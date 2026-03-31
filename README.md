@@ -8,26 +8,28 @@ The central claim: cohesive formation is a graded, self-referentially evaluated 
 
 ## Theory in One Page
 
-The primitive entity is a **soft cohesion field** `u_t : X_t → [0,1]` over a relational support space. The value `u_t(x)` is the degree to which site `x` participates in a cohesive formation — not a probability, not a segmentation mask.
+The primitive entity is a **soft cohesion field** $u_t : X_t \to [0,1]$ over a relational support space. The value $u_t(x)$ is the degree to which site $x$ participates in a cohesive formation — not a probability, not a segmentation mask.
 
 **Formal universe:**
-```
-C^soft = (T, {X_t}, {u_t}, {Cl_t}, {N_t, D_t}, {M_{t→s}})
-```
+
+$$\mathfrak{C}^{\mathrm{soft}} = \Big( T,\ \{X_t\},\ \{u_t\},\ \{\mathrm{Cl}_t\},\ \{\mathbf{N}_t, \mathbf{D}_t\},\ \{\mathbf{M}_{t \to s}\} \Big)$$
 
 **Operator triad** (variational):
-- `Cl_t` — Self-completion (closure): spreads cohesion along relational support
-- `D_t` — Self-contrast (distinction): suppresses cohesion where the field contrasts with its exterior
-- `C_t` — Self-integration (co-belonging resolvent): derived diagnostic, not a primitive
+- $\mathrm{Cl}_t$ — Self-completion (closure): spreads cohesion along relational support
+- $\mathbf{D}_t$ — Self-contrast (distinction): suppresses cohesion where the field contrasts with its exterior
+- $\mathbf{C}_t$ — Self-integration (co-belonging resolvent): derived diagnostic, not a primitive
 
-**Energy** on volume-constrained simplex `Σ_m = {u ∈ [0,1]^n : Σu_i = m}`:
-```
-E = λ_cl·E_cl + λ_sep·E_sep + λ_bd·E_bd + λ_tr·E_tr
-```
+**Energy** on volume-constrained simplex $\Sigma_m = \{u \in [0,1]^n : \sum u_i = m\}$:
 
-**Proto-cohesion diagnostic vector** `d = (Bind, Sep, Inside, Persist) ∈ [0,1]^4`
+$$E = \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{sep}} + \lambda_{\mathrm{bd}} E_{\mathrm{bd}} + \lambda_{\mathrm{tr}} E_{\mathrm{tr}}$$
 
-**Phase transition condition:** `β/α > 4λ₂/|W''(c)|` with `c` in the spinodal range
+**Proto-cohesion diagnostic vector** $\mathbf{d} = (\mathrm{Bind},\ \mathrm{Sep},\ \mathrm{Inside},\ \mathrm{Persist}) \in [0,1]^4$
+
+**Phase transition condition:**
+
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+
+with $c$ in the spinodal range $\left(\frac{3-\sqrt{3}}{6},\ \frac{3+\sqrt{3}}{6}\right)$.
 
 ---
 
@@ -92,11 +94,11 @@ cd papers && pdflatex paper2_cogsci.tex && pdflatex paper2_cogsci.tex
 
 **Category A — Fully proved:** T1 (existence), T6a/T6b (closure fixed point), T-A2 (monotonicity), T8-Core (phase transition), T20 (axiom consistency), T14 (gradient flow), T3/T6-Stability, T7 (enhanced metastability), T11 (Γ-convergence), C-Axioms, QM1–4.
 
-**Category B — Proved with structural parameter:** Sep = 1 − E_sep/m (exact equality), Predicate-Energy Bridge, T8-Full (IFT, conditional on generic non-degeneracy), T-Bind (projected form), T-Persist-K-Sep (well-separated multi-formation persistence).
+**Category B — Proved with structural parameter:** $\mathrm{Sep} = 1 - E_{\mathrm{sep}}/m$ (exact equality), Predicate-Energy Bridge, T8-Full (IFT, conditional on generic non-degeneracy), T-Bind (projected form), T-Persist-K-Sep (well-separated multi-formation persistence).
 
 **Conditional:** T-Persist-1 (subcomponents a,c proved; b corrected to away-from-bifurcation; e proved via Schauder), T-Persist-K-Weak (weakly-interacting regime).
 
-**Open:** Near-bifurcation persistence, strong-regime fixed-point uniqueness, T-Persist-K-Strong (conjectured), barrier scaling exponent Δ_soft ~ μ^0.32.
+**Open:** Near-bifurcation persistence, strong-regime fixed-point uniqueness, T-Persist-K-Strong (conjectured), barrier scaling exponent $\Delta_{\mathrm{soft}} \sim \mu^{0.32}$.
 
 **Predictions verified:** P1–P5 (single-formation), P1-K/P2-K/P3-K (multi-formation). P4-K retracted after experiments showed incorrect Hessian assumption.
 
@@ -104,10 +106,10 @@ cd papers && pdflatex paper2_cogsci.tex && pdflatex paper2_cogsci.tex
 
 ## Critical Implementation Notes
 
-- **Factor 4 in E_bd gradient:** `∇E_bd = 4α·L·u` (ordered-pair summation convention, not factor 2)
-- **Double-well gradient:** `W'(u) = 2u(1-u)(1-2u)` — factor of 2 (I6 correction)
-- **Sep predicate:** u-weighted average `Σ u_i·D_i / Σ u_i` — C_t-weighted form gives ~0.5 regardless (degenerate)
-- **b_D = 0:** Required for energy analyticity (Łojasiewicz convergence)
+- **Factor 4 in $E_{\mathrm{bd}}$ gradient:** $\nabla E_{\mathrm{bd}} = 4\alpha L u$ (ordered-pair summation convention, not factor 2)
+- **Double-well gradient:** $W'(u) = 2u(1-u)(1-2u)$ — factor of 2 (I6 correction)
+- **Sep predicate:** $u$-weighted average $\sum u_i D_i \,/\, \sum u_i$ — $\mathbf{C}_t$-weighted form gives $\approx 0.5$ regardless (degenerate)
+- **$b_D = 0$:** Required for energy analyticity (Łojasiewicz convergence)
 - **Persist:** Two implementations — core-overlap approximation in `diagnostics.py`, transport-based `persist_transport` in `transport.py`
 
 ---
