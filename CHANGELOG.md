@@ -2,6 +2,67 @@
 
 ---
 
+
+## 2026-04-01 — Status Refresh & Plan Realignment
+
+### Summary
+Consolidated the current mathematical state after the strong-regime / near-bifurcation documentation pass, verified what has actually been established, and rewrote `plan/Plan_0401.md` around the next real frontier: product-manifold basin theory, merge competitors, selection, and `exp24` integration.
+
+### Files Created
+None
+
+### Files Modified
+- `plan/Plan_0401.md` — Rewritten from a forward-looking placeholder into a status-aware live plan with completed items, current frontier, and prioritized next theorems
+- `CHANGELOG.md` — Added this status-refresh session entry
+
+### Theorem Status Changes
+None
+
+### Test Count
+Last recorded: 174 tests passing (unchanged; no `scc/` code modified and no fresh re-run in this planning/documentation session)
+
+### Open Items Carried Forward
+- Product-manifold basin/sublevel theorem on `Σ_M^K`
+- Explicit `(K-1)` merge competitor branch construction
+- Strong-regime selection theorem / branch-choice hypothesis
+- `exp24` completion and interpretation against the near-bifurcation local theory
+- Canonical Spec update only after a genuine theorem-status upgrade is justified
+
+---
+
+## 2026-03-31 — Strong-Regime Theorem Ladder & Near-Bifurcation Local Theory
+
+### Summary
+Executed the mathematical-priority part of `plan/Plan_0331.md` without touching code: formalized a theorem ladder for the strongly-interacting regime, unified the three multi-formation temporal regimes, and isolated near-bifurcation persistence as a shrinking-window local theory rather than a full persistence theorem.
+
+### Files Created
+- `docs/03-31/proof/T-PERSIST-K-STRONG-MORSE-ATTEMPT.md` — Strong-regime proof-attempt document with explicit theorem ladder: conditional coexistence theorem, local instability proposition, conditional merge proposition, full dichotomy left conjectural
+- `docs/03-31/theory/THREE-REGIME-SYNTHESIS.md` — Unified theorem-status map for well-separated, weakly-interacting, and strongly-interacting regimes
+- `docs/03-31/theory/NEAR-BIFURCATION-LOCAL-THEORY.md` — Local theory showing uniform persistence failure near bifurcation and the surviving shrinking-window / shifted-threshold statements
+- `plan/Plan_0401.md` — Next-step mathematical work plan continuing the strong-regime / near-bifurcation program
+
+### Files Modified
+- `docs/03-31/INDEX.md` — Added theorem-ladder proof/theory entries for the new strong-regime and near-bifurcation documents
+- `docs/00-overview.md` — Updated top-level project-state header from stale I11/149-tests status to current I12/174-tests status
+
+### Theorem Status Changes
+- `T-Persist-K-Strong`: retained as **conjectured** at canonical level; clarified internally into a theorem ladder
+- Strong-regime coexistence branch: sharpened to a **conditional local persistence theorem**
+- Strong-regime merge branch: sharpened to a **conditional merge proposition** requiring explicit Morse/selection hypotheses
+- Near-bifurcation persistence: sharpened to a **negative/local theory** — no uniform persistence theorem, only shrinking-window continuation and shifted-threshold survival
+
+### Test Count
+Last recorded: 174 tests passing (unchanged; no `scc/` code modified and no fresh re-run in this document-only session)
+
+### Open Items Carried Forward
+- Product-manifold basin/sublevel theorem on `Σ_M^K`
+- Explicit construction of a nearby `(K-1)`-formation merge competitor branch
+- Strong-regime transport/reoptimization selection theorem
+- `exp24` completion and interpretation against the new near-bifurcation local theory
+- Canonical Spec update only after a status-changing mathematical upgrade is justified by the new ladder
+
+---
+
 ## 2026-03-31 — T-Persist-1 Gap 4/5/6 Strengthening (Session 2)
 
 ### Summary

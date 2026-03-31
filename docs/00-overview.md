@@ -1,8 +1,8 @@
 # Soft Cognitive Cohesion — Refactoring Brainstorm: Complete Record
 
-**Date:** 2026-03-26 (Phase 1-2), 2026-03-27 (Phase 3-12)
-**Phase:** ALL 11 ITERATIONS COMPLETE (I1-I11)
-**Status:** Theory at 9.0/10. Spec v2.0 delivered, 22+ theorems proved, Python package working (149 tests incl. 28 transport), multi-formation architecture decided, two paper outlines ready, transport pipeline implemented and numerically verified.
+**Date:** 2026-03-26 (Phase 1-2), 2026-03-27 (Phase 3-10), 2026-03-30 to 2026-03-31 (I11-I12 follow-up)
+**Phase:** ALL 12 ITERATIONS COMPLETE (I1-I12)
+**Status:** Theory at 9.1/10. Spec v2.0 delivered, Python package working (174 tests), transport pipeline implemented and numerically verified, T-Persist-K-Sep proved, T-Persist-K-Weak conditionally proved, strong-regime dichotomy reframed as a theorem ladder, and near-bifurcation persistence isolated as a shrinking-window local theory.
 
 ---
 
