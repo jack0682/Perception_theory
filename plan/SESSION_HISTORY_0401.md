@@ -138,16 +138,38 @@ origin: git@github.com:jack0682/Perception_theory.git
 - K=2 local stability 증명 (merge curvature ≥ μ₁ + μ₂ > 0)
 - Isoperimetric energy ordering 증명
 
-커밋: 대기 중
+커밋: `b0b7b77` → 푸시 완료
+
+### 8. Phase 3 (Near-bif + K=2 topology + Boundary dynamics) — 3-agent parallel
+
+**exp34-agent** (near-bif directional):
+- 13 configs (10/12/15 grid, β=10-50)
+- Directional basin 2.5-4.3× > isotropic near bifurcation
+- μ=0.55에서 gain 최대 (4.3×)
+
+**exp35-agent** (K=2 topology search):
+- 24 extreme topologies: barbell (L=1-15), weighted bridge (w=0.001-1.0), star
+- **K=1 항상 선호** — ΔE = -2.4 ~ -6.8
+- Isoperimetric ordering 보편적
+
+**exp36-agent** (boundary dynamics):
+- 12×12, β=15-100, ε=0.01-0.20
+- Shallow/deep Δu ratio: 1.1-4.3 (β 증가에 따라 증가)
+- Threshold crossing: 0 (basin containment 성공)
+
+**이론 통합** (lead 직접):
+- NEARBIF-DIRECTIONAL-EXTENSION.md 작성
+- Directional Persistence Extension 정리 증명
+- Canonical Spec/CHANGELOG 업데이트
 
 ---
 
 ## 다음 세션에서 할 일
-- Near-bifurcation persistence (μ → 0) — T-Persist의 유일한 genuinely open 항목
-- Barrier height 정량화 (NEB/string method)
-- K=2가 globally preferred인 graph topology 탐색
+- Bifurcation crossing (μ = 0) / branch selection — T-Persist의 유일한 genuinely open 항목
+- Barrier height 정량화 (NEB/string method) for K-Merge
 - Formation birth (K → K+1) 이론
-- 또는 papers 업데이트 (Phase 2 결과 반영)
+- Papers 업데이트 (Phase 2+3 결과 반영)
+- 또는 사용자 지시에 따라 다른 방향
 
 ## 주요 실험 결과 요약
 

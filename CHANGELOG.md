@@ -2,6 +2,36 @@
 
 ---
 
+## 2026-04-01 — Phase 3: Near-Bif Directional Extension + Boundary Dynamics + Universal Ordering
+
+### Summary
+Three parallel experiments verify and extend the near-bifurcation theory. exp34: directional basin is 2.5-4.3× larger than isotropic near bifurcation, extending Tier 1 persistence to smaller spectral gaps. exp35: K=1 preferred over K=2 in ALL 24 extreme topologies (barbell, weighted bridge, star) — isoperimetric ordering appears universal. exp36: boundary instability channel confirmed (shallow/deep Δu ratio up to 4.3×), no actual threshold crossings at any tested config. Directional Persistence Extension theorem proved.
+
+### Files Created
+- `experiments/exp34_nearbif_directional.py` — Near-bif directional basin radii (13 configs)
+- `experiments/exp35_k2_preferred_topology.py` — K=2 topology search (24 configs, all K=1)
+- `experiments/exp36_boundary_dynamics.py` — Boundary-layer dynamics (25 configs)
+- `docs/04-01/theory/NEARBIF-DIRECTIONAL-EXTENSION.md` — Directional persistence extension theorem + synthesis
+
+### Files Modified
+- `Canonical Spec v2.0.md` — Near-bif directional extension erratum
+- `docs/04-01/INDEX.md` — Added NEARBIF-DIRECTIONAL-EXTENSION.md
+
+### Theorem Status Changes
+- Directional Persistence Extension: **New** — proved (r_eff/r_iso = √(λ_max/(f₁²μ + (1-f₁²)μ₂)))
+- Near-bif Tier 1: **Extended** — covers 2.5-4.3× wider spectral gap range
+- Universal Isoperimetric Ordering: **Conjectured** (verified on 24 topologies)
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Bifurcation crossing (μ = 0) / branch selection — sole genuinely open T-Persist item
+- Barrier height quantification for K-Merge
+- Formation birth (K → K+1)
+
+---
+
 ## 2026-04-01 — Phase 2: A1 Transport Selection + A2 Merge Dichotomy
 
 ### Summary
