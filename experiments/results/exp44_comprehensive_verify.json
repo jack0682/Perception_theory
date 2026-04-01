@@ -6,21 +6,21 @@
   ],
   "beta": 50.0,
   "volume_fraction": 0.3,
-  "n_pass": 14,
-  "n_fail": 0,
+  "n_pass": 12,
+  "n_fail": 2,
   "n_tests": 14,
-  "elapsed_seconds": 10.418996572494507,
+  "elapsed_seconds": 19.188968420028687,
   "tests": [
     {
       "test": "T1 (Existence)",
       "metric": 1.0,
       "threshold": 1.0,
       "result": "PASS",
-      "detail": "converged in 190 iter"
+      "detail": "converged in 168 iter"
     },
     {
       "test": "T6b (Closure FP rate)",
-      "metric": 0.7740780063026211,
+      "metric": 0.7730664820072707,
       "threshold": 0.875,
       "result": "PASS",
       "detail": "a_cl/4=0.875"
@@ -28,86 +28,86 @@
     {
       "test": "T8-Core (Phase Trans)",
       "metric": 50.0,
-      "threshold": 0.17481919412954672,
+      "threshold": 0.17481919412955585,
       "result": "PASS",
-      "detail": "beta/alpha=50.00 > 4*lam2/|W''|=0.17, range=1.000"
+      "detail": "beta/alpha=50.00 > 4*lam2/|W''|=0.17, range=0.998"
     },
     {
       "test": "T-Bind (Bind > 0.7)",
-      "metric": 0.8469090716400149,
+      "metric": 0.8489275896610073,
       "threshold": 0.7,
       "result": "PASS",
-      "detail": "Bind=0.8469"
+      "detail": "Bind=0.8489"
     },
     {
       "test": "Sep identity",
-      "metric": 1.1102230246251565e-16,
+      "metric": 3.3306690738754696e-16,
       "threshold": 0.01,
       "result": "PASS",
-      "detail": "Sep=0.9336, 1-Esep/m=0.9336"
+      "detail": "Sep=0.9521, 1-Esep/m=0.9521"
     },
     {
       "test": "Deep core (H2')",
-      "metric": 53.0,
+      "metric": 55.0,
       "threshold": 1.0,
       "result": "PASS",
-      "detail": "|deep_core|=53"
+      "detail": "|deep_core|=55"
     },
     {
       "test": "Deep core ratio",
-      "metric": 0.7681159420289855,
+      "metric": 0.7857142857142857,
       "threshold": 0.5,
       "result": "PASS",
-      "detail": "|deep|/|core|=0.768"
+      "detail": "|deep|/|core|=0.786"
     },
     {
       "test": "Transport FP conv",
-      "metric": 2.0,
+      "metric": 10.0,
       "threshold": 10.0,
-      "result": "PASS",
-      "detail": "iter=2, conv=True"
+      "result": "FAIL",
+      "detail": "iter=10, conv=False"
     },
     {
       "test": "Transport uniqueness",
-      "metric": 2.319845613673091e-10,
+      "metric": 0.05829227938733105,
       "threshold": 0.05,
-      "result": "PASS",
-      "detail": "max L2/sqrt(n)=0.0000"
+      "result": "FAIL",
+      "detail": "max L2/sqrt(n)=0.0583"
     },
     {
       "test": "T-Persist chain",
-      "metric": 0.9999913728036987,
+      "metric": 0.9862769313793652,
       "threshold": 0.9,
       "result": "PASS",
-      "detail": "overlap=1.0000"
+      "detail": "overlap=0.9863"
     },
     {
       "test": "K=2 merge curvature",
-      "metric": 6443.041339366573,
+      "metric": 6452.935322471376,
       "threshold": 0.0,
       "result": "PASS",
-      "detail": "d2E/deps2=6443.0413"
+      "detail": "d2E/deps2=6452.9353"
     },
     {
       "test": "Isoperimetric",
       "metric": 5.858914089857297,
-      "threshold": 10.867627585735274,
+      "threshold": 9.54547681140266,
       "result": "PASS",
-      "detail": "E(2m)=5.8589 < 2*E(m)=10.8676"
+      "detail": "E(2m)=5.8589 < 2*E(m)=9.5455"
     },
     {
       "test": "Boundary scaling",
-      "metric": 0.2318840579710145,
+      "metric": 0.21428571428571427,
       "threshold": 0.5,
       "result": "PASS",
-      "detail": "|bdry|/|core|=0.232"
+      "detail": "|bdry|/|core|=0.214"
     },
     {
       "test": "NB-2 remnant",
-      "metric": 3.7799854724660854e-06,
-      "threshold": 3.1969600339111504e-05,
+      "metric": 9.5732364237865e-05,
+      "threshold": 0.00010127035013414905,
       "result": "PASS",
-      "detail": "deep=0.000004, shallow=0.000032"
+      "detail": "deep=0.000096, shallow=0.000101"
     }
   ]
 }
