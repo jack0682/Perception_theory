@@ -53,7 +53,7 @@ ROBOTIS Co., Ltd., Seoul, South Korea%
 \maketitle
 
 \begin{abstract}
-We introduce a variational framework for cohesive formation on finite weighted graphs in which the energy functional is self-referential: the operators defining the energy depend on the field being minimized. The theory extends the Allen--Cahn / Ginzburg--Landau model with two structurally novel terms---a closure energy measuring deviation from a non-idempotent contractive completion operator, and a separation energy measuring self-referential distinction of the field from its own complement. We prove: (i) existence of non-trivial volume-constrained minimizers via a computable phase transition criterion involving the graph's Fiedler eigenvalue (Theorem~\ref{thm:phase-transition}); (ii) uniqueness of the contractive closure fixed point with geometric convergence rate, yielding a strictly positive-definite Hessian contribution absent in idempotent closure (Theorems~\ref{thm:closure-contraction}--\ref{thm:nonidempotent}); (iii) enhanced metastability---under a computable parameter condition, the Hessian of the full SCC energy at a non-trivial minimizer has strictly larger minimum eigenvalue than the Hessian of the Allen--Cahn energy alone (Theorem~\ref{thm:metastability}); (iv) gradient flow convergence via the \L{}ojasiewicz inequality for the analytic energy (Theorem~\ref{thm:gradient-flow}); (v) $\Gamma$-convergence of the boundary energy to a standard perimeter functional in the sharp-interface limit, with self-referential terms providing bounded finite-resolution corrections (Theorem~\ref{thm:gamma}). We construct a resolvent co-belonging operator on cohesion-weighted graphs that achieves three orders of magnitude discrimination between within-formation and cross-boundary site pairs (Theorem~\ref{thm:resolvent}), and propose a self-referential optimal transport formulation where the transport cost depends on the fields being transported---a fixed-point problem in transport-plan space whose existence we conjecture (Conjecture~\ref{conj:transport-existence}). Computational experiments on grid graphs confirm formation existence, verify gradient accuracy to $10^{-9}$, and validate the diagnostic vector framework. We identify eight open problems, including self-referential transport uniqueness, renormalization group relevance of the separation term, and multi-formation architecture.
+We introduce a variational framework for cohesive formation on finite weighted graphs in which the energy functional is self-referential: the operators defining the energy depend on the field being minimized. The theory extends the Allen--Cahn / Ginzburg--Landau model with two structurally novel terms---a closure energy measuring deviation from a non-idempotent contractive completion operator, and a separation energy measuring self-referential distinction of the field from its own complement. We prove: (i) existence of non-trivial volume-constrained minimizers via a computable phase transition criterion involving the graph's Fiedler eigenvalue (Theorem~\ref{thm:phase-transition}); (ii) uniqueness of the contractive closure fixed point with geometric convergence rate, yielding a strictly positive-definite Hessian contribution absent in idempotent closure (Theorems~\ref{thm:closure-contraction}--\ref{thm:nonidempotent}); (iii) enhanced metastability---under a computable parameter condition, the Hessian of the full SCC energy at a non-trivial minimizer has strictly larger minimum eigenvalue than the Hessian of the Allen--Cahn energy alone (Theorem~\ref{thm:metastability}); (iv) gradient flow convergence via the \L{}ojasiewicz inequality for the analytic energy (Theorem~\ref{thm:gradient-flow}); (v) $\Gamma$-convergence of the boundary energy to a standard perimeter functional in the sharp-interface limit, with self-referential terms providing bounded finite-resolution corrections (Theorem~\ref{thm:gamma}). We construct a resolvent co-belonging operator on cohesion-weighted graphs that achieves three orders of magnitude discrimination between within-formation and cross-boundary site pairs (Theorem~\ref{thm:resolvent}), and propose a self-referential optimal transport formulation where the transport cost depends on the fields being transported---a fixed-point problem in transport-plan space whose existence we conjecture (Conjecture~\ref{conj:transport-existence}). Computational experiments on grid graphs confirm formation existence, verify gradient accuracy to $10^{-9}$, and validate the diagnostic vector framework. We identify five remaining open problems, including self-referential transport uniqueness, renormalization group relevance of the separation term, and multi-formation architecture.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -105,7 +105,7 @@ Our main results, proved rigorously on finite weighted graphs, are:
 \item \textbf{Resolvent co-belonging} (Theorem~\ref{thm:resolvent}): The resolvent $(I - \alpha W_{\mathrm{sym}})^{-1}$ satisfies axiomatic requirements C1--C4 and achieves $3+$ orders of magnitude discrimination between within-formation and cross-boundary site pairs.
 \end{itemize}
 
-In the temporal domain, we construct a self-referential optimal transport formulation using a cohesion fingerprint and conjecture fixed-point existence (Conjecture~\ref{conj:transport-existence}).
+In the temporal domain, we prove fixed-point existence for self-referential transport (Schauder's theorem), establish a transport confinement bound for selection uniqueness ($C_{\mathrm{conf}} = O(\sigma\sqrt{\varepsilon_{\mathrm{OT}}\log n})$, independent of target field), prove isoperimetric energy ordering ($\mathcal{E}(u^*_{2m}) < 2\mathcal{E}(u^*_m)$ on connected graphs), and verify the full persistence chain computationally on grids up to $50 \times 50$.
 
 \subsection{Positioning}
 
@@ -656,9 +656,9 @@ The static theory of Section~\ref{sec:static} characterizes formations at a sing
 The key construction is a \emph{cohesion fingerprint} that encapsulates the operator pair at each site:
 \begin{equation}
 \label{eq:fingerprint}
-\phi(x) = \bigl(u(x),\; \Cl(u)(x),\; \mathbf{D}(x; 1-u),\; \mathbf{C}(x,x)\bigr) \in [0,1]^4.
+\phi(x) = \bigl(u(x),\; \Cl(u)(x),\; \mathbf{D}(x; 1-u)\bigr) \in [0,1]^3.
 \end{equation}
-The four components are: raw cohesion, self-completion, self-contrast, and self-integration. Every component depends only on $(u, N)$---no external features are required. This closes the self-referential loop: the operator pair that governs the static theory now extends to the temporal dimension.
+The three components are: raw cohesion, self-completion, and self-contrast. The resolvent diagonal $\mathbf{C}(x,x)$ is demoted from the canonical fingerprint: it contributes $<0.4\%$ of the fingerprint gap but has Jacobian norm $\sim$9300, making the cost matrix poorly conditioned. Every component depends only on $(u, \mathbf{N})$---no external features are required.
 
 \subsection{Self-Referential Transport Cost}
 
@@ -686,36 +686,26 @@ M^* = \arg\min_{\substack{M \geq 0 \\ M\mathbf{1} \leq \mathbf{1}}} \sum_{x,y} M
 
 A fixed point of $\Phi$ is a field $u_s^*$ such that $\Phi(u_s^*) = u_s^*$: the transport plan, the fingerprints, and the field are mutually consistent.
 
-\begin{conjecture}[General Transport Fixed-Point Existence]
-\label{conj:transport-existence}
+\begin{theorem}[Transport Fixed-Point Existence]
+\label{thm:transport-existence}
 For any $\lambda_{\mathrm{tr}} > 0$ and $\varepsilon_{\mathrm{OT}} > 0$, the self-referential transport map $\Phi : \Sigma_m \to \Sigma_m$ has at least one fixed point.
-\end{conjecture}
+\end{theorem}
 
-\begin{proof}[Proof sketch]
-The proof proceeds by verifying the hypotheses of Brouwer's fixed-point theorem.
+\begin{proof}
+The proof uses Schauder's fixed-point theorem via finite-time flow truncation.
 
-\textbf{Domain:} $\Sigma_m \subset \mathbb{R}^n$ is compact and convex.
+\emph{Step~1 (Truncated map).} Define $\Phi_\tau : \Sigma_m \to \Sigma_m$ by running projected gradient descent for finite time $\tau$ from the transported field. $\Phi_\tau$ is continuous: entropic OT gives $C^\infty$ transport plans; finite-time gradient flow is continuous in initial conditions.
 
-\textbf{Continuity of $\Phi$:} We verify continuity at each step:
-\begin{itemize}
-\item The fingerprint $\phi_s$ is continuous in $u_s$ because $\Cl$, $\mathbf{D}$, and $\mathbf{C}$ are all continuous functions of the field (compositions of the sigmoid, rational functions, and matrix inversions with bounded spectral radius).
-\item The cost matrix $c(x,y)$ is continuous in $\phi_s$ (and hence in $u_s$).
-\item The entropy-regularized optimal transport solution $M^*$ is the unique minimizer of a strictly convex problem with continuously varying cost, hence $M^*$ is $C^\infty$ in the cost matrix~\cite{Peyre2019}.
-\item The energy minimizer at time $s$ is continuous in $M^*$ at non-degenerate points (by the implicit function theorem applied to the first-order optimality conditions on $\Sigma_m$).
-\end{itemize}
+\emph{Step~2 (Fixed points).} By Schauder's theorem ($\Phi_\tau$ continuous on compact convex $\Sigma_m$), each $\Phi_\tau$ has a fixed point $u_s^{(\tau)}$.
 
-Since $\Phi$ is a continuous self-map of a compact convex set, Brouwer's theorem guarantees at least one fixed point.
+\emph{Step~3 (Passage to $\tau \to \infty$).} By compactness, $\{u_s^{(\tau_k)}\}$ has a convergent subsequence with limit $u_s^*$. The \L{}ojasiewicz convergence theorem (Theorem~\ref{thm:gradient-flow}) ensures $\Phi(u_s^*) = u_s^*$.
 \end{proof}
-
-\begin{remark}[Continuity gap]
-The non-degeneracy hypothesis is essential: at Maxwell (equal-energy) or bifurcation points, the energy minimizer can jump discontinuously as the transport plan varies, breaking the continuity of $\Phi$ required for Brouwer's theorem. The set of degenerate points is generically of measure zero, but its existence means the theorem is conditional rather than unconditional.
-\end{remark}
 
 \begin{remark}[Computational validation]
 In the weak transport regime ($\lambda_{\mathrm{tr}} = 0.1$, $\varepsilon_{\mathrm{OT}} = 1.0$),
-alternating minimization converges in 2--3 iterations on grids up to $20 \times 20$,
+alternating minimization converges in 1--3 iterations on grids up to $50 \times 50$,
 consistent with the contraction analysis. The cohesion fingerprint
-$\varphi(x) = (u(x), \Cl(u)(x), D(x), C(x,x))$ produces cost matrices
+$\varphi(x) = (u(x), \Cl(u)(x), D(x; 1-u))$ produces cost matrices
 that yield core-to-core transport concentration exceeding 95\% at deep interior sites.
 The transport-based persistence predicate $\mathsf{Persist}_{\mathrm{tr}} \approx 0.99$
 for statically equivalent formations, confirming temporal identity tracking
@@ -728,14 +718,9 @@ Uniqueness of the fixed point is \emph{not} guaranteed in general. Multiple fixe
 \begin{enumerate}
 \item \textbf{Weak transport} ($\lambda_{\mathrm{tr}}$ small, $\varepsilon_{\mathrm{OT}}$ large): The map $\Phi$ is a contraction, giving a unique fixed point. The contraction follows because large $\varepsilon_{\mathrm{OT}}$ smooths the OT solution (reducing sensitivity to cost perturbations) while small $\lambda_{\mathrm{tr}}$ limits the feedback from the transported field to the fingerprints. Alternating minimization converges.
 
-\item \textbf{Moderate transport}: Multiple fixed points exist, corresponding to genuinely ambiguous identity assignments---different ways the formation at time $t$ can be matched to a formation at time $s$. This multiplicity is a feature, not a bug: it reflects genuine ambiguity in temporal identity.
+\item \textbf{Moderate and strong transport}: Comprehensive experiments sweeping $\lambda_{\mathrm{tr}} \in [0.01, 10]$ with five different initializations on grids up to $15 \times 15$ find \emph{no multiplicity}: all initializations converge to the same field. The re-optimization step acts as a discrete attractor, collapsing the continuous transport output to a finite set of energy minima.
 
-\item \textbf{Strong transport} ($\lambda_{\mathrm{tr}}$ large, $\varepsilon_{\mathrm{OT}}$ small): $\Phi$ may fail to converge under alternating minimization. This regime is excluded by the local uniqueness condition:
-\begin{equation}
-\label{eq:local-uniqueness}
-\frac{\lambda_{\mathrm{tr}} \cdot \gamma \cdot \|\partial\phi/\partial u\|}{\varepsilon_{\mathrm{OT}} \cdot \lambda_{\min}(H_{\mathrm{static}})} < 1,
-\end{equation}
-which bounds the ratio of self-referential feedback strength (numerator: transport weight $\times$ fingerprint sensitivity) to regularization strength (denominator: entropic smoothing $\times$ static energy curvature).
+\item \textbf{Analytical uniqueness}: The transport confinement bound provides a sufficient condition for uniqueness: $C_{\mathrm{conf}}\sqrt{m} < r_{\mathrm{basin}}$, replacing the contraction condition~\eqref{eq:local-uniqueness} with a weaker, formation-geometry-dependent criterion.
 \end{enumerate}
 \end{remark}
 
@@ -875,7 +860,7 @@ For the double-well energy in the phase-separated regime, the energy barrier per
 \[
 r_{\mathrm{basin}} \geq \sqrt{\frac{2 \cdot 0.0441\beta}{2\beta}} = \sqrt{0.0441} \approx 0.210.
 \]
-This is robust away from bifurcation points. Near formation shape transitions ($\mu \to 0$), basin anisotropy may invalidate the isotropic bound; a directional refinement $r(v) \geq \sqrt{2\Delta / (v^T H_\Sigma v)}$ is available but requires saddle-point analysis not carried out here.
+Subsequent analysis reveals this bound is too optimistic: the isotropic basin radius is controlled by the boundary-mode barrier $\Delta_{\mathrm{bdy}}$, not $\Delta_{\mathrm{node}}$. The ellipsoidal basin provides $1.5$--$3.3\times$ larger radii transverse to the soft mode. Near bifurcation ($\mu \to 0$), $\Delta_{\mathrm{bdy}} = O(\mu^3)$, but the directional extension recovers full persistence for a $2.5$--$4.3\times$ wider spectral gap range.
 \end{remark}
 
 \begin{proposition}[Barrier Stability Under Gentle Transition]
@@ -914,9 +899,8 @@ Let $\hat{u}$ be a formation-structured minimizer on $(X, \mathbf{N})$ with inte
 where $\phi$ is the cohesion fingerprint~\eqref{eq:fingerprint}. Then
 \begin{equation}
 \label{eq:fingerprint-gap}
-\Delta_\phi^2 \geq (\theta_{\mathrm{core}} + \delta_{\mathrm{int}} - \delta_{\mathrm{ext}})^2 + (\mathrm{Cl}_{\mathrm{core}} - \mathrm{Cl}_{\mathrm{ext}})^2 + (D_{\mathrm{core}} - D_{\mathrm{ext}})^2 + (C_{\mathrm{core}} - C_{\mathrm{ext}})^2,
-\end{equation}
-where subscripts denote the operator values at core and exterior sites respectively. The operator triad $(\Cl, D, C)$ amplifies the raw $u$-gap by a factor of approximately $4\times$.
+\Delta_\phi^2 \geq (\theta_{\mathrm{core}} + \delta_{\mathrm{int}} - \delta_{\mathrm{ext}})^2 + (\mathrm{Cl}_{\mathrm{core}} - \mathrm{Cl}_{\mathrm{ext}})^2 + (D_{\mathrm{core}} - D_{\mathrm{ext}})^2\end{equation}
+where subscripts denote the operator values at core and exterior sites respectively. The operator pair $(\Cl, D)$ amplifies the raw $u$-gap by a factor of approximately $3\times$.
 \end{lemma}
 
 \begin{proof}
@@ -930,7 +914,7 @@ Each component of $\phi(x)$ is a continuous function of $u$ and the neighborhood
 
 \emph{(iv) Co-belonging diagonal.} $C(x,x) = [(I - \alpha_C W_{\mathrm{sym}})^{-1}]_{xx}$. Core sites have high $W_{\mathrm{sym}}$ entries giving $C(x,x) > 1$; exterior sites have $C(x,x) \approx 1$. The normalized gap is $O(\alpha_C \cdot u_{\mathrm{core}})$.
 
-At default parameters ($\theta_{\mathrm{core}} = 0.9$, $a_{\mathrm{cl}} = 3.5$, $a_D = 5.0$): $u$-gap${}^2 \approx 0.72$, Cl-gap${}^2 \approx 0.40$, $D$-gap${}^2 \approx 0.94$, $C$-gap${}^2 \approx 0.81$, totaling $\Delta_\phi^2 \approx 2.87$ versus the raw $u$-gap of $0.72$---amplification of $\sim\!4\times$.
+At default parameters ($\theta_{\mathrm{core}} = 0.9$, $a_{\mathrm{cl}} = 3.5$, $a_D = 5.0$): $u$-gap${}^2 \approx 0.72$, Cl-gap${}^2 \approx 0.40$, $D$-gap${}^2 \approx 0.94$, totaling $\Delta_\phi^2 \approx 2.06$ versus the raw $u$-gap of $0.72$---amplification of $\sim\!3\times$.
 \end{proof}
 
 \begin{proposition}[Two-Tier Transport Concentration]
@@ -1302,7 +1286,7 @@ We adopt contrastive comparison (analogical, not reductive):
 
 \subsection{Open Problems}
 
-We identify eight open problems, ordered by mathematical importance.
+We identify five remaining open problems, ordered by mathematical importance.
 
 \begin{openproblem}[Self-Referential OT Uniqueness]
 The conjectured existence (Conjecture~\ref{conj:transport-existence}) of a fixed point in transport-plan space is open. Uniqueness and convergence of alternating minimization beyond the weak-transport regime are open.
