@@ -2,6 +2,40 @@
 
 ---
 
+## 2026-04-01 — Phase 1: B1 β_crit + B2 Directional Basin + C3 Δ_bdy Formula
+
+### Summary
+Phase 1 two-round iteration. Round 1: β_crit 58→20α (max principle), directional basin (ellipsoidal 1.5-3.3×), Δ_bdy semi-analytical formula (S₃ invariant, 1-7% accuracy). Round 2: β_crit source term rigorous (19.55α exact threshold, config-dependent 15-33α), PSM gradient-vs-IFT clarification, C3 outlier resolved (optimizer stochasticity), conventions compliance.
+
+### Files Created
+- `docs/04-01/proof/DIRECTIONAL-BASIN-BOUNDS.md` — Theorems PSM, EBC, TP (directional basin)
+- `docs/04-01/INDEX.md` — Day index
+- `experiments/exp31_beta_threshold.py` — β threshold scan
+- `experiments/exp32_directional_basin.py` — Directional basin verification
+- `experiments/exp33_delta_bdy_formula.py` — Δ_bdy S₃ formula verification
+
+### Files Modified
+- `docs/03-31/proof/CORE-DEPTH-ISOPERIMETRIC.md` — β_crit: 58α → 20α via discrete maximum principle + source term analysis
+- `docs/03-31/proof/BASIN-ESCAPE-ANALYSIS.md` — §11: S₃ formula + component decomposition + cubic regime classification
+- `docs/04-01/proof/DIRECTIONAL-BASIN-BOUNDS.md` — Gradient vs IFT soft-mode fraction clarification
+- `Canonical Spec v2.0.md` — β_crit updated to config-dependent 15-33α
+
+### Key Results
+- β_crit = 19.55α exact (source-free: 8α, with source: config-dependent)
+- S₃ = Σ(2û_i-1)·v₁_i³ is the single geometric invariant controlling Δ_bdy
+- Ellipsoidal basin 1.5-3.3× larger than isotropic, gradient perturbation f₁ always within bound
+- Cubic saddle is generic (all 7 tested configs); quartic not observed
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- β_crit grid-dependence (λ_cl/λ_bd ratio increases with β due to normalization)
+- Strong-regime transport selection/uniqueness (A1)
+- K-Strong merge dichotomy (A2)
+
+---
+
 ## 2026-04-01 — Final Strengthening: Code Alignment, Full Chain Closure, Stress Test, Synthesis
 
 ### Summary

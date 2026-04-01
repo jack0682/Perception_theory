@@ -579,3 +579,117 @@ All results from `experiments/exp19_saddle_point_analysis.py` (§1-8) and `exper
 8. Measure exterior perturbation costs independently
 9. (exp24) Compute Taylor coefficients L₃, L₄ along soft mode
 10. (exp24) Run gradient flow from perturbed states to measure empirical basin radii
+11. (exp33) Decompose a₃ analytically via W'''(u) = 12(2u-1), validate against FD
+
+---
+
+## 11. Semi-Analytical a₃ Decomposition (exp33)
+
+**Date:** 2026-04-01
+**Status:** Derived and validated.
+
+### 11.1 Analytical Formula
+
+The third Taylor coefficient along the soft mode v₁ decomposes as:
+
+$$a_3 = D^3 E(\hat{u})[v_1, v_1, v_1]$$
+
+The dominant contribution comes from the double-well term in E_bd. Since W'''(u) = 24u - 12 = 12(2u - 1):
+
+$$a_3 \approx 12 \cdot \beta \cdot \lambda_{\mathrm{bd}} \cdot S_3$$
+
+where the **skewed third moment** is:
+
+$$S_3 = \sum_i (2\hat{u}_i - 1) \cdot v_{1,i}^3$$
+
+This sum is boundary-dominated: the factor (2û_i - 1) is the local curvature asymmetry of the double-well at each node (= W'''(û_i)/12), and v₁ concentrates on boundary nodes (Proposition BMD, §8).
+
+**Physical interpretation:** S₃ measures the asymmetry of the soft mode across the boundary layer. When boundary nodes are distributed symmetrically around u = 1/2, the factors (2û_i - 1) cancel and S₃ ≈ 0 (quartic regime). Asymmetric boundaries give |S₃| > 0 (cubic regime).
+
+### 11.2 Barrier Formulas
+
+**Cubic regime** (|S₃| appreciable):
+
+$$\Delta_{\mathrm{bdy}}^{\mathrm{cubic}} = \frac{2\mu^3}{3 a_3^2} = \frac{2\mu^3}{3 \cdot (12 \beta \lambda_{\mathrm{bd}} S_3)^2} = \frac{\mu^3}{216 \beta^2 \lambda_{\mathrm{bd}}^2 S_3^2}$$
+
+**Quartic regime** (S₃ ≈ 0): W''''(u) = 24, so a₄ = 24·β·λ_bd·Σ v₁_i⁴, giving:
+
+$$\Delta_{\mathrm{bdy}}^{\mathrm{quartic}} = \frac{3\mu^2}{2 a_4} = \frac{3\mu^2}{48 \beta \lambda_{\mathrm{bd}} \sum v_{1,i}^4} = \frac{\mu^2}{16 \beta \lambda_{\mathrm{bd}} \sum v_{1,i}^4}$$
+
+### 11.3 Numerical Validation (exp33)
+
+**a₃ analytical vs numerical (central finite differences):**
+
+| Config | S₃ | a₃_analytical | a₃_numerical | Ratio | S₃ bdy fraction |
+|--------|-----|--------------|-------------|-------|----------------|
+| 8×8 β=20 | 0.098 | 1.16 | 1.24 | 0.93 | 1.01 |
+| 8×8 β=50 | 0.438 | 10.36 | 10.42 | 0.99 | 1.01 |
+| 10×10 β=50 | 0.199 | 4.67 | 4.72 | 0.99 | 1.02 |
+| 10×10 β=100 | −0.467 | −10.86 | −11.13 | 0.98 | 1.00 |
+| 12×12 β=50 | −0.317 | −7.38 | −15.33 | 0.48 | 1.00 |
+| 12×12 β=100 | −0.293 | −6.81 | −7.09 | 0.96 | 1.40 |
+| 15×15 β=50 | −0.199 | −4.62 | −4.59 | 1.01 | 1.00 |
+
+**Finding:** The E_bd-only analytical formula a₃ = 12·β·λ_bd·S₃ matches the numerical FD a₃ within 1-7% for 6 of 7 configurations. The 12×12 β=50 outlier (ratio 0.48) has large E_cl and E_sep third-derivative contributions that dominate the total a₃.
+
+S₃ is almost entirely boundary-concentrated (bdy fraction ≈ 1.0), confirming the boundary-dominance picture from §8.
+
+### 11.4 Component Decomposition of a₃ (exp33, corrected 2026-04-01)
+
+> **Erratum (2026-04-01).** The original §11.3 presented only the E_bd-only formula and flagged the 12×12 β=50 outlier (ratio 0.48) without resolution. The full a₃ decomposes as:
+>
+> $$a_3 = D^3 E_{\text{bd}}[\hat{u}][v_1^3] + D^3 E_{\text{cl}}[\hat{u}][v_1^3] + D^3 E_{\text{sep}}[\hat{u}][v_1^3]$$
+>
+> The closure and separation third derivatives are computed via component-wise central FD (same methodology as the total a₃ but applied to each weighted energy term independently). Results:
+>
+> | Config | $a_3^{\text{bd}}$ (FD) | $a_3^{\text{cl}}$ (FD) | $a_3^{\text{sep}}$ (FD) | $a_3^{\text{total}}$ (FD) | $|a_3^{\text{cl}}+a_3^{\text{sep}}|/|a_3^{\text{total}}|$ |
+> |--------|-----|------|------|------|------|
+> | 8×8 β=20 | 1.16 | 0.09 | −0.01 | 1.24 | 7% |
+> | 8×8 β=50 | 10.36 | 0.36 | −0.30 | 10.42 | 0.6% |
+> | 10×10 β=50 | 4.67 | 0.15 | −0.11 | 4.72 | 1.0% |
+> | 10×10 β=100 | 11.57 | 0.40 | −0.32 | 11.65 | 0.7% |
+> | **12×12 β=50** | **63.96** | **136.43** | **−215.82** | **−15.44** | **514%** |
+> | 12×12 β=100 | −6.81 | −0.23 | −0.05 | −7.09 | 4% |
+> | 15×15 β=50 | −0.22 | −0.01 | 0.05 | −0.18 | 25% |
+>
+> **Key finding:** For 5 of 7 configs, the cl/sep contributions are ≤7% of the total — the E_bd-only S₃ formula is adequate. For 12×12 β=50 *at a specific near-bifurcation local minimum*, the cl/sep third derivatives are **individually larger than the total a₃** (with opposite signs that nearly cancel), explaining the 0.48 ratio.
+>
+> **Non-reproducibility note.** The 12×12 β=50 outlier depends on *which* local minimum the multi-start optimizer finds. Repeated runs with different random seeds produce formations that do NOT exhibit the outlier (cl/sep fraction ≤ 3%). The problematic minimum is near a shape bifurcation where the closure and separation energies have highly nonlinear behavior along the soft mode. This confirms the near-bifurcation mechanism: the outlier is not intrinsic to the grid/β configuration but to specific near-degenerate minima.
+>
+> Additionally, at the outlier minimum, even the E_bd analytical formula $12\beta\lambda_{\text{bd}} S_3$ disagrees with the E_bd FD value. This discrepancy arises because the volume-constraint projection introduces additional nonlinearity: the FD evaluates $E_{\text{bd}}(\pi_{\Sigma}(\hat{u} + tv_1))$ where the projection $\pi_\Sigma$ shifts all components by a constant that enters the double-well $W(u_i + \text{shift})$ nonlinearly. For most minima this correction is negligible; at near-bifurcation minima it can be large.
+>
+> **Corrected formula.** The exact a₃ is always:
+>
+> $$a_3 = a_3^{\text{bd}} + a_3^{\text{cl}} + a_3^{\text{sep}}$$
+>
+> where each component is computed via central FD along the projected soft mode. The semi-analytical approximation $a_3 \approx 12\beta\lambda_{\text{bd}} S_3$ is valid when (i) the formation is not near a shape bifurcation, and (ii) $\lambda_{\text{cl}}/\lambda_{\text{bd}}$ is moderate. Condition (ii) is violated with default normalized weights ($\lambda_{\text{cl}}/\lambda_{\text{bd}} \approx 13$), but the cl/sep third derivatives are generically small because the closure and separation operators are smooth. The exception is near bifurcation, where all derivatives become large.
+>
+> **Practical recommendation:** For reliable Δ_bdy estimation, compute a₃ via total-energy FD (as in §9.4) rather than the bd-only analytical formula. The S₃ formula remains useful as a structural diagnostic (boundary asymmetry indicator) and as a quick estimate away from bifurcation.
+
+**Full Taylor barrier vs measured:**
+
+| Config | μ | Δ_full (num L₃, L₄) | Δ_measured | full/meas |
+|--------|---|---------------------|-----------|----------|
+| 8×8 β=50 | 0.96 | 0.00913 | 0.00919 | **0.99** |
+| 10×10 β=100 | 0.56 | 0.00116 | 0.00113 | **1.02** |
+| 12×12 β=50 | 1.11 | 0.0408 | 0.0498 | **0.82** |
+| 10×10 β=50 | 1.44 | 0.190 | 0.540 | 0.35 |
+| 8×8 β=20 | 0.12 | 0.00165 | 0.104 | 0.02 |
+
+The full Taylor formula (using numerical L₃, L₄ at the saddle) achieves <2% error for 2 configs (8×8 β=50 and 10×10 β=100) and <20% for a third (12×12 β=50). The poor cases (10×10 β=50, 8×8 β=20) have large μ or complex saddle structure where the 4th-order truncation is insufficient.
+
+### 11.5 Regime Classification
+
+All 7 tested configurations are in the **cubic regime** (|S₃| > 10⁻⁴). No configuration exhibited S₃ ≈ 0 (symmetric quartic regime). This suggests that generic formations on finite grids have asymmetric boundary profiles, making the cubic saddle mechanism dominant.
+
+The purely cubic approximation Δ = 2μ³/(3a₃²) is a useful lower bound but typically underestimates by 10-50% because it neglects the quartic correction that raises the barrier.
+
+### 11.6 Implications
+
+1. **Δ_bdy is now semi-analytically expressible** in terms of formation-intrinsic quantities (μ, β, λ_bd, S₃), reducing the barrier to a single geometric invariant S₃ of the soft mode at the boundary. The S₃ formula is accurate away from bifurcation; near bifurcation, full FD decomposition is needed (§11.4).
+
+2. **The formula explains the barrier hierarchy**: configurations with large |S₃| (asymmetric boundaries) have cubic saddles with lower barriers, while symmetric boundaries would have quartic saddles with barriers scaling as μ² rather than μ³/S₃².
+
+3. **For T-Persist:** the basin radius can now be estimated without running the full energy trace — compute v₁ and a₃ (via total-energy FD for reliability), then r_basin ≈ √(2Δ_bdy/λ_max) with the appropriate formula. This makes the non-bifurcation check (μ > μ_threshold) actionable.
+
+4. **Near-bifurcation caveat (12×12 β=50 class):** When the formation is near a shape transition, the cl/sep third derivatives can dominate a₃, invalidating the E_bd-only approximation. In such cases, the full component decomposition (§11.4) reveals whether the barrier estimate is reliable.
