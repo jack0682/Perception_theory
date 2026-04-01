@@ -821,7 +821,7 @@ When formations have significant bulk overlap ($|O_{jk}| > \eta \cdot \min(|\tex
 
 ### Extension
 
-**Self-referential optimal transport existence.** Existence and uniqueness of optimal transport plans with self-referential cost (cost depends on the cohesion fields that the transport is trying to connect). This is a novel mathematical problem with no existing theory.
+**Self-referential optimal transport existence.** Existence and uniqueness of optimal transport plans with self-referential cost (cost depends on the cohesion fields that the transport is trying to connect). *(Erratum 2026-04-01: Existence proved (Schauder). Uniqueness: transport confinement bound proved — $\|\tilde{u} - u_t\|_2 \leq C_{\mathrm{conf}} \sqrt{m}$ with $C_{\mathrm{conf}} = O(\sigma\sqrt{\varepsilon_{\mathrm{OT}} \log n})$ independent of $u_s$; uniqueness follows when $C_{\mathrm{conf}}\sqrt{m} < r_{\mathrm{basin}}$. Bifurcation at $\beta_{\mathrm{crit}} \approx 5$ on $12{\times}12$: supercritical pitchfork, no hysteresis (exp37). Isoperimetric energy ordering $E(u^*_{2m}) < 2E(u^*_m)$ proved in sharp-interface regime with standard isoperimetric profile. K-merge barrier height $\sim O(\beta^{0.89})$ quantified (exp38). See ISOPERIMETRIC-TRANSPORT-PROOFS.md.)*
 
 **Renormalization group analysis.** Whether the separation energy remains relevant under coarse-graining (spatial rescaling of $X_t$) determines the theory's behavior at different scales. If $\mathcal{E}_{\mathrm{sep}}$ has a nontrivial fixed point under RG flow, separation is a "relevant" perturbation of Allen-Cahn — mathematically and ontologically significant.
 

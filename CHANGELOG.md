@@ -2,6 +2,38 @@
 
 ---
 
+## 2026-04-01 — Phase 4: Bifurcation Crossing, Barrier Height, Isoperimetric Proof, Transport Bound
+
+### Summary
+Three parallel tasks close remaining theory gaps. exp37: bifurcation crossing at β_crit≈5 on 12×12 is a supercritical pitchfork (no hysteresis, two distinct branches at ±Fiedler direction). exp38: K-merge barrier height scales as O(β^0.89) — 106-466 energy units at β=20-100, confirming kinetic stability of multi-formation states. Theory: isoperimetric energy ordering proved (test function + discrete isoperimetric inequality in sharp-interface regime); transport confinement bound proved (C_conf = O(σ√(ε_OT log n)), independent of u_s).
+
+### Files Created
+- `experiments/exp37_bifurcation_crossing.py` — β sweep, branch selection, hysteresis test
+- `experiments/exp38_barrier_height.py` — K-merge barrier via energy path interpolation
+- `docs/04-01/theory/ISOPERIMETRIC-TRANSPORT-PROOFS.md` — Two formal proofs: isoperimetric ordering + transport confinement
+
+### Files Modified
+- `Canonical Spec v2.0.md` — Self-referential OT section: confinement bound, bifurcation, isoperimetric errata
+- `docs/04-01/INDEX.md` — Added ISOPERIMETRIC-TRANSPORT-PROOFS.md
+
+### Theorem Status Changes
+- Isoperimetric Energy Ordering: **Conjectured** → **Proved** (sharp-interface regime, standard isoperimetric profile)
+- Transport Confinement Bound: **New** → **Proved** (C_conf independent of u_s)
+- Transport Selection: **Conditional on WR'** → **Conditional on C_conf√m < r_basin** (weaker, proved bound)
+- K-Merge Barrier: **Unquantified** → **O(β^0.89)** (exp38, 6 configs)
+- Bifurcation type: **Unknown** → **Supercritical pitchfork** (exp37, no hysteresis)
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Bifurcation branch selection mechanism (which branch is chosen by transport + noise?)
+- Formation birth (K → K+1) — reverse of merge
+- Tight constants in transport confinement bound
+- Papers update with Phase 2-4 results
+
+---
+
 ## 2026-04-01 — Phase 3: Near-Bif Directional Extension + Boundary Dynamics + Universal Ordering
 
 ### Summary

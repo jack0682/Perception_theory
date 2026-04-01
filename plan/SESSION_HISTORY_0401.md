@@ -164,11 +164,32 @@ origin: git@github.com:jack0682/Perception_theory.git
 
 ---
 
+### 9. Phase 4 (Bifurcation + Barrier + Proofs) — 3-agent parallel
+
+**exp37-agent** (bifurcation crossing):
+- 12×12, β sweep 5-50
+- β_crit ≈ 5 (empirical), supercritical pitchfork bifurcation
+- ±Fiedler 방향 → 두 distinct branch (correlation = -0.5)
+- Hysteresis 없음 (연속 전이)
+
+**exp38-agent** (barrier height):
+- 15×15 β=[20,30,50,100] + dumbbell bw=[1,4]
+- Barrier ~ O(β^0.89): 106 (β=20) → 466 (β=100)
+- Refined path (gradient relaxation): barrier 3.7× 작지만 여전히 significant (78)
+- Dumbbell barrier 더 작음 (98-146)
+
+**theory-proofs-agent** (formal proofs):
+- Isoperimetric ordering: **PROVED** (test function + isoperimetric inequality)
+- Transport confinement: **PROVED** (C_conf = O(σ√(ε_OT log n)), u_s-independent)
+- Selection uniqueness corollary: C_conf√m < r_basin
+
+---
+
 ## 다음 세션에서 할 일
-- Bifurcation crossing (μ = 0) / branch selection — T-Persist의 유일한 genuinely open 항목
-- Barrier height 정량화 (NEB/string method) for K-Merge
-- Formation birth (K → K+1) 이론
-- Papers 업데이트 (Phase 2+3 결과 반영)
+- Formation birth (K → K+1) — bifurcation에서 새 branch 탄생
+- Bifurcation branch selection — noise/transport가 어떤 branch 선택?
+- Papers 업데이트 (Phase 1-4 결과 반영)
+- Transport confinement tight constants
 - 또는 사용자 지시에 따라 다른 방향
 
 ## 주요 실험 결과 요약
@@ -209,4 +230,7 @@ origin: git@github.com:jack0682/Perception_theory.git
 | K-Strong (saddle) | **Retracted** (exp30 반증) |
 | K=2 Local Stability | **Proved** (curvature ≥ μ₁+μ₂) |
 | Isoperimetric Ordering | **Proved** (homogeneous graphs) |
-| K-Merge Barrier | **Conjectured** (barrier model replaces saddle) |
+| K-Merge Barrier | **Quantified** O(β^0.89), exp38 |
+| Isoperimetric Ordering | **Proved** (sharp-interface, standard isoperimetric) |
+| Transport Confinement | **Proved** (C_conf = O(σ√(ε_OT log n))) |
+| Bifurcation Type | **Supercritical pitchfork** (exp37, no hysteresis) |
