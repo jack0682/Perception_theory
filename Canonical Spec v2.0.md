@@ -442,7 +442,7 @@ $$
 
 clamped to $[0,1]$. A family of fields that achieves $\mathsf{Persist} = 1$ maintains full structural continuity of its cohesive core through time.
 
-**Status Note.** The persistence predicate has zero proved results across all iterations. This remains the theory's largest analytical gap. However, a working computational implementation now exists: the transport kernel uses a self-referential cost based on the cohesion fingerprint φ(x) = (u(x), Cl(u)(x), D(x;1-u), C(x,x)) — no external features needed. Fixed-point iteration converges in the weak regime (small λ_tr, large ε_OT) via Banach contraction. The transport-based Persist predicate implements core-to-core inheritance: Persist = Σ_{Core_t} Σ_{Core_s} M(x,y)·u_s(y) / ρ_persist. Making temporal transport fully self-referential remains a first-class open problem for strong-regime analysis (Section 12).
+**Status Note.** *(Erratum 2026-04-01: Persistence now has extensive proved results — see §13.)* The transport kernel uses a self-referential cost based on the 3-component cohesion fingerprint $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x;1{-}u))$ — the resolvent diagonal $C(x,x)$ was demoted from the canonical fingerprint (contributes $<0.4\%$ of fingerprint gap but has Jacobian norm $\sim$9300). Fixed-point existence proved via Schauder (any $\varepsilon_{\mathrm{OT}} > 0$); uniqueness via transport confinement ($C_{\mathrm{conf}} = O(\sigma\sqrt{\varepsilon_{\mathrm{OT}}\log n})$, independent of $u_s$). The transport-based Persist predicate implements core-to-core inheritance. End-to-end chain verified: exp27 (5/5 × 5/5 = 100% pass), exp28 (84/100, all failures at $n < 64$ or $\beta < 20$).
 
 ### 7.2. The Proto-Cohesion Diagnostic Vector
 
@@ -728,7 +728,7 @@ The following problems remain unresolved and constitute the primary agenda for t
 
 ### Foundational
 
-**Self-referential transport.** Making the transport kernel $\mathbf{M}_{t \to s}$ depend only on $u_t$, $u_s$, and $\mathbf{N}$ — without external features $\varphi$ or predicted correspondence $\Psi$ — remains the most important foundational open problem for the strong regime. A weak-regime implementation now exists and is numerically verified: the cohesion fingerprint $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x; 1-u), C(x,x))$ provides a self-referential feature vector, and fixed-point iteration (alternating OT plan computation with field re-optimization) converges in 2–3 iterations when $\lambda_{\mathrm{tr}}$ is small and $\varepsilon_{\mathrm{OT}}$ is large (Banach contraction in the weak regime). Two-tier transport concentration (deep core $>99.99\%$, shallow core $>99.3\%$ core-to-core transport) is confirmed by Experiments 10–11. Full existence and uniqueness results for the strong regime remain open.
+**Self-referential transport.** *(Erratum 2026-04-01: Largely resolved.)* The transport kernel depends only on $u_t$, $u_s$, and $\mathbf{N}$ via the 3-component cohesion fingerprint $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x; 1{-}u))$. Fixed-point existence proved (Schauder, any $\varepsilon_{\mathrm{OT}} > 0$). Selection/uniqueness: transport confinement bound $C_{\mathrm{conf}} = O(\sigma\sqrt{\varepsilon_{\mathrm{OT}}\log n})$ proved, independent of $u_s$; exp29 confirms no multiplicity across $\lambda_{\mathrm{tr}} \in [0.01, 10]$. Remaining: tight confinement constants (current bound 25–10000× conservative, exp40/41).
 
 **Discrete substrate defense.** The theory claims to describe pre-objective cohesion but defines its fields over individuated discrete sites $X_t$. A formal articulation of why this does not undermine the theory's philosophical claims — distinguishing the substrate (sites as relational loci) from the emergent structure (formations as cohesive organizations) — requires a more developed argument than the brief remark in Section 2. This is a philosophical-foundational problem, not a mathematical one.
 
@@ -737,7 +737,7 @@ The following problems remain unresolved and constitute the primary agenda for t
 **Multi-formation temporal evolution.** Independent per-formation transport (Option A) is now implemented for the **well-separated regime** — formations with disjoint supports. The architecture:
 
 - **$K$ transport plans** $\mathbf{M}^k_{t \to s}$, one per formation, each computed independently via the single-formation transport pipeline (cohesion fingerprint, self-referential cost, log-domain Sinkhorn partial OT).
-- **Per-formation fingerprint** $\varphi^k(x) = (u^k(x),\, \mathrm{Cl}^k(u^k)(x),\, D^k(x; 1-u^k),\, C^k(x,x))$ using formation-specific operators derived from $u^k$.
+- **Per-formation fingerprint** $\varphi^k(x) = (u^k(x),\, \mathrm{Cl}^k(u^k)(x),\, D^k(x; 1{-}u^k))$ using formation-specific operators derived from $u^k$. *(Erratum 2026-04-01: resolvent $C^k(x,x)$ demoted from canonical fingerprint.)*
 - **Simplex constraint in the temporal domain**: $\sum_{k=1}^{K} (\mathbf{M}^k \cdot u^k_s)(x) \leq 1$ for all $x$, enforced by post-hoc proportional rescaling when violated.
 - **Per-formation persistence diagnostic**: $\mathsf{Persist}^k = \text{core-to-core inheritance via } \mathbf{M}^k$, applying the single-formation T-Persist directly to each $(u^k_t, u^k_s)$ pair.
 
@@ -749,8 +749,8 @@ When formations have disjoint supports, per-formation T-Persist applies directly
 - **Coupled transport cost**: Implemented — repulsion-aware OT cost penalizes transport to occupied sites.
 
 **Remaining open problems:**
-- **Strongly-interacting regime** (significant bulk overlap): Dichotomy theorem (persistence or merge) planned but not proved. May require mean-field game theory or multi-marginal OT.
-- **Formation birth/death** (variable $K$) is not yet modeled — the current architecture assumes fixed $K$ across time steps.
+- **Strongly-interacting regime** (significant bulk overlap): *(Erratum 2026-04-01: Saddle conjecture retracted — K=2 is always a local minimum, never a saddle (exp30). Barrier model replaces saddle descent: K-merge barrier scales as $O(\beta^{0.89})$ (exp38). K=2 local stability proved: merge-direction curvature $\geq \mu_1 + \mu_2 > 0$. Isoperimetric energy ordering $E(u^*_{2m}) < 2E(u^*_m)$ proved. Multi-formation persistence is kinetic (barrier-based), not thermodynamic.)* Remaining: transition state characterization (NEB/string method), Kramers rates for thermal barrier crossing.
+- **Formation birth/death** (variable $K$): *(Erratum 2026-04-01: Three mechanisms formalized — parametric nucleation (supercritical pitchfork at $\beta_{\mathrm{crit}}$, exp37), topological splitting (graph structure change, exp39), volume-driven (ruled out on homogeneous grids). See FORMATION-BIRTH-THEORY.md.)* Remaining: formal birth theorem, multi-birth ($K \to K{+}2$).
 - **Cross-formation mass transfer** semantics for the strongly-interacting regime remains an open design choice.
 
 **Coupling Bound Lemma (K-Formation Hessian).**
@@ -898,6 +898,8 @@ As $\varepsilon = \alpha/\beta \to 0$, the boundary-morphology energy $\mathcal{
 
 ### Category B: Proved with Explicit Structural Parameter
 
+*(Note: T-Bind-Proj/Full are effectively Category A for $\tau_{\mathrm{cl}} = 1/2$ since $\bar{r}_0 = O(n^{-1/d})$ is now analytically bounded. Retained in Category B for general $\tau$ where the bound is regime-specific.)*
+
 **T-Bind-Proj. Tangential Residual Bound at Constrained Minimizers.**
 Let $G = (X, \mathbf{N})$ be a finite connected graph with $n = |X|$ vertices. Let $\hat{u}$ be a global minimizer of $\mathcal{E} = \lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}} + \lambda_{\mathrm{sep}} \mathcal{E}_{\mathrm{sep}} + \lambda_{\mathrm{bd}} \mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$ with strict interiority ($0 < \hat{u}_i < 1$ for all $i$), and suppose $a_{\mathrm{cl}} < 4$ (contraction regime). Let $r = \mathrm{Cl}(\hat{u}) - \hat{u}$ be the closure residual, $r_T = \Pi_T(r)$ its tangential component, and $\bar{r}_0 = |\mathbf{1}^T r|/n$ the per-site mean residual. Then:
 
@@ -976,7 +978,7 @@ Let $\hat{u}_t$ be a formation at time $t$ and $\hat{u}_s$ the minimizer at time
 - Weak-regime fixed-point convergence in 2–3 iterations
 - Transport-based Persist $\approx 0.90$–$0.97$ across perturbation scenarios
 
-*Implementation:* `scc/transport.py` implements the full pipeline: cohesion fingerprint $\varphi = (u, \mathrm{Cl}(u), D(x;1-u), C(x,x))$, self-referential cost, log-domain Sinkhorn partial OT, transport field application, and self-referential fixed-point iteration. 28 transport-specific tests pass. The implementation covers the weak regime ($\lambda_{\mathrm{tr}}$ small, $\varepsilon_{\mathrm{OT}}$ large); the strong regime remains open (see §12).
+*Implementation:* `scc/transport.py` implements the full pipeline: 3-component cohesion fingerprint $\varphi = (u, \mathrm{Cl}(u), D(x;1{-}u))$ *(erratum 2026-04-01: resolvent $C(x,x)$ demoted — see §7.1)*, self-referential cost, log-domain Sinkhorn partial OT, transport field application, and self-referential fixed-point iteration. 175 tests pass (28 transport-specific). Strong-regime selection resolved: no multiplicity observed across $\lambda_{\mathrm{tr}} \in [0.01, 10]$ (exp29); transport confinement bound proved (ISOPERIMETRIC-TRANSPORT-PROOFS.md).
 
 **T-Persist-K-Weak. Multi-Formation Temporal Persistence (Weakly-Interacting Regime).**
 Extends T-Persist-K-Sep to formations with boundary overlap ($|O_{jk}| = O(|\partial\text{Core}|)$). Joint Hessian has off-diagonal blocks $V_{jk} = \lambda_{\text{rep}} I$ (global coupling); spectral gap via Weyl bound: $\mu_{\text{joint}} \geq \min_k \mu_k - (K-1)\lambda_{\text{rep}}$. Under (H1-K), (WI: $|O_{jk}| \leq 0.2 \cdot \min(|\text{Core}_j|, |\text{Core}_k|)$), (SR: $\min_k \mu_k > (K-1)\lambda_{\text{rep}}$), (NB-K: $\mu_{\text{joint}} > \mu_0$): (a) joint minimizer persistence, (b) deep core unaffected by coupling, (c) boundary overlap sites have shifted-threshold fallback, (d) post-hoc simplex correction within basin radius, (e) deep core fingerprint gap preserved.

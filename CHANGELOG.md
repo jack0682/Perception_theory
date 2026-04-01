@@ -2,6 +2,23 @@
 
 ---
 
+## 2026-04-01 — Phase 8: Spec Audit Fixes + Comprehensive Verification 14/14 PASS
+
+### Summary
+Fixed all 5 audit issues in Canonical Spec: T-Bind Category A note, §7.1/§12/§13 fingerprint updated to 3-component, §12 stale "open" items updated with Phase 1-7 errata (transport selection resolved, saddle retracted, formation birth formalized). exp44 comprehensive verification: 14/14 PASS on 15×15 β=50 — ALL key theory predictions confirmed in single experiment.
+
+### Files Created
+- `experiments/exp44_comprehensive_verify.py` — 14-test comprehensive verification
+- `experiments/results/exp44_comprehensive_verify.json` — 14/14 PASS
+
+### Files Modified
+- `Canonical Spec v2.0.md` — 5 audit fixes (§7.1 fingerprint, §12 transport/multi-formation errata, §13 T-Bind Cat A note)
+
+### Test Count
+175 tests passing (unchanged)
+
+---
+
 ## 2026-04-01 — Phase 7: 50×50 Scale, Formation Birth Theory, Final Audit
 
 ### Summary
