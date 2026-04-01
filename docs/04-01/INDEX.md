@@ -20,6 +20,13 @@
 | [NEARBIF-DIRECTIONAL-EXTENSION.md](theory/NEARBIF-DIRECTIONAL-EXTENSION.md) | complete | Phase 3: Directional basin extends Tier 1 persistence 2.5-4.3× into near-bif regime. Universal isoperimetric ordering (24 topologies). Boundary instability channel verified. |
 | [ISOPERIMETRIC-TRANSPORT-PROOFS.md](theory/ISOPERIMETRIC-TRANSPORT-PROOFS.md) | complete | Phase 4: Isoperimetric energy ordering proved (test function + isoperimetric inequality). Transport confinement bound proved (C_conf = O(σ√(ε_OT log n)), u_s-independent). |
 | [R-BAR-BOUND.md](theory/R-BAR-BOUND.md) | complete | Phase 6: Analytical bound on r̄₀ (mean KKT residual). Three approaches: Cauchy–Schwarz, binary mass-balance, KKT contraction. Main result: r̄₀ = O(n^{-1/d}) for τ=1/2 via sharp-interface cancellation. Upgrades T-Bind to Category A. |
+| [FORMATION-BIRTH-THEORY.md](theory/FORMATION-BIRTH-THEORY.md) | complete | Phase 7: Three formation birth mechanisms — parametric nucleation (pitchfork, proved via T8-Core), topological splitting (hidden birth within K=1, empirically verified), volume-driven (ruled out on homogeneous grids). Connection to T-Persist, open questions on multi-birth and birth-death asymmetry. |
+
+## audit/
+
+| File | Status | Description |
+|------|--------|-------------|
+| [FINAL-SPEC-AUDIT.md](audit/FINAL-SPEC-AUDIT.md) | complete | Phase 7: Cross-reference of all 43 theorems/propositions in Canonical Spec against proof docs and experiments. 43/43 consistent, 5 minor organizational issues found. |
 
 ## synthesis/
 

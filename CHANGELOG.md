@@ -2,6 +2,29 @@
 
 ---
 
+## 2026-04-01 — Phase 7: 50×50 Scale, Formation Birth Theory, Final Audit
+
+### Summary
+Final verification phase. exp43: scale test up to 50×50 (n=2500) — all predictions hold; deep/core ratio 0.67→0.91, Bind stable at 0.85, boundary scaling slope -0.435. Formation birth theory formalized: three mechanisms (parametric nucleation, topological splitting, volume-driven — last not observed). Final spec audit: 43/43 theorems consistent; 1 medium issue (T-Bind section placement). CLAUDE.md stale r̄₀ reference updated.
+
+### Files Created
+- `experiments/exp43_50x50_scale.py` — Scale verification 10-50×50
+- `docs/04-01/theory/FORMATION-BIRTH-THEORY.md` — Formation birth formal theory (193 lines)
+- `docs/04-01/audit/FINAL-SPEC-AUDIT.md` — Complete cross-reference audit (43/43 consistent)
+
+### Files Modified
+- `CLAUDE.md` — Updated T-Bind description (r̄₀ now analytically bounded)
+
+### Key Results
+- 50×50 (n=2500): formation finding, diagnostics, all pass
+- Formation birth: topology-driven (crack) is the primary mechanism
+- Spec audit: no inconsistencies, 1 medium section-placement issue
+
+### Test Count
+175 tests passing (unchanged)
+
+---
+
 ## 2026-04-01 — Phase 6: Tight Confinement, Scale Verification, r̄₀ Bound
 
 ### Summary
