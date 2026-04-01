@@ -209,11 +209,19 @@ origin: git@github.com:jack0682/Perception_theory.git
 | Phase 4 | exp37-38 | Pitchfork bifurcation, barrier O(β^0.89), 2 proofs |
 | Phase 5 | exp39-40 | Birth mechanism, bound slack 25-10000×, 83% proved |
 
-## 다음 세션에서 할 일
-- Papers 업데이트 — **최우선**
-- Transport confinement tight constants
-- Formation birth formal theory
-- Larger-scale experiments (30×30, 50×50)
+## 다음 세션 (04-02) 할 일 — 이론 완결성 최우선
+
+**Plan_0402_proof_priorities.md 참조**
+
+### Tier 1 (즉시, 병렬 3-agent):
+1. **C3'' 대칭화 gap 폐쇄** — C-Axioms 유일한 gap, Medium
+2. **Transport confinement tight bound** — B1에 1.05× safety → 실용적 condition
+3. **Basin containment 무조건화** — GT + NB generic 증명
+
+### Tier 2 (Tier 1 완료 후):
+4. **K-Weak NB-K spectral gap** — Weyl tightness 개선
+
+### 목표: 이론 완결도 88% → 93%+
 
 ## 주요 실험 결과 요약
 
