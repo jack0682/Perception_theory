@@ -1,0 +1,255 @@
+{
+  "experiment": "exp42_scale_verification",
+  "params": {
+    "beta": 50.0,
+    "volume_fraction": 0.3
+  },
+  "grids": [
+    {
+      "side": 10,
+      "n": 100,
+      "formation": {
+        "energy": 2.6361900162449636,
+        "energy_terms": {
+          "E_bd": 23.27160929144004,
+          "E_cl": 2.452323085998084,
+          "E_sep": 2.118123737959812,
+          "E_total": 2.6361900162449636
+        },
+        "converged": true,
+        "n_iter": 191,
+        "max_u": 1.0,
+        "min_u": 0.0,
+        "std_u": 0.4415196024284574,
+        "formation_strength": 1.0,
+        "time_sec": 0.5
+      },
+      "core": {
+        "core_size": 31,
+        "deep_size": 21,
+        "boundary_size": 10,
+        "deep_ratio": 0.6774193548387096,
+        "boundary_ratio": 0.3225806451612903
+      },
+      "boundary_scaling": {
+        "n": 100,
+        "boundary_over_core": 0.3225806451612903
+      },
+      "diagnostics": {
+        "Bind": 0.8434010508975848,
+        "Sep": 0.9293958754013405,
+        "Inside": 0.9909849038541589,
+        "Persist": 1.0,
+        "min_score": 0.8434010508975848,
+        "mean_score": 0.940945457538271
+      },
+      "transport": {
+        "converged": true,
+        "iterations": 1,
+        "transport_energy": 2.1757517043972316,
+        "time_sec": 0.09
+      },
+      "spectral_proxy": {
+        "curvatures": [
+          73657.10635411915,
+          69849.28495512577,
+          83575.6838696966,
+          78358.59292555369,
+          76213.59218035194
+        ],
+        "min_curvature": 69849.28495512577,
+        "mean_curvature": 76330.85205696944,
+        "time_sec": 0.0
+      }
+    },
+    {
+      "side": 15,
+      "n": 225,
+      "formation": {
+        "energy": 5.315086551202198,
+        "energy_terms": {
+          "E_bd": 42.30858482357365,
+          "E_cl": 5.289785945568774,
+          "E_sep": 4.3331306282053585,
+          "E_total": 5.315086551202198
+        },
+        "converged": true,
+        "n_iter": 386,
+        "max_u": 1.0,
+        "min_u": 0.0,
+        "std_u": 0.4418485974477047,
+        "formation_strength": 1.0,
+        "time_sec": 0.84
+      },
+      "core": {
+        "core_size": 69,
+        "deep_size": 53,
+        "boundary_size": 16,
+        "deep_ratio": 0.7681159420289855,
+        "boundary_ratio": 0.2318840579710145
+      },
+      "boundary_scaling": {
+        "n": 225,
+        "boundary_over_core": 0.2318840579710145
+      },
+      "diagnostics": {
+        "Bind": 0.8466697689361833,
+        "Sep": 0.935805472174736,
+        "Inside": 0.9773237864321929,
+        "Persist": 1.0,
+        "min_score": 0.8466697689361833,
+        "mean_score": 0.939949756885778
+      },
+      "transport": {
+        "converged": true,
+        "iterations": 2,
+        "transport_energy": 5.279325330730176,
+        "time_sec": 0.4
+      },
+      "spectral_proxy": {
+        "curvatures": [
+          98401.3687599372,
+          98083.35171612725,
+          101219.88773050816,
+          93733.24710679753,
+          93742.65297310558
+        ],
+        "min_curvature": 93733.24710679753,
+        "mean_curvature": 97036.10165729513,
+        "time_sec": 0.0
+      }
+    },
+    {
+      "side": 20,
+      "n": 400,
+      "formation": {
+        "energy": 7.634530254693751,
+        "energy_terms": {
+          "E_bd": 47.28824899029991,
+          "E_cl": 9.107274677603016,
+          "E_sep": 5.185156754516585,
+          "E_total": 7.634530254693751
+        },
+        "converged": true,
+        "n_iter": 244,
+        "max_u": 1.0,
+        "min_u": 0.0,
+        "std_u": 0.44769568799276827,
+        "formation_strength": 1.0,
+        "time_sec": 0.72
+      },
+      "core": {
+        "core_size": 121,
+        "deep_size": 104,
+        "boundary_size": 17,
+        "deep_ratio": 0.859504132231405,
+        "boundary_ratio": 0.14049586776859505
+      },
+      "boundary_scaling": {
+        "n": 400,
+        "boundary_over_core": 0.14049586776859505
+      },
+      "diagnostics": {
+        "Bind": 0.8491086924504677,
+        "Sep": 0.9567903603790285,
+        "Inside": 0.9882110702078641,
+        "Persist": 1.0,
+        "min_score": 0.8491086924504677,
+        "mean_score": 0.9485275307593402
+      },
+      "transport": {
+        "converged": true,
+        "iterations": 2,
+        "transport_energy": 9.6320832633901,
+        "time_sec": 1.09
+      },
+      "spectral_proxy": {
+        "curvatures": [
+          90145.45772458859,
+          88922.05552086807,
+          91515.81597137693,
+          82711.55539745223,
+          86797.96589348144
+        ],
+        "min_curvature": 82711.55539745223,
+        "mean_curvature": 88018.57010155344,
+        "time_sec": 0.0
+      }
+    },
+    {
+      "side": 30,
+      "n": 900,
+      "formation": {
+        "energy": 15.022078743581297,
+        "energy_terms": {
+          "E_bd": 75.12202648517271,
+          "E_cl": 20.27061600191655,
+          "E_sep": 8.280080626529298,
+          "E_total": 15.022078743581297
+        },
+        "converged": true,
+        "n_iter": 161,
+        "max_u": 1.0,
+        "min_u": 0.0,
+        "std_u": 0.4505526406320836,
+        "formation_strength": 1.0,
+        "time_sec": 0.75
+      },
+      "core": {
+        "core_size": 272,
+        "deep_size": 241,
+        "boundary_size": 31,
+        "deep_ratio": 0.8860294117647058,
+        "boundary_ratio": 0.11397058823529412
+      },
+      "boundary_scaling": {
+        "n": 900,
+        "boundary_over_core": 0.11397058823529412
+      },
+      "diagnostics": {
+        "Bind": 0.8499236638613663,
+        "Sep": 0.9693330347165584,
+        "Inside": 0.9902195239133954,
+        "Persist": 1.0,
+        "min_score": 0.8499236638613663,
+        "mean_score": 0.95236905562283
+      },
+      "transport": {
+        "converged": true,
+        "iterations": 3,
+        "transport_energy": 21.988358679572556,
+        "time_sec": 8.86
+      },
+      "spectral_proxy": {
+        "curvatures": [
+          126888.50960103082,
+          122423.83619991415,
+          125643.88338773824,
+          129239.7868013495,
+          123718.50322097089
+        ],
+        "min_curvature": 122423.83619991415,
+        "mean_curvature": 125582.90384220071,
+        "time_sec": 0.0
+      }
+    }
+  ],
+  "boundary_scaling_fit": {
+    "ns": [
+      100,
+      225,
+      400,
+      900
+    ],
+    "ratios": [
+      0.3225806451612903,
+      0.2318840579710145,
+      0.14049586776859505,
+      0.11397058823529412
+    ],
+    "slope": -0.4990098972521398,
+    "expected_slope": -0.5,
+    "interpretation": "Slope=-0.499 (expected ~-0.5 for O(n^{-1/2}) scaling). CONSISTENT"
+  },
+  "total_time_sec": 13.27
+}

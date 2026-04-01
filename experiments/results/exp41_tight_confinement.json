@@ -1,0 +1,413 @@
+{
+  "experiment": "exp41_tight_confinement",
+  "description": "Tight formation-aware transport confinement bounds",
+  "parameters": {
+    "sigma": 1.0,
+    "gamma": 1.0,
+    "eps_ot": 1.0,
+    "core_threshold": 0.5
+  },
+  "configs": [
+    {
+      "config": "10x10_beta30",
+      "n": 100,
+      "beta": 30.0,
+      "m": 30.000000000000966,
+      "core_size": 30,
+      "boundary_size": 10,
+      "R_F": 6.0,
+      "diam": 18.0,
+      "delta_phi_sq": 1.768624807447328,
+      "max_displacement": 4.445520167050641,
+      "bounds": {
+        "B_naive": 11.753940002384187,
+        "B1": 5.477225575051749,
+        "B2": 1.7320508075689052,
+        "B3": 1.825741858350583,
+        "B4": 0.9342360741735785,
+        "B5": 4.445520167050641
+      },
+      "tightness_ratios": {
+        "B_naive": 0.37821531896103816,
+        "B1": 0.8116372251125771,
+        "B2": 2.5666222651345563,
+        "B3": 2.4349116753377316,
+        "B4": 4.758454838069843,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "True",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 0.8902970673715406,
+          "ot_converged": true,
+          "ot_iterations": 45
+        },
+        {
+          "target": "uniform",
+          "displacement": 4.445520167050641,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 4.369039063768895,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 1.3556076722300547,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    },
+    {
+      "config": "10x10_beta50",
+      "n": 100,
+      "beta": 50.0,
+      "m": 30.00000000000042,
+      "core_size": 31,
+      "boundary_size": 10,
+      "R_F": 5.0,
+      "diam": 18.0,
+      "delta_phi_sq": 1.3502954858608338,
+      "max_displacement": 5.600790055630968,
+      "bounds": {
+        "B_naive": 11.75394000238408,
+        "B1": 5.477225575051699,
+        "B2": 1.7320508075688894,
+        "B3": 1.521451548625472,
+        "B4": 1.4194978821634543,
+        "B5": 5.600790055630968
+      },
+      "tightness_ratios": {
+        "B_naive": 0.476503202712873,
+        "B1": 1.0225596844398914,
+        "B2": 3.233617646293096,
+        "B3": 3.681214863983609,
+        "B4": 3.945613534199018,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "False",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 1.5256672455005416,
+          "ot_converged": true,
+          "ot_iterations": 95
+        },
+        {
+          "target": "uniform",
+          "displacement": 4.414954858675726,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 5.600790055630968,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 2.9821523486266535,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    },
+    {
+      "config": "15x15_beta30",
+      "n": 225,
+      "beta": 30.0,
+      "m": 67.50000000000054,
+      "core_size": 68,
+      "boundary_size": 16,
+      "R_F": 9.0,
+      "diam": 28.0,
+      "delta_phi_sq": 1.1009322069212406,
+      "max_displacement": 7.631908415693504,
+      "bounds": {
+        "B_naive": 19.120323667469684,
+        "B1": 8.763560920082693,
+        "B2": 2.190890230020673,
+        "B3": 2.6408051879713477,
+        "B4": 2.73226679367148,
+        "B5": 7.631908415693504
+      },
+      "tightness_ratios": {
+        "B_naive": 0.39915163301749085,
+        "B1": 0.8708684158518395,
+        "B2": 3.483473663407358,
+        "B3": 2.889992965197215,
+        "B4": 2.7932515350882468,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "True",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 1.5262725855395363,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "uniform",
+          "displacement": 6.619098303224402,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 7.631908415693504,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 1.7331959618409865,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    },
+    {
+      "config": "15x15_beta50",
+      "n": 225,
+      "beta": 50.0,
+      "m": 67.49999999999922,
+      "core_size": 68,
+      "boundary_size": 17,
+      "R_F": 9.0,
+      "diam": 28.0,
+      "delta_phi_sq": 1.1715111648666114,
+      "max_displacement": 7.461436210499667,
+      "bounds": {
+        "B_naive": 19.120323667469496,
+        "B1": 9.31128347758777,
+        "B2": 2.25831795812723,
+        "B3": 2.6408051879713215,
+        "B4": 2.5460741760851615,
+        "B5": 7.461436210499667
+      },
+      "tightness_ratios": {
+        "B_naive": 0.39023587363190076,
+        "B1": 0.8013327301718739,
+        "B2": 3.3039794877632116,
+        "B3": 2.825439848606014,
+        "B4": 2.930565134583925,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "True",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 1.559411228301011,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "uniform",
+          "displacement": 6.6890257075019255,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 7.461436210499667,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 4.278101656992916,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    },
+    {
+      "config": "15x15_beta100",
+      "n": 225,
+      "beta": 100.0,
+      "m": 67.50000000000094,
+      "core_size": 70,
+      "boundary_size": 17,
+      "R_F": 9.0,
+      "diam": 28.0,
+      "delta_phi_sq": 0.9054180732048062,
+      "max_displacement": 6.6318950147466875,
+      "bounds": {
+        "B_naive": 19.120323667469737,
+        "B1": 9.311283477587887,
+        "B2": 2.2583179581272588,
+        "B3": 2.6408051879713548,
+        "B4": 3.322261500004766,
+        "B5": 6.6318950147466875
+      },
+      "tightness_ratios": {
+        "B_naive": 0.34685056226479194,
+        "B1": 0.7122428428593711,
+        "B2": 2.9366524721993876,
+        "B3": 2.5113155051930414,
+        "B4": 1.9961989791403154,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "True",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 4.3814921201759365,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "uniform",
+          "displacement": 6.6318950147466875,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 6.191791220915745,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 2.3596196647441587,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    },
+    {
+      "config": "20x20_beta50",
+      "n": 400,
+      "beta": 50.0,
+      "m": 120.00000000000011,
+      "core_size": 121,
+      "boundary_size": 24,
+      "R_F": 13.0,
+      "diam": 38.0,
+      "delta_phi_sq": 0.6827989873729904,
+      "max_displacement": 10.18561409368755,
+      "bounds": {
+        "B_naive": 26.813723084513246,
+        "B1": 13.145341380123993,
+        "B2": 2.683281572999749,
+        "B3": 3.7475753934564016,
+        "B4": 5.534199242269961,
+        "B5": 10.18561409368755
+      },
+      "tightness_ratios": {
+        "B_naive": 0.37986571508864564,
+        "B1": 0.774845916827112,
+        "B2": 3.7959542510108766,
+        "B3": 2.7179210621012544,
+        "B4": 1.8404856145926758,
+        "B5": 1.0
+      },
+      "validity": {
+        "B_naive": "True",
+        "B1": "True",
+        "B2": "False",
+        "B3": "False",
+        "B4": "False",
+        "B5": true
+      },
+      "targets": [
+        {
+          "target": "self",
+          "displacement": 2.097140668086173,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "uniform",
+          "displacement": 8.91287065457883,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "random",
+          "displacement": 10.18561409368755,
+          "ot_converged": false,
+          "ot_iterations": 100
+        },
+        {
+          "target": "shifted",
+          "displacement": 3.2980648651679756,
+          "ot_converged": false,
+          "ot_iterations": 100
+        }
+      ]
+    }
+  ],
+  "bound_summary": {
+    "B_naive": {
+      "universally_valid": true,
+      "max_tightness_ratio": 0.476503202712873,
+      "mean_tightness_ratio": 0.3951370509461234
+    },
+    "B1": {
+      "universally_valid": false,
+      "max_tightness_ratio": 1.0225596844398914,
+      "mean_tightness_ratio": 0.8322478025437775
+    },
+    "B2": {
+      "universally_valid": false,
+      "max_tightness_ratio": 3.7959542510108766,
+      "mean_tightness_ratio": 3.2200499643014147
+    },
+    "B3": {
+      "universally_valid": false,
+      "max_tightness_ratio": 3.681214863983609,
+      "mean_tightness_ratio": 2.843465986736477
+    },
+    "B4": {
+      "universally_valid": false,
+      "max_tightness_ratio": 4.758454838069843,
+      "mean_tightness_ratio": 3.044094939279004
+    }
+  },
+  "best_bound": "B_naive",
+  "best_max_ratio": 0.476503202712873
+}

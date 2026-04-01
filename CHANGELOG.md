@@ -2,6 +2,33 @@
 
 ---
 
+## 2026-04-01 — Phase 6: Tight Confinement, Scale Verification, r̄₀ Bound
+
+### Summary
+Three theory tightening tasks. exp41: formation-aware confinement bounds tested — B_naive remains only universally valid bound (max ratio 0.48), B1 (boundary-proportional) nearly valid (1.02× violation). exp42: scale verification on 10-30×30 — all predictions hold at scale; boundary scaling slope = -0.499 (theory: -0.500); deep/core ratio increases from 0.68 to 0.89; transport converges in 1-3 iterations. r̄₀ bound: proved r̄₀ = O(n^{-1/d}) via KKT + sharp-interface analysis, upgrading T-Bind from Category B → A for τ=1/2.
+
+### Files Created
+- `experiments/exp41_tight_confinement.py` — Formation-aware confinement bounds (5 candidates)
+- `experiments/exp42_scale_verification.py` — Scale verification 10-30×30
+- `docs/04-01/theory/R-BAR-BOUND.md` — r̄₀ analytical bound (3 approaches, main theorem)
+
+### Files Modified
+- `docs/04-01/INDEX.md` — Added R-BAR-BOUND.md
+
+### Theorem Status Changes
+- T-Bind: **Category B** → **Category A** (for τ=1/2, r̄₀ = O(n^{-1/d}) proved)
+- Boundary scaling: **Predicted O(n^{-1/2})** → **Verified** (slope = -0.499, 4 grid sizes)
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Tight confinement constants (B1 boundary-proportional nearly works, needs 1.05× safety factor)
+- Papers update
+- 50×50 scale test (30×30 passed, 50×50 may be slow)
+
+---
+
 ## 2026-04-01 — Phase 5: Formation Birth, T-Persist Confinement Verification, Unified Synthesis
 
 ### Summary
