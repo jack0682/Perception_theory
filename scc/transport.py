@@ -198,17 +198,22 @@ def transport_field(M: np.ndarray, u_s: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 def cohesion_fingerprint(
-    u: np.ndarray, graph: GraphState, params: ParameterRegistry
+    u: np.ndarray, graph: GraphState, params: ParameterRegistry,
+    use_resolvent: bool = False,
 ) -> np.ndarray:
-    """Compute the cohesion fingerprint φ(x) ∈ [0,1]^4 at each site.
+    """Compute the cohesion fingerprint φ(x) at each site.
 
-    φ(x) = (u(x), Cl(u)(x), D(x; 1-u), C(x,x))
-
-    Components:
+    Default (use_resolvent=False): φ(x) ∈ [0,1]^3
         φ₀ = u(x)        — raw cohesion value
         φ₁ = Cl(u)(x)    — self-completion (closure operator)
         φ₂ = D(x; 1-u)   — self-contrast (distinction operator)
+
+    With use_resolvent=True: φ(x) ∈ [0,1]^4 (backward compat)
         φ₃ = C(x,x)      — self-integration (resolvent diagonal, normalized)
+
+    The resolvent component C(x,x) is demoted from the canonical fingerprint:
+    it contributes <0.4% of the fingerprint gap but has Jacobian norm ~9300,
+    making the cost matrix poorly conditioned for gradient-based analysis.
 
     Parameters
     ----------
@@ -218,10 +223,12 @@ def cohesion_fingerprint(
         Graph structure with adjacency and derived quantities.
     params : ParameterRegistry
         Operator parameters.
+    use_resolvent : bool, default False
+        If True, include resolvent diagonal as 4th component (backward compat).
 
     Returns
     -------
-    np.ndarray, shape (n, 4)
+    np.ndarray, shape (n, 3) or (n, 4)
         Fingerprint vectors for all sites.
 
     References
@@ -232,21 +239,20 @@ def cohesion_fingerprint(
         raise ValueError("Input field contains NaN")
 
     n = graph.n
-    phi = np.empty((n, 4))
+    n_components = 4 if use_resolvent else 3
+    phi = np.empty((n, n_components))
 
     phi[:, 0] = u
     phi[:, 1] = closure(u, graph, params)
     phi[:, 2] = distinction(u, graph, params)
 
-    # Resolvent diagonal C(x,x) >= 1 (Neumann series starts at I).
-    # Interaction-only normalization: (C(x,x) - 1) / C(x,x) maps [1, ∞) → [0, 1).
-    # The identity contribution (1) is subtracted so only the co-belonging
-    # interaction term remains, preserving relative differences: core sites
-    # with high co-belonging have C(x,x) >> 1 → φ₃ ≈ 1, while exterior
-    # sites with C(x,x) ≈ 1 → φ₃ ≈ 0. This gives meaningful discrimination
-    # for the transport cost, unlike 1/C(x,x) which saturates near 1.0.
-    c_diag = resolvent_diagonal(u, graph, params)
-    phi[:, 3] = np.clip((c_diag - 1.0) / np.maximum(c_diag, _EPS), 0.0, 1.0)
+    if use_resolvent:
+        # Resolvent diagonal C(x,x) >= 1 (Neumann series starts at I).
+        # Interaction-only normalization: (C(x,x) - 1) / C(x,x) maps [1, ∞) → [0, 1).
+        # The identity contribution (1) is subtracted so only the co-belonging
+        # interaction term remains, preserving relative differences.
+        c_diag = resolvent_diagonal(u, graph, params)
+        phi[:, 3] = np.clip((c_diag - 1.0) / np.maximum(c_diag, _EPS), 0.0, 1.0)
 
     return phi
 
@@ -295,10 +301,10 @@ def transport_cost(
 
     Parameters
     ----------
-    phi_t : np.ndarray, shape (n, 4)
-        Cohesion fingerprint at time t (source).
-    phi_s : np.ndarray, shape (n, 4)
-        Cohesion fingerprint at time s (target).
+    phi_t : np.ndarray, shape (n, d)
+        Cohesion fingerprint at time t (source). d=3 (default) or d=4 (with resolvent).
+    phi_s : np.ndarray, shape (n, d)
+        Cohesion fingerprint at time s (target). Must have same d as phi_t.
     dist_matrix : np.ndarray, shape (n, n)
         Pairwise graph distances.
     sigma : float

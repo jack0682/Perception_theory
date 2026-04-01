@@ -37,6 +37,12 @@ T-Persist deep analysis and multi-formation temporal theory.
 | THREE-REGIME-SYNTHESIS.md | **Unified theorem-status map for well-separated / weakly-interacting / strongly-interacting regimes** | Complete |
 | NEAR-BIFURCATION-LOCAL-THEORY.md | **Local theory near bifurcation: uniform persistence fails, shrinking-window continuation only** | Complete |
 
+## synthesis/ (1)
+
+| File | Content | Status |
+|------|---------|--------|
+| T-PERSIST-FULL-PROOF.md | **Unified T-Persist proof synthesis: complete theorem statement, dependency chain, part-by-part proof, quantitative parameter table, near-bifurcation theory, multi-formation extension, experimental validation, errata** | Complete |
+
 ## generalization/ (1)
 
 | File | Content |

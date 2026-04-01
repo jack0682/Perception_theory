@@ -2,6 +2,36 @@
 
 ---
 
+## 2026-04-01 — Final Strengthening: Code Alignment, Full Chain Closure, Stress Test, Synthesis
+
+### Summary
+Code-theory alignment (3-component fingerprint in transport.py, 175 tests). exp27 warm-start chain: **5/5 parts × 5/5 configs = 100% pass** — proves exp26 failures were optimizer artifacts, not theory defects. exp28 stress test (100 combos): 84/100 pass, all failures from small-grid deep-core absence. Unified T-PERSIST-FULL-PROOF.md synthesis document (450 lines).
+
+### Files Created
+- `experiments/exp27_warm_start_chain.py` — Warm-start chain: 100% pass (landmark result)
+- `experiments/exp28_stress_test.py` — 100-combo stress test (84/100 pass)
+- `docs/03-31/synthesis/T-PERSIST-FULL-PROOF.md` — Unified proof synthesis (450 lines)
+
+### Files Modified
+- `scc/transport.py` — 3-component fingerprint default (use_resolvent=False)
+- `tests/test_transport.py` — Updated shape test + new resolvent test
+- `docs/03-31/INDEX.md` — Added synthesis section
+- `Canonical Spec v2.0.md` — exp27/28 results, synthesis reference
+
+### Theorem Status Changes
+- T-Persist-Full end-to-end: **experimentally verified** (5/5 × 5/5 with warm-start)
+- Validity boundary: n ≥ 64 (8×8), β ≥ 20, ε ≤ 0.20 → all parts pass
+- Code-theory alignment: transport.py now matches 3-component canonical fingerprint
+
+### Test Count
+175 tests passing (174 + 1 new fingerprint shape test)
+
+### Open Items Carried Forward
+- Strong-regime fixed-point selection/uniqueness
+- Product-manifold basin theory on Σ^K_M
+
+---
+
 ## 2026-04-01 — Deep Strengthening: Basin Flow, Chain Verification, Tight Bounds, Bifurcation Theory
 
 ### Summary

@@ -26,10 +26,18 @@ from tests.conftest import make_params
 class TestCohesionFingerprint:
 
     def test_shape(self, grid_5x5, default_params, rng):
-        """Fingerprint should be (n, 4) with values in [0, 1]."""
+        """Default fingerprint should be (n, 3) with values in [0, 1]."""
         n = grid_5x5.n
         u = rng.uniform(0.1, 0.9, n)
         phi = cohesion_fingerprint(u, grid_5x5, default_params)
+        assert phi.shape == (n, 3)
+        assert np.all(phi >= -1e-10) and np.all(phi <= 1.0 + 1e-10)
+
+    def test_shape_with_resolvent(self, grid_5x5, default_params, rng):
+        """Fingerprint with use_resolvent=True should be (n, 4)."""
+        n = grid_5x5.n
+        u = rng.uniform(0.1, 0.9, n)
+        phi = cohesion_fingerprint(u, grid_5x5, default_params, use_resolvent=True)
         assert phi.shape == (n, 4)
         assert np.all(phi >= -1e-10) and np.all(phi <= 1.0 + 1e-10)
 
@@ -42,7 +50,7 @@ class TestCohesionFingerprint:
         assert np.allclose(phi[:, 0], 0.5)
         # Other components should have low variance (not necessarily exactly uniform
         # due to boundary effects, but close)
-        for col in range(1, 4):
+        for col in range(1, phi.shape[1]):
             std = np.std(phi[:, col])
             assert std < 0.3, f"Column {col} std={std:.4f} too high for uniform field"
 
