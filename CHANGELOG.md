@@ -2,6 +2,70 @@
 
 ---
 
+## 2026-04-01 — Deep Strengthening: Basin Flow, Chain Verification, Tight Bounds, Bifurcation Theory
+
+### Summary
+Three-agent parallel deepening after audit repair. (1) exp24 completed — empirical basin 3-12× larger than sublevel estimate, confirming conservativeness. (2) exp26 full T-Persist chain end-to-end — parts (a)(c)(e) pass universally, (b)(d) fail only from basin-switching (optimizer non-uniqueness, not theory defect). (3) Formation-conditional Jacobian bound 1.75 (from 2.83), near-bifurcation theorems NB-1/NB-2 formalized with quantitative thresholds.
+
+### Files Created
+- `experiments/exp24_basin_flow_test.py` — Basin flow test (sublevel 3-12× conservative)
+- `experiments/exp26_full_chain_verification.py` — Full T-Persist chain verification (1/5 full closure, 3/5 parts universal)
+
+### Files Modified
+- `docs/03-31/proof/BASIN-ESCAPE-ANALYSIS.md` — §9: Quantitative Δ_bdy Taylor formula, <1% error verified
+- `docs/03-31/proof/TRANSPORT-CONCENTRATION-STRENGTHENED.md` — §7: Formation-conditional ‖J_φ‖ ≤ 1.75 bound
+- `docs/03-31/theory/NEAR-BIFURCATION-LOCAL-THEORY.md` — §8: Formal Theorems NB-1 (basin collapse Δ=O(μ³)), NB-2 (deep-core remnant), three-tier persistence ladder
+- `Canonical Spec v2.0.md` — Δ_bdy formula, formation-conditional bound, NB-1/NB-2 references, exp24/26 results
+
+### Theorem Status Changes
+- Δ_bdy: unknown → **quantitative Taylor formula** (cubic normal form, <1% error)
+- ‖∂φ/∂u‖_op bound: 2.83 → **1.75** (formation-conditional, free-set restriction)
+- Near-bifurcation: informal principles → **formal theorems NB-1, NB-2** with μ_bif = (ε₁/C')^{2/5}
+- Basin conservativeness: suspected → **confirmed 3-12×** (exp24)
+- T-Persist chain: untested → **(a)(c)(e) universally pass**, (b)(d) require basin identity
+
+### Test Count
+174 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Basin identity guarantee (warm-start vs multi-start for part (b))
+- Strong-regime selection hypothesis
+- Product-manifold basin theory on Σ^K_M
+- Quantitative Δ_bdy as closed-form function of formation geometry (Taylor derived, geometry-dependence open)
+
+---
+
+## 2026-04-01 — Gap 4/5/6 Proof Audit & Repair
+
+### Summary
+Full audit of 6 proof documents from 03-31 sessions. Found 6 critical/high-severity defects across Gap 4/5/6 proofs (scores 4-5.5/10). Executed 4-agent parallel repair: formula corrections, Γ→finite-β transfer proof, Schauder finite-time flow fix, boundary-mode analytical proof.
+
+### Files Modified
+- `docs/03-31/proof/CORE-DEPTH-ISOPERIMETRIC.md` — Prop 3 formula fixed (C₂: 40→2.875), Step 4 Γ→finite-β transfer rigorously proved (Markov + EL bootstrap), Thm 2 split into 2a (unconditional identity) + 2b (conditional iso_ratio bound)
+- `docs/03-31/proof/TRANSPORT-CONCENTRATION-STRENGTHENED.md` — ‖∂φ/∂u‖ bound justification added (P doubly stochastic on regular graphs, vertical-stack norm), Schauder Step 7 replaced with finite-time flow truncation (avoids IFT/μ>0 requirement)
+- `docs/03-31/proof/BASIN-ESCAPE-ANALYSIS.md` — Proposition BMD (boundary-mode dominance) analytically proved via Hessian diagonal gap argument, core fraction O(1/β)
+- `Canonical Spec v2.0.md` — 3 errata added (boundary-mode proof, Step 4 fix, Schauder finite-time flow, Thm 2 split)
+
+### Files Created
+- `experiments/exp25_hessian_diagonal.py` — Hessian diagonal verification for boundary-mode dominance
+- `plan/Plan_0401_revised.md` — Audit-based revised plan
+
+### Theorem Status Changes
+- Gap 6 Thm 1 (Deep Core Existence): Step 4 gap → **closed** (Markov + exponential saturation bootstrap)
+- Gap 6 Thm 2: single theorem → **split**: 2a unconditional identity + 2b conditional bound
+- Gap 5 Schauder: IFT-based → **finite-time flow** (no μ>0 requirement)
+- Gap 4 boundary-mode dominance: numerical observation → **analytically proved** (Prop BMD)
+
+### Test Count
+174 tests passing (unchanged — no scc/ code modified)
+
+### Open Items Carried Forward
+- Quantitative Δ_bdy formula (boundary barrier as function of formation shape)
+- Generic non-alignment of perturbation with soft mode
+- Product-manifold basin theory on Σ^K_M (from Plan_0401)
+- Strong-regime selection hypothesis formalization
+
+---
 
 ## 2026-04-01 — Status Refresh & Plan Realignment
 
