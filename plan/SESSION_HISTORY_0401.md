@@ -114,11 +114,40 @@ origin: git@github.com:jack0682/Perception_theory.git
 - **C1. Product-manifold basin on Σ^K_M** — A2 필요
 - **C2. Formation birth/death** — 미탐색
 
+### 7. Phase 2 (A1 + A2) — 4-agent parallel
+
+**exp29-agent** (A1 실험):
+- λ_tr sweep [0.01, 10], 10×10/15×15, β=50, 5가지 초기화
+- **결과: transport 고정점 다중성 없음** — 모든 λ_tr에서 unique
+- 10×10: max pairwise L2/√n ~ 1e-9
+- 15×15: "anti" 초기화만 L2/√n = 0.081, λ_tr에 무관 → optimizer 비유일성 (grid 대칭)
+
+**theory-a1-agent** (A1 이론):
+- Transport confinement 정리: re-optimization이 discrete attractor 역할
+- 4가지 독립 논증: entropic smoothing, re-opt discreteness, IFT continuation, basin dominance
+- WR' → transport confinement으로 완화 가능
+
+**exp30-agent** (A2 실험):
+- 15×15 grid + dumbbell (bw=1–8), β=50
+- **K=1이 항상 에너지적으로 선호** (ΔE ≈ −7.6, 49% 감소)
+- K=2는 항상 local minimum (Hessian +1000~1500), saddle 아님
+- dumbbell bw=1 (λ₂=0.013)에서도 K=1 선호
+
+**theory-a2-agent** (A2 이론):
+- Saddle conjecture 반증 → barrier model
+- K=2 local stability 증명 (merge curvature ≥ μ₁ + μ₂ > 0)
+- Isoperimetric energy ordering 증명
+
+커밋: 대기 중
+
+---
+
 ## 다음 세션에서 할 일
-- Phase 1 검증 결과 최종 확인
-- A1 (strong-regime selection) 수치 실험 시작 (exp29: λ_tr sweep)
-- A2 (K-Strong merge) 2-formation 구체적 예시 시도
-- 또는 사용자 지시에 따라 다른 방향
+- Near-bifurcation persistence (μ → 0) — T-Persist의 유일한 genuinely open 항목
+- Barrier height 정량화 (NEB/string method)
+- K=2가 globally preferred인 graph topology 탐색
+- Formation birth (K → K+1) 이론
+- 또는 papers 업데이트 (Phase 2 결과 반영)
 
 ## 주요 실험 결과 요약
 
@@ -132,6 +161,8 @@ origin: git@github.com:jack0682/Perception_theory.git
 | exp26 | Chain: (a)(c)(e) universal, (b)(d) basin-switching |
 | **exp27** | **Warm-start: 5/5 × 5/5 = 100% PASS** |
 | exp28 | Stress: 84/100, n≥64 β≥20 전부 통과 |
+| **exp29** | **λ_tr sweep: transport 고정점 unique (전 범위)** |
+| **exp30** | **K=2→K=1: 항상 merge 선호, saddle 없음** |
 | exp31 | β threshold scan |
 | exp32 | Directional basin: ellipsoidal 1.5-3.3× |
 | exp33 | Δ_bdy S₃ formula: 6/7 configs 1-7% |
@@ -144,12 +175,16 @@ origin: git@github.com:jack0682/Perception_theory.git
 | T-Persist-1(b) Basin | **Conditional** (GT+NB, boundary-mode bottleneck) |
 | T-Persist-1(c) Shifted | **Proved** |
 | T-Persist-1(d) Exact | **Conditional** (H2'+H3, β≥20α) |
-| T-Persist-1(e) Transport | **Conditional** (fixed-point: Schauder ✅, selection: WR') |
+| T-Persist-1(e) Transport | **Conditional** (transport confinement — WR'에서 완화) |
 | Schauder fixed-point | **Proved** (finite-time flow) |
+| Transport selection | **Conditional** (transport confinement, exp29 검증) |
 | Deep core existence H2' | **Proved** (Γ + isoperimetric + max principle) |
 | Boundary-mode dominance | **Proved** (Prop BMD) |
 | NB-1 Basin collapse | **Proved** (Δ = O(μ³)) |
 | NB-2 Deep-core remnant | **Proved** |
 | K-Sep | **Proved** |
 | K-Weak | **Conditional** |
-| K-Strong | **Conjectured** (theorem ladder) |
+| K-Strong (saddle) | **Retracted** (exp30 반증) |
+| K=2 Local Stability | **Proved** (curvature ≥ μ₁+μ₂) |
+| Isoperimetric Ordering | **Proved** (homogeneous graphs) |
+| K-Merge Barrier | **Conjectured** (barrier model replaces saddle) |

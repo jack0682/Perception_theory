@@ -2,6 +2,40 @@
 
 ---
 
+## 2026-04-01 — Phase 2: A1 Transport Selection + A2 Merge Dichotomy
+
+### Summary
+Two A-grade open problems resolved in parallel. A1 (strong-regime transport selection): exp29 λ_tr sweep [0.01, 10] on 10×10/15×15 grids finds **no transport multiplicity** — re-optimization acts as discrete attractor, making fixed point unique. WR' condition replaceable by weaker transport confinement. A2 (K-Strong merge dichotomy): exp30 falsifies saddle conjecture — K=2 is always a local minimum (Hessian curvature +1000–1500), K=1 is globally preferred (ΔE ≈ −7.6, 49% reduction). Merge requires barrier crossing, not saddle descent. Both findings strengthen T-Persist: selection uniqueness removes WR' dependency; local stability of K-formations ensures persistence without saddle avoidance.
+
+### Files Created
+- `experiments/exp29_lambda_tr_sweep.py` — λ_tr sweep: no transport multiplicity found
+- `experiments/exp29_results.json` — exp29 raw results
+- `experiments/exp30_merge_flow.py` — K=2 → K=1 merge dynamics (4 phases)
+- `experiments/exp30_merge_flow_results.json` — exp30 raw results
+- `docs/04-01/theory/TRANSPORT-SELECTION-ANALYSIS.md` — A1: transport confinement theorem, 4 uniqueness arguments
+- `docs/04-01/theory/MERGE-DICHOTOMY-ANALYSIS.md` — A2: barrier model, isoperimetric ordering, K=2 local stability
+
+### Files Modified
+- `Canonical Spec v2.0.md` — T-Persist-K-Strong: saddle → barrier model erratum; T-Persist-Full: strong-regime selection resolved erratum; bridging section updated
+- `docs/04-01/INDEX.md` — Added theory/ section with 2 new documents
+
+### Theorem Status Changes
+- T-Persist-1(e) selection: **conditional on WR'** → **conditional on transport confinement** (weaker, numerically verified)
+- T-Persist-K-Strong: **Conjectured (saddle model)** → **Partially proved (barrier model)** — local stability proved, isoperimetric ordering proved, saddle conjecture retracted
+- K=2 Local Stability: **New** — proved (merge-direction curvature ≥ μ₁ + μ₂ > 0)
+- Isoperimetric Energy Ordering: **New** — proved on homogeneous graphs
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Near-bifurcation persistence (μ → 0) — sole remaining genuinely open item for T-Persist
+- Barrier height quantification for K-Strong (NEB/string method)
+- Formation birth problem (K → K+1)
+- Graphs where K=2 IS globally preferred (more disconnected than dumbbell bw=1)
+
+---
+
 ## 2026-04-01 — Phase 1: B1 β_crit + B2 Directional Basin + C3 Δ_bdy Formula
 
 ### Summary
