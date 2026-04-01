@@ -468,3 +468,32 @@ None
 - T-Persist-1 Gap 4 (basin escape), Gap 5 (transport concentration), Gap 6 (interior gap) — all conditional
 - Strong regime transport — open (Brouwer continuity gap)
 - Near-bifurcation persistence — open
+
+---
+
+## 2026-04-02 — Phase A/B Stop-Point Marking
+
+### Summary
+Annotated the active `docs/04-02` unification documents with an explicit interruption point and a concrete restart order for the next session. Saved the same resume point into OMX notepad so the next session can restart from the exact handoff location.
+
+### Files Created
+- None
+
+### Files Modified
+- `docs/04-02/EXPECTED-OUTPUTS-PHASE-AB.md` — added explicit stop-point summary and next-session restart order
+- `docs/04-02/integration/PHASE-AB-SYNTHESIS.md` — marked this file as the main handoff location and listed the exact resume sequence
+- `docs/04-02/theory/T-PERSIST-K-UNIFIED.md` — added resume instructions for integrating missing Phase A findings before finalizing theorem claims
+- `docs/04-02/theory/UNIFIED-REGIME-PARAMETRIZATION.md` — marked the coupling parametrization as provisional and recorded the required re-checks before canonization
+
+### Theorem Status Changes
+None
+
+### Test Count
+175 tests collected previously; tests not run in this documentation-only session
+
+### Open Items Carried Forward
+- Task #2 deliverable is still missing: Sep/Weak/Strong regime-condition comparative analysis
+- Task #3 deliverable is still missing: isoperimetric-ordering and transport-confinement necessity analysis
+- `UNIFIED-REGIME-PARAMETRIZATION.md` remains provisional until reconciled with Tasks #2-3
+- `T-PERSIST-K-UNIFIED.md` still contains placeholders awaiting Phase A integration
+- `PHASE-AB-SYNTHESIS.md` remains the correct restart file for the next session
