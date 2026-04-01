@@ -2,6 +2,35 @@
 
 ---
 
+## 2026-04-01 — Phase 5: Formation Birth, T-Persist Confinement Verification, Unified Synthesis
+
+### Summary
+Three final verification tasks. exp39: formation birth/split tested via volume increase, β decrease, and topological crack — K=1 always energetically preferred but crack (w≤0.2) causes natural 2-component splitting within single formation. exp40: transport confinement bound verified but too conservative (C_conf·√m >> r_basin by 30-100×, actual displacement only 0-4% of bound); all 6 configs pass persistence regardless. Unified synthesis document: 24 fully proved + 6 structural + 6 conditional + 2 retracted + 5 open = 36 total claims, 83% proved/conditional. Theory assessed as publication-ready.
+
+### Files Created
+- `experiments/exp39_formation_birth.py` — Formation birth/split (3 scenarios)
+- `experiments/exp40_persist_confinement.py` — T-Persist confinement verification
+- `docs/04-01/synthesis/UNIFIED-THEORY-STATUS.md` — Comprehensive 334-line synthesis
+
+### Files Modified
+- `docs/04-01/INDEX.md` — Added synthesis section
+
+### Key Results
+- Formation birth mechanism: topology-driven (crack) splitting, not energetic preference
+- Transport confinement bound: proved but 25-10000× too conservative; actual phenomenon confirmed
+- Theory status: 30/36 claims proved or conditional (83%), ready for paper submission
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- Tighten transport confinement constants (25-10000× slack)
+- Formation birth formal theory (topology-driven K transition)
+- Paper updates (paper1_math.tex, paper2_cogsci.tex)
+- Larger-scale experiments (30×30, 50×50)
+
+---
+
 ## 2026-04-01 — Phase 4: Bifurcation Crossing, Barrier Height, Isoperimetric Proof, Transport Bound
 
 ### Summary

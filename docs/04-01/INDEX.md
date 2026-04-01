@@ -19,3 +19,9 @@
 | [MERGE-DICHOTOMY-ANALYSIS.md](theory/MERGE-DICHOTOMY-ANALYSIS.md) | complete | A2: Merge dichotomy analysis — K=2 is local min (not saddle), barrier model replaces saddle descent conjecture. Isoperimetric energy ordering, revised K-Strong status. |
 | [NEARBIF-DIRECTIONAL-EXTENSION.md](theory/NEARBIF-DIRECTIONAL-EXTENSION.md) | complete | Phase 3: Directional basin extends Tier 1 persistence 2.5-4.3× into near-bif regime. Universal isoperimetric ordering (24 topologies). Boundary instability channel verified. |
 | [ISOPERIMETRIC-TRANSPORT-PROOFS.md](theory/ISOPERIMETRIC-TRANSPORT-PROOFS.md) | complete | Phase 4: Isoperimetric energy ordering proved (test function + isoperimetric inequality). Transport confinement bound proved (C_conf = O(σ√(ε_OT log n)), u_s-independent). |
+
+## synthesis/
+
+| File | Status | Description |
+|------|--------|-------------|
+| [UNIFIED-THEORY-STATUS.md](synthesis/UNIFIED-THEORY-STATUS.md) | complete | Phase 5: Comprehensive synthesis of all Phase 1-4 results. 24 fully proved, 6 structural, 6 conditional, 2 retracted, 5 open. Dependency graph, gap register, publication readiness assessment. |

@@ -185,12 +185,35 @@ origin: git@github.com:jack0682/Perception_theory.git
 
 ---
 
+### 10. Phase 5 (Birth + Confinement + Synthesis) — 3-agent parallel
+
+**exp39-agent** (formation birth):
+- 3 scenarios: volume, β decrease, crack
+- K=1 항상 에너지적 선호, but crack w≤0.2 → 2-component split (topology-driven birth)
+
+**exp40-agent** (confinement verification):
+- C_conf·√m >> r_basin (30-100×) — bound 너무 보수적
+- 실제 displacement: bound의 0-4%, 6/6 persist ≥ 0.999
+
+**synthesis-agent**: 334줄 UNIFIED-THEORY-STATUS.md — 36 claims, 83% proved/conditional
+
+---
+
+## 최종 세션 요약 (Phase 1-5)
+
+| Phase | 실험 | 핵심 발견 |
+|-------|------|----------|
+| Phase 1 | exp31-33 | β_crit=15-33α, directional 1.5-3.3×, S₃ formula |
+| Phase 2 | exp29-30 | Transport unique, saddle retracted → barrier |
+| Phase 3 | exp34-36 | Near-bif 2.5-4.3×, isoperimetric 24/24, boundary channel |
+| Phase 4 | exp37-38 | Pitchfork bifurcation, barrier O(β^0.89), 2 proofs |
+| Phase 5 | exp39-40 | Birth mechanism, bound slack 25-10000×, 83% proved |
+
 ## 다음 세션에서 할 일
-- Formation birth (K → K+1) — bifurcation에서 새 branch 탄생
-- Bifurcation branch selection — noise/transport가 어떤 branch 선택?
-- Papers 업데이트 (Phase 1-4 결과 반영)
+- Papers 업데이트 — **최우선**
 - Transport confinement tight constants
-- 또는 사용자 지시에 따라 다른 방향
+- Formation birth formal theory
+- Larger-scale experiments (30×30, 50×50)
 
 ## 주요 실험 결과 요약
 
