@@ -491,23 +491,35 @@ def inter_formation_distances(
 def classify_regime(
     fields: List[np.ndarray],
     graph: GraphState,
+    params: Optional[ParameterRegistry] = None,
+    lambda_rep: float = 10.0,
     theta_supp: float = 0.1,
     D_sep: int = 3,
+    method: str = 'geometric',
 ) -> str:
     """Classify K-formation interaction regime.
 
+    Two methods available:
+      'geometric' (default, backward-compatible): Uses d_min and hard overlap.
+      'lambda': Uses unified Λ_coupling from coupling_strength(). Requires
+        params. Falls back to 'geometric' if params is None.
+
     Returns one of:
-      'well-separated': all pairs have d_min >= D_sep
-      'weakly-interacting': some d_min < D_sep but overlap confined to boundary
-      'strongly-interacting': significant bulk overlap between formations
+      'well-separated': negligible inter-formation coupling
+      'weakly-interacting': bounded coupling, perturbative regime
+      'strongly-interacting': significant bulk overlap or Λ >= 1/(K-1)
     """
     K = len(fields)
     if K <= 1:
         return 'well-separated'
 
+    if method == 'lambda' and params is not None:
+        result = coupling_strength(fields, graph, params, lambda_rep)
+        return result['predicted_regime']
+
+    # Geometric method (backward-compatible)
     D = inter_formation_distances(fields, graph, theta_supp)
 
-    # Check if all off-diagonal distances >= D_sep
     all_separated = True
     for j in range(K):
         for k in range(j + 1, K):
@@ -520,11 +532,10 @@ def classify_regime(
     if all_separated:
         return 'well-separated'
 
-    # Compute overlap and core sizes
     O = formation_overlap(fields, theta_supp)
     core_sizes = [float(np.sum(f > 0.5)) for f in fields]
     min_core = min(core_sizes) if core_sizes else 1.0
-    min_core = max(min_core, 1.0)  # avoid division by zero
+    min_core = max(min_core, 1.0)
 
     max_overlap = 0.0
     for j in range(K):
@@ -535,3 +546,264 @@ def classify_regime(
         return 'weakly-interacting'
 
     return 'strongly-interacting'
+
+
+def soft_overlap_weight(
+    fields: List[np.ndarray],
+) -> np.ndarray:
+    """Compute pairwise soft overlap weight ω_jk.
+
+    ω_jk = ⟨u^j, u^k⟩ / min(‖u^j‖², ‖u^k‖²)
+
+    This is the canonical coupling measure numerator from
+    UNIFIED-REGIME-PARAMETRIZATION.md §3.1.
+
+    Returns:
+        K×K symmetric matrix. Diagonal = 1.
+    """
+    K = len(fields)
+    norms_sq = [float(np.sum(f**2)) for f in fields]
+    omega = np.eye(K)
+    for j in range(K):
+        for k in range(j + 1, K):
+            inner = float(np.sum(fields[j] * fields[k]))
+            denom = min(norms_sq[j], norms_sq[k])
+            w = inner / denom if denom > 1e-10 else 0.0
+            omega[j, k] = w
+            omega[k, j] = w
+    return omega
+
+
+def coupling_strength(
+    fields: List[np.ndarray],
+    graph: GraphState,
+    params,
+    lambda_rep: float = 10.0,
+    mu_floor: Optional[float] = None,
+) -> dict:
+    """Compute the unified coupling parameter Λ_coupling.
+
+    Λ_coupling = max_{j≠k} λ_rep · ω_jk / min(μ_j, μ_k)
+
+    where ω_jk is the soft overlap weight and μ_k is the per-formation
+    spectral gap of the full energy constrained Hessian.
+
+    Uses regularization: μ_eff = max(μ_k, μ_floor) with
+    μ_floor = w_cl · 2(1 - a_cl/4)² (closure curvature bound).
+
+    Args:
+        fields: List of K formation fields u^k.
+        graph: GraphState.
+        params: ParameterRegistry.
+        lambda_rep: Repulsion strength.
+        mu_floor: Minimum spectral gap (regularization). If None,
+                  computed from closure curvature bound.
+
+    Returns:
+        dict with:
+          Lambda: float — max pairwise Λ_coupling
+          omega_matrix: K×K — soft overlap weights
+          mu_per_formation: list — spectral gaps μ_k
+          pairwise_Lambda: K×K — pairwise coupling strengths
+          predicted_regime: str — regime prediction from Λ thresholds
+    """
+    K = len(fields)
+    n = len(fields[0])
+
+    # Compute closure curvature floor
+    if mu_floor is None:
+        a_cl = params.a_cl
+        w_cl = params.w_cl
+        mu_floor = w_cl * 2.0 * (1.0 - a_cl / 4.0) ** 2
+
+    # Soft overlap matrix
+    omega = soft_overlap_weight(fields)
+
+    # Per-formation spectral gaps from E_bd Hessian
+    # (E_bd is the dominant term; full Hessian adds positive curvature)
+    L = graph.L
+    if hasattr(L, 'toarray'):
+        L = L.toarray()
+
+    mus = []
+    for k in range(K):
+        u_k = fields[k]
+        W2 = 2.0 * (1.0 - 6.0 * u_k + 6.0 * u_k**2)
+        H_bd = 4.0 * params.alpha_bd * L + params.beta_bd * np.diag(W2)
+        # Project to 1-perp
+        ones = np.ones(n)
+        P = np.eye(n) - np.outer(ones, ones) / n
+        H_proj = P @ H_bd @ P
+        eigs = np.sort(np.linalg.eigvalsh(H_proj))
+        mu_k = float(eigs[1])  # First nonzero
+        mus.append(mu_k)
+
+    # Pairwise coupling with regularization
+    pairwise = np.zeros((K, K))
+    for j in range(K):
+        for k in range(j + 1, K):
+            mu_min = max(min(mus[j], mus[k]), mu_floor)
+            Lambda_jk = lambda_rep * omega[j, k] / mu_min
+            pairwise[j, k] = Lambda_jk
+            pairwise[k, j] = Lambda_jk
+
+    Lambda_max = float(np.max(pairwise))
+
+    # Predict regime using 2-parameter classification (Λ, d_min)
+    # Per REGIME-CONDITIONS-COMPARATIVE.md §4: d_min provides spatial
+    # guarantees that Λ alone cannot capture.
+    D = inter_formation_distances(fields, graph)
+    d_min_val = float('inf')
+    for j in range(K):
+        for k in range(j + 1, K):
+            d_min_val = min(d_min_val, D[j, k])
+
+    if d_min_val >= 3 and Lambda_max < 0.01:
+        predicted = 'well-separated'
+    elif Lambda_max >= 1.0 / max(K - 1, 1):
+        predicted = 'strongly-interacting'
+    else:
+        # Check hard overlap for strong interaction
+        O = formation_overlap(fields)
+        core_sizes = [float(np.sum(f > 0.5)) for f in fields]
+        min_core = max(min(core_sizes) if core_sizes else 1.0, 1.0)
+        max_hard_overlap = 0.0
+        for j in range(K):
+            for k in range(j + 1, K):
+                max_hard_overlap = max(max_hard_overlap, O[j, k])
+        if max_hard_overlap / min_core >= 0.2:
+            predicted = 'strongly-interacting'
+        elif d_min_val < 3 or Lambda_max > 1e-4:
+            predicted = 'weakly-interacting'
+        else:
+            predicted = 'well-separated'
+
+    return {
+        'Lambda': Lambda_max,
+        'omega_matrix': omega,
+        'mu_per_formation': mus,
+        'mu_floor': mu_floor,
+        'pairwise_Lambda': pairwise,
+        'predicted_regime': predicted,
+    }
+
+
+def spectral_k_estimate(
+    graph: GraphState,
+    params: ParameterRegistry,
+    k_spectrum: int = 10,
+) -> dict:
+    """Estimate optimal K from Laplacian eigenvalue count below phase threshold.
+
+    The spectral K-selection hypothesis: K* = #{lambda_j < lambda_thresh}
+    where lambda_thresh = beta * |W''(c)| / (4*alpha).
+
+    Returns dict with k_estimate, eigenvalues, threshold, and details.
+    """
+    c = params.volume_fraction
+    W_pp = 2.0 * (1.0 - 6.0 * c + 6.0 * c**2)
+    if abs(W_pp) < 1e-12:
+        return {'k_estimate': 1, 'threshold': float('inf'),
+                'eigenvalues': [], 'reason': 'W_pp near zero'}
+
+    threshold = params.beta_bd * abs(W_pp) / (4.0 * params.alpha_bd)
+    eigenvalues = graph.spectrum(k_spectrum)
+
+    k_estimate = int(np.sum(eigenvalues < threshold))
+    k_estimate = max(k_estimate, 1)  # at least 1
+
+    # Eigengap method (von Luxburg 2007): K = argmax gap(lambda_k, lambda_{k+1})
+    gaps = []
+    for i in range(len(eigenvalues) - 1):
+        gaps.append(eigenvalues[i + 1] - eigenvalues[i])
+    k_eigengap = int(np.argmax(gaps)) + 1 if gaps else 1
+    k_eigengap = max(k_eigengap, 1)
+
+    return {
+        'k_estimate': k_estimate,
+        'k_eigengap': k_eigengap,
+        'threshold': float(threshold),
+        'eigenvalues': eigenvalues.tolist(),
+        'gaps': [float(g) for g in gaps],
+        'W_pp': float(W_pp),
+        'below_threshold': [float(e) for e in eigenvalues if e < threshold],
+    }
+
+
+def find_optimal_k(
+    graph: GraphState,
+    params: ParameterRegistry,
+    K_max: int = 5,
+    lambda_rep: float = 10.0,
+    total_volume_fraction: Optional[float] = None,
+    n_restarts: int = 2,
+    max_iter: int = 1000,
+) -> dict:
+    """Find K* = argmin E_total(K) by sweeping K = 1..K_max.
+
+    For each K, finds K formations with equal volume split and measures
+    total energy. Returns K* and per-K energy data.
+
+    Args:
+        graph: GraphState
+        params: ParameterRegistry (used as base; volume_fraction adjusted per K)
+        K_max: maximum K to test
+        lambda_rep: inter-formation repulsion strength
+        total_volume_fraction: total volume fraction (default: params.volume_fraction)
+        n_restarts: random restarts per K
+        max_iter: max iterations per optimization
+
+    Returns:
+        dict with k_optimal, energies, spectral_estimate, and details
+    """
+    from scc.optimizer import find_formation
+
+    n = graph.n
+    vf_total = total_volume_fraction or params.volume_fraction
+
+    spectral = spectral_k_estimate(graph, params)
+    energies = {}
+
+    for K in range(1, K_max + 1):
+        vf_k = vf_total / K
+        if vf_k < 0.05 or vf_k > 0.95:
+            break
+
+        params_k = ParameterRegistry(
+            a_cl=params.a_cl, eta_cl=params.eta_cl, tau_cl=params.tau_cl,
+            a_D=params.a_D, lambda_D=params.lambda_D, tau_D=params.tau_D,
+            alpha_bd=params.alpha_bd, beta_bd=params.beta_bd,
+            w_cl=params.w_cl, w_sep=params.w_sep, w_bd=params.w_bd,
+            volume_fraction=vf_k,
+        )
+
+        try:
+            if K == 1:
+                result = find_formation(graph, params_k)
+                e_total = result.energy
+            else:
+                results = find_k_formations(
+                    graph, params_k, K=K, lambda_rep=lambda_rep,
+                    n_restarts=n_restarts, max_iter=max_iter,
+                )
+                e_total = sum(r.energy for r in results)
+                # Add inter-formation repulsion energy
+                fields = [r.u for r in results]
+                for j in range(K):
+                    for k_idx in range(j + 1, K):
+                        e_total += lambda_rep * float(np.sum(fields[j] * fields[k_idx]))
+
+            energies[K] = float(e_total)
+        except Exception as e:
+            energies[K] = float('inf')
+
+    if not energies:
+        return {'k_optimal': 1, 'energies': {}, 'spectral_estimate': spectral}
+
+    k_optimal = min(energies, key=energies.get)
+
+    return {
+        'k_optimal': k_optimal,
+        'energies': energies,
+        'spectral_estimate': spectral,
+    }

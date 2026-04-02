@@ -1,0 +1,377 @@
+{
+  "experiment": "exp46_weak_strong",
+  "description": "Weak-Strong regime transition via lambda_rep sweep with coupling_strength",
+  "grid": "10x10",
+  "K": 2,
+  "vf": 0.45,
+  "beta": 10.0,
+  "lambda_rep_values": [
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "results": [
+    {
+      "lambda_rep": 0.001,
+      "d_min": 0.0,
+      "overlap": 17.0,
+      "omega_max": 0.05653539395824744,
+      "mu_per_formation": [
+        -4.701581295212846e-14,
+        0.15653681189869598
+      ],
+      "mu_min": -4.701581295212846e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.00045228315166597957,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8386739549182087,
+          "sep": 0.9152233522547089,
+          "inside": 0.9061200483394559
+        },
+        {
+          "bind": 0.8424136939794713,
+          "sep": 0.9211475006484268,
+          "inside": 0.8525686292816238
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.005,
+      "d_min": 0.0,
+      "overlap": 15.0,
+      "omega_max": 0.0682495771393368,
+      "mu_per_formation": [
+        0.48283723365974124,
+        -1.7391215207572084
+      ],
+      "mu_min": -1.7391215207572084,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.002729983085573472,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8385449218997045,
+          "sep": 0.9193443920134353,
+          "inside": 0.8968484105428373
+        },
+        {
+          "bind": 0.8489747921168863,
+          "sep": 0.9020843469851333,
+          "inside": 0.816537128404471
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.01,
+      "d_min": 0.0,
+      "overlap": 20.0,
+      "omega_max": 0.04644179077621625,
+      "mu_per_formation": [
+        1.2400840124208752,
+        1.2401777042058424
+      ],
+      "mu_min": 1.2400840124208752,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0003745051973176657,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8418243091206588,
+          "sep": 0.9224033464320059,
+          "inside": 0.8527328859906478
+        },
+        {
+          "bind": 0.8418243264674512,
+          "sep": 0.9224033432284653,
+          "inside": 0.8527279973660206
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.02,
+      "d_min": 0.0,
+      "overlap": 19.0,
+      "omega_max": 0.04443693200694916,
+      "mu_per_formation": [
+        1.672339298665854,
+        -3.551672844714915e-14
+      ],
+      "mu_min": -3.551672844714915e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.007109909121111866,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8414308322054151,
+          "sep": 0.9231166734143799,
+          "inside": 0.8539221442427372
+        },
+        {
+          "bind": 0.8411373794547747,
+          "sep": 0.9230100442171304,
+          "inside": 0.8644750923804029
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.05,
+      "d_min": 0.0,
+      "overlap": 11.0,
+      "omega_max": 0.03774888693577446,
+      "mu_per_formation": [
+        1.304618915683208,
+        2.2490554340767743e-14
+      ],
+      "mu_min": 2.2490554340767743e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.015099554774309784,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8398174575566568,
+          "sep": 0.9255806460513005,
+          "inside": 0.8651280653569701
+        },
+        {
+          "bind": 0.8393314411792787,
+          "sep": 0.9255343575291652,
+          "inside": 0.8740429333682608
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.1,
+      "d_min": 0.0,
+      "overlap": 10.0,
+      "omega_max": 0.029115479188080218,
+      "mu_per_formation": [
+        1.7866589058366573,
+        -0.6839818812304422
+      ],
+      "mu_min": -0.6839818812304422,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.023292383350464175,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.830283062289659,
+          "sep": 0.9309519856357041,
+          "inside": 0.9446926774066174
+        },
+        {
+          "bind": 0.8419503047602025,
+          "sep": 0.9154837281807956,
+          "inside": 0.8525761734503314
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.2,
+      "d_min": 0.0,
+      "overlap": 9.0,
+      "omega_max": 0.014280899647288363,
+      "mu_per_formation": [
+        -9.316124531437473e-14,
+        1.8904003148690391
+      ],
+      "mu_min": -9.316124531437473e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.02284943943566138,
+      "regime_geometric": "strongly-interacting",
+      "regime_lambda": "strongly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8301544411006826,
+          "sep": 0.927521077252074,
+          "inside": 0.9454421581999889
+        },
+        {
+          "bind": 0.8293655563129941,
+          "sep": 0.933408408841526,
+          "inside": 0.9406345179289687
+        }
+      ]
+    },
+    {
+      "lambda_rep": 0.5,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0007592868715109225,
+      "mu_per_formation": [
+        1.0985528326080178,
+        0.24177263040074348
+      ],
+      "mu_min": 0.24177263040074348,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.001570249846420556,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8237358459819784,
+          "sep": 0.9442728977034002,
+          "inside": 0.9614778307689725
+        },
+        {
+          "bind": 0.8293674589913709,
+          "sep": 0.9419391229360337,
+          "inside": 0.9139417952097185
+        }
+      ]
+    },
+    {
+      "lambda_rep": 1.0,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0,
+      "mu_per_formation": [
+        -8.426202444122843e-15,
+        1.5996574474221779
+      ],
+      "mu_min": -8.426202444122843e-15,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8247156349908835,
+          "sep": 0.9423015628467463,
+          "inside": 0.9588745645409841
+        },
+        {
+          "bind": 0.827575674766313,
+          "sep": 0.9416853613140235,
+          "inside": 0.9276485581902458
+        }
+      ]
+    },
+    {
+      "lambda_rep": 2.0,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0,
+      "mu_per_formation": [
+        -4.8404168721165666e-14,
+        2.630624742248016
+      ],
+      "mu_min": -4.8404168721165666e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8208303831028814,
+          "sep": 0.9396238105605543,
+          "inside": 0.9909389242573957
+        },
+        {
+          "bind": 0.8238530975595781,
+          "sep": 0.9389404441716713,
+          "inside": 0.9513927837853194
+        }
+      ]
+    },
+    {
+      "lambda_rep": 5.0,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0,
+      "mu_per_formation": [
+        2.634659937781896,
+        2.1712620404554235
+      ],
+      "mu_min": 2.1712620404554235,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8163429453781441,
+          "sep": 0.9392971787655178,
+          "inside": 0.9967395045799097
+        },
+        {
+          "bind": 0.8228123317673517,
+          "sep": 0.931912857061502,
+          "inside": 0.9712719489183599
+        }
+      ]
+    },
+    {
+      "lambda_rep": 10.0,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0,
+      "mu_per_formation": [
+        -1.0048927835681898e-14,
+        2.431989098371896
+      ],
+      "mu_min": -1.0048927835681898e-14,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8114722876543572,
+          "sep": 0.9180448425118383,
+          "inside": 1.0
+        },
+        {
+          "bind": 0.8125901818732,
+          "sep": 0.9256489087382903,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "lambda_rep": 20.0,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0,
+      "mu_per_formation": [
+        1.943590595028462,
+        2.462194376931569
+      ],
+      "mu_min": 1.943590595028462,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting",
+      "diagnostics": [
+        {
+          "bind": 0.8020046738812128,
+          "sep": 0.9016801637257318,
+          "inside": 0.6766673250629242
+        },
+        {
+          "bind": 0.79630941268539,
+          "sep": 0.8954558093273253,
+          "inside": 1.0
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 32.51767706871033
+}

@@ -1,0 +1,2474 @@
+{
+  "experiment": "exp50_unified_transport",
+  "description": "P-Unified-1/2 with transport-based persist + baseline",
+  "grid_configs": [
+    "10x10",
+    "12x12"
+  ],
+  "delta_betas": [
+    1.0,
+    2.0,
+    5.0
+  ],
+  "lrep_values": [
+    0.001,
+    0.005,
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    1.0,
+    5.0
+  ],
+  "results": [
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.0073559564268144,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.7804878048780486,
+          "core_size": 41
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.4146341463414633,
+          "core_size": 41
+        }
+      ],
+      "Lambda": 0.0004722839254233095,
+      "mu_per_formation": [
+        1.2743974262292296e-14,
+        1.9792574855640152e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.059035490677913686
+        ],
+        [
+          0.059035490677913686,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9326415851993748,
+        0.9406551803744847
+      ],
+      "persists_overlap": [
+        0.9841951193463728,
+        0.9706260104866222
+      ],
+      "mean_persist_transport": 0.9366483827869297,
+      "mean_persist_overlap": 0.9774105649164975
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.0136764773033216,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 1.837837837837838,
+          "core_size": 37
+        },
+        {
+          "max_depth": 3,
+          "mean_depth": 1.6666666666666667,
+          "core_size": 42
+        }
+      ],
+      "Lambda": 0.0005360812490496642,
+      "mu_per_formation": [
+        -1.0254138336421374e-13,
+        -4.611439302749675
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.013402031226241605
+        ],
+        [
+          0.013402031226241605,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9568804524415452,
+        0.9281700643650974
+      ],
+      "persists_overlap": [
+        0.9822561518331545,
+        0.9217585071457631
+      ],
+      "mean_persist_transport": 0.9425252584033212,
+      "mean_persist_overlap": 0.9520073294894589
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 0.9930405353857417,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.658536585365854,
+          "core_size": 41
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.0,
+          "core_size": 42
+        }
+      ],
+      "Lambda": 0.002834337883935743,
+      "mu_per_formation": [
+        -1.7636599783772748,
+        0.9159395302538048
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.03542922354919679
+        ],
+        [
+          0.03542922354919679,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9222299054294371,
+        0.9244456526526913
+      ],
+      "persists_overlap": [
+        0.9776875111239371,
+        0.9313305213463827
+      ],
+      "mean_persist_transport": 0.9233377790410642,
+      "mean_persist_overlap": 0.9545090162351599
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.009535431104401,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.025,
+          "core_size": 40
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.744186046511628,
+          "core_size": 43
+        }
+      ],
+      "Lambda": 0.0010408703097715215,
+      "mu_per_formation": [
+        14.783324592662353,
+        1.0444690399139316
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.021743136262439552
+        ],
+        [
+          0.021743136262439552,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9536802906211437,
+        0.9236694642045539
+      ],
+      "persists_overlap": [
+        0.9941825930474497,
+        0.995851101816122
+      ],
+      "mean_persist_transport": 0.9386748774128488,
+      "mean_persist_overlap": 0.9950168474317859
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.011176490072659,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6,
+          "core_size": 40
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.725,
+          "core_size": 40
+        }
+      ],
+      "Lambda": 0.014818681710849442,
+      "mu_per_formation": [
+        -1.4649034449511467,
+        -4.665761627432833
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0185233521385618
+        ],
+        [
+          0.0185233521385618,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9504508035909933,
+        0.9299506932110543
+      ],
+      "persists_overlap": [
+        0.9723005221303134,
+        0.958870563404042
+      ],
+      "mean_persist_transport": 0.9402007484010237,
+      "mean_persist_overlap": 0.9655855427671777
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 0.9915335858780465,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 1.9268292682926829,
+          "core_size": 41
+        },
+        {
+          "max_depth": 4,
+          "mean_depth": 2.0238095238095237,
+          "core_size": 42
+        }
+      ],
+      "Lambda": 0.005778849121549376,
+      "mu_per_formation": [
+        -1.3735277961098842,
+        -4.250295476554512
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.001444712280387344
+        ],
+        [
+          0.001444712280387344,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.926988648567226,
+        0.9168845598383674
+      ],
+      "persists_overlap": [
+        0.983139850828019,
+        0.9433691581987012
+      ],
+      "mean_persist_transport": 0.9219366042027967,
+      "mean_persist_overlap": 0.96325450451336
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.0183186507870674,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.731707317073171,
+          "core_size": 41
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.046511627906977,
+          "core_size": 43
+        }
+      ],
+      "Lambda": 0.002058740408914816,
+      "mu_per_formation": [
+        15.377344900273425,
+        -1.558022515128692e-13
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.000257342551114352
+        ],
+        [
+          0.000257342551114352,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9531930613025869,
+        0.9404901225537251
+      ],
+      "persists_overlap": [
+        0.9938579144913011,
+        0.9485005080296404
+      ],
+      "mean_persist_transport": 0.946841591928156,
+      "mean_persist_overlap": 0.9711792112604707
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9298087501356611,
+      "baseline_overlap": 0.9986726206540236,
+      "persist_ratio": 1.0174306480410658,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.619047619047619,
+          "core_size": 42
+        },
+        {
+          "max_depth": 4,
+          "mean_depth": 1.8604651162790697,
+          "core_size": 43
+        }
+      ],
+      "Lambda": 0.0,
+      "mu_per_formation": [
+        -0.15138984304217165,
+        -1.402174580255027
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9453306461168267,
+        0.9467011922927313
+      ],
+      "persists_overlap": [
+        0.9343418852662616,
+        0.9541166722767518
+      ],
+      "mean_persist_transport": 0.946015919204779,
+      "mean_persist_overlap": 0.9442292787715068
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.008917707871953,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.375,
+          "core_size": 40
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.275,
+          "core_size": 40
+        }
+      ],
+      "Lambda": 0.00021661412456289907,
+      "mu_per_formation": [
+        -8.259224038912852e-14,
+        -0.545438496859211
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.02707676557036238
+        ],
+        [
+          0.02707676557036238,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9595634509156972,
+        0.9200865907622439
+      ],
+      "persists_overlap": [
+        0.9866228346646646,
+        0.9473416208131502
+      ],
+      "mean_persist_transport": 0.9398250208389705,
+      "mean_persist_overlap": 0.9669822277389074
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.0164877587492862,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.5384615384615383,
+          "core_size": 39
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.725,
+          "core_size": 40
+        }
+      ],
+      "Lambda": 0.0015428246299370766,
+      "mu_per_formation": [
+        -4.536982451866584e-14,
+        14.829548427128145
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.03857061574842691
+        ],
+        [
+          0.03857061574842691,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9362505329393764,
+        0.9575027862765276
+      ],
+      "persists_overlap": [
+        0.991750827620994,
+        0.9949234634126253
+      ],
+      "mean_persist_transport": 0.9468766596079521,
+      "mean_persist_overlap": 0.9933371455168096
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.015968867673361,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.658536585365854,
+          "core_size": 41
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.951219512195122,
+          "core_size": 41
+        }
+      ],
+      "Lambda": 0.00011935092080601041,
+      "mu_per_formation": [
+        3.143824818334518,
+        15.382222922097654
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.03752183869210131
+        ],
+        [
+          0.03752183869210131,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9359272538246374,
+        0.9568593526208602
+      ],
+      "persists_overlap": [
+        0.9968914688123077,
+        0.9967875381668136
+      ],
+      "mean_persist_transport": 0.9463933032227487,
+      "mean_persist_overlap": 0.9968395034895607
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.021858995637936,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6,
+          "core_size": 40
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.175,
+          "core_size": 40
+        }
+      ],
+      "Lambda": 0.00048331142480217433,
+      "mu_per_formation": [
+        7.58362794704192,
+        -4.590532054623248
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0012082785620054358
+        ],
+        [
+          0.0012082785620054358,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9568774208783588,
+        0.9468827061899991
+      ],
+      "persists_overlap": [
+        0.994455130390796,
+        0.940616818645149
+      ],
+      "mean_persist_transport": 0.951880063534179,
+      "mean_persist_overlap": 0.9675359745179726
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.0071736872926482,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6904761904761907,
+          "core_size": 42
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.5384615384615383,
+          "core_size": 39
+        }
+      ],
+      "Lambda": 0.02043674702377925,
+      "mu_per_formation": [
+        -1.041555215469874,
+        -5.403140573739285
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.025545933779724063
+        ],
+        [
+          0.025545933779724063,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9458580397836361,
+        0.9305428287169488
+      ],
+      "persists_overlap": [
+        0.9686992691058841,
+        0.9619869297157466
+      ],
+      "mean_persist_transport": 0.9382004342502925,
+      "mean_persist_overlap": 0.9653430994108154
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 0.9878425873420057,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 2.7142857142857144,
+          "core_size": 42
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.880952380952381,
+          "core_size": 42
+        }
+      ],
+      "Lambda": 0.003285756745394802,
+      "mu_per_formation": [
+        -2.4777670717347084,
+        -4.212717680495068
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0008214391863487004
+        ],
+        [
+          0.0008214391863487004,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9155147027791576,
+        0.9248716300022096
+      ],
+      "persists_overlap": [
+        0.9873189425528959,
+        0.9687353128848788
+      ],
+      "mean_persist_transport": 0.9201931663906836,
+      "mean_persist_overlap": 0.9780271277188873
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 0.9855796725520543,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 2.025,
+          "core_size": 40
+        },
+        {
+          "max_depth": 4,
+          "mean_depth": 1.880952380952381,
+          "core_size": 42
+        }
+      ],
+      "Lambda": 0.005809246780990497,
+      "mu_per_formation": [
+        -3.69230725737992,
+        -1.1185709502584607
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0007261558476238121
+        ],
+        [
+          0.0007261558476238121,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9278208324922116,
+        0.9083496085012938
+      ],
+      "persists_overlap": [
+        0.9449813617846012,
+        0.9603414470466969
+      ],
+      "mean_persist_transport": 0.9180852204967527,
+      "mean_persist_overlap": 0.9526614044156491
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9315180153010544,
+      "baseline_overlap": 0.9974527517924766,
+      "persist_ratio": 1.0229898419214671,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 2.902439024390244,
+          "core_size": 41
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.775,
+          "core_size": 40
+        }
+      ],
+      "Lambda": 0.0,
+      "mu_per_formation": [
+        -5.112666853584122,
+        -5.186787864833846
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9528739964237203,
+        0.9529929380159287
+      ],
+      "persists_overlap": [
+        0.9638772150038208,
+        0.9635248812897418
+      ],
+      "mean_persist_transport": 0.9529334672198244,
+      "mean_persist_overlap": 0.9637010481467814
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 0.9933794368467865,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.619047619047619,
+          "core_size": 42
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.727272727272727,
+          "core_size": 44
+        }
+      ],
+      "Lambda": 0.00023977690557193095,
+      "mu_per_formation": [
+        -1.6936037611520205e-14,
+        -3.4760061100795096e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.029972113196491366
+        ],
+        [
+          0.029972113196491366,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9235050394833689,
+        0.935477576498426
+      ],
+      "persists_overlap": [
+        0.9889678660307331,
+        0.9888112988242693
+      ],
+      "mean_persist_transport": 0.9294913079908975,
+      "mean_persist_overlap": 0.9888895824275012
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 1.0154696063026092,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 2.5,
+          "core_size": 40
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.769230769230769,
+          "core_size": 39
+        }
+      ],
+      "Lambda": 6.946670816784647e-05,
+      "mu_per_formation": [
+        15.524805382849792,
+        2.803570258721379
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.03895095939813037
+        ],
+        [
+          0.03895095939813037,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9609355153550346,
+        0.9393860286126434
+      ],
+      "persists_overlap": [
+        0.9949947468059921,
+        0.9933520373893163
+      ],
+      "mean_persist_transport": 0.950160771983839,
+      "mean_persist_overlap": 0.9941733920976542
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 1.0159117559202298,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6666666666666665,
+          "core_size": 42
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6341463414634148,
+          "core_size": 41
+        }
+      ],
+      "Lambda": 0.0033980300715852987,
+      "mu_per_formation": [
+        -3.6854309177793385e-14,
+        2.143493205899826e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.04247537589481623
+        ],
+        [
+          0.04247537589481623,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9405280644311973,
+        0.9606209060185796
+      ],
+      "persists_overlap": [
+        0.9854474131877816,
+        0.986864525278383
+      ],
+      "mean_persist_transport": 0.9505744852248885,
+      "mean_persist_overlap": 0.9861559692330824
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 1.0081941493785997,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 2.5,
+          "core_size": 40
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.707317073170732,
+          "core_size": 41
+        }
+      ],
+      "Lambda": 0.000912624900581466,
+      "mu_per_formation": [
+        -5.155447221390936e-14,
+        -5.474407710199246
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0022815622514536647
+        ],
+        [
+          0.0022815622514536647,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9357599398292745,
+        0.9509465166467705
+      ],
+      "persists_overlap": [
+        0.9934717019184873,
+        0.9381959706164011
+      ],
+      "mean_persist_transport": 0.9433532282380226,
+      "mean_persist_overlap": 0.9658338362674442
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 0.989582070099825,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6341463414634148,
+          "core_size": 41
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.076923076923077,
+          "core_size": 39
+        }
+      ],
+      "Lambda": 0.004123353565503287,
+      "mu_per_formation": [
+        0.6102981102063995,
+        -5.54925187668243
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.005154191956879109
+        ],
+        [
+          0.005154191956879109,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9281747869975796,
+        0.9237015425972972
+      ],
+      "persists_overlap": [
+        0.9937316193107666,
+        0.9042573164832756
+      ],
+      "mean_persist_transport": 0.9259381647974384,
+      "mean_persist_overlap": 0.948994467897021
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 0.9855833533438721,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 2.048780487804878,
+          "core_size": 41
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.0681818181818183,
+          "core_size": 44
+        }
+      ],
+      "Lambda": 0.002927482083918805,
+      "mu_per_formation": [
+        -1.1721806129074344,
+        -4.381387064187508
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0007318705209797012
+        ],
+        [
+          0.0007318705209797012,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9247387555297518,
+        0.919654486878272
+      ],
+      "persists_overlap": [
+        0.9843261867681701,
+        0.9835818751055057
+      ],
+      "mean_persist_transport": 0.9221966212040119,
+      "mean_persist_overlap": 0.9839540309368379
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 0.994017511930225,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 2.5813953488372094,
+          "core_size": 43
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.0,
+          "core_size": 41
+        }
+      ],
+      "Lambda": 0.0025938996170221697,
+      "mu_per_formation": [
+        -0.009845324128371838,
+        -0.9750910452306423
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0003242374521277712
+        ],
+        [
+          0.0003242374521277712,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9291857104212535,
+        0.9309909815035352
+      ],
+      "persists_overlap": [
+        0.9608877150384983,
+        0.9861559039789038
+      ],
+      "mean_persist_transport": 0.9300883459623943,
+      "mean_persist_overlap": 0.973521809508701
+    },
+    {
+      "grid": "10x10",
+      "n": 100,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9356860767536275,
+      "baseline_overlap": 0.9944287932616629,
+      "persist_ratio": 0.9665723807906911,
+      "depths": [
+        {
+          "max_depth": 3,
+          "mean_depth": 1.5714285714285714,
+          "core_size": 42
+        },
+        {
+          "max_depth": 3,
+          "mean_depth": 1.5116279069767442,
+          "core_size": 43
+        }
+      ],
+      "Lambda": 0.001488568981158866,
+      "mu_per_formation": [
+        -4.2226219488190075,
+        -4.405872068650926
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          3.721422452897165e-05
+        ],
+        [
+          3.721422452897165e-05,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.8863894589206652,
+        0.9224271788402447
+      ],
+      "persists_overlap": [
+        0.7497738385477737,
+        0.8257211094306597
+      ],
+      "mean_persist_transport": 0.904408318880455,
+      "mean_persist_overlap": 0.7877474739892167
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9976590826462817,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2413793103448274,
+          "core_size": 58
+        },
+        {
+          "max_depth": 3,
+          "mean_depth": 1.7586206896551724,
+          "core_size": 58
+        }
+      ],
+      "Lambda": 0.0002982291224261573,
+      "mu_per_formation": [
+        -1.7608035728505183,
+        3.8894789649698207e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.03727864030326967
+        ],
+        [
+          0.03727864030326967,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9293871274683342,
+        0.9439115151366766
+      ],
+      "persists_overlap": [
+        0.9897222581531205,
+        0.9583816449411712
+      ],
+      "mean_persist_transport": 0.9366493213025053,
+      "mean_persist_overlap": 0.9740519515471459
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9856733866811622,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.9473684210526314,
+          "core_size": 57
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.086206896551724,
+          "core_size": 58
+        }
+      ],
+      "Lambda": 0.0006821211033538764,
+      "mu_per_formation": [
+        -3.5195507818192833,
+        -1.7125017291649522
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.01705302758384691
+        ],
+        [
+          0.01705302758384691,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9239664985917523,
+        0.926826672582498
+      ],
+      "persists_overlap": [
+        0.9832748026417525,
+        0.9898822849030359
+      ],
+      "mean_persist_transport": 0.9253965855871251,
+      "mean_persist_overlap": 0.9865785437723942
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9938474714713311,
+      "depths": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.4827586206896552,
+          "core_size": 58
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0338983050847457,
+          "core_size": 59
+        }
+      ],
+      "Lambda": 0.0008529590143607817,
+      "mu_per_formation": [
+        11.99677423753177,
+        -2.721261044757629
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.010661987679509771
+        ],
+        [
+          0.010661987679509771,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.939404590165762,
+        0.9267370123597524
+      ],
+      "persists_overlap": [
+        0.9964750268565455,
+        0.9572954500722349
+      ],
+      "mean_persist_transport": 0.9330708012627572,
+      "mean_persist_overlap": 0.9768852384643902
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9976014867570487,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4,
+          "core_size": 60
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.721311475409836,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.00041489533471628743,
+      "mu_per_formation": [
+        9.99473959150717,
+        -4.314545051242315
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0010372383367907186
+        ],
+        [
+          0.0010372383367907186,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9393574524603523,
+        0.9338330426792603
+      ],
+      "persists_overlap": [
+        0.9966582258535785,
+        0.955851828141503
+      ],
+      "mean_persist_transport": 0.9365952475698063,
+      "mean_persist_overlap": 0.9762550269975407
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9913199752712669,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0,
+          "core_size": 58
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2131147540983607,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.0026094743974157376,
+      "mu_per_formation": [
+        -9.982292770170642e-14,
+        -4.205143540389339
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0032618429967696716
+        ],
+        [
+          0.0032618429967696716,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9339191487591612,
+        0.9274765888881317
+      ],
+      "persists_overlap": [
+        0.9902199296331404,
+        0.9755901833556915
+      ],
+      "mean_persist_transport": 0.9306978688236465,
+      "mean_persist_overlap": 0.982905056494416
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 1.0005390425740823,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2096774193548385,
+          "core_size": 62
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1639344262295084,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.00013759051016660594,
+      "mu_per_formation": [
+        -6.475343437269715e-16,
+        0.9950099454538548
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          3.4397627541651486e-05
+        ],
+        [
+          3.4397627541651486e-05,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9398404958771299,
+        0.9388658306926234
+      ],
+      "persists_overlap": [
+        0.9912026990582644,
+        0.9960607889765717
+      ],
+      "mean_persist_transport": 0.9393531632848766,
+      "mean_persist_overlap": 0.993631744017418
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9909094599419791,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2698412698412698,
+          "core_size": 63
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.183333333333333,
+          "core_size": 60
+        }
+      ],
+      "Lambda": 0.003993328741173318,
+      "mu_per_formation": [
+        -0.9644883067546718,
+        -3.6016242075206426
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0004991660926466648
+        ],
+        [
+          0.0004991660926466648,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9269395450611979,
+        0.9336853703458127
+      ],
+      "persists_overlap": [
+        0.9813229125137951,
+        0.8653416933442709
+      ],
+      "mean_persist_transport": 0.9303124577035053,
+      "mean_persist_overlap": 0.923332302929033
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 21.0,
+      "delta_beta": 1.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9388470847356509,
+      "baseline_overlap": 0.999094623076197,
+      "persist_ratio": 0.9852365597562166,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 1.9152542372881356,
+          "core_size": 59
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 1.7540983606557377,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 2.5238437087988593e-05,
+      "mu_per_formation": [
+        -4.3088044860693895,
+        -4.317531316992857
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          6.309609271997148e-07
+        ],
+        [
+          6.309609271997148e-07,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9277255578853075,
+        0.9222473859189043
+      ],
+      "persists_overlap": [
+        0.8479565175399564,
+        0.819819147849851
+      ],
+      "mean_persist_transport": 0.9249864719021059,
+      "mean_persist_overlap": 0.8338878326949037
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9936741801497369,
+      "depths": [
+        {
+          "max_depth": 4,
+          "mean_depth": 1.912280701754386,
+          "core_size": 57
+        },
+        {
+          "max_depth": 4,
+          "mean_depth": 2.0350877192982457,
+          "core_size": 57
+        }
+      ],
+      "Lambda": 0.00023794968388226627,
+      "mu_per_formation": [
+        -1.5757770204386095,
+        -1.0852853360493186
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.029743710485283282
+        ],
+        [
+          0.029743710485283282,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.929770334943989,
+        0.9378861961874715
+      ],
+      "persists_overlap": [
+        0.9906335028109028,
+        0.9840250794447681
+      ],
+      "mean_persist_transport": 0.9338282655657302,
+      "mean_persist_overlap": 0.9873292911278355
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 1.002054998855232,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0517241379310347,
+          "core_size": 58
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2033898305084745,
+          "core_size": 59
+        }
+      ],
+      "Lambda": 0.0011715301743343443,
+      "mu_per_formation": [
+        -2.368452540398718,
+        14.655924377616984
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.02928825435835861
+        ],
+        [
+          0.02928825435835861,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9437104545811267,
+        0.939698212516258
+      ],
+      "persists_overlap": [
+        0.9752900449355479,
+        0.9981951864671412
+      ],
+      "mean_persist_transport": 0.9417043335486923,
+      "mean_persist_overlap": 0.9867426157013446
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9972116017099978,
+      "depths": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.4827586206896552,
+          "core_size": 58
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0338983050847457,
+          "core_size": 59
+        }
+      ],
+      "Lambda": 0.004419276879791307,
+      "mu_per_formation": [
+        3.462118002686219e-15,
+        -4.7303983797971637e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.05524096099739134
+        ],
+        [
+          0.05524096099739134,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9335297276915193,
+        0.94077555069771
+      ],
+      "persists_overlap": [
+        0.9672698488059078,
+        0.9430836486338112
+      ],
+      "mean_persist_transport": 0.9371526391946147,
+      "mean_persist_overlap": 0.9551767487198595
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9944459140473668,
+      "depths": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.3559322033898304,
+          "core_size": 59
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.5517241379310347,
+          "core_size": 58
+        }
+      ],
+      "Lambda": 0.0008702516949375194,
+      "mu_per_formation": [
+        -5.684301533792537e-14,
+        -2.426779404980328
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0021756292373437984
+        ],
+        [
+          0.0021756292373437984,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9407855342628534,
+        0.928321506384701
+      ],
+      "persists_overlap": [
+        0.9887002714382216,
+        0.9828950233305335
+      ],
+      "mean_persist_transport": 0.9345535203237771,
+      "mean_persist_overlap": 0.9857976473843775
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9864570589887146,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.3220338983050848,
+          "core_size": 59
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.6315789473684212,
+          "core_size": 57
+        }
+      ],
+      "Lambda": 0.014609040685672396,
+      "mu_per_formation": [
+        -5.496695629005703,
+        -4.186828559462993
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.018261300857090493
+        ],
+        [
+          0.018261300857090493,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9264884342410592,
+        0.9276031842242402
+      ],
+      "persists_overlap": [
+        0.965368509256037,
+        0.9771530109688975
+      ],
+      "mean_persist_transport": 0.9270458092326497,
+      "mean_persist_overlap": 0.9712607601124672
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9883498107963405,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0491803278688523,
+          "core_size": 61
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.129032258064516,
+          "core_size": 62
+        }
+      ],
+      "Lambda": 0.013787820731493084,
+      "mu_per_formation": [
+        4.7363057413120995,
+        -1.6048329170589274e-13
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.003446955182873271
+        ],
+        [
+          0.003446955182873271,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9294453671914545,
+        0.9282037657448264
+      ],
+      "persists_overlap": [
+        0.7323674631194335,
+        0.9513915840557725
+      ],
+      "mean_persist_transport": 0.9288245664681405,
+      "mean_persist_overlap": 0.841879523587603
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 0.9843488825069739,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2459016393442623,
+          "core_size": 61
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.161290322580645,
+          "core_size": 62
+        }
+      ],
+      "Lambda": 0.004745093987605181,
+      "mu_per_formation": [
+        -0.13587950058111659,
+        -1.5643377158528233
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0005931367484506477
+        ],
+        [
+          0.0005931367484506477,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9271015171282591,
+        0.9230276862380512
+      ],
+      "persists_overlap": [
+        0.9612785019121504,
+        0.9880540157083929
+      ],
+      "mean_persist_transport": 0.9250646016831552,
+      "mean_persist_overlap": 0.9746662588102717
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 22.0,
+      "delta_beta": 2.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9397731009021604,
+      "baseline_overlap": 0.9982614180122897,
+      "persist_ratio": 1.0009044139924568,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.8666666666666667,
+          "core_size": 60
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.5901639344262297,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.0,
+      "mu_per_formation": [
+        -2.7478019859404066e-14,
+        14.876108642728925
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9414560343770197,
+        0.9397900553116821
+      ],
+      "persists_overlap": [
+        0.9828442715900189,
+        0.9982458906909735
+      ],
+      "mean_persist_transport": 0.9406230448443509,
+      "mean_persist_overlap": 0.9905450811404961
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.001,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 0.9910911109029302,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1875,
+          "core_size": 64
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4310344827586206,
+          "core_size": 58
+        }
+      ],
+      "Lambda": 0.0006130106005253589,
+      "mu_per_formation": [
+        -0.8455543294104615,
+        -0.9993708565953598
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.07662632506566987
+        ],
+        [
+          0.07662632506566987,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9384567902381431,
+        0.9288678131029242
+      ],
+      "persists_overlap": [
+        0.9767011990119845,
+        0.8882438295952727
+      ],
+      "mean_persist_transport": 0.9336623016705337,
+      "mean_persist_overlap": 0.9324725143036285
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.005,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 1.0012077470729432,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0701754385964914,
+          "core_size": 57
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.263157894736842,
+          "core_size": 57
+        }
+      ],
+      "Lambda": 0.002282351745112616,
+      "mu_per_formation": [
+        7.841093048225017e-14,
+        2.4860962491131747e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0570587936278154
+        ],
+        [
+          0.0570587936278154,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9465744422923781,
+        0.9398110157122982
+      ],
+      "persists_overlap": [
+        0.963709034375121,
+        0.9556959386024402
+      ],
+      "mean_persist_transport": 0.9431927290023381,
+      "mean_persist_overlap": 0.9597024864887806
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.01,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 1.0026287757880026,
+      "depths": [
+        {
+          "max_depth": 9,
+          "mean_depth": 3.6551724137931036,
+          "core_size": 58
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0517241379310347,
+          "core_size": 58
+        }
+      ],
+      "Lambda": 0.002478066546524573,
+      "mu_per_formation": [
+        -2.3478485494547425,
+        1.9501067646471672e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.030975831831557166
+        ],
+        [
+          0.030975831831557166,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9460563415964482,
+        0.9430064907207338
+      ],
+      "persists_overlap": [
+        0.9932313807290585,
+        0.9929619945710377
+      ],
+      "mean_persist_transport": 0.944531416158591,
+      "mean_persist_overlap": 0.9930966876500481
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.05,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 1.0030089820519448,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.129032258064516,
+          "core_size": 62
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1904761904761907,
+          "core_size": 63
+        }
+      ],
+      "Lambda": 0.008901431905806162,
+      "mu_per_formation": [
+        0.23116318053437832,
+        0.2882641771252198
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.041153666213126903
+        ],
+        [
+          0.041153666213126903,
+          1.0
+        ]
+      ],
+      "predicted_regime": "strongly-interacting",
+      "persists_transport": [
+        0.9483855501570404,
+        0.9413936325573892
+      ],
+      "persists_overlap": [
+        0.9357538404888599,
+        0.9870105002220667
+      ],
+      "mean_persist_transport": 0.9448895913572148,
+      "mean_persist_overlap": 0.9613821703554633
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.1,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 0.9934843438866651,
+      "depths": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.263157894736842,
+          "core_size": 57
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.066666666666667,
+          "core_size": 60
+        }
+      ],
+      "Lambda": 0.000296559080497143,
+      "mu_per_formation": [
+        -3.9845174171371918,
+        -1.4462302659329915
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.00037069885062142874
+        ],
+        [
+          0.00037069885062142874,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9383815952057087,
+        0.9334521221642234
+      ],
+      "persists_overlap": [
+        0.9614533065698475,
+        0.9720050975911703
+      ],
+      "mean_persist_transport": 0.935916858684966,
+      "mean_persist_overlap": 0.9667292020805089
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 0.5,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 0.9967049946667873,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.5925925925925926,
+          "core_size": 54
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.8421052631578947,
+          "core_size": 57
+        }
+      ],
+      "Lambda": 0.0002067313076490372,
+      "mu_per_formation": [
+        -0.271844103382411,
+        -7.023813533346718e-14
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          5.16828269122593e-05
+        ],
+        [
+          5.16828269122593e-05,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9341589993402749,
+        0.9437427781447487
+      ],
+      "persists_overlap": [
+        0.9890046504145208,
+        0.9942265022596694
+      ],
+      "mean_persist_transport": 0.9389508887425118,
+      "mean_persist_overlap": 0.9916155763370951
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 1.0,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 0.9899683210199147,
+      "depths": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.5964912280701755,
+          "core_size": 57
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.19672131147541,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.001579067846747956,
+      "mu_per_formation": [
+        -4.26136343030679,
+        -3.9602762406611727
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0001973834808434945
+        ],
+        [
+          0.0001973834808434945,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9308269308947388,
+        0.934382212878714
+      ],
+      "persists_overlap": [
+        0.9790786071266231,
+        0.946721089814912
+      ],
+      "mean_persist_transport": 0.9326045718867264,
+      "mean_persist_overlap": 0.9628998484707676
+    },
+    {
+      "grid": "12x12",
+      "n": 144,
+      "vf": 0.4,
+      "beta_t": 20.0,
+      "beta_s": 25.0,
+      "delta_beta": 5.0,
+      "lambda_rep": 5.0,
+      "baseline_persist": 0.9420549648759575,
+      "baseline_overlap": 0.9961398811859532,
+      "persist_ratio": 0.994142826508564,
+      "depths": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1147540983606556,
+          "core_size": 61
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.6721311475409837,
+          "core_size": 61
+        }
+      ],
+      "Lambda": 0.0,
+      "mu_per_formation": [
+        -3.0904703815191277,
+        -1.6734177590478598
+      ],
+      "mu_floor": 0.125,
+      "omega_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "predicted_regime": "weakly-interacting",
+      "persists_transport": [
+        0.9416978361516335,
+        0.9313765348647873
+      ],
+      "persists_overlap": [
+        0.9698897927823007,
+        0.9882801312055942
+      ],
+      "mean_persist_transport": 0.9365371855082104,
+      "mean_persist_overlap": 0.9790849619939475
+    }
+  ],
+  "elapsed_seconds": 228.71136236190796
+}

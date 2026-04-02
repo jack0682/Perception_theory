@@ -1,0 +1,3401 @@
+{
+  "experiment": "exp49_unified_predictions",
+  "description": "P-Unified-1/2 validation: persist vs Lambda on large grids",
+  "configs": [
+    {
+      "grid": "15x15",
+      "vf": 0.35
+    },
+    {
+      "grid": "20x20",
+      "vf": 0.3
+    }
+  ],
+  "lambda_rep_values": [
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "perturbation_strengths": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "results": [
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.001,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.00025918908742924744,
+      "mu_per_formation": [
+        -1.43123015617008,
+        -1.3060391224962086e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9717383342692578,
+        0.9900209507945728
+      ],
+      "mean_persist": 0.9808796425319153,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.869047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6625,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4941176470588236,
+          "core_size": 85,
+          "deep_core_frac": 0.8235294117647058
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6790123456790123,
+          "core_size": 81,
+          "deep_core_frac": 0.8148148148148148
+        }
+      ],
+      "depth_changes": [
+        0.6250700280112045,
+        0.016512345679012164
+      ],
+      "mean_depth_change": 0.3207911868451083
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.001,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.00025918908742924744,
+      "mu_per_formation": [
+        -1.43123015617008,
+        -1.3060391224962086e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9716289758939585,
+        0.9902621135418594
+      ],
+      "mean_persist": 0.980945544717909,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.869047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6625,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4941176470588236,
+          "core_size": 85,
+          "deep_core_frac": 0.8235294117647058
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6790123456790123,
+          "core_size": 81,
+          "deep_core_frac": 0.8148148148148148
+        }
+      ],
+      "depth_changes": [
+        0.6250700280112045,
+        0.016512345679012164
+      ],
+      "mean_depth_change": 0.3207911868451083
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.001,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.00025918908742924744,
+      "mu_per_formation": [
+        -1.43123015617008,
+        -1.3060391224962086e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9725848191992547,
+        0.9916327494975099
+      ],
+      "mean_persist": 0.9821087843483822,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.869047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6625,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.5232558139534884,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6790123456790123,
+          "core_size": 81,
+          "deep_core_frac": 0.8148148148148148
+        }
+      ],
+      "depth_changes": [
+        0.6542081949058693,
+        0.016512345679012164
+      ],
+      "mean_depth_change": 0.33536027029244075
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.005,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0009505324198214762,
+      "mu_per_formation": [
+        -0.8515953413033684,
+        -1.4436020474272653
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9956286449101553,
+        0.9841119125177187
+      ],
+      "mean_persist": 0.9898702787139371,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.2375,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.055182926829268286
+      ],
+      "mean_depth_change": 0.027591463414634143
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.005,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0009505324198214762,
+      "mu_per_formation": [
+        -0.8515953413033684,
+        -1.4436020474272653
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9951265699064835,
+        0.9837466844913945
+      ],
+      "mean_persist": 0.989436627198939,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.2375,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.055182926829268286
+      ],
+      "mean_depth_change": 0.027591463414634143
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.005,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0009505324198214762,
+      "mu_per_formation": [
+        -0.8515953413033684,
+        -1.4436020474272653
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9925480786140508,
+        0.9835516358079569
+      ],
+      "mean_persist": 0.9880498572110039,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.2375,
+          "core_size": 80,
+          "deep_core_frac": 0.8125
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.012195121951219,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.055182926829268286
+      ],
+      "mean_depth_change": 0.027591463414634143
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.01,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0027086205335050046,
+      "mu_per_formation": [
+        -0.16916885869127024,
+        -3.408021434858056e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9976809076111763,
+        0.997630574671377
+      ],
+      "mean_persist": 0.9976557411412766,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1125,
+          "core_size": 80,
+          "deep_core_frac": 0.7875
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1125,
+          "core_size": 80,
+          "deep_core_frac": 0.7875
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.01,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0027086205335050046,
+      "mu_per_formation": [
+        -0.16916885869127024,
+        -3.408021434858056e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9976632599850068,
+        0.9987331629239476
+      ],
+      "mean_persist": 0.9981982114544772,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1125,
+          "core_size": 80,
+          "deep_core_frac": 0.7875
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1125,
+          "core_size": 80,
+          "deep_core_frac": 0.7875
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.01,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0027086205335050046,
+      "mu_per_formation": [
+        -0.16916885869127024,
+        -3.408021434858056e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9937764407190213,
+        0.9949674792684247
+      ],
+      "mean_persist": 0.994371959993723,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.1125,
+          "core_size": 80,
+          "deep_core_frac": 0.7875
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.0864197530864197,
+          "core_size": 81,
+          "deep_core_frac": 0.7777777777777778
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.55,
+          "core_size": 80,
+          "deep_core_frac": 0.8
+        }
+      ],
+      "depth_changes": [
+        -0.02608024691358013,
+        0.0
+      ],
+      "mean_depth_change": -0.013040123456790065
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.02,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.008124788218318992,
+      "mu_per_formation": [
+        -9.676756138212963e-14,
+        0.906514456530797
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9987750452698829,
+        0.9993323357867984
+      ],
+      "mean_persist": 0.9990536905283407,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.02,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.008124788218318992,
+      "mu_per_formation": [
+        -9.676756138212963e-14,
+        0.906514456530797
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.997090848084922,
+        0.9971295460664749
+      ],
+      "mean_persist": 0.9971101970756984,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.02,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.008124788218318992,
+      "mu_per_formation": [
+        -9.676756138212963e-14,
+        0.906514456530797
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9973007672210297,
+        0.9972917342033801
+      ],
+      "mean_persist": 0.997296250712205,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.674698795180723,
+          "core_size": 83,
+          "deep_core_frac": 0.7349397590361446
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 2.9358974358974357,
+          "core_size": 78,
+          "deep_core_frac": 0.7307692307692307
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.05,
+      "perturbation": 0.02,
+      "Lambda_coupling": 1.4455314960640406e-06,
+      "mu_per_formation": [
+        -1.487074483356915e-13,
+        -5.421612611549222
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9935734128896695,
+        0.9636314363499547
+      ],
+      "mean_persist": 0.9786024246198122,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.45679012345679,
+          "core_size": 81,
+          "deep_core_frac": 0.8024691358024691
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.738095238095238,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4878048780487805,
+          "core_size": 82,
+          "deep_core_frac": 0.8048780487804879
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.5952380952380953,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depth_changes": [
+        0.031014754591990545,
+        0.8571428571428572
+      ],
+      "mean_depth_change": 0.4440788058674239
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.05,
+      "perturbation": 0.05,
+      "Lambda_coupling": 1.4455314960640406e-06,
+      "mu_per_formation": [
+        -1.487074483356915e-13,
+        -5.421612611549222
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9934773563365102,
+        0.9630575620249372
+      ],
+      "mean_persist": 0.9782674591807237,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.45679012345679,
+          "core_size": 81,
+          "deep_core_frac": 0.8024691358024691
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.738095238095238,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4878048780487805,
+          "core_size": 82,
+          "deep_core_frac": 0.8048780487804879
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.5783132530120483,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        }
+      ],
+      "depth_changes": [
+        0.031014754591990545,
+        0.8402180149168101
+      ],
+      "mean_depth_change": 0.43561638475440034
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.05,
+      "perturbation": 0.1,
+      "Lambda_coupling": 1.4455314960640406e-06,
+      "mu_per_formation": [
+        -1.487074483356915e-13,
+        -5.421612611549222
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9948509947404324,
+        0.9633122867782514
+      ],
+      "mean_persist": 0.9790816407593419,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.45679012345679,
+          "core_size": 81,
+          "deep_core_frac": 0.8024691358024691
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 2.738095238095238,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4878048780487805,
+          "core_size": 82,
+          "deep_core_frac": 0.8048780487804879
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.5952380952380953,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depth_changes": [
+        0.031014754591990545,
+        0.8571428571428572
+      ],
+      "mean_depth_change": 0.4440788058674239
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.1,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.00625821292163522,
+      "mu_per_formation": [
+        0.0023222310494782333,
+        -1.7086170320035778
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9976786951427907,
+        0.9929776881505972
+      ],
+      "mean_persist": 0.995328191646694,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.158536585365853,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.180722891566265,
+          "core_size": 83,
+          "deep_core_frac": 0.8313253012048193
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.022186306200411288
+      ],
+      "mean_depth_change": 0.011093153100205644
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.1,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.00625821292163522,
+      "mu_per_formation": [
+        0.0023222310494782333,
+        -1.7086170320035778
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9980754933764859,
+        0.9928715661666603
+      ],
+      "mean_persist": 0.9954735297715731,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.158536585365853,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.180722891566265,
+          "core_size": 83,
+          "deep_core_frac": 0.8313253012048193
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.022186306200411288
+      ],
+      "mean_depth_change": 0.011093153100205644
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.1,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.00625821292163522,
+      "mu_per_formation": [
+        0.0023222310494782333,
+        -1.7086170320035778
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9965116482202901,
+        0.9924597094823244
+      ],
+      "mean_persist": 0.9944856788513072,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.158536585365853,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.292682926829268,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 4.180722891566265,
+          "core_size": 83,
+          "deep_core_frac": 0.8313253012048193
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.022186306200411288
+      ],
+      "mean_depth_change": 0.011093153100205644
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.2,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.8053658359884606,
+        -1.5328800181359095
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9824132513397542,
+        0.9819158106022297
+      ],
+      "mean_persist": 0.9821645309709919,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1686746987951806,
+          "core_size": 83,
+          "deep_core_frac": 0.7710843373493976
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4705882352941178,
+          "core_size": 85,
+          "deep_core_frac": 0.8235294117647058
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1904761904761907,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4285714285714284,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depth_changes": [
+        0.021801491681010088,
+        -0.04201680672268937
+      ],
+      "mean_depth_change": -0.010107657520839641
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.2,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.8053658359884606,
+        -1.5328800181359095
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9823487541312705,
+        0.9815264016378482
+      ],
+      "mean_persist": 0.9819375778845594,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1686746987951806,
+          "core_size": 83,
+          "deep_core_frac": 0.7710843373493976
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4705882352941178,
+          "core_size": 85,
+          "deep_core_frac": 0.8235294117647058
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1904761904761907,
+          "core_size": 84,
+          "deep_core_frac": 0.7857142857142857
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4285714285714284,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depth_changes": [
+        0.021801491681010088,
+        -0.04201680672268937
+      ],
+      "mean_depth_change": -0.010107657520839641
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.2,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.8053658359884606,
+        -1.5328800181359095
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9835179306612959,
+        0.9819356755072863
+      ],
+      "mean_persist": 0.9827268030842911,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1686746987951806,
+          "core_size": 83,
+          "deep_core_frac": 0.7710843373493976
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4705882352941178,
+          "core_size": 85,
+          "deep_core_frac": 0.8235294117647058
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1566265060240966,
+          "core_size": 83,
+          "deep_core_frac": 0.7710843373493976
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.4285714285714284,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depth_changes": [
+        -0.012048192771084043,
+        -0.04201680672268937
+      ],
+      "mean_depth_change": -0.027032499746886707
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.5,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5643463387520493,
+        -0.9249568447096566
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9899558396093167,
+        0.9826041711826274
+      ],
+      "mean_persist": 0.986280005395972,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6265060240963853,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7023809523809526,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6097560975609757,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.573170731707317,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        -0.01674992653540963,
+        -0.1292102206736354
+      ],
+      "mean_depth_change": -0.07298007360452252
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.5,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5643463387520493,
+        -0.9249568447096566
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9890977128776927,
+        0.9835934605896748
+      ],
+      "mean_persist": 0.9863455867336837,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6265060240963853,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7023809523809526,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6097560975609757,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.573170731707317,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        -0.01674992653540963,
+        -0.1292102206736354
+      ],
+      "mean_depth_change": -0.07298007360452252
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 0.5,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5643463387520493,
+        -0.9249568447096566
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9851404436237738,
+        0.9791233285053961
+      ],
+      "mean_persist": 0.9821318860645849,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6265060240963853,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7023809523809526,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6097560975609757,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.573170731707317,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        -0.01674992653540963,
+        -0.1292102206736354
+      ],
+      "mean_depth_change": -0.07298007360452252
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 1.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.0976696568972698e-13,
+        -2.0902043958879473e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9865916078789596,
+        0.9873841740074685
+      ],
+      "mean_persist": 0.986987890943214,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        }
+      ],
+      "depth_changes": [
+        -0.030072173215717868,
+        -0.030072173215717868
+      ],
+      "mean_depth_change": -0.030072173215717868
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 1.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.0976696568972698e-13,
+        -2.0902043958879473e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9877664130964303,
+        0.9870487960474668
+      ],
+      "mean_persist": 0.9874076045719485,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        }
+      ],
+      "depth_changes": [
+        -0.030072173215717868,
+        -0.030072173215717868
+      ],
+      "mean_depth_change": -0.030072173215717868
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 1.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.0976696568972698e-13,
+        -2.0902043958879473e-13
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9896215595495091,
+        0.9891235701789111
+      ],
+      "mean_persist": 0.9893725648642101,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.413793103448276,
+          "core_size": 87,
+          "deep_core_frac": 0.8275862068965517
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.383720930232558,
+          "core_size": 86,
+          "deep_core_frac": 0.8255813953488372
+        }
+      ],
+      "depth_changes": [
+        -0.030072173215717868,
+        -0.030072173215717868
+      ],
+      "mean_depth_change": -0.030072173215717868
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 2.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -8.570076304498157e-14,
+        -1.3505349239843019
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9978773184883225,
+        0.9779910859917612
+      ],
+      "mean_persist": 0.9879342022400419,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9146341463414633,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.369047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9146341463414633,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 6,
+          "mean_depth": 3.2560975609756095,
+          "core_size": 82,
+          "deep_core_frac": 0.8170731707317073
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.11295005807200953
+      ],
+      "mean_depth_change": -0.056475029036004765
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 2.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -8.570076304498157e-14,
+        -1.3505349239843019
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9954159931932953,
+        0.9800839540207779
+      ],
+      "mean_persist": 0.9877499736070365,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9146341463414633,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.369047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9146341463414633,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.3012048192771086,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.06784279977051044
+      ],
+      "mean_depth_change": -0.03392139988525522
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 2.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -8.570076304498157e-14,
+        -1.3505349239843019
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.995770431253851,
+        0.9787110384166274
+      ],
+      "mean_persist": 0.9872407348352392,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9146341463414633,
+          "core_size": 82,
+          "deep_core_frac": 0.8292682926829268
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.369047619047619,
+          "core_size": 84,
+          "deep_core_frac": 0.8214285714285714
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.9518072289156625,
+          "core_size": 83,
+          "deep_core_frac": 0.8313253012048193
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.3012048192771086,
+          "core_size": 83,
+          "deep_core_frac": 0.8192771084337349
+        }
+      ],
+      "depth_changes": [
+        0.03717308257419916,
+        -0.06784279977051044
+      ],
+      "mean_depth_change": -0.015334858598155643
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 5.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5990675594989097,
+        -1.0446931013505336
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9729809640342139,
+        0.9756165222105051
+      ],
+      "mean_persist": 0.9742987431223595,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.0,
+          "core_size": 82,
+          "deep_core_frac": 0.7682926829268293
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1772151898734178,
+          "core_size": 79,
+          "deep_core_frac": 0.7848101265822784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2804878048780486,
+          "core_size": 82,
+          "deep_core_frac": 0.8048780487804879
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.271604938271605,
+          "core_size": 81,
+          "deep_core_frac": 0.7901234567901234
+        }
+      ],
+      "depth_changes": [
+        0.2804878048780486,
+        0.09438974839818703
+      ],
+      "mean_depth_change": 0.1874387766381178
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 5.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5990675594989097,
+        -1.0446931013505336
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9734547195128819,
+        0.9778407190587108
+      ],
+      "mean_persist": 0.9756477192857964,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.0,
+          "core_size": 82,
+          "deep_core_frac": 0.7682926829268293
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1772151898734178,
+          "core_size": 79,
+          "deep_core_frac": 0.7848101265822784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.234567901234568,
+          "core_size": 81,
+          "deep_core_frac": 0.8024691358024691
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.271604938271605,
+          "core_size": 81,
+          "deep_core_frac": 0.7901234567901234
+        }
+      ],
+      "depth_changes": [
+        0.23456790123456805,
+        0.09438974839818703
+      ],
+      "mean_depth_change": 0.16447882481637754
+    },
+    {
+      "grid": "15x15",
+      "n": 225,
+      "vf": 0.35,
+      "lambda_rep": 5.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.5990675594989097,
+        -1.0446931013505336
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9691633633278269,
+        0.9746117027425352
+      ],
+      "mean_persist": 0.971887533035181,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.0,
+          "core_size": 82,
+          "deep_core_frac": 0.7682926829268293
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.1772151898734178,
+          "core_size": 79,
+          "deep_core_frac": 0.7848101265822784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.289156626506024,
+          "core_size": 83,
+          "deep_core_frac": 0.8072289156626506
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.271604938271605,
+          "core_size": 81,
+          "deep_core_frac": 0.7901234567901234
+        }
+      ],
+      "depth_changes": [
+        0.28915662650602414,
+        0.09438974839818703
+      ],
+      "mean_depth_change": 0.1917731874521056
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.001,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0002738919823510684,
+      "mu_per_formation": [
+        -1.662711507106982,
+        3.0087224103887878e-15
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9926731932919542,
+        0.9902241210133269
+      ],
+      "mean_persist": 0.9914486571526406,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.576,
+          "core_size": 125,
+          "deep_core_frac": 0.744
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7096774193548385,
+          "core_size": 124,
+          "deep_core_frac": 0.7903225806451613
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.5806451612903225,
+          "core_size": 124,
+          "deep_core_frac": 0.7419354838709677
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7338709677419355,
+          "core_size": 124,
+          "deep_core_frac": 0.7983870967741935
+        }
+      ],
+      "depth_changes": [
+        0.0046451612903224415,
+        0.024193548387096975
+      ],
+      "mean_depth_change": 0.014419354838709708
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.001,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0002738919823510684,
+      "mu_per_formation": [
+        -1.662711507106982,
+        3.0087224103887878e-15
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9948374165207472,
+        0.9913453204038402
+      ],
+      "mean_persist": 0.9930913684622937,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.576,
+          "core_size": 125,
+          "deep_core_frac": 0.744
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7096774193548385,
+          "core_size": 124,
+          "deep_core_frac": 0.7903225806451613
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.576,
+          "core_size": 125,
+          "deep_core_frac": 0.744
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7338709677419355,
+          "core_size": 124,
+          "deep_core_frac": 0.7983870967741935
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.024193548387096975
+      ],
+      "mean_depth_change": 0.012096774193548487
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.001,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0002738919823510684,
+      "mu_per_formation": [
+        -1.662711507106982,
+        3.0087224103887878e-15
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9903666005243578,
+        0.986976901533473
+      ],
+      "mean_persist": 0.9886717510289154,
+      "depths_t": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.576,
+          "core_size": 125,
+          "deep_core_frac": 0.744
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7096774193548385,
+          "core_size": 124,
+          "deep_core_frac": 0.7903225806451613
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.5806451612903225,
+          "core_size": 124,
+          "deep_core_frac": 0.7419354838709677
+        },
+        {
+          "max_depth": 10,
+          "mean_depth": 3.7338709677419355,
+          "core_size": 124,
+          "deep_core_frac": 0.7983870967741935
+        }
+      ],
+      "depth_changes": [
+        0.0046451612903224415,
+        0.024193548387096975
+      ],
+      "mean_depth_change": 0.014419354838709708
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.005,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.00018971890930572353,
+      "mu_per_formation": [
+        -0.5514677935610192,
+        -1.9282406619882189
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9968623183115023,
+        0.9858356484465894
+      ],
+      "mean_persist": 0.9913489833790459,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7244094488188977,
+          "core_size": 127,
+          "deep_core_frac": 0.84251968503937
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.2439024390243905,
+          "core_size": 123,
+          "deep_core_frac": 0.7642276422764228
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7244094488188977,
+          "core_size": 127,
+          "deep_core_frac": 0.84251968503937
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.336,
+          "core_size": 125,
+          "deep_core_frac": 0.768
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0920975609756094
+      ],
+      "mean_depth_change": 0.0460487804878047
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.005,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.00018971890930572353,
+      "mu_per_formation": [
+        -0.5514677935610192,
+        -1.9282406619882189
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9959937922871885,
+        0.9870902630534775
+      ],
+      "mean_persist": 0.9915420276703331,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7244094488188977,
+          "core_size": 127,
+          "deep_core_frac": 0.84251968503937
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.2439024390243905,
+          "core_size": 123,
+          "deep_core_frac": 0.7642276422764228
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7244094488188977,
+          "core_size": 127,
+          "deep_core_frac": 0.84251968503937
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.3253968253968256,
+          "core_size": 126,
+          "deep_core_frac": 0.7698412698412699
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.08149438637243511
+      ],
+      "mean_depth_change": 0.040747193186217556
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.005,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.00018971890930572353,
+      "mu_per_formation": [
+        -0.5514677935610192,
+        -1.9282406619882189
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9950213290570481,
+        0.9817041774302288
+      ],
+      "mean_persist": 0.9883627532436384,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7244094488188977,
+          "core_size": 127,
+          "deep_core_frac": 0.84251968503937
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.2439024390243905,
+          "core_size": 123,
+          "deep_core_frac": 0.7642276422764228
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7421875,
+          "core_size": 128,
+          "deep_core_frac": 0.84375
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.341463414634146,
+          "core_size": 123,
+          "deep_core_frac": 0.7642276422764228
+        }
+      ],
+      "depth_changes": [
+        0.017778051181102317,
+        0.09756097560975574
+      ],
+      "mean_depth_change": 0.05766951339542903
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.01,
+      "perturbation": 0.02,
+      "Lambda_coupling": 8.012849758355978e-05,
+      "mu_per_formation": [
+        -1.1043628214302514,
+        -2.7695590102812253
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9946155180799763,
+        0.9830692145579197
+      ],
+      "mean_persist": 0.9888423663189481,
+      "depths_t": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7938931297709924,
+          "core_size": 131,
+          "deep_core_frac": 0.8473282442748091
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.769230769230769,
+          "core_size": 130,
+          "deep_core_frac": 0.8461538461538461
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.024662360540223194
+      ],
+      "mean_depth_change": -0.012331180270111597
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.01,
+      "perturbation": 0.05,
+      "Lambda_coupling": 8.012849758355978e-05,
+      "mu_per_formation": [
+        -1.1043628214302514,
+        -2.7695590102812253
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9931059129674269,
+        0.9831719331130713
+      ],
+      "mean_persist": 0.9881389230402491,
+      "depths_t": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7938931297709924,
+          "core_size": 131,
+          "deep_core_frac": 0.8473282442748091
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.769230769230769,
+          "core_size": 130,
+          "deep_core_frac": 0.8461538461538461
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.024662360540223194
+      ],
+      "mean_depth_change": -0.012331180270111597
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.01,
+      "perturbation": 0.1,
+      "Lambda_coupling": 8.012849758355978e-05,
+      "mu_per_formation": [
+        -1.1043628214302514,
+        -2.7695590102812253
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9929782339210849,
+        0.9811678227059668
+      ],
+      "mean_persist": 0.9870730283135258,
+      "depths_t": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.7938931297709924,
+          "core_size": 131,
+          "deep_core_frac": 0.8473282442748091
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 12,
+          "mean_depth": 4.976190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8650793650793651
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.744186046511628,
+          "core_size": 129,
+          "deep_core_frac": 0.8449612403100775
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.04970708325936446
+      ],
+      "mean_depth_change": -0.02485354162968223
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.02,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0036557294234402897,
+      "mu_per_formation": [
+        -1.2981849483345398,
+        -1.2278577386089684
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9982609162686769,
+        0.9949421659495298
+      ],
+      "mean_persist": 0.9966015411091034,
+      "depths_t": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.782258064516129,
+          "core_size": 124,
+          "deep_core_frac": 0.8548387096774194
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.846774193548387,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.768,
+          "core_size": 125,
+          "deep_core_frac": 0.856
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.846774193548387,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depth_changes": [
+        -0.01425806451612921,
+        0.0
+      ],
+      "mean_depth_change": -0.007129032258064605
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.02,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0036557294234402897,
+      "mu_per_formation": [
+        -1.2981849483345398,
+        -1.2278577386089684
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9960276058347655,
+        0.993024821560159
+      ],
+      "mean_persist": 0.9945262136974622,
+      "depths_t": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.782258064516129,
+          "core_size": 124,
+          "deep_core_frac": 0.8548387096774194
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.846774193548387,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.768,
+          "core_size": 125,
+          "deep_core_frac": 0.856
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.846774193548387,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depth_changes": [
+        -0.01425806451612921,
+        0.0
+      ],
+      "mean_depth_change": -0.007129032258064605
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.02,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0036557294234402897,
+      "mu_per_formation": [
+        -1.2981849483345398,
+        -1.2278577386089684
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9936138543382693,
+        0.9921187508538701
+      ],
+      "mean_persist": 0.9928663025960698,
+      "depths_t": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.782258064516129,
+          "core_size": 124,
+          "deep_core_frac": 0.8548387096774194
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.846774193548387,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 11,
+          "mean_depth": 4.816,
+          "core_size": 125,
+          "deep_core_frac": 0.856
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.8629032258064515,
+          "core_size": 124,
+          "deep_core_frac": 0.8306451612903226
+        }
+      ],
+      "depth_changes": [
+        0.03374193548387083,
+        0.016129032258064502
+      ],
+      "mean_depth_change": 0.024935483870967667
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.05,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.004790357451154728,
+      "mu_per_formation": [
+        0.3030511458941829,
+        -2.0953169986227724e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9991580841931073,
+        0.9972677128530675
+      ],
+      "mean_persist": 0.9982128985230874,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.64,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.6666666666666665,
+          "core_size": 126,
+          "deep_core_frac": 0.8412698412698413
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.026666666666666394
+      ],
+      "mean_depth_change": 0.013333333333333197
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.05,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.004790357451154728,
+      "mu_per_formation": [
+        0.3030511458941829,
+        -2.0953169986227724e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9977012648011384,
+        0.9969201279230823
+      ],
+      "mean_persist": 0.9973106963621103,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.64,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.64,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.0
+      ],
+      "mean_depth_change": 0.0
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.05,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.004790357451154728,
+      "mu_per_formation": [
+        0.3030511458941829,
+        -2.0953169986227724e-14
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9966113009809171,
+        0.996375151642273
+      ],
+      "mean_persist": 0.9964932263115951,
+      "depths_t": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.64,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 4.1138211382113825,
+          "core_size": 123,
+          "deep_core_frac": 0.8373983739837398
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 3.6129032258064515,
+          "core_size": 124,
+          "deep_core_frac": 0.8387096774193549
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        -0.02709677419354861
+      ],
+      "mean_depth_change": -0.013548387096774306
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.1,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.015269501365407593,
+      "mu_per_formation": [
+        -1.6929777598206996,
+        -0.6229325931217412
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.989278625411279,
+        0.990846103979785
+      ],
+      "mean_persist": 0.990062364695532,
+      "depths_t": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.721311475409836,
+          "core_size": 122,
+          "deep_core_frac": 0.7704918032786885
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7016129032258065,
+          "core_size": 124,
+          "deep_core_frac": 0.8064516129032258
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.896,
+          "core_size": 125,
+          "deep_core_frac": 0.784
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.712,
+          "core_size": 125,
+          "deep_core_frac": 0.808
+        }
+      ],
+      "depth_changes": [
+        0.17468852459016393,
+        0.010387096774193694
+      ],
+      "mean_depth_change": 0.09253781068217881
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.1,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.015269501365407593,
+      "mu_per_formation": [
+        -1.6929777598206996,
+        -0.6229325931217412
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9895732648633168,
+        0.9896352815189223
+      ],
+      "mean_persist": 0.9896042731911195,
+      "depths_t": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.721311475409836,
+          "core_size": 122,
+          "deep_core_frac": 0.7704918032786885
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7016129032258065,
+          "core_size": 124,
+          "deep_core_frac": 0.8064516129032258
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.774193548387097,
+          "core_size": 124,
+          "deep_core_frac": 0.7741935483870968
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.717741935483871,
+          "core_size": 124,
+          "deep_core_frac": 0.8064516129032258
+        }
+      ],
+      "depth_changes": [
+        0.052882072977261,
+        0.016129032258064502
+      ],
+      "mean_depth_change": 0.03450555261766275
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.1,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.015269501365407593,
+      "mu_per_formation": [
+        -1.6929777598206996,
+        -0.6229325931217412
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9861890699660163,
+        0.9868340107112115
+      ],
+      "mean_persist": 0.9865115403386139,
+      "depths_t": [
+        {
+          "max_depth": 5,
+          "mean_depth": 2.721311475409836,
+          "core_size": 122,
+          "deep_core_frac": 0.7704918032786885
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.7016129032258065,
+          "core_size": 124,
+          "deep_core_frac": 0.8064516129032258
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 6,
+          "mean_depth": 2.7560975609756095,
+          "core_size": 123,
+          "deep_core_frac": 0.7723577235772358
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 3.693548387096774,
+          "core_size": 124,
+          "deep_core_frac": 0.7983870967741935
+        }
+      ],
+      "depth_changes": [
+        0.03478608556577356,
+        -0.008064516129032473
+      ],
+      "mean_depth_change": 0.013360784718370544
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.2,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0009635639711402287,
+      "mu_per_formation": [
+        -1.0634599763654675,
+        -1.797225770383149
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9842378147168079,
+        0.9831730816904398
+      ],
+      "mean_persist": 0.9837054482036238,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6747967479674797,
+          "core_size": 123,
+          "deep_core_frac": 0.8211382113821138
+        },
+        {
+          "max_depth": 12,
+          "mean_depth": 4.921259842519685,
+          "core_size": 127,
+          "deep_core_frac": 0.8582677165354331
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.736,
+          "core_size": 125,
+          "deep_core_frac": 0.824
+        },
+        {
+          "max_depth": 13,
+          "mean_depth": 4.9763779527559056,
+          "core_size": 127,
+          "deep_core_frac": 0.8582677165354331
+        }
+      ],
+      "depth_changes": [
+        0.06120325203252053,
+        0.055118110236220375
+      ],
+      "mean_depth_change": 0.05816068113437045
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.2,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0009635639711402287,
+      "mu_per_formation": [
+        -1.0634599763654675,
+        -1.797225770383149
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9823954043015254,
+        0.9814690604312956
+      ],
+      "mean_persist": 0.9819322323664105,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6747967479674797,
+          "core_size": 123,
+          "deep_core_frac": 0.8211382113821138
+        },
+        {
+          "max_depth": 12,
+          "mean_depth": 4.921259842519685,
+          "core_size": 127,
+          "deep_core_frac": 0.8582677165354331
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.736,
+          "core_size": 125,
+          "deep_core_frac": 0.824
+        },
+        {
+          "max_depth": 13,
+          "mean_depth": 5.0,
+          "core_size": 126,
+          "deep_core_frac": 0.8571428571428571
+        }
+      ],
+      "depth_changes": [
+        0.06120325203252053,
+        0.07874015748031482
+      ],
+      "mean_depth_change": 0.06997170475641767
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.2,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0009635639711402287,
+      "mu_per_formation": [
+        -1.0634599763654675,
+        -1.797225770383149
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9857850171698369,
+        0.9848086574945224
+      ],
+      "mean_persist": 0.9852968373321797,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.6747967479674797,
+          "core_size": 123,
+          "deep_core_frac": 0.8211382113821138
+        },
+        {
+          "max_depth": 12,
+          "mean_depth": 4.921259842519685,
+          "core_size": 127,
+          "deep_core_frac": 0.8582677165354331
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.736,
+          "core_size": 125,
+          "deep_core_frac": 0.824
+        },
+        {
+          "max_depth": 13,
+          "mean_depth": 5.015625,
+          "core_size": 128,
+          "deep_core_frac": 0.859375
+        }
+      ],
+      "depth_changes": [
+        0.06120325203252053,
+        0.09436515748031482
+      ],
+      "mean_depth_change": 0.07778420475641767
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.5,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.7727874140223647,
+        -1.3250417735540454
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9935209879412277,
+        0.9934515392609335
+      ],
+      "mean_persist": 0.9934862636010806,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.784,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.472,
+          "core_size": 125,
+          "deep_core_frac": 0.784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.8095238095238093,
+          "core_size": 126,
+          "deep_core_frac": 0.8412698412698413
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.528,
+          "core_size": 125,
+          "deep_core_frac": 0.792
+        }
+      ],
+      "depth_changes": [
+        0.025523809523809504,
+        0.05600000000000005
+      ],
+      "mean_depth_change": 0.04076190476190478
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.5,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.7727874140223647,
+        -1.3250417735540454
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9937200012581385,
+        0.9924559578877138
+      ],
+      "mean_persist": 0.9930879795729262,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.784,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.472,
+          "core_size": 125,
+          "deep_core_frac": 0.784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.8095238095238093,
+          "core_size": 126,
+          "deep_core_frac": 0.8412698412698413
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.528,
+          "core_size": 125,
+          "deep_core_frac": 0.792
+        }
+      ],
+      "depth_changes": [
+        0.025523809523809504,
+        0.05600000000000005
+      ],
+      "mean_depth_change": 0.04076190476190478
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 0.5,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.7727874140223647,
+        -1.3250417735540454
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9906916814638802,
+        0.9869093206912682
+      ],
+      "mean_persist": 0.9888005010775742,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.784,
+          "core_size": 125,
+          "deep_core_frac": 0.84
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.472,
+          "core_size": 125,
+          "deep_core_frac": 0.784
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.8095238095238093,
+          "core_size": 126,
+          "deep_core_frac": 0.8412698412698413
+        },
+        {
+          "max_depth": 8,
+          "mean_depth": 3.5163934426229506,
+          "core_size": 122,
+          "deep_core_frac": 0.7868852459016393
+        }
+      ],
+      "depth_changes": [
+        0.025523809523809504,
+        0.04439344262295064
+      ],
+      "mean_depth_change": 0.03495862607338007
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 1.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0014633644329883914,
+      "mu_per_formation": [
+        -3.4394180588505754,
+        -1.4434237990278178
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9828525398478025,
+        0.9855582401553787
+      ],
+      "mean_persist": 0.9842053900015906,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.129032258064516,
+          "core_size": 124,
+          "deep_core_frac": 0.7258064516129032
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4390243902439024,
+          "core_size": 123,
+          "deep_core_frac": 0.6585365853658537
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.16260162601626,
+          "core_size": 123,
+          "deep_core_frac": 0.7317073170731707
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4715447154471546,
+          "core_size": 123,
+          "deep_core_frac": 0.6585365853658537
+        }
+      ],
+      "depth_changes": [
+        0.033569367951744145,
+        0.03252032520325221
+      ],
+      "mean_depth_change": 0.03304484657749818
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 1.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0014633644329883914,
+      "mu_per_formation": [
+        -3.4394180588505754,
+        -1.4434237990278178
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9828288539235115,
+        0.9855146353008432
+      ],
+      "mean_persist": 0.9841717446121774,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.129032258064516,
+          "core_size": 124,
+          "deep_core_frac": 0.7258064516129032
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4390243902439024,
+          "core_size": 123,
+          "deep_core_frac": 0.6585365853658537
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.16260162601626,
+          "core_size": 123,
+          "deep_core_frac": 0.7317073170731707
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4715447154471546,
+          "core_size": 123,
+          "deep_core_frac": 0.6585365853658537
+        }
+      ],
+      "depth_changes": [
+        0.033569367951744145,
+        0.03252032520325221
+      ],
+      "mean_depth_change": 0.03304484657749818
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 1.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0014633644329883914,
+      "mu_per_formation": [
+        -3.4394180588505754,
+        -1.4434237990278178
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.977603756284222,
+        0.9830644882636496
+      ],
+      "mean_persist": 0.9803341222739358,
+      "depths_t": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.129032258064516,
+          "core_size": 124,
+          "deep_core_frac": 0.7258064516129032
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4390243902439024,
+          "core_size": 123,
+          "deep_core_frac": 0.6585365853658537
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 8,
+          "mean_depth": 3.180327868852459,
+          "core_size": 122,
+          "deep_core_frac": 0.7377049180327869
+        },
+        {
+          "max_depth": 7,
+          "mean_depth": 2.4836065573770494,
+          "core_size": 122,
+          "deep_core_frac": 0.6639344262295082
+        }
+      ],
+      "depth_changes": [
+        0.05129561078794298,
+        0.044582167133147
+      ],
+      "mean_depth_change": 0.04793888896054499
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 2.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.6795503106405374,
+        -2.045122177681523
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9914036106701459,
+        0.9870835737866379
+      ],
+      "mean_persist": 0.989243592228392,
+      "depths_t": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.519685039370079,
+          "core_size": 127,
+          "deep_core_frac": 0.8503937007874016
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.048780487804878,
+          "core_size": 123,
+          "deep_core_frac": 0.8048780487804879
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.496,
+          "core_size": 125,
+          "deep_core_frac": 0.848
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.105691056910569,
+          "core_size": 123,
+          "deep_core_frac": 0.8130081300813008
+        }
+      ],
+      "depth_changes": [
+        -0.023685039370078265,
+        0.05691056910569081
+      ],
+      "mean_depth_change": 0.016612764867806273
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 2.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.6795503106405374,
+        -2.045122177681523
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.993398211307327,
+        0.9849252457209778
+      ],
+      "mean_persist": 0.9891617285141524,
+      "depths_t": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.519685039370079,
+          "core_size": 127,
+          "deep_core_frac": 0.8503937007874016
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.048780487804878,
+          "core_size": 123,
+          "deep_core_frac": 0.8048780487804879
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.519685039370079,
+          "core_size": 127,
+          "deep_core_frac": 0.8503937007874016
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.105691056910569,
+          "core_size": 123,
+          "deep_core_frac": 0.8130081300813008
+        }
+      ],
+      "depth_changes": [
+        0.0,
+        0.05691056910569081
+      ],
+      "mean_depth_change": 0.028455284552845406
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 2.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -1.6795503106405374,
+        -2.045122177681523
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9906113294284656,
+        0.9879597134875748
+      ],
+      "mean_persist": 0.9892855214580203,
+      "depths_t": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.519685039370079,
+          "core_size": 127,
+          "deep_core_frac": 0.8503937007874016
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.048780487804878,
+          "core_size": 123,
+          "deep_core_frac": 0.8048780487804879
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 10,
+          "mean_depth": 4.476190476190476,
+          "core_size": 126,
+          "deep_core_frac": 0.8492063492063492
+        },
+        {
+          "max_depth": 9,
+          "mean_depth": 4.080645161290323,
+          "core_size": 124,
+          "deep_core_frac": 0.8064516129032258
+        }
+      ],
+      "depth_changes": [
+        -0.04349456317960243,
+        0.03186467348544486
+      ],
+      "mean_depth_change": -0.0058149448470787846
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 5.0,
+      "perturbation": 0.02,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -5.127892189770781,
+        -4.655149213129614
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9649805189089653,
+        0.9785261648320418
+      ],
+      "mean_persist": 0.9717533418705036,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2213740458015265,
+          "core_size": 131,
+          "deep_core_frac": 0.8015267175572519
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.1653543307086616,
+          "core_size": 127,
+          "deep_core_frac": 0.6850393700787402
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 3.779527559055118,
+          "core_size": 127,
+          "deep_core_frac": 0.8110236220472441
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.1507936507936507,
+          "core_size": 126,
+          "deep_core_frac": 0.6825396825396826
+        }
+      ],
+      "depth_changes": [
+        0.5581535132535915,
+        -0.014560679915010866
+      ],
+      "mean_depth_change": 0.27179641666929033
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 5.0,
+      "perturbation": 0.05,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -5.127892189770781,
+        -4.655149213129614
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9649382843493315,
+        0.978832455151102
+      ],
+      "mean_persist": 0.9718853697502168,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2213740458015265,
+          "core_size": 131,
+          "deep_core_frac": 0.8015267175572519
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.1653543307086616,
+          "core_size": 127,
+          "deep_core_frac": 0.6850393700787402
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 3.779527559055118,
+          "core_size": 127,
+          "deep_core_frac": 0.8110236220472441
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.1587301587301586,
+          "core_size": 126,
+          "deep_core_frac": 0.6825396825396826
+        }
+      ],
+      "depth_changes": [
+        0.5581535132535915,
+        -0.006624171978502957
+      ],
+      "mean_depth_change": 0.2757646706375443
+    },
+    {
+      "grid": "20x20",
+      "n": 400,
+      "vf": 0.3,
+      "lambda_rep": 5.0,
+      "perturbation": 0.1,
+      "Lambda_coupling": 0.0,
+      "mu_per_formation": [
+        -5.127892189770781,
+        -4.655149213129614
+      ],
+      "mu_floor": 0.125,
+      "persist_per_formation": [
+        0.9695586048801963,
+        0.9755287091286826
+      ],
+      "mean_persist": 0.9725436570044395,
+      "depths_t": [
+        {
+          "max_depth": 7,
+          "mean_depth": 3.2213740458015265,
+          "core_size": 131,
+          "deep_core_frac": 0.8015267175572519
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.1653543307086616,
+          "core_size": 127,
+          "deep_core_frac": 0.6850393700787402
+        }
+      ],
+      "depths_s": [
+        {
+          "max_depth": 9,
+          "mean_depth": 3.8449612403100777,
+          "core_size": 129,
+          "deep_core_frac": 0.813953488372093
+        },
+        {
+          "max_depth": 5,
+          "mean_depth": 2.173228346456693,
+          "core_size": 127,
+          "deep_core_frac": 0.6850393700787402
+        }
+      ],
+      "depth_changes": [
+        0.6235871945085512,
+        0.007874015748031482
+      ],
+      "mean_depth_change": 0.3157306051282913
+    }
+  ],
+  "elapsed_seconds": 99.14621996879578
+}

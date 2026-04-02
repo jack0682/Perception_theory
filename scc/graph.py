@@ -119,6 +119,24 @@ class GraphState:
         idx = np.argsort(eigvals)
         return eigvecs[:, idx[1]]
 
+    def spectrum(self, k: int = 10) -> np.ndarray:
+        """First k eigenvalues of the Laplacian (smallest to largest).
+
+        Useful for spectral K-selection: counting eigenvalues below the
+        phase transition threshold predicts the optimal formation count.
+        """
+        k = min(k, self.n - 1)
+        if self.n <= k + 2:
+            eigvals = np.sort(np.linalg.eigvalsh(self.L.toarray()))
+            return eigvals[:k]
+        eigvals = spla.eigsh(
+            self.L.astype(np.float64),
+            k=k,
+            which="SM",
+            return_eigenvectors=False,
+        )
+        return np.sort(eigvals)
+
     def cohesion_weighted_symmetric(self, u: np.ndarray) -> sp.csr_matrix:
         """Symmetrized cohesion-weighted adjacency W_sym for resolvent C_t.
 

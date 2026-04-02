@@ -3,7 +3,7 @@
 **Date:** 2026-04-02
 **Session:** Generalization of T-Persist-K structural conditions + unified regime spectrum
 **Category:** theory
-**Status:** paused provisional proposal
+**Status:** active — adopted as canonical coupling definition (reconciled 2026-04-02)
 **Depends on:** THREE-REGIME-SYNTHESIS.md, MULTI-TEMPORAL-THEORY.md, TRANSPORT-SELECTION-ANALYSIS.md, Canonical Spec v2.0 §10-13
 
 ---
@@ -17,15 +17,11 @@ This file contains a **working proposal**, not a settled parametrization.
 - The dimensional-analysis framing.
 - The bifurcation interpretation near `Lambda_coupling = 1 / (K - 1)`.
 
-**What must be rechecked before treating this as canonical:**
-- Whether one scalar `Lambda_coupling` is enough, or whether `d_min` must remain a second independent coordinate.
-- Whether the overlap-weight definition should be support-based, soft-inner-product-based, or spectral-loss-based.
-- Whether the strong-regime threshold should really be tied to the Weyl bound or only upper-bounded by it.
-
-**Resume tomorrow from here:**
-1. Compare this proposal against the missing Task #2 regime-condition table.
-2. Compare it against the missing Task #3 necessity analysis.
-3. Then either keep this scalar parametrization with explicit caveats, or split the theory into a 2-parameter regime map `(Lambda_coupling, d_min)`.
+**Reconciliation outcome (2026-04-02):**
+- **Adopted:** Λ_coupling = λ_rep · ω_jk / min(μ_j, μ_k) as the canonical coupling definition (soft overlap weight, spectral, dimensionless).
+- **d_min retained** as secondary spatial parameter via Spatial Decoupling Lemma (REGIME-CONDITIONS-COMPARATIVE.md §4.4). One scalar is sufficient for Weak/Strong; Sep needs d_min for geometric guarantees (simplex, separation budget).
+- **Overlap weight:** Soft inner-product-based ω_jk (adopted, not support-based or spectral-loss-based).
+- **Strong-regime threshold:** Tied to Weyl bound (1/(K-1)). May be conservative; tighter spectral perturbation is an open problem (ISOPERIMETRIC-TRANSPORT-NECESSITY.md §3.3).
 
 ## 1. Motivation
 

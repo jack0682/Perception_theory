@@ -1,0 +1,132 @@
+{
+  "experiment": "exp45_sep_boundary",
+  "description": "Sep-Weak regime boundary: distance sweep with coupling_strength",
+  "grid": "10x10",
+  "K": 2,
+  "lambda_rep": 1.0,
+  "vf": 0.4,
+  "beta": 15.0,
+  "results": [
+    {
+      "center_distance": 1,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0008233216529080036,
+      "mu_per_formation": [
+        2.47574449448625,
+        -0.6417762243747941
+      ],
+      "mu_min": -0.6417762243747941,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.006586573223264029,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 2,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.000848439226838848,
+      "mu_per_formation": [
+        1.5054083164897438,
+        -3.692515129359674
+      ],
+      "mu_min": -3.692515129359674,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.006787513814710784,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 3,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0005100334384662009,
+      "mu_per_formation": [
+        -4.859417425877983,
+        -0.6687647513466203
+      ],
+      "mu_min": -4.859417425877983,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.004080267507729607,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 4,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.00031430542478793163,
+      "mu_per_formation": [
+        -1.1646328194397466,
+        -1.431636817066951
+      ],
+      "mu_min": -1.431636817066951,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.002514443398303453,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 5,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0009061491714450958,
+      "mu_per_formation": [
+        -0.6329049341890024,
+        7.059344030589488
+      ],
+      "mu_min": -0.6329049341890024,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.007249193371560767,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 6,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.0005739058778843824,
+      "mu_per_formation": [
+        -0.2643813218880212,
+        7.202167252680095
+      ],
+      "mu_min": -0.2643813218880212,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.004591247023075059,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 7,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.00037420041307884125,
+      "mu_per_formation": [
+        -3.3006144305173915,
+        7.042581753280132
+      ],
+      "mu_min": -3.3006144305173915,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.00299360330463073,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    },
+    {
+      "center_distance": 8,
+      "d_min": 1.0,
+      "overlap": 0.0,
+      "omega_max": 0.00039350415944099955,
+      "mu_per_formation": [
+        -0.6611252770085154,
+        7.076701329670662
+      ],
+      "mu_min": -0.6611252770085154,
+      "mu_floor": 0.125,
+      "Lambda_coupling": 0.0031480332755279964,
+      "regime_geometric": "weakly-interacting",
+      "regime_lambda": "weakly-interacting"
+    }
+  ],
+  "elapsed_seconds": 17.999891757965088
+}

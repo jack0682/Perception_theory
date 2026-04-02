@@ -2,6 +2,307 @@
 
 ---
 
+## 2026-04-02 — Single-Field Multi-Formation: Closure Expands Stability Region
+
+### Summary
+Critical correction to exp57: overlapping bumps were unfair test. **Well-separated bumps on single field: K=4 survives!** Key finding: **SCC (a_cl=3.0) maintains K=4 from 10×10 grid, while Allen-Cahn (a_cl=0) needs 15×15.** Closure reduces the minimum inter-formation distance d_min* by ~30%, expanding multi-formation stability region. This is the multi-formation manifestation of T7-Enhanced metastability. CN14 revised to final form.
+
+### Key Result
+| Grid | SCC K | AC K | Closure difference |
+|---|---|---|---|
+| 10×10 | 4 ✅ | 1 ❌ | **SCC keeps 4, AC merges all** |
+| 12×12 | 4 ✅ | 3 | SCC stable, AC partial merge |
+| 15×15+ | 4 ✅ | 4 ✅ | Both stable (sufficient separation) |
+
+### Theoretical Impact
+- Multi-formation IS possible on single field (well-separated)
+- Closure lowers d_min* (10×10 vs 15×15 threshold)
+- CN14 (final): "Closure expands multi-formation stability"
+- T7-Enhanced → multi-formation: larger basins allow closer coexistence
+
+---
+
+## 2026-04-02 — exp57: Definitive Multi-Formation Test
+
+### Summary
+Fixed methodological bias in exp54 (gradient projection preserved mass). **exp57 Mode B (single field, K bumps):** K=4 → K=1 **ALWAYS**, both with and without closure, on ALL grid sizes. **This is the definitive answer: on a single field, formations always merge. K-field architecture (I9) is what enables multi-formation, not closure or any energy term.** CN6 resolved honestly: K is architecturally imposed, not emergent from the energy landscape.
+
+### Files Created
+- `experiments/exp57_closure_thorough.py` — Raw gradient + single-field modes
+
+### Key Finding
+- Single field + K bumps → K=1 ALWAYS (closure irrelevant)
+- K independent fields → K=4 survives (independent optimization, not metastability)
+- **K-field architecture is the load-bearing mechanism, not closure**
+- This is scientifically honest: SCC analyzes given formations, doesn't predict their count
+
+---
+
+## 2026-04-02 — exp54-56: Closure Threshold + Stochastic Coarsening + Nucleation
+
+### Summary
+Three parallel experiments to generalize multi-formation findings. **exp54 (closure threshold):** a_cl sweep 3.5→0, K=4 survives at ALL levels including a_cl=0. No critical threshold. **CN14 revised:** double-well (not closure) is the primary multi-formation stabilizer; closure is quality amplifier (peaks 0.85→1.00). **exp55 (stochastic):** noise up to 0.5, ZERO merge events in 5000 iters for both SCC and AC. Barriers are O(β)≈20, far above noise. **exp56 (nucleation):** random IC → K=1 in almost all cases. Eigengap prediction uncorrelated with nucleated K (corr=0.29).
+
+### Files Created
+- `experiments/exp54_closure_threshold.py` — a_cl sweep + pure Allen-Cahn comparison
+- `experiments/exp55_stochastic_coarsening.py` — Langevin dynamics with noise sweep
+- `experiments/exp56_nucleation.py` — Random IC → gradient flow → count formations
+
+### Key Findings
+- **No closure critical threshold** — double-well alone maintains K=4
+- **No stochastic coarsening** at noise ≤ 0.5 — barriers too high
+- **Random IC → K=1** — multi-formation requires structured initialization
+- **Closure role revised:** quality amplifier, not existence guarantor
+- **SCC vs AC difference:** NOT in metastability (both equally stable), but in formation QUALITY
+
+---
+
+## 2026-04-02 — Constraint Relaxation: Closure Is the Load-Bearing Wall
+
+### Summary
+exp52 (formation evolution, 7 configs): ALL formations survive gradient descent — K is perfectly metastable. exp53 (constraint relaxation, 6 levels + 2 topologies): **Progressive removal of repulsion, simplex, and mass constraint reveals that self-referential CLOSURE is the primary multi-formation stabilizer.** K=4 survives at L4-L5 (no repulsion, no simplex, free mass). Only L1 (shared mass + strong repulsion) is destabilizing — counterintuitively, repulsion + mass sharing flattens all peaks. CN14 proposed: "Self-referential closure is the primary multi-formation stabilizer."
+
+### Files Created
+- `experiments/exp52_formation_evolution.py` — Formation evolution from ES perspective
+- `experiments/exp53_constraint_relaxation.py` — Progressive constraint relaxation (6 levels)
+
+### Key Results
+- exp52: 7/7 configs, 0 death events, ALL formations survive
+- exp53 L0 (standard SCC): K=4 stable
+- exp53 L1 (shared mass + rep): K=0 (ALL DIE — repulsion destabilizes under shared mass!)
+- exp53 L4-L5 (no rep, no simplex): K=4 SURVIVES — closure alone maintains formations
+- exp53 SBM: CV=0.004, perfect stability — community structure creates natural niches
+- Mass redistribution is weak (CV < 0.1) even without constraints
+
+### Theoretical Impact
+- **Closure is the load-bearing wall** of multi-formation stability
+- Repulsion is NOT necessary for multi-formation survival
+- Coarsening requires stochastic barrier crossing, not gradient descent
+- CN14 proposed: "Self-referential closure is the primary multi-formation stabilizer"
+
+---
+
+## 2026-04-02 — Multi-Formation Theory Reassessment
+
+### Summary
+Comprehensive reassessment of multi-formation theory based on the K*=1 universal result. **Paradigm shift:** multi-formation is kinetic (metastability), not thermodynamic (energy minimization). Three pillars identified: (I) Nucleation (spectral → initial conditions), (II) Metastability (barrier heights, T7 enhancement), (III) Coarsening (K(t) evolution, SCC vs Allen-Cahn). P-Unified-1 falsified; Λ_coupling reclassified as structural classifier, not dynamical predictor. CN14 proposed: "K is kinetic, not thermodynamic." New testable predictions MK-1 through MK-4 replace P-Unified.
+
+### Files Created
+- `docs/04-02/theory/MULTI-FORMATION-REASSESSMENT.md` — Full reassessment: paradigm shift, 3 pillars, revised predictions
+
+### Theoretical Impact
+- Multi-formation framework: thermodynamic → **kinetic**
+- P-Unified-1: **falsified**; Λ_coupling: structural classifier only
+- CN6: **resolved** (K from dynamics, not energy)
+- CN14 proposed: K is kinetic, not thermodynamic
+- New predictions: MK-1 (nucleation = eigengap), MK-2 (SCC coarsening < AC), MK-3 (barrier ~ β^0.89), MK-4 (enhanced metastability factor)
+
+---
+
+## 2026-04-02 — Spectral K-Selection: Falsified + CN6 Resolved
+
+### Summary
+Implemented spectral K-selection theory and tested on 10 graph configurations (grids, barbells, SBM, random geometric). **Key finding: K*=1 universally** — isoperimetric inequality makes single formation always energetically optimal on connected graphs, regardless of community structure. Spectral threshold hypothesis falsified as thermodynamic prediction. **CN6 resolved:** K emerges from dynamics (initial conditions + barriers), not energy minimization. This is a negative but important result that redirects multi-formation theory toward kinetics.
+
+### Files Created
+- `docs/04-02/theory/SPECTRAL-K-SELECTION.md` — Theory note with derivation + experimental falsification + revised hypothesis
+- `experiments/exp51_k_selection.py` — K-selection experiment (Phases A-D)
+
+### Files Modified
+- `scc/graph.py` — Added `spectrum(k)` method for multi-eigenvalue computation
+- `scc/multi.py` — Added `spectral_k_estimate()` (threshold + eigengap), `find_optimal_k()`
+
+### Key Results
+- exp51: 10 graphs, K*=1 in all cases, 0/10 spectral match
+- SBM eigengap correctly identifies community structure (K_eigengap=3 for 3 communities) but energy still prefers K=1
+- Barbell with bridge weight 0.001: still K*=1 (formation flows through bottleneck)
+- **Insight:** Spectral K-selection works as initial condition predictor (where formations nucleate), not as energy minimizer
+
+### Theoretical Impact
+- CN6 ("K must be emergent"): **RESOLVED** — K is kinetic, not thermodynamic
+- Redirects research toward: coarsening timescale, SCC vs Allen-Cahn barrier heights, nucleation from random initial conditions
+
+---
+
+## 2026-04-02 — P-Unified Transport Experiments + BC' Cat A
+
+### Summary
+exp50: Transport-based persist on 10×10/12×12 (48 configs) + 8×8 high-Lambda scan. K=2 persist ~2-8% lower than K=1 baseline (coupling effect confirmed). But P-Unified-1 (Lambda² degradation) NOT observed — persist ratio NOT Lambda-monotone. **Root cause identified:** lambda_rep confounds Lambda AND formation quality simultaneously. Proper test requires fixed formation quality with varying coupling. BC' upgraded to Cat A via f₁^grad insight (28 Cat A total).
+
+### Files Created
+- `experiments/exp50_unified_transport.py` — Transport-based persist + baseline subtraction
+- `docs/04-02/proof/F1-BOUND-CATA-UPGRADE.md` — BC' Cat B→A proof
+
+### Experimental Results
+- exp50 (10×10/12×12): 48/48, persist_transport 0.90-0.95, Lambda < 0.02 (too small)
+- exp50 (8×8 scan): Lambda 0.0003-7.3, persist_ratio 0.92-0.98, NO monotone trend
+- **Key finding:** lambda_rep is a confounding variable — changes both Λ and formation quality
+
+### Open: P-Unified experimental design needs
+- Fixed formation structure with controlled inter-formation distance
+- Or: analytical approach (prove P-Unified-1 from TC' bound structure)
+
+---
+
+## 2026-04-02 — BC' Cat A Upgrade + P-Unified Experiments
+
+### Summary
+BC' upgraded from Cat B to **Cat A** via f₁^grad insight (Theorem PSM already proves the relevant bound — gradient direction, not IFT displacement). T-Persist-1(b) now fully proved. exp49 ran P-Unified-1/2 on 15×15/20×20 (66 configs) + 8×8 scan (11 configs). P-Unified-1 inconclusive: positive correlation (0.77) but exponent 0.03 vs predicted 2.0 — "narrow parameter window" problem identified (strong formations ⟹ small Lambda). **28 Cat A** total.
+
+### Files Created
+- `docs/04-02/proof/F1-BOUND-CATA-UPGRADE.md` — BC' Cat B→A proof: f₁^grad is the correct quantity
+- `experiments/exp49_unified_predictions.py` — P-Unified-1/2 validation experiment
+
+### Theorem Status Changes
+- T-Persist-1(b): **Cat B → Cat A** via BC' + Theorem PSM (f₁^grad ≤ √(n_bdy/n_F))
+- Proved results: **28 Cat A** (was 27)
+
+### Experimental Results
+- exp49 (15×15/20×20): 66 configs, persist 0.97-1.0, Lambda < 0.015 (too small for degradation)
+- exp49 (8×8 scan): Lambda up to 2.6, positive corr but exponent ≈ 0 (baseline persist ≈ 0.5)
+- **Finding:** P-Unified-1 needs transport-based persist + baseline subtraction; narrow window problem
+
+---
+
+## 2026-04-02 — BC' + TC' + H3 Proofs (Three Bottleneck Resolutions)
+
+### Summary
+Resolved ALL THREE critical chain bottlenecks for T-Persist. **H3 Tightening:** Formation-conditioned C₂ bound (≤ 1.24 vs worst-case 2.875) via KKT analysis at deep-core sites. H3 tightened from β > 11α to β > 7α. Combined with BC' and TC': T-Persist-Full effectively Cat B, single-formation persistence maturity 4/5.
+
+### Files Created
+- `docs/04-02/proof/H3-TIGHTENING.md` — Formation-conditioned interior gap; C₂^form ≤ 1.24; β > 7α sufficient
+
+### Files Modified
+- `docs/04-02/20260402STATUS.md` — All 3 bottlenecks marked resolved; persistence maturity 4/5
+
+### Theorem Status Changes
+- H3: β > 11α → **β > 7α** (formation-conditioned C₂ ≤ 1.24)
+- T-Persist-Full: effectively **Cat B** (all components Cat A or Cat B except (d) at mild Cat C with β > 7α)
+
+---
+
+## 2026-04-02 — BC' + TC' Proofs (Two Bottleneck Resolutions)
+
+### Summary
+Resolved the two critical chain bottlenecks for T-Persist. **BC' (Theorem):** Directional basin containment — ellipsoidal basin is 2.5-4.3× larger than isotropic, eliminating the hard threshold NB: μ ≥ 4.1. T-Persist-1(b) upgraded Cat C → Cat B. **TC' (Theorem):** Formation-conditioned transport confinement — perturbative + boundary decomposition tightens the 25-100× loose uniform bound. At natural parameters, displacement ≈ 0.17 < r_basin ≈ 0.2. T-Persist-1(e) upgraded Cat C → Cat B.
+
+### Files Created
+- `docs/04-02/proof/BC-PRIME-THEOREM.md` — Theorem BC': directional basin containment with r_eff formula
+- `docs/04-02/proof/TC-FORMATION-CONDITIONED.md` — Theorem TC': formation-conditioned transport confinement
+
+### Files Modified
+- `Canonical Spec v2.1.md` — T-Persist-1(b) and (e) status updated to Cat B
+- `docs/04-02/20260402STATUS.md` — Critical chain bottlenecks ① and ③ resolved; persistence maturity 3/5 → 4/5
+
+### Theorem Status Changes
+- T-Persist-1(b): **Cat C → Cat B** via BC' (directional basin; μ > 0 sufficient, no hard threshold)
+- T-Persist-1(e): **Cat C → Cat B** via TC' (formation-conditioned displacement bound)
+- Single-formation persistence maturity: **3/5 → 4/5** (only H3 tightening remains)
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- H3 tightening (β > 11α → β > 7α) — last Yellow bottleneck ②
+- T-Persist-Full → Cat B (cascades from (b)+(e) upgrades once H3 done)
+- Generic f₁ bound for Cat A upgrade of BC'
+- P-Unified-1/2 large-grid experiments
+
+---
+
+## 2026-04-02 — Experiment Validation + Canonical Spec v2.1
+
+### Summary
+Fixed Lambda_coupling regime experiments and created Canonical Spec v2.1. Key fixes: (1) `classify_regime()` now supports Lambda-based classification via `coupling_strength()` with mu_floor regularization; (2) exp45-47 redesigned for small grids + high vf to force interaction. Experiments validate 100% geometric-Lambda agreement across 69 configs. Canonical Spec v2.1 created with all v2.0→v2.1 changes: 3 Cat B→A upgrades, T-Persist-K-Unified, unified regime parametrization, Theorem 3.3 retraction.
+
+### Files Created
+- `Canonical Spec v2.1.md` — New authoritative spec (1096 lines), supersedes v2.0
+
+### Files Modified
+- `scc/multi.py` — `classify_regime()` now accepts `method='lambda'` + `params`/`lambda_rep` for Lambda-based classification
+- `experiments/exp45_sep_boundary.py` — Redesigned: 10x10 grid, vf=0.40, beta=15, uses `coupling_strength()`
+- `experiments/exp46_weak_strong.py` — Redesigned: 10x10 grid, vf=0.45, beta=10, uses `coupling_strength()`
+- `experiments/exp47_phase_diagram.py` — Redesigned: 8x8/10x10, beta=[5,10,20,40], uses `coupling_strength()`
+- `CLAUDE.md` — Updated to point to Canonical Spec v2.1, updated theorem counts
+
+### Experiment Results
+- exp45 (distance sweep): 8/8 agreement, all weakly-interacting (lambda_rep=1.0 too strong for transition)
+- exp46 (lambda_rep sweep): 13/13 agreement, strong→weak transition at lambda_rep≈0.5
+- exp47 (phase diagram): 56/56 agreement (100%), 15 strongly + 41 weakly-interacting configs
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- exp45 needs lower lambda_rep to see Sep→Weak transition
+- P-Unified-1/2 experiments on larger grids (persist degradation vs Lambda)
+- BC' formal theorem + TC analytical tightening
+- Paper updates with unified regime + v2.1 results
+
+---
+
+## 2026-04-02 — Category B Upgrade Proofs + Theory Audit
+
+### Summary
+Attempted to upgrade 6 Category B theorems to Category A. **3 successfully upgraded** (Deep Core Dom. 2b, T8-Full, Predicate-Energy Bridge). Key discovery for T8-Full: earlier negative H_bd eigenvalue was at E_full minimizer, not E_bd minimizer — μ₀(H_bd at E_bd min) is positive in ALL tested configs (0.96-60.2). 1 incorrect claim retracted (Theorem 3.3: r̄₀ for general τ is genuinely O(1), NOT O(n^{-1/d})). Comprehensive theory audit: 36 total claims → now **27 Cat A** (was 24), 3 Cat B, 6 Cat C, 2 retracted.
+
+### Files Created
+- `docs/04-02/proof/CATEGORY-B-UPGRADES.md` — 6 theorems analyzed; Deep Core 2b and Pred-Energy Bridge upgraded to Cat A
+- `docs/04-02/20260402STATUS.md` — Full theory status review (vulnerabilities, priorities, critical chain)
+
+### Files Modified
+- `docs/04-02/INDEX.md` — Added proof and audit sections
+
+### Theorem Status Changes
+- Deep Core Dom. 2b: **Category B → Category A** (isoperimetric inequality on Z^d proves bound unconditionally for grids)
+- Predicate-Energy Bridge: **Category B → Category A** (Sep bidirectional exact; Bind reverse at minimizers)
+- T8-Full: **Category B → Category A** — μ₀(H_bd at E_bd minimizer) > 0 in all tested β (0.96-60.2); earlier negative eigenvalue was at E_full minimizer (different point); anti-concentration proof on transition layer valid
+- T-Bind (general τ): **Theorem 3.3 RETRACTED** — r̄₀ genuinely O(1) for τ ≠ 1/2 (confirmed: 0.169 at τ=0.3)
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- T8-Full: upgraded to Cat A (anti-concentration proof at E_bd minimizer)
+- T-Bind (general τ): quantitative binary-approximation remains the genuine gap
+- T-Persist-K-Sep: upgrades automatically when T-Persist-1 upgrades
+- exp48 run: 48 configs, Λ_coupling qualitatively correct but 17% threshold accuracy; needs full-energy μ + regularization
+- Regularized Λ_coupling proposed: μ_floor = w_cl·2(1-a_cl/4)² ≈ 0.031; optimizer stability improvement needed for low λ_rep
+
+---
+
+## 2026-04-02 — Phase A-B: Multi-Formation Persistence Unification
+
+### Summary
+Completed the interrupted Phase A-B unification project. Three missing analysis documents written (Tasks #2, #3 by parallel agents). λ_coupling definition reconciled (spectral Λ = λ_rep·ω_jk/min(μ_j,μ_k) adopted as canonical). T-Persist-K-Unified theorem fully integrated: all 4 placeholder sections filled, universal hypotheses updated to 5 streamlined conditions (PS, ND, BC'-K, TC-K, SR-Λ), covering all three regimes as corollaries. Key finding: isoperimetric ordering NOT needed for persistence (only for metastability characterization); TC strictly weaker than WR' (exp40: persistence ≥0.999 when WR' fails in 3/6).
+
+### Files Created
+- `docs/04-02/INDEX.md` — Date index for 04-02 documents
+- `docs/04-02/analysis/REGIME-CONDITIONS-COMPARATIVE.md` — Task #2: Sep/Weak/Strong condition side-by-side; d_min independent of Λ; Spatial Decoupling Lemma proposed
+- `docs/04-02/analysis/ISOPERIMETRIC-TRANSPORT-NECESSITY.md` — Task #3: isoperimetric not needed for persistence; TC bound 25-100× loose; tightening path identified
+
+### Files Modified
+- `docs/04-02/theory/T-PERSIST-K-UNIFIED.md` — All placeholders filled (§3 coupling measure reconciled, §4 hypotheses updated, §7.3-7.4 integrated, §9.1-9.4 integrated); status: active
+- `docs/04-02/theory/UNIFIED-REGIME-PARAMETRIZATION.md` — Status upgraded from provisional to canonical; reconciliation note added
+- `docs/04-02/integration/PHASE-AB-SYNTHESIS.md` — Complete synthesis of all Phase A-B results (was empty template)
+
+### Theorem Status Changes
+- T-Persist-K-Unified: **new** — single parametric theorem covering Sep/Weak/Strong as corollaries (5 conditions)
+- T-Persist-1 conditions: 7 → 4 (H2' proved, H3/GT absorbed, NB/WR' replaced)
+- Isoperimetric ordering: **reclassified** from persistence hypothesis to separate landscape characterization theorem
+
+### Test Count
+175 tests passing (unchanged)
+
+### Open Items Carried Forward
+- exp45-47 experimental validation of regime boundaries and unified predictions
+- Analytical transport confinement proof at natural parameters (tightening path identified)
+- Generic soft-mode fraction bound f₁ = O(n^{-1/(2d)}) for automatic (BC') satisfaction
+- Canonical Spec v2.1 (deferred until experimental validation)
+- Paper update with unified theorem narrative
+
+---
+
 ## 2026-04-01 — Phase 8b: Paper1 Updated with Phase 1-8 Results
 
 ### Summary
