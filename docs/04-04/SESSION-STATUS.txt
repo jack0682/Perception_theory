@@ -1,0 +1,73 @@
+═══════════════════════════════════════════════════════════════════════════
+PHASE 12 → PHASE 13 TRANSITION (2026-04-04)
+═══════════════════════════════════════════════════════════════════════════
+
+PHASE 12 STATUS: ✅ COMPLETE & ARCHIVED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Deliverables:
+✅ T-Persist-1(b) upgraded Category B → A (basin containment via BC' + PSM)
+✅ Canonical Spec v2.1.md corrected & consistent (lines 1010-1011, 1084, 25, 1139, 1143)
+✅ Documentation complete (integration summary, audit report, completion record)
+✅ Git commit: Phase 12 Complete (9 files, +1975 insertions)
+
+Completeness: 95.8% (46/48 theorems Category A)
+
+Archive documents:
+  /docs/04-04/PHASE-12-COMPLETION-RECORD.md (detailed archival)
+  /docs/04-03/integration/PHASE-12-INTEGRATION-SUMMARY.md (synthesis)
+  /docs/04-03/proof/PHASE-12-FINAL-AUDIT-REPORT.md (9.2/10 audit)
+
+═══════════════════════════════════════════════════════════════════════════
+
+PHASE 13 PLANNING: THREE GAPS REMAIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Gap 1: T-Bind-Proj (General τ)                       [Priority 🔴 #1]
+  Status: Category B (proved for τ=1/2 only)
+  Target: Cat A via perturbation analysis
+  Effort: 5-7 hours
+  Success likelihood: 70%
+
+Gap 2: FORMATION-BIRTH (General Graph)              [Priority 🟡 #2]
+  Status: Category C (proved for D₄-symmetric only)
+  Target: Cat A via spectral perturbation theory
+  Effort: 5-8 hours
+  Success likelihood: 80%
+
+Gap 3: Near-Bifurcation Persistence (μ → 0)        [Priority 🟠 #3]
+  Status: Category C (three-tier ladder formalized)
+  Target: Cat A via center manifold reduction or normal forms
+  Effort: 10-13 hours
+  Success likelihood: 50% (most challenging)
+
+═══════════════════════════════════════════════════════════════════════════
+
+RECOMMENDED PHASE 13 STRATEGY: OPTION C (FOCUSED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1 (5-7 hrs): Attack T-Bind-Proj general τ
+  → Perturbation analysis + quantitative binary approximation
+  → Target: Cat A
+  → If succeeds: move to FORMATION-BIRTH in same phase
+
+Step 2 (5-8 hrs, if time permits): FORMATION-BIRTH
+  → Spectral perturbation theory / empirical universality test
+  → Target: Cat A
+  → If succeeds: 97.9% completeness (47/48 Cat A)
+
+Step 3 (defer to Phase 14): Near-bifurcation μ → 0
+  → Most challenging; needs deeper stochastic/manifold theory
+  → Can be approached fresh in Phase 14
+
+═══════════════════════════════════════════════════════════════════════════
+
+READY FOR PHASE 13. WHAT'S YOUR CHOICE?
+
+[ ] Option A: Sequential (T-Bind → Phase 13, FORMATION-BIRTH → 14, etc.)
+[ ] Option B: Parallel (All 3 gaps in Phase 13 via multi-agent teams)
+[✓] Option C: Focused (T-Bind Phase 13, pivot to FORMATION-BIRTH if time)
+
+Default: OPTION C (recommended, fastest path to 96.7%+)
+
+═══════════════════════════════════════════════════════════════════════════

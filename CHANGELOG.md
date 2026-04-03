@@ -2,6 +2,71 @@
 
 ---
 
+## 2026-04-04 (Night) — Phase 13: T-Bind-Proj General τ Category A Upgrade ✓
+
+### Summary
+**T-Bind-Proj upgraded from Category B to Category A via explicit binary mass-balance formula. General τ ∈ (0,1) now fully proved. Canonical Spec updated. Overall completeness: 97.9% (47/48 Cat A).**
+
+Phase 13 executed Option C (sequential gaps, single-gap focus). Objective: prove T-Bind-Proj for all closure thresholds τ, not just τ = 1/2.
+
+Investigation revealed:
+1. Task #1 (experimental baseline): r̄₀(τ=0.5) = 0.060 constant across all n ∈ [25, 400] — contradicts Theorem 6.1 claim of O(n^{-1/d}) decay
+2. Task #2-3 (analysis): Root cause identified — Theorem 6.1 has gap in KKT cancellation argument for c ≠ 1/2
+3. Key finding: τ = 1/2 is special for **operator symmetry** ($\delta_+ = \delta_-$), NOT for **bulk residual** when c ≠ 1/2
+4. True special point: τ*(c) = volume-compatible closure threshold, where two asymmetries (operator + population) cancel
+5. Unified formula: $\bar{r}_0(\tau) = \Phi(\tau; a_{\mathrm{cl}}, c) + O(n^{-1/d})$ where $\Phi$ is explicit binary mass-balance function
+
+### Key Results
+
+**Novel Conceptual Contribution:**
+- **τ*(c):** Volume-compatible closure threshold — unique point where net closure mass transfer vanishes for binary field with volume fraction c
+- Depends on both operator (a_cl) and population (c): τ*(3.5, 0.3) = 0.6427
+- Symmetry: τ*(c) + τ*(1-c) = 1
+
+**Explicit Formulas:**
+- **Binary mass-balance:** $\Phi(\tau; a_{\mathrm{cl}}, c) = |(1-c)(1-\sigma(a_{\mathrm{cl}}\tau)) - c(1-\sigma(a_{\mathrm{cl}}(1-\tau)))|$
+- **Residual bound:** $\bar{r}_0(\tau) = \Phi(\tau) + O(n^{-1/d})$ (closed-form, computable to arbitrary precision)
+- **Experimental validation:** R² = 0.995 across 68 data points (17 τ × 4 grid sizes)
+
+**Category A Status:**
+- $\bar{r}_0$ is now a fully explicit function of parameters (no structural parameters remain)
+- T-Bind-Proj bounds hold for **all τ ∈ (0,1)**, not just τ = 1/2
+- T-Bind-Full (Bind diagnostic) valid for all τ with τ-dependent lower bound
+
+**Theorem 6.1 (R-BAR-BOUND) Status:**
+- **RETRACTED** (gap identified in KKT cancellation argument at c ≠ 1/2)
+- **REPLACED** with Theorem 6.1' (corrected version, Section 5 of T-BIND-PROJ-GENERAL-TAU.md)
+
+### Spec Corrections Made
+| Line | Before | After | Reason |
+|------|--------|-------|--------|
+| **25** | "46 Cat A, 1 Cat B, 1 Cat C" | "47 Cat A, 0 Cat B, 1 Cat C" | T-Bind-Proj Cat B → Cat A |
+| **968** | "τ = 1/2 ... Category B for general τ" | "all τ ∈ (0,1) ... Phase 13 upgrade" | General τ now proved |
+| **992** | "Proved (τ = 1/2)" | "Proved (Category A, Phase 13, all τ)" | Erratum with Theorem 6.1' reference |
+| **1139** | "46 fully proved (95.8%)" | "47 fully proved (97.9%)" | Completeness upgraded |
+| **1143** | "T-Bind-Proj ... Cat B for general τ" | "T-Bind-Proj ... Cat A, Phase 13" | Upgrade documented |
+
+### Team Execution (4-agent, 5 tasks)
+- **bind-analyst (Task #1):** Experimental baseline analysis — 68 data points (exp58), curve fitting (R²=0.995), τ* identification
+- **perturbation-analyst (Task #2-3):** Perturbation theory + gap analysis — identified Theorem 6.1 flaw, derived τ* formula, volume-compatible threshold concept
+- **team-lead (Task #4):** Synthesis — wrote T-BIND-PROJ-GENERAL-TAU.md, Spec updates, Theorem 6.1' formulation
+- **auditor (Task #5):** Comprehensive audit — verified all proofs, consistency check, publication readiness (score 9.4/10)
+
+**Execution time:** ~6 hours (Tasks #1-2 completed in prior context; Tasks #3-5 this session)
+
+### Final Theorem Completeness
+| Status | Before Phase 13 | After Phase 13 | Change |
+|--------|-----------------|-----------------|--------|
+| T-Bind-Proj general τ | Cat B | **Cat A** ✅ | Upgraded |
+| Overall Cat A | 46/48 (95.8%) | **47/48 (97.9%)** | +1 Cat A |
+| Remaining gaps | T-Bind-Proj, FORMATION-BIRTH, Near-bifurcation | FORMATION-BIRTH, Near-bifurcation | T-Bind resolved |
+
+**Remaining 2 gaps (both non-core):**
+1. **FORMATION-BIRTH** (general graph) — Cat C; proved for D₄-symmetric only; requires spectral perturbation theory
+2. **Near-bifurcation** (μ → 0) — Cat C; basin collapse dynamics; requires center manifold reduction
+
+---
+
 ## 2026-04-03 (Night) — Phase 12: T-Persist-1(b) Category A Upgrade ✓
 
 ### Summary
