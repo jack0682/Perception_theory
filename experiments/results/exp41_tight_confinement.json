@@ -12,27 +12,27 @@
       "config": "10x10_beta30",
       "n": 100,
       "beta": 30.0,
-      "m": 30.000000000000966,
+      "m": 29.999999999999034,
       "core_size": 30,
       "boundary_size": 10,
-      "R_F": 6.0,
+      "R_F": 5.0,
       "diam": 18.0,
-      "delta_phi_sq": 1.768624807447328,
-      "max_displacement": 4.445520167050641,
+      "delta_phi_sq": 1.7411240064432636,
+      "max_displacement": 4.42936244798852,
       "bounds": {
-        "B_naive": 11.753940002384187,
-        "B1": 5.477225575051749,
-        "B2": 1.7320508075689052,
-        "B3": 1.825741858350583,
-        "B4": 0.9342360741735785,
-        "B5": 4.445520167050641
+        "B_naive": 11.753940002383809,
+        "B1": 5.477225575051573,
+        "B2": 1.7320508075688494,
+        "B3": 1.5214515486254372,
+        "B4": 0.9602848540047292,
+        "B5": 4.42936244798852
       },
       "tightness_ratios": {
-        "B_naive": 0.37821531896103816,
-        "B1": 0.8116372251125771,
-        "B2": 2.5666222651345563,
-        "B3": 2.4349116753377316,
-        "B4": 4.758454838069843,
+        "B_naive": 0.3768406548859535,
+        "B1": 0.8086872427098849,
+        "B2": 2.5572936016846333,
+        "B3": 2.9112740737555853,
+        "B4": 4.612550567174422,
         "B5": 1.0
       },
       "validity": {
@@ -46,25 +46,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 0.8902970673715406,
+          "displacement": 1.0658283825601036,
           "ot_converged": true,
-          "ot_iterations": 45
+          "ot_iterations": 65
         },
         {
           "target": "uniform",
-          "displacement": 4.445520167050641,
+          "displacement": 4.42936244798852,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 4.369039063768895,
+          "displacement": 3.836498933007538,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 1.3556076722300547,
+          "displacement": 1.173382728418279,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -74,27 +74,27 @@
       "config": "10x10_beta50",
       "n": 100,
       "beta": 50.0,
-      "m": 30.00000000000042,
+      "m": 29.999999999999,
       "core_size": 31,
       "boundary_size": 10,
       "R_F": 5.0,
       "diam": 18.0,
-      "delta_phi_sq": 1.3502954858608338,
-      "max_displacement": 5.600790055630968,
+      "delta_phi_sq": 1.3502954858521907,
+      "max_displacement": 5.600790055628629,
       "bounds": {
-        "B_naive": 11.75394000238408,
-        "B1": 5.477225575051699,
-        "B2": 1.7320508075688894,
-        "B3": 1.521451548625472,
-        "B4": 1.4194978821634543,
-        "B5": 5.600790055630968
+        "B_naive": 11.753940002383802,
+        "B1": 5.47722557505157,
+        "B2": 1.7320508075688485,
+        "B3": 1.521451548625436,
+        "B4": 1.4194978821756896,
+        "B5": 5.600790055628629
       },
       "tightness_ratios": {
-        "B_naive": 0.476503202712873,
-        "B1": 1.0225596844398914,
-        "B2": 3.233617646293096,
-        "B3": 3.681214863983609,
-        "B4": 3.945613534199018,
+        "B_naive": 0.47650320271268526,
+        "B1": 1.0225596844394884,
+        "B2": 3.2336176462918216,
+        "B3": 3.6812148639821585,
+        "B4": 3.945613534163361,
         "B5": 1.0
       },
       "validity": {
@@ -108,25 +108,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 1.5256672455005416,
+          "displacement": 1.5256672454777123,
           "ot_converged": true,
           "ot_iterations": 95
         },
         {
           "target": "uniform",
-          "displacement": 4.414954858675726,
+          "displacement": 4.41495485867273,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 5.600790055630968,
+          "displacement": 5.600790055628629,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 2.9821523486266535,
+          "displacement": 2.9821523486229635,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -136,32 +136,32 @@
       "config": "15x15_beta30",
       "n": 225,
       "beta": 30.0,
-      "m": 67.50000000000054,
+      "m": 67.49999999999957,
       "core_size": 68,
-      "boundary_size": 16,
-      "R_F": 9.0,
+      "boundary_size": 13,
+      "R_F": 8.0,
       "diam": 28.0,
-      "delta_phi_sq": 1.1009322069212406,
-      "max_displacement": 7.631908415693504,
+      "delta_phi_sq": 1.057948111519431,
+      "max_displacement": 7.714273913137951,
       "bounds": {
-        "B_naive": 19.120323667469684,
-        "B1": 8.763560920082693,
-        "B2": 2.190890230020673,
-        "B3": 2.6408051879713477,
-        "B4": 2.73226679367148,
-        "B5": 7.631908415693504
+        "B_naive": 19.12032366746955,
+        "B1": 7.120393247567137,
+        "B2": 1.9748417658131436,
+        "B3": 2.3473823893078474,
+        "B4": 2.8522714801630444,
+        "B5": 7.714273913137951
       },
       "tightness_ratios": {
-        "B_naive": 0.39915163301749085,
-        "B1": 0.8708684158518395,
-        "B2": 3.483473663407358,
-        "B3": 2.889992965197215,
-        "B4": 2.7932515350882468,
+        "B_naive": 0.4034593789990421,
+        "B1": 1.0834055992305942,
+        "B2": 3.906274440150697,
+        "B3": 3.286330317666136,
+        "B4": 2.7046071759960872,
         "B5": 1.0
       },
       "validity": {
         "B_naive": "True",
-        "B1": "True",
+        "B1": "False",
         "B2": "False",
         "B3": "False",
         "B4": "False",
@@ -170,25 +170,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 1.5262725855395363,
+          "displacement": 1.5605530154163803,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "uniform",
-          "displacement": 6.619098303224402,
+          "displacement": 6.65109973941466,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 7.631908415693504,
+          "displacement": 7.714273913137951,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 1.7331959618409865,
+          "displacement": 3.0329954610720287,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -198,27 +198,27 @@
       "config": "15x15_beta50",
       "n": 225,
       "beta": 50.0,
-      "m": 67.49999999999922,
-      "core_size": 68,
-      "boundary_size": 17,
+      "m": 67.50000000000095,
+      "core_size": 69,
+      "boundary_size": 16,
       "R_F": 9.0,
       "diam": 28.0,
-      "delta_phi_sq": 1.1715111648666114,
-      "max_displacement": 7.461436210499667,
+      "delta_phi_sq": 0.717346914812986,
+      "max_displacement": 6.959449436268785,
       "bounds": {
-        "B_naive": 19.120323667469496,
-        "B1": 9.31128347758777,
-        "B2": 2.25831795812723,
-        "B3": 2.6408051879713215,
-        "B4": 2.5460741760851615,
-        "B5": 7.461436210499667
+        "B_naive": 19.12032366746974,
+        "B1": 8.76356092008272,
+        "B2": 2.19089023002068,
+        "B3": 2.6408051879713557,
+        "B4": 4.009701838744574,
+        "B5": 6.959449436268785
       },
       "tightness_ratios": {
-        "B_naive": 0.39023587363190076,
-        "B1": 0.8013327301718739,
-        "B2": 3.3039794877632116,
-        "B3": 2.825439848606014,
-        "B4": 2.930565134583925,
+        "B_naive": 0.3639817796656448,
+        "B1": 0.7941348841793747,
+        "B2": 3.176539536717499,
+        "B3": 2.6353513193508133,
+        "B4": 1.7356526036478983,
         "B5": 1.0
       },
       "validity": {
@@ -232,25 +232,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 1.559411228301011,
+          "displacement": 1.9271311254438153,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "uniform",
-          "displacement": 6.6890257075019255,
+          "displacement": 6.626113605923337,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 7.461436210499667,
+          "displacement": 6.959449436268785,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 4.278101656992916,
+          "displacement": 3.9668502716910106,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -260,27 +260,27 @@
       "config": "15x15_beta100",
       "n": 225,
       "beta": 100.0,
-      "m": 67.50000000000094,
-      "core_size": 70,
-      "boundary_size": 17,
+      "m": 67.49999999999925,
+      "core_size": 68,
+      "boundary_size": 14,
       "R_F": 9.0,
       "diam": 28.0,
-      "delta_phi_sq": 0.9054180732048062,
-      "max_displacement": 6.6318950147466875,
+      "delta_phi_sq": 1.25162368196985,
+      "max_displacement": 6.733132709708818,
       "bounds": {
-        "B_naive": 19.120323667469737,
-        "B1": 9.311283477587887,
-        "B2": 2.2583179581272588,
-        "B3": 2.6408051879713548,
-        "B4": 3.322261500004766,
-        "B5": 6.6318950147466875
+        "B_naive": 19.1203236674695,
+        "B1": 7.668115805072282,
+        "B2": 2.0493901531919083,
+        "B3": 2.640805187971322,
+        "B4": 2.3500582544333253,
+        "B5": 6.733132709708818
       },
       "tightness_ratios": {
-        "B_naive": 0.34685056226479194,
-        "B1": 0.7122428428593711,
-        "B2": 2.9366524721993876,
-        "B3": 2.5113155051930414,
-        "B4": 1.9961989791403154,
+        "B_naive": 0.35214533115693447,
+        "B1": 0.8780687304246247,
+        "B2": 3.2854323512885135,
+        "B3": 2.5496514246403916,
+        "B4": 2.8650918320883894,
         "B5": 1.0
       },
       "validity": {
@@ -294,25 +294,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 4.3814921201759365,
+          "displacement": 1.8903220478666103,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "uniform",
-          "displacement": 6.6318950147466875,
+          "displacement": 6.733132709708818,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 6.191791220915745,
+          "displacement": 4.473776470017382,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 2.3596196647441587,
+          "displacement": 1.99709659089427,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -322,27 +322,27 @@
       "config": "20x20_beta50",
       "n": 400,
       "beta": 50.0,
-      "m": 120.00000000000011,
+      "m": 119.99999999999937,
       "core_size": 121,
-      "boundary_size": 24,
+      "boundary_size": 20,
       "R_F": 13.0,
       "diam": 38.0,
-      "delta_phi_sq": 0.6827989873729904,
-      "max_displacement": 10.18561409368755,
+      "delta_phi_sq": 1.1562938495517021,
+      "max_displacement": 10.944704735551213,
       "bounds": {
-        "B_naive": 26.813723084513246,
-        "B1": 13.145341380123993,
-        "B2": 2.683281572999749,
-        "B3": 3.7475753934564016,
-        "B4": 5.534199242269961,
-        "B5": 10.18561409368755
+        "B_naive": 26.813723084513164,
+        "B1": 10.954451150103294,
+        "B2": 2.4494897427831717,
+        "B3": 3.74757539345639,
+        "B4": 3.4468198448559297,
+        "B5": 10.944704735551213
       },
       "tightness_ratios": {
-        "B_naive": 0.37986571508864564,
-        "B1": 0.774845916827112,
-        "B2": 3.7959542510108766,
-        "B3": 2.7179210621012544,
-        "B4": 1.8404856145926758,
+        "B_naive": 0.4081754965938527,
+        "B1": 0.9991102781491714,
+        "B2": 4.46815699792054,
+        "B3": 2.9204761976668085,
+        "B4": 3.175305129998368,
         "B5": 1.0
       },
       "validity": {
@@ -356,25 +356,25 @@
       "targets": [
         {
           "target": "self",
-          "displacement": 2.097140668086173,
+          "displacement": 1.8412989673115778,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "uniform",
-          "displacement": 8.91287065457883,
+          "displacement": 8.9231593167258,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "random",
-          "displacement": 10.18561409368755,
+          "displacement": 10.944704735551213,
           "ot_converged": false,
           "ot_iterations": 100
         },
         {
           "target": "shifted",
-          "displacement": 3.2980648651679756,
+          "displacement": 2.158280610841808,
           "ot_converged": false,
           "ot_iterations": 100
         }
@@ -384,30 +384,30 @@
   "bound_summary": {
     "B_naive": {
       "universally_valid": true,
-      "max_tightness_ratio": 0.476503202712873,
-      "mean_tightness_ratio": 0.3951370509461234
+      "max_tightness_ratio": 0.47650320271268526,
+      "mean_tightness_ratio": 0.3968509740023522
     },
     "B1": {
       "universally_valid": false,
-      "max_tightness_ratio": 1.0225596844398914,
-      "mean_tightness_ratio": 0.8322478025437775
+      "max_tightness_ratio": 1.0834055992305942,
+      "mean_tightness_ratio": 0.9309944031888563
     },
     "B2": {
       "universally_valid": false,
-      "max_tightness_ratio": 3.7959542510108766,
-      "mean_tightness_ratio": 3.2200499643014147
+      "max_tightness_ratio": 4.46815699792054,
+      "mean_tightness_ratio": 3.4378857623422845
     },
     "B3": {
       "universally_valid": false,
-      "max_tightness_ratio": 3.681214863983609,
-      "mean_tightness_ratio": 2.843465986736477
+      "max_tightness_ratio": 3.6812148639821585,
+      "mean_tightness_ratio": 2.997383032843649
     },
     "B4": {
       "universally_valid": false,
-      "max_tightness_ratio": 4.758454838069843,
-      "mean_tightness_ratio": 3.044094939279004
+      "max_tightness_ratio": 4.612550567174422,
+      "mean_tightness_ratio": 3.1731368071780874
     }
   },
   "best_bound": "B_naive",
-  "best_max_ratio": 0.476503202712873
+  "best_max_ratio": 0.47650320271268526
 }

@@ -11,14 +11,14 @@
       "center_distance": 1,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.0008233216529080036,
+      "omega_max": 0.0008233216529561352,
       "mu_per_formation": [
-        2.47574449448625,
-        -0.6417762243747941
+        2.4757444942035516,
+        -0.6417762245604434
       ],
-      "mu_min": -0.6417762243747941,
+      "mu_min": -0.6417762245604434,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.006586573223264029,
+      "Lambda_coupling": 0.006586573223649082,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -26,14 +26,14 @@
       "center_distance": 2,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.000848439226838848,
+      "omega_max": 0.0008484392269045058,
       "mu_per_formation": [
-        1.5054083164897438,
-        -3.692515129359674
+        1.505408316174515,
+        -3.6925151297249057
       ],
-      "mu_min": -3.692515129359674,
+      "mu_min": -3.6925151297249057,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.006787513814710784,
+      "Lambda_coupling": 0.006787513815236046,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -41,14 +41,14 @@
       "center_distance": 3,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.0005100334384662009,
+      "omega_max": 0.0005100334384079151,
       "mu_per_formation": [
-        -4.859417425877983,
-        -0.6687647513466203
+        -4.85941741873057,
+        -0.6687647519710748
       ],
-      "mu_min": -4.859417425877983,
+      "mu_min": -4.85941741873057,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.004080267507729607,
+      "Lambda_coupling": 0.004080267507263321,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -56,14 +56,14 @@
       "center_distance": 4,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.00031430542478793163,
+      "omega_max": 0.00031430542477678,
       "mu_per_formation": [
-        -1.1646328194397466,
-        -1.431636817066951
+        -1.1646328203992693,
+        -1.4316368171770852
       ],
-      "mu_min": -1.431636817066951,
+      "mu_min": -1.4316368171770852,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.002514443398303453,
+      "Lambda_coupling": 0.00251444339821424,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -71,14 +71,14 @@
       "center_distance": 5,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.0009061491714450958,
+      "omega_max": 0.0009061491713909957,
       "mu_per_formation": [
-        -0.6329049341890024,
-        7.059344030589488
+        -0.6329049350739789,
+        7.059344029794373
       ],
-      "mu_min": -0.6329049341890024,
+      "mu_min": -0.6329049350739789,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.007249193371560767,
+      "Lambda_coupling": 0.007249193371127965,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -86,14 +86,14 @@
       "center_distance": 6,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.0005739058778843824,
+      "omega_max": 0.000573905877798285,
       "mu_per_formation": [
-        -0.2643813218880212,
-        7.202167252680095
+        -0.26438132257254116,
+        7.202167251932371
       ],
-      "mu_min": -0.2643813218880212,
+      "mu_min": -0.26438132257254116,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.004591247023075059,
+      "Lambda_coupling": 0.00459124702238628,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -101,14 +101,14 @@
       "center_distance": 7,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.00037420041307884125,
+      "omega_max": 0.0003742004130771537,
       "mu_per_formation": [
-        -3.3006144305173915,
-        7.042581753280132
+        -3.3006144287754795,
+        7.042581752479737
       ],
-      "mu_min": -3.3006144305173915,
+      "mu_min": -3.3006144287754795,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.00299360330463073,
+      "Lambda_coupling": 0.0029936033046172295,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     },
@@ -116,17 +116,17 @@
       "center_distance": 8,
       "d_min": 1.0,
       "overlap": 0.0,
-      "omega_max": 0.00039350415944099955,
+      "omega_max": 0.000393504159468185,
       "mu_per_formation": [
-        -0.6611252770085154,
-        7.076701329670662
+        -0.6611252777551916,
+        7.076701328891939
       ],
-      "mu_min": -0.6611252770085154,
+      "mu_min": -0.6611252777551916,
       "mu_floor": 0.125,
-      "Lambda_coupling": 0.0031480332755279964,
+      "Lambda_coupling": 0.00314803327574548,
       "regime_geometric": "weakly-interacting",
       "regime_lambda": "weakly-interacting"
     }
   ],
-  "elapsed_seconds": 17.999891757965088
+  "elapsed_seconds": 8.551071166992188
 }
