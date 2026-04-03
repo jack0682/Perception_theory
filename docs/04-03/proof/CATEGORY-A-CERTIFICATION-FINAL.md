@@ -25,11 +25,15 @@
 
 Two independent proof lines converge:
 
-**Pillar 1 (KKT / Screened Poisson).** The deviation v_x = 1 - u-hat(x) at deep-core sites satisfies a discrete screened Poisson equation. The maximum principle gives v_x <= C_1*e^{-2*c_0} + C_2^eff/beta = 0.034 + 0.096 = 0.130 at beta >= 7*alpha.
+**Pillar 1 (KKT / Screened Poisson).** The deviation v_x = 1 - u-hat(x) at deep-core sites satisfies a discrete screened Poisson equation (10-step derivation in KKT-DERIVATION-SCREENED-POISSON.md). The maximum principle gives v_x <= C_1*e^{-2*c_0} + C_2^eff/beta = 0.034 + 0.096 = 0.130 (conservative) or 0.034 + 0.046 = 0.080 (formation-conditioned) at beta >= 7*alpha.
 
-**Pillar 2 (Formation-Conditioned Jacobian).** Site-specific closure Jacobian analysis gives C_2^eff <= 0.671 for n >= 100, improving to C_2^sat ~ 0.42 as n -> infinity. The analytical threshold is beta > 3*alpha; the stated beta > 7*alpha provides a 5x safety margin.
+**Pillar 2 (Formation-Conditioned Jacobian).** Site-specific closure Jacobian analysis gives C_2^eff <= 0.322 (formation-conditioned, with |r_x| <= 0.20 at boundary analytically proved) or C_2^eff <= 0.671 (worst-case) for n >= 100. The analytical threshold is beta > 1.7*alpha; the stated beta > 7*alpha provides a 4x safety margin.
 
-**Critical correction resolved:** The Lagrange multiplier nu scales with beta (|nu| up to 2.66 at beta=100 in exp50 data). The proof correctly bounds v_x = (source)/(2*beta) directly, where the beta-dependent terms cancel in the mean-subtracted source.
+**Critical corrections resolved:**
+1. The Lagrange multiplier nu scales with beta (|nu| up to 2.66 at beta=100). Proof bounds v_x directly where beta-terms cancel.
+2. W''(1) = 2 (not 0 as gap plan claimed). Linearization is standard first-order Taylor. Nonlinear correction *strengthens* the bound (self-consistent v_x <= 0.059).
+3. |r_x| <= 0.20 at boundary analytically proved via g(u) decomposition + KKT balance + Modica-Mortola monotonicity.
+4. C_2^eff weighting rigorously derived from KKT source decomposition (not just stated).
 
 ---
 
@@ -71,11 +75,14 @@ H3 stands alone via:
 
 The draft certification (CATEGORY-A-CERTIFICATION.md) and experimental validation document (H3-EXPERIMENTAL-VALIDATION.md) contained data inconsistencies with the KKT analysis (H3-KKT-ANALYSIS.md). These are resolved as follows:
 
-| Issue | Draft claim | KKT analysis (authoritative) | Resolution |
-|-------|-------------|------------------------------|------------|
-| nu bound | |nu| <= 1.0 always | |nu| up to 2.66 at beta=100 | **Proof does not require |nu| bounded by O(1)**; bounds v_x directly |
-| nu_eff | <= 2.47 | 4.59 (abs-value sum) | **Absolute-value decomposition overestimates**; signed cancellation gives v_x = O(1/beta) |
-| Sep gradient at core | <= 0.04 | Up to 1.1 at high beta | **Enters as S_x/(2*beta)**, still bounded; formation-conditioned C_2^eff properly accounts |
+| Issue | Draft claim | Corrected (authoritative) | Resolution |
+|-------|-------------|--------------------------|------------|
+| W''(1) | = 0 (gap plan) | **= 2** | Linearization is standard 1st-order Taylor; correction strengthens bound |
+| nu bound | |nu| <= 1.0 always | |nu| up to 2.66 at beta=100 | Proof bounds v_x directly; beta-terms cancel in source |
+| nu_eff | <= 2.47 | 4.59 (abs-value sum) | Absolute-value decomposition overestimates; screened Poisson avoids this |
+| |r_x| at boundary | Empirical 0.20 | **Analytical <= 0.196** | Proved via g(u) + KKT Delta + monotonicity (Gap 2) |
+| C_2^eff | 0.671 (one-line proof) | **0.322 (rigorous KKT)** | Full derivation from source decomposition (Gap 3) |
+| Sep gradient at core | <= 0.04 | Up to 1.1 at high beta | Enters as S_x/(2*beta), formation-conditioned C_2^eff accounts |
 
 **Key insight:** The prior approach of independently bounding |nu|, |nabla E_cl|, |nabla E_sep|, |L*u-hat| and summing absolute values was incorrect — the signed terms cancel significantly. The correct approach (screened Poisson bound on v_x) avoids this issue entirely.
 
@@ -153,13 +160,17 @@ No circular dependencies. Pillar 1 provides the structural framework (screened P
 
 | File | Purpose | Status |
 |------|---------|--------|
-| H3-ANALYTICAL-BOUND-FINAL.md | **Definitive integrated proof** | FINAL |
-| H3-KKT-ANALYSIS.md | Pillar 1: KKT/Screened Poisson | Complete |
-| H3-JACOBIAN-ANALYSIS.md | Pillar 2: Site-weighted C_2^eff | Complete |
+| **H3-ANALYTICAL-BOUND-FINAL.md** | **Definitive integrated proof (Rev 2)** | **FINAL** |
+| **CATEGORY-A-CERTIFICATION-FINAL.md** | **This document** | **FINAL** |
+| H3-KKT-ANALYSIS.md | Pillar 1: KKT/Screened Poisson (Phase 10) | Complete |
+| H3-JACOBIAN-ANALYSIS.md | Pillar 2: Site-weighted C_2^eff (Phase 10) | Complete |
+| KKT-DERIVATION-SCREENED-POISSON.md | Gap 8: Full 10-step derivation (Day 1) | Complete |
+| W-TAYLOR-EXPANSION-RIGOROUS.md | Gap 1: W''(1)=2 correction + error bounds (Day 1) | Complete |
+| RX-BOUNDARY-RIGOROUS-BOUND.md | Gap 2: |r_x| <= 0.20 analytical (Day 2) | Complete |
+| C2-EFF-WEIGHTING-RIGOROUS.md | Gap 3: C_2^eff rigorous derivation (Day 2) | Complete |
 | H3-PROOF-OUTLINE.md | Proof strategy (historical) | Complete |
 | H3-EXPERIMENTAL-VALIDATION.md | Validation data (see note below) | Complete* |
 | H3-EXP-DATA-SUMMARY.json | Structured numerical results | Complete |
-| CATEGORY-A-CERTIFICATION-FINAL.md | **This document** | FINAL |
 
 *Note: H3-EXPERIMENTAL-VALIDATION.md contains the |nu| <= 1.0 claim that is contradicted by exp50 data. The definitive treatment of nu is in H3-KKT-ANALYSIS.md section 2.3 and H3-ANALYTICAL-BOUND-FINAL.md section 2. The experimental validation data (pass rates, R^2 values) remains correct; only the nu interpretation requires the correction in Section 2 above.
 

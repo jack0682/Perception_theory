@@ -63,6 +63,10 @@
 |------|-------------|--------|
 | `proof/H3-KKT-ANALYSIS.md` | Pillar 1: KKT screened Poisson bound, nu scaling correction | **Complete** |
 | `proof/H3-JACOBIAN-ANALYSIS.md` | Pillar 2: Site-weighted C_2^eff, formation-conditioned bounds | **Complete** |
+| `proof/KKT-DERIVATION-SCREENED-POISSON.md` | Gap 8: Full 10-step KKT -> screened Poisson derivation | **Complete** |
+| `proof/W-TAYLOR-EXPANSION-RIGOROUS.md` | Gap 1: W''(1)=2 correction, Taylor error bounds | **Complete** |
+| `proof/RX-BOUNDARY-RIGOROUS-BOUND.md` | Gap 2: |r_x| <= 0.20 analytical proof at boundary | **Complete** |
+| `proof/C2-EFF-WEIGHTING-RIGOROUS.md` | Gap 3: C_2^eff weighting formula rigorous KKT derivation | **Complete** |
 | `proof/H3-ANALYTICAL-BOUND.md` | Draft unified proof (superseded by FINAL) | **Superseded** |
 | `proof/H3-ANALYTICAL-BOUND-FINAL.md` | **Definitive integrated proof** — resolves nu inconsistency | **FINAL** |
 | `proof/H3-EXPERIMENTAL-VALIDATION.md` | exp13/28/31/50 validation data tables | **Complete** |

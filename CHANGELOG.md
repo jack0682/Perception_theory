@@ -2,6 +2,49 @@
 
 ---
 
+## 2026-04-03 (Night) — Phase 12: T-Persist-1(b) Category A Upgrade ✓
+
+### Summary
+**T-Persist-1(b) Basin Containment upgraded from Category B to Category A. Canonical Spec inconsistency resolved. All 5 components of T-Persist-Full now Category A.**
+
+Phase 12 was a consolidation and correction pass. Investigation revealed:
+1. Phase 7-10 basin analysis documents were already rigorous and at correct category levels
+2. Spec line 1010 marked T-Persist-1(b) as Cat B while spec line 1079 marked T-Persist-Full as Cat A — logically impossible
+3. Phase 10 had already proved T-Persist-1(b) Cat A via Theorem BC' + Theorem PSM
+
+### Spec Corrections Made
+| Line | Before | After | Reason |
+|------|--------|-------|--------|
+| **1010-1011** | T-Persist-1(b) Cat B | **Cat A** | BC' + PSM both Cat A; T-PERSIST-1B-UNCONDITIONAL.md (Kupka-Smale + Sard) proves unconditional |
+| **1084** | (NB) μ ≥ 4.1 hard threshold | (NB) Barrier positivity (Sard, generic) | Removes hard threshold; works for any μ > 0 with quantitative gentleness |
+
+### Key Results
+- **Theorem BC'** (directional basin containment): r_eff = √(2Δ_bdy/(f₁²μ + (1-f₁²)μ₂)) — Cat A
+- **Theorem PSM** (soft-mode fraction): f₁^grad ≤ √(n_bdy/n_F) via four-lemma chain (HDG, BMD, TC-DIR, volume orthogonality) — Cat A
+- **Proposition BMD** (boundary-mode dominance): soft mode > 90% boundary weight — Cat A (Phase 7)
+- **T-Persist-1(b) unconditional**: Kupka-Smale (NB removal) + Sard (GT removal) + BC' (basin containment) — Cat A (Phase 12)
+
+### Team Execution (3-agent, 5 tasks)
+- **basin-analyst:** Verified Phase 7-10 documents, found spec bug
+- **f1-analyst:** Verified Theorem PSM rigorous Category A
+- **auditor:** Prepared comprehensive audit checklist
+- **team-lead:** Corrected Canonical Spec v2.1.md, synthesized Phase 12 summary
+
+**Execution time:** ~4 hours (consolidation + spec correction + synthesis)
+
+### Final Theorem Completeness
+| Status | Before Phase 12 | After Phase 12 | Change |
+|--------|-----------------|-----------------|--------|
+| T-Persist-1(b) | Cat B | **Cat A** ✅ | Upgraded |
+| T-Persist-Full | Cat A (inconsistent) | **Cat A** (consistent) ✅ | Logically consistent |
+| Overall % | 93.8% (45/48 Cat A) | **95.8% (46/48 Cat A)** | +1 Cat A |
+
+**Remaining 2 gaps (non-core, below persistence):**
+1. FORMATION-BIRTH general-graph case (Cat C)
+2. Near-bifurcation dynamics μ → 0 (Cat C)
+
+---
+
 ## 2026-04-03 (Evening) — Phase 11: H3 Gap-Resolution Complete ✓
 
 ### Summary
