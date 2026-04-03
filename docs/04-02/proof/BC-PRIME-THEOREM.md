@@ -2,9 +2,9 @@
 
 **Date:** 2026-04-02
 **Category:** proof
-**Status:** proved (assembles existing Cat A results into a single formal theorem)
-**Depends on:** Proposition 3 (basin radius), Proposition 5 (basin containment), Proposition BMD (boundary-mode dominance), Directional Persistence Extension Theorem, NB-1 (barrier formula)
-**Upgrades:** T-Persist-1(b) from Category C to Category B
+**Status:** proved — **upgraded to Cat A** (see F1-BOUND-CATA-UPGRADE.md §4)
+**Depends on:** Proposition 3 (basin radius), Proposition 5 (basin containment), Proposition BMD (boundary-mode dominance), Directional Persistence Extension Theorem, NB-1 (barrier formula), Theorem PSM (f₁^grad bound)
+**Upgrades:** T-Persist-1(b) from Category C → B (this doc) → **A** (via f₁^grad, F1-BOUND-CATA-UPGRADE.md)
 
 ---
 

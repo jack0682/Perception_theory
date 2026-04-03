@@ -14,7 +14,9 @@ $$\mathbf{C}_t = (I - \alpha\, W_{\mathrm{sym}})^{-1}$$
 
 where $W_{\mathrm{sym}} = D_u^{-1/2}\, W_u\, D_u^{-1/2}$ is the symmetrically normalized cohesion-weighted adjacency (see SS2 below), and $\alpha \cdot \rho(W_{\mathrm{sym}}) < 1$.
 
-**Claim.** $\mathbf{C}_t(x,x)$ is monotone non-decreasing in $u(x)$ with all other field values held fixed. The inequality is strict whenever $x$ has at least one neighbor $j$ with $u(j) > 0$.
+**Claim.** $\mathbf{C}_t(x,x)$ is monotone non-decreasing in $u(x)$ with all other field values held fixed. The inequality is strict whenever $x$ has at least one neighbor $j$ with $u(j) > 0$ **and** $j$ has at least one neighbor $k \neq x$ with $u(k) > 0$ (i.e., $d_j^{\mathrm{rest}} > 0$).
+
+**Remark.** On graphs with minimum degree $\geq 2$ (including all grids), the condition $u(j) > 0$ for some neighbor $j$ automatically implies $d_j^{\mathrm{rest}} > 0$ since $j$ has a neighbor $k \neq x$. The strengthened condition is only binding on tree-like graphs where $x$ could be a cut vertex isolating all positive-$u$ neighbors (e.g., star graphs with center $x$).
 
 ---
 
@@ -134,11 +136,15 @@ where:
 
 **The graph Laplacian $L_0$ is positive semidefinite** (standard: $\mathbf{v}^T L_0\, \mathbf{v} = \tfrac{1}{2} \sum_{i,j \neq x} W_u(i,j)(v_i - v_j)^2 \geq 0$).
 
-**The diagonal $(1-\alpha)\, D_0$ is positive definite** since $1 - \alpha > 0$ (from $\alpha < 1$) and all diagonal entries $d_j^{\mathrm{rest}} > 0$ (each vertex $j \in N_x$ has positive degree in the restricted graph, since $w_j > 0$ requires $u(j) > 0$, ensuring $j$ participates in the weighted graph).
+**The diagonal $(1-\alpha)\, D_0$ is positive semidefinite** since $1 - \alpha > 0$ (from $\alpha < 1$) and all diagonal entries $d_j^{\mathrm{rest}} \geq 0$. It is **positive definite on the support of $\mathbf{w}$** (i.e., on $N_x$) when each $j \in N_x$ satisfies $d_j^{\mathrm{rest}} > 0$ — that is, $j$ has at least one neighbor $k \neq x$ with $u(k) > 0$.
 
-Therefore $G_0 = (1-\alpha) D_0 + \alpha L_0$ is positive definite, and:
+**Weak monotonicity** ($f'(s) \geq 0$) holds unconditionally since $G_0$ is always PSD (sum of PSD matrices).
+
+**Strict monotonicity** ($f'(s) > 0$) holds when the strengthened condition is satisfied: $\exists j \in N_x$ with $d_j^{\mathrm{rest}} > 0$, ensuring $D_0$ is positive definite on the support of $\mathbf{v}$, hence:
 
 $$f'(s) = \mathbf{v}^T G_0\, \mathbf{v} > 0 \quad \text{whenever } \mathbf{v} \neq 0$$
+
+**Counterexample for the weaker condition.** On a star graph with center $x$ and leaves $j_1, \ldots, j_p$ (no edges between leaves), if $u(j_k) > 0$ for all $k$ but $u(x)$ is the variable, then $d_{j_k}^{\mathrm{rest}} = 0$ for all leaves (they have no neighbors other than $x$). Hence $D_0 = 0$, $L_0 = 0$ (edgeless restricted graph), $G_0 = 0$, and $f'(s) = 0$. In this case $\mathbf{C}_t(x,x) = 1$ for all $u(x)$ — non-decreasing but not strictly increasing. This pathology does not arise on graphs with minimum degree $\geq 2$ (all grids).
 
 Since $\mathbf{v} = G(s)^{-1} \mathbf{w} \neq 0$ (because $\mathbf{w} \neq 0$ and $G(s)$ is nonsingular), we conclude $f'(s) > 0$ for all $s > 0$.
 

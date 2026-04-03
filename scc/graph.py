@@ -140,16 +140,15 @@ class GraphState:
     def cohesion_weighted_symmetric(self, u: np.ndarray) -> sp.csr_matrix:
         """Symmetrized cohesion-weighted adjacency W_sym for resolvent C_t.
 
-        W_sym(x,y) = sqrt(u(x)) * N(x,y) * sqrt(u(y)) / d_x
-        then symmetrized: W_sym = 0.5 * (W_norm + W_norm^T).
+        Uses D^{-1/2} W_u D^{-1/2} (geometric-mean symmetrization),
+        which admits the conjugation identity essential for C3'' proof.
         """
         sqrt_u = np.sqrt(np.clip(u, 0, 1))
         Su = sp.diags(sqrt_u)
         W_weighted = Su @ self.W @ Su
         deg = np.asarray(W_weighted.sum(axis=1)).ravel() + 1e-10
-        D_inv = sp.diags(1.0 / deg)
-        W_norm = D_inv @ W_weighted
-        W_sym = 0.5 * (W_norm + W_norm.T)
+        D_inv_sqrt = sp.diags(1.0 / np.sqrt(deg))
+        W_sym = D_inv_sqrt @ W_weighted @ D_inv_sqrt
         return W_sym.tocsr()
 
     def implicit_matrix(self, dt: float, alpha_bd: float) -> sp.csr_matrix:

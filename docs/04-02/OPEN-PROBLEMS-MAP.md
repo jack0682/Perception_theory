@@ -1,11 +1,13 @@
 # SCC Theory: Proved Results and Open Problems
 
-**Date:** 2026-04-02 (end of session)
+**Date:** 2026-04-03 (updated after gap resolution session)
 **Purpose:** Complete map of what is proved, what is conditional, and what is open
+
+**Update 2026-04-03:** +9 Cat A from gap resolution (equivariant supercriticality, K-field Hessian, C3'' closed, formation birth theorems, f₁ bound, beyond-Weyl spectral, barrier scaling). TC'' tightened 300×. H3 improved to β > 7α.
 
 ---
 
-## Part I. What Is Proved (28 Category A)
+## Part I. What Is Proved (38 Category A)
 
 ### 1. Formation Existence and Structure (5 theorems — COMPLETE)
 
@@ -19,7 +21,7 @@
 
 **Status:** No open problems. Formation existence theory is complete.
 
-### 2. Operator Theory (6 theorems — 1 gap)
+### 2. Operator Theory (7 theorems — COMPLETE)
 
 | Theorem | Statement | Method |
 |---|---|---|
@@ -29,8 +31,9 @@
 | **T-A2** | Closure monotone | σ, P_t monotone |
 | **C-Axioms** | Resolvent satisfies C1-C4 | Neumann series |
 | **QM1-4** | Q_morph satisfies 4 axioms | Direct |
+| **C3'' (closed)** | Resolvent diagonal C(x,x) non-decreasing in u(x) | Schur complement + M-matrix + PD of G₀ |
 
-**Open:** C3'' symmetrization gap — D^{-1/2} field-dependent analysis. Highly plausible, low priority.
+**Status:** C3'' gap closed (2026-04-03). Code aligned to D^{-1/2} symmetrization. No open problems.
 
 ### 3. Stability and Metastability (4 theorems — COMPLETE)
 
@@ -133,19 +136,20 @@
 
 | Problem | Current State | Approach | Impact |
 |---|---|---|---|
-| **Analytical d_min*(a_cl, β)** | Experimental (exp57) | T7-Enhanced Hessian eigenvalue comparison at boundary | Formal theorem for MF-1 |
+| ~~C3'' closure~~ | **RESOLVED** (2026-04-03) | Schur complement + M-matrix proof | Operator theory complete |
+| ~~Beyond-Weyl spectral bound~~ | **RESOLVED** (2026-04-03) | Overlap-restricted perturbation + BMD | 33× wider coexistence window |
+| ~~Formation birth theorem~~ | **RESOLVED** (2026-04-03) | Crandall-Rabinowitz + D₄ equivariant + Γ-convergence | 3 new Cat A theorems |
+| **Analytical d_min*(a_cl, β)** | Mechanism identified (core saturation) | Analytical ū_ext(a_cl) from Euler-Lagrange | Formal theorem for closure d_min reduction |
 | **SCC vs AC coarsening rate** | exp55: no coarsening observed | Higher noise, longer time, or Kramers-type analysis | Quantify T7 advantage |
-| **C3'' closure** | Highly plausible | D^{-1/2} field-dependent analysis | Complete operator theory |
 | **T-Bind general τ** | Retracted (O(1)) | New binary-approx gap measure | Low priority |
 
 ### 🟡 Research-Level (new techniques needed, weeks)
 
 | Problem | Current State | Approach | Impact |
 |---|---|---|---|
-| **Beyond-Weyl spectral bound** | Weyl may be loose | Structured sparse coupling perturbation theory | Tighten T-Persist-K-Weak |
-| **Formation birth theorem** | 3 mechanisms (exp37,39) | Quantitative nucleation: β_crit + pitchfork normal form | Variable K dynamics |
-| **Barrier exponent derivation** | O(β^0.89) from exp38 | NEB/string method on Σ^K_M + transition state analysis | Kramers merge rate |
-| **Analytical TC bound** | TC' (Cat B) | Sinkhorn Jacobian Lipschitz at formation-structured points | Upgrade TC' to Cat A |
+| **Barrier exponent derivation** | O(β^0.89) empirical; ΔE_LI=Θ(β) proved | NEB/string method for true saddle; Θ(√β) analysis | Kramers merge rate |
+| **Analytical TC upgrade** | TC'' tightened to 1-10× | Full Sinkhorn Lipschitz proof at formation-structured points | Upgrade TC'' to Cat A |
+| **Analytical ū_ext(a_cl)** | Numerical only | Solve closure-modified Euler-Lagrange in exterior | d_min quantitative Cat A |
 
 ### 🔴 Hard (open problem level, months+)
 
@@ -197,17 +201,20 @@ OPEN FRONTIER
 
 | Metric | Value |
 |---|---|
-| Theorems proved (Cat A) | **28** |
-| Theorems conditional (Cat B+C) | **7** |
-| Total claims | **36** |
-| Fully proved fraction | **78%** |
+| Theorems proved (Cat A) | **38** |
+| Theorems conditional (Cat B+C) | **10** |
+| Total claims | **48** |
+| Fully proved fraction | **79%** |
 | Retracted | **2** |
 | Falsified predictions | **2** (P-Unified-1, spectral K-sel) |
 | Verified predictions | **5/5** single + **4** new multi |
-| Experiments this session | **13** (exp45-57) |
-| Proofs this session | **3** (BC', TC', H3 tightening) |
-| Theory documents written | **6** |
+| Experiments (04-02) | **13** (exp45-57) |
+| Proofs (04-02) | **3** (BC', TC', H3 tightening) |
+| Proofs (04-03) | **10** (C3'', 3 birth, barrier, d_min, f₁, beyond-Weyl, K-field, TC'') |
+| Theory documents written | **6 + 7 proof docs** |
 | Test count | **175** (unchanged) |
+| Gaps identified | **27** |
+| Gaps resolved | **9** |
 
 ---
 
