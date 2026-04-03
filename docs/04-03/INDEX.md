@@ -53,8 +53,23 @@
 
 | File | Purpose | Status |
 |------|---------|--------|
+| `proof/CHEEVER-SPECTRAL-BOUNDS.md` | Rigorous spectral bounds for FORMATION-BIRTH generalization | **Complete** |
 | `proof/PROOF-EXECUTION-LOG.md` | Real-time proof development log | Planning |
 | `proof/MATRIX-CALCULUS-BANK.md` | Explicit u-Jacobian calculations for C3'' | Planning |
+
+### Phase 10: H3 Cat A Upgrade
+
+| File | Description | Status |
+|------|-------------|--------|
+| `proof/H3-KKT-ANALYSIS.md` | Pillar 1: KKT screened Poisson bound, nu scaling correction | **Complete** |
+| `proof/H3-JACOBIAN-ANALYSIS.md` | Pillar 2: Site-weighted C_2^eff, formation-conditioned bounds | **Complete** |
+| `proof/H3-ANALYTICAL-BOUND.md` | Draft unified proof (superseded by FINAL) | **Superseded** |
+| `proof/H3-ANALYTICAL-BOUND-FINAL.md` | **Definitive integrated proof** — resolves nu inconsistency | **FINAL** |
+| `proof/H3-EXPERIMENTAL-VALIDATION.md` | exp13/28/31/50 validation data tables | **Complete** |
+| `proof/H3-PROOF-OUTLINE.md` | Proof strategy and integration instructions | **Complete** |
+| `proof/CATEGORY-A-CERTIFICATION.md` | Draft certification (superseded by FINAL) | **Superseded** |
+| `proof/CATEGORY-A-CERTIFICATION-FINAL.md` | **Final H3 Cat A certification** with consistency audit | **FINAL** |
+| `experiment/H3-EXP-DATA-SUMMARY.json` | Structured numerical results from all experiments | **Complete** |
 
 ### Experiments
 
