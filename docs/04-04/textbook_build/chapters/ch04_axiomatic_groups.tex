@@ -1,0 +1,538 @@
+% Chapter 4: Axiomatic Groups
+% Part II: The Formal Theory
+
+\chapter{공리적 구조}
+\label{ch:axioms}
+
+\begin{quote}
+\textit{``공리는 이론의 정체성을 정의한다. 실현(realization)은 그 정체성의 한 가지 구현일 뿐이다.''}
+\end{quote}
+
+이 장에서 우리는 SCC 이론의 다섯 가지 공리군(Axiomatic Groups A--E)을 체계적으로 제시한다. 각 공리군은 이론의 핵심적 구조적 요구---응집적 자기-지지, 관계적 근접성, 공동-소속, 구별, 시간적 전달---를 형식적으로 포착한다.
+
+공리를 제시하기 전에 한 가지 핵심적인 설계 원칙을 먼저 이해해야 한다: \textbf{공리와 실현의 분리}. 이것은 이 이론을 다른 형식적 체계와 구별짓는 방법론적 결정이다.
+
+
+\section{설계 철학: 공리 대 실현}
+\label{sec:axiom-vs-realization}
+
+수학적 이론에서 공리(axiom)는 구조에 대한 \emph{제약조건}이다. 공리는 ``어떤 연산이 존재하며, 그것은 이런저런 성질을 만족한다''고 선언한다. 반면 실현(realization)은 그러한 성질을 만족하는 구체적 수학적 형식이다.
+
+SCC 이론은 이 두 층위를 엄격히 분리한다:
+
+\begin{itemize}
+    \item \textbf{공리적 층위}: 폐합 연산자 $\mathrm{Cl}_t$는 단조성(A2), 안정화 경향(A3), 연속성(A4)을 만족해야 한다. 이것은 \emph{어떤} 구체적 함수 형태에도 의존하지 않는 구조적 요구사항이다.
+    \item \textbf{실현적 층위}: 시그모이드 폐합 $\mathrm{Cl}_t(u)(x) = \sigma(a_{\mathrm{cl}}(P_t u(x) - \tau_{\mathrm{cl}}))$은 위 공리들을 만족하는 \emph{하나의 후보}이다. 다른 후보---예를 들어, 다른 활성화 함수를 사용하는 형태---도 같은 공리를 만족할 수 있다.
+\end{itemize}
+
+왜 이 분리가 중요한가? 세 가지 이유가 있다:
+
+\begin{enumerate}
+    \item \textbf{이론적 견고성}: 정리의 증명이 공리에만 의존하면, 실현을 바꿔도 정리는 유효하다.
+    \item \textbf{확장 가능성}: 새로운 응용 영역에서 다른 실현이 더 적합할 수 있다. 공리-실현 분리는 이러한 대체를 구조적으로 허용한다.
+    \item \textbf{과도한 구체화 방지}: 시그모이드의 특정 매개변수가 ``이론의 일부''로 오해되는 것을 방지한다.
+\end{enumerate}
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!50!black, title=핵심 원칙: 층위 분리]
+SCC 이론의 정리를 증명할 때, 증명이 공리에만 의존하는지, 아니면 특정 실현의 성질에도 의존하는지를 항상 명시해야 한다. 예를 들어, T8-Core (위상 전이)의 증명은 공리가 아닌 에너지 함수의 구체적 형태에 의존하므로, 이는 실현-의존적 정리이다.
+\end{tcolorbox}
+
+이 분리 원칙을 구체적 예로 이해하자. 다음 표는 SCC 이론의 주요 정리를 층위별로 분류한다:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\hline
+\textbf{정리} & \textbf{공리-의존} & \textbf{실현-의존} \\
+\hline
+T1 (극소점 존재) & & $\checkmark$ \\
+T6a/b (고정점 존재/유일성) & $\checkmark$ (A3) & \\
+T8-Core (위상 전이) & & $\checkmark$ \\
+T14 (기울기 흐름 수렴) & & $\checkmark$ ($b_D = 0$) \\
+T20 (공리 일관성) & & $\checkmark$ \\
+T-A2 (단조성) & $\checkmark$ (A2) & \\
+\hline
+\end{tabular}
+\caption{정리의 층위별 분류. 공리-의존 정리는 실현을 변경해도 유효하다.}
+\label{tab:theorem-layers}
+\end{table}
+
+\textbf{다른 분야와의 비교}. 이 설계 원칙은 수학의 다른 영역에서도 관찰된다. 군론에서 ``군''의 공리와 $\mathbb{Z}/n\mathbb{Z}$라는 구체적 군의 관계, 위상 공간의 공리와 유클리드 공간이라는 실현의 관계가 그 예이다. SCC에서 특별한 것은 공리적 층위와 실현적 층위의 분리가 물리적 세계의 전-객체적 구조에 관한 \emph{존재론적 주장}과 연결된다는 점이다.
+
+
+\section{공리군 A: 부드러운 폐합}
+\label{sec:group-a}
+
+폐합 연산자 $\mathrm{Cl}_t : [0,1]^{X_t} \to [0,1]^{X_t}$는 응집 장의 ``관계적 완성''을 수행한다. 직관적으로, $\mathrm{Cl}_t$는 각 위치의 응집도를 그 이웃으로부터의 관계적 지지에 기반하여 갱신한다. 잘 형성된 응집 장은 이미 자기-지지적이므로 폐합에 의해 거의 변하지 않는다.
+
+\subsection{A1': 조건부 확장성 (자기-조절)}
+
+전통적 위상적 폐합에서 ``확장성(extensivity)''은 $\mathrm{Cl}(A) \supseteq A$를 의미한다. 연속 설정으로 번역하면 $\mathrm{Cl}(u)(x) \geq u(x)$, 즉 폐합은 언제나 응집도를 높인다는 뜻이다.
+
+그러나 이것은 너무 강한 요구이다. 직관적으로 생각해보자: 응집도가 이미 매우 높은 ($u(x) = 0.9$) 위치에서, 이웃의 지지가 그에 미치지 못하면 어떤가? 상식적으로 폐합은 이 위치의 응집도를 \emph{낮추어야} 한다---과도하게 높은 응집도는 이웃의 지지에 비해 과대 평가된 것이기 때문이다.
+
+이것이 ``자기-조절(self-regulation)''의 핵심 아이디어이다. 폐합은 낮은 응집도를 높이고, 높은 응집도를 적절히 조절한다.
+
+\begin{axiom}[A1': 조건부 확장성]
+\label{ax:A1prime}
+모든 $u \in [0,1]^{X_t}$와 모든 $x \in X_t$에 대해,
+\begin{equation}
+    \mathrm{Cl}_t(u)(x) \geq u(x) \quad \text{if } u(x) \leq c^* \text{ and } (P_t u)(x) \geq u(x)
+\end{equation}
+여기서 $c^*$는 스칼라 폐합 고정점: $\sigma(a_{\mathrm{cl}}(c^* - \tau_{\mathrm{cl}})) = c^*$의 유일한 해이며, $a_{\mathrm{cl}} < 4$일 때 존재하고 유일하다.
+\end{axiom}
+
+이 공리의 두 조건을 분석하자:
+\begin{itemize}
+    \item $u(x) \leq c^*$: 응집도가 자기-지지 문턱값 이하일 때에만 확장성이 요구된다. $c^*$ 이상에서는 폐합이 응집도를 낮출 수 있다.
+    \item $(P_t u)(x) \geq u(x)$: 이웃의 평균 응집도가 해당 위치의 응집도 이상일 때에만 확장성이 요구된다. 이웃이 충분히 응집적이지 않으면, 확장성은 요구되지 않는다.
+\end{itemize}
+
+\textbf{왜 원래의 A1이 아닌 A1'인가?} 원래의 무조건적 확장성 A1은 공리 A3 (수축)과 양립 불가능하다. 구체적으로, $u(x) = 0.9$에서 $\mathrm{Cl}(u)(x) \geq 0.9$를 요구하면 $a_{\mathrm{cl}} \geq 5.49$가 필요한데, 이는 A3이 요구하는 $a_{\mathrm{cl}} < 4$와 모순된다. A1'은 확장성을 $c^*$ 이하로 제한함으로써 이 긴장을 해소한다.
+
+\begin{example}[5$\times$5 격자에서의 A1']
+5$\times$5 격자($n = 25$)에서 기본 매개변수 $a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$를 사용하면 $c^* \approx 0.5$이다. 중앙 영역에 $u \approx 0.3$인 약한 응집 패치가 있고 이웃들도 비슷한 수준이면, A1'에 의해 $\mathrm{Cl}(u)(x) \geq 0.3$이 보장된다---폐합이 약한 응집을 강화한다. 반면 가장자리에서 $u(x) = 0.8 > c^*$이고 이웃 지지가 약하면, 폐합은 이 값을 낮출 수 있다.
+\end{example}
+
+
+\begin{example}[1D 경로 그래프에서의 A1']
+$n = 7$인 경로 그래프(path graph) $x_1 - x_2 - \cdots - x_7$을 고려하자. 초기 장: $u = (0.1, 0.2, 0.4, 0.6, 0.4, 0.2, 0.1)$. $a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$, $\eta_{\mathrm{cl}} = 1$이면 $c^* \approx 0.5$이다.
+
+위치 $x_3$: $u(x_3) = 0.4 < c^* = 0.5$이고, $P_t u(x_3) = (u(x_2) + u(x_4))/2 = (0.2 + 0.6)/2 = 0.4 = u(x_3)$. 따라서 $P_t u(x_3) \geq u(x_3)$이므로 A1'의 두 조건이 만족된다: $\mathrm{Cl}(u)(x_3) \geq 0.4$.
+
+실제 계산: 전활성화 $z = 3.0 \times (0.4 - 0.5) = -0.3$, $\sigma(-0.3) \approx 0.426 > 0.4$. $\checkmark$
+
+위치 $x_4$: $u(x_4) = 0.6 > c^* = 0.5$이므로 A1'의 제1조건 위반. 폐합은 이 값을 낮출 수 있다. 실제: $P_t u(x_4) = (0.4 + 0.4)/2 = 0.4$, 전활성화 $z = 3.0 \times (0.4 - 0.5) = -0.3$, $\sigma(-0.3) \approx 0.426 < 0.6$. 폐합이 과대 평가를 교정한다.
+\end{example}
+
+
+\subsection{A2: 단조성}
+
+\begin{axiom}[A2: 단조성]
+\label{ax:A2}
+모든 $u, v \in [0,1]^{X_t}$에 대해,
+\begin{equation}
+    u \leq v \implies \mathrm{Cl}_t(u) \leq \mathrm{Cl}_t(v)
+\end{equation}
+여기서 부등식은 점별(pointwise)이다.
+\end{axiom}
+
+단조성은 자연스러운 요구이다: 모든 곳에서 더 응집적인 장은 폐합 후에도 더 응집적이어야 한다. 직관적으로, 응집도가 높은 환경은 더 많은 관계적 지지를 제공하므로, 그 환경에서의 폐합 결과도 더 높아야 한다.
+
+시그모이드 실현에서 A2의 증명은 즉시적이다: $P_t$는 비음 가중치의 가중 평균이므로 순서를 보존하고, $\sigma$는 단조 증가 함수이므로 그 합성도 순서를 보존한다.
+
+\begin{proof}[시그모이드 실현에 대한 A2 증명 (T-A2)]
+$u \leq v$ 점별이면, 각 $x$에 대해:
+\begin{enumerate}
+    \item $u(y) \leq v(y)$ (모든 $y$) $\Rightarrow$ $\sum_y K_t(x,y) u(y) \leq \sum_y K_t(x,y) v(y)$ ($K_t \geq 0$이므로)
+    \item 따라서 $(P_t u)(x) \leq (P_t v)(x)$
+    \item $\sigma$가 단조 증가이므로 $\sigma(a_{\mathrm{cl}}(P_t u(x) - \tau_{\mathrm{cl}})) \leq \sigma(a_{\mathrm{cl}}(P_t v(x) - \tau_{\mathrm{cl}}))$
+    \item 즉 $\mathrm{Cl}_t(u)(x) \leq \mathrm{Cl}_t(v)(x)$
+\end{enumerate}
+매개변수에 대한 제약 없이 무조건 성립한다.
+\end{proof}
+
+\begin{example}[단조성의 수치적 확인]
+5$\times$5 격자에서 $u(x) = 0.3$ (모든 $x$), $v(x) = 0.5$ (모든 $x$)으로 설정하자. $a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$일 때:
+\begin{itemize}
+    \item $\mathrm{Cl}(u)(x) = \sigma(3.0(0.3 - 0.5)) = \sigma(-0.6) \approx 0.354$
+    \item $\mathrm{Cl}(v)(x) = \sigma(3.0(0.5 - 0.5)) = \sigma(0) = 0.5$
+\end{itemize}
+$0.354 < 0.5$이므로 $\mathrm{Cl}(u) \leq \mathrm{Cl}(v)$ 확인. $\checkmark$
+\end{example}
+
+
+\subsection{A3: 안정화 경향 (수축)}
+
+이제 SCC 이론에서 가장 독특하고 중요한 공리에 도달한다.
+
+\begin{axiom}[A3: 안정화 경향]
+\label{ax:A3}
+$\mathrm{Cl}_t$의 반복 적용은 코시(Cauchy) 조건을 만족한다:
+\begin{equation}
+    \|\mathrm{Cl}_t^{(n+1)}(u) - \mathrm{Cl}_t^{(n)}(u)\| \to 0 \quad \text{as } n \to \infty
+\end{equation}
+모든 $u \in [0,1]^{X_t}$에 대해, 임의의 $\ell^p$ 노름에서.
+\end{axiom}
+
+시그모이드 실현에서 $a_{\mathrm{cl}} < 4$이면, 이 수렴은 기하급수적이다: 수축 비율(contraction rate)은 $a_{\mathrm{cl}}/4$이다. 이는 바나흐 수축 사상 정리(Banach contraction mapping theorem)에서 직접 따른다---시그모이드의 최대 도함수가 $\max \sigma' = 1/4$이므로, 리프시츠 상수는 $a_{\mathrm{cl}} \cdot (1/4) = a_{\mathrm{cl}}/4 < 1$이다.
+
+\subsubsection{$a_{\mathrm{cl}} < 4$는 왜 날카로운 한계인가?}
+
+$a_{\mathrm{cl}} = 4$는 정확히 시그모이드 $\sigma$의 최대 기울기가 $1/4$인 점에서의 리프시츠 상수가 $1$이 되는 경계이다:
+\begin{equation}
+    \text{Lip}(\mathrm{Cl}_t) \leq a_{\mathrm{cl}} \cdot \max_{z \in \mathbb{R}} \sigma'(z) = a_{\mathrm{cl}} \cdot \frac{1}{4}
+\end{equation}
+\begin{itemize}
+    \item $a_{\mathrm{cl}} < 4$: $\text{Lip} < 1$ $\Rightarrow$ 수축 $\Rightarrow$ 유일한 고정점 (바나흐 정리)
+    \item $a_{\mathrm{cl}} = 4$: $\text{Lip} = 1$ $\Rightarrow$ 비확장(nonexpansive), 유일성 미보장
+    \item $a_{\mathrm{cl}} > 4$: $\text{Lip} > 1$ $\Rightarrow$ 복수 고정점 가능, A3 위반
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig4_1_closure_iteration.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 4.1]} 폐합 반복의 수렴. 좌: $a_{\mathrm{cl}} = 3.0 < 4$ (수축 체제)---임의의 초기 장에서 출발하여 유일한 고정점으로 기하급수적으로 수렴. 우: $a_{\mathrm{cl}} = 5.0 > 4$ (비수축 체제)---복수 고정점이 존재하며, 초기 조건에 따라 다른 고정점으로 수렴.
+\vspace{0.5cm}}}
+\caption{폐합 반복의 수렴 거동. 수축 체제($a_{\mathrm{cl}} < 4$)에서는 모든 초기 장이 동일한 고정점으로 수렴한다. $a_{\mathrm{cl}} < 4$의 날카로운 한계는 시그모이드 함수의 최대 기울기 $1/4$에서 직접 유도된다.}
+\label{fig:closure-iteration}
+\end{figure}
+
+
+\subsubsection{비멱등성: 의도적 설계}
+
+전통적 위상적 폐합은 \textbf{멱등(idempotent)}이다: $\mathrm{Cl}^2 = \mathrm{Cl}$, 즉 폐합을 두 번 적용하면 한 번 적용한 것과 같다. SCC 이론은 이것을 의도적으로 포기한다. 왜인가?
+
+\textbf{존재론적 이유}: 전-객체적 단계에서 폐합은 완료된 연산이 아니라 진행 중인 \emph{경향}이다. 응집 장은 자기-지지를 향해 수렴하지만, 한 번의 적용으로 완벽히 도달하지는 않는다. 이 점진적 안정화 과정 자체가 형성의 본질적 특성이다.
+
+\textbf{수학적 보상}: 비멱등 폐합은 \emph{엄격히 더 강한 안정성}을 제공한다. 정리 T3/T6-Stability (제8장)에서 상세히 다루겠지만, 핵심 결과를 미리 말하면:
+\begin{itemize}
+    \item 비멱등 폐합 ($\|J_{\mathrm{Cl}}\|_{\mathrm{op}} < 1$): 폐합 헤시안 $2(I - J_{\mathrm{Cl}})^T(I - J_{\mathrm{Cl}})$은 $n/n$개의 양의 고유값을 가진다 (완전 양정치).
+    \item 멱등 폐합 ($\mathrm{Cl}^2 = \mathrm{Cl}$): 치역(range) 방향에서 영 고유값이 발생하여 $\leq (n-k)/n$개의 양의 고유값만 가진다.
+\end{itemize}
+비멱등성은 에너지 경관(energy landscape)에서 더 깊은 끌개 분지(attraction basin)를 만든다. 이것은 약점이 아니라 장점이다.
+
+\begin{example}[수축 비율의 수치적 검증]
+5$\times$5 균일 격자에서 중앙 위치에 $u_0 = 0.9$인 초기 장을 고려하자 (나머지 $u_0 = 0.1$). 기본 매개변수 $a_{\mathrm{cl}} = 3.0$에서 수축 비율은 $3.0/4 = 0.75$이다. 반복 적용의 결과:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\hline
+\textbf{반복 $k$} & $\|\mathrm{Cl}^{(k+1)}(u_0) - \mathrm{Cl}^{(k)}(u_0)\|_\infty$ & \textbf{이론적 한계} $0.75^k$ \\
+\hline
+0 & 0.412 & 1.000 \\
+1 & 0.287 & 0.750 \\
+2 & 0.198 & 0.563 \\
+5 & 0.062 & 0.237 \\
+10 & 0.003 & 0.056 \\
+15 & $< 10^{-4}$ & 0.013 \\
+\hline
+\end{tabular}
+\caption{폐합 반복의 수렴 속도. 실제 수렴은 이론적 한계보다 빠르다 (한계는 최악의 경우).}
+\label{tab:contraction-rate}
+\end{table}
+
+10회 반복 후 연속 차이가 $0.003$ 미만이며, 15회 반복 후 $10^{-4}$ 미만이다. 실제 수렴은 이론적 최악-경우 한계 ($0.75^k$)보다 상당히 빠른데, 이는 대부분의 위치에서 시그모이드의 실효 기울기가 $1/4$보다 훨씬 작기 때문이다 (시그모이드의 최대 기울기는 $z = 0$에서만 달성됨).
+\end{example}
+
+\subsubsection{$a_{\mathrm{cl}} = 4$의 경계 거동}
+
+$a_{\mathrm{cl}}$이 정확히 $4$인 경우 무슨 일이 일어나는가? 리프시츠 상수가 정확히 $1$이 되어, 바나흐 수축 정리의 적용이 실패한다. 그러나 이것이 유일성을 반드시 파괴하지는 않는다---비확장 사상(nonexpansive mapping)도 특정 조건 하에서 유일한 고정점을 가질 수 있다. 문제는 수렴 \emph{보장}이 사라진다는 것이다.
+
+$a_{\mathrm{cl}} > 4$에서는 상황이 질적으로 변한다. 스칼라 방정식 $\sigma(a(c - \tau)) = c$가 세 개의 해를 가질 수 있다: 하나는 $c^*$ 근방, 다른 둘은 $0$과 $1$ 근방이다. 이 복수 고정점은 ``한 폐합 적용으로 두 상태 중 하나로 점프''하는 이력 현상(hysteresis)을 야기할 수 있다. SCC 이론은 이를 의도적으로 피한다---형성의 출현은 폐합의 복수 고정점이 아니라 에너지 경관의 다중 극소점에서 발생해야 한다.
+
+\subsubsection{두 경관 구조}
+
+폐합 연산자와 에너지 함수는 각각 자체적인 ``경관''을 가지며, 이 두 경관은 서로 다른 역할을 한다:
+
+\begin{tcolorbox}[colback=green!5, colframe=green!50!black, title=두 경관 구조 (Two-Landscape Structure)]
+\begin{itemize}
+    \item \textbf{폐합 경관}: 유일한 고정점 ($a_{\mathrm{cl}} < 4$). 모든 초기 장이 같은 고정점으로 수렴. 경로 의존성 없음.
+    \item \textbf{에너지 경관}: 복수의 임계점 (준안정 극소점). 서로 다른 초기 조건이 서로 다른 형성으로 수렴. 경로 의존성 있음.
+\end{itemize}
+``궤적이 중요하다''는 철학적 주장은 에너지 경관에 적용된다---서로 다른 초기 조건이 서로 다른 준안정 형성으로 이끈다---폐합 연산자 자체에 적용되는 것이 아니다.
+\end{tcolorbox}
+
+
+\subsection{A4: 연속성}
+
+\begin{axiom}[A4: 연속성]
+\label{ax:A4}
+$\mathrm{Cl}_t$은 $[0,1]^{X_t} \to [0,1]^{X_t}$의 연속 사상이다 (임의의 $\ell^p$ 위상에서).
+\end{axiom}
+
+연속성은 응집 장의 작은 변화가 폐합 결과의 큰 불연속적 점프를 야기하지 않음을 보장한다. 유한 차원 설정에서 이 공리는 시그모이드 실현에 대해 자동적으로 만족된다 (시그모이드와 $P_t$ 모두 연속이므로).
+
+
+\subsection{공리 일관성 (T20)}
+
+다섯 공리의 동시 충족 가능성은 자명하지 않다. 특히 A1(원래)과 A3의 비양립성이 보여주듯, 자연스러워 보이는 공리들이 실제로는 모순될 수 있다.
+
+\begin{theorem}[T20: 공리 일관성 --- 매개변수 허용성]
+\label{thm:T20}
+시그모이드 폐합 실현은 다음을 만족한다:
+\begin{enumerate}
+    \item A1' (조건부 확장성) --- $c^* = \sigma(a_{\mathrm{cl}}(c^* - \tau_{\mathrm{cl}}))$에서.
+    \item A2 (단조성) --- 무조건적.
+    \item A3 (수축) --- $a_{\mathrm{cl}} < 4$일 때.
+    \item A4 (연속성) --- 무조건적.
+\end{enumerate}
+원래의 A1과 A3은 양립 불가능하다: A1이 $u(x) = 0.9$에서 요구하는 $a_{\mathrm{cl}} \geq 5.49$는 A3이 요구하는 $a_{\mathrm{cl}} < 4$와 모순된다.
+\end{theorem}
+
+\begin{proof}
+A1' 증명: $g(u) = \sigma(a_{\mathrm{cl}}(u - \tau_{\mathrm{cl}})) - u$로 정의하면, $g(0) = \sigma(-a_{\mathrm{cl}}\tau_{\mathrm{cl}}) > 0$이고 $g(c^*) = 0$이다. $a_{\mathrm{cl}} < 4$에서 $g'(c^*) = a_{\mathrm{cl}}\sigma'(a_{\mathrm{cl}}(c^* - \tau_{\mathrm{cl}})) - 1 < a_{\mathrm{cl}}/4 - 1 < 0$이므로, $g$는 $[0, c^*)$에서 양이다. $(P_t u)(x) \geq u(x)$이고 $u(x) \leq c^*$이면, 전활성화(pre-activation) $z(x) \geq a_{\mathrm{cl}}(u(x) - \tau_{\mathrm{cl}})$이므로 $\mathrm{Cl}(u)(x) = \sigma(z(x)) \geq \sigma(a_{\mathrm{cl}}(u(x) - \tau_{\mathrm{cl}})) = u(x) + g(u(x)) \geq u(x)$.
+
+A2: $P_t$는 비음 가중 평균이므로 순서 보존, $\sigma$는 단조 증가.
+
+A3: $\text{Lip}(\mathrm{Cl}_t) \leq a_{\mathrm{cl}}/4 < 1$이므로 바나흐 수축.
+
+A4: $\sigma$, $P_t$ 모두 연속.
+
+A1 비양립성: $\sigma^{-1}(0.9) = \ln(9) \approx 2.197$. $u(x) = 0.9$에서 $\sigma(a_{\mathrm{cl}}(0.9 - \tau_{\mathrm{cl}})) \geq 0.9$를 요구하면, $\tau_{\mathrm{cl}} = 0.5$일 때 $a_{\mathrm{cl}} \cdot 0.4 \geq 2.197$, 즉 $a_{\mathrm{cl}} \geq 5.49$. 이는 $a_{\mathrm{cl}} < 4$와 모순.
+\end{proof}
+
+
+\section{공리군 B: 부드러운 인접성}
+\label{sec:group-b}
+
+인접성(adjacency) $\mathbf{N}_t : X_t \times X_t \to [0,\infty)$는 위치들 사이의 관계적 근접성을 부호화한다. 인접성은 폐합과 구별의 기본 건축 재료이다.
+
+\begin{axiom}[B1: 비음성]
+\label{ax:B1}
+모든 $x, y \in X_t$에 대해 $\mathbf{N}_t(x,y) \geq 0$.
+\end{axiom}
+
+\begin{axiom}[B2: 대칭]
+\label{ax:B2}
+$\mathbf{N}_t(x,y) = \mathbf{N}_t(y,x)$ (비방향 관계의 경우).
+\end{axiom}
+
+\begin{axiom}[B3: 국소성]
+\label{ax:B3}
+$\mathbf{N}_t(x,y)$는 관계적으로 근접하지 않은 쌍 $(x,y)$에 대해 무시 가능하거나 영이다.
+\end{axiom}
+
+\begin{axiom}[B4: 비추이성]
+\label{ax:B4}
+인접성은 추이적(transitive)이어야 할 필요가 없다. ``$x$가 $y$에 인접하고, $y$가 $z$에 인접하다''가 ``$x$가 $z$에 인접하다''를 함의하지 않는다.
+\end{axiom}
+
+비추이성(B4)은 특히 중요하다. 왜 인접성은 추이적이면 안 되는가?
+
+인접성이 추이적이면, 인접한 위치들의 연쇄를 통해 모든 연결된 위치가 상호 인접하게 된다. 이는 인접성을 \emph{전역적} 동치 관계로 붕괴시킨다. 그러나 인접성은 \emph{국소적} 관계이다---두 위치가 물리적으로 가깝다는 사실이지, 전역적으로 같은 구조에 속한다는 사실이 아니다. 전역적 소속(공동-소속)은 국소적 인접성으로부터 \emph{구성}되어야 하지, 인접성의 원시적 성질로 전제되어서는 안 된다.
+
+\begin{example}[격자에서의 인접성]
+$5 \times 5$ 격자에서 인접성은 자연스럽게 정의된다: 격자 위치 $(i,j)$와 $(i', j')$가 $|i-i'| + |j-j'| = 1$이면 인접하다 (4-연결). 위치 $(1,1)$은 $(1,2)$에 인접하고, $(1,2)$는 $(1,3)$에 인접하지만, $(1,1)$은 $(1,3)$에 인접하지 \emph{않다}. 이것이 비추이성이다.
+\end{example}
+
+\begin{example}[다양한 인접 구조]
+인접성은 격자에 한정되지 않는다. SCC는 다양한 그래프 위에서 작동한다:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccl}
+\hline
+\textbf{그래프 유형} & $\lambda_2$ & \textbf{차수} & \textbf{인접 특성} \\
+\hline
+$10 \times 10$ 격자 & $\sim 0.10$ & 2--4 & 국소적, 균질적 \\
+확률적 블록 모형(SBM) & $\sim 0.5$--$2.0$ & 가변적 & 군집 구조 \\
+바벨 그래프 & $\sim 0.01$ & 2--$n/2$ & 병목 구조 \\
+무작위 기하 그래프 & $\sim 0.3$ & 가변적 & 연속 공간 유사 \\
+\hline
+\end{tabular}
+\caption{다양한 그래프 유형에서의 인접 구조와 스펙트럴 특성.}
+\label{tab:graph-types}
+\end{table}
+
+각 그래프 유형에서 B1--B4는 자명하게 만족된다. 그러나 그래프 구조는 형성의 형태에 깊은 영향을 미친다: 격자에서는 볼록한 형성이 선호되고 (등주 부등식), 바벨 그래프에서는 병목의 한쪽이 자연스러운 형성 위치이다.
+\end{example}
+
+\subsection{인접성에서 라플라시안으로}
+
+인접 행렬 $\mathbf{N}_t$로부터 \textbf{그래프 라플라시안} $L$이 구성된다:
+\begin{equation}
+    L = D - \mathbf{N}_t, \qquad D = \mathrm{diag}\Big(\sum_y \mathbf{N}_t(x,y)\Big)
+    \label{eq:graph-laplacian}
+\end{equation}
+$L$은 양 반정치(positive semi-definite)이며 $L \mathbf{1} = 0$이다. $L$의 두 번째 고유값 $\lambda_2$ (피들러 고유값)는 위상 전이 임계값을 결정하는 핵심 양이다 (제7장).
+
+라플라시안의 이차 형식 $u^T L u = \sum_{\{x,y\}} \mathbf{N}_t(x,y)(u(x) - u(y))^2 / 2$는 장의 ``매끄러움''을 측정한다. 이 양은 에너지 함수의 경계/형태론 항 (제6장)의 핵심 구성 요소이다.
+
+
+\section{공리군 C: 부드러운 공동-소속}
+\label{sec:group-c}
+
+공동-소속(co-belonging) $\mathbf{C}_t : X_t \times X_t \to [0,\infty)$는 두 위치가 \emph{같은 응집 형성}에 참여하는 정도를 측정한다. 인접성과 달리, 공동-소속은 비-국소적(non-local)이다: 직접 인접하지 않은 두 위치도 중간 위치들의 연쇄를 통해 높은 공동-소속을 가질 수 있다.
+
+\textbf{현재 상태}: 공동-소속은 \textbf{파생된 진단도구(derived diagnostic)}이다. v2.0에서 분리 술어(Sep)가 $u$-가중 형태로 수정된 후, $\mathbf{C}_t$는 어떤 술어나 에너지 항에도 들어가지 않는다. 그러나 형성의 비-국소적 구조를 분석하는 진단도구로서의 개념적 역할은 유지된다.
+
+\begin{axiom}[C1: 응집 및 인접 의존성]
+$\mathbf{C}_t(x,y)$는 응집 장 $u_t$와 인접 구조 $\mathbf{N}_t$에 의존해야 한다.
+\end{axiom}
+
+\begin{axiom}[C2: 인접성과의 구별]
+공동-소속은 인접성으로 환원되지 않는다. 인접하지만 공동-소속하지 않는 쌍(경계 양쪽)과, 공동-소속하지만 인접하지 않은 쌍(중간 경로를 통해 연결)이 모두 존재할 수 있다.
+\end{axiom}
+
+\begin{axiom}[C3'': 국소 단조성]
+$\mathbf{C}_t(x,x)$는 다른 장 값이 고정되었을 때 $u_t(x)$에 대해 단조 증가한다.
+\end{axiom}
+
+C3''는 원래의 C3 ($\mathbf{C}_t(x,x) = u_t(x)$ 또는 그것의 단조 함수)를 대체한다. 개정된 공리는 더 약하면서도 더 적절하다---특정 함수 형태에 대한 구속 없이, 위치의 자기-공동-소속이 그 응집 참여도와 함께 증가한다는 구조적 요구만을 부과한다.
+
+\begin{axiom}[C4: 대칭]
+$\mathbf{C}_t(x,y) = \mathbf{C}_t(y,x)$ --- 모든 $x, y \in X_t$에 대해.
+\end{axiom}
+
+\textbf{레졸벤트(resolvent) 실현}: 현재 채택된 공동-소속 실현은
+\begin{equation}
+    \mathbf{C}_t = (I - \alpha\, W_{\mathrm{sym}})^{-1}
+\end{equation}
+이며, 노이만 급수로 전개하면 $\mathbf{C}_t = \sum_{k=0}^{\infty} \alpha^k W_{\mathrm{sym}}^k$이다. $k$-차 항은 길이 $k$의 응집-가중 경로의 기여를 포착하여, 형성 내부 쌍과 경계 횡단 쌍 사이에 $3$자릿수 이상의 판별력을 제공한다.
+
+\textbf{공동-소속 강등의 근거}: Sep 술어가 $\mathbf{C}_t$-가중에서 $u$-가중으로 수정된 후, $\mathbf{C}_t$는 이론의 어떤 술어에도, 어떤 에너지 항에도 들어가지 않게 되었다. 원래의 $\mathbf{C}_t$-가중 Sep은 진단적으로 퇴행적이었다: $\mathbf{C}_t(x,x)$가 외부 노드에도 상당한 가중치를 부여하여, Sep $\approx 0.5$를 형성 품질과 무관하게 산출했다.
+
+
+\section{공리군 D: 구별}
+\label{sec:group-d}
+
+구별(distinction) $\mathbf{D}_t(x; 1-u_t)$는 위치 $x$에서의 \textbf{구조적 비대칭}을 측정한다: 내부 장 $u_t$로부터 받는 관계적 지지와 외부 장 $1 - u_t$로부터 받는 관계적 지지 사이의 차이이다.
+
+구별은 단순한 ``국소 대비(local contrast)''가 아니다. 이것은 \emph{장-상대적(field-relative)} 성질이다: $u_t$가 ``외부''의 의미를 정의하고, 바로 그 외부에 대해 비대칭성을 측정한다. 이 자기-참조적 구조가 SCC를 표준적 위상장 이론과 구별짓는 핵심 특성 중 하나이다.
+
+\begin{axiom}[D-Ax1: 외부 민감성]
+$\mathbf{D}_t(x; 1-u_t)$는 $u_t(x)$의 국소 값뿐 아니라 $x$의 이웃에서의 외부 장의 관계적 배치에 의존한다.
+\end{axiom}
+
+\begin{axiom}[D-Ax2: 비대칭]
+구별은 내부 장으로부터의 관계적 지지가 외부 장으로부터의 지지를 실질적으로 초과할 때 높다.
+\end{axiom}
+
+\begin{axiom}[D-Ax3: 경계 민감성, $b_D = 0$]
+구별은 외부 장의 공간적 구조를 통해 경계 형태론을 인식한다. 명시적 기울기 항 $b_D \cdot g_t$는 $b_D = 0$으로 설정한다.
+\end{axiom}
+
+\begin{example}[구별의 자기-참조적 구조]
+$5 \times 5$ 격자에서 중앙 $3 \times 3$에 $u \approx 0.8$, 나머지에 $u \approx 0.1$인 형성을 고려하자.
+
+\textbf{핵심 위치 $(3,3)$}: 이웃 4개 모두 높은 응집도. $P_t u(3,3) \approx 0.8$ (높음), $P_t(1-u)(3,3) \approx 0.2$ (낮음). 따라서 $D(3,3) = \sigma(a_D(0.8 - \lambda_D \cdot 0.2) - \tau_D)$는 높다---내부 지지가 외부 지지를 크게 초과.
+
+\textbf{경계 위치 $(2,3)$}: 이웃 중 일부는 높은 응집, 일부는 낮은 응집. $P_t u(2,3) \approx 0.5$, $P_t(1-u)(2,3) \approx 0.5$. 따라서 $D \approx \sigma(-\tau_D) \approx 0.4$ (중간)---비대칭이 약함.
+
+\textbf{외부 위치 $(1,1)$}: 이웃 대부분 낮은 응집. $P_t u(1,1) \approx 0.1$, $P_t(1-u)(1,1) \approx 0.9$. 따라서 $D$는 낮다---오히려 외부 지지가 내부 지지를 초과.
+
+이것이 자기-참조의 핵심이다: 장 $u$가 ``무엇이 내부이고 무엇이 외부인가''를 정의하고, 바로 그 정의에 대해 비대칭성을 측정받는다.
+\end{example}
+
+\subsection{왜 $b_D = 0$인가: 해석성의 요구}
+
+$b_D > 0$이면 구별 연산자에 기울기 지시자 $g_t(x; u) = \sum_y \mathbf{N}_t(x,y)|u_t(x) - u_t(y)|$가 포함되는데, 절대값 $|\cdot|$이 에너지의 해석성(analyticity)을 깨뜨린다.
+
+해석성이 왜 필요한가? 정리 T14 (제8장)에서 다루는 \L{}ojasiewicz 기울기 부등식은 에너지 함수가 해석적일 것을 요구한다. 이 부등식이 기울기 흐름의 수렴을 보장하는 핵심 도구이므로, 해석성은 협상 불가능하다.
+
+경계 민감성은 손실되지 않는다: $P_t(1-u)$의 공간적 구조가 경계 배치에 대한 암묵적 정보를 이미 담고 있다. 또한 경계/형태론 에너지 $\mathcal{E}_{\mathrm{bd}}$의 매끄러움 벌칙이 장의 공간적 일관성을 이미 강제한다.
+
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title=$b_D = 0$의 설계 결정 요약]
+\begin{itemize}
+    \item \textbf{문제}: $g_t = \sum N_{xy}|u_x - u_y|$의 절대값이 $u_x = u_y$에서 미분 불가능.
+    \item \textbf{결과}: 에너지가 비해석적 $\Rightarrow$ \L{}ojasiewicz 부등식 적용 불가 $\Rightarrow$ 수렴 보장 상실.
+    \item \textbf{대안}: $|u_x - u_y|$를 $\sqrt{(u_x - u_y)^2 + \varepsilon^2}$로 $\varepsilon$-평활화 가능하나, 이는 새로운 매개변수를 도입.
+    \item \textbf{결정}: $b_D = 0$. $P_t(1-u)$가 경계 정보를 암묵적으로 포함하므로 정보 손실 최소.
+    \item \textbf{보증**: $\mathcal{E}_{\mathrm{bd}}$의 매끄러움 벌칙이 이미 경계 일관성을 강제.
+\end{itemize}
+\end{tcolorbox}
+
+
+\section{공리군 E: 시간적 전달과 지속}
+\label{sec:group-e}
+
+시간적 전달 핵(temporal transport kernel) $\mathbf{M}_{t \to s} : X_t \times X_s \to [0,1]$은 시간 $t$의 응집 구조가 시간 $s$로 어떻게 계승되는지를 기술한다.
+
+\begin{axiom}[E1: 부분-확률성(Sub-Stochasticity)]
+\label{ax:E1}
+각 $x \in X_t$에 대해,
+\begin{equation}
+    \sum_{y \in X_s} \mathbf{M}_{t \to s}(x,y) \leq 1
+\end{equation}
+\end{axiom}
+
+등호가 아닌 부등호가 사용된다. 이는 응집적 내용의 일부가 소멸할 수 있음을 허용한다---모든 응집이 완벽히 보존되어야 한다는 것은 너무 강한 요구이다. 이것은 최적 전달 이론에서의 부분 전달(partial transport) 또는 불균형 최적 전달(unbalanced OT)과 연결된다.
+
+\begin{axiom}[E2: 비단사성(Non-Injectivity)]
+$\mathbf{M}_{t \to s}$는 일대일일 필요가 없다. 수렴(여러 $\to$ 하나), 발산(하나 $\to$ 여러), 부분 소멸 모두 허용된다.
+\end{axiom}
+
+\begin{axiom}[E3: 핵심 계승 (해 제약조건)]
+전달 핵은 응집적 핵심(core)을 우선적으로 보존해야 한다:
+\begin{equation}
+    \sum_{y \in X_s} \mathbf{M}_{t \to s}(x,y)\, u_s(y) \geq \delta > 0 \quad \text{for } x \in \mathrm{Core}_t(u_t)
+\end{equation}
+형성이 시간 $t$에서 $s$로 지속할 때.
+\end{axiom}
+
+\textbf{E3의 재분류}: v2.0에서 E3은 연산자 공리에서 \textbf{해 제약조건(solution constraint)}으로 재분류되었다. 이것은 전달 핵이 \emph{모든} 장에서 보편적으로 만족해야 하는 성질이 아니라, \emph{형성-구조화된} 장에서 달성해야 하는 성질이다. 진정으로 지속하는 형성에 핵심 보존을 실패하는 전달 핵은 나쁜 핵이지만, 그 핵 자체가 임의의 비형성 장에서 E3을 만족할 필요는 없다.
+
+\begin{axiom}[E4: 구조적 민감성]
+$\mathbf{M}_{t \to s}(x,y)$는 $x$와 $y$의 구조적 특성---단순한 공간적 근접성이 아닌---에 의존해야 한다.
+\end{axiom}
+
+\begin{tcolorbox}[colback=orange!5, colframe=orange!50!black, title=시간적 정체성에 대한 해석적 주석]
+이 이론에서 시간적 정체성은 \emph{점별 정체성}이 아니다. ``같은 좌표''나 ``같은 픽셀''이 점유된다는 주장이 아니다. 시간에 걸쳐 같은 것은 그 응집적 핵심이 구조적 계승 아래 보존되는 것이다---경계가 이동하고, 형태가 변형되고, 공간적 위치가 이동하더라도. 이 정체성 개념은 계산적 추적 ID보다 철학적 발생적 정체성(genidentity) 개념에 더 가깝다.
+\end{tcolorbox}
+
+
+\section{공리 일관성과 매개변수 허용 영역}
+\label{sec:axiom-consistency}
+
+정리 T20은 시그모이드 폐합 실현이 A1', A2, A3, A4를 동시에 만족함을 보여주었다. 그러나 전체 이론의 일관성은 더 넓은 질문이다: 다섯 공리군 모두를 동시에 만족하는 매개변수 영역이 존재하는가?
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig4_2_axiom_dependency.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 4.2]} 공리 의존성 그래프. 그룹 A (폐합)와 그룹 B (인접)는 독립적으로 만족 가능. 그룹 C (공동-소속)는 A와 B에 의존. 그룹 D (구별)는 B에 의존. 그룹 E (전달)는 결과적으로 모든 그룹에 의존한다. 화살표는 ``~가 ~에 필요로 한다''를 나타낸다.
+\vspace{0.5cm}}}
+\caption{공리군 간의 의존 관계. 그룹 A와 B는 독립적이며, C와 D는 각각 응집 장과 인접 구조에 의존한다. 그룹 E (시간적 전달)는 가장 많은 의존성을 가진다.}
+\label{fig:axiom-dependency}
+\end{figure}
+
+답은 긍정적이다. 기본 매개변수 집합 $a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$, $\alpha_{\mathrm{res}} < 1/\rho(W_{\mathrm{sym}})$에서:
+\begin{enumerate}
+    \item 그룹 A: T20에 의해 시그모이드 폐합이 A1', A2, A3, A4를 만족.
+    \item 그룹 B: 격자 인접성은 B1--B4를 자명하게 만족.
+    \item 그룹 C: 레졸벤트가 C1--C4를 만족 (C-Axioms 정리, 제5장에서 상세히).
+    \item 그룹 D: 시그모이드 구별이 D-Ax1--D-Ax3을 만족 ($b_D = 0$).
+    \item 그룹 E: 코히전 지문(cohesion fingerprint) 기반 자기-참조적 OT가 E1, E2, E4를 만족.
+\end{enumerate}
+
+이것은 이론의 내적 일관성을 확립한다. 공리들은 서로를 배제하지 않으며, 적절한 매개변수 영역에서 동시에 충족 가능하다.
+
+\subsection{매개변수 허용 영역의 기하학}
+
+공리 일관성은 매개변수 공간에서 ``허용 영역''을 정의한다. 핵심 제약조건을 요약하면:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcl}
+\hline
+\textbf{제약조건} & \textbf{출처} & \textbf{의미} \\
+\hline
+$a_{\mathrm{cl}} < 4$ & A3 (수축) & 폐합 고정점 유일성 \\
+$\alpha \cdot \rho(W_{\mathrm{sym}}) < 1$ & C (수렴) & 노이만 급수 수렴 \\
+$c \in (0.211, 0.789)$ & T8-Core & 스피노달 범위 (위상 전이) \\
+$b_D = 0$ & D-Ax3 + T14 & 에너지 해석성 \\
+$\sigma_M > 0$, $\gamma_M > 0$ & E1 & 전달 핵의 부분-확률성 \\
+$\beta/\alpha > \beta_{\mathrm{crit}}$ & T8-Core & 비자명 형성 존재 \\
+\hline
+\end{tabular}
+\caption{매개변수 허용 영역을 정의하는 핵심 제약조건.}
+\label{tab:parameter-admissibility}
+\end{table}
+
+기본 매개변수 집합 ($a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$, $\alpha = 1.0$, $\beta = 30.0$, $\lambda_{\mathrm{cl}} = 1.0$, $\lambda_{\mathrm{sep}} = 0.01$)은 이 모든 제약을 만족하며, 174개의 단위 테스트를 통과한다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig4_3_parameter_space.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{4cm}
+\textbf{[그림 4.3]} 매개변수 허용 영역. $(a_{\mathrm{cl}}, \beta/\alpha)$ 평면에서의 허용 영역 (음영). $a_{\mathrm{cl}} < 4$ (수축 체제)와 $\beta/\alpha > \beta_{\mathrm{crit}}$ (형성 존재)의 교집합. 기본 매개변수 $(\star)$는 영역 내부에 위치.
+\vspace{0.5cm}}}
+\caption{매개변수 공간에서의 허용 영역. 두 핵심 제약---수축과 위상 전이---의 교집합이 이론적으로 의미 있는 매개변수 조합을 정의한다.}
+\label{fig:parameter-space}
+\end{figure}
+
+
+\section*{이 장의 요약}
+
+\begin{itemize}
+    \item SCC 이론은 다섯 공리군으로 조직된다: A (폐합), B (인접), C (공동-소속), D (구별), E (시간적 전달).
+    \item 공리는 구조적 제약이며, 실현은 그 제약을 만족하는 구체적 형태이다.
+    \item A1'은 원래의 A1을 대체하여, 폐합의 자기-조절 특성을 포착한다.
+    \item $a_{\mathrm{cl}} < 4$는 수축(A3)을 보장하는 날카로운 한계이다.
+    \item 비멱등성은 의도적 설계이며 엄격히 더 강한 안정성을 제공한다.
+    \item $b_D = 0$은 에너지 해석성을 보장하기 위한 필수적 선택이다.
+    \item T20은 공리 일관성을 확립한다.
+\end{itemize}

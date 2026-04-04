@@ -1,0 +1,405 @@
+% Chapter 5: Provisional Operator Realizations
+% Part II: The Formal Theory
+
+\chapter{잠정적 연산자 실현}
+\label{ch:operators}
+
+\begin{quote}
+\textit{``공리가 '무엇이 존재해야 하는가'를 말한다면, 실현은 '그것이 구체적으로 어떻게 생겼는가'를 보여준다.''}
+\end{quote}
+
+제4장에서 우리는 SCC 이론의 다섯 공리군을 제시했다. 이 장에서는 각 공리군을 만족하는 \textbf{구체적 수학적 형태}---잠정적 실현(provisional realization)---를 제시하고, 그 성질을 분석한다.
+
+``잠정적''이라는 수식어를 강조한다. 이 실현들은 현재 가장 잘 작동하는 후보이지, 영구적으로 고정된 정의가 아니다. 미래의 작업에서 같은 공리를 만족하는 다른 형태로 대체될 수 있다.
+
+
+\section{폐합: 시그모이드 형태}
+\label{sec:sigmoid-closure}
+
+\subsection{구성}
+
+폐합 연산자의 현재 실현은 시그모이드 함수를 사용한 관계적 완성이다:
+\begin{equation}
+    \mathrm{Cl}_t(u)(x) = \sigma\!\Big( a_{\mathrm{cl}} \big( (1 - \eta_{\mathrm{cl}})\, u(x) + \eta_{\mathrm{cl}}\, (P_t u)(x) - \tau_{\mathrm{cl}} \big) \Big)
+    \label{eq:sigmoid-closure}
+\end{equation}
+
+여기서:
+\begin{itemize}
+    \item $\sigma(z) = 1/(1 + e^{-z})$: 로지스틱 시그모이드 함수
+    \item $a_{\mathrm{cl}} > 0$: 폐합 반응의 급경사(steepness) ($a_{\mathrm{cl}} < 4$ 필수)
+    \item $\eta_{\mathrm{cl}} \in [0,1]$: 자기-보존과 이웃 집계의 균형
+    \item $\tau_{\mathrm{cl}}$: 응집 유지에 필요한 결합 지지의 문턱값
+    \item $P_t$: 행-정규화된(row-normalized) 국소 집계 연산자
+\end{itemize}
+
+집계 연산자 $P_t$는 인접 구조를 통한 국소 평균을 계산한다:
+\begin{equation}
+    (P_t f)(x) = \frac{\sum_y K_t(x,y) f(y)}{\sum_y K_t(x,y) + \varepsilon}
+\end{equation}
+여기서 $K_t$는 국소 관계 핵(local relation kernel)이고 $\varepsilon > 0$은 고립 위치에서의 영 나누기를 방지하는 작은 안정화 상수이다.
+
+\subsection{직관}
+
+폐합의 작동을 직관적으로 이해하자. 각 위치 $x$에 대해:
+\begin{enumerate}
+    \item 이웃의 응집도 평균 $(P_t u)(x)$를 계산한다.
+    \item 자기 응집도 $u(x)$와 이웃 평균을 $\eta_{\mathrm{cl}}$ 비율로 혼합한다.
+    \item 결과에서 문턱값 $\tau_{\mathrm{cl}}$을 빼고, $a_{\mathrm{cl}}$로 스케일링한다.
+    \item 시그모이드를 적용하여 $[0,1]$로 사상한다.
+\end{enumerate}
+
+시그모이드의 역할은 결정적이다. 결합 지지가 $\tau_{\mathrm{cl}}$ 이상이면 시그모이드 출력은 높아지고 ($\to 1$), 미만이면 낮아진다 ($\to 0$). 이것이 응집 장에 ``판별적'' 성격을 부여한다: 충분한 관계적 지지를 받는 위치는 응집을 유지하고, 그렇지 않은 위치는 외부로 밀려난다.
+
+\subsection{수축 비율과 고정점}
+
+$a_{\mathrm{cl}} < 4$에서 시그모이드 폐합의 리프시츠 상수는:
+\begin{equation}
+    \text{Lip}(\mathrm{Cl}_t) \leq a_{\mathrm{cl}} \cdot \max_z \sigma'(z) \cdot \max(1-\eta_{\mathrm{cl}}, \eta_{\mathrm{cl}}) \leq \frac{a_{\mathrm{cl}}}{4}
+\end{equation}
+
+따라서 반복 $\mathrm{Cl}_t^{(n)}(u)$은 비율 $a_{\mathrm{cl}}/4$로 유일한 고정점 $u^* = \mathrm{Cl}_t(u^*)$에 수렴한다. $a_{\mathrm{cl}} = 3.0$ (기본값)에서 수축 비율은 $0.75$이며, 이는 약 $13$번의 반복으로 $10^{-3}$ 이내의 정밀도에 도달함을 의미한다 ($0.75^{13} \approx 0.002$).
+
+\subsection{스칼라 고정점 $c^*$의 해석}
+
+균질 장 $u \equiv c$ (모든 위치에서 동일한 값)에서 $P_t u = c$이므로, 스칼라 고정점 방정식은:
+\begin{equation}
+    c^* = \sigma(a_{\mathrm{cl}}(c^* - \tau_{\mathrm{cl}}))
+    \label{eq:scalar-fixed-point}
+\end{equation}
+
+$a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$일 때 수치적으로 $c^* \approx 0.5$이다. 이 값은 A1'에서의 자기-조절 문턱값이다.
+
+$\tau_{\mathrm{cl}}$의 역할: $\tau_{\mathrm{cl}} = 0.5$ (대칭)이면 $c^* = 0.5$이다. $\tau_{\mathrm{cl}} < 0.5$이면 $c^* > 0.5$---응집 문턱값이 높아져 ``응집하기 더 쉬움''. $\tau_{\mathrm{cl}} > 0.5$이면 $c^* < 0.5$---응집 문턱값이 낮아져 ``응집하기 더 어려움''. 매개변수 $\tau_{\mathrm{cl}}$는 이론의 ``응집 성향(cohesive tendency)''을 제어한다.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\hline
+$a_{\mathrm{cl}}$ & $\tau_{\mathrm{cl}}$ & $c^*$ & 수축 비율 \\
+\hline
+2.0 & 0.5 & 0.500 & 0.500 \\
+3.0 & 0.5 & 0.500 & 0.750 \\
+3.5 & 0.5 & 0.500 & 0.875 \\
+3.9 & 0.5 & 0.500 & 0.975 \\
+3.0 & 0.3 & 0.600 & 0.750 \\
+3.0 & 0.7 & 0.400 & 0.750 \\
+\hline
+\end{tabular}
+\caption{폐합 매개변수와 고정점. $a_{\mathrm{cl}}$이 4에 가까울수록 수축이 느려지고, $\tau_{\mathrm{cl}}$은 $c^*$의 위치를 제어한다.}
+\label{tab:closure-parameters}
+\end{table}
+
+\begin{example}[5$\times$5 격자에서의 폐합 계산]
+$5 \times 5$ 격자에서 중앙 $3 \times 3$ 영역에 $u = 0.7$, 나머지에 $u = 0.2$인 초기 장을 고려하자. $a_{\mathrm{cl}} = 3.0$, $\tau_{\mathrm{cl}} = 0.5$, $\eta_{\mathrm{cl}} = 1.0$일 때:
+
+\begin{itemize}
+    \item 중앙 위치 $(3,3)$: 4개의 이웃 모두 $u = 0.7$. $P_t u(3,3) = 0.7$. 전활성화: $3.0 \times (0.7 - 0.5) = 0.6$. $\sigma(0.6) \approx 0.646$. 폐합이 $0.7$에서 $0.646$으로 감소---과대 평가를 교정한다 (자기-조절).
+    \item 경계 위치 $(2,3)$: 이웃 중 일부는 $0.7$, 일부는 $0.2$. $P_t u \approx 0.45$. 전활성화: $3.0 \times (0.45 - 0.5) = -0.15$. $\sigma(-0.15) \approx 0.463$.
+    \item 외부 위치 $(1,1)$: 이웃 대부분 $0.2$. $P_t u \approx 0.2$. 전활성화: $3.0 \times (0.2 - 0.5) = -0.9$. $\sigma(-0.9) \approx 0.289$.
+\end{itemize}
+반복 적용하면 중앙부는 약간 감소하고, 경계는 더 낮아지며, 외부는 낮은 수준에 안정화된다. 결과적으로 ``내부/경계/외부''의 3층 구조가 형성된다.
+\end{example}
+
+
+\section{구별: 집계된 외부 비대칭}
+\label{sec:distinction-realization}
+
+\subsection{구성}
+
+구별 연산자의 현재 실현은 내부와 외부의 집계된 비대칭을 측정한다:
+\begin{equation}
+    \mathbf{D}_t(x; 1-u) = \sigma\!\Big( a_D \big( (P_t u)(x) - \lambda_D\, (P_t(1-u))(x) \big) - \tau_D \Big)
+    \label{eq:distinction}
+\end{equation}
+
+여기서:
+\begin{itemize}
+    \item $a_D > 0$: 비대칭 비교의 민감도
+    \item $\lambda_D > 0$: 외부 집계의 상대적 가중치
+    \item $\tau_D$: 구별 문턱값
+\end{itemize}
+
+\subsection{자기-참조적 구조}
+
+구별의 핵심적 특성은 \textbf{자기-참조성(self-referentiality)}이다. 장 $u$가 ``외부''의 의미를 정의하고 ($1 - u$), 동시에 그 외부에 대해 비대칭성을 측정받는다. 이 순환적 의존---장이 자기 자신에 대한 구별을 정의한다---은 표준적 Allen-Cahn이나 위상장 이론에서는 찾을 수 없는 구조이다.
+
+$P_t u(x)$는 이웃의 응집도 평균이고, $P_t(1-u)(x)$는 이웃의 비-응집도 평균이다. $P_t u + P_t(1-u) = P_t \mathbf{1} \approx 1$ (정규화가 완벽하면 정확히 $1$)이므로:
+\begin{equation}
+    P_t u(x) - \lambda_D P_t(1-u)(x) \approx (1 + \lambda_D) P_t u(x) - \lambda_D
+\end{equation}
+이는 구별이 본질적으로 이웃의 응집도 수준의 단조 함수임을 보여준다. 그러나 $P_t$가 응집-가중 인접 구조에 의존하므로, 자기-참조적 비선형성은 여전히 존재한다.
+
+\subsection{$b_D = 0$ 선택의 수학적 결과}
+
+v1.0에서의 구별 후보는 기울기 항 $b_D \cdot g_t$를 포함했다:
+\begin{equation}
+    g_t(x; u) = \sum_y \mathbf{N}_t(x,y) |u(x) - u(y)|
+\end{equation}
+
+절대값 $|\cdot|$은 원점에서 미분 불가능하므로, $g_t$를 포함하면 에너지 $\mathcal{E}$의 해석성이 파괴된다. 이는 \L{}ojasiewicz 수렴 정리 (T14)의 전제조건을 위반한다. 따라서 $b_D = 0$은 수렴 이론의 완전성을 위한 \textbf{필수적} 선택이다.
+
+
+\section{공동-소속: 레졸벤트}
+\label{sec:resolvent}
+
+\subsection{구성과 노이만 급수}
+
+공동-소속의 현재 실현은 레졸벤트(resolvent) 형태이다:
+\begin{equation}
+    \mathbf{C}_t = (I - \alpha\, W_{\mathrm{sym}})^{-1} = \sum_{k=0}^{\infty} \alpha^k W_{\mathrm{sym}}^k
+    \label{eq:resolvent}
+\end{equation}
+
+여기서 $W_{\mathrm{sym}}$은 대칭화된 응집-가중 인접 행렬이다:
+\begin{equation}
+    W_{\mathrm{sym}}(x,y) = \frac{\sqrt{u_t(x)}\, \mathbf{N}_t(x,y)\, \sqrt{u_t(y)}}{d_x}
+\end{equation}
+$d_x$는 적절한 차수 정규화이다.
+
+수렴 조건은 $\alpha \cdot \rho(W_{\mathrm{sym}}) < 1$이며, $\rho$는 스펙트럴 반경(spectral radius)이다.
+
+\subsection{물리적 해석}
+
+노이만 급수의 $k$-차 항 $\alpha^k W_{\mathrm{sym}}^k(x,y)$는 $x$에서 $y$로 가는 길이 $k$의 \textbf{응집-가중 경로}의 기여를 나타낸다. 이는 그래프에서의 확산 과정과 유사하지만, 결정적 차이가 있다: 가중치가 응집 장 $u$에 의존하므로, 응집이 높은 영역 내의 경로가 선호되고, 응집이 낮은 영역을 통과하는 경로는 지수적으로 감쇠한다.
+
+\subsection{판별력: 3자릿수 이상}
+
+레졸벤트의 핵심 장점은 \textbf{판별력}이다. 잘 형성된 응집 형성 내에서:
+\begin{itemize}
+    \item 형성 내부 쌍 $(x, y)$: $\mathbf{C}_t(x,y)$는 높다 (모든 길이의 응집-가중 경로가 기여).
+    \item 경계 횡단 쌍: $\mathbf{C}_t(x,y)$는 낮다 (경계를 통과하는 경로가 지수적으로 감쇠).
+\end{itemize}
+실험적으로, 이 차이는 $3$자릿수 이상이다---$10^{-3}$ 대 $10^0$ 수준.
+
+\textbf{왜 체사로(Cesàro) 평균이 아닌 레졸벤트인가?} 체사로 평균 $\frac{1}{N}\sum_{k=0}^{N-1} P^k$는 정상 분포(stationary distribution)로 퇴화하여, 쌍별 공동-소속 정보를 파괴한다. 레졸벤트는 기하 급수의 모든 항을 보존하여, 경로 길이별 기여를 완전히 포착한다.
+
+\begin{example}[레졸벤트 대 체사로: 5$\times$5 격자에서의 비교]
+$5 \times 5$ 격자에서 중앙 $3 \times 3$에 $u = 0.8$인 형성을 배치하자.
+
+\textbf{레졸벤트} ($\alpha = 0.8$): $\mathbf{C}(x_{\text{center}}, x_{\text{center}}) \approx 3.2$ (자기-공동-소속, 높음). $\mathbf{C}(x_{\text{center}}, x_{\text{exterior}}) \approx 0.003$ (외부와의 공동-소속, 매우 낮음). 비율: $\sim 10^3$.
+
+\textbf{체사로} ($N = 100$): 모든 쌍이 정상 분포 $\pi(x) \propto d(x)$로 수렴하여 $\mathbf{C}^{\text{Ces}}(x, y) \approx \pi(y)$---위치에 무관하게 거의 동일. 판별력: $\sim 10^0$ (없음).
+
+결론: 레졸벤트는 기하급수적 감쇠를 보존하여, 형성 경계를 3자릿수 이상으로 판별한다. 체사로는 이 정보를 완전히 파괴한다.
+\end{example}
+
+\subsection{스펙트럴 반경 제약과 $\alpha$의 선택}
+
+수렴 조건 $\alpha \cdot \rho(W_{\mathrm{sym}}) < 1$은 $\alpha$에 상한을 부과한다. $W_{\mathrm{sym}}$의 스펙트럴 반경은 그래프 구조와 응집 장에 의존한다. 일반적으로:
+\begin{itemize}
+    \item 정규 격자 ($d$-차수): $\rho(W_{\mathrm{sym}}) \leq 1$ (행-정규화 후)
+    \item 불규칙 그래프: $\rho(W_{\mathrm{sym}})$가 허브 노드에 의해 지배될 수 있음
+\end{itemize}
+
+실무적 선택: $\alpha = 0.8 / \rho_{\text{est}}$, 여기서 $\rho_{\text{est}}$는 거듭제곱 반복(power iteration)으로 추정. 이는 수렴을 보장하면서 충분한 비-국소적 통합을 제공한다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig5_2_resolvent_heatmap.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 5.2]} 10$\times$10 격자에서의 레졸벤트 판별 히트맵. 좌: 응집 장 $u$ (중앙에 형성). 우: 중앙 위치에서의 $\mathbf{C}_t(x_0, \cdot)$ 값. 형성 내부에서는 $\sim 10^0$, 외부에서는 $\sim 10^{-3}$---3자릿수 이상의 판별력.
+\vspace{0.5cm}}}
+\caption{레졸벤트 공동-소속의 판별력. 응집 형성 내부와 외부를 $10^3$ 이상의 비율로 구별한다.}
+\label{fig:resolvent-heatmap}
+\end{figure}
+
+
+\section{전달: 코히전 지문과 자기-참조적 OT}
+\label{sec:transport-realization}
+
+\subsection{코히전 지문}
+
+시간적 전달을 위해, 각 위치 $x$의 구조적 특성을 포착하는 \textbf{코히전 지문(cohesion fingerprint)}을 정의한다:
+\begin{equation}
+    \varphi(x) = \big( u(x),\; \mathrm{Cl}(u)(x),\; D(x; 1-u) \big) \in \mathbb{R}^3
+    \label{eq:fingerprint}
+\end{equation}
+
+세 성분은 각각:
+\begin{enumerate}
+    \item $u(x)$: 응집 참여 수준 (``여기가 얼마나 응집적인가?'')
+    \item $\mathrm{Cl}(u)(x)$: 관계적 완성도 (``이웃이 얼마나 지지하는가?'')
+    \item $D(x; 1-u)$: 외부 비대칭 (``여기가 얼마나 구별되는가?'')
+\end{enumerate}
+
+\textbf{왜 레졸벤트 대각선 $C(x,x)$를 제외했는가?} 초기에 지문은 4-성분이었으나, 분석 결과 $C(x,x)$는 지문 격차의 $<0.4\%$만 기여하면서 야코비안 노름이 $\sim 9300$에 달하여, 수치적 불안정성의 원인이 되었다. 3-성분 지문은 판별력을 사실상 유지하면서 안정성을 대폭 향상시킨다.
+
+\subsection{자기-참조적 전달 비용}
+
+두 시점의 위치 $(x, y)$ 사이의 전달 비용은 지문 거리에 기반한다:
+\begin{equation}
+    c(x, y; u_t, u_s) = \|\varphi_t(x) - \varphi_s(y)\|^2
+    \label{eq:transport-cost}
+\end{equation}
+
+이 비용은 \textbf{자기-참조적}이다: $\varphi_t$와 $\varphi_s$가 응집 장 $u_t$, $u_s$에 의존하고, 그 장들을 연결하는 것이 전달의 목표이다. 이 순환적 의존 구조가 자기-참조적 최적 전달의 수학적 참신성을 구성한다.
+
+\subsection{엔트로피-정규화 부분 최적 전달}
+
+실제 전달 핵은 싱크혼(Sinkhorn) 알고리즘을 사용한 엔트로피-정규화 부분 최적 전달로 계산된다:
+\begin{equation}
+    \mathbf{M}^*_{t \to s} = \argmin_{\mathbf{M} \in \Pi_\leq(u_t, u_s)} \sum_{x,y} \mathbf{M}(x,y) c(x,y) + \varepsilon_{\mathrm{OT}} \sum_{x,y} \mathbf{M}(x,y) \log \mathbf{M}(x,y)
+\end{equation}
+여기서 $\Pi_\leq$는 부분-확률적 결합(sub-stochastic coupling)의 집합이고, $\varepsilon_{\mathrm{OT}}$는 엔트로피 정규화 매개변수이다. 로그-도메인 싱크혼 반복은 수치적 안정성을 보장한다.
+
+\subsection{자기-참조적 고정점 반복}
+
+전달 비용이 $u_s$에 의존하고, $u_s$가 전달의 결과에 의존하므로, 자기-참조적 고정점을 구해야 한다. 이는 반복적으로 해결된다:
+
+\begin{enumerate}
+    \item 초기: $u_s^{(0)} = u_t$ (전달 없는 초기 추정)
+    \item 반복: $\mathbf{M}^{(k)} = \text{Sinkhorn}(c(\cdot; u_t, u_s^{(k)}))$, 그 다음 $u_s^{(k+1)} = \mathbf{M}^{(k)} \cdot u_s$
+    \item 수렴: $\|u_s^{(k+1)} - u_s^{(k)}\| < \varepsilon$이면 종료
+\end{enumerate}
+
+존재성은 샤우더(Schauder) 고정점 정리로 증명되며, 유일성은 전달 가둠 한계(transport confinement bound) $C_{\mathrm{conf}} = O(\sigma\sqrt{\varepsilon_{\mathrm{OT}} \log n})$로 보장된다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig5_3_fingerprint.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 5.3]} 코히전 지문의 세 성분. 좌에서 우: $u(x)$ (응집 참여), $\mathrm{Cl}(u)(x)$ (관계적 완성), $D(x;1-u)$ (외부 비대칭). 핵심(core) 위치는 세 성분 모두 높고, 경계 위치는 혼합된 값, 외부 위치는 세 성분 모두 낮다.
+\vspace{0.5cm}}}
+\caption{코히전 지문의 세 성분은 각 위치의 ``응집적 역할''을 독립적으로 포착한다. 3-성분 지문은 $0.4\%$ 미만의 정보 손실로 계산적 안정성을 크게 향상시킨다.}
+\label{fig:fingerprint-components}
+\end{figure}
+
+
+\section{야코비안과 미분 가능성}
+\label{sec:jacobians}
+
+에너지의 기울기 계산에는 각 연산자의 야코비안-전치-벡터 곱(Jacobian-transpose-vector product, JVP)이 필요하다. SCC의 구현에서 이 곱들은 \textbf{정확한(exact)} 형태로 계산되며, 유한 차분(finite difference)으로 $10^{-9}$ 수준까지 검증되었다.
+
+\subsection{폐합의 야코비안}
+
+시그모이드 폐합의 야코비안은:
+\begin{equation}
+    J_{\mathrm{Cl}}(u) = \mathrm{diag}(s) \cdot \big[ (1-\eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P_t \big] \cdot a_{\mathrm{cl}}
+\end{equation}
+여기서 $s_i = \sigma'(z_i) = \sigma(z_i)(1-\sigma(z_i))$는 시그모이드 도함수 벡터, $z_i$는 전활성화 값이다.
+
+시그모이드의 도함수에는 추가적 연쇄 법칙이 필요하지 않다---$\sigma'(z) = \sigma(z)(1-\sigma(z))$로 직접 계산 가능하다. 야코비안-전치 곱은:
+\begin{equation}
+    J_{\mathrm{Cl}}^T v = a_{\mathrm{cl}} \big[ (1-\eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P_t^T \big] \cdot \mathrm{diag}(s) \cdot v
+\end{equation}
+
+\subsection{에너지 기울기}
+
+각 에너지 항의 기울기:
+
+\textbf{폐합 에너지}:
+\begin{equation}
+    \nabla \mathcal{E}_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^T (u - \mathrm{Cl}(u))
+    \label{eq:grad-ecl}
+\end{equation}
+
+\textbf{분리 에너지}:
+\begin{equation}
+    \nabla_i \mathcal{E}_{\mathrm{sep}} = (1 - D_i) + u_i \cdot \frac{\partial D_i}{\partial u_i} \cdot (-1) + \sum_{j} u_j \frac{\partial D_j}{\partial u_i} \cdot (-1)
+    \label{eq:grad-esep}
+\end{equation}
+여기서 구별의 야코비안 $\partial D_i / \partial u_j$가 필요하다.
+
+\textbf{경계/형태론 에너지}: 순서-쌍 합산 관례에서,
+\begin{equation}
+    \nabla \mathcal{E}_{\mathrm{bd}} = 4\alpha L u + 2\beta\, u(1-u)(1-2u)
+    \label{eq:grad-ebd}
+\end{equation}
+
+\begin{tcolorbox}[colback=red!5, colframe=red!50!black, title=주의: 경계 에너지 기울기의 인수 4]
+순서-쌍 합산 관례에서 매끄러움 에너지는 $2\alpha u^T L u$이다. 기울기는 $4\alpha L u$이다 (인수 $4$, $2$가 아님). 이 인수는 순서-쌍 합산에서 각 무방향 간선이 두 번 계수되기 때문이다. 비순서-쌍 합산 $\sum_{\{x,y\}}$을 사용하면 에너지는 $\alpha u^T L u$이고 기울기는 $2\alpha L u$가 된다. 합산 관례를 혼동하면 기울기에서 정확히 인수 2의 오류가 발생한다.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!5, colframe=red!50!black, title=주의: 이중-우물 기울기의 인수 2]
+이중-우물 포텐셜 $W(u) = u^2(1-u)^2$의 도함수는 $W'(u) = 2u(1-u)(1-2u)$이다. 인수 $2$는 $\frac{d}{du}[u^2(1-u)^2]$의 직접 계산에서 나온다. 이것을 $u(1-u)(1-2u)$ (인수 $2$ 누락)로 잘못 기록하면, 위상 전이 문턱값과 모든 후속 계산에서 오류가 전파된다.
+\end{tcolorbox}
+
+\subsection{기울기 검증: 유한 차분과의 비교}
+
+해석적 기울기의 정확성은 유한 차분(finite difference)으로 검증된다:
+\begin{equation}
+    \frac{\partial \mathcal{E}}{\partial u_i} \approx \frac{\mathcal{E}(u + h e_i) - \mathcal{E}(u - h e_i)}{2h}
+\end{equation}
+여기서 $e_i$는 $i$-번째 표준 단위 벡터이고 $h$는 작은 섭동이다.
+
+SCC 구현에서 해석적 기울기와 유한 차분 사이의 최대 상대 오차:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\hline
+\textbf{에너지 항} & \textbf{최대 상대 오차} & $h$ \\
+\hline
+$\nabla \mathcal{E}_{\mathrm{cl}}$ & $< 10^{-9}$ & $10^{-5}$ \\
+$\nabla \mathcal{E}_{\mathrm{sep}}$ & $< 10^{-8}$ & $10^{-5}$ \\
+$\nabla \mathcal{E}_{\mathrm{bd}}$ (매끄러움) & $< 10^{-12}$ & $10^{-5}$ \\
+$\nabla \mathcal{E}_{\mathrm{bd}}$ (이중-우물) & $< 10^{-11}$ & $10^{-5}$ \\
+\hline
+\end{tabular}
+\caption{해석적 기울기의 유한 차분 검증. $10 \times 10$ 격자에서 무작위 장으로 테스트.}
+\label{tab:gradient-verification}
+\end{table}
+
+$\mathcal{E}_{\mathrm{sep}}$의 약간 큰 오차는 구별 연산자의 자기-참조적 야코비안의 복잡성에 기인하지만, $10^{-8}$ 수준은 완전히 만족스럽다.
+
+\begin{example}[기울기 계산 워크스루]
+$n = 4$ 경로 그래프 $1-2-3-4$에서 $u = (0.2, 0.7, 0.8, 0.3)$, $\alpha = 1.0$, $\beta = 10.0$일 때 $\nabla \mathcal{E}_{\mathrm{bd}}$를 계산하자.
+
+라플라시안 $L$은:
+\[
+L = \begin{pmatrix} 1 & -1 & 0 & 0 \\ -1 & 2 & -1 & 0 \\ 0 & -1 & 2 & -1 \\ 0 & 0 & -1 & 1 \end{pmatrix}
+\]
+
+매끄러움 기울기 $4\alpha L u = 4 \times 1.0 \times L \times (0.2, 0.7, 0.8, 0.3)^T$:
+\begin{align}
+    Lu &= (0.2 - 0.7,\; -0.2 + 1.4 - 0.8,\; -0.7 + 1.6 - 0.3,\; -0.8 + 0.3) \\
+    &= (-0.5,\; 0.4,\; 0.6,\; -0.5)
+\end{align}
+따라서 $4Lu = (-2.0, 1.6, 2.4, -2.0)$.
+
+이중-우물 기울기 $2\beta u(1-u)(1-2u)$:
+\begin{align}
+    &2 \times 10 \times (0.2 \cdot 0.8 \cdot 0.6,\; 0.7 \cdot 0.3 \cdot (-0.4),\; 0.8 \cdot 0.2 \cdot (-0.6),\; 0.3 \cdot 0.7 \cdot 0.4) \\
+    &= 20 \times (0.096,\; -0.084,\; -0.096,\; 0.084) = (1.92,\; -1.68,\; -1.92,\; 1.68)
+\end{align}
+
+전체: $\nabla \mathcal{E}_{\mathrm{bd}} = (-0.08, -0.08, 0.48, -0.32)$.
+
+이 벡터의 방향을 해석하자: 위치 1과 2 (높은 응집)에서는 기울기가 거의 0이고, 위치 3에서 양 (응집을 낮추라), 위치 4에서 음 (응집을 높이라). 기울기 하강은 형성을 ``다듬는'' 방향으로 작용한다.
+\end{example}
+
+\subsection{왜 해석성이 수렴 이론에 필수적인가}
+
+모든 연산자의 야코비안이 정확히 계산 가능하다는 것은 에너지 $\mathcal{E}$가 $C^\omega$ (해석적) 함수임을 보장하는 핵심 요소이다:
+
+\begin{itemize}
+    \item 시그모이드 $\sigma$는 전체 실수선에서 해석적이다.
+    \item $P_t$는 유한 합이므로 해석적이다.
+    \item 다항식 $u^2(1-u)^2$은 해석적이다.
+    \item $b_D = 0$이므로 절대값 $|\cdot|$이 없다.
+\end{itemize}
+
+이 해석성은 \L{}ojasiewicz 기울기 부등식의 전제조건이며, 이것이 기울기 흐름의 임계점 수렴을 보장한다 (정리 T14, 제8장).
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig5_1_sigmoid_landscape.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 5.1]} 시그모이드 폐합 경관. 1D 절편에서의 $\mathrm{Cl}_t(u)(x)$ 대 $u(x)$. $a_{\mathrm{cl}} = 3.0$에서 유일한 고정점 $c^* \approx 0.5$. $c^*$ 이하에서는 확장적 (위로 올린다), $c^*$ 이상에서는 수축적 (아래로 당긴다).
+\vspace{0.5cm}}}
+\caption{시그모이드 폐합의 자기-조절 경관. 유일한 고정점 $c^*$ 주변에서의 확장/수축 구조가 A1' (조건부 확장성)을 기하학적으로 보여준다.}
+\label{fig:sigmoid-landscape}
+\end{figure}
+
+
+\section*{이 장의 요약}
+
+\begin{itemize}
+    \item 시그모이드 폐합: 관계적 집계 $P_t u$에 시그모이드를 적용. 수축 비율 $a_{\mathrm{cl}}/4$. 유일한 고정점.
+    \item 구별: 내부/외부 집계 비대칭. 자기-참조적 구조. $b_D = 0$으로 해석성 보장.
+    \item 레졸벤트 공동-소속: $(I - \alpha W_{\mathrm{sym}})^{-1}$. 3자릿수 이상의 형성 내/외 판별력.
+    \item 코히전 지문: 3-성분 $(u, \mathrm{Cl}(u), D)$. 자기-참조적 OT 비용. 고정점 반복.
+    \item 모든 야코비안-전치 곱이 정확하게 계산 가능. FD 검증 $10^{-9}$.
+    \item 핵심 주의사항: 순서-쌍 인수 $4$, 이중-우물 인수 $2$.
+\end{itemize}

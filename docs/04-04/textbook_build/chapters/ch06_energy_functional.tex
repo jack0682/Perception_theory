@@ -1,0 +1,324 @@
+% Chapter 6: The Energy Functional
+% Part II: The Formal Theory
+
+\chapter{에너지 함수}
+\label{ch:energy}
+
+\begin{quote}
+\textit{``형성이란 구조적 요구들 사이의 균형점이다. 에너지 함수는 이 균형을 수학적으로 포착한다.''}
+\end{quote}
+
+SCC 이론의 에너지 함수는 네 가지 독립적 구조적 요구---폐합, 분리, 경계/형태론, 시간적 전달---를 하나의 변분적(variational) 목표로 통합한다. 형성(formation)은 이 에너지의 (근사적) 극소점으로 특성화된다.
+
+이 장에서 우리는 에너지의 각 항을 도출하고, 기울기를 계산하고, 극소점의 존재를 증명한다.
+
+
+\section{부피 제약조건}
+\label{sec:volume-constraint}
+
+에너지 최소화는 다음 \textbf{제약 다양체(constraint manifold)} 위에서 수행된다:
+\begin{equation}
+    \Sigma_m = \Big\{u \in [0,1]^n : \sum_{x \in X_t} u(x) = m\Big\}
+    \label{eq:sigma-m}
+\end{equation}
+여기서 $m > 0$은 \textbf{응집 예산(cohesive budget)}이고 $n = |X_t|$이다. 부피 분율(volume fraction)은 $c = m/n$이다.
+
+\subsection{존재론적 정당화}
+
+부피 제약조건은 단순한 계산적 편의가 아니라 \textbf{구조적 공리}이다. 그 이유:
+
+\begin{enumerate}
+    \item \textbf{유한한 응집 능력}: 유한한 관계적 체계는 응집을 유지할 수 있는 유한한 용량을 가진다. 모든 곳에서 $u = 1$인 장은 모든 곳에서 $u = 0$인 장만큼이나 특징 없다---어디에도 형성이 없다. 부피 제약은 ``응집적 자원이 유한하다''는 존재론적 사실을 형식화한다.
+
+    \item \textbf{선택성의 전제조건}: 형성이 형성되려면 \emph{어디에} 응집할 것인지를 선택해야 한다. 부피 제약이 이 선택을 강제한다.
+
+    \item \textbf{수학적 필요성}: 부피 제약 없이 모든 에너지 항은 비음이고 $u = 0$에서 영이므로, $u \equiv 0$이 전역 극소점이다. 비-자명 극소점의 존재 (정리 T8-Core)는 부피 제약을 필수적으로 요구한다.
+\end{enumerate}
+
+\subsection{허용 범위}
+
+위상 전이 정리 (T8-Core, 제7장)는 이중-우물 2차 도함수 $W''(c) < 0$인 범위를 요구한다:
+\begin{equation}
+    c \in \left(\frac{3-\sqrt{3}}{6},\; \frac{3+\sqrt{3}}{6}\right) \approx (0.211,\; 0.789)
+    \label{eq:spinodal-range}
+\end{equation}
+이것은 스피노달 영역(spinodal region)이다. 이 범위 밖에서는 균일 상태 $u \equiv c$가 항상 안정한 극소점이며, 비균일 형성이 에너지적으로 선호되지 않는다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig6_1_volume_constraint.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 6.1]} 부피 제약의 기하학. $n = 3$ (3개 위치)에서의 도해. $\Sigma_m$은 $[0,1]^3$ 초입방체 내의 2차원 단체(simplex). $m = c \cdot 3$으로 고정되면, 응집 장은 이 단체 위에서만 변할 수 있다. 균일 상태 $u = (c, c, c)$는 단체의 중심.
+\vspace{0.5cm}}}
+\caption{부피 제약 다양체 $\Sigma_m$의 기하학적 구조. 응집 예산 $m$은 유한한 응집 자원을 형식화하며, 형성이 어디에 응집할지를 선택하도록 강제한다.}
+\label{fig:volume-constraint}
+\end{figure}
+
+
+\section{폐합 에너지 $\mathcal{E}_{\mathrm{cl}}$}
+\label{sec:closure-energy}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{cl}}(u) = \sum_{x \in X_t} \big( u(x) - \mathrm{Cl}_t(u)(x) \big)^2 = \|u - \mathrm{Cl}(u)\|_2^2
+    \label{eq:E-cl}
+\end{equation}
+
+\subsection{해석}
+
+$\mathcal{E}_{\mathrm{cl}}$은 응집 장과 그 관계적 완성 사이의 $\ell^2$ 편차를 측정한다. $\mathcal{E}_{\mathrm{cl}} = 0$이면 $u = \mathrm{Cl}(u)$, 즉 장이 정확히 자기-지지적이다. 작은 $\mathcal{E}_{\mathrm{cl}}$은 장이 근사적으로 자기-지지적임을 의미한다.
+
+이것이 Bind 술어와의 다리(bridge)이다:
+\begin{equation}
+    \mathsf{Bind}(u) = 1 - \frac{\|u - \mathrm{Cl}(u)\|_2}{\sqrt{n}} \geq 1 - \sqrt{\frac{\mathcal{E}_{\mathrm{cl}}}{n}}
+    \label{eq:bind-energy-bridge}
+\end{equation}
+(코시-슈바르츠 부등식). 작은 폐합 에너지는 높은 결합(Bind)을 함의한다.
+
+\subsection{기울기}
+
+\begin{equation}
+    \nabla \mathcal{E}_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^T(u - \mathrm{Cl}(u))
+\end{equation}
+여기서 $J_{\mathrm{Cl}} = J_{\mathrm{Cl}}(u)$는 폐합의 야코비안 행렬이다.
+
+\subsection{헤시안의 양정치성}
+
+폐합 에너지의 2차 미분은 $r = u - \mathrm{Cl}(u)$가 작을 때 (고정점 근방):
+\begin{equation}
+    H_{\mathrm{cl}} \approx 2(I - J_{\mathrm{Cl}})^T(I - J_{\mathrm{Cl}})
+    \label{eq:hessian-cl}
+\end{equation}
+이것은 그람 행렬(Gram matrix)이다. $\|J_{\mathrm{Cl}}\|_{\mathrm{op}} < 1$ (비멱등 폐합)이면 $(I - J_{\mathrm{Cl}})$은 가역이므로, 이 그람 행렬은 \textbf{엄격히 양정치(strictly positive definite)}이다---$n/n$개의 양의 고유값을 가진다.
+
+이것이 비멱등성의 수학적 보상이다: 멱등 폐합에서는 $J_{\mathrm{Cl}} v = v$ (치역 방향)인 $v$가 존재하여, $(I - J_{\mathrm{Cl}})v = 0$이 되고, 헤시안에 영 고유값이 발생한다.
+
+
+\section{분리 에너지 $\mathcal{E}_{\mathrm{sep}}$}
+\label{sec:separation-energy}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{sep}}(u) = \sum_{x \in X_t} u(x) \big( 1 - \mathbf{D}_t(x; 1-u) \big)
+    \label{eq:E-sep}
+\end{equation}
+
+\subsection{해석}
+
+$\mathcal{E}_{\mathrm{sep}}$은 응집적이면서 ($u(x)$ 높음) 동시에 구별되지 않는 ($D$ 낮음) 위치에 벌칙을 부과한다. 최소화하면 장은 응집적인 모든 위치에서 외부에 대해 비대칭적이 되도록 유도된다.
+
+\subsection{Sep과의 정확한 항등식}
+
+분리 에너지와 Sep 술어 사이에는 \textbf{정확한} 대수적 항등식이 성립한다:
+\begin{equation}
+    \boxed{\mathsf{Sep}(u) = 1 - \frac{\mathcal{E}_{\mathrm{sep}}(u)}{m}}
+    \label{eq:sep-identity}
+\end{equation}
+여기서 $m = \sum_x u(x)$는 부피.
+
+\begin{proof}
+Sep의 정의로부터:
+\begin{align}
+    \mathsf{Sep}(u) &= \frac{\sum_x u(x) D(x; 1-u)}{\sum_x u(x)} = \frac{\sum_x u(x) D(x; 1-u)}{m} \\
+    &= \frac{\sum_x u(x) - \sum_x u(x)(1 - D(x; 1-u))}{m} \\
+    &= \frac{m - \mathcal{E}_{\mathrm{sep}}}{m} = 1 - \frac{\mathcal{E}_{\mathrm{sep}}}{m}
+\end{align}
+\end{proof}
+
+이 항등식은 에너지-술어 다리(Predicate-Energy Bridge)의 핵심 결과이다. Sep이 $1$에 가까우면 $\mathcal{E}_{\mathrm{sep}} \approx 0$이고, 그 역도 성립한다. 이 양방향 대응은 에너지 관점과 술어 관점이 분리에 대해서는 \textbf{완전히 동치}임을 의미한다.
+
+\subsection{자기-참조성}
+
+$\mathcal{E}_{\mathrm{sep}}$은 SCC 에너지에서 가장 특징적인 항이다. $\mathbf{D}_t$가 $u$에 의존하므로, 에너지 자체가 자기-참조적이다: 장이 ``외부''의 의미를 정의하고, 그 외부에 대한 비구별에 대해 벌칙을 받는다. 이 자기-참조적 순환은 표준 Allen-Cahn이나 위상장 이론에 유사물이 없다.
+
+
+\section{경계/형태론 에너지 $\mathcal{E}_{\mathrm{bd}}$}
+\label{sec:boundary-energy}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{bd}}(u) = \underbrace{\alpha \sum_{x,y \in X_t} \mathbf{N}_t(x,y)(u(x) - u(y))^2}_{\text{매끄러움}} + \underbrace{\beta \sum_{x \in X_t} u(x)^2(1-u(x))^2}_{\text{이중-우물}}
+    \label{eq:E-bd}
+\end{equation}
+
+이 항은 Allen-Cahn/Cahn-Hilliard 이론과 가장 직접적으로 연결되는 부분이다. 두 하위-항의 역할을 각각 분석하자.
+
+\subsection{매끄러움 벌칙: 순서-쌍 합산과 인수 4}
+
+매끄러움 벌칙은 인접한 위치들 사이의 응집도 차이에 벌칙을 부과한다. 순서-쌍 합산 관례 (정규 사양서 §0)에서, 대칭 $\mathbf{N}_t$에 대해:
+\begin{align}
+    \sum_{x,y} \mathbf{N}_t(x,y)(u(x) - u(y))^2 &= 2 u^T L u
+    \label{eq:smoothness-laplacian}
+\end{align}
+여기서 $L$은 그래프 라플라시안이다. 따라서 매끄러움 에너지는 $2\alpha u^T L u$이다.
+
+\textbf{기울기}: 매끄러움 에너지의 기울기는
+\begin{equation}
+    \nabla(2\alpha u^T L u) = 4\alpha L u
+    \label{eq:grad-smoothness}
+\end{equation}
+$L$이 대칭이므로 $\nabla(u^T L u) = 2Lu$이고, 인수 $2\alpha$가 곱해져 $4\alpha Lu$가 된다.
+
+\textbf{왜 인수 4인가?} 이것은 순서-쌍 합산 관례의 직접적 결과이다. 비순서-쌍 합산 $\sum_{\{x,y\}}$을 사용하면 에너지는 $\alpha u^T L u$이고 기울기는 $2\alpha Lu$가 된다. 합산 관례의 선택은 이론 전체에 걸쳐 일관되어야 하며, SCC 정규 사양서는 순서-쌍을 표준으로 채택한다.
+
+\textbf{헤시안}: 매끄러움 에너지의 헤시안은 $4\alpha L$이다.
+
+\subsection{이중-우물 벌칙}
+
+이중-우물 포텐셜 $W(u) = u^2(1-u)^2$은 $u = 0$과 $u = 1$에서 극소, $u = 1/2$에서 극대를 가진다. 이 벌칙은 응집 장이 중간값에 머무르는 것을 막고, $0$ (외부)이나 $1$ (내부) 가까이로 유도한다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig6_2_double_well.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 6.2]} 이중-우물 포텐셜 $W(u) = u^2(1-u)^2$. 두 극소점 $u = 0$과 $u = 1$은 ``외부''와 ``내부''를 나타낸다. 극대점 $u = 1/2$은 불안정하다. 스피노달 영역은 $W''(c) < 0$인 $(0.211, 0.789)$에 해당한다.
+\vspace{0.5cm}}}
+\caption{이중-우물 포텐셜과 그 도함수. $W'(u) = 2u(1-u)(1-2u)$에서의 인수 $2$와 스피노달 영역 $W''(c) < 0$이 위상 전이의 기초이다.}
+\label{fig:double-well}
+\end{figure}
+
+\textbf{도함수}:
+\begin{equation}
+    W'(u) = 2u(1-u)(1-2u)
+    \label{eq:W-prime}
+\end{equation}
+인수 $2$를 확인하자: $\frac{d}{du}[u^2(1-u)^2] = 2u(1-u)^2 + u^2 \cdot 2(1-u)(-1) = 2u(1-u)[(1-u) - u] = 2u(1-u)(1-2u)$.
+
+\textbf{2차 도함수}:
+\begin{equation}
+    W''(u) = 2(1 - 6u + 6u^2)
+    \label{eq:W-double-prime}
+\end{equation}
+$W''(c) < 0$인 영역, 즉 $1 - 6c + 6c^2 < 0$을 풀면 스피노달 범위 \eqref{eq:spinodal-range}를 얻는다.
+
+\textbf{헤시안}: 이중-우물 에너지의 헤시안은 $\beta \cdot \mathrm{diag}(W''(u_i))$이다.
+
+\subsection{두 하위-항의 경쟁}
+
+매끄러움 벌칙과 이중-우물 벌칙은 상반된 경향을 가진다:
+\begin{itemize}
+    \item 매끄러움: 인접한 위치의 값을 비슷하게 만든다 $\to$ 균일한 장 선호
+    \item 이중-우물: 각 위치의 값을 $0$ 또는 $1$로 밀어낸다 $\to$ 급격한 전이 선호
+\end{itemize}
+
+이 두 경향의 균형이 형성의 형태를 결정한다. $\alpha/\beta$가 크면 매끄러운 전이, 작으면 날카로운 전이 (날카로운 계면 한계, 제8장 T11).
+
+\textbf{Allen-Cahn 연결}: $\mathcal{E}_{\mathrm{bd}}$의 구조는 Allen-Cahn 에너지와 동일하다:
+\begin{equation}
+    E_{\mathrm{AC}} = \varepsilon \int |\nabla u|^2 + \frac{1}{\varepsilon} W(u)
+\end{equation}
+여기서 $\varepsilon = \alpha/\beta$이다. SCC는 이 Allen-Cahn 기반 위에 자기-참조적 항 ($\mathcal{E}_{\mathrm{cl}}$, $\mathcal{E}_{\mathrm{sep}}$)을 추가한 것이다.
+
+
+\section{전달 에너지 $\mathcal{E}_{\mathrm{tr}}$}
+\label{sec:transport-energy}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{tr}}(u_t, u_s) = \sum_{x \in X_t} \sum_{y \in X_s} \mathbf{M}_{t \to s}(x,y)\, \omega(u_t(x), u_s(y)) \big( u_s(y) - u_t(x) \big)^2
+    \label{eq:E-tr}
+\end{equation}
+여기서 $\omega(a,b)$는 고-응집 위치에서의 계승을 강조하는 가중 함수이다 (예: $\omega(a,b) = a \cdot b$ 또는 $\omega(a,b) = \min(a,b)$).
+
+\subsection{해석}
+
+전달 에너지는 시간적 전달 하에서의 응집적 내용의 불연속성에 벌칙을 부과한다. 시간 $t$에서 위치 $x$의 응집이 시간 $s$에서 위치 $y$로 전달될 때, $u_s(y)$와 $u_t(x)$의 차이가 작을수록 에너지가 낮다. 이것은 형성의 시간적 연속성을 보장한다.
+
+가중 함수 $\omega$는 외부 위치 (낮은 응집)의 전달 불연속성을 무시하고, 핵심(core) 위치의 연속성에 집중하도록 한다.
+
+\subsection{시간 내 에너지와의 결합}
+
+전체 에너지는 시간 내(within-time)와 시간 간(between-time) 항의 합이다:
+\begin{equation}
+    \mathcal{E}(\mathbf{u}) = \sum_{t \in W} \Big[ \lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}}(u_t) + \lambda_{\mathrm{sep}} \mathcal{E}_{\mathrm{sep}}(u_t) + \lambda_{\mathrm{bd}} \mathcal{E}_{\mathrm{bd}}(u_t) \Big] + \sum_{t < s} \lambda_{\mathrm{tr}} \mathcal{E}_{\mathrm{tr}}(u_t, u_s)
+\end{equation}
+정적(단일 시점) 분석에서는 $\lambda_{\mathrm{tr}} = 0$으로 설정하여 시간 내 항만 다룬다.
+
+
+\section{전체 에너지와 그 경관}
+\label{sec:full-energy}
+
+\subsection{네 항의 통합}
+
+단일 시점에서의 전체 에너지:
+\begin{equation}
+    \boxed{\mathcal{E}(u) = \lambda_{\mathrm{cl}}\, \mathcal{E}_{\mathrm{cl}}(u) + \lambda_{\mathrm{sep}}\, \mathcal{E}_{\mathrm{sep}}(u) + \lambda_{\mathrm{bd}}\, \mathcal{E}_{\mathrm{bd}}(u)}
+    \label{eq:full-energy}
+\end{equation}
+($\mathcal{E}_{\mathrm{tr}}$는 시간 간 항이므로 단일 시점에서는 제외.)
+
+가중 계수 $\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}} > 0$은 각 구조적 요구의 상대적 중요성을 제어한다.
+
+\subsection{네 항의 독립성 원칙}
+
+네 에너지 항은 네 가지 \textbf{개념적으로 독립적인} 구조적 요구에 대응한다:
+\begin{enumerate}
+    \item 폐합: 내적 관계적 자기-지지
+    \item 분리: 외부와의 구조적 대비
+    \item 경계/형태론: 일관된 공간적 분절
+    \item 전달: 응집 조직의 시간적 계승
+\end{enumerate}
+
+이들은 논리적으로 독립이다: 폐합적이지만 구별되지 않는 장, 구별되지만 형태론적으로 비일관적인 장, 형태론적으로 일관적이지만 시간적으로 불연속인 장이 모두 가능하다.
+
+\textbf{정직한 주의}: ``개념적 독립''은 각 항이 논리적으로 분리 가능한 구조적 요구를 다룬다는 뜻이지, 수학적으로 비상관이라는 뜻이 아니다. 실제로 $\mathcal{E}_{\mathrm{bd}}$의 매끄러움 벌칙과 $\mathcal{E}_{\mathrm{sep}}$의 구별 요구는 강하게 상호작용하며, Allen-Cahn 기반은 형태론 항과 폐합 항 사이에 공유된다.
+
+\subsection{에너지 경관의 구조}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig6_3_energy_landscape.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 6.3]} 에너지 경관의 개략적 단면. 수평축: $\Sigma_m$ 위의 1D 경로. 수직축: $\mathcal{E}$. 균일 상태 $u \equiv c$는 안장점 (위상 전이 이후), 비균일 극소점들은 ``형성''에 대응. 여러 극소점이 공존 가능 (준안정).
+\vspace{0.5cm}}}
+\caption{에너지 경관. 위상 전이 이후 균일 상태는 안장점이 되고, 비균일 형성들이 (준안정) 극소점으로 존재한다.}
+\label{fig:energy-landscape}
+\end{figure}
+
+에너지 경관은 일반적으로 복수의 극소점을 가진다:
+\begin{itemize}
+    \item 전역 극소점: 가장 깊은 에너지 골짜기. 가장 ``좋은'' 형성.
+    \item 준안정(metastable) 극소점: 국소 극소점이지만 전역이 아닌. 에너지 장벽에 의해 보호됨.
+    \item 안장점(saddle point): 위상 전이 이후의 균일 상태.
+\end{itemize}
+
+이 다중-극소점 구조가 바로 ``두 경관 구조'' (제4장)의 에너지 경관 측면이다. 서로 다른 초기 조건에서의 기울기 하강이 서로 다른 극소점으로 이끈다---이것이 SCC에서의 경로 의존성이다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig6_4_four_energies.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 6.4]} 잘 형성된 형성에서의 네 에너지 항. 좌에서 우: (1) $\mathcal{E}_{\mathrm{cl}}$: 핵심에서 거의 0 (자기-지지), 경계에서 약간 양. (2) $\mathcal{E}_{\mathrm{sep}}$: 구별된 영역에서 0에 가까움. (3) $\mathcal{E}_{\mathrm{bd}}$: 경계 대역에 집중. (4) 전체 $\mathcal{E}$: 대부분 경계/형태론이 지배.
+\vspace{0.5cm}}}
+\caption{형성에서의 네 에너지 항의 공간 분포. 각 항은 형성의 서로 다른 결함에 반응한다.}
+\label{fig:four-energies}
+\end{figure}
+
+
+\section{극소점의 존재 (T1)}
+\label{sec:existence}
+
+\begin{theorem}[T1: 에너지 극소점 존재]
+\label{thm:T1}
+제약 다양체 $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$ 위에서 에너지 $\mathcal{E}(u)$는 그 최솟값을 달성한다.
+\end{theorem}
+
+\begin{proof}
+$\Sigma_m$은 $\mathbb{R}^n$의 닫힌 유계 부분집합이므로 콤팩트하다 (Heine-Borel). $\mathcal{E}$는 $\Sigma_m$ 위에서 연속이다 ($\sigma$, $P_t$, 다항식은 모두 연속; 합성도 연속). 바이어슈트라스 극값 정리(Weierstrass extreme value theorem)에 의해, 콤팩트 집합 위의 연속 함수는 그 최솟값과 최댓값을 달성한다.
+\end{proof}
+
+증명은 놀라울 정도로 간단하다. 그 이유는 유한 차원 설정의 장점이다---$X_t$가 유한 집합이므로 $[0,1]^n$은 콤팩트하고, 부피 제약은 닫힌 조건이므로 $\Sigma_m$도 콤팩트하다.
+
+T1은 극소점의 \emph{존재}만 보장하고, 그 극소점이 \emph{비자명}(비균일)인지는 말하지 않는다. 비자명성은 위상 전이 정리 T8-Core (제7장)에서 다루어진다.
+
+\begin{tcolorbox}[colback=green!5, colframe=green!50!black, title=주요 정리: T1에서 T8-Core로]
+T1은 ``극소점이 존재한다''를 보장한다. T8-Core는 ``그 극소점은 비균일이다''를 보장한다 ($\beta/\alpha > \beta_{\mathrm{crit}}$일 때). 합쳐서: 충분히 강한 이중-우물 벌칙 하에서, 에너지의 전역 극소점은 비자명 형성이다.
+\end{tcolorbox}
+
+
+\section*{이 장의 요약}
+
+\begin{itemize}
+    \item 부피 제약 $\Sigma_m$은 유한한 응집 능력의 존재론적 형식화이며, 비자명 극소점 존재의 수학적 전제조건이다.
+    \item $\mathcal{E}_{\mathrm{cl}} = \|u - \mathrm{Cl}(u)\|^2$: 자기-지지로부터의 편차. Bind와의 다리: $\mathsf{Bind} \geq 1 - \sqrt{\mathcal{E}_{\mathrm{cl}}/n}$.
+    \item $\mathcal{E}_{\mathrm{sep}} = \sum u(x)(1 - D(x))$: 자기-참조적 구별 벌칙. Sep과의 정확한 항등식: $\mathsf{Sep} = 1 - \mathcal{E}_{\mathrm{sep}}/m$.
+    \item $\mathcal{E}_{\mathrm{bd}} = 2\alpha u^T L u + \beta \sum W(u)$: Allen-Cahn 형 형태론. 기울기의 인수 4 (순서-쌍). $W'(u) = 2u(1-u)(1-2u)$ (인수 2).
+    \item 네 에너지 항은 개념적으로 독립이지만 수학적으로 상호작용한다.
+    \item T1: $\Sigma_m$의 콤팩트성 + 에너지의 연속성 = 극소점 존재 (바이어슈트라스).
+\end{itemize}

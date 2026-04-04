@@ -1,0 +1,32 @@
+\chapter{Parameter Registry and Specification}
+\label{app:parameters}
+
+% This appendix is being written by template-expert as Task #10
+
+\section{Complete Parameter List}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Parameter & Symbol & Range & Typical & Unit \\
+    \hline
+    Closure threshold & $a_{cl}$ & $(0, 4)$ & $1.5$ & none \\
+    Closure decay & $\delta_cl$ & $(0, 1)$ & $0.1$ & $s^{-1}$ \\
+    Separation weight & $\omega_{sep}$ & $(0, 1)$ & $0.5$ & none \\
+    Boundary strength & $\alpha$ & $(0, 1)$ & $0.3$ & none \\
+    Transport coupling & $\lambda_{tr}$ & $[0, 1]$ & $0.2$ & none \\
+    \hline
+  \end{tabular}
+  \caption{SCC Parameter Space. Full specification in Canonical Spec v2.1.}
+\end{table}
+
+\section{Constraint Violations \& Safety Checks}
+
+% TODO: Details on parameter validation
+
+\section{Scaling \& Dimensionalization}
+
+% TODO: How parameters scale with grid size, time steps, etc.
+
+\cleardoublepage

@@ -1,0 +1,265 @@
+% Chapter 7: Phase Transition and Formation Birth
+% Part II: The Formal Theory
+
+\chapter{위상 전이와 형성의 탄생}
+\label{ch:phase-transition}
+
+\begin{quote}
+\textit{``형성은 에너지 경관의 불안정성에서 탄생한다. 균일한 세계가 더 이상 자기 자신을 유지할 수 없을 때, 구조가 출현한다.''}
+\end{quote}
+
+이 장은 SCC 이론의 가장 극적인 결과를 다룬다: 매개변수가 임계값을 넘으면, 균일한 응집 장이 불안정해지고 비균일 형성이 \emph{필연적으로} 출현한다. 이것이 \textbf{위상 전이(phase transition)}이며, 형성의 ``탄생''이다.
+
+
+\section{균일 상태와 그 안정성}
+\label{sec:uniform-state}
+
+\subsection{균일 상태}
+
+부피 제약 $\Sigma_m$ 위에서 가장 단순한 응집 장은 \textbf{균일 상태}이다:
+\begin{equation}
+    u \equiv c = \frac{m}{n}
+    \label{eq:uniform-state}
+\end{equation}
+모든 위치에서 동일한 응집도 $c$를 가진다. 이것은 ``어디에서도 특별히 응집적이지 않은'' 상태---형성이 없는 상태이다.
+
+균일 상태가 에너지의 극소점인가, 안장점인가? 이 질문에 대한 답이 위상 전이의 핵심이다.
+
+\subsection{균일 상태에서의 헤시안}
+
+$u \equiv c$에서 에너지의 2차 변분(second variation)을 계산하자. 부피 제약의 접선 공간 $T(\Sigma_m) = \{v : \sum_i v_i = 0\}$ 위에서, $\mathcal{E}_{\mathrm{bd}}$의 헤시안은:
+
+\begin{equation}
+    H_{\mathrm{bd}}\big|_{u=c} = 4\alpha L + \beta W''(c) \cdot I
+    \label{eq:hessian-uniform}
+\end{equation}
+
+$L$의 고유값을 $0 = \lambda_1 < \lambda_2 \leq \lambda_3 \leq \cdots \leq \lambda_n$이라 하자. $L \mathbf{1} = 0$이므로 $\lambda_1 = 0$은 상수 벡터 $\mathbf{1}$에 대응하는데, 이 방향은 접선 공간에 속하지 않는다 ($\sum_i v_i \neq 0$). 따라서 접선 공간에서 $L$의 최소 고유값은 $\lambda_2$---\textbf{피들러 고유값(Fiedler eigenvalue)}이다.
+
+접선 공간에서 $H_{\mathrm{bd}}$의 최소 고유값은:
+\begin{equation}
+    \mu_{\min} = 4\alpha\lambda_2 + \beta W''(c)
+    \label{eq:min-eigenvalue}
+\end{equation}
+
+\subsection{선형 안정성 분석}
+
+균일 상태의 안정성은 $\mu_{\min}$의 부호에 의해 결정된다:
+\begin{itemize}
+    \item $\mu_{\min} > 0$: 모든 섭동이 에너지를 증가시킴 $\Rightarrow$ 균일 상태는 (국소) 극소점 $\Rightarrow$ 안정
+    \item $\mu_{\min} < 0$: 피들러 고유벡터 방향의 섭동이 에너지를 감소시킴 $\Rightarrow$ 균일 상태는 안장점 $\Rightarrow$ 불안정
+\end{itemize}
+
+스피노달 범위 $c \in (0.211, 0.789)$에서 $W''(c) < 0$이므로, $\beta$가 충분히 크면 $\mu_{\min} < 0$이 된다. 정확한 조건은:
+\begin{equation}
+    4\alpha\lambda_2 + \beta W''(c) < 0 \quad \iff \quad \frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}
+    \label{eq:instability-condition}
+\end{equation}
+
+
+\section{위상 전이 (T8-Core)}
+\label{sec:T8-Core}
+
+\begin{theorem}[T8-Core: 비자명 극소점 존재]
+\label{thm:T8-Core}
+$X_t$를 피들러 고유값 $\lambda_2 > 0$인 유한 연결 그래프, $m = cn$으로 $c \in \left(\frac{3-\sqrt{3}}{6}, \frac{3+\sqrt{3}}{6}\right)$, $W(u) = u^2(1-u)^2$라 하자. 만약
+\begin{equation}
+    \boxed{\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|} =: \beta_{\mathrm{crit}}/\alpha}
+    \label{eq:phase-transition}
+\end{equation}
+이면, $\mathcal{E}_{\mathrm{bd}}|_{\Sigma_m}$의 전역 극소점은 비균일이다.
+\end{theorem}
+
+\begin{proof}
+$u \equiv c$에서의 접선 공간 헤시안 \eqref{eq:hessian-uniform}의 피들러 방향 고유값이
+\begin{equation}
+    4\alpha\lambda_2 + \beta W''(c) < 0
+\end{equation}
+이므로, 균일 상태는 안장점이다. T1에 의해 전역 극소점이 존재하고, 그것은 균일 상태가 아니므로 비균일이다.
+\end{proof}
+
+\subsection{임계 매개변수}
+
+\begin{equation}
+    \beta_{\mathrm{crit}} = \frac{4\alpha\lambda_2}{|W''(c)|}
+    \label{eq:beta-crit}
+\end{equation}
+
+이 공식의 세 요소를 분석하자:
+\begin{enumerate}
+    \item \textbf{$4\alpha$}: 매끄러움 벌칙의 강도. $\alpha$가 클수록 비균일 형성을 억제.
+    \item \textbf{$\lambda_2$}: 그래프의 연결성. $\lambda_2$가 클수록 형성 탄생에 더 강한 이중-우물이 필요.
+    \item \textbf{$|W''(c)|$}: 이중-우물의 곡률. $c = 1/2$에서 최대 ($|W''(1/2)| = 1$).
+\end{enumerate}
+
+\subsection{피들러 고유값: 유일한 위상적 인자}
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!50!black, title=핵심 통찰: 스펙트럴 보편성]
+위상 전이 임계값은 그래프의 전체 스펙트럼이 아니라 \textbf{단 하나의 수}, 피들러 고유값 $\lambda_2$에 의해서만 결정된다. 이것은 쿠랑-레일리(Courant-Rayleigh) 변분 원리의 직접적 결과이다:
+\begin{equation}
+    \lambda_2 = \min_{\substack{v \neq 0 \\ v \perp \mathbf{1}}} \frac{v^T L v}{v^T v}
+\end{equation}
+$v \perp \mathbf{1}$은 정확히 부피 제약의 접선 공간 조건 $\sum v_i = 0$이다!
+\end{tcolorbox}
+
+피들러 고유값은 그래프의 ``연결 강도''를 단일 숫자로 요약한다:
+\begin{itemize}
+    \item $\lambda_2$가 크면: 그래프가 강하게 연결됨 $\Rightarrow$ 형성 탄생에 높은 $\beta$ 필요
+    \item $\lambda_2$가 작으면: 그래프에 ``잘리기 쉬운'' 구조 $\Rightarrow$ 낮은 $\beta$로도 형성 탄생
+    \item $\lambda_2 = 0$: 비연결 그래프 $\Rightarrow$ 항상 비균일 극소점 존재
+\end{itemize}
+
+\begin{example}[격자에서의 $\lambda_2$]
+$k \times k$ 정방 격자에서 $\lambda_2 = 2(1 - \cos(\pi/k)) \approx \pi^2/k^2$ ($k$ 커짐에 따라). 따라서 $\beta_{\mathrm{crit}} \propto 1/k^2 \to 0$: 큰 격자에서는 거의 모든 $\beta > 0$에서 형성이 탄생한다.
+\end{example}
+
+이 스펙트럴 보편성은 32개 그래프에서 $R^2 = 0.9924$로 실험적으로 검증되었다.
+
+
+\section{초임계 갈림 분기 (T-Birth-Parametric)}
+\label{sec:pitchfork}
+
+T8-Core는 비균일 극소점의 존재를 보장하지만, 그 극소점이 어떻게 나타나는지---즉, 분기(bifurcation)의 \textbf{유형}---는 말하지 않는다. T-Birth-Parametric은 이 질문에 답한다.
+
+\begin{theorem}[T-Birth-Parametric: 초임계 갈퀴 분기]
+\label{thm:T-Birth-Parametric}
+임계 매개변수 $\beta_{\mathrm{crit}}$에서 \textbf{초임계 갈퀴(supercritical pitchfork)} 분기가 발생한다:
+\begin{enumerate}
+    \item $\beta < \beta_{\mathrm{crit}}$: 균일 극소점만 존재.
+    \item $\beta > \beta_{\mathrm{crit}}$: 두 개의 추가 비균일 극소점이 출현하며, 그 진폭은
+    \begin{equation}
+        |u_{\mathrm{nonunif}} - u_{\mathrm{unif}}| \propto (\beta - \beta_{\mathrm{crit}})^{1/2}
+    \end{equation}
+\end{enumerate}
+분기는 초임계(supercritical, 안정 분지)이다.
+\end{theorem}
+
+\begin{proof}[증명 개요]
+크란달-라비노비츠(Crandall-Rabinowitz) 정리를 적용한다. 핵심 요소:
+\begin{enumerate}
+    \item $\beta = \beta_{\mathrm{crit}}$에서 선형화의 핵(kernel)은 1차원 (피들러 고유벡터 $\psi$ 방향).
+    \item 3차 계수 $A = 4\beta_{\mathrm{crit}} \cdot \Phi_4 > 0$, 여기서 $\Phi_4 = \sum_x \psi(x)^4 > 0$.
+    \item $A > 0$이므로 분기는 초임계 (안정 분지가 $\beta > \beta_{\mathrm{crit}}$ 방향으로 분기).
+\end{enumerate}
+정방 격자에서 $D_4$ 대칭과 이중-우물의 3차 대칭 $W(u) = u(1-u)(1/2 - u)$ (인수 $2$ 제거 후)이 등변 분석(equivariant analysis)을 가능하게 한다.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig7_1_bifurcation.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 7.1]} 분기 다이어그램. 수평축: $\beta/\alpha$. 수직축: $\|u - c\|$. $\beta_{\mathrm{crit}}$ 이전: 균일 해만 존재 (수평선 $\|u-c\| = 0$). $\beta_{\mathrm{crit}}$ 이후: 제곱근 스케일링으로 비균일 분지가 분기. 실선: 안정 분지 (초임계). 점선: 불안정 (균일 상태).
+\vspace{0.5cm}}}
+\caption{초임계 갈퀴 분기. $\beta_{\mathrm{crit}}$에서의 전이는 연속적이며 이력 현상(hysteresis)이 없다. 진폭은 $(\beta - \beta_{\mathrm{crit}})^{1/2}$으로 성장한다.}
+\label{fig:bifurcation}
+\end{figure}
+
+\textbf{왜 ``갈퀴''인가?} 균일 상태의 대칭 ($u \equiv c$는 그래프의 모든 자기동형(automorphism)에 불변)이 임계점에서 깨지면서, 두 ``거울상'' 비균일 해가 동시에 출현한다. 이 대칭 깨짐이 갈퀴(pitchfork) 형태를 만든다.
+
+\textbf{이력 현상 없음}: 초임계 분기이므로 전이에 이력 현상이 없다---$\beta$를 임계값 이상으로 올렸다 내려도 같은 경로를 따른다. 이는 실험 exp37에서 확인되었다.
+
+
+\section{스펙트럴 보편성 (FORMATION-BIRTH)}
+\label{sec:spectral-universality}
+
+T8-Core의 임계 공식 \eqref{eq:phase-transition}에서 그래프-의존적 양은 오직 $\lambda_2$이다. 이것은 위상 전이가 그래프의 세부 구조가 아닌 스펙트럴 간극(spectral gap)에 의해서만 결정됨을 의미한다.
+
+\begin{theorem}[FORMATION-BIRTH: 일반 그래프에서의 형성 탄생]
+\label{thm:FORMATION-BIRTH}
+임의의 유한 연결 그래프에서, 비균일 극소점의 출현은 피들러 고유값 $\lambda_2$에 의해 보편적으로 특성화된다. 형성의 초기 공간적 구조는 피들러 고유벡터의 방향을 따른다.
+\end{theorem}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig7_2_fiedler_eigenvector.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 7.2]} 피들러 고유벡터와 형성 형태. 좌: 10$\times$10 격자의 피들러 고유벡터 (양/음 영역). 우: 임계점 직후의 비균일 극소점---피들러 고유벡터의 양 영역에 형성이 출현. 형성의 위치와 모양이 그래프의 스펙트럴 구조에 의해 결정됨을 보여준다.
+\vspace{0.5cm}}}
+\caption{형성은 피들러 고유벡터의 ``안내''를 받아 탄생한다. 이것이 스펙트럴 보편성의 기하학적 의미이다.}
+\label{fig:fiedler-eigenvector}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig7_3_spectral_universality.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 7.3]} 스펙트럴 보편성 산점도. 32개 그래프 (격자, 확률적 블록, 바벨, 무작위 기하)에서의 $\beta_{\mathrm{crit}}^{\mathrm{measured}}$ 대 $4\alpha\lambda_2/|W''(c)|$. $R^2 = 0.9924$. 이론적 예측과 실험의 거의 완벽한 일치.
+\vspace{0.5cm}}}
+\caption{32개 다양한 그래프에서의 위상 전이 임계값 검증. $R^2 = 0.9924$로, $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$의 보편적 유효성을 확인한다.}
+\label{fig:spectral-universality}
+\end{figure}
+
+
+\section{전체 에너지 섭동 (T8-Full)}
+\label{sec:T8-Full}
+
+T8-Core는 $\mathcal{E}_{\mathrm{bd}}$만을 대상으로 한다. 전체 에너지 $\mathcal{E} = \lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}} + \lambda_{\mathrm{sep}} \mathcal{E}_{\mathrm{sep}} + \lambda_{\mathrm{bd}} \mathcal{E}_{\mathrm{bd}}$에서도 비균일 극소점이 살아남는가?
+
+\begin{theorem}[T8-Full: 전체 에너지 하의 비자명 극소점]
+\label{thm:T8-Full}
+$\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}$이 $\beta$에 비해 충분히 작으면, $\mathcal{E}_{\mathrm{bd}}$의 비균일 극소점 $\hat{u}_0$ 근방에 전체 에너지 $\mathcal{E}$의 극소점 $\hat{u}$가 존재하며:
+\begin{equation}
+    \|\hat{u} - \hat{u}_0\| = O(\lambda_{\mathrm{cl}} + \lambda_{\mathrm{sep}})
+\end{equation}
+\end{theorem}
+
+\begin{proof}[증명 개요]
+경계 KKT(bordered KKT) 시스템에 대한 음함수 정리(IFT)를 적용한다. 핵심 조건은 $\mathcal{E}_{\mathrm{bd}}$ 극소점에서의 제약 헤시안의 비퇴화성(non-degeneracy), 즉 최소 고유값 $\mu_0 > 0$이다. 이 조건은 모든 테스트된 구성에서 확인되었다: $\mu_0 \in [0.96, 60.2]$.
+
+이전에 보고된 음의 고유값은 $\mathcal{E}_{\mathrm{full}}$ 극소점 (다른 점)에서의 것이었다. $\mathcal{E}_{\mathrm{bd}}$ 극소점에서의 비퇴화성은 전이층(transition layer)의 반집중(anti-concentration)으로 검증되었다.
+\end{proof}
+
+T8-Full의 의미: 자기-참조적 항 ($\mathcal{E}_{\mathrm{cl}}$, $\mathcal{E}_{\mathrm{sep}}$)이 형성을 파괴하지 않고, 매끄럽게 변형만 한다. 형성의 존재는 Allen-Cahn 기반에 의해 보장되고, 자기-참조적 항은 형성의 세부 형태를 조정한다.
+
+
+\section{안정성과 준안정성 (T7-Enhanced)}
+\label{sec:metastability}
+
+형성이 탄생하면, 그것은 얼마나 ``견고''한가? T7-Enhanced는 SCC의 형성이 순수 Allen-Cahn의 형성보다 \textbf{더 안정적}임을 증명한다.
+
+\begin{theorem}[T7-Enhanced: 향상된 준안정성]
+\label{thm:T7-Enhanced}
+SCC 에너지의 비자명 제약 극소점은 대응하는 Allen-Cahn 극소점보다 엄격히 더 큰 최소 헤시안 고유값을 가진다. 이는 자기-참조적 폐합 보정에 의한 것이다.
+\end{theorem}
+
+\begin{proof}
+폐합 항 $\lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}}$은 폐합 고정점에서 양정치 헤시안 기여 $2\lambda_{\mathrm{cl}}(I - J_{\mathrm{Cl}})^T(I - J_{\mathrm{Cl}})$를 추가한다 (그람 행렬). 이것은 Allen-Cahn 헤시안의 모든 고유값을 양의 양만큼 증가시킨다.
+\end{proof}
+
+물리적 의미: 폐합의 자기-강화(self-reinforcement) 구조가 형성의 끌개 분지(attraction basin)를 더 깊게 만든다. 작은 섭동에 대해 형성이 더 견고하게 유지된다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig7_4_scc_vs_allencahn.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 7.4]} SCC 대 Allen-Cahn 준안정성 비교. 수평축: 섭동 진폭. 수직축: 원래 극소점으로의 복원력. SCC (실선)는 Allen-Cahn (점선)보다 일관되게 높은 복원력을 보인다. 이는 폐합의 양정치 헤시안 기여 때문이다.
+\vspace{0.5cm}}}
+\caption{SCC의 향상된 준안정성. 자기-참조적 폐합 보정이 형성의 끌개 분지를 깊게 만들어, 동일한 섭동에 대해 더 높은 복원력을 제공한다.}
+\label{fig:scc-vs-allencahn}
+\end{figure}
+
+\subsection{다중-형성 관점}
+
+T7-Enhanced는 다중-형성의 공존 가능성에도 영향을 미친다. 폐합에 의한 장벽 높이의 증가 ($\beta^{0.89}$ 스케일링)와 임계 형성 간 거리의 감소 ($d_{\min}^*$이 약 $30\%$ 감소)는 SCC가 순수 Allen-Cahn보다 더 많은 형성을 더 가까운 거리에서 공존시킬 수 있음을 의미한다. 이것은 제9장 (다중-형성)에서 상세히 다룬다.
+
+
+\section{스케일링 주의사항}
+\label{sec:scaling-caveat}
+
+$k \times k$ 격자와 같이 $\lambda_2 \to 0$ ($k \to \infty$)인 그래프 계열에서, $\beta_{\mathrm{crit}} \to 0$이므로 거의 모든 $\beta > 0$에서 형성이 존재한다. 이 체제에서 T8-Core는 형성 \emph{존재}를 보장하지만, 의미 있는 \emph{선별 기준}을 제공하지 못한다.
+
+큰 격자에서는 위상 전이 대신 \textbf{진단 벡터} $\mathbf{d} = (\mathsf{Bind}, \mathsf{Sep}, \mathsf{Inside}, \mathsf{Persist})$가 주요 평가 도구가 된다. 형성 \emph{존재}가 아니라 형성 \emph{품질}이 의미 있는 질문이다.
+
+\textbf{유한-요소 재스케일링}: 연속체 해석에서 $\alpha$는 확산 계수이며 격자 해상도에 따라 $\alpha = \alpha_0 / h^2$ ($h$: 격자 간격)로 재스케일링해야 한다. $k \times k$ 격자에서 $h = 1/k$이면 $\beta_{\mathrm{crit}} \approx 4\alpha_0 \pi^2 / |W''(c)| = O(1)$로, 격자-독립적 임계값을 회복한다. 이 재스케일링은 표준 수치 PDE 실무이지만, 정리가 아닌 매개변수 처방이다.
+
+
+\section*{이 장의 요약}
+
+\begin{itemize}
+    \item 균일 상태 $u \equiv c$의 안정성은 접선 공간 헤시안의 부호로 결정된다.
+    \item \textbf{T8-Core}: $\beta/\alpha > 4\lambda_2/|W''(c)|$이면 균일 상태는 안장점이고 전역 극소점은 비균일.
+    \item 임계값은 피들러 고유값 $\lambda_2$에만 의존 (스펙트럴 보편성, $R^2 = 0.9924$).
+    \item \textbf{T-Birth-Parametric}: 임계점에서 초임계 갈퀴 분기. 진폭 $\propto (\beta - \beta_{\mathrm{crit}})^{1/2}$. 이력 없음.
+    \item \textbf{T8-Full}: 자기-참조적 항을 추가해도 비균일 극소점은 IFT에 의해 보존됨.
+    \item \textbf{T7-Enhanced}: SCC의 형성은 Allen-Cahn보다 더 안정적 (폐합의 양정치 헤시안 기여).
+\end{itemize}
