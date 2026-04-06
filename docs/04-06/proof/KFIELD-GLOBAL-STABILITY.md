@@ -4,6 +4,8 @@
 **Category:** proof
 **Status:** proved (Cat A)
 
+> **CAVEAT (2026-04-06 evening):** This theorem is mathematically correct but **vacuous in practice**. It proves K=2 is globally optimal *among K=2 states on Σ²_M*, but says nothing about whether K=2 is preferred over K=1. In fact, K=1 on Σ¹_{m₁+m₂} is ~50% cheaper in total energy. The theorem's "merge is impossible on Σ²_M" is an artifact of fixed-K architecture, not a meaningful stability result. The overlap=27 claim that motivated this analysis was a bug (actual overlap ≈ 0 with sufficient repulsion).
+
 ---
 
 ## Theorem (K-Field Global Stability)

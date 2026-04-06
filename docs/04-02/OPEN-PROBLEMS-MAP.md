@@ -5,7 +5,9 @@
 
 **Update 2026-04-03:** +9 Cat A from gap resolution (equivariant supercriticality, K-field Hessian, C3'' closed, formation birth theorems, f₁ bound, beyond-Weyl spectral, barrier scaling). TC'' tightened 300×. H3 improved to β > 7α.
 
-**Update 2026-04-06:** Audit of Phase 9-14 overclaims. Corrected from "48/0/0 (100%)" to **43 Cat A / 2 Cat B / 3 Cat C (90% proved)**. Formation Birth supercriticality on general graphs → Cat B. T-Persist-1(d), K-Weak, K-Unified restored to Cat C. H3 noted as formation-conditioned.
+**Update 2026-04-06 (audit):** Audit of Phase 9-14 overclaims. Corrected from "48/0/0 (100%)" to 43/2/3.
+
+**Update 2026-04-06 (evening):** Retracted 5 overclaims from today's session. γ_eff back to Cat B (exp60 NEB didn't converge). Merge barrier back to OPEN (K-field barrier structure unknown on M₂). Merge Theorem (c)(d)(e) retracted. Counts: **43 Cat A / 2 Cat B / 3 Cat C (90% proved)**.
 
 ---
 
@@ -150,7 +152,7 @@
 
 | Problem | Current State | Approach | Impact |
 |---|---|---|---|
-| **Barrier exponent derivation** | O(β^0.89) empirical; ΔE_LI=Θ(β) proved | NEB/string method for true saddle; Θ(√β) analysis | Kramers merge rate |
+| **Barrier exponent derivation** | O(β^0.89) empirical; ΔE_LI=Θ(β) proved; exp60 NEB inconclusive (didn't converge) | NEB/string method for true saddle (needs proper convergence); barrier on M₂ unknown | Kramers merge rate |
 | **Analytical TC upgrade** | TC'' tightened to 1-10× | Full Sinkhorn Lipschitz proof at formation-structured points | Upgrade TC'' to Cat A |
 | **Analytical ū_ext(a_cl)** | Numerical only | Solve closure-modified Euler-Lagrange in exterior | d_min quantitative Cat A |
 
@@ -158,7 +160,7 @@
 
 | Problem | Current State | Why Hard | Required Technique |
 |---|---|---|---|
-| **Merge theorem (MS1-MS4)** | 0/4 proved | Morse non-degeneracy, competitor existence, flow confinement, branch selection | Morse theory on Σ^K_M |
+| **Merge theorem (MS1-MS4)** | Parts (c)(d)(e) retracted; merge requires Σ²_M→Σ¹ transition | No continuous merge path on Σ²_M; barrier concept inapplicable within fixed-K manifold | Meta-dynamics for cross-manifold (variable-K) transitions |
 | **Near-bif branch selection (μ→0)** | Fully open | IFT collapses; topology changes; which branch selected? | Center manifold + Kramers stochastic theory |
 | **Strong self-ref transport uniqueness** | Existence proved (Schauder) | Cost depends on transport plan itself — novel mathematical structure | Fixed-point theory for cost-dependent OT |
 | **Variable K dynamics** | K is kinetic (exp51-57) | Birth + merge + barrier crossing in unified framework | Multi-scale dynamical systems theory |

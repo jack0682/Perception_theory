@@ -2,6 +2,23 @@
 
 ---
 
+## 2026-04-06 evening — Retracted 5 overclaims from today
+
+### Retractions
+- ❌ **"Barrierless merge" (exp60):** RETRACTED — NEB didn't converge; ΔE_NEB < 0.05 was a numerical artifact, not a physical result. True barrier structure on M₂ remains unknown.
+- ❌ **"γ_eff resolved as artifact":** RETRACTED — conclusion was based on the flawed exp60 NEB result. γ_eff ≈ 0.89 returns to Cat B (empirical, analytical derivation still needed).
+- ❌ **"K=2 global stability on M₂":** RETRACTED as practically meaningful — the theorem is correct but vacuous (K=2 is optimal among K=2 states, but K=1 is ~50% cheaper). The overlap=27 that motivated the analysis was a bug.
+- ❌ **"44 Cat A / 1 Cat B / 3 Cat C":** RETRACTED — recount needed. The earlier audit count of 43/2/3 stands pending careful re-verification.
+- ❌ **Merge Theorem Parts (c)(d)(e):** RETRACTED — Mountain Pass argument requires both endpoints on Σ²_M, but the "merged" endpoint violates per-formation mass constraints. Parts (a)(b) remain valid. Merge barrier problem is OPEN.
+
+### Files Modified
+- `docs/04-02/proof/MERGE-THEOREM.md` — Parts (c)(d)(e) marked RETRACTED with explanation (§7)
+- `docs/04-06/proof/KFIELD-GLOBAL-STABILITY.md` — Added "CAVEAT: correct but vacuous" note
+- `docs/04-02/OPEN-PROBLEMS-MAP.md` — γ_eff back to Cat B, merge barrier back to OPEN
+- `CHANGELOG.md` — This entry
+
+---
+
 ## 2026-04-06 — Gap #1-2 Closure + Major Discovery (Barrierless Merge)
 
 ### Gap #2: Birth supercriticality on general graphs → mostly Cat A

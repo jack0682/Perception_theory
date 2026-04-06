@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-03
 **Category:** proof
-**Status:** proved (parts a-d Cat A; part e Cat B conditional on transition-state regularity)
+**Status:** Parts (a)-(b) Cat A; Parts (c)(d)(e) **RETRACTED** (see §7)
 **Depends on:** K=2 Local Stability (Cat A), Isoperimetric Ordering (Cat A), ΔE_LI = Θ(β) (Cat A), T11 Γ-convergence (Cat A), MERGE-DICHOTOMY-ANALYSIS.md
 
 ---
@@ -214,6 +214,24 @@ The Kupka-Smale theorem states that for a residual (hence dense) set of smooth f
 - This includes the transition state $u_{\mathrm{TS}}$
 
 The "generic" qualifier cannot be removed without checking specific parameter values (which would require computing the Hessian at the transition state). For the **default** parameters, exp38 confirms the barrier exists and is well-defined, providing empirical evidence of non-degeneracy.
+
+---
+
+## 7. Retraction of Parts (c)(d)(e) — 2026-04-06
+
+**Parts (c), (d), and (e) are RETRACTED.** The proofs relied on the existence of a continuous merge path on Σ²_M connecting a K=2 state to a K=1-equivalent state. The K-Field Global Stability analysis (2026-04-06) showed that:
+
+1. **No K=1-equivalent state exists on Σ²_M.** The "merged" endpoint $(u_{\mathrm{merged}}, 0)$ violates the per-formation mass constraint $\sum u_2(i) = m_2 > 0$. The Mountain Pass argument requires both endpoints to lie on the same manifold — they do not.
+
+2. **K=2 is the global minimum on Σ²_M**, not merely a local minimum. There is no lower-energy state to connect to, so the barrier concept is inapplicable within Σ²_M.
+
+3. **Merge requires a discrete jump** from Σ²_M to Σ¹_{m₁+m₂} — a change of constraint manifold, not a continuous deformation. The Kramers rate formula (Part e) presupposed a continuous path that does not exist.
+
+**Parts (a) and (b) remain valid:**
+- (a) K-formation is a local minimum — upgraded to global minimum on Σ²_M.
+- (b) Energy ordering for single-field (isoperimetric) — still Cat A but applies only to fixed-total-mass comparison, not to Σ²_M.
+
+**The merge barrier problem is OPEN.** The correct formulation requires a meta-dynamics framework for transitions between manifolds of different K, which is outside the current theory.
 
 ---
 
