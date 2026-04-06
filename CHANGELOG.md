@@ -2,6 +2,35 @@
 
 ---
 
+## 2026-04-06 — Audit of Phase 9-14: Corrected Overclaims
+
+### Summary
+Rigorous audit of Phase 9-14 commits that claimed "THEORY 100% COMPLETE (48/48 Cat A)." Found 5 overclaimed items. Corrected to honest counts: **43 Cat A / 2 Cat B / 3 Cat C (90% proved).**
+
+### What Phase 9-14 genuinely achieved
+- ✅ T-Bind-Proj general τ: Cat B → Cat A (genuine, Phase 13)
+- ✅ H3 analytical bound: Cat B → Cat A (genuine, formation-conditioned, Phase 10-11)
+- ✅ Spec consistency fixes (Phase 12)
+- ✅ Empirical validation on 32 graphs (Phase 14)
+
+### Overclaims corrected
+- ❌ "48 Cat A, 0 Cat B, 0 Cat C" → 43/2/3
+- ❌ "THEORY 100% COMPLETE" → 90% proved
+- ⚠️ Formation Birth "general graph supercriticality" → Cat B (D₄ only proved)
+- ⚠️ T-Persist-1(d), K-Weak, K-Unified conditions restored to Cat C
+- ⚠️ H3: noted as formation-conditioned
+
+### Files Modified
+- `Canonical Spec v2.1.md` — Restored honest Cat A/B/C counts in §13, removed "100% COMPLETE" claim
+- `docs/04-04/FORMATION-BIRTH-GENERAL.md` — Corrected: existence is Cat A (T8-Core), supercriticality on general graphs is Cat B
+- `docs/04-04/SPECTRAL-FORMATION-BIRTH-UNIVERSAL.md` — Fixed §3.2 proof error ("Closure Hessian ≈ 4I"), clarified scope
+- `docs/04-02/OPEN-PROBLEMS-MAP.md` — Updated numbers to match corrected counts (43/2/3)
+- `docs/04-03/20260403STATUS.md` — Added audit note (counts accurate for 04-03 date)
+- `docs/04-02/proof/CROSS-REVIEW-INTEGRATION.md` — Added audit note (counts accurate for 04-03 date)
+- `CHANGELOG.md` — This entry
+
+---
+
 ## 2026-04-04 (Late Night) — Phase 14: FORMATION-BIRTH Category A Upgrade (General Graph) ✓
 
 **Status:** ✅ **COMPLETE — THEORY 100% COMPLETE (48/48 Cat A)**

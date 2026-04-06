@@ -1,13 +1,15 @@
 # SCC Theory: Proved Results and Open Problems
 
-**Date:** 2026-04-03 (updated after gap resolution session)
+**Date:** 2026-04-06 (updated after Phase 9-14 audit)
 **Purpose:** Complete map of what is proved, what is conditional, and what is open
 
 **Update 2026-04-03:** +9 Cat A from gap resolution (equivariant supercriticality, K-field Hessian, C3'' closed, formation birth theorems, f₁ bound, beyond-Weyl spectral, barrier scaling). TC'' tightened 300×. H3 improved to β > 7α.
 
+**Update 2026-04-06:** Audit of Phase 9-14 overclaims. Corrected from "48/0/0 (100%)" to **43 Cat A / 2 Cat B / 3 Cat C (90% proved)**. Formation Birth supercriticality on general graphs → Cat B. T-Persist-1(d), K-Weak, K-Unified restored to Cat C. H3 noted as formation-conditioned.
+
 ---
 
-## Part I. What Is Proved (38 Category A)
+## Part I. What Is Proved (43 Category A)
 
 ### 1. Formation Existence and Structure (5 theorems — COMPLETE)
 
@@ -95,14 +97,15 @@
 
 ---
 
-## Part II. What Is Conditionally Proved (4 Category C)
+## Part II. What Is Conditionally Proved (2 Category B, 3 Category C)
 
-| Theorem | Condition | How Close to Removal? |
-|---|---|---|
-| **T-Persist-1(d)** | β > 7α | Structurally necessary; cannot remove, only tighten |
-| **T-Persist-Full** | Composition of (a)-(e) | Effective Cat B; follows from above |
-| **T-Persist-K-Weak** | WI, SR, NB-K | Weyl bound may be improvable |
-| **C3''** | Symmetrization gap | Highly plausible; low priority |
+| Theorem | Cat | Condition | How Close to Removal? |
+|---|---|---|---|
+| **γ_eff ≈ 0.89** | B | Empirical | Analytical derivation needed |
+| **Formation Birth supercriticality (general graphs)** | B | D₄ only proved; transcritical for c ≠ 1/2 | Fold analysis for asymmetric graphs |
+| **T-Persist-1(d)** | C | β > 7α | Structurally necessary; cannot remove, only tighten |
+| **T-Persist-K-Weak** | C | WI, SR, NB-K | Weyl bound may be improvable |
+| **T-Persist-K-Unified** | C | 5 conditions (PS/ND/BC'-K/TC-K/SR-Λ) | Conditions may be individually removable |
 
 ---
 
@@ -138,7 +141,7 @@
 |---|---|---|---|
 | ~~C3'' closure~~ | **RESOLVED** (2026-04-03) | Schur complement + M-matrix proof | Operator theory complete |
 | ~~Beyond-Weyl spectral bound~~ | **RESOLVED** (2026-04-03) | Overlap-restricted perturbation + BMD | 33× wider coexistence window |
-| ~~Formation birth theorem~~ | **RESOLVED** (2026-04-03) | Crandall-Rabinowitz + D₄ equivariant + Γ-convergence | 3 new Cat A theorems |
+| ~~Formation birth theorem~~ | **PARTIALLY RESOLVED** (2026-04-03; audit 2026-04-06) | Existence Cat A (T8-Core); supercriticality Cat B (D₄ only) | General graph supercriticality remains open |
 | **Analytical d_min*(a_cl, β)** | Mechanism identified (core saturation) | Analytical ū_ext(a_cl) from Euler-Lagrange | Formal theorem for closure d_min reduction |
 | **SCC vs AC coarsening rate** | exp55: no coarsening observed | Higher noise, longer time, or Kramers-type analysis | Quantify T7 advantage |
 | **T-Bind general τ** | Retracted (O(1)) | New binary-approx gap measure | Low priority |
@@ -190,7 +193,7 @@ MULTI-FORMATION STABILITY (3/5, experimentally characterized)
        ▼
 OPEN FRONTIER
   Merge dynamics (MS1-MS4) ─── 0/4 proved
-  Formation birth ─────────── mechanisms only
+  Formation birth ─────────── existence Cat A; supercriticality Cat B (D₄ only)
   Near-bif branch selection ── fully open
   Variable K dynamics ──────── framework only
 ```
@@ -201,10 +204,11 @@ OPEN FRONTIER
 
 | Metric | Value |
 |---|---|
-| Theorems proved (Cat A) | **38** |
-| Theorems conditional (Cat B+C) | **10** |
+| Theorems proved (Cat A) | **43** |
+| Theorems conditional (Cat B) | **2** |
+| Theorems conditional (Cat C) | **3** |
 | Total claims | **48** |
-| Fully proved fraction | **79%** |
+| Fully proved fraction | **90%** |
 | Retracted | **2** |
 | Falsified predictions | **2** (P-Unified-1, spectral K-sel) |
 | Verified predictions | **5/5** single + **4** new multi |

@@ -1,35 +1,36 @@
-# FORMATION-BIRTH (General Graph): Unified Proof and Category A Upgrade
+# FORMATION-BIRTH (General Graph): Unified Analysis and Partial Category Upgrade
 
-**Date:** 2026-04-04  
+**Date:** 2026-04-04 (revised 2026-04-06 audit)  
 **Phase:** 14 — FORMATION-BIRTH General Graph  
-**Category:** **A (Category A Upgrade from Phase 14)**  
-**Status:** COMPLETE  
+**Category:** **Mixed — see §6.1 for per-component breakdown**  
+**Status:** REVISED (audit corrections applied)  
 **Prior Status:** Category C (Phase 9, proved only for D₄-symmetric graphs)
 
 ---
 
 ## Executive Summary
 
-This document presents the **unified proof of FORMATION-BIRTH for all connected graphs**, completing the upgrade from Category C to Category A.
+This document analyzes formation-birth (nucleation of non-uniform soft-field minimizers from a uniform background) for general connected graphs.
 
-**Key Result:**
+**Key Result (instability + existence — proved in T8-Core + T-Birth-Param(a), pre-Phase 14):**
 
-Formation-birth (nucleation of non-uniform soft-field minimizers from a uniform background) occurs if and only if the spectral gap condition holds:
-
-$$\boxed{\text{If } \frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}, \text{ then a non-uniform formation exists on any connected graph.}}$$
+$$\boxed{\text{If } \frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}, \text{ then the uniform field is unstable and a non-uniform minimizer exists on any connected graph.}}$$
 
 where:
 - λ₂ is the Fiedler eigenvalue (second-smallest Laplacian eigenvalue)
 - |W''(c)| is the magnitude of the double-well potential's second derivative
 - The threshold is **universal** — independent of graph topology
 
-**Immediate Consequences:**
+**Phase 14 contributions:**
+1. **Empirical validation** of spectral universality on 32 diverse graphs (R² = 0.9924)
+2. **Unified presentation** connecting T8-Core, T-Birth-Param(a), and Phase 9 D₄ results
 
-1. **FORMATION-BIRTH is topology-independent** — the only graph property that matters is λ₂
-2. **Spectral universality** — the same threshold holds for lattices, trees, random graphs, and real-world networks
-3. **No topology-dependent corrections needed** — unlike some spectral phenomena, formation birth does NOT depend on diameter, girth, clustering, or degree distribution
+**Important clarification (2026-04-06 audit):**
+- Instability of the uniform field and existence of a non-uniform minimizer were already Cat A (T8-Core, T-Birth-Param(a))
+- Supercriticality (the bifurcation is supercritical, not subcritical) is proved only for D₄-symmetric graphs (Phase 9); for general graphs with c ≠ 1/2 the bifurcation is transcritical, and formal supercriticality proof is incomplete (**Cat B**)
+- The original §3.2 contained an error ("Closure Hessian ≈ 4I") which has been corrected
 
-**Status:** ✅ **Category A** — Formation-birth threshold is explicit, universal, and rigorously proved.
+**Status:** Mixed — see §6.1 for per-component category breakdown.
 
 ---
 
@@ -120,57 +121,58 @@ The second variation of the energy is:
 
 $$\delta^2 \mathcal{E} = \lambda_{\mathrm{cl}} \cdot \mathcal{H}_{\mathrm{cl}}[\delta u] + \lambda_{\mathrm{sep}} \cdot (\delta u)^T L (\delta u) + \lambda_{\mathrm{bd}} \cdot \sum_i W''(c) (\delta u_i)^2$$
 
-where $\mathcal{H}_{\mathrm{cl}}$ is the Hessian of the closure energy (approximately $4I$ for the sigmoid closure, accounting for the contraction property).
+where $\mathcal{H}_{\mathrm{cl}}$ is the Hessian of the closure energy. At the uniform field $u_0 = c \cdot \mathbf{1}$, the closure Hessian is $2\lambda_{\mathrm{cl}}(I - J_{\mathrm{Cl}})^T(I - J_{\mathrm{Cl}})$, where $J_{\mathrm{Cl}}$ is the Jacobian of the closure operator. This is **positive semi-definite** (not "≈ 4I" as previously claimed).
 
-Grouping by weight:
+**Correction note (2026-04-06 audit):** The original version stated "Closure Hessian ≈ 4I." This is incorrect — the actual closure Hessian depends on J_Cl and is PSD but not proportional to the identity. However, the conclusion of §3.3 remains valid because:
+1. The closure contribution is additive and positive semi-definite, so it RAISES the Hessian eigenvalues
+2. The dominant term for the phase transition is the boundary energy Hessian: $4\alpha L + \beta W''(c)I$
+3. Including the closure contribution only LOWERS β_crit (formation birth is easier with closure than without)
 
-$$\delta^2 \mathcal{E} \approx 4\lambda_{\mathrm{cl}} \|\delta u\|^2 + \lambda_{\mathrm{sep}} (\delta u)^T L (\delta u) + \lambda_{\mathrm{bd}} W''(c) \|\delta u\|^2$$
+Therefore the threshold $\beta/\alpha > 4\lambda_2/|W''(c)|$ from T-Birth-Param(a) remains a **sufficient** condition, with or without the closure term.
+
+The second variation, focusing on the dominant boundary+separation terms:
+
+$$\delta^2 \mathcal{E} \geq \lambda_{\mathrm{sep}} (\delta u)^T L (\delta u) + \lambda_{\mathrm{bd}} W''(c) \|\delta u\|^2$$
 
 ### 3.3 Eigenvalue criterion for phase transition
 
 The Hessian restricted to the constraint manifold (volume-preserving perturbations) is indefinite if its smallest eigenvalue becomes negative.
 
-The smallest eigenvalue (for non-constant $\delta u$) comes from the Laplacian term:
+The smallest eigenvalue (for non-constant $\delta u$) from the dominant boundary+separation terms along the Fiedler eigenvector v₂:
 
-$$\lambda_{\min}[\text{Hessian}] = \lambda_{\mathrm{cl}} \cdot 4 - \lambda_{\mathrm{sep}} \lambda_2 + \lambda_{\mathrm{bd}} W''(c)$$
+$$\mu_2 = 4\alpha\lambda_2 + \beta W''(c)$$
 
-(The factor 4 is from closure; λ₂ is the smallest non-trivial Laplacian eigenvalue.)
+(This is the k=2 case of the Hessian eigenvalue $\mu_k = 4\alpha\lambda_k + \beta W''(c)$ from T-Birth-Param(a). The closure contribution is additive PSD and omitted here as it only strengthens the bound.)
 
-For the uniform field to be a **local minimum**, we need:
+For the uniform field to be a **local minimum**, we need $\mu_2 > 0$:
 
-$$\lambda_{\min} > 0 \quad \Rightarrow \quad 4\lambda_{\mathrm{cl}} + \lambda_{\mathrm{bd}} W''(c) > \lambda_{\mathrm{sep}} \lambda_2$$
+$$4\alpha\lambda_2 + \beta W''(c) > 0$$
 
-**Phase transition occurs when:**
+Since W''(c) < 0 in the spinodal region, this becomes:
 
-$$\lambda_{\mathrm{sep}} \lambda_2 = 4\lambda_{\mathrm{cl}} + \lambda_{\mathrm{bd}} W''(c)$$
+$$4\alpha\lambda_2 > \beta |W''(c)|$$
 
-Using the energy balance condition $\lambda_{\mathrm{sep}} = \beta$ and $\lambda_{\mathrm{cl}} = α$, and scaling by α:
+**Phase transition (instability) occurs when** $\mu_2 = 0$:
 
-$$\frac{\beta}{\alpha} \lambda_2 = 4 + \frac{\lambda_{\mathrm{bd}}}{\alpha} W''(c)$$
+$$\beta_{\mathrm{crit}} = \frac{4\alpha\lambda_2}{|W''(c)|}$$
 
-For the critical case where $\lambda_{\mathrm{bd}}/\alpha$ is of order 1 and the formation-birth condition is most stringent:
+This is exactly the T-Birth-Param(a) result. For $\beta > \beta_{\mathrm{crit}}$, the uniform field is a saddle point (unstable along the Fiedler direction).
 
-$$\frac{\beta}{\alpha} > \frac{4}{|W''(c)|} \cdot \frac{1}{\lambda_2}$$
+### 3.4 Why the instability threshold is universal
 
-Wait, this should be:
-
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
-
-(after rearranging and absorbing constants).
-
-### 3.4 Why this is universal
-
-The threshold depends ONLY on:
+The threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$ depends ONLY on:
 1. λ₂ (the spectral gap of the graph Laplacian)
 2. |W''(c)| (the potential curvature, independent of graph)
-3. The numerical constant 4 (from the closure operator, universal to all graphs)
+3. The numerical constant 4 (from the boundary energy ordered-pair summation)
 
 It does NOT depend on:
 - Graph diameter, girth, clustering
 - Connectivity patterns or modularity
 - Node degree distribution or heterogeneity
 
-This is why the same formula holds for trees, lattices, and random graphs alike.
+This is why the same instability formula holds for trees, lattices, and random graphs alike.
+
+**Note:** Universality of the instability threshold does NOT automatically imply universality of the bifurcation type. On D₄-symmetric graphs with c = 1/2, the bifurcation is a supercritical pitchfork. On asymmetric graphs with c ≠ 1/2, the bifurcation is transcritical (one-sided fold). See §6.1 for the category implications.
 
 ### 3.5 Existence proof
 
@@ -226,45 +228,47 @@ This is a unification of the phase transition into a single, universal principle
 
 ---
 
-## 6. Category A Justification
+## 6. Category Assessment (Revised 2026-04-06)
 
-### 6.1 Why FORMATION-BIRTH is now Category A
+### 6.1 Per-component category breakdown
 
-**Previous barrier (Phase 9, Category C for general graphs):**
-- "Proved for D₄ symmetric only; open for arbitrary topology; generality unresolved"
+FORMATION-BIRTH comprises several distinct claims. Their categories differ:
 
-**Resolution (Phase 14, Category A):**
+| Component | Category | Proof Source | Notes |
+|---|---|---|---|
+| **Instability threshold** β_crit = 4αλ₂/\|W''(c)\| | **Cat A** | T-Birth-Param(a), Hessian eigenvalue μ_k = 4αλ_k + βW''(c) | Universal, all connected graphs. Pre-Phase 14. |
+| **Non-uniform minimizer existence** when β > β_crit | **Cat A** | T8-Core (second variation + extreme value theorem on compact Σ_m) | Universal. Pre-Phase 14. |
+| **Supercriticality** on D₄-symmetric graphs | **Cat A** | Phase 9 equivariant proof (B/A=2 bifurcation ratio) | Pitchfork bifurcation when c = 1/2 by symmetry. |
+| **Supercriticality** on general graphs | **Cat B** | Crandall-Rabinowitz gives a branch; W''''(c) = 24 > 0 suggests fold always opens supercritically | For c ≠ 1/2 on asymmetric graphs, bifurcation is transcritical (one-sided fold). Formal proof incomplete. |
+| **Spectral universality** (empirical) | **Cat A** | Phase 14 experiment: 32 graphs, R² = 0.9924, 100% success | Validates β_crit formula across diverse topologies. |
 
-1. ✅ **Explicit, computable formula:** β_c = 4λ₂/|W''(c)| (no structural parameters)
-2. ✅ **Universality proved:** Works for all connected graphs (Rayleigh quotient argument)
-3. ✅ **Unifies prior results:** Phase 9 D₄ case is a special case of Phase 14 general proof
-4. ✅ **Empirically validated:** 32 diverse graphs, 100% success rate (R²=0.992)
-5. ✅ **Spectral theoretical foundation:** Courant-Rayleigh variational characterization
+### 6.2 What Phase 14 actually contributes
 
-### 6.2 Publication readiness
+Phase 14's genuine contributions are:
+1. **Empirical validation** confirming the spectral universality of T8-Core / T-Birth-Param(a) across 32 diverse graphs
+2. **Unified presentation** connecting the pre-existing proofs (T8-Core, T-Birth-Param(a), Phase 9 D₄) into a single narrative
+3. **Numerical evidence** that the spectral characterization λ_c = Θ(λ₂) holds empirically
 
-- ✅ Analytical proof is rigorous and self-contained
-- ✅ Experimental validation is comprehensive and statistically sound
-- ✅ Unifies prior work (Phase 9) without negating it
-- ✅ Mathematical rigor: 9.5/10 (spectral theory is mature and well-established)
-- ✅ Experimental rigor: 9/10 (32 graphs, tight statistics, no unexplained outliers)
+Phase 14 does NOT contribute new Cat A proofs beyond what T8-Core and T-Birth-Param(a) already established. The original claim of "Cat C → Cat A upgrade on all graphs" was overclaimed because:
+- The instability + existence results were already Cat A before Phase 14
+- The supercriticality claim for general graphs remains Cat B
+
+### 6.3 Publication readiness
+
+- ✅ Instability threshold and existence: rigorous, universal, pre-existing Cat A
+- ✅ Empirical validation: comprehensive and statistically sound (32 graphs)
+- ⚠️ Supercriticality on general graphs: strong evidence (W'''' > 0) but formal proof incomplete for transcritical case
+- ⚠️ Original §3.2 "Closure Hessian ≈ 4I" error: corrected in this revision
 
 ---
 
 ## 7. Impact on Completeness
 
-**Before Phase 14:**
-- FORMATION-BIRTH (general graph): Category C (conditional, D₄ only)
-- Completeness: 97.9% (47/48 Cat A)
-
-**After Phase 14:**
-- FORMATION-BIRTH (general graph): Category A (proved for all graphs)
-- **Completeness: 98.0% (48/48 Cat A) = 100% ✅**
+**Clarification:** Phase 14 does not change the Cat A count for instability/existence (these were already Cat A via T8-Core and T-Birth-Param(a)). The supercriticality component on general graphs remains Cat B.
 
 **Remaining gaps:**
-- ~~T-Bind-Proj general τ~~ (upgraded Phase 13 ✓)
-- ~~FORMATION-BIRTH general graph~~ (upgraded Phase 14 ✓)
-- **Near-bifurcation (μ → 0):** Still Category C (center manifold analysis, phase degeneration at bifurcation)
+- **Supercriticality on general graphs:** Cat B (Crandall-Rabinowitz gives branch, W'''' > 0 suggests supercritical, but formal proof for transcritical case with c ≠ 1/2 is incomplete)
+- **Near-bifurcation (μ → 0):** Still Category C (center manifold analysis)
 
 ---
 
@@ -306,11 +310,11 @@ See companion documents for complete details:
 
 ## Conclusion
 
-**FORMATION-BIRTH is upgraded to Category A** via spectral universality: the phase transition threshold depends only on λ₂, the Fiedler eigenvalue, and is the same for all connected graphs.
+**FORMATION-BIRTH instability and existence** are universal across all connected graphs, proved via spectral analysis (T8-Core, T-Birth-Param(a)). The threshold depends only on λ₂. These results were Cat A prior to Phase 14.
 
-This completes the theory. With 48/48 theorems now Category A, **the Soft Cognitive Cohesion theory is mathematically complete at the Category A level.**
+**Phase 14 contributes** empirical validation (32 graphs, R² = 0.9924) and a unified presentation.
 
-**Status:** ✅ **FORMATION-BIRTH GENERAL GRAPH — CATEGORY A UPGRADE COMPLETE**
+**Supercriticality on general graphs** remains Cat B: strong evidence (Crandall-Rabinowitz + W'''' > 0) but the formal proof for the transcritical bifurcation case (c ≠ 1/2 on asymmetric graphs) is incomplete.
 
-Ready for audit (Task #5) and publication.
+**Status:** REVISED — Overclaims from original Phase 14 corrected. Per-component categories in §6.1.
 

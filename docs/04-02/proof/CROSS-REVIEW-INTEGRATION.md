@@ -5,6 +5,8 @@
 **Status:** complete
 **Task:** #5 — Cross-review all proofs, identify gaps, synthesize
 
+> **⚠️ Audit note (2026-04-06):** Phase 9-14 overclaimed "48/48 Cat A, 100% COMPLETE." Corrected to 43/2/3 (90%). This document's counts (36 Cat A after 04-03 gap resolution) were accurate at time of writing. Formation Birth supercriticality on general graphs is Cat B (D₄ only proved). See CHANGELOG.md 2026-04-06 entry.
+
 ---
 
 ## 1. Proofs Reviewed

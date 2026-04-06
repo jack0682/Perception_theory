@@ -3,8 +3,8 @@
 **Date:** 2026-04-04  
 **Phase:** 14 — FORMATION-BIRTH General Graph  
 **Author:** Perturbation Theory (Phase 14 Task #2)  
-**Status:** ANALYTICAL PROOF  
-**Objective:** Prove β/α > 4λ₂/|W''(c)| suffices for formation birth on ANY connected graph
+**Status:** REVISED (2026-04-06 audit corrections)  
+**Objective:** Analyze β/α > 4λ₂/|W''(c)| threshold for formation birth on general graphs
 
 ---
 
@@ -182,7 +182,7 @@ The smallest eigenvalue (for non-constant u) comes from λ₂:
 
 $$a_0 - \frac{\beta}{\alpha} \lambda_2 = 0 \quad \Rightarrow \quad \frac{\beta}{\alpha} = \frac{a_0}{\lambda_2}$$
 
-From closure analysis (sigmoid properties), a₀ = 4/|W''(c)|. Thus:
+From boundary energy analysis (ordered-pair summation convention), a₀ = 4/|W''(c)|. Thus:
 
 $$\frac{\beta}{\alpha} = \frac{4/|W''(c)|}{\lambda_2} = \frac{4}{|W''(c)| \lambda_2}$$
 
@@ -208,35 +208,31 @@ By the variational argument above, the same threshold holds for ANY graph. The l
 
 ### 5.3 Why the same constant?
 
-The factor 4 in 4λ₂/|W''(c)| comes from:
-- Sigmoid closure operator: f(u) = σ(a_cl(u - τ)) has derivative f'(u) with max value a_cl/4
-- Double-well potential: W''(c) evaluated at spinodal point
-- These are universal properties, not specific to D₄ or any topology
+The factor 4 in 4λ₂/|W''(c)| comes from the ordered-pair summation in the boundary energy (E_bd smoothness = 2α·u^T·L·u, gradient = 4α·L·u — the factor 4 arises from summing over both (i,j) and (j,i) pairs). Combined with the double-well potential W''(c) evaluated at the spinodal point, these are universal properties independent of graph topology.
+
+**Correction (2026-04-06 audit):** The original text attributed the factor 4 to "sigmoid closure operator." This is incorrect — the factor comes from the boundary energy's ordered-pair summation convention, not from closure. The closure Hessian is PSD but not proportional to 4I.
 
 ---
 
-## 6. Implication: FORMATION-BIRTH is Category A
+## 6. Category Assessment (Revised 2026-04-06)
 
 ### 6.1 Theorem statement
 
-**FORMATION-BIRTH (General Graph, Category A).**
+**FORMATION-BIRTH Instability + Existence (General Graph, Category A — pre-Phase 14).**
 
 For any connected graph G with Laplacian eigenvalue λ₂:
 
-If β/α > 4λ₂/|W''(c)|, then a non-uniform energy minimizer (formation-like) exists on the volume-constrained manifold Σ_m.
+If β/α > 4λ₂/|W''(c)|, then the uniform field is unstable (saddle point) and a non-uniform energy minimizer exists on Σ_m.
 
-This theorem holds for:
-- **Any connected graph:** lattices, random, trees, real-world networks
-- **All parameters:** as long as β/α exceeds the spectral threshold
-- **All field values:** c ∈ (spinodal region)
+**Proof sources:** T-Birth-Param(a) (Hessian eigenvalue analysis) + T8-Core (existence via compactness). These are universal and were Cat A before Phase 14.
 
-### 6.2 Why this is Category A
+### 6.2 What remains Cat B
 
-1. ✅ **Explicit, computable theorem:** β_c = 4λ₂/|W''(c)| is a closed-form expression
-2. ✅ **Universality:** Works for all connected graphs (no exceptions)
-3. ✅ **Rigorous proof:** Variational + Rayleigh quotient argument with no gaps
-4. ✅ **Validated by Phase 9:** Reduces to known Phase 9 result for D₄ case
-5. ✅ **Consistent with empirical:** Task #1 (spectral data) shows no topology-dependence of β_c vs λ₂
+**Supercriticality on general graphs:** For D₄-symmetric graphs with c = 1/2, Phase 9 proved supercritical pitchfork bifurcation (Cat A). For general graphs with c ≠ 1/2, the bifurcation is transcritical. Crandall-Rabinowitz gives a local branch, and W''''(c) = 24 > 0 suggests the fold always opens to the supercritical side, but this is not yet a complete formal proof. **Category B.**
+
+### 6.3 What this document contributes
+
+The variational/Rayleigh-quotient analysis here provides an alternative presentation of the T-Birth-Param(a) result, unified with Phase 9. It does not establish new Cat A results beyond those already proved.
 
 ---
 
@@ -252,20 +248,13 @@ These are interesting but not necessary for the Category A claim: "Formation exi
 
 ## 8. Summary and Conclusion
 
-**Main Result:** FORMATION-BIRTH is a **universal spectral phenomenon.** The phase transition threshold depends only on λ₂, the spectral gap of the graph Laplacian.
+**Main Result:** The FORMATION-BIRTH instability threshold is a **universal spectral phenomenon.** The phase transition threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$ depends only on λ₂, proved via T-Birth-Param(a) and T8-Core (pre-Phase 14, Cat A).
 
-**Proof method:** Variational analysis via Rayleigh quotient on the Laplacian eigenvalues.
+**Phase 14 contribution:** Empirical validation on 32 graphs and unified presentation.
 
-**Category A justification:** Explicit closed-form threshold, universal across all graphs, rigorous proof without gaps.
-
-**Next steps (Phase 14):**
-- Task #3 (experiment-runner): Empirical validation on 30+ diverse graphs (confirm β_c formula)
-- Task #4 (synthesis): Write FORMATION-BIRTH-GENERAL.md (final unified theorem, Category A)
-- Task #5 (audit): Sign-off on publication readiness (Target: 98% completeness, 48/48 Cat A)
+**Open:** Supercriticality on general graphs (Cat B) — transcritical bifurcation case needs formal proof.
 
 ---
 
-**Status:** ✅ **SPECTRAL PERTURBATION THEORY COMPLETE**
-
-Analytical proof of universal FORMATION-BIRTH threshold established. Ready for empirical validation (Task #3) and synthesis (Task #4).
+**Status:** REVISED — Instability threshold is universal (Cat A, pre-Phase 14). Supercriticality on general graphs remains Cat B.
 
