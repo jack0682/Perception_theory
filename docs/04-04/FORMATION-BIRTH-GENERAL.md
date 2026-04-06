@@ -239,7 +239,9 @@ FORMATION-BIRTH comprises several distinct claims. Their categories differ:
 | **Instability threshold** β_crit = 4αλ₂/\|W''(c)\| | **Cat A** | T-Birth-Param(a), Hessian eigenvalue μ_k = 4αλ_k + βW''(c) | Universal, all connected graphs. Pre-Phase 14. |
 | **Non-uniform minimizer existence** when β > β_crit | **Cat A** | T8-Core (second variation + extreme value theorem on compact Σ_m) | Universal. Pre-Phase 14. |
 | **Supercriticality** on D₄-symmetric graphs | **Cat A** | Phase 9 equivariant proof (B/A=2 bifurcation ratio) | Pitchfork bifurcation when c = 1/2 by symmetry. |
-| **Supercriticality** on general graphs | **Cat B** | Crandall-Rabinowitz gives a branch; W''''(c) = 24 > 0 suggests fold always opens supercritically | For c ≠ 1/2 on asymmetric graphs, bifurcation is transcritical (one-sided fold). Formal proof incomplete. |
+| **Supercriticality** on general graphs (branch existence) | **Cat A** | Theorem 4 (§4 of FORMATION-BIRTH-THEOREM.md): C-R local branch + T8-Core global minimizer + Berge continuity | Formation branch exists for ALL β > β_crit on any connected graph. Global argument, no spectral gap needed. |
+| **Supercriticality** on general graphs (local supercriticality, $\delta > \lambda_2|W''|/(2\alpha)$) | **Cat A** | Theorem 4(b): $g_{sss} > 0$ via $W'''' = 24$ dominance, Parseval-bounded L-S correction | Covers all graphs with $\lambda_3 > (1 + |W''|/(2\alpha))\lambda_2$ — the generic/typical case. |
+| **Supercriticality** on general graphs (narrow gap $\delta \leq \lambda_2|W''|/(2\alpha)$) | **Cat B** | Formation exists (Cat A via T8-Core), but local C-R branch direction unproved | Uncommon edge case: $\lambda_3$ very close to (but not equal to) $\lambda_2$. Numerically always supercritical. |
 | **Spectral universality** (empirical) | **Cat A** | Phase 14 experiment: 32 graphs, R² = 0.9924, 100% success | Validates β_crit formula across diverse topologies. |
 
 ### 6.2 What Phase 14 actually contributes
@@ -267,7 +269,7 @@ Phase 14 does NOT contribute new Cat A proofs beyond what T8-Core and T-Birth-Pa
 **Clarification:** Phase 14 does not change the Cat A count for instability/existence (these were already Cat A via T8-Core and T-Birth-Param(a)). The supercriticality component on general graphs remains Cat B.
 
 **Remaining gaps:**
-- **Supercriticality on general graphs:** Cat B (Crandall-Rabinowitz gives branch, W'''' > 0 suggests supercritical, but formal proof for transcritical case with c ≠ 1/2 is incomplete)
+- **Supercriticality on general graphs (narrow spectral gap):** Cat B (when $\lambda_3$ very close to $\lambda_2$ but not degenerate; branch existence is Cat A, only local direction unproved)
 - **Near-bifurcation (μ → 0):** Still Category C (center manifold analysis)
 
 ---
@@ -314,7 +316,7 @@ See companion documents for complete details:
 
 **Phase 14 contributes** empirical validation (32 graphs, R² = 0.9924) and a unified presentation.
 
-**Supercriticality on general graphs** remains Cat B: strong evidence (Crandall-Rabinowitz + W'''' > 0) but the formal proof for the transcritical bifurcation case (c ≠ 1/2 on asymmetric graphs) is incomplete.
+**Supercriticality on general graphs** is now mostly resolved (Theorem 4, §4 of FORMATION-BIRTH-THEOREM.md): branch existence is **Cat A** for all graphs (C-R + T8-Core + Berge); local supercriticality ($g_{sss} > 0$) is **Cat A** when the spectral gap satisfies $\delta > \lambda_2|W''(c)|/(2\alpha)$ (the generic case). Only the narrow-gap edge case ($\lambda_3$ very close to $\lambda_2$ but not degenerate) remains **Cat B**.
 
 **Status:** REVISED — Overclaims from original Phase 14 corrected. Per-component categories in §6.1.
 

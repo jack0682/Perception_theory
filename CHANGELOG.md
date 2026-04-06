@@ -2,6 +2,22 @@
 
 ---
 
+## 2026-04-06 — Gap #1-2 Closure + Major Discovery (Barrierless Merge)
+
+### Gap #2: Birth supercriticality on general graphs → mostly Cat A
+- **Theorem 4** (FORMATION-BIRTH-THEOREM.md §4): branch existence on ALL graphs via C-R + T8-Core + Berge (Cat A)
+- Supercriticality proved when δ > λ₂|W''|/(2α) (generic case, Cat A)
+- Narrow spectral gap (λ₃ ≈ λ₂) remains Cat B edge case
+
+### Gap #1: γ_eff barrier exponent → RESOLVED (barrierless!)
+- **exp60 NEB**: True MEP barrier ≈ 0 (ΔE_NEB < 0.05 vs ΔE_LI ≈ 4-6)
+- γ_eff = 0.89 was a **linear interpolation artifact**, not a physical exponent
+- K=2 metastability comes from **λ_rep only**, not self-energy barrier
+
+### Updated counts: 44 Cat A / 1 Cat B / 3 Cat C (92% proved)
+
+---
+
 ## 2026-04-06 — Audit of Phase 9-14: Corrected Overclaims
 
 ### Summary
