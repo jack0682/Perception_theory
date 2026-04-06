@@ -167,7 +167,6 @@ All tests pass. The suite includes 89 core tests (energy, operators, params, dia
 | Cat A/B/C count consistent across docs | ❌ INCONSISTENT |
 | Remaining overclaims identified | ⚠️ 4 issues found |
 | Theory coherence after corrections | ✅ COHERENT |
-| Core tests passing | ✅ 89/89 |
-| Full test suite | ⏳ Timeout (likely environmental) |
+| Full test suite passing | ✅ 175/175 |
 
 **Bottom line:** The theory is sound but the bookkeeping is stale. The Canonical Spec §13 needs updating to reflect the 04-06 retractions before the theory can be considered stabilized. The HONEST-RECOUNT provides the corrected figures: **35 Cat A / 4 Cat B / 5 Cat C / 5 retracted (71% fully proved).** The core results (formation existence, operator axioms, single-formation persistence, predicate-energy bridge) are untouched and solid. The corrections affect the merge barrier theory (manifold error), quantitative fitting claims (d_min, barrier exponent, Beyond-Weyl 33×), and general-graph birth theory — all of which are now honestly categorized.
