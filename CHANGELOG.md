@@ -14,6 +14,15 @@
 - γ_eff = 0.89 was a **linear interpolation artifact**, not a physical exponent
 - K=2 metastability comes from **λ_rep only**, not self-energy barrier
 
+### Persistence Threshold Exact Formula (replaces "β > 7α")
+- **Derived**: β > Γ·ε₁²·α where Γ = 4/(C₁²C₂²)
+- C₁ = (1−θ)−(1−σ(a_cl(1−τ)))(1−J): interior gap from closure-DW tension
+- C₂ = √(W''(0)+2λ_cl(1−J)²): spectral mass from DW + Gram boost
+- J = a_cl(1−η)·σ(z)·(1−σ(z)): closure contraction rate (from recurrence)
+- **"7" decoded**: Γ·ε₁² at ε₁≈0.85 (implicit worst-case assumption)
+- For gentle perturbations: β > β_crit suffices (no extra condition)
+- File: `docs/04-06/PERSISTENCE-THRESHOLD-EQUATION.md`
+
 ### Updated counts: 44 Cat A / 1 Cat B / 3 Cat C (92% proved)
 
 ---
