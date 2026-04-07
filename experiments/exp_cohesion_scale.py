@@ -144,7 +144,6 @@ def main():
         return
 
     # 저장
-    import os
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, 'w') as f:
         json.dump(results, f, indent=2)
