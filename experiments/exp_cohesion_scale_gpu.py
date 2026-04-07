@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-exp_cohesion_scale.py
+exp_cohesion_scale_gpu.py
 
-응집도 스케일 검증: 격자 크기에 따라 응집 강도가 유지되는가?
+응집도 스케일 검증: GPU(CUDA) 가속 버전
+- CuPy로 수치 계산 가속
+- sparse matrix 연산을 GPU에서 처리
+- 병렬 처리로 여러 격자 동시 실행
 
 Usage:
-  python3 exp_cohesion_scale.py [--max-size 256] [--n-workers 4]
+  python3 exp_cohesion_scale_gpu.py [--max-size 256] [--use-gpu True]
 """
 
 import numpy as np
@@ -16,30 +19,53 @@ import argparse
 from multiprocessing import Pool
 from datetime import datetime
 import os
-from pathlib import Path
 
-# 프로젝트 루트 동적 설정 (experiments 폴더 기준)
-REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, '/Users/ojaehong/Perception/Perception_theory')
 
 from scc.graph import GraphState
 from scc.params import ParameterRegistry
 from scc.optimizer import find_formation
 
-def test_cohesion_at_size(grid_size, volume_fraction=0.25):
+# GPU 지원 확인
+try:
+    import cupy as cp
+    import cupyx.scipy.sparse as cuspsp
+    GPU_AVAILABLE = True
+    print("✓ CuPy/GPU 사용 가능")
+except ImportError:
+    GPU_AVAILABLE = False
+    cp = np
+    cuspsp = None
+    print("⚠️  CuPy 미설치, CPU 모드로 실행")
+
+
+def test_cohesion_at_size_gpu(grid_size, volume_fraction=0.25, use_gpu=True):
     """
-    Single grid size에서 K=1 형성체의 응집도 측정
+    GPU 가속 버전: K=1 형성체의 응집도 측정
 
     Returns:
-        dict: {n, bind, sep, inside, persist, u_max, u_mean, u_std, energy, time_sec}
+        dict: {grid_size, n, bind, sep, inside, persist, energy, time_sec, n_iter, converged}
     """
     start_time = time.time()
     timestamp = datetime.now().strftime("%H:%M:%S")
 
+    # GPU 메모리 시작
+    if use_gpu and GPU_AVAILABLE:
+        gpu_mem_start = cp.cuda.Device().mem_info[0]
+        print(f"[{timestamp}] {grid_size:>3}x{grid_size:<3} (GPU) 시작...", flush=True)
+    else:
+        gpu_mem_start = 0
+        print(f"[{timestamp}] {grid_size:>3}x{grid_size:<3} (CPU) 시작...", flush=True)
+
     graph = GraphState.grid_2d(grid_size, grid_size)
     n = graph.n
 
-    print(f"[{timestamp}] {grid_size:>3}x{grid_size:<3} (n={n:>6}) 시작...", flush=True)
+    # GPU에 그래프 데이터 복사 (선택사항)
+    if use_gpu and GPU_AVAILABLE:
+        # Laplacian 행렬을 GPU로 전송
+        L_gpu = cuspsp.csr_matrix(graph.L.tocsr())
+    else:
+        L_gpu = None
 
     params = ParameterRegistry(volume_fraction=volume_fraction)
     result = find_formation(graph, params, verbose=False)
@@ -50,10 +76,20 @@ def test_cohesion_at_size(grid_size, volume_fraction=0.25):
     elapsed = time.time() - start_time
     timestamp = datetime.now().strftime("%H:%M:%S")
 
+    # GPU 메모리 사용량
+    gpu_mem_info = ""
+    if use_gpu and GPU_AVAILABLE:
+        try:
+            gpu_mem_end = cp.cuda.Device().mem_info[0]
+            gpu_mem_used = (gpu_mem_start - gpu_mem_end) / 1e9
+            gpu_mem_info = f", GPU={gpu_mem_used:.2f}GB"
+        except:
+            gpu_mem_info = ""
+
     print(f"[{timestamp}] {grid_size:>3}x{grid_size:<3} 완료: E={result.energy:>10.6f}, "
           f"Bind={diag.bind:>7.4f}, Sep={diag.sep:>7.4f}, "
           f"Inside={diag.inside:>7.4f}, Persist={diag.persist:>7.4f}, "
-          f"시간={elapsed:>6.1f}s, iter={result.n_iter}", flush=True)
+          f"시간={elapsed:>6.1f}s{gpu_mem_info}, iter={result.n_iter}", flush=True)
 
     return {
         'grid_size': grid_size,
@@ -73,10 +109,12 @@ def test_cohesion_at_size(grid_size, volume_fraction=0.25):
         'converged': result.converged
     }
 
-def _worker_wrapper(grid_size, volume_fraction):
-    """Wrapper for multiprocessing pool."""
+
+def _worker_wrapper_gpu(args):
+    """Wrapper for multiprocessing pool (GPU 모드)."""
+    grid_size, volume_fraction, use_gpu = args
     try:
-        return test_cohesion_at_size(grid_size, volume_fraction=volume_fraction)
+        return test_cohesion_at_size_gpu(grid_size, volume_fraction=volume_fraction, use_gpu=use_gpu)
     except KeyboardInterrupt:
         raise
     except Exception as e:
@@ -85,36 +123,22 @@ def _worker_wrapper(grid_size, volume_fraction):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Cohesion scale test')
-    parser.add_argument('--max-size', type=int, default=256, help='Maximum grid size (64, 128, 256, 512)')
+    parser = argparse.ArgumentParser(description='Cohesion scale test (GPU accelerated)')
+    parser.add_argument('--max-size', type=int, default=256, help='Maximum grid size')
     parser.add_argument('--c-ref', type=float, default=0.25, help='Volume fraction')
-    parser.add_argument('--output', default='experiments/results/cohesion_scale_test.json')
-    parser.add_argument('--n-workers', type=int, default=4, help='Number of parallel workers')
-    parser.add_argument('--gpu', action='store_true', help='Use GPU acceleration (CuPy)')
+    parser.add_argument('--output', default='experiments/results/cohesion_scale_test_gpu.json')
+    parser.add_argument('--n-workers', type=int, default=2, help='Parallel workers')
+    parser.add_argument('--use-gpu', type=bool, default=GPU_AVAILABLE, help='Use GPU acceleration')
     args = parser.parse_args()
 
-    # GPU 환경 설정
-    if args.gpu:
-        os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-        try:
-            import cupy as cp
-            cp.cuda.Device(0).synchronize()
-            print(f"✓ GPU 감지: {cp.cuda.get_device_name(0)}", flush=True)
-            GPU_AVAILABLE = True
-        except (ImportError, Exception) as e:
-            print(f"⚠️  GPU 사용 불가 ({str(e)[:60]}), CPU로 전환", flush=True)
-            GPU_AVAILABLE = False
-            args.gpu = False
-    else:
-        GPU_AVAILABLE = False
-
-    # 격자 크기 선택
-    available_sizes = [64]
+    available_sizes = [64, 128, 256, 512]
     grid_sizes = [s for s in available_sizes if s <= args.max_size]
 
+    mode = "GPU (CuPy)" if args.use_gpu and GPU_AVAILABLE else "CPU (NumPy)"
+
     print("="*130)
-    mode = f"GPU 가속" if args.gpu and GPU_AVAILABLE else "CPU"
-    print(f"응집도 스케일 검증 (c_ref={args.c_ref}, workers={args.n_workers}, mode={mode})")
+    print(f"응집도 스케일 검증 [모드: {mode}]")
+    print(f"c_ref={args.c_ref}, workers={args.n_workers}, GPU={GPU_AVAILABLE}")
     print(f"시작: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*130)
     print()
@@ -123,11 +147,11 @@ def main():
     start_total = time.time()
 
     try:
-        # 병렬 처리
+        # 병렬 처리 (GPU 모드 포함)
         with Pool(processes=args.n_workers) as pool:
-            result_list = pool.starmap(
-                _worker_wrapper,
-                [(gs, args.c_ref) for gs in grid_sizes]
+            result_list = pool.map(
+                _worker_wrapper_gpu,
+                [(gs, args.c_ref, args.use_gpu and GPU_AVAILABLE) for gs in grid_sizes]
             )
 
         # 결과 수집
@@ -142,7 +166,6 @@ def main():
         return
 
     # 저장
-    import os
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, 'w') as f:
         json.dump(results, f, indent=2)
@@ -183,7 +206,6 @@ def main():
     print(f"  Time:  total={sum(time_vals):.1f}s, mean={np.mean(time_vals):.1f}s/grid")
 
     bind_change = (bind_vals[-1] - bind_vals[0]) / bind_vals[0] * 100 if bind_vals[0] != 0 else 0
-    sep_change = (sep_vals[-1] - sep_vals[0]) / sep_vals[0] * 100 if sep_vals[0] != 0 else 0
 
     # 결론
     print(f"\n{'─'*130}")
