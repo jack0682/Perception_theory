@@ -2,7 +2,41 @@
 
 ---
 
-## 2026-04-07 — F''(M/2) Computation + Spec/Papers Correction
+## 2026-04-07 (afternoon) — exp62 vs exp63 Divergence: K=2 Flavours and Grid-Size Effects
+
+### Summary
+Deep analysis of F''(M/2) sign flip between exp62 (mass sweep, global) and exp63 (direct Hessian, local) reveals NOT a contradiction but two distinct K=2 configuration types:
+- **Type A (centered):** u₁ ≈ u₂, symmetric on mass-transfer manifold, found by exp62
+- **Type B (off-center):** u₁ ≠ u₂, asymmetric preference, found by exp63
+
+Grid size (15×15 vs 20×20) determines which type dominates. On 20×20, λ_sep parameter governs: low λ_sep (K-Weak) → Type B, high λ_sep (K-Sep) → Type A.
+
+### Files Created
+- `docs/04-07/theory/EXP62-EXP63-DIVERGENCE.md` — Complete methodological divergence analysis
+- `docs/04-07/analysis/K2-FLAVOURS-AND-GRID-SIZE.md` — K=2 type classification and grid-size effects
+
+### Key Findings
+1. **All 4 configs show F'' sign flip:** −6e−3 (exp62) vs +0.11 (exp63) for 15×15_c0.5, etc.
+2. **Non-convergence of F''(h):** 15×15_c0.6 and 20×20_c0.5 show sign flips at intermediate h, indicating valley-hopping
+3. **Asymmetry metric:** ε>0 vs ε<0 energy imbalance reveals K=2 type
+   - 20×20_c0.6: asymmetry +0.375 (strong), λ_sep=0.108 (tiny) → Type B confirmed
+   - 20×20_c0.5: asymmetry −0.061 (weak), λ_sep=0.202 (large) → Type A confirmed
+   - 15×15 configs: Geometric grid-size effects dominate λ_sep parameter
+4. **ACF[1] as type indicator:** ACF[1]>+0.6 (Type A, monotonic) vs ACF[1]<−0.2 (Type B, valley-hopping)
+
+### Theoretical Implications
+- F''(M/2) upgraded from Cat B (parameter-dependent) to **Cat C (landscape-dependent)** — requires specification of which K=2 type
+- Regime classification (T-Persist-K-Sep vs T-Persist-K-Weak) may need grid-size term
+- Suggests exp65 (formation tracking) to resolve K=2 type via direct spatial/mass observation
+
+### Open Questions
+- Why is 15×15_c0.5 anomalous (high λ_sep but Type B)?
+- Can λ_sep asymmetry coupling be formalized as Λ_coupling(n)?
+- Does formation tracking confirm ACF[1] proxy for K=2 type?
+
+---
+
+## 2026-04-07 (morning) — F''(M/2) Computation + Spec/Papers Correction
 
 ### Summary
 Computed F''(M/2) numerically (exp62, exp63), confirmed parameter-dependent sign (Cat B). Updated Canonical Spec §13 to honest 35A/4B/5C/5R. Updated both papers with merge theorem retraction and corrected counts. d_min formula confirmed as Cat B (regression fit).
@@ -34,6 +68,7 @@ Computed F''(M/2) numerically (exp62, exp63), confirmed parameter-dependent sign
 - F''(M/2) formal characterization of parameter regimes where sign flips
 - d_min analytical derivation (tanh profile + volume balance)
 - Strong self-referential transport uniqueness
+- **[NEW]** K=2 type classification via formation tracking (exp65)
 
 ---
 
