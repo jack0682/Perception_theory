@@ -2,6 +2,41 @@
 
 ---
 
+## 2026-04-07 — F''(M/2) Computation + Spec/Papers Correction
+
+### Summary
+Computed F''(M/2) numerically (exp62, exp63), confirmed parameter-dependent sign (Cat B). Updated Canonical Spec §13 to honest 35A/4B/5C/5R. Updated both papers with merge theorem retraction and corrected counts. d_min formula confirmed as Cat B (regression fit).
+
+### Files Created
+- `docs/04-07/INDEX.md` — Session index
+- `docs/04-07/theory/F-DOUBLE-PRIME-COMPUTATION.md` — F''(M/2) analysis and results
+- `experiments/exp62_f_double_prime.py` — Mass sweep with fixed normalization
+- `experiments/exp63_hessian_mass_transfer.py` — Direct Hessian at K=2 minimum
+- `experiments/results/exp62_f_double_prime.json` — Mass sweep results
+- `experiments/results/exp63_hessian_mass_transfer.json` — Hessian test results
+
+### Files Modified
+- `Canonical Spec v2.1.md` — §13 corrected to 35A/4B/5C/5R with erratum, restructured Cat A/B/C/Retracted sections
+- `papers/paper1_math.tex` — Merge theorem retraction, theorem counts corrected (48→35A+4B+5C+5R)
+- `papers/paper2_cogsci.tex` — Merge dynamics and theorem counts corrected
+- `CHANGELOG.md` — This entry
+
+### Key Findings
+- F''(M/2) sign is parameter-dependent: Method 1 (uniform) always +, Method 2 (re-opt) varies with grid/c_ref
+- F'' magnitude O(0.1-1), near-zero — boundary and closure contributions nearly cancel
+- Confirms Stratified Morse Analysis prediction from 04-06
+- d_min formula: regression fit R²=0.987 but not analytical derivation → Cat B
+
+### Test Count
+175 tests passing (unchanged — no code modifications)
+
+### Open Items Carried Forward
+- F''(M/2) formal characterization of parameter regimes where sign flips
+- d_min analytical derivation (tanh profile + volume balance)
+- Strong self-referential transport uniqueness
+
+---
+
 ## 2026-04-06 evening — Retracted 5 overclaims from today
 
 ### Retractions

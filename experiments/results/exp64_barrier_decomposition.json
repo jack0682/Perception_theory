@@ -1,0 +1,58 @@
+{
+  "20": {
+    "beta": 20,
+    "barrier_total": 0.6883448029339831,
+    "barrier_bd": 2.851881200565458,
+    "barrier_cl": 0.0,
+    "barrier_sep": 0.0,
+    "delta_bd_at_peak": 1.6873941618360107,
+    "delta_cl_at_peak": -3.185569810696105,
+    "delta_sep_at_peak": -0.7116806181238218,
+    "alpha_max": 0.92,
+    "R_count": 95,
+    "R_partial": 86,
+    "m_total": 134.99999999999915
+  },
+  "30": {
+    "beta": 30,
+    "barrier_total": 0.48421247501875087,
+    "barrier_bd": 0.877851504827504,
+    "barrier_cl": 0.0,
+    "barrier_sep": 0.0,
+    "delta_bd_at_peak": 0.712663950130775,
+    "delta_cl_at_peak": -3.5276316413294158,
+    "delta_sep_at_peak": -0.12883241714324356,
+    "alpha_max": 0.96,
+    "R_count": 79,
+    "R_partial": 95,
+    "m_total": 134.9999999999986
+  },
+  "50": {
+    "beta": 50,
+    "barrier_total": 38.68056598148769,
+    "barrier_bd": 46.43352582748497,
+    "barrier_cl": 0.0,
+    "barrier_sep": 0.0,
+    "delta_bd_at_peak": 45.83670765355686,
+    "delta_cl_at_peak": -5.090464353286086,
+    "delta_sep_at_peak": -6.402939944925919,
+    "alpha_max": 0.74,
+    "R_count": 134,
+    "R_partial": 68,
+    "m_total": 135.00000000000082
+  },
+  "100": {
+    "beta": 100,
+    "barrier_total": 39.995948574181284,
+    "barrier_bd": 44.20168107001132,
+    "barrier_cl": 0.0,
+    "barrier_sep": 0.0,
+    "delta_bd_at_peak": 44.20168107001132,
+    "delta_cl_at_peak": -6.676881959194661,
+    "delta_sep_at_peak": -3.709018945438075,
+    "alpha_max": 0.78,
+    "R_count": 116,
+    "R_partial": 74,
+    "m_total": 135.00000000000034
+  }
+}
