@@ -19,8 +19,17 @@ import os
 from pathlib import Path
 
 # 프로젝트 루트 동적 설정 (experiments 폴더 기준)
-REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+REPO_ROOT = Path(__file__).resolve().parent.parent
+# PYTHONPATH에 추가
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+# 디버그: 경로 확인
+import sys
+if '--debug' in sys.argv or True:  # 항상 출력
+    print(f"[DEBUG] REPO_ROOT: {REPO_ROOT}", file=sys.stderr, flush=True)
+    print(f"[DEBUG] sys.path[0]: {sys.path[0]}", file=sys.stderr, flush=True)
+    print(f"[DEBUG] scc 모듈 경로: {REPO_ROOT / 'scc'}", file=sys.stderr, flush=True)
 
 from scc.graph import GraphState
 from scc.params import ParameterRegistry
