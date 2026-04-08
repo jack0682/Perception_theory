@@ -2,6 +2,55 @@
 
 ---
 
+## 2026-04-08 — Cat B Systematic Review: γ_eff, Birth, d_min
+
+### Summary
+Systematic review of all 4 Cat B items. One upgrade (birth → Cat A), two confirmed Cat B, one pending.
+
+### γ_eff ≈ 0.89 (Cat B confirmed)
+- Ensemble average γ → 1 (Γ-convergence), 0.89 is single-run fluctuation
+- Bootstrap 95% CI: [0.98, 1.12] — all include 1.0
+- γ(β) oscillation is sampling noise, not structural (50-trial bootstrap confirms)
+- A(d_c) formula derived (circle-circle geometry), B_fixed = -11√2/96·P·√α exact
+- B_geom (optimizer adaptation) is the irreducible empirical part
+
+### General Graph Birth (Cat B → Cat A!)
+Three new theorems:
+- **Thm A (Spectral Gap):** λ₃/λ₂ > 9/8 → supercritical for simple λ₂, c=1/2. Tight: counterexamples at λ₃/λ₂ < 1.10
+- **Thm B (Quartic Form):** Q₄(s) = ‖Vs‖₄⁴ > 0 for degenerate λ₂ — supercritical without symmetry
+- **Thm C (Type Classification):** Pitchfork when c=1/2 OR Φ₃=0; transcritical otherwise but a₃>0 always
+- Key insight: Φ₄ > 0 was a red herring; real gap was g_sss (L-S correction vs quartic)
+
+### d_min Formula (Cat B confirmed for regression, new Cat A bound)
+- Regression 4.8 + 0.31√(β/α) - 0.018β/α stays Cat B
+- d_min^SCC < d_min^AC: Cat A (T7-Enhanced + mass redistribution)
+- New exponential tail bound: Cat A but loose (d ≥ 2.5, actual 5-7)
+- Critical correction: c₀ is already 2D; 8-25× discrepancy from pre-asymptotic tanh profile
+- 1D kink comparison identified as path to tight Cat A bound (not yet proved)
+
+### Files Created
+- `docs/04-08/proof/BIRTH-GENERAL-THEOREM.md` — 3 new theorems
+- `docs/04-08/proof/BIRTH-DEGENERACY-ANALYSIS.md` — Quartic form argument
+- `docs/04-08/proof/BIRTH-ASYMMETRIC-C.md` — c≠1/2 bifurcation type
+- `docs/04-08/audit/DMIN-CRITIQUE.md` — 6-issue d_min critique
+- `docs/04-08/audit/DMIN-VERDICT.md` — d_min review verdict
+- `docs/04-08/experiment/DMIN-VERIFICATION.md` — 24-config tail verification
+- `docs/04-08/experiment/dmin_raw_data.json` — Raw profile data
+
+### Test Count
+175 tests passing (unchanged)
+
+### Theorem Status Changes
+- T-Birth-Parametric (general, λ₃/λ₂>9/8 or degenerate): Cat B → **Cat A**
+- T-Birth-Type-Classification: **NEW Cat A**
+
+### Open Items
+- Beyond-Weyl 33× review (4th Cat B, not started)
+- d_min 1D kink comparison bound (identified but not proved)
+- γ_eff oscillation documented as sampling noise
+
+---
+
 ## 2026-04-07 (afternoon) — exp62 vs exp63 Divergence: K=2 Flavours and Grid-Size Effects
 
 ### Summary
