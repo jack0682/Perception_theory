@@ -22,7 +22,7 @@ The document separates stable theoretical commitments — those principles that 
 - **Retraction:** Theorem 3.3 ($\bar{r}_0 = O(n^{-1/d})$ for general $\tau$) — experimentally falsified; $\bar{r}_0$ is genuinely $O(1)$ for $\tau \neq 1/2$.
 - **T-Persist-K-Unified:** New parametric theorem unifying Sep/Weak/Strong persistence regimes via the coupling parameter $\Lambda_{\mathrm{coupling}} = \lambda_{\mathrm{rep}} \cdot \omega_{jk} / \min(\mu_j, \mu_k)$.
 - **Unified regime parametrization:** $\Lambda_{\mathrm{coupling}}$ adopted as canonical coupling measure with $\mu$-floor regularization $\mu_{\mathrm{floor}} = w_{\mathrm{cl}} \cdot 2(1 - a_{\mathrm{cl}}/4)^2$. Experimental validation: 100% geometric-Lambda agreement across 69 configurations (exp46-47).
-- **Proved results registry:** Now **35 Category A**, **4 Category B**, **5 Category C**, **5 retracted**; total 49 claims (71% fully proved). *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. See docs/04-06/HONEST-RECOUNT.md.)*
+- **Proved results registry:** Now **41 Category A**, **3 Category B**, **5 Category C**, **5 retracted**; total 54 claims (76% fully proved). *(Erratum 2026-04-07: §13 counts corrected per honest recount of 04-06 deep audit. Erratum 2026-04-08: +6 Cat A from birth generalization and d_min structural proofs; general-graph birth upgraded Cat B→A.)*
 
 **Key changes from 2026-04-02 audit (paradigm shift: kinetic multi-formation):**
 
@@ -868,9 +868,11 @@ When formations have significant bulk overlap ($|O_{jk}| > \eta \cdot \min(|\tex
 
 *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. Previous counts (43A/2B/3C/0R) overcounted due to: empirical fits treated as proofs, merge path manifold error, quantitative claims bundled with qualitative theorems. See docs/04-06/HONEST-RECOUNT.md.)*
 
-The following theorems have been rigorously proved through Iterations 1–12 and audited 2026-04-06. They are listed with precise statements, proof methods, and known caveats. **Totals: 35 Category A, 4 Category B, 5 Category C, 5 Retracted (49 claims, 71% fully proved).**
+*(Erratum 2026-04-08: +6 Cat A from birth generalization and d_min structural proofs. Birth general graph upgraded Cat B→A. d_min reframed as closure spatial resolution parameter. Counts updated to 41A/3B/5C/5R.)*
 
-### Category A: Fully Proved (35 theorems)
+The following theorems have been rigorously proved through Iterations 1–12 and audited 2026-04-06. They are listed with precise statements, proof methods, and known caveats. **Totals: 41 Category A, 3 Category B, 5 Category C, 5 Retracted (54 claims, 76% fully proved).**
+
+### Category A: Fully Proved (41 theorems)
 
 **T1. Energy Minimizer Existence.**
 On the constraint manifold $\Sigma_m = \{u \in [0,1]^n : \sum u_i = m\}$, the energy $\mathcal{E}_t$ attains its minimum.
@@ -956,10 +958,10 @@ Well-separated K-formations are local minima of the K-field energy on $\Sigma^K_
 
 *(Erratum 2026-04-07: T-Merge parts (c)(d)(e) RETRACTED — merge path doesn't exist on $\Sigma^K_M$, Mountain Pass theorem inapplicable. See Retracted section. Barrier exponent $\gamma_{\mathrm{eff}} \approx 0.89$ moved to Category B — empirical fit, no analytical derivation.)*
 
-**T-Birth-Parametric. Supercritical Pitchfork Bifurcation in Formation Stability.**
-At the critical parameter $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$, a supercritical pitchfork bifurcation occurs: for $\beta < \beta_{\mathrm{crit}}$, only K=1 (uniform) minimizer; for $\beta > \beta_{\mathrm{crit}}$, two additional non-uniform minimizers appear with amplitude $|u_{\mathrm{nonunif}} - u_{\mathrm{unif}}| \propto (\beta - \beta_{\mathrm{crit}})^{1/2}$. The bifurcation is supercritical (stable branch) by Crandall-Rabinowitz theorem with cubic coefficient $A > 0$ from equivariant analysis (D₄ symmetry on square grids, cubic power symmetry via $W(u) = u(1-u)(1/2 - u)$).
-*Proof:* Crandall-Rabinowitz parametric bifurcation theorem. Cubic coefficient $A = 4\beta_{\mathrm{crit}} \cdot \Phi_4 > 0$ where $\Phi_4 = \int_\Omega \psi^4(x) dx$ with $\psi$ the eigenmode. Verified exp37 (zero hysteresis) and exp39 (topological birth). *(FORMATION-BIRTH-THEOREM.md, exp37, exp39.)*
-*Status:* **Proved** (D₄-symmetric, supercritical), Cat A. (General non-symmetric graphs: **Cat B** — supercriticality proved for D₄, general graph case incomplete; requires Cheeger/spectral clustering analysis.)
+**T-Birth-Parametric. Supercritical Bifurcation in Formation Stability.** *(Erratum 2026-04-08: Upgraded to full Cat A for general graphs via spectral gap condition λ₃/λ₂ > 9/8. Previously Cat A only for D₄-symmetric; general graphs were Cat B.)*
+At the critical parameter $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$, a supercritical bifurcation occurs: for $\beta < \beta_{\mathrm{crit}}$, only K=1 (uniform) minimizer; for $\beta > \beta_{\mathrm{crit}}$, non-uniform minimizers appear with amplitude $|u_{\mathrm{nonunif}} - u_{\mathrm{unif}}| \propto (\beta - \beta_{\mathrm{crit}})^{1/2}$. On D₄-symmetric graphs, the bifurcation is pitchfork (supercritical) by Crandall-Rabinowitz theorem with cubic coefficient $A > 0$ from equivariant analysis. On general graphs with $\lambda_3/\lambda_2 > 9/8$ and simple $\lambda_2$, supercriticality is guaranteed by T-Birth-Spectral-Gap (below). For degenerate $\lambda_2$, supercriticality follows from T-Birth-Quartic-Form. Bifurcation type (pitchfork vs. transcritical) classified by T-Birth-Type-Classification.
+*Proof:* Crandall-Rabinowitz parametric bifurcation theorem. Cubic coefficient $A = 4\beta_{\mathrm{crit}} \cdot \Phi_4 > 0$ where $\Phi_4 = \int_\Omega \psi^4(x) dx$ with $\psi$ the eigenmode. Verified exp37 (zero hysteresis) and exp39 (topological birth). General graph extension via Parseval identity and Lyapunov-Schmidt reduction. *(FORMATION-BIRTH-THEOREM.md, exp37, exp39, docs/04-08/proof/BIRTH-GENERAL-THEOREM.md.)*
+*Status:* **Proved**, Cat A (general graphs under spectral gap or quartic form conditions; see companion theorems below).
 
 **T-Beyond-Weyl. Structured Spectral Perturbation Bound for Multi-Formations.**
 The joint K-formation Hessian spectral gap tightens from the standard Weyl bound $\mu_{\mathrm{joint}} \geq \min_k \mu_k - (K-1)\lambda_{\mathrm{rep}}$ to a formation-aware bound exploiting soft-mode localization:
@@ -1005,20 +1007,48 @@ Exact formula: $\beta > \Gamma(a_{\mathrm{cl}}, \tau, \eta, \lambda_{\mathrm{cl}
 *Proof:* Rigorous derivation verified on 87 test cases with zero violations for $\varepsilon_1 \leq 0.1$. Analytically derived (not fitted).
 *Status:* **Proved**, Cat A.
 
-### Category B: Proved with Explicit Structural Parameter (4 theorems)
+**T-Birth-Spectral-Gap. Supercritical Bifurcation on General Graphs (Spectral Gap Condition).** *(New, 2026-04-08.)*
+If $\lambda_3/\lambda_2 > 9/8$ and $\lambda_2$ is simple, the bifurcation at $\beta_{\mathrm{crit}}$ is supercritical ($g_{sss} > 0$). The bound $9/8$ is tight: counterexamples exist for $\lambda_3/\lambda_2 < 1.10$ on dense Erdős-Rényi graphs.
+*Proof:* Parseval identity on $v_2^2$ + spectral gap bound on Lyapunov-Schmidt correction. *(docs/04-08/proof/BIRTH-GENERAL-THEOREM.md Thm A.)*
+*Status:* **Proved**, Cat A.
+
+**T-Birth-Quartic-Form. Supercritical Bifurcation (Degenerate Eigenvalue Case).** *(New, 2026-04-08.)*
+For degenerate $\lambda_2$ (multiplicity $\geq 2$), the quartic form $Q_4(s) = \|Vs\|_4^4 > 0$ for all $s \neq 0$ guarantees supercritical branching without any symmetry assumption. Here $V$ is the matrix of Fiedler eigenvectors.
+*Proof:* Linear independence of eigenspace + Euler identity. *(docs/04-08/proof/BIRTH-GENERAL-THEOREM.md Thm B.)*
+*Status:* **Proved**, Cat A.
+
+**T-Birth-Type-Classification. Pitchfork vs. Transcritical Classification.** *(New, 2026-04-08.)*
+Pitchfork bifurcation occurs when $c = 1/2$ OR $\Phi_3 = 0$ (satisfied by all regular lattices). Transcritical bifurcation occurs when both $c \neq 1/2$ AND $\Phi_3 \neq 0$. In both cases the post-bifurcation branch is stable: $a_3 = 4\beta_c \cdot \Phi_4 > 0$.
+*Proof:* Lyapunov-Schmidt normal form coefficients. *(docs/04-08/proof/BIRTH-ASYMMETRIC-C.md.)*
+*Status:* **Proved**, Cat A.
+
+**T-d_min-Existence. Two-Bump Existence/Nonexistence Threshold.** *(New, 2026-04-08.)*
+For $\beta > \beta_{\mathrm{crit}}$, there exist $d_1 < D_0$ such that: a two-bump local minimizer exists for $d \geq D_0$ and does not exist for $d < d_1$. The volume constraint on $\Sigma_m$ is the mechanism creating the sharp threshold (unlike Carr-Pego 1D without constraint).
+*Proof:* Existence ($d \geq D_0$): IFT + exponential coupling decay. Nonexistence ($d < d_1$): bridging mode test vector. *(docs/04-08/proof/DMIN-EXISTENCE-LARGE-D.md, DMIN-NONEXISTENCE-SMALL-D.md.)*
+*Status:* **Proved**, Cat A.
+
+**T-d_min-Monotone-a_cl. Closure Gain Decreases $d_{\min}$.** *(New, 2026-04-08.)*
+$\partial d_{\min}/\partial a_{\mathrm{cl}} < 0$: increasing closure gain decreases $d_{\min}$ (improves spatial resolution). Three non-cancelling channels: tail amplitude decrease (Cat A), decay rate increase (Cat A), spectral gap increase (Cat B for rate, Cat A for sign).
+*Proof:* Three non-cancelling channels with definite signs. *(docs/04-08/proof/DMIN-MONOTONE-ACL-COMBINED.md.)*
+*Status:* **Proved** (sign), Cat A. (Rate of decrease: Cat B — depends on relative channel magnitudes.)
+
+**T-d_min-Monotone-β. Phase Separation Strength Decreases $d_{\min}$.** *(New, 2026-04-08.)*
+$\partial d_{\min}/\partial \beta < 0$: increasing phase separation strength decreases $d_{\min}$.
+*Proof:* Explicit monotonicity of $c_0(\beta)$, $\varepsilon(\beta)$, $A(\beta)$. *(docs/04-08/proof/DMIN-MONOTONE-BETA.md.)*
+*Status:* **Proved**, Cat A.
+
+### Category B: Proved with Explicit Structural Parameter (3 theorems)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
+
+*(Erratum 2026-04-08: General-graph birth upgraded to Category A — proved via spectral gap condition λ₃/λ₂ > 9/8 (T-Birth-Spectral-Gap) and quartic form for degenerate eigenvalues (T-Birth-Quartic-Form). Count reduced from 4 to 3.)*
 
 **Barrier Exponent $\gamma_{\mathrm{eff}} \approx 0.89$.**
 Merge barrier scales as $\Delta E \propto \beta^{0.89}$. Asymptotic analysis gives $\Delta E = A\beta + B\sqrt{\beta}$ (two-term model), predicting $\gamma_{\mathrm{eff}} \to 1$ as $\beta \to \infty$. The effective exponent 0.89 is an empirical fit from exp38 (R² = 0.997) over $\beta \in [20, 100]$. No closed-form derivation of the effective exponent exists.
 *Status:* **Category B.** The EXISTENCE of a positive barrier is Cat A; the EXPONENT 0.89 is empirical.
 
-**T-Birth-Parametric — General (Non-D₄) Graphs.**
-Supercriticality on general non-symmetric graphs: requires Cheeger/spectral clustering analysis not yet completed. D₄-symmetric case proved (Cat A above). General graph case: supercriticality coefficient $A > 0$ requires eigenmode $\Phi_4 = \int \psi^4 > 0$, guaranteed by D₄ symmetry but not proved for arbitrary graphs. Validated on 32 graphs experimentally.
-*Status:* **Category B.** Experimental validation is not a proof.
-
 **T-d_min-Formula. Critical Inter-Formation Distance.** *(Erratum 2026-04-07: Downgraded from Cat A.)*
-$d_{\min}^* = 4.8 + 0.31\sqrt{\beta/\alpha} - 0.018\beta/\alpha$ (empirical fit, R² = 0.987). Least-squares fit to 20+ configurations. Analytical bounds from Sobolev trace inequality give scaling but not specific coefficients. The single-site Gram boost analysis predicts 0.3% reduction vs 30% observed — "collective Gram boost" scaling argument is dimensionally incorrect (DMIN-FORMULA.md).
+$d_{\min}^* = 4.8 + 0.31\sqrt{\beta/\alpha} - 0.018\beta/\alpha$ (empirical fit, R² = 0.987). Least-squares fit to 20+ configurations. Analytical bounds from Sobolev trace inequality give scaling but not specific coefficients. The single-site Gram boost analysis predicts 0.3% reduction vs 30% observed — "collective Gram boost" scaling argument is dimensionally incorrect (DMIN-FORMULA.md). *(Erratum 2026-04-08: The specific regression coefficients are individual-parameter-dependent; the structural properties of $d_{\min}$ — existence of a sharp threshold (T-d_min-Existence), monotonicity in $a_{\mathrm{cl}}$ and $\beta$ (T-d_min-Monotone-a_cl, T-d_min-Monotone-β) — are now Category A.)*
 *Status:* **Category B.** Qualitative result (closure reduces $d_{\min}^*$ by ~30%) Cat A; quantitative formula Cat B.
 
 **T-Beyond-Weyl. Structured Spectral Perturbation Bound.** *(Erratum 2026-04-07: Downgraded from Cat A.)*
@@ -1174,10 +1204,10 @@ This canonical specification (v2.1) establishes the formal structure of the theo
 
 From this commitment, the theory develops a formal universe in which closure captures relational self-support (A1'–A4, with proved contraction at $a_{\mathrm{cl}} < 4$), distinction captures exterior asymmetry (D-Ax1–3), morphological structure captures the articulation of core, boundary, and exterior ($\mathcal{Q}_{\mathrm{morph}} = \frac{\ell_{\max} - c}{1 - c} \cdot \mathrm{Artic}$, with proved axiom satisfaction QM1–4), and temporal transport captures the structural inheritance that constitutes persistence through time (E1–E4, with E3 reclassified as a solution constraint). Co-belonging (C1–C4, with proved resolvent realization) serves as a derived diagnostic for non-local structural integration but does not enter any predicate or energy term.
 
-The proto-cohesion diagnostic vector $\mathbf{d} \in [0,1]^4$ unifies these four requirements into a graded formal assessment of formation quality, and the minimal energy principle — with mandatory volume constraint on the manifold $\Sigma_m$ — provides a variational characterization of formations. *(Erratum 2026-04-07: Counts corrected per honest recount.)* The theory has **35 fully proved theorems** (Category A), 4 with structural parameters (Category B), 5 conditional results (Category C), and 5 retracted claims — totaling **49 formal claims, 71% fully proved**. Key results include non-trivial minimizer existence under a computable phase transition (T8-Core, T8-Full), gradient flow convergence (T14), stability advantage for non-idempotent closure (T3/T6), exact predicate-energy bridge (Sep = 1 - E_sep/m), closure residual bound for all τ (T-Bind-Proj), formation-birth on D₄-symmetric graphs (T-Birth-Parametric), and the unified multi-formation persistence theorem (T-Persist-K-Unified) parametrized by the coupling measure $\Lambda_{\mathrm{coupling}}$. The overcounting in previous versions arose from empirical fits treated as proofs, the merge path manifold error (T-Merge (c)(d)(e) retracted), and quantitative claims bundled with qualitative theorems.
+The proto-cohesion diagnostic vector $\mathbf{d} \in [0,1]^4$ unifies these four requirements into a graded formal assessment of formation quality, and the minimal energy principle — with mandatory volume constraint on the manifold $\Sigma_m$ — provides a variational characterization of formations. *(Erratum 2026-04-07: Counts corrected per honest recount. Erratum 2026-04-08: +6 Cat A, birth general graph upgrade, counts updated to 41/3/5/5.)* The theory has **41 fully proved theorems** (Category A), 3 with structural parameters (Category B), 5 conditional results (Category C), and 5 retracted claims — totaling **54 formal claims, 76% fully proved**. Key results include non-trivial minimizer existence under a computable phase transition (T8-Core, T8-Full), gradient flow convergence (T14), stability advantage for non-idempotent closure (T3/T6), exact predicate-energy bridge (Sep = 1 - E_sep/m), closure residual bound for all τ (T-Bind-Proj), formation-birth on general graphs under spectral gap condition (T-Birth-Parametric, T-Birth-Spectral-Gap), $d_{\min}$ structural properties (existence, monotonicity in $a_{\mathrm{cl}}$ and $\beta$), and the unified multi-formation persistence theorem (T-Persist-K-Unified) parametrized by the coupling measure $\Lambda_{\mathrm{coupling}}$. The overcounting in previous versions arose from empirical fits treated as proofs, the merge path manifold error (T-Merge (c)(d)(e) retracted), and quantitative claims bundled with qualitative theorems.
 
 **Multi-formation paradigm (2026-04-02 audit):** The theory now recognizes that multi-formation dynamics are fundamentally **kinetic (barrier-based), not thermodynamic (energy-based)**. The global energy minimum is always K*=1 (single formation) on any connected graph due to isoperimetric ordering. Multiple formations coexist as **metastable local minima** maintained by kinetic barriers of height $O(\beta^{0.89})$. Well-separated formations ($d > d_{\min}^* \approx 5$ nodes) remain stable under noise (exp55: zero merges in 5000 iterations at $\sigma \leq 0.5$, $\beta=30$). The self-referential closure operator reduces the critical distance $d_{\min}^*$ by ~30% compared to pure Allen-Cahn, realizing T7-Enhanced metastability through self-reinforced attraction basins and increased barrier heights. Three kinetic pillars structure multi-formation understanding: (I) Nucleation from spectral modes, (II) Metastability across three regimes (well-separated via T-Persist-K-Sep proved; weakly-interacting via T-Persist-K-Weak conditionally proved; strongly-interacting above merge bifurcation), (III) Coarsening under noise and stochasticity. K emerges kinetically from initial conditions and spatial structure; the $K$-field architecture guarantees K>1 by construction. Early thermodynamic predictions (P-Unified-1/2) are falsified; kinetic predictions (MK-1–MK-4) replace them.
 
-**Theory status: 35 Category A, 4 Category B, 5 Category C, 5 Retracted (71% fully proved).** *(Erratum 2026-04-07: corrected from 43/2/3/0 per 04-06 deep audit.)* Category B items: γ_eff ≈ 0.89 barrier exponent (empirical), general-graph birth supercriticality, d_min formula (regression fit), Beyond-Weyl 33× quantification (grid-specific). Category C items: T-Persist-1(d) (β > 7α structural condition), T-Persist-Full (chains through Cat C component), T-Persist-K-Sep (regime conditions WS/SR), T-Persist-K-Weak (WI + SR regime conditions), T-Persist-K-Unified (5 structural hypotheses). Retracted: Thm 3.3 general τ, T-Merge (c)(d)(e) (merge path manifold error), K-Saddle Conjecture. Remaining research extensions: (1) **Near-bifurcation persistence (μ → 0)** — center manifold reduction, branch selection, basin collapse dynamics; (2) **Multi-formation kinetic dynamics** — coarsening cascades, noise-driven merge rates, stochastic birth/death; (3) **Merge barrier on relaxed manifold** — F''(M/2) sign determination on $\Sigma_M^{\mathrm{relax}}$.
+**Theory status: 41 Category A, 3 Category B, 5 Category C, 5 Retracted (76% fully proved).** *(Erratum 2026-04-07: corrected from 43/2/3/0 per 04-06 deep audit. Erratum 2026-04-08: updated to 41/3/5/5 — birth generalization +3 Cat A, d_min structural proofs +3 Cat A, general-graph birth upgraded Cat B→A.)* Category B items: γ_eff ≈ 0.89 barrier exponent (empirical), d_min formula (regression fit), Beyond-Weyl 33× quantification (grid-specific). Category C items: T-Persist-1(d) (β > 7α structural condition), T-Persist-Full (chains through Cat C component), T-Persist-K-Sep (regime conditions WS/SR), T-Persist-K-Weak (WI + SR regime conditions), T-Persist-K-Unified (5 structural hypotheses). Retracted: Thm 3.3 general τ, T-Merge (c)(d)(e) (merge path manifold error), K-Saddle Conjecture. Remaining research extensions: (1) **Near-bifurcation persistence (μ → 0)** — center manifold reduction, branch selection, basin collapse dynamics; (2) **Multi-formation kinetic dynamics** — coarsening cascades, noise-driven merge rates, stochastic birth/death; (3) **Merge barrier on relaxed manifold** — F''(M/2) sign determination on $\Sigma_M^{\mathrm{relax}}$.
 
 The theory now stands as a mathematically structured ontology of pre-objective cohesion — with genuine theorems, honest gap accounting, and a clear distinction between what is proved, what is provisional, and what remains open — informed by a kinetic understanding of multi-formation coexistence that grounds the theory in barrier dynamics rather than energy minimization.
