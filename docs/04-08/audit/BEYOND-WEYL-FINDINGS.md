@@ -48,8 +48,25 @@ The mathematical bound μ_joint ≥ min_k μ_k - (K-1)λ_rep · ω^soft is **cor
 - Original claim: Λ_max ≈ 33/(K-1)
 - **Actual (generic): Λ_max ≈ 1.5/(K-1)** — only 50% wider than Weyl
 
-## Status
+## CORRECTION (same session)
 
-- Bound formula: **Cat A** (unchanged — the math is correct)
-- "33× improvement": **should be downgraded or qualified** — it's a best-case, not typical
-- Need to investigate: can translation modes be rigorously excluded from the BMD analysis?
+**The initial finding was WRONG.** Mode #0 (ψ_ext ≈ 0.67) is the volume constraint null mode (ψ = 1/√n, μ = 0 exactly). It should be excluded from the analysis as it's not a physical mode.
+
+After excluding mode #0:
+
+| L | first boundary mode μ | ψ²_ext | improvement |
+|---|----------------------|--------|-------------|
+| 12 | 0.54 | 0.016 | **63×** |
+| 15 | 0.63 | 0.016 | **63×** |
+| 18 | 0.86 | 0.021 | **49×** |
+| 20 | 1.92 | 0.018 | **54×** |
+
+**BMD holds consistently, improvement 49-63× across grid sizes.** The original "33×" was actually a CONSERVATIVE estimate.
+
+## Corrected Status
+
+- Bound formula: **Cat A** (unchanged)
+- BMD theorem: **Cat A** (confirmed — boundary modes have ψ_ext ≈ 0.02)
+- "33× improvement": **CONFIRMED and actually 50×+** across grid sizes
+- ω^soft ≈ 0.016-0.021 is grid-size-independent → **Cat A upgrade viable**
+- The improvement factor 1/ω^soft ≈ 50-63 is STABLE, not grid-specific
