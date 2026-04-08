@@ -2,6 +2,52 @@
 
 ---
 
+## 2026-04-08 (cont.) — d_min Existence + Monotonicity Proofs, Resolution Reframing
+
+### Summary
+d_min reconceptualized as "closure operator's spatial resolution" (individual parameter, not universal constant). Three structural properties proved.
+
+### Conceptual Reframing
+- d_min = minimum distance at which cohesion field recognizes two separate entities
+- Individual parameter determined by (a_cl, τ, α, β) — like visual acuity
+- Regression coefficients (4.8, 0.31, 0.018) are not theory predictions — they're measurements of a specific parameter set
+- New prediction P6: closure gain ↔ spatial resolution correlation
+
+### d_min Existence (sharp threshold)
+- DMIN-EXISTENCE-LARGE-D.md — Cat A: IFT + coupling decay → two-bump exists for d ≥ D₀
+- DMIN-NONEXISTENCE-SMALL-D.md — Cat A: bridging mode → no two-bump for d < d₁
+- DMIN-SHARP-THRESHOLD.md — Cat B: monotonicity of μ_min(d) → unique threshold d*
+- Volume constraint is the mechanism creating sharp threshold (unlike Carr-Pego 1D without constraint)
+
+### d_min Monotonicity
+- ∂d_min/∂a_cl < 0 — Cat A (sign), Cat B (rate): closure improves resolution
+  - Three non-cancelling channels: tail amplitude↓ (60%), decay rate↑ (25%), spectral gap↑ (15%)
+- ∂d_min/∂β < 0 — Cat A (complete): sharper phase separation improves resolution
+  - Direct proof via explicit monotonicity of c₀(β), ε(β), A(β)
+
+### Files Created
+- `docs/04-08/theory/DMIN-AS-RESOLUTION.md` — Conceptual reframing
+- `docs/04-08/proof/DMIN-EXISTENCE-LARGE-D.md` — Two-bump existence (Cat A)
+- `docs/04-08/proof/DMIN-NONEXISTENCE-SMALL-D.md` — Two-bump nonexistence (Cat A)
+- `docs/04-08/proof/DMIN-SHARP-THRESHOLD.md` — Sharp threshold (Cat B)
+- `docs/04-08/proof/MU1-MONOTONE-ACL.md` — μ₁ increases with a_cl (Cat B)
+- `docs/04-08/proof/TAIL-MONOTONE-ACL.md` — Tail shortens with a_cl (Cat A)
+- `docs/04-08/proof/DMIN-MONOTONE-ACL-COMBINED.md` — Combined ∂d_min/∂a_cl < 0
+- `docs/04-08/proof/DMIN-MONOTONE-BETA.md` — ∂d_min/∂β < 0 (Cat A)
+
+### Theorem Status Changes
+- d_min existence: **NEW Cat A** (existence + nonexistence)
+- d_min sharpness: **NEW Cat B** (monotonicity conditional)
+- ∂d_min/∂a_cl < 0 (sign): **NEW Cat A**
+- ∂d_min/∂β < 0: **NEW Cat A**
+
+### Open Items
+- Beyond-Weyl 33× review (last Cat B, not started)
+- d_min 1D kink comparison bound (tighter quantitative bound)
+- Spec §13 update with new theorems from this session
+
+---
+
 ## 2026-04-08 — Cat B Systematic Review: γ_eff, Birth, d_min
 
 ### Summary
