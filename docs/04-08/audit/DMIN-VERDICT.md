@@ -45,7 +45,13 @@ Three fundamental issues:
 - Closure dramatically sharpens tails: peak u goes 0.8-0.9 → 0.98-1.0
 - Decay rate c₀ increases 2-10× with closure
 - Strong finite-size effects: d_min grows with grid size
-- The 1D arccosh formula is fundamentally wrong for 2D (factor 8-25×)
+- c₀_fit/c₀_theory ratio 0.04-0.13 — NOT a 1D vs 2D issue (c₀ is already 2D), but pre-asymptotic regime effect
+
+### Critical correction (from critic follow-up)
+- c₀ = arccosh(1 + β/(4α)) IS the correct 2D lattice rate (derived from 2D Fourier transform)
+- The 1/√r Bessel prefactor makes tails SHORTER, not longer (geometric spreading)
+- The 8-25× discrepancy is from **pre-asymptotic interface profile** (tanh, not exponential at short distances)
+- **The right fix: 1D kink comparison principle, NOT 2D Bessel analysis**
 
 ### Critic findings  
 - **Super-additivity** (not sub-): nonlinear tail superposition OVERSHOOTS linear prediction
