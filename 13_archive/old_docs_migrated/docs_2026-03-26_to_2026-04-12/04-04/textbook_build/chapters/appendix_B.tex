@@ -1,0 +1,195 @@
+% Appendix B: Parameter Registry (~6 pages)
+
+\chapter{Parameter Registry}
+\label{app:parameters}
+
+이 부록은 SCC 이론과 \texttt{scc} 패키지의 모든 매개변수를 체계적으로 정리한다. 각 매개변수에 대해 이론적 제약, 기본값, 민감도를 명시한다.
+
+
+\section{Core Parameters}
+\label{app:core-params}
+
+
+\subsection{닫힘 매개변수}
+
+\begin{table}[h]
+\centering
+\caption{닫힘 연산자 매개변수 (Spec \S9.2)}
+\label{tab:closure-params}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{제약/비고} \\
+\hline
+$a_{\mathrm{cl}}$ & \texttt{a\_cl} & 3.5 & $(0, 4)$ & \textbf{필수}: $a_{\mathrm{cl}} < 4$ (A3 축소). $a_{\mathrm{cl}} = 4$에서 고정점 유일성 상실 \\
+$\eta_{\mathrm{cl}}$ & \texttt{eta\_cl} & 0.5 & $[0, 1]$ & 자기-유지와 이웃 집계의 균형 \\
+$\tau_{\mathrm{cl}}$ & \texttt{tau\_cl} & 0.5 & $\mathbb{R}$ & 닫힘 임계값 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{$a_{\mathrm{cl}}$의 역할}: 닫힘 연산자의 Lipschitz 상수는 $a_{\mathrm{cl}}/4$로 상한된다. $a_{\mathrm{cl}} < 4$이면 $\mathrm{Lip}(\mathrm{Cl}_t) < 1$이므로 Banach 축소 원리에 의해 고정점이 유일하고, 반복이 기하급수적으로 수렴한다. $a_{\mathrm{cl}} \geq 4$이면 다중 고정점이 가능하며, 이는 다중 형성 체제의 한 경로이지만 공리 A3을 위반한다.
+
+\textbf{민감도}: $a_{\mathrm{cl}} \in [3.0, 3.9]$에서 형성의 질은 안정적이다 (exp1: $\lambda$ sweep). $a_{\mathrm{cl}} < 2$이면 닫힘이 너무 약해 Bind가 저하된다.
+
+
+\subsection{구별 매개변수}
+
+\begin{table}[h]
+\centering
+\caption{구별 연산자 매개변수 (Spec \S9.3)}
+\label{tab:distinction-params}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{제약/비고} \\
+\hline
+$a_D$ & \texttt{a\_D} & 5.0 & $(0, \infty)$ & 비대칭 민감도 \\
+$\lambda_D$ & \texttt{lambda\_D} & 1.0 & $(0, \infty)$ & 내외부 가중 비율 \\
+$\tau_D$ & \texttt{tau\_D} & 0.0 & $\mathbb{R}$ & 구별 임계값 \\
+$b_D$ & \texttt{b\_D} & 0.0 & $\{0\}$ & \textbf{필수}: $b_D = 0$ (에너지 해석성, T14) \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{$b_D = 0$ 제약}: 기울기 지표 $g_t$의 절대값 $|\cdot|$이 에너지 해석성을 깨뜨려 Łojasiewicz 수렴(T14)이 성립하지 않는다. 이 제약은 비타협적이다.
+
+
+\subsection{에너지 가중 계수}
+
+\begin{table}[h]
+\centering
+\caption{에너지 가중 계수 (Spec \S8.1)}
+\label{tab:energy-weights}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{비고} \\
+\hline
+$\lambda_{\mathrm{cl}}$ & \texttt{w\_cl} & 1.0 & $(0, \infty)$ & 닫힘 에너지 가중 \\
+$\lambda_{\mathrm{sep}}$ & \texttt{w\_sep} & 1.0 & $(0, \infty)$ & 분리 에너지 가중 \\
+$\lambda_{\mathrm{bd}}$ & \texttt{w\_bd} & 1.0 & $(0, \infty)$ & 형태학 에너지 가중 \\
+$\lambda_{\mathrm{tr}}$ & \texttt{w\_tr} & 0.5 & $[0, \infty)$ & 전달 에너지 가중 (단일 시각: 0) \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{상대 비율}: 절대 크기보다 상대 비율이 중요하다. exp3(ablation)에서 $\lambda_{\mathrm{cl}} = 0$이면 Bind 붕괴, $\lambda_{\mathrm{sep}} = 0$이면 Sep 붕괴, $\lambda_{\mathrm{bd}} = 0$이면 형태학 붕괴가 확인되었다.
+
+
+\section{Constraint Parameters}
+\label{app:constraint-params}
+
+
+\subsection{부피 제약}
+
+\begin{table}[h]
+\centering
+\caption{부피 및 형태학 매개변수}
+\label{tab:volume-params}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{제약/비고} \\
+\hline
+$c$ & \texttt{volume\_fraction} & 0.3 & $(0.211, 0.789)$ & \textbf{필수}: 스피노달 범위 ($W''(c) < 0$) \\
+$\alpha$ & \texttt{alpha\_bd} & 1.0 & $(0, \infty)$ & 매끄러움 가중 \\
+$\beta$ & \texttt{beta\_bd} & 10.0 & $(0, \infty)$ & 이중 우물 가중 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{스피노달 범위}: $c$가 이 범위 밖이면 $W''(c) \geq 0$이 되어 균일 해가 안정하며, 위상 분리가 일어나지 않는다 (T8-Core 불성립).
+
+\textbf{$\beta/\alpha$ 비율}: 위상 전이 임계비 $4\lambda_2/|W''(c)|$ 이상이어야 한다. exp2(phase transition)에서 이 전이가 날카로운 임계 현상임이 확인되었다.
+
+
+\subsection{임계값 매개변수}
+
+\begin{table}[h]
+\centering
+\caption{이산 회복 임계값 (Spec \S5)}
+\label{tab:threshold-params}
+\begin{tabular}{llcc}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{의미} \\
+\hline
+$\theta_{\mathrm{core}}$ & \texttt{theta\_core} & 0.9 & Core 임계값 \\
+$\theta_{\mathrm{in}}$ & \texttt{theta\_in} & 0.5 & Interior 임계값 \\
+$\theta_{\mathrm{bd,lo}}$ & \texttt{theta\_bd\_lo} & 0.2 & 경계 하한 \\
+$\theta_{\mathrm{bd,hi}}$ & \texttt{theta\_bd\_hi} & 0.8 & 경계 상한 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{Multi-Formation Parameters}
+\label{app:multi-params}
+
+\begin{table}[h]
+\centering
+\caption{다중 형성 매개변수 (K-필드 아키텍처)}
+\label{tab:multi-params}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{제약/비고} \\
+\hline
+$K$ & --- & 1 & $\{1,2,\ldots\}$ & 형성 개수 (K-필드) \\
+$\lambda_{\mathrm{rep}}$ & \texttt{lambda\_rep} & 1.0 & $[0, \infty)$ & 형성 간 반발 가중 \\
+$\Lambda_{\mathrm{coupling}}$ & --- & 파생 & $[0, \infty)$ & $\lambda_{\mathrm{rep}} \cdot \omega_{jk}/\min(\mu_j, \mu_k)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{체제 분류}: $\Lambda_{\mathrm{coupling}}$에 의한 체제 분류:
+\begin{itemize}
+    \item $\Lambda < 0.01$: 잘 분리됨 (Well-separated) --- T-Persist-K-Sep 적용
+    \item $0.01 \leq \Lambda \leq 1/(K{-}1)$: 약한 상호작용 (Weakly-interacting) --- T-Persist-K-Weak 적용
+    \item $\Lambda > 1/(K{-}1)$: 강한 상호작용 (Strongly-coupled) --- 운동학적 장벽 체제
+\end{itemize}
+
+\textbf{스펙트럼-반발 호환성 (SR)}: $\min_k \mu_k > (K{-}1)\lambda_{\mathrm{rep}}$이 필요하다. 이 조건이 위반되면 결합 Hessian의 스펙트럼 간극이 소실되어 안정성이 보장되지 않는다.
+
+\textbf{권장 설정 (그래프 크기별)}:
+\begin{itemize}
+    \item $10 \times 10$ 격자, $K = 2$: $\lambda_{\mathrm{rep}} = 1.0$, $c = 0.3$ (기본)
+    \item $20 \times 20$ 격자, $K = 4$: $\lambda_{\mathrm{rep}} = 0.5$--$1.0$, $c = 0.25$
+    \item 일반 그래프: $\lambda_{\mathrm{rep}} < \min_k \mu_k / (K{-}1)$ 확인
+\end{itemize}
+
+
+\subsection{전달 매개변수}
+
+\begin{table}[h]
+\centering
+\caption{시간적 전달 매개변수}
+\label{tab:transport-params}
+\begin{tabular}{llccp{5cm}}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{범위} & \textbf{비고} \\
+\hline
+$\sigma_M$ & \texttt{sigma\_transport} & 1.0 & $(0, \infty)$ & 공간 허용 범위 \\
+$\gamma_M$ & \texttt{gamma\_transport} & 1.0 & $[0, \infty)$ & 지문 가중 \\
+$\varepsilon_{\mathrm{OT}}$ & \texttt{eps\_ot} & 1.0 & $(0, \infty)$ & \textbf{필수}: $> 0$ (Sinkhorn 수렴) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{최적화 매개변수}
+
+\begin{table}[h]
+\centering
+\caption{최적화기 매개변수}
+\label{tab:optimizer-params}
+\begin{tabular}{llcc}
+\hline
+\textbf{기호} & \textbf{코드명} & \textbf{기본값} & \textbf{의미} \\
+\hline
+$\eta_0$ & \texttt{dt\_init} & 0.01 & 초기 보폭 \\
+--- & \texttt{max\_iter} & 10000 & 최대 반복 횟수 \\
+--- & \texttt{n\_restarts} & 5 & 다중 시작 횟수 \\
+$\varepsilon_E$ & \texttt{eps\_energy} & $10^{-6}$ & 상대 에너지 변화 임계 \\
+$\varepsilon_u$ & \texttt{eps\_field} & $10^{-6}$ & 필드 변화 임계 \\
+$\varepsilon_g$ & \texttt{eps\_grad} & $10^{-3}$ & KKT 잔차 임계 \\
+\hline
+\end{tabular}
+\end{table}
+
+SCC의 최적화기는 Barzilai-Borwein(BB) 보폭을 사용하는 반암시적(semi-implicit) 사영 기울기 하강이다. 다중 시작(multi-start)은 여러 무작위 초기점에서 시작하여 가장 낮은 에너지를 가진 결과를 선택한다.

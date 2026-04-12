@@ -1,0 +1,1037 @@
+{
+  "experiment": "exp80_local_basin_proxy",
+  "config": "20x20:0.6",
+  "target_lambda": 0.5,
+  "distance_threshold": 4.0,
+  "continued_branch_type": "Type B candidate",
+  "summary": [
+    {
+      "sigma": 0.005,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.01,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.02,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.03,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.05,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.08,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.1,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.15,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    },
+    {
+      "sigma": 0.2,
+      "hits": 12,
+      "total": 12,
+      "hit_rate": 1.0
+    }
+  ],
+  "rows": [
+    {
+      "sigma": 0.005,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.182379957327989,
+      "within_threshold": true,
+      "E0": 17.543857310114273,
+      "overlap": 0.034669946103417414
+    },
+    {
+      "sigma": 0.005,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.160844569410252,
+      "within_threshold": true,
+      "E0": 17.54082159388333,
+      "overlap": 0.034851220404495876
+    },
+    {
+      "sigma": 0.005,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16271894975340595,
+      "within_threshold": true,
+      "E0": 17.53683706845279,
+      "overlap": 0.03510677946023725
+    },
+    {
+      "sigma": 0.005,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.12429613405879492,
+      "within_threshold": true,
+      "E0": 17.55352321393478,
+      "overlap": 0.034310866768271116
+    },
+    {
+      "sigma": 0.005,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13276512364708493,
+      "within_threshold": true,
+      "E0": 17.554748862627683,
+      "overlap": 0.0340400641701474
+    },
+    {
+      "sigma": 0.005,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13214381397499136,
+      "within_threshold": true,
+      "E0": 17.555438552329306,
+      "overlap": 0.0345880057688861
+    },
+    {
+      "sigma": 0.005,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15772099392767694,
+      "within_threshold": true,
+      "E0": 17.556396622105225,
+      "overlap": 0.0340135849036305
+    },
+    {
+      "sigma": 0.005,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1626171168797264,
+      "within_threshold": true,
+      "E0": 17.53773926578708,
+      "overlap": 0.03517752911612278
+    },
+    {
+      "sigma": 0.005,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18141661224239072,
+      "within_threshold": true,
+      "E0": 17.55542521051768,
+      "overlap": 0.0344431980250101
+    },
+    {
+      "sigma": 0.005,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16265631169893538,
+      "within_threshold": true,
+      "E0": 17.53846681070241,
+      "overlap": 0.03555614106574852
+    },
+    {
+      "sigma": 0.005,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1836586706533918,
+      "within_threshold": true,
+      "E0": 17.540054557137708,
+      "overlap": 0.03473045576457519
+    },
+    {
+      "sigma": 0.005,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15810609527439076,
+      "within_threshold": true,
+      "E0": 17.55725928920002,
+      "overlap": 0.03367836858298687
+    },
+    {
+      "sigma": 0.01,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15925253600484063,
+      "within_threshold": true,
+      "E0": 17.547821445500894,
+      "overlap": 0.0344073137633296
+    },
+    {
+      "sigma": 0.01,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1345644091726495,
+      "within_threshold": true,
+      "E0": 17.541560837147287,
+      "overlap": 0.034836862653676276
+    },
+    {
+      "sigma": 0.01,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1389559702718214,
+      "within_threshold": true,
+      "E0": 17.533686457842492,
+      "overlap": 0.03524418015890194
+    },
+    {
+      "sigma": 0.01,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1552481053753326,
+      "within_threshold": true,
+      "E0": 17.536378226994756,
+      "overlap": 0.03519365314650934
+    },
+    {
+      "sigma": 0.01,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13213205266976313,
+      "within_threshold": true,
+      "E0": 17.554759734095626,
+      "overlap": 0.03385822346831095
+    },
+    {
+      "sigma": 0.01,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15972220275893811,
+      "within_threshold": true,
+      "E0": 17.541623329029008,
+      "overlap": 0.03567117789429091
+    },
+    {
+      "sigma": 0.01,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18112210887533467,
+      "within_threshold": true,
+      "E0": 17.543655358194417,
+      "overlap": 0.03463175294549666
+    },
+    {
+      "sigma": 0.01,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1635472016010674,
+      "within_threshold": true,
+      "E0": 17.535479744226556,
+      "overlap": 0.03539059364407312
+    },
+    {
+      "sigma": 0.01,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18426183399263568,
+      "within_threshold": true,
+      "E0": 17.541055163529435,
+      "overlap": 0.03548822948886892
+    },
+    {
+      "sigma": 0.01,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1853637485082336,
+      "within_threshold": true,
+      "E0": 17.536134094491608,
+      "overlap": 0.03611181216374241
+    },
+    {
+      "sigma": 0.01,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1839385566387002,
+      "within_threshold": true,
+      "E0": 17.539922933901504,
+      "overlap": 0.03449767970726618
+    },
+    {
+      "sigma": 0.01,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1818115536152139,
+      "within_threshold": true,
+      "E0": 17.54486046048296,
+      "overlap": 0.0338337606577319
+    },
+    {
+      "sigma": 0.02,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1307392817565715,
+      "within_threshold": true,
+      "E0": 17.555148891726056,
+      "overlap": 0.033964534540882226
+    },
+    {
+      "sigma": 0.02,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15038932978453445,
+      "within_threshold": true,
+      "E0": 17.542666917130397,
+      "overlap": 0.03503705204877292
+    },
+    {
+      "sigma": 0.02,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.14130073586308986,
+      "within_threshold": true,
+      "E0": 17.527029245240715,
+      "overlap": 0.035493502942313696
+    },
+    {
+      "sigma": 0.02,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15663977912613994,
+      "within_threshold": true,
+      "E0": 17.53221893633415,
+      "overlap": 0.035438545016633904
+    },
+    {
+      "sigma": 0.02,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1337932870661224,
+      "within_threshold": true,
+      "E0": 17.540231023209742,
+      "overlap": 0.03401545579249235
+    },
+    {
+      "sigma": 0.02,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13199320179086424,
+      "within_threshold": true,
+      "E0": 17.542990687885045,
+      "overlap": 0.036366773394679544
+    },
+    {
+      "sigma": 0.02,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17899763683632036,
+      "within_threshold": true,
+      "E0": 17.546737911683095,
+      "overlap": 0.034334905892467946
+    },
+    {
+      "sigma": 0.02,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1314721344758358,
+      "within_threshold": true,
+      "E0": 17.531173263247346,
+      "overlap": 0.03579656619226699
+    },
+    {
+      "sigma": 0.02,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1850974693539147,
+      "within_threshold": true,
+      "E0": 17.54253100881371,
+      "overlap": 0.03600300091344996
+    },
+    {
+      "sigma": 0.02,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1808655274232311,
+      "within_threshold": true,
+      "E0": 17.531025105302028,
+      "overlap": 0.03714840116396237
+    },
+    {
+      "sigma": 0.02,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18430777264392714,
+      "within_threshold": true,
+      "E0": 17.54009565718858,
+      "overlap": 0.03401021437057561
+    },
+    {
+      "sigma": 0.02,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18011489583418863,
+      "within_threshold": true,
+      "E0": 17.550352767619266,
+      "overlap": 0.032543725876493595
+    },
+    {
+      "sigma": 0.03,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.12810355192530792,
+      "within_threshold": true,
+      "E0": 17.56093183677246,
+      "overlap": 0.03344514989692091
+    },
+    {
+      "sigma": 0.03,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.148625519845683,
+      "within_threshold": true,
+      "E0": 17.54390845439734,
+      "overlap": 0.03550193839983028
+    },
+    {
+      "sigma": 0.03,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.167406330544616,
+      "within_threshold": true,
+      "E0": 17.520120853918968,
+      "overlap": 0.035728553155077655
+    },
+    {
+      "sigma": 0.03,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18704704965912086,
+      "within_threshold": true,
+      "E0": 17.527755299742118,
+      "overlap": 0.035717747629233326
+    },
+    {
+      "sigma": 0.03,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1316234380145903,
+      "within_threshold": true,
+      "E0": 17.541249687234135,
+      "overlap": 0.03342322612475819
+    },
+    {
+      "sigma": 0.03,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1298352352937974,
+      "within_threshold": true,
+      "E0": 17.544104392743904,
+      "overlap": 0.03702391816436162
+    },
+    {
+      "sigma": 0.03,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1769668428426778,
+      "within_threshold": true,
+      "E0": 17.54944109402391,
+      "overlap": 0.034051440466781296
+    },
+    {
+      "sigma": 0.03,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.14262998121888454,
+      "within_threshold": true,
+      "E0": 17.52688977283225,
+      "overlap": 0.03622857569721913
+    },
+    {
+      "sigma": 0.03,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16436234199340657,
+      "within_threshold": true,
+      "E0": 17.54440592506166,
+      "overlap": 0.036463978924755065
+    },
+    {
+      "sigma": 0.03,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18993151350806045,
+      "within_threshold": true,
+      "E0": 17.525292857074447,
+      "overlap": 0.03809207178782481
+    },
+    {
+      "sigma": 0.03,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.184500619980804,
+      "within_threshold": true,
+      "E0": 17.541032917982903,
+      "overlap": 0.033533686308310696
+    },
+    {
+      "sigma": 0.03,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17844151412361295,
+      "within_threshold": true,
+      "E0": 17.55636236590466,
+      "overlap": 0.031220650741647683
+    },
+    {
+      "sigma": 0.05,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.12293703256913475,
+      "within_threshold": true,
+      "E0": 17.57314370066345,
+      "overlap": 0.03185599987701682
+    },
+    {
+      "sigma": 0.05,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.14492564818386977,
+      "within_threshold": true,
+      "E0": 17.546331347697112,
+      "overlap": 0.03668391070116088
+    },
+    {
+      "sigma": 0.05,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1704728672415566,
+      "within_threshold": true,
+      "E0": 17.503431412594104,
+      "overlap": 0.03674713510732629
+    },
+    {
+      "sigma": 0.05,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1824282935197664,
+      "within_threshold": true,
+      "E0": 17.51790666305461,
+      "overlap": 0.03656312737588038
+    },
+    {
+      "sigma": 0.05,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.11624342249472074,
+      "within_threshold": true,
+      "E0": 17.54481365232573,
+      "overlap": 0.032181702682318764
+    },
+    {
+      "sigma": 0.05,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.11535471361077763,
+      "within_threshold": true,
+      "E0": 17.545385765142754,
+      "overlap": 0.03826237872970478
+    },
+    {
+      "sigma": 0.05,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17362255549601519,
+      "within_threshold": true,
+      "E0": 17.552773351203445,
+      "overlap": 0.033512539923861176
+    },
+    {
+      "sigma": 0.05,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1694185241869609,
+      "within_threshold": true,
+      "E0": 17.519199707099638,
+      "overlap": 0.03705565924456925
+    },
+    {
+      "sigma": 0.05,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1658448530044917,
+      "within_threshold": true,
+      "E0": 17.546980753315488,
+      "overlap": 0.03921406488923039
+    },
+    {
+      "sigma": 0.05,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19394992236299646,
+      "within_threshold": true,
+      "E0": 17.512896740666406,
+      "overlap": 0.04125033974453779
+    },
+    {
+      "sigma": 0.05,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16245489676598934,
+      "within_threshold": true,
+      "E0": 17.544212719764833,
+      "overlap": 0.03251856566879041
+    },
+    {
+      "sigma": 0.05,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1960869405235373,
+      "within_threshold": true,
+      "E0": 17.569690435221027,
+      "overlap": 0.0286643246051213
+    },
+    {
+      "sigma": 0.08,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.14440779588530808,
+      "within_threshold": true,
+      "E0": 17.591061995286026,
+      "overlap": 0.02976510444408138
+    },
+    {
+      "sigma": 0.08,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.14867640943787483,
+      "within_threshold": true,
+      "E0": 17.549742839770914,
+      "overlap": 0.038373776423760234
+    },
+    {
+      "sigma": 0.08,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17333160750860446,
+      "within_threshold": true,
+      "E0": 17.483680409977215,
+      "overlap": 0.037852078916719704
+    },
+    {
+      "sigma": 0.08,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18468032313827135,
+      "within_threshold": true,
+      "E0": 17.503236759673143,
+      "overlap": 0.03903683653305559
+    },
+    {
+      "sigma": 0.08,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1374275350984646,
+      "within_threshold": true,
+      "E0": 17.55529475424531,
+      "overlap": 0.029911576990545388
+    },
+    {
+      "sigma": 0.08,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.10928222533542732,
+      "within_threshold": true,
+      "E0": 17.54508308419871,
+      "overlap": 0.03984498886644505
+    },
+    {
+      "sigma": 0.08,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16304471488643565,
+      "within_threshold": true,
+      "E0": 17.555005923285044,
+      "overlap": 0.03337030950578662
+    },
+    {
+      "sigma": 0.08,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17138599029647764,
+      "within_threshold": true,
+      "E0": 17.509308826639213,
+      "overlap": 0.03838138183343469
+    },
+    {
+      "sigma": 0.08,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16739320928514495,
+      "within_threshold": true,
+      "E0": 17.55270386357917,
+      "overlap": 0.04221964511803038
+    },
+    {
+      "sigma": 0.08,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1928712037024217,
+      "within_threshold": true,
+      "E0": 17.49245937817473,
+      "overlap": 0.04608584235802094
+    },
+    {
+      "sigma": 0.08,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15328911417273308,
+      "within_threshold": true,
+      "E0": 17.549632414956136,
+      "overlap": 0.031256214621797174
+    },
+    {
+      "sigma": 0.08,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19698514938215417,
+      "within_threshold": true,
+      "E0": 17.589434399440513,
+      "overlap": 0.023869370525252877
+    },
+    {
+      "sigma": 0.1,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1404990098885578,
+      "within_threshold": true,
+      "E0": 17.59946329511487,
+      "overlap": 0.031345072135332955
+    },
+    {
+      "sigma": 0.1,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13785923712854412,
+      "within_threshold": true,
+      "E0": 17.5530548930904,
+      "overlap": 0.04082826797321816
+    },
+    {
+      "sigma": 0.1,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.17401345563442833,
+      "within_threshold": true,
+      "E0": 17.476316711775496,
+      "overlap": 0.038577387088380974
+    },
+    {
+      "sigma": 0.1,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.18526297365508734,
+      "within_threshold": true,
+      "E0": 17.493333866841915,
+      "overlap": 0.04264637232391212
+    },
+    {
+      "sigma": 0.1,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.1331068231544848,
+      "within_threshold": true,
+      "E0": 17.565856262017487,
+      "overlap": 0.0288799917676347
+    },
+    {
+      "sigma": 0.1,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.10650488855287749,
+      "within_threshold": true,
+      "E0": 17.54275912714583,
+      "overlap": 0.04080818859150616
+    },
+    {
+      "sigma": 0.1,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16229207606581297,
+      "within_threshold": true,
+      "E0": 17.554211198812197,
+      "overlap": 0.03409774772430352
+    },
+    {
+      "sigma": 0.1,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19296459313829772,
+      "within_threshold": true,
+      "E0": 17.50091180844185,
+      "overlap": 0.0402733998522143
+    },
+    {
+      "sigma": 0.1,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16023517014290503,
+      "within_threshold": true,
+      "E0": 17.558698911535586,
+      "overlap": 0.043923396452594105
+    },
+    {
+      "sigma": 0.1,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19497561897298352,
+      "within_threshold": true,
+      "E0": 17.47901109092021,
+      "overlap": 0.04902024739563675
+    },
+    {
+      "sigma": 0.1,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.15294614236954482,
+      "within_threshold": true,
+      "E0": 17.55226035285621,
+      "overlap": 0.030786407400753668
+    },
+    {
+      "sigma": 0.1,
+      "trial": 11,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.20107406754287155,
+      "within_threshold": true,
+      "E0": 17.603872576074266,
+      "overlap": 0.019805812228927886
+    },
+    {
+      "sigma": 0.15,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.12595681234294367,
+      "within_threshold": true,
+      "E0": 17.618510302688534,
+      "overlap": 0.033692590595489694
+    },
+    {
+      "sigma": 0.15,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.16820025286821783,
+      "within_threshold": true,
+      "E0": 17.573516145843485,
+      "overlap": 0.04299219043952162
+    },
+    {
+      "sigma": 0.15,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.20316144762037205,
+      "within_threshold": true,
+      "E0": 17.5250391758966,
+      "overlap": 0.040054263564962646
+    },
+    {
+      "sigma": 0.15,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.21589180044529757,
+      "within_threshold": true,
+      "E0": 17.478403548179976,
+      "overlap": 0.0535091669268599
+    },
+    {
+      "sigma": 0.15,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19731061675732023,
+      "within_threshold": true,
+      "E0": 17.605515310238815,
+      "overlap": 0.02727888097088549
+    },
+    {
+      "sigma": 0.15,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13446485973494357,
+      "within_threshold": true,
+      "E0": 17.52746250917795,
+      "overlap": 0.041841678304455635
+    },
+    {
+      "sigma": 0.15,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19991513667455432,
+      "within_threshold": true,
+      "E0": 17.546172435479534,
+      "overlap": 0.03823903037169527
+    },
+    {
+      "sigma": 0.15,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.2595219830190465,
+      "within_threshold": true,
+      "E0": 17.478622910965164,
+      "overlap": 0.04542042548050994
+    },
+    {
+      "sigma": 0.15,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.21471099683988812,
+      "within_threshold": true,
+      "E0": 17.586397705825153,
+      "overlap": 0.04745363634203937
+    },
+    {
+      "sigma": 0.15,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.22815104017847207,
+      "within_threshold": true,
+      "E0": 17.449789292927512,
+      "overlap": 0.05755853822730754
+    },
+    {
+      "sigma": 0.15,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.11544915432098084,
+      "within_threshold": true,
+      "E0": 17.557739509863467,
+      "overlap": 0.030274120579145615
+    },
+    {
+      "sigma": 0.15,
+      "trial": 11,
+      "branch_type": "Mixed/ambiguous",
+      "family_distance_to_continued": 0.22418749397712753,
+      "within_threshold": true,
+      "E0": 17.639988534190913,
+      "overlap": 0.015952581549416596
+    },
+    {
+      "sigma": 0.2,
+      "trial": 0,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.21383727009720085,
+      "within_threshold": true,
+      "E0": 17.64033996177509,
+      "overlap": 0.035640845141321216
+    },
+    {
+      "sigma": 0.2,
+      "trial": 1,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.19053402590325158,
+      "within_threshold": true,
+      "E0": 17.598774452844964,
+      "overlap": 0.043312930694765106
+    },
+    {
+      "sigma": 0.2,
+      "trial": 2,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.24950177680881996,
+      "within_threshold": true,
+      "E0": 17.666319202249593,
+      "overlap": 0.03978725489135243
+    },
+    {
+      "sigma": 0.2,
+      "trial": 3,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.21744788351035235,
+      "within_threshold": true,
+      "E0": 17.45350615188469,
+      "overlap": 0.06169931224316526
+    },
+    {
+      "sigma": 0.2,
+      "trial": 4,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.20200850309612345,
+      "within_threshold": true,
+      "E0": 17.661623225314308,
+      "overlap": 0.025738819927359
+    },
+    {
+      "sigma": 0.2,
+      "trial": 5,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.13615089456108564,
+      "within_threshold": true,
+      "E0": 17.536563103028698,
+      "overlap": 0.047669419671900984
+    },
+    {
+      "sigma": 0.2,
+      "trial": 6,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.23333372147603737,
+      "within_threshold": true,
+      "E0": 17.513065489131094,
+      "overlap": 0.046437398994819225
+    },
+    {
+      "sigma": 0.2,
+      "trial": 7,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.2093000245989618,
+      "within_threshold": true,
+      "E0": 17.456276787737323,
+      "overlap": 0.05013729178275094
+    },
+    {
+      "sigma": 0.2,
+      "trial": 8,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.23494767278239392,
+      "within_threshold": true,
+      "E0": 17.64033289219863,
+      "overlap": 0.05058586062625273
+    },
+    {
+      "sigma": 0.2,
+      "trial": 9,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.2828177077898896,
+      "within_threshold": true,
+      "E0": 17.436990914486188,
+      "overlap": 0.07171848477465449
+    },
+    {
+      "sigma": 0.2,
+      "trial": 10,
+      "branch_type": "Type B candidate",
+      "family_distance_to_continued": 0.12388468794961681,
+      "within_threshold": true,
+      "E0": 17.566451281536196,
+      "overlap": 0.0306305348048084
+    },
+    {
+      "sigma": 0.2,
+      "trial": 11,
+      "branch_type": "Mixed/ambiguous",
+      "family_distance_to_continued": 0.2605649286348954,
+      "within_threshold": true,
+      "E0": 17.646060923198796,
+      "overlap": 0.02792957991330854
+    }
+  ]
+}

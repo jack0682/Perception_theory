@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "active": true,
+  "skill": "ralph",
+  "keyword": "",
+  "phase": "executing",
+  "activated_at": "2026-04-10T15:54:12.309Z",
+  "updated_at": "2026-04-11T07:13:22.299Z",
+  "source": "state-server",
+  "active_skills": [
+    {
+      "skill": "ralph",
+      "phase": "executing",
+      "active": true,
+      "activated_at": "2026-04-10T15:54:12.309Z",
+      "updated_at": "2026-04-11T07:13:22.299Z"
+    }
+  ]
+}

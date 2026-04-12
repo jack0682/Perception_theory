@@ -92,30 +92,14 @@ def main():
     parser.add_argument('--c-ref', type=float, default=0.25, help='Volume fraction')
     parser.add_argument('--output', default='experiments/results/cohesion_scale_test.json')
     parser.add_argument('--n-workers', type=int, default=4, help='Number of parallel workers')
-    parser.add_argument('--gpu', action='store_true', help='Use GPU acceleration (CuPy)')
     args = parser.parse_args()
-
-    # GPU 환경 설정
-    if args.gpu:
-        os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-        try:
-            import cupy as cp
-            cp.cuda.Device(0).synchronize()
-            print(f"✓ GPU 감지: {cp.cuda.get_device_name(0)}", flush=True)
-            GPU_AVAILABLE = True
-        except (ImportError, Exception) as e:
-            print(f"⚠️  GPU 사용 불가 ({str(e)[:60]}), CPU로 전환", flush=True)
-            GPU_AVAILABLE = False
-            args.gpu = False
-    else:
-        GPU_AVAILABLE = False
 
     # 격자 크기 선택
     available_sizes = [64]
     grid_sizes = [s for s in available_sizes if s <= args.max_size]
 
     print("="*130)
-    mode = f"GPU 가속" if args.gpu and GPU_AVAILABLE else "CPU"
+    mode = "CPU"
     print(f"응집도 스케일 검증 (c_ref={args.c_ref}, workers={args.n_workers}, mode={mode})")
     print(f"시작: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*130)

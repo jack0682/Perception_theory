@@ -1,0 +1,561 @@
+{
+  "experiment": "exp69_relaxed_merge_neb_sweep",
+  "results": [
+    {
+      "experiment": "exp68_relaxed_merge_neb_lite",
+      "config": "10x10:0.6",
+      "lambda_rep": 0.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 14.811910759402904,
+      "initial": {
+        "name": "direct_initial",
+        "n_points": 7,
+        "max_total": 14.811910759402904,
+        "max_delta": 0.0,
+        "max_index": 0,
+        "source_overlap": 8.901995046797925,
+        "max_overlap": 8.901995046797925,
+        "max_overlap_index": 0,
+        "max_overlap_excess": 0.0,
+        "rows": [
+          {
+            "i": 0,
+            "total": 14.811910759402904,
+            "self1": 7.32498132658115,
+            "self2": 7.486929432821754,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 42.046327748502506,
+            "bd2": 42.71822300497717,
+            "overlap": 8.901995046797925,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 14.616180678237225,
+            "self1": 7.973538190784148,
+            "self2": 6.6426424874530765,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 49.23853016064824,
+            "bd2": 34.793077787373875,
+            "overlap": 8.775049317672401,
+            "delta": -0.1957300811656797
+          },
+          {
+            "i": 2,
+            "total": 13.304018008073474,
+            "self1": 7.7722627652981515,
+            "self2": 5.531755242775321,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 52.71102077660682,
+            "bd2": 25.839651584821542,
+            "overlap": 8.105415543743892,
+            "delta": -1.5078927513294307
+          },
+          {
+            "i": 3,
+            "total": 11.060889015271112,
+            "self1": 6.760014884144261,
+            "self2": 4.300874131126851,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 51.528416746434665,
+            "bd2": 16.707443790266847,
+            "overlap": 6.893093725012394,
+            "delta": -3.7510217441317923
+          },
+          {
+            "i": 4,
+            "total": 8.51369678396006,
+            "self1": 5.433733438504374,
+            "self2": 3.079963345455686,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 46.16267663185006,
+            "bd2": 8.463745477719465,
+            "overlap": 5.138083861477915,
+            "delta": -6.2982139754428434
+          },
+          {
+            "i": 5,
+            "total": 6.244473175712346,
+            "self1": 4.263286802145831,
+            "self2": 1.9811863735665158,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 38.49310040623302,
+            "bd2": 2.3936394022519965,
+            "overlap": 2.8403859531404505,
+            "delta": -8.567437583690559
+          },
+          {
+            "i": 6,
+            "total": 4.59535832522209,
+            "self1": 3.4875881101165507,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.806329454625377,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -10.216552434180814
+          }
+        ]
+      },
+      "relaxed": {
+        "name": "neb_lite_relaxed",
+        "n_points": 7,
+        "max_total": 14.811910759402904,
+        "max_delta": 0.0,
+        "max_index": 0,
+        "source_overlap": 8.901995046797925,
+        "max_overlap": 8.901995046797925,
+        "max_overlap_index": 0,
+        "max_overlap_excess": 0.0,
+        "rows": [
+          {
+            "i": 0,
+            "total": 14.811910759402904,
+            "self1": 7.32498132658115,
+            "self2": 7.486929432821754,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 42.046327748502506,
+            "bd2": 42.71822300497717,
+            "overlap": 8.901995046797925,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 14.548694565703759,
+            "self1": 7.946005426623056,
+            "self2": 6.602689139080703,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 49.272027996669394,
+            "bd2": 34.48628598541103,
+            "overlap": 8.757638546516556,
+            "delta": -0.2632161936991455
+          },
+          {
+            "i": 2,
+            "total": 13.160320967311993,
+            "self1": 7.706609062980789,
+            "self2": 5.453711904331204,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 52.66683675430887,
+            "bd2": 25.255109923271856,
+            "overlap": 8.042577532672137,
+            "delta": -1.6515897920909115
+          },
+          {
+            "i": 3,
+            "total": 10.85707258942292,
+            "self1": 6.6565231592891765,
+            "self2": 4.200549430133743,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 51.21448172768498,
+            "bd2": 16.0072156720945,
+            "overlap": 6.771527553743004,
+            "delta": -3.9548381699799844
+          },
+          {
+            "i": 4,
+            "total": 8.328750605801151,
+            "self1": 5.340967883130115,
+            "self2": 2.987782722671036,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 45.66974696323269,
+            "bd2": 7.9007265089579555,
+            "overlap": 4.977255429257368,
+            "delta": -6.483160153601753
+          },
+          {
+            "i": 5,
+            "total": 6.124040509664818,
+            "self1": 4.207736228388948,
+            "self2": 1.91630428127587,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 38.07476957802208,
+            "bd2": 2.1163809873132884,
+            "overlap": 2.6731879208428113,
+            "delta": -8.687870249738086
+          },
+          {
+            "i": 6,
+            "total": 4.59535832522209,
+            "self1": 3.4875881101165507,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.806329454625377,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -10.216552434180814
+          }
+        ]
+      },
+      "history": [
+        {
+          "iter": 0,
+          "max_delta": 0.0,
+          "max_total": 14.811910759402904
+        },
+        {
+          "iter": 10,
+          "max_delta": 0.0,
+          "max_total": 14.811910759402904
+        },
+        {
+          "iter": 20,
+          "max_delta": 0.0,
+          "max_total": 14.811910759402904
+        },
+        {
+          "iter": 24,
+          "max_delta": 0.0,
+          "max_total": 14.811910759402904
+        }
+      ],
+      "diagnostics": {
+        "initial_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 5.542233338928781e-13
+        },
+        "relaxed_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 5.471179065352771e-13
+        },
+        "history": {
+          "history_points": 4,
+          "monotone_nonincreasing": true,
+          "max_increase": 0.0,
+          "initial_recorded_max_delta": 0.0,
+          "final_recorded_max_delta": 0.0
+        },
+        "improvement": 0.0
+      }
+    },
+    {
+      "experiment": "exp68_relaxed_merge_neb_lite",
+      "config": "10x10:0.6",
+      "lambda_rep": 1.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 6.26985916534487,
+      "initial": {
+        "name": "direct_initial",
+        "n_points": 7,
+        "max_total": 15.612111302584363,
+        "max_delta": 9.342252137239495,
+        "max_index": 3,
+        "source_overlap": 0.04762691276702441,
+        "max_overlap": 4.949899027082264,
+        "max_overlap_index": 3,
+        "max_overlap_excess": 4.902272114315239,
+        "rows": [
+          {
+            "i": 0,
+            "total": 6.26985916534487,
+            "self1": 3.3477743522485666,
+            "self2": 2.8744579003292783,
+            "rep": 0.04762691276702441,
+            "barrier": 0.0,
+            "bd1": 23.214339230972126,
+            "bd2": 20.143959379726294,
+            "overlap": 0.04762691276702441,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 10.805672419208726,
+            "self1": 4.602065766579402,
+            "self2": 3.4272033527130534,
+            "rep": 2.7764032999162707,
+            "barrier": 0.0,
+            "bd1": 30.640397067629053,
+            "bd2": 24.386033334562953,
+            "overlap": 2.7764032999162707,
+            "delta": 4.535813253863856
+          },
+          {
+            "i": 2,
+            "total": 14.428591369787526,
+            "self1": 5.948822097542879,
+            "self2": 4.0692752675566295,
+            "rep": 4.410494004688017,
+            "barrier": 0.0,
+            "bd1": 41.623942988759204,
+            "bd2": 25.636466918568093,
+            "overlap": 4.410494004688017,
+            "delta": 8.158732204442657
+          },
+          {
+            "i": 3,
+            "total": 15.612111302584363,
+            "self1": 6.4794472074874045,
+            "self2": 4.182765068014694,
+            "rep": 4.949899027082264,
+            "barrier": 0.0,
+            "bd1": 48.28811103703626,
+            "bd2": 21.960611768687237,
+            "overlap": 4.949899027082264,
+            "delta": 9.342252137239495
+          },
+          {
+            "i": 4,
+            "total": 13.457308670227132,
+            "self1": 5.7018877457198105,
+            "self2": 3.3608025574083102,
+            "rep": 4.394618367099009,
+            "barrier": 0.0,
+            "bd1": 47.30457836966814,
+            "bd2": 13.95523083618699,
+            "overlap": 4.394618367099009,
+            "delta": 7.187449504882262
+          },
+          {
+            "i": 5,
+            "total": 9.288914319812687,
+            "self1": 4.420344240522154,
+            "self2": 2.1239180545522776,
+            "rep": 2.7446520247382553,
+            "barrier": 0.0,
+            "bd1": 39.8935652583971,
+            "bd2": 4.748498386655005,
+            "overlap": 2.7446520247382553,
+            "delta": 3.019055154467817
+          },
+          {
+            "i": 6,
+            "total": 4.596700805120458,
+            "self1": 3.4889305900149177,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.823835089499596,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -1.673158360224412
+          }
+        ]
+      },
+      "relaxed": {
+        "name": "neb_lite_relaxed",
+        "n_points": 7,
+        "max_total": 15.32064756757011,
+        "max_delta": 9.05078840222524,
+        "max_index": 3,
+        "source_overlap": 0.04762691276702441,
+        "max_overlap": 4.771763260386457,
+        "max_overlap_index": 3,
+        "max_overlap_excess": 4.7241363476194325,
+        "rows": [
+          {
+            "i": 0,
+            "total": 6.26985916534487,
+            "self1": 3.3477743522485666,
+            "self2": 2.8744579003292783,
+            "rep": 0.04762691276702441,
+            "barrier": 0.0,
+            "bd1": 23.214339230972126,
+            "bd2": 20.143959379726294,
+            "overlap": 0.04762691276702441,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 10.355358179634136,
+            "self1": 4.459196308306362,
+            "self2": 3.396932957508729,
+            "rep": 2.499228913819045,
+            "barrier": 0.0,
+            "bd1": 29.71973743573345,
+            "bd2": 24.17987847243721,
+            "overlap": 2.499228913819045,
+            "delta": 4.085499014289266
+          },
+          {
+            "i": 2,
+            "total": 14.056435561455935,
+            "self1": 5.81935631235264,
+            "self2": 4.030548385005014,
+            "rep": 4.206530864098279,
+            "barrier": 0.0,
+            "bd1": 40.72018312090675,
+            "bd2": 25.44371697274777,
+            "overlap": 4.206530864098279,
+            "delta": 7.786576396111065
+          },
+          {
+            "i": 3,
+            "total": 15.32064756757011,
+            "self1": 6.411008027531764,
+            "self2": 4.137876279651887,
+            "rep": 4.771763260386457,
+            "barrier": 0.0,
+            "bd1": 47.8619476674492,
+            "bd2": 21.565478908928647,
+            "overlap": 4.771763260386457,
+            "delta": 9.05078840222524
+          },
+          {
+            "i": 4,
+            "total": 13.0305207578006,
+            "self1": 5.636120246471463,
+            "self2": 3.250688755950728,
+            "rep": 4.14371175537841,
+            "barrier": 0.0,
+            "bd1": 46.95360970780895,
+            "bd2": 13.108359524559027,
+            "overlap": 4.14371175537841,
+            "delta": 6.7606615924557305
+          },
+          {
+            "i": 5,
+            "total": 8.744592240541081,
+            "self1": 4.374234917641549,
+            "self2": 1.9999729465110583,
+            "rep": 2.3703843763884747,
+            "barrier": 0.0,
+            "bd1": 39.49501371556738,
+            "bd2": 3.974331713331291,
+            "overlap": 2.3703843763884747,
+            "delta": 2.4747330751962116
+          },
+          {
+            "i": 6,
+            "total": 4.596700805120458,
+            "self1": 3.4889305900149177,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.823835089499596,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -1.673158360224412
+          }
+        ]
+      },
+      "history": [
+        {
+          "iter": 0,
+          "max_delta": 9.330629638453729,
+          "max_total": 15.6004888037986
+        },
+        {
+          "iter": 10,
+          "max_delta": 9.214237666826303,
+          "max_total": 15.484096832171174
+        },
+        {
+          "iter": 20,
+          "max_delta": 9.097546778042265,
+          "max_total": 15.367405943387135
+        },
+        {
+          "iter": 24,
+          "max_delta": 9.05078840222524,
+          "max_total": 15.32064756757011
+        }
+      ],
+      "diagnostics": {
+        "initial_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 4.689582056016661e-13
+        },
+        "relaxed_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 4.689582056016661e-13
+        },
+        "history": {
+          "history_points": 4,
+          "monotone_nonincreasing": true,
+          "max_increase": -0.046758375817024245,
+          "initial_recorded_max_delta": 9.330629638453729,
+          "final_recorded_max_delta": 9.05078840222524
+        },
+        "improvement": 0.29146373501425415
+      }
+    }
+  ],
+  "summary": [
+    {
+      "config": "10x10:0.6",
+      "lambda_rep": 0.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 14.811910759402904,
+      "initial_max_delta": 0.0,
+      "relaxed_max_delta": 0.0,
+      "initial_source_overlap": 8.901995046797925,
+      "initial_max_overlap": 8.901995046797925,
+      "initial_max_overlap_excess": 0.0,
+      "relaxed_source_overlap": 8.901995046797925,
+      "relaxed_max_overlap": 8.901995046797925,
+      "relaxed_max_overlap_excess": 0.0,
+      "improvement": 0.0,
+      "improvement_frac": 0.0,
+      "initial_max_index": 0,
+      "relaxed_max_index": 0,
+      "max_mass_error": 5.471179065352771e-13,
+      "max_simplex_violation": 0.0,
+      "max_box_low_violation": 0.0,
+      "max_box_high_violation": 0.0,
+      "history_monotone": true,
+      "history_max_increase": 0.0
+    },
+    {
+      "config": "10x10:0.6",
+      "lambda_rep": 1.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 6.26985916534487,
+      "initial_max_delta": 9.342252137239495,
+      "relaxed_max_delta": 9.05078840222524,
+      "initial_source_overlap": 0.04762691276702441,
+      "initial_max_overlap": 4.949899027082264,
+      "initial_max_overlap_excess": 4.902272114315239,
+      "relaxed_source_overlap": 0.04762691276702441,
+      "relaxed_max_overlap": 4.771763260386457,
+      "relaxed_max_overlap_excess": 4.7241363476194325,
+      "improvement": 0.29146373501425415,
+      "improvement_frac": 0.03119844452200555,
+      "initial_max_index": 3,
+      "relaxed_max_index": 3,
+      "max_mass_error": 4.689582056016661e-13,
+      "max_simplex_violation": 0.0,
+      "max_box_low_violation": 0.0,
+      "max_box_high_violation": 0.0,
+      "history_monotone": true,
+      "history_max_increase": -0.046758375817024245
+    }
+  ]
+}

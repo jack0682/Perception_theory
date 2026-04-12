@@ -1,0 +1,161 @@
+{
+  "experiment": "exp79_continuation_access_diagnostic",
+  "config": "20x20:0.6",
+  "target_lambda": 0.5,
+  "distance_threshold": 5.0,
+  "continued_branch": {
+    "branch_type": "Type B candidate",
+    "total_energy": 17.93024747995569,
+    "E0": 17.906272952867443,
+    "overlap": 0.04794905417648822
+  },
+  "raw_hit_count": 7,
+  "raw_total_count": 16,
+  "raw_hit_rate": 0.4375,
+  "raw_rows": [
+    {
+      "raw_index": 0,
+      "branch_type": "Type A candidate",
+      "total_energy": 27.852504953729717,
+      "E0": 27.621049838074455,
+      "overlap": 0.46291023131052494,
+      "family_distance_to_continued": 4.376604166916784,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 1,
+      "branch_type": "Type A candidate",
+      "total_energy": 32.92926148888306,
+      "E0": 32.48115054621832,
+      "overlap": 0.8962218853294612,
+      "family_distance_to_continued": 6.7590114832053025,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 2,
+      "branch_type": "Type A candidate",
+      "total_energy": 31.634187667176224,
+      "E0": 31.388664205434885,
+      "overlap": 0.49104692348267576,
+      "family_distance_to_continued": 5.140035485073453,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 3,
+      "branch_type": "Type A candidate",
+      "total_energy": 29.540813702594708,
+      "E0": 29.401943805131587,
+      "overlap": 0.2777397949262377,
+      "family_distance_to_continued": 5.163375119732314,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 4,
+      "branch_type": "Type A candidate",
+      "total_energy": 27.955585914588426,
+      "E0": 27.749434694879415,
+      "overlap": 0.41230243941802114,
+      "family_distance_to_continued": 4.689610471751858,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 5,
+      "branch_type": "Type A candidate",
+      "total_energy": 31.5822289954709,
+      "E0": 31.195539029839455,
+      "overlap": 0.7733799312628857,
+      "family_distance_to_continued": 4.9799988595603875,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 6,
+      "branch_type": "Type A candidate",
+      "total_energy": 27.621838377298168,
+      "E0": 27.45374083656654,
+      "overlap": 0.3361950814632588,
+      "family_distance_to_continued": 5.060713286592918,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 7,
+      "branch_type": "Type A candidate",
+      "total_energy": 31.648529608813647,
+      "E0": 31.45410673464825,
+      "overlap": 0.38884574833079777,
+      "family_distance_to_continued": 6.085519815031692,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 8,
+      "branch_type": "Type A candidate",
+      "total_energy": 33.56184797108466,
+      "E0": 33.10947283005508,
+      "overlap": 0.9047502820591612,
+      "family_distance_to_continued": 5.963274368889265,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 9,
+      "branch_type": "Type A candidate",
+      "total_energy": 26.222776306383953,
+      "E0": 26.094539739852685,
+      "overlap": 0.25647313306253827,
+      "family_distance_to_continued": 4.647791942744027,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 10,
+      "branch_type": "Type A candidate",
+      "total_energy": 28.071769258450185,
+      "E0": 27.925662156938134,
+      "overlap": 0.29221420302410417,
+      "family_distance_to_continued": 4.360664031270348,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 11,
+      "branch_type": "Type A candidate",
+      "total_energy": 29.021567031231566,
+      "E0": 28.86162493069444,
+      "overlap": 0.31988420107425064,
+      "family_distance_to_continued": 4.954316873365109,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 12,
+      "branch_type": "Type A candidate",
+      "total_energy": 31.428284614994585,
+      "E0": 30.945785409376988,
+      "overlap": 0.9649984112351937,
+      "family_distance_to_continued": 6.4005355448618815,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 13,
+      "branch_type": "Type A candidate",
+      "total_energy": 31.28893150628343,
+      "E0": 31.13085186759857,
+      "overlap": 0.3161592773697204,
+      "family_distance_to_continued": 5.407884248302325,
+      "within_threshold": false
+    },
+    {
+      "raw_index": 14,
+      "branch_type": "Type A candidate",
+      "total_energy": 28.89831971290024,
+      "E0": 28.56554925404621,
+      "overlap": 0.6655409177080546,
+      "family_distance_to_continued": 4.757288508910211,
+      "within_threshold": true
+    },
+    {
+      "raw_index": 15,
+      "branch_type": "Type A candidate",
+      "total_energy": 32.30074314720548,
+      "E0": 31.979318646006003,
+      "overlap": 0.6428490023989588,
+      "family_distance_to_continued": 5.967057996324749,
+      "within_threshold": false
+    }
+  ]
+}

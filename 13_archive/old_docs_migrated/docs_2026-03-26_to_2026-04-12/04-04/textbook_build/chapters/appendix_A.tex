@@ -1,0 +1,236 @@
+% Appendix A: Mathematical Background (~12 pages)
+
+\chapter{Mathematical Background}
+\label{app:math-background}
+
+이 부록은 본문에서 사용되는 수학적 배경을 자기 완결적으로 제공한다. 각 주제는 SCC 이론에서의 역할을 명시하여, 필요한 부분만 참조할 수 있도록 구성되었다.
+
+
+\section{Graph Theory}
+\label{app:graph-theory}
+
+SCC 이론은 관계적 지지 공간 $X_t$를 유한 그래프로 모델링한다. 이 절은 핵심적인 그래프-대수적 도구를 소개한다.
+
+
+\subsection{인접 행렬과 라플라시안}
+
+유한 그래프 $G = (V, E)$에서 $|V| = n$일 때, 인접 행렬 $A \in \mathbb{R}^{n \times n}$은 $A_{ij} = \mathbf{N}_t(x_i, x_j)$이다. SCC에서 $A$는 대칭이고 비음(nonneg)이다.
+
+\textbf{차수 행렬} $D$는 대각 행렬로, $D_{ii} = \sum_j A_{ij}$이다.
+
+\textbf{그래프 라플라시안} $L$은 다음과 같이 정의된다:
+\begin{equation}
+    L = D - A
+    \label{eq:laplacian-def}
+\end{equation}
+
+$L$은 양반정치(positive semidefinite)이며, 다음 이차 형식을 만족한다:
+\begin{equation}
+    v^T L v = \sum_{\{i,j\} \in E} A_{ij}(v_i - v_j)^2 \geq 0
+    \label{eq:laplacian-quadratic}
+\end{equation}
+
+이 이차 형식은 SCC의 경계/형태학 에너지 $\mathcal{E}_{\mathrm{bd}}$의 매끄러움 항에 직접 나타난다. 순서쌍 합 규약 하에서:
+\begin{equation}
+    \sum_{x,y} \mathbf{N}(x,y)(u(x) - u(y))^2 = 2\, u^T L\, u
+    \label{eq:ordered-pair-laplacian}
+\end{equation}
+
+
+\subsection{Fiedler 고유값과 스펙트럼 간극}
+
+$L$의 고유값을 $0 = \lambda_1 \leq \lambda_2 \leq \cdots \leq \lambda_n$으로 정렬하자. 연결 그래프에서 $\lambda_1 = 0$은 상수 벡터에 대응하고, $\lambda_2 > 0$이다.
+
+\begin{definition}[Fiedler 고유값]
+$\lambda_2(L)$을 대수적 연결도(algebraic connectivity) 또는 Fiedler 고유값이라 한다. 이것은 그래프의 연결 강도를 정량화한다.
+\end{definition}
+
+\textbf{SCC에서의 역할}: 위상 전이 정리(T8-Core)의 핵심 조건은
+\begin{equation}
+    \frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}
+    \label{eq:phase-transition-condition}
+\end{equation}
+이다. 여기서 $W''(c) = 2(1 - 6c + 6c^2)$이고 $c$는 스피노달 범위 $\big(\frac{3-\sqrt{3}}{6}, \frac{3+\sqrt{3}}{6}\big) \approx (0.211, 0.789)$ 내에 있어야 $W''(c) < 0$이다. $\lambda_2$가 작을수록 (즉 연결이 느슨할수록) 위상 분리가 쉽게 일어난다.
+
+
+\subsection{행 정규화 행렬}
+
+행 정규화 인접 행렬은 확률 전이 행렬로 해석된다:
+\begin{equation}
+    P = D^{-1}A, \qquad P_{ij} = \frac{A_{ij}}{\sum_k A_{ik}}
+    \label{eq:row-normalized}
+\end{equation}
+
+SCC에서 $P$는 닫힘 연산자의 집계(aggregation) 성분이다: $(Pu)(x)$는 지점 $x$의 이웃들에 대한 응집의 가중 평균이다.
+
+
+\subsection{예제: $5 \times 5$ 격자}
+
+$5 \times 5$ 격자 ($n = 25$, 4-연결)에서:
+\begin{itemize}
+    \item 내부 지점 ($3 \times 3 = 9$개): 차수 4
+    \item 변 지점 ($12$개): 차수 3
+    \item 모서리 지점 ($4$개): 차수 2
+    \item Fiedler 고유값: $\lambda_2 = 2(1 - \cos(\pi/5)) \approx 0.382$
+\end{itemize}
+
+위상 전이 조건: $c = 0.3$에서 $|W''(0.3)| = 2|1 - 1.8 + 0.54| = 0.52$이므로, $\beta/\alpha > 4 \times 0.382/0.52 \approx 2.94$이면 비자명 형성이 출현한다. 기본 매개변수 $\beta = 10, \alpha = 1$에서 $\beta/\alpha = 10 > 2.94$이므로 조건이 충족된다.
+
+
+\section{Variational Methods}
+\label{app:variational}
+
+SCC는 변분적 이론이다: 형성은 에너지 범함수의 최소화자로 특징지어진다. 이 절은 필요한 변분법 배경을 제공한다.
+
+
+\subsection{Euler-Lagrange 방정식}
+
+범함수 $\mathcal{E}(u) : \mathbb{R}^n \to \mathbb{R}$의 임계점(critical point)은 기울기가 0인 점이다:
+\begin{equation}
+    \nabla \mathcal{E}(u^*) = 0
+    \label{eq:euler-lagrange}
+\end{equation}
+
+유한 차원에서 이는 표준 다변수 최적화 문제이다. SCC의 에너지는 해석적(analytic)이므로 ($b_D = 0$ 조건 하에서), Łojasiewicz 기울기 부등식이 적용된다.
+
+\begin{theorem}[Łojasiewicz 기울기 부등식]
+해석적 함수 $\mathcal{E} : \mathbb{R}^n \to \mathbb{R}$의 임계점 $u^*$ 근방에서, 상수 $C > 0$, $\theta \in [1/2, 1)$이 존재하여:
+\begin{equation}
+    \|\nabla \mathcal{E}(u)\| \geq C\, |\mathcal{E}(u) - \mathcal{E}(u^*)|^\theta
+    \label{eq:lojasiewicz}
+\end{equation}
+\end{theorem}
+
+이 부등식은 T14(기울기 흐름 수렴)의 핵심 도구이다: 기울기 흐름의 경로 길이가 유한함을 보장하여, 궤적이 단일 임계점으로 수렴함을 증명한다.
+
+
+\subsection{제약 최적화와 KKT 조건}
+
+SCC의 최적화는 부피 제약 $\Sigma_m$ 위에서 수행된다. 일반적으로, 등식 제약 $h(u) = 0$과 부등식 제약 $g_i(u) \leq 0$ 하에서의 최적화에는 Karush-Kuhn-Tucker(KKT) 조건이 필요하다:
+\begin{align}
+    \nabla \mathcal{E}(u^*) + \lambda \nabla h(u^*) + \sum_i \mu_i \nabla g_i(u^*) &= 0 \label{eq:kkt-stationarity}\\
+    h(u^*) &= 0 \label{eq:kkt-equality}\\
+    g_i(u^*) \leq 0, \quad \mu_i \geq 0, \quad \mu_i g_i(u^*) &= 0 \label{eq:kkt-complementarity}
+\end{align}
+
+SCC의 경우:
+\begin{itemize}
+    \item 등식 제약: $\sum_i u_i = m$ (부피)
+    \item 부등식 제약: $0 \leq u_i \leq 1$ (상자 제약)
+    \item Lagrange 승수 $\lambda$: 부피 제약에 대한 ``화학 포텐셜''
+\end{itemize}
+
+
+\subsection{사영 기울기 하강}
+
+$\Sigma_m$ 위의 최적화는 사영 기울기 하강(PGD)으로 구현된다:
+\begin{equation}
+    u^{k+1} = \Pi_{\Sigma_m}\!\big(u^k - \eta\, \nabla \mathcal{E}(u^k)\big)
+    \label{eq:pgd}
+\end{equation}
+여기서 $\Pi_{\Sigma_m}$은 $\Sigma_m$으로의 유클리드 사영이다. 이 사영은 두 단계로 수행된다:
+\begin{enumerate}
+    \item 평균 보정: $\tilde{u}_i \leftarrow v_i - (\sum_j v_j - m)/n$ (부피 복원)
+    \item 상자 절단: $u_i \leftarrow \max(0, \min(1, \tilde{u}_i))$ (범위 복원, 부피 미세 보정 반복)
+\end{enumerate}
+
+
+\section{Optimal Transport}
+\label{app:ot}
+
+SCC의 시간적 전달 핵은 최적 전달(OT) 이론과 연결된다. 이 절은 핵심 개념을 소개한다.
+
+
+\subsection{Kantorovich 문제}
+
+측도 $\mu$와 $\nu$ 사이의 Kantorovich 최적 전달 비용은:
+\begin{equation}
+    \mathrm{OT}(\mu, \nu) = \inf_{\gamma \in \Gamma(\mu,\nu)} \sum_{x,y} c(x,y)\, \gamma(x,y)
+    \label{eq:kantorovich}
+\end{equation}
+여기서 $\Gamma(\mu,\nu)$는 주변이 $\mu, \nu$인 결합 측도(coupling)의 집합이고, $c(x,y)$는 전달 비용이다.
+
+\textbf{SCC 연결}: SCC의 전달 핵 $\mathbf{M}_{t \to s}$는 응집 측도 $u_t \cdot \mu_{X_t}$와 $u_s \cdot \mu_{X_s}$ 사이의 부분-확률적(sub-stochastic) 커플링이다. 전체 질량이 보존되지 않으므로 (E1: 부분 전달), \textbf{비균형 OT}(unbalanced OT)의 틀이 적용된다.
+
+
+\subsection{엔트로피 정규화와 Sinkhorn 알고리즘}
+
+엔트로피 정규화 OT는 원래 문제에 엔트로피 항을 추가한다:
+\begin{equation}
+    \mathrm{OT}_\varepsilon(\mu, \nu) = \inf_{\gamma \in \Gamma(\mu,\nu)} \sum_{x,y} c(x,y)\, \gamma(x,y) + \varepsilon \sum_{x,y} \gamma(x,y) \log \gamma(x,y)
+    \label{eq:sinkhorn-ot}
+\end{equation}
+
+$\varepsilon > 0$이면 해는 유일하며 $\gamma^* = \mathrm{diag}(a)\, K\, \mathrm{diag}(b)$ 형태이다. 여기서 $K_{ij} = e^{-c_{ij}/\varepsilon}$이고, 벡터 $a, b$는 Sinkhorn 반복으로 구한다:
+\begin{equation}
+    a \leftarrow \frac{\mu}{Kb}, \qquad b \leftarrow \frac{\nu}{K^T a}
+    \label{eq:sinkhorn-iteration}
+\end{equation}
+
+SCC의 \texttt{transport.py}는 수치 안정성을 위해 로그 도메인 Sinkhorn을 사용한다.
+
+
+\subsection{부분 최적 전달}
+
+SCC의 전달은 질량 보존을 요구하지 않는다 (E1: 부분 소실 허용). 부분 OT는 주변 제약을 부등식으로 완화한다:
+\begin{equation}
+    \gamma \mathbf{1} \leq \mu, \qquad \gamma^T \mathbf{1} \leq \nu
+    \label{eq:partial-ot}
+\end{equation}
+
+이는 응집 소실(cohesion dissipation)---형성의 일부가 후속자 없이 소멸하는 현상---을 자연스럽게 수용한다.
+
+
+\subsection{자기-참조적 전달 비용}
+
+SCC의 전달 비용은 자기-참조적이다: 비용 $c(x,y)$가 응집 장 $u_t, u_s$ 자체에 의존한다. 구체적으로, 응집 지문(cohesion fingerprint) $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x; 1{-}u))$를 이용하여:
+\begin{equation}
+    c(x,y; u_t, u_s) = \frac{\|y - x\|^2}{2\sigma^2} + \gamma \|\varphi_t(x) - \varphi_s(y)\|^2
+    \label{eq:self-referential-cost}
+\end{equation}
+
+비용이 해에 의존하므로, 고정점 반복이 필요하다. Schauder 고정점 정리에 의해 존재성이 보장되며, 약한 체제(weak regime)에서 Banach 축소 원리에 의해 수렴이 보장된다.
+
+
+\section{Bifurcation Theory}
+\label{app:bifurcation}
+
+SCC의 위상 전이 정리(T8)는 분기 이론(bifurcation theory)에 의존한다.
+
+
+\subsection{Crandall-Rabinowitz 정리}
+
+\begin{theorem}[Crandall-Rabinowitz, 1971]
+$F(\lambda, u) = 0$이 $(\lambda_0, u_0)$에서 자명 분지(trivial branch)를 가지고, $F_u(\lambda_0, u_0)$의 핵이 1차원이며 횡단성 조건(transversality condition) $F_{\lambda u}(\lambda_0, u_0) \phi \notin \mathrm{Range}(F_u(\lambda_0, u_0))$를 만족하면, $(\lambda_0, u_0)$에서 비자명 분지가 갈라져 나온다.
+\end{theorem}
+
+\textbf{SCC 적용}: 균일 해 $u \equiv c$에서의 Hessian을 분석하면, $\beta/\alpha$가 임계비 $4\lambda_2/|W''(c)|$를 넘을 때 pitchfork 분기가 발생한다. 이것이 T8-Core의 본질이다.
+
+
+\subsection{Pitchfork 분기}
+
+T8의 분기는 supercritical pitchfork이다: 분기점 이후 균일 해는 불안정해지고, 두 개의 안정한 비균일 해(형성)가 나타난다. 비자명 분지의 방향은 Fiedler 고유벡터에 의해 결정된다.
+
+\begin{equation}
+    u_\varepsilon = c\,\mathbf{1} + \varepsilon\, v_2 + O(\varepsilon^2)
+    \label{eq:pitchfork-branch}
+\end{equation}
+여기서 $v_2$는 $\lambda_2$에 대응하는 Fiedler 고유벡터이다.
+
+
+\section{$\Gamma$-수렴}
+\label{app:gamma-convergence}
+
+$\Gamma$-수렴은 에너지 범함수의 극한 행동을 분석하는 도구이다.
+
+\begin{definition}[$\Gamma$-수렴]
+범함수열 $\mathcal{E}_h$가 $\mathcal{E}$로 $\Gamma$-수렴한다는 것은 모든 $u$에 대해:
+\begin{enumerate}
+    \item (Liminf) $u_h \to u$이면 $\mathcal{E}(u) \leq \liminf_{h \to 0} \mathcal{E}_h(u_h)$
+    \item (Recovery) $\mathcal{E}(u) = \lim_{h \to 0} \mathcal{E}_h(u_h)$인 복원열 $u_h$가 존재
+\end{enumerate}
+\end{definition}
+
+\textbf{Modica-Mortola 정리}: 연속 Allen-Cahn 에너지 $\varepsilon \int |\nabla u|^2 + \varepsilon^{-1} \int W(u)$는 $\varepsilon \to 0$에서 인터페이스 에너지(perimeter functional)로 $\Gamma$-수렴한다.
+
+\textbf{SCC 적용} (T11): 그래프 위의 SCC 경계 에너지 $\mathcal{E}_{\mathrm{bd}}$는 그래프 해상도가 세밀해질 때 연속 Allen-Cahn 에너지로 $\Gamma$-수렴한다. 이는 SCC의 이산 이론과 연속 위상 장 이론 사이의 수학적 일관성을 보장한다.

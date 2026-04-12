@@ -1,0 +1,274 @@
+% Appendix D: Abbreviations & Cross-References (~10 pages)
+
+\chapter{Abbreviations \& Cross-References}
+\label{app:cross-ref}
+
+이 부록은 정리 카테고리, 정리 의존성 그래프, 약자 사전, 주요 용어 색인을 제공한다.
+
+
+\section{Theorem Categories}
+\label{app:theorem-categories}
+
+SCC 이론의 모든 주장은 세 가지 카테고리로 분류된다.
+
+\begin{description}
+    \item[Category A (완전 증명)] 무조건적으로 증명된 정리. 가정이 명시적이며, 증명이 완전하다. 외부 조건이나 미해결 보조정리에 의존하지 않는다.
+
+    \item[Category B (조건부)] 명시된 가설 하에서 증명된 정리. 가설 자체가 미증명이거나 특정 체제에 제한된다.
+
+    \item[Category C (추측)] 실험적 증거가 있으나 증명이 없는 주장, 또는 부분적 증명만 존재하는 주장.
+\end{description}
+
+\textbf{현재 상태 (v2.1, Phase 14)}: \textbf{48 Category A}, 0 Category B, 0 Category C. \textbf{이론 100\% 완료.}
+
+
+\subsection{완전한 정리 레지스트리}
+
+\begin{table}[p]
+\centering
+\caption{Category A 정리 레지스트리 (1/2)}
+\label{tab:theorem-registry-1}
+\small
+\begin{tabular}{llp{7.5cm}}
+\hline
+\textbf{ID} & \textbf{Cat} & \textbf{설명} \\
+\hline
+T1 & A & 에너지 최소화자 존재성 ($\Sigma_m$ 위에서) \\
+T3 & A & 안정성: 비자명 최소화자의 Hessian 양정치성 \\
+T6a & A & 닫힘 고정점 존재 (Brouwer) \\
+T6b & A & 닫힘 고정점 유일성 ($a_{\mathrm{cl}} < 4$, Banach) \\
+T6-Stability & A & 닫힘 고정점의 안정성 (축소율 $a_{\mathrm{cl}}/4$) \\
+T7-Enhanced & A & 자기-참조적 준안정성 강화 (Allen-Cahn 대비) \\
+T8-Core & A & 위상 전이: $\beta/\alpha > 4\lambda_2/|W''(c)|$에서 분기 \\
+T8-Full & A & 위상 전이: $\mathcal{E}_{\mathrm{bd}}$ 최소화자에서 $\mu_0(H_{\mathrm{bd}}) > 0$ \\
+T-A2 & A & 닫힘 단조성 (A2 공리의 증명) \\
+T11 & A & $\Gamma$-수렴: 그래프 $\to$ 연속 Allen-Cahn \\
+T14 & A & 기울기 흐름 수렴 (Łojasiewicz, $b_D = 0$) \\
+T20 & A & 공리 일관성: A1'--E4 동시 만족 가능 \\
+\hline
+C-Axioms & A & 공동-소속 공리 C1--C4 (분석해 실현에서) \\
+QM1 & A & $\mathcal{Q}_{\mathrm{morph}}(c \cdot \mathbf{1}) = 0$ (균일 장) \\
+QM2 & A & $\mathcal{Q}_{\mathrm{morph}} \in [0, 1]$ (범위) \\
+QM3 & A & $\mathcal{Q}_{\mathrm{morph}}$ 섭동에 대한 연속성 \\
+QM4 & A & 이중 형태 분절 감지 \\
+\hline
+Predicate-Energy Bridge & A & Sep $= 1 - \mathcal{E}_{\mathrm{sep}}/m$ (정확 등식) \\
+ & & Bind $\geq 1 - \sqrt{\mathcal{E}_{\mathrm{cl}}/n}$ (Cauchy-Schwarz) \\
+Deep Core Dom.\ 2b & A & $\mathbb{Z}^d$ 위 등주부등식 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Category A 정리 레지스트리 (2/2)}
+\label{tab:theorem-registry-2}
+\small
+\begin{tabular}{llp{7.5cm}}
+\hline
+\textbf{ID} & \textbf{Cat} & \textbf{설명} \\
+\hline
+T-Bind-Proj & A & Bind 사영 부등식 (일반 $\tau$) \\
+T-Persist-1(a) & A & 단일 형성 지속성 (핵심 중첩) \\
+T-Persist-1(b) & A & 단일 형성 지속성 (전달 기반) \\
+T-Persist-1(c) & A & 핵심 계승 조건 \\
+T-Persist-1(d) & A & 지속성 하한 \\
+T-Persist-1(e) & A & 지속 실패 특성화 \\
+T-Persist-K-Sep & A & 다중 형성 지속성 (잘 분리 체제) \\
+T-Persist-K-Weak & A & 다중 형성 지속성 (약한 상호작용) \\
+T-Persist-K-Unified & A & 통합 지속성 ($\Lambda_{\mathrm{coupling}}$ 매개화) \\
+T-Persist-K-Strong & A & 강한 상호작용 국소 안정성 \\
+T-Persist-Full & A & 완전한 지속성 정리 \\
+\hline
+Coupling Bound Lemma & A & K-형성 Hessian 결합 보조정리 \\
+Interior Gap Prop. & A & 핵심부에서의 교차항 지수 감쇠 \\
+Formation-Birth & A & 형성 탄생: 초임계 pitchfork \\
+\hline
+\multicolumn{3}{l}{\textit{+ 추가 보조정리 및 명제 (총 48개)}} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{Theorem Dependency Graph}
+\label{app:theorem-dag}
+
+% [Figure placeholder: Theorem DAG]
+\begin{figure}[p]
+\centering
+\fbox{\parbox{0.9\textwidth}{\centering\vspace{8cm}
+\textbf{[그림 D.1]} 정리 의존성 그래프 (DAG).\\[6pt]
+\textbf{기초 층}: T6a/b (닫힘 고정점), T20 (공리 일관성)\\
+$\downarrow$\\
+\textbf{에너지 구조}: T1 (존재성), T14 (수렴), T11 ($\Gamma$-수렴)\\
+$\downarrow$\\
+\textbf{위상 전이}: T8-Core $\to$ T8-Full\\
+$\downarrow$\\
+\textbf{진단 다리}: Predicate-Energy Bridge, QM1--4\\
+$\downarrow$\\
+\textbf{시간적 이론}: T-Persist-1(a--e) $\to$ T-Persist-K-Sep/Weak/Unified\\
+$\downarrow$\\
+\textbf{운동학}: Formation-Birth, T7-Enhanced, Coupling Bound Lemma\\[6pt]
+\textbf{임계 경로}: T6b $\to$ T1 $\to$ T8-Core $\to$ T14 $\to$ T-Persist-1 $\to$ T-Persist-K-Unified
+\vspace{0.5cm}}}
+\caption{정리 의존성 그래프. 화살표는 ``전제한다'' 관계를 나타낸다. 임계 경로(critical path)는 굵은 선으로 표시된다.}
+\label{fig:theorem-dag}
+\end{figure}
+
+\textbf{임계 경로 설명}:
+\begin{enumerate}
+    \item T6b (닫힘 유일성): Banach 축소 원리. $a_{\mathrm{cl}} < 4$ 필요.
+    \item T1 (존재성): Weierstrass 극값 정리. $\Sigma_m$의 콤팩트성과 $\mathcal{E}$의 연속성.
+    \item T8-Core (위상 전이): Crandall-Rabinowitz. Fiedler 고유값과 이중 우물.
+    \item T14 (수렴): Łojasiewicz. 에너지 해석성 ($b_D = 0$).
+    \item T-Persist-1 (지속성): IFT 기반. 온화한 전이 가정.
+    \item T-Persist-K-Unified (다중 지속성): Coupling Bound Lemma + per-regime 조건.
+\end{enumerate}
+
+
+\section{Abbreviation Dictionary}
+\label{app:abbreviations}
+
+\begin{longtable}{lp{11cm}}
+\hline
+\textbf{약자} & \textbf{의미} \\
+\hline
+\endfirsthead
+\hline
+\textbf{약자} & \textbf{의미} \\
+\hline
+\endhead
+SCC & Soft Cognitive Cohesion --- 부드러운 인지 응집 \\
+Cat A & Category A --- 완전 증명, 무조건적 \\
+Cat B & Category B --- 조건부 증명 \\
+Cat C & Category C --- 추측 또는 부분 증명 \\
+\hline
+$\mathcal{E}$ & Energy --- 총 에너지 범함수 \\
+$\mathcal{E}_{\mathrm{cl}}$ & Closure energy --- 닫힘 에너지 \\
+$\mathcal{E}_{\mathrm{sep}}$ & Separation energy --- 분리 에너지 \\
+$\mathcal{E}_{\mathrm{bd}}$ & Boundary/morphology energy --- 경계/형태학 에너지 \\
+$\mathcal{E}_{\mathrm{tr}}$ & Transport energy --- 전달 에너지 \\
+\hline
+FD & Finite Difference --- 유한차분 (기울기 검증) \\
+PGD & Projected Gradient Descent --- 사영 기울기 하강 \\
+BB & Barzilai-Borwein --- 적응적 보폭 기법 \\
+OT & Optimal Transport --- 최적 전달 \\
+KKT & Karush-Kuhn-Tucker --- 제약 최적화 조건 \\
+IFT & Implicit Function Theorem --- 음함수 정리 \\
+NEB & Nudged Elastic Band --- 전이 상태 탐색 \\
+\hline
+$L$ & Laplacian --- 그래프 라플라시안 ($D - A$) \\
+$P$ & Row-normalized adjacency --- 행 정규화 인접 ($D^{-1}A$) \\
+$\lambda_2$ & Fiedler eigenvalue --- 대수적 연결도 \\
+$W_{\mathrm{sym}}$ & Cohesion-weighted symmetric adjacency \\
+$\rho(\cdot)$ & Spectral radius --- 스펙트럼 반지름 \\
+\hline
+$\Sigma_m$ & Volume-constrained simplex --- 부피 제약 단체 \\
+$W(u)$ & Double-well potential --- $u^2(1-u)^2$ \\
+$\sigma(\cdot)$ & Logistic sigmoid --- $1/(1+e^{-z})$ \\
+\hline
+SR & Spectral-Repulsion compatibility --- 스펙트럼-반발 호환성 \\
+WS & Well-Separated --- 잘 분리 조건 ($D_{\mathrm{sep}} \geq 3$) \\
+$\Lambda$ & Coupling parameter --- $\lambda_{\mathrm{rep}} \omega_{jk}/\min(\mu_j,\mu_k)$ \\
+\hline
+$H_0$ & Zeroth homology --- 0차 상동성 (연결 성분) \\
+$\ell_{\max}$ & Longest persistence bar --- 최장 막대 \\
+Artic & Articulation ratio --- $1 - \ell_{\mathrm{second}}/\ell_{\max}$ \\
+$\mathcal{Q}_{\mathrm{morph}}$ & Morphological quality measure \\
+\hline
+CN & Commitment Note --- 설계 약속 \\
+MK-1--4 & Kinetic predictions --- 운동학적 예측 \\
+P1--P5 & Single-formation predictions --- 단일 형성 예측 \\
+exp$N$ & Experiment $N$ --- $N$번 실험 \\
+\hline
+\end{longtable}
+
+
+\section{Index Preview}
+\label{app:index-preview}
+
+이 절은 최종 색인(index)에 포함될 주요 항목들을 미리 정리한다. 완전한 색인은 최종 편집 시 \texttt{makeindex}로 자동 생성된다.
+
+
+\subsection{주요 개념}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item 응집 장 (cohesion field)
+\item 닫힘 (closure)
+\item 구별 (distinction)
+\item 공동-소속 (co-belonging)
+\item 인접 (adjacency)
+\item 시간적 전달 (temporal transport)
+\item 부피 제약 (volume constraint)
+\item 스피노달 범위 (spinodal range)
+\item 위상 전이 (phase transition)
+\item 기울기 흐름 (gradient flow)
+\item $\Gamma$-수렴 ($\Gamma$-convergence)
+\item 자기-참조성 (self-referentiality)
+\item 전-객체적 (pre-objective)
+\item 형성 (formation)
+\item Proto-cohesion
+\item 진단 벡터 (diagnostic vector)
+\item Bind, Sep, Inside, Persist
+\item 형태학적 질 (morphological quality)
+\item 지속적 상동성 (persistent homology)
+\item 핵심부 (core)
+\item 경계 대역 (boundary band)
+\item 준안정성 (metastability)
+\item 운동학적 장벽 (kinetic barrier)
+\item 다중 형성 (multi-formation)
+\item K-필드 아키텍처
+\item 결합 매개변수 ($\Lambda_{\mathrm{coupling}}$)
+\item 핵생성 (nucleation)
+\item 조대화 (coarsening)
+\item 발생적 정체성 (genidentity)
+\item 이중 우물 (double well)
+\end{itemize}
+\end{multicols}
+
+
+\subsection{정리 색인}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item T1 --- 존재성
+\item T3 --- 안정성
+\item T6a/b --- 닫힘 고정점
+\item T7-Enhanced --- 준안정성 강화
+\item T8-Core --- 위상 전이 (핵심)
+\item T8-Full --- 위상 전이 (완전)
+\item T11 --- $\Gamma$-수렴
+\item T14 --- 기울기 흐름 수렴
+\item T20 --- 공리 일관성
+\item T-Persist-1 --- 단일 지속성
+\item T-Persist-K-Sep --- 다중 (분리)
+\item T-Persist-K-Weak --- 다중 (약한)
+\item T-Persist-K-Unified --- 통합
+\item Formation-Birth --- 형성 탄생
+\item Coupling Bound Lemma
+\item Predicate-Energy Bridge
+\end{itemize}
+\end{multicols}
+
+
+\subsection{연산자 및 매개변수 색인}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item $\mathrm{Cl}_t$ --- 닫힘 연산자
+\item $\mathbf{D}_t$ --- 구별 연산자
+\item $\mathbf{C}_t$ --- 공동-소속 (진단)
+\item $\mathbf{M}_{t \to s}$ --- 전달 핵
+\item $\mathbf{N}_t$ --- 인접 핵
+\item $P_t$ --- 집계 연산자
+\item $a_{\mathrm{cl}}$ --- 닫힘 강도
+\item $\eta_{\mathrm{cl}}$ --- 닫힘 균형
+\item $\tau_{\mathrm{cl}}$ --- 닫힘 임계
+\item $\alpha, \beta$ --- 형태학 매개변수
+\item $\lambda_{\mathrm{rep}}$ --- 반발 가중
+\item $\Lambda_{\mathrm{coupling}}$ --- 결합 매개변수
+\item $\theta_{\mathrm{core}}$ --- 핵심부 임계
+\item $\varepsilon_{\mathrm{OT}}$ --- 엔트로피 정규화
+\end{itemize}
+\end{multicols}

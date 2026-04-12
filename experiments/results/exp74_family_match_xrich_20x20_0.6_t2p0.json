@@ -1,0 +1,31 @@
+{
+  "experiment": "exp74_branch_family_match",
+  "input_glob": "experiments/results/exp73_catalog_xrich_20x20_0.6.json",
+  "distance_threshold": 2.0,
+  "rows": [
+    {
+      "config": "20x20:0.6",
+      "n_representatives": 95,
+      "base_key": "Type B candidate|co0.12|ov3.4|sep5.2",
+      "base_branch_type": "Type B candidate",
+      "base_source_lambda": 0.0,
+      "base_E0": 20.050070246099686,
+      "base_overlap": 3.4219181740256346,
+      "global_cross": 1.540427972054218,
+      "global_cross_key": "Type A candidate|co0.00|ov2.7|sep5.6",
+      "global_cross_branch_type": "Type A candidate",
+      "global_cross_source_lambda": 0.0,
+      "global_cross_E0": 21.229312370601793,
+      "global_cross_overlap": 2.656389278228226,
+      "matched_distance": null,
+      "matched_key": null,
+      "matched_branch_type": null,
+      "matched_source_lambda": null,
+      "matched_E0": null,
+      "matched_overlap": null,
+      "matched_cross": null,
+      "matched_within_threshold": false,
+      "distance_threshold": 2.0
+    }
+  ]
+}

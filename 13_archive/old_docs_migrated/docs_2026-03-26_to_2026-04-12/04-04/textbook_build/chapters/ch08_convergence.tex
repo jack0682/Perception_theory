@@ -1,0 +1,271 @@
+% Chapter 8: Convergence, Stability, and Limits
+% Part II: The Formal Theory
+
+\chapter{수렴, 안정성, 극한}
+\label{ch:convergence}
+
+\begin{quote}
+\textit{``기울기 흐름은 에너지 경관 위의 공을 구르게 한다. \L{}ojasiewicz 부등식은 공이 반드시 멈춘다고 말한다.''}
+\end{quote}
+
+이 장에서 우리는 SCC 에너지의 기울기 흐름이 임계점에 수렴함을 증명하고 (T14), 비멱등 폐합이 제공하는 안정성 이점을 정량화하며 (T3/T6-Stability), 날카로운 계면 $\Gamma$-수렴 극한을 도출하고 (T11), 에너지와 술어 사이의 다리를 건설한다 (Predicate-Energy Bridge).
+
+
+\section{$\Sigma_m$ 위의 기울기 흐름}
+\label{sec:gradient-flow}
+
+\subsection{사영된 기울기 하강}
+
+에너지 최소화는 제약 다양체 $\Sigma_m$ 위에서 수행된다. 유클리드 기울기 $\nabla \mathcal{E}(u)$를 그대로 사용하면 부피 제약을 위반하므로, 접선 공간 $T(\Sigma_m) = \{v : \sum_i v_i = 0\}$으로의 \textbf{사영}이 필요하다:
+\begin{equation}
+    \Pi_T(g) = g - \frac{\mathbf{1}^T g}{n} \mathbf{1}
+    \label{eq:tangent-projection}
+\end{equation}
+
+사영된 기울기 흐름(projected gradient flow):
+\begin{equation}
+    \dot{u} = -\Pi_T \nabla \mathcal{E}(u)
+    \label{eq:projected-gradient-flow}
+\end{equation}
+
+이 흐름은 $\Sigma_m$ 위에 머물면서 에너지를 단조 감소시킨다.
+
+\subsection{반-암묵적(Semi-Implicit) 이산화}
+
+실제 구현에서는 반-암묵적 오일러 방법을 사용한다:
+\begin{equation}
+    u^{(k+1)} = \mathrm{Proj}_{\Sigma_m \cap [0,1]^n}\!\Big(u^{(k)} - \eta_k \cdot \Pi_T \nabla \mathcal{E}(u^{(k)})\Big)
+    \label{eq:semi-implicit}
+\end{equation}
+
+여기서 $\eta_k$는 바르질라이-보르바인(Barzilai-Borwein, BB) 스텝 크기이며, $\mathrm{Proj}$는 $\Sigma_m \cap [0,1]^n$으로의 사영이다. 사영은 두 단계로 이루어진다:
+\begin{enumerate}
+    \item 상자 제약 사영: $u_i \gets \max(0, \min(1, u_i))$
+    \item 부피 제약 사영: 라그랑주 승수를 조정하여 $\sum_i u_i = m$을 복원
+\end{enumerate}
+
+
+\section{\L{}ojasiewicz 수렴 (T14)}
+\label{sec:lojasiewicz}
+
+기울기 흐름이 ``수렴한다''는 것은 자명하지 않다. 에너지가 유계 이하이고 단조 감소한다고 해서, 궤적이 반드시 한 점에 수렴하는 것은 아니다---불연속적 에너지에서는 궤적이 임계점 집합 위에서 영원히 방황할 수 있다.
+
+\L{}ojasiewicz-Simon 부등식은 이 문제를 해결한다.
+
+\subsection{해석적 함수에 대한 \L{}ojasiewicz 부등식}
+
+\begin{theorem}[\L{}ojasiewicz 기울기 부등식]
+$f : \mathbb{R}^n \to \mathbb{R}$가 실-해석적(real-analytic) 함수이고, $p$가 $f$의 임계점이면, $p$의 근방에서:
+\begin{equation}
+    \|\nabla f(x)\| \geq C |f(x) - f(p)|^\theta
+    \label{eq:lojasiewicz-inequality}
+\end{equation}
+$C > 0$, $\theta \in [1/2, 1)$인 상수가 존재한다.
+\end{equation}
+\end{theorem}
+
+이 부등식의 핵심 메시지: 해석적 함수에서는, 기울기가 ``너무 빨리'' 0에 접근하지 않는다. 에너지가 아직 임계값에 도달하지 않았으면, 기울기는 임계값까지의 거리에 비해 충분히 크다.
+
+\subsection{T14: SCC 기울기 흐름의 수렴}
+
+\begin{theorem}[T14: 기울기 흐름 수렴]
+\label{thm:T14}
+사영된 기울기 흐름 $\dot{u} = -\Pi_T \nabla \mathcal{E}(u)$은 $\Sigma_m$ 위의 임계점에 수렴한다. 에너지가 해석적 ($b_D = 0$인 시그모이드 + 다항식)이면, 수렴은 \L{}ojasiewicz 부등식에 의해 지수적이다.
+\end{theorem}
+
+\begin{proof}
+$\mathcal{E}$는 콤팩트 집합 $\Sigma_m \cap [0,1]^n$ 위에서 아래로 유계이다. 기울기 흐름은 에너지를 단조 감소시키므로, 에너지는 수렴한다. \L{}ojasiewicz 부등식을 적용하면:
+
+1. 궤적의 길이가 유한하다: $\int_0^\infty \|\dot{u}\| dt < \infty$ (\L{}ojasiewicz 인수에서).
+2. 유한 길이 궤적은 콤팩트 집합에서 수렴한다.
+3. 극한점은 $\nabla \mathcal{E} = \nu \mathbf{1}$ (KKT 조건)을 만족하는 임계점이다.
+
+수렴 속도: $\|u(t) - u^*\| \leq C \exp(-\gamma t)$ ($\theta = 1/2$일 때 지수적).
+\end{proof}
+
+\subsection{왜 $b_D = 0$이 필수적인가 --- 재방문}
+
+T14의 증명은 에너지의 해석성에 의존한다. SCC 에너지의 각 성분이 해석적인지 확인하자:
+\begin{itemize}
+    \item $\mathcal{E}_{\mathrm{cl}} = \|u - \sigma(\cdots)\|^2$: $\sigma$는 전체 실수선에서 $C^\omega$ $\checkmark$
+    \item $\mathcal{E}_{\mathrm{sep}} = \sum u_i(1 - \sigma(\cdots))$: 같은 이유 $\checkmark$
+    \item $\mathcal{E}_{\mathrm{bd}} = \alpha\sum\cdots + \beta\sum u_i^2(1-u_i)^2$: 다항식과 이차 형식 $\checkmark$
+    \item $b_D > 0$이면? $g_t = \sum N_{xy}|u_x - u_y|$: 절대값은 $u_x = u_y$에서 $C^\omega$ 아님 $\times$
+\end{itemize}
+
+$b_D = 0$은 유일한 해석성 파괴 요인을 제거한다. 이것이 D-Ax3에서 $b_D = 0$을 공리적으로 요구하는 수학적 필연성이다.
+
+
+\section{비멱등성 이점 (T3/T6-Stability)}
+\label{sec:non-idempotence}
+
+\begin{theorem}[T3/T6-Stability: 비멱등 안정성 이점]
+\label{thm:stability}
+비멱등 폐합 고정점에서 ($\|J_{\mathrm{Cl}}\|_{\mathrm{op}} < 1$):
+\begin{equation}
+    H_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^T(I - J_{\mathrm{Cl}}) \text{ 는 } n/n \text{개의 양의 고유값을 가진다}
+\end{equation}
+멱등 폐합 ($\mathrm{Cl}^2 = \mathrm{Cl}$)에서는 치역 방향의 영 고유값 때문에:
+\begin{equation}
+    H_{\mathrm{cl}}^{\mathrm{idem}} \text{ 는 } \leq (n-k)/n \text{개의 양의 고유값을 가진다}
+\end{equation}
+여기서 $k$는 폐합 연산자 치역의 차원이다.
+\end{theorem}
+
+\begin{proof}
+\textbf{비멱등의 경우}: $H_{\mathrm{cl}} = 2A^T A$는 그람 행렬이다 ($A = I - J_{\mathrm{Cl}}$). $\|J_{\mathrm{Cl}}\|_{\mathrm{op}} < 1$이면 $A$는 가역이므로, $\ker(A) = \{0\}$이고, $A^T A$의 모든 고유값은 양이다. 최소 고유값은 $\sigma_{\min}(A)^2 \geq (1 - a_{\mathrm{cl}}/4)^2 > 0$이다.
+
+\textbf{멱등의 경우}: $\mathrm{Cl}^2 = \mathrm{Cl}$이면 $J_{\mathrm{Cl}}$은 사영 연산자이다. 치역 방향 $v$ ($J_{\mathrm{Cl}} v = v$)에서 $(I - J_{\mathrm{Cl}})v = 0$이므로, $H_{\mathrm{cl}}^{\mathrm{idem}} v = 0$이다. 치역의 차원이 $k$이면 $k$개의 영 고유값이 존재한다.
+\end{proof}
+
+\subsection{안정성 격차의 정량화}
+
+$a_{\mathrm{cl}} = 3.0$ (기본값)에서:
+\begin{align}
+    \text{비멱등 최소 고유값} &\geq 2(1 - 3/4)^2 = 2 \times 0.0625 = 0.125 \\
+    \text{멱등 최소 고유값} &= 0
+\end{align}
+
+이 격차 ($0.125$ 대 $0$)는 에너지 경관에서 실질적 차이를 만든다. 비멱등 폐합은 \textbf{모든} 방향에서 양의 곡률을 보장하여, 극소점이 모든 방향의 섭동에 대해 안정적이다. 멱등 폐합은 치역 방향에서 ``평탄한 골짜기''를 만들어, 그 방향의 섭동에 대해 중립적이다.
+
+이것이 제4장에서 예고한 ``비멱등성의 수학적 보상''의 정량적 실현이다.
+
+
+\section{날카로운-계면 $\Gamma$-수렴 (T11)}
+\label{sec:gamma-convergence}
+
+$\varepsilon = \alpha/\beta \to 0$이면 무슨 일이 발생하는가? 이중-우물 벌칙이 매끄러움 벌칙을 압도하면서, 응집 장은 점점 더 $\{0, 1\}$-값에 가까워진다---``날카로운 계면(sharp interface)''에 접근한다.
+
+\begin{theorem}[T11: $\Gamma$-수렴]
+\label{thm:gamma-convergence}
+$\varepsilon = \alpha/\beta \to 0$일 때, 경계/형태론 에너지 $\mathcal{E}_{\mathrm{bd}}$는 둘레(perimeter) 범함수로 $\Gamma$-수렴한다:
+\begin{equation}
+    \mathcal{E}_{\mathrm{bd}}^\varepsilon \xrightarrow{\Gamma} c_0 \cdot \mathrm{Per}(A, X_t)
+    \label{eq:gamma-convergence}
+\end{equation}
+여기서 $A = \{x : u(x) = 1\}$는 극한 집합이고, $c_0$는 이중-우물에 의해 결정되는 표면 장력 상수이다. 극소점은 부피 제약 하의 최소 둘레 집합의 특성 함수에 수렴한다.
+\end{theorem}
+
+\begin{proof}[증명 개요]
+표준 Modica-Mortola 논증의 그래프 버전이다.
+\begin{enumerate}
+    \item \textbf{하한(lim-inf)}: 영-영 부등식 $2\sqrt{W(u)} |\nabla u| \geq \frac{d}{dx}\Phi(u)$ (여기서 $\Phi(u) = \int_0^u \sqrt{W(s)} ds$)를 이산 설정에 적용.
+    \item \textbf{회복 수열(recovery sequence)}: 한 차원 최적 프로파일 $q(z) = \frac{1}{2}(1 + \tanh(z/(2\sqrt{2\varepsilon})))$을 경계면에 따라 배치.
+    \item \textbf{등-강압성(equi-coercivity)}: $[0,1]^n$의 콤팩트성.
+\end{enumerate}
+자기-참조적 보정 항 ($\mathcal{E}_{\mathrm{cl}}$, $\mathcal{E}_{\mathrm{sep}}$)은 날카로운-계면 한계에서 \textbf{수정된 표면 장력}을 산출한다. 표면 장력 상수가 $c_0$에서 $c_0 + \delta c$ ($\delta c$는 폐합 및 구별 보정)로 변경되지만, $\Gamma$-수렴 구조 자체는 보존된다.
+\end{proof}
+
+\subsection{물리적 의미}
+
+$\Gamma$-수렴은 SCC가 ``극단적'' 매개변수 체제에서 고전적 최소 표면 문제로 환원됨을 보여준다. 이것은 이론의 일관성 검증이다: 경계가 날카로워지면, 응집 형성은 주어진 부피의 ``가장 작은 경계''를 가진 영역---등주 문제(isoperimetric problem)---에 수렴한다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig8_2_sharp_interface.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 8.2]} 날카로운-계면 극한 수열. 좌에서 우: $\varepsilon = 0.5, 0.1, 0.01$. 경계 대역이 점점 얇아지며, 극한에서 특성 함수 (이진 분할)에 수렴. 극한 집합의 경계는 그래프에서의 최소 둘레를 달성한다.
+\vspace{0.5cm}}}
+\caption{$\varepsilon \to 0$ 극한에서의 날카로운-계면 수렴. 부드러운 응집 장이 이진 분할로 수렴하며, 경계는 최소 둘레를 달성한다.}
+\label{fig:sharp-interface}
+\end{figure}
+
+
+\section{술어-에너지 다리}
+\label{sec:predicate-energy-bridge}
+
+SCC에는 ``형성''의 두 가지 정의가 공존한다:
+\begin{enumerate}
+    \item \textbf{변분적 정의}: 에너지 $\mathcal{E}$의 (근사적) 극소점.
+    \item \textbf{진단적 정의}: 진단 벡터 $\mathbf{d} = (\mathsf{Bind}, \mathsf{Sep}, \mathsf{Inside}, \mathsf{Persist})$의 모든 성분이 높음.
+\end{enumerate}
+
+술어-에너지 다리(Predicate-Energy Bridge)는 이 두 정의를 연결한다.
+
+\begin{theorem}[Predicate-Energy Bridge]
+\label{thm:predicate-bridge}
+\begin{enumerate}
+    \item \textbf{Sep 항등식} (정확한 양방향):
+    \begin{equation}
+        \mathsf{Sep} = 1 - \frac{\mathcal{E}_{\mathrm{sep}}}{m}
+    \end{equation}
+
+    \item \textbf{Bind 한계} (순방향, 코시-슈바르츠):
+    \begin{equation}
+        \mathsf{Bind} \geq 1 - \sqrt{\frac{\mathcal{E}_{\mathrm{cl}}}{n}}
+    \end{equation}
+
+    \item \textbf{Bind 역방향} (극소점에서, KKT):
+    제약 극소점에서 KKT 평형 조건이 역 한계를 제공한다.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Sep 항등식: 제6장 \eqref{eq:sep-identity}에서 증명됨. Bind 순방향: 코시-슈바르츠 $\|u - \mathrm{Cl}(u)\|_2 / \sqrt{n} \leq \sqrt{\|u - \mathrm{Cl}(u)\|_2^2 / n} = \sqrt{\mathcal{E}_{\mathrm{cl}} / n}$. Bind 역방향: 제약 극소점에서 KKT 조건 $\nabla \mathcal{E} = \nu \mathbf{1}$을 접선 공간으로 사영하면, $\|r_T\|$에 대한 상한이 나오고, 이는 T-Bind-Proj/Full에 의해 Bind의 하한으로 변환된다.
+\end{proof}
+
+\subsection{다리의 방향성}
+
+순방향 다리(에너지 $\to$ 술어)는 강하다: 작은 에너지는 높은 술어를 함의한다. 역방향 다리(술어 $\to$ 에너지)는 일반적으로 성립하지 않는다: 높은 술어가 작은 에너지를 함의하지는 않는다 (에너지의 다른 항이 클 수 있으므로).
+
+그러나 제약 극소점에서는 KKT 조건이 추가적 구조를 제공하여, 역방향 한계도 가능해진다. 이것이 T-Bind-Proj/Full의 내용이다.
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig8_3_predicate_energy.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 8.3]} 술어-에너지 대응. 좌: Sep 대 $\mathcal{E}_{\mathrm{sep}}/m$---정확한 선형 관계 $\mathsf{Sep} = 1 - \mathcal{E}_{\mathrm{sep}}/m$. 우: Bind 대 $\sqrt{\mathcal{E}_{\mathrm{cl}}/n}$---코시-슈바르츠 한계와 실제 값. 극소점에서 한계가 더 빡빡해짐.
+\vspace{0.5cm}}}
+\caption{술어-에너지 다리의 실험적 검증. Sep-에너지 관계는 정확한 항등식이고, Bind-에너지 관계는 코시-슈바르츠 한계로 제어된다.}
+\label{fig:predicate-energy}
+\end{figure}
+
+\subsection{Deep Core Dominance 2b}
+
+술어-에너지 다리의 보조 결과로, 잘 형성된 형성에서 ``깊은 핵심(deep core)''이 전체 핵심의 대부분을 차지함이 보장된다:
+\begin{equation}
+    \frac{|\mathrm{Core}^2|}{|\mathrm{Core}|} \geq 1 - \frac{4C}{\sqrt{m}}
+\end{equation}
+여기서 $C$는 등주 비율(isoperimetric ratio)이다. $\mathbb{Z}^d$ 격자에서 $C$는 차원에만 의존하는 상수로 유계이다.
+
+이것은 형성의 핵심이 ``중실(solid)''임을 보장한다---내부가 경계 위치로 가득 찬 ``속이 빈'' 형성이 아니라, 대부분이 깊은 내부 위치로 구성된 ``속이 찬'' 형성이다.
+
+
+\section{기울기 흐름 수렴의 전체 그림}
+\label{sec:convergence-summary}
+
+\begin{figure}[t]
+\centering
+% \includegraphics{figures/fig8_1_convergence_trajectories.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 8.1]} 수렴 궤적. 여러 초기 조건에서 출발한 기울기 흐름 궤적 (2D 사영). 각 궤적은 서로 다른 극소점으로 수렴한다. 모든 궤적은 유한 길이이며 (\L{}ojasiewicz), 반드시 임계점에 도달한다. 경로 의존성: 초기 조건이 최종 형성을 결정한다.
+\vspace{0.5cm}}}
+\caption{기울기 흐름의 수렴 궤적. \L{}ojasiewicz 부등식은 모든 궤적이 유한 길이이고 임계점에 수렴함을 보장한다. 서로 다른 초기 조건은 서로 다른 형성으로 이끈다.}
+\label{fig:convergence-trajectories}
+\end{figure}
+
+이 장의 결과들을 종합하면, SCC의 기울기 흐름에 대한 완전한 그림이 완성된다:
+
+\begin{enumerate}
+    \item \textbf{존재} (T1): 전역 극소점이 존재한다.
+    \item \textbf{비자명성} (T8-Core): 충분히 강한 이중-우물 하에서, 극소점은 비균일 형성이다.
+    \item \textbf{수렴} (T14): 임의의 초기 조건에서의 기울기 흐름은 (국소) 극소점에 수렴한다.
+    \item \textbf{안정성} (T7-Enhanced, T3/T6-Stability): 극소점은 양정치 헤시안에 의해 보호되며, 폐합의 비멱등성이 이를 강화한다.
+    \item \textbf{극한 일관성} (T11): 날카로운-계면 극한에서 최소 둘레 문제로 환원된다.
+    \item \textbf{술어 다리}: 에너지 극소점은 높은 진단 벡터를 가지며, 이는 변분적 형성이 진단적 형성이기도 함을 보장한다.
+\end{enumerate}
+
+이것으로 Part II의 형식적 이론 전개가 완성된다. Part III에서는 이 단일-형성 이론을 다중-형성으로 확장하고, 시간적 전달과 지속성을 다룬다.
+
+
+\section*{이 장의 요약}
+
+\begin{itemize}
+    \item 사영된 기울기 하강: $\dot{u} = -\Pi_T \nabla \mathcal{E}$는 $\Sigma_m$ 위에서 에너지를 단조 감소시킨다.
+    \item \textbf{T14}: 해석적 에너지 ($b_D = 0$) $\Rightarrow$ \L{}ojasiewicz 부등식 $\Rightarrow$ 지수적 수렴.
+    \item $b_D = 0$은 해석성의 유일한 파괴 요인을 제거하는 필수적 선택.
+    \item \textbf{T3/T6-Stability}: 비멱등 폐합 $\Rightarrow$ 그람 행렬 $n/n$ 양정치. 멱등 $\Rightarrow$ $\leq (n-k)/n$.
+    \item \textbf{T11}: $\varepsilon = \alpha/\beta \to 0$에서 Modica-Mortola형 $\Gamma$-수렴. 수정된 표면 장력.
+    \item \textbf{Predicate-Energy Bridge}: $\mathsf{Sep} = 1 - \mathcal{E}_{\mathrm{sep}}/m$ (정확). $\mathsf{Bind} \geq 1 - \sqrt{\mathcal{E}_{\mathrm{cl}}/n}$ (C-S).
+    \item Deep Core Dominance 2b: $|\mathrm{Core}^2|/|\mathrm{Core}| \geq 1 - 4C/\sqrt{m}$.
+\end{itemize}

@@ -1,0 +1,4 @@
+lambda,continued_branch_type,continued_total,catalog_best_key,catalog_best_type,catalog_best_total,direct_best_type,direct_best_total,direct_minus_cont,direct_minus_catalog,distance_direct_to_cont,distance_direct_to_base
+0.1,Type B candidate,19.1879265382642,Type B candidate|co0.12|ov3.4|sep5.2,Type B candidate,20.39226206350225,Type B candidate,18.33883330329015,-0.849093234974049,-2.0534287602120997,0.7859176884829342,4.09964782687396
+0.5,Type B candidate,18.38839049163181,Type B candidate|co0.12|ov3.4|sep5.2,Type B candidate,21.761029333112504,Type B candidate,17.981141209334062,-0.40724928229774804,-3.7798881237784414,0.1726347599596687,5.105358376378559
+1.0,Type B candidate,18.002576935485372,Type B candidate|co0.12|ov3.4|sep5.2,Type B candidate,23.47198842012532,Type B candidate,17.51583346644228,-0.4867434690430912,-5.95615495368304,0.18387553385528696,5.183806019506079

@@ -7,7 +7,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This repository contains the formal specification, Python implementation, and publication drafts for **Soft Cognitive Cohesion (SCC)** — a mathematical theory of how coherent formations emerge prior to discrete objecthood.
 
 ### Session Start — MANDATORY
-**Every new session must read `CONVENTIONS.md` and the last entry of `CHANGELOG.md` before any file creation or modification.** These files define naming rules, directory structure, and carry-forward items from the previous session.
+**Every new session must read these in order:**
+1. **`THEORY_STATUS_2026-04-12.md`** ← **READ FIRST** (2026-04-12 theory audit: exp65 validation failure, F-1/M-1/MO-1 unresolved, Type A/B classification rejected)
+2. `CONVENTIONS.md` — naming rules, directory structure
+3. Last entry of `CHANGELOG.md` — carry-forward items from previous session
+
+These files define critical context, naming rules, and open problems.
 
 ### Agent Teams — DEFAULT WORKFLOW
 This project runs in **tmux**. For any non-trivial task (research, proof writing, experiments, multi-file edits), **spawn agent teams with tmux split panes by default**:
@@ -19,7 +24,8 @@ This project runs in **tmux**. For any non-trivial task (research, proof writing
 - After all teammates finish, the lead integrates results, updates Canonical Spec/CHANGELOG, and cleans up the team.
 
 ### Authoritative Documents
-- **Canonical Spec v2.1.md** — The authoritative formal specification (1096 lines). Supersedes v2.0. Key additions: 3 Cat B→A upgrades, T-Persist-K-Unified, unified regime parametrization (Λ_coupling), Theorem 3.3 retraction.
+- **THEORY_STATUS_2026-04-12.md** ⚠️ **CRITICAL** — Theory audit & foundation problem analysis. exp65 validation failure, F-1/M-1/MO-1 unresolved, Type A/B rejected. **Must re-read at session start.**
+- **Canonical Spec v2.1.md** — The authoritative formal specification (1096 lines). Supersedes v2.0. **NOTE: Contains implicit assumptions (fixed K manifold) not fully explicit in theorem statements.** See THEORY_STATUS_2026-04-12.md.
 - **Agent Instructions.md** — Binding operational protocol. Must be read before any formalization work.
 - **CONVENTIONS.md** — File management rules, naming conventions, logging protocol. **Read every session.**
 - **CHANGELOG.md** — Session-level change log. **Append after every session that modifies files.**

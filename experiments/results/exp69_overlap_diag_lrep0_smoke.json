@@ -1,0 +1,276 @@
+{
+  "experiment": "exp69_relaxed_merge_neb_sweep",
+  "results": [
+    {
+      "experiment": "exp68_relaxed_merge_neb_lite",
+      "config": "10x10:0.6",
+      "lambda_rep": 0.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 15.290611193418414,
+      "initial": {
+        "name": "direct_initial",
+        "n_points": 7,
+        "max_total": 15.290611193418414,
+        "max_delta": 0.0,
+        "max_index": 0,
+        "max_overlap": 8.983722229376262,
+        "max_overlap_index": 0,
+        "rows": [
+          {
+            "i": 0,
+            "total": 15.290611193418414,
+            "self1": 7.624712548423583,
+            "self2": 7.66589864499483,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 43.26916955480655,
+            "bd2": 43.44917944630183,
+            "overlap": 8.983722229376262,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 14.938967206936146,
+            "self1": 8.226320005451552,
+            "self2": 6.712647201484595,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 50.2675961365584,
+            "bd2": 35.01270177783465,
+            "overlap": 8.833940726440924,
+            "delta": -0.3516439864822676
+          },
+          {
+            "i": 2,
+            "total": 13.468563535804172,
+            "self1": 7.924251851898039,
+            "self2": 5.544311683906132,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 53.38433198292238,
+            "bd2": 25.749891415363074,
+            "overlap": 8.145157009387969,
+            "delta": -1.8220476576142417
+          },
+          {
+            "i": 3,
+            "total": 11.102741643335147,
+            "self1": 6.810619804892243,
+            "self2": 4.292121838442905,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 51.86968266850862,
+            "bd2": 16.501518704939215,
+            "overlap": 6.917371078217398,
+            "delta": -4.187869550083267
+          },
+          {
+            "i": 4,
+            "total": 8.50944703127748,
+            "self1": 5.439704839128929,
+            "self2": 3.0697421921485515,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 46.29536304794851,
+            "bd2": 8.2916386628502,
+            "overlap": 5.150582932929215,
+            "delta": -6.781164162140934
+          },
+          {
+            "i": 5,
+            "total": 6.240266194576279,
+            "self1": 4.2631562487890005,
+            "self2": 1.9771099457872783,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 38.5544972558945,
+            "bd2": 2.3275909756181044,
+            "overlap": 2.8447925735234154,
+            "delta": -9.050344998842135
+          },
+          {
+            "i": 6,
+            "total": 4.59992494434815,
+            "self1": 3.4921547292426105,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.86161870702032,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -10.690686249070264
+          }
+        ]
+      },
+      "relaxed": {
+        "name": "neb_lite_relaxed",
+        "n_points": 7,
+        "max_total": 15.290611193418414,
+        "max_delta": 0.0,
+        "max_index": 0,
+        "max_overlap": 8.983722229376262,
+        "max_overlap_index": 0,
+        "rows": [
+          {
+            "i": 0,
+            "total": 15.290611193418414,
+            "self1": 7.624712548423583,
+            "self2": 7.66589864499483,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 43.26916955480655,
+            "bd2": 43.44917944630183,
+            "overlap": 8.983722229376262,
+            "delta": 0.0
+          },
+          {
+            "i": 1,
+            "total": 14.892040608970301,
+            "self1": 8.218027626631281,
+            "self2": 6.67401298233902,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 50.38140272888575,
+            "bd2": 34.707038171689575,
+            "overlap": 8.81985441478703,
+            "delta": -0.39857058444811244
+          },
+          {
+            "i": 2,
+            "total": 13.326419926848093,
+            "self1": 7.863601824964121,
+            "self2": 5.462818101883972,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 53.38567365337395,
+            "bd2": 25.13531647471747,
+            "overlap": 8.082520452308684,
+            "delta": -1.964191266570321
+          },
+          {
+            "i": 3,
+            "total": 10.892647883397263,
+            "self1": 6.703629591412182,
+            "self2": 4.1890182919850805,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 51.55740399125952,
+            "bd2": 15.778160379178294,
+            "overlap": 6.794478012308335,
+            "delta": -4.397963310021151
+          },
+          {
+            "i": 4,
+            "total": 8.322375529020384,
+            "self1": 5.345659639309572,
+            "self2": 2.9767158897108112,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 45.79796621731625,
+            "bd2": 7.722857902163685,
+            "overlap": 4.988734123588632,
+            "delta": -6.96823566439803
+          },
+          {
+            "i": 5,
+            "total": 6.1198187797162396,
+            "self1": 4.207683557396178,
+            "self2": 1.9121352223200612,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 38.136264318073714,
+            "bd2": 2.051033842745219,
+            "overlap": 2.677066264203184,
+            "delta": -9.170792413702173
+          },
+          {
+            "i": 6,
+            "total": 4.59992494434815,
+            "self1": 3.4921547292426105,
+            "self2": 1.1077702151055395,
+            "rep": 0.0,
+            "barrier": 0.0,
+            "bd1": 31.86161870702032,
+            "bd2": 0.0,
+            "overlap": 0.0,
+            "delta": -10.690686249070264
+          }
+        ]
+      },
+      "history": [
+        {
+          "iter": 0,
+          "max_delta": 0.0,
+          "max_total": 15.290611193418414
+        },
+        {
+          "iter": 10,
+          "max_delta": 0.0,
+          "max_total": 15.290611193418414
+        },
+        {
+          "iter": 20,
+          "max_delta": 0.0,
+          "max_total": 15.290611193418414
+        },
+        {
+          "iter": 24,
+          "max_delta": 0.0,
+          "max_total": 15.290611193418414
+        }
+      ],
+      "diagnostics": {
+        "initial_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 7.602807272633072e-13
+        },
+        "relaxed_constraints": {
+          "max_box_low_violation": 0.0,
+          "max_box_high_violation": 0.0,
+          "max_simplex_violation": 0.0,
+          "max_total_mass_error": 7.602807272633072e-13
+        },
+        "history": {
+          "history_points": 4,
+          "monotone_nonincreasing": true,
+          "max_increase": 0.0,
+          "initial_recorded_max_delta": 0.0,
+          "final_recorded_max_delta": 0.0
+        },
+        "improvement": 0.0
+      }
+    }
+  ],
+  "summary": [
+    {
+      "config": "10x10:0.6",
+      "lambda_rep": 0.0,
+      "lambda_bar": 100.0,
+      "n_images": 7,
+      "n_iter": 25,
+      "step": 0.001,
+      "spring": 0.05,
+      "source_energy": 15.290611193418414,
+      "initial_max_delta": 0.0,
+      "relaxed_max_delta": 0.0,
+      "initial_max_overlap": 8.983722229376262,
+      "relaxed_max_overlap": 8.983722229376262,
+      "improvement": 0.0,
+      "improvement_frac": 0.0,
+      "initial_max_index": 0,
+      "relaxed_max_index": 0,
+      "max_mass_error": 7.602807272633072e-13,
+      "max_simplex_violation": 0.0,
+      "max_box_low_violation": 0.0,
+      "max_box_high_violation": 0.0,
+      "history_monotone": true,
+      "history_max_increase": 0.0
+    }
+  ]
+}

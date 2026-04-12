@@ -1,0 +1,754 @@
+% Chapter 12: Algorithms and the Python Implementation
+% Part IV: Implementation and Applications
+
+\chapter{알고리즘과 파이썬 구현}
+\label{ch:algorithms}
+
+\begin{quote}
+\textit{``이론은 구현될 때 비로소 시험대에 오른다.''}
+\end{quote}
+
+\noindent
+앞서 Part II--III에서 SCC 이론의 수학적 구조---에너지 범함수, 위상 전이, 다중 형성, 시간적 전달---를 엄밀하게 전개했다. 이 장에서는 이론 전체를 \textbf{실행 가능한 파이썬 코드}로 구현한다. 목표는 단순한 코드 나열이 아니라, 각 모듈이 이론의 어떤 구성 요소를 어떻게 실현하는지를 명확히 대응시키는 것이다.
+
+SCC 구현 패키지 \texttt{scc/}는 174개의 단위 테스트를 통과하며, 핵심 파이프라인은 다음 흐름을 따른다:
+\[
+\text{Graph} \;\longrightarrow\; \text{Operators} \;\longrightarrow\; \text{Energy} \;\longrightarrow\; \text{Optimizer} \;\longrightarrow\; \text{Diagnostics}
+\]
+
+이 파이프라인의 최소 실행 예는 다음과 같다:
+\begin{lstlisting}[language=Python, caption={SCC 형성 발견의 최소 예제}]
+from scc import GraphState, ParameterRegistry, find_formation
+
+g = GraphState.grid_2d(10, 10)
+p = ParameterRegistry()
+result = find_formation(g, p)
+print(result.diagnostics)
+# DiagnosticVector(Bind=0.952, Sep=0.987, Inside=0.831, Persist=1.000)
+\end{lstlisting}
+
+이 네 줄이 작동하기까지 어떤 수학이 구현되어야 하는지를 이제 살펴보자.
+
+
+%% ============================================================
+\section{파이프라인 개관: 그래프에서 진단까지}
+\label{sec:pipeline-overview}
+
+SCC 구현은 여섯 개의 핵심 모듈로 구성된다. 각 모듈은 이론의 한 층위에 대응하며, 모듈 간 의존성은 단방향이다(그림~\ref{fig:module-deps}).
+
+\begin{table}[h]
+\centering
+\caption{SCC 파이썬 패키지 모듈 구조}
+\label{tab:modules}
+\begin{tabular}{lll}
+\toprule
+\textbf{모듈} & \textbf{이론 층위} & \textbf{핵심 클래스/함수} \\
+\midrule
+\texttt{graph.py} & 관계적 지지 공간 $X_t$ & \texttt{GraphState} \\
+\texttt{params.py} & 매개변수 레지스트리 & \texttt{ParameterRegistry} \\
+\texttt{operators.py} & 연산자 삼중항 $\mathrm{Cl}_t, D_t, C_t$ & \texttt{closure()}, \texttt{distinction()} \\
+\texttt{energy.py} & 에너지 범함수 $\mathcal{E}$ & \texttt{EnergyComputer} \\
+\texttt{optimizer.py} & $\Sigma_m$ 위 경사 흐름 & \texttt{find\_formation()} \\
+\texttt{diagnostics.py} & 진단 벡터 $\mathbf{d}$ & \texttt{DiagnosticVector} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+여기에 두 개의 확장 모듈이 추가된다:
+\begin{itemize}
+    \item \texttt{transport.py}: 시간적 전달 핵 $\mathbf{M}_{t \to s}$, 자기-참조 최적 수송
+    \item \texttt{multi.py}: $K$-장 다중 형성 최적화, 형성 간 반발, 레짐 분류
+\end{itemize}
+
+% Figure placeholder
+\begin{figure}[t]
+\centering
+% \includegraphics[width=0.85\textwidth]{figures/fig12_1_module_deps.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 12.1]} 모듈 의존성 그래프.\\
+\texttt{graph.py} $\to$ \texttt{operators.py} $\to$ \texttt{energy.py} $\to$ \texttt{optimizer.py} $\to$ \texttt{diagnostics.py}\\
+\texttt{params.py}는 모든 모듈에서 참조. \texttt{transport.py}와 \texttt{multi.py}는 전체 파이프라인을 확장.
+\vspace{0.5cm}}}
+\caption{SCC 파이썬 패키지의 모듈 의존성. 화살표는 import 방향을 나타낸다. 핵심 파이프라인은 좌에서 우로 단방향이며, \texttt{params.py}는 횡단적으로 모든 모듈에 매개변수를 공급한다.}
+\label{fig:module-deps}
+\end{figure}
+
+\paragraph{설계 원칙.}
+구현은 세 가지 원칙을 따른다.
+\begin{enumerate}
+    \item \textbf{이론-코드 대응}: 각 함수는 정규 사양서(Canonical Spec)의 특정 절에 대응한다. 함수명과 변수명은 이론 표기를 가능한 한 그대로 반영한다.
+    \item \textbf{정확한 기울기}: 모든 에너지 항의 기울기는 해석적으로 유도하고, 유한 차분으로 $10^{-9}$ 수준까지 검증한다.
+    \item \textbf{희소 행렬 연산}: 그래프 라플라시안과 인접 행렬은 \texttt{scipy.sparse}로 처리하여, $50 \times 50$ 이상의 격자에서도 효율적으로 작동한다.
+\end{enumerate}
+
+
+%% ============================================================
+\section{그래프 표현과 라플라시안}
+\label{sec:graph-impl}
+
+SCC의 관계적 지지 공간 $X_t$는 유한 그래프 $G = (X, \mathbf{N})$로 구현된다. \texttt{GraphState} 클래스는 인접 행렬 $\mathbf{N}$을 희소 행렬(CSR 형식)로 저장하고, 필요한 파생량을 지연 계산(lazy computation)한다.
+
+\subsection{인접 행렬과 2D 격자}
+
+가장 흔히 사용되는 그래프는 4-연결 2D 격자이다. $r \times c$ 격자에서 노드 $(i, j)$의 인덱스는 $i \cdot c + j$이며, 이웃은 상하좌우 4방향이다.
+
+\begin{lstlisting}[language=Python, caption={2D 격자 그래프 생성 (graph.py)}]
+@classmethod
+def grid_2d(cls, rows: int, cols: int, weight: float = 1.0) -> GraphState:
+    """4-연결 2D 격자 그래프 생성."""
+    n = rows * cols
+    row_idx, col_idx = [], []
+    for r in range(rows):
+        for c in range(cols):
+            idx = r * cols + c
+            if c + 1 < cols:
+                row_idx.extend([idx, idx + 1])
+                col_idx.extend([idx + 1, idx])
+            if r + 1 < rows:
+                row_idx.extend([idx, idx + cols])
+                col_idx.extend([idx + cols, idx])
+    data = np.full(len(row_idx), weight, dtype=np.float64)
+    adj = sp.csr_matrix((data, (row_idx, col_idx)), shape=(n, n))
+    return cls(adj)
+\end{lstlisting}
+
+\subsection{그래프 라플라시안}
+
+그래프 라플라시안 $L = D - W$는 SCC 에너지의 경계/형태 항 $\mathcal{E}_{\mathrm{bd}}$에서 핵심 역할을 한다. 여기서 $D$는 차수 행렬(degree matrix)이다.
+
+\begin{lstlisting}[language=Python, caption={라플라시안 계산 (graph.py)}]
+@property
+def L(self) -> sp.csr_matrix:
+    """Graph Laplacian L = D - W (sparse)."""
+    if self._laplacian is None:
+        D = sp.diags(self.degree)
+        self._laplacian = (D - self.W).tocsr()
+    return self._laplacian
+\end{lstlisting}
+
+\subsection{Fiedler 고유값과 행 정규화}
+
+Fiedler 고유값 $\lambda_2$는 라플라시안의 두 번째로 작은 고유값으로, 위상 전이 임계값 $\beta_{\mathrm{crit}} = 4\alpha\lambda_2 / |W''(c)|$를 결정한다(정리 T8-Core).
+
+행 정규화 인접 행렬 $P_t$는 연산자 실현의 기본 구성 블록이다:
+\begin{equation}
+    (P_t f)(x) = \frac{\sum_y N(x,y) f(y)}{\sum_y N(x,y) + \epsilon}
+    \label{eq:row-norm}
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={Fiedler 고유값과 행 정규화 (graph.py)}]
+@property
+def fiedler(self) -> float:
+    """라플라시안의 두 번째 최소 고유값 (대수적 연결도)."""
+    if self._fiedler is None:
+        eigvals = spla.eigsh(self.L.astype(np.float64),
+                             k=min(3, self.n - 1), which="SM",
+                             return_eigenvectors=False)
+        self._fiedler = float(np.sort(eigvals)[1])
+    return self._fiedler
+
+@property
+def P(self) -> sp.csr_matrix:
+    """행 정규화 인접 행렬 P_t."""
+    if self._P is None:
+        deg = self.degree + 1e-10
+        D_inv = sp.diags(1.0 / deg)
+        self._P = (D_inv @ self.W).tocsr()
+    return self._P
+\end{lstlisting}
+
+$P_t$의 중요한 성질은 $P_t(1 - u) = P_t(\mathbf{1}) - P_t(u)$이다. 이 항등식은 구별 연산자 $D_t$의 효율적 계산에 사용된다(\S\ref{sec:operator-impl} 참조).
+
+\subsection{응집 가중 대칭 행렬}
+
+공-소속 연산자(resolvent) $C_t = (I - \alpha W_{\mathrm{sym}})^{-1}$에 사용되는 대칭화된 응집 가중 인접 행렬은 기하 평균 대칭화를 사용한다:
+\begin{equation}
+    W_{\mathrm{sym}} = D_u^{-1/2} \, W_u \, D_u^{-1/2}, \quad W_u = \mathrm{diag}(\sqrt{u}) \cdot W \cdot \mathrm{diag}(\sqrt{u})
+\end{equation}
+이 대칭화는 C3'' 증명에 필수적인 켤레 항등식(conjugation identity)을 보장한다.
+
+
+%% ============================================================
+\section{연산자 구현}
+\label{sec:operator-impl}
+
+SCC의 세 연산자---자기-완성(Cl$_t$), 자기-대비(D$_t$), 자기-통합(C$_t$)---는 모두 행 정규화 인접 $P_t$를 기본 구성 블록으로 사용한다.
+
+\subsection{폐합 연산자 $\mathrm{Cl}_t$}
+
+정규 사양서 \S9.2의 시그모이드 폐합:
+\begin{equation}
+    \mathrm{Cl}_t(u)(x) = \sigma\!\bigl(a_{\mathrm{cl}} \bigl[(1-\eta)\,u(x) + \eta\,(P_t u)(x) - \tau_{\mathrm{cl}}\bigr]\bigr)
+    \label{eq:closure-impl}
+\end{equation}
+여기서 $\sigma(z) = 1/(1+e^{-z})$는 로지스틱 시그모이드이다.
+
+\begin{lstlisting}[language=Python, caption={폐합 연산자 (operators.py)}]
+def closure(u, graph, params):
+    """Cl_t(u)(x) = sigma(a_cl * ((1-eta)*u(x) + eta*(P_t u)(x) - tau))."""
+    Pu = aggregation(u, graph)  # P_t u
+    z = params.a_cl * (
+        (1.0 - params.eta_cl) * u + params.eta_cl * Pu - params.tau_cl
+    )
+    return sigmoid(z)
+\end{lstlisting}
+
+\paragraph{수치적 안정성.} 시그모이드는 큰 양수/음수 인자에서 오버플로우를 일으킬 수 있으므로, 분기 구현을 사용한다:
+\begin{lstlisting}[language=Python]
+def sigmoid(x):
+    return np.where(x >= 0,
+                    1.0 / (1.0 + np.exp(-x)),
+                    np.exp(x) / (1.0 + np.exp(x)))
+\end{lstlisting}
+
+\paragraph{야코비안 전치-벡터 곱.} 에너지 기울기 계산에는 $J_{\mathrm{Cl}}^T v$가 필요하다. $J_{\mathrm{Cl}}$을 명시적으로 구성하지 않고, 행렬-벡터 곱으로 계산한다:
+\begin{equation}
+    J_{\mathrm{Cl}} = \mathrm{diag}(\sigma' \cdot a_{\mathrm{cl}}) \cdot \bigl[(1-\eta)I + \eta P\bigr]
+\end{equation}
+\begin{equation}
+    J_{\mathrm{Cl}}^T v = \bigl[(1-\eta)I + \eta P^T\bigr] \cdot (\sigma' \cdot a_{\mathrm{cl}} \cdot v)
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={폐합 야코비안 전치-벡터 곱 (operators.py)}]
+def closure_jacobian_transpose_vec(v, sigma_prime, graph, params):
+    """J_Cl^T @ v 를 J_Cl 행렬을 형성하지 않고 계산."""
+    w = sigma_prime * params.a_cl * v
+    return (1.0 - params.eta_cl) * w + \
+           params.eta_cl * np.asarray(graph.P.T @ w).ravel()
+\end{lstlisting}
+
+\subsection{구별 연산자 $D_t$}
+
+구별 연산자(정규 사양서 \S9.3)는 내부와 외부의 비대칭을 측정한다:
+\begin{equation}
+    D_t(x; 1{-}u) = \sigma\!\bigl(a_D \bigl[P_t(u)(x) - \lambda_D \, P_t(1{-}u)(x)\bigr] - \tau_D\bigr)
+    \label{eq:distinction-impl}
+\end{equation}
+
+핵심 구현 기법은 $P_t(\mathbf{1})$ 트릭이다: $P_t(1-u) = P_t(\mathbf{1}) - P_t(u)$이므로, $P_t$를 한 번만 적용하면 된다.
+
+\begin{lstlisting}[language=Python, caption={구별 연산자 (operators.py)}]
+def distinction(u, graph, params):
+    """D_t(x; 1-u)---P_1 트릭으로 효율적 계산."""
+    Pu = aggregation(u, graph)
+    P1_minus_Pu = graph.P_1 - Pu  # P_t(1-u)
+    z = params.a_D * (Pu - params.lambda_D * P1_minus_Pu) - params.tau_D
+    return sigmoid(z)
+\end{lstlisting}
+
+\paragraph{$b_D = 0$ 강제.} 정규 사양서에서 $b_D = 0$은 에너지의 해석성(analyticity)을 보장하기 위한 필수 조건이다. 이것이 위반되면 \L{}ojasiewicz 수렴(T14)이 성립하지 않는다. 매개변수 검증기가 이를 자동으로 확인한다.
+
+\subsection{공-소속 연산자 $C_t$ (레졸벤트)}
+
+$C_t = (I - \alpha_C W_{\mathrm{sym}})^{-1}$는 노이만 급수로 근사한다:
+\begin{equation}
+    C_t \approx \sum_{k=0}^{K} (\alpha_C W_{\mathrm{sym}})^k
+\end{equation}
+수렴 조건은 $\alpha_C \cdot \rho(W_{\mathrm{sym}}) < 1$이다.
+
+\begin{lstlisting}[language=Python, caption={레졸벤트 대각 원소 계산 (operators.py)}]
+def resolvent_diagonal(u, graph, params):
+    """C_t = (I - alpha_C * W_sym)^{-1}의 대각 원소를 노이만 급수로 계산."""
+    W_sym = graph.cohesion_weighted_symmetric(u)
+    aW = (params.alpha_C * W_sym).tocsr()
+    power = sp.eye(graph.n, format="csr")
+    diag = np.ones(graph.n)
+    for k in range(1, params.k_neumann + 1):
+        power = power @ aW
+        diag += power.diagonal()
+        if np.max(np.abs(diag)) > 1e6:  # 발산 방지
+            break
+    return diag
+\end{lstlisting}
+
+공-소속 연산자는 진단용(diagnostic)으로 강등되었으며(v2.1), 에너지 최적화에는 직접 관여하지 않는다. 그러나 3+ 자릿수의 내부/외부 판별 능력을 제공하여, 형성 품질 평가에 여전히 유용하다.
+
+
+%% ============================================================
+\section{에너지 계산과 정확한 기울기}
+\label{sec:energy-impl}
+
+SCC 에너지는 네 개의 독립 항으로 구성된다:
+\begin{equation}
+    \mathcal{E} = \lambda_{\mathrm{cl}}\,\mathcal{E}_{\mathrm{cl}} + \lambda_{\mathrm{sep}}\,\mathcal{E}_{\mathrm{sep}} + \lambda_{\mathrm{bd}}\,\mathcal{E}_{\mathrm{bd}} + \lambda_{\mathrm{tr}}\,\mathcal{E}_{\mathrm{tr}}
+    \label{eq:total-energy}
+\end{equation}
+
+각 항의 구현에서 가장 중요한 것은 \textbf{정확한 해석적 기울기}이다. 모든 기울기는 유한 차분(finite difference)으로 $10^{-9}$ 수준까지 검증되었다.
+
+\subsection{경계/형태 에너지 $\mathcal{E}_{\mathrm{bd}}$}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{bd}} = \underbrace{2\alpha \, u^T L u}_{\text{평활도}} + \underbrace{\beta \sum_i W(u_i)}_{\text{이중 우물}}
+\end{equation}
+여기서 $W(u) = u^2(1-u)^2$는 이중 우물 퍼텐셜이다.
+
+\paragraph{핵심 기술적 세부사항: 인수 4.}
+순서쌍(ordered pair) 합산 규약에 의해:
+\begin{equation}
+    \sum_{x,y} N(x,y)(u(x)-u(y))^2 = 2u^T L u
+\end{equation}
+따라서 평활도의 기울기는 $4\alpha L u$이다 ($2\alpha$가 아님):
+\begin{equation}
+    \nabla_u [2\alpha \, u^T L u] = 4\alpha \, L u
+    \label{eq:factor-4}
+\end{equation}
+
+\paragraph{이중 우물 기울기: 인수 2.}
+$W'(u) = 2u(1-u)(1-2u)$로, 원래의 $u(1-u)(1-2u)$에 인수 2가 곱해진다 (I6 보정):
+\begin{equation}
+    W'(u) = \frac{d}{du}[u^2(1-u)^2] = 2u(1-u)(1-2u)
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={경계 에너지와 기울기 (energy.py)}]
+def energy_bd(u, graph, params):
+    """E_bd = 2*alpha * u^T L u + beta * sum W(u_i)."""
+    Lu = np.asarray(graph.L @ u).ravel()
+    smooth = 2.0 * params.alpha_bd * float(u @ Lu)
+    well = params.beta_bd * np.sum(u**2 * (1.0 - u)**2)
+    return float(smooth + well)
+
+def grad_bd(u, graph, params):
+    """grad E_bd = 4*alpha*L*u + beta*W'(u).  인수 4와 인수 2에 주의."""
+    Lu = np.asarray(graph.L @ u).ravel()
+    return 4.0 * params.alpha_bd * Lu + \
+           params.beta_bd * 2.0 * u * (1.0 - u) * (1.0 - 2.0 * u)
+\end{lstlisting}
+
+\subsection{폐합 에너지 $\mathcal{E}_{\mathrm{cl}}$}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{cl}} = \|\mathrm{Cl}_t(u) - u\|^2
+\end{equation}
+
+이 항은 장이 폐합 고정점에서 벗어난 정도를 측정한다. 기울기는:
+\begin{equation}
+    \nabla \mathcal{E}_{\mathrm{cl}} = 2(J_{\mathrm{Cl}} - I)^T (\mathrm{Cl}(u) - u)
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={폐합 에너지 기울기 (energy.py)}]
+def grad_cl(u, graph, params):
+    """grad E_cl = 2 * (J_Cl - I)^T @ (Cl(u) - u)."""
+    Cl_u, sigma_prime, z = closure_with_jacobian(u, graph, params)
+    residual = Cl_u - u
+    JtR = closure_jacobian_transpose_vec(residual, sigma_prime, graph, params)
+    return 2.0 * (JtR - residual)
+\end{lstlisting}
+
+\subsection{분리 에너지 $\mathcal{E}_{\mathrm{sep}}$}
+
+\begin{equation}
+    \mathcal{E}_{\mathrm{sep}} = \sum_i u_i (1 - D_t(x_i; 1{-}u))
+\end{equation}
+
+Sep 진단과의 정확한 관계: $\mathsf{Sep} = 1 - \mathcal{E}_{\mathrm{sep}} / m$ (정확한 양방향 등식).
+
+기울기:
+\begin{equation}
+    \nabla \mathcal{E}_{\mathrm{sep}} = (1 - D) - J_D^T u
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={분리 에너지 기울기 (energy.py)}]
+def grad_sep(u, graph, params):
+    """grad E_sep = (1 - D) - J_D^T @ u."""
+    D_u, sigma_prime_D, z_D = distinction_with_jacobian(u, graph, params)
+    frozen_part = 1.0 - D_u
+    jac_part = distinction_jacobian_transpose_vec(
+        u, sigma_prime_D, graph, params)
+    return frozen_part - jac_part
+\end{lstlisting}
+
+\subsection{기울기 검증}
+
+모든 기울기는 중앙 유한 차분으로 검증된다:
+\begin{equation}
+    \frac{\partial \mathcal{E}}{\partial u_i} \approx \frac{\mathcal{E}(u + h\,e_i) - \mathcal{E}(u - h\,e_i)}{2h}, \quad h = 10^{-6}
+\end{equation}
+
+테스트 스위트는 해석적 기울기와 유한 차분 기울기 사이의 상대 오차가 $10^{-9}$ 이하임을 확인한다. 이는 야코비안 전치-벡터 곱이 정확하게 구현되었음을 보장한다.
+
+% Figure placeholder
+\begin{figure}[t]
+\centering
+% \includegraphics[width=0.85\textwidth]{figures/fig12_2_gradient_verification.pdf}
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 12.2]} 기울기 검증 결과.\\
+$x$축: 노드 인덱스, $y$축: 해석적 기울기(실선)와 유한 차분 기울기(점).\\
+세 에너지 항($\mathcal{E}_{\mathrm{cl}}$, $\mathcal{E}_{\mathrm{sep}}$, $\mathcal{E}_{\mathrm{bd}}$) 모두에서\\
+상대 오차 $< 10^{-9}$로 일치.
+\vspace{0.5cm}}}
+\caption{해석적 기울기 대 유한 차분 기울기 비교. $10 \times 10$ 격자의 무작위 장에서 측정. 모든 에너지 항에서 기계 정밀도 수준의 일치를 확인할 수 있다.}
+\label{fig:gradient-verification}
+\end{figure}
+
+\subsection{헤시안 스펙트럼 정규화}
+
+네 에너지 항의 상대적 규모가 다르므로, 최적화 전에 가중치를 정규화한다:
+\begin{equation}
+    \lambda_i^{\mathrm{eff}} = \frac{w_i}{\sigma_i + \epsilon}
+\end{equation}
+여기서 $\sigma_i$는 $i$번째 에너지 항의 헤시안 스펙트럼 노름이다.
+
+$\mathcal{E}_{\mathrm{bd}}$의 헤시안은 해석적으로 계산 가능하다:
+\begin{equation}
+    H_{\mathrm{bd}} = 4\alpha L + \beta W''(c) I
+\end{equation}
+$\mathcal{E}_{\mathrm{cl}}$과 $\mathcal{E}_{\mathrm{sep}}$의 헤시안 스펙트럼 노름은 유한 차분 멱급수 반복(power iteration)으로 추정한다.
+
+
+%% ============================================================
+\section{$\Sigma_m$ 위의 최적화}
+\label{sec:optimization}
+
+SCC 형성은 체적 제약 집합 $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$ 위의 에너지 최소화로 발견된다. 최적화기는 세 가지 핵심 요소로 구성된다: (i) 반-암묵적 사영 경사 하강, (ii) Barzilai-Borwein 보폭, (iii) 다중 시작.
+
+\subsection{$\Sigma_m$ 위로의 사영}
+
+$\Sigma_m \cap [0,1]^n$ 위로의 유클리드 사영은 이분법으로 정확히 계산한다:
+\begin{equation}
+    v^* = \mathrm{clip}(u - \lambda, 0, 1), \quad \text{where } \lambda \text{ satisfies } \sum_i v^*_i = m
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={체적 제약 사영 (optimizer.py)}]
+def project_volume(u, m):
+    """u를 {v : v_i in [0,1], sum(v) = m} 위로 사영."""
+    lo = float(np.min(u)) - 1.0
+    hi = float(np.max(u)) + 1.0
+    for _ in range(60):  # 이분법, ~50회 반복으로 배정밀도 수렴
+        mid = (lo + hi) / 2.0
+        v = np.clip(u - mid, 0.0, 1.0)
+        s = np.sum(v)
+        if abs(s - m) < 1e-12:
+            break
+        if s > m:
+            lo = mid
+        else:
+            hi = mid
+    return np.clip(u - mid, 0.0, 1.0)
+\end{lstlisting}
+
+이 사영은 곱셈 재조정(multiplicative rescaling)과 달리 체계적 편향을 도입하지 않는 정확한 최근점 사영이다.
+
+\subsection{반-암묵적 경사 하강}
+
+경계 에너지의 확산 항 $4\alpha L u$는 강성(stiffness)을 유발하므로, 반-암묵적(semi-implicit) 방식으로 처리한다:
+\begin{enumerate}
+    \item 반응 항(폐합, 분리, 이중 우물)은 \textbf{명시적}으로 계산
+    \item 확산 항($4\alpha L u$)은 \textbf{암묵적}으로 처리
+\end{enumerate}
+
+결과 선형 시스템:
+\begin{equation}
+    (I + \Delta t \cdot 4\alpha\lambda_{\mathrm{bd}} L) \, u^{(\tau+1)} = u^{(\tau)} - \Delta t \cdot g_{\mathrm{react}}
+\end{equation}
+
+\begin{lstlisting}[language=Python, caption={반-암묵적 단계 (optimizer.py, 핵심 루프 발췌)}]
+# 확산/반응 분리
+Lu = np.asarray(graph.L @ u).ravel()
+g_diffusion = ec.lambda_bd * 4.0 * params.alpha_bd * Lu
+g_react = g_sigma - g_diffusion
+g_react = g_react - np.mean(g_react)
+
+# 명시적 반응 단계 + 암묵적 확산 단계
+u_react = u - dt * g_react
+A_imp = graph.implicit_matrix(dt * ec.lambda_bd, params.alpha_bd)
+u_new = spsolve(A_imp, u_react)
+u_new = project_volume(u_new, m)
+\end{lstlisting}
+
+\subsection{Barzilai-Borwein 보폭 적응}
+
+보폭 $\Delta t$는 매 단계 Barzilai-Borwein 공식으로 갱신된다:
+\begin{equation}
+    \Delta t^{(\tau+1)} = \frac{|s^T s|}{|s^T y|}, \quad s = u^{(\tau+1)} - u^{(\tau)}, \quad y = g^{(\tau+1)} - g^{(\tau)}
+\end{equation}
+에너지가 증가하면 보폭을 반으로 줄이고, 극도로 작아지면 ($< 10^{-10}$) 최적화를 중단한다.
+
+\subsection{다중 시작 전략}
+
+지역 최소점의 비유일성 문제를 완화하기 위해, 다중 시작(multi-start) 전략을 사용한다:
+\begin{itemize}
+    \item \textbf{시작 0}: Fiedler 고유벡터 방향 섭동 $u_0 = c \cdot \mathbf{1} + \epsilon \cdot v_2$
+    \item \textbf{시작 1--4}: 무작위 가우시안 섭동
+\end{itemize}
+Fiedler 방향 초기화는 위상 전이 이론(T8-Core)에서 동기를 얻은 것으로, 균일 상태의 가장 불안정한 방향을 향해 섭동한다.
+
+\subsection{수렴 판정}
+
+세 가지 기준이 동시에 만족될 때 수렴을 선언한다:
+\begin{enumerate}
+    \item 상대 에너지 변화: $|\Delta \mathcal{E}| / (|\mathcal{E}| + 10^{-15}) < \epsilon_{\mathrm{energy}}$
+    \item KKT 잔차: $\|g - \nu \cdot \mathbf{1}\|_2 / \sqrt{n} < \epsilon_{\mathrm{grad}}$
+    \item 장 변화: $\|u^{(\tau+1)} - u^{(\tau)}\|_2 / \sqrt{n} < \epsilon_{\mathrm{field}}$
+\end{enumerate}
+
+특히, KKT 잔차는 \textbf{상자 인식}(box-aware)으로 계산된다. 상자 경계($u_i = 0$ 또는 $u_i = 1$)의 노드는 상보성(complementarity)에 의해 자연스럽게 KKT를 만족하므로, 내부 노드만으로 라그랑주 승수 $\nu$를 추정한다.
+
+
+%% ============================================================
+\section{진단과 지속성}
+\label{sec:diagnostics-impl}
+
+최적화가 완료되면, 발견된 장 $\hat{u}$의 품질을 진단 벡터 $\mathbf{d} = (\mathsf{Bind}, \mathsf{Sep}, \mathsf{Inside}, \mathsf{Persist}) \in [0,1]^4$로 평가한다.
+
+\subsection{Bind: 자기-지지}
+
+\begin{equation}
+    \mathsf{Bind} = 1 - \frac{\|u - \mathrm{Cl}_t(u)\|_2}{\sqrt{n}}
+\end{equation}
+$\ell^2$ 노름을 사용하는 이유: $\ell^\infty$ 노름은 경계 노드의 본래적 잔차(inherent residual, $\sim 0.21$) 때문에 부적절하다.
+
+\begin{lstlisting}[language=Python, caption={Bind 진단 (diagnostics.py)}]
+def bind_predicate(u, graph, params):
+    Cl_u = closure(u, graph, params)
+    residual_norm = np.linalg.norm(u - Cl_u)
+    return float(max(0.0, 1.0 - residual_norm / np.sqrt(len(u))))
+\end{lstlisting}
+
+\subsection{Sep: 외부로부터의 구별}
+
+\begin{equation}
+    \mathsf{Sep} = \frac{\sum_x u(x) \cdot D_t(x; 1{-}u)}{\sum_x u(x)} = 1 - \frac{\mathcal{E}_{\mathrm{sep}}}{m}
+\end{equation}
+$u$-가중 평균을 사용한다. 원래의 $C_t$-가중 전체-노드 버전은 형성 품질과 무관하게 $\sim 0.5$를 반환했다.
+
+\subsection{Inside: 형태적 품질}
+
+$\mathcal{Q}_{\mathrm{morph}} = \frac{\ell_{\max} - c}{1 - c} \cdot \mathrm{Artic}$로, 초수준 집합 여과(superlevel-set filtration)의 $H_0$ 지속 다이어그램에서 계산한다.
+
+구현은 그래프 인접 구조를 따르는 Union-Find 알고리즘을 사용한다:
+\begin{enumerate}
+    \item 노드를 $u$ 감소 순으로 정렬
+    \item 각 노드 활성화 시, 이미 활성인 이웃과 합집합
+    \item 합집합 시 더 젊은(나중에 태어난) 성분이 소멸---사/생 막대(bar) 기록
+    \item 최장 막대 $\ell_{\max}$와 차장 막대 $\ell_{\mathrm{second}}$로부터 $\mathrm{Artic} = 1 - \ell_{\mathrm{second}}/\ell_{\max}$ 계산
+\end{enumerate}
+
+\subsection{Persist: 시간적 계승}
+
+두 가지 구현이 제공된다:
+
+\paragraph{핵심 중첩 근사.}
+\begin{equation}
+    \mathsf{Persist}_{\mathrm{overlap}} = \frac{\sum_i \min(u_{\mathrm{curr},i}, \, u_{\mathrm{prev},i})}{\max(\sum u_{\mathrm{curr}}, \sum u_{\mathrm{prev}})}
+\end{equation}
+전달 커널 없이 공간적 지속성을 포착한다.
+
+\paragraph{전달 기반 지속성.}
+정규 사양서 \S7.1의 공식을 따르는 전달 기반 $\mathsf{Persist}$는 \texttt{transport.py}의 \texttt{persist\_transport} 함수로 구현된다. 응집 지문(cohesion fingerprint)에 기반한 자기-참조 비용과 엔트로피 정칙화 부분 최적 수송을 사용한다.
+
+
+%% ============================================================
+\section{다중 형성 파이프라인}
+\label{sec:multi-impl}
+
+단일 형성의 축약 불가피성($K^* = 1$, 연결 그래프의 등주부등식)을 우회하기 위해, $K$개의 결합된 연속 장을 동시에 최적화한다.
+
+\subsection{$K$-장 에너지}
+
+\begin{equation}
+    \mathcal{E}(u^1, \ldots, u^K) = \sum_k \mathcal{E}_{\mathrm{self}}(u^k) + \sum_{j<k} \lambda_{\mathrm{rep}} \sum_x u^j(x) \, u^k(x) + \lambda_{\mathrm{bar}} \sum_x \max\!\bigl(0, \textstyle\sum_k u^k(x) - 1\bigr)^2
+\end{equation}
+
+\begin{itemize}
+    \item $\mathcal{E}_{\mathrm{self}}(u^k)$: 제6장의 단일 형성 에너지
+    \item $\lambda_{\mathrm{rep}}$: 형성 간 반발 강도
+    \item $\lambda_{\mathrm{bar}}$: 심플렉스 장벽 (총 참여가 1을 초과하지 않도록)
+\end{itemize}
+
+\subsection{레짐 분류}
+
+결합 측도 $\Lambda_{\mathrm{coupling}} = \max_{j \neq k} \lambda_{\mathrm{rep}} \cdot \omega_{jk} / \min(\mu_j, \mu_k)$에 의해 세 레짐을 분류한다:
+\begin{itemize}
+    \item \textbf{잘-분리됨} (well-separated): $\Lambda < 0.01$
+    \item \textbf{약하게 상호작용} (weakly-interacting): $0.01 < \Lambda < 1/(K-1)$
+    \item \textbf{강하게 상호작용} (strongly-interacting): $\Lambda > 1/(K-1)$
+\end{itemize}
+
+\subsection{시간적 전달 ($K$ 형성)}
+
+$K$ 형성의 시간적 전달은 세 가지 모드를 제공한다:
+\begin{enumerate}
+    \item \textbf{독립} (independent): 각 형성을 별도로 전달
+    \item \textbf{보정} (correction): 독립 전달 후 반발/심플렉스 보정
+    \item \textbf{재최적화} (reoptimize): 전달된 장에서 전체 $K$-장 최적화 재시작
+\end{enumerate}
+
+보정 모드는 효율성과 정확성의 균형을 제공하며, T-Persist-K-Sep에서 이론적으로 정당화된다. 강한 상호작용 레짐에서는 재최적화가 필요하다.
+
+
+%% ============================================================
+\section{첫 번째 형성 찾기: 완전한 튜토리얼}
+\label{sec:first-formation}
+
+이 절에서는 SCC 패키지를 사용하여 처음으로 형성을 발견하는 과정을 단계별로 안내한다. 기본적인 파이썬 지식만 있으면 따라할 수 있다.
+
+\subsection{환경 설정}
+
+SCC 패키지는 설치 단계 없이 저장소 루트에서 직접 실행한다:
+\begin{lstlisting}[language=bash, caption={환경 확인}]
+# 필수 의존성 확인
+python3 -c "import numpy, scipy; print('OK')"
+
+# 테스트 실행 (174개 모두 통과해야 함)
+python3 -m pytest tests/ -v --tb=short
+\end{lstlisting}
+
+\subsection{단계 1: 그래프 생성}
+
+$10 \times 10$ 4-연결 격자를 생성한다. 이는 100개의 노드와 180개의 간선을 가진다.
+
+\begin{lstlisting}[language=Python, caption={그래프 생성과 기본 속성 확인}]
+from scc import GraphState, ParameterRegistry, find_formation
+import numpy as np
+
+# 10x10 격자 생성
+g = GraphState.grid_2d(10, 10)
+print(f"노드 수: {g.n}")          # 100
+print(f"Fiedler 고유값: {g.fiedler:.4f}")  # ~0.0979
+print(f"최대 차수: {max(g.degree)}")       # 4 (내부 노드)
+\end{lstlisting}
+
+Fiedler 고유값 $\lambda_2 \approx 0.098$은 위상 전이 임계값을 결정한다. 기본 매개변수($\alpha = 1, \beta = 10$)에서:
+\begin{equation}
+    \beta_{\mathrm{crit}} = \frac{4\alpha\lambda_2}{|W''(c)|} \approx \frac{4 \times 1 \times 0.098}{0.667} \approx 0.59
+\end{equation}
+$\beta = 10 \gg 0.59$이므로, 비균일 형성이 반드시 존재한다.
+
+\subsection{단계 2: 매개변수 설정과 검증}
+
+\begin{lstlisting}[language=Python, caption={매개변수 설정과 검증}]
+p = ParameterRegistry()
+valid, violations, warnings = p.validate(
+    fiedler_eigenvalue=g.fiedler)
+print(f"유효: {valid}")        # True
+print(f"beta_crit: {p.beta_critical(g.fiedler):.2f}")  # ~0.59
+\end{lstlisting}
+
+\subsection{단계 3: 형성 발견}
+
+\begin{lstlisting}[language=Python, caption={형성 발견과 결과 해석}]
+result = find_formation(g, p, verbose=True)
+print(f"수렴: {result.converged}")
+print(f"반복: {result.n_iter}")
+print(f"에너지: {result.energy:.4f}")
+print(f"진단: {result.diagnostics}")
+# DiagnosticVector(Bind=0.952, Sep=0.987, Inside=0.831, Persist=1.000)
+\end{lstlisting}
+
+\subsection{단계 4: 결과 시각화}
+
+\begin{lstlisting}[language=Python, caption={형성 시각화 (matplotlib)}]
+import matplotlib.pyplot as plt
+
+u = result.u.reshape(10, 10)
+fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+
+# 응집 장
+axes[0].imshow(u, cmap='hot', vmin=0, vmax=1)
+axes[0].set_title('Cohesion field u')
+
+# 핵심/경계/외부
+core = (u >= 0.9).astype(float)
+boundary = ((u >= 0.2) & (u < 0.9)).astype(float)
+axes[1].imshow(core + 0.5 * boundary, cmap='RdYlGn')
+axes[1].set_title('Core (green) / Boundary (yellow)')
+
+# 에너지 수렴
+axes[2].plot(result.energy_history)
+axes[2].set_xlabel('Iteration')
+axes[2].set_ylabel('Energy')
+axes[2].set_title('Energy convergence')
+
+plt.tight_layout()
+plt.savefig('my_first_formation.pdf')
+\end{lstlisting}
+
+% Figure placeholder
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 12.3]} 첫 번째 형성 튜토리얼 출력.\\
+좌: 응집 장 $u$ 히트맵 (핵심=밝음, 외부=어두움).\\
+중: 핵심/경계/외부 분류.\\
+우: 에너지 수렴 곡선 (약 200회 반복에서 수렴).
+\vspace{0.5cm}}}
+\caption{$10 \times 10$ 격자에서의 첫 번째 SCC 형성 발견 결과. 약 200회 반복 후 에너지가 수렴하고, 명확한 핵심-경계-외부 구조가 나타난다.}
+\label{fig:first-formation}
+\end{figure}
+
+\subsection{단계 5: 다중 형성}
+
+$K = 2$ 형성을 찾아보자:
+\begin{lstlisting}[language=Python, caption={다중 형성 발견}]
+from scc import find_k_formations
+
+results = find_k_formations(g, p, K=2, lambda_rep=10.0)
+for k, r in enumerate(results):
+    print(f"형성 {k+1}: {r.diagnostics}")
+# 형성 1: DiagnosticVector(Bind=0.91, Sep=0.95, Inside=0.72, ...)
+# 형성 2: DiagnosticVector(Bind=0.89, Sep=0.93, Inside=0.68, ...)
+\end{lstlisting}
+
+두 형성은 격자의 반대편에 위치하며, 반발 항이 공간적 분리를 유도한다.
+
+% Figure placeholder
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{5cm}
+\textbf{[그림 12.4]} $K = 2$ 다중 형성 발견 결과.\\
+좌: 형성 1 (격자 좌측), 우: 형성 2 (격자 우측).\\
+반발 항이 두 형성을 공간적으로 분리시킨다.
+\vspace{0.5cm}}}
+\caption{$10 \times 10$ 격자에서 $K = 2$ 형성 발견. 형성 간 반발($\lambda_{\mathrm{rep}} = 10$)이 공간적 분리를 유도하고, 심플렉스 제약이 참여 총합을 1 이하로 유지한다.}
+\label{fig:first-multi-formation}
+\end{figure}
+
+
+%% ============================================================
+\section{연습 문제}
+\label{sec:ch12-exercises}
+
+\begin{enumerate}
+    \item \textbf{최소 구현.} NumPy만 사용하여 단일 에너지 항 $\mathcal{E}_{\mathrm{bd}}$의 최소화를 구현하라. 체적 사영, 기울기 계산, 단순 경사 하강을 포함할 것. $5 \times 5$ 격자에서 형성이 출현하는 최소 $\beta$를 찾아라.
+
+    \item \textbf{기울기 검증.} $\mathcal{E}_{\mathrm{cl}}$의 해석적 기울기를 유도하고, 유한 차분으로 검증하라. $h = 10^{-4}, 10^{-6}, 10^{-8}$에서 상대 오차를 측정하고, 최적 $h$를 논의하라.
+
+    \item \textbf{새 에너지 항.} 엔트로피 정칙화 항 $\mathcal{E}_{\mathrm{ent}} = -\sum_i [u_i \log u_i + (1-u_i)\log(1-u_i)]$를 추가하라. 이 항의 기울기를 유도하고, 형성 품질에 미치는 영향을 조사하라.
+
+    \item \textbf{비정규 그래프.} 바벨 그래프(두 개의 완전 그래프를 하나의 간선으로 연결)에서 형성을 찾아라. Fiedler 고유값과 형성 위치의 관계를 논의하라.
+
+    \item \textbf{반-암묵적 vs. 명시적.} 반-암묵적 방식과 순수 명시적 경사 하강의 수렴 속도를 비교하라. $\alpha_{\mathrm{bd}}$를 변화시키며 반-암묵적 방식의 이점이 커지는 조건을 확인하라.
+
+    \item \textbf{수렴 모니터링.} 최적화 과정에서 진단 벡터의 네 성분이 어떤 순서로 높은 값에 도달하는지 기록하라. 예측 P5 (Sep-before-Inside)가 관찰되는지 확인하라.
+\end{enumerate}
+
+
+%% ============================================================
+\section{요약: 이론에서 코드로}
+\label{sec:ch12-summary}
+
+이 장에서 구현한 파이프라인은 SCC 이론의 모든 핵심 구성 요소를 반영한다:
+
+\begin{table}[h]
+\centering
+\caption{이론-코드 대응표}
+\label{tab:theory-code}
+\begin{tabular}{lll}
+\toprule
+\textbf{이론 개념} & \textbf{구현} & \textbf{검증} \\
+\midrule
+관계적 지지 공간 $X_t$ & \texttt{GraphState} & 174 테스트 \\
+폐합 $\mathrm{Cl}_t$ & \texttt{closure()} & FD $< 10^{-9}$ \\
+구별 $D_t$ & \texttt{distinction()} & FD $< 10^{-9}$ \\
+순서쌍 합산 ($\times 4$) & \texttt{grad\_bd()} & FD $< 10^{-9}$ \\
+체적 제약 $\Sigma_m$ & \texttt{project\_volume()} & 이분법, $< 10^{-12}$ \\
+반-암묵적 흐름 & \texttt{\_optimize\_single()} & 수렴, exp1-3 \\
+진단 벡터 $\mathbf{d}$ & \texttt{DiagnosticVector} & QM1-4, Bridge \\
+$K$-장 반발 & \texttt{find\_k\_formations()} & exp6, exp38 \\
+자기-참조 전달 & \texttt{transport\_fixed\_point()} & exp9-11 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+다음 장에서는 이 구현을 사용하여 이론의 예측을 58개의 수치 실험으로 검증한다.

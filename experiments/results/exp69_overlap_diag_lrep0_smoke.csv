@@ -1,0 +1,2 @@
+config,lambda_rep,lambda_bar,n_images,n_iter,step,spring,source_energy,initial_max_delta,relaxed_max_delta,initial_max_overlap,relaxed_max_overlap,improvement,improvement_frac,initial_max_index,relaxed_max_index,max_mass_error,max_simplex_violation,max_box_low_violation,max_box_high_violation,history_monotone,history_max_increase
+10x10:0.6,0.0,100.0,7,25,0.001,0.05,15.290611193418414,0.0,0.0,8.983722229376262,8.983722229376262,0.0,0.0,0,0,7.602807272633072e-13,0.0,0.0,0.0,True,0.0

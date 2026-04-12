@@ -1,0 +1,182 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MASTER FILE: Soft Cognitive Cohesion — A Mathematical Theory
+% of Pre-Objective Formation
+%
+% Phase 15: Educational Textbook (600+ pages)
+% Date: 2026-04-04
+%
+% Compilation: pdflatex master.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{SNmono}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Metadata
+\title{Soft Cognitive Cohesion: A Mathematical Theory of Pre-Objective Formation}
+\subtitle{Formal Foundations, Temporal Dynamics, and Applications}
+\author{Collective Authorship}
+\date{2026}
+
+% PDF Settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfauthor={SCC Research Team},
+    pdftitle={Soft Cognitive Cohesion},
+    pdfsubject={Mathematical Theory},
+    pdfkeywords={cohesion, formation, field theory, mathematical foundations}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONT MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Half Title Page
+\thispagestyle{empty}
+\vspace*{3cm}
+{\centering
+\Large\textbf{Soft Cognitive Cohesion}\\
+\Large A Mathematical Theory of Pre-Objective Formation\\
+\vspace{1cm}
+}
+\newpage
+
+% Title Page
+\frontmatter
+\pagestyle{headings}
+
+% Copyright and other front matter would go here
+\include{frontmatter/copyright}
+
+% Foreword (if available)
+\iffile{frontmatter/foreword.tex}
+  \include{frontmatter/foreword}
+\fi
+
+% Preface
+\include{preface}
+
+% Notation
+\include{notation}
+
+% Table of Contents
+\tableofcontents
+\cleardoublepage
+
+% List of Theorems
+\addcontentsline{toc}{chapter}{List of Theorems}
+\include{frontmatter/list_of_theorems}
+
+% List of Figures
+\listoffigures
+\cleardoublepage
+
+% List of Algorithms
+\listofalgorithms
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+% PART I: FOUNDATIONS — Why Soft Cognitive Cohesion?
+\part{Foundations: Why Soft Cognitive Cohesion?}
+\label{part:foundations}
+
+\include{chapters/ch01_motivation}
+\include{chapters/ch02_concepts}
+\include{chapters/ch03_formal_universe}
+
+% PART II: FORMAL THEORY
+\part{Formal Theory: Axioms, Operators, and Dynamics}
+\label{part:formal-theory}
+
+\include{chapters/ch04_axiomatic_groups}
+\include{chapters/ch05_operator_realizations}
+\include{chapters/ch06_energy_functional}
+\include{chapters/ch07_phase_transition}
+\include{chapters/ch08_convergence}
+
+% PART III: MULTI-FORMATION & TEMPORAL DYNAMICS
+\part{Multi-Formation Theory and Temporal Dynamics}
+\label{part:multi-temporal}
+
+\include{chapters/ch09_multi_formation}
+\include{chapters/ch10_temporal_transport}
+\include{chapters/ch11_diagnostic_vector}
+
+% PART IV: IMPLEMENTATION & APPLICATIONS
+\part{Implementation and Applications}
+\label{part:implementation}
+
+\include{chapters/ch12_algorithms}
+\include{chapters/ch13_experiments}
+\include{chapters/ch14_connections}
+\include{chapters/ch15_theorem_registry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BACK MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+% APPENDIX A: Mathematical Background
+\include{appendices/appendix_a_math_background}
+
+% APPENDIX B: Parameter Registry
+\include{appendices/appendix_b_parameters}
+
+% APPENDIX C: Design Decisions
+\include{appendices/appendix_c_design_decisions}
+
+% APPENDIX D: Theorem Dependency Graph
+\include{appendices/appendix_d_theorem_dag}
+
+% Bibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{references}
+\bibliographystyle{plainnat}
+
+% Index
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTES FOR COMPILATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Ensure SNmono.cls is in the same directory or in TeX path
+% 2. Run: pdflatex master.tex
+%        pdflatex master.tex (for TOC)
+%        bibtex master
+%        makeindex master
+%        pdflatex master.tex (final)
+% 3. All chapter .tex files in chapters/ must exist
+% 4. All appendix .tex files in appendices/ must exist
+% 5. Figure directories (P1_foundations, P2_formal, etc.) must have PDFs
+%
+% Expected output: master.pdf (~600+ pages)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

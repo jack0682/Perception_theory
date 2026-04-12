@@ -1,0 +1,3 @@
+config,lambda_rep,lambda_bar,n_images,n_iter,step,spring,source_energy,initial_max_delta,relaxed_max_delta,improvement,improvement_frac,initial_max_index,relaxed_max_index,max_mass_error,max_simplex_violation,max_box_low_violation,max_box_high_violation,history_monotone,history_max_increase
+10x10:0.5,1.0,100.0,7,25,0.001,0.05,7.121200428288347,14.175321028342228,13.879430706624191,0.2958903217180371,0.020873624034787788,3,3,1.0089706847793423e-12,0.0,0.0,0.0,True,-0.0487524312607448
+10x10:0.6,1.0,100.0,7,25,0.001,0.05,7.7415157152094265,7.817847630869221,7.457875525305199,0.35997210556402237,0.04604491191957385,3,3,1.6200374375330284e-12,0.0,0.0,0.0,True,-0.05696835383715104
