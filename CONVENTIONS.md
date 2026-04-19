@@ -1,163 +1,163 @@
-# CONVENTIONS.md — File & Log Management Rules
+# CONVENTIONS.md — Repository & Theory Discipline
 
-**Every new Claude session MUST read this file before creating, modifying, or logging any file.**
-
----
-
-## 1. Directory Structure
-
-```
-/home/jack/ex/
-  CLAUDE.md              # Claude Code instructions (read-only unless updating)
-  CONVENTIONS.md         # THIS FILE — file management rules
-  Agent Instructions.md  # Binding protocol (read-only)
-  Canonical Spec v2.0.md # Authoritative spec
-  CHANGELOG.md           # Session-level change log (append-only)
-
-  scc/                   # Python package — code only
-  tests/                 # Test files only
-  experiments/           # Experiment scripts only
-  papers/                # LaTeX drafts and figures only
-  paper_template/        # Template files (read-only)
-
-  docs/                  # Research record — organized by date
-    00-overview.md       # Master index (update when adding new iteration)
-    YYYY-MM-DD/          # Date folder (e.g., 03-31/)
-      INDEX.md           # Date-level index (required)
-      <category>/        # Category subfolder
-        <files>.md       # Actual documents
-```
-
-## 2. File Creation Rules
-
-### 2.1 Research Documents (docs/)
-
-**Always** place in `docs/YYYY-MM-DD/<category>/`.
-
-| Category | When to use | Example filenames |
-|----------|------------|-------------------|
-| `proof/` | New theorem proofs, proof attempts | `CORE-DEPTH-PROOF.md`, `T-PERSIST-K-SEP.md` |
-| `audit/` | Reviews, verification, gap analysis | `A7-transport-audit.md`, `RE-AUDIT-6.md` |
-| `repair/` | Bug fixes, gap closures, corrections | `GAP-CLOSURES-4.md`, `BASIN-REPAIR.md` |
-| `theory/` | New theoretical development, design decisions | `MULTI-TEMPORAL-THEORY.md`, `BIRTH-DEATH.md` |
-| `experiment/` | Experiment analysis reports | `EXP16-ANALYSIS.md` |
-| `synthesis/` | Session summaries, iteration capstones | `I14-SYNTHESIS.md` |
-| `generalization/` | Extensions beyond core theory | `CONTINUUM.md`, `STOCHASTIC.md` |
-
-**Procedure:**
-1. Check if today's date folder exists: `docs/YYYY-MM-DD/`. Create if not.
-2. Check if the category subfolder exists. Create if not.
-3. Create the file with a header (see §4).
-4. Update `docs/YYYY-MM-DD/INDEX.md` — add one row to the relevant table.
-5. If starting a new iteration (I13, I14, ...), also update `docs/00-overview.md`.
-
-### 2.2 Code Files (scc/, tests/, experiments/)
-
-- **scc/**: Only create new modules if the theory pipeline genuinely needs it. Prefer extending existing modules.
-- **tests/**: Mirror `scc/` structure. One test file per module (`test_<module>.py`).
-- **experiments/**: Name as `exp<N>_<short_name>.py`. Increment N from the highest existing experiment number.
-- **papers/**: Only modify existing `.tex` files unless creating a new paper.
-
-### 2.3 Files That Must NOT Be Created
-
-- No README.md (CLAUDE.md serves this role)
-- No duplicate specs (Canonical Spec v2.0.md is authoritative)
-- No scratch/temp files in the repo root
-- No `.py` files outside `scc/`, `tests/`, `experiments/`, `papers/`
-
-## 3. File Modification Rules
-
-### 3.1 Canonical Spec v2.0.md
-
-- **Only modify** when a theorem status changes (proved/retracted), an erratum is needed, or a new theorem is added.
-- **Always** add an erratum note inline: `*(Erratum YYYY-MM-DD: <what changed and why>)*`
-- **Never** silently change a proof status. The change must be logged in CHANGELOG.md.
-
-### 3.2 Code (scc/)
-
-- Run `python3 -m pytest tests/ -v` after any code change.
-- Record the test count in CHANGELOG.md if it changes (e.g., "174 → 180 tests").
-- If a function signature changes, grep for all callers and update them.
-
-### 3.3 Papers (papers/)
-
-- Only update when theory/code changes necessitate it.
-- Note which section was modified in CHANGELOG.md.
-
-## 4. Document Header Format
-
-Every `.md` file in `docs/` must start with:
-
-```markdown
-# <Title>
-
-**Date:** YYYY-MM-DD
-**Session:** <brief session description, e.g., "Multi-formation gap closure">
-**Category:** proof | audit | repair | theory | experiment | synthesis | generalization
-**Status:** active | complete | superseded
-**Depends on:** <list of prerequisite documents or theorems, if any>
+Read at session start with `THEORY/canonical/canonical.md`, `THEORY/canonical/open_problems.md`, and the last entry of `THEORY/CHANGELOG.md`.
 
 ---
 
-<content>
+## 1. Top-Level Split: CODE / THEORY
+
+Two physically separated trees:
+
+| Tree | Contains | Imported / Executed? |
+|------|----------|----------------------|
+| `CODE/` | `scc/`, `tests/`, `experiments/`, `scripts/`, `papers/` | Yes — run everything from `cd CODE` |
+| `THEORY/` | `canonical/`, `working/`, `logs/`, `CHANGELOG.md` | No — read-only narrative |
+
+**Do not put executable code under `THEORY/`.**
+**Do not put theory narrative under `CODE/`** (except LaTeX sources, which are theory output but require Python to generate figures — these live in `CODE/papers/`).
+
+---
+
+## 2. THEORY/ Internal Structure
+
+```
+THEORY/
+├── CHANGELOG.md           state changes to canonical (status changes, errata, retractions)
+├── canonical/             authoritative specification — no contamination allowed
+├── working/               active theory development (topic-based, free-form)
+└── logs/                  chronological journal (daily / weekly / monthly)
 ```
 
-## 5. CHANGELOG.md — Session Log
+### Promotion Pipeline (Contamination Barrier)
 
-Every session that modifies files must append to `CHANGELOG.md`. Format:
+```
+logs/daily/YYYY-MM-DD.md   ──── reorganize by topic ──→   working/<topic>.md
+                                                                │
+                                                                │ proof + review + tests
+                                                                ↓
+                                                     canonical/canonical.md
+                                                    (one-way — no return path)
+```
+
+- `canonical/` accepts **promoted content only**. No direct editing from raw ideas.
+- Retractions from `canonical/` are **explicit** — `*(Retracted YYYY-MM-DD: reason)*` inline, logged in `THEORY/CHANGELOG.md`. Retracted content stays visible (crossed-out, not removed).
+- **No reverse flow.** A canonical theorem under re-examination does not move back to `working/`. It stays in canonical/ with a visible erratum/retraction marker.
+
+### canonical/ rules
+
+Edit only to:
+1. Add a newly promoted theorem (`canonical.md` body + row in `theorem_status.md`)
+2. Insert inline erratum: `*(Erratum YYYY-MM-DD: what and why)*`
+3. Mark explicit retraction: `*(Retracted YYYY-MM-DD: reason)*`
+
+All three require a `THEORY/CHANGELOG.md` entry.
+
+### working/ rules
+
+- One file per topic. Filename: descriptive, snake or kebab case (`F-1_kinetic.md`, `multi-formation.md`).
+- Header optional; minimum recommended:
+  ```markdown
+  # <topic>
+  **Status:** exploring | developing | near-promotion
+  **Last touched:** YYYY-MM-DD
+  **Canonical refs:** canonical.md §X.Y
+  ```
+- Free-form body.
+- Once fully promoted, either delete working file (its content is now in canonical.md) or move to `_archive/working_promoted/YYYY-MM-DD_<topic>.md`.
+
+### logs/ rules
+
+- **daily/YYYY-MM-DD.md** — only when meaningful work happens that day. No daily obligation.
+- **weekly/YYYY-Www.md** — optional week summary.
+- **monthly/YYYY-MM.md** — optional month summary.
+- Free-form. No metadata frontmatter required.
+
+---
+
+## 3. CODE/ Discipline
+
+### Running things
+
+**Everything is run from `CODE/` as cwd.** `tests/conftest.py` has a 3-line sys.path bridge that resolves `scc` relative to `CODE/`.
+
+```bash
+cd CODE && python3 -m pytest tests/ -v
+```
+
+### Tests
+
+- Run `cd CODE && python3 -m pytest tests/` after any code change. 175 must pass.
+- Test count delta → append entry to `THEORY/CHANGELOG.md`.
+- Signature change → grep callers and update.
+- Extend existing modules before adding new `scc/*.py`.
+
+### Experiments
+
+- Name: `experiments/exp<N>_<snake_case>.py`. N increments from highest existing.
+- Results: `experiments/results/` — one `.json` per run (+ optional `.csv`).
+- **Do not rename existing exp<N>.** Numbering is stable history.
+
+### Papers
+
+- `papers/paper1_math.tex`, `papers/paper2_cogsci.tex` — working drafts.
+- `papers/generate_figures.py` for figures.
+
+---
+
+## 4. CHANGELOG Format
+
+Append to `THEORY/CHANGELOG.md` after any session that modifies canonical, working, or code:
 
 ```markdown
-## YYYY-MM-DD — <Session Title>
+## YYYY-MM-DD — <title>
 
 ### Summary
-<1-3 sentences: what was accomplished>
+<1–3 sentences>
 
-### Files Created
-- `path/to/file.md` — <one-line description>
-
-### Files Modified
-- `path/to/file.md` — <what changed>
+### Files Created / Modified
+- `<path>` — <short>
 
 ### Theorem Status Changes
-- <theorem name>: <old status> → <new status> (reason)
+- <theorem>: <old> → <new> (reason)
 
 ### Test Count
-<N> tests passing (previously <M>)
+<N> passing (previously <M>)
 
-### Open Items Carried Forward
-- <anything unfinished that the next session should know>
+### Carry-Forward
+- <unfinished items>
 ```
 
-## 6. Naming Conventions
+---
+
+## 5. Naming
 
 | Type | Pattern | Example |
 |------|---------|---------|
-| Research doc | `UPPER-KEBAB-CASE.md` | `CORE-DEPTH-PROOF.md` |
-| Iteration doc | `I<N>-<topic>.md` | `I14-SYNTHESIS.md` |
-| Audit doc | `A<N>-<topic>.md` | `A7-transport-audit.md` |
-| Repair doc | `R<N>-<topic>.md` or `GAP-CLOSURES-<N>.md` | `R7-basin-repair.md` |
-| Experiment | `exp<N>_<snake_case>.py` | `exp16_birth_death.py` |
-| Test file | `test_<module>.py` | `test_transport.py` |
-| Date folder | `MM-DD` (within same year) | `04-01/` |
-| Category folder | `lowercase/` | `proof/`, `audit/` |
+| Experiment | `CODE/experiments/exp<N>_<snake>.py` | `exp14_multi_persist.py` |
+| Test | `CODE/tests/test_<module>.py` | `test_transport.py` |
+| Canonical spec | `THEORY/canonical/canonical.md` (single file) | — |
+| Working topic | `THEORY/working/<topic>.md` | `F-1_kinetic.md` |
+| Daily log | `THEORY/logs/daily/YYYY-MM-DD.md` | `2026-04-20.md` |
+| Weekly log | `THEORY/logs/weekly/YYYY-Www.md` | `2026-W17.md` |
+| Monthly log | `THEORY/logs/monthly/YYYY-MM.md` | `2026-04.md` |
 
-## 7. Session Start Checklist
+**No prefix registries** (D-/S-/T-/A-/E-/Q-/C-/P-/X-) and **no numbered top-level directories** (00_meta, 01_canonical, ...). The Research OS that used these patterns is archived at `_archive/research_os_2026-04-12/` and must not be re-introduced.
 
-When starting a new session, Claude must:
+---
 
-1. **Read** `CONVENTIONS.md` (this file)
-2. **Read** `CHANGELOG.md` (last entry) to understand where the previous session left off
-3. **Check** `docs/00-overview.md` header for current project state
-4. **Verify** test count: `python3 -m pytest tests/ --co -q 2>/dev/null | tail -1`
-5. If continuing interrupted work, check `CHANGELOG.md` "Open Items Carried Forward"
+## 6. Forbidden
 
-## 8. When Multiple Agents Work in Parallel
+- Numbered top-level dirs (00_meta, 01_canonical, ..., 99_templates)
+- Per-item registry files (standalone Q-xxxx, P-xxxx, X-xxxx, etc.)
+- 5-role daily logs (lead/proof/critic/experiment/archivist format)
+- Editing `canonical/` directly from raw ideas — must pass through `working/` with review
+- Editing inside `_archive/` — if something there is still alive, pull a copy out explicitly and log why
+- Silently resolving an open problem — F-1 / M-1 / MO-1 stay open until explicit promotion
 
-- Each agent team writes to its own output file(s) in the correct `docs/YYYY-MM-DD/<category>/` path.
-- The orchestrating session is responsible for updating `INDEX.md` and `CHANGELOG.md` after all agents complete.
-- Agent output files should include the agent/team name in the header.
+---
 
-## 9. Superseding and Archiving
+## 7. When Something is Superseded
 
-- When a document is superseded, add `**Status:** superseded by <new-file-path>` to its header. Do NOT delete it.
-- When a theorem is retracted, keep the original proof doc but mark status as `retracted` with reason.
+1. Mark intent in `THEORY/CHANGELOG.md`.
+2. Move the file to `_archive/<topic>_YYYY-MM-DD/` (preserve with date stamp).
+3. Do not delete — preserve the record.

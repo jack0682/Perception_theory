@@ -1,169 +1,125 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a mathematical theory of how coherent formations emerge prior to discrete objecthood.
 
-## Project Overview
+## Session Start
 
-This repository contains the formal specification, Python implementation, and publication drafts for **Soft Cognitive Cohesion (SCC)** — a mathematical theory of how coherent formations emerge prior to discrete objecthood.
+Read in order:
+1. **`THEORY/canonical/canonical.md`** — authoritative specification (v1.2, 2026-04-12). Single source of truth for the theory.
+2. **`THEORY/canonical/open_problems.md`** — currently unresolved: F-1 (K=2 vacuity), M-1 (K=1 preference), MO-1 (Morse inapplicability).
+3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
-### Session Start — MANDATORY
-**Every new session must read these in order:**
-1. **`THEORY_STATUS_2026-04-12.md`** ← **READ FIRST** (2026-04-12 theory audit: exp65 validation failure, F-1/M-1/MO-1 unresolved, Type A/B classification rejected)
-2. `CONVENTIONS.md` — naming rules, directory structure
-3. Last entry of `CHANGELOG.md` — carry-forward items from previous session
+For the reorganization history (what was tried and abandoned), see `AUDIT_2026-04-18.md`.
 
-These files define critical context, naming rules, and open problems.
+## Repository Layout
 
-### Agent Teams — DEFAULT WORKFLOW
-This project runs in **tmux**. For any non-trivial task (research, proof writing, experiments, multi-file edits), **spawn agent teams with tmux split panes by default**:
-- Use `TeamCreate` to create a team, `TaskCreate` for task breakdown, then spawn teammates via `Agent` with `team_name` parameter.
-- Each teammate runs in its own tmux pane for visibility.
-- Typical team: 2-4 teammates working in parallel (e.g., proof-writer + experiment-runner + auditor).
-- Task #5-style "integration" tasks should be blocked on prerequisite tasks and handled by the team lead.
-- Always use `bypassPermissions` mode for teammates to avoid blocking on approvals.
-- After all teammates finish, the lead integrates results, updates Canonical Spec/CHANGELOG, and cleans up the team.
-
-### Authoritative Documents
-- **THEORY_STATUS_2026-04-12.md** ⚠️ **CRITICAL** — Theory audit & foundation problem analysis. exp65 validation failure, F-1/M-1/MO-1 unresolved, Type A/B rejected. **Must re-read at session start.**
-- **Canonical Spec v2.1.md** — The authoritative formal specification (1096 lines). Supersedes v2.0. **NOTE: Contains implicit assumptions (fixed K manifold) not fully explicit in theorem statements.** See THEORY_STATUS_2026-04-12.md.
-- **Agent Instructions.md** — Binding operational protocol. Must be read before any formalization work.
-- **CONVENTIONS.md** — File management rules, naming conventions, logging protocol. **Read every session.**
-- **CHANGELOG.md** — Session-level change log. **Append after every session that modifies files.**
-
-### Python Package (`scc/`)
-Working implementation with 174 passing tests. Core pipeline: field → operators → energy → optimization → diagnostics.
-
-### Papers (`papers/`)
-Two LaTeX drafts (IEEEtran format): `paper1_math.tex` (math, 11 pages) and `paper2_cogsci.tex` (cognitive science, 14 pages).
-
-### Development Record (`docs/`)
-148 documents from 12 structured iterations (I1-I12), organized by date then category:
-- `docs/03-26/` — Day 1: Brainstorming (I1)
-- `docs/03-27/` — Day 2: Deep math through papers (I2-I10)
-- `docs/03-30/` — Day 3: Comprehensive audit & repair
-- `docs/03-31/` — Day 4: Transport, multi-temporal, persist analysis
-
-Each date folder has an `INDEX.md`. Start with `docs/00-overview.md`.
-
-## Test Fixtures
-
-`tests/conftest.py` provides shared fixtures: `rng` (seed 42), `grid_5x5`, `grid_10x10`, `grid_20x20`, `default_params`, `bump_field_10x10` (Gaussian bump projected to Σ_m), `two_region_field` (sharp left/right). Helper `make_params(**overrides)` for custom parameter sets.
-
-## Build & Test Commands
-
-```bash
-# Run all tests (174 tests, ~2min)
-python3 -m pytest tests/ -v
-
-# Run a single test file
-python3 -m pytest tests/test_energy.py -v
-
-# Run a specific test
-python3 -m pytest tests/test_operators.py::TestA3Contraction -v
-
-# Quick smoke test (find a formation on 10x10 grid)
-python3 -c "from scc import *; g=GraphState.grid_2d(10,10); p=ParameterRegistry(); r=find_formation(g,p); print(r.diagnostics)"
-
-# Run all experiments
-python3 experiments/run_all.py
-
-# Run individual experiments (17 total, exp1-exp17)
-python3 experiments/exp1_lambda_sweep.py
-python3 experiments/exp2_phase_transition.py
-python3 experiments/exp3_ablation.py
-python3 experiments/exp14_multi_persist.py
-
-# Generate paper figures
-python3 papers/generate_figures.py
-
-# Compile papers (requires texlive)
-cd papers && pdflatex paper1_math.tex && pdflatex paper1_math.tex
-cd papers && pdflatex paper2_cogsci.tex && pdflatex paper2_cogsci.tex
+```
+Perception_theory/
+├── CLAUDE.md / README.md / CONVENTIONS.md / AUDIT_2026-04-18.md
+│
+├── CODE/                           executable assets — run from this dir
+│   ├── scc/                        Python package (12 modules)
+│   ├── tests/                      pytest suite (175 passing)
+│   ├── experiments/                exp<N>_<name>.py + results/
+│   ├── scripts/                    one-off utilities
+│   ├── papers/                     LaTeX + generate_figures.py
+│   └── README.md
+│
+├── THEORY/                         theory documents — read-oriented
+│   ├── CHANGELOG.md                theory state-change log
+│   ├── canonical/                  authoritative (no contamination)
+│   │   ├── canonical.md            ← THE spec (v1.2)
+│   │   ├── theorem_status.md       proved / conditional / open index
+│   │   └── open_problems.md        F-1 / M-1 / MO-1
+│   ├── working/                    in-progress theory (one file = one topic)
+│   └── logs/                       chronological research journal
+│       ├── daily/  YYYY-MM-DD.md
+│       ├── weekly/ YYYY-Www.md
+│       └── monthly/ YYYY-MM.md
+│
+├── private_brainstorm/             personal exploratory notes
+└── _archive/                       frozen material — do not edit
+    └── research_os_2026-04-12/     abandoned Research OS scaffolding
 ```
 
-## Code Architecture
+## Promotion Pipeline (Contamination Barrier)
 
-The `scc/` package follows the theory's pipeline: `graph → params → operators → energy → optimizer → diagnostics`.
+```
+THEORY/logs/daily/YYYY-MM-DD.md   (raw chronological record)
+         ↓ reorganize by topic
+THEORY/working/<topic>.md          (active theory development)
+         ↓ proof + review + tests
+THEORY/canonical/canonical.md      (authoritative — one-way only)
+```
 
-- **graph.py**: `GraphState` — wraps sparse adjacency, computes Laplacian, Fiedler eigenvalue, row-normalized P, cohesion-weighted W_sym
-- **params.py**: `ParameterRegistry` — all parameters with constraint validation (a_cl < 4, spinodal range, β_crit)
-- **operators.py**: `closure()`, `distinction()`, `aggregation()`, `resolvent_diagonal()` — the operator triad + exact Jacobian-transpose-vector products for gradient computation
-- **energy.py**: `EnergyComputer` — E_cl, E_sep, E_bd with exact gradients (verified to FD 1e-9), Hessian spectral normalization
-- **optimizer.py**: `find_formation()` — semi-implicit projected gradient descent on Σ_m with BB step size, multi-start
-- **diagnostics.py**: `DiagnosticVector` — Bind (ℓ²/√n), Sep (u-weighted), Inside (H0 persistence Q_morph), Persist
-- **multi.py**: K-field architecture (I9) — K coupled soft cohesion fields with simplex participation constraint, inter-formation repulsion, and `transport_k_formations` for multi-formation temporal transport (three modes: independent/correction/reoptimize; coupled transport cost with repulsion-aware OT). `inter_formation_distances`, `classify_regime`, `formation_overlap` for regime classification. T-Persist-K-Sep (well-separated) and T-Persist-K-Weak (weakly-interacting) proved.
-- **transport.py**: Temporal transport kernel — cohesion fingerprint, self-referential cost, entropy-regularized partial OT (Sinkhorn log-domain), transport field application, self-referential fixed-point iteration, transport-based `persist_transport` predicate
-- **predicates.py**, **resolvent.py**, **persistence.py**: Thin compatibility wrappers for tests (accept raw matrices/dicts instead of typed objects)
+**canonical/ accepts only promoted content.** No reverse flow. Retractions stay explicit (inline `*(Retracted YYYY-MM-DD: reason)*`) and are logged in `THEORY/CHANGELOG.md`.
 
-Key API: `find_formation(GraphState, ParameterRegistry) → FormationResult`
+## Policy
 
-No `setup.py` or `pyproject.toml` — run from repo root via `python3 -m pytest` or direct imports. No install step needed.
+- **Do not re-introduce Research OS structure** (numbered 00–99 dirs, 5-role daily logs, D/S/T/A/E/Q/C/P/X registry files). It was tried 2026-04-12, collapsed 2026-04-16, archived 2026-04-18.
+- **`THEORY/canonical/canonical.md` is the single authoritative spec.** Any theorem-status change edits it + `theorem_status.md` + appends to `THEORY/CHANGELOG.md`.
+- **No per-item registry files.** Proofs live inside canonical.md sections; theorem index lives in theorem_status.md (single file).
+- **Experiments**: keep `experiments/exp<N>_*.py` numbering stable. No E-xxxx renaming.
+- **Run everything from `CODE/`.** Tests and experiments locate `scc` via sys.path relative to `CODE/`.
+
+## Test & Build
+
+```bash
+# All tests (175, ~3min)
+cd CODE && python3 -m pytest tests/ -v
+
+# Single file
+cd CODE && python3 -m pytest tests/test_energy.py -v
+
+# Smoke
+cd CODE && python3 -c "from scc import *; g=GraphState.grid_2d(10,10); p=ParameterRegistry(); r=find_formation(g,p); print(r.diagnostics)"
+
+# Experiments
+cd CODE && python3 experiments/exp1_lambda_sweep.py
+
+# Paper figures
+cd CODE && python3 papers/generate_figures.py
+```
+
+## Code Architecture (scc/)
+
+Pipeline: `graph → params → operators → energy → optimizer → diagnostics`.
+
+- **graph.py** — `GraphState` (Laplacian, Fiedler, row-normalized P, cohesion-weighted W_sym)
+- **params.py** — `ParameterRegistry` (a_cl<4, spinodal, β_crit validation)
+- **operators.py** — `closure`, `distinction`, `aggregation`, `resolvent_diagonal` + exact JVPs
+- **energy.py** — `EnergyComputer` (E_cl, E_sep, E_bd + exact gradients, FD-verified 1e-9)
+- **optimizer.py** — `find_formation` (semi-implicit projected gradient, BB step, multi-start)
+- **diagnostics.py** — `DiagnosticVector` (Bind, Sep, Inside, Persist)
+- **multi.py** — K-field, `transport_k_formations` (independent/correction/reoptimize)
+- **transport.py** — cohesion fingerprint, Sinkhorn log-domain OT, `persist_transport`
+- **predicates.py, resolvent.py, persistence.py** — thin compatibility wrappers
 
 ### Critical Implementation Details
-- **Ordered-pair summation**: E_bd smoothness = 2α·u^T·L·u, gradient = 4α·L·u (factor 4, not 2)
-- **Double-well gradient**: W'(u) = 2u(1-u)(1-2u) — factor of 2 (I6 correction)
-- **Sep predicate**: Uses u-weighted average (Σ u_i·D_i / Σ u_i), matching spec §7.1 (corrected from original C_t-weighted version in I8, which gives ~0.5 regardless)
-- **Persist**: Two implementations available: (1) Core-overlap approximation in `diagnostics.py`: Σ min(u_curr, u_prev) / max(Σ u_curr, Σ u_prev) — genuine soft-field overlap measure, no transport needed. (2) Transport-based `persist_transport` in `transport.py`: core-to-core inheritance via transport kernel M_{t→s}, implementing the spec's §7.1 formula. Uses self-referential cost via cohesion fingerprint; weak-regime fixed-point converges via Banach contraction.
-- **b_D = 0**: Required for energy analyticity (Łojasiewicz convergence)
 
-## Critical Constraints
+- E_bd smoothness: `2α·uᵀLu` → gradient `4α·Lu` (factor 4, ordered-pair sum)
+- Double-well: `W'(u) = 2u(1-u)(1-2u)` (factor 2, I6 correction)
+- Sep predicate: u-weighted (`Σuᵢ·Dᵢ / Σuᵢ`), NOT C_t-weighted (degenerate)
+- `b_D = 0` required for analyticity (Łojasiewicz convergence)
+- Persist: core-overlap (`diagnostics.py`) + transport-based `persist_transport` (`transport.py`)
 
-Before doing any work on this theory, read **Agent Instructions.md** in full. Key rules:
+## Ontological Constraints (non-negotiable)
 
-1. **Ontological priority**: The soft cohesion field `u_t : X_t -> [0,1]` is the primitive entity. Crisp objects are always derivative — never invert this.
-2. **Never collapse layers**: Maintain strict separation between ontology, axiomatics, provisional operator realizations, and implementation.
-3. **Never silently resolve open problems**: If the theory leaves something open (co-belonging operator form, transition operator form, crisp recovery protocol, dynamic update laws), it must stay explicitly open unless deliberately resolved.
-4. **Never reduce to familiar frameworks**: The theory is not fuzzy segmentation, not clustering, not tracking. Do not substitute engineering proxies (edge detection for distinction, morphological dilation for closure, tracking IDs for persistence).
-5. **Four-term energy independence**: The four energy terms (closure, separation, boundary/morphology, transport) are conceptually independent and must not be merged or collapsed.
-6. **Idempotence is deliberately omitted**: Closure has a stabilization tendency (A3), not primitive idempotence. This is a foundational commitment.
+1. **Soft cohesion field `u_t : X_t → [0,1]` is the primitive.** Crisp objects are derivative.
+2. **Four energy terms (closure, separation, boundary, transport) are conceptually independent.** Do not merge.
+3. **Closure has stabilization tendency (A3), not idempotence.** Deliberately omitted.
+4. **Not fuzzy segmentation, not clustering, not tracking.** No engineering proxies.
+5. **Never silently resolve open problems** (F-1, M-1, MO-1, co-belonging form, transition operator, crisp recovery). Keep explicit until deliberately resolved via promotion pipeline.
 
-## Required Work Order
+## Theory Sketch (v1.2)
 
-Per Agent Instructions Section 5, work must proceed in this sequence:
-1. Internalize conceptual motivation (why pre-objective cohesion, not objects)
-2. Read and preserve the Canonical Spec
-3. Normalize notation without altering concepts
-4. Separate primitives from derived notions
-5. Distinguish axioms from provisional operator realizations
-6. Clarify energy structure
-7. Record unresolved issues explicitly
-8. Only then proceed to implementation-oriented work
+Formal universe: `C^soft = (T, {X_t}, {u_t}, {Cl_t}, {N_t, D_t}, {M_{t→s}})`
 
-## Theory Structure Quick Reference (v2.0)
+Energy on `Σ_m = {u ∈ [0,1]^n : Σuᵢ = m}`:
+`E = λ_cl·E_cl + λ_sep·E_sep + λ_bd·E_bd + λ_tr·E_tr`
 
-**Formal universe**: `C^soft = (T, {X_t}, {u_t}, {Cl_t}, {N_t, C_t, D_t}, {M_{t->s}})` (T_t demoted to derived diagnostic)
+Diagnostic: `d = (Bind, Sep, Inside, Persist) ∈ [0,1]⁴`
 
-**Axiomatic groups**: A (closure, A1' conditional extensivity), B (adjacency), C (co-belonging, resolvent), D (distinction, b_D=0), E (temporal transport)
+Phase transition: `β/α > 4λ₂ / |W''(c)|` with c in spinodal `((3-√3)/6, (3+√3)/6)`.
 
-**Operator pair** (variational): Self-completion (Cl_t), Self-contrast (D_t vs 1-u). **Derived diagnostic**: Self-integration (C_t resolvent, demoted from formal universe)
-
-**Energy**: E = λ_cl·E_cl + λ_sep·E_sep + λ_bd·E_bd + λ_tr·E_tr on volume-constrained Σ_m
-
-**Proto-cohesion diagnostic vector**: d = (Bind, Sep, Inside, Persist) ∈ [0,1]^4
-
-**Phase transition**: β/α > 4λ₂/|W''(c)| with c in spinodal ((3-√3)/6, (3+√3)/6)
-
-**27 fully proved results** in Canonical Spec v2.1 §13 Category A (T1 existence, T6a/T6b closure FP, T-A2 monotonicity, T8-Core phase transition, T8-Full (upgraded from B), T20 axiom consistency, T14 gradient flow, T3/T6-Stability, T7-Enhanced metastability, T11 Γ-convergence, C-Axioms, QM1–4, Predicate-Energy Bridge (upgraded from B), Deep Core Dom. 2b (upgraded from B), plus auxiliary results). **Category B (3):** T-Bind-Proj/Full (proved for τ=1/2, Category B for general τ), T-Persist-K-Sep (well-separated, conditional on per-formation T-Persist-1 + WS + SR). **Category C (6 conditional):** T-Persist-1(b,d,e), T-Persist-Full, T-Persist-K-Weak, C3''. **New in v2.1:** T-Persist-K-Unified (parametric theorem covering Sep/Weak/Strong via Λ_coupling = λ_rep·ω_jk/min(μ_j,μ_k); 5 conditions PS/ND/BC'-K/TC-K/SR-Λ; exp46-47 100% validation). **Retracted (2):** K-Saddle Conjecture, Theorem 3.3 (r̄₀ general τ). 5/5 single-formation predictions verified (P1 contraction, P2 independence, P3 enhanced dwell p=0.037, P4 path dependence, P5 Sep-before-Inside). See Canonical Spec v2.1 §13.
-
-## Development Record (docs/)
-
-87+ documents from 12 structured iterations. Start with `docs/00-overview.md`.
-
-| Iter | Focus | Key Output | Score |
-|------|-------|-----------|-------|
-| I1 | Brainstorming (10 rounds) | 44 settled points | 6/10 |
-| I2 | Deep mathematics | 12 theorems proved | 7/10 |
-| I3 | Implementation design | Algorithm + module specs | 7/10 |
-| I4 | Extensions | Gestalt mapping, 10 predictions | 7/10 |
-| I5 | Vulnerability audit | 17 vulnerabilities found | 6.5/10 |
-| I6 | Spec rewrite | Canonical Spec v2.0 | 7.5/10 |
-| I7 | Temporal theory | T-Persist-1, Sep identity | 8/10 |
-| I8 | Code + experiments | scc/ package, 89 tests | 8.5/10 |
-| I9 | Multi-formation | K-field architecture decided | 9/10 |
-| I10 | Publication | 2 paper outlines + drafts | 9/10 |
-| I11 | Transport implementation | transport.py, 3 experiments, T-Persist verified, multi-formation temporal (well-separated) | 8.5/10 |
-| I12 | Multi-temporal | T-Persist-K-Sep/Weak, regime classification, coupled transport | - |
-
-## Required Deliverables (when formalizing)
-
-Any formalization work must produce: notation-consistent formal spec, primitive/derived concept registry, operator catalogue, energy-term explanation sheet, unresolved-issues register. Implementation specs are downstream and must be clearly labeled as such.
+Full theorem catalog: `THEORY/canonical/canonical.md` §13.
