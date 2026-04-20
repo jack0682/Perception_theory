@@ -4,23 +4,41 @@
 
 ## Contents
 
-- **`canonical.md`** — 권위 스펙 (현재 v1.2, 1216줄, 2026-04-12 기준). 이 레포의 이론에 관한 유일한 authoritative 문서.
+- **`canonical.md`** — 권위 스펙 (현재 v1.2, 1216줄, 2026-04-12 기준). 이 레포의 이론에 관한 유일한 authoritative 문서. **주 1 회 주간 merge 로 update** (2026-04-20 이후).
+- **`canonical_sub.md`** — 주간 merge buffer. 매일 append 누적, 주 1 회 user 리뷰 후 `canonical.md` 에 흡수 + reset. `canonical.md` 의 pre-merge staging area.
 - **`theorem_status.md`** — 정리 인덱스 (증명/조건부/열린/철회). `canonical.md`와 일치해야 함.
 - **`open_problems.md`** — F-1 (K=2 vacuity), M-1 (K=1 preference), MO-1 (Morse inapplicable). 현재 critical 3건.
 
 ## Governance
 
+### Pipeline (2026-04-20 개정)
+
+```
+working/<topic>.md       (증명/검증 완료분)
+    ↓ daily append
+canonical_sub.md         (주간 buffer)
+    ↓ weekly merge (user 리뷰)
+canonical.md             (main, 주 1회 update)
+theorem_status.md        (main 동기)
+```
+
 ### 들어오는 조건 (Promotion In)
 
-`../working/<topic>.md`에서 다음 조건을 모두 만족할 때만 승급:
+`../working/<topic>.md`에서 다음 조건을 모두 만족할 때만 `canonical_sub.md` 에 daily append:
 1. 증명 완료 (Category A) 또는 명시적 조건부 (Category B/C, 조건 명시)
 2. 실험/테스트 검증 (해당 시)
 3. 기존 canonical 내용과 무모순
+4. working reference 출처 명시
 
-승급 방법:
-- 새 정리 → `canonical.md` 해당 섹션에 본문 추가 + `theorem_status.md`에 행 추가
-- 기존 정리 수정 → `canonical.md`에 `*(Erratum YYYY-MM-DD: 사유)*` 인라인 추가
-- **모든 변경은 `../CHANGELOG.md`에 날짜별 기록.**
+`canonical_sub.md` append 방법:
+- 해당 날짜 섹션에 `### Added` / `### Modified` / `### Retired` / `### Clarified` / `### Pending` 중 하나로 기록
+- `canonical.md` 와 `theorem_status.md` 는 **본 시점에 직접 수정 안 함**
+
+주간 merge (user, 주 1회):
+- 새 정리 → `canonical.md` 해당 섹션 insert + `theorem_status.md` 행 추가
+- 기존 정리 수정 → `canonical.md` 에 `*(Erratum YYYY-MM-DD: 사유)*` 인라인 추가
+- **모든 변경은 `../CHANGELOG.md` 주간 entry 로 기록.**
+- 완료 후 `canonical_sub.md` reset (날짜 섹션 제거, Merge History append).
 
 ### 나가는 조건 (Retraction Out)
 

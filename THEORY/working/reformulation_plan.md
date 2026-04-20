@@ -1,9 +1,10 @@
-# Reformulation Plan — 메타 (Purpose Pending)
+# Reformulation Plan — C+E Cycle Active
 
-**Status:** planning — Stage 0 (Purpose Declaration) pending
+**Status:** **Stage 0 locked (2026-04-20)** — Purpose = **C+E (Thermal Framework + Emergent-K)**. Stage 1 이 2026-04-21 진입 예정.
 **Location:** `THEORY/working/reformulation_plan.md` (2026-04-19 저녁 이관. 다중 세션 gating 자료이므로 working/ 소관)
+**Purpose pin:** `THEORY/working/reformulation_purpose.md` (2026-04-20 작성) — 한 줄 선언문 + rationale 5 + Non-goals 6 + 17-세션 stage 분배.
 **Entry context:** `THEORY/working/open_problems_reframing_2026-04-19.md` — F-1/M-1/MO-1을 단일 원천 N-1로 통합 재프레이밍 완료
-**User principle:** "이론적 목적이 분명하게 못을 박고 그다음 진행해야함." → **Stage 0 = blocking gate.**
+**User principle:** "이론적 목적이 분명하게 못을 박고 그다음 진행해야함." → Stage 0 = blocking gate. **해소됨 2026-04-20.**
 
 ---
 

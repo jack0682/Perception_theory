@@ -2,6 +2,48 @@
 
 ---
 
+## 2026-04-20 — Stage 0 Purpose Decision Material + Integer-K Dependency Map
+
+### Summary
+Reformulation Stage 0 (Purpose Declaration) 의 blocking gate 해소를 위한 **의사결정 재료** 를 생산. 8 선택지 (A/B/C/D/E + C+E/B+C/A+C) 에 대해 Matrix-1 (16 OP × 5 coverage code) + Matrix-2 (49 theorem × 5 survival code) + 15 세션 스케치 + Q1–Q4 답변 + Pareto frontier + Decision Tree + Sensitivity 를 전부 생성. 최종 결정은 사용자 몫 (2026-04-20 저녁 `reformulation_purpose.md` 작성). **이론 작업은 수행하지 않음** (plan.md Non-goals 준수). 부산물로 드러난 메타-관찰 2 건 을 working/ 에 promote.
+
+### Files Created
+- `THEORY/logs/daily/2026-04-20/plan.md` — 세션 목표 선언 (2026-04-19 저녁 작성)
+- `THEORY/logs/daily/2026-04-20/01_exploration.md` — Matrix-1 + Matrix-2 + cross-reference (3 라운드 audit 포함)
+- `THEORY/logs/daily/2026-04-20/02_development.md` — 15 세션 스케치 (5 후보 × 3)
+- `THEORY/logs/daily/2026-04-20/03_integration_and_new_open.md` — Q1–Q4 + 조합 분석 + Pareto + 권고 E + CS-1…4 + Decision Tree + NQ-1…7
+- `THEORY/logs/daily/2026-04-20/99_summary.md` — 한 줄 메시지 + 3 audit 라운드 기록
+- `THEORY/working/integer_K_dependency_map.md` — 9 + 1 integer-K load-bearing 정리 목록 (Cat A retire 5, Cat B retire 1, Cat C re-prove 3, Cat A re-prove-retain 1) + incidental finding (T-Persist-K-Sep category inconsistency, Cat C count header mismatch)
+- `THEORY/working/new_open_questions_2026-04-20.md` — NQ-1…NQ-7 topic-consolidated (soft-K uniqueness, CN7 근거, vineyard 대체, Q_morph threshold-free, CN↔공리 layer rule, D partial well-posedness, P-G scope)
+- `THEORY/canonical/canonical_sub.md` — **주간 merge buffer 신설.** `canonical.md` 는 주 1 회 update 원칙 으로 전환; 매일 변경사항은 본 파일에 daily append 누적 후 user 주간 리뷰로 canonical.md 에 흡수. 2026-04-20 첫 entry 에 위 Clarified/Pending/Added 기록.
+
+### Files Modified
+- `THEORY/CHANGELOG.md` — 이 entry 추가
+- `THEORY/canonical/README.md` — Pipeline 섹션 개정 (working → canonical_sub → canonical.md weekly merge 구조 반영)
+
+### Theorem Status Changes
+- **None.** canonical.md 미수정, theorem_status.md 미수정. `integer_K_dependency_map.md` 는 기존 canonical §13 의 암묵적 의존성을 **명시화** 한 working-level 문서이며 category 변경을 동반하지 않음.
+- **Pre-existing inconsistency 발견 (별도 보수 대상):** `canonical.md` §13 line 1043 erratum 은 T-Persist-K-Sep 을 Cat C 로 이동시키나 `theorem_status.md` CV-1.2 는 Cat B 로 기록. `canonical.md` §13 line 1061 header 는 "Cat C: 5 theorems" 이나 실제 나열은 6~7 개. 오늘 발생한 불일치가 아니라 기존 상태의 기록.
+
+### Test Count
+- 변경 없음 (코드/실험 미수정). 마지막 확인 175 passing.
+
+### Rationale
+2026-04-12 Research OS 실패의 핵심 원인이 "purpose 미고정 상태에서 scaffolding 착수" 였음 (AUDIT_2026-04-18 진단). 동일 실패 방지를 위해 Stage 0 를 blocking gate 로 승급 (2026-04-19 reformulation_plan.md). 2026-04-20 세션은 그 gate 해소의 **의사결정 재료** 생산이 목적이었고, 이론 자체 진전은 의도적 Non-goal. 이 제약 하에서도 Matrix-2 cell 판정 과정에서 **candidate A 와 E 의 coverage 동치** 가 드러났고, 그 근거가 "동일 9개 정리 공격" 임을 3rd audit 이 확인. 이 발견을 working/ 으로 promote 해 재공식화 Stage 2 (Axiom Audit) 의 pre-deliverable 로 기록.
+
+### Carry-Forward
+- **사용자 할 일 (2026-04-20 저녁):** `THEORY/working/reformulation_purpose.md` 작성 — 한 줄 선언문 + rationale 3–5 + Non-goals 3+. Decision Tree (`03 §12`) 에 따라 Q-α/β/γ/δ/ε 순차 답변.
+- **내일 plan.md Target** (purpose 에 의존):
+  - E 선택 시: E-S1 (`working/E/soft_K_definition.md` — `K_soft(u) = Σᵢ ℓᵢ φ(ℓᵢ)` commit + persistence stability 기반 Lipschitz 증명 골격).
+  - C+E 선택 시: 공통 Stage 1 첫 세션 (`F[u] = E[u] − TS[u] + λ_K K_soft(u)` 의 well-definedness 예비 분석).
+  - B 선택 시: CN15 (external substrate) 초안 + canonical §14 삽입 위치.
+  - 다른 후보는 `99_summary.md` "내일 plan.md 준비 제안" 참조.
+- **NQ-1…7 은 working/new_open_questions_2026-04-20.md 에 보존.** purpose pin 후 해당 purpose scope 내 NQ 만 canonical/open_problems.md 에 OP-xxxx 로 승급 고려.
+- **theorem_status.md ↔ canonical.md §13 category/count inconsistency 별도 보수 세션** 필요. 본 세션에서는 working 문서 §6 에 기록만.
+- **권고 E** (plan.md §8): 12 세션, 완전해결 5 (F-1, M-1, MO-1, OP-0005, P-A), Cat A 상실 5. Pareto frontier {B, B+C, E, C+E} 중 단일 후보 효율 최고.
+
+---
+
 ## 2026-04-19 — Repository Restructure: CODE / THEORY Split
 
 ### Summary
