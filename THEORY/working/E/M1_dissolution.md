@@ -199,3 +199,57 @@ The C+E reformulation does **not** completely close the M-1 thread. Residuals:
 - **canonical_sub.md 2026-04-21 entry:** M-1 reframing as Clarified (CN6/CN8/CN14 thermal interpretation); Kramers/exp38 reinterpretation as Pending.
 
 Next file: `working/E/MO1_dissolution.md` (G6).
+
+---
+
+## §8. Round 18 Post-Audit 재정식화 (added 2026-04-22)
+
+**Trigger:** 2026-04-21 저녁 Round 12-18 single-formation audit + 2026-04-22 Axis B derivation (`working/MF/from_single.md` §5-§6 two-timescale picture).
+
+### 8.1 M-1 의 새 진단: "always preferred" 는 timescale 혼동
+
+원래 M-1: "K=2 landscape $E(m_1, m_2)$ monotonically decreasing toward $m_2 \to 0$; K=1 always cheaper."
+
+**Round 12-18 + Axis B 에서 밝혀진 두 timescale:**
+
+- **$t_{\mathrm{emerge}} \sim 1/|\mu_{\min}|$** (emergence): $u_{\mathrm{uniform}}$ 의 $N_{\mathrm{unst}}$ 불안정 방향에서 $\widehat{K} \approx 1 + \sqrt{N_{\mathrm{unst}}}$ formations 가 **자연 생성** (Conjecture 2.1 of MF §2).
+- **$t_{\mathrm{coarsen}} \sim \exp(\Delta\mathcal{F}/T)$** (coarsening): Kramers metastability escape 로 점진적 merge, 최종 $K^\ast = 1$ (T-Merge (b) Cat A).
+
+**M-1 진단.** "K=1 always preferred" 는 $t_{\mathrm{coarsen}} \to \infty$ limit statement. Short-time $[t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$ window 에서는 $\widehat{K} \geq 2$ preferred. M-1 은 두 timescale 의 **conflation**.
+
+### 8.2 T-Merge (b) 는 유지, framing 만 수정
+
+- **T-Merge (b) Cat A 증명 (Γ-convergence 등주 부등식)**: 유지. Isoperimetric ordering 은 $t \to \infty$ 에서 정확.
+- **Framing 수정**: "K=1 is globally preferred" → "K=1 is the $t \to \infty$ limit on connected graph; K ≥ 2 is the emergence-timescale reality."
+
+**정리.**
+
+| Aspect | Framing (old) | Framing (Round 18 post-audit) |
+|---|---|---|
+| T-Merge (b) claim | "K=1 always preferred" | "K=1 is coarsening-limit state on connected graph" |
+| T=0 gradient flow | K=1 after convergence | $\widehat{K}$ frozen at emergence (local min absorption), K=1 unreachable |
+| T>0 Langevin, finite $t_{\mathrm{obs}}$ | (unspecified) | $\widehat{K}(t_{\mathrm{obs}})$ depending on window $[t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$ |
+| Observed "K=2" in experiments (exp62/63, exp55) | "metastable but suboptimal" | "emergence-timescale observation, thermodynamically suboptimal but kinetically protected" |
+
+### 8.3 CN6 의 정량 내용 (`working/MF/from_single.md` §6)
+
+M-1 을 redissolution 하는 CN6-quantitative 재서술:
+- "K is kinetically determined" 이 구체화: "K is set by $N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}}$ at emergence, coarsens to $K=1$ at exponential time."
+- CN6 + T-Merge (b) + Kramers: no contradiction, 서로 다른 시간 스케일의 statement.
+
+### 8.4 Residual after 8.1-8.3
+
+- **R-M1-A ~ R-M1-E** (이전 §5 carry items) 모두 유지.
+- **새 carry**:
+  - **R-M1-F (new)**: $t_{\mathrm{coarsen}}/t_{\mathrm{emerge}}$ ratio 의 parameter dependence — large ratio 가 "observable metastability" 의 regime 결정. Numerical scan 에서 $\Delta\mathcal{F}/T$ 를 측정해야 함.
+  - **R-M1-G (new)**: LSW coarsening exponent 의 SCC 수정 — canonical CN14 "β^0.89" barrier → LSW in 2D classical $t^{-1/2}$ 수정 가능. NQ-34 (`working/MF/from_single.md` §9).
+
+### 8.5 Canonical impact (pending Stage 6)
+
+- canonical CN6 의 **quantitative addendum**: 위 §8.3 형태.
+- canonical §11 Multi-formation paradigm "kinetic" 언급의 구체화.
+- canonical OP-0002 (M-1) status: **"reframed as two-timescale conflation; dissolved via two-scale analysis"**.
+
+---
+
+**End of §8 Round 18 post-audit reframing.**

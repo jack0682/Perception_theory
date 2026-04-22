@@ -1,107 +1,191 @@
 # Integer-K Dependency Map
 
-**Status:** developing
-**Last touched:** 2026-04-20
-**Canonical refs:** `canonical.md` §12 (K-field), §13 Cat A (T-Merge (a), Topological Lock, Coupling Bound Lemma, Prop 1.2, Thm 3.1), §13 Cat B (γ_eff ≈ 0.89), §13 Cat C (T-Persist-K-Sep/Weak/Unified)
-**Origin:** `THEORY/logs/daily/2026-04-20/01_exploration.md` §5.2–§5.3 (3rd audit: A–E K-dissolution 대칭성)
-**Purpose:** canonical 에 분산되어 있던 "integer K 의 load-bearing 지점" 을 단일 목록으로 consolidation. candidate E (soft-K) 또는 A (N-1 전체) 가 건드릴 정리의 **명시적 목록** 제공.
+**Status:** updating (Round 12-18 post-audit rewrite, 2026-04-22).
+**Last touched:** 2026-04-22 (SF-S1 session).
+**Previous versions:** 2026-04-20 (initial topic consolidation), 2026-04-21 evening Round 2 errata note (E-5/E-6 pending).
+**Canonical refs:** `canonical.md` §12 (K-field), §13 Cat A (T-Merge (a), Topological Lock, Coupling Bound Lemma, Prop 1.2, Thm 3.1), §13 Cat B (γ_eff ≈ 0.89, T-Beyond-Weyl, T-d_min-Formula), §13 Cat C (T-Persist-K-Sep/Weak/Unified).
+**Working refs:** `working/SF/mode_count.md` (Prop 1.3a/b, integer-K derivability), `working/SF/interface_scale.md` (ξ_0 anchor), `working/MF/from_single.md` (derived multi-formation view, Conjecture 2.1), `working/E/{F1,M1,MO1}_dissolution.md` §Round 18 post-audit sections.
+**Origin:** `THEORY/logs/daily/2026-04-20/01_exploration.md` §5.2–§5.3 (3rd audit); 2026-04-22 `logs/daily/2026-04-22/01_exploration.md` §3.2 (Axis B derivation rationale).
 
 ---
 
-## 1. 왜 지금 명시화하는가
+## §1. Rewrite motivation (2026-04-22)
 
-canonical v1.2 는 이미 "fixed K, fixed m" 외부 가정 하에 K-field 정리들을 증명 (`theorem_status.md` CV-1.2 notes). 그러나 **어떤 정리가 K 의 정수성 (integer structure) 자체에 의존** 하고 어떤 정리는 단순히 "K=1 에서 성립" 인지가 `canonical.md` inline 으로 분산되어 있어, 재공식화시 건드릴 범위의 정확한 지도가 없었다.
+Previous version (2026-04-20 + 2026-04-21 errata note) identified 10 integer-K load-bearing theorems and called for retirement based on "soft-K hat statement meaning disappears under soft-K reformulation".
 
-2026-04-20 session 3rd audit (`logs/daily/2026-04-20/99_summary.md` Error-7) 에서 candidate A 의 K-soft 작업이 candidate E 와 동일 효과를 만듦이 발견되었고, 이 동치의 근거는 **같은 9개 정리 집합** 에 대한 공통 공격 이다. 본 문서는 그 9개를 목록화.
+**Round 12-18 + Axis B derivation (2026-04-22) provides a stronger reason:** integer $K$ is **derivable** from single-formation invariants $(N_{\mathrm{unst}}, \xi_0)$ via `working/MF/from_single.md` §2 Conjecture 2.1. The retirement reason for the 10 integer-K theorems is therefore updated:
 
-## 2. Integer-K Load-Bearing 정리 9개
+- **Old reason** (2026-04-20): "soft-K hat statement meaning disappears."
+- **New reason** (2026-04-22): "integer-K is a derivable statistic from $(N_{\mathrm{unst}}, \xi_0)$; the K-field architecture $\Sigma^K_M$ with external $m_j$ is an optional representation, not a primitive requirement."
 
-### 2.1 Category A — Retire (5개)
+This is a stronger statement. It says: *integer-K is not wrong, but it is not primitive*. The 10 theorems remain valid within K-field architecture but are not needed in the derived view.
 
-statement 자체가 per-formation mass `Σ^K_M` · K-formation index · (K-1) coupling factor 를 사용하므로 soft-K 하에서 의미 소실.
+---
 
-| # | 정리 | canonical.md 위치 | integer-K 의존 지점 |
-|---|---|---|---|
-| 1 | **T-Merge (a)** — K-Formation Local Minimality | §13, line 979 | `Σ^K_M` manifold 위의 per-formation Hessian PD |
-| 2 | **Topological Lock** — Merge Impossible on `Σ^K_M` | §13, line 988 | `0 ∉ Σ_{m_2}` 의 per-formation mass 정의 |
-| 3 | **Coupling Bound Lemma** — K-Formation Hessian | §13, line 820 | Weyl bound 의 `(SR): min_k μ_k > (K-1)λ_rep` — `(K-1)` factor 는 integer K 특유 |
-| 4 | **Proposition 1.2** — Fiber Dimension | §13, line 1026 | Stratified Morse 의 `Σ²_M` fiber 구조 |
-| 5 | **Theorem 3.1(a,b,d)** — Landscape at Symmetric Point | §13, line 1031 | K=2 대칭점 (m_1 = m_2 = M/2) 의 landscape |
+## §2. Integer-K Load-Bearing Theorems (9 + 1)
 
-**주:** T-Merge (b) Energy Ordering (Isoperimetric, line 984) 는 Cat A 이나 증명 핵심이 Γ-convergence isoperimetric — soft-K 하에서 "single-mode vs multi-mode energy ordering" 로 statement 재작성 + 증명 재활용 가능. **Re-prove (retain)** 으로 분류, Retire 아님.
+Unchanged from 2026-04-20 enumeration; retirement reasons updated per Round 12-18.
 
-### 2.2 Category B — Retire (1개)
+### 2.1 Category A — Retire (5 → 5; count unchanged)
 
-| # | Result | canonical.md 위치 | integer-K 의존 지점 |
-|---|---|---|---|
-| 6 | **γ_eff ≈ 0.89** (empirical K-merge barrier exponent) | §13, line 992 (erratum 2026-04-07) | "K=2 → K=1 merge" barrier 의 scaling — "merge" 개념이 soft-K distribution 의 mode unification 으로 대체되면 barrier exponent 는 재측정 대상 |
+Statements involve per-formation mass $\Sigma^K_M$, per-formation Hessian products, or $(K-1)$ coupling factors that are **integer-K specific**. In derived view, these live within K-field architecture but do not speak to the underlying single-field Σ_m analysis.
 
-### 2.3 Category C — Re-prove (3개)
+| # | Theorem | canonical.md line | Integer-K dependence | Retire reason (2026-04-22) |
+|---|---|---|---|---|
+| 1 | **T-Merge (a)** — K-Formation Local Minimality | §13, 979 | $\Sigma^K_M$ manifold | Valid within K-field architecture; single-field Σ_m equivalent: $u^\ast$ with $K_{\mathrm{soft}}(u^\ast) \approx K$ is a local minimum (captured by `cardinality_open.md` §2) |
+| 2 | **Topological Lock** — Merge Impossible on $\Sigma^K_M$ | §13, 988 | $\Sigma^K_M$-specific | $\Sigma^K_M$ not needed in derived view; Σ_m is connected, merge paths exist (MO1_dissolution §9) |
+| 3 | **Coupling Bound Lemma** — K-Formation Hessian | §13, 820 | $(K-1)\lambda_{\mathrm{rep}}$ | Core result (exponential tail decay at distance, Item 5) reusable in single-field context; $(K-1)$ coupling factor is K-field specific |
+| 4 | **Proposition 1.2** — Fiber Dimension | §13, 1026 | $\Sigma^2_M$ stratified Morse | $\Sigma^2_M$ not needed; Σ_m is convex polytope (Prop 1.1), smooth Morse on Σ_m^ε \ V (MO1_dissolution §9.2) |
+| 5 | **Theorem 3.1(a,b,d)** — Landscape at Symmetric Point | §13, 1031 | $(m_1 = m_2 = M/2)$ symmetric point | "Symmetric point" is Σ²_M-specific; single-field analog: $u^\ast$ with $K_{\mathrm{soft}} \approx 2$, mode centers related by graph automorphism |
 
-statement 의 per-formation index `j ∈ {1,…,K}` 를 soft-K distribution 의 mode 로 재해석 가능. 결과 (persistence) 는 유지 가능하나 증명 재작성 필요.
+**Re-prove (retain) 1 (unchanged):** T-Merge (b) Cat A (line 984), isoperimetric energy ordering. Γ-convergence proof survives in derived view as "single-mode ($K_{\mathrm{soft}} \approx 1$) has lower energy than multi-mode ($K_{\mathrm{soft}} > 1$) on connected graph" (M1_dissolution §2.2). **This is the only retained theorem among the 10.**
 
-| # | 정리 | canonical.md 위치 | integer-K 의존 지점 |
-|---|---|---|---|
-| 7 | **T-Persist-K-Sep** (Well-Separated) | §13, line 1065 (erratum-moved to Cat C 2026-04-07) | per-formation T-Persist 를 K 번 independent 적용; `d_min(j,k) ≥ D_sep` |
-| 8 | **T-Persist-K-Weak** (Weakly-Interacting) | §13, line 1110 | joint Hessian `(SR): min_k μ_k > (K-1)λ_rep` |
-| 9 | **T-Persist-K-Unified** | §13, line 1115 | pair index `(j,k)` 의 $\Lambda_{coupling} = \lambda_{rep} \omega_{jk} / \min(μ_j, μ_k)$ |
+### 2.2 Category B — Retire (1 → 3; **+2 per E-5 applied**)
 
-### 2.4 총계
+E-5 (2026-04-21 Round 2 errata, originally pending) identified two additional Cat B theorems for retirement, now applied:
 
-- **Retire 6** (Cat A 5 + Cat B 1) — soft-K 하에서 statement 의미 소실.
-- **Re-prove 3** (Cat C) — statement 재작성 + 증명 재작성.
-- **Re-prove (retain) 1** (T-Merge (b), Cat A) — 증명 핵심 유지.
+| # | Result | canonical.md line | Integer-K dependence | Retire reason (2026-04-22) |
+|---|---|---|---|---|
+| 6 | **γ_eff ≈ 0.89** K-merge barrier exponent | §13, 992 (erratum) | "K-merge" barrier | Empirical, protocol/path-conditioned (canonical 2026-04-10 erratum + Round 11 Stage 5 NEB numerics confirming non-reproducibility); in derived view, barrier between $K_{\mathrm{soft}} = K+1$ and $K_{\mathrm{soft}} = K$ basins on single Σ_m is mode-unification barrier; $\beta^{0.89}$ is protocol measurement, NOT universal invariant |
+| **7** (new) | **T-Beyond-Weyl** | §13, 1057 (Cat B) | $\omega_{\mathrm{soft}}$ from $\mathcal{P}_{O_{jk}}\psi_k^{\mathrm{soft}}$ — pair-overlap projection | K-formation pair-overlap concept requires Σ²_M; single-field analog via Prop 1.3b cl_sep eigenmode analysis (carry to post-Stage-1) |
+| **8** (new) | **T-d_min-Formula** | §13, 1053 (Cat B) | $d_{\min}^\ast = 4.8 + 0.31\sqrt{\beta/\alpha}$ — branch-conditioned regression | Direction fix in `working/MF/from_single.md` §4: $d_{\min}^\ast \asymp \xi_0\cdot \log(1/\epsilon_0)$, NOT $\sqrt{\beta/\alpha}$; prior fit is an artifact of branch-specific protocol (NQ-30) |
 
-이 **9 + 1 = 10 개** 가 candidate E (또는 A) 의 K-얼굴 작업의 정확한 대상.
+**Total Cat B retire: 3** (γ_eff, T-Beyond-Weyl, T-d_min-Formula). This is the E-5 update now applied.
 
-## 3. Integer-K 에 load-bearing 이 **아닌** 정리들 (Soft-K 하 Survive)
+### 2.3 Category C — Re-prove (3, unchanged)
 
-아래 정리들은 K 개념을 사용하지 않거나 K=1 의 single formation 만 다룸. soft-K 재공식화에서 **survive**.
+Per-formation index can be reinterpreted as soft-K distribution mode index; persistence results survive but require proof rewrite.
 
-**Cat A (19개 survive):** T-1 (Existence), T-3 (Interior Stability), T-6a/b/Stability (Closure FP), T-7 (Enhanced Metastability), T-8-Core/Full (Phase Transition), T-11 (Γ-Convergence), T-14 (Gradient Flow), T-20 (Consistency), C-Axioms, QM-1/2/3/4, Predicate-Energy Bridge, T-Bind-Proj, Deep Core Dominance 2b, T-Persist-1(b)/(e), T-A2.
+| # | Theorem | canonical.md line | Integer-K dependence | Reinterpretation |
+|---|---|---|---|---|
+| 9 | **T-Persist-K-Sep** | §13, 1065 | per-formation $j \in \{1,\ldots,K\}$ | "K independent formations" → "K well-separated modes of single field" |
+| 10 | **T-Persist-K-Weak** | §13, 1110 | joint Hessian, $(K-1)\lambda_{\mathrm{rep}}$ | Weyl bound on single-field Hessian with pair-mode interaction |
+| 11 | **T-Persist-K-Unified** | §13, 1115 | pair index $(j,k)$ in $\Lambda_{\mathrm{coupling}}$ | $\Lambda$ becomes soft-mode overlap measure; Corollaries reorganize |
 
-**Cat B (3개 survive):** T-Bind-Proj (single formation), T-Persist-K-Sep/Unified (theorem_status.md 기준, 하지만 canonical §13 는 Cat C 로 erratum-이동 — 6.1 inconsistency 참조).
+### 2.4 Total count update (2026-04-22)
 
-**Cat C (2개 survive under K=1):** T-Bind-Full (general τ, single formation), T-Persist-1(a)/(d)/Full.
+- **Retire 8** (5 Cat A + 3 Cat B) — up from 6 in 2026-04-20 original.
+- **Re-prove 3** (Cat C) — unchanged.
+- **Re-prove (retain) 1** (T-Merge (b) Cat A) — unchanged.
+- **Total touched: 12** (was 10 in original count).
 
-## 4. Candidate A 와 E 의 coverage 동치의 근거
+---
 
-Matrix-1 의 OP 5-level coding 에서 A 와 E 가 indistinguishable 함의 원인: 두 후보 모두 위 **9개 정리를 공통 공격**. A 는 추가로 threshold (Core/Interior 경계, §5) 와 axiom-switching (A1' `a_cl<4`, b_D=0, E3 reclassification) 을 별도 phase 에서 다루나, 이는 **위 9개 정리 목록 밖의 작업** 이며 Matrix-2 (정리 survival) 에 반영되지 않음.
+## §3. Single-Formation Cat A Survival (22 + 4 = 26)
 
-결론: A ⊋ E 의 scope 포함은 sustained, 그러나 Matrix-2 coarse 코딩에서 drop out. 실질 구분 축은 세션 수 (A 18 vs E 12) 와 qualitative depth 뿐.
+Soft-K reformulation and derived multi-formation view do NOT require retirement of single-formation-only Cat A theorems. These **survive**.
 
-## 5. "Retire" vs "Re-prove" 구분 기준
+### 3.1 Canonical-original 22 Cat A survivors (Round 2 verified + §3 corrected)
 
-- **Retire:** statement 자체가 soft-K 이후 의미를 잃음. Topological Lock 의 `0 ∉ Σ_{m_2}` 는 per-formation mass 가 integer K 를 전제하므로 soft-K 에서 `Σ_{m_2}` 라는 객체 자체가 부재.
-- **Re-prove:** statement 의 내용이 soft-K 언어로 rewrite 가능. T-Persist-K-Sep 의 "per-formation persistence" 를 "per-mode persistence of soft-K distribution" 로 재작성, 결과 (persistence 유지) 는 동일.
-- **Re-prove (retain):** 증명 핵심 (예: Γ-convergence) 이 statement 언어 재작성 후에도 거의 그대로 재활용 가능. T-Merge (b) 가 유일 예.
+(Round 2 verification in `logs/daily/2026-04-21/05_deepening_and_verification.md` §4 enumerated exactly these 22.)
 
-## 6. 기존 canonical 과의 inconsistency (incidental finding)
+**T-1** (Existence), **T-3** / **T-6a/b/Stability** (Closure FP), **T-7** (Enhanced Metastability), **T-8-Core/Full** (Phase Transition), **T-11** (Γ-Convergence), **T-14** (Gradient Flow), **T-20** (Axiom Consistency), **C-Axioms**, **QM-1/2/3/4**, **Predicate-Energy Bridge**, **T-Bind-Proj** (all τ), **Deep Core Dominance 2b**, **T-Persist-1(b)/(e)**, **T-A2**, **Prop 1.1** (Σ_m convex polytope), **T-Birth-Parametric** (D4 supercritical), **Persistence Threshold Equation**.
 
-### 6.1 T-Persist-K-Sep 의 Category
+(Round 2 §4: original `integer_K_dependency_map.md` §3 claimed 19; Round 2 re-enumerated to 22, applying E-6 to this file is the action of §2.4.)
 
-- `canonical.md` §13 line 1043 erratum (2026-04-07): "T-Persist-K-Sep moved to Category C".
-- `theorem_status.md` (last_updated 2026-04-12): Cat B.
+### 3.2 Round 12-18 new Cat A survivors (+4)
 
-두 파일이 불일치. 본 dependency map 은 **canonical.md §13 을 우선** (CLAUDE.md 의 "canonical.md 는 THE spec" 원칙). 이 inconsistency 자체가 별도 작업: `theorem_status.md` 를 §13 에 맞춰 sync 해야.
+**Prop 1.3a** (pure $\mathcal{E}_{\mathrm{bd}}$ Morse index) — `working/SF/mode_count.md` §1.
+**Prop 1.3b** (cl_sep structural decomposition, (a)-(c)+(e)) — `working/SF/mode_count.md` §2.
+**Cor 2.2 qualitative** (interface concentration) — `working/SF/interface_scale.md` §2.
+**Cor 2.2 quantitative (tanh ansatz)** — `working/SF/interface_scale.md` §3.
 
-### 6.2 Cat C 개수
+**Total single-formation Cat A post-Round 18: 22 + 4 = 26.**
 
-- `canonical.md` §13 line 1061 header: "Cat C: Conditional (5 theorems)".
-- 그러나 line 1065+ 에 T-Persist-K-Sep, T-Persist-K-Weak, T-Persist-K-Unified + T-Persist-1(a)/(d)/Full + T-Bind-Full 가 나열 — 6~7개.
+### 3.3 Cat B/C single-formation survivors
 
-header 와 내용 불일치. 본 문서는 header 숫자 대신 내용 목록 기준.
+- **Cat B (survive):** T-Bind-Full (τ=1/2 single formation variant was Cat A in Round 2; general τ remains Cat B per canonical §13).
+- **Cat C (survive):** T-Persist-1(a)/(d)/Full — all single-formation applicable, `β > 7α` condition retained.
 
-## 7. Next Actions
+---
 
-- [ ] 본 문서 user 검토 (2026-04-21).
-- [ ] 위 §2 의 "Retire 6 / Re-prove 3 / Re-prove (retain) 1" 분류가 정확한지 각 정리 증명을 reread 하여 검증. 특히 **T-Merge (b) Γ-conv 재증명 sketch** 를 soft-K 언어로 pre-draft.
-- [ ] Soft-K 정의가 commit 된 후 (purpose = E 선택 + E-S1 완료) 본 목록이 완전한지 cross-check. §3–§7 의 K 를 간접 사용하는 predicate 가 누락되어 있는지 audit.
-- [ ] §6 inconsistency (T-Persist-K-Sep category · Cat C count) 별도 보수 세션 — `theorem_status.md` 를 `canonical.md` §13 에 sync.
-- [ ] (optional) `canonical.md` §13 의 위 9개 정리 옆에 inline marker `*(Integer-K precondition: working/integer_K_dependency_map.md)*` 추가 여부 user decision. 이는 category 변경 아님 (metadata).
+## §4. Candidate A vs E coverage equivalence (context, unchanged)
 
-## 8. 2026-04-20 session 과의 관계
+(Retained from 2026-04-20.) Both candidates cover the same 9+1 theorems listed in §2; A adds threshold-level and axiom-switching work beyond this list. Matrix-2 coarse coding renders them indistinguishable at theorem-level; only session depth (A 18 vs E 12) and qualitative reach differ.
 
-본 문서는 `logs/daily/2026-04-20/01_exploration.md` §5.2–§5.3 의 3rd audit 발견을 topic 기반으로 consolidate. Matrix-2 cell 판정의 근거를 독립 reference 문서화 — 향후 재공식화 세션 이 Matrix-2 를 재생성하지 않고 본 문서만 참조하면 됨.
+---
 
-9 integer-K load-bearing 정리 + 1 re-provable 정리 목록은 reformulation Stage 2 (Axiom Audit) 의 **pre-deliverable**. Stage 2 본 작업은 각 정리의 수정 상세와 공리 수준 합의.
+## §5. Retire vs Re-prove criterion (updated)
+
+- **Retire:** Statement uses K-field architecture primitives ($\Sigma^K_M$, per-formation mass, $(K-1)$ coupling factor) as load-bearing. In derived view, the architecture is not required; the theorem's information content is either (a) reproducible via single-field analysis with different language, or (b) branch-conditioned and better served by NQ-30 remeasurement.
+- **Re-prove:** Statement's mathematical content survives under single-field reinterpretation but requires rewriting proof.
+- **Re-prove (retain):** Proof core (e.g., Γ-convergence in T-Merge (b)) survives nearly intact; only statement language updates.
+
+---
+
+## §6. Previously Identified Inconsistencies (still open)
+
+### 6.1 T-Persist-K-Sep Category (unchanged from 2026-04-20)
+
+- `canonical.md` §13 line 1043 erratum (2026-04-07): T-Persist-K-Sep moved to Cat C.
+- `theorem_status.md` (2026-04-12): still Cat B.
+
+**Resolution (proposed):** sync `theorem_status.md` to Cat C per canonical §13 authority (`CLAUDE.md` principle: canonical is THE spec). Affects `theorem_status.md` line 47.
+
+### 6.2 Cat C Count Header (unchanged from 2026-04-20)
+
+- `canonical.md` §13 line 1061 header: "(5 theorems)".
+- Actually listed: 6 or 7 (T-Bind-Full + T-Persist-1(a)/(d)/Full + T-Persist-K-Sep + T-Persist-K-Weak + T-Persist-K-Unified).
+
+**Resolution (proposed):** update header count.
+
+### 6.3 NEW (2026-04-22): T-d_min-Formula direction error
+
+- canonical line 1007 (old) / §13 Cat B: $d_{\min}^\ast = 4.8 + 0.31\sqrt{\beta/\alpha}$.
+- **Direction is wrong**: $\sqrt{\beta/\alpha} = 1/\xi_0$; correct scaling is $d_{\min}^\ast \asymp \xi_0\cdot \log(1/\epsilon_0)$ from Coupling Bound Lemma Item 5 (proof in `working/MF/from_single.md` §4 / `02_development.md` §7).
+- Round 13 §2.5 flagged "dimensionally suspicious" — now analytically corrected.
+- **Resolution:** NQ-30 remeasurement in ξ_0-axis rather than $\sqrt{\beta/\alpha}$-axis; canonical T-d_min-Formula Cat B downgrades further (wrong direction, not just Cat B fit).
+
+---
+
+## §7. Next Actions (updated 2026-04-22)
+
+### 7.1 Immediate (pending user review this week)
+
+- [ ] User review of §2.1–2.3 updated retire classification (8 total, +2 from E-5).
+- [ ] User review of §3.2 +4 new Cat A survivors (Prop 1.3a, 1.3b (a)-(c)+(e), Cor 2.2 qual, Cor 2.2 quant tanh).
+- [ ] Decision on §6.3 T-d_min-Formula direction correction: accept as canonical Cat B correction inline, or NQ-30 to re-measure?
+
+### 7.2 Stage 2 (Axiom Audit) pre-deliverable
+
+- [ ] Cross-check §2.4 "8 retire + 3 re-prove + 1 retain" against candidate E's soft-K completeness (is there a 11th theorem missed?).
+- [ ] Cross-check §3 26 Cat A survivors against candidate E's axiom-switching (are additional ones threshold-sensitive?).
+
+### 7.3 Stage 6 (Canonical merge)
+
+- [ ] Apply retirements on canonical.md §13 (move 8 entries to Retracted or mark as "Valid within K-field architecture; single-field equivalents in working/SF/ + working/MF/").
+- [ ] §13 T-Persist-K-Sep category resolve (6.1).
+- [ ] §13 Cat C count header fix (6.2).
+- [ ] §13 T-d_min-Formula direction correction (6.3).
+- [ ] §13 add 4 new Cat A (Prop 1.3a/b, Cor 2.2 qual/quant).
+- [ ] §11/§12 reshape: derived multi-formation view inserts a paragraph crediting working/MF/from_single.md §2 Conjecture 2.1; "K is kinetically determined" of CN6 acquires quantitative content (§6.2 of MF file).
+
+### 7.4 Post-Stage-1 (future)
+
+- [ ] G-D ($\mathrm{Aut}(G)$ orbit symmetry $\mathcal{M}_1$): scoped out, deep analysis.
+- [ ] $\widehat{K}(N_{\mathrm{unst}})$ graph-class formula validation on non-2D graphs (exp_mode_emergence.py carry).
+- [ ] NQ-32 (SCC profile deviation) resolution via exp_profile_fit.py execution.
+- [ ] NQ-33 ($d_{\mathrm{eff}}(G)$ precise definition for non-lattice graphs).
+- [ ] NQ-34 (coarsening exponent with SCC self-referentiality, LSW extension).
+
+---
+
+## §8. Relationship to other working files
+
+- **`working/SF/mode_count.md`** produces Cat A substitutes for integer-K-retired claims via Prop 1.3a/b.
+- **`working/SF/interface_scale.md`** produces the $\xi_0$-based single-formation geometry that replaces the $\sqrt{\beta/\alpha}$ fit.
+- **`working/MF/from_single.md`** produces the derived multi-formation view.
+- **`working/E/{F1,M1,MO1}_dissolution.md`** Round 18 post-audit sections provide the reframing of each Critical using the derived view.
+
+**Canonical merge readiness:** all 8 retirements documented, 4 new Cat A ready for §13 insertion, direction correction for T-d_min-Formula staged. Pending Stage 6 weekly merge.
+
+---
+
+## §9. Session trace (updated)
+
+- 2026-04-20: initial topic consolidation (9+1 theorems, 6 retire).
+- 2026-04-21 (Round 2): E-5 identified (+2 retire candidates: T-Beyond-Weyl, T-d_min-Formula), pending.
+- 2026-04-21 (Round 2): E-6 identified (§3 Cat A count 19 → 22), pending.
+- **2026-04-22 (this session):** E-5, E-6 applied; §2.4 updated (8 retire total); §3.2 added (+4 Round 12-18 Cat A, total 26); §6.3 new inconsistency (T-d_min-Formula direction); retirement reason updated to derived-view framing.
+
+**End of integer_K_dependency_map.md.**

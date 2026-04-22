@@ -193,3 +193,58 @@ then `K=2 occupancy = Z_2 / Z` with `Z = Σ_K Z_K`. Carry to **CE-S2**.
 - **canonical_sub.md 2026-04-21 entry:** F-1 reframing (vacuity → thermal population) as **Pending** (Critical relabeling awaits weekly merge); C-S2 / CE-S2 carry items as **Added — Pending OP promotion**.
 
 Next: 02_development.md (G1–G6 의 수학적 핵심을 step-by-step granularity 로 통합).
+
+---
+
+## §7. Round 18 Post-Audit 재정식화 (added 2026-04-22)
+
+**Trigger:** 2026-04-21 저녁 Round 12-18 single-formation audit (`14_single_formation_audit.md`) + 2026-04-22 Axis B derivation (`working/MF/from_single.md`).
+
+### 7.1 F-1 의 새 언어: "K=2 vacuity" 는 integer-K 언어의 artifact
+
+원래 F-1 statement는 **integer K 를 independent primitive** 로 다루는 K-field architecture 내에서만 의미:
+- Σ^K_M = Σ_{m_1} × ⋯ × Σ_{m_K} (per-formation mass constraint)
+- "K=2 vacuity" = "K=2 configuration은 external m_j 없이는 energy optimization 만으로 선택되지 않음"
+
+**Round 12-18 + Axis B derivation 후**: single-formation invariant $(N_{\mathrm{unst}}, \xi_0)$ 로부터 $\widehat{K}$ 가 derived:
+$$\widehat{K}(\beta, \alpha, T, c, G) = 1 + N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}(G)} + O(1).$$
+
+이 관점에서:
+- **K=2 emergence 는 자동적**: $N_{\mathrm{unst}} \geq 1$ (즉 $\beta > \beta_{\mathrm{crit}}^{(2)}$) regime 에서, 단일 Fiedler mode 가 $\pm$ pair of basins 를 만들어 $\widehat{K} = 2$ 가 자연 emergence.
+- **External m_j 는 derived view 에서 vacuous**: 단일 $\Sigma_m$ 위에서 분석; mass 는 $u$ 의 공간 구조로 분할 (formation size §3 of MF).
+- **"K=2 is vacuous" claim 은 wrong framing**: Σ_m 에는 K=2 임계점이 존재 (Prop 1.3a + pitchfork 분기), multi-init으로 empirically 확인 (canonical exp62/63).
+
+### 7.2 F-1 의 N_unst 언어 재진술
+
+**Statement (F-1 재정식화).** "K=2 configuration" 은 soft-K 단일 필드 $u \in \Sigma_m$ 가 $K_{\mathrm{soft}}(u) \approx 2$ 인 critical point 를 의미. $\beta > \beta_{\mathrm{crit}}^{(2)}$ 하에서 이런 configuration 은 $u_{\mathrm{uniform}}$ 의 instability 로부터 자동 emergence 하며, external mass assumption 불필요.
+
+**Cat A 근거:**
+- Prop 1.3a (`working/SF/mode_count.md` §1): $u_{\mathrm{uniform}}$ 의 Morse index = $N_{\mathrm{unst}}$. 즉 $N_{\mathrm{unst}} \geq 1$ 이면 $u_{\mathrm{uniform}}$ 은 saddle, 음의 방향이 존재.
+- T-Birth-Parametric Cat A (canonical §13, D4): $\beta = \beta_{\mathrm{crit}}^{(2)}$ 에서 supercritical pitchfork; $\beta > \beta_{\mathrm{crit}}^{(2)}$ 이면 두 개의 non-uniform minimizer 존재.
+- `cardinality_open.md` §3.2 pitchfork 하한: $N_{\mathrm{min}}(\beta) \geq N_{\mathrm{unst}}^{\mathrm{bd}}(\beta)$ — large $\beta$ 에서 다수의 K=2, K>2 local minima 존재.
+
+### 7.3 F-1 의 세 언어의 관계
+
+| Framing | Claim | Valid in |
+|---|---|---|
+| Integer-K (canonical v1.2 pre-SF-S1) | "K=2 vacuous w/o external m_j" | K-field architecture $\Sigma^K_M$ 만 |
+| C+E thermal (G4 `F1_dissolution.md` §3) | "K=2 thermally populated, T > T_c 에서 dominant" | $T > 0$ Gibbs framework |
+| N_unst spectral (this §7, 2026-04-22) | "K=2 emerges at $\beta > \beta_{\mathrm{crit}}^{(2)}$, auto" | Single field $\Sigma_m$ with gradient flow + Prop 1.3a |
+
+**통합:** 세 언어 각각 valid 한 scope 에서 동일한 결론 ("K=2 exists autonomously"). F-1 의 vacuity claim 은 integer-K 언어 전용 pathology.
+
+### 7.4 Residual after 7.1-7.3
+
+- **NQ-32** (SCC profile deviation): $N_{\mathrm{unst}}^{\mathrm{full}}$ 의 정확한 계수 는 cl_sep Hessian 의 정량 효과에 의존. 현재 Weyl bracket 만 (`working/SF/mode_count.md` §2.3). 정확한 $\widehat{K}(\beta)$ 는 이 해결에 부분적으로 의존.
+- **Non-2D graph**: $\widehat{K}$ formula 의 graph-class 의존성 (Conjecture 2.1 in MF §2). Barbell/SBM/1D cycle 수치 검증 pending.
+- **F-1 empirical re-interpretation**: canonical exp62/63 의 "K=2 E ≈ 4.66 vs K=1 E ≈ 2.25" 는 단일 $\Sigma_m$ 위 두 개의 distinct local minima — F-1 이 vacuous 대신 "K=2 not global" 로 정확히 재서술 (H-E3).
+
+### 7.5 Canonical impact (pending Stage 6)
+
+- canonical §11 "multi-formation is kinetic" commitment 의 정량 내용 획득: **"kinetic" = "Fiedler-mode instability emergence at $N_{\mathrm{unst}} \geq 1$"**.
+- canonical OP-0001 (F-1) 의 status update: **"reframed as integer-K language artifact; dissolved in derived view (N_unst-based)"**.
+- §13 retired 6 개 (T-Merge (a), Topological Lock, Coupling Bound, Prop 1.2, Thm 3.1, γ_eff=0.89): retire reason **업데이트** — "valid within K-field architecture, but derivable from single-formation invariants in N_unst language; K-field architecture itself optional".
+
+---
+
+**End of §7 Round 18 post-audit reframing.**

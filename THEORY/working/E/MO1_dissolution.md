@@ -244,3 +244,76 @@ Both are sketched here; full quantitative replacement (statement: "for soft-K co
 - **canonical_sub.md 2026-04-21 entry:** Σ²_M removal + Prop 1.2 / Thm 3.1 retire as **Pending** (formal retirement awaits weekly merge); Witten Laplacian framework as **Added — Pending OP promotion**.
 
 Next file: `working/E/F1_dissolution.md` (G4 — final dissolution mapping, lowest priority per plan).
+
+---
+
+## §9. Round 18 Post-Audit 재정식화 (added 2026-04-22)
+
+**Trigger:** 2026-04-21 저녁 Round 12-18 single-formation audit + 2026-04-22 Prop 1.3a/b (`working/SF/mode_count.md`).
+
+### 9.1 MO-1 의 새 관찰: Σ²_M 은 소요되지 않음
+
+원래 MO-1: "$\Sigma^2_M$ 에 corners 가 존재하므로 smooth Morse 적용 불가능."
+
+**Round 12-18 + Axis B derivation 후 관찰**: 다중 formation 분석이 **Σ²_M 을 필요로 하지 않음**. 모든 분석은 단일 Σ_m 위에서 수행 가능:
+
+- **Prop 1.3a** (mode_count.md §1): $u_{\mathrm{uniform}}$ 의 Morse index 는 단일 Σ_m 위 $\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}$ 의 eigenvalue 부호 분석. Σ²_M 부재.
+- **Prop 1.3b** (mode_count.md §2): full energy Hessian 의 구조 해석. Σ²_M 부재.
+- **Cor 2.2** (interface_scale.md): single formation interface 해석. Σ²_M 부재.
+- **$\widehat{K}$ derivation** (MF from_single.md §2): $N_{\mathrm{unst}}$ → $\widehat{K}$ 는 Σ_m 위 spectral count.
+
+**핵심 관찰.** multi-formation 이 "K-field architecture $\Sigma^K_M$" 을 요구하는 것이 아니라, 단일 Σ_m 위 multi-mode structure 로 해석 가능. 이 reframing 은 MO-1 의 Σ²_M corner 문제를 **제기조차 하지 않게** 만듬.
+
+### 9.2 Σ_m 위 Morse theory applicability
+
+canonical Proposition 1.1 (Cat A): Σ_m 는 convex polytope (dim $n-1$, contractible).
+
+- Σ_m 의 standard hypercube corners ($u_i \in \{0, 1\}$): present but not specific to multi-formation.
+- Σ_m^ε := Σ_m ∩ [ε, 1-ε]^n: smooth manifold (no corners).
+- ℱ_{C+E} real-analytic on Σ_m^ε \ V (Prop 2.1 of MO1_dissolution §2.2).
+
+**Standard smooth Morse applies on Σ_m^ε \ V.** 전제였던 "$\Sigma^K_M$ corners" 는 K-field architecture specific, 단일 Σ_m 에서는 해당 없음.
+
+### 9.3 Prop 1.3a/b 가 Σ_m 위 Morse index 직접 제공
+
+- **Prop 1.3a (Cat A)**: Morse index at $u_{\mathrm{uniform}} = N_{\mathrm{unst}}^{\mathrm{bd}}$. **This is the exact quantity MO-1 claimed was inaccessible.**
+- **Prop 1.3b (e)**: full energy Morse index via Weyl bracket, $N_{\mathrm{unst}}^{\mathrm{full}} \in [N^{\mathrm{bd}} - \#\{+\nu\}, N^{\mathrm{bd}} + \#\{-\nu\}]$.
+
+이는 MO-1 의 "smooth Morse applicable 하지 않다" 주장을 **direct 반박**: canonical Σ_m 위에서 Morse index 는 Prop 1.3a/b 로 정확히 계산 가능.
+
+### 9.4 Witten Laplacian (§3 이전 논의) 의 역할 조정
+
+이전 §3 에서 Witten Laplacian 을 MO-1 의 "Morse 대체 도구" 로 제안. Round 18 post-audit 관점 에서:
+
+- **이전 관점 (Witten 이 대안)**: smooth Morse 가 Σ²_M 에서 불가능하므로 spectral analysis 로 대체.
+- **Round 18 post-audit 관점**: smooth Morse 가 단일 Σ_m 에서 **직접 가능** (Prop 1.3a/b). Witten Laplacian 은 **추가 도구** 로서 finite-T dynamics (Kramers, metastability) 를 분석하는데 유용 — 하지만 MO-1 해소에는 불필요.
+
+**Witten 의 재배치**: not "MO-1 dissolution tool", but "thermal dynamics tool for M-1 Kramers quantification".
+
+### 9.5 Retired theorems 재평가
+
+integer_K_dependency_map §2.1 의 Σ²_M 기반 6 retired 정리 (T-Merge (a), Topological Lock, Coupling Bound, Prop 1.2, Thm 3.1, γ_eff=0.89):
+
+| Retirement reason (pre-Round 18) | Retirement reason (post-Round 18) |
+|---|---|
+| "soft-K 하에서 statement 의미 소실" | "단일 Σ_m 분석으로 충분; $\Sigma^K_M$ 자체가 optional architecture" |
+
+- **Prop 1.2** (Σ²_M fiber dimension): retire — 필요 없음.
+- **Theorem 3.1 (Landscape at symmetric point)**: retire — "symmetric point" 는 Σ²_M specific 개념.
+- **Replacement statements**: `working/SF/mode_count.md` + `working/SF/cardinality_open.md` 가 single Σ_m 위 동등 정보 제공.
+
+### 9.6 Residual after 9.1-9.5
+
+- **Σ_m 위 Morse inequality 의 정확한 형태** (cardinality_open.md §2 Hypothetical Theorem 4.1): 여전히 conjecture. 생성-소멸 분기의 counting 이 open.
+- **Vineyard singular set V 처리**: V 는 codim-1, generic transversality 주장 (Sard) 으로 해소 가능하나 rigorous 증명 C-S2 carry.
+- **Σ_m 의 hypercube corners ($u_i \in \{0, 1\}$)**: 여전히 corners — 하지만 standard (stratified Morse 적용 가능, Goresky-MacPherson). 이는 K-field architecture 와 독립.
+
+### 9.7 Canonical impact (pending Stage 6)
+
+- canonical OP-0003 (MO-1) status: **"reframed as K-field architecture artifact; dissolved by single-Σ_m analysis via Prop 1.3a/b"**.
+- canonical Prop 1.2, Thm 3.1 retirement (integer_K_dependency_map §2.1 items 4, 5): accelerated retirement reasoning (단일 Σ_m 가 더 자연스러운 analysis venue).
+- Witten Laplacian 제안의 재위치: from "MO-1 dissolution" to "thermal dynamics / Kramers quantification" (M-1 dissolution 에 통합).
+
+---
+
+**End of §9 Round 18 post-audit reframing.**
