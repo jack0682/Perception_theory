@@ -1049,6 +1049,117 @@ with explicit c-regime dependence: c≈0.5 → $m_{\mathrm{per}} \to cn$ (K→1)
 
 ---
 
+### Round 22 — Validation Cascade + Formation Quantization Discovery (2026-04-22 late night)
+
+**Session type:** X-series validation (X1 Basin Stability, X2 Shape Regime, X3 Mirror-IC) + V1-V7 sub-experiments (~8 hours total).
+**Origin:** `logs/daily/2026-04-22/24_deepening_round22.md` + `working/SF/step_cohesion.md` (new) + `CODE/experiments/{exp_x1_basin_stability,exp_x2_shape_regime,exp_x3_mirror_ic,exp_x1_v5_hysteresis,exp_x1_v7_predictions}.py` + 9 results JSON files.
+
+#### Session 핵심 산출물 5 신규 Cat A
+
+**1. C-2026-04-22-X3 (E3 Cubic Mechanism) — Cat A empirical.**
+
+> Prop 1.3b (d)의 cubic term $-c\gamma_D''(P^\top P)$에서 $\gamma_D'' = d_0(1-d_0)(1-2d_0)\kappa_D^2$의 sign-flip at c=0.5가 dynamic c↔1-c asymmetry의 primary mechanism.
+
+- **Evidence:** X3 v2 (2D sq L=32, β=0.5, 50 seeds × 4 conditions: A=c03std, B=c07std, C=c07mirror, D=c03mirror).
+  - K̂: A=2.54, B=1.00, C=1.00, D=2.40
+  - Mann-Whitney: P(K_C=K_A)=5.4×10⁻¹⁵, P(K_C=K_B)=1.0, P(K_D=K_B)=4.9×10⁻¹⁴, P(K_D=K_A)=0.56
+  - Bidirectional: mirror IC preserves c-side statistics ⇒ static Hessian mechanism confirmed
+
+**2. C-2026-04-22-X2 (D1 α-Absolute Threshold) — Cat A empirical.**
+
+> SCC profile shape regime (near-tanh $p\approx 1.2$ vs sharp $p\geq 3.5$) selection은 절대 α에 의해 결정됨. $\xi_0/a$ ratio는 regime variable 아님.
+
+- **Evidence:** X2 (2D sq L=48, c=0.3, 16 configs α×β={1,5,20,100}×{0.5,2.5,5,20}).
+  - D1 correct: 11/12 (91.7%); D7 (393·β/α ratio) correct: 9/12 (75%)
+  - Key discriminator: (α=5, β=0.5) → A (D1 wins); (α=20, β=20) → B (D1 wins)
+
+**3. C-2026-04-22-X1V5 (Protocol Selection on Multi-Branch Landscape) — Cat A empirical.**
+
+> SCC landscape has **multiple coexisting smooth branches**, each E_k(β) smooth in β. Observed "jumps" in dynamic observables are **protocol-dependent selector transitions**, NOT landscape-intrinsic bifurcations.
+
+- **Evidence:** X1 V5 hysteresis on C_1024, c=0.7, α=1.0 at β∈{6.0, 6.5, 7.0, 7.05, 7.1, 7.2, 7.3, 7.5, 8.0, 9.0, 10.0}.
+  - Forward (Fiedler-init): HIGH branch E≈403 at β≤7.05, LOW branch E≈30 at β≥7.10
+  - Backward (warm-start): LOW branch E≈30 at ALL β (even β=6.00: E=30.03)
+  - **Hysteresis 4/11 = LOW basin exists everywhere but Fiedler-init에서 capture 실패**
+
+**4. C-2026-04-22-FQ (Formation Quantization Theorem) — Cat A structural.**
+
+> Every well-separated local minimizer $u^* \in \Sigma_m$ admits unique step decomposition:
+> $$u^*(x) = \sum_{k=1}^{K(u^*)} \phi_k^*(x) + r(u^*)$$
+> where $K(u^*) \in \mathbb{Z}_{\geq 0}$는 **topological invariant within basin**, $\phi_k^*$는 localized tanh-soliton, $r = O(\exp(-d_{\min}/\xi_0))$.
+
+- **Evidence:** V7 P3 (β=9, 200 seeds): integer K distribution, mean=12.95, Gaussian-like envelope on integer lattice.
+- **Historical positioning**: "graph-based cohesion field theory에서 formation quanta 발견의 첫 systematic demonstration."
+- **Full commit**: `working/SF/step_cohesion.md` §1.
+
+**5. C-2026-04-22-3L (Three-Layer Hierarchy) — Cat A organizational.**
+
+> SCC theory는 세 layer로 조직:
+> - **Layer 1 (topological)**: K ∈ ℤ, basin structure, step-function selectors. Protocol-independent within basin.
+> - **Layer 2 (geometric)**: (r₀, ξ₀, d_min) ∈ ℝ₊. Smooth functions of (β, c, α, G).
+> - **Layer 3 (microscopic)**: u(x) ∈ [0,1] continuous field, PDE-governed.
+
+- **Evidence**: 모든 R22 X-series data가 이 3-layer hierarchy에 clean mapping.
+
+#### Retractions (주간 merge 필수)
+
+**R-2026-04-22-R22-01**: **Conjecture 2.1 (v1-v5 모든 버전)** — 전면 retract.
+- `working/MF/from_single.md` §2 전체 stricken-through (historical reference only).
+- Replacement: C-FQ + C-X1V5 (Formation Quantization + Protocol Selection).
+
+**R-2026-04-22-R22-02**: **Conjecture 2.1-Bott (torus extensive scaling)** — 전면 retract.
+- `working/SF/symmetry_moduli.md` §3.7.5 retract.
+- Static $\mathrm{Vol}(\mathrm{Iso}_0)$ orbit volume은 Layer 1 topology에서 유효.
+
+**R-2026-04-22-R22-03**: **Round 9 §11 Supra-Lattice Theorem** — Cat A → Cat B regime-restricted.
+- `working/SF/profile_deviation.md` §11 demotion.
+- Shape regime은 D1 α-threshold에 따름 (C-2026-04-22-X2).
+
+#### Partial rehabilitations (주간 merge)
+
+**P-2026-04-22-R22-01**: **Round 6 §2.3e (3-regime c-phase diagram)** — partial rehabilitate.
+- Static $\nu_k(c)$ 3-regime: Cat A **maintained** (algebraic).
+- Dynamic extension: withdrawn.
+- BUT: E3 cubic term mechanism (C-X3)이 dynamic c↔1-c asymmetry의 primary mechanism — **static 대칭 기반 추론보다 더 정밀한 mechanism이 식별됨**.
+
+#### Canonical §2 공리 추가 후보 (Stage 2 Axiom Audit 대상)
+
+- **S1 (Step-Cohesion Decomposition)**: §1 of `step_cohesion.md`
+- **S2 (Three-Layer Hierarchy)**: §3 of `step_cohesion.md`
+- **S3 (Protocol-Parameterized Observable)**: §6 of `step_cohesion.md`
+- **S4 (Static/Dynamic Decomposition)**: 기존 F1 revised
+
+#### 본 entry 의 canonical 변경 규모 (Stage 2 merge 예상)
+
+- **Cat A 추가**: 5 (C-X3, C-X2, C-X1V5, C-FQ, C-3L) — 모두 well-evidenced
+- **Retractions**: 3 (Conj 2.1 v1-5, Conj 2.1-Bott, Round 9 §11 demotion)
+- **New axioms**: 4 (S1-S4) — Stage 2 재구성의 핵심
+- **Theorem re-classification**: 모든 기존 Cat A를 Layer 1/2/3으로 재분류 (Stage 2 작업)
+- **예상 line count**: +400-500 (5 Cat A entries + 4 axioms + layer classification table)
+
+#### R22 Q-list (user decisions pending — Q61-Q70+)
+
+- **Q61**: C-FQ (Formation Quantization)를 canonical §13 Cat A structural로 승급할지 — 권고 **YES** (strong empirical support)
+- **Q62**: C-3L (Three-Layer Hierarchy)을 §2 axiom으로 승급할지 — 권고 **YES** (organizational necessity for further development)
+- **Q63**: C-X3 (E3 Cubic Mechanism)을 Prop 1.3b (d) 확장으로 Cat A dynamic 추가 — 권고 **YES** (explicit mechanism with p<10⁻¹⁴ evidence)
+- **Q64**: C-X2 (D1 α-threshold)을 profile_deviation.md 확장으로 Cat A — 권고 **YES** (empirical, regime-restricted)
+- **Q65**: C-X1V5 (Protocol Selection)을 §14 CN 또는 §2 axiom — 권고 **§2 axiom**으로 승급 (foundational)
+- **Q66**: Conjecture 2.1 retraction 공식화 방식 — 전면 삭제 vs historical strikethrough (권고: historical strikethrough with R22 retraction notice)
+- **Q67**: Conjecture 2.1-Bott retraction 방식 — same as Q66
+- **Q68**: Round 9 §11 Cat A→Cat B demotion annotation 방식
+- **Q69**: Round 6 §2.3e scope clarification 문구 (static 대칭 + E3 dynamic mechanism 분리)
+- **Q70**: Stage 2 Axiom Audit의 구체 개시 로드맵 (언제, 어디부터)
+
+#### R22 session 종료 상태
+
+- **22 rounds 총**; X1-X3 + V1-V7 empirical cascade 완료
+- **72 preserved static Cat A + 5 new Cat A = 77 Cat A in force**
+- **Formation Quantization discovery**: 오늘 세션의 가장 중요한 theoretical contribution
+- **Stage 2 Axiom Audit 모든 필수 요소 확보**: F1-SSU-v5, S1-S4 공리, three-layer hierarchy
+- **다음 세션 (2026-04-23) 개시**: Stage 2 Axiom Audit, canonical §2 재작성, theorem re-classification
+
+---
+
 ## 2026-04-21
 
 **Session type:** Stage 1 (Definition Foundation) — C+E common first session.

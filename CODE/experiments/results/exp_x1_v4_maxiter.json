@@ -1,0 +1,78 @@
+{
+  "session": "2026-04-22_X1_basin_stability",
+  "purpose": "Test B1 Secondary Bifurcation + C Basin-Stability Hierarchy",
+  "config": {
+    "n": 1024,
+    "c": 0.7,
+    "alpha": 1.0,
+    "eps_init": 0.01,
+    "beta_list": [
+      7.0,
+      7.05,
+      7.1
+    ]
+  },
+  "results": [
+    {
+      "beta": 7.0,
+      "K_observed": 1,
+      "energy": 402.5897615536121,
+      "converged": true,
+      "final_gnorm": 5.02265849156865e-06,
+      "elapsed_sec": 4.301135778427124,
+      "lambda_min_raw": -0.025508385685832025,
+      "eigenvalues_smallest": [
+        -0.025508385685832025,
+        -0.024588428653942174,
+        -0.02368200422304767
+      ],
+      "goldstone_count": 0,
+      "goldstone_threshold": 0.00044674405585164504,
+      "lambda_min_decisive": -0.025508385685832025,
+      "shift_used": 44.67440558516451,
+      "sigma_upper_estimate": 21.837202792582254,
+      "success": true
+    },
+    {
+      "beta": 7.05,
+      "K_observed": 1,
+      "energy": 404.8476802685405,
+      "converged": true,
+      "final_gnorm": 3.368893024086524e-06,
+      "elapsed_sec": 4.243336915969849,
+      "lambda_min_raw": -0.05199594067255475,
+      "eigenvalues_smallest": [
+        -0.05199594067255475,
+        -0.051060173945323584,
+        -0.05013816115762637
+      ],
+      "goldstone_count": 0,
+      "goldstone_threshold": 0.00044622730604615163,
+      "lambda_min_decisive": -0.05199594067255475,
+      "shift_used": 44.622730604615164,
+      "sigma_upper_estimate": 21.811365302307582,
+      "success": true
+    },
+    {
+      "beta": 7.1,
+      "K_observed": 1,
+      "energy": 30.33825667459427,
+      "converged": false,
+      "final_gnorm": 0.0011969608005588082,
+      "elapsed_sec": 5.908214092254639,
+      "lambda_min_raw": 7.73070496506989e-12,
+      "eigenvalues_smallest": [
+        7.73070496506989e-12,
+        0.23817481020381592,
+        0.318424636190457
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006478299516831015,
+      "lambda_min_decisive": 0.23817481020381592,
+      "shift_used": 64.78299516831015,
+      "sigma_upper_estimate": 31.891497584155076,
+      "success": true
+    }
+  ],
+  "total_elapsed_sec": 6.209982872009277
+}

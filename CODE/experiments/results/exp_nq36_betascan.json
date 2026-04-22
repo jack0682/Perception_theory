@@ -1,0 +1,173 @@
+{
+  "config": {
+    "L": 32,
+    "c": 0.7,
+    "alpha": 1.0,
+    "n_seeds": 30,
+    "beta_list": [
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0
+    ]
+  },
+  "total_elapsed_s": 105.13145184516907,
+  "scans": {
+    "cycle": {
+      "name": "1D cycle C_1024",
+      "n_nodes": 1024,
+      "L_param": 1024,
+      "alpha": 1.0,
+      "c": 0.7,
+      "n_seeds": 30,
+      "spectrum_covers_all": false,
+      "results": [
+        {
+          "beta": 3.0,
+          "N_unst_predicted": 298,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 14.768548011779785
+        },
+        {
+          "beta": 4.0,
+          "N_unst_predicted": 348,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.793881893157959
+        },
+        {
+          "beta": 5.0,
+          "N_unst_predicted": 394,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.805490970611572
+        },
+        {
+          "beta": 6.0,
+          "N_unst_predicted": 438,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.980464935302734
+        },
+        {
+          "beta": 7.0,
+          "N_unst_predicted": 482,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.807034015655518
+        },
+        {
+          "beta": 8.0,
+          "N_unst_predicted": 499,
+          "spectrum_covers_all": false,
+          "K_mean": 1.0,
+          "K_std": 0.0,
+          "K_median": 1.0,
+          "K_min": 1,
+          "K_max": 1,
+          "K_histogram": {
+            "1": 30
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.989838123321533
+        },
+        {
+          "beta": 9.0,
+          "N_unst_predicted": 499,
+          "spectrum_covers_all": false,
+          "K_mean": 3.966666666666667,
+          "K_std": 1.5595583420386114,
+          "K_median": 4.0,
+          "K_min": 1,
+          "K_max": 7,
+          "K_histogram": {
+            "1": 3,
+            "2": 2,
+            "3": 6,
+            "4": 7,
+            "5": 7,
+            "6": 4,
+            "7": 1
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.985095262527466
+        },
+        {
+          "beta": 10.0,
+          "N_unst_predicted": 499,
+          "spectrum_covers_all": false,
+          "K_mean": 9.5,
+          "K_std": 1.9621416870348585,
+          "K_median": 10.0,
+          "K_min": 6,
+          "K_max": 14,
+          "K_histogram": {
+            "6": 2,
+            "7": 2,
+            "8": 8,
+            "9": 1,
+            "10": 8,
+            "11": 6,
+            "13": 2,
+            "14": 1
+          },
+          "n_seeds_ok": 30,
+          "n_seeds_fail": 0,
+          "elapsed_s": 12.841908931732178
+        }
+      ]
+    }
+  }
+}

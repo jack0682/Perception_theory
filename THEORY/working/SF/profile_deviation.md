@@ -1,6 +1,14 @@
 # profile_deviation.md — NQ-32: SCC Full Minimizer vs Tanh Ansatz
 
-**Status:** open problem, 2026-04-22 (SF-S1 session).
+**⚠️ MAJOR STATUS UPDATE (2026-04-22 R22)**:
+- **§11 Round 9 Supra-Lattice Theorem**: Cat A → **Cat B regime-restricted** (X2 + R21 refutation)
+- **True regime criterion**: **α-absolute threshold (D1)**, NOT $\xi_0/a$ ratio
+- **Shape function**: Hybrid α-threshold regime classification:
+  - α ≥ 20 (esp. β ≤ 5): **Regime B** (near-tanh, p ≈ 1.2-1.3)
+  - α ≤ 10: **Regime A** (sharp, p ≥ 3.5)
+- **Cat A evidence** (X2 11/12 configs): α is the controlling variable, reformulated as **C-2026-04-22-X2 (D1 α-Absolute Threshold)**. See `working/SF/step_cohesion.md` §3 for layer context.
+
+**Status:** open problem, 2026-04-22 (SF-S1 session) **+ R22 regime classification update**.
 **Author origin:** Round 18 (`exp_alpha_scan_v3` execution, 2026-04-21 evening).
 **Canonical refs:** §13 Cat A T11 (Γ-convergence to perimeter), §13 Cat A T-Merge (b) (isoperimetric ordering).
 **Working refs:** `working/SF/mode_count.md` §2 (Prop 1.3b cl_sep operator), `working/SF/interface_scale.md` §4 (3-tier Cor 2.2 status).

@@ -1,6 +1,17 @@
 # cardinality_open.md — G-C Gap (Σ_m Critical-Point Cardinality)
 
-**Status:** open problem, 2026-04-22 (SF-S1 session).
+**⚠️ STATUS UPDATE (2026-04-22 R22)** — G-C gap 진짜 **closed** via Formation Quantization:
+- **§8 Hypothetical Theorem 4.1\* (A)-(D)**: Cat A maintained (Layer 1 topological).
+- **§8.7-8.9 Cascade + Tree Structure + Universal c_0-Counting**: **PROMOTED** to Layer 1 foundational theorems.
+- **§4.1 Static $N_{\mathrm{min}} \geq N_{\mathrm{unst}}$**: Cat A maintained.
+- **§4.2 Static vs Dynamic count distinction**: **Dramatically vindicated by R22**:
+  - R22 V5 확증: 여러 basins (HIGH, LOW) 공존 at given β
+  - R22 V7 P3 확증: 하나 β에서 K ∈ {1,7,...,21} distribution
+  - **Static $c_0$ count (이 파일 내용)** vs **Dynamic K̂ selected by protocol** 명확히 분리 확립
+- **Formation Quantization connection** (NEW): 각 critical point $u^*$는 step decomposition $u^* = \sum_{k=1}^{K(u^*)} \phi_k^*$를 가지며, $K(u^*)$ is topological invariant. See `working/SF/step_cohesion.md` §1.
+- **Layer classification**: This file's theorems are **Layer 1 (topological)** — landscape-intrinsic discrete structure.
+
+**Status:** open problem, 2026-04-22 (SF-S1 session) **+ R22 Layer 1 confirmation + Formation Quantization bridge**.
 **Author origin:** Round 15 (gap identification) + Round 18 (multi-init survey prep).
 **Canonical refs:** §13 Cat A T1 (minimizer existence), T14 (gradient flow convergence), T-Birth-Parametric (D4 pitchfork exp37); §14 CN1 (closure trajectory), CN8 (metastable not globally optimal), CN9 (two-landscape structure).
 **Working refs:** `working/SF/mode_count.md` (Prop 1.3a/b seed the critical-point landscape), `working/E/soft_K_definition.md` (K_soft as derived diagnostic), `working/MF/from_single.md` §5 (K̂ lower bound via Morse inequality).

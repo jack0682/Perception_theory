@@ -1,6 +1,15 @@
 # mode_count.md — Prop 1.3a/b (Hessian at u_uniform)
 
-**Status:** commit draft, 2026-04-22 (SF-S1 session).
+**⚠️ STATUS UPDATE (2026-04-22 R22)**:
+- **§1 Prop 1.3a (pure bd Morse index)**: Cat A **maintained** (Layer 3 static).
+- **§2 Prop 1.3b (a)-(e)**: Cat A **maintained** (Layer 3 static).
+- **§2.3c Cubic term $\gamma_D''$ sign flip at c=0.5**: **PROMOTED to Cat A dynamic mechanism** via X3 v2 empirical confirmation (Mann-Whitney p<10⁻¹⁴). This is **E3 mechanism** for c↔1-c dynamic asymmetry — primary mechanism, not secondary.
+- **§2.3e Round 6 3-regime c-phase diagram**: **Scope clarification** (partial rehabilitation):
+  - **Static part**: Cat A maintained — $\nu_k(c)$ 3-regime by algebra is correct
+  - **Dynamic extension** ($\widehat K(c) = \widehat K(1-c)$): formally withdrawn (R19); but **cubic-mechanism-driven** dynamic asymmetry (c=0.3 vs c=0.7) IS transferred to $\widehat K$ via Layer 2 geometric shift
+- **Canonical impact**: **C-2026-04-22-X3 (E3 Cubic Mechanism)** — Cat A dynamic, cross-layer bridge. See `working/SF/step_cohesion.md` §3.2.
+
+**Status:** commit draft, 2026-04-22 (SF-S1 session) **+ R22 E3 confirmation + §2.3e scope clarification**.
 **Author origin:** Round 12 + Round 16 (audit + `exp_hessian_uniform_v2` numerical).
 **Canonical refs:** §8.1 ($\mathcal{E}_{\mathrm{bd}}$), §13 Cat A T8-Core (phase transition), T3/T6-Stability (closure Gram PSD), T-A2 (closure monotonicity), T20 (axiom consistency).
 **Working refs:** `working/SF/interface_scale.md` (ξ_0 anchor), `working/MF/from_single.md` §2 ($N_{\mathrm{unst}}$ → K̂ bridge), `working/integer_K_dependency_map.md` §2 (integer-K audit).

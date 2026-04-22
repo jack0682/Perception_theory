@@ -1,6 +1,18 @@
 # symmetry_moduli.md — G-D Aut(G) Moduli Space $\mathcal{M}_1$ (First-Step Analysis)
 
-**Status:** first-step scoping, 2026-04-22 Round 2.
+**⚠️ STATUS UPDATE (2026-04-22 R22)**:
+- **§3.3 G-D Cubic Coefficient Theorem (2D square)**: Cat A **maintained** (Layer 2 geometric).
+- **§3.6 $C_n$/$T^2$ $\Phi_4$ analysis**: Cat A **maintained** (Layer 2).
+- **§3.6.3 Universal $A_2/A_1 \in \{2, 4\}$ classification**: Cat A **maintained**.
+- **§3.7.3 $C_n$ Lock-In Theorem**: Cat A maintained (Layer 2 structural).
+- **§3.7.5 Conjecture 2.1-Bott (extensive scaling on torus)**: **RETRACTED** by R17+R19+V7 data.
+  - R17 (c=0.3): torus/square ratio = 0.55 (예측 ~32) — refuted
+  - R19 (c=0.7): torus/square ratio = 1.00 (예측 ~32) — refuted
+  - **$\mathrm{Vol}(\mathrm{Iso}_0)$ static orbit volume은 Layer 1 topology에서 유효**, 하지만 dynamic K̂으로 전이되는 extensive scaling 주장은 무효.
+- **K-sector extensions**: $\mathcal{M}_K$ for K≥2는 **Formation Quantization** framework 아래 각 K-sector의 orbit 구조로 재정의. See `step_cohesion.md` §7.
+- **Canonical reorganization**: Moduli theorems은 Layer 1 (topology) vs Layer 2 (geometric) 분리. §3.3 axis-selection은 Layer 2 (energy comparison), $\mathcal{M}_K$ orbit structure는 Layer 1 (topological).
+
+**Status:** first-step scoping, 2026-04-22 Round 2 **+ R22 Conjecture 2.1-Bott retraction + K-sector reorganization**.
 **Author origin:** Round 15 identified G-D gap and explicitly scoped it out; Round 2 of 2026-04-22 provides the first-step structural analysis.
 **Canonical refs:** §13 Cat A Prop 1.1 (Σ_m convex polytope), T8-Core scaling caveat (Fiedler eigenvalue $\lambda_2$ role on non-expander families), T-Birth-Parametric (D4 supercritical pitchfork).
 **Working refs:** `working/SF/mode_count.md` (Prop 1.3a/b spectral base), `working/SF/cardinality_open.md` §8 (Morse index structure), `working/MF/from_single.md` §2 (K̂ graph-class formula).

@@ -1,0 +1,246 @@
+{
+  "session": "2026-04-22_X1_basin_stability",
+  "purpose": "Test B1 Secondary Bifurcation + C Basin-Stability Hierarchy",
+  "config": {
+    "n": 1024,
+    "c": 0.7,
+    "alpha": 1.0,
+    "eps_init": 0.01,
+    "beta_list": [
+      7.0,
+      7.05,
+      7.1,
+      7.15,
+      7.2,
+      7.25,
+      7.3,
+      7.35,
+      7.4,
+      7.45,
+      7.5
+    ]
+  },
+  "results": [
+    {
+      "beta": 7.0,
+      "K_observed": 1,
+      "energy": 402.5897615536116,
+      "converged": true,
+      "final_gnorm": 5.022658491576431e-06,
+      "elapsed_sec": 6.024975299835205,
+      "lambda_min_raw": -0.025508385664743116,
+      "eigenvalues_smallest": [
+        -0.025508385664743116,
+        -0.024588428517006378,
+        -0.02368201404391357
+      ],
+      "goldstone_count": 0,
+      "goldstone_threshold": 0.00044674164597157843,
+      "lambda_min_decisive": -0.025508385664743116,
+      "shift_used": 44.67416459715785,
+      "sigma_upper_estimate": 21.837082298578924,
+      "success": true
+    },
+    {
+      "beta": 7.05,
+      "K_observed": 1,
+      "energy": 404.84768026853783,
+      "converged": true,
+      "final_gnorm": 3.368893024083283e-06,
+      "elapsed_sec": 5.980638265609741,
+      "lambda_min_raw": -0.051995940649582906,
+      "eigenvalues_smallest": [
+        -0.051995940649582906,
+        -0.051060173915750795,
+        -0.050138074738718785
+      ],
+      "goldstone_count": 0,
+      "goldstone_threshold": 0.00044622678865567287,
+      "lambda_min_decisive": -0.051995940649582906,
+      "shift_used": 44.62267886556729,
+      "sigma_upper_estimate": 21.811339432783644,
+      "success": true
+    },
+    {
+      "beta": 7.1,
+      "K_observed": 1,
+      "energy": 30.279993882046867,
+      "converged": true,
+      "final_gnorm": 0.00029657976361820957,
+      "elapsed_sec": 7.154476165771484,
+      "lambda_min_raw": 6.652101092186058e-11,
+      "eigenvalues_smallest": [
+        6.652101092186058e-11,
+        0.797848182220136,
+        0.8790503472269364
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006486511387510941,
+      "lambda_min_decisive": 0.797848182220136,
+      "shift_used": 64.86511387510942,
+      "sigma_upper_estimate": 31.93255693755471,
+      "success": true
+    },
+    {
+      "beta": 7.15,
+      "K_observed": 1,
+      "energy": 30.349018229225422,
+      "converged": true,
+      "final_gnorm": 0.00027782140837213747,
+      "elapsed_sec": 7.033227920532227,
+      "lambda_min_raw": -3.041122909053229e-11,
+      "eigenvalues_smallest": [
+        -3.041122909053229e-11,
+        0.43452311869849325,
+        0.5235213876434557
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006496629695760961,
+      "lambda_min_decisive": 0.43452311869849325,
+      "shift_used": 64.96629695760961,
+      "sigma_upper_estimate": 31.98314847880481,
+      "success": true
+    },
+    {
+      "beta": 7.2,
+      "K_observed": 1,
+      "energy": 30.2990945148186,
+      "converged": false,
+      "final_gnorm": 0.0018211967484329608,
+      "elapsed_sec": 10.910668849945068,
+      "lambda_min_raw": -5.732658792112488e-11,
+      "eigenvalues_smallest": [
+        -5.732658792112488e-11,
+        0.9576836043414971,
+        1.0389098236475576
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006525897181067176,
+      "lambda_min_decisive": 0.9576836043414971,
+      "shift_used": 65.25897181067177,
+      "sigma_upper_estimate": 32.12948590533588,
+      "success": true
+    },
+    {
+      "beta": 7.25,
+      "K_observed": 1,
+      "energy": 30.370914339617357,
+      "converged": true,
+      "final_gnorm": 0.0002050920638780883,
+      "elapsed_sec": 6.575805902481079,
+      "lambda_min_raw": 1.27613475342514e-11,
+      "eigenvalues_smallest": [
+        1.27613475342514e-11,
+        0.5200941222005326,
+        0.6039350706054591
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006534680023921214,
+      "lambda_min_decisive": 0.5200941222005326,
+      "shift_used": 65.34680023921214,
+      "sigma_upper_estimate": 32.17340011960607,
+      "success": true
+    },
+    {
+      "beta": 7.3,
+      "K_observed": 1,
+      "energy": 30.38200708848086,
+      "converged": false,
+      "final_gnorm": 0.0011495513418842158,
+      "elapsed_sec": 6.861443996429443,
+      "lambda_min_raw": 8.041922683332814e-11,
+      "eigenvalues_smallest": [
+        8.041922683332814e-11,
+        0.42165289587073573,
+        0.5029028408619496
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006552814618497497,
+      "lambda_min_decisive": 0.42165289587073573,
+      "shift_used": 65.52814618497497,
+      "sigma_upper_estimate": 32.264073092487486,
+      "success": true
+    },
+    {
+      "beta": 7.35,
+      "K_observed": 1,
+      "energy": 30.329249986251835,
+      "converged": true,
+      "final_gnorm": 0.00036327447568876303,
+      "elapsed_sec": 6.382805109024048,
+      "lambda_min_raw": 5.89039927945123e-11,
+      "eigenvalues_smallest": [
+        5.89039927945123e-11,
+        0.9593863026141634,
+        1.0415144003304988
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006583111437367667,
+      "lambda_min_decisive": 0.9593863026141634,
+      "shift_used": 65.83111437367667,
+      "sigma_upper_estimate": 32.415557186838335,
+      "success": true
+    },
+    {
+      "beta": 7.4,
+      "K_observed": 1,
+      "energy": 30.339015531674093,
+      "converged": true,
+      "final_gnorm": 0.0003779754326869608,
+      "elapsed_sec": 6.461177110671997,
+      "lambda_min_raw": -3.701927653310122e-11,
+      "eigenvalues_smallest": [
+        -3.701927653310122e-11,
+        0.9927359067613537,
+        1.0750102750113655
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006600931078646198,
+      "lambda_min_decisive": 0.9927359067613537,
+      "shift_used": 66.00931078646198,
+      "sigma_upper_estimate": 32.50465539323099,
+      "success": true
+    },
+    {
+      "beta": 7.45,
+      "K_observed": 1,
+      "energy": 30.498965933084662,
+      "converged": true,
+      "final_gnorm": 0.0003003255546987534,
+      "elapsed_sec": 5.741272211074829,
+      "lambda_min_raw": -0.025396779095686384,
+      "eigenvalues_smallest": [
+        -0.025396779095686384,
+        -4.703792910731863e-11,
+        0.13326360577293883
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006604713494404918,
+      "lambda_min_decisive": -0.025396779095686384,
+      "shift_used": 66.04713494404918,
+      "sigma_upper_estimate": 32.52356747202459,
+      "success": true
+    },
+    {
+      "beta": 7.5,
+      "K_observed": 1,
+      "energy": 30.42515474767737,
+      "converged": true,
+      "final_gnorm": 0.0003155379562530656,
+      "elapsed_sec": 5.920323133468628,
+      "lambda_min_raw": 4.695266397902742e-11,
+      "eigenvalues_smallest": [
+        4.695266397902742e-11,
+        0.6891197912922848,
+        0.7739639135183296
+      ],
+      "goldstone_count": 1,
+      "goldstone_threshold": 0.0006631912860896024,
+      "lambda_min_decisive": 0.6891197912922848,
+      "shift_used": 66.31912860896024,
+      "sigma_upper_estimate": 32.65956430448012,
+      "success": true
+    }
+  ],
+  "total_elapsed_sec": 13.4980149269104
+}

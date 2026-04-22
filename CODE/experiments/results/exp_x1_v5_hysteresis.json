@@ -1,0 +1,231 @@
+{
+  "session": "2026-04-22_X1_v5_hysteresis",
+  "config": {
+    "n": 1024,
+    "c": 0.7,
+    "alpha": 1.0,
+    "eps_init": 0.01,
+    "max_iter": 30000,
+    "beta_list": "6.00,6.50,7.00,7.05,7.10,7.20,7.30,7.50,8.00,9.00,10.00",
+    "out": "results/exp_x1_v5_hysteresis.json"
+  },
+  "beta_list": [
+    6.0,
+    6.5,
+    7.0,
+    7.05,
+    7.1,
+    7.2,
+    7.3,
+    7.5,
+    8.0,
+    9.0,
+    10.0
+  ],
+  "forward": {
+    "6.0": {
+      "E": 357.4313608588343,
+      "K": 1,
+      "converged": true,
+      "elapsed": 3.333415985107422
+    },
+    "6.5": {
+      "E": 380.01056095606674,
+      "K": 1,
+      "converged": true,
+      "elapsed": 1.7696120738983154
+    },
+    "7.0": {
+      "E": 402.58976155361273,
+      "K": 1,
+      "converged": true,
+      "elapsed": 1.634767770767212
+    },
+    "7.05": {
+      "E": 404.8476802685376,
+      "K": 1,
+      "converged": true,
+      "elapsed": 1.6606152057647705
+    },
+    "7.1": {
+      "E": 30.338026891812742,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.983720064163208
+    },
+    "7.2": {
+      "E": 30.29978073111989,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.7095119953155518
+    },
+    "7.3": {
+      "E": 30.319455991289015,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.692026138305664
+    },
+    "7.5": {
+      "E": 30.511169352126963,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.5232841968536377
+    },
+    "8.0": {
+      "E": 30.629637133543373,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.2502501010894775
+    },
+    "9.0": {
+      "E": 31.171078750829807,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.223107099533081
+    },
+    "10.0": {
+      "E": 31.667128234250605,
+      "K": 1,
+      "converged": true,
+      "elapsed": 2.3907549381256104
+    }
+  },
+  "backward": {
+    "10.0": {
+      "E": 31.667154052392988,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.7116382122039795
+    },
+    "9.0": {
+      "E": 31.003471355910587,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.08341598510742188
+    },
+    "8.0": {
+      "E": 30.531429271867445,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.09547185897827148
+    },
+    "7.5": {
+      "E": 30.425143111949602,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.04541611671447754
+    },
+    "7.3": {
+      "E": 30.38183262148077,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.08459615707397461
+    },
+    "7.2": {
+      "E": 30.360051035886688,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.019855976104736328
+    },
+    "7.1": {
+      "E": 30.33803322621527,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.2919790744781494
+    },
+    "7.05": {
+      "E": 30.32708636251153,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.020027875900268555
+    },
+    "7.0": {
+      "E": 30.315952080375265,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.387570858001709
+    },
+    "6.5": {
+      "E": 30.20362514714804,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.10359072685241699
+    },
+    "6.0": {
+      "E": 30.031233787051853,
+      "K": 1,
+      "converged": true,
+      "elapsed": 0.22644591331481934
+    }
+  },
+  "verdicts": [
+    {
+      "beta": 6.0,
+      "E_forward": 357.4313608588343,
+      "E_backward": 30.031233787051853,
+      "verdict": "**HYSTERESIS** \u2014 forward HIGH, backward LOW"
+    },
+    {
+      "beta": 6.5,
+      "E_forward": 380.01056095606674,
+      "E_backward": 30.20362514714804,
+      "verdict": "**HYSTERESIS** \u2014 forward HIGH, backward LOW"
+    },
+    {
+      "beta": 7.0,
+      "E_forward": 402.58976155361273,
+      "E_backward": 30.315952080375265,
+      "verdict": "**HYSTERESIS** \u2014 forward HIGH, backward LOW"
+    },
+    {
+      "beta": 7.05,
+      "E_forward": 404.8476802685376,
+      "E_backward": 30.32708636251153,
+      "verdict": "**HYSTERESIS** \u2014 forward HIGH, backward LOW"
+    },
+    {
+      "beta": 7.1,
+      "E_forward": 30.338026891812742,
+      "E_backward": 30.33803322621527,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 7.2,
+      "E_forward": 30.29978073111989,
+      "E_backward": 30.360051035886688,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 7.3,
+      "E_forward": 30.319455991289015,
+      "E_backward": 30.38183262148077,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 7.5,
+      "E_forward": 30.511169352126963,
+      "E_backward": 30.425143111949602,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 8.0,
+      "E_forward": 30.629637133543373,
+      "E_backward": 30.531429271867445,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 9.0,
+      "E_forward": 31.171078750829807,
+      "E_backward": 31.003471355910587,
+      "verdict": "same branch (no hysteresis)"
+    },
+    {
+      "beta": 10.0,
+      "E_forward": 31.667128234250605,
+      "E_backward": 31.667154052392988,
+      "verdict": "same branch (no hysteresis)"
+    }
+  ],
+  "n_hysteresis": 4,
+  "total_elapsed_sec": 28.241324186325073
+}

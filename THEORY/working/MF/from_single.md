@@ -1,7 +1,17 @@
 # from_single.md — Multi-Formation Structure Derived from Single-Formation Invariants
 
-**Status:** commit draft (primary approach: Axis B), 2026-04-22 (SF-S1 session).
-**Author origin:** `logs/daily/2026-04-22/01_exploration.md` §3.2 (Approach B1 + B3 primary); `02_development.md` §5-§9.
+**⚠️ MAJOR STATUS UPDATE (2026-04-22 R22)** — see `working/SF/step_cohesion.md` for full reformulation:
+- **§2 Conjecture 2.1 (v1-v5 all versions)**: **RETRACTED** by R17+R19+R20+V7 P1 cascade.
+  - R17: Weyl $\sqrt{N_{\mathrm{unst}}}$ falsified (예측 23.3 vs 관측 7.76 at β=30)
+  - R19: $u \leftrightarrow 1-u$ dynamic symmetry refuted (pre-registered 3/3 fail)
+  - R20: $\widehat K = f(N_{\mathrm{unst}})$ functional form itself impossible (N_unst=499 for β=8,9,10 gives K̂∈{1,4,10})
+  - V7 P1: Softmax probability distribution absent (P(K=1)≈0.02 constant for β=8.5-9.5)
+- **§1 derived-view thesis**: **partially retained** as Axis B's guiding principle, but $\widehat K$는 $(N_{\mathrm{unst}}, \xi_0)$만의 function 아님; **Protocol-dependent basin selector** 추가 필요.
+- **F-1/M-1/MO-1 dissolutions**: **maintained** (§Round 18 post-audit sections). Mechanism refined to E3 cubic term (`mode_count.md` §2.3c) + Protocol Selection (`step_cohesion.md` §6).
+- **Replacement framework**: **Formation Quantization + Three-Layer Hierarchy + Protocol-Parameterized Landscape** (`working/SF/step_cohesion.md`).
+
+**Status:** commit draft (primary approach: Axis B) **+ R22 retraction/reformulation notice**, 2026-04-22 (SF-S1 + R22 sessions).
+**Author origin:** `logs/daily/2026-04-22/01_exploration.md` §3.2 (Approach B1 + B3 primary); `02_development.md` §5-§9; **R22 reformulation: `24_deepening_round22.md` + `working/SF/step_cohesion.md`**.
 **Canonical refs:** §8.1 (energy), §11 Multi-formation paradigm (I9 K-field architecture), §12 (T-Persist-K family, Coupling Bound Lemma), §13 Cat A T-Merge (b) (isoperimetric ordering), T11 (Γ-convergence), T-Birth-Parametric (D4 pitchfork); §14 CN6 (K kinetic), CN8 (metastable), CN14 (closure expands metastability).
 **Working refs:** `working/SF/mode_count.md` (Prop 1.3a/b seeds), `working/SF/interface_scale.md` (ξ_0 anchor, 3-scale table, T-d_min direction correction), `working/E/{F1,M1,MO1}_dissolution.md` (reframings of F-1/M-1/MO-1 rely on derived multi-formation view).
 **External refs:** Cahn-Hilliard (1958) amplitude equation; Lifshitz-Slyozov (1961) & Wagner (1961) coarsening (LSW); Freidlin-Wentzell (1984) small-noise escape; Modica-Mortola (1977) Γ-convergence.
@@ -18,11 +28,23 @@ This view inverts the canonical v1.2 perspective where $K$ was a primary paramet
 
 ## §2. $\widehat{K}$ from $N_{\mathrm{unst}}$ (mode-count emergence)
 
-### 2.1 Conjecture (primary commit of this file)
+**🚨 RETRACTED 2026-04-22 R22 — Section maintained as HISTORICAL ONLY. Do not cite §2 formulas for active theory.**
 
-> **Conjecture 2.1 (Mode-count emergence, graph-class parametrized).** For a generic connected graph $G$ with effective spectral dimension $d_{\mathrm{eff}}(G)$, the expected number of formations emerging from $u_{\mathrm{uniform}}$ under small-noise initialization is
+**Reason for retraction** (summary):
+- R17 falsified Weyl $\sqrt{N_{\mathrm{unst}}}$ scaling (관측 7.76 vs 예측 23.3 at β=30)
+- R19 refuted $u↔1-u$ dynamic symmetry (pre-registered 3/3 fail)
+- R20 showed N_unst=499 saturated at β∈{8,9,10} but K̂∈{1, 3.97, 9.50} — impossible for any $f(N_{\mathrm{unst}})$
+- V7 P1 refuted softmax probability (P(K=1)≈0.02 constant across β=8.5-9.5)
+
+**Replacement framework**: See `working/SF/step_cohesion.md` §§1-6 (Formation Quantization + Protocol Selection).
+
+### 2.1 Conjecture (**RETRACTED** — historical reference only)
+
+> **Conjecture 2.1 (Mode-count emergence, graph-class parametrized).** ~~For a generic connected graph $G$ with effective spectral dimension $d_{\mathrm{eff}}(G)$, the expected number of formations emerging from $u_{\mathrm{uniform}}$ under small-noise initialization is~~
 > $$\widehat{K}(\beta, \alpha, T, c, G) = 1 + N_{\mathrm{unst}}(\beta, \alpha, T, c, G)^{1/d_{\mathrm{eff}}(G)} + O(1),$$
-> where $N_{\mathrm{unst}} = \#\{k \geq 2 : \mu_k^{\mathrm{full}}(\beta, \alpha, T, c) < 0\}$ is the full-energy Morse index of $u_{\mathrm{uniform}}$ (Prop 1.3a at T=0, extended by T-Uniform-Stab-T at T>0, Prop 1.3b for full-energy correction).
+> ~~where $N_{\mathrm{unst}} = \#\{k \geq 2 : \mu_k^{\mathrm{full}}(\beta, \alpha, T, c) < 0\}$ is the full-energy Morse index of $u_{\mathrm{uniform}}$ (Prop 1.3a at T=0, extended by T-Uniform-Stab-T at T>0, Prop 1.3b for full-energy correction).~~
+>
+> **Verdict (R22)**: This functional form is incompatible with empirical data at all levels. See `step_cohesion.md` for the replacement protocol-parameterized framework.
 
 ### 2.2 Derivation sketch (Approach B1: weakly-nonlinear + B3: dimensional classification)
 

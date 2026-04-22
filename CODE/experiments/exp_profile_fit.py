@@ -48,6 +48,7 @@ import os
 import json
 import argparse
 import time
+import threading
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -214,6 +215,16 @@ def measure_at_config(alpha, beta, grid_size=48, c=0.3, n_inits=24, k_soft_max=0
 
     xi_theory = float(np.sqrt(alpha / beta))
 
+    # Heartbeat thread: emit progress every 8s during long find_formation call.
+    _hb_stop = threading.Event()
+    _hb_start = time.time()
+    def _heartbeat():
+        while not _hb_stop.wait(8.0):
+            elapsed = time.time() - _hb_start
+            print(f"      ... find_formation running α={alpha} β={beta} (elapsed {elapsed:.0f}s)", flush=True)
+    _hb_thread = threading.Thread(target=_heartbeat, daemon=True)
+    _hb_thread.start()
+
     try:
         result = find_formation(graph, params, verbose=False)
     except Exception as exc:
@@ -222,6 +233,8 @@ def measure_at_config(alpha, beta, grid_size=48, c=0.3, n_inits=24, k_soft_max=0
             'n_inits': n_inits, 'k_soft_max': k_soft_max,
             'found': False, 'reason': f'find_formation failed: {exc}',
         }
+    finally:
+        _hb_stop.set()
 
     u_out = result.u
     if HAS_KSOFT:
@@ -269,6 +282,34 @@ def measure_at_config(alpha, beta, grid_size=48, c=0.3, n_inits=24, k_soft_max=0
 # Main
 # ---------------------------------------------------------------------------
 
+def _worker(task):
+    """Worker for multiprocessing parallel execution.
+
+    Limits BLAS thread count per worker to avoid CPU over-subscription.
+    """
+    idx, n_total, alpha, beta, kwargs = task
+    # Cap BLAS threads per worker to prevent contention when configs run in parallel
+    os.environ.setdefault('OMP_NUM_THREADS', '2')
+    os.environ.setdefault('OPENBLAS_NUM_THREADS', '2')
+    os.environ.setdefault('MKL_NUM_THREADS', '2')
+    os.environ.setdefault('VECLIB_MAXIMUM_THREADS', '2')
+
+    xi_th = float(np.sqrt(alpha / beta))
+    print(f"  [{idx+1}/{n_total}] START alpha={alpha}, beta={beta}, xi_theory={xi_th:.3f}", flush=True)
+    t_i = time.time()
+    res = measure_at_config(alpha, beta, **kwargs)
+    elapsed = time.time() - t_i
+    res['elapsed_sec'] = elapsed
+
+    if res['found']:
+        print(f"  [{idx+1}/{n_total}] DONE α={alpha} β={beta}: K_soft={res['k_soft']:.3f}, "
+              f"best={res['best_profile']}, xi_ratio(tanh)={res['xi_ratios']['tanh']:.3f}, "
+              f"xi_ratio(gen)={res['xi_ratios']['generalized']:.3f} ({elapsed:.1f}s)", flush=True)
+    else:
+        print(f"  [{idx+1}/{n_total}] SKIP α={alpha} β={beta}: {res.get('reason')} ({elapsed:.1f}s)", flush=True)
+    return idx, res
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--grid-size', type=int, default=48)
@@ -276,39 +317,44 @@ def main():
     ap.add_argument('--c', type=float, default=0.3)
     ap.add_argument('--k-soft-max', type=float, default=0.55)
     ap.add_argument('--out', default='results/exp_profile_fit.json')
+    ap.add_argument('--workers', type=int, default=1,
+                    help='Parallel workers (1=serial, 4-6 recommended on M1 8-core)')
     args = ap.parse_args()
 
     # (alpha, beta) grid chosen to span xi_theory in [0.10, 0.30]
     # xi_theory = sqrt(alpha/beta); need asymptotic regime (xi << r_0) on grid.
     configs = [
-        (0.5, 50), (1.0, 50), (2.0, 50),
-        (0.5, 80), (1.0, 80), (2.0, 80),
-        (0.5, 120), (1.0, 120), (2.0, 120),
+          (5.0, 5.0), (10.0, 10.0), (20.0, 20.0),
+          (10.0, 2.5), (20.0, 5.0), (40.0, 10.0),
+          (10.0, 1.0), (20.0, 2.5), (40.0, 5.0),
     ]
 
-    print(f"[exp_profile_fit] grid={args.grid_size} n_inits={args.n_inits} c={args.c}")
+    print(f"[exp_profile_fit] grid={args.grid_size} n_inits={args.n_inits} c={args.c} workers={args.workers}")
     print(f"[exp_profile_fit] scanning {len(configs)} (alpha, beta) configs...")
 
     t0 = time.time()
-    results = []
-    for i, (alpha, beta) in enumerate(configs):
-        print(f"  [{i+1}/{len(configs)}] alpha={alpha}, beta={beta}, xi_theory={np.sqrt(alpha/beta):.3f}")
-        t_i = time.time()
-        res = measure_at_config(alpha, beta,
-                                grid_size=args.grid_size,
-                                c=args.c,
-                                n_inits=args.n_inits,
-                                k_soft_max=args.k_soft_max)
-        elapsed = time.time() - t_i
-        res['elapsed_sec'] = elapsed
+    kwargs = {
+        'grid_size': args.grid_size,
+        'c': args.c,
+        'n_inits': args.n_inits,
+        'k_soft_max': args.k_soft_max,
+    }
+    tasks = [(i, len(configs), a, b, kwargs) for i, (a, b) in enumerate(configs)]
 
-        if res['found']:
-            print(f"    found: K_soft={res['k_soft']:.3f}, best profile={res['best_profile']}, "
-                  f"xi_ratio (tanh)={res['xi_ratios']['tanh']:.3f}, "
-                  f"xi_ratio (gen)={res['xi_ratios']['generalized']:.3f} ({elapsed:.1f}s)")
-        else:
-            print(f"    NOT FOUND: {res.get('reason')} ({elapsed:.1f}s)")
-        results.append(res)
+    if args.workers <= 1:
+        # Serial path (original behavior)
+        results = [None] * len(configs)
+        for task in tasks:
+            idx, res = _worker(task)
+            results[idx] = res
+    else:
+        # Parallel path via multiprocessing.Pool
+        import multiprocessing as mp
+        ctx = mp.get_context('spawn')  # 'spawn' required on macOS
+        results = [None] * len(configs)
+        with ctx.Pool(processes=args.workers) as pool:
+            for idx, res in pool.imap_unordered(_worker, tasks):
+                results[idx] = res
 
     total_elapsed = time.time() - t0
     out = {

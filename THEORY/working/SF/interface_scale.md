@@ -1,6 +1,13 @@
 # interface_scale.md — Cor 2.2 qualitative + quantitative
 
-**Status:** commit draft, 2026-04-22 (SF-S1 session).
+**⚠️ STATUS UPDATE (2026-04-22 R22)**:
+- **§2 Cor 2.2 qualitative**: Cat A **maintained** (Layer 2 geometric).
+- **§3 Cor 2.2 quantitative (tanh ansatz)**: Cat A **maintained** as Layer 2 theorem for tanh-ansatz case, with proviso that **α ≥ 20** regime (X2 D1 threshold) is where tanh ansatz actually holds.
+- **Shape regime criterion (from X2)**: **D1 α-absolute threshold** (α ≥ 20 → near-tanh, α ≤ 10 → sharp). This is the true regime variable, NOT $\xi_0/a$ per earlier Round 9 §11 claim. See `profile_deviation.md` updated status.
+- **3-scale hierarchy (§5)**: Maintained as Layer 2 geometric anchors.
+- **Layer classification**: This file's theorems are **Layer 2 (geometric)** — smooth functions of (β, c, α).
+
+**Status:** commit draft, 2026-04-22 (SF-S1 session) **+ R22 D1 α-threshold regime criterion update**.
 **Author origin:** Round 13 + Round 17 + Round 18 (`exp_interface_ansatz`, `exp_alpha_scan_v3` numerical).
 **Canonical refs:** §13 Cat A T11 (Γ-convergence Modica-Mortola), T-Merge (b) (isoperimetric ordering), Deep Core Dominance 2b, Coupling Bound Lemma Item 5 (exponential tail decay).
 **Working refs:** `working/SF/mode_count.md` ($N_{\mathrm{unst}}$), `working/SF/profile_deviation.md` (NQ-32), `working/MF/from_single.md` §3 (formation size), §4 (spacing).
