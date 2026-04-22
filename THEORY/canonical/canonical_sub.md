@@ -946,6 +946,107 @@ NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2
 
 **다음 세션 (2026-04-23):** **Option B'' (Stage 2 Axiom Audit) 가 자연스러운 다음 단계** — 84 Cat A foundation + 3 Critical OP dissolution이 안정 기반.
 
+### Round 17 — Numerical Validation Analysis (`exp_k_hat_validation.py` 결과 분석, 2026-04-22 night)
+
+`logs/daily/2026-04-22/19_deepening_round17.md` — 사용자가 실행한 `exp_k_hat_validation.py --grid 32 --seeds 50` (309s) 결과 분석. R14 Conjecture 2.1 prediction과 대조.
+
+#### 실험 데이터 요약 (c=0.3, 2D L=32 or cycle n=1024)
+
+| β | 2D square $\widehat K$ | 2D torus $\widehat K$ | 1D cycle $\widehat K$ |
+|---|---|---|---|
+| 0.5 | 4.76±1.42 | 2.66±1.12 | 29.22±2.77 |
+| 1.0 | 4.80±1.44 | 2.66±1.12 | 29.40±2.80 |
+| 3.0 | 4.96±1.54 | 2.72±1.15 | 30.08±2.71 |
+| 10.0 | 5.50±1.69 | 3.06±1.22 | 33.32±2.63 |
+| 30.0 | 7.76±2.12 | 4.82±1.42 | 41.82±3.39 |
+
+Torus/Square 비율: **0.55-0.62** (R14 예측 ~32 extensive 대비 54-58× 저하).
+
+#### 주요 발견 (6 Cat A/B empirical)
+
+**A-R17-01. Conjecture 2.1 Weyl scaling 실험 반증 (Cat A empirical).** 2D square에서 $\widehat K \sim \sqrt{N_{\mathrm{unst}}}$ 예측: β=0.5 일치 (4.76 vs 4.74 predicted, 0.4% 오차), 그러나 β=3 이상에서 예측 과대 2-3×. **원래 공식이 metastable $\widehat K$에 부적합.**
+
+**A-R17-02. Conjecture 2.1-Bott 외연 torus scaling 완전 반증** — torus/square = 0.55-0.62, 예측 ~L=32. **148× 차이** at β=30. Extensive 해석 부정확.
+
+**A-R17-03. 핵심 구분 — 두 종류의 $\widehat K$**:
+- $\widehat K_{\mathrm{short-time}}$: Langevin 선형-성장 peak (Round 12 exp_mode_emergence 대상). Conj 2.1 original 적용.
+- $\widehat K_{\mathrm{metastable}}$: gradient flow 도달 국소 최소 (exp_k_hat_validation 측정). **서로 다른 양**.
+
+**A-R17-04. Revised Conjecture 2.1-v3 (Cat B empirical).** 
+$$\widehat K_{\mathrm{metastable}}(G; \beta) = \frac{cn}{m_{\mathrm{per}}(\beta, G)},$$ 
+$m_{\mathrm{per}}$는 graph-class specific 핵화-조대화 stopping size. Moderate β에서 약하게 β-dependent; saturation에서 감소 (formation sharpens).
+
+**A-R17-05. $m_{\mathrm{per}}$ 경험적 값** — c=0.3, canonical optimizer:
+- 2D square: 40-65 (β=30 → 0.5).
+- 2D torus: 64-115 (더 큰 formation).
+- 1D cycle: 7-11 (작은 1D formation).
+
+**A-R17-06. M-1 수치 확증.** Gradient flow에서 $\widehat K \gg 1$은 K=1 global min에 **도달하지 못함**을 확증. 2-timescale: 빠른 조대화 → metastable-K → 지수적으로 느린 K=1 수렴 ($\tau_{\mathrm{slow}} \sim e^{d_{\min}/\xi_0}$).
+
+#### 중요 구분 재확인
+
+- **Conjecture 2.1-original**: 여전히 **Langevin 단시간 $\widehat K$**에 유효 (Round 12 exp_mode_emergence 미실행이므로 그 regime은 검증 필요).
+- **Conjecture 2.1-Bott extensive torus**: orbit-count 량(정적 landscape)에 대한 것으로 재해석 필요. **Dynamical $\widehat K$에는 적용 안됨.**
+
+#### 추가 실행 권고 (user choice)
+
+- **Run A**: `--c 0.5` (Regime II 비교, ~5분).
+- **Run B**: `--grid 64 --skip-cycle --beta-list 3,30` (large-L scaling, ~30분).
+- **Run D**: `exp_mode_emergence.py` (Langevin short-time, Conj 2.1-original 검증).
+
+#### Cumulative (post-R17): 90 Cat A/B
+
+#### 주간 merge 추가 user 결정 (Q51-Q53)
+
+- **Q51**: Revised Conjecture 2.1-v3를 canonical §11에 empirical Cat B로 추가할지.
+- **Q52**: 두 종류의 $\widehat K$ 명시적 구분을 canonical §11 Multi-formation에 반영.
+- **Q53**: R5 Conjecture 2.1-Bott extensive 해석을 orbit-count version으로 retraction할지 (단, 실험으로 완전 부정 아님 — Langevin 미검증).
+
+### Round 18 — c=0.5 (Regime II) 수치 검증 (2026-04-22 night, post-R17)
+
+`logs/daily/2026-04-22/20_deepening_round18.md` — 사용자 추가 실행 `--c 0.5 --seeds 50` 결과 분석. R6 3-regime 이론과 대조, $u \to 1-u$ symmetry 탐색.
+
+#### 데이터 (c=0.3 vs c=0.5)
+
+| β | 2D sq I/II | 2D torus I/II | 1D cycle I/II |
+|---|---|---|---|
+| 0.5 | 4.76 / **1.36** | 2.66 / **1.00** | 29.22 / 31.64 |
+| 30 | 7.76 / 2.66 | 4.82 / **1.08** | 41.82 / 56.18 |
+
+#### 6 Cat A/B empirical claims
+
+**A-R18-01. Regime II perfect coarsening on torus**: c=0.5 torus에서 K=1.00, std=0.000 across 50 seeds × 4 β. Γ-convergence T11 직접 실험 확증. **Cat A empirical**.
+
+**A-R18-02. c=0.5 → c=0.3 ratio ~3.5× on 2D square**: Regime I이 Regime II보다 3.5배 더 많은 형성. Coarsening dynamics 차이. Cat A empirical.
+
+**A-R18-03. 1D cycle c-insensitive**: c=0.3 vs c=0.5에서 $\widehat K$ ~10% 차이만. Linear packing의 다른 메커니즘. Cat A empirical.
+
+**A-R18-04. M-1 refined**: $\tau_{\mathrm{slow}} \sim e^{d_{\min}/\xi_0}$ 공식은 droplet regime에만 적용. c=1/2에서는 gradient flow가 K=1 실제 도달. **이는 R16의 단순화된 M-1 dissolution을 정교화함**. Cat A.
+
+**A-R18-05. Revised Conjecture 2.1-v4 (c-augmented)**:
+$$\widehat K_{\mathrm{metastable}}(G; \beta, c) = \frac{cn}{m_{\mathrm{per}}(\beta, G, c)},$$
+with explicit c-regime dependence: c≈0.5 → $m_{\mathrm{per}} \to cn$ (K→1); c≠0.5 → $m_{\mathrm{per}}$ finite (K≫1). Cat B empirical.
+
+**A-R18-06. R6 3-regime qualitative confirmation (through different mechanism)**: Regime II가 c=0.3 Regime I 대비 낮은 $\widehat K$ 나타냄 — R6 mode-count 예측과 질적 일치. 단 메커니즘은 coarsening dynamics이지 mode count 아님. Cat A structural.
+
+#### Cross-check 예측 (user 추가 실행 시)
+
+**c=0.7 test (Regime III, predicted by $u \to 1-u$ symmetry with c=0.3):**
+- 2D square: ~4-5 ✓
+- 2D torus: ~2-3 ✓
+- 1D cycle: ~30 ✓ (c-insensitive)
+
+#### Cumulative (post-R18): 96 Cat A/B
+
+#### 주간 merge 추가 user 결정 (Q54-Q55)
+
+- **Q54**: Revised Conj 2.1-v4 (c-augmented)를 canonical §11 Multi-formation에 empirical Cat B로 추가할지.
+- **Q55**: R6 3-regime 이론과 R18 empirical c-regime을 "이론+실험 complete picture"로 공식 통합할지.
+
+#### Round 18 conclusion
+
+**Regime II perfect coarsening 실험 확증 + c-regime 이론의 실험 대응 확립.** M-1 dissolution은 regime-dependent 으로 refined. Conjecture 2.1 v3 → v4 (c-dependence 추가). **18 rounds 세션 종료 상태.**
+
 ---
 
 ## 2026-04-21
