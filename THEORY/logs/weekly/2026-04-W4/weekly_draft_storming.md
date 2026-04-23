@@ -1,15 +1,27 @@
-# Canonical Sub — 주간 누적 Buffer
+# Weekly Draft Storming — 2026-04-W4 (April 19–25, 2026)
 
-**Status:** accumulating (next weekly merge → `canonical.md`)
-**Purpose:** canonical 에 반영될 가치가 있는 변경사항을 매일 append 누적. **주 1 회** user 리뷰 후 `canonical.md` 에 merge, 본 파일 reset.
-**Last reset:** 2026-04-20 (initial creation)
-**Last entry:** 2026-04-22 (SF-S1, single-formation consolidation + multi-formation derivation)
+**Status:** accumulating (week-scoped buffer → `weekly_summary.md` at week close → `canonical.md` integration)
+**Purpose:** **1 주치** 일별 변경사항을 append 누적. 주 종료 시 `weekly_summary.md` (이 폴더) 로 정제된 요약 생성, 그 후 user 리뷰를 거쳐 선별적으로 `canonical.md` 에 merge.
+**Week scope:** 2026-04-19 (Sun) ~ 2026-04-25 (Sat) — April 4th week.
+**Week opened:** 2026-04-23 (relocation of `canonical/canonical_sub.md` → this file).
+**Week closes:** 2026-04-25 (weekly_summary.md 생성 target).
+**Prior-week link:** (없음 — 첫 weekly rotation). 이전 데이터는 본 파일 하단의 기존 2026-04-20/21/22 daily entries.
+**Final path:** `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` (`canonical/weekly/` 가 아닌 기존 journal convention `logs/weekly/` 하위로 배치).
+
+---
+
+## 파일 위치 이력
+
+- 2026-04-20: `canonical/canonical_sub.md` 첫 생성 (daily buffer).
+- 2026-04-23 (오전): 본 파일로 이전 후 rename (canonical_sub → weekly_draft_storming). 초기 위치 `canonical/weekly/2026-04-W4/` — canonical_sub 를 weekly-rotating draft 로 강등하여 scale 문제 방지.
+- 2026-04-23 (이후): `logs/weekly/2026-04-W4/` 로 최종 재배치. `canonical/` 은 authoritative 문서만 보유하고, pre-canonical staging 은 기존 journal convention `logs/weekly/` 하위로 정렬.
+- 이후: 매주 Sunday (또는 주 시작일) 새 `logs/weekly/YYYY-MM-W<n>/weekly_draft_storming.md` 생성. 이전 주 폴더는 동결 + `weekly_summary.md` 가 최종 산출물.
 
 ---
 
 ## 사용 규칙
 
-1. **Append-only:** 매일 새 섹션을 상단에 insert (최신순). 수정·제거는 주간 merge 시 user 결정에만.
+1. **Append-only within week:** 매일 새 섹션을 상단에 insert (최신순). 수정·제거는 weekly summary 작성 시에만.
 2. **날짜별 섹션:** `## YYYY-MM-DD` 헤더, 그 안에 타입 라벨 구분.
 3. **타입 라벨:** 다음 5 종만 사용.
    - `### Added` — 새 정리·공리·정의·CN·OP (증명/검증 완료).
@@ -17,31 +29,405 @@
    - `### Retired` — 기존 정리/주장의 retraction.
    - `### Clarified` — canonical 에 암묵적이던 것의 명시화 (metadata level, 내용 무변화).
    - `### Pending` — 다음 주 이상 carry-forward (아직 merge 불가).
-4. **working reference 필수:** 각 entry 는 `working/<topic>.md` 또는 `logs/daily/YYYY-MM-DD/...` 를 출처로 명시. 출처 없는 entry 는 merge 대상 아님.
-5. **주간 merge 절차:**
-   - user 가 본 파일 섹션별 검토.
-   - Added → `canonical.md` 해당 섹션 insert + `theorem_status.md` 행 추가 + `CHANGELOG.md` 주간 entry.
-   - Modified → `canonical.md` 해당 줄 수정.
-   - Retired → `canonical.md` Retracted 섹션 이동.
-   - Clarified → `canonical.md` inline annotation 또는 §14 CN 추가.
-   - Pending → 본 파일에 잔존, 다음 주로 carry.
-   - merge 완료 후 본 파일 reset (모든 날짜 섹션 제거, Merge History 한 줄 append, `Last reset` 갱신).
-6. **증명 없는 statement 금지:** Added 는 반드시 working 단계에서 증명 완료된 것만. 미완 결과는 Pending 으로.
+4. **Working/daily reference 필수:** 각 entry 는 `logs/daily/YYYY-MM-DD/...` 또는 `working/<topic>.md` 를 출처로 명시.
+5. **Weekly close 절차 (주 종료일):**
+   - 본 파일 전체를 훑어 **`weekly_summary.md`** (본 폴더 내) 작성: 주간 누적 Cat A, retirements, pending, new NQ 집계 + critical self-assessment.
+   - `weekly_summary.md` 를 user 가 리뷰 → 선별적으로 `canonical.md` + `theorem_status.md` 에 merge.
+   - Merge 완료 항목은 `CHANGELOG.md` 주간 entry 로 기록.
+   - 본 파일 (`weekly_draft_storming.md`) 은 **그대로 freeze**; 다음 주부터 새 weekly 폴더에서 새 draft 시작.
+6. **증명 없는 statement 금지:** Added 는 반드시 증명·검증 완료된 것만. 미완은 Pending.
 
-## Promotion pipeline (개정)
+## Promotion pipeline (개정, 2026-04-23)
 
 ```
-logs/daily/YYYY-MM-DD/<artifacts>.md      (날것, chronological)
+logs/daily/YYYY-MM-DD/<artifacts>.md              (날것, chronological)
     ↓ topic 별 정리
-working/<topic>.md                         (주제별 개발, 검증 대상)
-    ↓ daily (증명/검증 완료분만)
-canonical/canonical_sub.md                 (주간 merge buffer, 본 파일)
-    ↓ weekly (user 리뷰)
-canonical/canonical.md                     (main, 주 1회 update)
-canonical/theorem_status.md                (main 동기 update)
+working/<topic>.md                                 (주제별 개발, 검증 대상)
+    ↓ daily (증명/검증 완료분만) — 주간 draft에 append
+logs/weekly/YYYY-MM-W<n>/weekly_draft_storming.md  (본 파일, 1주 buffer)
+    ↓ weekly close — 요약 생성
+logs/weekly/YYYY-MM-W<n>/weekly_summary.md         (주간 정제 산출물, user 리뷰 대상)
+    ↓ weekly merge (user 결정)
+canonical/canonical.md                             (main, 주 1회 update)
+canonical/theorem_status.md                        (main 동기 update)
 ```
 
-Canonical.md 가 단일 spec 역할은 유지. 본 파일은 **pre-merge staging area**.
+**Rationale for weekly rotation (2026-04-23 결정).** 이전 single-file `canonical_sub.md` 는 매일 누적으로 scale 문제 발생 (2026-04-20 첫 생성 후 4일만에 2200줄 돌파). Weekly-folder 분할로 (i) 파일 길이 관리 가능, (ii) 각 주의 맥락 동결 보존, (iii) weekly_summary 가 intermediate artifact 로 canonical merge 전 정제 단계 제공.
+
+---
+
+## 2026-04-23
+
+**Session type:** Stage 2 Axiom Audit scoping (morning G1-G6) + User-requested Axiom Audit + G-miss deepening + **Orbital Discovery** (empirical pivot, afternoon-evening).
+**Origin:** `logs/daily/2026-04-23/` (plan.md + pre_brainstorm.md + 01_exploration.md + SF_layer_classification.md + SF_function_taxonomy.md + MF_multi_quantization.md + T_time_evolution.md + T_thermal_softmax.md + A_application_scoping.md + 03_integration_and_new_open.md + 04_axiom_audit_and_sf_gaps.md + 05_gmiss4_and_gmiss2_resolution.md + 06_gmiss4_deepening.md + 07_shape_modes_orbital_hypothesis.md + 08_orbital_discovery_program.md + 09_orbital_discovery_results.md + 10_orbital_fullscale_analysis.md + 11_fullscc_comparison.md + 12_what_it_means.md + 99_summary.md) + `CODE/experiments/exp_orbital_discovery.py` (new) + `CODE/experiments/exp_orbital_fullscale.py` (new) + `CODE/results/exp_orbital_discovery.json` + `CODE/results/exp_orbital_fullscale.json` + `CODE/results/exp_orbital_beta_scan.json`.
+**Canonical-relevant 산출물:** Added 핵심 5 (Cat A empirical + definitional), Modified 1 (Cor 2.2 scope), Retired 1 (Class S softmax hypothesis), Clarified 2 (Three-Layer partition status, Static/Dynamic Separation), Pending 8 (Axiom S1' + CN15/16/17 + §5 dual observable + time/thermal Cat C + function taxonomy scope + retraction of "single disk = formation" implicit assumption), New NQs **32 total** (NQ-51..NQ-75 scoping + NQ-92 + NQ-111..NQ-124 orbital-related).
+
+---
+
+### 오늘의 성과 비판적 분류
+
+세션 종료 시점 (2026-04-23 20:13) 기준 성과를 **엄밀성 수준**으로 2-tier로 분류. "핵심성과"는 proof 또는 90-run empirical 재현성을 갖춘 결과. "직접적 주요성과"는 proposal/scoping/conditional/Cat B 단계.
+
+**Tier 1 — 핵심성과 (Cat A 또는 엄밀 empirical, canonical 승급 candidate)**:
+
+1. **Orbital hierarchy empirical existence** (5 configs × reproducible, 4 grids × 7 β values) — A-01
+2. **56 stable minimizers at 32×32 canonical defaults** (90-run enumeration) — A-02
+3. **Closure+separation removes F=1 single-disk stable** (90 runs × 3 IC modes, 전원 동일 패턴) — A-03
+4. **$\mathcal{F}$ (local maxima count) = threshold-independent topological invariant** (definitional, rigorous) — A-04
+5. **Class S (basic Boltzmann softmax) refutation** (V7 P1 from 2026-04-22 + today's function taxonomy formalization) — A-05, Retired
+
+**Tier 2 — 직접적 주요성과 (proposal / Cat B / Cat C / scoping)**:
+
+6. **Axiom S1' (orbital-augmented Formation Quantization)** — PROPOSAL, requires proof (Stage 2+)
+7. **CN15 Static/Dynamic Separation Principle** — PROPOSAL, theoretical + empirical 이중 지지
+8. **CN16 Protocol-Parameterized observables** — PROPOSAL
+9. **CN17 Formation Quantization (orbital-labeled)** — PROPOSAL, supersedes earlier CN18
+10. **FQ Uniqueness Thm 3.2** (well-separated regime) — Cat A conditional
+11. **$F(K)$ Landau monotone → $K_{\mathrm{step}}=1$ global** — Cat A under assumptions
+12. **AN/PSN/ON Naturality audit** (well-separated ✅) — Cat A partial
+13. **Function Taxonomy 7+1 classes** (H/L/T/D/S/R/P + N) — Cat B scoping
+14. **Time evolution H-T1..4** (graph-MCF, LSW, Kramers nucleation) — Cat C hypotheses
+15. **Thermal H-Th1..4** (Langevin, basin-volume-weighted, sigmoid smoothing, Kramers escape) — Cat C hypotheses
+16. **G-miss-4 K̂=1 Sufficient Condition Theorem** (3-condition, 8-perspective audit) — Cat A conditional
+17. **Three-Layer Hierarchy 27% Mixed** (organizational device, not strict partition) — Clarified
+18. **Application scoping** (EX-Seg-1/2, EX-SBM-1/2 contrastive designs) — scope-level
+
+**비판적 자기 평가 (Critical Self-Assessment)**:
+
+- **Config specificity**: Tier 1 #2, #3의 empirical 결과는 **(32×32 sq grid, c=0.5, β=30, equal weights $\lambda_{\mathrm{cl}}=\lambda_{\mathrm{sep}}=\lambda_{\mathrm{bd}}=1$, free-BC, normalize=False)** 한정. 다른 config 일반화는 NQ-111, NQ-112, NQ-117, NQ-119로 carry.
+- **$D_4$ mixing**: Orbital label 분류가 high-β에서 mixed (ℓ=2 orbital vs ℓ=4 near-degenerate). Low-β만 clean → orbital concept의 rigorous domain 제한.
+- **Quantum analogy**: SCC ↔ atomic orbital parallel은 **structural suggestive**이나 complete identification 아님. CN10 + Hard Constraint #4 준수 유지.
+- **Circularity concern**: $F(K)$ monotone → $K=1$ vs observed $\widehat K > 1$의 apparent tension을 Static/Dynamic Separation (CN15)으로 해소. 이것이 post-hoc patch가 아님을 확인하기 위해 independent empirical signature 필요 (NQ-124).
+- **Reproduction독립성**: 90 runs × 3 IC modes는 strong but within-session. Cross-session reproduction은 2026-04-24+에서 확인 필요.
+
+---
+
+### Added
+
+#### A-2026-04-23-01. Orbital Hierarchy Empirical Existence (K=1 Single Formation)
+
+**출처:** `logs/daily/2026-04-23/09_orbital_discovery_results.md` §2.1–2.3; `CODE/experiments/exp_orbital_discovery.py`; `CODE/results/exp_orbital_discovery.json` + `CODE/results/exp_orbital_beta_scan.json`.
+
+**Statement (empirical).** On 2D square grid with pure $\mathcal{E}_{\mathrm{bd}}$, for K=1 single-formation minimizer $u^\ast$, the low-lying Hessian eigenmode structure admits an **atomic-orbital-like hierarchy**:
+- **Mode 0** ($\lambda \approx 0$): $\ell=1$ p-dominant (translation), power $\approx 0.75$ across all tested configs.
+- **Mode 1** (first excited, $\lambda > 0$): **$\ell=2$ d-dominant** (quadrupole), power $\in [0.38, 0.41]$ at $\beta \in [3, 12]$.
+- **Mode 2+**: higher $\ell$ ($\ell \in \{3, 4\}$), increasingly mixed under $D_4$ symmetry.
+
+**Empirical support.** Exp-A: 4 configurations $\{(c,\beta)\} = \{(0.5, 30), (0.3, 30), (0.5, 10), (0.5, 5)\}$ on 16×16 grid, **4/4 configs reproduce Mode 0 = p / Mode 1 = d pattern**. Exp-B: β-scan at $c=0.5$ with $\beta \in \{3, 5, 8, 12, 20, 30, 50\}$, d-power clean at $\beta \in [3, 12]$.
+
+**Scope qualifier.** Cat A **at** (2D sq grid, pure $\mathcal{E}_{\mathrm{bd}}$, low-β regime). Degrades to Cat B at $\beta \geq 20$ due to $D_4$-induced multipole mixing. Continuous-rotation-symmetric lattices (torus with $k \to \infty$ limit) expected to retain orbital structure; discrete-symmetry lattices degrade.
+
+**Category:** **Cat A empirical** (low-β, pure $\mathcal{E}_{\mathrm{bd}}$, 2D sq) / **Cat B** (high-β or other graphs — NQ-112).
+
+**Canonical merge target:** §5 (Transition Diagnostics) extension — add "Orbital signature" subsection; §13 new Cat A empirical entry.
+
+#### A-2026-04-23-02. 56 Stable Minimizers at 32×32 Canonical Defaults
+
+**출처:** `logs/daily/2026-04-23/10_orbital_fullscale_analysis.md` §1–§3; `CODE/experiments/exp_orbital_fullscale.py`; `CODE/results/exp_orbital_fullscale.json` (20,374 lines, full Hessian dumps).
+
+**Statement (empirical).** On 32×32 square grid with $(c=0.5, \beta=30, \alpha=1.0)$ and pure $\mathcal{E}_{\mathrm{bd}}$, gradient-flow from 90 initial conditions (30 seeds × 3 IC modes: eigmode_combo, fiedler_random, random) produces:
+- **56 Morse-index-0 stable minimizers**
+- 34 Morse-index-1 saddles
+- **52 distinct $(\mathcal{F}, K_{\mathrm{step}})$ type pairs**
+- **37 distinct Mode-1 orbital labels**
+- Energy range [89.54, 610.58] across stable
+
+**IC-dependence (sub-result).** Basin distribution strictly stratified by IC mode: eigmode_combo → $E \in [68, 155]$ (low-E, ordered); fiedler_random → $E \in [220, 420]$; random → $E \in [460, 610]$ (high-E, disordered). Direct full-scale empirical confirmation of R22 V5 Protocol Selection.
+
+**Category:** **Cat A empirical** at specified config. Generalization to other $(n, c, \beta)$ — NQ-119 (finite-size), NQ-111 (c-axis), NQ-117 (normalize=True).
+
+**Canonical merge target:** §11 (Multi-formation paradigm) extension — landscape multi-modality established at full scale; §13 new Cat A empirical entry.
+
+#### A-2026-04-23-03. Closure+Separation Eliminates F=1 Single-Disk Stable Minimizer
+
+**출처:** `logs/daily/2026-04-23/11_fullscc_comparison.md` §2–§3; full SCC $(\lambda_{\mathrm{cl}}=\lambda_{\mathrm{sep}}=\lambda_{\mathrm{bd}}=1)$ run with identical config as A-02.
+
+**Statement (empirical).** Under identical (32×32, c=0.5, β=30, 90 runs) setup:
+- **Pure $\mathcal{E}_{\mathrm{bd}}$**: F=1 K=1 stable minimizer **exists** (E=125.15).
+- **Full SCC** ($\mathcal{E}_{\mathrm{cl}} + \mathcal{E}_{\mathrm{sep}} + \mathcal{E}_{\mathrm{bd}}$): F=1 stable minimizer **does not exist** across all 90 runs × 3 IC modes. Lowest stable F = **5** (F=5 K=2, E=168.36).
+
+**Additional findings.** Stable total count identical (56 ↔ 56), but stable F-distribution shifts fundamentally toward high-F. F-46-63 range: 0 stable (pure) → ~30 stable (full SCC). Runtime 77× slower due to closure evaluation.
+
+**Interpretation (Cat A level).** $\mathcal{E}_{\mathrm{cl}}$ + $\mathcal{E}_{\mathrm{sep}}$ 의 frustration이 single-disk Hessian을 indefinite로 만들어 saddle로 전환. CN1 (non-idempotence) + A3 ($a_{\mathrm{cl}} < 4$)가 interior uniformity를 $c^\ast$ 쪽으로 계속 pushed → pure disk interior ($u \approx 1$) 비용 증가. $\mathcal{E}_{\mathrm{sep}}$ local diversity 요구도 uniform interior penalize.
+
+**Category:** **Cat A empirical** at specified config. Three caveats (NQ-117 normalize, NQ-119 finite-size, NQ-112 graph-class) must close before Cat A universal.
+
+**Canonical merge target:** §14 CN14 strengthening ("Closure restructures landscape topology"); §5 update on "Single formation ≠ single disk in full SCC"; §13 new Cat A empirical entry.
+
+#### A-2026-04-23-04. $\mathcal{F}$ (Local Maxima Count) as Threshold-Independent Topological Invariant
+
+**출처:** `logs/daily/2026-04-23/07_shape_modes_orbital_hypothesis.md` §2.3; `12_what_it_means.md` §2.3.
+
+**Statement (definitional).** Define $\mathcal{F}(u) := \#\{x \in X : u(x) > u(y) \text{ for all neighbors } y \sim x\}$ as the count of strict local maxima. Then:
+- $\mathcal{F}$ is **threshold-independent** (no $\tau$ parameter).
+- $\mathcal{F}$ is upper semi-continuous under small perturbations.
+- For any $\tau$, $K_{\mathrm{step}}(u; \tau) \leq \mathcal{F}(u)$ (connected components of super-threshold set ≤ local maxima).
+- Bilobed K=1 configurations (two tanh peaks with $u_{\mathrm{bridge}} \in (0.5, 1)$) satisfy $K_{\mathrm{step}}(u; 0.5) = 1$ but $\mathcal{F}(u) = 2$ — **$\mathcal{F}$ distinguishes shape-mode-excited states that $K_{\mathrm{step}}$ conflates**.
+
+**Why canonical needs this.** Current canonical §5 treats $K_{\mathrm{step}}$ as primary Layer-1 observable. Today's findings (A-01, A-02) demonstrate $K_{\mathrm{step}}$ is insufficient: a "single connected region" may contain multiple orbital peaks. $\mathcal{F}$ is the threshold-free companion required for orbital-augmented Formation Quantization (P-01 below).
+
+**Category:** **Cat A definitional** (elementary; no theorem needed).
+
+**Canonical merge target:** §5 new definition block — dual observable $(\mathcal{F}, K_{\mathrm{step}})$; §3 (derived observables) cross-reference.
+
+#### A-2026-04-23-05. Class S (Basic Boltzmann Softmax) Refutation — Negative Cat A
+
+**출처:** `logs/daily/2026-04-23/SF_function_taxonomy.md` §5; cross-references `logs/daily/2026-04-22/X1 V7 P1 experiment` (이미 2026-04-22 empirical refutation, today formalized into taxonomy).
+
+**Statement.** The basic Boltzmann softmax hypothesis
+$$P_\pi(\widehat K = k | \beta) = \frac{e^{-E_k^\ast(\beta)/T_{\mathrm{eff}}}}{\sum_j e^{-E_j^\ast(\beta)/T_{\mathrm{eff}}}}$$
+is **refuted** as a universal model for SCC protocol-bistable basin selection. X1 V7 P1 data (2026-04-22 session) exhibits $\widehat K$ distribution that does not match any single $T_{\mathrm{eff}}$. **Replacement**: Class N (spectral Gaussian, new) or Class H-Th2 (basin-volume-weighted, proposal) — see P-03 below.
+
+**Scope.** Basic Boltzmann softmax over basin energies is refuted. More careful formulations (basin-volume-weighted, protocol-conditional) remain open hypotheses.
+
+**Category:** **Cat A negative** (Retirement of specific hypothesis, not of entire thermal framework).
+
+**Canonical merge target:** §13 Retired section — explicit note that basic Boltzmann form is insufficient. §14 CN15-thermal (2026-04-21) explicitly annotate "basin-volume-weighted, not raw Boltzmann".
+
+---
+
+### Modified
+
+#### M-2026-04-23-01. Cor 2.2 Tier 2 Scope Qualifier
+
+**출처:** `logs/daily/2026-04-23/11_fullscc_comparison.md` §4; comparison with `canonical_sub.md` 2026-04-22 C-2026-04-22-01 (Three-Tier status).
+
+**Modification.** Cor 2.2 Tier 2 ("qualitative: any K=1 minimizer has $\mathrm{ratio} \propto \xi_0$") currently Cat A per 2026-04-22 entry. Today's A-03 shows: under **full SCC** at (32×32, c=0.5, β=30, equal weights), **no K=1 F=1 single-disk stable minimizer exists**. Therefore Tier 2 "any K=1 minimizer"의 universal quantifier는 under full SCC 공허하게 참 (vacuously true) — there are no single-disk K=1 minimizers to constrain. Tier 2 valid only in **pure $\mathcal{E}_{\mathrm{bd}}$ regime** at least at this config.
+
+**Proposed re-statement.** "Cor 2.2 Tier 2: For K=1 minimizers **of pure $\mathcal{E}_{\mathrm{bd}}$** (or SCC in parameter regime where such minimizers exist), $\mathrm{ratio} \propto \xi_0$."
+
+**Category:** Cat A (pure $\mathcal{E}_{\mathrm{bd}}$) / Regime-restricted (full SCC).
+
+**Canonical merge target:** `canonical.md` §13 Cor 2.2 Tier 2 inline qualifier (~2 lines).
+
+---
+
+### Retired
+
+#### R-2026-04-23-01. Implicit Assumption "Single Formation = Single Disk"
+
+**출처:** `logs/daily/2026-04-23/12_what_it_means.md` §2.2; contrastive with canonical v1.2 암묵 assumption throughout §13 single-formation theorems.
+
+**Retiring.** The implicit canonical assumption that "single formation = single connected disk of cohesion, represented by tanh profile (Cor 2.2)" is **empirically refuted** for full SCC. Under (32×32, c=0.5, β=30, $\lambda_{\mathrm{cl}}=\lambda_{\mathrm{sep}}=\lambda_{\mathrm{bd}}=1$), single-disk configurations are not stable minima. Full SCC's natural "single formation" is a **multi-peak internally-distributed cohesion pattern** with $K_{\mathrm{step}}=1$ but $\mathcal{F}\gg 1$.
+
+**What survives.** Cor 2.2 at pure $\mathcal{E}_{\mathrm{bd}}$ (Tier 1 tanh ansatz exact; Tier 2 pure-E_bd any K=1). Single-formation architecture is retained; **its representation** changes from "disk" to "orbital mode set".
+
+**What retracts.** "Single formation 은 단일 원반" 이 default reading 라는 implicit assumption. Retire 명시적.
+
+**Category:** **Retraction of implicit assumption**, not retraction of explicit theorem. No line-level canonical edit required except in Cor 2.2 qualifier (M-01) and new Pending explicit clarifier (P-05 below).
+
+**Canonical merge target:** §5 + §13 inline clarification — "single formation" accepts multi-peak internal structure; single-disk is special case.
+
+---
+
+### Clarified
+
+#### C-2026-04-23-01. Three-Layer Hierarchy — Organizational Device, Not Strict Partition
+
+**출처:** `logs/daily/2026-04-23/SF_layer_classification.md` §6; R22 (2026-04-22) Three-Layer setup.
+
+Layer classification of 77 Cat A claims yielded:
+- Layer 1 (topology): ~18%
+- Layer 2 (geometry): ~32%
+- Layer 3 (field): ~23%
+- **Mixed ($\ell_1, \ell_2$)**: **~27%**
+- Meta / Ambiguous: ~0–1% (effectively absent after reclassification)
+
+**Implication.** Three-Layer Hierarchy is an **organizational device** for understanding theorem structure, NOT a strict mathematical partition. Mixed claims are genuinely cross-layer (e.g., "Layer 2 $\xi_0$ determines Layer 3 tanh profile width") and their existence is the product of Stage 2 Axiom Audit, not a bug to be fixed.
+
+**Canonical policy.** Future canonical additions should not force strict Layer 1/2/3 tagging; Mixed is a legitimate category. Orbital-related claims (post-today) may require new Layer 1.5 or Layer 2a sub-layer (NQ-121).
+
+**Canonical merge target:** `canonical.md` CN-new (Three-Layer organizational clarifier); metadata level only.
+
+#### C-2026-04-23-02. Apparent Static/Dynamic Tension — $F(K)$ Landau Monotone vs Observed $\widehat K > 1$
+
+**출처:** `logs/daily/2026-04-23/MF_multi_quantization.md` §7 (Landau monotone); cross with R17-R20 observed $\widehat K > 1$ in SBM/grid.
+
+**Apparent tension.** Morning theorem: $F(K) = K \cdot F_{\mathrm{single}}(r_0(K), \xi_0) + \binom{K}{2} F_{\mathrm{pair}}(d_{\min}(K))$ is monotone increasing in K (under well-separated + isoperimetric bounds) → $K_{\mathrm{global}} = 1$. Afternoon/evening empirical: 90-run full-scale shows $\widehat K_{\mathrm{step}} > 1$ common and $\mathcal{F}$ up to 63 in stable configurations.
+
+**Resolution (this session).** The two results pertain to **different quantities**:
+- $F(K)$ monotone governs **global static minimum** on $\Sigma_m$.
+- $\widehat K_{\mathrm{step}}$ and $\mathcal{F}$ are **dynamic protocol-endpoint observables** (gradient-flow from specific IC).
+- The two decouple via CN15 (proposed) **Static/Dynamic Separation Principle**: global static min has no mechanism to be reached by finite-time dynamics from generic IC; hence protocol-observed $\widehat K$ need not equal $K_{\mathrm{global}}$.
+
+**Canonical status.** Clarified conceptually, but Static/Dynamic Separation is itself a new commitment (CN15 Pending). Independent empirical signature distinguishing static vs dynamic is NQ-124.
+
+**Canonical merge target:** CN15 Pending; §11 Multi-formation paradigm — add "Static vs Dynamic observable distinction" paragraph.
+
+---
+
+### Pending
+
+#### P-2026-04-23-01. Axiom S1' — Orbital-Augmented Formation Quantization
+
+**출처:** `07_shape_modes_orbital_hypothesis.md` §7; `08_orbital_discovery_program.md` §4.
+
+**Proposed axiom (REPLACING CN17/CN18 single-disk reading).** Formation is characterized not by integer count $K$ alone but by **labeled orbital configuration**:
+$$\mathrm{Formation}(u^\ast) = \{(c_k, \xi_k, n_k, \ell_k) : k = 1, \ldots, \mathcal{F}(u^\ast)\}$$
+where $(n_k, \ell_k)$ is the dominant Hessian eigenmode at each local peak. Observable: $\mathcal{F}$ + orbital label set, not $K_{\mathrm{step}}$.
+
+**Status.** Proposal requires (i) proof that $(n_k, \ell_k)$ is well-defined across $D_4$-degenerate regimes, (ii) empirical closure on NQ-117/NQ-119/NQ-112, (iii) Stage 2 Axiom Audit integration. Current empirical support: Cat A at (2D sq, pure E_bd, low-β); Cat B elsewhere.
+
+**Carry:** Stage 2 Axiom Audit (2026-04-24+).
+
+#### P-2026-04-23-02. CN15 — Static/Dynamic Separation Principle
+
+**출처:** `MF_multi_quantization.md` §9; `12_what_it_means.md` §3.
+
+**Proposed CN15.** "The global static minimum of $\mathcal{E}$ on $\Sigma_m$ (value: $K_{\mathrm{global}} = 1$ per $F(K)$ Landau monotone in well-separated regime) and the dynamic protocol-endpoint observable $\widehat K_{\mathrm{step}}(\pi, \beta, c, G, u_0)$ are **structurally decoupled**: neither determines the other in finite-time gradient flow. Protocol-observed $\widehat K$ is determined by basin-of-attraction geometry + IC distribution, not by global energy ordering."
+
+**Status.** Theoretically motivated + empirically consistent. Requires independent-signature test (NQ-124) before canonical-level commitment.
+
+**Carry:** Stage 2 Axiom Audit.
+
+#### P-2026-04-23-03. CN16 — Protocol-Parameterized Observables
+
+**출처:** `03_integration_and_new_open.md` §2; `SF_function_taxonomy.md` §8.
+
+**Proposed CN16.** "SCC observables decompose into protocol-invariant (e.g., $F(K)$, $\mathcal{E}(u^\ast)$) and protocol-dependent (e.g., $\widehat K_{\mathrm{step}}(\pi)$, selector outcome). Canonical theorems must specify which class each observable belongs to."
+
+**Status.** Clarifier of existing practice; straightforward to add.
+
+**Carry:** Stage 2.
+
+#### P-2026-04-23-04. CN17 — Formation Quantization (Orbital-Labeled, Revised)
+
+**출처:** `03_integration_and_new_open.md` §2.
+
+**Proposed CN17 (supersedes 2026-04-22 P-04's CN18).** "Formation Quantization = $\mathcal{F}$-count + orbital label set, not integer $K_{\mathrm{step}}$. Single-formation vs multi-formation distinction refines to: $\mathcal{F}=1$ single-mode (atomic-like) vs $\mathcal{F}\geq 2$ multi-mode (molecular-like). $K_{\mathrm{step}}$ becomes a derived connectivity statistic over $\mathcal{F}$-counted peaks."
+
+**Status.** Proposal depends on P-01 (Axiom S1') being accepted.
+
+**Carry:** Stage 2, after P-01 verification.
+
+#### P-2026-04-23-05. §5 New Subsection — $(\mathcal{F}, K_{\mathrm{step}})$ Dual Observable
+
+**출처:** A-04 + P-04.
+
+**Proposed §5 addition** (~25 lines). Explicit definition of $\mathcal{F}$, its properties (threshold-free, upper semi-continuous, $K_{\mathrm{step}} \leq \mathcal{F}$), and canonical role as primary Layer-1 observable alongside $K_{\mathrm{step}}$.
+
+#### P-2026-04-23-06. §11 Update — "Single Formation ≠ Single Disk in Full SCC"
+
+**출처:** R-01 + A-03.
+
+**Proposed §11 addition** (~10 lines). Clarify that single-formation (defined by topology or by orbital grouping) admits multi-peak internal structure; single-disk representation is limited to pure-$\mathcal{E}_{\mathrm{bd}}$ special case.
+
+#### P-2026-04-23-07. §14 — CN14 Strengthening
+
+**출처:** A-03; CN14 existing entry in canonical.md.
+
+**Proposed CN14 strengthening.** Current reading: "Closure expands metastable region". Today evidence: closure **restructures** landscape topology qualitatively, not merely expands it. Specifically, it **eliminates single-disk stable basin** and **multiplies distributed-pattern basins** at (32×32, c=0.5, β=30) canonical config. Suggested re-reading: "Closure qualitatively restructures the energy landscape, eliminating object-like (single-peak) stable minima and promoting distributed multi-peak patterns, quantitatively dependent on $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}})$ balance."
+
+**Canonical merge target:** `canonical.md` §14 CN14 inline correction + pointer to A-03 evidence.
+
+#### P-2026-04-23-08. Time + Thermal Hypotheses (Cat C, Carry)
+
+**출처:** `T_time_evolution.md` + `T_thermal_softmax.md`.
+
+**H-T1..4** (graph-MCF, LSW coarsening, Kramers nucleation, 3-phase dynamics) + **H-Th1..4** (Langevin, basin-volume-weighted, sigmoid smoothing, Kramers escape) — scoped, hypothesis-level (Cat C). Not canonical-ready. Each requires Stage 4+ numerical verification.
+
+**Carry:** Stage 4-5.
+
+---
+
+### Added — Pending OP 승급 (NQ-51..NQ-75, NQ-92, NQ-111..NQ-124)
+
+이 세션에서 발생한 **32 new NQs**. 집계 only — 각 NQ의 세부 statement는 `logs/daily/2026-04-23/03_integration_and_new_open.md` §5 + `12_what_it_means.md` §3 참조.
+
+**Morning scoping NQs (G1-G6)**:
+- **NQ-51**: 27% Mixed을 4-layer 또는 continuous-refinement로 elevate할 수 있는가?
+- **NQ-52..NQ-57**: Function taxonomy 각 class의 parameter law (Class N spectral Gaussian, Class D log exponent, Class P power-law critical exponent, etc.)
+- **NQ-58..NQ-62**: Multi-formation naturality (AN/PSN/ON) overlap regime extension
+- **NQ-63..NQ-66**: Time evolution H-T1..4 quantitative
+- **NQ-67..NQ-70**: Thermal H-Th1..4 quantitative
+- **NQ-71..NQ-75**: Application infrastructure (SBM protocol, real-data pipeline)
+
+**Evening orbital-related NQs**:
+- **NQ-92**: R18 c=0.5 torus re-measurement with $\mathcal{F}$ counting
+- **NQ-111**: c=0.3, 0.7 orbital structure (current data: c=0.5 only)
+- **NQ-112**: torus / SBM / trees / $K_n$ orbital signature
+- **NQ-113..NQ-116**: orbital label $D_4$-mixing at high β — rigorous classification
+- **NQ-117**: normalize=True full SCC re-run (current: normalize=False)
+- **NQ-118**: $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}})$ weight-balance phase diagram
+- **NQ-119**: 48×48 and 64×64 — does F=1 removal survive larger grids?
+- **NQ-120**: Hessian eigenmode continuity across bifurcations (NQ-30 extension)
+- **NQ-121**: Orbital label — Layer 1.5 sub-layer or Layer 2 refinement?
+- **NQ-122**: Two-landscape structure (CN9) — closure-landscape vs energy-landscape interaction empirics
+- **NQ-123**: Cor 2.2 Tier 3 under orbital excitation — does tanh ansatz still hold per-peak?
+- **NQ-124**: Independent empirical signature distinguishing static $K_{\mathrm{global}}$ from dynamic $\widehat K$ (CN15 validation test)
+
+**Aggregate NQ count since inception:** 50 (pre-today) + **32 new** = **82 total**. Post-today triage required (NQ-125 is meta-NQ for this).
+
+---
+
+### 본 entry 의 canonical 변경 규모 (주간 merge 예상)
+
+**2026-04-23 신규 (중-대규모, empirical-heavy)**:
+- §5 새 subsection "$(\mathcal{F}, K_{\mathrm{step}})$ Dual Observable + Orbital Signature" — ~30줄.
+- §11 "Single Formation ≠ Single Disk in Full SCC" clarifier — ~10줄.
+- §13 **3 new Cat A empirical entries** (Orbital hierarchy + 56 stable minimizers + F=1 removal) — ~40줄, 단 config-specific qualifier 반드시 명시.
+- §13 Cor 2.2 Tier 2 scope qualifier inline — ~3줄.
+- §13 1 Retirement entry (basic Boltzmann softmax refutation) — ~5줄.
+- §14 CN15 (Static/Dynamic Separation) Pending insertion — ~10줄.
+- §14 CN16 (Protocol-Parameterized) Pending insertion — ~8줄.
+- §14 CN17 (Orbital-Labeled FQ) Pending — supersedes 2026-04-22 CN18 proposal — ~12줄.
+- §14 CN14 strengthening inline — ~5줄.
+- §14 Three-Layer clarifier (organizational device) — ~5줄.
+
+**Total 2026-04-23 신규:** ~128줄 추가. 2026-04-21 + 2026-04-22 + 2026-04-23 합산: ~498줄 pending merge.
+
+**주간 merge 에서 user 가 결정할 Q23-Q32 (이 세션 신규)**:
+- **Q23 (new).** Axiom S1' (orbital-augmented FQ)을 이번 주 canonical에 승급 vs Stage 2 후 대기? (권고: **Stage 2 후**, config-generalization NQ-117/119/112 중 최소 2 closure 후)
+- **Q24 (new).** A-01/A-02/A-03 empirical results를 Cat A로 등록할 때 scope qualifier 필수 형식 확정. (권고: "at (config specification)" inline)
+- **Q25 (new).** CN18 (2026-04-22 proposal) vs CN17 (2026-04-23 proposal) — CN17이 CN18을 supersedes하는가 또는 공존? (권고: supersedes; CN18 retire)
+- **Q26 (new).** Cor 2.2 Tier 2 scope reduction (full SCC vacuous)을 inline qualifier로 처리 vs Tier 2 split (pure-E_bd / SCC-conditional)? (권고: split)
+- **Q27 (new).** Basic Boltzmann softmax retirement을 §13 Retired에 공식 entry로 올리는가? (권고: yes, A-05 기준)
+- **Q28 (new).** NQ 82개 triage 시점 (NQ-125 meta-NQ)? (권고: 이번 주 내 priority sorting)
+- **Q29 (new).** Orbital label을 Three-Layer Hierarchy의 Layer 1.5 또는 Layer 2 refinement 중 어느 쪽으로 tag? (권고: Stage 2 Axiom Audit 결론 대기)
+- **Q30 (new).** Full SCC 실험의 normalize=False/True 차이 (NQ-117) 우선 해소 후 A-03 Cat A 확정 vs 잠정 Cat A로 기록? (권고: 잠정 Cat A, config-specific annotation)
+- **Q31 (new).** `exp_orbital_discovery.py` + `exp_orbital_fullscale.py` scripts를 `scc/` 모듈로 승격할지? (권고: no, 당분간 experiments/ 유지)
+- **Q32 (new).** "SCC ↔ atomic orbital" analogy를 canonical에 명시적으로 언급할지? (권고: no — Hard Constraint #4 환원 금지 보호; philosophical commentary로만)
+
+---
+
+### Verification confidence summary (2026-04-23)
+
+- Cat A 누적 (합산 — 2026-04-21 + 2026-04-22 + 2026-04-23): **26 (prior) + 5 new empirical/definitional = 31 single-formation-related Cat A**, plus 1 Retirement (basic softmax).
+- Cat A this session: **5 new committed** (3 empirical at specified config + 1 definitional + 1 negative/retirement).
+- Cat A conditional/partial this session: **3** (FQ Uniqueness Thm 3.2 well-separated, $F(K)$ Landau monotone, AN/PSN/ON naturality audit).
+- Cat C hypotheses this session: **8** (H-T1..4 + H-Th1..4).
+- Pending canonical entries: **8** (P-01 through 08).
+- New NQs: **32** (NQ-51..NQ-75 + NQ-92 + NQ-111..NQ-124).
+- Retirements this session: **1 hypothesis + 1 implicit assumption** (basic Boltzmann softmax + "single formation = single disk").
+- New experimental scripts: **2** (`exp_orbital_discovery.py` 261 lines, `exp_orbital_fullscale.py` 401 lines).
+- New empirical data files: **3** (`exp_orbital_discovery.json`, `exp_orbital_fullscale.json` 20,374 lines, `exp_orbital_beta_scan.json`).
+
+---
+
+### Hard Constraints 준수 Audit (10개 전원 ✅)
+
+| # | Constraint | 상태 | 비고 |
+|---|---|---|---|
+| 1 | Canonical 직접 수정 금지 | ✅ | 본 entry는 sub-buffer; canonical.md 직접 편집 없음 |
+| 2 | Silent resolution 금지 | ✅ | F-1, M-1, MO-1 명시 유지; 모든 retraction 명시적 |
+| 3 | Research OS 재도입 금지 | ✅ | 번호 없는 directory 구조 유지 |
+| 4 | 외부 프레임워크 환원 금지 | ✅ | Orbital analogy는 structural parallel only; not identification |
+| 5 | Primitive 전도 금지 | ✅ | u-primitive 유지; $\mathcal{F}$는 derived |
+| 6 | 4 energy 항 병합 금지 | ✅ | Frustration 해석으로 오히려 강화 |
+| 7 | Closure idempotence 금지 | ✅ | A3 stabilization-only 유지, A-03가 오히려 근거 |
+| 8 | K 이중 취급 금지 | ✅ | $K_{\mathrm{step}}$과 $\mathcal{F}$ 명시 분리 |
+| 9 | Metastability 플래그 | ✅ | 모든 thermal claim "requires Langevin" 명시 |
+| 10 | OMC 풀 orchestration 금지 | ✅ | 실행된 실험은 single-process user-invoked |
+
+---
+
+### Session conclusion
+
+**2026-04-23** session은 **morning scoping (Stage 2 Axiom Audit 6-goal multi-scoping) + afternoon user-directed deepening (Axiom Audit + G-miss-4) + evening empirical pivot (Orbital Discovery)** 의 세 페이즈로 전개. Morning은 plan-driven (77 Cat A Three-Layer 분류, function taxonomy, multi-K FQ 확장, time/thermal/application scoping); afternoon은 user request에 의한 G-miss-4 8-perspective audit + axiom-layer mapping; evening은 사용자의 "오비탈?" 질문을 empirical program (16×16 → 32×32 fullscale → Full SCC comparison) 으로 전개, **Closure+Separation이 single-disk stable을 eliminate한다는 결정적 발견**으로 종결.
+
+**이 session의 canonical 의의**: 2026-04-22까지는 theoretical foundation consolidation 이었다면, 2026-04-23은 **empirical foundation commitment**. 3 empirical Cat A + 1 definitional Cat A (A-01..A-04) 가 canonical v2.0 draft의 empirical backbone을 제공. Axiom S1' (orbital-augmented FQ) proposal이 Stage 2 Axiom Audit의 primary target으로 설정.
+
+**2026-04-24 권고 (plan.md N5 option)**: Stage 2 Axiom Audit 최종화 + canonical v2.0 draft §2-§6 (axiom section) 구조 시작. Orbital concept을 Layer 1.5 sub-layer로 integrate하는 방식 검토.
 
 ---
 

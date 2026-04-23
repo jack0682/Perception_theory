@@ -1,21 +1,38 @@
-# THEORY/logs/ — 연구 기록 (Research Journal)
+# THEORY/logs/ — 연구 기록 (Research Journal) + Pre-Canonical Staging
 
-**시간순 날것 기록.** 오늘 뭘 했는지, 무엇을 시도했는지, 어디서 막혔는지 자유롭게 기록.
+**시간순 기록 + promotion pipeline 중간 단계.** daily 는 날것 기록, weekly/monthly 는 canonical 승급 파이프라인의 staging/synthesis layer.
 
-## 구조
+## 구조 (2026-04-23 개편, 3-tier)
 
 ```
 logs/
-├── daily/       YYYY-MM-DD.md   (필요시)
-├── weekly/      YYYY-Www.md     (주간 요약, 선택)
-└── monthly/     YYYY-MM.md      (월간 요약, 선택)
+├── daily/     YYYY-MM-DD/       (원재료, atomic, 필요시)
+├── weekly/    YYYY-MM-W<n>/     (pre-canonical staging, 주 단위 rotating buffer)
+│   ├── weekly_draft_storming.md     (daily append)
+│   └── weekly_summary.md            (week close 시 정제 → canonical merge 후보)
+└── monthly/   YYYY-MM/          (월간 synthesis, canonical merge 없음)
+    ├── monthly_summary.md           (weekly summary 들의 cross-week 통합)
+    └── monthly_retrospective.md     (옵션: narrative 회고)
 ```
+
+**3-tier 역할 분화**:
+
+| Layer | 목적 | 생성 빈도 | Canonical merge 대상? |
+|---|---|---|---|
+| `daily/` | 원재료 기록 | 필요할 때만 | ❌ (working 경유 필수) |
+| `weekly/` | Promotion staging | 주 단위 rotating | ✅ (weekly_summary.md) |
+| `monthly/` | Macro synthesis | 월 1 회 | ❌ (집계만) |
+
+각 layer 에 전용 README 존재:
+- `weekly/README.md` — daily append → week close workflow
+- `monthly/README.md` — 월간 통합 + retrospective workflow
 
 ### daily/
 
-**필요할 때만 작성.** 매일 강제 아님. 무언가 진전·발견·막힘이 있을 때 날짜 파일 하나.
+**필요할 때만 작성.** 매일 강제 아님. 무언가 진전·발견·막힘이 있을 때 해당 날짜 폴더 또는 파일.
 
-파일명: `YYYY-MM-DD.md` (예: `2026-04-20.md`)
+- 단순 노트: `daily/YYYY-MM-DD.md`
+- 다중 session/topic 날: `daily/YYYY-MM-DD/*.md` (예: `01_exploration.md`, `99_summary.md`)
 
 형식 자유. 권장 골격:
 
@@ -23,43 +40,47 @@ logs/
 # YYYY-MM-DD
 
 ## What happened today
-
 <narrative>
 
 ## What I tried
-
 - <attempt 1>
-- <attempt 2>
 
 ## What I learned / decided
-
 <observations>
 
 ## Blockers / open questions
-
 <what's stuck>
 
 ## Next
-
 <tomorrow's seed>
 ```
 
-### weekly/ (선택)
+### weekly/ (pre-canonical staging — 2026-04-23 개편)
 
-주가 끝날 때 돌아보면서 쓴다. `YYYY-Www.md` (ISO week, 예: `2026-W17.md`).
+**기존 canonical_sub.md 단일 파일을 주간 rotating 구조로 개편**. 이전의 선택적 weekly journal 역할을 넘어 **canonical merge 파이프라인의 정규 중간 단계** 가 됨.
 
-- 이번 주 전체에서 건진 것
-- 실패한 방향 (다시 돌아올 것인가?)
-- 다음 주 초점
+파일/폴더 명명: `YYYY-MM-W<n>/` (월 내 주차; "시작일 속한 월" 기준으로 결정). 상세 workflow 는 `weekly/README.md`.
 
-매주 강제 아님. 의미 있을 때만.
+Flow:
+1. **Daily append**: 매일 해당 주 `weekly_draft_storming.md` 에 날짜 섹션 추가 (Added/Modified/Retired/Clarified/Pending 타입)
+2. **Week close**: 주 종료일 (Sat) 에 `weekly_summary.md` 작성 (주간 정제 산출물)
+3. **Canonical merge**: user 가 `weekly_summary.md` 리뷰 후 선별적으로 `canonical/canonical.md` + `theorem_status.md` 에 merge, `CHANGELOG.md` entry
+4. **Freeze**: merge 완료된 이전 주 폴더 동결 (삭제·수정 금지)
 
-### monthly/ (선택)
+### monthly/ (월간 synthesis — 2026-04-23 신설)
 
-월말 재정렬. `YYYY-MM.md` (예: `2026-04.md`).
+**해당 월의 weekly_summary.md 들의 macro-view 통합**. Canonical 에 직접 merge 되지 않는 synthesis-only layer. 상세는 `monthly/README.md`.
 
-- 한 달 단위 방향 전환 기록
-- canonical/에 승급된 것, working/에 남은 것, logs/에만 있는 것의 총 정리
+생성 트리거: 해당 월의 마지막 weekly_summary.md 가 close 된 시점 (통상 다음 월 첫 Sun 근처).
+
+내용:
+- 각 weekly summary 의 bullet integration
+- 월간 Cat A / Retirements / NQ 집계
+- Cross-week narrative (theme continuity, turning points)
+- Long-arc meta-lessons
+- 다음 월 권고
+
+옵션으로 `monthly_retrospective.md` — narrative 회고 (major pivots, abandoned directions, epistemic failures).
 
 ## 기록 ↔ 이론 분리
 

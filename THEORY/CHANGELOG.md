@@ -2,6 +2,46 @@
 
 ---
 
+## 2026-04-23 — Canonical Sub → Weekly Rotation 개편 + Orbital Discovery Empirical Pivot
+
+### Summary
+2026-04-20 신설 `canonical/canonical_sub.md` 가 4일만에 ~2200줄 돌파 → scale 문제 대응으로 **주간 rotating folder 구조** 로 개편. 기존 파일을 `logs/weekly/2026-04-W4/weekly_draft_storming.md` 로 이전 + rename. `canonical/` 는 authoritative 문서만 보유하고, pre-canonical staging 은 기존 journal convention `logs/weekly/` 하위로 정렬. 각 주 종료 시 `weekly_summary.md` 생성 → user 리뷰 → canonical merge 파이프라인. 본 세션의 2026-04-23 entry (Stage 2 Axiom Audit scoping + Orbital Discovery empirical pivot) 는 개편된 draft 에 보존.
+
+### Files Moved (git mv)
+- `THEORY/canonical/canonical_sub.md` → `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` — 파일 rename + 경로 이전 (2-step: 먼저 `canonical/weekly/2026-04-W4/` 로 이전, 이후 `logs/weekly/2026-04-W4/` 로 최종 재배치). Git 이 rename 추적.
+
+### Files Created
+- `THEORY/logs/weekly/README.md` — Weekly rotation workflow 가이드 (폴더 명명, daily append, weekly close, freeze policy, rationale, 기존 logs/ 구조와의 관계).
+
+### Files Modified
+- `THEORY/canonical/README.md` — Pipeline 섹션 재작성. `canonical_sub.md` 제거, 외부 staging 은 `../logs/weekly/YYYY-MM-W<n>/` 로 포인팅.
+- `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` — Header 재작성: "Canonical Sub 주간 누적 Buffer" → "Weekly Draft Storming 2026-04-W4", Week scope 명시, 파일 위치 이력 명시, rotation rationale 추가, pipeline diagram 경로 수정.
+
+### Theorem Status Changes
+- **None** from restructuring itself. 2026-04-23 entry 의 5 Cat A + 1 Retirement 는 weekly merge 시 user 리뷰 대상.
+
+### Rationale
+기존 single-file buffer 는 매일 누적으로:
+- 첫 주 (Apr 20–23) 만에 scale breakdown.
+- 주간 merge 전 overload → reset 불가.
+- 이전 주 맥락이 merge 시점에 flat 소실 (context loss).
+
+Weekly rotation 은 (i) 파일 크기 bounded (주당 ~500줄 예상), (ii) 주 단위 context freeze, (iii) `weekly_summary.md` intermediate artifact 로 canonical merge 품질 향상, (iv) 배치 정합성 (canonical/ 은 authoritative, logs/weekly/ 는 journal-성격 staging).
+
+### Carry-Forward
+- **2026-04-25 (weekly close target):** `logs/weekly/2026-04-W4/weekly_summary.md` 작성 — Apr 20/21/22/23 daily entries 통합 + Cat A 집계 + critical assessment + canonical merge 권고.
+- **User 주간 리뷰 후:** `canonical.md` merge 대상 선정 (2026-04-23 entry 의 Q23-Q32 + 기존 Q1-Q22 결정).
+- **2026-04-26 (Sun):** `logs/weekly/2026-04-W5/weekly_draft_storming.md` 신규 생성, 다음 주 시작.
+
+### 2026-04-23 Session 주요 산출물 (참조용)
+- 5 Cat A candidates (A-01..A-05): Orbital hierarchy + 56 stable minimizers + F=1 closure-elimination + 𝓕 definitional + Boltzmann softmax refutation.
+- 8 Pending CN/Axiom proposals: Axiom S1' + CN15/16/17 + §5 dual observable + §11 update + CN14 strengthening + time/thermal Cat C.
+- 32 new NQs (NQ-51..75 + NQ-92 + NQ-111..124).
+- 2 new experiments (`exp_orbital_discovery.py` + `exp_orbital_fullscale.py`), 3 new JSON results.
+- 상세: `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` §2026-04-23.
+
+---
+
 ## 2026-04-20 — Stage 0 Purpose Decision Material + Integer-K Dependency Map
 
 ### Summary
