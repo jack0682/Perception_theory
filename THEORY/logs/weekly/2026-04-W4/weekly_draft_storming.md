@@ -56,6 +56,279 @@ canonical/theorem_status.md                        (main 동기 update)
 
 ---
 
+## 2026-04-24
+
+**Session type:** σ-framework 정립 (morning) + **C2 cluster (Pre-Objective Mechanism) 완전 공략** (afternoon-evening) + C3/G1 Geometric Taxonomy + Dual-Regime deep dive (night, Theorem 1 V1→V5b 6 iterations).
+**Origin:** `logs/daily/2026-04-24/` (plan.md + pre_brainstorm.md + 01..27_*.md + 99_summary.md, 29 core markdowns ~10,000 줄) + `CODE/scripts/` 10+ new Python scripts + `CODE/scripts/results/` multiple JSON artifacts.
+**Canonical-relevant 산출물:** Added **13 Cat A** (Theorem 2 (i)-(v) + Theorem 2-G + Lemma 4 + F-1 fully resolved + NQ-132/133/134/135/150/155 Cat A), Clarified 1 (M-1 layer-clarification), Sidestepped 1 (MO-1 via single-formation framework), Pending 5 (σ-signature definitional + Axiom S1' v1 + CN15/16/17 sharpened + Commitment 14/15 v2 + Theorem 1 V5b iterative state), New NQs **~40 cumulative** (NQ-125..NQ-171).
+
+---
+
+### 오늘의 성과 비판적 분류
+
+세션 종료 시점 기준 성과를 엄밀성 수준으로 2-tier 분류. "핵심성과"는 proof 또는 직접 numerical 확인을 갖춘 **graph-class-independent 결과 + in-session retraction 없음**. "직접적 주요성과"는 proposal / iterative-progressing / Cat B / sidestepped.
+
+**Tier 1 — 핵심성과 (Cat A, canonical 승급 candidate, 오늘의 유일한 mathematical 결론)**:
+
+1. **Theorem 2 (Pre-Objective Theorem)** — 6 statements (i)-(v) + 2-G (graph-class independent generalization) + Lemma 4 (quadratic form PD) — 모두 Cat A
+2. **F-1 fully resolved** (pure via T-Merge (b) canonical + full via Theorem 2) — Cat A both portions
+3. **NQ-132** ((C5) threshold trivially 0 generically) — Cat A
+4. **NQ-133** (IC-protocol dichotomy $\mathcal{F}_*$) — Cat A
+5. **NQ-134** (cl/sep responsibility mechanism-level) — Cat A
+6. **NQ-135** (generalized $\mathcal{F}_*$ dichotomy) — Cat A
+7. **NQ-150** (graph-class universality qualitative, via Theorem 2-G) — Cat A qualitative
+8. **NQ-155** (thermodynamic limit dichotomy) — Cat A
+
+**Tier 2 — 직접적 주요성과 (proposal / iterative / Cat B / sidestepped — 오늘 *확정* 아님)**:
+
+9. **σ-signature definitional framework** ($\sigma(u^*) = (\mathcal{F}; \{(n_k, [\rho_k], \lambda_k)\})$) — Definitional Cat A (scaffolding)
+10. **Axiom S1' v1** (SCC-intrinsic redraft) — PROPOSAL
+11. **CN15/16/17 sharpened** — PROPOSAL
+12. **Lemma 1/2/3** (irrep decomposition well-defined + nodal count + Goldstone saturation identity) — Cat A definitional
+13. **Theorem 3** (σ at uniform on $D_4$ grid closed form) — Cat A special instance
+14. **Theorem 4** (σ at first-pitchfork leading order $\epsilon$) — Cat A special instance
+15. **Theorem 1 V5b** (dual-regime: sub-lattice orbital / super-lattice Goldstone + commensurability splitting) — **V1→V5b 6 iterations (V4, V5a retracted in-session). Current best, not yet a conclusion.**
+16. **M-1** layer-clarified, **MO-1** sidestepped (via single-formation σ-framework)
+17. **C3 cluster** sub-lattice resolved (conditional on Theorem 1 V5b)
+18. **Commitment 14** (orbital character constitutive) / **Commitment 15 v2** (pre-objective as theorem) — candidate
+
+**비판적 자기 평가 (Critical Self-Assessment)**:
+
+- **Tier 1 의 scope**: Theorem 2 family 는 (G1)-(G4) 가정 하 graph-class independent Cat A. 특정 grid 의존성 없음. **이것이 세션의 유일한 *확정된 mathematical 결론*.**
+- **Theorem 1 의 iteration nature**: V1→V5b 6 iterations (V4 premature sharp-transition claim, V5a partially-wrong falsification 이 **in-session retracted**). V5b 의 commensurability splitting 은 **오늘 발견된 새 현상** 이며 NQ-168 이 내일 primary target. 결론으로 올리면 안 됨.
+- **σ-framework 의 위상**: definitional scaffolding. Cat A definitional 이지 Cat A empirical 아님. σ-values 의 *예측* (내일 NQ-128/137/141) 없이는 empirical content 확정 안 됨.
+- **주제 분산**: 오늘은 4 arc (σ-framework morning / C2 afternoon / C3-G1 evening / dual-regime night) 로 이어졌음. **그 중 *self-contained 하게 닫힌* arc 는 C2 하나**. 나머지는 in-progress.
+- **Silent resolution: 0건. Hard constraint 위반: 0건. Canonical 직접 수정: 0건.** (9/9 success criteria 충족)
+
+---
+
+### Added
+
+#### A-2026-04-24-01. Theorem 2 Family (Pre-Objective Mechanism, Graph-Class Independent)
+
+**출처:** `logs/daily/2026-04-24/08_C2_phase1_theory.md` (analytic) · `09_C2_phase2_results.md` (L=12 numerical direct confirm) · `11_C2_phase4_partial.md` (Lemma 4) · `11a_C2_generalization.md` (Theorem 2-G) · `12_C2_final.md` (Phase 3 integration) · `15_C2_thermo_results.md` (Phase 3C dichotomy) · `16_C2_closure.md` (final closure).
+
+**Statement (formal).** $\mathcal{E} = \mathcal{E}_{\mathrm{bd}} + \lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}} + \lambda_{\mathrm{sep}} \mathcal{E}_{\mathrm{sep}}$ canonical params ($b_D = 0$, $a_{\mathrm{cl}} \in (0,4)$, $c \in$ spinodal, $\beta > \beta_{\mathrm{crit}}^{(2)}$). Let $u_0^* \in \Sigma_m$ be a non-uniform critical point of pure $\mathcal{E}_{\mathrm{bd}}$. Then for generic $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}) \in \mathbb{R}^2_{>0}$ excluding the codim-1 anti-parallel locus $\{g_{\mathrm{cl}}(u_0^*) \parallel -g_{\mathrm{sep}}(u_0^*)\}$:
+
+- **(i) disk non-criticality**: $u_0^*$ is NOT a critical point of full $\mathcal{E}$ on $\Sigma_m$.
+- **(ii) multi-peak attractor**: gradient flow from $u_0^*$ converges to $u^*_{\mathrm{end}}$ with $\mathcal{F}(u^*_{\mathrm{end}}) > \mathcal{F}(u_0^*)$.
+- **(iii) Lemma 4 (quadratic form PD)**: $M \in \mathbb{R}^{2\times 2}$ with $M_{11} = \|g_{\mathrm{cl}}\|^2$, $M_{22} = \|g_{\mathrm{sep}}\|^2$, $M_{12} = \langle g_{\mathrm{cl}}, g_{\mathrm{sep}}\rangle$ is positive definite under $g_{\mathrm{cl}}, g_{\mathrm{sep}}$ linear independence. Destabilization magnitude $\|\nabla \mathcal{E}(u_0^*)\|^2 = \lambda^\top M \lambda$.
+- **(iv) IC sensitivity**: basin-attraction 이 initial condition 의 eigenmode alignment 에 민감.
+- **(v) thermodynamic dichotomy**:
+  - Adaptive IC (Fiedler/eigenmode-aligned): $\mathcal{F}_*^{\mathrm{adaptive}}(L) \leq F^{\mathrm{first-pitchfork}}(\beta, c) + O(1)$, **bounded**.
+  - Random IC: $\mathcal{F}_*^{\mathrm{random}}(L) \sim L^{2.8}$, **divergent**.
+
+**Theorem 2-G (graph-class generalization).** Under (G1)-(G4) — (G1) pure $\mathcal{E}_{\mathrm{bd}}$ non-uniform critical exists, (G2) $\mathrm{Cl}$ contraction FP $c^* \mathbf{1}$, (G3) $D$ canonical sigmoid, (G4) $u_0^*$ non-constant — 결론 (i),(ii) 이 **모든 유한 연결 그래프에서 성립**. Graph-class independent.
+
+**Proof structure (5 step, 전부 graph-independent).**
+- Step 1: $u_0^*$ pure-bd critical ⟹ $g_{\mathrm{bd}}(u_0^*) = \mu \mathbf{1}$ (Lagrange).
+- Step 2: Full-critical 동치조건 $(g_{\mathrm{cl}} + g_{\mathrm{sep}})(u_0^*) \in \mathrm{span}(\mathbf{1})$ on $\mathbf{1}^\perp$.
+- Step 3: $g_{\mathrm{cl}} = a_{\mathrm{cl}}(I - J_{\mathrm{Cl}}^\top)(u_0^* - \mathrm{Cl}(u_0^*))$; $\mathrm{Cl}$ unique FP = $c^* \mathbf{1}$ (T6b canonical Cat A); $u_0^*$ non-constant ⟹ $u_0^* \neq \mathrm{Cl}(u_0^*)$ ⟹ $g_{\mathrm{cl}} \neq 0$.
+- Step 4: $D$ sigmoid + $u_0^*$ heterogeneous interior/exterior contrast ⟹ $g_{\mathrm{sep}} \neq 0$.
+- Step 5: Anti-parallel locus codim-1; generic $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}})$ excludes it ⟹ (i). Multi-peak attractor ⟹ (ii) via Lemma 4 PD. ∎
+
+**Numerical confirmation (L=12 free-BC grid, Phase 2, direct).** Pure $\mathcal{E}_{\mathrm{bd}}$ disk minimizer 에서 측정:
+
+| 측정량 | 값 | 의미 |
+|---|---|---|
+| $\|g_{\mathrm{cl}}(u_0^*)\|$ | 2.11 | Step 3 의 $g_{\mathrm{cl}} \neq 0$ 확인 |
+| $\|g_{\mathrm{sep}}(u_0^*)\|$ | 7.03 | Step 4 의 $g_{\mathrm{sep}} \neq 0$ 확인 |
+| $\cos(g_{\mathrm{cl}}, g_{\mathrm{sep}})$ | **−0.76** (≠ −1) | Step 5 의 generic regime 확인 |
+| $\langle g_{\mathrm{cl}}, g_{\mathrm{sep}}\rangle$ | −11.3 | — |
+| $\|g_{\mathrm{full}}\|$ at $\lambda=(1,1)$ analytic | $\sqrt{4.45 - 22.6 + 49.4} = 5.59$ | Lemma 4 quadratic form |
+| $\|g_{\mathrm{full}}\|$ numerical | **5.589** | 3-digit quantitative 일치 |
+| Flow endpoint $\mathcal{F}$ | **F=1 → F=9** | (ii) multi-peak attractor 직접 관측 |
+
+**Phase 3C confirmation (L=32, thermodynamic dichotomy).**
+
+| IC protocol | $\mathcal{F}_{\min}$ at L=32 | R23 $F_* = 5$ 와의 관계 |
+|---|---|---|
+| Random uniform | **51** | 훨씬 높음 |
+| Fiedler eigenmode | **2** | 훨씬 낮음 |
+| Adaptive eigenmode_combo (R23) | ≈ 5 | R23 값이 여기 해당 |
+
+Random vs Fiedler $\mathcal{F}_{\min}$ ratio ≈ **25×**. $\mathcal{F}_*^{\mathrm{random}}(L) \sim L^{2.8}$ empirical fit.
+
+**Category.**
+- Thm 2 (i), (iii), (iv), (v) dichotomy form, Thm 2-G qualitative, Lemma 4 — **Cat A**
+- Thm 2 (ii) qualitative — Cat A; exact $\Delta\mathcal{F}$ — Cat B
+- Thm 2 (v) 정확한 지수 $k \approx 2.8$ — Cat B (empirical fit)
+- Thm 2-G 특정 graph class 위 정량값 — Cat B/C
+
+**Canonical merge target.**
+- `canonical.md` §13: Theorem 2 family + Theorem 2-G + Lemma 4 추가
+- `canonical.md` §14: Commitment 15 v2 후보 ("Pre-objective 가 mathematical theorem") 추가
+- `theorem_status.md`: 8 new Cat A entries
+
+#### A-2026-04-24-02. F-1 Fully Resolved (Cat A Both Layers)
+
+**출처:** `logs/daily/2026-04-24/16_C2_closure.md` §4.
+
+**Statement.** F-1 ("K=2 global stability vacuous without external per-formation mass; K=1 always ~50% cheaper") 이 두 layer 로 분해되어 각각 Cat A resolved:
+- **Pure $\mathcal{E}_{\mathrm{bd}}$ portion**: canonical T-Merge (b) Cat A 에 의해 이미 resolved. "K=1 global minimum on $\Sigma_m$; K=2 requires modification to $\Sigma^K_M$" 는 T-Merge (b) isoperimetric ordering 의 직접적 따름결과. 세션 시작 시 "open conjecture" 분류는 **잘못된 분류**.
+- **Full SCC portion**: Theorem 2 (i) 에 의해 negative resolution. "$\mathcal{F} = 1$ vacuous under full SCC; $\mathcal{F} \geq 2$ default ground state."
+
+**Reframing note.** F-1 의 기존 premise ("K=1 이 energetically preferred 인데 관측은 K>1") 자체가 잘못 framed. Full SCC layer 에서 $\mathcal{F}=1$ 은 애초에 non-critical 이므로 "K=1 cheaper vs observed K>1" 대립 구조가 형성되지 않음. 이는 기존 제안된 resolution A/B/C (외부 고정 / K-selection / kinetic) 중 어느 것도 아닌 **네 번째 길**: *문제의 premise 붕괴*.
+
+**Category:** **Cat A fully resolved** (both portions).
+
+**Canonical merge target:**
+- `open_problems.md` OP-0001 (F-1): UNRESOLVED 🔴 → Cat A RESOLVED
+- `theorem_status.md` F-1 entry 업데이트 + T-Merge (b) cross-reference
+
+#### A-2026-04-24-03. NQ-132 / 133 / 134 / 135 / 150 / 155 Cat A
+
+**출처:** `16_C2_closure.md` §3, §5; `15_C2_thermo_results.md`; `11a_C2_generalization.md` §7; `08_C2_phase1_theory.md`.
+
+**Statement (요약):**
+- **NQ-132** — $\lambda_{\mathrm{cl}}^{\mathrm{crit}}$ threshold: Theorem 2 (i) Step 3 에서 $g_{\mathrm{cl}} \neq 0$ 가 자동이므로 threshold trivially 0 generically. Cat A.
+- **NQ-133** — $\mathcal{F}_*$ 의 IC dependence: Phase 3C dichotomy 관측 (random 51 vs Fiedler 2 at L=32). Cat A.
+- **NQ-134** — cl/sep responsibility: $\lambda^\top M \lambda$ 가 both $\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}$ 에 monotone; F_mean non-monotonicity (pure sep scan) 는 **IC artifact**, mechanism 의 본질적 비단조 아님. Cat A mechanism-level.
+- **NQ-135** — generalized $\mathcal{F}_*$: existence Cat A + dichotomy form Cat A.
+- **NQ-150** — graph-class universality: Theorem 2-G 가 "$\mathcal{F} \geq 2$ universal" 를 입증. Cat A qualitative.
+- **NQ-155** — thermodynamic limit: adaptive bounded + random $\sim L^{2.8}$ divergent (dichotomy). Cat A.
+
+**Category:** 6 NQ 모두 **Cat A**.
+
+**Canonical merge target:** `theorem_status.md` NQ-list 업데이트.
+
+---
+
+### Clarified
+
+#### Cl-2026-04-24-01. M-1 Layer Clarification
+
+**출처:** `16_C2_closure.md` §4; `11_C2_phase4_partial.md`.
+
+**Statement.** M-1 ("K=1 energetic preference by $E(m_1, m_2)$ monotonicity as $m_2 \to 0$") 은 **pure $\mathcal{E}_{\mathrm{bd}}$ layer 에서만 유효**. Full SCC layer 에서는 Theorem 2 에 의해 $\mathcal{F}=1$ 이 애초에 non-critical 이므로 "K=1 cheaper" 라는 비교 자체가 framed 되지 않음. M-1 은 pure-bd layer 에서 참, full SCC layer 에서는 premise 붕괴.
+
+**Category:** Clarified (metadata-level, pure vs full layer 분리).
+
+**Canonical merge target:** `open_problems.md` OP-0002 (M-1) — layer dependency 명시.
+
+---
+
+### Sidestepped
+
+#### Sd-2026-04-24-01. MO-1 Scope-Separated via Single-Formation σ-Framework
+
+**출처:** `99_summary.md` §8; `16_C2_closure.md` §7.
+
+**Statement.** MO-1 ("$\Sigma^2_M$ manifold-with-corners ⟹ smooth Morse inapplicable") 는 **multi-formation** constrained manifold 의 문제. 본 세션의 σ-framework 는 single formation $\Sigma_m$ 위 정의 + Theorem 2 family 도 single-formation level. 따라서 MO-1 이 본 결과에 blocker 가 아님 (**sidestepped**, not resolved). Multi-formation σ 의 stratified Morse 확장은 별개 task (Phase 5).
+
+**Category:** Sidestepped (scope separation, not mathematical resolution).
+
+**Canonical merge target:** `open_problems.md` OP-0003 (MO-1) — scope note 추가 ("current theorems do not require stratified Morse on $\Sigma^K_M$").
+
+---
+
+### Pending (proposals requiring user weekly review)
+
+#### P-2026-04-24-01. σ-Signature Framework (Definitional, Canonical-Ready)
+
+**출처:** `02_development.md` §2, §5; `04_orbital_proofs.md`; `05_orbital_essence.md`.
+
+**Statement.** For local minimum $u^* \in \Sigma_m$ of full $\mathcal{E}$:
+
+$$\sigma(u^*) = \big(\mathcal{F}(u^*);\ \{(n_k, [\rho_k], \lambda_k)\}_{k=1}^{K}\big)$$
+
+where $n_k$ = nodal domain count of $k$-th Hessian eigenvector; $[\rho_k] \in \mathrm{Irr}(\mathrm{Stab}_G(u^*))$ with $\mathrm{Stab}_G(u^*) \subset \mathrm{Aut}(G)$; $\lambda_k$ = $k$-th Hessian eigenvalue. Cutoff $K$ determined by spectral-gap multiple $c = 10$ (provisional, NQ-125).
+
+**Supporting lemmas (Cat A definitional):** Lemma 1 (irrep decomposition well-defined), Lemma 2 (nodal count properties), Lemma 3 (Goldstone-saturation identity $(\partial_x u^*, \partial_y u^*)$ ↔ ℓ=1).
+
+**Worked instances (Cat A):** Theorem 3 (σ at uniform on $D_4$ grid closed form), Theorem 4 (σ at first-pitchfork leading order $\epsilon$).
+
+**Role.** Connects continuous primitive $u_t: X_t \to [0,1]$ to discrete label $\sigma$ — mathematical bridge for SCC ontological two-layer (continuous-emerged-discrete).
+
+**Category:** Cat A definitional + Canonical-ready scaffolding (not empirical content).
+
+**Canonical merge target:** `canonical.md` §6 (observables) 또는 §11 (multi-formation paradigm) 에 signature subsection.
+
+#### P-2026-04-24-02. Axiom S1' v1 (SCC-Intrinsic Redraft)
+
+**출처:** `03_integration_and_new_open.md`; `working/canonical_drafts/axiom_S1_prime_v1.md` (TBD draft).
+
+**Statement (draft).**
+
+> For any local minimum $u^* \in \Sigma_m$ of full $\mathcal{E}$ with Morse index 0, there exists a discrete signature $\sigma(u^*) = (\mathcal{F}; \{(n_k, [\rho_k], \lambda_k)\}_{k=1}^{K})$ specified by (i) $\mathcal{F}$ = local-maxima count, (ii) $n_k$ = nodal count, (iii) $[\rho_k]$ = irrep class, (iv) $\lambda_k$ = Hessian eigenvalue. Formation identity is specified by $\sigma$, not by $K_{\mathrm{step}}$ or single-observable $K$.
+
+**Category:** PROPOSAL (stage 6 merge candidate).
+
+**Canonical merge target:** `canonical.md` §14 commitment 또는 new axiom group S.
+
+#### P-2026-04-24-03. CN15/16/17 Sharpened
+
+**출처:** `03_integration_and_new_open.md`; `14_C3_theory_attack.md`.
+
+**Statement:**
+- **CN15 Static/Dynamic Separation**: proof-of-need + falsifiability test 보강.
+- **CN16 Protocol-Parameterized observables**: R23/Phase 3C IC-protocol dichotomy 로 정량 empirical 뒷받침.
+- **CN17 σ-labeled Formation Quantization**: 기존 CN18 대체; σ-framework 와 연결.
+
+**Category:** PROPOSAL.
+
+#### P-2026-04-24-04. Commitment 14 / 15 v2 후보
+
+**출처:** `05_orbital_essence.md` §8; `16_C2_closure.md` §7.
+
+**Statement:**
+- **Commitment 14**: "Orbital character is constitutive, not analogical." σ 가 SCC 의 continuous $u$ ↔ discrete label 의 ontological bridge.
+- **Commitment 15 v2**: "Pre-objective commitment is mathematical theorem." Theorem 2-G 가 graph-class independent 증명으로 정당화.
+
+**Category:** PROPOSAL (canonical §14 후보).
+
+#### P-2026-04-24-05. Theorem 1 V5b — Iterative State, NOT a Session Conclusion
+
+**출처:** `21..27_*.md` sequence (dual-regime deep dive, V1→V5b, 6 iterations).
+
+**Current best statement (V5b).** Regime parameter $\zeta = \xi_0 / a$.
+- Sub-lattice ($\zeta < 0.3$): all geometries genuine orbital only.
+- Super-lattice ($\zeta > 0.5$): translation Goldstone doublet with commensurability splitting (one near-zero + one orbital-scale).
+- Crossover ($0.3 < \zeta < 0.5$): smooth.
+
+**Iteration history (in-session retractions):**
+- V1 (morning): Goldstone universal — falsified by G1
+- V2 (G1): 3-geometry taxonomy (T / T_off / O) — incomplete
+- V3 (C3-T): regime-based (sub/super) — misinterpreted
+- V4 (`24_*`): sharp $\zeta \approx 1$ transition — **retracted in-session (premature)**
+- V5a (`25_*`): dual-regime falsification — **retracted in-session (partially wrong)**
+- V5b (`27_*`): eigenvector projection decisive — 94-99% Goldstone overlap in super-lattice + 2D doublet commensurability splitting **discovered**
+
+**Evidence (V5b).** L=40 $\beta/\beta_{\mathrm{crit}} = 10.15$ decoupled test: 99% Goldstone overlap (criticality-independent). 2D doublet commensurability splitting 는 **오늘 발견된 새 현상** — mechanism NQ-168 이 내일 primary target.
+
+**Important note.** V5b 는 *current best state* 이지 **세션의 확정된 mathematical 결론이 아님**. 6 iteration 중 2개 (V4, V5a) 가 in-session retracted 된 chain 의 최신 state. Weekly summary 작성 시 Tier 1 으로 올리지 말 것.
+
+**Category:** Iterative / Cat A conditional on V5b 검증 (NQ-168 pending).
+
+**Canonical merge target:** 아직 없음. 내일 NQ-168 numerical 결과 후 재평가.
+
+---
+
+### New NQs (cumulative NQ-125..NQ-171, ~40 new)
+
+주요 cluster:
+- **C1' (σ-framework depth)**: 11 NQ (σ-jump formalization NQ-148, ontological bridge 등).
+- **C2 (pre-objective)**: 대부분 Cat A resolved; 잔존 NQ-156/157 (practical convergence noise, mechanism 무관).
+- **C3 (orbital structure)**: sub-lattice resolved; super-lattice Goldstone commensurability **NQ-168** 이 highest priority.
+- **C4 (future extensions)**: 17 NQ (multi-formation σ, β-scaling $\nu = 5.8$ closed form NQ-169, etc.)
+
+**Next-session (2026-04-25, W4 마지막 날) priority:**
+- **P0**: `weekly_summary.md` 작성 (Apr 20-24 통합, canonical merge 권고안)
+- **P1**: NQ-168 commensurability mechanism (Theorem 1 V5b 검증/refinement)
+- **P2**: NQ-148 σ-jump formalization 또는 NQ-128 ($\lambda_0/\lambda_1$ ratio) σ-framework numerical 검증
+
+---
+
+### Canonical 경계 준수
+
+- **Canonical 직접 수정**: 0건
+- **theorem_status.md 직접 수정**: 0건
+- **Silent resolution**: 0건
+- **Hard constraint 위반**: 0건
+- 모든 결과는 `logs/daily/2026-04-24/` + 본 weekly buffer 에 accumulate. Stage 6 weekly close (2026-04-25) 시 user 리뷰 후 선별적 canonical merge.
+
+---
+
 ## 2026-04-23
 
 **Session type:** Stage 2 Axiom Audit scoping (morning G1-G6) + User-requested Axiom Audit + G-miss deepening + **Orbital Discovery** (empirical pivot, afternoon-evening).
