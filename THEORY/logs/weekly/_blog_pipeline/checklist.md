@@ -135,11 +135,15 @@
 
 ---
 
-## 11. 검증
+## 11. 검증 (2단계 필수 — velite 만으로는 부족)
 
-- [ ] `cd /Users/ojaehong/Perception/jack0682.github.io && pnpm exec velite build` → 0 errors
+- [ ] **단계 1 — velite content build**: `cd /Users/ojaehong/Perception/jack0682.github.io && pnpm exec velite build` → 0 errors
+  - acorn parse 에러를 잡음 (math 모드 밖 brace 표현 등 syntactic 문제)
+- [ ] **단계 2 — full next.js production build**: `pnpm build` → 0 errors, 모든 페이지 prerender 성공
+  - **velite 가 통과해도 next prerender 에서 잡히는 trap 이 있다** — JSX expression 이 syntactically valid 하지만 render time 에 undefined reference 인 경우 (`ReferenceError: B is not defined` 등)
+  - 296+ pages prerender 가 모두 성공해야 함
 - [ ] grep 으로 카운트 자기모순 점검: `grep -E "[0-9]+ Cat A|[0-9]+ Category A" content/notes/part-0/*.mdx` — 모든 페이지 동일 숫자 (`38` 등)
-- [ ] 빌드 산출 review (옵션): `.velite/` 출력에서 새 entry 등록 확인
+- [ ] 빌드 산출 review (옵션): `.velite/journal.json` 에 새 weekly post slug 등록 확인 (`grep -c "<slug>" .velite/journal.json`)
 
 ---
 
@@ -153,7 +157,60 @@
 
 ## MDX 트랩 (자주 발생하는 빌드 에러)
 
-- **acorn parse error "Could not parse expression with body"**: math 모드 밖에서 `{...}` 가 JSX expression 으로 해석. fix → `$...$` 로 래핑하거나 `\{...\}` 로 escape.
-  - 흔한 케이스: `R^{2x2}`, `Σ^K_M` (밖에서 사용 시), `\widehat{K}` (math 모드 밖)
-- **frontmatter YAML 오류**: `summary:` 안에 `:` 콜론이 unquoted 로 있으면 깨짐. 따옴표로 감싸기.
-- **link slug 미스매치**: `/notes/part-0/canonical-spec-scc-X/` 경로에서 X 가 실제 slug 와 안 맞으면 dead link.
+### Type 1: acorn parse error (velite 단계에서 잡힘)
+
+**증상**: `error Could not parse expression with acorn body`
+
+**원인**: math 모드 밖에서 `{...}` 가 JSX expression 으로 해석되는데, 그 안에 invalid JS syntax (`2x2` 같은 number-prefix identifier 등) 가 있을 때.
+
+**fix**: `$...$` 로 래핑하거나 `\{...\}` 로 escape.
+
+**흔한 케이스**:
+- `R^{2x2}` → `$\mathbb{R}^{2 \times 2}$`
+- `Σ^K_M` (math 밖) → `$\Sigma^K_M$`
+- `\widehat{K}` (math 밖) → `$\widehat{K}$`
+- `~ L^{2.8}` → `$\sim L^{2.8}$`
+
+### Type 2: prerender ReferenceError (velite 통과, next build 에서 잡힘)
+
+**증상**: `ReferenceError: <Letter> is not defined`. velite 빌드는 0 errors 인데 `pnpm build` 의 prerender 단계에서 specific page 가 실패.
+
+**원인**: math 모드 밖에서 `{X, Y, Z}` 같은 패턴이 syntactically valid JS 로 파싱됨. `{B, B+C, E, C+E}` → JSX expression `<>{B, B+C, E, C+E}</>` 으로 해석 → render 시 변수 B, C, E 가 undefined → ReferenceError.
+
+**fix**: brace 자체를 제거하거나 escape. Set notation 은 prose 로 풀어쓰기 권장:
+- ❌ `Pareto frontier {B, B+C, E, C+E}` 
+- ✅ `Pareto frontier 는 B, B+C, E, C+E 로 산출`
+- ✅ 또는 `Pareto frontier $\{B, B+C, E, C+E\}$` (math escape)
+
+**검출**: `grep -nE '\{[A-Z][^$]*\}' content/journal/<file>.mdx` — math 모드 밖의 대문자-시작 brace expression 찾기.
+
+### Type 3: frontmatter YAML 오류
+
+**증상**: 페이지가 빌드되지 않거나 frontmatter 가 깨진 채로 표시됨.
+
+**원인**: `summary:` 등 string 값 안에 unquoted `:` 콜론이 있으면 YAML parser 가 key-value 로 오해석.
+
+**fix**: 따옴표로 감싸기.
+- ❌ `summary: This: a problem`
+- ✅ `summary: "This: a problem"`
+
+### Type 4: link slug 미스매치
+
+**증상**: 빌드 통과되지만 사이트에서 dead link.
+
+**원인**: `[text](/notes/part-0/canonical-spec-scc-X/)` 의 X 가 실제 slug 와 다름.
+
+**fix**: 변경 시 모든 cross-reference grep 으로 점검. canonical 페이지의 slug 는 frontmatter `slug:` 가 truth.
+
+### Type 5: math mode 안의 한글 / non-ASCII
+
+**증상**: 일부 environment 에서 KaTeX 렌더링 실패.
+
+**fix**: math 안에는 한글/한자 사용 금지. 한글 설명은 math block 밖에.
+
+---
+
+## 체크리스트 자체 갱신 이력
+
+- **2026-04-26**: 초안 (W4 backfill 작업 기반)
+- **2026-04-27**: §11 검증을 2단계 (velite + next build) 로 분리. Type 2 prerender ReferenceError trap 추가 (실전에서 weekly post 의 `{B, B+C, E, C+E}` set notation 에 의해 발생).
