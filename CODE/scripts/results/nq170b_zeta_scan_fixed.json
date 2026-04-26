@@ -1,0 +1,1223 @@
+{
+  "L": 20,
+  "c": 0.5,
+  "N_seeds": 3,
+  "zetas": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.7,
+    1.0
+  ],
+  "protocol": "mode-agnostic Goldstone detection; 3 IC widths per seed",
+  "results": [
+    {
+      "zeta": 0.1,
+      "L": 20,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        0,
+        1
+      ],
+      "energy": 120.41477757924793,
+      "u_min": 0.0,
+      "u_max": 0.9964036491947036,
+      "u_std": 0.49224642198715873,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.419455982370927e-13,
+          "overlap_x": 3.1614884593210526e-16,
+          "overlap_y": 2.96043123194459e-17,
+          "overlap_tangent": 1.000000000000001,
+          "max_translation_overlap": 3.1614884593210526e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 159.48202460757417,
+          "overlap_x": 0.3532887410506742,
+          "overlap_y": 0.37817980760535735,
+          "overlap_tangent": 2.7182123291982972e-16,
+          "max_translation_overlap": 0.37817980760535735,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 159.59049726602993,
+          "overlap_x": 0.18531713879916215,
+          "overlap_y": 0.07358184593869485,
+          "overlap_tangent": 2.838434613528076e-16,
+          "max_translation_overlap": 0.18531713879916215,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 159.76839156237017,
+          "overlap_x": 0.29972200081264466,
+          "overlap_y": 0.29055129592186957,
+          "overlap_tangent": 2.485691161654099e-16,
+          "max_translation_overlap": 0.29972200081264466,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 160.15789833793517,
+          "overlap_x": 0.015832069978489374,
+          "overlap_y": 0.018632316174700993,
+          "overlap_tangent": 9.307865078797494e-17,
+          "max_translation_overlap": 0.018632316174700993,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 160.2639400243285,
+          "overlap_x": 0.13279548099093647,
+          "overlap_y": 0.04717668579690779,
+          "overlap_tangent": 1.0519477385422653e-16,
+          "max_translation_overlap": 0.13279548099093647,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 159.48202460757417,
+      "goldstone_max_overlap": 0.37817980760535735,
+      "goldstone_overlap_x": 0.3532887410506742,
+      "goldstone_overlap_y": 0.37817980760535735
+    },
+    {
+      "zeta": 0.1,
+      "L": 20,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 120.41477757878081,
+      "u_min": 0.0,
+      "u_max": 0.9964036484642,
+      "u_std": 0.49224642126064416,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 4.0680728033065e-13,
+          "overlap_x": 3.666581943543845e-16,
+          "overlap_y": 5.273831325031403e-17,
+          "overlap_tangent": 0.9999999999999999,
+          "max_translation_overlap": 3.666581943543845e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 159.48202212302408,
+          "overlap_x": 0.35328887022634464,
+          "overlap_y": 0.3781795981700956,
+          "overlap_tangent": 1.299255432872494e-16,
+          "max_translation_overlap": 0.3781795981700956,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 159.59049598516384,
+          "overlap_x": 0.18531625084282763,
+          "overlap_y": 0.07358116741843283,
+          "overlap_tangent": 4.2081414515668736e-17,
+          "max_translation_overlap": 0.18531625084282763,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 159.76839044153186,
+          "overlap_x": 0.2997224606417566,
+          "overlap_y": 0.2905517749751708,
+          "overlap_tangent": 5.83941108058911e-17,
+          "max_translation_overlap": 0.2997224606417566,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 160.15789596007045,
+          "overlap_x": 0.01583188538566232,
+          "overlap_y": 0.018632377744627445,
+          "overlap_tangent": 3.336163964506656e-17,
+          "max_translation_overlap": 0.018632377744627445,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 160.26393780755424,
+          "overlap_x": 0.13279559125915258,
+          "overlap_y": 0.04717604045562893,
+          "overlap_tangent": 1.6066227513735298e-16,
+          "max_translation_overlap": 0.13279559125915258,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 159.48202212302408,
+      "goldstone_max_overlap": 0.3781795981700956,
+      "goldstone_overlap_x": 0.35328887022634464,
+      "goldstone_overlap_y": 0.3781795981700956
+    },
+    {
+      "zeta": 0.1,
+      "L": 20,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 120.4059503236646,
+      "u_min": 0.0,
+      "u_max": 0.9964009742978719,
+      "u_std": 0.49224302276994103,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 5.652062636240957e-13,
+          "overlap_x": 4.926614671774132e-16,
+          "overlap_y": 2.0816681711721685e-16,
+          "overlap_tangent": 1.0000000000000009,
+          "max_translation_overlap": 4.926614671774132e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 159.54432347374143,
+          "overlap_x": 0.37556327709520854,
+          "overlap_y": 0.2369926059610522,
+          "overlap_tangent": 1.3414765578127983e-16,
+          "max_translation_overlap": 0.37556327709520854,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 159.6206146662608,
+          "overlap_x": 0.0003524435985510291,
+          "overlap_y": 0.3365058648629834,
+          "overlap_tangent": 3.317627657807383e-17,
+          "max_translation_overlap": 0.3365058648629834,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 159.77826051115872,
+          "overlap_x": 0.3027756397616638,
+          "overlap_y": 0.242224873181143,
+          "overlap_tangent": 7.284347066502547e-17,
+          "max_translation_overlap": 0.3027756397616638,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 160.3926605816984,
+          "overlap_x": 0.04473676432310033,
+          "overlap_y": 0.04120904274243744,
+          "overlap_tangent": 1.6541526808632079e-19,
+          "max_translation_overlap": 0.04473676432310033,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 160.4542820116324,
+          "overlap_x": 0.04740948236490494,
+          "overlap_y": 0.04034755020225904,
+          "overlap_tangent": 2.578977936647197e-16,
+          "max_translation_overlap": 0.04740948236490494,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 159.54432347374143,
+      "goldstone_max_overlap": 0.37556327709520854,
+      "goldstone_overlap_x": 0.37556327709520854,
+      "goldstone_overlap_y": 0.2369926059610522
+    },
+    {
+      "zeta": 0.2,
+      "L": 20,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        0,
+        1
+      ],
+      "energy": 99.19723679071662,
+      "u_min": 0.0,
+      "u_max": 0.9988286990113976,
+      "u_std": 0.47430646407391786,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 9.244899670815126e-14,
+          "overlap_x": 5.175084950865385e-16,
+          "overlap_y": 2.4119756686631342e-17,
+          "overlap_tangent": 1.0000000000000007,
+          "max_translation_overlap": 5.175084950865385e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 16.434126606539603,
+          "overlap_x": 0.4061084586915101,
+          "overlap_y": 0.1430564268573986,
+          "overlap_tangent": 3.33499650273381e-17,
+          "max_translation_overlap": 0.4061084586915101,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 16.513686355674533,
+          "overlap_x": 0.22147628917591086,
+          "overlap_y": 0.39400779578956635,
+          "overlap_tangent": 1.0004093161191322e-16,
+          "max_translation_overlap": 0.39400779578956635,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 16.7401336562282,
+          "overlap_x": 0.27122964082115364,
+          "overlap_y": 0.04853227533997944,
+          "overlap_tangent": 6.542188725111324e-16,
+          "max_translation_overlap": 0.27122964082115364,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 16.84437868781897,
+          "overlap_x": 0.33934194652899075,
+          "overlap_y": 0.46620706837146014,
+          "overlap_tangent": 6.684540783086518e-16,
+          "max_translation_overlap": 0.46620706837146014,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 17.035680546183695,
+          "overlap_x": 0.10612413665015234,
+          "overlap_y": 0.028384465381073882,
+          "overlap_tangent": 6.194058163335429e-16,
+          "max_translation_overlap": 0.10612413665015234,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 16.84437868781897,
+      "goldstone_max_overlap": 0.46620706837146014,
+      "goldstone_overlap_x": 0.33934194652899075,
+      "goldstone_overlap_y": 0.46620706837146014
+    },
+    {
+      "zeta": 0.2,
+      "L": 20,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 99.19723689039205,
+      "u_min": 0.0,
+      "u_max": 0.9988286934302986,
+      "u_std": 0.47430640595698687,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.0251637805676682e-13,
+          "overlap_x": 3.72741599655347e-16,
+          "overlap_y": 1.1956402967228978e-16,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 3.72741599655347e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 16.432527445777552,
+          "overlap_x": 0.40458550110979097,
+          "overlap_y": 0.141716308014373,
+          "overlap_tangent": 5.107658239453726e-16,
+          "max_translation_overlap": 0.40458550110979097,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 16.514016104195896,
+          "overlap_x": 0.2230470150215298,
+          "overlap_y": 0.3947319323862386,
+          "overlap_tangent": 2.6147620684592417e-17,
+          "max_translation_overlap": 0.3947319323862386,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 16.74002950297932,
+          "overlap_x": 0.27316870314685815,
+          "overlap_y": 0.04700081460896216,
+          "overlap_tangent": 1.5527214549254837e-16,
+          "max_translation_overlap": 0.27316870314685815,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 16.844413839979737,
+          "overlap_x": 0.3383239364335569,
+          "overlap_y": 0.4660625510323559,
+          "overlap_tangent": 1.07934013879016e-17,
+          "max_translation_overlap": 0.4660625510323559,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 17.035635690599666,
+          "overlap_x": 0.10713129877844978,
+          "overlap_y": 0.02661159044672713,
+          "overlap_tangent": 1.5542350996972187e-16,
+          "max_translation_overlap": 0.10713129877844978,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 16.844413839979737,
+      "goldstone_max_overlap": 0.4660625510323559,
+      "goldstone_overlap_x": 0.3383239364335569,
+      "goldstone_overlap_y": 0.4660625510323559
+    },
+    {
+      "zeta": 0.2,
+      "L": 20,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 99.08460704620246,
+      "u_min": 0.0,
+      "u_max": 0.9988205732374654,
+      "u_std": 0.47429233357766193,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 2.5276368849792584e-13,
+          "overlap_x": 5.016343719246642e-16,
+          "overlap_y": 3.6136660640272703e-16,
+          "overlap_tangent": 1.000000000000002,
+          "max_translation_overlap": 5.016343719246642e-16,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 16.49169006935733,
+          "overlap_x": 0.3887461590587828,
+          "overlap_y": 0.32843097223657497,
+          "overlap_tangent": 1.8724263425994082e-16,
+          "max_translation_overlap": 0.3887461590587828,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 16.68799344410621,
+          "overlap_x": 0.012910459858723727,
+          "overlap_y": 0.45817181891167363,
+          "overlap_tangent": 7.308277224490908e-17,
+          "max_translation_overlap": 0.45817181891167363,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 16.73741929228741,
+          "overlap_x": 0.5325107345501604,
+          "overlap_y": 0.268998298537173,
+          "overlap_tangent": 1.9904694905622046e-17,
+          "max_translation_overlap": 0.5325107345501604,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 16.903285784098614,
+          "overlap_x": 0.05543409602586139,
+          "overlap_y": 0.12515775945170993,
+          "overlap_tangent": 3.1716990212763533e-17,
+          "max_translation_overlap": 0.12515775945170993,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 16.976962393950863,
+          "overlap_x": 0.04816320693384468,
+          "overlap_y": 0.04794562734782312,
+          "overlap_tangent": 2.1347807252543672e-17,
+          "max_translation_overlap": 0.04816320693384468,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 16.73741929228741,
+      "goldstone_max_overlap": 0.5325107345501604,
+      "goldstone_overlap_x": 0.5325107345501604,
+      "goldstone_overlap_y": 0.268998298537173
+    },
+    {
+      "zeta": 0.5,
+      "L": 20,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        3,
+        3,
+        1
+      ],
+      "energy": 36.994196095792326,
+      "u_min": 0.0025659763815385934,
+      "u_max": 0.9974340236184585,
+      "u_std": 0.4263900000192376,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -3.573028327032893e-14,
+          "overlap_x": 4.942791989018631e-14,
+          "overlap_y": 1.1482986614678743e-15,
+          "overlap_tangent": 0.999999999999999,
+          "max_translation_overlap": 4.942791989018631e-14,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742609903923984,
+          "overlap_x": 0.944308821328641,
+          "overlap_y": 3.7826967062794315e-12,
+          "overlap_tangent": 5.21163890824866e-14,
+          "max_translation_overlap": 0.944308821328641,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925183612823,
+          "overlap_x": 4.880524172892499e-12,
+          "overlap_y": 0.16135212083488978,
+          "overlap_tangent": 5.4536387865522915e-15,
+          "max_translation_overlap": 0.16135212083488978,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925183631222,
+          "overlap_x": 4.4620718480778104e-12,
+          "overlap_y": 0.9778842862679415,
+          "overlap_tangent": 2.791166336629841e-16,
+          "max_translation_overlap": 0.9778842862679415,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739688410673,
+          "overlap_x": 3.702162875561604e-12,
+          "overlap_y": 0.0015365618727938581,
+          "overlap_tangent": 5.634652056043645e-15,
+          "max_translation_overlap": 0.0015365618727938581,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739688429012,
+          "overlap_x": 3.0825343535285722e-12,
+          "overlap_y": 0.001093702269360739,
+          "overlap_tangent": 3.0055832324574106e-15,
+          "max_translation_overlap": 0.001093702269360739,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.5384925183631222,
+      "goldstone_max_overlap": 0.9778842862679415,
+      "goldstone_overlap_x": 4.4620718480778104e-12,
+      "goldstone_overlap_y": 0.9778842862679415
+    },
+    {
+      "zeta": 0.5,
+      "L": 20,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        3,
+        1,
+        3
+      ],
+      "energy": 36.99419609362562,
+      "u_min": 0.0025659824423909477,
+      "u_max": 0.9974340175576115,
+      "u_std": 0.4263900000430106,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -8.786145983162872e-14,
+          "overlap_x": 5.183392262984251e-14,
+          "overlap_y": 1.2948987561802025e-14,
+          "overlap_tangent": 1.0000000000000002,
+          "max_translation_overlap": 5.183392262984251e-14,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.1474261083224718,
+          "overlap_x": 0.9443085650456615,
+          "overlap_y": 1.7637680338826886e-12,
+          "overlap_tangent": 5.3956432886195666e-14,
+          "max_translation_overlap": 0.9443085650456615,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925276421125,
+          "overlap_x": 3.893852248657753e-12,
+          "overlap_y": 0.7284200384956124,
+          "overlap_tangent": 2.602793678845094e-15,
+          "max_translation_overlap": 0.7284200384956124,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925276451232,
+          "overlap_x": 1.7392332498636482e-12,
+          "overlap_y": 0.6786995582372274,
+          "overlap_tangent": 1.6002356934228816e-14,
+          "max_translation_overlap": 0.6786995582372274,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739781217482,
+          "overlap_x": 6.651183737175032e-13,
+          "overlap_y": 0.0006515973044735375,
+          "overlap_tangent": 9.62569628070376e-16,
+          "max_translation_overlap": 0.0006515973044735375,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739781247536,
+          "overlap_x": 2.5813555718271954e-12,
+          "overlap_y": 0.0008296386678576478,
+          "overlap_tangent": 1.5539012901171282e-14,
+          "max_translation_overlap": 0.0008296386678576478,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.1474261083224718,
+      "goldstone_max_overlap": 0.9443085650456615,
+      "goldstone_overlap_x": 0.9443085650456615,
+      "goldstone_overlap_y": 1.7637680338826886e-12
+    },
+    {
+      "zeta": 0.5,
+      "L": 20,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        4,
+        1,
+        1
+      ],
+      "energy": 36.99419609529444,
+      "u_min": 0.0025659777709217744,
+      "u_max": 0.997434022229075,
+      "u_std": 0.42639000002470034,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.1131928874301214e-14,
+          "overlap_x": 7.151037952077385e-15,
+          "overlap_y": 9.13546419181908e-15,
+          "overlap_tangent": 1.0000000000000009,
+          "max_translation_overlap": 9.13546419181908e-15,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742610116991745,
+          "overlap_x": 2.7526308512484104e-13,
+          "overlap_y": 0.9442257984715461,
+          "overlap_tangent": 9.153847771137096e-15,
+          "max_translation_overlap": 0.9442257984715461,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925204920038,
+          "overlap_x": 0.9960412255731382,
+          "overlap_y": 2.8808734341295855e-13,
+          "overlap_tangent": 7.008590603775593e-15,
+          "max_translation_overlap": 0.9960412255731382,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925204930158,
+          "overlap_x": 0.030366514325944942,
+          "overlap_y": 1.0240227685157927e-12,
+          "overlap_tangent": 5.8418141803611076e-15,
+          "max_translation_overlap": 0.030366514325944942,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739709717503,
+          "overlap_x": 0.0009532609843397385,
+          "overlap_y": 2.4327996250041586e-12,
+          "overlap_tangent": 1.0447803330759388e-16,
+          "max_translation_overlap": 0.0009532609843397385,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739709727641,
+          "overlap_x": 0.0004407253887796113,
+          "overlap_y": 2.840453867599927e-12,
+          "overlap_tangent": 3.829535341390222e-15,
+          "max_translation_overlap": 0.0004407253887796113,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 2,
+      "goldstone_eigenvalue": 0.5384925204920038,
+      "goldstone_max_overlap": 0.9960412255731382,
+      "goldstone_overlap_x": 0.9960412255731382,
+      "goldstone_overlap_y": 2.8808734341295855e-13
+    },
+    {
+      "zeta": 0.7,
+      "L": 20,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 1,
+      "attempts_F": [
+        1
+      ],
+      "energy": 26.683999455873966,
+      "u_min": 0.013595958650199389,
+      "u_max": 0.9864040413443484,
+      "u_std": 0.390319960931465,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -0.0017696039601678062,
+          "overlap_x": 0.9721769355271807,
+          "overlap_y": 8.038939142411809e-08,
+          "overlap_tangent": 1.1925185357372313e-12,
+          "max_translation_overlap": 0.9721769355271807,
+          "is_tangent": false
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 2.6363441364795725e-14,
+          "overlap_x": 1.1584981046736028e-12,
+          "overlap_y": 4.23726118218224e-15,
+          "overlap_tangent": 0.9999999999999997,
+          "max_translation_overlap": 1.1584981046736028e-12,
+          "is_tangent": true
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.38098464122181636,
+          "overlap_x": 1.5548313642063114e-06,
+          "overlap_y": 0.15430558415784684,
+          "overlap_tangent": 6.5684516130348924e-15,
+          "max_translation_overlap": 0.15430558415784684,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.3809846412709746,
+          "overlap_x": 3.3390053226990633e-09,
+          "overlap_y": 0.9879792455789911,
+          "overlap_tangent": 3.2946488079858735e-15,
+          "max_translation_overlap": 0.9879792455789911,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.38977826555382716,
+          "overlap_x": 1.8991939193225312e-10,
+          "overlap_y": 0.00011402254922207715,
+          "overlap_tangent": 5.9236296375995835e-15,
+          "max_translation_overlap": 0.00011402254922207715,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.389778265583705,
+          "overlap_x": 2.449759469476428e-09,
+          "overlap_y": 0.0001434502214414244,
+          "overlap_tangent": 5.8957086860175485e-15,
+          "max_translation_overlap": 0.0001434502214414244,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.3809846412709746,
+      "goldstone_max_overlap": 0.9879792455789911,
+      "goldstone_overlap_x": 3.3390053226990633e-09,
+      "goldstone_overlap_y": 0.9879792455789911
+    },
+    {
+      "zeta": 0.7,
+      "L": 20,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 2,
+      "attempts_F": [
+        1,
+        4
+      ],
+      "energy": 26.684011469661257,
+      "u_min": 0.013581650413112436,
+      "u_max": 0.9864183495870932,
+      "u_std": 0.39031960250482806,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -0.0018380329084959342,
+          "overlap_x": 1.6030344771441175e-08,
+          "overlap_y": 0.9722514640735966,
+          "overlap_tangent": 3.937390565039768e-13,
+          "max_translation_overlap": 0.9722514640735966,
+          "is_tangent": false
+        },
+        {
+          "mode": 1,
+          "eigenvalue": -1.4063405307122894e-14,
+          "overlap_x": 5.726433920550336e-15,
+          "overlap_y": 3.8300342527126586e-13,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 3.8300342527126586e-13,
+          "is_tangent": true
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.38091705735795545,
+          "overlap_x": 0.15739051182006258,
+          "overlap_y": 3.449732828854312e-06,
+          "overlap_tangent": 6.166814621487304e-15,
+          "max_translation_overlap": 0.15739051182006258,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.38091705788035013,
+          "overlap_x": 0.9874924853349895,
+          "overlap_y": 3.36312938993783e-09,
+          "overlap_tangent": 4.603580117972178e-15,
+          "max_translation_overlap": 0.9874924853349895,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.38970983508559576,
+          "overlap_x": 5.297710597699686e-05,
+          "overlap_y": 5.391605728005892e-10,
+          "overlap_tangent": 7.417410449477284e-16,
+          "max_translation_overlap": 5.297710597699686e-05,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.3897098354956299,
+          "overlap_x": 0.0002119497325470742,
+          "overlap_y": 8.119441395093406e-09,
+          "overlap_tangent": 9.002178737574258e-16,
+          "max_translation_overlap": 0.0002119497325470742,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.38091705788035013,
+      "goldstone_max_overlap": 0.9874924853349895,
+      "goldstone_overlap_x": 0.9874924853349895,
+      "goldstone_overlap_y": 3.36312938993783e-09
+    },
+    {
+      "zeta": 0.7,
+      "L": 20,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        1,
+        3,
+        3
+      ],
+      "energy": 26.68401076647565,
+      "u_min": 0.013582358694480734,
+      "u_max": 0.9864176413115849,
+      "u_std": 0.3903196235343601,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -0.001834015290060029,
+          "overlap_x": 6.86311708039414e-08,
+          "overlap_y": 0.9722292059013301,
+          "overlap_tangent": 4.30854305335393e-12,
+          "max_translation_overlap": 0.9722292059013301,
+          "is_tangent": false
+        },
+        {
+          "mode": 1,
+          "eigenvalue": -8.913933269573012e-16,
+          "overlap_x": 2.190794952027341e-17,
+          "overlap_y": 4.1891189586687244e-12,
+          "overlap_tangent": 1.0000000000000002,
+          "max_translation_overlap": 4.1891189586687244e-12,
+          "is_tangent": true
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.38092102526892,
+          "overlap_x": 0.1576054461368278,
+          "overlap_y": 3.963982460820751e-06,
+          "overlap_tangent": 2.0317918682348605e-15,
+          "max_translation_overlap": 0.1576054461368278,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.38092102578641784,
+          "overlap_x": 0.9874582258062735,
+          "overlap_y": 4.728685121381596e-09,
+          "overlap_tangent": 4.902759309849034e-17,
+          "max_translation_overlap": 0.9874582258062735,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.38971385273350606,
+          "overlap_x": 7.401418061100638e-05,
+          "overlap_y": 4.9475883777395114e-11,
+          "overlap_tangent": 1.7620239490171778e-15,
+          "max_translation_overlap": 7.401418061100638e-05,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.389713853133056,
+          "overlap_x": 1.0071869449406074e-05,
+          "overlap_y": 7.817290204816077e-09,
+          "overlap_tangent": 3.1547662658221584e-15,
+          "max_translation_overlap": 1.0071869449406074e-05,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.38092102578641784,
+      "goldstone_max_overlap": 0.9874582258062735,
+      "goldstone_overlap_x": 0.9874582258062735,
+      "goldstone_overlap_y": 4.728685121381596e-09
+    },
+    {
+      "zeta": 1.0,
+      "L": 20,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.571547516040887,
+      "u_min": 0.06338455080698777,
+      "u_max": 0.9366154491931896,
+      "u_std": 0.32794927969667603,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -7.79236982241769e-07,
+          "overlap_x": 7.916788206275509e-10,
+          "overlap_y": 0.9845642933273465,
+          "overlap_tangent": 3.853310877108417e-10,
+          "max_translation_overlap": 0.9845642933273465,
+          "is_tangent": false
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 6.603784759217597e-16,
+          "overlap_x": 9.913456628426277e-15,
+          "overlap_y": 3.793829916858014e-10,
+          "overlap_tangent": 1.0000000000000002,
+          "max_translation_overlap": 3.793829916858014e-10,
+          "is_tangent": true
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.3106996110917399,
+          "overlap_x": 0.1564263290668487,
+          "overlap_y": 1.8700730953683744e-05,
+          "overlap_tangent": 1.0438268131187817e-15,
+          "max_translation_overlap": 0.1564263290668487,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.31069962284118624,
+          "overlap_x": 0.9876521239202719,
+          "overlap_y": 4.12080499465582e-11,
+          "overlap_tangent": 9.99577406820189e-15,
+          "max_translation_overlap": 0.9876521239202719,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.3915470882250187,
+          "overlap_x": 9.054420872643214e-07,
+          "overlap_y": 1.667130350451533e-08,
+          "overlap_tangent": 1.2903751699095363e-16,
+          "max_translation_overlap": 9.054420872643214e-07,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.3915470890649081,
+          "overlap_x": 1.7000431017392112e-07,
+          "overlap_y": 6.262065715966852e-12,
+          "overlap_tangent": 1.1265325526922084e-16,
+          "max_translation_overlap": 1.7000431017392112e-07,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.31069962284118624,
+      "goldstone_max_overlap": 0.9876521239202719,
+      "goldstone_overlap_x": 0.9876521239202719,
+      "goldstone_overlap_y": 4.12080499465582e-11
+    },
+    {
+      "zeta": 1.0,
+      "L": 20,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.57154742044614,
+      "u_min": 0.06398910905924819,
+      "u_max": 0.9360108909390825,
+      "u_std": 0.32794929050795807,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -5.429197567053355e-15,
+          "overlap_x": 2.7046190429513786e-15,
+          "overlap_y": 1.3548332115966731e-08,
+          "overlap_tangent": 1.0000000000000013,
+          "max_translation_overlap": 1.3548332115966731e-08,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 6.863753527249085e-08,
+          "overlap_x": 1.0225116033455774e-09,
+          "overlap_y": 0.9845642585647773,
+          "overlap_tangent": 1.3760739681547284e-08,
+          "max_translation_overlap": 0.9845642585647773,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.3107003102950402,
+          "overlap_x": 0.15638557816542994,
+          "overlap_y": 1.8464900027316565e-05,
+          "overlap_tangent": 2.24487726183338e-15,
+          "max_translation_overlap": 0.15638557816542994,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.3107003217502148,
+          "overlap_x": 0.987658577727869,
+          "overlap_y": 8.041414604209028e-10,
+          "overlap_tangent": 3.164056922685577e-15,
+          "max_translation_overlap": 0.987658577727869,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.3915479361529804,
+          "overlap_x": 2.0124203576861573e-06,
+          "overlap_y": 1.6460692007705603e-08,
+          "overlap_tangent": 1.240637034750323e-15,
+          "max_translation_overlap": 2.0124203576861573e-06,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.3915479369745772,
+          "overlap_x": 1.0475419705982722e-07,
+          "overlap_y": 9.142342739871453e-12,
+          "overlap_tangent": 1.8280705176027914e-15,
+          "max_translation_overlap": 1.0475419705982722e-07,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.3107003217502148,
+      "goldstone_max_overlap": 0.987658577727869,
+      "goldstone_overlap_x": 0.987658577727869,
+      "goldstone_overlap_y": 8.041414604209028e-10
+    },
+    {
+      "zeta": 1.0,
+      "L": 20,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "n_attempts": 3,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.571547416021147,
+      "u_min": 0.06404500149542551,
+      "u_max": 0.9359549985045758,
+      "u_std": 0.3279492912169944,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -8.359075098555819e-15,
+          "overlap_x": 2.0324767209262904e-08,
+          "overlap_y": 1.832978799842668e-14,
+          "overlap_tangent": 1.000000000000001,
+          "max_translation_overlap": 2.0324767209262904e-08,
+          "is_tangent": true
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 1.3224304818459137e-07,
+          "overlap_x": 0.9845648680152886,
+          "overlap_y": 1.0354390875939921e-09,
+          "overlap_tangent": 2.064339916194153e-08,
+          "max_translation_overlap": 0.9845648680152886,
+          "is_tangent": false
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.31070036201218926,
+          "overlap_x": 1.8815549438396275e-05,
+          "overlap_y": 0.15643692577096954,
+          "overlap_tangent": 1.1001071148651154e-14,
+          "max_translation_overlap": 0.15643692577096954,
+          "is_tangent": false
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.310700373920894,
+          "overlap_x": 1.531743446027676e-10,
+          "overlap_y": 0.9876504460160267,
+          "overlap_tangent": 1.6586975619477516e-14,
+          "max_translation_overlap": 0.9876504460160267,
+          "is_tangent": false
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.39154799967552445,
+          "overlap_x": 1.678033196929613e-08,
+          "overlap_y": 6.206155658308123e-09,
+          "overlap_tangent": 2.6264420416018974e-15,
+          "max_translation_overlap": 1.678033196929613e-08,
+          "is_tangent": false
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.3915480005265531,
+          "overlap_x": 1.751321794023948e-13,
+          "overlap_y": 1.2401905197229541e-08,
+          "overlap_tangent": 6.97238299710134e-15,
+          "max_translation_overlap": 1.2401905197229541e-08,
+          "is_tangent": false
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.310700373920894,
+      "goldstone_max_overlap": 0.9876504460160267,
+      "goldstone_overlap_x": 1.531743446027676e-10,
+      "goldstone_overlap_y": 0.9876504460160267
+    }
+  ],
+  "aggregate_by_zeta": {
+    "0.1": {
+      "n_total": 3,
+      "n_F1": 3,
+      "mean_overlap_all": 0.3773075609568872,
+      "mean_overlap_F1": 0.3773075609568872
+    },
+    "0.2": {
+      "n_total": 3,
+      "n_F1": 3,
+      "mean_overlap_all": 0.48826011798465885,
+      "mean_overlap_F1": 0.48826011798465885
+    },
+    "0.5": {
+      "n_total": 3,
+      "n_F1": 3,
+      "mean_overlap_all": 0.9727446922955805,
+      "mean_overlap_F1": 0.9727446922955805
+    },
+    "0.7": {
+      "n_total": 3,
+      "n_F1": 3,
+      "mean_overlap_all": 0.9876433189067514,
+      "mean_overlap_F1": 0.9876433189067514
+    },
+    "1.0": {
+      "n_total": 3,
+      "n_F1": 3,
+      "mean_overlap_all": 0.9876537158880558,
+      "mean_overlap_F1": 0.9876537158880558
+    }
+  },
+  "crossover_zeta_star": 0.20726950823896015,
+  "crossover_bracket": [
+    0.2,
+    0.5
+  ],
+  "v5b_sub_lattice_pass": true,
+  "v5b_super_lattice_pass": true
+}

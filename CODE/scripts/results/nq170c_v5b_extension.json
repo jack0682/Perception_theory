@@ -1,0 +1,3256 @@
+{
+  "protocol": "V5b graph-class extension + Courant nodal count",
+  "c": 0.5,
+  "N_seeds": 3,
+  "configs": [
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zetas": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "label": "baseline (NQ-170b\u91cd)"
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zetas": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "label": "translation broken \u2014 V5b N/A"
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zetas": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "label": "1D translation \u2014 V5b 1D Goldstone"
+    }
+  ],
+  "results": [
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 0,
+      "F": 0,
+      "F1_found": false,
+      "attempts_F": [
+        0,
+        0,
+        0
+      ],
+      "energy": 96.95302749281083,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 2.3699556884881806e-13,
+          "overlap_x": 4.206704429243757e-17,
+          "overlap_y": 1.1796119636642288e-16,
+          "overlap_tangent": 0.9999999999999973,
+          "max_translation_overlap": 1.1796119636642288e-16,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 16.01795685630643,
+          "overlap_x": 1.9604316543814893e-05,
+          "overlap_y": 0.23173390480295045,
+          "overlap_tangent": 5.603969979034451e-17,
+          "max_translation_overlap": 0.23173390480295045,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 16.237796973934586,
+          "overlap_x": 0.3614258400153546,
+          "overlap_y": 0.021931543911605435,
+          "overlap_tangent": 3.7643499428696714e-16,
+          "max_translation_overlap": 0.3614258400153546,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 17.10101045401484,
+          "overlap_x": 0.002538345119005468,
+          "overlap_y": 0.4022141993040366,
+          "overlap_tangent": 7.376386421164075e-18,
+          "max_translation_overlap": 0.4022141993040366,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 17.271635124687283,
+          "overlap_x": 0.4934365799168886,
+          "overlap_y": 0.013391494161939969,
+          "overlap_tangent": 3.946495907847236e-16,
+          "max_translation_overlap": 0.4934365799168886,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 17.377323231801427,
+          "overlap_x": 2.4776418553846755e-06,
+          "overlap_y": 0.32822739985688,
+          "overlap_tangent": 1.8323016715005025e-16,
+          "max_translation_overlap": 0.32822739985688,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 17.271635124687283,
+      "goldstone_max_overlap": 0.4934365799168886,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          2.3699556884881806e-13
+        ],
+        [
+          2,
+          16.01795685630643
+        ],
+        [
+          2,
+          16.237796973934586
+        ],
+        [
+          2,
+          17.10101045401484
+        ],
+        [
+          2,
+          17.271635124687283
+        ],
+        [
+          4,
+          17.377323231801427
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 99.14256542777744,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.1110496175690473e-13,
+          "overlap_x": 3.9076290584883093e-16,
+          "overlap_y": 5.169475958410885e-16,
+          "overlap_tangent": 0.999999999999998,
+          "max_translation_overlap": 5.169475958410885e-16,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 16.496915658392602,
+          "overlap_x": 0.3805882271230271,
+          "overlap_y": 0.3527234730109945,
+          "overlap_tangent": 2.1423834928313568e-16,
+          "max_translation_overlap": 0.3805882271230271,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 16.712943471324433,
+          "overlap_x": 0.16266115373977919,
+          "overlap_y": 0.30204414212651354,
+          "overlap_tangent": 6.938893903907228e-18,
+          "max_translation_overlap": 0.30204414212651354,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 16.772638912120442,
+          "overlap_x": 0.4745004610261534,
+          "overlap_y": 0.4262364211842819,
+          "overlap_tangent": 9.194034422677078e-17,
+          "max_translation_overlap": 0.4745004610261534,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 16.88740603437319,
+          "overlap_x": 0.1093914013209065,
+          "overlap_y": 0.08815469723810165,
+          "overlap_tangent": 9.540979117872439e-17,
+          "max_translation_overlap": 0.1093914013209065,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 16.971230009476674,
+          "overlap_x": 0.05034345754097852,
+          "overlap_y": 0.035036884018749756,
+          "overlap_tangent": 1.0408340855860843e-16,
+          "max_translation_overlap": 0.05034345754097852,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 16.772638912120442,
+      "goldstone_max_overlap": 0.4745004610261534,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          3.1110496175690473e-13
+        ],
+        [
+          2,
+          16.496915658392602
+        ],
+        [
+          3,
+          16.712943471324433
+        ],
+        [
+          2,
+          16.772638912120442
+        ],
+        [
+          2,
+          16.88740603437319
+        ],
+        [
+          2,
+          16.971230009476674
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        0,
+        1,
+        1
+      ],
+      "energy": 99.52505309453451,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.5238907544600575e-13,
+          "overlap_x": 7.726024681131705e-16,
+          "overlap_y": 4.0419056990259605e-16,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 7.726024681131705e-16,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 12.398722728515983,
+          "overlap_x": 0.20389646903886205,
+          "overlap_y": 0.1211484650933094,
+          "overlap_tangent": 1.2906342661267445e-15,
+          "max_translation_overlap": 0.20389646903886205,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 15.602205651854051,
+          "overlap_x": 0.3877878631922974,
+          "overlap_y": 0.2807532585651781,
+          "overlap_tangent": 4.614364446098307e-16,
+          "max_translation_overlap": 0.3877878631922974,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 15.920011219457564,
+          "overlap_x": 0.0036242100294685033,
+          "overlap_y": 0.4417231288110529,
+          "overlap_tangent": 3.694961003830599e-16,
+          "max_translation_overlap": 0.4417231288110529,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 16.131662474611247,
+          "overlap_x": 0.4653245579244712,
+          "overlap_y": 0.13645495587363154,
+          "overlap_tangent": 2.203098814490545e-16,
+          "max_translation_overlap": 0.4653245579244712,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 16.2728694659804,
+          "overlap_x": 0.09792802807545446,
+          "overlap_y": 0.17982203729890717,
+          "overlap_tangent": 3.3306690738754696e-16,
+          "max_translation_overlap": 0.17982203729890717,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 16.131662474611247,
+      "goldstone_max_overlap": 0.4653245579244712,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          3.5238907544600575e-13
+        ],
+        [
+          2,
+          12.398722728515983
+        ],
+        [
+          3,
+          15.602205651854051
+        ],
+        [
+          3,
+          15.920011219457564
+        ],
+        [
+          3,
+          16.131662474611247
+        ],
+        [
+          2,
+          16.2728694659804
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        5,
+        1,
+        1
+      ],
+      "energy": 36.994196093131606,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 7.924629212876718e-14,
+          "overlap_x": 8.011332482821265e-15,
+          "overlap_y": 1.2547525952283367e-14,
+          "overlap_tangent": 0.9999999999999999,
+          "max_translation_overlap": 1.2547525952283367e-14,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742611043667275,
+          "overlap_x": 6.048450204703955e-12,
+          "overlap_y": 0.9442260550806538,
+          "overlap_tangent": 1.3405943022348765e-14,
+          "max_translation_overlap": 0.9442260550806538,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925297558929,
+          "overlap_x": 0.9997900655582861,
+          "overlap_y": 5.961441135524234e-12,
+          "overlap_tangent": 8.138373872382254e-15,
+          "max_translation_overlap": 0.9997900655582861,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925297589969,
+          "overlap_x": 0.017389183228735054,
+          "overlap_y": 9.348726355768236e-15,
+          "overlap_tangent": 1.215568173461995e-14,
+          "max_translation_overlap": 0.017389183228735054,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739802354933,
+          "overlap_x": 0.0012894270688895981,
+          "overlap_y": 1.7040195616309026e-12,
+          "overlap_tangent": 2.226951262285226e-15,
+          "max_translation_overlap": 0.0012894270688895981,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739802385918,
+          "overlap_x": 0.0002578266597211623,
+          "overlap_y": 2.54314507007556e-12,
+          "overlap_tangent": 5.981543385602528e-16,
+          "max_translation_overlap": 0.0002578266597211623,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 2,
+      "goldstone_eigenvalue": 0.5384925297558929,
+      "goldstone_max_overlap": 0.9997900655582861,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          7.924629212876718e-14
+        ],
+        [
+          2,
+          0.14742611043667275
+        ],
+        [
+          2,
+          0.5384925297558929
+        ],
+        [
+          2,
+          0.5384925297589969
+        ],
+        [
+          4,
+          0.5389739802354933
+        ],
+        [
+          4,
+          0.5389739802385918
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        4,
+        1,
+        1
+      ],
+      "energy": 36.9941960972276,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.1693407304672528e-14,
+          "overlap_x": 8.871213225819519e-16,
+          "overlap_y": 2.8016326238111677e-15,
+          "overlap_tangent": 1.0000000000000002,
+          "max_translation_overlap": 2.8016326238111677e-15,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742609288792416,
+          "overlap_x": 1.966126195770794e-12,
+          "overlap_y": 0.9443089902266535,
+          "overlap_tangent": 2.7547408798511697e-15,
+          "max_translation_overlap": 0.9443089902266535,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925122115987,
+          "overlap_x": 0.7825979393962729,
+          "overlap_y": 1.837060675292674e-12,
+          "overlap_tangent": 4.992479953752627e-16,
+          "max_translation_overlap": 0.7825979393962729,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925122127285,
+          "overlap_x": 0.6198414166339951,
+          "overlap_y": 7.453820875124071e-13,
+          "overlap_tangent": 9.560189825116167e-16,
+          "max_translation_overlap": 0.6198414166339951,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739626914894,
+          "overlap_x": 0.015846147651709802,
+          "overlap_y": 3.0999982854156005e-14,
+          "overlap_tangent": 1.0776969594505914e-15,
+          "max_translation_overlap": 0.015846147651709802,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739626926241,
+          "overlap_x": 0.014578508565507006,
+          "overlap_y": 1.6048472174897061e-12,
+          "overlap_tangent": 1.4278942611634093e-16,
+          "max_translation_overlap": 0.014578508565507006,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.14742609288792416,
+      "goldstone_max_overlap": 0.9443089902266535,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          1.1693407304672528e-14
+        ],
+        [
+          2,
+          0.14742609288792416
+        ],
+        [
+          2,
+          0.5384925122115987
+        ],
+        [
+          2,
+          0.5384925122127285
+        ],
+        [
+          4,
+          0.5389739626914894
+        ],
+        [
+          4,
+          0.5389739626926241
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        6,
+        1,
+        1
+      ],
+      "energy": 36.99419609544744,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.6171134536498906e-14,
+          "overlap_x": 2.8488496284229115e-15,
+          "overlap_y": 1.3701713375002811e-14,
+          "overlap_tangent": 1.0000000000000009,
+          "max_translation_overlap": 1.3701713375002811e-14,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742610051584637,
+          "overlap_x": 4.474731864342538e-12,
+          "overlap_y": 0.944225780379093,
+          "overlap_tangent": 1.4578616092109087e-14,
+          "max_translation_overlap": 0.944225780379093,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5384925198375818,
+          "overlap_x": 0.6065471885589728,
+          "overlap_y": 8.919150682774879e-13,
+          "overlap_tangent": 9.348207971604516e-15,
+          "max_translation_overlap": 0.6065471885589728,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.5384925198395073,
+          "overlap_x": 0.7949737291010113,
+          "overlap_y": 3.805748576522772e-12,
+          "overlap_tangent": 3.612778479156198e-15,
+          "max_translation_overlap": 0.7949737291010113,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.5389739703173445,
+          "overlap_x": 0.0008408875170614755,
+          "overlap_y": 6.161137138666062e-13,
+          "overlap_tangent": 4.1823098803628334e-16,
+          "max_translation_overlap": 0.0008408875170614755,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.5389739703192679,
+          "overlap_x": 0.0009266639511467667,
+          "overlap_y": 4.201116451246767e-12,
+          "overlap_tangent": 8.007917245977936e-16,
+          "max_translation_overlap": 0.0009266639511467667,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.14742610051584637,
+      "goldstone_max_overlap": 0.944225780379093,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          1.6171134536498906e-14
+        ],
+        [
+          2,
+          0.14742610051584637
+        ],
+        [
+          2,
+          0.5384925198375818
+        ],
+        [
+          2,
+          0.5384925198395073
+        ],
+        [
+          4,
+          0.5389739703173445
+        ],
+        [
+          4,
+          0.5389739703192679
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.571547360157822,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 2.2034304134506984e-15,
+          "overlap_x": 1.8222837694110289e-09,
+          "overlap_y": 1.0286910212542466e-15,
+          "overlap_tangent": 0.9999999999999997,
+          "max_translation_overlap": 1.8222837694110289e-09,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 6.264912773233821e-07,
+          "overlap_x": 0.9845648468527354,
+          "overlap_y": 8.852982943084731e-10,
+          "overlap_tangent": 1.8508523338088556e-09,
+          "max_translation_overlap": 0.9845648468527354,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.31070076963321214,
+          "overlap_x": 1.8660237136980395e-05,
+          "overlap_y": 0.15643147452205472,
+          "overlap_tangent": 4.531965080989409e-16,
+          "max_translation_overlap": 0.15643147452205472,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.3107007813462025,
+          "overlap_x": 5.2006231569465267e-11,
+          "overlap_y": 0.9876513097582473,
+          "overlap_tangent": 8.27463098040937e-16,
+          "max_translation_overlap": 0.9876513097582473,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.3915484939592257,
+          "overlap_x": 1.664871189088063e-08,
+          "overlap_y": 5.541881712054463e-07,
+          "overlap_tangent": 1.0191500421363742e-15,
+          "max_translation_overlap": 5.541881712054463e-07,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.39154849479816595,
+          "overlap_x": 4.2275057152846296e-12,
+          "overlap_y": 1.0460918479396168e-06,
+          "overlap_tangent": 4.163336342344337e-16,
+          "max_translation_overlap": 1.0460918479396168e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.3107007813462025,
+      "goldstone_max_overlap": 0.9876513097582473,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          2.2034304134506984e-15
+        ],
+        [
+          2,
+          6.264912773233821e-07
+        ],
+        [
+          2,
+          0.31070076963321214
+        ],
+        [
+          2,
+          0.3107007813462025
+        ],
+        [
+          4,
+          0.3915484939592257
+        ],
+        [
+          4,
+          0.39154849479816595
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.571547306766735,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -9.308667131891616e-15,
+          "overlap_x": 1.6276196068004678e-09,
+          "overlap_y": 2.153659195425206e-15,
+          "overlap_tangent": 0.9999999999999996,
+          "max_translation_overlap": 1.6276196068004678e-09,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 1.117155550864148e-06,
+          "overlap_x": 0.9845647233078672,
+          "overlap_y": 3.954378543363779e-10,
+          "overlap_tangent": 1.6531360111111254e-09,
+          "max_translation_overlap": 0.9845647233078672,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.310701173743241,
+          "overlap_x": 1.8794375286841896e-05,
+          "overlap_y": 0.15646951113512725,
+          "overlap_tangent": 5.186823193170653e-16,
+          "max_translation_overlap": 0.15646951113512725,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.3107011856225305,
+          "overlap_x": 7.757812977085554e-10,
+          "overlap_y": 0.9876452847458135,
+          "overlap_tangent": 2.190088388420719e-15,
+          "max_translation_overlap": 0.9876452847458135,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.3915489845920772,
+          "overlap_x": 1.6755509494627285e-08,
+          "overlap_y": 3.17479790664342e-08,
+          "overlap_tangent": 8.664943762504151e-16,
+          "max_translation_overlap": 3.17479790664342e-08,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.3915489854447044,
+          "overlap_x": 1.003578904007485e-11,
+          "overlap_y": 4.773626298068545e-09,
+          "overlap_tangent": 5.090112359384946e-15,
+          "max_translation_overlap": 4.773626298068545e-09,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.3107011856225305,
+      "goldstone_max_overlap": 0.9876452847458135,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          -9.308667131891616e-15
+        ],
+        [
+          2,
+          1.117155550864148e-06
+        ],
+        [
+          2,
+          0.310701173743241
+        ],
+        [
+          2,
+          0.3107011856225305
+        ],
+        [
+          4,
+          0.3915489845920772
+        ],
+        [
+          4,
+          0.3915489854447044
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 18.57154732745613,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -1.1745556586313687e-14,
+          "overlap_x": 1.6615250824497663e-09,
+          "overlap_y": 4.96564594998361e-16,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 1.6615250824497663e-09,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 9.16499079243996e-07,
+          "overlap_x": 0.9845644006237555,
+          "overlap_y": 6.717549192684219e-10,
+          "overlap_tangent": 1.6875745891854754e-09,
+          "max_translation_overlap": 0.9845644006237555,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.31070100878997675,
+          "overlap_x": 1.858898940197305e-05,
+          "overlap_y": 0.15643609401652064,
+          "overlap_tangent": 3.931533917866936e-15,
+          "max_translation_overlap": 0.15643609401652064,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.3107010204020879,
+          "overlap_x": 1.4138016321899038e-10,
+          "overlap_y": 0.9876505782297311,
+          "overlap_tangent": 1.0742275124986378e-15,
+          "max_translation_overlap": 0.9876505782297311,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.3915487839852573,
+          "overlap_x": 1.65672826941618e-08,
+          "overlap_y": 3.6208064026861317e-06,
+          "overlap_tangent": 4.301680539553487e-15,
+          "max_translation_overlap": 3.6208064026861317e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 0.39154878481837285,
+          "overlap_x": 3.4813797244320766e-11,
+          "overlap_y": 3.4687811715583897e-07,
+          "overlap_tangent": 1.165083654552923e-15,
+          "max_translation_overlap": 3.4687811715583897e-07,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.3107010204020879,
+      "goldstone_max_overlap": 0.9876505782297311,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          -1.1745556586313687e-14
+        ],
+        [
+          2,
+          9.16499079243996e-07
+        ],
+        [
+          2,
+          0.31070100878997675
+        ],
+        [
+          2,
+          0.3107010204020879
+        ],
+        [
+          4,
+          0.3915487839852573
+        ],
+        [
+          4,
+          0.39154878481837285
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 0,
+      "F": 0,
+      "F1_found": false,
+      "attempts_F": [
+        0
+      ],
+      "energy": 50.0391615318836,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.8230035350005386e-13,
+          "overlap_x": 0.22097967556914355,
+          "overlap_y": 0.26299571477592637,
+          "overlap_tangent": 0.9999999999999998,
+          "max_translation_overlap": 0.26299571477592637,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 11.406312061448048,
+          "overlap_x": 0.06761963947190153,
+          "overlap_y": 0.06351972989873496,
+          "overlap_tangent": 3.469446951953614e-16,
+          "max_translation_overlap": 0.06761963947190153,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 11.416733240023417,
+          "overlap_x": 0.4147553553257408,
+          "overlap_y": 0.299510559774147,
+          "overlap_tangent": 1.7659484985443896e-15,
+          "max_translation_overlap": 0.4147553553257408,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 12.654096215842083,
+          "overlap_x": 0.33574167606040206,
+          "overlap_y": 0.2424508420785677,
+          "overlap_tangent": 2.1441182163073336e-15,
+          "max_translation_overlap": 0.33574167606040206,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 13.407838581841784,
+          "overlap_x": 0.01845719777055438,
+          "overlap_y": 0.014362122509784248,
+          "overlap_tangent": 7.632783294297951e-17,
+          "max_translation_overlap": 0.01845719777055438,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 14.386761151891227,
+          "overlap_x": 0.2350626055730637,
+          "overlap_y": 0.16852334060976523,
+          "overlap_tangent": 1.9524312722118964e-15,
+          "max_translation_overlap": 0.2350626055730637,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 1,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 2,
+      "goldstone_eigenvalue": 11.416733240023417,
+      "goldstone_max_overlap": 0.4147553553257408,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          3.8230035350005386e-13
+        ],
+        [
+          2,
+          11.406312061448048
+        ],
+        [
+          2,
+          11.416733240023417
+        ],
+        [
+          3,
+          12.654096215842083
+        ],
+        [
+          3,
+          13.407838581841784
+        ],
+        [
+          4,
+          14.386761151891227
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "energy": 81.4266689055692,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 4.5267084213496723e-13,
+          "overlap_x": 0.09914140287038353,
+          "overlap_y": 0.056207858746130254,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 0.09914140287038353,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 8.368757403390491,
+          "overlap_x": 0.14847176678129953,
+          "overlap_y": 0.006805741845606313,
+          "overlap_tangent": 5.039371697712625e-16,
+          "max_translation_overlap": 0.14847176678129953,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 8.435683445376597,
+          "overlap_x": 0.2071054637431135,
+          "overlap_y": 0.027414415839106955,
+          "overlap_tangent": 8.153200337090993e-17,
+          "max_translation_overlap": 0.2071054637431135,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 8.842155524078915,
+          "overlap_x": 0.2414107261540444,
+          "overlap_y": 0.10448776309717737,
+          "overlap_tangent": 4.6629367034256575e-15,
+          "max_translation_overlap": 0.2414107261540444,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 14.678277243802972,
+          "overlap_x": 0.43099887687299326,
+          "overlap_y": 0.18477532241367356,
+          "overlap_tangent": 3.3046482217358175e-16,
+          "max_translation_overlap": 0.43099887687299326,
+          "is_tangent": false,
+          "nodal_count": 5,
+          "nodal_pos": 4,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 14.767991906255364,
+          "overlap_x": 0.11924869939301135,
+          "overlap_y": 0.06064285276684901,
+          "overlap_tangent": 8.326672684688674e-17,
+          "max_translation_overlap": 0.11924869939301135,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 1,
+          "nodal_neg": 5
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 14.678277243802972,
+      "goldstone_max_overlap": 0.43099887687299326,
+      "goldstone_nodal_count": 5,
+      "sigma_signature": [
+        [
+          1,
+          4.5267084213496723e-13
+        ],
+        [
+          2,
+          8.368757403390491
+        ],
+        [
+          2,
+          8.435683445376597
+        ],
+        [
+          3,
+          8.842155524078915
+        ],
+        [
+          5,
+          14.678277243802972
+        ],
+        [
+          6,
+          14.767991906255364
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.2,
+      "seed": 2,
+      "F": 0,
+      "F1_found": false,
+      "attempts_F": [
+        0,
+        0
+      ],
+      "energy": 49.06431078144952,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.2210556862777305e-13,
+          "overlap_x": 0.23875267175900466,
+          "overlap_y": 0.2519777682445429,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 0.2519777682445429,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 9.50861998997779,
+          "overlap_x": 0.007203266792072838,
+          "overlap_y": 0.12366892032697911,
+          "overlap_tangent": 8.604228440844963e-16,
+          "max_translation_overlap": 0.12366892032697911,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 9.913504009221231,
+          "overlap_x": 0.24332344426536823,
+          "overlap_y": 0.1639033123348214,
+          "overlap_tangent": 1.2420620087993939e-15,
+          "max_translation_overlap": 0.24332344426536823,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 10.976271633908317,
+          "overlap_x": 0.25077926925568017,
+          "overlap_y": 0.29852491413067295,
+          "overlap_tangent": 1.7555401576885288e-15,
+          "max_translation_overlap": 0.29852491413067295,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 14.529394342083227,
+          "overlap_x": 0.4046864434630331,
+          "overlap_y": 0.3693694413876888,
+          "overlap_tangent": 2.90132501357121e-15,
+          "max_translation_overlap": 0.4046864434630331,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 15.799285686457312,
+          "overlap_x": 0.04235098030657655,
+          "overlap_y": 0.0010388107006318835,
+          "overlap_tangent": 9.020562075079397e-17,
+          "max_translation_overlap": 0.04235098030657655,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 3,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 4,
+      "goldstone_eigenvalue": 14.529394342083227,
+      "goldstone_max_overlap": 0.4046864434630331,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          3.2210556862777305e-13
+        ],
+        [
+          2,
+          9.50861998997779
+        ],
+        [
+          3,
+          9.913504009221231
+        ],
+        [
+          3,
+          10.976271633908317
+        ],
+        [
+          3,
+          14.529394342083227
+        ],
+        [
+          4,
+          15.799285686457312
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1
+      ],
+      "energy": 18.49740145040922,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -1.1517700590993621e-14,
+          "overlap_x": 0.4048584055272747,
+          "overlap_y": 0.45361589313825845,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 0.45361589313825845,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.2459188791207725,
+          "overlap_x": 0.07846275933296369,
+          "overlap_y": 3.63416181303841e-05,
+          "overlap_tangent": 3.04432450385847e-15,
+          "max_translation_overlap": 0.07846275933296369,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.538973735553831,
+          "overlap_x": 0.4217804589956272,
+          "overlap_y": 2.562395616562302e-07,
+          "overlap_tangent": 6.740817366774178e-16,
+          "max_translation_overlap": 0.4217804589956272,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.0193736675458693,
+          "overlap_x": 2.59003378726033e-06,
+          "overlap_y": 1.6174122500472365e-11,
+          "overlap_tangent": 2.875729795487553e-17,
+          "max_translation_overlap": 2.59003378726033e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.6752898997370378,
+          "overlap_x": 0.08326856173848886,
+          "overlap_y": 7.24545601267647e-12,
+          "overlap_tangent": 9.595506863851935e-18,
+          "max_translation_overlap": 0.08326856173848886,
+          "is_tangent": false,
+          "nodal_count": 5,
+          "nodal_pos": 3,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.7485151333983981,
+          "overlap_x": 0.8020776566097607,
+          "overlap_y": 0.8282531948153465,
+          "overlap_tangent": 4.260480856999038e-15,
+          "max_translation_overlap": 0.8282531948153465,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 5,
+      "goldstone_eigenvalue": 1.7485151333983981,
+      "goldstone_max_overlap": 0.8282531948153465,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          -1.1517700590993621e-14
+        ],
+        [
+          2,
+          0.2459188791207725
+        ],
+        [
+          3,
+          0.538973735553831
+        ],
+        [
+          4,
+          1.0193736675458693
+        ],
+        [
+          5,
+          1.6752898997370378
+        ],
+        [
+          3,
+          1.7485151333983981
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1
+      ],
+      "energy": 18.497401451138625,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.9895636758713137e-14,
+          "overlap_x": 0.4536158931985117,
+          "overlap_y": 0.4048584064804802,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 0.4536158931985117,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.24591887342652588,
+          "overlap_x": 3.647100387570157e-05,
+          "overlap_y": 0.0784574208584708,
+          "overlap_tangent": 1.1449174941446927e-15,
+          "max_translation_overlap": 0.0784574208584708,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5389737317287361,
+          "overlap_x": 2.579675356384481e-07,
+          "overlap_y": 0.4217814881569438,
+          "overlap_tangent": 2.461007939220291e-16,
+          "max_translation_overlap": 0.4217814881569438,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.0193736636866173,
+          "overlap_x": 2.103251600660272e-11,
+          "overlap_y": 7.210804480188897e-07,
+          "overlap_tangent": 6.591949208711867e-17,
+          "max_translation_overlap": 7.210804480188897e-07,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.6752898958323652,
+          "overlap_x": 6.970340971079736e-12,
+          "overlap_y": 0.0832685652292123,
+          "overlap_tangent": 5.1574228119203545e-17,
+          "max_translation_overlap": 0.0832685652292123,
+          "is_tangent": false,
+          "nodal_count": 5,
+          "nodal_pos": 3,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.748515129075856,
+          "overlap_x": 0.8282531946649199,
+          "overlap_y": 0.8020776200890969,
+          "overlap_tangent": 4.198054105269923e-15,
+          "max_translation_overlap": 0.8282531946649199,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 5,
+      "goldstone_eigenvalue": 1.748515129075856,
+      "goldstone_max_overlap": 0.8282531946649199,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          1.9895636758713137e-14
+        ],
+        [
+          2,
+          0.24591887342652588
+        ],
+        [
+          3,
+          0.5389737317287361
+        ],
+        [
+          4,
+          1.0193736636866173
+        ],
+        [
+          5,
+          1.6752898958323652
+        ],
+        [
+          3,
+          1.748515129075856
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.5,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1
+      ],
+      "energy": 18.497401450787216,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.7550537280118775e-15,
+          "overlap_x": 0.45361589316949,
+          "overlap_y": 0.40485840601864653,
+          "overlap_tangent": 1.0000000000000009,
+          "max_translation_overlap": 0.45361589316949,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.2459188761724908,
+          "overlap_x": 3.640872725867855e-05,
+          "overlap_y": 0.07845449682711195,
+          "overlap_tangent": 2.373101715136272e-15,
+          "max_translation_overlap": 0.07845449682711195,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.5389737335728031,
+          "overlap_x": 2.5716072804809337e-07,
+          "overlap_y": 0.42178203571632344,
+          "overlap_tangent": 2.3763690487773545e-16,
+          "max_translation_overlap": 0.42178203571632344,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.019373665546518,
+          "overlap_x": 1.830057633211979e-11,
+          "overlap_y": 2.459971900693135e-06,
+          "overlap_tangent": 5.551115123125783e-17,
+          "max_translation_overlap": 2.459971900693135e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.6752898977147237,
+          "overlap_x": 3.1483860657433027e-12,
+          "overlap_y": 0.08326856353788822,
+          "overlap_tangent": 9.786100526640483e-17,
+          "max_translation_overlap": 0.08326856353788822,
+          "is_tangent": false,
+          "nodal_count": 5,
+          "nodal_pos": 3,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.7485151311600449,
+          "overlap_x": 0.8282531947373717,
+          "overlap_y": 0.8020776186169754,
+          "overlap_tangent": 7.228699238788472e-15,
+          "max_translation_overlap": 0.8282531947373717,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        }
+      ],
+      "goldstone_mode_index": 5,
+      "goldstone_eigenvalue": 1.7485151311600449,
+      "goldstone_max_overlap": 0.8282531947373717,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          3.7550537280118775e-15
+        ],
+        [
+          2,
+          0.2459188761724908
+        ],
+        [
+          3,
+          0.5389737335728031
+        ],
+        [
+          4,
+          1.019373665546518
+        ],
+        [
+          5,
+          1.6752898977147237
+        ],
+        [
+          3,
+          1.7485151311600449
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 9.388035046492645,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -6.2529839074272826e-15,
+          "overlap_x": 0.5803119144814501,
+          "overlap_y": 0.6474859718010301,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 0.6474859718010301,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.09841604261911954,
+          "overlap_x": 0.07845890294058991,
+          "overlap_y": 4.3606505467224475e-06,
+          "overlap_tangent": 1.0069771622447932e-14,
+          "max_translation_overlap": 0.07845890294058991,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.3914706260797382,
+          "overlap_x": 0.4217865013199964,
+          "overlap_y": 1.7136238525874547e-08,
+          "overlap_tangent": 1.9809966113251004e-15,
+          "max_translation_overlap": 0.4217865013199964,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.8339646851357059,
+          "overlap_x": 0.6859116191490734,
+          "overlap_y": 0.7450883512466053,
+          "overlap_tangent": 8.723924360687363e-15,
+          "max_translation_overlap": 0.7450883512466053,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.8718705401425816,
+          "overlap_x": 8.660921997449513e-09,
+          "overlap_y": 5.33759527377532e-13,
+          "overlap_tangent": 6.079934732755587e-16,
+          "max_translation_overlap": 8.660921997449513e-09,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.4801935149307106,
+          "overlap_x": 6.556560838676118e-05,
+          "overlap_y": 0.14650753643304554,
+          "overlap_tangent": 2.2898349882893854e-16,
+          "max_translation_overlap": 0.14650753643304554,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.8339646851357059,
+      "goldstone_max_overlap": 0.7450883512466053,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          -6.2529839074272826e-15
+        ],
+        [
+          2,
+          0.09841604261911954
+        ],
+        [
+          3,
+          0.3914706260797382
+        ],
+        [
+          3,
+          0.8339646851357059
+        ],
+        [
+          4,
+          0.8718705401425816
+        ],
+        [
+          2,
+          1.4801935149307106
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 9.388035048088604,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 5.2101578966005465e-15,
+          "overlap_x": 0.6474859718548589,
+          "overlap_y": 0.5803119145461557,
+          "overlap_tangent": 0.9999999999999989,
+          "max_translation_overlap": 0.6474859718548589,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.09841604254648532,
+          "overlap_x": 4.392468046857112e-06,
+          "overlap_y": 0.07845890282547499,
+          "overlap_tangent": 2.67841304690819e-15,
+          "max_translation_overlap": 0.07845890282547499,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.3914706259269908,
+          "overlap_x": 1.7261027347777332e-08,
+          "overlap_y": 0.42178650131045553,
+          "overlap_tangent": 2.2227626843610536e-15,
+          "max_translation_overlap": 0.42178650131045553,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.8339646852431981,
+          "overlap_x": 0.7450755704009688,
+          "overlap_y": 0.6859116190989623,
+          "overlap_tangent": 8.110288800950143e-15,
+          "max_translation_overlap": 0.7450755704009688,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.8718705398210967,
+          "overlap_x": 8.658816719187001e-12,
+          "overlap_y": 8.597092115574731e-09,
+          "overlap_tangent": 1.0408340855860843e-17,
+          "max_translation_overlap": 8.597092115574731e-09,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.4801935148668715,
+          "overlap_x": 0.1464317672295964,
+          "overlap_y": 6.569073128661217e-05,
+          "overlap_tangent": 1.0796485233610653e-15,
+          "max_translation_overlap": 0.1464317672295964,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.8339646852431981,
+      "goldstone_max_overlap": 0.7450755704009688,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          5.2101578966005465e-15
+        ],
+        [
+          2,
+          0.09841604254648532
+        ],
+        [
+          3,
+          0.3914706259269908
+        ],
+        [
+          3,
+          0.8339646852431981
+        ],
+        [
+          4,
+          0.8718705398210967
+        ],
+        [
+          2,
+          1.4801935148668715
+        ]
+      ]
+    },
+    {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 1.0,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 9.388035047349378,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -1.7017624797967072e-14,
+          "overlap_x": 0.6474859718299275,
+          "overlap_y": 0.5803119145139725,
+          "overlap_tangent": 1.0000000000000009,
+          "max_translation_overlap": 0.6474859718299275,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.09841604258013774,
+          "overlap_x": 4.385023105756003e-06,
+          "overlap_y": 0.07845886637622176,
+          "overlap_tangent": 1.5612511283791264e-15,
+          "max_translation_overlap": 0.07845886637622176,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.391470625996889,
+          "overlap_x": 1.7201495005939016e-08,
+          "overlap_y": 0.421786497585675,
+          "overlap_tangent": 1.3657305131644162e-15,
+          "max_translation_overlap": 0.421786497585675,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 1,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 0.8339646851929334,
+          "overlap_x": 0.7450755704262857,
+          "overlap_y": 0.6859116196241724,
+          "overlap_tangent": 1.16714533274654e-15,
+          "max_translation_overlap": 0.7450755704262857,
+          "is_tangent": false,
+          "nodal_count": 3,
+          "nodal_pos": 2,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 0.871870539968915,
+          "overlap_x": 1.1850895265119732e-11,
+          "overlap_y": 1.7766142673789524e-08,
+          "overlap_tangent": 1.0408340855860843e-16,
+          "max_translation_overlap": 1.7766142673789524e-08,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 1.4801935148978214,
+          "overlap_x": 0.1464317672429143,
+          "overlap_y": 2.584030442241962e-06,
+          "overlap_tangent": 3.322645977799077e-15,
+          "max_translation_overlap": 0.1464317672429143,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        }
+      ],
+      "goldstone_mode_index": 3,
+      "goldstone_eigenvalue": 0.8339646851929334,
+      "goldstone_max_overlap": 0.7450755704262857,
+      "goldstone_nodal_count": 3,
+      "sigma_signature": [
+        [
+          1,
+          -1.7017624797967072e-14
+        ],
+        [
+          2,
+          0.09841604258013774
+        ],
+        [
+          3,
+          0.391470625996889
+        ],
+        [
+          3,
+          0.8339646851929334
+        ],
+        [
+          4,
+          0.871870539968915
+        ],
+        [
+          2,
+          1.4801935148978214
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.2,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        0,
+        0
+      ],
+      "energy": 3.4116717716596416,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 4.421599723312382e-14,
+          "overlap_x": 2.4676000537824075e-16,
+          "overlap_tangent": 0.9999999999999998,
+          "max_translation_overlap": 2.4676000537824075e-16,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 31.4430478097083,
+          "overlap_x": 0.7635918147008404,
+          "overlap_tangent": 1.3877787807814457e-17,
+          "max_translation_overlap": 0.7635918147008404,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 34.05233081253423,
+          "overlap_x": 0.0014592055859828854,
+          "overlap_tangent": 2.6020852139652106e-16,
+          "max_translation_overlap": 0.0014592055859828854,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 39.12182917269129,
+          "overlap_x": 0.0031527233451003195,
+          "overlap_tangent": 1.1102230246251565e-16,
+          "max_translation_overlap": 0.0031527233451003195,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 39.12183457052705,
+          "overlap_x": 0.63471131184757,
+          "overlap_tangent": 4.163336342344337e-17,
+          "max_translation_overlap": 0.63471131184757,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 50.10556403594686,
+          "overlap_x": 0.01513774491783132,
+          "overlap_tangent": 4.0766001685454967e-17,
+          "max_translation_overlap": 0.01513774491783132,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 31.4430478097083,
+      "goldstone_max_overlap": 0.7635918147008404,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          4.421599723312382e-14
+        ],
+        [
+          2,
+          31.4430478097083
+        ],
+        [
+          4,
+          34.05233081253423
+        ],
+        [
+          4,
+          39.12182917269129
+        ],
+        [
+          4,
+          39.12183457052705
+        ],
+        [
+          6,
+          50.10556403594686
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.2,
+      "seed": 1,
+      "F": 0,
+      "F1_found": false,
+      "attempts_F": [
+        0,
+        0,
+        0
+      ],
+      "energy": 3.4116717716596408,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 3.1470938920374827e-15,
+          "overlap_x": 6.863677378191047e-17,
+          "overlap_tangent": 0.9999999999999998,
+          "max_translation_overlap": 6.863677378191047e-17,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 31.443047901249905,
+          "overlap_x": 0.7635918229986018,
+          "overlap_tangent": 1.1275702593849246e-17,
+          "max_translation_overlap": 0.7635918229986018,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 34.05233090018639,
+          "overlap_x": 0.0014591950338707761,
+          "overlap_tangent": 2.7755575615628914e-17,
+          "max_translation_overlap": 0.0014591950338707761,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 39.121829256140806,
+          "overlap_x": 0.0074909461732505685,
+          "overlap_tangent": 4.163336342344337e-17,
+          "max_translation_overlap": 0.0074909461732505685,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 39.121834655506966,
+          "overlap_x": 0.6346749287075698,
+          "overlap_tangent": 1.3010426069826053e-16,
+          "max_translation_overlap": 0.6346749287075698,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 50.10556403731715,
+          "overlap_x": 0.015137738805918026,
+          "overlap_tangent": 3.642919299551295e-17,
+          "max_translation_overlap": 0.015137738805918026,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 31.443047901249905,
+      "goldstone_max_overlap": 0.7635918229986018,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          3.1470938920374827e-15
+        ],
+        [
+          2,
+          31.443047901249905
+        ],
+        [
+          4,
+          34.05233090018639
+        ],
+        [
+          4,
+          39.121829256140806
+        ],
+        [
+          4,
+          39.121834655506966
+        ],
+        [
+          6,
+          50.10556403731715
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.2,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        0,
+        0
+      ],
+      "energy": 3.4116717716596945,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.33562244597046e-14,
+          "overlap_x": 2.5912431922403556e-17,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 2.5912431922403556e-17,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 31.443054431602015,
+          "overlap_x": 0.7635918237395,
+          "overlap_tangent": 3.5236570605778894e-18,
+          "max_translation_overlap": 0.7635918237395,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 34.05233676119187,
+          "overlap_x": 0.0014592517685977477,
+          "overlap_tangent": 2.7755575615628914e-17,
+          "max_translation_overlap": 0.0014592517685977477,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 39.12183558282724,
+          "overlap_x": 0.012348634901803988,
+          "overlap_tangent": 4.163336342344337e-17,
+          "max_translation_overlap": 0.012348634901803988,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 39.121840983510126,
+          "overlap_x": 0.6345989796299913,
+          "overlap_tangent": 5.2909066017292616e-17,
+          "max_translation_overlap": 0.6345989796299913,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 50.10556409611489,
+          "overlap_x": 0.015137747333346354,
+          "overlap_tangent": 3.469446951953614e-18,
+          "max_translation_overlap": 0.015137747333346354,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 31.443054431602015,
+      "goldstone_max_overlap": 0.7635918237395,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          1.33562244597046e-14
+        ],
+        [
+          2,
+          31.443054431602015
+        ],
+        [
+          4,
+          34.05233676119187
+        ],
+        [
+          4,
+          39.12183558282724
+        ],
+        [
+          4,
+          39.121840983510126
+        ],
+        [
+          6,
+          50.10556409611489
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.5,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 1.8497401521492645,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.7606986963135442e-15,
+          "overlap_x": 1.2670359282162397e-15,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 1.2670359282162397e-15,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742491806397193,
+          "overlap_x": 0.9443632480355678,
+          "overlap_tangent": 1.4023138661563295e-15,
+          "max_translation_overlap": 0.9443632480355678,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 1.7485140186759016,
+          "overlap_x": 6.057219778621076e-05,
+          "overlap_tangent": 1.1102230246251565e-16,
+          "max_translation_overlap": 6.057219778621076e-05,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 5.5893889080999815,
+          "overlap_x": 0.3103203004084956,
+          "overlap_tangent": 5.854691731421724e-17,
+          "max_translation_overlap": 0.3103203004084956,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 5.589412043184016,
+          "overlap_x": 0.016077196714596488,
+          "overlap_tangent": 6.938893903907228e-18,
+          "max_translation_overlap": 0.016077196714596488,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 8.072192674777282,
+          "overlap_x": 0.04677935714669923,
+          "overlap_tangent": 1.7694179454963432e-16,
+          "max_translation_overlap": 0.04677935714669923,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.14742491806397193,
+      "goldstone_max_overlap": 0.9443632480355678,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          1.7606986963135442e-15
+        ],
+        [
+          2,
+          0.14742491806397193
+        ],
+        [
+          4,
+          1.7485140186759016
+        ],
+        [
+          2,
+          5.5893889080999815
+        ],
+        [
+          4,
+          5.589412043184016
+        ],
+        [
+          6,
+          8.072192674777282
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.5,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 1.849740152245932,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 4.034837771969471e-15,
+          "overlap_x": 5.5250942709861306e-15,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 5.5250942709861306e-15,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742490978190043,
+          "overlap_x": 0.9442465232954511,
+          "overlap_tangent": 5.878110498347411e-15,
+          "max_translation_overlap": 0.9442465232954511,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 1.7485140090805262,
+          "overlap_x": 6.119912610932693e-05,
+          "overlap_tangent": 5.204170427930421e-16,
+          "max_translation_overlap": 6.119912610932693e-05,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 5.5893889164802255,
+          "overlap_x": 0.3106515648225061,
+          "overlap_tangent": 9.020562075079397e-17,
+          "max_translation_overlap": 0.3106515648225061,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 5.589412052835203,
+          "overlap_x": 0.01645312840664978,
+          "overlap_tangent": 1.249000902703301e-16,
+          "max_translation_overlap": 0.01645312840664978,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 8.072192668857872,
+          "overlap_x": 0.0468626147453558,
+          "overlap_tangent": 1.0018028073766061e-16,
+          "max_translation_overlap": 0.0468626147453558,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.14742490978190043,
+      "goldstone_max_overlap": 0.9442465232954511,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          4.034837771969471e-15
+        ],
+        [
+          2,
+          0.14742490978190043
+        ],
+        [
+          4,
+          1.7485140090805262
+        ],
+        [
+          2,
+          5.5893889164802255
+        ],
+        [
+          4,
+          5.589412052835203
+        ],
+        [
+          6,
+          8.072192668857872
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.5,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 1.8497401521265053,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 1.0442043912760197e-16,
+          "overlap_x": 1.4363510381087963e-15,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 1.4363510381087963e-15,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 0.14742492001626528,
+          "overlap_x": 0.9443632098078847,
+          "overlap_tangent": 1.5092094240998222e-15,
+          "max_translation_overlap": 0.9443632098078847,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 1.7485140209377554,
+          "overlap_x": 6.057240528396096e-05,
+          "overlap_tangent": 4.198030811863873e-16,
+          "max_translation_overlap": 6.057240528396096e-05,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 5.589388906124383,
+          "overlap_x": 0.31032096048614977,
+          "overlap_tangent": 2.7755575615628914e-17,
+          "max_translation_overlap": 0.31032096048614977,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 5.589412040908392,
+          "overlap_x": 0.01606667584975227,
+          "overlap_tangent": 7.632783294297951e-17,
+          "max_translation_overlap": 0.01606667584975227,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 8.072192676173485,
+          "overlap_x": 0.04677938423513286,
+          "overlap_tangent": 1.717376241217039e-16,
+          "max_translation_overlap": 0.04677938423513286,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 0.14742492001626528,
+      "goldstone_max_overlap": 0.9443632098078847,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          1.0442043912760197e-16
+        ],
+        [
+          2,
+          0.14742492001626528
+        ],
+        [
+          4,
+          1.7485140209377554
+        ],
+        [
+          2,
+          5.589388906124383
+        ],
+        [
+          4,
+          5.589412040908392
+        ],
+        [
+          6,
+          8.072192676173485
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 1.0,
+      "seed": 0,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 0.9388034926613051,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": 4.191985267208077e-15,
+          "overlap_x": 6.595061085787335e-12,
+          "overlap_tangent": 1.0,
+          "max_translation_overlap": 6.595061085787335e-12,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 1,
+          "nodal_neg": 0
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 2.9968075368015612e-05,
+          "overlap_x": 0.98711964384107,
+          "overlap_tangent": 6.681035282299352e-12,
+          "max_translation_overlap": 0.98711964384107,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.8339850857769551,
+          "overlap_x": 6.622919603045045e-06,
+          "overlap_tangent": 5.542441505745899e-16,
+          "max_translation_overlap": 6.622919603045045e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.4802506803169417,
+          "overlap_x": 0.1464703632394836,
+          "overlap_tangent": 4.354155924701786e-16,
+          "max_translation_overlap": 0.1464703632394836,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.4993789461984077,
+          "overlap_x": 0.00017450916621284947,
+          "overlap_tangent": 1.2663481374630692e-16,
+          "max_translation_overlap": 0.00017450916621284947,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 2.2328581236213862,
+          "overlap_x": 0.020387088716791846,
+          "overlap_tangent": 1.717376241217039e-16,
+          "max_translation_overlap": 0.020387088716791846,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 2.9968075368015612e-05,
+      "goldstone_max_overlap": 0.98711964384107,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          4.191985267208077e-15
+        ],
+        [
+          2,
+          2.9968075368015612e-05
+        ],
+        [
+          4,
+          0.8339850857769551
+        ],
+        [
+          2,
+          1.4802506803169417
+        ],
+        [
+          4,
+          1.4993789461984077
+        ],
+        [
+          6,
+          2.2328581236213862
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 1.0,
+      "seed": 1,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 0.9388034841706547,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -3.599839893975238e-15,
+          "overlap_x": 7.422831446723954e-12,
+          "overlap_tangent": 1.0000000000000004,
+          "max_translation_overlap": 7.422831446723954e-12,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 3.115763991723284e-05,
+          "overlap_x": 0.9871193695839492,
+          "overlap_tangent": 7.518173583687116e-12,
+          "max_translation_overlap": 0.9871193695839492,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.8339871611542601,
+          "overlap_x": 4.465300068094008e-06,
+          "overlap_tangent": 4.510281037539698e-16,
+          "max_translation_overlap": 4.465300068094008e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.4802481065468411,
+          "overlap_x": 0.14647219678708406,
+          "overlap_tangent": 6.562675750054758e-16,
+          "max_translation_overlap": 0.14647219678708406,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.4993761811328306,
+          "overlap_x": 0.0001512285540788659,
+          "overlap_tangent": 1.1527237497865883e-15,
+          "max_translation_overlap": 0.0001512285540788659,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 2.2328603580610666,
+          "overlap_x": 0.020398464093341194,
+          "overlap_tangent": 8.81239525796218e-16,
+          "max_translation_overlap": 0.020398464093341194,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 3.115763991723284e-05,
+      "goldstone_max_overlap": 0.9871193695839492,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          -3.599839893975238e-15
+        ],
+        [
+          2,
+          3.115763991723284e-05
+        ],
+        [
+          4,
+          0.8339871611542601
+        ],
+        [
+          2,
+          1.4802481065468411
+        ],
+        [
+          4,
+          1.4993761811328306
+        ],
+        [
+          6,
+          2.2328603580610666
+        ]
+      ]
+    },
+    {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 1.0,
+      "seed": 2,
+      "F": 1,
+      "F1_found": true,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "energy": 0.9388034860619006,
+      "mode_data": [
+        {
+          "mode": 0,
+          "eigenvalue": -2.3310626861008427e-15,
+          "overlap_x": 2.949533152440953e-11,
+          "overlap_tangent": 0.9999999999999994,
+          "max_translation_overlap": 2.949533152440953e-11,
+          "is_tangent": true,
+          "nodal_count": 1,
+          "nodal_pos": 0,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 1,
+          "eigenvalue": 3.054260314540159e-05,
+          "overlap_x": 0.9871191564864149,
+          "overlap_tangent": 2.9880093191381185e-11,
+          "max_translation_overlap": 0.9871191564864149,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 2,
+          "eigenvalue": 0.8339864359905499,
+          "overlap_x": 5.328553516889198e-06,
+          "overlap_tangent": 1.1397133237167623e-15,
+          "max_translation_overlap": 5.328553516889198e-06,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 3,
+          "eigenvalue": 1.4802479973595748,
+          "overlap_x": 0.146473012417007,
+          "overlap_tangent": 5.117434254131581e-16,
+          "max_translation_overlap": 0.146473012417007,
+          "is_tangent": false,
+          "nodal_count": 2,
+          "nodal_pos": 1,
+          "nodal_neg": 1
+        },
+        {
+          "mode": 4,
+          "eigenvalue": 1.4993761042407858,
+          "overlap_x": 0.00014210936701983604,
+          "overlap_tangent": 3.7470027081099033e-16,
+          "max_translation_overlap": 0.00014210936701983604,
+          "is_tangent": false,
+          "nodal_count": 4,
+          "nodal_pos": 2,
+          "nodal_neg": 2
+        },
+        {
+          "mode": 5,
+          "eigenvalue": 2.2328593489089372,
+          "overlap_x": 0.02040606928220926,
+          "overlap_tangent": 1.9255430583342559e-16,
+          "max_translation_overlap": 0.02040606928220926,
+          "is_tangent": false,
+          "nodal_count": 6,
+          "nodal_pos": 3,
+          "nodal_neg": 3
+        }
+      ],
+      "goldstone_mode_index": 1,
+      "goldstone_eigenvalue": 3.054260314540159e-05,
+      "goldstone_max_overlap": 0.9871191564864149,
+      "goldstone_nodal_count": 2,
+      "sigma_signature": [
+        [
+          1,
+          -2.3310626861008427e-15
+        ],
+        [
+          2,
+          3.054260314540159e-05
+        ],
+        [
+          4,
+          0.8339864359905499
+        ],
+        [
+          2,
+          1.4802479973595748
+        ],
+        [
+          4,
+          1.4993761042407858
+        ],
+        [
+          6,
+          2.2328593489089372
+        ]
+      ]
+    }
+  ],
+  "aggregate": {
+    "2D_torus_zeta0.2": {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.2,
+      "n": 2,
+      "mean_overlap": 0.46991250947531227,
+      "prediction": "no Goldstone",
+      "expected_range": "< 0.5",
+      "pass": true
+    },
+    "2D_torus_zeta0.5": {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 0.5,
+      "n": 3,
+      "mean_overlap": 0.9627749453880109,
+      "prediction": "Goldstone iff \u03b6\u22650.5",
+      "expected_range": "> 0.9",
+      "pass": true
+    },
+    "2D_torus_zeta1.0": {
+      "graph_class": "2D_torus",
+      "L": 20,
+      "zeta": 1.0,
+      "n": 3,
+      "mean_overlap": 0.9876490575779306,
+      "prediction": "Goldstone iff \u03b6\u22650.5",
+      "expected_range": "> 0.9",
+      "pass": true
+    },
+    "2D_free_BC_zeta0.2": {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.2,
+      "n": 1,
+      "mean_overlap": 0.43099887687299326,
+      "prediction": "no Goldstone (boundary broken)",
+      "expected_range": "< 0.5",
+      "pass": true
+    },
+    "2D_free_BC_zeta0.5": {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 0.5,
+      "n": 3,
+      "mean_overlap": 0.8282531947392128,
+      "prediction": "no Goldstone (boundary broken)",
+      "expected_range": "< 0.5",
+      "pass": false
+    },
+    "2D_free_BC_zeta1.0": {
+      "graph_class": "2D_free_BC",
+      "L": 20,
+      "zeta": 1.0,
+      "n": 3,
+      "mean_overlap": 0.7450798306912866,
+      "prediction": "no Goldstone (boundary broken)",
+      "expected_range": "< 0.5",
+      "pass": false
+    },
+    "1D_cycle_zeta0.2": {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.2,
+      "n": 2,
+      "mean_overlap": 0.7635918192201702,
+      "prediction": "no Goldstone",
+      "expected_range": "< 0.5",
+      "pass": false
+    },
+    "1D_cycle_zeta0.5": {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 0.5,
+      "n": 3,
+      "mean_overlap": 0.9443243270463011,
+      "prediction": "1D Goldstone iff \u03b6\u22650.5",
+      "expected_range": "> 0.9",
+      "pass": true
+    },
+    "1D_cycle_zeta1.0": {
+      "graph_class": "1D_cycle",
+      "L": 40,
+      "zeta": 1.0,
+      "n": 3,
+      "mean_overlap": 0.987119389970478,
+      "prediction": "1D Goldstone iff \u03b6\u22650.5",
+      "expected_range": "> 0.9",
+      "pass": true
+    }
+  }
+}

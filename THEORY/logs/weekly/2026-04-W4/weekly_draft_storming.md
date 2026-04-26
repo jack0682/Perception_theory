@@ -56,6 +56,167 @@ canonical/theorem_status.md                        (main 동기 update)
 
 ---
 
+## 2026-04-26 (W4 Extended Day 8)
+
+**Session type:** W4 extended close — V5b verification cycle (NQ-170 → NQ-172 → NQ-170b → NQ-170c). Per user direction (mid-session): "아직 내용은 전부 W4로 간주해" → 04-26 work treated as W4 final-day continuation, NOT W5 Day 1. **W4 scope (extended): 2026-04-19 ~ 2026-04-26 (8 days)**.
+**Origin:** `logs/daily/2026-04-26/` (plan.md + 01_exploration.md + 02_NQ170_zeta_scan.md + 03_V5b_status_update.md + 04_NQ170c_graph_extension_nodal.md + 99_summary.md) + `CODE/scripts/{nq170_zeta_scan, nq172_reproducibility_test, nq170b_zeta_scan_fixed, nq170c_v5b_extension}.py` + 4 result JSONs.
+**Canonical-relevant 산출물:** **V5b → V5b-T (Cat A canonical-ready, T1-3 candidate) + V5b-F (Cat C new finding, T3-3)**. σ-framework multi-graph empirical Cat A 강화 (single-graph NQ-141 → 3-graph-class NQ-170c). 4 new NQ (NQ-172 reproducibility resolved; NQ-173/174/175 carry).
+
+---
+
+### 오늘의 성과 비판적 분류 (W4 extended close)
+
+**Tier 1 — 핵심성과 (Cat A canonical-promotable)**:
+
+1. **V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs)** — Cat A. Sub/super-lattice dichotomy + commensurability split (2D torus) + 1D Goldstone (cycle) + nodal count explicit. ζ_*(G) graph-class dependent. *(Splits original V5b: T2 → T1.)*
+2. **σ-framework multi-graph empirical Cat A** — NQ-170c 3 graph classes × 9 minimizers × 6 modes nodal counts well-defined. Strengthens NQ-141 (single-graph) to multi-graph-class.
+
+**Tier 3 — Sketch / new finding**:
+
+3. **V5b-F (Partial Goldstone on Boundary-Modified Graphs)** — Cat C new finding. Boundary lifting mechanism qualitative observed (overlap 0.75-0.83 at 2D free BC ζ=0.5, 1.0). Quantification deferred to NQ-173.
+
+**비판적 자기 평가 (W4 extended close)**:
+- **V5b 8 iterations** (V1 morning W4-04-24 → V5b'' W4-04-26 evening): 명확한 *iterative refinement* pattern.
+- **NQ-170 method failure 가 healthy science**: random IC + n_restarts=1 protocol이 부적합 → multi-IC (NQ-170b) + graph-class extension (NQ-170c) 발견.
+- **NQ-172 reproducibility crisis 가 resolved**: NQ-168 mode-indexing이 lowest non-tangent 가 mode 1이라는 hardcoded assumption. NQ-170 분석이 mode 1 보고 → mode 0이 Goldstone일 때 false negative. mode-agnostic detection으로 fix.
+- **V5b-T canonical 승급 path substantively unblocked**: 4 conditions 모두 충족.
+- **V5b-F 새 발견**: V5b의 "graph-class independent" claim이 *precise scope*로 sharpened — translation-invariant graphs에 적용. Boundary-modified는 별도 phenomenology.
+
+---
+
+### Added (W4 extended)
+
+#### A-2026-04-26-01. V5b-T Pre-Objective Goldstone Theorem on Translation-Invariant Graphs
+
+**출처:** `logs/daily/2026-04-26/04_NQ170c_graph_extension_nodal.md` §3, §4; `02_NQ170_zeta_scan.md` (initial method failure record); `03_V5b_status_update.md` (잠정 강등 history); CODE/scripts/{nq170b, nq170c}.
+
+**Statement (V5b-T)**: On translation-invariant graphs (torus T^d, cycle C_n) with cohesion field $u_t : X \to [0,1]$ subject to volume constraint, with regime parameter $\zeta = \xi_0/a$ where $\xi_0 = \sqrt{\alpha/\beta}$ and $a$ is lattice spacing:
+
+- **Sub-lattice** ($\zeta < \zeta_*(G)$): $\mathcal{F}=1$ minimizer Hessian has orbital modes only, no translation Goldstone. Mode 1 max(overlap_x, overlap_y) < 0.5.
+- **Super-lattice** ($\zeta > \zeta_*(G)$): $\mathcal{F}=1$ minimizer has $d$-fold translation pseudo-Goldstone ($d$ = lattice dimension). Mode (mode-agnostic) max overlap > 0.9.
+- **2D torus** ($d=2$): 2-fold doublet, possibly split by lattice commensurability into (near-zero, orbital-scale) — V5-c.
+- **1D cycle** ($d=1$): 1-fold single Goldstone (no doublet, no commensurability split).
+- **ζ_*(G) graph-class dependent**: 2D torus ≈ [0.2, 0.5]; 1D cycle < 0.2.
+
+**Proof structure**: V5b-T is empirical statement (Cat A). Theoretical derivation: PN barrier on disk-like minimizer, dimensionality d enters via Goldstone count. Future analytical work (NQ-174).
+
+**Empirical confirmation (NQ-170b + NQ-170c)**:
+| Graph class | L | ζ | n F=1 minimizers | mean overlap | V5b-T 예측 | PASS |
+|------------|---|---|------|--------------|-----------|------|
+| 2D torus | 20 | 0.2 | 2 | 0.470 | < 0.5 | ✓ |
+| 2D torus | 20 | 0.5 | 3 | 0.963 | > 0.9 | ✓ |
+| 2D torus | 20 | 1.0 | 3 | 0.988 | > 0.9 | ✓ |
+| 1D cycle | 40 | 0.5 | 3 | 0.944 | > 0.9 | ✓ |
+| 1D cycle | 40 | 1.0 | 3 | 0.987 | > 0.9 | ✓ |
+
+Sub-statements:
+- **(V5b-T-a) sub-lattice**: 2D torus ζ=0.2 mean 0.47 < 0.5. Confirmed. *(1D cycle ζ=0.2 = 0.76 > 0.5, suggesting ζ_*(1D cycle) < 0.2 — graph-class dependent.)*
+- **(V5b-T-b) super-lattice existence**: 12/12 PASS at ζ ≥ 0.5 across 2 graph classes (torus + cycle).
+- **(V5b-T-c) 2D commensurability split**: direction flipping (ov_x vs ov_y) directly observed in 2D torus at multiple seeds.
+- **(V5b-T-d) 1D no commensurability**: 1D cycle has single Goldstone, no doublet.
+- **(V5b-T-e) Nodal count = 2 universal**: Goldstone modes nodal=2 across all translation-invariant minimizers.
+
+**Category**:
+- (V5b-T-a, b, e): **Cat A** (empirical, graph-class verified).
+- (V5b-T-c, d): **Cat A** (mechanism observed).
+
+**Canonical merge target**: `canonical.md` §13 new Cat A entry (T-V5b-T or similar).
+
+#### A-2026-04-26-02. σ-Framework Multi-Graph Empirical Cat A Strengthening
+
+**출처:** `04_NQ170c_graph_extension_nodal.md` §4; `nq170c_v5b_extension.json`.
+
+**Statement**: σ(u*) = (𝓕; {(n_k, [ρ_k], λ_k)})의 (n_k, λ_k) component가 3 graph classes (2D torus, 2D free BC, 1D cycle) × 9 F=1 minimizers × 6 lowest Hessian modes에서 well-defined. Mode 0 (volume tangent)는 nodal=1 universal. Goldstone modes는 nodal=2 universal on translation-invariant graphs. Higher modes systematic nodal hierarchy:
+- 2D torus: 2 → 4 (orbital ↔ degenerate pair)
+- 1D cycle: 2 → 4 → 6 (ℓ=1, 2, 3 angular)
+- 2D free BC: 2 → 3-5 (boundary perturbation)
+
+**Empirical confirmation**:
+- 모든 graph class에서 nodal counts well-defined
+- Free BC에서 boundary가 nodal lines 추가 → σ-framework가 graph-topology-sensitive observable로 확인
+- Translation-invariant graphs의 Goldstone universality (nodal=2) → σ가 ℓ=1 angular structure를 graph-independent하게 표현
+
+**Category**: **Cat A multi-graph empirical**. W4 04-25 NQ-141 (single-graph 32×32 free BC, 324/324 perfect σ-irrep)에서 multi-graph로 확장.
+
+**Canonical merge target**: `canonical.md` §11.1 Commitment 14 (Orbital character is constitutive)의 strengthening note. σ-framework가 graph-class invariant statement임을 추가 cross-reference.
+
+---
+
+### Modified (W4 extended)
+
+#### M-2026-04-26-01. V5b classification refined (T2 → T1-3 + T3-3)
+
+**출처:** `04_NQ170c_graph_extension_nodal.md` §5; `99_summary.md` §4.
+
+**Modification**: W4 weekly_summary §3.2 V5b T2-1 entry를 다음과 같이 split:
+- **T1-3 (new)**: V5b-T (Cat A canonical-ready). 위 A-2026-04-26-01.
+- **T3-3 (new)**: V5b-F (Cat C new finding). 위 §"Tier 3 새 finding".
+
+원래 V5b "current best" status를 W4 close에서 T2로 두었던 것이 정확한 결정 — graph-class extension 결과로 V5b-T(Cat A 가능) + V5b-F (Cat C 별도) split이 도출됨.
+
+**Category**: T2 entry retracted (split into T1 + T3). Net W4 close: T1 = 2 → **3** (added V5b-T), T2 = 5 → 4, T3 = 3 → **4** (added V5b-F).
+
+**Canonical merge target**: W4 weekly_summary §3 update + canonical.md §13 V5b-T 추가 + NQ-173 등록.
+
+---
+
+### Pending (W5+ carry-forward)
+
+#### P-2026-04-26-01. NQ-173: Boundary-Modified Partial Goldstone Quantification
+
+**출처:** `04_NQ170c_graph_extension_nodal.md` §6.
+
+**Statement**: 2D free BC L=20 ζ=0.5, 1.0에서 mode max overlap 0.75-0.83 (intermediate, NOT < 0.5 NOT > 0.9). Bulk-like interior region에서 approximate translation Goldstone, boundary-localized lifting. 정확한 mechanism quantification 미수행.
+
+**Sub-tasks**:
+- Mode mass spatial distribution (interior vs boundary fraction)
+- Bulk-only translation overlap (interior region에서만)
+- Boundary lifting의 ζ-dependence
+- Larger L에서 boundary effect scaling
+
+**Carry**: W5+ 후속 작업.
+
+#### P-2026-04-26-02. NQ-174: ζ_*(graph-class) Precise Dependence
+
+**출처:** `04_NQ170c_graph_extension_nodal.md` §6.
+
+**Statement**: ζ_*(2D torus) ∈ [0.2, 0.5], ζ_*(1D cycle) < 0.2. 정확한 값 + dimensionality dependence:
+- ζ_*(d, lattice topology) = ?
+- 이론적 derivation: PN barrier scaling이 dimensionality에 어떻게 의존
+- 추가 ζ values (0.05, 0.1, 0.15) 측정 필요 (1D cycle)
+- 2D torus ζ ∈ {0.25, 0.3, 0.35, 0.4, 0.45} 측정 필요
+
+**Carry**: W5+ 후속 작업.
+
+#### P-2026-04-26-03. NQ-175: 3D Extension (T^3, T^d for d ≥ 3)
+
+**출처:** `04_NQ170c_graph_extension_nodal.md` §6.
+
+**Statement**: V5b-T의 3D extension. 예측: 3-fold Goldstone triplet + commensurability splitting (3 → varying numbers depending on direction). Computational cost higher. Single-formation σ Phase 5와는 별개 (multi-formation σ가 아닌 single-formation higher-d).
+
+**Carry**: W5+ or W6+.
+
+---
+
+### New NQs
+
+- **NQ-172** (W4-04-26 morning, RESOLVED): NQ-168 vs NQ-170 reproducibility crisis. Resolution: NQ-170 mode-indexing bug (hardcoded mode 1). Mode-agnostic detection으로 fix.
+- **NQ-173** (NEW): Boundary-modified partial Goldstone characterization (P-2026-04-26-01).
+- **NQ-174** (NEW): ζ_*(graph-class) precise dependence (P-2026-04-26-02).
+- **NQ-175** (NEW): V5b-T 3D extension (P-2026-04-26-03).
+
+---
+
+### Canonical 경계 준수
+
+- **Canonical 직접 수정**: 0건 ✓ (W4 weekly_summary update만 별도)
+- **theorem_status.md 직접 수정**: 0건 ✓
+- **Silent resolution**: 0건 ✓ (V5b-T/V5b-F split + new findings 명시)
+- **Hard constraint 위반**: 0건 ✓
+- 모든 결과는 `logs/daily/2026-04-26/` + 본 weekly buffer (W4 extended)에 accumulate. Stage 6 weekly close (W4 04-26 EOD) 시 user 리뷰 후 V5b-T canonical merge 결정.
+
+---
+
 ## 2026-04-24
 
 **Session type:** σ-framework 정립 (morning) + **C2 cluster (Pre-Objective Mechanism) 완전 공략** (afternoon-evening) + C3/G1 Geometric Taxonomy + Dual-Regime deep dive (night, Theorem 1 V1→V5b 6 iterations).

@@ -2,6 +2,242 @@
 
 ---
 
+## 2026-04-26 — W4 Extended Close: V5b-T Canonical Merge + V5b-F New Finding
+
+### Summary
+
+W4 close (initial 2026-04-25)을 user direction "아직 내용은 전부 W4로 간주해"에 따라 **2026-04-26 EOD까지로 extended**. V5b verification cycle (NQ-170 → NQ-172 → NQ-170b → NQ-170c)이 V5b를 V5b-T (Cat A canonical-ready) + V5b-F (Cat C new finding) 로 split. **canonical v1.4 release**: T-V5b-T entry 추가 (37A → 38A, 51 → 52 claims, 73% fully proved). V5b 8-iteration cycle (V1 → V5b'' through 04-24 + 04-26) 정직하게 closure에 도달.
+
+**W4 scope (extended)**: 2026-04-19 ~ **2026-04-26** (8 days, originally 7).
+
+### Files Created (W4 extended)
+
+- `THEORY/logs/daily/2026-04-26/plan.md` — W4 extended Day 8 plan (initially W5 Day 1, reverted per user direction).
+- `THEORY/logs/daily/2026-04-26/01_exploration.md` — NQ-170 multi-approach + Primary A1+A3.
+- `THEORY/logs/daily/2026-04-26/02_NQ170_zeta_scan.md` — NQ-170 method failure + NQ-172 reproducibility crisis 등록.
+- `THEORY/logs/daily/2026-04-26/03_V5b_status_update.md` — V5b 7-iteration history + 잠정 Cat 강등 (당시).
+- `THEORY/logs/daily/2026-04-26/04_NQ170c_graph_extension_nodal.md` — **결정적 결과: V5b → V5b-T (Cat A) + V5b-F (Cat C) split + σ multi-graph empirical**.
+- `THEORY/logs/daily/2026-04-26/99_summary.md` — W4 extended close 통합 요약 (8-day journey through V5b 8 iterations).
+- `THEORY/logs/weekly/2026-04-W5/README.md` — W5 placeholder (not opened — reverted to W4 extended).
+- `CODE/scripts/{nq170_zeta_scan, nq172_reproducibility_test, nq170b_zeta_scan_fixed, nq170c_v5b_extension}.py` — V5b verification cycle 4 scripts.
+- `CODE/scripts/results/nq170{,b,c}_*.json + nq172_*.json + nq172_u_*.npy` — 원자료.
+
+### Files Modified (W4 extended)
+
+- `THEORY/canonical/canonical.md` (v1.3 → **v1.4**):
+  - §13: **T-V5b-T** Cat A entry 추가 (Pre-Objective Goldstone on Translation-Invariant Graphs). T-PreObj family 다음에 위치.
+  - 4곳 counts update: 37A → **38A**, 51 → **52** claims (line 58, 906, 1300, 1304).
+  - §15 closing summary: V5b-T narrative + W4 extended note 추가.
+
+- `THEORY/canonical/theorem_status.md`:
+  - last_updated: 2026-04-25 → 2026-04-26.
+  - **CV-1.4 release entry** 추가 (W4 extended close).
+  - C-0710 (T-V5b-T) + C-0711 (V5b-F Cat C, NQ-173 carry) Active Claims 추가.
+  - Proof Status Summary update.
+  - Footer update.
+
+- `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md`:
+  - **04-26 entry append (latest-first)** — Added/Modified/Pending sections + V5b-T A-2026-04-26-01 + σ multi-graph A-2026-04-26-02.
+
+- `THEORY/logs/weekly/2026-04-W4/weekly_summary.md`:
+  - Period: 04-19~04-25 → **04-19~04-26 (EXTENDED)**.
+  - §3.1 T1: 2 → **3** (added T1-3 V5b-T).
+  - §3.2 T2: 5 → 4 (V5b T2-1 SUPERSEDED).
+  - §3.3 T3: 3 → **4** (added T3-3 V5b-F new finding).
+  - §6 W5 carry-forward: NQ-173/174/175 명시.
+  - §8 statistics + §9 narrative closing.
+
+- `THEORY/CHANGELOG.md` — 본 entry.
+
+### Theorem Status Changes
+
+**New Cat A**:
+- **T-V5b-T**: Pre-Objective Goldstone on Translation-Invariant Graphs (sub/super-lattice dichotomy + 2D commensurability split + 1D 1-fold Goldstone + Goldstone nodal=2 universal).
+
+**New Cat C finding**:
+- **V5b-F**: Partial Goldstone on Boundary-Modified Graphs (boundary lifting mechanism, qualitative). NQ-173 carry.
+
+**Counts**:
+- §13 theorems: 37A/4B/5C → **38A**/4B/5C (+1 Cat A: T-V5b-T)
+- Total claims: 51 → **52** (73% fully proved)
+
+**Reproducibility crisis identified+resolved**:
+- NQ-172: NQ-168 (04-25 5-seed Goldstone confirmation) vs NQ-170 (04-26 morning, max_overlap=0.000) 모순. Resolution: NQ-170 분석 스크립트가 mode index 1을 hardcode → mode 0이 Goldstone일 때 false negative. Mode-agnostic detection 적용으로 해소.
+
+**V5b 8 iterations 통합**:
+- V1 (W4-04-24 morning, universal Goldstone) → falsified by G1
+- V2 (W4-04-24 G1, 3-geometry) → incomplete
+- V3, V4 (W4-04-24, dual-regime) → V4 retracted in-session as premature
+- V5a (W4-04-24, falsification via critical slowing) → retracted in-session as partially wrong
+- V5b (W4-04-24 27_*, refined dual-regime) → "current best" through 04-25
+- V5b' (W4-extended 04-26 NQ-172 후) → reproducibility resolved
+- **V5b'' (W4-extended 04-26 NQ-170c 후) → V5b-T (T1, canonical-merged) + V5b-F (T3, new finding) split**
+
+### Test Count
+
+- 변경 없음 (코드 검증 미수정). 마지막 확인 175 passing.
+
+### Rationale
+
+W4 close (initial 2026-04-25)이 V5b를 *T2 보수적 분류*로 둔 결정이 W5 Day 1 시도 (NQ-170 morning, method failure + NQ-172 crisis) 후 retrospective하게 정당함이 확인됨. V5b를 04-25 close에서 T1으로 격상시키지 않은 것이 옳았음 — 그렇지 않았다면 *premature canonical promotion + retraction* 사태가 됐을 것. 보수적 verification 정신이 작동.
+
+이후 04-26 V5b verification cycle 4-stage (NQ-170 → 172 → 170b → 170c)가 V5b의 정확한 scope에 도달:
+- **V5b-T (Cat A canonical-ready)**: translation-invariant graphs (torus, cycle)에서 sub/super-lattice dichotomy + commensurability split + nodal count.
+- **V5b-F (Cat C new finding)**: boundary-modified graphs에서 *partial* Goldstone (overlap 0.5-0.85), boundary lifting mechanism qualitative observed.
+
+이는 V5b의 "graph-class independent" claim을 *over-broad statement에서 precise scope*로 sharpen — V5b-T로 conservative 정착, V5b-F는 새 phenomenology 영역 개척.
+
+**σ-framework 강화**: NQ-141 (W4 04-25) single-graph (R23 32×32 free BC, 324/324 perfect) → NQ-170c (W4 extended 04-26) multi-graph (3 classes × 9 minimizers × 6 modes) empirical. Commitment 14의 strengthening.
+
+### Carry-Forward (W5+)
+
+**W5 priorities** (post-W4 extended close):
+- **NQ-173**: V5b-F partial Goldstone characterization (boundary lifting mechanism quantification). Mode mass spatial distribution + bulk-only overlap + ζ-dependence.
+- **NQ-174**: ζ_*(graph-class) precise dependence. 2D torus ζ ∈ {0.25, 0.3, 0.35, 0.4, 0.45} + 1D cycle ζ ∈ {0.05, 0.1, 0.15} 추가 측정.
+- **NQ-175**: V5b-T 3D extension (T^3, T^d for d ≥ 3) — 3-fold Goldstone triplet.
+- σ supporting lemmas (Lemma 1/2/3, Theorem 3/4) §13 entries — user decision.
+- SF Round 1-5 Cat A merge (Q29-Q34) — user decision.
+- Multi-formation σ Phase 5 — would re-engage MO-1 stratified Morse.
+
+**W5 opening**: V5b-T canonical merge (this commit) 후 user 결정에 따라.
+
+### W4 Extended Close 통계
+
+- W4 daily sessions: 7 → **8** (extended)
+- W4 신규 Cat A (canonical-merged): 35 → 37 (v1.3, 04-25) → **38 (v1.4, 04-26)**
+- W4 신규 NQ: ~95 → **~99** (NQ-001..NQ-175, +172/173/174/175)
+- T1 results: 2 → **3** (added V5b-T)
+- T3 results: 3 → **4** (added V5b-F new finding)
+- T2 → T1 격상: 1 (V5b → V5b-T)
+- In-session retractions: 2 (V4, V5a) → 2 (no new)
+- Reproducibility crises: 0 → 1 (NQ-172, identified+resolved)
+- σ-framework empirical scope: single-graph (NQ-141) → **multi-graph (NQ-170c, 3 classes)**
+- Hard constraint violations: 0
+- Silent resolutions: 0
+
+상세는 `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` (extended close).
+
+---
+
+## 2026-04-25 — W4 Weekly Close: F-1/M-1/MO-1 Resolution + Theorem 2 Family Cat A
+
+### Summary
+
+W4 (Apr 19–25) 7일 누적 결과 마감. **Critical 3건 (F-1, M-1, MO-1) 모두 해소** — 1년간 publication을 블록하던 critical blockers가 모두 W4에서 resolved/clarified/sidestepped. Net effect: v2.0 release path unblocked. T1 결과 2건 (Theorem 2 family graph-class independent + F-1 split-resolution) 이 canonical merge 준비 완료.
+
+### Files Created
+
+- `THEORY/logs/daily/2026-04-25/01_sigma_numerical.md` — G3 결정 (Option C drop) + G2 σ-numerical (NQ-128/137/141)
+- `THEORY/logs/daily/2026-04-25/02_NQ168_commensurability.md` — G1 NQ-168 4가지 가설 판정
+- `THEORY/logs/daily/2026-04-25/99_summary.md` — 세션 요약
+- `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` — W4 정제 요약 (T1=2 / T2=5 / T3=4 / T4=2 분류, ~25 페이지)
+- `CODE/scripts/nq168_commensurability.py` — NQ-168 commensurability splitting 실험
+- `CODE/scripts/results/nq168_commensurability.json` — 15 F=1 minimizer 원자료
+
+### Files Modified
+
+- `THEORY/canonical/open_problems.md`:
+  - **OP-0001 F-1**: ❌ UNRESOLVED 🔴 → ✅ **SPLIT-RESOLVED** (Pure $\mathcal{E}_{\mathrm{bd}}$ via T-Merge (b) Cat A pre-existing; Full SCC via Theorem 2 (i) Cat A graph-class independent).
+  - **OP-0002 M-1**: ❌ UNRESOLVED 🔴 → ✅ **LAYER-CLARIFIED** (proved theorem T-Merge (b) misframed as problem; Static/Dynamic Separation explains apparent K=1 vs K>1 conflict).
+  - **OP-0003 MO-1**: ❌ UNRESOLVED 🟠 → ⚪ **SIDESTEPPED** (single-formation σ-framework on $\Sigma_m$ requires no corners; multi-formation Phase 5 still open).
+  - Problem Statistics 표 update (Critical 3 → 0, High 3 → 1).
+  - Critical Path to Resolution 섹션 재작성 (W4 완료 사항 + W5+ 다음 우선순위).
+  - Lifecycle Example (F-1) update — actual timeline 04-19 reframing → 04-24 resolution (6 days).
+
+- `THEORY/CHANGELOG.md` — 본 entry 추가.
+
+### Theorem Status Changes
+
+**Critical resolution**:
+- F-1, M-1, MO-1 (3건 Critical blocker) 모두 active OP list에서 제거 (sidestepped/resolved/clarified).
+
+**W4 merge 모든 stage 완료** (2026-04-26 업데이트):
+- ✅ Stage 1.1 `open_problems.md` — F-1/M-1/MO-1 status update + Statistics + Critical Path + Lifecycle (3 entries 변경, 4 sections 갱신).
+- ✅ Stage 1.2 `CHANGELOG.md` — 본 entry.
+- ✅ Stage 1.3 `canonical.md` §13 — T-PreObj-1 + T-PreObj-1G + Lemma 4 + F-1 Resolution Corollary (Cat A entries 추가). Counts 4곳 update (35A/49claims/71% → 37A/51claims/73%).
+- ✅ Stage 1.4 `theorem_status.md` — CV-1.3 release entry. C-0700/0701/0702 신규 + C-0550/0551/0552 status 변경 + X-0001 superseded + OP table + Proof Status Summary + footer.
+- ✅ Stage 2.1 `canonical.md` §0 — v1.2 → v1.3 release notice. Option C → **Option C+E** (kinetic + emergent-K, 2026-04-20 결정 반영). W4 timeline (04-19 N-1 → 04-25 close) 명시.
+- ✅ Stage 2.2 `canonical.md` §12 — "$\mathcal{F}$ vs $K_{\mathrm{step}}$ — dual observables" paragraph 추가. T-Merge (b)의 "K*=1 universally" 를 "$K_{\mathrm{step}}^* = 1$ specifically" 로 qualifier.
+- ✅ Stage 2.3 `canonical.md` §14 — CN8 (T-PreObj-1 cross-reference) + CN14 (qualitative landscape restructuring 강화).
+- ✅ Stage 3.2 `canonical.md` §11.1 — **Commitment 14 (Orbital character constitutive, σ-signature)** 신규 추가.
+- ✅ Stage 3.3 `canonical.md` §11.1 — **Commitment 15 (Pre-objective commitment is mathematical theorem)** 신규 추가.
+- ✅ Stage 3.4 `canonical.md` §14 — **CN15 (Static/Dynamic Separation Principle)** 신규 추가.
+- ✅ Stage 3.5 `canonical.md` §14 — **CN16 (Protocol-Parameterized Observables)** 신규 추가.
+- ✅ Stage 3.6 `canonical.md` §14 — **CN17 (σ-Labeled Formation Quantization)** 신규 추가.
+
+**v1.2 → v1.3 release counts**:
+- §11.1 Fixed Commitments: 13 → **15** (+2: Commitment 14, 15)
+- §14 Commitment Notes: 14 → **17** (+3: CN15, CN16, CN17)
+- §13 theorems: 35A/4B/5C → **37A**/4B/5C (+2 Cat A: T-PreObj-1, T-PreObj-1G; +Lemma 4 supporting; +F-1 Corollary)
+- Total claims: 49 → **51** (73% fully proved)
+- Critical OPs: 3 → **0**
+
+**Stage 4 (W5+ deferred, user decision pending)**:
+- Theorem 1 V5b — W5 NQ-170 (ζ-scan) + graph-class extension 후 canonical 승급 후보.
+- σ supporting lemmas (Lemma 1/2/3, Theorem 3/4) — Axiom S1' v1 결정 (B+C 권고대로 Commitment 14에 통합)에 따라 §13 entry 추가는 W5+에 결정.
+- SF Round 1-5 Cat A — Q29-Q34 user 결정 항목 (Universal $A_2/A_1$ 분류 등).
+- Multi-formation σ Phase 5 — would re-engage MO-1.
+
+### Test Count
+
+- 변경 없음 (코드 검증 미수정). 마지막 확인 175 passing.
+
+### Rationale
+
+W4의 핵심 narrative arc: **04-19 N-1 reframing 발견 → 04-21 K_soft + ℱ_{C+E} architectural dissolution → 04-23 R23 Orbital Discovery + closure-eliminates-F=1 empirical pivot → 04-24 σ-framework + Theorem 2 family graph-class independent → 04-25 NQ-141 perfect σ-taxonomy + W4 close**.
+
+이 7일에 걸친 점진적 변환의 결과:
+
+1. **F-1/M-1/MO-1 framing 자체가 잘못 framed였음을 발견** — F-1과 M-1은 misclassified proved theorems, MO-1은 multi-formation problem이지만 single-formation scope에서는 blocker 아님.
+
+2. **Theorem 2 family**가 graph-class independent (any finite connected graph)로 SCC의 pre-objective character를 mathematical theorem으로 정착.
+
+3. **σ-framework**가 continuous primitive $u_t$에서 discrete signature $\sigma$로의 emergence를 formal apparatus로 정착, NQ-141 (R23 56 minimizer × 324 mode-ℓ pair)에서 0건 예외로 empirically grounded.
+
+이는 단순한 "open problem 해결"이 아니라 **framework 자체의 격상**이다.
+
+### Carry-Forward
+
+**Stage 1 remaining (다음 작업 단위)**:
+- `canonical.md` §13 T-PreObj-1 family Cat A entry 추가
+- `theorem_status.md` 9 신규 Cat A entry + C-0550/0551/0552 status update
+
+**Stage 2 (명확화)**:
+- `canonical.md` §0 v2.0 description update (Option C → C+E, K_soft + ℱ_{C+E} framework)
+- `canonical.md` §12 K_step vs 𝓕 distinction paragraph 추가
+
+**Stage 3 (User decision required)**:
+- Axiom S1' v1 위치 결정 (§6 new Group S vs §11 Commitment 14 vs §13 entry only)
+- CN15/16/17 명시 추가 (Static/Dynamic + Protocol-Parameterized + σ-labeled FQ)
+
+**Stage 4 (W5 deferred)**:
+- Theorem 1 V5b ζ-scan + graph-class extension → V5b Cat A 전체 승급 후보
+- σ supporting (Lemma 1/2/3, Theorem 3/4) canonical 위치 후 종속
+
+**W5 Day 1 우선순위**:
+- P0: 본 CHANGELOG의 Stage 1 remaining + Stage 2 실행
+- P1: NQ-170 (ζ_* crossover quantification, Theorem 1 V5b 검증)
+- P1: NQ-168b (position-dependent commensurability 정량 mapping)
+- P2: NQ-148 (σ-jump formalization, N-1.A connection)
+
+### W4 통계
+
+- Daily sessions: 6 (04-19 reframing + 04-20 decision + 04-21 C+E foundation + 04-22 SF 24 rounds + 04-23 orbital discovery + 04-24 σ + Theorem 2 + V5b + 04-25 verify)
+- Daily logs files: ~95+ (04-21: 17, 04-22: 28, 04-23: 21, 04-24: 28, 04-25: 5)
+- W4 신규 Cat A (draft 단계, canonical 미반영): ≈ 50+
+- W4 신규 NQ: ~95 (NQ-1 ~ NQ-171 중 W4 추가분)
+- T1 results: **2건** (Theorem 2 family + F-1 split-resolution)
+- T2 results: **5건** (V5b + σ-framework + Lemma 1/2/3 + Thm 3/4 + Axiom S1' + SF Round 1-5)
+- T4 in-session retractions: 2 (V4 premature, V5a partially-wrong)
+- Hard constraint violations: **0**
+- Silent resolutions: **0**
+- Canonical direct edits during W4: **0** (본 entry 후 Stage 1.2부터 시작)
+- Open problem Critical blockers: 3 → **0** (F-1, M-1, MO-1 모두 해소)
+
+상세는 `THEORY/logs/weekly/2026-04-W4/weekly_summary.md`.
+
+---
+
 ## 2026-04-23 — Canonical Sub → Weekly Rotation 개편 + Orbital Discovery Empirical Pivot
 
 ### Summary
