@@ -57,7 +57,7 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig04-phase-transition'
+out = _style.output_dir() / 'fig04-phase-transition'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')

@@ -40,7 +40,7 @@ cbar.set_label('$u_t(x)$  —  degree of cohesive participation')
 cbar.outline.set_linewidth(0.6)
 
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig01-soft-cohesion-field'
+out = _style.output_dir() / 'fig01-soft-cohesion-field'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')

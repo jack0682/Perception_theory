@@ -81,7 +81,7 @@ fig.suptitle('Theorem T-V5b-T  —  Pre-Objective Goldstone on translation-invar
              '(nodal count = 2 universal across graph classes)',
              y=1.04)
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig11-goldstone-bloch'
+out = _style.output_dir() / 'fig11-goldstone-bloch'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')

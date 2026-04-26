@@ -105,7 +105,7 @@ ax.plot([], [], color='black', linewidth=1.0, label='gradient flow trajectory')
 ax.legend(loc='upper right', fontsize=8)
 
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig08-gradient-flow'
+out = _style.output_dir() / 'fig08-gradient-flow'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')

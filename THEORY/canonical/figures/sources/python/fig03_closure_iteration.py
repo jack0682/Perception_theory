@@ -77,7 +77,7 @@ fig.suptitle(f'Closure operator iteration  '
              rf'($a_{{cl}} = {a_cl}$,  $\eta = {eta}$,  $\tau = {tau}$)',
              y=1.02)
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig03-closure-iteration'
+out = _style.output_dir() / 'fig03-closure-iteration'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')

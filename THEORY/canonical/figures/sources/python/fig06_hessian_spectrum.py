@@ -71,7 +71,7 @@ ax.spines['right'].set_visible(False)
 fig.suptitle('Theorem T7-Enhanced  —  non-idempotent metastability advantage',
              y=1.02)
 plt.tight_layout()
-out = Path(__file__).resolve().parents[2] / 'output' / 'fig06-hessian-spectrum'
+out = _style.output_dir() / 'fig06-hessian-spectrum'
 plt.savefig(out.with_suffix('.svg'))
 plt.savefig(out.with_suffix('.png'), dpi=200)
 print(f'Saved: {out}.svg / .png')
