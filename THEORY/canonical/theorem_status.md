@@ -2,7 +2,7 @@
 id: META-0103
 type: registry/theorems
 status: accepted
-last_updated: 2026-04-26
+last_updated: 2026-04-27
 ---
 
 # Theorem Registry
@@ -15,7 +15,29 @@ last_updated: 2026-04-26
 
 ## Canonical Theorems (Accepted into Canonical Spec)
 
-### Canonical Spec v1.4 (2026-04-26) — Current Version (W4 Extended Close)
+### Canonical Spec v1.5 (2026-04-27) — Current Version (W5 Day 1: σ-Framework Supporting Structures)
+
+**Additions over v1.4** (W5 Day 1 G0, 2026-04-27):
+
+| T-ID | Name | Status | Category | Source | Proof | Experiments | Notes |
+|------|------|--------|----------|--------|-------|-------------|-------|
+| **T-σ-Lemma-1** | σ-Framework Irrep Decomposition Well-Defined | accepted | A | C-0712 | P-0712 | (theoretical, finite-group rep theory) | Hessian commutes with $G_u$-action; isotypic decomposition via Maschke + Schur; finite-graph hypothesis essential; trivial-stabilizer case vacuous |
+| **T-σ-Lemma-2** | σ-Framework Nodal Count Properties | accepted | A (i,ii,iii,iv) + C (v,vi conditional) | C-0713 | P-0713 | (theoretical + W4-04-25 NQ-141 32×32 numerical) | Graph-intrinsic + Aut(G)-equivariance + lower bound $\geq 2$ + sign-flip Cat A; Courant upper bound + $G_u$-orbit divisibility Cat C |
+| **T-σ-Lemma-3** | Goldstone–ℓ=1 Angular Saturation | accepted | A (continuum) | C-0714 | P-0714 | W4-04-26 NQ-170c 2D torus L=20 ζ=0.5 (overlap 0.97) | IBP identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$; Goldstone basis automatically ℓ=1; nodal count = 2 universal (anchors T-V5b-T-(e)) |
+| **T-σ-Theorem-3** | σ at Uniform on $D_4$ Free-BC Grid (Closed Form) | accepted | A | C-0715 | P-0715 | exp_hessian_uniform_v2 (NQ-141 W4-04-25, $L = 4$ to $32$, $< 10^{-9}$ precision) | $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$; full $D_4$ irrep table on cosine basis; $\mathcal{N}(\phi_{(p,q)}) = (p+1)(q+1)$ |
+| **T-σ-Theorem-4** | σ at First Pitchfork on $D_4$ Free-BC Grid (Leading Order) | accepted | A in $\epsilon$-small regime | C-0716 | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | $D_4 \to \mathbb{Z}_2$ symmetry breaking; Mode 0 trivial irrep / Mode 1 sign irrep split; $\mathcal{F}$ tie-break NQ-143/NQ-184 |
+
+**v1.4 → v1.5 release notes (2026-04-27)**:
+- Added: 5 Cat A entries (T-σ-Lemma-1 + T-σ-Lemma-2 + T-σ-Lemma-3 + T-σ-Theorem-3 + T-σ-Theorem-4) — σ-framework supporting structures grounding Commitment 14.
+- Decision: Option α (5 separate entries) per W5 strategic plan §0.4 Decision 1 default; rationale "mathematically independent statements deserve individual canonical visibility".
+- Counts: 38A → **43A**, 52 claims → **57 claims**, 73% → **75% fully proved**.
+- T classification update: T1 = 3 → **8** (Lemma 1, 2, 3, Theorem 3, 4 each individually T1 per Option α). T2 reduced (σ supporting structures moved out of T2).
+- Sub-statement caveats canonically registered: T-σ-Lemma-2 internal Cat A/C split (sub-statements (v) Courant + (vi) orbit divisibility are Cat C riders within the Cat A entry); T-σ-Theorem-4 explicit "in $\epsilon$-small regime" qualifier; T-σ-Lemma-3 explicit "in continuum limit" qualifier.
+- Pre-brainstorm corrections folded in: Lemma 1 finite-graph hypothesis explicit; Lemma 2 sub-statement (iii) reframed as lower-bound-from-$\mathbf{1}^\perp$ (was incorrectly stated as "$n_k = 1$ iff constant" in plan templates); Lemma 3 IBP interpretation B (δu^ref = unit vector in ℓ=1 angular subspace) adopted.
+- σ-framework now fully canonical-grounded: definitional Commitment 14 + irrep apparatus (T-σ-Lemma-1) + nodal count (T-σ-Lemma-2) + Goldstone–ℓ=1 saturation (T-σ-Lemma-3) + worked examples on uniform (T-σ-Theorem-3) and post-bifurcation (T-σ-Theorem-4) configurations.
+- **Source:** `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet) + `01a-01e` (per-statement files); `THEORY/canonical/canonical.md` §13 (T-σ-Lemma-1 ~ T-σ-Theorem-4 entries inserted after T-V5b-T at lines 1169-1283); `THEORY/CHANGELOG.md` 2026-04-27 entry.
+
+### Canonical Spec v1.4 (2026-04-26) — Previous Version (W4 Extended Close)
 
 **Additions over v1.3** (W4 extended close, 2026-04-26):
 
@@ -98,6 +120,11 @@ last_updated: 2026-04-26
 | **C-0702** | Lemma 4 Quadratic Form PD | ✅ **accepted Cat A** | A | P-0702 | E-0090 | New 2026-04-24. M positive definite under g_cl, g_sep linear independence. |
 | **C-0710** | T-V5b-T Pre-Objective Goldstone on Translation-Invariant Graphs | ✅ **accepted Cat A** | A | P-0710 | E-0095, E-0096, E-0097 | New 2026-04-26 (W4 extended). Sub/super-lattice spectral dichotomy on torus T^d / cycle C_n; 2D commensurability split; 1D Goldstone; nodal count = 2 universal. After 8 V5b iterations (V1 → V5b''). |
 | **C-0711** | V5b-F Partial Goldstone on Boundary-Modified Graphs | tentative | C | P-0711 | E-0096 (free BC partial) | New 2026-04-26 (W4 extended). Cat C new finding. NQ-173 quantification carry. |
+| **C-0712** | T-σ-Lemma-1 σ-Framework Irrep Decomposition Well-Defined | ✅ **accepted Cat A** | A | P-0712 | (theoretical, Maschke + Schur orthogonality) | New 2026-04-27 (W5 Day 1 G0). Hessian-$G_u$ commutation + canonical isotypic projector. Finite-graph hypothesis essential. |
+| **C-0713** | T-σ-Lemma-2 σ-Framework Nodal Count Properties | ✅ **accepted Cat A** (i,ii,iii,iv) + Cat C riders (v,vi) | A/C-split | P-0713 | NQ-141 (W4-04-25 R23 32×32 empirical) | New 2026-04-27 (W5 Day 1 G0). Lower bound $\mathcal{N} \geq 2$ corrected from "constant" template; orbit divisibility restricted to non-invariant case. |
+| **C-0714** | T-σ-Lemma-3 Goldstone–ℓ=1 Angular Saturation | ✅ **accepted Cat A** in continuum | A | P-0714 | NQ-170c (W4-04-26 2D torus ζ=0.5 overlap 0.97) | New 2026-04-27 (W5 Day 1 G0). IBP saturation identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$. Anchors T-V5b-T-(e) Goldstone nodal=2 universal. |
+| **C-0715** | T-σ-Theorem-3 σ at Uniform on $D_4$ Grid (Closed Form) | ✅ **accepted Cat A** | A | P-0715 | exp_hessian_uniform_v2 (NQ-141, $L = 4$ to $32$, $< 10^{-9}$ precision) | New 2026-04-27 (W5 Day 1 G0). $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ closed form. |
+| **C-0716** | T-σ-Theorem-4 σ at First Pitchfork (Leading Order) | ✅ **accepted Cat A** in $\epsilon$-small regime | A | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | New 2026-04-27 (W5 Day 1 G0). $D_4 \to \mathbb{Z}_2$ symmetry breaking; trivial vs sign irrep split. $\mathcal{F}$ tie-break NQ-143/NQ-184. |
 
 ---
 
@@ -111,6 +138,40 @@ last_updated: 2026-04-26
 ---
 
 ## Canonical Spec Version History
+
+### CV-1.5 (2026-04-27) — W5 Day 1 G0: σ-Framework Supporting Structures Canonical Merge
+
+- **Added Cat A**: T-σ-Lemma-1 (Irrep Decomposition Well-Defined), T-σ-Lemma-2 (Nodal Count Properties — sub-statements (i,ii,iii,iv) Cat A; (v) Courant + (vi) orbit-divisibility Cat C riders), T-σ-Lemma-3 (Goldstone–ℓ=1 Angular Saturation, Cat A in continuum), T-σ-Theorem-3 (σ at uniform on $D_4$ free-BC grid closed form), T-σ-Theorem-4 (σ at first pitchfork leading order, Cat A in $\epsilon$-small regime).
+- **σ-framework status change**: Commitment 14 (W4 04-25) supporting structures (Lemma 1/2/3, Theorem 3/4) — T2 (deferred) → **T1 (canonical-merged)**.
+- **Decision**: Option α (5 separate §13 entries) — per W5 strategic plan §0.4 Decision 1 default; chosen because mathematically independent statements deserve individual canonical visibility for paper §4 σ-framework reference.
+- **Pre-brainstorm corrections folded in** (`logs/daily/2026-04-27/pre_brainstorm.md` §1.1/1.2/1.3/1.4):
+  - T-σ-Lemma-1: finite-graph hypothesis essential (Maschke fails on infinite groups without compact-Lie or amenable extension); trivial-stabilizer case vacuous remark added.
+  - T-σ-Lemma-2 (iii): plan-template wording "$n_k = 1$ iff $\phi_k$ constant" was incorrect for $\phi_k \in \mathbf{1}^\perp$ (constant in $\mathbf{1}^\perp$ requires $\phi_k = 0$). Replaced with lower bound $\mathcal{N}(\phi_k) \geq 2$ from $\sum \phi_k = 0$ constraint. **Cat A** (was "Cat A" but with wrong content).
+  - T-σ-Lemma-2 (vi): orbit divisibility restricted to non-invariant $\phi_k$ (vacuous for $G_u$-invariant case).
+  - T-σ-Lemma-3: IBP interpretation B adopted ($\delta u^{\mathrm{ref}} = $ unit vector in ℓ=1 angular subspace) per W4-04-24 §3.3 actual proof structure; sat. identity is between Goldstone basis and ℓ=1 angular basis.
+- **Counts**: 38 + 5 = **43** Category A; 52 + 5 = **57 claims**; 73% → **75% fully proved**.
+- **T1 explosion**: 3 → **8** (Option α: each of Lemma 1, 2, 3, Theorem 3, 4 individually T1).
+- **canonical.md growth**: 1420 → 1537 lines (~117 lines added; entries are concise per W4 §13 style).
+- **Source**: `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet); `01a_lemma1_irrep_decomposition.md`, `01b_lemma2_nodal_count.md`, `01c_lemma3_goldstone_saturation.md`, `01d_theorem3_uniform_D4_grid.md`, `01e_theorem4_first_pitchfork.md` (per-statement files); `THEORY/canonical/canonical.md` §13 lines 1169-1306 (new entries between T-V5b-T and T-Birth-Parametric).
+
+**Errata Round 1 (2026-04-27 evening, post-merge re-review)**: User-requested re-audit caught 3 substantive math errors in this morning's canonical merge. All errors fixed in canonical entries (with embedded `*Erratum 2026-04-27 evening:*` notes). **Theorem status NOT changed**: all 5 σ structures remain Cat A. See `THEORY/logs/daily/2026-04-27/91_critical_review.md`.
+
+- T-σ-Lemma-3 (i): IBP identity value $-m \to -c_d \int u^*(r) dr$ (factor-$r_0$ correction inherited from W4-04-24 source; $c_d$ dimension-dependent).
+- T-σ-Theorem-4 (ii): $K_1 < K_0$ → $K_1 = K_0$ on $D_4$ ($A_2/A_1 = 4$); "would-be Goldstone" framing removed.
+- T-σ-Theorem-3 (vi): irrep-table speculative entries replaced with rigorous Schur-orthogonality character calculation.
+
+**Round 2 refinements (2026-04-27 night, second re-review)**: User-requested second re-audit caught structural issues beyond Round-1 value errors. 7 issues fixed in canonical (with `*Refinement 2026-04-27 night*` markers); 2 commitment-level changes deferred to user decision; 4 NQs spawned (NQ-187..NQ-190). **Theorem status still NOT changed**. See `THEORY/logs/daily/2026-04-27/92_critical_review_round2.md`.
+
+- T-σ-Lemma-3: (i) reframed to lead with rank/injectivity (IBP value as corollary); statement extended to general dimension $d$ (1D cycle, 2D/3D bulk and torus); (iii) nodal=2 made explicit for all dimensions. **Fully anchors T-V5b-T-(e) "universal on translation-invariant graphs"** (previously only 2D-localized).
+- T-σ-Lemma-3: anchoring footer added — registers which T-V5b-T sub-statements σ supports structures anchor (only (e)) vs leave canonical-empirical ((a)/(b)/(c)/(d)).
+- T-σ-Theorem-3: spinodal hypothesis discussion added — clarifies role of $W''(c) < 0$ vs outside-spinodal vs spinodal-boundary cases.
+- T-σ-Theorem-4: (i') orbit-representative remark added — clarifies σ-tuple is for chosen representative; conjugate stabilizers across orbit give σ-equivalence.
+- T-σ-Theorem-4: well-definedness note added — flags $K_0 = K_1$ degeneracy requires Commitment 14 (O7) tie-breaking convention (deferred to user decision).
+- 04_nq174_setup.md: PRE-RUN sanity test snippet added (Round-1 §6.G follow-through).
+
+**Deferred to W5 Day 2+ user decision (Commitment-level changes)**:
+- Commitment 14 (O5') multi-irrep eigenspace convention.
+- Commitment 14 (O7) tie-breaking convention by canonical irrep order.
 
 ### CV-1.4 (2026-04-26) — W4 Extended Close: V5b-T Verification + Partial Goldstone Discovery
 
@@ -184,19 +245,21 @@ last_updated: 2026-04-26
 
 ---
 
-## Proof Status Summary (Updated 2026-04-26, post-W4 extended close)
+## Proof Status Summary (Updated 2026-04-27, post-W5 Day 1 G0)
 
 | Status | Count | Examples |
 |--------|-------|----------|
-| **Category A (Fully Proved)** | **38** (was 37 post-v1.3, 35 pre-W4) | T-1, T-20, QM-1:4, C-Axioms, Predicate-Energy Bridge, T-PreObj-1, T-PreObj-1G, Lemma 4 (W4), **T-V5b-T (W4 extended)**, etc. |
+| **Category A (Fully Proved)** | **43** (was 38 post-v1.4, 37 post-v1.3, 35 pre-W4) | T-1, T-20, QM-1:4, C-Axioms, Predicate-Energy Bridge, T-PreObj-1, T-PreObj-1G, Lemma 4 (W4), T-V5b-T (W4 extended), **T-σ-Lemma-1, T-σ-Lemma-2, T-σ-Lemma-3, T-σ-Theorem-3, T-σ-Theorem-4 (W5 Day 1 G0)**, etc. |
 | **Category B (Conditional)** | 4 | T-Bind-Proj (τ=1/2), T-Persist-K-Sep, T-Persist-K-Unified |
-| **Category C (Very Conditional)** | 5 + 1 (new finding) | T-Bind-Full (general τ), T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Weak; **V5b-F (new finding 2026-04-26, NQ-173 carry)** |
+| **Category C (Very Conditional)** | 5 + 1 (new finding) + 2 (W5 Day 1 sub-statements within T-σ-Lemma-2) | T-Bind-Full (general τ), T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Weak; V5b-F (new finding 2026-04-26, NQ-173 carry); T-σ-Lemma-2 (v) Courant upper bound + (vi) $G_u$-orbit divisibility (W5 Day 1 sub-statements bundled in single Cat A parent entry) |
 | **Resolved/Clarified/Sidestepped (W4)** | 3 | C-0550 (F-1 split-resolved), C-0551 (M-1 layer-clarified), C-0552 (MO-1 sidestepped) |
 | **Challenged** | 1 | C-0553 (Type A/B) |
 | **Retracted** | 2 | K-Saddle Conjecture, r̄₀ general τ |
 | **Open (active)** | 4 (was 7) | OP-0004, OP-0005, OP-0006, OP-0007 (Critical 3건은 W4에서 해소) |
 | **Reproducibility crises identified+resolved** | 1 | NQ-172 (mode-indexing artifact, 2026-04-26 resolved) |
-| **W4-extended carry NQ** | 3 (new) | NQ-173 (V5b-F partial Goldstone), NQ-174 (ζ_* graph-dependence), NQ-175 (3D extension) |
+| **W4-extended carry NQ** | 3 (G1/G2/G4) | NQ-173 (V5b-F partial Goldstone — G1 W5 Day 1), NQ-174 (ζ_* graph-dependence — G2 W5 Day 2-3), NQ-175 (3D extension — G4 W5 Day 5) |
+| **W5 Day 1 G0 spawn NQ** | 11 (NQ-176..NQ-186) | NQ-176/177 (functoriality, multi-irrep ordering — Lemma 1); NQ-178/179 (frustration bound, orbit sharpening — Lemma 2); NQ-180/181 (discrete correction, higher-ℓ analog — Lemma 3); NQ-182/183 (discrete nodal count, periodic-BC analog — Theorem 3); NQ-184/185/186 (tie-break, higher pitchforks, cascade — Theorem 4) |
+| **W5 Day 1 Round-2 spawn NQ** | 4 (NQ-187..NQ-190) | NQ-187 (higher-order $\epsilon$-splitting of $K_0 = K_1$ on $D_4$ — Theorem 4); NQ-188 (σ-uniqueness theorem — # distinct σ-classes per graph/parameter regime); NQ-189 (σ → crisp object recovery — Commitment 11 derivative-objecthood); NQ-190 (σ topological invariance under graph homeomorphism). See `THEORY/logs/daily/2026-04-27/92_critical_review_round2.md` §10, §12. |
 
 ---
 
@@ -228,10 +291,11 @@ last_updated: 2026-04-26
 
 ---
 
-**Last updated:** 2026-04-26 (W4 extended close + V5b-T canonical merge)
-**Total canonical theorems:** 42 = **38 Cat A** + 4 Cat B + 5 Cat C — 5 retracted (52 claims, 73% fully proved)
+**Last updated:** 2026-04-27 (W5 Day 1 G0 + σ-framework supporting structures canonical merge)
+**Total canonical theorems:** 47 = **43 Cat A** + 4 Cat B + 5 Cat C — 5 retracted (57 claims, 75% fully proved)
 **Open problems:** 4 active (was 7) — Critical 3건 (F-1, M-1, MO-1) 모두 해소
 **Recent W4 additions (2026-04-25)**: T-PreObj-1, T-PreObj-1G, Lemma 4 (Pre-Objective Mechanism graph-class independent), Commitment 14/15, CN15/16/17.
 **W4 extended addition (2026-04-26)**: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) — sub/super-lattice dichotomy on torus T^d, cycle C_n; 2D doublet commensurability split; 1D Goldstone; nodal count = 2 universal. V5b 8-iteration cycle resolved.
-**Pending W5+ (T2/T3 carry)**: NQ-173 (V5b-F partial Goldstone characterization), NQ-174 (ζ_*(graph) precise dependence), NQ-175 (3D extension), σ supporting lemmas (Lemma 1/2/3, Theorem 3/4) §13 entries decision, SF Round 1-5 Cat A merge (Q29-Q34).
-**See also:** `weekly_summary.md` (W4 extended close), `open_problems.md` (active OPs), `canonical.md` §13 (theorem catalog)
+**W5 Day 1 G0 addition (2026-04-27)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted).
+**Pending W5+ (T2/T3 carry, Days 2-7)**: NQ-173 (V5b-F partial Goldstone characterization — G1 evening Day 1), NQ-174 (ζ_*(graph) precise dependence — G2 setup EOD Day 1, run Day 2 morning), NQ-175 (3D extension — G4 Day 5), Multi-formation σ Phase 5 — G3 Day 3-4, SF Round 1-5 Cat A merge (Q29-Q34) — G5 Day 5.
+**See also:** `weekly_summary.md` (W4 extended close), `open_problems.md` (active OPs), `canonical.md` §13 (theorem catalog), `THEORY/logs/daily/2026-04-27/` (W5 Day 1 artifacts), `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md` (8-goal blueprint), `THEORY/CHANGELOG.md` 2026-04-27 entry.
