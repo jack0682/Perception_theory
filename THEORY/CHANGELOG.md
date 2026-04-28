@@ -2,6 +2,48 @@
 
 ---
 
+## 2026-04-28 — Version Naming Cleanup (Editorial, no theorem-status change)
+
+### Summary
+
+Editorial cleanup unifying canonical version naming. Multiple previously-conflicting version axes (Perception_theory frontmatter "v1.2" / main heading "v1.2" / §1 self-reference "version 2.1"; jack0682.github.io site self-tagging "v2.0/v2.1/v2.2/v2.3" as a separate document-version ladder) consolidated to a **single release identifier: CV-x.y** across both Perception_theory canonical and the public-facing site. **No theorem status changes** — this is a documentation correction only; Cat A/B/C counts and theorem indices unchanged (43A / 57 claims / 75% fully proved).
+
+The original cleanup pass (earlier 2026-04-28) introduced a dual-axis system (CV-x.y release + theory_revision v2.x). User feedback identified the dual axis as itself a source of confusion; second pass simplified to **single CV-x.y ladder**. Theory-ontology revision markers (v1.0 / v2.0 / v2.1) still appear inline as historical narrative pointers within body text — these describe *when in the theory's ontology evolution* a particular change occurred (T_t demoted v2.0; volume constraint added v2.0; T-Persist-K-Unified added v2.1); they are explicitly framed as narrative change-log markers, not a competing identifier.
+
+### Files Modified
+
+- `THEORY/canonical/canonical.md`:
+  - Frontmatter (L1-7): `id: CV-1.2 / version: 1.2 / released: 2026-04-12` → `id: CV-1.5 / version: 1.5 / theory_revision: 2.1 / released: 2026-04-27`. Description updated to current state.
+  - Main heading (L10): `# Canonical Specification of Soft Cognitive Cohesion (v1.2)` → `(CV-1.5)`.
+  - Added explicit version-axes banner under main heading: explains theory-revision (v2.1) vs canonical-release (CV-1.5) two-axis convention.
+  - L14-52 DEVELOPMENT NOTICE block: replaced CV-1.3-frozen content with CV-1.5 → CV-1.6 progression. Kept CV-1.0..CV-1.5 history list; added CV-1.6 development items (V5b-F, ζ_*, multi-formation σ Phase 5, SF Round merge, Commitment 14 (O5')(O7)).
+  - §1 Status Note (L64): self-reference "version 2.1" reframed as "**CV-1.5 (2026-04-27)** of theory revision **v2.1**". Added inline §1.1 Canonical Release History table — 6 rows (CV-1.0..CV-1.5) with dates, Cat A counts, total claims, % proved, headline change.
+
+- `THEORY/canonical/theorem_status.md`:
+  - L12 Structure note: `(CV-1.0, CV-1.1, CV-1.2)` → `(CV-1.0 .. CV-1.5; current = CV-1.5)`.
+  - L197 duplicate empty stub `### CV-1.2 (2026-04-12) — Previous Version (Frozen)` removed.
+  - Version History bottom section reordered to reverse-chronological: CV-1.2 → CV-1.1 → CV-1.0 (was CV-1.0 → CV-1.1 → CV-1.2 ascending). Now full Version History reads CV-1.5 → CV-1.4 → CV-1.3 → CV-1.2 → CV-1.1 → CV-1.0 (newest first throughout).
+
+### Rationale
+
+User audit caught the version-naming inconsistency: frontmatter stuck at CV-1.2 (2026-04-12, last touched in CV-1.2 merge), main heading echoing v1.2, §1 self-asserting "version 2.1", while theorem_status.md and CHANGELOG independently tracked CV-1.0..CV-1.5. External readers had no clear source of truth for "what release is this".
+
+The cleanup adopts:
+- **CV-x.y as the single primary release identifier** (matches operational reality of theorem_status.md + CHANGELOG).
+- **theory_revision: 2.x as a secondary conceptual axis** (only changes on substantive ontological revision: T_t demoted v2.0; C_t demoted v2.0 cycle 2; etc.). Existing v2.0/v2.1 internal references in §3-§13 remain valid as conceptual-revision markers; they no longer compete with release-version naming.
+- **§1.1 Canonical Release History table** as the human-facing summary; theorem_status.md §Version History as authoritative detail.
+
+### Theorem Status Changes
+
+**None.** Cat A: 43 (unchanged). Total claims: 57 (unchanged). % proved: 75% (unchanged). All theorem indices, proof references, and erratum notes preserved verbatim. The `*Erratum 2026-04-27*` and `*Refinement 2026-04-27 night*` markers in §13 σ-supporting entries are untouched.
+
+### Carry-Forward
+
+- W5 Day 3 (2026-04-29): NQ-191 P2 patch + G1+G2 verdict + G3 multi-formation σ Phase 5 substantive opening per `THEORY/logs/daily/2026-04-29/plan.md`.
+- CV-1.6 release path unchanged by this editorial cleanup; targets per W5 strategic plan §6.
+
+---
+
 ## 2026-04-27 — W5 Day 1 G0: σ-Framework Supporting Structures Canonical Merge (v1.4 → v1.5)
 
 ### Summary

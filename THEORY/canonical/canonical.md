@@ -1,55 +1,56 @@
 ---
-id: CV-1.2
+id: CV-1.5
 type: canonical/specification
-version: 1.2
-released: 2026-04-12
+version: 1.5
+released: 2026-04-27
 status: accepted
-description: Current authoritative specification with explicit assumptions, F-1/M-1/MO-1 documented, Type A/B classification retracted
+description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5). 43A/57 claims/75% fully proved.
 ---
 
-# Canonical Specification of Soft Cognitive Cohesion (v1.2)
+# Canonical Specification of Soft Cognitive Cohesion (CV-1.5)
+
+> **Version naming convention.** This document uses a single release ladder, **CV-x.y**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → **CV-1.5 (04-27, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
+>
+> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.5**.*
 
 ---
 
-## ⚠️ DEVELOPMENT NOTICE: Canonical Specification v1.3 → v2.0 Progression
+## ⚠️ DEVELOPMENT NOTICE: CV-1.5 → CV-1.6 Progression
 
-**Status (2026-04-25, post-W4 merge):** v1.3 is **CURRENT**. v2.0 development continues with substantial W4 progress.
+**Status (2026-04-28, W5 Day 2):** **CV-1.5 is CURRENT**. CV-1.6 release path is in development per W5 strategic plan.
 
-**v1.3 release (2026-04-25, this document):**
-- **Critical blockers resolved**: F-1 (OP-0001) SPLIT-RESOLVED, M-1 (OP-0002) LAYER-CLARIFIED, MO-1 (OP-0003) SIDESTEPPED — 3 → 0 active Critical OPs.
-- **New Cat A theorems**: T-PreObj-1 (Pre-Objective Multi-Peak Formation), T-PreObj-1G (graph-class independent), Lemma 4 (Quadratic form PD). See §13.
-- **Updated counts**: 35A → 37A, 49 → 51 claims, 71% → 73% fully proved.
-- **Reframing**: F-1 framing was discovered to be a *misclassification* of T-Merge (b) (proved theorem). Resolution path = "Option D" (premise dissolution), neither original A/B/C.
+**CV-1.5 release summary (2026-04-27, this document):**
+- **σ-framework supporting structures merged** (W5 Day 1 G0): T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — five Cat A entries grounding Commitment 14.
+- **Counts**: 38A → **43A**, 52 → **57 claims**, 73% → **75% fully proved**.
+- **T1 explosion**: 3 → **8** (each σ-supporting structure individually canonical-visible per Option α).
+- **Errata Round 1+2** (2026-04-27 evening/night): 3 substantive math errors fixed with embedded `*Erratum*`/`*Refinement*` markers; theorem status unchanged (all remain Cat A).
 
-**v2.0 progression history:**
-- 2026-04-13: Initial Option C decision (kinetic theory reformulation only).
-- 2026-04-19: N-1 (Soft-Hard Switching Asymmetry) discovered as single source of F/M/MO. 9 reframed problems P-A..P-H.
-- **2026-04-20**: Decision matrix evaluation → **Option C+E selected** (kinetic + emergent-K). Original Option C alone superseded.
-- 2026-04-21: Foundation work — K_soft (persistence-based soft count, Cat A Lipschitz) + ℱ_{C+E}[u] = ℰ - TS + λ_K K_soft (Cat A well-posed) + F-group axioms F1, F2 (Cat A). F/M/MO architectural dissolution candidate.
-- 2026-04-22: SF symmetry/moduli formalization (24 rounds). Universal A_2/A_1 ∈ {2,4} classification, $C_n$ Lock-In Theorem.
-- 2026-04-23: R23 Orbital Discovery + Three-Layer Hierarchy + Formation Quantization (FQ Uniqueness Thm 3.2 Cat A).
-- **2026-04-24**: σ-framework $\sigma(u^*) = (\mathcal{F}; \{(n_k, [\rho_k], \lambda_k)\})$ + Theorem 2 family graph-class independent + V5b dual-regime Goldstone discovery.
-- **2026-04-25 (today)**: NQ-141 σ-taxonomy 324/324 perfect (R23 empirical confirmation) + NQ-168 Hypothesis D falsified + W4 close → **v1.3 release**.
+**CV-1.0 through CV-1.5 history (canonical release timeline):**
+- **CV-1.0** (2026-04-01): Initial spec, 11 Cat A + QM-1:4.
+- **CV-1.1** (2026-04-03): PLAN_0403 Tier 1 — 35 → 38 Cat A.
+- **CV-1.2** (2026-04-12): T-Persist-K-Unified added; F-1/M-1/MO-1 documented; honest recount → 35A/4B/5C/5R.
+- **CV-1.3** (2026-04-25): T-PreObj-1 family + Lemma 4 + F-1 split-resolution corollary. Critical blockers 3 → 0.
+- **CV-1.4** (2026-04-26): T-V5b-T canonical (Pre-Objective Goldstone on translation-invariant graphs).
+- **CV-1.5** (2026-04-27): σ-framework supporting structures (T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4).
 
-**Active v2.0 development (W5+, 2026-04-26 onward):**
-- σ-framework canonical placement (T2 candidate, user decision pending): §6 new Group S vs §11 Commitment 14 vs §13 entry.
-- Axiom S1' v1 SCC-intrinsic redraft (Pending W4 04-24).
-- Commitments 14 (Orbital character constitutive) + 15 v2 (Pre-objective as theorem) — proposals.
-- CN15/16/17 (Static/Dynamic Separation, Protocol-Parameterized observables, σ-labeled FQ) — proposals.
-- Theorem 1 V5b ζ-scan + graph-class extension (W5 NQ-170).
-- Multi-formation σ extension (Phase 5) — would re-engage MO-1 stratified Morse.
+**CV-1.6 development (W5+, 2026-04-28 onward):**
+- V5b-F characterization (NQ-173 W5 Day 3, Cat C → B target candidate).
+- ζ_*(graph) precise dependence (NQ-174 W5 Day 3, T-V5b-T-(d) bracket → 2-decimal precise).
+- Multi-formation σ Phase 5 (G3, W5 Day 3-4) — re-engages MO-1 (multi-formation scope).
+- SF Round 1-5 Cat A merge (G5, W5 Day 5).
+- Commitment 14 (O5')/(O7) tie-breaking conventions — user decision pending.
 
-**What v1.3 means:**
-- **Single-formation theory is now closed for foundational issues** — F-1/M-1/MO-1 no longer block publication.
-- σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions).
-- Theorem 2 family makes "pre-objective formation" a graph-class independent mathematical theorem.
-- v2.0 release path is **unblocked**.
+**What CV-1.5 means:**
+- **Single-formation theory is canonical-closed** — F-1/M-1/MO-1 no longer block publication; σ-framework fully grounded with 5 supporting structures.
+- σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions) + theoretical scaffolding (Lemma 1/2/3, Theorem 3/4).
+- **CV-2.0 release path** unblocked (publication-grade single-formation closure achieved).
 
 **Access:**
-- v1.3 specification: This document (below).
-- W4 detailed work: `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` (~25 pages closing summary).
-- Daily session logs: `THEORY/logs/daily/2026-04-19/` ~ `2026-04-25/`.
-- v2.0 next steps: `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` §6 (W5 carry-forward).
+- Full Version History: `theorem_status.md` §Canonical Spec Version History (CV-1.0..CV-1.5).
+- Per-merge session log: `THEORY/CHANGELOG.md` (entries chronological by date).
+- W4 detailed work: `THEORY/logs/weekly/2026-04-W4/weekly_summary.md`.
+- W5 strategic plan: `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md`.
+- Daily session logs: `THEORY/logs/daily/YYYY-MM-DD/`.
 
 ---
 
@@ -61,7 +62,23 @@ All sums of the form $\sum_{x,y \in X_t}$ range over **ordered pairs**: each und
 
 ## 1. Status Note
 
-This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion, version 2.1. It supersedes v2.0 and incorporates results from Iterations 1–12 plus the 2026-04-02 theory audit.
+This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion. The current release is **CV-1.5 (2026-04-27)**, incorporating results from Iterations 1–12 plus the 2026-04-02 theory audit and superseding all earlier releases. See §1.1 below for the full canonical release history.
+
+### 1.1 Canonical Release History
+
+| Release | Date | Cat A | Total claims | % proved | Headline change |
+|---------|------|-------|--------------|----------|-----------------|
+| **CV-1.0** | 2026-04-01 | 11 + QM-1:4 | ~35 | — | Initial comprehensive spec (T-1, T-3, T-6a/b, T-7, T-8-Core/Full, T-11, T-14, T-20, QM-1:4) |
+| **CV-1.1** | 2026-04-03 | 38 | — | — | PLAN_0403 Tier 1 — C-Axioms / Predicate-Energy Bridge / Deep Core Dom. 2b upgraded to Cat A; T-Persist-1(b)(e) unconditional; T-Bind-Full added |
+| **CV-1.2** | 2026-04-12 | 35A / 4B / 5C / 5R | 49 | 71% | T-Persist-K-Unified added; F-1/M-1/MO-1 documented as critical OPs; Type A/B retracted; honest recount post-04-07 audit |
+| **CV-1.3** | 2026-04-25 | 37 | 51 | 73% | T-PreObj-1 + T-PreObj-1G + Lemma 4 (W4 merge); F-1 SPLIT-RESOLVED, M-1 LAYER-CLARIFIED, MO-1 SIDESTEPPED — Critical blockers 3 → 0 |
+| **CV-1.4** | 2026-04-26 | 38 | 52 | 73% | T-V5b-T (Pre-Objective Goldstone on translation-invariant graphs); V5b-F new Cat C finding; W4 extended close |
+| **CV-1.5** | **2026-04-27** | **43** | **57** | **75%** | σ-framework supporting structures: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — Commitment 14 fully canonical-grounded; T1 = 3 → 8 |
+
+**Authoritative sources:**
+- Per-release detail: `theorem_status.md` §Canonical Spec Version History.
+- Per-merge session log: `THEORY/CHANGELOG.md` (chronological).
+- Open problems / status changes: `THEORY/canonical/open_problems.md`.
 
 The document declares the primitive ontology, the formal universe, the axiomatic groups (A–E), the derived predicates, the minimal energy principle with volume constraint, and the proved results registry that jointly constitute the theory as it now stands.
 
@@ -1563,7 +1580,7 @@ $K_{\mathrm{step}}$ becomes a derived connectivity statistic over $\mathcal{F}$-
 
 ## 15. Closing Summary
 
-This canonical specification (v2.1) establishes the formal structure of the theory of Soft Cognitive Cohesion in its current state. The theory is grounded in a single foundational commitment: that the structural properties of coherent formations — binding, separation, morphological articulation, and persistence — are decomposable into independently graded dimensions and evaluable through self-referential operators. This formation-level description is formally richer than and not reducible to discrete object-level description, though the theory's equilibrium formations may themselves be object-like.
+This canonical specification (CV-1.5) establishes the formal structure of the theory of Soft Cognitive Cohesion in its current state. The theory is grounded in a single foundational commitment: that the structural properties of coherent formations — binding, separation, morphological articulation, and persistence — are decomposable into independently graded dimensions and evaluable through self-referential operators. This formation-level description is formally richer than and not reducible to discrete object-level description, though the theory's equilibrium formations may themselves be object-like.
 
 From this commitment, the theory develops a formal universe in which closure captures relational self-support (A1'–A4, with proved contraction at $a_{\mathrm{cl}} < 4$), distinction captures exterior asymmetry (D-Ax1–3), morphological structure captures the articulation of core, boundary, and exterior ($\mathcal{Q}_{\mathrm{morph}} = \frac{\ell_{\max} - c}{1 - c} \cdot \mathrm{Artic}$, with proved axiom satisfaction QM1–4), and temporal transport captures the structural inheritance that constitutes persistence through time (E1–E4, with E3 reclassified as a solution constraint). Co-belonging (C1–C4, with proved resolvent realization) serves as a derived diagnostic for non-local structural integration but does not enter any predicate or energy term.
 

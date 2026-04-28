@@ -9,7 +9,7 @@ last_updated: 2026-04-27
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0, CV-1.1, CV-1.2) then status (active, challenged, deprecated).
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.5; current = CV-1.5) then status (active, challenged, deprecated).
 
 ---
 
@@ -194,15 +194,15 @@ last_updated: 2026-04-27
 - **Pending user decision (T2 candidates, deferred):** σ-framework (Lemma 1/2/3, Theorem 3/4), Theorem 1 V5b, Axiom S1' v1 placement, CN15/16/17 (Static/Dynamic Separation, Protocol-Parameterized observables, σ-labeled FQ), Commitment 14/15 v2.
 - **Source:** `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` (W4 closing summary, ~25 pages).
 
-### CV-1.2 (2026-04-12) — Previous Version (Frozen)
+### CV-1.2 (2026-04-12) — Frozen, with Audit Clarifications
 
-### CV-1.0 (2026-04-01)
-
-- **Theorems:** T-1, T-3, T-6a, T-6b, T-6-Stability, T-7, T-8-Core, T-8-Full, T-11, T-14, T-20
-- **QM Results:** QM-1, QM-2, QM-3, QM-4 (11 Category A)
-- **Provisional:** Predicate-Energy Bridge, Deep Core Dom. 2b (Category B at the time)
-- **K-field:** T-Persist-K-Sep (Category B), T-Persist-K-Weak (Category C) 
-- **Notes:** Initial comprehensive spec; 35+ theorems claimed
+- **Added:** T-Persist-K-Unified (Category B; parametric coverage of Sep/Weak/Strong regimes)
+- **Explicit Assumptions:** All K-field theorems now state "fixed K, fixed m" constraint
+- **Status Clarifications:**
+  - F-1, M-1, MO-1 documented as unresolved (not silently ignored) — *resolved in CV-1.3*
+  - Type A/B classification retracted (exp65 invalidated)
+  - Morse theory MO-1 vulnerability flagged (mitigation: use existing results, defer full Morse) — *sidestepped in CV-1.3*
+- **Count:** 38 + 1 (T-Persist-K-Unified) = 39 theorems (per CV-1.2 release accounting; honest recount 04-07 → 35A/4B/5C/5R)
 
 ### CV-1.1 (2026-04-03) — PLAN_0403 Tier 1 Complete
 
@@ -216,15 +216,13 @@ last_updated: 2026-04-27
 - **New:** T-Bind-Full (Category A, τ=1/2 only)
 - **Count:** 35 → 38 Category A (3 upgraded)
 
-### CV-1.2 (2026-04-12) — Frozen, with Audit Clarifications
+### CV-1.0 (2026-04-01) — Initial Comprehensive Spec
 
-- **Added:** T-Persist-K-Unified (Category B; parametric coverage of Sep/Weak/Strong regimes)
-- **Explicit Assumptions:** All K-field theorems now state "fixed K, fixed m" constraint
-- **Status Clarifications:**
-  - F-1, M-1, MO-1 documented as unresolved (not silently ignored) — *resolved in CV-1.3*
-  - Type A/B classification retracted (exp65 invalidated)
-  - Morse theory MO-1 vulnerability flagged (mitigation: use existing results, defer full Morse) — *sidestepped in CV-1.3*
-- **Count:** 38 + 1 (T-Persist-K-Unified) = 39 theorems (per CV-1.2 release accounting; honest recount 04-07 → 35A/4B/5C/5R)
+- **Theorems:** T-1, T-3, T-6a, T-6b, T-6-Stability, T-7, T-8-Core, T-8-Full, T-11, T-14, T-20
+- **QM Results:** QM-1, QM-2, QM-3, QM-4 (11 Category A)
+- **Provisional:** Predicate-Energy Bridge, Deep Core Dom. 2b (Category B at the time)
+- **K-field:** T-Persist-K-Sep (Category B), T-Persist-K-Weak (Category C)
+- **Notes:** Initial comprehensive spec; 35+ theorems claimed
 - **Retracted:** K-Saddle Conjecture, r̄₀ general τ (kept in archive)
 
 ---
