@@ -1,0 +1,521 @@
+{
+  "meta": {
+    "c": 0.1,
+    "n_seeds": 5,
+    "sweeps_description": "2D torus L=20 + 1D cycle L=40, mode-agnostic detection",
+    "crossover_threshold": 0.9,
+    "elapsed_s": 25.226926803588867,
+    "mode_agnostic": true,
+    "no_mode_index_hardcode": true,
+    "description": "\u03b6_*(graph-class) precise dependence (NQ-174)"
+  },
+  "results": {
+    "2D_torus": {
+      "L": 20,
+      "zetas_swept": [
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45
+      ],
+      "per_zeta": {
+        "0.25": [
+          {
+            "F1_found": false,
+            "energy": 35.74720375967899,
+            "best_mode_idx": 2,
+            "best_eigval": 4.911859747024963,
+            "best_overlap": 0.4220382247038602,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.42154555174688074,
+              "ov_y": 0.4220382247038602
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": false,
+            "energy": 36.47757841406333,
+            "best_mode_idx": 1,
+            "best_eigval": 4.005983684286976,
+            "best_overlap": 0.6823006582200934,
+            "best_overlaps_per_axis": {
+              "ov_x": 1.949666114976767e-07,
+              "ov_y": 0.6823006582200934
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": false,
+            "energy": 35.7472037101235,
+            "best_mode_idx": 2,
+            "best_eigval": 4.911715064757291,
+            "best_overlap": 0.4240284796827196,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.4195168615523703,
+              "ov_y": 0.4240284796827196
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": false,
+            "energy": 36.413386866995054,
+            "best_mode_idx": 1,
+            "best_eigval": 4.828828503860355,
+            "best_overlap": 0.6398383051706964,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.6398383051706964,
+              "ov_y": 0.23891290272042276
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": false,
+            "energy": 36.47757831811401,
+            "best_mode_idx": 1,
+            "best_eigval": 4.006119540213262,
+            "best_overlap": 0.6823003383936288,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.6823003383936288,
+              "ov_y": 1.1872151854282198e-06
+            },
+            "seed": 4
+          }
+        ],
+        "0.3": [
+          {
+            "F1_found": false,
+            "energy": 30.75882500042431,
+            "best_mode_idx": 2,
+            "best_eigval": 1.889170267798433,
+            "best_overlap": 0.5389215559982732,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5389215559982732,
+              "ov_y": 0.5389114802435411
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": false,
+            "energy": 30.758825000432452,
+            "best_mode_idx": 1,
+            "best_eigval": 1.8891701922491495,
+            "best_overlap": 0.5389256761336969,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5389076109892833,
+              "ov_y": 0.5389256761336969
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": false,
+            "energy": 30.758824546191555,
+            "best_mode_idx": 1,
+            "best_eigval": 1.8892064022418662,
+            "best_overlap": 0.5393275594169724,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5393275594169724,
+              "ov_y": 0.5384880103950659
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": false,
+            "energy": 30.758825000427468,
+            "best_mode_idx": 2,
+            "best_eigval": 1.889170300148306,
+            "best_overlap": 0.5389209890592792,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5389119505189002,
+              "ov_y": 0.5389209890592792
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": false,
+            "energy": 30.75882500042411,
+            "best_mode_idx": 2,
+            "best_eigval": 1.8891702346141896,
+            "best_overlap": 0.5389373862217637,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5389373862217637,
+              "ov_y": 0.5388955551585868
+            },
+            "seed": 4
+          }
+        ],
+        "0.35": [
+          {
+            "F1_found": false,
+            "energy": 26.41499900762573,
+            "best_mode_idx": 2,
+            "best_eigval": 0.7922122375445881,
+            "best_overlap": 0.8833300414198169,
+            "best_overlaps_per_axis": {
+              "ov_x": 1.763831735182575e-09,
+              "ov_y": 0.8833300414198169
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": false,
+            "energy": 26.41499900762372,
+            "best_mode_idx": 2,
+            "best_eigval": 0.7922122375591422,
+            "best_overlap": 0.8833299388642212,
+            "best_overlaps_per_axis": {
+              "ov_x": 6.327778958453711e-08,
+              "ov_y": 0.8833299388642212
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": false,
+            "energy": 26.41499900762602,
+            "best_mode_idx": 2,
+            "best_eigval": 0.7922122375479743,
+            "best_overlap": 0.883330072617644,
+            "best_overlaps_per_axis": {
+              "ov_x": 1.6924815493535306e-08,
+              "ov_y": 0.883330072617644
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": false,
+            "energy": 26.4149990076248,
+            "best_mode_idx": 2,
+            "best_eigval": 0.7922122375496365,
+            "best_overlap": 0.8833301169083656,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.8833301169083656,
+              "ov_y": 4.350932846300393e-08
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": false,
+            "energy": 26.414870383825367,
+            "best_mode_idx": 2,
+            "best_eigval": 0.7888016507426491,
+            "best_overlap": 0.8833687011358664,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.8833687011358664,
+              "ov_y": 1.85560873475904e-07
+            },
+            "seed": 4
+          }
+        ],
+        "0.4": [
+          {
+            "F1_found": true,
+            "energy": 22.641645184188533,
+            "best_mode_idx": 1,
+            "best_eigval": 0.293457533847526,
+            "best_overlap": 0.9211476515881465,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.00048221974784290293,
+              "ov_y": 0.9211476515881465
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": true,
+            "energy": 22.641645183737552,
+            "best_mode_idx": 2,
+            "best_eigval": 0.29345857989773366,
+            "best_overlap": 0.9175261908537624,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.0801784986550648,
+              "ov_y": 0.9175261908537624
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": true,
+            "energy": 22.641645184912537,
+            "best_mode_idx": 2,
+            "best_eigval": 0.29345904757735386,
+            "best_overlap": 0.9209791655218273,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.014754826278433298,
+              "ov_y": 0.9209791655218273
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": true,
+            "energy": 22.641645183868846,
+            "best_mode_idx": 2,
+            "best_eigval": 0.29345920347429855,
+            "best_overlap": 0.9210610262779458,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.9210610262779458,
+              "ov_y": 0.00655222963132273
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": true,
+            "energy": 22.64164518328436,
+            "best_mode_idx": 1,
+            "best_eigval": 0.2934575485055529,
+            "best_overlap": 0.9211474610834061,
+            "best_overlaps_per_axis": {
+              "ov_x": 3.102054389845805e-05,
+              "ov_y": 0.9211474610834061
+            },
+            "seed": 4
+          }
+        ],
+        "0.45": [
+          {
+            "F1_found": true,
+            "energy": 16.000000000536165,
+            "best_mode_idx": 2,
+            "best_eigval": 4.932389902455053,
+            "best_overlap": 0.5510279982776457,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.5224928310998561,
+              "ov_y": 0.5510279982776457
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": true,
+            "energy": 16.000000000334136,
+            "best_mode_idx": 2,
+            "best_eigval": 4.932389352765376,
+            "best_overlap": 0.765194286255241,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.02767053762699899,
+              "ov_y": 0.765194286255241
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": true,
+            "energy": 16.00000000033902,
+            "best_mode_idx": 2,
+            "best_eigval": 4.932389367602954,
+            "best_overlap": 0.6909305126080356,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.32954451829117504,
+              "ov_y": 0.6909305126080356
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": true,
+            "energy": 16.000000000403166,
+            "best_mode_idx": 2,
+            "best_eigval": 4.932389554898234,
+            "best_overlap": 0.7368108059683982,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7368108059683982,
+              "ov_y": 0.19892164080862526
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": true,
+            "energy": 16.00000000054759,
+            "best_mode_idx": 2,
+            "best_eigval": 4.932389930895554,
+            "best_overlap": 0.755900411111701,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.755900411111701,
+              "ov_y": 0.06938396519809414
+            },
+            "seed": 4
+          }
+        ]
+      },
+      "zeta_star_threshold_0.9": 0.4,
+      "mean_overlap_at_star": 0.9203722990650178
+    },
+    "1D_cycle": {
+      "L": 40,
+      "zetas_swept": [
+        0.05,
+        0.1,
+        0.15
+      ],
+      "per_zeta": {
+        "0.05": [
+          {
+            "F1_found": false,
+            "energy": 3.960200007351272,
+            "best_mode_idx": 1,
+            "best_eigval": 779.5737983794228,
+            "best_overlap": 0.704161606896854,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.704161606896854
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": true,
+            "energy": 3.9602000073512715,
+            "best_mode_idx": 1,
+            "best_eigval": 779.573798507025,
+            "best_overlap": 0.7041616068183787,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7041616068183787
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": true,
+            "energy": 3.9602000073512715,
+            "best_mode_idx": 1,
+            "best_eigval": 779.5737985070227,
+            "best_overlap": 0.7041616068184682,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7041616068184682
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": true,
+            "energy": 3.960200007351271,
+            "best_mode_idx": 1,
+            "best_eigval": 779.5737983916504,
+            "best_overlap": 0.7041616068899249,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7041616068899249
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": true,
+            "energy": 3.9602000073512715,
+            "best_mode_idx": 1,
+            "best_eigval": 779.5737994421484,
+            "best_overlap": 0.7041616062167154,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7041616062167154
+            },
+            "seed": 4
+          }
+        ],
+        "0.1": [
+          {
+            "F1_found": true,
+            "energy": 3.8432017711474162,
+            "best_mode_idx": 1,
+            "best_eigval": 179.9392171753225,
+            "best_overlap": 0.716309032218075,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.716309032218075
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": true,
+            "energy": 3.8432017711474167,
+            "best_mode_idx": 1,
+            "best_eigval": 179.9392171754864,
+            "best_overlap": 0.7163090292481661,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7163090292481661
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": true,
+            "energy": 3.843201771147417,
+            "best_mode_idx": 1,
+            "best_eigval": 179.93921718951057,
+            "best_overlap": 0.7163090322076661,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7163090322076661
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": true,
+            "energy": 3.8432017711474167,
+            "best_mode_idx": 1,
+            "best_eigval": 179.93921718438486,
+            "best_overlap": 0.7163090316061678,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7163090316061678
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": true,
+            "energy": 3.8432017711474167,
+            "best_mode_idx": 1,
+            "best_eigval": 179.9392171889153,
+            "best_overlap": 0.7163090323161336,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7163090323161336
+            },
+            "seed": 4
+          }
+        ],
+        "0.15": [
+          {
+            "F1_found": true,
+            "energy": 3.6562408791215093,
+            "best_mode_idx": 1,
+            "best_eigval": 69.44898061914816,
+            "best_overlap": 0.7360447832852098,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7360447832852098
+            },
+            "seed": 0
+          },
+          {
+            "F1_found": false,
+            "energy": 3.6562408791215093,
+            "best_mode_idx": 1,
+            "best_eigval": 69.44898065484827,
+            "best_overlap": 0.7360447766834904,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7360447766834904
+            },
+            "seed": 1
+          },
+          {
+            "F1_found": true,
+            "energy": 3.65624087912151,
+            "best_mode_idx": 1,
+            "best_eigval": 69.44898056017006,
+            "best_overlap": 0.736044782737187,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.736044782737187
+            },
+            "seed": 2
+          },
+          {
+            "F1_found": true,
+            "energy": 3.6562408791215093,
+            "best_mode_idx": 1,
+            "best_eigval": 69.44898052702898,
+            "best_overlap": 0.7360447869501361,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7360447869501361
+            },
+            "seed": 3
+          },
+          {
+            "F1_found": true,
+            "energy": 3.6562408791215097,
+            "best_mode_idx": 1,
+            "best_eigval": 69.44898055070941,
+            "best_overlap": 0.7360447721505247,
+            "best_overlaps_per_axis": {
+              "ov_x": 0.7360447721505247
+            },
+            "seed": 4
+          }
+        ]
+      },
+      "zeta_star_threshold_0.9": null,
+      "mean_overlap_at_star": null
+    }
+  }
+}

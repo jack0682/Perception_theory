@@ -306,6 +306,7 @@ def find_formation(
     normalize: bool = True,
     verbose: bool = False,
     u_init: np.ndarray | None = None,
+    allow_outside_spinodal: bool = False,
 ) -> FormationResult:
     """Run FindFormation with multi-start optimization.
 
@@ -318,6 +319,9 @@ def find_formation(
     u_init : optional initial field. When provided, skips multi-start and
         runs a single optimization from this initialization (projected onto
         the feasible set).
+    allow_outside_spinodal : if True, demote spinodal-range violation to
+        warning. Used for IC-driven metastable-stationary studies where the
+        formation is metastable but not the global minimum (NQ-191).
 
     Returns
     -------
@@ -326,6 +330,7 @@ def find_formation(
     # Validate parameters
     valid, violations, warnings = params.validate(
         fiedler_eigenvalue=graph.fiedler,
+        allow_outside_spinodal=allow_outside_spinodal,
     )
     if not valid:
         raise ValueError("Parameter validation failed:\n" + "\n".join(violations))

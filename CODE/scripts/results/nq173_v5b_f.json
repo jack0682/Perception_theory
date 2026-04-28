@@ -1,0 +1,1895 @@
+{
+  "meta": {
+    "L": 20,
+    "c": 0.1,
+    "zetas": [
+      0.5,
+      0.7,
+      1.0
+    ],
+    "n_seeds": 5,
+    "graph_class": "2D_free_BC",
+    "interior_band": 4,
+    "elapsed_s": 23.68686819076538,
+    "mode_agnostic": true,
+    "no_mode_index_hardcode": true,
+    "description": "V5b-F partial Goldstone characterization (H1/H2/H3 test, NQ-173)"
+  },
+  "results": [
+    {
+      "L": 20,
+      "zeta": 0.5,
+      "F1_found": false,
+      "energy": 9.815991071778173,
+      "attempts_F": [
+        0,
+        0,
+        0
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 0.3085729383032008,
+          "ov_tangent": 1.871766630578975e-15,
+          "max_overlap_full": 0.46675619340984964,
+          "overlaps_full": {
+            "overlap_full_x": 0.46675619340984964,
+            "overlap_full_y": 0.34355587532314813
+          },
+          "max_overlap_bulk": 0.15740185055299424,
+          "ov_x_bulk": 0.15740185055299424,
+          "ov_y_bulk": 0.04480598389939559,
+          "bulk_mass_fraction": 0.00928042056585684,
+          "mode_decomp_alpha": 0.4667561934098509,
+          "mode_decomp_beta": 0.7312996692967554,
+          "mode_decomp_gamma": 0.49733233315359876,
+          "alpha2_plus_beta2": 0.752660550399998
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 0.6563095597887064,
+          "ov_tangent": 7.533904056167273e-15,
+          "max_overlap_full": 0.8452566250540569,
+          "overlaps_full": {
+            "overlap_full_x": 0.782513496787723,
+            "overlap_full_y": 0.8452566250540569
+          },
+          "max_overlap_bulk": 0.8737231248423513,
+          "ov_x_bulk": 0.8306345289749186,
+          "ov_y_bulk": 0.8737231248423513,
+          "bulk_mass_fraction": 0.16611858394221135,
+          "mode_decomp_alpha": 0.7825134967877179,
+          "mode_decomp_beta": -0.4907832045742067,
+          "mode_decomp_gamma": 0.3831507189774419,
+          "alpha2_plus_beta2": 0.8531955265470694
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.3955175633468444,
+          "ov_tangent": 1.3704315460216776e-16,
+          "max_overlap_full": 0.07701316734352376,
+          "overlaps_full": {
+            "overlap_full_x": 0.061927329648502775,
+            "overlap_full_y": 0.07701316734352376
+          },
+          "max_overlap_bulk": 0.9937923348505461,
+          "ov_x_bulk": 0.9588543672647887,
+          "ov_y_bulk": 0.9937923348505461,
+          "bulk_mass_fraction": 0.25812370247540567,
+          "mode_decomp_alpha": 0.06192732964850217,
+          "mode_decomp_beta": -0.051065268426981586,
+          "mode_decomp_gamma": 0.9967734668434378,
+          "alpha2_plus_beta2": 0.006442655796913938
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 3.0583400795256575,
+          "ov_tangent": 1.474514954580286e-17,
+          "max_overlap_full": 0.03898292920052433,
+          "overlaps_full": {
+            "overlap_full_x": 0.03898292920052433,
+            "overlap_full_y": 0.025886252941355298
+          },
+          "max_overlap_bulk": 0.15545195987488178,
+          "ov_x_bulk": 0.15545195987488178,
+          "ov_y_bulk": 0.044830260446068276,
+          "bulk_mass_fraction": 0.07321957579312373,
+          "mode_decomp_alpha": -0.03898292920052399,
+          "mode_decomp_beta": -0.057686352434015105,
+          "mode_decomp_gamma": 0.9975733637050488,
+          "alpha2_plus_beta2": 0.0048473840261944665
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 5.219683498448947,
+          "ov_tangent": 6.938893903907228e-17,
+          "max_overlap_full": 0.04795351072466929,
+          "overlaps_full": {
+            "overlap_full_x": 0.00747254436937822,
+            "overlap_full_y": 0.04795351072466929
+          },
+          "max_overlap_bulk": 0.9742537764308902,
+          "ov_x_bulk": 0.9059301930090927,
+          "ov_y_bulk": 0.9742537764308902,
+          "bulk_mass_fraction": 0.24226532688748317,
+          "mode_decomp_alpha": 0.007472544369378166,
+          "mode_decomp_beta": 0.06299024707217565,
+          "mode_decomp_gamma": 0.9979861671658751,
+          "alpha2_plus_beta2": 0.004023610145566059
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 0.6563095597887064,
+        "ov_tangent": 7.533904056167273e-15,
+        "max_overlap_full": 0.8452566250540569,
+        "overlaps_full": {
+          "overlap_full_x": 0.782513496787723,
+          "overlap_full_y": 0.8452566250540569
+        },
+        "max_overlap_bulk": 0.8737231248423513,
+        "ov_x_bulk": 0.8306345289749186,
+        "ov_y_bulk": 0.8737231248423513,
+        "bulk_mass_fraction": 0.16611858394221135,
+        "mode_decomp_alpha": 0.7825134967877179,
+        "mode_decomp_beta": -0.4907832045742067,
+        "mode_decomp_gamma": 0.3831507189774419,
+        "alpha2_plus_beta2": 0.8531955265470694
+      },
+      "interior_band_used": 4,
+      "seed": 0,
+      "beta": 4.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.5,
+      "F1_found": true,
+      "energy": 12.960000001628075,
+      "attempts_F": [
+        0,
+        1,
+        0
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 3.7765857283731274,
+          "ov_tangent": 2.0990154059319366e-15,
+          "max_overlap_full": 0.3776417851003802,
+          "overlaps_full": {
+            "overlap_full_x": 0.3776417851003802,
+            "overlap_full_y": 0.35746497331325766
+          },
+          "max_overlap_bulk": 0.4779132378727904,
+          "ov_x_bulk": 0.3839754922088956,
+          "ov_y_bulk": 0.4779132378727904,
+          "bulk_mass_fraction": 0.17763844376477683,
+          "mode_decomp_alpha": -0.37764178465389087,
+          "mode_decomp_beta": 0.3597934019469463,
+          "mode_decomp_gamma": 0.853191297657722,
+          "alpha2_plus_beta2": 0.27206460960113255
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 3.7765993678403755,
+          "ov_tangent": 1.8492152253912764e-15,
+          "max_overlap_full": 0.4927848511542192,
+          "overlaps_full": {
+            "overlap_full_x": 0.37228063910763204,
+            "overlap_full_y": 0.4927848511542192
+          },
+          "max_overlap_bulk": 0.6857556404740195,
+          "ov_x_bulk": 0.48438779338825466,
+          "ov_y_bulk": 0.6857556404740195,
+          "bulk_mass_fraction": 0.1776373248151792,
+          "mode_decomp_alpha": 0.3722806387273781,
+          "mode_decomp_beta": 0.4905054487412906,
+          "mode_decomp_gamma": 0.7879159414454315,
+          "alpha2_plus_beta2": 0.37918846921615945
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 3.8750982454423837,
+          "ov_tangent": 4.597017211338539e-17,
+          "max_overlap_full": 0.24216189991613074,
+          "overlaps_full": {
+            "overlap_full_x": 0.15956293031122515,
+            "overlap_full_y": 0.24216189991613074
+          },
+          "max_overlap_bulk": 0.29759750433989945,
+          "ov_x_bulk": 0.16264242429488118,
+          "ov_y_bulk": 0.29759750433989945,
+          "bulk_mass_fraction": 0.08763687459937264,
+          "mode_decomp_alpha": 0.15956293007447467,
+          "mode_decomp_beta": -0.24314744006587624,
+          "mode_decomp_gamma": 0.9567753099528956,
+          "alpha2_plus_beta2": 0.08458100626454057
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 4.069613886458859,
+          "ov_tangent": 4.759456954798232e-16,
+          "max_overlap_full": 0.4205097158988367,
+          "overlaps_full": {
+            "overlap_full_x": 0.4205097158988367,
+            "overlap_full_y": 0.18236944842876052
+          },
+          "max_overlap_bulk": 0.6360875363147429,
+          "ov_x_bulk": 0.6360875363147429,
+          "ov_y_bulk": 0.2846027712650788,
+          "bulk_mass_fraction": 0.4877274626217595,
+          "mode_decomp_alpha": 0.4205097153618563,
+          "mode_decomp_beta": -0.18495811267470574,
+          "mode_decomp_gamma": 0.8882353718705992,
+          "alpha2_plus_beta2": 0.21103792415789852
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 4.069640703854863,
+          "ov_tangent": 2.816215143031098e-16,
+          "max_overlap_full": 0.328268799561857,
+          "overlaps_full": {
+            "overlap_full_x": 0.328268799561857,
+            "overlap_full_y": 0.11557521400193457
+          },
+          "max_overlap_bulk": 0.3098940107565115,
+          "ov_x_bulk": 0.3098940107565115,
+          "ov_y_bulk": 0.1439743788301531,
+          "bulk_mass_fraction": 0.11821841736352723,
+          "mode_decomp_alpha": -0.3282687990942903,
+          "mode_decomp_beta": -0.11355926040009127,
+          "mode_decomp_gamma": 0.9377333789081931,
+          "alpha2_plus_beta2": 0.12065611008142327
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 3.7765993678403755,
+        "ov_tangent": 1.8492152253912764e-15,
+        "max_overlap_full": 0.4927848511542192,
+        "overlaps_full": {
+          "overlap_full_x": 0.37228063910763204,
+          "overlap_full_y": 0.4927848511542192
+        },
+        "max_overlap_bulk": 0.6857556404740195,
+        "ov_x_bulk": 0.48438779338825466,
+        "ov_y_bulk": 0.6857556404740195,
+        "bulk_mass_fraction": 0.1776373248151792,
+        "mode_decomp_alpha": 0.3722806387273781,
+        "mode_decomp_beta": 0.4905054487412906,
+        "mode_decomp_gamma": 0.7879159414454315,
+        "alpha2_plus_beta2": 0.37918846921615945
+      },
+      "interior_band_used": 4,
+      "seed": 1,
+      "beta": 4.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.5,
+      "F1_found": false,
+      "energy": 9.815991071779052,
+      "attempts_F": [
+        0,
+        0,
+        0
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 0.3085729382979299,
+          "ov_tangent": 1.1535911115245767e-15,
+          "max_overlap_full": 0.46678219356816497,
+          "overlaps_full": {
+            "overlap_full_x": 0.46678219356816497,
+            "overlap_full_y": 0.46675607180298695
+          },
+          "max_overlap_bulk": 0.15744053876140532,
+          "ov_x_bulk": 0.15744053876140532,
+          "ov_y_bulk": 0.15740166960564736,
+          "bulk_mass_fraction": 0.009280420566086604,
+          "mode_decomp_alpha": 0.4667821935681676,
+          "mode_decomp_beta": -0.8202068395063018,
+          "mode_decomp_gamma": 0.3307191016478693,
+          "alpha2_plus_beta2": 0.8906248758052266
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 0.656309559791905,
+          "ov_tangent": 2.4754504002189037e-15,
+          "max_overlap_full": 0.7825135686044099,
+          "overlaps_full": {
+            "overlap_full_x": 0.7824981412191452,
+            "overlap_full_y": 0.7825135686044099
+          },
+          "max_overlap_bulk": 0.830634537449475,
+          "ov_x_bulk": 0.8306327170312254,
+          "ov_y_bulk": 0.830634537449475,
+          "bulk_mass_fraction": 0.16611858394245624,
+          "mode_decomp_alpha": -0.7824981412191422,
+          "mode_decomp_beta": -0.445323507877746,
+          "mode_decomp_gamma": 0.4351822978017908,
+          "alpha2_plus_beta2": 0.8106163676799535
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.3955175633433219,
+          "ov_tangent": 2.7755575615628914e-17,
+          "max_overlap_full": 0.06193125802543013,
+          "overlaps_full": {
+            "overlap_full_x": 0.06193125802543013,
+            "overlap_full_y": 0.061927311277614465
+          },
+          "max_overlap_bulk": 0.9588550066228284,
+          "ov_x_bulk": 0.9588550066228284,
+          "ov_y_bulk": 0.9588543642740731,
+          "bulk_mass_fraction": 0.2581237024774496,
+          "mode_decomp_alpha": -0.061931258025429585,
+          "mode_decomp_beta": -0.03523937006714458,
+          "mode_decomp_gamma": 0.9974581224676344,
+          "alpha2_plus_beta2": 0.005077293923341502
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 3.0583400795233273,
+          "ov_tangent": 1.8214596497756474e-17,
+          "max_overlap_full": 0.038982947454070424,
+          "overlaps_full": {
+            "overlap_full_x": 0.038979026420109725,
+            "overlap_full_y": 0.038982947454070424
+          },
+          "max_overlap_bulk": 0.1554520438797557,
+          "ov_x_bulk": 0.1554339992607014,
+          "ov_y_bulk": 0.1554520438797557,
+          "bulk_mass_fraction": 0.07321957579443496,
+          "mode_decomp_alpha": 0.038979026420109336,
+          "mode_decomp_beta": -0.06849913664795096,
+          "mode_decomp_gamma": 0.996889414016332,
+          "alpha2_plus_beta2": 0.0062114962221742395
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 5.219683498439005,
+          "ov_tangent": 7.28583859910259e-17,
+          "max_overlap_full": 0.007472564799451992,
+          "overlaps_full": {
+            "overlap_full_x": 0.007468175376731903,
+            "overlap_full_y": 0.007472564799451992
+          },
+          "max_overlap_bulk": 0.9059301989891672,
+          "ov_x_bulk": 0.9059289132839725,
+          "ov_y_bulk": 0.9059301989891672,
+          "bulk_mass_fraction": 0.24226532688401578,
+          "mode_decomp_alpha": -0.00746817537673182,
+          "mode_decomp_beta": -0.004255109315852504,
+          "mode_decomp_gamma": 0.9999630595183266,
+          "alpha2_plus_beta2": 7.387959874747822e-05
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 0.656309559791905,
+        "ov_tangent": 2.4754504002189037e-15,
+        "max_overlap_full": 0.7825135686044099,
+        "overlaps_full": {
+          "overlap_full_x": 0.7824981412191452,
+          "overlap_full_y": 0.7825135686044099
+        },
+        "max_overlap_bulk": 0.830634537449475,
+        "ov_x_bulk": 0.8306327170312254,
+        "ov_y_bulk": 0.830634537449475,
+        "bulk_mass_fraction": 0.16611858394245624,
+        "mode_decomp_alpha": -0.7824981412191422,
+        "mode_decomp_beta": -0.445323507877746,
+        "mode_decomp_gamma": 0.4351822978017908,
+        "alpha2_plus_beta2": 0.8106163676799535
+      },
+      "interior_band_used": 4,
+      "seed": 2,
+      "beta": 4.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.5,
+      "F1_found": false,
+      "energy": 9.815991071773844,
+      "attempts_F": [
+        0,
+        0,
+        0
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 0.3085729370020009,
+          "ov_tangent": 4.631711680858075e-16,
+          "max_overlap_full": 0.4667808673395652,
+          "overlaps_full": {
+            "overlap_full_x": 0.46675739799958915,
+            "overlap_full_y": 0.4667808673395652
+          },
+          "max_overlap_bulk": 0.1574385655394288,
+          "ov_x_bulk": 0.1574036431756242,
+          "ov_y_bulk": 0.1574385655394288,
+          "bulk_mass_fraction": 0.00928042060443096,
+          "mode_decomp_alpha": -0.4667573979995912,
+          "mode_decomp_beta": 0.8202209502145467,
+          "mode_decomp_gamma": 0.3307191017189626,
+          "alpha2_plus_beta2": 0.8906248757582026
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 0.6563095602459974,
+          "ov_tangent": 1.1018963519404679e-14,
+          "max_overlap_full": 0.7825127852112916,
+          "overlaps_full": {
+            "overlap_full_x": 0.7825127852112916,
+            "overlap_full_y": 0.7824989243353399
+          },
+          "max_overlap_bulk": 0.8306344448922854,
+          "ov_x_bulk": 0.8306344448922854,
+          "ov_y_bulk": 0.830632809320934,
+          "bulk_mass_fraction": 0.1661185840154444,
+          "mode_decomp_alpha": -0.7825127852112874,
+          "mode_decomp_beta": -0.44529777487665123,
+          "mode_decomp_gamma": 0.4351822982047604,
+          "alpha2_plus_beta2": 0.8106163673292232
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.395517560695118,
+          "ov_tangent": 6.106226635438361e-16,
+          "max_overlap_full": 0.061931058608396254,
+          "overlaps_full": {
+            "overlap_full_x": 0.06192751261824046,
+            "overlap_full_y": 0.061931058608396254
+          },
+          "max_overlap_bulk": 0.9588549738405937,
+          "ov_x_bulk": 0.958854396716447,
+          "ov_y_bulk": 0.9588549738405937,
+          "bulk_mass_fraction": 0.2581237034876387,
+          "mode_decomp_alpha": -0.06192751261823984,
+          "mode_decomp_beta": -0.035245953793175105,
+          "mode_decomp_gamma": 0.9974581223901718,
+          "alpha2_plus_beta2": 0.005077294077872889
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 3.0583400760976214,
+          "ov_tangent": 8.673617379884035e-17,
+          "max_overlap_full": 0.03898274803000827,
+          "overlaps_full": {
+            "overlap_full_x": 0.03898274803000827,
+            "overlap_full_y": 0.038979225142910044
+          },
+          "max_overlap_bulk": 0.155451127882654,
+          "ov_x_bulk": 0.155451127882654,
+          "ov_y_bulk": 0.15543491552276997,
+          "bulk_mass_fraction": 0.0732195762446014,
+          "mode_decomp_alpha": -0.03898274803000798,
+          "mode_decomp_beta": 0.06849701793421305,
+          "mode_decomp_gamma": 0.9968894140726688,
+          "alpha2_plus_beta2": 0.006211496109850995
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 5.21968349492014,
+          "ov_tangent": 4.5102810375396984e-17,
+          "max_overlap_full": 0.00747234099191639,
+          "overlaps_full": {
+            "overlap_full_x": 0.00747234099191639,
+            "overlap_full_y": 0.007468397274908306
+          },
+          "max_overlap_bulk": 0.9059301327657738,
+          "ov_x_bulk": 0.9059301327657738,
+          "ov_y_bulk": 0.9059289776121221,
+          "bulk_mass_fraction": 0.2422653268288924,
+          "mode_decomp_alpha": -0.007472340991916271,
+          "mode_decomp_beta": -0.0042477872083999425,
+          "mode_decomp_gamma": 0.9999630595296672,
+          "alpha2_plus_beta2": 7.387957606731843e-05
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 0.6563095602459974,
+        "ov_tangent": 1.1018963519404679e-14,
+        "max_overlap_full": 0.7825127852112916,
+        "overlaps_full": {
+          "overlap_full_x": 0.7825127852112916,
+          "overlap_full_y": 0.7824989243353399
+        },
+        "max_overlap_bulk": 0.8306344448922854,
+        "ov_x_bulk": 0.8306344448922854,
+        "ov_y_bulk": 0.830632809320934,
+        "bulk_mass_fraction": 0.1661185840154444,
+        "mode_decomp_alpha": -0.7825127852112874,
+        "mode_decomp_beta": -0.44529777487665123,
+        "mode_decomp_gamma": 0.4351822982047604,
+        "alpha2_plus_beta2": 0.8106163673292232
+      },
+      "interior_band_used": 4,
+      "seed": 3,
+      "beta": 4.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.5,
+      "F1_found": true,
+      "energy": 12.960000000787367,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 3.7765797355969832,
+          "ov_tangent": 2.7755575615628914e-17,
+          "max_overlap_full": 0.3830892938939726,
+          "overlaps_full": {
+            "overlap_full_x": 0.3830892938939726,
+            "overlap_full_y": 0.35006527508772195
+          },
+          "max_overlap_bulk": 0.48729811865068035,
+          "ov_x_bulk": 0.48729811865068035,
+          "ov_y_bulk": 0.45269255475969006,
+          "bulk_mass_fraction": 0.17762941065582405,
+          "mode_decomp_alpha": -0.38308929321440516,
+          "mode_decomp_beta": -0.34946268974538097,
+          "mode_decomp_gamma": 0.8550546309449538,
+          "alpha2_plus_beta2": 0.2688815780995889
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 3.7765918064312576,
+          "ov_tangent": 5.447031714567174e-16,
+          "max_overlap_full": 0.48710924346723883,
+          "overlaps_full": {
+            "overlap_full_x": 0.4190276960010699,
+            "overlap_full_y": 0.48710924346723883
+          },
+          "max_overlap_bulk": 0.6671308219649094,
+          "ov_x_bulk": 0.5734842218014825,
+          "ov_y_bulk": 0.6671308219649094,
+          "bulk_mass_fraction": 0.1776291321927128,
+          "mode_decomp_alpha": -0.41902769540089135,
+          "mode_decomp_beta": 0.48776943513566634,
+          "mode_decomp_gamma": 0.765830770232204,
+          "alpha2_plus_beta2": 0.41350323136554923
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 3.8750874391848567,
+          "ov_tangent": 4.85722573273506e-17,
+          "max_overlap_full": 0.2577229392276933,
+          "overlaps_full": {
+            "overlap_full_x": 0.19853475731535475,
+            "overlap_full_y": 0.2577229392276933
+          },
+          "max_overlap_bulk": 0.3046154181508186,
+          "ov_x_bulk": 0.2311041333830519,
+          "ov_y_bulk": 0.3046154181508186,
+          "bulk_mass_fraction": 0.08763411636945488,
+          "mode_decomp_alpha": 0.1985347568860991,
+          "mode_decomp_beta": 0.2574107456719127,
+          "mode_decomp_gamma": 0.9456868711792543,
+          "alpha2_plus_beta2": 0.10567634167919258
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 4.069619892304657,
+          "ov_tangent": 7.868029754738888e-16,
+          "max_overlap_full": 0.30585471404141285,
+          "overlaps_full": {
+            "overlap_full_x": 0.30585471404141285,
+            "overlap_full_y": 0.2278793094609392
+          },
+          "max_overlap_bulk": 0.48051762396786435,
+          "ov_x_bulk": 0.48051762396786435,
+          "ov_y_bulk": 0.3580870836300802,
+          "bulk_mass_fraction": 0.4877128431257244,
+          "mode_decomp_alpha": -0.30585471340963416,
+          "mode_decomp_beta": -0.22739814734946695,
+          "mode_decomp_gamma": 0.9245231078059329,
+          "alpha2_plus_beta2": 0.14525702313285932
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 4.069635695143654,
+          "ov_tangent": 8.026814551031179e-16,
+          "max_overlap_full": 0.19839710738109076,
+          "overlaps_full": {
+            "overlap_full_x": 0.19839710738109076,
+            "overlap_full_y": 0.1474941828469632
+          },
+          "max_overlap_bulk": 0.2379211820098252,
+          "ov_x_bulk": 0.2379211820098252,
+          "ov_y_bulk": 0.17214488339697012,
+          "bulk_mass_fraction": 0.11820692603040218,
+          "mode_decomp_alpha": 0.19839710693171733,
+          "mode_decomp_beta": -0.14780666088857936,
+          "mode_decomp_gamma": 0.9689126787064423,
+          "alpha2_plus_beta2": 0.06120822104190678
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 3.7765918064312576,
+        "ov_tangent": 5.447031714567174e-16,
+        "max_overlap_full": 0.48710924346723883,
+        "overlaps_full": {
+          "overlap_full_x": 0.4190276960010699,
+          "overlap_full_y": 0.48710924346723883
+        },
+        "max_overlap_bulk": 0.6671308219649094,
+        "ov_x_bulk": 0.5734842218014825,
+        "ov_y_bulk": 0.6671308219649094,
+        "bulk_mass_fraction": 0.1776291321927128,
+        "mode_decomp_alpha": -0.41902769540089135,
+        "mode_decomp_beta": 0.48776943513566634,
+        "mode_decomp_gamma": 0.765830770232204,
+        "alpha2_plus_beta2": 0.41350323136554923
+      },
+      "interior_band_used": 4,
+      "seed": 4,
+      "beta": 4.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.7,
+      "F1_found": true,
+      "energy": 6.612244902171188,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.975031367943607,
+          "ov_tangent": 1.6063539387545234e-15,
+          "max_overlap_full": 0.49368275444133947,
+          "overlaps_full": {
+            "overlap_full_x": 0.49368275444133947,
+            "overlap_full_y": 0.49243696588598695
+          },
+          "max_overlap_bulk": 0.5113127498042304,
+          "ov_x_bulk": 0.5113127498042304,
+          "ov_y_bulk": 0.4833137374360019,
+          "bulk_mass_fraction": 0.17759247106432188,
+          "mode_decomp_alpha": 0.49368275401091727,
+          "mode_decomp_beta": -0.25032935559514774,
+          "mode_decomp_gamma": 0.8328340483670887,
+          "alpha2_plus_beta2": 0.3063874478804858
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.975089402128988,
+          "ov_tangent": 6.765421556309548e-16,
+          "max_overlap_full": 0.3060990929498113,
+          "overlaps_full": {
+            "overlap_full_x": 0.1628173167030501,
+            "overlap_full_y": 0.3060990929498113
+          },
+          "max_overlap_bulk": 0.3053721496383361,
+          "ov_x_bulk": 0.08144146023768822,
+          "ov_y_bulk": 0.3053721496383361,
+          "bulk_mass_fraction": 0.17761877429940837,
+          "mode_decomp_alpha": 0.16281731662673385,
+          "mode_decomp_beta": 0.49610783630892336,
+          "mode_decomp_gamma": 0.8528584502479578,
+          "alpha2_plus_beta2": 0.2726324638406516
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 2.0735491707539575,
+          "ov_tangent": 9.540979117872439e-17,
+          "max_overlap_full": 0.17642454324681045,
+          "overlaps_full": {
+            "overlap_full_x": 0.17642454324681045,
+            "overlap_full_y": 0.08724883701865077
+          },
+          "max_overlap_bulk": 0.1636685914888261,
+          "ov_x_bulk": 0.1636685914888261,
+          "ov_y_bulk": 0.06786699316801492,
+          "bulk_mass_fraction": 0.08762562317587765,
+          "mode_decomp_alpha": 0.1764245430685928,
+          "mode_decomp_beta": 0.020135258701491313,
+          "mode_decomp_gamma": 0.9841082013478306,
+          "alpha2_plus_beta2": 0.03153104803993773
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 2.268119043346443,
+          "ov_tangent": 1.231443603772614e-15,
+          "max_overlap_full": 0.2359773005965165,
+          "overlaps_full": {
+            "overlap_full_x": 0.2359773005965165,
+            "overlap_full_y": 0.10153275732866587
+          },
+          "max_overlap_bulk": 0.7527703410601058,
+          "ov_x_bulk": 0.7527703410601058,
+          "ov_y_bulk": 0.6829891623811002,
+          "bulk_mass_fraction": 0.48471822281619004,
+          "mode_decomp_alpha": -0.23597730036750428,
+          "mode_decomp_beta": -0.045665563239172015,
+          "mode_decomp_gamma": 0.9706850004225439,
+          "alpha2_plus_beta2": 0.057770629954686153
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 2.2681196759076583,
+          "ov_tangent": 3.104833149478528e-16,
+          "max_overlap_full": 0.35567570684868166,
+          "overlaps_full": {
+            "overlap_full_x": 0.21764305006345558,
+            "overlap_full_y": 0.35567570684868166
+          },
+          "max_overlap_bulk": 0.31207479625884105,
+          "ov_x_bulk": 0.06612523782766982,
+          "ov_y_bulk": 0.31207479625884105,
+          "bulk_mass_fraction": 0.12113903984182273,
+          "mode_decomp_alpha": -0.21764305002441148,
+          "mode_decomp_beta": -0.5970875555486881,
+          "mode_decomp_gamma": 0.7720867527583697,
+          "alpha2_plus_beta2": 0.4038820462150362
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 1,
+        "eigenvalue": 1.975031367943607,
+        "ov_tangent": 1.6063539387545234e-15,
+        "max_overlap_full": 0.49368275444133947,
+        "overlaps_full": {
+          "overlap_full_x": 0.49368275444133947,
+          "overlap_full_y": 0.49243696588598695
+        },
+        "max_overlap_bulk": 0.5113127498042304,
+        "ov_x_bulk": 0.5113127498042304,
+        "ov_y_bulk": 0.4833137374360019,
+        "bulk_mass_fraction": 0.17759247106432188,
+        "mode_decomp_alpha": 0.49368275401091727,
+        "mode_decomp_beta": -0.25032935559514774,
+        "mode_decomp_gamma": 0.8328340483670887,
+        "alpha2_plus_beta2": 0.3063874478804858
+      },
+      "interior_band_used": 4,
+      "seed": 0,
+      "beta": 2.0408163265306127,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.7,
+      "F1_found": true,
+      "energy": 6.612244903585447,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.9750741149480266,
+          "ov_tangent": 1.1275702593849246e-15,
+          "max_overlap_full": 0.38534898461134115,
+          "overlaps_full": {
+            "overlap_full_x": 0.33664156738087897,
+            "overlap_full_y": 0.38534898461134115
+          },
+          "max_overlap_bulk": 0.48907439787087015,
+          "ov_x_bulk": 0.3670576411932447,
+          "ov_y_bulk": 0.48907439787087015,
+          "bulk_mass_fraction": 0.1776382133723777,
+          "mode_decomp_alpha": -0.3366415671627694,
+          "mode_decomp_beta": 0.358211663330541,
+          "mode_decomp_gamma": 0.8708368730779386,
+          "alpha2_plus_beta2": 0.24164314048783822
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.9750961615045772,
+          "ov_tangent": 5.551115123125783e-16,
+          "max_overlap_full": 0.6040010761904728,
+          "overlaps_full": {
+            "overlap_full_x": 0.45937145777315436,
+            "overlap_full_y": 0.6040010761904728
+          },
+          "max_overlap_bulk": 0.6943413655815365,
+          "ov_x_bulk": 0.49372756759909076,
+          "ov_y_bulk": 0.6943413655815365,
+          "bulk_mass_fraction": 0.1776459606361643,
+          "mode_decomp_alpha": 0.4593714576489347,
+          "mode_decomp_beta": 0.6450785435899332,
+          "mode_decomp_gamma": 0.6106157027929954,
+          "alpha2_plus_beta2": 0.6271484635026163
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 2.0735955624077524,
+          "ov_tangent": 2.7929047963226594e-16,
+          "max_overlap_full": 0.22911709043696582,
+          "overlaps_full": {
+            "overlap_full_x": 0.14057214928574271,
+            "overlap_full_y": 0.22911709043696582
+          },
+          "max_overlap_bulk": 0.1931343255569205,
+          "ov_x_bulk": 0.10632422485276441,
+          "ov_y_bulk": 0.1931343255569205,
+          "bulk_mass_fraction": 0.08763940832676907,
+          "mode_decomp_alpha": 0.14057214917614175,
+          "mode_decomp_beta": -0.21802958897236205,
+          "mode_decomp_gamma": 0.965765276456212,
+          "alpha2_plus_beta2": 0.06729743079145659
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 2.268112762370567,
+          "ov_tangent": 1.4873729147196063e-15,
+          "max_overlap_full": 0.4190638697541434,
+          "overlaps_full": {
+            "overlap_full_x": 0.4190638697541434,
+            "overlap_full_y": 0.17166988083357992
+          },
+          "max_overlap_bulk": 0.746805150310438,
+          "ov_x_bulk": 0.746805150310438,
+          "ov_y_bulk": 0.4442923975932238,
+          "bulk_mass_fraction": 0.48780531511959674,
+          "mode_decomp_alpha": 0.4190638694701389,
+          "mode_decomp_beta": -0.1367851032573988,
+          "mode_decomp_gamma": 0.8975941782518296,
+          "alpha2_plus_beta2": 0.19432469116842288
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 2.268125778170056,
+          "ov_tangent": 3.622082289048839e-16,
+          "max_overlap_full": 0.2729302594813755,
+          "overlaps_full": {
+            "overlap_full_x": 0.2729302594813755,
+            "overlap_full_y": 0.0704334341261515
+          },
+          "max_overlap_bulk": 0.14951852013528322,
+          "ov_x_bulk": 0.14951852013528322,
+          "ov_y_bulk": 0.053223985566155034,
+          "bulk_mass_fraction": 0.11814327191935652,
+          "mode_decomp_alpha": -0.2729302592744248,
+          "mode_decomp_beta": -0.0938061009424154,
+          "mode_decomp_gamma": 0.957449470728548,
+          "alpha2_plus_beta2": 0.08329051100162338
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.9750961615045772,
+        "ov_tangent": 5.551115123125783e-16,
+        "max_overlap_full": 0.6040010761904728,
+        "overlaps_full": {
+          "overlap_full_x": 0.45937145777315436,
+          "overlap_full_y": 0.6040010761904728
+        },
+        "max_overlap_bulk": 0.6943413655815365,
+        "ov_x_bulk": 0.49372756759909076,
+        "ov_y_bulk": 0.6943413655815365,
+        "bulk_mass_fraction": 0.1776459606361643,
+        "mode_decomp_alpha": 0.4593714576489347,
+        "mode_decomp_beta": 0.6450785435899332,
+        "mode_decomp_gamma": 0.6106157027929954,
+        "alpha2_plus_beta2": 0.6271484635026163
+      },
+      "interior_band_used": 4,
+      "seed": 1,
+      "beta": 2.0408163265306127,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.7,
+      "F1_found": true,
+      "energy": 6.612244903377922,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.9750517272928136,
+          "ov_tangent": 2.3418766925686896e-17,
+          "max_overlap_full": 0.32382086651076747,
+          "overlaps_full": {
+            "overlap_full_x": 0.32382086651076747,
+            "overlap_full_y": 0.030878040765390625
+          },
+          "max_overlap_bulk": 0.38814946694437047,
+          "ov_x_bulk": 0.38814946694437047,
+          "ov_y_bulk": 0.09765980073954518,
+          "bulk_mass_fraction": 0.17761627282507456,
+          "mode_decomp_alpha": 0.3238208662741738,
+          "mode_decomp_beta": -0.03869204247445359,
+          "mode_decomp_gamma": 0.9453269129854491,
+          "alpha2_plus_beta2": 0.10635702758540126
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.9750776558993923,
+          "ov_tangent": 9.020562075079397e-17,
+          "max_overlap_full": 0.6065432171168059,
+          "overlaps_full": {
+            "overlap_full_x": 0.001980554979364016,
+            "overlap_full_y": 0.6065432171168059
+          },
+          "max_overlap_bulk": 0.7721907585205176,
+          "ov_x_bulk": 0.02426424258354164,
+          "ov_y_bulk": 0.7721907585205176,
+          "bulk_mass_fraction": 0.17761055654920854,
+          "mode_decomp_alpha": 0.0019805549786879166,
+          "mode_decomp_beta": 0.6066716399560514,
+          "mode_decomp_gamma": 0.7949500604912308,
+          "alpha2_plus_beta2": 0.3680544013249885
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 2.0735602539814395,
+          "ov_tangent": 2.1597307275911248e-16,
+          "max_overlap_full": 0.5556271347813924,
+          "overlaps_full": {
+            "overlap_full_x": 0.021739413249101773,
+            "overlap_full_y": 0.5556271347813924
+          },
+          "max_overlap_bulk": 0.5885138307823236,
+          "ov_x_bulk": 0.018131541054012327,
+          "ov_y_bulk": 0.5885138307823236,
+          "bulk_mass_fraction": 0.08762916177678019,
+          "mode_decomp_alpha": -0.021739413240048078,
+          "mode_decomp_beta": 0.5563124907638177,
+          "mode_decomp_gamma": 0.8306887567146528,
+          "alpha2_plus_beta2": 0.30995618946786435
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 2.268114592757145,
+          "ov_tangent": 4.532473300757761e-16,
+          "max_overlap_full": 0.1172983643024213,
+          "overlaps_full": {
+            "overlap_full_x": 0.1172983643024213,
+            "overlap_full_y": 0.01961582360109943
+          },
+          "max_overlap_bulk": 0.020736793928059254,
+          "ov_x_bulk": 0.020736793928059254,
+          "ov_y_bulk": 0.01157659693404809,
+          "bulk_mass_fraction": 0.11813055087139969,
+          "mode_decomp_alpha": -0.1172983642077162,
+          "mode_decomp_beta": -0.016794285664523543,
+          "mode_decomp_gamma": 0.9929547047691614,
+          "alpha2_plus_beta2": 0.014040954276787657
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 2.2681238754018915,
+          "ov_tangent": 1.4070233693430634e-15,
+          "max_overlap_full": 0.39441713181918847,
+          "overlaps_full": {
+            "overlap_full_x": 0.39441713181918847,
+            "overlap_full_y": 0.046795923505963316
+          },
+          "max_overlap_bulk": 0.8579238297715269,
+          "ov_x_bulk": 0.8579238297715269,
+          "ov_y_bulk": 0.030999976338161,
+          "bulk_mass_fraction": 0.48774140514115016,
+          "mode_decomp_alpha": -0.39441713154840063,
+          "mode_decomp_beta": 0.05631612557363796,
+          "mode_decomp_gamma": 0.9172042413451357,
+          "alpha2_plus_beta2": 0.15873637965849413
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.9750776558993923,
+        "ov_tangent": 9.020562075079397e-17,
+        "max_overlap_full": 0.6065432171168059,
+        "overlaps_full": {
+          "overlap_full_x": 0.001980554979364016,
+          "overlap_full_y": 0.6065432171168059
+        },
+        "max_overlap_bulk": 0.7721907585205176,
+        "ov_x_bulk": 0.02426424258354164,
+        "ov_y_bulk": 0.7721907585205176,
+        "bulk_mass_fraction": 0.17761055654920854,
+        "mode_decomp_alpha": 0.0019805549786879166,
+        "mode_decomp_beta": 0.6066716399560514,
+        "mode_decomp_gamma": 0.7949500604912308,
+        "alpha2_plus_beta2": 0.3680544013249885
+      },
+      "interior_band_used": 4,
+      "seed": 2,
+      "beta": 2.0408163265306127,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.7,
+      "F1_found": true,
+      "energy": 6.612244902217006,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.9750481344709674,
+          "ov_tangent": 1.2975731600306517e-15,
+          "max_overlap_full": 0.4736078022228954,
+          "overlaps_full": {
+            "overlap_full_x": 0.005951684442818774,
+            "overlap_full_y": 0.4736078022228954
+          },
+          "max_overlap_bulk": 0.4644140046811624,
+          "ov_x_bulk": 0.05539420807831369,
+          "ov_y_bulk": 0.4644140046811624,
+          "bulk_mass_fraction": 0.17760966050410007,
+          "mode_decomp_alpha": 0.005951684435053192,
+          "mode_decomp_beta": 0.4885034855858442,
+          "mode_decomp_gamma": 0.872541644864511,
+          "alpha2_plus_beta2": 0.23867107797713358
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.9750800680037854,
+          "ov_tangent": 7.355227538141662e-16,
+          "max_overlap_full": 0.5606986059725627,
+          "overlaps_full": {
+            "overlap_full_x": 0.5606986059725627,
+            "overlap_full_y": 0.03574836152710549
+          },
+          "max_overlap_bulk": 0.6895776166138212,
+          "ov_x_bulk": 0.6895776166138212,
+          "ov_y_bulk": 0.07725801368390688,
+          "bulk_mass_fraction": 0.1776147774057822,
+          "mode_decomp_alpha": 0.5606986054183559,
+          "mode_decomp_beta": -0.11220140408940883,
+          "mode_decomp_gamma": 0.8203827879729535,
+          "alpha2_plus_beta2": 0.32697208119772403
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 2.07355843278442,
+          "ov_tangent": 8.933825901280557e-17,
+          "max_overlap_full": 0.4589092726007808,
+          "overlaps_full": {
+            "overlap_full_x": 0.4589092726007808,
+            "overlap_full_y": 0.10148687869615924
+          },
+          "max_overlap_bulk": 0.4451384296237323,
+          "ov_x_bulk": 0.4451384296237323,
+          "ov_y_bulk": 0.07177438194560784,
+          "bulk_mass_fraction": 0.08762857102115555,
+          "mode_decomp_alpha": -0.4589092721069842,
+          "mode_decomp_beta": 0.2271271470175662,
+          "mode_decomp_gamma": 0.8589618961641423,
+          "alpha2_plus_beta2": 0.26218446093810116
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 2.2681159093092926,
+          "ov_tangent": 9.824146467304288e-16,
+          "max_overlap_full": 0.2702221522858704,
+          "overlaps_full": {
+            "overlap_full_x": 0.2702221522858704,
+            "overlap_full_y": 0.04023168923831421
+          },
+          "max_overlap_bulk": 0.19237454229693315,
+          "ov_x_bulk": 0.19237454229693315,
+          "ov_y_bulk": 0.043957301206658715,
+          "bulk_mass_fraction": 0.11812963691977846,
+          "mode_decomp_alpha": 0.27022215191166576,
+          "mode_decomp_beta": -0.11353369918263674,
+          "mode_decomp_gamma": 0.9560805864393102,
+          "alpha2_plus_beta2": 0.08590991223386482
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 2.2681226643364814,
+          "ov_tangent": 1.4908063627713016e-15,
+          "max_overlap_full": 0.2744073115870527,
+          "overlaps_full": {
+            "overlap_full_x": 0.17583952458915342,
+            "overlap_full_y": 0.2744073115870527
+          },
+          "max_overlap_bulk": 0.799830069308609,
+          "ov_x_bulk": 0.4601313057809387,
+          "ov_y_bulk": 0.799830069308609,
+          "bulk_mass_fraction": 0.48774043320022914,
+          "mode_decomp_alpha": 0.17583952433130923,
+          "mode_decomp_beta": 0.23716709615307816,
+          "mode_decomp_gamma": 0.9554225401283223,
+          "alpha2_plus_beta2": 0.0871677698147445
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.9750800680037854,
+        "ov_tangent": 7.355227538141662e-16,
+        "max_overlap_full": 0.5606986059725627,
+        "overlaps_full": {
+          "overlap_full_x": 0.5606986059725627,
+          "overlap_full_y": 0.03574836152710549
+        },
+        "max_overlap_bulk": 0.6895776166138212,
+        "ov_x_bulk": 0.6895776166138212,
+        "ov_y_bulk": 0.07725801368390688,
+        "bulk_mass_fraction": 0.1776147774057822,
+        "mode_decomp_alpha": 0.5606986054183559,
+        "mode_decomp_beta": -0.11220140408940883,
+        "mode_decomp_gamma": 0.8203827879729535,
+        "alpha2_plus_beta2": 0.32697208119772403
+      },
+      "interior_band_used": 4,
+      "seed": 3,
+      "beta": 2.0408163265306127,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 0.7,
+      "F1_found": true,
+      "energy": 6.612244902231614,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.9750687210062046,
+          "ov_tangent": 1.5959455978986625e-16,
+          "max_overlap_full": 0.34326280808921245,
+          "overlaps_full": {
+            "overlap_full_x": 0.34326280808921245,
+            "overlap_full_y": 0.3407400798826744
+          },
+          "max_overlap_bulk": 0.4349470942261817,
+          "ov_x_bulk": 0.4187457498860432,
+          "ov_y_bulk": 0.4349470942261817,
+          "bulk_mass_fraction": 0.17763089774467694,
+          "mode_decomp_alpha": -0.3432628078094836,
+          "mode_decomp_beta": -0.3071838927164263,
+          "mode_decomp_gamma": 0.8875858836362442,
+          "alpha2_plus_beta2": 0.2121912991696674
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.9750917463095254,
+          "ov_tangent": 4.2674197509029455e-16,
+          "max_overlap_full": 0.5935208406654455,
+          "overlaps_full": {
+            "overlap_full_x": 0.5189127390229276,
+            "overlap_full_y": 0.5935208406654455
+          },
+          "max_overlap_bulk": 0.6663363198592585,
+          "ov_x_bulk": 0.5591146605415945,
+          "ov_y_bulk": 0.6663363198592585,
+          "bulk_mass_fraction": 0.17763928864679635,
+          "mode_decomp_alpha": -0.5189127388986519,
+          "mode_decomp_beta": 0.6501141512166395,
+          "mode_decomp_gamma": 0.5550505921054115,
+          "alpha2_plus_beta2": 0.6919188402034321
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 2.0735867595441757,
+          "ov_tangent": 3.2786273695961654e-16,
+          "max_overlap_full": 0.23630523962377142,
+          "overlaps_full": {
+            "overlap_full_x": 0.17388037505099777,
+            "overlap_full_y": 0.23630523962377142
+          },
+          "max_overlap_bulk": 0.19619387270060423,
+          "ov_x_bulk": 0.1388069729121225,
+          "ov_y_bulk": 0.19619387270060423,
+          "bulk_mass_fraction": 0.08763685132474154,
+          "mode_decomp_alpha": 0.17388037488830335,
+          "mode_decomp_beta": 0.2196443734665428,
+          "mode_decomp_gamma": 0.9599593556152224,
+          "alpha2_plus_beta2": 0.07847803556680705
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 2.268114848868048,
+          "ov_tangent": 7.574482016538438e-16,
+          "max_overlap_full": 0.2873591170068889,
+          "overlaps_full": {
+            "overlap_full_x": 0.2873591170068889,
+            "overlap_full_y": 0.20844165200850473
+          },
+          "max_overlap_bulk": 0.6620769572144835,
+          "ov_x_bulk": 0.6620769572144835,
+          "ov_y_bulk": 0.5296161188965597,
+          "bulk_mass_fraction": 0.48778872754309255,
+          "mode_decomp_alpha": -0.28735911674775616,
+          "mode_decomp_beta": -0.17994400479443742,
+          "mode_decomp_gamma": 0.9407682462543518,
+          "alpha2_plus_beta2": 0.11495510683951107
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 2.268123812539694,
+          "ov_tangent": 6.29018525092305e-16,
+          "max_overlap_full": 0.1369329721175967,
+          "overlaps_full": {
+            "overlap_full_x": 0.1369329721175967,
+            "overlap_full_y": 0.10017292436246285
+          },
+          "max_overlap_bulk": 0.08997455803176842,
+          "ov_x_bulk": 0.08997455803176842,
+          "ov_y_bulk": 0.06602309959976038,
+          "bulk_mass_fraction": 0.11814159767009606,
+          "mode_decomp_alpha": 0.13693297198457857,
+          "mode_decomp_beta": -0.1148083247316585,
+          "mode_decomp_gamma": 0.9839046751366621,
+          "alpha2_plus_beta2": 0.03193159024421933
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.9750917463095254,
+        "ov_tangent": 4.2674197509029455e-16,
+        "max_overlap_full": 0.5935208406654455,
+        "overlaps_full": {
+          "overlap_full_x": 0.5189127390229276,
+          "overlap_full_y": 0.5935208406654455
+        },
+        "max_overlap_bulk": 0.6663363198592585,
+        "ov_x_bulk": 0.5591146605415945,
+        "ov_y_bulk": 0.6663363198592585,
+        "bulk_mass_fraction": 0.17763928864679635,
+        "mode_decomp_alpha": -0.5189127388986519,
+        "mode_decomp_beta": 0.6501141512166395,
+        "mode_decomp_gamma": 0.5550505921054115,
+        "alpha2_plus_beta2": 0.6919188402034321
+      },
+      "interior_band_used": 4,
+      "seed": 4,
+      "beta": 2.0408163265306127,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 1.0,
+      "F1_found": true,
+      "energy": 3.2400000137902047,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.0179860823982858,
+          "ov_tangent": 3.174543961037557e-15,
+          "max_overlap_full": 0.29638432183387986,
+          "overlaps_full": {
+            "overlap_full_x": 0.29638432183387986,
+            "overlap_full_y": 0.26905847460304533
+          },
+          "max_overlap_bulk": 0.2665029807970628,
+          "ov_x_bulk": 0.2665029807970628,
+          "ov_y_bulk": 0.2514444032651784,
+          "bulk_mass_fraction": 0.17759798600605162,
+          "mode_decomp_alpha": 0.29638432166059153,
+          "mode_decomp_beta": 0.10902908952046611,
+          "mode_decomp_gamma": 0.9488250584339187,
+          "alpha2_plus_beta2": 0.09973100848787081
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.0180368532534125,
+          "ov_tangent": 2.4077961846558082e-15,
+          "max_overlap_full": 0.3510348221026583,
+          "overlaps_full": {
+            "overlap_full_x": 0.3510348221026583,
+            "overlap_full_y": 0.21777090187728182
+          },
+          "max_overlap_bulk": 0.28637196941101334,
+          "ov_x_bulk": 0.28637196941101334,
+          "ov_y_bulk": 0.14644679346880352,
+          "bulk_mass_fraction": 0.17762126960327856,
+          "mode_decomp_alpha": 0.3510348220427265,
+          "mode_decomp_beta": -0.5537811083761729,
+          "mode_decomp_gamma": 0.7550503544261725,
+          "alpha2_plus_beta2": 0.42989896228091123
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.116502983857779,
+          "ov_tangent": 1.1535911115245767e-15,
+          "max_overlap_full": 0.02865546934248526,
+          "overlaps_full": {
+            "overlap_full_x": 0.02865546934248526,
+            "overlap_full_y": 0.02342479869887481
+          },
+          "max_overlap_bulk": 0.02719386723071401,
+          "ov_x_bulk": 0.00935208806742291,
+          "ov_y_bulk": 0.02719386723071401,
+          "bulk_mass_fraction": 0.08762727896883775,
+          "mode_decomp_alpha": 0.028655469324983637,
+          "mode_decomp_beta": -0.05239590820478886,
+          "mode_decomp_gamma": 0.9982151736380089,
+          "alpha2_plus_beta2": 0.0035664671188397386
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 1.3110678377687592,
+          "ov_tangent": 2.2134520982048343e-15,
+          "max_overlap_full": 0.2602989671710223,
+          "overlaps_full": {
+            "overlap_full_x": 0.2602989671710223,
+            "overlap_full_y": 0.25128341840637347
+          },
+          "max_overlap_bulk": 0.8640591764978888,
+          "ov_x_bulk": 0.8320736055653348,
+          "ov_y_bulk": 0.8640591764978888,
+          "bulk_mass_fraction": 0.48396510193743264,
+          "mode_decomp_alpha": -0.260298967016429,
+          "mode_decomp_beta": -0.11482904538092781,
+          "mode_decomp_gamma": 0.958675512416524,
+          "alpha2_plus_beta2": 0.08094126189291519
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 1.3110679326319608,
+          "ov_tangent": 1.0433489264064823e-15,
+          "max_overlap_full": 0.31534860596057784,
+          "overlaps_full": {
+            "overlap_full_x": 0.26164362106476297,
+            "overlap_full_y": 0.31534860596057784
+          },
+          "max_overlap_bulk": 0.27473250634382645,
+          "ov_x_bulk": 0.05734846634397244,
+          "ov_y_bulk": 0.27473250634382645,
+          "bulk_mass_fraction": 0.12190138800488216,
+          "mode_decomp_alpha": -0.2616436210118982,
+          "mode_decomp_beta": 0.6075786667099211,
+          "mode_decomp_gamma": 0.7499271826936111,
+          "alpha2_plus_beta2": 0.4376092206572232
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.0180368532534125,
+        "ov_tangent": 2.4077961846558082e-15,
+        "max_overlap_full": 0.3510348221026583,
+        "overlaps_full": {
+          "overlap_full_x": 0.3510348221026583,
+          "overlap_full_y": 0.21777090187728182
+        },
+        "max_overlap_bulk": 0.28637196941101334,
+        "ov_x_bulk": 0.28637196941101334,
+        "ov_y_bulk": 0.14644679346880352,
+        "bulk_mass_fraction": 0.17762126960327856,
+        "mode_decomp_alpha": 0.3510348220427265,
+        "mode_decomp_beta": -0.5537811083761729,
+        "mode_decomp_gamma": 0.7550503544261725,
+        "alpha2_plus_beta2": 0.42989896228091123
+      },
+      "interior_band_used": 4,
+      "seed": 0,
+      "beta": 1.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 1.0,
+      "F1_found": true,
+      "energy": 3.2400000129123745,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.0180113571033664,
+          "ov_tangent": 1.6375789613221059e-15,
+          "max_overlap_full": 0.19373148039026475,
+          "overlaps_full": {
+            "overlap_full_x": 0.06164484061196471,
+            "overlap_full_y": 0.19373148039026475
+          },
+          "max_overlap_bulk": 0.2325179339863945,
+          "ov_x_bulk": 0.10908853920797075,
+          "ov_y_bulk": 0.2325179339863945,
+          "bulk_mass_fraction": 0.1776204202735594,
+          "mode_decomp_alpha": -0.06164484058299655,
+          "mode_decomp_beta": 0.191300563998317,
+          "mode_decomp_gamma": 0.9795937973687986,
+          "alpha2_plus_beta2": 0.040395992156577236
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.018031843369757,
+          "ov_tangent": 9.818534874028728e-16,
+          "max_overlap_full": 0.4524767057657821,
+          "overlaps_full": {
+            "overlap_full_x": 0.2596798578140976,
+            "overlap_full_y": 0.4524767057657821
+          },
+          "max_overlap_bulk": 0.4362738856823627,
+          "ov_x_bulk": 0.2619774474940715,
+          "ov_y_bulk": 0.4362738856823627,
+          "bulk_mass_fraction": 0.17762971351014828,
+          "mode_decomp_alpha": 0.259679857817096,
+          "mode_decomp_beta": 0.7119883275914761,
+          "mode_decomp_gamma": 0.6524101415655535,
+          "alpha2_plus_beta2": 0.5743610071824143
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.1165229423594525,
+          "ov_tangent": 2.2985086056692694e-16,
+          "max_overlap_full": 0.10718896748506482,
+          "overlaps_full": {
+            "overlap_full_x": 0.041691444365851205,
+            "overlap_full_y": 0.10718896748506482
+          },
+          "max_overlap_bulk": 0.07592626910191623,
+          "ov_x_bulk": 0.03280567214246437,
+          "ov_y_bulk": 0.07592626910191623,
+          "bulk_mass_fraction": 0.0876333308269575,
+          "mode_decomp_alpha": 0.041691444345662354,
+          "mode_decomp_beta": -0.10086140375788664,
+          "mode_decomp_gamma": 0.9940265593536026,
+          "alpha2_plus_beta2": 0.011911199299638893
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 1.3110672453509886,
+          "ov_tangent": 2.3633134023978014e-15,
+          "max_overlap_full": 0.3489809063042748,
+          "overlaps_full": {
+            "overlap_full_x": 0.3489809063042748,
+            "overlap_full_y": 0.23637319751337316
+          },
+          "max_overlap_bulk": 0.8871857855931987,
+          "ov_x_bulk": 0.8871857855931987,
+          "ov_y_bulk": 0.7896066732849744,
+          "bulk_mass_fraction": 0.48775921814050105,
+          "mode_decomp_alpha": 0.3489809061507804,
+          "mode_decomp_beta": -0.05355089480219699,
+          "mode_decomp_gamma": 0.9355985404050523,
+          "alpha2_plus_beta2": 0.12465537119193579
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 1.3110685218281368,
+          "ov_tangent": 3.3348551107008004e-15,
+          "max_overlap_full": 0.2935332884768197,
+          "overlaps_full": {
+            "overlap_full_x": 0.2935332884768197,
+            "overlap_full_y": 0.185881068055748
+          },
+          "max_overlap_bulk": 0.10907927722167539,
+          "ov_x_bulk": 0.10907927722167539,
+          "ov_y_bulk": 0.049781128849682346,
+          "bulk_mass_fraction": 0.11814427882374477,
+          "mode_decomp_alpha": -0.29353328840340104,
+          "mode_decomp_beta": -0.4152479476205481,
+          "mode_decomp_gamma": 0.8610501440659588,
+          "alpha2_plus_beta2": 0.2585926494039917
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.018031843369757,
+        "ov_tangent": 9.818534874028728e-16,
+        "max_overlap_full": 0.4524767057657821,
+        "overlaps_full": {
+          "overlap_full_x": 0.2596798578140976,
+          "overlap_full_y": 0.4524767057657821
+        },
+        "max_overlap_bulk": 0.4362738856823627,
+        "ov_x_bulk": 0.2619774474940715,
+        "ov_y_bulk": 0.4362738856823627,
+        "bulk_mass_fraction": 0.17762971351014828,
+        "mode_decomp_alpha": 0.259679857817096,
+        "mode_decomp_beta": 0.7119883275914761,
+        "mode_decomp_gamma": 0.6524101415655535,
+        "alpha2_plus_beta2": 0.5743610071824143
+      },
+      "interior_band_used": 4,
+      "seed": 1,
+      "beta": 1.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 1.0,
+      "F1_found": true,
+      "energy": 3.240000013298237,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.0180077821741793,
+          "ov_tangent": 1.5161483180037294e-15,
+          "max_overlap_full": 0.06300683949884332,
+          "overlaps_full": {
+            "overlap_full_x": 0.06300683949884332,
+            "overlap_full_y": 0.0410162032199942
+          },
+          "max_overlap_bulk": 0.13101929289463152,
+          "ov_x_bulk": 0.094654622996993,
+          "ov_y_bulk": 0.13101929289463152,
+          "bulk_mass_fraction": 0.17761251161230696,
+          "mode_decomp_alpha": 0.06300683947463595,
+          "mode_decomp_beta": -0.06085271320684843,
+          "mode_decomp_gamma": 0.9961561551658367,
+          "alpha2_plus_beta2": 0.007672914525217489
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.0180188141123254,
+          "ov_tangent": 6.730727086790012e-16,
+          "max_overlap_full": 0.6986654501025407,
+          "overlaps_full": {
+            "overlap_full_x": 0.020732865573917365,
+            "overlap_full_y": 0.6986654501025407
+          },
+          "max_overlap_bulk": 0.8285855322999044,
+          "ov_x_bulk": 0.0012729115861642257,
+          "ov_y_bulk": 0.8285855322999044,
+          "bulk_mass_fraction": 0.17761257990163348,
+          "mode_decomp_alpha": -0.02073286558826979,
+          "mode_decomp_beta": 0.7331018291844873,
+          "mode_decomp_gamma": 0.6798028069454095,
+          "alpha2_plus_beta2": 0.5378681436691425
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.1165068473376027,
+          "ov_tangent": 1.2463988174893359e-15,
+          "max_overlap_full": 0.41486598146931536,
+          "overlaps_full": {
+            "overlap_full_x": 0.0028178437463336624,
+            "overlap_full_y": 0.41486598146931536
+          },
+          "max_overlap_bulk": 0.3722071193974877,
+          "ov_x_bulk": 0.003045970845978507,
+          "ov_y_bulk": 0.3722071193974877,
+          "bulk_mass_fraction": 0.08762846974766429,
+          "mode_decomp_alpha": -0.0028178437462862186,
+          "mode_decomp_beta": 0.4325771728809647,
+          "mode_decomp_gamma": 0.9015925073218685,
+          "alpha2_plus_beta2": 0.1871309507410665
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 1.3110675197927535,
+          "ov_tangent": 1.2784844255313288e-15,
+          "max_overlap_full": 0.26261097015880797,
+          "overlaps_full": {
+            "overlap_full_x": 0.26261097015880797,
+            "overlap_full_y": 0.0440904585314732
+          },
+          "max_overlap_bulk": 0.03760934523459305,
+          "ov_x_bulk": 0.002841756956330551,
+          "ov_y_bulk": 0.03760934523459305,
+          "bulk_mass_fraction": 0.11882829169636334,
+          "mode_decomp_alpha": 0.26261097007218,
+          "mode_decomp_beta": -0.12160098483813211,
+          "mode_decomp_gamma": 0.957208795866474,
+          "alpha2_plus_beta2": 0.08375132111585505
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 1.3110682431832232,
+          "ov_tangent": 5.735514195743044e-16,
+          "max_overlap_full": 0.35092721997709997,
+          "overlaps_full": {
+            "overlap_full_x": 0.35092721997709997,
+            "overlap_full_y": 0.01767499108315062
+          },
+          "max_overlap_bulk": 0.9183241492793833,
+          "ov_x_bulk": 0.9183241492793833,
+          "ov_y_bulk": 0.3241853228686579,
+          "bulk_mass_fraction": 0.48704478442392335,
+          "mode_decomp_alpha": 0.3509272198629937,
+          "mode_decomp_beta": -0.08278250624827921,
+          "mode_decomp_gamma": 0.9327363738047766,
+          "alpha2_plus_beta2": 0.13000285698151628
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.0180188141123254,
+        "ov_tangent": 6.730727086790012e-16,
+        "max_overlap_full": 0.6986654501025407,
+        "overlaps_full": {
+          "overlap_full_x": 0.020732865573917365,
+          "overlap_full_y": 0.6986654501025407
+        },
+        "max_overlap_bulk": 0.8285855322999044,
+        "ov_x_bulk": 0.0012729115861642257,
+        "ov_y_bulk": 0.8285855322999044,
+        "bulk_mass_fraction": 0.17761257990163348,
+        "mode_decomp_alpha": -0.02073286558826979,
+        "mode_decomp_beta": 0.7331018291844873,
+        "mode_decomp_gamma": 0.6798028069454095,
+        "alpha2_plus_beta2": 0.5378681436691425
+      },
+      "interior_band_used": 4,
+      "seed": 2,
+      "beta": 1.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 1.0,
+      "F1_found": true,
+      "energy": 3.240000013358453,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.0180011435073308,
+          "ov_tangent": 3.122502256758253e-16,
+          "max_overlap_full": 0.2363387016984042,
+          "overlaps_full": {
+            "overlap_full_x": 0.15639635059582213,
+            "overlap_full_y": 0.2363387016984042
+          },
+          "max_overlap_bulk": 0.1945044423059369,
+          "ov_x_bulk": 0.09422480845967073,
+          "ov_y_bulk": 0.1945044423059369,
+          "bulk_mass_fraction": 0.1776077839139807,
+          "mode_decomp_alpha": 0.1563963504134931,
+          "mode_decomp_beta": 0.17725350351568425,
+          "mode_decomp_gamma": 0.9716590847971088,
+          "alpha2_plus_beta2": 0.055878622931244806
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.0180254677351073,
+          "ov_tangent": 2.6229018956769323e-15,
+          "max_overlap_full": 0.44893124187993394,
+          "overlaps_full": {
+            "overlap_full_x": 0.44893124187993394,
+            "overlap_full_y": 0.0013496491929644414
+          },
+          "max_overlap_bulk": 0.4631525621969094,
+          "ov_x_bulk": 0.4631525621969094,
+          "ov_y_bulk": 0.012454130102053446,
+          "bulk_mass_fraction": 0.177617284802281,
+          "mode_decomp_alpha": 0.44893124164917997,
+          "mode_decomp_beta": -0.3785429885833395,
+          "mode_decomp_gamma": 0.8094232181409916,
+          "alpha2_plus_beta2": 0.34483405393428074
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.116506816395509,
+          "ov_tangent": 2.255140518769849e-16,
+          "max_overlap_full": 0.16205209660536585,
+          "overlaps_full": {
+            "overlap_full_x": 0.16205209660536585,
+            "overlap_full_y": 0.03152501373696144
+          },
+          "max_overlap_bulk": 0.1381653165113735,
+          "ov_x_bulk": 0.1381653165113735,
+          "ov_y_bulk": 0.018507805928575427,
+          "bulk_mass_fraction": 0.08762845762788397,
+          "mode_decomp_alpha": -0.16205209643481575,
+          "mode_decomp_beta": 0.17859889657734676,
+          "mode_decomp_gamma": 0.9704852148190798,
+          "alpha2_plus_beta2": 0.05815844781756463
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 1.3110676125626428,
+          "ov_tangent": 3.507843802485599e-15,
+          "max_overlap_full": 0.3128154835631207,
+          "overlaps_full": {
+            "overlap_full_x": 0.3128154835631207,
+            "overlap_full_y": 0.23286280425865377
+          },
+          "max_overlap_bulk": 0.2028605239061361,
+          "ov_x_bulk": 0.2028605239061361,
+          "ov_y_bulk": 0.01726861657381451,
+          "bulk_mass_fraction": 0.11904458390838517,
+          "mode_decomp_alpha": 0.31281548340032606,
+          "mode_decomp_beta": -0.5701905312109042,
+          "mode_decomp_gamma": 0.7596244015712287,
+          "alpha2_plus_beta2": 0.42297076853755283
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 1.3110681523324854,
+          "ov_tangent": 3.220974495557775e-15,
+          "max_overlap_full": 0.3126571080027889,
+          "overlaps_full": {
+            "overlap_full_x": 0.2432704701765317,
+            "overlap_full_y": 0.3126571080027889
+          },
+          "max_overlap_bulk": 0.8996308732434852,
+          "ov_x_bulk": 0.7845769266850602,
+          "ov_y_bulk": 0.8996308732434852,
+          "bulk_mass_fraction": 0.48682853709209695,
+          "mode_decomp_alpha": -0.2432704698935938,
+          "mode_decomp_beta": -0.20368074995768365,
+          "mode_decomp_gamma": 0.9483320254923513,
+          "alpha2_plus_beta2": 0.10066636942557437
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.0180254677351073,
+        "ov_tangent": 2.6229018956769323e-15,
+        "max_overlap_full": 0.44893124187993394,
+        "overlaps_full": {
+          "overlap_full_x": 0.44893124187993394,
+          "overlap_full_y": 0.0013496491929644414
+        },
+        "max_overlap_bulk": 0.4631525621969094,
+        "ov_x_bulk": 0.4631525621969094,
+        "ov_y_bulk": 0.012454130102053446,
+        "bulk_mass_fraction": 0.177617284802281,
+        "mode_decomp_alpha": 0.44893124164917997,
+        "mode_decomp_beta": -0.3785429885833395,
+        "mode_decomp_gamma": 0.8094232181409916,
+        "alpha2_plus_beta2": 0.34483405393428074
+      },
+      "interior_band_used": 4,
+      "seed": 3,
+      "beta": 1.0,
+      "status": "ok"
+    },
+    {
+      "L": 20,
+      "zeta": 1.0,
+      "F1_found": true,
+      "energy": 3.240000013208295,
+      "attempts_F": [
+        1,
+        1,
+        1
+      ],
+      "all_modes": [
+        {
+          "mode_idx": 1,
+          "eigenvalue": 1.0180120081619541,
+          "ov_tangent": 3.3480163086352377e-15,
+          "max_overlap_full": 0.1615532478970707,
+          "overlaps_full": {
+            "overlap_full_x": 0.0743345665061099,
+            "overlap_full_y": 0.1615532478970707
+          },
+          "max_overlap_bulk": 0.20858414941780967,
+          "ov_x_bulk": 0.05307553143969656,
+          "ov_y_bulk": 0.20858414941780967,
+          "bulk_mass_fraction": 0.17761747016216647,
+          "mode_decomp_alpha": -0.07433456647804079,
+          "mode_decomp_beta": 0.14508378743544037,
+          "mode_decomp_gamma": 0.9866230621924007,
+          "alpha2_plus_beta2": 0.02657493315009031
+        },
+        {
+          "mode_idx": 2,
+          "eigenvalue": 1.0180226823533913,
+          "ov_tangent": 5.4262150328554526e-15,
+          "max_overlap_full": 0.6401032836398379,
+          "overlaps_full": {
+            "overlap_full_x": 0.09990445156449262,
+            "overlap_full_y": 0.6401032836398379
+          },
+          "max_overlap_bulk": 0.7299137760916448,
+          "ov_x_bulk": 0.07366137716239367,
+          "ov_y_bulk": 0.7299137760916448,
+          "bulk_mass_fraction": 0.17761985637405645,
+          "mode_decomp_alpha": 0.09990445159363279,
+          "mode_decomp_beta": 0.7140716008964816,
+          "mode_decomp_gamma": 0.6929075330409618,
+          "alpha2_plus_beta2": 0.5198791506550886
+        },
+        {
+          "mode_idx": 3,
+          "eigenvalue": 1.1165147219516733,
+          "ov_tangent": 4.137315490204685e-16,
+          "max_overlap_full": 0.26281819918860405,
+          "overlaps_full": {
+            "overlap_full_x": 0.0064530257265167056,
+            "overlap_full_y": 0.26281819918860405
+          },
+          "max_overlap_bulk": 0.21285493264236213,
+          "ov_x_bulk": 0.0031952337514852425,
+          "ov_y_bulk": 0.21285493264236213,
+          "bulk_mass_fraction": 0.087630852226653,
+          "mode_decomp_alpha": -0.006453025724552974,
+          "mode_decomp_beta": 0.27643216966306094,
+          "mode_decomp_gamma": 0.9610117658147433,
+          "alpha2_plus_beta2": 0.07645638596562905
+        },
+        {
+          "mode_idx": 4,
+          "eigenvalue": 1.3110678018746735,
+          "ov_tangent": 3.1533325619724148e-15,
+          "max_overlap_full": 0.27303505790897264,
+          "overlaps_full": {
+            "overlap_full_x": 0.27196228729592486,
+            "overlap_full_y": 0.27303505790897264
+          },
+          "max_overlap_bulk": 0.904996419419737,
+          "ov_x_bulk": 0.904996419419737,
+          "ov_y_bulk": 0.5684608169285127,
+          "bulk_mass_fraction": 0.47336542354927424,
+          "mode_decomp_alpha": -0.2719622872033896,
+          "mode_decomp_beta": 0.19354944802008986,
+          "mode_decomp_gamma": 0.9426426287359487,
+          "alpha2_plus_beta2": 0.11142487448978045
+        },
+        {
+          "mode_idx": 5,
+          "eigenvalue": 1.3110679629493662,
+          "ov_tangent": 2.8083072434355316e-15,
+          "max_overlap_full": 0.3218505576290805,
+          "overlaps_full": {
+            "overlap_full_x": 0.3218505576290805,
+            "overlap_full_y": 0.1779780830987619
+          },
+          "max_overlap_bulk": 0.42120035006174755,
+          "ov_x_bulk": 0.42120035006174755,
+          "ov_y_bulk": 0.1202072070360769,
+          "bulk_mass_fraction": 0.132522471653534,
+          "mode_decomp_alpha": 0.32185055756008424,
+          "mode_decomp_beta": 0.30234406630522037,
+          "mode_decomp_gamma": 0.8972180806070994,
+          "alpha2_plus_beta2": 0.19499971583171258
+        }
+      ],
+      "goldstone_candidate": {
+        "mode_idx": 2,
+        "eigenvalue": 1.0180226823533913,
+        "ov_tangent": 5.4262150328554526e-15,
+        "max_overlap_full": 0.6401032836398379,
+        "overlaps_full": {
+          "overlap_full_x": 0.09990445156449262,
+          "overlap_full_y": 0.6401032836398379
+        },
+        "max_overlap_bulk": 0.7299137760916448,
+        "ov_x_bulk": 0.07366137716239367,
+        "ov_y_bulk": 0.7299137760916448,
+        "bulk_mass_fraction": 0.17761985637405645,
+        "mode_decomp_alpha": 0.09990445159363279,
+        "mode_decomp_beta": 0.7140716008964816,
+        "mode_decomp_gamma": 0.6929075330409618,
+        "alpha2_plus_beta2": 0.5198791506550886
+      },
+      "interior_band_used": 4,
+      "seed": 4,
+      "beta": 1.0,
+      "status": "ok"
+    }
+  ]
+}

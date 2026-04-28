@@ -75,8 +75,17 @@ class ParameterRegistry:
         self,
         fiedler_eigenvalue: float | None = None,
         spectral_radius_W_sym: float | None = None,
+        allow_outside_spinodal: bool = False,
     ) -> Tuple[bool, List[str], List[str]]:
         """Validate all parameter constraints.
+
+        Args:
+            fiedler_eigenvalue: optional second-smallest Laplacian eigenvalue
+            spectral_radius_W_sym: optional spectral radius of cohesion-weighted Laplacian
+            allow_outside_spinodal: if True, demote spinodal-range violation from
+                FATAL to WARNING. Used for IC-driven metastable-stationary studies
+                (e.g., σ-framework Hessian analysis at small c, NQ-191).
+                Default False preserves variational-use semantics.
 
         Returns (valid, violations, warnings).
         """
@@ -126,10 +135,15 @@ class ParameterRegistry:
         c_lo = (3 - math.sqrt(3)) / 6  # ~0.2113
         c_hi = (3 + math.sqrt(3)) / 6  # ~0.7887
         if not (c_lo < c < c_hi):
-            V.append(
-                f"FATAL: c={c:.3f} outside spinodal ({c_lo:.3f}, {c_hi:.3f}). "
-                "No phase separation possible."
+            msg = (
+                f"c={c:.3f} outside spinodal ({c_lo:.3f}, {c_hi:.3f}). "
+                "No spontaneous phase separation; metastable formations only via "
+                "prepared IC (σ-framework Hessian use)."
             )
+            if allow_outside_spinodal:
+                W.append(f"WARNING (allow_outside_spinodal=True): {msg}")
+            else:
+                V.append(f"FATAL: {msg} Set allow_outside_spinodal=True to bypass for metastable use.")
 
         # Resolvent convergence
         if spectral_radius_W_sym is not None:
