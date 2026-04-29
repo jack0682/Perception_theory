@@ -1,0 +1,1987 @@
+{
+  "meta": {
+    "beta": 4.0,
+    "xi_0": 0.5,
+    "zeta": 0.5,
+    "setups": [
+      {
+        "m": 40,
+        "L": 20,
+        "sweep_id": "a_L20_c10",
+        "c": 0.1
+      },
+      {
+        "m": 80,
+        "L": 20,
+        "sweep_id": "a_L20_c20",
+        "c": 0.2
+      },
+      {
+        "m": 120,
+        "L": 20,
+        "sweep_id": "a_L20_c30",
+        "c": 0.3
+      },
+      {
+        "m": 160,
+        "L": 20,
+        "sweep_id": "a_L20_c40",
+        "c": 0.4
+      },
+      {
+        "m": 80,
+        "L": 28,
+        "sweep_id": "b_c10_L28",
+        "c": 0.10204081632653061
+      },
+      {
+        "m": 160,
+        "L": 40,
+        "sweep_id": "b_c10_L40",
+        "c": 0.1
+      },
+      {
+        "m": 20,
+        "L": 14,
+        "sweep_id": "c_L14_c10",
+        "c": 0.10204081632653061
+      }
+    ],
+    "seeds_per_setup": 3,
+    "total_attempts": 21,
+    "predictions": {
+      "Phase_3_heuristic": "mu propto sqrt(m); mu(20)/mu(40)=0.71, mu(80)/mu(40)=1.41, mu(160)/mu(40)=2.0",
+      "Day_3_section_4": "mu approx 2*alpha = 2*beta*xi_0^2 = 2*4*0.25 = 2 (constant across m)"
+    },
+    "started_at": "2026-04-29T10:18:29",
+    "elapsed_s": 223.4,
+    "finished_at": "2026-04-29T10:22:12"
+  },
+  "per_setup": [
+    {
+      "m": 40,
+      "L": 20,
+      "sweep_id": "a_L20_c10",
+      "c": 0.1,
+      "attempts": [
+        {
+          "mu_Goldstone": 0.6563095620858084,
+          "best_overlap": 0.8452626333863199,
+          "best_idx": 2,
+          "cluster_perimeter": 20,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 5.78549979543257e-14,
+              "ov_tangent": 1.0000000000000009,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.3085729317492997,
+              "ov_tangent": 2.033095913844818e-15,
+              "overlap_x": 0.46676982581583404,
+              "overlap_y": 0.3435413367665234,
+              "max_overlap": 0.46676982581583404,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.6563095620858084,
+              "ov_tangent": 1.1549788903053582e-14,
+              "overlap_x": 0.782505444809074,
+              "overlap_y": 0.8452626333863199,
+              "max_overlap": 0.8452626333863199,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.3955175499383008,
+              "ov_tangent": 4.614364446098307e-16,
+              "overlap_x": 0.061929394245875194,
+              "overlap_y": 0.07701098230904019,
+              "max_overlap": 0.07701098230904019,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 3.0583400621788503,
+              "ov_tangent": 7.806255641895632e-18,
+              "overlap_x": 0.03898088110752096,
+              "overlap_y": 0.025888281803681315,
+              "max_overlap": 0.03898088110752096,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 5.219683480635748,
+              "ov_tangent": 2.7755575615628914e-17,
+              "overlap_x": 0.00747024877210084,
+              "overlap_y": 0.047954406263906665,
+              "max_overlap": 0.047954406263906665,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 5.6301059443944785,
+              "ov_tangent": 2.688821387764051e-16,
+              "overlap_x": 0.22609986328765666,
+              "overlap_y": 0.19590158146874206,
+              "max_overlap": 0.22609986328765666,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.930049436317444,
+              "ov_tangent": 2.5587171270657905e-16,
+              "overlap_x": 0.14788594485738094,
+              "overlap_y": 0.13251097819590593,
+              "max_overlap": 0.14788594485738094,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 9.815991071751315,
+          "u_max": 1.0,
+          "u_min": 0.019712757382290193,
+          "fraction_saturated": 0.0475,
+          "seed": 0,
+          "time_optimizer_s": 6.1,
+          "time_hessian_s": 0.1
+        },
+        {
+          "mu_Goldstone": 0.6563095620881,
+          "best_overlap": 0.8452626302019552,
+          "best_idx": 2,
+          "cluster_perimeter": 20,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 5.430173840844897e-14,
+              "ov_tangent": 0.999999999999999,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.30857293173524825,
+              "ov_tangent": 7.147060721024445e-16,
+              "overlap_x": 0.4667698185929091,
+              "overlap_y": 0.34354134446998114,
+              "max_overlap": 0.4667698185929091,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.6563095620881,
+              "ov_tangent": 1.3936768405997668e-14,
+              "overlap_x": 0.7825054490730605,
+              "overlap_y": 0.8452626302019552,
+              "max_overlap": 0.8452626302019552,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.395517549913481,
+              "ov_tangent": 7.840950111415168e-16,
+              "overlap_x": 0.06192939316226283,
+              "overlap_y": 0.07701098347897495,
+              "max_overlap": 0.07701098347897495,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 3.0583400621445005,
+              "ov_tangent": 7.45931094670027e-17,
+              "overlap_x": 0.03898088218920445,
+              "overlap_y": 0.02588828072619874,
+              "max_overlap": 0.03898088218920445,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 5.219683480600367,
+              "ov_tangent": 7.632783294297951e-17,
+              "overlap_x": 0.007470249977119356,
+              "overlap_y": 0.04795440578274933,
+              "max_overlap": 0.04795440578274933,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 5.630105944410669,
+              "ov_tangent": 1.682681771697503e-16,
+              "overlap_x": 0.22609986508510094,
+              "overlap_y": 0.19590157994958207,
+              "max_overlap": 0.22609986508510094,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.9300494363433875,
+              "ov_tangent": 1.0668549377257364e-16,
+              "overlap_x": 0.14788594261820726,
+              "overlap_y": 0.13251098030401276,
+              "max_overlap": 0.14788594261820726,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 9.815991071751494,
+          "u_max": 1.0,
+          "u_min": 0.01971275738137123,
+          "fraction_saturated": 0.0475,
+          "seed": 1,
+          "time_optimizer_s": 2.5,
+          "time_hessian_s": 0.2
+        },
+        {
+          "mu_Goldstone": 0.6563095619821586,
+          "best_overlap": 0.8452610004223586,
+          "best_idx": 2,
+          "cluster_perimeter": 20,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": -2.569381373024456e-14,
+              "ov_tangent": 1.0000000000000013,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.3085729320320476,
+              "ov_tangent": 8.673617379884035e-17,
+              "overlap_x": 0.34354528793384054,
+              "overlap_y": 0.46676612099859227,
+              "max_overlap": 0.46676612099859227,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.6563095619821586,
+              "ov_tangent": 5.5355026118419914e-15,
+              "overlap_x": 0.8452610004223586,
+              "overlap_y": 0.782507632887014,
+              "max_overlap": 0.8452610004223586,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.3955175505283997,
+              "ov_tangent": 1.6479873021779667e-16,
+              "overlap_x": 0.0770115773942529,
+              "overlap_y": 0.061928834271384306,
+              "max_overlap": 0.0770115773942529,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 3.058340062944534,
+              "ov_tangent": 6.071532165918825e-18,
+              "overlap_x": 0.025887730188145955,
+              "overlap_y": 0.03898143730255575,
+              "max_overlap": 0.03898143730255575,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 5.219683481418414,
+              "ov_tangent": 6.938893903907228e-17,
+              "overlap_x": 0.04795416232960974,
+              "overlap_y": 0.007470871531973233,
+              "max_overlap": 0.04795416232960974,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 5.630105944027109,
+              "ov_tangent": 1.8735013540549517e-16,
+              "overlap_x": 0.19590080238695043,
+              "overlap_y": 0.22610078398940459,
+              "max_overlap": 0.22610078398940459,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.93004943573281,
+              "ov_tangent": 3.434752482434078e-16,
+              "overlap_x": 0.13251205923646261,
+              "overlap_y": 0.14788479616358313,
+              "max_overlap": 0.14788479616358313,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 9.815991071752903,
+          "u_max": 1.0,
+          "u_min": 0.019712757403181985,
+          "fraction_saturated": 0.0475,
+          "seed": 2,
+          "time_optimizer_s": 4.9,
+          "time_hessian_s": 0.9
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 0.6563095620520223,
+        "mu_std": 4.940995905440065e-11,
+        "mu_min": 0.6563095619821586,
+        "mu_max": 0.6563095620881,
+        "perim_mean": 20.0,
+        "overlap_mean": 0.8452620880035445
+      }
+    },
+    {
+      "m": 80,
+      "L": 20,
+      "sweep_id": "a_L20_c20",
+      "c": 0.2,
+      "attempts": [
+        {
+          "mu_Goldstone": 1.1081449788288331,
+          "best_overlap": 0.7659333806725652,
+          "best_idx": 3,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 4.40481326046504e-14,
+              "ov_tangent": 1.0000000000000009,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.0654196261159557,
+              "ov_tangent": 1.6198847818671425e-14,
+              "overlap_x": 0.43629233801335543,
+              "overlap_y": 0.43629428019788147,
+              "max_overlap": 0.43629428019788147,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5518243732434991,
+              "ov_tangent": 3.628174150005492e-15,
+              "overlap_x": 0.030980189604099165,
+              "overlap_y": 0.031007474132949246,
+              "max_overlap": 0.031007474132949246,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.1081449788288331,
+              "ov_tangent": 6.3803129446426965e-15,
+              "overlap_x": 0.7659325591409315,
+              "overlap_y": 0.7659333806725652,
+              "max_overlap": 0.7659333806725652,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.3470438161820595,
+              "ov_tangent": 4.649058915617843e-16,
+              "overlap_x": 0.02098688284535801,
+              "overlap_y": 0.020924228047312476,
+              "max_overlap": 0.02098688284535801,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.405662238030349,
+              "ov_tangent": 3.139849491518021e-16,
+              "overlap_x": 0.03495356425198555,
+              "overlap_y": 0.03496305776288833,
+              "max_overlap": 0.03496305776288833,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.6569637625671727,
+              "ov_tangent": 1.700029006457271e-16,
+              "overlap_x": 0.007184272122015917,
+              "overlap_y": 0.007176086855217548,
+              "max_overlap": 0.007184272122015917,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.026365303418739,
+              "ov_tangent": 8.673617379884035e-17,
+              "overlap_x": 0.021854592265594178,
+              "overlap_y": 0.02186390848972209,
+              "max_overlap": 0.02186390848972209,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.45491285485682,
+          "u_max": 1.0,
+          "u_min": 0.012385833763925885,
+          "fraction_saturated": 0.135,
+          "seed": 0,
+          "time_optimizer_s": 3.8,
+          "time_hessian_s": 0.4
+        },
+        {
+          "mu_Goldstone": 1.1081449971291228,
+          "best_overlap": 0.8150443009757977,
+          "best_idx": 3,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 1.288751885340708e-14,
+              "ov_tangent": 1.0000000000000009,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.0654196575641654,
+              "ov_tangent": 8.250344851745695e-15,
+              "overlap_x": 0.36377741224863547,
+              "overlap_y": 0.43629113860743174,
+              "max_overlap": 0.43629113860743174,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5518244124733803,
+              "ov_tangent": 8.656270145124267e-16,
+              "overlap_x": 0.028127737019437535,
+              "overlap_y": 0.03096367992366872,
+              "max_overlap": 0.03096367992366872,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.1081449971291228,
+              "ov_tangent": 4.644722106927901e-15,
+              "overlap_x": 0.8150443009757977,
+              "overlap_y": 0.7659320671809807,
+              "max_overlap": 0.8150443009757977,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.3470438434477852,
+              "ov_tangent": 2.480654570646834e-16,
+              "overlap_x": 0.023268395484206866,
+              "overlap_y": 0.021024892504458895,
+              "max_overlap": 0.023268395484206866,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.4056622457915404,
+              "ov_tangent": 3.469446951953614e-16,
+              "overlap_x": 0.028916607314368542,
+              "overlap_y": 0.03494779653608525,
+              "max_overlap": 0.03494779653608525,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.6569637618141018,
+              "ov_tangent": 1.0061396160665481e-16,
+              "overlap_x": 0.016010776250661704,
+              "overlap_y": 0.007189244386391819,
+              "max_overlap": 0.016010776250661704,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.026365318305258,
+              "ov_tangent": 1.5265566588595902e-16,
+              "overlap_x": 0.007715939946398215,
+              "overlap_y": 0.021848935993768276,
+              "max_overlap": 0.021848935993768276,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.454912855849631,
+          "u_max": 1.0,
+          "u_min": 0.012385833546434879,
+          "fraction_saturated": 0.135,
+          "seed": 1,
+          "time_optimizer_s": 4.3,
+          "time_hessian_s": 0.3
+        },
+        {
+          "mu_Goldstone": 1.1081455414569912,
+          "best_overlap": 0.8150492716959474,
+          "best_idx": 3,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.124308018773236e-14,
+              "ov_tangent": 1.0000000000000004,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.06542046024161545,
+              "ov_tangent": 1.886858724819973e-14,
+              "overlap_x": 0.36378107192380693,
+              "overlap_y": 0.436295479798238,
+              "max_overlap": 0.436295479798238,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5518255136300536,
+              "ov_tangent": 8.795048023202412e-16,
+              "overlap_x": 0.028064303177763844,
+              "overlap_y": 0.03103748246040527,
+              "max_overlap": 0.03103748246040527,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.1081455414569912,
+              "ov_tangent": 5.780098621954721e-15,
+              "overlap_x": 0.8150492716959474,
+              "overlap_y": 0.7659346053639777,
+              "max_overlap": 0.8150492716959474,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.3470446785572834,
+              "ov_tangent": 8.153200337090993e-17,
+              "overlap_x": 0.023457519273752406,
+              "overlap_y": 0.020858070518904266,
+              "max_overlap": 0.023457519273752406,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.4056625790236654,
+              "ov_tangent": 2.229119666630197e-16,
+              "overlap_x": 0.028890687276592223,
+              "overlap_y": 0.03497288898670254,
+              "max_overlap": 0.03497288898670254,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.656963692749676,
+              "ov_tangent": 9.8879238130678e-17,
+              "overlap_x": 0.01603739646479116,
+              "overlap_y": 0.0071676739580735505,
+              "max_overlap": 0.01603739646479116,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.026365457190478,
+              "ov_tangent": 4.5102810375396984e-17,
+              "overlap_x": 0.007719074834881795,
+              "overlap_y": 0.02187366627594073,
+              "max_overlap": 0.02187366627594073,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.454912857121585,
+          "u_max": 1.0,
+          "u_min": 0.012385825396055287,
+          "fraction_saturated": 0.135,
+          "seed": 2,
+          "time_optimizer_s": 5.7,
+          "time_hessian_s": 0.2
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 1.1081451724716491,
+        "mu_std": 2.610189803858966e-07,
+        "mu_min": 1.1081449788288331,
+        "mu_max": 1.1081455414569912,
+        "perim_mean": 32.0,
+        "overlap_mean": 0.79867565111477
+      }
+    },
+    {
+      "m": 120,
+      "L": 20,
+      "sweep_id": "a_L20_c30",
+      "c": 0.3,
+      "attempts": [
+        {
+          "mu_Goldstone": 1.476423805608091,
+          "best_overlap": 0.755170507708494,
+          "best_idx": 4,
+          "cluster_perimeter": 44,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.660189423809594e-14,
+              "ov_tangent": 1.0000000000000004,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.1208038683736437,
+              "ov_tangent": 4.259440022913452e-14,
+              "overlap_x": 0.37027040545337614,
+              "overlap_y": 0.42874310871686416,
+              "max_overlap": 0.42874310871686416,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.4311239294577386,
+              "ov_tangent": 3.47725320759551e-15,
+              "overlap_x": 0.1084668225783195,
+              "overlap_y": 0.10470244074835586,
+              "max_overlap": 0.1084668225783195,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.9353135353179649,
+              "ov_tangent": 1.061650767297806e-15,
+              "overlap_x": 0.05914321989930914,
+              "overlap_y": 0.065659911475797,
+              "max_overlap": 0.065659911475797,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.476423805608091,
+              "ov_tangent": 2.734357879008442e-15,
+              "overlap_x": 0.755170507708494,
+              "overlap_y": 0.7145859720962711,
+              "max_overlap": 0.755170507708494,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.6157868811610003,
+              "ov_tangent": 7.615436059538183e-16,
+              "overlap_x": 0.21398793822209522,
+              "overlap_y": 0.20309460401837245,
+              "max_overlap": 0.21398793822209522,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 2.4277321292702845,
+              "ov_tangent": 3.0444397003392965e-16,
+              "overlap_x": 0.020755730211109182,
+              "overlap_y": 0.025595862002616043,
+              "max_overlap": 0.025595862002616043,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 3.4243496146101102,
+              "ov_tangent": 9.020562075079397e-17,
+              "overlap_x": 4.768331186129349e-05,
+              "overlap_y": 0.007508210058707811,
+              "max_overlap": 0.007508210058707811,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 17.862136260038163,
+          "u_max": 1.0,
+          "u_min": 0.009835086675661138,
+          "fraction_saturated": 0.23,
+          "seed": 0,
+          "time_optimizer_s": 21.3,
+          "time_hessian_s": 0.8
+        },
+        {
+          "mu_Goldstone": 1.4764237961458495,
+          "best_overlap": 0.7145857134950226,
+          "best_idx": 4,
+          "cluster_perimeter": 44,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.3062449909729076e-14,
+              "ov_tangent": 1.0000000000000002,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.1208038644279576,
+              "ov_tangent": 2.9439992110802393e-14,
+              "overlap_x": 0.42874208039973977,
+              "overlap_y": 0.4287429478794401,
+              "max_overlap": 0.4287429478794401,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.4311239328930308,
+              "ov_tangent": 1.1208915740024139e-14,
+              "overlap_x": 0.10470815405855258,
+              "overlap_y": 0.10470342734132285,
+              "max_overlap": 0.10470815405855258,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.9353135503869314,
+              "ov_tangent": 3.2248509418408844e-15,
+              "overlap_x": 0.06566102150989282,
+              "overlap_y": 0.06566008716778839,
+              "max_overlap": 0.06566102150989282,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.4764237961458495,
+              "ov_tangent": 3.0964814046186007e-16,
+              "overlap_x": 0.714584529711366,
+              "overlap_y": 0.7145857134950226,
+              "max_overlap": 0.7145857134950226,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.6157869080425031,
+              "ov_tangent": 1.2281842209915794e-15,
+              "overlap_x": 0.20309444808972515,
+              "overlap_y": 0.20309457180834245,
+              "max_overlap": 0.20309457180834245,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 2.427732145089255,
+              "ov_tangent": 9.367506770274758e-17,
+              "overlap_x": 0.025598033806775097,
+              "overlap_y": 0.025596238206725394,
+              "max_overlap": 0.025598033806775097,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 3.4243496181979265,
+              "ov_tangent": 1.43982048506075e-16,
+              "overlap_x": 0.007509377499761619,
+              "overlap_y": 0.007508417157940039,
+              "max_overlap": 0.007509377499761619,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 17.862136260007475,
+          "u_max": 1.0,
+          "u_min": 0.00983508652006634,
+          "fraction_saturated": 0.23,
+          "seed": 1,
+          "time_optimizer_s": 5.5,
+          "time_hessian_s": 0.0
+        },
+        {
+          "mu_Goldstone": 1.4764238127297213,
+          "best_overlap": 0.7551717128329637,
+          "best_idx": 4,
+          "cluster_perimeter": 44,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.1602190123636355e-14,
+              "ov_tangent": 0.9999999999999996,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.1208038706711739,
+              "ov_tangent": 3.930883396563445e-15,
+              "overlap_x": 0.37027071273785056,
+              "overlap_y": 0.3702702988482937,
+              "max_overlap": 0.37027071273785056,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.4311239261090888,
+              "ov_tangent": 2.3314683517128287e-15,
+              "overlap_x": 0.1084607140747662,
+              "overlap_y": 0.1084684516201064,
+              "max_overlap": 0.1084684516201064,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.9353135229823202,
+              "ov_tangent": 1.3877787807814457e-16,
+              "overlap_x": 0.0591386509994812,
+              "overlap_y": 0.059144447420956425,
+              "max_overlap": 0.059144447420956425,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.4764238127297213,
+              "ov_tangent": 5.617034615212901e-15,
+              "overlap_x": 0.7551717128329637,
+              "overlap_y": 0.7551701959499897,
+              "max_overlap": 0.7551717128329637,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.6157868597585123,
+              "ov_tangent": 1.745131816832668e-15,
+              "overlap_x": 0.21398609422749826,
+              "overlap_y": 0.2139884257933085,
+              "max_overlap": 0.2139884257933085,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 2.427732117154812,
+              "ov_tangent": 2.0643209364124004e-16,
+              "overlap_x": 0.020749044323524986,
+              "overlap_y": 0.020757510942096966,
+              "max_overlap": 0.020757510942096966,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 3.424349611804279,
+              "ov_tangent": 7.979727989493313e-17,
+              "overlap_x": 4.421634139847863e-05,
+              "overlap_y": 4.859688965194037e-05,
+              "max_overlap": 4.859688965194037e-05,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 17.862136260192194,
+          "u_max": 1.0,
+          "u_min": 0.009835086795186524,
+          "fraction_saturated": 0.23,
+          "seed": 2,
+          "time_optimizer_s": 21.5,
+          "time_hessian_s": 0.2
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 1.4764238048278873,
+        "mu_std": 6.792777515649427e-09,
+        "mu_min": 1.4764237961458495,
+        "mu_max": 1.4764238127297213,
+        "perim_mean": 44.0,
+        "overlap_mean": 0.7416426446788268
+      }
+    },
+    {
+      "m": 160,
+      "L": 20,
+      "sweep_id": "a_L20_c40",
+      "c": 0.4,
+      "attempts": [
+        {
+          "mu_Goldstone": 1.7483929081627112,
+          "best_overlap": 0.8282643698488183,
+          "best_idx": 5,
+          "cluster_perimeter": 54,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": -1.4723900104200603e-14,
+              "ov_tangent": 1.0000000000000016,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.24591877129983092,
+              "ov_tangent": 2.5136143166903935e-15,
+              "overlap_x": 0.07840513672903773,
+              "overlap_y": 3.672622009408093e-05,
+              "max_overlap": 0.07840513672903773,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5389736333020415,
+              "ov_tangent": 1.2585897391826934e-15,
+              "overlap_x": 0.4217911977975821,
+              "overlap_y": 2.6294679953811886e-07,
+              "max_overlap": 0.4217911977975821,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.0193735651915425,
+              "ov_tangent": 5.499073418846478e-16,
+              "overlap_x": 3.1833810717112954e-05,
+              "overlap_y": 8.112352803402167e-12,
+              "max_overlap": 3.1833810717112954e-05,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.6752897972471985,
+              "ov_tangent": 3.6304001525908763e-16,
+              "overlap_x": 0.08326857199196437,
+              "overlap_y": 1.609013250361438e-12,
+              "max_overlap": 0.08326857199196437,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.7483929081627112,
+              "ov_tangent": 4.2674197509029455e-16,
+              "overlap_x": 0.8020776266000422,
+              "overlap_y": 0.8282643698488183,
+              "max_overlap": 0.8282643698488183,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 2.4905714952939224,
+              "ov_tangent": 2.8275992658421956e-16,
+              "overlap_x": 7.3717669435132456e-06,
+              "overlap_y": 6.073544445150958e-13,
+              "max_overlap": 7.3717669435132456e-06,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 3.4451437185608387,
+              "ov_tangent": 1.4789872885417887e-16,
+              "overlap_x": 0.034854187698341796,
+              "overlap_y": 2.8802524262654637e-13,
+              "max_overlap": 0.034854187698341796,
+              "is_tangent": false
+            }
+          ],
+          "F": 1,
+          "F1_found": true,
+          "energy": 18.497401397024163,
+          "u_max": 0.99995073370998,
+          "u_min": 2.548849465477646e-07,
+          "fraction_saturated": 0.35,
+          "seed": 0,
+          "time_optimizer_s": 4.5,
+          "time_hessian_s": 0.0
+        },
+        {
+          "mu_Goldstone": 1.753353173173844,
+          "best_overlap": 0.7245451255347184,
+          "best_idx": 5,
+          "cluster_perimeter": 52,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.179413253336252e-14,
+              "ov_tangent": 1.000000000000001,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.09373730207440494,
+              "ov_tangent": 7.320880013317321e-14,
+              "overlap_x": 0.4221357204258063,
+              "overlap_y": 0.4221373350542834,
+              "max_overlap": 0.4221373350542834,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.3249382032985864,
+              "ov_tangent": 1.3429361789274452e-14,
+              "overlap_x": 0.09622196300482941,
+              "overlap_y": 0.09621203128050242,
+              "max_overlap": 0.09622196300482941,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.7049786683730715,
+              "ov_tangent": 7.932890455641939e-15,
+              "overlap_x": 0.0694329426245903,
+              "overlap_y": 0.06943038126050931,
+              "max_overlap": 0.0694329426245903,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.206460641928626,
+              "ov_tangent": 1.6826817716975029e-15,
+              "overlap_x": 0.0731796638955567,
+              "overlap_y": 0.07317856979641128,
+              "max_overlap": 0.0731796638955567,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.753353173173844,
+              "ov_tangent": 3.3350058825654116e-15,
+              "overlap_x": 0.724542870659185,
+              "overlap_y": 0.7245451255347184,
+              "max_overlap": 0.7245451255347184,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 1.833920082475972,
+              "ov_tangent": 4.909267437014364e-16,
+              "overlap_x": 0.028661933302788004,
+              "overlap_y": 0.028652350410133566,
+              "max_overlap": 0.028661933302788004,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 2.5791378975444843,
+              "ov_tangent": 3.226585665316861e-16,
+              "overlap_x": 0.02461821150212111,
+              "overlap_y": 0.024617454106601357,
+              "max_overlap": 0.02461821150212111,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 20.70574188480666,
+          "u_max": 1.0,
+          "u_min": 0.008438913604863403,
+          "fraction_saturated": 0.3125,
+          "seed": 1,
+          "time_optimizer_s": 5.1,
+          "time_hessian_s": 0.3
+        },
+        {
+          "mu_Goldstone": 1.7483929108436869,
+          "best_overlap": 0.8283860562046427,
+          "best_idx": 5,
+          "cluster_perimeter": 54,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 2.752631065638175e-14,
+              "ov_tangent": 1.0000000000000004,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.2459187748267074,
+              "ov_tangent": 3.5475095083725705e-16,
+              "overlap_x": 0.07845897905140221,
+              "overlap_y": 3.6894804278183105e-05,
+              "max_overlap": 0.07845897905140221,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5389736356749109,
+              "ov_tangent": 1.008152589865698e-15,
+              "overlap_x": 0.4217811438569554,
+              "overlap_y": 2.603956390108573e-07,
+              "max_overlap": 0.4217811438569554,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 1.0193735675860152,
+              "ov_tangent": 5.958775139980332e-16,
+              "overlap_x": 3.374286495022935e-07,
+              "overlap_y": 2.3957761122184174e-11,
+              "max_overlap": 3.374286495022935e-07,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.6752897996677152,
+              "ov_tangent": 2.181507944665033e-16,
+              "overlap_x": 0.08326856997075821,
+              "overlap_y": 3.640442383784077e-12,
+              "max_overlap": 0.08326856997075821,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.7483929108436869,
+              "ov_tangent": 3.0513785942432037e-15,
+              "overlap_x": 0.8020776661828419,
+              "overlap_y": 0.8283860562046427,
+              "max_overlap": 0.8283860562046427,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 2.4905714977484585,
+              "ov_tangent": 3.5561831257524545e-16,
+              "overlap_x": 1.1577515784125724e-07,
+              "overlap_y": 5.073129416555133e-13,
+              "max_overlap": 1.1577515784125724e-07,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 3.4451437210481974,
+              "ov_tangent": 2.2114336186915273e-17,
+              "overlap_x": 0.034854187161130146,
+              "overlap_y": 5.143633660816514e-13,
+              "max_overlap": 0.034854187161130146,
+              "is_tangent": false
+            }
+          ],
+          "F": 1,
+          "F1_found": true,
+          "energy": 18.497401396571725,
+          "u_max": 0.9999507336291776,
+          "u_min": 2.548853651095989e-07,
+          "fraction_saturated": 0.35,
+          "seed": 2,
+          "time_optimizer_s": 5.1,
+          "time_hessian_s": 0.1
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 1.7500463307267473,
+        "mu_std": 0.0023382907186578544,
+        "mu_min": 1.7483929081627112,
+        "mu_max": 1.753353173173844,
+        "perim_mean": 53.333333333333336,
+        "overlap_mean": 0.7937318505293932
+      }
+    },
+    {
+      "m": 80,
+      "L": 28,
+      "sweep_id": "b_c10_L28",
+      "c": 0.10204081632653061,
+      "attempts": [
+        {
+          "mu_Goldstone": 0.5388576329681329,
+          "best_overlap": 0.8462313487935651,
+          "best_idx": 2,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 3.1905719701176587e-14,
+              "ov_tangent": 0.9999999999999999,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.1386437679759079,
+              "ov_tangent": 3.0721952759549254e-15,
+              "overlap_x": 0.44767514092142413,
+              "overlap_y": 0.36475414394869454,
+              "max_overlap": 0.44767514092142413,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5388576329681329,
+              "ov_tangent": 1.526209714164395e-14,
+              "overlap_x": 0.8075071257383011,
+              "overlap_y": 0.8462313487935651,
+              "max_overlap": 0.8462313487935651,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.6398822475709651,
+              "ov_tangent": 6.600622826091751e-16,
+              "overlap_x": 0.05307486928163456,
+              "overlap_y": 0.06344731325048039,
+              "max_overlap": 0.06344731325048039,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.4448972436133383,
+              "ov_tangent": 2.5326962749261384e-16,
+              "overlap_x": 0.036736030291503574,
+              "overlap_y": 0.02891161325670665,
+              "max_overlap": 0.036736030291503574,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.546877582733448,
+              "ov_tangent": 2.654126918244515e-16,
+              "overlap_x": 0.018900049868577795,
+              "overlap_y": 0.028399385829033466,
+              "max_overlap": 0.028399385829033466,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.9252570309568346,
+              "ov_tangent": 1.43982048506075e-16,
+              "overlap_x": 0.008045084396252122,
+              "overlap_y": 0.0019784075632120063,
+              "max_overlap": 0.008045084396252122,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.465861912018863,
+              "ov_tangent": 1.9081958235744878e-17,
+              "overlap_x": 0.0037441148698049848,
+              "overlap_y": 0.02723032821098642,
+              "max_overlap": 0.02723032821098642,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.217433233860923,
+          "u_max": 1.0,
+          "u_min": 0.01303976767307496,
+          "fraction_saturated": 0.0663265306122449,
+          "seed": 0,
+          "time_optimizer_s": 6.4,
+          "time_hessian_s": 0.3
+        },
+        {
+          "mu_Goldstone": 0.5388576344176197,
+          "best_overlap": 0.8462416655413078,
+          "best_idx": 2,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 2.588491426489987e-14,
+              "ov_tangent": 1.0000000000000009,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.13864376753341953,
+              "ov_tangent": 5.493869248418548e-15,
+              "overlap_x": 0.44769716587806513,
+              "overlap_y": 0.3647313791294263,
+              "max_overlap": 0.44769716587806513,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5388576344176197,
+              "ov_tangent": 1.0245276849119023e-14,
+              "overlap_x": 0.8074945599876104,
+              "overlap_y": 0.8462416655413078,
+              "max_overlap": 0.8462416655413078,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.6398822437640721,
+              "ov_tangent": 7.251144129583054e-16,
+              "overlap_x": 0.05308692137411591,
+              "overlap_y": 0.06343685640359051,
+              "max_overlap": 0.06343685640359051,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.444897237411523,
+              "ov_tangent": 6.782768791069316e-16,
+              "overlap_x": 0.03672676866878473,
+              "overlap_y": 0.02892100268275815,
+              "max_overlap": 0.03672676866878473,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.5468775764157323,
+              "ov_tangent": 2.8449465006019636e-16,
+              "overlap_x": 0.018903437081788814,
+              "overlap_y": 0.028397326026350332,
+              "max_overlap": 0.028397326026350332,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.925257024754265,
+              "ov_tangent": 8.847089727481716e-17,
+              "overlap_x": 0.0080416302543046,
+              "overlap_y": 0.0019791757854941,
+              "max_overlap": 0.0080416302543046,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.465861898186126,
+              "ov_tangent": 2.42861286636753e-17,
+              "overlap_x": 0.0037510447425261606,
+              "overlap_y": 0.02723621156975488,
+              "max_overlap": 0.02723621156975488,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.217433233662023,
+          "u_max": 1.0,
+          "u_min": 0.013039767381725182,
+          "fraction_saturated": 0.0663265306122449,
+          "seed": 1,
+          "time_optimizer_s": 5.2,
+          "time_hessian_s": 0.6
+        },
+        {
+          "mu_Goldstone": 0.5388576343928362,
+          "best_overlap": 0.8462408438182785,
+          "best_idx": 2,
+          "cluster_perimeter": 32,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 2.448727122068281e-14,
+              "ov_tangent": 1.0000000000000007,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.13864376765797404,
+              "ov_tangent": 3.788636071533347e-15,
+              "overlap_x": 0.4476954117860152,
+              "overlap_y": 0.3647331924123421,
+              "max_overlap": 0.4476954117860152,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.5388576343928362,
+              "ov_tangent": 1.466882171285988e-14,
+              "overlap_x": 0.807495560776764,
+              "overlap_y": 0.8462408438182785,
+              "max_overlap": 0.8462408438182785,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.6398822439650742,
+              "ov_tangent": 6.522560269672795e-16,
+              "overlap_x": 0.05308596144647906,
+              "overlap_y": 0.06343768929683025,
+              "max_overlap": 0.06343768929683025,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 1.4448972376631164,
+              "ov_tangent": 3.0010716134398763e-16,
+              "overlap_x": 0.03672750622100471,
+              "overlap_y": 0.028920254769378873,
+              "max_overlap": 0.03672750622100471,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 2.546877576668578,
+              "ov_tangent": 2.1510571102112408e-16,
+              "overlap_x": 0.01890316730119166,
+              "overlap_y": 0.02839749009945204,
+              "max_overlap": 0.02839749009945204,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 3.925257025050976,
+              "ov_tangent": 5.551115123125783e-17,
+              "overlap_x": 0.008041905326573721,
+              "overlap_y": 0.001979114562247801,
+              "max_overlap": 0.008041905326573721,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 5.465861898815177,
+              "ov_tangent": 3.469446951953614e-17,
+              "overlap_x": 0.0037504929063582604,
+              "overlap_y": 0.027235742915022884,
+              "max_overlap": 0.027235742915022884,
+              "is_tangent": false
+            }
+          ],
+          "F": 0,
+          "F1_found": false,
+          "energy": 14.217433233662597,
+          "u_max": 1.0,
+          "u_min": 0.01303976739291048,
+          "fraction_saturated": 0.0663265306122449,
+          "seed": 2,
+          "time_optimizer_s": 10.8,
+          "time_hessian_s": 0.2
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 0.5388576339261962,
+        "mu_std": 6.775286302441593e-10,
+        "mu_min": 0.5388576329681329,
+        "mu_max": 0.5388576344176197,
+        "perim_mean": 32.0,
+        "overlap_mean": 0.8462379527177172
+      }
+    },
+    {
+      "m": 160,
+      "L": 40,
+      "sweep_id": "b_c10_L40",
+      "c": 0.1,
+      "attempts": [
+        {
+          "mu_Goldstone": 0.38120913736206324,
+          "best_overlap": 0.840481124783937,
+          "best_idx": 3,
+          "cluster_perimeter": 48,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 6.208439343286014e-14,
+              "ov_tangent": 0.9999999999999996,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.01191263525339123,
+              "ov_tangent": 1.051849579658537e-14,
+              "overlap_x": 0.432605041223871,
+              "overlap_y": 0.377070456272821,
+              "max_overlap": 0.432605041223871,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.24795540864933796,
+              "ov_tangent": 1.8481743913056903e-14,
+              "overlap_x": 0.1432504814941046,
+              "overlap_y": 0.14525457955697724,
+              "max_overlap": 0.14525457955697724,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.38120913736206324,
+              "ov_tangent": 3.734599435256669e-14,
+              "overlap_x": 0.8134577446484317,
+              "overlap_y": 0.840481124783937,
+              "max_overlap": 0.840481124783937,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 0.6645494556793761,
+              "ov_tangent": 6.678685382510707e-16,
+              "overlap_x": 0.003803567927591109,
+              "overlap_y": 0.004786918813072149,
+              "max_overlap": 0.004786918813072149,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.2276233215652357,
+              "ov_tangent": 4.796510411075872e-16,
+              "overlap_x": 0.04787575052524422,
+              "overlap_y": 0.04971057468639089,
+              "max_overlap": 0.04971057468639089,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 1.9390722498827828,
+              "ov_tangent": 1.0495077029659683e-16,
+              "overlap_x": 0.0015240685673984199,
+              "overlap_y": 0.000542929776584461,
+              "max_overlap": 0.0015240685673984199,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 2.774590691225229,
+              "ov_tangent": 3.7296554733501353e-16,
+              "overlap_x": 0.020896987168730338,
+              "overlap_y": 0.017880332629953186,
+              "max_overlap": 0.020896987168730338,
+              "is_tangent": false
+            }
+          ],
+          "F": 15,
+          "F1_found": false,
+          "energy": 20.366255294136458,
+          "u_max": 1.0,
+          "u_min": 0.008858335493830213,
+          "fraction_saturated": 0.073125,
+          "seed": 0,
+          "time_optimizer_s": 26.9,
+          "time_hessian_s": 0.9
+        },
+        {
+          "mu_Goldstone": 0.38120914563129843,
+          "best_overlap": 0.8135253575811088,
+          "best_idx": 3,
+          "cluster_perimeter": 48,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 1.1235635495968157e-13,
+              "ov_tangent": 1.0000000000000009,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.011912636046823655,
+              "ov_tangent": 2.631462756030878e-13,
+              "overlap_x": 0.432659976309266,
+              "overlap_y": 0.4324371607996802,
+              "max_overlap": 0.432659976309266,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.24795546393992277,
+              "ov_tangent": 2.3860254050322993e-14,
+              "overlap_x": 0.14319516524125941,
+              "overlap_y": 0.14341889804359148,
+              "max_overlap": 0.14341889804359148,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.38120914563129843,
+              "ov_tangent": 5.450739685997075e-14,
+              "overlap_x": 0.813435616138331,
+              "overlap_y": 0.8135253575811088,
+              "max_overlap": 0.8135253575811088,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 0.6645495203340351,
+              "ov_tangent": 2.007075061705166e-15,
+              "overlap_x": 0.0037734617006819834,
+              "overlap_y": 0.0038957225340292834,
+              "max_overlap": 0.0038957225340292834,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.2276233758612003,
+              "ov_tangent": 2.680147770384167e-16,
+              "overlap_x": 0.047877859189239425,
+              "overlap_y": 0.04786923914276517,
+              "max_overlap": 0.047877859189239425,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 1.9390722457692586,
+              "ov_tangent": 1.1535911115245767e-16,
+              "overlap_x": 0.0015271951078919092,
+              "overlap_y": 0.0015143654478977711,
+              "max_overlap": 0.0015271951078919092,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 2.774590584177282,
+              "ov_tangent": 1.97758476261356e-16,
+              "overlap_x": 0.020894008950547282,
+              "overlap_y": 0.020905978182268373,
+              "max_overlap": 0.020905978182268373,
+              "is_tangent": false
+            }
+          ],
+          "F": 23,
+          "F1_found": false,
+          "energy": 20.366255295809445,
+          "u_max": 1.0,
+          "u_min": 0.008858333923580706,
+          "fraction_saturated": 0.073125,
+          "seed": 1,
+          "time_optimizer_s": 38.7,
+          "time_hessian_s": 0.8
+        },
+        {
+          "mu_Goldstone": 0.3812091337579964,
+          "best_overlap": 0.8404864461254264,
+          "best_idx": 3,
+          "cluster_perimeter": 48,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 5.2609509665465146e-14,
+              "ov_tangent": 1.0000000000000007,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 0.011912582384151535,
+              "ov_tangent": 5.594483210025203e-16,
+              "overlap_x": 0.43262242331809164,
+              "overlap_y": 0.3770506633977921,
+              "max_overlap": 0.43262242331809164,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 0.24795537087159766,
+              "ov_tangent": 1.9970136655445003e-14,
+              "overlap_x": 0.14323309715299812,
+              "overlap_y": 0.1452688667356858,
+              "max_overlap": 0.1452688667356858,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 0.3812091337579964,
+              "ov_tangent": 3.438503821950878e-14,
+              "overlap_x": 0.813450715078649,
+              "overlap_y": 0.8404864461254264,
+              "max_overlap": 0.8404864461254264,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 0.6645494626851567,
+              "ov_tangent": 2.22218077272629e-15,
+              "overlap_x": 0.0037940248129979537,
+              "overlap_y": 0.0047948517981702445,
+              "max_overlap": 0.0047948517981702445,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 1.227623334523752,
+              "ov_tangent": 7.37257477290143e-16,
+              "overlap_x": 0.04787644072436181,
+              "overlap_y": 0.049711230316506025,
+              "max_overlap": 0.049711230316506025,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 1.9390722343478968,
+              "ov_tangent": 4.85722573273506e-17,
+              "overlap_x": 0.0015250544647228276,
+              "overlap_y": 0.0005415494006475521,
+              "max_overlap": 0.0015250544647228276,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 2.7745906079894915,
+              "ov_tangent": 3.5128150388530344e-16,
+              "overlap_x": 0.02089604521236189,
+              "overlap_y": 0.017882922204608322,
+              "max_overlap": 0.02089604521236189,
+              "is_tangent": false
+            }
+          ],
+          "F": 27,
+          "F1_found": false,
+          "energy": 20.366255294506573,
+          "u_max": 1.0,
+          "u_min": 0.008858334298579773,
+          "fraction_saturated": 0.073125,
+          "seed": 2,
+          "time_optimizer_s": 35.8,
+          "time_hessian_s": 2.0
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 0.38120913891711933,
+        "mu_std": 4.970410767676064e-09,
+        "mu_min": 0.3812091337579964,
+        "mu_max": 0.38120914563129843,
+        "perim_mean": 48.0,
+        "overlap_mean": 0.8314976428301574
+      }
+    },
+    {
+      "m": 20,
+      "L": 14,
+      "sweep_id": "c_L14_c10",
+      "c": 0.10204081632653061,
+      "attempts": [
+        {
+          "mu_Goldstone": 3.8005222098766582,
+          "best_overlap": 0.5683052536429145,
+          "best_idx": 2,
+          "cluster_perimeter": 0,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": -1.7739276654050466e-15,
+              "ov_tangent": 0.9999999999999997,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 3.8005196659941585,
+              "ov_tangent": 9.149893418213288e-17,
+              "overlap_x": 0.5170231967330714,
+              "overlap_y": 0.5470810462410862,
+              "max_overlap": 0.5470810462410862,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 3.8005222098766582,
+              "ov_tangent": 3.2612801348363973e-16,
+              "overlap_x": 0.53853594599846,
+              "overlap_y": 0.5683052536429145,
+              "max_overlap": 0.5683052536429145,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 4.001114856082252,
+              "ov_tangent": 1.0408340855860843e-17,
+              "overlap_x": 0.07911722259101225,
+              "overlap_y": 0.08343261637575396,
+              "max_overlap": 0.08343261637575396,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 4.392162237765185,
+              "ov_tangent": 3.365363543395006e-16,
+              "overlap_x": 0.26680910336339875,
+              "overlap_y": 0.026611873722035235,
+              "max_overlap": 0.26680910336339875,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 4.3921802314760265,
+              "ov_tangent": 1.7551687337411578e-16,
+              "overlap_x": 0.21373018409081812,
+              "overlap_y": 0.07970692185103487,
+              "max_overlap": 0.21373018409081812,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 4.5927692727351355,
+              "ov_tangent": 1.888061850418253e-16,
+              "overlap_x": 0.12888835251094988,
+              "overlap_y": 0.1679968185367216,
+              "max_overlap": 0.1679968185367216,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 4.592770224349992,
+              "ov_tangent": 3.7990444123892075e-16,
+              "overlap_x": 0.17988511469930132,
+              "overlap_y": 0.15655710023030311,
+              "max_overlap": 0.17988511469930132,
+              "is_tangent": false
+            }
+          ],
+          "F": 1,
+          "F1_found": false,
+          "energy": 6.582291392864327,
+          "u_max": 0.10204373476458663,
+          "u_min": 0.10203858940122319,
+          "fraction_saturated": 0.0,
+          "seed": 0,
+          "time_optimizer_s": 0.2,
+          "time_hessian_s": 0.0
+        },
+        {
+          "mu_Goldstone": 3.8004744874338456,
+          "best_overlap": 0.4905538591518589,
+          "best_idx": 1,
+          "cluster_perimeter": 0,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": 1.3067175794956131e-14,
+              "ov_tangent": 1.0,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 3.8004744874338456,
+              "ov_tangent": 7.934157616931031e-17,
+              "overlap_x": 0.361409147677968,
+              "overlap_y": 0.4905538591518589,
+              "max_overlap": 0.4905538591518589,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 3.8005201552159824,
+              "ov_tangent": 2.0816681711721685e-17,
+              "overlap_x": 0.34026993357996027,
+              "overlap_y": 0.2100170521454548,
+              "max_overlap": 0.34026993357996027,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 4.001072032840422,
+              "ov_tangent": 3.41740524767431e-16,
+              "overlap_x": 0.014110409038646295,
+              "overlap_y": 0.14155218300968037,
+              "max_overlap": 0.14155218300968037,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 4.392171427169831,
+              "ov_tangent": 1.2021633688519273e-15,
+              "overlap_x": 0.2472070303653982,
+              "overlap_y": 0.20672374388232947,
+              "max_overlap": 0.2472070303653982,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 4.39217185298671,
+              "ov_tangent": 4.2760933682828295e-16,
+              "overlap_x": 0.30889620241036164,
+              "overlap_y": 0.2658576479310656,
+              "max_overlap": 0.30889620241036164,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 4.592735382421976,
+              "ov_tangent": 9.952975943416931e-17,
+              "overlap_x": 0.19275611309659071,
+              "overlap_y": 0.15351762686429338,
+              "max_overlap": 0.19275611309659071,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 4.592757530126203,
+              "ov_tangent": 6.071532165918825e-17,
+              "overlap_x": 0.19642966317063937,
+              "overlap_y": 0.1733405778666562,
+              "max_overlap": 0.19642966317063937,
+              "is_tangent": false
+            }
+          ],
+          "F": 1,
+          "F1_found": false,
+          "energy": 6.582291392892566,
+          "u_max": 0.10204473934008002,
+          "u_min": 0.10203958198419802,
+          "fraction_saturated": 0.0,
+          "seed": 1,
+          "time_optimizer_s": 0.2,
+          "time_hessian_s": 0.0
+        },
+        {
+          "mu_Goldstone": 3.800522257588439,
+          "best_overlap": 0.5670820993099925,
+          "best_idx": 2,
+          "cluster_perimeter": 0,
+          "mode_records": [
+            {
+              "mode_idx": 0,
+              "eigval": -7.905578102915053e-15,
+              "ov_tangent": 1.0000000000000018,
+              "is_tangent": true
+            },
+            {
+              "mode_idx": 1,
+              "eigval": 3.8005197095963297,
+              "ov_tangent": 5.0561090687503696e-17,
+              "overlap_x": 0.5482932309139361,
+              "overlap_y": 0.5160735036308466,
+              "max_overlap": 0.5482932309139361,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 2,
+              "eigval": 3.800522257588439,
+              "ov_tangent": 1.474514954580286e-16,
+              "overlap_x": 0.5670820993099925,
+              "overlap_y": 0.539873210472412,
+              "max_overlap": 0.5670820993099925,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 3,
+              "eigval": 4.001114936281865,
+              "ov_tangent": 4.9439619065339e-16,
+              "overlap_x": 0.08292263335911157,
+              "overlap_y": 0.07940068388821894,
+              "max_overlap": 0.08292263335911157,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 4,
+              "eigval": 4.3921622144351105,
+              "ov_tangent": 7.251144129583054e-16,
+              "overlap_x": 0.026188819557058613,
+              "overlap_y": 0.2661042919364889,
+              "max_overlap": 0.2661042919364889,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 5,
+              "eigval": 4.392180252644911,
+              "ov_tangent": 1.8502693578941343e-16,
+              "overlap_x": 0.07947432550588314,
+              "overlap_y": 0.21336230639763465,
+              "max_overlap": 0.21336230639763465,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 6,
+              "eigval": 4.5927693168610455,
+              "ov_tangent": 4.557714882585939e-17,
+              "overlap_x": 0.16895062346104284,
+              "overlap_y": 0.12781235438456004,
+              "max_overlap": 0.16895062346104284,
+              "is_tangent": false
+            },
+            {
+              "mode_idx": 7,
+              "eigval": 4.592770270067969,
+              "ov_tangent": 3.3133218391157016e-16,
+              "overlap_x": 0.1557114385659329,
+              "overlap_y": 0.18079831887936307,
+              "max_overlap": 0.18079831887936307,
+              "is_tangent": false
+            }
+          ],
+          "F": 1,
+          "F1_found": false,
+          "energy": 6.582291392866895,
+          "u_max": 0.10204374083550453,
+          "u_min": 0.10203858587547042,
+          "fraction_saturated": 0.0,
+          "seed": 2,
+          "time_optimizer_s": 0.2,
+          "time_hessian_s": 0.0
+        }
+      ],
+      "summary": {
+        "n_good": 3,
+        "mu_mean": 3.800506318299648,
+        "mu_std": 2.250782948784914e-05,
+        "mu_min": 3.8004744874338456,
+        "mu_max": 3.800522257588439,
+        "perim_mean": 0.0,
+        "overlap_mean": 0.541980404034922
+      }
+    }
+  ]
+}

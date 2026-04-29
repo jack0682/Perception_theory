@@ -58,6 +58,94 @@ canonical/canonical.md + theorem_status.md
 
 <!-- Daily entries appended below this line, most recent first -->
 
+## 2026-04-29 — W5 Day 3 (MODERATE-CONSOLIDATION): Phase 1-10 → canonical promotion queue + Paper §4 polish + theorem_status/CHANGELOG drafts
+
+### Mission
+
+Day 2's 10-cycle expansion → Day 3's anchoring. Process Day 2 user-decision queue, package for explicit per-item user authorization, polish Paper §4 (independent of canonical), pre-author theorem_status / CHANGELOG conditional refresh. Optional Phase 11 deprioritized per plan §3 Block 4.
+
+### Calibration vs plan
+
+- plan.md targets: 3-5 daily files, 1300-2300 lines, MODERATE ~7-8h.
+- **Actual**: 5 daily files (00, 01, 02, 03, 99), ~2000-2500 lines, within budget.
+- **Quantitative success criteria**: 5/5 met. 0 canonical edits applied (correctly — user authorization required); 0 silent resolutions; 0 git commits; 0 Phase 11 numerical.
+- **Qualitative**: Phase 1-10 ready for canonical merge with explicit per-item decision packet; Paper §4 LaTeX-ready prose with Phase 9-10 final-state integration.
+
+### Added (5 daily files)
+
+- **`00_phase9_10_reconciliation.md`** (~140 lines): Phase 9-10 REVISIONS ↔ proposal text reconciliation. **Verdict**: D-1, D-2, D-3, D-4, D-5, D-6a proposal texts are FINAL (Phase ≥ source orthogonal or stable). **D-6 SPLIT recommended**: D-6a (static σ_multi^A + σ_multi^D, Phase 4 anchored) vs D-6b (dynamic σ_multi^A(t) trajectory, Phase 9-10 NEW). **Recommend defer D-6b to W6+** (V3 used simplified σ-tuple; rigorous K-jump theory unaddressed).
+
+- **`01_canonical_promotion_queue_review.md`** (~330 lines): 7-item user-decision packet. Per-item: source / reconciled status / canonical edit target / proposed text / line delta / Cat impact / decision options (A1/A2/A3/D1). Combined option matrix (All-7, **Recommended**, Conservative, Minimum, Defer-all). Default behavior absent authorization: defer all.
+
+- **`02_paper_section4_polished.md`** (~750 lines, LaTeX-ready): Paper §4.1-§4.7 polished from `2026-04-28/26_*` + `29_*`. Polish achieved: notation consolidated (σ vs σ_multi vs σ^A vs σ^D); theorem cards standardized; equation numbering sequential (4.1)-(4.22); 10 theorem statements; 246-run numerical inventory. Phase 9-10 REVISIONS integrated:
+  - §4.3.5 box-clipping primary stabilizer (Phase 7 R1.2).
+  - §4.5.3 LSW α plateau **0.25-0.30** (Phase 10 V2 standardization, replaces Phase 7 0.281 single reading + Phase 8 T3 γ-optimal misread).
+  - §4.5.4 K-jump scaling Δt ∝ t^1.315 (Phase 10 V4).
+  - §4.5.5 3D V5 structural verification with insufficient-statistics caveat.
+  - §4.5.7 SCC ↔ CH **correspondence** (CN10 — not reduction).
+  - §4.6.3 OQ-1 σ_multi^A(t) rigorous theory (Phase 9-10 NEW; Cat B sketch only).
+
+- **`03_theorem_status_phase1-10_update.md`** (~370 lines): Conditional template. §1 decision-to-canonical-side mapping; §2 theorem_status.md update (CV-1.5.1 release entry + 4 new C-IDs if Recommended approved + Active Claims rows + Proof Status Summary update); §3 CHANGELOG.md Phase 1-10 cumulative entry (~280 lines); §4 application protocol (Recommended / Conservative / Minimum / Defer-all paths); §5 partial-approval handling.
+
+- **`99_summary.md`** (~280 lines): Day 3 reflection + Day 4 priority adjustment + Hard Constraint verification.
+
+### Pending (Day 4 critical path)
+
+- **User decision on D-1..D-6b** (recommend Recommended option: D-1..D-5 + D-6a, defer D-6b).
+- If approved: Day 4 morning Block 1 application (~60 min): pre-flight tests + ~145-180 canonical lines applied + theorem_status CV-1.5.1 + CHANGELOG Phase 1-10 cumulative + post-edit tests.
+- CV-1.5 → CV-1.5.1 release: 43A → 46A; 57 → 60 claims; 75% → 77% proved (if Recommended).
+- If deferred: Day 4 Phase 11 NQ-244 3D LSW T³_15 K=10 (~1-2h) — Paper §4.5.5 publishable α value.
+
+### Calibration vs Day 2 (consolidation vs expansion contrast)
+
+| 항목 | Day 2 (EXPANSION) | **Day 3 (CONSOLIDATION)** |
+|------|---|---|
+| New daily files | 38 | **5** |
+| Numerical runs | 246 | **0** |
+| canonical edits | 0 | 0 (queue prepared) |
+| NQ spawns | 57 | 0 |
+| Major findings | 5+ per cycle × 10 | 0 (consolidation) |
+| Total lines | ~5900 | **~2000-2500** |
+
+### Hard constraints (Day 3)
+
+- canonical 직접 수정 0 ✓
+- Silent resolution 0 ✓ (D-6b explicitly flagged as needing additional drafting if approved)
+- 0 git commits (per CLAUDE.md commit policy) ✓
+- 0 Phase 11 numerical (Block 4 deprioritized per plan §3) ✓
+- Phase 9-10 REVISIONS reflected in proposal text (Block 0.5 reconciliation per item) ✓
+- u_t primitive maintained ✓
+- 4 energy terms not merged ✓
+- K not dual-treated ✓
+- P-F flag inline (D-6b dynamic note) ✓
+- No reductive equation (SCC ↔ CH = correspondence per CN10) ✓
+- No OMC pull orchestration ✓
+
+### W5 ladder status post-Day-3
+
+| Level | Status |
+|---|---|
+| Minimal (G0+G1 P0) | ✅ |
+| Standard (+G2+G3 substantive) | ✅ |
+| Ambitious (+G4..G6 ≥1) | **canonical promotion ready** if user approves Day 4 |
+| Maximal (+G7+G8) | not yet (Day 6+ if Days 4-5 progress) |
+| Stretch (+CV-1.5.x release+Paper 1) | **CV-1.5.1 ready** if user approves; Paper §4 polished |
+
+**Standard ladder still on track Day 5-7** if Block 1 approval comes Day 4.
+
+### Methodological observation
+
+Day 3 demonstrates that a **CONSOLIDATION day after a 10-cycle expansion day is feasible without losing momentum**. The 5 deliverables are tightly bounded (~2000-2500 lines) yet substantively cover: reconciliation (FINAL-state verification), packaging (user-decision queue), polish (paper-ready), drafts (theorem_status/CHANGELOG templates). The hard-constraint-compliance pattern (no canonical edits absent authorization; defer-all default) keeps the agent from drifting into uncommitted theoretical changes.
+
+### References
+
+- **Daily** (`THEORY/logs/daily/2026-04-29/`, 5 files): see Added section above.
+- **Source files** (`THEORY/logs/daily/2026-04-28/`): `01_NQ173_v5b_f_verdict.md`, `02_NQ174_zeta_star_results.md`, `03_canonical_proposal_v5b_t_update.md`, `20_canonical_proposals_F10_F11.md`, `22_F13_F14_F16_combined.md` (glossary), `26_*` (paper §4.1-§4.3), `29_*` (paper §4.4-§4.7), `33_*`+`34_*` (Phase 9-10).
+- **Canonical** (`THEORY/canonical/`): unchanged Day 3.
+- **CHANGELOG.md**: unchanged Day 3 (template in `03_*` for conditional application).
+
+---
+
 ## 2026-04-28 — W5 Day 2 (... → STRETCH+ via Phase 10): strict pool α=0 verified; standardized LSW plateau α=0.25-0.30; K-jump LSW-scaling; 3D σ-framework; 10-cycle methodology demonstrated
 
 ### Phase 10 (post-ninth-self-critique, V1-V5)
