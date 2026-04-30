@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "n_graphs_tested": 3,
+    "n_pairs_tested": 3,
+    "all_locality_predicates_hold": true
+  },
+  "configuration": {
+    "c_target": 0.5,
+    "alpha_bd": 1.0,
+    "epsilon_post_pitchfork": 0.05,
+    "n_hessian_modes": 12,
+    "eps_sigma_tolerance": 0.001,
+    "L_grid": 8,
+    "N_cycle": 20,
+    "N_torus": 10
+  },
+  "graphs": [
+    {
+      "name": "R23_D4_L8",
+      "n": 64,
+      "stabilizer": {
+        "name": "D_4",
+        "order": 8,
+        "irreps_count": 5,
+        "description": "Dihedral group D_4 (8 elements, 4 rotations + 4 reflections)."
+      },
+      "lambda_2_lap": 0.15224093497742663,
+      "beta_crit": 0.6089637399097065,
+      "beta_used": 0.6394119269051919,
+      "first_pitchfork_multiplicity": 2,
+      "sigma_tuple_uniform": [
+        -0.030448186995482292,
+        -0.03044818699548072,
+        0.5785155529142209,
+        1.7037338236024242,
+        1.703733823602432,
+        2.3126975635121307,
+        2.312697563512135,
+        4.046879574110048,
+        4.299120614174088,
+        4.299120614174089,
+        4.908084354083792,
+        4.908084354083798
+      ],
+      "sigma_tuple_minimizer": [
+        1.1184422872370763,
+        1.416668950015392,
+        2.035514708583038,
+        2.825268311034791,
+        2.912895197982473,
+        3.5336960982390853,
+        3.7545259910903583,
+        5.222729222156685,
+        5.4416218125108,
+        5.58232043370947,
+        6.213018578856587,
+        6.3527653341252375
+      ],
+      "minimizer_energy": 1.3060252709766813,
+      "minimizer_F_local_max": 2
+    },
+    {
+      "name": "cycle_Z20",
+      "n": 20,
+      "stabilizer": {
+        "name": "D_20",
+        "order": 40,
+        "irreps_count": 13,
+        "description": "Dihedral group D_20 (2n=40 elements)."
+      },
+      "lambda_2_lap": 0.09788696740969277,
+      "beta_crit": 0.3915478696387711,
+      "beta_used": 0.4111252631207097,
+      "first_pitchfork_multiplicity": 2,
+      "sigma_tuple_uniform": [
+        -0.01957739348193816,
+        -0.019577393481937874,
+        1.1167387818797088,
+        1.1167387818797094,
+        2.8865927185395033,
+        2.8865927185395046,
+        5.116738781879711,
+        5.116738781879712,
+        7.588874736879291,
+        7.588874736879291,
+        10.061010691878868,
+        10.06101069187887
+      ],
+      "sigma_tuple_minimizer": [
+        0.6006363965931529,
+        0.9366317529873393,
+        1.8697417136610868,
+        2.0374716524763414,
+        3.679493785121504,
+        3.7539276922793614,
+        5.938595164709815,
+        5.941102833712184,
+        8.403884781645862,
+        8.40955033022344,
+        10.846537517769002,
+        10.90194449684888
+      ],
+      "minimizer_energy": 0.436607811329691,
+      "minimizer_F_local_max": 2
+    },
+    {
+      "name": "torus_Z10x10",
+      "n": 100,
+      "stabilizer": {
+        "name": "(Z_10)^2 \u22ca D_4",
+        "order": 800,
+        "irreps_count": -1,
+        "description": "Translations Z_10\u00d7Z_10 = 100 elts \u00d7 D_4 = 8 \u2192 semidirect product order 800."
+      },
+      "lambda_2_lap": 0.3819660112501031,
+      "beta_crit": 1.5278640450004124,
+      "beta_used": 1.604257247250433,
+      "first_pitchfork_multiplicity": 4,
+      "sigma_tuple_uniform": [
+        -0.07639320225001639,
+        -0.07639320225001278,
+        -0.07639320225000516,
+        -0.07639320224999833,
+        1.4514708427504,
+        1.4514708427504053,
+        1.451470842750406,
+        1.4514708427504115,
+        3.9236067977499816,
+        3.923606797749985,
+        3.9236067977499864,
+        3.9236067977499927
+      ],
+      "sigma_tuple_minimizer": [
+        2.0198759220677607,
+        2.0759882833515335,
+        2.0944807478666196,
+        3.0509995613274214,
+        3.262370557281932,
+        4.012278448045542,
+        4.016114876660934,
+        4.82486958419391,
+        6.057874622596204,
+        6.574842654200802,
+        6.576580245369342,
+        6.821280572512814
+      ],
+      "minimizer_energy": 2.894541971071867,
+      "minimizer_F_local_max": 5
+    }
+  ],
+  "pairwise_tests": [
+    {
+      "g1": "R23_D4_L8",
+      "g2": "cycle_Z20",
+      "stabilizer_orders": [
+        8,
+        40
+      ],
+      "first_pitchfork_multiplicities": [
+        2,
+        2
+      ],
+      "irrep_compatible_necessary_conds": false,
+      "sigma_equiv_at_uniform": false,
+      "sigma_equiv_at_minimizer": false,
+      "locality_predicate_holds": true,
+      "interpretation": "|G_u^(1)|=8 vs |G_u^(2)|=40: NOT iso-compatible; \u03c3-tuples DIFFER"
+    },
+    {
+      "g1": "R23_D4_L8",
+      "g2": "torus_Z10x10",
+      "stabilizer_orders": [
+        8,
+        800
+      ],
+      "first_pitchfork_multiplicities": [
+        2,
+        4
+      ],
+      "irrep_compatible_necessary_conds": false,
+      "sigma_equiv_at_uniform": false,
+      "sigma_equiv_at_minimizer": false,
+      "locality_predicate_holds": true,
+      "interpretation": "|G_u^(1)|=8 vs |G_u^(2)|=800: NOT iso-compatible; \u03c3-tuples DIFFER"
+    },
+    {
+      "g1": "cycle_Z20",
+      "g2": "torus_Z10x10",
+      "stabilizer_orders": [
+        40,
+        800
+      ],
+      "first_pitchfork_multiplicities": [
+        2,
+        4
+      ],
+      "irrep_compatible_necessary_conds": false,
+      "sigma_equiv_at_uniform": false,
+      "sigma_equiv_at_minimizer": false,
+      "locality_predicate_holds": true,
+      "interpretation": "|G_u^(1)|=40 vs |G_u^(2)|=800: NOT iso-compatible; \u03c3-tuples DIFFER"
+    }
+  ],
+  "interpretation": {
+    "expected_outcome": "All 3 stabilizers (D_4 order 8, D_20 order 40, (Z_10)^2 \u22ca D_4 order 800) are pairwise non-isomorphic \u21d2 pairwise \u03c3-tuples should DIFFER \u21d2 locality predicate should hold (irrep_compatible \u2194 \u03c3_equivalent, both False).",
+    "caveat_irrep": "\u03c3-tuple here is eigenvalue-multiset proxy; full irrep-aware \u03c3-tuple requires Aut(G)_{u*} character decomposition (NQ-259, W6+ deferred).",
+    "caveat_post_pitchfork_hessian": "Hessian at minimizer uses leading-order approximation H \u2248 4\u03b1 L + \u03b2 W''(u*) diag, exact at uniform and accurate for small \u03b5 post-pitchfork."
+  },
+  "nq_references": {
+    "NQ-262": "Bridge B-2 \u03c3-locality (working/SF/schramm_sigma_locality_theorem.md)",
+    "NQ-259": "Aut(G)_{u*} explicit computation prerequisite (W6+)",
+    "NQ-188": "\u03c3-class enumeration NQ-188 \u00a75 protocol (W7+)"
+  }
+}

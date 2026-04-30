@@ -15,7 +15,46 @@ last_updated: 2026-04-27
 
 ## Canonical Theorems (Accepted into Canonical Spec)
 
-### Canonical Spec v1.5 (2026-04-27) — Current Version (W5 Day 1: σ-Framework Supporting Structures)
+### Canonical Spec v1.5.1 (2026-04-29) — Current Version (W5 Day 3 EOD: D-6a Multi-Static + Ontological Depth + Critic 보강)
+
+**Additions over v1.5** (W5 Day 3 EOD, 2026-04-29):
+
+| T-ID | Name | Status | Category | Source | Proof | Experiments | Notes |
+|------|------|--------|----------|--------|-------|-------------|-------|
+| **T-Commitment-14-Multi-Static** | Multi-Formation σ-Signature on K-field (Static) | accepted | A definitional | C-0717 | P-0717 | (theoretical extension of Commitment 14) | Defined on $\widetilde{\Sigma}^{K_{\mathrm{field}},\circ}_M$ interior (Option A pragmatic; corners deferred to NQ-248 W7+). $\sigma_{\mathrm{multi}} = (\sigma^A, \sigma^D)$ joint invariant under wreath-product $\mathrm{Aut}(G) \wr S_{K_{\mathrm{act}}}$ |
+| **T-σ-multi-A-Static** | Within-Formation σ-Tuple Multi-Set Invariance | accepted | A (well-separated regime) | C-0718 | P-0718 | (theoretical via Coupling Bound Lemma + T-σ-Lemma-1) | Multi-set $\{\sigma_j\}_{j=1}^{K_{\mathrm{act}}}$ under $S_{K_{\mathrm{act}}}$ permutation; reduces to Commitment 14 σ at $K_{\mathrm{act}}=1$. Cat B target in T-Persist-K-Weak overlap regime |
+| **T-σ-multi-D-Static** | Between-Formation Cohomology Pull-Back | accepted | A definitional | C-0719 | P-0719 | (wreath-product representation theory, Specht 1935 + James-Kerber 1981) | Conjugacy-class label in $H^1(\mathrm{Aut}(G) \wr S_{K_{\mathrm{act}}}; \mathrm{Stab}(\mathbf{u}^*))$. Explicit cohomology computation (D_4 × S_2 etc.) Cat B target via NQ-242d W6+ |
+| **T-σ-Multi-1** | Multi-Formation Goldstone-Pair Instability (Phase 4 Static) | tentative | B target | C-0720 | (sketch) | (Phase 4 D-6a numerical, Phase 6 Q1 box-clipping) | Goldstone-pair separation $\Delta\lambda \approx O(\lambda_{\mathrm{rep}} e^{-c_0 D_{\mathrm{sep}}})$ under V5b-T per-formation regime. Static instability iff $\lambda_{\mathrm{rep}} > c_{\mathrm{eff}} \mu_{\mathrm{Gold}}^{\mathrm{single}}$. Cat A pending NQ-242 numerical anchor |
+
+**Sub-statement additions to T-V5b-T**:
+
+| Sub-ID | Name | Status | Category | Notes |
+|--------|------|--------|----------|-------|
+| **(V5b-F-empirical)** | V5b-F Goldstone Mass Scaling | accepted | B target | $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot \|\partial S\|/n$, $C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$ (NQ-198a 6 corner-sat, SNR 35). Refutes Phase 3 heuristic + Day 3 §4 derivation. Full $C(\beta, \xi_0)$ open via NQ-198k W6+ |
+| **(V5b-T-zero)** | Sub-Spinodal Translation-Invariant Regime | accepted | A definitional | $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T-zero}} = 0$ exactly (discrete translation orbit on $\mathbb{Z}_L^d$). Replaces V5b-T' WITHDRAWN. Empirical anchor NQ-198f $T^2_{20}/T^2_{28}$ $|\mu| \leq 0.028$ within FD numerical noise |
+
+**Status changes to existing entries**:
+
+| C-ID | Name | Old Status | New Status | Reason |
+|------|------|-----------|-----------|--------|
+| **C-0716** | T-σ-Theorem-4 σ at First Pitchfork | Cat A in $\epsilon$-small regime | **Cat B in $\epsilon$-small regime** | Retroactive Critic 7-agent verdict 2026-04-29: Errata Round 1 caught structural error in original (ii) ("would-be transverse Goldstone" inapplicable to discrete sym breaking); original Cat A merge had unresolved Morse-index contradiction. Higher-order $\epsilon$ splitting NQ-187 W7+ may re-promote. |
+| **D-5 (V5b-T' new entry candidate)** | V5b-T' Pre-Objective Goldstone (Phase 3 proposal) | Cat B target proposal | **WITHDRAWN** | NQ-198f phantom on torus (μ ≈ 0 exact, not PN-barrier-lifted O(β)). Replaced by V5b-T-zero sub-statement. |
+
+**v1.5 → v1.5.1 release notes (2026-04-29)**:
+
+- **Added (4 new C-IDs)**: 3 Cat A definitional (Multi-Static + multi-A-Static + multi-D-Static) + 1 Cat B target (Multi-1).
+- **Added (sub-statements)**: V5b-T-zero (Cat A def, replaces V5b-T' phantom) + V5b-F-empirical (Cat B target) within T-V5b-T entry.
+- **Status revision**: T-σ-Theorem-4 Cat A → Cat B retroactive (Critic 보강).
+- **Withdrawn**: D-5 V5b-T' new entry candidate (NQ-198f phantom finding).
+- **Counts**: 43A → **45A** (net +2: +3 D-6a Cat A − 1 Theorem-4 격하), 4B → **5B** (+1 Theorem-4 + 1 Multi-1 vs −1 hypothetical), 57 → **60 claims**, 75% → **75% fully proved** (unchanged % due to balanced category shift).
+- **Commitment 16 K-status** added to §11.1 (K_field architectural cap / K_act dynamic stratum index two-tier decomposition; resolves 4-month K ontological ambiguity per OP-0009).
+- **Commitment 14 (O5')(O7) sub-conventions** added (multi-irrep ordering + tie-breaking via Mulliken character order).
+- **CN6 refined** (line 1603): "K kinetically determined" now refers specifically to K_act per Commitment 16.
+- **Open problems**: OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations registered; OP-0003 MO-1 re-activation rider added.
+- **canonical.md growth**: 1593 → 1664 lines (~71 lines added).
+- **Source**: `THEORY/logs/daily/2026-04-29/04..11_*` (Day 3 deepening + numerical + 7-agent + 4-agent ontological depth analysis); `THEORY/working/MF/K_status_commitment.md` (OAT-1 Commitment 16 audit); `THEORY/CHANGELOG.md` 2026-04-29 entry.
+
+### Canonical Spec v1.5 (2026-04-27) — Previous Version (W5 Day 1: σ-Framework Supporting Structures)
 
 **Additions over v1.4** (W5 Day 1 G0, 2026-04-27):
 

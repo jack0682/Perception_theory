@@ -16,6 +16,9 @@ from scc.transport import (
     sinkhorn_partial_ot, transport_field, transport_fixed_point,
     TransportResult, persist_transport,
 )
+from scc.sigma_rich import (
+    SigmaRich, compute_sigma_rich, compute_centroids, compute_orientations,
+)
 
 __all__ = [
     "ParameterRegistry",
@@ -40,4 +43,8 @@ __all__ = [
     "transport_fixed_point",
     "TransportResult",
     "persist_transport",
+    "SigmaRich",
+    "compute_sigma_rich",
+    "compute_centroids",
+    "compute_orientations",
 ]

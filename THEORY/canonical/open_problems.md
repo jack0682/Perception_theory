@@ -134,12 +134,123 @@ Therefore, the principal results of W4 (Theorem 2 family + σ-framework + F-1 sp
 **Multi-formation extension still open**: Stratified Morse on $\Sigma^K_M$ (multi-formation σ, Phase 5) remains genuine open work. MO-1 returns as an active blocker if/when the theory extends to multi-formation σ.
 
 **Severity:** 🟠 HIGH (within multi-formation scope) → ⚪ NOT BLOCKING (within single-formation scope)
-**Last reviewed:** 2026-04-25 (W4 weekly close)
+
+**Re-activation trigger (W5 added 2026-04-29 CV-1.5.1):** D-6b dynamic σ_multi^A(t) approval at CV-1.6 OR NQ-248 multi-formation stratified Morse work begins → 🟠 HIGH automatic re-activation. Single-formation σ-framework (CV-1.5+) operates on $\Sigma_m$ corner-free; multi-formation σ Phase 5 (D-6a CV-1.5.1, D-6b CV-1.6+) operates on $\widetilde{\Sigma}^{K_{\mathrm{field}}}_M$ corner-saturated regime — MO-1 stratified Morse on $\widetilde{\Sigma}^K_M$ becomes relevant. Current Day 3 EOD CV-1.5.1 D-6a uses Option A pragmatic (interior only, corners excluded) which preserves SIDESTEPPED status. Critical-blocker count "0" at CV-1.5.1 is **temporally conditional** on architecture choice (per Commitment 16 K-status + OAT-4 Shared-pool architecture decision pending CV-1.6).
+
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD CV-1.5.1; rider added per 4-agent ontological depth analyst recommendation)
 **References:**
 - `THEORY/logs/daily/2026-04-24/02_development.md` §2, §5 (σ on Σ_m, single-formation)
 - `THEORY/logs/daily/2026-04-24/16_C2_closure.md` §7 (MO-1 sidestep note)
 - `THEORY/logs/daily/2026-04-24/99_summary.md` §8 (sidestep vs resolution distinction)
-- Multi-formation σ Phase 5: deferred to W5+ (W4 weekly_summary §6.4)
+- `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §5.4 (explicit re-engagement of MO-1 at multi-formation level)
+- Multi-formation σ Phase 5: D-6a static merged at CV-1.5.1; D-6b dynamic deferred to W6+ via NQ-242
+
+---
+
+### **OP-0008: σ^A K-jump Inheritance Non-Determinism**
+
+**Statement:**
+Under K-field gradient flow on shared-pool $\widetilde{\Sigma}^K_M$ (Phase 7 R1.3 architecture), at K-jump times $t^*$ (where $K_{\mathrm{act}}(t^{*-}) > K_{\mathrm{act}}(t^{*+})$, formation merger event), the post-merger σ^A($t^{*+}$) is **NOT deterministic** in pre-merger σ^A($t^{*-}$) alone. Inheritance map $\Phi : \sigma^A(t^{*-}) \to \sigma^A(t^{*+})$ requires merger-geometry data $\mathcal{M}$ = (which two formation indices $j, k$ merge; cluster centroids; post-merger relaxation trajectory; orientation alignment).
+
+**Evidence:**
+- Day 3 deepening pass `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` Lemma 4.4.1(c): formal non-determinism claim, Cat C asserted.
+- Self-critique `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3: Lemma 4.4.1(c) downgraded "Cat B sketch" → "Cat C (conjectured)".
+- Phase 8 T4 SCC↔CH correspondence (`2026-04-28/32_U5_SCC_CH_theorem.md` Cat B target): implicit assumption of deterministic σ-trajectory under CH-correspondence flow — violated by Lemma 4.4.1(c).
+- Working file `THEORY/working/MF/sigma_multi_trajectory.md` §4.2 Lemma 4.2(c) Cat status: conjectured (Cat C).
+
+**Impact:**
+- D-6b Commitment 14-Multi DYNAMIC Cat A path (CV-1.6+) requires **rich-σ augmentation**: σ-tuple expanded to include cluster centroid, orientation, and Wigner-von Neumann data beyond eigenvalue tuple.
+- **Bifurcates CV-1.6 release path**:
+  - Path A: accept non-determinism, register Cat B target with explicit non-deterministic K-jump map.
+  - Path B (Cat A target): rich-σ augmentation (NQ-242c explicit construction + NQ-242d σ^D symmetry-emergence).
+- Phase 8 T4 caveat needed in Paper §4.5.7 SCC↔CH correspondence section: "static correspondence intact; dynamic σ_multi^A(t) ↔ CH flow correspondence requires σ_rich".
+
+**Status:** ⚠️ **TENTATIVE** (Cat C asserted; explicit construction NQ-242c open).
+
+**Severity:** 🟠 **HIGH** — affects D-6b canonical path; CV-1.6 release-blocking for Cat A target if Path B chosen.
+
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD, registered at CV-1.5.1).
+
+**Direct-attack NQs:**
+- **NQ-242c**: explicit construction of two trajectories with same σ^A($t^{*-}$) but distinct σ^A($t^{*+}$). Cat A target. ~2-3 weeks. W6+ priority.
+- **NQ-242d**: σ^D symmetry-emergence characterization (post-merger stabilizer $\supseteq$ pull-back image). Cat A target. ~2-3 weeks. W6+.
+- **NQ-242**: full Hessian σ-tuple time-series with rigorous K-jump theory. Cat A or B target. 4-6 weeks. W6 Day 1-7 priority.
+
+**Related problems:** OP-0003 MO-1 (re-activation at multi-formation level via D-6b path), OP-0005 K-Selection (K-jump-event path-dependence implication), OP-0009 Multi-Formation Ontological Foundations (OP-0008 ⊂ OP-0009).
+
+**References:**
+- Day 3 deepening: `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c)
+- Self-critique: `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3
+- Working file: `THEORY/working/MF/sigma_multi_trajectory.md` §4.2
+- Phase 8 T4 implicit assumption: `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`
+
+---
+
+### **OP-0009: Multi-Formation Ontological Foundations**
+
+**Statement:**
+Multi-formation σ-framework (D-6a static at CV-1.5.1 + D-6b dynamic at CV-1.6+) implicitly relies on 7 ontological commitments that are NOT all canonically registered as of CV-1.5.1. The implicit foundation is:
+
+1. **OP-0009-K (K-status)**: K (formation count) ontological position. **PARTIALLY RESOLVED** by Commitment 16 (CV-1.5.1) — K_field/K_act two-tier decomposition. *(OAT-1 done; working file `working/MF/K_status_commitment.md`.)*
+2. **OP-0009-F (F as derived diagnostic)**: F (peak count, threshold-free upper semi-continuous) canonical registration. Currently inline in T-PreObj-1 + CN17 only; not in §5 derived diagnostics. **OPEN** (OAT-2 W6 Day 1).
+3. **OP-0009-λ (λ_rep ontology)**: λ_rep $\langle u^j, u^k \rangle$ as 5th energy term vs 4-term coupling realization vs simplex-enforcement Lagrange. CN5 (4-term independence) is single-formation 약속 — multi-formation extension status undecided. **OPEN** (OAT-3 W6 Day 2).
+4. **OP-0009-A (Architecture choice)**: K-field architecture I9 ($\Sigma^K_M$, fixed K) vs Shared-pool architecture I9' ($\widetilde{\Sigma}^K_M$, K_act variable). Currently I9 canonical, I9' working only. **OPEN** (OAT-4 W6 Day 2).
+5. **OP-0009-C (C_t multi-formation)**: Co-belonging C_t demoted single-formation; multi-formation status (subsumed by σ_multi^D vs revived primitive). **OPEN** (OAT-5 W6 Day 3).
+6. **OP-0009-Pre (Pre-objective + K-field)**: K-field architecture imports object-like K parameter; potential CN10 violation. Resolution path via "modeling-layer commitment" framing. **OPEN** (OAT-6 W6 Day 4).
+7. **OP-0009-Emp (R23 F=9 σ verification)**: σ-framework Cat A claims (CV-1.5) anchored at F=1 uniform / F=2 first-pitchfork; F=9 default ground state σ behavior empirical only (NQ-141). **OPEN** (OAT-7 W6 Day 5+6).
+
+**Evidence:**
+- 4-agent ontological depth analysis 2026-04-29 EOD (architect / critic / analyst / planner): convergent identification of 5 implicit commitments + 2 supplementary as multi-formation initiation foundations.
+- Critic 7-agent verdict 2026-04-29: REVISE — D-6a should not merge without ontological audit; 5 CRITICAL findings.
+- W4-W5 working trajectory: 5 conflicting K-status uses (External I9 / Kinetic CN6 / Derivative R22 / K_soft / Integer per N-1) coexisted in canonical/working without explicit reconciliation.
+
+**Impact:**
+- CV-1.5.1 D-6a merge proceeded with **partial ontological foundation** (Commitment 16 K-status added; other 6 sub-items deferred to OAT-2..7 W6 working files).
+- CV-1.6 (W6 close) target: 4 ontological D-items (D-CV1.6-O1 K-status if not already in CV-1.5.1 + O2 Shared-pool I9' + O3 F bridge + O4 λ_rep) + 7 process D-items.
+- v2.0 (W11-W12) target: full OP-0009 resolution + Paper 4 NEW (Pre-Objective Multi-Architecture, planner權告).
+- Paper 1 §6 multi-formation forward-reference depends on OP-0009 sub-items partially resolved before W9 submit.
+
+**Status:** ⚠️ **PARTIALLY ADDRESSED** at CV-1.5.1 + Day 4 morning OAT batch session (2026-04-30). 1 of 7 sub-items RESOLVED (OP-0009-K via Commitment 16 CV-1.5.1); 6 of 7 PARTIALLY RESOLVED at CV-1.6 candidate level via OAT-2..7 working files (W5 Day 4 advance from W6).
+
+**Sub-item Status Table (W5 Day 4 EOD post-Critic verdict propagation):**
+
+| Sub-item | Pre-Day 4 | Post-Day 4 OAT batch | Resolution mechanism | Working file | Promotion target |
+|---|---|---|---|---|---|
+| **OP-0009-K** (K-status) | OPEN | ✅ **RESOLVED** | Commitment 16 K_field/K_act two-tier decomposition | `K_status_commitment.md` (480 lines) | CV-1.5.1 (DONE) |
+| **OP-0009-F** (F derived diagnostic) | OPEN | ⚪ **PARTIALLY RESOLVED** | F as derived diagnostic register §5.5 + CN17+ amendment + 4-quantity bridge | `F_Kstep_K_triple.md` (359 lines) | CV-1.6 D-CV1.6-O3 |
+| **OP-0009-λ** (λ_rep ontology) | OPEN | ⚪ **PARTIALLY RESOLVED** | Argument B (architectural-layer coupling) + Option 3 (CN10 contrastive); strict KKT identification verification fail | `lambda_rep_ontology.md` (242 lines) | CV-1.6 D-CV1.6-O3 |
+| **OP-0009-A** (Architecture: K-field vs Shared-pool) | OPEN | ⚪ **PARTIALLY RESOLVED** | I9 + I9' complementary modeling-layer commitments via Tool A1 stratified space | `shared_pool_canonical_proposal.md` (335 lines) | CV-1.6 D-CV1.6-O2 |
+| **OP-0009-C** (C_t multi-formation) | OPEN | ⚪ **PARTIALLY RESOLVED** | Option C-3 variant: $C_t$ demoted maintained + σ_multi^D orthogonal (not subsumes); architecture-conditional (K-field 4a primary) | `cobelonging_vs_sigmaD.md` (392 lines) | CV-1.6 D-CV1.6-O4 |
+| **OP-0009-Pre** (Pre-objective + K-field tension) | OPEN | ⚪ **PARTIALLY RESOLVED** | Path A+C+Tool A2 quotient hybrid; unordered configuration ontologically primary | `pre_objective_K_field_tension.md` (534 lines) | v2.0 §1 amendment |
+| **OP-0009-Emp** (R23 empirical verification) | OPEN | ⚪ **PARTIALLY RESOLVED** | R23 fullscale dataset numerical analysis: F=63 max, all 56 minimizers F > K_step, σ-irrep CONFIRMED 0 exceptions; **BC-1 fails generic** (R23 generic = overlapping regime) | `single_high_F_equivalence.md` (511 lines) | CV-1.6 partial; full v2.0 |
+
+**Net OP-0009 status post-Day 4 OAT batch**: **PARTIALLY ADDRESSED** (1 RESOLVED + 6 PARTIALLY RESOLVED). Full RESOLVED status not achieved at CV-1.6; v2.0 (W11-W12) deferred for Pre-objective + K-field tension full canonical §1 amendment.
+
+**Important caveat (W5 Day 4 EOD post-Critic, 2026-04-30):** Per Critic 7-agent verdict (`daily/2026-04-30/05_critic_final_review.md`) MAJOR-3 finding, OP-0009 should be framed as "framework + 1/7 sub-items closed (K via Commitment 16) + 6/7 sub-items partially addressed", **not** as "OP-0009 framework-level resolved" or "Theory Deepening Stretch 100%". Future canonical/CHANGELOG/paper claims should reflect this calibrated status to avoid inflated-resolution mis-citations.
+
+**Severity:** 🟠 **HIGH** — release-blocking for Cat A multi-formation σ-framework completeness; not blocking for CV-1.5.1 D-6a static (Cat A definitional only).
+
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD, registered at CV-1.5.1).
+
+**Direct-attack NQs and OAT working files**:
+- OAT-1 (DONE): `working/MF/K_status_commitment.md` — Commitment 16 K-status proposal.
+- OAT-2 (W6 Day 1 evening): F/K_step/K_act/K_field bridge — `working/MF/F_Kstep_K_triple.md` planned.
+- OAT-3 (W6 Day 2 evening): λ_rep ontological status — `working/MF/lambda_rep_ontology.md` planned.
+- OAT-4 (W6 Day 2 evening): Shared-pool architecture I9' — `working/MF/shared_pool_canonical_proposal.md` planned.
+- OAT-5 (W6 Day 3 PM): C_t vs σ_multi^D coexistence — `working/MF/cobelonging_vs_sigmaD.md` planned.
+- OAT-6 (W6 Day 4 PM): Pre-objective + K-field tension — `working/MF/pre_objective_K_field_tension.md` planned.
+- OAT-7 (W6 Day 5+6): R23 F=9 ↔ K=9 K-field empirical equivalence — `working/MF/single_high_F_equivalence.md` planned.
+
+Total OAT effort: ~8 hours theory work spread W6 Day 1-7, parallel to NQ-242 numerical lane.
+
+**Related problems:** OP-0003 MO-1 (sub-item OP-0009-A architecture decision triggers MO-1 re-activation); OP-0005 K-Selection (sub-item OP-0009-K addresses what K is, not what selects K_act); OP-0008 σ^A K-jump non-determinism (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
+
+**References:**
+- 4-agent ontological depth analysis: inline conversation 2026-04-29 EOD (architect/critic/analyst/planner).
+- OAT-1 working file: `THEORY/working/MF/K_status_commitment.md`.
+- D-6a static merge: `THEORY/canonical/canonical.md` §13 T-Commitment-14-Multi-Static (CV-1.5.1).
+- D-6b dynamic deferred: `THEORY/working/MF/sigma_multi_trajectory.md` Theorem 4.6.1 Cat C/B target.
+- Critic 7-agent verdict 2026-04-29 EOD (escalated to ADVERSARIAL mode at Phase 2).
 
 ---
 
@@ -330,7 +441,7 @@ Theory on discrete graphs; what is continuous limit?
 | Severity | Count | Blocked By | Status |
 |----------|-------|-----------|--------|
 | 🔴 ~~CRITICAL~~ | ~~3~~ → **0** | — | **All 3 resolved/clarified/sidestepped in W4 (2026-04-24)** |
-| 🟠 **HIGH** | 1 (was 3) | None | OP-0005 K-selection still open (partially addressed by σ-framework + CN15) |
+| 🟠 **HIGH** | **3 (was 1)** | OP-0009 release-blocking for CV-1.6 Cat A | OP-0005 K-Selection (partial: σ-framework + CN15 + Commitment 16 K_field/K_act); OP-0008 σ^A K-jump non-determinism (W5 Day 3 EOD); OP-0009 Multi-Formation Ontological Foundations (W5 Day 3 EOD; sub-item OP-0009-K resolved by Commitment 16; sub-items 2-7 OAT-2~7 W6+) |
 | 🟡 **MEDIUM** | 4 (was 5) | Mostly orthogonal | unchanged |
 | 🟢 **LOW** | 4+ | None | Out of scope |
 | **Total active open** | **5+** | — | — |
@@ -403,7 +514,7 @@ Low (future):                 Dynamic topology, Stochastic, Continuous limit
 
 **Last updated:** 2026-04-25 (W4 weekly close, post-resolution)
 **Total problems:** 15+ registered
-**Active blockers:** 0 critical (was 3 pre-W4), 1 high (OP-0005 K-Selection partial)
+**Active blockers:** 0 critical (was 3 pre-W4; MO-1 OP-0003 re-activation trigger registered W5 Day 3 EOD CV-1.5.1 — temporally conditional on D-6b approval at CV-1.6); 3 high (OP-0005 K-Selection partial; OP-0008 σ^A K-jump non-determinism W5 Day 3 EOD; OP-0009 Multi-Formation Ontological Foundations W5 Day 3 EOD with sub-item OP-0009-K resolved by Commitment 16)
 **W4 changes:** F-1 split-resolved, M-1 layer-clarified, MO-1 sidestepped (3 Critical → 0)
 **Time to resolution (F-1):** 6 days from N-1 reframing (04-19) to SPLIT-RESOLVED (04-24)
 
