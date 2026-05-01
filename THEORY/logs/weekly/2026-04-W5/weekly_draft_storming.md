@@ -58,6 +58,279 @@ canonical/canonical.md + theorem_status.md
 
 <!-- Daily entries appended below this line, most recent first -->
 
+## 2026-05-01 — W5 Day 5 (RECONCILIATION-FIRST): Day 4 burst integration + T-σ-Theorem-4 γ/β/α path assignment + CV-1.7 parking lot + W6 D1-D7 plan preview
+
+### Posture shift
+
+Day 5 was **NOT a growth day**. After Day 4's expansion + deepening burst (~10,800 lines / 42 files / 1 🔴 critical T-σ-Theorem-4 finding / post-EOD un-audited cluster), Day 5 was a *calibration / reconciliation / cataloging / W6-priming* day. This was necessary after Day 4 burst per `pre_brainstorm.md` §6.
+
+**Output**: ~1641 working/log lines / 8 daily files (`01_morning_state_reload.md` through `99_summary.md`); canonical edits = **0**; new teammate dispatch = **0**. Intentionally an order of magnitude smaller than Day 4 per plan.md §4 inventory + Risk-8 mitigation.
+
+### Modified
+
+- **CV-1.6 packet recalibrated** (`THEORY/logs/daily/2026-05-01/04_cv16_packet_recalibration.md`): inclusion count reduced from naive 11 D-items to **effective 10** (5 ✅ READY/READY-NEAR + 5 🟡 PARTIAL with caveats + 3 🔴 DEFER + 17 🅿 CV-1.7 parking lot files). Reduction is honesty, not failure.
+- **T-σ-Theorem-4 red lane bounded** (`03_t_sigma_theorem4_reconciliation.md`): 3-way A_2/A_1 discrepancy (2/3 vs 4 vs 8) cleanly partitioned into 🥇γ Σ_m-Hessian convention audit (priority, W6 D1-D3, NEW `working/SF/sigma_m_hessian_convention_audit.md`) + 🥈β R22 cubic-equivariant audit (W6 D4-W7, NEW `r22_a2_a1_audit.md`) + 🥉α finite-L vs continuum extrapolation (existing `nq187b_L_extrapolation.md` + new `CODE/scripts/nq187b_a2_a1_extrapolation.py`).
+
+### Pending (W6 handoff)
+
+- **T-σ-Theorem-4 stays Cat B**; Cat A re-promotion deferred to **CV-1.7+** post-(γ)+(β)+(α) closure. CV-1.6 caveat addition only (provisional text drafted in `03_*` §4.1; W6 D5 finalize).
+- **Post-EOD op-0008 cluster** (~17 files / ~8145 lines: σ_rich foundation 8 + K-Selection 4 + reconciliation drafts 2 + Commitment 18/19 packets + π_1 + Lie algebra + σ-class category + nq242c) → **CV-1.7 parking lot** with W7+ critic dispatch checklist enforced.
+- **W6 D1-D7 daily skeleton drafted** (`07_w6_plan_preview.md` 349 lines, Block 6 EXTENSION justified by user "오늘도 작업 많이 할거라"): D1 γ + α direct + OAT-2 / D2 γ-L8 + β cond + NQ-242 PH P1 setup + OAT-3 / D3 α formalize + γ verdict + OAT-4 + NQ-242 P1 dense + `oat5-c_t-prover` cond / D4 NQ-198k + NQ-244 analysis + OAT-5 / D5 MO-1 face decision + OAT-7 + Phase 2 zigzag + caveat finalize / D6 NQ-242c + CV-1.6 finalize draft + parking lot list / D7 CV-1.6 release + W6 close.
+- **5 specialist teammate roles parked** for W6 D1 morning dispatch: `gamma-path-prover` (unconditional), `nq242-ph-engineer` (unconditional), `r22-audit-prover` (conditional), `oat5-c_t-prover` (conditional), `cv16-finalizer` (D6-D7 unconditional).
+
+### Clarified
+
+- **Theorem 4.6.1 / Lemma 4.2(c) label hygiene**: ✅ NO EDIT NEEDED. Wave 3 already applied Critic C3 / MAJOR-4 corrections (`sigma_multi_trajectory.md` Lemma 4.2(c) "Cat C (conjectured)" + Theorem 4.4(iii) consistent). σ_rich Path B does NOT retroactively over-promote plain σ^A status (different layers). Optional supplementary "small label-fix diff" item per plan.md §4 was NOT triggered.
+- **NQ-244 launch script does NOT exist at Day 5 entry**: `ls CODE/scripts/` audit revealed no `nq244*` script. Day 5 produces operator-ready launch metadata + adaptation pointer (`_v5_3D_torus.py` + `_f7_K10_LSW.py` templates); actual launch deferred to operator. W6 D4 result analysis lane absorbs deferral. Risk-3 mitigation: NQ-244 did NOT hijack Day 5 session.
+- **OP-0009 wording binding** per Critic MAJOR-3: "framework + 1/7 sub-items resolved (K via Commitment 16) + 6/7 sub-items partially addressed". Used verbatim across Day 5 outputs + W6 D7 CV-1.6 release narrative requirement.
+
+### Retired (this session)
+
+- 4 Wave 5 dispatch contingencies (NQ-187b / σ_rich vs σ_standard / Schramm-locality positive / K-Selection (c) numerical) all defer to W6+ with named reroute paths. NO new dispatch today (`06_active_teammate_and_wave5_decisions.md` §4.5).
+- Active teammates 3/3 (op-0008-architect / lanczos-engineer / sigma-fingerprint-numerical) approved SHUTDOWN FINAL; team `scc-wave3-deep-research` config preserved (empty roster) for W6 reuse. lanczos-engineer Task #41 status verification-deferred (Risk-6).
+
+### Ladder position
+
+W5 strategic plan **"Theory Deepening Stretch"** ladder: ~500%+ achieved at Day 4 EOD; **Day 5 does not advance the ladder, only solidifies position**. W5 close path: Day 6 (Sat 5/2) weekly_summary.md substantive draft; Day 7 (Sun 5/3) finalize + `W6_strategic_plan.md` from `07_w6_plan_preview.md` seed.
+
+### Day 4 (2026-04-30) entry placeholder
+
+⚠️ Day 4 entry is missing from this storming file at Day 5 entry. Day 5 lead does NOT backfill (out of Day 5 scope per anti-drift). User backfill recommended at W5 close (Day 7) before `weekly_summary.md` finalize. Day 4 EOD reflection canonical source: `THEORY/logs/daily/2026-04-30/99_summary.md` (~331+ lines including §11 OAT batch addendum + §12 PM infinite-develop batch + §13 Wave 3 Native Team + §14 Wave 3 final productivity).
+
+### Hard constraint compliance
+
+`99_summary.md` §9 audit verdict: PASS. canonical edits 0; OP silent resolution 0; CN10/CN5/u_t primitive/K-status all clean; P-F flags maintained; no Research OS; no OMC pool calls.
+
+### Supplementary finding (post-Block 5, user "keep going" directive)
+
+**🔴 Substantive Day 5 supplementary**: α-path direct compute script `CODE/scripts/nq187b_a2_a1_extrapolation.py` (154 lines, NEW) executed today; result $A_2/A_1 = 2/3$ **identically at every $L \in \{4, 8, 16, 32, 64, 128\}$** (residual L² ~10⁻¹⁶). The post-EOD `working/SF/nq187b_L_extrapolation.md` §2.6 table (claiming L-dependent values 0.80 / 0.762 / 0.703 / 0.668 / 0.659 → 2/3 asymptotic) is computationally **incorrect**: correct $\sum_i \cos^4((i+1/2)\pi/L) = 3L/8$ exactly for all $L \geq 2$ (vs claimed 1.25 / 2.625 / 5.6875 / ...; arithmetic error). Implication: **β-path priority elevated from conditional to unconditional W6 D1-D2 dispatch** alongside γ-path; α-path closed Cat A as supporting evidence. R22's claim 4 vs naive 2/3 is a *structural* convention/derivation question, not a finite-L correction question. Errata recommendation drafted (`08_alpha_path_direct_compute_finding.md` §5); not applied today (W6 D1 morning ~15min task). The CV-1.7 parking lot discipline (post-EOD cluster default = PARTIAL until critic-checked) is **vindicated** by this finding — the cluster contained a real arithmetic error caught only by Day 5 supplementary cross-check.
+
+### Sources
+
+- `THEORY/logs/daily/2026-05-01/01_morning_state_reload.md` (146 lines).
+- `THEORY/logs/daily/2026-05-01/02_verification_audit.md` (312 lines).
+- `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md` (250 lines).
+- `THEORY/logs/daily/2026-05-01/04_cv16_packet_recalibration.md` (227 lines).
+- `THEORY/logs/daily/2026-05-01/05_nq244_launch_note.md` (171 lines).
+- `THEORY/logs/daily/2026-05-01/06_active_teammate_and_wave5_decisions.md` (186 lines).
+- `THEORY/logs/daily/2026-05-01/07_w6_plan_preview.md` (349 lines).
+- `THEORY/logs/daily/2026-05-01/99_summary.md` (277 lines).
+- `THEORY/logs/daily/2026-05-01/08_alpha_path_direct_compute_finding.md` (229 lines, supplementary).
+- `THEORY/logs/daily/2026-05-01/TASK_LEDGER.md` (Day 5 EOD + W6 D1 morning state, supplementary).
+- `CODE/scripts/nq187b_a2_a1_extrapolation.py` (154 lines, supplementary CODE).
+- `CODE/scripts/results/nq187b_a2_a1_extrapolation.json` (supplementary CODE artifact).
+
+---
+
+## 2026-04-30 — W5 Day 4 (theory-deepening burst): OAT-2~7 + 4-tool mapping verified + Wave 1+2 NQ deepening + Wave 3 native team activated + 196/196 tests + 1 🔴 NQ-187 critical finding + post-EOD op-0008-architect 17-file cluster
+
+**Backfill note** *(written Day 5 EOD 2026-05-01 by Day 5 lead; original Day 4 storming append was missed during Day 4 close due to Wave 3 native team activation eclipse + post-EOD op-0008-architect continuation past the 99_summary close. This entry consolidates Day 4 99_summary §1-§14 + 12_wave3_eod_status + 13_wave3_critical_findings + TASK_LEDGER Wave 3 마무리 into the storming format.)*
+
+### Mission
+
+User directives across the day:
+- AM: "그냥 내일 plan이랑 pre_brainstorm 지우고 지금하자" → Day 4 process plan + pre_brainstorm deleted; CV-1.5.1 batch apply mode shift.
+- AM (later): "Paper 만드는 단계는 아직 이르다" + "최신 위상수학·군론·집합론 동향 정리 (2024-2026) + 4 mathematical tools" → 4-tool mathematical scaffolding verification protocol triggered.
+- PM (Wave 1): "아직 close 안하고 끝까지 할수있는데까지 가봄 모든 스킬과 에이전트 MCP를 동원해서 무한 디벨롭 multi formation 및 single formation을 지속 감사하고 지속적으로 open problem을 풀려고 노력 해야함" → Persistent Autonomous Execution Mode + 9 Wave 1 background agents.
+- PM (Wave 3): "서브에이전트 말고 tmux에서 띄우는 진짜 teammates를 create하라" + "이제 Task를 아주 정교하고 자세하고 많이 만들어서 아주 정밀하게 진행해줘. 논스탑 브레인스토밍 모든 방법을 동원하여" → Claude Code native agent team `scc-wave3-deep-research` activated; 60 detailed tasks; 11 teammates spawned.
+
+Net Day 4 mode: **theory-deepening burst** (vs Day 3's "MODERATE-CONSOLIDATION"). Theory Deepening Stretch ladder achieved AM EOD ~100%, PM Wave 1+2 EOD ~200%, PM Wave 3 EOD ~500%+ (vs original 100% W5 strategic plan target).
+
+### Added
+
+- **canonical (~125 lines AM)**: R23 generic state caveat at T-σ-multi-A-Static (C-0718) entry — `well-separated regime is null in R23 generic state`; D-6a Multi-Static Cat A in well-separated only; Cat B target in T-Persist-K-Weak overlap regime (R23 generic). BC-1 conjecture (per-formation F ↔ aggregate F lobes bijection) **fails generic** acknowledged.
+- **working/MF AM batch (OAT-2~7 + supplementary, ~3063 lines net delta)**:
+  - `K_status_commitment.md` (480 lines, OAT-1 from W5 Day 3 EOD precedent).
+  - `mathematical_scaffolding_4tools.md` (612 lines, OAT-supplementary; 4-tool mathematical scaffolding §8.1 Commitment 17 candidate text).
+  - `F_Kstep_K_triple.md` (359 lines, OAT-2; BC-1 fails generic update applied).
+  - `lambda_rep_ontology.md` (242 lines, OAT-3; Argument B + Option 3 contrastive; strict KKT identification fail honest).
+  - `shared_pool_canonical_proposal.md` (335 lines, OAT-4).
+  - `cobelonging_vs_sigmaD.md` (392 lines, OAT-5; Option C-3 variant; orthogonality witness).
+  - `pre_objective_K_field_tension.md` (534 lines, OAT-6; Path A+C+Tool A2 hybrid).
+  - `single_high_F_equivalence.md` (511 lines, OAT-7; R23 numerical + σ-irrep CONFIRMED 0 exceptions; F=63 max; all 56 minimizers F > K_step).
+- **working/SF PM Wave 1+2 (NQ deepening, ~2000 lines)**:
+  - `sigma_theorem4_higher_order.md` (NQ-187 initial 303 lines; Wave 3 4-fix revised pivot 819 lines).
+  - `sigma_uniqueness_theorem.md` (NQ-188 ~360 lines).
+  - `sigma_to_crisp_recovery.md` (NQ-189 ~430 lines).
+  - `sigma_topological_invariance.md` (NQ-190 ~268 lines).
+  - `sigma_trajectory_perturbation.md` (NQ-244 W5 Day 4 PM Wave 2 ~248 lines).
+- **working/MF PM Wave 1+2 (~1000 lines)**:
+  - `formation_birth_string_breaking.md` (NQ-253 486 lines; Wave 3 7-fix revision applied).
+  - `scc_mass_gap_connection.md` (NQ-249 413 → 445 lines after Wave 3 nq-249-revisor C1+C2+C3+M1 fixes; M2-M6 + m1-m5 deferred to W6).
+- **Wave 3 lead-direct (17 files / ~3500+ lines, scc-wave3-deep-research team-lead)**:
+  - `foundational_bridges_2026.md` (340 → 402 lines; 7 bridges B-1..B-7; NQ-261..267).
+  - `theorem_2g_schramm_restatement.md` (250 → 156 lines; T-PreObj-1G Schramm-locality reframing CV-1.6 implicit O6 candidate).
+  - `CV-1.6_packet_crosswalk.md` (350 → 205 lines; 11 D-items mapped).
+  - `cn15_static_dynamic_separation.md` (200 → 146 lines; CN15 CV-1.6 implicit O7 candidate).
+  - `n1_kramers_extension.md` (170 → 121 lines; N-1 ↔ K-Selection (b) connection; P-F flagged; CV-1.6 implicit O8 candidate).
+  - `sigma_class_category.md` (250 → 185 lines; σ-class category Fukaya-spirit).
+  - `op003_mo1_status_review.md` (150 → 140 lines; MO-1 sidestep preservation review).
+  - `sigma_rich_refinement_theorem.md` (250 → 188 lines; Cat A target σ_rich refinement claim).
+  - `sigma_fingerprint_qrcode.md` (250 → 195 lines; Bridge B-4 σ-fingerprint algorithm spec; NQ-264 Cat B target).
+  - `commitments_18_19_drafts.md` (180 → 144 lines; CV-1.7+ Commitment 18 σ_rich + Commitment 19 K-Selection axiom drafts).
+  - `r24_dataset_design.md` (180 → 146 lines; R24 dataset for Bridge B-2 σ-locality verification).
+- **Wave 3 teammate-completed (~14 files / ~7300+ lines)**:
+  - **op-0008-architect** EXCEPTIONAL: 17 files / 6590 lines / 4 clusters (σ_rich foundation 8 / 3051 + K-Selection 5 / 1771 + T-σ-Theorem-4 reconciliation 2 / 760 + original 2 / 1008). Continued past 99_summary close → **post-EOD un-audited cluster**.
+  - **op-0005-architect**: `k_selection_mechanism.md` (520 lines; OP-0005 attack 3 candidates a/b/c).
+  - **nq-187-rewriter**: 4-fix pivot revision (303 → 819 lines).
+  - **nq-249-revisor**: `10_critic_NQ249_review.md` (517 lines) + `scc_mass_gap_connection.md` C1+C2+C3+M1.
+  - **bernshtein-prover**: `bernshtein_conservation.md` (206 lines).
+  - **schramm-locality-prover**: `schramm_sigma_locality_theorem.md` (343 lines) + `CODE/scripts/sigma_locality_R23_cycle_torus.py` + JSON (3 graph classes verified).
+  - **lanczos-engineer**: `CODE/scripts/test_sigma_theorem4_scaling.py` + `CODE/scripts/results/sigma_theorem4_scaling.json` + `daily/2026-04-30/11_nq187_scaling_test_results.md` (~250 lines).
+  - **pi1-formation-prover**: `formation_fundamental_group.md` (349 lines; B-3 π_1 formal Cat C).
+  - **sigma-rich-coder**: `CODE/scc/sigma_rich.py` (149+ lines, NamedTuple SigmaRich + compute_sigma_rich + helpers) + `CODE/tests/test_sigma_rich.py` (11 unit tests pass) + `test_sigma_rich_integration.py` (5 integration tests pass).
+  - **changelog-coordinator**: `THEORY/CHANGELOG.md` Wave 3 entry +136 lines + 6 cross-ref edits.
+
+Plus daily logs PM Wave 1+2+3 (Day 4 daily folder ~16 files / ~385KB):
+- `01_canonical_promotion_log.md` ~370 (CV-1.5.1 merge).
+- `02_4tool_mapping_summary.md` ~280 (4-tool verification daily).
+- `03_OAT_batch_log.md` ~280 (OAT 2-7 batch).
+- `04_external_references_verification.md` ~1002 (8 fact corrections AM 7 + Wave 2 1).
+- `05_critic_final_review.md` ~290 (Critic AM batch verdict; MAJOR-3 OP-0009 wording binding).
+- `06_gauge_theory_connections_analysis.md` ~720 (gauge theory connections).
+- `07_external_references_gauge_extension.md` ~1212 (gauge external references; document-specialist Wave 1).
+- `08_pm_infinite_develop_batch.md` ~127 (PM Wave 1+2 batch summary).
+- `09_critic_re_review_5files.md` ~200 (NQ-187/188/189/190/253 critic; 1 ACCEPT + 2 ACCEPT-WITH-RESERVATIONS + 2 REVISE).
+- `10_critic_NQ249_review.md` ~517 (NQ-249 REVISE; 3 critical + 6 major + 5 minor).
+- `11_nq187_scaling_test_results.md` ~180 (lanczos-engineer numerical p ≈ 1).
+- `12_wave3_eod_status.md` ~155 (Wave 3 EOD lead-direct snapshot).
+- `13_wave3_critical_findings.md` ~232 (🔴/🟢/🟡 bulletin; NQ-187 p≈1 + NQ-187b 3-way A_2/A_1 2/3 vs 4 vs 8).
+- `14_external_references_wave3_audit.md` ~180 (Wave 3 external references audit).
+- `15_wave4_carry_forward.md` ~180 (Day 5 morning entry point).
+- `99_summary.md` ~876 (Day 4 EOD with §11 OAT batch + §12 PM infinite-develop + §13 Wave 3 native team + §14 Wave 3 final productivity addenda).
+
+### Modified
+
+- **R23 generic state caveat** added at canonical T-σ-multi-A-Static (C-0718) per OAT-7 scientist agent finding (R23 fullscale 56 minimizers, all F > K_step; well-separated null set).
+- **BC-1 conjecture** generic-fail update applied to `working/MF/F_Kstep_K_triple.md` §3.6.
+- **`working/MF/sigma_multi_trajectory.md`** Theorem 4.6.1 보강 (242 → 283 lines): PH reformulation §3.7 added (centroid Vietoris-Rips PH; $K_{\mathrm{act}}(t) = \dim H_0(R_r(\{c^{(j)}(t)\}))$); Lemma 4.2(c) Cat status downgraded "Cat B sketch" → "Cat C (conjectured)" per Critic C3 / 09_*; Theorem 4.4(iii) consistency; FM1-FM4 PH context; NQ-242 Phase 1-4 PH-reframed breakdown (4-6 weeks → 3-4 weeks via PHAT/GUDHI/Ripser).
+- **CN6 reference** maintained (CV-1.5.1 amendment from Day 3 EOD: "K kinetically determined" → K_act per Commitment 16).
+- **8 citation corrections** applied (W5 Day 4 cumulative; AM 7 + PM Wave 1+2 1):
+  - Allen-Cahn 1972 → 1979 (*Acta Metall.* 27).
+  - Garcke-Nestler-Stoth 2004 → 1999 (*SIAM J. Appl. Math.* 60(1)).
+  - Specht 1933 → 1935 (*Math. Z.* 39).
+  - Mackey → McKay (Cabanes-Späth conjecture).
+  - 4D wild surfaces "Mrowka-Kronheimer-Ruberman-Hughes" → Hughes-Ruberman 2024 (arXiv:2402.01921).
+  - Formigrams "Ginot et al." → Kim-Mémoli (arXiv:1712.04064).
+  - Bertozzi 2017 graph Allen-Cahn → García Trillos-Murray 2017 (J. Stat. Phys.); Bertozzi-Esedoğlu-Gillette 2007 image processing.
+  - **8th (PM Wave 2)**: García Trillos & Murray 2017 vol **169(3) → 167(3)**, pages 934–958, DOI 10.1007/s10955-017-1772-4.
+
+### 4-tool mathematical scaffolding verification
+
+User AM directive: 4 도구 권고 검증 (stratified space / unordered configuration / persistent homology + zigzag / multi-phase field model).
+
+`mathematical_scaffolding_4tools.md` 612 lines §1-§9 + §8.1 Commitment 17 candidate text:
+
+| Tool | 검증 결과 | SCC mapping |
+|---|---|---|
+| A1 Stratified Space | ✅ PASSED | $\widetilde\Sigma^K_M = \bigsqcup S_{K_{\mathrm{act}}}$ Whitney-stratified semi-algebraic |
+| A2 Quotient Space | ✅ PASSED | $\widetilde{\widetilde\Sigma}^K_M = \widetilde\Sigma^K_M / S_{K_{\mathrm{field}}}$ ontologically primary |
+| A3 Persistent Homology | ✅ PASSED | $\sigma_{\mathrm{multi}}^A(t) \cong$ centroid Vietoris-Rips PH barcode |
+| A4 Multi-Phase Field | ⚠️ PARTIAL | SCC bilinear λ_rep ≠ KKT Lagrange exactly; Option 3 contrastive 권고 |
+
+22 multi-formation 한계 → 4-tool 적용 결과:
+- ✅ 자동 해소: 9개 (1, 2, 6, 10, 11, 12, 15, 18, 20).
+- ⚠️ Partial: 2-3개 (4, 17).
+- ⏳ Pending: 10-11개 (3, 5, 7, 8, 9, 13, 14, 16, 19, 21, 22).
+
+Critical insights:
+- Architecture 충돌 (Tool A1) 자동 해소: K-field와 Shared-pool은 *같은 층화공간의 다른 보기*; K-field = 코딩 (K-1) slice of top stratum.
+- Pre-objective + K-field tension (Tool A2) 해소: Unordered configuration ontologically primary; ordered K-field = modeling-layer lift.
+- σ^A K-jump 비결정성 = standard PH fact (Tool A3): 0-dim barcode ↛ 1-dim barcode at critical events.
+- NQ-242 reframe: 4-6 weeks → **3-4 weeks** (PHAT/GUDHI computational topology pipeline).
+- λ_rep Argument C strict fail honest (Tool A4): SCC bilinear ≠ KKT exactly; Option 3 contrastive (CN10 not reductive) 권고.
+
+### Wave 3 Native Team Activation (PM late, 2026-04-30)
+
+`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` 활성화 확인 → `TeamCreate` + `Agent(team_name=...)` 진입.
+- **Team name**: `scc-wave3-deep-research`.
+- **Config**: `~/.claude/teams/scc-wave3-deep-research/config.json`.
+- **Tasks**: `~/.claude/tasks/scc-wave3-deep-research/` (60 detailed tasks created).
+- **Lead session**: `team-lead@scc-wave3-deep-research`.
+- **Window 1:0**: 6 panes (lead + 5 first-batch teammates) + 3 second-batch + 2 third-batch = 11 teammates total.
+- **Auxiliary omc-team CLI** (window 1:1): `wave-3-oat-deepening-team-work` 3 panes (OAT-2/3/4 workers).
+
+Memory note: `feedback_native_teams.md` registered — "for sustained Perception_theory work, use TeamCreate not subagents" (user preference).
+
+### Critical findings (Day 4 EOD, 2 🔴 + 3 🟢 + 1 🟡)
+
+- **🔴 NQ-187 numerical p ≈ 1 falsifies T-σ-Theorem-4 leading-order claim** (lanczos-engineer): on $D_4$ free-BC $L \in \{4, 8, 16\}$ grid, $\mu_0 = \epsilon |W''(c)|$, $\mu_1 = 2 \epsilon |W''(c)|$ asymptotically; ratio $\mu_1/\mu_0 = 2$ (not 1 as canonical claims); power-law $p_{16} = 1.03 \pm 0.014$ rejects both §3.2 polynomial-equivariant (predicted p=2) and §5 alternative (predicted p=3/2). Triggers NQ-187b dispatch + T-σ-Theorem-4 canonical revision packet (`sigma_theorem4_canonical_revision.md` 338 lines, op-0008-architect Task #63).
+- **🔴 NQ-187b 3-way A_2/A_1 discrepancy** (op-0008-architect, post-EOD): naive continuum-style 2/3 vs R22 working file claim 4 vs NQ-187 numerical implied 8 (effective). 6× discrepancy R22 vs naive; 12× discrepancy naive vs implied; 2× R22 vs implied. Combined audit needed at W6 Day 1-3 reconciliation triple γ (Σ_m-Hessian convention) / β (R22 derivation) / α (finite-L extrapolation). *(Day 5 EOD R-1 finding revealed §2.6 table itself is computationally incorrect; correct closed-form $A_2/A_1 = 2/3$ exactly at every $L \geq 2$; β-path priority elevated to unconditional W6 D1-D2 dispatch per Day 5 R-2.)*
+- **🟢 σ-locality verified across 3 graph classes** (schramm-locality-prover): R23 D_4 free-BC L=8 grid + Z_n cycle n=20 + Z_n × Z_n torus n=10. JSON: `"all_locality_predicates_hold": true`. T-PreObj-1G Schramm-restatement gains numerical anchor (CV-1.6 implicit O6 candidate).
+- **🟢 σ_rich CODE 16/16 tests pass** (sigma-rich-coder): 11 unit + 5 integration; OP-0008 Path B Cat A computational anchor.
+- **🟢 Full test suite 196/196 pass in 173.79s, 0 regressions** (lead-side validation): pre-Wave-3 baseline 175 + Wave 3 +21 (σ_rich 16 + σ-locality + σ-class-count + σ-fingerprint + scaling).
+- **🟡 NQ-249 critic verdict REVISE** (nq-249-revisor): 3 critical (C1, C2, C3) + 6 major (M1-M6) + 5 minor (m1-m5). Wave 3 PM revision applied C1+C2+C3+M1 → `scc_mass_gap_connection.md` 413 → 445 lines; M2-M6 + m1-m5 deferred to W6.
+
+### Pending (Day 5+ carry-forward)
+
+- NQ-187 pivot critic re-review (revised 819-line form) — W6 D1+ via fresh critic dispatch.
+- NQ-253 revised critic re-verdict (per Critic Wave 1+2 REVISE, Wave 3 7-fix applied) — W6+.
+- Theorem 4.6.1 Cat C label correction (Critic C3) — applied during Wave 3 Day 4 to `sigma_multi_trajectory.md` Lemma 4.2(c) + Theorem 4.4(iii); Day 5 cross-check confirms.
+- NQ-244 background launch (3D LSW T³_15 K=10) — Day 5 morning planned (per `15_wave4_carry_forward.md` §2.3).
+- T-σ-Theorem-4 reconciliation triple γ/β/α — W6 D1-D7 priority (`sigma_theorem4_canonical_revision.md` §4 + §8).
+- Post-EOD op-0008-architect cluster critic re-review — **W7+ (CV-1.7 parking lot per Day 5 R-8)**.
+- Git commit 4-month gap close — Day 5 morning planned (Day 5 actually committed `0430_done` 50109a3 evening 19:45).
+
+### Clarified
+
+- **OP-0009 sub-item state at Day 4 EOD** (per Critic 7-agent verdict 2026-04-29 + `05_critic_final_review.md` MAJOR-3 + ontological depth 4-agent analysis):
+  - OP-0009-K (K-status): ✅ RESOLVED (Commitment 16 K_field/K_act CV-1.5.1).
+  - OP-0009-F (F derived diagnostic): ⚪ PARTIALLY RESOLVED (OAT-2 + CN17+; BC-1 fails generic).
+  - OP-0009-λ (λ_rep ontology): ⚪ PARTIALLY RESOLVED (OAT-3 Argument B + Option 3; strict KKT fail).
+  - OP-0009-A (Architecture I9/I9'): ⚪ PARTIALLY RESOLVED (OAT-4 I9 + I9' complementary stratified).
+  - OP-0009-C (C_t multi-formation): ⚪ PARTIALLY RESOLVED (OAT-5 Option C-3 + orthogonality witness).
+  - OP-0009-Pre (Pre-objective + K-field): ⚪ PARTIALLY RESOLVED (OAT-6 Path A+C+Tool A2 hybrid).
+  - OP-0009-Emp (R23 empirical): ⚪ PARTIALLY RESOLVED (OAT-7 R23 numerical + σ-irrep CONFIRMED 0 exceptions).
+  - **Net OP-0009: 1/7 RESOLVED + 6/7 PARTIALLY RESOLVED**. Wording binding per Critic MAJOR-3 — never claim "framework-level resolved" or "Theory Deepening Stretch 100% [implies completion]".
+
+### Retired (Wave 1+2 explicit non-actions)
+
+- **NQ-217 V1 (continuum limit Γ-convergence)**: 3 blockers preserved (BV vs $H^1$ continuum target ambiguity; per-field-mass to continuum-mass scaling unspecified; θ=1/2 canonical interface interaction needs treatment). Re-spawn after working-file decisions.
+- **Tool A4 quantitative audit V1**: REJECTED (scope; PHR comparison framework based on incorrect simplex constraint assumption — SCC has no $\sum_j u^j \leq 1$ per site, only per-field mass $\|u^j\|_1 = m_j$). Tool A4 PARTIAL FAIL status maintained.
+- **5 dormant medium OPs analyst V1**: REJECTED (framing — declaration voice "OP is now PARTIALLY RESOLVED" would silently resolve OPs and violate ontological constraint #5). Re-spawn requires recommendation voice + retraction triggers + 12 question resolutions.
+- **NQ-187 ε^{3/2} structurally impossible** preserved: $D_4$ equivariant ring has no integer solution to $2a + 4b = 5$; actual splitting is $O(\epsilon^2)$ via 6th-order equivariant.
+- **D-5 V5b-T' new entry candidate** WITHDRAWN at CV-1.5.1 (NQ-198f phantom on torus; replaced by V5b-T-zero sub-statement).
+- Day 4 process plan + pre_brainstorm files **deleted** AM (per user "지금 하자" mode shift).
+
+### Hard constraint compliance
+
+- [x] canonical 직접 수정: ~125 lines AM (CV-1.5.1 batch + R23 caveat); user explicit "지금 하자" + implicit Path γ approval (2026-04-29 22:25).
+- [x] Silent OP resolution 0: F-1 / M-1 / MO-1 / OP-0005 / OP-0008 / OP-0009 all preserved registered status; D-5 WITHDRAW explicit; T-σ-Theorem-4 격하 inline + status revision; NQ-187 falsification + NQ-187b 3-way both fully documented as 🔴 critical findings (not silent).
+- [x] u_t primitive maintained: 30+ files reference correctly; all 4 Tools (A1-A3 PASSED + A4 PARTIAL) operate on u_t primitive.
+- [x] CN10 contrastive: sweep clean (0 violations across all working/SF + working/MF; Tool A4 partial fail honest, Bridge B-7 AC philosophical analog explicitly contrastive).
+- [x] CN5 4-energy not merged: Commitment 17 4-tool preserves CN5 single-formation; bilinear λ_rep architectural-layer separate per OAT-3 Option 3 contrastive.
+- [x] K not abused: Commitment 16 K_field/K_act distinction preserved across all OAT files + Wave 3 working files.
+- [x] No Research OS resurrection: single-topic working files only.
+- [x] No metastability claim without P-F flag: K-Selection (b) Kramers + N-1 Kramers extension (Wave 3 lead-direct) both P-F flagged.
+- [x] No Phase 11 numerical exceeding 30min: 0 (theory-only Day 4 except NQ-187 lanczos numerical 33 sec).
+
+### Sources
+
+- `THEORY/logs/daily/2026-04-30/01_canonical_promotion_log.md` ~370 (CV-1.5.1 merge log).
+- `THEORY/logs/daily/2026-04-30/02_4tool_mapping_summary.md` ~280 (4-tool verification).
+- `THEORY/logs/daily/2026-04-30/03_OAT_batch_log.md` ~280 (OAT 2-7).
+- `THEORY/logs/daily/2026-04-30/04_external_references_verification.md` ~1002 (8 citation corrections).
+- `THEORY/logs/daily/2026-04-30/05_critic_final_review.md` ~290 (Critic verdict + MAJOR-3 OP-0009 wording).
+- `THEORY/logs/daily/2026-04-30/06_gauge_theory_connections_analysis.md` ~720.
+- `THEORY/logs/daily/2026-04-30/07_external_references_gauge_extension.md` ~1212 (gauge extension; document-specialist).
+- `THEORY/logs/daily/2026-04-30/08_pm_infinite_develop_batch.md` ~127 (Wave 1+2 batch summary).
+- `THEORY/logs/daily/2026-04-30/09_critic_re_review_5files.md` ~200 (NQ-187/188/189/190/253 verdicts).
+- `THEORY/logs/daily/2026-04-30/10_critic_NQ249_review.md` ~517 (NQ-249 REVISE).
+- `THEORY/logs/daily/2026-04-30/11_nq187_scaling_test_results.md` ~180 (lanczos numerical p ≈ 1).
+- `THEORY/logs/daily/2026-04-30/12_wave3_eod_status.md` ~155.
+- `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` ~232 (🔴 + 🟢 + 🟡 bulletin).
+- `THEORY/logs/daily/2026-04-30/14_external_references_wave3_audit.md` ~180.
+- `THEORY/logs/daily/2026-04-30/15_wave4_carry_forward.md` ~180 (Day 5 morning entry point).
+- `THEORY/logs/daily/2026-04-30/99_summary.md` ~876 (§1-§14 cumulative).
+- `THEORY/logs/daily/2026-04-30/TASK_LEDGER.md` ~308 (Wave 3 마무리 final state).
+- 11 working/MF AM batch + ~9 working/SF + working/MF Wave 1+2 + 17 op-0008-architect post-EOD cluster + 9 Wave 3 lead-direct files.
+
+### Day 4 → Day 5 transition
+
+Day 5 (RECONCILIATION-FIRST) entry point: `THEORY/logs/daily/2026-04-30/15_wave4_carry_forward.md` (Day 4 EOD primary handoff). Day 5 produced 9-item retraction inventory (`2026-05-01/99_summary.md` §13) including Day 5 supplementary R-1 finding that the post-EOD `nq187b_L_extrapolation.md` §2.6 table is computationally incorrect (correct closed-form $A_2/A_1 = 2/3$ identically at every $L \geq 2$), elevating β-path to unconditional W6 D1-D2 dispatch (R-2). The CV-1.7 parking lot discipline (post-EOD op-0008-architect cluster default = PARTIAL until critic-checked, ~17 files / ~8145 lines) was *vindicated* by R-1 finding — the cluster contained a real arithmetic error caught only by Day 5 supplementary cross-check.
+
+---
+
 ## 2026-04-29 — W5 Day 3 (MODERATE-CONSOLIDATION): Phase 1-10 → canonical promotion queue + Paper §4 polish + theorem_status/CHANGELOG drafts
 
 ### Mission

@@ -38,7 +38,6 @@ A "next action" includes:
 Repeat this loop until a hard runtime/tool limit, explicit user interruption, or genuine blocker occurs:
 
 1. Inspect the current state:
-   - read TASK_LEDGER.md if it exists,
    - inspect TODO/FIXME/GAP/BLOCKER markers,
    - check recently modified files,
    - identify the highest-priority unresolved item.

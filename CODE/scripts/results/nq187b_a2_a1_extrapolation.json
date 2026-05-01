@@ -1,0 +1,64 @@
+{
+  "spec": {
+    "task": "NQ-187b",
+    "purpose": "Direct discrete-grid A_2/A_1 evaluation on D_4 free-BC L x L grid; alpha-path reconciliation input for T-\u03c3-Theorem-4 3-way A_2/A_1 discrepancy (2/3 vs 4 vs 8).",
+    "convention": "C1 naive (no L^2-normalization)",
+    "eigenmodes": "phi_(p,q)(i,j) = cos(p*pi*(i+1/2)/L) * cos(q*pi*(j+1/2)/L)"
+  },
+  "L_values": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "rows": [
+    {
+      "L": 4,
+      "A1": 6.0,
+      "A2": 4.0,
+      "A2_over_A1": 0.6666666666666666
+    },
+    {
+      "L": 8,
+      "A1": 24.0,
+      "A2": 15.999999999999998,
+      "A2_over_A1": 0.6666666666666666
+    },
+    {
+      "L": 16,
+      "A1": 96.0,
+      "A2": 64.0,
+      "A2_over_A1": 0.6666666666666666
+    },
+    {
+      "L": 32,
+      "A1": 384.0,
+      "A2": 256.0,
+      "A2_over_A1": 0.6666666666666666
+    },
+    {
+      "L": 64,
+      "A1": 1536.0,
+      "A2": 1024.0,
+      "A2_over_A1": 0.6666666666666666
+    },
+    {
+      "L": 128,
+      "A1": 6144.0,
+      "A2": 4095.9999999999995,
+      "A2_over_A1": 0.6666666666666666
+    }
+  ],
+  "extrapolation_1_over_L_squared": {
+    "a_L_infty": 0.6666666666666666,
+    "b_slope": 1.9218636034156247e-15,
+    "residual_l2": 1.1102230246251565e-16
+  },
+  "reference_predictions": {
+    "naive_C1_continuum": 0.6666666666666666,
+    "R22_working_file_claim": 4.0,
+    "numerical_implied_effective": 8.0
+  }
+}
