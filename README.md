@@ -15,7 +15,7 @@
 원시 상태는 다음과 같은 응집장이다.
 
 $$
-u_t:X_t\to[0,1].
+u_t:X_t\to[0,1]
 $$
 
 $u_t(x)$는 “$x$가 어떤 객체에 속한다”는 뜻이 아니다. $x$가 현재 형성 중인 응집 구조에 얼마나 참여하는지를 나타낸다.
@@ -23,7 +23,7 @@ $u_t(x)$는 “$x$가 어떤 객체에 속한다”는 뜻이 아니다. $x$가 
 기본 상태공간은 총 응집량이 고정된 장들의 공간이다.
 
 $$
-\Sigma_m(G_t)=\{u:X_t\to[0,1]\mid \sum_x u(x)=m\}.
+\Sigma_m(G_t)=\{u:X_t\to[0,1]\mid \sum_x u(x)=m\}
 $$
 
 이 공간에서 장은 퍼지고, 모이고, 갈라지고, 안정화된다. 객체는 그 결과를 읽는 방식이다.
@@ -75,11 +75,11 @@ $$
 현재 canonical 결과는 이 질문에 조건부로 답한다.
 
 $$
+\begin{aligned}
 K_{\mathrm{bar}}^{\ell_{\min}}(U;G)
-=
-K_{\mathrm{act}}^\varepsilon(\mathbf u),
-\qquad
-U=\sum_j u^{(j)}.
+&=K_{\mathrm{act}}^\varepsilon(\mathbf u),\\
+U&=\sum_j u^{(j)}.
+\end{aligned}
 $$
 
 이 등식은 전역적으로 항상 참이라는 뜻이 아니다. 활성 영역이 분리되어 있고, 영역 사이 bridge가 낮으며, 작은 잔여 성분이 억제되는 resolved regime에서 참이다.
@@ -186,7 +186,7 @@ python3 -c "from scc import *; g=GraphState.grid_2d(10,10); p=ParameterRegistry(
 현재 조건부 정리는 resolved regime에서 다음을 보장한다.
 
 $$
-K_{\mathrm{bar}}=K_{\mathrm{act}}.
+K_{\mathrm{bar}}=K_{\mathrm{act}}
 $$
 
 다음 단계는 어떤 가중 함수 $\phi$에 대해
@@ -196,4 +196,3 @@ K_{\mathrm{soft}}^\phi\approx K_{\mathrm{bar}}
 $$
 
 가 안정적으로 성립하는지 밝히는 것이다. 모든 smooth weighting이 좋은 것은 아니므로, 안정적인 envelope class와 오차 bound가 필요하다.
-
