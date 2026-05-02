@@ -1,0 +1,311 @@
+{
+  "script": "l1h2_boundary_leakage_counterexample.py",
+  "purpose": "Numerical stress tests of the L1-H2 boundary-leakage inequality ell_global <= ell_local for Case A bars.",
+  "non_claims": {
+    "L1_proved": false,
+    "L1F_promoted_to_Cat_A": false,
+    "L1H_promoted_to_Cat_A": false,
+    "L1H2_promoted_to_Cat_A": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "K_bar_equals_K_act_globally": false,
+    "K_soft_equals_K_act_globally": false,
+    "sigma_rich_sufficient": false,
+    "reservoir_canonical": false,
+    "exhibits_are_theorem_proof": false
+  },
+  "exhibits": {
+    "ST_1": {
+      "name": "ST-1 internal-only",
+      "description": "Pure internal merger; X_bg vertex (6) has U well below ell_min, so no external path can compete with internal saddle.",
+      "graph_n": 7,
+      "U": [
+        1.0,
+        0.5,
+        0.4,
+        0.55,
+        0.5,
+        0.45,
+        0.05
+      ],
+      "N_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "case_A_birth_vertices": [
+        0,
+        3
+      ],
+      "bars": [
+        {
+          "birth_vertex_global_idx": 0,
+          "U_birth": 1.0,
+          "local_bar": [
+            1.0,
+            0.0
+          ],
+          "global_bar": [
+            1.0,
+            0.0
+          ],
+          "ell_local": 1.0,
+          "ell_global": 1.0,
+          "global_le_local": true
+        },
+        {
+          "birth_vertex_global_idx": 3,
+          "U_birth": 0.55,
+          "local_bar": [
+            0.55,
+            0.4
+          ],
+          "global_bar": [
+            0.55,
+            0.4
+          ],
+          "ell_local": 0.15000000000000002,
+          "ell_global": 0.15000000000000002,
+          "global_le_local": true
+        }
+      ],
+      "ell_global_le_ell_local_for_all_case_A_bars": true,
+      "had_strict_inequality": false
+    },
+    "ST_2": {
+      "name": "ST-2 low boundary, slow external",
+      "description": "X_bg value below ell_min; external path through X_bg has bottleneck < d_local, so global death = local death.",
+      "graph_n": 7,
+      "U": [
+        1.0,
+        0.5,
+        0.4,
+        0.55,
+        0.5,
+        0.45,
+        0.08
+      ],
+      "N_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "case_A_birth_vertices": [
+        0,
+        3
+      ],
+      "bars": [
+        {
+          "birth_vertex_global_idx": 0,
+          "U_birth": 1.0,
+          "local_bar": [
+            1.0,
+            0.0
+          ],
+          "global_bar": [
+            1.0,
+            0.0
+          ],
+          "ell_local": 1.0,
+          "ell_global": 1.0,
+          "global_le_local": true
+        },
+        {
+          "birth_vertex_global_idx": 3,
+          "U_birth": 0.55,
+          "local_bar": [
+            0.55,
+            0.4
+          ],
+          "global_bar": [
+            0.55,
+            0.4
+          ],
+          "ell_local": 0.15000000000000002,
+          "ell_global": 0.15000000000000002,
+          "global_le_local": true
+        }
+      ],
+      "ell_global_le_ell_local_for_all_case_A_bars": true,
+      "had_strict_inequality": false
+    },
+    "ST_3": {
+      "name": "ST-3 external-faster-than-internal",
+      "description": "Internal saddle at U=0.20 vs external path with bottleneck min(0.35, 0.40, 0.30) = 0.30 (the boundary) and exit U(6)=0.30. This stress case is the one L1-H \u00a78 mistakenly believed could lengthen bars; the corrected inequality predicts d_global \u2265 d_local hence ell_global \u2264 ell_local (bar SHORTER globally).",
+      "graph_n": 9,
+      "U": [
+        1.0,
+        0.5,
+        0.4,
+        0.55,
+        0.4,
+        0.2,
+        0.3,
+        0.35,
+        0.4
+      ],
+      "N_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "case_A_birth_vertices": [
+        0,
+        3
+      ],
+      "bars": [
+        {
+          "birth_vertex_global_idx": 0,
+          "U_birth": 1.0,
+          "local_bar": [
+            1.0,
+            0.0
+          ],
+          "global_bar": [
+            1.0,
+            0.0
+          ],
+          "ell_local": 1.0,
+          "ell_global": 1.0,
+          "global_le_local": true
+        },
+        {
+          "birth_vertex_global_idx": 3,
+          "U_birth": 0.55,
+          "local_bar": [
+            0.55,
+            0.4
+          ],
+          "global_bar": [
+            0.55,
+            0.4
+          ],
+          "ell_local": 0.15000000000000002,
+          "ell_global": 0.15000000000000002,
+          "global_le_local": true
+        }
+      ],
+      "ell_global_le_ell_local_for_all_case_A_bars": true,
+      "had_strict_inequality": false
+    },
+    "ST_4": {
+      "name": "ST-4 LG-2 violated, high boundary",
+      "description": "LG-2 fails: boundary collar U(4)=0.95 is close to peak. Verify graph-inclusion inequality still holds independently of LG-2.",
+      "graph_n": 6,
+      "U": [
+        1.0,
+        0.5,
+        0.4,
+        0.6,
+        0.95,
+        0.9
+      ],
+      "N_mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "case_A_birth_vertices": [
+        0,
+        4
+      ],
+      "bars": [
+        {
+          "birth_vertex_global_idx": 0,
+          "U_birth": 1.0,
+          "local_bar": [
+            1.0,
+            0.0
+          ],
+          "global_bar": [
+            1.0,
+            0.0
+          ],
+          "ell_local": 1.0,
+          "ell_global": 1.0,
+          "global_le_local": true
+        },
+        {
+          "birth_vertex_global_idx": 4,
+          "U_birth": 0.95,
+          "local_bar": [
+            0.95,
+            0.4
+          ],
+          "global_bar": [
+            0.95,
+            0.4
+          ],
+          "ell_local": 0.5499999999999999,
+          "ell_global": 0.5499999999999999,
+          "global_le_local": true
+        }
+      ],
+      "ell_global_le_ell_local_for_all_case_A_bars": true,
+      "had_strict_inequality": false
+    },
+    "ST_5": {
+      "name": "ST-5 equal heights tie",
+      "description": "Ties at peak height. Check inequality holds (or marked tie-stable case) regardless of elder-rule assignment.",
+      "graph_n": 5,
+      "U": [
+        1.0,
+        0.5,
+        0.05,
+        0.5,
+        1.0
+      ],
+      "N_mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "case_A_birth_vertices": [
+        0
+      ],
+      "bars": [
+        {
+          "birth_vertex_global_idx": 0,
+          "U_birth": 1.0,
+          "local_bar": [
+            1.0,
+            0.0
+          ],
+          "global_bar": [
+            1.0,
+            0.0
+          ],
+          "ell_local": 1.0,
+          "ell_global": 1.0,
+          "global_le_local": true
+        }
+      ],
+      "ell_global_le_ell_local_for_all_case_A_bars": true,
+      "had_strict_inequality": false
+    }
+  },
+  "summary": {
+    "all_stress_tests_satisfy_ell_global_le_ell_local": true,
+    "any_strict_inequality": false
+  },
+  "wall_clock_seconds": 0.003187894821166992
+}

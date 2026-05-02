@@ -1,0 +1,2560 @@
+{
+  "script": "l1i_constants_feasibility.py",
+  "script_version": "0.1",
+  "purpose": "Empirical feasibility study for L1-H constants on initial Gaussian-bump configurations on T^2_20.",
+  "non_claims": {
+    "L1_proved": false,
+    "L1F_promoted_to_Cat_A": false,
+    "L1H_promoted_to_Cat_A": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "K_bar_equals_K_act_globally": false,
+    "K_soft_equals_K_act_globally": false,
+    "sigma_rich_sufficient": false,
+    "reservoir_canonical": false,
+    "feasibility_is_theorem_proof": false
+  },
+  "config": {
+    "n_torus": 20,
+    "M_total": 90.0,
+    "initial_masses": [
+      30.0,
+      30.0,
+      30.0,
+      0.0
+    ],
+    "epsilon": 0.225,
+    "centers_A": [
+      [
+        5,
+        5
+      ],
+      [
+        15,
+        5
+      ],
+      [
+        10,
+        14
+      ]
+    ],
+    "centers_B": [
+      [
+        5,
+        5
+      ],
+      [
+        15,
+        5
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "budget_threshold": 0.05,
+    "marginal_tolerance": 0.01,
+    "mode": "smoke",
+    "n_configs_tested": 48
+  },
+  "summary": {
+    "class_counts": {
+      "INFEASIBLE": 32,
+      "FEASIBLE_WITH_BUDGET": 16
+    },
+    "failure_counts": {
+      "LG-1": 23,
+      "LG-2": 5,
+      "LG-4": 12
+    },
+    "n_total": 48,
+    "best_cases": [
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.05,
+          "r": 2,
+          "l_min": 0.1,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 4.539992976248477e-05,
+          "1": 4.539992976248477e-05,
+          "2": 4.539992976248477e-05
+        },
+        "lg2_min_margin": 0.8999546000702375,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.9,
+        "lg3_pass": true,
+        "bg_max_U": 1.1253517471925872e-07,
+        "bg_size": 325,
+        "lg4_margin": 0.09999988746482529,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.1,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.9,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.05,
+          "r": 2,
+          "l_min": 0.1,
+          "geometry": "B",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 4.539992976248477e-05,
+          "1": 4.539992976248477e-05,
+          "2": 4.539992976248477e-05
+        },
+        "lg2_min_margin": 0.8999546000702375,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 5.109320980346368e-12,
+          "0-2": 5.109320980346368e-12,
+          "1-2": 5.109320980346368e-12
+        },
+        "lg3_min_margin": 0.8999999999948907,
+        "lg3_pass": true,
+        "bg_max_U": 1.1253517471925892e-07,
+        "bg_size": 325,
+        "lg4_margin": 0.09999988746482529,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.1,
+        "h6_pass": true,
+        "max_bridge": 5.109320980346368e-12,
+        "ledger_margin": 0.8999999999948907,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.1,
+          "r": 2,
+          "l_min": 0.1,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 4.539992976248477e-05,
+          "1": 4.539992976248477e-05,
+          "2": 4.539992976248477e-05
+        },
+        "lg2_min_margin": 0.8999546000702375,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.9,
+        "lg3_pass": true,
+        "bg_max_U": 1.1253517471925872e-07,
+        "bg_size": 325,
+        "lg4_margin": 0.09999988746482529,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.1,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.9,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.1,
+          "r": 2,
+          "l_min": 0.1,
+          "geometry": "B",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 4.539992976248477e-05,
+          "1": 4.539992976248477e-05,
+          "2": 4.539992976248477e-05
+        },
+        "lg2_min_margin": 0.8999546000702375,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 5.109320980346368e-12,
+          "0-2": 5.109320980346368e-12,
+          "1-2": 5.109320980346368e-12
+        },
+        "lg3_min_margin": 0.8999999999948907,
+        "lg3_pass": true,
+        "bg_max_U": 1.1253517471925892e-07,
+        "bg_size": 325,
+        "lg4_margin": 0.09999988746482529,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.1,
+        "h6_pass": true,
+        "max_bridge": 5.109320980346368e-12,
+        "ledger_margin": 0.8999999999948907,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.05,
+          "r": 1,
+          "l_min": 0.1,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 0.018315638888734165,
+          "1": 0.018315638888734165,
+          "2": 0.018315638888734165
+        },
+        "lg2_min_margin": 0.8816843611112659,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.9,
+        "lg3_pass": true,
+        "bg_max_U": 4.539992976248477e-05,
+        "bg_size": 361,
+        "lg4_margin": 0.09995460007023751,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.1,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.9,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      }
+    ]
+  },
+  "results": [
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": null,
+        "1": null,
+        "2": null
+      },
+      "lg2_min_margin": null,
+      "lg2_pass": false,
+      "bridge_heights": {
+        "0-1": 0.18539791494082744,
+        "0-2": 0.18539791494082744,
+        "1-2": 0.18539791494082744
+      },
+      "lg3_min_margin": 0.7148675970632437,
+      "lg3_pass": true,
+      "bg_max_U": null,
+      "bg_size": 0,
+      "lg4_margin": null,
+      "lg4_pass": null,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791494082744,
+      "ledger_margin": 0.7148675970632437,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-2"
+      ],
+      "notes": [
+        "slot 0: boundary undefined (N_j^r covers all of X)",
+        "slot 1: boundary undefined (N_j^r covers all of X)",
+        "slot 2: boundary undefined (N_j^r covers all of X)",
+        "Background X_bg is empty \u2014 LG-4 vacuous."
+      ]
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": null,
+        "1": null,
+        "2": null
+      },
+      "lg2_min_margin": null,
+      "lg2_pass": false,
+      "bridge_heights": {
+        "0-1": 0.18539791502301617,
+        "0-2": 0.18539791502301617,
+        "1-2": 0.18539791502301617
+      },
+      "lg3_min_margin": 0.714867596981055,
+      "lg3_pass": true,
+      "bg_max_U": null,
+      "bg_size": 0,
+      "lg4_margin": null,
+      "lg4_pass": null,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791502301617,
+      "ledger_margin": 0.714867596981055,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-2"
+      ],
+      "notes": [
+        "slot 0: boundary undefined (N_j^r covers all of X)",
+        "slot 1: boundary undefined (N_j^r covers all of X)",
+        "slot 2: boundary undefined (N_j^r covers all of X)",
+        "Background X_bg is empty \u2014 LG-4 vacuous."
+      ]
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": null,
+        "1": null,
+        "2": null
+      },
+      "lg2_min_margin": null,
+      "lg2_pass": false,
+      "bridge_heights": {
+        "0-1": 0.18539791494082744,
+        "0-2": 0.18539791494082744,
+        "1-2": 0.18539791494082744
+      },
+      "lg3_min_margin": 0.7148675970632437,
+      "lg3_pass": true,
+      "bg_max_U": null,
+      "bg_size": 0,
+      "lg4_margin": null,
+      "lg4_pass": null,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791494082744,
+      "ledger_margin": 0.7148675970632437,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-2"
+      ],
+      "notes": [
+        "slot 0: boundary undefined (N_j^r covers all of X)",
+        "slot 1: boundary undefined (N_j^r covers all of X)",
+        "slot 2: boundary undefined (N_j^r covers all of X)",
+        "Background X_bg is empty \u2014 LG-4 vacuous."
+      ]
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": null,
+        "1": null,
+        "2": null
+      },
+      "lg2_min_margin": null,
+      "lg2_pass": false,
+      "bridge_heights": {
+        "0-1": 0.18539791502301617,
+        "0-2": 0.18539791502301617,
+        "1-2": 0.18539791502301617
+      },
+      "lg3_min_margin": 0.714867596981055,
+      "lg3_pass": true,
+      "bg_max_U": null,
+      "bg_size": 0,
+      "lg4_margin": null,
+      "lg4_pass": null,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791502301617,
+      "ledger_margin": 0.714867596981055,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-2"
+      ],
+      "notes": [
+        "slot 0: boundary undefined (N_j^r covers all of X)",
+        "slot 1: boundary undefined (N_j^r covers all of X)",
+        "slot 2: boundary undefined (N_j^r covers all of X)",
+        "Background X_bg is empty \u2014 LG-4 vacuous."
+      ]
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.19079417855793435,
+        "1": 0.19079417855793435,
+        "2": 0.19079417855793435
+      },
+      "lg2_min_margin": 0.7094713334461368,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.18539791494082744,
+        "0-2": 0.18539791494082744,
+        "1-2": 0.18539791494082744
+      },
+      "lg3_min_margin": 0.7148675970632437,
+      "lg3_pass": true,
+      "bg_max_U": 0.1853997251856013,
+      "bg_size": 337,
+      "lg4_margin": -0.0853997251856013,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791494082744,
+      "ledger_margin": 0.7148675970632437,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.19079417855793435,
+        "1": 0.19079417855793435,
+        "2": 0.19079417855793435
+      },
+      "lg2_min_margin": 0.7094713334461368,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.18539791502301617,
+        "0-2": 0.18539791502301617,
+        "1-2": 0.18539791502301617
+      },
+      "lg3_min_margin": 0.714867596981055,
+      "lg3_pass": true,
+      "bg_max_U": 0.1853997251856013,
+      "bg_size": 337,
+      "lg4_margin": -0.0853997251856013,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791502301617,
+      "ledger_margin": 0.714867596981055,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.1853997251856013,
+        "1": 0.1853997251856013,
+        "2": 0.1853997251856013
+      },
+      "lg2_min_margin": 0.7148657868184698,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.18539791494082744,
+        "0-2": 0.18539791494082744,
+        "1-2": 0.18539791494082744
+      },
+      "lg3_min_margin": 0.7148675970632437,
+      "lg3_pass": true,
+      "bg_max_U": 0.18539791502301242,
+      "bg_size": 289,
+      "lg4_margin": -0.08539791502301242,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791494082744,
+      "ledger_margin": 0.7148675970632437,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.000265512004071,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.1853997251856013,
+        "1": 0.1853997251856013,
+        "2": 0.1853997251856013
+      },
+      "lg2_min_margin": 0.7148657868184698,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.18539791502301617,
+        "0-2": 0.18539791502301617,
+        "1-2": 0.18539791502301617
+      },
+      "lg3_min_margin": 0.714867596981055,
+      "lg3_pass": true,
+      "bg_max_U": 0.18539791502301617,
+      "bg_size": 289,
+      "lg4_margin": -0.08539791502301616,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.18539791502301617,
+      "ledger_margin": 0.714867596981055,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661872459708,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.1267655678038791,
+        "1": 0.1267655678038791,
+        "2": 0.12676556780387846
+      },
+      "lg2_min_margin": 0.7740006194420916,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12023564606579129,
+        "0-2": 0.120221580825904,
+        "1-2": 0.120221580825904
+      },
+      "lg3_min_margin": 0.7805305411801795,
+      "lg3_pass": true,
+      "bg_max_U": 0.12074180072757221,
+      "bg_size": 229,
+      "lg4_margin": -0.0207418007275722,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12023564606579129,
+      "ledger_margin": 0.7805305411801795,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661818457156,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.12730424680550073,
+        "1": 0.12730424680550073,
+        "2": 0.1273042468066104
+      },
+      "lg2_min_margin": 0.773461935040215,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12730424680550073,
+        "0-2": 0.12730424680550073,
+        "1-2": 0.12730424680550073
+      },
+      "lg3_min_margin": 0.773461935040215,
+      "lg3_pass": true,
+      "bg_max_U": 0.12074179245647748,
+      "bg_size": 229,
+      "lg4_margin": -0.020741792456477476,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12730424680550073,
+      "ledger_margin": 0.7734619350402149,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661872459708,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 1,
+      "boundary_collars": {
+        "0": 0.12074180072757221,
+        "1": 0.12074180072757221,
+        "2": 0.1207418007264619
+      },
+      "lg2_min_margin": 0.7800243865183986,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12023564606579129,
+        "0-2": 0.120221580825904,
+        "1-2": 0.120221580825904
+      },
+      "lg3_min_margin": 0.7805305411801795,
+      "lg3_pass": true,
+      "bg_max_U": 0.120221580825904,
+      "bg_size": 163,
+      "lg4_margin": -0.020221580825904,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12023564606579129,
+      "ledger_margin": 0.7805305411801795,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661818457156,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.1273042468066104,
+        "1": 0.1273042468066104,
+        "2": 0.12730424680550073
+      },
+      "lg2_min_margin": 0.7734619350391052,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12730424680550073,
+        "0-2": 0.12730424680550073,
+        "1-2": 0.12730424680550073
+      },
+      "lg3_min_margin": 0.773461935040215,
+      "lg3_pass": true,
+      "bg_max_U": 0.12021938083557807,
+      "bg_size": 182,
+      "lg4_margin": -0.02021938083557806,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12730424680550073,
+      "ledger_margin": 0.7734619350402149,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661872459708,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.16869345644686018,
+        "1": 0.16869345644686018,
+        "2": 0.16869345634740962
+      },
+      "lg2_min_margin": 0.7320727307991106,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12023564606579129,
+        "0-2": 0.120221580825904,
+        "1-2": 0.120221580825904
+      },
+      "lg3_min_margin": 0.7805305411801795,
+      "lg3_pass": true,
+      "bg_max_U": 0.12166746064813795,
+      "bg_size": 265,
+      "lg4_margin": -0.021667460648137946,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12023564606579129,
+      "ledger_margin": 0.7805305411801795,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661818457156,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.16869363744556648,
+        "1": 0.16869363744556648,
+        "2": 0.1686938181522583
+      },
+      "lg2_min_margin": 0.7320723691505742,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12730424680550073,
+        "0-2": 0.12730424680550073,
+        "1-2": 0.12730424680550073
+      },
+      "lg3_min_margin": 0.773461935040215,
+      "lg3_pass": true,
+      "bg_max_U": 0.12167179780554208,
+      "bg_size": 265,
+      "lg4_margin": -0.02167179780554207,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12730424680550073,
+      "ledger_margin": 0.7734619350402149,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661872459708,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.12166746064813795,
+        "1": 0.12166746064813795,
+        "2": 0.12166739429110136
+      },
+      "lg2_min_margin": 0.7790987265978329,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12023564606579129,
+        "0-2": 0.120221580825904,
+        "1-2": 0.120221580825904
+      },
+      "lg3_min_margin": 0.7805305411801795,
+      "lg3_pass": true,
+      "bg_max_U": 0.12023564606579129,
+      "bg_size": 193,
+      "lg4_margin": -0.020235646065791285,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12023564606579129,
+      "ledger_margin": 0.7805305411801795,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0007661818457156,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 2,
+      "boundary_collars": {
+        "0": 0.1273042468066104,
+        "1": 0.1273042468066104,
+        "2": 0.12730424680550073
+      },
+      "lg2_min_margin": 0.7734619350391052,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.12730424680550073,
+        "0-2": 0.12730424680550073,
+        "1-2": 0.12730424680550073
+      },
+      "lg3_min_margin": 0.773461935040215,
+      "lg3_pass": true,
+      "bg_max_U": 0.12023911259921535,
+      "bg_size": 205,
+      "lg4_margin": -0.020239112599215348,
+      "lg4_pass": false,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.12730424680550073,
+      "ledger_margin": 0.7734619350402149,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-4"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004280117422761,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.1780401712099055,
+        "1": 0.1780401712099055,
+        "2": 0.11838176458976975
+      },
+      "lg2_min_margin": 0.7224291053602934,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.1082800376148603,
+        "0-2": 0.08799265927661604,
+        "1-2": 0.08799265927661604
+      },
+      "lg3_min_margin": 0.7921892389553385,
+      "lg3_pass": true,
+      "bg_max_U": 0.022903708405012407,
+      "bg_size": 94,
+      "lg4_margin": 0.0770962915949876,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.1082800376148603,
+      "ledger_margin": 0.7921479741274159,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 0.9959572534763672,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.662101093532518,
+        "1": 0.662101093532518,
+        "2": 0.6603498102063687
+      },
+      "lg2_min_margin": 0.23385615994384923,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.3629536444865058,
+        "0-2": 0.3629536444865058,
+        "1-2": 0.3629536444865058
+      },
+      "lg3_min_margin": 0.5330036089898614,
+      "lg3_pass": true,
+      "bg_max_U": 0.01897688591639021,
+      "bg_size": 127,
+      "lg4_margin": 0.08102311408360979,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.3629536444865058,
+      "ledger_margin": 0.5330036089898614,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004280117422761,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.3929040644925281,
+        "1": 0.3929040644925281,
+        "2": 0.24253760255136467
+      },
+      "lg2_min_margin": 0.5075652120776707,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.1082800376148603,
+        "0-2": 0.08799265927661604,
+        "1-2": 0.08799265927661604
+      },
+      "lg3_min_margin": 0.7921892389553385,
+      "lg3_pass": true,
+      "bg_max_U": 0.008161460611701577,
+      "bg_size": 57,
+      "lg4_margin": 0.09183853938829843,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.1082800376148603,
+      "ledger_margin": 0.7921479741274159,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 0.9959572534763672,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.9346015604990021,
+        "1": 0.9346015604990021,
+        "2": 0.9340655240602334
+      },
+      "lg2_min_margin": -0.03864430702263488,
+      "lg2_pass": false,
+      "bridge_heights": {
+        "0-1": 0.3629536444865058,
+        "0-2": 0.3629536444865058,
+        "1-2": 0.3629536444865058
+      },
+      "lg3_min_margin": 0.5330036089898614,
+      "lg3_pass": true,
+      "bg_max_U": 0.009510672721316824,
+      "bg_size": 83,
+      "lg4_margin": 0.09048932727868318,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.3629536444865058,
+      "ledger_margin": 0.5330036089898614,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1",
+        "LG-2"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004280117422761,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 1,
+      "boundary_collars": {
+        "0": 0.11838176458976975,
+        "1": 0.11838176458976975,
+        "2": 0.11844216950658285
+      },
+      "lg2_min_margin": 0.7819858422356933,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.1082800376148603,
+        "0-2": 0.08799265927661604,
+        "1-2": 0.08799265927661604
+      },
+      "lg3_min_margin": 0.7921892389553385,
+      "lg3_pass": true,
+      "bg_max_U": 0.06965335607596951,
+      "bg_size": 139,
+      "lg4_margin": 0.030346643924030497,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.1082800376148603,
+      "ledger_margin": 0.7921479741274159,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 0.9959572534763672,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.49282847269638996,
+        "1": 0.49282847269638996,
+        "2": 0.4927188633172461
+      },
+      "lg2_min_margin": 0.40312878077997727,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.3629536444865058,
+        "0-2": 0.3629536444865058,
+        "1-2": 0.3629536444865058
+      },
+      "lg3_min_margin": 0.5330036089898614,
+      "lg3_pass": true,
+      "bg_max_U": 0.06839361568087272,
+      "bg_size": 166,
+      "lg4_margin": 0.03160638431912728,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.3629536444865058,
+      "ledger_margin": 0.5330036089898614,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004280117422761,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.1780401712099055,
+        "1": 0.1780401712099055,
+        "2": 0.11838176458976975
+      },
+      "lg2_min_margin": 0.7224291053602934,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.1082800376148603,
+        "0-2": 0.08799265927661604,
+        "1-2": 0.08799265927661604
+      },
+      "lg3_min_margin": 0.7921892389553385,
+      "lg3_pass": true,
+      "bg_max_U": 0.020333171854840577,
+      "bg_size": 82,
+      "lg4_margin": 0.07966682814515944,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.1082800376148603,
+      "ledger_margin": 0.7921479741274159,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "wq1"
+      },
+      "n_active": 3,
+      "h_min_measured": 0.9959572534763672,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.662101093532518,
+        "1": 0.662101093532518,
+        "2": 0.6603498102063687
+      },
+      "lg2_min_margin": 0.23385615994384923,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.3629536444865058,
+        "0-2": 0.3629536444865058,
+        "1-2": 0.3629536444865058
+      },
+      "lg3_min_margin": 0.5330036089898614,
+      "lg3_pass": true,
+      "bg_max_U": 0.01897688591639021,
+      "bg_size": 119,
+      "lg4_margin": 0.08102311408360979,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.3629536444865058,
+      "ledger_margin": 0.5330036089898614,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888734165,
+        "1": 0.018315638888734165,
+        "2": 0.018315638888734165
+      },
+      "lg2_min_margin": 0.8816843611112659,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 3.8574996959278356e-22,
+        "0-2": 1.9293968714564823e-22,
+        "1-2": 1.9293968714564823e-22
+      },
+      "lg3_min_margin": 0.9,
+      "lg3_pass": true,
+      "bg_max_U": 4.539992976248477e-05,
+      "bg_size": 361,
+      "lg4_margin": 0.09995460007023751,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 3.8574996959278356e-22,
+      "ledger_margin": 0.9,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888734165,
+        "1": 0.018315638888734165,
+        "2": 0.018315638888734165
+      },
+      "lg2_min_margin": 0.8816843611112659,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 5.109320980346368e-12,
+        "0-2": 5.109320980346368e-12,
+        "1-2": 5.109320980346368e-12
+      },
+      "lg3_min_margin": 0.8999999999948907,
+      "lg3_pass": true,
+      "bg_max_U": 4.539992976248477e-05,
+      "bg_size": 361,
+      "lg4_margin": 0.09995460007023751,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 5.109320980346368e-12,
+      "ledger_margin": 0.8999999999948907,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 4.539992976248477e-05,
+        "1": 4.539992976248477e-05,
+        "2": 4.539992976248477e-05
+      },
+      "lg2_min_margin": 0.8999546000702375,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 3.8574996959278356e-22,
+        "0-2": 1.9293968714564823e-22,
+        "1-2": 1.9293968714564823e-22
+      },
+      "lg3_min_margin": 0.9,
+      "lg3_pass": true,
+      "bg_max_U": 1.1253517471925872e-07,
+      "bg_size": 325,
+      "lg4_margin": 0.09999988746482529,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 3.8574996959278356e-22,
+      "ledger_margin": 0.9,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 4.539992976248477e-05,
+        "1": 4.539992976248477e-05,
+        "2": 4.539992976248477e-05
+      },
+      "lg2_min_margin": 0.8999546000702375,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 5.109320980346368e-12,
+        "0-2": 5.109320980346368e-12,
+        "1-2": 5.109320980346368e-12
+      },
+      "lg3_min_margin": 0.8999999999948907,
+      "lg3_pass": true,
+      "bg_max_U": 1.1253517471925892e-07,
+      "bg_size": 325,
+      "lg4_margin": 0.09999988746482529,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 5.109320980346368e-12,
+      "ledger_margin": 0.8999999999948907,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888734165,
+        "1": 0.018315638888734165,
+        "2": 0.018315638888734165
+      },
+      "lg2_min_margin": 0.8816843611112659,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 3.8574996959278356e-22,
+        "0-2": 1.9293968714564823e-22,
+        "1-2": 1.9293968714564823e-22
+      },
+      "lg3_min_margin": 0.9,
+      "lg3_pass": true,
+      "bg_max_U": 4.539992976248477e-05,
+      "bg_size": 361,
+      "lg4_margin": 0.09995460007023751,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 3.8574996959278356e-22,
+      "ledger_margin": 0.9,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888734165,
+        "1": 0.018315638888734165,
+        "2": 0.018315638888734165
+      },
+      "lg2_min_margin": 0.8816843611112659,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 5.109320980346368e-12,
+        "0-2": 5.109320980346368e-12,
+        "1-2": 5.109320980346368e-12
+      },
+      "lg3_min_margin": 0.8999999999948907,
+      "lg3_pass": true,
+      "bg_max_U": 4.539992976248477e-05,
+      "bg_size": 361,
+      "lg4_margin": 0.09995460007023751,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 5.109320980346368e-12,
+      "ledger_margin": 0.8999999999948907,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 4.539992976248477e-05,
+        "1": 4.539992976248477e-05,
+        "2": 4.539992976248477e-05
+      },
+      "lg2_min_margin": 0.8999546000702375,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 3.8574996959278356e-22,
+        "0-2": 1.9293968714564823e-22,
+        "1-2": 1.9293968714564823e-22
+      },
+      "lg3_min_margin": 0.9,
+      "lg3_pass": true,
+      "bg_max_U": 1.1253517471925872e-07,
+      "bg_size": 325,
+      "lg4_margin": 0.09999988746482529,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 3.8574996959278356e-22,
+      "ledger_margin": 0.9,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 0.5,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 4.539992976248477e-05,
+        "1": 4.539992976248477e-05,
+        "2": 4.539992976248477e-05
+      },
+      "lg2_min_margin": 0.8999546000702375,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 5.109320980346368e-12,
+        "0-2": 5.109320980346368e-12,
+        "1-2": 5.109320980346368e-12
+      },
+      "lg3_min_margin": 0.8999999999948907,
+      "lg3_pass": true,
+      "bg_max_U": 1.1253517471925892e-07,
+      "bg_size": 325,
+      "lg4_margin": 0.09999988746482529,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 5.109320980346368e-12,
+      "ledger_margin": 0.8999999999948907,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888990245,
+        "1": 0.018315638888990245,
+        "2": 0.01831563888898853
+      },
+      "lg2_min_margin": 0.8816843611110098,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 7.4533063441599186e-06,
+        "0-2": 4.231000842327765e-06,
+        "1-2": 4.231000842327765e-06
+      },
+      "lg3_min_margin": 0.8999925466936559,
+      "lg3_pass": true,
+      "bg_max_U": 0.0015034393621675068,
+      "bg_size": 289,
+      "lg4_margin": 0.09849656063783249,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 7.4533063441599186e-06,
+      "ledger_margin": 0.8999925466936559,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000000000000568,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018319365541907957,
+        "1": 0.018319365541907957,
+        "2": 0.018319365541913924
+      },
+      "lg2_min_margin": 0.8816806344581489,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.0016268489970643943,
+        "0-2": 0.0016268489970643943,
+        "1-2": 0.0016268489970643943
+      },
+      "lg3_min_margin": 0.8983731510029924,
+      "lg3_pass": true,
+      "bg_max_U": 0.0016268489973186202,
+      "bg_size": 289,
+      "lg4_margin": 0.09837315100268139,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.0016268489970643943,
+      "ledger_margin": 0.8983731510029924,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.0015034393621675068,
+        "1": 0.0015034393621675068,
+        "2": 0.0015034393621673665
+      },
+      "lg2_min_margin": 0.8984965606378326,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 7.4533063441599186e-06,
+        "0-2": 4.231000842327765e-06,
+        "1-2": 4.231000842327765e-06
+      },
+      "lg3_min_margin": 0.8999925466936559,
+      "lg3_pass": true,
+      "bg_max_U": 0.00012341186549466877,
+      "bg_size": 229,
+      "lg4_margin": 0.09987658813450534,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 7.4533063441599186e-06,
+      "ledger_margin": 0.8999925466936559,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000000000000568,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.0016268489970643943,
+        "1": 0.0016268489970643943,
+        "2": 0.0016268489973186202
+      },
+      "lg2_min_margin": 0.8983731510027949,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.0016268489970643943,
+        "0-2": 0.0016268489970643943,
+        "1-2": 0.0016268489970643943
+      },
+      "lg3_min_margin": 0.8983731510029924,
+      "lg3_pass": true,
+      "bg_max_U": 0.00012340980434118702,
+      "bg_size": 229,
+      "lg4_margin": 0.09987659019565882,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.0016268489970643943,
+      "ledger_margin": 0.8983731510029924,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.08208499862390657,
+        "1": 0.08208499862390657,
+        "2": 0.08208499862390645
+      },
+      "lg2_min_margin": 0.8179150013760934,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 7.4533063441599186e-06,
+        "0-2": 4.231000842327765e-06,
+        "1-2": 4.231000842327765e-06
+      },
+      "lg3_min_margin": 0.8999925466936559,
+      "lg3_pass": true,
+      "bg_max_U": 0.018315638888990245,
+      "bg_size": 325,
+      "lg4_margin": 0.08168436111100977,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 7.4533063441599186e-06,
+      "ledger_margin": 0.8999925466936559,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000000000000568,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.08208511115907348,
+        "1": 0.08208511115907348,
+        "2": 0.08208511116418257
+      },
+      "lg2_min_margin": 0.8179148888359309,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.0016268489970643943,
+        "0-2": 0.0016268489970643943,
+        "1-2": 0.0016268489970643943
+      },
+      "lg3_min_margin": 0.8983731510029924,
+      "lg3_pass": true,
+      "bg_max_U": 0.018319365541913924,
+      "bg_size": 325,
+      "lg4_margin": 0.08168063445808608,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.0016268489970643943,
+      "ledger_margin": 0.8983731510029924,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018315638888990245,
+        "1": 0.018315638888990245,
+        "2": 0.01831563888898853
+      },
+      "lg2_min_margin": 0.8816843611110098,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 7.4533063441599186e-06,
+        "0-2": 4.231000842327765e-06,
+        "1-2": 4.231000842327765e-06
+      },
+      "lg3_min_margin": 0.8999925466936559,
+      "lg3_pass": true,
+      "bg_max_U": 0.0015034393621675068,
+      "bg_size": 277,
+      "lg4_margin": 0.09849656063783249,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 7.4533063441599186e-06,
+      "ledger_margin": 0.8999925466936559,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 1.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000000000000568,
+      "lg1_disjoint": true,
+      "lg1_overlap_count": 0,
+      "boundary_collars": {
+        "0": 0.018319365541907957,
+        "1": 0.018319365541907957,
+        "2": 0.018319365541913924
+      },
+      "lg2_min_margin": 0.8816806344581489,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.0016268489970643943,
+        "0-2": 0.0016268489970643943,
+        "1-2": 0.0016268489970643943
+      },
+      "lg3_min_margin": 0.8983731510029924,
+      "lg3_pass": true,
+      "bg_max_U": 0.0016268489973186202,
+      "bg_size": 277,
+      "lg4_margin": 0.09837315100268139,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.0016268489970643943,
+      "ledger_margin": 0.8983731510029924,
+      "ledger_pass": true,
+      "feasibility_class": "FEASIBLE_WITH_BUDGET",
+      "failing_clauses": [],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000035206926243,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.08791393254420779,
+        "1": 0.08791393254420779,
+        "2": 0.07088207568981977
+      },
+      "lg2_min_margin": 0.8120915544552764,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.08791393254420779,
+        "0-2": 0.07088207568981977,
+        "1-2": 0.07088207568981977
+      },
+      "lg3_min_margin": 0.8120915544552764,
+      "lg3_pass": true,
+      "bg_max_U": 0.03963746435624082,
+      "bg_size": 123,
+      "lg4_margin": 0.06036253564375919,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.08791393254420779,
+      "ledger_margin": 0.8120895881484166,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004918218966954,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.4121124195249065,
+        "1": 0.4121124195249065,
+        "2": 0.4120198431638603
+      },
+      "lg2_min_margin": 0.4883794023717889,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.30241980853591355,
+        "0-2": 0.30241980853591355,
+        "1-2": 0.30241980853591355
+      },
+      "lg3_min_margin": 0.5980720133607819,
+      "lg3_pass": true,
+      "bg_max_U": 0.02856853311539146,
+      "bg_size": 153,
+      "lg4_margin": 0.07143146688460855,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.30241980853591355,
+      "ledger_margin": 0.5980720133607819,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000035206926243,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.1464796372757054,
+        "1": 0.1464796372757054,
+        "2": 0.1128473459497924
+      },
+      "lg2_min_margin": 0.7535258497237787,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.08791393254420779,
+        "0-2": 0.07088207568981977,
+        "1-2": 0.07088207568981977
+      },
+      "lg3_min_margin": 0.8120915544552764,
+      "lg3_pass": true,
+      "bg_max_U": 0.014079925831127073,
+      "bg_size": 74,
+      "lg4_margin": 0.08592007416887293,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.08791393254420779,
+      "ledger_margin": 0.8120895881484166,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.05,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004918218966954,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.5550805066007019,
+        "1": 0.5550805066007019,
+        "2": 0.5536013682389838
+      },
+      "lg2_min_margin": 0.34541131529599356,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.30241980853591355,
+        "0-2": 0.30241980853591355,
+        "1-2": 0.30241980853591355
+      },
+      "lg3_min_margin": 0.5980720133607819,
+      "lg3_pass": true,
+      "bg_max_U": 0.011896161366116266,
+      "bg_size": 109,
+      "lg4_margin": 0.08810383863388374,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.30241980853591355,
+      "ledger_margin": 0.5980720133607819,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000035206926243,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 1,
+      "boundary_collars": {
+        "0": 0.0963946324626605,
+        "1": 0.0963946324626605,
+        "2": 0.09644534418495941
+      },
+      "lg2_min_margin": 0.8035581765076649,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.08791393254420779,
+        "0-2": 0.07088207568981977,
+        "1-2": 0.07088207568981977
+      },
+      "lg3_min_margin": 0.8120915544552764,
+      "lg3_pass": true,
+      "bg_max_U": 0.055485685790893885,
+      "bg_size": 139,
+      "lg4_margin": 0.04451431420910612,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.08791393254420779,
+      "ledger_margin": 0.8120895881484166,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 1,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004918218966954,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.4121124195249065,
+        "1": 0.4121124195249065,
+        "2": 0.4120198431638603
+      },
+      "lg2_min_margin": 0.4883794023717889,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.30241980853591355,
+        "0-2": 0.30241980853591355,
+        "1-2": 0.30241980853591355
+      },
+      "lg3_min_margin": 0.5980720133607819,
+      "lg3_pass": true,
+      "bg_max_U": 0.05363365730061351,
+      "bg_size": 166,
+      "lg4_margin": 0.0463663426993865,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.30241980853591355,
+      "ledger_margin": 0.5980720133607819,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "A",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0000035206926243,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.1464796372757054,
+        "1": 0.1464796372757054,
+        "2": 0.0963946324626605
+      },
+      "lg2_min_margin": 0.7535258497237787,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.08791393254420779,
+        "0-2": 0.07088207568981977,
+        "1-2": 0.07088207568981977
+      },
+      "lg3_min_margin": 0.8120915544552764,
+      "lg3_pass": true,
+      "bg_max_U": 0.014079925831127073,
+      "bg_size": 82,
+      "lg4_margin": 0.08592007416887293,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.08791393254420779,
+      "ledger_margin": 0.8120895881484166,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    },
+    {
+      "config": {
+        "sigma_b": 2.0,
+        "delta": 0.1,
+        "r": 2,
+        "l_min": 0.1,
+        "geometry": "B",
+        "state_mode": "raw_gaussian"
+      },
+      "n_active": 3,
+      "h_min_measured": 1.0004918218966954,
+      "lg1_disjoint": false,
+      "lg1_overlap_count": 3,
+      "boundary_collars": {
+        "0": 0.5550805066007019,
+        "1": 0.5550805066007019,
+        "2": 0.5536013682389838
+      },
+      "lg2_min_margin": 0.34541131529599356,
+      "lg2_pass": true,
+      "bridge_heights": {
+        "0-1": 0.30241980853591355,
+        "0-2": 0.30241980853591355,
+        "1-2": 0.30241980853591355
+      },
+      "lg3_min_margin": 0.5980720133607819,
+      "lg3_pass": true,
+      "bg_max_U": 0.011896161366116266,
+      "bg_size": 119,
+      "lg4_margin": 0.08810383863388374,
+      "lg4_pass": true,
+      "slot_l2": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "h6_min_margin": 0.1,
+      "h6_pass": true,
+      "max_bridge": 0.30241980853591355,
+      "ledger_margin": 0.5980720133607819,
+      "ledger_pass": true,
+      "feasibility_class": "INFEASIBLE",
+      "failing_clauses": [
+        "LG-1"
+      ],
+      "notes": []
+    }
+  ],
+  "wall_clock_seconds": 0.38042497634887695,
+  "metadata": {
+    "host": "ojaehong-ui-MacBookAir.local",
+    "python_version": "3.12.11",
+    "numpy_version": "2.3.2",
+    "run_timestamp_utc": "2026-05-02T04:13:32Z"
+  }
+}

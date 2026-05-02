@@ -1,0 +1,1721 @@
+{
+  "script": "l1g_l1hyp_diagnostic.py",
+  "script_version": "0.1",
+  "purpose": "Empirical L1Hyp clause diagnostic for the L-1 hard-bar / active-count bridge candidate (L1-F).",
+  "non_claims": {
+    "L1_proved": false,
+    "L1F_promoted_to_Cat_A": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "K_bar_equals_K_act_globally": false,
+    "K_soft_equals_K_act_globally": false,
+    "sigma_rich_sufficient": false,
+    "reservoir_canonical": false,
+    "diagnostic_is_theorem_proof": false
+  },
+  "result": {
+    "mode": "rerun",
+    "trajectory_A": {
+      "name": "equilateral_disk_triangle",
+      "centers": [
+        [
+          5,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "n_snapshots": 4,
+      "snapshots": [
+        {
+          "tau": 0,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              1.0004752050835806,
+              0.9124634766219903,
+              0.8921951674687203,
+              4.17178602956092e-05,
+              4.17178602956092e-05,
+              1.4938077190107535e-05,
+              1.4938077190107535e-05,
+              2.795185171100556e-06
+            ],
+            "masses": [
+              29.999999999999993,
+              29.999999999999993,
+              30.000000000000007,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 1.0004692765701988,
+              "1": 1.0004752050835806,
+              "2": 1.0004280117422761
+            },
+            "slot_l1": {
+              "0": 0.9980463791008668,
+              "1": 0.9980463791008668,
+              "2": 0.9980463791008672
+            },
+            "slot_l2": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 81,
+              "1": 81,
+              "2": 81
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 1.0,
+              "1-2": 1.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.1082800376148603,
+              "0-2": 0.08799265927661604,
+              "1-2": 0.08799265927661604
+            },
+            "max_bridge": 0.1082800376148603,
+            "h_min_measured": 1.0004280117422761,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.7921479741274159,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 1.0004752050835806
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 81,
+                  "1": 81,
+                  "2": 81
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 1.0,
+                  "1-2": 1.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 1.0004692765701988,
+                  "1": 1.0004752050835806,
+                  "2": 1.0004280117422761
+                },
+                "h_min_measured": 1.0004280117422761
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.1082800376148603,
+                  "0-2": 0.08799265927661604,
+                  "1-2": 0.08799265927661604
+                },
+                "max_bridge": 0.1082800376148603,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.7921479741274159,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.0,
+                  "1": 0.0,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 50,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.7040789376975853,
+              0.564529362897704,
+              0.5574105035252995,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.03085094422835,
+              29.989778607775456,
+              29.9793704479962,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.6987892845312464,
+              "1": 0.701481178889791,
+              "2": 0.7040789376975853
+            },
+            "slot_l1": {
+              "0": 0.6987892845312464,
+              "1": 0.701481178889791,
+              "2": 0.7040789376975853
+            },
+            "slot_l2": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 102,
+              "1": 101,
+              "2": 99
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 1.0,
+              "1-2": 1.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.1413787810059469,
+              "0-2": 0.136951815992087,
+              "1-2": 0.136951815992087
+            },
+            "max_bridge": 0.1413787810059469,
+            "h_min_measured": 0.6987892845312464,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.45741050352529955,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.7040789376975853
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 102,
+                  "1": 101,
+                  "2": 99
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 1.0,
+                  "1-2": 1.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.6987892845312464,
+                  "1": 0.701481178889791,
+                  "2": 0.7040789376975853
+                },
+                "h_min_measured": 0.6987892845312464
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.1413787810059469,
+                  "0-2": 0.136951815992087,
+                  "1-2": 0.136951815992087
+                },
+                "max_bridge": 0.1413787810059469,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.45741050352529955,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.0,
+                  "1": 0.0,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 125,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.5509758629751081,
+              0.38326914286381775,
+              0.3782496592037998,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.062990571959755,
+              29.973980657296668,
+              29.96302877074357,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.5419641183939158,
+              "1": 0.5465439896802037,
+              "2": 0.5509758629751081
+            },
+            "slot_l1": {
+              "0": 0.5419641183939158,
+              "1": 0.5465439896802037,
+              "2": 0.5509758629751081
+            },
+            "slot_l2": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 198,
+              "1": 194,
+              "2": 194
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.16371445919011596,
+              "0-2": 0.16327484681638593,
+              "1-2": 0.16327484681638593
+            },
+            "max_bridge": 0.16371445919011596,
+            "h_min_measured": 0.5419641183939158,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.27824965920379985,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.5509758629751081
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 198,
+                  "1": 194,
+                  "2": 194
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.5419641183939158,
+                  "1": 0.5465439896802037,
+                  "2": 0.5509758629751081
+                },
+                "h_min_measured": 0.5419641183939158
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.16371445919011596,
+                  "0-2": 0.16327484681638593,
+                  "1-2": 0.16327484681638593
+                },
+                "max_bridge": 0.16371445919011596,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.27824965920379985,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.0,
+                  "1": 0.0,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 200,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.47736357164253224,
+              0.29992872723669106,
+              0.29396845934441895,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.109500084834245,
+              29.97902938740633,
+              29.91147052775942,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.46578358314664864,
+              "1": 0.4716791976475634,
+              "2": 0.47736357164253224
+            },
+            "slot_l1": {
+              "0": 0.46578358314664864,
+              "1": 0.4716791976475634,
+              "2": 0.47736357164253224
+            },
+            "slot_l2": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 205,
+              "1": 203,
+              "2": 205
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.1718151238022297,
+              "0-2": 0.17175047041087235,
+              "1-2": 0.17175047041087235
+            },
+            "max_bridge": 0.1718151238022297,
+            "h_min_measured": 0.46578358314664864,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.19396845934441895,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.47736357164253224
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 205,
+                  "1": 203,
+                  "2": 205
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.46578358314664864,
+                  "1": 0.4716791976475634,
+                  "2": 0.47736357164253224
+                },
+                "h_min_measured": 0.46578358314664864
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.1718151238022297,
+                  "0-2": 0.17175047041087235,
+                  "1-2": 0.17175047041087235
+                },
+                "max_bridge": 0.1718151238022297,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.19396845934441895,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.0,
+                  "1": 0.0,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        }
+      ],
+      "trajectory_outcome": "FAIL",
+      "no_k_jump": true,
+      "jump_time": null
+    },
+    "trajectory_B": {
+      "name": "isosceles_disk_triangle",
+      "centers": [
+        [
+          5,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n_snapshots": 4,
+      "snapshots": [
+        {
+          "tau": 0,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              1.0003349731200921,
+              0.6350995863181433,
+              0.6350995863181433,
+              0.0012451804634185937,
+              0.0012451804634185937,
+              0.0007703724202561268,
+              0.0007703724202561268,
+              0.0
+            ],
+            "masses": [
+              29.999999999999996,
+              29.999999999999996,
+              30.0,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.9959572534763672,
+              "1": 0.99759119288387,
+              "2": 0.9976898718504065
+            },
+            "slot_l1": {
+              "0": 0.9925023917691271,
+              "1": 0.9925023917691271,
+              "2": 0.9925023917691271
+            },
+            "slot_l2": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 81,
+              "1": 81,
+              "2": 81
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.3629536444865058,
+              "0-2": 0.3629536444865058,
+              "1-2": 0.3629536444865058
+            },
+            "max_bridge": 0.3629536444865058,
+            "h_min_measured": 0.9959572534763672,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.5330036089898614,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 1.0003349731200921
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 81,
+                  "1": 81,
+                  "2": 81
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.9959572534763672,
+                  "1": 0.99759119288387,
+                  "2": 0.9976898718504065
+                },
+                "h_min_measured": 0.9959572534763672
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.3629536444865058,
+                  "0-2": 0.3629536444865058,
+                  "1-2": 0.3629536444865058
+                },
+                "max_bridge": 0.3629536444865058,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.5330036089898614,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.0,
+                  "1": 0.0,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 50,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.705841942423136,
+              0.47020584489778355,
+              0.4679843732422328,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.164712609762525,
+              30.122795788115653,
+              29.712491602121823,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.700292160716785,
+              "1": 0.7029380043390216,
+              "2": 0.705841942423136
+            },
+            "slot_l1": {
+              "0": 0.700292160716785,
+              "1": 0.7029380043390216,
+              "2": 0.705841942423136
+            },
+            "slot_l2": {
+              "0": 4.153678473154537e-05,
+              "1": 3.872844898988176e-05,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 96,
+              "1": 96,
+              "2": 91
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.23230778747455222,
+              "0-2": 0.23230778747455222,
+              "1-2": 0.2327321594412381
+            },
+            "max_bridge": 0.2327321594412381,
+            "h_min_measured": 0.700292160716785,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.3675600012755469,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.705841942423136
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 96,
+                  "1": 96,
+                  "2": 91
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.700292160716785,
+                  "1": 0.7029380043390216,
+                  "2": 0.705841942423136
+                },
+                "h_min_measured": 0.700292160716785
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.23230778747455222,
+                  "0-2": 0.23230778747455222,
+                  "1-2": 0.2327321594412381
+                },
+                "max_bridge": 0.2327321594412381,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.3675600012755469,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 4.153678473154537e-05,
+                  "1": 3.872844898988176e-05,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 125,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.5537385814199963,
+              0.3534293791998214,
+              0.34929550558148215,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.21732214763376,
+              30.127048612895813,
+              29.65562923947044,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.5438855594912821,
+              "1": 0.5484488948796137,
+              "2": 0.5537385814199963
+            },
+            "slot_l1": {
+              "0": 0.5438855594912821,
+              "1": 0.5484488948796137,
+              "2": 0.5537385814199963
+            },
+            "slot_l2": {
+              "0": 7.302386692119994e-05,
+              "1": 6.542463657440573e-05,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 222,
+              "1": 218,
+              "2": 212
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.19459005390979997,
+              "0-2": 0.19459005390979997,
+              "1-2": 0.19501951567979225
+            },
+            "max_bridge": 0.19501951567979225,
+            "h_min_measured": 0.5438855594912821,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.24886604381148988,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.5537385814199963
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 222,
+                  "1": 218,
+                  "2": 212
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.5438855594912821,
+                  "1": 0.5484488948796137,
+                  "2": 0.5537385814199963
+                },
+                "h_min_measured": 0.5438855594912821
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.19459005390979997,
+                  "0-2": 0.19459005390979997,
+                  "1-2": 0.19501951567979225
+                },
+                "max_bridge": 0.19501951567979225,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.24886604381148988,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 7.302386692119994e-05,
+                  "1": 6.542463657440573e-05,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        },
+        {
+          "tau": 200,
+          "diagnostic": {
+            "K_act": 3,
+            "active_set": [
+              0,
+              1,
+              2
+            ],
+            "K_bar": 3,
+            "coverage_excess": 0,
+            "dominant_bars": [
+              0.482527969738197,
+              0.28179966958095515,
+              0.2762067741611521,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "masses": [
+              30.265059235736608,
+              30.126533390684195,
+              29.60840737357919,
+              0.0
+            ],
+            "slot_b_U": {
+              "0": 0.4694633390246549,
+              "1": 0.4753940611282792,
+              "2": 0.482527969738197
+            },
+            "slot_l1": {
+              "0": 0.4694633390246549,
+              "1": 0.4753940611282792,
+              "2": 0.482527969738197
+            },
+            "slot_l2": {
+              "0": 0.00010319107818291401,
+              "1": 8.688020759051174e-05,
+              "2": 0.0
+            },
+            "slot_support_size": {
+              "0": 229,
+              "1": 223,
+              "2": 216
+            },
+            "slot_support_connected": {
+              "0": true,
+              "1": true,
+              "2": true
+            },
+            "slot_support_n_cc": {
+              "0": 1,
+              "1": 1,
+              "2": 1
+            },
+            "pair_distances": {
+              "0-1": 0.0,
+              "0-2": 0.0,
+              "1-2": 0.0
+            },
+            "pair_bridge_heights": {
+              "0-1": 0.19325656486350284,
+              "0-2": 0.19325656486350284,
+              "1-2": 0.19359439154732402
+            },
+            "max_bridge": 0.19359439154732402,
+            "h_min_measured": 0.4694633390246549,
+            "raw_margin_h_min_minus_bridge_minus_lmin": 0.17586894747733092,
+            "R_inact_inf": 0.0,
+            "K_bar_R_inact": 0,
+            "U_max": 0.482527969738197
+          },
+          "clauses": {
+            "H1": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "supports_connected": {
+                  "0": true,
+                  "1": true,
+                  "2": true
+                },
+                "support_sizes": {
+                  "0": 229,
+                  "1": 223,
+                  "2": 216
+                },
+                "support_n_cc": {
+                  "0": 1,
+                  "1": 1,
+                  "2": 1
+                },
+                "pair_distances": {
+                  "0-1": 0.0,
+                  "0-2": 0.0,
+                  "1-2": 0.0
+                }
+              },
+              "pass": false,
+              "note": "Active masses + delta-supports + connectivity + graph distances."
+            },
+            "H2": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "slot_b_U": {
+                  "0": 0.4694633390246549,
+                  "1": 0.4753940611282792,
+                  "2": 0.482527969738197
+                },
+                "h_min_measured": 0.4694633390246549
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Peak-based birth heights b_j^U = U(p_j); h_min is min over active slots."
+            },
+            "H3": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "pair_bridge_heights": {
+                  "0-1": 0.19325656486350284,
+                  "0-2": 0.19325656486350284,
+                  "1-2": 0.19359439154732402
+                },
+                "max_bridge": 0.19359439154732402,
+                "uncomputed_pairs": []
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Threshold-scan max-min bridge height between peaks. Exact min-cut height H_cut^jk not implemented (Level 2 future)."
+            },
+            "H4": {
+              "status": "PARTIALLY_MEASURABLE",
+              "value": {
+                "raw_margin": 0.17586894747733092,
+                "comment": "raw margin = h_min - max_bridge - l_min; r_assoc and r_birth not estimable from data."
+              },
+              "pass": true,
+              "note": "L1Hyp constants r_assoc, r_birth not derivable empirically."
+            },
+            "H5": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Stable slot-to-bar association map A_bar requires birth-vertex tracking through superlevel filtration; not implemented (Level 2)."
+            },
+            "H6": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "slot_l2": {
+                  "0": 0.00010319107818291401,
+                  "1": 8.688020759051174e-05,
+                  "2": 0.0
+                }
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Slot-internal full-graph H_0 secondary bar; full local barcode on G_j^r not implemented."
+            },
+            "H7": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "R_inact_inf": 0.0,
+                "K_bar_R_inact": 0
+              },
+              "pass": true,
+              "threshold": 0.1,
+              "note": "Aggregate residual height + barcode on R_inact alone."
+            },
+            "H8": {
+              "status": "EXACTLY_MEASURABLE",
+              "value": {
+                "K_bar_minus_K_act": 0,
+                "K_bar": 3,
+                "K_act": 3
+              },
+              "pass": true,
+              "note": "Exact integer count comparison. K_bar > K_act => possible non-slot bar overcount; K_bar < K_act => undercount (association failure)."
+            },
+            "H9": {
+              "status": "PROXY_MEASURABLE",
+              "value": {
+                "min_gap_to_lmin": 0.0
+              },
+              "pass": false,
+              "note": "Gap proxy; true tau_tie requires plateau detection on field."
+            },
+            "H10": {
+              "status": "NOT_MEASURABLE_FROM_CURRENT_OUTPUTS",
+              "value": null,
+              "pass": null,
+              "note": "Local-to-global barcode transfer is the central theorem-grade gap. It cannot be empirically measured; requires proof or counterexample."
+            }
+          },
+          "outcome": "FAIL",
+          "counts": {
+            "pass": 6,
+            "fail": 2,
+            "unknown": 2
+          }
+        }
+      ],
+      "trajectory_outcome": "FAIL",
+      "no_k_jump": true,
+      "jump_time": null
+    },
+    "config": {
+      "K_field": 4,
+      "M": 90.0,
+      "epsilon": 0.225,
+      "lambda_rep": 10.0,
+      "seed": 42,
+      "max_iter": 200,
+      "snapshot_every": 25,
+      "n_torus": 20,
+      "centers_A": [
+        [
+          5,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "centers_B": [
+        [
+          5,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "l_min": 0.1,
+      "delta": 0.05,
+      "bridge_max_pairs": 3
+    },
+    "wall_clock_seconds": 0.21467089653015137
+  },
+  "metadata": {
+    "host": "ojaehong-ui-MacBookAir.local",
+    "python_version": "3.12.11",
+    "numpy_version": "2.3.2",
+    "run_timestamp_utc": "2026-05-02T03:40:36Z"
+  }
+}

@@ -15,7 +15,37 @@ last_updated: 2026-04-27
 
 ## Canonical Theorems (Accepted into Canonical Spec)
 
-### Canonical Spec v1.5.1 (2026-04-29) — Current Version (W5 Day 3 EOD: D-6a Multi-Static + Ontological Depth + Critic 보강)
+### Canonical Spec v1.5.2 (2026-05-02) — Current Version (W6: L1-F Hard-Bar / Active-Count Bridge Conditional Cat-A)
+
+**Additions over v1.5.1** (W6, 2026-05-02):
+
+| T-ID | Name | Status | Category | Source | Proof | Experiments | Notes |
+|------|------|--------|----------|--------|-------|-------------|-------|
+| **T-L1-F** | Hard-Bar / Active-Count Bridge under L1-J Regime | accepted | A (conditional under L1-J package) | C-0721 | P-0721 | (theoretical via L1-A..L1-L chain; numerical L1-I 439/1920 FEASIBLE_WITH_BUDGET on $T^2_{20}$; L1-H2 stress tests 5/5; L1-J PO-1 decay-to-cut 6/6; L1-K external audit passed) | Conditional theorem on finite shared-pool multi-formation states under hypothesis package $(P0)$–$(P11)$: $K_{\mathrm{bar}}^{\ell_{\min}}(U(\mathbf u);G)=K_{\mathrm{act}}^{\varepsilon}(\mathbf u)$ AND labeled bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon\to\mathrm{Bars}_0^{\mathrm{term}}(U;G)$ via primary representative $q_j^U=\arg\max^\prec_{x\in N_j^r}U(x)$. NOT a global identity; explicit hypothesis package required. P7 decay-to-cut adopted as safe technical regime hypothesis; L1-L provides Combes-Thomas / discrete Agmon backing under strong stationarity (P7_DERIVED_UNDER_STRONG_STATIONARITY) but P7 is not asserted for all SCC states. Does NOT solve OP-0005 (K-Selection) or OP-0008 ($\sigma^A$ K-jump non-determinism). Does NOT establish $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}$ (additionally requires $\phi\in\Phi_{\mathrm{res}}$ per WQ-LAT-1.B). Does NOT claim $\sigma_{\mathrm{rich}}$ sufficiency. Reservoir theory not promoted to canonical. |
+
+**v1.5.1 → v1.5.2 release notes (2026-05-02)**:
+
+- **Added (1 new C-ID)**: 1 Cat A conditional (T-L1-F) synthesizing the L1-A..L1-L chain.
+- **Hypothesis package (P0)–(P11)**:
+  - P0 terminal-death $H_0$ superlevel persistence convention (code-aligned with `scc.diagnostics._persistence_h0_graph`);
+  - P1 deterministic tie convention (fixed total order $\prec$ on $X$; ties in descending-$U$ broken by ascending $\prec$);
+  - P2 active mass + connected $\delta$-support;
+  - P3 disjoint active neighborhoods $N_j^r\cap N_k^r=\emptyset$;
+  - P4 low boundary collar $\max_{\partial N_j^r}U\le b_j-\ell_{\min}-r_{\mathrm{assoc}}$;
+  - P5 background suppression $\|U\|_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}$ (on $U$, not just on $R_{\mathrm{inact}}$);
+  - P6 birth height $b_j\ge h_{\min}\ge\ell_{\min}$;
+  - P7 decay-to-cut (heterogeneous form): $u^{(\ell)}(x)\le\psi_\ell(d_G(x,S_\ell^\delta))$ and $H_{C_{jk}}(U)\le\sum_{\ell\in A}\psi_\ell(q_{\ell,jk})+\|R_{\mathrm{inact}}\|_{\infty,C_{jk}}$;
+  - P8 tightened H6 on $G_j^r$: $\ell_{j,2}(u^{(j)};G_j^r)\le\ell_{\min}-3\rho_{\mathrm{pert}}$;
+  - P9 NE-2 perturbation $\|R_j\|_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$;
+  - P10 inactive residual suppression $\|R_{\mathrm{inact}}\|_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$;
+  - P11 margin ledger $h_{\min}-\max_{k\neq j}B_{jk}\ge\ell_{\min}+r_{\mathrm{assoc}}+r_{\mathrm{birth}}$.
+- **L1 chain provenance**: L1-A merge / death / contact level; L1-B cut bound; L1-C slot-to-bar + terminal-death convention; L1-D no-extra-bar / secondary-bar suppression; L1-E inactive suppression; L1-F synthesis; L1-G empirical diagnostic; L1-H local-to-global transfer; L1-H2 boundary-leakage proof (Lemma 1: $\ell_{\mathrm{glob}}\le\ell_{\mathrm{loc}}$ from graph inclusion); L1-I constants feasibility (439/1920 FEASIBLE_WITH_BUDGET); L1-J Cat-A attempt; L1-K external audit (THEOREM_CANDIDATE_STRONG_AUDIT_PASSED); L1-K-REPAIR (4 proof-hygiene repairs R-1, R-2, R-3, R-4 applied); L1-L P7 status decision.
+- **Counts**: 45A → **46A** (+1 conditional Cat A), 60 → **61 claims**, 75% → **75% fully proved** (unchanged %).
+- **Non-claims preserved**: no global $K_{\mathrm{bar}}=K_{\mathrm{act}}$; no global $K_{\mathrm{soft}}=K_{\mathrm{act}}$; no OP-0005 or OP-0008 solution; no $\sigma_{\mathrm{rich}}$ sufficiency; reservoir theory not promoted to canonical; P7 not generally derived from all SCC states; no application / vision / robotics claims.
+- **Source**: `THEORY/working/MF/kbar_kact_bridge_L1A..L1L_*.md` (full L1 chain — 13 working documents); `CODE/scripts/l1g_l1hyp_diagnostic.py`, `l1h_local_to_global_counterexample.py`, `l1h2_boundary_leakage_counterexample.py`, `l1i_constants_feasibility.py`, `l1j_bridge_cut_decay_diagnostic.py` (5 diagnostic / counterexample scripts); `CODE/scripts/results/l1*.json`.
+- **canonical.md growth**: ~25 lines added in §13 Category A (T-L1-F entry).
+
+### Canonical Spec v1.5.1 (2026-04-29) — Previous Version (W5 Day 3 EOD: D-6a Multi-Static + Ontological Depth + Critic 보강)
 
 **Additions over v1.5** (W5 Day 3 EOD, 2026-04-29):
 

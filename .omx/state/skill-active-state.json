@@ -2,18 +2,26 @@
   "version": 1,
   "active": true,
   "skill": "ralph",
-  "keyword": "",
-  "phase": "executing",
-  "activated_at": "2026-04-10T15:54:12.309Z",
-  "updated_at": "2026-04-11T07:13:22.299Z",
-  "source": "state-server",
+  "keyword": "ralph",
+  "phase": "planning",
+  "activated_at": "2026-05-01T13:09:56.173Z",
+  "updated_at": "2026-05-01T13:09:56.173Z",
+  "source": "keyword-detector",
+  "session_id": "019de394-a509-7251-b6ac-637531d3c3a0",
+  "thread_id": "",
+  "turn_id": "019de3a8-fbf0-71d1-845c-5e7e77c6aa9c",
   "active_skills": [
     {
       "skill": "ralph",
-      "phase": "executing",
+      "phase": "planning",
       "active": true,
-      "activated_at": "2026-04-10T15:54:12.309Z",
-      "updated_at": "2026-04-11T07:13:22.299Z"
+      "activated_at": "2026-05-01T13:09:56.173Z",
+      "updated_at": "2026-05-01T13:09:56.173Z",
+      "session_id": "019de394-a509-7251-b6ac-637531d3c3a0",
+      "thread_id": "",
+      "turn_id": "019de3a8-fbf0-71d1-845c-5e7e77c6aa9c"
     }
-  ]
+  ],
+  "initialized_mode": "ralph",
+  "initialized_state_path": ".omx/state/sessions/019de394-a509-7251-b6ac-637531d3c3a0/ralph-state.json"
 }

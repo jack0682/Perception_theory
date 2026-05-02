@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://perception-theory.local/schemas/nq242c_result_schema.json",
+  "title": "NQ-242c Counterexample Result Schema",
+  "description": "JSON schema for the numerical anchor produced by CODE/scripts/nq242c_counterexample.py. See THEORY/working/MF/nq242c_counterexample_protocol.md §10.",
+  "type": "object",
+  "required": ["protocol_id", "protocol_version", "status", "graph", "parameters",
+               "configuration_A", "configuration_B", "criteria", "diagnostics",
+               "conclusion", "metadata"],
+  "properties": {
+    "protocol_id": {"const": "NQ-242c"},
+    "protocol_version": {"type": "string"},
+    "status": {"enum": ["not_run", "weak_success", "success", "failed"]},
+    "graph": {
+      "type": "object",
+      "required": ["type", "n"],
+      "properties": {
+        "type": {"const": "torus_grid"},
+        "n": {"type": "integer", "minimum": 4}
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "required": ["K_field", "M", "epsilon", "lambda_rep", "lambda_bar",
+                   "sigma_b", "dt", "max_iter", "snapshot_every",
+                   "tolerance_eigen", "seed", "integrator"],
+      "properties": {
+        "K_field": {"type": "integer", "minimum": 1},
+        "M": {"type": "number", "exclusiveMinimum": 0},
+        "epsilon": {"type": "number", "exclusiveMinimum": 0},
+        "lambda_rep": {"type": "number"},
+        "lambda_bar": {"type": "number"},
+        "sigma_b": {"type": "number", "exclusiveMinimum": 0},
+        "dt": {"type": "number", "exclusiveMinimum": 0},
+        "max_iter": {"type": "integer", "minimum": 1},
+        "snapshot_every": {"type": "integer", "minimum": 1},
+        "tolerance_eigen": {"type": "number", "exclusiveMinimum": 0},
+        "seed": {"type": "integer"},
+        "integrator": {"enum": ["Option_D1", "Option_D2"]},
+        "center_perturb": {"type": ["array", "null"]},
+        "sigma_b_perturb": {"type": ["number", "null"]}
+      }
+    },
+    "configuration_A": {"$ref": "#/$defs/Configuration"},
+    "configuration_B": {"$ref": "#/$defs/Configuration"},
+    "criteria": {
+      "type": "object",
+      "required": ["C1_same_pre_sigma", "C2_different_post_sigma",
+                   "C3_same_protocol"],
+      "properties": {
+        "C1_same_pre_sigma": {"type": ["boolean", "null"]},
+        "C1_max_lambda_diff": {"type": ["number", "null"]},
+        "C1_cluster_size_match": {"type": ["boolean", "null"]},
+        "C2_different_post_sigma": {"type": ["boolean", "null"]},
+        "C2_max_lambda_diff": {"type": ["number", "null"]},
+        "C2_offending_cluster": {"type": ["integer", "null"]},
+        "C3_same_protocol": {"type": ["boolean", "null"]},
+        "C4_robustness": {"type": ["boolean", "null"]},
+        "C4_robustness_notes": {"type": "array",
+                                "items": {"type": "string"}}
+      }
+    },
+    "diagnostics": {
+      "type": "object",
+      "properties": {
+        "sigma_rich_pre_A": {"$ref": "#/$defs/SigmaRich"},
+        "sigma_rich_pre_B": {"$ref": "#/$defs/SigmaRich"},
+        "sigma_rich_post_A": {"$ref": "#/$defs/SigmaRich"},
+        "sigma_rich_post_B": {"$ref": "#/$defs/SigmaRich"},
+        "k_act_trajectory_A": {"type": "array",
+                               "items": {"type": "integer"}},
+        "k_act_trajectory_B": {"type": "array",
+                               "items": {"type": "integer"}},
+        "m_j_trajectory_A": {"type": "array",
+                             "items": {"type": "array",
+                                       "items": {"type": "number"}}},
+        "m_j_trajectory_B": {"type": "array",
+                             "items": {"type": "array",
+                                       "items": {"type": "number"}}},
+        "snapshot_times_A": {"type": "array",
+                             "items": {"type": "integer"}},
+        "snapshot_times_B": {"type": "array",
+                             "items": {"type": "integer"}}
+      }
+    },
+    "conclusion": {
+      "type": "object",
+      "required": ["standard_sigma_incomplete", "sigma_rich_sufficiency",
+                   "scope_caveat"],
+      "properties": {
+        "standard_sigma_incomplete": {
+          "enum": ["supported", "weak", "undetermined", "not_supported"]
+        },
+        "sigma_rich_sufficiency": {"const": "not_claimed"},
+        "scope_caveat": {"type": "string"},
+        "failure_mode": {"enum": ["F1", "F2", "F3", "F4", null]},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["wall_clock_seconds", "python_version", "numpy_version"],
+      "properties": {
+        "git_commit": {"type": ["string", "null"]},
+        "wall_clock_seconds": {"type": "number"},
+        "host": {"type": ["string", "null"]},
+        "python_version": {"type": "string"},
+        "numpy_version": {"type": "string"},
+        "scipy_version": {"type": ["string", "null"]},
+        "scc_module_path": {"type": ["string", "null"]},
+        "run_timestamp_utc": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "$defs": {
+    "Configuration": {
+      "type": "object",
+      "required": ["name", "centers", "initial_masses",
+                   "K_act_pre", "K_act_post"],
+      "properties": {
+        "name": {"type": "string"},
+        "centers": {
+          "type": "array",
+          "items": {"type": "array",
+                    "items": {"type": "integer"},
+                    "minItems": 2, "maxItems": 2}
+        },
+        "initial_masses": {"type": "array",
+                            "items": {"type": "number"}},
+        "sigma_pre": {"$ref": "#/$defs/SigmaStandardTuple"},
+        "sigma_post": {"$ref": "#/$defs/SigmaStandardTuple"},
+        "K_act_pre": {"type": ["integer", "null"]},
+        "K_act_post": {"type": ["integer", "null"]},
+        "jump_time": {"type": ["integer", "null"]},
+        "multi_merger": {"type": "boolean"},
+        "no_k_jump": {"type": "boolean"},
+        "active_set_pre": {"type": "array", "items": {"type": "integer"}},
+        "active_set_post": {"type": "array", "items": {"type": "integer"}}
+      }
+    },
+    "SigmaStandardTuple": {
+      "description": "Tuple of (cluster_size, multiplicity_tag, eigenvalue) per cluster, sorted by ascending eigenvalue.",
+      "type": ["array", "null"],
+      "items": {
+        "type": "array",
+        "minItems": 3, "maxItems": 3,
+        "prefixItems": [
+          {"type": "integer", "minimum": 1, "description": "n_k cluster size"},
+          {"type": "string", "description": "multiplicity tag, e.g. 'mult-2'"},
+          {"type": "number", "description": "lambda_k eigenvalue"}
+        ]
+      }
+    },
+    "SigmaRich": {
+      "type": ["object", "null"],
+      "properties": {
+        "sigma_standard": {"$ref": "#/$defs/SigmaStandardTuple"},
+        "centroids": {
+          "type": "array",
+          "items": {"type": "array",
+                    "items": {"type": "number"},
+                    "minItems": 2, "maxItems": 2}
+        },
+        "orientations": {
+          "type": "array",
+          "description": "Per-formation 2x2 inertia tensors as flattened arrays.",
+          "items": {"type": "array",
+                    "items": {"type": "array",
+                              "items": {"type": "number"}}}
+        },
+        "wigner_data": {
+          "type": "array",
+          "description": "K x K x 2 x 2 Wigner-pair effective Hamiltonians.",
+          "items": {"type": "array",
+                    "items": {"type": "array",
+                              "items": {"type": "array",
+                                        "items": {"type": "number"}}}}
+        },
+        "centroids_torus_aware": {
+          "type": ["array", "null"],
+          "description": "Optional Frechet-mean centroids on torus."
+        }
+      }
+    }
+  }
+}

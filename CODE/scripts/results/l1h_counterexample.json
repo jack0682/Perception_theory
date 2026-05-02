@@ -1,0 +1,449 @@
+{
+  "script": "l1h_local_to_global_counterexample.py",
+  "purpose": "Finite-graph counterexamples / boundary exhibits for L1-H Local-to-Global Barcode Transfer (working-grade).",
+  "non_claims": {
+    "L1_proved": false,
+    "L1F_promoted_to_Cat_A": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "K_bar_equals_K_act_globally": false,
+    "K_soft_equals_K_act_globally": false,
+    "sigma_rich_sufficient": false,
+    "reservoir_canonical": false,
+    "exhibit_is_theorem_proof": false
+  },
+  "l_min": 0.1,
+  "exhibits": {
+    "CE_1": {
+      "description": "Path graph 5, two unit peaks at endpoints",
+      "high_corridor": {
+        "U": [
+          1.0,
+          0.5,
+          0.95,
+          0.5,
+          1.0
+        ],
+        "global": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.5
+            ],
+            [
+              0.95,
+              0.5
+            ],
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.5,
+            0.44999999999999996,
+            0.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 3,
+          "l_min": 0.1
+        },
+        "local_N1": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 1,
+          "l_min": 0.1
+        },
+        "local_N2": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 1,
+          "l_min": 0.1
+        },
+        "X_bg_vertices": [
+          2
+        ],
+        "X_bg_max_U": 0.95,
+        "LG4_passes": false
+      },
+      "low_corridor": {
+        "U": [
+          1.0,
+          0.5,
+          0.05,
+          0.5,
+          1.0
+        ],
+        "global": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.05
+            ],
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.05,
+              0.05
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.95,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 2,
+          "l_min": 0.1
+        },
+        "local_N1": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 1,
+          "l_min": 0.1
+        },
+        "local_N2": {
+          "all_bars": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "sorted_lengths": [
+            1.0,
+            0.0
+          ],
+          "k_bar_at_l_min": 1,
+          "l_min": 0.1
+        },
+        "X_bg_vertices": [
+          2
+        ],
+        "X_bg_max_U": 0.05,
+        "LG4_passes": true
+      },
+      "interpretation": {
+        "high_corridor": "U(corridor) >= l_min, so LG-4 fails. The corridor produces an extra global bar from a vertex in X_bg.",
+        "low_corridor": "U(corridor) < l_min, so LG-4 holds. Global K_bar matches the sum of local dominant bars (= 2).",
+        "lesson": "LG-4 (background suppression) is necessary. CE-1 demonstrates the high-corridor failure mode listed in L1F-F2 and the background-bar failure mode L1H-F3."
+      }
+    },
+    "CE_2": {
+      "description": "Dumbbell-like + isolated background spike",
+      "U": [
+        1.0,
+        0.9,
+        0.05,
+        0.05,
+        0.9,
+        1.0,
+        0.5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "global": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.05
+          ],
+          [
+            0.5,
+            0.05
+          ],
+          [
+            0.9,
+            0.9
+          ],
+          [
+            0.9,
+            0.9
+          ],
+          [
+            0.05,
+            0.05
+          ],
+          [
+            0.05,
+            0.05
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.95,
+          0.45,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 3,
+        "l_min": 0.1
+      },
+      "local_N_A": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.9,
+            0.9
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 1,
+        "l_min": 0.1
+      },
+      "local_N_B": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.9,
+            0.9
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 1,
+        "l_min": 0.1
+      },
+      "X_bg_vertices": [
+        2,
+        3,
+        6
+      ],
+      "X_bg_max_U": 0.5,
+      "LG4_passes": false,
+      "interpretation": "Vertex 6 has U(6) = 0.5 >= l_min = 0.10, so LG-4 fails. Globally vertex 6 produces a finite bar (born at 0.5, dying at 0.05 when vertex 3 enters), of length 0.45. Locally on N_A and N_B this bar is invisible, so K_bar(global) - sum local = 1 (overcount) demonstrating the L1H-F3 failure mode."
+    },
+    "CE_3": {
+      "description": "Single 5-vertex path; slot u^(1) with borderline-secondary",
+      "u_slot_only": [
+        1.0,
+        0.5,
+        0.4,
+        0.5,
+        0.55
+      ],
+      "u_perturbed": [
+        1.0,
+        0.5,
+        0.4,
+        0.5,
+        0.5900000000000001
+      ],
+      "rho_pert_applied": 0.04,
+      "slot_bars": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.55,
+            0.4
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.4,
+            0.4
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.15000000000000002,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 2,
+        "l_min": 0.1
+      },
+      "perturbed_bars": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.5900000000000001,
+            0.4
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.4,
+            0.4
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.19000000000000006,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 2,
+        "l_min": 0.1
+      },
+      "ell_{j,2}_slot_only": 0.15000000000000002,
+      "ell_{j,2}_perturbed": 0.19000000000000006,
+      "interpretation": "Slot-internal secondary bar length is ~0.15 > l_min = 0.10. A non-uniform residual perturbation can push it further; in the bottleneck-stability argument the bound is |ell_{j,2}(U) - ell_{j,2}(u^(j))| <= 2 rho_pert. So H6 must be tightened to ell_{j,2}(u^(j)) <= l_min - 3 rho_pert (1 buffer + 2 from bottleneck) for the upper-bound argument to close. CE-3 documents this constant-tightening obligation."
+    },
+    "CE_4": {
+      "description": "Two equal-height peaks; elder-rule terminal bar",
+      "U": [
+        1.0,
+        0.5,
+        0.05,
+        0.5,
+        1.0
+      ],
+      "global": {
+        "all_bars": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.05
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.05,
+            0.05
+          ]
+        ],
+        "sorted_lengths": [
+          1.0,
+          0.95,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "k_bar_at_l_min": 2,
+        "l_min": 0.1
+      },
+      "interpretation": "Both peaks born at 1.0; one survives as terminal (death=0, length 1.0), the other dies at corridor merge level (length ~0.95). K_bar count = |A| = 2 either way, so this is NOT a counterexample to the count theorem. It only documents that LG-6 elder-rule compatibility is required to make the bar-to-slot assignment well-defined."
+    }
+  },
+  "wall_clock_seconds": 0.0017118453979492188
+}

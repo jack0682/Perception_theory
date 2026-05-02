@@ -58,6 +58,84 @@ canonical/canonical.md + theorem_status.md
 
 <!-- Daily entries appended below this line, most recent first -->
 
+## 2026-05-02 — SCC Multi-Formation Resolved Count Bridge
+
+### Main breakthrough
+
+**T-L1-F — Hard-Bar / Active-Count Bridge under the L1-J Regime** promoted as **PROMOTED_AS_CAT_A_CONDITIONAL** under canonical version **CV-1.5.2** (2026-05-02).
+
+The theorem establishes, under the L1-J hypothesis package $(P0)$–$(P11)$:
+
+\[
+K_{\mathrm{bar}}^{\ell_{\min}}(U(\mathbf u);G)
+=
+K_{\mathrm{act}}^\varepsilon(\mathbf u),
+\]
+
+and a labeled bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon(\mathbf u)\to\mathrm{Bars}_0^{\mathrm{term}}(U;G)$ via primary representative $q_j^U=\arg\max^\prec_{x\in N_j^r}U(x)$.
+
+**Canonical edits**:
+- `THEORY/canonical/theorem_status.md` (+30 lines, CV-1.5.2 section with T-L1-F).
+- `THEORY/canonical/canonical.md` (+9 lines, T-L1-F entry at end of §13 Category A).
+- `THEORY/canonical/open_problems.md` UNCHANGED (no OP affected; T-L1-F does not solve OP-0005 / OP-0008).
+
+### Why it matters
+
+The theorem cleanly **separates four regimes** for multi-formation counting:
+
+- **Resolved regime** (L1-J package satisfied): $K_{\mathrm{bar}}=K_{\mathrm{act}}$ + labeled bijection. Cat-A conditional theorem.
+- **Overlap / unresolved regime** ($K_{\mathrm{bar}}\neq K_{\mathrm{act}}$): hypothesis package fails (LG-1 disjoint neighborhoods or LG-4 background suppression typically); R23 generic states + WQ-1 production trajectory after F-B6 fall here.
+- **Soft-count regime** ($K_{\mathrm{soft}}^\phi$): requires $\phi\in\Phi_{\mathrm{res}}$ envelope class (per WQ-LAT-1.B); not Cat-A yet (next priority L1-M corollary).
+- **K-jump / σ-rich regime** (post-aggregate-merging, OP-0008): still open; the resolved-regime baseline T-L1-F is now the reference against which K-jump non-determinism is measured.
+
+### Research interpretation
+
+The theory now has a **canonical baseline** for multi-formation counting. This is the first L1 chain output to reach Cat-A conditional canonical status (CV-1.5.2). With this baseline:
+
+- Future work can **measure precisely when and how the count bridge breaks** (overlap regime onset, F-B6 aggregate merging events, simplex-saturation transitions).
+- The L1 chain (L1-A through L1-L) is now the definitive proof provenance for the resolved-regime bridge; canonical-grade.
+- L1-K external audit passed (THEOREM_CANDIDATE_STRONG_AUDIT_PASSED) with 4 proof-hygiene repairs applied (L1-K-REPAIR R-1 contradiction proof + R-2 $q_j^U$ + R-3 plateau + R-4 heterogeneous-$\psi$).
+- L1-L provides P7 backing: P7_DERIVED_UNDER_STRONG_STATIONARITY (Combes-Thomas / discrete Agmon) under strong stationarity + box constraint or source-cancellation; for canonical adoption, P7 is treated as **safe technical regime hypothesis** (Path A in L1-L).
+
+### Empirical anchor (L1-I + L1-H2 + L1-J)
+
+- **L1-I**: 439/1920 (22.9 %) configurations on $T^2_{20}$ are FEASIBLE_WITH_BUDGET. Best case: $\sigma_b=0.5,\delta=0.02,r=0,\ell_{\min}=0.10$, raw Gaussian.
+- **L1-H2**: 5/5 boundary-leakage stress tests confirm $\ell_{\mathrm{glob}}\le\ell_{\mathrm{loc}}$ for all Case A bars, including ST-3 (the case L1-H §8 originally believed could lengthen bars — corrected).
+- **L1-J PO-1**: 6/6 decay-to-cut configurations on $T^2_{20}$ satisfy $K_{\mathrm{act}}\psi(q)+h_{\mathrm{noise}}\le h_{\min}-\ell_{\min}$ with margin, including the WQ-1 default $\sigma_b=2.0$.
+
+### Next brainstorm candidates
+
+1. **L1-M soft-count corollary** under $\Phi_{\mathrm{res}}$. Combine T-L1-F + WQ-LAT-1.B $\Phi_{\mathrm{res}}$ envelope class to derive Cat-A bound on $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}^\varepsilon+O(\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}+\rho_\phi)$. Estimated 1–2 weeks.
+2. **OP-0008 σ-standard insufficiency revisit.** Use the resolved-regime baseline T-L1-F to re-enter σ-rich / K-jump non-determinism. The natural question: when the L1-J regime is violated by F-B6 aggregate merging, what σ-rich invariants distinguish pre-event vs post-event states?
+3. **σ-rich minimal packet** (σ_rich design grounding). With the resolved-regime baseline established, σ-rich's design as candidate finite reservoir-statistic packet for reservoir transitions becomes more principled (per `latent_index_space_design.md`).
+4. **K-jump event theory under overlap regime.** When $K_{\mathrm{bar}}\neq K_{\mathrm{act}}$, what new event classes arise (overlap merger, secondary-bar promotion, residual-born dominant bar)? Does the L1H2 stress-test register cover them?
+5. **L1-L-FORMALIZE** — full Combes-Thomas / discrete Agmon derivation of P7 from primitive SCC dynamics. Substantive theorem-grade workstream. Removes P7 from hypothesis package; upgrades T-L1-F from CONDITIONAL to UNCONDITIONAL Cat A under primitive SCC. Not blocking for L1-M.
+6. **Dynamics-compatible L1-J regime persistence (L1-N).** Find an SCC initial state in the L1-J regime, integrate forward under Option D-2 or alternative dynamics, measure how long the regime is preserved. Bridges static feasibility to dynamic applicability.
+7. **Possible paper section: "Resolved and Unresolved Multi-Formation Regimes."** The L1 chain naturally narrates the resolved-regime baseline (T-L1-F) + the overlap regime (F-B6, R23 generic) + the soft-count regime (Φ_res) + the K-jump regime (OP-0008). Paper-section candidate for §4 multi-formation extension.
+
+### Non-claims (preserved)
+
+- **OP-0005 open** (K-Selection mechanism not solved by T-L1-F).
+- **OP-0008 open** ($\sigma^A$ K-jump non-determinism not solved).
+- **No global count identity** ($K_{\mathrm{bar}}=K_{\mathrm{act}}$ holds only under $(P0)$–$(P11)$).
+- **No $K_{\mathrm{soft}}=K_{\mathrm{act}}$ globally** (additionally requires $\Phi_{\mathrm{res}}$).
+- **No $\sigma_{\mathrm{rich}}$ sufficiency** claimed.
+- **Reservoir framework still working-grade** (not promoted to canonical).
+- **P7 not generally SCC-derived** (L1-L: only under strong stationarity).
+- **No application / robotics / vision claims.**
+- **No new Commitment number assigned** (T-L1-F uses C-0721 / P-0721 in existing numbering).
+
+### Closure references
+
+- Daily log: `THEORY/logs/daily/2026-05-02/01_T_L1_F_canonical_promotion_closure.md`.
+- L1 chain (full 13 documents): `THEORY/working/MF/kbar_kact_bridge_L1*.md`.
+- L1-K external audit: `THEORY/working/MF/kbar_kact_bridge_L1K_external_audit.md`.
+- L1-L P7 status: `THEORY/working/MF/kbar_kact_bridge_L1L_scc_decay_theorem.md`.
+- Diagnostic scripts: `CODE/scripts/l1g_l1hyp_diagnostic.py`, `l1h_local_to_global_counterexample.py`, `l1h2_boundary_leakage_counterexample.py`, `l1i_constants_feasibility.py`, `l1j_bridge_cut_decay_diagnostic.py`.
+- Result JSONs: `CODE/scripts/results/l1{g,h,h2,i,j}_*.json`.
+
+---
+
 ## 2026-05-01 — W5 Day 5 (RECONCILIATION-FIRST): Day 4 burst integration + T-σ-Theorem-4 γ/β/α path assignment + CV-1.7 parking lot + W6 D1-D7 plan preview
 
 ### Posture shift

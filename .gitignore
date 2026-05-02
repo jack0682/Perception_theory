@@ -27,3 +27,8 @@ experiments/*.csv
 .omc/
 .omx/
 _archive/
+AGENTS.md
+analyse_gemini.md
+AUDIT_2026-04-18.md
+analyze_codex.md
+deep-research-report.md
