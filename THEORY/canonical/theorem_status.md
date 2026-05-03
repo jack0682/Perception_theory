@@ -2,14 +2,14 @@
 id: META-0103
 type: registry/theorems
 status: accepted
-last_updated: 2026-04-27
+last_updated: 2026-05-02
 ---
 
 # Theorem Registry
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.5; current = CV-1.5) then status (active, challenged, deprecated).
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.5.2; current = **CV-1.5.2**) then status (active, challenged, deprecated). *(Updated 2026-05-02 after T-L1-F canonical promotion to CV-1.5.2.)*
 
 ---
 
@@ -312,17 +312,17 @@ last_updated: 2026-04-27
 
 ---
 
-## Proof Status Summary (Updated 2026-04-27, post-W5 Day 1 G0)
+## Proof Status Summary (Updated 2026-05-02, post-CV-1.5.2 T-L1-F canonical promotion)
 
 | Status | Count | Examples |
 |--------|-------|----------|
-| **Category A (Fully Proved)** | **43** (was 38 post-v1.4, 37 post-v1.3, 35 pre-W4) | T-1, T-20, QM-1:4, C-Axioms, Predicate-Energy Bridge, T-PreObj-1, T-PreObj-1G, Lemma 4 (W4), T-V5b-T (W4 extended), **T-σ-Lemma-1, T-σ-Lemma-2, T-σ-Lemma-3, T-σ-Theorem-3, T-σ-Theorem-4 (W5 Day 1 G0)**, etc. |
-| **Category B (Conditional)** | 4 | T-Bind-Proj (τ=1/2), T-Persist-K-Sep, T-Persist-K-Unified |
+| **Category A (Fully Proved)** | **46** (was 43 post-v1.5, 38 post-v1.4, 37 post-v1.3, 35 pre-W4) | T-1, T-20, QM-1:4, C-Axioms, Predicate-Energy Bridge, T-PreObj-1, T-PreObj-1G, Lemma 4 (W4), T-V5b-T (W4 extended), T-σ-Lemma-1, T-σ-Lemma-2, T-σ-Lemma-3, T-σ-Theorem-3 (W5 Day 1 G0; T-σ-Theorem-4 retroactively격하 to Cat B at CV-1.5.1), **T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static (W5 Day 4 D-6a multi-formation σ static)**, **T-L1-F (W5 Day 6 CV-1.5.2 hard-bar / active-count bridge under L1-J regime, conditional)**, etc. |
+| **Category B (Conditional)** | **5** (was 4 pre-W5) | T-Bind-Proj (τ=1/2), T-Persist-K-Sep, T-Persist-K-Unified, **T-σ-Theorem-4 (Cat A → Cat B retroactive at CV-1.5.1, NQ-187 finding + Critic 7-agent verdict; Cat A re-promotion deferred to CV-1.7+ post-γ/β/α audit)**, **T-σ-Multi-1 (Cat B target, Goldstone-pair instability under V5b-T per-formation regime)** |
 | **Category C (Very Conditional)** | 5 + 1 (new finding) + 2 (W5 Day 1 sub-statements within T-σ-Lemma-2) | T-Bind-Full (general τ), T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Weak; V5b-F (new finding 2026-04-26, NQ-173 carry); T-σ-Lemma-2 (v) Courant upper bound + (vi) $G_u$-orbit divisibility (W5 Day 1 sub-statements bundled in single Cat A parent entry) |
 | **Resolved/Clarified/Sidestepped (W4)** | 3 | C-0550 (F-1 split-resolved), C-0551 (M-1 layer-clarified), C-0552 (MO-1 sidestepped) |
 | **Challenged** | 1 | C-0553 (Type A/B) |
 | **Retracted** | 2 | K-Saddle Conjecture, r̄₀ general τ |
-| **Open (active)** | 4 (was 7) | OP-0004, OP-0005, OP-0006, OP-0007 (Critical 3건은 W4에서 해소) |
+| **Open (active)** | **6** (was 4 pre-W5; +2 W5 Day 4 HIGH OP registrations) | OP-0004, OP-0005, OP-0006, OP-0007 (Critical W4 해소 후 잔존 4건) + **OP-0008 σ^A K-jump non-determinism (HIGH, CV-1.5.1 W5 Day 4)** + **OP-0009 Multi-Formation Ontological Foundations (HIGH, CV-1.5.1 W5 Day 4; 7 sub-items, 1/7 OP-0009-K RESOLVED via Commitment 16)**. OP-0003 MO-1 re-activation rider added (D-6b approval or NQ-248 multi-formation Morse work begins → 🟠 HIGH automatic). |
 | **Reproducibility crises identified+resolved** | 1 | NQ-172 (mode-indexing artifact, 2026-04-26 resolved) |
 | **W4-extended carry NQ** | 3 (G1/G2/G4) | NQ-173 (V5b-F partial Goldstone — G1 W5 Day 1), NQ-174 (ζ_* graph-dependence — G2 W5 Day 2-3), NQ-175 (3D extension — G4 W5 Day 5) |
 | **W5 Day 1 G0 spawn NQ** | 11 (NQ-176..NQ-186) | NQ-176/177 (functoriality, multi-irrep ordering — Lemma 1); NQ-178/179 (frustration bound, orbit sharpening — Lemma 2); NQ-180/181 (discrete correction, higher-ℓ analog — Lemma 3); NQ-182/183 (discrete nodal count, periodic-BC analog — Theorem 3); NQ-184/185/186 (tie-break, higher pitchforks, cascade — Theorem 4) |
@@ -339,10 +339,13 @@ last_updated: 2026-04-27
 - **Convergence:** T-11, T-14
 - **Diagnostics:** T-Bind-Proj/Full, Predicate-Energy Bridge
 
-### Multi-Formation (K-field)
+### Multi-Formation (K-field / Shared-pool $\widetilde\Sigma_M^{K_{\mathrm{field}}}$)
 - **Temporal Persistence:** T-Persist-K-Sep, T-Persist-K-Weak, T-Persist-K-Unified
 - **Global Stability:** Deep Core Dominance 2b (conditional)
-- **Open:** F-1, M-1, OP-0006
+- **σ-framework Multi (W5 Day 4 D-6a static, CV-1.5.1):** T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static, T-σ-Multi-1 (Cat B target)
+- **Hard-Bar / Active-Count Bridge (W5 Day 6, CV-1.5.2):** **T-L1-F** (Cat A conditional under L1-J regime $(P0)$–$(P11)$)
+- **K-status (CV-1.5.1):** Commitment 16 K_field/K_act Two-Tier Decomposition
+- **Open:** F-1 / M-1 (W4 resolved), OP-0006, **OP-0008 σ^A K-jump non-determinism (HIGH)**, **OP-0009 Multi-Formation Ontological Foundations (HIGH, 7 sub-items, 1/7 RESOLVED + 6/7 PARTIALLY)**
 
 ### Foundational
 - **Consistency:** T-20, C-Axioms
@@ -358,11 +361,16 @@ last_updated: 2026-04-27
 
 ---
 
-**Last updated:** 2026-04-27 (W5 Day 1 G0 + σ-framework supporting structures canonical merge)
-**Total canonical theorems:** 47 = **43 Cat A** + 4 Cat B + 5 Cat C — 5 retracted (57 claims, 75% fully proved)
-**Open problems:** 4 active (was 7) — Critical 3건 (F-1, M-1, MO-1) 모두 해소
+**Last updated:** 2026-05-02 (W5 Day 6 + CV-1.5.2 T-L1-F canonical promotion)
+**Total canonical theorems:** **56** = **46 Cat A** + 5 Cat B + 5 Cat C — 5 retracted (**61 claims, 75% fully proved**)
+**Open problems:** **6 active** (was 4 pre-W5; +2 HIGH W5 Day 4 OP-0008/OP-0009) — Critical 3건 (F-1, M-1, MO-1) W4에서 해소
 **Recent W4 additions (2026-04-25)**: T-PreObj-1, T-PreObj-1G, Lemma 4 (Pre-Objective Mechanism graph-class independent), Commitment 14/15, CN15/16/17.
 **W4 extended addition (2026-04-26)**: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) — sub/super-lattice dichotomy on torus T^d, cycle C_n; 2D doublet commensurability split; 1D Goldstone; nodal count = 2 universal. V5b 8-iteration cycle resolved.
-**W5 Day 1 G0 addition (2026-04-27)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted).
-**Pending W5+ (T2/T3 carry, Days 2-7)**: NQ-173 (V5b-F partial Goldstone characterization — G1 evening Day 1), NQ-174 (ζ_*(graph) precise dependence — G2 setup EOD Day 1, run Day 2 morning), NQ-175 (3D extension — G4 Day 5), Multi-formation σ Phase 5 — G3 Day 3-4, SF Round 1-5 Cat A merge (Q29-Q34) — G5 Day 5.
+**W5 Day 1 G0 addition (2026-04-27, CV-1.5)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted). **Round-1 (3 numerical errors) + Round-2 (11 structural issues) audit applied same session.**
+**W5 Day 4 addition (2026-04-30, CV-1.5.1)**: D-6a multi-formation σ static (3 Cat A: T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static) + 1 Cat B target (T-σ-Multi-1 Goldstone-pair instability) + Commitment 16 K-status Two-Tier Decomposition (K_field/K_act; resolves OP-0009-K). T-σ-Theorem-4 Cat A → Cat B retroactive (NQ-187 RED finding + Critic 7-agent verdict). OP-0008 + OP-0009 registered HIGH; OP-0003 MO-1 re-activation rider added.
+**W5 Day 5 reconciliation (2026-05-01)**: 47 working files / 15,805 lines audited; 9 retractions documented (R-1..R-9); CV-1.6 packet recalibrated 11 → effective 10 D-items; CV-1.7 parking lot discipline (17 files / ~8145 lines) introduced.
+**W5 Day 6 addition (2026-05-02, CV-1.5.2 — current)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step working chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4) completed. Open problems unchanged (T-L1-F not solving OP-0005/OP-0008 explicitly).
+**W5 Day 7 working draft (2026-05-03)**: L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ envelope class; Cat-B sketched (Lemma L-M-1 Cat A absolute + Lemma L-M-2 sketched edge-band emptiness + Theorem L-M conditional); CV-1.6 promotion target via L1-M-AUDIT (W6 G1, ~2-3 days).
+**Pending W6+ (CV-1.6 release target W6 D7 EOD 2026-05-10)**: T-L1-M Cat A conditional new entry (post-L1-M-AUDIT); T-σ-Theorem-4 Cat A re-promotion attempt (post-γ-path Σ_m-Hessian convention audit); D-6a Schramm/CN15/N-1 Kramers integration; OP-0009-F + OP-0009-λ PARTIAL → READY upgrade (post-OAT-2/OAT-3 short integration).
+**Future-stale items pending CV-1.6 release**: above pending entries + open_problems.md `last_updated` synchronization + CHANGELOG.md W5 Day 5/6/7 entries (release-day 머지 in progress).
 **See also:** `weekly_summary.md` (W4 extended close), `open_problems.md` (active OPs), `canonical.md` §13 (theorem catalog), `THEORY/logs/daily/2026-04-27/` (W5 Day 1 artifacts), `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md` (8-goal blueprint), `THEORY/CHANGELOG.md` 2026-04-27 entry.

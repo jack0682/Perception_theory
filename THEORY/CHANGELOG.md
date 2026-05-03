@@ -2,6 +2,235 @@
 
 ---
 
+## 2026-05-03 — W5 Day 7 L1-M Soft-Count Corollary Working Draft + W5 Close
+
+### Summary
+
+W5 Day 7 (final day, W5 close ceremony). Single-thread session producing **L1-M Soft-Count Corollary** working draft (Cat-B sketched) — soft-count companion to T-L1-F (CV-1.5.2 hard-count bridge). 4 daily files in `THEORY/logs/daily/2026-05-03/` (~1100 lines total). **No canonical edits** (per autonomous-execution prompt §3 + §8.1 — working/ writes also deferred to user promotion).
+
+### Substantive Result
+
+**Theorem L-M (Soft-Count Corollary)**: Under T-L1-F's $(P0)$–$(P11)$ + $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ + $\tau < \tau_* := \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$:
+
+$$|K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)| \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}} + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon$$
+
+with three per-family corollaries — $\phi_{\mathrm{hard}}$ EXACT, $\phi_{\mathrm{logistic}}^{s\ge 50}$ bound $\le 3e^{-s\tau}\cdot K_{\mathrm{act}}^\varepsilon$, $\phi_{\mathrm{shift\text{-}sat}}^{\beta\ge 20}$ bound $\le e^{-\beta\tau}\cdot K_{\mathrm{act}}^\varepsilon$.
+
+**Substantive strengthening over plan.md**: edge-band control hypothesis (E) listed as separate assumption in plan.md §4.3 was **eliminated** via Lemma L-M-2 — under $(P0)$–$(P11)$ the L1-J regime constants $(\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$ already force the edge band $[\ell_{\min} - \tau, \ell_{\min} + \tau]$ to contain no bars. L-M hypothesis package collapses to $\{(P0)$–$(P11), \phi \in \Phi_{\mathrm{res}}, \tau < \tau_*\}$.
+
+### Files Created
+
+- `THEORY/logs/daily/2026-05-03/01_exploration.md` (~290 lines) — Restatement, four mathematically independent approaches generated (A1 primary + A4 enhancement, A2/A3 preserved as alternatives, A5/A6/A7 considered-and-excluded with rationale), primary-selection rationale.
+- `THEORY/logs/daily/2026-05-03/02_development.md` (~542 lines) — $\Phi_{\mathrm{res}}$ definition (F1–F5 axioms), Lemma L-M-1 envelope-pure inequality (Cat A absolute), Lemma L-M-2 edge-band emptiness (Cat B sketched, 3 bookkeeping refinements R-1/R-2/R-3 flagged), Theorem L-M (combined corollary), 3 per-family corollaries, 4 counterexample attempts.
+- `THEORY/logs/daily/2026-05-03/03_integration_and_new_open.md` (~321 lines) — Plan-vs-prompt path conflict resolution (working/ write deferred), proposed canonical.md insertion text for "T-L1-M" entry, explicit OP non-impact audit (each of OP-0001..0013 individually), 8 new open questions (NQ-L1M-1..8), prompt v2 candidate notes.
+- `THEORY/logs/daily/2026-05-03/99_summary.md` (~89 lines) — Three-sentence result + W5 close + W6 seed recommendations.
+
+### W5 Weekly Close Ceremony
+
+- `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` (~863 lines, 66KB) — Comprehensive W5 weekly summary following W4 template (§0–§10): executive summary + 7-day timeline + tier-classified Cat A/B inventory + 3 CV releases (CV-1.5/1.5.1/1.5.2) detail + new HIGH OPs (OP-0008/0009) + honest reclassifications (T-σ-Theorem-4 Cat A → Cat B retroactive + 9 Day 5 retractions) + W6 carry-forward + statistics.
+
+### W6 Strategic Plan Seeded
+
+- `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (~1691 lines, 87KB) — Comprehensive W6 strategic blueprint (§0–§17), 8 goals across 3 pillars (P1 Multi-Formation Count Theory Closure + P2 σ-framework Cat A Re-Promotion + CV-1.6 Release + P3 Empirical Anchoring), 4 critical decision points, 4-level success ladder.
+- `THEORY/logs/daily/2026-05-04/plan.md` + `pre_brainstorm.md` — W6 Day 1 triple parallel thread launch.
+
+### Theorem Status Changes
+
+- T-L1-M: working draft Cat-B sketched (NOT canonical — promotion target via L1-M-AUDIT in W6 G1).
+- No canonical theorem additions.
+
+### Open Problem Impact
+
+- Explicit OP non-impact audit per OP-0001..0013 individually. **No silent OP resolution.**
+- OP-0009-F: marginal clarification (count envelope vs prominence envelope separation via $\Phi_{\mathrm{res}}$ class restriction). Status remains PARTIALLY RESOLVED.
+- All other OPs: unchanged.
+
+### Test Count
+
+196/196 passing (no scc/ edits).
+
+### Open Items Carried Forward to W6
+
+- L1-M-AUDIT (W6 G1, ~2-3 days, Day 1-3): external audit + repair cycle on L1-M working draft.
+- NQ-L1M-2 CSEH 2007 factor-2 sharpness (W6 G2, ~1 day, Day 1 single target): factor-2 → factor-1 sharpening under terminal-death convention.
+- γ-path Σ_m-Hessian convention audit (W6 G3, ~3-5 days): T-σ-Theorem-4 Cat B → Cat A re-promotion attempt.
+
+---
+
+## 2026-05-02 — W5 Day 6 CV-1.5.2 Release: T-L1-F Hard-Bar / Active-Count Bridge Canonical Promotion
+
+### Summary
+
+W5 Day 6 single-deliverable canonical promotion session. **T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime)** promoted to canonical Cat A *conditional* under hypothesis package $(P0)$–$(P11)$. **First multi-formation canonical Cat A theorem** in SCC theory — closes the L1-A through L1-L 13-step working chain that had been substantive content of W5.
+
+### Theorem Statement (T-L1-F)
+
+Let $G=(X,E)$ be a finite graph and $\mathbf u \in \widetilde\Sigma_M^{K_{\mathrm{field}}}(G)$ a shared-pool multi-formation state. Under the L1-J regime hypothesis package $(P0)$–$(P11)$:
+
+$$K_{\mathrm{bar}}^{\ell_{\min}}(U(\mathbf u); G) = K_{\mathrm{act}}^\varepsilon(\mathbf u),$$
+
+and the map $\mathcal A_{\mathrm{bar}} : A^\varepsilon(\mathbf u) \to \mathrm{Bars}_0^{\mathrm{term}}(U; G)$ defined by $\mathcal A_{\mathrm{bar}}(j) := $ the unique dominant bar with birth in $N_j^r$ (equivalently $b = q_j^U = \arg\max^\prec_{x \in N_j^r} U(x)$) is a bijection from active slots to dominant terminal $H_0$ bars.
+
+### Hypothesis Package $(P0)$–$(P11)$
+
+- P0 terminal-death $H_0$ superlevel persistence convention
+- P1 deterministic tie convention (fixed total order $\prec$ on $X$)
+- P2 active mass + connected $\delta$-support
+- P3 LG-1 disjoint active neighborhoods $N_j^r \cap N_k^r = \emptyset$
+- P4 LG-2 low boundary collar $\max_{\partial N_j^r} U \le b_j - \ell_{\min} - r_{\mathrm{assoc}}$
+- P5 LG-4 background suppression on $U$ (not just $R_{\mathrm{inact}}$)
+- P6 birth height $b_j \ge h_{\min} \ge \ell_{\min}$
+- P7 decay-to-cut (heterogeneous): $u^{(\ell)}(x) \le \psi_\ell(d_G(x, S_\ell^\delta))$ + $H_{C_{jk}}(U) \le \sum_\ell \psi_\ell(q_{\ell,jk}) + \|R_{\mathrm{inact}}\|_{\infty,C_{jk}}$
+- P8 tightened H6 on $G_j^r$: $\ell_{j,2}(u^{(j)}; G_j^r) \le \ell_{\min} - 3\rho_{\mathrm{pert}}$
+- P9 NE-2 perturbation $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$
+- P10 inactive residual $\|R_{\mathrm{inact}}\|_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$
+- P11 margin ledger $h_{\min} - \max_{k \ne j} B_{jk} \ge \ell_{\min} + r_{\mathrm{assoc}} + r_{\mathrm{birth}}$
+
+### Proof Structure
+
+- **Lower bound** $K_{\mathrm{bar}} \ge |A|$: LG-2 boundary collar + LG-3 inter-neighborhood bridge + $h_{\min} \ge \ell_{\min}$ (L1-H §8 step 2).
+- **Upper bound** $K_{\mathrm{bar}} \le |A|$: (α) LG-7 coverage derived from LG-4 + terminal-death (every dominant bar's birth has $U \ge \ell_{\min}$, hence not in $X_{\mathrm{bg}}$); (β) per-neighborhood at-most-one-dominant-bar via L1-H2 Lemma 1 (graph-inclusion: $\ell_{\mathrm{glob}} \le \ell_{\mathrm{loc}}$ on $G_j^r \subseteq G$) + L1-H2 Lemma 2 (contradiction-based bottleneck-stability under tightened H6).
+- **PO-1 decay-to-cut** (P7) bounds $\theta_{\mathrm{bridge}}^{jk}(U)$ via L1-J §8.1 + L1-B Cat-A cut lemma.
+
+### Empirical Anchoring
+
+- L1-I 439/1920 (22.9%) configurations on $T^2_{20}$ FEASIBLE_WITH_BUDGET; best case $\sigma_b=0.5,\delta=0.02,r=0,\ell_{\min}=0.10$ raw_gaussian.
+- L1-H2 stress 5/5 + L1-J PO-1 6/6.
+- External audit (L1-K, THEOREM_CANDIDATE_STRONG_AUDIT_PASSED) with 4 proof-hygiene repairs (R-1 contradiction proof, R-2 $q_j^U$ clarification, R-3 plateau handling, R-4 heterogeneous $\psi$) all applied (L1-K-REPAIR cycle).
+- P7 status decision (L1-L): P7 adopted as **safe technical regime hypothesis**; L1-L Combes-Thomas / discrete Agmon analysis provides theorem-grade backing under strong stationarity but P7 is not asserted for all SCC states.
+
+### Files Modified
+
+- `THEORY/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666 → 1675).
+- `THEORY/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338 → 368).
+
+### Files NOT Modified
+
+- `THEORY/canonical/open_problems.md` — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
+
+### Files Created
+
+- `THEORY/logs/daily/2026-05-02/01_T_L1_F_canonical_promotion_closure.md` — Day 6 canonical promotion closure document (Day 6 has no 99_summary; this file replaces it).
+
+### Theorem Status Changes
+
+- **CV-1.5.1 → CV-1.5.2**: 45A → **46A** / 5B / 5C / 5R / 60 → **61 claims** / 75% proved.
+- T-L1-F (C-0721): **new Cat A conditional** under L1-J regime $(P0)$–$(P11)$.
+
+### Non-Claims Preserved (Explicit)
+
+- **No global $K_{\mathrm{bar}} = K_{\mathrm{act}}$**. Equality only under $(P0)$–$(P11)$.
+- **No global $K_{\mathrm{soft}}^\phi = K_{\mathrm{act}}$**. Additionally requires $\phi \in \Phi_{\mathrm{res}}$ per WQ-LAT-1.B.
+- **OP-0005 (K-Selection) NOT solved**. T-L1-F is a bridge, not a K-selection mechanism.
+- **OP-0008 ($\sigma^A$ K-jump non-determinism) NOT solved**. T-L1-F does not address $\sigma$-inheritance.
+- **$\sigma_{\mathrm{rich}}$ sufficiency NOT claimed**.
+- **Reservoir theory NOT promoted to canonical**. Reservoir framework remains working-grade.
+- **P7 NOT generally derived from all SCC states**. L1-L provides Route C derivation under strong stationarity only.
+- **No application / robotics / vision claims**.
+
+### Test Count
+
+196/196 passing (no scc/ edits).
+
+### Open Items Carried Forward
+
+- W5 Day 7: L1-M Soft-Count Corollary working draft (CV-1.6 promotion target via L1-M-AUDIT W6 G1).
+- W6+: L1-M-AUDIT external audit + repair cycle (mirrors L1-K external audit pattern).
+
+---
+
+## 2026-05-01 — W5 Day 5 Reconciliation Day (15,805 Lines Audited; 9 Retractions; CV-1.7 Parking Lot Discipline)
+
+### Summary
+
+W5 Day 5 RECONCILIATION-FIRST session — Day 4 대량 산출물 정리; T-σ-Theorem-4 붉은 경고 audit lane으로 격리; CV-1.6 packet에서 READY/PARTIAL 다시 구분; post-EOD op-0008 cluster catalog; Operational Theorem 4.6.1 label + NQ-244 launch까지 마감; W6 entry plan preview까지. **Calibration**: Day 5는 *reconciliation + cataloging + W6-priming* day, NOT a growth day. ~1640 working/log lines (vs Day 4's ~10,800; intentionally an order of magnitude smaller per Risk-8 mitigation). **No canonical edits applied** (audit only).
+
+### What Was Verified (Block 1)
+
+- 47 working files / **~15,805 lines** persisted across T-σ-Theorem-4 cluster (5) + σ_rich foundation (10) + K-Selection (6) + Wave 3 lead-direct (9) + CV-1.6/1.7 packet drafts (6) + OAT-2~7 batch (7) + reconciliation candidates (4). **0 phantom; 0 missing**.
+- 8 CODE files persisted (sigma_rich.py + tests + R23 numerical scripts).
+- Test baseline 196/196 preserved (no Day 5 CODE edits).
+- Wave 3 critic verdict integration: 5/8 ACCEPT family + 3/8 PARTIAL.
+
+### What Was Downgraded or Caveated (Block 3 reclassification)
+
+CV-1.6 packet inclusion **11 D-items naive expectation → effective 10**:
+- O4 C_t coexistence: PARTIAL → 🔴 DEFER → W6+
+- P1 V5b-F C(β) (NQ-198k): NOT STARTED → 🔴 DEFER → W6 D4
+- P2 V5b-T-zero (NQ-198l): NOT STARTED → 🔴 DEFER → W6+
+- O2 Shared-pool I9': ⏳ → 🟡 PARTIAL → W6 D3 short integration
+- O3 F bridge + λ_rep: ⏳ → 🟡 PARTIAL (BC-1 fails generic update; OAT-2/3 short integration W6 D1-D2)
+- P3 3D LSW (NQ-244): ⏳ → 🟡 PARTIAL (Day 5 launch metadata only; result analysis W6 D4)
+- P4 G5 SF Round merge: ⏳ → 🟡 PARTIAL (NQ-187 pivot caveat-based inclusion at CV-1.6, NOT Cat A re-promotion)
+
+### What Remains Red (T-σ-Theorem-4 γ/β/α handoff to W6)
+
+- T-σ-Theorem-4 **3-way A_2/A_1 discrepancy** (2/3 vs 4 vs 8) cleanly bounded into 3 audit paths γ / β / α with explicit ownership and W6 D1-D7 handoff dates.
+- 🥇 **γ-path** ($\Sigma_m$-Hessian convention audit, highest priority): NEW W6 D1-D3 working file `sigma_m_hessian_convention_audit.md`; teammate `gamma-path-prover` D1 morning dispatch; 3-5 days effort; Cat A target.
+- 🥈 **β-path** (R22 cubic-equivariant derivation audit): NEW W6 D4-W7 working file `r22_a2_a1_audit.md`; teammate `r22-audit-prover` conditional dispatch (only if γ inconclusive); 1-2 weeks effort.
+- 🥉 **α-path** (finite-L vs continuum extrapolation): existing post-EOD `nq187b_L_extrapolation.md` 422 lines + NEW `CODE/scripts/nq187b_a2_a1_extrapolation.py`; W6 D3 direct compute (< 1 hour) + W6 D4-W7 numerical extension (10-30 hours).
+- T-σ-Theorem-4 stays Cat B; Cat A re-promotion deferred to **CV-1.7+** post-(γ)+(β)+(α) closure.
+- Default expectation: caveat addition, NOT Cat A re-promotion attempt. **Day 5 canonical edits to T-σ-Theorem-4 = 0**.
+
+### CV-1.7 Parking Lot Discipline Introduced (Block 5)
+
+**Cluster contents** (~17 files / ~8145 lines, **all un-audited at Day 5 entry**):
+- σ_rich foundation: 8 files / 2764 lines → CV-1.7 Commitment 18 candidate
+- σ-fingerprint: 2 files / 539 lines → CV-1.7+ NQ-264 R23
+- K-Selection: 5 files / 1915 lines → CV-1.7+ Commitment 19 candidate
+- Reconciliation drafts: 2 files / 760 lines → T-σ-Theorem-4 reconciliation triple inputs
+- Commitment packets: 2 files / 835 lines → CV-1.7+ formal proposals
+- NQ-242c: 1 file / 475 lines → W6 D6 input
+- Auxiliary categorical / π_1 / Lie algebra: 3 files / 857 lines → CV-1.7+ via Bridge B-3 framing
+
+**Parking lot rule**: working/-only labels with explicit "CV-1.7 candidate" header at W6 D6 packet finalize. **No Day 5 promotion attempt.** Critic re-review at W6+ unblocks promotion path. CV-1.7 release target: ~W7-W9. **Mitigation against silent abandonment**: W6 D6 critic dispatch checklist explicit.
+
+### 9 Aggregate Retractions Documented (R-1..R-9)
+
+| Type | Count | Examples |
+|---|---:|---|
+| Arithmetic error correction | 1 | R-1 (post-EOD §2.6 table) |
+| Priority elevation | 1 | R-2 (β-path conditional → unconditional) |
+| Estimate correction | 1 | R-3 (NQ-244 launch time) |
+| Plan item dissolved | 1 | R-4 (label-fix diff not needed) |
+| Wave 5 dispatch retired | 1 | R-5 (4 contingencies → W6 reroute) |
+| Status reaffirmation | 1 | R-6 (T-σ-Theorem-4 Cat B retained) |
+| Packet count recalibration | 1 | R-7 (11 → effective 10 + 17 parking lot) |
+| Cluster classification | 1 | R-8 (post-EOD → CV-1.7 parking lot) |
+| Framing calibration | 1 | R-9 (OP-0009 wording binding) |
+
+**Net**: 9 distinct retraction-style items (1 substantive arithmetic correction + 1 priority elevation with theorem-level implications + 7 process/classification/framing adjustments). 정직 교정의 측정 가능한 산출물.
+
+### Files Created (Day 5)
+
+- `THEORY/logs/daily/2026-05-01/01_morning_state_reload.md`
+- `THEORY/logs/daily/2026-05-01/02_verification_audit.md`
+- `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`
+- `THEORY/logs/daily/2026-05-01/04_cv16_packet_recalibration.md`
+- `THEORY/logs/daily/2026-05-01/05_nq244_launch_note.md`
+- `THEORY/logs/daily/2026-05-01/06_active_teammate_and_wave5_decisions.md`
+- `THEORY/logs/daily/2026-05-01/07_w6_plan_preview.md`
+- `THEORY/logs/daily/2026-05-01/08_alpha_path_direct_compute_finding.md`
+- `THEORY/logs/daily/2026-05-01/09_day6_plan_seed.md`
+- `THEORY/logs/daily/2026-05-01/99_summary.md`
+
+### Theorem Status Changes
+
+- T-σ-Theorem-4: Cat B retained (Cat A re-promotion deferred to CV-1.7+).
+- CV-1.6 packet inclusion: 11 D-items → effective 10 (5 READY/READY-NEAR + 5 PARTIAL caveat-based + 3 DEFER + 17 parking lot files excluded).
+
+### Test Count
+
+196/196 maintained (no scc/ edits).
+
+### Open Items Carried Forward
+
+- Day 6 morning: NQ-244 3D LSW background launch + γ-path teammate dispatch + L1-M Cat A re-promotion attempt path.
+- Day 7 W5 close: weekly_summary substantive draft.
+- W6 D1-D7: γ/β/α audit paths execution; CV-1.6 release target D7 EOD.
+
+---
+
 ## 2026-04-30 PM (Wave 3) — Infinite-Develop Continued: Critic Carry-Forward Resolutions + 2 NEW Working Files (sigma_lie_algebra_structure + foundational_bridges_2026) + 2 In-Flight (sigma_rich_augmentation + k_selection_mechanism) + Cross-File Citation Network Sweep
 
 ### Summary
