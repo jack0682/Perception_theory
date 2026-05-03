@@ -2,6 +2,54 @@
 
 ---
 
+## 2026-05-04 (W6 Day 1 evening) — G2 (T-Bind categorical decision) + NQ-187 falsification handling
+
+W6 Day 1 evening session per the redesigned W6 strategic plan (G2 + opportunistic NQ-187 handling).
+
+### G2 — T-Bind-Proj / T-Bind-Full categorical decision (closed)
+
+**Decision:** T-Bind-Proj = Cat A (for all τ_cl ∈ (0,1)). T-Bind-Full = Cat A.
+
+**Rationale:** `THEORY/canonical/canonical.md` §13 line 1440-1448 explicitly states "T-Bind-Proj. *(Moved here from former Category B — Phase 13 upgrade to Cat A for all τ.)*" and "T-Bind-Full. ... *Status:* **Proved**, Cat A." The Erratum 2026-04-07 inside the §13 Cat B header (line 1481) explicitly says "T-Bind-Proj/Full moved to Category A above." The proof is complete: KKT projection + Banach inversion of restricted operator with $\sigma_{\min} \ge 1 - a_{\mathrm{cl}}/4$, with general τ via the binary mass-balance formula $\Phi(\tau; a_{\mathrm{cl}}, c)$. T-Bind-Full follows from T-Bind-Proj + universal gradient bounds.
+
+The disagreement with `theorem_status.md` (which had T-Bind-Proj at Cat B with τ=1/2 restriction and T-Bind-Full at Cat C "very conditional") was a stale shadow: the Phase 13 upgrade was applied in `canonical.md` 2026-04-07 but never propagated to `theorem_status.md`.
+
+**Actions:**
+- `theorem_status.md` row C-0200 (T-Bind-Proj) and row C-0201 (T-Bind-Full) updated to Cat A with explicit reference to canonical.md §13 line 1440 / 1445 and the Erratum 2026-04-07 trail.
+- `theorem_status.md` Proof Status Summary: T-Bind-Proj removed from Cat B example list; T-Bind-Full removed from Cat C example list, with audit notes explaining the correction.
+- `canonical.md` §15 closing summary: removed the "T-Bind-Proj sub-case status differs" caveat (which was itself a propagation error from theorem_status.md) and rewrote the Cat A explanation to clarify that the 46-Cat-A count includes T-Bind-Proj/Full per Phase 13 upgrade.
+
+**Net effect:** Cat A count unchanged at 46 (canonical was already correct); Cat B example list lost T-Bind-Proj (4 hard Cat B + 2 status-downgraded retained); Cat C example list lost T-Bind-Full (5 entries retained per canonical Erratum: T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Sep, T-Persist-K-Weak, T-Persist-K-Unified, plus V5b-F + T-σ-Lemma-2 sub-statements). The deeper Cat B / Cat C count audit (T-Persist-K-Sep / T-Persist-K-Unified currently appearing in different categories across files; T-σ-Theorem-4 / T-σ-Multi-1 status-downgraded but physically in Cat A section) is deferred to a future audit pass.
+
+### NQ-187 falsification handling for T-σ-Theorem-4 (continuum-vs-discrete caveat added)
+
+**Decision:** keep canonical T-σ-Theorem-4 statement (ii) intact as a **continuum-limit claim**; add an explicit caveat that the prediction is not realized on finite discrete $D_4$ free-BC grids $L \le 16$, and document the three reconciliation hypotheses (α continuum extrapolation, β R22 re-derivation, γ Σ_m-Hessian convention) currently under γ/β/α path audit.
+
+**Rationale:** the canonical statement uses $A_2/A_1 = 4$ from R22 §3.3, which is a continuum Lebesgue-integral derivation on the unit square. NQ-187 (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`, script `CODE/scripts/test_sigma_theorem4_scaling.py`, $L \in \{4, 8, 16\}$, $\epsilon \in \{0.001..0.1\}$, analytic sparse $\Sigma_m$-Hessian + shift-invert Lanczos) measured the bottom two eigenvalues at the post-bifurcation minimizer:
+- $\mu_0/\epsilon \approx 1$ across all $(L, \epsilon)$ tested (not $4$ as canonical predicts).
+- $\mu_1/\epsilon \approx 2$ across all $(L, \epsilon)$ tested (not $4$ as canonical predicts).
+- Ratio $\mu_1/\mu_0 \approx 2$ (not $1$ as canonical predicts for the degeneracy).
+- Power-law fit for $\Delta\mu = \mu_1 - \mu_0$ vs $\epsilon$: exponent $p \approx 1.03$ at $L = 16$ (not $p = 2$ predicted by canonical's $O(\epsilon^2)$ degeneracy splitting).
+
+The canonical statement is therefore mathematically correct as a **continuum-limit identity** (the R22 derivation is sound on smooth domain) but **does not directly apply to the discrete grid** which is the only thing the implementation can actually compute on. The Cat-B retention is justified independently by NQ-187's numerical refutation, on top of the Errata Round 1 Morse-index inconsistency that triggered the original 2026-04-29 retroactive downgrade.
+
+**Actions:**
+- `canonical.md` §13 T-σ-Theorem-4 entry: statement (ii) prefix amended to make the "continuum-limit prediction" framing explicit; added a "Continuum vs discrete grid note (added 2026-05-04 W6 NQ-187 audit)" paragraph that documents the NQ-187 numerical results, identifies the three reconciliation hypotheses (α/β/γ), and states "canonical statement (ii) should be read as a continuum-limit claim, not a finite-grid claim" until the γ/β/α audit closes.
+- References block updated to cite the NQ-187 daily log (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`), the Wave 3 critical findings doc (`logs/daily/2026-04-30/13_wave3_critical_findings.md` §1), the Day 5 reconciliation γ/β/α framework (`logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`), and the working file (`THEORY/working/SF/sigma_theorem4_higher_order.md` §8).
+- `theorem_status.md` row C-0716 brief and Proof Status Summary entry rewritten to surface the continuum-vs-discrete caveat: "Statement now read as continuum-limit claim until γ/β/α audit closes."
+
+**Net effect on Cat counts:** none. T-σ-Theorem-4 was already Cat B; the audit only adds documentation. The γ/β/α path audit (executed by W6 G3 in the *deleted* old W6 plan, deferred in the *redesigned* W6 plan to a future cycle) will determine whether Cat A re-promotion is possible or whether a deeper retraction / restatement is needed.
+
+### Test count
+
+215 passed + 1 xfailed unchanged. No `scc/` edits in this evening session.
+
+### Theorem status changes
+
+None substantive. Two documentation reconciliations (G2 brief sync; NQ-187 caveat). Active counts unchanged.
+
+---
+
 ## 2026-05-04 (Pass 2) — Theory-Consistency Audit + Structural Decisions
 
 Second audit pass on 2026-05-04. Triggered by user request for a precise re-review of all documents (~450 findings across 7 parallel exploration agents). The first pass (Pass 1, also recorded in this entry below) handled the test count, canonical version drift, daily-log structural anomalies, paper draft removal, root-level draft cleanup, and `.omx` untracking. This Pass 2 handles the deeper theory-consistency findings.
