@@ -1,52 +1,59 @@
 ---
-id: CV-1.5
+id: CV-1.5.2
 type: canonical/specification
-version: 1.5
-released: 2026-04-27
+version: 1.5.2
+released: 2026-05-02
 status: accepted
-description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29). 45A/60 claims/75% fully proved.
+description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02). 46A/61 claims/75% fully proved.
 ---
 
-# Canonical Specification of Soft Cognitive Cohesion (CV-1.5)
+# Canonical Specification of Soft Cognitive Cohesion (CV-1.5.2)
 
-> **Version naming convention.** This document uses a single release ladder, **CV-x.y**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → **CV-1.5 (04-27, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
+> **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → **CV-1.5.2 (05-02, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
 >
-> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.5**.*
+> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.5.2**.*
 
 ---
 
-## ⚠️ DEVELOPMENT NOTICE: CV-1.5 → CV-1.6 Progression
+## ⚠️ DEVELOPMENT NOTICE: CV-1.5.2 → CV-1.6 Progression
 
-**Status (2026-04-28, W5 Day 2):** **CV-1.5 is CURRENT**. CV-1.6 release path is in development per W5 strategic plan.
+**Status (2026-05-02, W5 Day 6):** **CV-1.5.2 is CURRENT**. CV-1.6 release path is in development per W5 reconciliation + W6 strategic plan (CV-1.6 release target W6 D7 EOD 2026-05-10).
 
-**CV-1.5 release summary (2026-04-27, this document):**
+**CV-1.5.2 release summary (2026-05-02, this document):**
+- **T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) merged** as Cat A *conditional* under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem.
+- **Counts**: 45A → **46A**, 60 → **61 claims**, 75% fully proved.
+- **Non-claims preserved (explicit)**: no global $K_{\mathrm{bar}}=K_{\mathrm{act}}$; no global $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}$; OP-0005 / OP-0008 NOT solved; reservoir theory NOT promoted; P7 NOT generally derived.
+
+**Prior CV-1.5 release summary (2026-04-27):**
 - **σ-framework supporting structures merged** (W5 Day 1 G0): T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — five Cat A entries grounding Commitment 14.
 - **Counts**: 38A → **43A**, 52 → **57 claims**, 73% → **75% fully proved**.
 - **T1 explosion**: 3 → **8** (each σ-supporting structure individually canonical-visible per Option α).
 - **Errata Round 1+2** (2026-04-27 evening/night): 3 substantive math errors fixed with embedded `*Erratum*`/`*Refinement*` markers; theorem status unchanged (all remain Cat A).
 
-**CV-1.0 through CV-1.5 history (canonical release timeline):**
+**CV-1.0 through CV-1.5.2 history (canonical release timeline):**
 - **CV-1.0** (2026-04-01): Initial spec, 11 Cat A + QM-1:4.
 - **CV-1.1** (2026-04-03): PLAN_0403 Tier 1 — 35 → 38 Cat A.
 - **CV-1.2** (2026-04-12): T-Persist-K-Unified added; F-1/M-1/MO-1 documented; honest recount → 35A/4B/5C/5R.
 - **CV-1.3** (2026-04-25): T-PreObj-1 family + Lemma 4 + F-1 split-resolution corollary. Critical blockers 3 → 0.
 - **CV-1.4** (2026-04-26): T-V5b-T canonical (Pre-Objective Goldstone on translation-invariant graphs).
 - **CV-1.5** (2026-04-27): σ-framework supporting structures (T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4).
+- **CV-1.5.1** (2026-04-29): D-6a Multi-Static (3 Cat A) + Commitment 16 K-status + T-σ-Theorem-4 retroactive Cat A → Cat B + OP-0008/OP-0009 registered.
+- **CV-1.5.2** (2026-05-02): T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional. First multi-formation canonical Cat A theorem.
 
-**CV-1.6 development (W5+, 2026-04-28 onward):**
-- V5b-F characterization (NQ-173 W5 Day 3, Cat C → B target candidate).
-- ζ_*(graph) precise dependence (NQ-174 W5 Day 3, T-V5b-T-(d) bracket → 2-decimal precise).
-- Multi-formation σ Phase 5 (G3, W5 Day 3-4) — re-engages MO-1 (multi-formation scope).
-- SF Round 1-5 Cat A merge (G5, W5 Day 5).
-- Commitment 14 (O5')/(O7) tie-breaking conventions — user decision pending.
+**CV-1.6 development (W6, 2026-05-04 ~ 2026-05-10 target):**
+- T-L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ (W5 Day 7 working draft, Cat B sketched; CV-1.6 promotion target via L1-M-AUDIT, W6 G1).
+- T-σ-Theorem-4 Cat B → Cat A re-promotion attempt (γ-path Σ_m-Hessian convention audit, W6 G3).
+- OP-0009-F + OP-0009-λ PARTIAL → READY (OAT-2/3 short integration, W6 G7).
+- 5 D-items READY/READY-NEAR + 5 PARTIAL caveat-based per W5 Day 5 reconciliation packet recalibration.
 
-**What CV-1.5 means:**
-- **Single-formation theory is canonical-closed** — F-1/M-1/MO-1 no longer block publication; σ-framework fully grounded with 5 supporting structures.
-- σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions) + theoretical scaffolding (Lemma 1/2/3, Theorem 3/4).
-- **CV-2.0 release path** unblocked (publication-grade single-formation closure achieved).
+**What CV-1.5.2 means:**
+- **Single-formation theory is canonical-closed** — F-1/M-1/MO-1 no longer block publication; σ-framework grounded with supporting structures (Lemmas 1/2/3 + Theorems 3/4).
+- σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions) + theoretical scaffolding.
+- **Multi-formation count theory has its first canonical Cat A theorem** (T-L1-F): under L1-J regime $(P0)$–$(P11)$ on shared-pool $\widetilde\Sigma_M^{K_{\mathrm{field}}}$, hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}$ equals active-slot count $K_{\mathrm{act}}^\varepsilon$, with labelled bijection.
+- **NOT YET claimed**: global $K_{\mathrm{bar}}=K_{\mathrm{act}}$, global $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}$, K-selection mechanism (OP-0005), σ K-jump inheritance (OP-0008), reservoir theory promotion, vision/AI/robotics application.
 
 **Access:**
-- Full Version History: `theorem_status.md` §Canonical Spec Version History (CV-1.0..CV-1.5).
+- Full Version History: `theorem_status.md` §Canonical Spec Version History (CV-1.0..CV-1.5.2).
 - Per-merge session log: `THEORY/CHANGELOG.md` (entries chronological by date).
 - W4 detailed work: `THEORY/logs/weekly/2026-04-W4/weekly_summary.md`.
 - W5 strategic plan: `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md`.
@@ -62,7 +69,7 @@ All sums of the form $\sum_{x,y \in X_t}$ range over **ordered pairs**: each und
 
 ## 1. Status Note
 
-This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion. The current release is **CV-1.5 (2026-04-27)**, incorporating results from Iterations 1–12 plus the 2026-04-02 theory audit and superseding all earlier releases. See §1.1 below for the full canonical release history.
+This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion. The current release is **CV-1.5.2 (2026-05-02)**, incorporating results from Iterations 1–12 plus the 2026-04-02 theory audit, the W4–W5 multi-formation extensions (T-PreObj, T-V5b-T, σ-supporting Lemmas/Theorems, D-6a Multi-Static + Commitment 16, T-L1-F Hard-Bar/Active-Count Bridge), and superseding all earlier releases. See §1.1 below for the full canonical release history.
 
 ### 1.1 Canonical Release History
 
@@ -75,6 +82,7 @@ This document is the canonical human-readable formal specification of the theory
 | **CV-1.4** | 2026-04-26 | 38 | 52 | 73% | T-V5b-T (Pre-Objective Goldstone on translation-invariant graphs); V5b-F new Cat C finding; W4 extended close |
 | **CV-1.5** | **2026-04-27** | **43** | **57** | **75%** | σ-framework supporting structures: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — Commitment 14 fully canonical-grounded; T1 = 3 → 8 |
 | **CV-1.5.1** | **2026-04-29** | **45** | **60** | **75%** | D-1~D-4 + D-6a applied (Commitment 14 (O5')(O7); V5b-F empirical scaling; ζ_*(G,c) precise; Multi-Static 3 entries); D-5 V5b-T' WITHDRAWN (NQ-198f phantom on torus); V5b-T-zero sub-statement (Cat A def, μ=0 exact); T-σ-Theorem-4 Cat A→B (Errata Round 1 retroactive); Commitment 16 K-status (K_field/K_act decomposition); OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations registered; MO-1 re-activation rider added to OP-0003 |
+| **CV-1.5.2** | **2026-05-02** | **46** | **61** | **75%** | T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A *conditional* under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4). open_problems.md unchanged (T-L1-F is a bridge, not a K-selection mechanism — explicitly does NOT solve OP-0005 / OP-0008). |
 
 **Authoritative sources:**
 - Per-release detail: `theorem_status.md` §Canonical Spec Version History.
@@ -91,7 +99,7 @@ The document separates stable theoretical commitments — those principles that 
 - **Retraction:** Theorem 3.3 ($\bar{r}_0 = O(n^{-1/d})$ for general $\tau$) — experimentally falsified; $\bar{r}_0$ is genuinely $O(1)$ for $\tau \neq 1/2$.
 - **T-Persist-K-Unified:** New parametric theorem unifying Sep/Weak/Strong persistence regimes via the coupling parameter $\Lambda_{\mathrm{coupling}} = \lambda_{\mathrm{rep}} \cdot \omega_{jk} / \min(\mu_j, \mu_k)$.
 - **Unified regime parametrization:** $\Lambda_{\mathrm{coupling}}$ adopted as canonical coupling measure with $\mu$-floor regularization $\mu_{\mathrm{floor}} = w_{\mathrm{cl}} \cdot 2(1 - a_{\mathrm{cl}}/4)^2$. Experimental validation: 100% geometric-Lambda agreement across 69 configurations (exp46-47).
-- **Proved results registry:** Now **45 Category A**, **5 Category B**, **5 Category C**, **5 retracted**; total 60 claims (75% fully proved). *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. See docs/04-06/HONEST-RECOUNT.md.)* *(Update 2026-04-25: T-PreObj-1 + T-PreObj-1G added in W4 merge — 35A → 37A, 49 → 51 claims. F-1/M-1/MO-1 resolved/clarified/sidestepped.)* *(Update 2026-04-26: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) added in W4 extended close — 37A → 38A, 51 → 52 claims. V5b 8 iterations (V1 → V5b'') resolved into V5b-T canonical + V5b-F Cat C new finding.)* *(Update 2026-04-27: σ-framework supporting structures T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 added in W5 Day 1 G0 — 38A → 43A, 52 → 57 claims. σ-framework now fully canonical-grounded.)* *(Update 2026-04-29: CV-1.5.1 — D-6a Multi-Static (3 Cat A entries) + T-σ-Multi-1 (Cat B target) + V5b-F-empirical sub (Cat B) + V5b-T-zero sub (Cat A def) + T-σ-Theorem-4 retroactive Cat A → Cat B (Critic verdict) + Commitment 16 K-status + Commitment 14 (O5')(O7) sub-conventions; D-5 V5b-T' WITHDRAWN (NQ-198f phantom). 43A → 45A, 4B → 5B, 57 → 60 claims; OP-0008 σ^A K-jump + OP-0009 Multi-Formation Ontological Foundations registered; MO-1 re-activation rider on OP-0003.)*
+- **Proved results registry:** Now **46 Category A**, **5 Category B**, **5 Category C**, **5 retracted**; total 61 claims (75% fully proved). *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. See docs/04-06/HONEST-RECOUNT.md.)* *(Update 2026-04-25: T-PreObj-1 + T-PreObj-1G added in W4 merge — 35A → 37A, 49 → 51 claims. F-1/M-1/MO-1 resolved/clarified/sidestepped.)* *(Update 2026-04-26: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) added in W4 extended close — 37A → 38A, 51 → 52 claims. V5b 8 iterations (V1 → V5b'') resolved into V5b-T canonical + V5b-F Cat C new finding.)* *(Update 2026-04-27: σ-framework supporting structures T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 added in W5 Day 1 G0 — 38A → 43A, 52 → 57 claims. σ-framework now fully canonical-grounded.)* *(Update 2026-04-29: CV-1.5.1 — D-6a Multi-Static (3 Cat A entries) + T-σ-Multi-1 (Cat B target) + V5b-F-empirical sub (Cat B) + V5b-T-zero sub (Cat A def) + T-σ-Theorem-4 retroactive Cat A → Cat B (Critic verdict) + Commitment 16 K-status + Commitment 14 (O5')(O7) sub-conventions; D-5 V5b-T' WITHDRAWN (NQ-198f phantom). 43A → 45A, 4B → 5B, 57 → 60 claims; OP-0008 σ^A K-jump + OP-0009 Multi-Formation Ontological Foundations registered; MO-1 re-activation rider on OP-0003.)* *(Update 2026-05-02: CV-1.5.2 — T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) added as Cat A conditional. First multi-formation canonical Cat A. 45A → 46A, 60 → 61 claims. L1-A through L1-L chain + L1-K external audit + L1-K-REPAIR cycle. open_problems.md unchanged.)*
 
 **Key changes from 2026-04-02 audit (paradigm shift: kinetic multi-formation):**
 
@@ -978,9 +986,9 @@ When formations have significant bulk overlap ($|O_{jk}| > \eta \cdot \min(|\tex
 
 *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. Previous counts (43A/2B/3C/0R) overcounted due to: empirical fits treated as proofs, merge path manifold error, quantitative claims bundled with qualitative theorems. See docs/04-06/HONEST-RECOUNT.md.)*
 
-The following theorems have been rigorously proved through Iterations 1–12, audited 2026-04-06, extended in W4 (2026-04-19 ~ 2026-04-26, extended close), W5 Day 1 (2026-04-27 σ-framework supporting structures merge), and **W5 Day 3 EOD (2026-04-29 D-6a Multi-Static + ontological depth + Critic 보강)**. They are listed with precise statements, proof methods, and known caveats. **Totals (post-W5 Day 3 EOD, 2026-04-29 CV-1.5.1): 45 Category A, 5 Category B, 5 Category C, 5 Retracted (60 claims, 75% fully proved).** *(W4 additions: T-PreObj-1 + T-PreObj-1G — Pre-Objective Mechanism graph-class independent; corollary resolves F-1. W4 extended addition: T-V5b-T — Pre-Objective Goldstone on Translation-Invariant Graphs. W5 Day 1 additions: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14. **W5 Day 3 EOD additions (CV-1.5.1)**: T-Commitment-14-Multi-Static + T-σ-multi-A-Static + T-σ-multi-D-Static (3 Cat A definitional entries grounding Commitment 14-Multi); T-σ-Multi-1 (Cat B target, Goldstone-pair instability); V5b-F-empirical sub-statement (Cat B target via NQ-198a 1/n scaling); V5b-T-zero sub-statement (Cat A definitional, replaces WITHDRAWN V5b-T' phantom); T-σ-Theorem-4 retroactive Cat A → Cat B (Critic 7-agent verdict).)*
+The following theorems have been rigorously proved through Iterations 1–12, audited 2026-04-06, extended in W4 (2026-04-19 ~ 2026-04-26, extended close), W5 Day 1 (2026-04-27 σ-framework supporting structures merge), W5 Day 3 EOD (2026-04-29 D-6a Multi-Static + ontological depth + Critic 보강), and **W5 Day 6 (2026-05-02 T-L1-F Hard-Bar / Active-Count Bridge canonical promotion)**. They are listed with precise statements, proof methods, and known caveats. **Totals (post-W5 Day 6, 2026-05-02 CV-1.5.2): 46 Category A, 5 Category B, 5 Category C, 5 Retracted (61 claims, 75% fully proved).** *(W4 additions: T-PreObj-1 + T-PreObj-1G — Pre-Objective Mechanism graph-class independent; corollary resolves F-1. W4 extended addition: T-V5b-T — Pre-Objective Goldstone on Translation-Invariant Graphs. W5 Day 1 additions: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14. **W5 Day 3 EOD additions (CV-1.5.1)**: T-Commitment-14-Multi-Static + T-σ-multi-A-Static + T-σ-multi-D-Static (3 Cat A definitional entries grounding Commitment 14-Multi); T-σ-Multi-1 (Cat B target, Goldstone-pair instability); V5b-F-empirical sub-statement (Cat B target via NQ-198a 1/n scaling); V5b-T-zero sub-statement (Cat A definitional, replaces WITHDRAWN V5b-T' phantom); T-σ-Theorem-4 retroactive Cat A → Cat B (Critic 7-agent verdict). **W5 Day 6 addition (CV-1.5.2)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) Cat A conditional — first multi-formation canonical Cat A theorem.)*
 
-### Category A: Fully Proved (35 theorems)
+### Category A: Fully Proved (46 theorems as of CV-1.5.2; baseline below lists original 35 from Iterations 1–12, with W4–W5 additions appended later in this section: T-PreObj-1, T-PreObj-1G, T-V5b-T (+ V5b sub-statements), T-σ-Lemma-1/2/3, T-σ-Theorem-3, T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static, T-L1-F)
 
 **T1. Energy Minimizer Existence.**
 On the constraint manifold $\Sigma_m = \{u \in [0,1]^n : \sum u_i = m\}$, the energy $\mathcal{E}_t$ attains its minimum.

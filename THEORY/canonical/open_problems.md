@@ -2,13 +2,13 @@
 id: ROADMAP-0003
 type: roadmap/open_problems
 status: accepted
-last_updated: 2026-05-02
+last_updated: 2026-04-30
 ---
 
 <!-- Update history:
-  2026-04-25: W4 weekly close (F-1/M-1/MO-1 resolved/clarified/sidestepped, 3 Critical → 0).
-  2026-04-30 (W5 Day 4 / CV-1.5.1): OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations (7 sub-items) registered HIGH; OP-0003 MO-1 re-activation rider added; OP-0009-K RESOLVED via Commitment 16.
-  2026-05-02 (W5 Day 6 / CV-1.5.2): T-L1-F canonical promotion. open_problems.md NOT modified (T-L1-F is a bridge, not a K-selection mechanism — explicitly does NOT solve OP-0005 or OP-0008). last_updated bumped to acknowledge release-day 머지 alignment.
+  2026-04-25: W4 weekly close (F-1/M-1/MO-1 resolved/clarified/sidestepped, 3 Critical → 0). [last body edit through this date]
+  2026-04-30 (W5 Day 4 / CV-1.5.1): OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations (7 sub-items) registered HIGH; OP-0003 MO-1 re-activation rider added; OP-0009-K RESOLVED via Commitment 16. [last body edit]
+  2026-05-02 (W5 Day 6 / CV-1.5.2): T-L1-F canonical promotion. open_problems.md body NOT modified (T-L1-F is a bridge, not a K-selection mechanism — explicitly does NOT solve OP-0005 or OP-0008). Note (2026-05-04 audit fix): the previous bump of `last_updated` to 2026-05-02 was misleading because no body change accompanied it; reverted to 2026-04-30 (the true date of the last substantive edit) per audit-trail honesty principle.
 -->
 
 

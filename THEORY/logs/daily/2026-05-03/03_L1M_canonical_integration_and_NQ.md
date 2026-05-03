@@ -1,9 +1,11 @@
-# 03_integration_and_new_open.md — L1-M Integration with Canonical, New Open Questions
+# 03_L1M_canonical_integration_and_NQ.md — L1-M Integration with Canonical, New Open Questions
+
+> *(Renamed 2026-05-04 audit: previously `03_integration_and_new_open.md`. Internal/external references updated.)*
 
 **Session:** 2026-05-03 (W5 Day 7)
 **Target (from plan.md §2):** Integrate today's L1-M corollary into the canonical fabric; surface what L1-M changes/strengthens/leaves untouched; collect new open questions for W6+ planning.
 **This file covers:** §1 plan-vs-prompt resolution (working/ write conflict), §2 integration with T-L1-F + canonical §13, §3 OP-non-impact statement, §4 new open questions, §5 prompt v2 candidate notes (per prompt §14).
-**Depends on reading:** `02_development.md` Theorem L-M, Lemmas L-M-1, L-M-2; `canonical.md` §13 Cat A T-L1-F entry; `open_problems.md` OP-0005, OP-0008, OP-0009; plan.md §5 success criteria, §7 expected outputs.
+**Depends on reading:** `02_L1M_proof_development.md` Theorem L-M, Lemmas L-M-1, L-M-2; `canonical.md` §13 Cat A T-L1-F entry; `open_problems.md` OP-0005, OP-0008, OP-0009; plan.md §5 success criteria, §7 expected outputs.
 
 ---
 
@@ -26,24 +28,24 @@ These conflict at the surface level: plan.md asks me to create a `working/MF/...
 
 I take the prompt's hard constraint as authoritative (§8.1: "canonical 직접 수정 금지" extends to the spirit of working/ as well — the working/ files are part of the promotion pipeline, and direct writes by the autonomous agent bypass the user's review step).
 
-**Concretely.** The substantive content of the would-be `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` — its definitions, lemmas, theorem statement, proofs, per-family corollaries, and counterexample analysis — lives in this session's `02_development.md`. The user, at their convenience, can promote `02_development.md`'s §§1–8 directly into `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with minimal reformatting.
+**Concretely.** The substantive content of the would-be `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` — its definitions, lemmas, theorem statement, proofs, per-family corollaries, and counterexample analysis — lives in this session's `02_L1M_proof_development.md`. The user, at their convenience, can promote `02_L1M_proof_development.md`'s §§1–8 directly into `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with minimal reformatting.
 
-**Why this satisfies plan.md §5.** The criterion states "the document … contains a theorem candidate with explicit hypothesis package" + "error terms are explicit" + "Φ_res is formalized" + "relation to T-L1-F is explicit" + "non-claims preserved" + "next step identified". `02_development.md` satisfies each of these criteria with identical content quality to a working/ document; only the *file path* differs.
+**Why this satisfies plan.md §5.** The criterion states "the document … contains a theorem candidate with explicit hypothesis package" + "error terms are explicit" + "Φ_res is formalized" + "relation to T-L1-F is explicit" + "non-claims preserved" + "next step identified". `02_L1M_proof_development.md` satisfies each of these criteria with identical content quality to a working/ document; only the *file path* differs.
 
-**Recommended user follow-up.** Copy `02_development.md` to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with the following minimal header changes:
+**Recommended user follow-up.** Copy `02_L1M_proof_development.md` to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with the following minimal header changes:
 - Title: `# L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ — Working Draft`
 - Status: `working-grade theorem candidate; Cat-B sketched; CV-1.6 promotion path TBD`
 - Predecessor: `T-L1-F (canonical CV-1.5.2, 2026-05-02)`
 - Companion artifacts: list this Day 7 logs directory
 
-After promotion, the user may delete this resolution note from `02_development.md` if desired.
+After promotion, the user may delete this resolution note from `02_L1M_proof_development.md` if desired.
 
 ### §1.3 Status of plan.md §5 success criteria
 
 Reproduced and audited:
 
-- ✅ (1) Working-grade L1-M document **content** created in `02_development.md`. *Path conflict resolved per §1.2.*
-- ✅ (2) Theorem candidate with explicit hypothesis package: Theorem L-M (`02_development.md` §6.1).
+- ✅ (1) Working-grade L1-M document **content** created in `02_L1M_proof_development.md`. *Path conflict resolved per §1.2.*
+- ✅ (2) Theorem candidate with explicit hypothesis package: Theorem L-M (`02_L1M_proof_development.md` §6.1).
 - ✅ (3) Error terms explicit: $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ defined (§3.1) + bounded by sub-class (§4.2) + reduced to $\rho_{\mathrm{sub}}+\rho_\phi$ via L-M-2 (§5).
 - ✅ (4) $\Phi_{\mathrm{res}}$ formalized: Definition L-M-D1 (§2.1) F1–F5 axioms; pre-existing `ksoft_kact_bridge_lemma.md` §5.3.2 cleanly formalized.
 - ✅ (5) Relation to T-L1-F explicit: §6.2 substitution + §6.5 comparison table.
@@ -68,7 +70,7 @@ After line 1469 (end of T-L1-F entry), insert:
 **T-L1-M. Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F.** *(New, 2026-05-03 W5 Day 7 working draft; CV-1.6 promotion target after L1-M-AUDIT.)*
 Let $G,\mathbf u,U,A^\varepsilon,K_{\mathrm{act}}^\varepsilon,K_{\mathrm{soft}}^\phi$ be as in T-L1-F. Let $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ denote the class of envelopes $\phi:[0,1]\to[0,1]$ satisfying axioms F1 (range), F2 ($\phi(0)=0$), F3 (monotonicity), F4 (sub-threshold suppression: $\phi(\ell)\le\varepsilon_{\mathrm{sub}}^\phi$ on $[0,\ell_{\min}-\tau]$), F5 (dominant retention: $1-\phi(\ell)\le\varepsilon_{\mathrm{dom}}^\phi$ on $[\ell_{\min}+\tau,1]$). Set $\tau_*:=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$. Under T-L1-F's $(P0)$–$(P11)$ and $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ with $\tau\in(0,\tau_*)$,
 $$|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}(U;\tau)+\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).$$
-*Proof:* L-M-1 (envelope-pure inequality, triangle decomposition over three-region bar partition) + L-M-2 (edge-band emptiness derived from P6+P8+P9+P10 + L1-H2 Lemma 1 + CSEH 2007 bottleneck stability) + T-L1-F substitution. Per-family corollaries: $\phi=\phi_{\mathrm{hard}}$ EXACT; $\phi=\phi_{\mathrm{logistic}}^s$ ($s\ge 50$) bound $\le 3e^{-s\tau}\cdot K_{\mathrm{act}}^\varepsilon$; $\phi=\phi_{\mathrm{shift\text{-}sat}}^\beta$ ($\beta\ge 20$) bound $\le e^{-\beta\tau}\cdot K_{\mathrm{act}}^\varepsilon$. *(Day 7 logs/daily/2026-05-03/02_development.md; working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md after user promotion.)*
+*Proof:* L-M-1 (envelope-pure inequality, triangle decomposition over three-region bar partition) + L-M-2 (edge-band emptiness derived from P6+P8+P9+P10 + L1-H2 Lemma 1 + CSEH 2007 bottleneck stability) + T-L1-F substitution. Per-family corollaries: $\phi=\phi_{\mathrm{hard}}$ EXACT; $\phi=\phi_{\mathrm{logistic}}^s$ ($s\ge 50$) bound $\le 3e^{-s\tau}\cdot K_{\mathrm{act}}^\varepsilon$; $\phi=\phi_{\mathrm{shift\text{-}sat}}^\beta$ ($\beta\ge 20$) bound $\le e^{-\beta\tau}\cdot K_{\mathrm{act}}^\varepsilon$. *(Day 7 logs/daily/2026-05-03/02_L1M_proof_development.md; working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md after user promotion.)*
 *Status:* **Cat-A conditional** under T-L1-F's $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}$ + $\tau<\tau_*$. NOT a global identity. Does NOT solve OP-0005 (K-Selection), OP-0008 ($\sigma^A$ K-jump non-determinism). Does NOT promote $\Phi_{\mathrm{res}}$ to a canonical envelope class beyond its working role; reservoir-admissible families restricted to WQ-LAT-1.B-empirically-supported sub-classes (hard, logistic $s\ge 50$, shift-sat $\beta\ge 20$).
 ```
 
@@ -82,7 +84,7 @@ plan.md §2 stated:
 $$|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$$
 with **edge-band control (E)** as a separate hypothesis (plan.md §4.3).
 
-`02_development.md` Theorem L-M instead delivers the cleaner form:
+`02_L1M_proof_development.md` Theorem L-M instead delivers the cleaner form:
 $$|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}+\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot K_{\mathrm{act}}^\varepsilon$$
 where $\rho_{\mathrm{edge}}^\phi$ has been *eliminated* via Lemma L-M-2 (edge-band emptiness derived from $(P0)$–$(P11) + \tau<\tau_*$).
 

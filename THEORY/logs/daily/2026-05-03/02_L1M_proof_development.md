@@ -1,11 +1,13 @@
-# 02_development.md — L1-M Soft-Count Corollary, Primary Approach
+# 02_L1M_proof_development.md — L1-M Soft-Count Corollary, Primary Approach
+
+> *(Renamed 2026-05-04 audit: previously `02_development.md`. Internal/external references updated.)*
 
 **Session:** 2026-05-03 (W5 Day 7)
 **Target (from plan.md §2):** $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$ under T-L1-F $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ + edge-band control (E).
 **This file covers:** §1 notation, §2 $\Phi_{\mathrm{res}}$ definition, §3 envelope-pure inequality (L-M-1), §4 envelope sub-class bounds, §5 edge-band derivation (L-M-2), §6 L1-M theorem candidate, §7 counterexample attempts, §8 status self-classification.
-**Depends on reading:** `canonical.md` §13 Cat A T-L1-F (definitive statement of $(P0)$–$(P11)$); `working/MF/ksoft_kact_bridge_lemma.md` §5.3.2 ($\Phi_{\mathrm{res}}$ working axioms); `working/MF/wq_lat1b_phi_envelope_refinement_results.md` §5.1, §6 (empirical anchors); `01_exploration.md` §3 (primary-approach selection rationale).
+**Depends on reading:** `canonical.md` §13 Cat A T-L1-F (definitive statement of $(P0)$–$(P11)$); `working/MF/ksoft_kact_bridge_lemma.md` §5.3.2 ($\Phi_{\mathrm{res}}$ working axioms); `working/MF/wq_lat1b_phi_envelope_refinement_results.md` §5.1, §6 (empirical anchors); `01_L1M_approach_exploration.md` §3 (primary-approach selection rationale).
 
-**Approach selected (per `01_exploration.md` §3):** A1 (bar-by-bar three-region partition) with A4 enhancement (edge-band derivation from regime constants instead of postulation as separate hypothesis (E)).
+**Approach selected (per `01_L1M_approach_exploration.md` §3):** A1 (bar-by-bar three-region partition) with A4 enhancement (edge-band derivation from regime constants instead of postulation as separate hypothesis (E)).
 
 ---
 
@@ -132,7 +134,7 @@ The bounds in Claim L-M-V1 are consistent with the empirical record: $\phi_{\mat
 
 ## §3. Lemma L-M-1 (Envelope-Pure Inequality)
 
-This is the substantive content of **Approach A1** from `01_exploration.md` §2.1, applied at the level of the bar-length distribution alone, without using $(P0)$–$(P11)$.
+This is the substantive content of **Approach A1** from `01_L1M_approach_exploration.md` §2.1, applied at the level of the bar-length distribution alone, without using $(P0)$–$(P11)$.
 
 ### §3.1 Statement
 
@@ -260,7 +262,7 @@ This matches plan.md §4.5 line-by-line.
 
 ## §5. Lemma L-M-2 (Edge-Band Derivation under L1-J Regime)
 
-This is the **A4 enhancement** from `01_exploration.md` §2.4 / §3.3. It eliminates the $N_{\mathrm{edge}}$ term of (L-M-1*) under $(P0)$–$(P11)$.
+This is the **A4 enhancement** from `01_L1M_approach_exploration.md` §2.4 / §3.3. It eliminates the $N_{\mathrm{edge}}$ term of (L-M-1*) under $(P0)$–$(P11)$.
 
 ### §5.1 Statement
 
@@ -420,7 +422,7 @@ Note the $N_{\mathrm{sub}}$ term vanishes since $\varepsilon_{\mathrm{sub}}^{\ph
 
 ### §6.4 Sharp asymptotic regime
 
-In the limit $s\to\infty$ (or $\beta\to\infty$), Corollaries L-M.B and L-M.C both reduce to L-M.A: $K_{\mathrm{soft}}^\phi\to K_{\mathrm{act}}^\varepsilon$ pointwise. The convergence rate is **exponential in $s\tau$ (or $\beta\tau$)**, i.e., the product of sharpness and transition width. This recovers Approach A2 (`01_exploration.md` §2.2) as a corollary: A2 was the *observation* that $\phi^s\to\phi_{\mathrm{hard}}$; L-M.B/C provides the *quantitative rate* embedded in the L1-M error bound.
+In the limit $s\to\infty$ (or $\beta\to\infty$), Corollaries L-M.B and L-M.C both reduce to L-M.A: $K_{\mathrm{soft}}^\phi\to K_{\mathrm{act}}^\varepsilon$ pointwise. The convergence rate is **exponential in $s\tau$ (or $\beta\tau$)**, i.e., the product of sharpness and transition width. This recovers Approach A2 (`01_L1M_approach_exploration.md` §2.2) as a corollary: A2 was the *observation* that $\phi^s\to\phi_{\mathrm{hard}}$; L-M.B/C provides the *quantitative rate* embedded in the L1-M error bound.
 
 ### §6.5 Comparison with T-L1-F
 

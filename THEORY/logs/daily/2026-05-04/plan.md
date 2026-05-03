@@ -5,7 +5,7 @@
 **W6 scope:** 2026-05-04 (Mon, Day 1) ~ 2026-05-10 (Sun, Day 7 W6 close).
 **Session working directory:** `THEORY/logs/daily/2026-05-04/`.
 **Weekly buffer target:** `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` (latest-first 05-04 entry append; create if missing).
-**W5 Day 7 EOD references:** `THEORY/logs/daily/2026-05-03/02_development.md` (L1-M working draft, audit input); `THEORY/logs/daily/2026-05-03/03_integration_and_new_open.md` §4 (NQ-L1M-1..8); `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` §7 (W6 carry-forward).
+**W5 Day 7 EOD references:** `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (L1-M working draft, audit input); `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md` §4 (NQ-L1M-1..8); `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` §7 (W6 carry-forward).
 **Active runtime:** triple-thread parallel — 2 external-audit teammate dispatches (G1, G3) + 1 single-target completion (G2) + 1 PARTIAL→READY integration (G7) + 1 background numerical launch (NQ-187b).
 **User calibration:** W6 strategic plan §0.4 Decision 1 Option α (parallel) recommended; Day 3 EOD critical decision artifact (G1 verdict + G3 시나리오) 사용자 검토 필수.
 
@@ -17,8 +17,8 @@
 
 - **Canonical version current:** **CV-1.5.2** (2026-05-02). T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional canonical-merged.
 - **Counts:** 46A / 5B / 5C / 5R / 61 claims / 75% proved.
-- **Tests:** 196/196 passing.
-- **L1-M working draft (Day 7):** in `THEORY/logs/daily/2026-05-03/02_development.md` (~542 lines). Status: Cat-B sketched; CV-1.6 promotion target via L1-M-AUDIT.
+- **Tests:** 215 passing, 1 xfailed.
+- **L1-M working draft (Day 7):** in `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines). Status: Cat-B sketched; CV-1.6 promotion target via L1-M-AUDIT.
 - **3 bookkeeping refinements flagged in `02_development.md` §5.7**: R-1 (bottleneck-stability factor-2 sharpness in §5.4), R-2 (Type-B bound LG-7 reuse explicit reproof in §5.5), R-3 (terminal-death convention Type-N consistency in §5.4).
 
 ### §1.2 W6 carry-forward (P0 from W5 weekly_summary §7.1)
@@ -59,9 +59,9 @@ W5 P1:
 
 ### §3.1 G1 L1-M-AUDIT input package
 
-- `THEORY/logs/daily/2026-05-03/02_development.md` (~542 lines) — substantive content (Definition L-M-D1 Φ_res, Lemma L-M-1 envelope-pure, Lemma L-M-2 edge-band emptiness sketched, Theorem L-M, 3 per-family corollaries, 4 counterexample attempts).
-- `THEORY/logs/daily/2026-05-03/01_exploration.md` (~290 lines) — approach rationale (A1 primary + A4 enhancement; A2/A3 preserved; A5/A6/A7 excluded with rationale).
-- `THEORY/logs/daily/2026-05-03/03_integration_and_new_open.md` (~310 lines) — integration with canonical + OP non-impact audit + 8 new NQs.
+- `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines) — substantive content (Definition L-M-D1 Φ_res, Lemma L-M-1 envelope-pure, Lemma L-M-2 edge-band emptiness sketched, Theorem L-M, 3 per-family corollaries, 4 counterexample attempts).
+- `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md` (~290 lines) — approach rationale (A1 primary + A4 enhancement; A2/A3 preserved; A5/A6/A7 excluded with rationale).
+- `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md` (~310 lines) — integration with canonical + OP non-impact audit + 8 new NQs.
 - `THEORY/canonical/canonical.md` §13 T-L1-F entry (line 1462) — anchor.
 - `THEORY/working/MF/ksoft_kact_bridge_lemma.md` (WQ-2 bridge lemma, predecessor).
 - `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md` (empirical anchor for envelope sub-classes).
@@ -207,7 +207,7 @@ Day 1 is successful if:
 6. **5 distinct daily files produced** + Day 1 99_summary.
 7. **No canonical edits applied** (per W6 plan §13.4 hard constraint; G4 release Day 7).
 8. **No silent OP resolution** (per W6 plan §13.4 hard constraint).
-9. **Tests still 196/196 passing** (no scc/ edits expected).
+9. **Tests still 215 passing, 1 xfailed** (no scc/ edits expected).
 
 ---
 
@@ -261,7 +261,7 @@ By the end of 2026-05-04, the goal is to have **W6 triple parallel thread launch
 - Confirm G1 + G3 audit dispatches launched fire-and-forget; Day 2-3 verdict 처리 path 명료.
 - Confirm G7 OAT-2 PH layer scope drafted; Day 2 morning 작업 entry 가능.
 - Confirm NQ-187b background numerical launched; Day 5 EOD analysis 가능 (or earlier if convergence faster than expected).
-- Confirm 196/196 tests passing (no scc/ edits).
+- Confirm 215 passed, 1 xfailed (no scc/ edits).
 - Confirm canonical 직접 수정 0; silent OP resolution 0; CN10/CN6/CN15 violation 0.
 
 Day 1 의 substantive Day 1 contribution은 **G2 single target complete (CSEH factor sharpness Cat A)** + **3 background threads launched (G1, G3, NQ-187b)**. Day 2-3 는 verdict aggregation + G7 complete. Day 4-5 는 G6 + G8. Day 6-7 는 G4 release + G5 dispatch.
@@ -272,9 +272,9 @@ Day 1 의 substantive Day 1 contribution은 **G2 single target complete (CSEH fa
 
 - W5 close: `THEORY/logs/weekly/2026-04-W5/weekly_summary.md`
 - W6 strategic plan: `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (especially §6.1 Day 1 Block 1-5)
-- L1-M working draft: `THEORY/logs/daily/2026-05-03/02_development.md`
-- L1-M exploration: `THEORY/logs/daily/2026-05-03/01_exploration.md`
-- L1-M integration: `THEORY/logs/daily/2026-05-03/03_integration_and_new_open.md`
+- L1-M working draft: `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md`
+- L1-M exploration: `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md`
+- L1-M integration: `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md`
 - T-L1-F canonical: `THEORY/canonical/canonical.md` §13 (line 1462)
 - T-σ-Theorem-4 canonical: `THEORY/canonical/canonical.md` §13 + `theorem_status.md` CV-1.5.1 entry
 - γ/β/α framework: `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`

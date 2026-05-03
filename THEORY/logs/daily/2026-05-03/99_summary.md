@@ -20,9 +20,9 @@ with three per-family corollaries — $\phi_{\mathrm{hard}}$ EXACT, $\phi_{\math
 
 | File | Length (lines) | Content |
 |---|---|---|
-| `01_exploration.md` | ~290 | Restatement, four-approach generation (A1 primary + A4 enhancement, A2/A3 preserved), primary-selection rationale |
-| `02_development.md` | ~430 | $\Phi_{\mathrm{res}}$ definition (F1–F5), Lemma L-M-1 (envelope-pure inequality), Lemma L-M-2 (edge-band emptiness), Theorem L-M, three per-family corollaries, four counterexample attempts |
-| `03_integration_and_new_open.md` | ~310 | Plan-vs-prompt path resolution, canonical placement proposal, OP non-impact audit (each OP individually), 8 new open questions (NQ-L1M-1..8), prompt v2 candidate notes |
+| `01_L1M_approach_exploration.md` | ~290 | Restatement, four-approach generation (A1 primary + A4 enhancement, A2/A3 preserved), primary-selection rationale |
+| `02_L1M_proof_development.md` | ~430 | $\Phi_{\mathrm{res}}$ definition (F1–F5), Lemma L-M-1 (envelope-pure inequality), Lemma L-M-2 (edge-band emptiness), Theorem L-M, three per-family corollaries, four counterexample attempts |
+| `03_L1M_canonical_integration_and_NQ.md` | ~310 | Plan-vs-prompt path resolution, canonical placement proposal, OP non-impact audit (each OP individually), 8 new open questions (NQ-L1M-1..8), prompt v2 candidate notes |
 | `99_summary.md` | this file | session summary + W6 seed |
 
 Total session output: ~1100 lines across 4 files in `THEORY/logs/daily/2026-05-03/`.
@@ -33,7 +33,7 @@ No writes to `THEORY/canonical/`, `THEORY/working/`, or `CODE/`. Per prompt §3 
 
 ## §3. Substantive Strengthening over plan.md
 
-plan.md §4.3 stated L1-M as conditional under $(P0)$–$(P11) + \phi\in\Phi_{\mathrm{res}} + \text{(E)}$ with three error terms $\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$. The **A4 enhancement** (`01_exploration.md` §2.4 / §3.3, developed as Lemma L-M-2 in `02_development.md` §5) discovered that (E) is a *consequence* of $(P0)$–$(P11)$ when $\tau<\tau_*$. The plan.md hypothesis (E) is therefore not needed; the bound simplifies to two terms only.
+plan.md §4.3 stated L1-M as conditional under $(P0)$–$(P11) + \phi\in\Phi_{\mathrm{res}} + \text{(E)}$ with three error terms $\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$. The **A4 enhancement** (`01_L1M_approach_exploration.md` §2.4 / §3.3, developed as Lemma L-M-2 in `02_L1M_proof_development.md` §5) discovered that (E) is a *consequence* of $(P0)$–$(P11)$ when $\tau<\tau_*$. The plan.md hypothesis (E) is therefore not needed; the bound simplifies to two terms only.
 
 This is the day's structurally most-substantive contribution. It mirrors how T-L1-F's L1-K-REPAIR cycle tightened hypothesis-package interactions — here we tighten by *deriving* a hypothesis from the existing regime rather than postulating it.
 
@@ -47,7 +47,7 @@ Per prompt §6 / §99 conventions, my recommendations for the most fruitful next
 
 **(a) NQ-L1M-2 — CSEH 2007 factor-2 sharpness in L-M-2 §5.4 (Cat-B → Cat-A upgrade for L-M).** This is the highest-priority technical refinement. The factor-$2$ in the bottleneck-stability bound for Type-N bars is the largest source of looseness in $\tau_*$. Tightening this would expand the admissible $\tau$ range and could discharge L-M from "Cat-B sketched" to "Cat-A conditional", paralleling the T-L1-F cycle. Estimated effort: ~1 day; pure proof work, no new empirics needed.
 
-**(b) L1-M-AUDIT — external audit of L-M's Cat-B-sketched proof.** Mirrors the L1-K external audit that preceded T-L1-F's CV-1.5.2 promotion. Three bookkeeping refinements are flagged in `02_development.md` §5.7 as audit targets. This is the natural CV-1.6 promotion path. Estimated effort: ~2–3 days for full audit + repair cycle.
+**(b) L1-M-AUDIT — external audit of L-M's Cat-B-sketched proof.** Mirrors the L1-K external audit that preceded T-L1-F's CV-1.5.2 promotion. Three bookkeeping refinements are flagged in `02_L1M_proof_development.md` §5.7 as audit targets. This is the natural CV-1.6 promotion path. Estimated effort: ~2–3 days for full audit + repair cycle.
 
 **(c) NQ-L1M-3 — empirical sweep of $(\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$ on L1-I FEASIBLE_WITH_BUDGET configurations.** Identifies which regime constant is the practical bottleneck in $\tau_*$. Informs design of future regime-tightening work (analogous to L1-J's tightened H6). Estimated effort: ~half day; reuses existing `CODE/scripts/l1i_constants_feasibility.py`.
 
@@ -73,14 +73,14 @@ If the user wants to begin attacking OP-0008 with L-M as a tool: **(e) NQ-L1M-7*
 
 ## §5. Closing Ledger
 
-- ✅ plan.md §5 success criteria (1)–(7) all met (`03_integration_and_new_open.md` §1.3).
-- ✅ Three independent approaches generated, primary selected with rationale (`01_exploration.md` §2–§3).
-- ✅ Substantive proof development with explicit Cat-classification (`02_development.md` §6, §8).
-- ✅ Counterexample attempts documented (`02_development.md` §7); no genuine counterexample found.
-- ✅ Integration with canonical: proposed `canonical.md` insertion text + working-file relations table (`03_integration_and_new_open.md` §2).
-- ✅ OP non-impact audit per OP-0001..0013 (`03_integration_and_new_open.md` §3).
-- ✅ 8 new open questions surfaced for W6 (`03_integration_and_new_open.md` §4).
-- ✅ Prompt v2 candidate notes recorded (`03_integration_and_new_open.md` §5).
+- ✅ plan.md §5 success criteria (1)–(7) all met (`03_L1M_canonical_integration_and_NQ.md` §1.3).
+- ✅ Three independent approaches generated, primary selected with rationale (`01_L1M_approach_exploration.md` §2–§3).
+- ✅ Substantive proof development with explicit Cat-classification (`02_L1M_proof_development.md` §6, §8).
+- ✅ Counterexample attempts documented (`02_L1M_proof_development.md` §7); no genuine counterexample found.
+- ✅ Integration with canonical: proposed `canonical.md` insertion text + working-file relations table (`03_L1M_canonical_integration_and_NQ.md` §2).
+- ✅ OP non-impact audit per OP-0001..0013 (`03_L1M_canonical_integration_and_NQ.md` §3).
+- ✅ 8 new open questions surfaced for W6 (`03_L1M_canonical_integration_and_NQ.md` §4).
+- ✅ Prompt v2 candidate notes recorded (`03_L1M_canonical_integration_and_NQ.md` §5).
 - ✅ canonical.md NOT modified (per prompt §8.1).
 - ✅ No silent OP resolutions (per prompt §8.2).
 

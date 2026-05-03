@@ -99,7 +99,7 @@ cd CODE && python3 -m pytest tests/ -v
 
 ### Papers
 
-- `papers/paper1_math.tex`, `papers/paper2_cogsci.tex` — working drafts.
+- `papers/` — IEEEtran.cls + figures/ + generate_figures.py (the `paper1_math.tex` / `paper2_cogsci.tex` drafts were deleted on 2026-05-04 per user decision to rewrite from scratch later; see `THEORY/CHANGELOG.md` 2026-05-04 entry).
 - `papers/generate_figures.py` for figures.
 
 ---

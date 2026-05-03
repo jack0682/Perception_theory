@@ -9,17 +9,17 @@ Read in order:
 2. **`THEORY/canonical/open_problems.md`** — currently unresolved: F-1 (K=2 vacuity), M-1 (K=1 preference), MO-1 (Morse inapplicability).
 3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
-For the reorganization history (what was tried and abandoned), see `AUDIT_2026-04-18.md`.
+For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).
 
 ## Repository Layout
 
 ```
 Perception_theory/
-├── CLAUDE.md / README.md / CONVENTIONS.md / AUDIT_2026-04-18.md
+├── CLAUDE.md / README.md / CONVENTIONS.md
 │
 ├── CODE/                           executable assets — run from this dir
 │   ├── scc/                        Python package (12 modules)
-│   ├── tests/                      pytest suite (175 passing)
+│   ├── tests/                      pytest suite (215 passed, 1 xfailed)
 │   ├── experiments/                exp<N>_<name>.py + results/
 │   ├── scripts/                    one-off utilities
 │   ├── papers/                     LaTeX + generate_figures.py
@@ -28,7 +28,7 @@ Perception_theory/
 ├── THEORY/                         theory documents — read-oriented
 │   ├── CHANGELOG.md                theory state-change log
 │   ├── canonical/                  authoritative (no contamination)
-│   │   ├── canonical.md            ← THE spec (v1.2)
+│   │   ├── canonical.md            ← THE spec (CV-1.5.2, 2026-05-02)
 │   │   ├── theorem_status.md       proved / conditional / open index
 │   │   └── open_problems.md        F-1 / M-1 / MO-1
 │   ├── working/                    in-progress theory (one file = one topic)
@@ -65,7 +65,7 @@ THEORY/canonical/canonical.md      (authoritative — one-way only)
 ## Test & Build
 
 ```bash
-# All tests (175, ~3min)
+# All tests (215 + 1 xfailed, ~4min)
 cd CODE && python3 -m pytest tests/ -v
 
 # Single file

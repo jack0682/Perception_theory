@@ -2,6 +2,40 @@
 
 ---
 
+## 2026-05-04 — Repository Audit & Hygiene Pass (No Theorem Edits)
+
+Pure cleanup session in response to user audit request. **No theorem promotions, retractions, or status changes.**
+
+### Findings
+
+1. **Test count drift across W5 D4–D7 entries.** Entries dated 2026-05-01 / 2026-05-02 / 2026-05-03 uniformly state `196/196 passing`. Direct execution of `cd CODE && pytest tests/ -q` on 2026-05-04 returns **`215 passed, 1 xfailed`** (216 collected, ~232s wall). The 175 → 215 jump came from test modules added on 2026-04-28 (`test_outside_spinodal_override.py`) and 2026-04-30 (`test_aut_g_stabilizer.py`, `test_sigma_rich.py`, `test_sigma_rich_integration.py`); the snapshot was not refreshed.
+2. **`canonical.md` header drift.** Frontmatter, NOTICE block, §1 status note, §1.1 release table, and §13 totals/Cat-A header were stale at CV-1.5 / 45A / 60 claims while `theorem_status.md` had advanced to CV-1.5.2 / 46A / 61 claims via the W5 Day 6 T-L1-F promotion.
+3. **`open_problems.md` false `last_updated` bump.** W5 Day 6 commit had bumped `last_updated: 2026-04-25 → 2026-05-02` while making zero body changes.
+4. **Daily-log structural anomalies.** `2026-05-02/` had no `99_summary.md` (single-deliverable closure-only structure); `2026-05-03/` used generic narrative-arc filenames (`01_exploration` / `02_development` / `03_integration_and_new_open`) while the surrounding W5 days had moved to topic-specific naming.
+5. **`CODE/papers/`** held two paper drafts (`paper1_math.tex`, `paper2_cogsci.tex`) that were stale relative to CV-1.5.2 (no T-L1-F entry, stale test counts in citations).
+6. **5 root-level draft files** with no canonical role (`analyse_gemini.md`, `analyze_codex.md`, `deep-research-report.md`, `research_log.md`, `AUDIT_2026-04-18.md`).
+7. **Untracked working audit** (`THEORY/working/repository_theory_audit_2026-05-03.md`, ~1,316 lines) sitting outside the promotion pipeline with no CHANGELOG record.
+
+### Actions
+
+- **canonical.md sync** — frontmatter updated to CV-1.5.2 / 46A / 61 claims; NOTICE rewritten with CV-1.5.2 release summary + prior CV-1.5 note; §1 status, §1.1 release-history table (added CV-1.5.1 + CV-1.5.2 rows), erratum/refinement Update line, "single current identifier" parenthetical, CV-1.0..CV-1.5.2 timeline, "What CV-1.5.2 means", §13 §981 totals, and Cat A header (35 → 46) all aligned.
+- **open_problems.md** `last_updated` reverted to 2026-04-30 (the true date of the last body change at CV-1.5.1) with a history-block audit note explaining the rollback.
+- **Test count corrections** applied in `CODE/README.md`, `CLAUDE.md`, `2026-05-04/plan.md`, `2026-05-02/plan.md`, `W6_strategic_plan.md`, and the W5 `weekly_summary.md` (each with an inline audit note pointing back to this entry). Historical 2026-05-01/02/03 CHANGELOG entries left intact below; this header is the authoritative correction.
+- **Daily-log normalization**: `2026-05-02/99_summary.md` created (Day 6 close summary, retroactive); `2026-05-03/{01,02,03}_*.md` renamed via `git mv` to topic-specific (`01_L1M_approach_exploration.md`, `02_L1M_proof_development.md`, `03_L1M_canonical_integration_and_NQ.md`) with internal cross-refs updated and renamed-from notes added at the top of each.
+- **Paper drafts deleted** (`paper1_math.{tex,aux,fdb_latexmk,fls,log,pdf,tex.patch}`, `paper2_cogsci.{tex,aux,fdb_latexmk,fls,log,pdf}`) per user instruction (will be rewritten from scratch later); `CODE/papers/` keeps `IEEEtran.cls`, `figures/`, `generate_figures.py`. References in `CODE/README.md` and `CONVENTIONS.md` updated.
+- **Root-level drafts deleted** (`analyse_gemini.md`, `analyze_codex.md`, `deep-research-report.md`, `research_log.md`, `AUDIT_2026-04-18.md`); `CLAUDE.md` reorganization-history pointer updated to `_archive/research_os_2026-04-12/`.
+- **Working audit deleted** (`THEORY/working/repository_theory_audit_2026-05-03.md`) — its substantive findings are recorded in this CHANGELOG entry; the file itself bypassed the promotion pipeline and the user opted to remove it rather than retain it.
+
+### Test Count Verified
+
+`215 passed, 1 xfailed in 231.57s` (216 collected). This is the authoritative count as of 2026-05-04.
+
+### Theorem Status Changes
+
+None. All theorem statuses, hypothesis packages, and OP statuses unchanged from CV-1.5.2 (2026-05-02).
+
+---
+
 ## 2026-05-03 — W5 Day 7 L1-M Soft-Count Corollary Working Draft + W5 Close
 
 ### Summary
@@ -20,9 +54,9 @@ with three per-family corollaries — $\phi_{\mathrm{hard}}$ EXACT, $\phi_{\math
 
 ### Files Created
 
-- `THEORY/logs/daily/2026-05-03/01_exploration.md` (~290 lines) — Restatement, four mathematically independent approaches generated (A1 primary + A4 enhancement, A2/A3 preserved as alternatives, A5/A6/A7 considered-and-excluded with rationale), primary-selection rationale.
-- `THEORY/logs/daily/2026-05-03/02_development.md` (~542 lines) — $\Phi_{\mathrm{res}}$ definition (F1–F5 axioms), Lemma L-M-1 envelope-pure inequality (Cat A absolute), Lemma L-M-2 edge-band emptiness (Cat B sketched, 3 bookkeeping refinements R-1/R-2/R-3 flagged), Theorem L-M (combined corollary), 3 per-family corollaries, 4 counterexample attempts.
-- `THEORY/logs/daily/2026-05-03/03_integration_and_new_open.md` (~321 lines) — Plan-vs-prompt path conflict resolution (working/ write deferred), proposed canonical.md insertion text for "T-L1-M" entry, explicit OP non-impact audit (each of OP-0001..0013 individually), 8 new open questions (NQ-L1M-1..8), prompt v2 candidate notes.
+- `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md` (~290 lines) — Restatement, four mathematically independent approaches generated (A1 primary + A4 enhancement, A2/A3 preserved as alternatives, A5/A6/A7 considered-and-excluded with rationale), primary-selection rationale.
+- `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines) — $\Phi_{\mathrm{res}}$ definition (F1–F5 axioms), Lemma L-M-1 envelope-pure inequality (Cat A absolute), Lemma L-M-2 edge-band emptiness (Cat B sketched, 3 bookkeeping refinements R-1/R-2/R-3 flagged), Theorem L-M (combined corollary), 3 per-family corollaries, 4 counterexample attempts.
+- `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md` (~321 lines) — Plan-vs-prompt path conflict resolution (working/ write deferred), proposed canonical.md insertion text for "T-L1-M" entry, explicit OP non-impact audit (each of OP-0001..0013 individually), 8 new open questions (NQ-L1M-1..8), prompt v2 candidate notes.
 - `THEORY/logs/daily/2026-05-03/99_summary.md` (~89 lines) — Three-sentence result + W5 close + W6 seed recommendations.
 
 ### W5 Weekly Close Ceremony

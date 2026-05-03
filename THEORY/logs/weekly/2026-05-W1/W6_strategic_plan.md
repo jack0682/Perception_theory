@@ -218,9 +218,9 @@ W6 daily protocol에서도 pre_brainstorm.md 유지.
 ### 1.3.1 Test suite
 
 - W5 entry: 175/175 tests passing (CV-1.4 baseline)
-- W5 Day 4 σ_rich CODE 추가 후: **196/196 tests passing**
-- W5 Day 5-7: 196/196 maintained (no scc/ edits)
-- **W6 entry**: 196/196 tests passing
+- W5 Day 4 σ_rich CODE 추가 후: **215 passed + 1 xfailed**
+- W5 Day 5-7: 215 passed + 1 xfailed maintained (no scc/ edits)
+- **W6 entry**: 215 passed + 1 xfailed (verified 2026-05-04 audit; prior CHANGELOG/plan claims of "196/196" were stale — tests grew from 175 → 215 across 04-28 `test_outside_spinodal_override` + 04-30 `test_aut_g_stabilizer` / `test_sigma_rich` / `test_sigma_rich_integration` additions, but the count snapshot was not refreshed)
 
 ### 1.3.2 Cumulative numerical attempts
 
@@ -235,7 +235,7 @@ W5 close 시점:
 - `THEORY/working/CE/` free_energy_wellposed.md + others
 - 17 CV-1.7 parking lot files (W5 Day 5 격리)
 
-W6 추가 예상: L1-M working file (Day 7 daily의 02_development.md 내용 promotion) + γ-path working files (sigma_m_hessian_convention_audit.md NEW) + (G1 통과 시) L1-M-AUDIT working file + (G3 시나리오 B 시) r22_a2_a1_audit.md NEW
+W6 추가 예상: L1-M working file (Day 7 daily의 `02_L1M_proof_development.md` 내용 promotion) + γ-path working files (`sigma_m_hessian_convention_audit.md` NEW) + (G1 통과 시) L1-M-AUDIT working file + (G3 시나리오 B 시) `r22_a2_a1_audit.md` NEW
 
 ---
 
@@ -296,7 +296,7 @@ Plus 1 Cat B target: C-0720 T-σ-Multi-1 (Day 4, Goldstone-pair instability).
 
 ### 2.2.1 L1-M working draft (Day 7, in logs/daily/2026-05-03/)
 
-**File**: `THEORY/logs/daily/2026-05-03/02_development.md` (~542 lines)
+**File**: `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines)
 
 **Content**:
 - Definition L-M-D1: $\Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ via 5 axioms F1–F5
@@ -312,7 +312,7 @@ Plus 1 Cat B target: C-0720 T-σ-Multi-1 (Day 4, Goldstone-pair instability).
 
 ### 2.2.2 L1-M-AUDIT 입력 파일 (W6 G1 작업 대상)
 
-- `02_development.md` §5.7: 3 bookkeeping refinements
+- `02_L1M_proof_development.md` §5.7: 3 bookkeeping refinements
   1. Bottleneck-stability factor-2 sharpness in §5.4
   2. Type-B bound LG-7 reuse explicit reproof
   3. Terminal-death convention Type-N consistency
@@ -332,7 +332,7 @@ Plus 1 Cat B target: C-0720 T-σ-Multi-1 (Day 4, Goldstone-pair instability).
 
 ## 2.3 Test / Computational State
 
-- Test suite: 196/196 passing
+- Test suite: 215 passed, 1 xfailed (corrected 2026-05-04 audit)
 - NQ-244 3D LSW background: launched W5 Day 6 (estimated 30-50h compute), expected EOD W6 D3-D4
 - L1-I FEASIBLE_WITH_BUDGET: 439/1920 (22.9%)
 - WQ-LAT-1.B empirical anchors: 5 envelope sub-classes verified
@@ -451,13 +451,13 @@ P3 W6 close 시점:
 
 ### 4.1.1 Goal statement
 
-L1-M working draft (Day 7 `02_development.md`)의 **external audit** + 발견된 issue에 대한 **repair cycle** (mirrors W5 Day 6 L1-K external audit + L1-K-REPAIR pattern).
+L1-M working draft (Day 7 `02_L1M_proof_development.md`)의 **external audit** + 발견된 issue에 대한 **repair cycle** (mirrors W5 Day 6 L1-K external audit + L1-K-REPAIR pattern).
 
 **Target**: L1-M의 Lemma L-M-2 (edge-band emptiness)을 **Cat B sketched → Cat A conditional**로 승급. Theorem L-M (combined corollary)도 Cat A conditional 승급.
 
 ### 4.1.2 Audit scope
 
-3 bookkeeping refinements flagged in `02_development.md` §5.7:
+3 bookkeeping refinements flagged in `02_L1M_proof_development.md` §5.7:
 
 **Refinement 1 (R-1)**: Bottleneck-stability factor-2 in §5.4
 - 현재 statement: $|\ell_i - \ell_i^{(u^{(j)})}| \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}$
@@ -479,8 +479,8 @@ L1-M working draft (Day 7 `02_development.md`)의 **external audit** + 발견된
 - **Method**: external teammate dispatch (analogous to L1-K external audit on T-L1-F)
 - **Teammate suggested**: `l1m-audit-prover` (general-purpose with audit prompt)
 - **Audit input package**:
-  - `THEORY/logs/daily/2026-05-03/02_development.md` (substantive content)
-  - `THEORY/logs/daily/2026-05-03/01_exploration.md` (approach rationale)
+  - `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (substantive content)
+  - `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md` (approach rationale)
   - `THEORY/canonical/canonical.md` §13 T-L1-F entry (anchor)
   - `THEORY/working/MF/ksoft_kact_bridge_lemma.md` (predecessor)
   - `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md` (empirical anchor)
@@ -489,7 +489,7 @@ L1-M working draft (Day 7 `02_development.md`)의 **external audit** + 발견된
 ### 4.1.4 Repair cycle (if REPAIR-NEEDED)
 
 If audit returns REPAIR-NEEDED:
-- Per-refinement repair: each R-1/R-2/R-3 explicit fix in `02_development.md` §5.7.
+- Per-refinement repair: each R-1/R-2/R-3 explicit fix in `02_L1M_proof_development.md` §5.7.
 - New findings: dispatched to W6+ separately (do not block G1 closure unless directly invalidating Lemma L-M-2).
 - Repair cycle ends when audit dispatch returns PASS.
 
@@ -497,7 +497,7 @@ If audit returns REPAIR-NEEDED:
 
 - PASS audit: Lemma L-M-2 → Cat A conditional under $(P0)$–$(P11)$. Theorem L-M → Cat A conditional. Per-family corollaries (L-M.A EXACT / L-M.B / L-M.C) → Cat A conditional.
 - PARTIAL PASS: Lemma L-M-2 → Cat B retained; Theorem L-M → Cat B; specific corollaries (e.g., L-M.A EXACT regardless) maintain Cat A.
-- FAIL: L-M working draft retracted; restart from `01_exploration.md` Approach A2 or A3.
+- FAIL: L-M working draft retracted; restart from `01_L1M_approach_exploration.md` Approach A2 or A3.
 
 ### 4.1.6 Estimated time
 
@@ -958,8 +958,8 @@ The practical rule is: **Day 6-7 are for release engineering, not new theory.** 
 
 **Block 3 (14:00-17:00)** — G1 L1-M-AUDIT dispatch (Thread 1)
 - L1-M audit input package 준비:
-  - `THEORY/logs/daily/2026-05-03/02_development.md` (substantive content)
-  - `THEORY/logs/daily/2026-05-03/01_exploration.md` (approach rationale)
+  - `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (substantive content)
+  - `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md` (approach rationale)
   - `THEORY/canonical/canonical.md` §13 T-L1-F entry
   - `THEORY/working/MF/ksoft_kact_bridge_lemma.md`
   - `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md`
@@ -1126,7 +1126,7 @@ The practical rule is: **Day 6-7 are for release engineering, not new theory.** 
 - 사용자 final authorization (Day 6 EOD draft 검토)
 - canonical.md / theorem_status.md / open_problems.md / CHANGELOG.md actual edits
 - CV-1.6 release marker apply
-- 196/196 tests verify (no scc/ edits, expected pass)
+- 215 + 1 xfailed tests verify (no scc/ edits, expected pass)
 
 **Block 2 (11:00-13:00)** — CV-1.6 release closure
 - Release announcement entry in `THEORY/CHANGELOG.md`
@@ -1263,7 +1263,7 @@ The practical rule is: **Day 6-7 are for release engineering, not new theory.** 
 **Mitigation**:
 - W6 핵심 작업은 모두 theory development + working file (no scc/ edits).
 - G2 sanity check, G6 dynamic analysis 모두 stand-alone CODE scripts (scc/ unmodified).
-- 196/196 tests 매일 EOD 확인 (~3min run).
+- 215 + 1 xfailed tests 매일 EOD 확인 (~4min run).
 
 **Trigger**: scc/ edit detected at any daily EOD.
 
@@ -1337,7 +1337,7 @@ The practical rule is: **Day 6-7 are for release engineering, not new theory.** 
 **Trigger**: G1 audit FAIL (audit가 L-M-2 fundamental issue 발견).
 
 **Rollback**:
-1. L-M working draft retracted (logs/daily/2026-05-03/02_development.md에 retraction note 추가).
+1. L-M working draft retracted (logs/daily/2026-05-03/02_L1M_proof_development.md에 retraction note 추가).
 2. Approach A2 (sharpness asymptotic) 또는 A3 (functional-analytic supremum-bound) 활성화 검토 (Day 7 `01_*` §2.2-§2.3).
 3. CV-1.6에서 T-L1-M 제외; G4 Conservative path.
 4. W7+ L1-M v2 작업 entry.

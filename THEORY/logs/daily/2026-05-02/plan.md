@@ -147,7 +147,7 @@ NEW: `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` substantive draft (~1500-
 - **Day 1 (Mon 4/27, AGGRESSIVE marathon)**: G0 σ-framework supporting structures canonical merge (T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 → 5 Cat A entries; 38A → 43A; CV-1.5 release). Round 1 + Round 2 errata caught.
 - **Day 2 (Tue 4/28, STRETCH+ via Phase 10)**: K=10 phase 1-10 numerical (strict pool α=0 verified; standardized LSW plateau α=0.25-0.30; K-jump LSW-scaling; 3D σ-framework; 10-cycle methodology demonstrated).
 - **Day 3 (Wed 4/29, MODERATE-CONSOLIDATION)**: Phase 1-10 → canonical promotion queue; Paper §4 polish; theorem_status/CHANGELOG drafts; CV-1.5.1 release at EOD (43A → 45A; +D-6a Multi-Static + T-σ-Multi-1 + V5b-F-empirical sub + V5b-T-zero sub; T-σ-Theorem-4 Cat A → Cat B retroactive Critic verdict; Commitment 16 K-status; OP-0008 + OP-0009 registered; D-5 V5b-T' WITHDRAWN).
-- **Day 4 (Thu 4/30, theory-deepening burst)**: ~10,800 lines / 42 files / 1 🔴 critical T-σ-Theorem-4 NQ-187 finding (μ_1/μ_0 = 2 asymptotically, p ≈ 1.03 at L=16) + post-EOD un-audited cluster (17 files / 6590 lines op-0008-architect); 196/196 tests passing (+21 from σ_rich + σ-locality + scaling); R23 generic state caveat at canonical T-σ-multi-A-Static; 8 citation corrections.
+- **Day 4 (Thu 4/30, theory-deepening burst)**: ~10,800 lines / 42 files / 1 🔴 critical T-σ-Theorem-4 NQ-187 finding (μ_1/μ_0 = 2 asymptotically, p ≈ 1.03 at L=16) + post-EOD un-audited cluster (17 files / 6590 lines op-0008-architect); 215+1xfailed tests passing (+21 from σ_rich + σ-locality + scaling); R23 generic state caveat at canonical T-σ-multi-A-Static; 8 citation corrections.
 - **Day 5 (Fri 5/1, RECONCILIATION-FIRST)**: ~2926 lines / 12 daily files / 0 canonical edits / 1 substantive theorem-level finding (R-1: $A_2/A_1 = 2/3$ exactly at every $L \geq 2$, Cat A) + 9-item retraction inventory (`99_summary.md` §13: R-1 arithmetic / R-2 β-path elevation / R-3 NQ-244 estimate / R-4 label-fix dissolved / R-5 Wave 5 retired / R-6 T-σ-Theorem-4 status / R-7 packet recalibration / R-8 cluster reclassification / R-9 framing) + W6 D1-D7 plan preview + Day 6 productive plan seed.
 - **Day 6 (Sat 5/2, FORWARD-LEANING-EXECUTION + weekly substance)**: this plan day.
 - **Day 7 (Sun 5/3, W5 CLOSE)**: weekly_summary finalize + W6_strategic_plan.md from `2026-05-01/07_w6_plan_preview.md` seed (~400-600 lines).
@@ -156,15 +156,15 @@ NEW: `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` substantive draft (~1500-
 - canonical: CV-1.5 (W5 Day 1 G0) + CV-1.5.1 (W5 Day 3 EOD) — 38A → 45A; 52 → 60 claims; 73% → 75% proved.
 - working files: ~50+ persisted across W5 (count exact at Day 7 finalize).
 - daily logs: ~80+ files across W5 Days 1-7.
-- tests: 175 → 196 (+21 from σ_rich unit/integration + σ-locality 3 graphs + scaling).
-- critical findings: 2 🔴 (NQ-187 p≈1 + NQ-187b 3-way → reconciled to 2-way γ + β audit per Day 5 R-1) + 3 🟢 (σ-locality 3 graphs + σ_rich CODE 16/16 + 196/196) + 1 🟡 (NQ-249 REVISE applied C1+C2+C3+M1; M2-M6 + m1-m5 deferred).
+- tests: 175 → 215 (+40, plus 1 xfailed) from σ_rich unit/integration + σ-locality 3 graphs + scaling + outside-spinodal override + aut_g_stabilizer. *(Original plan text wrote "175 → 196 (+21)"; corrected 2026-05-04 audit — actual count after 04-28 + 04-30 test additions is 215.)*
+- critical findings: 2 🔴 (NQ-187 p≈1 + NQ-187b 3-way → reconciled to 2-way γ + β audit per Day 5 R-1) + 3 🟢 (σ-locality 3 graphs + σ_rich CODE 16/16 + 215+1xfailed) + 1 🟡 (NQ-249 REVISE applied C1+C2+C3+M1; M2-M6 + m1-m5 deferred).
 - Day 5 supplementary: 1 substantive Cat A closed-form result (post-EOD §2.6 arithmetic error correction).
 - citation corrections: 8 (Day 4 AM 7 + PM 1).
 
 **§4 Theory Deepening Stretch ladder** (achieved):
 - W5 D1 G0: σ-framework supporting structures canonical merge (T2 → T1 5 entries).
 - W5 D3 CV-1.5.1: D-6a Multi-Static + Commitment 16 K-status + 4-tool verification + Commitment 17 candidate.
-- W5 D4 burst: OAT-2~7 working files + Wave 3 native team activation + post-EOD cluster + 196/196 tests.
+- W5 D4 burst: OAT-2~7 working files + Wave 3 native team activation + post-EOD cluster + 215+1xfailed tests.
 - W5 D5 reconciliation: 9-item retraction inventory + R-1 arithmetic finding + CV-1.7 parking lot vindication.
 - Achievement level: ~500%+ vs original 100% W5 strategic plan target.
 
@@ -292,7 +292,7 @@ If NOT identifiable: `01_*` documents the ambiguity + recommends a default first
 
 Optional supplementary:
 - TASK_LEDGER.md update with Day 6 EOD + Day 7 entry transition.
-- pytest 196/196 confirmation (~3min) if NQ-244 script smoke test triggers anxiety.
+- pytest 215+1xfailed confirmation (~3min) if NQ-244 script smoke test triggers anxiety.
 
 ---
 

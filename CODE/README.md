@@ -6,7 +6,7 @@ Executable assets for Soft Cognitive Cohesion (SCC). **Run everything from this 
 
 ```
 scc/          Python package (12 modules)
-tests/        pytest suite (175 passing)
+tests/        pytest suite (215 passed, 1 xfailed; verified 2026-05-04)
 experiments/  exp<N>_<name>.py + results/
 scripts/      one-off utilities
 papers/       LaTeX sources + generate_figures.py
@@ -15,7 +15,7 @@ papers/       LaTeX sources + generate_figures.py
 ## Commands
 
 ```bash
-# All tests (~3 min)
+# All tests (~4 min, 215 passed + 1 xfailed)
 cd CODE && python3 -m pytest tests/ -v
 
 # Single test file
@@ -30,8 +30,10 @@ cd CODE && python3 experiments/exp1_lambda_sweep.py
 # Paper figures
 cd CODE && python3 papers/generate_figures.py
 
-# Compile papers (requires texlive)
-cd CODE/papers && pdflatex paper1_math.tex && pdflatex paper1_math.tex
+# Compile papers
+# (drafts paper1_math.tex / paper2_cogsci.tex were deleted on 2026-05-04 per user
+# decision to rewrite from scratch later; only IEEEtran.cls / figures/ /
+# generate_figures.py remain in CODE/papers/.)
 ```
 
 ## scc/ Modules

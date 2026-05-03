@@ -214,7 +214,7 @@ canonical/canonical.md + canonical/theorem_status.md  (main)
 - Native team scc-wave3-deep-research dispatched with **11 teammates** working in parallel (gauge-theory connections, σ-locality verification, σ_rich CODE implementation, NQ-187 falsification attempt, π_1 / categorical / Lie algebra exploration, etc.).
 - 42 daily files cumulative
 - ~11,800+ lines of working/log output
-- 196/196 tests passing
+- 215 passed + 1 xfailed (entry text originally said "196/196"; corrected 2026-05-04 audit — see W5 close stats §10)
 - NQ-249 (gauge-theory parallels analysis) Critic verdict REVISE → 3 critical + 6 major fixes applied.
 
 **🔴 NQ-187 RED finding**: T-σ-Theorem-4 leading-order claim ($A_2/A_1 = 4$ on $D_4$) **falsified on $D_4$ free-BC L≤16**. Discrete-grid finite-L extrapolation 분석 (`nq187b_L_extrapolation.md`)에서 $A_2/A_1 = p \approx 1$ for L=16 — Cat A re-promotion path 차단. NQ-187b spawned + Task #63 T-σ-Theorem-4 canonical revision urgent.
@@ -240,7 +240,7 @@ canonical/canonical.md + canonical/theorem_status.md  (main)
 **§1 Verification audit (`02_verification_audit.md`)**:
 - 47 working files / **~15,805 lines** persisted across T-σ-Theorem-4 cluster (5) + σ_rich foundation (10) + K-Selection (6) + Wave 3 lead-direct (9) + CV-1.6/1.7 packet drafts (6) + OAT-2~7 batch (7) + reconciliation candidates (4). **0 phantom; 0 missing**.
 - 8 CODE files persisted (sigma_rich.py + tests + R23 numerical scripts).
-- Test baseline 196/196 preserved.
+- Test baseline 215 + 1 xfailed preserved (originally written "196/196"; corrected 2026-05-04 audit).
 - Wave 3 critic verdict integration: 5/8 ACCEPT family + 3/8 PARTIAL.
 
 **§2 CV-1.6 packet recalibration (`04_*`)**:
@@ -339,14 +339,14 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 
 **핵심 산출** (4 daily files, ~1100 lines):
 
-**`01_exploration.md`** (~290 lines): Restatement + 4 mathematically independent approaches generated:
+**`01_L1M_approach_exploration.md`** (~290 lines): Restatement + 4 mathematically independent approaches generated:
 - A1 (Primary): Bar-by-bar absolute deviation + 3-region partition (plan-aligned)
 - A2: Sharpness-driven asymptotic via mollified hard-threshold approximation
 - A3: Functional-analytic supremum-bound on bar-length distribution support
 - A4: Edge-band control as *consequence* of L1-J regime (substantive enhancement)
 - 3 considered-and-excluded (A5 Wasserstein collapse, A6 functional-derivative, A7 SCC dual-mode layer-confusion)
 
-**`02_development.md`** (~430 lines):
+**`02_L1M_proof_development.md`** (~542 lines):
 - **Definition L-M-D1**: $\Phi_\mathrm{res}(\ell_\min, \tau)$ envelope class via 5 axioms F1–F5 (range, lower normalization, monotonicity, sub-threshold suppression, dominant retention) with structural-deviation pair $(\varepsilon_\mathrm{sub}^\phi, \varepsilon_\mathrm{dom}^\phi)$.
 - **Claim L-M-V1**: 3 WQ-LAT-1.B sub-classes ($\phi_\mathrm{hard}$, $\phi_\mathrm{logistic}^{s\ge 50}$, $\phi_\mathrm{shift\text{-}sat}^{\beta\ge 20}$) verified against F1–F5 with explicit deviation bounds.
 - **Claim L-M-V2**: Default $\phi$-sat $\phi_0(\ell) = \ell/(\ell+\ell_\min) \notin \Phi_\mathrm{res}$ (F4 violation).
@@ -356,7 +356,7 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 - **3 per-family corollaries**: $\phi_\mathrm{hard}$ EXACT (Cat A absolute under $(P0)$–$(P11)$); $\phi_\mathrm{logistic}^{s\ge 50}$ bound $\le 3e^{-s\tau}\cdot K_\mathrm{act}^\varepsilon$ (Cat B sketched); $\phi_\mathrm{shift\text{-}sat}^{\beta\ge 20}$ bound $\le e^{-\beta\tau}\cdot K_\mathrm{act}^\varepsilon$ (Cat B sketched).
 - **4 counterexample attempts** (default $\phi$-sat / edge-band-dense bar config / insufficient sharpness / $\tau$ too large) — all consistent with L-M's hypothesis package.
 
-**`03_integration_and_new_open.md`** (~310 lines): Plan-vs-prompt path conflict resolution (working/MF write postponed to user); proposed canonical.md insertion text for "T-L1-M" entry; explicit OP non-impact audit per OP-0001..0013; **8 new open questions** (NQ-L1M-1..8); prompt v2 candidate notes.
+**`03_L1M_canonical_integration_and_NQ.md`** (~310 lines): Plan-vs-prompt path conflict resolution (working/MF write postponed to user); proposed canonical.md insertion text for "T-L1-M" entry; explicit OP non-impact audit per OP-0001..0013; **8 new open questions** (NQ-L1M-1..8); prompt v2 candidate notes.
 
 **`99_summary.md`** (~89 lines): Three-sentence result + W5 close + W6 seed.
 
@@ -430,7 +430,7 @@ $$|K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)| \
 
 **Why T2 not T1**: L-M-2 sketched 상태; L1-M-AUDIT (~2-3 days, mirrors L1-K external audit cycle) 후 Cat A 승급 path. Substantive (E) elimination via A4 enhancement은 plan.md를 넘어선 강화.
 
-**Canonical impact**: §13 Cat A entry "T-L1-M" candidate immediately after T-L1-F; Day 7 `03_integration_and_new_open.md` §2.1에 verbatim insertion text proposal.
+**Canonical impact**: §13 Cat A entry "T-L1-M" candidate immediately after T-L1-F; Day 7 `03_L1M_canonical_integration_and_NQ.md` §2.1에 verbatim insertion text proposal.
 
 #### **T2-2: σ_rich Path B Cat B Target (Day 4 working level)**
 
@@ -645,7 +645,7 @@ CV-1.6 release 후 stale될 items:
 - canonical.md 직접 수정: 0 (T-L1-F 본체는 W5 Day 6에 이미 머지; 오늘 release-day 머지는 metadata staleness 만)
 - silent OP resolution: 0
 - CN10/CN6/CN15 violation: 0
-- 196/196 tests passing: ✅ (no scc/ edits)
+- 215 + 1 xfailed: ✅ (no scc/ edits; original text "196/196" — corrected 2026-05-04 audit)
 - pre_brainstorm + Round-1/2 audit cycle 적용: weekly_summary 자체 재분석으로 대체 (release-day 검증)
 
 **Net effect**: W5 close 후 canonical baseline이 *완전 최신화*되어 W6 entry state가 명확. weekly_summary §4.1-§4.4는 *각 release 시점의 history snapshot*으로 보존되고, §4.5가 *current actual state vs claim* cross-check 역할.
@@ -746,7 +746,7 @@ W4 04-24의 SPLIT-RESOLVED (F-1) + LAYER-CLARIFIED (M-1) status은 W5 동안 변
 
 ### 7.1 P0 (W6 critical path)
 
-1. **L1-M-AUDIT** (~2-3 days, Day 8-10): Day 7 L1-M working draft Cat-B sketched의 external audit + repair cycle. Mirrors L1-K external audit (Day 6 T-L1-F의 promotion path). 3 bookkeeping refinements (`02_development.md` §5.7) — bottleneck-stability factor / Type-B bound LG-7 reuse / terminal-death convention Type-N — 처리 후 Cat-A conditional 승급 가능.
+1. **L1-M-AUDIT** (~2-3 days, Day 8-10): Day 7 L1-M working draft Cat-B sketched의 external audit + repair cycle. Mirrors L1-K external audit (Day 6 T-L1-F의 promotion path). 3 bookkeeping refinements (`02_L1M_proof_development.md` §5.7) — bottleneck-stability factor / Type-B bound LG-7 reuse / terminal-death convention Type-N — 처리 후 Cat-A conditional 승급 가능.
 
 2. **NQ-L1M-2 — CSEH 2007 factor-2 sharpness** (~1 day, Day 8 single target): L-M-2 §5.4의 bottleneck-stability factor-2를 sharpen. $\tau_*$ 확장 + L-M-2 Cat A 승급 path. **Day 8 단일 최우선 후보** (Day 7 99_summary §4.1 권고).
 
@@ -860,7 +860,7 @@ L1-M은 **CV-1.6 promotion target via L1-M-AUDIT**, NOT yet canonical. canonical
 | OP-0009 sub-items partially resolved | 6/7 (F/λ_rep/A/C/Pre/Emp via OAT-2~7 working) |
 | OP-0003 MO-1 rider added | re-activation trigger registered |
 | L1 chain (working/MF/) | 13 working files (L1-A through L1-L + L1-K-REPAIR + L1-J Cat-A upgrade) |
-| L1-M working draft | 1 (Day 7 logs/daily/2026-05-03/02_development.md) |
+| L1-M working draft | 1 (Day 7 `logs/daily/2026-05-03/02_L1M_proof_development.md`) |
 | 4-tool mathematical scaffolding | 1 working file (611 lines) |
 | K-status commitment | 1 working file (480 lines, OAT-1) |
 | OAT-2~7 batch | 7 working files (~2570 lines aggregate) |
@@ -884,8 +884,8 @@ L1-M은 **CV-1.6 promotion target via L1-M-AUDIT**, NOT yet canonical. canonical
 ### 9.4 Test Suite Health
 
 - W5 entry: 175/175 tests passing (CV-1.4 baseline)
-- Day 4 σ_rich CODE 추가 후: 196/196 tests passing
-- W5 close: **196/196 maintained** through Days 5-7 (no scc/ edits)
+- Day 4 σ_rich CODE 추가 후: **215 passed + 1 xfailed** *(corrected 2026-05-04 audit; prior writes used "196/196" snapshot. Day 4 sigma_rich additions actually brought the suite to 215. The "196" figure was a single-write inertia error that propagated through Days 4–7.)*
+- W5 close: **215 passed + 1 xfailed maintained** through Days 5-7 (no scc/ edits)
 
 ---
 

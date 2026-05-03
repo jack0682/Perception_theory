@@ -1,4 +1,6 @@
-# 01_exploration.md — L1-M Soft-Count Corollary, Approach Generation
+# 01_L1M_approach_exploration.md — L1-M Soft-Count Corollary, Approach Generation
+
+> *(Renamed 2026-05-04 audit: previously `01_L1M_approach_exploration.md`. Internal/external references updated for the topic-specific naming convention used elsewhere in the W5 daily structure.)*
 
 **Session:** 2026-05-03 (W5 Day 7, post-T-L1-F canonical promotion)
 **Target (from plan.md §2):** Develop **L1-M — Soft-Count Corollary under $\Phi_{\mathrm{res}}$**: under T-L1-F's $(P0)$–$(P11)$ and $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$, prove
@@ -183,7 +185,7 @@ I considered and excluded:
 
 ## §4. Output Plan for §02
 
-`02_development.md` will contain (numbering deliberately aligned with §§ for cross-reference):
+`02_L1M_proof_development.md` will contain (numbering deliberately aligned with §§ for cross-reference):
 
 - **§1.** Notation summary (objects, regime constants, envelope class $\Phi_{\mathrm{res}}$).
 - **§2.** Envelope class $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ — formal definition (axioms F1–F5) + verification of WQ-LAT-1.B empirical sub-classes.
@@ -196,6 +198,6 @@ I considered and excluded:
 
 ---
 
-**End of `01_exploration.md`.**
+**End of `01_L1M_approach_exploration.md`.**
 
-**Next file:** `02_development.md` — primary-approach development.
+**Next file:** `02_L1M_proof_development.md` — primary-approach development.
