@@ -9,7 +9,7 @@
 
 ## 0. 고착화의 징후 (왜 기존 관점이 갇혀있었는가)
 
-`THEORY/canonical/open_problems.md` 전체를 다시 읽으면 15+ 문제 중 **critical 3건이 모두 K=1 vs K=2 에너지 비교**에 집중되어 있다. F-1/M-1/MO-1은 서로 다른 세 문제로 보이지만 실제로는 **하나의 깊은 문제의 세 얼굴**이다 (§9에서 전개). 1년 가까이 이 언어에 갇혀있었기 때문에, 이 하나의 깊은 문제를 해소해야 풀리는 다른 층위의 문제들이 안 보였다.
+`THEORY/canonical/theorem_status.md` 전체를 다시 읽으면 15+ 문제 중 **critical 3건이 모두 K=1 vs K=2 에너지 비교**에 집중되어 있다. F-1/M-1/MO-1은 서로 다른 세 문제로 보이지만 실제로는 **하나의 깊은 문제의 세 얼굴**이다 (§9에서 전개). 1년 가까이 이 언어에 갇혀있었기 때문에, 이 하나의 깊은 문제를 해소해야 풀리는 다른 층위의 문제들이 안 보였다.
 
 또 하나의 징후: **Category C 5개 중 4개가 K-field 관련** (T-Persist-K-Sep, T-Persist-K-Weak, T-Persist-K-Unified, T-Persist-1(d)). K 문제가 해결되면 조건부 정리들이 연쇄적으로 격상될 수 있다. 그러나 K 문제의 "해결"이 정말 무엇을 의미하는지 명료하지 않다 — 이것 자체가 재프레이밍 대상.
 
@@ -310,4 +310,4 @@ Cl은 self-completion, D는 self-contrast, C는 self-integration. 셋 중 둘만
 - **증발한 기존 문제**: 없음 (M-1은 "정리로 재분류", 삭제 아님).
 - **새로 드러난 문제**: P-B, P-F, P-H 및 단일 원천 N-1.
 - **위치**: `THEORY/working/open_problems_reframing_2026-04-19.md`
-- **승급 경로**: 이 문서는 working 단계. canonical로 승급하려면 `THEORY/canonical/open_problems.md` 에 반영 — 단, canonical 수정 전에 주요 재명명을 CHANGELOG에 기록하고 공개적 erratum 형식 유지.
+- **승급 경로**: 이 문서는 working 단계. canonical로 승급하려면 `THEORY/canonical/theorem_status.md` 에 반영 — 단, canonical 수정 전에 주요 재명명을 CHANGELOG에 기록하고 공개적 erratum 형식 유지.

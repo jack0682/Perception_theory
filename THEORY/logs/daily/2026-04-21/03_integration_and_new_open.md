@@ -80,7 +80,7 @@ T-Merge (c)(d)(e) (Mountain Pass on Σ²_M) and K-Saddle Conjecture (R2-R5) rema
 
 ## §3. Existing Open Problems Status
 
-Per `canonical/open_problems.md` and `working/open_problems_reframing_2026-04-19.md`:
+Per `canonical/theorem_status.md` and `working/open_problems_reframing_2026-04-19.md`:
 
 ### 3.1 Critical (🔴): F-1, M-1, MO-1
 

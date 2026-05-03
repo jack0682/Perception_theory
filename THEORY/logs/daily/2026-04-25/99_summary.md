@@ -90,7 +90,7 @@
 ### 6.1 가장 시급한 목표
 
 **P0 (MUST)**: **canonical merge 실행**
-- `THEORY/canonical/open_problems.md`: F-1 → SPLIT-RESOLVED, M-1 → LAYER-CLARIFIED 수정
+- `THEORY/canonical/theorem_status.md`: F-1 → SPLIT-RESOLVED, M-1 → LAYER-CLARIFIED 수정
 - `THEORY/canonical/canonical.md §13`: Theorem 2 (T-PreObj-1) Cat A entry 추가
 - → 이 두 merge는 W4 close 이후 "가장 성숙한 T1 결과"이며 weekly_summary.md에 이미 준비된 제안 텍스트 있음
 

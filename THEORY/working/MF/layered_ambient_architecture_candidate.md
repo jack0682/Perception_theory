@@ -546,7 +546,7 @@ NQ-242c is now framed as a trajectory-pair construction inside Layer II:
 
 ### 11.6 No change to canonical files
 
-This memo does not edit `canonical.md`, `theorem_status.md`, `open_problems.md`, or `CHANGELOG.md`. Should the architecture be promoted, the canonical-edit candidates already drafted in `mathematical_scaffolding_4tools.md` §8 and `shared_pool_canonical_proposal.md` §5 are the relevant text proposals.
+This memo does not edit `canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog), or `CHANGELOG.md`. Should the architecture be promoted, the canonical-edit candidates already drafted in `mathematical_scaffolding_4tools.md` §8 and `shared_pool_canonical_proposal.md` §5 are the relevant text proposals.
 
 ---
 

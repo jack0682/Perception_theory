@@ -1,6 +1,6 @@
 # CONVENTIONS.md — Repository & Theory Discipline
 
-Read at session start with `THEORY/canonical/canonical.md`, `THEORY/canonical/open_problems.md`, and the last entry of `THEORY/CHANGELOG.md`.
+Read at session start with `THEORY/canonical/canonical.md`, `THEORY/canonical/theorem_status.md`, and the last entry of `THEORY/CHANGELOG.md`.
 
 ---
 

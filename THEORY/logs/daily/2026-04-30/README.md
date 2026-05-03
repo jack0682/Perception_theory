@@ -49,7 +49,7 @@ THEORY/                theory documents
 ├── canonical/         authoritative — promoted content only
 │   ├── canonical.md   ← THE spec (v1.2, 1216 lines)
 │   ├── theorem_status.md
-│   └── open_problems.md
+│   └── theorem_status.md
 ├── working/           in-progress theory (one file = one topic)
 └── logs/              chronological journal
     ├── daily/ weekly/ monthly/
@@ -100,7 +100,7 @@ cd CODE/papers && pdflatex paper1_math.tex && pdflatex paper1_math.tex
 
 **Retracted:** K-Saddle Conjecture, Theorem 3.3 (r̄₀ general τ), **Type A/B classification** (exp65: 0/4 configs observed as Type B).
 
-**Open critical:** F-1 (K=2 vacuity), M-1 (K=1 always preferred), MO-1 (Morse inapplicable under fixed-K). See `THEORY/canonical/open_problems.md`.
+**Open critical:** F-1 (K=2 vacuity), M-1 (K=1 always preferred), MO-1 (Morse inapplicable under fixed-K). See `THEORY/canonical/theorem_status.md`.
 
 **Predictions verified:** P1–P5 (single-formation), P1-K/P2-K/P3-K (multi-formation). P4-K retracted.
 

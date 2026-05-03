@@ -5,7 +5,7 @@
 **Origin:** `THEORY/logs/daily/2026-04-20/03_integration_and_new_open.md` §9 (NQ-1…NQ-7)
 **Purpose:** 2026-04-20 session 에서 드러난 7 개 새 open question 을 topic 별 consolidate. 각 NQ 는 Purpose pin 이후 plan.md Target 후보 또는 reformulation Stage 1–3 의 subtask. **본 문서는 NQ 를 해결하지 않음 — 보존.**
 
-**Relation to `canonical/open_problems.md`:** 본 NQ 들은 아직 canonical open problem 로 승급되지 않음. purpose pin 후 해당 purpose scope 내 NQ 만 canonical/open_problems.md 에 OP-xxxx 로 승급 고려.
+**Relation to `canonical/theorem_status.md`:** 본 NQ 들은 아직 canonical open problem 로 승급되지 않음. purpose pin 후 해당 purpose scope 내 NQ 만 canonical/theorem_status.md 에 OP-xxxx 로 승급 고려.
 
 ---
 

@@ -357,7 +357,7 @@ D-Items O1-O7 should be approved as a *coherent bundle* — partial approval ris
 - `canonical/canonical.md` §13 (theorems) — new T-K-Selection-* entries.
 - `canonical/canonical.md` §14 (CN list) — CN15 amendment.
 - `canonical/canonical.md` §15 (open problems index) — OP-0005 RESOLVED.
-- `canonical/open_problems.md` — OP-0005 status update (§5 of this packet).
+- `canonical/theorem_status.md` — OP-0005 status update (§5 of this packet).
 - `canonical/theorem_status.md` — T-K-Selection-* Cat status entries.
 - `THEORY/CHANGELOG.md` — CV-1.7+ entry (§6 of this packet).
 

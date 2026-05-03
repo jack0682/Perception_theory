@@ -147,7 +147,7 @@ Inspect in this order. Highest-priority files are read fully; the rest are refer
 ### 5.1 Mandatory before any new work
 
 1. `THEORY/canonical/canonical.md` (CV-1.5.1) — current canonical baseline; especially §3 (formal universe), §11 (Commitments and Open Design Choices), §13 (theorem catalog including T-Persist-K-* and D-6a entries), §14 (CN list).
-2. `THEORY/canonical/open_problems.md` — current OP register, especially OP-0001..0003 (resolved/clarified/sidestepped status), OP-0005 (K-Selection HIGH), OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Ontological Foundations, 7 sub-items).
+2. `THEORY/canonical/theorem_status.md` — current OP register, especially OP-0001..0003 (resolved/clarified/sidestepped status), OP-0005 (K-Selection HIGH), OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Ontological Foundations, 7 sub-items).
 3. `THEORY/canonical/theorem_status.md` — current Cat A / B / C registry, version history.
 4. `THEORY/working/MF/layered_ambient_architecture_candidate.md` — full architecture definitions and status table.
 5. `THEORY/working/MF/layered_ambient_architecture_README.md` — architecture orientation.
@@ -190,7 +190,7 @@ Inspect in this order. Highest-priority files are read fully; the rest are refer
 
 - `THEORY/canonical/canonical.md`
 - `THEORY/canonical/theorem_status.md`
-- `THEORY/canonical/open_problems.md`
+- `THEORY/canonical/theorem_status.md`
 - `THEORY/CHANGELOG.md`
 - `_archive/**` (frozen)
 - Any vision_model_sketch/ file (application-side, out of scope for this line)

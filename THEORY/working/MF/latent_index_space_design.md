@@ -16,7 +16,7 @@
 - `THEORY/working/MF/F_Kstep_K_triple.md` — 4-quantity bridge.
 - `THEORY/working/E/soft_K_definition.md` — $K_{\mathrm{soft}}^\phi$ persistence-based.
 - `THEORY/working/MF/sigma_rich_augmentation.md` — σ-rich Path B candidate.
-- `THEORY/canonical/canonical.md`, `theorem_status.md`, `open_problems.md` — canonical baseline (CV-1.5.1).
+- `THEORY/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog) — canonical baseline (CV-1.5.1).
 
 ---
 

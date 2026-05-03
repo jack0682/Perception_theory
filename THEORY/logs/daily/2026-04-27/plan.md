@@ -113,7 +113,7 @@
 - Expected line counts: Lemma 1 ~120 lines, Lemma 2 ~150 lines, Lemma 3 ~100 lines = ~370 lines added.
 
 **Specific Edit operations**:
-1. Open canonical.md, find "**Corollary (F-1 Resolution via T-Merge (b) + T-PreObj-1)** ... *See also:* `open_problems.md` OP-0001 SPLIT-RESOLVED entry; `logs/weekly/2026-04-W4/weekly_summary.md` §4.1." (existing line ~1108-1115)
+1. Open canonical.md, find "**Corollary (F-1 Resolution via T-Merge (b) + T-PreObj-1)** ... *See also:* `theorem_status.md` (Open Problems Catalog) OP-0001 SPLIT-RESOLVED entry; `logs/weekly/2026-04-W4/weekly_summary.md` §4.1." (existing line ~1108-1115)
 2. Edit: replace last line "*See also:* ..." with same text + 3 new entries inserted after.
 
 **Success metric**: §13에 3 new entries 추가 + canonical.md grows by ~370 lines.

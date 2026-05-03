@@ -2,6 +2,56 @@
 
 ---
 
+## 2026-05-04 (W6 Day 1 late evening) — open_problems.md merged into theorem_status.md
+
+User decision (per the audit Pass 2 finding that the two files used incompatible OP-ID systems and overlapping but drifted bodies): consolidate `THEORY/canonical/open_problems.md` into `THEORY/canonical/theorem_status.md` as a unified Open Problems Catalog section, then delete `open_problems.md`.
+
+### Migration scope
+
+The substantive content of the previously-separate `open_problems.md` (~530 lines) was migrated into `theorem_status.md` as a new "Open Problems Catalog" section with the structure:
+- Quick Index (1-line per OP, all 14 active+resolved OPs).
+- CRITICAL section: full bodies for OP-0001 (F-1 SPLIT-RESOLVED), OP-0002 (M-1 LAYER-CLARIFIED), OP-0003 (MO-1 SIDESTEPPED with re-activation rider).
+- HIGH section: full bodies for OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Foundations, including the 7-sub-item status table), OP-0004 (Type A/B retracted), OP-0005 (K-Selection), OP-0006 (Boundary precision).
+- MEDIUM section: full bodies for OP-0010 (Bind generalization, now largely resolved at canonical level by W6 G2), OP-0011, OP-0012, OP-0013.
+- LOW section: full bodies for OP-0020 (Dynamic topology), OP-0021 (Stochastic dynamics), OP-0022 (Continuous-time limit).
+- Problem Statistics (post-W6 G2 audit), Critical Path to Resolution, Problem Lifecycle Example for F-1.
+
+The catalog is now the single authoritative source for OP information; no information was lost in the migration.
+
+### Cross-reference updates
+
+A bulk `sed` pass updated ~63 cross-references across the project from `open_problems.md` to `theorem_status.md`. A second pass simplified an awkward `(Open Problems Catalog)` parenthetical that the first pass had inserted in tree-diagram and file-list contexts. A third pass deduplicated `theorem_status.md + theorem_status.md` artifacts where files originally listed `theorem_status.md, open_problems.md` as a pair.
+
+Manual fixes were applied to:
+- `CLAUDE.md`: Session Start reading list (CV-1.2 -> CV-1.5.2; F-1/M-1/MO-1 phrasing updated); Repository Layout tree (removed redundant entry the bulk sed had created); Theory Sketch heading (v1.2 -> CV-1.5.2); Policy section (added explicit note about the 2026-05-04 merge).
+- `THEORY/working/MF/cobelonging_vs_sigmaD.md`, `THEORY/working/MF/cn15_static_dynamic_separation.md`: cross-reference lines updated.
+
+### Files NOT updated (acceptable as historical)
+
+Five files still contain `open_problems.md` mentions in narrative-historical contexts that should not be silently rewritten:
+- `THEORY/CHANGELOG.md` audit-note (this entry's predecessors describing the prior `last_updated` bump on the file).
+- `CLAUDE.md` Policy section (intentional self-reference describing the merge).
+- `THEORY/logs/daily/2026-04-25/99_summary.md` (historical mention of canonical-merge recommendation).
+- `THEORY/logs/daily/2026-04-30/01_canonical_promotion_log.md` (historical line-count tally).
+- `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` (historical pending-status entry).
+
+### Files modified (this entry)
+
+- `THEORY/canonical/theorem_status.md`: Open Problems Catalog section added (~480 lines absorbed from open_problems.md).
+- `THEORY/canonical/open_problems.md`: DELETED.
+- `THEORY/canonical/README.md`: list of catalog files updated by user/linter to reflect the merge.
+- `CLAUDE.md`, `CONVENTIONS.md`, `THEORY/canonical/canonical.md`, ~30 working files, several `logs/daily/` files: cross-references updated by the bulk sed passes.
+
+### Test count
+
+215 passed + 1 xfailed unchanged. No `scc/` edits.
+
+### Theorem status changes
+
+None substantive. The merge eliminates a documentation drift surface; no theorem statements changed.
+
+---
+
 ## 2026-05-04 (W6 Day 1 evening) — G2 (T-Bind categorical decision) + NQ-187 falsification handling
 
 W6 Day 1 evening session per the redesigned W6 strategic plan (G2 + opportunistic NQ-187 handling).
@@ -56,7 +106,7 @@ Second audit pass on 2026-05-04. Triggered by user request for a precise re-revi
 
 ### Findings of note (Pass 2)
 
-1. **Two incompatible OP-ID systems** between `theorem_status.md` and `open_problems.md` — same OP-IDs (OP-0004, OP-0005, OP-0006, OP-0007) referred to different problems in each file.
+1. **Two incompatible OP-ID systems** between `theorem_status.md` and `theorem_status.md` — same OP-IDs (OP-0004, OP-0005, OP-0006, OP-0007) referred to different problems in each file.
 2. **`canonical.md` §15 closing summary** was two versions stale (CV-1.5 wording, 45A/60 claims, T-L1-F unmentioned).
 3. **Errata Round 1 corrections** (T-σ-Lemma-3 IBP identity, T-σ-Theorem-3 worked example) were applied in `canonical.md` body but never propagated to `theorem_status.md` brief rows.
 4. **Retraction count** disagreed between `canonical.md` §13 (5 retracted, properly enumerated) and `theorem_status.md` Proof Status Summary table (2 retracted).
@@ -69,7 +119,7 @@ Second audit pass on 2026-05-04. Triggered by user request for a precise re-revi
 
 ### Actions (Pass 2)
 
-- **OP-ID system unified.** `theorem_status.md` Open Problems table re-synced to `open_problems.md` IDs (the latter is now the master). OP-0004 (Type A/B retracted), OP-0005 (K-Selection High), OP-0006 (Boundary precision High), OP-0008 (σ^A K-jump High), OP-0009 (Multi-Formation Foundations High, 7 sub-items). Pre-CV-1.5 IDs OP-0004/0005/0006/0007 (Boundary / Transport / Type A/B / Dynamic-topology) in `theorem_status.md` are now consistent with `open_problems.md`. The Proof Status Summary "Open (active)" row was rewritten to enumerate by severity (4 High + 4 Medium + 3 Low = 11 active total).
+- **OP-ID system unified.** `theorem_status.md` Open Problems table re-synced to `theorem_status.md` IDs (the latter is now the master). OP-0004 (Type A/B retracted), OP-0005 (K-Selection High), OP-0006 (Boundary precision High), OP-0008 (σ^A K-jump High), OP-0009 (Multi-Formation Foundations High, 7 sub-items). Pre-CV-1.5 IDs OP-0004/0005/0006/0007 (Boundary / Transport / Type A/B / Dynamic-topology) in `theorem_status.md` are now consistent with `theorem_status.md`. The Proof Status Summary "Open (active)" row was rewritten to enumerate by severity (4 High + 4 Medium + 3 Low = 11 active total).
 - **canonical.md §15 rewritten** for CV-1.5.2 baseline (46A / 5B / 5C / 5R = 61 claims) with explicit T-L1-F mention, explicit non-claims, explicit P7 caveat about WQ-1 production dynamics being outside the L1-J regime, updated remaining-research-extensions list (now numbers L1-M, T-σ-Theorem-4 re-promotion, OP-0008 σ-rich, OP-0005 K-Selection composite, OP-0009 sub-items, etc. as concrete CV-1.6/1.7 candidates).
 - **Errata Round 1 corrections propagated** to `theorem_status.md` rows for T-σ-Lemma-3 (line 95 + C-0714 detail row), T-σ-Theorem-3 (C-0715 detail row), T-σ-Theorem-4 (line 97 + C-0716 detail row, including the retroactive Cat A → Cat B downgrade explanation and the NQ-187 Wave 3 numerical refutation context).
 - **Retraction count corrected** in `theorem_status.md` Proof Status Summary (2 → 5; the 5 retractions are K-Saddle Conjecture, r̄₀ general τ / Theorem 3.3, T-Merge (c), T-Merge (d), T-Merge (e), matching `canonical.md` §13 Retracted block).
@@ -105,7 +155,7 @@ Pure cleanup session in response to user audit request. **No theorem promotions,
 
 1. **Test count drift across W5 D4–D7 entries.** Entries dated 2026-05-01 / 2026-05-02 / 2026-05-03 uniformly state `196/196 passing`. Direct execution of `cd CODE && pytest tests/ -q` on 2026-05-04 returns **`215 passed, 1 xfailed`** (216 collected, ~232s wall). The 175 → 215 jump came from test modules added on 2026-04-28 (`test_outside_spinodal_override.py`) and 2026-04-30 (`test_aut_g_stabilizer.py`, `test_sigma_rich.py`, `test_sigma_rich_integration.py`); the snapshot was not refreshed.
 2. **`canonical.md` header drift.** Frontmatter, NOTICE block, §1 status note, §1.1 release table, and §13 totals/Cat-A header were stale at CV-1.5 / 45A / 60 claims while `theorem_status.md` had advanced to CV-1.5.2 / 46A / 61 claims via the W5 Day 6 T-L1-F promotion.
-3. **`open_problems.md` false `last_updated` bump.** W5 Day 6 commit had bumped `last_updated: 2026-04-25 → 2026-05-02` while making zero body changes.
+3. **`theorem_status.md` false `last_updated` bump.** W5 Day 6 commit had bumped `last_updated: 2026-04-25 → 2026-05-02` while making zero body changes.
 4. **Daily-log structural anomalies.** `2026-05-02/` had no `99_summary.md` (single-deliverable closure-only structure); `2026-05-03/` used generic narrative-arc filenames (`01_exploration` / `02_development` / `03_integration_and_new_open`) while the surrounding W5 days had moved to topic-specific naming.
 5. **`CODE/papers/`** held two paper drafts (`paper1_math.tex`, `paper2_cogsci.tex`) that were stale relative to CV-1.5.2 (no T-L1-F entry, stale test counts in citations).
 6. **5 root-level draft files** with no canonical role (`analyse_gemini.md`, `analyze_codex.md`, `deep-research-report.md`, `research_log.md`, `AUDIT_2026-04-18.md`).
@@ -235,7 +285,7 @@ and the map $\mathcal A_{\mathrm{bar}} : A^\varepsilon(\mathbf u) \to \mathrm{Ba
 
 ### Files NOT Modified
 
-- `THEORY/canonical/open_problems.md` — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
+- `THEORY/canonical/theorem_status.md` — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
 
 ### Files Created
 
@@ -630,7 +680,7 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
   - D-5 V5b-T' WITHDRAWN row recorded.
   - Counts: 43A → 45A, 4B → 5B, 57 → 60 claims.
 
-- `THEORY/canonical/open_problems.md`:
+- `THEORY/canonical/theorem_status.md`:
   - **OP-0008** σ^A K-jump Inheritance Non-Determinism added (HIGH severity).
   - **OP-0009** Multi-Formation Ontological Foundations added (HIGH severity, 7 sub-items: K-status / F / λ_rep / Architecture / C_t / Pre-objective / Empirical).
   - OP-0003 MO-1 entry: re-activation trigger rider added ("D-6b approval / NQ-248 begin").
@@ -687,7 +737,7 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
 ### Test Count
 
 - Pre-edit baseline: 175 passing (W5 Day 1 inherited; pytest module install gap on this session — test verification deferred to next compute-available session).
-- Code changes this release: **0** (theory-only release; canonical.md + theorem_status.md + open_problems.md + CHANGELOG.md + working/MF/K_status_commitment.md only).
+- Code changes this release: **0** (theory-only release; canonical.md + theorem_status.md + CHANGELOG.md + working/MF/K_status_commitment.md only).
 
 ### Carry-Forward (W5 Day 4-7 + W6+)
 
@@ -1080,7 +1130,7 @@ W4 (Apr 19–25) 7일 누적 결과 마감. **Critical 3건 (F-1, M-1, MO-1) 모
 
 ### Files Modified
 
-- `THEORY/canonical/open_problems.md`:
+- `THEORY/canonical/theorem_status.md`:
   - **OP-0001 F-1**: ❌ UNRESOLVED 🔴 → ✅ **SPLIT-RESOLVED** (Pure $\mathcal{E}_{\mathrm{bd}}$ via T-Merge (b) Cat A pre-existing; Full SCC via Theorem 2 (i) Cat A graph-class independent).
   - **OP-0002 M-1**: ❌ UNRESOLVED 🔴 → ✅ **LAYER-CLARIFIED** (proved theorem T-Merge (b) misframed as problem; Static/Dynamic Separation explains apparent K=1 vs K>1 conflict).
   - **OP-0003 MO-1**: ❌ UNRESOLVED 🟠 → ⚪ **SIDESTEPPED** (single-formation σ-framework on $\Sigma_m$ requires no corners; multi-formation Phase 5 still open).
@@ -1096,7 +1146,7 @@ W4 (Apr 19–25) 7일 누적 결과 마감. **Critical 3건 (F-1, M-1, MO-1) 모
 - F-1, M-1, MO-1 (3건 Critical blocker) 모두 active OP list에서 제거 (sidestepped/resolved/clarified).
 
 **W4 merge 모든 stage 완료** (2026-04-26 업데이트):
-- ✅ Stage 1.1 `open_problems.md` — F-1/M-1/MO-1 status update + Statistics + Critical Path + Lifecycle (3 entries 변경, 4 sections 갱신).
+- ✅ Stage 1.1 `theorem_status.md` — F-1/M-1/MO-1 status update + Statistics + Critical Path + Lifecycle (3 entries 변경, 4 sections 갱신).
 - ✅ Stage 1.2 `CHANGELOG.md` — 본 entry.
 - ✅ Stage 1.3 `canonical.md` §13 — T-PreObj-1 + T-PreObj-1G + Lemma 4 + F-1 Resolution Corollary (Cat A entries 추가). Counts 4곳 update (35A/49claims/71% → 37A/51claims/73%).
 - ✅ Stage 1.4 `theorem_status.md` — CV-1.3 release entry. C-0700/0701/0702 신규 + C-0550/0551/0552 status 변경 + X-0001 superseded + OP table + Proof Status Summary + footer.
@@ -1258,7 +1308,7 @@ Reformulation Stage 0 (Purpose Declaration) 의 blocking gate 해소를 위한 *
   - C+E 선택 시: 공통 Stage 1 첫 세션 (`F[u] = E[u] − TS[u] + λ_K K_soft(u)` 의 well-definedness 예비 분석).
   - B 선택 시: CN15 (external substrate) 초안 + canonical §14 삽입 위치.
   - 다른 후보는 `99_summary.md` "내일 plan.md 준비 제안" 참조.
-- **NQ-1…7 은 working/new_open_questions_2026-04-20.md 에 보존.** purpose pin 후 해당 purpose scope 내 NQ 만 canonical/open_problems.md 에 OP-xxxx 로 승급 고려.
+- **NQ-1…7 은 working/new_open_questions_2026-04-20.md 에 보존.** purpose pin 후 해당 purpose scope 내 NQ 만 canonical/theorem_status.md 에 OP-xxxx 로 승급 고려.
 - **theorem_status.md ↔ canonical.md §13 category/count inconsistency 별도 보수 세션** 필요. 본 세션에서는 working 문서 §6 에 기록만.
 - **권고 E** (plan.md §8): 12 세션, 완전해결 5 (F-1, M-1, MO-1, OP-0005, P-A), Cat A 상실 5. Pareto frontier {B, B+C, E, C+E} 중 단일 후보 효율 최고.
 
@@ -1271,7 +1321,7 @@ Split the repository into **CODE/** (executable assets — scc, tests, experimen
 
 ### Files Moved
 - `scc/`, `tests/`, `experiments/`, `scripts/`, `papers/` → `CODE/`
-- `canonical.md`, `theorem_status.md`, `open_problems.md` → `THEORY/canonical/`
+- `canonical.md`, `theorem_status.md`, `theorem_status.md` → `THEORY/canonical/`
 - `CHANGELOG.md` → `THEORY/CHANGELOG.md` (this file)
 
 ### Files Modified
@@ -1307,7 +1357,7 @@ Full-repo audit revealed two competing organizational schemes mixed (2026-04-12 
 
 ### Files Created
 - `canonical.md` — promoted from `01_canonical/canonical_version_1.2.md` (single authoritative spec)
-- `open_problems.md` — promoted from `02_roadmap/open_problems.md`
+- `theorem_status.md` — promoted from `02_roadmap/open_problems.md`
 - `theorem_status.md` — promoted from `03_context_memory/theorem_registry.md`
 - `AUDIT_2026-04-18.md` — full-repo audit output (6 parallel explore agents, cross-verified)
 - `papers/` — restored from `_archive/legacy_code_and_materials/papers/`
@@ -1334,7 +1384,7 @@ Full-repo audit revealed two competing organizational schemes mixed (2026-04-12 
 The 2026-04-12 Research OS imposed 5-role daily logging, 8-layer hierarchy, and prefix registries on a single-researcher theory project. Log format collapsed by 2026-04-16. Registry files (P-xxxx, X-xxxx) were referenced in the theorem registry but never created on disk (0 files for 39 theorems / 2 counterexamples). The ceremonial overhead did not produce theorems and obscured the actual theory. Rolled back to theory-first layout.
 
 ### Carry-Forward
-- F-1 (K=2 vacuity), M-1 (K=1 preferred), MO-1 (Morse inapplicable) remain the open critical problems (`open_problems.md`)
+- F-1 (K=2 vacuity), M-1 (K=1 preferred), MO-1 (Morse inapplicable) remain the open critical problems (`theorem_status.md`)
 - `scripts/m2_landscape.py`, `scripts/m2_landscape_v2.py` still have `/home/jack/ex` dead paths — fix or archive when convenient
 - `_archive/legacy_code_and_materials/docs/` is a byte-identical duplicate of `_archive/old_docs_migrated/docs_2026-03-26_to_2026-04-12/` — candidate for deletion
 - Kinetic theory direction (Option C chosen 2026-04-13, E-0081/E-0082 never implemented) was effectively abandoned with Research OS — re-evaluate when returning to K>1 multi-formation work

@@ -451,10 +451,10 @@ If rejected, this file stays in `working/MF/` indefinitely as "explored ontologi
 - T-Persist-K-Sep / Weak / Strong / Unified: `canonical.md` §13 line 889-925.
 - Coupling Bound Lemma: `canonical.md` §12 line 870-887.
 - F vs K_step duality (W4 04-24): `canonical.md` §12 line 827-832.
-- OP-0001 F-1 SPLIT-RESOLVED: `open_problems.md` line 18-60.
-- OP-0002 M-1 LAYER-CLARIFIED: `open_problems.md` line 64-100.
-- OP-0003 MO-1 SIDESTEPPED: `open_problems.md` line 105-141.
-- OP-0005 K-Selection HIGH: `open_problems.md` line 175-197.
+- OP-0001 F-1 SPLIT-RESOLVED: `theorem_status.md` (Open Problems Catalog) line 18-60.
+- OP-0002 M-1 LAYER-CLARIFIED: `theorem_status.md` (Open Problems Catalog) line 64-100.
+- OP-0003 MO-1 SIDESTEPPED: `theorem_status.md` (Open Problems Catalog) line 105-141.
+- OP-0005 K-Selection HIGH: `theorem_status.md` (Open Problems Catalog) line 175-197.
 - OP-0008 σ^A K-jump non-determinism (W5 Day 4 register): proposed in `daily/2026-04-30/plan.md` Block 3.
 - OP-0009 Multi-Formation Ontological Foundations: proposed in 4-agent ontological depth analysis (W5 Day 3 EOD).
 - D-6a Commitment 14-Multi static (CV-1.5.1 W5 Day 4 morning): `daily/2026-04-30/plan.md` Block 1.

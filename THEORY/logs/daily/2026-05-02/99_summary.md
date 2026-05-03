@@ -38,7 +38,7 @@ Total: 4 files. The single-deliverable structure (only `01_*` rather than the st
 
 ### §3.2 Canonical files NOT modified
 
-- `THEORY/canonical/open_problems.md` — unchanged. T-L1-F is a bridge, not a K-selection mechanism (OP-0005) or σ-inheritance result (OP-0008); minimal-edits principle. *(2026-05-04 audit note: the previous bump of `last_updated: 2026-04-25 → 2026-05-02` made on Day 6 was misleading because no body change accompanied it; reverted by audit fix.)*
+- `THEORY/canonical/theorem_status.md` — unchanged. T-L1-F is a bridge, not a K-selection mechanism (OP-0005) or σ-inheritance result (OP-0008); minimal-edits principle. *(2026-05-04 audit note: the previous bump of `last_updated: 2026-04-25 → 2026-05-02` made on Day 6 was misleading because no body change accompanied it; reverted by audit fix.)*
 
 ### §3.3 Counts at CV-1.5.2
 
@@ -82,6 +82,6 @@ Parallel Day 7 ceremony: W5 weekly_summary draft + W6 strategic plan seeding.
 - ✅ Empirical regime non-vacuous (L1-I 439/1920 = 22.9% on $T^2_{20}$).
 - ✅ No silent OP resolutions (OP-0005 / OP-0008 explicit non-claim).
 - ✅ Test baseline preserved (215 + 1 xfailed; no `scc/` edits).
-- ⚠️ `open_problems.md` `last_updated` bump on Day 6 was substantively empty (audit-corrected on 2026-05-04).
+- ⚠️ `theorem_status.md` (Open Problems Catalog) `last_updated` bump on Day 6 was substantively empty (audit-corrected on 2026-05-04).
 
 **End of Day 6.**

@@ -120,7 +120,7 @@ SCC는 "객체(object)가 개별화되기 이전 층위에서 어떻게 응집(c
 ```
 CODE/                   실행 자산 (scc/, tests/, experiments/, scripts/, papers/)
 THEORY/
-├── canonical/          ← 승급된 권위 (canonical.md, theorem_status.md, open_problems.md)
+├── canonical/          ← 승급된 권위 (canonical.md, theorem_status.md)
 ├── working/            ← 주제별 진행 중 자료 (파일 1개 = 주제 1개)
 ├── logs/daily/{DATE}/  ← 오늘 세션 작업장 (plan.md + 에이전트 출력)
 └── CHANGELOG.md
@@ -146,7 +146,7 @@ logs/daily/...  →  working/<topic>.md  →  canonical/canonical.md
 
 1. **`THEORY/logs/daily/{DATE}/plan.md`** — 오늘의 target, why-now, context refs, session goals, non-goals, success criterion. **이 파일이 세션의 소관을 규정**합니다.
 2. **`THEORY/canonical/canonical.md`** — 이론 본문. 최소한 plan.md가 참조하는 섹션들, 그리고 §2 (foundational orientation), §3 (formal universe), §11 (fixed commitments), §14 (commitment notes CN1~CN14) 은 읽기.
-3. **`THEORY/canonical/open_problems.md`** — 기존 OP-xxxx 목록. plan.md의 target이 기존 OP와 어떻게 관계되는지 파악.
+3. **`THEORY/canonical/theorem_status.md`** — 기존 OP-xxxx 목록. plan.md의 target이 기존 OP와 어떻게 관계되는지 파악.
 4. **`THEORY/canonical/theorem_status.md`** — 49개 claims의 현재 Category (A/B/C/R). 당신이 어떤 정리를 건드리게 될지 사전 점검.
 5. **`THEORY/working/*.md`** — plan.md가 지정한 working 파일들. 특히 `open_problems_reframing_2026-04-19.md` 는 최근 F-1/M-1/MO-1을 N-1 (Soft-Hard Switching Asymmetry)로 통합 재프레이밍한 문서. 미리 읽어두면 언어가 일관됨.
 6. **최근 1~2일치 `THEORY/logs/daily/<최근날짜>/*.md`** — 전일 세션의 carry-forward 파악.
@@ -341,7 +341,7 @@ plan.md 확인 완료. 오늘 target 이해:
 
 진입 파일 읽기 시작:
 - [ ] canonical.md §...
-- [ ] open_problems.md
+- [ ] theorem_status.md
 - [ ] theorem_status.md
 - [ ] working/<해당 파일>
 - [ ] 최근 logs/daily/<최근날짜>

@@ -149,7 +149,7 @@ Per `07_w6_plan_preview.md`:
 - D4 (Thu 5/7): NQ-198k launch + NQ-244 result analysis + OAT-5 integration.
 - D5 (Fri 5/8): MO-1 face decision + OAT-7 R23 F=9 + NQ-242 Phase 2 zigzag + T-σ-Theorem-4 caveat finalize.
 - D6 (Sat 5/9): NQ-242c counterexample + CV-1.6 packet finalize draft + parking lot list assembly.
-- D7 (Sun 5/10): CV-1.6 release (canonical.md edits + theorem_status.md + open_problems.md + CHANGELOG) + W6 close.
+- D7 (Sun 5/10): CV-1.6 release (canonical.md edits + theorem_status.md + CHANGELOG) + W6 close.
 
 ### §8.3 W6 success criteria (6-item)
 

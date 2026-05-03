@@ -209,7 +209,7 @@ Stage 2가 확정한 공리 변화에 맞춰, canonical §3~§7의 정의를 재
 - `08_canonical_diff.md` — 재공식화된 canonical 전문 vs 기존 v1.2 차분
 - `THEORY/canonical/canonical.md` 교체 (승급 단계)
 - `THEORY/canonical/theorem_status.md` 갱신
-- `THEORY/canonical/open_problems.md` 재작성 (N-1 등 신규 문제 포함)
+- `THEORY/canonical/theorem_status.md` 재작성 (N-1 등 신규 문제 포함)
 - `THEORY/CHANGELOG.md` 주요 항목
 - `CODE/papers/` 관련 섹션 업데이트 (해당 시)
 
@@ -218,7 +218,7 @@ Stage 2가 확정한 공리 변화에 맞춰, canonical §3~§7의 정의를 재
 - [ ] Stage 2 axiom audit의 각 결정이 canonical 본문에 대응됨
 - [ ] Stage 4 theorem survival이 theorem_status.md에 반영됨
 - [ ] Non-goals 섹션이 canonical §11 "Open Design Choices"에 추가됨
-- [ ] 새 open problem(예: N-1 잔여)이 open_problems.md에 registered
+- [ ] 새 open problem(예: N-1 잔여)이 theorem_status.md에 registered
 - [ ] Test suite 통과 (CODE/tests/ 실행 결과 첨부)
 - [ ] 사용자 최종 승인
 

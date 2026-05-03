@@ -28,7 +28,7 @@
    - T2 (conditional/regime): Theorem 1 V5b + Lemma 1/2/3 + σ-definitional
    - T3 (sketch): G4 continuum limit, C3 super-lattice qualitative
    - T4 (retracted in-session): V4, V5a
-3. **Canonical merge 권고안**: T1만 권고 — F-1 resolution → open_problems.md 갱신, Theorem 2 → canonical.md §13
+3. **Canonical merge 권고안**: T1만 권고 — F-1 resolution → theorem_status.md 갱신, Theorem 2 → canonical.md §13
 4. **W5 carry-forward**: G2 irrep / G3 nodal / NQ-168 / NQ-128/137/141 / canonical_drafts 파일들
 5. **Self-assessment**: "C2/C3 100% conquered" claim의 과장 위험 명시, Tier 분류에서 honest
 
@@ -193,7 +193,7 @@
 **P0 (반드시 달성)**:
 - [ ] `THEORY/logs/weekly/2026-04-W4/weekly_summary.md` 완성 + commit
 - [ ] Tier 1/2/3/4 분류 표 포함 (T1 = 2건 정직하게)
-- [ ] F-1 resolution (T1) 명시 + open_problems.md 갱신 권고
+- [ ] F-1 resolution (T1) 명시 + theorem_status.md 갱신 권고
 - [ ] V5b (T2) vs Theorem 2 (T1) 구분 명시
 - [ ] W5 carry-forward 항목 명시
 

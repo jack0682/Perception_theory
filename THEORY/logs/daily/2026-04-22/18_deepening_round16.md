@@ -9,7 +9,7 @@
 
 ## §1. F-1 original statement
 
-From `THEORY/canonical/open_problems.md` (pre-session):
+From `THEORY/canonical/theorem_status.md` (pre-session):
 
 > **F-1 (K=2 vacuity, CRITICAL).** In the K=1 analysis of `canonical.md`, the integer $K$ is treated as a primitive parameter. However, no explicit K=2 construction exists showing that energy minimization at fixed mass $m = 2m_0$ (twice K=1) actually prefers two formations rather than a single larger formation. Absent this, the "K=2 regime" of the theory is vacuous.
 
@@ -187,7 +187,7 @@ Plus:
 
 ## §8. Summary
 
-**F-1 verification is the capstone of medium-term work.** Combined with M-1 and MO-1 explicit resolutions, the 3 Critical open problems from pre-session `open_problems.md` are now **fully dissolved at Cat A universal level** with explicit mechanisms:
+**F-1 verification is the capstone of medium-term work.** Combined with M-1 and MO-1 explicit resolutions, the 3 Critical open problems from pre-session `theorem_status.md` (Open Problems Catalog) are now **fully dissolved at Cat A universal level** with explicit mechanisms:
 - F-1: K=2 exists as metastable local min; $\widehat K$ probabilistic.
 - M-1: Two-timescale with explicit scale $e^{d_{\min}/\xi_0}$.
 - MO-1: Morse-Bott structure from Rounds 5 + 12.

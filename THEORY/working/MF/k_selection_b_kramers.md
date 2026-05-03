@@ -290,7 +290,7 @@ W12+: combined Cat A everywhere for K-Selection axiom canonical promotion at CV-
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; §13 T-Persist-K-Sep, T-Persist-K-Weak.
 - `canonical/canonical.md` §14 CN6 (Kinetic), CN15 (Static/Dynamic Separation).
-- `canonical/open_problems.md` OP-0005 (direct attack); OP-0008 (Kramers reframing connection).
+- `canonical/theorem_status.md` OP-0005 (direct attack); OP-0008 (Kramers reframing connection).
 
 ### §11.3 Daily logs (V4 source)
 

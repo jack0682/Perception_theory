@@ -314,7 +314,7 @@ CV-1.6 candidate Commitment 18 (proposed extension to Commitment 17 4-tool packe
 ### §10.2 Canonical refs
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; §13 T-σ-multi-A-Static; §14 CN5, CN10.
-- `canonical/open_problems.md` OP-0008.
+- `canonical/theorem_status.md` OP-0008.
 
 ### §10.3 External refs (PH library + theory)
 

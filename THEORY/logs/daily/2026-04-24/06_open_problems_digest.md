@@ -3,7 +3,7 @@
 **Session:** 2026-04-24 (evening)
 **Origin:** 사용자 요청 — "남은 open problem 과 새로 생긴 open problem 정리 및 설명".
 **This file covers:** (A) 본 세션 이전 catalogued OP 의 현재 status (각각 본 세션 영향 명시) · (B) 본 세션이 생성한 26 새 NQ (NQ-125..150) 의 정리 + 분류 · (C) Strategic clustering · (D) 다음 세션 priority ranking.
-**Depends on reading:** `canonical/open_problems.md` (OP-0001..0007), `working/open_problems_reframing_2026-04-19.md` (N-1 / P-A..H), 본 세션 `02_development.md` `03_integration_and_new_open.md` `04_orbital_proofs.md` `05_orbital_essence.md`.
+**Depends on reading:** `canonical/theorem_status.md` (OP-0001..0007), `working/open_problems_reframing_2026-04-19.md` (N-1 / P-A..H), 본 세션 `02_development.md` `03_integration_and_new_open.md` `04_orbital_proofs.md` `05_orbital_essence.md`.
 
 ---
 
@@ -84,7 +84,7 @@
 
 ### A3. Canonical original list (OP-0001..0007)
 
-각 OP 의 정확한 statement 는 `canonical/open_problems.md` 에 기록되어 있음 (직접 참조 권고). 본 세션 영향:
+각 OP 의 정확한 statement 는 `canonical/theorem_status.md` 에 기록되어 있음 (직접 참조 권고). 본 세션 영향:
 
 - **OP-0001** (binary co-belonging form): 무관, untouched.
 - **OP-0002** (transition operator $T_t$): 무관 (canonical 에서 demoted, 본 세션 무관), untouched.

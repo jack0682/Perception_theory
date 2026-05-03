@@ -14,7 +14,7 @@
 - `THEORY/working/MF/shared_pool_canonical_proposal.md` (I9' shared-pool ambient)
 - `THEORY/working/MF/F_Kstep_K_triple.md` (4-quantity bridge)
 - `THEORY/working/E/soft_K_definition.md` ($K_{\mathrm{soft}}^\phi$ persistence-based)
-- `THEORY/canonical/canonical.md`, `theorem_status.md`, `open_problems.md`
+- `THEORY/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog)
 
 ---
 

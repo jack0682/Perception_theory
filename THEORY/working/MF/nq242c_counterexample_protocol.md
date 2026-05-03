@@ -723,7 +723,7 @@ These remain forbidden non-claims regardless of the outcome of this protocol.
 - Architecture: `layered_ambient_architecture_candidate.md` (Layer II definition, K-jump, status table); `layered_ambient_architecture_agent_notes.md` (mandatory distinctions, forbidden overclaims); `layered_ambient_architecture_next_work.md` (WQ-1 spec).
 - Code: `scc/multi.py`, `scc/sigma_rich.py`, `scc/diagnostics.py`, `scc/energy.py`, `scc/graph.py`, `scc/optimizer.py`, `scc/params.py`.
 - Tests: `tests/test_multi.py`, `tests/test_sigma_rich.py`, `tests/test_sigma_rich_integration.py`.
-- Open problems: `THEORY/canonical/open_problems.md` OP-0008 (direct attack subject; severity 🟠 HIGH retained).
+- Open problems: `THEORY/canonical/theorem_status.md` OP-0008 (direct attack subject; severity 🟠 HIGH retained).
 - Theorem status: `THEORY/canonical/theorem_status.md` (no edits made by this protocol).
 
 ---

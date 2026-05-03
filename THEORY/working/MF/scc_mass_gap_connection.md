@@ -264,7 +264,7 @@ If $\min_k \lambda_k \to 0$ uniformly as $\beta \uparrow$ a bifurcation surface 
 
 ### §9.4 K-jump non-determinism (OP-0008)
 
-**Failure (d):** σ^A K-jump non-determinism (OP-0008, registered in canonical §1.1 CV-1.5.1 release-notes line 77; full open-problem statement at `THEORY/canonical/open_problems.md` OP-0008) implies $\mathcal{L}_K$ is not connected and the infimum may be taken over a path-disconnected union with different mass-gap values per connected component. Resolution: BC-249-1 (revised §3.1 form) stated per-component, with $\Delta_*(G, K, \delta_0)$ depending on the connected component label as well as $(G, K, \delta_0)$.
+**Failure (d):** σ^A K-jump non-determinism (OP-0008, registered in canonical §1.1 CV-1.5.1 release-notes line 77; full open-problem statement at `THEORY/canonical/theorem_status.md` OP-0008) implies $\mathcal{L}_K$ is not connected and the infimum may be taken over a path-disconnected union with different mass-gap values per connected component. Resolution: BC-249-1 (revised §3.1 form) stated per-component, with $\Delta_*(G, K, \delta_0)$ depending on the connected component label as well as $(G, K, \delta_0)$.
 
 ---
 
@@ -358,8 +358,8 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
 - `THEORY/working/MF/multi_formation_sigma.md` — multi-formation σ framework, V5b-F transfer mechanism §5.5.
 - `THEORY/working/MF/sigma_multi_trajectory.md` — dynamic σ trajectory, K-jump events.
 - `THEORY/logs/daily/2026-04-30/06_gauge_theory_connections_analysis.md` — 9 gauge-theory connections enumeration; Connection A §3 (NQ-249 origin), Connection G §9, Connection H §10, Connection F §8.
-- OP-0009 sub-item OP-0009-Emp (R23 σ verification) — `canonical/open_problems.md` OP-0009.
-- OP-0008 σ^A K-jump non-determinism — registered in canonical §1.1 CV-1.5.1 release-notes (`canonical.md:77`); full open-problem statement at `THEORY/canonical/open_problems.md` OP-0008.
+- OP-0009 sub-item OP-0009-Emp (R23 σ verification) — `canonical/theorem_status.md` OP-0009.
+- OP-0008 σ^A K-jump non-determinism — registered in canonical §1.1 CV-1.5.1 release-notes (`canonical.md:77`); full open-problem statement at `THEORY/canonical/theorem_status.md` OP-0008.
 
 ---
 
@@ -371,7 +371,7 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
 | **CN10 contrastive (YM downstream parallel, not foundation)** | ✅ | §1.3, §5 contrastive table, §10 connection structure. SCC content is graph-spectral; YM is structural inspiration only. |
 | **F-1 not silently resolved** | ✅ | F-1 (vacuity) is about pre-objective formation existence; this file restricts to non-trivial $\mathcal{L}_K$ Morse-0 minimizers ⇒ F-1 regime is *outside* scope. We do not claim F-1 resolved; we restrict hypothesis. |
 | **M-1 not silently resolved** | ✅ | M-1 (K=1 preference) is about ground-state K-selection; this file analyzes spectral structure *given* K, not selection of K. M-1 untouched. |
-| **MO-1 not silently resolved** | ✅ | MO-1 (Morse inapplicability) is sidestepped in canonical via single-formation framework; multi-formation Morse re-engagement deferred to MO-1 OP-0003 rider (canonical §1.1 CV-1.5.1 release-notes line 77; full statement at `THEORY/canonical/open_problems.md` OP-0003). This file uses Morse-0 hypothesis explicitly *as hypothesis*, never claims MO-1 resolved. |
+| **MO-1 not silently resolved** | ✅ | MO-1 (Morse inapplicability) is sidestepped in canonical via single-formation framework; multi-formation Morse re-engagement deferred to MO-1 OP-0003 rider (canonical §1.1 CV-1.5.1 release-notes line 77; full statement at `THEORY/canonical/theorem_status.md` OP-0003). This file uses Morse-0 hypothesis explicitly *as hypothesis*, never claims MO-1 resolved. |
 | **Cat A/B/C distinctions explicit** | ✅ | §7 Cat A immediate (§7.1), Cat B target BC-249-1 (§7.2), Cat C closed-form (§7.3). |
 | **Multi-formation default; K=1 degenerate special case** | ✅ | Throughout, $K_{\mathrm{act}} \geq 1$ general; $K=1$ recovers single-formation per canonical T-σ-multi-A-Static reduction (`canonical.md:1233`). |
 
@@ -392,7 +392,7 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
   - §13 T-σ-Lemma-3 (lines 1301–1320)
   - §13 T-V5b-T-zero (lines 1199–1201)
   - §13 T-σ-Theorem-3 (lines 1262–1265)
-- `THEORY/canonical/open_problems.md` — OP-0009 sub-items (OP-0009-Emp), OP-0008.
+- `THEORY/canonical/theorem_status.md` — OP-0009 sub-items (OP-0009-Emp), OP-0008.
 - `THEORY/canonical/theorem_status.md` — Cat A/B/C registry.
 
 ### §14.2 Working references

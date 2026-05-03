@@ -3,7 +3,7 @@
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30).
 **Type:** Open Problem status preservation review.
 **Author:** team-lead@scc-wave3-deep-research.
-**Canonical refs:** open_problems.md OP-0003 MO-1 (canonical line 105+); §11.1 Commitment 14 (single-formation σ on $\Sigma_m$); §11.1 Commitment 14-Multi (D-6a static, CV-1.5.1).
+**Canonical refs:** theorem_status.md OP-0003 MO-1 (canonical line 105+); §11.1 Commitment 14 (single-formation σ on $\Sigma_m$); §11.1 Commitment 14-Multi (D-6a static, CV-1.5.1).
 
 ---
 
@@ -90,7 +90,7 @@ No Wave 3 file invokes corner-saturated regime stratified Morse analysis directl
 
 ## §5. Recommendation for canonical update at CV-1.6
 
-OP-0003 MO-1 entry in `open_problems.md` should be updated at CV-1.6:
+OP-0003 MO-1 entry in `theorem_status.md` should be updated at CV-1.6:
 
 ```markdown
 **Last reviewed:** 2026-04-30 (W5 Day 4 PM Wave 3 EOD; sidestep preserved).
@@ -123,7 +123,7 @@ sidestep preserved.
 
 ## §7. Cross-references
 
-- canonical/open_problems.md OP-0003 MO-1 (line 105+, current SIDESTEPPED + rider).
+- canonical/theorem_status.md OP-0003 MO-1 (line 105+, current SIDESTEPPED + rider).
 - canonical/canonical.md §11.1 Commitment 14 + Commitment 14-Multi.
 - working/MF/sigma_rich_augmentation.md (Wave 3, Path B for OP-0008).
 - working/MF/k_selection_mechanism.md (Wave 3 in flight).

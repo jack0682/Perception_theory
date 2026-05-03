@@ -135,7 +135,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 ### §2.5 W6 D5 — Fri 5/8 — MO-1 face decision + OAT-7 + NQ-242 Phase 2 zigzag
 
 **Morning (09:00-12:00)**:
-- MO-1 face decision: D-6b dynamic σ_multi^A(t) approval at CV-1.6 OR defer? Re-activation trigger rider per `open_problems.md` OP-0003.
+- MO-1 face decision: D-6b dynamic σ_multi^A(t) approval at CV-1.6 OR defer? Re-activation trigger rider per `theorem_status.md` OP-0003.
 - Decision criterion: NQ-242 PH Phase 1 dense runs (D3-D4) sufficient to support D-6b Cat B target promotion?
 
 **Afternoon (13:00-17:00)**:
@@ -161,7 +161,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
   - O5 Commitment 17 4-tool: ~80-100 canonical lines.
   - Implicit O6 Schramm-restatement addendum: ~30 canonical lines.
   - Implicit O7 CN15: ~20 canonical lines.
-  - Implicit O8 N-1 Kramers: open_problems.md OP-0005 inline note.
+  - Implicit O8 N-1 Kramers: theorem_status.md OP-0005 inline note.
   - P3 NQ-244: caveat text from D4 verdict.
   - P4 G5 SF Round merge: NQ-187 caveat per `03_*` §4.1.
   - P5 NQ-242 PH Phase 1+2: σ_multi^A(t) PH barcode equivalence promotion text.
@@ -183,7 +183,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 **Afternoon (13:00-17:00)**:
 - canonical.md edit application: 11 D-items + 3 implicit candidates per packet draft.
 - `theorem_status.md` update: counts adjusted (45A → 46-49A, 5B → 6-7B, 60 → 63-65 claims).
-- `open_problems.md` update: OP-0005/0008/0009 status text per Day 5 binding wording.
+- `theorem_status.md` update: OP-0005/0008/0009 status text per Day 5 binding wording.
 - `THEORY/CHANGELOG.md` CV-1.6 entry append.
 
 **Evening (17:00-19:00)**:
@@ -234,7 +234,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 
 ### §3.5 `cv16-finalizer` (W6 D6-D7 dedicated)
 
-**Scope**: CV-1.6 packet assembly + canonical.md edit application + theorem_status.md count update + open_problems.md status text + CHANGELOG entry. Coordinator role for W6 close.
+**Scope**: CV-1.6 packet assembly + canonical.md edit application + theorem_status.md count update + theorem_status.md status text + CHANGELOG entry. Coordinator role for W6 close.
 
 **No new working file**; operates on canonical/ files directly per CV-1.6 release protocol.
 
@@ -257,7 +257,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 ### §4.3 Risk: OP-0009 over-claim during CV-1.6 release
 
 **Likelihood**: high (Day 5 Critic MAJOR-3 binding wording).
-**Mitigation**: `cv16-finalizer` D6-D7 work uses verbatim "OP-0009 framework + 1/7 sub-items resolved (K via Commitment 16) + 6/7 sub-items partially addressed" wording in canonical.md + theorem_status.md + open_problems.md + CHANGELOG. Day 5 `04_*` §7.1 documents this constraint.
+**Mitigation**: `cv16-finalizer` D6-D7 work uses verbatim "OP-0009 framework + 1/7 sub-items resolved (K via Commitment 16) + 6/7 sub-items partially addressed" wording in canonical.md + theorem_status.md + CHANGELOG. Day 5 `04_*` §7.1 documents this constraint.
 
 ### §4.4 Risk: post-EOD cluster lobbying for CV-1.6 inclusion via volume
 

@@ -760,7 +760,7 @@ This file was revised on 2026-04-30 (W5 Day 4 PM, Wave 3) in response to the W5 
 
 - **File status (top):** changed from "working file, R&D scoping (W5 Day 4 spawn → W7+ candidate)" to "REVISED (Wave 3 W5 Day 4 PM); awaiting W6 critic re-review."
 - **§11 Summary bullet:** "Cat A re-promotion of T-σ-Theorem-4" softened to "T-σ-Theorem-4-Refined as a Cat A candidate (new theorem, not reversal); v1.0 audit annotation permanent" per §7 reframe.
-- **No canonical edits.** No `theorem_status.md` or `open_problems.md` changes. Open Problems registry unchanged.
+- **No canonical edits.** No `theorem_status.md` or `theorem_status.md` (Open Problems Catalog) changes. Open Problems registry unchanged.
 
 ### §13.3 Hard-constraint compliance (initial Wave 3 pass)
 

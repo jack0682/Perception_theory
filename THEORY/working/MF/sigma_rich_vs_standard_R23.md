@@ -209,7 +209,7 @@ If table fully confirmed: σ_rich strict-discrimination universally established.
 
 ### §8.1 OP-0009-Emp recap
 
-Per `open_problems.md` OP-0009 sub-item:
+Per `theorem_status.md` (Open Problems Catalog) OP-0009 sub-item:
 > **OP-0009-Emp (R23 F=9 σ verification)**: σ-framework Cat A claims (CV-1.5) anchored at F=1 uniform / F=2 first-pitchfork; F=9 default ground state σ behavior empirical only (NQ-141). **OPEN** (OAT-7 W6 Day 5+6).
 
 ### §8.2 This file's contribution
@@ -419,7 +419,7 @@ If (W3) FAIL: NQ-242c-only result — graph-class-dependence register; CN17 univ
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16, 18 (CV-1.7 candidate).
 - `canonical/canonical.md` §13 T-σ-* family (T-σ-Lemma-1/2/3, T-σ-Theorem-3/4, T-σ-multi-A-Static, etc.).
-- `canonical/open_problems.md` OP-0008 (direct connection); OP-0009-Emp (sub-target).
+- `canonical/theorem_status.md` OP-0008 (direct connection); OP-0009-Emp (sub-target).
 
 ### §12.3 CODE infrastructure
 

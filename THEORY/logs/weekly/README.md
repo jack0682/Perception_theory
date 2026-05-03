@@ -108,6 +108,6 @@ Weekly rotation (본 폴더) 은:
 - Canonical pipeline 전체: `../../canonical/README.md`
 - Theory main spec: `../../canonical/canonical.md`
 - Theorem index: `../../canonical/theorem_status.md`
-- Open problems: `../../canonical/open_problems.md`
+- Open problems: `../../canonical/theorem_status.md`
 - Changelog: `../../CHANGELOG.md`
 - Daily logs: `../daily/YYYY-MM-DD/`

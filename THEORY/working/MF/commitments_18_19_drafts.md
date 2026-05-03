@@ -45,7 +45,7 @@ References:
 - `working/MF/sigma_rich_augmentation.md` (Wave 3 W5 Day 4 PM, 533 lines).
 - `working/SF/sigma_rich_refinement_theorem.md` (Wave 3 lead, Cat A target refinement claim).
 - `CODE/scc/sigma_rich.py` (Wave 3 implementation).
-- `THEORY/canonical/open_problems.md` OP-0008 (HIGH severity).
+- `THEORY/canonical/theorem_status.md` OP-0008 (HIGH severity).
 ```
 
 **Effort:** ~50 canonical lines.
@@ -82,7 +82,7 @@ References:
 - `working/MF/n1_kramers_extension.md` (Wave 3 lead, N-1 ↔ K-Selection (b) connection).
 - `working/MF/cn15_static_dynamic_separation.md` (Wave 3 lead, CV-1.6 candidate).
 - `working/MF/foundational_bridges_2026.md` Bridge B-7 (AC philosophical analog).
-- `THEORY/canonical/open_problems.md` OP-0005 (HIGH severity).
+- `THEORY/canonical/theorem_status.md` OP-0005 (HIGH severity).
 ```
 
 **Effort:** ~70 canonical lines.

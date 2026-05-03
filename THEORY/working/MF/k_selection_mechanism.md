@@ -11,7 +11,7 @@
 
 ## §1. Mission
 
-> **Direct attack on OP-0005 K-Selection Mechanism (HIGH severity, OPEN per `open_problems.md` §286).**
+> **Direct attack on OP-0005 K-Selection Mechanism (HIGH severity, OPEN per `theorem_status.md` §286).**
 >
 > "Theory provides no mechanism for how K (number of formations) is determined." After Commitment 16 (CV-1.5.1) the question sharpens to: **what mechanism selects $K_{\mathrm{act}}$ within the architectural cap $K_{\mathrm{field}}$**, given that CN15 Static/Dynamic Separation forbids identifying the dynamic protocol-endpoint observable with the static energy minimum?
 
@@ -430,7 +430,7 @@ Wave 4 NQ-301..303 packet must pass Critic + 7-agent review before any candidate
 
 ### §13.1 Canonical (verified entries)
 
-- **OP-0005 K-Selection Mechanism**: `THEORY/canonical/open_problems.md` §286–§309 (HIGH severity, OPEN, last reviewed 2026-04-17 phase 4 evidence-boundary alignment note).
+- **OP-0005 K-Selection Mechanism**: `THEORY/canonical/theorem_status.md` §286–§309 (HIGH severity, OPEN, last reviewed 2026-04-17 phase 4 evidence-boundary alignment note).
 - **Commitment 16 (K_field/K_act decomposition)**: `THEORY/canonical/canonical.md` §11.1 #16 line 812 (CV-1.5.1, 2026-04-29).
 - **CN6 (K kinetically determined, refined)**: `canonical.md` §14 line 1605 (refined per Commitment 16, CV-1.5.1).
 - **CN10 (contrastive vs reductive)**: `canonical.md` §14 line 1546.
@@ -498,7 +498,7 @@ this file (working/MF/k_selection_mechanism.md, W5 Day 4 PM Wave 3 spawn)
   ↓ Critic + 7-agent review
   ↓ Wave 4 packet integration
   ↓ user-decision at CV-1.7 (W12+)
-canonical/canonical.md §11.1 + §13 + §14 + open_problems.md OP-0005 update
+canonical/canonical.md §11.1 + §13 + §14 + theorem_status.md OP-0005 update
 ```
 
 If verified, OP-0005 status update: HIGH OPEN → PARTIALLY RESOLVED (Cat B candidate anchored).

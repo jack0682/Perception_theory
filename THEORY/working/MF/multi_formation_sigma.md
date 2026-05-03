@@ -502,7 +502,7 @@ Per plan.md §3 Block 3 (15:30-16:00) — script skeleton drafted in `CODE/scrip
 - Round-2 forward gaps register: `THEORY/logs/daily/2026-04-27/92_critical_review_round2.md` Issue R.
 - MO-1 decision Option A/B/C: `THEORY/logs/daily/2026-04-28/04_G3_phase5_MO1_decision.md` (companion file).
 - N-1 Soft-Hard Switching: `THEORY/working/open_problems_reframing_2026-04-19.md`.
-- F-1 / M-1 / MO-1 status: `canonical.md` §12 + `open_problems.md` OP-0001/OP-0002/OP-0003.
+- F-1 / M-1 / MO-1 status: `canonical.md` §12 + `theorem_status.md` (Open Problems Catalog) OP-0001/OP-0002/OP-0003.
 
 ---
 

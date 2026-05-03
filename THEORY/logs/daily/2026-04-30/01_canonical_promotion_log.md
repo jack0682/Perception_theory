@@ -11,7 +11,7 @@
 
 - canonical.md: 1593 lines (CV-1.5).
 - theorem_status.md: 299 lines (last_updated 2026-04-27).
-- open_problems.md: 412 lines.
+- theorem_status.md: 412 lines.
 - CHANGELOG.md: 4037 lines.
 - working/MF/K_status_commitment.md: 480 lines (OAT-1, W5 Day 3 EOD spawn).
 - daily/2026-04-30/: empty (plan.md + pre_brainstorm.md 삭제 직전).
@@ -167,9 +167,9 @@ User authorization context: "지금 하자" 직접 진행 (W5 Day 3 EOD 7-에이
 
 ---
 
-## §5. open_problems.md Updates
+## §5. theorem_status.md Updates
 
-**File**: `THEORY/canonical/open_problems.md`.
+**File**: `THEORY/canonical/theorem_status.md`.
 **Pre-state**: 412 lines.
 **Post-state**: 507 lines.
 
@@ -321,7 +321,7 @@ CV-1.6 예상: 45A → ~50A, 5B → ~7B, 60 → ~70 claims.
 
 ## §10. Status Summary
 
-**Files modified**: 4 canonical (canonical.md, theorem_status.md, open_problems.md, CHANGELOG.md).
+**Files modified**: 4 canonical (canonical.md, theorem_status.md, CHANGELOG.md).
 **Files created (new)**: 2 working (K_status_commitment.md OAT-1; mathematical_scaffolding_4tools.md OAT-supplementary).
 **Files deleted**: 2 (Day 4 plan.md + pre_brainstorm.md per user direction).
 **Net canonical lines**: +71 (canonical.md), +39 (theorem_status.md), +95 (open_problems.md), +128 (CHANGELOG.md) = **+333 canonical lines** total.

@@ -3,7 +3,7 @@
 **Status:** working draft (W5 Day 4 OAT-supplementary; OP-0008 Path B candidate proposal; CV-1.6 candidate, NOT promoted).
 **Created:** 2026-04-30 (W5 Day 4).
 **Type:** Direct attack on OP-0008 σ^A K-jump Inheritance Non-Determinism via Path B (rich-σ augmentation).
-**Author origin:** OP-0008 registration `THEORY/canonical/open_problems.md` (CV-1.5.1) + Path A/B bifurcation per OP-0008 Impact section + 4-tool mathematical scaffolding `working/MF/mathematical_scaffolding_4tools.md` Tool A3 PH framing.
+**Author origin:** OP-0008 registration `THEORY/canonical/theorem_status.md` (CV-1.5.1) + Path A/B bifurcation per OP-0008 Impact section + 4-tool mathematical scaffolding `working/MF/mathematical_scaffolding_4tools.md` Tool A3 PH framing.
 **Canonical refs:** §11.1 Commitment 14 (single-formation σ); §11.1 Commitment 14-Multi (D-6a static σ_multi^A + σ_multi^D, CV-1.5.1); §13 T-σ-multi-A-Static, T-σ-Multi-1; §11.1 Commitment 16 (K_field/K_act); §14 CN5, CN10; §15 OP-0008.
 **Working refs:** `working/MF/sigma_multi_trajectory.md` (D-6b dynamic, Lemma 4.4.1(c) Cat C); `working/MF/multi_formation_sigma.md` (D-6a static, Approach A primary); `working/MF/mathematical_scaffolding_4tools.md` §4 Tool A3 (Persistent Homology).
 **Open problems referenced:** OP-0008 (direct attack); OP-0009-A (architecture, related); OP-0009-Pre (pre-objective vs labels, related).
@@ -269,7 +269,7 @@ This is the pragmatic CV-1.6 default if W6 effort budget tight.
 
 ### §6.1 Goal
 
-NQ-242c (per `open_problems.md` OP-0008): "explicit construction of two trajectories with same σ^A($t^{*-}$) but distinct σ^A($t^{*+}$)". Cat A target. ~2-3 weeks W6+.
+NQ-242c (per `theorem_status.md` (Open Problems Catalog) OP-0008): "explicit construction of two trajectories with same σ^A($t^{*-}$) but distinct σ^A($t^{*+}$)". Cat A target. ~2-3 weeks W6+.
 
 Path B reframing: NQ-242c becomes **two-fold construction**:
 - (NQ-242c-Standard): two trajectories with same σ_standard($t^{*-}$) but distinct σ_standard($t^{*+}$). *Confirms* σ_standard non-determinism.
@@ -317,7 +317,7 @@ CV-1.6 candidate level: **Cat B target** with NQ-242c-Rich numerical anchor; CV-
 
 ### §7.1 Statement
 
-NQ-242d (per `open_problems.md`): "σ^D symmetry-emergence characterization (post-merger stabilizer ⊇ pull-back image)". Cat A target. ~2-3 weeks W6+.
+NQ-242d (per `theorem_status.md` (Open Problems Catalog)): "σ^D symmetry-emergence characterization (post-merger stabilizer ⊇ pull-back image)". Cat A target. ~2-3 weeks W6+.
 
 The post-merger stabilizer $G_{\mathbf{u}^*}^{(t^{*+})} = \mathrm{Stab}_{\mathrm{Aut}(G) \wr S_{K'-1}}(\mathbf{u}^*(t^{*+}))$ may be **strictly larger** than the pull-back image of the pre-merger stabilizer $G_{\mathbf{u}^*}^{(t^{*-})}$ under the merger quotient $S_{K'} \to S_{K'-1}$ (with merging-pair $\mathbb{Z}_2$ collapse).
 
@@ -346,7 +346,7 @@ Claim 7.1 + §7.3 σ_rich determination: Cat B sketch. Cat A requires:
 - Explicit characterization of $G_{\mathrm{emerge}, jk}$ as a function of (centroid-pair, orientation-pair, Wigner-mixing).
 - Verification on NQ-242c-Rich numerical example.
 
-NQ-242d effort estimate: 2-3 weeks W6+ (consistent with `open_problems.md` original estimate). Path B reframing reduces to characterization of $G_{\mathrm{emerge}, jk}$ from σ_rich data.
+NQ-242d effort estimate: 2-3 weeks W6+ (consistent with `theorem_status.md` (Open Problems Catalog) original estimate). Path B reframing reduces to characterization of $G_{\mathrm{emerge}, jk}$ from σ_rich data.
 
 ---
 
@@ -423,7 +423,7 @@ If Path B reaches partial maturity by CV-1.6: register σ_rich definition (§2) 
 
 ### §10.1 NQ-242c+d explicit Cat A construction (W6 Days 1-7)
 
-**Effort**: 2-3 weeks (consistent with `open_problems.md` estimate).
+**Effort**: 2-3 weeks (consistent with `theorem_status.md` (Open Problems Catalog) estimate).
 
 - **NQ-242c-Standard**: §6.2 Steps 1-4 — confirms σ_standard non-determinism. ~3-5 days numerical.
 - **NQ-242c-Rich**: §6.2 Steps 5-6 — confirms σ_rich determinism. ~3-5 days numerical (reuses Step 1-4 trajectories).
@@ -475,7 +475,7 @@ Cat A everywhere (post-CV-1.6) requires:
 - [x] **Closure not assumed idempotent** — N/A.
 - [x] **K not dual-treated** — K_act integer per Commitment 16; σ_rich components defined per active formation index; K-jump events are stratum transitions per Tool A1.
 - [x] **No metastability claim without P-F flag** — N/A; σ_rich is static-Hessian invariant (zero-T equilibrium framework). Dynamic σ_rich(t) trajectory inherits the metastability flag from `sigma_multi_trajectory.md` (P-F flagged in §8 of that file).
-- [x] **OP-0008 not silently resolved** — Path B is **candidate** for CV-1.6 release; explicit Cat status (Cat B sketch / Cat B target with NQ-242c-Rich anchor / Cat A everywhere only post-W9+ theoretical proof). Severity 🟠 HIGH retained on `open_problems.md` until promotion. Path A fallback registered (§5.1, §9.2). Hybrid intermediate registered (§5.4, §9.3). No claim of resolution at this working file.
+- [x] **OP-0008 not silently resolved** — Path B is **candidate** for CV-1.6 release; explicit Cat status (Cat B sketch / Cat B target with NQ-242c-Rich anchor / Cat A everywhere only post-W9+ theoretical proof). Severity 🟠 HIGH retained on `theorem_status.md` (Open Problems Catalog) until promotion. Path A fallback registered (§5.1, §9.2). Hybrid intermediate registered (§5.4, §9.3). No claim of resolution at this working file.
 - [x] **OP-0009-related sub-items**: OP-0009-A architecture (stratified space) per Tool A1 §2 of `mathematical_scaffolding_4tools.md` — σ_rich operates on stratum interiors; OP-0009-Pre pre-objective primacy preserved via $u_t$-derived components per CN10.
 
 ---
@@ -497,12 +497,12 @@ Cat A everywhere (post-CV-1.6) requires:
 - `THEORY/canonical/canonical.md` §11.1 Commitment 16 (K_field/K_act, CV-1.5.1).
 - `THEORY/canonical/canonical.md` §13 T-σ-multi-A-Static, T-σ-Multi-1.
 - `THEORY/canonical/canonical.md` §14 CN5, CN10, CN17.
-- `THEORY/canonical/open_problems.md` OP-0008 (direct attack subject), OP-0009 (related ontological foundations).
+- `THEORY/canonical/theorem_status.md` OP-0008 (direct attack subject), OP-0009 (related ontological foundations).
 - `THEORY/canonical/theorem_status.md` (D-6a entries; D-6b deferred to CV-1.6 with Path B candidate per this file).
 
 ### §12.3 Open problem / NQ register
 
-- **OP-0008** (this file's direct attack): σ^A K-jump non-determinism. Path A / Path B / Hybrid bifurcation per `open_problems.md`. **Severity 🟠 HIGH retained** until Path B Cat A everywhere or Path A canonicalization.
+- **OP-0008** (this file's direct attack): σ^A K-jump non-determinism. Path A / Path B / Hybrid bifurcation per `theorem_status.md` (Open Problems Catalog). **Severity 🟠 HIGH retained** until Path B Cat A everywhere or Path A canonicalization.
 - **NQ-242** (W6+ 4-6 weeks → 3-4 weeks PH-augmented): full Hessian σ-tuple time-series + rigorous K-jump theory. Reframed as σ_rich numerical pipeline per §8.3.
 - **NQ-242c** (W6+ 2-3 weeks): explicit two-trajectory counterexample. Two-fold reframe per §6.1 (σ_standard non-det confirm + σ_rich det confirm).
 - **NQ-242d** (W6+ 2-3 weeks): σ^D symmetry-emergence characterization. Path B framing per §7.

@@ -235,7 +235,7 @@ The three candidates per `k_selection_mechanism.md`:
 - residual error vector per candidate;
 - implied refinement step per candidate (how to strengthen a partial-success candidate);
 - a falsification register (which candidates are falsified by R23, and on what specific configurations);
-- update to `THEORY/canonical/open_problems.md` OP-0005 entry — *as a candidate text in this working file, not a direct canonical edit* — noting which candidates survived and what is the next refinement step.
+- update to `THEORY/canonical/theorem_status.md` OP-0005 entry — *as a candidate text in this working file, not a direct canonical edit* — noting which candidates survived and what is the next refinement step.
 
 ### Success criterion
 

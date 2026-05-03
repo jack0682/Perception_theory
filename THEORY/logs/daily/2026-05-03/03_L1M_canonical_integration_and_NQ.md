@@ -5,7 +5,7 @@
 **Session:** 2026-05-03 (W5 Day 7)
 **Target (from plan.md §2):** Integrate today's L1-M corollary into the canonical fabric; surface what L1-M changes/strengthens/leaves untouched; collect new open questions for W6+ planning.
 **This file covers:** §1 plan-vs-prompt resolution (working/ write conflict), §2 integration with T-L1-F + canonical §13, §3 OP-non-impact statement, §4 new open questions, §5 prompt v2 candidate notes (per prompt §14).
-**Depends on reading:** `02_L1M_proof_development.md` Theorem L-M, Lemmas L-M-1, L-M-2; `canonical.md` §13 Cat A T-L1-F entry; `open_problems.md` OP-0005, OP-0008, OP-0009; plan.md §5 success criteria, §7 expected outputs.
+**Depends on reading:** `02_L1M_proof_development.md` Theorem L-M, Lemmas L-M-1, L-M-2; `canonical.md` §13 Cat A T-L1-F entry; `theorem_status.md` (Open Problems Catalog) OP-0005, OP-0008, OP-0009; plan.md §5 success criteria, §7 expected outputs.
 
 ---
 

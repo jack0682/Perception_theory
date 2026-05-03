@@ -447,7 +447,7 @@ If (C3) succeeds for A but fails for B (or vice versa): Φ_rich is *configuratio
 ### §8.2 Canonical refs
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; §13 T-σ-multi-A-Static, T-σ-Multi-1; §14 CN5, CN10.
-- `canonical/open_problems.md` OP-0008 (direct attack subject).
+- `canonical/theorem_status.md` OP-0008 (direct attack subject).
 - `canonical/theorem_status.md` (target update upon (C1)-(C4) completion).
 
 ### §8.3 Numerical infrastructure

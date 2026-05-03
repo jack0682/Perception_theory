@@ -344,7 +344,7 @@ CV-1.7+ packet:
 ### §10.3 Canonical refs
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; §13 T-Merge (b), Theorem 2, T-Persist-K family; §14 CN5, CN6, CN10, CN15.
-- `canonical/open_problems.md` OP-0005 (closure target); OP-0008.
+- `canonical/theorem_status.md` OP-0005 (closure target); OP-0008.
 - `canonical/theorem_status.md` (CV-1.7+ promotion target).
 
 ### §10.4 External refs

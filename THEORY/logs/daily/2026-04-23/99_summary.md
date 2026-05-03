@@ -148,7 +148,7 @@
 2. **F(K) Landau 접근**은 observed $\widehat K > 1$을 예측하지 **못함** — 이는 bug가 아니라 feature; Static/Dynamic Separation Principle의 empirical 확증.
 3. **Class S (basic softmax) refuted by V7 P1**, replacement Class N (spectral Gaussian)은 new proposal이지만 단 한 개 data point (V7 P3: $\bar K \approx 13, \sigma \approx 1.5$) 기반; full parameter law 미확립.
 4. **Formation Quantization은 well-separated regime에서 완전 자연스러움**; overlap regime은 new framework 필요.
-5. **canonical theorem_status.md + open_problems.md는 2026-04-12 frozen**; 최근 10일 간 R22+session 결과가 반영 안 됨. Stage 6 weekly merge가 지연되고 있음 — 사용자 decision required.
+5. **canonical theorem_status.md는 2026-04-12 frozen**; 최근 10일 간 R22+session 결과가 반영 안 됨. Stage 6 weekly merge가 지연되고 있음 — 사용자 decision required.
 
 ---
 

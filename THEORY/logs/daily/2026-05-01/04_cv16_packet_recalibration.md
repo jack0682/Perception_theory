@@ -120,9 +120,9 @@ For each implicit candidate (O6 / O7 / O8), specify **exactly which canonical se
 **Target section**: `canonical.md` §13 — **NOT** a standalone Cat A theorem (P-F flag prevents). Possibilities:
 - (a) Sub-statement under K-Selection (b) candidate — but K-Selection is OP-0005 OPEN, not yet a canonical theorem.
 - (b) Sub-statement under N-1 (Soft-Hard Switching Asymmetry) — but N-1 is currently a *re-framing* in `THEORY/working/open_problems_reframing_2026-04-19.md`, not a canonical theorem either.
-- (c) Inline note in `open_problems.md` OP-0005 K-Selection entry.
+- (c) Inline note in `theorem_status.md` OP-0005 K-Selection entry.
 
-**Recommended target**: (c) inline note in `open_problems.md` OP-0005 entry, ~10 lines linking N-1 ↔ K-Selection (b) with explicit P-F flag reminder. **NOT** §13.
+**Recommended target**: (c) inline note in `theorem_status.md` OP-0005 entry, ~10 lines linking N-1 ↔ K-Selection (b) with explicit P-F flag reminder. **NOT** §13.
 
 **Net effect**: +0 theorem count; +0 Cat A; cross-reference enrichment of OP-0005 only.
 
@@ -224,4 +224,4 @@ Files persisted in working/ at Day 4 EOD that are *explicitly excluded* from CV-
 ---
 
 **End of 04_cv16_packet_recalibration.md.**
-**Status:** CV-1.6 packet recalibrated under post-EOD-aware discipline. 10 effective inclusion items (2 ✅ READY + 3 ✅ READY-NEAR Wave 3 implicit + 5 🟡 PARTIAL with caveats); 3 🔴 DEFER (O4 + P1 + P2); 6 CV-1.7 parking lot post-EOD cluster files. Wave 3 implicit candidates (Schramm / CN15 / N-1 Kramers) addressed to specific canonical sections (§13 T-PreObj-1G addendum / §11.1 CN15 amendment / open_problems.md OP-0005 inline). Revised count estimate: 46-49A / 6-7B / 5C / 5R / 63-65 claims / 73-76% proved. ~28 files / ~10,150 lines explicitly NOT in CV-1.6 with reasons. OP-0009 wording binding per MAJOR-3.
+**Status:** CV-1.6 packet recalibrated under post-EOD-aware discipline. 10 effective inclusion items (2 ✅ READY + 3 ✅ READY-NEAR Wave 3 implicit + 5 🟡 PARTIAL with caveats); 3 🔴 DEFER (O4 + P1 + P2); 6 CV-1.7 parking lot post-EOD cluster files. Wave 3 implicit candidates (Schramm / CN15 / N-1 Kramers) addressed to specific canonical sections (§13 T-PreObj-1G addendum / §11.1 CN15 amendment / theorem_status.md OP-0005 inline). Revised count estimate: 46-49A / 6-7B / 5C / 5R / 63-65 claims / 73-76% proved. ~28 files / ~10,150 lines explicitly NOT in CV-1.6 with reasons. OP-0009 wording binding per MAJOR-3.

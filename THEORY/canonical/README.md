@@ -5,8 +5,8 @@
 ## Contents
 
 - **`canonical.md`** — Authoritative specification. Current release is **CV-1.5.2 (2026-05-02)** containing 46 Cat A + 5 Cat B + 5 Cat C theorems (61 claims, 75% fully proved). Updated per merge, not on a fixed cadence.
-- **`theorem_status.md`** — Theorem index (proved / conditional / open / retracted). Must stay consistent with `canonical.md`. Open Problems table is now synced to `open_problems.md` IDs as of the 2026-05-04 audit pass.
-- **`open_problems.md`** — Active OP registry (OP-0001 through OP-0009, plus medium-priority OP-0010..OP-0013 and low-priority OP-0020..OP-0022). The authoritative OP-ID source for the project.
+- **`theorem_status.md`** — Theorem index (proved / conditional / open / retracted). Must stay consistent with `canonical.md`. Open Problems table is now synced to `theorem_status.md` (Open Problems Catalog) IDs as of the 2026-05-04 audit pass.
+- **`theorem_status.md` (Open Problems Catalog)** — Active OP registry (OP-0001 through OP-0009, plus medium-priority OP-0010..OP-0013 and low-priority OP-0020..OP-0022). The authoritative OP-ID source for the project.
 - **`figures/`** — Figure source scripts (Python). Rendered PNG/SVG live in the blog repo.
 
 ## Pipeline (Promotion Barrier)

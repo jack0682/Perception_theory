@@ -120,9 +120,9 @@
 
 **T1 → merge 권고**:
 - `canonical.md` §13: Theorem 2 family (Pre-Objective, (i)-(v)+2-G+Lemma 4)
-- `open_problems.md` OP-0001 (F-1): UNRESOLVED → RESOLVED ✅ (Cat A both layers)
-- `open_problems.md` OP-0002 (M-1): 상태 업데이트 (layer-clarified, premise 붕괴 명시)
-- `open_problems.md` OP-0003 (MO-1): scope note 추가 (sidestepped via single-formation)
+- `theorem_status.md` OP-0001 (F-1): UNRESOLVED → RESOLVED ✅ (Cat A both layers)
+- `theorem_status.md` OP-0002 (M-1): 상태 업데이트 (layer-clarified, premise 붕괴 명시)
+- `theorem_status.md` OP-0003 (MO-1): scope note 추가 (sidestepped via single-formation)
 
 **T2 → 보류 (merge 없음)**:
 - Theorem 1 V5b → working/에 동결, NQ-168 검증 후 재평가
@@ -170,7 +170,7 @@
 
 - **Q-T4**: In-session retraction (V4, V5a)의 원인이 "새 정보 도달"인가 "사전 검증 부족"인가? → process 개선 결정.
 
-- **Q-T5**: F-1 resolution을 "Cat A resolved"로 weekly_summary에 기록하면, open_problems.md 실제 갱신은 user 리뷰 후인가, weekly_summary 작성 시인가? (canonical 경계 질문)
+- **Q-T5**: F-1 resolution을 "Cat A resolved"로 weekly_summary에 기록하면, theorem_status.md 실제 갱신은 user 리뷰 후인가, weekly_summary 작성 시인가? (canonical 경계 질문)
 
 ---
 

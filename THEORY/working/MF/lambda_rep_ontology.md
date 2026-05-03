@@ -291,7 +291,7 @@ $$W^{\mathrm{obs}}(\mathbf{u}) = \begin{cases} \sum_{j<k} \gamma_{jk} u^{(j)} u^
 
 ### §5.2 OP-0009-λ Status Update at CV-1.6
 
-`open_problems.md` OP-0009-λ entry:
+`theorem_status.md` (Open Problems Catalog) OP-0009-λ entry:
 > "PARTIALLY RESOLVED (CV-1.6) by Option 3 contrastive comparison — λ_rep is architectural-layer coupling (between-formation interaction); CN5 4-term independence preserved at single-formation; reductive KKT identification verified to fail."
 
 ---

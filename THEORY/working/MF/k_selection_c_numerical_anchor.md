@@ -385,7 +385,7 @@ CV-1.7+ candidate Commitment 19 (K-Selection axiom) per task #49 in TaskList; th
 ### §8.2 Canonical refs
 
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; §13 T-Persist-K family; §14 CN15.
-- `canonical/open_problems.md` OP-0005 (direct attack); OP-0008, OP-0009.
+- `canonical/theorem_status.md` OP-0005 (direct attack); OP-0008, OP-0009.
 
 ### §8.3 External refs
 

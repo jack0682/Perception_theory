@@ -3,7 +3,7 @@
 **Session:** 2026-04-20
 **Target (from plan.md):** 재공식화 Stage 0 (Purpose Declaration) 확정을 위한 의사결정 재료 생산 — 5 후보 (A/B/C/D/E) + 3 조합 (C+E, B+C, A+C) 에 대한 Matrix-1 (OP coverage) · Matrix-2 (Theorem survival) · 세션 스케치 재료 · Q1~Q4 답변 · 단일 권고 1개. **최종 선택 금지** — 재료만.
 **This file covers:** §1 Restatement · §2 Multi-approach (3+) · §3 Primary selection rationale · §4 Matrix-1 · §5 Matrix-2 · §6 Cross-reference between matrices.
-**Depends on reading:** `THEORY/logs/daily/2026-04-20/plan.md`; `THEORY/working/reformulation_plan.md` §Stage 0; `THEORY/working/open_problems_reframing_2026-04-19.md` §1–§9; `THEORY/canonical/canonical.md` §3, §6, §8, §11, §12, §13, §14 (CN1–14); `THEORY/canonical/open_problems.md` OP-0001~0007; `THEORY/canonical/theorem_status.md` 전체.
+**Depends on reading:** `THEORY/logs/daily/2026-04-20/plan.md`; `THEORY/working/reformulation_plan.md` §Stage 0; `THEORY/working/open_problems_reframing_2026-04-19.md` §1–§9; `THEORY/canonical/canonical.md` §3, §6, §8, §11, §12, §13, §14 (CN1–14); `THEORY/canonical/theorem_status.md` OP-0001~0007; `THEORY/canonical/theorem_status.md` 전체.
 
 ---
 

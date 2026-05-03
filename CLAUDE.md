@@ -5,8 +5,8 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/canonical/canonical.md`** — authoritative specification (v1.2, 2026-04-12). Single source of truth for the theory.
-2. **`THEORY/canonical/open_problems.md`** — currently unresolved: F-1 (K=2 vacuity), M-1 (K=1 preference), MO-1 (Morse inapplicability).
+1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.5.2, 2026-05-02). Single source of truth for the theory.
+2. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog (merged 2026-05-04 audit; OP-0001/0002/0003 resolved in W4; active high-priority OPs are OP-0005, OP-0006, OP-0008, OP-0009).
 3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
 For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).
@@ -29,8 +29,7 @@ Perception_theory/
 │   ├── CHANGELOG.md                theory state-change log
 │   ├── canonical/                  authoritative (no contamination)
 │   │   ├── canonical.md            ← THE spec (CV-1.5.2, 2026-05-02)
-│   │   ├── theorem_status.md       proved / conditional / open index
-│   │   └── open_problems.md        F-1 / M-1 / MO-1
+│   │   └── theorem_status.md       proved / conditional / retracted index + Open Problems Catalog (merged 2026-05-04)
 │   ├── working/                    in-progress theory (one file = one topic)
 │   └── logs/                       chronological research journal
 │       ├── daily/  YYYY-MM-DD.md
@@ -58,7 +57,7 @@ THEORY/canonical/canonical.md      (authoritative — one-way only)
 
 - **Do not re-introduce Research OS structure** (numbered 00–99 dirs, 5-role daily logs, D/S/T/A/E/Q/C/P/X registry files). It was tried 2026-04-12, collapsed 2026-04-16, archived 2026-04-18.
 - **`THEORY/canonical/canonical.md` is the single authoritative spec.** Any theorem-status change edits it + `theorem_status.md` + appends to `THEORY/CHANGELOG.md`.
-- **No per-item registry files.** Proofs live inside canonical.md sections; theorem index lives in theorem_status.md (single file).
+- **No per-item registry files.** Proofs live inside canonical.md sections; theorem index + Open Problems Catalog both live in `theorem_status.md` (single file). The previously separate `open_problems.md` was merged into `theorem_status.md` on 2026-05-04 to eliminate documentation drift.
 - **Experiments**: keep `experiments/exp<N>_*.py` numbering stable. No E-xxxx renaming.
 - **Run everything from `CODE/`.** Tests and experiments locate `scc` via sys.path relative to `CODE/`.
 
@@ -111,7 +110,7 @@ Pipeline: `graph → params → operators → energy → optimizer → diagnosti
 4. **Not fuzzy segmentation, not clustering, not tracking.** No engineering proxies.
 5. **Never silently resolve open problems** (F-1, M-1, MO-1, co-belonging form, transition operator, crisp recovery). Keep explicit until deliberately resolved via promotion pipeline.
 
-## Theory Sketch (v1.2)
+## Theory Sketch (CV-1.5.2)
 
 Formal universe: `C^soft = (T, {X_t}, {u_t}, {Cl_t}, {N_t, D_t}, {M_{t→s}})`
 

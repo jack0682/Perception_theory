@@ -323,7 +323,7 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 **Files modified**:
 - `THEORY/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666→1675).
 - `THEORY/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02)" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338→368).
-- `THEORY/canonical/open_problems.md` — **unchanged**. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result).
+- `THEORY/canonical/theorem_status.md` — **unchanged**. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result).
 
 **Counts at CV-1.5.2**: 45A → **46A** / 5B / 5C / 5R / 60 → **61 claims** / 75% proved.
 
@@ -413,7 +413,7 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 - L1-I empirical anchor (439/1920 FEASIBLE)
 - Self-contained하게 닫힌 single arc
 
-**Canonical impact**: §13 Cat A; theorem_status.md CV-1.5.2 entry; open_problems.md unchanged (OP-0005/0008 not solved — explicit non-claim).
+**Canonical impact**: §13 Cat A; theorem_status.md CV-1.5.2 entry; theorem_status.md unchanged (OP-0005/0008 not solved — explicit non-claim).
 
 ### 3.2 T2 — Conditional / Working-Draft (W6 Promotion Target, 4건)
 
@@ -505,7 +505,7 @@ W5는 단일 주에서 **3차례 minor canonical version 증분**을 수행한 �
 |---|---|---|
 | canonical.md | 1593 lines | 1664 lines (+71) |
 | theorem_status.md | 299 lines | 338 lines (+39) |
-| open_problems.md | 412 lines | 507 lines (+95) |
+| theorem_status.md | 412 lines | 507 lines (+95) |
 | CHANGELOG.md | 4037 lines | 4165 lines (+128) |
 | §13 Cat A | 43 | **45** |
 | §13 Cat B | 4 | **5** |
@@ -538,7 +538,7 @@ W5는 단일 주에서 **3차례 minor canonical version 증분**을 수행한 �
 |---|---|---|
 | canonical.md | 1666 lines | 1675 lines (+9) |
 | theorem_status.md | 338 lines | 368 lines (+30) |
-| open_problems.md | 507 lines | 507 lines (unchanged) |
+| theorem_status.md | 507 lines | 507 lines (unchanged) |
 | §13 Cat A | 45 | **46** |
 | Total claims | 60 | **61** |
 
@@ -546,7 +546,7 @@ W5는 단일 주에서 **3차례 minor canonical version 증분**을 수행한 �
 
 **Modified**: theorem_status.md CV-1.5.1 reflagged "Previous Version".
 
-**Unchanged (의도적)**: open_problems.md — T-L1-F는 OP-0005 / OP-0008을 풀지 않음 (bridge이지 selection mechanism이 아님). minimal-edits principle.
+**Unchanged (의도적)**: theorem_status.md — T-L1-F는 OP-0005 / OP-0008을 풀지 않음 (bridge이지 selection mechanism이 아님). minimal-edits principle.
 
 ### 4.4 CV-1.6 Packet Status (W6 D7 EOD Release Target)
 
@@ -577,7 +577,7 @@ W5 close ceremony 시점에 weekly_summary §4.1-§4.4 의 모든 수치를 actu
 |---|---|---|---|---|
 | `THEORY/canonical/canonical.md` | post-CV-1.5.2: 1675 lines | **1675 lines** | 0 | ✅ exact match |
 | `THEORY/canonical/theorem_status.md` | post-CV-1.5.2: 368 lines | **368 lines** | 0 | ✅ exact match |
-| `THEORY/canonical/open_problems.md` | post-CV-1.5.1: 507 lines (CV-1.5.2 unchanged) | **523 lines** | **+16** | ⚠ Day 7 W5 close에서 frontmatter `last_updated` + update history block 추가됨 (release-day 머지) |
+| `THEORY/canonical/theorem_status.md` | post-CV-1.5.1: 507 lines (CV-1.5.2 unchanged) | **523 lines** | **+16** | ⚠ Day 7 W5 close에서 frontmatter `last_updated` + update history block 추가됨 (release-day 머지) |
 | `THEORY/CHANGELOG.md` | post-CV-1.5.1: 4165 lines | **4404 lines (pre-Day 7 머지)** → **+~600 lines (post-Day 7 머지)** | substantial | ⚠ W5 Day 5/6/7 entries는 4404 → ~5000 lines로 추가됨 (release-day 머지) |
 
 #### 4.5.2 §13 Cat A entry inventory (W5 cumulative, 9 net Cat A added)
@@ -615,7 +615,7 @@ W5 close 시점에 발견된 stale metadata 6건 모두 fix:
 | `theorem_status.md` | 325 | "Open (active) 4 (was 7)" | "**6** (was 4 pre-W5; +2 W5 Day 4 HIGH)" + OP-0008/0009 명시 + MO-1 rider | post-CV-1.5.1 actual |
 | `theorem_status.md` | 343-345 | Multi-Formation 섹션 (T-Persist-K-* + Open: F-1, M-1, OP-0006) | + σ-framework Multi 4건 + T-L1-F + Commitment 16 + OP-0008/0009 | post-CV-1.5.1/1.5.2 actual |
 | `theorem_status.md` | 361-367 | "Last updated: 2026-04-27" + 47 = 43 Cat A + 4 Cat B counts + W5 Day 1 G0 only mention | 7-line update: CV-1.5.2 + 56 = 46 Cat A + 5 Cat B + W5 Day 4-7 cumulative additions | release-day 머지 |
-| `open_problems.md` | 5 | `last_updated: 2026-04-25` | `last_updated: 2026-05-02` + update history block | OP-0008/0009 추가 + T-L1-F 영향 명시 |
+| `theorem_status.md` | 5 | `last_updated: 2026-04-25` | `last_updated: 2026-05-02` + update history block | OP-0008/0009 추가 + T-L1-F 영향 명시 |
 
 총 **8건 metadata fix** + **1건 update history annotation**.
 
@@ -634,7 +634,7 @@ W5 Day 5/6/7의 substantive changes가 CHANGELOG.md에 누락되어 있었음. r
 CV-1.6 release 후 stale될 items:
 
 - `theorem_status.md`: line 5 + line 12 + line 315 + counts (line 319-320) + footer (line 361-367) — CV-1.6 release date + new entries (T-L1-M Cat A new + 시나리오 A 시 T-σ-Theorem-4 Cat A 복원 + OP-0009-F/λ READY upgrade) reflect 필요.
-- `open_problems.md`: line 5 + update history block — OP-0009 sub-item status update (1/7 RESOLVED + 2/7 READY + 4/7 PARTIALLY post-G7 OAT-2/3 short integration).
+- `theorem_status.md`: line 5 + update history block — OP-0009 sub-item status update (1/7 RESOLVED + 2/7 READY + 4/7 PARTIALLY post-G7 OAT-2/3 short integration).
 - `canonical.md` §13: T-L1-M new entry (post-L1-M-AUDIT) + (시나리오 A 시) T-σ-Theorem-4 status change.
 - `CHANGELOG.md`: W6 Day 1-7 cumulative entry (~600 lines).
 

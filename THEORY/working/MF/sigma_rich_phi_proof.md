@@ -294,7 +294,7 @@ If Conjecture 6.1 fails to reach Cat A everywhere by W9+: adopt Hybrid path (per
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16.
 - `canonical/canonical.md` §13 T-Persist-K-Sep (Coupling Bound Lemma); T-V5b-T (Goldstone).
 - `canonical/canonical.md` §14 CN10.
-- `canonical/open_problems.md` OP-0008 (master direct attack).
+- `canonical/theorem_status.md` OP-0008 (master direct attack).
 
 ### §11.3 External refs
 

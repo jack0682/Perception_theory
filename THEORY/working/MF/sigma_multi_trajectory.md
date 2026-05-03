@@ -261,7 +261,7 @@ D-6b (this dynamic extension) is **deferred to CV-1.6** post-NQ-242.
 - Reductive equation 0 — Modica-Mortola, equivariant cohomology cited as **structural correspondence**. PH is a *standard mathematical reformulation* of K-jump topology, not an external reduction or engineering proxy; it does not replace the SCC energy framework.
 - MO-1 re-engaged explicitly via Approach 2 stratified-space.
 - CN10 contrastive preserved — PH non-determinism fact (FM2 reframe) is cited as a standard result (Cohen-Steiner 2007, Carlsson 2009), not a novel SCC claim; contrastive structure with existing literature maintained.
-- PH does not resolve open problems F-1, M-1, MO-1 — these remain open per `THEORY/canonical/open_problems.md`.
+- PH does not resolve open problems F-1, M-1, MO-1 — these remain open per `THEORY/canonical/theorem_status.md`.
 
 ---
 

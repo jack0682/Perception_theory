@@ -77,7 +77,7 @@ and a labeled bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon(\mathbf u)\to\m
 **Canonical edits**:
 - `THEORY/canonical/theorem_status.md` (+30 lines, CV-1.5.2 section with T-L1-F).
 - `THEORY/canonical/canonical.md` (+9 lines, T-L1-F entry at end of §13 Category A).
-- `THEORY/canonical/open_problems.md` UNCHANGED (no OP affected; T-L1-F does not solve OP-0005 / OP-0008).
+- `THEORY/canonical/theorem_status.md` UNCHANGED (no OP affected; T-L1-F does not solve OP-0005 / OP-0008).
 
 ### Why it matters
 

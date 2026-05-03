@@ -238,7 +238,7 @@ Deliberately preserved. Reconciliation work is cognitively expensive; do not ski
   - `working/MF/cn15_static_dynamic_separation.md` (implicit O7 CN15)
   - `working/MF/n1_kramers_extension.md` (implicit O8 N-1 Kramers)
   - `working/MF/mathematical_scaffolding_4tools.md` §8.1 (D-CV1.6-O5 Commitment 17 4-tool)
-- Compare against `open_problems.md` OP-0009 sub-item table.
+- Compare against `theorem_status.md` (Open Problems Catalog) OP-0009 sub-item table.
 
 #### 14:30-15:30: Reclassify READY / PARTIAL / DEFER (post-EOD cluster aware)
 
@@ -539,7 +539,7 @@ W6 (2026-05-04 Mon ~ 2026-05-10 Sun) — 7-day arc focused on T-σ-Theorem-4 rec
 8. `THEORY/working/SF/sigma_theorem4_canonical_revision.md`
 9. `THEORY/working/MF/sigma_multi_trajectory.md` (label hygiene target)
 10. `THEORY/working/MF/commitments_18_19_drafts.md` + `commitment_18_sigma_rich_packet.md` + `commitment_19_k_selection_axiom_packet.md` (CV-1.7 parking lot scope)
-11. `THEORY/canonical/open_problems.md` (OP-0008, OP-0009)
+11. `THEORY/canonical/theorem_status.md` (OP-0008, OP-0009)
 
 ---
 

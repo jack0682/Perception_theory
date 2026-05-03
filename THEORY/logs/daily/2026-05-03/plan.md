@@ -25,7 +25,7 @@
   \mathcal A_{\mathrm{bar}}:A^\varepsilon(\mathbf u)\to\mathrm{Bars}_0^{\mathrm{term}}(U;G)
   \]
   defined by $\mathcal A_{\mathrm{bar}}(j)=$ the unique dominant bar with birth in $N_j^r$, equivalently born at $q_j^U=\arg\max^\prec_{x\in N_j^r}U(x)$.
-- **`THEORY/canonical/open_problems.md` unchanged.** OP-0005 (K-Selection) and OP-0008 ($\sigma^A$ K-jump non-determinism) remain open; T-L1-F does not solve either.
+- **`THEORY/canonical/theorem_status.md` unchanged.** OP-0005 (K-Selection) and OP-0008 ($\sigma^A$ K-jump non-determinism) remain open; T-L1-F does not solve either.
 - **Empirical anchors**: L1-I 439/1920 FEASIBLE_WITH_BUDGET on $T^2_{20}$; L1-H2 5/5 stress tests; L1-J PO-1 6/6 decay-to-cut configs.
 - **L1-M is the next research target** (per Day 6 closure recommendation).
 

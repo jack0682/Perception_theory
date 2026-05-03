@@ -169,7 +169,7 @@ Key documents:
 
 - `THEORY/canonical/theorem_status.md` — current theorem status
 - `THEORY/canonical/canonical.md` — settled theory specification
-- `THEORY/canonical/open_problems.md` — open problem registry
+- `THEORY/canonical/theorem_status.md` — open problem registry
 - `THEORY/working/MF/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
 
 ---

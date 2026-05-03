@@ -63,7 +63,7 @@ equivalently $\mathcal A_{\mathrm{bar}}(j)=$ the bar born at $q_j^U=\arg\max^\pr
 
 ### Canonical files NOT modified
 
-- **`THEORY/canonical/open_problems.md`** — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
+- **`THEORY/canonical/theorem_status.md`** — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
 
 ### L1 chain documents (provenance, working/MF — already in repo)
 

@@ -131,7 +131,7 @@ last_updated: 2026-05-02
 | **T-PreObj-1** | Pre-Objective Multi-Peak Formation Mechanism | accepted | A | C-0700 | P-0700 | E-0090 (L=12 numerical, 3-digit agreement) + E-0091 (L=32 dichotomy) | F=1 single-disk minimizer non-critical under full SCC; gradient flow attracts to multi-peak F≥2; IC-protocol dichotomy (adaptive bounded vs random ~ L^2.8) |
 | **T-PreObj-1G** | Pre-Objective Mechanism Graph-Class Independent | accepted | A | C-0701 | P-0701 | (theoretical, qualitative empirical) | Conclusions (i),(ii) of T-PreObj-1 hold on **any finite connected graph** under (G1)–(G4) hypotheses |
 | **Lemma 4** | Quadratic Form Positive Definite (M matrix) | accepted | A | C-0702 | P-0702 | E-0090 | M ∈ R^{2x2} of (g_cl, g_sep) gradients, PD under linear independence; destabilization magnitude Lambda^T M Lambda > 0 |
-| **F-1 Resolution Corollary** | F-1 SPLIT-RESOLVED via T-Merge(b) + T-PreObj-1 | accepted | A | (corollary) | (corollary) | — | Pure E_bd portion via T-Merge(b); full SCC portion via T-PreObj-1 (i); see open_problems.md OP-0001 |
+| **F-1 Resolution Corollary** | F-1 SPLIT-RESOLVED via T-Merge(b) + T-PreObj-1 | accepted | A | (corollary) | (corollary) | — | Pure E_bd portion via T-Merge(b); full SCC portion via T-PreObj-1 (i); see theorem_status.md OP-0001 |
 
 **v1.2 → v1.3 release notes (2026-04-25):**
 - Added: 2 Cat A theorems (T-PreObj-1, T-PreObj-1G), 1 Cat A lemma (Lemma 4), 1 Cat A corollary (F-1 split-resolution).
@@ -179,7 +179,7 @@ last_updated: 2026-05-02
 
 | C-ID | Name | Status | Category (Intended) | Proof (P-ID) | Experiments | Notes |
 |------|------|--------|---------|----------|-------------|-------|
-| **C-0550** | F-1: K=2 Vacuity Problem | ✅ **SPLIT-RESOLVED (2026-04-24)** | A | P-0700 + T-Merge(b) | E-0090, E-0091 | Pure E_bd portion: T-Merge(b) Cat A pre-existing. Full SCC portion: T-PreObj-1 (i) Cat A. See open_problems.md OP-0001. |
+| **C-0550** | F-1: K=2 Vacuity Problem | ✅ **SPLIT-RESOLVED (2026-04-24)** | A | P-0700 + T-Merge(b) | E-0090, E-0091 | Pure E_bd portion: T-Merge(b) Cat A pre-existing. Full SCC portion: T-PreObj-1 (i) Cat A. See theorem_status.md OP-0001. |
 | **C-0551** | M-1: K=1 Always Preferred | ✅ **LAYER-CLARIFIED (2026-04-24)** | A | T-Merge(b) | none | Proved theorem (T-Merge(b)) misframed as problem. Pure E_bd: theorem holds. Full SCC: comparison not framed (Theorem 2 makes F=1 non-critical). |
 | **C-0552** | MO-1: Morse Theory Invalid | ⚪ **SIDESTEPPED (2026-04-24)** | A (single-formation) | (sidestep) | none | Single-formation σ-framework operates on Σ_m (no corners). Multi-formation extension to Σ^K_M still open (Phase 5). |
 | **C-0553** | Type A/B Classification | challenged | OP | exp65 | E-0065 | exp65 invalidates; Type B never observed (unchanged from v1.2). |
@@ -296,33 +296,348 @@ last_updated: 2026-05-02
 
 ---
 
-## Open Problems (OP-xxxx) — Updated 2026-05-04 (audit pass; OP-ID system unified per `open_problems.md` as master)
+## Open Problems Catalog (OP-xxxx)
 
-> Note (2026-05-04 audit): the OP-ID system in this file previously used a different numbering than `open_problems.md` (the authoritative registry). The table below has been re-synced to use `open_problems.md` IDs. Severity flags are kept in plain-text form per project documentation policy (Critical / High / Medium / Low) instead of color emojis.
+> Note (2026-05-04 audit, second pass): this catalog absorbed the previously separate `THEORY/canonical/theorem_status.md` file. The merge eliminates a documentation drift surface (the two files used different OP-ID assignments and disagreed on body-level status flags). All OP body content (Statement, Evidence, Resolution mechanism, Sub-item tables, References, Statistics, Critical Path) lives here. Severity flags are kept in plain-text form (Critical / High / Medium / Low) rather than color emojis. Cross-references in working files that still point to `theorem_status.md` should be read as pointing to this section.
 
-| OP-ID | Problem | Severity | Status | Blocker For |
-|-------|---------|----------|--------|-------------|
-| **OP-0001** | F-1: K=2 vacuous | (was Critical) Resolved | SPLIT-RESOLVED (2026-04-24) via T-PreObj-1 (i) + T-Merge (b) | (no longer blocking) |
-| **OP-0002** | M-1: K=1 preferred | (was Critical) Resolved | LAYER-CLARIFIED (2026-04-24) — proved theorem misframed | (no longer blocking) |
-| **OP-0003** | MO-1: Morse fails | (was High) Sidestepped | SIDESTEPPED (2026-04-24) for single-formation σ scope; re-activation rider on D-6b approval or NQ-248 multi-formation Morse work | Multi-formation σ Phase 5 (re-engages) |
-| **OP-0004** | Type A/B Classification Invalidation | High | RETRACTED (empirically invalidated; exp65 0/4 Type B observed) | Branch selection narrative |
-| **OP-0005** | K Selection Mechanism (Missing) | High | OPEN; partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16); CV-1.7+ Commitment 19 candidate | Multi-formation completeness |
-| **OP-0006** | Boundary Definition Precision | High | TENTATIVE (D-0013 in development) | Morphology formalization, Q_morph |
-| **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | OPEN (CV-1.5.1, W5 Day 4); Path B σ-rich + Φ-rich Cat B target; CV-1.7 Commitment 18 candidate | Dynamic σ-framework |
-| **OP-0009** | Multi-Formation Ontological Foundations | High | OPEN (CV-1.5.1, W5 Day 4; 7 sub-items); 1/7 RESOLVED via Commitment 16 (OP-0009-K), 6/7 PARTIALLY (per body of `open_problems.md`; the post-OAT table marks some as "RESOLVED" but the conservative reading is PARTIALLY) | Multi-formation σ + reservoir architecture |
-| **OP-0010** | Bind Generalization | Medium | OPEN | Bind diagnostic completeness |
-| **OP-0011** | Transport kernel exact form | Medium | TENTATIVE | Full persist theorem |
-| **OP-0012** | Persistence composition | Medium | OPEN | Persist diagnostic completeness |
-| **OP-0013** | Closure operator convergence rate | Medium | OPEN | A3 sharpness |
-| **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file) | Future multi-scale extension |
-| **OP-0021** | (see `open_problems.md`) | Low | seed | — |
-| **OP-0022** | (see `open_problems.md`) | Low | seed | — |
+### Quick Index
+
+| OP-ID | Problem | Severity | Status |
+|-------|---------|----------|--------|
+| **OP-0001** | F-1: K=2 vacuous | (was Critical) Resolved | SPLIT-RESOLVED (2026-04-24) via T-PreObj-1 (i) + T-Merge (b) |
+| **OP-0002** | M-1: K=1 preferred | (was Critical) Resolved | LAYER-CLARIFIED (2026-04-24) — proved theorem misframed |
+| **OP-0003** | MO-1: Morse fails | (was High) Sidestepped | SIDESTEPPED (2026-04-24) for single-formation σ scope; re-activation rider on D-6b approval or NQ-248 multi-formation Morse work |
+| **OP-0004** | Type A/B Classification Invalidation | High | RETRACTED (empirically invalidated; exp65 0/4 Type B observed) |
+| **OP-0005** | K Selection Mechanism (Missing) | High | OPEN; partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16); CV-1.7+ Commitment 19 candidate |
+| **OP-0006** | Boundary Definition Precision | High | TENTATIVE (D-0013 in development) |
+| **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | OPEN (CV-1.5.1, W5 Day 4); Path B σ-rich + Φ-rich Cat B target; CV-1.7 Commitment 18 candidate |
+| **OP-0009** | Multi-Formation Ontological Foundations | High | OPEN (CV-1.5.1, W5 Day 4; 7 sub-items); 1/7 RESOLVED via Commitment 16 (OP-0009-K), 6/7 PARTIALLY |
+| **OP-0010** | Bind Generalization | Medium | OPEN (T-Bind-Proj/Full now Cat A per Phase 13 — see W6 G2 audit; OP-0010 retains for any further generalization questions) |
+| **OP-0011** | Transport kernel exact form | Medium | TENTATIVE |
+| **OP-0012** | Persistence composition | Medium | OPEN |
+| **OP-0013** | Closure operator convergence rate | Medium | OPEN |
+| **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file pre-2026-05-04 unification) |
+| **OP-0021** | Stochastic Dynamics | Low | UNDER INVESTIGATION (exp54–exp59 Kramers rate theory) |
+| **OP-0022** | Continuous-Time Limit | Low | seed |
 
 **W4 changes (2026-04-25):** Critical blockers 3 → 0. F-1 / M-1 / MO-1 all resolved / clarified / sidestepped via T-PreObj-1 family + T-Merge(b) + σ-framework single-formation scope.
 
 **W5 changes (2026-04-29 CV-1.5.1 + 2026-04-30 W5 Day 4):** OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations registered High. OP-0009-K resolved via Commitment 16. OP-0003 MO-1 re-activation rider added.
 
-See `open_problems.md` for detailed body-level entries.
+---
+
+### CRITICAL PROBLEMS (Foundational) — All Resolved in W4
+
+#### OP-0001: F-1 — K=2 Vacuity
+
+**Statement.** K=2 global stability is "vacuous" without external per-formation mass constraint. If masses $m_j$ are allowed to vary, energy minimization always selects K=1 (energetically ~50% cheaper).
+
+**Evidence.**
+- exp62, exp63: K=2 energy $E \approx 4.66$; K=1 energy $E \approx 2.25$.
+- M-1 analysis: $M_2$ landscape monotonically decreasing toward K=1.
+- All K-field theorems originally assumed "$m_j$ fixed externally".
+
+**Impact (original framing).** All K-field theorems (T-Persist-K-Sep, T-Persist-K-Unified, etc.) depend on this external assumption; K-field theory is not self-contained; no mechanism explained why K would be fixed in biological/cognitive systems; blocked publication as self-contained theory.
+
+**Status:** **SPLIT-RESOLVED (2026-04-24)** — both portions Cat A.
+
+**Resolution (2026-04-24, W4).** F-1 decomposes into two layers, each Cat A resolved:
+- **Pure $\mathcal{E}_{\mathrm{bd}}$ portion:** resolved by T-Merge (b) canonical theorem (already proved, isoperimetric ordering on connected graphs). The "K=1 cheaper" statement in pure $\mathcal{E}_{\mathrm{bd}}$ is a *correct theorem*, not an open problem. Original framing as "open problem" was a misclassification — see also OP-0002.
+- **Full SCC portion:** resolved by T-PreObj-1 (i) (Pre-Objective Mechanism, Cat A graph-class independent via T-PreObj-1G). Under full SCC parameters, the F=1 single-disk minimizer of pure $\mathcal{E}_{\mathrm{bd}}$ is **not a critical point** of full $\mathcal{E}$. Therefore the dichotomy "K=1 cheaper vs observed K>1" does not arise — F=1 is non-critical, F ≥ 2 is the default ground state under full SCC. The premise of F-1 collapses.
+
+Net effect: the originally-paradoxical comparison ("global static minimum K=1 vs empirical K>1") is dissolved. Pure $\mathcal{E}_{\mathrm{bd}}$ statement is a proved theorem (T-Merge (b)); full SCC statement is reversed (F ≥ 2 default).
+
+**Severity:** was Critical → Resolved (no longer blocking).
+**Last reviewed:** 2026-04-25 (W4 weekly close).
+**References:** `THEORY/logs/daily/2026-04-24/16_C2_closure.md` §F-1 resolution; `THEORY/logs/daily/2026-04-24/11a_C2_generalization.md` (T-PreObj-1G); `THEORY/logs/daily/2026-04-24/08_C2_phase1_theory.md` (T-PreObj-1 (i) proof); canonical.md §13 T-Merge (b) (pure portion); canonical.md §13 T-PreObj-1 (full SCC portion).
+
+#### OP-0002: M-1 — K=1 Energetic Preference
+
+**Statement.** The K=2 energy landscape $E(m_1, m_2)$ where $m_1 + m_2 = M$ is monotonically decreasing as one formation size decreases ($m_2 \to 0$). Therefore, K=1 with total mass $M$ is always energetically cheaper than any K=2 split.
+
+**Evidence.** Direct calculation $E_{K1}(M) < E_{K2}(M/2, M/2)$ always; empirical confirmation exp62, exp63, exp71–exp73; consequence of energy functional form (no K>1 preference mechanism).
+
+**Status:** **LAYER-CLARIFIED (2026-04-24)** — proved theorem misframed.
+
+**Clarification (2026-04-24, W4).** M-1 is **not an open problem**; it is the *correct mathematical statement* (T-Merge (b), canonical §13 Cat A) about isoperimetric ordering on the constraint manifold $\Sigma_m$. The original framing as "problem" arose from conflating two distinct quantities:
+- **Pure $\mathcal{E}_{\mathrm{bd}}$ layer:** M-1 statement holds — K=1 has lower energy than K=2 by perimeter minimization (Γ-convergence). This is T-Merge (b), already canonical.
+- **Full SCC layer:** the comparison "K=1 cheaper vs K=2" is not even framed, because under full SCC parameters the F=1 single-disk minimizer is **not a critical point** (T-PreObj-1 (i)). The "K=1 ground state" of pure $\mathcal{E}_{\mathrm{bd}}$ does not survive into the full SCC landscape.
+
+Net effect: M-1 is *proved* (T-Merge (b)); the misframe was treating it as a *problem*. The actual problem (in original framing) was the apparent conflict between this proved theorem and empirically observed K>1 — that conflict is resolved by Static/Dynamic Separation (CN15) and T-PreObj-1: static global minimum is K=1 only on pure $\mathcal{E}_{\mathrm{bd}}$, but dynamic protocol-endpoint observables ($\widehat K$, $\mathcal F$) need not equal it.
+
+**Severity:** was Critical → Clarified (proved theorem, not a problem).
+**Last reviewed:** 2026-04-25 (W4 weekly close).
+**References:** canonical.md §13 T-Merge (b); `THEORY/logs/daily/2026-04-24/08_C2_phase1_theory.md` §M-1 layer analysis; `THEORY/logs/daily/2026-04-24/16_C2_closure.md` §4; `THEORY/logs/daily/2026-04-23/MF_multi_quantization.md` §7 (Landau monotone — same statement under FQ framework).
+
+#### OP-0003: MO-1 — Morse Theory Inapplicability
+
+**Statement.** The K=2 constrained manifold $\Sigma^2_M = \{(u^1, u^2) : m_1 = m_2 = M/2\}$ is not a smooth manifold; it has corners (at boundary where one formation's mass $\to 0$). Smooth Morse theory requires manifolds without boundary and is thus inapplicable.
+
+**Status:** **SIDESTEPPED (2026-04-24)** — single-formation σ-framework operates on $\Sigma_m$ (no corners). Multi-formation extension to $\Sigma^K_M$ remains open.
+
+**Sidestep mechanism (2026-04-24, W4).** MO-1 was a blocker for global landscape analysis on the multi-formation manifold $\Sigma^K_M$ (corners). The W4 work introduced:
+- **σ-framework** (canonical-ready, Cat A definitional): operates on **single-formation** $\Sigma_m$ (smooth simplex, no corners). Hessian eigenvalue/irrep/nodal-count signature $\sigma(u^*) = (\mathcal F; \{(n_k, [\rho_k], \lambda_k)\})$ is well-posed.
+- **T-PreObj-1 family** (Cat A graph-class independent): operates on **single-formation** $\Sigma_m$. Pre-objective formation mechanism (F ≥ 2 default under full SCC) does not require multi-formation Morse analysis.
+
+Therefore the principal results of W4 (T-PreObj-1 family + σ-framework + F-1 split-resolution) **do not require Morse theory on $\Sigma^K_M$**. MO-1 is not a blocker for current scope.
+
+Multi-formation extension still open: stratified Morse on $\Sigma^K_M$ (multi-formation σ, Phase 5) remains genuine open work. MO-1 returns as an active blocker if/when the theory extends to multi-formation σ.
+
+**Severity:** was High (multi-formation scope) → Not blocking (single-formation scope).
+
+**Re-activation trigger (W5 added 2026-04-29 CV-1.5.1).** D-6b dynamic $\sigma_{\mathrm{multi}}^A(t)$ approval at CV-1.6 OR NQ-248 multi-formation stratified Morse work begins → High automatic re-activation. Single-formation σ-framework (CV-1.5+) operates on $\Sigma_m$ corner-free; multi-formation σ Phase 5 (D-6a CV-1.5.1, D-6b CV-1.6+) operates on $\widetilde\Sigma^{K_{\mathrm{field}}}_M$ corner-saturated regime — MO-1 stratified Morse on $\widetilde\Sigma^K_M$ becomes relevant. Current Day 3 EOD CV-1.5.1 D-6a uses Option A pragmatic (interior only, corners excluded) which preserves SIDESTEPPED status. Critical-blocker count "0" at CV-1.5.1 is **temporally conditional** on architecture choice (per Commitment 16 K-status + OAT-4 Shared-pool architecture decision pending CV-1.6).
+
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD CV-1.5.1; rider added per 4-agent ontological depth analyst recommendation).
+**References:** `THEORY/logs/daily/2026-04-24/02_development.md` §2, §5; `THEORY/logs/daily/2026-04-24/16_C2_closure.md` §7 (MO-1 sidestep note); `THEORY/logs/daily/2026-04-24/99_summary.md` §8 (sidestep vs resolution distinction); `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §5.4 (explicit re-engagement of MO-1 at multi-formation level); D-6a static merged at CV-1.5.1; D-6b dynamic deferred to W6+ via NQ-242.
+
+---
+
+### HIGH-PRIORITY PROBLEMS
+
+#### OP-0008: σ^A K-jump Inheritance Non-Determinism
+
+**Statement.** Under K-field gradient flow on shared-pool $\widetilde\Sigma^K_M$ (Phase 7 R1.3 architecture), at K-jump times $t^*$ (where $K_{\mathrm{act}}(t^{*-}) > K_{\mathrm{act}}(t^{*+})$, formation merger event), the post-merger $\sigma^A(t^{*+})$ is **NOT deterministic** in pre-merger $\sigma^A(t^{*-})$ alone. Inheritance map $\Phi : \sigma^A(t^{*-}) \to \sigma^A(t^{*+})$ requires merger-geometry data $\mathcal M$ = (which two formation indices $j, k$ merge; cluster centroids; post-merger relaxation trajectory; orientation alignment).
+
+**Evidence.**
+- Day 3 deepening pass `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` Lemma 4.4.1(c): formal non-determinism claim, Cat C asserted.
+- Self-critique `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3: Lemma 4.4.1(c) downgraded "Cat B sketch" → "Cat C (conjectured)".
+- Phase 8 T4 SCC↔CH correspondence (`2026-04-28/32_U5_SCC_CH_theorem.md` Cat B target): implicit assumption of deterministic σ-trajectory under CH-correspondence flow — violated by Lemma 4.4.1(c).
+- Working file `THEORY/working/MF/sigma_multi_trajectory.md` §4.2 Lemma 4.2(c) Cat status: conjectured (Cat C).
+
+**Impact.** D-6b Commitment 14-Multi DYNAMIC Cat A path (CV-1.6+) requires **rich-σ augmentation**: σ-tuple expanded to include cluster centroid, orientation, and Wigner-von Neumann data beyond eigenvalue tuple. Bifurcates CV-1.6 release path:
+- Path A: accept non-determinism, register Cat B target with explicit non-deterministic K-jump map.
+- Path B (Cat A target): rich-σ augmentation (NQ-242c explicit construction + NQ-242d σ^D symmetry-emergence).
+
+Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "static correspondence intact; dynamic $\sigma_{\mathrm{multi}}^A(t)$ ↔ CH flow correspondence requires σ-rich".
+
+**Status:** TENTATIVE (Cat C asserted; explicit construction NQ-242c open).
+**Severity:** High — affects D-6b canonical path; CV-1.6 release-blocking for Cat A target if Path B chosen.
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD, registered at CV-1.5.1).
+
+**Direct-attack NQs:**
+- **NQ-242c**: explicit construction of two trajectories with same $\sigma^A(t^{*-})$ but distinct $\sigma^A(t^{*+})$. Cat A target. ~2-3 weeks. W6+ priority.
+- **NQ-242d**: $\sigma^D$ symmetry-emergence characterization (post-merger stabilizer $\supseteq$ pull-back image). Cat A target. ~2-3 weeks. W6+.
+- **NQ-242**: full Hessian σ-tuple time-series with rigorous K-jump theory. Cat A or B target. 4-6 weeks.
+
+**Related problems:** OP-0003 MO-1 (re-activation at multi-formation level via D-6b path); OP-0005 K-Selection (K-jump-event path-dependence implication); OP-0009 (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
+
+**References:** `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c); `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3; `THEORY/working/MF/sigma_multi_trajectory.md` §4.2; `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`.
+
+#### OP-0009: Multi-Formation Ontological Foundations
+
+**Statement.** Multi-formation σ-framework (D-6a static at CV-1.5.1 + D-6b dynamic at CV-1.6+) implicitly relies on 7 ontological commitments that are NOT all canonically registered as of CV-1.5.1. The implicit foundation is:
+
+1. **OP-0009-K (K-status)**: K (formation count) ontological position. **PARTIALLY RESOLVED** by Commitment 16 (CV-1.5.1) — K_field/K_act two-tier decomposition. (OAT-1 done; working file `working/MF/K_status_commitment.md`.)
+2. **OP-0009-F (F as derived diagnostic)**: F (peak count, threshold-free upper semi-continuous) canonical registration. Currently inline in T-PreObj-1 + CN17 only; not in §5 derived diagnostics. OPEN (OAT-2 W6 Day 1).
+3. **OP-0009-λ (λ_rep ontology)**: $\lambda_{\mathrm{rep}}\,\langle u^j, u^k\rangle$ as 5th energy term vs 4-term coupling realization vs simplex-enforcement Lagrange. CN5 (4-term independence) is single-formation 약속 — multi-formation extension status undecided. OPEN (OAT-3 W6 Day 2).
+4. **OP-0009-A (Architecture choice)**: K-field architecture I9 ($\Sigma^K_M$, fixed K) vs Shared-pool architecture I9' ($\widetilde\Sigma^K_M$, $K_{\mathrm{act}}$ variable). Currently I9 canonical, I9' working only. OPEN (OAT-4 W6 Day 2).
+5. **OP-0009-C ($C_t$ multi-formation)**: Co-belonging $C_t$ demoted single-formation; multi-formation status (subsumed by $\sigma_{\mathrm{multi}}^D$ vs revived primitive). OPEN (OAT-5 W6 Day 3).
+6. **OP-0009-Pre (Pre-objective + K-field)**: K-field architecture imports object-like K parameter; potential CN10 violation. Resolution path via "modeling-layer commitment" framing. OPEN (OAT-6 W6 Day 4).
+7. **OP-0009-Emp (R23 F=9 σ verification)**: σ-framework Cat A claims (CV-1.5) anchored at F=1 uniform / F=2 first-pitchfork; F=9 default ground state σ behavior empirical only (NQ-141). OPEN (OAT-7 W6 Day 5+6).
+
+**Evidence.**
+- 4-agent ontological depth analysis 2026-04-29 EOD (architect / critic / analyst / planner): convergent identification of 5 implicit commitments + 2 supplementary as multi-formation initiation foundations.
+- Critic 7-agent verdict 2026-04-29: REVISE — D-6a should not merge without ontological audit; 5 CRITICAL findings.
+- W4-W5 working trajectory: 5 conflicting K-status uses (External I9 / Kinetic CN6 / Derivative R22 / K_soft / Integer per N-1) coexisted in canonical/working without explicit reconciliation.
+
+**Status:** PARTIALLY ADDRESSED at CV-1.5.1 + Day 4 morning OAT batch session (2026-04-30). 1 of 7 sub-items RESOLVED (OP-0009-K via Commitment 16 CV-1.5.1); 6 of 7 PARTIALLY RESOLVED at CV-1.6 candidate level via OAT-2..7 working files.
+**Severity:** High — release-blocking for Cat A multi-formation σ-framework completeness; not blocking for CV-1.5.1 D-6a static (Cat A definitional only).
+**Last reviewed:** 2026-04-29 (W5 Day 3 EOD, registered at CV-1.5.1).
+
+**Sub-item Status Table (W5 Day 4 EOD post-Critic verdict propagation):**
+
+| Sub-item | Pre-Day 4 | Post-Day 4 OAT batch | Resolution mechanism | Working file | Promotion target |
+|---|---|---|---|---|---|
+| **OP-0009-K** (K-status) | OPEN | RESOLVED | Commitment 16 K_field/K_act two-tier decomposition | `K_status_commitment.md` (480 lines) | CV-1.5.1 (DONE) |
+| **OP-0009-F** (F derived diagnostic) | OPEN | PARTIALLY RESOLVED | F as derived diagnostic register §5.5 + CN17+ amendment + 4-quantity bridge | `F_Kstep_K_triple.md` (359 lines) | CV-1.6 D-CV1.6-O3 |
+| **OP-0009-λ** (λ_rep ontology) | OPEN | PARTIALLY RESOLVED | Argument B (architectural-layer coupling) + Option 3 (CN10 contrastive); strict KKT identification verification fail | `lambda_rep_ontology.md` (242 lines) | CV-1.6 D-CV1.6-O3 |
+| **OP-0009-A** (Architecture: K-field vs Shared-pool) | OPEN | PARTIALLY RESOLVED | I9 + I9' complementary modeling-layer commitments via Tool A1 stratified space | `shared_pool_canonical_proposal.md` (335 lines) | CV-1.6 D-CV1.6-O2 |
+| **OP-0009-C** ($C_t$ multi-formation) | OPEN | PARTIALLY RESOLVED | Option C-3 variant: $C_t$ demoted maintained + $\sigma_{\mathrm{multi}}^D$ orthogonal (not subsumes); architecture-conditional (K-field 4a primary) | `cobelonging_vs_sigmaD.md` (392 lines) | CV-1.6 D-CV1.6-O4 |
+| **OP-0009-Pre** (Pre-objective + K-field tension) | OPEN | PARTIALLY RESOLVED | Path A+C+Tool A2 quotient hybrid; unordered configuration ontologically primary | `pre_objective_K_field_tension.md` (534 lines) | v2.0 §1 amendment |
+| **OP-0009-Emp** (R23 empirical verification) | OPEN | PARTIALLY RESOLVED | R23 fullscale dataset numerical analysis: F=63 max, all 56 minimizers $F > K_{\mathrm{step}}$, σ-irrep CONFIRMED 0 exceptions; **BC-1 fails generic** (R23 generic = overlapping regime) | `single_high_F_equivalence.md` (511 lines) | CV-1.6 partial; full v2.0 |
+
+**Net OP-0009 status post-Day 4 OAT batch:** PARTIALLY ADDRESSED (1 RESOLVED + 6 PARTIALLY RESOLVED). Full RESOLVED status not achieved at CV-1.6; v2.0 (W11–W12) deferred for Pre-objective + K-field tension full canonical §1 amendment.
+
+**Important caveat (W5 Day 4 EOD post-Critic, 2026-04-30):** per Critic 7-agent verdict (`daily/2026-04-30/05_critic_final_review.md`) MAJOR-3 finding, OP-0009 should be framed as "framework + 1/7 sub-items closed (K via Commitment 16) + 6/7 sub-items partially addressed", **not** as "OP-0009 framework-level resolved" or "Theory Deepening Stretch 100%". Future canonical/CHANGELOG/paper claims should reflect this calibrated status to avoid inflated-resolution mis-citations.
+
+**Direct-attack NQs and OAT working files.**
+- OAT-1 (DONE): `working/MF/K_status_commitment.md` — Commitment 16 K-status proposal.
+- OAT-2 (W6 Day 1 evening): F/$K_{\mathrm{step}}$/$K_{\mathrm{act}}$/$K_{\mathrm{field}}$ bridge — `working/MF/F_Kstep_K_triple.md`.
+- OAT-3 (W6 Day 2 evening): $\lambda_{\mathrm{rep}}$ ontological status — `working/MF/lambda_rep_ontology.md`.
+- OAT-4 (W6 Day 2 evening): Shared-pool architecture I9' — `working/MF/shared_pool_canonical_proposal.md`.
+- OAT-5 (W6 Day 3 PM): $C_t$ vs $\sigma_{\mathrm{multi}}^D$ coexistence — `working/MF/cobelonging_vs_sigmaD.md`.
+- OAT-6 (W6 Day 4 PM): Pre-objective + K-field tension — `working/MF/pre_objective_K_field_tension.md`.
+- OAT-7 (W6 Day 5+6): R23 F=9 ↔ K=9 K-field empirical equivalence — `working/MF/single_high_F_equivalence.md`.
+
+**Related problems:** OP-0003 MO-1 (sub-item OP-0009-A architecture decision triggers MO-1 re-activation); OP-0005 K-Selection (sub-item OP-0009-K addresses what K is, not what selects $K_{\mathrm{act}}$); OP-0008 σ^A K-jump non-determinism (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
+
+**References.** 4-agent ontological depth analysis: inline conversation 2026-04-29 EOD (architect/critic/analyst/planner); OAT-1 working file; D-6a static merge: canonical.md §13 T-Commitment-14-Multi-Static (CV-1.5.1); D-6b dynamic deferred: `THEORY/working/MF/sigma_multi_trajectory.md` Theorem 4.6.1 Cat C/B target; Critic 7-agent verdict 2026-04-29 EOD.
+
+#### OP-0004: Type A/B Classification Invalidation
+
+**Statement.** 04-07 proposed "Type A vs Type B" classification of K=2 configurations: Type A = centered, stable, no valley-hopping; Type B = off-center, swap-prone, valley-hopping. exp65 conducted validation; Type B was never observed (0/4 configurations).
+
+**Evidence.** exp65_formation_tracking.json: all 4 configs clustered at Type A; max_center_offset = 0.01–0.08 (all < Type B threshold 0.12); swap_count = 0 everywhere (Type B marker absent).
+
+**Status:** RETRACTED (empirically invalidated).
+**Severity:** High (affects theoretical narrative).
+**Last reviewed:** 2026-04-12 audit.
+**References:** exp65 data, `AUDIT_REPORT_2026-04-12.md` (in archived form).
+
+#### OP-0005: K Selection Mechanism (Missing)
+
+**Statement.** Theory provides no mechanism for how K (number of formations) is determined. Is it:
+- Fixed externally (current assumption A-0012, unresolved F-1)?
+- Emerged from energy minimization (contradicted by M-1)?
+- Determined by model selection (BIC, free energy)?
+- Kinetically determined (metastability barriers)?
+
+**Impact.** Cannot predict K from initial conditions alone; theory cannot explain K emergence in biological/cognitive systems; required for moving from v1.2 to v2.0.
+
+**Status:** OPEN (no full proposal yet; partial 4-layer composite via free-energy + Kramers + numerical anchor + Commitment 16; CV-1.7+ Commitment 19 candidate).
+**Severity:** High (foundational question).
+**Related:** F-1, M-1.
+
+**2026-04-17 integration note (Phase 4).** Current audited E-0082 surface provides only weak, proxy-level support for a persistence-scope reading, not observed-K selection closure. Current runnable/artifact evidence still lacks τ/T/B/cross-K observables and locked reruns remain blocked by "No Type B base found". This is an evidence-boundary alignment note only; it does not change OP-0005 status or severity. OP-0005 therefore remains OPEN; selection-mechanism status is unchanged pending a runnable E-0082 path plus explicit selection-grade outputs.
+
+#### OP-0006: Boundary Definition Precision
+
+**Statement.** Boundary $B_t$ is currently defined via $D_t$ (distinction operator) threshold: $B_t = \{x : D_t(u_t) > \text{threshold}\}$. But this is not morphologically precise (what is "boundary" exactly?), lacks gradient/articulation measure, and is graded rather than crisp.
+
+**Impact.** Affects articulation diagnostic (part of proto-cohesion d); needed for precise morphological quality measure $\mathcal Q_{\mathrm{morph}}$; currently incomplete.
+
+**Status:** TENTATIVE (D-0013 in development).
+**Severity:** High (affects diagnostics).
+**Related:** D-0004 (distinction operator).
+
+---
+
+### MEDIUM-PRIORITY PROBLEMS
+
+#### OP-0010: Bind Generalization
+
+**Statement.** Originally framed as: T-Bind-Proj proved for τ=1/2 only (Cat B); T-Bind-Full general τ (Cat C). 2026-05-04 W6 G2 audit decided both at Cat A per canonical Erratum 2026-04-07 Phase 13 upgrade (KKT projection + Banach inversion, general τ via binary mass-balance formula $\Phi(\tau; a_{\mathrm{cl}}, c)$). The original "general τ unclear" question is now resolved; OP-0010 retains for any further generalization questions (e.g. $\tau$ outside $(0,1)$, non-strict-interior minimizers).
+
+**Status:** Largely resolved at canonical level by W6 G2 decision; retain for residual generalization scope.
+**Severity:** Medium (specialty case).
+**References:** canonical.md §13 T-Bind-Proj (line 1440), T-Bind-Full (line 1445); W6 G2 audit entry in CHANGELOG 2026-05-04.
+
+#### OP-0011: Transport Kernel Uniqueness
+
+**Statement.** Current transport kernel $M_{t \to s}$ form (entropy-regularized OT) is *one* realization satisfying axioms E1–E5. Is it unique? Are there other realizations?
+
+**Impact.** Theoretical completeness; robustness of persistence results; may affect characterization of formation inheritance.
+
+**Status:** UNDER INVESTIGATION (exp30–exp35).
+**Severity:** Medium (impacts formalism).
+**Related:** T-Persist-1(a–e).
+
+#### OP-0012: Persistence Composition
+
+**Statement.** T-Persist-Full (composition of persistence across 3+ time steps) is Cat C (very conditional). Can general composition formula be proved?
+
+**Impact.** Affects long-timescale predictions; currently only T-Persist-1 (two-step) fully proved; limits temporal theory.
+
+**Status:** UNRESOLVED (Cat C conditional).
+**Severity:** Medium (temporal extension).
+**References:** canonical.md §13 T-Persist-Full.
+
+#### OP-0013: Closure Operator Convergence Rate
+
+**Statement.** T-6 proves closure operator has fixed point with contraction; exact rate unknown.
+
+**Question.** What is the convergence rate as function of parameters?
+
+**Impact.** Affects efficiency of closure-based algorithms; currently only asymptotic guarantee known; low practical impact.
+
+**Status:** UNDER INVESTIGATION.
+**Severity:** Medium (implementation detail).
+
+---
+
+### LOW-PRIORITY PROBLEMS
+
+#### OP-0020: Dynamic Topology (Out of Scope)
+
+**Statement.** Current theory assumes $X_t$ is fixed. What if graph topology changes over time?
+**Status:** Not in current scope.
+**Severity:** Low (future extension).
+**Note:** previously listed as OP-0007 in earlier theorem_status.md OP table; unified to OP-0020 per 2026-05-04 audit pass.
+
+#### OP-0021: Stochastic Dynamics
+
+**Statement.** Theory focuses on deterministic gradient descent. How do thermal fluctuations affect dynamics?
+**Status:** UNDER INVESTIGATION (exp54–exp59 Kramers rate theory).
+**Severity:** Low (extension work).
+
+#### OP-0022: Continuous-Time Limit
+
+**Statement.** Theory on discrete graphs; what is continuous limit?
+**Status:** Not addressed.
+**Severity:** Low (theoretical extension).
+
+---
+
+### Problem Statistics (post-W6 G2 audit, 2026-05-04)
+
+| Severity | Count | Status |
+|----------|-------|--------|
+| Critical | 0 | All 3 (F-1, M-1, MO-1) addressed in W4 (2026-04-24) |
+| High | 5 | OP-0005, OP-0006, OP-0008, OP-0009 active; OP-0004 retracted |
+| Medium | 4 | OP-0010 largely resolved at canonical level (W6 G2); OP-0011, OP-0012, OP-0013 active |
+| Low | 3 | OP-0020, OP-0021, OP-0022 (extensions / out of scope) |
+| Total active open | 7 (4 High + 3 Medium + a residual scope of OP-0010) | — |
+| Resolved / clarified / sidestepped (W4) | 3 | F-1, M-1, MO-1 |
+| Retracted | 1 | OP-0004 |
+
+---
+
+### Critical Path to Resolution
+
+**Completed in W4 (2026-04-19 ~ 2026-04-25).**
+1. F-1 SPLIT-RESOLVED (OP-0001) — both portions Cat A. Pure $\mathcal{E}_{\mathrm{bd}}$ portion: T-Merge (b) canonical; full SCC portion: T-PreObj-1 (i) Cat A graph-class independent (W4 04-24).
+2. M-1 LAYER-CLARIFIED (OP-0002) — proved theorem (T-Merge (b)) misframed as problem. Static/Dynamic Separation (CN15) explains apparent K=1 vs K>1 conflict.
+3. MO-1 SIDESTEPPED (OP-0003) — single-formation σ-framework operates on $\Sigma_m$ (no corners); current scope does not require Morse on $\Sigma^K_M$.
+4. Resolution path: Option D (premise dissolution) — neither original A/B/C, but a fourth path discovered via SCC-intrinsic re-framing.
+
+**W5 close + W6 actions (2026-04-26 onward).**
+- W5 Day 1 G0: σ-framework supporting structures merged (CV-1.5).
+- W5 Day 3 EOD: D-6a multi-formation σ static + Commitment 16 K-status (CV-1.5.1); OP-0008 + OP-0009 registered.
+- W5 Day 4: 17 working files / ~8,145 lines added in Wave 3 burst (now in CV-1.7 parking lot).
+- W5 Day 5: reconciliation day; 9 retractions documented.
+- W5 Day 6: T-L1-F canonical promotion (CV-1.5.2) — first multi-formation Cat A theorem.
+- W5 Day 7: L-M soft-count corollary working draft (Cat B sketched).
+- W6 Day 1 (today, 2026-05-04): full audit pass + OP-ID unification + theorem_status.md merge into this file + W6 G2 (T-Bind decision) + NQ-187 falsification handling for T-σ-Theorem-4.
+
+**W6 remaining (per `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md`).**
+- G1 L1-M-AUDIT (R-1/R-2/R-3 closure for L-M-2).
+- G3 K_act ε-convention decision.
+- G4 CV-1.7 parking-lot Stage 0 inventory.
+
+**Future (W7+).**
+- CV-1.7 parking-lot Stages 1–3 (per `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`).
+- OP-0008 Path B (σ-rich + Φ-rich) Cat B target — Commitment 18 candidate.
+- OP-0005 K-Selection 4-layer composite — Commitment 19 candidate.
+- T-σ-Theorem-4 γ/β/α path audit (Cat A re-promotion attempt; CV-1.7+).
+- L1-M canonical promotion (post L1-M-AUDIT closure).
+- OP-0009 sub-items 2–7 PARTIAL → READY upgrades via OAT-2..7 short integrations.
+
+---
+
+### Problem Lifecycle Example: F-1
+
+- **Discovery:** 2026-04-06 audit identified K=2 energy paradox.
+- **Formalization:** 2026-04-12 documented as critical.
+- **Reframing:** 2026-04-19 N-1 (Soft-Hard Switching Asymmetry) discovered as single source of F-1/M-1/MO-1 (W4 reframing).
+- **Foundation work:** 2026-04-21 K_soft + $\mathcal F_{C+E}$ framework — F/M/MO architectural dissolution candidate.
+- **Empirical pivot:** 2026-04-23 R23 Orbital Discovery + 56 stable minimizers + closure-eliminates-F=1.
+- **Resolution:** 2026-04-24 T-PreObj-1 family Cat A (graph-class independent via T-PreObj-1G) + T-Merge (b) canonical → SPLIT-RESOLVED.
+- **Current status:** OP-0001 RESOLVED (no longer blocking).
+- **Resolution path:** Option D (premise dissolution via SCC-intrinsic re-framing).
+- **Timeline (actual):** reframing-to-resolution: 6 days (04-19 to 04-24).
+- **Outcome:** v2.0 release path unblocked.
+
+---
 
 ---
 
@@ -336,7 +651,7 @@ See `open_problems.md` for detailed body-level entries.
 | **Resolved/Clarified/Sidestepped (W4)** | 3 | C-0550 (F-1 split-resolved), C-0551 (M-1 layer-clarified), C-0552 (MO-1 sidestepped) |
 | **Challenged** | 1 | C-0553 (Type A/B) |
 | **Retracted** | 5 | K-Saddle Conjecture; r̄₀ general τ (Theorem 3.3); T-Merge (c); T-Merge (d); T-Merge (e). *(Corrected 2026-05-04 audit: prior "2" entry was inconsistent with `canonical.md` §13 Retracted block which catalogues 5 distinct retractions.)* |
-| **Open (active)** | **High: 4 (OP-0005 K-Selection, OP-0006 Boundary, OP-0008 σ^A K-jump, OP-0009 Multi-Formation Foundations); Medium: 4 (OP-0010..OP-0013); Low: 3 (OP-0020..OP-0022)** — total 11. OP-0001/0002 resolved (W4); OP-0003 sidestepped with re-activation rider; OP-0004 retracted (Type A/B). | OP-0005 K-Selection partial via 4-layer composite (CV-1.7+ candidate); OP-0008 σ^A K-jump (Path B σ-rich + Φ-rich Cat B target, CV-1.7 Commitment 18 candidate); OP-0009 7 sub-items (1/7 RESOLVED via Commitment 16, 6/7 PARTIALLY per `open_problems.md` body). |
+| **Open (active)** | **High: 4 (OP-0005 K-Selection, OP-0006 Boundary, OP-0008 σ^A K-jump, OP-0009 Multi-Formation Foundations); Medium: 4 (OP-0010..OP-0013); Low: 3 (OP-0020..OP-0022)** — total 11. OP-0001/0002 resolved (W4); OP-0003 sidestepped with re-activation rider; OP-0004 retracted (Type A/B). | OP-0005 K-Selection partial via 4-layer composite (CV-1.7+ candidate); OP-0008 σ^A K-jump (Path B σ-rich + Φ-rich Cat B target, CV-1.7 Commitment 18 candidate); OP-0009 7 sub-items (1/7 RESOLVED via Commitment 16, 6/7 PARTIALLY per `theorem_status.md` body). |
 | **Reproducibility crises identified+resolved** | 1 | NQ-172 (mode-indexing artifact, 2026-04-26 resolved) |
 | **W4-extended carry NQ** | 3 (G1/G2/G4) | NQ-173 (V5b-F partial Goldstone — G1 W5 Day 1), NQ-174 (ζ_* graph-dependence — G2 W5 Day 2-3), NQ-175 (3D extension — G4 W5 Day 5) |
 | **W5 Day 1 G0 spawn NQ** | 11 (NQ-176..NQ-186) | NQ-176/177 (functoriality, multi-irrep ordering — Lemma 1); NQ-178/179 (frustration bound, orbit sharpening — Lemma 2); NQ-180/181 (discrete correction, higher-ℓ analog — Lemma 3); NQ-182/183 (discrete nodal count, periodic-BC analog — Theorem 3); NQ-184/185/186 (tie-break, higher pitchforks, cascade — Theorem 4) |
@@ -385,5 +700,5 @@ See `open_problems.md` for detailed body-level entries.
 **W4 extended addition (2026-04-26)**: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) — sub/super-lattice dichotomy on torus T^d, cycle C_n; 2D doublet commensurability split; 1D Goldstone; nodal count = 2 universal. V5b 8-iteration cycle resolved.
 **W5 Day 1 G0 addition (2026-04-27, CV-1.5)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted). Round-1 (3 numerical errors) + Round-2 (11 structural issues) audit applied same session.
 **W5 Day 4 addition (2026-04-30, CV-1.5.1)**: D-6a multi-formation σ static (3 Cat A: T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static) + 1 Cat B target (T-σ-Multi-1 Goldstone-pair instability) + Commitment 16 K-status Two-Tier Decomposition (K_field/K_act; resolves OP-0009-K). T-σ-Theorem-4 Cat A → Cat B retroactive (NQ-187 RED finding + Critic 7-agent verdict). OP-0008 + OP-0009 registered High; OP-0003 MO-1 re-activation rider added.
-**W5 Day 6 addition (2026-05-02, CV-1.5.2 — current)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step working chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4) completed. open_problems.md unchanged (T-L1-F is a bridge, not a K-selection mechanism).
-**See also:** `weekly_summary.md` (W4 extended close), `open_problems.md` (active OPs), `canonical.md` §13 (theorem catalog), `THEORY/logs/daily/2026-04-27/` (W5 Day 1 artifacts), `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md` (8-goal blueprint), `THEORY/CHANGELOG.md` 2026-04-27 entry.
+**W5 Day 6 addition (2026-05-02, CV-1.5.2 — current)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step working chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4) completed. theorem_status.md unchanged (T-L1-F is a bridge, not a K-selection mechanism).
+**See also:** `weekly_summary.md` (W4 extended close), `theorem_status.md` (active OPs), `canonical.md` §13 (theorem catalog), `THEORY/logs/daily/2026-04-27/` (W5 Day 1 artifacts), `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md` (8-goal blueprint), `THEORY/CHANGELOG.md` 2026-04-27 entry.

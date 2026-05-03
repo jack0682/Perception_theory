@@ -220,7 +220,7 @@ deferred to D-6b dynamic σ_multi^A(t) (W6+ via NQ-242).
 
 ### §5.3 OP-0003 MO-1 entry update (architecture-conditional re-activation)
 
-`open_problems.md` OP-0003 MO-1 entry (이미 W5 Day 3 EOD CV-1.5.1에 rider 추가됨):
+`theorem_status.md` (Open Problems Catalog) OP-0003 MO-1 entry (이미 W5 Day 3 EOD CV-1.5.1에 rider 추가됨):
 
 ```markdown
 **Re-activation trigger (W5 Day 3 EOD + W6+ formalized):** 

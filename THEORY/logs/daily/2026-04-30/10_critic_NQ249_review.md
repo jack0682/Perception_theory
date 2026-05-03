@@ -191,7 +191,7 @@ Suggested rewrite:
 | Replace | With |
 |---|---|
 | `canonical.md:77` (Commitment 16 reference) | `canonical §11.1 Commitment 16, lines 796–812` |
-| `canonical.md:77` (OP-0008 reference) | `canonical §1.1 CV-1.5.1 release-notes line 77; see also `THEORY/canonical/open_problems.md` OP-0008` |
+| `canonical.md:77` (OP-0008 reference) | `canonical §1.1 CV-1.5.1 release-notes line 77; see also `THEORY/canonical/theorem_status.md` OP-0008` |
 | `canonical.md:1337` (phase-transition / spinodal interior) | `canonical §8 admissible range line 572` (for spinodal interval) **or** `canonical §13 T8-Core line 1005 + Scaling Caveat line 1009` (for $\beta_{\mathrm{crit}}$ formula) |
 | `canonical.md:1343` (phase-transition + uniform vacuum) | `canonical §13 T-σ-Theorem-3 (lines 1334–1409)` (if context is σ-Theorem-3) **or** `canonical §13 T8-Core line 1005` (if context is phase-transition existence) — disambiguate based on §-by-§ context. |
 | `canonical.md:1367` (exp_hessian_uniform_v2.json) | Re-verify; if inside T-σ-Theorem-4, cite `canonical §13 T-σ-Theorem-4 lines 1378–1409`. |
@@ -443,7 +443,7 @@ Per C2 above, §10.2's framing risks treating QuEra's observed spontaneous strin
 2. **C2**: Add reconciliation paragraph to §10.2 acknowledging NQ-253 §4.3 forbids $\Delta K = +1$ under noiseless flow; cycling is protocol-conditional via NQ-253 §4.2 mechanisms B1/B2/B3.
 3. **C3**: Restructure §7.1 with explicit (H1)+(H2)+(H3) hypothesis chain. Downgrade Cat A claim to Cat A *conditional on T-σ-Multi-1 Cat A upgrade*. Retract §16 Path A "no canonical entry needed" claim.
 4. **M1**: Correct canonical line citations. Specifically:
-   - `canonical.md:77` → `canonical §11.1 Commitment 16 lines 796–812` (for Commitment 16) or `canonical §1.1 CV-1.5.1 line 77 + open_problems.md OP-0008` (for OP-0008).
+   - `canonical.md:77` → `canonical §11.1 Commitment 16 lines 796–812` (for Commitment 16) or `canonical §1.1 CV-1.5.1 line 77 + theorem_status.md OP-0008` (for OP-0008).
    - `canonical.md:1337` / `canonical.md:1343` → context-disambiguate: `canonical §13 T-σ-Theorem-3 lines 1334–1409` for σ-theory, or `canonical §13 T8-Core line 1005 + Scaling Caveat line 1009` for phase-transition existence, or `canonical §8 line 572` for admissible spinodal range.
    - Verify each citation by `grep -n` before applying.
 

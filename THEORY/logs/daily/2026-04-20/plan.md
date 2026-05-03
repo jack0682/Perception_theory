@@ -19,7 +19,7 @@
 - **`THEORY/working/open_problems_reframing_2026-04-19.md`** — N-1 단일 원천 + P-A~P-H 9개 신 problem 정의 + F/M/MO 교차 대조 표 (§9) + 재명명된 문제 전수 설명.
 - **`THEORY/canonical/canonical.md`** — 특히 §3 (formal universe), §6 (axiom groups A-E), §8 (energy), §11 (fixed commitments & open design choices), §12 (open problems), §13 (49 claims registry), §14 (CN1–CN14 commitment notes).
 - **`THEORY/canonical/theorem_status.md`** — 49 claims 현재 Category (35 A / 4 B / 5 C / 5 Retracted) 및 각각의 소스 (canonical §13 참조).
-- **`THEORY/canonical/open_problems.md`** — 기존 OP-0001 ~ OP-0007. 각 후보가 어떤 OP 를 건드리는지 대응 필요.
+- **`THEORY/canonical/theorem_status.md`** — 기존 OP-0001 ~ OP-0007. 각 후보가 어떤 OP 를 건드리는지 대응 필요.
 - **`THEORY/logs/daily/2026-04-19/00_session_log.md`** — 전 세션 narrative 와 carry-forward.
 - **`THEORY/logs/daily/MAIN_PROMPT.md`** 는 에이전트에게 이미 주어진 지시이므로 다시 읽지 말 것 — 중복.
 

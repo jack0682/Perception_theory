@@ -360,7 +360,7 @@ The volume budget exists so that Day 5 can finish W6 priming today instead of pu
 8. `THEORY/working/SF/sigma_theorem4_canonical_revision.md`
 9. `THEORY/working/MF/sigma_multi_trajectory.md` (label hygiene target)
 10. `THEORY/working/MF/commitments_18_19_drafts.md` + `commitment_18_sigma_rich_packet.md` + `commitment_19_k_selection_axiom_packet.md` (CV-1.7 parking lot scope)
-11. `THEORY/canonical/open_problems.md` (OP-0008, OP-0009)
+11. `THEORY/canonical/theorem_status.md` (OP-0008, OP-0009)
 
 ---
 

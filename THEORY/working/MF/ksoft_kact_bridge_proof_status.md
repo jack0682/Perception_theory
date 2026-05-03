@@ -33,7 +33,7 @@ It uses the following evidence sources:
 | `soft_K_definition.md` | base \(K_{\mathrm{soft}}\) definition and CSEH stability skeleton |
 | `F_Kstep_K_triple.md` | surrounding count-diagnostic bridge |
 | `K_status_commitment.md` | \(K_{\mathrm{field}}\) / \(K_{\mathrm{act}}\) two-tier status |
-| `open_problems.md` | OP-0005 and OP-0008 status boundary |
+| `theorem_status.md` (Open Problems Catalog) | OP-0005 and OP-0008 status boundary |
 | `theorem_status.md` | canonical theorem-status boundary |
 
 This audit does **not** solve OP-0005. It does **not** solve OP-0008. It does **not** claim \(\sigma_{\mathrm{rich}}\) sufficiency. It does **not** identify \(K_{\mathrm{soft}}^\phi\) and \(K_{\mathrm{act}}^\varepsilon\) globally.

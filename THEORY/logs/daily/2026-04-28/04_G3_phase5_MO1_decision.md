@@ -3,7 +3,7 @@
 **Session:** 2026-04-28 (W5 Day 2 MODERATE, Block 3 14:30-15:30)
 **Target (from plan.md §3 Block 3 + W5_strategic_plan.md §0.4 Decision 2):** Choose among Options A/B/C for handling MO-1 (Morse theory inapplicability on $\Sigma^K_M$ corners) in multi-formation σ Phase 5 (G3).
 **This file covers:** §1 problem statement; §2 Option A (interior-only) detailed; §3 Option B (stratified Morse) detailed; §4 Option C (soft-K detour) detailed; §5 decision criteria + recommendation; §6 W5+ trajectory implications.
-**Depends on reading:** `working/MF/multi_formation_sigma.md` (companion file, σ_multi^(A) primary); `canonical.md` §12 OP-0003 MO-1 SIDESTEPPED note (single-formation scope); `open_problems.md` OP-0003 MO-1 entry; `2026-04-27/03_v5b_f_status_update.md` §4 (V5b-F mechanism transfer to multi-formation, conditional on NQ-173 Branch B).
+**Depends on reading:** `working/MF/multi_formation_sigma.md` (companion file, σ_multi^(A) primary); `canonical.md` §12 OP-0003 MO-1 SIDESTEPPED note (single-formation scope); `theorem_status.md` (Open Problems Catalog) OP-0003 MO-1 entry; `2026-04-27/03_v5b_f_status_update.md` §4 (V5b-F mechanism transfer to multi-formation, conditional on NQ-173 Branch B).
 **Status:** decision recorded with explicit rationale; W5+ multi-formation σ trajectory determined.
 
 ---
@@ -12,7 +12,7 @@
 
 ### 1.1 What MO-1 is
 
-From `canonical.md` §12 + `open_problems.md` OP-0003:
+From `canonical.md` §12 + `theorem_status.md` (Open Problems Catalog) OP-0003:
 
 > **MO-1: Morse Theory Inapplicability on $\Sigma^K_M$.** The K-field manifold $\Sigma^K_M = \Sigma_{m_1} \times \cdots \times \Sigma_{m_K}$ has corners where one or more $u^{(j)}$ saturates the boundary of $[0,1]^n$. At corners, Morse-theoretic Hessian analysis fails (Hessian is not the usual second-derivative tangent-space operator; gradient flow can hit corners). Standard Morse-theory tools (Hessian index, Morse complex, λ-cobordism) do not directly apply.
 
@@ -254,7 +254,7 @@ If R3 (tensor-irrep too subtle): A-light fallback; defer full A to W7-W8.
 ## §8. Cross-References
 
 - σ_multi^(A) primary definition: `working/MF/multi_formation_sigma.md` §5.
-- MO-1 canonical status: `canonical.md` §12 + `open_problems.md` OP-0003.
+- MO-1 canonical status: `canonical.md` §12 + `theorem_status.md` (Open Problems Catalog) OP-0003.
 - V5b-F Branch verdict (deferred): `01_NQ173_v5b_f_verdict.md`.
 - W4-04-22 R22 retraction (relevant to Option C): `working/SF/from_single.md` §2 retracted; `working/SF/step_cohesion.md` replacement.
 - K-field architecture I9: `canonical.md` §11 line 829.

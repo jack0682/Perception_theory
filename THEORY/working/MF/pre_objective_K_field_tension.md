@@ -425,7 +425,7 @@ via Tool A2 quotient construction (`working/MF/mathematical_scaffolding_4tools.m
 
 ### §10.3 Open problems pointers
 
-- OP-0001 F-1 SPLIT-RESOLVED (W4 04-24 Option D): `open_problems.md` line 18-60.
+- OP-0001 F-1 SPLIT-RESOLVED (W4 04-24 Option D): `theorem_status.md` (Open Problems Catalog) line 18-60.
 - OP-0008 σ^A K-jump non-determinism (W5 Day 4 register): `daily/2026-04-30/plan.md` Block 3.
 - OP-0009 Multi-Formation Ontological Foundations: 7 sub-items (K, A, Pre, λ, F, C, Emp); this file addresses *OP-0009-Pre*.
 - OP-0009-K (K-status): RESOLVED via Commitment 16 (OAT-1).

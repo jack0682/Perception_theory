@@ -334,7 +334,7 @@ Random vs Fiedler $\mathcal{F}_{\min}$ ratio ≈ **25×**. $\mathcal{F}_*^{\math
 **Category:** **Cat A fully resolved** (both portions).
 
 **Canonical merge target:**
-- `open_problems.md` OP-0001 (F-1): UNRESOLVED 🔴 → Cat A RESOLVED
+- `theorem_status.md` (Open Problems Catalog) OP-0001 (F-1): UNRESOLVED 🔴 → Cat A RESOLVED
 - `theorem_status.md` F-1 entry 업데이트 + T-Merge (b) cross-reference
 
 #### A-2026-04-24-03. NQ-132 / 133 / 134 / 135 / 150 / 155 Cat A
@@ -365,7 +365,7 @@ Random vs Fiedler $\mathcal{F}_{\min}$ ratio ≈ **25×**. $\mathcal{F}_*^{\math
 
 **Category:** Clarified (metadata-level, pure vs full layer 분리).
 
-**Canonical merge target:** `open_problems.md` OP-0002 (M-1) — layer dependency 명시.
+**Canonical merge target:** `theorem_status.md` (Open Problems Catalog) OP-0002 (M-1) — layer dependency 명시.
 
 ---
 
@@ -379,7 +379,7 @@ Random vs Fiedler $\mathcal{F}_{\min}$ ratio ≈ **25×**. $\mathcal{F}_*^{\math
 
 **Category:** Sidestepped (scope separation, not mathematical resolution).
 
-**Canonical merge target:** `open_problems.md` OP-0003 (MO-1) — scope note 추가 ("current theorems do not require stratified Morse on $\Sigma^K_M$").
+**Canonical merge target:** `theorem_status.md` (Open Problems Catalog) OP-0003 (MO-1) — scope note 추가 ("current theorems do not require stratified Morse on $\Sigma^K_M$").
 
 ---
 
@@ -1741,7 +1741,7 @@ NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2
 - **Q46 (new).** $\mathcal{M}_K$ classification framework 을 canonical §11 Multi-formation 의 새 subsection 으로 추가할지.
 - **Q47 (new).** Lyapunov-Schmidt K-formation Hessian structure 을 §13 Cat A 로 추가 (well-separated regime).
 - **Q48 (new).** $\widehat K(\beta, c, T)$ master formula 를 canonical §8 (energy) 뒤에 phase-diagram chapter 로 추가할지.
-- **Q49 (new).** F-1 / M-1 / MO-1 explicit resolution (R16) 을 `open_problems.md` 에서 `theorem_status.md` Cat A 로 이동할지 — 공식 closure.
+- **Q49 (new).** F-1 / M-1 / MO-1 explicit resolution (R16) 을 `theorem_status.md` (Open Problems Catalog) 에서 `theorem_status.md` Cat A 로 이동할지 — 공식 closure.
 - **Q50 (new).** Conjecture 2.1 validation 을 실험 결과에 따라 Cat A upgrade path 마련.
 
 #### FINAL SESSION CONCLUSION (2026-04-22, 전체 종료)
@@ -2579,7 +2579,7 @@ canonical.md 보수 대상. 오늘 수정 없음; 주간 merge 에서 user 확�
 
 ### Added — Pending OP 승급
 
-본 주에는 `canonical/open_problems.md` 에 OP-xxxx 로 승급하지 않음. **승급 조건:** reformulation purpose pin 후 해당 purpose scope 내 NQ 만.
+본 주에는 `canonical/theorem_status.md` 에 OP-xxxx 로 승급하지 않음. **승급 조건:** reformulation purpose pin 후 해당 purpose scope 내 NQ 만.
 
 **출처:** `working/new_open_questions_2026-04-20.md` (topic-consolidated); 기원 `logs/daily/2026-04-20/03_integration_and_new_open.md` §9.
 

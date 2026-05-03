@@ -392,7 +392,7 @@ Source: `16_C2_closure.md` §4
 > F-1의 기존 premise ("K=1이 energetically preferred인데 관측은 K>1") 자체가 **잘못 framed**. Full SCC layer에서 F=1은 애초에 non-critical이므로 "K=1 cheaper vs observed K>1" 대립 구조가 **형성되지 않음**. 이는 기존 제안된 resolution A/B/C (외부 고정 / K-selection / kinetic) 중 어느 것도 아닌 **네 번째 길**: *문제의 premise 붕괴*.
 
 **Cat**: **Cat A fully resolved** (both portions).
-**Canonical merge target**: `open_problems.md` OP-0001 → SPLIT-RESOLVED + `theorem_status.md` F-1 entry update.
+**Canonical merge target**: `theorem_status.md` OP-0001 → SPLIT-RESOLVED + `theorem_status.md` F-1 entry update.
 
 ---
 
@@ -607,7 +607,7 @@ T1=2 + T2=5 + T3=3 + T4=2 분류 (§3 참조).
 - **네 번째 길**: 기존 A/B/C 옵션 중 어느 것도 아닌 *premise 붕괴*
 - 1년간 갇혀있던 framing의 명시적 dissolution
 
-**Canonical impact**: open_problems.md OP-0001 + theorem_status.md F-1 entry.
+**Canonical impact**: theorem_status.md OP-0001 + theorem_status.md F-1 entry.
 
 ---
 
@@ -801,7 +801,7 @@ T1=2 + T2=5 + T3=3 + T4=2 분류 (§3 참조).
 
 ## §5. Canonical Merge Recommendations (T1만, 구체 diff)
 
-### 5.1 `THEORY/canonical/open_problems.md` 수정 (3건)
+### 5.1 `THEORY/canonical/theorem_status.md` 수정 (3건)
 
 위 §4의 3개 diff block.
 

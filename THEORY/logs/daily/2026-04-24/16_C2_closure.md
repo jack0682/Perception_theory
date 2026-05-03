@@ -270,7 +270,7 @@ N-1 (soft-hard switching) 의 가장 깊은 instance: "Soft landscape (continuou
 본 세션의 C2 산출이 stage 6 weekly merge 대상:
 - Canonical §13 에 Theorem 2, Theorem 2-G, Lemma 4 추가
 - Canonical §14 commitment 에 "pre-objective 가 mathematical theorem" 명시 (Commitment 14 후보와 결합)
-- open_problems.md 에 F-1 / M-1 / MO-1 resolution 기록
+- theorem_status.md 에 F-1 / M-1 / MO-1 resolution 기록
 - theorem_status.md 에 Cat A 목록 업데이트
 
 (단, 직접 수정 금지 원칙 준수 — 위는 stage 6 proposal list.)

@@ -39,7 +39,7 @@ These are not mutually exclusive: (a) provides the equilibrium prediction; (b) t
 
 ### §2.2 M-1 conflict
 
-Per `open_problems.md` OP-0002 M-1 status: T-Merge (b) proves K=1 has lowest pure $\mathcal{E}_{\mathrm{bd}}$ (Modica-Mortola Γ-convergence; perimeter minimization). But empirical K>1 is observed (NQ-141, R23 F=9, etc.).
+Per `theorem_status.md` (Open Problems Catalog) OP-0002 M-1 status: T-Merge (b) proves K=1 has lowest pure $\mathcal{E}_{\mathrm{bd}}$ (Modica-Mortola Γ-convergence; perimeter minimization). But empirical K>1 is observed (NQ-141, R23 F=9, etc.).
 
 Reconciliation via CN15 Static/Dynamic Separation: **static global minimum is K=1** (under pure $\mathcal{E}_{\mathrm{bd}}$), but **dynamic protocol-endpoint observables** ($\widehat{K}, \mathcal{F}$) need not equal it.
 
@@ -286,7 +286,7 @@ CV-1.7+ candidate Commitment 19 (K-Selection axiom) per task #49 in TaskList; co
 - `canonical/canonical.md` §11.1 Commitment 14, 14-Multi, 16; CN15 candidate.
 - `canonical/canonical.md` §13 T-Merge (b) (M-1 proved); Theorem 2 (F=1 not critical).
 - `canonical/canonical.md` §14 CN5, CN10, CN15.
-- `canonical/open_problems.md` OP-0005 (K-Selection direct attack); OP-0001 F-1; OP-0002 M-1 LAYER-CLARIFIED.
+- `canonical/theorem_status.md` OP-0005 (K-Selection direct attack); OP-0001 F-1; OP-0002 M-1 LAYER-CLARIFIED.
 
 ### §11.3 External refs
 

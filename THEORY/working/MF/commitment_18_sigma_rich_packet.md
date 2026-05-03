@@ -433,7 +433,7 @@ CV-1.7 D-CV1.7-S1-S6 (this packet §7.2) bundle assumes CV-1.6 D-CV1.6-O5 select
 - `canonical/canonical.md` §13 (theorems) — new T-σ-rich-* + T-Phi-rich + T-PH-A3-σ-rich entries.
 - `canonical/canonical.md` §14 (CN list) — CN10 affirmation.
 - `canonical/canonical.md` §15 (open problems index) — OP-0008 PARTIALLY RESOLVED.
-- `canonical/open_problems.md` — OP-0008 status update (§5 of this packet).
+- `canonical/theorem_status.md` — OP-0008 status update (§5 of this packet).
 - `canonical/theorem_status.md` — T-σ-rich-* Cat status entries.
 - `THEORY/CHANGELOG.md` — CV-1.7 entry (§6 of this packet).
 

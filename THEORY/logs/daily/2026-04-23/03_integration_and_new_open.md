@@ -282,7 +282,7 @@ Three-Layer Hierarchy was proposed mid-2026-04 and already produces 27% "mixed" 
 - Protocol dependence and static/dynamic separation maintained throughout.
 
 **Limits**:
-- `theorem_status.md` and `open_problems.md` in `THEORY/canonical/` are **stale** (as of 2026-04-12) relative to session logs. This session did **not** update canonical files; user's Stage 6 weekly merge needed.
+- `theorem_status.md` and `theorem_status.md` (Open Problems Catalog) in `THEORY/canonical/` are **stale** (as of 2026-04-12) relative to session logs. This session did **not** update canonical files; user's Stage 6 weekly merge needed.
 - NQ count (75 total cumulative) is high; triage needed for Stage 3/6.
 
 ---

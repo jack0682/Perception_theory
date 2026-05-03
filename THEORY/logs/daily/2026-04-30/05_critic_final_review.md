@@ -90,11 +90,11 @@ Caveat explicit content:
 **Issue**: 7 sub-items × PARTIALLY RESOLVED ≠ OP-0009 RESOLVED. Framing in 99_summary.md as "OP-0009 framework-level addressed" is over-claim.
 
 **Critic Recommendation**:
-1. Update `open_problems.md` OP-0009 entry with explicit sub-item status table (currently in working files only).
+1. Update `theorem_status.md` OP-0009 entry with explicit sub-item status table (currently in working files only).
 2. Avoid framing CV-1.6 as "OP-0009 resolved" — frame as "OP-0009 framework + 1/7 sub-items closed (K via Commitment 16) + 6/7 sub-items partially addressed".
 3. Calibrate Stretch ladder claim — "Theory Deepening Stretch ✅ 100%" is over-graded.
 
-**Status post-Critic**: open_problems.md OP-0009 sub-item table 추가 작업 in progress (this daily session).
+**Status post-Critic**: theorem_status.md OP-0009 sub-item table 추가 작업 in progress (this daily session).
 
 ### §4.4 MAJOR-4: Tool A4 Quantitative Comparison Missing
 
@@ -128,7 +128,7 @@ Caveat explicit content:
 1. ✅ **CRITICAL-1 fixed** (immediate): Specht 1933 → Specht 1935 in 3 remaining files (canonical.md, theorem_status.md, multi_formation_sigma.md). DONE post-Critic.
 2. ✅ **CRITICAL-2 fixed** (already done pre-Critic): R23 Generic State Caveat at canonical T-σ-multi-A-Static.
 3. **MAJOR-1 + MAJOR-2 acknowledged**: User retroactive confirmation request — pending Day 5 morning.
-4. **MAJOR-3 acknowledged**: open_problems.md OP-0009 sub-item table — pending Day 5 morning.
+4. **MAJOR-3 acknowledged**: theorem_status.md OP-0009 sub-item table — pending Day 5 morning.
 5. (W6 OAT-3 expansion): MAJOR-4 Tool A4 quantitative comparison.
 
 ---
@@ -169,7 +169,7 @@ Before canonical Cat A merge with empirical anchor claim:
 
 ### §9.4 OP-0009 status table propagation
 
-`open_problems.md` OP-0009 entry should contain explicit 7-row sub-item status table to prevent future inflated-resolution claims.
+`theorem_status.md` OP-0009 entry should contain explicit 7-row sub-item status table to prevent future inflated-resolution claims.
 
 ---
 
@@ -200,7 +200,7 @@ Critic started in THOROUGH mode. After Phase 2 verification surfaced:
 1. ✅ **DONE**: 3 remaining Specht 1933 → 1935 fixes (canonical.md, theorem_status.md, multi_formation_sigma.md).
 2. ✅ **DONE**: 7 citation corrections applied to 5+ working/daily files.
 3. **TODO Day 5 morning**: User retroactive confirmation request (MAJOR-1 + MAJOR-2).
-4. **TODO Day 5 morning**: open_problems.md OP-0009 sub-item table (MAJOR-3) — *완료 if pending Day 4 EOD edit*.
+4. **TODO Day 5 morning**: theorem_status.md OP-0009 sub-item table (MAJOR-3) — *완료 if pending Day 4 EOD edit*.
 5. **TODO Day 5 morning**: NQ-244 background launch + git commit + W5 weekly_summary 시작.
 
 ---

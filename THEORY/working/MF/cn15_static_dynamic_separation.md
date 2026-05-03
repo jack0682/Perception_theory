@@ -68,7 +68,7 @@ $\widetilde\Sigma^K_M$.
 readings. Commitment 16 K_field/K_act decomposition is the modeling-layer 
 realization of CN15.
 
-References: W4 OP-0001 F-1 SPLIT-RESOLVED (open_problems.md §OP-0001); 
+References: W4 OP-0001 F-1 SPLIT-RESOLVED (`THEORY/canonical/theorem_status.md` Open Problems Catalog §OP-0001); 
 canonical §13 T-Merge (b), T-PreObj-1, T-PreObj-1G; canonical §11.1 Commitment 16; 
 working/MF/cn15_static_dynamic_separation.md (this file); 
 working/MF/formation_birth_string_breaking.md §4.3 (Claim 4.3 noiseless-flow 
