@@ -86,7 +86,7 @@ cd CODE && python3 -m pytest tests/ -v
 
 ### Tests
 
-- Run `cd CODE && python3 -m pytest tests/` after any code change. 175 must pass.
+- Run `cd CODE && python3 -m pytest tests/` after any code change. Current baseline: **215 passed, 1 xfailed** (216 collected; verified 2026-05-04). Update this number when adding tests.
 - Test count delta → append entry to `THEORY/CHANGELOG.md`.
 - Signature change → grep callers and update.
 - Extend existing modules before adding new `scc/*.py`.

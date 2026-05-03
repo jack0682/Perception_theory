@@ -92,9 +92,9 @@ last_updated: 2026-05-02
 |------|------|--------|----------|--------|-------|-------------|-------|
 | **T-σ-Lemma-1** | σ-Framework Irrep Decomposition Well-Defined | accepted | A | C-0712 | P-0712 | (theoretical, finite-group rep theory) | Hessian commutes with $G_u$-action; isotypic decomposition via Maschke + Schur; finite-graph hypothesis essential; trivial-stabilizer case vacuous |
 | **T-σ-Lemma-2** | σ-Framework Nodal Count Properties | accepted | A (i,ii,iii,iv) + C (v,vi conditional) | C-0713 | P-0713 | (theoretical + W4-04-25 NQ-141 32×32 numerical) | Graph-intrinsic + Aut(G)-equivariance + lower bound $\geq 2$ + sign-flip Cat A; Courant upper bound + $G_u$-orbit divisibility Cat C |
-| **T-σ-Lemma-3** | Goldstone–ℓ=1 Angular Saturation | accepted | A (continuum) | C-0714 | P-0714 | W4-04-26 NQ-170c 2D torus L=20 ζ=0.5 (overlap 0.97) | IBP identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$; Goldstone basis automatically ℓ=1; nodal count = 2 universal (anchors T-V5b-T-(e)) |
-| **T-σ-Theorem-3** | σ at Uniform on $D_4$ Free-BC Grid (Closed Form) | accepted | A | C-0715 | P-0715 | exp_hessian_uniform_v2 (NQ-141 W4-04-25, $L = 4$ to $32$, $< 10^{-9}$ precision) | $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$; full $D_4$ irrep table on cosine basis; $\mathcal{N}(\phi_{(p,q)}) = (p+1)(q+1)$ |
-| **T-σ-Theorem-4** | σ at First Pitchfork on $D_4$ Free-BC Grid (Leading Order) | accepted | A in $\epsilon$-small regime | C-0716 | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | $D_4 \to \mathbb{Z}_2$ symmetry breaking; Mode 0 trivial irrep / Mode 1 sign irrep split; $\mathcal{F}$ tie-break NQ-143/NQ-184 |
+| **T-σ-Lemma-3** | Goldstone–ℓ=1 Angular Saturation | accepted | A (continuum) | C-0714 | P-0714 | W4-04-26 NQ-170c 2D torus L=20 ζ=0.5 (overlap 0.97) | IBP identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-c_d \int u^*(r)\, dr, 0)$ *(corrected per canonical.md Errata Round 1, 2026-04-27 evening; original brief stated $(-m, 0)$ which was a Jacobian error)*; Goldstone basis automatically ℓ=1; nodal count = 2 universal (anchors T-V5b-T-(e)) |
+| **T-σ-Theorem-3** | σ at Uniform on $D_4$ Free-BC Grid (Closed Form) | accepted | A | C-0715 | P-0715 | exp_hessian_uniform_v2 (NQ-141 W4-04-25, $L = 4$ to $32$, $< 10^{-9}$ precision) | $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$; full $D_4$ irrep table on cosine basis; $\mathcal{N}(\phi_{(p,q)}) = (p+1)(q+1)$. *(Erratum 2026-04-27 Round 1: §13 worked example originally listed irrep label A_1 for the $(1,1)$ singlet; corrected to B_2.)* |
+| **T-σ-Theorem-4** | σ at First Pitchfork on $D_4$ Free-BC Grid (Leading Order) | accepted at CV-1.5; **Cat A → Cat B retroactive at CV-1.5.1 (2026-04-29)** per Critic 7-agent verdict (Errata Round 1 found the original "$0 < K_1 < K_0$ would-be transverse Goldstone" framing categorically inapplicable to $D_4 \to \mathbb{Z}_2$ discrete symmetry breaking; corrected statement is leading-order degeneracy $K_0 = K_1 = 4\|W''(c)\|\epsilon$ on $D_4$, distinguishable only by irrep label, so Mode 0 = Mode 1 numerically and Cat A label was assigned with internal Morse-index contradiction at merge time). NQ-187 (Wave 3, 2026-04-30) numerical $p \approx 1.03$ at $L = 16$ further refutes both $p = 2$ (predicted) and $p = 3/2$ (alternative). Cat A re-promotion deferred to CV-1.7+ post-γ/β/α path audit. | B (was A in $\epsilon$-small regime at CV-1.5) | C-0716 | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | $D_4 \to \mathbb{Z}_2$ symmetry breaking; corrected Mode 0 trivial irrep / Mode 1 sign irrep both with eigenvalue $4\|W''(c)\|\epsilon$ (degenerate at leading order on $D_4$); $\mathcal{F}$ tie-break NQ-143/NQ-184; NQ-187 finite-$L$ ratio $\approx 1$ pending γ-path Σ_m-Hessian convention audit. |
 
 **v1.4 → v1.5 release notes (2026-04-27)**:
 - Added: 5 Cat A entries (T-σ-Lemma-1 + T-σ-Lemma-2 + T-σ-Lemma-3 + T-σ-Theorem-3 + T-σ-Theorem-4) — σ-framework supporting structures grounding Commitment 14.
@@ -191,9 +191,9 @@ last_updated: 2026-05-02
 | **C-0711** | V5b-F Partial Goldstone on Boundary-Modified Graphs | tentative | C | P-0711 | E-0096 (free BC partial) | New 2026-04-26 (W4 extended). Cat C new finding. NQ-173 quantification carry. |
 | **C-0712** | T-σ-Lemma-1 σ-Framework Irrep Decomposition Well-Defined | ✅ **accepted Cat A** | A | P-0712 | (theoretical, Maschke + Schur orthogonality) | New 2026-04-27 (W5 Day 1 G0). Hessian-$G_u$ commutation + canonical isotypic projector. Finite-graph hypothesis essential. |
 | **C-0713** | T-σ-Lemma-2 σ-Framework Nodal Count Properties | ✅ **accepted Cat A** (i,ii,iii,iv) + Cat C riders (v,vi) | A/C-split | P-0713 | NQ-141 (W4-04-25 R23 32×32 empirical) | New 2026-04-27 (W5 Day 1 G0). Lower bound $\mathcal{N} \geq 2$ corrected from "constant" template; orbit divisibility restricted to non-invariant case. |
-| **C-0714** | T-σ-Lemma-3 Goldstone–ℓ=1 Angular Saturation | ✅ **accepted Cat A** in continuum | A | P-0714 | NQ-170c (W4-04-26 2D torus ζ=0.5 overlap 0.97) | New 2026-04-27 (W5 Day 1 G0). IBP saturation identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$. Anchors T-V5b-T-(e) Goldstone nodal=2 universal. |
-| **C-0715** | T-σ-Theorem-3 σ at Uniform on $D_4$ Grid (Closed Form) | ✅ **accepted Cat A** | A | P-0715 | exp_hessian_uniform_v2 (NQ-141, $L = 4$ to $32$, $< 10^{-9}$ precision) | New 2026-04-27 (W5 Day 1 G0). $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ closed form. |
-| **C-0716** | T-σ-Theorem-4 σ at First Pitchfork (Leading Order) | ✅ **accepted Cat A** in $\epsilon$-small regime | A | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | New 2026-04-27 (W5 Day 1 G0). $D_4 \to \mathbb{Z}_2$ symmetry breaking; trivial vs sign irrep split. $\mathcal{F}$ tie-break NQ-143/NQ-184. |
+| **C-0714** | T-σ-Lemma-3 Goldstone–ℓ=1 Angular Saturation | accepted Cat A in continuum | A | P-0714 | NQ-170c (W4-04-26 2D torus ζ=0.5 overlap 0.97) | New 2026-04-27 (W5 Day 1 G0). IBP saturation identity $\mathcal{P}_{\ell=1}[\delta u_x] = (-c_d \int u^*(r)\, dr, 0)$ *(Erratum 2026-04-27 Round 1: original brief stated $(-m, 0)$ which was a Jacobian error)*. Anchors T-V5b-T-(e) Goldstone nodal=2 universal. |
+| **C-0715** | T-σ-Theorem-3 σ at Uniform on $D_4$ Grid (Closed Form) | accepted Cat A | A | P-0715 | exp_hessian_uniform_v2 (NQ-141, $L = 4$ to $32$, $< 10^{-9}$ precision) | New 2026-04-27 (W5 Day 1 G0). $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ closed form. *(Erratum 2026-04-27 Round 1: §13 worked example originally listed irrep label A_1 for the $(1,1)$ singlet; corrected to B_2.)* |
+| **C-0716** | T-σ-Theorem-4 σ at First Pitchfork (Leading Order) | Cat A → Cat B retroactive (CV-1.5.1, 2026-04-29) per Critic 7-agent verdict + Errata Round 1 (Morse-index inconsistency at original merge time); NQ-187 (Wave 3, 2026-04-30) numerical $p \approx 1.03$ at $L = 16$ further refutes leading-order claim. Cat A re-promotion deferred to CV-1.7+ post-γ/β/α path audit. | B (was A) | P-0716 | (theoretical via T-Birth-Parametric + R22 axis-aligned) | New 2026-04-27 (W5 Day 1 G0); retroactively downgraded 2026-04-29. $D_4 \to \mathbb{Z}_2$ symmetry breaking; corrected Mode 0 = Mode 1 = $4\|W''(c)\|\epsilon$ (degenerate at leading order on $D_4$, distinguishable only by irrep label). $\mathcal{F}$ tie-break NQ-143/NQ-184. NQ-187 finite-$L$ ratio $\approx 1$ pending γ-path audit. |
 
 ---
 
@@ -296,19 +296,33 @@ last_updated: 2026-05-02
 
 ---
 
-## Open Problems (OP-xxxx) — Updated 2026-04-25 (W4 close)
+## Open Problems (OP-xxxx) — Updated 2026-05-04 (audit pass; OP-ID system unified per `open_problems.md` as master)
+
+> Note (2026-05-04 audit): the OP-ID system in this file previously used a different numbering than `open_problems.md` (the authoritative registry). The table below has been re-synced to use `open_problems.md` IDs. Severity flags are kept in plain-text form per project documentation policy (Critical / High / Medium / Low) instead of color emojis.
 
 | OP-ID | Problem | Severity | Status | Blocker For |
 |-------|---------|----------|--------|-------------|
-| **OP-0001** | F-1: K=2 vacuous | 🔴 ~~CRITICAL~~ → ✅ | **SPLIT-RESOLVED (2026-04-24)** | (no longer blocking) |
-| **OP-0002** | M-1: K=1 preferred | 🔴 ~~CRITICAL~~ → ✅ | **LAYER-CLARIFIED (2026-04-24)** — proved theorem misframed | (no longer blocking) |
-| **OP-0003** | MO-1: Morse fails | 🟠 ~~HIGH~~ → ⚪ | **SIDESTEPPED (2026-04-24)** for single-formation σ scope | Multi-formation σ Phase 5 (re-engages) |
-| **OP-0004** | Boundary definition precision | 🟡 MEDIUM | tentative (D-0004) | Morphology formalization |
-| **OP-0005** | Transport kernel exact form | 🟡 MEDIUM | tentative | Full persist theorem |
-| **OP-0006** | Type A/B characterization | 🟠 HIGH | challenged (exp65) | Branch selection theory |
-| **OP-0007** | Dynamic topology | 🟢 LOW | seed | Future multi-scale extension |
+| **OP-0001** | F-1: K=2 vacuous | (was Critical) Resolved | SPLIT-RESOLVED (2026-04-24) via T-PreObj-1 (i) + T-Merge (b) | (no longer blocking) |
+| **OP-0002** | M-1: K=1 preferred | (was Critical) Resolved | LAYER-CLARIFIED (2026-04-24) — proved theorem misframed | (no longer blocking) |
+| **OP-0003** | MO-1: Morse fails | (was High) Sidestepped | SIDESTEPPED (2026-04-24) for single-formation σ scope; re-activation rider on D-6b approval or NQ-248 multi-formation Morse work | Multi-formation σ Phase 5 (re-engages) |
+| **OP-0004** | Type A/B Classification Invalidation | High | RETRACTED (empirically invalidated; exp65 0/4 Type B observed) | Branch selection narrative |
+| **OP-0005** | K Selection Mechanism (Missing) | High | OPEN; partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16); CV-1.7+ Commitment 19 candidate | Multi-formation completeness |
+| **OP-0006** | Boundary Definition Precision | High | TENTATIVE (D-0013 in development) | Morphology formalization, Q_morph |
+| **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | OPEN (CV-1.5.1, W5 Day 4); Path B σ-rich + Φ-rich Cat B target; CV-1.7 Commitment 18 candidate | Dynamic σ-framework |
+| **OP-0009** | Multi-Formation Ontological Foundations | High | OPEN (CV-1.5.1, W5 Day 4; 7 sub-items); 1/7 RESOLVED via Commitment 16 (OP-0009-K), 6/7 PARTIALLY (per body of `open_problems.md`; the post-OAT table marks some as "RESOLVED" but the conservative reading is PARTIALLY) | Multi-formation σ + reservoir architecture |
+| **OP-0010** | Bind Generalization | Medium | OPEN | Bind diagnostic completeness |
+| **OP-0011** | Transport kernel exact form | Medium | TENTATIVE | Full persist theorem |
+| **OP-0012** | Persistence composition | Medium | OPEN | Persist diagnostic completeness |
+| **OP-0013** | Closure operator convergence rate | Medium | OPEN | A3 sharpness |
+| **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file) | Future multi-scale extension |
+| **OP-0021** | (see `open_problems.md`) | Low | seed | — |
+| **OP-0022** | (see `open_problems.md`) | Low | seed | — |
 
-**W4 changes (2026-04-25):** Critical blockers 3 → **0**. F-1/M-1/MO-1 all resolved/clarified/sidestepped via Theorem 2 family + T-Merge(b) + σ-framework single-formation scope. See `open_problems.md` for detailed entries.
+**W4 changes (2026-04-25):** Critical blockers 3 → 0. F-1 / M-1 / MO-1 all resolved / clarified / sidestepped via T-PreObj-1 family + T-Merge(b) + σ-framework single-formation scope.
+
+**W5 changes (2026-04-29 CV-1.5.1 + 2026-04-30 W5 Day 4):** OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations registered High. OP-0009-K resolved via Commitment 16. OP-0003 MO-1 re-activation rider added.
+
+See `open_problems.md` for detailed body-level entries.
 
 ---
 
@@ -321,8 +335,8 @@ last_updated: 2026-05-02
 | **Category C (Very Conditional)** | 5 + 1 (new finding) + 2 (W5 Day 1 sub-statements within T-σ-Lemma-2) | T-Bind-Full (general τ), T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Weak; V5b-F (new finding 2026-04-26, NQ-173 carry); T-σ-Lemma-2 (v) Courant upper bound + (vi) $G_u$-orbit divisibility (W5 Day 1 sub-statements bundled in single Cat A parent entry) |
 | **Resolved/Clarified/Sidestepped (W4)** | 3 | C-0550 (F-1 split-resolved), C-0551 (M-1 layer-clarified), C-0552 (MO-1 sidestepped) |
 | **Challenged** | 1 | C-0553 (Type A/B) |
-| **Retracted** | 2 | K-Saddle Conjecture, r̄₀ general τ |
-| **Open (active)** | **6** (was 4 pre-W5; +2 W5 Day 4 HIGH OP registrations) | OP-0004, OP-0005, OP-0006, OP-0007 (Critical W4 해소 후 잔존 4건) + **OP-0008 σ^A K-jump non-determinism (HIGH, CV-1.5.1 W5 Day 4)** + **OP-0009 Multi-Formation Ontological Foundations (HIGH, CV-1.5.1 W5 Day 4; 7 sub-items, 1/7 OP-0009-K RESOLVED via Commitment 16)**. OP-0003 MO-1 re-activation rider added (D-6b approval or NQ-248 multi-formation Morse work begins → 🟠 HIGH automatic). |
+| **Retracted** | 5 | K-Saddle Conjecture; r̄₀ general τ (Theorem 3.3); T-Merge (c); T-Merge (d); T-Merge (e). *(Corrected 2026-05-04 audit: prior "2" entry was inconsistent with `canonical.md` §13 Retracted block which catalogues 5 distinct retractions.)* |
+| **Open (active)** | **High: 4 (OP-0005 K-Selection, OP-0006 Boundary, OP-0008 σ^A K-jump, OP-0009 Multi-Formation Foundations); Medium: 4 (OP-0010..OP-0013); Low: 3 (OP-0020..OP-0022)** — total 11. OP-0001/0002 resolved (W4); OP-0003 sidestepped with re-activation rider; OP-0004 retracted (Type A/B). | OP-0005 K-Selection partial via 4-layer composite (CV-1.7+ candidate); OP-0008 σ^A K-jump (Path B σ-rich + Φ-rich Cat B target, CV-1.7 Commitment 18 candidate); OP-0009 7 sub-items (1/7 RESOLVED via Commitment 16, 6/7 PARTIALLY per `open_problems.md` body). |
 | **Reproducibility crises identified+resolved** | 1 | NQ-172 (mode-indexing artifact, 2026-04-26 resolved) |
 | **W4-extended carry NQ** | 3 (G1/G2/G4) | NQ-173 (V5b-F partial Goldstone — G1 W5 Day 1), NQ-174 (ζ_* graph-dependence — G2 W5 Day 2-3), NQ-175 (3D extension — G4 W5 Day 5) |
 | **W5 Day 1 G0 spawn NQ** | 11 (NQ-176..NQ-186) | NQ-176/177 (functoriality, multi-irrep ordering — Lemma 1); NQ-178/179 (frustration bound, orbit sharpening — Lemma 2); NQ-180/181 (discrete correction, higher-ℓ analog — Lemma 3); NQ-182/183 (discrete nodal count, periodic-BC analog — Theorem 3); NQ-184/185/186 (tie-break, higher pitchforks, cascade — Theorem 4) |
@@ -361,16 +375,15 @@ last_updated: 2026-05-02
 
 ---
 
-**Last updated:** 2026-05-02 (W5 Day 6 + CV-1.5.2 T-L1-F canonical promotion)
+**Last updated:** 2026-05-04 (audit pass; OP-ID system unified, working content moved out per CLAUDE.md contamination barrier)
 **Total canonical theorems:** **56** = **46 Cat A** + 5 Cat B + 5 Cat C — 5 retracted (**61 claims, 75% fully proved**)
-**Open problems:** **6 active** (was 4 pre-W5; +2 HIGH W5 Day 4 OP-0008/OP-0009) — Critical 3건 (F-1, M-1, MO-1) W4에서 해소
+**Open problems:** see Open Problems table above (4 High + 4 Medium + 3 Low active; 3 Critical resolved in W4; 1 retracted)
+
+**Note (2026-05-04 audit):** prior versions of this section listed forward-looking content ("W5 Day 7 working draft", "Pending W6+", "Future-stale items pending CV-1.6 release") that belong in `THEORY/CHANGELOG.md` (chronological session log) and `THEORY/logs/weekly/...strategic_plan.md` (forward planning). Per CLAUDE.md contamination barrier ("canonical/ accepts only promoted content"), those forward-looking lines were moved out of this canonical-layer file. The W5 Day 7 L1-M soft-count working draft, the pending W6+ promotion targets, and the future-stale list are recorded in CHANGELOG.md (2026-05-04 audit-pass entry).
+
 **Recent W4 additions (2026-04-25)**: T-PreObj-1, T-PreObj-1G, Lemma 4 (Pre-Objective Mechanism graph-class independent), Commitment 14/15, CN15/16/17.
 **W4 extended addition (2026-04-26)**: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) — sub/super-lattice dichotomy on torus T^d, cycle C_n; 2D doublet commensurability split; 1D Goldstone; nodal count = 2 universal. V5b 8-iteration cycle resolved.
-**W5 Day 1 G0 addition (2026-04-27, CV-1.5)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted). **Round-1 (3 numerical errors) + Round-2 (11 structural issues) audit applied same session.**
-**W5 Day 4 addition (2026-04-30, CV-1.5.1)**: D-6a multi-formation σ static (3 Cat A: T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static) + 1 Cat B target (T-σ-Multi-1 Goldstone-pair instability) + Commitment 16 K-status Two-Tier Decomposition (K_field/K_act; resolves OP-0009-K). T-σ-Theorem-4 Cat A → Cat B retroactive (NQ-187 RED finding + Critic 7-agent verdict). OP-0008 + OP-0009 registered HIGH; OP-0003 MO-1 re-activation rider added.
-**W5 Day 5 reconciliation (2026-05-01)**: 47 working files / 15,805 lines audited; 9 retractions documented (R-1..R-9); CV-1.6 packet recalibrated 11 → effective 10 D-items; CV-1.7 parking lot discipline (17 files / ~8145 lines) introduced.
-**W5 Day 6 addition (2026-05-02, CV-1.5.2 — current)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step working chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4) completed. Open problems unchanged (T-L1-F not solving OP-0005/OP-0008 explicitly).
-**W5 Day 7 working draft (2026-05-03)**: L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ envelope class; Cat-B sketched (Lemma L-M-1 Cat A absolute + Lemma L-M-2 sketched edge-band emptiness + Theorem L-M conditional); CV-1.6 promotion target via L1-M-AUDIT (W6 G1, ~2-3 days).
-**Pending W6+ (CV-1.6 release target W6 D7 EOD 2026-05-10)**: T-L1-M Cat A conditional new entry (post-L1-M-AUDIT); T-σ-Theorem-4 Cat A re-promotion attempt (post-γ-path Σ_m-Hessian convention audit); D-6a Schramm/CN15/N-1 Kramers integration; OP-0009-F + OP-0009-λ PARTIAL → READY upgrade (post-OAT-2/OAT-3 short integration).
-**Future-stale items pending CV-1.6 release**: above pending entries + open_problems.md `last_updated` synchronization + CHANGELOG.md W5 Day 5/6/7 entries (release-day 머지 in progress).
+**W5 Day 1 G0 addition (2026-04-27, CV-1.5)**: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14 in §13 directly. Option α (5 separate entries). Pre-brainstorm corrections folded in (finite-graph hypothesis explicit, Lemma 2 (iii) reframed as lower bound, Lemma 3 IBP interpretation B adopted). Round-1 (3 numerical errors) + Round-2 (11 structural issues) audit applied same session.
+**W5 Day 4 addition (2026-04-30, CV-1.5.1)**: D-6a multi-formation σ static (3 Cat A: T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static) + 1 Cat B target (T-σ-Multi-1 Goldstone-pair instability) + Commitment 16 K-status Two-Tier Decomposition (K_field/K_act; resolves OP-0009-K). T-σ-Theorem-4 Cat A → Cat B retroactive (NQ-187 RED finding + Critic 7-agent verdict). OP-0008 + OP-0009 registered High; OP-0003 MO-1 re-activation rider added.
+**W5 Day 6 addition (2026-05-02, CV-1.5.2 — current)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem. L1-A through L1-L 13-step working chain + L1-K external audit + L1-K-REPAIR cycle (R-1..R-4) completed. open_problems.md unchanged (T-L1-F is a bridge, not a K-selection mechanism).
 **See also:** `weekly_summary.md` (W4 extended close), `open_problems.md` (active OPs), `canonical.md` §13 (theorem catalog), `THEORY/logs/daily/2026-04-27/` (W5 Day 1 artifacts), `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md` (8-goal blueprint), `THEORY/CHANGELOG.md` 2026-04-27 entry.

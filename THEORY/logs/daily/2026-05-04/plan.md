@@ -271,7 +271,7 @@ Day 1 의 substantive Day 1 contribution은 **G2 single target complete (CSEH fa
 **Source files for Day 1:**
 
 - W5 close: `THEORY/logs/weekly/2026-04-W5/weekly_summary.md`
-- W6 strategic plan: `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (especially §6.1 Day 1 Block 1-5)
+- W6 strategic plan: ~~`THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (especially §6.1 Day 1 Block 1-5)~~ — *(File deleted 2026-05-04 audit pass; the plan silently downgraded the CV-1.7 parking-lot dispatch from "audit" to "checklist preparation only" and contained internal arithmetic inconsistencies — see CHANGELOG 2026-05-04 entry. Replacement plan for the parking-lot work: `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`. A new W6 strategic plan is to be redesigned per user decision.)*
 - L1-M working draft: `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md`
 - L1-M exploration: `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md`
 - L1-M integration: `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md`

@@ -2,7 +2,54 @@
 
 ---
 
-## 2026-05-04 — Repository Audit & Hygiene Pass (No Theorem Edits)
+## 2026-05-04 (Pass 2) — Theory-Consistency Audit + Structural Decisions
+
+Second audit pass on 2026-05-04. Triggered by user request for a precise re-review of all documents (~450 findings across 7 parallel exploration agents). The first pass (Pass 1, also recorded in this entry below) handled the test count, canonical version drift, daily-log structural anomalies, paper draft removal, root-level draft cleanup, and `.omx` untracking. This Pass 2 handles the deeper theory-consistency findings.
+
+### Findings of note (Pass 2)
+
+1. **Two incompatible OP-ID systems** between `theorem_status.md` and `open_problems.md` — same OP-IDs (OP-0004, OP-0005, OP-0006, OP-0007) referred to different problems in each file.
+2. **`canonical.md` §15 closing summary** was two versions stale (CV-1.5 wording, 45A/60 claims, T-L1-F unmentioned).
+3. **Errata Round 1 corrections** (T-σ-Lemma-3 IBP identity, T-σ-Theorem-3 worked example) were applied in `canonical.md` body but never propagated to `theorem_status.md` brief rows.
+4. **Retraction count** disagreed between `canonical.md` §13 (5 retracted, properly enumerated) and `theorem_status.md` Proof Status Summary table (2 retracted).
+5. **T-L1-F Cat A status** is honest as "conditional under L1-J regime" but the conditional regime fails on production WQ-1 dynamics (P7 fails for the build_initial_state mass-projection); this caveat was not visible from the canonical entry alone.
+6. **L-M draft (Cat-B sketched)** was inflated to "Cat-A conditional" in the proposed canonical insertion text in `2026-05-03/03_L1M_canonical_integration_and_NQ.md` §2.1.
+7. **W6 strategic plan** had silently downgraded the CV-1.7 parking-lot dispatch from "audit" to "prompt skeleton preparation"; arithmetic inconsistencies (62 vs 75 vs 144 hours) and Decision Tree contradictions about G3 blocking status.
+8. **Pipeline diagram** disagreed across four meta-docs (3-stage simple in CLAUDE.md / CONVENTIONS.md / working/README.md / MAIN_PROMPT.md; 4-stage weekly rotation in canonical/README.md / logs/README.md).
+9. **CONVENTIONS.md** still said "175 must pass" after Pass 1 had already updated CHANGELOG / W6 plan / CODE README / CLAUDE.md / W5 weekly_summary; CONVENTIONS.md was the only file Pass 1 missed.
+10. **Parent `Perception/CLAUDE.md`** was thoroughly stale: "174 tests, 27 theorems proved", "Canonical Spec v2.1.md (1096 lines)", references to non-existent `Agent Instructions.md`, references to deleted paper drafts.
+
+### Actions (Pass 2)
+
+- **OP-ID system unified.** `theorem_status.md` Open Problems table re-synced to `open_problems.md` IDs (the latter is now the master). OP-0004 (Type A/B retracted), OP-0005 (K-Selection High), OP-0006 (Boundary precision High), OP-0008 (σ^A K-jump High), OP-0009 (Multi-Formation Foundations High, 7 sub-items). Pre-CV-1.5 IDs OP-0004/0005/0006/0007 (Boundary / Transport / Type A/B / Dynamic-topology) in `theorem_status.md` are now consistent with `open_problems.md`. The Proof Status Summary "Open (active)" row was rewritten to enumerate by severity (4 High + 4 Medium + 3 Low = 11 active total).
+- **canonical.md §15 rewritten** for CV-1.5.2 baseline (46A / 5B / 5C / 5R = 61 claims) with explicit T-L1-F mention, explicit non-claims, explicit P7 caveat about WQ-1 production dynamics being outside the L1-J regime, updated remaining-research-extensions list (now numbers L1-M, T-σ-Theorem-4 re-promotion, OP-0008 σ-rich, OP-0005 K-Selection composite, OP-0009 sub-items, etc. as concrete CV-1.6/1.7 candidates).
+- **Errata Round 1 corrections propagated** to `theorem_status.md` rows for T-σ-Lemma-3 (line 95 + C-0714 detail row), T-σ-Theorem-3 (C-0715 detail row), T-σ-Theorem-4 (line 97 + C-0716 detail row, including the retroactive Cat A → Cat B downgrade explanation and the NQ-187 Wave 3 numerical refutation context).
+- **Retraction count corrected** in `theorem_status.md` Proof Status Summary (2 → 5; the 5 retractions are K-Saddle Conjecture, r̄₀ general τ / Theorem 3.3, T-Merge (c), T-Merge (d), T-Merge (e), matching `canonical.md` §13 Retracted block).
+- **L-M draft promoted to working/MF/.** `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` content copied to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with a working-grade header that is explicit about Cat-B sketched status, the three open R-items (R-1 / R-2 / R-3), and the L1-M-AUDIT promotion path.
+- **Cat-A inflation in proposed canonical text fixed** in `2026-05-03/03_L1M_canonical_integration_and_NQ.md` §2.1 line 74 ("**Cat-A conditional**" -> "**Cat-B sketched**" with audit note explaining why the inflation was wrong).
+- **W6 strategic plan deleted** (`THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md`, ~1,691 lines). User decision: delete then redesign. The replacement parking-lot plan is at `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`. A new W6 strategic plan is to be drafted per user decision; the current `2026-05-04/plan.md` no longer references the deleted strategic plan.
+- **Parking-lot plan created.** `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md` lays out a 4-stage plan (Inventory -> Per-file self-assessment -> Cluster-by-cluster critic dispatch -> Disposition) for surfacing the 17 unaudited working files (~8,145 lines) introduced during the W5 Day 4 Wave 3 burst. Estimated total: ~10 working days for the full pass. Per-cluster priority order is recommended (Reconciliation drafts first, σ-rich foundation second, K-Selection third, Commitment packets fourth).
+- **3 root-level directories deleted** (`vision_model_sketch/`, `private_brainstorm/`, root-level `experiments/`). Per user decision: not part of the canonical structure; clean up to reduce noise.
+- **Pipeline diagram unified to 3-stage** (`daily -> working -> canonical`) by rewriting `THEORY/canonical/README.md` and `THEORY/logs/README.md` (both previously described a 4-stage weekly-rotation pipeline). The 3-stage variant in `CLAUDE.md`, `CONVENTIONS.md`, `working/README.md`, and `MAIN_PROMPT.md` is now the single canonical pipeline.
+- **CONVENTIONS.md test count fixed** ("175 must pass" -> "215 passed, 1 xfailed (216 collected; verified 2026-05-04). Update this number when adding tests.").
+- **Parent `Perception/CLAUDE.md` synced** to current Perception_theory state (215+1xfailed, 61 claims, CV-1.5.2, single canonical.md file, deleted paper drafts noted, stale `Agent Instructions.md` reference removed, ontological constraints expanded to the full 5).
+
+### Decisions deferred
+
+- **NQ-187 falsification of T-σ-Theorem-4 leading-order claim**: noted in `theorem_status.md` row C-0716 brief; canonical statement modification (continuum-only vs discrete-grid clarification, or additional retraction) deferred per user decision.
+- **W6 strategic plan redesign**: delete done; redesign awaiting user direction.
+
+### Test Count Verified (still)
+
+`215 passed, 1 xfailed in 231.57s` (216 collected). No `scc/` edits in Pass 2.
+
+### Theorem Status Changes
+
+None substantive. Status accuracy of CV-1.5.2 baseline is unchanged: 46 Cat A + 5 Cat B + 5 Cat C + 5 Retracted = 61 claims, 75% fully proved. Retroactive corrections (T-σ-Theorem-4 Cat A -> Cat B at CV-1.5.1, retraction count 2 -> 5 in theorem_status, OP-ID system unification) only correct documentation drift, not theorem statements.
+
+---
+
+## 2026-05-04 (Pass 1) — Repository Audit & Hygiene Pass (No Theorem Edits)
 
 Pure cleanup session in response to user audit request. **No theorem promotions, retractions, or status changes.**
 
