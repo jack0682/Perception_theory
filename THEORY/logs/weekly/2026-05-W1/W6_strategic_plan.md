@@ -62,14 +62,32 @@ W6는 *W5의 momentum (Day 6-7 L1 line) + W5의 reconciliation discipline (Day 5
 |----|------|----------|--------|----------------|--------|-----------|
 | **G1** | L1-M-AUDIT (external audit + repair cycle) | **P0 MUST** | P1 | 2-3 days | Day 1-3 | Cat B sketched → **Cat A conditional** |
 | **G2** | NQ-L1M-2 CSEH 2007 factor-2 sharpness | **P0 MUST** | P1 | 1 day | Day 1 (single target) | Cat A absolute |
-| **G3** | γ-path Σ_m-Hessian convention audit | **P0 MUST** | P2 | 3-5 days | Day 1-3 (parallel with G1) | T-σ-Theorem-4 Cat B → **Cat A re-promotion attempt** |
-| **G4** | CV-1.6 release packet finalize | P1 | P2 | 2 days | Day 6-7 | CV-1.6 release |
+| **G3** | γ-path Σ_m-Hessian convention audit | P1 parallel audit / bonus | P2 | 3-5 days | Day 1-3 (parallel with G1; non-blocking) | T-σ-Theorem-4 Cat B → **Cat A re-promotion attempt** |
+| **G4** | CV-1.6 release packet finalize | **P0 MUST** | P2 | 2 days | Day 6-7 | CV-1.6 release |
 | **G5** | CV-1.7 parking lot critic dispatch checklist | P1 | P2 | 1 day | Day 6 | 17 files / ~8145 lines critic re-review queued |
 | **G6** | L-M extension to perturbation analysis (NQ-L1M-5) | P1 | P1 | 2-3 days | Day 4-5 | Cat B target → bridge to dynamics |
 | **G7** | OAT-2/3 short integration (F bridge + λ_rep) | P1 | P3 | 1-2 days | Day 1-2 | PARTIAL → READY for CV-1.6 |
 | **G8** | NQ-244 3D LSW analysis ($T^3_{15+}$ K=10+ t=1000+) | P2 | P3 | 1 day analysis (background launched W5 D6) | Day 4 | 3D LSW α plateau Cat B confirmation or Cat C downgrade |
 
-**Total estimated time**: ~62 hours = ~9 hours/day × 7 days. Realistic since W4/W5 averaged 8-12 hours/day; W5 Day 4 peaked at 11,800+ lines / 42 files / Wave 3 11-teammate dispatch.
+**Total estimated time**: ~62 hours = ~9 hours/day × 7 days. This is possible, but W6 is cognitively heavier than a normal expansion week because audit verdicts and release edits are mixed. Treat 62 hours as an upper-capacity budget, not as a target to fill.
+
+### 0.3.1 User Calibration (2026-05-03): Critical Path Reweighting
+
+W6 is not primarily an expansion week. It is a **sealing + promotion + release engineering week**. The critical path is:
+
+```
+G2 factor sharpness -> G1 L1-M-AUDIT / repair -> G4 CV-1.6 release
+```
+
+Operationally:
+
+- **G1 is king**: every optional task is judged by whether it helps L1-M reach Cat A conditional or improves the honesty of its failure state.
+- **G2 is the Day 1 small knife**: finish it early, then feed its factor-sharpness result into G1 repairs.
+- **G4 is non-negotiable**: a conservative CV-1.6 release is better than no CV-1.6 release.
+- **G3 is important but non-blocking**: γ-path success is a Gold-level bonus; inconclusive or failed γ-path should close as Cat B retained with caveat / W7 spillover, not consume G1/G4.
+- **Day 6-7 are release-only**: no new theorem hunting after Day 5. Day 6 builds the packet; Day 7 cuts the release and seeds W7.
+
+Default victory condition is **Silver** (§8.2): G2 complete, G1 pass or repair-complete, OAT-2/3 READY if feasible, and CV-1.6 actually released with T-L1-M included.
 
 ## 0.4 Critical Decision Points (Decision Tree)
 
@@ -82,7 +100,7 @@ L1-M-AUDIT (G1)과 γ-path audit (G3)는 모두 ~3-5일 소요. parallel 진행 
 - Option α (parallel): G1 Day 1-3 + G3 Day 1-3 동시. Day 4부터 G6/G7. *Aggressive*.
 - Option β (sequential): G3 Day 1-5 → G1 Day 5-7. CV-1.6 release Day 7 EOD까지 빠듯. *Conservative*.
 - Option γ (G1 우선): G1 Day 1-3 → G3 Day 4-6. γ-path가 W7로 일부 spillover. *L1 line 우선*.
-- **Recommendation**: Option α (W5 Day 4 Wave 3 11-teammate parallel 경험상 ~3 thread는 지속가능; γ-path와 L1-M-AUDIT은 서로 dependency 없음).
+- **Recommendation**: Option α, but with **G1/G2/G4 as the W6 critical path** and G3 as a non-blocking parallel audit. If G3 slips, preserve CV-1.6 by retaining T-σ-Theorem-4 as Cat B with caveat and moving β/repair work to W7.
 
 ### Decision 2 (Day 3 EOD): γ-path verdict 분기
 
@@ -93,6 +111,8 @@ L1-M-AUDIT (G1)과 γ-path audit (G3)는 모두 ~3-5일 소요. parallel 진행 
 - 시나리오 C (γ verdict reveals deeper structural error, e.g., R22 normal-form 자체에 issue): T-σ-Theorem-4 retract or major restatement. CV-1.6에서 제외. 별도 working file로 격리.
 
 **Critical**: 시나리오 C는 W4 N-1 reframing 같은 paradigm shift로 확장될 가능성. Day 3 EOD 사용자 검토 필수.
+
+**Non-blocking rule**: G3 cannot consume the G1/G4 release budget. Scenario B is a valid closure state, and Scenario C is quarantined into working/ rather than allowed to derail CV-1.6.
 
 ### Decision 3 (Day 5 EOD): G6 L-M perturbation depth
 
@@ -111,7 +131,7 @@ CV-1.6 release 시 inclusion 항목 결정:
 - Option B (Conservative): 5 READY + (G1 통과 시) T-L1-M only. PARTIAL caveat 항목 일부 제외. Net ~48A / 6B / 5C / 63 claims.
 - Option C (Minimal): 5 READY only + T-L1-M (G1 통과 시). PARTIAL/DEFER 모두 제외. Net ~47A / 5B / 5C / 61 claims.
 - Option D (Maximal): A + γ-path 시나리오 C 시 T-σ-Theorem-4 retraction 별도 처리.
-- **Recommendation**: Option A or B (G1/G3 verdict에 따라 결정).
+- **Recommendation**: Option A if G1 passes cleanly and G3 does not create release risk; otherwise Option B. **CV-1.6 Conservative > CV-1.6 미발행**.
 
 ### Decision 5 (Day 7 morning): W7 thread selection
 
@@ -532,7 +552,7 @@ L-M-2 §5.4에서 사용한 bottleneck-stability factor-2 ($|\ell_i - \ell_i^{(u
 - Pillar: **P1**
 - Priority: **P0 MUST** (W5 Day 7 99_summary §4.1 권고 (a) — *most important single target*)
 
-## 4.3 G3 [P0 MUST] γ-Path Σ_m-Hessian Convention Audit
+## 4.3 G3 [P1 Parallel Audit / Gold Bonus] γ-Path Σ_m-Hessian Convention Audit
 
 ### 4.3.1 Goal statement
 
@@ -601,7 +621,7 @@ W5 Day 5 §3에 명시: NQ-187b discrete-grid $A_2/A_1$ sweep on $D_4$ at L=20, 
 ### 4.3.9 Pillar / Priority
 
 - Pillar: **P2**
-- Priority: **P0 MUST** (W5 weekly_summary §7.1 P0 #3)
+- Priority: **P1 parallel audit / Gold bonus**. This remains mathematically important, but it is not allowed to block G1/G2/G4. Scenario B closes as Cat B retained with caveat; Scenario C is quarantined into working/ and W7 repair planning.
 
 ## 4.4 G4 [P1] CV-1.6 Release Packet Finalize
 
@@ -906,6 +926,22 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 
 # §6. Daily Breakdown — 7 Days × 3 Sessions
 
+## 6.0 Operational Simplification (User Calibration)
+
+Remember W6 as:
+
+```
+Mon: close G2; open G1/G3/G7.
+Tue: focus on G1 repair; finish OAT-2/3 short integration if possible.
+Wed: verdict day — G1 PASS/REPAIR/FAIL, G3 A/B/C, G7 READY/PARTIAL, CV-1.6 scope A/B/C/D.
+Thu: start G6 deeply; treat G8 as auxiliary analysis only if results are ready.
+Fri: close G6 and write the L1-N bridge.
+Sat: build CV-1.6 packet; write CV-1.7 parking-lot checklist.
+Sun: release CV-1.6; write W6 summary; choose W7 thread.
+```
+
+The practical rule is: **Day 6-7 are for release engineering, not new theory.** If a new theorem appears on Day 6-7, register it as W7 input unless it is a required repair for CV-1.6 correctness.
+
 ## 6.1 Day 1 (2026-05-04 Mon) — Triple Parallel Thread Launch
 
 **Type**: AGGRESSIVE marathon launch (mirrors W5 Day 1 G0 σ-merge + G1/G2 setup pattern)
@@ -1005,7 +1041,7 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 
 **Day 3 expected output**: 4-6 daily files. **Critical decision artifact**: G1 + G3 verdict aggregate.
 
-## 6.4 Day 4 (2026-05-07 Thu) — G6 L-M Perturbation + G8 3D LSW Analysis
+## 6.4 Day 4 (2026-05-07 Thu) — G6 L-M Perturbation Primary + G8 Auxiliary
 
 **Block 1 (09:00-10:00)** — pre-brainstorm + Day 3 decision implementation
 - G3 시나리오에 따른 W6 D4-D7 path 결정 (Day 3 EOD 사용자 결정)
@@ -1016,11 +1052,12 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 - Triangle decomposition with L-M Theorem
 - $K_{\mathrm{act}}^\varepsilon$ rigidity neighborhood radius 도출
 
-**Block 3 (14:00-17:00)** — G8 NQ-244 3D LSW analysis
+**Block 3 (14:00-17:00)** — G8 NQ-244 3D LSW analysis, only if data is ready
 - W5 Day 6 background compute output 분석
 - α LSW exponent fit (5+ seeds × $T^3_{15}$ K=10)
 - 시나리오 A/B/C 판정
 - Output: `working/MF/nq244_3d_lsw_analysis.md`
+- If G8 data is incomplete or noisy, write a short analysis note and return time to G6.
 
 **Block 4 (17:00-19:00)** — G6 L-M perturbation Part 2
 - Continuous-time gradient flow $\dot K_{\mathrm{soft}}^\phi(U(t))$ formula off vineyard
@@ -1028,7 +1065,7 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 
 **Block 5 (19:00-20:00)** — Day 4 99_summary
 
-**Day 4 expected output**: 4-6 daily files + 2 working files (`lm_perturbation_analysis.md` partial + `nq244_3d_lsw_analysis.md`).
+**Day 4 expected output**: 4-6 daily files + `lm_perturbation_analysis.md` partial. `nq244_3d_lsw_analysis.md` is optional / auxiliary.
 
 ## 6.5 Day 5 (2026-05-08 Fri) — G6 Complete + Day 6-7 Prep
 
@@ -1055,31 +1092,33 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 
 **Day 5 expected output**: 4-6 daily files + 2 working files (`lm_perturbation_analysis.md` complete + `l1n_dynamics_persistence_setup.md`) + 2 prep files.
 
-## 6.6 Day 6 (2026-05-09 Sat) — G5 Parking Lot Dispatch + G4 Packet Finalize Prep
+## 6.6 Day 6 (2026-05-09 Sat) — CV-1.6 Packet Build + CV-1.7 Parking Lot Checklist
 
-**Block 1 (09:00-10:00)** — pre-brainstorm + Day 6-7 dispatch coordination
+**Block 1 (09:00-10:00)** — pre-brainstorm + release scope lock
+- Confirm G1/G3/G7 verdicts and freeze CV-1.6 inclusion scope.
+- No new theorem work unless required to repair a release-blocking error.
 
-**Block 2 (10:00-14:00)** — G5 CV-1.7 parking lot critic dispatch (parallel)
-- 8 σ_rich foundation files → 8 teammates parallel
-- 5 K-Selection files → 5 teammates parallel
-- 4 other files → 4 teammates parallel
-- Total 17 teammates (mirrors W5 Day 4 Wave 3 11-teammate pattern + 6 추가)
-
-**Block 3 (14:00-17:00)** — G5 verdict collection + W7+ recommendation
-- Per-file critic verdict
-- Cluster-level recommendation
-- CV-1.7 release projection (W7-W9)
-- Output: `working/MF/cv17_parking_lot_critic_dispatch.md`
-
-**Block 4 (17:00-19:00)** — G4 CV-1.6 packet finalize text prep
+**Block 2 (10:00-14:00)** — G4 CV-1.6 packet build
 - canonical.md changes draft (T-L1-M new entry, optional T-σ-Theorem-4 Cat A 복원, CV-1.6 marker)
 - theorem_status.md changes draft (CV-1.6 release entry, CV-1.5.2 reflag "Previous")
-- open_problems.md changes draft (OP-0009-F + OP-0009-λ PARTIAL → READY)
+- open_problems.md changes draft (OP-0009-F + OP-0009-λ PARTIAL → READY if G7 succeeded)
 - CHANGELOG.md entry draft
+
+**Block 3 (14:00-17:00)** — G5 CV-1.7 parking lot checklist
+- 17 files inventory 정리
+- Per-file critic prompt skeletons prepared (8 σ_rich + 5 K-Selection + 4 other)
+- Verdict schema: ACCEPT / ACCEPT-WITH-RESERVATIONS / REVISE / REJECT
+- Output: `working/MF/cv17_parking_lot_critic_dispatch.md`
+- Full 17-file dispatch is optional and only allowed if the CV-1.6 packet is already stable.
+
+**Block 4 (17:00-19:00)** — release review pass
+- Cross-check `canonical.md` / `theorem_status.md` / `open_problems.md` / `CHANGELOG.md` consistency.
+- Verify non-claims: no OP-0005 / OP-0008 silent resolution; no global $K_{\mathrm{soft}}^\phi = K_{\mathrm{act}}$.
+- Prepare Day 7 execution checklist.
 
 **Block 5 (19:00-20:00)** — Day 6 99_summary + Day 7 plan seed
 
-**Day 6 expected output**: 4-6 daily files + 1 working file (`cv17_parking_lot_critic_dispatch.md`) + 4 canonical change drafts.
+**Day 6 expected output**: 4-6 daily files + 1 working file (`cv17_parking_lot_critic_dispatch.md`) + 4 canonical change drafts. The release packet matters more than completing 17 external verdicts.
 
 ## 6.7 Day 7 (2026-05-10 Sun) — CV-1.6 Release + W6 Close + W7 Plan Seed
 
@@ -1240,66 +1279,54 @@ W6 D6-D7: G4 CV-1.6 release packet finalize + G5 CV-1.7 parking lot dispatch
 
 ---
 
-# §8. Success Criteria — 4-Level Ladder
+# §8. Success Criteria — Bronze / Silver / Gold / Diamond
 
-## 8.1 Minimal Success (P0 MUST 1건 only)
+## 8.1 Bronze: Minimum Honest Success
 
-**Definition**: G1 또는 G3 둘 중 하나 PASS, 그리고 G2 complete.
-
-**Specific**: 
-- G2 NQ-L1M-2: ✅ complete (Day 1)
-- G1 L1-M-AUDIT: ✅ PASS (Day 3) → T-L1-M Cat A conditional canonical-ready
-- 또는 G3 γ-path: ✅ verdict (시나리오 A/B 둘 다 가능; 시나리오 C 시 격리)
-
-**Outcome**: CV-1.6 release possible (Conservative scope: G1 PASS only → T-L1-M Cat A new + 5 READY/READY-NEAR + PARTIAL caveat).
-
-**Counts (CV-1.6 estimate)**: ~47-48 Cat A / 5-6 Cat B / 5 Cat C / 5 R / 62-64 claims.
-
-## 8.2 Standard Success (P0 MUST 2건 + P1 일부)
-
-**Definition**: G1 PASS + G3 시나리오 A/B/C 처리 + G2 complete + G7 complete.
+**Definition**: G2 completes, G1 audit finishes with an honest status, and G4 reaches a release-candidate packet even if CV-1.6 is not cut.
 
 **Specific**:
-- G1, G2, G7: ✅ complete
-- G3: 시나리오 verdict (any)
-- G4: CV-1.6 packet finalize executed
-- G5 또는 G6: 일부 진행
+- G2 NQ-L1M-2 complete.
+- G1 L1-M-AUDIT returns PASS / REPAIR-NEEDED / FAIL, with per-refinement findings recorded.
+- L1-M either remains Cat B / repair-needed with precise blockers, or becomes canonical-ready.
+- G4 prepares a CV-1.6 release candidate, even if final release moves to W7.
 
-**Outcome**: CV-1.6 release with Recommended scope (T-L1-M new + READY + PARTIAL caveat + OP-0009-F/λ READY upgrade).
+**Outcome**: Not a failure. W6 exposes the exact L1-M debt instead of inflating the theorem.
 
-**Counts (CV-1.6 estimate)**: ~48-49 Cat A / 6 Cat B / 5 Cat C / 5 R / 64-65 claims.
+## 8.2 Silver: Default Victory
 
-## 8.3 Ambitious Success (P0 MUST 3건 + P1 전부)
-
-**Definition**: G1 PASS + G3 시나리오 A (T-σ-Theorem-4 Cat A 복원) + G2/G7 complete + G4/G5/G6/G8 모두 진행.
+**Definition**: G2 complete, G1 pass or repair-complete, G7 OAT-2/3 READY if feasible, and CV-1.6 actually released.
 
 **Specific**:
-- G1-G8 모두 complete
-- T-σ-Theorem-4 Cat A re-promotion successful
+- G2 complete on Day 1.
+- G1 L1-M-AUDIT PASS or repair-complete by Day 3-5.
+- T-L1-M included in CV-1.6 as Cat A conditional, or included with an explicitly justified weaker status if the audit requires it.
+- G7 OAT-2/3 upgrades OP-0009-F / OP-0009-λ to READY when the short integration succeeds.
+- G4 edits `canonical.md`, `theorem_status.md`, `open_problems.md`, and `CHANGELOG.md`.
 
-**Outcome**: CV-1.6 release with Maximal scope (T-L1-M new + T-σ-Theorem-4 Cat A 복원 + READY + PARTIAL caveat + OP-0009-F/λ READY).
+**Outcome**: W6 wins. SCC gets the first stable multi-formation count-theory static core: T-L1-F hard-count anchor + T-L1-M soft-count companion.
 
-**Counts (CV-1.6 estimate)**: ~50 Cat A / 6 Cat B / 5 Cat C / 5 R / 67 claims.
+## 8.3 Gold: Strong Success
 
-## 8.4 Maximal Success (Ambitious + W7 prep)
-
-**Definition**: Ambitious + W7 plan seed substantive (Option α OP-0008 entry 또는 Option γ Paper 1 draft entry seed).
+**Definition**: Silver plus meaningful forward motion on G3/G5/G6 without threatening the release.
 
 **Specific**:
-- Ambitious 모두 + 
-- G5 CV-1.7 parking lot dispatch verdict 도착 (대다수 ACCEPT)
-- G6 L-M perturbation Cat B target확보 + L1-N entry setup 완성
-- W7 plan seed (`THEORY/logs/weekly/2026-05-W2/W7_strategic_plan.md` placeholder + 1-page outline)
+- G3 γ-path reaches Scenario A and T-σ-Theorem-4 Cat A re-promotion is clean, or Scenario B/C is closed honestly with caveat/quarantine.
+- G6 produces `lm_perturbation_analysis.md` and L1-N entry setup.
+- G5 creates the CV-1.7 parking-lot critic dispatch checklist.
 
-**Outcome**: CV-1.6 release Maximal + CV-1.7 release projection W7-W9 + Paper 1 draft entry W8.
+**Outcome**: CV-1.6 is released and W7 has a clean bridge into OP-0008 / L1-N / CV-1.7 cleanup.
 
-**Counts (CV-1.6 estimate)**: ~50 Cat A / 6 Cat B / 5 Cat C / 5 R / 67 claims + W7 seeded.
+## 8.4 Diamond: Optional Overperformance With Overload Risk
 
-## 8.5 Stretch Success (Maximal + 의외 발견)
+**Definition**: Gold plus G8 3D LSW Cat B confirmation, full CV-1.7 parking-lot dispatch, and substantive W7 OP-0008 path seeding.
 
-**Definition**: Maximal + W6 동안 unforeseen substantive 발견 (e.g., L-M의 새 application, L1-N의 partial result).
+**Specific**:
+- G8 NQ-244 returns a usable 3D LSW verdict.
+- 17-file CV-1.7 parking lot dispatch is completed rather than merely checklisted.
+- W7 plan seed selects OP-0008 Path B and/or CV-1.7 critic burst with enough detail to start immediately.
 
-**Outcome**: W6는 weekly_summary 한 page에 narrative arc 정리 가능한 수준으로 closure. W7+ horizon 명료.
+**Outcome**: Excellent, but not required. Diamond must never replace Silver as the operating target.
 
 ---
 
@@ -1669,18 +1696,18 @@ Day 7 에 W7 plan은 *outline only* (1-2 pages). 본격 작성은 W7 Day 1 morni
 
 W6는 **W5의 momentum (multi-formation count theory canonical 진입)과 W5의 reconciliation discipline (정직 교정 + parking lot 격리)을 동시에 계승**하는 첫 주이다.
 
-W6 Day 1-3은 *triple-thread parallel start* (G1 L1-M-AUDIT + G2 NQ-L1M-2 + G3 γ-path) — W4 N-1 reframing 같은 paradigm shift 가능성도 열려있는 substantive audit week. Day 4-5는 *L-M perturbation analysis + 3D LSW analysis* — substantive theory work + empirical anchoring. Day 6-7은 *CV-1.6 release + CV-1.7 parking lot dispatch* — procedural closure + W7+ horizon prep.
+W6 Day 1-3은 *critical-path audit start* (G2 closes early; G1 L1-M-AUDIT owns the week; G3 γ-path runs parallel but non-blocking). Day 4-5는 *L-M perturbation primary + optional 3D LSW analysis* — substantive theory work, with G8 as auxiliary. Day 6-7은 *CV-1.6 release engineering + CV-1.7 parking lot checklist* — procedural closure + W7+ horizon prep. Day 6-7에는 새 정리 hunting 금지.
 
 W6의 outcome 시나리오는 4 levels:
-- **Minimal**: G1 PASS + G2 complete → CV-1.6 Conservative scope.
-- **Standard**: + G3 verdict + G7 complete → CV-1.6 Recommended scope.
-- **Ambitious**: + G3 시나리오 A + G4-G8 complete → CV-1.6 Maximal scope (T-L1-M new + T-σ-Theorem-4 Cat A 복원).
-- **Maximal**: + W7 plan seed substantive (Option α 또는 γ).
+- **Bronze**: G2 complete + G1 honest verdict + CV-1.6 release candidate.
+- **Silver**: G2 complete + G1 PASS/repair-complete + CV-1.6 released with T-L1-M included. **Default victory.**
+- **Gold**: Silver + G3 closed cleanly + G6 L1-N bridge + G5 parking-lot checklist.
+- **Diamond**: Gold + G8 strong verdict + full parking-lot dispatch + substantive W7 OP-0008 seed. Optional, not required.
 
 W6 close 후 W7+의 horizon은 **OP-0008 σ_rich path B 본격 entry (Option α)** + **CV-1.7 parking lot critic re-review burst (Option δ)** parallel — multi-formation theory의 *dynamic* 영역 본격 진입과 single-formation theory의 *cleanup completion* 동시 진행.
 
 **W6 종결 한 문장 (target)**: 
-> W6는 multi-formation count theory를 두 정리 (T-L1-F + T-L1-M) Cat A canonical로 완결하고, σ-framework T-σ-Theorem-4의 Cat A 복원 시도를 γ-path audit으로 시작하며, CV-1.6 release를 통해 single-formation foundation을 publication-ready 상태로 봉합한 주이다.
+> W6는 multi-formation count theory를 두 정리 (T-L1-F + T-L1-M)로 canonical static core까지 봉합하고, σ-framework T-σ-Theorem-4는 γ-path audit으로 정직하게 상태를 닫으며, CV-1.6 release를 실제로 끊은 주이다.
 
 W6는 *closure + release transition week* — W4-W5의 substantive 진보 line을 마감하고 W7+의 dynamic + parking-lot-cleanup line을 entry시키는 *bridge week*.
 
