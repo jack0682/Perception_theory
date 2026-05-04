@@ -146,7 +146,9 @@ $$H_{\ell\ell}(t^{*+}) = \Pi_{\mathrm{merge}}(\tilde H_{jk}(t^{*-}); \theta_{jk}
 
 **Status**: this is precisely Conjecture 8.1 of `sigma_rich_wigner_derivation.md` — Cat B sketch level. Cat A everywhere requires explicit projection-formula proof. **Open W9+ as (R2)**.
 
-### §6.2 Sketch of Wigner-projection mechanism
+### §6.2 Sketch of Wigner-projection mechanism (expanded W6 D1 EOD audit)
+
+#### §6.2.1 Heuristic limit picture
 
 At merger limit $\Delta_{jk}^{\mathrm{Gold}} \to 0$:
 - Goldstone-pair eigenvectors $v_+, v_-$ approach degeneracy.
@@ -155,6 +157,50 @@ At merger limit $\Delta_{jk}^{\mathrm{Gold}} \to 0$:
 - $\lambda_{jk}^{\mathrm{Gold},-}$ → 0 (post-merger translation Goldstone).
 
 The mixing angle $\theta_{jk}^{\mathrm{mix}}$ at $t^{*-}$ encodes the linear-combination coefficients; mass ratio $m_j / m_k$ encodes the relative weighting.
+
+#### §6.2.2 Matrix perturbation framework (W9+ proof target)
+
+The rigorous W9+ proof of Conjecture 6.1 requires the following framework. Refer to Kato 1980 *Perturbation Theory for Linear Operators* §II.4 and Reed-Simon IV §XIII.5 for foundational machinery.
+
+**Setup.** Along the merger trajectory $\mathbf u(t)$ for $t \in (t^* - \delta, t^* + \delta)$:
+- For $t < t^*$: $H(t)$ acts on $T_{\mathbf u(t)} \widetilde{\Sigma}_M^{K_{\mathrm{act}}(t^{*-})}$ (pre-merger tangent space).
+- At $t = t^*$: stratum-boundary crossing where formations $j, k$ merge into $\ell$. Tangent-space dimension drops by 1 (one Goldstone is preserved, the other becomes internal vibration mode).
+- For $t > t^*$: $H(t)$ acts on $T_{\mathbf u(t)} \widetilde{\Sigma}_M^{K_{\mathrm{act}}(t^{*+})}$ with $K_{\mathrm{act}}(t^{*+}) = K_{\mathrm{act}}(t^{*-}) - 1$.
+
+**Key technical ingredients required for the proof:**
+
+(a) **Analytic family lemma (Kato 1980 §II.4).** Establish that $H(t)$ extends to an analytic family of Hermitian operators on a *fixed* extended Hilbert space (containing both pre- and post-merger tangent spaces as subspaces) for $t$ in a complex neighborhood of $t^*$. This requires showing that the merger stratum is "regular" in the Whitney-stratified sense (per Tool A1 verification in `mathematical_scaffolding_4tools.md` §2.2).
+
+(b) **Newton-Puiseux normal form at the crossing.** The Goldstone-pair eigenvalues $\lambda_{jk}^{\mathrm{Gold},\pm}(t)$ have analytic continuations except at branch points. At a generic 1-parameter merger crossing, the local normal form is:
+$$\lambda_{jk}^{\mathrm{Gold},\pm}(t) = \lambda_0 \pm c \cdot (t - t^*)^{1/2} + O(t - t^*)$$
+for symmetric merger (square-root branch) — analogous to the Wigner-von Neumann avoided-crossing minimum-gap analysis (Reed-Simon IV Theorem XIII.55). For asymmetric merger, the gap stays positive and the normal form is analytic.
+
+(c) **Limiting eigenvector subspace identification.** As $t \to t^{*-}$, the 2D Goldstone-pair eigenspace $V_{\mathrm{Gold},jk}^{\mathrm{pre}} := \mathrm{span}(v_+(t), v_-(t))$ approaches a limiting 2D subspace $V^* \subset T_{\mathbf u(t^*)}$. The post-merger Goldstone subspace $V_{\mathrm{Gold},\ell}^{\mathrm{post}}$ together with the internal vibration mode form an *orthogonal decomposition* of $V^*$:
+$$V^* = V_{\mathrm{Gold},\ell}^{\mathrm{post}} \oplus \mathrm{span}(v_{\mathrm{int},\ell}).$$
+
+(d) **Explicit projection formula (target output of W9+ proof).** The projection $\Pi_{\mathrm{merge}}$ is conjectured to take the form:
+$$\Pi_{\mathrm{merge}}\bigl(\tilde H_{jk}(t^{*-}); \theta_{jk}^{\mathrm{mix}}, m_j, m_k\bigr) = R(\theta_{jk}^{\mathrm{mix}})^T \cdot \mathrm{diag}\!\left(0,\, \tilde\lambda_{\mathrm{int}}\right) \cdot R(\theta_{jk}^{\mathrm{mix}})$$
+where $R(\theta)$ is the 2×2 rotation matrix and $\tilde\lambda_{\mathrm{int}} = \lambda_{jk}^{\mathrm{Gold},+}(t^{*-}) \cdot \mu(m_j, m_k)$ with $\mu(m_j, m_k)$ a mass-rescaling factor (likely $m_j m_k / (m_j + m_k)$ by analogy with reduced-mass dynamics). **The exact form of $\mu$ is the key unknown of the conjecture** — it requires explicit computation via stratified Morse analysis at the merger boundary.
+
+(e) **Continuity / matching condition.** Establish $\lim_{t \to t^{*-}} \tilde H_{jk}(t)|_{V_{\mathrm{Gold}}}$ matches $H_{\ell\ell}(t^{*+})|_{V_{\mathrm{Gold},\ell}^{\mathrm{post}} \oplus \mathrm{span}(v_{\mathrm{int}})}$ via the projection above. This is a singular-limit theorem analogous to the slow-fast reduction in dynamical systems but with Hessian operators rather than vector fields.
+
+**Estimated effort for rigorous proof**: 4-6 weeks of theoretical work (W9-W12), per Cluster A audit. Requires expertise in matrix-analytic perturbation theory + stratified spaces + spectral-flow analysis. Independent attempt by external prover-style agent recommended pre-promotion (analogous to L1-K external audit pattern).
+
+#### §6.2.3 Failure modes (potential falsification routes)
+
+If Conjecture 6.1 fails, Φ_rich determinism (Theorem 7.1) breaks. Falsification routes worth registering:
+
+1. **Multi-formation simultaneous merger** ($\ge 3$ formations merge at $t^*$): the Goldstone-pair sub-Hessian framework does not directly apply; conjecture would need extension to higher-order Wigner-projection. Currently scoped out by hypothesis (H1) "single pair merger at $t^*$".
+
+2. **Asymmetric merger with persistent gap**: if $\Delta_{jk}^{\mathrm{Gold}}(t^{*-}) > 0$ at merger time (no true crossing), the eigenspace bundle is regular through $t^*$ and the projection is *trivial* (analytic continuation). The interesting case (and the conjecture's substance) is symmetric merger with $\Delta \to 0$.
+
+3. **Non-generic Goldstone-pair true crossing**: at the symmetric merger limit, Newton-Puiseux normal form may degenerate to higher-order branching (cube-root, etc.) requiring case analysis.
+
+4. **Non-translation-invariant graph**: Goldstones may not be exact zero modes; "Goldstone-pair" interpretation requires extension via approximate-Goldstone theorems (Cluster F `working/MF/n1_kramers_extension.md` partial reference).
+
+5. **Coupling-strength regime breakdown**: if $\lambda_{\mathrm{rep}}$ is too large (strong coupling), the cross-block 2×2 sub-Hessian framework (`sigma_rich_wigner_derivation.md` §2.1) may no longer accurately reduce to the pair-wise picture; conjecture validity restricted to weak-coupling regime.
+
+**NQ-242c-Rich numerical anchor (per `nq242c_explicit_construction.md`)** is the primary Cat B target: numerical verification on the equilateral vs isoceles triangle construction (`sigma_rich_augmentation.md` §4) provides empirical evidence for or against Conjecture 6.1. Failure of NQ-242c-Rich would force registration of one of the above falsification routes and require Path A fallback per `sigma_rich_augmentation.md` §5.1.
 
 ### §6.3 Determinism (assuming Conjecture 6.1)
 

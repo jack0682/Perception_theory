@@ -1,10 +1,10 @@
 # L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ — Working Draft
 
-> **Status:** working-grade theorem candidate; **Cat-B sketched**. CV-1.6 promotion candidate via L1-M-AUDIT (W6+).
-> **Predecessor:** T-L1-F (canonical CV-1.5.2, 2026-05-02; see `THEORY/canonical/canonical.md` §13).
-> **Provenance:** content promoted from `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` on 2026-05-04 (audit pass). Section numbering and proofs preserved verbatim.
-> **Key open audit items (Lemma L-M-2 §5.7):** R-1 bottleneck-stability factor sharpness; R-2 Type-B bound LG-7 reuse explicit reproof; R-3 Type-N terminal-death convention. Cat-A conditional upgrade depends on resolving all three.
-> **Companion artifacts:** Day 7 daily logs at `THEORY/logs/daily/2026-05-03/{01_L1M_approach_exploration, 02_L1M_proof_development, 03_L1M_canonical_integration_and_NQ, 99_summary}.md`.
+> **Status:** working-grade theorem candidate; **Cat A conditional under $(P0)$–$(P11)$** *(post-W6 D1 L1-M-AUDIT closure 2026-05-04: R-0 + R-1 + R-2 + R-3 all resolved; was Cat-B sketched pre-audit)*. CV-1.6 promotion candidate; external `l-m-k-audit-prover`-style audit recommended for promotion rigor (NQ-G1-3, deferred to user decision).
+> **Predecessor:** T-L1-F (canonical CV-1.5.2, 2026-05-02; see `THEORY/canonical/canonical.md` §13). Commitment 16 ε convention amendment applied W6 D1 (R1 reading: $\bar m := M / K_{\mathrm{field}}$; for $T^2_{20}, M=90, K_{\mathrm{field}}=4 \Rightarrow \epsilon = 0.225$ matching production-script default).
+> **Provenance:** content promoted from `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` on 2026-05-04 (audit pass). W6 D1 self-audit closure applied 2026-05-04 late from `THEORY/logs/daily/2026-05-04/02_development.md` §1-§5 (R-0/R-1/R-2/R-3 specifications) + `op_resolution.md` §9 NQ-G1-1 self-correction integration.
+> **Audit closure (Lemma L-M-2 §5.7):** R-1 bottleneck-stability factor sharpness ✅ Cat A absolute (sharpness verified via explicit perturbation construction); R-2 Type-B bound P5-direct chain ✅ Cat A absolute (no T-L1-F LG-7 dependency, no $(P0)$ dependency for the bound); R-3 Type-N non-terminal consistency ✅ Cat A absolute (cf. R-1); R-0 §2.2 Phi-4c F1 wording ✅ Cat A absolute (clipping hedge removed). **Substantive change:** $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ (uses $\rho_{\mathrm{bg}}$ not $\rho_{\mathrm{res}}$); NQ-G1-1 self-correction notes that $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is configuration-dependent (deferred to NQ-G1-1-ext W7+).
+> **Companion artifacts:** Day 7 daily logs at `THEORY/logs/daily/2026-05-03/{01_L1M_approach_exploration, 02_L1M_proof_development, 03_L1M_canonical_integration_and_NQ, 99_summary}.md`. W6 D1 audit closure at `THEORY/logs/daily/2026-05-04/{01_,02_,03_,99_}.md` + `op_resolution.md` §9 + §13.6 erratum.
 
 **Session:** 2026-05-03 (W5 Day 7)
 **Target (from plan.md §2):** $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$ under T-L1-F $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ + edge-band control (E).
@@ -112,7 +112,7 @@ The pair $(\varepsilon_{\mathrm{sub}}^\phi,\varepsilon_{\mathrm{dom}}^\phi)$ is 
 
 - **$\phi_{\mathrm{hard}}$.** F1: range $\{0,1\}\subseteq[0,1]$. F2: $\phi_{\mathrm{hard}}(0)=0$. F3: monotone (jump from $0$ to $1$ at $\ell_{\min}$). F4: $\phi=0$ on $[0,\ell_{\min})$, hence on $[0,\ell_{\min}-\tau]$. $\varepsilon_{\mathrm{sub}}=0$. F5: $\phi=1$ on $[\ell_{\min},1]$, hence on $[\ell_{\min}+\tau,1]$. $\varepsilon_{\mathrm{dom}}=0$.
 
-- **$\phi_{\mathrm{logistic}}^s$.** F1: $\sigma(s(\ell-\ell_{\min}))\in[0,1]$ for all $\ell$; subtracting $\sigma(-s\ell_{\min})\in[0,1)$ may give negative values for $\ell$ near $0$. We tighten F1 to $\phi(\ell)\ge 0$ by clipping at $0$ if needed; alternatively restrict $\Phi_{\mathrm{res}}$ to $\phi$ that already satisfy F1 (Phi-4c with the WQ-LAT-1.B definition is non-negative on $[0,1]$ since $\sigma(-s\ell_{\min})$ is the value at $\ell=0$). F2: $\phi(0)=\sigma(-s\ell_{\min})-\sigma(-s\ell_{\min})=0$. F3: $\sigma$ is monotone increasing; subtracting a constant preserves monotonicity. F4: for $\ell\le\ell_{\min}-\tau$, $s(\ell-\ell_{\min})\le-s\tau$, so $\sigma(s(\ell-\ell_{\min}))\le\sigma(-s\tau)=1/(1+e^{s\tau})\le e^{-s\tau}$. Subtracting $\sigma(-s\ell_{\min})\ge 0$ gives $\phi(\ell)\le e^{-s\tau}$. F5: for $\ell\ge\ell_{\min}+\tau$, $\sigma(s(\ell-\ell_{\min}))\ge\sigma(s\tau)=1-1/(1+e^{s\tau})\ge 1-e^{-s\tau}$. So $1-\phi(\ell)=1-\sigma(s(\ell-\ell_{\min}))+\sigma(-s\ell_{\min})\le e^{-s\tau}+\sigma(-s\ell_{\min})$. For $s\ell_{\min}\ge s\tau$ (i.e., $\tau\le\ell_{\min}$): $\sigma(-s\ell_{\min})\le\sigma(-s\tau)\le e^{-s\tau}$, so the bound is $\le 2e^{-s\tau}$.
+- **$\phi_{\mathrm{logistic}}^s$.** F1 *(R-0 closure W6 D1: simplified from previous "clip at 0" hedge)*: $\sigma$ is monotonic with $\sigma\in[0,1]$; subtracting $\sigma(-s\ell_{\min})$ gives $\phi(0)=0$ exactly. By monotonicity of $\sigma$, $\phi(\ell)$ is non-decreasing on $[0,1]$ starting from $\phi(0)=0$; hence $\phi(\ell)\ge 0$ on $[0,1]$ cleanly without any clipping. Combined with $\sigma(s(\ell-\ell_{\min}))\le 1$ and $\sigma(-s\ell_{\min})\ge 0$, we have $\phi(\ell)\le 1$. Hence F1 is satisfied: $\phi(\ell)\in[0,1]$ on $[0,1]$. F2: $\phi(0)=\sigma(-s\ell_{\min})-\sigma(-s\ell_{\min})=0$. F3: $\sigma$ is monotone increasing; subtracting a constant preserves monotonicity. F4: for $\ell\le\ell_{\min}-\tau$, $s(\ell-\ell_{\min})\le-s\tau$, so $\sigma(s(\ell-\ell_{\min}))\le\sigma(-s\tau)=1/(1+e^{s\tau})\le e^{-s\tau}$. Subtracting $\sigma(-s\ell_{\min})\ge 0$ gives $\phi(\ell)\le e^{-s\tau}$. F5: for $\ell\ge\ell_{\min}+\tau$, $\sigma(s(\ell-\ell_{\min}))\ge\sigma(s\tau)=1-1/(1+e^{s\tau})\ge 1-e^{-s\tau}$. So $1-\phi(\ell)=1-\sigma(s(\ell-\ell_{\min}))+\sigma(-s\ell_{\min})\le e^{-s\tau}+\sigma(-s\ell_{\min})$. For $s\ell_{\min}\ge s\tau$ (i.e., $\tau\le\ell_{\min}$): $\sigma(-s\ell_{\min})\le\sigma(-s\tau)\le e^{-s\tau}$, so the bound is $\le 2e^{-s\tau}$.
 
 - **$\phi_{\mathrm{shift\text{-}sat}}^\beta$.** F1: $1-e^{-x}\in[0,1]$ for $x\ge 0$, $0$ for $x\le 0$ via $(\cdot)_+$. F2: $\phi(0)=1-e^0=0$. F3: monotone in $\ell$ on $[\ell_{\min},1]$, constant $0$ on $[0,\ell_{\min}]$. F4: $\phi\equiv 0$ on $[0,\ell_{\min}]$, hence on $[0,\ell_{\min}-\tau]$. $\varepsilon_{\mathrm{sub}}=0$. F5: for $\ell\ge\ell_{\min}+\tau$, $\beta(\ell-\ell_{\min})\ge\beta\tau$, so $\phi(\ell)\ge 1-e^{-\beta\tau}$. Hence $1-\phi(\ell)\le e^{-\beta\tau}$. ∎
 
@@ -326,40 +326,73 @@ For $\tau<2\rho_{\mathrm{pert}}$: $\ell_i\le\ell_{\min}-2\rho_{\mathrm{pert}}<\e
 
 *Note.* The graph-inclusion lemma L1-H2 Lemma 1 is needed to transfer from local $G_j^r$ to global $G$: $\ell_{\mathrm{glob}}(U;G)\le\ell_{\mathrm{loc}}(U;G_j^r)$, which preserves the upper bound across the $G_j^r\subseteq G$ inclusion.
 
-### §5.5 Type-B bars sit far below the edge band: $\ell_i\le\ell_{\min}-\rho_{\mathrm{res}}$ for $\tau<\rho_{\mathrm{res}}$
+**Sharpness note (R-1 closure, W6 D1).** The factor $2$ in $|\ell_i-\ell_i^{(u^{(j)})}|\le\rho_{\mathrm{pert}}$ is **sharp** under $(P0)$–$(P11)$. The terminal-death convention $(P0)$ would allow factor-$1$ sharpening only for **terminal** matched bars ($d_i=d_{\sigma(i)}=0\Rightarrow|\ell_i-\ell_{\sigma(i)}|=|b_i-b_{\sigma(i)}|\le\rho_{\mathrm{pert}}/2$). But Type-N bars are **NOT terminal**: by P3 disjointness + connectedness of $N_j^r$, a subdominant local-maximum component in $N_j^r$ merges with the slot-primary component at some intra-slot saddle vertex $w\in N_j^r$, giving $d_i=U(w)>0$ (finite, not terminal). Hence $(P0)$ does not apply to Type-N. *Sharpness verified by explicit construction:* take $R_j(v)=+\rho_{\mathrm{pert}}/2$ at the subdominant peak vertex $v$, $R_j(w)=-\rho_{\mathrm{pert}}/2$ at the saddle vertex $w$, $R_j=0$ elsewhere. Admissible under P9 ($\|R_j\|_{\infty}=\rho_{\mathrm{pert}}/2$). Then $\ell_i^U-\ell_i^{u^{(j)}}=R_j(v)-R_j(w)=\rho_{\mathrm{pert}}$ exactly, achieving the factor-$2$ bound. *(Construction valid in the generic vineyard-nonsingular regime where $\rho_{\mathrm{pert}}/2$ is below the local persistence-skeleton stability threshold of $u^{(j)}|_{G_j^r}$ — i.e., the perturbation does not reorder superlevel events; this is automatic under bottleneck stability for non-degenerate $u^{(j)}$. Disclosure added per W6 D1 external audit recommendation.)* Recovering factor $1$ would require strictly stronger hypotheses on $R_j$ sign correlation (e.g., **(S-sign)** constant-sign on $N_j^r$, or **(S-Lip)** Lipschitz constraint on $R_j$, or **(P9-tight)** $\|R_j\|_\infty\le\rho_{\mathrm{pert}}/4$) — none are in current L1-J. **Resolution:** original $\tau_*=\min(2\rho_{\mathrm{pert}},\cdot,\cdot)$ stands; expansion via factor-$1$ sharpening is unavailable without strengthening the regime.
 
-For Type-B bars, $b_i\in X_{\mathrm{bg}}$ where $X_{\mathrm{bg}}$ is the background region (off all $N_j^r$). On $X_{\mathrm{bg}}$ the field $U$ coincides with the inactive residual: $U|_{X_{\mathrm{bg}}}=R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$. By P10, $\|R_{\mathrm{inact}}\|_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$. Hence the birth height $b_i=U(b_i)\le\ell_{\min}-\rho_{\mathrm{res}}$, and by P0 the death is $d_i=0$:
+**Type-N terminal-death consistency (R-3 closure, W6 D1).** Type-N bars are NOT terminal under $(P0)$; they are intra-slot merge bars (per the R-1 sharpness note above). The CSEH bottleneck-stability comparison between $\mathrm{Dgm}_0^{\sup}(U|_{G_j^r})$ and $\mathrm{Dgm}_0^{\sup}(u^{(j)}|_{G_j^r})$ uses the global $(P0)$ death convention applied identically to both diagrams; this gives consistent matched-bar comparisons regardless of whether individual matched bars are terminal or merge. The factor $2$ in the length-shift bound applies uniformly (cf. R-1 closure).
+
+### §5.5 Type-B bars sit far below the edge band: $\ell_i\le\ell_{\min}-\rho_{\mathrm{bg}}$ for $\tau<\rho_{\mathrm{bg}}$ (post-R2)
+
+**(R-2 closure, W6 D1: P5-direct chain replacing previous P10 + implicit-T-L1-F-structure derivation.)**
+
+For Type-B bars ($b_i\in X_{\mathrm{bg}}$, off all $N_j^r$), apply P5 (canonical.md §13 line 1483, T-L1-F regime hypothesis: **background suppression on $U$ directly**, not just on $R_{\mathrm{inact}}$):
 $$
-\ell_i=b_i\le\ell_{\min}-\rho_{\mathrm{res}}.
+\|U\|_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}.
 $$
-For $\tau<\rho_{\mathrm{res}}$: $\ell_i\le\ell_{\min}-\rho_{\mathrm{res}}<\ell_{\min}-\tau$, so $i\in I_{\mathrm{sub}}\not\subseteq I_{\mathrm{edge}}$.
-
-*Note.* P5 (background suppression on $U$, not just $R_{\mathrm{inact}}$) gives a stronger bound $b_i\le\ell_{\min}-\rho_{\mathrm{bg}}$, but $\rho_{\mathrm{bg}}$ may not equal $\rho_{\mathrm{res}}$. Using the weaker P10 bound is sufficient for the conclusion; the stronger P5 bound only tightens the constant.
-
-### §5.6 Conclusion: $\tau_*=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$
-
-Combining §5.3, §5.4, §5.5: every bar of $U$ on $G$ has either $\ell_i\ge\ell_{\min}+r_{\mathrm{birth}}$ (Type-D) or $\ell_i\le\ell_{\min}-2\rho_{\mathrm{pert}}$ (Type-N) or $\ell_i\le\ell_{\min}-\rho_{\mathrm{res}}$ (Type-B). Setting
+Hence:
 $$
-\tau_*:=\min(2\rho_{\mathrm{pert}},\,\rho_{\mathrm{res}},\,r_{\mathrm{birth}}),
+b_i=U(b_i)\le\|U\|_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}.
 $$
-for any $\tau\in(0,\tau_*)$ we have $\ell_i\notin[\ell_{\min}-\tau,\ell_{\min}+\tau]$ for every $i\in I(U)$. Hence $N_{\mathrm{edge}}(U;\tau)=0$. ∎
+For the death $d_i\ge 0$ (death levels are non-negative in $H_0$ superlevel persistence, regardless of whether the Type-B bar is terminal or merge under $(P0)$):
+$$
+\ell_i=b_i-d_i\le b_i\le\ell_{\min}-\rho_{\mathrm{bg}}.
+$$
+For $\tau<\rho_{\mathrm{bg}}$: $\ell_i\le\ell_{\min}-\rho_{\mathrm{bg}}<\ell_{\min}-\tau$, so $i\in I_{\mathrm{sub}}\not\subseteq I_{\mathrm{edge}}$.
 
-### §5.7 Status of L-M-2
+*Note (R-2 derivation properties).* This chain uses P5 directly (background suppression on $U$, not on $R_{\mathrm{inact}}$), avoiding (i) the implicit "$U|_{X_{\mathrm{bg}}}=R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion (which fails when active-slot decay tails extend into $X_{\mathrm{bg}}$ via P7), (ii) the dependency on T-L1-F's LG-7 coverage proof structure, and (iii) the $(P0)$ terminal-death dependency for the bound $b_i$. P5 is stronger than P10 for Type-B bound purposes; the resulting $\tau_*$ uses $\rho_{\mathrm{bg}}$ instead of $\rho_{\mathrm{res}}$ — see post-R2 $\tau_*$ in §5.6.
 
-**Self-classification: Cat B sketched.** The proof uses:
+*Note (NQ-G1-1 self-correction, W6 D1 late re-review).* The relationship between $\tau_*^{\mathrm{post-R2}}$ (using $\rho_{\mathrm{bg}}$) and the original $\tau_*$ (using $\rho_{\mathrm{res}}$) is **configuration-dependent**, NOT generically ordered:
+- $\rho_{\mathrm{bg}}^{\mathrm{actual}}=\ell_{\min}-\|U\|_{\infty,X_{\mathrm{bg}}}$ vs $\rho_{\mathrm{res}}^{\mathrm{actual}}=\ell_{\min}-\|R_{\mathrm{inact}}\|_\infty$ (latter is over the **full** graph, not just $X_{\mathrm{bg}}$).
+- $\|U\|_{\infty,X_{\mathrm{bg}}}\ge\|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (since $U|_{X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ and active-slot decay tails into bg).
+- $\|R_{\mathrm{inact}}\|_\infty\ge\|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (global $\ge$ restricted).
+- Hence the comparison between $\rho_{\mathrm{bg}}$ and $\rho_{\mathrm{res}}$ depends on whether (i) active decay tails into background dominate, OR (ii) inactive residual peaks outside $X_{\mathrm{bg}}$ (e.g., on $N_j^r$ near formations) dominate. Configuration-dependent verdict: $\tau_*^{\mathrm{post-R2}}$ may be tighter or wider than original $\tau_*$ on a per-configuration basis. Empirical anchor (NQ-G1-1-ext, W7+): extend `l1i_constants_feasibility.py` to record both $\|U\|_{\infty,X_{\mathrm{bg}}}$ and $\|R_{\mathrm{inact}}\|_\infty$ separately for the 1920-config sweep. Cat A conditional self-classification of L-M-2 is **unaffected** by this nuance: the lemma states "edge-band empty for $\tau\in(0,\tau_*^{\mathrm{post-R2}})$" which holds either way.
+
+### §5.6 Conclusion (post-R2): $\tau_*^{\mathrm{post-R2}}=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{bg}},r_{\mathrm{birth}})$
+
+Combining §5.3 (Type-D), §5.4 (Type-N, with R-1 sharpness verification), and §5.5 (Type-B, post-R2 P5-direct chain): every bar of $U$ on $G$ has either $\ell_i\ge\ell_{\min}+r_{\mathrm{birth}}$ (Type-D) or $\ell_i\le\ell_{\min}-2\rho_{\mathrm{pert}}$ (Type-N) or $\ell_i\le\ell_{\min}-\rho_{\mathrm{bg}}$ (Type-B, post-R2). Setting
+$$
+\tau_*^{\mathrm{post-R2}}:=\min(2\rho_{\mathrm{pert}},\,\rho_{\mathrm{bg}},\,r_{\mathrm{birth}}),
+$$
+for any $\tau\in(0,\tau_*^{\mathrm{post-R2}})$ we have $\ell_i\notin[\ell_{\min}-\tau,\ell_{\min}+\tau]$ for every $i\in I(U)$. Hence $N_{\mathrm{edge}}(U;\tau)=0$. ∎
+
+### §5.7 Status of L-M-2 (post-R0/R1/R2/R3 closures)
+
+**Self-classification: Cat A conditional under $(P0)$–$(P11)$** *(post-W6 D1 audit closure; was Cat B sketched pre-audit)*.
+
+The proof uses:
 - **L1-H2 Lemma 1** (graph-inclusion: $\ell_{\mathrm{glob}}\le\ell_{\mathrm{loc}}$ on $G_j^r\subseteq G$) — Cat A within T-L1-F's proof structure (canonical, CV-1.5.2).
-- **CSEH 2007 bottleneck stability** — external Cat A theorem, used routinely in `working/E/soft_K_definition.md` §2.1.
-- **P0–P11 directly** — canonical regime hypothesis.
+- **CSEH 2007 bottleneck stability** — external Cat A theorem, used routinely in `working/E/soft_K_definition.md` §2.1. Factor-2 sharpness verified via explicit construction (R-1 closure §5.4 sharpness note).
+- **P0–P11 directly** — canonical regime hypothesis. Specifically: P3, P5, P6, P8, P9, P11 + (P0) terminal-death convention.
 
-The "sketched" status (rather than "proved") reflects three points where rigor could be sharpened:
+**Original three "sketched" refinements (now closed via W6 D1 L1-M-AUDIT):**
 
-1. **The bottleneck-stability factor.** §5.4 used $|\ell_i-\ell_i^{(u^{(j)})}|\le 2\cdot\rho_{\mathrm{pert}}/2=\rho_{\mathrm{pert}}$. The factor $2$ derives from both birth and death of a single bar shifting by at most $\|\Delta U\|_\infty=\rho_{\mathrm{pert}}/2$. This is consistent with `working/E/soft_K_definition.md` §2.2 Prop 2.1 (the factor-$2$ from u-side and v-side diagonal pairings is properly handled there as $4L_\phi n$ Lipschitz constant, but here we want only the per-bar shift, which is the $2$).
-2. **The Type-B bound's interaction with LG-7.** §5.5 used P10 directly on $X_{\mathrm{bg}}$. The LG-7 coverage that T-L1-F's proof derives from P5+P0+LG-4 ensures every dominant-bar birth has $U\ge\ell_{\min}$ and hence is *not* in $X_{\mathrm{bg}}$. This is the basis for the "Type-B" classification as background. A fully rigorous L-M-2 proof would re-establish this explicitly rather than invoking the T-L1-F proof structure.
-3. **The terminal-death convention's role for Type-N.** §5.4 implicitly assumed Type-N bars also use terminal death. This is correct under P0 (which is global), but the argument should make this explicit: the comparison between $U|_{G_j^r}$ and $u^{(j)}|_{G_j^r}$ both use terminal death on $G_j^r$, giving consistent diagram-comparisons.
+1. ~~**The bottleneck-stability factor**~~ — **R-1 RESOLVED W6 D1.** Factor 2 verified sharp via explicit admissible perturbation $R_j(v)=+\rho_{\mathrm{pert}}/2, R_j(w)=-\rho_{\mathrm{pert}}/2$ achieving $|\ell_i^U-\ell_i^{u^{(j)}}|=\rho_{\mathrm{pert}}$ exactly. (P0) factor-1 sharpening structurally inapplicable (Type-N bars not terminal). See §5.4 R-1 sharpness note. Cat A absolute.
+2. ~~**The Type-B bound's interaction with LG-7**~~ — **R-2 RESOLVED W6 D1.** §5.5 replaced with explicit P5-direct chain; no implicit "$U|_{X_{\mathrm{bg}}}=R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion, no T-L1-F LG-7 structure dependency, no $(P0)$ dependency for the bound. Side effect: $\tau_*^{\mathrm{post-R2}}$ uses $\rho_{\mathrm{bg}}$ instead of $\rho_{\mathrm{res}}$. NQ-G1-1 self-correction (W6 D1 late re-review): $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison is configuration-dependent — empirical anchor deferred to NQ-G1-1-ext (W7+). Cat A conditional self-classification unaffected. Cat A absolute (for the chain itself).
+3. ~~**The terminal-death convention's role for Type-N**~~ — **R-3 RESOLVED W6 D1.** Type-N bars are NOT terminal (intra-slot merge bars per R-1 analysis); CSEH bottleneck stability uses (P0) global death convention applied identically to both diagrams, yielding consistent matched-bar comparisons. See §5.4 R-3 consistency note. Cat A absolute.
 
-These three points are *bookkeeping refinements*, not structural gaps. They do not alter the conclusion. They are flagged for L1-M-AUDIT (next-step item per plan.md §8).
+**Plus R-0 closure W6 D1**: §2.2 Phi-4c F1 wording simplified (clipping/restriction hedge removed; uses F2+F3 only by monotonicity). Cat A absolute.
 
-A future Cat-A upgrade (analogous to L1-K external audit + L1-K-REPAIR cycle) would resolve these into a Cat-A-conditional statement. The conditional regime is exactly $(P0)$–$(P11)$, the same as T-L1-F.
+**Post-repair status table:**
+
+| Statement | Pre-W6-D1 | Post-W6-D1 | Cat |
+|---|---|---|---|
+| Lemma L-M-2 (edge-band emptiness under regime) | sketched | proved | **A conditional under $(P0)$–$(P11)$** |
+| §5.3 Type-D bound | proved | proved | A conditional (P11+P6+(P0)) |
+| §5.4 Type-N bound + factor-2 sharpness | sketched | proved + verified | A conditional (CSEH + P9 + P8 + P3, factor-2 sharp) |
+| §5.5 Type-B bound (P5 direct, post-R2) | sketched (via P10) | proved (via P5) | A conditional |
+
+**Why "conditional" (not absolute):** the conditional clause is "**under the L1-J regime hypothesis package $(P0)$–$(P11)$**". All three Type-D / Type-N / Type-B bounds use specific regime hypotheses. The conditionality is the same as T-L1-F's: not a global identity, valid only when $(P0)$–$(P11)$ hold. T-L1-F empirically establishes the regime is non-empty (L1-I 439/1920 FEASIBLE_WITH_BUDGET on $T^2_{20}$).
+
+**External audit recommendation (NQ-G1-3, W6 D1 deferred to user decision).** The W6 D1 L1-M-AUDIT closure was a self-audit (Approach A3). For CV-1.6 promotion rigor, an external `l-m-k-audit-prover`-style agent dispatch (analogous to L1-K external audit pattern) is recommended to independently verify R-0/R-1/R-2/R-3 closures. ~7-15 min agent runtime + ~10-30 min verdict integration.
 
 ---
 
@@ -369,7 +402,7 @@ This is the substantive deliverable of Day 7.
 
 ### §6.1 Statement
 
-**Theorem L-M (Soft-Count Corollary).** Let $G=(X,E)$ be a finite graph, $\mathbf u\in\widetilde\Sigma_M^{K_{\mathrm{field}}}(G)$. Suppose the L1-J regime hypothesis package $(P0)$–$(P11)$ from T-L1-F (canonical.md §13 Cat A, CV-1.5.2) holds. Let $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ with $\tau\in(0,\tau_*)$ where $\tau_*=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$. Then
+**Theorem L-M (Soft-Count Corollary, post-W6-D1-AUDIT, Cat A conditional).** Let $G=(X,E)$ be a finite graph, $\mathbf u\in\widetilde\Sigma_M^{K_{\mathrm{field}}}(G)$. Suppose the L1-J regime hypothesis package $(P0)$–$(P11)$ from T-L1-F (canonical.md §13 Cat A, CV-1.5.2) holds. Let $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ with $\tau\in(0,\tau_*^{\mathrm{post-R2}})$ where $\tau_*^{\mathrm{post-R2}}=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{bg}},r_{\mathrm{birth}})$ *(the post-R2 closure replaces $\rho_{\mathrm{res}}$ with $\rho_{\mathrm{bg}}$; see §5.5 R-2 closure + NQ-G1-1 self-correction note)*. Then
 $$
 \boxed{
 \bigl|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr|\le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}(U;\tau)+\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot K_{\mathrm{act}}^\varepsilon(\mathbf u),
@@ -385,13 +418,13 @@ $$
 |K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{bar}}^{\ell_{\min}}(U)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi.
 $$
 
-By Lemma L-M-2 (edge-band emptiness, §5), under $(P0)$–$(P11) + \tau<\tau_*$: $N_{\mathrm{edge}}(U;\tau)=0$. By Lemma L-M-Edge (§4.1), $\rho_{\mathrm{edge}}^\phi\le N_{\mathrm{edge}}=0$.
+By Lemma L-M-2 post-W6-D1 closure (edge-band emptiness, §5), under $(P0)$–$(P11) + \tau<\tau_*^{\mathrm{post-R2}}$: $N_{\mathrm{edge}}(U;\tau)=0$. By Lemma L-M-Edge (§4.1), $\rho_{\mathrm{edge}}^\phi\le N_{\mathrm{edge}}=0$.
 
 By Lemma L-M-Sub (§4.1), $\rho_{\mathrm{sub}}\le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}(U;\tau)$.
 
 By Lemma L-M-Dom (§4.1), $\rho_\phi\le\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot N_{\mathrm{dom}}(U;\tau)$.
 
-By the T-L1-F bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon\to\mathrm{Bars}_0^{\mathrm{term}}$ (canonical.md §13 line 1467), each active slot corresponds to exactly one dominant terminal-death bar. By L-M-2, every dominant bar has length $\ge\ell_{\min}+r_{\mathrm{birth}}>\ell_{\min}+\tau$ (since $\tau<\tau_*\le r_{\mathrm{birth}}$), hence belongs to $I_{\mathrm{dom}}$. Conversely every bar in $I_{\mathrm{dom}}$ has length $>\ell_{\min}+\tau\ge\ell_{\min}$, so it is counted in $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$ via T-L1-F. Hence $N_{\mathrm{dom}}(U;\tau)=K_{\mathrm{bar}}^{\ell_{\min}}(U)=K_{\mathrm{act}}^\varepsilon(\mathbf u)$.
+By the T-L1-F bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon\to\mathrm{Bars}_0^{\mathrm{term}}$ (canonical.md §13 line 1467), each active slot corresponds to exactly one dominant terminal-death bar. By L-M-2, every dominant bar has length $\ge\ell_{\min}+r_{\mathrm{birth}}>\ell_{\min}+\tau$ (since $\tau<\tau_*^{\mathrm{post-R2}}\le r_{\mathrm{birth}}$), hence belongs to $I_{\mathrm{dom}}$. Conversely every bar in $I_{\mathrm{dom}}$ has length $>\ell_{\min}+\tau\ge\ell_{\min}$, so it is counted in $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$ via T-L1-F. Hence $N_{\mathrm{dom}}(U;\tau)=K_{\mathrm{bar}}^{\ell_{\min}}(U)=K_{\mathrm{act}}^\varepsilon(\mathbf u)$.
 
 Combining:
 $$

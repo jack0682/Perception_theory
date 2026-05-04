@@ -1,284 +1,297 @@
-# plan.md — 2026-05-04 (W6 Day 1, Triple Parallel Thread Launch)
+# plan.md — 2026-05-04 (W6 Day 1) — REDESIGNED v2 (post-reset + post-G3-deep-dive)
 
-**Title:** 2026-05-04 Research Plan — W6 Day 1 Triple Parallel Thread Launch (G1 + G2 + G3 + G7).
-**Session type:** W6 Day 1 — *AGGRESSIVE marathon launch* (mirrors W5 Day 1 G0 σ-merge + G1/G2 setup pattern). Triple-thread parallel start per W6 strategic plan §0.4 Decision 1 Option α.
+**Title:** 2026-05-04 Research Plan — W6 Day 1, Audit-Anchored (4-goal scope), realigned post-reset.
+**Status:** **REDESIGNED v2 2026-05-04 mid-day** (after the prior redesign was made stale by an inner-files reset + a subsequent G3 deep-dive). Supersedes both the original 08:51 OLD 8-goal version AND the first redesign (10:22). Aligned with the redesigned `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (140 lines, 4 goals, 35 hours total).
+**Reason for v2 redesign:** (1) the first redesign (10:22) referenced files that were subsequently deleted in the user-requested reset (10:30); (2) a post-reset G3 deep-dive session produced 4 new files (01_/02_/03_/99_) that the first redesign did not anticipate; (3) the W6 strategic plan G3 itself was found in the deep-dive to contain a misframing that should be revised. The current plan.md must reflect (1)+(2)+(3) honestly.
 **W6 scope:** 2026-05-04 (Mon, Day 1) ~ 2026-05-10 (Sun, Day 7 W6 close).
 **Session working directory:** `THEORY/logs/daily/2026-05-04/`.
-**Weekly buffer target:** `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` (latest-first 05-04 entry append; create if missing).
-**W5 Day 7 EOD references:** `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (L1-M working draft, audit input); `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md` §4 (NQ-L1M-1..8); `THEORY/logs/weekly/2026-04-W5/weekly_summary.md` §7 (W6 carry-forward).
-**Active runtime:** triple-thread parallel — 2 external-audit teammate dispatches (G1, G3) + 1 single-target completion (G2) + 1 PARTIAL→READY integration (G7) + 1 background numerical launch (NQ-187b).
-**User calibration:** W6 strategic plan §0.4 Decision 1 Option α (parallel) recommended; Day 3 EOD critical decision artifact (G1 verdict + G3 시나리오) 사용자 검토 필수.
+**Authoritative weekly anchor:** `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (redesigned 4-goal version; W6 D1 G3 deep-dive proposes one §4.2 status-text revision — see §5 below).
 
 ---
 
-## §1. Starting State
+## §1. Day 1 Actual State (audit across all 2026-05-04 sessions)
 
-### §1.1 W5 close inventory (2026-05-03 EOD)
+Five sessions ran on 2026-05-04 in time order:
 
-- **Canonical version current:** **CV-1.5.2** (2026-05-02). T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional canonical-merged.
-- **Counts:** 46A / 5B / 5C / 5R / 61 claims / 75% proved.
-- **Tests:** 215 passing, 1 xfailed.
-- **L1-M working draft (Day 7):** in `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines). Status: Cat-B sketched; CV-1.6 promotion target via L1-M-AUDIT.
-- **3 bookkeeping refinements flagged in `02_development.md` §5.7**: R-1 (bottleneck-stability factor-2 sharpness in §5.4), R-2 (Type-B bound LG-7 reuse explicit reproof in §5.5), R-3 (terminal-death convention Type-N consistency in §5.4).
+### §1.1 Morning sessions: Pass 1 + Pass 2 audit (before this Claude session)
 
-### §1.2 W6 carry-forward (P0 from W5 weekly_summary §7.1)
+Per `CHANGELOG.md` 2026-05-04 entries:
+- **Pass 1 (Repository Audit & Hygiene Pass).** Test count drift fix (`175 → 215 passed, 1 xfailed`), CV version drift (CV-1.2 → CV-1.5.2 propagation), daily-log structural anomalies, paper draft removal, root-level draft cleanup. Test count corrections applied across `CODE/README.md`, `CLAUDE.md`, `2026-05-04/plan.md`, `2026-05-02/plan.md`, `W6_strategic_plan.md`, W5 `weekly_summary.md`.
+- **Pass 2 (Theory-Consistency Audit + Structural Decisions).** ~450 findings across 7 parallel exploration agents. Key structural decisions:
+  - Old W6 strategic plan deleted (~1691 lines) — silently downgraded CV-1.7 parking-lot dispatch + arithmetic inconsistencies (62 vs 75 vs 144 hours).
+  - Replacement parking-lot plan: `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`.
+  - **New W6 strategic plan (140 lines) drafted with 4 goals (G1 L1-M-AUDIT, G2 T-Bind, G3 ε-convention, G4 parking-lot inventory), 35-hour budget.**
+  - `open_problems.md` merged into `theorem_status.md`.
 
-- **G1 L1-M-AUDIT** (~2-3 days, Day 1-3): external audit + repair cycle on L1-M working draft.
-- **G2 NQ-L1M-2 CSEH 2007 factor-2 sharpness** (~1 day, Day 1 single target): Cat A absolute target.
-- **G3 γ-path Σ_m-Hessian convention audit** (~3-5 days, Day 1-3): T-σ-Theorem-4 Cat B → Cat A re-promotion attempt.
+### §1.2 Evening session: G2 (T-Bind decision) + NQ-187 falsification handling (before this Claude session)
 
-W5 P1:
-- **G7 OAT-2/3 short integration** (~1-2 days, Day 1-2): F bridge + λ_rep PARTIAL → READY upgrade.
+Per `CHANGELOG.md` 2026-05-04 (W6 Day 1 evening) entry:
+- **T-Bind-Proj / T-Bind-Full categorical decision** applied: both confirmed Cat A (per Phase 13 upgrade 2026-04-07; previously had drift between `canonical.md` (Cat A) and `theorem_status.md` (Cat B/C)). Erratum notes added at `canonical.md:1452, 1457` and `theorem_status.md:163-164` and the CV-1.1 release row (`theorem_status.md:285`).
+- **NQ-187 falsification handling** applied: T-σ-Theorem-4 entry (`canonical.md` lines 1385-1433) prefix amended to "continuum-limit prediction"; "Continuum vs discrete grid note (added 2026-05-04 W6 NQ-187 audit)" paragraph added with α/β/γ 3-path framework. Per the W6 redesign §2, **further γ-path audit work is deferred**.
 
-### §1.3 Open Problems unchanged (W6 D1 entry)
+This evening session **completed redesigned W6 plan G2 ahead of schedule** (originally Day 2; closed Day 1 evening).
 
-- OP-0005 (K-Selection): 🟠 HIGH; working-level partial only.
-- OP-0008 (σ^A K-jump non-determinism): 🟠 HIGH; W7+ Path B σ_rich entry.
-- OP-0009 (Multi-Formation Ontological Foundations 7-sub-items): 🟠 HIGH; 1/7 RESOLVED + 6/7 PARTIALLY.
-- OP-0003 (MO-1) re-activation rider: not triggered (W6 multi-formation Morse work 없음).
-- OP-0001 (F-1) / OP-0002 (M-1): RESOLVED / LAYER-CLARIFIED at W4; unchanged.
+### §1.3 First autonomous session (Claude, this conversation, ~08:51-09:21) — RESET
 
----
+Ran on the OLD 8-goal plan.md (which was authored from the deleted W6 strategic plan). Produced 8 daily files + 1 weekly entry + 2 CODE artifacts. Substantive over-delivery on **deferred-track** OLD-plan goals (G2 CSEH, G3 γ-path, NQ-187b α-direct, G7 OAT-2) plus **on-track** redesigned G1 (L1-M-AUDIT dispatch + verdict).
 
-## §2. Main Objective
+**These outputs were RESET (deleted) by user instruction at ~10:30**, after the user-supervised analysis discovered the misalignment between the OLD-plan-driven outputs and the redesigned W6 strategic plan's 4-goal scope. Current persistent state reflects only files that survived the reset (see §2 below).
 
-**Day 1 Goal**: Launch **triple parallel thread** (G1 + G3 + G7) + **complete G2 single target** + **launch NQ-187b background numerical**.
+**Surviving artifacts outside `0504/` (NOT touched by the reset):**
+- `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` (4528 B, 09:21) — Day 1 entry under OLD-plan content; **STALE** post-reset.
+- `CODE/scripts/gamma_path_audit_symbolic.py` (17402 B, 09:13) — TEMPORARY DRAFT from the deferred-track γ-path audit; **deferred-track**.
+- `CODE/scripts/results/nq187b_a2_a1_extrapolation.json` (1404 B, 09:12) — re-generated by re-running the pre-existing `nq187b_a2_a1_extrapolation.py` script. Deterministic output; harmless.
 
-**End-of-Day target**:
-- G2: ✅ COMPLETE (CSEH factor sharpness analysis Cat A absolute, Day 1 single target).
-- G1: ✅ DISPATCHED (audit input package prepared + teammate `l1m-audit-prover` launched fire-and-forget; verdict expected Day 2-3).
-- G3: ✅ DISPATCHED (audit input package prepared + teammate `gamma-path-prover` launched fire-and-forget; verdict expected Day 2-3).
-- G7: ⏳ PARTIAL (OAT-2 PH layer scope drafted; complete Day 2).
-- NQ-187b: ✅ BACKGROUND LAUNCHED (script `nq187b_a2_a1_extrapolation.py` running; ~10-30 hours estimated).
+(See §5 Outstanding Decisions for what to do with each.)
 
-**Day 1 success criterion**: 4 substantive thread starts + 1 complete + 1 background launch = **5 distinct deliverables** before EOD.
+### §1.4 Plan-realignment session (Claude, 10:22): first redesign
 
----
+Plan.md was overwritten to align with the redesigned W6 strategic plan's 4-goal scope. The first redesign described §1.3 outputs as "preserved deferred-track artifacts" (§5 of the first redesign) — **but the user reset deleted those artifacts immediately after the redesign was written**, making §1.3 + §1.4 + §5 + §11 of the first redesign internally inconsistent (referencing files that no longer exist).
 
-## §3. Key Inputs
+### §1.5 G3 deep-dive session (Claude, ~10:30-10:42, post-reset)
 
-### §3.1 G1 L1-M-AUDIT input package
+After the reset, the autonomous prompt was re-invoked. Selected target: redesigned W6 plan G3 (K_act ε-convention), originally scheduled Day 3, accelerated to Day 1 mid-day.
 
-- `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (~542 lines) — substantive content (Definition L-M-D1 Φ_res, Lemma L-M-1 envelope-pure, Lemma L-M-2 edge-band emptiness sketched, Theorem L-M, 3 per-family corollaries, 4 counterexample attempts).
-- `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md` (~290 lines) — approach rationale (A1 primary + A4 enhancement; A2/A3 preserved; A5/A6/A7 excluded with rationale).
-- `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md` (~310 lines) — integration with canonical + OP non-impact audit + 8 new NQs.
-- `THEORY/canonical/canonical.md` §13 T-L1-F entry (line 1462) — anchor.
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` (WQ-2 bridge lemma, predecessor).
-- `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md` (empirical anchor for envelope sub-classes).
-- `THEORY/working/MF/ksoft_kact_bridge_proof_status.md` (C-09/C-10/C-11 lemma candidate framework).
+**Substantive deliverable (G3 D1 verdict — Cat A definitional precision proposal):**
+- Approach A4 (Diagnostic-First) executed.
+- Verdict: **D1** — canonical Commitment 16's "$\bar m$ per-formation expected mass" is to be read as $\bar m := M / K_{\mathrm{field}}$ (R1, architectural per-formation mean), based on:
+  - All 4 production scripts (`nq242c`, `l1i`, `wq_lat1`, `l1g`) using $\epsilon = 0.225$ at $M = 90$, $K_{\mathrm{field}} = 4$.
+  - `nq242c_counterexample.py` line 80 explicit comment `0.225 = 0.01 * (M / K_field) = 0.01 * 22.5`.
+  - OAT-1 source `K_status_commitment.md` line 313 explicit deferral of "final convention to NQ-242 W6 D1-D3" (= now).
+- Proposed canonical amendment (one sentence at canonical.md:810): preserves $\epsilon = 0.225$ for the standard $T^2_{20}$ regime; no script re-runs needed; T-L1-F's "439/1920 = 22.9% feasible" claim automatically anchored.
+- **Important secondary finding:** W6 strategic plan G3 status text (lines 49-52) contains a misframing — its "($\epsilon = 0.225$ ~0.075·m̄ for K_field=4)" parenthetical implicitly assumes $\bar m \approx 3$, which is unsupported by any source. Recommended W6 strategic plan §4.2 status-text revision (proposal in `03_integration_and_new_open.md` §4.2).
+- 6 new open questions collected (NQ-G3-1 through NQ-G3-6).
 
-### §3.2 G2 NQ-L1M-2 CSEH factor sharpness inputs
+**Files produced (all in `0504/`):**
+- `01_exploration.md` (16700 B): G3 problem restatement + 5 approaches + A4 primary selection.
+- `02_development.md` (26997 B): A4 diagnostic execution + D1 verdict + Cat A amendment proposal + propagation plan.
+- `03_integration_and_new_open.md` (19725 B): canonical integration + W6 strategic plan revision proposal + OP non-impact + 6 NQs + 5 prompt v2 notes.
+- `99_summary.md` (8719 B): EOD summary + Day 2 recommendations.
 
-- CSEH 2007: Cohen-Steiner, Edelsbrunner, Harer, *Stability of persistence diagrams*, Theorem 4.2 (already cited in `working/E/soft_K_definition.md` §2.1).
-- L-M-2 §5.4 statement: $|\ell_i - \ell_i^{(u^{(j)})}| \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}$.
-- T-L1-F P0 (terminal-death $H_0$ superlevel persistence convention) — for Type-D (dominant) bars.
-- Type-D (terminal survivors) vs Type-N (non-dominant, possibly finite-death) vs Type-B (background) classification from `02_development.md` §5.2.
-
-### §3.3 G3 γ-path audit input package
-
-- `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` §1.4 — NQ-187 RED finding original.
-- `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md` — γ/β/α 3-path framework.
-- `THEORY/working/SF/symmetry_moduli.md` §3.3 — R22 cubic coefficient analysis (Cat A reference).
-- `THEORY/canonical/canonical.md` §13 T-σ-Theorem-4 entry — current Cat B retroactive status.
-- W4 04-22 SF Round 4 documents (`logs/daily/2026-04-22/04..07_deepening_round*.md`) — original $A_2/A_1 \in \{2, 4\}$ claim source.
-- `THEORY/logs/daily/2026-04-30/nq187b_L_extrapolation.md` (post-EOD, 422 lines) — finite-L extrapolation.
-
-### §3.4 G7 OAT-2/3 inputs
-
-- OAT-2: `THEORY/working/MF/F_Kstep_K_triple.md` (359 lines, OP-0009-F).
-- OAT-3: `THEORY/working/MF/lambda_rep_ontology.md` (242 lines, OP-0009-λ).
-
-### §3.5 NQ-187b numerical script inputs
-
-- W5 Day 5 §3 prep: `CODE/scripts/nq187b_a2_a1_extrapolation.py` (NEW W6 D1 to be written).
-- L1-I FEASIBLE_WITH_BUDGET configurations from `working/MF/kbar_kact_bridge_L1I_constants_feasibility.md`.
-- $D_4$ free-BC L sweep target: L ∈ {20, 24, 28, 32, 36, 40} (vs W5 Day 4-5 only L≤16).
+**Validation:** `cd CODE && python3 -m pytest tests/ -q --tb=no` → **215 passed, 1 xfailed** (258.59s) ✓ — preserved per scc/ 0 edits this session.
 
 ---
 
-## §4. Work Packages (5 Blocks)
+## §2. Current Persistent State (post-reset, post-G3-deep-dive)
 
-### Block 1 — pre-brainstorm + plan finalize (09:00-11:00)
+### §2.1 Files in `0504/` (this directory)
 
-- **Output 1**: `pre_brainstorm.md` (Day 1) — looser conceptual frame:
-  - G1 audit input package gathering 검토 (which files are load-bearing for L-M-2 verification).
-  - G3 γ-path approach review (3 conventions: centered Hessian / Lagrange-projected / reduced on Σ_m).
-  - G7 OAT-2/3 PH layer scope (50 lines target; what specific PH layer additions).
-  - G2 NQ-L1M-2 mathematical depth preview (factor-2 → factor-1 sharpening under terminal-death).
-- **Output 2**: this `plan.md` (Day 1) — Block 2-5 schedule.
+```
+plan.md                             (this file, redesigned v2)
+g3_01_exploration.md                (G3 deep-dive, post-reset, 16700 B)
+g3_02_development.md                (G3 deep-dive, post-reset, 26997 B)
+g3_03_integration_and_new_open.md   (G3 deep-dive, post-reset, 19725 B)
+01_exploration.md                   (G1 self-audit, post-G3, ~16800 B)
+02_development.md                   (G1 self-audit, post-G3, ~33800 B)
+03_integration_and_new_open.md      (G1 self-audit, post-G3, ~24600 B)
+99_summary.md                       (Day 1 EOD unified, ~10500 B)
+op_resolution.md                    (12 NQ resolution + W6 D1 late re-review erratum, ~50400 B)
+```
+*(Inventory updated W6 D1 late: G3 files renamed with `g3_` prefix to disambiguate from G1 files which inherited the unprefixed numbered names; `pre_brainstorm.md` (user-authored 08:51, OLD 8-goal plan) deleted as legacy per op_resolution.md §13.6 Erratum 6.)*
 
-**Estimated time**: ~2 hours.
+### §2.2 Files outside `0504/` produced/modified by 2026-05-04 sessions
 
-### Block 2 — G2 NQ-L1M-2 single-target completion (11:00-13:00)
+| File | Origin | Status post-reset |
+|---|---|---|
+| `THEORY/CHANGELOG.md` | morning audits + evening G2 | KEEP — authoritative session log |
+| `THEORY/canonical/canonical.md` (lines 1452, 1457, 1385-1433) | evening G2 + NQ-187 handling | KEEP — applied canonical edits |
+| `THEORY/canonical/theorem_status.md` (lines 163-164, 285) | evening G2 | KEEP — applied edits |
+| `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` | morning Pass 2 | KEEP — authoritative weekly anchor |
+| `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` | first autonomous session 09:21 | **STALE** (OLD-plan content; user decision pending — see §5) |
+| `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md` | morning Pass 2 | KEEP — replacement parking-lot plan |
+| `CODE/scripts/gamma_path_audit_symbolic.py` | first autonomous session (gamma-path-prover agent) 09:13 | **TEMPORARY DRAFT, deferred-track** (user decision — see §5) |
+| `CODE/scripts/results/nq187b_a2_a1_extrapolation.json` | re-run of pre-existing script | KEEP (deterministic output, harmless) |
 
-**Mathematical depth**:
-- CSEH 2007 Theorem 4.2: $W_\infty(\mathrm{Dgm}(f), \mathrm{Dgm}(g)) \le \|f - g\|_\infty$.
-- Standard analysis: bar $[d_i, b_i]$ → $[d_i', b_i']$ under perturbation $\delta = W_\infty$. $|b_i - b_i'| \le \delta$ + $|d_i - d_i'| \le \delta$ → $|\ell_i - \ell_i'| \le 2\delta$.
-- **Sharpening under terminal-death convention** (T-L1-F P0): $d_i = d_i' = 0$ for terminal-death survivors → $|d_i - d_i'| = 0$ → $|\ell_i - \ell_i'| = |b_i - b_i'| \le \delta$. **Factor-2 → factor-1**.
+### §2.3 Files DELETED in the reset (no longer exist)
 
-**Per-bar-type analysis**:
-- **Type-D (dominant terminal survivors)**: factor-1 (sharpening applicable).
-- **Type-N (non-dominant)**: depends on whether bar is terminal (survivor) or finite-death (merged). per-bar 분석 필요.
-- **Type-B (background)**: typically terminal under T-L1-F P0; factor-1 likely.
+The following 8 files in `0504/` were deleted at ~10:30:
+- `01_l1m_audit_dispatch.md`, `01a_l1m_audit_verdict.md` (G1 redesigned-plan ON-TRACK content; verdict file in particular contained the 3-textual-repair specifications for L-M)
+- `02_gamma_path_dispatch.md`, `02a_gamma_path_verdict.md` (γ-path deferred-track content)
+- `03_nq187b_numerical_launch.md` (NQ-187b deferred-track content)
+- `04_oat2_ph_layer_scope.md` (OAT-2 deferred-track content)
+- `99_summary.md` (OLD-plan EOD summary; later replaced by G3 deep-dive 99_summary.md)
+- `cseh_factor_sharpness_analysis.md` (G2 OLD-plan deferred-track content; was Cat A negative finding for L-M-2 §5.4 R-1 sharpness)
 
-**Output**: `THEORY/working/MF/cseh_factor_sharpness_analysis.md` (~150-250 lines).
-- §1: Statement (revised factor for each bar type).
-- §2: CSEH 2007 + terminal-death derivation.
-- §3: Per-bar-type analysis + table.
-- §4: Implication for L-M-2 §5.4 — new $\tau_*$ expression $\tau_* = \min(5\rho_{\mathrm{pert}}/2, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$ (vs original $\min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$ — **25% expansion**).
-- §5: Implication for L-M Theorem — new sub-class bounds (sharpened by factor 2).
-- §6: Cat classification: **Cat A absolute** (CSEH 2007 + terminal-death convention 직접 분석).
+**Substantive consequences of these deletions:**
+- The **G1 audit verdict (REPAIR-NEEDED with 3 textual repair specifications)** is gone. Reachable only via conversation memory (high-level summary) until a user-supervised re-spawn of the audit.
+- The **G2 OLD-plan CSEH negative finding (factor 2 sharp under L1-J)** is gone. Was Cat A absolute as a sharpness verification of L-M-2 §5.4. Reachable only via conversation memory.
+- The **γ-path Scenario B verdict (γ-path eliminated; β-path activation recommended)** is gone. Was Cat A diagnostic with explicit symbolic L=4 computation. Reachable only via conversation memory + the surviving `gamma_path_audit_symbolic.py` script.
+- The **NQ-187b $A_2/A_1 = 2/3$ exact-identity finding** is gone (the doc explanation; the script + JSON output survive in `CODE/scripts/`).
+- The **OAT-2 6-quantity bridge scope** is gone. Conversation memory only.
 
-**Estimated time**: ~2 hours.
-
-### Block 3 — G1 L1-M-AUDIT dispatch (Thread 1) (14:00-17:00)
-
-**Step 1 (14:00-15:30)**: L1-M audit input package 준비
-- Bundle 7 input files (§3.1).
-- Audit prompt 작성 (per W6 strategic plan §4.1.3 audit dispatch protocol):
-  - "Audit L-M working draft (Day 7 02_development.md) for Cat A conditional promotion under (P0)–(P11) + Φ_res + τ < τ_*. 3 bookkeeping refinements (R-1 bottleneck-stability factor / R-2 LG-7 reuse / R-3 terminal-death Type-N consistency) flagged in §5.7. Verdict: PASS / REPAIR-NEEDED / FAIL. Per-refinement verdict + new findings."
-
-**Step 2 (15:30-17:00)**: Teammate dispatch
-- **Teammate**: `l1m-audit-prover` (general-purpose subagent, audit prompt with structural completeness focus).
-- **Mode**: fire-and-forget background dispatch.
-- **Expected verdict timing**: Day 2 morning ~ Day 3 morning.
-- **Output 1 (Day 1 EOD)**: `THEORY/logs/daily/2026-05-04/01_l1m_audit_dispatch.md` (~100-150 lines) — dispatch record + audit prompt + input package list + expected output schema.
-
-**Estimated time**: ~3 hours.
-
-### Block 4 — G3 γ-path dispatch (Thread 2) + NQ-187b numerical launch (17:00-20:00)
-
-**Step 1 (17:00-18:00)**: γ-path audit input package 준비
-- Bundle 6 input files (§3.3).
-- Audit prompt:
-  - "Audit T-σ-Theorem-4 Cat B retroactive status (CV-1.5.1 Day 4) for Cat A re-promotion attempt. 3-way A_2/A_1 discrepancy (2/3 vs 4 vs 8) cleanly bounded into γ/β/α paths. **γ-path scope: Σ_m-Hessian convention audit** — centered (H_c = ∇²E - μI), Lagrange-projected (H_L = P^⊥ ∇²E P^⊥), reduced on Σ_m (H_r). Specify which convention A_2/A_1 ratio belongs to + verdict on 3 conventions reconciliation."
-- **Verdict scenarios** (per W6 strategic plan §4.3.4):
-  - 시나리오 A: $A_2/A_1$ resolves to single value → T-σ-Theorem-4 Cat A re-promotion candidate.
-  - 시나리오 B: γ verdict inconclusive → β-path R22 audit conditional dispatch (W6 D4-W7 spillover).
-  - 시나리오 C: deeper structural error → T-σ-Theorem-4 retract or major restatement (paradigm-shift candidate).
-
-**Step 2 (18:00-19:00)**: Teammate dispatch
-- **Teammate**: `gamma-path-prover` (general-purpose subagent, audit + structural analysis prompt).
-- **Mode**: fire-and-forget background dispatch.
-- **Expected verdict timing**: Day 2 morning ~ Day 3 EOD.
-- **Output 2 (Day 1 EOD)**: `THEORY/logs/daily/2026-05-04/02_gamma_path_dispatch.md` (~100-150 lines) — dispatch record + audit prompt + input package list + 3-scenario decision tree.
-
-**Step 3 (19:00-20:00)**: NQ-187b numerical script + background launch
-- **Script**: `CODE/scripts/nq187b_a2_a1_extrapolation.py` (NEW W6 D1).
-  - Setup: $D_4$ free-BC, c=0.5, β=30, $A_2/A_1$ measurement at L ∈ {20, 24, 28, 32, 36, 40}.
-  - 5 seeds per L → 30 minimizers total.
-  - Output: $A_2/A_1(L)$ table + linear/inverse-L extrapolation to continuum L → ∞.
-  - Estimated runtime: ~10-30 hours (size depends on convergence iters).
-- **Background launch**: `nohup python3 scripts/nq187b_a2_a1_extrapolation.py > nq187b.log 2>&1 &`.
-- **Output 3 (Day 1 EOD)**: `THEORY/logs/daily/2026-05-04/03_nq187b_numerical_launch.md` (~80-120 lines) — script doc + launch record + expected output schema.
-
-**Estimated time**: ~3 hours.
-
-### Block 5 — G7 OAT-2/3 partial start + Day 1 99_summary (20:00-21:00)
-
-**Step 1 (20:00-20:30)**: G7 OAT-2 PH layer scope
-- `THEORY/working/MF/F_Kstep_K_triple.md` (359 lines, OP-0009-F)에 PH layer 추가 *scope* 작성 (실제 추가는 Day 2):
-  - Current 4-quantity bridge: $\mathcal F$ / $K_{\mathrm{step}}$ / $K_{\mathrm{act}}$ / $K_{\mathrm{field}}$.
-  - PH layer 추가: $K_{\mathrm{bar}}^{\ell_{\min}}(U)$ + L-M $K_{\mathrm{soft}}^\phi(U)$ → **6-quantity bridge**.
-  - Section 추가 위치: §4 또는 §5 (existing 4-quantity 다음).
-  - 예상 ~50 lines.
-- **Output 4 (Day 1 EOD)**: `THEORY/logs/daily/2026-05-04/04_oat2_ph_layer_scope.md` (~50-100 lines) — Day 2 morning 작업 prep.
-
-**Step 2 (20:30-21:00)**: Day 1 99_summary
-- Block 1-5 산출 정리.
-- Day 2 priority adjustment.
-- Hard constraint verification.
-- weekly_draft_storming.md 04-W5 → 05-W1 transition 처리 (Day 1 entry append).
-- **Output 5 (Day 1 EOD)**: `THEORY/logs/daily/2026-05-04/99_summary.md`.
-
-**Estimated time**: ~1 hour.
+These artifacts were on **deferred-track** per the redesigned W6 plan's §2 explicit non-goals (γ-path, OAT-2/3, etc.) — so their deletion does not block any redesigned W6 plan goal *except* G1 (whose verdict file was on-track and is now gone).
 
 ---
 
-## §5. Success Criteria
+## §3. Goal Status against Redesigned W6 Plan (post-reset, post-G3-deep-dive)
 
-Day 1 is successful if:
+| Redesigned G | W6 plan §3 schedule | Current persistent state | Status |
+|---|---|---|---|
+| **G1** L1-M-AUDIT (R-1/R-2/R-3 closure) | Day 4-5 (12h budget) | **🔁 RESET — work was over-delivered Day 1 then deleted; verdict file no longer exists in persistent state** | Day 2 morning decision: (a) re-spawn audit (~7-10 min compute), or (b) proceed from conversation-memory summary (less rigorous), or (c) schedule per original W6 plan Day 4-5. |
+| **G2** T-Bind categorical decision | Day 2 (6h budget) | ✅ **Day 1 evening done** (CHANGELOG; canonical edits at canonical.md:1452, 1457 + theorem_status.md:163-164, 285) | CLOSED (out of this Claude session's scope). |
+| **G3** K_act ε-convention | Day 3 (6h budget) | ✅ **Day 1 mid-day post-reset deep-dive** (4 files, 72 KB; D1 verdict; Cat A definitional precision proposal — canonical Commitment 16 line 810 amendment + W6 strategic plan §4.2 status-text revision) | CLOSED at proposal stage; user-supervised promotion (~30 min) closes fully. See §4.1 below. |
+| **G4** Parking-lot inventory (Stage 0) | Day 6 (4h budget) | ❌ Not started | On schedule. |
 
-1. **G2 ✅ COMPLETE**: `cseh_factor_sharpness_analysis.md` produced; new $\tau_*$ expression derived; Cat A absolute classification.
-2. **G1 ✅ DISPATCHED**: `l1m-audit-prover` teammate launched fire-and-forget; dispatch record file produced.
-3. **G3 ✅ DISPATCHED**: `gamma-path-prover` teammate launched fire-and-forget; dispatch record file produced.
-4. **G7 ⏳ PARTIAL**: OAT-2 PH layer scope drafted; Day 2 complete path 명료.
-5. **NQ-187b ✅ BACKGROUND LAUNCHED**: script `nq187b_a2_a1_extrapolation.py` running; launch record produced.
-6. **5 distinct daily files produced** + Day 1 99_summary.
-7. **No canonical edits applied** (per W6 plan §13.4 hard constraint; G4 release Day 7).
-8. **No silent OP resolution** (per W6 plan §13.4 hard constraint).
-9. **Tests still 215 passing, 1 xfailed** (no scc/ edits expected).
+**Summary:** redesigned W6 plan **G2 + G3 effectively closed in Day 1** (acceleration from Day 2-3 to Day 1). G1 RESET (Day 2 decision needed). G4 on schedule (Day 6).
 
 ---
 
-## §6. Risk Register
+## §4. Day 2 Priority (post-reset, post-G3-deep-dive)
 
-- **Risk D1-1 — Background teammate dispatch overhead**: G1 + G3 audit dispatch가 Day 1 evening에 launch되어 verdict는 Day 2-3 도착. Day 1 EOD에 verdict 미도착이 정상. **Mitigation**: 두 dispatch 모두 fire-and-forget; Day 1 99_summary는 dispatch record만 기록.
-- **Risk D1-2 — NQ-187b script 작성 시 scc/ 의존성 break**: $D_4$ free-BC L=20-40 sweep에 새로운 graph constructor 또는 minimizer init mode 필요 가능. **Mitigation**: 기존 `scc/graph.py` GraphState constructors 사용; 새 mode 필요 시 별도 standalone helper에 격리 (scc/ unmodified).
-- **Risk D1-3 — G2 mathematical depth가 expected보다 깊음**: CSEH factor sharpness가 Type-N bars의 mixed terminal/finite-death case에서 생각보다 복잡 → Block 2 ~2시간 over. **Mitigation**: Block 2를 Day 1 morning Block 1과 swap 가능 (Block 2가 Day 1 single most important). Block 5를 Day 2 morning으로 이동.
-- **Risk D1-4 — Pre-brainstorm corrections이 G1/G3/G7 input package 수정 강제**: 평소 wording-level corrections (W5 Day 1 패턴)이 substantive package change 강제 가능. **Mitigation**: pre-brainstorm을 Block 1에서 마무리; Block 3-4 dispatch는 corrections 적용 후.
-- **Risk D1-5 — Triple-thread coordination이 single-session에서 무리**: G1 + G3 + G7 + G2 4-thread를 single 세션에 처리 시 cognitive load. **Mitigation**: G2 single-target은 ~2시간 budget; G1 + G3 dispatch는 input package + prompt 작성으로 한정 (verdict 처리는 Day 2-3); G7은 partial scope only.
+### §4.1 Day 2 Block 0 (morning, ~30-60 min) — G3 user-supervised promotion
 
----
+Apply the G3 D1 verdict's proposals (per `02_development.md` §6 + §7 + `03_integration_and_new_open.md` §1):
 
-## §7. Expected Output Files
+1. **canonical.md line 810 amendment** (one sentence; per `02_development.md` §6.1 explicit text).
+2. **CHANGELOG entry** (per `02_development.md` §7.3 explicit text, ~20 lines).
+3. **W6 strategic plan §4.2 status-text revision** (per `03_integration_and_new_open.md` §4.2 explicit text — addresses the misframing finding).
+4. **Optional: theorem_status.md CV-1.5.1 footnote** (per `03_integration_and_new_open.md` §2.2; cosmetic).
+5. **Optional: working file annotations** (`K_status_commitment.md` line 314 + `kbar_kact_bridge_L1I_constants_feasibility.md` line 92; per `02_development.md` §7.4; cosmetic).
 
-**Daily files (5 + 99 = 6)**:
+### §4.2 Day 2 Block 1 (morning, ~2-4 hours) — G1 closure
 
-- `THEORY/logs/daily/2026-05-04/pre_brainstorm.md` — Day 1 looser conceptual frame.
-- `THEORY/logs/daily/2026-05-04/plan.md` — this file.
-- `THEORY/logs/daily/2026-05-04/01_l1m_audit_dispatch.md` — G1 dispatch record (~100-150 lines).
-- `THEORY/logs/daily/2026-05-04/02_gamma_path_dispatch.md` — G3 dispatch record (~100-150 lines).
-- `THEORY/logs/daily/2026-05-04/03_nq187b_numerical_launch.md` — NQ-187b script doc + launch record (~80-120 lines).
-- `THEORY/logs/daily/2026-05-04/04_oat2_ph_layer_scope.md` — G7 Day 2 morning prep (~50-100 lines).
-- `THEORY/logs/daily/2026-05-04/99_summary.md` — Day 1 EOD reflection.
+Per redesigned plan §3.4 (Day 4-5 work originally; first-redesigned plan tried to compress this to Day 2 morning before reset):
 
-**Working files (1 new)**:
+**Decision required (from §3 G1 row above):**
+- **(a) Re-spawn audit:** dispatch a fresh `l1m-audit-prover` agent against the L-M working draft. The G2 OLD-plan CSEH analysis that pre-resolved R-1 is also gone, so either (a-i) redo CSEH + audit, or (a-ii) audit accepts conversation-memory R-1 closure summary. Estimated: ~15-30 min for (a-ii); ~1-2 hours for (a-i).
+- **(b) Proceed from memory:** apply the 3 textual repairs to L-M working draft based on this conversation's summary (R-2: §5.5 Type-B chain wording fix; R-3: §5.4 Type-N non-terminal note; minor §2.2 Phi-4c F1 wording). Less rigorous but faster (~30 min). Risk: misremembered specific replacement wording.
+- **(c) Schedule per original Day 4-5:** treat the reset as a deliberate revert to original schedule; do G1 reading on Day 4 + closure Day 5 per W6 strategic plan §3.
 
-- `THEORY/working/MF/cseh_factor_sharpness_analysis.md` — G2 deliverable (~150-250 lines).
+**Recommendation (per `99_summary.md` §5.5 conservative path):** (a-ii) re-spawn with conversation-memory R-1 summary as input, ~15-30 min; preserves audit rigor without re-doing the CSEH derivation.
 
-**CODE files (1 new)**:
+After G1 closure: promote L-M to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with Cat-A-conditional badge. **Closes redesigned W6 plan G1.**
 
-- `CODE/scripts/nq187b_a2_a1_extrapolation.py` — NQ-187b numerical script (~200-350 lines).
+### §4.3 Day 2 Block 2 (afternoon, ~2 hours) — Outstanding decisions cleanup (§5)
 
-**Background processes (1 launched)**:
+See §5 below for the explicit decision list.
 
-- `nq187b.log` — NQ-187b background run output (~10-30 hours expected).
+### §4.4 Day 2 Block 3 (evening, ~1 hour) — Day 3 plan + 2026-05-05/plan.md
 
-**Weekly file (1 modified)**:
+Draft tomorrow's plan. With G2 + G3 + G1 closed by Day 2 EOD, Day 3-5 budget is mostly free.
 
-- `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` — Day 1 entry append (create file if missing).
+### §4.5 Day 2 EOD status target
 
-**Total Day 1 output**: 6 daily files + 1 working file + 1 CODE script + 1 background process + 1 weekly entry = **9 distinct artifacts** (excluding the background log file which builds passively).
-
----
-
-## §8. End-of-Day Target for 2026-05-04
-
-By the end of 2026-05-04, the goal is to have **W6 triple parallel thread launched + G2 single target complete**. The state at EOD should:
-
-- Confirm G2 NQ-L1M-2 Cat A absolute (CSEH factor sharpness) → L-M-2 §5.4의 새 $\tau_*$ expression이 W6 G1 audit input에 반영 가능.
-- Confirm G1 + G3 audit dispatches launched fire-and-forget; Day 2-3 verdict 처리 path 명료.
-- Confirm G7 OAT-2 PH layer scope drafted; Day 2 morning 작업 entry 가능.
-- Confirm NQ-187b background numerical launched; Day 5 EOD analysis 가능 (or earlier if convergence faster than expected).
-- Confirm 215 passed, 1 xfailed (no scc/ edits).
-- Confirm canonical 직접 수정 0; silent OP resolution 0; CN10/CN6/CN15 violation 0.
-
-Day 1 의 substantive Day 1 contribution은 **G2 single target complete (CSEH factor sharpness Cat A)** + **3 background threads launched (G1, G3, NQ-187b)**. Day 2-3 는 verdict aggregation + G7 complete. Day 4-5 는 G6 + G8. Day 6-7 는 G4 release + G5 dispatch.
+- G1: ✅ closed (textual repairs + promotion).
+- G2: ✅ closed Day 1 evening.
+- G3: ✅ closed Day 2 morning (user-supervised promotion of Day 1 mid-day proposals).
+- G4: ❌ pending (Day 6 per schedule); could accelerate to Day 3-5 given slack.
 
 ---
 
-**Source files for Day 1:**
+## §5. Outstanding Decisions (user input required)
 
-- W5 close: `THEORY/logs/weekly/2026-04-W5/weekly_summary.md`
-- W6 strategic plan: ~~`THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (especially §6.1 Day 1 Block 1-5)~~ — *(File deleted 2026-05-04 audit pass; the plan silently downgraded the CV-1.7 parking-lot dispatch from "audit" to "checklist preparation only" and contained internal arithmetic inconsistencies — see CHANGELOG 2026-05-04 entry. Replacement plan for the parking-lot work: `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`. A new W6 strategic plan is to be redesigned per user decision.)*
-- L1-M working draft: `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md`
-- L1-M exploration: `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md`
-- L1-M integration: `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md`
-- T-L1-F canonical: `THEORY/canonical/canonical.md` §13 (line 1462)
-- T-σ-Theorem-4 canonical: `THEORY/canonical/canonical.md` §13 + `theorem_status.md` CV-1.5.1 entry
-- γ/β/α framework: `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`
-- NQ-187 RED finding: `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` §1.4
-- OAT-2 source: `THEORY/working/MF/F_Kstep_K_triple.md`
-- OAT-3 source: `THEORY/working/MF/lambda_rep_ontology.md`
-- CSEH 2007 reference: `THEORY/working/E/soft_K_definition.md` §2.1
+These decisions need user input before Day 2 morning to avoid silent drift:
+
+### §5.1 G1 closure path (per §4.2 above)
+
+Choose: **(a-ii) re-spawn with R-1 memory summary** [recommended] / **(a-i) full redo** / **(b) memory-only no re-spawn** / **(c) schedule Day 4-5**.
+
+### §5.2 `weekly_draft_storming.md` — STALE
+
+The file (4528 B, 09:21, in `THEORY/logs/weekly/2026-05-W1/`) was created by the first autonomous session under OLD 8-goal plan content. After the reset, its Day 1 entry is stale (references deleted files + describes outdated goal scope).
+
+Choose:
+- **(α) Rewrite under realigned plan** — replace Day 1 entry with content reflecting current persistent state (G2 done evening + G3 done Day 1 mid-day + G1 reset); ~5-10 min.
+- **(β) Delete** — remove the file; W6 D7 weekly_summary.md drafting will create the authoritative weekly record.
+- **(γ) Leave with STALE flag** — append a note saying "STALE post-reset; see plan.md §1 for current state"; keep as historical record.
+
+**Recommendation:** (α) rewrite — keeps the weekly buffer functional for Day 2-7 entries.
+
+### §5.3 `gamma_path_audit_symbolic.py` — TEMPORARY DRAFT
+
+The file (17402 B, 09:13, in `CODE/scripts/`) was created by the deferred-track gamma-path-prover agent. Marked "TEMPORARY DRAFT — gamma-path-prover" in source. Contains symbolic L=4 Σ_m-Hessian computation under three conventions; result was the γ-path Scenario B verdict (γ eliminated). Functioning code, not part of any active goal track post-reset.
+
+Choose:
+- **(α) Delete** — clean removal, deferred-track artifact not needed for redesigned W6 plan.
+- **(β) Retain** — useful reference for any future NQ-187 falsification handling reactivation; preserve as `CODE/scripts/_archive/gamma_path_audit_symbolic.py` or rename with `_deferred_track` suffix.
+
+**Recommendation:** (β) retain with rename — functioning symbolic computation is hard to reproduce; cheap to keep.
+
+### §5.4 `CODE/scripts/results/nq187b_a2_a1_extrapolation.json`
+
+Re-generated this session from pre-existing script. Deterministic output. **Recommendation:** keep as-is; harmless.
+
+### §5.5 W6 strategic plan §4.2 status-text revision
+
+Per G3 deep-dive finding: W6 strategic plan G3 status text contains a misframing ("(~0.075·m̄ for K_field=4)" implies $\bar m \approx 3$, unsupported). Proposed replacement text in `03_integration_and_new_open.md` §4.2.
+
+Choose:
+- **(α) Apply revision** — overwrites the strategic plan §4.2 G3 status block; preserves the rest. ~5 min.
+- **(β) Leave as-is** — strategic plan unchanged; G3 deep-dive findings live only in `0504/03_integration_and_new_open.md` § 4.2 as a proposal.
+
+**Recommendation:** (α) apply — keeps strategic plan internally consistent with G3 D1 verdict.
+
+---
+
+## §6. Hard Constraints (preserved)
+
+- **Canonical 직접 수정 0** for autonomous-session work (this G3 deep-dive; the evening G2 + NQ-187 handling did edit canonical, but those were user-supervised CHANGELOG-tracked decisions).
+- **Working/ 직접 수정 0** for autonomous-session work.
+- **scc/ 0 edits** for W6 (no scc/-touching goal in redesigned plan G1-G4).
+- **Tests still 215 / 1 xfailed** — verified at G3 deep-dive end (258.59s pytest run).
+- **No silent OP resolution** — see `02_development.md` §10.3 + `03_integration_and_new_open.md` §5.
+- **N-1 reframing honored**, **CN5 / CN6 / CN7 / CN10 / CN15 preserved**, **u_t primitive maintained**, **No OMC pool orchestration** (G3 deep-dive used 0 Agent dispatches; first autonomous session used 2 single Agent dispatches `l1m-audit-prover` + `gamma-path-prover` — both deleted in reset; both compliant with §8.10).
+- **No Research OS resurrection.**
+
+---
+
+## §7. Decision Points (per redesigned W6 plan §5 + this v2)
+
+These need user input or explicit deferral by W6 close, otherwise they become silent drift:
+
+1. **Day 2 EOD (Tue 2026-05-05):** ~~T-Bind-Proj / T-Bind-Full category decision~~ — **COMPLETED Day 1 evening.** Closed.
+2. **Day 2 morning:** ~~ε convention decision~~ — **COMPLETED Day 1 mid-day post-reset.** Decision packet at `02_development.md` §5-§6 (D1 verdict, R1 reading); user-supervised promotion at Day 2 Block 0.
+3. **Day 2 morning:** **G1 closure path (§5.1) — NEW DECISION POINT** post-reset.
+4. **Day 2 morning:** **weekly_draft_storming.md handling (§5.2) — NEW.**
+5. **Day 2 morning:** **gamma_path_audit_symbolic.py handling (§5.3) — NEW.**
+6. **Day 2 morning:** **W6 strategic plan §4.2 revision (§5.5) — NEW.**
+7. **Day 5 EOD:** if R-3 cannot be closed, decide whether L-M is retained at Cat-B sketched / moved to Cat C / retracted. — **Effectively pre-resolved** by G1 audit verdict (REPAIR-NEEDED with closeable repairs, conversation memory) + G2 OLD-plan R-1 pre-resolution (conversation memory). Concrete closure at Day 2 morning per §4.2.
+8. **Day 7 EOD (W6 close):** decision on whether CV-1.6 release becomes a W7 target or is deferred indefinitely. Default per redesigned plan: deferred until parking lot is at least partially resolved.
+
+---
+
+## §8. Risks (per redesigned W6 plan §6 + Day 1 v2-specific)
+
+- **G1 verdict file deletion increased rework cost.** The 3 textual repair specifications (R-2 §5.5, R-3 §5.4, minor §2.2 Phi-4c F1 wording) lived in the deleted `01a_l1m_audit_verdict.md`. Conversation-memory summary is high-level; specific replacement wording may need re-derivation. Mitigation: §5.1 (a-ii) re-spawn with R-1 summary input (~15-30 min).
+- **G2 OLD-plan CSEH analysis deletion.** The Cat A negative finding (factor 2 sharp under L1-J) used to pre-resolve R-1 of G1. If G1 is re-spawned without the CSEH file, the audit may flag R-1 as still open (re-introducing a refinement that was closed). Mitigation: include the conversation-memory R-1 summary in the re-spawn input.
+- **W6 strategic plan §4.2 misframing was retroactive.** The misframing was authored 2026-05-04 morning; the G3 deep-dive Day 1 mid-day discovered it. If unrevised, the strategic plan continues to claim a discrepancy that doesn't exist at the canonical/script level. Mitigation: §5.5 (α) apply revision Day 2.
+- **plan.md drift surface.** This file has now been redesigned twice (10:22 first, NOW v2 second) within a single Day 1. If further state changes happen post-this-redesign (e.g., a third autonomous session or another reset), v3 redesign may be needed. Mitigation: §5 outstanding decisions resolved by Day 2 morning to stabilize.
+- **G3 closure depends on user promotion.** The G3 deliverables are PROPOSAL stage (canonical amendment text + CHANGELOG entry text + W6 strategic plan revision text); actual canonical edits are user-supervised per §8.1 hard constraint. Mitigation: §4.1 explicit Day 2 Block 0 (~30 min user-supervised promotion).
+
+---
+
+## §9. Source Files for Day 1 (corrected, only existing files)
+
+**Authoritative weekly anchor:**
+- `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (140 lines, redesigned 2026-05-04 morning)
+
+**Authoritative session log:**
+- `THEORY/CHANGELOG.md` 2026-05-04 entries (Pass 1, Pass 2, evening G2 + NQ-187 handling, late evening open_problems merge)
+
+**Reference plan for parking-lot work (Day 6):**
+- `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`
+
+**G1 (L-M) sources (for Day 2 morning closure):**
+- `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (L-M working draft, audit subject)
+- `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md`
+- `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md`
+- `THEORY/canonical/canonical.md` §13 T-L1-F (lines 1482-1489) + §11.1 #16 Commitment 16 (lines 804-820)
+
+**G3 (this Day 1 mid-day deliverables — ε-convention deep-dive):**
+- `THEORY/logs/daily/2026-05-04/01_exploration.md` — G3 multi-approach + A4 selection rationale.
+- `THEORY/logs/daily/2026-05-04/02_development.md` — G3 A4 diagnostic execution + D1 verdict + Cat A amendment proposal + propagation plan.
+- `THEORY/logs/daily/2026-05-04/03_integration_and_new_open.md` — G3 canonical integration + W6 strategic plan revision proposal + 6 NQs + 5 prompt v2 notes.
+- `THEORY/logs/daily/2026-05-04/99_summary.md` — G3 EOD summary + Day 2 recommendations.
+
+**G2 + NQ-187 evening session sources (already canonical):**
+- `THEORY/canonical/canonical.md` lines 1452, 1457 (T-Bind-Proj/Full Cat A erratum)
+- `THEORY/canonical/canonical.md` lines 1385-1433 (T-σ-Theorem-4 continuum-vs-discrete note)
+- `THEORY/canonical/theorem_status.md` lines 163-164, 285 (T-Bind sync)
+
+**Outstanding (user-decision-pending, see §5):**
+- `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` — STALE OLD-plan content.
+- `CODE/scripts/gamma_path_audit_symbolic.py` — TEMPORARY DRAFT, deferred-track.
+
+---
+
+**End of redesigned `plan.md` v2. Day 1 substantively complete (G2 + G3 closed; G1 reset awaiting Day 2 decision; G4 on schedule). Day 2 starts with G3 user-supervised promotion (Block 0, ~30 min) → G1 closure (Block 1, ~2-4 hours) → outstanding decisions cleanup (Block 2, ~2 hours) → Day 3 plan (Block 3, ~1 hour).**

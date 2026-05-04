@@ -1,0 +1,217 @@
+{
+  "spec": {
+    "task": "NQ-G3-3",
+    "purpose": "K_act stability under epsilon perturbation at fixed initial state. Standard L1-I configuration (T^2_20, M=90, K_field=4, initial_masses=(30,30,30,0)).",
+    "datetime_utc": "2026-05-04T03:12:14+00:00"
+  },
+  "initial_state": {
+    "K_field": 4,
+    "M_total": 90.0,
+    "initial_masses": [
+      30.0,
+      30.0,
+      30.0,
+      0.0
+    ]
+  },
+  "epsilon_sweep": [
+    {
+      "epsilon": 0.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.0001,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.001,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.01,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.05,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.225,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 0.5,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 1.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 5.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 10.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 20.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 25.0,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 29.999,
+      "K_act": 3,
+      "per_slot_active": [
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "epsilon": 30.0,
+      "K_act": 0,
+      "per_slot_active": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "epsilon": 30.001,
+      "K_act": 0,
+      "per_slot_active": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "epsilon": 35.0,
+      "K_act": 0,
+      "per_slot_active": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "epsilon": 50.0,
+      "K_act": 0,
+      "per_slot_active": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "epsilon": 100.0,
+      "K_act": 0,
+      "per_slot_active": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "jumps": [
+    {
+      "epsilon": 30.0,
+      "K_act_before": 3,
+      "K_act_after": 0
+    }
+  ],
+  "verdict": "K_act^epsilon is structurally stable in [0, 30) at K_act=3. Single simultaneous jump at epsilon=30. Cat A absolute (initial state). Dynamic-state analog (post-gradient-flow with continuous per-slot mass distribution) deferred as NQ-G3-3-dynamic (W7+)."
+}

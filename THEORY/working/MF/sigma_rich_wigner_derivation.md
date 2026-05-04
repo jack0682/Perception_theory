@@ -223,6 +223,12 @@ Specifically: at the merger limit $\Delta_{jk}^{\mathrm{Gold}} \to 0$, the upper
 
 **Cat status**: **Cat B sketch** at this file's level. Cat A everywhere requires explicit projection-formula proof — an open item for W9+ (R2 of `sigma_rich_augmentation.md` §10.4).
 
+**Detailed matrix-perturbation framework**: see `sigma_rich_phi_proof.md` §6.2.2 for the W9+ proof target outline (analytic family lemma + Newton-Puiseux normal form + limiting eigenvector subspace identification + explicit projection formula + continuity matching). Conjecture 6.1 of `sigma_rich_phi_proof.md` is **identical** to Conjecture 8.1 here; cross-reference maintained for both audit + numerical-anchor purposes.
+
+**Mass-rescaling factor (key conjectural element)**: the projection formula's $\mu(m_j, m_k)$ rescaling — most likely $\mu = m_j m_k / (m_j + m_k)$ by analogy with classical-mechanical reduced-mass dynamics — is the central unknown that the W9+ rigorous proof must determine. Numerical anchor (NQ-242c-Rich Step 6) tests this on the equilateral vs isoceles triangle construction (`sigma_rich_augmentation.md` §4): symmetric ($m_j = m_k$) gives reduced mass $m/2$; asymmetric tests the formula's mass-dependence. Failure of NQ-242c-Rich to confirm the reduced-mass form would force conjecture revision (e.g., to $\mu = \min(m_j, m_k)$ or other functional form).
+
+**Failure modes** (per `sigma_rich_phi_proof.md` §6.2.3): (1) multi-formation simultaneous merger; (2) asymmetric merger with persistent gap (trivial projection); (3) non-generic higher-order Newton-Puiseux branching; (4) non-translation-invariant graph approximate Goldstones; (5) strong-coupling regime ($\lambda_{\mathrm{rep}}$ large). Currently scoped out by hypotheses (H1)-(H4); validity restricted accordingly.
+
 ### §8.3 Numerical anchor target
 
 For NQ-242c-Rich verification (per `nq242c_explicit_construction.md` §6 Step 6):

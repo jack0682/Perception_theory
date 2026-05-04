@@ -1,5 +1,21 @@
 # pre_objective_K_field_tension.md — Pre-Objective Primacy vs K-Field Architecture: 가장 깊은 Ontological Gap
 
+> **✅ REJECT-RETIRE-RECOMMENDATION (W6 D1 EOD parking-lot Issue #5 audit, 2026-05-04)**
+> The original Issue #5 recommendation classified this file as "philosophical commitment, not math" and proposed archive to `_archive/ontological_design_decisions/`. **Chain verification rejects this recommendation.**
+>
+> **Rejection rationale:**
+> 1. **8 active inbound references** including canonical `theorem_status.md` Open Problems Catalog + 6 active OAT workstream files (`K_status_commitment.md`, `F_Kstep_K_triple.md`, `k_selection_mechanism.md`, `shared_pool_canonical_proposal.md`, `mathematical_scaffolding_4tools.md`, `foundational_bridges_2026.md`).
+> 2. **Active OP-0009-Pre PARTIALLY RESOLVED claim** at §7 — this is structured ontological audit with a specific resolution proposal, not philosophical musing.
+> 3. **Mathematical content**: Path A + Path C + Tool A2 quotient hybrid analysis (§§3–6); $\widetilde{\widetilde\Sigma}^K_M = \widetilde\Sigma^K_M / S_{K_{\mathrm{field}}}$ unordered configuration formalism; CN10 one-way ontological flow $u_t \to [\mathbf{u}] \to \mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}}) \to$ cog-sci.
+> 4. **OAT-6 of the systematic OP-0009 sub-item resolution effort** (OAT-1 ✅ Commitment 16; OAT-2/3/4/5/6/7 PARTIALLY RESOLVED). Archive would break the OAT system symmetry + OP-0009 sub-item resolution chain.
+> 5. **Promotion target**: v2.0 (W11-W12) canonical §1 ontological setup paragraph amendment (~25-30 lines).
+>
+> **Correct classification**: ontology-oriented mathematical working file (not "philosophical commitment"). Comparable to `K_status_commitment.md` which served as the OAT-1 working file before promoting to canonical Commitment 16 — i.e., ontological audits with specific canonical-promotion proposals are legitimate working files.
+>
+> **Action**: PRESERVE IN PLACE in `working/MF/`. No archive move. Continue toward **v2.0 §1 ontological setup paragraph amendment** promotion target (canonical-scheduled — see canonical `theorem_status.md` OP-0009 Sub-item Status Table row for OP-0009-Pre, "Promotion target: v2.0 §1 amendment").
+>
+> *(Re-examination verification W6 D1 EOD late: canonical theorem_status.md OP-0009 sub-item Status Table explicitly registers this file as the OP-0009-Pre PARTIALLY RESOLVED resolution mechanism with v2.0 §1 amendment as the promotion target. The original Issue #5 audit "philosophical commitment, not math" classification arose from parking_lot_inventory §1.6 Cluster F (Auxiliary) misclassification of this file; canonical sub-item table treats it on par with OAT-1/2/3/4/7 working files.)*
+
 **Status:** working draft (OAT-6 W5 Day 4 spawn 2026-04-29; multi-formation 초입의 *deepest ontological gap*).
 **Type:** Theory-only ontological audit (no canonical edits, no compute). Targets CV-1.6 user-decision packet — proposes amendment to canonical §1 ontological setup paragraph at v2.0 / W11–W12.
 **Author origin:** 4-에이전트 ontological depth analysis (W5 Day 3 EOD) Critic CRITICAL-1 — *"K-field architecture imports object-like indexed fields, contradicting Commitment 1"*. Builds on OAT-1 (`K_status_commitment.md` — Commitment 16 K_field/K_act decomposition) + OAT-supplementary (`mathematical_scaffolding_4tools.md` §3 Tool A2 quotient verification).

@@ -453,14 +453,26 @@ Rigorous Cat status assessment after §10.1 + §10.2 completion. CV-1.6 packet d
 
 **Deliverable**: D-CV1.6-O5 decision document (`THEORY/logs/daily/2026-05-XX/...`).
 
-### §10.4 Theoretical rigor upgrades (W7-W9)
+### §10.4 Theoretical rigor upgrades (W7-W9), R1/R2/R3 blockers
 
-Cat A everywhere (post-CV-1.6) requires:
-- σ_rich Aut-invariance proof (§2.4 W2): explicit pair-stabilizer + wreath-product treatment.
-- §3.3(d) Wigner-projection eigenvalue collapse rigorous proof.
-- §7.2 σ^D symmetry-emergence Cat A: full $G_{\mathrm{emerge}, jk}$ characterization.
+Cat A everywhere (post-CV-1.6) requires the following theoretical completions, registered as R1/R2/R3 blockers:
 
-**Effort**: 4-6 weeks W9-W12 (theoretical, post-CV-1.6 release).
+**(R1) σ_rich Aut-invariance proof** (§2.4 W2): explicit pair-stabilizer + wreath-product treatment. Centroid + orientation static Aut-invariance is Cat A complete (`sigma_rich_centroid_derivation.md` Theorems 5.1, 6.1, 6.3; `sigma_rich_orientation_derivation.md` Theorem 5.4). What remains for (R1): Wigner-data static Aut-invariance under the cross-block 2×2 sub-Hessian convention (`sigma_rich_wigner_derivation.md` §6 Theorem 6.5 already Cat A; (R1) substantively closed). **Status: Cat A complete W6 D1.**
+
+**(R2) Wigner-projection eigenvalue collapse rigorous proof** (§3.3(d) sketch level → Cat A target):
+- Conjecture statement: `sigma_rich_phi_proof.md` Conjecture 6.1 ≡ `sigma_rich_wigner_derivation.md` Conjecture 8.1.
+- W9+ proof framework: `sigma_rich_phi_proof.md` §6.2.2 (matrix-perturbation framework with 5 technical ingredients: analytic family lemma, Newton-Puiseux normal form, limiting eigenvector subspace, explicit projection formula, continuity matching).
+- Central unknown: mass-rescaling factor $\mu(m_j, m_k)$ in the projection formula (likely reduced mass $m_j m_k / (m_j + m_k)$; subject to NQ-242c-Rich numerical confirmation).
+- Failure modes registered: 5 falsification routes (multi-formation simultaneous merger, asymmetric persistent-gap merger, higher-order Newton-Puiseux branching, non-translation-invariant graph, strong-coupling regime breakdown).
+- **Status: Cat B sketch + numerical anchor pending; Cat A everywhere W9-W12 contingent.**
+
+**(R3) σ^D symmetry-emergence Cat A** (§7.2): full $G_{\mathrm{emerge}, jk}$ characterization. Symmetry-emergence at K-jump events is currently sketched; Cat A requires explicit characterization of the emergent stabilizer subgroup as the merger occurs. Connects to OP-0009-Pre (pre-objective primacy) via the question of whether emergent symmetry is intrinsic (CN10 contrastive scaffolding) or modeling-layer commitment.
+
+**Effort estimate (R2 + R3)**: 4-6 weeks W9-W12 (theoretical, post-CV-1.6 release). Independent external prover-style audit recommended pre-CV-1.7 promotion (analogous to L1-K external audit → T-L1-F CV-1.5.2 pattern).
+
+**Hybrid CV-1.6 / CV-1.7+ promotion path** (per §9.3):
+- **CV-1.6 minor**: σ_rich static components (centroid + orientation + Wigner-data static-Aut-invariance) Cat A — promotable as supplementary canonical entries (T-σ-rich-Centroid + T-σ-rich-Orientation + T-σ-rich-Wigner-Static).
+- **CV-1.7+ full**: Φ_rich determinism (Theorem 7.1) Cat A — only after (R2) closes via W9+ rigorous proof + NQ-242c-Rich PASS. **OP-0008 OPEN until (R2) + numerical PASS.**
 
 ---
 

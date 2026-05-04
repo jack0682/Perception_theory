@@ -1,5 +1,21 @@
 # cobelonging_vs_sigmaD.md — Co-belonging $C_t$ vs σ_multi^D Multi-Formation Status (OAT-5)
 
+> **✅ REJECT-RETIRE-RECOMMENDATION (W6 D1 EOD parking-lot Issue #5 audit, 2026-05-04)**
+> The original Issue #5 recommendation classified this file as "design decision, not theorem" and proposed archive to `_archive/ontological_design_decisions/`. **Chain verification rejects this recommendation.**
+>
+> **Rejection rationale:**
+> 1. **8 active inbound references** including canonical `theorem_status.md` Open Problems Catalog + 7 active working files (`shared_pool_canonical_proposal.md`, `CV-1.6_packet_crosswalk.md`, `F_Kstep_K_triple.md`, `k_selection_mechanism.md`, `K_status_commitment.md`, `mathematical_scaffolding_4tools.md`, `parking_lot_inventory`).
+> 2. **Active OP-0009-C PARTIALLY RESOLVED claim** (architecture-conditional) — structured resolution proposal with specific verdict (Option C-3), not philosophical musing.
+> 3. **Mathematical content**: Option C-3 verdict ($C_t$ demoted-derived maintained; σ_multi^D and $C_t$ orthogonal information); orthogonality witness construction §5.2 on $D_4$-grid; explicit canonical impact (~10-15 lines at CV-1.6).
+> 4. **OAT-5 of the systematic OP-0009 sub-item resolution effort** (OAT-1 ✅ Commitment 16; OAT-2/3/4/5/6/7 PARTIALLY RESOLVED). Archive would break the OAT system symmetry.
+> 5. **Promotion target**: CV-1.6 W6 Day 7 morning (D-CV1.6-O6 if user approves) — within current W6 release cycle.
+>
+> **Correct classification**: ontology-oriented mathematical working file with architecture-conditional resolution proposal (not "design decision" alone). Comparable to OAT-4 `shared_pool_canonical_proposal.md` (which is similarly architecture-conditional and has CV-1.6 D-item promotion target).
+>
+> **Action**: PRESERVE IN PLACE in `working/MF/`. No archive move. Continue toward **CV-1.6 D-CV1.6-O4 promotion target** (canonical-scheduled, NOT speculative — see `THEORY/working/CV-1.6_packet_crosswalk.md` D-CV1.6-O4 entry + canonical `theorem_status.md` OP-0009 Sub-item Status Table row for OP-0009-C).
+>
+> *(Re-examination correction W6 D1 EOD late: original Issue #5 disclosure header said "D-CV1.6-O6 if user approves" — both phrases inaccurate. Correct designation is D-CV1.6-O4 per `CV-1.6_packet_crosswalk.md` line 50, scheduled — not "if user approves" hedge. Canonical theorem_status.md OP-0009 Sub-item Status Table confirms PARTIALLY RESOLVED status with this exact promotion target.)*
+
 **Status:** working draft (OAT-5, post W5 Day 4 morning batch session).
 **Type:** Theory-only audit; verdict on whether $C_t$ remains demoted-derived under K>1 or revives as primitive.
 **Author origin:** OAT-5 W6 priority advanced to W5 Day 4 per user "지금 하자" + "모든 도구 적극 활용 + 자율" direction; analyst-grade analysis (gap-list returned 2026-04-30 morning) integrated into write-capable working file.

@@ -1,5 +1,12 @@
 # formation_birth_string_breaking.md — NQ-253: Formation Birth via String-Breaking Analog (Gauge Theory Connection H)
 
+> **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
+> **Retire scope:** QCD string-breaking analog framing + 't Hooft 1974 / Bali 2001 / QuEra-Harvard-Innsbruck 2025 cross-domain rhetoric (motivational only; CN10 contrastive — no mathematical import from gauge theory).
+> **Preserve scope:** (1) **NQ-198a empirical anchor** ($C(\beta) \approx 13.2$ at $\beta = 4, \xi_0 = 0.5$ — V5b-F empirical scaling); (2) **R23 F=63 single-web configuration** observation; (3) **Critical boundary-size threshold formulation** $|\partial S|_{\mathrm{crit}}$ from §3 — SCC-intrinsic geometric criterion for formation birth.
+> **Future split (W7+ recommended):** extract NQ-253 SCC-intrinsic threshold formulation into `working/MF/formation_birth_threshold_NQ253.md`, retire gauge-theory framing to `_archive/cv17_speculative_retired_2026-05-04/`.
+> **5 active inbound references** (n1_kramers_extension, cn15_static_dynamic_separation, sigma_to_crisp_recovery, sigma_topological_invariance, parking_lot_inventory) → split must preserve link integrity.
+> **CN10 disclosure**: SCC formation birth is mass-conserving gradient-flow + double-well dynamics; gauge-theory string breaking is dynamical confinement-deconfinement transition. Structural parallel ("threshold-driven nucleation") is heuristic motivation only; mathematical content is SCC-intrinsic.
+
 **Status:** REVISED (W5 Day 4 PM Wave 3); awaiting W6 critic re-review.
 **Type:** Theory development — gauge theory analog + formation birth mechanism.
 **Author origin:** Day 4 OAT batch session post-Critic. Gauge theory Connection H (Very Strong) from `daily/2026-04-30/06_gauge_theory_connections_analysis.md`.

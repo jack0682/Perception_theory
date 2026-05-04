@@ -1,5 +1,13 @@
 # formation_fundamental_group.md — Formation Fundamental Group π_1(F) (NQ-263 Working File)
 
+> **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
+> **Retire scope:** Geometric Langlands apparatus framing (étale π_1, profinite completion, Galois cohomology, dual group, categorical equivalence) — entirely absent from SCC's strictly finite-graph setting; Gaitsgory-Raskin 2024 framing is heuristic motivation only.
+> **Preserve scope:** (1) **Definition 3.1**: $\pi_1(F; u^*) := \mathrm{Aut}(G)_{u^*}$ (formation fundamental group as the stabilizer subgroup of $\mathrm{Aut}(G)$ at minimizer $u^*$) — SCC-intrinsic finite-group invariant; (2) **Worked examples §5, §6** on $C_n, T^2_L, R23$; (3) **σ-class enumeration consequence** (orbit-counting application to NQ-188).
+> **Important framing**: $\pi_1(F)$ as defined IS just the stabilizer $\mathrm{Aut}(G)_{u^*}$, a standard finite-group object — NOT a fundamental group in any topological sense. The "$\pi_1$" label is **marketing** borrowed from Geometric Langlands framing; the mathematics is **orbit algebra**, equivalent to NQ-188's stabilizer-based σ-class enumeration.
+> **Future split (W7+ recommended):** absorb Definition 3.1 + worked examples into `working/SF/sigma_uniqueness_theorem.md` (which already handles NQ-188 σ-class enumeration via Aut(G)_{u*} stabilizer, so this would consolidate). Retire Langlands apparatus framing + Gaitsgory-Raskin references to `_archive/cv17_speculative_retired_2026-05-04/`.
+> **4 active inbound references** (op003_mo1_status_review, sigma_class_category, parking_lot_inventory, WAVE3_MASTER_INDEX) → split must preserve link integrity (sigma_class_category itself is FULL RETIRE candidate; op003 is index-only).
+> **CN10 disclosure**: SCC π_1(F) as "stabilizer subgroup of Aut(G)" is well-defined finite-group object. The "fundamental group" naming evokes algebraic-topology / Geometric-Langlands intuition that does NOT apply (no continuous loop space, no profinite completion). Naming should be reconsidered: `Stab(F)` or `Aut(F; u*)` would be more precise; `π_1(F)` is misleading. **Recommend renaming in W7+ split.**
+
 **Status:** working draft (Wave 3 NEW theoretical work, 2026-04-30, W5 Day 4 PM).
 **Created:** 2026-04-30 by team-lead@scc-wave3-deep-research, Task #24 (formal definition).
 **Author origin:** Direct spawn from `working/MF/foundational_bridges_2026.md` §4 Bridge B-3 (Gaitsgory-Raskin Geometric Langlands ↔ SCC multi-layer encirclement). Bridge B-3 proposed NQ-263 as the formal-definition target; this file delivers the definition + worked examples + σ-class enumeration consequence.

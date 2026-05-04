@@ -11,16 +11,16 @@
 
 ## §1. Mission
 
-> **"OP-0005 K-Selection 4-옵션 (a) free-energy + (b) Kramers + (c) numerical anchor + (d) Commitment 16 cap 가 *complementary* 하며 single coherent K-Selection axiom 으로 compose 되는지 prove. Commitment 16 K_field/K_act decomposition 과의 *compatibility* 정식 verify. M-1, Theorem 2, CN15 Static/Dynamic Separation 과 *consistent* 함을 closure. CV-1.7+ Commitment 19 K-Selection axiom 후보 제안."**
+> **"OP-0005 K-Selection 4-옵션 (a) free-energy + (b) Kramers + (c) numerical anchor + (d) Commitment 16 cap 가 *complementary* 하며 single coherent K-Selection axiom 후보 로 compose 될 수 있는지 (compatibility, partial-answer level) prove. Commitment 16 K_field/K_act decomposition 과의 *compatibility* 정식 verify. M-1, Theorem 2, CN15 Static/Dynamic Separation 과 *consistent* 함을 closure. CV-1.7+ Commitment 19 K-Selection axiom 후보 제안 (Cat A everywhere 는 W9+ contingent)."**
 
-이 working file 은 K-Selection cluster (Tasks #5, #6, #7) 의 **synthesis closure**. 4-option 들이 conflict 가 아니라 *layered architecture* 임을 prove: (d) 가 외부 cap; (a) 가 thermodynamic equilibrium; (b) 가 kinetic correction; (c) 가 empirical anchor. M-1 + Theorem 2 + CN15 와의 reconciliation 을 single picture 로 closure.
+이 working file 은 K-Selection cluster (Tasks #5, #6, #7) 의 **partial-resolution synthesis**. 4-option 들이 conflict 가 아니라 *layered architecture* 임을 prove: (d) 가 외부 cap; (a) 가 thermodynamic equilibrium; (b) 가 kinetic correction; (c) 가 empirical anchor. M-1 + Theorem 2 + CN15 와의 reconciliation 을 single picture 로 closure. **OP-0005 의 full RESOLVED 상태는 W6-W7 (V1)-(V7) numerical execution + W9+ Cat A theoretical work 완료 이후에만 가능**; 본 file 은 partial answer (compatibility-level) 까지만 establish.
 
 **핵심 deliverable**:
-1. Layered K-Selection architecture (§2-§5).
-2. Commitment 16 compatibility theorem (§6).
-3. M-1 + Theorem 2 + CN15 reconciliation (§7).
-4. CV-1.7+ Commitment 19 candidate text (§8).
-5. Cat A target via composition (§9).
+1. Layered K-Selection architecture (§2-§5) — Cat A composition.
+2. Commitment 16 compatibility theorem (§6) — Cat A definitional.
+3. M-1 + Theorem 2 + CN15 reconciliation (§7) — Cat A.
+4. CV-1.7+ Commitment 19 candidate text (§8) — partial-resolution packet.
+5. Cat A target via composition (§9) — partial; Theorem 3.3 (numerical anchor) + W9+ Cat A everywhere remain pending per §6.3.1 + §8.2.
 
 ---
 
@@ -206,15 +206,26 @@ Modulo noise: $\mathcal{K}(t)$ is a *random variable* with:
 - Trajectory statistics determined by Kramers rates (Layer (b)).
 - Confirmed numerically by (c).
 
-### §6.3 OP-0005 closure
+### §6.3 OP-0005 partial answer (NOT closure — see §6.3.1)
 
-OP-0005 K-Selection mechanism: ANSWERED via composite (a)+(b)+(c)+(d):
+OP-0005 K-Selection mechanism: **PARTIALLY ANSWERED** via candidate 4-layer composite (a)+(b)+(c)+(d). The candidate composite addresses each historical sub-question:
 - "Fixed externally?" → only $K_{\mathrm{field}}$ (Layer (d)); $K_{\mathrm{act}}$ is dynamical.
 - "Emerged from energy minimization?" → Layer (a) free-energy minimum (yes, with entropy); pure $\mathcal{E}^*_K$ minimum gives M-1 K=1, but full SCC + entropy gives K>1.
 - "Determined by model selection (BIC)?" → Layer (a) information-theoretic variant; equivalent to free-energy.
 - "Kinetically determined?" → Layer (b) Kramers; yes, in conjunction with Layer (a).
 
-All four candidate mechanisms are *correct* — they describe different layers of the same composite picture.
+All four candidate mechanisms are *complementary*, not competing — they describe different layers of the same composite picture.
+
+### §6.3.1 What this is and what it is NOT
+
+**This file establishes** (Cat A this session, §3 + §4): the four candidate layers (a)+(b)+(c)+(d) are mutually compatible (Theorems 3.1, 3.2, 4.1 Cat A) and the composite picture is internally coherent under M-1 + Theorem 2 + CN15 (§5).
+
+**This file does NOT establish:**
+- **Theorem 3.3 numerical consistency** ((b) ⊆ (c)): empirical anchor Cat B target, **pending W6-W7 (V1)-(V7) numerical execution** per `k_selection_c_numerical_anchor.md` §6.2.
+- **Cat A everywhere for the composite axiom**: requires W9+ theoretical work — closed-form $S(K)$ derivation (Task #5 §7.2), barrier-scaling proof (Task #6 §3.3), LSW-correspondence proof (Task #6 §7.4), time-scale-separation theorem (Task #6 §4.4).
+- **Full OP-0005 resolution**: canonical OP catalog status (`theorem_status.md` line 312) reads **"OPEN; partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16); CV-1.7+ Commitment 19 candidate"**. This file's verdict is consistent with that catalog status — the composite is the *partial answer*, not a closure. Full closure requires the W6-W7 numerical anchor + W9+ Cat A theoretical completions above.
+
+**Catalog-consistent status: PARTIALLY RESOLVED. Promotion to RESOLVED is W9+ contingent on the items listed.**
 
 ---
 
@@ -257,8 +268,9 @@ The composite picture honors:
 - **CN6 Kinetic axiom**: kinetic K_act trajectory legitimate observable.
 - **CN10 contrastive**: free-energy + Kramers + LSW are standard mathematical tools used contrastively, not reductive replacement of SCC.
 
-OP-0005 K-Selection mechanism: RESOLVED via composite (a)+(b)+(c)+(d).
-OP-0008 σ^A K-jump non-determinism: complementary kinetic-stochastic timing (Path B σ_rich + Kramers).
+OP-0005 K-Selection mechanism: **PARTIALLY RESOLVED** via candidate 4-layer composite (a)+(b)+(c)+(d). Cat A compatibility established (Theorems 3.1, 3.2, 4.1 in `k_selection_compatibility_proof.md`). Cat B numerical anchor (Theorem 3.3 (b) ⊆ (c) consistency) **pending W6-W7 (V1)-(V7) execution** per `k_selection_c_numerical_anchor.md`. Cat A everywhere requires W9+ theoretical work (closed-form $S(K)$, barrier-scaling proof, LSW-correspondence proof, time-scale-separation theorem). **Full RESOLVED status is gated by all three completion conditions; not granted by this packet.**
+
+OP-0008 σ^A K-jump non-determinism: complementary kinetic-stochastic timing layer (Path B σ_rich + Kramers); see Commitment 18 packet. Commitment 19 does NOT resolve OP-0008.
 
 *(W5 Day 4 K-Selection cluster: Tasks #5 free-energy, #6 Kramers, #7 numerical anchor, #8 compatibility proof. Working files `working/MF/k_selection_a_*.md`, `_b_*.md`, `_c_*.md`, `_compatibility_proof.md`. CV-1.7+ promotion target post-W12 numerical execution + theoretical Cat A everywhere.)*
 ```
@@ -274,13 +286,13 @@ CV-1.7+ packet (W12+) post:
 
 ## §8. Cat Status and Hard Constraints
 
-### §8.1 Cat A established (this file)
+### §8.1 Cat A established (this file) — explicit scope
 
 - Theorem 3.1 ((d) ⊆ (a)): **Cat A** (definitional bound).
-- Theorem 3.2 ((a) ⊆ (b) at long time, $T > 0$): **Cat A** (standard ergodic equilibrium).
+- Theorem 3.2 ((a) ⊆ (b) at long time, $T > 0$): **Cat A** (standard ergodic equilibrium, P-F flagged).
 - Theorem 4.1 (K-Selection ⊆ Commitment 16): **Cat A** (definitional compatibility).
 - §5 reconciliation with M-1 + Theorem 2 + CN15: **Cat A** (consistent layered statements).
-- §6 composite determinism + OP-0005 closure: **Cat A** (synthesis).
+- §6 composite determinism + OP-0005 *partial answer*: **Cat A composition** of the above compatibility theorems. The composition does NOT include Theorem 3.3 (Cat B target, see §8.2) and does NOT claim full OP-0005 RESOLVED status (§6.3.1 partial-answer scope).
 
 ### §8.2 Cat B pending
 
@@ -299,7 +311,7 @@ CV-1.7+ packet (W12+) post:
 - [x] **CN15 Static/Dynamic Separation** — explicitly extended (§5.3).
 - [x] **K not dual-treated** — K_field/K_act per Commitment 16.
 - [x] **P-F flag** — Theorem 3.2 ergodicity, Layer (b) trajectory analysis P-F flagged via Task #6 inheritance.
-- [x] **OP-0005 not silently resolved** — composite (a)+(b)+(c)+(d) is the *answer*, all 4 layers required.
+- [x] **OP-0005 not silently resolved** — §6.3 + §7.1 use **PARTIALLY ANSWERED / PARTIALLY RESOLVED** wording; canonical OP catalog status "OPEN; partial via 4-layer composite" (`theorem_status.md` line 312) preserved. §6.3.1 explicit partial-answer scope clause documents what this file does NOT establish (Theorem 3.3 numerical anchor + W9+ Cat A everywhere). The 4-layer composite is the *partial answer candidate*, not the closure. Composite (a)+(b)+(c)+(d) is *complementary* (each layer supplies a distinct sub-structure), not redundant; full RESOLVED status gated by W6-W7 numerical + W9+ theoretical completions.
 - [x] **OP-0008 connection** — σ^A K-jump non-determinism reframed via Kramers stochastic event timing + σ_rich Path B.
 
 ---
@@ -319,10 +331,10 @@ Execute (V1)-(V7) numerical validation per `k_selection_c_numerical_anchor.md` �
 
 ### §9.3 W12+ canonical promotion
 
-CV-1.7+ packet:
-- Commitment 19 (this file §7.1) approval.
-- OP-0005 RESOLVED entry update.
-- Theorem-status updates (T-K-Selection-A/B/C entries for layers (a), (b), (c)).
+CV-1.7+ packet (gated on §9.1 + §9.2 completions):
+- Commitment 19 (this file §7.1) approval — **conditional** on Theorem 3.3 numerical anchor (V1)-(V7) PASS + W9+ Cat A everywhere theoretical completions.
+- OP-0005 status update **OPEN → RESOLVED** — only after the above completions; intermediate state at this packet's promotion is "PARTIALLY RESOLVED via 4-layer composite candidate; W9+ contingent for full resolution".
+- Theorem-status updates (T-K-Selection-A/B/C entries for layers (a), (b), (c)) — Cat status per individual layer maturity.
 
 ---
 
@@ -358,7 +370,9 @@ CV-1.7+ packet:
 
 **End of k_selection_compatibility_proof.md.**
 
-**Status: working draft. Task #8 complete (synthesis closure). K-Selection 4-option compatibility proof: 4-layer architecture (Layer d cap → a equilibrium → b kinetics → c empirical) with Theorem 3.1 ((d) ⊆ (a)) + Theorem 3.2 ((a) ⊆ (b) ergodic) + Theorem 4.1 (Commitment 16 compatibility) all Cat A. M-1 + Theorem 2 + CN15 reconciliation Cat A (§5). OP-0005 RESOLVED via composite (a)+(b)+(c)+(d) (§6.3). CV-1.7+ Commitment 19 candidate text drafted (§7.1). Theorem 3.3 numerical consistency Cat B target post-W6-W7. Cat A everywhere for axiom requires Tasks #5+#6+#7 Cat B → Cat A transitions (W9+). CV-1.7+ promotion at W12+. K-Selection cluster (Tasks #5-8) COMPLETE.**
+**Status: working draft. Task #8 complete (partial-resolution synthesis). K-Selection 4-option compatibility proof: 4-layer architecture (Layer d cap → a equilibrium → b kinetics → c empirical) with Theorem 3.1 ((d) ⊆ (a)) + Theorem 3.2 ((a) ⊆ (b) ergodic) + Theorem 4.1 (Commitment 16 compatibility) all Cat A. M-1 + Theorem 2 + CN15 reconciliation Cat A (§5). OP-0005 PARTIALLY RESOLVED via candidate 4-layer composite (a)+(b)+(c)+(d) (§6.3 + §6.3.1 partial-answer scope clause); canonical OP catalog status "OPEN; partial via 4-layer composite" (`theorem_status.md` line 312) preserved. CV-1.7+ Commitment 19 candidate text drafted (§7.1) with PARTIALLY RESOLVED wording. Theorem 3.3 numerical consistency Cat B target post-W6-W7 (V1)-(V7). Cat A everywhere for axiom requires Tasks #5+#6+#7 Cat B → Cat A transitions (W9+). Full OP-0005 RESOLVED status W12+ contingent on (V1)-(V7) PASS + W9+ Cat A theoretical completions. K-Selection cluster (Tasks #5-8) compatibility-level synthesis complete; numerical + Cat A everywhere phases pending.**
+
+*(W6 D1 EOD audit fix applied 2026-05-04: §6.3/§7.1/§8.1/§9.3 originally claimed "RESOLVED via composite" which contradicted canonical OP catalog "OPEN; partial via 4-layer composite". §6.3.1 partial-answer scope clause added; §1 mission + §6.3 + §7.1 + §8.1 + §9.3 + footer reframed to "PARTIALLY RESOLVED" wording. Net: 0 mathematical content changes; only catalog-consistent status alignment. See `op_resolution.md` parking-lot precision audit Issue #1 for trigger documentation.)*
 
 **File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/k_selection_compatibility_proof.md`
 **Created:** 2026-04-30 (W5 Day 4).

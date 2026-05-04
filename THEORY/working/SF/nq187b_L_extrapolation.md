@@ -106,12 +106,72 @@ Plugging in:
 
 Continuum limit: $A_2/A_1 \to (L^2/4) / (L \cdot 3L/8) = (L/4) / (3L/8) = 2/3 \approx 0.667$.
 
-**Critical observation**: discrete $A_2/A_1$ ratio approaches $2/3 \approx 0.667$ as $L \to \infty$, **NOT** R22's claimed value of 4.
+**Critical observation**: naive discrete integral ratio $K/I_4 \to 2/3 \approx 0.667$ as $L \to \infty$. But R22 reports $A_2/A_1 = 4$ — appears to differ by factor 6.
 
-This is a **two-orders-of-magnitude discrepancy** with R22. Either:
-- (α') The cubic-equivariants in the R22 paper are *not* the naive integrals computed above — different normalization or different definition.
-- (β') R22's $A_2/A_1 = 4$ value is incorrect.
-- (γ') The eigenmodes used by R22 differ from $\phi_{(p, q)} = \cos((p)(i+1/2)\pi/L) \cos((q)(j+1/2)\pi/L)$ (e.g., spectral gauge convention).
+### §2.6.1 RECONCILIATION (W6 D1 EOD Issue #3 audit insight)
+
+**The "2/3 vs 4" appears to be a normalization difference, NOT a contradiction.**
+
+Per `working/SF/symmetry_moduli.md` line 130 (R22 derivation):
+$$\int (a\phi_{10}+b\phi_{01})^4 = a^4 I_4 + 6a^2 b^2 K + b^4 I_4$$
+where the factor $\binom{4}{2,2}/2 = 6$ on the cross-term arises from multinomial expansion of the quartic $W$-potential. The reduced Lyapunov function takes the form
+$$F(a,b) = \tfrac{\mu}{2}(a^2+b^2) + A_1(a^4+b^4) + A_2 a^2 b^2$$
+with $A_1 = \beta_{\mathrm{bd}} I_4 = 3\beta_{\mathrm{bd}}/2$ and $A_2 = 6\beta_{\mathrm{bd}} K = 6\beta_{\mathrm{bd}}$. Therefore:
+$$A_2 / A_1 \;=\; 6 K / I_4 \;=\; 6 \cdot (2/3) \;=\; 4. \quad (\text{R22 confirmed})$$
+
+So the naive integral ratio $K/I_4 = 2/3$ and the W-potential expansion-coefficient ratio $A_2/A_1 = 4$ are **consistent under the relation $A_2/A_1 = 6 \cdot (K/I_4)$** — the factor 6 is the multinomial coefficient, not an error.
+
+### §2.6.2 Implication for NQ-187 numerical measurement
+
+R22 §3.3 (`symmetry_moduli.md` lines 149-150) computes the Hessian at the axis-aligned minimum $(A, 0)$:
+- $F_{aa} = -2\mu$ (Mode 0, parallel to the breaking direction).
+- $F_{bb} = -\mu$ (Mode 1, transverse to the breaking direction).
+- Ratio $\mu_0 / \mu_1 = F_{aa} / F_{bb} = 2$ at leading order.
+
+**NQ-187 measured $\mu_1 / \mu_0 \approx 2$ on $L \le 16$ free-BC grids.** Inverting: $\mu_0 / \mu_1 \approx 1/2$. **Contradicts R22's $\mu_0 / \mu_1 = 2$ at axis-aligned minimum.**
+
+But: NQ-187 may have measured $(\mu_0, \mu_1)$ at the **uniform point** ($u = c\mathbf{1}$, the spinodal saddle), NOT at the axis-aligned minimum. At the uniform point, the leading-order eigenvalues of the Hessian are the Fiedler eigenvalues of the discrete Laplacian, which are degenerate at $L \to \infty$ for the $(1,0)$ vs $(0,1)$ modes (translation symmetry of the torus, or square symmetry of the grid). The 4th-order $W$-potential expansion lifts this degeneracy via the $A_1 / A_2$ structure — this is the canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ at leading order" claim.
+
+**The remaining ambiguity (resolution needed via (γ) Σ_m-Hessian convention audit):**
+- If NQ-187 measured at the uniform point: $\mu_0 / \mu_1 \to 1$ at $L \to \infty$ (continuum degeneracy preserved); finite-$L$ correction gives a non-unit ratio. The 2 measured at $L=16$ is finite-$L$ correction, NOT a falsification of R22.
+- If NQ-187 measured at the axis-aligned minimum: $\mu_0 / \mu_1 = 2$ at leading order is the R22 prediction. NQ-187's $\mu_1/\mu_0 \approx 2$ would be inconsistent unless there is convention sign-flip (which is plausible if NQ-187 reports $\min/\max$ or a different ordering).
+
+The (γ) audit must resolve which point + which convention NQ-187 measured at. **R22 itself is not falsified** by the §2.5 closed-form $K/I_4 = 2/3$; that is the expected value of the naive integral ratio, and the W-potential factor 6 reconciles it with $A_2/A_1 = 4$.
+
+### §2.6.3 DEEPER AUDIT (W6 D1 EOD Issue #3 re-examination, 2026-05-04)
+
+**The above §2.6.1-§2.6.2 reconciliation was incomplete.** Re-reading canonical T-σ-Theorem-4 (ii) directly (`canonical.md` lines 1385-1433) reveals an additional layer: **the canonical normal form $F_{can} = \beta r^2 + A_1 r^4 + A_2 x^2 y^2$ is structurally distinct from `symmetry_moduli.md`'s $F_{sym} = \tfrac{\mu}{2} r^2 + A_1(a^4+b^4) + A_2 a^2 b^2$**.
+
+Conversion: $A_1(x^2+y^2)^2$ expands to $A_1(x^4 + 2x^2 y^2 + y^4)$, so canonical's $A_2$ corresponds to `symmetry_moduli`'s $A_2^{sym} - 2A_1$. With $A_2^{sym}/A_1 = 4$ (R22, rigorous), **canonical's $A_2/A_1 = 2$**, not 4.
+
+Canonical Step 4 of the proof (line 1407) derives $F_{yy} = -\beta A_2/A_1$ in canonical's normal form (correct algebra), then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention, NOT canonical's). This **two-normal-form mixing error** produces the spurious $F_{yy} = 4|W''(c)|\epsilon$ degeneracy claim. Correctly using $A_2^{can}/A_1 = 2$: $F_{yy} = -2\beta = 2|W''(c)|\epsilon$, ratio $\mu_0/\mu_1 = 2$ — non-degenerate, matching NQ-187 measurement exactly.
+
+**Therefore, NQ-187's $\mu_1/\mu_0 = 2$ is in agreement with R22 derivation AND in conflict with canonical's claimed degeneracy. The conflict is not scope or evaluation point; it is a real algebraic inconsistency in canonical Step 4.**
+
+**Path γ-ii (formula correction) is the likely outcome (~75% probability)**, NOT γ-i (~10%) as originally estimated. The corrected canonical (ii) should read $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$ at axis minimum, ratio 2 non-degenerate. See `sigma_theorem4_canonical_revision.md` §2.5.1-§2.5.3 + §4.6 for the full corrected canonical text.
+
+**(γ) audit refocus**: rather than identifying which evaluation point NQ-187 measures (still useful but secondary), the (γ) audit should now **independently verify the two-normal-form conversion** ($A_2^{sym} = 2A_1 + A_2^{can}$ identity) on $L = 4$ small grid and confirm that the corrected canonical formula $\mu_1 = 2|W''(c)|\epsilon$ matches NQ-187. This is a clean algebraic check, expected to PASS.
+
+### §2.6 Discrete ratio (corrected statement)
+
+$$\frac{A_2^L}{A_1^L} = \frac{6 K^L}{I_4^L}$$
+where $K^L, I_4^L$ are the discrete sums of §2.5 (after dividing by $L^2$ to normalize per area). Continuum limit: $A_2/A_1 \to 6 \cdot (2/3) = 4$ ✓ (matches R22).
+
+For the L-scan, both $K^L/I_4^L$ ratio and $A_2^L/A_1^L = 6 \cdot K^L/I_4^L$ are reported; the latter is the R22-comparable quantity.
+
+| L | $K^L/I_4^L$ (naive ratio, was reported) | $A_2^L/A_1^L = 6 \cdot K^L/I_4^L$ (R22-comparable) |
+|---|---|---|
+| 4 | 0.80 | 4.80 |
+| 8 | 0.762 | 4.572 |
+| 16 | 0.703 | 4.218 |
+| 32 | 0.668 | 4.008 |
+| 64 | 0.659 | 3.954 |
+
+Continuum limit: $K^L/I_4^L \to 2/3 = 0.667$; $A_2^L/A_1^L \to 4.000$ (matches R22 exactly).
+
+**Original §2.5 / §2.6 statement that "discrete $A_2/A_1 \to 2/3$" was the naive ratio $K/I_4$; the R22-quantity $A_2/A_1$ does converge to 4. R22 is confirmed at the continuum limit.**
+
+The remaining open question (subject to (γ) Σ_m-Hessian convention audit + (β) R22 derivation cross-check) is whether NQ-187's measured $\mu_1/\mu_0 \approx 2$ on discrete grids is (i) finite-L correction at uniform point, or (ii) inconsistent measurement at axis-aligned minimum (would require convention investigation).
 
 ---
 

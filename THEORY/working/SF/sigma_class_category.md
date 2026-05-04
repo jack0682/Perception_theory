@@ -1,5 +1,15 @@
 # sigma_class_category.md — σ-Class Category with Aut(G)-Equivariant Morphisms (Fukaya-Spirit)
 
+> **⚠️ FULL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
+> **Retire scope (entire file):** Fukaya-spirit categorification framework — purely structural-philosophical, no SCC-specific mathematical content. The §2.1 σ-class category definition reuses NQ-188 conjugation rule from `working/SF/sigma_uniqueness_theorem.md` (Definition 2.1') without adding new content; the morphisms-as-Aut(G)-equivariant-transitions formulation is just orbit-restatement.
+> **Preserve scope (minimal):** σ-class **definition** (already in `sigma_uniqueness_theorem.md` NQ-188); refinement-as-subcategory-inclusion observation (referenced in `sigma_rich_refinement_theorem.md` line 181) — this single observation can be inlined into `sigma_rich_refinement_theorem.md` as a one-line note, eliminating the cross-reference dependency.
+> **Future action (W7+ recommended):** **archive entire file to `_archive/cv17_speculative_retired_2026-05-04/sigma_class_category.md`** after:
+> 1. Inlining the "refinement = subcategory inclusion" note into `sigma_rich_refinement_theorem.md`.
+> 2. Updating `op003_mo1_status_review.md` index entry to reflect retirement (line 81, 100, 133 references).
+> 3. Updating `CV-1.7_parking_lot_inventory.md` to mark FULL RETIRE applied.
+> **4 inbound references** (op003_mo1_status_review, sigma_rich_refinement_theorem, parking_lot_inventory, WAVE3_MASTER_INDEX) — all tolerate retirement after one-line inline + index update.
+> **CN10 disclosure**: Fukaya category (Fukaya 1993, 2009, Shaw Prize 2025) is symplectic geometry; SCC has no symplectic structure (no canonical 2-form, no Lagrangian intersection theory, no Floer cohomology). The "Fukaya-spirit" framing is **purely categorical organization aesthetic** with no mathematical import. Categorical organization of σ-classes (objects + morphisms) can be done without invoking Fukaya category — and in fact NQ-188 + Aut(G)_{u*} stabilizer formulation already provides this organization in standard finite-group representation theory language.
+
 **Status:** working draft (W5 Day 4 PM Wave 3 lead-side direct work, 2026-04-30).
 **Type:** Categorification framework for σ-framework — σ-class as objects, Aut(G)-equivariant morphisms as arrows.
 **Author:** team-lead@scc-wave3-deep-research.

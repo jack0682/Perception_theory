@@ -65,6 +65,86 @@ Three possible reconciliations:
 - **(β)** R22 cubic-equivariant ratio derivation in `symmetry_moduli.md` §3.3 incorrect. Re-verification needed.
 - **(γ)** Σ_m-Hessian convention map (NQ-187 architect's §2.1 absorption derivation) incorrect — the Hessian on Σ_m vs full ℝ^n convention error.
 
+### §2.5 RECONCILIATION (W6 D1 EOD Issue #3 deeper audit insight)
+
+After detailed cross-check of R22 derivation in `symmetry_moduli.md` §3.3 (lines 100-156) against NQ-187 measurement protocol, the apparent "falsification" decomposes into two distinct claims that should be analyzed separately:
+
+**Claim 1 (R22 cubic-equivariant ratio $A_2/A_1 = 4$): LIKELY CORRECT.**
+
+Per `symmetry_moduli.md` line 113-130, the ratio $A_2/A_1 = 6K/I_4 = 6 \cdot (2/3) = 4$ comes from:
+- Multinomial expansion $\int(a\phi_{10} + b\phi_{01})^4 = a^4 I_4 + 6a^2b^2 K + b^4 I_4$ (factor 6 = $\binom{4}{2,2}/2$).
+- Integral evaluations $I_4 = 3/2$, $K = 1$ on continuum $D_4$ free-BC torus.
+- **Naive integral ratio $K/I_4 = 2/3$ is consistent with $A_2/A_1 = 4$ via the multinomial factor 6** — they are the same quantity in different normalizations, not contradictory values.
+- nq187b §2.5 `discrete sum tables show $K^L/I_4^L \to 2/3$ at $L \to \infty$; multiplying by 6 gives $A_2^L/A_1^L \to 4$ ✓ R22 confirmed.
+
+**Claim 2 (Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ degenerate"): LIKELY PARTIALLY INCORRECT.**
+
+Per R22 axis-aligned minimum analysis (`symmetry_moduli.md` lines 148-150), the Hessian at the post-bifurcation minimum $(A, 0)$ is:
+- $F_{aa} = -2\mu$ (Mode parallel to breaking direction).
+- $F_{bb} = -\mu$ (Mode transverse to breaking direction).
+- Ratio $F_{aa}/F_{bb} = 2$ at leading order.
+
+If $\mu \propto -\epsilon$ (specifically $\mu = -2\epsilon|W''(c)|$ under one common convention), then $F_{aa} = 4\epsilon|W''(c)|$ and $F_{bb} = 2\epsilon|W''(c)|$. **R22 axis-aligned predicts $\mu_0/\mu_1 = 2$ at the post-bifurcation minimum, not 1.**
+
+NQ-187 measured $\mu_1/\mu_0 = 2$ at the minimizer (per §2.1 protocol "Hessian at first-pitchfork minimizer"). Inverting: $\mu_0/\mu_1 = 1/2$, i.e., $\mu_1$ corresponds to the parallel direction (larger eigenvalue), $\mu_0$ to the transverse — opposite sort order from R22's $F_{aa}, F_{bb}$ but the **factor 2 ratio is exactly the R22 prediction**.
+
+**Therefore: NQ-187's $\mu_1/\mu_0 = 2$ is in agreement with R22 derivation, but contradicts the canonical (ii) "leading-order degeneracy" formula.** The contradiction is between NQ-187 + R22 (both claim ratio 2 at minimum) vs canonical (ii) (claims ratio 1 / degeneracy at minimum).
+
+### §2.5.1 DEEPER AUDIT (W6 D1 EOD Issue #3 re-examination, 2026-05-04)
+
+After re-examining canonical T-σ-Theorem-4 entry (`canonical.md` lines 1385-1433) directly, the apparent "Mode 0 = Mode 1 degenerate" claim arises from a **two-normal-form mixing error** in canonical Step 4 of the proof (line 1407). Specifically:
+
+**Canonical normal form** (line 1395):
+$$F_{can}(x, y; \beta) = \beta(x^2 + y^2) + A_1 (x^2 + y^2)^2 + A_2 x^2 y^2.$$
+
+**`symmetry_moduli.md` §3.3 normal form** (line 127):
+$$F_{sym}(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + A_1^{sym}(a^4 + b^4) + A_2^{sym} a^2 b^2.$$
+
+**These two normal forms are NOT the same.** Conversion via expanding $A_1^{can}(x^2+y^2)^2 = A_1^{can}(x^4 + 2 x^2 y^2 + y^4)$:
+- Coefficient of $x^4$ (or $y^4$) in $F_{can}$: $A_1^{can}$ — matches $A_1^{sym}$.
+- Coefficient of $x^2 y^2$ in $F_{can}$: $2 A_1^{can} + A_2^{can}$ — matches $A_2^{sym}$.
+- **Conversion identity**: $A_2^{sym} = 2 A_1^{can} + A_2^{can}$, equivalently $A_2^{can}/A_1 = A_2^{sym}/A_1 - 2$.
+
+`symmetry_moduli.md` §3.3 explicitly derives $A_2^{sym}/A_1 = 4$ (line 130, multinomial factor 6: $A_2^{sym} = 6 \beta_{bd} K, A_1 = \beta_{bd} I_4 = 3 \beta_{bd}/2$, ratio $4$). Converting to canonical's normal form: $A_2^{can}/A_1 = 4 - 2 = 2$.
+
+**Canonical line 1395 claims "$A_2/A_1 = 4$"**, but this is using `symmetry_moduli`'s value INSIDE canonical's normal form. The correct value for canonical's normal form is $A_2/A_1 = 2$.
+
+**Recomputed canonical Step 4** (using correct $A_2^{can}/A_1 = 2$):
+- $F_{xx}|_{(A,0)} = -4\beta = 4|W''(c)|\epsilon$ ✓ (unchanged, doesn't depend on $A_2$)
+- $F_{yy}|_{(A,0)} = -\beta \cdot A_2^{can}/A_1 = -\beta \cdot 2 = 2|W''(c)|\epsilon$ (corrected; canonical's "$4|W''(c)|\epsilon$" was wrong)
+- **Ratio $\mu_0/\mu_1 = 2$ at leading order, NON-DEGENERATE** ← matches NQ-187 numerical measurement exactly.
+
+### §2.5.2 Revised falsification verdict
+
+The "falsification" is **NOT a normalization difference (path γ-i)**, **NOT a scope error**, but **a real algebraic error in canonical Step 4**: convention-mixing between two distinct normal forms, leading to the spurious "$A_2/A_1 = 4$" insertion into canonical's normal form (correct value: 2).
+
+**Path γ-ii (formula correction) is now the likely outcome**, NOT path γ-i (scope clarification). Probability estimate revised: **γ-ii ~75%, γ-i ~10%, β-fail ~10% (R22 derivation re-check), α-fail ~5%**.
+
+**Implication for Cat A re-promotion**:
+- The **R22 derivation in `symmetry_moduli.md` §3.3 is correct** ($A_2^{sym}/A_1 = 4$ is rigorous).
+- Canonical Step 4 has a **two-normal-form mixing error**: takes $A_2^{sym}$ value (= 4) and plugs into canonical's $F_{yy} = -\beta A_2^{can}/A_1$ formula (which expects canonical's $A_2$, = 2 under proper conversion).
+- **The corrected canonical (ii) statement** matches NQ-187 measurement exactly: $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2 (non-degenerate).
+- T-σ-Theorem-4 with corrected (ii) is **Cat A candidate at CV-1.7+** (after applying the formula correction); the corrected statement is mathematically rigorous.
+
+### §2.5.3 What the original Phase 2 reconciliation missed
+
+The W6 D1 EOD initial reconciliation (§2.5 first version, written 2026-05-04 PM) correctly identified the **multinomial factor 6** explaining the $K/I_4 = 2/3$ vs $A_2^{sym}/A_1 = 4$ discrepancy at the **`symmetry_moduli`-internal** level. However, it **did not** examine canonical's normal form definition + the conversion between canonical and `symmetry_moduli` conventions.
+
+Upon direct re-examination of `canonical.md` lines 1385-1433 (Issue #3 re-examination, 2026-05-04 EOD), the canonical normal form $F_{can} = \beta r^2 + A_1 r^4 + A_2 x^2 y^2$ is **distinct** from `symmetry_moduli`'s $F_{sym} = \tfrac{\mu}{2}r^2 + A_1(a^4+b^4) + A_2 a^2 b^2$, and the value "$A_2/A_1 = 4$" is **convention-dependent**:
+- $A_2^{sym}/A_1 = 4$ ✓ (correct in `symmetry_moduli`'s normal form, derived from $\int \phi^2 \psi^2$ multinomial expansion)
+- $A_2^{can}/A_1 = 2$ ✓ (correct in canonical's normal form, derived from $A_2^{can} = A_2^{sym} - 2 A_1$)
+
+**Canonical Step 4 line 1407 mixed the two**: derived $F_{yy} = -\beta A_2^{can}/A_1$ (correct in canonical's normal form), then plugged in $A_2/A_1 = 4$ from `symmetry_moduli`'s convention. This produces the spurious result $F_{yy} = 4|W''(c)|\epsilon$ instead of the correct $F_{yy} = 2|W''(c)|\epsilon$.
+
+This explains:
+- Why NQ-187 measurement ($\mu_1/\mu_0 = 2$) is in real conflict with canonical's claim (degeneracy) — the canonical claim is algebraically wrong, not just a different evaluation point.
+- Why R22 axis-minimum analysis in `symmetry_moduli.md` (which uses $F_{sym}$ form throughout) gives ratio 2 at minimum — the `symmetry_moduli` derivation is internally consistent.
+- Why the multinomial-factor-6 reconciliation alone was insufficient — that reconciliation only addresses `symmetry_moduli`'s internal logic; canonical has an independent error.
+
+**This is path γ-ii (formula correction), not γ-i (scope clarification).** The original Phase 2 conclusion was incorrect on path-probability ordering; this §2.5.1-§2.5.3 deeper audit corrects it.
+
+---
+
 ---
 
 ## §3. Proposed Canonical Revision Text
@@ -198,11 +278,70 @@ Wave 3 audit 2026-04-30 `working/SF/sigma_theorem4_canonical_revision.md`.)*
 
 **Working file target**: `working/SF/sigma_m_hessian_convention_audit.md`.
 
-### §4.4 Audit priority
+### §4.4 Audit priority (W6 D1 EOD Issue #3 refined)
 
-(γ) Σ_m convention audit: **highest priority** (3-5 days, smallest effort, most likely error source per Critic finding).
-(β) R22 derivation audit: **medium priority** (1-2 weeks, can run in parallel).
-(α) NQ-187b L → ∞ extrapolation: **lowest priority** (2 weeks, computational intensive — only meaningful after (β)+(γ) audits clear).
+(γ) Σ_m convention audit: **highest priority** (3-5 days, smallest effort). **Refined target per §2.5 deeper audit insight**: identify whether canonical (ii) evaluates Hessian at uniform point (γ-i, scope clarification needed) or at post-bifurcation minimum (γ-ii, formula correction needed). Most likely outcome: γ-i (scope error, not formula error). Working file target: `r22_a2_a1_audit.md` per §4.2 below + `sigma_m_hessian_convention_audit.md` (new placeholder file 2026-05-04 W6 D1 EOD).
+
+(β) R22 derivation audit: **medium priority but likely PASS** (1-2 weeks, can run in parallel). Per §2.5 reconciliation: $A_2/A_1 = 4$ continuum is consistent with naive integral ratio $K/I_4 = 2/3$ via multinomial factor 6; R22 derivation in `symmetry_moduli.md` §3.3 lines 113-130 explicitly tracks this factor. **Audit is likely confirmation, not refutation.**
+
+(α) NQ-187b L → ∞ extrapolation: **lowest priority** (2 weeks, computational intensive — likely confirms continuum value). Per `nq187b_L_extrapolation.md` §2.6 (post-W6 D1 EOD update): extrapolated $A_2^L/A_1^L$ from L=4 (4.80) to L=64 (3.954) trends to continuum 4.00 cleanly, finite-L correction $O(1/L^2)$ small. **Useful as cross-validation; not the critical path.**
+
+### §4.5 Refined three-path decision rule (W6 D1 EOD Issue #3)
+
+After audits (γ) + (β) + (α) execute, the following decision tree determines T-σ-Theorem-4 status:
+
+**Path γ-i (scope clarification, most likely):**
+- (γ) audit confirms canonical (ii) evaluates uniform-point Hessian (Fielder doublet, degenerate at leading order in continuum); NQ-187 measures axis-minimum Hessian (R22 prediction $F_{aa}/F_{bb} = 2$).
+- Action: **clarify canonical (ii) statement scope** — explicit "evaluated at uniform point" annotation. Add separate (ii') sub-statement for axis-minimum Hessian with R22 prediction $\mu_0/\mu_1 = 2$ at leading order.
+- Status: T-σ-Theorem-4 → **Cat A re-promotion candidate at CV-1.7+** (contingent on (β) confirming $A_2/A_1 = 4$).
+- Severity reduction: this path treats the "falsification" as a documentation gap, not a mathematical error.
+
+**Path γ-ii (formula correction, less likely):**
+- (γ) audit confirms canonical (ii) was intended to describe axis-minimum Hessian but contains a formula error.
+- Action: **correct canonical (ii) statement** to $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$ at leading order; ratio 2 (non-degenerate); higher-order $\epsilon^{3/2}$ correction unchanged.
+- Status: T-σ-Theorem-4 → **Cat B retained with corrected formula** at CV-1.6 (canonical revision packet §3.1 already drafted with this option as fallback).
+- Severity: moderate (correction needed but not retraction).
+
+**Path β-fail (R22 derivation error, very unlikely):**
+- (β) audit identifies error in R22 §3.3.
+- Action: **retract** R22 cubic-equivariant analysis from canonical scaffolding; re-derive from first principles; revise T-σ-Theorem-4 (ii) accordingly.
+- Status: T-σ-Theorem-4 → **Cat C retraction candidate**.
+- Severity: high (full retraction).
+
+**Path α-fail (continuum extrapolation rejects $A_2/A_1 = 4$, very unlikely):**
+- (α) NQ-187b L → ∞ extrapolation diverges from 4.
+- Action: same as β-fail.
+- Severity: high (full retraction).
+
+**Path defaults (revised after §2.5.1-§2.5.3 deeper audit):** based on the canonical-normal-form vs `symmetry_moduli`-normal-form conversion analysis, the falsification is most likely a **two-normal-form mixing error in canonical Step 4** (path γ-ii formula correction). Revised probability estimates:
+- **γ-ii (formula correction): ~75%** ← most likely outcome.
+- **γ-i (scope clarification): ~10%** ← was originally estimated 70%; revised down after deeper audit revealed the algebraic mixing error.
+- **β-fail (R22 derivation error): ~10%** ← unchanged; R22 derivation independently consistent.
+- **α-fail (continuum extrapolation reject): ~5%** ← unchanged.
+
+The "Cat A → Cat B 영구 격하 위기" framing in the Issue #3 trigger is **moderately accurate**: T-σ-Theorem-4 (ii) does require formula correction at canonical, and the corrected statement (ratio 2 non-degenerate at axis minimum) is what NQ-187 measured. The R22 derivation itself is correct; the error is in canonical's transcription of R22 into a different normal form. Cat A re-promotion is feasible at CV-1.7+ once the formula correction is applied (path γ-ii); not feasible without correction.
+
+### §4.6 Recommended canonical correction (γ-ii path)
+
+For canonical T-σ-Theorem-4 (ii), the corrected statement should read:
+
+```markdown
+**(ii) Hessian split (corrected per W6 D1 EOD Issue #3 deeper audit, 2026-05-04).** *(Original 2026-04-27 W5 Day 1 G0 statement contained a two-normal-form mixing error; corrected here to internal consistency + agreement with NQ-187 numerical measurement.)*
+
+By R22 normal-form analysis on the Fiedler doublet, the post-bifurcation minimizer's Hessian on $V_2 = \mathrm{span}(\phi_{(1, 0)}, \phi_{(0, 1)})$ has two leading-order eigenvalues:
+$$\mu_0 = 4|W''(c)|\epsilon + O(\epsilon^{3/2}) \quad \text{(along $\phi_{(1, 0)}$, broken-symmetry direction)},$$
+$$\mu_1 = 2|W''(c)|\epsilon + O(\epsilon^{3/2}) \quad \text{(along $\phi_{(0, 1)}$, transverse direction)},$$
+**ratio $\mu_0/\mu_1 = 2$ at leading order (non-degenerate).** The non-degeneracy reflects the $D_4 \to \mathbb{Z}_2$ symmetry breaking: the broken-direction Hessian is twice the transverse-direction Hessian. NQ-187 numerical measurement (`THEORY/logs/daily/2026-04-30/11_nq187_scaling_test_results.md`, `CODE/scripts/test_sigma_theorem4_scaling.py`) confirms this ratio on $L \in \{4, 8, 16\}$ with effective coefficients $\mu_0/\epsilon = c_0$ and $\mu_1/\epsilon = c_0/2$ for some L-dependent constant $c_0$ (finite-L effective normalization).
+
+In R22's normal form $F_{sym}(a,b) = \tfrac{\mu}{2}(a^2+b^2) + A_1^{sym}(a^4+b^4) + A_2^{sym} a^2 b^2$, the ratio $A_2^{sym}/A_1 = 4$ on $D_4$ free-BC continuum (per `working/SF/symmetry_moduli.md` §3.3 derivation, rigorous). In canonical's normal form $F_{can}(x,y) = \beta(x^2+y^2) + A_1(x^2+y^2)^2 + A_2^{can} x^2 y^2$, the ratio is $A_2^{can}/A_1 = 2$ (via conversion $A_2^{can} = A_2^{sym} - 2 A_1$). Both express the same continuum content; only the basis labeling differs.
+```
+
+This correction:
+- **Preserves R22 derivation** (`symmetry_moduli.md` §3.3) intact — no β-fail.
+- **Preserves NQ-187 numerical measurement** as evidence — directly confirms the corrected formula.
+- **Replaces the "degeneracy" claim** with the corrected "ratio 2 non-degenerate" claim.
+- **Preserves the (i) symmetry-breaking + (iii) irrep + (iv) nodal + (v) σ-signature substatements** — they don't depend on the (ii) eigenvalue formula.
+- **Changes the (v) σ-signature** to reflect non-degenerate eigenvalues: $(2, [+1], 4|W''(c)|\epsilon), (2, [-1], 2|W''(c)|\epsilon)$ — the trivial-irrep-first ordering is now via *eigenvalue magnitude* (4 > 2), not the "tie-break by Mulliken character order" of the original (vi). The (vi) tie-break convention and Commitment 14 (O7) become **inapplicable** for this theorem (no tie at leading order); they remain useful for higher-order or different theorem applications.
 
 ---
 

@@ -53,8 +53,8 @@
   ],
   "extrapolation_1_over_L_squared": {
     "a_L_infty": 0.6666666666666666,
-    "b_slope": 1.9218636034156247e-15,
-    "residual_l2": 1.1102230246251565e-16
+    "b_slope": 8.785403237999583e-15,
+    "residual_l2": 5.661048867003676e-16
   },
   "reference_predictions": {
     "naive_C1_continuum": 0.6666666666666666,

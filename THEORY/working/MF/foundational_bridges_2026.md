@@ -1,5 +1,19 @@
 # foundational_bridges_2026.md — 2024-2026 Mathematical Breakthroughs as Bridges to SCC Multi-Formation Theory
 
+> **⚠️ SPLIT-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
+> **Mixed verdict** — the 7 bridges decompose into legitimate vs speculative:
+> - **B-1 Bernshtein set theory** (NQ-261): **LEGITIMATE** — finite-graph algorithmic reframing. Salvage into separate file.
+> - **B-2 Schramm-style locality** (NQ-262): **PARTIALLY LEGITIMATE** — local stabilizer determines global σ-tuple is a real claim with `working/SF/schramm_sigma_locality_theorem.md` as the dedicated file. Retire this file's B-2 in favor of the dedicated file.
+> - **B-3 Geometric Langlands → π_1(F)** (NQ-263): **SPECULATIVE** — Langlands apparatus inapplicable in finite-graph SCC; see `formation_fundamental_group.md` retire-candidate banner.
+> - **B-4 σ-fingerprint** (NQ-264): **LEGITIMATE** — already developed in `working/SF/sigma_fingerprint_algorithm.md`. Retire this file's B-4 in favor of the dedicated file.
+> - **B-5 4D wild-surface topology** (NQ-248): **SPECULATIVE** — no concrete SCC instantiation; stratified Morse correspondence is at most heuristic.
+> - **B-6 Fukaya category** (NQ-266): **SPECULATIVE** — no symplectic structure in SCC; categorical inspiration only (see `sigma_class_category.md` retire-candidate banner).
+> - **B-7 Axiom of Choice → K-Selection** (NQ-267): **PHILOSOPHICAL** — Cat C exploratory framing; not a mathematical bridge.
+> **Retire scope:** B-3, B-5, B-6, B-7 sections (speculative bridges with no mathematical content beyond heuristic motivation).
+> **Preserve scope:** B-1 (consolidate to `working/MF/bernshtein_conservation.md` — already exists as dedicated file). B-2/B-4 cross-references stay; their dedicated files retain content.
+> **Future split (W7+ recommended):** restructure this file into a 2-3 page "legitimate bridges only" annotated catalog, retire B-3/B-5/B-6/B-7 to `_archive/cv17_speculative_retired_2026-05-04/`. Cross-references (5 inbound: r24_dataset_design, op003_mo1_status_review, bernshtein_conservation, commitments_18_19_drafts, WAVE3_MASTER_INDEX) tolerate this restructure since the legitimate-bridges section is preserved.
+> **CN10 disclosure**: cross-domain bridges (set theory, topology, gauge theory, Langlands, Fukaya, AC) are heuristic motivation only — SCC retains its own primitives ($u_t$, $X_t$, soft cohesion field). Mathematical content imported from external frameworks is restricted to standard tools (CSEH 2007 PH stability, Whitney stratification, Crandall-Rabinowitz bifurcation) not reframed as "bridges". The bridges B-3/B-5/B-6/B-7 are conceptual orientation aids that should be archived once their motivational role has been served.
+
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30).
 **Type:** BRIDGES catalog (NOT theorem registry, NOT canonical proposal).
 **Author origin:** user-supplied 2024-2026 set theory + topology + geometric Langlands research notes; cross-referenced with existing 4-tool scaffolding (`mathematical_scaffolding_4tools.md`) and OAT plan (W6).

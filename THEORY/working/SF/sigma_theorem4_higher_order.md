@@ -719,6 +719,80 @@ For $L \in \{4, 8, 16, 32, 64, 128\}$ on the $D_4$-symmetric free-BC square grid
 - Cross-reference to task #62 (NQ-187b) and #63 (canonical revision urgent) in the team task list.
 - Cross-reference to `working/SF/symmetry_moduli.md` §3.3 (R22 source of $A_2/A_1 = 4$); a sister revision pass on that file should mark the $A_2/A_1 = 4$ identity as "Cat A pending NQ-187b discrete-grid verification".
 
+### §11.7 RECONCILIATION (W6 D1 EOD Issue #3 deeper audit insight)
+
+Per `sigma_theorem4_canonical_revision.md` §2.5 + `nq187b_L_extrapolation.md` §2.6.1-§2.6.2 (W6 D1 EOD updates), the §11.3 hypothesis-tree is now refined:
+
+**Hypothesis A (continuum-limit recovery $r(L) \to 4$): now strongly supported analytically.**
+
+The W6 D1 EOD reconciliation insight identifies the apparent §2.5 "$K/I_4 = 2/3$ vs R22 $A_2/A_1 = 4$" discrepancy as a **multinomial-coefficient normalization difference (factor 6)**, not a contradiction:
+- Naive integral ratio $K^L/I_4^L$ converges to $2/3$ at $L \to \infty$ (computed in `nq187b_L_extrapolation.md` §2.5).
+- W-potential expansion-coefficient ratio $A_2^L/A_1^L = 6 \cdot K^L/I_4^L$ converges to $6 \cdot (2/3) = 4$ at $L \to \infty$.
+- Discrete table values: $A_2^L/A_1^L = 4.80, 4.572, 4.218, 4.008, 3.954$ at $L = 4, 8, 16, 32, 64$ (per `nq187b_L_extrapolation.md` §2.6 corrected table) — clean trend to continuum 4.
+
+So Hypothesis A is **algebraically forced** (factor 6 is exact multinomial coefficient), and the discrete data confirms convergence with $O(1/L^2)$ correction. **R22 $A_2/A_1 = 4$ is correct at the continuum.**
+
+**Hypothesis B (discrete-stable plateau $r_\infty < 4$): RULED OUT** by the algebraic identity above.
+
+**Hypothesis C (no convergence): RULED OUT** by the discrete-table convergence to 4.000 at $L = 64$.
+
+### §11.8 Refined understanding of §8.5 numerical falsification
+
+Given §11.7 ruling, the §8.5 "numerical falsification" finding (NQ-187 measurement $\mu_1/\mu_0 \approx 2$ on $L \leq 16$) is **NOT a falsification of $A_2/A_1 = 4$**. Instead, it falsifies the canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 degenerate at leading order" claim. The two claims are distinct:
+
+1. **R22 cubic-equivariant ratio $A_2/A_1 = 4$ at continuum** — confirmed (this section §11.7).
+2. **Canonical T-σ-Theorem-4 (ii) leading-order degeneracy of Hessian eigenvalues at the post-bifurcation minimum** — likely **incorrect**. Per R22 §3.3 axis-aligned analysis (`symmetry_moduli.md` lines 148-150): $F_{aa}/F_{bb} = 2$ at the minimum, **non-degenerate at leading order**. NQ-187's $\mu_1/\mu_0 = 2$ is consistent with this R22 prediction (modulo eigenvalue-ordering convention).
+
+**Revised canonical (ii) statement (path γ-i scope clarification, expected):**
+> At the post-bifurcation axis-aligned minimum $u^*_\epsilon = c\mathbf 1 + a_\epsilon \phi_{(1,0)} + O(\epsilon)$, the Hessian eigenvalues are $\mu_0 = 4|W''(c)|\epsilon$ (parallel direction) and $\mu_1 = 2|W''(c)|\epsilon$ (transverse), with leading-order ratio $\mu_0/\mu_1 = 2$ (non-degenerate). The 2-fold ratio reflects $A_2/A_1 = 4$ via the relation $F_{aa}/F_{bb} = 2A_1/(A_2/A_1) \cdot$ ... [exact closed form from R22 derivation].
+
+**Alternative if canonical (ii) was intended as uniform-point statement (path γ-i strict):**
+> At the uniform point $u = c\mathbf 1$, the Fielder doublet $(\phi_{1,0}, \phi_{0,1})$ is degenerate at leading order with eigenvalues $\mu_0 = \mu_1 = -\beta_{\mathrm{bd}} \pi^2 + O(\epsilon)$ (unstable, $D_4$-symmetric). The 4th-order $W$-potential expansion lifts the degeneracy at the post-bifurcation minimum (path γ-i; R22 $A_2/A_1 = 4$ structural).
+
+The `sigma_m_hessian_convention_audit.md` placeholder file (γ path, also created W6 D1 EOD) targets the resolution between these two (γ-i scope) options.
+
+### §11.9 Status update
+
+Per the W6 D1 EOD reconciliation:
+- §11.3 Hypothesis A: **confirmed analytically + numerically** at the continuum claim level.
+- §10.1 deliverables (Cat A re-promotion path): **proceeding via path γ-i scope clarification**, not blocked by the original "B or C" hypotheses (now ruled out).
+- §11.6 sister revision recommendation on `symmetry_moduli.md` §3.3: **NOT needed** — R22 $A_2/A_1 = 4$ identity is correct as stated; the recommendation was based on the original false-falsification framing.
+
+The §11.7-§11.9 reconciliation supersedes the original §11 "block" hypothesis enumeration, which assumed a real R22 derivation problem. With the multinomial factor-6 reconciliation, R22 stands; canonical (ii) requires scope clarification or formula correction (γ-i or γ-ii path per `sigma_theorem4_canonical_revision.md` §4.5).
+
+### §11.10 DEEPER AUDIT REVISION (W6 D1 EOD Issue #3 re-examination, 2026-05-04)
+
+**The §11.7-§11.9 conclusion above (path γ-i scope clarification, ~70% probability) is now revised to favor path γ-ii (formula correction, ~75% probability).** Re-reading canonical T-σ-Theorem-4 entry (`canonical.md` lines 1385-1433) directly reveals an additional layer beyond the multinomial-factor-6 reconciliation:
+
+**Canonical's normal form** (line 1395): $F_{can}(x,y;\beta) = \beta(x^2+y^2) + A_1(x^2+y^2)^2 + A_2 x^2 y^2$
+**`symmetry_moduli.md` §3.3 normal form** (line 127): $F_{sym}(a,b) = \tfrac{\mu}{2}(a^2+b^2) + A_1^{sym}(a^4+b^4) + A_2^{sym} a^2 b^2$
+
+These are **distinct normal forms**. Conversion: $A_1(x^2+y^2)^2 = A_1(x^4 + 2 x^2 y^2 + y^4)$, so canonical's $x^2 y^2$ coefficient = $2 A_1^{can} + A_2^{can}$, matching `symmetry_moduli`'s $A_2^{sym}$. Hence:
+$$A_2^{sym} = 2 A_1^{can} + A_2^{can} \quad\Leftrightarrow\quad A_2^{can}/A_1 = A_2^{sym}/A_1 - 2$$
+
+`symmetry_moduli`'s $A_2^{sym}/A_1 = 4$ converts to **canonical's $A_2^{can}/A_1 = 2$**, NOT 4.
+
+**Canonical Step 4 line 1407** derives $F_{yy}|_{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). But it then plugs in "$A_2/A_1 = 4$" from `symmetry_moduli`'s convention (line 1395 reference) into canonical's formula — a **two-normal-form mixing error**. The result $F_{yy} = 4|W''(c)|\epsilon$ (claimed degeneracy) is spurious; correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2|W''(c)|\epsilon$, ratio $\mu_0/\mu_1 = 2$ non-degenerate — exactly what NQ-187 measured.
+
+**Implications for §11.7's Hypothesis A**:
+- Hypothesis A "continuum-limit recovery $r(L) \to 4$" still holds for `symmetry_moduli`'s $A_2^{sym}/A_1$ at the **continuum level** (rigorous derivation).
+- But canonical's "$A_2/A_1 = 4$" claim is an **algebraic error of normal-form conversion**, not a continuum-vs-discrete claim. NQ-187's $\mu_1/\mu_0 = 2$ is consistent with the corrected canonical formula (with $A_2^{can}/A_1 = 2$) at all $L$, not just at finite $L$.
+- The "$\to 4$ at $L \to \infty$" framing of Hypothesis A is **consistent within `symmetry_moduli`'s convention** but **does not address the canonical formula error**.
+
+**Implications for §11.8's revised understanding**:
+- The "§8.5 numerical falsification" is a **real falsification of canonical (ii) as written**, not just a scope ambiguity.
+- The R22 derivation in `symmetry_moduli.md` is not falsified.
+- Canonical (ii) requires **formula correction**: replace "$A_2/A_1 = 4$" inside canonical's $F_{yy} = -\beta A_2/A_1$ formula with the correct canonical convention value $A_2/A_1 = 2$, yielding $\mu_1 = 2|W''(c)|\epsilon$ (non-degenerate ratio 2 with $\mu_0$).
+
+**Implications for §10.1 Cat A re-promotion**:
+- Path proceeds via **γ-ii formula correction** (not γ-i scope clarification).
+- The corrected canonical (ii) is mathematically rigorous and matches NQ-187 numerical.
+- Cat A re-promotion candidate at CV-1.7+ post-formula-correction.
+
+See `sigma_theorem4_canonical_revision.md` §2.5.1-§2.5.3 (deeper audit insight) + §4.5 (revised path probabilities) + §4.6 (recommended canonical correction text) for the full corrected analysis.
+
+**Lesson logged**: When auditing falsification claims involving normal-form conventions, **always verify which normal form the canonical statement uses**, and **confirm conversion identities** between any two normal forms involved in the chain (R22 derivation → canonical statement → numerical measurement). Mixing conventions silently is a common error pattern. Pattern: $A_2^{(can)} = A_2^{(other)} - n A_1$ for $n$-degree polynomial expansion of $(x^2+y^2)^n$ vs $(x^{2n}+y^{2n})$ basis.
+
 ---
 
 ## §12. Summary

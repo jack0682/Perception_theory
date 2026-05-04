@@ -1,5 +1,11 @@
 # scc_mass_gap_connection.md — SCC Multi-Formation Hessian Spectrum vs Yang–Mills Mass Gap (NQ-249)
 
+> **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
+> **Retire scope:** Yang-Mills mass gap analogy + Clay-millennium structural parallel framing (motivational scaffolding; CN10 contrastive only — no mathematical import from gauge theory).
+> **Preserve scope:** **BC-249-1 conjecture** (`§3.1` revised form with explicit $\delta_0$ bifurcation-distance dependence) — SCC-intrinsic open conjecture about Hessian spectral gap $\Delta_*(G, K, \delta_0)$ on multi-formation Lyapunov manifold $\mathcal{L}_K$, registered as **NQ-249** in canonical structures + OP-0009-Emp sub-item.
+> **Future split (W7+ recommended):** extract BC-249-1 conjecture statement + empirical anchor protocol into a new SCC-only file `working/MF/spectral_gap_BC249.md`, retire Yang-Mills rhetoric to `_archive/cv17_speculative_retired_2026-05-04/`. Cross-references (`WAVE3_MASTER_INDEX` index-only + `CV-1.7_parking_lot_inventory` tracker) tolerate split.
+> **CN10 disclosure**: Yang-Mills is downstream parallel via structural correspondence, NOT foundational import. SCC mass gap question (Δ_K > 0 uniform on $\mathcal{L}_K$) is independent SCC-intrinsic problem; the gauge-theory framing was heuristic motivation, not derivation source.
+
 **Status:** Working theory (W6+ candidate). Revised 2026-04-30 per critic review (`THEORY/logs/daily/2026-04-30/10_critic_NQ249_review.md`) — C1+C2+C3+M1 mandatory fixes applied.
 **NQ:** NQ-249.
 **Topic class:** MF (multi-formation) × CN10 contrastive parallel to Clay-millennium gauge theory.

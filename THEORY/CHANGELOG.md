@@ -2,6 +2,897 @@
 
 ---
 
+## 2026-05-04 (W6 Day 1 EOD twelfth addendum) — Issue #5 RE-EXAMINATION: REJECT-RETIRE verdict confirmed, 3 detail errors corrected
+
+**Trigger:** user re-review of Issue #5 eleventh addendum. Re-examination identified 3 detail errors in the disclosure headers + parking_lot_inventory while confirming the substantive REJECT-RETIRE verdict.
+
+### Verification of Issue #5 substantive verdict
+
+Phase 1 — canonical theorem_status.md OP-0009 **Sub-item Status Table** (lines 440-460) checked directly:
+
+| Sub-item | Pre-Day 4 | Post-Day 4 OAT batch | Resolution mechanism file | Promotion target (canonical) |
+|---|---|---|---|---|
+| OP-0009-K | OPEN | RESOLVED | `K_status_commitment.md` | CV-1.5.1 (DONE) |
+| OP-0009-F | OPEN | PARTIALLY RESOLVED | `F_Kstep_K_triple.md` | CV-1.6 D-CV1.6-O3 |
+| OP-0009-λ | OPEN | PARTIALLY RESOLVED | `lambda_rep_ontology.md` | CV-1.6 D-CV1.6-O3 |
+| OP-0009-A | OPEN | PARTIALLY RESOLVED | `shared_pool_canonical_proposal.md` | CV-1.6 D-CV1.6-O2 |
+| **OP-0009-C** | **OPEN** | **PARTIALLY RESOLVED** | **`cobelonging_vs_sigmaD.md`** | **CV-1.6 D-CV1.6-O4** |
+| **OP-0009-Pre** | **OPEN** | **PARTIALLY RESOLVED** | **`pre_objective_K_field_tension.md`** | **v2.0 §1 amendment** |
+| OP-0009-Emp | OPEN | PARTIALLY RESOLVED | `single_high_F_equivalence.md` | CV-1.6 partial; full v2.0 |
+
+**My eleventh-addendum REJECT-RETIRE verdict is CONFIRMED**: both files are **canonical-registered OAT workstream members** with PARTIALLY RESOLVED status + scheduled promotion targets, NOT "philosophical commitment / design decision" as Issue #5 originally classified.
+
+Phase 2 — `THEORY/working/CV-1.6_packet_crosswalk.md` D-item list checked:
+- D-CV1.6-O1 Commitment 16 (OAT-1, DONE)
+- D-CV1.6-O2 Shared-pool I9' (OAT-4)
+- D-CV1.6-O3 F bridge + λ_rep (OAT-2 + OAT-3 combined)
+- **D-CV1.6-O4 C_t multi-formation σ_multi^D coexistence (OAT-5 cobelonging_vs_sigmaD.md)**
+- D-CV1.6-O5 Commitment 17 4-tool scaffolding
+
+OAT-5 is officially scheduled as **D-CV1.6-O4**, not D-CV1.6-O6 as I previously claimed.
+
+### 3 detail errors corrected
+
+**Error 1**: `cobelonging_vs_sigmaD.md` REJECT-RETIRE disclosure header originally said "CV-1.6 D-CV1.6-O6 promotion target (if user approves)".
+**Correction**: D-CV1.6-O4 (canonical-scheduled per `CV-1.6_packet_crosswalk.md` line 50). The "if user approves" hedge was inaccurate — this is canonical-scheduled, not aspirational.
+
+**Error 2**: `pre_objective_K_field_tension.md` REJECT-RETIRE disclosure header originally said "v2.0 promotion target (W11-W12 timeline)".
+**Correction**: "v2.0 §1 ontological setup paragraph amendment" per canonical theorem_status.md OP-0009 Sub-item Status Table. The W11-W12 timeline was correct in spirit but the exact promotion target wording is "v2.0 §1 amendment".
+
+**Error 3**: `CV-1.7_parking_lot_inventory.md` §1.6 Cluster F (Auxiliary) classification of OAT-5/OAT-6 is **inconsistent with canonical sub-item table** which treats them as OAT workstream members on par with OAT-1/2/3/4 (Cluster E / Commitments).
+**Correction**: §1.5 Cluster E added a "Cluster classification correction" note acknowledging OAT-5/6 are misplaced into Cluster F. Logical placement is Cluster E (Commitments / OAT workstream); §1.6 retained for inventory continuity but flagged as misclassification source.
+
+### Files modified (3)
+
+1. `THEORY/working/MF/cobelonging_vs_sigmaD.md`: REJECT-RETIRE header updated with D-CV1.6-O4 correction + canonical-scheduled (not "if user approves") clarification + re-examination metadata.
+2. `THEORY/working/MF/pre_objective_K_field_tension.md`: REJECT-RETIRE header updated with v2.0 §1 amendment specifics + Cluster F misclassification origin note + re-examination metadata.
+3. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.5 Cluster E classification correction note added; §1.6 OAT-5/6 row updated with canonical-confirmed status + D-CV1.6-O4 correction.
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **OP-0009 sub-item catalog**: status preserved (OP-0009-C + OP-0009-Pre PARTIALLY RESOLVED canonical-confirmed).
+- **N-1 hard constraint**: 0 silent OP resolution. Both files' PARTIALLY RESOLVED status was canonical-registered, not silently introduced.
+- **CV-1.6 packet integrity**: OAT-5 D-CV1.6-O4 promotion target now correctly identified.
+- **Parking lot inventory**: cluster classification error documented + corrected reference framework.
+
+### Lesson logged
+
+**Issue #5 re-examination demonstrates two distinct patterns**:
+
+1. **Substantive verdict (REJECT-RETIRE) was correct.** The chain verification approach (Issue #1/#3/#4 lessons) successfully identified the original Issue #5 surface read as misdiagnosis. The OAT workstream context + canonical theorem_status.md sub-item table + cross-reference audit all confirmed the files are legitimate active workstream members.
+
+2. **Detail errors arose from secondary inference.** The three corrected errors (D-CV1.6-O6 → D-CV1.6-O4, "if user approves" → canonical-scheduled, Cluster F misplacement) all came from secondary inference rather than direct canonical lookup. Pattern: when verifying a working file's promotion path, **always cross-check `CV-1.6_packet_crosswalk.md` D-item list + canonical `theorem_status.md` OP sub-item Status Table directly** — don't infer from working-file self-attribution alone.
+
+**Refined retirement-audit checklist (cumulative across Issues #1-#5 + re-examination)**:
+1. Cross-reference audit (inbound refs, especially canonical layer references).
+2. OP catalog impact (active "PARTIALLY RESOLVED" claims; **verify in canonical sub-item table, not just working file footer**).
+3. Salvage value identification.
+4. Workstream context (systematic effort like OAT, L1, σ-rich, K-Selection).
+5. Promotion target (**verify in CV-x.y_packet_crosswalk.md D-item list, not just working file footer**).
+6. Author intent vs reader perception.
+7. Cluster classification cross-check (parking_lot_inventory cluster vs canonical workstream membership).
+
+Pattern: working-file self-attribution can be ASPIRATIONAL or NUMBERING-INACCURATE; canonical sub-item tables + packet crosswalks are AUTHORITATIVE. **Always cross-check the authoritative layer when the verdict turns on promotion-path claims.**
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD eleventh addendum) — Issue #5 REJECTED: ontological audit files are legitimate OAT workstream
+
+**Trigger:** parking-lot precision audit Issue #5 — original recommendation: 2 files (`pre_objective_K_field_tension.md` OAT-6, `cobelonging_vs_sigmaD.md` OAT-5) move to `_archive/ontological_design_decisions/` as "philosophical commitment / design decision, not theorem".
+
+**Applied chain verification per Issue #1/#3/#4 lessons.** Per-file cross-reference audit + salvage-value extraction yielded **REJECTED** verdict — both files are legitimate active working files with structured mathematical content tied to OP-0009 sub-item resolution.
+
+### Why the original Issue #5 recommendation is wrong
+
+**Both files have 8 active inbound references** including canonical `theorem_status.md` Open Problems Catalog. The "philosophical commitment / design decision" framing in the original Issue #5 audit was based on a surface read of the file titles ("ontological gap", "co-belonging vs σ_multi^D status") without examining actual content.
+
+**Mathematical content found** in both files:
+
+`pre_objective_K_field_tension.md` (OAT-6, 534 lines):
+- Path A + Path C + Tool A2 quotient hybrid analysis (§§3-6).
+- $\widetilde{\widetilde\Sigma}^K_M = \widetilde\Sigma^K_M / S_{K_{\mathrm{field}}}$ unordered configuration formalism (formal mathematical structure, not philosophy).
+- CN10 one-way ontological flow $u_t \to [\mathbf{u}] \to \mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}}) \to$ cog-sci formalization.
+- **OP-0009-Pre PARTIALLY RESOLVED** active claim §7 — structured resolution proposal with v2.0 canonical §1 amendment target.
+
+`cobelonging_vs_sigmaD.md` (OAT-5, 392 lines):
+- Option C-3 verdict: $C_t$ demoted-derived; σ_multi^D and $C_t$ orthogonal information.
+- Orthogonality witness construction §5.2 on $D_4$-grid (concrete mathematical example).
+- Architecture-conditional verdict (depends on OP-0009-A K-field 4a primary assumption).
+- **OP-0009-C PARTIALLY RESOLVED** active claim — CV-1.6 D-CV1.6-O6 promotion candidate.
+
+### OAT systematic structure broken by retirement
+
+Both files are part of the **OAT (OP-0009 sub-item Tasks) workstream**:
+- OAT-1 ✅ `K_status_commitment.md` → Commitment 16 (CV-1.5.1, **already PROMOTED to canonical**).
+- OAT-2 `F_Kstep_K_triple.md` → OP-0009-F PARTIALLY RESOLVED (CV-1.6 candidate).
+- OAT-3 `lambda_rep_ontology.md` → OP-0009-λ PARTIALLY RESOLVED (CV-1.6 candidate).
+- OAT-4 `shared_pool_canonical_proposal.md` → OP-0009-A PARTIALLY RESOLVED (CV-1.6 candidate).
+- **OAT-5** `cobelonging_vs_sigmaD.md` → OP-0009-C PARTIALLY RESOLVED (CV-1.6 D-CV1.6-O6 candidate). ← Issue #5 misclassified.
+- **OAT-6** `pre_objective_K_field_tension.md` → OP-0009-Pre PARTIALLY RESOLVED (v2.0 canonical §1 amendment candidate). ← Issue #5 misclassified.
+- OAT-7 `single_high_F_equivalence.md` → OP-0009-Emp PARTIALLY RESOLVED.
+
+**OAT-1 (`K_status_commitment.md`) is the proof that the OAT pattern is legitimate**: it was an "ontological audit working file" that successfully promoted to canonical Commitment 16. OAT-5 and OAT-6 are direct analogs serving the same workstream pattern. Archiving them while preserving OAT-1/2/3/4/7 would break the OAT systematic structure + OP-0009 sub-item resolution chain.
+
+### Action applied
+
+Both files received **REJECT-RETIRE-RECOMMENDATION disclosure headers** (~10-12 lines each) explicitly:
+- Documenting the 8 active inbound references with specific file names.
+- Citing the OP-0009 sub-item PARTIALLY RESOLVED active claim each file makes.
+- Listing the substantive mathematical content (Tool A2 quotient analysis, orthogonality witness construction, etc.).
+- Identifying their position in the OAT systematic workstream.
+- Recommending **PRESERVE IN PLACE** in `working/MF/`; no archive move.
+
+### Files modified
+
+1. `THEORY/working/MF/pre_objective_K_field_tension.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
+2. `THEORY/working/MF/cobelonging_vs_sigmaD.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
+3. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.6 Issue #5 audit table added (REJECT-RETIRE verdict + OAT systematic structure documentation).
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **OP-0009 sub-item catalog**: 0 status changes. OP-0009-Pre + OP-0009-C remain PARTIALLY RESOLVED per current working file claims.
+- **N-1 hard constraint**: 0 silent OP resolution. Both files explicitly preserve OP-0009 sub-item resolution scope.
+- **OAT workstream integrity**: preserved (OAT-1/2/3/4/5/6/7 all aligned to systematic OP-0009 sub-item resolution effort).
+- **CV-1.6 promotion path**: OAT-5 (D-CV1.6-O6) remains live candidate; OAT-6 v2.0 candidate preserved.
+
+### Lesson logged
+
+**Issue #5 reinforces the chain-verification lesson from Issues #1/#3/#4: surface-read retire recommendations are unreliable.** The Issue #5 audit applied the chain verification pattern (cross-reference audit + salvage-value extraction + workstream context) and discovered that the original "philosophical commitment / design decision" classification was a **category error** — the files contain structured mathematical analysis with active OP catalog resolution claims, not philosophical musing.
+
+**Refined retirement-audit checklist (cumulative across Issues #1-#5)**:
+1. **Cross-reference audit**: enumerate inbound references; flag canonical layer references as critical.
+2. **OP catalog impact**: check for active "OP-XXXX PARTIALLY RESOLVED" or "RESOLVED" claims; these indicate legitimate workstream files.
+3. **Salvage value identification**: distinguish heuristic motivation from SCC-intrinsic mathematical content.
+4. **Workstream context**: check whether file is part of a systematic effort (OAT, L1, σ-rich, K-Selection); systematic-effort participants should not be retired in isolation.
+5. **Promotion target**: files with CV-1.6/CV-1.7+/v2.0 promotion targets are active workstream candidates, NOT archive candidates.
+6. **Author intent vs reader perception**: file titles ("philosophical", "design", "ontological gap") may evoke wrong category; verify by reading §1 mission + §2 setup before classifying.
+
+Pattern: **the lower the cross-reference / OP-claim / salvage value, the safer the retirement; the higher any of these, the more cautious the verdict should be.**
+
+### Path forward
+
+**No W7+ retirement work needed for Issue #5** — both files preserve in place. Continue:
+- OAT-5 → CV-1.6 D-CV1.6-O6 promotion (W6 Day 7 morning if user approves).
+- OAT-6 → v2.0 canonical §1 amendment (W11-W12 timeline).
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD tenth addendum) — Issue #4: Speculative cross-domain bridges retire-candidate disclosure (6 files, partial vs full)
+
+**Trigger:** parking-lot precision audit Issue #4 — original recommendation: 6 files / ~2,200 lines RETIRE (Yang-Mills mass gap, QCD string-breaking, Geometric Langlands π_1, McKay-spirit Lie algebra, 4 speculative bridges in foundational_bridges_2026, Fukaya category).
+
+**Applied chain verification per Issue #1 deep-fix lesson + Issue #3 deeper audit lesson** (chain-of-substitution verification before retirement). Per-file cross-reference audit + salvage-value extraction yielded **refined verdicts** that depart significantly from the original "RETIRE wholesale" recommendation:
+
+### Per-file refined verdicts
+
+| File | Inbound refs | Salvage value | Refined verdict |
+|---|---:|---|---|
+| `MF/scc_mass_gap_connection.md` | 2 (index + tracker) | BC-249-1 conjecture (NQ-249, OP-0009-Emp) | **PARTIAL RETIRE** |
+| `MF/formation_birth_string_breaking.md` | 5 active | NQ-198a $C(\beta) \approx 13.2$ anchor + critical-threshold formulation | **PARTIAL RETIRE** |
+| `SF/formation_fundamental_group.md` | 4 (incl. sigma_class_category) | π_1(F) := Aut(G)_{u*} formal definition + worked examples | **PARTIAL RETIRE + RENAME** (π_1 misleading) |
+| `SF/sigma_lie_algebra_structure.md` | 5 active | Aut(G)_{u*} basics (duplicated elsewhere) + NQ-259/260 empirical tasks | **PARTIAL RETIRE + CONSOLIDATE** |
+| `MF/foundational_bridges_2026.md` | 5 active | B-1 (Bernshtein), B-2 (Schramm), B-4 (σ-fingerprint) — already in dedicated files | **SPLIT** (legitimate bridges already separated; speculative B-3/B-5/B-6/B-7 retire) |
+| `SF/sigma_class_category.md` | 4 (incl. parking_lot_inventory) | "refinement = subcategory inclusion" 1-line observation | **FULL RETIRE** (after inline + index update) |
+
+### What this session applied
+
+**6 files received retire-candidate disclosure headers** with explicit:
+- **Retire scope**: heuristic / motivational / cross-domain rhetoric to be archived.
+- **Preserve scope**: SCC-intrinsic content with mathematical or empirical value.
+- **Future split (W7+)**: file-specific consolidation/extraction/archive plan.
+- **Cross-reference impact**: explicit list of inbound references that retirement must preserve.
+- **CN10 disclosure**: explicit acknowledgment of which external-framework framing is heuristic-only vs which mathematical content is SCC-intrinsic.
+
+### What this session did NOT apply
+
+- **No actual file moves to `_archive/`** — preserved in `working/` until W7+ to allow:
+  - User review of disclosure headers + refined verdicts.
+  - Inline / consolidation work (e.g., absorbing π_1(F) definition into `sigma_uniqueness_theorem.md`, inlining sigma_class_category one-line note into `sigma_rich_refinement_theorem.md`).
+  - Cross-reference cleanup (e.g., op003_mo1_status_review.md index entries pointing to retired files).
+- **No content deletion** — disclosure headers are non-destructive; speculative content remains in place but flagged.
+
+### Salvage value preservation plan (W7+)
+
+For PARTIAL RETIRE files, the substantive content slated for preservation:
+
+1. **`scc_mass_gap_connection.md`** → extract BC-249-1 conjecture (`§3.1` revised form with $\delta_0$ bifurcation-distance dependence) into new `working/MF/spectral_gap_BC249.md` (SCC-intrinsic; no Yang-Mills framing).
+
+2. **`formation_birth_string_breaking.md`** → extract NQ-198a empirical anchor + threshold formulation $|\partial S|_{\mathrm{crit}}$ into `working/MF/formation_birth_threshold_NQ253.md` (SCC-intrinsic; no QCD framing).
+
+3. **`formation_fundamental_group.md`** → consolidate Definition 3.1 ($\pi_1(F) := \mathrm{Aut}(G)_{u^*}$) into `working/SF/sigma_uniqueness_theorem.md` (Aut(G)_{u*} formalism already there). Rename suggestion: `Stab(F)` or `Aut(F; u*)` instead of misleading `π_1(F)`.
+
+4. **`sigma_lie_algebra_structure.md`** → consolidate Aut(G)_{u*} content into `sigma_uniqueness_theorem.md`. Separate NQ-259 (R23 explicit Aut(G)_{u*} computation) + NQ-260 (ML classifier) into independent empirical-task files.
+
+5. **`foundational_bridges_2026.md`** → restructure into 2-3 page "legitimate bridges only" annotated catalog (B-1 + B-2 + B-4 references to dedicated files); retire B-3/B-5/B-6/B-7.
+
+6. **`sigma_class_category.md`** → inline "refinement = subcategory inclusion" observation into `sigma_rich_refinement_theorem.md` line 181 area; archive entire file.
+
+### Files modified
+
+1. `THEORY/working/MF/scc_mass_gap_connection.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~7 lines).
+2. `THEORY/working/MF/formation_birth_string_breaking.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~8 lines).
+3. `THEORY/working/SF/formation_fundamental_group.md`: PARTIAL RETIRE + RENAME disclosure header (~10 lines).
+4. `THEORY/working/SF/sigma_lie_algebra_structure.md`: PARTIAL RETIRE + CONSOLIDATE disclosure header (~10 lines).
+5. `THEORY/working/MF/foundational_bridges_2026.md`: SPLIT disclosure header with per-bridge verdict table (~12 lines).
+6. `THEORY/working/SF/sigma_class_category.md`: FULL RETIRE-CANDIDATE disclosure header (~10 lines).
+7. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.6 refined verdicts table added.
+8. `_archive/cv17_speculative_retired_2026-05-04/`: directory created (empty until W7+ moves).
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits. No theorem statements affected.
+- **OP catalog**: 0 status changes. NQ-249, NQ-253, NQ-263, NQ-258, NQ-261/262/264/266/248/267 (the underlying NQs of the 6 files) retain current status; W7+ consolidation will rationalize the mapping.
+- **N-1 hard constraint**: 0 silent OP resolution. All 6 files preserve OP catalog references with explicit "not silently resolved" hard-constraint statements (verified during cross-reference audit).
+- **Working layer hygiene**: 6 files now have explicit retire-candidate disclosure with per-file rationale. Future user can apply W7+ archive plan with confidence; cross-reference impact pre-analyzed.
+
+### Lesson logged
+
+**Issue #4 demonstrates that "RETIRE wholesale" recommendations require chain-of-substitution verification.** Without it, retirement risks:
+- Breaking active cross-references (5 of 6 files have 4-5 active inbound references).
+- Discarding salvage-value content (BC-249-1 conjecture, NQ-198a empirical anchor, π_1(F) formal definition).
+- Conflating heuristic framing with mathematical content (Yang-Mills rhetoric vs SCC mass gap question; QCD string-breaking vs SCC threshold formulation).
+
+The refined per-file verdicts (PARTIAL / SPLIT / FULL) replace the binary RETIRE recommendation with a nuanced taxonomy that preserves substantive content while archiving heuristic motivation. Pattern: **when retirement is recommended, audit each file's (inbound refs, outbound claims, salvage value) triple before applying retirement; partial retirement with disclosure is often more appropriate than wholesale archiving.**
+
+### Path forward (W7+)
+
+1. **W7 priority 1**: salvage-value extraction (5 new SCC-only files: `spectral_gap_BC249.md`, `formation_birth_threshold_NQ253.md`, NQ-259/260 separate files; consolidations into `sigma_uniqueness_theorem.md`).
+2. **W7 priority 2**: cross-reference cleanup (op003_mo1_status_review.md index, sigma_rich_refinement_theorem.md line 181, sigma_class_category retirement chain).
+3. **W7 priority 3**: archive moves to `_archive/cv17_speculative_retired_2026-05-04/`.
+4. **W7+ ongoing**: parking_lot_inventory updates as each file's status transitions.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD ninth addendum) — Issue #3 DEEP RE-EXAMINATION: canonical Step 4 two-normal-form mixing error found
+
+**Trigger:** user re-review identified that the original Issue #3 reconciliation (eighth addendum) was **incomplete**. The "multinomial factor 6" insight resolved the apparent $K/I_4 = 2/3$ vs $A_2^{sym}/A_1 = 4$ discrepancy at the **`symmetry_moduli`-internal** level, but did not examine canonical's normal form definition + conversion to `symmetry_moduli`'s convention.
+
+### Root cause of original reconciliation incompleteness
+
+Re-reading canonical T-σ-Theorem-4 entry (`canonical.md` lines 1385-1433) directly reveals **two distinct normal forms** in play:
+
+**Canonical normal form** (line 1395):
+$$F_{can}(x, y; \beta) = \beta(x^2 + y^2) + A_1 (x^2 + y^2)^2 + A_2 x^2 y^2$$
+
+**`symmetry_moduli.md` §3.3 normal form** (line 127):
+$$F_{sym}(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + A_1^{sym}(a^4 + b^4) + A_2^{sym} a^2 b^2$$
+
+These are **structurally distinct**. The conversion identity comes from expanding $A_1(x^2+y^2)^2 = A_1(x^4 + 2 x^2 y^2 + y^4)$:
+$$A_2^{sym} = 2 A_1^{can} + A_2^{can} \quad\Leftrightarrow\quad A_2^{can}/A_1 = A_2^{sym}/A_1 - 2$$
+
+`symmetry_moduli` rigorously derives $A_2^{sym}/A_1 = 4$ via multinomial factor 6 (eighth addendum reconciliation). Converting to canonical's normal form: **$A_2^{can}/A_1 = 4 - 2 = 2$**.
+
+### The two-normal-form mixing error
+
+**Canonical line 1395** claims "$A_2/A_1 = 4$" for canonical's normal form. **This is wrong**: the value 4 is correct only in `symmetry_moduli`'s normal form; canonical's value should be 2.
+
+**Canonical Step 4 (line 1407)** derives $F_{yy}|_{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). It then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention) into canonical's formula. The result $F_{yy} = 4|W''(c)|\epsilon$ (claimed degeneracy with $\mu_0$) is **spurious due to convention-mixing**; the correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2|W''(c)|\epsilon$.
+
+### Recomputed canonical (ii) — corrected formula
+
+With $A_2^{can}/A_1 = 2$ (correct conversion in canonical's normal form):
+- $\mu_0 = F_{xx}|_{(A,0)} = -4\beta = 4|W''(c)|\epsilon$ (unchanged)
+- $\mu_1 = F_{yy}|_{(A,0)} = -\beta A_2^{can}/A_1 = -2\beta = 2|W''(c)|\epsilon$ (corrected; was $4|W''(c)|\epsilon$)
+- **Ratio $\mu_0/\mu_1 = 2$ at leading order, NON-DEGENERATE**
+
+This **matches NQ-187 numerical measurement** $\mu_1/\mu_0 \approx 2$ exactly (modulo eigenvalue-ordering convention). The "falsification" is a real algebraic inconsistency in canonical Step 4, not a scope error or normalization-only difference.
+
+### Revised path probabilities (path γ-ii promoted, γ-i demoted)
+
+**Original (eighth addendum) probability estimates**:
+- γ-i (scope clarification): ~70%
+- γ-ii (formula correction): ~20%
+- β-fail: ~5%
+- α-fail: ~5%
+
+**Revised (ninth addendum, after deeper audit)**:
+- **γ-ii (formula correction): ~75%** ← path γ-ii promoted as expected outcome.
+- γ-i (scope clarification): ~10% ← demoted (deeper audit revealed the algebraic error).
+- β-fail: ~10% (unchanged; R22 derivation independently consistent within `symmetry_moduli`'s normal form).
+- α-fail: ~5% (unchanged).
+
+### Corrected canonical statement (γ-ii path text)
+
+`sigma_theorem4_canonical_revision.md` §4.6 NEW — recommended canonical correction text. Key changes from original canonical T-σ-Theorem-4 (ii):
+- Replace "$\mu_0 = \mu_1 = 4|W''(c)|\epsilon$ degenerate" with "$\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2 non-degenerate".
+- Replace "$A_2/A_1 = 4$" claim in canonical line 1395 with "convention-aware: $A_2^{sym}/A_1 = 4$ in `symmetry_moduli`'s form, $A_2^{can}/A_1 = 2$ in canonical's form, related by $A_2^{can} = A_2^{sym} - 2 A_1$".
+- Update (v) σ-signature: ordering by eigenvalue magnitude (4 > 2), not by Mulliken character order tie-break.
+- Mark Commitment 14 (O7) tie-break convention as **not applicable** for this theorem (no tie at leading order); convention remains useful for higher-order theorems.
+
+### Files modified (3 deeper-audit revisions)
+
+1. **`THEORY/working/SF/sigma_theorem4_canonical_revision.md`** §2.5.1-§2.5.3 + §4.5 + §4.6 added:
+   - §2.5.1 DEEPER AUDIT — two-normal-form conversion analysis + canonical Step 4 mixing error.
+   - §2.5.2 Revised falsification verdict — algebraic error, not scope ambiguity.
+   - §2.5.3 What original Phase 2 missed — canonical normal form definition not examined.
+   - §4.5 revised path probability table — γ-ii promoted to ~75%.
+   - §4.6 NEW — recommended canonical correction text with corrected formula + convention disclosure.
+
+2. **`THEORY/working/SF/nq187b_L_extrapolation.md`** §2.6.3 added:
+   - DEEPER AUDIT subsection — two-normal-form mixing error identified.
+   - (γ) audit refocused: from "which evaluation point NQ-187 measures" to "verify two-normal-form conversion identity".
+   - Corrected canonical formula matches NQ-187 measurement at all $L$ (not just finite-$L$ correction).
+
+3. **`THEORY/working/SF/sigma_theorem4_higher_order.md`** §11.10 added:
+   - DEEPER AUDIT REVISION subsection — superseding §11.7-§11.9 path γ-i framing.
+   - Hypothesis A "continuum-limit recovery $\to 4$" interpretation refined: holds for `symmetry_moduli`'s $A_2^{sym}/A_1$ but does not address canonical's formula error.
+   - "§8.5 numerical falsification" reframed: real falsification of canonical (ii) as written, not scope ambiguity.
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits. Canonical T-σ-Theorem-4 retains Cat B with Wave 3 audit caveat at C-0716.
+- **OP catalog**: 0 status changes.
+- **N-1 hard constraint**: silent re-promotion 0건 (working files preserve Cat A re-promotion conditional language).
+- **Working layer**: deeper audit clarifies the falsification mechanism (two-normal-form mixing in canonical Step 4), promotes γ-ii path to ~75% probability. Cat A re-promotion path now has a **concrete corrected canonical text proposal** (`sigma_theorem4_canonical_revision.md` §4.6).
+- **CV-1.6 release**: not blocked. T-σ-Theorem-4 already at Cat B; Wave 3 audit caveat already in canonical line 1421-1431.
+
+### Lesson logged (2-issue pattern)
+
+**Two distinct lessons from this deeper audit**:
+
+1. **Multi-normal-form mixing pattern**: when a theorem statement involves a quantity defined in multiple ways (different normal forms, different bases, different sign conventions), **always verify the value plugged in matches the convention assumed by the formula**. The pattern $A_2^{(can)} = A_2^{(other)} - n A_1$ for $n$-degree polynomial expansion of $(x^2+y^2)^n$ vs $(x^{2n}+y^{2n})$ basis is a generic hazard.
+
+2. **Reconciliation depth**: a normalization reconciliation (multinomial factor 6) at one level may miss a deeper algebraic error at another level (canonical's normal form). When user requests "재검토", apply the audit pattern recursively until all conventions and substitutions are consistent. Pattern from Issue #1 deep-fix (commitment_19 promotion packet downstream of compatibility_proof) generalizes: silent-resolution risk audits and formula-error audits both require **chain-of-substitution verification**, not just point-wise checks.
+
+### Path forward (refined)
+
+- **W6 Day 2 (priority highest)**: execute (γ) audit per refocused scope: independently verify the conversion identity $A_2^{sym} = 2 A_1 + A_2^{can}$ on $L = 4$ small grid via desk computation; confirm corrected canonical formula $\mu_1 = 2|W''(c)|\epsilon$. **Expected outcome: PASS, confirming γ-ii path.**
+- **W6+ (priority medium)**: execute (β) R22 derivation audit per `r22_a2_a1_audit.md` §3 — confirms `symmetry_moduli`'s internal logic.
+- **W7+ (priority lowest)**: (α) NQ-187b L → ∞ extrapolation — useful cross-validation only.
+- **CV-1.7+ T-σ-Theorem-4 Cat A re-promotion**: contingent on (γ) audit confirmation + canonical correction applied per §4.6 corrected text. **Cat A re-promotion is feasible; the corrected statement is mathematically rigorous and matches NQ-187 numerical exactly.**
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD eighth addendum) — Issue #3: NQ-187 falsification reconciliation (likely false-alarm; R22 confirmed)
+
+**Trigger:** parking-lot precision audit Issue #3 (T-σ-Theorem-4 Cat A → Cat B 영구 격하 위기). Cluster D 3 files audit + R22 derivation cross-check identified the apparent "$K/I_4 = 2/3$ vs $A_2/A_1 = 4$" two-orders-of-magnitude discrepancy as a **multinomial-coefficient normalization difference (factor 6)**, NOT a contradiction.
+
+### Key insight — multinomial factor 6 reconciliation
+
+`working/SF/symmetry_moduli.md` lines 113-130 explicitly tracks the factor:
+$$\int (a\phi_{10} + b\phi_{01})^4 = a^4 I_4 + 6 a^2 b^2 K + b^4 I_4$$
+where the cross-term coefficient $6 = \binom{4}{2,2}/2$ is the multinomial expansion factor. The reduced Lyapunov function takes the form $F(a,b) = \tfrac{\mu}{2}(a^2+b^2) + A_1(a^4+b^4) + A_2 a^2 b^2$ with:
+- $A_1 = \beta_{\mathrm{bd}} I_4 = 3\beta_{\mathrm{bd}}/2$ (factor 1).
+- $A_2 = 6 \beta_{\mathrm{bd}} K = 6 \beta_{\mathrm{bd}}$ (factor 6).
+- Ratio $A_2/A_1 = 6 K/I_4 = 6 \cdot (2/3) = 4$ ✓
+
+**The naive integral ratio $K/I_4 = 2/3$ and R22 W-potential expansion ratio $A_2/A_1 = 4$ are the same continuum quantity in different normalizations.** The "two-orders-of-magnitude" framing in cluster D was a category-error reading of the discrepancy.
+
+### Impact on T-σ-Theorem-4 status
+
+Per refined understanding (§2.5 of `sigma_theorem4_canonical_revision.md` post-update):
+
+**R22 cubic-equivariant ratio $A_2/A_1 = 4$**: **LIKELY CORRECT** at continuum (confirmed by multinomial factor 6 reconciliation + discrete table $A_2^L/A_1^L \to 4$ as $L \to \infty$ in `nq187b_L_extrapolation.md` §2.6).
+
+**Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ degenerate at leading order"**: **LIKELY PARTIALLY INCORRECT** — but the error is most likely **scope** (path γ-i: canonical (ii) describes uniform-point Hessian degeneracy; NQ-187 measures axis-minimum Hessian which is non-degenerate per R22 axis-aligned analysis $F_{aa}/F_{bb} = 2$), not formula. Path γ-i resolution: clarify canonical (ii) scope; add separate sub-statement for axis-minimum Hessian.
+
+**Refined 4-path decision tree** (`sigma_theorem4_canonical_revision.md` §4.5):
+- **Path γ-i** (scope clarification, ~70% probability): canonical (ii) measures uniform-point Hessian; NQ-187 measures axis-minimum Hessian; both correct, statement scope unclear → **clarify scope**, no formula error, **Cat A re-promotion candidate at CV-1.7+**.
+- **Path γ-ii** (formula correction, ~20%): canonical (ii) intended axis-minimum but contains formula error → **correct formula** ($\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2) at CV-1.6, Cat B retained.
+- **Path β-fail** (R22 derivation error, ~5%): retract R22 + Cat C retraction.
+- **Path α-fail** (continuum extrapolation rejects A_2/A_1 = 4, ~5%): retract.
+
+**Most likely outcome: γ-i scope clarification → Cat A re-promotion.** The original "Cat A → Cat B 영구 격하 위기" framing in the parking-lot precision audit Issue #3 trigger was **likely overstated** — the falsification appears to be a category/scope error.
+
+### Files modified (3) + new placeholder files (2)
+
+**Modified:**
+
+1. **`THEORY/working/SF/nq187b_L_extrapolation.md`** §2.6 corrected:
+   - §2.6.1 RECONCILIATION subsection added (multinomial factor 6 explanation).
+   - §2.6.2 Implication for NQ-187 numerical measurement (uniform vs axis-minimum point).
+   - §2.6 Discrete ratio table corrected: separate columns for naive $K^L/I_4^L$ (→ 2/3) vs R22-comparable $A_2^L/A_1^L = 6 \cdot K^L/I_4^L$ (→ 4).
+
+2. **`THEORY/working/SF/sigma_theorem4_canonical_revision.md`** §2.5 + §4.4 + §4.5:
+   - §2.5 RECONCILIATION subsection added (Claim 1 R22 LIKELY CORRECT + Claim 2 canonical (ii) LIKELY PARTIALLY INCORRECT decomposition).
+   - §4.4 audit priority refined (γ-i scope clarification expected).
+   - §4.5 NEW — refined 4-path decision tree (γ-i / γ-ii / β-fail / α-fail) with probability estimates.
+
+3. **`THEORY/working/SF/sigma_theorem4_higher_order.md`** §11.7-§11.9 added:
+   - §11.7 Hypothesis A (continuum-limit recovery $r(L) \to 4$) algebraically forced + numerically confirmed.
+   - §11.8 §8.5 "numerical falsification" reframed as falsifying canonical (ii) scope/formula, NOT R22.
+   - §11.9 §11.6 sister revision recommendation on `symmetry_moduli.md` REVISED — R22 stands; revision was based on original false-falsification framing.
+
+**New placeholder files (2):**
+
+4. **`THEORY/working/SF/sigma_m_hessian_convention_audit.md`** (NEW, 110 lines):
+   - (γ) Σ_m-Hessian convention audit placeholder.
+   - §2.1 Convention I (centered) vs Convention II (Lagrange multiplier) test matrix.
+   - §2.2 3 candidate evaluation points: uniform / axis-min / diagonal saddle.
+   - §2.4 decision criterion: which (point, convention) NQ-187 measured at.
+   - Resolves previously-broken cross-reference from `sigma_theorem4_canonical_revision.md` §4.3.
+
+5. **`THEORY/working/SF/r22_a2_a1_audit.md`** (NEW, 100 lines):
+   - (β) R22 cubic-equivariant derivation audit placeholder.
+   - §2 R22 derivation recap (lines 100-156 of `symmetry_moduli.md` §3.3).
+   - §3 audit verification checklist (8 items: multinomial coefficient, reflection-symmetry vanishing, integral evaluations, normalization, discrete-to-continuum convergence, axis-minimum existence, Hessian at minimum, diagonal saddle structure).
+   - §3.1 expected outcome: **PASS** at continuum + small $O(1/L^2)$ correction (β-fail probability ≈ 5%).
+   - Resolves previously-broken cross-reference from `sigma_theorem4_canonical_revision.md` §4.2.
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits. T-σ-Theorem-4 retains Cat B with Wave 3 audit caveat per `theorem_status.md` line 196 C-0716.
+- **OP catalog**: 0 status changes. T-σ-Theorem-4 is C-0716 (retroactive Cat B per CV-1.5.1 Critic verdict + Wave 3 NQ-187 caveat); not associated with an OP entry.
+- **N-1 hard constraint**: silent re-promotion 0건 confirmed (6-point audit cleared cluster D at start of this issue). All "Cat A re-promotion" language is conditional on (γ)+(β)+(α) audit completion + post-CV-1.7+ supervised promotion.
+- **Working layer narrative**: refined from "permanent Cat B retention crisis" to "scope clarification path likely → Cat A re-promotion at CV-1.7+". Significantly less aggressive interpretation supported by multinomial factor 6 reconciliation.
+- **CV-1.6 release**: not blocked. T-σ-Theorem-4 already at Cat B per CV-1.5.1 retroactive; Wave 3 audit adds caveat. CV-1.6 retains Cat B with augmented caveat per `sigma_theorem4_canonical_revision.md` §5.3.
+
+### Path forward
+
+- **W6 Day 2-3 (priority highest)**: execute (γ) Σ_m-Hessian convention audit per `sigma_m_hessian_convention_audit.md` § 2 — desk computation on $L = 4$ small grid, ~3-5 days. **Most likely confirms γ-i scope clarification path.**
+- **W6+ (priority medium)**: execute (β) R22 derivation audit per `r22_a2_a1_audit.md` §3 — independent re-derivation, ~1-2 weeks. **Most likely PASS (multinomial factor 6 reconciliation already strongly supports R22).**
+- **W7+ (priority lowest)**: execute (α) NQ-187b L → ∞ extrapolation per `nq187b_L_extrapolation.md` §6 — Lanczos eigenvalue extraction at $L \in \{32, 64\}$, ~2 weeks. **Most likely PASS (discrete table $A_2^L/A_1^L$ already trends to 4.000 at $L = 64$).**
+- **CV-1.7+ T-σ-Theorem-4 Cat A re-promotion**: contingent on (γ)+(β)+(α) all PASS + canonical (ii) statement clarified per γ-i path.
+
+### Lesson logged
+
+**"Two-orders-of-magnitude discrepancy" can be normalization, not contradiction.** When raw integral ratios differ from theory predictions by integer factors, check multinomial / normalization conventions before declaring falsification. Pattern: $\binom{n}{p,q}/c$ factors arise generically in W-potential / Lyapunov function expansion of multi-mode reductions.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD seventh addendum) — 6-point N-1 audit pattern applied across all promotion-packet-style files
+
+**Trigger:** user directive "검사" after Issue #1 deep-fix lesson logged. Apply the 6-point N-1 audit pattern (upstream proof + canonical text blocks + decision items + CHANGELOG entries + cross-walk tables + footer) systematically across all canonical-write-trigger candidate files in `working/` to verify no other silent-resolution risks remain.
+
+### Files audited (20+)
+
+**Commitment promotion packets:**
+- `commitment_18_sigma_rich_packet.md` — OP-0008 promotion
+- `commitment_19_k_selection_axiom_packet.md` — OP-0005 promotion (already deep-fixed in 6th addendum)
+- `commitments_18_19_drafts.md` — combined drafts
+- `K_status_commitment.md` — Commitment 16 (already promoted CV-1.5.1)
+
+**Architecture / OAT promotion packets:**
+- `shared_pool_canonical_proposal.md` — OP-0009-A
+- `lambda_rep_ontology.md` — OP-0009-λ
+- `F_Kstep_K_triple.md` — OP-0009-F
+- `cobelonging_vs_sigmaD.md` — OP-0009-C
+- `cn15_static_dynamic_separation.md` — CN15 promotion candidate
+
+**K-Selection cluster:**
+- `k_selection_compatibility_proof.md` (already Issue #1 fix applied)
+- `k_selection_mechanism.md`
+- `k_selection_a_free_energy.md`, `_b_kramers.md`, `_c_numerical_anchor.md`
+- `n1_kramers_extension.md`
+
+**σ-rich cluster:**
+- `sigma_rich_augmentation.md`, `sigma_rich_phi_proof.md`, `sigma_rich_wigner_derivation.md` (Issue #2 framework already applied)
+- `sigma_rich_centroid_derivation.md`, `_orientation_derivation.md`
+- `sigma_rich_VR_phase1.md`, `sigma_rich_vs_standard_R23.md`
+- `sigma_rich_refinement_theorem.md`, `single_high_F_equivalence.md`
+- `nq242c_explicit_construction.md`
+
+**Reconciliation cluster:**
+- `sigma_theorem4_canonical_revision.md`
+
+### Audit results
+
+**Files with N-1 violation found + fixed previously this session:**
+- `commitment_19_k_selection_axiom_packet.md`: 8 wording locations + §5 OP-0005 status update block (Issue #1 deep-fix per 6th addendum). **0 standalone "RESOLVED" claims post-fix; 16 PARTIALLY RESOLVED occurrences.**
+
+**Files audited and verified CLEAN (15+):**
+All other promotion-packet-style files preserve canonical OP catalog status correctly:
+- `commitment_18_sigma_rich_packet.md`: 12 PARTIALLY RESOLVED occurrences; line 360 RESOLVED reference is in §7.4 CV-1.8+ end-state description (post-R2 proof + numerical PASS) — legitimate forward-looking conditional, not silent resolution at this packet's promotion (CV-1.7).
+- `shared_pool_canonical_proposal.md`: OP-0009-A PARTIALLY RESOLVED (5 occurrences).
+- `lambda_rep_ontology.md`: OP-0009-λ PARTIALLY RESOLVED (5 occurrences).
+- `F_Kstep_K_triple.md`: OP-0009-F PARTIALLY RESOLVED (5 occurrences); BC-1 generic case explicitly rejected (honest negative finding).
+- `cobelonging_vs_sigmaD.md`: OP-0009-C PARTIALLY RESOLVED architecture-conditional (6 occurrences).
+- All K-Selection sub-files (a/b/c/mechanism/n1_kramers): preserve OP-0005 OPEN with each option being one-of-four.
+- All σ-rich files: preserve OP-0008 OPEN with R2 W9+ blocker explicit.
+
+**False-positive RESOLVED references identified (legitimate factual statements about already-resolved OPs, not silent resolution):**
+- `k_selection_mechanism.md` line 41: "OP-0009-K is RESOLVED" — refers to canonically resolved OP-0009-K (Commitment 16 CV-1.5.1; `theorem_status.md` line 451 confirms RESOLVED status).
+- `cn15_static_dynamic_separation.md` lines 6, 71, 115, 138: "OP-0001 F-1 SPLIT-RESOLVED" — refers to canonically resolved OP-0001 (W4, T-PreObj-1 + T-Merge(b); `theorem_status.md` line 307 confirms SPLIT-RESOLVED status).
+- `commitment_18_sigma_rich_packet.md` line 360: CV-1.8+ end-state RESOLVED conditional on R2 + numerical PASS (legitimate forward-looking).
+
+### 6-point pattern verification
+
+For each promotion-packet file, the following 6 points were checked:
+1. **Upstream proof / synthesis file**: "RESOLVED" wording for OPEN OPs.
+2. **Canonical text blocks** (within ```markdown ... ``` fences): proposed canonical insertion text.
+3. **Decision items** (D-CV1.x-Y format): user-approval gates.
+4. **CHANGELOG entry blocks** (within the file): proposed history records.
+5. **Cross-walk tables** (D-Item to source mapping): consistency with #3.
+6. **Footer status block** (file-end summary): final state record.
+
+All 6 points verified clean across all audited files except `commitment_19_k_selection_axiom_packet.md` which was deep-fixed per Issue #1 6th addendum.
+
+### Pattern applicability to future audits
+
+The 6-point checklist is recommended for any future N-1 silent-resolution audit. Particularly important: **don't stop at the upstream proof file** — the canonical-write trigger is the downstream promotion packet, and silent-resolution risks can hide in the proposed canonical text blocks (Points 2-6) even if the upstream synthesis file is already correctly framed.
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **All canonical OP catalog statuses preserved**: OP-0005 OPEN, OP-0008 OPEN, OP-0006 TENTATIVE, OP-0009 OPEN with sub-items per current state, OP-0010..0013 unchanged.
+- **N-1 hard constraint**: silent OP resolution risk **fully eliminated** across the entire promotion-packet ecosystem (1 violation found and fixed; 15+ files verified clean).
+- **Audit pattern documented**: 6-point checklist becomes the standard procedure for any future N-1 silent-resolution audit; available in this entry + 6th addendum lesson-logged section.
+
+### Files not modified
+
+This entry is audit-completion documentation only. No file content changes (the only file fix was already applied in the 6th addendum). The audit trail entry serves as the verification record.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD sixth addendum) — Issue #1 DEEP-FIX: commitment_19 promotion packet propagation
+
+**Trigger:** user re-review identified that the original Issue #1 fix was incomplete — the wording fixes in `k_selection_compatibility_proof.md` did NOT propagate to the actual canonical-promotion packet `commitment_19_k_selection_axiom_packet.md`. The promotion packet contained 8 standalone "OP-0005 RESOLVED" wording locations in proposed canonical text + decision items + CHANGELOG entry. If approved as drafted, the canonical layer would inherit "OP-0005 RESOLVED" status at CV-1.7+ promotion — actual N-1 silent-resolution violation at the canonical-write level (not just internal-document inconsistency).
+
+### Root cause of original fix incompleteness
+
+The original Issue #1 fix (CHANGELOG entry above) addressed only `k_selection_compatibility_proof.md` (the synthesis proof file). However, that file is *upstream* of the promotion packet `commitment_19_k_selection_axiom_packet.md`, which is what would actually be applied to canonical at CV-1.7+. The promotion packet had its own independent "RESOLVED" wording in:
+- §1 Mission line 14 + §1 Goal #4 line 22
+- §2 proposed Commitment 19 canonical text line 35
+- §3 compatibility theorem block line 166
+- §5 OP-0005 Status Update entry (lines 199-222) — 3 occurrences inside proposed canonical OP catalog text
+- §6 CHANGELOG entry (lines 232-234, 246) — 2 occurrences
+- §7.2 D-CV1.7-K4 decision item line 286
+- §8 D-CV1.7-O7 cross-walk line 317
+- §9 hard-constraint sweep line 327
+- §10.3 canonical-refs line 280
+- Footer status block line 373
+
+Total: **~10 wording locations + §5 OP-0005 status block requiring full reframe**.
+
+### Deep-fix applied (3 substantive reframings + 7 wording-only updates)
+
+**Substantive reframings:**
+
+1. **§5 OP-0005 Status Update block** — fully reframed from "Status (CV-1.7+ update): ✅ RESOLVED" to "Status (CV-1.7+ update): 🟡 PARTIALLY RESOLVED". Added explicit "What this packet establishes" / "What this packet does NOT establish" subsections. Listed **4 gating conditions for OP-0005 status: PARTIALLY RESOLVED → RESOLVED** (W12+ separate packet):
+   - (V1)-(V7) numerical PASS on at least 4 graph classes
+   - Theorem 3.3 (b) ⊆ (c) consistency Cat B → Cat A theoretical upgrade
+   - W9+ Cat A completions: closed-form $S(K)$ + barrier-scaling proof + LSW-correspondence proof + time-scale-separation theorem
+   - Independent external prover-style audit (analogous to L1-K external audit pattern)
+
+2. **§1 Mission area** — added explicit "N-1 silent-resolution constraint" subsection acknowledging the W6 D1 EOD audit fix and clarifying that the packet's promotion changes OP-0005 status from OPEN → PARTIALLY RESOLVED (NOT full RESOLVED); full RESOLVED is a future W12+ separate-packet decision.
+
+3. **§9 Hard-constraint sweep** — silent-resolution constraint claim expanded to enumerate the 8 wording locations now reframed + cross-reference to companion fix in `k_selection_compatibility_proof.md` §6.3.1.
+
+**Wording-only updates:**
+- §1 Mission line 14: "OP-0005 RESOLVED" → "OP-0005 status update (PARTIALLY RESOLVED at CV-1.7+ promotion; full RESOLVED gated on completion conditions)"
+- §1 Goal #4 line 22: same alignment
+- §2 Commitment 19 final text line 35: "compose coherently and resolve OP-0005" → "compose coherently and **partially resolve** OP-0005 ... at the compatibility level"
+- §3 compatibility theorem block: "OP-0005 RESOLVED via composite picture" → "OP-0005 PARTIALLY RESOLVED via candidate composite picture; Cat A compatibility established; Theorem 3.3 numerical anchor pending; Cat A everywhere requires W9+"
+- §6 CHANGELOG entry §232-234: "resolving OP-0005" → "partially resolving OP-0005"
+- §6 CHANGELOG entry §246: "OP-0005 ... → ✅ RESOLVED" → "OP-0005 ... → 🟡 **PARTIALLY RESOLVED** (full RESOLVED W12+ contingent)"
+- §7.2 D-CV1.7-K4: "approve OP-0005 RESOLVED status" → "approve OP-0005 status update **OPEN → 🟡 PARTIALLY RESOLVED** (NOT a RESOLVED decision; full RESOLVED is a future W12+ separate-packet decision)"
+- §8 D-CV1.7-O7: "OP-0005 RESOLVED" → "OP-0005 OPEN → PARTIALLY RESOLVED (NOT full RESOLVED; W12+ separate decision)"
+- §10.3 canonical-refs: same alignment
+- Footer status block: full reframe + audit-fix metadata note
+
+### Verification
+
+- `grep -E '\bRESOLVED\b'` after fix shows **0 standalone "RESOLVED" claims** (excluding "PARTIALLY RESOLVED", "→ RESOLVED" status-transition descriptions, and conditional/gating contexts).
+- "PARTIALLY RESOLVED" wording **16 occurrences** across the file (consistent throughout).
+- canonical OP-0005 catalog (`theorem_status.md` line 312) status "OPEN; partial via 4-layer composite" **preserved**.
+- No mathematical-result changes; no theorem statements modified; no Cat status changes; only catalog-consistency wording alignment.
+
+### Net effect
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **OP-0005 catalog status**: preserved at OPEN; future CV-1.7+ promotion will write OPEN → PARTIALLY RESOLVED (still partial); future W12+ separate packet handles PARTIALLY RESOLVED → RESOLVED transition with explicit gating.
+- **N-1 hard constraint**: silent OP resolution risk **fully eliminated** at both upstream (compatibility proof file) and downstream (canonical-promotion packet) layers.
+- **W12+ workflow**: explicitly decoupled — Commitment 19 axiom + 4-layer architecture promotable at CV-1.7+ as partial resolution; full mechanism instantiation requires separate future packet contingent on (V1)-(V7) PASS + W9+ Cat A theoretical + external audit.
+
+### Lesson logged
+
+**Silent-resolution risk requires propagation check across the full upstream→downstream chain**: working file `compatibility_proof.md` (upstream proof) → packet `commitment_19_axiom_packet.md` (downstream canonical-write trigger). Original fix addressed only upstream; the canonical-write trigger had independent wording requiring its own fix. Pattern recommendation for future N-1 audits: when fixing a silent-resolution claim, also check the corresponding promotion packet (if exists) for the same wording in proposed canonical text, decision items, and CHANGELOG entry blocks. The promotion packet is what actually writes to canonical, so its wording is the load-bearing one.
+
+### Files modified
+
+- `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md`: ~10 wording locations + §5 OP-0005 status update full reframe + §1 N-1 silent-resolution constraint subsection + footer audit-fix metadata.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD fourth + fifth addendums) — Parking-Lot Issue #1 + #2 development applied
+
+User directive "8 critical issues 하나씩 디벨롭" after Stage 0 inventory + precision audit. Two issues addressed in this entry; remaining 6 issues (#3-#8) deferred to subsequent sessions.
+
+### Issue #1 — OP-0005 silent-resolution risk fix (`k_selection_compatibility_proof.md`)
+
+**Problem:** `working/MF/k_selection_compatibility_proof.md` claimed "OP-0005 K-Selection mechanism: **RESOLVED** via composite (a)+(b)+(c)+(d)" in §6.3 + §7.1 + §8.1 + §9.3 + footer, contradicting canonical OP catalog status `theorem_status.md` line 312 ("**OPEN; partial via 4-layer composite**"). N-1 hard constraint violation (silent OP resolution).
+
+**Fix applied (7 locations):**
+- §1 Mission statement: clarified "compatibility, partial-answer level"; full RESOLVED status W6-W7 + W9+ contingent.
+- §6.3 line 211: "ANSWERED" → "**PARTIALLY ANSWERED**".
+- §6.3.1 (new): explicit partial-answer scope clause documenting what this file does NOT establish (Theorem 3.3 numerical anchor + W9+ Cat A everywhere).
+- §7.1 line 260 (proposed Commitment 19 canonical text): "RESOLVED" → "**PARTIALLY RESOLVED via candidate 4-layer composite ... full RESOLVED status gated by all three completion conditions**".
+- §8.1 line 283: "OP-0005 closure: Cat A (synthesis)" → "OP-0005 *partial answer*: Cat A composition ... does NOT include Theorem 3.3, does NOT claim full RESOLVED".
+- §8.3 line 302 hard-constraint sweep: explicit canonical OP catalog reference + partial-answer wording compliance.
+- §9.3 W12+ promotion: gating conditions explicit (numerical (V1)-(V7) PASS + W9+ Cat A theoretical completions).
+- Footer (line 373): full status block reframed to PARTIALLY RESOLVED with W9+/W12+ contingency + audit fix metadata note.
+
+**Net:** 0 mathematical content changes; 7 wording locations + 1 new scope subsection. Verification: `grep -E '^[^<]*\bRESOLVED\b' k_selection_compatibility_proof.md` shows 0 standalone "RESOLVED" claims (all now PARTIALLY/contingent/conditional). Canonical OP-0005 catalog status preserved.
+
+### Issue #2 — OP-0008 Path B Cat B blocker (Conjecture 6.1 ≡ 8.1) framework extension
+
+**Problem:** Conjecture 6.1 (`sigma_rich_phi_proof.md` §6) ≡ Conjecture 8.1 (`sigma_rich_wigner_derivation.md` §8) "Wigner-projection at merger" was registered as Cat B sketch with W9+ proof open (R2 blocker), but the §6.2 mechanism sketch was minimal — Cluster A audit recommended expansion to a fuller framework with explicit failure modes.
+
+**Cross-file consistency verified:** All 10 σ-rich files explicitly preserve OP-0008 OPEN status; no silent-resolution risk like Issue #1. The fix here is *substantive content addition* (W9+ proof framework + failure modes), not catalog wording.
+
+**Framework added (3 files):**
+
+1. **`sigma_rich_phi_proof.md` §6.2.2 (new, ~30 lines)** — Matrix-perturbation framework for W9+ rigorous proof. Five technical ingredients:
+   - (a) **Analytic family lemma** (Kato 1980 §II.4): $H(t)$ extends to analytic family on extended Hilbert space; requires Whitney-stratified merger boundary regularity (`mathematical_scaffolding_4tools.md` §2.2).
+   - (b) **Newton-Puiseux normal form**: at generic 1-parameter merger crossing, $\lambda_{jk}^{Gold,\pm}(t) = \lambda_0 \pm c (t-t^*)^{1/2} + O(t-t^*)$ (square-root branch for symmetric merger).
+   - (c) **Limiting eigenvector subspace**: 2D pre-merger Goldstone-pair subspace decomposes into post-merger Goldstone + internal vibration (orthogonal).
+   - (d) **Explicit projection formula** (target output): $\Pi_{\mathrm{merge}} = R(\theta_{jk}^{\mathrm{mix}})^T \cdot \mathrm{diag}(0, \tilde\lambda_{\mathrm{int}}) \cdot R(\theta_{jk}^{\mathrm{mix}})$ with mass-rescaling factor $\mu(m_j, m_k)$ as the central unknown (likely reduced mass $m_j m_k / (m_j + m_k)$).
+   - (e) **Continuity / matching condition**: singular-limit theorem.
+
+2. **`sigma_rich_phi_proof.md` §6.2.3 (new)** — 5 failure modes / falsification routes registered:
+   - Multi-formation simultaneous merger (≥3 formations at $t^*$).
+   - Asymmetric merger with persistent gap (trivial projection).
+   - Non-generic higher-order Newton-Puiseux branching.
+   - Non-translation-invariant graph approximate Goldstones.
+   - Strong-coupling regime breakdown ($\lambda_{\mathrm{rep}}$ large).
+   
+   Currently scoped out by hypotheses (H1)-(H4); NQ-242c-Rich numerical anchor (per `nq242c_explicit_construction.md`) is primary Cat B target — failure forces Path A fallback or hypothesis revision.
+
+3. **`sigma_rich_wigner_derivation.md` §8.2 expanded (~12 lines)** — Cross-references `phi_proof` §6.2.2 framework + adds mass-rescaling specifics: NQ-242c-Rich Step 6 tests $\mu = m_j m_k/(m_j+m_k)$ vs alternatives; symmetric ($m_j = m_k$) gives $m/2$, asymmetric tests mass-dependence.
+
+4. **`sigma_rich_augmentation.md` §10.4 expanded (~25 lines)** — R1/R2/R3 blockers explicit; Hybrid CV-1.6 / CV-1.7+ promotion path documented:
+   - **CV-1.6 minor**: σ_rich static components (T-σ-rich-Centroid + T-σ-rich-Orientation + T-σ-rich-Wigner-Static) Cat A — promotable as supplementary canonical entries.
+   - **CV-1.7+ full**: Φ_rich determinism (Theorem 7.1) Cat A — only after (R2) W9+ proof + NQ-242c-Rich PASS.
+   - **OP-0008 OPEN until (R2) + numerical PASS.**
+
+**Net:** 0 mathematical-result changes; ~70 lines of substantive framework + falsification-route content added across 3 files. Conjecture status remains Cat B sketch; W9+ proof requirements now explicit (5 ingredients + 5 failure modes); NQ-242c-Rich Cat B target identified as primary numerical anchor.
+
+### σ_rich non-vacuity confirmed
+
+`sigma_rich_augmentation.md` §4 explicit construction (equilateral vs isoceles triangle on T²₂₀, $K_{\mathrm{field}}=4$, $K_{\mathrm{act}}=3$): Trajectory A centroids form equilateral triangle (side 10); Trajectory B forms isoceles triangle (base 10, height 7). Same per-formation σ_j ⇒ same σ_standard (definitional scope: without coupling-strength labels). Different centroid pair distances (A: $(10, \sqrt{125}, \sqrt{125})$; B: $(10, \sqrt{74}, \sqrt{74})$) ⇒ distinct σ_rich. Single ingredient (centroid component) suffices for differentiation; orientation $\Theta_j$ + Wigner-data $W_{jk}$ provide finer discrimination for non-disk / Goldstone-mixing-sensitive cases. **σ_rich non-vacuity established.**
+
+### Files modified
+
+- `THEORY/working/MF/k_selection_compatibility_proof.md`: 7 wording locations + new §6.3.1 partial-answer scope clause + footer audit-fix metadata note.
+- `THEORY/working/MF/sigma_rich_phi_proof.md`: §6.2.2 matrix-perturbation framework (new) + §6.2.3 failure modes (new).
+- `THEORY/working/MF/sigma_rich_wigner_derivation.md`: §8.2 cross-reference + mass-rescaling specifics + failure modes reference.
+- `THEORY/working/MF/sigma_rich_augmentation.md`: §10.4 R1/R2/R3 blocker registration + Hybrid CV-1.6 / CV-1.7+ promotion path.
+
+### Net effect on theorem-status / OP catalog / canonical / scc
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **OP-0005**: status preserved (OPEN; partial via 4-layer composite). Issue #1 fix aligns working file claim with catalog.
+- **OP-0008**: status preserved (OPEN). Issue #2 framework extension makes R2 W9+ blocker explicit; CV-1.6 minor promotion path identified for σ_rich static components only.
+- **N-1 hard constraint**: silent OP resolution 0건 (Issue #1 violation corrected).
+
+### Remaining parking-lot issues (deferred to subsequent sessions)
+
+- Issue #3 (NQ-187 falsification: T-σ-Theorem-4 Cat A→B 영구 격하 위기; NQ-187b L → ∞ extrapolation execution required)
+- Issue #4 (Speculative cross-domain bridges 6 files RETIRE)
+- Issue #5 (Ontological design audits 2 files _archive 이전)
+- Issue #6 (K_status_commitment.md header transition)
+- Issue #7 (commitments_18_19_drafts.md retire/merge)
+- Issue #8 (sigma_rich_refinement_theorem.md strictness proof 격하)
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD third addendum) — G4 Parking-Lot Stage 0 inventory completed; "17 / 8,145" → "49 / 17,269" audit-trail correction
+
+User directive "parking-lot 수면 위로 꺼내자" after Day 1 G1+G2+G3 P0 closures + T-L1-M canonical promotion. Executed Stage 0 of `CV-1.7_PARKING_LOT_REVIEW_PLAN.md` ahead of the original Day 6 schedule (4-5 days early). Created `THEORY/working/CV-1.7_parking_lot_inventory.md` (~430 lines).
+
+### Key finding — substantive count drift correction
+
+**Original claim (W5 narrative + W6 strategic plan §1 G4 + parking-lot plan §2):** "17 unaudited working files (~8,145 lines)".
+
+**Stage 0 verified count:** **49 files / 17,269 lines** added during `[2026-04-30, 2026-05-02)` to `THEORY/working/`. Drift factor ~2.9× on file count, ~2.1× on line count.
+
+**Per-cluster breakdown:**
+
+| Cluster | Plan §2 estimate | Stage 0 inventory | Drift |
+|---|---|---|---|
+| σ-rich foundation | 8 / 2,764 | 10 / 3,421 | +2 files, +24% |
+| σ-fingerprint | 2 / 539 | 3 / 860 | +1 file, +60% |
+| K-Selection | 5 / 1,915 | 5 / 1,915 | exact ✓ |
+| Reconciliation drafts | 2 / 760 | 3 / 1,579 | +1 file, +108% |
+| Commitment packets | 2 / 835 | 8 / 2,818 (**1 already PROMOTED**) | +6 files, +237% |
+| Auxiliary | 3 / 857 | 18 / 6,298 | +15 files, +635% |
+
+The auxiliary cluster F was massively under-counted in the original W5 narrative: 3 files / 857 lines → 18 files / 6,298 lines. This cluster has the highest expected RETIRE rate at Stage 2 (many speculative / scaffolding entries with low canonical-promotion probability).
+
+### Files modified
+
+- `THEORY/working/CV-1.7_parking_lot_inventory.md` — **NEW** (~430 lines): Stage 0 inventory deliverable with §0 headline numbers + audit-trail correction; §1.1–§1.7 per-cluster file enumeration; §2 plan reconciliation table; §3 cross-reference impact analysis for retirement candidates; §4 acceptance-criteria check; §5 Stage 1 recommendations; §6 key findings; §7 hard-constraint sweep.
+- `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md` §2 cluster table — annotated with "Stage 0 verified count" update note pointing to the inventory file. Original "17 / 8,145" claim retained for historical record (per N-1 reframing) with explicit correction note.
+
+### One file already promoted to canonical
+
+`THEORY/working/MF/K_status_commitment.md` (480 lines) → **Commitment 16** (canonical.md §11.1 #16, line 810; CV-1.5.1, 2026-04-29). Should transition from "parking-lot candidate" to "promoted-source" status. Cross-references in `canonical.md` line 820 + `theorem_status.md` CV-1.5.1 release-notes line 80.
+
+### Net effect on theorem-status / OP catalog / canonical / scc
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits (this entry; G3 amendment + T-L1-M promotion entries above are separate).
+- **OP-0008 / OP-0009 sub-items**: 0 status changes. Cluster E commitment packets (Commitment 18 + 19) are referenced by OP-0008/0009 sub-items; retirement of any would require corresponding OP catalog updates (deferred to Stage 2/3 of parking-lot plan).
+- **CV-1.7 release scope**: Stage 0 inventory clarifies the actual parking-lot size; Stages 1-3 (header drafting + critic dispatch + disposition) remain explicitly W7+ scope per W6 plan §2 non-goals.
+
+### Cross-reference impact (for Stage 2/3 Disposition planning)
+
+Files with hard cross-references that constrain retirement:
+- `K_status_commitment.md`: PROMOTED — cannot retire.
+- `commitment_18_sigma_rich_packet.md` + `commitment_19_k_selection_axiom_packet.md` + `commitments_18_19_drafts.md`: referenced by OP-0008/0009 candidate-path mentions in `theorem_status.md` Open Problems Catalog. Retirement requires OP catalog update.
+- `F_Kstep_K_triple.md`, `lambda_rep_ontology.md`, `pre_objective_K_field_tension.md`, `cobelonging_vs_sigmaD.md`, `shared_pool_canonical_proposal.md`: referenced by OAT-2/3/4/5/6 in OP-0009 sub-item table.
+- `sigma_theorem4_canonical_revision.md` + `sigma_theorem4_higher_order.md` + `nq187b_L_extrapolation.md`: tied to canonical.md C-0716 NQ-187 audit (continuum-vs-discrete caveat).
+
+### Day 1 EOD net status (post-G4 Stage 0)
+
+- **G2** (T-Bind categorical decision): ✅ fully closed (commit `4553bd8`).
+- **G3** (ε-convention amendment): ✅ fully closed (canonical + theorem_status applied).
+- **G1** (L-M-AUDIT + canonical promotion): ✅ fully closed + canonically promoted (working draft Cat A conditional + external audit PASS + canonical T-L1-M entry + C-0722 row).
+- **G4** (parking-lot Stage 0 inventory): ✅ **completed (4-5 days early)** — Stage 0 deliverable produced; Stages 1+ remain W7+ scope.
+
+**4 of 4 P0/P1 W6 goals substantively closed in Day 1 EOD.** Remaining W6 schedule: Day 4-5 deferred numerical NQ-G3-1/NQ-G1-2 (~2-3h total); Day 6 G4 Stage 1 header drafting (~2.5-3h); Day 7 weekly summary + W7 seed.
+
+**CV-1.6 release feasibility status:** all original blocker conditions removed (G1+G2+G3 closure + canonical promotion). Default per W6 plan Decision Point 4 was "deferred until parking lot at least partially resolved". With Stage 0 done, "partially resolved" is a judgment call — the user can elect (a) push CV-1.6 release to Day 7 EOD with Stage 0 as sufficient, (b) defer to W7 alongside Stage 1, (c) defer further.
+
+### Provenance / audit trail
+
+- Source method: `git log --since="2026-04-30" --until="2026-05-02" --diff-filter=A --pretty=format:"" -- 'THEORY/working/'` over the W5 Wave 3 burst window.
+- Verification: 49 files counted; 17,269 lines summed via `wc -l` over each file. Original "17/8,145" claim cross-checked against W5 Day 5 reconciliation narrative + W6 strategic plan G4 + op_resolution §7.5 audit (which had flagged the count as unverified).
+- Cluster assignment: filename pattern + H1 title inspection; ambiguous cases sampled by content.
+- Cross-reference scan: grep over `canonical.md` + `theorem_status.md` for retirement-impact identification.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD second addendum) — T-L1-M canonical promotion applied (special-case authorization)
+
+User decision after Day 1 EOD G1 closure + external audit PASS: apply the T-L1-M canonical promotion as a "special-case" supervised promotion (analogous to the G3 Commitment 16 amendment promotion earlier today). Per W6 plan §2 explicit non-goals, "L-M canonical promotion" was deferred until at least CV-1.6 release prep; the user's "promotion 정리" directive triggers an exception based on the same-day external audit PASS providing the third-party verification rigor that W6 plan §1 G1 deliverable language did not strictly require but op_resolution NQ-G1-3 recommended.
+
+### Substantive change
+
+`canonical.md` §13: New theorem T-L1-M inserted immediately after T-L1-F (post line 1489). Statement, proof outline, and status block per the proposal text in `THEORY/logs/daily/2026-05-04/03_integration_and_new_open.md` §1.2 with the post-W6-D1-AUDIT R-0/R-1/R-2/R-3 closure trace + NQ-G1-1 self-correction integration + persistence-skeleton preservation disclosure (per external audit recommendation).
+
+`theorem_status.md` Active Claims comprehensive table (line 196 area): New row C-0722 inserted after C-0716, marked accepted Cat A conditional with full provenance including external audit PASS.
+
+### Canonical T-L1-M new entry summary
+
+**Statement:** Under T-L1-F's $(P0)$–$(P11)$ and $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ with $\tau \in (0, \tau_*^{\mathrm{post-R2}})$ where $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$:
+$$|K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)| \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}}(U;\tau) + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).$$
+
+**Status:** Cat A conditional under (P0)–(P11) + $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ + $\tau < \tau_*^{\mathrm{post-R2}}$.
+
+**Per-family corollaries** (working layer): L-M.A (hard) Cat A absolute; L-M.B (logistic $s\ge 50$) bound $\le 3e^{-s\tau} \cdot K_{\mathrm{act}}^\varepsilon$ Cat A conditional inheriting; L-M.C (shift-sat $\beta\ge 20$) bound $\le e^{-\beta\tau} \cdot K_{\mathrm{act}}^\varepsilon$ Cat A conditional inheriting.
+
+**Non-claims preserved:** NOT a global identity. Does NOT establish $K_{\mathrm{soft}} = K_{\mathrm{act}}$ unconditionally. Does NOT solve OP-0005 (K-Selection) or OP-0008 (σ^A K-jump non-determinism). Does NOT promote $\Phi_{\mathrm{res}}$ to canonical envelope class beyond its working role. Reservoir-admissible families restricted to WQ-LAT-1.B-empirically-supported sub-classes only.
+
+### Files modified
+
+- `THEORY/canonical/canonical.md`: T-L1-M new entry inserted in §13 after T-L1-F (~6 lines: header + theorem statement display + proof outline + status block).
+- `THEORY/canonical/theorem_status.md`: C-0722 row added to Active Claims comprehensive table after C-0716 row.
+
+### Net effect
+
+- **Theorem count update**: 45A → **46A** (T-L1-M Cat A conditional). Total claims 60 → **61**. The CV-1.5.1 release-notes counts (45A / 5B / 60 claims / 75% fully proved) are stale; a CV-1.6 release-notes section can be drafted at user discretion (deferred per W6 plan §2 non-goals: "CV-1.6 release date determined separately").
+- **OP catalog**: 0 changes. T-L1-M does NOT solve any OP. NQ-G1-1-ext registered as W7+ follow-on (configuration-dependent ρ_bg/ρ_res empirical anchor).
+- **Working file**: `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` remains the working-layer artifact; canonical.md is now the authoritative spec for T-L1-M.
+- **W6 plan §1 G1 deliverable**: ✅ exceeded ("L-M-2 Cat-B sketched -> Cat-A conditional via explicit closure" + canonical promotion + external audit PASS).
+
+### Day 1 EOD net status (post-T-L1-M canonical promotion)
+
+- **G2** (T-Bind categorical decision): ✅ fully closed (commit `4553bd8`, evening).
+- **G3** (ε-convention amendment): ✅ fully closed (canonical + theorem_status applied; CHANGELOG below).
+- **G1** (L-M-AUDIT + canonical promotion): ✅ **fully closed + canonically promoted** (working draft Cat A conditional + external audit PASS + canonical T-L1-M entry + C-0722 row).
+- **G4** (parking-lot Stage 0 inventory): 📋 next (per user "parking-lot 수면위로 꺼내자" directive).
+
+**3 of 4 P0 goals genuinely closed AND canonically promoted in Day 1 EOD.** Remaining: G4 inventory + (optionally) deferred numerical NQ-G3-1/NQ-G1-2.
+
+### Provenance / audit trail
+
+- L-M draft: `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (548 → 581 lines post-W6-D1-AUDIT closure).
+- Repair specifications: `THEORY/logs/daily/2026-05-04/02_development.md` §1-§5 (R-0/R-1/R-2/R-3 + post-repair Cat A conditional self-classification).
+- Promotion proposal: `THEORY/logs/daily/2026-05-04/03_integration_and_new_open.md` §1.2 (T-L1-M canonical entry text) + §2.1 (C-0722 row text).
+- NQ-G1-1 self-correction: `THEORY/logs/daily/2026-05-04/op_resolution.md` §9.9–§9.10.
+- External audit: cold-review general-purpose agent dispatch W6 D1 EOD; verdict PASS (R-0/R-1/R-2/R-3 + Theorem L-M composition); persistence-skeleton preservation disclosure recommendation applied.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD addendum) — G1 L-M-AUDIT closure applied to working draft + external audit PASS (L-M Cat A conditional)
+
+W6 Day 1 G1 deliverable closed at the working layer. The R-0/R-1/R-2/R-3 specifications from `THEORY/logs/daily/2026-05-04/02_development.md` (originally session-log proposals) were applied to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (the L-M working draft, 548 → ~620 lines). NQ-G1-1 self-correction (op_resolution.md §9) integrated. External audit (NQ-G1-3 dispatch, ~7 min general-purpose agent in cold-review mode) verified all four closures + Theorem L-M composition. Verdict: **PASS — L-M is genuinely Cat A conditional under (P0)–(P11)**.
+
+### Substantive changes to the L-M working draft
+
+**§2.2 (R-0 closure)** — Phi-4c F1 wording simplified: "clip at 0" hedge replaced with monotonicity-only argument (uses F2+F3 only; no clipping or restriction needed). Cat A absolute.
+
+**§5.4 (R-1 closure + R-3 closure)** — Two notes appended after Type-N main derivation:
+- **R-1 sharpness note**: factor 2 in CSEH bottleneck stability shift bound is sharp under (P0)–(P11). Verified via explicit admissible perturbation $R_j(v) = +\rho_{\mathrm{pert}}/2, R_j(w) = -\rho_{\mathrm{pert}}/2$ at peak/saddle vertices achieving $|\ell_i^U - \ell_i^{u^{(j)}}| = \rho_{\mathrm{pert}}$ exactly. Type-N bars are NOT terminal (P3 disjointness + $N_j^r$ connectedness force intra-slot merging at saddle $w$ with $d_i = U(w) > 0$), so (P0) factor-1 sharpening is structurally inapplicable. Persistence-skeleton preservation disclosure added per external auditor's recommendation. Cat A absolute.
+- **R-3 consistency note**: Type-N non-terminal nature (per R-1) is consistent with CSEH applied identically to both diagrams under (P0) global death convention. Cat A absolute.
+
+**§5.5 (R-2 closure + NQ-G1-1 self-correction)** — Type-B chain replaced with explicit P5-direct derivation:
+- Original: $b_i \le \ell_{\min} - \rho_{\mathrm{res}}$ via P10 + implicit "$U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion + (P0) terminal-death.
+- Post-R2: $b_i \le \|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ via P5 directly; $\ell_i = b_i - d_i \le b_i$ since $d_i \ge 0$.
+- Removes: implicit assertion (which fails when active decay tails extend into bg via P7); LG-7 dependency; (P0) dependency for the bound.
+- Side effect: $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ replaces $\tau_* = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$.
+- **NQ-G1-1 nuance integrated**: $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison is configuration-dependent (not generically ordered); $\|U\|_{\infty,X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (active tails) but $\|R_{\mathrm{inact}}\|_\infty \ge \|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (global $\ge$ restricted). NQ-G1-1-ext (W7+) for empirical anchor. Cat A conditional self-classification unaffected (lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds either way). Cat A absolute (for the chain itself).
+
+**§5.6 conclusion** — $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$.
+
+**§5.7 status** — Lemma L-M-2 upgraded from **Cat B sketched** to **Cat A conditional under (P0)–(P11)**. Per-Type bounds (Type-D / Type-N / Type-B) all certified. External audit recommendation disclosed.
+
+**§6.1 Theorem L-M statement** — updated to reference $\tau_*^{\mathrm{post-R2}}$. Cat A conditional under (P0)–(P11) + $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ + $\tau \in (0, \tau_*^{\mathrm{post-R2}})$. Statement boxed as before.
+
+**Header status block** — promotion-ready Cat A conditional with G3 ε-convention R1 reading + W6 D1 self-audit closure provenance + companion artifacts list updated.
+
+### External audit (NQ-G1-3) summary
+
+Cold-review general-purpose agent dispatched with input package (working/MF/ revised L-M draft + canonical T-L1-F lines 1482-1489 + soft_K_definition.md §2.2 Cor 2.2 CSEH reference). Reviewed each R-0/R-1/R-2/R-3 closure independently and the L-M Theorem composition.
+
+- **R-0 PASS** — F2+F3 monotonicity argument is standard.
+- **R-1 PASS** (with one minor disclosure recommended) — sharpness construction admissible under P9; achieves factor-2 bound; Type-N-not-terminal argument correct (P3 + connectedness force intra-slot merge). The persistence-skeleton preservation assumption (generic vineyard-nonsingular regime) was not explicitly stated; recommended one-line disclosure now applied. **Not a structural gap.**
+- **R-2 PASS** — P5-direct chain is correct; $b_i = U(b_i) \le \|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ tautological once Type-B is defined as $b_i \in X_{\mathrm{bg}}$. NQ-G1-1 nuance soundly handled (does not affect Cat A conditional).
+- **R-3 PASS** — consistency with R-1 captured correctly.
+- **Theorem L-M composition PASS** — L-M-1 (Cat A absolute) + L-M-2 (Cat A conditional, post-repair) + L-M-Sub/Dom (Cat A absolute) + T-L1-F bijection (canonical Cat A conditional) compose tightly.
+
+**OVERALL verdict: PASS — L-M is genuinely Cat A conditional under (P0)–(P11). Promotion-ready.**
+
+### Files modified
+
+- `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md`: header status block + §2.2 Phi-4c F1 + §5.4 R-1/R-3 notes appended + §5.5 Type-B chain replaced (with NQ-G1-1 self-correction) + §5.6 τ_* updated + §5.7 status block + §6.1 Theorem L-M statement.
+
+### Net effect
+
+- **canonical.md**: 0 edits (this entry; the G3 line 810 amendment was applied earlier today as a separate "special case" entry).
+- **theorem_status.md**: 0 edits (this entry; the G3 traceability footnote was applied earlier today).
+- **Working layer**: L-M draft upgraded from Cat B sketched to Cat A conditional. Promotion-ready for canonical CV-1.6 release (T-L1-M new entry in §13 immediately after T-L1-F + theorem_status.md C-0722 row).
+- **OP catalog**: 0 changes. NQ-G1-1-ext registered as W7+ follow-on (configuration-dependent ρ_bg/ρ_res empirical anchor).
+- **W6 plan §1 G1 deliverable**: ✅ substantively closed ("L-M-2 Cat-B sketched -> Cat-A conditional via explicit closure of R-1/R-2/R-3"). External audit PASS provides the third-party verification recommended for CV-1.6 promotion rigor.
+
+### Day 1 EOD net status (post-G1 closure)
+
+- **G2** (T-Bind categorical decision): ✅ fully closed (commit `4553bd8`, evening).
+- **G3** (ε-convention): ✅ fully closed (canonical + theorem_status applied; CHANGELOG entry above).
+- **G1** (L-M-AUDIT R-0/R-1/R-2/R-3): ✅ **fully closed** (working draft updated + external audit PASS; CV-1.6 promotion-ready).
+- **G4** (parking-lot Stage 0 inventory): 📋 scheduled Day 6.
+
+**3 of 4 P0 goals genuinely closed (not just labeled) in Day 1 EOD.** Day 2-7: G4 + (optionally) T-L1-M canonical promotion + deferred numerical NQ-G3-1/NQ-G1-2.
+
+---
+
+## 2026-05-04 (W6 Day 1 late re-review) — G3 Commitment 16 ε-convention amendment applied (Cat A definitional precision)
+
+User decision after re-review of Day 1 closure rigor (per `THEORY/logs/daily/2026-05-04/op_resolution.md` §13.6 erratum log + late-day re-review session): apply the G3 ε-convention amendment to canonical.md + theorem_status.md as a "special-case" supervised promotion, on the basis that the amendment is one-sentence Cat A definitional precision (no theorem category change, no OP catalog impact) and the proposal text was thoroughly diagnosed in `g3_02_development.md` + reviewed in `g3_03_integration_and_new_open.md` §1.2.
+
+### Substantive change
+
+`canonical.md` line 810 (Commitment 16 K_act default ε convention) was amended to make the R1 reading **explicit**:
+
+- **Before:** "for support threshold $\epsilon$ (default $\epsilon = 0.01 \cdot \bar{m}$, $\bar{m}$ per-formation expected mass)"
+- **After:** "for support threshold $\epsilon$ (default $\epsilon = 0.01 \cdot \bar{m}$, where $\bar{m} := M / K_{\mathrm{field}}$ is the **architectural per-formation mean** with $M$ the total system mass; for the standard $T^2_{20}$ multi-formation regime $M = 90, K_{\mathrm{field}} = 4$ this gives $\bar{m} = 22.5$ and $\epsilon = 0.225$, matching production-script default and L1-I empirical anchor)"
+
+### Rationale (G3 diagnostic-first finding, condensed)
+
+Production scripts (`l1i_constants_feasibility.py`, `nq242c_counterexample.py`, `wq_lat1_reservoir_resolution_sweep.py`, `l1g_l1hyp_diagnostic.py`) all use $\epsilon = 0.225 = 0.01 \cdot 22.5 = 0.01 \cdot M / K_{\mathrm{field}}$, matching the R1 reading exactly. The W6 strategic plan §G3 had implicitly assumed $\bar m \approx 3$ (giving $\epsilon = 0.075 \cdot \bar m$), but no source supports this alternative reading. The R1 reading was the only one consistent with all production scripts and the T-L1-F empirical anchor.
+
+### Files modified
+
+- `THEORY/canonical/canonical.md`: line 810 amended in-place (one-sentence change; +~150 chars).
+- `THEORY/canonical/theorem_status.md`: CV-1.5.1 release-notes Commitment 16 line appended with the same Erratum text inline (traceability footnote).
+
+### Net effect
+
+- **No theorem category change.** All Cat A theorems unaffected. T-L1-F (C-0721) Cat A status preserved (the empirical anchor "439/1920" was already at $\epsilon = 0.225$ implicitly via L1-I script default; the amendment makes this explicit upstream).
+- **No OP catalog change.** OP-0001..0013, OP-0020 all unchanged. OP-0009-K (resolved via Commitment 16) status preserved.
+- **No release-version increment.** This is a documentation-precision amendment, not a substantive change. CV-1.5.2 spec version retained.
+- **Counts unchanged.** 45A / 5B / 60 claims / 75% fully proved (per CV-1.5.1 release notes) all preserved.
+- **Closes G3 properly.** W6 strategic plan §1 G3 deliverable ("a single canonical ε convention applied across canonical / working / scripts") is now substantively met (canonical applied; working file `K_status_commitment.md` already R1-consistent per `g3_02_development.md` §2; scripts already use R1 verbatim).
+
+### Provenance / audit trail
+
+- Diagnostic: `THEORY/logs/daily/2026-05-04/g3_02_development.md` §1-§5 (production-script + working-file + L1-I cross-checks).
+- Decision: `g3_02_development.md` §6 (D1 minimal-clarify rule).
+- Amendment text source: `g3_03_integration_and_new_open.md` §1.2 (proposal recap).
+- Re-review trigger: `op_resolution.md` §13.6 erratum log + W6 D1 late re-review session (2026-05-04).
+- User authorization: explicit "오늘은 특별케이스 이므로 업데이트" directive after closure-rigor re-examination.
+
+### Day 1 EOD net status (post-promotion)
+
+- **G2** (T-Bind categorical decision): ✅ fully closed (commit `4553bd8`, evening).
+- **G3** (ε-convention): ✅ fully closed (this entry, late re-review).
+- **G1** (L-M-AUDIT R-0/R-1/R-2/R-3): ⚠️ self-audit Cat A conditional reached; R-1 audit-trail recovery + R-2 self-correction integration + NQ-G1-3 external audit recommended before CV-1.6 promotion (Day 2-3 work).
+- **G4** (parking-lot Stage 0 inventory): 📋 scheduled Day 6.
+
+---
+
 ## 2026-05-04 (W6 Day 1 late evening) — open_problems.md merged into theorem_status.md
 
 User decision (per the audit Pass 2 finding that the two files used incompatible OP-ID systems and overlapping but drifted bodies): consolidate `THEORY/canonical/open_problems.md` into `THEORY/canonical/theorem_status.md` as a unified Open Problems Catalog section, then delete `open_problems.md`.
