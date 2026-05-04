@@ -22,11 +22,11 @@
 | 7 | NQ-G3-4 W6 plan misframing pattern | audit (cross-doc check) | 30 min | ✅ PARTIAL RESOLUTION (spot audit; no other major drift found) |
 | 8 | NQ-G3-3 K_act ε perturbation at fixed state | numerical (small script) | 30 min | ✅ EXECUTED (script + results) |
 | 9 | NQ-G1-1 ρ_bg vs ρ_res in L1-I | numerical (post-process existing JSON) | 30 min | ✅ PARTIAL Cat B sketched (configuration-dependent; NQ-G1-1-ext deferred) |
-| 10 | NQ-G3-1 "439/1920" stability under ε | numerical (l1i sweep, heavy) | 1-2 hours | 📋 DEFERRED with execution plan |
-| 11 | NQ-G1-2 (P9-tight) regime experiment | numerical (l1i sweep, heavy) | 1-2 hours | 📋 DEFERRED with execution plan |
-| 12 | NQ-G1-3 External L-M-K-style audit | external (agent dispatch) | 7-15 min agent + integration | 📋 DEFERRED to user decision |
+| 10 | NQ-G3-1 "439/1920" stability under ε | numerical (l1i sweep, heavy) | 1-2 hours | 📋 DEFERRED with execution plan (only remaining deferred-numerical NQ) |
+| 11 | NQ-G1-2 (P9-tight) regime experiment | numerical (l1i sweep, heavy) | 1-2 hours | ✅ **EXECUTED W6 D1 EOD post-EOD** (CHANGELOG 13th + 14th addendums; post-processing + fresh-full-run 5/5 match) |
+| 12 | NQ-G1-3 External L-M-K-style audit | external (agent dispatch) | 7-15 min agent + integration | ✅ **DONE W6 D1 EOD** (CHANGELOG addendum + 2nd addendum; PASS verdict, T-L1-M canonically promoted same-day) |
 
-**This session resolves 9 of 12 NQs (6 fully + 3 partially); defers 3 (2 numerical heavy + 1 external).** *(W6 D1 late re-review reclassified NQ-G1-1 from full to partial — see §13.6.)*
+**This session resolves 9 of 12 NQs (6 fully + 3 partially); defers 3 (2 numerical heavy + 1 external).** *(W6 D1 late re-review reclassified NQ-G1-1 from full to partial — see §13.6.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day; NQ-G3-1 remains the only deferred-numerical item, target W7+.)*
 
 ---
 
@@ -579,6 +579,58 @@ Minor script modification + re-run: ~30 minutes total. The l1i script's H6' cond
 
 **📋 DEFERRED with execution plan (Cat C target).** Cheap to execute (~30 min); recommended Day 4 work in revised W6 schedule (per `03_integration_and_new_open.md` §5.3).
 
+### §10.6 EXECUTED W6 D1 EOD thirteenth addendum (post-deferral resolution)
+
+**Trigger:** user "G1 남은 부분 마무리" directive, W6 D1 EOD post-twelfth-addendum. NQ-G1-2 elevated from deferred to executed under same-day budget.
+
+**Method:** Post-processing wrapper `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` re-classifies the existing 1920-config baseline JSON (`l1i_constants_feasibility.json`) under 5 budget regimes without re-computation (uses stored per-clause margins). Wall-clock 0.006s.
+
+**Regime comparison:**
+
+| Regime | Budget | H6 budget | FEASIBLE | Fraction |
+|---|---|---|---|---|
+| R0 standard | 0.05 | (=budget) | **439** | 22.9% |
+| R1 P9-tight H6-only (faithful per §10.4 step 2) | 0.05 | 0.025 | **439** | 22.9% |
+| R2 P9-tight all-halved (strong) | 0.025 | (=budget) | 594 | 30.9% |
+| R3 H6-doubled (sanity) | 0.05 | 0.10 | 439 | 22.9% |
+| R4 all-doubled (sanity) | 0.10 | (=budget) | 255 | 13.3% |
+
+**Key finding:** R0 = R1 = R3 (439 configs identical). H6' is **non-binding** in the L1-I FEASIBLE set; binding constraints are LG-2/LG-3/LG-4/ledger.
+
+**Verdict per §10.4:**
+- R1 = 439 ≥ 200 ⇒ (P9-tight) is CANDIDATE for L1-J' regime promotion.
+- R0 ⊆ R1 with |R1\R0| = 0 ⇒ adopting (P9-tight) does NOT shrink empirical regime; factor-1 sharpening applicable to entire existing L1-I FEASIBLE set without empirical penalty.
+
+**Theoretical net effect:** factor-1 sharpening leaves $\tau_*^{\mathrm{post-R2}}$ unchanged in form (parameterization difference only when ρ_pert is binding). Benefit is conceptual rigor, not regime expansion.
+
+**Status:** **✅ EXECUTED** — NQ-G1-2 closure Cat C target met (empirical feasibility verified for L1-J' regime candidate). Canonical adoption deferred to W7+ pending NQ-G1-2-ext (direct ‖R_j‖_∞ measurement under shared-pool dynamics).
+
+**New follow-on:** NQ-G1-2-ext (W7+) — empirically verify whether physical perturbations $R_j$ satisfy $\|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$ under shared-pool gradient-flow dynamics. L1-I currently tests initial-state geometry only; the perturbation-magnitude question requires extending l1i to compute $R_j$ across time evolution. Estimated effort ~1-2 hours.
+
+**Files:** `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (script), `CODE/scripts/results/op_resolution_nq_g1_2_p9_tight.json` (output), CHANGELOG W6 D1 EOD thirteenth addendum (full audit trail).
+
+### §10.7 Fresh-full-run validation W6 D1 EOD fourteenth addendum
+
+**Trigger:** user "아예 빡세게 돌릴수있으니까" directive — execute the original op_resolution.md §10.4 step 3 plan (fresh full re-run with H6-only patch) rather than relying solely on post-processing.
+
+**Method:** Created `CODE/scripts/l1i_constants_feasibility_p9_tight.py` as parent-l1i copy + 4-edit patch (CLI `--h6-budget` arg, fn signature, classification block split into non-H6 + H6 branches, output JSON config block). Ran all 5 regimes from scratch.
+
+**5/5 regimes match post-processing prediction exactly:**
+
+| Regime | --budget | --h6-budget | Fresh Full FEASIBLE | §10.6 prediction | Match |
+|---|---|---|---|---|---|
+| R0 standard | 0.05 | inherits | 439 | 439 | ✅ |
+| R1 P9-tight H6-only (faithful) | 0.05 | 0.025 | **439** | 439 | ✅ |
+| R2 P9-tight all-halved | 0.025 | inherits | 594 | 594 | ✅ |
+| R3 H6-doubled (sanity) | 0.05 | 0.10 | 439 | 439 | ✅ |
+| R4 all-doubled (sanity) | 0.10 | inherits | 255 | 255 | ✅ |
+
+Total wall-clock 75.7s (5 × ~15s). Identical INFEASIBLE=1233 + MARGINAL=20 baselines across regimes.
+
+**Net effect:** post-processing wrapper validated as mathematically equivalent to fresh full re-run. NQ-G1-2 closure rigor upgraded from "post-processing + 2-point validation" to "fresh-full-run across 5 regimes". (P9-tight) regime CANDIDATE status reaffirmed with stronger empirical backing.
+
+**Files:** `l1i_constants_feasibility_p9_tight.py` (patched script); `l1i_p9tight_R0_b005.json` / `R1_b005_h6_0025.json` / `R2_b0025.json` / `R3_b005_h6_010.json` / `R4_b010.json` (fresh full run outputs); CHANGELOG W6 D1 EOD fourteenth addendum (full audit trail).
+
 ---
 
 ## §11. NQ-G3-1 — "439/1920" Stability under ε Perturbation
@@ -656,7 +708,7 @@ Per `plan.md` v2 §5.1, the user-decision options for G1 closure path include:
 
 ### §12.5 Status
 
-**📋 DEFERRED to user decision.** Cheap (~30 min); high-value for canonical promotion.
+~~**📋 DEFERRED to user decision.**~~ ✅ **DONE W6 D1 EOD** (CHANGELOG W6 D1 EOD addendum + second addendum). Cold-review general-purpose subagent dispatched ~7 min; verdict: **PASS** — all 4 closures + Theorem L-M composition verified rigorous. Persistence-skeleton preservation disclosure added per auditor recommendation. T-L1-M supervised canonical promotion applied same-day (CHANGELOG second addendum); C-0722 row in `theorem_status.md` line 197.
 
 ---
 
@@ -674,20 +726,20 @@ Per `plan.md` v2 §5.1, the user-decision options for G1 closure path include:
 | 6 | NQ-G3-2 non-standard regimes | ✅ PARTIAL | A documentation | Regime-parametric note (§6.4 above) |
 | 7 | NQ-G3-4 W6 plan misframing pattern | ✅ PARTIAL | C audit | 2 status-text revisions confirmed; spot audit (§7 above) |
 | 8 | NQ-G3-3 K_act ε perturbation at fixed state | ✅ EXECUTED | A absolute (initial state) | Script + theoretical statement (§8 above); dynamic-state deferred |
-| 9 | NQ-G1-1 ρ_bg vs ρ_res | ✅ PARTIAL (revised W6 D1 late) | B sketched | Self-corrected to configuration-dependent (§9.9–§9.10); NQ-G1-1-ext deferred to W7+. **Correction to `03_integration_and_new_open.md` §3.2 needed** |
+| 9 | NQ-G1-1 ρ_bg vs ρ_res | ✅ PARTIAL (revised W6 D1 late) | B sketched | Self-corrected to configuration-dependent (§9.9–§9.10); NQ-G1-1-ext deferred to W7+. ~~**Correction to `03_integration_and_new_open.md` §3.2 needed**~~ ✅ **APPLIED post-EOD chat session** (also parallel cross-reference erratum in `02_development.md` §3.4) |
 | 10 | NQ-G3-1 "439/1920" stability under ε | 📋 DEFERRED | A target | Execution plan (§11.5) |
-| 11 | NQ-G1-2 (P9-tight) regime experiment | 📋 DEFERRED | C target | Execution plan (§10.4) |
-| 12 | NQ-G1-3 External L-M-K-style audit | 📋 DEFERRED to user | — | Execution plan (§12.2) |
+| 11 | NQ-G1-2 (P9-tight) regime experiment | ✅ EXECUTED (W6 D1 EOD thirteenth addendum) | C absolute (R1=R0=439, H6 non-binding; (P9-tight) candidate for L1-J' without empirical penalty) | Post-processing wrapper §10.6; NQ-G1-2-ext deferred W7+ |
+| 12 | NQ-G1-3 External L-M-K-style audit | ✅ DONE W6 D1 EOD | — | PASS verdict; T-L1-M supervised canonical promotion same-day (CHANGELOG addendum + 2nd addendum) |
 
-**Net: 6 NQs fully resolved + 3 partially resolved + 3 deferred (with execution plans).** *(Revised W6 D1 late re-review: NQ-G1-1 reclassified from "fully resolved Cat A" to "partially resolved Cat B sketched" to match §9.8 body text and §9.10 final verdict; see §13.6 erratum.)*
+**Net: 6 NQs fully resolved + 3 partially resolved + 3 deferred (with execution plans).** *(Revised W6 D1 late re-review: NQ-G1-1 reclassified from "fully resolved Cat A" to "partially resolved Cat B sketched" to match §9.8 body text and §9.10 final verdict; see §13.6 erratum.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day → 8 fully resolved + 3 partially + **1 deferred** (NQ-G3-1 only, W7+ target).)*
 
 ### §13.2 Canonical implications
 
-No canonical changes proposed beyond what's already in:
-- `g3_02_development.md` §6.1 (Commitment 16 amendment — G3)
-- `03_integration_and_new_open.md` §1.2 (T-L1-M new entry — G1)
+Canonical changes APPLIED W6 D1 EOD (post-supervision):
+- `g3_02_development.md` §6.1 → **APPLIED** (Commitment 16 line 810 amendment per CHANGELOG late re-review entry)
+- `03_integration_and_new_open.md` §1.2 → **APPLIED** (T-L1-M new entry in canonical.md §13 line 1491; C-0722 row in theorem_status.md line 197) per CHANGELOG W6 D1 EOD second addendum
 
-**One correction needed (Cat A documentation):** `03_integration_and_new_open.md` §3.2 claim that "post-R2 regime is at least as wide as pre-repair" should be revised per §9.7 above (correct claim: post-R2 is at most as wide; trade-off accepted for theoretical clarity).
+~~**One correction needed (Cat A documentation):** `03_integration_and_new_open.md` §3.2 claim that "post-R2 regime is at least as wide as pre-repair" should be revised per §9.7 above (correct claim: post-R2 is at most as wide; trade-off accepted for theoretical clarity).~~ ✅ **APPLIED post-EOD chat session**: §3.2 erratum block added (configuration-dependent reading, NQ-G1-1-ext W7+); parallel cross-reference erratum in `02_development.md` §3.4.
 
 **Three new working/MF/ candidates surfaced:**
 - Lemma L-M-G1-4 (per-formation aggregation, Cat B sketched, §4 above) — could be in `working/MF/ksoft_kact_bridge_per_formation.md` (W7+).
@@ -700,13 +752,13 @@ No canonical changes proposed beyond what's already in:
 - **NQ-G3-3-dynamic**: K_act stability under ε perturbation for **dynamic states** (post-gradient-flow), not just initial state.
 - **NQ-G3-4-broader**: Pass 3 audit across all working/canonical/log files (cross-doc consistency check).
 
-### §13.4 Follow-on actions for Day 2+
+### §13.4 Follow-on actions for Day 2+ (status updated post W6 D1 EOD chat session)
 
-1. **Apply correction to `03_integration_and_new_open.md` §3.2** (per §9.7 above) — `02_development.md` §3 R-2 closure section may also need a parallel correction.
-2. **Apply 2 W6 strategic plan status-text revisions** (G1 + G3 per §7.8 above) — user-supervised.
-3. **Day 4 G4 acceleration:** verify "17 / 8,145 lines" parking-lot count (per §7.5 above).
-4. **Day 4-5:** execute deferred numerical NQs (NQ-G3-1 + NQ-G1-2; ~3-4 hours total).
-5. **Day 2 morning (optional):** dispatch NQ-G1-3 external L-M-K-style audit (~30 min).
+1. ~~**Apply correction to `03_integration_and_new_open.md` §3.2** (per §9.7 above) — `02_development.md` §3 R-2 closure section may also need a parallel correction.~~ ✅ **DONE post-EOD chat session**: §3.2 erratum block + §3.4 cross-reference erratum applied.
+2. ~~**Apply 2 W6 strategic plan status-text revisions** (G1 + G3 per §7.8 above) — user-supervised.~~ ✅ **DONE post-EOD chat session**: G1 status text replaced with FULLY CLOSED + CANONICALLY PROMOTED + open follow-ons listed; G3 status text revision was already applied per CHANGELOG late re-review entry.
+3. ~~**Day 4 G4 acceleration:** verify "17 / 8,145 lines" parking-lot count (per §7.5 above).~~ ✅ **DONE W6 D1 EOD third addendum**: actual count 49 files / 17,269 lines verified; `CV-1.7_parking_lot_inventory.md` (~430 lines) produced; `CV-1.7_PARKING_LOT_REVIEW_PLAN.md` body text updated post-EOD chat session.
+4. **Day 4-5:** execute deferred numerical NQs (NQ-G3-1 + NQ-G1-2; ~3-4 hours total). → Partially done: ✅ **NQ-G1-2 EXECUTED W6 D1 EOD post-EOD chat session** (CHANGELOG 13th + 14th addendums). 📋 NQ-G3-1 still deferred (only remaining numerical NQ; recommended Day 4-5 or W7+).
+5. ~~**Day 2 morning (optional):** dispatch NQ-G1-3 external L-M-K-style audit (~30 min).~~ ✅ **DONE W6 D1 EOD addendum**: PASS verdict; T-L1-M supervised canonical promotion same-day (CHANGELOG 2nd addendum).
 
 ### §13.5 OP non-impact statement (recap)
 

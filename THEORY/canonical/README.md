@@ -4,7 +4,7 @@
 
 ## Contents
 
-- **`canonical.md`** — Authoritative specification. Current release is **CV-1.5.2 (2026-05-02)** containing 46 Cat A + 5 Cat B + 5 Cat C theorems (61 claims, 75% fully proved). Updated per merge, not on a fixed cadence.
+- **`canonical.md`** — Authoritative specification. Current release is **CV-1.5.2 (2026-05-02)** with W6 D1 EOD T-L1-M supervised addition (2026-05-04). Counts: **47 Cat A** (46 from CV-1.5.2 release + 1 post-supervision T-L1-M Soft-Count Corollary) + 5 Cat B + 5 Cat C theorems (**62 claims**, 75% fully proved). Updated per merge, not on a fixed cadence. *(T-L1-M was promoted as a special-case supervised promotion same-day after external L-M-K-style audit PASS; CHANGELOG W6 D1 EOD second addendum.)*
 - **`theorem_status.md`** — Theorem index (proved / conditional / open / retracted). Must stay consistent with `canonical.md`. Open Problems table is now synced to `theorem_status.md` (Open Problems Catalog) IDs as of the 2026-05-04 audit pass.
 - **`theorem_status.md` (Open Problems Catalog)** — Active OP registry (OP-0001 through OP-0009, plus medium-priority OP-0010..OP-0013 and low-priority OP-0020..OP-0022). The authoritative OP-ID source for the project.
 - **`figures/`** — Figure source scripts (Python). Rendered PNG/SVG live in the blog repo.

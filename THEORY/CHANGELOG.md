@@ -2,6 +2,141 @@
 
 ---
 
+## 2026-05-04 (W6 Day 1 EOD fourteenth addendum) — NQ-G1-2 fresh-full-run validation: 5/5 regimes match post-processing prediction exactly
+
+**Trigger:** user "아예 빡세게 돌릴수있으니까" directive. Post-processing approach in thirteenth addendum was mathematically equivalent to full re-run for budget changes (validated at 2/5 control points: R0 budget=0.05, R2 budget=0.025), but op_resolution.md §10.4 step 3 originally specified fresh full re-run with H6-only patch. This addendum executes that faithful version and validates all 5 regimes from scratch.
+
+### What was done
+
+Created `CODE/scripts/l1i_constants_feasibility_p9_tight.py` as a copy of the parent l1i script with one structural addition: optional per-clause `--h6-budget` CLI argument (inherits `--budget` when omitted). This enables faithful (P9-tight) testing per op_resolution.md §10.4 step 2 (ρ_pert/2 → ρ_pert/4 ⇒ H6' margin 3·ρ_pert → 1.5·ρ_pert ⇒ H6 budget 0.05 → 0.025 with global budget 0.05 unchanged).
+
+Patches applied (4 minimal edits to the script copy):
+1. Module docstring header preserving original docstring as cross-reference.
+2. `compute_feasibility(...)` signature: added `h6_budget: Optional[float] = None`.
+3. Classification block (lines 463-486): split margins into `non_h6_margins` and `h6_margin`; FEASIBLE_WITH_BUDGET requires both `min(non_h6_margins) ≥ budget` AND `h6_margin ≥ effective_h6_budget` where `effective_h6_budget = budget if h6_budget is None else h6_budget`.
+4. CLI: added `--h6-budget` argument; `main()` passes `h6_budget=args.h6_budget` to `compute_feasibility`; output JSON config block records `h6_budget_threshold` + `h6_budget_inherits_budget` flag.
+
+Total ~75 LOC added (mostly docstring); ~10 LOC modified in classification logic.
+
+### Fresh full run results (5 regimes × 1920 configs each)
+
+| Regime | --budget | --h6-budget | FEASIBLE_WITH_BUDGET | Post-processing prediction | Match |
+|---|---|---|---|---|---|
+| R0 standard | 0.05 | (inherits) | 439 | 439 | ✅ |
+| R1 P9-tight H6-only (faithful) | 0.05 | 0.025 | **439** | 439 | ✅ |
+| R2 P9-tight all-halved | 0.025 | (inherits) | 594 | 594 | ✅ |
+| R3 H6-doubled (sanity) | 0.05 | 0.10 | 439 | 439 | ✅ |
+| R4 all-doubled (sanity) | 0.10 | (inherits) | 255 | 255 | ✅ |
+
+**Total wall-clock: 75.7s (5 × ~15s).** All baseline distributions identical: INFEASIBLE = 1233, MARGINAL = 20 across all regimes (LG-1, LG-2, LG-4 failures are budget-independent — the 20 MARGINAL configs sit just below 0 margin regardless of budget).
+
+### Validation verdict
+
+**Post-processing wrapper `op_resolution_nq_g1_2_p9_tight.py` validated as mathematically equivalent to fresh full re-run at all 5 control points.** No discrepancy found. The thirteenth addendum's NQ-G1-2 conclusions are preserved with stronger backing:
+
+- R0 = R1 = R3 = 439/1920: H6' is **non-binding** in the L1-I FEASIBLE_WITH_BUDGET set (binding constraints are LG-2 / LG-3 / LG-4 / ledger).
+- R0 ⊆ R1 with |R1 \ R0| = 0: adopting (P9-tight) does NOT shrink the empirical regime; factor-1 sharpening applicable to entire existing FEASIBLE set without empirical penalty.
+- R2 expansion: halving ALL clause budgets adds 155 configs (594 vs 439), but this is NOT the faithful (P9-tight) interpretation — it's the stronger "all clauses scale with ρ_pert" hypothesis.
+- R3 = R0: stricter H6 (0.10) does not lose any FEASIBLE configs because all 439 already had H6 margin ≥ 0.10 (further evidence H6 is non-binding).
+- R4 < R0: doubling ALL clauses drops 184 configs to RAW_FEASIBLE (439 → 255), confirming non-H6 clauses are sensitive to budget.
+
+### Hard-constraint sweep
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **working/MF/**: 0 edits.
+- **N-1 hard constraint**: 0 silent OP resolution. (P9-tight) candidate status unchanged from thirteenth addendum.
+- **OP catalog**: 0 changes.
+- **scc smoke**: passed earlier this session (DiagnosticVector(Bind=0.853, Sep=0.924, Inside=0.998, Persist=1.000)); not re-run since 0 scc/ edits.
+
+### Files modified / created
+
+1. `CODE/scripts/l1i_constants_feasibility_p9_tight.py` (NEW): parent l1i copy + 4-edit patch for per-clause H6 budget.
+2. `CODE/scripts/results/l1i_p9tight_R0_b005.json` (NEW): R0 fresh full run.
+3. `CODE/scripts/results/l1i_p9tight_R1_b005_h6_0025.json` (NEW): R1 P9-tight H6-only fresh full run.
+4. `CODE/scripts/results/l1i_p9tight_R2_b0025.json` (NEW): R2 P9-tight all-halved fresh full run.
+5. `CODE/scripts/results/l1i_p9tight_R3_b005_h6_010.json` (NEW): R3 H6-doubled fresh full run.
+6. `CODE/scripts/results/l1i_p9tight_R4_b010.json` (NEW): R4 all-doubled fresh full run.
+
+(The validation runs at budget=0.05 / 0.025 from the thirteenth addendum — `l1i_full_b005_validation.json` and `l1i_full_b0025_p9tight_all.json` — used the ORIGINAL parent script and were preliminary 2/5 validation. The current fourteenth addendum's 5/5 fresh runs are the canonical NQ-G1-2 deliverable.)
+
+### Net effect
+
+- **NQ-G1-2 closure rigor upgraded** from thirteenth addendum's "post-processing + 2-point full-run validation" to "complete fresh-full-run across 5 regimes, all matching post-processing predictions exactly".
+- **(P9-tight) regime status:** confirmed CANDIDATE for L1-J' regime promotion. R0 ⊆ R1 with no empirical regime loss; factor-1 sharpening for Lemma L-M-2 §5.4 R-1 is empirically supportable on the existing 439-config FEASIBLE set.
+- **Canonical adoption still pending NQ-G1-2-ext (W7+):** direct ‖R_j‖_∞ measurement under shared-pool gradient-flow dynamics required to verify whether physical perturbations actually satisfy ‖R_j‖_∞ ≤ ρ_pert/4. Initial-state H6' non-binding ≠ post-flow R_j satisfying (P9-tight).
+- **T-L1-M Cat A conditional status: unchanged.** No theorem-level claim modification; this is empirical regime characterization.
+
+### Lesson logged
+
+**Fresh full re-run is the gold standard for empirical claims even when post-processing is mathematically equivalent.** The 5/5 match validates the post-processing wrapper as a legitimate computational shortcut, but the canonical NQ-G1-2 deliverable should reference the fresh full runs (this addendum's outputs), not the post-processing JSON, for audit-trail rigor. Pattern: when an execution plan calls for "fresh full re-run", do that AND THEN compare to a faster shortcut, rather than substituting the shortcut. The faster shortcut becomes a validated cache.
+
+---
+
+## 2026-05-04 (W6 Day 1 EOD thirteenth addendum) — NQ-G1-2 EXECUTED: (P9-tight) regime empirical study, factor-1 sharpening empirically penalty-free
+
+**Trigger:** user "G1 남은 부분 마무리" directive after Day 1 EOD G1 fully closed. NQ-G1-2 was deferred per `op_resolution.md` §10.4 with execution plan; this addendum executes it.
+
+### What was done
+
+Created `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (post-processing wrapper around the baseline `l1i_constants_feasibility.json`). Re-classified all 1920 configurations under 5 budget regimes without re-running the expensive feasibility computation (uses stored per-clause margins).
+
+### Regimes tested
+
+| Regime | Budget | H6 budget | FEASIBLE_WITH_BUDGET | Fraction |
+|---|---|---|---|---|
+| R0 standard | 0.05 | (=budget) | **439** | 22.9% |
+| R1 P9-tight H6-only (faithful) | 0.05 | 0.025 | **439** | 22.9% |
+| R2 P9-tight all-halved | 0.025 | (=budget) | 594 | 30.9% |
+| R3 H6-doubled (sanity) | 0.05 | 0.10 | 439 | 22.9% |
+| R4 all-doubled (sanity) | 0.10 | (=budget) | 255 | 13.3% |
+
+### Key finding
+
+**R0 = R1 = R3 (439 configs identically).** Halving the H6' margin requirement (faithful (P9-tight) interpretation per `op_resolution.md` §10.4 step 2: ρ_pert' = ρ_pert/2 ⇒ H6' margin from 3·ρ_pert to 1.5·ρ_pert) does **not** add any new FEASIBLE configurations. Doubling H6' margin to 0.10 does not lose any either. **Conclusion: in the L1-I FEASIBLE_WITH_BUDGET set, H6' is non-binding** — the binding constraints are LG-2 / LG-3 / LG-4 / ledger.
+
+### Verdict per op_resolution.md §10.4 step 5/6
+
+- **R1 = 439 ≥ 200** ⇒ (P9-tight) is a **CANDIDATE for L1-J' regime promotion** enabling factor-1 sharpening for Lemma L-M-2 §5.4 R-1's perturbation argument.
+- More importantly: **R0 ⊆ R1 with |R1 \ R0| = 0**. Adopting (P9-tight) does NOT shrink the empirical regime. Factor-1 sharpening would be applicable to the entire existing L1-I FEASIBLE_WITH_BUDGET set without empirical penalty.
+
+### Theoretical interpretation
+
+Factor-1 sharpening in R-1 was theoretically inapplicable under standard (P9) (per `02_development.md` §2.4 verdict: factor-2 sharp under (P0)–(P11)). Under (P9-tight), the Type-N bottleneck-stability shift bound becomes:
+$$|\ell_i^U - \ell_i^{u^{(j)}}| \le 2 \cdot \rho_{\mathrm{pert}}/4 \cdot 2 = \rho_{\mathrm{pert}} \quad \text{(factor 1 in } \rho_{\mathrm{pert}}/2\text{)},$$
+expanding $\tau_*^{\mathrm{post-R2}}$ from $\min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ to $\min(\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ (NOT looser; same 2ρ_pert vs ρ_pert' = ρ_pert in the second term — neutral net effect on $\tau_*$ since 2·(ρ_pert/2) = ρ_pert).
+
+**Net theoretical effect:** factor-1 sharpening leaves $\tau_*^{\mathrm{post-R2}}$ unchanged in form (different parameterization, same admissible range when ρ_pert is the binding term). The benefit is conceptual rigor (factor-1 cleaner), not regime expansion.
+
+### Hard-constraint sweep
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md**: 0 edits (T-L1-M Cat A conditional status unchanged).
+- **N-1 hard constraint**: 0 silent OP resolution. (P9-tight) regime is a candidate, NOT adopted; factor-1 sharpening NOT claimed in canonical.
+- **OP catalog**: 0 changes. NQ-G1-2 executed, NQ-G1-2-ext (W7+) registered for direct ‖R_j‖_∞ measurement under shared-pool dynamics (the empirical question of whether physical perturbations actually satisfy (P9-tight)).
+- **Tests preserved**: `cd CODE && python3 -m pytest tests/ -q --tb=no` not re-run (scc/ 0 edits; baseline 215 passed + 1 xfailed verified earlier this session).
+
+### Files modified
+
+1. `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (NEW): NQ-G1-2 execution wrapper, post-processes baseline l1i JSON.
+2. `CODE/scripts/results/op_resolution_nq_g1_2_p9_tight.json` (NEW): 5-regime comparison output + overlap analysis.
+3. `THEORY/logs/daily/2026-05-04/op_resolution.md`: §10.5 status updated DEFERRED → EXECUTED; §13.1 row 11 updated (separate edit).
+4. `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md`: G1 follow-on note updated (NQ-G1-2 EXECUTED) (separate edit).
+
+### NQ-G1-2-ext (W7+ follow-on)
+
+Direct measurement of $\|R_j\|_\infty$ under shared-pool gradient-flow dynamics (perturbation magnitude after time evolution). The current l1i tests INITIAL Gaussian-bump configurations; perturbations $R_j$ in the L-M proof are dynamic (post-flow). Whether empirical $R_j$ satisfies $\|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$ requires extending l1i to compute $R_j$ across time evolution and measuring the max norm over $N_j^r$. Estimated effort ~1-2 hours; not a blocker.
+
+### Lesson logged
+
+**Empirical (P9-tight) feasibility is not the same as empirical (P9-tight) realization.** L1-I tests INITIAL state geometry: H6' is non-binding because Gaussian peaks have ample margin to ℓ_min. Whether physical perturbations satisfy ‖R_j‖_∞ ≤ ρ_pert/4 is a separate empirical question deferred to NQ-G1-2-ext. The current verdict ("(P9-tight) candidate") is necessary but not sufficient for canonical adoption; sufficient evidence requires NQ-G1-2-ext.
+
+### Net effect
+
+- **G1 substantively complete**: all of W6 D1 G1 follow-ons (R-0/R-1/R-2/R-3 closure + canonical promotion + external audit + NQ-G1-1 self-correction + NQ-G1-2 deferred-numerical) closed.
+- **Open follow-on (W7+)**: NQ-G1-1-ext (ρ_bg vs ρ_res empirical) + NQ-G1-2-ext (‖R_j‖_∞ post-flow measurement). Both deferred, not blockers, not OP-catalog-affecting.
+
+---
+
 ## 2026-05-04 (W6 Day 1 EOD twelfth addendum) — Issue #5 RE-EXAMINATION: REJECT-RETIRE verdict confirmed, 3 detail errors corrected
 
 **Trigger:** user re-review of Issue #5 eleventh addendum. Re-examination identified 3 detail errors in the disclosure headers + parking_lot_inventory while confirming the substantive REJECT-RETIRE verdict.

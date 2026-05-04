@@ -294,4 +294,39 @@ These need user input or explicit deferral by W6 close, otherwise they become si
 
 ---
 
-**End of redesigned `plan.md` v2. Day 1 substantively complete (G2 + G3 closed; G1 reset awaiting Day 2 decision; G4 on schedule). Day 2 starts with G3 user-supervised promotion (Block 0, ~30 min) → G1 closure (Block 1, ~2-4 hours) → outstanding decisions cleanup (Block 2, ~2 hours) → Day 3 plan (Block 3, ~1 hour).**
+**End of redesigned `plan.md` v2.**
+
+---
+
+## §EOD COMPLETE MARKER (W6 Day 1 final, 2026-05-04 post-EOD chat session)
+
+**Day 1 = SUBSTANTIVELY CLOSED at every layer.** What was originally planned for Days 1–6 of the redesigned W6 plan (G1+G2+G3+G4) was completed entirely on Day 1, with additional post-EOD wrap-up extending through the chat session.
+
+### Day 1 final accounting
+- **G2 (T-Bind decision)**: ✅ Cat A confirmed; canonical edits applied evening commit `4553bd8` (T-Bind-Proj/Full at canonical.md:1452, 1457; theorem_status.md:163-164, 285).
+- **G3 (K_act ε-convention)**: ✅ R1 reading verdict + Commitment 16 line 810 amendment applied per CHANGELOG late re-review entry. W6 strategic plan G3 misframing corrected (the "0.075·m̄" framing assumed an unsupported $\bar m \approx 3$ reading; actual is R1 = M/K_field = 22.5).
+- **G1 (L1-M-AUDIT)**: ✅ R-0/R-1/R-2/R-3 self-audit closures (Cat A absolute) + Lemma L-M-2 / Theorem L-M Cat A conditional + per-family corollaries L-M.A absolute / L-M.B/L-M.C conditional inheriting. External L-M-K-style audit (NQ-G1-3) PASS verdict (~7 min cold-review agent). T-L1-M canonical promotion applied W6 D1 EOD second addendum (canonical.md §13 line 1491; theorem_status.md C-0722 line 197). NQ-G1-2 EXECUTED post-EOD (post-processing wrapper + fresh-full-run with H6-only patch, 5/5 regimes match: R0=R1=R3=439, R2=594, R4=255). NQ-G1-1 self-correction integrated. Cross-doc corrections applied (§3.2 erratum + §3.4 cross-reference).
+- **G4 (parking-lot Stage 0)**: ✅ Inventory file `CV-1.7_parking_lot_inventory.md` (~430 lines) produced; "17/8145" → "49/17269" audit-trail correction; Issue #1–#5 series resolved with chain-verification audit pattern documented (CHANGELOG addendums #4–#12).
+
+### Theorem-count delta
+- CV-1.5.2 release baseline (2026-05-02): 46A / 5B / 5C / 5R = 61 claims, 75% fully proved.
+- Post W6 D1 EOD (2026-05-04, supervised T-L1-M addition): **47A** / 5B / 5C / 5R = **62 claims**, 75% fully proved.
+
+### CHANGELOG addendums (14 total this day)
+1st (G1 audit closure) → 2nd (T-L1-M canonical promotion) → 3rd (G4 Stage 0 inventory) → 4th–12th (Issue #1–#5 series) → **13th (NQ-G1-2 post-processing)** → **14th (NQ-G1-2 fresh-full-run validation 5/5 match)**.
+
+### Hard-constraint sweep
+- canonical / theorem_status / scc / working/MF: only G2 evening + G1 EOD T-L1-M promotion + Commitment 16 line 810 + L-M draft promotion (all sustained-supervised). scc/ 0 edits — tests preserved (215 passed + 1 xfailed; smoke `DiagnosticVector(Bind=0.853, Sep=0.924, Inside=0.998, Persist=1.000)` verified).
+- N-1, CN5/6/7/10/15, u_t primitive: all preserved. Silent OP resolution: 0. Research OS resurrection: 0. External framework reduction: 0.
+
+### Day 2–7 carry-forward
+**~3-day W6 schedule slack** relative to original plan. Possible scope: (a) finish G4 Stage 1 per-file Cat-status header drafting on 49 files, (b) execute remaining deferred NQ-G3-1 (only deferred-numerical NQ left), (c) CV-1.6 release packet preparation (release feasibility upgraded from "deferred indefinitely" to "W6 D7 EOD CANDIDATE"), (d) W7+ seed work (NQ-G1-1-ext, NQ-G1-2-ext, NQ-G1-4 candidate, NQ-G1-6 candidate). User decision required for prioritization.
+
+**Day 2 morning critical-path is now substantively empty** (all originally-planned Day 2 promotion items already applied W6 D1 EOD); Day 2 plan should be drafted by user as fresh "what to do with the slack" exercise.
+
+**Outstanding user-decision items (carry-forward):**
+- `weekly_draft_storming.md` (OLD 8-goal content, stale post-redesign): delete / refresh / leave-historical.
+- CV-1.6 release scheduling per Decision Point 4: push Day 7 / defer W7 / defer further.
+- W7+ seed work prioritization (4 follow-ons to order).
+
+**Day 1 is closed. End of plan.md.**

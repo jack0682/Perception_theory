@@ -1,0 +1,366 @@
+{
+  "script": "op_resolution_nq_g1_2_p9_tight.py",
+  "script_version": "0.1.0",
+  "purpose": "NQ-G1-2 (P9-tight) regime empirical study: re-classify L1-I FEASIBLE_WITH_BUDGET configurations under (P9-tight) interpretation where \u03c1_pert halves and H6' margin requirement halves accordingly.",
+  "non_claims": {
+    "L1J_prime_promoted_to_canonical": false,
+    "P9_tight_adopted_as_canonical_regime": false,
+    "factor_1_sharpening_for_LM2_R1": false,
+    "TL1M_Cat_A_conditional_status_changed": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "OP_0009_resolved": false
+  },
+  "baseline_source": "/Users/ojaehong/Perception/Perception_theory/CODE/scripts/results/l1i_constants_feasibility.json",
+  "baseline_summary": {
+    "class_counts": {
+      "INFEASIBLE": 1233,
+      "RAW_FEASIBLE": 228,
+      "FEASIBLE_WITH_BUDGET": 439,
+      "MARGINAL": 20
+    },
+    "failure_counts": {
+      "LG-1": 904,
+      "LG-2": 243,
+      "LG-4": 402
+    },
+    "n_total": 1920,
+    "best_cases": [
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.02,
+          "r": 3,
+          "l_min": 0.2,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 1.1253517471925872e-07,
+          "1": 1.1253517471925872e-07,
+          "2": 1.1253517471925872e-07
+        },
+        "lg2_min_margin": 0.7999998874648253,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.8,
+        "lg3_pass": true,
+        "bg_max_U": 5.109089028063343e-12,
+        "bg_size": 277,
+        "lg4_margin": 0.19999999999489093,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.2,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.8,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.02,
+          "r": 3,
+          "l_min": 0.2,
+          "geometry": "wide",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 1.1253517471925872e-07,
+          "1": 1.1253517471925872e-07,
+          "2": 1.1253517471925872e-07
+        },
+        "lg2_min_margin": 0.7999998874648253,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 6.470528673856677e-26,
+          "1-2": 6.470528673856677e-26
+        },
+        "lg3_min_margin": 0.8,
+        "lg3_pass": true,
+        "bg_max_U": 5.109089028063343e-12,
+        "bg_size": 277,
+        "lg4_margin": 0.19999999999489093,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.2,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.8,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.05,
+          "r": 3,
+          "l_min": 0.2,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 1.1253517471925872e-07,
+          "1": 1.1253517471925872e-07,
+          "2": 1.1253517471925872e-07
+        },
+        "lg2_min_margin": 0.7999998874648253,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.8,
+        "lg3_pass": true,
+        "bg_max_U": 5.109089028063343e-12,
+        "bg_size": 277,
+        "lg4_margin": 0.19999999999489093,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.2,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.8,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.05,
+          "r": 3,
+          "l_min": 0.2,
+          "geometry": "wide",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 1.1253517471925872e-07,
+          "1": 1.1253517471925872e-07,
+          "2": 1.1253517471925872e-07
+        },
+        "lg2_min_margin": 0.7999998874648253,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 6.470528673856677e-26,
+          "1-2": 6.470528673856677e-26
+        },
+        "lg3_min_margin": 0.8,
+        "lg3_pass": true,
+        "bg_max_U": 5.109089028063343e-12,
+        "bg_size": 277,
+        "lg4_margin": 0.19999999999489093,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.2,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.8,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      },
+      {
+        "config": {
+          "sigma_b": 0.5,
+          "delta": 0.1,
+          "r": 3,
+          "l_min": 0.2,
+          "geometry": "A",
+          "state_mode": "raw_gaussian"
+        },
+        "n_active": 3,
+        "h_min_measured": 1.0,
+        "lg1_disjoint": true,
+        "lg1_overlap_count": 0,
+        "boundary_collars": {
+          "0": 1.1253517471925872e-07,
+          "1": 1.1253517471925872e-07,
+          "2": 1.1253517471925872e-07
+        },
+        "lg2_min_margin": 0.7999998874648253,
+        "lg2_pass": true,
+        "bridge_heights": {
+          "0-1": 3.8574996959278356e-22,
+          "0-2": 1.9293968714564823e-22,
+          "1-2": 1.9293968714564823e-22
+        },
+        "lg3_min_margin": 0.8,
+        "lg3_pass": true,
+        "bg_max_U": 5.109089028063343e-12,
+        "bg_size": 277,
+        "lg4_margin": 0.19999999999489093,
+        "lg4_pass": true,
+        "slot_l2": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        },
+        "h6_min_margin": 0.2,
+        "h6_pass": true,
+        "max_bridge": 3.8574996959278356e-22,
+        "ledger_margin": 0.8,
+        "ledger_pass": true,
+        "feasibility_class": "FEASIBLE_WITH_BUDGET",
+        "failing_clauses": [],
+        "notes": []
+      }
+    ]
+  },
+  "n_configs": 1920,
+  "regimes": [
+    {
+      "name": "R0_standard",
+      "description": "Baseline: all-clause budget = 0.05 (matches T-L1-F empirical anchor)",
+      "budget": 0.05,
+      "h6_budget": null,
+      "counts": {
+        "FEASIBLE_WITH_BUDGET": 439,
+        "RAW_FEASIBLE": 228,
+        "MARGINAL": 0,
+        "INFEASIBLE": 1253,
+        "INCONCLUSIVE": 0
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333,
+      "label": "R0_standard: budget=0.0500 (uniform)"
+    },
+    {
+      "name": "R1_p9tight_h6only",
+      "description": "P9-tight (faithful, op_resolution.md \u00a710.4 step 2): only H6 margin halved (\u03c1_pert/2 in H6)",
+      "budget": 0.05,
+      "h6_budget": 0.025,
+      "counts": {
+        "FEASIBLE_WITH_BUDGET": 439,
+        "RAW_FEASIBLE": 228,
+        "MARGINAL": 0,
+        "INFEASIBLE": 1253,
+        "INCONCLUSIVE": 0
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333,
+      "label": "R1_p9tight_h6only: budget=0.0500, h6_budget=0.0250"
+    },
+    {
+      "name": "R2_p9tight_all",
+      "description": "P9-tight (strong): all-clause budget halved (if all margins inherit \u03c1_pert scaling)",
+      "budget": 0.025,
+      "h6_budget": null,
+      "counts": {
+        "FEASIBLE_WITH_BUDGET": 594,
+        "RAW_FEASIBLE": 73,
+        "MARGINAL": 0,
+        "INFEASIBLE": 1253,
+        "INCONCLUSIVE": 0
+      },
+      "feasible_with_budget": 594,
+      "feasible_fraction": 0.309375,
+      "label": "R2_p9tight_all: budget=0.0250 (uniform)"
+    },
+    {
+      "name": "R3_h6doubled",
+      "description": "Sanity (H6 doubled): only H6 margin doubled (stricter perturbation absorption)",
+      "budget": 0.05,
+      "h6_budget": 0.1,
+      "counts": {
+        "FEASIBLE_WITH_BUDGET": 439,
+        "RAW_FEASIBLE": 228,
+        "MARGINAL": 0,
+        "INFEASIBLE": 1253,
+        "INCONCLUSIVE": 0
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333,
+      "label": "R3_h6doubled: budget=0.0500, h6_budget=0.1000"
+    },
+    {
+      "name": "R4_all_doubled",
+      "description": "Sanity (all doubled): all-clause budget doubled",
+      "budget": 0.1,
+      "h6_budget": null,
+      "counts": {
+        "FEASIBLE_WITH_BUDGET": 255,
+        "RAW_FEASIBLE": 412,
+        "MARGINAL": 0,
+        "INFEASIBLE": 1253,
+        "INCONCLUSIVE": 0
+      },
+      "feasible_with_budget": 255,
+      "feasible_fraction": 0.1328125,
+      "label": "R4_all_doubled: budget=0.1000 (uniform)"
+    }
+  ],
+  "overlap": {
+    "r0_only": 0,
+    "r0_and_r1": 439,
+    "r1_only": 0,
+    "r0_subset_of_r1": true,
+    "r0_subset_of_r2": true,
+    "r3_subset_of_r0": true,
+    "r1_minus_r0_size": 0,
+    "r2_minus_r0_size": 155,
+    "r0_minus_r3_size": 0
+  },
+  "interpretation_notes": [
+    "Baseline R0 = 439/1920 FEASIBLE_WITH_BUDGET matches T-L1-F empirical anchor.",
+    "R1 (P9-tight H6-only halved) is the faithful translation of op_resolution.md \u00a710.4 step 2.",
+    "R0 \u2286 R1 expected since H6 margin requirement is relaxed (\u2264 0.05 \u2192 \u2264 0.025).",
+    "R2 (all-clause halved) is a stronger relaxation; tests whether other margins also inherit \u03c1_pert scaling.",
+    "R3 (H6 doubled) inverts: how restrictive is a tighter H6 alone? r3_subset_of_r0 expected True.",
+    "Per op_resolution.md \u00a710.4 step 6 verdict: if R1 (or R2) feasible count > 200/1920, (P9-tight) is candidate for L1-J' regime promotion enabling factor-1 sharpening.",
+    "Per step 5: if R1 < 50/1920, (P9-tight) regime too restrictive; (P9) standard stays.",
+    "Cat A conditional status of T-L1-M is unaffected regardless of outcome \u2014 this experiment informs whether factor-1 sharpening is empirically supportable, not whether L-M is correct."
+  ],
+  "wall_clock_seconds": 0.006079912185668945,
+  "metadata": {
+    "host": "ojaehong-ui-MacBookAir.local",
+    "python_version": "3.12.11",
+    "run_timestamp_utc": "2026-05-04T13:35:11Z"
+  }
+}

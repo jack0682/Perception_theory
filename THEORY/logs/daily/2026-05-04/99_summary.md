@@ -132,4 +132,120 @@ CODE/scripts/
 └── results/nq187b_a2_a1_extrapolation.json  (re-generated; harmless; per plan.md v2 §5.4)
 ```
 
-**End of `99_summary.md`. Day 1 substantively complete: G1 + G2 + G3 all closed (G2 canonically applied evening; G1 + G3 at proposal stage awaiting user-supervised promotion). Day 2 morning critical path: G3 promotion (~30 min) + T-L1-M promotion proposal review (~30 min) + optional external L-M-K-style audit (~15-30 min) + outstanding decisions cleanup (~30 min). 3-day slack relative to original W6 plan.**
+---
+
+## §7. Day 1 post-EOD wrap-up (chat session 2026-05-04 late evening)
+
+After the unified §1–§6 EOD compilation above (and after CHANGELOG addendums #1–#12 documenting Issue #1–#5 series + parking-lot inventory), the user reopened a chat session with directives "G1 남은 부분 마무리" → "전부 차례차례" → "빡세게 돌릴수있으니까". This wrap-up section documents what was added on top of the EOD state, before the user closed the day.
+
+### §7.1 Light-touch documentation precision (3 edits)
+
+1. **`THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` G1 status text** — replaced "Cat-B sketched, 3-4 days, P0 must" with the actual EOD reality: "✅ FULLY CLOSED + CANONICALLY PROMOTED" + R-0/R-1/R-2/R-3 closure detail + canonical T-L1-M promotion + external audit PASS verdict + open follow-ons (NQ-G1-1-ext, NQ-G1-2, NQ-G1-2-ext) explicitly listed.
+2. **`03_integration_and_new_open.md` §3.2 erratum** — corrected the incorrect "post-R2 admissible $\tau$ range is at least as wide as the pre-repair range" claim (which contradicted `op_resolution.md` §9.4–§9.10 self-correction). Replaced with a configuration-dependent erratum block citing `op_resolution.md` §9.7 + §13.6 and explicitly noting Cat A conditional self-classification of Lemma L-M-2 is unaffected.
+3. **`02_development.md` §3.4 cross-reference** — added a parallel NQ-G1-1 cross-reference erratum block linking to `op_resolution.md` §9.4–§9.10. The §3.4 hedge "may be tighter or looser" was already correct; the cross-reference makes the audit trail explicit.
+
+These three edits closed the documentation drift that `op_resolution.md` §13.4 (Day 2+ follow-on actions) had flagged as outstanding. Audit trail now consistent across `02_development.md` §3.4, `03_integration_and_new_open.md` §3.2, `op_resolution.md` §9, and CHANGELOG.
+
+### §7.2 NQ-G1-2 (P9-tight) regime experiment — two-phase EXECUTED
+
+Per `op_resolution.md` §10.4 (deferred numerical experiment with execution plan).
+
+**Phase A (CHANGELOG thirteenth addendum) — post-processing wrapper:**
+- Created `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (~14 KB).
+- Re-classifies the existing baseline `l1i_constants_feasibility.json` (1920 configs) under 5 budget regimes without re-running compute_feasibility (uses stored per-clause margins). Wall-clock 0.006s.
+- Output: `CODE/scripts/results/op_resolution_nq_g1_2_p9_tight.json` (~11 KB).
+- Two-point validation: ran parent l1i fresh at `--budget 0.05` (439 confirmed) and `--budget 0.025` (594 confirmed) — post-processing predictions matched at both.
+
+**Phase B (CHANGELOG fourteenth addendum) — fresh-full-run with H6-only patch:**
+- Created `CODE/scripts/l1i_constants_feasibility_p9_tight.py` (~27 KB) as parent l1i copy + 4-edit patch (`--h6-budget` CLI arg / `compute_feasibility` signature / classification block split into non-H6 + H6 branches / output JSON config).
+- Ran 5 regimes from scratch (each ~15s, total 75.7s):
+
+| Regime | --budget | --h6-budget | FEASIBLE | Post-processing | Match |
+|---|---|---|---|---|---|
+| R0 standard | 0.05 | inherit | 439 | 439 | ✅ |
+| R1 P9-tight H6-only (faithful) | 0.05 | 0.025 | **439** | 439 | ✅ |
+| R2 P9-tight all-halved | 0.025 | inherit | 594 | 594 | ✅ |
+| R3 H6-doubled (sanity) | 0.05 | 0.10 | 439 | 439 | ✅ |
+| R4 all-doubled (sanity) | 0.10 | inherit | 255 | 255 | ✅ |
+
+5/5 regimes match post-processing prediction exactly.
+
+### §7.3 Findings (NQ-G1-2)
+
+- **R0 = R1 = R3 = 439:** H6' is **non-binding** in the L1-I FEASIBLE_WITH_BUDGET set. Binding constraints are LG-1 (904 failures) / LG-2 (243) / LG-4 (402) / ledger.
+- **R0 ⊆ R1 with |R1 \ R0| = 0:** adopting (P9-tight) does NOT shrink the empirical regime. Factor-1 sharpening for Lemma L-M-2 §5.4 R-1's perturbation argument is empirically supportable on the existing 439-config FEASIBLE set **without empirical penalty**.
+- **(P9-tight) verdict:** CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening. Final canonical adoption deferred to NQ-G1-2-ext (W7+) requiring direct $\|R_j\|_\infty$ measurement under shared-pool gradient-flow dynamics (initial-state H6' non-binding ≠ post-flow $R_j$ satisfying (P9-tight)).
+- **T-L1-M Cat A conditional status: unchanged.** Factor-1 sharpening is an empirical regime extension, not a theorem-level claim modification.
+
+### §7.4 Hard-constraint sweep (this session)
+
+- **canonical.md / theorem_status.md / scc/**: 0 edits.
+- **working/MF/**: 0 edits (T-L1-M Cat A conditional status preserved).
+- **scc smoke**: passed (`DiagnosticVector(Bind=0.853, Sep=0.924, Inside=0.998, Persist=1.000)`).
+- **N-1 hard constraint**: 0 silent OP resolution. (P9-tight) is candidate, NOT adopted.
+- **OP catalog**: 0 changes. NQ-G1-1-ext + NQ-G1-2-ext registered W7+.
+- **Research OS / OMC pool / external framework**: not invoked.
+
+### §7.5 G1 final inventory (post chat-session)
+
+| Layer | Status |
+|---|---|
+| Audit closures (R-0/R-1/R-2/R-3) | ✅ all Cat A absolute, applied to working draft |
+| Lemma L-M-2 / Theorem L-M | ✅ Cat A conditional (post-repair, audit-trail explicit) |
+| Per-family corollaries L-M.A/B/C | ✅ A absolute / A conditional inheriting / A conditional inheriting |
+| Working draft `working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` | ✅ ~620 lines, all closures + NQ-G1-1 self-correction |
+| Canonical T-L1-M entry §13 line 1491 | ✅ promoted (supervised) |
+| `theorem_status.md` C-0722 row | ✅ accepted Cat A conditional |
+| External L-M-K-style audit (NQ-G1-3) | ✅ PASS (cold-review agent) |
+| NQ-G1-1 (ρ_bg vs ρ_res) | ✅ partial Cat B, configuration-dependent (NQ-G1-1-ext W7+) |
+| NQ-G1-2 ((P9-tight) regime) | ✅ EXECUTED (post-processing + fresh-full-run 5/5 match) |
+| NQ-G1-4 (per-formation K_soft) | ✅ Cat B sketched (op_resolution.md §4) |
+| NQ-G1-5 (Φ_res 5-axiom) | ✅ Cat A absolute, F1–F5 minimal |
+| NQ-G1-6 (perturbation extension) | ✅ Cat C sketched (op_resolution.md §5) |
+| W6 strategic plan G1 status text | ✅ updated to FULLY CLOSED |
+| Cross-doc corrections | ✅ §3.2 erratum + §3.4 cross-reference |
+| CHANGELOG audit trail | ✅ 14 addendums (12 EOD + 13th NQ-G1-2 + 14th fresh-full-run validation) |
+
+**G1 = SUBSTANTIVELY CLOSED at every layer.** No outstanding G1 deliverables; all W7+ items are explicit follow-ons (not blockers) for additional rigor.
+
+### §7.6 Files modified / created (this session)
+
+modified:
+- `THEORY/CHANGELOG.md` (added 13th + 14th addendums)
+- `THEORY/logs/daily/2026-05-04/02_development.md` (§3.4 cross-reference)
+- `THEORY/logs/daily/2026-05-04/03_integration_and_new_open.md` (§3.2 erratum)
+- `THEORY/logs/daily/2026-05-04/op_resolution.md` (§10.6 EXECUTED + §10.7 fresh-full-run validation + §13.1 row 11)
+- `THEORY/logs/daily/2026-05-04/99_summary.md` (this §7 wrap-up)
+- `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (G1 status text + open follow-ons)
+
+new (untracked):
+- `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py`
+- `CODE/scripts/l1i_constants_feasibility_p9_tight.py`
+- `CODE/scripts/results/op_resolution_nq_g1_2_p9_tight.json`
+- `CODE/scripts/results/l1i_p9tight_R0_b005.json`
+- `CODE/scripts/results/l1i_p9tight_R1_b005_h6_0025.json`
+- `CODE/scripts/results/l1i_p9tight_R2_b0025.json`
+- `CODE/scripts/results/l1i_p9tight_R3_b005_h6_010.json`
+- `CODE/scripts/results/l1i_p9tight_R4_b010.json`
+- `CODE/scripts/results/l1i_full_b005_validation.json` (preliminary 2-point validation, thirteenth addendum)
+- `CODE/scripts/results/l1i_full_b0025_p9tight_all.json` (preliminary 2-point validation, thirteenth addendum)
+
+### §7.7 Carry-forward to Day 2 (revised after wrap-up)
+
+The §5 Day 2 morning critical path (~1.5–2h) is now further reduced:
+- Block 0a (G3 Commitment 16 amendment): ✅ already applied W6 D1 EOD per CHANGELOG late re-review entry — not needed.
+- Block 0b (T-L1-M canonical promotion): ✅ already applied W6 D1 EOD second addendum — not needed.
+- Block 1 (External L-M-K-style audit): ✅ already executed W6 D1 EOD with PASS verdict — not needed.
+- Block 2 (outstanding decisions cleanup): largely closed; NQ-G1-1-ext / NQ-G1-2-ext W7+, NQ-G1-2 EXECUTED (post-processing + fresh-full-run), parking-lot Issue #1–#5 series resolved. Remaining: any user judgment on weekly_draft_storming.md (OLD-plan content; STALE — see §7.8 below).
+
+**Day 2 morning is now substantively free** for either: (i) Day 4-5 deferred numerical NQ-G3-1 (~1-2h, ε stability sweep), (ii) accelerate G4 Stage 1 per-file Cat-status header drafting (~2.5-3h on the 49-file inventory), (iii) W7+ seed work, or (iv) early CV-1.6 release packet preparation (release feasibility upgraded to W6 D7 EOD candidate).
+
+### §7.8 Open user-decision items (carry-forward)
+
+- **`weekly_draft_storming.md`**: OLD 8-goal plan content authored 09:21 morning, stale post-redesign. Per `plan.md` v2 §5.2, user decision pending — options: (a) delete (analogous to morning `pre_brainstorm.md` deletion), (b) refresh to match redesigned 4-goal plan, (c) leave stale as historical record.
+- **CV-1.6 release scheduling**: Decision Point 4 default was "deferred until parking lot at least partially resolved". Stage 0 done; remaining options: (a) push CV-1.6 release to Day 7 EOD with Stage 0 as sufficient, (b) defer to W7 alongside Stage 1, (c) defer further.
+- **W7+ seed work prioritization**: NQ-G1-1-ext / NQ-G1-2-ext / NQ-G1-4 candidate / NQ-G1-6 candidate (4 follow-ons). Order TBD.
+
+---
+
+**End of `99_summary.md`. Day 1 substantively complete + post-EOD wrap-up applied: G1 fully closed at every layer (audit + working draft + canonical promotion + external audit PASS + 6 surfaced NQs all addressed + cross-doc corrections + W6 plan status text sync + NQ-G1-2 fresh-full-run validation 5/5 match). G2 + G3 + G4 all closed. CV-1.6 release feasibility = W6 D7 EOD candidate. Tests preserved (215 passed + 1 xfailed; smoke verified). 3-day W6 schedule slack remains. Day 2+ substantively free for W7+ seed work / G4 Stage 1 / deferred numerical NQs / CV-1.6 release packet.**

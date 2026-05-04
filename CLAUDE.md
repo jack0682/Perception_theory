@@ -5,7 +5,7 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.5.2, 2026-05-02). Single source of truth for the theory.
+1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.5.2, 2026-05-02; W6 D1 EOD T-L1-M supervised addition 2026-05-04). Single source of truth for the theory. Counts: 47A / 5B / 5C / 5R = 62 claims, 75% fully proved.
 2. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog (merged 2026-05-04 audit; OP-0001/0002/0003 resolved in W4; active high-priority OPs are OP-0005, OP-0006, OP-0008, OP-0009).
 3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
@@ -28,7 +28,7 @@ Perception_theory/
 ├── THEORY/                         theory documents — read-oriented
 │   ├── CHANGELOG.md                theory state-change log
 │   ├── canonical/                  authoritative (no contamination)
-│   │   ├── canonical.md            ← THE spec (CV-1.5.2, 2026-05-02)
+│   │   ├── canonical.md            ← THE spec (CV-1.5.2, 2026-05-02 + W6 D1 EOD T-L1-M supervised, 2026-05-04)
 │   │   └── theorem_status.md       proved / conditional / retracted index + Open Problems Catalog (merged 2026-05-04)
 │   ├── working/                    in-progress theory (one file = one topic)
 │   └── logs/                       chronological research journal

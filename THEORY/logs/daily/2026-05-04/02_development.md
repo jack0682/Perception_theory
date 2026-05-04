@@ -181,6 +181,8 @@ This may be tighter or looser than the original $\tau_* = \min(2\rho_{\mathrm{pe
 
 For consistency with T-L1-F's empirical L1-I anchor (which uses $\rho_{\mathrm{bg}}$ implicitly via P5), the $\tau_*^{\mathrm{post-R2}}$ formulation with $\rho_{\mathrm{bg}}$ is **more honest** (matches the canonical regime constants directly) and **avoids the P10 indirection**.
 
+> ***(NQ-G1-1 cross-reference, W6 D1 late re-review per `op_resolution.md` §9.7 + §13.6)***: The "may be tighter or looser" hedge above is correct. Detailed analysis in `op_resolution.md` §9.4–§9.10 confirms that $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (P5 restricts to $X_{\mathrm{bg}}$ but bounds $U$ which includes active-slot decay tails per P7; P10 bounds $R_{\mathrm{inact}}$ globally; neither generically dominates). NQ-G1-1-ext (W7+) for empirical anchor via L1-I extension recording $\|R_{\mathrm{inact}}\|_\infty$ separately. Note: `03_integration_and_new_open.md` §3.2 originally claimed "post-R2 range at least as wide" — that claim was **incorrect** and has been corrected per the same erratum link. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: edge-band emptiness for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$ holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint.
+
 ### §3.5 Replacement text for L-M draft §5.5
 
 ```

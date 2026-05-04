@@ -2,24 +2,24 @@
 
 **Created:** 2026-05-04 (audit pass; W6 strategic plan was deleted concurrently because its G5 task silently downgraded the parking-lot dispatch from "audit" to "checklist preparation only").
 **Owner:** user (planning) + lead (execution).
-**Goal:** raise the 17 unaudited working files (~8,145 lines) introduced during the W5 Wave 3 burst above the surface so they either receive a critic verdict and become Cat A/B/C candidates, or are explicitly retired.
+**Goal:** raise the **49 unaudited working files (~17,269 lines)** introduced during the W5 Wave 3 burst above the surface so they either receive a critic verdict and become Cat A/B/C candidates, or are explicitly retired. *(Original W5 narrative count was "17 / 8,145"; W6 D1 EOD Stage 0 inventory found the actual count is ~2.9× / 2.1× larger — see §2 audit-trail note.)*
 **Status:** PLAN ONLY — execution begins per user decision.
 
 ---
 
 ## 1. Why this plan exists
 
-W5 Day 5 (2026-05-01) reconciliation introduced the term "CV-1.7 parking lot" to label 17 files that emerged from the W5 Day 4 Wave 3 11-teammate parallel dispatch but were never given a critic re-review. The W5 weekly summary §1.2 promised to label each file with a `CV-1.7 candidate` header at "W6 D6 packet finalize". By 2026-05-04 audit, only 3 of 17 files have such labels; the other 14 sit unlabelled in `working/MF/` and `working/SF/`.
+W5 Day 5 (2026-05-01) reconciliation introduced the term "CV-1.7 parking lot" to label files that emerged from the W5 Day 4 Wave 3 11-teammate parallel dispatch but were never given a critic re-review. The W5 weekly summary §1.2 narrative claimed "17 files" but the actual Stage 0 inventory (W6 D1 EOD, 2026-05-04) found **49 files / 17,269 lines** in `[2026-04-30, 2026-05-02)`. The W5 weekly summary promised to label each file with a `CV-1.7 candidate` header at "W6 D6 packet finalize". By 2026-05-04 audit, the inventory file `THEORY/working/CV-1.7_parking_lot_inventory.md` (W6 D1 EOD Stage 0 deliverable) provides the canonical 49-file accounting; per-file Cat-status header drafting (Stage 1) is W7+ scope.
 
 The deleted W6 strategic plan (W6_strategic_plan.md, ~1,691 lines) had reduced parking-lot work to "Block 3 (Day 6 14:00-17:00) prepares prompt skeletons; Full 17-file dispatch is optional and only allowed if the CV-1.6 packet is already stable." This was a silent downgrade — parking-lot files would have received zero substantive review during W6. The user explicitly rejected this downgrade in the 2026-05-04 audit decision, asking for a real plan.
 
 This file is the replacement plan.
 
-## 2. Inventory of the 17 parking-lot files
+## 2. Inventory of the parking-lot files
 
-Cluster breakdown from CHANGELOG.md (W5 Day 5 entry):
+**Cluster breakdown — W5 Day 5 narrative (HISTORICAL; superseded by W6 D1 EOD Stage 0 inventory; retained for audit trail):**
 
-| Cluster | Count | Lines | Target | Status |
+| Cluster | Count (W5 narrative) | Lines (W5 narrative) | Target | Status |
 |---|---|---|---|---|
 | σ-rich foundation | 8 | ~2,764 | CV-1.7 Commitment 18 candidate | unlabelled |
 | σ-fingerprint | 2 | ~539 | CV-1.7+ NQ-264 R23 | unlabelled |
@@ -27,7 +27,8 @@ Cluster breakdown from CHANGELOG.md (W5 Day 5 entry):
 | Reconciliation drafts | 2 | ~760 | T-σ-Theorem-4 γ/β/α audit inputs | unlabelled |
 | Commitment packets | 2 | ~835 | CV-1.7+ formal proposals | partially labelled (3 of 17 have headers) |
 | Auxiliary (categorical / π_1 / Lie algebra) | 3 | ~857 | CV-1.7+ Bridge B-3 framing | unlabelled |
-| **Total** | **17 (some clusters share files; need per-file count)** | **~8,145** | various | mostly unlabelled |
+| **Total (W5 narrative)** | **17 (some clusters share files; need per-file count)** | **~8,145** | various | mostly unlabelled |
+| **Total (W6 D1 EOD Stage 0 audited)** | **49 files** (Cluster A 10 / B 3 / C 5 / D 3 / E 8 / F 20 — see inventory) | **17,269** | various | per-file Cat-headers W7+ Stage 1 |
 
 > **Stage 0 verified count (2026-05-04 W6 D1 EOD update):** the original "17 / 8,145" was a stale W5 narrative count. Actual Stage 0 inventory finds **49 files / 17,269 lines** added in `[2026-04-30, 2026-05-02)` to `THEORY/working/`, with **1 already promoted** (`K_status_commitment.md` → Commitment 16, CV-1.5.1). The auxiliary cluster F was particularly under-counted (3/857 → 18/6,298). See `THEORY/working/CV-1.7_parking_lot_inventory.md` for the canonical per-file accounting + cross-reference impact analysis. Stage 1 effort revised from "one sitting" to ~2.5-3h; Stage 2 cluster critic dispatch revised from ~10 working days to ~15-20 working days (Stage 2 remains W7+ scope per §6 non-goals).
 
@@ -98,7 +99,7 @@ After Stage 3:
 
 ## 4. Risks and mitigations
 
-- **Critic fatigue.** 8,145 lines is a lot. Mitigation: cluster-by-cluster dispatch with per-cluster verdict windows; the user can pause between clusters.
+- **Critic fatigue.** 17,269 lines (Stage 0 audited count) is a lot. Mitigation: cluster-by-cluster dispatch with per-cluster verdict windows; the user can pause between clusters. *(Original W5 narrative estimate "8,145 lines" was ~2.1× under-counted.)*
 - **Inter-cluster dependency.** σ-rich and K-Selection both feed Commitment packets. Mitigation: do the dependents (σ-rich, K-Selection) before the depending (Commitment packets).
 - **Re-spawn risk.** A critic verdict of REVISE may spawn new working files, growing the parking lot. Mitigation: Stage 3 disposition explicitly counts new working files against the parking-lot total — there should be a downward trajectory.
 - **Silent abandonment recurrence.** This is what the deleted W6 plan did. Mitigation: each cluster's critic verdict is recorded in CHANGELOG with date; the parking-lot inventory file from Stage 0 is the persistent ledger.
