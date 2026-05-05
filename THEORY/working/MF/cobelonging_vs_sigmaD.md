@@ -405,4 +405,4 @@ Orthogonality witness §5.2 construction을 numerical로 실증 — 두 K=2 D_4-
 **File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/cobelonging_vs_sigmaD.md`
 **Created:** 2026-04-30 (W5 Day 4 morning, OAT-5 advanced from W6 Day 3).
 **Lines:** ~340.
-**Promotion target:** CV-1.6 W6 Day 7 morning (D-CV1.6-O6 if user approves).
+**Promotion target:** ~~CV-1.6 W6 Day 7 morning (D-CV1.6-O6 if user approves)~~ → **CV-1.6 D-CV1.6-O4** (canonical-scheduled per `THEORY/working/CV-1.6_packet_crosswalk.md` line 50; not "if user approves" hedge). *(Erratum 2026-05-05 W6 D2 closure-rigor audit Check 4: residual stale text from pre-12th-addendum disclosure-header design; corrected per CHANGELOG 2026-05-04 W6 D1 EOD twelfth addendum Error 1.)*

@@ -1,0 +1,330 @@
+{
+  "script": "op_resolution_nq_g3_1_epsilon_stability.py",
+  "script_version": "0.1.0",
+  "purpose": "NQ-G3-1 \u03b5-stability sweep over the L1-I 1920-config baseline. Verifies \u00a711.3 piecewise-constant prediction: f(\u03b5) \u2248 22.9% on \u03b5 \u2208 (0, 30); 0% on \u03b5 \u2265 30.",
+  "non_claims": {
+    "L1_proved": false,
+    "L1F_promoted_to_Cat_A": false,
+    "L1H_promoted_to_Cat_A": false,
+    "OP_0005_solved": false,
+    "OP_0008_solved": false,
+    "K_bar_equals_K_act_globally": false,
+    "K_soft_equals_K_act_globally": false,
+    "sigma_rich_sufficient": false,
+    "reservoir_canonical": false,
+    "feasibility_is_theorem_proof": false,
+    "Commitment_16_modified": false,
+    "T_L1_M_status_modified": false,
+    "Commitment_16_epsilon_promoted_to_axiom": false
+  },
+  "config": {
+    "n_torus": 20,
+    "M_total": 90.0,
+    "initial_masses": [
+      30.0,
+      30.0,
+      30.0,
+      0.0
+    ],
+    "epsilon_sweep": [
+      0.001,
+      0.05,
+      0.1,
+      0.15,
+      0.225,
+      0.3,
+      0.5,
+      1.0,
+      5.0,
+      25.0,
+      29.99,
+      30.0,
+      30.01,
+      35.0
+    ],
+    "centers_A": [
+      [
+        5,
+        5
+      ],
+      [
+        15,
+        5
+      ],
+      [
+        10,
+        14
+      ]
+    ],
+    "centers_B": [
+      [
+        5,
+        5
+      ],
+      [
+        15,
+        5
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "budget_threshold": 0.05,
+    "bridge_max_pairs": 6,
+    "n_configs_per_epsilon": 1920,
+    "state_mode_per_config": "wq1 or raw_gaussian per FeasibilityConfig.state_mode"
+  },
+  "per_epsilon_results": {
+    "0.001": {
+      "epsilon": 0.001,
+      "wall_seconds": 14.40851902961731,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.05": {
+      "epsilon": 0.05,
+      "wall_seconds": 14.448007106781006,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.1": {
+      "epsilon": 0.1,
+      "wall_seconds": 14.564764976501465,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.15": {
+      "epsilon": 0.15,
+      "wall_seconds": 14.570204019546509,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.225": {
+      "epsilon": 0.225,
+      "wall_seconds": 14.612058877944946,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.3": {
+      "epsilon": 0.3,
+      "wall_seconds": 14.586029052734375,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "0.5": {
+      "epsilon": 0.5,
+      "wall_seconds": 14.608993768692017,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "1.0": {
+      "epsilon": 1.0,
+      "wall_seconds": 14.57344388961792,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "5.0": {
+      "epsilon": 5.0,
+      "wall_seconds": 14.622596979141235,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "25.0": {
+      "epsilon": 25.0,
+      "wall_seconds": 14.579580068588257,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "29.99": {
+      "epsilon": 29.99,
+      "wall_seconds": 14.614682912826538,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1920
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 1233,
+        "RAW_FEASIBLE": 228,
+        "FEASIBLE_WITH_BUDGET": 439,
+        "MARGINAL": 20
+      },
+      "feasible_with_budget": 439,
+      "feasible_fraction": 0.22864583333333333
+    },
+    "30.0": {
+      "epsilon": 30.0,
+      "wall_seconds": 11.10476016998291,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "3": 1280,
+        "1": 240,
+        "0": 400
+      },
+      "feasibility_class_distribution": {
+        "INFEASIBLE": 874,
+        "RAW_FEASIBLE": 231,
+        "FEASIBLE_WITH_BUDGET": 404,
+        "MARGINAL": 11,
+        "INCONCLUSIVE": 400
+      },
+      "feasible_with_budget": 404,
+      "feasible_fraction": 0.21041666666666667
+    },
+    "30.01": {
+      "epsilon": 30.01,
+      "wall_seconds": 8.814152956008911,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "0": 960,
+        "3": 960
+      },
+      "feasibility_class_distribution": {
+        "INCONCLUSIVE": 960,
+        "RAW_FEASIBLE": 148,
+        "FEASIBLE_WITH_BUDGET": 389,
+        "INFEASIBLE": 416,
+        "MARGINAL": 7
+      },
+      "feasible_with_budget": 389,
+      "feasible_fraction": 0.20260416666666667
+    },
+    "35.0": {
+      "epsilon": 35.0,
+      "wall_seconds": 8.800374031066895,
+      "n_configs": 1920,
+      "n_active_distribution": {
+        "0": 960,
+        "3": 960
+      },
+      "feasibility_class_distribution": {
+        "INCONCLUSIVE": 960,
+        "RAW_FEASIBLE": 148,
+        "FEASIBLE_WITH_BUDGET": 389,
+        "INFEASIBLE": 416,
+        "MARGINAL": 7
+      },
+      "feasible_with_budget": 389,
+      "feasible_fraction": 0.20260416666666667
+    }
+  },
+  "verdict": {
+    "baseline_epsilon": 0.225,
+    "baseline_feasible_with_budget": 439,
+    "boundary_29_99": 439,
+    "boundary_30_00": 404,
+    "boundary_30_01": 389,
+    "prediction_holds_below_30": true,
+    "prediction_holds_above_30": false,
+    "piecewise_constant_verdict": false,
+    "piecewise_constant_threshold": 30.0,
+    "interpretation": "If piecewise_constant_verdict is True, \u00a711.3 theoretical prediction is empirically confirmed: f(\u03b5) is constant at 439/1920 on \u03b5 \u2208 (0, 30) and 0/1920 on \u03b5 \u2265 30. NQ-G3-1 closure verdict: \u2705 EXECUTED with prediction confirmed."
+  },
+  "wall_clock_seconds_total": 188.91250205039978,
+  "metadata": {
+    "host": "ojaehong-ui-MacBookAir.local",
+    "python_version": "3.12.11",
+    "numpy_version": "2.3.2",
+    "run_timestamp_utc": "2026-05-05T02:37:46Z"
+  }
+}

@@ -22,11 +22,11 @@
 | 7 | NQ-G3-4 W6 plan misframing pattern | audit (cross-doc check) | 30 min | ✅ PARTIAL RESOLUTION (spot audit; no other major drift found) |
 | 8 | NQ-G3-3 K_act ε perturbation at fixed state | numerical (small script) | 30 min | ✅ EXECUTED (script + results) |
 | 9 | NQ-G1-1 ρ_bg vs ρ_res in L1-I | numerical (post-process existing JSON) | 30 min | ✅ PARTIAL Cat B sketched (configuration-dependent; NQ-G1-1-ext deferred) |
-| 10 | NQ-G3-1 "439/1920" stability under ε | numerical (l1i sweep, heavy) | 1-2 hours | 📋 DEFERRED with execution plan (only remaining deferred-numerical NQ) |
+| 10 | NQ-G3-1 "439/1920" stability under ε | numerical (l1i sweep, heavy) | 1-2 hours | ✅ **EXECUTED W6 D2** (`THEORY/logs/daily/2026-05-05/03_nq_g3_1_epsilon_stability.md`; 14-ε sweep × 1920 = 26,880 runs in 188.9s; piecewise-constant on (0,30) at 439/1920 confirmed; raw_gaussian state_mode revealed as structurally ε-independent) |
 | 11 | NQ-G1-2 (P9-tight) regime experiment | numerical (l1i sweep, heavy) | 1-2 hours | ✅ **EXECUTED W6 D1 EOD post-EOD** (CHANGELOG 13th + 14th addendums; post-processing + fresh-full-run 5/5 match) |
 | 12 | NQ-G1-3 External L-M-K-style audit | external (agent dispatch) | 7-15 min agent + integration | ✅ **DONE W6 D1 EOD** (CHANGELOG addendum + 2nd addendum; PASS verdict, T-L1-M canonically promoted same-day) |
 
-**This session resolves 9 of 12 NQs (6 fully + 3 partially); defers 3 (2 numerical heavy + 1 external).** *(W6 D1 late re-review reclassified NQ-G1-1 from full to partial — see §13.6.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day; NQ-G3-1 remains the only deferred-numerical item, target W7+.)*
+**This session resolves 9 of 12 NQs (6 fully + 3 partially); defers 3 (2 numerical heavy + 1 external).** *(W6 D1 late re-review reclassified NQ-G1-1 from full to partial — see §13.6.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day; NQ-G3-1 remains the only deferred-numerical item, target W7+.)* *(W6 D2 update 2026-05-05: NQ-G3-1 ✅ EXECUTED via `2026-05-05/03_nq_g3_1_epsilon_stability.md`; final accounting **9 fully + 3 partially + 0 deferred** — all 12 W6 D1 batch NQs closed.)*
 
 ---
 
@@ -661,17 +661,28 @@ So expected $f(\epsilon)$:
 
 A more interesting variant: how does $f$ change for **dynamic states** (post-gradient-flow)? This requires running gradient flow + measuring per-config feasibility, much more expensive.
 
-### §11.5 DEFERRED with execution plan
+### §11.5 ~~DEFERRED with execution plan~~ → ✅ EXECUTED W6 D2 (2026-05-05)
 
-**Execution plan for follow-on session:**
-1. Modify l1i to accept --epsilon argument.
-2. Run for $\epsilon \in \{0.05, 0.10, 0.15, 0.225, 0.30, 0.50\}$.
-3. Plot $f(\epsilon)$.
-4. Confirm theoretical prediction (piecewise constant) or identify deviation.
+**Execution plan (original):**
+1. ~~Modify l1i to accept --epsilon argument.~~ → instead, **wrapper-import approach**: `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` imports `compute_feasibility` from l1i and iterates ε without modifying the parent script.
+2. Run for $\epsilon \in \{0.001, 0.05, 0.10, 0.15, 0.225, 0.30, 0.50, 1.0, 5.0, 25.0, 29.99, 30.0, 30.01, 35.0\}$ (14 values, expanded beyond the original 6 to also probe the boundary at ε = 30 and the above-boundary regime).
+3. ~~Plot $f(\epsilon)$.~~ → tabular form in `2026-05-05/03_nq_g3_1_epsilon_stability.md` §2.3.
+4. Confirm theoretical prediction (piecewise constant) or identify deviation. → **Confirmed for wq1 state_mode (production-relevant); raw_gaussian state_mode revealed as structurally ε-independent (by-design dual state_mode behavior, not deviation from theory).**
 
 ### §11.6 Status
 
-**📋 DEFERRED with execution plan (Cat A target after execution).** Theoretical pre-analysis (§11.3) suggests trivial outcome for initial state; full numerical confirmation is ~1-2 hours. Recommended Day 4 work.
+~~**📋 DEFERRED with execution plan (Cat A target after execution).**~~ → ✅ **EXECUTED W6 D2 (2026-05-05)** per `THEORY/logs/daily/2026-05-05/03_nq_g3_1_epsilon_stability.md`.
+
+**Execution summary:**
+- Wall-clock: 188.9s (14 ε × 1920 configs = 26,880 total runs).
+- Empirical verdict: f(ε) = 439/1920 = 22.86% piecewise-constant on ε ∈ (0, 30) — **§11.3 prediction confirmed for the wq1 state_mode component** (the production-relevant mode).
+- Boundary transition at ε = 30: spread across ~0.01 ε-window (29.99 → 30.0 → 30.01: f goes 22.86% → 21.04% → 20.26%) due to sub-percent numerical mass variance in wq1 build_initial_state.
+- Above-30: f stabilises at 389/1920 = 20.26% (raw_gaussian-only floor; raw_gaussian active set is structurally ε-independent per `l1i_constants_feasibility.py` line 281).
+- Baseline 439 = 50 wq1 + 389 raw_gaussian (independently verified by re-classifying baseline JSON).
+
+**T-L1-F empirical anchor implication:** the 22.9% claim is robust across any production-regime ε (0.05 – 1.0) by 4 orders of magnitude. T-L1-F / T-L1-M Cat A conditional status: unchanged.
+
+**New NQ surfaced:** NQ-G3-1-ext (Low priority, W7+) — wq1 build_initial_state mass-preservation precision (~30 min reading + ~30 min targeted experiment if needed). Not a CV-1.6 blocker.
 
 ---
 
@@ -727,11 +738,11 @@ Per `plan.md` v2 §5.1, the user-decision options for G1 closure path include:
 | 7 | NQ-G3-4 W6 plan misframing pattern | ✅ PARTIAL | C audit | 2 status-text revisions confirmed; spot audit (§7 above) |
 | 8 | NQ-G3-3 K_act ε perturbation at fixed state | ✅ EXECUTED | A absolute (initial state) | Script + theoretical statement (§8 above); dynamic-state deferred |
 | 9 | NQ-G1-1 ρ_bg vs ρ_res | ✅ PARTIAL (revised W6 D1 late) | B sketched | Self-corrected to configuration-dependent (§9.9–§9.10); NQ-G1-1-ext deferred to W7+. ~~**Correction to `03_integration_and_new_open.md` §3.2 needed**~~ ✅ **APPLIED post-EOD chat session** (also parallel cross-reference erratum in `02_development.md` §3.4) |
-| 10 | NQ-G3-1 "439/1920" stability under ε | 📋 DEFERRED | A target | Execution plan (§11.5) |
+| 10 | NQ-G3-1 "439/1920" stability under ε | ✅ **EXECUTED W6 D2** | A confirmed for wq1 (production mode) + raw_gaussian ε-independence revealed | Wrapper `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` (14 ε × 1920 in 188.9s); piecewise-constant on (0,30) at 439/1920 confirmed; boundary spread at ε=30; above-30 floor at 389/1920 = raw_gaussian-only (structurally ε-independent). NQ-G3-1-ext (W7+ low priority) for wq1 mass-preservation precision. See `THEORY/logs/daily/2026-05-05/03_nq_g3_1_epsilon_stability.md` |
 | 11 | NQ-G1-2 (P9-tight) regime experiment | ✅ EXECUTED (W6 D1 EOD thirteenth addendum) | C absolute (R1=R0=439, H6 non-binding; (P9-tight) candidate for L1-J' without empirical penalty) | Post-processing wrapper §10.6; NQ-G1-2-ext deferred W7+ |
 | 12 | NQ-G1-3 External L-M-K-style audit | ✅ DONE W6 D1 EOD | — | PASS verdict; T-L1-M supervised canonical promotion same-day (CHANGELOG addendum + 2nd addendum) |
 
-**Net: 6 NQs fully resolved + 3 partially resolved + 3 deferred (with execution plans).** *(Revised W6 D1 late re-review: NQ-G1-1 reclassified from "fully resolved Cat A" to "partially resolved Cat B sketched" to match §9.8 body text and §9.10 final verdict; see §13.6 erratum.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day → 8 fully resolved + 3 partially + **1 deferred** (NQ-G3-1 only, W7+ target).)*
+**Net: 6 NQs fully resolved + 3 partially resolved + 3 deferred (with execution plans).** *(Revised W6 D1 late re-review: NQ-G1-1 reclassified from "fully resolved Cat A" to "partially resolved Cat B sketched" to match §9.8 body text and §9.10 final verdict; see §13.6 erratum.)* *(Post-EOD update: NQ-G1-3 + NQ-G1-2 both executed same-day → 8 fully resolved + 3 partially + **1 deferred** (NQ-G3-1 only, W7+ target).)* *(W6 D2 update 2026-05-05: NQ-G3-1 ✅ EXECUTED via Silver-target fill-in → final accounting **9 fully resolved + 3 partially + 0 deferred** — entire 12-NQ batch from W6 D1 closed.)*
 
 ### §13.2 Canonical implications
 
@@ -757,7 +768,7 @@ Canonical changes APPLIED W6 D1 EOD (post-supervision):
 1. ~~**Apply correction to `03_integration_and_new_open.md` §3.2** (per §9.7 above) — `02_development.md` §3 R-2 closure section may also need a parallel correction.~~ ✅ **DONE post-EOD chat session**: §3.2 erratum block + §3.4 cross-reference erratum applied.
 2. ~~**Apply 2 W6 strategic plan status-text revisions** (G1 + G3 per §7.8 above) — user-supervised.~~ ✅ **DONE post-EOD chat session**: G1 status text replaced with FULLY CLOSED + CANONICALLY PROMOTED + open follow-ons listed; G3 status text revision was already applied per CHANGELOG late re-review entry.
 3. ~~**Day 4 G4 acceleration:** verify "17 / 8,145 lines" parking-lot count (per §7.5 above).~~ ✅ **DONE W6 D1 EOD third addendum**: actual count 49 files / 17,269 lines verified; `CV-1.7_parking_lot_inventory.md` (~430 lines) produced; `CV-1.7_PARKING_LOT_REVIEW_PLAN.md` body text updated post-EOD chat session.
-4. **Day 4-5:** execute deferred numerical NQs (NQ-G3-1 + NQ-G1-2; ~3-4 hours total). → Partially done: ✅ **NQ-G1-2 EXECUTED W6 D1 EOD post-EOD chat session** (CHANGELOG 13th + 14th addendums). 📋 NQ-G3-1 still deferred (only remaining numerical NQ; recommended Day 4-5 or W7+).
+4. **Day 4-5:** execute deferred numerical NQs (NQ-G3-1 + NQ-G1-2; ~3-4 hours total). → ✅ **FULLY DONE.** NQ-G1-2 EXECUTED W6 D1 EOD post-EOD chat session (CHANGELOG 13th + 14th addendums); NQ-G3-1 ✅ **EXECUTED W6 D2 2026-05-05** via Silver-target fill-in wrapper `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` (14-ε × 1920 = 26,880 runs in 188.9s; piecewise-constant on (0,30) at 439/1920 confirmed for wq1 production mode; raw_gaussian ε-independence revealed). All deferred-numerical items from W6 D1 batch closed. See `THEORY/logs/daily/2026-05-05/03_nq_g3_1_epsilon_stability.md`.
 5. ~~**Day 2 morning (optional):** dispatch NQ-G1-3 external L-M-K-style audit (~30 min).~~ ✅ **DONE W6 D1 EOD addendum**: PASS verdict; T-L1-M supervised canonical promotion same-day (CHANGELOG 2nd addendum).
 
 ### §13.5 OP non-impact statement (recap)

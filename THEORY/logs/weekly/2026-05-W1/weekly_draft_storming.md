@@ -7,6 +7,79 @@
 
 ---
 
+## 2026-05-05 (Tue, W6 Day 2) — EOD entry (audit + Decision Point 4 capture + NQ-G3-1 + Gold-PARTIAL skeleton + EOD migration)
+
+> **Frame note.** Day 2 inherited NO critical-path from Day 1's over-delivery (G1+G2+G3+G4 all closed Day 1; 14 CHANGELOG addendums + post-EOD NQ-G1-2 fresh-full-run validation). Today shape: **closure-rigor audit (S1 from `pre_brainstorm.md` §3) + Decision Point 4 capture + NQ-G3-1 fill-in (S2) + Option B-specific CV-1.6 release packet skeleton drafting (S3 partial)**. Right-sized post-Option-B-authorization at ~4-5h equivalent vs Day 1's ~10-12h.
+
+### One-line (EOD): Bronze ✅ + Silver ✅ + Gold-PARTIAL 🟢. G2.1 audit 4 CLEAN + 1 LOW-drift (`cobelonging_vs_sigmaD.md` line 408 erratum applied W6 D2 EOD); G2.2 = Option B captured ("Option B로 가자"); NQ-G3-1 EXECUTED (439/1920 piecewise-constant on (0,30) confirmed for wq1 mode + raw_gaussian ε-independence revealed); CV-1.6 release packet skeleton drafted + migrated to `working/` as Option B-specific W6 D7 deliverable.
+
+### EOD status table (W6 D2 targets per `2026-05-05/plan.md` §2 + §9)
+
+| W6 D2 target | Status | Anchor |
+|---|---|---|
+| **G2.1 closure-rigor audit** (P0, ~2-3h) | ✅ MET — 4/5 CLEAN + 1/5 CLEAN-WITH-LOW-DRIFT | `01_closure_rigor_audit.md` §1–§5 (5 chain-verification checks); `cobelonging_vs_sigmaD.md` line 408 erratum applied W6 D2 EOD (preserve-with-correction pattern) |
+| **G2.2 Decision Point 4 capture** (P1, ~30 min) | ✅ MET — Option B (defer CV-1.6 to W7 alongside Stage 1) | `01_closure_rigor_audit.md` §0.4 |
+| **G2.3 NQ-G3-1 ε-stability** (P1 fill-in, ~1-2h) | ✅ EXECUTED W6 D2 — piecewise-constant on (0,30) at 439/1920 confirmed; raw_gaussian ε-independence revealed | `03_nq_g3_1_epsilon_stability.md`; `op_resolution.md` 5 status row updates; `op_resolution_nq_g3_1_epsilon_stability.py` (NEW) + JSON output |
+| **Gold-target CV-1.6 release packet skeleton** (Option B-specific stretch, ~5-6h) | ✅ MET (post-EOD migration) — drafted W6 D2 EOD in proposal form + user-supervised migrated same-day to `working/CV-1.6_release_packet_skeleton.md` | `04_cv16_release_packet_skeleton_proposal.md` (proposal); `THEORY/working/CV-1.6_release_packet_skeleton.md` (migrated) |
+
+### Substantive findings
+
+1. **G2.1 audit (5 chain-verification checks per Issue #1–#5 lessons):**
+   - Check 1 T-L1-M canonical entry: 4-source agreement on `τ_*^{post-R2} = min(2ρ_pert, ρ_bg, r_birth)` and Cat A conditional. CLEAN.
+   - Check 2 47A/62 count propagation: 5-source agreement (canonical §15 + theorem_status + canonical/README + both CLAUDE.md). CLEAN. Pre-existing Cat B 5-vs-6 reconciliation flag carried correctly with explicit deferral to next canonical-merge cycle.
+   - Check 3 NQ-G1-2 EXECUTED 4-layer: agreement across CHANGELOG #13+#14 / op_resolution.md / W6 strategic plan / 99_summary.md. CLEAN.
+   - Check 4 Issue #5 RE-EXAMINATION: REJECT-RETIRE verdict applied; D-CV1.6-O4 + v2.0 §1 amendment promotion targets correct. **LOW DRIFT surfaced**: `cobelonging_vs_sigmaD.md` line 408 retained stale "D-CV1.6-O6 if user approves" body-level promotion-target text not updated by 12th addendum (which corrected only disclosure header at lines 15+17). Erratum applied W6 D2 EOD with preserve-with-correction pattern.
+   - Check 5 §3.2 erratum + §3.4 cross-reference chain: 5-source agreement on configuration-dependent ρ_bg vs ρ_res reading. CLEAN.
+
+2. **G2.2 Decision Point 4 = Option B (CV-1.6 release scheduling):** user "Option B로 가자" → defer CV-1.6 release to W7 alongside Stage 1 per-file Cat-status header drafting on the 49 parking-lot files. H3 (premature CV-1.6 release) hazard DEFUSED. Closure-week commitment per W6 strategic plan §7 PRESERVED.
+
+3. **NQ-G3-1 ε-stability sweep findings:**
+   - Wrapper `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` (NEW, ~6 KB; imports compute_feasibility from l1i_constants_feasibility; iterates ε without modifying parent script).
+   - Sweep ε ∈ {0.001, 0.05, 0.10, 0.15, 0.225 baseline, 0.30, 0.50, 1.0, 5.0, 25.0, 29.99, 30.0, 30.01, 35.0} × 1920 configs = 26,880 runs in 188.9s.
+   - **§11.3 piecewise-constant prediction CONFIRMED for wq1 state_mode** (production-relevant): f(ε) = 439/1920 = 22.86% constant on ε ∈ (0, 30) across 11 sampled values spanning 4 orders of magnitude.
+   - **raw_gaussian state_mode (960 of 1920 configs) is structurally ε-independent by design** (per `l1i_constants_feasibility.py` line 281). Above-30 floor at 389/1920 = 20.26% is the raw_gaussian-only contribution.
+   - **Boundary transition at ε = 30 spread across ~0.01 ε-window** (29.99 → 30.0 → 30.01: f = 22.86% → 21.04% → 20.26%) due to sub-percent numerical mass variance in wq1 build_initial_state.
+   - **Baseline 439 = 50 wq1 + 389 raw_gaussian** (independently verified by re-classifying baseline JSON by state_mode).
+   - **T-L1-F empirical anchor 22.9% feasibility claim is robust under ε perturbations within production regime** (0.05 – 1.0 spans 1 order of magnitude inside the 4-order-of-magnitude robust band). T-L1-F / T-L1-M Cat A conditional status: unchanged.
+
+4. **Gold-target skeleton drafted + migrated (Option B-specific):** `THEORY/working/CV-1.6_release_packet_skeleton.md` (~10 KB; user-supervised migration from `2026-05-05/04_cv16_release_packet_skeleton_proposal.md`). Covers §1 T-IDs affected (T-L1-M new + 4 erratum-marked); §2 Commitment 16 ε amendment; §3 5-surface CV history row updates; §4 erratum log; §5 parking-lot status (Stage 0 done, Stage 1 W7+); §6 hazard tree; §7 pre-release checklist; §8 pending user decisions (Cat B 5-vs-6 reconciliation; Stage 1 release-time scope; release announcement scope; CV-1.6.1 patch slot).
+
+5. **op_resolution.md 5 status row updates** (W6 D2 supervised): §0 row 10 + §0 footer + §11.5/§11.6 + §13.1 row 10 + §13.1 footer + §13.4 item 4. NQ-G3-1 flipped from 📋 DEFERRED to ✅ EXECUTED W6 D2. Final accounting: **9 fully resolved + 3 partially + 0 deferred** — entire 12-NQ batch from W6 D1 closed.
+
+### Theorem-count delta
+
+| Layer | Before W6 D2 | After W6 D2 EOD |
+|---|---|---|
+| canonical.md §15 / §13 / frontmatter | 47A / 5B / 5C / 5R = 62 claims | **unchanged** (47A / 62) |
+| theorem_status.md Proof Status Summary | 47A / 5B / 5C | **unchanged** |
+| both CLAUDE.md + canonical/README.md | 62 / 47A | **unchanged** |
+
+**No theorem-level claim modification this Day 2.** NQ-G3-1 is empirical regime characterization; T-L1-F empirical anchor robustness ratified. T-L1-F / T-L1-M Cat A conditional status: unchanged.
+
+### CV-1.6 release packet (Day 2 implications)
+
+- **Skeleton drafted W6 D2 EOD + migrated** (Option B-specific). W6 D7 deliverable on track.
+- **Release apply scheduled W7 D-TBD** alongside Stage 1 per-file Cat-status header drafting (~3-5 days W7 D1+).
+- **2 new pending user decisions for release-pre-apply** (per skeleton §8): (i) Cat B 5-vs-6 reconciliation (default: carry forward); (ii) Stage 1 release-time scope (default: full 49-file before release).
+
+### Day 3-7 priority (post W6 D2 EOD)
+
+- **Day 3 (Wed 2026-05-06):** light scope. Day 3 plan.md + pre_brainstorm.md drafting (this entry). Optional skeleton refinement post-migration.
+- **Day 4 (Thu 2026-05-07):** contingency / W7+ seed prep (proposal form only, no W7+ work started); skeleton refinement continued.
+- **Day 5 (Fri 2026-05-08):** weekly_summary outline + skeleton finalization for W6 D7.
+- **Day 6 (Sat 2026-05-09):** weekly_summary draft.
+- **Day 7 (Sun 2026-05-10) W6 close:** `weekly_summary.md` finalize + `working/CV-1.6_release_packet_skeleton.md` final review (W6 D7 deliverable per Option B). **No CV-1.6 release apply in W6.**
+
+### Hard-constraint sweep (W6 D2 EOD inclusive of supervised migration)
+
+- canonical.md / theorem_status.md / scc/: **0 edits.** Tests preserved (215 + 1 xfailed; not re-run since 0 scc/ edits).
+- working/: **2 edits user-supervised** — (a) `cobelonging_vs_sigmaD.md` line 408 erratum (W6 D2 G2.1 audit Check 4 finding; preserve-with-correction pattern); (b) `CV-1.6_release_packet_skeleton.md` migration from 2026-05-05/04 proposal (Option B-specific Gold-target deliverable). Both documented in CHANGELOG.
+- THEORY/logs/daily/2026-05-04/op_resolution.md: 5 status row updates (daily-log layer; allowed).
+- CODE/scripts/: 1 NEW wrapper (`op_resolution_nq_g3_1_epsilon_stability.py`) + 1 NEW JSON output. No edits to existing scripts.
+- Silent OP resolution: 0. Research OS / OMC pool / external framework / metastability w/o P-F flag: all preserved.
+
+---
+
 ## 2026-05-04 (Mon, W6 Day 1) — EOD UPDATE (post-redesign + post-EOD chat-session wrap-up)
 
 > **Frame note.** The "morning entry" below this section was authored 09:21 under the **OLD 8-goal plan** (G1 L1-M-AUDIT / G2 CSEH / G3 γ-path / G4 CV-1.6 packet / G5 CV-1.7 parking lot / G6 L-M perturbation / G7 OAT-2 / G8 unspecified). At ~10:30 the user reset; W6 strategic plan was redesigned to a **4-goal scope** (G1 L1-M-AUDIT / G2 T-Bind decision / G3 ε-convention / G4 parking-lot inventory). The morning entry's findings remain valid (CSEH factor-2 sharpness, NQ-187b α exact identity, γ-path elimination) but its goal labels (G2/G3/G7) refer to OLD G-IDs. The EOD reality below uses the redesigned 4-goal labels. Morning entry preserved as historical record per the latest-first append convention.

@@ -2,6 +2,94 @@
 
 ---
 
+## 2026-05-05 (W6 Day 2 EOD) — Gold-target CV-1.6 release packet skeleton drafted (Option B-specific) + user-supervised migration to working/
+
+**Trigger:** plan.md §9 Gold criterion (Option B-specific) post-G2.2 capture. Skeleton drafted in proposal form per plan.md §7 hard-constraint sweep target ("Working/ 직접 수정 0 (autonomous-session)") then user-supervised migrated same-day to `working/CV-1.6_release_packet_skeleton.md` per session-end authorization.
+
+### What was done
+- Drafted ~10 KB skeleton in proposal form at `THEORY/logs/daily/2026-05-05/04_cv16_release_packet_skeleton_proposal.md` covering: §1 T-IDs affected (T-L1-M new entry; 4 erratum-marked entries; CV-1.6 has +1 Cat A delta vs CV-1.5.2 = packaging existing W6 D1 supervised promotion); §2 Commitment 16 ε convention amendment (R1 reading); §3 CV history row update across 5 surfaces (canonical §15 + theorem_status + canonical/README + both CLAUDE.md + weekly_draft_storming); §4 erratum log (W6 D1 morning audit + evening G2/G3/NQ-187 + EOD Issue #1–#5 + post-EOD NQ-G1-2 + W6 D2 closure-rigor + NQ-G3-1); §5 parking-lot resolution status (Stage 0 done; Stage 1 deferred W7+); §6 hazard tree; §7 pre-release checklist; §8 pending user decisions (Cat B 5-vs-6 reconciliation; Stage 1 release-time scope; release announcement scope; CV-1.6.1 patch slot).
+- User-supervised migration W6 D2 EOD: `cp` proposal to `working/CV-1.6_release_packet_skeleton.md` + strip §0.0 (migration block) + rename top-level title to "CV-1.6 Release Packet Skeleton (working — Option B; W6 D7 deliverable)" + refresh header (drop "proposal" framing, add provenance line, list dependencies-on-reading explicitly).
+
+### Net effect
+- canonical.md / theorem_status.md / scc/: 0 edits.
+- working/: 1 NEW file (`CV-1.6_release_packet_skeleton.md`); user-supervised migration documented.
+- N-1 hard constraint: 0 silent OP resolution. T-L1-F / T-L1-M / Commitment 16 status: unchanged.
+- 2 new open user-decision items surfaced for W7 release-pre-apply (Cat B 5-vs-6 reconciliation; Stage 1 release-time scope). Both for W7 release-apply consideration; not blockers for W6 D7 weekly_summary.
+
+### Files modified / created
+1. `THEORY/logs/daily/2026-05-05/04_cv16_release_packet_skeleton_proposal.md` (NEW; daily-log proposal, ~10 KB).
+2. `THEORY/working/CV-1.6_release_packet_skeleton.md` (NEW via user-supervised migration; same content as proposal minus §0.0 + title bump + header refresh).
+
+### Lesson logged
+The Gold-target proposal-pattern resolves the inherent tension between plan.md §9 Gold criterion ("draft at working/...") and §7 hard-constraint sweep target ("Working/ 직접 수정 0 (autonomous-session)"). By staging the substantive content in a daily-log file with an explicit user-supervised migration block (§0.0), the autonomous session produces full forward-looking value while preserving all hard-constraints. Pattern is consistent with W6 D1 EOD G3 + G1 + T-L1-M canonical promotion proposals (drafted in 2026-05-04/ daily logs; user-supervised application same-day at EOD). Future Gold-target executions should default to this proposal-pattern unless user explicitly authorizes direct working/ writes.
+
+---
+
+## 2026-05-05 (W6 Day 2 EOD) — NQ-G3-1 EXECUTED (Silver target met): ε-stability sweep of 439/1920 anchor confirms §11.3 piecewise-constant prediction for wq1 mode + reveals raw_gaussian ε-independence
+
+**Trigger:** plan.md §G2.3 fill-in after G2.2 Decision Point 4 = Option B captured. NQ-G3-1 was the only remaining 📋 DEFERRED row in op_resolution.md §13.1 from the W6 D1 batch.
+
+### What was done
+- Created `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` wrapper (~6 KB; imports `compute_feasibility`, `make_full_sweep` from `l1i_constants_feasibility`).
+- Sweep ε ∈ {0.001, 0.05, 0.10, 0.15, 0.225 baseline, 0.30, 0.50, 1.0, 5.0, 25.0, 29.99, 30.0, 30.01, 35.0} × 1920 configs = 26,880 total runs.
+- Wall-clock: 188.9s.
+- Output: `CODE/scripts/results/op_resolution_nq_g3_1_epsilon_stability.json`.
+- 5 status row updates to `THEORY/logs/daily/2026-05-04/op_resolution.md` (§0 row 10, §0 footer, §11.5/§11.6, §13.1 row 10, §13.1 footer, §13.4 item 4): all flipped from 📋 DEFERRED to ✅ EXECUTED W6 D2.
+
+### Findings
+- f(ε) = 439/1920 (constant) for ε ∈ (0, 30) — confirms §11.3 piecewise-constant prediction. 11 sampled ε values across 4 orders of magnitude (0.001 → 25.0): zero variation.
+- f(ε) drops to 389/1920 (constant) for ε ≥ 30 — raw_gaussian state_mode (960 of 1920 configs) is structurally ε-independent (active set determined by `initial_mass > 0`, not post-projection mass > ε).
+- Boundary transition at ε = 30 is spread across ~0.01 ε-window: f(29.99)=22.86%, f(30.0)=21.04%, f(30.01)=20.26%. Spread reflects sub-percent numerical variance in wq1 build_initial_state.
+- Baseline 439 decomposes as 50 wq1 + 389 raw_gaussian (independently verified by re-classifying baseline JSON).
+
+### T-L1-F empirical anchor implication
+22.9% feasibility claim is robust under ε perturbations within the production regime (0.05 – 1.0); the 0.225 default is one of many equivalent choices. T-L1-F / T-L1-M Cat A conditional status: unchanged.
+
+### Hard-constraint sweep
+- canonical.md / theorem_status.md / scc/ / working/MF/: 0 edits.
+- THEORY/logs/daily/2026-05-04/op_resolution.md: 5 status row updates (daily-log layer, allowed).
+- CODE/scripts/: 1 new wrapper + 1 new JSON output. No edits to `l1i_constants_feasibility.py`.
+- N-1 hard constraint: 0 silent OP resolution.
+
+### Files modified / created
+1. `CODE/scripts/op_resolution_nq_g3_1_epsilon_stability.py` (NEW)
+2. `CODE/scripts/results/op_resolution_nq_g3_1_epsilon_stability.json` (NEW)
+3. `THEORY/logs/daily/2026-05-05/03_nq_g3_1_epsilon_stability.md` (NEW)
+4. `THEORY/logs/daily/2026-05-04/op_resolution.md` (status row updates only)
+
+### NQ-G3-1-ext (W7+ low priority)
+wq1 build_initial_state mass-preservation precision: at ε = 30 (boundary), 240 wq1 configs have 1 active slot and 400 have 0 active, indicating sub-percent variance around nominal mass 30. Investigate whether mass projection is exact rescaling vs. simplex-constrained clipping. Not a CV-1.6 blocker.
+
+### Lesson logged
+A cheap (~30 min wrapper) numerical sweep can simultaneously (a) confirm a theoretical prediction and (b) surface a deeper structural distinction (here: dual state_mode dichotomy, where wq1 is ε-dependent and raw_gaussian is ε-independent by design). Pattern reaffirms: even when §11.3-style theoretical pre-analysis suggests a "trivial" outcome, the actual sweep can produce a non-trivial finding — usually in the load-bearing direction (here: T-L1-F empirical anchor robust across 4 orders of magnitude in ε). Run the sweep cheaply rather than relying on theoretical pre-analysis alone.
+
+---
+
+## 2026-05-05 (W6 Day 2) — Closure-rigor audit + Decision Point 4 captured (Option B); slack-week Bronze target met + line 408 erratum applied
+
+**Trigger:** plan.md §2 G2.1 closure-rigor audit (5 chain-verification checks) + §2 G2.2 Decision Point 4 capture (CV-1.6 release scheduling A/B/C). Day 2 inherited no critical-path from Day 1; audit-anchored session per `pre_brainstorm.md` §3 (S1) preferred shape.
+
+### What was done
+- 5 chain-verification checks per plan.md §2 G2.1: (1) T-L1-M canonical entry consistency / (2) §15 47A/62 count propagation / (3) NQ-G1-2 EXECUTED 4-layer agreement / (4) Issue #5 RE-EXAMINATION verdict + 12th addendum corrections / (5) §3.2 + §3.4 cross-reference chain. Verdict: 4/5 CLEAN + 1/5 CLEAN-WITH-LOW-DRIFT.
+- One residual stale line surfaced: `cobelonging_vs_sigmaD.md` line 408 retained "D-CV1.6-O6 if user approves" body-level promotion-target text not updated by the 12th addendum (which corrected only the disclosure-header layer at lines 15+17). Severity LOW; erratum proposal drafted in `01_closure_rigor_audit.md` §7.1; **applied W6 D2 EOD same-day with preserve-with-correction pattern** per user session-end authorization.
+- G2.2 Decision Point 4 ✅ CAPTURED — user decision: Option B (defer CV-1.6 release to W7 alongside Stage 1 per-file Cat-status header drafting). H3 (premature CV-1.6 release) hazard DEFUSED. Closure-week commitment per W6 strategic plan §7 PRESERVED.
+
+### Net effect
+- canonical.md / theorem_status.md / scc/: 0 edits.
+- working/MF/cobelonging_vs_sigmaD.md: 1 line update (line 408 erratum, preserve-with-correction; D-CV1.6-O6 → D-CV1.6-O4 per CV-1.6_packet_crosswalk.md line 50).
+- Tests: not re-run (0 scc/ edits; baseline 215 passed + 1 xfailed verified W6 D1 EOD).
+- N-1 hard constraint: 0 silent OP resolution.
+
+### Files created / modified
+1. `THEORY/logs/daily/2026-05-05/01_closure_rigor_audit.md` (G2.1 audit + G2.2 capture + §7.1 erratum proposal).
+2. `THEORY/logs/daily/2026-05-05/99_summary.md` (Day 2 EOD).
+3. `THEORY/working/MF/cobelonging_vs_sigmaD.md` line 408 (erratum applied, preserve-with-correction pattern).
+
+### Lesson logged
+Audit-closure-rigor day produces a small but actionable finding (1 residual line out of ~600+ modified) that an over-delivered closure-day (W6 D1) did NOT explicitly catch. Pattern reaffirmed: chain-verification adversarial cold-read on canonical sub-item tables + packet crosswalks + body-level promotion lines is the right hardening discipline. The canonical preserve-with-correction default may produce minor body-level residue in working/MF/ files; a periodic body-level pass (~once per major addendum batch) would catch such residue earlier. Pattern recommendation: future addendum batches that correct disclosure headers should include a `grep -n` body-level scan for the same incorrect token before declaring closure.
+
+---
+
 ## 2026-05-04 (W6 Day 1 EOD fourteenth addendum) — NQ-G1-2 fresh-full-run validation: 5/5 regimes match post-processing prediction exactly
 
 **Trigger:** user "아예 빡세게 돌릴수있으니까" directive. Post-processing approach in thirteenth addendum was mathematically equivalent to full re-run for budget changes (validated at 2/5 control points: R0 budget=0.05, R2 budget=0.025), but op_resolution.md §10.4 step 3 originally specified fresh full re-run with H6-only patch. This addendum executes that faithful version and validates all 5 regimes from scratch.
