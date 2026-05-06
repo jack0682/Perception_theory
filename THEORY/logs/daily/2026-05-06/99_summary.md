@@ -158,3 +158,156 @@ The most substantial Day 3 advance. The K-field labeled-index conflict with pre-
 ---
 
 **End of `99_summary.md`. W6 Day 3 complete. Bronze ✅ Silver ✅ Gold ✅. All 15 hard constraints PASS. W7 D1 next: exp58 execution + canonical §0 ToC.**
+
+---
+
+## APPENDIX — W6 D4 Theory Development Closeout (Sessions A–Y, 2026-05-06)
+
+*Appended EOD 2026-05-06. This appendix covers theory-side work (Sessions A–Y) conducted after the W6 D3 administrative session above. No conflict with W6 D3 constraints — theory sessions operated in a separate reasoning context with their own hard constraints (no Package II, no T-MF-Synthesis promotion, no OP-0005 fully resolved).*
+
+---
+
+### A1. Final State
+
+| Item | Value |
+|---|---|
+| Canonical version | **CV-1.11** |
+| Theorem count | **54A / 14B / 5C / 5R = 78 claims** |
+| Proved fraction | ~69% fully proved |
+| pytest | 215 passed, 1 xfailed |
+| Latest promoted theorem | **T-K-Select-OBS Cat B** (Session Y) |
+| canonical.md frontmatter | Fixed closeout (id/version: CV-1.11; title updated) |
+
+---
+
+### A2. Major Work Completed Today (Sessions A–Y, Chronological)
+
+**Sessions A–E (CV-1.6):** Stereo-SCC extension. T-ST-5a hard-depth locking promoted Cat A (gaps G1–G4 closed). D-ST-1..5 Cat B registered. T-OP6-B Cat B entry added.
+
+**Session F–G (CV-1.6 continued):** T-ST-5b formally signed off Cat B. Narrow claim: full SCC energy only, GL-only NULL, monotonicity not established. exp02e 6/6 SUPPORTED at β=10.
+
+**Sessions H–I (CV-1.7):** P-F stochastic foundation. T-P-F-ε0 Cat A (Gibbs continuity ε→0). T-P-F-ε0-K Cat B (Kramers exponent stability, conditional H5).
+
+**Session K (CV-1.7 amendment):** T-OP6-B promoted Cat B → Cat A. Blockers B1–B4 all closed. OP-0006 RESOLVED.
+
+**Sessions M–N–O (CV-1.8):** P-F-A1 Package I registration and promotion. T-PF-A1-AR + T-PF-A1-SDE Cat A (field polytope + reflected Langevin). T-PF-A1-GI + T-PF-A1-PE initially Cat B.
+
+**Session P (CV-1.9):** T-PF-A1-GI + T-PF-A1-PE promoted Cat B → Cat A. Package I fully Cat A. Heat kernel + L² kernel uniqueness; Payne-Weinberger 1960 + L²→TV Cauchy-Schwarz.
+
+**Session Q–R (CV-1.10):** T-K-Select-PF Cat B canonical. Equilibrium K-selection via Gibbs sector mass. OP-0005-EQ partially resolved. Sector K_feas §3.5 tightened.
+
+**Session S–T (working):** T-K-Select-OBS first defined as working Cat B candidate. OP-0005-OBS: OPEN → STRUCTURED → Cat B path confirmed. LM1–LM3 conditions identified.
+
+**Session U:** T-MF-Synthesis conceptual future candidate. 13-phase formation life-cycle defined. Gap table (10 missing layers). Not promoted.
+
+**Session V:** T-Temporal-Identity working Cat B candidate (parts a,b,d). OP-0011 structured (component confinement). OP-0012 partially structured.
+
+**Session W:** T-σ-Inherit working Cat B candidate. σ-signature inheritance through PersComp correspondence. OP-0008 partially structured.
+
+**Session X:** exp83 (temporal identity transport, 4 scenarios ALL PASSED) + exp84 (sigma inheritance, 5 scenarios ALL PASSED). Numerical anchors registered in working files.
+
+**Session Y (CV-1.11):** T-K-Select-OBS promoted canonical Cat B. Canonical likelihood §2.4 added (LM1–LM3 explicitly verified). exp85 ALL PASSED (3/3: obs_2blobs δF=+89.9, obs_1blob δF=+107.4, λ→0 δF=+0.80). OP-0005-OBS: STRUCTURED → PARTIALLY RESOLVED.
+
+**Closeout session:** canonical.md frontmatter fixed (CV-1.10 → CV-1.11 in id/version/title/naming convention/closing summary). Daily log, CHANGELOG, weekly draft updated. Tomorrow's folder prepared.
+
+---
+
+### A3. Current Architecture State
+
+```
+Perception pipeline:
+  SCC (cohesion-first field)
+    → RelationWorld (relation/world grammar over SCC formations)
+      → ONN (ontological/semantic placement)
+        → ORTSF (action, attention, memory, delay-robust control)
+```
+
+- **SCC** = perceptual objecthood layer; primitive is u_t : X_t → [0,1]; objects are derivative.
+- **RelationWorld** = organizes SCC formations into discrete relational grammar; may be ontologically broader, but perceptual generation begins with SCC.
+- **ONN** = meaning/ontological placement; constraint-based fixed-point solver over relations.
+- **ORTSF** = action, attention, memory, and delay-robust control stabilization.
+
+The perceptual pipeline direction is: cohesion → relation → meaning → action. Ontological generality ordering is separate from generation ordering.
+
+---
+
+### A4. Theorem Status Changes (W6 D4)
+
+| Claim | Status after W6 D4 | Notes |
+|---|---|---|
+| T-ST-5a | Cat A | Hard-depth topological locking; G1–G4 closed Session E |
+| T-ST-5b | Cat B | Narrow: full SCC only, GL NULL, monotonicity not established |
+| T-OP6-B | Cat A | PersRidge boundary equivalence; B1–B4 closed Session K; OP-0006 RESOLVED |
+| T-P-F-ε0 | Cat A | Gibbs measure continuity ε→0 |
+| T-P-F-ε0-K | Cat B | Kramers exponent stability, conditional H5 |
+| T-PF-A1-AR | Cat A | Field polytope compact convex + affine isometry |
+| T-PF-A1-SDE | Cat A | Reflected Langevin SDE well-posedness (Lions-Sznitman) |
+| T-PF-A1-GI | Cat A | Gibbs measure unique invariant (heat kernel + L² kernel) |
+| T-PF-A1-PE | Cat A | Poincaré inequality + exponential ergodicity (Payne-Weinberger) |
+| T-K-Select-PF | Cat B | Equilibrium K-selection via Gibbs sector mass; OP-0005-EQ partial |
+| T-K-Select-OBS | Cat B | Observation-conditioned K-selection via posterior; OP-0005-OBS partial |
+| T-Temporal-Identity | Working Cat B | Parts a,b,d; part c Cat C (OP-0011); exp83 ALL PASSED |
+| T-σ-Inherit | Working Cat B | Parts a,b,d-dir,e; parts c,d-σ_std Cat C (OP-0008 W9+); exp84 ALL PASSED |
+| T-MF-Synthesis | Future candidate | Conceptual synthesis; not promoted; blocked by σ_standard (OP-0008) |
+
+---
+
+### A5. Open Problem Status Changes (W6 D4)
+
+| OP | Status | Notes |
+|---|---|---|
+| OP-0005 overall | OPEN | 3-way split: EQ/OBS/DYN |
+| OP-0005-EQ | PARTIALLY RESOLVED | T-K-Select-PF Cat B; no Kramers |
+| OP-0005-OBS | PARTIALLY RESOLVED | T-K-Select-OBS Cat B; no temporal dynamics |
+| OP-0005-DYN | OPEN | Package II / Eyring-Kramers; W9+ |
+| OP-0006 | RESOLVED | T-OP6-B Cat A; d_H ≤ 2(α/β)^{1/2} under H1–H5 |
+| OP-0008 | PARTIALLY STRUCTURED | σ_standard merge/split Wigner-projection; W9+; OP-0008-MERGE/SPLIT sub-items |
+| OP-0009 | OPEN | Architecture migration deferred; 7 sub-items; W11–W12 |
+| OP-0011 | STRUCTURED | Component confinement path; blocker for T-Temporal-Identity part (c) |
+| OP-0012 | PARTIALLY STRUCTURED | Compositional consistency (OP-0012-CC) for temporal composition |
+| OP-0021 | OPEN | T_* axiomatic registration; prerequisite for Package II |
+
+---
+
+### A6. Experiments Completed (W6 D4)
+
+| Experiment | Result | Theorem relation | Key limitation |
+|---|---|---|---|
+| exp83 | ALL PASSED (4/4 scenarios) | T-Temporal-Identity (parts a,b,d) | Numerical anchor only; not a proof; PersComp proxy via threshold |
+| exp84 | ALL PASSED (5/5 scenarios) | T-σ-Inherit (parts a,b,d-dir) | Numerical anchor only; toy σ=(mass,centroid,inertia); no σ_standard |
+| exp85 | ALL PASSED (3/3 scenarios) | T-K-Select-OBS (§8.3 Method B) | Zero-temperature MAP evaluation; not re-optimization under combined objective |
+| exp02e | 6/6 SUPPORTED (β=10, full SCC) | T-ST-5b Cat B narrow claim | GL-only NULL; β=20 PARTIAL; monotonicity not established |
+| exp06 | 5/5 shadow + 5/5 blur | T-OP6-B Cat A | Under H1–H5 only; not general |
+
+---
+
+### A7. Non-Overclaim Locks (W6 D4 EOD)
+
+- OP-0005 not fully resolved; overall status OPEN.
+- OP-0005-DYN OPEN; Package II not started.
+- Eyring-Kramers rates not claimed from Package I.
+- T-MF-Synthesis NOT promoted to any canonical category.
+- T-Temporal-Identity NOT canonical; working Cat B candidate only.
+- T-σ-Inherit NOT canonical; working Cat B candidate only.
+- OP-0008 NOT resolved; σ_standard / Wigner projection Cat C (W9+).
+- T-ST-5b monotonicity not established; analytical barrier lower bound absent.
+- K-field remains a local chart convenience, not a foundational primitive.
+- exp83/84/85 are numerical anchors, NOT proofs.
+- T_* remains axiomatic (OP-0021); Package II (Eyring-Kramers) conditional on H5 + OP-0021.
+
+---
+
+### A8. Carry-Forward to W7 D1
+
+Priority list:
+1. **T-Temporal-Identity Cat B review** — tighten assumptions; define narrow Cat B scope; review exp83.
+2. **T-σ-Inherit Cat B review** — review σ-inheritance scope; use exp84; keep σ_standard Cat C.
+3. **T-MF-Synthesis Cat B preparation** — after T-Temporal-Identity + T-σ-Inherit canonical.
+4. **OP-0021 T_* registration** — prerequisite for Package II.
+5. **OP-0005-DYN / Package II** — W9+; not before H5 Morse stability + OP-0021.
+6. **OP-0009 architecture migration** — W11–W12.
+7. **Production code helpers** — temporal identity / sigma inheritance scc/ module, if canonical.
+
+---
+
+*End W6 D4 Appendix. Total W6 D4 theory sessions: A–Y (25 sessions). CV-1.11 sealed.*

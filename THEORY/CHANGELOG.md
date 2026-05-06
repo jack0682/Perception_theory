@@ -2,6 +2,43 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — EOD Closeout: CV-1.11 Sealed; logs + W7 plan prepared; canonical.md frontmatter fixed
+
+**Trigger:** End-of-day closeout session. No new theorems. Documentation and preparation only.
+
+### Summary
+
+- **Final count: 54A/14B/5C/5R = 78 claims** (~69% fully proved). Version: CV-1.11.
+- **canonical.md frontmatter fixed**: `id`, `version`, title, version naming convention, closing summary, and open-problems header all updated from CV-1.10 → CV-1.11. This was the only inconsistency found.
+- **T-K-Select-OBS** Cat B canonical (Session Y). OP-0005-OBS partially resolved.
+- **T-K-Select-PF** Cat B canonical (Session R). OP-0005-EQ partially resolved.
+- **T-Temporal-Identity** working Cat B candidate; exp83 ALL PASSED (4/4 scenarios).
+- **T-σ-Inherit** working Cat B candidate; exp84 ALL PASSED (5/5 scenarios).
+- **T-MF-Synthesis** future candidate only; NOT promoted.
+- **exp85** ALL PASSED (3/3 scenarios; obs_2blobs δF=+89.9, obs_1blob δF=+107.4, λ→0 δF=+0.80).
+- **OP-0011** STRUCTURED (component confinement; blocker T-Temporal-Identity part c).
+- **OP-0012** PARTIALLY STRUCTURED (compositional consistency OP-0012-CC).
+- **OP-0008** PARTIALLY STRUCTURED (σ_standard Wigner projection; W9+).
+- **OP-0021** OPEN (T_* registration; Package II prerequisite).
+- pytest: **215 passed, 1 xfailed** — clean.
+- Daily log `2026-05-06/99_summary.md` W6 D4 appendix added.
+- Weekly draft `2026-05-W1/weekly_draft_storming.md` W6 D4 section added.
+- Tomorrow folder `2026-05-07/` created with `00_plan.md` and `01_pre_brainstorm.md`.
+- Perception stack stub `working/MF/scc_relation_onn_ortsf_perception_stack.md` created.
+
+### Non-claims preserved
+
+- OP-0005 overall OPEN; OP-0005-DYN OPEN; Package II not started; Kramers rates not claimed.
+- T-MF-Synthesis NOT canonical. T-Temporal-Identity NOT canonical. T-σ-Inherit NOT canonical.
+- OP-0008 NOT resolved. σ_standard Cat C. T-ST-5b monotonicity not established.
+- K-field remains local chart, not foundation. T_* axiomatic (OP-0021).
+
+### Recommended next session (W7 D1)
+
+Option A: T-Temporal-Identity Cat B review (tighten assumptions, narrow Cat B scope, review exp83). See `2026-05-07/00_plan.md`.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session Y: T-K-Select-OBS promoted canonical Cat B; exp85 ALL PASSED; CV-1.11; count 77→78 (54A/14B/5C/5R)
 
 **Trigger:** "Proceed to Session Y — T-K-Select-OBS Canonical Cat B Preparation." CV-1.11 target. No Package II/Kramers; no T-MF-Synthesis; no OP-0005 fully resolved.

@@ -128,7 +128,9 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 | (c) | Kernel independence | Cat C | OP-0011 component confinement |
 | (d) | Reduction to persist_transport ($K=1$) | Working Cat B | Routine algebra |
 
-*Session V note (2026-05-06): Component correspondence score $S_{ij}^0$ defined. Five event types defined with threshold conditions. Proof sketch for part (b) written. OP-0011 structured: component confinement path identified. OP-0012 partially structured: OP-0012-CC (compositional consistency condition) defined as Cat B path. exp55 four-scenario plan written. Canonical count unchanged at 77.*
+*Session V note (2026-05-06): Component correspondence score $S_{ij}^0$ defined. Five event types defined with threshold conditions. Proof sketch for part (b) written. OP-0011 structured: component confinement path identified. OP-0012 partially structured: OP-0012-CC (compositional consistency condition) defined as Cat B path. exp55 four-scenario plan written (superseded — see Session X). Canonical count unchanged at 77.*
+
+*Session X note (2026-05-06): exp83 (renumbered from exp55 plan) ALL PASSED (4/4 scenarios: A=CONT, B=MERGE, C=SPLIT, D=BIRTH+CONT). Numerical anchor for T-Temporal-Identity parts (a,b,d). Working file `temporal_identity_perscomp_transport.md` §9b updated. Canonical count unchanged at 78 (CV-1.11).*
 
 ---
 
@@ -155,7 +157,9 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | (d-σ_standard) | Post-split $\sigma_{\mathrm{standard}}$ | Cat C | OP-0008-SPLIT W9+ |
 | (e) | $R_\sigma$ decomposition well-defined | Working Cat B | Metric properties of $d_\sigma$ |
 
-*Session W note (2026-05-06): Component signature $\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$ defined. Inheritance map $\Phi$ per five event types. OP-0008 restructured into four sub-problems: CONT (PARTIALLY STRUCTURED), MERGE (PARTIALLY STRUCTURED — centroid+orientation Cat B, σ_standard Cat C), SPLIT (STRUCTURED — direction Cat B, σ_standard Cat C), DIST (OPEN new sub-problem). MERGE centroid Cat B via mass-weighted average; MERGE orientation Cat B via parallel-axis theorem. σ_standard under merge/split Cat C (Wigner-projection W9+). exp56 four-scenario plan written (A=CONT, B=MERGE, C=SPLIT, D=BIRTH). New code functions planned: `phi_merge_centroid`, `phi_merge_orientation` (deferred). Canonical count unchanged at 77.*
+*Session W note (2026-05-06): Component signature $\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$ defined. Inheritance map $\Phi$ per five event types. OP-0008 restructured into four sub-problems: CONT (PARTIALLY STRUCTURED), MERGE (PARTIALLY STRUCTURED — centroid+orientation Cat B, σ_standard Cat C), SPLIT (STRUCTURED — direction Cat B, σ_standard Cat C), DIST (OPEN new sub-problem). MERGE centroid Cat B via mass-weighted average; MERGE orientation Cat B via parallel-axis theorem. σ_standard under merge/split Cat C (Wigner-projection W9+). exp56 four-scenario plan written (superseded — see Session X). New code functions planned: `phi_merge_centroid`, `phi_merge_orientation` (deferred). Canonical count unchanged at 77.*
+
+*Session X note (2026-05-06): exp84 (renumbered from exp56 plan) ALL PASSED (5/5 scenarios: A=CONT, B=MERGE centroid, C=MERGE orientation, D=SPLIT direction, E=BIRTH). Numerical anchor for T-σ-Inherit parts (a,b,d-dir,e). Working file `sigma_inherit_k_jump.md` §8b updated. Canonical count unchanged at 78 (CV-1.11).*
 
 ---
 

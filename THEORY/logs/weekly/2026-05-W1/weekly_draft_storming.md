@@ -7,6 +7,60 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Major Consolidation: CV-1.10 → CV-1.11; T-K-Select-OBS Cat B; temporal/σ working candidates; exp83/84/85 ALL PASSED
+
+> **Frame note.** Day 4 sessions (A–Y) were theory-development sessions with tight hard constraints: no Package II, no T-MF-Synthesis promotion, no OP-0005 fully resolved. EOD closeout sealed CV-1.11.
+
+### One-line: CV-1.11 sealed. 77→78 claims (54A/14B/5C/5R). T-K-Select-OBS Cat B canonical. T-Temporal-Identity + T-σ-Inherit working candidates with numerical anchors. exp83/84/85 ALL PASSED. pytest 215+1xfailed clean.
+
+### Major advances
+
+| Item | Status | Notes |
+|---|---|---|
+| CV-1.10 → CV-1.11 | Sealed | T-K-Select-OBS Cat B (+1B); OP-0005-OBS partially resolved |
+| T-K-Select-PF | Cat B canonical | Equilibrium K-selection via Gibbs sector mass; OP-0005-EQ partial |
+| T-K-Select-OBS | Cat B canonical | Posterior K-selection; canonical likelihood §2.4; exp85 ALL PASSED |
+| P-F-A1 Package I | Fully Cat A | AR/SDE/GI/PE all Cat A; Gibbs invariant + Poincaré ergodicity |
+| T-Temporal-Identity | Working Cat B | Parts a,b,d; OP-0011 structured; exp83 4/4 PASS |
+| T-σ-Inherit | Working Cat B | Parts a,b,d-dir,e; OP-0008 partially structured; exp84 5/5 PASS |
+| T-MF-Synthesis | Future candidate | 13-phase life-cycle + gap table; NOT promoted |
+| OP-0005 EQ/OBS split | Advanced | EQ + OBS partially resolved; DYN OPEN (W9+) |
+| OP-0006 | RESOLVED | T-OP6-B Cat A; d_H ≤ 2(α/β)^{1/2} under H1–H5 |
+| OP-0011/0012 | STRUCTURED / PARTIAL | Component confinement + compositional consistency paths |
+| OP-0008 | PARTIALLY STRUCTURED | σ_standard Wigner projection; W9+ |
+
+### Perception stack clarified
+
+```
+SCC (cohesion-first field) → RelationWorld (relation/world grammar) → ONN (semantic placement) → ORTSF (action/control)
+```
+
+- Perceptual generation order: cohesion → relation → meaning → action.
+- RelationWorld may be ontologically broader; SCC is the perceptual entry point.
+- Stub document: `THEORY/working/MF/scc_relation_onn_ortsf_perception_stack.md`.
+
+### Theorem-count delta (W6 D4)
+
+| Layer | Before W6 D4 | After W6 D4 |
+|---|---|---|
+| canonical.md | 54A/13B/5C/5R = 77 (CV-1.10) | **54A/14B/5C/5R = 78 (CV-1.11)** |
+| working candidates | 0 | T-Temporal-Identity + T-σ-Inherit (not canonical) |
+
+### Remaining blockers
+
+- OP-0005-DYN / Package II: W9+ (H5 Morse + OP-0021 T_*).
+- OP-0008 σ_standard: W9+; blocks T-MF-Synthesis Cat B.
+- T-Temporal-Identity / T-σ-Inherit: not yet canonical; Cat B review target W7.
+- OP-0009 architecture migration: W11–W12.
+
+### Carry-forward to W7 D1
+
+1. T-Temporal-Identity Cat B review (recommended first task).
+2. T-σ-Inherit Cat B review.
+3. See `2026-05-07/00_plan.md` for full option list.
+
+---
+
 ## 2026-05-06 (Wed, W6 Day 3) — EOD entry (Redirection Mode v3: 5-debt substantive paydown, 22 output files, all 15 HC PASS)
 
 > **Frame note.** Day 3 = "redirection mode v3" (deliberate debt-paydown day). Plan v3 had 12 goals across 5 accumulated debts (W1 ontological-foundational, W2 production reach, W3 OP stagnation, W4 metric policy, W5 P-F framework). Session resumed from compaction mid-G3.4; completed G3.4 through G3.12 + EOD files.
