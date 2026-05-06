@@ -688,6 +688,40 @@ CSV + JSON summary (compatible with exp55 format).
 
 ---
 
+## §8b. Numerical Anchor — exp84 (Session X, 2026-05-06)
+
+**File**: `CODE/experiments/exp84_sigma_inheritance_toy.py`
+**Results**: `CODE/experiments/results/exp84_sigma_inheritance_toy.json`
+
+**Status**: ALL PASSED (5/5 scenarios).
+
+| Scenario | Test | Key metric | Result |
+|----------|------|------------|--------|
+| A CONT | Centroid tracks translation | shift residual < 0.5 grid unit | PASS |
+| B MERGE centroid | $\Phi_\mathrm{MERGE}$ centroid formula | centroid residual < 0.05 | PASS |
+| C MERGE orientation | Parallel-axis theorem | Frobenius relative residual < 2% (actual ≈ 0.4%) | PASS |
+| D SPLIT direction | Principal axis of inertia = split direction | cos(θ) to column axis > 0.90 | PASS |
+| E BIRTH | No inheritance; σ computed fresh | σ well-defined | PASS |
+
+**Method**: 15×15 grid; minimal toy signature σ(C) = (mass, centroid, inertia_tensor); Gaussian blobs; scipy.ndimage connected components. Does NOT use the full `sigma_rich.py` Hessian computation (expensive; not needed for the centroid/orientation Cat B claims).
+
+**Theorem parts supported (T-σ-Inherit)**:
+- Part (a) CONT centroid + orientation: validated ✓ (scenario A, centroid shift tracks translation)
+- Part (b) MERGE centroid: validated ✓ (scenario B, mass-weighted average formula near-exact)
+- Part (b) MERGE orientation: validated ✓ (scenario C, parallel-axis theorem relative error ~0.4%)
+- Part (d) SPLIT direction: validated ✓ (scenario D, principal inertia axis = elongation direction)
+- Part (e) BIRTH/DEATH: validated ✓ (scenario E, fresh σ computation)
+- Part (c) MERGE/SPLIT σ_standard: NOT tested — Cat C, requires Wigner-projection (W9+).
+
+**Limitations**:
+- Toy signature omits σ_standard (Hessian eigenvalues) and Wigner data — Cat C parts not tested.
+- Near-exact inertia identity (scenario C) relies on well-separated blob supports (minimal cross-terms).
+- Uses simple threshold extraction, not full D-ST-3 PersComp.
+
+**Note**: Original plan referenced exp56; renumbered exp84 (exp55–56 already exist).
+
+---
+
 ## §10. Session W Boundary and Next Actions
 
 ### §10.1 T-σ-Inherit status

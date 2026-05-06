@@ -1,0 +1,124 @@
+{
+  "experiment": "exp83_temporal_identity_transport",
+  "session": "Session X (W6 D4, 2026-05-06)",
+  "anchor_for": "T-Temporal-Identity (working Cat B candidate, Session V)",
+  "note": "Numerical anchor only. Not a proof. Validates component correspondence R_{t->s} event classification across 4 scenarios. Canonical spec \u00a75.2-5.6.",
+  "grid_n": 15,
+  "thresholds": {
+    "pers_thresh": 0.28,
+    "tau_id": 0.1,
+    "tau_split": 0.1,
+    "tau_merge": 0.1,
+    "tau_birth": 0.05,
+    "tau_death": 0.05
+  },
+  "results": [
+    {
+      "scenario": "A_translation",
+      "K_t": 2,
+      "K_s": 2,
+      "events": [
+        {
+          "type": "CONT",
+          "t": 0,
+          "s": 0
+        },
+        {
+          "type": "CONT",
+          "t": 1,
+          "s": 1
+        }
+      ],
+      "detected_types": [
+        "CONT"
+      ],
+      "expected_types": [
+        "CONT"
+      ],
+      "passed": true,
+      "margin_delta_sep": 0.7259243390148086,
+      "ot_converged": true,
+      "ot_iters": 35
+    },
+    {
+      "scenario": "B_merge",
+      "K_t": 2,
+      "K_s": 1,
+      "events": [
+        {
+          "type": "MERGE",
+          "t": [
+            0,
+            1
+          ],
+          "s": 0
+        }
+      ],
+      "detected_types": [
+        "MERGE"
+      ],
+      "expected_types": [
+        "MERGE"
+      ],
+      "passed": true,
+      "margin_delta_sep": null,
+      "ot_converged": true,
+      "ot_iters": 15
+    },
+    {
+      "scenario": "C_split",
+      "K_t": 1,
+      "K_s": 2,
+      "events": [
+        {
+          "type": "SPLIT",
+          "t": 0,
+          "s": [
+            0,
+            1
+          ]
+        }
+      ],
+      "detected_types": [
+        "SPLIT"
+      ],
+      "expected_types": [
+        "SPLIT"
+      ],
+      "passed": true,
+      "margin_delta_sep": null,
+      "ot_converged": true,
+      "ot_iters": 15
+    },
+    {
+      "scenario": "D_birth_cont",
+      "K_t": 1,
+      "K_s": 2,
+      "events": [
+        {
+          "type": "CONT",
+          "t": 0,
+          "s": 0
+        },
+        {
+          "type": "BIRTH",
+          "t": null,
+          "s": 1
+        }
+      ],
+      "detected_types": [
+        "BIRTH",
+        "CONT"
+      ],
+      "expected_types": [
+        "CONT",
+        "BIRTH"
+      ],
+      "passed": true,
+      "margin_delta_sep": 0.714305884603712,
+      "ot_converged": true,
+      "ot_iters": 50
+    }
+  ],
+  "all_passed": true
+}

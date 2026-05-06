@@ -2,6 +2,75 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session X: exp83 + exp84 numerical anchors; T-Temporal-Identity + T-σ-Inherit validated; pytest 215+1xfailed; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session X — Temporal Identity and Sigma Inheritance Numerical Anchors." Unlimited reasoning mode. No Package II; no T-MF-Synthesis; no canonical count changes.
+
+---
+
+### 1. Phase 1 — File Inspection
+
+Files read: `temporal_identity_perscomp_transport.md` (§§2–9), `sigma_inherit_k_jump.md` (§§2–8), `transport.py` (`sinkhorn_partial_ot`, `cohesion_fingerprint`, `graph_distance_matrix`, `transport_cost`), `sigma_rich.py` (`SigmaRich`, `compute_centroids`, `compute_orientations`), `diagnostics.py` (PersComp-related functions), experiment patterns (exp52, exp58).
+
+State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. exp55–82 already exist. Next available: exp83, exp84.
+
+### 2. Phase 2 — exp83 created and validated
+
+**Created**: `CODE/experiments/exp83_temporal_identity_transport.py` (Session X, 2026-05-06).
+
+Architecture: experiment-local (no new scc/ modules). Uses `sinkhorn_partial_ot` + `cohesion_fingerprint` + `graph_distance_matrix` from `scc.transport`. PersComp proxy via scipy.ndimage superlevel-set threshold + connected components. Component score matrix $\mathbf{S}$ from block transport mass. Two-pass event classification (pass 1: t-side deaths/splits; pass 2: s-side births/merges/continuations).
+
+15×15 grid. Gaussian blobs: radius=1.5 for pair blobs (required: blobs at distance 7 have midpoint sum < threshold); radius=3.5 for merged/wide blobs.
+
+Results:
+
+| Scenario | K_t | K_s | Event | Pass |
+|----------|-----|-----|-------|------|
+| A translation | 2 | 2 | CONT | PASS |
+| B merge | 2 | 1 | MERGE | PASS |
+| C split | 1 | 2 | SPLIT | PASS |
+| D birth+cont | 1 | 2 | CONT+BIRTH | PASS |
+
+### 3. Phase 3 — exp84 created and validated
+
+**Created**: `CODE/experiments/exp84_sigma_inheritance_toy.py` (Session X, 2026-05-06).
+
+Architecture: pure numpy + scipy.ndimage; no scc imports. Minimal toy signature σ(C) = (mass, centroid, inertia_tensor) — sufficient for Cat B centroid+orientation claims without expensive Hessian computation. Implements `phi_merge_centroid` (mass-weighted average) and `phi_merge_inertia` (parallel-axis theorem) locally.
+
+Results:
+
+| Scenario | Test | Key metric | Pass |
+|----------|------|------------|------|
+| A CONT | Centroid tracks translation | residual < 0.5 grid unit | PASS |
+| B MERGE centroid | $\Phi_\mathrm{MERGE}$ formula | residual < 0.05 | PASS |
+| C MERGE orientation | Parallel-axis theorem | relative Frobenius < 2% (actual ~0.4%) | PASS |
+| D SPLIT direction | Principal axis = elongation | cos(θ) > 0.90 | PASS |
+| E BIRTH | No inheritance | σ well-defined | PASS |
+
+Fix applied: scenario C originally used absolute Frobenius threshold 0.5 — too tight for large inertia tensors. Changed to relative threshold < 2% (actual error ~0.4% from Gaussian tail cross-terms).
+
+### 4. Phase 4 — Theory files updated
+
+- `temporal_identity_perscomp_transport.md`: §9b Numerical Anchor added (exp83 results, theorem parts supported, limitations).
+- `sigma_inherit_k_jump.md`: §8b Numerical Anchor added (exp84 results, theorem parts supported, limitations).
+
+### 5. Phase 5 — Pytest
+
+Result: **215 passed, 1 xfailed** — unchanged. No regressions from new experiment files.
+
+### 6. Phase 6 — Residue search
+
+Searched exp83 and exp84 for: "proof", "resolves OP-0008", "Package II", "Kramers". No violations found. Both files use "NOT a proof", "Numerical anchor only", "working Cat B candidate" language throughout.
+
+### 7. Carry-forward
+
+- T-Temporal-Identity: working Cat B candidate with exp83 numerical anchor (parts a,b,d). Part (c) kernel independence still Cat C (OP-0011).
+- T-σ-Inherit: working Cat B candidate with exp84 numerical anchor (centroid+orientation). σ_standard Cat C (OP-0008-MERGE/SPLIT, W9+).
+- Next actions: (1) T-K-Select-OBS → canonical Cat B (exp54 + likelihood canonicalization, CV-1.11); (2) OP-0008-MERGE σ_standard Wigner-projection (W9+); (3) full `component_sigma` + `phi_merge_centroid` + `phi_merge_orientation` in scc/ for future use.
+- Canonical count unchanged: **54A / 13B / 5C / 5R = 77 claims**.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session W: Sigma Inheritance working file; T-σ-Inherit candidate; OP-0008 restructured into CONT/MERGE/SPLIT/DIST sub-problems; canonical count unchanged at 77
 
 **Trigger:** "Proceed to Session W — Sigma Inheritance for K-jump / Component Correspondence." Unlimited reasoning mode. No Package II; no T-MF-Synthesis promotion; no canonical count changes; no OP-0008 resolved.

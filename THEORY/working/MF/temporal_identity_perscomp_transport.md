@@ -558,6 +558,37 @@ condition check (yes/no), Persist scalar for comparison. CSV + JSON summary.
 
 ---
 
+## §9b. Numerical Anchor — exp83 (Session X, 2026-05-06)
+
+**File**: `CODE/experiments/exp83_temporal_identity_transport.py`
+**Results**: `CODE/experiments/results/exp83_temporal_identity_transport.json`
+
+**Status**: ALL PASSED (4/4 scenarios).
+
+| Scenario | K_t | K_s | Detected event | Result |
+|----------|-----|-----|----------------|--------|
+| A translation | 2 | 2 | CONT | PASS |
+| B merge | 2 | 1 | MERGE | PASS |
+| C split | 1 | 2 | SPLIT | PASS |
+| D birth+cont | 1 | 2 | CONT + BIRTH | PASS |
+
+**Method**: 15×15 grid; Gaussian blobs (radius 1.5 for pair blobs, 3.5 for merged/wide blobs); `sinkhorn_partial_ot` with entropic regularization ε=1.0, mass fraction 0.85; PersComp proxy via superlevel-set threshold + scipy.ndimage connected components; component score matrix $\mathbf{S}$ built from block transport mass; event classification per §5 (pass 1: deaths + splits; pass 2: births + merges + continuations).
+
+**Theorem parts supported**:
+- Part (a) Existence: constructive classification covers all five event types ✓
+- Part (b) Uniqueness (stable-K + margin condition): verified in scenario A (K_t=K_s=2, mutual max-score matched) ✓
+- Part (d) Reduction to single-formation: effectively verified (K=1 case in all component interactions) ✓
+- Part (c) Kernel independence: NOT tested (requires OP-0011 Step 2).
+
+**Limitations**:
+- PersComp extraction uses simple threshold (proxy for full D-ST-3 persistence definition).
+- Transport plan is `sinkhorn_partial_ot`, not the canonical self-referential fixed-point (transport_fixed_point). Margin condition $\Delta_{\mathrm{sep}}$ not formally bounded.
+- Kernel independence (part c) requires OP-0011; not validated here.
+
+**Note**: Original plan referenced exp55; renumbered exp83 (exp55–56 already exist).
+
+---
+
 ## §10. Session V Boundary and Next Actions
 
 ### §10.1 Status of T-Temporal-Identity

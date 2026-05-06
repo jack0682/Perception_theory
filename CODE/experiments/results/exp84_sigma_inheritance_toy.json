@@ -1,0 +1,105 @@
+{
+  "experiment": "exp84_sigma_inheritance_toy",
+  "session": "Session X (W6 D4, 2026-05-06)",
+  "anchor_for": "T-\u03c3-Inherit (working Cat B candidate, Session W): centroid + orientation Cat B parts only",
+  "note": "Toy signature (mass, centroid, inertia_tensor). Does NOT validate sigma_standard Hessian eigenvalues (Cat C). Not a proof of T-\u03c3-Inherit.",
+  "grid_n": 15,
+  "results": [
+    {
+      "scenario": "A_CONT",
+      "K_t": 1,
+      "K_s": 1,
+      "centroid_t": [
+        6.999999999999998,
+        6.999999999999999
+      ],
+      "centroid_s": [
+        7.9999999999999964,
+        6.999999999999999
+      ],
+      "actual_shift": [
+        0.9999999999999982,
+        0.0
+      ],
+      "expected_shift": [
+        1.0,
+        0.0
+      ],
+      "centroid_shift_residual": 1.7763568394002505e-15,
+      "passed": true,
+      "note": "Centroid shift tracks translation; residual < 0.5 grid unit"
+    },
+    {
+      "scenario": "B_MERGE_centroid",
+      "c_pred": [
+        6.999999999999998,
+        7.5
+      ],
+      "c_actual": [
+        7.0,
+        7.500000000000003
+      ],
+      "centroid_residual": 3.2023728339893768e-15,
+      "mass1": 17.474013736764434,
+      "mass2": 17.474013736764434,
+      "passed": true,
+      "note": "Phi_MERGE centroid formula; residual near 0 for separated blobs"
+    },
+    {
+      "scenario": "C_MERGE_orientation",
+      "M_pred": [
+        [
+          78.52982063604598,
+          2.4297270997176813e-16
+        ],
+        [
+          -1.6374303968754192e-15,
+          506.6431571867748
+        ]
+      ],
+      "M_actual": [
+        [
+          79.78936404365632,
+          5.5430584428221105e-15
+        ],
+        [
+          4.440892098500626e-15,
+          508.3869714774211
+        ]
+      ],
+      "frobenius_residual": 2.1511247931993887,
+      "relative_frobenius_residual": 0.004180105259481839,
+      "passed": true,
+      "note": "Phi_MERGE orientation via parallel-axis theorem; residual near 0 for separated blobs"
+    },
+    {
+      "scenario": "D_SPLIT_direction",
+      "K_t": 1,
+      "eigenvalues": [
+        34.940839967945955,
+        237.7243612328189
+      ],
+      "principal_axis": [
+        0.0,
+        1.0
+      ],
+      "cos_to_column_axis": 1.0,
+      "aspect_ratio": 6.8036246824891045,
+      "passed": true,
+      "note": "Principal inertia axis aligns with elongation = predicted split direction"
+    },
+    {
+      "scenario": "E_BIRTH",
+      "K_t": 0,
+      "K_s": 1,
+      "sigma_s_mass": 17.474013736764434,
+      "sigma_s_centroid": [
+        6.999999999999998,
+        6.999999999999999
+      ],
+      "passed": true,
+      "note": "Birth: no ancestor, sigma well-defined from u_s alone"
+    }
+  ],
+  "all_passed": true
+}
