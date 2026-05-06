@@ -6,6 +6,21 @@ with simplex participation constraint and inter-formation repulsion.
 Energy: E(u^1,...,u^K) = sum_k E_self(u^k) + sum_{j<k} E_inter(u^j, u^k)
 where E_inter = lambda_rep * sum_x u^j(x)*u^k(x)
 Simplex barrier: lambda_bar * sum_x max(0, sum_k u^k(x) - 1)^2
+
+ARCHITECTURE NOTE (OP-0009-Pre-a, 2026-05-06):
+The K-field product manifold Sigma_M^K used here is a LOCAL COORDINATE CHART
+within the foundational state space F_M(P) = {u in [0,1]^n : sum u_i = M}
+(canonical §3.9, D-ST-2). It is valid under conditions V1–V4:
+  V1 (K-Stability): K_act remains constant during the time interval.
+  V2 (Basin Localization): Trajectory stays within one basin A_{K,alpha}(P).
+  V3 (Formation Separation): <u^j, u^k> < eps for all j != k.
+  V4 (Mass Budget): m_j = sum u^j > m_min > 0 for all j.
+When V1 fails (K-jump event), the K-field chart degenerates and must be
+replaced by a (K±1)-field chart. The foundational single-field architecture
+(find_formation in optimizer.py + K_act = #PersComp post-hoc) is the
+canonical F_M(P) approach; K-field is a computational accelerator within
+stable basins. Full migration to F_M(P) as primary architecture is deferred
+to v2.0 (W11–W12). See THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md.
 """
 
 from __future__ import annotations

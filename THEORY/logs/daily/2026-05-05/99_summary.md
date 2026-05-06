@@ -337,3 +337,38 @@ Per §8 item 4 above:
 ---
 
 **End of `99_summary.md`. W6 Day 2 substantively complete: Bronze ✅ + Silver ✅ + Gold-PARTIAL 🟢 (user-supervised migration pending Day 3 morning). G2.1 closure-rigor audit (4 CLEAN + 1 LOW-drift surfaced); G2.2 Decision Point 4 = Option B captured; G2.3 NQ-G3-1 EXECUTED (piecewise-constant on (0, 30) at 439/1920 confirmed; raw_gaussian ε-independence revealed); Gold-target CV-1.6 release packet skeleton drafted in proposal form. Tests preserved (215 passed + 1 xfailed; not re-run since 0 scc/ edits). 12-of-12 hard-constraint sweep ✓. Pacing right-sized; H1/H2/H3/H4/H5 hazards all mitigated. 3 morning ~5-min user-supervised Day 3 steps queued: (a) §7.1 erratum apply; (b) §0.0 skeleton migration; (c) weekly_draft_storming.md 2026-05-05 entry append.**
+
+---
+
+## §14. Evening Session Addendum — P-F Framework + Stereo SCC (W6 D2 evening)
+
+**Trigger:** User study session ("약간 더 공부하고싶어") post-main-session, evolving into deep theoretical development on P-F framework, state space, and stereo observation layer.
+
+**New files produced:**
+
+| File | Location | Content |
+|------|----------|---------|
+| `05_pf_stereo_scc_framework_proposal.md` | `logs/daily/2026-05-05/` | 8 formal premises (P1–P8) with full cross-verification table; hard-constraint checklist; new content inventory; 4 open questions (OQ-1–4) |
+| `stereo_observation_framework.md` | `working/MF/` | Full framework: $\Sigma_M$ state space; $\tilde{u}_t$ on $\mathcal{P}_t$; back-projection $b_t$; prior/likelihood separation (CN5); BO time scales; $\mathcal{P}$-conditional Kramers rates; partition function $Z_K(\mathcal{P})$; σ-posterior at K-jump; surface field theory; P-F axiom v0 candidate |
+
+**Organic working/ edits (cross-references added):**
+
+| File | Addition |
+|------|---------|
+| `k_selection_mechanism.md` | Working refs: `stereo_observation_framework.md` §7 ($Z_K(\mathcal{P})$, $F(K;\mathcal{P})$) |
+| `k_selection_b_kramers.md` | Working refs: `stereo_observation_framework.md` §6 (BO + $\mathcal{P}$-conditional rates) |
+| `n1_kramers_extension.md` | §8 Cross-refs: `stereo_observation_framework.md` §5–§6 (N-1 = BO $T \to 0$ limit) |
+| `pre_objective_K_field_tension.md` | Working refs: `stereo_observation_framework.md` §2 ($\Sigma_M$ vs $\Sigma^K_M$; OP-0009-Pre modeling-layer path) |
+
+**Key theoretical advances:**
+- $\Sigma_M$ (not $\Sigma^K_M$) established as correct foundational state space; $K_{\text{act}}$ = derived $\pi_0$ observable.
+- Four-layer separation: $\mathfrak{O}_t$ / $\tilde{u}_t$ / prior $\mathcal{E}_{\text{SCC}}$ / likelihood $\mathcal{L}_{\text{obs}}$ — $E_{\text{photo}}$ placed in likelihood, preserving CN5 strictly.
+- BO time scales $\tau_{\text{frame}} \ll \tau_{\text{fast}} \ll \tau_{\mathcal{P}} \lesssim \tau_{\text{slow}}$: fast variable $\tilde{u}_t$ integrates out → effective Markov jump process over $K_{\text{act}}(t)$.
+- $\mathcal{P}$-conditional partition function $Z_K(\mathcal{P})$ → free energy $F(K;\mathcal{P})$ → $P_{\text{eq}}(K|\mathcal{P})$: structural OP-0005 resolution path (NOT resolved; structural path only).
+- P-F Axiom v0 candidate: "no metastability rate claim without stochastic SCC extension (Langevin on $\Sigma_M$)."
+
+**Hard-constraint sweep (evening session):**
+- canonical.md / theorem_status.md: 0 edits.
+- working/MF/: 1 new file created + 4 existing files updated (working-refs line additions only).
+- CN5 preserved; CN10 contrastive only; P-F flags throughout; no OP silently resolved.
+- OP-0005, OP-0008, OP-0009-Pre: all remain OPEN HIGH; structural paths documented only.

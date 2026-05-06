@@ -15,6 +15,8 @@
 
 이 working file 은 K-Selection cluster 의 *canonical promotion artifact* 를 단일 packet 으로 정리. 사용자가 CV-1.7+ 시점에 review + approve 할 수 있는 minimal-edit 형태.
 
+**Session Q update (2026-05-06, CV-1.9):** P-F-A1 Package I is now fully Cat A. The P-F flag on $Z_K$ in Layer (b) of Commitment 19 is RESOLVED. The exact sector free energy $F(K;\mathcal{P}) = -T_* \log Z_K$ is well-defined via T-PF-A1-GI (unique Gibbs invariant). The saddle-point approximation $\mathcal{E}^*_K - T \cdot S(K)$ in §2(b) is an approximation of this exact formula. New working theorem T-K-Select-PF (Cat B candidate, `k_select_pf_equilibrium.md`) formalizes the equilibrium sub-problem (OP-0005-EQ). When Commitment 19 is promoted, §2(b) should reference T-K-Select-PF and use the exact $-T_* \log Z_K$ formulation. OP-0005-DYN (Kramers) and OP-0005-OBS remain OPEN.
+
 **중요 — N-1 silent-resolution constraint** (W6 D1 EOD audit fix): 본 packet 은 OP-0005 의 *full RESOLVED* 상태를 곧바로 promote 하지 않습니다. CV-1.7+ promotion 시점의 status 변화는 **OPEN → PARTIALLY RESOLVED** (4-layer composite candidate accepted + Cat A compatibility established + Cat B numerical anchor pending). 추가 status 변화 (PARTIALLY RESOLVED → RESOLVED) 는 **별도 future packet** (W12+) 으로 (V1)-(V7) numerical PASS + W9+ Cat A everywhere 완료 후 적용. 본 packet 의 §5 + §6 텍스트는 이 partial-resolution 단계까지만 reflect 함. canonical OP catalog 의 현재 상태 ("OPEN; partial via 4-layer composite", `theorem_status.md` line 312) 와 일관 유지.
 
 **핵심 deliverables**:

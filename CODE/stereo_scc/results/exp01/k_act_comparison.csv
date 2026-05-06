@@ -1,0 +1,4 @@
+scenario,K_act_PersComp,K_act_slot,note
+two_blobs,2,N/A,two separated Gaussians
+one_blob,1,N/A,single central Gaussian
+noisy_two_blobs,2,4,blobs + uniform noise; slot=4 slots with noise

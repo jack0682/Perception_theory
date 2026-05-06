@@ -1,0 +1,6 @@
+shadow_strength,delta_SCC_symmdiff,delta_SCC_pers_symmdiff,delta_raw_L1,delta_SCC_L1,stability_ratio,claim
+0.2,0.0,2.9898,0.1574,0.1157,1.361,SUPPORTED
+0.3,0.0,0.3571,0.2493,0.1156,2.157,SUPPORTED
+0.5,0.0,0.3571,0.4639,0.1136,4.085,SUPPORTED
+0.7,0.1538,3.0,0.7479,0.2084,3.589,SUPPORTED
+0.8,0.6346,0.602,0.9202,0.67,1.373,SUPPORTED

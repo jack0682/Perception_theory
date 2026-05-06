@@ -5,7 +5,7 @@
 **Type:** Kramers metastability derivation of K-Selection mechanism — option (b) of OP-0005 4-option list.
 **Author origin:** Task #6 K-Selection (b); attacks OP-0005 via Kramers escape-rate kinetic theory. Kinetic complement to Task #5 (free-energy variational); companion to Task #7 (numerical anchor), Task #8 (Commitment 16 compatibility).
 **Canonical refs:** §11.1 Commitment 14, 14-Multi, 16; §13 T-Persist-K-Sep, T-Persist-K-Weak; §14 CN15 Static/Dynamic Separation, CN6 Kinetic; §15 OP-0005, OP-0008.
-**Working refs:** `k_selection_a_free_energy.md` (Task #5 equilibrium counterpart); `multi_formation_sigma.md` (D-6a static); `sigma_multi_trajectory.md` (D-6b dynamic, V4 K-jump statistics); Phase 10 V4 result $\Delta t \propto t^{1.315}$.
+**Working refs:** `k_selection_a_free_energy.md` (Task #5 equilibrium counterpart); `multi_formation_sigma.md` (D-6a static); `sigma_multi_trajectory.md` (D-6b dynamic, V4 K-jump statistics); Phase 10 V4 result $\Delta t \propto t^{1.315}$; `stereo_observation_framework.md` §6 ($\mathcal{P}$-conditional Kramers rates with Eyring-Kramers prefactor; BO time-scale structure; W6 D2).
 
 ---
 
@@ -54,15 +54,19 @@ Kramers theory (this file) provides the **quantitative time scale** for the barr
 
 ### §3.1 K-formation basin
 
-For each $K' \in \{1, \ldots, K_{\mathrm{field}}\}$, the K'-active stratum $S_{K'} \subset \widetilde\Sigma^K_M$ contains local minima of $\mathcal{E}_K$. A K'-formation basin is the basin of attraction of a local minimum in $S_{K'}$.
+For each $K' \in \{1, \ldots, K_{\mathrm{field}}\}$, the K'-active topological sector $\mathcal{B}_{K'}(\mathcal{P}) = \{\tilde{u} \in \mathcal{F}_0(\mathcal{P}) : K_\mathrm{act}(\tilde{u}) = K'\}$ (Canonical Memo v1.1 §D5) contains local minima of $\mathcal{E}_\mathrm{SCC}[\cdot;\mathcal{P}]$. A K'-formation basin is the basin of attraction $\mathcal{A}_{K',\alpha}(\mathcal{P})$ of one such local minimum within $\mathcal{B}_{K'}(\mathcal{P})$.
+
+*(Correction from earlier draft: "K'-active stratum $S_{K'} \subset \widetilde\Sigma^K_M$" used $\Sigma_M^K$ as foundational. $\Sigma_M^K$ is a local coordinate chart within one basin $\mathcal{A}_{K',\alpha}$, not the full sector. See Canonical Memo v1.1 §D5–D6.)*
 
 ### §3.2 Saddle between K' and K'-1
 
 To transition K' → K'-1 (e.g., merger of formations $j, k$), the trajectory crosses a *saddle point* $u_s^{(jk)}$ on the boundary of $S_{K'}$ (where $\|u^{(j)}\|_1 \to 0$ or $\|u^{(k)}\|_1 \to 0$, or where $j, k$ coalesce).
 
-**Definition 3.1 (K-jump barrier)**:
-$$\Delta E_{K' \to K'-1}^{(jk)} := \mathcal{E}_K(u_s^{(jk)}) - \mathcal{E}_K(u_{\mathrm{min},K'})$$
-where $u_{\mathrm{min},K'}$ is the local minimum in $S_{K'}$ from which the merger initiates.
+**Definition 3.1 ($\mathcal{P}$-conditioned K-jump barrier)**:
+$$\Delta\mathcal{E}_{K' \to K'-1}^{(jk)}(\mathcal{P}) := \mathcal{E}_\mathrm{SCC}(u_\mathrm{saddle}^{(jk)}(\mathcal{P});\mathcal{P}) - \mathcal{E}_\mathrm{SCC}(u_{\mathrm{min},K'}(\mathcal{P});\mathcal{P})$$
+where $u_{\mathrm{min},K'}(\mathcal{P})$ is the local minimum in $\mathcal{A}_{K',\alpha}(\mathcal{P})$ from which the merger initiates; $u_\mathrm{saddle}^{(jk)}(\mathcal{P})$ is the index-1 saddle connecting the $K'$-basin to the $(K'-1)$-basin along the $j$-$k$ merger path on $\mathcal{F}_M(\mathcal{P})$.
+
+**$\mathcal{P}$-conditioning is essential:** the barrier depends on the graph $\mathcal{G}^P$. In the stereo setting, depth-filtered edges (D1, Canonical Memo v1.1) remove connections across depth discontinuities, raising the merger barrier between formations at different depths. See `stereo_observation_framework.md` §6.1 for the single-field $\mathcal{F}_M(\mathcal{P})$ analogue of this formula.
 
 ### §3.3 Barrier scaling estimates
 
@@ -120,6 +124,16 @@ $$\tau_{\mathrm{cascade}} = \sum_{K' = K_{\mathrm{eq}}+1}^{K_{\mathrm{field}}} \
 ---
 
 ## §5. Dynamic K_act(t) Trajectory
+
+**Timescale hierarchy (stereo setting).** The K_act(t) dynamics operate at the *slow* timescale
+$\tau_\mathrm{slow} = \tau_0 e^{\Delta\mathcal{E}/T}$ (Kramers crossing time), which is much longer
+than both the SCC intra-basin relaxation $\tau_\mathrm{fast}$ and the point cloud change time
+$\tau_{\mathcal{P}}$:
+$$\tau_\mathrm{frame} \ll \tau_\mathrm{fast} \ll \tau_{\mathcal{P}} \lesssim \tau_\mathrm{slow}$$
+Under this ordering (BO condition: $\tau_\mathrm{fast} \ll \tau_{\mathcal{P}}$), $K_\mathrm{act}(t)$
+reduces to an effective Markov jump process with $\mathcal{P}$-conditioned rates
+$\Gamma^{K \to K'}(\mathcal{P}_t)$. See `stereo_observation_framework.md` §5–§6 for the full
+Born-Oppenheimer derivation and Eyring-Kramers prefactor formula.
 
 ### §5.1 Stochastic K_act(t) trajectory
 

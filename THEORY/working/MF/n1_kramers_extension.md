@@ -113,6 +113,7 @@ working/MF/k_selection_mechanism.md §3 (candidate (b)).
 - working/MF/cn15_static_dynamic_separation.md §3 dynamic reading (this Wave 3).
 - working/MF/formation_birth_string_breaking.md §4 mechanisms B1/B2/B3 (NQ-253).
 - working/MF/sigma_rich_augmentation.md §4 protocol-conditional Φ_rich (this Wave 3).
+- working/MF/stereo_observation_framework.md §5–§6 (Born-Oppenheimer time-scale separation + $\mathcal{P}$-conditional Kramers rates; shows N-1 asymmetry $=$ BO $T \to 0$ limit; W6 D2).
 
 ---
 

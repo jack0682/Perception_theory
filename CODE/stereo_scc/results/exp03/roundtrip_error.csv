@@ -1,0 +1,7 @@
+metric,value
+n_pixels,256
+n_valid_backprojected,100
+n_invalid_pixels,156
+n_valid_finite_after_pullback,100
+n_invalid_nan_after_pullback,156
+max_roundtrip_error,0.00e+00

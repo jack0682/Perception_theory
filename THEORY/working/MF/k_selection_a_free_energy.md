@@ -61,10 +61,10 @@ All three give compatible scaling laws (§6).
 ### §3.1 Energy minimum at fixed K
 
 For each fixed $K \in \{1, 2, \ldots, K_{\mathrm{field}}\}$, define:
-$$\mathcal{E}^*_K := \min_{\mathbf{u} \in \widetilde\Sigma^K_M : K_{\mathrm{act}}(\mathbf{u}) = K} \mathcal{E}_K(\mathbf{u})$$
-— the minimum SCC energy over configurations with exactly $K$ active formations.
+$$\mathcal{E}^*_K(\mathcal{P}) := \min_{\tilde{u} \in \mathcal{B}_K(\mathcal{P})} \mathcal{E}_\mathrm{SCC}[\tilde{u};\mathcal{P}]$$
+— the minimum SCC energy over the **topological sector** $\mathcal{B}_K(\mathcal{P}) = \{\tilde{u} \in \mathcal{F}_0(\mathcal{P}) : K_\mathrm{act}(\tilde{u}) = K\}$ (see Canonical Memo v1.1 §D5). This replaces the earlier $\min_{\mathbf{u} \in \widetilde\Sigma^K_M : K_\mathrm{act}=K}$ which used $\Sigma_M^K$ as a foundational state space — $\Sigma_M^K$ is a local coordinate chart of one energy basin $\mathcal{A}_{K,\alpha}(\mathcal{P})$ within $\mathcal{B}_K$, not the full sector.
 
-**Note**: $\mathcal{E}^*_K$ depends on graph $G$, total mass $M$, energy parameters $(\alpha, \beta, \lambda_{\mathrm{rep}}, a_{\mathrm{cl}})$.
+**Note**: $\mathcal{E}^*_K(\mathcal{P})$ depends on the point cloud $\mathcal{P}$ (via $\mathcal{G}^P$ graph structure), total mass $M$, and energy parameters $(\alpha, \beta, \lambda_{\mathrm{rep}}, a_{\mathrm{cl}})$. The $\mathcal{P}$-conditioning is essential in the stereo setting.
 
 ### §3.2 Configurational entropy
 
@@ -79,17 +79,21 @@ Specifically: $S(K) \sim K \log(|X|/K) + O(1)$ for $K \ll |X|$ (combinatorial K-
 
 ### §3.3 Free energy
 
-**Definition 3.1 (Free Energy at K).** For inverse temperature $\beta_T = 1/T$ (where $T$ is *thermal* temperature, distinct from SCC parameter $\beta$ — use $T$ to avoid clash):
-$$F(K; T) := \mathcal{E}^*_K - T \cdot S(K).$$
+**Definition 3.1 (Free Energy at K, $\mathcal{P}$-conditioned).** For thermal temperature $T$ (distinct from SCC parameter $\beta$ — use $T$ to avoid clash):
+$$F(K; \mathcal{P}, T) := \mathcal{E}^*_K(\mathcal{P}) - T \cdot S(K; \mathcal{P}).$$
 
-(For SCC, the notation $\beta_T$ avoids the canonical $\beta$ parameter.)
+The $\mathcal{P}$-conditioning is essential: as the stereo point cloud changes (scene motion), the energy minimum $\mathcal{E}^*_K(\mathcal{P})$ and configurational entropy $S(K;\mathcal{P})$ both change, shifting the predicted $K^*$. This is the $\mathcal{P}$-conditioned generalization of the single-graph $F(K;T)$ formulation. See `stereo_observation_framework.md` §7.1 for the full $Z_K(\mathcal{P})$ partition function.
+
+**Multi-basin decomposition (correction from earlier drafts):** The partition function integrates over the full topological sector, not a single basin:
+$$Z_K(\mathcal{P}) = \int_{\mathcal{B}_K(\mathcal{P})} \exp\!\left(-\frac{\mathcal{E}_\mathrm{SCC}[\tilde{u};\mathcal{P}]}{T}\right) \mathcal{D}\tilde{u} = \sum_{\alpha=1}^{n_K(\mathcal{P})} Z_{K,\alpha}(\mathcal{P})$$
+so $F(K;\mathcal{P},T) = -T \log Z_K(\mathcal{P})$ accounts for all basins $\mathcal{A}_{K,\alpha}$. ~~⚠️ **P-F flag:** $Z_K$ is defined only when stochastic SCC (P-F-A1 Langevin on $\mathcal{F}_M(\mathcal{P})$) is canonically formalized.~~ **✓ P-F flag RESOLVED (CV-1.9, Session P, 2026-05-06):** P-F-A1 Package I is now fully Cat A (T-PF-A1-AR/SDE/GI/PE). $Z_K = \int_{\mathcal{B}_K} e^{-E/T_*} d\sigma_M$ is well-defined as a Lebesgue integral over a compact measurable subset of $\mathcal{F}_M(\mathcal{P})$ (T-PF-A1-AR). $\pi_{T_*} = Z^{-1} e^{-E/T_*} d\sigma_M$ is the unique invariant measure (T-PF-A1-GI). The sector masses $p_K = \pi_{T_*}(\mathcal{B}_K)$ are well-defined probabilities. The formulation $F(K;\mathcal{P},T_*) = -T_* \log Z_K$ is now the **exact** sector free energy, not approximate. The saddle-point approximation $F_{\mathrm{approx}} = \mathcal{E}^*_K - T_* \cdot S(K)$ in §3.3 above is the Laplace approximation of this exact formula in the small-$T_*$ regime. See `THEORY/working/MF/k_select_pf_equilibrium.md` (Session Q, T-K-Select-PF) for the complete grounded theorem.
 
 ### §3.4 K-selection rule
 
-**Free-energy K-Selection rule (Option (a))**:
-$$K^*(T) := \arg\min_{K \in \{1, \ldots, K_{\mathrm{field}}\}} F(K; T).$$
+**Free-energy K-Selection rule (Option (a), $\mathcal{P}$-conditioned)**:
+$$K^*(\mathcal{P}, T) := \arg\min_{K \in \{1, \ldots, K_{\mathrm{field}}\}} F(K; \mathcal{P}, T).$$
 
-This is the predicted equilibrium $K_{\mathrm{act}}$ at temperature $T$.
+This is the predicted equilibrium $K_{\mathrm{act}}$ at temperature $T$ for point cloud $\mathcal{P}$.
 
 ---
 

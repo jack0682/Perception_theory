@@ -7,6 +7,61 @@
 
 ---
 
+## 2026-05-06 (Wed, W6 Day 3) — EOD entry (Redirection Mode v3: 5-debt substantive paydown, 22 output files, all 15 HC PASS)
+
+> **Frame note.** Day 3 = "redirection mode v3" (deliberate debt-paydown day). Plan v3 had 12 goals across 5 accumulated debts (W1 ontological-foundational, W2 production reach, W3 OP stagnation, W4 metric policy, W5 P-F framework). Session resumed from compaction mid-G3.4; completed G3.4 through G3.12 + EOD files.
+
+### One-line (EOD): Bronze ✅ Silver ✅ Gold ✅. All 12 required goals met; both optional goals (G3.9, G3.10) also completed. 22 new daily-log files. All 15 hard constraints PASS. No canonical/working/scc edits.
+
+### EOD status table (W6 D3 targets per plan.md v3)
+
+| Goal | Status | Primary output |
+|---|---|---|
+| G3.1 Strategic recalibration | ✅ | `01_*.md` + `01a_*.md` + `01b_*.md` |
+| G3.2 OP-0009-Pre quotient formalism (Gold) | ✅ | `02_*.md` through `02e_*.md` (6 files) |
+| G3.3 P-F framework escalation | ✅ | `03_*.md` + `03a_*.md` + `03b_*.md` |
+| G3.4 NQ-G1-2-ext design | ✅ | `04_*.md` + `04a_*.md` + `04b_*.md` |
+| G3.5 canonical split feasibility | ✅ | `05_*.md` |
+| G3.6 OP-0009 sub-items audit | ✅ | `06_*.md` |
+| G3.7 working stockpile audit | ✅ | `07_*.md` |
+| G3.8 OP-0005 layer status | ✅ | `08_*.md` |
+| G3.9 σ-multi status (optional) | ✅ | `09_*.md` |
+| G3.10 v2.0 outlook (optional) | ✅ | `10_*.md` |
+| G3.11 metric policy | ✅ | `01a_*.md` (sub-file) |
+| G3.12 W7-W10 calendar | ✅ | `11_*.md` |
+
+### Key substantive findings
+
+1. **G3.2 $\widetilde{\widetilde\Sigma}^K_M$ quotient formalism:** K-field labeled-index conflict with pre-objecthood resolved via $S_K$-quotient. Ontological layer table (5 levels). Commitment 1 auto-satisfied at class level. All existing frameworks ($\sigma$, T-Persist-K, T-L1-F/M, Commitment 16, closure) compatible. OP-0009-Pre SUBSTANTIALLY ADVANCED (Cat C).
+
+2. **G3.3 P-F escalation:** 8-axiom Langevin framework v0 (P-F-A1..A8). OP-0014 proposed HIGH. 5 implicit P-F usages in canonical cataloged. Layer B Kramers formula under P-F: $k_{K\to K-1}$ now has well-defined $T_*$.
+
+3. **G3.4 NQ-G1-2-ext design:** `exp58_nq_g1_2_ext.py` pseudo-code + measurement protocol complete. W7 D1 execution ready.
+
+4. **G3.7 stockpile audit:** 69 MF files — 12 ACTIVE / 30 STAGING / 12 DORMANT / 3 SUPERSEDED. W3 OP stagnation confirmed: ~30 staging files without promotion plan.
+
+5. **G3.12 calendar:** W7-W10 28-day D-by-D; 8 supervised sessions; critical path W9 OP-0014 → W10 CV-1.7.
+
+### Theorem-count delta
+
+| Layer | Before W6 D3 | After W6 D3 EOD |
+|---|---|---|
+| canonical.md | 47A / 5B / 5C / 5R = 62 claims | **unchanged** |
+| theorem_status.md | 47A / 5B / 5C / 5R | **unchanged** |
+
+No theorem-level changes. All work is daily-log proposal layer.
+
+### Substance:Admin ratio
+S=17 substantive outputs / A=5 admin/frame = 3.4:1. Well above W8 2:1 target.
+
+### Carry-forward to W7 D1
+1. Run `exp58_nq_g1_2_ext.py` (~1-2h).
+2. canonical §0 ToC + anchor tags (~30min).
+3. Analyze H-A/B/C outcome → conditional erratum (W7 D2 if H-B).
+4. OP-0009-F + OP-0009-C promotions (W7 D3, supervised).
+
+---
+
 ## 2026-05-05 (Tue, W6 Day 2) — EOD entry (audit + Decision Point 4 capture + NQ-G3-1 + Gold-PARTIAL skeleton + EOD migration)
 
 > **Frame note.** Day 2 inherited NO critical-path from Day 1's over-delivery (G1+G2+G3+G4 all closed Day 1; 14 CHANGELOG addendums + post-EOD NQ-G1-2 fresh-full-run validation). Today shape: **closure-rigor audit (S1 from `pre_brainstorm.md` §3) + Decision Point 4 capture + NQ-G3-1 fill-in (S2) + Option B-specific CV-1.6 release packet skeleton drafting (S3 partial)**. Right-sized post-Option-B-authorization at ~4-5h equivalent vs Day 1's ~10-12h.

@@ -20,7 +20,7 @@
 **Type:** Theory-only ontological audit (no canonical edits, no compute). Targets CV-1.6 user-decision packet — proposes amendment to canonical §1 ontological setup paragraph at v2.0 / W11–W12.
 **Author origin:** 4-에이전트 ontological depth analysis (W5 Day 3 EOD) Critic CRITICAL-1 — *"K-field architecture imports object-like indexed fields, contradicting Commitment 1"*. Builds on OAT-1 (`K_status_commitment.md` — Commitment 16 K_field/K_act decomposition) + OAT-supplementary (`mathematical_scaffolding_4tools.md` §3 Tool A2 quotient verification).
 **Canonical refs:** §11.1 #1 Commitment 1 (`canonical.md:757` u_t primitive — *"not a crisp subset, a class label, or an instance ID"*), §11.1 #11 Commitment 11 (`canonical.md:761` crisp objects derivative), §11 I9 (`canonical.md:846` K-field architecture *"guarantees K>1 by construction"*), §14 CN6 (`canonical.md:1532` K kinetic), §14 CN10 (`canonical.md:1546` contrastive vs reductive).
-**Working refs:** `K_status_commitment.md` (OAT-1, Commitment 16 K_field/K_act two-tier), `mathematical_scaffolding_4tools.md` (Tool A2 §3 quotient verification), `from_single.md` §1 derived-view thesis (R22-retracted §2 quantitative; thesis preserved), `working/E/F1_dissolution.md` §7 (R22-aware F-1 framing — Round 18 post-audit).
+**Working refs:** `K_status_commitment.md` (OAT-1, Commitment 16 K_field/K_act two-tier), `mathematical_scaffolding_4tools.md` (Tool A2 §3 quotient verification), `from_single.md` §1 derived-view thesis (R22-retracted §2 quantitative; thesis preserved), `working/E/F1_dissolution.md` §7 (R22-aware F-1 framing — Round 18 post-audit); `stereo_observation_framework.md` §2 ($\Sigma_M$ vs $\Sigma^K_M$ foundational state space; single-field $K_{\text{act}}$ as derived observable; BO resolution of pre-objective tension via modeling-layer framing; W6 D2).
 **Open problems:** OP-0001 F-1 SPLIT-RESOLVED (W4 04-24 Option D), OP-0008 σ^A K-jump non-determinism (W5 Day 4 register), OP-0009 Multi-Formation Ontological Foundations sub-item **OP-0009-Pre** (this file's resolution candidate).
 
 ---
@@ -223,7 +223,7 @@ $$u_t \text{ (Commitment 1 primitive)} \to [\mathbf{u}] \in \widetilde{\widetild
 **Verification**:
 - **First arrow** ($u_t \to [\mathbf{u}]$): single field aggregate $u = \sum_k u^{(k)}$가 multi-mode structure를 emergence시킴. Quotient level에서 mode decomposition은 H₀ persistence (Tool A3 zigzag PH) 또는 spectral cluster decomposition으로 derived. *Reverse forbidden*: $[\mathbf{u}]$가 single $u_t$ primitive를 *대체*할 수 없음 (Commitment 1 보호).
 - **Second arrow** ($[\mathbf{u}] \to \mathbf{u}$): ordered lift = labeling choice. *Reverse forbidden*: ordered representation을 fundamental로 취급하면 Commitment 1 위반.
-- **Third arrow** ($\mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}})$): K_field = modeling-layer cap (Commitment 16); K_act = derived integer diagnostic (support-thresholding count). *Reverse forbidden*: K_field 또는 K_act가 u_t를 *replace*할 수 없음.
+- **Third arrow** ($\mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}})$): K_field = modeling-layer cap (Commitment 16); K_act($\tilde{u}$) = $\#$PersComp($\tilde{u}$) — derived integer diagnostic (persistent connected components via threshold filtration; NOT K-field slot-count $|\{j:\|u^{(j)}\|_\infty>\varepsilon\}|$ which is a K-field architecture artifact — see Canonical Memo v1.1 §D4). *Reverse forbidden*: K_field 또는 K_act가 u_t를 *replace*할 수 없음.
 - **Fourth arrow** ($(K_{\mathrm{field}}, K_{\mathrm{act}}) \to$ cog-sci): downstream comparison only. *Reverse forbidden* (CN10 contrastive vs reductive): cognitive science K (Pylyshyn FINSTs, Treisman groups)이 SCC의 K_field 또는 K_act를 *define*할 수 없음 — only *compare*.
 
 ---
@@ -537,6 +537,38 @@ CV-1.6 packet (W6 Day 6 EOD): *forward-reference* to this file from Commitment 1
 v2.0 packet (W11 Day X): canonical §1 *Pre-Objective Primacy at Quotient Level* paragraph amendment merged.
 
 If rejected: this file stays in `working/MF/` indefinitely as *"explored ontological resolution candidate; not adopted; multi-formation σ-framework retains implicit pre-objective tension"*.
+
+---
+
+## §13. Empirical Support for Architecture Migration (W6 D4 Sessions F–G)
+
+The exp02d/exp02e contrast provides the first concrete experimental evidence that the architecture migration described in §3–§5 is not merely a philosophical preference — it is a **necessary methodological constraint** for valid foundational computations.
+
+### §13.1 Evidence summary
+
+| Experiment | State space used | Endpoint valid in F_M(P)? | Barrier result |
+|---|---|---|---|
+| exp02d (Session E) | Σ_M^K (K-field + repulsion λ=10) | No (V3 violation) | All 18 barriers < 0 (artifacts) |
+| exp02e (Session F) | F_M(P) (single-field relaxation) | Yes (energy-probe validated) | Physical barriers: 25% increase at β=10 full_scc |
+
+### §13.2 Architectural interpretation
+
+The exp02d failure is not merely a numerical artifact — it reflects the fundamental incompatibility between:
+
+- **Σ_M^K (K-field product)**: A *modeling-layer* state space with repulsion that artificially enforces K-formation separation. The local minima in Σ_M^K need not correspond to local minima in the foundational energy landscape F_M(P).
+- **F_M(P) (single-field, shared pool)**: The *foundational* state space where the SCC energy is defined and where all claims about formation dynamics, barriers, and phase transitions must be grounded.
+
+This is exactly the architecture the Path A + Path C + Tool A2 hybrid of §3.4 describes:
+- Pre-objective primacy (Commitment 1) = dynamics on F_M(P) are foundational
+- K-field chart = *post hoc* labeling of components; valid as a coordinate chart only under V1–V4
+
+### §13.3 Principle established (operational)
+
+**Any computation that conflates Σ_M^K local minima with F_M(P) local minima without explicit V1–V4 validation is ontologically invalid for canonical-level claims.**
+
+This principle, originally stated as a philosophical position in §2–§3, is now backed by experimental demonstration (exp02d null result reversed by exp02e fix). The experiment converted OP-0009's philosophical principle into a **verification procedure principle** — a concrete, enforceable methodological rule.
+
+Cross-reference: `op_0009_pre_a_kfield_chart_validity.md §8` (Architecture Migration Policy, Session G) for the operational implementation.
 
 ---
 
