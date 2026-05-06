@@ -2,6 +2,68 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session U: Emergent Multi-Formation Synthesis document; T-MF-Synthesis future candidate registered; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session U — Emergent Multi-Formation Synthesis." No new theorem promotions; no Package II; synthesis and gap-identification only.
+
+---
+
+### 1. Phase 1 — State Verification
+
+- CV-1.10 current ✓; 54A/13B/5C/5R = 77 claims ✓
+- T-K-Select-PF canonical Cat B; T-K-Select-OBS working Cat B candidate ✓
+- P-F-A1 Package I fully Cat A ✓; OP-0006 RESOLVED ✓
+- T-ST-5a Cat A; T-ST-5b Cat B ✓
+- OP-0005-DYN, OP-0008, OP-0009, OP-0011/0012 OPEN ✓
+
+### 2. Phase 2 — Synthesis Document Created
+
+**`THEORY/working/MF/emergent_multi_formation_synthesis.md`** — 9 sections:
+
+**§1 Central Thesis:** Multi-formation is not primitive — it emerges from a shared soft field. $K_\mathrm{act}(u) = |\mathrm{PersComp}(u)|$ is derived, not assumed. $\Sigma_M^K$ is local chart, not foundational.
+
+**§2 Theorem Ladder:** 13-entry table mapping support → field polytope → boundary → depth locking → stochastic dynamics → Gibbs equilibrium → K-selection → observation-conditioned K-selection. Each row marked Cat A / Cat B / working / open.
+
+**§3 What "Formation" Currently Means:** $\mathfrak{F}_i(u) = (C_i, \partial C_i, K_i, \sigma_i^?)$. Spatial objecthood established; temporal objecthood not yet established. Two-step persistence Cat A (partial); multi-step Cat C (OP-0012); K-jump theory OPEN.
+
+**§4 Gap Table:** 10 missing layers: temporal identity (OP-0011/0012), σ-inheritance (OP-0008), dynamic K-transition (OP-0005-DYN/Package II), likelihood canonicalization (OP-0005-OBS), architecture migration (OP-0009), semantic/affordance structure, code migration, T_* registration (OP-0021), non-convex topology, continuum limit.
+
+**§5 Formation Life-Cycle Proposal:** 13-phase life-cycle (latent fluctuation → nucleation → persistence → boundary sharpening → depth-stabilization → barrier stabilization → equilibrium K-selection → observation-conditioned selection → interaction → merge/split → σ-update → temporal identity → death). Each phase mapped to existing theorems or OPEN status. Not a proved theorem — conceptual roadmap.
+
+**§6 T-MF-Synthesis Future Candidate:** Five-claim synthesis theorem (i) compact field polytope, (ii) crisp boundary, (iii) depth topological locking, (iv) ergodic stochastic dynamics, (v) equilibrium + observation K-selection. Expected Cat B after all dependencies canonical; Cat A after temporal identity + σ-inheritance.
+
+**§7 K-Field Architecture:** V1–V4 validity conditions summarized; empirical exp02d V3 failure documented; recommended practice: K-field as initialization only, validate endpoints via single-field relaxation.
+
+**§8 Next Theory Priorities:** (1) temporal identity / PersComp transport → T-Temporal-Identity Cat B candidate; (2) σ-inheritance OP-0008 → T-σ-Inherit Cat B candidate; (3) T-K-Select-OBS → canonical Cat B (exp54 + likelihood canonicalization); (4) Package II after OP-0021; (5) OP-0009 v2.0 migration.
+
+**§9 Consolidated State Assessment:** Complete static + equilibrium theory. Dynamic, temporal, and semantic layers are the remaining frontier.
+
+### 3. Phase 3 — theorem_status.md Update
+
+Added "Future Synthesis Candidate — T-MF-Synthesis (Session U)" section after Session S/T Working Candidates. No count change; pointer to synthesis working file; Session U note.
+
+### 4. Phase 4 — Residue Search
+
+All target patterns searched. Only hit: theorem_status.md line 442 ("All K-field theorems originally assumed '$m_j$ fixed externally'") — confirmed historical evidence note, not an architecture claim. No active residues found.
+
+### 5. Phase 5 — Tests
+
+No code changes in Session U (theory-only markdown). pytest 215+1xfailed confirmed clean from prior sessions; no rerun needed.
+
+### 6. Files Modified / Created
+
+| File | Change |
+|------|--------|
+| `THEORY/working/MF/emergent_multi_formation_synthesis.md` | CREATED — 9-section synthesis document |
+| `THEORY/canonical/theorem_status.md` | T-MF-Synthesis future candidate section added |
+| `THEORY/CHANGELOG.md` | This entry |
+
+### 7. Canonical Count
+
+**Unchanged: 54A/13B/5C/5R = 77 claims, ~70% fully proved.**
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session T: T-K-Select-OBS Cat B candidate confirmed; K_feas^obs tightening; canonical count unchanged at 77
 
 **Trigger:** "Proceed to Session T." Primary objective: start OP-0005-OBS (observation-conditioned K-selection). Session S had already created `k_select_obs_posterior.md` with all required §1–§11. Session T verified, tightened, and sealed that work.

@@ -103,6 +103,18 @@ last_updated: 2026-05-06
 
 ---
 
+### Future Synthesis Candidate — T-MF-Synthesis (Session U, 2026-05-06)
+
+*Conceptual future synthesis candidate — no count change, no canonical promotion. Source: `THEORY/working/MF/emergent_multi_formation_synthesis.md` (Session U, 2026-05-06).*
+
+**T-MF-Synthesis** (Emergent Multi-Formation from Shared Soft Field): joint statement that T-OP6-B + T-ST-5a/5b + P-F-A1 Package I (AR/SDE/GI/PE) + T-K-Select-PF + T-K-Select-OBS together constitute a rigorous static + equilibrium emergent multi-formation theory. The synthesis asserts: (i) crisp spatial formation with boundary precision, (ii) hard/soft depth stabilization, (iii) ergodic stochastic dynamics, (iv) equilibrium K-distribution, (v) observation-conditioned posterior K-selection.
+
+Expected future status: Cat B after all listed dependencies canonical; Cat A after T-Temporal-Identity (OPEN, OP-0011/0012) + T-σ-Inherit (OPEN, OP-0008) are proved. Not promoted in Session U; synthesis document is a gap analysis and roadmap only.
+
+*Session U note (2026-05-06): Formation life-cycle defined (phases 1–13); gap table written (10 missing layers); K-field V1–V4 validity conditions summarized; next theory priority sequence: temporal identity → σ-inheritance → T-K-Select-OBS Cat B canonical → Package II → OP-0009 v2.0.*
+
+---
+
 ### CV-1.8 Canonical Additions — P-F-A1 Package I (W6 D4, 2026-05-06, Sessions M–N–O)
 
 *T-PF-A1-AR and T-PF-A1-SDE promoted to canonical §13 Category A in Session O. T-PF-A1-GI and T-PF-A1-PE promoted to canonical §13 Category B in Session O. Bodies in `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`.*
