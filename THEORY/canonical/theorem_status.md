@@ -132,6 +132,33 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 
 ---
 
+### Session W Working Candidate — T-σ-Inherit (2026-05-06)
+
+*Working Cat B candidate (parts a,b,d-direction,e) / Cat C (parts c,d-σ_standard, pending OP-0008-MERGE/SPLIT Wigner-projection W9+). No count change. Source: `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).*
+
+**T-σ-Inherit** (σ-signature inheritance through persistent-component correspondence): Given persistent components $C_i^t \in \mathrm{PersComp}(u_t)$ with component-level signatures $\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$ — where $u_t^i := u_t \cdot \mathbf{1}_{C_i^t}$ and $G_{C_i^t}$ is the induced subgraph with one-hop buffer — and correspondence $R_{t \to s}$ from T-Temporal-Identity, the inheritance map $\Phi$ satisfies:
+
+- **CONT** ($C_i^t \to C_j^s$, 1-to-1): centroid $\hat{c}_j^s$ via transport plan; orientation $\Theta_j^s = \Theta_i^t + \delta\Theta$ continuous; $\sigma_{\mathrm{standard}}$ continuous Cat B by implicit function theorem.
+- **MERGE** ($\{C_{i_1}^t, C_{i_2}^t\} \to C_j^s$): $c_j^s = (m_{i_1}c_{i_1} + m_{i_2}c_{i_2})/(m_{i_1}+m_{i_2})$ (mass-weighted; deterministic Cat B); $\Theta_j^s$ via parallel-axis theorem (deterministic Cat B); $\sigma_{\mathrm{standard}}$ Cat C (Wigner-projection W9+).
+- **SPLIT** ($C_i^t \to \{C_{j_1}^s, C_{j_2}^s\}$): split direction $v_1 = \arg\min_{\|v\|=1} \langle v, H_i^t v\rangle$ (lowest Hessian eigenvector, Goldstone mode) Cat B; $\sigma_{\mathrm{standard}}$ Cat C.
+- **BIRTH** ($\varnothing \to C_j^s$): $\sigma(C_j^s)$ computed fresh; no residual.
+- **DEATH** ($C_i^t \to \varnothing$): $\sigma(C_i^t)$ discarded; no residual.
+
+Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))$ decomposes into centroid, orientation, and eigenvalue components.
+
+| Part | Claim | Status | Blocker |
+|------|-------|--------|---------|
+| (a) | Component-level $\sigma(C_i^t)$ well-defined | Working Cat B | Connected + $m_i^t > 0$ + V3-separation |
+| (b) | MERGE centroid formula deterministic | Working Cat B | Mass conservation (routine) |
+| (c) | $\sigma_{\mathrm{standard}}$ deterministic under MERGE/SPLIT | Cat C | OP-0008-MERGE/SPLIT Wigner-projection W9+ |
+| (d-direction) | SPLIT direction $v_1$ well-defined | Working Cat B | Gap condition $\lambda_1 < \lambda_2$ (Goldstone) |
+| (d-σ_standard) | Post-split $\sigma_{\mathrm{standard}}$ | Cat C | OP-0008-SPLIT W9+ |
+| (e) | $R_\sigma$ decomposition well-defined | Working Cat B | Metric properties of $d_\sigma$ |
+
+*Session W note (2026-05-06): Component signature $\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$ defined. Inheritance map $\Phi$ per five event types. OP-0008 restructured into four sub-problems: CONT (PARTIALLY STRUCTURED), MERGE (PARTIALLY STRUCTURED — centroid+orientation Cat B, σ_standard Cat C), SPLIT (STRUCTURED — direction Cat B, σ_standard Cat C), DIST (OPEN new sub-problem). MERGE centroid Cat B via mass-weighted average; MERGE orientation Cat B via parallel-axis theorem. σ_standard under merge/split Cat C (Wigner-projection W9+). exp56 four-scenario plan written (A=CONT, B=MERGE, C=SPLIT, D=BIRTH). New code functions planned: `phi_merge_centroid`, `phi_merge_orientation` (deferred). Canonical count unchanged at 77.*
+
+---
+
 ### CV-1.8 Canonical Additions — P-F-A1 Package I (W6 D4, 2026-05-06, Sessions M–N–O)
 
 *T-PF-A1-AR and T-PF-A1-SDE promoted to canonical §13 Category A in Session O. T-PF-A1-GI and T-PF-A1-PE promoted to canonical §13 Category B in Session O. Bodies in `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`.*
@@ -443,11 +470,11 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 | **OP-0004** | Type A/B Classification Invalidation | High | RETRACTED (empirically invalidated; exp65 0/4 Type B observed) |
 | **OP-0005** | K Selection Mechanism (Missing) | High | OPEN; partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16); CV-1.7+ Commitment 19 candidate |
 | **OP-0006** | Boundary Definition Precision | High | RESOLVED (Session K, 2026-05-06): T-OP6-B promoted Cat A; d_H ≤ 2(α/β)^{1/2} under H1–H5; B1–B4 all closed. Residual: C=2 not tight; H4 required; soft-cut stereo open. |
-| **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | OPEN (CV-1.5.1, W5 Day 4); Path B σ-rich + Φ-rich Cat B target; CV-1.7 Commitment 18 candidate |
+| **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | PARTIALLY STRUCTURED (Session W, 2026-05-06): sub-problems CONT/MERGE/SPLIT/DIST registered; MERGE centroid+orientation Cat B; σ_standard Cat C (W9+) |
 | **OP-0009** | Multi-Formation Ontological Foundations | High | OPEN (CV-1.5.1, W5 Day 4; 8 sub-items post W6 D4 split); 1/8 RESOLVED via Commitment 16 (OP-0009-K); OP-0009-Pre SPLIT into Pre-a (PARTIALLY RESOLVED) + Pre-b (PARTIALLY RESOLVED, exp01 support) |
 | **OP-0010** | Bind Generalization | Medium | OPEN (T-Bind-Proj/Full now Cat A per Phase 13 — see W6 G2 audit; OP-0010 retains for any further generalization questions) |
-| **OP-0011** | Transport kernel exact form | Medium | TENTATIVE |
-| **OP-0012** | Persistence composition | Medium | OPEN |
+| **OP-0011** | Transport kernel exact form | Medium | STRUCTURED (Session V, 2026-05-06): component confinement path identified |
+| **OP-0012** | Persistence composition | Medium | PARTIALLY STRUCTURED (Session V, 2026-05-06): OP-0012-CC compositional consistency Cat B path |
 | **OP-0013** | Closure operator convergence rate | Medium | OPEN |
 | **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file pre-2026-05-04 unification) |
 | **OP-0021** | Stochastic Dynamics | Low | UNDER INVESTIGATION (exp54–exp59 Kramers rate theory) |
@@ -543,9 +570,18 @@ Multi-formation extension still open: stratified Morse on $\Sigma^K_M$ (multi-fo
 
 Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "static correspondence intact; dynamic $\sigma_{\mathrm{multi}}^A(t)$ ↔ CH flow correspondence requires σ-rich".
 
-**Status:** TENTATIVE (Cat C asserted; explicit construction NQ-242c open).
-**Severity:** High — affects D-6b canonical path; CV-1.6 release-blocking for Cat A target if Path B chosen.
-**Last reviewed:** 2026-04-29 (W5 Day 3 EOD, registered at CV-1.5.1).
+**Status:** PARTIALLY STRUCTURED (Session W, 2026-05-06): four sub-problems registered; MERGE centroid+orientation Cat B path identified; σ_standard Cat C (Wigner-projection W9+). Original Path A/B framing superseded by sub-problem decomposition.
+**Severity:** High — affects D-6b canonical path; CV-1.6 release-blocking for Cat A target on σ_standard component.
+**Last reviewed:** 2026-05-06 (Session W).
+
+**Sub-problem registry (Session W, 2026-05-06):**
+
+| Sub-ID | Name | Status | Notes |
+|--------|------|--------|-------|
+| **OP-0008-CONT** | Continuation σ-persistence | PARTIALLY STRUCTURED | Centroid via transport Cat B; σ_standard continuous by IFT Cat B (gap condition required) |
+| **OP-0008-MERGE** | Merger σ-inheritance | PARTIALLY STRUCTURED | Centroid mass-weighted Cat B; orientation parallel-axis Cat B; σ_standard Wigner-projection Cat C (W9+) |
+| **OP-0008-SPLIT** | Split σ-assignment | STRUCTURED | Split direction $v_1$ (Goldstone mode) Cat B; σ_standard both daughters Cat C (W9+) |
+| **OP-0008-DIST** | Disturbance/perturbation σ-stability | OPEN | New sub-problem; σ_rich stability under small $u_t$ perturbation; no structured path yet |
 
 **Direct-attack NQs:**
 - **NQ-242c**: explicit construction of two trajectories with same $\sigma^A(t^{*-})$ but distinct $\sigma^A(t^{*+})$. Cat A target. ~2-3 weeks. W6+ priority.
@@ -554,7 +590,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 
 **Related problems:** OP-0003 MO-1 (re-activation at multi-formation level via D-6b path); OP-0005 K-Selection (K-jump-event path-dependence implication); OP-0009 (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
 
-**References:** `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c); `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3; `THEORY/working/MF/sigma_multi_trajectory.md` §4.2; `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`.
+**References:** `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c); `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3; `THEORY/working/MF/sigma_multi_trajectory.md` §4.2; `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`; `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
 
 #### OP-0009: Multi-Formation Ontological Foundations
 

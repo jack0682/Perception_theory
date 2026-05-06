@@ -2,6 +2,82 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session W: Sigma Inheritance working file; T-σ-Inherit candidate; OP-0008 restructured into CONT/MERGE/SPLIT/DIST sub-problems; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session W — Sigma Inheritance for K-jump / Component Correspondence." Unlimited reasoning mode. No Package II; no T-MF-Synthesis promotion; no canonical count changes; no OP-0008 resolved.
+
+---
+
+### 1. Phase 1 — File Inspection
+
+Files read: `sigma_inherit_k_jump.md` (new — created this session), `theorem_status.md` (OP-0008/0011/0012 entries, Session V T-Temporal-Identity section), `canonical.md` (§§11.1 Commitment 14/14-Multi, §13, §14 CN5/CN10, §16 OP-0008 reference), `sigma_rich.py` (SigmaRich namedtuple, `compute_sigma_rich`, `compute_centroids`, `compute_orientations`, `_sigma_standard`, `_wigner_data`), `sigma_rich_augmentation.md`, `sigma_rich_phi_proof.md`, `temporal_identity_perscomp_transport.md` (R_{t→s} and five event types from Session V).
+
+State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. OP-0008 OPEN. No component-level σ function exists in sigma_rich.py. `sigma_rich_phi_proof.md` provides Φ_MERGE centroid (mass-weighted) and Φ_MERGE orientation (parallel-axis) as Cat B; Wigner/σ_standard conjecture Cat C.
+
+### 2. Phase 2 — Created sigma inheritance working file
+
+**Created**: `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
+
+Sections: §1 problem statement ($\mathfrak{F}_i = (C_i, \partial C_i, K, \sigma_i^?)$ — completing the σ component); §2 component-level signature definition ($\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$); §3 inheritance per five event types (CONT/MERGE/SPLIT/BIRTH/DEATH); §4 inheritance residual $R_\sigma$ decomposition; §5 T-σ-Inherit candidate (6-row status table); §6 OP-0008 restructuring into four sub-problems; §7 code alignment with sigma_rich.py; §8 exp56 four-scenario plan; §9 non-overclaim register (8 items); §10 session boundary.
+
+### 3. Phase 3 — Component-level σ defined
+
+- Restricted field: $u_t^i := u_t \cdot \mathbf{1}_{C_i^t}$ (component mask).
+- Induced subgraph: $G_{C_i^t}$ = induced subgraph + one-hop boundary buffer.
+- Signature: $\sigma(C_i^t; u_t, \mathcal{P}_t) := \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C) = (\sigma_{\mathrm{standard}}^i, c_i^t, \Theta_i^t, W_i^t)$.
+- Well-definedness (Proposition 2.2): connected + $m_i^t > 0$ + non-trivial edges + V3-separation.
+- No new code exists yet; planned function: `component_sigma(u_t, comps_t, graph_state, params, positions) -> list[SigmaRich]`.
+
+### 4. Phase 4 — Inheritance map Φ per event type
+
+- **CONT**: centroid $\hat{c}_j^s$ via transport plan; orientation $\Theta_j^s = \Theta_i^t + \delta\Theta$ continuous (implicit function theorem); $\sigma_{\mathrm{standard}}$ continuous Cat B (spectral gap condition). Status: PARTIALLY STRUCTURED.
+- **MERGE**: $c_j^s = (m_{i_1}c_{i_1} + m_{i_2}c_{i_2})/(m_{i_1}+m_{i_2})$ deterministic Cat B; $\Theta_j^s$ via parallel-axis theorem deterministic Cat B; $\sigma_{\mathrm{standard}}$ Cat C (Wigner-projection W9+). Status: PARTIALLY STRUCTURED.
+- **SPLIT**: split direction $v_1$ (lowest Hessian eigenvector = Goldstone mode) Cat B; $\sigma_{\mathrm{standard}}$ both daughters Cat C. Status: STRUCTURED (direction only).
+- **BIRTH**: σ computed fresh; no residual. **DEATH**: σ discarded; no residual.
+- Inheritance residual: $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))$ decomposed into centroid ($\|c_j^s - \hat{c}_j^s\|$), orientation ($\|\Theta_j^s - \hat{\Theta}_j^s\|_F$), eigenvalue ($\|\lambda_j^s - \hat{\lambda}_j^s\|$) components.
+
+### 5. Phase 5 — T-σ-Inherit candidate theorem
+
+Six-row status table (parts a,b,d-direction,e working Cat B; parts c,d-σ_standard Cat C). No count change — working candidate only.
+
+### 6. Phase 6 — OP-0008 restructuring
+
+Original Path A/B framing superseded by four sub-problems:
+
+| Sub-ID | Status |
+|--------|--------|
+| OP-0008-CONT | PARTIALLY STRUCTURED |
+| OP-0008-MERGE | PARTIALLY STRUCTURED (centroid+orientation Cat B; σ_standard Cat C) |
+| OP-0008-SPLIT | STRUCTURED (direction Cat B; σ_standard Cat C) |
+| OP-0008-DIST | OPEN (new; σ_rich stability under small perturbation) |
+
+### 7. Phase 7 — Code alignment
+
+`sigma_rich.py` (282 lines) provides all four σ_rich components. No component-level function exists. Two new functions planned (deferred):
+- `phi_merge_centroid(sigma_i1, sigma_i2, m_i1, m_i2) -> np.ndarray` — mass-weighted average.
+- `phi_merge_orientation(sigma_i1, sigma_i2, m_i1, m_i2, c_merged) -> np.ndarray` — parallel-axis theorem.
+
+### 8. Phase 8 — theorem_status.md updates
+
+- Session W working candidate section added for T-σ-Inherit (6-row status table; no count change).
+- OP-0008 summary table: OPEN → PARTIALLY STRUCTURED; sub-problem registry added.
+- OP-0011 summary table: TENTATIVE → STRUCTURED (stale cosmetic entry corrected).
+- OP-0012 summary table: OPEN → PARTIALLY STRUCTURED (stale cosmetic entry corrected).
+
+### 9. Phase 9 — Residue search
+
+Searched `sigma_inherit_k_jump.md`, `theorem_status.md`, `canonical.md` for forbidden patterns: σ_standard deterministic under merge (none claimed); OP-0008 resolved (not claimed; PARTIALLY STRUCTURED only); Package II (not mentioned); σ_inherit_k_jump claiming canonical status (all marked working only). No violations found.
+
+### 10. Carry-forward
+
+- T-σ-Inherit: working Cat B candidate (parts a,b,d-direction,e), Cat C (parts c,d-σ_standard). Requires: exp56 validation; OP-0008-MERGE Wigner-projection W9+; component_sigma implementation.
+- New code deliverables deferred: `component_sigma`, `phi_merge_centroid`, `phi_merge_orientation`, `inheritance_residual`.
+- exp55 (Session V) and exp56 (Session W) both unimplemented — next code session.
+- T-K-Select-OBS → canonical Cat B (exp54 + likelihood canonicalization) remains queued.
+- Canonical count unchanged: **54A / 13B / 5C / 5R = 77 claims**.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session V: Temporal Identity working file; T-Temporal-Identity candidate; OP-0011/0012 structured; canonical count unchanged at 77
 
 **Trigger:** "Proceed to Session V — Temporal Identity for Emergent Multi-Formation." Unlimited reasoning mode. No new canonical promotions; no Package II; no T-MF-Synthesis promotion.
