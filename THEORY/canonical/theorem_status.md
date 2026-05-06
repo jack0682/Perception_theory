@@ -115,6 +115,23 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 
 ---
 
+### Session V Working Candidate — T-Temporal-Identity (2026-05-06)
+
+*Working Cat B candidate (parts a,b,d) / Cat C (part c, pending OP-0011). No count change. Source: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06).*
+
+**T-Temporal-Identity** (Persistent component identity via unbalanced transport): Given two consecutive fields $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$, their persistent component sets $\mathrm{PersComp}(u_t)$, $\mathrm{PersComp}(u_s)$, and an admissible unbalanced transport plan $M_{t \to s}$ (E1–E4), there exists a well-defined component-level correspondence relation $R_{t \to s} \subseteq \mathrm{PersComp}(u_t) \times \mathrm{PersComp}(u_s)$ obtained by thresholding the component score matrix $\mathbf{S}$. Five event types are handled: continuation (1-to-1), split (1-to-many), merge (many-to-1), birth ($\varnothing \to C_j^s$), death ($C_i^t \to \varnothing$). If $K_t = K_s$, no birth/death occurs, and the score matrix satisfies the margin condition ($\Delta_\mathrm{sep} > 0$), the relation is a unique bijection. Reduces to `persist_transport` scalar in the $K=1$ case.
+
+| Part | Claim | Status | Blocker |
+|------|-------|--------|---------|
+| (a) | Existence of $R_{t \to s}$ | Working Cat B | None (constructive) |
+| (b) | Uniqueness (stable-K + margin condition) | Working Cat B | $\Delta_\mathrm{sep}$ formula pending |
+| (c) | Kernel independence | Cat C | OP-0011 component confinement |
+| (d) | Reduction to persist_transport ($K=1$) | Working Cat B | Routine algebra |
+
+*Session V note (2026-05-06): Component correspondence score $S_{ij}^0$ defined. Five event types defined with threshold conditions. Proof sketch for part (b) written. OP-0011 structured: component confinement path identified. OP-0012 partially structured: OP-0012-CC (compositional consistency condition) defined as Cat B path. exp55 four-scenario plan written. Canonical count unchanged at 77.*
+
+---
+
 ### CV-1.8 Canonical Additions — P-F-A1 Package I (W6 D4, 2026-05-06, Sessions M–N–O)
 
 *T-PF-A1-AR and T-PF-A1-SDE promoted to canonical §13 Category A in Session O. T-PF-A1-GI and T-PF-A1-PE promoted to canonical §13 Category B in Session O. Bodies in `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`.*
@@ -671,9 +688,9 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Impact.** Theoretical completeness; robustness of persistence results; may affect characterization of formation inheritance.
 
-**Status:** UNDER INVESTIGATION (exp30–exp35).
+**Status:** UNDER INVESTIGATION → STRUCTURED (Session V, 2026-05-06). Component-level confinement path identified: Step 1 site-level (T-Persist-1(e) $C_\mathrm{conf}$ bound); Step 2 component-level (open: bound $|\gamma_M(C_i^t,C_j^s) - \gamma_{M'}(C_i^t,C_j^s)|$); Step 3 identity-level (when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$, all admissible plans give same $R_{t \to s}$). Feeds into T-Temporal-Identity part (c).
 **Severity:** Medium (impacts formalism).
-**Related:** T-Persist-1(a–e).
+**Related:** T-Persist-1(a–e); T-Temporal-Identity part (c).
 
 #### OP-0012: Persistence Composition
 
@@ -681,9 +698,9 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Impact.** Affects long-timescale predictions; currently only T-Persist-1 (two-step) fully proved; limits temporal theory.
 
-**Status:** UNRESOLVED (Cat C conditional).
+**Status:** PARTIALLY STRUCTURED (Session V, 2026-05-06). OP-0012-CC candidate defined: under stable-K + margin condition (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ is conjectured to hold exactly. Full general composition (arbitrary K-jumps) remains Cat C. Probabilistic (Markov/Chapman-Kolmogorov) formulation written. Proof of OP-0012-CC pending.
 **Severity:** Medium (temporal extension).
-**References:** canonical.md §13 T-Persist-Full.
+**References:** canonical.md §13 T-Persist-Full; `temporal_identity_perscomp_transport.md` §7.2.
 
 #### OP-0013: Closure Operator Convergence Rate
 

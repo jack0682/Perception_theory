@@ -2,6 +2,67 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session V: Temporal Identity working file; T-Temporal-Identity candidate; OP-0011/0012 structured; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session V — Temporal Identity for Emergent Multi-Formation." Unlimited reasoning mode. No new canonical promotions; no Package II; no T-MF-Synthesis promotion.
+
+---
+
+### 1. Phase 1 — File Inspection
+
+Files read: `emergent_multi_formation_synthesis.md` (§§3,4,5,8), `theorem_status.md` (OP-0011/0012 entries), `canonical.md` (§§3,7,8.5,11,13 transport sections), `transport.py` (`sinkhorn_partial_ot`, `persist_transport`, `transport_fixed_point`), `sigma_multi_trajectory.md` (σ dynamic trajectory; out of scope for Session V).
+
+State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. T-MF-Synthesis future candidate. OP-0011 UNDER INVESTIGATION. OP-0012 UNRESOLVED Cat C. `persist_transport` is site-level only; no component-level score matrix exists.
+
+### 2. Phase 2 — Created temporal identity working file
+
+**Created**: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06).
+
+Sections: §1 problem statement + scope; §2 objects ($u_t$, $\mathrm{PersComp}$, cores, cohesion measures); §3 transport map vs. transport plan forms (unbalanced); §4 component correspondence score $S_{ij}^0$ and full score $S_{ij}$ ($\sigma$-terms deferred); §5 temporal identity relation $R_{t \to s}$ with all five event types; §6 T-Temporal-Identity candidate theorem (parts a,b,c,d); §7 OP-0011/OP-0012 structured treatment; §8 non-overclaim register; §9 exp55 four-scenario plan; §10 session boundary.
+
+### 3. Phase 3 — Mathematical objects defined
+
+- $u_t \in \mathcal{F}_M(\mathcal{P}_t)$ with $\mathrm{PersComp}(u_t) = \{C_1^t,\ldots,C_{K_t}^t\}$.
+- Component cohesion measure $\mu_i^t$ with mass $m_i^t = \sum_{x \in C_i^t} u_t(x)$.
+- Transport plan: $\gamma(C_i^t, C_j^s) = \sum_{x \in C_i^t, y \in C_j^s} M_{t \to s}(x,y)$ (unbalanced; no forced balance).
+- Score matrix: $S_{ij}^0 = \lambda_m \gamma(C_i^t,C_j^s) - \lambda_c \langle c, \gamma_{ij}\rangle$; normalized $\tilde{S}_{ij}^0 = S_{ij}^0/\min(m_i^t,m_j^s)$.
+
+### 4. Phase 4 — Five event types defined
+
+Continuation (1-to-1, stable-K, mutual max-score), Split (1-to-many, $\gamma \geq \tau_\mathrm{split} \cdot m_i^t$), Merge (many-to-1, $\gamma \geq \tau_\mathrm{merge} \cdot m_{i_k}^t$), Birth ($\sum_i\gamma < \tau_\mathrm{birth}\cdot m_j^s$), Death ($\sum_j\gamma < \tau_\mathrm{death}\cdot m_i^t$). No $K_t = K_s$ assumption forced globally.
+
+### 5. Phase 5 — T-Temporal-Identity candidate theorem
+
+Parts: (a) Existence — constructive, Cat B; (b) Unique bijection under stable-K + margin condition $\Delta_\mathrm{sep} > 0$ — Cat B; (c) Kernel independence — Cat C pending OP-0011; (d) Reduction to `persist_transport` in $K=1$ case — Cat B. Proof sketch for (b) written (mutual-max + margin → bijection via induction). Kernel-dependence constant $\epsilon_\mathrm{kernel}$ defined (Definition 6.2).
+
+### 6. Phase 6 — OP-0011/OP-0012 structured
+
+OP-0011: 3-step path identified (site-level confinement → component-level confinement bound → identity-level independence). Status updated: UNDER INVESTIGATION → STRUCTURED.
+
+OP-0012: OP-0012-CC (compositional consistency condition) defined as Cat B path. Under stable-K + margin on both intervals, $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ conjectured exact. Probabilistic (Chapman-Kolmogorov) formulation written. Status updated: UNRESOLVED Cat C → PARTIALLY STRUCTURED.
+
+### 7. Phase 7 — exp55 plan written
+
+Four scenarios: (A) stable translation (Case 1 verification), (B) merge (Case 3), (C) split (Case 2), (D) birth + continuation (Cases 1+4). Not implemented. Prerequisite: `component_score_matrix` helper (~30 lines) in `scc/transport.py` or `scc/temporal_identity.py`.
+
+### 8. Phase 8 — theorem_status.md updates
+
+- Session V working candidate section added for T-Temporal-Identity (4-row status table; no count change).
+- OP-0011 status updated: UNDER INVESTIGATION (exp30–exp35) → STRUCTURED with 3-step path.
+- OP-0012 status updated: UNRESOLVED (Cat C) → PARTIALLY STRUCTURED with OP-0012-CC candidate.
+
+### 9. Phase 9 — Residue search
+
+Searched canonical.md, theorem_status.md, emergent_multi_formation_synthesis.md for: forced one-to-one during K-jump; component identity equated with label index; $K_t = K_s$ assumed always; merge/split ignored; OP-0008 claimed solved; Package II overclaim. No violations found in Session V deliverables (all five event types explicitly defined; $K_t \neq K_s$ explicitly handled; σ-terms explicitly deferred; Package II not mentioned).
+
+### 10. Carry-forward
+
+- T-Temporal-Identity: working Cat B candidate (parts a,b,d), Cat C (part c). Requires: $\Delta_\mathrm{sep}$ formula (link to T-Persist-K-Sep); exp55 validation; OP-0011 Step 2.
+- Next session priority: T-σ-Inherit Cat B candidate (OP-0008 Path B) or exp55 implementation + T-K-Select-OBS → canonical Cat B.
+- Canonical count unchanged: **54A / 13B / 5C / 5R = 77 claims**.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session U: Emergent Multi-Formation Synthesis document; T-MF-Synthesis future candidate registered; canonical count unchanged at 77
 
 **Trigger:** "Proceed to Session U — Emergent Multi-Formation Synthesis." No new theorem promotions; no Package II; synthesis and gap-identification only.
