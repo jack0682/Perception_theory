@@ -89,7 +89,7 @@ last_updated: 2026-05-06
 
 ---
 
-### Session S Working Candidates — OP-0005-OBS Observation-Conditioned K-Selection (W6 D4, 2026-05-06, Session S)
+### Session S/T Working Candidates — OP-0005-OBS Observation-Conditioned K-Selection (W6 D4, 2026-05-06, Sessions S–T)
 
 *T-K-Select-OBS is a new Cat B candidate using P-F-A1 Package I + T-K-Select-PF + explicit likelihood model LM1–LM3. NOT yet canonical — working-file only. No count change to canonical total (77 claims). Source: `THEORY/working/MF/k_select_obs_posterior.md`.*
 
@@ -98,6 +98,8 @@ last_updated: 2026-05-06
 | **T-K-Select-OBS** | Observation-Conditioned K-Selection via Posterior Sector Mass | **working Cat B candidate** (Session S, 2026-05-06) | **B candidate** | Posterior well-definedness: Bayes on Gibbs prior (Package I) with positive measurable likelihood (LM1–LM3). Posterior sector masses $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$ form probability distribution. $K^*(\mathfrak{O}_t) = \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Prior {p_K} recovered when $\mathcal{L}_\mathrm{obs} \equiv 1$. | Addresses OP-0005-OBS only. Does NOT prove Kramers rates (OP-0005-DYN). Does NOT prove temporal K-dynamics. Does NOT prove K* uniqueness. Does NOT resolve OP-0008 (σ-inheritance). $E_\mathrm{photo}$ in likelihood only (CN5). Cat A path: canonicalize likelihood model; verify LM1–LM3; exp54 validation. |
 
 *Session S working note (2026-05-06): T-K-Select-OBS defines observation-conditioned K-selection as Bayesian posterior over Gibbs prior. Mathematical structure complete given Package I + T-K-Select-PF + LM1–LM3. OP-0005-OBS status: OPEN → STRUCTURED (Cat B candidate). OP-0005 overall remains OPEN. CN5 preserved: $E_\mathrm{photo}$ in likelihood only. Stereo bridge: connects to D-ST-5 backprojection $b_t$ and `stereo_observation_framework.md` §4 prior/likelihood separation. exp54 plan written (§8 of working file). Canonical count unchanged at 77 pending promotion review.*
+
+*Session T review note (2026-05-06): Cat B candidate status confirmed. §3.5 added: $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = K_\mathrm{feas}$ under LM2 (Lemma 3.2). Extension to LM2' (partially nonneg likelihood; $K_\mathrm{feas}^{obs} \subseteq K_\mathrm{feas}$) noted as further open problem. No overclaims found. Residue search clean. pytest 215+1xfailed. Canonical count unchanged at 77.*
 
 ---
 

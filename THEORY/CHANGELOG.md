@@ -2,6 +2,93 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session T: T-K-Select-OBS Cat B candidate confirmed; K_feas^obs tightening; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session T." Primary objective: start OP-0005-OBS (observation-conditioned K-selection). Session S had already created `k_select_obs_posterior.md` with all required §1–§11. Session T verified, tightened, and sealed that work.
+
+---
+
+### 1. Phase 1 — State Verification
+
+- CV-1.10 current ✓
+- Count: 54A/13B/5C/5R = 77 claims ✓
+- T-K-Select-PF canonical Cat B (OP-0005-EQ partially resolved) ✓
+- OP-0005-DYN OPEN ✓
+- OP-0005-OBS STRUCTURED (working Cat B candidate, Session S) ✓
+- Package II not started; no overclaim ✓
+
+### 2. Phase 2 — k_select_obs_posterior.md Audit and Tightening
+
+**File already comprehensive from Session S** (368 lines, §1–§11). Content verified:
+- §1 Mission: prior → posterior via Bayes (T-K-Select-PF + Gibbs prior)
+- §2 Prerequisites: Package I Cat A + T-K-Select-PF + LM1–LM3
+- §3 Posterior measure + sector masses: Z_K^obs, p_K(O_t), F_obs, K*(O_t)
+- §4 T-K-Select-OBS: 5 claims with complete proofs
+- §5 Non-overclaim: 8 explicit non-overclaims (no Kramers, no K* uniqueness, CN5, etc.)
+- §6 CN5 compliance + stereo bridge (H_L/H_R operators, D-ST-5 backprojection)
+- §7 OP-0005 3-way status table
+- §8 exp54 numerical plan (Method A MCMC + Method B sector MAP; two regimes)
+- §9 Cat B justification + Cat A path
+- §10 Hard constraint verification checklist
+- §11 References
+
+**Session T addition — §3.5 K_feas^obs tightening:**
+- Defined $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = \{K : Z_K^{obs}(\mathfrak{O}_t) > 0\}$
+- Lemma 3.2: Under LM2 (strict positivity), $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = K_\mathrm{feas}$ (the prior feasible set)
+- Proof: For $K \in K_\mathrm{feas}$, $\sigma_M(\mathcal{B}_K) > 0$ + LM2 → $Z_K^{obs} > 0$. For $K \notin K_\mathrm{feas}$, $\sigma_M(\mathcal{B}_K) = 0$ → $Z_K^{obs} = 0$.
+- Remark: LM2' (partially nonneg) gives $K_\mathrm{feas}^{obs} \subseteq K_\mathrm{feas}$ — noted as further open problem (not claimed here).
+- Status line updated: "Session T review: Cat B status confirmed; §3.5 K_feas^obs tightening added"
+
+### 3. Phase 3 — theorem_status.md Update
+
+- Section header: "Session S Working Candidates" → "Session S/T Working Candidates"
+- Session T review note appended after Session S note: Cat B confirmed; §3.5 added; no overclaims; residue search clean; pytest 215+1xfailed; canonical count unchanged at 77.
+
+### 4. Phase 4 — exp54 Plan
+
+exp54 plan complete in §8 of working file (from Session S). Not yet implemented. Two regimes:
+1. Prior K=1, observation pushes K=2 — posterior shift verified
+2. Prior K=2, observation pushes K=1 — posterior shift verified
+Method A (MCMC) + Method B (find_formation sector MAP). Both implementable with existing `optimizer.py`.
+
+### 5. Phase 5 — Residue Search
+
+All patterns searched: no overclaims found.
+- OP-0005 not fully resolved: clean
+- OP-0005-OBS not confused with Kramers: clean
+- E_photo not added as fifth SCC term: clean
+- K*(O_t) uniqueness not claimed: clean
+- Package II not overclaimed: clean
+- Object detection not conflated: clean
+
+### 6. Phase 6 — pytest
+
+**215 passed, 1 xfailed** (verified). No regressions.
+
+### 7. Files Modified
+
+| File | Change |
+|------|--------|
+| `THEORY/working/MF/k_select_obs_posterior.md` | Status header updated; §3.5 K_feas^obs tightening added (Defn 3.5, Lemma 3.2) |
+| `THEORY/canonical/theorem_status.md` | Section header → "Session S/T"; Session T review note appended |
+| `THEORY/CHANGELOG.md` | This entry |
+
+### 8. OP-0005 Status Post-Session T
+
+| Sub-ID | Status |
+|--------|--------|
+| OP-0005-EQ | PARTIALLY RESOLVED — T-K-Select-PF canonical Cat B (CV-1.10) |
+| OP-0005-DYN | OPEN — Package II, W9+ |
+| OP-0005-OBS | STRUCTURED — T-K-Select-OBS Cat B candidate (Sessions S/T); K_feas^obs = K_feas under LM2 (Lemma 3.2) |
+
+OP-0005 overall: OPEN.
+
+### 9. Canonical Count
+
+**Unchanged: 54A/13B/5C/5R = 77 claims, ~70% fully proved.** T-K-Select-OBS remains working-grade (Cat B candidate); no canonical promotion in Session T.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Progress Consolidation Session: 12 stale refs fixed; W6D4_progress_consolidation_2026-05-06.md written; canonical count 77 confirmed
 
 **Trigger:** "Proceed to Progress Consolidation Session." after Session S accepted. Primary objective: release-grade progress document sealing W6 D4 (Sessions A–S, CV-1.6→CV-1.10). Secondary: fix active stale version references across canonical documents.

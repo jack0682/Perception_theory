@@ -1,6 +1,6 @@
 # k_select_obs_posterior.md — T-K-Select-OBS: Observation-Conditioned K-Selection via Posterior Sector Mass
 
-**Status:** working draft, Session S (2026-05-06). Cat B candidate (OP-0005-OBS). Single-topic working file per `THEORY/working/MF/` convention.
+**Status:** working draft, Cat B candidate. Session S (2026-05-06) initial draft. Session T (2026-05-06) review: Cat B status confirmed; §3.5 K_feas^obs tightening added; no overclaims. Single-topic working file per `THEORY/working/MF/` convention.
 **Type:** Theorem + proof sketch. Attacks OP-0005-OBS using T-K-Select-PF (canonical Cat B, CV-1.10) + P-F-A1 Package I (all Cat A, CV-1.9) + an explicit observation likelihood model.
 **Author origin:** Session S (2026-05-06). Follows `stereo_observation_framework.md` (W6 D2 evening, working draft) which defines the full observation layer including $\mathfrak{O}_t$, $b_t$, and prior/likelihood separation. Extends T-K-Select-PF (OP-0005-EQ) to the observation-conditioned setting (OP-0005-OBS).
 **Canonical refs (dependencies):**
@@ -114,6 +114,23 @@ When $\mathcal{L}_\mathrm{obs} \equiv 1$: $p_K(\mathfrak{O}_t) = p_K$ (T-K-Selec
 **Lemma 3.1.** $\pi_t^{obs}(\partial\mathcal{B}_K) = 0$.
 
 **Proof.** $\pi_t^{obs} \ll \sigma_M$ (by definition: $\pi_t^{obs}$ has density $\propto \mathcal{L}_\mathrm{obs} e^{-E/T_*}$ w.r.t. $\sigma_M$, positive by LM2). Since $\pi_{T_*} \ll \sigma_M$ (T-PF-A1-GI) and $\partial\mathcal{B}_K$ is $\sigma_M$-null (T-K-Select-PF Cat B, codimension argument), $\pi_t^{obs}(\partial\mathcal{B}_K) = 0$. □
+
+### §3.3 Posterior feasibility and K_feas^obs(O_t)
+
+**Definition 3.5 (Posterior feasible set).** For fixed $\mathfrak{O}_t$, define:
+$$K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = \{K \in \mathbb{Z}_{\geq 0} : Z_K^{obs}(\mathfrak{O}_t) > 0\}$$
+
+**Lemma 3.2 (Posterior feasibility equals prior feasibility under LM2).**
+Under LM1–LM3 (in particular LM2: $\mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u) > 0$ for all $u$):
+$$K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = K_\mathrm{feas}$$
+
+**Proof.** For $K \in K_\mathrm{feas}$: $\sigma_M(\mathcal{B}_K) > 0$ by definition. $Z_K^{obs} = \int_{\mathcal{B}_K}\mathcal{L}_\mathrm{obs}\,e^{-E/T_*}d\sigma_M \geq \inf_{\mathcal{B}_K}(\mathcal{L}_\mathrm{obs}\,e^{-E/T_*})\cdot\sigma_M(\mathcal{B}_K) > 0$, where the infimum is positive since $\mathcal{L}_\mathrm{obs} > 0$ (LM2) and $e^{-E/T_*} > 0$ on the compact set $\mathcal{F}_M(G)$ (bounded $E$). Hence $K \in K_\mathrm{feas}^{obs}(\mathfrak{O}_t)$.
+
+For $K \notin K_\mathrm{feas}$: $\sigma_M(\mathcal{B}_K) = 0$ by definition of $K_\mathrm{feas}$, so $Z_K^{obs} = 0$, hence $K \notin K_\mathrm{feas}^{obs}(\mathfrak{O}_t)$. □
+
+**Remark.** LM2 (strict positivity) is the assumption that guarantees $K_\mathrm{feas}^{obs} = K_\mathrm{feas}$. If LM2 is relaxed to LM2' ($\mathcal{L}_\mathrm{obs} \geq 0$, not identically zero), then $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) \subseteq K_\mathrm{feas}$ could be a strict subset — the observation evidence may rule out entire K-sectors. This is a useful extension but requires separate treatment (T-K-Select-OBS currently assumes LM2).
+
+The observation-conditioned K-selection formula (§3, Definition 3.4) uses $K_\mathrm{feas}$ and $K_\mathrm{feas}^{obs}$ interchangeably under LM2. The argmin in claim (iii) of T-K-Select-OBS is over $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = K_\mathrm{feas}$.
 
 ---
 
