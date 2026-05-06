@@ -1,17 +1,17 @@
 ---
-id: CV-1.5.2
+id: CV-1.10
 type: canonical/specification
-version: 1.5.2
-released: 2026-05-02
+version: 1.10
+released: 2026-05-06
 status: accepted
-description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02); T-L1-M Soft-Count Corollary under Φ_res supervised addition (W6 D1 EOD, 2026-05-04). **47A/62 claims/75% fully proved**.
+description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02); T-L1-M Soft-Count Corollary under Φ_res supervised addition (W6 D1 EOD, 2026-05-04); stereo extension T-ST-5a/b + D-ST-1..5 + T-OP6-B Cat B (CV-1.6 content, W6 D4 Sessions A–G, 2026-05-06); T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B (CV-1.7, Session I, 2026-05-06); T-OP6-B promoted Cat A + OP-0006 RESOLVED (Session K, 2026-05-06); T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B (CV-1.8, Sessions M–N, 2026-05-06); T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (CV-1.9, Session P, 2026-05-06); T-K-Select-PF Cat B + OP-0005-EQ partially resolved (CV-1.10, Session R, 2026-05-06). **54A/13B/5C/5R = 77 claims, ~70% fully proved**.
 ---
 
-# Canonical Specification of Soft Cognitive Cohesion (CV-1.5.2)
+# Canonical Specification of Soft Cognitive Cohesion (CV-1.10)
 
-> **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → **CV-1.5.2 (05-02, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
+> **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → CV-1.5.2 (05-02) → CV-1.6 (05-06) → CV-1.7 (05-06) → CV-1.8 (05-06) → CV-1.9 (05-06) → **CV-1.10 (05-06, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
 >
-> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.5.2**.*
+> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.10**.*
 
 ---
 
@@ -52,6 +52,13 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 - OP-0009-F + OP-0009-λ PARTIAL → READY (OAT-2/3 short integration, W6 G7).
 - 5 D-items READY/READY-NEAR + 5 PARTIAL caveat-based per W5 Day 5 reconciliation packet recalibration.
 
+**CV-1.7 additions (W6 D4, 2026-05-06, Session I — P-F stochastic foundation):**
+- **T-P-F-ε0 (Gibbs Measure Continuity at ε=0) promoted to Cat A** (§13 Category A, this session). Weak convergence $\mu_\varepsilon\Rightarrow\mu_0$ on compact $\mathcal{F}_M(\mathcal{P})$ by dominated convergence; H1–H4 verified. Count: 48A → **49A** (§13: 48 + T-ST-5a in §16 = 49 total Cat A).
+- **T-P-F-ε0-K (Kramers Exponent Stability) promoted to Cat B** (§13 Category B, this session). $\Delta\mathcal{E}_\varepsilon=\Delta\mathcal{E}_0+\varepsilon\Delta R$; Target B vs Target A correction $\Gamma_B/\Gamma_A=\exp(O(\delta))$ in phase-separated regime; conditional on H5 Morse stability. Count: 12B → **13B**.
+- **Running total post-Session I: 49A/13B/5C/5R = 72 claims.** *(Updated Session K: T-OP6-B Cat B → Cat A → **50A/12B/5C/5R = 72 claims**. Updated Sessions M–N: T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B → **52A/14B/5C/5R = 76 claims, ~68% fully proved**. Updated Session P CV-1.9: T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A → **54A/12B/5C/5R = 76 claims, ~71% fully proved**.)*
+- **P-F-A1 axiom (v0) remains OPEN** — spectral gap + Lions-Sznitman reflection still required. T-P-F-ε0 is NOT P-F-A1.
+- CV-1.7 formal release pending: P-F-A1 Cat A (spectral gap + T_* registration).
+
 **What CV-1.5.2 means:**
 - **Single-formation theory is canonical-closed** — F-1/M-1/MO-1 no longer block publication; σ-framework grounded with supporting structures (Lemmas 1/2/3 + Theorems 3/4).
 - σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions) + theoretical scaffolding.
@@ -75,7 +82,7 @@ All sums of the form $\sum_{x,y \in X_t}$ range over **ordered pairs**: each und
 
 ## 1. Status Note
 
-This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion. The current release is **CV-1.5.2 (2026-05-02)**, incorporating results from Iterations 1–12 plus the 2026-04-02 theory audit, the W4–W5 multi-formation extensions (T-PreObj, T-V5b-T, σ-supporting Lemmas/Theorems, D-6a Multi-Static + Commitment 16, T-L1-F Hard-Bar/Active-Count Bridge), and superseding all earlier releases. See §1.1 below for the full canonical release history.
+This document is the canonical human-readable formal specification of the theory of Soft Cognitive Cohesion. The current release is **CV-1.10 (2026-05-06)**, incorporating results from Iterations 1–12 plus the 2026-04-02 theory audit, the W4–W5 multi-formation extensions (T-PreObj, T-V5b-T, σ-supporting Lemmas/Theorems, D-6a Multi-Static + Commitment 16, T-L1-F Hard-Bar/Active-Count Bridge), and superseding all earlier releases. See §1.1 below for the full canonical release history.
 
 ### 1.1 Canonical Release History
 
@@ -105,7 +112,7 @@ The document separates stable theoretical commitments — those principles that 
 - **Retraction:** Theorem 3.3 ($\bar{r}_0 = O(n^{-1/d})$ for general $\tau$) — experimentally falsified; $\bar{r}_0$ is genuinely $O(1)$ for $\tau \neq 1/2$.
 - **T-Persist-K-Unified:** New parametric theorem unifying Sep/Weak/Strong persistence regimes via the coupling parameter $\Lambda_{\mathrm{coupling}} = \lambda_{\mathrm{rep}} \cdot \omega_{jk} / \min(\mu_j, \mu_k)$.
 - **Unified regime parametrization:** $\Lambda_{\mathrm{coupling}}$ adopted as canonical coupling measure with $\mu$-floor regularization $\mu_{\mathrm{floor}} = w_{\mathrm{cl}} \cdot 2(1 - a_{\mathrm{cl}}/4)^2$. Experimental validation: 100% geometric-Lambda agreement across 69 configurations (exp46-47).
-- **Proved results registry:** Now **47 Category A**, **5 Category B**, **5 Category C**, **5 retracted**; total **62 claims** (75% fully proved). *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. See docs/04-06/HONEST-RECOUNT.md.)* *(Update 2026-04-25: T-PreObj-1 + T-PreObj-1G added in W4 merge — 35A → 37A, 49 → 51 claims. F-1/M-1/MO-1 resolved/clarified/sidestepped.)* *(Update 2026-04-26: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) added in W4 extended close — 37A → 38A, 51 → 52 claims. V5b 8 iterations (V1 → V5b'') resolved into V5b-T canonical + V5b-F Cat C new finding.)* *(Update 2026-04-27: σ-framework supporting structures T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 added in W5 Day 1 G0 — 38A → 43A, 52 → 57 claims. σ-framework now fully canonical-grounded.)* *(Update 2026-04-29: CV-1.5.1 — D-6a Multi-Static (3 Cat A entries) + T-σ-Multi-1 (Cat B target) + V5b-F-empirical sub (Cat B) + V5b-T-zero sub (Cat A def) + T-σ-Theorem-4 retroactive Cat A → Cat B (Critic verdict) + Commitment 16 K-status + Commitment 14 (O5')(O7) sub-conventions; D-5 V5b-T' WITHDRAWN (NQ-198f phantom). 43A → 45A, 4B → 5B, 57 → 60 claims; OP-0008 σ^A K-jump + OP-0009 Multi-Formation Ontological Foundations registered; MO-1 re-activation rider on OP-0003.)* *(Update 2026-05-02: CV-1.5.2 — T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) added as Cat A conditional. First multi-formation canonical Cat A. 45A → 46A, 60 → 61 claims. L1-A through L1-L chain + L1-K external audit + L1-K-REPAIR cycle. theorem_status.md unchanged.)* *(Update 2026-05-04: W6 D1 EOD CV-1.5.2 + T-L1-M post-supervision addition — T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F) Cat A conditional under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}} + \tau < \tau_*^{\mathrm{post-R2}}$. 46A → 47A, 61 → 62 claims. W6 G1 deliverable (R-0/R-1/R-2/R-3 self-audit closures + external L-M-K-style audit PASS + supervised user authorization). C-0722 row added in theorem_status.md line 197. NQ-G1-1 self-correction integrated; NQ-G1-2 EXECUTED ((P9-tight) candidate for L1-J' promotion); NQ-G1-1-ext + NQ-G1-2-ext W7+. Does NOT solve OP-0005 / OP-0008 / OP-0009.)*
+- **Proved results registry:** Now **47 Category A**, **5 Category B**, **5 Category C**, **5 retracted**; total **62 claims** (75% fully proved). *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. See docs/04-06/HONEST-RECOUNT.md.)* *(Update 2026-04-25: T-PreObj-1 + T-PreObj-1G added in W4 merge — 35A → 37A, 49 → 51 claims. F-1/M-1/MO-1 resolved/clarified/sidestepped.)* *(Update 2026-04-26: T-V5b-T (Pre-Objective Goldstone on Translation-Invariant Graphs) added in W4 extended close — 37A → 38A, 51 → 52 claims. V5b 8 iterations (V1 → V5b'') resolved into V5b-T canonical + V5b-F Cat C new finding.)* *(Update 2026-04-27: σ-framework supporting structures T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 added in W5 Day 1 G0 — 38A → 43A, 52 → 57 claims. σ-framework now fully canonical-grounded.)* *(Update 2026-04-29: CV-1.5.1 — D-6a Multi-Static (3 Cat A entries) + T-σ-Multi-1 (Cat B target) + V5b-F-empirical sub (Cat B) + V5b-T-zero sub (Cat A def) + T-σ-Theorem-4 retroactive Cat A → Cat B (Critic verdict) + Commitment 16 K-status + Commitment 14 (O5')(O7) sub-conventions; D-5 V5b-T' WITHDRAWN (NQ-198f phantom). 43A → 45A, 4B → 5B, 57 → 60 claims; OP-0008 σ^A K-jump + OP-0009 Multi-Formation Ontological Foundations registered; MO-1 re-activation rider on OP-0003.)* *(Update 2026-05-02: CV-1.5.2 — T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) added as Cat A conditional. First multi-formation canonical Cat A. 45A → 46A, 60 → 61 claims. L1-A through L1-L chain + L1-K external audit + L1-K-REPAIR cycle. theorem_status.md unchanged.)* *(Update 2026-05-04: W6 D1 EOD CV-1.5.2 + T-L1-M post-supervision addition — T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F) Cat A conditional under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}} + \tau < \tau_*^{\mathrm{post-R2}}$. 46A → 47A, 61 → 62 claims. W6 G1 deliverable (R-0/R-1/R-2/R-3 self-audit closures + external L-M-K-style audit PASS + supervised user authorization). C-0722 row added in theorem_status.md line 197. NQ-G1-1 self-correction integrated; NQ-G1-2 EXECUTED ((P9-tight) candidate for L1-J' promotion); NQ-G1-1-ext + NQ-G1-2-ext W7+. Does NOT solve OP-0005 / OP-0008 / OP-0009.)* *(Update 2026-05-06: CV-1.8 Sessions M–N — T-PF-A1-AR (field polytope affine reduction, Cat A) + T-PF-A1-SDE (reflected Langevin well-posedness, Cat A) + T-PF-A1-GI (Gibbs invariance, Cat B) + T-PF-A1-PE (Poincaré ergodicity, Cat B). 50A → 52A, 12B → 14B, 72 → 76 claims; ~68% fully proved. P-F-A1 Package I complete at working/canonical level.)* *(Update 2026-05-06: CV-1.9 Session P — T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (heat kernel uniqueness + $L^2$ ergodic kernel argument for GI; Payne-Weinberger for convex polytopes + $L^2\to TV$ Cauchy-Schwarz for PE). 52A → 54A, 14B → 12B; 76 claims, ~71% fully proved. P-F-A1 Package I fully Cat A.)*
 
 **Key changes from 2026-04-02 audit (paradigm shift: kinetic multi-formation):**
 
@@ -238,6 +245,54 @@ is the temporal transport or inheritance kernel. The value $\mathbf{M}_{t \to s}
 
 Temporal transport need not be one-to-one. It may be one-to-many (a cohesive region at time $t$ may distribute its inheritance across multiple sites at time $s$), many-to-one (multiple sites at time $t$ may converge onto a single inheritor), partial (some cohesive content may dissipate without successor), or probabilistic. What is required is that transport preserve the structural organization of cohesion, not that it preserve individual site identities.
 
+### 3.9. Field Space and Mass Constraint
+
+*(Migrated from §16 D-ST-2, W6 D4 Session C. Canonical from CV-1.6.)*
+
+The **base field space** over a support $\mathcal{P}$ is:
+
+$$\mathcal{F}_0(\mathcal{P}) = \{\tilde{u} : \mathcal{P} \to [0,1]\}$$
+
+The **mass-constrained subspace** is:
+
+$$\mathcal{F}_M(\mathcal{P}) = \{\tilde{u} \in \mathcal{F}_0(\mathcal{P}) : \textstyle\sum_{x \in \mathcal{P}} \tilde{u}(x) = M\}$$
+
+$\mathcal{F}_M(\mathcal{P})$ is the correct foundational state space for SCC dynamics — the manifold on which gradient flow and energy minimization are defined. This replaces the K-field product manifold $\Sigma_M^K = \prod_j \Sigma_{m_j}$ as the foundational space; $\Sigma_M^K$ is a local coordinate chart within one energy basin $\mathcal{A}_{K,\alpha}(\mathcal{P}) \subset \mathcal{F}_M(\mathcal{P})$ (see §16 D-ST-4), not the global state space.
+
+### 3.10. Stereo Adjacency — Hard and Smooth Regimes
+
+*(Migrated from §16 D-ST-1, W6 D4 Session C. Canonical from CV-1.6. Smooth variant added for T-ST-5b.)*
+
+When the support space $\mathcal{P}$ is a stereo point cloud with associated depths $z_i$, the abstract soft adjacency $\mathbf{N}_t$ (§3.5) admits two canonical specializations:
+
+**Hard-threshold stereo adjacency (D-ST-1):**
+
+$$G_t^\mathcal{P} = (X_t, E_t^\mathcal{P}), \quad E_t^\mathcal{P} = \{(x_i, x_j) : d_{3D}(x_i, x_j) \leq \delta_{\mathrm{3D}},\; |z_i - z_j| < \Delta z\}$$
+
+Edges across depth boundaries ($|z_i - z_j| \geq \Delta z$) are removed entirely. The monocular (flat) case is recovered when $\Delta z = \infty$. This produces a possibly disconnected graph (T-ST-5a regime).
+
+**Smooth depth-weighted adjacency:**
+
+$$w_{ij}^{\mathrm{smooth}} = w_{ij}^{2D} \cdot \exp(-\lambda_z |z_i - z_j|^2)$$
+
+The graph remains connected; cross-boundary edges are downweighted by depth separation. The hard-threshold case is the limit $\lambda_z \to \infty$ (with $\Delta z$ correspondingly sharp). This is the T-ST-5b regime.
+
+*All axioms of Group B (Soft Adjacency) carry over to both specializations. The Laplacian $L = D - W$ is constructed from the respective weight matrix.*
+
+### 3.11. Active Formation Count $K_{\mathrm{act}}$ as Persistent Component Count
+
+*(Migrated from §16 D-ST-3, W6 D4 Session C. Canonical from CV-1.6.)*
+
+For a field $\tilde{u} \in \mathcal{F}_0(\mathcal{P})$ on a graph $G = (X, E)$, the **active formation count** is:
+
+$$K_{\mathrm{act}}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}) := \bigl|\{(b,d) \in \mathrm{Bars}_0(\tilde{u}; G) : b - d > \rho_{\mathrm{pers}}\}\bigr|$$
+
+where $\mathrm{Bars}_0(\tilde{u}; G)$ is the $H_0$ persistent homology barcode of $\tilde{u}$ via the superlevel-set filtration on $G$, and $\rho_{\mathrm{pers}} > 0$ is the persistence threshold.
+
+This is the correct foundational definition. The slot-count $|\{j : \|u^{(j)}\|_\infty > \varepsilon\}|$ (K-field artifact) is a derived approximation valid only under the L1-J regime $(P0)$–$(P11)$ (T-L1-F, CV-1.5.2); it is not a definition. Under the L1-J regime, T-L1-F establishes equivalence between the slot-count and the hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}$.
+
+*Experimentally validated: exp01 (W6 D4) — PersComp=2 (correct) vs slot-count=4 (inflated) for noisy 2-blob field. Implementation: `CODE/stereo_scc/topology.py:persistent_component_count`.*
+
 ---
 
 ## 4. Why the Soft Form Is Primary
@@ -301,6 +356,51 @@ $$
 which measures the rate of cohesion change at site $x$ relative to its relational neighborhood. Sites at which $g_t(x; u)$ is large are sites of rapid transition — boundary sites in the morphological sense.
 
 The boundary band is not a codimension-one manifold in general. It is a volumetric region whose thickness and structure reflect the morphology of the formation. A formation with a thick boundary band transitions gradually from inside to outside; a formation with a thin boundary band has a more abrupt transition. Both are legitimate; the theory does not impose a preference.
+
+### 5.3b. Persistent Gradient Ridge Boundary (Cat A conditional — CV-1.7)
+
+*(Added W6 D4 Session E as Cat B. Promoted Cat A conditional under H1–H5 in Session K 2026-05-06. Source: `THEORY/working/MF/op_0006_boundary_precision.md`. Resolves OP-0006 at Cat B level (Session E); fully resolved at Cat A level (Session K; see §13 Category A T-OP6-B entry).)*
+
+The §5.3 boundary band definition (field-value threshold) admits a gradient-based strengthening that is more stable under photometric perturbations and does not depend on the choice of thresholds $\theta_1, \theta_2$.
+
+**Definition (Persistent Gradient Ridge, canonical from CV-1.6).** For a cohesion field $\tilde{u} \in \mathcal{F}_0(\mathcal{P})$ on graph $G = (X, E)$, the **persistent gradient ridge boundary** is:
+
+$$B_{\mathrm{PersRidge}}(\tilde{u}) := \bigl\{x \in X : (b_x, d_x) \in \mathrm{Bars}_0(|\nabla_G \tilde{u}|;\, G),\; b_x - d_x > \rho_{\mathrm{bd}}\bigr\}$$
+
+where $|\nabla_G \tilde{u}(x)| = \sqrt{\sum_{y \sim x}(\tilde{u}(x) - \tilde{u}(y))^2}$ is the discrete gradient magnitude, $\mathrm{Bars}_0(|\nabla_G \tilde{u}|; G)$ is the $H_0$ persistence barcode of the gradient magnitude field under the superlevel-set filtration on $G$, and $\rho_{\mathrm{bd}} > 0$ is the boundary persistence threshold.
+
+**Interpretation.** $B_{\mathrm{PersRidge}}(\tilde{u})$ is the set of nodes whose gradient magnitude forms a persistent "ridge" — a connected component in $\{x : |\nabla_G \tilde{u}(x)| \geq \theta\}$ that persists for a range of thresholds of width $> \rho_{\mathrm{bd}}$. This is the gradient-domain analog of the D-ST-3 definition ($K_{\mathrm{act}}$ as #PersComp on the cohesion field itself, §3.11).
+
+**Theorem T-OP6-B (Cat A conditional — PersRidge Equivalence, H1–H5).** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`.)* *Under assumptions H1–H5 (see below), the persistent gradient ridge boundary and the topological boundary of the persistent formation core are approximately equivalent in graph Hausdorff distance:*
+
+$$d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\mathrm{PersComp}(\tilde{u}^*)\bigr) \leq 2 \cdot (\alpha/\beta)^{1/2}$$
+
+*where $\partial\mathrm{PersComp}(\tilde{u}^*) = \{x \in C_j : \exists\, y \sim x,\; y \notin C_j\}$ is the node-boundary of the formation core $C_j = \{x : \tilde{u}^*(x) \geq 1/2\}$, and the constant $C = 2$ is explicit.*
+
+**Assumption package (H1–H5):**
+- **(H1) Phase separation:** $\beta/\alpha > 4\lambda_2/|W''(c)|$ and $\tilde{u}^* \approx \{0,1\}$-valued.
+- **(H2) Well-formed formation:** The formation core $C_j$ is connected with non-empty interior (single component, no isolated nodes).
+- **(H3) Canonical threshold:** $\rho_{\mathrm{bd}} = 1/(4\xi)$ where $\xi = (2\alpha/\beta)^{1/2}$ (half-maximum gradient threshold; $\rho_{\mathrm{bd}} \cdot \xi = 1/4$ constant).
+- **(H4) Bounded curvature:** $\kappa_{\mathrm{max}} \cdot \xi \leq 0.1$ (interface curvature small relative to interface width).
+- **(H5) Hard-cut stereo adjacency (for stereo B3):** $G_t^\mathcal{P}$ from D-ST-1 (depth-gap pixels suppress edges).
+
+*Proof summary.* (B4) $\rho_{\mathrm{bd}} = 1/(4\xi)$ gives constant $\rho_{\mathrm{bd}} \cdot \xi = 1/4$; 1D bound $\Delta_{1D} = \xi \cdot \mathrm{arctanh}(1/\sqrt{2}) \approx 1.246(\alpha/\beta)^{1/2}$ (Session J). (B2) Matched-asymptotic expansion at curved interface: $u^*(x) = u_0(r/\xi) + \xi\kappa_{\mathrm{mean}} v_1(r/\xi) + O((\kappa_{\mathrm{max}}\xi)^2)$ with Pöschl-Teller correction $|v_1'(s)| \leq 1$; under H4, $d_H \leq 1.37\xi < 2(\alpha/\beta)^{1/2}$. (B1) Topological separator: any path from $C_j^{\mathrm{int}}$ to $C_j^{\mathrm{ext}}$ crosses $\partial C_j \subset B_t$ by graph connectivity; $B_t$ is a vertex separator. (B3) Stereo conditioning: $G_t^\mathcal{P}$ severs depth-gap edges; PersRidge on stereo graph inherits the same bound. Full proofs: `op_0006_boundary_precision.md §9–§12`.
+
+**Stability (experimental).** By the persistence stability theorem (Chazal et al.), $B_{\mathrm{PersRidge}}(\tilde{u})$ is stable under field perturbations $\|\delta\tilde{u}\|_\infty < \rho_{\mathrm{bd}}/2$. Experimentally validated (exp06, W6 D4): under shadow perturbations (strength $s \in \{0.2, 0.3, 0.5, 0.7, 0.8\}$, all SUPPORTED, max ratio $\Delta_{\mathrm{raw}}/\Delta_{\mathrm{SCC}} = 4.09$) and blur perturbations ($\sigma \in \{0.5, 1.0, 1.5, 2.0, 3.0\}$, all SUPPORTED, max ratio $= 50.8$). SCC boundary is 4–51× more stable than raw image gradient boundary under photometric perturbations.
+
+**Relation to §5.3 Boundary Band.** Under phase separation, all three characterizations coincide: $\mathrm{Bd}_t(\tilde{u}^*) \approx B_{\mathrm{PersRidge}}(\tilde{u}^*) \approx \partial\mathrm{PersComp}(\tilde{u}^*)$. The §5.3 definition (field-value threshold) remains the primary registered definition; $B_{\mathrm{PersRidge}}$ is a strengthened definition with better stability properties.
+
+**Distinction from raw image edge.** A raw image edge detector (Canny, Sobel) computes $|\nabla I|$ for pixel intensity $I : \mathcal{P} \to \mathbb{R}$. $B_{\mathrm{PersRidge}}(\tilde{u}^*)$ operates on the SCC-optimized field $\tilde{u}^*$ (output of SCC optimization) — conditioned on the full SCC energy (closure + separation + boundary + transport). It is invariant to photometric changes that do not alter formation structure, while $|\nabla I|$ responds to luminance gradients regardless of structure. (exp06 confirms this: ratio > 1 for all shadow/blur conditions.)
+
+**Non-overclaims.** $C = 2$ is not tight (inner computation gives $C < 1.37$ under H4); H4 is required; proof is continuum interface → discrete lattice (discretization adds $O(1)$ hops, included in constant); soft-cut stereo (GL-weighted adjacency without hard depth cut) is conditional and not covered.
+
+**Blockers resolved (B1–B4 closed, Session K 2026-05-06):**
+- **B1 Topological separator:** $B_t \supset \partial C_j$ (Direction 2) → $B_t$ is vertex separator. CLOSED.
+- **B2 Hausdorff constant:** $C = 2$ explicit; curved interface matched asymptotics under H4. CLOSED.
+- **B3 Stereo conditioning:** $B_{\mathrm{PersRidge}}^{\mathcal{P}}$ uses $G_t^\mathcal{P}$ only; hard-cut D-ST-1 suppresses depth-gap edges. CLOSED.
+- **B4 $\rho_{\mathrm{bd}}$ calibration:** $\rho_{\mathrm{bd}} = 1/(4\xi)$ (half-maximum gradient). CLOSED (Session J).
+
+*Implementation:* `CODE/stereo_scc/topology.py:persistent_component_count` (on gradient magnitude field). *Experiment:* `CODE/stereo_scc/experiments/exp06_boundary_stability_shadow_blur.py`.
 
 ### 5.4. Exterior
 
@@ -992,9 +1092,9 @@ When formations have significant bulk overlap ($|O_{jk}| > \eta \cdot \min(|\tex
 
 *(Erratum 2026-04-07: §13 counts corrected to 35A/4B/5C/5R per honest recount of 04-06 deep audit. Previous counts (43A/2B/3C/0R) overcounted due to: empirical fits treated as proofs, merge path manifold error, quantitative claims bundled with qualitative theorems. See docs/04-06/HONEST-RECOUNT.md.)*
 
-The following theorems have been rigorously proved through Iterations 1–12, audited 2026-04-06, extended in W4 (2026-04-19 ~ 2026-04-26, extended close), W5 Day 1 (2026-04-27 σ-framework supporting structures merge), W5 Day 3 EOD (2026-04-29 D-6a Multi-Static + ontological depth + Critic 보강), **W5 Day 6 (2026-05-02 T-L1-F Hard-Bar / Active-Count Bridge canonical promotion)**, and **W6 Day 1 EOD (2026-05-04 T-L1-M Soft-Count Corollary supervised addition)**. They are listed with precise statements, proof methods, and known caveats. **Totals (post-W6 D1 EOD, 2026-05-04, CV-1.5.2 + T-L1-M post-supervision): 47 Category A, 5 Category B, 5 Category C, 5 Retracted (62 claims, 75% fully proved).** *(W4 additions: T-PreObj-1 + T-PreObj-1G — Pre-Objective Mechanism graph-class independent; corollary resolves F-1. W4 extended addition: T-V5b-T — Pre-Objective Goldstone on Translation-Invariant Graphs. W5 Day 1 additions: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14. **W5 Day 3 EOD additions (CV-1.5.1)**: T-Commitment-14-Multi-Static + T-σ-multi-A-Static + T-σ-multi-D-Static (3 Cat A definitional entries grounding Commitment 14-Multi); T-σ-Multi-1 (Cat B target, Goldstone-pair instability); V5b-F-empirical sub-statement (Cat B target via NQ-198a 1/n scaling); V5b-T-zero sub-statement (Cat A definitional, replaces WITHDRAWN V5b-T' phantom); T-σ-Theorem-4 retroactive Cat A → Cat B (Critic 7-agent verdict). **W5 Day 6 addition (CV-1.5.2)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) Cat A conditional — first multi-formation canonical Cat A theorem. **W6 D1 EOD addition (2026-05-04, CV-1.5.2 + T-L1-M post-supervision)**: T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F) Cat A conditional under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau) + \tau < \tau_*^{\mathrm{post-R2}}$, supervised promotion same-day after external L-M-K-style audit PASS.)*
+The following theorems have been rigorously proved through Iterations 1–12, audited 2026-04-06, extended in W4 (2026-04-19 ~ 2026-04-26, extended close), W5 Day 1 (2026-04-27 σ-framework supporting structures merge), W5 Day 3 EOD (2026-04-29 D-6a Multi-Static + ontological depth + Critic 보강), **W5 Day 6 (2026-05-02 T-L1-F Hard-Bar / Active-Count Bridge canonical promotion)**, and **W6 Day 1 EOD (2026-05-04 T-L1-M Soft-Count Corollary supervised addition)**. They are listed with precise statements, proof methods, and known caveats. **Totals (post-W6 D1 EOD, 2026-05-04, CV-1.5.2 + T-L1-M post-supervision): 47 Category A, 5 Category B, 5 Category C, 5 Retracted (62 claims, 75% fully proved).** *(W4 additions: T-PreObj-1 + T-PreObj-1G — Pre-Objective Mechanism graph-class independent; corollary resolves F-1. W4 extended addition: T-V5b-T — Pre-Objective Goldstone on Translation-Invariant Graphs. W5 Day 1 additions: T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — σ-framework supporting structures grounding Commitment 14. **W5 Day 3 EOD additions (CV-1.5.1)**: T-Commitment-14-Multi-Static + T-σ-multi-A-Static + T-σ-multi-D-Static (3 Cat A definitional entries grounding Commitment 14-Multi); T-σ-Multi-1 (Cat B target, Goldstone-pair instability); V5b-F-empirical sub-statement (Cat B target via NQ-198a 1/n scaling); V5b-T-zero sub-statement (Cat A definitional, replaces WITHDRAWN V5b-T' phantom); T-σ-Theorem-4 retroactive Cat A → Cat B (Critic 7-agent verdict). **W5 Day 6 addition (CV-1.5.2)**: T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime $(P0)$–$(P11)$) Cat A conditional — first multi-formation canonical Cat A theorem. **W6 D1 EOD addition (2026-05-04, CV-1.5.2 + T-L1-M post-supervision)**: T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F) Cat A conditional under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau) + \tau < \tau_*^{\mathrm{post-R2}}$, supervised promotion same-day after external L-M-K-style audit PASS. **W6 D4 Sessions M–N additions (CV-1.8, 2026-05-06)**: T-PF-A1-AR (field polytope compact convex + affine isometry, Cat A); T-PF-A1-SDE (reflected Langevin SDE well-posedness, Cat A, Lions-Sznitman 1984 convex case + Tanaka uniqueness); T-PF-A1-GI (Gibbs measure invariance, Cat B, zero-current + Dirichlet form); T-PF-A1-PE (Poincaré inequality + exponential ergodicity, Cat B, Payne-Weinberger + Holley-Stroock; explicit bound $\lambda_1\geq(\pi^2/n)e^{-\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$). **Running total after Sessions M–N: 52A/14B/5C/5R = 76 claims, ~68% fully proved.** **W6 D4 Session P addition (CV-1.9, 2026-05-06)**: T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (heat kernel + $L^2$ kernel uniqueness for GI; Payne-Weinberger 1960 for convex polytopes + $L^2\to TV$ Cauchy-Schwarz for PE). **Running total after Session P: 54A/12B/5C/5R = 76 claims, ~71% fully proved.** *(Update 2026-05-06: CV-1.10 Session R — T-K-Select-PF Cat B (+1B); CV-1.10 total: **54A/13B/5C/5R = 77 claims, ~70% fully proved**.)*)*
 
-### Category A: Fully Proved (47 theorems as of CV-1.5.2 + W6 D1 EOD T-L1-M supervised addition; baseline below lists original 35 from Iterations 1–12, with W4–W5–W6 additions appended later in this section: T-PreObj-1, T-PreObj-1G, T-V5b-T (+ V5b sub-statements), T-σ-Lemma-1/2/3, T-σ-Theorem-3, T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static, T-L1-F, **T-L1-M (W6 D1 EOD supervised 2026-05-04, post external audit PASS)**)
+### Category A: Fully Proved (53 theorems in §13: 47 as of CV-1.5.2/W6 D1 EOD T-L1-M supervised addition + T-P-F-ε0 W6 D4 Session I CV-1.7 + T-OP6-B W6 D4 Session K CV-1.7 + T-PF-A1-AR + T-PF-A1-SDE W6 D4 Sessions M–N CV-1.8 + T-PF-A1-GI + T-PF-A1-PE W6 D4 Session P CV-1.9; note §16 adds T-ST-5a Cat A, giving running total 54A; baseline below lists original 35 from Iterations 1–12, with W4–W5–W6–W6-D4 additions appended later in this section: T-PreObj-1, T-PreObj-1G, T-V5b-T (+ V5b sub-statements), T-σ-Lemma-1/2/3, T-σ-Theorem-3, T-Commitment-14-Multi-Static, T-σ-multi-A-Static, T-σ-multi-D-Static, T-L1-F, **T-L1-M (W6 D1 EOD supervised 2026-05-04, post external audit PASS)**, **T-P-F-ε0 (W6 D4 Session I, 2026-05-06, CV-1.7)**, **T-OP6-B (W6 D4 Session K, 2026-05-06, CV-1.7 — promoted from Cat B; B1–B4 all closed)**, **T-PF-A1-AR (W6 D4 Sessions M–N, 2026-05-06, CV-1.8)**, **T-PF-A1-SDE (W6 D4 Sessions M–N, 2026-05-06, CV-1.8)**, **T-PF-A1-GI (W6 D4 Session P, 2026-05-06, CV-1.9 — promoted from Cat B; heat kernel + $L^2$ kernel uniqueness)**, **T-PF-A1-PE (W6 D4 Session P, 2026-05-06, CV-1.9 — promoted from Cat B; Payne-Weinberger for convex polytopes + $L^2\to TV$ Cauchy-Schwarz)**)
 
 **T1. Energy Minimizer Existence.**
 On the constraint manifold $\Sigma_m = \{u \in [0,1]^n : \sum u_i = m\}$, the energy $\mathcal{E}_t$ attains its minimum.
@@ -1503,7 +1603,99 @@ $$|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)|
 
 *Status:* **Proved**, Cat A *conditional under the L1-J regime package $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ + $\tau<\tau_*^{\mathrm{post-R2}}$*. NOT a global identity. Does NOT solve OP-0005 (K-Selection) or OP-0008 ($\sigma^A$ K-jump non-determinism). Does NOT promote $\Phi_{\mathrm{res}}$ to a canonical envelope class beyond its working role; reservoir-admissible families restricted to WQ-LAT-1.B-empirically-supported sub-classes (hard, logistic $s\ge 50$, shift-sat $\beta\ge 20$). $\tau_*^{\mathrm{post-R2}}$ uses $\rho_{\mathrm{bg}}$ (per W6 D1 G1-AUDIT R-2 closure: §5.5 Type-B chain replaced with explicit P5-direct derivation). Comparison between $\rho_{\mathrm{bg}}$ and $\rho_{\mathrm{res}}$ is configuration-dependent (NQ-G1-1 self-correction; empirical anchor deferred to NQ-G1-1-ext W7+); Cat A conditional self-classification unaffected. R-1 sharpness construction valid in the generic vineyard-nonsingular regime (persistence-skeleton preservation, automatic for non-degenerate $u^{(j)}$ at $\rho_{\mathrm{pert}}/2$ below local skeleton stability threshold). External L-M-K-style audit PASSed W6 D1 EOD (R-0/R-1/R-2/R-3 + Theorem L-M composition all verified by independent cold-review).
 
-### Category B: Proved with Explicit Structural Parameter (4 theorems)
+**T-P-F-ε0. Gibbs Measure Continuity at ε=0 (Target B → Target A Weak Convergence).** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Formal proof: `THEORY/working/MF/pf_tstar_langevin.md` §8.5.)*
+Let $\mathcal{F}_M(\mathcal{P})=\{\tilde{u}\in[0,1]^n:\sum_i\tilde{u}_i=M\}$ be the mass-constrained field space (D-ST-2, §3.9). Define the parameterized measure family
+$$\mu_\varepsilon(d\tilde{u})=Z_\varepsilon^{-1}\exp\!\left(-\frac{\mathcal{E}_{\mathrm{SCC}}^{\mathcal{P}}[\tilde{u}]+\varepsilon R(\tilde{u})}{T_*}\right)d\sigma(\tilde{u}),\quad\varepsilon\in[0,1],$$
+where $d\sigma$ is the $(n-1)$-Hausdorff measure on $\mathcal{F}_M(\mathcal{P})$ and $Z_\varepsilon$ is the normalizing constant. With $R=-T_*S_{\mathrm{Bern}}$: $\varepsilon=0$ gives **Target A** (pure Gibbs $\propto\exp(-\mathcal{E}/T_*)$, canonical P-F-A1 axiom v0); $\varepsilon=1$ gives **Target B** (Bernoulli-regularized, `langevin.py` `lambda_K=0`). Under:
+*(H1)* $\mathcal{F}_M(\mathcal{P})$ compact (finite $n$, intersection of $[0,1]^n$ with affine hyperplane);
+*(H2)* $\mathcal{E}_{\mathrm{SCC}}$ continuous on $\mathcal{F}_M(\mathcal{P})$ (polynomial in $\tilde{u}$);
+*(H3)* $\sigma(\mathcal{F}_M(\mathcal{P}))>0$ (non-degenerate $(n-1)$-polytope for $M\in(0,n)$);
+*(H4)* $R$ bounded below: $R(\tilde{u})\ge -C$ (verified: $-T_*S_{\mathrm{Bern}}\ge -T_*n\ln 2$);
+
+$$\mu_\varepsilon\Rightarrow\mu_0\quad\text{weakly as }\varepsilon\to 0,$$
+
+i.e., $\int f\,d\mu_\varepsilon\to\int f\,d\mu_0$ for all bounded continuous $f:\mathcal{F}_M(\mathcal{P})\to\mathbb{R}$.
+
+*Proof (4 steps):* (1) $\mathcal{F}_M$ compact $\Rightarrow$ $\sigma(\mathcal{F}_M)\in(0,\infty)$. (2) $\mathcal{E}_{\mathrm{SCC}}$ continuous on compact $\Rightarrow$ $\mathcal{E}_*<\infty$ $\Rightarrow$ $Z_0\ge e^{-\mathcal{E}_*/T_*}\cdot\sigma(\mathcal{F}_M)>0$. (3) Dominating function $h(\tilde{u})=\exp(-\mathcal{E}/T_*)\cdot\exp(C/T_*)$ integrable; $g_\varepsilon\to g_0$ pointwise; DCT $\Rightarrow$ $Z_\varepsilon\to Z_0>0$. (4) Decompose $\int f\,d\mu_\varepsilon-\int f\,d\mu_0$ into Term I $=(1/Z_\varepsilon)\int f(g_\varepsilon-g_0)d\sigma\to 0$ (DCT) and Term II $=((1/Z_\varepsilon)-(1/Z_0))\int f g_0\,d\sigma\to 0$ ($Z_\varepsilon\to Z_0>0$). $\square$
+
+**Non-overclaim:** *T-P-F-ε0 is not P-F-A1.* It establishes continuity of the Gibbs target under Bernoulli regularization. Full P-F-A1 remains open pending spectral gap and reflected Langevin / Lions-Sznitman construction. This theorem does NOT prove: spectral gap or mixing time, Eyring-Kramers pre-exponential factor, existence or canonical definition of $T_*$, H5 Morse stability, or infinite-dimensional extension to continuous $\mathcal{P}=\mathbb{R}^2$.
+
+*Status:* **Proved**, Cat A. All hypotheses H1–H4 verified in SCC setting. P-F-A1 axiom remains OPEN (see OP in `theorem_status.md`). Peer-review note: polynomial continuity of $\mathcal{E}_{\mathrm{SCC}}$ (H2) and polytope non-degeneracy (H3) are straightforward to verify.
+
+**T-OP6-B. PersRidge Boundary Equivalence.** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`. See also §5.3b for full statement with assumption package H1–H5.)*
+
+Under H1–H5 (phase separation, well-formed formation, canonical $\rho_{\mathrm{bd}} = 1/(4\xi)$, bounded curvature $\kappa_{\mathrm{max}}\xi \leq 0.1$, hard-cut D-ST-1):
+
+$$d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\mathrm{PersComp}(\tilde{u}^*)\bigr) \leq 2 \cdot (\alpha/\beta)^{1/2}$$
+
+*Proof summary (four blockers closed):* (B4) $\rho_{\mathrm{bd}} \cdot \xi = 1/4$ constant → 1D bound $\Delta_{1D} \approx 1.246(\alpha/\beta)^{1/2}$ (Session J). (B2) Matched-asymptotic expansion at curved interface with Pöschl-Teller correction $|v_1'| \leq 1$; under H4, $d_H < 1.37\xi < 2(\alpha/\beta)^{1/2}$. (B1) Topological separator: any path from $C_j^{\mathrm{int}}$ to $C_j^{\mathrm{ext}}$ crosses $\partial C_j \subset B_t$. (B3) Stereo: $G_t^\mathcal{P}$ severs depth-gap edges; bound transfers. Experimental support: exp06 (shadow 5/5, blur 5/5; SCC boundary 4–51× more stable than raw gradient).
+
+*Status:* **Proved**, Cat A conditional under H1–H5.
+
+---
+
+**T-PF-A1-AR. Field Polytope Compact Convex Structure and Affine Reduction.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Affine-Reduction.)*
+
+Let $G=(V,E)$ be a finite graph with $|V|=n\geq 2$, $\mu\in\mathbb{R}^n$ a positive weight vector ($\mu_i>0$, $\sum\mu_i=1$), and $M\in(0,1)$. Define the **field polytope** $\mathcal{F}_M(G) = \{u\in[0,1]^n : \mu^\top u = M\}$. Then:
+
+1. $\mathcal{F}_M(G)$ is nonempty (take $u^*=M\cdot\mathbf{1}$; since $\mu^\top(M\cdot\mathbf{1})=M$ and $M\in(0,1)$, $u^*\in\mathrm{int}([0,1]^n)\cap H_M$).
+2. $\mathcal{F}_M(G)$ is a compact convex polytope of intrinsic dimension $n-1$ in $H_M=\{u:\mu^\top u=M\}$ (with at most $2n$ facets from box constraints $u_i=0$ or $u_i=1$).
+3. Let $H_0=\ker(\mu^\top)$ and $Q\in\mathbb{R}^{n\times(n-1)}$ have columns forming an ONB of $H_0$. Define $\tilde{C}:=\{x\in\mathbb{R}^{n-1}: u^*+Qx\in[0,1]^n\}$. The map $\Phi(x)=u^*+Qx$ is an **isometry** $(\tilde{C},|\cdot|)\to(\mathcal{F}_M(G),|\cdot|)$ with $\Phi^{-1}(u)=Q^\top(u-u^*)$.
+4. $\tilde{C}$ is a compact convex polytope with nonempty interior, satisfying the uniform exterior sphere condition and the uniform interior cone condition (UIC: $0\in\mathrm{int}(\tilde{C})$; finitely many faces bound the minimum inward angle from below).
+5. The projected energy $\tilde{\mathcal{E}}(x)=\mathcal{E}_{\mathrm{SCC}}(u^*+Qx)$ is $C^\infty$ on $\tilde{C}$ with $\|\nabla^2\tilde{\mathcal{E}}\|\leq M_H<\infty$ (compactness), so $\nabla\tilde{\mathcal{E}}$ is $M_H$-Lipschitz.
+
+*Proof sketch:* (1) Direct. (2) $u^*\in\mathrm{int}([0,1]^n)$ gives $B(u^*,\varepsilon)\cap H_M\subset\mathcal{F}_M(G)$ for small $\varepsilon$, so intrinsic dim $=n-1$. (3) $Q^\top Q=I_{n-1}$ → isometry; $QQ^\top(u-u^*)=u-u^*$ for $u-u^*\in H_0$ → surjectivity. (4) Exterior sphere: convexity. UIC: open segment $(z,0)\subset\mathrm{int}(\tilde{C})$ by convexity for any $z\in\partial\tilde{C}$; finitely many faces. (5) Each term of $\mathcal{E}_{\mathrm{SCC}}$ is $C^\infty$ on $[0,1]^n$ (sigmoid, quadratics, smooth transport; $E_{\mathrm{sep}}$ denominator $\sum u_i=nM>0$ on $\mathcal{F}_M(G)$ for uniform $\mu$); chain rule gives $\nabla^2\tilde{\mathcal{E}}=Q^\top\nabla^2\mathcal{E}_{\mathrm{SCC}}(u^*+Qx)Q$, bounded on compact $\tilde{C}$.
+
+*Status:* **Proved**, Cat A. Count: §13 has 50 Cat A entries; total 51A counting T-ST-5a in §16.
+
+---
+
+**T-PF-A1-SDE. Well-Posedness of Reflected Langevin SDE on Field Polytope.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Finite-Reflected-SDE.)*
+
+Under the setup of T-PF-A1-AR with $T_*>0$, there exists a **unique strong solution** $(X_t, K_t)$ to the reflected Langevin SDE on $\tilde{C}$:
+$$dX_t = -\nabla\tilde{\mathcal{E}}(X_t)\,dt + \sqrt{2T_*}\,dB_t + dK_t, \quad X_0\in\tilde{C}$$
+where $B_t$ is $(n-1)$-dimensional Brownian motion and $K_t$ is the **Skorokhod reflection process** (bounded variation, supported on $\{t:X_t\in\partial\tilde{C}\}$, with $dK_t$ pointing into the inward normal cone $N_{\tilde{C}}(X_t)$).
+
+The lifted process $U_t=\Phi(X_t)\in\mathcal{F}_M(G)$ is the **Reflected Langevin on $H_M$**:
+$$dU_t = -\Pi_M\nabla\mathcal{E}_{\mathrm{SCC}}(U_t)\,dt + \sqrt{2T_*}\,\Pi_M\,dW_t + d\tilde{K}_t$$
+where $\Pi_M=QQ^\top$ projects onto $H_0$ and $d\tilde{K}_t=Q\,dK_t\in N_{\mathcal{F}_M(G)}(U_t)$ within $H_M$.
+
+*Proof:* (Existence) $\tilde{C}$ is compact convex, $\nabla\tilde{\mathcal{E}}$ is Lipschitz (T-PF-A1-AR), $T_*>0$ — Lions-Sznitman (1984, CPAM 37(4):511–537) Theorem 1, **convex domain case (ii)** (no smooth boundary required). (Uniqueness) Tanaka argument for convex domains: the reflection term satisfies $(X^1_t-X^2_t)\cdot(dK^1_t-dK^2_t)\leq 0$ (geometric property of convex normal cones); therefore $d|X^1_t-X^2_t|^2\leq 2M_H|X^1_t-X^2_t|^2\,dt$; Gronwall gives $|X^1_t-X^2_t|^2=0$. (Lifting) Itô formula applied to $U_t=u^*+QX_t$.
+
+**Non-overclaim:** This result constructs the process for any $T_*>0$. It does NOT identify a canonical $T_*$, prove Gibbs invariance, or establish the Poincaré inequality (subsequent theorems).
+
+*Status:* **Proved**, Cat A. All hypotheses directly verified from T-PF-A1-AR. Count: §13 had 51 Cat A entries at CV-1.8; 53 entries after Session P CV-1.9 promotions of T-PF-A1-GI + T-PF-A1-PE below; total 54A counting T-ST-5a in §16.
+
+---
+
+**T-PF-A1-GI. Gibbs Measure is the Unique Invariant Measure.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Gibbs-Invariance.)*
+
+Under the setup of T-PF-A1-SDE, the Gibbs measure
+$$\pi_{T_*}(du) = Z^{-1}\exp\!\bigl(-\mathcal{E}_{\mathrm{SCC}}(u)/T_*\bigr)\,d\sigma_M(u)$$
+is the **unique invariant probability measure** for the reflected Langevin $U_t$ on $\mathcal{F}_M(G)$, where $Z\in(0,\infty)$ (finiteness: $\mathcal{E}_{\mathrm{SCC}}$ continuous on compact $\mathcal{F}_M(G)$).
+
+*Proof (zero-current + heat kernel uniqueness):* (Stationarity) Probability current $J[\rho^*]=-\rho^*\nabla\tilde{\mathcal{E}}-T_*\nabla\rho^*=0$ identically (since $\nabla\rho^*=-(1/T_*)\nabla\tilde{\mathcal{E}}\cdot\rho^*$); $\nabla\cdot J=0$ and no-flux BC $n\cdot J|_{\partial\tilde{C}}=0$ are automatic. (Reversibility) Integration by parts on $\tilde{C}$: $\int f\,Lg\,d\pi^*=-T_*\int\nabla f\cdot\nabla g\,d\pi^*$ for $f,g\in\mathrm{dom}(L)$ (boundary term vanishes: $\partial_n g=0$ on $\partial\tilde{C}$, Neumann BC). $L$ is therefore self-adjoint on $L^2(\pi^*)$. (Uniqueness, Part A) For $t>0$, the Neumann heat semigroup $P_t$ has a transition kernel with respect to Lebesgue measure on $\tilde{C}$: standard consequence of uniform ellipticity ($T_*\cdot I_{n-1}$, $T_*>0$) on a bounded Lipschitz domain (Aronson 1968, "Non-negative solutions of linear parabolic equations," Ann. Scuola Norm. Sup. Pisa). Any invariant $\nu$ satisfies $\nu=\nu P_t\ll\mathrm{Leb}\ll\pi_{T_*}$ (since $\pi_{T_*}$ has strictly positive continuous density); write $\nu=h\cdot\pi_{T_*}$, $h\in L^1(\pi^*)$, $\int h\,d\pi^*=1$. (Uniqueness, Part B) $\nu$-invariance + self-adjointness: $\int g\cdot P_t h\,d\pi^*=\int g\cdot h\,d\pi^*$ for all bounded $g$, so $P_t h=h$ in $L^2(\pi^*)$ for all $t\geq 0$; by the generator characterization (Pazy "Semigroups of Linear Operators" §1.2), $Lh=0$; then $0=\langle h,Lh\rangle_{L^2(\pi^*)}=-T_*\int|\nabla h|^2d\pi^*$, so $\nabla h=0$ a.e.; connected $\tilde{C}$ gives $h=\mathrm{const}=1$. Therefore $\nu=\pi_{T_*}$.
+
+**Non-overclaim:** Holds for any $T_*>0$. Does NOT establish convergence rate (next theorem) or canonical $T_*$ registration (OP-0021).
+
+*Status:* **Proved, Cat A** (Session P, 2026-05-06, CV-1.9). Zero-current + Dirichlet form self-adjointness algebraically complete. Uniqueness: Neumann heat kernel existence (Aronson 1968, uniformly elliptic on Lipschitz domain) + $L^2(\pi^*)$ kernel argument (self-adjoint semigroup, trivial kernel on connected domain). Count: +1A (entry 52 in §13).
+
+---
+
+**T-PF-A1-PE. Poincaré Inequality and Exponential Ergodicity.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Poincare-Ergodicity.)*
+
+Under the setup of T-PF-A1-GI, there exists $C_P\in(0,\infty)$ such that the **Poincaré inequality** holds on $\mathcal{F}_M(G)$:
+$$\mathrm{Var}_{\pi_{T_*}}(f)\leq C_P\cdot T_*\cdot\int_{\mathcal{F}_M(G)}|\nabla_H f|^2\,d\pi_{T_*},\qquad \lambda_1\geq 1/C_P>0$$
+with explicit bounds $\lambda_1(\pi_{T_*})\geq\frac{\pi^2}{n}e^{-\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$ and $C_P=\frac{n}{\pi^2}e^{\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$. For initial laws with $L^2(\pi_{T_*})$ density $h_0$:
+$$\|\mathrm{Law}(U_t)-\pi_{T_*}\|_{TV}\leq\tfrac{1}{2}e^{-\lambda_1 t}\|h_0-1\|_{L^2(\pi_{T_*})}.$$
+
+*Proof:* (Step 1 — Payne-Weinberger on $\tilde{C}$) Payne-Weinberger (1960, Arch. Rat. Mech. Anal. 5:286–292) prove $\mu_1(D)\geq\pi^2/\mathrm{diam}(D)^2$ for any **bounded convex domain** $D$. Their proof uses Steiner symmetrization — a purely geometric argument (reflect $D$ across hyperplanes, increasing symmetry without decreasing $\mu_1$) that requires only convexity and boundedness, no boundary smoothness. $\tilde{C}$ is a bounded convex polytope, hence a bounded convex domain; Payne-Weinberger applies directly. $\mathrm{diam}(\tilde{C})\leq\mathrm{diam}([0,1]^n)=\sqrt{n}$ (isometry), so $\mathrm{gap}(\mu_0)\geq\pi^2/n$. (Steps 2–3 — Holley-Stroock Poincaré perturbation) Density ratio $c_0/C_0=e^{-\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$; self-contained calculation: $\int|\nabla f|^2 d\pi_{T_*}\geq c_0\int|\nabla f|^2 d\mu_0$ and $\mathrm{Var}_{\pi_{T_*}}(f)\leq C_0\,\mathrm{Var}_{\mu_0}(f)$, giving $\mathrm{gap}(\pi_{T_*})\geq(c_0/C_0)\cdot\mathrm{gap}(\mu_0)\geq e^{-\mathrm{osc}/T_*}\cdot(\pi^2/n)$. (Step 4 — $L^2$ ergodicity) Spectral theorem for self-adjoint semigroup (T-PF-A1-GI) with gap $\lambda_1>0$: $\|P_tf-\pi_{T_*}(f)\|_{L^2(\pi_{T_*})}\leq e^{-\lambda_1 t}\|f-\pi_{T_*}(f)\|_{L^2(\pi_{T_*})}$. (Step 5 — $L^2\to TV$) $\|\mathrm{Law}(U_t)-\pi_{T_*}\|_{TV}=\frac{1}{2}\int|h_t-1|\,d\pi_{T_*}\leq\frac{1}{2}\|h_t-1\|_{L^2(\pi_{T_*})}$ (Cauchy-Schwarz; $\pi_{T_*}$ is a probability measure so $\|g\|_{L^1(\pi)}\leq\|g\|_{L^2(\pi)}$). Combined with Step 4 gives the TV bound.
+
+**Non-overclaim:** $C_P\sim(n/\pi^2)e^{\beta n/16T_*}$ — exponentially large in $n$ (metastable scaling; correct and expected for double-well). P-F-A1 requires only existence of $C_P<\infty$, not polynomial bounds. TV convergence requires $L^2(\pi_{T_*})$ initial density; $L^2$ ergodicity holds for all $t>0$ (heat kernel regularization for point-mass initial conditions). Sharp Eyring-Kramers constants (Package II, conditional on H5) and canonical $T_*$ (OP-0021) not claimed.
+
+*Status:* **Proved, Cat A** (Session P, 2026-05-06, CV-1.9). Payne-Weinberger 1960 applies to $\tilde{C}$ as a bounded convex domain (Steiner symmetrization proof covers polytopes). Holley-Stroock Poincaré perturbation self-contained. $L^2\to TV$ via Cauchy-Schwarz with explicit $L^2(\pi_{T_*})$ density assumption. Count: §13 has 53 Cat A entries; total 54A counting T-ST-5a in §16.
+
+### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
 
@@ -1522,6 +1714,43 @@ The branch-conditioned threshold should be written $d_{\min}^*(B,\mathrm{rule},\
 **T-Beyond-Weyl. Structured Spectral Perturbation Bound.** *(Erratum 2026-04-07: Downgraded from Cat A.)*
 $\mu_{\mathrm{joint}} \geq \min_k \mu_k - (K-1)\lambda_{\mathrm{rep}} \cdot \omega_{\mathrm{soft}}$, where $\omega_{\mathrm{soft}} = \max_{j \neq k} \|\mathcal{P}_{O_{jk}}\psi_k^{\mathrm{soft}}\|^2$ is branch/overlap-geometry dependent. The mathematical structured perturbation bound (Davis-Kahan + variational, under the relevant second-gap/localization hypotheses) is rigorous. The "33× improvement" is the special value $1/\omega_{\mathrm{soft}} \approx 33$ when $\omega_{\mathrm{soft}} \approx 0.03$ in a limited 12×12 well-separated configuration (exp46-47); it is not a universal constant. *(Erratum 2026-04-10: The improvement factor should be reported as $1/\omega_{\mathrm{soft}}(B,O)$ or as a branch/geometric interval, not as a universal 33× factor.)*
 *Status:* **Category B.** The structured bound formula is theorem-level under explicit conditions; the QUANTITATIVE CLAIM (33× improvement, extended coexistence window) is Cat B — verified on limited configurations.
+
+**T-P-F-ε0-K. Kramers Exponent Stability under Bernoulli Regularization.** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Corollary to T-P-F-ε0. Full derivation: `THEORY/working/MF/pf_tstar_langevin.md` §8.5 Corollary.)*
+Under T-P-F-ε0 hypotheses (H1)–(H4) and:
+*(H5)* Morse stability: saddle $\tilde{u}^*_{\mathrm{sad}}$ and minimum $\tilde{u}^*_{\mathrm{min}}$ are non-degenerate critical points of $\mathcal{E}+\varepsilon R$ stable for $\varepsilon\in[0,\varepsilon_0]$ (no critical-point bifurcation);
+
+the perturbed barrier satisfies:
+$$\Delta\mathcal{E}_\varepsilon=\Delta\mathcal{E}_0+\varepsilon\cdot\Delta R,$$
+where $\Delta\mathcal{E}_0=\mathcal{E}(\tilde{u}^*_{\mathrm{sad}})-\mathcal{E}(\tilde{u}^*_{\mathrm{min}})$ and $\Delta R=R(\tilde{u}^*_{\mathrm{sad}})-R(\tilde{u}^*_{\mathrm{min}})$. The leading Arrhenius factor satisfies $\Gamma_\varepsilon=\Gamma_0\cdot\exp(-\varepsilon\Delta R/T_*)$.
+
+**Bernoulli specialization** ($R=-T_*S_{\mathrm{Bern}}$, $\varepsilon=1$, Target B vs Target A): At phase-separated endpoints $\tilde{u}^*_{\mathrm{min}}\approx\{0,1\}$-valued gives $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{min}})\approx 0$; saddle has $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{sad}})=O(\delta)$ with $\delta\sim\exp(-c\sqrt{\beta/\alpha})$ (Allen-Cahn interface width). Therefore:
+$$\frac{\Gamma_B}{\Gamma_A}=\exp(O(\delta))=1+O(\delta)\quad\text{(exponentially small in phase-separated regime)}.$$
+
+**Non-overclaim:** *T-P-F-ε0-K is not P-F-A1.* It establishes that the leading Arrhenius barrier is stable under Bernoulli regularization, subject to Morse stability (H5). It does NOT prove: spectral gap, Eyring-Kramers pre-exponential factor $A$ (Hessian-at-saddle term), $T_*$ existence or uniqueness, or that Target B and Target A are equivalent for rate prefactors. Full P-F-A1 remains open.
+
+*Assumptions:* (H5) Morse stability holds generically (non-degenerate SCC saddles) but is not globally verified for $\mathcal{E}_{\mathrm{SCC}}+\varepsilon R$. No spectral/Eyring-Kramers theorem claimed.
+
+*Status:* **Cat B** — conditional on H5 (Morse stability). Cat A promotion path: (i) prove H5 for $\mathcal{E}_{\mathrm{SCC}}$ saddles, (ii) establish spectral gap / Poincaré inequality on $\mathcal{F}_M(\mathcal{P})$.
+
+**T-K-Select-PF. Equilibrium K-Selection under P-F-A1 Package I.** *(New, Session R, 2026-05-06. Source: `THEORY/working/MF/k_select_pf_equilibrium.md`. Grounded by CV-1.9 Package I; re-attacks OP-0005-EQ.)*
+
+Let $G=(V,E)$ be a finite connected graph with $|V|=n$, mass $M\in(0,1)$, $T_*>0$ (P-F-A1 axiom, OP-0021), and persistence parameters $\rho_{\mathrm{pers}},\tau\geq 0$. Define the persistent component count $K_{\mathrm{act}}(u):=\#\mathrm{PersComp}(u;\rho_{\mathrm{pers}},\tau)$ (D-ST-3, §3.11), the K-sector $\mathcal{B}_K=\{u\in\mathcal{F}_M(G):K_{\mathrm{act}}(u)=K\}$, and the feasible set $K_{\mathrm{feas}}=\{K\in\mathbb{Z}_{\geq 0}:\sigma_M(\mathcal{B}_K)>0\}$ (finite, non-empty; $K\leq K_{\mathrm{field}}$ by Commitment 16). Under P-F-A1 Package I (T-PF-A1-AR/SDE/GI/PE all Cat A, CV-1.9):
+
+(i) Each $\mathcal{B}_K$ is Borel measurable; $\pi_{T_*}(\partial\mathcal{B}_K)=0$ (boundary contained in $\bigcup_{v}\{u(v)=\rho_{\mathrm{pers}}\}$, codimension $\geq 1$ in $\mathcal{F}_M(G)$, hence $\sigma_M$-null; $\pi_{T_*}\ll\sigma_M$ by T-PF-A1-GI).
+
+(ii) The Gibbs sector masses
+$$p_K = \pi_{T_*}(\mathcal{B}_K) = \frac{Z_K}{Z}, \qquad Z_K = \int_{\mathcal{B}_K} e^{-E_{\mathrm{SCC}}(u)/T_*}\,d\sigma_M(u)$$
+are well-defined ($Z_K>0$ for $K\in K_{\mathrm{feas}}$ since $e^{-E/T_*}>0$ on a positive-measure set) and form a probability distribution: $\sum_{K\in K_{\mathrm{feas}}} p_K = 1$.
+
+(iii) The stationary distribution of $K_{\mathrm{act}}(U_t)$ under the reflected Langevin (T-PF-A1-SDE) is exactly $\{p_K\}_{K\in K_{\mathrm{feas}}}$ (T-PF-A1-GI pushforward: $\mathbb{P}_{\pi_{T_*}}[K_{\mathrm{act}}(U)=K]=\pi_{T_*}(\mathcal{B}_K)=p_K$; uniqueness from T-PF-A1-GI).
+
+(iv) Equilibrium K-selection: $K^*\in\arg\max_{K\in K_{\mathrm{feas}}} p_K = \arg\min_{K\in K_{\mathrm{feas}}} F(K;\mathcal{P})$ where $F(K;\mathcal{P})=-T_*\log Z_K$ (sector free energy). Ordering: $p_K>p_{K'}$ iff $F(K;\mathcal{P})<F(K';\mathcal{P})$.
+
+**Saddle-point connection:** $F_{\mathrm{approx}}(K;T)=\mathcal{E}^*_K - T\cdot S(K)$ (from `working/MF/k_selection_a_free_energy.md`, P-F flag now RESOLVED) is the Laplace approximation of $F(K;\mathcal{P})=-T_*\log Z_K$ in the small-$T_*$ regime.
+
+**Non-overclaim:** No Kramers transition rates (OP-0005-DYN, Package II, W9+); no $K^*$ uniqueness (multiple $K$ may share equal $p_K$ near crossover temperature); no OP-0008 (σ^A K-jump non-determinism separate); no K_field counting; $T_*$ axiomatic (OP-0021). OP-0005-EQ partially resolved; OP-0005-DYN and OP-0005-OBS remain OPEN.
+
+*Status:* **Cat B** (Session R, 2026-05-06, CV-1.10). Gibbs-measure grounding of equilibrium K-selection via Package I is rigorous. Cat B conditions: (a) $K_{\mathrm{act}}$ definition uses D-ST-3 canonical form (§3.11); (b) $K_{\mathrm{feas}}$ characterization requires per-instance verification of $\sigma_M(\mathcal{B}_K)>0$; (c) $\sigma_M$-null boundary stated via codimension argument — requires explicit $\sigma_M$-coordinate computation for Cat A (T-PF-A1-AR affine isometry). Cat A path: formalize (a)–(c); no new mathematics beyond Package I.
 
 ### Category C: Conditional (5 theorems)
 
@@ -1697,20 +1926,157 @@ $K_{\mathrm{step}}$ becomes a derived connectivity statistic over $\mathcal{F}$-
 
 ## 15. Closing Summary
 
-This canonical specification (CV-1.5.2, 2026-05-02) establishes the formal structure of the theory of Soft Cognitive Cohesion in its current state. The theory is grounded in a single foundational commitment: that the structural properties of coherent formations — binding, separation, morphological articulation, and persistence — are decomposable into independently graded dimensions and evaluable through self-referential operators. This formation-level description is formally richer than and not reducible to discrete object-level description, though the theory's equilibrium formations may themselves be object-like.
+This canonical specification (CV-1.10, 2026-05-06) establishes the formal structure of the theory of Soft Cognitive Cohesion in its current state. The theory is grounded in a single foundational commitment: that the structural properties of coherent formations — binding, separation, morphological articulation, and persistence — are decomposable into independently graded dimensions and evaluable through self-referential operators. This formation-level description is formally richer than and not reducible to discrete object-level description, though the theory's equilibrium formations may themselves be object-like.
 
 From this commitment, the theory develops a formal universe in which closure captures relational self-support (A1'–A4, with proved contraction at $a_{\mathrm{cl}} < 4$), distinction captures exterior asymmetry (D-Ax1–3), morphological structure captures the articulation of core, boundary, and exterior ($\mathcal{Q}_{\mathrm{morph}} = \frac{\ell_{\max} - c}{1 - c} \cdot \mathrm{Artic}$, with proved axiom satisfaction QM1–4), and temporal transport captures the structural inheritance that constitutes persistence through time (E1–E4, with E3 reclassified as a solution constraint). Co-belonging (C1–C4, with proved resolvent realization) serves as a derived diagnostic for non-local structural integration but does not enter any predicate or energy term.
 
-The proto-cohesion diagnostic vector $\mathbf{d} \in [0,1]^4$ unifies these four requirements into a graded formal assessment of formation quality, and the minimal energy principle — with mandatory volume constraint on the manifold $\Sigma_m$ — provides a variational characterization of formations. *(Erratum 2026-04-07: Counts corrected per honest recount. Update 2026-04-25: W4 merge. Update 2026-04-26: W4 extended close. Update 2026-04-27: W5 Day 1 σ-framework supporting structures merge. Update 2026-04-29: W5 Day 3 EOD CV-1.5.1 — D-6a Multi-Static + Commitment 16 K-status + Critic verdict (T-σ-Theorem-4 Cat A→B); D-5 V5b-T' WITHDRAWN. Update 2026-05-02: W5 Day 6 CV-1.5.2 — T-L1-F Hard-Bar / Active-Count Bridge canonical promotion, first multi-formation Cat A theorem, conditional under L1-J regime $(P0)$–$(P11)$. Update 2026-05-04: W6 D1 EOD — T-L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ supervised promotion (special-case authorization same-day after external L-M-K-style audit PASS); CHANGELOG W6 D1 EOD second addendum.)* The theory now has **47 fully proved theorems** (Category A: 46 from CV-1.5.2 release + 1 from W6 D1 EOD T-L1-M supervised addition), 5 with structural parameters (Category B), 5 conditional results (Category C), and 5 retracted claims — totaling **62 formal claims, 75% fully proved**. Key results include non-trivial minimizer existence under a computable phase transition (T8-Core, T8-Full), gradient flow convergence (T14), stability advantage for non-idempotent closure (T3/T6), exact predicate-energy bridge (Sep = 1 - E_sep/m), closure residual bound for all τ (T-Bind-Proj), formation-birth on D₄-symmetric graphs (T-Birth-Parametric), the unified multi-formation persistence theorem (T-Persist-K-Unified) parametrized by the coupling measure $\Lambda_{\mathrm{coupling}}$, the **graph-class independent Pre-Objective Mechanism (T-PreObj-1, T-PreObj-1G, W4)** that resolves the F-1 vacuity problem, the **Pre-Objective Goldstone on Translation-Invariant Graphs (T-V5b-T, W4 extended)** establishing the sub/super-lattice spectral dichotomy, and the **Hard-Bar / Active-Count Bridge (T-L1-F, W5 Day 6 CV-1.5.2)** establishing — under the L1-J regime hypothesis package $(P0)$–$(P11)$ on shared-pool $\widetilde\Sigma_M^{K_{\mathrm{field}}}$ — that the hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}$ of the aggregate field $U(\mathbf u)=\sum_j u^{(j)}$ equals the active-slot count $K_{\mathrm{act}}^\varepsilon$, with a labelled bijection between active slots and dominant terminal $H_0$ bars. The overcounting in previous versions arose from empirical fits treated as proofs, the merge path manifold error (T-Merge (c)(d)(e) retracted), and quantitative claims bundled with qualitative theorems.
+The proto-cohesion diagnostic vector $\mathbf{d} \in [0,1]^4$ unifies these four requirements into a graded formal assessment of formation quality, and the minimal energy principle — with mandatory volume constraint on the manifold $\Sigma_m$ — provides a variational characterization of formations. *(Erratum 2026-04-07: Counts corrected per honest recount. Update 2026-04-25: W4 merge. Update 2026-04-26: W4 extended close. Update 2026-04-27: W5 Day 1 σ-framework supporting structures merge. Update 2026-04-29: W5 Day 3 EOD CV-1.5.1 — D-6a Multi-Static + Commitment 16 K-status + Critic verdict (T-σ-Theorem-4 Cat A→B); D-5 V5b-T' WITHDRAWN. Update 2026-05-02: W5 Day 6 CV-1.5.2 — T-L1-F Hard-Bar / Active-Count Bridge canonical promotion, first multi-formation Cat A theorem, conditional under L1-J regime $(P0)$–$(P11)$. Update 2026-05-04: W6 D1 EOD — T-L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ supervised promotion (special-case authorization same-day after external L-M-K-style audit PASS); CHANGELOG W6 D1 EOD second addendum. Update 2026-05-06: W6 D4 CV-1.7 — stereo extension (T-ST-5a Cat A +1A; D-ST-1..5 Cat B +5B; T-OP6-B Cat B +1B, then promoted Cat A Session K +1A/−1B; T-ST-5b Cat B +1B) + P-F stochastic foundation (T-P-F-ε0 Cat A +1A; T-P-F-ε0-K Cat B +1B); CV-1.7 total: 50A/12B/5C/5R = 72 claims, ~69%. Update 2026-05-06: W6 D4 CV-1.8 Sessions M–N — P-F-A1 Package I (T-PF-A1-AR + T-PF-A1-SDE Cat A +2A; T-PF-A1-GI + T-PF-A1-PE Cat B +2B); CV-1.8 total: 52A/14B/5C/5R = 76 claims, ~68% fully proved. Update 2026-05-06: W6 D4 CV-1.9 Session P — T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (+2A/−2B); CV-1.9 total: **54A/12B/5C/5R = 76 claims, ~71% fully proved**. Update 2026-05-06: CV-1.10 Session R — T-K-Select-PF Cat B (+1B); CV-1.10 total: **54A/13B/5C/5R = 77 claims, ~70% fully proved**. See §13 Category A/B headers for authoritative running counts.)* The theory now has **54 fully proved theorems** (Category A), **13** with structural parameters (Category B), 5 conditional results (Category C), and 5 retracted claims — totaling **77 formal claims, ~70% fully proved**. Key results include non-trivial minimizer existence under a computable phase transition (T8-Core, T8-Full), gradient flow convergence (T14), stability advantage for non-idempotent closure (T3/T6), exact predicate-energy bridge (Sep = 1 - E_sep/m), closure residual bound for all τ (T-Bind-Proj), formation-birth on D₄-symmetric graphs (T-Birth-Parametric), the unified multi-formation persistence theorem (T-Persist-K-Unified) parametrized by the coupling measure $\Lambda_{\mathrm{coupling}}$, the **graph-class independent Pre-Objective Mechanism (T-PreObj-1, T-PreObj-1G, W4)** that resolves the F-1 vacuity problem, the **Pre-Objective Goldstone on Translation-Invariant Graphs (T-V5b-T, W4 extended)** establishing the sub/super-lattice spectral dichotomy, and the **Hard-Bar / Active-Count Bridge (T-L1-F, W5 Day 6 CV-1.5.2)** establishing — under the L1-J regime hypothesis package $(P0)$–$(P11)$ on shared-pool $\widetilde\Sigma_M^{K_{\mathrm{field}}}$ — that the hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}$ of the aggregate field $U(\mathbf u)=\sum_j u^{(j)}$ equals the active-slot count $K_{\mathrm{act}}^\varepsilon$, with a labelled bijection between active slots and dominant terminal $H_0$ bars. The overcounting in previous versions arose from empirical fits treated as proofs, the merge path manifold error (T-Merge (c)(d)(e) retracted), and quantitative claims bundled with qualitative theorems.
 
 **Multi-formation paradigm (2026-04-02 audit):** The theory now recognizes that multi-formation dynamics are fundamentally **kinetic (barrier-based), not thermodynamic (energy-based)**. The global energy minimum is always K*=1 (single formation) on any connected graph due to isoperimetric ordering. Multiple formations coexist as **metastable local minima** maintained by kinetic barriers of height $O(\beta^{0.89})$. Well-separated formations ($d > d_{\min}^* \approx 5$ nodes) remain stable under noise (exp55: zero merges in 5000 iterations at $\sigma \leq 0.5$, $\beta=30$). The self-referential closure operator reduces the critical distance $d_{\min}^*$ by ~30% compared to pure Allen-Cahn, realizing T7-Enhanced metastability through self-reinforced attraction basins and increased barrier heights. Three kinetic pillars structure multi-formation understanding: (I) Nucleation from spectral modes, (II) Metastability across three regimes (well-separated via T-Persist-K-Sep proved; weakly-interacting via T-Persist-K-Weak conditionally proved; strongly-interacting above merge bifurcation), (III) Coarsening under noise and stochasticity. K emerges kinetically from initial conditions and spatial structure; the K-field architecture guarantees K>1 by construction. Early thermodynamic predictions (P-Unified-1/2) are falsified; kinetic predictions (MK-1–MK-4) replace them.
 
-**Theory status (post-W6 Day 1 EOD, 2026-05-04, CV-1.5.2 + T-L1-M post-supervision; W6 G2 audit reconciliation 2026-05-04):** Category A = **47 theorems** (CV-1.5.2 release: 46; W6 D1 EOD T-L1-M supervised addition: +1) (this count includes T-Bind-Proj and T-Bind-Full per Erratum 2026-04-07 Phase 13 upgrade, which `theorem_status.md` had not propagated until W6 G2 audit; T-Bind-Proj is the Tangential Residual Bound, Cat A for all τ_cl ∈ (0,1); T-Bind-Full is the Bind Lower Bound, Cat A as a corollary of T-Bind-Proj). Category B = 4 hard entries in §13 Cat B section (γ_eff ≈ 0.89 empirical exponent, T-Birth-Parametric General non-D₄ graphs, T-d_min-Formula, T-Beyond-Weyl) plus 2 status-downgraded entries that physically remain in §13 Cat A section but are flagged Cat B at row level (T-σ-Theorem-4 retroactive Cat A → Cat B at CV-1.5.1 per Critic verdict + NQ-187 numerical refutation, Cat A re-promotion deferred to CV-1.7+ post-γ/β/α path audit; T-σ-Multi-1 Cat B target, Goldstone-pair instability). Category C items: T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Sep (regime-conditional, moved here from Cat B per Erratum 2026-04-07), T-Persist-K-Weak, T-Persist-K-Unified, plus V5b-F (Cat C new finding 2026-04-26) and the Cat C riders inside T-σ-Lemma-2 (v) Courant upper bound + (vi) $G_u$-orbit divisibility. Retracted: Theorem 3.3 (general τ), T-Merge (c), T-Merge (d), T-Merge (e) (merge path manifold error), K-Saddle Conjecture. *(W6 G2 closure note 2026-05-04: the "5 Cat B" headline at the top of §15 is the reconciled count [4 hard + 2 status-downgraded but physically in Cat A — minus 1 to avoid double-counting one of them]; this reconciliation is pending a deeper Cat B/C re-enumeration in a future audit pass.)*
+**Theory status (post-W6 Day 1 EOD, 2026-05-04, CV-1.5.2 + T-L1-M post-supervision; W6 G2 audit reconciliation 2026-05-04; *(further updated through CV-1.10 W6 D4 Sessions E–R: current 54A/13B/5C/5R = 77 claims; see §13 headers)*): Category A = **47 theorems** at this date (CV-1.5.2 release: 46; W6 D1 EOD T-L1-M supervised addition: +1) (this count includes T-Bind-Proj and T-Bind-Full per Erratum 2026-04-07 Phase 13 upgrade, which `theorem_status.md` had not propagated until W6 G2 audit; T-Bind-Proj is the Tangential Residual Bound, Cat A for all τ_cl ∈ (0,1); T-Bind-Full is the Bind Lower Bound, Cat A as a corollary of T-Bind-Proj). Category B = 4 hard entries in §13 Cat B section (γ_eff ≈ 0.89 empirical exponent, T-Birth-Parametric General non-D₄ graphs, T-d_min-Formula, T-Beyond-Weyl) plus 2 status-downgraded entries that physically remain in §13 Cat A section but are flagged Cat B at row level (T-σ-Theorem-4 retroactive Cat A → Cat B at CV-1.5.1 per Critic verdict + NQ-187 numerical refutation, Cat A re-promotion deferred to CV-1.7+ post-γ/β/α path audit; T-σ-Multi-1 Cat B target, Goldstone-pair instability). Category C items: T-Persist-1(a/d), T-Persist-Full, T-Persist-K-Sep (regime-conditional, moved here from Cat B per Erratum 2026-04-07), T-Persist-K-Weak, T-Persist-K-Unified, plus V5b-F (Cat C new finding 2026-04-26) and the Cat C riders inside T-σ-Lemma-2 (v) Courant upper bound + (vi) $G_u$-orbit divisibility. Retracted: Theorem 3.3 (general τ), T-Merge (c), T-Merge (d), T-Merge (e) (merge path manifold error), K-Saddle Conjecture. *(W6 G2 closure note 2026-05-04: the "5 Cat B" headline at the top of §15 is the reconciled count [4 hard + 2 status-downgraded but physically in Cat A — minus 1 to avoid double-counting one of them]; this reconciliation is pending a deeper Cat B/C re-enumeration in a future audit pass.)*
 
 **W4 critical-blocker resolution**: F-1 (OP-0001) SPLIT-RESOLVED via T-Merge (b) + T-PreObj-1 (i); M-1 (OP-0002) LAYER-CLARIFIED (proved theorem misframed); MO-1 (OP-0003) SIDESTEPPED for current single-formation σ-framework scope, with re-activation rider on D-6b approval or NQ-248 multi-formation Morse work.
 
-**Active open problems (post-CV-1.5.2)**: 4 High (OP-0005 K-Selection, OP-0006 Boundary precision, OP-0008 σ^A K-jump non-determinism, OP-0009 Multi-Formation Ontological Foundations with 7 sub-items); 4 Medium (OP-0010..OP-0013); 3 Low (OP-0020..OP-0022). T-L1-F is a bridge, not a K-selection mechanism — it explicitly does NOT solve OP-0005 or OP-0008. Reservoir theory remains working-grade, not promoted to canonical. P7 (decay-to-cut) is adopted as a safe technical hypothesis; L1-L provides Combes-Thomas / discrete Agmon backing under strong stationarity but P7 is not asserted for all SCC states. The L1-J regime is empirically non-vacuous (L1-I 439/1920 = 22.9% feasible on $T^2_{20}$ with raw_gaussian initial states) but production WQ-1 trajectories — which use mass-projection initial states — typically exit the regime, so T-L1-F's reach in production dynamics is narrow and the conditional Cat A status should be read accordingly.
+**Active open problems (post-CV-1.10, 2026-05-06)**: 3 High (OP-0005 K-Selection, OP-0008 σ^A K-jump non-determinism, OP-0009 Multi-Formation Ontological Foundations with 7 sub-items); 4 Medium (OP-0010..OP-0013); 3 Low (OP-0020..OP-0022). *(OP-0006 Boundary precision RESOLVED Session K 2026-05-06 — T-OP6-B Cat A, d_H ≤ 2(α/β)^{1/2} under H1–H5.)* T-L1-F is a bridge, not a K-selection mechanism — it explicitly does NOT solve OP-0005 or OP-0008. Reservoir theory remains working-grade, not promoted to canonical. P7 (decay-to-cut) is adopted as a safe technical hypothesis; L1-L provides Combes-Thomas / discrete Agmon backing under strong stationarity but P7 is not asserted for all SCC states. The L1-J regime is empirically non-vacuous (L1-I 439/1920 = 22.9% feasible on $T^2_{20}$ with raw_gaussian initial states) but production WQ-1 trajectories — which use mass-projection initial states — typically exit the regime, so T-L1-F's reach in production dynamics is narrow and the conditional Cat A status should be read accordingly.
 
 **Remaining research extensions**: ~~(1) L1-M Soft-Count Corollary working-grade Cat-B sketched, CV-1.6 promotion candidate via L1-M-AUDIT;~~ ✅ **(1) RESOLVED 2026-05-04 W6 D1 EOD**: T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$) Cat A conditional under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}} + \tau < \tau_*^{\mathrm{post-R2}}$ where $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$. Promoted to canonical §13 line 1491 same-day after external L-M-K-style audit PASS (NQ-G1-3, ~7 min cold-review general-purpose agent). C-0722 row in `theorem_status.md` line 197. NQ-G1-1 self-correction integrated. NQ-G1-2 EXECUTED ((P9-tight) regime CANDIDATE for L1-J' promotion enabling factor-1 sharpening empirically penalty-free; NQ-G1-1-ext + NQ-G1-2-ext W7+ for empirical anchors). T-L1-M does NOT solve OP-0005 / OP-0008.; (2) **T-σ-Theorem-4 Cat A re-promotion** via γ-path Σ_m-Hessian convention audit (CV-1.7+ candidate); (3) **OP-0008 σ-rich + Φ-rich (Path B)** as Cat B target for K-jump non-determinism (CV-1.7 Commitment 18 candidate); (4) **OP-0005 K-Selection 4-layer composite** (free-energy + Kramers + numerical anchor + Commitment 16) as CV-1.7+ Commitment 19 candidate; (5) **OP-0009 sub-items 2-7** (F bridge, λ_rep, Architecture, C_t, Pre-objective, Empirical) PARTIAL → READY upgrades via OAT-2..7 short integrations; (6) **Multi-formation kinetic dynamics** — branch-state transition graph, coarsening cascades, stochastic birth/death; (7) **V5b ζ_*(graph) precise dependence + 3D extension** (NQ-174, NQ-175); (8) **V5b-F partial Goldstone characterization** (NQ-173).
 
 The theory now stands as a mathematically structured ontology of pre-objective cohesion — with genuine theorems, honest gap accounting, and a clear distinction between what is proved, what is provisional, and what remains open — informed by a kinetic understanding of multi-formation coexistence that grounds the theory in barrier dynamics rather than energy minimization, and (post-CV-1.5.2) by a first canonical multi-formation count-bridge theorem (T-L1-F) that links chart-level active slots to aggregate-field topological bars under explicit regime conditions.
+
+---
+
+## 16. Stereo Observation Extension — Canonical Definitions (Cat B candidates, CV-1.6 target)
+
+*(Added 2026-05-06 W6 D4. Updated W6 D4 Session C: D-ST-1..D-ST-3 bodies migrated to §3.9–§3.11 of the Formal Universe; cross-references maintained below. T-ST-5 split into T-ST-5a (Cat B candidate, hard-cut topological locking) and T-ST-5b (Cat C pending, smooth-depth barrier raising). Status: D-ST-1..D-ST-3 now in §3.9–§3.11; D-ST-4..D-ST-5 Cat B candidates here; T-ST-5a Cat B candidate; T-ST-5b Cat C pending. Source: `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`. Implementation: `CODE/stereo_scc/`.)*
+
+This section registers foundational definitions for the stereo observation extension of SCC. The stereo layer models the observation structure $\mathcal{P}_t$ as arising from a depth-conditioned point cloud rather than a flat pixel grid, and introduces P-conditioned versions of K_act, barriers, and free energy. These definitions are a prerequisite for OP-0005 K-Selection Layer C (Kramers barrier formalization) and OP-0006 Boundary Precision.
+
+### D-ST-1. Depth-Filtered Adjacency (Stereo Graph $G_t^\mathcal{P}$)
+
+*(Body migrated to §3.10, W6 D4 Session C. Primary definition is in §3.10, which covers both the hard-threshold and smooth-weight variants.)*
+
+$G_t^\mathcal{P}$ is the hard-threshold stereo adjacency (§3.10, first variant); the smooth variant uses $w_{ij}^{\mathrm{smooth}} = w_{ij}^{2D} \cdot \exp(-\lambda_z |z_i - z_j|^2)$. T-ST-5a (hard) and T-ST-5b (smooth) are defined over these two regimes respectively.
+
+### D-ST-2. Field Space $\mathcal{F}_0(\mathcal{P})$ and Base State Space
+
+*(Body migrated to §3.9, W6 D4 Session C. Primary definition and the $\Sigma_M^K$ distinction are in §3.9.)*
+
+$\mathcal{F}_M(\mathcal{P})$ is the foundational state space (§3.9); $\Sigma_M^K$ is a local chart within one basin $\mathcal{A}_{K,\alpha}(\mathcal{P})$ (§16 D-ST-4). D-ST-4 builds directly on $\mathcal{F}_0(\mathcal{P})$.
+
+### D-ST-3. $K_{\mathrm{act}}$ as Persistent Component Count (#PersComp)
+
+*(Body migrated to §3.11, W6 D4 Session C. Primary definition, T-L1-F relationship, and experimental validation are in §3.11.)*
+
+$K_{\mathrm{act}}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u})$ via $H_0$ superlevel-set persistence with threshold $\rho_{\mathrm{pers}}$ (§3.11). Implementation: `CODE/stereo_scc/topology.py:persistent_component_count`. Used in D-ST-4 (topological sector $\mathcal{B}_K$) and T-ST-5a/b.
+
+### D-ST-4. Topological Sector $\mathcal{B}_K(\mathcal{P})$ and Energy Basin $\mathcal{A}_{K,\alpha}(\mathcal{P})$
+
+$$\mathcal{B}_K(\mathcal{P}) = \{\tilde{u} \in \mathcal{F}_0(\mathcal{P}) : K_{\mathrm{act}}(\tilde{u}) = K\}$$
+
+is the $K$-th **topological sector** — the set of all fields with exactly $K$ persistent components. It is not a manifold; it is a topological stratum of $\mathcal{F}_0(\mathcal{P})$.
+
+Within $\mathcal{B}_K(\mathcal{P})$, each local energy minimum $\tilde{u}^{(\alpha)}$ defines an **energy basin**:
+
+$$\mathcal{A}_{K,\alpha}(\mathcal{P}) = \{\tilde{u} \in \mathcal{B}_K(\mathcal{P}) : \text{gradient flow from } \tilde{u} \text{ converges to } \tilde{u}^{(\alpha)}\}$$
+
+The multi-basin partition function is:
+
+$$Z_K(\mathcal{P}) = \int_{\mathcal{B}_K(\mathcal{P})} e^{-\mathcal{E}[\tilde{u};\mathcal{P}]/T_*} \mathcal{D}\tilde{u} = \sum_\alpha Z_{K,\alpha}(\mathcal{P})$$
+
+*Note (P-F flag):* $T_*$ (effective temperature) is undefined until P-F-A1 (Langevin on $\mathcal{F}_M(\mathcal{P})$) is canonically formalized (see OP-0021).
+
+### D-ST-5. Backprojection $b_t$ and Pullback $\tilde{u}_t^{\mathrm{pix}}$
+
+Given valid pixel set $X_L^{\mathrm{valid}} \subset \mathcal{P}_L$ (pixels with reliable disparity), the backprojection is the partial map:
+
+$$b_t : X_L^{\mathrm{valid}} \to \mathcal{P}_t, \qquad b_t(x_L) = z(x_L) \cdot K_{\mathrm{cam}}^{-1} \begin{pmatrix}u_L \\ v_L \\ 1\end{pmatrix}$$
+
+where $z(x_L) = f_{\mathrm{cam}} \cdot \text{baseline} / \delta(x_L)$ is the stereo depth formula ($\delta$ = disparity). Partiality: $b_t$ is undefined at low-confidence or zero-disparity pixels.
+
+The pullback of a 3D cohesion field $\tilde{u}_t : \mathcal{P}_t \to [0,1]$ to pixel space is:
+
+$$\tilde{u}_t^{\mathrm{pix}}(x) = \begin{cases} \tilde{u}_t(b_t(x)) & x \in X_L^{\mathrm{valid}} \\ \mathrm{NaN} & \text{otherwise} \end{cases}$$
+
+*Prior/likelihood separation (CN5-compliant):* The SCC energy $\mathcal{E}[\tilde{u};\mathcal{P}]$ is the **prior** on field structure. Photometric alignment $\mathcal{E}_{\mathrm{photo}}[\tilde{u}^{\mathrm{pix}}, I] = \|\tilde{u}^{\mathrm{pix}} - I\|^2$ is a **likelihood** term in $L_{\mathrm{obs}}(\mathcal{O} | \tilde{u}, \mathcal{P})$. $\mathcal{E}_{\mathrm{photo}}$ does NOT enter $\mathcal{E}_{\mathrm{SCC}}$ as a fifth term; this would violate CN5 (four-term conceptual independence). The MAP objective is $\mathcal{E}_{\mathrm{SCC}} + \lambda_{\mathrm{photo}} \mathcal{E}_{\mathrm{photo}}$, and these are structurally independent. Experimentally validated: exp04 (W6 D4) — field shift 10.2, $E_{\mathrm{photo}}$ reduced 90.3→1.5, prior and likelihood solutions diverge as expected.
+
+*Implementation:* `CODE/stereo_scc/stereo_geometry.py:backproject_pixels`, `pullback_field_to_pixels`. Validated: exp03 (W6 D4) — round-trip error = 0.00, NaN correctly assigned at invalid pixels.
+
+### T-ST-5a (Cat A). Regime A: Hard-Depth Topological Locking.
+
+**Claim.** Let $G_t^\mathcal{P}$ be the depth-filtered adjacency (§3.10) with hard threshold $\Delta z$. Assume:
+
+- **(A-HARDCUT)** $G^\mathcal{P}$ uses the hard-threshold construction of §3.10.
+- **(A-DEPTH-SEP)** $|z_i - z_j| \geq \Delta z$ for all $x_i \in S_1$, $x_j \in S_2$.
+- **(A-LOCAL)** $\mathcal{E}[\tilde{u}; G^\mathcal{P}]$ is edge-local (each gradient term couples only graph-adjacent pairs).
+- **(A-NO-BRIDGE)** No edges exist outside the A-HARDCUT construction.
+- **(A-PERSISTENCE)** $K_{\mathrm{act}}$ measured via §3.11 with fixed $\rho_{\mathrm{pers}} > 0$.
+- **(A-MASS)** Global $\sum_i \tilde{u}_i = M$ is enforced by projection (e.g., bisection-based `project_volume`). Per-component mass conservation is **not** required; the proof holds for any global projection since cross-component merger depends only on graph topology, not mass distribution.
+
+Then: **(a)** the adjacency graph decomposes $G_t^\mathcal{P}\big|_{S_1 \cup S_2} = G_1 \sqcup G_2$; **(b)** gradient flow on $\mathcal{F}_M(\mathcal{P})$ preserves $K_{\mathrm{act}} = 2$ — no merger path exists; **(c)** the merger barrier is $\Delta E_{\mathrm{merge}} = +\infty$ (state-space disconnection, not an energy saddle).
+
+**Proof sketch.** Lemma 1 (Graph Decomposition): A-HARDCUT + A-DEPTH-SEP directly imply no cross-$S_1/S_2$ edges — proved by definition. Lemma 2 (Gradient Locality): by A-LOCAL, $\partial\mathcal{E}/\partial \tilde{u}_i$ for $i \in S_1$ depends only on neighbors in $G_1$ — independent of $S_2$ values. Lemma 3 (Mass Non-Flow — auxiliary, not required): gradient step alone preserves per-component masses, but the global projection (`project_volume` bisection) may transfer mass between $S_1$ and $S_2$. This lemma is NOT needed for the main proof. Lemma 4 (Persistent Component Stability): the $H_0$ superlevel-set filtration on $G_1 \sqcup G_2$ can produce bar deaths only within each $G_k$; a cross-component merger event requires a cross-component edge, which does not exist by Lemma 1. Therefore $K_{\mathrm{act}}$ is invariant — regardless of mass redistribution by the global projection. Therefore $K_{\mathrm{act}}$ is invariant. Together: $\mathcal{B}_2 = \{\tilde{u} \in \mathcal{F}_M(\mathcal{P}) : K_{\mathrm{act}} = 2, \text{ depth-sep.}\}$ is a closed invariant set under gradient flow; (b) and (c) follow. Full proof file: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`.
+
+**Remark (barrier interpretation).** The infinite barrier is the *non-existence of an admissible path*, not a saddle at infinite energy height. The correct analogy: separate drainage basins — no merger channel exists. The eps-bridge experiment (exp02-NEB) confirms this: any $\varepsilon > 0$ bridge immediately collapses the barrier to 0, showing the locking is topological (discontinuous at $\varepsilon = 0$), not energetic (which would decay smoothly).
+
+
+**Status:** **Cat A — all gaps closed (W6 D4 Session E).** G1: Lemma 3 (per-component mass conservation) is not required; Lemma 4 holds from Lemma 1 alone — graph topology prevents cross-component merger regardless of mass redistribution by the global projection. G2: claim distinguishes merger (prohibited) from decay (permitted). G3: A-STRICT assumption (strict barcode persistence b−d > ρ_pers + ε) ensures non-boundary case. G4: strict/non-strict threshold conventions are complementary (no ambiguity at |z_i−z_j| = Δz). Exp02-NEB confirmed (W6 D4). Full proof: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`. No P-F flag (deterministic topological result — no stochastic dynamics).
+
+**Source:** `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md §T5` + `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`. **Implementation:** `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py` + `results/exp02_neb/k_stability.csv`.
+
+---
+
+### T-ST-5b (**Cat B** — W6 D4 Session G). Regime B: Smooth-Depth Barrier Raising.
+
+**Claim.** Under soft depth-weighted adjacency — bridge edge weights:
+
+$$w_{ij} = w_{ij}^{2D} \cdot \exp(-\lambda_z |z_i - z_j|^2)$$
+
+the graph $G_t^{\mathrm{smooth}}$ remains connected but cross-boundary edges are downweighted. For a K=2 field straddling a depth discontinuity of magnitude $\Delta z$:
+
+$$\Delta E^{\mathrm{merge}}_{\mathrm{stereo}}(\Delta z, \lambda_z) > \Delta E^{\mathrm{merge}}_{\mathrm{flat}}$$
+
+**under full SCC energy (E_cl + E_sep active).** GL-only energy (boundary term only) is NULL — zero adjacency sensitivity at phase-separated minima. Monotone dependence on $\Delta z$ and $\lambda_z$ is not established (exp02e: barrier plateaus from $\Delta z = 0.5$ onward at $\beta=10$; non-monotone at $\beta=20$).
+
+**Status:** **Cat B (W6 D4 Session G — formally signed off).** Narrow claim: Under full SCC energy with active closure/separation terms, smooth stereo adjacency raises the K=2→K=1 merger barrier relative to flat adjacency. This is not a generic GL double-well effect. Monotonicity in depth gap is not established. (Cat C → Cat B candidate: Session F; formal sign-off: Session G.)
+
+*Experiment history:* exp02b (β=4, GL energy): barrier=0. exp02c (β sweep): at β=20, K=2 genuine minimum but no flat/smooth differentiation (all barriers 0.41). exp02d (Session E): full SCC energy but K=2 endpoint from `find_k_formations` (K-field repulsion) is NOT a genuine F_M(P) local minimum — all barriers artificially negative (V3 chart-validity violation; documented in OP-0009-Pre-a §7).
+
+*exp02e (Session F):* Corrected endpoint methodology — bimodal init → single-field gradient descent → K_act verify. 12×12 grid, 28 trials. **Results:**
+- **gl_only** (E_bd only): barrier_flat = barrier_smooth (NULL — GL energy has zero adjacency sensitivity at phase-separated minima)
+- **full_scc β=10:** barrier_smooth = 3.45–3.51 vs barrier_flat = 2.76 — **25–27% higher, 6/6 smooth conditions SUPPORTED**
+- **full_scc β=20:** smooth > flat for Δz≥1.0, λz=4.0 or Δz≥2.0 (3/6, PARTIAL); reversed at small Δz
+
+**Key finding:** The barrier-raising effect requires E_cl or E_sep active. The smooth depth-weighted adjacency modifies the closure energy (α·u^T L_smooth u), reducing cross-region cohesive pull and raising the energy cost of merging. GL energy alone (boundary term only) cannot differentiate flat vs smooth adjacency.
+
+**Refined claim vs original:** Monotone increase in Δz is NOT confirmed (barrier plateaus from Δz=0.5 onward at β=10). Direction (smooth > flat) is confirmed for full_scc β=10. Cat A promotion requires analytical lower bound on barrier gap.
+
+P-F flag: any Kramers-rate interpretation of ΔE requires T_* (P-F-A1, unresolved).
+
+**Warning:** T-ST-5b is geometry-sensitive and energy-sensitive. It is NOT a universal theorem. It applies only when: (1) full SCC energy (E_cl + E_sep active); (2) intermediate phase-separation regime (β~10); (3) smooth depth-weighted adjacency. At GL-only energy or at β=20 with small depth separation, the effect is absent or reversed. Do not cite T-ST-5b as a universal barrier-raising result.
+
+**Cat A promotion requires:** (a) monotone barrier increase confirmed over $\Delta z$ sweep and $\lambda_z$ sweep (not confirmed by exp02e — barrier plateaus from $\Delta z = 0.5$ at $\beta=10$; non-monotone at $\beta=20$); (b) analytical lower bound $\Delta E^{\mathrm{merge}}_{\mathrm{stereo}} - \Delta E^{\mathrm{merge}}_{\mathrm{flat}} \geq f(\lambda_z, \Delta z, \alpha, \beta)$ for some explicit function $f$ in terms of graph geometry and SCC parameters.
+
+**Cat A lower-bound plan (Session H, W6 D4):**
+
+*Driver identification.* The barrier gap is driven by $\mathcal{E}_{\mathrm{cl}}$ and $\mathcal{E}_{\mathrm{sep}}$ (exp02e: gl_only NULL). The closure energy is $\mathcal{E}_{\mathrm{cl}} = \alpha \cdot \tilde{u}^T L \tilde{u} = \alpha \sum_{(i,j) \in E} w_{ij}(\tilde{u}_i - \tilde{u}_j)^2$. The Laplacian difference $L_{\mathrm{smooth}} - L_{\mathrm{flat}}$ is supported on cross-depth edges: $(L_{\mathrm{smooth}} - L_{\mathrm{flat}})$ has off-diagonal entries $+w_{ij}^{2D}(1 - \exp(-\lambda_z|z_i - z_j|^2))$ for cross-depth pairs $(i,j)$.
+
+*Candidate lower bound.* Under the approximation that the saddle profile is similar for flat and smooth (same bridge geometry), the barrier gap is:
+
+$$\Delta E_{\mathrm{smooth}} - \Delta E_{\mathrm{flat}} \approx \alpha \cdot \tilde{u}_{\mathrm{sad}}^T (L_{\mathrm{flat}} - L_{\mathrm{smooth}}) \tilde{u}_{\mathrm{sad}} - \alpha \cdot \tilde{u}_{\mathrm{min}}^T (L_{\mathrm{flat}} - L_{\mathrm{smooth}}) \tilde{u}_{\mathrm{min}}$$
+
+$$= \alpha \sum_{\substack{(i,j): |z_i - z_j| = \Delta z}} w_{ij}^{2D}(1 - e^{-\lambda_z \Delta z^2}) \bigl[(\tilde{u}^{\mathrm{sad}}_i - \tilde{u}^{\mathrm{sad}}_j)^2 - (\tilde{u}^{\mathrm{min}}_i - \tilde{u}^{\mathrm{min}}_j)^2\bigr]$$
+
+This is positive when the saddle has larger cross-depth gradient than the minimum — which holds when the bridge is the merger path (bridge nodes at $\tilde{u} \approx 1/2$ while the K=2 minimum has the two blobs separated). Therefore a candidate form is:
+
+$$f(\alpha, \Delta z, \lambda_z, P, \bar{w}) = \alpha \cdot P \cdot \bar{w}^{2D} \cdot (1 - e^{-\lambda_z \Delta z^2}) \cdot \tfrac{1}{4}$$
+
+where $P$ = number of cross-depth bridge edges at the saddle and $\bar{w}^{2D}$ = mean 2D edge weight.
+
+*Gaps before Cat A:* (i) The saddle-profile approximation must be justified (perturbed saddle stability under $L_{\mathrm{smooth}} - L_{\mathrm{flat}}$); (ii) $P$ and $\bar{w}^{2D}$ are geometry-dependent (computed from the graph, not from SCC parameters alone); (iii) $\mathcal{E}_{\mathrm{sep}}$ contribution is not accounted for; (iv) monotonicity in $\Delta z$ of the function $f$ would require $P$ to be monotone, but $P$ depends on the merger geometry (not obvious). *Do not promote T-ST-5b beyond Cat B until gaps (i)–(iv) are closed.*
+
+**Source:** `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md §T5`. **Implementation (pending):** `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py`.
+
+---
+
+*End of §16. D-ST-1..D-ST-3 bodies are in §3.9–§3.11 (migrated W6 D4 Session C); D-ST-4..D-ST-5 remain here as Cat B candidates. T-ST-5 has been split into T-ST-5a (**Cat A** — all gaps G1–G4 closed W6 D4 Session E; proof in `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`) and T-ST-5b (**Cat B** — formally signed off W6 D4 Session G; narrow claim: full SCC energy only, GL-only NULL, monotonicity not established; exp02e results: full_scc β=10 6/6 SUPPORTED 25% increase; gl_only NULL; β=20 3/6 PARTIAL; see `CODE/experiments/results/exp02e_single_field_neb_summary.md`). Count update at Session G: 48A/12B/5C/5R = 70 claims. *(Further updated Sessions I + K: T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B added → 49A/13B; T-OP6-B Cat B → Cat A → **50A/12B/5C/5R = 72 claims** as of CV-1.7 Session K. See §13 Category A/B headers for authoritative counts.)* Remaining promotion requirements: (i) T-ST-5b Cat A: monotonicity over Δz/λ_z + analytical lower bound on barrier gap; (ii) P-F-A1 Langevin formalization (for $T_*$ in D-ST-4; §8 implementation link + discrepancy note Session E; §8.4 three-target distinction Session F; see `THEORY/working/MF/pf_tstar_langevin.md`); (iii) OP-0009-Pre-a architecture migration OPEN (v2.0, W11–W12; exp02d V3 failure documented in working file §7). Target: CV-1.6 completed (T-ST-5a Cat A + OP-0006 §5.3b canonical + T-ST-5b Cat B sign-off); CV-1.7 completed (T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B + T-OP6-B Cat A, 2026-05-06). CV-1.8 completed (T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B, Sessions M–N–O 2026-05-06; P-F-A1 Package I canonical). CV-1.9 completed (T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, Session P 2026-05-06; heat kernel + $L^2$ kernel uniqueness for GI; Payne-Weinberger 1960 for convex polytopes + $L^2\to TV$ Cauchy-Schwarz for PE; P-F-A1 Package I fully Cat A; 54A/12B/76 claims). CV-1.10 completed (T-K-Select-PF Cat B + OP-0005-EQ partially resolved, Session R 2026-05-06; Gibbs sector-mass equilibrium K-selection grounded by Package I; 54A/13B/77 claims). CV-1.11 targets: T-ST-5b Cat A candidate (analytical lower bound + monotonicity over $\Delta z/\lambda_z$); P-F-A1 Package II conditional start (H5 Morse stability + T_* registration OP-0021); OP-0005-DYN/OP-0005-OBS/OP-0008/OP-0009 remain active high-priority open problems.*

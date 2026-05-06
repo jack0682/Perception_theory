@@ -5,8 +5,8 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.5.2, 2026-05-02; W6 D1 EOD T-L1-M supervised addition 2026-05-04). Single source of truth for the theory. Counts: 47A / 5B / 5C / 5R = 62 claims, 75% fully proved.
-2. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog (merged 2026-05-04 audit; OP-0001/0002/0003 resolved in W4; active high-priority OPs are OP-0005, OP-0006, OP-0008, OP-0009).
+1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.10, 2026-05-06; W6 D1 EOD T-L1-M supervised addition 2026-05-04; stereo extension + Session E additions 2026-05-06; Session G: T-ST-5b Cat B formally signed off; Session I: T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B promoted, CV-1.7; Session K: T-OP6-B promoted Cat A; Sessions M–N–O: T-PF-A1-AR + T-PF-A1-SDE Cat A, T-PF-A1-GI + T-PF-A1-PE Cat B, CV-1.8; Session P: T-PF-A1-GI + T-PF-A1-PE Cat A, CV-1.9; Session R: T-K-Select-PF Cat B, CV-1.10). Single source of truth for the theory. Counts: **54A / 13B / 5C / 5R = 77 claims** (including CV-1.6 stereo extension; T-OP6-B Cat A [Session K]; CV-1.7 P-F foundation: T-P-F-ε0 Cat A, T-P-F-ε0-K Cat B; CV-1.8 P-F-A1 Package I: T-PF-A1-AR/SDE Cat A, T-PF-A1-GI/PE Cat B; **CV-1.9 P-F-A1 Package I fully Cat A: T-PF-A1-GI + T-PF-A1-PE Cat A** [Session P]; **CV-1.10 T-K-Select-PF Cat B: equilibrium K-selection OP-0005-EQ** [Session R; P-F-A1 Package II OPEN; OP-0021 T_* registration]); ~70% fully proved.
+2. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog (merged 2026-05-04 audit; OP-0001/0002/0003 resolved in W4; OP-0006 RESOLVED Session K 2026-05-06; active high-priority OPs are OP-0005, OP-0008, OP-0009).
 3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
 For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).

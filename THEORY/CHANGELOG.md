@@ -2,6 +2,2166 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Progress Consolidation Session: 12 stale refs fixed; W6D4_progress_consolidation_2026-05-06.md written; canonical count 77 confirmed
+
+**Trigger:** "Proceed to Progress Consolidation Session." after Session S accepted. Primary objective: release-grade progress document sealing W6 D4 (Sessions A–S, CV-1.6→CV-1.10). Secondary: fix active stale version references across canonical documents.
+
+---
+
+### 1. Stale Reference Fixes (12 corrections)
+
+**canonical.md:**
+- YAML `id: CV-1.9` → `id: CV-1.10`; `version: 1.9` → `version: 1.10`
+- H1 title `(CV-1.5.2)` → `(CV-1.10)`
+- Version naming convention box: extended chain to include CV-1.6→CV-1.10; marked CV-1.10 as current
+- Version box note: `CV-1.5.2` → `CV-1.10`
+- §1 Status Note: `CV-1.5.2 (2026-05-02)` → `CV-1.10 (2026-05-06)`
+- §15 opening sentence: `(CV-1.5.2, 2026-05-02)` → `(CV-1.10, 2026-05-06)`
+- §15 theory status parenthetical: `*(further updated CV-1.7...current 50A/12B...72)*` → `*(further updated through CV-1.10...54A/13B...77)*`
+- §16 open problems header: `post-CV-1.9` → `post-CV-1.10`
+
+**theorem_status.md:**
+- Line 12 structure header: `current = **CV-1.9**` → `current = **CV-1.10**`; extended description to include CV-1.10 Session R
+- Line 33 running total: relabeled `Running total (current): 50A/12B...72` → `Running total (CV-1.7, at Session K close)` with superseded note pointing to CV-1.10
+- Line 833 version label: removed stale `— current` from CV-1.5.2 + T-L1-M entry
+
+### 2. Consolidation Document Written
+
+**`THEORY/working/W6D4_progress_consolidation_2026-05-06.md`** — 13 sections:
+1. Executive summary (CV count table: CV-1.6→CV-1.10)
+2. Session timeline A–S
+3. Theorem promotion table (11 promotions)
+4. OP status table (all 13 OPs)
+5. Architecture state (F_M(G) primary, K_act derived, Gibbs, K-selection EQ+OBS)
+6. Code/experiment status (215+1xfailed; exp52/exp54 planned)
+7. Count consistency verification (all documents checked)
+8. Stale reference corrections table (13 entries)
+9. Non-overclaim audit (8 boundaries verified)
+10. Architecture decision log (5 decisions)
+11. CV-1.11 roadmap
+12. File inventory
+13. Conclusion + carry-forward state
+
+### 3. Pytest Result
+
+**215 passed, 1 xfailed** — verified Progress Consolidation Session. No regressions.
+
+### 4. Count Verification
+
+Final state: **54A/13B/5C/5R = 77 claims, ~70% fully proved** — consistent across all documents.
+
+### 5. Files Modified
+
+- `THEORY/canonical/canonical.md` — 8 stale ref fixes
+- `THEORY/canonical/theorem_status.md` — 3 stale ref fixes (+ CV-1.9 stale ref fix from Phase 0)
+- `THEORY/working/W6D4_progress_consolidation_2026-05-06.md` — CREATED
+- `THEORY/CHANGELOG.md` — this entry
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session S: OP-0005-OBS structured; T-K-Select-OBS Cat B candidate; posterior sector mass defined; exp54 plan; canonical count unchanged at 77
+
+**Trigger:** "Proceed to Session S." after Session R accepted (CV-1.10 active). Primary objective: attack OP-0005-OBS (observation-conditioned K-selection) using P-F-A1 Package I + T-K-Select-PF.
+
+---
+
+### 1. CV-1.10 Consistency Audit (Phase 1)
+
+Verified across canonical.md, theorem_status.md, CHANGELOG.md, k_select_pf_equilibrium.md:
+- Count: 54A/13B/5C/5R = 77 ✓
+- OP-0005-EQ: canonical Cat B (T-K-Select-PF, Session R) ✓
+- OP-0005-DYN: OPEN ✓
+- OP-0005-OBS: OPEN ✓ (target of this session)
+- No Kramers overclaim in Cat B entry ✓
+- YAML frontmatter, §13 headers, §14 summary, §16 CV history all consistent ✓
+
+---
+
+### 2. Observation Layer Review (Phase 4 first, to inform theorem)
+
+Read `stereo_observation_framework.md` (W6 D2 evening, working draft):
+- Full observation tuple $\mathfrak{O}_t = (X_L, X_R, f_L, f_R, \Pi_{LR}, \delta, z, c)$ already defined.
+- Prior/likelihood separation (§4): $E_\mathrm{SCC}$ in prior, $E_\mathrm{photo}$ in likelihood — CN5 compliant. Confirmed by exp04.
+- MAP: $\tilde{u}^* = \arg\min[E_\mathrm{SCC} + \mathcal{L}_\mathrm{obs}]$.
+- D-ST-5 (canonical §16): $b_t : X_L^\mathrm{valid} \to \mathcal{P}_t$ backprojection; pullback $u^\mathrm{pix} = b_t^* u$.
+- P-F flags on Kramers rates and partition functions were present (now resolved for the equilibrium layer by Package I + T-K-Select-PF).
+
+---
+
+### 3. T-K-Select-OBS Theorem Definition (Phase 2-3)
+
+**New working file**: `THEORY/working/MF/k_select_obs_posterior.md`
+
+**Core definitions introduced:**
+- Observation tuple: $\mathfrak{O}_t = (f_L, f_R, \Pi_{LR}, b_L, b_R, c)$
+- Observation energy (negative log-likelihood): $\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = -\log \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u)$
+- Likelihood conditions LM1–LM3: measurability, positivity, posterior normalizability.
+- Posterior measure: $\pi_t^{obs}(du) = (Z^{obs})^{-1} \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u) e^{-E(u)/T_*} d\sigma_M(u)$
+- Posterior sector partition function: $Z_K^{obs}(\mathfrak{O}_t) = \int_{\mathcal{B}_K} \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t|u) e^{-E/T_*} d\sigma_M$
+- Posterior sector mass: $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$
+- Observation-conditioned free energy: $F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t) = -T_* \log Z_K^{obs}(\mathfrak{O}_t)$
+- Selection: $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$
+
+**T-K-Select-OBS claims (i)–(v):**
+(i) $\pi_t^{obs}$ well-defined probability measure.
+(ii) $\{p_K(\mathfrak{O}_t)\}$ probability distribution on $K_\mathrm{feas}$.
+(iii) $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs} = \arg\max_K p_K(\mathfrak{O}_t)$.
+(iv) Prior–posterior relationship: $p_K(\mathfrak{O}_t) = p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}|K_\mathrm{act}=K] \cdot Z/Z^{obs}$; $\mathcal{L}_\mathrm{obs} \equiv 1$ recovers T-K-Select-PF.
+(v) Strict ordering: $p_K > p_{K'}$ iff $F_\mathrm{obs}(K) < F_\mathrm{obs}(K')$.
+
+**Proofs**: Complete given Package I + T-K-Select-PF + LM1–LM3. Mathematical content is Bayes' theorem on the Gibbs probability space established by Package I.
+
+**Cat B designation**: LM1–LM3 (explicit structural conditions on likelihood model) serve as the "structural parameters" per Cat B definition. Cat A path: canonicalize specific likelihood model; verify LM1–LM3; exp54 validation.
+
+---
+
+### 4. Non-Overclaim Record
+
+Critical non-overclaims explicitly in §5:
+- No Kramers rates / Package II (OP-0005-DYN OPEN).
+- No temporal K-dynamics.
+- No K*(O_t) uniqueness.
+- No specific likelihood model imposed.
+- E_photo in likelihood only (CN5 preserved — NOT a 5th SCC energy term).
+- No temporal tracking / σ-inheritance.
+- No object detection (K_act ≠ object count).
+
+---
+
+### 5. Stereo Observation Bridge (Phase 4)
+
+§6 of working file connects T-K-Select-OBS to the canonical stereo framework:
+- Observation tuple condensed from `stereo_observation_framework.md` §3.2.
+- D-ST-5 (canonical §16) backprojection $b_t$ connects $u \in \mathcal{F}_M(G)$ to pixel space.
+- Photometric likelihood form $\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = \lambda_\mathrm{photo}\sum_{x_L}c(x_L)\Psi(\ldots)$ satisfies LM1–LM3 automatically.
+- Operator form $\mathcal{L}_\mathrm{obs} = \mathcal{L}_L(f_L|H_L u)\cdot\mathcal{L}_R(f_R|H_R u)$ also given as alternative.
+
+---
+
+### 6. exp54 Plan (Phase 6)
+
+`CODE/experiments/exp54_posterior_k_selection_toy.py`:
+- 12×12 or 16×16 grid; α=1.0, β=30, M=0.3, T_*=0.05.
+- Regime 1: prior prefers K=1; observation (two-blob image) pushes K=2.
+- Regime 2: prior prefers K=2; observation (single-blob image) pushes K=1.
+- Method A: MCMC sampling of posterior; Method B: sector MAP comparison (implementable with existing `find_formation`).
+- λ_photo sweep: 0 recovers T-K-Select-PF; ∞ → delta-mass on K*(O).
+
+---
+
+### 7. theorem_status.md Update (Phase 5)
+
+- Added "Session S Working Candidates" section with T-K-Select-OBS Cat B candidate table row.
+- Updated OP-0005-OBS: OPEN → **STRUCTURED** (T-K-Select-OBS working Cat B candidate).
+- OP-0005 overall remains OPEN. No canonical count change.
+
+---
+
+### 8. Tests and Residue (Phase 7)
+
+- **pytest**: 215 passed, 1 xfailed — clean.
+- **Residue check**: No OP-0005 fully resolved, no E_photo as fifth energy term, no Kramers in OBS theorem, no K*(O) unique, no object detection conflation found.
+
+---
+
+### Files Created / Modified
+
+- `THEORY/working/MF/k_select_obs_posterior.md` — NEW (T-K-Select-OBS Cat B candidate, ~380 lines)
+- `THEORY/canonical/theorem_status.md` — Session S working candidates section; OP-0005-OBS updated
+- `THEORY/CHANGELOG.md` — this entry
+
+**Canonical count: 54A/13B/5C/5R = 77 claims (unchanged). OP-0005-OBS: OPEN → STRUCTURED.**
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session R: T-K-Select-PF promoted canonical Cat B; CV-1.10; 54A/13B/5C/5R = 77 claims; OP-0005-EQ partially resolved
+
+**Trigger:** "Proceed to Session R." after Session Q accepted (T-K-Select-PF working Cat B candidate established). Primary objective: promote T-K-Select-PF to `canonical.md §13 Category B`; tighten sector definition; update all counts to 13B / 77 claims.
+
+---
+
+### 1. Pre-Promotion Review (Phase 1)
+
+Working file `THEORY/working/MF/k_select_pf_equilibrium.md` reviewed against canonical standards:
+
+- K_act definition: uses D-ST-3 canonical form (#PersComp(u; ρ_pers, τ)) — PASS.
+- Sector B_K Borel measurability: Lemma 3.1 — piecewise-constant step function on finite graph — PASS.
+- Null boundary π_{T_*}(∂B_K) = 0: Lemma 3.2 — codimension-1 argument, ∂B_K ⊆ ∪_v {u(v)=ρ_pers} — acceptable for Cat B (Cat A requires explicit σ_M-coordinate computation).
+- Package I grounding: all four P-F-A1 theorems Cat A (CV-1.9) — PASS.
+- Non-overclaim: no Kramers, no K* uniqueness, no OP-0008, T_* axiomatic — PASS.
+- Hard constraints (§10): all 10 boxes checked — PASS.
+
+**Verdict: ready for canonical Cat B promotion.**
+
+---
+
+### 2. Sector Definition Tightening (Phase 2)
+
+Additions to `k_select_pf_equilibrium.md` in Session R:
+
+- **§3.5 (new)**: Definition 3.2 K_feas = {K ∈ ℤ_{≥0} : σ_M(B_K) > 0}. Proved finite (K ≤ K_field by Commitment 16) and non-empty (F_M(G) has positive σ_M-measure by T-PF-A1-AR). Consequence: Z_K > 0 and p_K > 0 for K ∈ K_feas.
+- **§5.1 A5 (updated)**: Assumption A5 restated as "K ranges over K_feas ⊆ ℤ_{≥0} (Definition 3.2, §3.5), which is finite and non-empty."
+- **Status line updated**: "working draft, tightened Session R. Cat B — promoted to canonical Cat B in canonical.md §13 Session R."
+
+---
+
+### 3. Canonical Promotion (Phase 3)
+
+Inserted **T-K-Select-PF** entry in `canonical.md §13 Category B` (after T-P-F-ε0-K, before Category C header). Theorem title: "Equilibrium K-Selection under P-F-A1 Package I." Content includes:
+- Setup: G finite connected, M ∈ (0,1), T_* > 0, K_act = #PersComp (D-ST-3), K-sector B_K, feasible set K_feas.
+- Claims (i)–(iv): Borel measurability + null boundary; well-defined sector masses {p_K}; stationary K_act distribution under reflected Langevin; K* = argmax p_K = argmin F(K;P).
+- Saddle-point connection: F_approx(K;T) = E*_K − T·S(K) is Laplace approximation of exact F(K;P) = −T_* log Z_K.
+- Non-overclaim block: no Kramers, no K* uniqueness, no OP-0008, OP-0005-EQ only.
+- Status: Cat B with explicit (a)/(b)/(c) conditions for Cat A promotion.
+
+---
+
+### 4. Count and Header Updates (Phase 4)
+
+All canonical documents updated: 12B → 13B, 76 claims → 77 claims, ~71% → ~70% fully proved.
+
+| Document | Change |
+|---|---|
+| `canonical.md §13 Category B header` | Added "T-K-Select-PF Session R 2026-05-06" |
+| `canonical.md §13 preamble running total` | +1B → 54A/13B/5C/5R = 77 claims, ~70% |
+| `canonical.md §14 "theory now has" sentence` | 12 → 13 Cat B, 76 → 77 formal claims |
+| `canonical.md §14 parenthetical update list` | Added CV-1.10 Session R update |
+| `canonical.md §16 end-note CV history` | CV-1.9 complete → CV-1.10 complete; CV-1.11 targets listed |
+| `canonical.md YAML frontmatter` | Added T-K-Select-PF Cat B CV-1.10 Session R |
+| `theorem_status.md` | Session Q working candidate → CV-1.10 canonical Cat B row; +1B count update |
+| `theorem_status.md OP-0005-EQ` | Updated: "canonical Cat B (Session R, CV-1.10)" |
+
+---
+
+### 5. OP-0005 Status Post-Session R
+
+| Sub-ID | Name | Status |
+|---|---|---|
+| **OP-0005-EQ** | Equilibrium K-selection | **PARTIALLY RESOLVED** — T-K-Select-PF canonical Cat B (Session R, CV-1.10) |
+| **OP-0005-DYN** | Dynamical K-transition / Kramers rates | **OPEN** — Package II, W9+ |
+| **OP-0005-OBS** | Observation-conditioned K selection | **OPEN** |
+
+OP-0005 overall remains OPEN (EQ sub-problem only).
+
+---
+
+### 6. Files Modified
+
+- `THEORY/working/MF/k_select_pf_equilibrium.md` — status update, §3.5 K_feas, §5.1 A5 tightened
+- `THEORY/canonical/canonical.md` — T-K-Select-PF §13 Cat B entry; Cat B header; §13 preamble count; §14 summary; §16 CV history; YAML frontmatter
+- `THEORY/canonical/theorem_status.md` — Session Q working candidate → CV-1.10 canonical Cat B; OP-0005-EQ row updated; CV-1.10 count update line
+- `THEORY/CHANGELOG.md` — this entry
+- `Perception_theory/CLAUDE.md` — count update 12B → 13B, 76 → 77
+- `Perception/CLAUDE.md` — count update 12B → 13B, 76 → 77
+
+**Final count: 54A/13B/5C/5R = 77 claims, ~70% fully proved (CV-1.10).**
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session Q: OP-0005 re-attack via P-F-A1 Package I; T-K-Select-PF Cat B candidate; OP-0005 split into EQ/DYN/OBS; P-F flag on Z_K resolved; canonical count unchanged at 76
+
+**Trigger:** "Proceed to Session Q." after Session P accepted (CV-1.9 active). Primary objective: re-attack OP-0005 K-selection using the newly established P-F-A1 Package I (all four theorems Cat A).
+
+---
+
+### 1. OP-0005 Audit Summary
+
+**Pre-Session-Q state:** OP-0005 HIGH OPEN, "partial via 4-layer composite (free-energy / Kramers / numerical anchor / Commitment 16; CV-1.7+ Commitment 19 candidate)." The equilibrium free-energy layer (`k_selection_a_free_energy.md` §3.3) carried an explicit P-F flag:
+
+> *"⚠️ P-F flag: Z_K is defined only when stochastic SCC (P-F-A1 Langevin on F_M(P)) is canonically formalized."*
+
+**What Package I (CV-1.9) unlocks for OP-0005:**
+- T-PF-A1-AR: F_M(G) is a compact convex polytope; σ_M (Lebesgue measure on F_M(G)) is well-defined.
+- T-PF-A1-GI: π_{T_*} = Z^{-1} exp(−E/T_*) dσ_M is the **unique invariant** Gibbs measure; Z is finite and positive.
+- Therefore Z_K = ∫_{B_K} exp(−E/T_*) dσ_M is well-defined as a Lebesgue integral over a measurable sector.
+- Therefore p_K = π_{T_*}(B_K) are well-defined sector masses forming a probability distribution.
+- Therefore F(K;P) = −T_* log Z_K is the exact sector free energy (not the saddle-point approximation).
+
+**P-F flag on Z_K: RESOLVED by Package I.**
+
+---
+
+### 2. Sector Partition (Phase 2)
+
+For K_act(u) := #PersComp(u; ρ_pers, τ) on finite graph G:
+
+- **Measurability**: K_act is a step function (changes only at finitely many hyperplanes {u(v) = ρ_pers}); Borel measurable. B_K = {u ∈ F_M(G) : K_act(u) = K} is a Borel set.
+- **Boundary null set**: ∂B_K ⊆ ∪_v {u(v) = ρ_pers}, codimension-1 in ℝ^n; intersection with F_M(G) (dim n−1) has σ_M-measure zero. Hence π_{T_*}(∂B_K) = 0.
+- **Partition**: {B_K} partition F_M(G) up to a π_{T_*}-null set.
+- **Structure**: B_K is locally closed (neither open nor closed in general); no smooth manifold structure assumed. Stratified decomposition sufficient for Gibbs measure argument.
+
+---
+
+### 3. T-K-Select-PF: Equilibrium K-Selection Theorem
+
+**New working theorem** (Cat B candidate): `THEORY/working/MF/k_select_pf_equilibrium.md`
+
+**Statement (informal):** Under P-F-A1 Package I on finite graph G with T_* > 0:
+1. Sector masses p_K = π_{T_*}(B_K) = Z_K/Z form a well-defined probability distribution.
+2. The stationary distribution of K_act(U_t) under the reflected Langevin is exactly {p_K} (by T-PF-A1-GI uniqueness + pushforward).
+3. The equilibrium K-selection is K* ∈ argmax_K p_K = argmin_K F(K;P) where F(K;P) = −T_* log Z_K.
+4. By T-PF-A1-PE, the K-distribution converges to {p_K} exponentially for L²(π_{T_*}) initial laws.
+
+**Proof structure:** Measurability (Lemma 3.1) → null boundary (Lemma 3.2) → partition (Lemma 3.3) → well-definedness (Lemma 4.1 via T-PF-A1-AR/GI) → stationary K-distribution (T-PF-A1-GI pushforward) → K* definition.
+
+**Cat B candidate** — not yet canonical. Cat A path: fix K_act definition to match D-ST-3 canonical form; explicit σ_M-null computation; sector non-degeneracy for specific graph classes.
+
+**Non-overclaims:**
+- Does NOT prove Kramers rates (OP-0005-DYN, Package II).
+- Does NOT prove K* unique (equal sector masses possible).
+- Does NOT resolve OP-0008.
+- Does NOT compute specific p_K values.
+- T_* axiomatic (OP-0021).
+
+---
+
+### 4. OP-0005 3-Way Split
+
+OP-0005 K-Selection Mechanism is split into three subproblems:
+
+| Sub-ID | Name | Status after Session Q |
+|---|---|---|
+| **OP-0005-EQ** | Equilibrium K-selection | PARTIALLY RESOLVED — T-K-Select-PF Cat B candidate |
+| **OP-0005-DYN** | Dynamical K-transition / Kramers rates | OPEN — Package II, W9+ |
+| **OP-0005-OBS** | Observation-conditioned K selection | OPEN — stereo SCC, separate |
+
+OP-0005 overall: HIGH OPEN (EQ sub-problem partially addressed; DYN and OBS remain).
+
+---
+
+### 5. Relation to Old OP-0005 Mechanism Options
+
+| Old option | Relation to T-K-Select-PF |
+|---|---|
+| (a) Free-energy: F(K;T) = E*_K − T·S(K) | **Saddle-point approximation** of exact F(K;P) = −T_* log Z_K. P-F flag RESOLVED. |
+| (b) Kramers: Γ_{K→K'} escape rates | **Still P-F flagged** — Package II. T-K-Select-PF provides the *target distribution*; Kramers provides *speed of approach*. |
+| (c) Numerical anchor | Independent — remains pending execution. |
+| (d) Commitment 16 cap | Unchanged; K_field/K_act decomposition preserved. K range for T-K-Select-PF is {0,..,K_field}. |
+
+**Commitment 19 packet** (`commitment_19_k_selection_axiom_packet.md`): updated with Session Q note — Layer (b) P-F flag resolved; §2(b) should reference T-K-Select-PF when promoted to canonical.
+
+---
+
+### 6. Files Modified
+
+1. `THEORY/working/MF/k_select_pf_equilibrium.md` — NEW (Session Q); T-K-Select-PF Cat B candidate; ~360 lines.
+2. `THEORY/working/MF/k_selection_a_free_energy.md` — §3.3 P-F flag resolved; cross-reference T-K-Select-PF added.
+3. `THEORY/canonical/theorem_status.md` — Session Q working candidates section added (T-K-Select-PF table); OP-0005 body updated with 3-way split table.
+4. `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md` — Session Q update note added; P-F flag resolution noted; T-K-Select-PF cross-reference.
+
+---
+
+### 7. Residue Search (Session Q)
+
+- OP-0005 premature full-resolution: **None found.** All "RESOLVED" hits refer to P-F flag on Z_K or OP-0006 (correct).
+- Σ_M^K foundational misuse: **None in new files.** T-K-Select-PF explicitly marks Σ_M^K as local chart (non-overclaim §6 item 7).
+- K* uniqueness overclaim: **None.** Non-overclaim §6 item 4 explicit.
+- Package II overclaim: **None.** All Package II references correctly labeled as OPEN/W9+.
+- OP-0005-DYN (Kramers) without Package II: k_selection_b_kramers.md still P-F flagged throughout (pre-existing, correct).
+
+---
+
+### 8. Pytest (theory-only session; no code changes)
+
+215 passed, 1 xfailed — confirmed. No regressions.
+
+---
+
+### 9. Count Status
+
+Canonical claim count: **54A/12B/5C/5R = 76 claims, ~71% fully proved** (unchanged).
+
+T-K-Select-PF is a working Cat B candidate only — not yet canonical, does not increment the count. Canonical promotion pending review + user decision.
+
+---
+
+### 10. Carry-Forward to CV-1.10 / Session R
+
+- **T-K-Select-PF Cat B → Cat A**: fix K_act definition; explicit σ_M-null computation; sector non-degeneracy characterization for canonical graph classes.
+- **Canonical promotion of T-K-Select-PF**: requires review session + user decision; add to canonical.md §13 Category B.
+- **OP-0005-DYN (Kramers)**: Package II, conditional on H5 + OP-0021. Not before W9.
+- **OP-0005-OBS**: observation-conditioned K-selection for stereo SCC; requires D-ST-3/D-ST-4 + P-F-A1 + observation model.
+- **OP-0005, OP-0008, OP-0009**: active high-priority open problems. Do not resolve silently.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session P: T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A; P-F-A1 Package I fully Cat A; CV-1.8 → CV-1.9; count 52A/14B/76 → 54A/12B/76 claims (~71% fully proved)
+
+**Trigger:** "Proceed to Session P." after CV-1.8 accepted. Primary objective: upgrade T-PF-A1-GI and T-PF-A1-PE from Cat B to Cat A by supplying the two proof gaps identified in Sessions N–O: (1) uniqueness of invariant measure for GI, (2) Payne-Weinberger applicability to polytopes + L²→TV formalization for PE.
+
+---
+
+### 1. T-PF-A1-GI Promoted Cat B → Cat A
+
+**Gap closed:** Uniqueness of the Gibbs invariant measure π_{T_*}.
+
+**Old Cat B proof:** Zero-current J[ρ*]=0 (stationarity, algebraic) + Dirichlet form IBP. Uniqueness informal ("nondegenerate noise + connected domain").
+
+**Session P completion — two-part argument:**
+- **Part A (Aronson 1968):** The reflected Langevin generator L = −∇Ẽ·∇ + T_*Δ is uniformly elliptic on the bounded Lipschitz domain C̃ (convex polytope). By Aronson (1968, *ARMA* 25:81–150) the Neumann heat kernel p(t,x,y) is strictly positive for all t>0, x,y ∈ C̃. Therefore any invariant measure ν satisfies ν ≪ Leb ≪ π_{T_*}, and we can write ν = h·π_{T_*} with h ∈ L¹(π_{T_*}).
+- **Part B (L²(π_{T_*}) kernel argument):** ν-invariance means P_t h = h for all t>0 (where P_t is the self-adjoint L²(π_{T_*}) semigroup). By Pazy §1.2, h is in the kernel of the generator L: Lh = 0. Multiplying by h and integrating against π_{T_*}: −T_*∫|∇h|²dπ_{T_*} = 0. Therefore ∇h = 0 a.e., so h = const = 1 (since ν is a probability measure). Hence ν = π_{T_*}. □
+
+**Cat A status:** Stationarity (zero-current) unchanged. Uniqueness proved via Aronson heat kernel + L² semigroup fixed-point. Does NOT prove convergence rate (that is Package II).
+
+---
+
+### 2. T-PF-A1-PE Promoted Cat B → Cat A
+
+**Gaps closed:** (a) Payne-Weinberger applicability to convex polytopes; (b) L²→TV formalization with explicit initial density assumption.
+
+**Old Cat B proof:** Payne-Weinberger cited for general C̃; Holley-Stroock perturbation stated; "Cat A path: P-W citation for Lipschitz domains + L²→TV formalization."
+
+**Session P completion:**
+
+**(a) Payne-Weinberger for polytopes:** Payne-Weinberger (1960, *ARMA* 5:286–292) prove the Neumann spectral gap bound μ_1 ≥ π²/diam² for *bounded convex domains* in ℝ^{n-1}. Their proof uses Steiner symmetrization, which is purely geometric and requires only convexity and boundedness — no boundary smoothness condition. A convex polytope is a bounded convex domain, so P-W applies directly to C̃.
+
+**(b) L²→TV conversion (explicit):** For h_t = dν_t/dπ_{T_*}:
+```
+‖ν_t − π_{T_*}‖_{TV} = ½∫|h_t − 1| dπ_{T_*} ≤ ½‖h_t − 1‖_{L²(π_{T_*})}
+```
+(Cauchy-Schwarz with π_{T_*} a probability measure). The L² norm decays as exp(−λ_1 t)·‖h_0 − 1‖_{L²(π_{T_*})}.
+
+**Explicit non-overclaim:** This bound requires the initial density h_0 = dν_0/dπ_{T_*} to be in L²(π_{T_*}). Dirac-delta initial conditions (u_0 ∈ F_M(G) fixed) do NOT satisfy this; the L² decay applies for diffuse initial measures. For Dirac-delta start, positivity of heat kernel (Aronson) gives ν_t ≪ π_{T_*} for t>0, but the L² exponential rate does not apply at t=0.
+
+**Cat A status:** Poincaré inequality + exponential L² ergodicity with explicit λ_1 lower bound. TV convergence for L²(π_{T_*}) initial density. C_P exponentially large for metastable systems — correct, as P-F-A1 Package I asserts existence of spectral gap, not polynomially small gap (that is Package II territory).
+
+---
+
+### 3. Count Change and Version Bump
+
+| Metric | Before Session P (CV-1.8) | After Session P (CV-1.9) |
+|---|---|---|
+| Category A | 52 | **54** (+T-PF-A1-GI, +T-PF-A1-PE) |
+| Category B | 14 | **12** (−T-PF-A1-GI, −T-PF-A1-PE) |
+| Category C | 5 | 5 |
+| Retracted | 5 | 5 |
+| **Total** | **76** | **76** |
+| % fully proved | ~68% | **~71%** |
+
+Canonical version: **CV-1.8 → CV-1.9**. P-F-A1 Package I is now **fully Cat A**.
+
+---
+
+### 4. Non-Overclaim Inventory (Session P)
+
+- **T-PF-A1-GI:** Proves stationarity (zero-current) + uniqueness (Aronson + L² kernel). Does NOT prove Kramers rates, convergence speed, or mixing times.
+- **T-PF-A1-PE:** Proves existence of C_P > 0 (spectral gap) and exponential L² ergodicity for L²(π) initial density. Does NOT prove C_P is polynomially small. C_P ~ exp(osc/T_*) is exponentially large in the metastable regime (correct behavior for multi-well landscape).
+- **TV bound:** Requires L²(π_{T_*}) initial density — Dirac-delta start is excluded. Stated explicitly in canonical entry.
+- **Package II (Eyring-Kramers):** NOT started in Session P. Remains conditional on H5 (Morse stability) + T_* registration (OP-0021). Not before W9.
+
+---
+
+### 5. Files Modified
+
+1. `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — T-PF-A1-GI: Step 5 replaced with two-part uniqueness proof (Aronson + L² kernel); category → Cat A. T-PF-A1-PE: Step 1 extended (P-W polytope applicability); Steps 5–6 replaced (L² ergodicity + L²→TV Cauchy-Schwarz with explicit density assumption); category → Cat A.
+2. `THEORY/canonical/canonical.md` — frontmatter CV-1.8 → CV-1.9; §13 Cat A header "51 → 53 theorems"; T-PF-A1-GI and T-PF-A1-PE entries moved Cat B → Cat A (full canonical text); Cat B header updated; old Cat B entries removed; §11 count paragraph addendum; §15 "52 → 54 fully proved"; §16 CV-1.9 note; running total 54A/12B/76/~71%.
+3. `THEORY/canonical/theorem_status.md` — header current = CV-1.9; CV-1.9 section added (2-row table + promotion detail paragraph + count update); CV-1.8 historical rows annotated with Session P promotion; CV-1.8 running total de-bolded (historical).
+4. `Perception_theory/CLAUDE.md` — Session Start: CV-1.9 counts 54A/12B; ~71%; Session P listed.
+5. `Perception/CLAUDE.md` — Status line and theorem_status.md description: 54A/12B/~71%; Session P listed.
+
+---
+
+### 6. Pytest
+
+215 passed, 1 xfailed — confirmed. No code changes in Session P (theory-only session).
+
+---
+
+### 7. Carry-Forward to CV-1.10
+
+- **P-F-A1 Package II (Eyring-Kramers / Freidlin-Wentzell):** Conditional on H5 (Morse stability of Ẽ on C̃) + T_* registration (OP-0021). Not before W9.
+- **T_* registration (OP-0021):** Canonical definition of T_* as a function of SCC parameters; currently an axiom.
+- **T-ST-5b Cat B → Cat A:** Needs monotonicity proof + analytical lower bound on barrier gap.
+- **OP-0005, OP-0008, OP-0009:** Active high-priority open problems. Do not resolve silently.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session O: P-F-A1 Package I canonical promotion; T-PF-A1-AR + T-PF-A1-SDE Cat A; T-PF-A1-GI + T-PF-A1-PE Cat B; CV-1.7 → CV-1.8; count 50A/12B/72 → 52A/14B/76 claims
+
+**Trigger:** "'continue" after Session N. Primary objective: promote all four Package I theorems (reviewed in Session N) into canonical.md §13; bump version to CV-1.8; update all count fields and cross-references.
+
+---
+
+### 1. Canonical Insertions — §13 Category A
+
+Two new entries inserted after T-OP6-B in the Category A block:
+
+**T-PF-A1-AR (Affine Reduction):**
+- Statement: F_M(G) = {u ∈ [0,1]^n : μ^T u = M} is a compact convex polytope of intrinsic dimension n−1; Φ(x) = u* + Qx (Q ∈ ℝ^{n×(n−1)} ONB of ker(μ^T), u* = M·1) is an affine isometry C̃ → F_M(G) with Φ(0) ∈ int(F_M(G)) and C̃ uniformly inner-cone at every boundary point.
+- Proof: polytope intersection argument; Q^T Q = I; chain rule for Ẽ; u* = M·1 satisfies μ^T u* = M; interior: M ∈ (0,1) → u* ∈ int([0,1]^n); UIC from finitely many faces.
+- Status: **Cat A** (Sessions M–N–O, 2026-05-06)
+
+**T-PF-A1-SDE (Reflected Langevin Well-Posedness):**
+- Statement: The intrinsic Langevin SDE dU_t = −Π_M∇E_SCC(U_t)dt + √(2T_*)Π_M dW_t + dK̃_t on F_M(G) is well-posed (existence and strong uniqueness of solutions for any initial condition U_0 ∈ F_M(G)).
+- Proof: Lift to C̃ via Φ^{-1}; Lions-Sznitman (1984) Theorem 1 convex-domain case (ii) applies directly — no C^{1,1} regularity required; Tanaka-Gronwall: (X^1−X^2)·(dK^1−dK^2) ≤ 0 for convex domains → |X^1_t−X^2_t|² ≤ 0.
+- Status: **Cat A** (Sessions M–N–O, 2026-05-06)
+
+Category A header: "49 theorems" → "51 theorems"; running total 50A → 52A.
+
+---
+
+### 2. Canonical Insertions — §13 Category B
+
+Two new entries inserted after T-P-F-ε0-K in the Category B block:
+
+**T-PF-A1-GI (Gibbs Invariance):**
+- Statement: π_{T_*} = Z^{-1}exp(−Ẽ/T_*)dσ_M is an invariant measure of the reflected Langevin on F_M(G).
+- Proof: Zero-current: J[ρ*] = −ρ*·∇Ẽ − T_*·∇ρ* = 0 algebraically (∇ρ* = −(1/T_*)·∇Ẽ·ρ*); Dirichlet form identity via IBP; BC n·J = 0 automatically.
+- Cat A path: Stroock-Varadhan support theorem for uniqueness (irreducibility from nondegenerate noise + connected domain).
+- Status: **Cat B** (Sessions M–N–O, 2026-05-06)
+
+**T-PF-A1-PE (Poincaré + Ergodicity):**
+- Statement: λ_1(π_{T_*}) ≥ (π²/n)·exp(−osc(Ẽ)/T_*) > 0; C_P = n·exp(osc(Ẽ)/T_*)/π²; the law of U_t converges to π_{T_*} in L².
+- Proof: Payne-Weinberger (1960): μ_1(C̃) ≥ π²/diam(C̃)² ≥ π²/n; Holley-Stroock perturbation: gap(π_{T_*}) ≥ exp(−osc(Ẽ)/T_*)·gap(uniform) ≥ (π²/n)·exp(−osc(Ẽ)/T_*).
+- Cat A path: Payne-Weinberger citation for Lipschitz domains (polytopes qualify) + L²→TV via Cauchy-Schwarz.
+- Status: **Cat B** (Sessions M–N–O, 2026-05-06)
+
+---
+
+### 3. Count Change and Version Bump
+
+| Metric | Before Session O | After Session O |
+|---|---|---|
+| Category A | 50 | **52** (+T-PF-A1-AR, +T-PF-A1-SDE) |
+| Category B | 12 | **14** (+T-PF-A1-GI, +T-PF-A1-PE) |
+| Category C | 5 | 5 |
+| Retracted | 5 | 5 |
+| **Total** | **72** | **76** |
+| % fully proved | ~69% | **~68%** (denominator grew faster) |
+
+Canonical version: **CV-1.7 → CV-1.8**.
+
+---
+
+### 4. Files Modified
+
+1. `THEORY/canonical/canonical.md` — §13 Cat A: two entries added after T-OP6-B; §13 Cat B: two entries added after T-P-F-ε0-K; Cat A header "49 entries" → "51 entries"; running total lines; §11 count paragraph; CV-1.7 additions running total; §15 end paragraph; §16 end note + "active open problems" label; frontmatter id/version 1.7 → 1.8
+2. `THEORY/canonical/theorem_status.md` — header current = CV-1.8; P-F-A1 row updated; new CV-1.8 section with 4-row table; count footnote 52A/14B/76/~68%
+3. `Perception_theory/CLAUDE.md` — Session Start line 1: CV-1.8 counts, T-PF-A1-AR/SDE Cat A + T-PF-A1-GI/PE Cat B; ~68%
+4. `Perception/CLAUDE.md` — Status line and theorem_status.md description updated to 52A/14B/76/~68%
+
+---
+
+### 5. Pytest (theory-only session; no code changes)
+
+215 passed, 1 xfailed (confirmed Session M; no regressions in Sessions N or O).
+
+---
+
+### 6. Carry-Forward to CV-1.9
+
+Open items after CV-1.8:
+- **T-PF-A1-GI Cat B → Cat A**: add Stroock-Varadhan support theorem citation for uniqueness of invariant measure
+- **T-PF-A1-PE Cat B → Cat A**: (a) Payne-Weinberger citation for Lipschitz domains; (b) L²→TV conversion via Cauchy-Schwarz
+- **T-ST-5b Cat B → Cat A candidate**: narrow claim (full SCC energy only, GL-only NULL, monotonicity not established) — needs experiment
+- **P-F-A1 Package II**: conditional on H5 (metastable well separation) + T_* registration; Freidlin-Wentzell + Eyring-Kramers; not before W7
+- **OP-0005, OP-0008, OP-0009**: active high-priority open problems (do not resolve silently)
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session N: P-F-A1 Package I proof review; four theorems elevated; two Cat A, two Cat B→Cat A path; explicit Poincaré bound λ₁ ≥ (π²/n)·exp(−osc/T_*); no count change
+
+**Trigger:** "continue" after Session M. Primary objective: review and tighten all four Package I theorem proofs; elevate from working grade to Cat B/Cat A candidates ready for canonical promotion (Session O).
+
+---
+
+### 1. T-PF-A1-Affine-Reduction — Reviewed: Cat A
+
+**Original status:** Cat A candidate (working grade). **After review: Cat A — no remaining gaps.**
+
+Gaps filled:
+- u* = M·1 works for any probability vector μ (verified: μ^T(M·1) = M·Σμ_i = M; M·1 ∈ (0,1)^n since M ∈ (0,1))
+- Intrinsic dimension n−1: u* ∈ int([0,1]^n) → B(u*, ε) ∩ H_M ⊂ F_M(G) → full relative dimension
+- UIC: 0 = Φ^{-1}(u*) ∈ int(C̃); for any z ∈ ∂C̃, the open segment (z, 0) ⊂ int(C̃) by convexity; finitely many faces → minimum inward angle positive
+- E_sep denominator: Σu_i = n·M > 0 on F_M(G) (uniform μ = (1/n)·1, Σμ_i·u_i = M)
+- All five claim items now have complete elementary proofs
+
+### 2. T-PF-A1-Finite-Reflected-SDE — Reviewed: Cat A
+
+**Original status:** Cat B candidate (conditional on corner-geometry Skorokhod). **After review: Cat A — Lions-Sznitman Thm 1 convex case applies directly.**
+
+Key clarification: Lions-Sznitman (1984) Theorem 1 explicitly covers **convex open domains** (case (ii)), not just C^{1,1} domains. C̃ is a convex polytope → falls under the convex-domain case with no approximation needed.
+
+Added Tanaka uniqueness argument:
+- d|X^1_t − X^2_t|² = 2(X^1−X^2)·(−(∇Ẽ(X^1)−∇Ẽ(X^2))dt + d(K^1−K^2))
+- Key: (X^1−X^2)·(dK^1−dK^2) ≤ 0 for convex domains (Tanaka 1979 condition)
+- Gronwall: |X^1_t−X^2_t|² ≤ 0 → strong uniqueness
+- Corner reflection is the orthogonal projection onto the inward normal cone N_{C̃}(z) — well-defined for polytopes, subsumed by convexity in Lions-Sznitman
+
+Lifting formula: dU_t = −Π_M∇E_SCC(U_t)dt + √(2T_*)Π_M dW_t + dK̃_t, Π_M = QQ^T.
+
+### 3. T-PF-A1-Gibbs-Invariance — Reviewed: Cat B (Cat A path clear)
+
+**Original status:** Cat B (Dirichlet form calculation "needs clean write-up"). **After review: zero-current derivation complete; Cat A path: Doeblin/Stroock-Varadhan citation for uniqueness.**
+
+Replaced vague "boundary term cancellation" with explicit algebraic calculation:
+- Probability current J[ρ](x) = −ρ·∇Ẽ − T_*·∇ρ
+- For ρ* = Z^{-1}e^{-Ẽ/T_*}: ∇ρ* = −(1/T_*)·∇Ẽ·ρ*
+- Therefore J[ρ*] = −ρ*·∇Ẽ − T_*·(−1/T_*)·∇Ẽ·ρ* = 0 identically
+- ∇·J[ρ*] = 0 trivially; BC n·J = 0 automatically satisfied
+- Dirichlet form identity: ∫f·Lg·dπ* = −T_*·∫∇f·∇g·dπ* (integration by parts; ±∇Ẽ terms cancel)
+- Uniqueness: nondegenerate noise + connected compact domain → irreducibility; Cat A requires Stroock-Varadhan support theorem citation
+
+### 4. T-PF-A1-Poincare-Ergodicity — Reviewed: Cat B (Cat A path clear)
+
+**Original status:** Cat B (Payne-Weinberger + Holley-Stroock "need computation"). **After review: all computations explicit.**
+
+Added explicit calculation:
+- Payne-Weinberger (1960): μ_1(C̃) ≥ π²/diam(C̃)² ≥ π²/n (since diam(C̃) ≤ diam([0,1]^n) = √n)
+- Density ratio: w(x) = dπ_{T_*}/dμ_0, C_0/c_0 = exp(osc(Ẽ)/T_*), c_0/C_0 = exp(−osc(Ẽ)/T_*)
+- Holley-Stroock (Poincaré version): gap(μ) ≥ (c/C)·gap(μ_0) — proved via numerator ≥ c·∫|∇f|²dμ_0 and denominator ≤ C·Var_{μ_0}(f)
+- **Explicit lower bound: λ_1(π_{T_*}) ≥ (π²/n)·exp(−osc(Ẽ)/T_*) > 0**
+- **Explicit Poincaré constant: C_P = n·exp(osc(Ẽ)/T_*)/π²**
+- Scale: osc(E_cl) ~ β·n/16 → C_P ~ (n/π²)·exp(β·n/16T_*) (exponentially large in n; correct for metastable system)
+- Cat A path: (a) Payne-Weinberger citation for Lipschitz domains (polytopes qualify); (b) L²→TV conversion via Cauchy-Schwarz (standard); (c) Holley-Stroock Poincaré version is self-contained above
+
+---
+
+### 5. Category Summary After Session N
+
+| Theorem | Before N | After N |
+|---|---|---|
+| T-PF-A1-Affine-Reduction | Cat A working | **Cat A** (all gaps filled) |
+| T-PF-A1-Finite-Reflected-SDE | Cat B working | **Cat A** (Lions-Sznitman convex + Tanaka) |
+| T-PF-A1-Gibbs-Invariance | Cat B working | **Cat B** (zero-current clean; uniqueness: Doeblin needed) |
+| T-PF-A1-Poincare-Ergodicity | Cat B working | **Cat B** (explicit bound; L²→TV and P-W citation needed) |
+
+**Count change: none.** All four are CV-1.8 candidates. Canonical promotion in Session O requires:
+- T-PF-A1-AR and T-PF-A1-SDE: ready for Cat A canonical entries in canonical.md §13
+- T-PF-A1-GI and T-PF-A1-PE: Cat B canonical entries; Cat A promotion after Doeblin/P-W citations formalized
+
+---
+
+### 6. Files Modified
+
+1. `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — four theorem proof sections replaced with reviewed proofs
+2. `THEORY/canonical/theorem_status.md` — CV-1.8 note updated with Session N review outcome
+
+---
+
+### 7. No Pytest Needed (theory-only session; code not modified)
+
+215 passed, 1 xfailed confirmed Session M. No regressions.
+
+---
+
+### 8. Carry-Forward to Session O
+
+Session O: Canonical promotion of all four Package I theorems into canonical.md §13. Expected count change: +4 (2A from T-PF-A1-AR and T-PF-A1-SDE; 2B from T-PF-A1-GI and T-PF-A1-PE). Running total after Session O: **52A/14B/5C/5R = 76 claims**.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session M: P-F-A1 four theorem candidates written; route memo restructured (three-package split); 8-pattern residue search; 1 stale reference fixed; CV-1.8 candidates registered; no count change
+
+**Trigger:** Session M instruction (unlimited-reasoning mode). Primary objective: formalize P-F-A1 via corrected finite-dimensional route (affine reduction → reflected SDE → Gibbs invariance → Poincaré ergodicity). Freidlin-Wentzell and Eyring-Kramers relegated to conditional Package II.
+
+---
+
+### 1. Route Memo Restructured: Three-Package Split
+
+File: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — completely rewritten from Session L version.
+
+**Three-package structure:**
+
+| Package | Content | Status |
+|---|---|---|
+| I. Minimal finite-dimensional | Affine Reduction + Reflected SDE + Gibbs Invariance + Poincaré | Working grade (Session M) |
+| II. Conditional metastability | Freidlin-Wentzell + Eyring-Kramers | Conditional on H5 + T_* registration |
+| III. Numerical support | Hessian at saddle, T_* calibration | W8–W9+ |
+
+**Key architectural correction:** Bakry-Émery and Holley-Stroock are correctly relegated to the "closed routes" section. Holley-Stroock is used *within* Package I only as the final perturbation step from Payne-Weinberger (existence proof), not as the primary spectral gap strategy.
+
+**Correct Package I route:**
+1. F_M(G) = {u ∈ [0,1]^n : μ^T u = M} is a compact convex polytope of intrinsic dimension n−1 (affine isometry Φ: C̃ → F_M(G) via Q ∈ R^{n×(n−1)} ONB of ker(μ^T))
+2. Reflected SDE on C̃ well-posed via Lions-Sznitman 1984 (Lipschitz drift verified on compact C̃; polytope corner condition via Dupuis-Ishii 1993)
+3. Gibbs measure π_{T_*} = Z^{-1} exp(−E/T_*) dσ_M is the unique invariant measure (Dirichlet form + no-flux BC + irreducibility)
+4. Poincaré inequality: Payne-Weinberger on C̃ + Holley-Stroock perturbation → λ_1 > 0; C_P may be exp. large in osc(E)/T_* but existence is sufficient for P-F-A1
+
+---
+
+### 2. Four Theorem Candidates Written (Package I)
+
+All four written in `working/MF/pf_a1_lions_sznitman_freidlin_route.md` as working-grade candidates.
+
+| T-ID (candidate) | Name | Category | Key authority |
+|---|---|---|---|
+| T-PF-A1-Affine-Reduction | Field Polytope Compact Convex + Affine Isometry | Cat A candidate | Polytope intersection; chain rule |
+| T-PF-A1-Finite-Reflected-SDE | Well-Posed Reflected Langevin on C̃ | Cat B candidate | Lions-Sznitman 1984; Dupuis-Ishii 1993 |
+| T-PF-A1-Gibbs-Invariance | Gibbs Measure Unique Invariant Measure | Cat B candidate | Dirichlet form; reversibility; irreducibility |
+| T-PF-A1-Poincare-Ergodicity | Poincaré Inequality + Exponential Ergodicity | Cat B candidate | Payne-Weinberger 1960; Holley-Stroock |
+
+**Non-overclaim (mandatory):** The Poincaré constant C_P = exp(2·osc(Ẽ)/T_*) · diam(C̃)²/π² is exponentially large in osc(E)/T_* = O(β·n/T_*). P-F-A1 requires only existence (λ_1 > 0), not a polynomial lower bound. Sharp Eyring-Kramers constants are Package II.
+
+---
+
+### 3. Stale Reference Fix in pf_tstar_langevin.md
+
+**File:** `THEORY/working/MF/pf_tstar_langevin.md` §8.5 "Promotion path for P-F-A1 Cat A"
+
+**Stale content:** Listed "Holley-Stroock for log-Sobolev; Bakry-Émery curvature on simplex" as viable spectral gap routes.
+
+**Fix:** Replaced with explicit route correction notice (Bakry-Émery CLOSED; Holley-Stroock insufficient as primary), and the full Package I decomposition pointing to the route memo.
+
+---
+
+### 4. Code Alignment Note (langevin.py)
+
+Documented in route memo §8 "Code Alignment Note":
+
+- `langevin.py` implements **projected Euler-Maruyama with box clipping** (clip to [ε,1−ε], rescale to preserve mass), NOT Skorokhod reflection.
+- Free energy is F_{C+E} = E_SCC − T·S_ber + λ_K·K_soft (**Target B**), not pure Gibbs Target A.
+- `_reflect_to_box()` docstring claim of "Lions-Sznitman reflection" is aspirational, not implemented.
+- **No code changes needed** for P-F-A1 theory work. Proper Skorokhod implementation is Package III (W9+).
+
+---
+
+### 5. Conservative Status Decision
+
+No count change to canonical claim totals (50A/12B/5C/5R = 72 claims, ~69%).
+
+CV-1.8 candidates registered in `theorem_status.md` (P-F-A1 row updated):
+- T-PF-A1-Affine-Reduction, T-PF-A1-Finite-Reflected-SDE, T-PF-A1-Gibbs-Invariance, T-PF-A1-Poincare-Ergodicity
+- Pending proof review (Session N) before Cat B promotion
+
+---
+
+### 6. Residue Search (8 Patterns)
+
+| Pattern | Result | Action |
+|---|---|---|
+| P-F-A1 non-scoped overclaims | CLEAN (all instances: "NOT P-F-A1" or "OPEN") | — |
+| Spectral gap polynomial/uniform overclaim | CLEAN (only in route memo, properly anti-overclaiming) | — |
+| Poincaré uniform constant overclaim | CLEAN (all instances note C_P may be exp. large) | — |
+| Bakry-Émery not in failed context | RESIDUE in `pf_tstar_langevin.md:420` — listed as viable route | FIXED (§3 above) |
+| Holley-Stroock as primary route | RESIDUE in `pf_tstar_langevin.md:420` — same stale location | FIXED (§3 above) |
+| Eyring-Kramers unconditional | CLEAN (canonical files: "does NOT prove Eyring-Kramers"; working files properly scoped) | — |
+| T_* described as defined/canonical | CLEAN (all: "until T_* is canonically defined"; "only for F_M(P) dynamics") | — |
+| Lions-Sznitman overclaims | CLEAN in canonical; `working/C/F_group_axioms.md` has old "Cat A on Σ_m^ε" (pre-Session-M archived working file, acceptable) | Note only |
+
+**Net residues fixed: 1 file (pf_tstar_langevin.md). Archive files (working/C/, logs/daily/) not modified.**
+
+---
+
+### 7. Pytest
+
+215 passed, 1 xfailed — no regressions (code not modified; theory-only session).
+
+---
+
+### 8. Carry-Forward to Session N
+
+| Item | Status |
+|---|---|
+| T-PF-A1-Affine-Reduction proof review | Session N — clean write-up; Cat A promotion candidate |
+| T-PF-A1-Finite-Reflected-SDE proof review | Session N — Dupuis-Ishii corner argument; Cat B promotion candidate |
+| T-PF-A1-Gibbs-Invariance proof review | Session N — Dirichlet form calculation detail; Cat B promotion candidate |
+| T-PF-A1-Poincare-Ergodicity proof review | Session N — Payne-Weinberger + H-S computation; Cat B promotion candidate |
+| CV-1.8 canonical promotion | Session O (after N review) |
+| H5 numerical (Hessian at saddle) | Package II, Session P |
+| T_* canonical registration (OP-0021) | W9+, hard |
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session L: CV-1.7 consistency audit + release packet + P-F-A1 route memo; 13 file fixes; 9-pattern residue search CLEAN; 50A/12B/5C/5R confirmed
+
+**Trigger:** Session L instruction (unlimited-reasoning mode). Primary objective: CV-1.7 consistency audit and release-packet preparation before beginning P-F-A1 deep work.
+
+---
+
+### 1. CV-1.7 Consistency Audit
+
+Audited: `canonical.md`, `theorem_status.md`, `CHANGELOG.md`, `Perception_theory/CLAUDE.md`, `Perception/CLAUDE.md`.
+
+**Count verification:** 50A/12B/5C/5R = 72 claims confirmed in all locations (after fixes below).
+
+**Breakdown confirmation:**
+- 49 Cat A in §13 + T-ST-5a in §16 = 50A total ✓
+- §13 Cat B: Barrier Exponent, T-Birth-Parametric, T-d_min, T-Beyond-Weyl, T-σ-Theorem-4, T-P-F-ε0-K = 6; Stereo Cat B: D-ST-1..5, T-ST-5b = 6; total 12B ✓
+- Cat C: T-Persist-1(d), T-Persist-Full, T-Persist-K-Sep, T-Persist-K-Weak, T-Persist-K-Unified = 5C ✓
+- Retracted: K-Saddle, Theorem 3.3, T-Merge(c/d/e) = 5R ✓
+- Total: 50+12+5+5 = 72 ✓
+
+---
+
+### 2. Inconsistencies Found and Fixed
+
+| # | File | Issue | Fix |
+|---|---|---|---|
+| 1 | canonical.md frontmatter | `id: CV-1.5.2`, `version: 1.5.2`, `**47A/62 claims/75%**` | Updated to CV-1.7, 50A/12B/72/~69% |
+| 2 | canonical.md §5.3b header | "Cat B — CV-1.6" | Updated to "Cat A conditional — CV-1.7" |
+| 3 | canonical.md §11 count para | "47 fully proved / 62 formal claims / 75%" | Updated to "50 / 72 / ~69%"; added CV-1.7 update history entry |
+| 4 | canonical.md theory-status para | "Category A = 47 theorems" (no forward ref) | Added "(further updated CV-1.7: 50A/12B; see §13 headers)" |
+| 5 | canonical.md active OPs list | "4 High (OP-0005, OP-0006, OP-0008, OP-0009)" | "3 High (OP-0005, OP-0008, OP-0009); OP-0006 RESOLVED" |
+| 6 | canonical.md §16 end note | Count 48A/12B=70 claims, no forward ref | Added Sessions I/K forward ref; "CV-1.7 completed" target |
+| 7 | theorem_status.md "current" line | "current = CV-1.5.2" | "current = CV-1.7" |
+| 8 | theorem_status.md problem stats | "High: 5; OP-0005/0006/0008/0009 active" | "High: 4; OP-0006 RESOLVED" |
+| 9 | theorem_status.md summary table | "High: 4 active (incl. OP-0006)" | "High: 3 active; OP-0006 RESOLVED" |
+| 10 | theorem_status.md cross-ref | OP-0006 in active Open list | Struck through with RESOLVED note |
+| 11 | theorem_status.md OP-0006 body | "Cat B candidate ACHIEVED" (stale) | Full RESOLVED entry with B1–B4, residuals, Cat A promotion |
+| 12 | Perception_theory/CLAUDE.md | 49A/13B/T-OP6-B Cat B/~68%/OP-0006 active | 50A/12B/T-OP6-B Cat A/~69%/OP-0006 removed from active |
+| 13 | Perception/CLAUDE.md (parent) | 49A/13B/T-OP6-B Cat B/~68% (×2 locations) | Both updated to 50A/12B/T-OP6-B Cat A/~69% |
+
+---
+
+### 3. Residue Search (9 Patterns) — All CLEAN
+
+| Pattern | Result |
+|---|---|
+| OP-0006 TENTATIVE (non-historical) | CLEAN after fixes |
+| T-P-F-ε0 conflated with P-F-A1 | CLEAN (all instances: "NOT P-F-A1") |
+| T-ST-5b monotonicity overclaim | CLEAN ("Monotone-in-Δz NOT confirmed" everywhere) |
+| GL-only supporting T-ST-5b | CLEAN ("gl_only NULL" in all references) |
+| Σ_M^K as foundational (not local chart) | CLEAN (F_M(P) foundational; Σ_M^K local chart per §3.9/§16) |
+| Slot-count K_act unqualified | CLEAN ("regime-conditional approximation" in all references) |
+| Raw image edge as SCC boundary | CLEAN (§5.3b explicitly distinguishes) |
+| T_* as raw observation noise | CLEAN (no conflation found) |
+| P-F-A1 marked Cat A | CLEAN (P-F-A1 is "C (working)" / OPEN everywhere) |
+
+---
+
+### 4. CV-1.7 Release Packet
+
+Created: `THEORY/working/CV-1.7_release_packet.md`
+
+Contents:
+- §2.1 Release summary (date, count, major promotions, non-promotions)
+- §2.2 Five new/promoted theorems: T-ST-5a, T-P-F-ε0, T-OP6-B, T-P-F-ε0-K, T-ST-5b (statement, category, proof, limitations)
+- §2.3 OP status changes: OP-0006 RESOLVED; P-F-A1 OPEN; T-ST-5b Cat A OPEN; OP-0009-Pre-a OPEN
+- §2.4 Technical corrections: ρ_bd scaling (Session J), K-field endpoint invalidity, P-F Target A/B/C distinction, non-overclaim notes
+- §2.5 Code/test status: 215+1xfailed; no regressions; exp06/exp02e/exp01/exp02-NEB results
+- §2.6 Remaining blockers: P-F-A1, T-ST-5b Cat A, OP-0009 v2.0, T-OP6-B C refinement, soft-cut stereo, H4 verification
+- §2.7 Consistency audit summary (this session)
+
+---
+
+### 5. P-F-A1 Route Memo
+
+Created: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`
+
+Contents:
+- Why Bakry-Émery failed: double-well W''(u) changes sign in spinodal; no global Ric ≥ K > 0
+- Why Holley-Stroock insufficient: osc(E_SCC) ~ O(β·n); gap exp(−c·β·n/T_*) is n-exponential
+- Lions-Sznitman construction: reflected Langevin on [0,1]^n ∩ Σ_m; obligations 1–4
+- Freidlin-Wentzell quasipotential: V = ΔE_SCC for gradient systems; pre-exponential A requires H5
+- Spectral gap from quasipotential: λ_1 ~ C_P·exp(−ΔE/T_*) (barrier-dependent)
+- Exact next proof obligations: 5 items (Lions-Sznitman, FW, H5 numerical, T_* registration, Poincaré)
+- T_* registration: foundational bottleneck; candidate route rate-matching; W7+ minimum
+- Recommended session plan: Sessions M–Q (W7–W9+, ~3–5 weeks)
+
+---
+
+### 6. Pytest
+
+**215 passed, 1 xfailed** — Session L introduced no code changes; baseline confirmed.
+
+---
+
+### Session L Carry-Forward
+
+- **CV-1.7 SEALED.** All counts consistent: 50A/12B/5C/5R = 72 claims, ~69% fully proved.
+- **Release packet:** `THEORY/working/CV-1.7_release_packet.md`
+- **P-F-A1 next step:** `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — Obligation 1 (Lions-Sznitman construction) is recommended first deliverable for W7.
+- **Remaining open problems:** OP-0005 (K-Selection), OP-0008 (σ^A K-jump), OP-0009 (Multi-Formation), P-F-A1, T-ST-5b Cat A.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session K: T-OP6-B Cat B → Cat A (B1–B4 all closed: curved Hausdorff, topological separator, stereo conditioning, ρ_bd); canonical + theorem_status updated; 50A/12B; P-F-A1 OPEN
+
+**Trigger:** Session K instruction (unlimited-reasoning mode, resumed after Session J context compaction). Primary objective: close remaining Cat A blockers for T-OP6-B via (1) curved-interface Hausdorff extension, (2) topological separator formalization, (3) stereo conditioning formalization, then promote to Cat A and update canonical documents.
+
+---
+
+### 1. Curved-Interface Hausdorff Extension (B2 Closure)
+
+**Matched-asymptotic expansion.** Local normal coordinates `x = y + r·n(y)` near interface `Γ`. The Allen-Cahn profile perturbs as:
+
+```
+u*(x) = u₀(r/ξ) + ξ·κ_mean·v₁(r/ξ) + O((κ_max·ξ)²)
+```
+
+where `u₀(s) = ½(1+tanh(s))` is the flat profile and `v₁` solves the Pöschl-Teller equation `(-∂_s² + 2 − 3sech²s)v₁ = ∂_s u₀`.
+
+**Pöschl-Teller bound.** The correction satisfies `|v₁'(s)| ≤ C_v ≤ 1` by spectrum analysis. Gradient at the interface becomes `|∇u*|_max = 1/(2ξ)·(1 + ξ·κ_mean·v₁'(0))`. Under H4 (κ_max·ξ ≤ 0.1): correction ≤ 0.1·C_v ≤ 0.1, so the gradient maximum shifts by ≤ 10%.
+
+**Hausdorff bound under H4.** The effective ridge half-width becomes `Δ_curved ≤ 1.37ξ ≈ 1.94(α/β)^{1/2} < 2(α/β)^{1/2}`.
+
+**Result: B2 CLOSED.** Explicit constant `C = 2` (not tight; inner value `C < 1.37` under H4). Gap 2 Direction 1: `d(B_t, ∂PersComp) ≤ 2(α/β)^{1/2}`. Combined with Direction 2 (Gap 2, Session J): `d_H ≤ 2(α/β)^{1/2}`.
+
+---
+
+### 2. Topological Separator Formalization (B1 Closure)
+
+**Formal proof.** Any path `γ: v₀ ~ v₁ ~ … ~ v_k` from `C_j^int = {u* > 1/2}` interior to `C_j^ext = {u* < 1/2}` exterior must cross the superlevel boundary: `∃ i s.t. u*(v_i) ≥ 1/2 > u*(v_{i+1})`. By Direction 2 (Session J): `∂C_j ⊂ B_t`, so `v_i ∈ B_t`. Therefore every path passes through `B_t` — it is a vertex separator.
+
+**Handles non-convex and multiply-connected formations.** The argument is purely graph-theoretic; formation topology (convex/non-convex, single-connected/annular) does not affect it. The only requirement is that `∂C_j ⊂ B_t`, which follows from `ρ_bd = 1/(4ξ)` under H1–H3.
+
+**Intermediate β.** Under H1, the phase-separated regime ensures `∂C_j ⊂ B_t` with exponentially small error `δ ~ exp(−c√(β/α))`. The margin condition is explicit.
+
+**Result: B1 CLOSED** under H1–H3 (given Direction 2 from B2). Full proof in `op_0006_boundary_precision.md §10`.
+
+---
+
+### 3. Stereo Conditioning Formalization (B3 Closure)
+
+**Formal statement.** `B_PersRidge^P(ũ*) = PersRidge(|∇_{G_t^P} ũ*|; G_t^P)` where `G_t^P` is the stereo adjacency graph from D-ST-1 (hard depth cut: edges suppressed across depth gaps).
+
+**Proof.** Depth-gap pixels have no edges in `G_t^P`; gradient magnitude at such pixels is zero under D-ST-1 (no neighbors contribute). PersRidge is computed on `G_t^P` only, so the computation is automatically conditioned on stereo structure — depth-gap pixels cannot appear in `B_PersRidge^P`. The Hausdorff bound transfers to `G_t^P` with the same constant C = 2 because the interface geometry within each depth-connected component is unchanged.
+
+**Result: B3 CLOSED** for hard-cut D-ST-1. Conditional for soft-cut (GL-weighted adjacency without hard depth cut) — not covered. Full proof in `op_0006_boundary_precision.md §11`.
+
+---
+
+### 4. B4 Status
+
+**Already CLOSED in Session J.** `ρ_bd = 1/(4ξ)`, `ρ_bd·ξ = 1/4` (constant). No new work.
+
+---
+
+### 5. Promotion Decision: T-OP6-B Cat B → Cat A
+
+**Blocker table (post-Session K):**
+
+| Blocker | Status |
+|---|---|
+| B1 Topological separator | **CLOSED** (formal proof, §10) |
+| B2 Hausdorff constant C | **CLOSED** (C = 2 explicit under H4, §9) |
+| B3 Stereo conditioning | **CLOSED** for hard-cut D-ST-1 (§11) |
+| B4 ρ_bd calibration | **CLOSED** (Session J, ρ_bd = 1/(4ξ)) |
+
+**Assumption package (H1–H5):**
+- H1: Phase separation (β/α > 4λ₂/|W''(c)|)
+- H2: Well-formed formation (connected C_j, non-empty interior)
+- H3: Canonical ρ_bd = 1/(4ξ)
+- H4: Bounded curvature κ_max·ξ ≤ 0.1
+- H5: Hard-cut D-ST-1 stereo adjacency (for stereo B3)
+
+**Non-overclaims:** C = 2 not tight; H4 required; continuum proof; soft-cut stereo conditional; proof not peer-reviewed.
+
+**Decision: T-OP6-B promoted to Cat A conditional (H1–H5). Count: 49A/13B → 50A/12B.**
+
+Working file: `THEORY/working/MF/op_0006_boundary_precision.md §12.5`.
+
+---
+
+### 6. P-F-A1 Spectral Gap Survey (OPEN)
+
+**Routes surveyed:**
+- Bakry-Émery / curvature-dimension: fails — `E_SCC` has both concave (double-well) and convex terms; global Ric ≥ K with K > 0 not available.
+- Holley-Stroock: requires `exp(osc(V)/T_*)` bound; `osc(E_SCC) ~ β·n` (linear in system size n); gives n-exponential gap, not polynomial.
+- Correct route: Lions-Sznitman reflection + Freidlin-Wentzell for barrier crossing; spectral gap ~ `exp(−ΔE/T_*)`.
+
+**Result: P-F-A1 REMAINS OPEN.** No new progress. Documented in `op_0006_boundary_precision.md §13`.
+
+---
+
+### 7. Canonical Document Updates
+
+Files updated in Session K:
+
+- `THEORY/canonical/canonical.md`:
+  - §5.3b: Proposition T-OP6-B (Cat B) → Theorem T-OP6-B (Cat A conditional, H1–H5); assumption package H1–H5 added; blockers B1–B4 resolved inline; Hausdorff formula updated to `≤ 2(α/β)^{1/2}`; "Unresolved" block removed.
+  - §13 Category A header: count 48 → 49 in §13; running total 49A → 50A; T-OP6-B added to addition list.
+  - §13 Category A: T-OP6-B Cat A entry added (after T-P-F-ε0).
+  - §13 Category B header: note T-OP6-B promoted to Cat A.
+  - Running total annotation updated: 49A/13B → 50A/12B.
+
+- `THEORY/canonical/theorem_status.md`:
+  - T-OP6-B row: Cat B → Cat A (conditional); evidence/notes updated with B1–B4 closed.
+  - Count footnote: 49A/13B → 50A/12B = 72 claims, ~69% fully proved.
+  - OP-0006 entry: TENTATIVE → RESOLVED (residual: C=2 not tight; H4 required; soft-cut open).
+  - CV-1.7 Session K count update note added.
+
+---
+
+### 8. Residue Search (7 Patterns)
+
+| Pattern | Result |
+|---|---|
+| Stale "Cat B" labels for T-OP6-B in canonical.md | CLEAN — all updated to Cat A conditional |
+| Stale "Cat B" labels for T-OP6-B in theorem_status.md | CLEAN — updated |
+| "49A/13B" stale count in canonical.md | CLEAN — updated; historical Session I note annotated |
+| "49A/13B" stale count in theorem_status.md | CLEAN — Session K update note added; Session I note preserved as historical |
+| "Proposition T-OP6-B" residue | CLEAN — §5.3b now reads "Theorem T-OP6-B (Cat A conditional)" |
+| OP-0006 TENTATIVE residue | CLEAN — updated to RESOLVED with residuals noted |
+| P-F-A1 OPEN status | CONFIRMED OPEN — no spurious resolution introduced |
+
+---
+
+### 9. Pytest
+
+**215 passed, 1 xfailed** — Session K introduced no code changes; baseline confirmed.
+
+*(Note: pytest invoked via `/usr/bin/python3 -m pytest` — `/opt/homebrew/Caskroom/miniforge/base/bin/python3` lacks pytest in this session.)*
+
+---
+
+### Session K Carry-Forward
+
+- **T-OP6-B: Cat A (conditional).** Open refinements: (a) tighten C < 1.37 → explicit constant; (b) soft-cut stereo conditioning; (c) global H4 curvature verification.
+- **P-F-A1: OPEN.** Route: Lions-Sznitman + Freidlin-Wentzell spectral gap.
+- **OP-0006: RESOLVED** (with residuals noted above).
+- **Count: 50A/12B/5C/5R = 72 claims, ~69% fully proved.**
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session J: OP-0006 Hausdorff gap closure (ρ_bd correction, 1D proved, 2D flat conditional, Gaps 2+4 closed), topological separator working lemma, residue search 6 patterns, pytest
+
+**Trigger:** 5-part Session J instruction (unlimited-reasoning mode, context-resumed from Session I). Primary objective: advance T-OP6-B from Cat B toward Cat A by closing the Hausdorff constant and topological separator blockers.
+
+---
+
+### 1. ρ_bd Scaling Correction (Critical Bug Fix)
+
+**Discovery:** The Session I Working Note in `op_0006_boundary_precision.md §7` contained an error in the candidate canonical ρ_bd.
+
+**Error:** The Session I candidate was `ρ_bd = ½(α/β)^{1/2}`. With `ξ = (2α/β)^{1/2}`, the product `ρ_bd·ξ = (α/β)/√2 → 0` as `β → ∞`. A vanishing `ρ_bd·ξ` causes the ridge half-width `Δ → ∞` in the arctanh formula, violating `d_H ≤ C(α/β)^{1/2}` for large β.
+
+**Correction:** The canonical choice is `ρ_bd = 1/(4ξ) = ¼(β/(2α))^{1/2}` — the half-maximum gradient threshold. This gives `ρ_bd·ξ = 1/4` (constant, independent of α, β).
+
+Also corrected: the §7 Δ formula `ξ·arctanh(√(1−4ρ²ξ²))` is wrong. The correct derivation from `sech²(Δ/ξ) = 2ρ·ξ` gives `Δ = ξ·arctanh(√(1−2ρ·ξ))`.
+
+**Files edited:** `THEORY/working/MF/op_0006_boundary_precision.md` §7 Working Note (added ⚠ CORRECTION block + formula strike-through; Blocker 4 candidate line corrected).
+
+---
+
+### 2. Blocker 2 Hausdorff Constant: 1D Proved, 2D Flat Conditional
+
+**1D result (working grade, proved):**
+With `ρ_bd·ξ = 1/4`:
+- `sech²(Δ/ξ) = 1/2 → tanh(Δ/ξ) = 1/√2`
+- `Δ₁D = ξ·arctanh(1/√2) ≈ 0.881ξ ≈ 1.246(α/β)^{1/2}`
+- **C₁D ≤ 1.25 (proved for 1D flat interface)**
+
+**2D flat interface result (conditional on flat interface):**
+For 4-connected grid, flat interface ⊥ x-axis: `|∇_G u*|₂D ≈ √2·|u*'|₁D`. Effective threshold `ρ_bd_eff·ξ = 1/(4√2)`.
+- `Δ₂D ≈ 1.104ξ ≈ 1.562(α/β)^{1/2}`
+- **C₂D ≤ 1.56 < 2 (proved for flat interface)**
+
+---
+
+### 3. Gap 2 Closed: Both Hausdorff Directions
+
+The Hausdorff distance `d_H(B_t, ∂PersComp)` requires both directions:
+- **Direction 1** (ridge → boundary): `sup_{x∈B_t} d(x, ∂PersComp) = Δ` (ridge centered at interface). ✓
+- **Direction 2** (boundary → ridge): `∂PersComp ⊂ B_t` because boundary nodes sit at the gradient peak `1/(2ξ) > ρ_bd = 1/(4ξ)`. Therefore `d(∂PersComp, B_t) = 0`. ✓
+
+**Gap 2 closed** for flat interface / phase-separated regime.
+
+---
+
+### 4. Gap 3 Bounded: Discretization
+
+- Wide interface `ξ ≥ 1` (α ≥ β/2): continuum approximation valid; `d_H ≤ C(α/β)^{1/2}`.
+- Narrow interface `ξ < 1` (α < β/2): transition in one hop; `d_H = 0`.
+- Combined: `d_H ≤ max(1.56·(α/β)^{1/2}, 1)` lattice hops.
+
+---
+
+### 5. Gap 4 Closed: ∂PersComp Identification
+
+For flat interface in phase-separated regime: `PersComp = {ũ* ≥ 1/2}`, so `∂PersComp = {x ∈ C_j : ∃y~x, u*(y) < 1/2}` — the level-set boundary at the Allen-Cahn interface. **Gap 4 closed** under flat-interface restriction.
+
+---
+
+### 6. Topological Separator Working Lemma (Blocker 1, Route C)
+
+**Working Lemma:** Under (R1) phase separation + (R2) well-formed formation + (R3) compatible `ρ_bd`, `B_t` is a vertex separator.
+
+- **Sub-lattice regime (ξ < 1):** any path from interior to exterior includes a "crossing edge" (x,y) with `u*(x) ≈ 1, u*(y) ≈ 0`; `|∇_G u*(x)| ≈ 1 >> ρ_bd`, so `x ∈ B_t`. ✓
+- **Continuum regime (ξ ≥ 1):** `∂C_j ⊂ B_t` (gradient peak > ρ_bd); `∂C_j` is vertex separator by definition; hence `B_t` separates. ✓
+
+Formal gap: intermediate β (ξ ≈ 1 transition) and non-convex topology. Estimated ~0.5 day.
+
+---
+
+### 7. Updated Blocker Table (Post-Session J)
+
+| Blocker | Session J Status |
+|---|---|
+| B1 Topological separator | Working lemma (Route C, two regimes). Open: intermediate β + non-convex topology. |
+| B2 Hausdorff constant C | **1D PROVED:** C₁D ≤ 1.25. **2D flat CONDITIONAL:** C₂D ≤ 1.56 < 2. Open: curved interface. |
+| B3 Stereo conditioning | Essentially done (Route A). ~0.25 day to formalize. |
+| B4 ρ_bd calibration | **CORRECTED:** ρ_bd = 1/(4ξ) = ¼(β/(2α))^{1/2}, ρ_bd·ξ = 1/4 (constant). |
+
+**Remaining effort to Cat A:** ~1–1.5 days (curved-interface C, B1 formal proof, B3 write-up).
+
+---
+
+### 8. Residue Search (6 Patterns)
+
+| Pattern | Result |
+|---|---|
+| Stale `ρ_bd = ½(α/β)^{1/2}` outside op_0006 | CHANGELOG lines 78/229/267 — **historical log entries, correct as-is** |
+| T-OP6-B / OP-0006 cross-references | All consistent: Cat B in canonical.md + theorem_status.md; TENTATIVE in OP table |
+| b_D = 0 analyticity constraint | Enforced consistently across all files |
+| aut_g xfail / NQ-259 | 215 + 1 xfailed documented correctly in CLAUDE.md + CONVENTIONS.md |
+| P-F-A1 OPEN status | Correctly OPEN in canonical.md, theorem_status.md, CLAUDE.md |
+| OP-0006 status in theorem_status.md | Correctly TENTATIVE; T-OP6-B Cat B registered |
+
+All 6 patterns clean. No propagation of ρ_bd error to canonical documents.
+
+---
+
+### 9. Pytest
+
+**215 passed, 1 xfailed** — consistent baseline maintained. Session J introduced no code changes.
+
+---
+
+### Session J Carry-Forward
+
+| Item | Status |
+|---|---|
+| T-OP6-B Cat A: B2 curved interface | OPEN — next session |
+| T-OP6-B Cat A: B1 formal proof (intermediate β) | OPEN — next session |
+| T-OP6-B Cat A: B3 stereo write-up | OPEN — ~0.25 day |
+| P-F-A1: spectral gap (Bakry-Émery on F_M(P)) | OPEN — not started |
+| T-ST-5b Cat A: analytical lower bound on barrier gap | OPEN — deferred |
+
+**Count:** 49A / 13B / 5C / 5R = 72 claims. No new promotions in Session J (gap closure work only).
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session I: T-P-F-ε0 Cat A promotion, T-P-F-ε0-K Cat B promotion, OP-0006 Hausdorff working note, residue search 7 patterns, pytest
+
+**Trigger:** 8-part Session I instruction (unlimited-reasoning mode). Primary objective: promote the completed P-F epsilon-limit package into canonical status without overclaiming full P-F-A1. Resumed from Session H checkpoint.
+
+---
+
+### 1. T-P-F-ε0 Promoted to Canonical Cat A
+
+**Location:** `THEORY/canonical/canonical.md` §13 Category A — entry appended after T-L1-M.
+
+**Theorem statement (canonical):**
+
+Let $\mathcal{F}_M(\mathcal{P})=\{\tilde{u}\in[0,1]^n:\sum_i\tilde{u}_i=M\}$. Parameterized family $\mu_\varepsilon\propto\exp(-({\mathcal{E}_{\mathrm{SCC}}+\varepsilon R})/T_*)d\sigma$. Under H1 (compactness), H2 ($\mathcal{E}_{\mathrm{SCC}}$ continuous), H3 ($\sigma>0$), H4 ($R\ge -C$): $\mu_\varepsilon\Rightarrow\mu_0$ weakly as $\varepsilon\to 0$.
+
+**Proof key steps (in canonical entry):** (1) $\mathcal{F}_M$ compact → $\sigma\in(0,\infty)$; (2) continuity on compact → $Z_0>0$; (3) dominated convergence (dominator $h=\exp(-\mathcal{E}/T_*)\cdot\exp(C/T_*)$) → $Z_\varepsilon\to Z_0$; (4) Term I + Term II decomposition → $\int f\,d\mu_\varepsilon\to\int f\,d\mu_0$.
+
+**Non-overclaim block (in canonical entry):** "T-P-F-ε0 is not P-F-A1. It establishes continuity of the Gibbs target under Bernoulli regularization. Full P-F-A1 remains open pending spectral gap and reflected Langevin / Lions-Sznitman construction. Does NOT prove: spectral gap, Eyring-Kramers pre-exponential, $T_*$ existence, H5 Morse stability, or infinite-dimensional extension."
+
+---
+
+### 2. T-P-F-ε0-K Promoted to Canonical Cat B
+
+**Location:** `THEORY/canonical/canonical.md` §13 Category B — entry appended after T-Beyond-Weyl.
+
+**Theorem statement (canonical):**
+
+Under H1–H4 + H5 (Morse stability): $\Delta\mathcal{E}_\varepsilon=\Delta\mathcal{E}_0+\varepsilon\Delta R$. Bernoulli specialization: $\Gamma_B/\Gamma_A=\exp(O(\delta))=1+O(\delta)$ where $\delta\sim\exp(-c\sqrt{\beta/\alpha})$.
+
+**Non-overclaim block (in canonical entry):** "T-P-F-ε0-K is not P-F-A1. Conditional on H5 Morse stability (unproved globally). No pre-exponential factor proof. Cat A path: H5 proof + spectral gap."
+
+---
+
+### 3. Canonical.md DEVELOPMENT NOTICE Updated
+
+**CV-1.7 additions block added** after CV-1.6 development section:
+- T-P-F-ε0: Cat A, count 48A → 49A (§13: 48 + T-ST-5a §16 = 49 total)
+- T-P-F-ε0-K: Cat B, count 12B → 13B
+- Running total: **49A/13B/5C/5R = 72 claims**
+- P-F-A1 OPEN (explicit)
+
+**Category A header:** updated 47 → 48 (§13 count; total 49A including §16).
+**Category B header:** updated 4 → 5 theorems.
+
+---
+
+### 4. theorem_status.md Updated
+
+- CV-1.7 section header changed: "Candidates" → "Canonical Additions (Sessions H–I)"
+- T-P-F-ε0: status "working — Cat A candidate" → "**canonical Cat A** (Session I)"
+- T-P-F-ε0-K: status "working — Cat B" → "**canonical Cat B** (Session I)"
+- P-F-A1: unchanged OPEN
+- Count footnote updated: 48A/12B/5C/5R = 70 → **49A/13B/5C/5R = 72 claims, ~68% fully proved**
+- Running total note in CV-1.6 stereo section: 48A/12B/5C/5R → 49A/13B/5C/5R = 72 (with Session I annotation)
+- Non-overclaim note added (mandatory per Session I instruction)
+
+---
+
+### 5. CLAUDE.md Files Updated
+
+Both `Perception/CLAUDE.md` and `Perception_theory/CLAUDE.md`:
+- Count 70/48A/12B → 72/49A/13B
+- Session G → Session I annotation
+- CV-1.7 P-F foundation entries added to status line
+
+---
+
+### 6. OP-0006 Hausdorff Constant Working Note
+
+**Added to `THEORY/working/MF/op_0006_boundary_precision.md` §7 Blocker 2:**
+
+New subsection "Working Note — 1D Allen-Cahn Profile Bound for C (W6 D4 Session I, 2026-05-06)":
+- Profile: $u^*(x)=\frac{1}{2}(1+\tanh((x-x_0)/\xi))$, $\xi=(2\alpha/\beta)^{1/2}$ (using $|W''(1/2)|=1$ for $W(u)=u^2(1-u)^2$)
+- Gradient magnitude: $|u^*{}'|\le 1/(2\xi)$ at interface
+- Hausdorff bound: $d_H\le\Delta=\xi\,\mathrm{arctanh}(\sqrt{1-4\rho_{\mathrm{bd}}^2\xi^2})$; with canonical $\rho_{\mathrm{bd}}=\frac{1}{2}(\alpha/\beta)^{1/2}$: $\Delta\approx 0.88\xi$
+- Candidate bound: $C=\sqrt{2}\approx 1.41$ (1D); $C\le 2$ (2D, $d=4$)
+- 4 gaps before Cat A: (1) 1D→2D extension; (2) Hausdorff vs ridge width; (3) discretization correction; (4) $\partial\mathrm{PersComp}$ identification
+
+Status: **working note only**. Not a proof. Do not promote to Cat A without closing 4 gaps.
+
+---
+
+### 7. Residue Search (7 Patterns)
+
+| Pattern | Hits | Assessment |
+|---|---|---|
+| P-F-A1 accidentally Cat A | theorem_status.md:44 (T-P-F-ε0-K row) + canonical.md:60 | **Clean** — both are non-overclaim text or "needed for Cat A" language |
+| T-P-F-ε0 as full Langevin theorem | theorem_status.md:49 (non-overclaim note itself) | **Clean** — triggered on non-overclaim text |
+| Spectral gap claimed without proof | canonical.md:970 (formation separation spectral gap in T-Persist context) | **Clean** — unrelated to P-F Langevin spectral gap |
+| Lions-Sznitman claimed as implemented | CHANGELOG:311 "Not currently implemented"; archive log | **Clean** — CHANGELOG correctly marks as unimplemented |
+| Target C for canonical T* | No hits | Clean |
+| T* as raw observation noise | No hits | Clean |
+| Kramers overpromoted beyond assumptions | No hits | Clean |
+
+All 7 patterns clean.
+
+---
+
+### 8. Pytest
+
+**Result: `215 passed, 1 xfailed`** — clean (3:32 runtime). No code modifications in Session I (theory documents only); result unchanged from Sessions G and H.
+
+---
+
+### Carry-Forward (Session J)
+
+| Item | Status | Next action |
+|---|---|---|
+| P-F-A1 Cat A (spectral gap) | OPEN | Prove Poincaré inequality on $\mathcal{F}_M(\mathcal{P})$ (Holley-Stroock / Bakry-Émery path) |
+| P-F-A1 Cat A (Lions-Sznitman) | OPEN | Implement reflection in langevin.py; cite Tanaka-Ikeda construction |
+| H5 Morse stability | OPEN (blocks T-P-F-ε0-K → Cat A) | Generic Morse theory argument for $\mathcal{E}_{\mathrm{SCC}}$ saddles |
+| T-ST-5b Cat A | OPEN (4 gaps) | Monotonicity sweep + f formula proof |
+| OP-0006 Cat A Blocker 2 | Working note complete | Close 4 analytical gaps; ~1 day |
+| OP-0006 Cat A Blockers 1,3,4 | Routes sketched | ~half-day each |
+| D-ST-4 Cat A | Blocked on P-F-A1 | Follows after P-F-A1 Cat A |
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session H: T-P-F-ε0 formal proof, CV-1.7 registration, T-ST-5b Cat A lower-bound plan, OP-0006 blocker routes, residue search 7 patterns, pytest
+
+**Trigger:** 6-part Session H instruction (unlimited-reasoning mode). Primary objective: advance CV-1.7 by formalizing P-F-A1 stochastic foundation. Resumed from context compaction after Session G.
+
+---
+
+### 1. T-P-F-ε0 Formal Proof (§8.5 replacement)
+
+**File modified:** `THEORY/working/MF/pf_tstar_langevin.md` — §8.5 completely replaced (proof sketch → formal theorem package); §8.6 registration decision added.
+
+**Theorem T-P-F-ε0 (Gibbs Measure Continuity at ε=0):**
+
+Setup: Parameterized family μ_ε = Z_ε^{-1} exp(−(E_SCC + ε·R)/T*) dσ on F_M(P); ε ∈ [0,1]; R = S_Bern.
+
+Hypotheses (with SCC verification):
+- H1: F_M(P) compact — ✓ (closed bounded polytope in ℝⁿ)
+- H2: E_SCC continuous on F_M(P) — ✓ (polynomial in ũ)
+- H3: R = S_Bern bounded: 0 ≤ R ≤ n·ln2 — ✓
+- H4: σ(F_M(P)) > 0 — ✓ ((n-1)-simplex has positive (n-1)-volume)
+
+Proof structure (4 steps):
+1. Compactness: F_M(P) compact → σ(F_M) < ∞ and positive
+2. Z_0 > 0: E_SCC continuous on compact → achieves maximum → exp(−E_max/T*) > 0 → Z_0 > 0
+3. DCT for Z_ε: g_ε = exp(−E_SCC/T*)·exp(−ε·R/T*) ≤ exp(−E_SCC/T*)·exp(C/T*) =: h(ũ) integrable; g_ε → g_0 pointwise → Z_ε → Z_0
+4. Weak convergence: |∫f dμ_ε − ∫f dμ_0| bounded by (1/Z_ε)·‖f‖∞·‖g_ε−g_0‖_L1 + |(1/Z_ε−1/Z_0)|·‖f‖∞·Z_0 → 0
+
+**Status:** Cat A candidate. Proof complete pending peer review of H2 (polynomiality) and H4 (simplex measure).
+
+**Corollary T-P-F-ε0-K (Kramers Barrier Perturbation):**
+
+At phase-separated endpoints A, B: ΔE_ε = ΔE_0 + ε·ΔR with ΔR = O(δ) (δ = |∂S|/n = fraction of boundary nodes). Kramers rate ratio Γ_B/Γ_A = exp((ΔE_ε^‡ − ΔE_ε^{min})/T*) deviates from pure-Gibbs prediction by exp(O(δ)). **Status: Cat B** (depends on H5 Morse stability — not proved).
+
+**Non-claims (6 explicit):**
+1. Does NOT prove Langevin SDE has Target A as invariant measure
+2. Does NOT prove spectral gap or mixing time
+3. Does NOT extend to T* → 0 (Kramers low-T limit requires separate argument)
+4. Does NOT apply to Target C (K-augmented)
+5. Does NOT establish ΔR = O(δ) universally (only at phase-separated states)
+6. Does NOT prove Morse stability (H5)
+
+**§8.6 Registration decision:**
+
+| Claim | Status | Notes |
+|---|---|---|
+| T-P-F-ε0 | Cat A candidate | Promote once verified |
+| T-P-F-ε0-K | Cat B | H5 (Morse stability) open |
+| P-F-A1 v0 | OPEN (blocker) | spectral gap + Lions-Sznitman needed |
+| D-ST-4 | Cat B (P-F flagged) | Rate claims depend on P-F-A1 |
+
+---
+
+### 2. CV-1.7 Registration in theorem_status.md
+
+**File modified:** `THEORY/canonical/theorem_status.md` — new CV-1.7 section prepended before CV-1.5.2 section.
+
+**New entries (NOT yet in running total):**
+
+| T-ID | Name | Status | Category |
+|---|---|---|---|
+| T-P-F-ε0 | Gibbs Measure Continuity at ε=0 | working — Cat A candidate | A candidate |
+| T-P-F-ε0-K | Kramers Barrier Perturbation | working — Cat B | B |
+| P-F-A1 (v0) | T_* Axiom | OPEN (working/blocker) | C (working) |
+
+**Running total unchanged: 48A/12B/5C/5R = 70 claims.** CV-1.7 candidates enter the count only after formal promotion to canonical.md.
+
+---
+
+### 3. T-ST-5b Cat A Lower-Bound Plan
+
+**File modified:** `THEORY/canonical/canonical.md` — §16 T-ST-5b section, after "Cat A promotion requires" block.
+
+**Driver:** L_smooth − L_flat has off-diagonal entries w_{ij}^{2D}·(1−exp(−λ_z|z_i−z_j|²)) for cross-depth pairs (i,j); zero for same-depth. Barrier gap formula:
+
+ΔE_smooth − ΔE_flat ≈ α·Σ_{cross-depth (i,j)} w^{2D}·(1−exp(−λ_z·Δz²))·[(ũ_i^sad−ũ_j^sad)² − (ũ_i^min−ũ_j^min)²]
+
+**Candidate lower bound f(α, Δz, λ_z, P, w̄):**
+
+f = α · P · w̄^{2D} · (1 − exp(−λ_z·Δz²)) · 1/4
+
+where P = number of cross-depth edge pairs, w̄^{2D} = mean 2D weight, Δz = depth separation, 1/4 = saddle-point u-difference bound ((ũ^sad−ũ^sad_j)² ≥ 1/4 at ideal 0.5 saddle).
+
+**4 gaps before Cat A:**
+1. Saddle-point structure: need (ũ_i^sad−ũ_j^sad)² − (ũ_i^min−ũ_j^min)² ≥ 1/4 in general (currently assumed from double-well geometry; not proved)
+2. Monotonicity in Δz: need d/dΔz [barrier(Δz)] > 0 for all tested configurations (exp sweep required)
+3. Universality: current data covers β ∈ {10,20}, smooth adjacency; no GL-only or mixed-β proof
+4. Analytical lower bound f needs numerical verification across parameter grid
+
+**Policy:** Do NOT promote T-ST-5b beyond Cat B pending these 4 items.
+
+---
+
+### 4. OP-0006 Cat A Blocker Routes
+
+**File modified:** `THEORY/working/MF/op_0006_boundary_precision.md` — §7 Cat A blockers section completely rewritten with explicit routes.
+
+**Blocker 1 — Topological separator existence:**
+- Route A (PL Morse): Extend Morse theory to PL energy → requires non-degeneracy of E_SCC Hessian at critical points. Obstacle: E_SCC may have degenerate critical manifolds on F_M(P) boundary.
+- **Route B (recommended):** Use §5b Hausdorff bound + Morse saddle count for SCC energy. If ΔE > C·ρ_bd, then by continuity there exists a separator in the Hausdorff ball. Estimate: ~half-day.
+
+**Blocker 2 — Hausdorff constant C:**
+- **Route A (recommended):** Explicit 1D Allen-Cahn profile u*(x) = ½(1+tanh((x−x₀)/ξ)), ξ = (2α/(β|W''(c)|))^{1/2}. Profile width ξ gives gradient bound min|∇ũ*| = 1/(2ξ). For regular grid (degree d=4): C ≤ 2·ξ·√d ≤ 2 for standard SCC parameters. Then ρ_bd < min|∇ũ*|/2 = 1/(4ξ). Estimate: ~1 day.
+- Route B: Numerical calibration (run optimizer with noise, measure Hausdorff distances).
+
+**Blocker 3 — Stereo conditioning (D-ST-1 applies):**
+- **Route A (recommended):** D-ST-1 establishes that stereo adjacency increases separation. Boundary set {u: ρ_bd/2 ≤ u_i ≤ 1−ρ_bd/2} is depth-contiguous by construction (stereo graph connects depth-adjacent nodes). OP-0006 stereo case follows from gradient definition + D-ST-1 claim. ~half-day.
+
+**Blocker 4 — ρ_bd calibration:**
+- **Route A (recommended, canonical candidate):** ρ_bd = ½(α/β)^{1/2}. Derivation: spinodal zone width scales as (α/β)^{1/2} in Allen-Cahn theory; half that width gives safe separation from crisp boundary. Explicit formula: ρ_bd = ρ_0·(α/β)^{1/2} with ρ_0 = ½. Estimate: ~1 day for proof.
+- Route B (data-driven): Run optimizer across (α,β) grid; fit ρ_bd(α,β) empirically.
+
+---
+
+### 5. Residue Search (7 Patterns)
+
+| Pattern | Hits | Action |
+|---|---|---|
+| Target C used for canonical T* claims | No canonical hits | None |
+| T* described as raw observation noise | No hits; kramers.py:29 already correct | None |
+| P-F-A1 overpromoted to Cat A | No canonical hits; working files correctly conditional | None |
+| Kramers claim above Cat B without P-F-A1 | No canonical hits | None |
+| T-ST-5b monotonicity overclaim (new) | No new hits; canonical text already correct (Session G fix) | None |
+| GL-only described as supporting T-ST-5b | No live residues | None |
+| K-field endpoints (exp68) cited in canonical barriers | exp68 found in CODE/experiments/ but NOT cited in canonical documents | No action needed |
+
+All 7 patterns clean.
+
+---
+
+### 6. Pytest
+
+**Result:** `215 passed, 1 xfailed` — clean (3:17 runtime). The xfailed marks `scc.aut_g` as deferred NQ-259 W6+ deliverable.
+
+---
+
+### Carry-Forward (Session I)
+
+| Item | Status | Next action |
+|---|---|---|
+| T-P-F-ε0 formal promotion to canonical | Working §8.5 complete | Promote to canonical.md §13 + update count to 49A/12B/5C/5R |
+| T-P-F-ε0-K Cat B registration | Working §8.6 decision | Promote to canonical.md §13 + update count to 49A/13B/5C/5R |
+| P-F-A1 Cat A | OPEN (spectral gap + Lions-Sznitman) | ~1–2 days; blocks D-ST-4 Cat A |
+| T-ST-5b Cat A | OPEN (4 gaps listed) | Monotonicity sweep exp + analytical lower bound |
+| OP-0006 Cat A Blocker 1 | Route B sketched | ~half-day: Morse + §5b Hausdorff |
+| OP-0006 Cat A Blocker 2 | Route A sketched | ~1 day: 1D Allen-Cahn profile |
+| OP-0006 Cat A Blocker 3 | Route A sketched | ~half-day: from D-ST-1 |
+| OP-0006 Cat A Blocker 4 | ρ_bd = ½(α/β)^{1/2} | ~1 day: Allen-Cahn spinodal argument |
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session G: T-ST-5b Cat B formal sign-off, exp02e bug-fix record, P-F-A1 ε→0 plan, OP-0009 architecture migration policy, residue search 3 new patterns, pytest
+
+**Trigger:** 6-part Session G instruction (unlimited-reasoning mode). Continued from Session F checkpoint; resumed from context compaction.
+
+---
+
+### 1. T-ST-5b Cat B Formal Sign-Off
+
+**Status change:** Cat B candidate (Session F) → **Cat B** (formally signed off Session G, W6 D4).
+
+**Narrow claim adopted:**
+> Under full SCC energy with active closure/separation terms, smooth stereo adjacency raises the K=2→K=1 merger barrier relative to flat adjacency. This is not a generic GL double-well effect. Monotonicity in depth gap is not established. (GL-only: NULL; full_scc β=10: 6/6 SUPPORTED 25% increase; β=20: 3/6 PARTIAL.)
+
+**Theorem count update:** 48A/11B/6C/5R → **48A/12B/5C/5R** = 70 claims (T-ST-5b moved from Cat C to Cat B).
+
+**Warning added:** T-ST-5b is NOT a universal theorem. Applies only under: (1) full SCC energy (E_cl + E_sep active); (2) intermediate β (~10); (3) smooth depth-weighted adjacency. Not valid for GL-only or β=20 with small depth separation.
+
+**Files modified:**
+- `THEORY/canonical/canonical.md`: §16 T-ST-5b header → Cat B; claim body (removed monotonicity assertion); Status block → formal sign-off; Warning block added; Cat A requirements updated; §16 footer count updated.
+- `THEORY/canonical/theorem_status.md`: T-ST-5b row "B candidate" → **B**; count note updated to 48A/12B/5C/5R.
+- `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`: §T5 updated — monotonicity overclaim removed; T-ST-5a/5b split noted; Cat B status recorded.
+- Both CLAUDE.md files: status counts updated.
+
+---
+
+### 2. exp02e Bug-Fix Record
+
+**Added to `CODE/experiments/results/exp02e_single_field_neb_summary.md`:**
+- Promotion target updated to "Cat B (formally signed off Session G)"
+- New section "Bug-Fix Record" appended with:
+  - Bug 1: u-change stopping criterion invalid under box-clamping (47% nodes clamped at u=0; clip absorbs gradient signal; premature stop at step ~400 with gradient RMS = 0.34). Fix: energy-change stopping `|ΔE| < 1e-7` per 100 steps.
+  - Bug 2: KKT-gap `is_local_minimum` misleading at box-active nodes. Attempted fix (max(0,−g_proj)) yielded KKT RMS = 0.22411 identically at all checkpoints — field frozen but not at clean minimum. Fix: energy-probe `|E(u) − E(u − dt·∇proj)| < tol = 1e-5`.
+  - Cross-reference: exp02d as OP-0009 V3 violation evidence (K-field endpoints not F_M(P) local minima).
+
+---
+
+### 3. P-F-A1 ε→0 Proof Plan
+
+**Added `§8.5` to `THEORY/working/MF/pf_tstar_langevin.md`:**
+
+Parameterized family: μ_ε ∝ exp(−E_SCC/T*)·exp(ε·R)·dũ, ε ∈ [0,1], R = S_Bern.
+- ε=0: Target A (pure Gibbs, Lions-Sznitman reflection — canonical axiom)
+- ε=1: Target B (Bernoulli-regularized — langevin.py with lambda_K=0)
+
+**Lemma P-F-ε-Limit:** Under (C1) E_SCC continuous + bounded below, (C2) R bounded above (n·ln2), (C3) Lebesgue measure on simplex: μ_ε → μ_0 weakly by dominated convergence (Z_ε → Z_0 > 0; pointwise exp(ε·R) → 1).
+
+**Kramers exponent:** ΔF_ε = ΔE − ε·ΔS_Bern; at phase-separated states ΔS_Bern = O(|∂S|/n) = O(δ). No leading-order Kramers distortion.
+
+**Remaining for Cat A:** Fokker-Planck spectral gap analysis OR Lions-Sznitman implementation (exp ~1-day engineering). Proof sketch complete; formal write-up ~half-day.
+
+---
+
+### 4. OP-0009 Architecture Migration Policy
+
+**`op_0009_pre_a_kfield_chart_validity.md`:** §8 added — Architecture Migration Policy:
+- §8.1: Mandatory single-field validation pipeline for foundational barrier claims (4-step: generate → relax in F_M(P) → energy-probe is_min → k_act_from_barcode)
+- §8.2: Architecture table contrasting exp02d (Σ_M^K, barriers invalid) vs exp02e (F_M(P), barriers physical)
+- §8.3: Policy scope (T-ST-5b, D-ST-4 barriers, future multi-formation barriers)
+
+**`pre_objective_K_field_tension.md`:** §13 added — Empirical Support for Architecture Migration:
+- §13.1: exp02d/exp02e evidence table
+- §13.2: Architectural interpretation — Σ_M^K = modeling-layer; F_M(P) = foundational
+- §13.3: Principle established: "Any computation conflating Σ_M^K minima with F_M(P) minima without V1–V4 validation is ontologically invalid for canonical-level claims"
+- Notes the key insight: "The experiment converted OP-0009's philosophical principle into a verification procedure principle."
+
+---
+
+### 5. Residue Search (3 New Patterns) + Pytest
+
+**New patterns searched:**
+
+| Pattern | Hits | Action |
+|---|---|---|
+| T-ST-5b monotonicity overclaim | `stereo_scc_canonical_memo_v1.1.md §T5`: "increases with Δz_jk" (live) | **FIXED** — removed monotonicity; added T-5a/5b split, Cat B status, GL-only null, warning |
+| GL-only described as supporting T-ST-5b | No live residues found (CHANGELOG:35 already correct NULL) | No action |
+| Target C used for canonical T* claims | No live canonical claims found; CHANGELOG:72 already correct flag | No action |
+
+**Pytest:** `215 passed, 1 xfailed` — clean (3:42 runtime).
+
+---
+
+### Carry-Forward (Session H)
+
+| Item | Status | Next action |
+|---|---|---|
+| T-ST-5b Cat A | OPEN | Monotonicity sweep + analytical lower bound on barrier gap |
+| P-F-A1 ε→0 lemma formal write-up | Working §8.5 | ~half-day; cite Cattiaux-Guillin or Tanaka-Ikeda |
+| P-F-A1 Lions-Sznitman implementation | OPEN | Add to langevin.py (~1 day) |
+| OP-0009 v2.0 architecture migration | OPEN deferred to W11-W12 | Await v2.0 canonical §1 amendment package |
+| OP-0006 Cat B → Cat A | 4 blockers explicit | Next: Hausdorff constant C derivation |
+| Paper rewrite (CV-1.6 basis) | OPEN | Scheduled post-CV-1.6 completion |
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session F: exp02e corrected NEB, OP-0009 exp02d evidence, OP-0006 Cat B strengthened, P-F-A1 §8.4 three-target, residue search 8 new patterns, pytest
+
+**Trigger:** 5-part Session F instruction + mid-session 8-pattern residue addition (unlimited-reasoning mode). Resumed from context compaction; carried forward from Session E checkpoint.
+
+---
+
+### 1. exp02e: Single-field endpoint NEB for T-ST-5b (corrected methodology)
+
+**Root cause of exp02d failure (all 18 barriers negative):** `find_k_formations(lambda_rep=10)` minimizes the K-field product energy on Σ_M^K. The combined field ũ_A = clip(u⁽¹⁾+u⁽²⁾,0,1) is NOT a local minimum of E_SCC(ũ) on F_M(P). The repulsion term artificially inflates the K=2 state energy, so the NEB saddle has lower energy than the endpoint → negative barriers.
+
+**New file:** `CODE/experiments/exp02e_single_field_neb.py`
+
+Key design:
+- `make_bimodal_init` → `single_field_relax` (projected gradient descent, no repulsion) → `is_local_minimum` (energy-change probe: |ΔE| < 1e-5) → `k_act_from_barcode` (Union-Find H0, graph-general)
+- Two energy variants: gl_only (w_cl=0, w_sep=0), full_scc (w_cl=1, w_sep=1)
+- β ∈ {10, 20}, Δz ∈ {0.5, 1.0, 2.0}, λ_z ∈ {2.0, 4.0}
+
+**Critical bug fix during Session F:** `single_field_relax` early stopping `max|u_new − u| < 1e-6` fired prematurely (~step 400) when box-clamped nodes (47% at u=0) made the per-node u-change negligible even though interior gradient RMS = 0.34. Fixed to energy-change stopping `|ΔE| < 1e-7` per 100 steps. `is_local_minimum` changed from KKT-gap (misleading due to box-clamping) to energy-probe: |E(u) − E(u − dt·∇proj)| < tol.
+
+**Full results (28 trials, all valid endpoints):**
+
+| Variant | β | flat barrier | smooth range | above flat |
+|---|---|---|---|---|
+| gl_only | 10 | 2.6090 | 2.6090 (6/6) | 0/6 — NULL |
+| gl_only | 20 | 5.0005 | 5.0005 (6/6) | 0/6 — NULL |
+| full_scc | 10 | 2.7607 | 3.4524–3.5132 | **6/6 SUPPORTED** |
+| full_scc | 20 | 4.1542 | 4.1140–4.2760 | 3/6 PARTIAL |
+
+**Sub-hypothesis A:** NOT SUPPORTED — both flat and smooth maintain K=2 in all 28 trials. (Earlier apparent collapse at β=20 gl_only flat was an artifact of the incorrect u-change stopping criterion.)
+
+**Sub-hypothesis B:** SUPPORTED for full_scc β=10 (6/6, 25–27% barrier increase). PARTIAL for β=20 (effect present at Δz≥1.0, λz=4.0). NULL for gl_only (no adjacency sensitivity — GL boundary energy doesn't differentiate flat vs smooth at phase-separated minima).
+
+**T-ST-5b status:** Cat B experimental evidence obtained at β=10 full_scc. Refined claim: smooth > flat requires E_cl/E_sep active (not GL alone). Monotone-in-Δz clause not confirmed (barrier plateaus at Δz=0.5). Results: `CODE/experiments/results/exp02e_single_field_neb.csv`, `_summary.md`.
+
+---
+
+### 2. OP-0009-Pre-a: exp02d failure documented as V3 chart-validity violation
+
+Added §7 to `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`:
+- §7.1–§7.2: V3 violation mechanism — λ_rep=10 creates artificially deep valley between K-field bumps; ũ_A is NOT a critical point of E_SCC on F_M(P)
+- §7.3: 18 conditions, all barriers < 0. Null result — artifacts only.
+- §7.4: exp02e fix (single_field_relax methodology)
+- §7.5: OP-0009 interpretation — confirms K-field Σ_M^K and F_M(P) give different local minima under same SCC energy
+
+---
+
+### 3. OP-0006 Cat B package strengthened
+
+**Working file** `THEORY/working/MF/op_0006_boundary_precision.md`:
+- §5b theorem statement aligned with canonical: updated bound to `d_H(...) ≤ C·(α/β)^{1/2}` (was `C(β^{−1/2})`); C is geometry-dependent, Allen-Cahn interface width interpretation
+- §7 Cat A blockers expanded from 3 to **4 explicit blockers**:
+  1. Topological separator (§4.2): connected separator argument (combinatorial Jordan curve)
+  2. Hausdorff constant C: explicit value in terms of graph geometry, α, β, λ_bd (currently unknown)
+  3. Stereo conditioning (§4.3): B_PersRidge ⊂ X \ depth-gap pixels under D-ST-1
+  4. ρ_bd calibration: connect ρ_bd to SCC parameters (interface width δ~exp(−c√(β/α)))
+- Aligned with theorem_status.md T-OP6-B Cat B entry (all 4 blockers now consistent)
+
+---
+
+### 4. P-F-A1 §8.4: Three Gibbs targets distinguished
+
+Added §8.4 to `THEORY/working/MF/pf_tstar_langevin.md`:
+
+**Target A (canonical axiom v0):** μ_A ∝ exp(−E_SCC/T_*) — pure Gibbs; achieved via Lions-Sznitman reflection at ∂[0,1]^n. Not currently implemented.
+
+**Target B (langevin.py, lambda_K=0):** μ_B ∝ exp(−E_SCC/T)·exp(S_Bern) — Bernoulli-regularized Gibbs; soft boundary barrier replaces hard reflection. Correction term is O(δ) ~ O(exp(−c√(β/α))) in phase-separated regime — negligible for bulk barrier claims.
+
+**Target C (langevin.py full):** μ_C adds K_soft term — NOT appropriate for canonical T_* claims (K_soft is ad hoc regularizer, not part of E_SCC).
+
+**Modification plan (4-row table):** Cat B → use Target B (lambda_K=0); Cat A → prove ε→0 limit (analytical, ~half-day) OR implement Lions-Sznitman reflection (engineering, ~1 day).
+
+---
+
+### 5. Residue search (8 new patterns)
+
+| Pattern | Result |
+|---|---|
+| Foundational Σ_M^K (K-field as primary state space) | CLEAN — multi.py has LOCAL COORDINATE CHART note (Session E) |
+| Slot-count K_act (K-field slot count instead of #PersComp) | CLEAN — `slot_count_kact` in topology.py explicitly labeled "biased upward", used only for comparison |
+| K-field endpoint as single-field min without validation | NO NEW RESIDUES — `find_k_formations` in exp12/46/78 used for transport (valid K-chart use), not NEB endpoints |
+| E_photo as 5th SCC energy term | CLEAN — all correctly placed as likelihood term in exp04 MAP framework (D-ST-5 compliant) |
+| Doubly stochastic overclaim | CLEAN — explicitly labeled "NOT doubly stochastic" in stereo_scc_canonical_memo_v1.1.md |
+| T-ST-5 smooth/hard confusion | **RESIDUE FIXED** — exp02_stereo_merger_barrier_neb.py and results/exp02_neb/exp02_neb_summary.md used stale pre-split "T-ST-5" label; updated to T-ST-5a with split note pointing to exp02c/d/e for T-ST-5b |
+| Boundary as raw image edge | CLEAN — op_0006_boundary_precision.md §3 has explicit distinction table; exp06 uses raw gradient only as comparison baseline |
+| T_* as raw observation noise | **RESIDUE FIXED** — kramers.py:29 described T_star as "Effective temperature / noise scale"; updated to "Effective Langevin temperature on F_M(P) (P-F-A1; not observation noise)" |
+
+---
+
+### 6. Tests
+
+```
+215 passed, 1 xfailed in 191.19s (0:03:11)
+```
+All clean. xfailed = scc.aut_g (deferred NQ-259 W6+).
+
+---
+
+### Carry-forward
+
+- **exp02e results (PID 82813):** Full 28-trial run in progress. Preliminary β=20/full_scc: barrier_smooth=4.276 > barrier_flat=4.154. Await CSV for complete Sub-Hyp A/B assessment.
+- **T-ST-5b status:** Cat C pending; exp02e is the definitive run. If smooth > flat monotone in Δz, Cat B evidence strengthened.
+- **P-F-A1:** §8.4 three-target distinction added. ε→0 proof (Target B→A) estimated W7 half-day. Gating item for D-ST-4 Cat A.
+- **OP-0009:** Architecture migration OPEN (v2.0, W11–W12). exp02d failure logged as V3 empirical evidence.
+- **OP-0006:** Cat B package complete; 4 Cat A blockers explicit. Target CV-1.7 Cat A candidate.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session E: T-ST-5a Cat A (G1–G4 closed), §5.3b PersRidge canonical, exp02d full SCC barrier, P-F-A1 §8 langevin link, OP-0009-Pre-a multi.py note, residue search, pytest
+
+**Trigger:** 7-part Session E instruction (unlimited-reasoning mode). Session D checkpoint accepted. Context compaction occurred mid-session; resumed cleanly.
+
+### What was done
+
+**1. T-ST-5a G1–G4 gaps closed → Cat A promoted:**
+
+Updated `THEORY/working/MF/tst5a_hard_depth_locking_proof.md` (status → "Cat A — all gaps G1–G4 closed"):
+
+- **G1 (Mass projection uniformity) — CLOSED:** Confirmed `optimizer.py:project_volume` uses bisection on Lagrange multiplier, NOT uniform shift. Key insight: Lemma 3 (per-component mass conservation) is NOT required by the main theorem. Lemma 4 follows from Lemma 1 (graph topology) alone — cross-component H₀ merger requires a cross-component edge, which Lemma 1 rules out. Even global-projection mass redistribution cannot enable merger. Lemma 3 demoted to auxiliary corollary.
+- **G2 (Merger vs decay) — CLOSED:** Theorem part (b) now explicitly says "no merger path" (cross-component K=2→K=1 transition). Decay (K_act→1 via intra-component bar death) is permitted and explicitly listed in §6 "what T-ST-5a does NOT claim".
+- **G3 (Persistence threshold boundary) — CLOSED:** Added A-STRICT assumption: b−d > ρ_pers + ε for some ε>0. Justified by barcode Lipschitz stability (Chazal et al.) — strict inequality is preserved for all t where field changes by < ε/2.
+- **G4 (Threshold boundary at |z_i−z_j| = Δz) — CLOSED:** A-HARDCUT uses strict < for edge inclusion; A-DEPTH-SEP uses ≥ for separation. Complementary: no ambiguity at equality.
+
+**Canonical updates (canonical.md §16 T-ST-5a):**
+- A-MASS assumption corrected: bisection projection may transfer mass; proof does NOT require per-component conservation.
+- Proof sketch Lemma 3: demoted to auxiliary (non-required), with explicit bisection caveat.
+- Status: "Cat A — all gaps closed (W6 D4 Session E)."
+
+**theorem_status.md:** T-ST-5a row status → "**A**". Count note updated: stereo extension adds 1A/6B/1C. Running total: 48A/11B/6C/5R = 70 claims.
+
+---
+
+**2. OP-0006 §5.3b — PersRidge canonical amendment + T-OP6-B registered:**
+
+`canonical.md §5.3b` (new section between §5.3 and §5.4):
+- Formal definition: `B_PersRidge(ũ) = {x : (b_x, d_x) ∈ Bars_0(|∇_G ũ|; G), b_x−d_x > ρ_bd}`
+- Graph gradient magnitude: `|∇_G ũ(x)| = sqrt(Σ_{y~x}(ũ(x)−ũ(y))²)`
+- **T-OP6-B proposition (Cat B):** In phase-separated regime, B_PersRidge ≈ ∂PersComp in Hausdorff distance O((α/β)^{1/2}). Proof sketch: Stokes-like flow argument + barcode stability. Experiment evidence: exp06 shadow ratio 4.09 (5/5), blur ratio 50.8 (5/5).
+- Distinction from raw image edge (Canny/Sobel): PersRidge is topologically filtered via H₀ barcode — suppresses high-gradient pixels not on formation boundaries.
+- 4 unresolved Cat A requirements: explicit Hausdorff constant, topological separator definition, stereo conditioning, ρ_bd calibration.
+
+**theorem_status.md:** T-OP6-B row added (Cat B).
+
+---
+
+**3. exp02d — Full 4-term SCC energy barrier experiment written + launched:**
+
+New file: `CODE/stereo_scc/experiments/exp02d_full_scc_smooth_barrier.py`
+
+Design:
+- Grid: 12×12 (n=144), β=20
+- Energy variants: gl_only (w_cl=0, w_sep=0), bd_cl (w_cl=1, w_sep=0), bd_sep (w_cl=0, w_sep=1), full_scc (w_cl=1, w_sep=1)
+- Adjacency: flat (GraphState.grid_2d) + smooth (Gaussian depth decay, Δz ∈ {0.5,1.0,2.0}, λ_z ∈ {2.0,4.0})
+- K=2 endpoint: `find_k_formations(g, p, K=2, lambda_rep=10)` → u_A = clip(u1+u2,0,1)
+- K=1 endpoint: `find_formation(g, p_merged)`
+- NEB: single-field space (exp60 design), n_images=12, max_iter=600, climbing image
+
+**Partial results (gl_only, flat + first smooth trial):**
+- gl_only/flat: barrier_neb = −0.10 (K=2 from find_k_formations is not a genuine single-field minimum under E_bd alone — repulsion creates the apparent K=2 state, but the combined field u_A is not a local minimum in single-field F_M(P) space)
+- **Methodological finding:** The K-field repulsion (lambda_rep=10) in find_k_formations creates K=2 configurations that are NOT genuine single-field minima of E_bd. NEB in single-field space reveals this. For a genuine K=2 barrier measurement, the K=2 endpoint should be obtained via bimodal initialization → single-field gradient descent (as in exp02c). This is logged as a methodological gap in exp02d summary.
+
+Experiment running (PID 76206, background). Results to: `CODE/stereo_scc/results/exp02d_full_scc/`.
+
+---
+
+**4. P-F-A1 T_* Langevin formalization — §8 implementation link added:**
+
+Updated `THEORY/working/MF/pf_tstar_langevin.md`:
+
+New §8 (Implementation Link: langevin.py):
+- §8.1: Documents `projected_langevin` in `CODE/scc/langevin.py` — uses `F_C+E = E_SCC − T·S_Bernoulli + λ_K·K_soft`; `_project_tangent(v,n) = v − mean(v)` (correct F_M(P) mass conservation); `_reflect_to_box` approximates Lions-Sznitman reflection.
+- §8.2 (Discrepancy with P-F-A1 §3): langevin.py invariant measure is `exp(−E/T)·exp(S_Bernoulli)` — the Bernoulli-regularized Gibbs measure, NOT the pure `exp(−E_SCC/T_*)`. Bernoulli entropy term serves as boundary barrier (workaround for box constraint). For canonical Cat A promotion, either (a) show equivalence to Lions-Sznitman as ε→0, or (b) implement pure-energy variant. Cat B barrier-height claims are unaffected.
+- §8.3: Validation status — PARTIAL. Mass conservation: correct. Projected noise: correct. Boundary handling: approximate. Invariant measure: regularized. Sufficient for Cat B; insufficient for Cat A rate claims.
+
+---
+
+**5. OP-0009-Pre-a — multi.py architecture migration note:**
+
+Updated module docstring of `CODE/scc/multi.py`:
+- Added ARCHITECTURE NOTE (OP-0009-Pre-a): K-field Σ_M^K is a LOCAL COORDINATE CHART within F_M(P); valid under V1 (K-stability), V2 (basin localization), V3 (formation separation), V4 (mass budget).
+- Notes V1 failure mode (K-jump event → chart degeneration).
+- References `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`.
+- Architecture migration deferred to v2.0 (W11–W12).
+
+---
+
+**6. 8-pattern residue search:**
+
+Searched `scc/`, `stereo_scc/`, `tests/` for: TODO, FIXME, HACK, XXX, BROKEN, deprecated, NotImplemented, raise NotImplementedError.
+
+**Result: CLEAN.** No residues found in any of the three directories.
+
+---
+
+**7. Canonical consistency fixes:**
+
+- `canonical.md §16 footer`: Updated — removed stale "Cat A-candidate" for T-ST-5a; updated promotion requirements to reflect Session E completions.
+- `theorem_status.md` line 33: Updated claim count note — T-ST-5a formally signed off as Cat A.
+
+---
+
+**8. pytest: 215 passed, 1 xfailed. CLEAN.**
+
+`/Users/ojaehong/Library/Python/3.9/bin/pytest tests/ -q` — 215 passed, 1 xfailed in 229.02s. The xfailed marks `scc.aut_g` as deferred NQ-259 W6+ deliverable (expected). No regressions. The multi.py docstring addition (Task 5) does not affect any test.
+
+---
+
+### Carry-forward
+
+- **T-ST-5b (Cat C):** exp02d completed. Key finding: K-field repulsion endpoint (find_k_formations with lambda_rep=10) creates u_A that is NOT a genuine single-field minimum → all NEB barriers negative. Suggestive trend: smooth > flat for all variants (6/6 for full_scc; bd_sep max smooth = +0.18 vs flat = −0.24, only positive barrier). **exp02e needed** with bimodal-init → single-field gradient descent K=2 endpoint, analogous to exp02c's `find_minimum` approach but using full EnergyComputer. This is the gating item for T-ST-5b Cat C → Cat B promotion. Results in `CODE/stereo_scc/results/exp02d_full_scc/`.
+- **P-F-A1:** §8 discrepancy documented. Cat B ceiling policy stands. Next: implement pure-energy Langevin (without Bernoulli entropy term) and validate invariant measure at CV-1.7.
+- **OP-0009-Pre-a:** V1–V4 docstring added to multi.py. V1 detector (K_act monitor during gradient flow) not yet implemented. Architecture migration to v2.0.
+- **CV-1.6 status:** T-ST-5a Cat A + OP-0006 §5.3b canonical → CV-1.6 targets met for stereo extension core. D-ST-1..D-ST-5 still "B candidates" in §16; full CV-1.6 release requires theorem_status.md version bump and canonical version header update.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session D: T-ST-5a Cat A-candidate, exp02c β-sweep, OP-0006 Cat B, pf_tstar F_M/F_0 distinction, OP-0009-Pre-a chart validity, residue search
+
+**Trigger:** 7-part Session D instruction (unlimited-reasoning mode). Session C checkpoint accepted as starting point.
+
+### What was done
+
+**1. T-ST-5a formal proof sketch → Cat A-candidate:**
+
+New file: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`.
+
+Formal proof via 4 lemmas:
+- **Lemma 1 (Graph Decomposition):** A-HARDCUT + A-DEPTH-SEP → no cross-component edges (by definition). Proved.
+- **Lemma 2 (Gradient Locality):** A-LOCAL → ∂E/∂ũᵢ for i∈S₁ is independent of {ũⱼ : j∈S₂}. Proved.
+- **Lemma 3 (Mass Non-Flow):** Uniform projection enforces mass conservation per-component when G₁⊔G₂ (Laplacian row-sum=0 within each component). Proved.
+- **Lemma 4 (Persistent Component Stability):** H₀ superlevel-set filtration on G₁⊔G₂ cannot produce cross-component bar deaths. Proved.
+- **Theorem T-ST-5a:** B₂ = {ũ ∈ F_M(P) : K_act=2, depth-separated} is a closed invariant set under gradient flow. No merger path exists. ΔE_merge = +∞ (non-existence, not a saddle).
+
+Clarified: "barrier=∞" means state-space disconnection (no admissible path), NOT a saddle at infinite height. The eps-bridge experiment (exp02-NEB binary step) is consistent: any ε>0 bridge immediately collapses barrier to 0, confirming topological (not energetic) locking.
+
+**Remaining gaps (G1–G4):** G1 — Lagrange multiplier uniformity (verifiable in optimizer.py); G2 — claim should distinguish merger from decay; G3 — strict persistence inequality at ρ_pers boundary; G4 — strict/non-strict threshold complementarity. All technicalities, not logical obstructions.
+
+**Canonical update (canonical.md §16 T-ST-5a):** Status upgraded from "Cat B candidate" to "Cat A-candidate". Proof sketch added inline. Assumptions A-HARDCUT/A-DEPTH-SEP/A-LOCAL/A-NO-BRIDGE/A-PERSISTENCE/A-MASS listed explicitly.
+
+**theorem_status.md:** New CV-1.6 candidates table added with T-ST-5a as Cat A-candidate.
+
+---
+
+**2. exp02c — Smooth-barrier β-sweep (T-ST-5b Regime B):**
+
+New file: `CODE/stereo_scc/experiments/exp02c_smooth_barrier_full_energy.py`.
+
+Sweep β ∈ {4, 10, 20, 50} × Δz ∈ {0.25, 0.5, 1.0, 2.0} × λ_z ∈ {1.0, 2.0, 4.0, 8.0} with flat/smooth/hard adjacency comparison.
+
+| β | Flat barrier | K=2 minima? | Smooth differentiation? | Status |
+|---|---|---|---|---|
+| 4 | 0.0 | No | N/A | Same as exp02b |
+| 10 | 0.0 | No | N/A | Same as exp02b |
+| 20 | 0.4103 | Yes (K=2 genuine local min) | No — all smooth = flat = 0.4103 | No differentiation |
+| 50 | 0.0 | Convergence artifact | — | Step too large for β=50 |
+
+Hard adjacency at all β: K=1 reference not found (barrier=nan) — consistent with T-ST-5a topological locking.
+
+**Interpretation:** At β=20, K=2 is a genuine local minimum of the GL energy. But smooth adjacency does NOT raise the barrier above flat — the NEB merger path is dominated by the double-well energy and does not depend on cross-depth edge weights. T-ST-5b requires full 4-term SCC energy (especially E_cl, which provides formation cohesion that is disrupted when cross-boundary edges are downweighted).
+
+**T-ST-5b status:** REMAINS Cat C. Updated in canonical.md §16 T-ST-5b status block to include exp02c null-differentiation finding.
+
+Results: `CODE/stereo_scc/experiments/results/exp02c_smooth_full/`.
+
+---
+
+**3. OP-0006 Boundary Precision → Cat B candidate achieved:**
+
+Added §5b to `THEORY/working/MF/op_0006_boundary_precision.md`:
+
+**PersRidge equivalence theorem (proof sketch):** In the phase-separated regime (β large, ũ* ≈ {0,1}-valued), B_t(ũ*) (PersRidge) ≈ ∂PersComp(ũ*) (topological boundary of formation core) in graph Hausdorff distance O(β^{−1/2}). Proof: gradient magnitude concentrated at ∂PersComp nodes (≈1−2δ) under phase separation; PersRidge picks up exactly these nodes. Regime conditions: R1 (phase separation), R2 (well-formed formation), R3 (compatible persistence thresholds). Gap: explicit constant C in O(β^{−1/2}) bound.
+
+Cat B §7 update: All three criteria now met. (1) Barcode stability — standard result (Chazal et al.). (2) PersRidge equivalence — proof sketch §5b. (3) exp06 SUPPORTED (shadow 5/5 max ratio 4.085, blur 5/5 max ratio 50.804).
+
+**theorem_status.md OP-0006:** Updated from "TENTATIVE" to "Cat B candidate ACHIEVED (Session D)".
+
+---
+
+**4. pf_tstar_langevin.md — F_0/F_M dynamics distinction + Cat B ceiling policy:**
+
+Added §1b to `THEORY/working/MF/pf_tstar_langevin.md`:
+
+- **F_0(P) = [0,1]^n** (unconstrained): non-conservative flow; no natural Gibbs invariant measure; boundary attractors at {0,1}^n corners prevent compactness argument.
+- **F_M(P) = {ũ : Σ uᵢ = M} ∩ [0,1]^n** (mass-constrained): conservative flow; compact manifold; Gibbs measure exp(−E/T_*) well-defined; T_* is the Langevin temperature of THIS dynamics specifically.
+
+**T_* is defined only for F_M(P) dynamics.** The mass-conservation projection in optimizer.py (u ← u + (M−Σu)/n) is the discrete-time analog of the F_M(P) projected flow; any T_* estimate must account for this projection.
+
+Added §7b: **No Kramers promotion above Cat B until P-F-A1.** Policy:
+- ΔE barrier heights (NEB) = Cat B without P-F-A1 (deterministic)
+- Rates Γ, escape times τ, Z_K, π_K, T_* itself = at most Cat B (P-F flagged) until P-F-A1
+- T-BO (Bayesian K*) = at most Cat B until P-F-A1
+- Once P-F-A1 registered: D-ST-4 barriers Cat B → Cat A; rates/Z_K/π_K → Cat A-eligible
+
+---
+
+**5. OP-0009-Pre-a chart validity working file:**
+
+New file: `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`.
+
+Formalizes Σ_M^K as local chart within one basin A_{K,α}(P), with 4 validity conditions:
+- **V1 (K-Stability):** K_act stable on trajectory; K-jump → chart degenerates, needs (K-1)-chart
+- **V2 (Basin Localization):** trajectory stays in single basin A_{K,α}(P); inter-basin transition → chart needs label update
+- **V3 (Formation Separation):** ⟨u^(j), u^(k)⟩ < ε; large overlap → participation constraint binding, product structure lost
+- **V4 (Mass Budget):** m_j > m_min > 0; formation death → chart collapse
+
+Also clarified: Σ_M^K → B_K(P) domain fix already done (D-ST-4); chart map Φ_K not injective (S_K permutation symmetry); architecture migration open (deferred v2.0 W11–W12).
+
+**theorem_status.md OP-0009-Pre-a row:** Updated to include new file + V1–V4 conditions.
+
+---
+
+**6. Residue search (8 patterns) — ALL CLEAN:**
+
+| Pattern | Search result |
+|---|---|
+| Foundational Σ_M^K (not as chart) | Canonical §11/§13 uses in K-field theorem statements (legitimate); §3.9 establishes F_M(P) as foundational. No contamination |
+| Slot-count K_act as definition | No hits; §3.11 correctly defines #PersComp; T-L1-F correctly labels slot-count as regime-approx |
+| E_photo as 5th SCC energy term | No hits; D-ST-5 correctly separates E_photo as likelihood term (CN5-compliant) |
+| Doubly stochastic transport | One Sinkhorn hit in T-Transport proof — legitimate OT use, no spurious claim |
+| T-ST-5 undivided (not split) | No hits; T-ST-5a/b split complete in §16 |
+| Boundary = raw image gradient | No hits; OP-0006 correctly distinguishes SCC boundary from ∇I |
+| T_* = observation noise (canonical) | No hits; pf_tstar §2a flags environmental-noise interpretation as "plausible but not formally grounded" |
+| ρ_pers = complete OP-0005 solution | No hits; op_0006 correctly calls ρ_pers "ad hoc" |
+
+**Residue search verdict: CLEAN.**
+
+---
+
+**7. Session D checkpoint (this entry).**
+
+### Files created/modified
+
+| File | Change |
+|---|---|
+| `THEORY/working/MF/tst5a_hard_depth_locking_proof.md` | NEW — formal proof sketch for T-ST-5a (Lemmas 1–4 + Theorem + 4 gaps) |
+| `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md` | NEW — K-field chart validity conditions V1–V4 + architecture migration status |
+| `CODE/stereo_scc/experiments/exp02c_smooth_barrier_full_energy.py` | NEW — β-sweep NEB experiment (flat/smooth/hard adjacency comparison) |
+| `CODE/stereo_scc/experiments/results/exp02c_smooth_full/` | NEW — exp02c results (CSV + summary + plots) |
+| `THEORY/canonical/canonical.md §16 T-ST-5a` | Cat B → Cat A-candidate; assumptions + proof sketch added inline |
+| `THEORY/canonical/canonical.md §16 T-ST-5b` | Status updated with exp02c null-differentiation result |
+| `THEORY/working/MF/op_0006_boundary_precision.md §5b, §7` | PersRidge equivalence theorem added; Cat B status achieved |
+| `THEORY/working/MF/pf_tstar_langevin.md §1b, §7b` | F_0/F_M distinction added; Cat B ceiling policy added |
+| `THEORY/canonical/theorem_status.md` | CV-1.6 candidates table added (D-ST-1..D-ST-5, T-ST-5a/b); OP-0006 → Cat B; OP-0009-Pre-a row updated |
+
+### Status snapshot (Session D EOD)
+
+| Item | Before Session D | After Session D |
+|---|---|---|
+| T-ST-5a | Cat B candidate | **Cat A-candidate** (proof sketch with G1–G4 gaps) |
+| T-ST-5b | Cat C (exp02b null-barrier) | Cat C (exp02c null-differentiation; GL energy insufficient) |
+| OP-0006 | TENTATIVE | **Cat B candidate ACHIEVED** (all 3 criteria met) |
+| pf_tstar F_0/F_M | Not distinguished | **Distinguished** (§1b) |
+| pf_tstar Cat B ceiling | Not explicit | **Explicit policy** (§7b) |
+| OP-0009-Pre-a chart validity | PARTIALLY RESOLVED | **V1–V4 conditions formalized** (new working file) |
+| Residue search | — | **8/8 CLEAN** |
+
+### Carry-forward to Session E
+
+1. **T-ST-5a:** Resolve G1–G4 gaps (G1: optimizer.py uniformity check; G2–G4: wording fixes) → Cat A promotion. Estimated: 1 hour.
+2. **T-ST-5b:** Design exp02d with full 4-term SCC energy (E_cl + E_sep + E_bd on a 20×20 grid with K=2 initial condition, depth-separated blobs). This is the correct next test — the GL toy energy is definitively insufficient.
+3. **OP-0006 Cat B → canonical:** Promote §2b PersRidge definition to canonical.md §5.3 amendment at CV-1.6. Write 3 sentences: definition, stability note, equivalence regime.
+4. **P-F-A1 (pf_tstar):** Register §1b + §2b + P-F-A1 axiom v0 as CV-1.7 axiom group G. Estimated: W7 half-day.
+5. **OP-0009-Pre-a architecture migration:** V1 detector in multi.py (K-jump detection); long-term v2.0 §1 amendment. Not urgent.
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session C: T-ST-5 regime split, §3 migration, OP-0006 exp, T_* formalization
+
+**Trigger:** 7-part Session C instruction. Executed: (1) T-ST-5 regime split, (2) exp02b smooth NEB, (3) OP-0006 PersRidge extension + exp06, (4) pf_tstar_langevin.md, (5) D-ST-1..D-ST-3 §3 migration, (6) residue search, (7) checkpoint.
+
+### What was done
+
+**1. T-ST-5 regime split (canonical.md §16):**
+- T-ST-5 replaced by T-ST-5a (Cat B candidate) and T-ST-5b (Cat C pending).
+- **T-ST-5a:** Hard-depth topological locking. Claim: if depth threshold removes all bridge edges, $G^P = G_1 \sqcup G_2$ and K=2 is topologically locked (barrier=∞). This is a support-topology result, not a smooth GL barrier result. No P-F flag. Status: Cat B candidate — supported by exp02-NEB (W6 D4, K_flat=1, K_stereo=2).
+- **T-ST-5b:** Smooth-depth barrier raising. Claim: under $w_{ij} = w_{2D} \cdot \exp(-\lambda_z |z_i-z_j|^2)$, merger barrier increases monotonically with $\Delta z$ and $\lambda_z$. Status: Cat C pending — exp02b null-barrier result (see below).
+
+**2. exp02b — Smooth-adjacency NEB (T-ST-5b Regime B):**
+`CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py` (new). Sweep Δz ∈ {0.25, 0.5, 1.0, 2.0} × λ_z ∈ {0.5, 1.0, 2.0, 4.0, 8.0} = 20 configurations.
+
+| Result | Value |
+|---|---|
+| K=2-stable configurations | 20/20 |
+| Max barrier (smooth) | 0.0000 |
+| Flat reference barrier | 0.0000 |
+| Monotone in λ_z | True (trivially, all 0) |
+| T-ST-5b status | Cat C MAINTAINED |
+
+**Interpretation:** The GL toy energy (α=1, β=4) does not create genuine K=2 local minima under smooth adjacency at this parameter scale. The NEB finds no uphill path. This is a **null-barrier result**, not a falsification of T-ST-5b: the GL energy is too weak (insufficient phase separation). T-ST-5b re-test requires β=20+, or full 4-term SCC energy with closure.
+
+**3. OP-0006 boundary precision — PersRidge extension + exp06:**
+
+*op_0006_boundary_precision.md:* Extended §2 with §2b "Persistent Gradient Ridge":
+$$B_t(\tilde{u}) = \mathrm{PersRidge}(|\nabla_G \tilde{u}|, \rho_{\mathrm{bd}}) = \{x : (b_x,d_x) \in \mathrm{Bars}_0(|\nabla_G \tilde{u}|; G),\; b_x - d_x > \rho_{\mathrm{bd}}\}$$
+This is the $H_0$ barcode of the gradient magnitude field (not the field itself), analogous to D-ST-3 (§3.11). Promotion criteria updated: Cat B target is §2b, not §2.
+
+*exp06 — Boundary stability (shadow + blur):*
+
+| Perturbation | SUPPORTED / total | Max ratio |
+|---|---|---|
+| Shadow (s=0.2..0.8) | 5/5 | 4.085 (s=0.5) |
+| Blur (σ=0.5..3.0) | 5/5 | 50.804 (σ=2.0) |
+| Overall | **SUPPORTED** | — |
+
+OP-0006 Cat B criterion 3 (stability ratio > 1 for s ≥ 0.3): **MET**.
+
+**4. T_* working file:**
+`THEORY/working/MF/pf_tstar_langevin.md` (new). Contents: 3 candidate interpretations, P-F-A1 axiom v0, Kramers formula with explicit A and ΔE, Laplace approximation of Z_K, implications table. P-F-A1 axiom v0 is CV-1.7 Axiom Group G candidate.
+
+**5. D-ST-1..D-ST-3 migration into §3 Formal Universe:**
+Bodies of D-ST-1, D-ST-2, D-ST-3 moved from §16 extension into §3:
+- §3.9: Field Space $\mathcal{F}_0(\mathcal{P})$ and Mass Constraint (D-ST-2 body)
+- §3.10: Stereo Adjacency — Hard and Smooth Regimes (D-ST-1 body + smooth variant for T-ST-5b)
+- §3.11: Active Formation Count $K_{\mathrm{act}}$ as #PersComp (D-ST-3 body)
+
+§16 D-ST-1..D-ST-3 entries now contain cross-references only. D-ST-4..D-ST-5 remain in §16 as Cat B candidates.
+
+theorem_status.md OP-0009-Pre-b updated: "FURTHER RESOLVED (Session C) — D-ST-3 body migrated to §3.11; CV-1.6 §3 amendment requirement satisfied."
+
+**6. Residue search (CLEAN — 7 patterns):**
+
+| Pattern | Status |
+|---|---|
+| Foundational Σ_M^K | CLEAN |
+| Slot-count K_act as definition | CLEAN |
+| E_photo as prior | CLEAN |
+| Doubly stochastic transport | CLEAN |
+| T-ST-5 overclaim | CLEAN (T-ST-5a/b correctly labeled, null-barrier noted) |
+| Boundary as raw image edge | CLEAN |
+| Hard-depth misdescribed as smooth barrier | CLEAN |
+
+### Net effect
+
+- `THEORY/canonical/canonical.md`: §3 extended (+§3.9..§3.11); §16 T-ST-5 split into T-ST-5a/b; §16 D-ST-1..D-ST-3 cross-refs; T-ST-5b null-barrier status updated; §16 footer updated
+- `THEORY/canonical/theorem_status.md`: OP-0009-Pre-b FURTHER RESOLVED (§3 migration satisfied)
+- `THEORY/working/MF/op_0006_boundary_precision.md`: §2b PersRidge definition added; promotion criteria updated
+- `THEORY/working/MF/pf_tstar_langevin.md`: new P-F-A1 working file
+- `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py`: new experiment
+- `CODE/stereo_scc/results/exp02b_smooth_neb/`: new results directory (summary.md + CSVs + plots)
+- `CODE/stereo_scc/experiments/exp06_boundary_stability_shadow_blur.py`: new experiment
+- `CODE/stereo_scc/results/exp06_boundary/`: new results directory (summary.md + CSVs + plots)
+- Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims)
+
+### Remaining blockers
+
+- **T-ST-5a Cat A**: formal proof of disconnection guarantee under D-ST-1 hard threshold + field perturbation continuity argument
+- **T-ST-5b Cat B**: needs β=20+ or full SCC energy to see genuine smooth barrier; GL toy insufficient
+- **OP-0006 Cat B**: PersRidge stability proof + §5.3 equivalence theorem still needed (exp06 criterion 3 MET; criteria 1+2 pending)
+- **P-F-A1**: Langevin on $\mathcal{F}_M(\mathcal{P})$ needed for $T_*$ in D-ST-4; CV-1.7 target
+- **OP-0009-Pre-a full**: K-field architecture I9 vs shared-pool I9' tension remains; §3 migration done
+
+---
+
+## 2026-05-06 (W6 Day 4) — Session B: Canonical promotions, NEB experiment, OP-0006 formalization
+
+**Trigger:** 7-part instruction continuing from Session A context compaction. Executed: (1) canonical §16 promotion, (2) theorem_status OP-0009-Pre split, (3) exp02-NEB, (4) OP-0006 working file, (5) residue search, (6) checkpoint.
+
+### What was done
+
+**1. canonical.md §16 — D-ST-1..D-ST-5 + T-ST-5 (Cat B candidates, CV-1.6 target):**
+Added new §16 "Stereo Observation Extension" after §15 Closing Summary (~116 lines). Definitions:
+- D-ST-1: Depth-filtered adjacency $G_t^\mathcal{P}$ (hard threshold $\Delta z > \delta_z$)
+- D-ST-2: Stereo support space $\mathcal{P}_t = X_L^{\mathrm{valid}} \times Z_t$
+- D-ST-3: $K_{\mathrm{act}}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}; \rho_{\mathrm{pers}})$ (correct definition; slot-count is regime-conditional approx)
+- D-ST-4: $\mathcal{P}$-conditional Kramers rate $\Gamma_{K \to K-1}(\mathcal{P})$ (P-F flagged: $T_*$ undefined)
+- D-ST-5: Pullback $\tilde{u}_t^{\mathrm{pix}} = \tilde{u}_t \circ b_t$; prior/likelihood separation (CN5-compliant)
+- T-ST-5: Working theorem — stereo raises merger barriers (K-stability mechanism; Cat B)
+
+**2. theorem_status.md — OP-0009-Pre split into Pre-a + Pre-b:**
+- OP-0009-Pre-a: K-field as local chart, not foundational state space. PARTIALLY RESOLVED (D-ST-1..D-ST-4 canonical registration; $\mathcal{B}_K(\mathcal{P})$ registered as correct integration domain).
+- OP-0009-Pre-b: $K_{\mathrm{act}}$ derived as #PersComp observable. PARTIALLY RESOLVED (D-ST-3 registered; exp01 SUPPORTED: PersComp=2 vs slot-count=4 for noisy 2-blob field).
+- Quick Index row updated; sub-item status table updated; net status paragraph updated.
+
+**3. exp02-NEB — NEB/string-method merger barrier experiment:**
+`CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py` (new). Protocol:
+- Hard bimodal init: two rectangular 0.9-blocks separated by 0s
+- Hard depth cut via `make_depth_separated_grid` (DELTA_Z=0.5, DEPTH_GAP=2.0)
+- K-stability primary demo: flat→K=1 (spontaneous merger), stereo→K=2 (disconnected, barrier=∞)
+- eps-bridge NEB sweep: `adj_eps = adj_stereo + eps * adj_bridge` for eps in {0.002..1.0}
+- Results: K_flat=1, K_stereo=2, SUPPORTED; eps-bridge barrier = binary step (∞→0 at any eps>0)
+
+| Result | Value |
+|---|---|
+| K_flat (after relax) | 1 (spontaneous merger) |
+| K_stereo (after relax) | 2 (topologically locked) |
+| K-stability claim | SUPPORTED |
+| max_barrier_finite | 0.0000 (all eps>0 → K=1) |
+| barrier_non_increasing | True |
+
+Results saved: `CODE/stereo_scc/results/exp02_neb/{k_stability.csv, barrier_vs_depth_NEB.csv, barrier_vs_eps.png, energy_path_*.png, exp02_neb_summary.md, field_*.png}`.
+
+**4. OP-0006 boundary precision — working formalization:**
+`THEORY/working/MF/op_0006_boundary_precision.md` (new, ~185 lines). Contents:
+- §1: Problem statement (soft boundary band §5.3 → crisp persistent boundary)
+- §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : |\nabla_G \tilde{u}(x)| > \theta\}$; persistent if stable under $\|\delta\|_\infty$ small
+- §3: Distinction from raw image edge (table: 5 properties)
+- §4: Open sub-questions (convergence, topological stability, stereo conditioning)
+- §5: Toy experiment proposal — boundary stability ratio under shadow/blur perturbation
+- §6: Relationship to OP-0005 and OP-0009-Pre-b
+- §7: Status + promotion criteria (Cat B target: CV-1.6; Cat A: CV-1.7)
+
+**5. canonical.md T-ST-5 status updated:**
+Replaced "monotonically increasing barrier with depth separation" (anticipated result) with accurate NEB result: binary K-stability mechanism (flat K=1, stereo K=2, eps-bridge step function). Cat A promotion path clarified: (a) analytical lower bound on barrier gap, (b) smooth-adjacency variant.
+
+**6. Residue search (CLEAN — 5 patterns):**
+
+| Pattern | Status |
+|---|---|
+| Slot-counting K_act | No active residue — all mentions correctly labeled regime-conditional |
+| Foundational Σ_M^K | No active residue — all correctly labeled local chart |
+| E_photo as prior | No active residue — all correctly placed in likelihood |
+| Doubly stochastic transport | No active residue — correctly labeled "NOT doubly stochastic" |
+| T-ST-5 overclaim | No active residue — correctly labeled working theorem (updated above) |
+
+### Net effect
+
+- `THEORY/canonical/canonical.md`: §16 appended (D-ST-1..D-ST-5, T-ST-5; ~116 lines); T-ST-5 status paragraph updated with NEB results
+- `THEORY/canonical/theorem_status.md`: OP-0009-Pre split into Pre-a + Pre-b; sub-item table + net status updated
+- `THEORY/working/MF/op_0006_boundary_precision.md`: new working file
+- `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py`: new NEB experiment
+- `CODE/stereo_scc/results/exp02_neb/`: new results directory (8 files)
+- Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims); D-ST-1..D-ST-5 are Cat B *candidates* not yet promoted
+- Open problems: OP-0009-Pre-a and Pre-b PARTIALLY RESOLVED; OP-0006 now has working formalization (status: in-progress)
+
+### Remaining blockers
+
+- **P-F-A1**: Langevin on $\mathcal{F}_M(\mathcal{P})$ needed to define $T_*$ in D-ST-4 (Kramers rate)
+- **T-ST-5 Cat A**: analytical lower bound on barrier gap $\Delta E_{\mathrm{stereo}} - \Delta E_{\mathrm{flat}}$; smooth-adjacency variant
+- **OP-0006 Cat B**: toy experiment (shadow/blur stability ratio > 1) not yet run
+- **OP-0009-Pre-a full resolution**: D-ST-1..D-ST-3 must be integrated into §3 Formal Universe, not §16 extension
+
+---
+
+## 2026-05-06 (W6 Day 4) — SCC Stereo Soft-to-Crisp Stabilization: Phase B implementation complete
+
+**Trigger:** 10-phase research program (stereo-SCC stabilization). Session continues from W6 D3 context compaction. Phases 7–10 executed.
+
+### What was done
+
+**Phase 7 — `CODE/stereo_scc/` module created (7 core files + experiments):**
+
+- `fields.py`: `make_grid_2d`, `make_depth_separated_grid` (G_t^P depth-filtered adjacency), `gaussian_field` (2D grid_shape support added), `normalize_field`, `laplacian_from_adj`. Bug fixed: vertical neighbor was `idx+rows` (square-grid coincidence); corrected to `idx+cols`.
+- `topology.py`: `persistent_component_count` implementing K_act = #PersComp (correct per Canonical Memo v1.1 §D4); `slot_count_kact` (WRONG slot-count definition, included for comparison only).
+- `stereo_geometry.py`: `depth_from_disparity`, `backproject_pixels` (partial map b_t, §D9), `pullback_field_to_pixels` (u_L^pix = u_t(b_t(x)), NaN at invalid pixels), `depth_filtered_adjacency_3d`.
+- `energies.py`: Ginzburg-Landau energy E[u;P] = α u^T L u + β Σ W(u_x), gradient, `find_local_minimum` (projected gradient descent), `merger_barrier_estimate` (linear interpolation; toy, not NEB), `stereo_barrier_comparison`.
+- `kramers.py`: `kramers_rate` (Arrhenius; P-F flagged), `build_rate_matrix` (tridiagonal CTMC for K_act jump process), `simulate_markov_chain` (Gillespie), `stationary_distribution`, `free_energy_from_barriers`.
+- `visualization.py`: Five save functions (field heatmap, persistence curve, barrier bar chart, Markov trajectory, F(K) curve). All headless (Agg backend).
+- `experiments/exp01–exp05` + `run_all_experiments.py`: See experiment results below.
+
+**Phase 8 — Experiments run (5/5 SUPPORTED):**
+
+| Exp | Claim | Result |
+|---|---|---|
+| exp01 | K_act = #PersComp robust vs slot-count (A) | SUPPORTED: PersComp=2 (correct), slot=4 (inflated) for noisy 2-blob field |
+| exp02 | Stereo raises merger barriers (T5 / B) | SUPPORTED: barrier_stereo/flat = 1.003 (toy linear-interp barrier; ratio direction correct) |
+| exp03 | Backprojection pullback round-trip (C) | SUPPORTED: 100 valid/156 invalid, roundtrip_err = 0.00 |
+| exp04 | Prior/likelihood independence in MAP (D) | SUPPORTED: field_shift=10.2, E_photo: 90.3→1.5 |
+| exp05 | K_act Markov chain stationary dist (E) | SUPPORTED: low-T pi[K≤1]=1.000, high-T max pi=0.41 |
+
+Results saved to `CODE/stereo_scc/results/exp01–exp05/`.
+
+**Phase 9 — Residue search (CLEAN):**
+Checked 10 residue categories (slot-counting K_act, foundational Σ_M^K, E_photo as 5th prior term, doubly stochastic transport, OP-0006 as K-dynamics, ũ_t=U_t conflation, P_t=M_t conflation, G3.2 overestimation, rho_pers sufficiency, P-conditioning missing). No active residues found.
+
+**Phase 10 — Final report:**
+`CODE/stereo_scc/results/phase10_final_report.md`
+
+### Net effect
+
+- `THEORY/canonical/canonical.md`: **0 edits** (no promotion this session)
+- `THEORY/canonical/theorem_status.md`: **0 edits** (OP catalog unchanged)
+- Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims)
+- Open problems: unchanged (not silently resolved); OP-0009-Pre partially addressed at implementation level only
+- `CODE/stereo_scc/`: 7 new module files + 6 experiment files + run_all_experiments.py + results/
+
+### Files created
+
+1. `CODE/stereo_scc/__init__.py`
+2. `CODE/stereo_scc/fields.py`
+3. `CODE/stereo_scc/topology.py`
+4. `CODE/stereo_scc/stereo_geometry.py`
+5. `CODE/stereo_scc/energies.py`
+6. `CODE/stereo_scc/kramers.py`
+7. `CODE/stereo_scc/visualization.py`
+8. `CODE/stereo_scc/experiments/__init__.py`
+9. `CODE/stereo_scc/experiments/exp01_persistent_components.py`
+10. `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier.py`
+11. `CODE/stereo_scc/experiments/exp03_backprojection_pullback.py`
+12. `CODE/stereo_scc/experiments/exp04_prior_likelihood_map.py`
+13. `CODE/stereo_scc/experiments/exp05_kramers_markov_chain.py`
+14. `CODE/stereo_scc/run_all_experiments.py`
+15. `CODE/stereo_scc/results/phase10_final_report.md`
+16. `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md` (from W6 D3)
+
+### Next session carry-forward
+
+1. Promote D1–D4, T5 from Canonical Memo v1.1 to `canonical.md` (Cat B candidates)
+2. Register OP-0009-Pre-a (PersComp validated, Cat A) and OP-0009-Pre-b (K-field/single-field unification, OPEN) in `theorem_status.md`
+3. Replace linear-interpolation barrier (exp02) with proper NEB/string method
+4. Formalize P-F-A1 Langevin on F_M(P) to canonicalize T_star
+
+---
+
+## 2026-05-06 (W6 Day 3) — Redirection Mode v3: 5-debt substantive paydown (OP-0009-Pre quotient formalism, P-F framework escalation, NQ-G1-2-ext design, working stockpile audit, W7-W10 calendar)
+
+**Trigger:** Day 3 plan.md v3 "redirection mode" — 12 goals, 22 output files, 15 hard constraints; all debt-paydown in daily-log proposal layer only.
+
+### What was done
+
+**G3.1 — Strategic recalibration + metric policy + OP priority reassessment:**
+- `01_strategic_recalibration_core.md`: 5-debt summary table; OP priority reassessment; W7-W10 shape; 5 anti-patterns (AP1-AP5); Day 3 debt status board.
+- `01a_w4_metric_policy_proposal.md`: Substance:Admin ratio metric; alarm threshold 1:2; W6 retrospective 2:30 ALARM; W7-W10 targets (W8 target 2:1).
+- `01b_op_priority_reassessment_table.md`: HIGH/MEDIUM/LOW/RESOLVED OP table; OP-0009-Pre accelerated; OP-P-F (OP-0014) proposed HIGH; OP dependency graph.
+
+**G3.2 — OP-0009-Pre: $\widetilde{\widetilde\Sigma}^K_M$ unordered K-field formalism (Bronze/Silver/Gold):**
+- `02_op_0009_pre_substantive_start.md`: mission statement; sub-file outline; 6 starting points; W7-W8 phase plan.
+- `02a_unordered_configuration_formalism.md`: $S_K$ action; quotient $\widetilde{\widetilde\Sigma}^K_M = \Sigma^K_M / S_K$; stratification (open stratum dim $K(n-1)$; symmetric strata $D_P$ codim $(|P|-1)(n-1)$); worked example $T^2_4$ n=16 K=2.
+- `02b_reduction_map_pi.md`: $\pi$ continuity; local centroid-ordering sections; fiber size table; functoriality ($\mathcal{E}$, $K_\mathrm{act}$ both factor through $\pi$).
+- `02c_minimization_principle_unordered.md`: $\mathcal{E}$ $S_K$-equivariant (single-slot sums + symmetric repulsion); $\widetilde{\mathcal{E}}$ well-defined; existence + uniqueness sketches on quotient.
+- `02d_ontological_reading.md`: Commitment 1 auto-satisfied at class level ✓; 5-layer ontological table (primitive/class/modeling/derived/cog-sci); CN10 refined chain.
+- `02e_compatibility_check.md`: σ-framework / T-Persist-K / T-L1-F/M / Commitment 16 / closure operator — all $S_K$-invariant or equivariant; no incompatibility found (Cat C sketch).
+
+**G3.3 — P-F framework escalation (OP-0014 proposal HIGH):**
+- `03_pf_framework_escalation_core.md`: 5 implicit P-F usages cataloged; OP-0005 Layer B vacuous without $T_*$; OP-0008 Path B requires P-F; OP-0014 escalation to HIGH proposed; W9 D-by-D outline.
+- `03a_pf_framework_axiom_proposal_v0.md`: P-F-A1..A8 (Langevin on $\Sigma_M$; Markov; Boltzmann $p_*$; Arrhenius; Eyring-Kramers MFPT; K-jump rates + N-1 recovery; $T_*$ calibration; zero-T reduction).
+- `03b_op_0005_layer_b_kramers_pf_dependence.md`: Full Eyring-Kramers $k_{K\to K-1}$ under P-F; $\mathcal{P}$-conditioning; 4 remaining open problems.
+
+**G3.4 — NQ-G1-2-ext production reach design:**
+- `04_nq_g1_2_ext_design.md`: post-flow $\|R_j\|_\infty$ measurement; $T^2_{20}$ n=400, K=4, 960 wq1 configs, 1000 steps; 3 hypothesis branches H-A/B/C; wall-clock ~1-2h.
+- `04a_l1i_extension_script_outline.md`: `exp58_nq_g1_2_ext.py` pseudo-code; `compute_ideal_gaussian` helper; module dependency map.
+- `04b_post_flow_R_j_measurement_protocol.md`: sampling (every 50 steps, 20 snapshots); aggregation (max/avg/final/t_exit); hypothesis determination rule; population-level statistical reporting.
+
+**G3.5-G3.10 — Audits and outlooks:**
+- `05_canonical_md_split_feasibility.md`: no split before W10 D6; interim §0 ToC + anchors at W7 D1 recommended.
+- `06_op_0009_sub_items_audit.md`: all 7 sub-items last-edited + next-step + W7-W10 distribution; OP-0009-Pre SUBSTANTIALLY ADVANCED.
+- `07_working_stockpile_audit.md`: 69 MF files classified — 12 ACTIVE / 30 STAGING / 12 DORMANT / 3 SUPERSEDED.
+- `08_op_0005_k_selection_layer_status.md`: Layer A~40% / B~70% / C~40% / Compat~55%; OP-0014 as shared unblock.
+- `09_sigma_multi_status.md` (optional): BC-1 reach limitation; G3.2 class-level compatibility ✓.
+- `10_w11_w12_v20_outlook.md` (optional): v2.0 candidates; critical path W9→W10→W11-W12.
+
+**G3.12 — W7-W10 28-day calendar:**
+- `11_w7_w10_d_by_d_calendar.md`: W7 D1-D7 through W10 D1-D7; 8 supervised sessions; ~45 projected output files; critical path: W9 OP-0014 → W10 CV-1.7.
+
+### Net effect
+- canonical.md / theorem_status.md / scc/ / working/: **0 edits** (all 15 hard constraints PASS).
+- 22 new daily-log files created in `THEORY/logs/daily/2026-05-06/`.
+- Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims).
+- OP catalog: unchanged (no silent resolution). OP-0014 registration deferred to W9 D1 supervised.
+
+### Files created
+1. `THEORY/logs/daily/2026-05-06/01_strategic_recalibration_core.md`
+2. `THEORY/logs/daily/2026-05-06/01a_w4_metric_policy_proposal.md`
+3. `THEORY/logs/daily/2026-05-06/01b_op_priority_reassessment_table.md`
+4. `THEORY/logs/daily/2026-05-06/02_op_0009_pre_substantive_start.md`
+5. `THEORY/logs/daily/2026-05-06/02a_unordered_configuration_formalism.md`
+6. `THEORY/logs/daily/2026-05-06/02b_reduction_map_pi.md`
+7. `THEORY/logs/daily/2026-05-06/02c_minimization_principle_unordered.md`
+8. `THEORY/logs/daily/2026-05-06/02d_ontological_reading.md`
+9. `THEORY/logs/daily/2026-05-06/02e_compatibility_check.md`
+10. `THEORY/logs/daily/2026-05-06/03_pf_framework_escalation_core.md`
+11. `THEORY/logs/daily/2026-05-06/03a_pf_framework_axiom_proposal_v0.md`
+12. `THEORY/logs/daily/2026-05-06/03b_op_0005_layer_b_kramers_pf_dependence.md`
+13. `THEORY/logs/daily/2026-05-06/04_nq_g1_2_ext_design.md`
+14. `THEORY/logs/daily/2026-05-06/04a_l1i_extension_script_outline.md`
+15. `THEORY/logs/daily/2026-05-06/04b_post_flow_R_j_measurement_protocol.md`
+16. `THEORY/logs/daily/2026-05-06/05_canonical_md_split_feasibility.md`
+17. `THEORY/logs/daily/2026-05-06/06_op_0009_sub_items_audit.md`
+18. `THEORY/logs/daily/2026-05-06/07_working_stockpile_audit.md`
+19. `THEORY/logs/daily/2026-05-06/08_op_0005_k_selection_layer_status.md`
+20. `THEORY/logs/daily/2026-05-06/09_sigma_multi_status.md`
+21. `THEORY/logs/daily/2026-05-06/10_w11_w12_v20_outlook.md`
+22. `THEORY/logs/daily/2026-05-06/11_w7_w10_d_by_d_calendar.md`
+23. `THEORY/logs/daily/2026-05-06/99_summary.md`
+
+### Carry-forward to W7 D1
+- Run `exp58_nq_g1_2_ext.py` (~1-2h); analyze H-A/B/C outcome.
+- Add canonical §0 ToC + anchor tags (~30min).
+- Begin OP-0009-F + OP-0009-C supervised canonical promotions (W7 D3).
+
+---
+
 ## 2026-05-05 (W6 Day 2 EOD) — Gold-target CV-1.6 release packet skeleton drafted (Option B-specific) + user-supervised migration to working/
 
 **Trigger:** plan.md §9 Gold criterion (Option B-specific) post-G2.2 capture. Skeleton drafted in proposal form per plan.md §7 hard-constraint sweep target ("Working/ 직접 수정 0 (autonomous-session)") then user-supervised migrated same-day to `working/CV-1.6_release_packet_skeleton.md` per session-end authorization.
