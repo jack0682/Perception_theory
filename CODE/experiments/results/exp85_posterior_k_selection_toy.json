@@ -1,0 +1,60 @@
+{
+  "experiment": "exp85_posterior_k_selection_toy",
+  "session": "Session Y (W6 D4, 2026-05-06)",
+  "anchor_for": "T-K-Select-OBS (working Cat B candidate, Session S)",
+  "method": "Method B zero-temperature: F_obs(K) = E_SCC(u_K^*) + lambda * ||u_K^*-I||^2 evaluated at prior sector MAP u_K^* = find_formation(sector_K_init)",
+  "canonical_likelihood": "Phi_obs(u;O) = (lambda_photo/2)*sum_x(u(x)-f(x))^2; LM1-LM3 verified in k_select_obs_posterior.md \u00a72.4",
+  "note": "NOT a proof of T-K-Select-OBS.",
+  "grid_n": 12,
+  "pers_thresh": 0.28,
+  "lambda_photo": 3.0,
+  "K1_act_prior": 1,
+  "K2_act_prior": 2,
+  "E_scc_K1_prior": 4.337792018318826,
+  "E_scc_K2_prior": 3.563654314241119,
+  "results": [
+    {
+      "scenario": "obs_2blobs",
+      "K1_act": 1,
+      "K2_act": 2,
+      "E_scc_K1": 4.337792018318823,
+      "E_scc_K2": 3.5636543142411186,
+      "obs_loss_K1": 39.936050209969395,
+      "obs_loss_K2": 10.230836134935007,
+      "F_obs_K1": 124.145942648227,
+      "F_obs_K2": 34.25616271904614,
+      "delta_F": 89.88977992918086,
+      "lambda_photo": 3.0,
+      "passed": true,
+      "note": "Two-blob obs: F_obs(K=2) < F_obs(K=1) required (obs matches K=2 MAP)"
+    },
+    {
+      "scenario": "obs_1blob",
+      "K1_act": 1,
+      "K2_act": 2,
+      "E_scc_K1": 4.337792018318823,
+      "E_scc_K2": 3.5636543142411186,
+      "obs_loss_K1": 6.668562410688358,
+      "obs_loss_K2": 42.71774032489388,
+      "F_obs_K1": 24.343479250383893,
+      "F_obs_K2": 131.71687528892275,
+      "delta_F": 107.37339603853886,
+      "lambda_photo": 3.0,
+      "passed": true,
+      "note": "One-blob obs: F_obs(K=1) < F_obs(K=2) required (obs matches K=1 MAP)"
+    },
+    {
+      "scenario": "lambda_to_zero",
+      "E_scc_K1": 4.337792018318823,
+      "E_scc_K2": 3.5636543142411186,
+      "prior_preferred": 2,
+      "F_obs_K1_small": 4.377728068528793,
+      "F_obs_K2_small": 3.5738851503760536,
+      "small_lambda_preferred": 2,
+      "lambda_small": 0.001,
+      "passed": true,
+      "note": "lambda\u21920: posterior ordering matches prior E_SCC ordering"
+    }
+  ],
+  "all_passed": true
+}

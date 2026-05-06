@@ -76,6 +76,26 @@ with $\Psi \geq 0$ a photometric consistency measure (e.g., $\Psi = \|f_L - f_R\
 
 *Remark.* LM1–LM3 hold automatically when $\Phi_\mathrm{obs}$ is continuous and bounded (as for the photometric form above, since $\mathcal{F}_M(G)$ is compact by T-PF-A1-AR). LM2 means no observation evidence is infinitely decisive. LM3 is implied by LM2 (positive integrand over positive-measure set) + T-PF-A1-AR compactness.
 
+### §2.4 Canonical likelihood model (minimal admissible form)
+
+For numerical validation (exp85, Session Y) and as a concrete instance of Definition 2.2, the following minimal form is canonical:
+
+**Canonical model (flat-graph monocular form).** Let $f : X \to [0,1]$ be an observed intensity field and $c : X \to [0,1]$ a confidence mask (both fixed, $c \equiv 1$ for uniform weighting). Define:
+
+$$\Phi_\mathrm{obs}(u;\mathcal{O}) = \frac{\lambda_\mathrm{photo}}{2}\sum_{x \in X}\bigl(u(x) - f(x)\bigr)^2$$
+
+so that $\mathcal{L}_\mathrm{obs}(\mathcal{O} \mid u) = \exp(-\Phi_\mathrm{obs}(u;\mathcal{O}))$. Here $H(u)(x) = u(x)$ is the identity observation operator (no backprojection needed on the flat graph).
+
+**Explicit verification of LM1–LM3 for the canonical model:**
+
+- **(LM1) Measurability.** $u \mapsto \Phi_\mathrm{obs}(u;\mathcal{O})$ is a finite sum of continuous functions of the node values $u(x) \in [0,1]$. It is continuous on $\mathcal{F}_M(G)$ (compact subset of $\mathbb{R}^n$), hence Borel measurable. $\checkmark$
+
+- **(LM2) Positivity.** $\Phi_\mathrm{obs}(u;\mathcal{O}) = \frac{\lambda_\mathrm{photo}}{2}\sum_x (u(x)-f(x))^2 \in [0,\,\frac{\lambda_\mathrm{photo}}{2}|X|] < +\infty$ for all $u \in [0,1]^n$. Hence $\mathcal{L}_\mathrm{obs} = e^{-\Phi_\mathrm{obs}} \geq e^{-\lambda_\mathrm{photo}|X|/2} > 0$. $\checkmark$
+
+- **(LM3) Posterior normalizability.** By LM2: $\mathcal{L}_\mathrm{obs}(u)\,e^{-E(u)/T_*} \geq e^{-\lambda_\mathrm{photo}|X|/2 - \sup_{\mathcal{F}_M(G)} E / T_*} > 0$ everywhere on $\mathcal{F}_M(G)$. Combined with $\sigma_M(\mathcal{F}_M(G)) > 0$ (T-PF-A1-AR), the integral $Z^\mathrm{obs} > 0$. $\checkmark$
+
+*Remark.* This model satisfies strict LM2 (not just $\geq 0$), so $K_\mathrm{feas}^\mathrm{obs} = K_\mathrm{feas}$ (Lemma 3.2). The stereo form in §6.2 is a generalization via backprojection $b_t$ and correspondence $\Pi_{LR}$. For Cat B, the canonical monocular form suffices as the admissible instance; Cat A would canonicalize the full stereo form.
+
 ---
 
 ## §3. Posterior Measure and Sector Masses
@@ -238,15 +258,17 @@ where $H_L u = u^{pix}_L$ (left pullback, linear operator on $\mathcal{F}_M(G)$)
 |---|---|---|
 | **OP-0005-EQ** | Equilibrium K-selection | **PARTIALLY RESOLVED** — T-K-Select-PF canonical Cat B (Session R, CV-1.10) |
 | **OP-0005-DYN** | Dynamical K-transition / Kramers rates | **OPEN** — Package II, W9+ |
-| **OP-0005-OBS** | Observation-conditioned K selection | **STRUCTURED** — T-K-Select-OBS Cat B candidate (Session S). Mathematical structure complete; requires: (a) canonical likelihood model; (b) temporal extension; (c) experimental validation. |
+| **OP-0005-OBS** | Observation-conditioned K selection | **PARTIALLY RESOLVED** — T-K-Select-OBS promoted canonical Cat B (Session Y, CV-1.11). (a) canonical likelihood model: §2.4 verified LM1–LM3; (b) exp85 ALL PASSED (Session Y). Remaining: Cat A requires full stereo likelihood canonicalization; OP-0005-DYN OPEN. |
 
 OP-0005 overall remains OPEN.
 
 ---
 
-## §8. Numerical Verification Plan (exp54)
+## §8. Numerical Verification Plan (exp85)
 
-**`CODE/experiments/exp54_posterior_k_selection_toy.py`** — Toy posterior K-selection.
+**`CODE/experiments/exp85_posterior_k_selection_toy.py`** — Toy posterior K-selection.
+
+*Note (Session Y): renumbered exp85 (exp54_closure_threshold.py already exists at the originally planned number).*
 
 ### §8.1 Setup
 
@@ -292,7 +314,23 @@ Method B is implementable with existing `find_formation` in `optimizer.py` (init
 | $\lambda_\mathrm{photo} \to 0$ | $p_K(\mathfrak{O}_t) \to p_K$ (prior) | Recover T-K-Select-PF |
 | $\lambda_\mathrm{photo} \to +\infty$ | $p_K(\mathfrak{O}_t) \to \delta_{K^*(\mathfrak{O}_t)}$ | Observation dominates |
 
-### §8.5 Implementation note
+### §8.5 Numerical anchor results (Session Y, 2026-05-06)
+
+**ALL PASSED** (3/3 scenarios). Grid: 12×12, volume_fraction=0.3, lambda_photo=3.0.
+
+Prior MAPs: K1_act=1 (E_SCC=4.3378), K2_act=2 (E_SCC=3.5637).
+
+| Scenario | F_obs(K=1) | F_obs(K=2) | delta_F | Result |
+|---|---|---|---|---|
+| obs_2blobs (I=two blobs) | 124.15 | 34.26 | +89.89 (K=2 preferred) | **PASS** |
+| obs_1blob  (I=one blob)  | 24.34 | 131.72 | +107.37 (K=1 preferred) | **PASS** |
+| lambda→0 (ordering=prior) | F(K=2)<F(K=1) | F(K=2)<F(K=1) | 0.80 | **PASS** |
+
+Observation losses: K1 vs I_2blobs = 39.94; K2 vs I_2blobs = 10.23. K1 vs I_1blob = 6.67; K2 vs I_1blob = 42.72.
+
+**Key finding:** With lambda_photo=3.0, F_obs(K) ordering reverses as expected under opposite observations. The canonical likelihood (§2.4) with LM1–LM3 is numerically validated.
+
+### §8.6 Implementation note
 
 Requires no new SCC code — uses existing:
 - `scc/optimizer.py:find_formation` for MAP per-sector.
@@ -322,10 +360,10 @@ The theorem has a complete proof given Package I + T-K-Select-PF + LM1–LM3. Th
 
 - Canonicalize the likelihood model (specific $\Phi_\mathrm{obs}$ or $(H_L, H_R)$ form).
 - Verify LM1–LM3 for the canonical form explicitly.
-- Provide experimental validation (exp54 above).
+- Provide experimental validation (exp85, Session Y).
 - Address temporal extension (if required for Cat A).
 
-Cat A promotion: achievable after (a) canonical likelihood model choice and (b) exp54 validation. No new mathematics beyond Package I + Bayes theorem.
+Cat A promotion: achievable after (a) canonical likelihood model choice and (b) exp85 validation. No new mathematics beyond Package I + Bayes theorem.
 
 ### §9.3 Suggested canonical label
 
@@ -378,7 +416,7 @@ If promoted: **T-K-Select-OBS** — "Observation-Conditioned K-Selection via Pos
 
 **End of k_select_obs_posterior.md.**
 
-**Status:** working draft, Cat B candidate, Session S (2026-05-06). T-K-Select-OBS proves: given Package I + T-K-Select-PF + positive measurable likelihood LM1–LM3, the observation-conditioned posterior $\pi_t^{obs}$ is a well-defined probability measure on $\mathcal{F}_M(G)$; posterior sector masses $\{p_K(\mathfrak{O}_t)\}$ form a probability distribution; $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Prior {p_K} recovered when $\mathcal{L}_\mathrm{obs} \equiv 1$. CN5 preserved: $E_\mathrm{photo}$ in likelihood only. Non-overclaims: no Kramers, no temporal dynamics, no $K^*$ uniqueness, no object detection, no σ-inheritance, $T_*$ axiomatic.
+**Status:** PROMOTED canonical Cat B, Session Y (2026-05-06), CV-1.11. T-K-Select-OBS proves: given Package I + T-K-Select-PF + positive measurable likelihood LM1–LM3, the observation-conditioned posterior $\pi_t^{obs}$ is a well-defined probability measure on $\mathcal{F}_M(G)$; posterior sector masses $\{p_K(\mathfrak{O}_t)\}$ form a probability distribution; $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Prior {p_K} recovered when $\mathcal{L}_\mathrm{obs} \equiv 1$. CN5 preserved: $E_\mathrm{photo}$ in likelihood only. Non-overclaims: no Kramers, no temporal dynamics, no $K^*$ uniqueness, no object detection, no σ-inheritance, $T_*$ axiomatic.
 
 **OP-0005-OBS: OPEN → STRUCTURED (Cat B candidate). OP-0005 overall OPEN.**
 

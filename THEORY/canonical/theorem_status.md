@@ -9,7 +9,7 @@ last_updated: 2026-05-06
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.10; current = **CV-1.10**) then status (active, challenged, deprecated). *(Updated 2026-05-06 after T-OP6-B Cat A promotion, T-P-F-ε0/T-P-F-ε0-K canonical additions, OP-0006 resolution, CV-1.8 P-F-A1 Package I (T-PF-A1-AR/SDE/GI/PE), CV-1.9 Session P T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, and CV-1.10 Session R T-K-Select-PF Cat B.)*
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.11; current = **CV-1.11**) then status (active, challenged, deprecated). *(Updated 2026-05-06 after T-OP6-B Cat A promotion, T-P-F-ε0/T-P-F-ε0-K canonical additions, OP-0006 resolution, CV-1.8 P-F-A1 Package I (T-PF-A1-AR/SDE/GI/PE), CV-1.9 Session P T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, CV-1.10 Session R T-K-Select-PF Cat B, and CV-1.11 Session Y T-K-Select-OBS Cat B.)*
 
 ---
 
@@ -54,6 +54,8 @@ last_updated: 2026-05-06
 
 *CV-1.10 count update (Session R, 2026-05-06): T-K-Select-PF Cat B new (+1B). Running total: **54A/13B/5C/5R = 77 claims, ~70% fully proved.** OP-0005-EQ partially resolved.*
 
+*CV-1.11 count update (Session Y, 2026-05-06): T-K-Select-OBS Cat B new (+1B). Running total: **54A/14B/5C/5R = 78 claims, ~69% fully proved.** OP-0005-OBS partially resolved.*
+
 *CV-1.8 candidates registered (Session M, 2026-05-06): T-PF-A1-Affine-Reduction, T-PF-A1-Finite-Reflected-SDE, T-PF-A1-Gibbs-Invariance, T-PF-A1-Poincare-Ergodicity. No count change — pending canonical promotion (Session O).*
 
 *CV-1.8 proof review complete (Session N, 2026-05-06): All four Package I theorems reviewed. Categories after review: T-PF-A1-AR (Cat A — elementary polytope geometry); T-PF-A1-SDE (Cat A — Lions-Sznitman Thm 1 convex case + Tanaka uniqueness, no remaining gaps); T-PF-A1-GI (Cat B → Cat A path: zero-current derivation complete, uniqueness needs Doeblin/Stroock-Varadhan citation); T-PF-A1-PE (Cat B → Cat A path: Payne-Weinberger + explicit Holley-Stroock computation, L²→TV formalization needed). Explicit lower bound: λ_1(π_{T_*}) ≥ (π²/n)·exp(−osc(Ẽ)/T_*) > 0; C_P = n·exp(osc(Ẽ)/T_*)/π². **Promoted to canonical in Session O (CV-1.8).***
@@ -89,17 +91,15 @@ last_updated: 2026-05-06
 
 ---
 
-### Session S/T Working Candidates — OP-0005-OBS Observation-Conditioned K-Selection (W6 D4, 2026-05-06, Sessions S–T)
+### CV-1.11 Canonical Addition — Observation-Conditioned K-Selection (W6 D4, 2026-05-06, Session Y)
 
-*T-K-Select-OBS is a new Cat B candidate using P-F-A1 Package I + T-K-Select-PF + explicit likelihood model LM1–LM3. NOT yet canonical — working-file only. No count change to canonical total (77 claims). Source: `THEORY/working/MF/k_select_obs_posterior.md`.*
+*T-K-Select-OBS promoted from Sessions S–T working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file source: `THEORY/working/MF/k_select_obs_posterior.md` (canonical likelihood §2.4 + exp85 ALL PASSED added Session Y). Count: +1B → 54A/14B/5C/5R = 78 claims. OP-0005-OBS: STRUCTURED → PARTIALLY RESOLVED.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
-| **T-K-Select-OBS** | Observation-Conditioned K-Selection via Posterior Sector Mass | **working Cat B candidate** (Session S, 2026-05-06) | **B candidate** | Posterior well-definedness: Bayes on Gibbs prior (Package I) with positive measurable likelihood (LM1–LM3). Posterior sector masses $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$ form probability distribution. $K^*(\mathfrak{O}_t) = \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Prior {p_K} recovered when $\mathcal{L}_\mathrm{obs} \equiv 1$. | Addresses OP-0005-OBS only. Does NOT prove Kramers rates (OP-0005-DYN). Does NOT prove temporal K-dynamics. Does NOT prove K* uniqueness. Does NOT resolve OP-0008 (σ-inheritance). $E_\mathrm{photo}$ in likelihood only (CN5). Cat A path: canonicalize likelihood model; verify LM1–LM3; exp54 validation. |
+| **T-K-Select-OBS** | Observation-Conditioned K-Selection via Posterior Sector Mass | **canonical Cat B** (Session Y, 2026-05-06, CV-1.11) | **B** | Posterior well-definedness: Bayes on Gibbs prior (Package I) with LM1–LM3 likelihood. $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$ forms probability distribution. $K^*(\mathfrak{O}_t) = \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Prior recovery when $\mathcal{L}_\mathrm{obs}\equiv 1$. Canonical likelihood model §2.4 verified (LM1–LM3). exp85 ALL PASSED (3/3 scenarios, 12×12 grid). | Addresses OP-0005-OBS only. Does NOT prove Kramers rates (OP-0005-DYN). No temporal K-dynamics. No $K^*$ uniqueness. No OP-0008. $\Phi_\mathrm{obs}$ in likelihood only (CN5). $T_*$ axiomatic (OP-0021). Cat A path: canonicalize full stereo likelihood $(H_L,H_R)$; temporal extension. |
 
-*Session S working note (2026-05-06): T-K-Select-OBS defines observation-conditioned K-selection as Bayesian posterior over Gibbs prior. Mathematical structure complete given Package I + T-K-Select-PF + LM1–LM3. OP-0005-OBS status: OPEN → STRUCTURED (Cat B candidate). OP-0005 overall remains OPEN. CN5 preserved: $E_\mathrm{photo}$ in likelihood only. Stereo bridge: connects to D-ST-5 backprojection $b_t$ and `stereo_observation_framework.md` §4 prior/likelihood separation. exp54 plan written (§8 of working file). Canonical count unchanged at 77 pending promotion review.*
-
-*Session T review note (2026-05-06): Cat B candidate status confirmed. §3.5 added: $K_\mathrm{feas}^{obs}(\mathfrak{O}_t) = K_\mathrm{feas}$ under LM2 (Lemma 3.2). Extension to LM2' (partially nonneg likelihood; $K_\mathrm{feas}^{obs} \subseteq K_\mathrm{feas}$) noted as further open problem. No overclaims found. Residue search clean. pytest 215+1xfailed. Canonical count unchanged at 77.*
+*Session S working note (2026-05-06): T-K-Select-OBS first defined. Mathematical structure complete given Package I + T-K-Select-PF + LM1–LM3. OP-0005-OBS: OPEN → STRUCTURED. Session T (2026-05-06): Cat B confirmed; $K_\mathrm{feas}^\mathrm{obs}=K_\mathrm{feas}$ under LM2 (Lemma 3.2). Session Y (2026-05-06): canonical likelihood §2.4 added (LM1–LM3 verified explicitly); exp85 ALL PASSED (obs_2blobs δF=+89.9, obs_1blob δF=+107.4, λ→0 δF=+0.80); promoted canonical Cat B. OP-0005-OBS: STRUCTURED → PARTIALLY RESOLVED.*
 
 ---
 
@@ -678,7 +678,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 |---|---|---|---|
 | **OP-0005-EQ** | Equilibrium K-selection | **PARTIALLY RESOLVED** — T-K-Select-PF **canonical Cat B** (Session R, CV-1.10). P-F flag on Z_K lifted by Package I (CV-1.9). {p_K = π_{T_*}(B_K)} is the stationary K-distribution. K_feas defined. Body in `canonical.md §13 Category B`. | Cat A path: explicit σ_M-null in T-PF-A1-AR coordinates + K_feas per-instance characterization + K_act fixed to D-ST-3. |
 | **OP-0005-DYN** | Dynamical K-transition / Kramers rates | **OPEN** | Package II (Eyring-Kramers, H5 + OP-0021). Not before W9+. |
-| **OP-0005-OBS** | Observation-conditioned K selection | **STRUCTURED** — T-K-Select-OBS working Cat B candidate (Session S, 2026-05-06). Posterior sector masses $p_K(\mathfrak{O}_t) = \pi_t^{obs}(\mathcal{B}_K)$ defined. $K^*(\mathfrak{O}_t) = \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Working file: `THEORY/working/MF/k_select_obs_posterior.md`. | Cat B conditions: canonical likelihood model (LM1–LM3); exp54 validation. OP-0005 overall OPEN. |
+| **OP-0005-OBS** | Observation-conditioned K selection | **PARTIALLY RESOLVED** — T-K-Select-OBS **canonical Cat B** (Session Y, 2026-05-06, CV-1.11). Posterior sector masses $p_K(\mathfrak{O}_t) = Z_K^\mathrm{obs}/Z^\mathrm{obs}$ well-defined. $K^*(\mathfrak{O}_t) = \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$. Canonical likelihood §2.4 verified (LM1–LM3). exp85 ALL PASSED. Body in `canonical.md §13 Category B`. | Cat A path: full stereo likelihood canonicalization; temporal extension. OP-0005 overall OPEN (OP-0005-DYN still OPEN). |
 
 *OP-0005 overall remains OPEN until all three subproblems are addressed.*
 

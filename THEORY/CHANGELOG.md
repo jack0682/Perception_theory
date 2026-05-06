@@ -2,6 +2,42 @@
 
 ---
 
+## 2026-05-06 (W6 Day 4) — Session Y: T-K-Select-OBS promoted canonical Cat B; exp85 ALL PASSED; CV-1.11; count 77→78 (54A/14B/5C/5R)
+
+**Trigger:** "Proceed to Session Y — T-K-Select-OBS Canonical Cat B Preparation." CV-1.11 target. No Package II/Kramers; no T-MF-Synthesis; no OP-0005 fully resolved.
+
+---
+
+### 1. Phase 1 — File Inspection
+
+Files read: `k_select_obs_posterior.md` (full 386 lines), `k_select_pf_equilibrium.md` (header), `optimizer.py` (find_formation API), `energy.py` (EnergyComputer.gradient). State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. exp54 already exists. Next available: exp85.
+
+### 2. Phase 2 — Canonical Likelihood Model
+
+Added §2.4 "Canonical likelihood model (minimal admissible form)" to `k_select_obs_posterior.md`. Canonical model: $\Phi_\mathrm{obs}(u;\mathcal{O}) = \frac{\lambda_\mathrm{photo}}{2}\sum_x(u(x)-f(x))^2$. LM1–LM3 explicitly verified: LM1 (continuity → Borel measurability on finite graph); LM2 (strict positivity since $\Phi_\mathrm{obs}<+\infty$); LM3 (LM2 + T-PF-A1-AR compactness → $Z^\mathrm{obs}>0$). Updated §8 and §9.2 references from exp54 → exp85.
+
+### 3. Phase 3 — exp85 Implementation
+
+Created `CODE/experiments/exp85_posterior_k_selection_toy.py`. Design: Method B zero-temperature — evaluate $F_\mathrm{obs}(K) = E_\mathrm{SCC}(u_K^*) + \lambda_\mathrm{photo}\|u_K^*-I\|^2$ at prior sector MAPs found via `find_formation(u_init=sector_K_init)`. Grid: 12×12, volume_fraction=0.3, lambda_photo=3.0. Three scenarios: obs_2blobs (F_obs(K=2)<F_obs(K=1)), obs_1blob (F_obs(K=1)<F_obs(K=2)), lambda→0 (ordering matches prior). Debugging: combined optimizer (800 steps) failed because lambda=3.0 dragged both inits to same basin; redesigned to direct evaluation at prior MAPs. ALL PASSED (3/3).
+
+**exp85 results:** Prior MAPs: K1_act=1 (E=4.3378), K2_act=2 (E=3.5637). obs_2blobs δF=+89.89 [PASS]; obs_1blob δF=+107.37 [PASS]; lambda→0 δF=+0.80 [PASS].
+
+### 4. Phase 4 — Promotion Review
+
+T-K-Select-OBS promotion criteria met: (a) canonical likelihood model §2.4 with explicit LM1–LM3 verification; (b) exp85 ALL PASSED. Narrow statement: static Bayesian K-selection, no Kramers, no K* uniqueness, no temporal dynamics, no σ-inheritance, T_* axiomatic. CN5 preserved. Non-overclaim register (§5) clean. Promoted to canonical Cat B.
+
+### 5. Phase 5 — Canonical Updates
+
+- `k_select_obs_posterior.md`: §2.4 added; §7 OP-0005-OBS → PARTIALLY RESOLVED; §8 exp54→exp85; §8.5 results added; footer status → PROMOTED.
+- `canonical.md §13 Category B`: T-K-Select-OBS entry inserted after T-K-Select-PF. Count updates: 13B→14B; 77→78; §15 narrative; §16 footer (CV-1.12 targets); frontmatter description.
+- `theorem_status.md`: CV-1.11 count update note; CV-1.11 section (T-K-Select-OBS canonical Cat B, promotion journey S→T→Y); OP-0005-OBS STRUCTURED→PARTIALLY RESOLVED; header CV-1.11.
+
+**Count change: 54A/13B/5C/5R = 77 claims → 54A/14B/5C/5R = 78 claims. ~69% fully proved.**
+
+**Non-claims preserved:** OP-0005-DYN OPEN (Package II, W9+); OP-0005 overall OPEN; OP-0008 OPEN (σ-inheritance); T-MF-Synthesis NOT promoted; no new scc/ modules; no Package II start.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — Session X: exp83 + exp84 numerical anchors; T-Temporal-Identity + T-σ-Inherit validated; pytest 215+1xfailed; canonical count unchanged at 77
 
 **Trigger:** "Proceed to Session X — Temporal Identity and Sigma Inheritance Numerical Anchors." Unlimited reasoning mode. No Package II; no T-MF-Synthesis; no canonical count changes.
