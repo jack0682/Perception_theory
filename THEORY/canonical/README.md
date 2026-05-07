@@ -4,9 +4,10 @@
 
 ## Contents
 
-- **`canonical.md`** — Authoritative specification. Current release is **CV-1.5.2 (2026-05-02)** with W6 D1 EOD T-L1-M supervised addition (2026-05-04). Counts: **47 Cat A** (46 from CV-1.5.2 release + 1 post-supervision T-L1-M Soft-Count Corollary) + 5 Cat B + 5 Cat C theorems (**62 claims**, 75% fully proved). Updated per merge, not on a fixed cadence. *(T-L1-M was promoted as a special-case supervised promotion same-day after external L-M-K-style audit PASS; CHANGELOG W6 D1 EOD second addendum.)*
-- **`theorem_status.md`** — Theorem index (proved / conditional / open / retracted). Must stay consistent with `canonical.md`. Open Problems table is now synced to `theorem_status.md` (Open Problems Catalog) IDs as of the 2026-05-04 audit pass.
-- **`theorem_status.md` (Open Problems Catalog)** — Active OP registry (OP-0001 through OP-0009, plus medium-priority OP-0010..OP-0013 and low-priority OP-0020..OP-0022). The authoritative OP-ID source for the project.
+- **`DECLARATION.md`** — **(DECL-1.0, 2026-05-07) 먼저 읽기.** 이론 중심축 선언문. "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" 중심 정리 T8, 6개 인식론적 질문(Q1~Q6), 이론의 범위와 비-주장 명시. 모든 수학 이전에 읽어야 할 2분 분량 문서.
+- **`canonical.md`** — Authoritative specification. Current release is **CV-1.11 (2026-05-07)**. Counts: **54 Cat A / 14 Cat B / 5 Cat C / 5 Retracted** (**78 claims**, ~69% fully proved). Includes stereo extension (CV-1.6), P-F foundation (CV-1.7), P-F-A1 Package I fully Cat A (CV-1.9), K-selection equilibrium Cat B (CV-1.10), T-Temporal-Identity all-Cat-B + NQ closures (CV-1.11). Updated per merge, not on a fixed cadence.
+- **`theorem_status.md`** — Theorem index (proved / conditional / open / retracted) + Open Problems Catalog (OP-0001..OP-0022). Active high-priority OPs: OP-0005, OP-0008, OP-0009; OP-0006 RESOLVED; OP-0011 PARTIALLY RESOLVED (Lemma 10); OP-0008-DIST CLOSED Cat B (Lemma 16).
+- **`hypothesis_tree.md`** — Hypothesis dependency tree (HT-3.0, 2026-05-07). 블록이 수학적 주제 → 인식론적 질문(Q1~Q6)으로 재편. Phase 1 타겟: H-SINK. Authoritative source for hypothesis dependency structure and modification governance.
 - **`figures/`** — Figure source scripts (Python). Rendered PNG/SVG live in the blog repo.
 
 ## Pipeline (Promotion Barrier)

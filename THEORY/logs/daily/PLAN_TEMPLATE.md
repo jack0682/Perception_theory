@@ -20,6 +20,7 @@
 
 - `THEORY/canonical/canonical.md` §X.Y — <관련 섹션>
 - `THEORY/canonical/theorem_status.md` — <해당 OP-ID 또는 P-ID>
+- `THEORY/canonical/hypothesis_tree.md` — <오늘 타겟하는 HT-node (예: H-SINK, H-T*)>
 - `THEORY/working/<file>.md` — <있다면>
 - 어제 로그: `THEORY/logs/daily/YYYY-MM-DD/<files>.md` — <해당 항목>
 - 외부 자료: <필요시. PDF, 논문, 다른 프로젝트>

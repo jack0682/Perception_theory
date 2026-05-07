@@ -9,6 +9,8 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 
 # Canonical Specification of Soft Cognitive Cohesion (CV-1.11)
 
+> **먼저 읽기:** 이 문서의 수학적 내용에 앞서 [`DECLARATION.md`](DECLARATION.md) (DECL-1.0)를 읽을 것. 이론의 중심축("어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"), Primitive u_t, 중심 정리 T8, 6개 인식론적 질문(Q1~Q6)을 2분 안에 파악할 수 있다.
+
 > **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → CV-1.5.2 (05-02) → CV-1.6 (05-06) → CV-1.7 (05-06) → CV-1.8 (05-06) → CV-1.9 (05-06) → CV-1.10 (05-06) → **CV-1.11 (05-06, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
 >
 > *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.11**.*

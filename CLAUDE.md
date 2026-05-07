@@ -5,9 +5,11 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.10, 2026-05-06; W6 D1 EOD T-L1-M supervised addition 2026-05-04; stereo extension + Session E additions 2026-05-06; Session G: T-ST-5b Cat B formally signed off; Session I: T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B promoted, CV-1.7; Session K: T-OP6-B promoted Cat A; Sessions M–N–O: T-PF-A1-AR + T-PF-A1-SDE Cat A, T-PF-A1-GI + T-PF-A1-PE Cat B, CV-1.8; Session P: T-PF-A1-GI + T-PF-A1-PE Cat A, CV-1.9; Session R: T-K-Select-PF Cat B, CV-1.10). Single source of truth for the theory. Counts: **54A / 13B / 5C / 5R = 77 claims** (including CV-1.6 stereo extension; T-OP6-B Cat A [Session K]; CV-1.7 P-F foundation: T-P-F-ε0 Cat A, T-P-F-ε0-K Cat B; CV-1.8 P-F-A1 Package I: T-PF-A1-AR/SDE Cat A, T-PF-A1-GI/PE Cat B; **CV-1.9 P-F-A1 Package I fully Cat A: T-PF-A1-GI + T-PF-A1-PE Cat A** [Session P]; **CV-1.10 T-K-Select-PF Cat B: equilibrium K-selection OP-0005-EQ** [Session R; P-F-A1 Package II OPEN; OP-0021 T_* registration]); ~70% fully proved.
-2. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog (merged 2026-05-04 audit; OP-0001/0002/0003 resolved in W4; OP-0006 RESOLVED Session K 2026-05-06; active high-priority OPs are OP-0005, OP-0008, OP-0009).
-3. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
+1. **`THEORY/canonical/DECLARATION.md`** — **(DECL-1.0, 2026-05-07) 먼저 읽기.** 이론의 중심축: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive: u_t. 중심 정리: T8 (β/α > 4λ₂/|W''(c)|). 6개 인식론적 질문(Q1~Q6). 2분 분량.
+2. **`THEORY/canonical/canonical.md`** — authoritative specification (CV-1.11, 2026-05-06). Single source of truth for the theory. Counts: **54A / 14B / 5C / 5R = 78 claims** (~69% fully proved). Promotion target: CV-1.12 (T-Temporal-Identity Cat B → Cat A via H-SINK).
+3. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021.
+4. **`THEORY/canonical/hypothesis_tree.md`** — **(HT-3.0, 2026-05-07)** 의존성 구조 권위 소스. 블록이 Q1~Q6 인식론적 질문 기준으로 재편됨. Phase 1 타겟: H-SINK (Q5 Cat A). 수정 규칙 후미.
+5. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
 For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).
 

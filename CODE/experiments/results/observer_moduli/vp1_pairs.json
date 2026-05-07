@@ -1,0 +1,287 @@
+{
+  "part_A_counterexamples": [],
+  "part_B_counterexamples": [
+    {
+      "config_A": "cl_dominant",
+      "config_B": "balanced",
+      "lambda_A": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "lambda_B": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "diag_dist": 0.1401,
+      "topo_dist": 3.012,
+      "K_core_A": 2,
+      "K_core_B": 1,
+      "is_counterexample": true,
+      "diag_A": {
+        "Bind": 0.8774,
+        "Sep": 0.849,
+        "Inside": 0.8469,
+        "Persist": 1.0
+      },
+      "diag_B": {
+        "Bind": 0.8557,
+        "Sep": 0.9216,
+        "Inside": 0.9647,
+        "Persist": 1.0
+      },
+      "topo_A": {
+        "l_max": 0.9097,
+        "l_second": 0.0251,
+        "l_third": 0.0118,
+        "artic": 0.9724,
+        "K_core": 2,
+        "K_mid": 1,
+        "K_low": 1
+      },
+      "topo_B": {
+        "l_max": 1.0,
+        "l_second": 0.0353,
+        "l_third": 0.0138,
+        "artic": 0.9647,
+        "K_core": 1,
+        "K_mid": 1,
+        "K_low": 1
+      }
+    },
+    {
+      "config_A": "cl_dominant",
+      "config_B": "balanced_cl",
+      "lambda_A": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "lambda_B": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "diag_dist": 0.1162,
+      "topo_dist": 3.013,
+      "K_core_A": 2,
+      "K_core_B": 1,
+      "is_counterexample": true,
+      "diag_A": {
+        "Bind": 0.8774,
+        "Sep": 0.849,
+        "Inside": 0.8469,
+        "Persist": 1.0
+      },
+      "diag_B": {
+        "Bind": 0.8617,
+        "Sep": 0.907,
+        "Inside": 0.9463,
+        "Persist": 1.0
+      },
+      "topo_A": {
+        "l_max": 0.9097,
+        "l_second": 0.0251,
+        "l_third": 0.0118,
+        "artic": 0.9724,
+        "K_core": 2,
+        "K_mid": 1,
+        "K_low": 1
+      },
+      "topo_B": {
+        "l_max": 0.9853,
+        "l_second": 0.0328,
+        "l_third": 0.0064,
+        "artic": 0.9667,
+        "K_core": 1,
+        "K_mid": 1,
+        "K_low": 1
+      }
+    },
+    {
+      "config_A": "cl_dominant",
+      "config_B": "cl_sep",
+      "lambda_A": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "lambda_B": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "diag_dist": 0.0714,
+      "topo_dist": 3.028,
+      "K_core_A": 2,
+      "K_core_B": 1,
+      "is_counterexample": true,
+      "diag_A": {
+        "Bind": 0.8774,
+        "Sep": 0.849,
+        "Inside": 0.8469,
+        "Persist": 1.0
+      },
+      "diag_B": {
+        "Bind": 0.8657,
+        "Sep": 0.906,
+        "Inside": 0.8883,
+        "Persist": 1.0
+      },
+      "topo_A": {
+        "l_max": 0.9097,
+        "l_second": 0.0251,
+        "l_third": 0.0118,
+        "artic": 0.9724,
+        "K_core": 2,
+        "K_mid": 1,
+        "K_low": 1
+      },
+      "topo_B": {
+        "l_max": 0.9508,
+        "l_second": 0.0424,
+        "l_third": 0.0226,
+        "artic": 0.9554,
+        "K_core": 1,
+        "K_mid": 1,
+        "K_low": 1
+      }
+    }
+  ],
+  "part_C_counterexamples": [],
+  "part_D_top_near_ces": [
+    {
+      "lambda_A": [
+        0.52,
+        0.1,
+        0.38
+      ],
+      "lambda_B": [
+        0.66,
+        0.1,
+        0.24
+      ],
+      "diag_dist": 0.1216,
+      "K_core_A": 1,
+      "K_core_B": 0,
+      "K_core_diff": 1,
+      "l_second_A": 0.0087,
+      "l_second_B": 0.0116,
+      "topo_dist": 3.003,
+      "diag_A": [
+        0.8857,
+        0.8148,
+        0.856,
+        1.0
+      ],
+      "diag_B": [
+        0.9035,
+        0.7132,
+        0.7916,
+        1.0
+      ],
+      "is_counterexample": true
+    },
+    {
+      "lambda_A": [
+        0.66,
+        0.1,
+        0.24
+      ],
+      "lambda_B": [
+        0.66,
+        0.24,
+        0.1
+      ],
+      "diag_dist": 0.1763,
+      "K_core_A": 0,
+      "K_core_B": 1,
+      "K_core_diff": 1,
+      "l_second_A": 0.0116,
+      "l_second_B": 0.0362,
+      "topo_dist": 3.025,
+      "diag_A": [
+        0.9035,
+        0.7132,
+        0.7916,
+        1.0
+      ],
+      "diag_B": [
+        0.8754,
+        0.8836,
+        0.8271,
+        1.0
+      ],
+      "is_counterexample": false
+    },
+    {
+      "lambda_A": [
+        0.38,
+        0.1,
+        0.52
+      ],
+      "lambda_B": [
+        0.66,
+        0.1,
+        0.24
+      ],
+      "diag_dist": 0.1974,
+      "K_core_A": 1,
+      "K_core_B": 0,
+      "K_core_diff": 1,
+      "l_second_A": 0.0059,
+      "l_second_B": 0.0116,
+      "topo_dist": 3.006,
+      "diag_A": [
+        0.8743,
+        0.855,
+        0.9258,
+        1.0
+      ],
+      "diag_B": [
+        0.9035,
+        0.7132,
+        0.7916,
+        1.0
+      ],
+      "is_counterexample": false
+    }
+  ],
+  "part_D_definitive_ces": [
+    {
+      "lambda_A": [
+        0.52,
+        0.1,
+        0.38
+      ],
+      "lambda_B": [
+        0.66,
+        0.1,
+        0.24
+      ],
+      "diag_dist": 0.1216,
+      "K_core_A": 1,
+      "K_core_B": 0,
+      "K_core_diff": 1,
+      "l_second_A": 0.0087,
+      "l_second_B": 0.0116,
+      "topo_dist": 3.003,
+      "diag_A": [
+        0.8857,
+        0.8148,
+        0.856,
+        1.0
+      ],
+      "diag_B": [
+        0.9035,
+        0.7132,
+        0.7916,
+        1.0
+      ],
+      "is_counterexample": true
+    }
+  ],
+  "op_oms_009_status": "RESOLVED-NEGATIVE",
+  "total_definitive_counterexamples": 4
+}

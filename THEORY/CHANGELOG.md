@@ -2,6 +2,180 @@
 
 ---
 
+## 2026-05-07 (W6 Day 5, Session 3) — VP-1 P-해상도 감사 완료: OP-OMS-009 RESOLVED-NEGATIVE, Prop R1 PROVED
+
+**Trigger:** Session 2 컨텍스트 압축 후 재시작. VP-1 (P-해상도 감사) 실행 — OMS 정규 승격의 최우선 계산 단계.
+
+### Summary
+
+- **VP-1 실행 결과:** `exp86_vp1_p_resolution_audit.py` (4개 부분: 합성 필드, 최적화기 스윕 12×12, 해석적 구성 10×10, 고해상도 스윕 15×15)
+- **핵심 결과:** **4개 확정적 반례 발견** (기준: $\|d\| < 0.15$ AND $D_T > 0.5$)
+  - CE-1 (가장 좁은 진단 거리): $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\|d\|=0.071$, $D_T=3.028$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-2: $\|d\|=0.116$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-3: $\|d\|=0.140$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-4 (독립 복제, 15×15): $\|d\|=0.122$, $K_{\mathrm{core}}$ 1 vs 0
+- **OP-OMS-009 분류:** RESOLVED-NEGATIVE — $P_{\min}$이 너무 거칠다 (4개 반례로 확정)
+- **Prop R1 상태:** HYPOTHESIZED → **PROVED** (CE-1이 구성적 증명 제공)
+- **정규 승격 차단 요인:** 3개 → **2개** (OP-OMS-009 제거; OP-OMS-001, OP-OMS-002 잔존)
+
+### Mechanism
+
+Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$가 H0 막대 코드를 하나의 스칼라로 붕괴시킴. $K_{\mathrm{core}}$ 정수값은 이 스칼라에서 단사적으로 복원 불가. cl-dominant $\lambda$ (w_cl=0.6)는 12×12 그리드에서 $K_{\mathrm{core}}=2$ 균형 (이중 블롭)을 생성하며, 균형 잡힌 $\lambda$는 $K_{\mathrm{core}}=1$ (단일 블롭)을 생성 — 두 경우의 진단 4-벡터가 $\|d\|<0.15$ 이내로 근접 가능.
+
+### Files created
+
+- `THEORY/working/observer_moduli/vp1_p_resolution_audit.md` — 주 감사 문서; Prop R1 PROVED; OP-OMS-009 분류
+- `THEORY/working/observer_moduli/vp1_p_resolution_audit_log.md` — 실행 로그; 설계 근거; 해석 결정
+- `THEORY/working/observer_moduli/vp1_counterexamples.md` — 4개 반례 문서화; 메커니즘 분석
+- `THEORY/working/observer_moduli/vp1_results.md` — 최종 분류; Prop/OP 상태 업데이트; 다음 단계
+- `CODE/experiments/results/observer_moduli/vp1_pairs.json` — 반례 데이터
+- `CODE/experiments/results/observer_moduli/vp1_summary.md` — 기계 가독 요약
+
+### Files updated
+
+- `open_problems.md` — OP-OMS-009 RESOLVED-NEGATIVE; 요약 테이블 + 차단 요인 목록 업데이트
+- `audit_log.md` — W7 CONFIRMED; AUDIT-021 추가; W11 비고 명확화
+- `canonical_promotion_checklist.md` — B8 PROVED, B17 open (비차단), D9 RESOLVED, Criterion B/D 요약 업데이트, VP-1 COMPLETE, 최종 박스 업데이트 (v1.1)
+- `checkpoints.md` — VP-1 섹션 추가; 성공 기준 업데이트; 세션 로그 업데이트
+- `daily_log.md` — Session 3 기록 추가
+- `THEORY/working/INDEX.md` — VP-1 파일 목록 추가; 차단 요인/프로토콜 상태 업데이트
+
+### Next session priority
+
+1. VP-3 실행 (core-weight 대칭 테스트) — OP-OMS-001 공격
+2. VP-2 실행 (분지 발견) — OP-OMS-002 공격
+3. $u^*(\Theta)$ 연속성 증명 시도 — OP-OMS-009 잔여 하위 질문
+
+---
+
+## 2026-05-07 (W6 Day 5, cont.) — Observer Moduli Space OMS-0.2 → OMS-1.0 완성 (CANONICAL CANDIDATE 선언)
+
+**Trigger:** OMS-0.1 골격 완성 후 OMS-0.2부터 OMS-1.0-candidate까지 장기 자율 세션 (long-horizon). 컨텍스트 윈도우 관리를 위해 Task 11–27 순차 추적.
+
+### Summary
+
+- **11개 신규 파일 생성** (`THEORY/working/observer_moduli/`):
+  - `readout_map_audit.md` (OMS-0.2): $P_{\min}$/$P_{\mathrm{top}}$/$P_{\mathrm{full}}$ 3단계 판독 맵 체계. Prop R1 (P_min 과거 거칠음, HYPOTHESIZED, VP-1 필요). Prop R3 ($P_{\mathrm{top}}$ 몫 공간 강하, PROVED conditional on $u^*$ 연속성). OP-OMS-009 등록.
+  - `observer_landscape_candidates.md` (OMS-0.2): 수용 가능 경관 클래스 $\mathcal{V}_{\mathrm{adm}}$ (V1–V5 기준). 6개 후보 $V$ 형태 목록. $V_D^0$ 계산 플레이스홀더 지정. OMS-1.0 입장: 유일 $V$ 아닌 클래스 $\mathcal{V}_{\mathrm{adm}}$가 정규 대상.
+  - `basin_stratification.md` (OMS-0.2): $\mathcal{M}_{\mathrm{obs}}$ 위 사영 기울기 흐름 정의. **Prop BS1 증명**: 연결 모듈라이 공간 위에 다중 분지 가능 (명시적 2-최솟값 구성). 핵심 구별 필수 문장: 지각 유형은 $\mathfrak{M}$의 연결 성분이 아닌 $V$의 어트랙터 분지.
+  - `core_weight_symmetry.md` (OMS-0.3): **Prop CW1 증명**: $S_4$ 가중치 치환은 게이지 대칭이 아님 (에너지 항들 함수 형식 상이). CW2: 정적 장면에서 수송 불변성 (조건부 증명). $G_{\mathrm{cw}}(P)$ 발견 대칭군으로 정의. 프로토콜 CW-1/2/3.
+  - `latent_symmetry.md` (OMS-0.3): **Prop LS1 증명**: $\Delta^3$에 모든 꼭짓점 보존하는 연속 군 행동 없음. 잠재 생성자 프레임워크 $(Z, \Gamma)$ 정의. Prop LS3: 잠재 대칭은 OMS-Gen 범위 (OMS 코어 아님).
+  - `rg_relevance_flow.md` (OMS-0.4): 3개 차원감소 메커니즘 필수 구별 (정규화/게이지/RG). 지각 야코비안 $J_P(\Theta)$ 및 $d_{\mathrm{eff}}(\Theta;\varepsilon)$ 정의. 가설 RG1: $d_{\mathrm{eff}}^{\mathrm{typ}}(0.05) \in [2,4]$ (HYPOTHESIZED). 3개 경고 (RG는 프로그램, 정리 아님).
+  - `stratified_dynamics.md` (OMS-0.5): $\Delta^3$의 $2^4 = 16$ 층 완전 열거. **Prop SD1 증명**: 경계 면은 사영 기울기 흐름의 흡수 벽. 각 면/모서리/꼭짓점의 지각적 해석.
+  - `validation_protocols.md` (OMS-0.6): VP-1~VP-6 (계산적) + EP-1, EP-2 (실험적) 완전 정의. SCC 코드 진입점 명시. 우선순위: VP-1→VP-3→VP-4→VP-2→VP-6→VP-5.
+  - `integration_with_scc.md` (OMS-0.7): SCC 계층 지도 (Level 1 → T8 → K-field → temporal → OMS). OMS K=1은 시간/다중형성 이론 독립. OMS K≥2는 T-K-Select (Cat B) 의존. OMS는 어떤 SCC 정리도 수정하지 않음.
+  - `oms_1_candidate.md` (OMS-1.0): 20개 섹션 종합 문서. 15개 증명된 명제, 4개 가설/조건부, 2개 차단됨. 18개 감사 경고. 최종 상태: **CANONICAL CANDIDATE — OP-OMS-001, OP-OMS-002, OP-OMS-009로 차단됨**.
+  - `canonical_promotion_checklist.md` (OMS-1.0): 기준 A–E 체크리스트. A: 14/15, B: 13/19, C: 17/17, D: 16/16, E: 6/9. 3개 차단 요인. 승격 경로: VP-1 → VP-3 → VP-2 → 이론 → canonical.
+
+- **8개 기존 파일 업데이트:**
+  - `open_problems.md`: OP-OMS-009~016 추가 (8개 신규 등록); 요약 테이블 확장; OP-OMS-003 RESOLVED 표시
+  - `audit_log.md`: AUDIT-011~020 추가 (10개 신규); 과잉주장 경고 W1~W12로 확장
+  - `definitions.md`: DEF-15~22 추가 ($T_\Theta$, $\mathcal{V}_{\mathrm{adm}}$, 어트랙터 분지/지각 유형, 관련/비관련 방향, $d_{\mathrm{eff}}$, 경계 층, 잠재 생성자, 지각 야코비안); 버전 0.1→0.7
+  - `observer_moduli_space.md`: §§15–17 추가 (OMS-0.2/0.5/0.4 결과 통합); OP 테이블 16개로 확장; 상태 테이블 업데이트; 버전 OMS-0.1→OMS-0.7
+  - `daily_log.md`: Session 2 완전 기록 추가
+  - `checkpoints.md`: OMS-0.2~1.0 모든 단계 체크포인트 추가; 성공 기준 완전 업데이트
+  - `THEORY/working/INDEX.md`: observer_moduli/ 섹션을 OMS-1.0-candidate 상태로 갱신; 11개 신규 파일 목록 추가
+  - `THEORY/CHANGELOG.md`: 이 항목 (Session 2 기록)
+
+- **KEY MATHEMATICAL DECISIONS (영구 기록):**
+  1. $P_{\min}$ 과거 거칠음: HYPOTHESIZED (VP-1 실행 전까지 정리 아님)
+  2. $\mathcal{V}_{\mathrm{adm}}$ (클래스)가 OMS-1.0의 정규 대상 — 유일 $V$ 아님
+  3. 지각 유형 = $V$의 어트랙터 분지 (NOT $\mathfrak{M}$의 연결 성분) — Prop BS1 증명
+  4. $S_4$ 가중치 치환 REJECTED (Prop CW1, 에너지 항 함수 형식 상이)
+  5. $\Delta^3$에 꼭짓점 보존 연속 대칭 없음 (Prop LS1 증명)
+  6. RG 관련성 흐름은 연구 프로그램, 정리 아님 (Warning RG1)
+  7. 경계 면은 흡수 벽 (Prop SD1 증명, $V \in C^1$ 조건부)
+  8. 3개 차원 감소 메커니즘 필수 구별: 정규화 / 유한 게이지 / RG 흐름
+  9. $u^*(\Theta)$ 연속성은 미증명 — OP-OMS-009 차단 요인으로 등록
+
+- **Canonical 카운트 변동 없음:** 54A/14B/5C/5R = 78 (CV-1.11). OMS는 working/ 단계. 차단 요인 해소 시 승격 예정.
+
+### Non-claims preserved
+
+- OMS-1.0-candidate는 working 문서. canonical.md에 포함되지 않음.
+- $G_{\mathrm{core\text{-}weight}} = \{e\}$는 기본값 (OP-OMS-001 열린 차단 요인).
+- $\mathcal{V}_{\mathrm{adm}}$ 존재 주장되었으나 미증명 (OP-OMS-002 열린 차단 요인).
+- $u^*(\Theta)$ 연속성 미증명 (OP-OMS-009 열린 차단 요인).
+- Hypothesis RG1 ($d_{\mathrm{eff}} \in [2,4]$) — VP-6 실행 전까지 가설.
+- 분지 수 보편적 주장 없음 — $V \in \mathcal{V}_{\mathrm{adm}}$ 선택에 의존.
+- 검증 프로토콜 VP-1~VP-6 정의됨, 아직 실행 안 됨.
+
+---
+
+## 2026-05-07 (W6 Day 5, cont.) — Observer Moduli Space OMS-0.1 신규 생성
+
+**Trigger:** Observer parameter independence/dependence 분석에서 "SCC Observer Moduli Space를 canonical definition으로 고정하라" 지시.
+
+### Summary
+
+- **`THEORY/working/observer_moduli/` 신규 디렉토리 생성** (9개 파일):
+  - `plan.md`: 7단계 실행 계획, 파일 매니페스트, 성공 기준
+  - `pre_brainstorm.md`: 수학적 전략, W''(c) 공식, 게이지 행동 핵심 구분 (파라미터 공간이 아닌 필드 공간에 작용), Δ³ 위상, Sym²(A) 구조
+  - `daily_log.md`: Session 1 기록 (모든 핵심 수학적 결정 포함)
+  - `definitions.md`: DEF-1 ~ DEF-14 형식적 정의 전부 (파라미터 표, Θ = (q,λ,ξ), M_raw, M_obs, M_obs^crit, P, 퍼셉션 코어, G_SCC^(0), 안정화 소군, 모듈라이 공간, 근본 영역, V 요건, 오비폴드 구조)
+  - `toy_models.md`: Toy Model A (K=1, Δ³ ≅ B³, 명제 A1~A6), Toy Model B (K=2, Sym²(Δ³), 대각선 특이점 B1~B3)
+  - `open_problems.md`: OP-OMS-001~008 등록 (중요도·난이도 평가 포함; OP-OMS-003 거의 해결됨)
+  - `audit_log.md`: AUDIT-001~010 (U(1) 거부 공식화, 유한 게이지군 차원 비감소, G_core-weight = {e} 기본값, 임계성 가설 두 버전 정책, Aut_task 과제 앵커 명시)
+  - `checkpoints.md`: 진행 상황 추적기, 성공 기준 체크
+  - `observer_moduli_space.md`: 메인 문서 OMS-0.1 (§1~§14: 소개, 파라미터 공간, 게이지군, 모듈라이 공간 정의, 위상 [명제 3~6], 오비폴드 구조, 판독 맵, 코어, V 잠재함수, 장난감 모델, 열린 문제, SCC와의 관계, RelationWorld와의 관계, 승격 기준)
+- **KEY MATHEMATICAL DECISIONS (모두 영구 기록):**
+  1. U(1) 거부: (α,β) → (e^{iφ}α, e^{iφ}β)는 실수 양수 cone 탈출 — 무효
+  2. 올바른 스케일 게이지: ℝ_{>0}-quotient via α+β=1, q = β/α 자유 파라미터
+  3. G_SCC^(0) = S_K × Aut_task (G_core-weight = {e} 기본값, 증명 필요)
+  4. 유한 게이지군은 차원을 줄이지 않음 (finite G → dim(M/G) = dim(M))
+  5. 차원 감소 출처: 정규화 (-1 DOF) + 임계성 (-1 DOF) + 관련성 흐름 (미정)
+  6. M_obs는 컴팩트 (Tychonoff, 명제 1)
+  7. 𝔐_SCC^obs는 컴팩트·하우스도르프·연결 (명제 3~4~6)
+  8. 최솟값 모델: 𝔐_min ≅ Δ³ (K=1, 임계, ξ 고정)
+  9. OP-OMS-003 해결: 연결성 (연결 공간의 상 = 연결)
+  10. 퍼셉션 불연속성은 위상 장벽이 아닌 V(Θ) 분지 구조에서 발생
+- **`THEORY/working/INDEX.md` 업데이트:** Level-2 Extension 섹션 추가 (observer_moduli/ 9개 파일 목록, 승격 차단 요인 명시)
+- **Canonical 카운트 변동 없음:** 54A/14B/5C/5R = 78 (CV-1.11). Observer Moduli Space는 working/ 단계; canonical 승격 전제 조건 미충족.
+
+### Non-claims preserved
+
+- `observer_moduli_space.md`는 working 문서 (OMS-0.1). canonical.md에 포함되지 않음.
+- G_core-weight = {e}는 기본값 (default), 증명된 정리 아님 (OP-OMS-001 열린 문제).
+- V(Θ) 명시적 정의 없음 (OP-OMS-002 열린 문제).
+- 유효 자유도 1–3 추정치 — 계산 확인 필요 (OP-OMS-005).
+- Observer Dynamics (Θ_o(t) = F^t(s_o)) 공식화 안 됨 (Level-3 SCC, OP-OMS-007 연기).
+
+---
+
+## 2026-05-07 (W6 Day 5) — DECLARATION.md 신규 + hypothesis_tree.md HT-3.0 + 연구 방향 전환
+
+**Trigger:** 이론 외연 확장에서 수학적 엄밀성 심화로 방향 전환. 이론 중심축 선언 + 전체 의존성 구조 공식 문서화.
+
+### Summary
+
+- **hypothesis_tree.md 초기 등록 (HT-1.0):** `THEORY/canonical/hypothesis_tree.md` 신규 생성.
+  - 대목표 명시: formation 출현 · K-selection · 시간 동일성 · 동역학 — u_t 단독 primitive.
+  - 6개 블록 (I~VI), 10개 가설 노드 등록 (H-T*, H-MORSE, H-SINK, H-SPEC, H-SR, H-WS, H-P7, GAP-0, GAP-1, GAP-2).
+  - 수정 규칙 (HT-ADD, HT-CLOSE, HT-PROMOTE, HT-RESTRUCTURE, HT-SYNC) 확정.
+  - 버전 체계 HT-x.y 도입.
+- **hypothesis_tree.md HT-1.1:** GAP-0/1/2 → H-μ0/H-κ/H-σ4 통합; H-SPEC Archived 섹션으로 이동; Phase 1/2/3 구조 및 연구 페이즈 섹션 추가.
+- **hypothesis_tree.md HT-2.0 (에이전트 최적화 리스트럭처):** 섹션 순서 전면 재편. 즉시 타겟 → 가설 요약 → 대목표 → 크리티컬 패스 → H-노드 상세 → 페이즈 → 수정 규칙(후미). Cat A 완성 목록은 한 줄 요약으로 압축. 세션 시작 시 첫 화면에서 Phase 1 타겟(H-SINK) 즉시 파악 가능.
+- **DECLARATION.md (DECL-1.0) 신규 생성:** `THEORY/canonical/DECLARATION.md` — 이론 중심축 선언문. 출발 질문: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive u_t 정의. 중심 정리 T8 (β/α > 4λ₂/|W''(c)|) 단독 제시. 6개 인식론적 질문(Q1~Q6) 표. 관측 조건 의존성 (구조화된 조건부성). 에너지 구조 표. 이론이 아닌 것(non-claims) 명시. **canonical/의 읽기 진입점 — 모든 수학 이전에 읽어야 할 2분 분량 문서.** CLAUDE.md Session Start 단계 1로 삽입. canonical/README.md Contents 최상단에 등록.
+- **hypothesis_tree.md HT-3.0 (인식론적 질문 재편):** 대목표를 "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"로 재정의. 기존 BLOCK-I~VI → Q1(경계 출현), Q2(다수 공존), Q3(변화), Q4(K-선택), Q5(시간 동일성), Q6(σ-상속) 6개 인식론적 질문 블록으로 재편. H-노드 내용 변경 없음 — 귀속 블록 명칭만 Q-notation으로 전환. DECLARATION.md 일관성 체크 HT-SYNC 규칙에 추가. 모든 신규 H-노드는 Q1~Q6 중 하나에 귀속 필수 (새 불변 규칙). theorem_status.md Dependency authority 라인 HT-1.0 → HT-3.0 업데이트.
+- **연구 방향 전환:** 새 정리/NOP 생성 중단 → 기존 가설 클로저 + Cat B → Cat A 승격 집중.
+- **크리티컬 패스 식별:** H-T* 및 H-MORSE 가 최우선 병목 (독립 공략 가능).
+- **T-Temporal-Identity 전 파트 Cat B 달성 (W6 D5 메인 세션 성과):**
+  - 파트 (c) Cat C → Cat B (Lemma 10, OP-0011 Step 2 PARTIALLY RESOLVED).
+  - NQ-5 CLOSED (Lemma 8), NQ-4 부분 클로저 (Lemma 12), NQ-6 전진 (Lemma 13 스케치).
+  - OP-0011 STRUCTURED → PARTIALLY RESOLVED. OP-0012 → PARTIALLY RESOLVED (Lemma 6).
+  - OP-0008-DIST CLOSED Cat B (Lemma 16, NOP-B).
+  - 10개 NOP (A-J) 카탈로그, 다수 Cat B 스케치.
+  - Working file: `temporal_identity_sharp_form_2026-05-07.md` (Cat B-ready, P1-P5 기준 명시).
+- **Canonical 카운트 변동 없음:** 54A/14B/5C/5R = 78 (CV-1.11). 다음 목표: CV-1.12 (+1B → 79).
+
+### Non-claims preserved
+
+- T-Temporal-Identity NOT yet canonical (promotion session 필요 → CV-1.12).
+- hypothesis_tree.md는 의존성 구조의 권위 소스. 정리 권위 소스는 canonical.md 유지.
+- H-T*, H-MORSE 클로저 없이 Package II / K-Select-DYN 진입 불가.
+
+---
+
 ## 2026-05-06 (W6 Day 4) — EOD Closeout: CV-1.11 Sealed; logs + W7 plan prepared; canonical.md frontmatter fixed
 
 **Trigger:** End-of-day closeout session. No new theorems. Documentation and preparation only.

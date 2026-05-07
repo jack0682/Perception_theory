@@ -57,6 +57,11 @@ Optional. Currently empty for 2026-04. If used, contains macro-view synthesis of
 
 The job of files under `logs/` is to record the process, not to define the theory. The theory itself lives in `canonical/`; active development lives in `working/`. A daily log is the right place for "today I tried X and hit Y", but the canonical statement belongs in `canonical/` after promotion.
 
+Authoritative documents in `canonical/` as of CV-1.11 (2026-05-07):
+- `canonical/canonical.md` — theory specification (54A/14B/5C/5R = 78 claims)
+- `canonical/theorem_status.md` — theorem index + Open Problems Catalog
+- `canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0); governs which floating hypotheses block which theorem upgrades
+
 ## Non-conventions (no Research OS)
 
 - No 5-role daily format (lead/proof/critic/experiment/archivist).

@@ -2,7 +2,7 @@
 id: META-0103
 type: registry/theorems
 status: accepted
-last_updated: 2026-05-06
+last_updated: 2026-05-07
 ---
 
 # Theorem Registry
@@ -10,6 +10,8 @@ last_updated: 2026-05-06
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
 **Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.11; current = **CV-1.11**) then status (active, challenged, deprecated). *(Updated 2026-05-06 after T-OP6-B Cat A promotion, T-P-F-ε0/T-P-F-ε0-K canonical additions, OP-0006 resolution, CV-1.8 P-F-A1 Package I (T-PF-A1-AR/SDE/GI/PE), CV-1.9 Session P T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, CV-1.10 Session R T-K-Select-PF Cat B, and CV-1.11 Session Y T-K-Select-OBS Cat B.)*
+
+**Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
 ---
 

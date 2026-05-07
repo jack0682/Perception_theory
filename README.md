@@ -130,8 +130,10 @@ Current summary:
 | static signatures for multiple fields | canonical definitional layer |
 | hard topological count vs active count bridge | proved under explicit conditions |
 | soft count bridge | open |
-| field-capacity selection principle | open |
+| field-capacity equilibrium selection (P-F regime) | Cat B — T-K-Select-PF |
+| temporal identity across dynamic events (all parts) | Cat B — T-Temporal-Identity |
 | dynamic count-jump inheritance | open |
+| blocking hypotheses (H-T*, H-MORSE, H-SINK, H-SR, H-WS) | open — see hypothesis_tree.md |
 
 ---
 
@@ -167,9 +169,9 @@ THEORY/
 
 Key documents:
 
-- `THEORY/canonical/theorem_status.md` — current theorem status
-- `THEORY/canonical/canonical.md` — settled theory specification
-- `THEORY/canonical/theorem_status.md` — open problem registry
+- `THEORY/canonical/canonical.md` — settled theory specification (CV-1.11)
+- `THEORY/canonical/theorem_status.md` — theorem index + open problem registry
+- `THEORY/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
 - `THEORY/working/MF/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
 
 ---
@@ -194,19 +196,21 @@ python3 -c "from scc import *; g=GraphState.grid_2d(10,10); p=ParameterRegistry(
 
 ## 8. Next Direction
 
-The next core step is to move from hard counts to soft counts.
+The current phase shifts from expanding the theorem count to closing floating hypotheses.
 
-The current conditional bridge gives, in a resolved regime,
+The theory has accumulated 14 Cat B theorems — results proved under explicit structural assumptions that have not yet been independently verified. Until those assumptions are closed, the conditional results cannot be upgraded to Cat A and the full logical chain from axioms to main claims remains incomplete.
 
-$$
-K_{\mathrm{bar}}=K_{\mathrm{act}}
-$$
+The five blocking hypotheses are tracked in `THEORY/canonical/hypothesis_tree.md` (HT-1.0):
 
-The next question is when a persistence-weighted soft count satisfies
+| Hypothesis | Blocks |
+|---|---|
+| H-T* — canonical registration of $T_*$ | P-F-A1 Package II, K-Select-DYN |
+| H-MORSE — Morse stability of $E$ near $u^*$ | Package II (Eyring–Kramers) |
+| H-SINK — Sinkhorn map is Lipschitz in graph metric | T-Temporal-Identity Cat A |
+| H-SR — spectral repulsion under perturbation | T-Temporal-Identity Cat A |
+| H-WS — well-separation in equilibrium regime | T-Temporal-Identity Cat A |
 
-$$
-K_{\mathrm{soft}}^\phi\approx K_{\mathrm{bar}}
-$$
+The critical path is: H-T* + H-MORSE → Package II → K-Select-DYN. In parallel, H-SINK + H-SR + H-WS → T-Temporal-Identity Cat A → CV-1.12.
 
-Not every smooth weighting function is stable. The next theorem should identify an admissible class of envelopes $\phi$ and prove an explicit error bound.
+Horizontal expansion (new open problems, new theorem areas) is paused until hypothesis debt is materially reduced.
 

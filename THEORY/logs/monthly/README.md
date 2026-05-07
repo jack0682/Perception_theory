@@ -81,7 +81,8 @@ Monthly layer 는:
 
 | 월 | Weeks covered | Monthly summary | Retrospective | Canonical merges this month |
 |---|---|---|---|---|
-| 2026-04 | W4 (+ W5 예정) | 🔨 2026-05-03 target | TBD | pending (weekly review 대기) |
+| 2026-04 | W4–W5 | done (2026-05-03) | TBD | CV-1.5.2 baseline + stereo ext. |
+| 2026-05 | W1–W5 (ongoing) | pending (end of month) | TBD | CV-1.6 through CV-1.11; hypothesis_tree.md (HT-1.0) |
 
 ## Cross-references
 
