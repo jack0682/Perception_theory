@@ -175,49 +175,59 @@ project: Observer Moduli Space of SCC
 
 ---
 
-## 2026-05-08 — Session 4: VP-3 Core-Weight Symmetry + VP-2 Landscape + VP-4 Basin
+## 2026-05-08 — Session 4: VP-3 Core-Weight Symmetry + VP-2 Landscape + VP-4 Basin + OMS-1.1
 
-**Context:** Session 3 context compaction. Autonomous mission continues: VP-3 → VP-2 → VP-4 → OMS-1.1.
+**Context:** Session 3 context compaction. Autonomous mission: VP-3 → VP-2 → VP-4 → OMS-1.1. All four completed.
 
 **Session achievements:**
-- VP-3 (exp87): Tested 7 λ-space transformation families. G_cw={e} computationally supported for dynamic scenes. Prop CW2 confirmed (n=18). Discovered approximate symmetry loci (OP-OMS-017).
+- VP-3 (exp87): Tested 7 λ-space transformation families. G_cw={e} computationally supported for dynamic scenes. Prop CW2 confirmed (n=18, frac_asym=0.000). Discovered approximate symmetry loci (OP-OMS-017).
 - VP-2 (theory): V_adm class analyzed; V_P: V1+V3 PROVED; existence HYPOTHESIZED (Prop VP2-2). OP-OMS-018 registered (optimizer regularity).
-- VP-4 (exp88): Basin stratification on V_D^0 launched (running).
-- Bug fix discovered: exp87 initially used wrong parameter names (lambda_cl instead of w_cl).
+- VP-4 (exp88, direct eval, 31.1s): 6 strategic λ-points × 2 scenes. S3: 2 observer types, Δd=0.4012. S4: 2 observer types, Δd=0.5206 (cl-dominant gives symmetric equilibrium, n_high=0). Prop BS1 COMPUTATIONALLY CONFIRMED. OP-OMS-010(c) COMPUTATIONALLY SUPPORTED. V_D^0 V4 criterion COMPUTATIONALLY SUPPORTED.
+- OMS-1.1 promotion: oms_1_1_promotion_audit.md written. Two-track strategy. Track 1 adopted — OMS-1.0-candidate → OMS-1.1 (Computationally Grounded Canonical Candidate).
+- Checklist v1.2: OP-OMS-001/002 downgraded from blockers to "pending formal proof". OP-OMS-018 new formal blocker.
+- Bug fix: exp87 initially used wrong parameter names (lambda_cl instead of w_cl).
 
 **Files created:**
 - `vp3_initial_reading_log.md`
 - `vp3_core_weight_symmetry_results.md`
 - `vp2_observer_landscape_admissible.md`
+- `vp4_basin_stratification_results.md`
+- `oms_1_1_promotion_audit.md`
 - `CODE/experiments/exp87_vp3_core_weight_symmetry.py`
 - `CODE/experiments/exp88_vp4_basin_stratification.py`
 - `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`
 - `CODE/experiments/results/observer_moduli/vp3_symmetry_summary.md`
+- `CODE/experiments/results/observer_moduli/vp4_basin_results.json`
+- `CODE/experiments/results/observer_moduli/vp4_basin_summary.md`
 
 **Files updated:**
 - `core_weight_symmetry.md` — §6–7 VP-3 results
-- `open_problems.md` — OP-OMS-001; +OP-OMS-017, +OP-OMS-018
-- `oms_1_candidate.md` — §11 Prop CW2/CW3 updates
+- `open_problems.md` — OP-OMS-001/010 updates; +OP-OMS-017, +OP-OMS-018
+- `oms_1_candidate.md` — OMS-1.1 promotion; frontmatter + status declaration updated
 - `audit_log.md` — AUDIT-022
-- `checkpoints.md` — VP-3, VP-2 complete; VP-4 running
-- `THEORY/CHANGELOG.md` — Session 4 entry
+- `checkpoints.md` — VP-3/VP-2/VP-4 complete; OMS-1.1 status
+- `canonical_promotion_checklist.md` — v1.2 full rewrite
+- `THEORY/CHANGELOG.md` — Session 4 entry (VP-3+VP-4+OMS-1.1)
+- `THEORY/working/INDEX.md` — VP-4 complete; OMS-1.1 stage; new files table
 
 **Key mathematical decisions:**
 1. PARTIAL_SYMMETRY verdicts (B,C,D,F,G) are NOT candidate symmetries — they reflect scene/λ-dependent approximate loci, not global gauge directions.
-2. Transform E (transport ablation) is the sole confirmed conditional symmetry (static scenes). This is already documented as Prop CW2.
-3. VP-2 result: V_adm is non-empty (hypothesized). The canonical representative is V_P with α=β=1. The computational placeholder is V_D^0 with d*=(1,1,1,0).
-4. OP-OMS-018 (optimizer regularity) is new and important: C^1 regularity of u*(λ) is needed for smooth gradient flow on M_obs.
+2. Transform E (transport ablation) is the sole confirmed conditional symmetry (static scenes). Prop CW2 COMPUTATIONALLY CONFIRMED.
+3. VP-2 result: V_adm is non-empty (hypothesized). Canonical representative V_P with α=β=1. Computational placeholder V_D^0 with d*=(1,1,1,0).
+4. VP-4 result: cl-dominant observer is a consistently distinct perceptual type. S4 symmetric equilibrium (n_high=0 for P1) is the strongest evidence — high λ_cl drives biclique symmetry rather than formation selection.
+5. d*=(1,1,1,0) is not achievable on static scenes (Persist=1.00 floor). V_D^0 with this target has gradient structure issues; a better target would exclude or adapt the Persist component.
+6. OP-OMS-018 (optimizer regularity) is the new key blocker for formal OMS-2.0 promotion.
 
 **Open questions:**
-- VP-4: How many basins does V_D^0 generate on S3/S4 scenes?
-- Is the approximate symmetry locus near {λ_cl=λ_sep} geometrically simple (a codimension-1 hyperplane)?
-- Does V_P with α=β=1 satisfy V4 (basin-generating) computationally?
+- Is the approximate symmetry locus near {λ_cl=λ_sep} a codimension-1 hyperplane? (OP-OMS-017)
+- Does V_P with α=β=1 satisfy V4 computationally? (OP-OMS-002 sub-question)
+- What is the formal proof strategy for C^1 regularity of u*(λ)? (OP-OMS-018 — the key remaining blocker)
+- Does the S4 cl-dominant symmetric equilibrium connect to the VP-3 approximate symmetry locus near {λ_cl=λ_sep}?
 
 **Next session priority:**
-- Complete VP-4 basin results and update theory
-- Write OMS-1.1 canonical promotion audit
-- Update INDEX.md and remaining downstream files
-- Consider git commit
+- VP-6 (effective DOF estimation via Jacobian singular spectrum) — next computational priority
+- OP-OMS-018 theoretical analysis — envelope theorem + implicit function theorem approach to u*(λ) regularity
+- Consider promoting sub-results (Props 1–7, Prop R1, Prop CW2, Prop BS1) to canonical.md §14
 
 ---
 
