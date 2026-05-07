@@ -1,10 +1,11 @@
 ---
 id: TI-v1
 type: working/theory
-status: open — Session V draft; T-Temporal-Identity future Cat B candidate (parts a,b,d); Cat C (part c, pending OP-0011); not promoted
+status: SUPERSEDED — Session V predecessor; superseded for promotion purposes by `temporal_identity_sharp_form_2026-05-07.md` (W6 D5 evening session). Retained for history.
 created: 2026-05-06
 session: Session V (W6 D4, 2026-05-06)
-scope: temporal identity for persistent components via unbalanced transport
+superseded_by: working/MF/temporal_identity_sharp_form_2026-05-07.md
+scope: temporal identity for persistent components via unbalanced transport (original draft)
 related:
   - canonical.md §§3,7,8.5,11,13 (M_{t→s}, E1–E4, T-Persist-1, T-Persist-Full)
   - theorem_status.md (OP-0011, OP-0012)
@@ -12,7 +13,11 @@ related:
   - emergent_multi_formation_synthesis.md §§3,4,5,8
   - op_0009_pre_a_kfield_chart_validity.md (V1–V4)
   - k_select_obs_posterior.md (T-K-Select-OBS)
+  - **temporal_identity_sharp_form_2026-05-07.md** (sharp-form successor; today's promotion target)
 ---
+
+> **Supersession note (2026-05-07 evening session):** This file remains as the Session V original draft. The promotion-target Cat B form is now in `temporal_identity_sharp_form_2026-05-07.md`, which incorporates: (i) sharp-form Sinkhorn dual-potential analysis improving $\varepsilon_\mathrm{OT}^*$ from ~0.05 to ~0.45; (ii) Lemma 6 (OP-0012-CC partial closure); (iii) Lemma 8 (NQ-T-Identity-5 closure — margin alone implies pairing); (iv) Lemmas 9–11 (OP-0011 Step 2 closure — kernel independence Cat C → Cat B); (v) refined hypothesis package (no postulated (A8) or (MA1)). Original Session V content below is preserved verbatim for history.
+
 
 # Temporal Identity for Persistent Components via Unbalanced Transport
 

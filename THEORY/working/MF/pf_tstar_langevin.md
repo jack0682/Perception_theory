@@ -445,3 +445,82 @@ Estimated effort for Package I promotion to Cat B: Session N (1 session proof re
 - `CODE/scc/langevin.py` — Primary implementation: projected Langevin on Σ_m with Bernoulli entropy regularization (§8 above)
 - `CODE/stereo_scc/kramers.py` — Toy implementation (ad hoc $T_*$)
 - `CODE/stereo_scc/experiments/exp05_kact_markov_chain.py` — Toy Markov chain (ad hoc $T_*$)
+
+---
+
+## §11. (Appended 2026-05-07 evening session) — Multi-Tool Brainstorm + NOP-F / NOP-J
+
+This section appends today's evening-session work on canonicalizing $T_*$ via multiple mathematical tools. Source: `THEORY/logs/daily/2026-05-07/09_OP0021_T_star_brainstorm.md` and `10_new_open_problems.md` §7 (NOP-F), §11 (NOP-J).
+
+### §11.1 Eight angles for $T_*$ (compressed)
+
+| # | Angle | Tool | Strength | Weakness |
+|---|-------|------|----------|----------|
+| 1 | Information-theoretic (Fisher) | Cramér-Rao + Bayesian-frequentist duality | Canonical via $\Phi_\mathrm{obs}$ | Sensor-dependent |
+| 2 | Renormalization group | Wilsonian RG + Gaussian fluctuation | Intrinsic | Cutoff non-canonical |
+| 3 | Detailed balance | Boltzmann H-theorem | Operational | Postulate, not derivation |
+| 4 | Thermodynamic free energy | JKO / Otto calculus | Mathematically clean | Modifies SCC dynamics |
+| 5 | Spectral (mixing) | Trace of inverse Hessian | Closed-form | No physical separation |
+| 6 | Operational (empirical) | Empirical variance | Easy to estimate | Not first-principles |
+| 7 | Quantum-style uncertainty | Heisenberg / Robertson-Schrödinger | Fundamental scales | Wrong ontology |
+| 8 | Variational / Legendre | Convex duality | Axiomatic | Reduces to #5 |
+
+**Compatibility cluster:** {1, 2, 3, 5} agree on slow-mode subspace under Gaussian fluctuation. {4, 7} structurally incompatible. {6, 8} not new.
+
+### §11.2 Lemma 14 candidate — combined Fisher + RG (Cat C target Cat B)
+
+$$T_* := \mathrm{tr}[\mathcal{I}(u^*)]^{-1} = \frac{1}{\sum_k \mu_k^{(\mathrm{slow})}}.$$
+
+Consistency relations:
+- $T_*^{(\mathrm{Fisher})} = T_*^{(\mathrm{RG, slow})}$ by Cramér-Rao saturation.
+- $T_*^{(\mathrm{DB})}$ matches under Onsager regression hypothesis.
+
+Critical gaps: boundary-mode / Fisher identification (sketched §4.2 step 4–5 of `09_OP0021_T_star_brainstorm.md`); Cramér-Rao saturation; slow-mode cutoff self-consistency.
+
+Numerical anchor estimate: $T_* \approx 0.2$ at exp83 default parameters.
+
+### §11.3 NOP-F — $T_*$ emergence (not definition) — Lemma 20 candidate
+
+**Beyond Lemma 14's *definition* approach:** can $T_*$ *emerge* from deterministic SCC gradient flow alone?
+
+**Lemma 20 (Mori-Zwanzig $T_*$ emergence, Cat C target Cat B).** *Under (FAST-SLOW): SCC Hessian spectrum decomposes into slow modes ($\mu < \mu_\mathrm{joint}/2$) and fast modes ($\mu > \mu_\mathrm{joint}/2$). Mori-Zwanzig projection of gradient flow onto slow-mode subspace yields a generalized Langevin equation*
+$$\dot u_\mathrm{slow} = -\nabla E_\mathrm{slow}(u_\mathrm{slow}) + \xi(t),\quad \langle \xi(0)\xi(t)\rangle \approx T_* \delta(t),$$
+*where the noise variance equals the RG temperature*
+$$T_* = \frac{1}{n_\mathrm{fast}}\sum_{\mu_k > \mu_\mathrm{joint}/2}\mu_k^{-1} = T_*^{(\mathrm{RG})}.$$
+
+This **derives** $T_*$ from deterministic dynamics + slow/fast separation. No external structure (sensor, postulate) required.
+
+**Status:** Cat C, sketched. Difficulty: 2–3 sessions for full Cat B.
+
+**Significance.** If Lemma 20 closes:
+- $T_*$ becomes a *consequence* of SCC, not an axiom.
+- OP-0021 fully resolved (canonical $T_*$ definition + derivation).
+- Package II (Eyring-Kramers) Cat B-conditional only on H5.
+- T-K-Select-PF $T_*$-dependence becomes intrinsic.
+- D-ST-4 partition function uses canonical $T_*$.
+
+### §11.4 NOP-J — Information geometry on $\mathcal{F}_M$ (Lemma 24 candidate)
+
+**Question.** Fisher information $\mathcal{I}(u^*)$ defines a Riemannian metric on $\mathcal{F}_M$. SCC Hessian $H = \nabla^2 E$ also defines a metric. Compatibility?
+
+**Lemma 24 (Fisher ↔ Hessian compatibility, Cat C):** *Under canonical $\Phi_\mathrm{obs}$ + LM1–LM3, the Fisher metric is conformal to the boundary-restriction of the SCC Hessian:*
+$$\mathcal{I}_\mathrm{Fisher}(u^*)\big|_{\partial\mathrm{Core}} = T_*^{(\mathrm{Fisher})} \cdot H\big|_{\partial\mathrm{Core}}.$$
+
+**Status:** Cat C, sketched. Compatible with Lemma 14 (combined Fisher + RG). Difficulty: 1 session.
+
+### §11.5 Aggregate impact on OP-0021
+
+If both Lemma 14 (Fisher / RG defn) and Lemma 20 (Mori-Zwanzig derivation) close:
+- $T_*$ is canonically defined AND derivable.
+- OP-0021 promoted from UNDER INVESTIGATION → STRUCTURED → PARTIALLY RESOLVED → eventually RESOLVED.
+- Package II (Eyring-Kramers) ready for Cat B.
+- OP-0005-DYN (Kramers rates) becomes addressable.
+
+Recommended sequencing for W7+: Lemma 14 → Lemma 20 → Lemma 24, ~5 sessions total.
+
+### §11.6 References (added 2026-05-07)
+
+- `THEORY/logs/daily/2026-05-07/09_OP0021_T_star_brainstorm.md` — 8-angle brainstorm + Lemma 14
+- `THEORY/logs/daily/2026-05-07/10_new_open_problems.md` — NOP-F + NOP-J
+- canonical T-PF-A1-AR/SDE/GI/PE Cat A — Package I foundation
+- T-K-Select-OBS canonical likelihood §2.4 — LM1–LM3 (Fisher info source)
