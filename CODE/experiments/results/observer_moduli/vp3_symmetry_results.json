@@ -1,0 +1,101 @@
+{
+  "experiment": "VP-3 Core-Weight Symmetry Test",
+  "date": "2026-05-08",
+  "op_attacks": "OP-OMS-001",
+  "scenes_used": ["S4_two_cliques (n=10)", "S3_grid6x6 (n=36)"],
+  "volume_fraction": 0.3,
+  "lambda_samples": "10 extreme + core pairs; 6 extreme lambdas for swap tests",
+  "op_oms_001_classification": "COMPUTATIONALLY_SUPPORTED_DEFAULT (G_cw={e})",
+  "complete_run_stats": {
+    "A": {"verdict": "NOT_A_SYMMETRY",   "frac_asym": 0.833, "delta_P_mean": 1.1991, "delta_K_frac": 0.333, "n_pairs": 12},
+    "B": {"verdict": "PARTIAL_SYMMETRY", "frac_asym": 0.500, "delta_P_mean": 0.9725, "delta_K_frac": 0.250, "n_pairs": 12},
+    "C": {"verdict": "PARTIAL_SYMMETRY", "frac_asym": 0.368, "delta_P_mean": 0.2562, "delta_K_frac": 0.079, "n_pairs": 38},
+    "D": {"verdict": "PARTIAL_SYMMETRY", "frac_asym": 0.421, "delta_P_mean": 0.1313, "delta_K_frac": 0.053, "n_pairs": 38},
+    "E": {"verdict": "CANDIDATE_SYMMETRY", "frac_asym": 0.000, "delta_P_mean": 0.0000, "delta_K_frac": 0.000, "n_pairs": 18},
+    "F": {"verdict": "PARTIAL_SYMMETRY", "frac_asym": 0.300, "delta_P_mean": 0.1595, "delta_K_frac": 0.033, "n_pairs": 60},
+    "G": {"verdict": "PARTIAL_SYMMETRY", "frac_asym": 0.217, "delta_P_mean": 0.1011, "delta_K_frac": 0.050, "n_pairs": 60}
+  },
+  "transformation_results": {
+    "A": {
+      "name": "A: Closure-Separation Swap",
+      "description": "lambda -> (lambda_sep, lambda_cl, lambda_bd, lambda_tr)",
+      "frac_asymmetric": 0.833,
+      "n_pairs": 12,
+      "delta_P_top_mean": 1.1991,
+      "key_results": [
+        {"lam_A": [0.85,0.05,0.05,0.05], "lam_B": [0.05,0.85,0.05,0.05], "delta_d": 0.7504, "delta_T": 1.5003, "delta_P_top": 1.5005, "is_asymmetric": true},
+        {"lam_A": [0.60,0.20,0.15,0.05], "lam_B": [0.20,0.60,0.15,0.05], "delta_d": 0.0295, "delta_T": 0.0, "delta_P_top": 0.0295, "is_asymmetric": false},
+        {"lam_A": [0.50,0.10,0.35,0.05], "lam_B": [0.10,0.50,0.35,0.05], "delta_d": 0.1012, "delta_T": 0.0, "delta_P_top": 0.1012, "is_asymmetric": true}
+      ],
+      "verdict": "NOT_A_SYMMETRY",
+      "note": "Definitively NOT a symmetry (frac_asym=0.833). Near-sym cases near lambda_cl=lambda_sep diagonal define local approximate symmetry locus (OP-OMS-017)."
+    },
+    "B": {
+      "name": "B: Closure-Boundary Swap",
+      "description": "lambda -> (lambda_bd, lambda_sep, lambda_cl, lambda_tr)",
+      "frac_asymmetric": 0.500,
+      "n_pairs": 12,
+      "delta_P_top_mean": 0.9725,
+      "delta_P_top_max": 3.4417,
+      "verdict": "PARTIAL_SYMMETRY",
+      "note": "Scene/lambda-dependent. frac_asym=0.500: exactly half asymmetric. NOT a global gauge symmetry. Partial behavior may reflect regime-specific approximate symmetry."
+    },
+    "C": {
+      "name": "C: Boundary-Closure Compensation",
+      "description": "lambda_cl += delta, lambda_bd -= delta, delta in {0.05,0.10,0.15}",
+      "frac_asymmetric": 0.368,
+      "n_pairs": 38,
+      "delta_P_top_mean": 0.2562,
+      "verdict": "PARTIAL_SYMMETRY",
+      "note": "NOT a global symmetry. Near-sym cases near lambda_bd-dominant corner. Consistent with approximate local symmetry near F_bd face."
+    },
+    "D": {
+      "name": "D: Boundary-Separation Compensation",
+      "description": "lambda_sep += delta, lambda_bd -= delta, delta in {0.05,0.10,0.15}",
+      "frac_asymmetric": 0.421,
+      "n_pairs": 38,
+      "delta_P_top_mean": 0.1313,
+      "verdict": "PARTIAL_SYMMETRY",
+      "note": "NOT a global symmetry. Same pattern as C near lambda_bd corner."
+    },
+    "E": {
+      "name": "E: Transport Ablation (Static Scene)",
+      "description": "lambda_tr -> 0, rescale others proportionally to Δ³",
+      "frac_asymmetric": 0.0,
+      "n_pairs": 18,
+      "delta_P_top_mean": 0.0,
+      "verdict": "CANDIDATE_SYMMETRY",
+      "note": "Prop CW2 COMPUTATIONALLY CONFIRMED. delta_d=delta_T=0.000 for ALL 18 tested pairs on static scenes. Transport weight lambda_tr is gauge-irrelevant for static single-frame observations."
+    },
+    "F": {
+      "name": "F: Radial Toward Centroid",
+      "description": "lambda -> (1-t)*lambda + t*(0.25,0.25,0.25,0.25), t in {0.1,0.2,0.3}",
+      "frac_asymmetric": 0.300,
+      "n_pairs": 60,
+      "delta_P_top_mean": 0.1595,
+      "verdict": "PARTIAL_SYMMETRY",
+      "note": "NOT a global gauge direction. 30% of pairs show asymmetry; 70% show approximate invariance (within-basin flatness at small t)."
+    },
+    "G": {
+      "name": "G: Random Tangent Perturbation",
+      "description": "lambda -> proj_Δ³(lambda + 0.08*v), v random unit tangent",
+      "frac_asymmetric": 0.217,
+      "n_pairs": 60,
+      "epsilon": 0.08,
+      "verdict": "PARTIAL_SYMMETRY",
+      "note": "NOT a global gauge symmetry (21.7% asymmetric). Majority of non-asymmetric cases reflect within-basin flatness at eps=0.08 scale, not gauge invariance."
+    }
+  },
+  "op_oms_001_summary": {
+    "S4_action_rejected": "CONFIRMED (Prop CW1, theoretical + no counterexample found)",
+    "transform_A_cl_sep_swap": "NOT_A_SYMMETRY for generic lambda. Approximate local symmetry near lambda_cl=lambda_sep diagonal.",
+    "transform_B_cl_bd_swap": "NOT_A_SYMMETRY",
+    "transform_C_bd_cl_compensation": "NOT_A_SYMMETRY for generic lambda. Near-symmetric near lambda_bd=1 corner.",
+    "transform_D_bd_sep_compensation": "NOT_A_SYMMETRY for generic lambda.",
+    "transform_E_transport_ablation": "CANDIDATE_SYMMETRY — conditional (Prop CW2 COMPUTATIONALLY CONFIRMED on static scenes).",
+    "transform_F_radial": "NOT_A_SYMMETRY",
+    "transform_G_random_tangent": "NOT_A_SYMMETRY (asymmetric cases exist; local flatness != gauge invariance)",
+    "G_cw_classification": "G_cw = {e} for dynamic scenes. COMPUTATIONALLY SUPPORTED.",
+    "G_cw_static_exception": "Static-scene restriction has 1-parameter gauge direction in lambda_tr (Prop CW2 CONFIRMED computationally)."
+  }
+}

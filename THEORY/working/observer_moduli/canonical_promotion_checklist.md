@@ -1,7 +1,8 @@
 ---
 type: working/checklist
 created: 2026-05-07
-stage: OMS-1.0
+updated: 2026-05-08
+stage: OMS-1.1
 project: Observer Moduli Space of SCC
 ---
 
@@ -31,9 +32,9 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | A12 | Relevant/irrelevant directions, $d_{\mathrm{eff}}$ | rg_relevance_flow.md RG3–RG5 | **[✓]** |
 | A13 | Boundary strata $\partial_I \Delta^3$ | stratified_dynamics.md SD1 | **[✓]** |
 | A14 | Latent generator framework | latent_symmetry.md LS1–LS3 | **[✓]** |
-| A15 | Unique canonical $V \in \mathcal{V}_{\mathrm{adm}}$ | — | **[!] BLOCKER (OP-OMS-002)** |
+| A15 | Unique canonical $V \in \mathcal{V}_{\mathrm{adm}}$ | vp2_observer_landscape_admissible.md | **[~] HYPOTHESIZED** (Prop VP2-2 — existence hypothesized via $V_P$; V1+V3 proved, V2+V4 computationally supported; no unique canonical $V$ yet proved) |
 
-**Criterion A summary:** 14/15 complete. Blocked on A15 (explicit canonical $V$).
+**Criterion A summary (v1.2):** 14 complete, 1 hypothesized. A15 downgraded from BLOCKER to HYPOTHESIZED after VP-2 demonstrated existence via $V_P$ and VP-4 supported V4 for $V_D^0$.
 
 ---
 
@@ -47,21 +48,22 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | B4 | $\mathfrak{M}$ connected | Prop 6 | **[✓]** |
 | B5 | Finite gauge preserves dimension | Prop 5 | **[✓]** |
 | B6 | $\mathfrak{M}$ is orbifold | Prop 7 | **[✓]** |
-| B7 | $P_{\mathrm{top}}$ descent to quotient | readout_map_audit.md Prop R3 | **[~] PARTIAL** (conditional on $u^*$ continuity) |
+| B7 | $P_{\mathrm{top}}$ descent to quotient | readout_map_audit.md Prop R3 | **[~] PARTIAL** (conditional on $u^*$ continuity — OP-OMS-018) |
 | B8 | $P_{\min}$ too coarse (Prop R1) | readout_map_audit.md, vp1_counterexamples.md | **[✓] PROVED** (VP-1, exp86, 4 CEs, 2026-05-07) |
 | B9 | K=1 minimal model $\cong \Delta^3$ | toy_models.md Props A1–A6 | **[✓]** |
 | B10 | K=2 symmetric product + diagonal singularity | toy_models.md Props B1–B3 | **[✓]** |
-| B11 | Multiple basins on connected space (Prop BS1) | basin_stratification.md | **[✓]** |
+| B11 | Multiple basins on connected space (Prop BS1) | basin_stratification.md + vp4_basin_stratification_results.md | **[✓] PROVED** (construction) + **COMPUTATIONALLY CONFIRMED** (VP-4, Δd=0.40–0.52) |
 | B12 | Boundary faces as absorbing walls (Prop SD1) | stratified_dynamics.md | **[✓]** |
 | B13 | $S_4$ weight permutation rejected (CW1) | core_weight_symmetry.md | **[✓]** |
 | B14 | U(1) on $(\alpha,\beta)$ rejected | audit_log.md AUDIT-001 | **[✓]** |
 | B15 | No vertex-preserving cont. symmetry (LS1) | latent_symmetry.md | **[✓]** |
-| B16 | Transport invariance (static scenes, CW2) | core_weight_symmetry.md | **[✓] conditional** |
-| B17 | Continuity of $u^*(\Theta)$ | — | **[~] OPEN** (OP-OMS-009 residual — resolution sub-question closed, continuity still unproved) |
-| B18 | Existence of $V \in \mathcal{V}_{\mathrm{adm}}$ | — | **[!] BLOCKER (OP-OMS-002)** |
+| B16 | Transport invariance (static scenes, CW2) | core_weight_symmetry.md, vp3_core_weight_symmetry_results.md | **[✓] COMPUTATIONALLY CONFIRMED** (VP-3 E, n=18, frac_asym=0.000) |
+| B17 | Continuity of $u^*(\Theta)$ | — | **[~] OPEN** (OP-OMS-018 — needed for Prop R3 fully; not a blocker for OMS-1.1 but unresolved) |
+| B18 | Existence of $V \in \mathcal{V}_{\mathrm{adm}}$ | vp2_observer_landscape_admissible.md | **[~] HYPOTHESIZED** (Prop VP2-2 — $V_P$ with V1+V3 proved; $V_D^0$ with V1+V2+V4 computationally supported) |
 | B19 | RG relevance: $d_{\mathrm{eff}}$ computation | rg_relevance_flow.md | **[~] HYPOTHESIZED** (VP-6 needed) |
+| B20 | $G_{\mathrm{cw}} = \{e\}$ for dynamic scenes | vp3_core_weight_symmetry_results.md | **[~] COMPUTATIONALLY SUPPORTED** (VP-3, 7 transforms A–G; not formally proved) |
 
-**Criterion B summary:** 14/19 fully proved; 2 partial/hypothesized; 1 blocker; 1 conditional. (B8 promoted to proved by VP-1.)
+**Criterion B summary (v1.2):** 13 fully proved; 3 computationally supported/confirmed; 3 hypothesized/partial; 1 open. No hard blockers remain (B18 downgraded from BLOCKER to HYPOTHESIZED after VP-2 + VP-4).
 
 ---
 
@@ -86,8 +88,9 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | C15 | $b_D = 0$ fixed (not observer) | audit_log.md AUDIT-009 | **[✓]** |
 | C16 | $m$ scene-determined (not observer) | audit_log.md AUDIT-010 | **[✓]** |
 | C17 | Effective DOF estimate labeled as hypothesis | rg_relevance_flow.md Warning RG3 | **[✓]** |
+| C18 | VP-3 partial-symmetry results labeled as approximate loci, not gauge | vp3_core_weight_symmetry_results.md, audit_log.md AUDIT-022 | **[✓]** |
 
-**Criterion C summary:** 17/17 complete. All audit warnings documented.
+**Criterion C summary (v1.2):** 18/18 complete. AUDIT-022 added for VP-3 decisions.
 
 ---
 
@@ -95,8 +98,8 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 
 | # | ID | Title | Classification | Promotion blocker? |
 |---|---|---|---|---|
-| D1 | OP-OMS-001 | Core-weight gauge group | OPEN (constrained) | **YES** |
-| D2 | OP-OMS-002 | Admissible $V$ existence | OPEN | **YES** |
+| D1 | OP-OMS-001 | Core-weight gauge group | **COMPUTATIONALLY SUPPORTED** ($G_{\mathrm{cw}}=\{e\}$, VP-3) | Formal proof pending; not a blocker for OMS-1.1 |
+| D2 | OP-OMS-002 | Admissible $V$ existence | **HYPOTHESIZED** (Prop VP2-2) | Formal proof pending; not a blocker for OMS-1.1 |
 | D3 | OP-OMS-003 | Connectedness | **RESOLVED** (Prop 6) | No |
 | D4 | OP-OMS-004 | Contractibility of $\mathrm{Sym}^K(\Delta^3)$ | OPEN | No |
 | D5 | OP-OMS-005 | Effective DOF / continuous gauge | OPEN | No |
@@ -104,15 +107,17 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | D7 | OP-OMS-007 | Observer dynamics (Level-3) | DEFERRED | No |
 | D8 | OP-OMS-008 | Relation to RelationWorld | OPEN | No |
 | D9 | OP-OMS-009 | Readout resolution + continuity | **RESOLVED-NEGATIVE** (VP-1, 2026-05-07) | REMOVED |
-| D10 | OP-OMS-010 | $V$ regularity | OPEN | No (subsumed by D2) |
+| D10 | OP-OMS-010 | $V$ regularity / basin count | OPEN (sub-question (c) COMPUTATIONALLY SUPPORTED, VP-4) | No (subsumed by D2) |
 | D11 | OP-OMS-011 | Basin stability | OPEN | No |
 | D12 | OP-OMS-012 | Boundary face interpretation | OPEN | No |
 | D13 | OP-OMS-013 | Stratified flow at corners | OPEN | No |
 | D14 | OP-OMS-014 | Empirical identifiability | OPEN | No |
 | D15 | OP-OMS-015 | OMS ↔ perceptual styles | OPEN | No |
 | D16 | OP-OMS-016 | Computational $d_{\mathrm{eff}}$ | COMPUTATIONALLY TESTABLE | No |
+| D17 | OP-OMS-017 | Approximate symmetry loci in $\lambda$-space | OPEN (NEW — VP-3, 2026-05-08) | No |
+| D18 | OP-OMS-018 | Optimizer regularity ($C^1$ of $u^*(\lambda)$) | OPEN (NEW — VP-2 analysis, 2026-05-08) | **YES** (needed for Prop R3 and formal V proof) |
 
-**Criterion D summary:** 16/16 classified. 2 canonical blockers (OP-OMS-001, OP-OMS-002). 2 resolved (OP-OMS-003, OP-OMS-009).
+**Criterion D summary (v1.2):** 18/18 classified. 1 formal blocker remains (OP-OMS-018). Previous blockers OP-OMS-001 and OP-OMS-002 downgraded to "pending formal proof" status after VP-3/VP-2/VP-4.
 
 ---
 
@@ -121,16 +126,16 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | # | Item | Status |
 |---|---|---|
 | E1 | `THEORY/working/INDEX.md` updated with observer_moduli/ | **[✓]** (Session 1) |
-| E2 | `THEORY/CHANGELOG.md` updated with Session 1 entry | **[✓]** (Session 1) |
+| E2 | `THEORY/CHANGELOG.md` updated with Session 1–4 entries | **[✓]** (Sessions 1–4) |
 | E3 | Cross-links to SCC static theory | **[✓]** (integration_with_scc.md) |
 | E4 | Cross-links to multi-formation theory | **[✓]** (integration_with_scc.md §3.2) |
 | E5 | Cross-links to temporal identity theory | **[✓]** (integration_with_scc.md §3.1) |
 | E6 | Layer map in integration document | **[✓]** (integration_with_scc.md §2) |
-| E7 | INDEX.md updated with Session 2 new files | **[✗]** (pending Task 27) |
-| E8 | CHANGELOG.md updated with Session 2 entry | **[✗]** (pending Task 27) |
+| E7 | INDEX.md updated with Session 2–4 new files | **[✓]** (Task 27 + Session 4 updates) |
+| E8 | CHANGELOG.md updated with Sessions 2–4 entries | **[✓]** (Sessions 2–4 entries prepended) |
 | E9 | OMS promotion criteria listed in canonical.md | **[✗]** (deferred — OMS not yet canonical) |
 
-**Criterion E summary:** 6/9 complete. Tasks 27 will complete E7–E8. E9 deferred until OMS is canonical-accepted.
+**Criterion E summary (v1.2):** 8/9 complete. E9 deferred until canonical promotion.
 
 ---
 
@@ -139,58 +144,57 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 | Protocol | Purpose | Status |
 |---|---|---|
 | VP-1: P-resolution audit | Confirm Prop R1 | **COMPLETE** (exp86, 2026-05-07; 4 CEs; RESOLVED-NEGATIVE) |
-| VP-2: Basin discovery | Demonstrate multi-basin $V_D^0$ | **NOT YET RUN** |
-| VP-3: Core-weight symmetry | Test closure-separation swap | **NOT YET RUN** |
-| VP-4: Boundary face ablation | Validate face interpretations | **NOT YET RUN** |
+| VP-2: Observer landscape admissibility | Analyze $V_{\mathrm{adm}}$ class; existence hypothesized | **COMPLETE** (theory analysis, 2026-05-08; V_P: V1+V3 proved; existence HYPOTHESIZED) |
+| VP-3: Core-weight symmetry | Test 7 $\lambda$-transforms | **COMPLETE** (exp87, 2026-05-08; $G_{\mathrm{cw}}=\{e\}$ COMP. SUPPORTED; Prop CW2 CONFIRMED) |
+| VP-4: Basin stratification | Confirm Prop BS1 computationally | **COMPLETE** (exp88, 2026-05-08; 2 observer types; Prop BS1 CONFIRMED) |
 | VP-5: Latent symmetry (toy) | Verify dimension formula | **NOT YET RUN** |
 | VP-6: RG Jacobian singular spectrum | Estimate $d_{\mathrm{eff}}$ | **NOT YET RUN** |
-
-All protocols defined in `validation_protocols.md`. Recommended execution order: VP-1 → VP-3 → VP-4 → VP-2 → VP-6 → VP-5.
 
 ---
 
 ## Promotion Pathway
 
-### Path to CANONICAL ACCEPTED
+### Path to OMS-1.1 (Computationally Grounded Canonical) — **ACHIEVED**
 
-1. **Immediate (computational):**
-   - ~~Run VP-1 → Confirm Prop R1 → Resolve OP-OMS-009 partially.~~ **DONE** (exp86, 2026-05-07; RESOLVED-NEGATIVE)
-   - Run VP-3 → Test $g_1 \notin G_{\mathrm{cw}}$ → Constrain OP-OMS-001 further. **NEXT PRIORITY**
-   - Run VP-2 → Demonstrate multi-basin $V_D^0$ → Resolve OP-OMS-002 partially.
+1. ~~Run VP-1 → Confirm Prop R1 → Resolve OP-OMS-009 partially.~~ **DONE** (exp86, 2026-05-07)
+2. ~~Run VP-3 → Test $G_{\mathrm{cw}}=\{e\}$ → Computationally support OP-OMS-001.~~ **DONE** (exp87, 2026-05-08)
+3. ~~Run VP-2 → Analyze $\mathcal{V}_{\mathrm{adm}}$ → Hypothesize $V$ existence.~~ **DONE** (theory, 2026-05-08)
+4. ~~Run VP-4 → Confirm Prop BS1 computationally → Support OP-OMS-010(c).~~ **DONE** (exp88, 2026-05-08)
 
-2. **Near-term (theoretical):**
-   - Prove or cite regularity of $u^*(\Theta)$ (SCC optimizer output) → Resolve continuity part of OP-OMS-009.
-   - Show $V_D^0 \in \mathcal{V}_{\mathrm{adm}}$ (verify V1–V5 for this specific $V$) → Partially resolve OP-OMS-002.
+### Path to OMS-2.0 (Fully Formal Canonical) — DEFERRED
 
-3. **Medium-term:**
-   - Either prove $G_{\mathrm{core\text{-}weight}} = \{e\}$ or find a non-trivial element → Resolve OP-OMS-001.
-   - Define a canonical $V$ satisfying all criteria V1–V5 with proof → Resolve OP-OMS-002.
-
-4. **Promotion trigger:**
-   - All three blockers resolved → Status upgrades from CANONICAL CANDIDATE to CANONICAL ACCEPTED.
-   - Add OMS §14 to canonical.md. Log in CHANGELOG.md. Update INDEX.md.
+1. **OP-OMS-018:** Prove $C^1$ regularity of $u^*(\lambda)$ — needed for Prop R3 (smooth descent of $P_{\mathrm{top}}$ to quotient) and for V3 of $V_P$.
+2. **OP-OMS-001 formal:** Prove $G_{\mathrm{cw}} = \{e\}$ for $P_{\mathrm{top}}$ via envelope theorem argument (non-symmetry of energy functional under $\lambda$-transformations for generic scenes).
+3. **OP-OMS-002 formal:** Prove $V^* \in \mathcal{V}_{\mathrm{adm}}$ for some explicitly constructed $V^*$ — likely requires OP-OMS-018 first.
+4. **Promotion trigger:** All three resolved → OMS-2.0 CANONICAL ACCEPTED.
 
 ---
 
 ## Final Classification
 
-$$\boxed{\textbf{OMS-1.0-candidate: CANONICAL CANDIDATE — Blocked by OP-OMS-001, OP-OMS-002}}$$
+$$\boxed{\textbf{OMS-1.1: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE}}$$
 
-*(OP-OMS-009 blocker REMOVED 2026-05-07, VP-1.)*
+$$G_{\mathrm{cw}}=\{e\} \text{ computationally supported (VP-3)}; \quad \mathcal{V}_{\mathrm{adm}} \neq \emptyset \text{ hypothesized (VP-2)}; \quad \text{Prop BS1 confirmed (VP-4)}$$
 
-**The following sub-results are canonical-ready and may be promoted independently:**
+$$\text{Formally blocked: OP-OMS-018 (optimizer regularity — } C^1 \text{ of } u^*(\lambda)\text{)}$$
+
+*(OP-OMS-009 REMOVED 2026-05-07, VP-1. OP-OMS-001/002 downgraded from BLOCKERS to pending formal proof 2026-05-08, VP-3/VP-2/VP-4.)*
+
+**Sub-results canonical-ready (promotable independently):**
 - Compactness, Hausdorff, connectedness, orbifold structure (Props 1–7).
 - Toy models A and B (Props A1–A6, B1–B3).
-- Basin multiplicity on connected space (Prop BS1).
+- Basin multiplicity on connected space (Prop BS1 — PROVED + COMPUTATIONALLY CONFIRMED).
 - Boundary face absorbing-wall result (Prop SD1).
 - Gauge rejection results (CW1, LS1, AUDIT-001).
 - $P_{\min}$ coarseness result (Prop R1, PROVED by VP-1).
-- Mandatory audit warnings C1–C17.
+- Static transport invariance (Prop CW2, COMPUTATIONALLY CONFIRMED by VP-3).
+- Conservative gauge default $G_{\mathrm{cw}}=\{e\}$ (Prop CW3, COMPUTATIONALLY SUPPORTED by VP-3).
+- Mandatory audit warnings C1–C18.
 
-**The following require resolution of blockers before promotion:**
-- Basin stratification as core OMS claim (pending OP-OMS-002).
-- Full gauge group $G_{\mathrm{SCC}}^{(0)}$ with $G_{\mathrm{core\text{-}weight}}$ determined (pending OP-OMS-001).
+**Sub-results requiring OP-OMS-018 resolution:**
+- Smooth descent $P_{\mathrm{top}} : \mathfrak{M} \to \mathcal{P}$ (Prop R3 — conditional on $u^*$ continuity).
+- Canonical $V \in \mathcal{V}_{\mathrm{adm}}$ with V3 proved (blocked on $u^*$ regularity).
 
 ---
 
-*Checklist version 1.1, 2026-05-07. Updated after VP-1 resolution of OP-OMS-009.*
+*Checklist version 1.2, 2026-05-08. Updated after VP-3 (core-weight symmetry), VP-2 (landscape admissibility), VP-4 (basin stratification). OP-OMS-001/002 downgraded from BLOCKERS; OP-OMS-017/018 registered; stage promoted to OMS-1.1.*

@@ -187,21 +187,52 @@ Until an explicit non-trivial $g \in G_{\mathrm{cw}}(P_{\mathrm{top}})$ is compu
 
 ---
 
-## §6. Summary and OP-OMS-001 Status
+## §6. VP-3 Results (exp87, 2026-05-08)
+
+VP-3 executed Protocols CW-1, CW-2, CW-3 and four additional transformation families on
+scenes S3 (6×6 grid) and S4 (two 5-cliques) with volume fraction 0.3.
+
+### VP-3 Complete Results
+
+| Transform | Description | frac_asym | n | Verdict |
+|---|---|---|---|---|
+| A (CW-1) | Closure-sep swap | **0.833** | 12 | **NOT_A_SYMMETRY** |
+| B | Closure-bd swap | 0.500 | 12 | PARTIAL_SYMMETRY |
+| C (CW-2) | Boundary-cl compensation | 0.368 | 38 | PARTIAL_SYMMETRY |
+| D | Boundary-sep compensation | 0.421 | 38 | PARTIAL_SYMMETRY |
+| E (CW-3) | Transport ablation (static) | **0.000** | 18 | **CANDIDATE_SYMMETRY** |
+| F | Radial toward centroid | 0.300 | 60 | PARTIAL_SYMMETRY |
+| G | Random tangent eps=0.08 | 0.217 | 60 | PARTIAL_SYMMETRY |
+
+**Prop CW2 status: PROVED (conditional) → COMPUTATIONALLY CONFIRMED (VP-3 E, n=18 pairs, all delta_P=0).**
+
+**Prop CW3 status: ASSUMED → COMPUTATIONALLY SUPPORTED (no global gauge direction found).**
+
+**New: Observation VP3-3 (approximate symmetry loci).** [COMPUTATIONALLY SUPPORTED]
+- Near $\{\lambda_{\mathrm{cl}} = \lambda_{\mathrm{sep}}\}$: Transform A is locally approximate (VP-3 A near-sym case, $\Delta P_{\mathrm{top}} = 0.0295$).
+- Near $F_{\mathrm{bd}}$ face ($\lambda_{\mathrm{bd}} \approx 0.85$): Transforms C and D are locally approximate.
+- Registered as **OP-OMS-017** (approximate symmetry loci in $\lambda$-space).
+
+---
+
+## §7. Summary and OP-OMS-001 Status (Post-VP-3)
 
 ### Status Update for OP-OMS-001
 
 | Sub-question | Status |
 |---|---|
 | Is $S_4$ a weight gauge symmetry? | REJECTED (Prop CW1) |
-| Is the closure-separation swap a global symmetry? | COMPUTATIONALLY TESTABLE (Protocol CW-1) |
-| Is there a boundary-closure approximate symmetry? | HYPOTHESIZED (Protocol CW-2) |
-| Is transport invariance a global symmetry? | PROVED conditional on scene class (Prop CW2) |
-| Default $G_{\mathrm{core\text{-}weight}} = \{e\}$? | ASSUMED (conservative, maintained) |
+| Is the closure-separation swap a global symmetry? | **NOT_A_SYMMETRY** (VP-3 A, frac_asym=0.833) |
+| Is the closure-bd swap a global symmetry? | PARTIAL_SYMMETRY (VP-3 B, scene-dependent) |
+| Is there a boundary-closure approximate symmetry? | PARTIAL (VP-3 C — near $F_{\mathrm{bd}}$ only) |
+| Is there a boundary-sep approximate symmetry? | PARTIAL (VP-3 D — same) |
+| Is transport invariance a global symmetry? | **COMPUTATIONALLY CONFIRMED** conditional (Prop CW2, VP-3 E) |
+| Radial toward centroid a symmetry? | PARTIAL_SYMMETRY (VP-3 F) |
+| Random tangent a symmetry? | PARTIAL_SYMMETRY (VP-3 G) |
+| Default $G_{\mathrm{core\text{-}weight}} = \{e\}$? | **COMPUTATIONALLY SUPPORTED** (VP-3 A–G) |
 
-**OP-OMS-001 remains OPEN** but has been significantly constrained:
-- Global permutation symmetries are ruled out.
-- The most plausible candidate (conditional transport invariance) is scene-class-specific, not a universal gauge.
-- Approximate local symmetries are hypothesized but not proved.
-
-**Next step to resolve:** Execute Protocols CW-1 and CW-2 numerically using SCC code in `CODE/scc/`.
+**OP-OMS-001 remains OPEN** for formal proof, but:
+- All major candidate global symmetries have been ruled out computationally.
+- The only genuine gauge direction found is $\lambda_{\mathrm{tr}}$ on static-scene restriction (Prop CW2 confirmed).
+- PARTIAL_SYMMETRY verdicts for B, C, D, F, G reflect approximate local symmetry loci (OP-OMS-017), not global gauge symmetries.
+- The default $G_{\mathrm{cw}} = \{e\}$ for dynamic scenes is now COMPUTATIONALLY SUPPORTED.

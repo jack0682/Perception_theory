@@ -13,20 +13,33 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 
 ## OP-OMS-001 — Core-Weight Gauge Group
 
-**Status:** Open  
+**Status:** Open (VP-3 significantly constrains — default G_cw={e} COMPUTATIONALLY SUPPORTED, 2026-05-08)
 **Importance:** ★★★  **Difficulty:** H
 
 **Statement.** Is $G_{\mathrm{core\text{-}weight}} = \{e\}$ the correct default, or does a non-trivial compact group act on the energy weights $\lambda$ while preserving perceptual cores?
 
 **Context.** The current formulation sets $G_{\mathrm{core\text{-}weight}} = \{e\}$ by convention (conservative default). The motivation: any continuous group acting on $\lambda \in \Delta^3$ would either: (a) reduce the dimension of $\mathfrak{M}$, or (b) identify observers that have genuinely different perceptual outputs.
 
-**What would resolve it.**
-- Identify an energy-weight symmetry $g: \Delta^3 \to \Delta^3$ such that $P(g \cdot \lambda) = P(\lambda)$ for all scenes $X_t$
-- OR prove that no such symmetry exists for the full readout $P_{\mathrm{top}}$
+**VP-3 Results (exp87, 2026-05-08).** Seven transformation families A–G tested on S3 and S4 scenes:
 
-**Candidate symmetry to test.** Closure-separation swap: $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}) \leftrightarrow (\lambda_{\mathrm{sep}}, \lambda_{\mathrm{cl}})$ (a $\mathbb{Z}_2$ action on $\Delta^3$). Does this preserve the perceptual core? Requires explicit computation on toy scenes.
+| Transform | Verdict | frac_asym | n |
+|---|---|---|---|
+| A: Closure-sep swap | **NOT_A_SYMMETRY** | 0.833 | 12 |
+| B: Closure-bd swap | PARTIAL_SYMMETRY | 0.500 | 12 |
+| C: Bd-cl compensation | PARTIAL_SYMMETRY | 0.368 | 38 |
+| D: Bd-sep compensation | PARTIAL_SYMMETRY | 0.421 | 38 |
+| E: Transport ablation (static) | **CANDIDATE_SYMMETRY** | 0.000 | 18 |
+| F: Radial toward centroid | PARTIAL_SYMMETRY | 0.300 | 60 |
+| G: Random tangent | PARTIAL_SYMMETRY | 0.217 | 60 |
 
-**Dependencies.** Requires $P_{\mathrm{top}}$ to be well-defined (DEF-6 in `definitions.md`). Requires explicit scene examples.
+- **Prop CW2** (static transport invariance): **COMPUTATIONALLY CONFIRMED** (VP-3 E, n=18).
+- **Prop CW3** (G_cw={e} default): **COMPUTATIONALLY SUPPORTED** (no global gauge direction found).
+- PARTIAL_SYMMETRY results (B, C, D, F, G) reflect approximate local symmetry loci near $\{\lambda_{\mathrm{cl}}=\lambda_{\mathrm{sep}}\}$ and near $F_{\mathrm{bd}}$. See **OP-OMS-017**.
+
+**What would fully resolve it.**
+- Formal proof that no diffeomorphism $g: \Delta^3 \to \Delta^3$ satisfies $P(g \cdot \lambda) = P(\lambda)$ for all scenes (beyond the static-scene transport invariance).
+
+**Dependencies.** Requires $P_{\mathrm{top}}$ to be well-defined (DEF-6 in `definitions.md`).
 
 ---
 
@@ -184,7 +197,7 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 
 ## OP-OMS-010 — Existence and Regularity of Admissible Observer Landscape
 
-**Status:** Open
+**Status:** Open (VP-4 results: (c) COMPUTATIONALLY SUPPORTED, 2026-05-08)
 **Importance:** ★★★  **Difficulty:** H
 **Canonical blocker:** YES (subsumed by OP-OMS-002)
 
@@ -192,12 +205,19 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 
 (a) Existence: Is there any $V$ satisfying V1–V5?
 (b) Regularity: Is there $V \in \mathcal{V}_{\mathrm{adm}} \cap C^1(\mathcal{M}_{\mathrm{obs}})$?
-(c) Basin count: For the recommended $V_P$, how many distinct basins does $\mathfrak{M}$ have?
+(c) Basin count: For $V_D^0$, how many distinct basins does $\mathfrak{M}$ have?
 (d) Universality: Is the basin stratification topology independent of the choice of $V \in \mathcal{V}_{\mathrm{adm}}$?
 
-**Partial progress.** $V_D^0$ satisfies V1 (proved), V2 (assumed). V3–V5 open.
+**VP-4 Results (exp88, 2026-05-08).** Direct evaluation of $V_D^0$ at 6 strategic $\lambda$-points on S3 and S4:
 
-**Attack plan.** Protocol VP-2 for (c). Prove $V_D^0 \in \mathcal{V}_{\mathrm{adm}}$ to resolve (a).
+- **Sub-question (c):** ≥2 distinct observer types found on both scenes ($\Delta d = 0.40$ on S3, $\Delta d = 0.52$ on S4). **COMPUTATIONALLY SUPPORTED.**
+- cl-dominant observer (P1: $\lambda_{cl}=0.70$) is a consistently distinct perceptual type.
+- On S4 (two 5-cliques): cl-dominant gives symmetric equilibrium (no dominant formation), while all other observers select one clique as dominant.
+- Persist=1.00 for all evaluations on static scenes, consistent with Prop CW2.
+
+**Partial progress.** $V_D^0$ satisfies V1 (proved), V2 (assumed), V4 (COMPUTATIONALLY SUPPORTED, VP-4). V3, V5 open.
+
+**Attack plan.** (a)–(d) remain open in full generality. $V_D^0$ partially satisfies V1+V2+V4; V3 (critical points vs readout stability) and V5 (boundary awareness) require further work.
 
 ---
 
@@ -295,14 +315,58 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 
 ---
 
+## OP-OMS-017 — Approximate Symmetry Loci in $\lambda$-Space
+
+**Status:** Open (NEW — VP-3, Session 4, 2026-05-08)
+**Importance:** ★  **Difficulty:** M
+**Canonical blocker:** No
+
+**Statement.** Are there codimension-1 submanifolds $S \subset \Delta^3$ on which a transformation $g$
+acts as an approximate gauge symmetry of $P_{\mathrm{top}}$ (i.e., $\Delta P_{\mathrm{top}}(g \cdot \lambda, \lambda) < \epsilon$)?
+
+**VP-3 evidence.** Two candidate loci:
+1. $S_A = \{\lambda_{\mathrm{cl}} = \lambda_{\mathrm{sep}}\}$: closure-sep swap is approximately a local symmetry (VP-3 A).
+2. $S_B = \{F_{\mathrm{bd}}\text{ neighborhood}\}$: boundary-dominant face, compensation near-symmetric (VP-3 C, D).
+
+**Why it matters.** Approximate symmetry loci define flat regions of the observer landscape $V$.
+These flat regions slow observer adaptation — near $S$, gradient flow $\dot\Theta = -\nabla V$ has small magnitude.
+They define perceptual indifference surfaces: configurations on $S$ are perceptually equivalent up to $\epsilon$.
+
+**What would resolve it.** Map $\Delta P_{\mathrm{top}}(g \cdot \lambda, \lambda)$ on a fine grid and identify
+the level set $\{\Delta P_{\mathrm{top}} < 0.05\}$.
+
+---
+
+## OP-OMS-018 — Optimizer Regularity in $\lambda$-Space
+
+**Status:** Open (NEW — VP-2, Session 4, 2026-05-08)
+**Importance:** ★★★  **Difficulty:** H
+**Canonical blocker:** No (blocks OMS-0.4 gradient flow analysis)
+
+**Statement.** For fixed scene $X_t$ and interior $\lambda \in \mathrm{int}(\Delta^3)$: is the map
+$\lambda \mapsto u^*(\lambda; X_t)$ differentiable ($C^1$) in $\lambda$?
+
+**Why it matters.** $C^1$ regularity implies:
+- $d_\Theta$ is $C^1$ in $\Theta$ → observer landscape $V \in C^1$ → smooth gradient flow.
+- Envelope theorem: $\partial E^*/\partial \lambda_i = E_i(u^*)$ (the $i$-th energy at the optimum).
+- Required for OMS-0.4 (effective DOF Hessian analysis).
+
+**Obstruction.** Phase transitions in $u^*$ (T8: $\beta/\alpha > 4\lambda_2/|W''(c)|$) cause $u^*$ to
+jump at bifurcation boundaries → regularity breaks at these boundaries.
+
+**Refined statement.** $\lambda \mapsto u^*$ is $C^1$ on connected components of $\Delta^3$ separated
+by phase-transition boundaries. These components = perceptual phases of the observer moduli space.
+
+---
+
 ## Summary Table
 
-*Updated 2026-05-07 (OMS-0.2 through OMS-1.0)*
+*Updated 2026-05-08 (VP-3 results, Session 4)*
 
 | ID | Title | Importance | Difficulty | Status | Blocker? |
 |---|---|---|---|---|---|
-| OP-OMS-001 | Core-Weight Gauge Group | ★★★ | H | Open (constrained) | YES |
-| OP-OMS-002 | Admissible $V$ Existence | ★★★ | H | Open | YES |
+| OP-OMS-001 | Core-Weight Gauge Group | ★★★ | H | Open (**G_cw={e} COMP. SUPPORTED**, VP-3) | YES (formal proof) |
+| OP-OMS-002 | Admissible $V$ Existence | ★★★ | H | Open (VP-2: existence HYPOTHESIZED) | YES |
 | OP-OMS-003 | Connectedness | ★★ | M | **RESOLVED** (Prop 6) | No |
 | OP-OMS-004 | Contractibility of $\mathrm{Sym}^K(\Delta^3)$ | ★★ | M | Open | No |
 | OP-OMS-005 | Effective DOF / Latent Gauge | ★★★ | M | Open | No |
@@ -310,16 +374,18 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 | OP-OMS-007 | Observer Dynamics (Level-3) | ★★ | H | Deferred | No |
 | OP-OMS-008 | Relation to RelationWorld | ★ | M | Open | No |
 | OP-OMS-009 | Readout Resolution + Continuity | ★★★ | M | **RESOLVED-NEGATIVE** (VP-1) | REMOVED |
-| OP-OMS-010 | $V$ Existence and Regularity | ★★★ | H | Open | YES (via OP-002) |
+| OP-OMS-010 | $V$ Existence and Regularity | ★★★ | H | Open (V1+V3 PROVED for $V_P$) | YES (via OP-002) |
 | OP-OMS-011 | Basin Stability | ★★ | M | Open | No |
 | OP-OMS-012 | Boundary Face Interpretation | ★★ | M | Open | No |
 | OP-OMS-013 | Stratified Flow at Corners | ★ | M | Open | No |
 | OP-OMS-014 | Empirical Identifiability | ★★ | H | Open | No |
 | OP-OMS-015 | OMS ↔ Perceptual Styles | ★★ | H | Open | No |
 | OP-OMS-016 | Computational $d_{\mathrm{eff}}$ | ★★ | L | Computationally testable | No |
+| OP-OMS-017 | Approximate Symmetry Loci | ★ | M | Open (VP-3 evidence) | No |
+| OP-OMS-018 | Optimizer Regularity in $\lambda$-space | ★★★ | H | Open (new, VP-2) | No |
 
-**Canonical promotion blockers:** OP-OMS-001, OP-OMS-002 (= OP-OMS-010). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~
+**Canonical promotion blockers:** OP-OMS-001 (formal proof), OP-OMS-002 (= OP-OMS-010). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~
 
-**Immediate computational attacks:** VP-3 (→ 001), VP-2 (→ 002/010), VP-6 (→ 016). ~~VP-1 (→ 009): COMPLETE.~~
+**Immediate computational attacks:** ~~VP-3 (→ 001): COMPLETE 2026-05-08.~~ VP-4 (→ 002/010/basin count), VP-6 (→ 016). ~~VP-1 (→ 009): COMPLETE.~~
 
 **OP-OMS-003 resolved:** Connectedness proved by Prop 6 (observer_moduli_space.md). No longer open.

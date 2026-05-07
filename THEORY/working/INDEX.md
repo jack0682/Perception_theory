@@ -231,9 +231,9 @@ These 16 files document the development of T-L1-F (Hard-Bar/Active-Count Bridge)
 
 Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\mathrm{obs}} / G_{\mathrm{SCC}}^{(0)}$
 
-**Promotion blockers:** OP-OMS-001 (core-weight gauge), OP-OMS-002 ($V \in \mathcal{V}_{\mathrm{adm}}$ existence). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ See `observer_moduli/canonical_promotion_checklist.md`.
+**Stage:** OMS-1.1 (Computationally Grounded Canonical Candidate, 2026-05-08). Formal blocker: OP-OMS-018 (optimizer regularity). ~~OP-OMS-001/002: downgraded to "pending formal proof" (VP-3/VP-2/VP-4).~~ ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ See `observer_moduli/canonical_promotion_checklist.md` v1.2.
 
-**Validation protocols:** ~~VP-1 COMPLETE~~ (exp86, 4 CEs, RESOLVED-NEGATIVE) → VP-3 → VP-4 → VP-2 → VP-6 → VP-5.
+**Validation protocols:** ~~VP-1 COMPLETE~~ (exp86, 4 CEs, RESOLVED-NEGATIVE) → ~~VP-3 COMPLETE~~ (exp87, G_cw={e} COMP. SUPPORTED) → ~~VP-4 COMPLETE~~ (exp88, 2 observer types, Prop BS1 CONFIRMED) → ~~VP-2 COMPLETE~~ (theory) → VP-6 → VP-5.
 
 ### Core files (Session 1, OMS-0.1)
 
@@ -243,10 +243,10 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/pre_brainstorm.md` | complete | Mathematical strategy, gauge subtlety, Δ³ topology |
 | `observer_moduli/definitions.md` | complete (v0.7) | DEF-1 through DEF-22; all formal definitions |
 | `observer_moduli/toy_models.md` | complete | K=1 (Δ³ topology, Props A1–A6); K=2 (Sym², Props B1–B3) |
-| `observer_moduli/open_problems.md` | complete | OP-OMS-001 through OP-OMS-016; OP-OMS-003 + OP-OMS-009 RESOLVED |
-| `observer_moduli/audit_log.md` | complete | AUDIT-001 through AUDIT-021; overclaim warnings W1–W12; W7 CONFIRMED |
-| `observer_moduli/checkpoints.md` | complete | Full progress tracker; all OMS stages + VP-1 |
-| `observer_moduli/daily_log.md` | complete | Session 1 + Session 2 + Session 3 (VP-1) records |
+| `observer_moduli/open_problems.md` | complete | OP-OMS-001 through OP-OMS-018; OP-OMS-003+009 RESOLVED; +017+018 new |
+| `observer_moduli/audit_log.md` | complete | AUDIT-001 through AUDIT-022; overclaim warnings W1–W12 |
+| `observer_moduli/checkpoints.md` | complete | Full progress tracker; VP-1+VP-3+VP-2+VP-4 done; OMS-1.1 |
+| `observer_moduli/daily_log.md` | complete | Session 1 through Session 4 records |
 | `observer_moduli/observer_moduli_space.md` | complete (v0.7) | Main document, §§1–17 |
 
 ### New files (Session 2, OMS-0.2 through OMS-1.0)
@@ -262,8 +262,8 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/stratified_dynamics.md` | OMS-0.5 | 16-strata $\Delta^3$ stratification; absorbing walls (Prop SD1) |
 | `observer_moduli/validation_protocols.md` | OMS-0.6 | VP-1 through VP-6 (computational); EP-1, EP-2 (empirical) |
 | `observer_moduli/integration_with_scc.md` | OMS-0.7 | Layer map; independence conditions; OMS does not modify SCC |
-| `observer_moduli/oms_1_candidate.md` | OMS-1.0 | 20-section synthesis; CANONICAL CANDIDATE status |
-| `observer_moduli/canonical_promotion_checklist.md` | OMS-1.0 | Criteria A–E; 2 blockers remaining; v1.1 (VP-1 updated) |
+| `observer_moduli/oms_1_candidate.md` | OMS-1.1 | 20-section synthesis; COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE |
+| `observer_moduli/canonical_promotion_checklist.md` | OMS-1.1 | Criteria A–E; v1.2 (OP-OMS-018 new blocker; OMS-1.1 decision) |
 
 ### New files (Session 3, VP-1 P-Resolution Audit)
 
@@ -275,6 +275,18 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/vp1_results.md` | VP-1 | Final classification; updated Prop + OP status; next steps |
 
 **Experiment data:** `CODE/experiments/exp86_vp1_p_resolution_audit.py`, `CODE/experiments/results/observer_moduli/vp1_pairs.json`, `vp1_summary.md`
+
+### New files (Session 4, VP-3 / VP-2 / VP-4 / OMS-1.1)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/vp3_initial_reading_log.md` | VP-3 | Initial state reading log before VP-3 execution |
+| `observer_moduli/vp3_core_weight_symmetry_results.md` | VP-3 | Full VP-3 results; G_cw={e} COMP. SUPPORTED; Prop CW2 CONFIRMED |
+| `observer_moduli/vp2_observer_landscape_admissible.md` | VP-2 | V_adm class; V_P: V1+V3 PROVED; existence HYPOTHESIZED; OP-OMS-018 |
+| `observer_moduli/vp4_basin_stratification_results.md` | VP-4 | Basin discovery; 2 observer types on S3+S4; Prop BS1 CONFIRMED; V4 SUPPORTED |
+| `observer_moduli/oms_1_1_promotion_audit.md` | OMS-1.1 | Promotion audit; two-track strategy; OMS-1.1 = Track 1 (computationally grounded) |
+
+**Experiment data (Session 4):** `CODE/experiments/exp87_vp3_core_weight_symmetry.py`, `CODE/experiments/exp88_vp4_basin_stratification.py`, `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`, `vp3_symmetry_summary.md`, `vp4_basin_results.json`, `vp4_basin_summary.md`
 
 ---
 

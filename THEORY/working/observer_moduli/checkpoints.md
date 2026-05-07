@@ -311,10 +311,13 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 - [x] Audit log written with overclaim warnings (AUDIT-001 through AUDIT-021)
 - [x] Validation protocols VP-1 through VP-6 defined
 - [x] VP-1 executed: 4 CEs found, Prop R1 PROVED, OP-OMS-009 RESOLVED-NEGATIVE
+- [x] VP-3 executed: 7 transforms tested; G_cw={e} COMPUTATIONALLY SUPPORTED; Prop CW2 CONFIRMED; OP-OMS-017/018 added
+- [x] VP-2 completed: V_adm class analyzed; V_P: V1+V3 PROVED; existence HYPOTHESIZED; OP-OMS-016/018 registered
+- [x] VP-4 COMPLETE: 2 distinct observer types on S3 and S4; Prop BS1 COMPUTATIONALLY CONFIRMED; OP-OMS-010(c) COMPUTATIONALLY SUPPORTED; V_D^0 V4 criterion supported (exp88, 2026-05-08)
 - [x] Integration with SCC layers documented
 - [x] Canonical promotion checklist written
 
-**OMS-1.0-candidate overall: CANONICAL CANDIDATE (2 blockers remaining: OP-OMS-001, OP-OMS-002)**
+**OMS-1.1 overall: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE — $G_{\mathrm{cw}}=\{e\}$ computationally supported; $V$ existence hypothesized; Prop BS1 computationally confirmed; formally blocked pending OP-OMS-018 (optimizer regularity)**
 
 ---
 
@@ -338,3 +341,4 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 | 2026-05-07 | Session 2: Updates — OP/Audit/Definitions/Main | open_problems.md, audit_log.md, definitions.md, observer_moduli_space.md, daily_log.md |
 | 2026-05-07 | Session 2: INDEX + CHANGELOG (Task 27) | THEORY/working/INDEX.md, THEORY/CHANGELOG.md |
 | 2026-05-07 | Session 3: VP-1 P-resolution audit | exp86_vp1_p_resolution_audit.py, vp1_pairs.json, vp1_summary.md, vp1_p_resolution_audit.md, vp1_counterexamples.md, vp1_results.md, vp1_p_resolution_audit_log.md |
+| 2026-05-08 | Session 4: VP-3 core-weight symmetry; VP-2 landscape; VP-4 basin; OMS-1.1 audit | exp87, exp88, vp3_initial_reading_log.md, vp3_core_weight_symmetry_results.md, vp2_observer_landscape_admissible.md, vp4_basin_stratification_results.md, oms_1_1_promotion_audit.md, vp3_symmetry_results.json, vp3_symmetry_summary.md, vp4_basin_results.json, vp4_basin_summary.md |

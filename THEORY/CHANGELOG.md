@@ -2,6 +2,60 @@
 
 ---
 
+## 2026-05-08 (W6 Day 6, Session 4) — VP-3 코어 가중치 대칭 테스트 완료: OP-OMS-001 계산적으로 지지됨; VP-2/VP-4 진행 중
+
+**Trigger:** Session 3 컨텍스트 압축 후 재시작. VP-3 (코어 가중치 대칭 테스트) 실행 — OP-OMS-001 공격.
+
+### Summary
+
+- **VP-3 실행 결과:** `exp87_vp3_core_weight_symmetry.py` (7개 변환군 A–G, S3/S4 씬, volume_fraction=0.3)
+- **핵심 결과:** **모든 전역 게이지 대칭 후보 계산적으로 기각**
+  - A (cl-sep swap): frac_asym=0.833, n=12 — NOT_A_SYMMETRY
+  - B (cl-bd swap): frac_asym=0.500, n=12 — PARTIAL_SYMMETRY
+  - C (bd-cl compensation): frac_asym=0.368, n=38 — PARTIAL_SYMMETRY
+  - D (bd-sep compensation): frac_asym=0.421, n=38 — PARTIAL_SYMMETRY
+  - E (transport ablation, static): frac_asym=0.000, n=18 — **CANDIDATE_SYMMETRY (Prop CW2 확인)**
+  - F (radial centroid): frac_asym=0.300, n=60 — PARTIAL_SYMMETRY
+  - G (random tangent): frac_asym=0.217, n=60 — PARTIAL_SYMMETRY
+- **OP-OMS-001 분류:** 계산적으로 지지 — $G_{\mathrm{cw}} = \{e\}$ (동적 씬), Prop CW3 ASSUMED → COMPUTATIONALLY SUPPORTED
+- **Prop CW2 상태:** PROVED (conditional) → **COMPUTATIONALLY CONFIRMED** (n=18, 모든 $\Delta P_{\mathrm{top}} = 0$)
+- **버그 수정:** exp87에서 잘못된 파라미터 이름 `lambda_cl` → `w_cl` (ParameterRegistry 속성) 발견 및 수정
+- **신규 미해결 문제:** OP-OMS-017 (근사 대칭 궤적), OP-OMS-018 (최적화기 λ-정칙성)
+- **VP-2 완료:** `vp2_observer_landscape_admissible.md` 작성 — V_P 후보 분석; V1+V3 PROVED; 존재성 HYPOTHESIZED
+- **VP-4 완료 (직접 평가, 31.1s):** `exp88_vp4_basin_stratification.py` — 6개 전략적 $\lambda$ 포인트, S3/S4 씬
+  - S3 (36 노드): 2개 관찰자 유형, Δd=0.4012; S4 (10 노드): 2개 유형, Δd=0.5206
+  - cl-지배 관찰자(P1): S4에서 대칭 평형 (n_high=0), 독특한 지각 유형
+  - **Prop BS1 계산적으로 확인됨** (≥2 유형, 두 씬 모두); OP-OMS-010(c) COMPUTATIONALLY SUPPORTED
+  - V_D^0 V4 기준 (basin-generating): COMPUTATIONALLY SUPPORTED
+- **OMS-1.1 승격 결정:** Track 1 채택 — 계산적 근거 정규 후보. OP-OMS-001/002 차단 해제; OP-OMS-018 신규 공식 차단
+- **`oms_1_candidate.md`**: OMS-1.0-candidate → **OMS-1.1** 승격
+- **`canonical_promotion_checklist.md`**: v1.1 → **v1.2** (OP-OMS-017/018 등록; OMS-1.1 결정 반영)
+
+### Files Created
+
+- `THEORY/working/observer_moduli/vp3_initial_reading_log.md`
+- `THEORY/working/observer_moduli/vp3_core_weight_symmetry_results.md`
+- `THEORY/working/observer_moduli/vp2_observer_landscape_admissible.md`
+- `THEORY/working/observer_moduli/oms_1_1_promotion_audit.md`
+- `THEORY/working/observer_moduli/vp4_basin_stratification_results.md`
+- `CODE/experiments/exp87_vp3_core_weight_symmetry.py`
+- `CODE/experiments/exp88_vp4_basin_stratification.py`
+- `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`
+- `CODE/experiments/results/observer_moduli/vp3_symmetry_summary.md`
+- `CODE/experiments/results/observer_moduli/vp4_basin_results.json`
+- `CODE/experiments/results/observer_moduli/vp4_basin_summary.md`
+
+### Files Updated
+
+- `THEORY/working/observer_moduli/core_weight_symmetry.md` — §6–7 VP-3 결과 추가
+- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-001/010 업데이트; OP-OMS-017, OP-OMS-018 추가
+- `THEORY/working/observer_moduli/oms_1_candidate.md` — OMS-1.1 승격; 프론트매터 + 상태 선언 업데이트
+- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-022 추가
+- `THEORY/working/observer_moduli/checkpoints.md` — VP-4 완료; OMS-1.1 상태 업데이트
+- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — v1.2 전면 업데이트
+
+---
+
 ## 2026-05-07 (W6 Day 5, Session 3) — VP-1 P-해상도 감사 완료: OP-OMS-009 RESOLVED-NEGATIVE, Prop R1 PROVED
 
 **Trigger:** Session 2 컨텍스트 압축 후 재시작. VP-1 (P-해상도 감사) 실행 — OMS 정규 승격의 최우선 계산 단계.

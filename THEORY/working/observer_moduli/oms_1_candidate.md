@@ -1,17 +1,18 @@
 ---
 type: working/canonical-candidate
 created: 2026-05-07
-stage: OMS-1.0-candidate
+updated: 2026-05-08
+stage: OMS-1.1
 project: Observer Moduli Space of SCC
-version: OMS-1.0-candidate
-status: CANONICAL CANDIDATE — blocked by OP-OMS-001, OP-OMS-002 (OP-OMS-009 RESOLVED 2026-05-07)
+version: OMS-1.1
+status: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE — G_cw={e} computationally supported; V existence hypothesized; Prop BS1 computationally confirmed; formally blocked pending OP-OMS-018
 ---
 
-# SCC Observer Moduli Space — OMS-1.0 Candidate
+# SCC Observer Moduli Space — OMS-1.1 Candidate
 
-**Version:** OMS-1.0-candidate (2026-05-07)
+**Version:** OMS-1.1 (2026-05-08)
 
-> **Status declaration:** This document is a **Canonical Candidate** — it is mathematically conservative, audited, and repository-ready, but is BLOCKED from canonical promotion by two open problems (OP-OMS-001, OP-OMS-002). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ It cannot be accepted as canonical until the remaining blockers are resolved. See §19 (Canonical Promotion Checklist).
+> **Status declaration:** This document is a **Computationally Grounded Canonical Candidate** — all core claims are either proved or computationally supported. $G_{\mathrm{cw}}=\{e\}$ is COMPUTATIONALLY SUPPORTED (VP-3); $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ is HYPOTHESIZED (VP-2); Prop BS1 (≥2 observer types) is COMPUTATIONALLY CONFIRMED (VP-4). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ Formally blocked from full canonical promotion pending OP-OMS-018 (optimizer regularity, $C^1$ of $u^*(\lambda)$). See §19 (Canonical Promotion Checklist).
 
 Every statement is classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.
 
@@ -225,17 +226,27 @@ $\mathfrak{M}$ is connected AND can support $\geq 2$ distinct perceptual types. 
 
 ## §11. Core-Weight Symmetry Status
 
-**Status of OP-OMS-001:** SIGNIFICANTLY CONSTRAINED but not resolved.
+**Status of OP-OMS-001:** SIGNIFICANTLY CONSTRAINED — $G_{\mathrm{cw}} = \{e\}$ COMPUTATIONALLY SUPPORTED (VP-3, exp87, 2026-05-08).
 
 | Candidate | Status |
 |---|---|
 | $S_4$ weight permutation | REJECTED (Prop CW1) |
-| Closure-separation swap $\mathbb{Z}_2$ | COMPUTATIONALLY TESTABLE (Protocol VP-3) |
-| Boundary-closure compensation | HYPOTHESIZED (local, approximate) |
-| Transport invariance (static scenes) | PROVED conditional on scene class (Prop CW2) |
+| Closure-separation swap $\mathbb{Z}_2$ | **NOT_A_SYMMETRY** (VP-3 A, frac_asym=0.833, n=12) |
+| Closure-boundary swap | PARTIAL_SYMMETRY (VP-3 B, scene-dependent) |
+| Boundary-closure compensation | PARTIAL (VP-3 C, near $F_{\mathrm{bd}}$ only — not global) |
+| Boundary-separation compensation | PARTIAL (VP-3 D, same) |
+| Transport invariance (static scenes) | **COMPUTATIONALLY CONFIRMED** (Prop CW2, VP-3 E, n=18) |
+| Radial toward centroid | PARTIAL_SYMMETRY (VP-3 F) |
+| Random tangent perturbation | PARTIAL_SYMMETRY (VP-3 G) |
 | Any global continuous symmetry on $\Delta^3$ | REJECTED for vertex-preserving actions (Prop LS1) |
 
-**Default maintained:** $G_{\mathrm{core\text{-}weight}} = \{e\}$. [ASSUMED]
+**Prop CW2 update:** PROVED (conditional) → **COMPUTATIONALLY CONFIRMED** (VP-3 E, $\Delta P_{\mathrm{top}} = 0$ for all 18 static-scene pairs).
+
+**Prop CW3 update:** ASSUMED → **COMPUTATIONALLY SUPPORTED** (no global gauge direction found on $\Delta^3$ for dynamic scenes).
+
+**Default maintained:** $G_{\mathrm{core\text{-}weight}} = \{e\}$ for dynamic scenes. [COMPUTATIONALLY SUPPORTED]
+
+**Approximate symmetry loci** (OP-OMS-017, NEW): near $\{\lambda_{\mathrm{cl}}=\lambda_{\mathrm{sep}}\}$ and near $F_{\mathrm{bd}}$ face, approximate local symmetries exist. Not global gauge directions.
 
 ---
 
@@ -324,7 +335,8 @@ $$\mathfrak{M} = \bigsqcup_{I \subseteq \{cl,sep,bd,tr\},\ [H] \leq G} \mathfrak
 | Prop BS1 | Multiple types on connected $\mathfrak{M}$ | PROVED | Construction of 2-basin $V$ |
 | Prop SD1 | Faces are absorbing walls | PROVED | Projection argument |
 | Prop CW1 | $S_4$ rejected | PROVED | Distinct functional forms |
-| Prop CW2 | Transport invariant (static) | PROVED (conditional) | $E_{\mathrm{tr}} = 0$ for static scenes |
+| Prop CW2 | Transport invariant (static) | **COMPUTATIONALLY CONFIRMED** (VP-3 E) | $\Delta P_{\mathrm{top}} = 0$ for n=18 static pairs |
+| Prop CW3 | $G_{\mathrm{cw}} = \{e\}$ default | **COMPUTATIONALLY SUPPORTED** (VP-3 A–G) | No global gauge direction found |
 | Prop LS1 | No vertex-preserving cont. symmetry | PROVED | Fixed-point argument |
 
 ### Summary of Assumed/Hypothesized Claims
@@ -344,7 +356,7 @@ $$\mathfrak{M} = \bigsqcup_{I \subseteq \{cl,sep,bd,tr\},\ [H] \leq G} \mathfrak
 
 | ID | Title | Status |
 |---|---|---|
-| OP-OMS-001 | Core-weight gauge group | OPEN (constrained: $S_4$ rejected, transport invariance proved conditional) |
+| OP-OMS-001 | Core-weight gauge group | OPEN (formal proof); **G_cw={e} COMPUTATIONALLY SUPPORTED** (VP-3, exp87, 2026-05-08) |
 | OP-OMS-002 | Explicit admissible $V$ | OPEN ($\mathcal{V}_{\mathrm{adm}}$ defined; no explicit element proved admissible) |
 | OP-OMS-009 | Readout resolution + continuity | **RESOLVED-NEGATIVE** (VP-1, 2026-05-07; $P_{\min}$ coarseness PROVED; continuity sub-question still open but not a blocker) |
 

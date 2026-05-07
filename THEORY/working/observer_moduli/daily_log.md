@@ -175,6 +175,52 @@ project: Observer Moduli Space of SCC
 
 ---
 
+## 2026-05-08 — Session 4: VP-3 Core-Weight Symmetry + VP-2 Landscape + VP-4 Basin
+
+**Context:** Session 3 context compaction. Autonomous mission continues: VP-3 → VP-2 → VP-4 → OMS-1.1.
+
+**Session achievements:**
+- VP-3 (exp87): Tested 7 λ-space transformation families. G_cw={e} computationally supported for dynamic scenes. Prop CW2 confirmed (n=18). Discovered approximate symmetry loci (OP-OMS-017).
+- VP-2 (theory): V_adm class analyzed; V_P: V1+V3 PROVED; existence HYPOTHESIZED (Prop VP2-2). OP-OMS-018 registered (optimizer regularity).
+- VP-4 (exp88): Basin stratification on V_D^0 launched (running).
+- Bug fix discovered: exp87 initially used wrong parameter names (lambda_cl instead of w_cl).
+
+**Files created:**
+- `vp3_initial_reading_log.md`
+- `vp3_core_weight_symmetry_results.md`
+- `vp2_observer_landscape_admissible.md`
+- `CODE/experiments/exp87_vp3_core_weight_symmetry.py`
+- `CODE/experiments/exp88_vp4_basin_stratification.py`
+- `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`
+- `CODE/experiments/results/observer_moduli/vp3_symmetry_summary.md`
+
+**Files updated:**
+- `core_weight_symmetry.md` — §6–7 VP-3 results
+- `open_problems.md` — OP-OMS-001; +OP-OMS-017, +OP-OMS-018
+- `oms_1_candidate.md` — §11 Prop CW2/CW3 updates
+- `audit_log.md` — AUDIT-022
+- `checkpoints.md` — VP-3, VP-2 complete; VP-4 running
+- `THEORY/CHANGELOG.md` — Session 4 entry
+
+**Key mathematical decisions:**
+1. PARTIAL_SYMMETRY verdicts (B,C,D,F,G) are NOT candidate symmetries — they reflect scene/λ-dependent approximate loci, not global gauge directions.
+2. Transform E (transport ablation) is the sole confirmed conditional symmetry (static scenes). This is already documented as Prop CW2.
+3. VP-2 result: V_adm is non-empty (hypothesized). The canonical representative is V_P with α=β=1. The computational placeholder is V_D^0 with d*=(1,1,1,0).
+4. OP-OMS-018 (optimizer regularity) is new and important: C^1 regularity of u*(λ) is needed for smooth gradient flow on M_obs.
+
+**Open questions:**
+- VP-4: How many basins does V_D^0 generate on S3/S4 scenes?
+- Is the approximate symmetry locus near {λ_cl=λ_sep} geometrically simple (a codimension-1 hyperplane)?
+- Does V_P with α=β=1 satisfy V4 (basin-generating) computationally?
+
+**Next session priority:**
+- Complete VP-4 basin results and update theory
+- Write OMS-1.1 canonical promotion audit
+- Update INDEX.md and remaining downstream files
+- Consider git commit
+
+---
+
 ## Template for Future Sessions
 
 ```

@@ -412,3 +412,31 @@ Swapping $\lambda_{cl} \leftrightarrow \lambda_{sep}$ generically changes the op
 **Remaining canonical blockers.** OP-OMS-001 (core-weight gauge group), OP-OMS-002 (admissible $V$ existence).
 
 **Files affected.** `open_problems.md` OP-OMS-009; `readout_map_audit.md` Prop R1; `canonical_promotion_checklist.md` B7; `vp1_p_resolution_audit.md`, `vp1_counterexamples.md`, `vp1_results.md` (new); `CODE/experiments/results/observer_moduli/vp1_pairs.json`.
+
+---
+
+## AUDIT-022 — VP-3 Core-Weight Symmetry Test: OP-OMS-001 Partial Resolution
+
+**Date:** 2026-05-08
+**Decision:** All tested λ-space transformation families ruled out as global gauge symmetries of $P_{\mathrm{top}}$. Default $G_{\mathrm{cw}} = \{e\}$ is COMPUTATIONALLY SUPPORTED. Prop CW2 COMPUTATIONALLY CONFIRMED.
+
+**Context.** Protocol VP-3 (exp87) tested 7 transformation families (A–G) on energy weight simplex $\Delta^3$ using S3 (6×6 grid, n=36) and S4 (two 5-cliques, n=10). Key parameter fix: w_cl/w_sep/w_bd/w_tr are the correct ParameterRegistry attributes (not lambda_*); volume_fraction=0.3 is the mass budget.
+
+**Results summary** (frac_asym = fraction of pairs with $\Delta P_{\mathrm{top}} > 0.05$):
+- A (cl-sep swap): 0.833, n=12 — NOT_A_SYMMETRY
+- B (cl-bd swap): 0.500, n=12 — PARTIAL_SYMMETRY
+- C (bd-cl compensation): 0.368, n=38 — PARTIAL_SYMMETRY
+- D (bd-sep compensation): 0.421, n=38 — PARTIAL_SYMMETRY
+- E (transport ablation, static): 0.000, n=18 — CANDIDATE_SYMMETRY (Prop CW2 confirmed)
+- F (radial centroid): 0.300, n=60 — PARTIAL_SYMMETRY
+- G (random tangent): 0.217, n=60 — PARTIAL_SYMMETRY
+
+**Key decisions.**
+1. No transformation (except E, static-conditional) is a gauge symmetry. All have non-zero frac_asym.
+2. PARTIAL_SYMMETRY verdicts reflect scene/λ-dependent approximate symmetry loci (OP-OMS-017).
+3. Prop CW2: PROVED (conditional) → COMPUTATIONALLY CONFIRMED (n=18, all delta_P=0.000).
+4. Prop CW3: ASSUMED → COMPUTATIONALLY SUPPORTED.
+
+**New open problems.** OP-OMS-017 (approximate symmetry loci), OP-OMS-018 (optimizer regularity in λ-space).
+
+**Files affected.** `core_weight_symmetry.md` §6–7; `open_problems.md` OP-OMS-001, +OP-OMS-017, +OP-OMS-018; `vp3_core_weight_symmetry_results.md` (new); `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`, `vp3_symmetry_summary.md`.
