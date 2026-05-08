@@ -17,65 +17,48 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 
 ---
 
-## ⚠️ DEVELOPMENT NOTICE: CV-1.5.2 → CV-1.6 Progression
+## CV-1.11 Release State (2026-05-08, W6 EOD)
 
-**Status (2026-05-02, W5 Day 6):** **CV-1.5.2 is CURRENT**. CV-1.6 release path is in development per W5 reconciliation + W6 strategic plan (CV-1.6 release target W6 D7 EOD 2026-05-10).
+**Current version:** CV-1.11 — **54A / 14B / 5C / 5R = 78 claims** (~69% fully proved)
+**Released:** 2026-05-06 (sealed W6 D4). **OMS Appendix added:** 2026-05-08 (W6 D6, Sessions 7–8).
+**Next target:** CV-1.12 — T-Temporal-Identity (a,b,d) Cat A via **H-SINK** (Sinkhorn-Lipschitz, Phase 1 unblocked).
 
-**CV-1.5.2 release summary (2026-05-02, this document):**
-- **T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) merged** as Cat A *conditional* under hypothesis package $(P0)$–$(P11)$. First multi-formation canonical Cat A theorem.
-- **Counts**: 45A → **46A**, 60 → **61 claims**, 75% fully proved.
-- **Non-claims preserved (explicit)**: no global $K_{\mathrm{bar}}=K_{\mathrm{act}}$; no global $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}$; OP-0005 / OP-0008 NOT solved; reservoir theory NOT promoted; P7 NOT generally derived.
+### W6 Highlights (2026-05-04 to 2026-05-08)
 
-**W6 D1 EOD post-supervision addition (2026-05-04, supervised special-case):**
-- **T-L1-M (Soft-Count Corollary under $\Phi_{\mathrm{res}}$ following T-L1-F) merged** as Cat A *conditional* under $(P0)$–$(P11) + \phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau) + \tau < \tau_*^{\mathrm{post-R2}}$ where $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$. Canonical entry at §13 line 1491 (immediately after T-L1-F). Per-family corollaries: L-M.A (φ=φ_hard) Cat A absolute; L-M.B (φ=φ_logistic, s≥50) + L-M.C (φ=φ_shift-sat, β≥20) Cat A conditional inheriting.
-- **Promotion provenance**: W6 G1 deliverable — R-0/R-1/R-2/R-3 self-audit closures + Lemma L-M-2 Cat A conditional + Theorem L-M Cat A conditional + external L-M-K-style audit PASS (cold-review general-purpose agent, ~7 min) + supervised user authorization same-day. CHANGELOG W6 D1 EOD second addendum.
-- **Counts**: 46A → **47A**, 61 → **62 claims**, 75% fully proved unchanged. C-0722 row added to `theorem_status.md` line 197.
-- **Non-claims preserved (explicit)**: T-L1-M does NOT solve OP-0005 / OP-0008 / OP-0009. Φ_res is NOT promoted to a canonical envelope class beyond its working role; reservoir-admissible families restricted to WQ-LAT-1.B-empirically-supported sub-classes. NQ-G1-1 self-correction integrated ($\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ configuration-dependent; NQ-G1-1-ext W7+ for empirical anchor). NQ-G1-2 EXECUTED ((P9-tight) regime CANDIDATE for L1-J' promotion enabling factor-1 sharpening empirically penalty-free; NQ-G1-2-ext W7+ for direct $\|R_j\|_\infty$ measurement under shared-pool dynamics). Persistence-skeleton preservation disclosure added per external auditor recommendation.
+| Version | Content | Δ |
+|---------|---------|---|
+| CV-1.6 (W6 D4 G) | Stereo extension T-ST-5a Cat A, T-OP6-B Cat B, D-ST-1..5 | +2A +6B |
+| CV-1.7 (W6 D4 I) | T-P-F-ε0 Cat A, T-P-F-ε0-K Cat B | +1A +1B |
+| CV-1.7→ (W6 D4 K) | T-OP6-B Cat B → **Cat A**; OP-0006 RESOLVED | +1A −1B |
+| CV-1.8 (W6 D4 M–O) | P-F-A1 Package I: AR/SDE Cat A, GI/PE Cat B | +2A +2B |
+| CV-1.9 (W6 D4 P) | T-PF-A1-GI + T-PF-A1-PE Cat B → **Cat A** | +2A −2B |
+| CV-1.10 (W6 D4 R) | T-K-Select-PF **Cat B**; OP-0005-EQ partially resolved | +1B |
+| CV-1.11 (W6 D4 Y) | T-K-Select-OBS **Cat B**; OP-0005-OBS partially resolved | +1B |
+| Appendix OMS (W6 D6) | OMS-2.0 Accepted — Full; §A–§M, 20+ theorem items | (Appendix) |
 
-**Prior CV-1.5 release summary (2026-04-27):**
-- **σ-framework supporting structures merged** (W5 Day 1 G0): T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4 — five Cat A entries grounding Commitment 14.
-- **Counts**: 38A → **43A**, 52 → **57 claims**, 73% → **75% fully proved**.
-- **T1 explosion**: 3 → **8** (each σ-supporting structure individually canonical-visible per Option α).
-- **Errata Round 1+2** (2026-04-27 evening/night): 3 substantive math errors fixed with embedded `*Erratum*`/`*Refinement*` markers; theorem status unchanged (all remain Cat A).
+**Entry state (W5 EOD):** 46A/5B/5C/5R = 61 claims.
+**W6 net delta:** +8A / +9B / +17 total claims.
 
-**CV-1.0 through CV-1.5.2 history (canonical release timeline):**
-- **CV-1.0** (2026-04-01): Initial spec, 11 Cat A + QM-1:4.
-- **CV-1.1** (2026-04-03): PLAN_0403 Tier 1 — 35 → 38 Cat A.
-- **CV-1.2** (2026-04-12): T-Persist-K-Unified added; F-1/M-1/MO-1 documented; honest recount → 35A/4B/5C/5R.
-- **CV-1.3** (2026-04-25): T-PreObj-1 family + Lemma 4 + F-1 split-resolution corollary. Critical blockers 3 → 0.
-- **CV-1.4** (2026-04-26): T-V5b-T canonical (Pre-Objective Goldstone on translation-invariant graphs).
-- **CV-1.5** (2026-04-27): σ-framework supporting structures (T-σ-Lemma-1/2/3 + T-σ-Theorem-3/4).
-- **CV-1.5.1** (2026-04-29): D-6a Multi-Static (3 Cat A) + Commitment 16 K-status + T-σ-Theorem-4 retroactive Cat A → Cat B + OP-0008/OP-0009 registered.
-- **CV-1.5.2** (2026-05-02): T-L1-F (Hard-Bar / Active-Count Bridge under L1-J Regime) Cat A conditional. First multi-formation canonical Cat A theorem.
+### New documents (W6)
 
-**CV-1.6 development (W6, 2026-05-04 ~ 2026-05-10 target):**
-- T-L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ (W5 Day 7 working draft, Cat B sketched; CV-1.6 promotion target via L1-M-AUDIT, W6 G1).
-- T-σ-Theorem-4 Cat B → Cat A re-promotion attempt (γ-path Σ_m-Hessian convention audit, W6 G3).
-- OP-0009-F + OP-0009-λ PARTIAL → READY (OAT-2/3 short integration, W6 G7).
-- 5 D-items READY/READY-NEAR + 5 PARTIAL caveat-based per W5 Day 5 reconciliation packet recalibration.
+- `THEORY/canonical/DECLARATION.md` — DECL-1.0: theory central axis, T8, Q1–Q6.
+- `THEORY/canonical/hypothesis_tree.md` — HT-3.0: dependency tree reorganized by Q1–Q6.
+- `THEORY/working/observer_moduli/` — OMS-2.0 full working package (30+ files, VP-1..VP-11).
 
-**CV-1.7 additions (W6 D4, 2026-05-06, Session I — P-F stochastic foundation):**
-- **T-P-F-ε0 (Gibbs Measure Continuity at ε=0) promoted to Cat A** (§13 Category A, this session). Weak convergence $\mu_\varepsilon\Rightarrow\mu_0$ on compact $\mathcal{F}_M(\mathcal{P})$ by dominated convergence; H1–H4 verified. Count: 48A → **49A** (§13: 48 + T-ST-5a in §16 = 49 total Cat A).
-- **T-P-F-ε0-K (Kramers Exponent Stability) promoted to Cat B** (§13 Category B, this session). $\Delta\mathcal{E}_\varepsilon=\Delta\mathcal{E}_0+\varepsilon\Delta R$; Target B vs Target A correction $\Gamma_B/\Gamma_A=\exp(O(\delta))$ in phase-separated regime; conditional on H5 Morse stability. Count: 12B → **13B**.
-- **Running total post-Session I: 49A/13B/5C/5R = 72 claims.** *(Updated Session K: T-OP6-B Cat B → Cat A → **50A/12B/5C/5R = 72 claims**. Updated Sessions M–N: T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B → **52A/14B/5C/5R = 76 claims, ~68% fully proved**. Updated Session P CV-1.9: T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A → **54A/12B/5C/5R = 76 claims, ~71% fully proved**.)*
-- **P-F-A1 axiom (v0) remains OPEN** — spectral gap + Lions-Sznitman reflection still required. T-P-F-ε0 is NOT P-F-A1.
-- CV-1.7 formal release pending: P-F-A1 Cat A (spectral gap + T_* registration).
+### Non-claims (mandatory)
 
-**What CV-1.5.2 means:**
-- **Single-formation theory is canonical-closed** — F-1/M-1/MO-1 no longer block publication; σ-framework grounded with supporting structures (Lemmas 1/2/3 + Theorems 3/4).
-- σ-framework provides empirical anchor (NQ-141 Cat A, R23 56 minimizer × 324 mode-ℓ pair, 0 exceptions) + theoretical scaffolding.
-- **Multi-formation count theory has its first canonical Cat A theorem** (T-L1-F): under L1-J regime $(P0)$–$(P11)$ on shared-pool $\widetilde\Sigma_M^{K_{\mathrm{field}}}$, hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}$ equals active-slot count $K_{\mathrm{act}}^\varepsilon$, with labelled bijection.
-- **NOT YET claimed**: global $K_{\mathrm{bar}}=K_{\mathrm{act}}$, global $K_{\mathrm{soft}}^\phi=K_{\mathrm{act}}$, K-selection mechanism (OP-0005), σ K-jump inheritance (OP-0008), reservoir theory promotion, vision/AI/robotics application.
+- T-Temporal-Identity / T-σ-Inherit: **working Cat B**, not yet canonical.
+- P-F-A1 Package II (Eyring–Kramers): OPEN — conditional on H5 + OP-0021 (T_* registration).
+- OP-0005-DYN: OPEN (W9+). OP-0008: Cat C. T_*: axiomatic (OP-0021).
+- OMS-2.0: Appendix OMS in canonical.md; theorem_status.md formal row addition pending.
 
-**Access:**
-- Full Version History: `theorem_status.md` §Canonical Spec Version History (CV-1.0..CV-1.5.2).
-- Per-merge session log: `THEORY/CHANGELOG.md` (entries chronological by date).
-- W4 detailed work: `THEORY/logs/weekly/2026-04-W4/weekly_summary.md`.
-- W5 strategic plan: `THEORY/logs/weekly/2026-04-W5/W5_strategic_plan.md`.
-- Daily session logs: `THEORY/logs/daily/YYYY-MM-DD/`.
+### Access
+
+- Full session log: `THEORY/CHANGELOG.md` (entries chronological, latest first).
+- Theorem index + Open Problems Catalog: `theorem_status.md`.
+- W6 weekly summary: `THEORY/logs/weekly/2026-05-W1/weekly_summary.md`.
 
 ---
-
 ## 0. Summation Convention
 
 All sums of the form $\sum_{x,y \in X_t}$ range over **ordered pairs**: each undirected edge is counted twice when the kernel is symmetric. This convention is load-bearing in the phase transition theorem (T8-Core) and the Hessian analysis. Where unordered-pair sums are intended, the notation $\sum_{\{x,y\}}$ is used explicitly, and the relationship $\sum_{\{x,y\}} f(x,y) = \frac{1}{2}\sum_{x,y} f(x,y)$ holds for symmetric $f$.

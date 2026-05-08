@@ -2,6 +2,33 @@
 
 ---
 
+## 2026-05-08 (W6 EOD) — Weekly close: CV-1.11 sealed + OMS-2.0 Full + documentation sync
+
+**Trigger:** W6 5-day close (2026-05-04~08). No new theorems. Documentation sync only.
+
+### Summary
+
+- **Weekly summary written:** `THEORY/logs/weekly/2026-05-W1/weekly_summary.md`.
+- **canonical.md DEVELOPMENT NOTICE replaced:** stale CV-1.5.2→CV-1.6 notice removed; replaced with CV-1.11 current-state release note (W6 highlights, non-claims, access pointers).
+- **theorem_status.md header updated:** `last_updated` 2026-05-07 → 2026-05-08; structure note updated with OMS-2.0, DECLARATION.md, HT-3.0 additions.
+- **Parent CLAUDE.md (Perception/) updated:** Status line updated to 78 claims / 54A/14B/5C/5R / CV-1.11 / OMS-2.0 / HT-3.0 / DECLARATION.md / next target CV-1.12.
+
+### W6 net state (entry → exit)
+
+| | Entry (05-04) | Exit (05-08) |
+|---|---|---|
+| Canonical version | CV-1.5.2 | **CV-1.11** |
+| Claims | 61 (46A/5B/5C/5R) | **78 (54A/14B/5C/5R)** |
+| OMS | — | **OMS-2.0 Accepted — Full** |
+| Theory navigation | HT-2.x | **HT-3.0 + DECLARATION.md** |
+| pytest | 215+1xfailed | **215+1xfailed (clean)** |
+
+### Next session
+
+**H-SINK** (Phase 1, unblocked): Bigot-Cazelles-Papadakis → $L_g \leq L_c$ in SCC cost class → T-Temporal-Identity (a,b,d) Cat A → CV-1.12 (+3A).
+
+---
+
 ## 2026-05-08 (W6 Day 6, Session 8) — OP-OMS-034 closure → **OMS-2.0 Accepted — Full**
 
 **Trigger:** User-mandated narrow-scope OP-OMS-034 closure session. Single goal: close the temporal extension to remove the last blocker for full OMS-2.0 Accepted. No broadening.
