@@ -247,3 +247,65 @@ Are the boundary faces of $\Delta^3$ (pure-energy observers) valid limiting perc
 **OP-OMS-013 — Stratified Gradient Flow at Corners** [OPEN]
 
 Is the projected gradient flow well-defined and convergent at corner strata (codimension $\geq 2$ faces) of $\Delta^3$? This requires analysis of the flow at simplicial corners, where the tangent cone is strictly smaller than a half-space.
+
+---
+
+## §8. OMS-1.2 patch (Session 5, 2026-05-08) — Branch-switching surfaces
+
+The **simplex stratification** of §2 (faces, edges, vertices of $\Delta^3$) is
+**topological**: it is intrinsic to $\Delta^3$ as a polytope. A second
+stratification is now in play, not topological but **dynamical**:
+
+> **Definition SD-OMS-1.2.** The **dynamical stratification** of $\Delta^3$
+> partitions $\mathrm{int}(\Delta^3) = \bigsqcup_\alpha \mathcal{B}_\alpha \sqcup \Sigma_{\mathrm{branch}}$
+> where each $\mathcal{B}_\alpha$ is an open subset of $\Delta^3$ on which
+> $u^*(\lambda)$ has a uniform branch identifier ($K_{\mathrm{core}}$, $n_{\mathrm{high}}$,
+> active set), and $\Sigma_{\mathrm{branch}}$ is the closed set of $\lambda$
+> on which the branch identifier flips for arbitrarily small perturbations.
+
+This is registered as OP-OMS-026 (mapping $\Sigma_{\mathrm{branch}}$
+explicitly). Within each open $\mathcal{B}_\alpha$, the projected gradient
+flow of $V$ is classically defined by Theorem R1 / R2 of
+`op_oms_018_regular_u_star.md`.
+
+### Filippov sliding-mode at $\Sigma_{\mathrm{branch}}$
+
+At a point $\lambda \in \Sigma_{\mathrm{branch}}$ between branches $\alpha$
+and $\alpha'$, $V$ has two one-sided gradients $\nabla V|_{\alpha}(\lambda)$
+and $\nabla V|_{\alpha'}(\lambda)$. The classical projected gradient flow is
+not defined. Following piecewise-smooth dynamical systems theory
+(Filippov, *Differential Equations with Discontinuous Right-Hand Side*),
+adopt the **convex-hull convention**:
+
+$$\dot \lambda \in -\Pi_{T_\lambda \Delta^3}\, \mathrm{conv}\bigl\{\nabla V|_{\alpha}(\lambda),\ \nabla V|_{\alpha'}(\lambda)\bigr\}.$$
+
+This is a differential inclusion. The flow exists in the Filippov sense
+(by upper hemicontinuity of the convex-hull right-hand side and the Hartman
+existence theorem for differential inclusions). The flow may slide along
+$\Sigma_{\mathrm{branch}}$ until it reaches a transverse exit.
+
+**Status.** **DEFINED**. Existence in the Filippov sense follows from
+standard differential-inclusion theory. Uniqueness, asymptotic behavior,
+and the relationship between Filippov solutions and within-branch
+attractors are **OPEN** (sub-problem of OP-OMS-013 generalized).
+
+### Two stratifications interact
+
+The simplex topological stratification (§2) and the dynamical stratification
+(SD-OMS-1.2) are independent:
+
+- The simplex faces $F_{cl}, F_{sep}, F_{bd}, F_{tr}$ are absorbing walls
+  (Prop SD1) — once $\lambda_i = 0$, the flow stays on the face.
+- The branch-switching set $\Sigma_{\mathrm{branch}}$ is generically
+  **transverse** to the simplex faces (e.g.\ the cl-dominant transition
+  on S4 is a slice through the interior near the cl-axis).
+- Their intersection (codim-2 sets where both apply) requires more careful
+  analysis; flag as a sub-OP under OP-OMS-013.
+
+### Computational evidence
+
+VP-6 (Run 2) flagged 2 stencils as branch-jumping (out of 42), localizing
+$\Sigma_{\mathrm{branch}}$ near $\{\lambda_{cl} \approx \lambda_{sep}\}$ on S3
+and on the cl-axis on S4. The path test (`vp6_u_star_regular_path_test.py`)
+provides directional evidence (paths that cross $\Sigma_{\mathrm{branch}}$
+exhibit $K_{\mathrm{core}} / n_{\mathrm{high}}$ flips at intermediate $t$).

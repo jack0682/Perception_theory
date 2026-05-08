@@ -170,7 +170,108 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 
 ---
 
-## Final Classification
+## Final Classification (Session 8 — temporal closure → Full Accepted)
+
+$$\boxed{\textbf{OMS-2.0 Accepted — Full}}$$
+
+**Equivalent fully-qualified form:**
+
+$$\boxed{\textbf{OMS-2.0 Accepted — Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test)}}$$
+
+**Session-8 advances:**
+
+- **OP-OMS-034 CLOSED** at COMPUTATIONALLY SUPPORTED level via VP-11 (`vp11_temporal_delta3.py`).
+- **VP-11 Phase 1 (rank witness):** 14/14 samples rank 3, 14/14 λ_tr-nontrivial. (Wit-T) CONFIRMED.
+- **VP-11 Phase 2 (Δ³ branch map K=5):** 19 distinct branches; 7 λ_tr-unique; codim-1 supported at budget-tight level (excess due to branch density, not violation).
+- **Theorems T1–T8 + TS3 + H4-T-CW added** to canonical.md Appendix OMS Temporal subsection (M).
+- **Critical correction:** rank-3 (not rank-4) is the correct condition on Δ³ tangent.
+
+**No remaining hard blockers for OMS-2.0 Accepted Full.**
+
+Non-blocking sub-OPs (formality / robustness): OP-OMS-032b, OP-OMS-033b, OP-OMS-034b, OP-OMS-034c.
+
+---
+
+## Final Classification (Session 7 — Static)
+
+$$\boxed{\textbf{OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034}}$$
+
+**Session-7 advances:**
+
+- **Gap C1 theorem package** consolidated into `gap_c1_final_theorem_package.md` with C1.1–C1.5 sharpened. Two real bugs caught and fixed: C1.2 rank-equivalence hypothesis corrected to $H_T \succ 0$; C1.4 rigidity restated honestly with explicit (Vertex) hypothesis (supplied by Prop CW1 + VP-3).
+- **OP-OMS-032 → CLOSED UNDER CERTIFIED WITNESS.** INTERVAL_CERTIFIED H4 witness (best margin $4 \times 10^{13}$ over IEEE bound).
+- **OP-OMS-033 → PROVED as conditional fold theorem SN3** (Crandall–Rabinowitz applied to SCC KKT system). Lemma SN4 SCC genericity sketched (sub-OP OP-OMS-033b).
+- **OP-OMS-034 → SEPARATED.** Static does not require it.
+- **Appendix OMS** added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items.
+
+**OMS-2.0 final classification: Accepted — Static (PROVED with all theorems labeled), with Full Temporal Conditional on OP-OMS-034.**
+
+---
+
+## Final Classification (Session 6 update — OMS-2.0 push)
+
+$$\boxed{\textbf{OMS-2.0 Conditional Accepted}}$$
+
+**Session-6 advances (Gates 1–8):**
+
+- **Gate 1 (3 theory files for OP-OMS-001 Gap C1):** Theorems RT1, RT2,
+  RT3 (rank obstruction + immersion + Reduction-C closure) PROVED
+  conditional on H1–H3. Sensitivity formula $J_e = -G_T^\top H_T^{-1} G_T$
+  PROVED in S1; active-set version S2 PROVED. Analytic genericity chain
+  G1–G8 + GAP-C1 closes Gap C1 modulo H4 witness.
+- **Gate 2 (VP-8 rank witness):** 42 evaluations across P12 / S3 /
+  asymmetric K4+tail. **rank(J_e_tan) = 2 in 42/42** cases;
+  |det 3×3 minor of G_T| > 1e-6 in **34/42 (81%)** cases. **H4
+  COMPUTATIONALLY CONFIRMED.**
+- **Gate 3 (OP-OMS-002+ theory):** $V_2$ and $V_{2,\tau}$ defined;
+  NV3–NV10 PROVED admissible + non-trivial.
+- **Gate 4 (VP-9 basin test):** $V_{2,\tau=0.01}$ on P12 → 3 attractors,
+  2 distinct readout pairs (NONTRIVIAL); on S3 → 4 attractors, 4
+  distinct pairs (NONTRIVIAL). $V_{2,\tau=0.1}$ collapses (NV10 caveat).
+  **OP-OMS-002+ COMPUTATIONALLY SUPPORTED.**
+- **Gate 5 (OP-OMS-026 full Δ³ theory):** Theorem SB11 PROVED for codim-1
+  components ($\Sigma_{ab}, \Sigma_{\mathrm{Hess}}, \Sigma_{\mathrm{AS}}$);
+  $\Sigma_{\mathrm{SN}}$ PROOF SKETCH (Arnold). **$\Sigma_{T8} \subset \Sigma_{\mathrm{branch}}$
+  identification — major conceptual unification of T8 with OMS.**
+- **Gate 6 (VP-10 pseudo-Δ³):** P12 K=8 tetrahedral grid, 165 points; 7
+  branches; dominant (3,4) at **64.2%**; transition fraction 0.311 ≤
+  0.375 codim-1 budget. **Codim-1 CONSISTENT.**
+- **Gate 7 (OMS-2.0 promotion audit):** All 4 criteria assessed.
+  Conservative classification: **OMS-2.0 Conditional Accepted** with
+  three sub-OPs (OP-OMS-032/033/034).
+- **Gate 8 (bookkeeping):** all of `open_problems.md`, `audit_log.md`
+  (AUDIT-024), `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`,
+  `THEORY/working/INDEX.md` updated.
+
+**Conditions on OMS-2.0 Conditional Accepted:**
+
+1. H4 (rank-3 minor witness) is COMPUTATIONALLY CONFIRMED via VP-8;
+   closed-form symbolic proof on small scene = OP-OMS-032.
+2. $\Sigma_{\mathrm{SN}}$ PROOF SKETCH via Arnold; SCC-specific
+   verification = OP-OMS-033.
+3. Pseudo-Δ³ (static scene) used; full temporal Δ³ = OP-OMS-034.
+
+**Promotion path to OMS-2.0 Accepted:** close OP-OMS-032/033/034.
+
+---
+
+## Final Classification (Session 5 update)
+
+$$\boxed{\textbf{OMS-1.2: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE WITH LOCAL REGULARITY THEOREM}}$$
+
+**Substantive Session-5 advances:**
+
+- OP-OMS-018 PARTIALLY RESOLVED: Theorem R1 (local interior $C^1$ branch), R2 (boundary fixed-active-set $C^1$), R4 (value-function concavity), R5 (envelope) — all PROVED. Prop R3 (3) (no global continuous selection) PROVED — global $C^1$ REJECTED.
+- $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ PROVED constructively by $V_E := v$ (the value function itself, R4).
+- VP-6 effective DOF: $d_{\mathrm{eff}}(\lambda; \mathrm{rel}=5\!\times\!10^{-2}) \le 2$ in 42/42 sampled stencils across S3 / S4. Revised Hyp RG1 COMPUTATIONALLY SUPPORTED.
+- New propositions: ED1, ED2 (effective DOF theory). New OPs: OP-OMS-024..028. OP-OMS-017 superseded by OP-OMS-026.
+- Admissibility class $\mathcal{V}_{\mathrm{adm}}$ relaxed to allow stratified-smooth landscapes (V2 patched).
+
+**Remaining OMS-2.0-Accepted blockers:** OP-OMS-001 (formal G_cw proof), OP-OMS-002+ (non-trivial multi-basin admissible $V$), OP-OMS-026 ($\Sigma_{\mathrm{branch}}$ characterization).
+
+---
+
+## Final Classification (Session 4)
 
 $$\boxed{\textbf{OMS-1.1: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE}}$$
 

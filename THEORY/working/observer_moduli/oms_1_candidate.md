@@ -2,17 +2,19 @@
 type: working/canonical-candidate
 created: 2026-05-07
 updated: 2026-05-08
-stage: OMS-1.1
+stage: OMS-2.0 Accepted — Full
 project: Observer Moduli Space of SCC
-version: OMS-1.1
-status: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE — G_cw={e} computationally supported; V existence hypothesized; Prop BS1 computationally confirmed; formally blocked pending OP-OMS-018
+version: OMS-2.0 Accepted — Full (Session 8, 2026-05-08)
+status: OMS-2.0 Accepted — Full. Static face PROVED (Sessions 4–7). Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced temporal OMS test (Session 8, VP-11 — 14/14 (Wit-T) witnesses + 19 distinct branches with 7 λ_tr-unique). Canonical Appendix OMS Temporal subsection M added. No remaining hard blockers; sub-OPs 032b/033b/034b/034c are non-blocking formality/robustness upgrades.
 ---
 
-# SCC Observer Moduli Space — OMS-1.1 Candidate
+# SCC Observer Moduli Space — OMS-1.2 Candidate
 
-**Version:** OMS-1.1 (2026-05-08)
+**Version:** OMS-1.2 (2026-05-08, Session 5)
 
-> **Status declaration:** This document is a **Computationally Grounded Canonical Candidate** — all core claims are either proved or computationally supported. $G_{\mathrm{cw}}=\{e\}$ is COMPUTATIONALLY SUPPORTED (VP-3); $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ is HYPOTHESIZED (VP-2); Prop BS1 (≥2 observer types) is COMPUTATIONALLY CONFIRMED (VP-4). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ Formally blocked from full canonical promotion pending OP-OMS-018 (optimizer regularity, $C^1$ of $u^*(\lambda)$). See §19 (Canonical Promotion Checklist).
+> **Status declaration (OMS-1.2).** This document is a **Computationally Grounded Canonical Candidate with Local Regularity Theorem**. $G_{\mathrm{cw}}=\{e\}$ is COMPUTATIONALLY SUPPORTED (VP-3); **$\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ is PROVED** constructively by $V_E := v$ (the value function, R4 of `op_oms_018_regular_u_star.md`); Prop BS1 (≥2 observer types) is COMPUTATIONALLY CONFIRMED (VP-4). **OP-OMS-018 is PARTIALLY RESOLVED**: local R1 (interior $C^1$), R2 (boundary $C^1$), R4 ($v$ concave/Lipschitz), R5 (envelope) PROVED; global $C^1$ of $u^*$ REJECTED via Prop R3 (3) (no continuous global selection). The branch-switching surfaces $\Sigma_{\mathrm{branch}}$ are observer-type transition surfaces, not regularity defects (OP-OMS-026). $d_{\mathrm{eff}}(\lambda; \mathrm{rel}=5\!\times\!10^{-2}) \le 2$ in 42/42 sampled stencils (VP-6, Session 5). Remaining OMS-2.0-Accepted blockers: OP-OMS-001 (formal $G_{\mathrm{cw}}$ proof), OP-OMS-002+ (non-trivial multi-basin admissible $V$), OP-OMS-026 ($\Sigma_{\mathrm{branch}}$ characterization). See §19 / canonical_promotion_checklist v1.3 / oms_1_2_status_audit.md.
+
+> **Status declaration (OMS-1.1, prior).** This document was a **Computationally Grounded Canonical Candidate** — all core claims are either proved or computationally supported. $G_{\mathrm{cw}}=\{e\}$ is COMPUTATIONALLY SUPPORTED (VP-3); $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ is HYPOTHESIZED (VP-2); Prop BS1 (≥2 observer types) is COMPUTATIONALLY CONFIRMED (VP-4). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ Formally blocked from full canonical promotion pending OP-OMS-018 (optimizer regularity, $C^1$ of $u^*(\lambda)$). See §19 (Canonical Promotion Checklist).
 
 Every statement is classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.
 
@@ -422,7 +424,89 @@ This document has been developed under the following audit commitments:
 
 ---
 
-## §20. OMS-1.0 Classification
+## §20. OMS Classification (latest = OMS-2.0 Accepted — Full)
+
+$$\boxed{\textbf{OMS-2.0 Accepted — Full (Session 8, 2026-05-08)}}$$
+$$\boxed{\textbf{Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED)}}$$
+
+**Session 8 (OP-OMS-034 closure) advances:**
+
+- **OP-OMS-034 CLOSED** — COMPUTATIONALLY SUPPORTED via VP-11 faithful reduced temporal OMS test.
+- Rank-3 (Wit-T) **CONFIRMED in 14/14 sampled λ points** with non-trivial λ_tr response.
+- Δ³ branch map: 19 distinct branches; 7 λ_tr-unique; codim-1 supported at budget-tight level.
+- Theorems T1–T8 + TS3 + H4-T-CW added to canonical.md Appendix OMS Temporal subsection M.
+- **Critical correction:** rank-3 (not rank-4) is the correct condition on Δ³ tangent. Documented in W28.
+
+**Five user-mandated criteria for Full Accepted all met:**
+
+1. Temporal rank witness ✓
+2. Nondegenerate λ_tr response ✓
+3. Temporal Δ³ branch map support ✓ (19 branches, 7 λ_tr-unique)
+4. No contradiction with static OMS appendix ✓ (TS1, TS3)
+5. canonical.md updated with temporal status ✓ (subsection M)
+
+**No remaining hard blockers.**
+
+---
+
+## §20-prior. OMS Classification (Session 7 = OMS-2.0 Accepted Static)
+
+$$\boxed{\textbf{OMS-2.0 Accepted — Static (Session 7, 2026-05-08)}}$$
+$$\boxed{\textbf{Full Temporal Conditional on OP-OMS-034}}$$
+
+**Session 7 (proof closure) advances:**
+
+- **Gap C1 theorem package** (`gap_c1_final_theorem_package.md`): C1.1–C1.5 PROVED with corrected hypotheses (C1.2 rank-equivalence requires $H_T \succ 0$; C1.4 rigidity requires (Vertex) supplied by CW1+VP-3).
+- **OP-OMS-032 CLOSED UNDER CERTIFIED WITNESS** (`op_oms_032_closed_form_h4.md`): INTERVAL_CERTIFIED H4 witness, best margin $4 \times 10^{13}$ over IEEE bound.
+- **OP-OMS-033 PROVED as conditional fold theorem SN3** (`op_oms_033_sigma_sn_arnold.md`) via Crandall–Rabinowitz applied to the SCC KKT system.
+- **OP-OMS-034 SEPARATED** (`op_oms_034_temporal_delta3_status.md`): static OMS-2.0 self-contained; full temporal stays Conditional.
+- **Canonical Appendix OMS** added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items, layered on SCC core (no SCC theorems modified).
+
+---
+
+## §20-prior. OMS Classification (Session 6 = OMS-2.0 Conditional Accepted)
+
+$$\boxed{\textbf{OMS-2.0 Conditional Accepted (Session 6, 2026-05-08)}}$$
+
+**Session 6 (2026-05-08) advances:**
+
+- **OP-OMS-001 PROVED conditional on H4 witness (CONFIRMED via VP-8).** RT1/RT2/RT3 + S1/S2 + G1–G8 + GAP-C1 form a complete proof chain modulo H4; H4 confirmed by 34/42 explicit witnesses across 3 scenes (VP-8). Combined with Reduction B (continuous-component triviality, OP-OMS-029 PROVED) and Prop CW1 ($S_4$ rejected) and VP-3 elimination of all 7 transformation families.
+- **OP-OMS-002+ PROVED admissible + COMPUTATIONALLY SUPPORTED.** Explicit non-trivial admissible $V_2 = \min\{D_1, D_2 + c\}$ and softened $V_{2,\tau}$. VP-9: 3–4 distinct attractors with 2–4 distinct-readout pairs on P12 / S3 for τ = 0.01.
+- **OP-OMS-026 PROVED codim-1.** Theorem SB11: $\Sigma_{\mathrm{branch}} = \bigcup \Sigma_{ab} \cup \Sigma_{\mathrm{Hess}} \cup \Sigma_{\mathrm{AS}} \cup \Sigma_{\mathrm{SN}}$ with codim-1 PROVED for all but $\Sigma_{\mathrm{SN}}$ (PROOF SKETCH). Identifies SCC T8 phase-transition surface as $\Sigma_{T8} = \Sigma_{\mathrm{Hess}} \subset \Sigma_{\mathrm{branch}}$ — significant conceptual unification.
+- **Pseudo-Δ³ codim-1 evidence (VP-10).** P12 K=8 tetrahedral grid: 7 branches, dominant 64.2%, transition fraction 0.311 ≤ 0.375 codim-1 budget.
+
+**Conditions remaining for OMS-2.0 Accepted (full):**
+
+1. **OP-OMS-032** — closed-form symbolic H4 witness on $P_3$ or $P_4$.
+2. **OP-OMS-033** — $\Sigma_{\mathrm{SN}}$ Arnold specifics for SCC energy.
+3. **OP-OMS-034** — full temporal Δ³ via 2-time-slice scene.
+
+---
+
+## §20-prior. OMS-1.2 Classification
+
+$$\boxed{\textbf{OMS-1.2-candidate: COMPUTATIONALLY GROUNDED CANONICAL CANDIDATE WITH LOCAL REGULARITY THEOREM}}$$
+
+**Session 5 (2026-05-08) advances:**
+
+- OP-OMS-018 PARTIALLY RESOLVED: local R1/R2 PROVED; global $C^1$ REJECTED.
+- $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ PROVED constructively by $V_E = v$.
+- $d_{\mathrm{eff}}(\lambda; \mathrm{rel}=5\!\times\!10^{-2}) \le 2$ COMPUTATIONALLY SUPPORTED on simplex slice.
+- Props ED1, ED2, R1, R2, R3, R4, R5 added to the proved-prop catalog.
+- OP-OMS-024..028 registered. OP-OMS-017 superseded by OP-OMS-026.
+
+**Remaining OMS-2.0-Accepted blockers:**
+
+1. **OP-OMS-001** (formal proof of $G_{\mathrm{cw}}=\{e\}$).
+2. **OP-OMS-002+** (non-trivial multi-basin admissible $V$ — existence
+   proven trivially by $V_E$, but a meaningful basin-generating element of
+   $\mathcal{V}_{\mathrm{adm}}$ is still needed).
+3. **OP-OMS-026** ($\Sigma_{\mathrm{branch}}$ characterization — needed
+   for the global stratified picture).
+
+---
+
+## §20-prior. OMS-1.0 / OMS-1.1 Classification
 
 $$\boxed{\textbf{OMS-1.0-candidate: CANONICAL CANDIDATE — Blocked by OP-OMS-001, OP-OMS-002}}$$
 

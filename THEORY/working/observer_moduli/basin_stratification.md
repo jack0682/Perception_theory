@@ -266,3 +266,46 @@ These transitions are **predicted by OMS** without requiring changes to the unde
 ### Mandatory central sentence (reaffirmed)
 
 > **Perceptual types are not connected components of the observer moduli space; they are attractor basins or basin strata of an admissible observer landscape on that space.**
+
+---
+
+## §11. OMS-1.2 patch (Session 5, 2026-05-08)
+
+Following the partial resolution of OP-OMS-018 (`op_oms_018_regular_u_star.md`)
+and the VP-6 effective DOF results (`vp6_effective_dof.md`), the basin
+stratification is read in the **stratified-smooth** sense:
+
+> **Remark BS-OMS-1.2.** The basins are *open subsets of regular branches*
+> in the stratification $\Delta^3 = \mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}} \sqcup \Sigma_{\mathrm{branch}}$.
+> The basin boundaries are the union of:
+>
+> 1. **Within-branch saddle separatrices** — classical Morse boundaries
+>    (level set through a non-degenerate saddle of $V$ inside an open branch).
+> 2. **Between-branch transition surfaces** — codim-1 surfaces $\Sigma_{\mathrm{branch}}$
+>    where $u^*(\lambda)$ exchanges branches (Prop R3 (3) of
+>    `op_oms_018_regular_u_star.md`); these correspond to discrete jumps in
+>    $K_{\mathrm{core}}$ / $n_{\mathrm{high}}$ and hence in the topological signature
+>    component of $P_{\mathrm{top}}$.
+>
+> The two contributions are conceptually distinct:
+> (1) is a feature of $V$, (2) is a feature of the underlying SCC optimizer.
+> In OMS-1.2 both contribute codim-1 separators between perceptual types.
+
+**Computational evidence.** The cl-dominant transition on S4 (VP-4: cl-dom
+gives $n_{\mathrm{high}}=0$, others $n_{\mathrm{high}}=5$) is a between-branch
+transition. The VP-6 BRANCH-JUMP at `S_cl_eq_sep` near $\{\lambda_{cl}=\lambda_{sep}\}$
+on S3 localizes another such surface. Within-branch Morse boundaries are
+predicted by Prop BS1's construction but not yet computationally mapped.
+
+**Prop BS1 stays valid.** Prop BS1's construction
+$\bar V(\lambda) = \|\lambda - \lambda^{(1)}\|^2 \cdot \|\lambda - \lambda^{(2)}\|^2$
+gives a *within-branch* basin-separator example. The S3 / S4 VP-1+VP-4
+evidence adds the *between-branch* type to the picture. Both are valid
+realizations of "$\ge 2$ basins on connected $\mathfrak{M}$".
+
+**Implication for OP-OMS-011 (basin stability).** Stability under scene
+perturbation must be analyzed separately for the two boundary types:
+within-branch Morse saddles are structurally stable (Palis–Smale);
+between-branch transitions are **bifurcation surfaces** and may move
+continuously with the scene (the spinodal threshold $\beta/\alpha = 4\lambda_2 / |W''(c)|$
+shifts with $\lambda_2(X_t)$).

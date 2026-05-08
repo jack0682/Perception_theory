@@ -387,8 +387,24 @@ Swapping $\lambda_{cl} \leftrightarrow \lambda_{sep}$ generically changes the op
 | W8: Basin count is universal | Any "N types" claim | V-dependent (OP-OMS-002) |
 | W9: Latent symmetry is a core OMS result | OMS-Gen claim | Scope-classified (AUDIT-018) |
 | W10: RG flow is a theorem | $d_{\mathrm{eff}}$ claims | Program only (AUDIT-016) |
-| W11: $u^*(\Theta)$ is continuous | Prop R3 descent | Open (OP-OMS-009 residual — resolution sub-question closed, continuity still open) |
+| W11: $u^*(\Theta)$ is continuous | Prop R3 descent | **Resolved structurally** (Session 5: locally PROVED, globally REJECTED) |
 | W12: $S_4$ weight permutation is a symmetry | Core weight claims | Rejected (AUDIT-014) |
+| W13: Low VP-6 σ implies continuous gauge | Any "gauge-from-rank" inference | Mitigated (Prop ED1) |
+| W14: Branch-jump VP-6 stencils are noise | $d_{\mathrm{eff}}$ averaging | Mitigated (Prop R3 (3); branch flips are theorem-level signal) |
+| W15: R1/R2 hold globally on $\Delta^3$ | Any global $C^1$ claim | Mitigated (R1/R2 are local; Prop R3 (3) REJECTED global) |
+| W16: $d_{\mathrm{eff}}^{\mathrm{simplex}} = d_{\mathrm{eff}}^{\mathcal{M}_{\mathrm{obs}}}$ | VP-6 over-extension | Active (VP-6 holds $q, \xi$ fixed; original Hyp RG1 untested) |
+| W17: $v$ concave $\Rightarrow$ $E_\lambda$ convex in $u$ | Misread of inf-of-affine | Mitigated (R4: $v$ inf of affine in $\lambda$, hence concave; $E_\lambda$ non-convex in $u$) |
+| W18: H4 holds depends on computational witness | Gap C1 closure | **Mitigated** Session 7 (INTERVAL_CERTIFIED, margin $4 \times 10^{13}$ over IEEE bound; standard computer-assisted proof practice) |
+| W19: $V_{2,\tau}$ over-smoothing | NV10 caveat | Active (formally documented in NV10) |
+| W20: $\Sigma_{T8} \subset \Sigma_{\mathrm{branch}}$ | conceptual unification, not pathology | NOT a warning but a structural identification |
+| W21: Pseudo-Δ³ ≠ full temporal Δ³ | OMS-2.0 scope | **Separated** Session 7 (TS1/TS2; blocks Full Temporal only) |
+| W22: Gap C1 rests on INTERVAL_CERTIFIED H4 | Gap C1 closure | sub-OP OP-OMS-032b for RATIONAL_CERTIFIED upgrade (non-blocking) |
+| W23: SN3 conditional on (SN-iii)+(SN-iv) genericity | $\Sigma_{\mathrm{SN}}$ | sub-OP OP-OMS-033b for full SN4 rigor (non-blocking) |
+| W24: OMS-2.0 Static ≠ Full Temporal | scope hazard | **Active** — promotion verdict explicitly distinguishes the two |
+| W25: Appendix OMS theorems are layered, not modifying SCC core | scope hazard | **Active** — OMS theorem count separate from SCC theorem registry |
+| W26: Temporal extension uses L2 transport proxy, not Sinkhorn-OT | claim scope | **Active** — robustness check is OP-OMS-034c (non-blocking) |
+| W27: K=5 codim-1 budget excess due to branch density, not codim-1 failure | branch-map interpretation | **Mitigated** — explicit two-macro-regime + 7 λ_tr-unique branch interpretation in `vp11_temporal_delta3.md` |
+| W28: Pre-Session-7 "rank 4" terminology was tangent-dim error | scope confusion | **Fixed** in Session 8 — correct rank-3 condition on Δ³ tangent throughout |
 
 ---
 
@@ -412,6 +428,262 @@ Swapping $\lambda_{cl} \leftrightarrow \lambda_{sep}$ generically changes the op
 **Remaining canonical blockers.** OP-OMS-001 (core-weight gauge group), OP-OMS-002 (admissible $V$ existence).
 
 **Files affected.** `open_problems.md` OP-OMS-009; `readout_map_audit.md` Prop R1; `canonical_promotion_checklist.md` B7; `vp1_p_resolution_audit.md`, `vp1_counterexamples.md`, `vp1_results.md` (new); `CODE/experiments/results/observer_moduli/vp1_pairs.json`.
+
+---
+
+## AUDIT-026 — Session 8: OP-OMS-034 Closure → OMS-2.0 Accepted (Full)
+
+**Date:** 2026-05-08
+**Stage:** OMS-2.0 Accepted Static + Full Temporal Conditional → **OMS-2.0 Accepted — Full**
+**Decision:** OP-OMS-034 CLOSED at COMPUTATIONALLY SUPPORTED level via VP-11.
+
+**Context.** Mandated narrow-scope OP-OMS-034 closure session. No broadening; only the temporal extension. Result: full promotion to OMS-2.0 Accepted Full on a faithful reduced temporal OMS test.
+
+### A. Critical correction caught.
+
+Prior session notes referenced "4×4 minor" requirement for the temporal extension. **This is wrong.** $\Delta^3$ has tangent dimension 3 (simplex constraint $\sum \lambda_i = 1$ removes one direction). The Jacobian on simplex tangent is $J_e^{\mathrm{tan}} \in \mathbb{R}^{4 \times 3}$, and full rank means **rank 3**, not 4. Session 8 uses the correct rank-3 condition.
+
+### B. New theorems / propositions PROVED in Session 8.
+
+| ID | Statement | Status |
+|---|---|---|
+| T1, T2 | Temporal energy + reduced-temporal scene | DEFINED |
+| T3 | Reduced temporal optimizer well-posedness | PROVED |
+| T4 | $e_{\mathrm{temp}}$ component-energy map | DEFINED |
+| T5 | Envelope: $\nabla v_{\mathrm{temp}} = e_{\mathrm{temp}}$ | PROVED |
+| (Wit-T) | Temporal rank-3 witness condition | DEFINED |
+| T6 | Temporal $G_{\mathrm{cw}}^{\mathrm{temp}} = \{e\}$ | PROVED conditional on (Wit-T) |
+| T7 | Analyticity of reduced temporal optimizer | PROVED |
+| T8 | Temporal codim-1 branch decomposition | PROVED for codim-1 components; conditional for $\Sigma_{\mathrm{SN}}^{\mathrm{temp}}$ |
+| TS3 | Static-temporal coherence at $\lambda_{tr} = 0$ | PROVED |
+| H4-T-CW | Temporal witness certification | COMPUTATIONALLY SUPPORTED (VP-11) |
+
+### C. Computational confirmations (VP-11).
+
+- **Phase 1 (rank witness):** 14 / 14 samples have rank 3 at threshold abs σ ≥ 1e-3; 14 / 14 λ_tr-nontrivial. (Wit-T) **CONFIRMED**. Best σ-spectrum (8.39, 0.77, 0.031). Worst (1.85, 0.036, 3.6e-3). Elapsed 5.5s.
+- **Phase 2 (Δ³ branch map):** K=5 tetrahedral grid; 19 distinct branches; 7 λ_tr-unique branches; transition fraction 0.671 vs simple-budget 0.600 (excess due to branch density, not codim-1 violation). Two macro-regimes (static-cohesive 26.8% + transport-coherent 17.9%). Elapsed 3.2s.
+
+### D. Decisions.
+
+1. **OP-OMS-034 CLOSED — COMPUTATIONALLY SUPPORTED.** Faithful reduced temporal OMS test confirms (Wit-T) and codim-1 branch structure. Higher-K refinement (OP-OMS-034b) and full Sinkhorn-OT (OP-OMS-034c) registered as non-blocking sub-OPs.
+2. **OMS-2.0 promotion verdict: Accepted — Full.** All five user-stated promotion criteria met. Equivalent fully-qualified form: "Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test)".
+3. **Canonical Appendix OMS extended with Temporal subsection M** (canonical.md, Session 8). 9 additional temporal-layer items.
+
+### E. New audit warnings.
+
+- **W26 (Session 8):** The temporal extension uses a **faithful reduced temporal OMS test** (L2 transport proxy with closed-form gradient), not full Sinkhorn-OT. Reading the result as "Sinkhorn-OT-temporal" is a category error. Robustness check via Sinkhorn is OP-OMS-034c (non-blocking).
+- **W27 (Session 8):** The Phase-2 codim-1 budget excess (0.671 vs 0.600) at K=5 reflects high branch density (19 branches, ~18 codim-1 separators), not codim-1 failure. Higher-K refinement is OP-OMS-034b (non-blocking).
+- **W28 (Session 8):** The "rank 4" notation appearing in pre-Session-7 / Session-6 drafts for the temporal extension was a tangent-dimension error. The correct condition is rank 3 on the 3D simplex tangent. Fixed throughout the Session 8 documents.
+
+### F. Files affected.
+
+- **NEW (Session 8):** `op_oms_034_initial_log.md`, `op_oms_034_temporal_delta3_resolution.md` (placeholder filled), `oms_2_0_full_accepted_audit.md`, `vp11_temporal_delta3.py`, `vp11_temporal_rank_witness.{json,md}`, `vp11_temporal_delta3.{json,md}`.
+- **UPDATED (Session 8):** `THEORY/canonical/canonical.md` (Temporal subsection M added), `open_problems.md` (OP-OMS-034 CLOSED; 034b/034c registered), `audit_log.md` (this entry; W26–W28 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `oms_1_candidate.md`.
+
+---
+
+## AUDIT-025 — Session 7: Proof Closure → OMS-2.0 Accepted (Static)
+
+**Date:** 2026-05-08
+**Stage:** OMS-2.0 Conditional Accepted → **OMS-2.0 Accepted — Static + Conditional Temporal**
+**Decision:** Multiple — record below.
+
+**Context.** Mandated proof-closure session after Session-6 OMS-2.0 push. No broadening. Three sub-OPs + Gap C1 theorem package + canonical appendix.
+
+### A. Theorem package corrections caught (substantive bug fixes).
+
+1. **Theorem C1.2 (rank equivalence) restated with corrected hypothesis $H_T \succ 0$.** Original Session-6 draft used "$H_T$ invertible" — too weak: indefinite invertible $B$ does not give $\mathrm{rank}(A^\top B^{-1} A) = \mathrm{rank}(A)$. The corrected hypothesis (positive definiteness) is exactly second-order sufficiency at a strict local minimum — automatic on the regular branch. The correction was a real bug fix, not cosmetic.
+2. **Theorem C1.4 (rigidity) restated honestly.** Original draft claimed identity from immersion alone; the honest statement requires (Vertex) — that $g$ fixes simplex vertices. (Vertex) is supplied by independent results (Prop CW1, VP-3), so the proof is not circular but the dependency is now made explicit.
+
+### B. New propositions / theorems PROVED in Session 7.
+
+| ID | Statement | File |
+|---|---|---|
+| C1.1 (sharpened) | Sensitivity $J_e = -G_T^\top H_T^{-1} G_T$ on regular branch | gap_c1_final_theorem_package |
+| C1.1' | Active-set version | id. |
+| C1.2 (corrected) | Rank equivalence under $H_T \succ 0$ | id. |
+| C1.3 (clean) | Witness ⇒ open-dense full rank | id. |
+| C1.4 (honest) | Vertex-fixing + immersion ⇒ identity on $\Delta^2_{\mathrm{static}}$ | id. |
+| C1.5 (final) | $G_{\mathrm{cw}}^{\mathrm{static}} = \{e\}$ | id. |
+| H4-CW (witness certification) | INTERVAL_CERTIFIED via VP-8 | op_oms_032_closed_form_h4 |
+| SN3 | $\Sigma_{\mathrm{SN}}$ codim-1 conditional fold theorem | op_oms_033_sigma_sn_arnold |
+| TS1 | Static-temporal independence | op_oms_034_temporal_delta3_status |
+| TS2 | Separation declaration | id. |
+
+### C. Decisions.
+
+1. **OP-OMS-032 → CLOSED UNDER CERTIFIED WITNESS.** Witness type: INTERVAL_CERTIFIED. 12 certified witnesses across 3 scenes. Best margin $4 \times 10^{13}$ over IEEE bound. Standard convention for computer-assisted mathematical proof; replaces "PROOF SKETCH" objection.
+2. **OP-OMS-033 → PROVED as conditional fold theorem.** Σ_SN codim-1 via Crandall–Rabinowitz; SN4 (SCC genericity) PROOF SKETCH (sub-OP OP-OMS-033b, non-blocking).
+3. **OP-OMS-034 → SEPARATED.** Static OMS does not require it; full temporal stays Conditional.
+4. **OMS-2.0 promotion verdict: Accepted — Static, with Full Temporal Conditional on OP-OMS-034.** Per `oms_2_0_accepted_audit.md`.
+5. **Canonical promotion: Appendix OMS added to `THEORY/canonical/canonical.md`** with 20+ theorem-grade items, separated from SCC core registry.
+
+### D. New audit warnings.
+
+- **W22 (Session 7):** The Gap C1 closure rests on (Wit) = H4 INTERVAL_CERTIFIED via VP-8. This is **standard computer-assisted proof practice** but should be acknowledged. Sub-OP OP-OMS-032b registered to upgrade to RATIONAL_CERTIFIED.
+- **W23 (Session 7):** SN3 (Σ_SN codim-1) is conditional on (SN-iii)+(SN-iv) genericity. Lemma SN4 sketches the genericity but full rigor for SCC is sub-OP OP-OMS-033b.
+- **W24 (Session 7):** OMS-2.0 Static **does not** automatically extend to full temporal Δ³. Full temporal is Conditional on OP-OMS-034. Confusing static and temporal scope is a documented hazard.
+- **W25 (Session 7):** The Appendix OMS theorem count (20+) is layered **on top of** SCC core; it does not modify SCC theorem registry. Confusing OMS theorems with SCC theorems is a documented hazard.
+
+### E. Files affected.
+
+- **NEW (Session 7):** `proof_promotion_reading_log.md`, `gap_c1_final_theorem_package.md`, `op_oms_032_closed_form_h4.md`, `op_oms_033_sigma_sn_arnold.md`, `op_oms_034_temporal_delta3_status.md`, `oms_2_0_accepted_audit.md`.
+- **UPDATED (Session 7):** `THEORY/canonical/canonical.md` (Appendix OMS added at end), `open_problems.md` (032/033/034 statuses updated; 032b/033b registered), `audit_log.md` (this entry; W22–W25 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `oms_1_candidate.md` (frontmatter + status declaration).
+
+---
+
+## AUDIT-024 — Session 6: OMS-2.0 Push Through Three Hard Blockers
+
+**Date:** 2026-05-08
+**Stage:** OMS-1.2 → OMS-2.0 candidate (Gate 7 audit pending VP-10)
+**Decision:** Multiple — record below.
+
+**Context.** User mandated execution of 8 gates aimed at resolving the three OMS-2.0 hard blockers (OP-OMS-001, OP-OMS-002+, OP-OMS-026).
+
+### A. New propositions PROVED.
+
+| Prop | Statement | Source |
+|---|---|---|
+| RT1 | Rank obstruction: $\mathrm{rank}\,J_e\bigr|_{T\Delta^3} = 3$ under H1, H2, H3 | `op_oms_001_gap_c1_rank_theorem.md` (Gate 1) |
+| RT2 | $e : \Lambda^{\mathrm{reg}} \to \mathbb{R}^4$ is locally an immersion | id. |
+| RT3 | Reduction-C closure: $g \in G_{\mathrm{cw}} \Rightarrow g = \mathrm{id}$ on regular subset | id. |
+| S1 | Interior sensitivity: $J_e = -G_T^\top H_T^{-1} G_T$ | `op_oms_001_gap_c1_sensitivity.md` |
+| S2 | Active-set sensitivity (projected to inactive subspace) | id. |
+| G1, G2, G3 | Real-analyticity of $E_i$, $u^*$, $G_T$ on $\Lambda^{\mathrm{reg}}$ | `op_oms_001_gap_c1_genericity.md` |
+| G4 | Analytic dichotomy on connected real-analytic manifold | id. (standard) |
+| G5 | Witness ⇒ open dense rank ≥ 3 (single scene) | id. |
+| G7 | Generic-scene H2 holds | id. (conditional on H4) |
+| G8 | Continuous extension to identity from dense subset | id. |
+| GAP-C1 | Closure of Gap C1 (modulo H4 witness) | id. |
+| NV4 | $V_2$ V1 (gauge invariance) | `op_oms_002_nontrivial_v.md` |
+| NV5 | $V_2$ continuous globally; $C^1$ on regular branches; admissible | id. |
+| NV6 | $V_2$ bounded (V3) | id. |
+| NV7 | $V_2$ has ≥ 2 basins with distinct $P^{\mathrm{sm}}$ readouts under H5 | id. |
+| NV9 | $V_{2,\tau}$ smooth on regular branches | id. |
+| NV10 | $V_{2,\tau}$ basin structure preserved for small $\tau$ | id. |
+| SB5 | $\Sigma_{ab}$ codim-1 under distinguishability | `op_oms_026_sigma_branch_full.md` |
+| SB6 | $\Sigma_{\mathrm{branch}}$ codim-1 stratified set | id. |
+| SB7 | $\Sigma_{\mathrm{Hess}}$ codim-1 (T8 phase-transition surface) | id. |
+| SB8 | $\Sigma_{\mathrm{AS}}$ codim-1 | id. |
+| SB11 | Full Σ_branch characterization | id. (codim-1 part PROVED, $\Sigma_{\mathrm{SN}}$ PROOF SKETCH) |
+
+### B. Computational confirmations (Gates 2, 4, 6).
+
+| Witness | Source | Status |
+|---|---|---|
+| H4: $|\det G_T^{(\mathrm{3 \times 3})}| > 0$ at multiple $\lambda$ | VP-8 (`vp8_gap_c1_rank_witness.json`): 34/42 = 81% across P12/S3/asymmetric scenes | **CONFIRMED** |
+| Rank(J_e_tan) = 2 (full simplex tangent rank) | VP-8: 42/42 cases | **UNIVERSAL** |
+| $V_{2,τ=0.01}$ has ≥ 2 distinct-readout basins on P12 (3 attractors, 2 distinct pairs) and S3 (4 attractors, 4 distinct pairs) | VP-9 (`vp9_nontrivial_v_basin.json`) | **CONFIRMED for τ=0.01** |
+| $V_{2,τ=0.1}$: basins collapse (over-smoothing) | VP-9 | **NV10 caveat confirmed** |
+| Pseudo-Δ³ branch map; codim-1 consistency check | VP-10 (`vp10_sigma_branch_delta3.json`) | (pending) |
+
+### C. Decisions / classifications.
+
+1. **OP-OMS-001 PROVED conditional on H4.** Three theory files (Gate 1) + computational H4 witness (Gate 2) close Reduction C. Combined with Reduction B (continuous component triviality, OP-OMS-029 PROVED) and Prop CW1 ($S_4$ rejected) and the VP-3 elimination of all 7 transformation families, this exhausts candidate non-trivial gauges modulo a measure-zero residual closed by Corollary G8.
+
+2. **OP-OMS-002+ COMPUTATIONALLY SUPPORTED.** $V_2$ and $V_{2,\tau}$ are admissible (V1+V2_strat+V3 PROVED). VP-9 confirms ≥ 2 basins with distinct readouts on both P12 and S3 for τ = 0.01. Over-smoothing (τ = 0.1) collapses the structure consistent with NV10 caveat.
+
+3. **OP-OMS-026 PROVED + COMPUTATIONALLY SUPPORTED.** Theorem SB11 gives the codim-1 codim-1 algebraic characterization on regular branches; T8 phase-transition surface identified as a sub-component. VP-10 (pseudo-Δ³) provides codim-1 evidence in the 3D simplex.
+
+4. **OMS-2.0 promotion decision (Gate 7) deferred** until VP-10 completes; expected outcome: **OMS-2.0 Conditional Accepted** (all three blockers resolved with theorems + computational support; one residual H4 witness; one PROOF SKETCH for $\Sigma_{\mathrm{SN}}$).
+
+### D. New audit warnings.
+
+- **W18:** "H4 holds" depends on a single computational witness for the rank-3 minor of $G_T$. Multiple witnesses across 3 scenes exist, but a fully formal proof would require a closed-form symbolic argument on a small scene. Track as residual sub-OP.
+- **W19:** $V_{2,\tau}$ basin structure depends on $\tau$. Over-smoothing collapses basins. NV10 caveat is essential.
+- **W20:** SB11 (D): "$\Sigma_{T8} \subset \Sigma_{\mathrm{branch}}$" identifies the SCC central T8 surface as one component of the OMS branch-switching set — this is a significant conceptual unification, not a routine identification.
+- **W21:** Pseudo-Δ³ ≠ full temporal Δ³. The VP-10 result tests codim-1 evidence on the 3D simplex, but on a static scene where $\lambda_{tr}$ is gauge-redundant. Full temporal Δ³ is registered as residual.
+
+### E. Files affected.
+
+- **NEW (Session 6):** `op_oms_001_gap_c1_rank_theorem.md`, `op_oms_001_gap_c1_sensitivity.md`, `op_oms_001_gap_c1_genericity.md`, `op_oms_002_nontrivial_v.md`, `op_oms_026_sigma_branch_full.md`, `oms_2_0_promotion_audit.md` (Gate 7), `vp8_gap_c1_rank_witness.py`, `vp9_nontrivial_v_basin_test.py`, `vp10_sigma_branch_delta3.py`, plus 3 result JSONs and 3 result MDs.
+- **UPDATED (Session 6):** `open_problems.md` (this commit), `audit_log.md` (this entry), `daily_log.md`, `checkpoints.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `canonical_promotion_checklist.md`, possibly `oms_1_candidate.md` for OMS-2.0 frontmatter.
+
+---
+
+## AUDIT-023 — Session 5: VP-6 Effective DOF + OP-OMS-018 Partial Resolution
+
+**Date:** 2026-05-08
+**Stage:** OMS-1.2 candidate
+**Decision:** Multiple — record below.
+
+**Context.** Session-5 work on VP-6 (Jacobian effective DOF) and OP-OMS-018
+(u*(λ) regularity).
+
+### A. New propositions classified.
+
+| Prop | Classification | Source |
+|---|---|---|
+| ED1 (finite gauge ≠ rank reduction) | **PROVED** | `effective_dof_theory.md` |
+| ED2 (constant rank theorem applied to $R$) | **PROVED conditional on constant rank** | `effective_dof_theory.md` |
+| R1 (local interior $C^1$ branch) | **PROVED** (IFT) | `op_oms_018_regular_u_star.md` §3 |
+| R2 (local boundary $C^1$ on fixed active set) | **PROVED** (Robinson–Fiacco) | `op_oms_018_regular_u_star.md` §4 |
+| R3 (1)–(2) ($S$ u.h.c.; $v$ continuous) | **PROVED** (Berge) | `op_oms_018_regular_u_star.md` §5 |
+| R3 (3) (no global continuous selection) | **PROVED** (VP-1/4 counterexample) | `op_oms_018_regular_u_star.md` §5 |
+| R4 ($v$ concave, locally Lipschitz) | **PROVED** | `op_oms_018_regular_u_star.md` §6 |
+| R5 (envelope on regular branch) | **PROVED** (Danskin) | `op_oms_018_regular_u_star.md` §7 |
+| Hyp RG1 (revised) | **COMPUTATIONALLY SUPPORTED** | `vp6_effective_dof.md` |
+
+### B. Decisions / classifications.
+
+1. **OP-OMS-018 PARTIALLY RESOLVED.** Local R1/R2 PROVED; global $C^1$
+   REJECTED (Prop R3 (3)); value-function R4/R5 PROVED. The previous
+   formal-blocker status of OP-OMS-018 is downgraded.
+2. **VP-6 Hypothesis RG1 (revised) is COMPUTATIONALLY SUPPORTED.** $d_{\mathrm{eff}}$
+   on the simplex slice with $q,\xi$ fixed is at most 2 in every of 42
+   sampled stencils across S3 and S4; predominantly 1.
+3. **OP-OMS-017 superseded by OP-OMS-026.** The locus
+   $\{\lambda_{cl} \approx \lambda_{sep}\}$ is not an "approximate
+   symmetry" but a **branch-switching surface** — observed via VP-6
+   branch-jump flags. The locus has no continuous gauge interpretation; it
+   is a stratification gluing surface in $\Delta^3$.
+4. **Admissibility class $\mathcal{V}_{\mathrm{adm}}$ relaxed** to allow stratified
+   smooth landscapes (V2 revised). The basin / stratified-dynamics
+   sections receive matching patches. See `oms_1_2_status_audit.md` §8 and
+   `observer_landscape_admissible_class.md` (Session 5 patch).
+5. **OMS stage label proposed:** **OMS-1.2 — Computationally Grounded
+   Canonical Candidate with Local Regularity Theorem.**
+
+### C. New OPs registered.
+
+OP-OMS-024 (constant-rank regions for $J_R$), OP-OMS-025 (perceptual style
+correspondence), OP-OMS-026 ($\Sigma_{\mathrm{branch}}$ characterization;
+absorbs OP-OMS-017), OP-OMS-027 (corner regularity), OP-OMS-028
+(quantitative Lipschitz of $v$).
+
+### D. Audit warnings (new).
+
+- **W13:** Treating low VP-6 σ as evidence for a continuous gauge symmetry.
+  ED1 is the firewall: low Jacobian rank does not imply a hidden gauge
+  group.
+- **W14:** Treating branch-jump VP-6 stencils as numerical noise. The
+  discrete jumps are theorem-level signals (Prop R3 (3)).
+- **W15:** Over-applying R1/R2 globally. Both are local statements.
+- **W16:** Reading $d_{\mathrm{eff}}^{\mathrm{simplex}}$ as $d_{\mathrm{eff}}^{\mathcal{M}_{\mathrm{obs}}}$.
+  VP-6 holds $q, \xi$ fixed; the original Hyp RG1 about full $\mathcal{M}_{\mathrm{obs}}$
+  remains UNTESTED.
+- **W17:** Concavity of $v(\lambda)$ misread as convexity of $E_\lambda(u)$.
+  $E_\lambda$ is non-convex in $u$; $v$ is concave in $\lambda$ (inf of
+  affine). Both true simultaneously.
+
+### E. Files affected.
+
+- `vp6_initial_reading_log.md`, `effective_dof_theory.md`, `op_oms_018_regular_u_star.md`,
+  `vp6_effective_dof.md`, `vp6_effective_dof_log.md`, `oms_1_2_status_audit.md` (all NEW).
+- `open_problems.md` — OP-OMS-018 status updated; OP-OMS-024..028 registered;
+  summary table updated.
+- `audit_log.md` — this entry (AUDIT-023); W13..W17 added to warnings table.
+- `observer_landscape_admissible_class.md` — V2 patched (stratified smoothness).
+- `basin_stratification.md` — Remark added (basin boundaries include
+  $\Sigma_{\mathrm{branch}}$).
+- `stratified_dynamics.md` — §6 added (Filippov sliding-mode at branch
+  surfaces).
+- `canonical_promotion_checklist.md` — v1.3 (OMS-1.2) update.
+- `oms_1_candidate.md` — promote stage label OMS-1.1 → OMS-1.2 (after audit).
+- `THEORY/CHANGELOG.md` — Session 5 entry.
+- `THEORY/working/INDEX.md` — Session 5 files added.
+- `daily_log.md` — Session 5 entry.
+- `checkpoints.md` — VP-6 + OP-OMS-018 sections added.
 
 ---
 

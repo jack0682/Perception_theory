@@ -231,9 +231,13 @@ These 16 files document the development of T-L1-F (Hard-Bar/Active-Count Bridge)
 
 Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\mathrm{obs}} / G_{\mathrm{SCC}}^{(0)}$
 
-**Stage:** OMS-1.1 (Computationally Grounded Canonical Candidate, 2026-05-08). Formal blocker: OP-OMS-018 (optimizer regularity). ~~OP-OMS-001/002: downgraded to "pending formal proof" (VP-3/VP-2/VP-4).~~ ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~ See `observer_moduli/canonical_promotion_checklist.md` v1.2.
+**Stage:** **OMS-2.0 Accepted — Full** (2026-05-08, Session 8). Static face PROVED (Sessions 4–7); Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced temporal OMS test (Session 8, VP-11). Canonical authority: `THEORY/canonical/canonical.md` **Appendix OMS** sections A–L (Static, Session 7) + M (Temporal, Session 8). Final audits: `oms_2_0_accepted_audit.md` (Static) + `oms_2_0_full_accepted_audit.md` (Full).
 
-**Validation protocols:** ~~VP-1 COMPLETE~~ (exp86, 4 CEs, RESOLVED-NEGATIVE) → ~~VP-3 COMPLETE~~ (exp87, G_cw={e} COMP. SUPPORTED) → ~~VP-4 COMPLETE~~ (exp88, 2 observer types, Prop BS1 CONFIRMED) → ~~VP-2 COMPLETE~~ (theory) → VP-6 → VP-5.
+**Prior stages:** OMS-2.0 Accepted Static (Session 7); OMS-2.0 Conditional Accepted (Session 6); OMS-1.2 (Session 5).
+
+**Prior stage:** OMS-1.2 (Session 5). ~~OP-OMS-018 was the formal blocker; PARTIALLY RESOLVED — local R1/R2 PROVED, global $C^1$ REJECTED.~~ ~~OP-OMS-001/002: downgraded to "pending formal proof" (VP-3/VP-2/VP-4).~~ ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~
+
+**Validation protocols:** ~~VP-1 COMPLETE~~ (exp86, 4 CEs, RESOLVED-NEGATIVE) → ~~VP-3 COMPLETE~~ (exp87, G_cw={e} COMP. SUPPORTED) → ~~VP-4 COMPLETE~~ (exp88, 2 observer types, Prop BS1 CONFIRMED) → ~~VP-2 COMPLETE~~ (theory) → ~~VP-6 COMPLETE~~ (Session 5: $d_{\mathrm{eff}} \le 2$ COMP. SUPPORTED) → VP-5.
 
 ### Core files (Session 1, OMS-0.1)
 
@@ -287,6 +291,73 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/oms_1_1_promotion_audit.md` | OMS-1.1 | Promotion audit; two-track strategy; OMS-1.1 = Track 1 (computationally grounded) |
 
 **Experiment data (Session 4):** `CODE/experiments/exp87_vp3_core_weight_symmetry.py`, `CODE/experiments/exp88_vp4_basin_stratification.py`, `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`, `vp3_symmetry_summary.md`, `vp4_basin_results.json`, `vp4_basin_summary.md`
+
+### New files (Session 5, VP-6 + OP-OMS-018 attack / OMS-1.2)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/vp6_initial_reading_log.md` | VP-6 | Initial reading log before VP-6 / OP-OMS-018 work |
+| `observer_moduli/effective_dof_theory.md` | VP-6 theory | DEF-ED1..ED4; Props ED1, ED2 PROVED; revised Hyp RG1 |
+| `observer_moduli/op_oms_018_regular_u_star.md` | OP-OMS-018 | Theorems R1, R2 PROVED (local); Prop R3 PROVED (global $C^1$ REJECTED); Prop R4, R5 PROVED |
+| `observer_moduli/vp6_effective_dof.md` | VP-6 | Results writeup: $d_{\mathrm{eff}} \le 2$ in 42/42 stencils |
+| `observer_moduli/vp6_effective_dof_log.md` | VP-6 | Execution log; per-sample tables |
+| `observer_moduli/observer_landscape_admissible_class.md` | OMS-1.2 patch | V2 stratified-smooth patch; $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$ PROVED constructively |
+| `observer_moduli/oms_1_2_status_audit.md` | OMS-1.2 | Stage-label audit; OMS-1.2 = "Computationally Grounded Canonical Candidate with Local Regularity Theorem" |
+
+**Experiment data (Session 5):** `CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py`, `CODE/experiments/observer_moduli/vp6_u_star_regular_path_test.py`, `CODE/experiments/observer_moduli/vp7_branch_map.py`, `CODE/experiments/results/observer_moduli/vp6_jacobian_spectra.json`, `vp6_effective_dof_summary.md`, `vp6_u_star_path_results.json`, `vp6_u_star_path_summary.md`, `vp7_branch_map.json`, `vp7_branch_map.md`
+
+### Session 5 continuation files (2026-05-08, post-final-report)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/op_oms_028_lipschitz_v.md` | OP-OMS-028 | Theorem L1 PROVED (global Lipschitz of $v$); explicit constant via energy bounds |
+| `observer_moduli/op_oms_001_formal_proof_attempt.md` | OP-OMS-001 | Three reductions; continuous component of $G_{\mathrm{cw}}$ PROVED trivial; discrete case sketched with named gaps |
+| `observer_moduli/vp7_branch_map_results.md` | VP-7 | Σ_branch fine-grid mapping; P12 has 7 branches (dominant 66.7%); S3 has 17 branches (fragmented) |
+
+### Session 6 files (2026-05-08, OMS-2.0 push, Gates 1–8 → OMS-2.0 Conditional Accepted)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/op_oms_001_gap_c1_rank_theorem.md` | OMS-2.0 Gate 1 | Theorems RT1, RT2, RT3 PROVED conditional on H1–H3 |
+| `observer_moduli/op_oms_001_gap_c1_sensitivity.md` | OMS-2.0 Gate 1 | Theorems S1, S2 PROVED with $J_e = -G_T^\top H_T^{-1} G_T$ |
+| `observer_moduli/op_oms_001_gap_c1_genericity.md` | OMS-2.0 Gate 1 | G1–G3 + G4 (analytic dichotomy) + G5/G7/G8 + GAP-C1 PROVED conditional on H4 |
+| `observer_moduli/op_oms_002_nontrivial_v.md` | OMS-2.0 Gate 3 | $V_2, V_{2,\tau}$ defined; NV3–NV10 PROVED |
+| `observer_moduli/op_oms_026_sigma_branch_full.md` | OMS-2.0 Gate 5 | SB1–SB11; codim-1 PROVED; $\Sigma_{T8} \subset \Sigma_{\mathrm{branch}}$ identified |
+| `observer_moduli/oms_2_0_promotion_audit.md` | OMS-2.0 Gate 7 | Final classification: OMS-2.0 Conditional Accepted |
+
+**Experiment data (Session 6, OMS-2.0 push):**
+`CODE/experiments/observer_moduli/vp8_gap_c1_rank_witness.py`,
+`vp9_nontrivial_v_basin_test.py`,
+`vp10_sigma_branch_delta3.py`,
+`CODE/experiments/results/observer_moduli/vp8_gap_c1_rank_witness.{json,md}`,
+`vp9_nontrivial_v_basin.{json,md}`,
+`vp10_sigma_branch_delta3.{json,md}`
+
+### Session 7 files (2026-05-08, proof closure → OMS-2.0 Accepted Static)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/proof_promotion_reading_log.md` | Session 7 reading log | brief |
+| `observer_moduli/gap_c1_final_theorem_package.md` | OMS-2.0 Static — main | C1.1–C1.5 sharpened; C1.2 rank-eq corrected; C1.4 rigidity honest |
+| `observer_moduli/op_oms_032_closed_form_h4.md` | OP-OMS-032 final | CLOSED UNDER CERTIFIED WITNESS |
+| `observer_moduli/op_oms_033_sigma_sn_arnold.md` | OP-OMS-033 final | PROVED as conditional fold theorem SN3 |
+| `observer_moduli/op_oms_034_temporal_delta3_status.md` | OP-OMS-034 final | SEPARATED (Static does not require it) |
+| `observer_moduli/oms_2_0_accepted_audit.md` | OMS-2.0 final audit | Accepted Static + Conditional Temporal |
+| `THEORY/canonical/canonical.md` | **Appendix OMS** added | 20+ theorem-grade items (Static OMS canonical layer) |
+
+**Session 7 introduces NO new experiments** (per the no-broadening rule).
+
+### Session 8 files (2026-05-08, OP-OMS-034 closure → OMS-2.0 Accepted Full)
+
+| File | Stage | Notes |
+|---|---|---|
+| `observer_moduli/op_oms_034_initial_log.md` | Session 8 reading log | brief |
+| `observer_moduli/op_oms_034_temporal_delta3_resolution.md` | OP-OMS-034 final | Theorems T1–T8; rank-3 corrected; Case A verdict |
+| `observer_moduli/oms_2_0_full_accepted_audit.md` | OMS-2.0 Full audit | Final classification: Accepted — Full |
+| `THEORY/canonical/canonical.md` | **Appendix OMS subsection M (Temporal)** added | T1–T8 + TS3 + H4-T-CW |
+| `CODE/experiments/observer_moduli/vp11_temporal_delta3.py` | VP-11 Phase 1+2 | rank witness + Δ³ branch map |
+| `CODE/experiments/results/observer_moduli/vp11_temporal_rank_witness.{json,md}` | Phase 1 results | 14/14 (Wit-T) |
+| `CODE/experiments/results/observer_moduli/vp11_temporal_delta3.{json,md}` | Phase 2 results | 19 branches, 7 λ_tr-unique |
 
 ---
 

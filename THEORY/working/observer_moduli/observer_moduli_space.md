@@ -574,4 +574,18 @@ These three are conceptually distinct and must never be conflated.
 
 ---
 
-*OMS-0.7, 2026-05-07. Working document — not yet canonical. Blockers: OP-OMS-001, OP-OMS-002, OP-OMS-009. See canonical_promotion_checklist.md for the full promotion pathway.*
+*OMS-0.7, 2026-05-07. Working document — superseded by `THEORY/canonical/canonical.md` Appendix OMS as of Session 7 (2026-05-08). Static OMS-2.0 Accepted. Full Temporal Conditional on OP-OMS-034.*
+
+---
+
+## §18. OMS-2.0 Promotion Trajectory (Session 4 → Session 7, 2026-05-08)
+
+| Session | Classification | Key advance |
+|---|---|---|
+| Session 4 (morning) | OMS-1.1 — Computationally Grounded Canonical Candidate | VP-3/VP-2/VP-4 complete |
+| Session 5 | OMS-1.2 — w/ Local Regularity Theorem | OP-OMS-018 partially resolved (R1–R5 PROVED) |
+| Session 5 cont. | OMS-1.2+ | OP-OMS-028 PROVED (Lipschitz); OP-OMS-029 PROVED (continuous-component triviality) |
+| Session 6 | OMS-2.0 Conditional Accepted | All three hard blockers resolved at theorem + witness level |
+| **Session 7** | **OMS-2.0 Accepted — Static, Full Temporal Conditional on OP-OMS-034** | **Gap C1 theorem package consolidated; sub-OPs 032/033/034 resolved/separated; Appendix OMS added to canonical.md** |
+
+**Authoritative status at end of Session 7:** see `THEORY/canonical/canonical.md` **Appendix OMS** and `oms_2_0_accepted_audit.md`.

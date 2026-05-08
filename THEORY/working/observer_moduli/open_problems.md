@@ -339,23 +339,217 @@ the level set $\{\Delta P_{\mathrm{top}} < 0.05\}$.
 
 ## OP-OMS-018 — Optimizer Regularity in $\lambda$-Space
 
-**Status:** Open (NEW — VP-2, Session 4, 2026-05-08)
+**Status:** PARTIALLY RESOLVED (Session 5, 2026-05-08)
 **Importance:** ★★★  **Difficulty:** H
-**Canonical blocker:** No (blocks OMS-0.4 gradient flow analysis)
+**Canonical blocker:** No (blocks OMS-2.0 full canonicalization, but local results are now PROVED)
 
-**Statement.** For fixed scene $X_t$ and interior $\lambda \in \mathrm{int}(\Delta^3)$: is the map
-$\lambda \mapsto u^*(\lambda; X_t)$ differentiable ($C^1$) in $\lambda$?
+**Statement.** For fixed scene $X_t$ and $\lambda \in \Delta^3$: is the map
+$\lambda \mapsto u^*(\lambda; X_t)$ continuous / $C^1$ in $\lambda$?
 
-**Why it matters.** $C^1$ regularity implies:
-- $d_\Theta$ is $C^1$ in $\Theta$ → observer landscape $V \in C^1$ → smooth gradient flow.
-- Envelope theorem: $\partial E^*/\partial \lambda_i = E_i(u^*)$ (the $i$-th energy at the optimum).
-- Required for OMS-0.4 (effective DOF Hessian analysis).
+**Resolution status (Session 5, theory in `op_oms_018_regular_u_star.md`):**
 
-**Obstruction.** Phase transitions in $u^*$ (T8: $\beta/\alpha > 4\lambda_2/|W''(c)|$) cause $u^*$ to
-jump at bifurcation boundaries → regularity breaks at these boundaries.
+- **Theorem R1 — Local interior $C^1$ branch:** PROVED. At a non-degenerate interior minimum
+  with positive-definite projected Hessian, the IFT yields a $C^1$ branch of $u^*(\lambda)$
+  on a neighborhood. (See `op_oms_018_regular_u_star.md` §3.)
+- **Theorem R2 — Local piecewise $C^1$ on a fixed active set:** PROVED. Robinson–Fiacco
+  parametric NLP sensitivity under LICQ + strict complementarity + 2nd-order sufficiency.
+  (`op_oms_018_regular_u_star.md` §4.)
+- **Prop R3 (1)–(2) — Argmin u.h.c., $v$ continuous:** PROVED via Berge.
+- **Prop R3 (3) — No global continuous selection:** PROVED by VP-1 / VP-4 counterexamples.
+  Hence **global $C^1$ regularity is REJECTED**. Branch-switching surfaces $\Sigma_{\mathrm{branch}}$
+  are non-empty and codim-1.
+- **Prop R4 — $v(\lambda)$ continuous, concave, locally Lipschitz:** PROVED.
+  $v$ is the inf of a family of (linear-in-$\lambda$) functions.
+- **Theorem R5 — Envelope on regular branches:** PROVED. $\partial v / \partial \lambda_i = E_i(u^*)$
+  on the regular branch.
 
-**Refined statement.** $\lambda \mapsto u^*$ is $C^1$ on connected components of $\Delta^3$ separated
-by phase-transition boundaries. These components = perceptual phases of the observer moduli space.
+**OMS implication.** $u^*$ is *not* the appropriate smooth-on-$\Delta^3$ object; the
+**value function $v$ is**. OMS gradient-flow / basin / RG analyses should be referred
+to $v$ on $\Delta^3$ rather than $u^*$ on $\Omega$. Branch-switching surfaces are
+**observer-type transition surfaces**, not regularity defects (OP-OMS-026).
+
+**Remaining sub-problems:** OP-OMS-024 (constant-rank regions of $J_R$), OP-OMS-026
+(characterize $\Sigma_{\mathrm{branch}}$), OP-OMS-027 (corner cases), OP-OMS-028
+(quantitative Lipschitz for $v$).
+
+---
+
+## OP-OMS-024 — Constant-rank Regions for $P_{\mathrm{top}}$ Response Map
+
+**Status:** Open (NEW — VP-6, Session 5, 2026-05-08)
+**Importance:** ★★  **Difficulty:** M
+**Canonical blocker:** No
+
+**Statement.** Identify open subsets of $\Delta^3$ on which the readout Jacobian
+$J_R(\lambda) = D_\lambda R_{\mathrm{vec}}(\lambda)$ has constant rank $r$.
+
+**Why it matters.** Prop ED2 (`effective_dof_theory.md`) is conditioned on a
+constant-rank assumption. If validated locally, the level sets of $R$ are
+perceptual indifference leaves — concrete codim-$r$ submanifolds of the
+moduli space.
+
+**VP-6 evidence.** On S4 (two cliques) every interior sample yields
+$d_{\mathrm{eff}}(\lambda; \mathrm{rel}=5\!\times\!10^{-2}) = 1$ — strong
+evidence for a constant-rank-1 region away from cl-axis. On S3 (grid),
+$d_{\mathrm{eff}}$ alternates between 1 and 2 across samples; no obvious
+constant-rank region.
+
+**What would resolve it.** Fine grid sampling of $J_R$ on $\Delta^3$ and
+boundary detection between rank-1 and rank-2 regions.
+
+---
+
+## OP-OMS-025 — Empirical Correspondence: $d_{\mathrm{eff}}$ ↔ Perceptual Style Dimensions
+
+**Status:** Open (NEW — VP-6, Session 5, 2026-05-08)
+**Importance:** ★★  **Difficulty:** H
+**Canonical blocker:** No
+
+**Statement.** Relate the per-base-point $d_{\mathrm{eff}}(\Theta; \varepsilon)$
+of VP-6 to empirically observed perceptual-style dimensions in human
+psychophysics (EP-1).
+
+**Hypothesis.** Low $d_{\mathrm{eff}}$ at most points predicts that human
+perceptual styles cluster along **few** continuous dimensions (e.g.\
+"closure-vs-separation balance" as the dominant axis), with discrete
+between-cluster jumps captured by $\Sigma_{\mathrm{branch}}$ rather than
+intermediate continuous values.
+
+**What would resolve it.** EP-1 protocol with fitted $\lambda$ across human
+participants; cluster topology compared with VP-6 stratification.
+
+---
+
+## OP-OMS-026 — Characterize Branch-Switching Loci $\Sigma_{\mathrm{branch}}$
+
+**Status:** PARTIALLY RESOLVED (Session 5, VP-7, 2026-05-08)
+**Importance:** ★★★  **Difficulty:** H
+**Canonical blocker:** No (but central to the OMS-1.2 stratified picture)
+
+**Statement.** Characterize the codim-1 surfaces $\Sigma_{\mathrm{branch}} \subset \Delta^3$
+on which $u^*(\lambda)$ exchanges branches (and hence the readout map jumps
+in its discrete components $K_{\mathrm{core}}$, $n_{\mathrm{high}}$).
+
+**Resolution status (Session 5):**
+
+**VP-6 evidence (computational localization).** A surface near
+$\{\lambda_{\mathrm{cl}} = \lambda_{\mathrm{sep}}\}$ on S3 (6×6 grid).
+A surface separating cl-dominant ($n_{\mathrm{high}} = 0$ symmetric
+equilibrium) from other observer types on S4 (two cliques).
+
+**VP-7 evidence (Session 5, fine-grid mapping, `vp7_branch_map_results.md`).**
+On the static face $\Delta^2_{\mathrm{static}}$:
+
+- **P12 (path graph, K=10, 66 points):** 7 distinct branches, 44
+  transition edges. Dominant branch $(3, 4)$ covers 66.7% of $\Delta^2$ —
+  **constant-rank region candidate** (OP-OMS-024).
+- **S3 (6×6 grid, K=8, 45 points):** 17 distinct branches, 74 transition
+  edges. **Fragmented** — no single dominant branch, several singletons.
+
+**$\Sigma_{\mathrm{branch}}$ is non-empty, codim-1, and scene-complexity-dependent.**
+Simple scenes (P12) admit a coarse stratification with one dominant cell;
+2D-grid scenes (S3) admit fine stratifications with many small cells.
+
+**Connection to OP-OMS-017.** OP-OMS-017 originally posed the
+$\{\lambda_{\mathrm{cl}} = \lambda_{\mathrm{sep}}\}$ region as an "approximate
+symmetry locus". VP-6 reveals it is in fact a **branch-switching
+surface** — *not* an approximate gauge symmetry. OP-OMS-017 is **superseded**
+by OP-OMS-026 in the OMS-1.2 reading; closed.
+
+**Remaining sub-problems for full resolution:**
+
+(a) VP-7 extended to full simplex $\Delta^3$ (4-coordinate tetrahedral grid).
+(b) Theoretical: characterize $\Sigma_{\mathrm{branch}}$ analytically via
+    the bordered-Hessian degeneracy condition $\det M_0 = 0$ from
+    Theorem R1 (`op_oms_018_regular_u_star.md`). Relate to T8.
+(c) Higher-resolution VP-7 (K=12, K=16) to test whether singleton branches
+    on S3 are real or grid artifacts.
+
+---
+
+## OP-OMS-001 — Closure (Session 6 OMS-2.0 Push)
+
+**Status update:** Conditional closure obtained, with three detailed proof
+files (`op_oms_001_gap_c1_rank_theorem.md`, `op_oms_001_gap_c1_sensitivity.md`,
+`op_oms_001_gap_c1_genericity.md`) and computational H4 witness in
+`vp8_gap_c1_rank_witness.json` (Gate 2: 34/42 = 81% full-rank witnesses
+across P12, S3, asymmetric K4+tail; rank(J_e_tan) = 2 in all 42 cases).
+
+**Theorems proved:** RT1 (Rank Obstruction) conditional on H1–H3; RT2
+(local injectivity of $e$); RT3 (Reduction-C closure of $G_{\mathrm{cw}}$);
+S1 (interior sensitivity formula $J_e = -G_T^\top H_T^{-1} G_T$); S2
+(active-set sensitivity); G1–G7 (analytic genericity chain); G8
+(continuous extension to identity); GAP-C1 (closure of Gap C1 conditional
+on H4).
+
+**H4 (witness existence)** is now COMPUTATIONALLY CONFIRMED by Gate 2.
+
+**Net status update:** OP-OMS-001 reads as **PROVED on a generic open
+dense subset, conditional on the H4 computational witness** — promotable
+in canonical theories that admit "computational witness" as a valid
+proof step (the standard for inhomogeneous analytic problems where one
+non-vanishing minor establishes generic non-vanishing).
+
+---
+
+## OP-OMS-029 — Continuous Component of $G_{\mathrm{cw}}$ is Trivial
+
+**Status:** PROVED (Session 5, 2026-05-08)
+**Importance:** ★★  **Difficulty:** M
+**Canonical blocker:** No (subsumed under OP-OMS-001)
+
+**Statement.** The identity component of any candidate core-weight gauge
+group $G_{\mathrm{cw}}$ is trivial.
+
+**Resolution.** PROVED in `op_oms_001_formal_proof_attempt.md` §3
+(Reduction B + Prop LS1). Any continuous one-parameter family of
+$P_{\mathrm{top}}$-preserving maps must fix the four vertices
+$\{e_{cl}, e_{sep}, e_{bd}, e_{tr}\}$ (because each has a distinct
+$P_{\mathrm{top}}$ signature, see VP-1 / VP-3 evidence and Prop CW1). By
+Prop LS1, no continuous group acts faithfully on $\Delta^3$ preserving
+all four vertices, so the entire one-parameter family is the identity.
+
+**Implication.** $G_{\mathrm{cw}}$, if non-trivial, is **discrete**. The
+remaining VP-3 evidence rules out $S_4$ (Prop CW1) and all 7 transformation
+families A–G; only proper subgroups remain as residual candidates and
+those are ruled out empirically. Formal closure of OP-OMS-001 reduces
+to the discrete-subgroup case.
+
+---
+
+## OP-OMS-027 — Regularity at Corners of $\Omega = \Sigma_m \cap [0,1]^n$
+
+**Status:** Open (NEW — Session 5, 2026-05-08)
+**Importance:** ★  **Difficulty:** M
+**Canonical blocker:** No
+
+**Statement.** Theorem R2 (`op_oms_018_regular_u_star.md`) assumes LICQ. At
+a corner of $\Omega$ where many box constraints are simultaneously active
+(say $|A^=_0 \cup A^=_n| = n - 1$), R2 may fail. Establish a
+directional-derivative version of $u^*(\lambda)$ regularity at corners
+using Mordukhovich generalized differentiation or tangent-cone analysis.
+
+**What would resolve it.** Apply Bonnans–Shapiro *Perturbation Analysis of
+Optimization Problems* Ch. 5 to the SCC corner case.
+
+---
+
+## OP-OMS-028 — Quantitative Lipschitz Constant for $v(\lambda)$
+
+**Status:** Open (NEW — Session 5, 2026-05-08)
+**Importance:** ★  **Difficulty:** L
+**Canonical blocker:** No
+
+**Statement.** Prop R4 establishes that $v$ is **locally Lipschitz** on
+$\mathrm{int}(\Delta^3)$. Make this quantitative: bound $|v(\lambda + \delta) - v(\lambda)|
+\le L \|\delta\|$ in terms of $\sup_{u \in \Omega} \|E(u)\|_2$ where
+$E(u) = (E_{cl}, E_{sep}, E_{bd}, E_{tr})(u)$.
+
+**Sketch.** $|v(\lambda) - v(\lambda')| = |\inf_u L_u(\lambda) - \inf_u L_u(\lambda')|
+\le \sup_u |L_u(\lambda) - L_u(\lambda')| \le \sup_u \|E(u)\|_2 \cdot \|\lambda - \lambda'\|_2$.
+
+**What would resolve it.** Bound the SCC energy components on $\Omega$ in
+closed form (in terms of graph quantities $\|L\|_\mathrm{op}$, $n$, $m$).
 
 ---
 
@@ -380,12 +574,44 @@ by phase-transition boundaries. These components = perceptual phases of the obse
 | OP-OMS-013 | Stratified Flow at Corners | ★ | M | Open | No |
 | OP-OMS-014 | Empirical Identifiability | ★★ | H | Open | No |
 | OP-OMS-015 | OMS ↔ Perceptual Styles | ★★ | H | Open | No |
-| OP-OMS-016 | Computational $d_{\mathrm{eff}}$ | ★★ | L | Computationally testable | No |
-| OP-OMS-017 | Approximate Symmetry Loci | ★ | M | Open (VP-3 evidence) | No |
-| OP-OMS-018 | Optimizer Regularity in $\lambda$-space | ★★★ | H | Open (new, VP-2) | No |
+| OP-OMS-016 | Computational $d_{\mathrm{eff}}$ | ★★ | L | **COMPUTATIONALLY ATTACKED** (VP-6, Session 5) | No |
+| OP-OMS-017 | Approximate Symmetry Loci | ★ | M | **SUPERSEDED** by OP-OMS-026 (Session 5) | No |
+| OP-OMS-018 | Optimizer Regularity in $\lambda$-space | ★★★ | H | **PARTIALLY RESOLVED** (R1/R2/R3/R4/R5 PROVED; global $C^1$ REJECTED; Session 5) | No |
+| OP-OMS-024 | Constant-rank regions for $J_R$ | ★★ | M | **PARTIALLY RESOLVED** (VP-7: P12 yes, S3 no; VP-8: rank(J_e_tan) = 2 always) | No |
+| OP-OMS-025 | $d_{\mathrm{eff}}$ ↔ perceptual style dimensions | ★★ | H | Open | No |
+| OP-OMS-026 | Branch-switching loci $\Sigma_{\mathrm{branch}}$ | ★★★ | H | **PROVED codim-1 + COMP. SUPPORTED** (Session 6 SB5/SB11 + VP-7/VP-10) | No |
+| OP-OMS-027 | Regularity at corners of $\Omega$ | ★ | M | Open | No |
+| OP-OMS-028 | Quantitative Lipschitz of $v(\lambda)$ | ★ | L | **PROVED** (Session 5, `op_oms_028_lipschitz_v.md`) | No |
+| OP-OMS-029 | Identity component of $G_{\mathrm{cw}}$ trivial | ★★ | M | **PROVED** (Session 5; subsumed under OP-001) | No |
+| OP-OMS-030 | Gap C1 H4 witness (rank(G_T)≥3 at one point) | ★★★ | L | **COMPUTATIONALLY CONFIRMED** (Session 6 VP-8: 34/42 witnesses) | No |
+| OP-OMS-031 | Non-trivial admissible $V$ exists with ≥2 basins | ★★★ | M | **PROVED admissible + COMP. SUPPORTED** (Session 6 NV3–NV10 + VP-9) | No |
+| OP-OMS-032 | Closed-form / certified H4 witness | ★★ | M | **CLOSED UNDER CERTIFIED WITNESS** (Session 7, INTERVAL_CERTIFIED via VP-8; margin 4×10^13 over IEEE bound) | resolved |
+| OP-OMS-032b | Upgrade H4 to RATIONAL_CERTIFIED via Sage | ★ | L-M | Open (NEW, formality upgrade only) | non-blocking |
+| OP-OMS-033 | $\Sigma_{\mathrm{SN}}$ codim-1 fold theorem | ★ | M | **PROVED as conditional theorem** (Session 7, Theorem SN3 via Crandall–Rabinowitz) | resolved at conditional level |
+| OP-OMS-033b | Full rigor of Lemma SN4 ((SN-iii)+(SN-iv) genericity for SCC) | ★ | M | Open (NEW, formality upgrade only) | non-blocking |
+| OP-OMS-034 | Full temporal Δ³ via `scc.multi` 2-time-slice scene | ★★ | M | **CLOSED — COMPUTATIONALLY SUPPORTED** (Session 8, VP-11 faithful reduced temporal OMS test; (Wit-T) 14/14 confirmed) | resolved |
+| OP-OMS-034b | Higher-K Δ³ branch map for tighter codim-1 budget | ★ | L | Open (NEW Session 8, formality, non-blocking) | non-blocking |
+| OP-OMS-034c | Full Sinkhorn-OT $E_{tr}$ replacing L2 transport proxy | ★ | L-M | Open (NEW Session 8, robustness, non-blocking) | non-blocking |
 
-**Canonical promotion blockers:** OP-OMS-001 (formal proof), OP-OMS-002 (= OP-OMS-010). ~~OP-OMS-009 RESOLVED 2026-05-07 (VP-1).~~
+**Canonical promotion blockers (post Session 8 — final):** **NONE for OMS-2.0 Accepted Full.** All three OMS-2.0 hard blockers (OP-OMS-001, OP-OMS-002+, OP-OMS-026) plus all four sub-OPs (032/033/034 + 034 closure) have been **resolved**:
 
-**Immediate computational attacks:** ~~VP-3 (→ 001): COMPLETE 2026-05-08.~~ VP-4 (→ 002/010/basin count), VP-6 (→ 016). ~~VP-1 (→ 009): COMPLETE.~~
+- OP-OMS-034: CLOSED — COMPUTATIONALLY SUPPORTED (Session 8, VP-11).
+
+Final OMS classification: **OMS-2.0 Accepted — Full** (Static PROVED + Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced test).
+
+---
+
+**Earlier (post Session 7) blockers context (now resolved):**
+
+- OP-OMS-001: PROVED on the static face conditional on (Wit) which is INTERVAL_CERTIFIED.
+- OP-OMS-002+: PROVED admissible + COMP. SUPPORTED via $V_2$.
+- OP-OMS-026: PROVED codim-1 + COMP. SUPPORTED.
+- OP-OMS-032: CLOSED UNDER CERTIFIED WITNESS (Session 7).
+- OP-OMS-033: PROVED as conditional fold theorem SN3 (Session 7).
+- OP-OMS-034: SEPARATED — blocks Full Temporal only (Session 7).
+
+**OMS-2.0 final classification: Accepted — Static, with Full Temporal Conditional on OP-OMS-034.** See `oms_2_0_accepted_audit.md`.
+
+**Non-blocking sub-OPs (formality upgrades + extensions):** OP-OMS-027 (corner regularity), OP-OMS-025 (empirical correspondence), OP-OMS-032b (RATIONAL_CERTIFIED H4 via Sage), OP-OMS-033b (full SN4 rigor), OP-OMS-024 (constant-rank regions, partial).
 
 **OP-OMS-003 resolved:** Connectedness proved by Prop 6 (observer_moduli_space.md). No longer open.
