@@ -361,6 +361,17 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 
 ---
 
+## AFD_0/ — Abstract Formation Dynamics Foundation (2026-05-12)
+
+Status: AFD-0 Draft v0.1
+Files: README.md, abstract_formation_dynamics.md, afd_theorem_registry.md, afd_open_problems.md, afd_audit.md, afd_hmorse_reclassification.md, afd_examples.md, afd_framework_comparison.md, afd_log.md, afd_summary_for_next_agent.md, afd_layer_diagram.md
+Key definitions: AFD-D1 to AFD-D15
+Key theorems: AFD-T1 (Prop), AFD-T2 (Thm), AFD-T3 (Prop), AFD-T4 (Prop), AFD-T5 (Thm), AFD-T6 (Prop), AFD-T7 (Prop), AFD-T8 (LC), AFD-T9 (Thm), AFD-T10 (DP)
+Central claim: AFD-T9 — Layer-2 AFD does NOT require H-MORSE; H-MORSE is reclassified as Layer-3 regularity.
+Open problems: OP-AFD-001 through OP-AFD-010.
+
+---
+
 ## Parked (Stale)
 
 `parking/` — 12 files from April–May 2026 planning artifacts. See `parking/README.md`.
