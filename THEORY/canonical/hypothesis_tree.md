@@ -1,14 +1,14 @@
 ---
-id: HT-3.0
+id: HT-3.5
 type: theory/hypothesis-tree
-version: 3.0
+version: 3.5
 created: 2026-05-07
-last_updated: 2026-05-07
+last_updated: 2026-05-10
 status: active
-description: SCC 이론 가설 의존성 트리. HT-3.0: 블록을 수학적 주제에서 인식론적 질문 기준으로 재편. 에이전트 세션 최적화 구조 유지 (즉시 타겟 → 요약 → 상세).
+description: SCC 이론 가설 의존성 트리. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10) — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW). Net count unchanged: 80 claims preliminary. HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
 ---
 
-# SCC Hypothesis Tree (HT-3.0)
+# SCC Hypothesis Tree (HT-3.5)
 
 ---
 
@@ -16,13 +16,23 @@ description: SCC 이론 가설 의존성 트리. HT-3.0: 블록을 수학적 주
 
 **먼저 읽기:** `THEORY/canonical/DECLARATION.md` — 이론의 중심축 (2분 분량)
 
-**지금 공략 가능 (Phase 1, unblocked):**
+**CV-1.12 SEALED (W7-FINAL 2026-05-10):** H-SINK FULLY CLOSED (Cat A). T-Temporal-Identity canonical Cat B. 54A/15B/5C/5R = 79 claims.
 
-> **H-SINK** — Sinkhorn-Lipschitz (S-B2)
-> Bigot-Cazelles-Papadakis 적용: SCC 비용 클래스에서 $L_g \leq L_c$ 증명
-> 클로저 시: T-Temporal-Identity (a,b,d) Cat A → **CV-1.12 +3A**
+**W7-CV113 (2026-05-10):** Lemma S-B1-Weak Cat A. OP-SB1-DEEP 비차단 강등. 55A/15B/5C/5R = 80 claims (예비).
 
-*다른 가설에 의존하지 않음 — 다음 세션에서 바로 시작 가능*
+**W7-CV113A (2026-05-10):** S-B1-SYM Cat B — 0.84 reframed as `ρ_sym(C_iso, m, θ_core)`. OP-SB1-084 registered (LOW). Net count unchanged: 55A/15B/5C/5R = 80 claims (예비). HT-3.4.
+
+**W7-CV1.13 (2026-05-10) — CV-1.13 SEALED:** T-Temporal-Identity full Cat A. S-A1 ✓ (D-ST-3 integration), S-A3 ✓ (existence Cat A), S-C1 ✓ (kernel independence Cat A conditional, margin 2ε_kernel corrected). **59A/14B/5C/5R = 83 claims**. HT-3.5.
+
+**다음 목표 (CV-1.14 타겟):**
+
+> **H-MORSE / Package II** — Eyring-Kramers + T_* 정규 등록 (Phase 2)
+
+> **T-σ-Inherit** — OP-0008 MERGE/SPLIT Wigner-projection (Phase 2)
+
+> **OP-SB1-084 (LOW)** — tightest analytic C_iso such that ρ_sym = 0.84 on 15×15
+
+*CV-1.13 closed: T-Temporal-Identity Cat A path complete. OP-SB1-DEEP superseded by OP-SB1-084 (LOW). Next priority: H-MORSE / Package II (Phase 2) or T-σ-Inherit OP-0008.*
 
 ---
 
@@ -30,7 +40,7 @@ description: SCC 이론 가설 의존성 트리. HT-3.0: 블록을 수학적 주
 
 | ID | 가설 | 현재 상태 | 차단하는 정리 | 우선순위 | 페이즈 |
 |----|------|----------|-------------|---------|-------|
-| **H-SINK** | Sinkhorn-Lipschitz (S-B2) | OPEN | Q5 Cat A | 상 | **Phase 1** |
+| **H-SINK** | Sinkhorn-Lipschitz (S-B2) | **FULLY CLOSED** (Cat A, W7-FINAL 2026-05-10; Partial-H-SINK closes partial OT) | Q5 Cat A ✓ | 완료 | **Phase 1 ✓** |
 | **H-T*** | T_* 정규 등록 (OP-0021) | OPEN | Q3/Q4 수치화 | 최상 | Phase 2 |
 | **H-MORSE** | Morse 안정성 | OPEN | Q3 Package II | 최상 | Phase 2 |
 | **H-SR** | 스펙트럼 반발 호환성 | OPEN | Q2 무조건화 | 중 | Phase 2 |
@@ -66,10 +76,13 @@ E1-E4 (transport: sub-stoch, non-inj, core-inherit, fingerprint-cost)
 ## 크리티컬 패스
 
 ```
-H-SINK [Phase 1] ──→ Q5 Cat A → CV-1.12
+H-SINK [Phase 1] ──→ Q5 Cat A ✓ → CV-1.12 ✓ (2026-05-10)
                           │
                           ▼
-                      Q6 Cat B (σ-상속)
+                    S-B1-Weak Cat A + S-A1/S-A3/S-C1 ──→ T-Temporal-Identity Cat A ✓ → CV-1.13 ✓ (2026-05-10)
+                          │
+                          ▼
+                      Q6 Cat B (σ-상속) ── OP-0008 MERGE/SPLIT (Phase 2)
 
 H-MORSE ──┐
            ├──→ Package II (Eyring-Kramers)
@@ -208,20 +221,30 @@ H-T*   ──┘         │
 
 ```
 ┌─────────────────────────────────────────────────┐
-│ [H-SINK] Sinkhorn-Lipschitz (S-B2, Lemma 8.2)   │  OPEN — Phase 1 타겟
+│ [H-SINK] Sinkhorn-Lipschitz (S-B2, Lemma 8.2)   │  FULLY CLOSED — Cat A (W7-FINAL, 2026-05-10)
 │  ∀ cost c ∈ SCC-cost-class, ∀ ε_OT > 0:       │
 │  L_g(ε_OT) ≤ L_c (Bigot-Cazelles-Papadakis)   │
 │                                                 │
-│  대안 경로: H-SPEC → ARCHIVED (scaling error)   │
+│  ✓ S-B2 (Lemma 8.2) — Cat A (W7-T1)           │
+│    증명: DR2 검증(H-SINK-1,2,4,5) +            │
+│          log-sum-exp fixed-point argument       │
+│    새 가정: H-SINK-ENT (ε_OT > 0, 기등록)      │
 │                                                 │
-│  닫히면:                                        │
+│  ✓ 전체 플랜 안정성 (partial OT) — Cat A        │
+│    Theorem Partial-H-SINK (W7-FINAL):           │
+│    SCC E1 one-sided → rows independent →        │
+│    row-softmax Lipschitz 직접 증명              │
+│    Séjourné et al. 불필요                       │
+│                                                 │
+│  다음 단계 (CV-1.13):                           │
+│  → OP-SB1-DEEP → S-B1 Cat A                   │
 │  → T-Temporal-Identity (a,b,d) Cat A           │
-│  → CV-1.12 승격 (+3A, 57 Cat A)                │
 └─────────────────────────────────────────────────┘
 ```
 
-*파트 (c) kernel independence: 추가로 S-B3 (iso-ratio 의존성 제거) 필요.*
+*파트 (c) kernel independence: S-B3 이미 완료 (Lemma 10, 2026-05-07). Cat A는 partial OT Lemma 9 Cat A 필요.*
 *OP-0011: PARTIALLY RESOLVED (Lemma 10, 2026-05-07).*
+*H-SINK: PARTIALLY CLOSED — S-B2 Cat A 달성 (2026-05-10). 작업 파일: `THEORY/working/temporal/H-SINK.md`.*
 
 ---
 
@@ -282,7 +305,7 @@ HT-x.y
   y: 노드 변경 (가설 추가/클로저/상태 갱신)                           — 세션 중 자유롭게
 ```
 
-현재: **HT-3.0**
+현재: **HT-3.4**
 
 ### 조작 유형
 
@@ -325,3 +348,7 @@ HT-x.y
 | HT-1.1 | 2026-05-07 | GAP-0/1/2 → H-μ0/H-κ/H-σ4; H-SPEC Archived; Phase 1/2/3 추가. |
 | HT-2.0 | 2026-05-07 | 에이전트 읽기 최적화 리스트럭처: 즉시 타겟 → 요약 → 상세 순서. |
 | HT-3.0 | 2026-05-07 | 블록을 수학적 주제(BLOCK-I~VI)에서 인식론적 질문(Q1~Q6)으로 재편. 대목표를 "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"로 재정의. T8 중심 정리 명시. DECLARATION.md 참조 추가. 모든 H-노드에 Q 귀속 표시. |
+| HT-3.1 | 2026-05-10 | H-SINK PARTIALLY CLOSED: S-B2 (Lemma 8.2) Cat A 달성; partial OT 전체 플랜 안정성 Cat B. H-SINK-ENT 등록. 작업 파일: `THEORY/working/temporal/H-SINK.md`. 다음 타겟: W7-T2 T-Temporal-Identity 캐논 Cat B 승격. |
+| HT-3.2 | 2026-05-10 | H-SINK FULLY CLOSED: Theorem Partial-H-SINK (one-sided Sinkhorn) Cat A. T-Temporal-Identity 캐논 Cat B 승격 (CV-1.12). OP-SB1-DEEP 등록. S-B1 Cat B conditional (HWF-1–3). 79 claims. |
+| HT-3.3 | 2026-05-10 | Lemma S-B1-Weak Cat A (W7-CV113): ρ_deep > ρ_* ≈ 0.003은 H2' (Γ-수렴+DMP)에서 Cat A 증명됨. OP-SB1-DEEP 비차단 강등. T-Temporal-Identity (b,d) Cat A 경로: S-A1-A3만 남음 (~1–2 sessions). 80 claims (예비). |
+| HT-3.4 | 2026-05-10 | S-B1-SYM Cat B (W7-CV113A): symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) derived from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW priority, successor of OP-SB1-DEEP). T-Temporal-Identity Cat A path unchanged: S-A1-A3 only. Net count: 55A/15B/5C/5R = 80 claims (예비, no change). CV-1.13 NOT sealed by W7-CV113A. |

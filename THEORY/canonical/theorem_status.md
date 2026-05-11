@@ -9,7 +9,7 @@ last_updated: 2026-05-08
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.11; current = **CV-1.11**) then status (active, challenged, deprecated). *(Updated 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.12; current = **CV-1.13**) then status (active, challenged, deprecated). *(Updated 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
 
 **Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
@@ -57,6 +57,8 @@ last_updated: 2026-05-08
 *CV-1.10 count update (Session R, 2026-05-06): T-K-Select-PF Cat B new (+1B). Running total: **54A/13B/5C/5R = 77 claims, ~70% fully proved.** OP-0005-EQ partially resolved.*
 
 *CV-1.11 count update (Session Y, 2026-05-06): T-K-Select-OBS Cat B new (+1B). Running total: **54A/14B/5C/5R = 78 claims, ~69% fully proved.** OP-0005-OBS partially resolved.*
+
+*CV-1.12 count update (W7-FINAL, 2026-05-10): T-Temporal-Identity canonical Cat B new (+1B). H-SINK full plan stability promoted Cat A (partial OT closed by Theorem Partial-H-SINK). H-SINK-ENT registered as technical hypothesis. OP-0011 → PARTIALLY RESOLVED (Steps 2–3 closed). Running total: **54A/15B/5C/5R = 79 claims, ~68% fully proved.***
 
 *CV-1.8 candidates registered (Session M, 2026-05-06): T-PF-A1-Affine-Reduction, T-PF-A1-Finite-Reflected-SDE, T-PF-A1-Gibbs-Invariance, T-PF-A1-Poincare-Ergodicity. No count change — pending canonical promotion (Session O).*
 
@@ -117,9 +119,40 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 
 ---
 
-### Session V Working Candidate — T-Temporal-Identity (2026-05-06)
+### CV-1.12 Canonical Addition — Temporal Identity (W7-FINAL, 2026-05-10)
 
-*Working Cat B candidate (parts a,b,d) / Cat C (part c, pending OP-0011). No count change. Source: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06).*
+*T-Temporal-Identity promoted from Session V/X working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file sources: `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` (sharp form, 2026-05-07 evening); `THEORY/working/temporal/H-SINK.md` (W7-T1, S-B2 Cat A); `THEORY/working/temporal/partial_ot_stability.md` (W7-FINAL, Theorem Partial-H-SINK Cat A). Count: +1B → 54A/15B/5C/5R = 79 claims. OP-0011 → PARTIALLY RESOLVED.*
+
+| T-ID | Name | Status | Category | Proof | Notes |
+|---|---|---|---|---|---|
+| **T-Temporal-Identity** | Persistent Component Identity via Partial Transport | **canonical Cat A** (W7-CV1.13, 2026-05-10, CV-1.13) | **A** | **(a) Cat A** — S-A3 CERTIFIED (Lemma 1 constructive existence, `S-A3_EXISTENCE_AUDIT.md`). **(b,d) Cat A** — S-A1 CERTIFIED (D-ST-3 integration, `S-A1_PERSCOMP_INTEGRATION.md`) + Lemma S-B1-Weak Cat A ($\Delta_\mathrm{sep}>0$, W7-CV113). **(c) Cat A conditional** — S-C1 CERTIFIED (`S-C1_KERNEL_AUDIT.md`): Lemmas 9–11 all Cat A, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$. Numerical anchor: exp83 ALL PASSED (4/4). | Assumption package: (A1)–(A7) + (A7') + (A9) + (DR1)–(DR2). All four parts CERTIFIED (W7-CV1.13). Does NOT prove multi-formation temporal identity. H-SINK-ENT required. OP-0011 RESOLVED. OP-0012-CC Cat B. |
+
+*W7-T1 note (2026-05-10): H-SINK-S2 = S-B2 = Lemma 8.2 promoted Cat A. H-SINK PARTIALLY CLOSED (partial OT pending). HT-3.1.*
+
+*W7-FINAL note (2026-05-10): Theorem Partial-H-SINK (one-sided SCC E1 partial OT stability) proved Cat A via direct row-softmax Lipschitz — no Séjourné et al. needed. H-SINK full theorem upgraded Cat A. Lemma 9 Cat A → Lemma 10 Cat A → Lemma 11 = S-B3 Cat A conditional. S-B1 (ρ_deep ≥ 0.84) Cat B conditional (HWF-1–3; OP-SB1-DEEP registered). HT-3.2.*
+
+*W7-CV113 note (2026-05-10): **Lemma S-B1-Weak Cat A** — critical correction: positivity threshold for Δ_sep > 0 is ρ_* ≈ 0.003, NOT 0.84. H2' (deep core non-emptiness, Γ-convergence + DMP) gives ρ_deep ≥ 0.7/225 ≈ 0.00311 > ρ_*, proving Δ_sep > 0 Cat A. OP-SB1-DEEP downgraded from HIGH-BLOCKING to NON-BLOCKING quantitative refinement. T-Temporal-Identity (b,d) Cat A path: S-A1-A3 only (~1–2 sessions). Preliminary count: 55A/15B/5C/5R = 80 claims. HT-3.3.*
+
+*W7-CV1.13 note (2026-05-10): **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED.** S-A1 CERTIFIED (`S-A1_PERSCOMP_INTEGRATION.md`): D-ST-3 §3.11 integration verified, no circular dependency, code matches. S-A3 CERTIFIED (`S-A3_EXISTENCE_AUDIT.md`): Lemma 1 existence proof correct — score matrix finiteness trivially holds on finite graph, five event types exhaust all cases. S-C1 CERTIFIED (`S-C1_KERNEL_AUDIT.md`): Lemmas 9–11 all verified; margin factor gap identified and repaired — correct condition is $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$ (not $+ \epsilon_\mathrm{kernel}$); at canonical parameters $\Delta_\mathrm{sep}^* \approx 0.837 \gg 2\epsilon_\mathrm{kernel}$, numerically negligible. Net count: **+4A (parts a,b,c,d), −1B (old T-Temporal-Identity Cat B row) → 59A/14B/5C/5R = 83 claims**. HT-3.5.*
+
+---
+
+### CV-1.13 — T-Temporal-Identity Full Cat A **SEALED** (W7-CV1.13, 2026-05-10)
+
+*CV-1.13 SEALED (W7-CV1.13, 2026-05-10). T-Temporal-Identity promoted full Cat A — all four parts (a,b,c,d) certified via S-A1/S-A3/S-C1 audits. Count: **59A/14B/5C/5R = 83 claims** (net +3 over CV-1.12 baseline of 80 preliminary: +4A parts a,b,c,d, −1B old Cat B row). Audit files: `S-A1_PERSCOMP_INTEGRATION.md`, `S-A3_EXISTENCE_AUDIT.md`, `S-C1_KERNEL_AUDIT.md`. HT-3.5.*
+
+*Prior partial advances within CV-1.13: Lemma S-B1-Weak Cat A (+1A, W7-CV113, `CV113_S-B1_DEEP_CORE_CLOSURE.md`); S-B1-SYM Cat B (net 0, W7-CV113A, `SYMBOLIC_DEEP_CORE_NECESSITY.md`); OP-SB1-DEEP superseded; OP-SB1-084 registered LOW.*
+
+| T-ID | Name | Status | Category | Proof | Notes |
+|---|---|---|---|---|---|
+| **Lemma S-B1-Weak** | Deep-Core Density Positivity (ρ_deep > ρ_*) | **Cat A** (W7-CV113, 2026-05-10) | **A** | H2' (deep core non-emptiness, |Core| ≥ 25 → |Core²| ≥ 1, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives m^deep ≥ θ_core = 0.7; m ≤ n = 225; hence ρ_deep ≥ 0.7/225 ≈ 0.00311 > ρ_* ≈ 0.00282. Corollary: Δ_sep > 0 Cat A. | Requires: β > 7α (canonical), |Core| ≥ 25, n = 225 (15×15 grid). Does NOT prove ρ_deep ≥ 0.84. Quantitative magnitude (Δ_sep* ≈ 0.837) given by **S-B1-SYM** (Cat B; replaces S-B1 Strong literal 0.84, W7-CV113A). Source: `CV113_S-B1_DEEP_CORE_CLOSURE.md §3`. |
+| **Lemma S-B1-SYM** | Symbolic Deep-Core Density Identity | **Cat B** (W7-CV113A, 2026-05-10) | **B** | Theorem 2b (Deep Core Dominance, Cat A, canonical.md §13) + pointwise Core lower bound (u ≥ θ_core on Core) + trivial mass upper bound (m^total ≤ |Core| = m). Statement: ρ_deep ≥ θ_core(1 − 4 C_iso/√m) under HWF-1 (iso_ratio ≤ C_iso), m ≥ 25, β > 7α. Recovers literal 0.84 at sharp regime (C_iso, m, θ_core) = (0.2, 25, 1.0). Source: `THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md §2`. | Conditional on HWF-1 (iso_ratio ≤ C_iso) — not derivable from (A1)–(A7) alone. Counterexample: 3×10 rectangle, ρ_deep ≈ 0.27. Replaces S-B1 Strong (literal 0.84) as standalone Cat B claim. Three evaluations: default 0.613 / tight 0.867 / sharp 0.840. Literal 0.84 = ρ_sym(0.2, 25, 1.0), retracted as standalone, preserved as derived value. |
+
+---
+
+### Session V Working Candidate — T-Temporal-Identity (2026-05-06) — **PROMOTED CV-1.12**
+
+*Working Cat B candidate (parts a,b,d) / Cat C (part c, pending OP-0011). No count change at Session V. Source: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06). **Promoted to canonical Cat B in CV-1.12 (W7-FINAL, 2026-05-10); see CV-1.12 section above.***
 
 **T-Temporal-Identity** (Persistent component identity via unbalanced transport): Given two consecutive fields $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$, their persistent component sets $\mathrm{PersComp}(u_t)$, $\mathrm{PersComp}(u_s)$, and an admissible unbalanced transport plan $M_{t \to s}$ (E1–E4), there exists a well-defined component-level correspondence relation $R_{t \to s} \subseteq \mathrm{PersComp}(u_t) \times \mathrm{PersComp}(u_s)$ obtained by thresholding the component score matrix $\mathbf{S}$. Five event types are handled: continuation (1-to-1), split (1-to-many), merge (many-to-1), birth ($\varnothing \to C_j^s$), death ($C_i^t \to \varnothing$). If $K_t = K_s$, no birth/death occurs, and the score matrix satisfies the margin condition ($\Delta_\mathrm{sep} > 0$), the relation is a unique bijection. Reduces to `persist_transport` scalar in the $K=1$ case.
 
@@ -479,7 +512,8 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | **OP-0008** | σ^A K-jump Inheritance Non-Determinism | High | PARTIALLY STRUCTURED (Session W, 2026-05-06): sub-problems CONT/MERGE/SPLIT/DIST registered; MERGE centroid+orientation Cat B; σ_standard Cat C (W9+) |
 | **OP-0009** | Multi-Formation Ontological Foundations | High | OPEN (CV-1.5.1, W5 Day 4; 8 sub-items post W6 D4 split); 1/8 RESOLVED via Commitment 16 (OP-0009-K); OP-0009-Pre SPLIT into Pre-a (PARTIALLY RESOLVED) + Pre-b (PARTIALLY RESOLVED, exp01 support) |
 | **OP-0010** | Bind Generalization | Medium | OPEN (T-Bind-Proj/Full now Cat A per Phase 13 — see W6 G2 audit; OP-0010 retains for any further generalization questions) |
-| **OP-0011** | Transport kernel exact form | Medium | STRUCTURED (Session V, 2026-05-06): component confinement path identified |
+| **OP-0011** | Transport kernel exact form | Medium | **RESOLVED** (W7-CV1.13, 2026-05-10): Steps 1–3 all closed Cat A / Cat A conditional (Theorem Partial-H-SINK + S-C1 external audit CERTIFIED with margin correction); T-Temporal-Identity (c) Cat A conditional. |
+| **OP-SB1-DEEP** | Deep-core density $\rho_\mathrm{deep} \geq 0.84$ unconditional | Low | **DOWNGRADED NON-BLOCKING** (W7-CV113, 2026-05-10): blocking condition removed — Lemma S-B1-Weak (ρ_deep > 0.003) Cat A proves Δ_sep > 0; quantitative magnitude Cat B conditional under HWF-1–3 |
 | **OP-0012** | Persistence composition | Medium | PARTIALLY STRUCTURED (Session V, 2026-05-06): OP-0012-CC compositional consistency Cat B path |
 | **OP-0013** | Closure operator convergence rate | Medium | OPEN |
 | **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file pre-2026-05-04 unification) |
@@ -730,9 +764,9 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Impact.** Theoretical completeness; robustness of persistence results; may affect characterization of formation inheritance.
 
-**Status:** UNDER INVESTIGATION → STRUCTURED (Session V, 2026-05-06). Component-level confinement path identified: Step 1 site-level (T-Persist-1(e) $C_\mathrm{conf}$ bound); Step 2 component-level (open: bound $|\gamma_M(C_i^t,C_j^s) - \gamma_{M'}(C_i^t,C_j^s)|$); Step 3 identity-level (when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$, all admissible plans give same $R_{t \to s}$). Feeds into T-Temporal-Identity part (c).
-**Severity:** Medium (impacts formalism).
-**Related:** T-Persist-1(a–e); T-Temporal-Identity part (c).
+**Status:** UNDER INVESTIGATION → STRUCTURED (Session V, 2026-05-06) → **PARTIALLY RESOLVED** (W7-FINAL, 2026-05-10). Step 1: site-level (T-Persist-1(e) $C_\mathrm{conf}$ Cat A). Step 2: component-level — $|\gamma_M(C_i^t,C_j^s) - \gamma_{M'}(C_i^t,C_j^s)| \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ proved **Cat A** (Lemma 10, via Theorem Partial-H-SINK; `working/temporal/partial_ot_stability.md`). Step 3: identity-level — kernel independence under margin condition $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$ proved **Cat A conditional** (Lemma 11 = S-B3; `working/temporal/S-B3_kernel_independence.md`). All three steps closed at Cat A level.
+**Severity:** Medium → **RESOLVED at working level** (pending S-C1 external audit for canonical Cat A).
+**Related:** T-Persist-1(a–e); T-Temporal-Identity part (c); Theorem Partial-H-SINK (`working/temporal/partial_ot_stability.md`).
 
 #### OP-0012: Persistence Composition
 
@@ -780,15 +814,42 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 ---
 
+#### OP-SB1-DEEP: Deep-Core Density Lower Bound
+
+**Statement.** Prove $\rho_\mathrm{deep} \geq 0.84$ (or the correct canonical threshold) unconditionally from canonical SCC axioms (A1)–(A7'), without well-formedness assumptions HWF-1–3.
+
+**Impact.** ~~High: blocking path to CV-1.13~~ → **DOWNGRADED LOW (W7-CV113, 2026-05-10):** Lemma S-B1-Weak (Cat A) proves ρ_deep > ρ_* ≈ 0.003 and thereby Δ_sep > 0 Cat A. T-Temporal-Identity (b,d) Cat A no longer requires ρ_deep ≥ 0.84. Remaining impact: quantitative magnitude (Δ_sep* ≈ 0.837) — useful for numerical bounds but not required for logical Cat A promotion.
+
+**Status:** DOWNGRADED NON-BLOCKING (W7-CV113, 2026-05-10). Original OPEN status (W7-FINAL): Cat B conditional under HWF-1–3; counterexample found (elongated formation, ρ_deep < 0.5). Routes 1–8 tried; Route 8 (corrected positivity analysis) yields Lemma S-B1-Weak Cat A. ρ_deep ≥ 0.84 unconditional remains Cat B conditional — relevant only for numerical magnitude claims.
+**Severity:** Low (non-blocking quantitative refinement).
+**Registered:** W7-FINAL, 2026-05-10. Downgraded: W7-CV113, 2026-05-10. Source: `THEORY/working/temporal/S-B1_deep_core_density.md §5`; `CV113_S-B1_DEEP_CORE_CLOSURE.md §6`.
+**Related:** T-Temporal-Identity parts (b), (d); Lemma S-B1-Weak (Cat A, W7-CV113); Lemma S-B1-SYM (Cat B, W7-CV113A); canonical.md §13 Cat B T-Temporal-Identity.
+**Successor:** OP-SB1-084 (W7-CV113A, 2026-05-10). The "ρ_deep ≥ 0.84 unconditional" question is reformulated as: prove S-B1-SYM Cat A by deriving HWF-1 (iso_ratio ≤ C_iso) from canonical (A1)–(A7). Source: `SYMBOLIC_DEEP_CORE_NECESSITY.md §6`.
+
+---
+
+#### OP-SB1-084: Tightest Analytic C_iso for ρ_sym = 0.84
+
+**Statement.** On canonical 15×15 SCC single-formation minimizers, determine the smallest provable $C_\mathrm{iso}$ such that the symbolic identity $\rho_\mathrm{sym}(C_\mathrm{iso}, \bar{m}, \bar{\theta}_\mathrm{core}) := \bar{\theta}_\mathrm{core}(1 - 4 C_\mathrm{iso}/\sqrt{\bar{m}})$ evaluates to 0.84 at canonical default parameters. Equivalently: prove an analytic upper bound on iso_ratio(Core) for SCC minimizers under (A1)–(A7) tight enough to drive ρ_sym ≥ 0.84 without invoking exp83 measurement.
+
+**Impact.** LOW. Does not block T-Temporal-Identity Cat A — Lemma S-B1-Weak (Cat A, W7-CV113) handles logical positivity (Δ_sep > 0). If resolved: Δ_sep* ≥ 0.837 becomes analytic Cat A (upgrading quantitative magnitude from Cat B symbolic to Cat A analytic).
+
+**Status.** OPEN (W7-CV113A, 2026-05-10). Resolution mechanisms: (a) derive HWF-1 from (A1)–(A7) with explicit tight C_iso; (b) constrained ensemble argument for SCC minimizers; (c) tighten Theorem 2b constant from 4 to c < 4 on canonical lattice.
+**Severity:** Low (does not block any Cat A path).
+**Registered:** W7-CV113A, 2026-05-10. Source: `THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md §6`.
+**Related:** OP-SB1-DEEP (superseded), Lemma S-B1-Weak (Cat A, W7-CV113), Lemma S-B1-SYM (Cat B, W7-CV113A), Theorem 2b Deep Core Dominance (Cat A, canonical.md §13).
+
+---
+
 ### Problem Statistics (post-W6 G2 audit, 2026-05-04)
 
 | Severity | Count | Status |
 |----------|-------|--------|
 | Critical | 0 | All 3 (F-1, M-1, MO-1) addressed in W4 (2026-04-24) |
 | High | 4 | OP-0005, OP-0008, OP-0009 active; OP-0004 retracted; **OP-0006 RESOLVED** (Session K 2026-05-06) |
-| Medium | 4 | OP-0010 largely resolved at canonical level (W6 G2); OP-0011, OP-0012, OP-0013 active |
-| Low | 3 | OP-0020, OP-0021, OP-0022 (extensions / out of scope) |
-| Total active open | 7 (4 High + 3 Medium + a residual scope of OP-0010) | — |
+| Medium | 4 | OP-0010 largely resolved at canonical level (W6 G2); OP-0011 PARTIALLY RESOLVED (W7-FINAL); OP-0012, OP-0013 active |
+| Low | 4 | OP-0020, OP-0021, OP-0022 (extensions / out of scope); **OP-SB1-084 NEW** (W7-CV113A, tightest analytic C_iso for ρ_sym = 0.84; OP-SB1-DEEP superseded by OP-SB1-084) |
+| Total active open | 8 (4 High + 3 Medium + 1 downgraded low) | — |
 | Resolved / clarified / sidestepped (W4) | 3 | F-1, M-1, MO-1 |
 | Retracted | 1 | OP-0004 |
 
