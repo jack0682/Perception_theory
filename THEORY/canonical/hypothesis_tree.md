@@ -305,7 +305,7 @@ HT-x.y
   y: 노드 변경 (가설 추가/클로저/상태 갱신)                           — 세션 중 자유롭게
 ```
 
-현재: **HT-3.4**
+현재: **HT-3.5**
 
 ### 조작 유형
 
@@ -352,3 +352,4 @@ HT-x.y
 | HT-3.2 | 2026-05-10 | H-SINK FULLY CLOSED: Theorem Partial-H-SINK (one-sided Sinkhorn) Cat A. T-Temporal-Identity 캐논 Cat B 승격 (CV-1.12). OP-SB1-DEEP 등록. S-B1 Cat B conditional (HWF-1–3). 79 claims. |
 | HT-3.3 | 2026-05-10 | Lemma S-B1-Weak Cat A (W7-CV113): ρ_deep > ρ_* ≈ 0.003은 H2' (Γ-수렴+DMP)에서 Cat A 증명됨. OP-SB1-DEEP 비차단 강등. T-Temporal-Identity (b,d) Cat A 경로: S-A1-A3만 남음 (~1–2 sessions). 80 claims (예비). |
 | HT-3.4 | 2026-05-10 | S-B1-SYM Cat B (W7-CV113A): symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) derived from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW priority, successor of OP-SB1-DEEP). T-Temporal-Identity Cat A path unchanged: S-A1-A3 only. Net count: 55A/15B/5C/5R = 80 claims (예비, no change). CV-1.13 NOT sealed by W7-CV113A. |
+| HT-3.5 | 2026-05-10 | CV-1.13 SEALED (W7-CV1.13): T-Temporal-Identity full Cat A across all four parts (a,b,c,d). S-A1 CERTIFIED (D-ST-3 PersComp integration into §3.11), S-A3 CERTIFIED (part (a) constructive existence proof — Lemma 1), S-C1 CERTIFIED with margin correction (Lemma 11 kernel independence; corrected margin condition `Δ_sep ≥ Δ_sep* + 2 ε_kernel` — numerically negligible at canonical parameters). Net: +4A, −1B → **59A/14B/5C/5R = 83 claims (~71%)**. Seal document: `THEORY/canonical/CV-1.13_SEAL.md`. Next CV-1.14 candidate: H-MORSE / Package II Entry Audit. |
