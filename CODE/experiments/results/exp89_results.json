@@ -1,0 +1,60 @@
+[
+  {
+    "case": "A_1d_analytic",
+    "endpoint_residual": 2.0,
+    "endpoint_c_direct": 4.0,
+    "endpoint_c_eff": 2.0,
+    "time_normalized_residual": 0.0,
+    "pass_endpoint_nonsemi": true,
+    "pass_norm_additive": true,
+    "pass_endpoint_nonzero": true
+  },
+  {
+    "case": "B_2d_k1",
+    "n": 10,
+    "k_form": 1,
+    "motion_size": 1.5,
+    "seed": 42,
+    "endpoint_residual": 80.0,
+    "action_residual_2hop": 0.0,
+    "action_dp_3hop_residual": 0.0,
+    "soft_residuals": {
+      "eps_0.01": 2.842170943040401e-14,
+      "eps_0.1": 2.842170943040401e-14,
+      "eps_1.0": 0.0
+    },
+    "sinkhorn_residuals": {
+      "eps_0.01": 0.028718029032695092,
+      "eps_0.1": 0.028718029032695092,
+      "eps_1.0": 0.028718029032695092
+    },
+    "pass_endpoint_nonzero": true,
+    "pass_action_zero": true,
+    "pass_dp_3hop": true,
+    "pass_soft_semigroup": true
+  },
+  {
+    "case": "C_2d_k2",
+    "n": 10,
+    "k_form": 2,
+    "motion_size": 1.0,
+    "seed": 7,
+    "endpoint_residual": 80.0,
+    "action_residual_2hop": 0.0,
+    "action_dp_3hop_residual": 0.0,
+    "soft_residuals": {
+      "eps_0.01": 2.842170943040401e-14,
+      "eps_0.1": 2.842170943040401e-14,
+      "eps_1.0": 0.0
+    },
+    "sinkhorn_residuals": {
+      "eps_0.01": 0.017280758751128424,
+      "eps_0.1": 0.017280758751128424,
+      "eps_1.0": 0.017280758751128424
+    },
+    "pass_endpoint_nonzero": true,
+    "pass_action_zero": true,
+    "pass_dp_3hop": true,
+    "pass_soft_semigroup": true
+  }
+]

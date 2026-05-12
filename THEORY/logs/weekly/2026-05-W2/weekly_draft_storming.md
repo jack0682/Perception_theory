@@ -46,25 +46,56 @@
   - 남은 격차: 실제 지수 β^0.89 또는 β^1.2 analytic 도출 (OP-AFD-004a, Layer 3, H-MORSE-Saddle 필요)
 - **AFD-T7 레지스트리 갱신** — Lemma Candidate → Cat B Proposition (C_K(K,K-1) ≥ 0.0221β, 조건부)
 - **Session 로그 생성:** `THEORY/logs/daily/2026-05-12/10_afd0_and_op004_session.md`
+- **OP-0012-CC-StableK 분리**: Kernel-composed level (T-CC-StableK-Kernel, Cat B 완결)과 independent Sinkhorn recomputation level (OPEN)로 구분 확정. Route B 폐기.
+- **CV-1.14 working 파일** (`THEORY/working/CV114_TEMPORAL_COMPOSITION/`, 00–05): Lemma 6 정밀 독해; T-CC-StableK-Kernel Cat B; OP-0012-SINK 신규 subproblem 정의.
+- **CV-1.15 Action-Based Temporal Succession Package** (`THEORY/working/CV115_ACTION_TEMPORAL_COST/`, 00–10): Cat A 8건 (T-ACT-DP, T-ACT-GIBBS 등) + Cat B 2건. Sinkhorn-scaled plan semigroup OPEN (proved failure). Promotion checklist P1–P6 충족; P7 사용자 승인 대기.
+- **exp89 scaffold 구현**: `CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py` — 3-case 설계 (1D analytic, 2D K=1, 2D K=2).
 
 ### 미완료 / 이월
 
-- M-A2 수치 검증 (Track A 블로커 — Day 3 착수 예정)
-- AFD-0 외부 감사 (3-agent TeamCreate — Day 3–4 예정)
-- OP-AFD-003 infimum attainment proof
+- M-A2 수치 검증 (Track A 블로커 — 이월)
+- AFD-0 외부 감사 (3-agent TeamCreate — 이월)
+- exp89 최종 실행 및 검증 (Day 3 완료)
+- CV-1.15 P7 사용자 승인 (이월)
 
 ### Day 2 Close Note
 
 - AFD-0 gained its first nontrivial K-transition lower-bound result (OP-AFD-004 Cat B).
 - AFD-T7 moved from Lemma Candidate to Cat B Proposition (C_K(K,K-1) ≥ 0.0221β).
 - H-MORSE burden reduced: tight exponent moved to Layer 3 (OP-AFD-004a), AFD-0 unblocked.
-- Day 3 focus: M-A2 numeric (Track A) + AFD-0 audit + OP-AFD-003 infimum attainment.
+- CV-1.15 Action-Based Temporal Succession Package: 10 working files, 8 Cat A + 2 Cat B candidates, promotion-ready pending P7.
+- cost/kernel level composition (T-ACT-DP, T-ACT-GIBBS): closed. Sinkhorn-scaled plan: OPEN.
 
 ---
 
 ## Day 3 — 2026-05-13 (Wed)
 
-*진행 후 기록 예정*
+### 완료
+
+- **exp89 최종 검증** (3-case PASS):
+  - Case A (1D analytic): endpoint_residual=2.0, norm_residual=0 — L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION 수치 확인.
+  - Case B (2D K=1, n=10): action_residual=0, soft_residual≤2.84e-14, sinkhorn_residual=0.0287>0.
+  - Case C (2D K=2, n=10): 동일 패턴, sinkhorn_residual=0.0173>0.
+  - 결과 저장: `CODE/experiments/results/exp89_results.json`
+  - 해석: endpoint cost hierarchy 수치 확인; Sinkhorn gap >0 → T-SINKHORN-PLAN-SEMIGROUP-FAILS 일치.
+- **CV-1.15 09_final_audit.md 업데이트** — §11 추가; 판정 READY FOR USER APPROVAL로 상향.
+- **CV-1.15 10_patch_plan.md 업데이트** — exp89 완료 상태 반영.
+- **세션 마무리 작업** — 2026-05-12 99_summary.md 소급 추가, CV114/05_promotion_draft.md CV-1.15 연결 추가, weekly draft 업데이트, 내일 plan/pre_brainstorm 작성.
+
+### 미완료 / 이월
+
+- P7 사용자 승인 대기: canonical/theorem_status/hypothesis_tree/CHANGELOG 직접 수정 대기.
+- OP-0012-SINK: OPEN (Sinkhorn scaling gap bound 없음 — L-δ_eff-SINK + L-Eff-Sinkhorn 필요).
+- AFD-R1 promotion: Claim B.3 검증 후 진행 가능 (OP-AFD-003a-revised).
+- M-A2 수치 검증: Track A, 미실행.
+
+### Day 3 Close Note
+
+- CV-1.15 Action-Based Temporal Succession Package: 10 working files + exp89 완료. Promotion checklist P1–P6 충족.
+- exp89: endpoint residual nonzero, action/Gibbs residual ≈ 0 (~2.84e-14), Sinkhorn residual >0 — 이론 계층 수치 확인.
+- cost/kernel level composition 닫힘; Sinkhorn-scaled plan composition OPEN 유지.
+- SCC temporal identity 해석: endpoint similarity → action-based path inheritance로 이동 (이론 층위에서).
+- 내일(Day 4) 목표: CV-1.15 promotion application (P7 승인 시) + post-promotion consistency audit.
 
 ---
 
@@ -82,11 +113,13 @@
 
 ## 주간 scoreboard (업데이트 예정)
 
-| 지표 | Entry | Exit | Δ |
+| 지표 | Entry | Exit (현재) | Δ |
 |---|---|---|---|
-| Canonical version | CV-1.13 | | |
-| Cat A | 59 | | |
-| Cat B | 14 | | |
-| Total claims | 83 | | |
-| Working 파일 신규 | 0 | | |
-| CV-1.14 봉인 | — | | |
+| Canonical version | CV-1.13 | CV-1.13 (CV-1.15 승인 대기) | — |
+| Cat A | 59 | 59 (→67 승인 후) | +8 대기 |
+| Cat B | 14 | 14 (→16 승인 후) | +2 대기 |
+| Total claims | 83 | 83 (→93 승인 후) | +10 대기 |
+| Working 파일 신규 | 0 | CV114: 6, CV115: 11, exp89: 1 | +18 |
+| CV-1.14 봉인 | — | 대기 (T-CC-StableK-Kernel Cat B) | — |
+| CV-1.15 봉인 | — | P7 승인 대기 | — |
+| exp89 | — | 3-case PASS | 완료 |

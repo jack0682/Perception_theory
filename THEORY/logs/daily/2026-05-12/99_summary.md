@@ -145,3 +145,50 @@ Day 4 plan (suggested, priority-ordered post-audit):
 ---
 
 *Session 2026-05-12 W7 Day 3 closed.*
+
+---
+
+## Appendix — CV-1.14/CV-1.15 세션 (같은 날 별도 진행, 2026-05-13 소급 기록)
+
+> 이 섹션은 2026-05-13 마무리 세션에서 소급 추가됨.
+> CV-1.14/CV-1.15 작업은 2026-05-12 OP-AFD-003 세션과 독립적으로 같은 날 진행되었다.
+
+### 세션 산출물
+
+| 파일 | 내용 |
+|---|---|
+| THEORY/working/CV114_TEMPORAL_COMPOSITION/ (00–05) | CV-1.14 OP-0012 분리: Kernel-composed vs independent Sinkhorn |
+| THEORY/working/CV115_ACTION_TEMPORAL_COST/ (00–10) | CV-1.15 Action-Based Temporal Succession Package (10 파일) |
+| CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py | exp89 scaffold 구현 |
+| CODE/experiments/results/exp89_results.json | exp89 3-case 검증 결과 (2026-05-13 완료) |
+
+### 주요 결과
+
+1. **OP-0012-CC-StableK 분리**: Kernel-composed level (T-CC-StableK-Kernel, Cat B 완결)과 independent Sinkhorn recomputation level (OPEN)로 분리됨.
+2. **Route B 폐기**: "self-referential cost이므로 ε_comp=0" 주장 폐기. Independent Sinkhorn 계산 시 Route B 적용 안 됨.
+3. **CV-1.15 Cat A 8건**:
+   - L-ENDPOINT-NONSEMI: endpoint² cost 합성 불가 (반례: x=0,z=2)
+   - L-ACTION-NORMALIZATION: time-normalized cost 등속 경로에서 additive
+   - L-FINGERPRINT-ACTION-ADMISSIBLE: SCC fingerprint action admissibility
+   - T-ACT-DP: hard-min Bellman DP (양방향 부등식 완결)
+   - L-ACTION-DELTA-EFF-ZERO: δ_eff=0 (action cost 재정의 하에서)
+   - T-ACT-GIBBS: Gibbs kernel semigroup K_{i→k}=K_{i→j}K_{j→k} (Chapman-Kolmogorov)
+   - L-SOFTMIN-HARDMIN-BOUND: smin_ε 오차 ≤ ε log N
+   - L-SOFT-ACTION-DELTA-EFF-ZERO: soft δ_eff^ε=0 (T-ACT-GIBBS 귀결)
+4. **CV-1.15 Cat B 2건**: T-ACT-KERNEL-COMP→REL, P-SINKHORN-STABILITY-CONDITIONAL
+5. **Sinkhorn-scaled plan semigroup OPEN**: T-SINKHORN-PLAN-SEMIGROUP-FAILS proved failure (b₁⊙a₂≠c·I generically); OP-0012-SINK OPEN 유지.
+6. **exp89 3-case PASS** (2026-05-13 완료): endpoint residual nonzero; action/Gibbs residual ≈ 0 (≤2.84e-14); Sinkhorn residual nonzero (0.0173–0.0287) — 이론 계층 수치 확인.
+
+### 폐기된 주장 (이 세션에서 확정)
+
+- Route B ε_comp=0: self-referential cost만으로 semigroup property 보장 안 됨
+- Independent Sinkhorn composition: 이번 작업 범위에서 해결 안 됨 (OPEN)
+- Sinkhorn-scaled plan semigroup: proved failure, generically false
+
+### 상태
+
+- CV-1.15 Promotion checklist P1–P6 충족
+- P7 사용자 승인 대기
+- canonical.md 실제 수정: 사용자 승인 후 진행 (10_patch_plan.md §5 순서 참조)
+
+*소급 추가: 2026-05-13.*
