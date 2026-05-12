@@ -152,8 +152,8 @@ W7 strategic plan의 Track A (H-MORSE-Local Cat B):
 | `AFD_0/afd_summary_for_next_agent.md` | UPDATE 2026-05-12 section prepended |
 | `logs/daily/2026-05-12/10_afd0_and_op004_session.md` | This file |
 | `logs/weekly/2026-05-W2/weekly_draft_storming.md` | Day 2 filled + close note |
-| `logs/daily/2026-05-13/00_plan.md` | Created (Day 3 plan) |
-| `logs/daily/2026-05-13/01_pre_brainstorm.md` | Created (Day 3 brainstorm) |
+| `logs/daily/2026-05-12/00_plan.md` | Created (originally misdated 2026-05-13 "Day 3 plan", relocated to 2026-05-12) |
+| `logs/daily/2026-05-12/01_pre_brainstorm.md` | Created (originally misdated 2026-05-13 "Day 3 pre-brainstorm", relocated to 2026-05-12) |
 
 ### Day 3 handoff
 

@@ -1,10 +1,11 @@
 ---
 type: log/brainstorm
-date: 2026-05-13
+date: 2026-05-12
 session: Day 3 pre-session rough notes
+note: originally dated 2026-05-13 in error; relocated to 2026-05-12 (actual session date). Day-3 framing preserved.
 ---
 
-# Day 3 Pre-Session Brainstorm — 2026-05-13
+# Day 3 Pre-Session Brainstorm — 2026-05-12 (relocated from 2026-05-13)
 
 Rough practical notes for the three priorities. No polish, just key questions and approaches.
 
