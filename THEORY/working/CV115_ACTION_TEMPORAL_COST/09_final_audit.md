@@ -306,3 +306,38 @@ minor fixes (K symbol → 10_patch_plan.md §1 주석 블록으로 처리; "refi
 적용 순서 (승인 후): CHANGELOG → theorem_status → hypothesis_tree → canonical.
 
 *업데이트: 2026-05-13. exp89_results.json 기준.*
+
+---
+
+## §12. 2026-05-13 audit pass — amendments applied (R-C + S-i)
+
+This section records the second-pass audit performed 2026-05-13 (after exp89 PASS), which expanded the "READY AFTER MINOR FIXES" judgment of §10 with additional findings and applied them as amendments.
+
+### §12.1 Findings applied to 10_patch_plan.md (via 04_proposed_amendments.md)
+
+| Finding (label from 2026-05-13 audit) | Severity | Action applied |
+|---|---|---|
+| §2 CV-1.14 dependency | MEDIUM | **R-C** chosen: CV-1.15 §13.Y background + T-ACT-KERNEL-COMP→REL annotation rewritten to cite CV-1.14 T-CC-StableK-Kernel as *working candidate*, not canonical. T-ACT-KERNEL-COMP→REL Cat B status preserved with explicit "conditional on CV-1.14 promotion" annotation. |
+| §3 style mismatch | LOW | **S-i** chosen: single §13.Y block split into per-category inserts (Cat A insert + Cat B insert + §12 OPEN insert + Interpretation insert). |
+| 1.2a "fingerprint similarity cost" undefined | LOW | Parenthetical added inside L-ACTION-DELTA-EFF-ZERO 주의-line: "(the standard SCC self-referential cost $c[u_t, u_s]$ used in single-formation transport, canonical §8.5; cf. T-Temporal-Identity score matrix derivation)" |
+| 1.2b "temporal identity cost" semantic slip | LOW | §13.Y refinement-framing note rephrased to reference "T-Temporal-Identity (§13 Cat A; based on score matrix $S^0_{ij}$ derived from $c[u_t, u_s]$ of §8.5)" instead of "T-Temporal-Identity (§8.5)". |
+| 1.3b $\varepsilon$ vs $\varepsilon_{\mathrm{OT}}$ collision | MEDIUM | (기호 주의 — 2) note added to canonical insert header explicitly distinguishing the two parameters. |
+| 1.4a L-FINGERPRINT-ACTION-ADMISSIBLE under-stated conditions | LOW | Explicit condition list added: "$\varphi_i$ Lipschitz, $\Delta t_i > 0$, $d_i \geq 0$, $a_i$ per D-LOCAL-ACTION". |
+| 1.4b L-SOFTMIN-HARDMIN-BOUND under-stated conditions | LOW | Explicit condition list added: "$a \in \mathbb{R}^N$, $N$ finite, $\varepsilon > 0$". |
+| 1.5 §8.5 cross-reference target | LOW | Header note updated to "(§13 Cat A; $S^0_{ij}$ from §8.5)" — see 1.2b. |
+| 1.7 exp89 missing from CHANGELOG file list | LOW | CHANGELOG draft §"Files updated" includes exp89 file paths. |
+| §2.4 Cat B header staleness (pre-existing) | LOW (hygiene) | Cat B header amended to record T-Temporal-Identity's CV-1.13 promotion to Cat A. |
+| 1.3a $a_\ell$ vs $a$ (Sinkhorn row scaling) | LOW | **DEFERRED.** Purely internal stylistic; revisit if T-SINKHORN-PLAN-SEMIGROUP-FAILS body becomes a canonical Cat B + theorem (currently OPEN in §12 Warning subsection). |
+| 1.3c $c$ has six superscripts | LOW | **ACCEPTED.** All six superscripts are defined inline in the Cat A insert; no rename. |
+
+### §12.2 Updated readiness judgment
+
+- §10 (2026-05-12): READY AFTER MINOR FIXES (K symbol clarity + refinement framing).
+- §11 (2026-05-13 morning, post exp89 PASS): READY FOR USER APPROVAL.
+- **§12 (2026-05-13 audit pass): READY FOR USER APPROVAL + AMENDMENTS APPLIED.**
+
+All Cat A 8-entry proofs unchanged. All claim counts unchanged (+8A +2B → 67A/16B/5C/5R = 93 claims, Interpretation row excluded). Symbol clarity, refinement framing, scope restrictions, condition explicitness all updated.
+
+The amendments source is `THEORY/logs/daily/2026-05-13/04_proposed_amendments.md` §A–§E. The user has authorized full apply 2026-05-13 ("go without question"); the canonical / theorem_status / hypothesis_tree / CHANGELOG / 10_patch_plan apply is being executed in the same session per §F apply-order.
+
+*Updated: 2026-05-13. Audit reference: `THEORY/logs/daily/2026-05-13/02_development.md + 04_proposed_amendments.md`. P7 granted 2026-05-13 in-session.*
