@@ -10,6 +10,9 @@ files_modified:
   - THEORY/logs/weekly/2026-05-W2/weekly_draft_storming.md (pending: Day 2)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 10 — AFD-0 Session + OP-AFD-004 Proof (2026-05-12)
 
 이 파일은 2026-05-12 W7 Day 2 세션을 기록한다.

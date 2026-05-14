@@ -8,6 +8,9 @@ session: W7 carry-forward
 scope: OP-0012-CC-StableK — 이미 증명된 것 / Cat B 가능 / 새로 필요한 것 분류
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 03. Gap Audit v2 — OP-0012-CC-StableK
 
 ---

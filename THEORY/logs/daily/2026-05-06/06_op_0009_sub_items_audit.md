@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_op_0009_sub_items_audit.md — OP-0009 Sub-Items Audit
 
 **Session:** 2026-05-06 (W6 Day 3 G3.6, P1).

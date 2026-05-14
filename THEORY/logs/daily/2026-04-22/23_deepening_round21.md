@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 23 — Deepening Round 21: Round 9 §11 Supra-Lattice Falsification
 
 **Session continuation:** 2026-04-22 night (post-R20, user-executed Command 3).

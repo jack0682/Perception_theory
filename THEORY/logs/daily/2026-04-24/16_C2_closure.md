@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 16_C2_closure.md — C2 Cluster Final Closure
 
 **Session:** 2026-04-24 (late)

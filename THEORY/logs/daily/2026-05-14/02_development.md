@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02 — Development: D-HMORSE-LOCAL + Exclusion + 3 Lemmas + Counterexample
 
 **Session:** 2026-05-14 (W7-Day5)

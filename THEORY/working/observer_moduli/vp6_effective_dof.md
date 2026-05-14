@@ -9,6 +9,9 @@ experiment: CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py
 data: CODE/experiments/results/observer_moduli/vp6_jacobian_spectra.json
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-6 — Effective DOF via Jacobian Singular Spectrum
 
 Computational attack on OP-OMS-016 (computational $d_{\mathrm{eff}}$),

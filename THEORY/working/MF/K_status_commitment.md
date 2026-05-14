@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # K_status_commitment.md — K의 Ontological Status Canonical Commitment Audit
 
 **Status:** working draft (OAT-1 spawn 2026-04-29 W5 Day 3 EOD; OAT track의 fundamental entry).

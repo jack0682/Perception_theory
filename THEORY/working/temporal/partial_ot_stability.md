@@ -9,6 +9,9 @@ predecessor: THEORY/working/temporal/H-SINK.md (W7-T1; H-SINK-6 partial OT Cat B
 closes: H-SINK partial OT gap → H-SINK full theorem Cat A
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # Partial/Sub-Stochastic OT Stability for SCC E1 Kernel
 
 **Working proof file. W7-FINAL session, 2026-05-10.**

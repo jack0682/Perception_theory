@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # logs/weekly/ — 주간 Rotating Buffer (Pre-Canonical Staging)
 
 **Purpose.** Canonical 승급 전 **주 단위** staging area. 이전의 `canonical/canonical_sub.md` 단일 파일을 2026-04-23 에 본 폴더의 주간 폴더 구조로 개편. `logs/weekly/` 가 기존 chronological journal convention 이라 `canonical/` 의 authoritative 범위와 분리하여 배치.

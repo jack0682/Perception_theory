@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_class_category.md — σ-Class Category with Aut(G)-Equivariant Morphisms (Fukaya-Spirit)
 
 > **⚠️ FULL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # W5 Strategic Plan — Comprehensive Edition (2026-04-27 ~ 2026-05-03)
 
 **Type:** Comprehensive 7-day strategic blueprint with long-term roadmap.

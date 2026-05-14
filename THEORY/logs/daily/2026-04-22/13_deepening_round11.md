@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13 — Round 11: $\mathcal{M}_2$ Classification on 2D Grid (K=2 First Pitchfork)
 
 **Session:** 2026-04-22 (Round 11, multi-formation 확장 시작)

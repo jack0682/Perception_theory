@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_select_obs_posterior.md — T-K-Select-OBS: Observation-Conditioned K-Selection via Posterior Sector Mass
 
 **Status:** working draft, Cat B candidate. Session S (2026-05-06) initial draft. Session T (2026-05-06) review: Cat B status confirmed; §3.5 K_feas^obs tightening added; no overclaims. Single-topic working file per `THEORY/working/MF/` convention.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — Day 7 (2026-05-03) Session Summary + W6 Seed
 
 **Session:** 2026-05-03 (W5 Day 7)

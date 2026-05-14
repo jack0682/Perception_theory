@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 24_P1_findings_F6_F7_redo.md — P1.1 + P1.2 Numerical Findings (Phase 4 F6/F7 Resolved)
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 5, P1.1 + P1.2).

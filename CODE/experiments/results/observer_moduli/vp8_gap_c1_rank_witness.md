@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-8 — Gap C1 Rank Witness Summary
 
 **Date:** 2026-05-08  

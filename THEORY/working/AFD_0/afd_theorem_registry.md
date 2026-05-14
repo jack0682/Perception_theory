@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # AFD-0 Theorem Registry
 
 Tabular index of AFD-0 results. Cross-references to Layer-1 (Cat A) dependencies and open gaps.

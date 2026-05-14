@@ -5,6 +5,9 @@ status: open
 last_updated: 2026-05-06
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # P-F-A1: Effective Stochastic Temperature $T_*$ — Working Formalization
 
 **Blocker for:** D-ST-4 (Kramers rate, partition function $Z_K$), T-BO (Bayesian optimal $K^*$), any canonical metastability claim

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03 — Integration & New Open: Q1–Q4 + Combination Analysis + Recommendation
 
 **Session:** 2026-04-20

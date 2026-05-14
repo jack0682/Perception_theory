@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_L1M_proof_development.md — L1-M Soft-Count Corollary, Primary Approach
 
 > *(Renamed 2026-05-04 audit: previously `02_development.md`. Internal/external references updated.)*

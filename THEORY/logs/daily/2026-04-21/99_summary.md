@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99 — Session Summary (2026-04-21)
 
 **Session type:** Stage 1 (Definition Foundation) — C+E common first session.

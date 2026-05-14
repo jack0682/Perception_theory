@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp02: Stereo Merger Barrier (Claim T5 / Claim B)
 
 ## Setup

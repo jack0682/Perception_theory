@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_exploration.md — G3 K_act ε-Convention Decision: Restatement + Multi-Approach + Primary Selection
 
 **Session:** 2026-05-04 (W6 Day 1, Day 1 mid-day acceleration of redesigned Day 3 work)

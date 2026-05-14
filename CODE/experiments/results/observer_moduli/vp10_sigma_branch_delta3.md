@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-10 — Pseudo-Δ³ Σ_branch Map Summary
 
 **Date:** 2026-05-08  

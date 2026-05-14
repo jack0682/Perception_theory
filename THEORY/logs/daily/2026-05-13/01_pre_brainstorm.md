@@ -4,6 +4,9 @@ date: 2026-05-13
 session: CV-1.15 promotion 전 rough notes
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Pre-Brainstorm — 2026-05-13
 
 Promotion application 직전 탐색적 메모. 증명되지 않은 것은 쓰지 않는다.

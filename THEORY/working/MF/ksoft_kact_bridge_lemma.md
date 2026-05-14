@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # WQ-2: $K_{\mathrm{soft}}$ / $K_{\mathrm{act}}$ Bridge Lemma
 
 **File:** `THEORY/working/MF/ksoft_kact_bridge_lemma.md`

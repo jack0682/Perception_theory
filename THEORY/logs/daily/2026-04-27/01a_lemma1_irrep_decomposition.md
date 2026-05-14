@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01a_lemma1_irrep_decomposition.md — Lemma 1 (σ-Framework, Irrep Decomposition Well-Defined)
 
 **Session:** 2026-04-27 (W5 Day 1, G0 Block 1)

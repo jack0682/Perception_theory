@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-J: Cat-A Upgrade Attempt for the Hard-Bar / Active-Count Bridge
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1J_catA_upgrade_attempt.md`

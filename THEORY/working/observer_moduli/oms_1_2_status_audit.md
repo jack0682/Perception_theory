@@ -7,6 +7,9 @@ stage: OMS-1.2 status audit
 depends_on: oms_1_candidate.md, oms_1_1_promotion_audit.md, vp6_effective_dof.md, op_oms_018_regular_u_star.md
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OMS-1.2 Status Audit
 
 This audit assesses OMS status after the Session-5 VP-6 (effective DOF

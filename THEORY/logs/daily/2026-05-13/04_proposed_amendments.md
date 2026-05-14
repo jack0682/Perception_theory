@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04 — Proposed Amendments (R-C + S-i, copy-paste-ready)
 
 **Session:** 2026-05-13

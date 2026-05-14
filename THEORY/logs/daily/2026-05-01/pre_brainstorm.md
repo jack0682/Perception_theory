@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-05-01 W5 Day 5 (reconciliation pre-think, revised)
 
 **Type:** Pre-session brainstorm. This sits next to `plan.md` as the looser mental frame for Day 5.

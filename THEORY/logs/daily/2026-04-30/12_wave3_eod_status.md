@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12_wave3_eod_status.md — Wave 3 End-of-Day Status (W5 Day 4 PM, 2026-04-30)
 
 **Trigger:** End of Wave 3 lead-direct work session; 9 native teammates still in flight.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_development.md — Primary Development of T-Temporal-Identity Cat B (parts a, b, d)
 
 **Session:** 2026-05-07 (Thu, W6 Day 5)

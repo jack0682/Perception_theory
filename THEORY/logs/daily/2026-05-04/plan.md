@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-04 (W6 Day 1) — REDESIGNED v2 (post-reset + post-G3-deep-dive)
 
 **Title:** 2026-05-04 Research Plan — W6 Day 1, Audit-Anchored (4-goal scope), realigned post-reset.

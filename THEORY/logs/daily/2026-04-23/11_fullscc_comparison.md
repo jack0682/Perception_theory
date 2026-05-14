@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11 — Full SCC vs Pure Allen-Cahn: Landscape Comparison
 
 **Session:** 2026-04-23 (user executed `--with-closure` full SCC run per recommendation).

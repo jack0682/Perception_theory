@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-I: Constants Feasibility Study
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md`

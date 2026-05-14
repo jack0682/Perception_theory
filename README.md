@@ -1,3 +1,5 @@
+> [!nav] Linked: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · [[INDEX|working/INDEX.md]]
+
 # Relational Field Formation
 
 This repository develops a mathematical theory of how object-like structure can emerge from relational fields without assuming objects in advance.

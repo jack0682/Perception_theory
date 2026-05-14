@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 22 — Deepening Round 20: NQ-36 Resolved + Static/Dynamic Decoupling (2026-04-22 night)
 
 **Trigger:** Single-formation audit (summary §16.5 NQ-36) + user-executed fine β-scan.

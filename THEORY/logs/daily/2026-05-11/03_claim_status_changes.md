@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03 — Claim Status Changes (W7 Arc)
 
 All status changes are dated 2026-05-10 (the actual seal day for CV-1.12 and CV-1.13).

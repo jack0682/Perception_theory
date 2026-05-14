@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_topological_invariance.md — σ-tuple Invariance under Graph Homeomorphism / Topological Equivalence (NQ-190)
 
 **Status:** working draft (NQ-190, W5 Day 4+ open question; SF-axis spawn 2026-04-29).

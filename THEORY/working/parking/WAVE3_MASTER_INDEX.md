@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # WAVE3_MASTER_INDEX.md — W5 Day 4 PM Wave 3 New Files Master Index
 
 **Last updated:** 2026-04-30 (W5 Day 4 PM Wave 3, ongoing).

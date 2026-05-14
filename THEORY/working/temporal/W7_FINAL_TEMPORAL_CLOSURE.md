@@ -8,6 +8,9 @@ scope: single-formation temporal closure; H-SINK → partial OT → S-B1 → S-B
 predecessor: THEORY/working/temporal/H-SINK.md (W7-T1, 2026-05-10)
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # W7-FINAL: Single-Formation Temporal Closure — Audit and Proof Log
 
 **Purpose.** Complete end-to-end audit of the single-formation temporal identity chain:

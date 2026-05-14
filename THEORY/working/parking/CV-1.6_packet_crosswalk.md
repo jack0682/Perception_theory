@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # CV-1.6_packet_crosswalk.md — CV-1.6 Release Packet 11 D-Items Cross-Walk
 
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # Colab에서 로컬 폴더 마운트 방법
 
 ## 방법 1️⃣: Google Drive 마운트 (권장)

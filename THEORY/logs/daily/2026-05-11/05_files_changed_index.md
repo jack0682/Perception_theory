@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05 — Files Changed Index (W7 Arc)
 
 All file edits dated 2026-05-10 (the closure work day). The 2026-05-11 daily log files are this folder's content (created today).

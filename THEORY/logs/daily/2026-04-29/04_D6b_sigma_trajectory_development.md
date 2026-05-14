@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_D6b_sigma_trajectory_development.md — Substantive Development of σ_multi^A(t) Dynamic Trajectory
 
 **Session:** 2026-04-29 (W5 Day 3, post-Block-5 deepening pass)

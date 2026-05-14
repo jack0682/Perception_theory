@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W6 D2 EOD Summary (Closure-Rigor Audit + Decision-Point Surfacing; Slack-Week Mode)
 
 **Session:** 2026-05-05 (W6 Day 2 EOD; post-Day-1-overdelivery slack-week mode; single-thread audit)

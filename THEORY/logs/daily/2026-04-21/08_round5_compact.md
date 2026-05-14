@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08 — Round 5 Compact: Witten Explicit + (T, λ_K) Corners + Spectral Gap + Saturation Check
 
 **Session:** 2026-04-21 (Round 5, post Round 1-4)

@@ -6,6 +6,9 @@ claim_count_at_start: 59A / 14B / 5C / 5R = 83 claims
 hypothesis_tree_at_start: HT-3.5
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 2026-05-12 Daily Log Index
 
 **전일 상태:** CV-1.13 SEALED (2026-05-10). T-Temporal-Identity full Cat A. 83 claims (~71%).

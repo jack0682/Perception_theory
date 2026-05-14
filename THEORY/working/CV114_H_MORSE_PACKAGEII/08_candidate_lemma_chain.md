@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 08 — Candidate Lemma Chain (CV-1.14)
 
 Five candidate paths for CV-1.14. For each: required lemmas, difficulty, expected status, risk, output files, seal feasibility.

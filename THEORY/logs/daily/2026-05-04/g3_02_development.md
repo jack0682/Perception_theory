@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_development.md — G3 ε-Convention Diagnostic-First Execution + Decision Rule
 
 **Session:** 2026-05-04 (W6 Day 1, mid-day acceleration)

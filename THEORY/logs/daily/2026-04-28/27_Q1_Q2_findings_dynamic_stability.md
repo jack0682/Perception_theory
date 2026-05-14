@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 27_Q1_Q2_findings_dynamic_stability.md — Phase 6 Q1+Q2 Findings: Dynamic Stability is Generic
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 6, Q1 + Q2 findings).

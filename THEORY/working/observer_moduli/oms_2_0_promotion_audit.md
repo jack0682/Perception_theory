@@ -17,6 +17,9 @@ depends_on:
   - vp10_sigma_branch_delta3 (results)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OMS-2.0 Promotion Audit
 
 This audit applies the **conservative classification rules** specified by

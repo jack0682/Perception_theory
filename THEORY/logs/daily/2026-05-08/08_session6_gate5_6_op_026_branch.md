@@ -6,6 +6,9 @@ attacks: OP-OMS-026
 deliverables: op_oms_026_sigma_branch_full.md, vp10_sigma_branch_delta3.py + .json + .md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 6 Gates 5 & 6 — OP-OMS-026 Full Σ_branch Theory and Δ³ Map
 
 ## Gate 5 — Theory file `op_oms_026_sigma_branch_full.md`

@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # AFD-0 Honesty Audit
 
 20-question audit applied to AFD-0 (Draft v0.1). Each question is answered honestly with the specific definition / theorem reference and any caveats. Overclaim corrections are summarized at the bottom.

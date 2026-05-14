@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # foundational_bridges_2026.md — 2024-2026 Mathematical Breakthroughs as Bridges to SCC Multi-Formation Theory
 
 > **⚠️ SPLIT-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**

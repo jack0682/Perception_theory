@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_active_teammate_and_wave5_decisions.md — Active Teammate Shutdown + Wave 5 Contingency Verdict
 
 **Session:** 2026-05-01 (W5 Day 5)

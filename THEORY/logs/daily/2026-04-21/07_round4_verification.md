@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07 — Round 4 Verification: Phase Diagram + Cat C Survival + Cross-File Consistency
 
 **Session:** 2026-04-21 (Round 4, post Round 1-3)

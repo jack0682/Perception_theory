@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # step_cohesion.md — Formation Quantization via Step-Based Decomposition
 
 **Status:** committed draft, 2026-04-22 R22.

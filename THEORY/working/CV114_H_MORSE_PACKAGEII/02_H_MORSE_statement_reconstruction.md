@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 02 — H-MORSE Statement Reconstruction
 
 Agent C (Long-Form Theorem Writer) + Agent A (Aristotle-style formal discipline).

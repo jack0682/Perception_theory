@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # Non-Canonical Commitment Candidate: Layered Ambient-State Architecture for SCC / Multi-Formation
 
 **Document type:** Non-canonical commitment candidate. Working draft.

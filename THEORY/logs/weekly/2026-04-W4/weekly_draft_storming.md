@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Weekly Draft Storming — 2026-04-W4 (April 19–25, 2026)
 
 **Status:** accumulating (week-scoped buffer → `weekly_summary.md` at week close → `canonical.md` integration)

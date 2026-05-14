@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02 — Development (Block A pre-approval audit + Block D dry-run + Block E/F)
 
 **Session:** 2026-05-13

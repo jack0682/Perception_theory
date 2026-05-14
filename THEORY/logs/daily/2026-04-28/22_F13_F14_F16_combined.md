@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 22_F13_F14_F16_combined.md — Continuum Limit + Non-Involution Wreath + Terminology Glossary
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 4, F13 + F14 + F16 combined).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_closure_rigor_audit.md — W6 D2 G2.1 Closure-Rigor Audit
 
 **Session:** 2026-05-05 (W6 Day 2, single-thread audit work; post Day-1-overdelivery slack-week mode)

@@ -9,6 +9,9 @@ experiment: CODE/experiments/observer_moduli/vp7_branch_map.py
 data: CODE/experiments/results/observer_moduli/vp7_branch_map.json
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-7 — Σ_branch Mapping on the Static Face Δ²
 
 Computational attack on OP-OMS-026 (characterize $\Sigma_{\mathrm{branch}}$)

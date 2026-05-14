@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_lie_algebra_structure.md — Lie Algebra / Group Theory Perspective on the σ-Framework (NQ-258 Initiation)
 
 > **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**

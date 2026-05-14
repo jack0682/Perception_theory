@@ -7,6 +7,9 @@ scope: canonical.md, theorem_status.md, hypothesis_tree.md, CHANGELOG.md 업데�
 non-overclaim: 실제 파일 수정 없음. 이 파일은 draft block만 포함.
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 10. Patch Plan — CV-1.15 Promotion
 
 ---

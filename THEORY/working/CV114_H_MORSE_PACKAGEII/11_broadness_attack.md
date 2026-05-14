@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 11 — OP-HMORSE-BROADNESS Closure (Attack Record)
 
 **Working folder:** `THEORY/working/CV114_H_MORSE_PACKAGEII/`

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_rich_phi_proof.md — Φ_rich K-jump Inheritance Map Determinism Proof (Synthesis)
 
 **Status:** working draft (W5 Day 4, Task #4 synthesis).

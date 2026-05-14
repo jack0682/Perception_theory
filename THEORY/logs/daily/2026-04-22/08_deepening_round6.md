@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08 — Deepening Round 6: Prop 1.3b (d) Full Spectrum Across Spinodal
 
 **Session:** 2026-04-22 (Round 6, post-Round-5)

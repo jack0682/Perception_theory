@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-L: SCC-Decay Theorem Attempt for P7 Decay-to-Cut
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1L_scc_decay_theorem.md`

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-04-29 (W5 Day 3 morning brainstorm)
 
 **Author**: User reflection at Day 3 morning, before plan.md execution.

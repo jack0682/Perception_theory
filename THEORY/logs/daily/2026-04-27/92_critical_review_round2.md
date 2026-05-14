@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 92_critical_review_round2.md — Second-Round Deep Re-Review
 
 **Session:** 2026-04-27 (W5 Day 1, post-evening-corrections, second user re-audit)

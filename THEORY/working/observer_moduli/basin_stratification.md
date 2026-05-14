@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 depends_on: observer_landscape_candidates.md, readout_map_audit.md
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Basin Stratification — OMS-0.2
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.

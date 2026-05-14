@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 stage: OMS-1.1 → OMS-1.2 candidate
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-6 Initial Reading Log — Session 5
 
 Records the OMS state at session start (post-VP-4 / OMS-1.1) and the

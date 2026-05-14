@@ -6,6 +6,9 @@ canonical_version_at_start: CV-1.13 (sealed; 59A / 14B / 5C / 5R = 83 claims)
 entering_state: 두 archive (V-AFD 5/12 → 5/13 archive; R-2 5/13 → same-day archive) 직후
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 00 — Index (2026-05-14)
 
 ## Day context

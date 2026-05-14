@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04b_post_flow_R_j_measurement_protocol.md — Post-Flow R_j Measurement Protocol
 
 **Session:** 2026-05-06 (W6 Day 3 G3.4, sub-file of `04_nq_g1_2_ext_design.md`).

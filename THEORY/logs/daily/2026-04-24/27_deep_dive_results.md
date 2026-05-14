@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 27_deep_dive_results.md — Deep Dive Results: PARTIAL RESTORATION of dual-regime
 
 **Session:** 2026-04-24 (final night, deep dive analysis complete)

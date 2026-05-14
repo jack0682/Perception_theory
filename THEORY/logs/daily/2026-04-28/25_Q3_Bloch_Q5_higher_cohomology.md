@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 25_Q3_Bloch_Q5_higher_cohomology.md — Phase 6 Q3 (Bloch L^{-q}) + Q5 (H², H³)
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 6, Q3 + Q5).

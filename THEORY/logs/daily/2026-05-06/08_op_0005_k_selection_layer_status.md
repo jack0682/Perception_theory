@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_op_0005_k_selection_layer_status.md — OP-0005 K-Selection Layer Status
 
 **Session:** 2026-05-06 (W6 Day 3 G3.8, P1).

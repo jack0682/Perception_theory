@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-05-02 W5 Day 6 (forward-leaning execution + W5 weekly close substance pre-think)
 
 **Type:** Pre-session brainstorm. Sits next to `plan.md` as the looser mental frame for Day 6.

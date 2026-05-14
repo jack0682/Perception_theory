@@ -9,6 +9,9 @@ scope: T-ACT-KERNEL-COMP-REL (Cat B), T-SINKHORN-PLAN-SEMIGROUP-FAILS (OPEN),
 non-overclaim: Sinkhorn-scaled plan semigroup proved/Cat B 선언 절대 금지
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 02. 조건부·열린 결과 — CV-1.15 Action Temporal Cost
 
 ---

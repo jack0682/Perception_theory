@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_close_NQ4_robust.md — NQ-T-Identity-4 Partial Closure (Large $\varepsilon_\mathrm{OT}$ Robustness)
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session

@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # AFD-0 Worked Examples
 
 Seven concrete examples on small grids illustrating the AFD-0 definitions. All grids use 4-neighbor connectivity unless otherwise stated. Parameter conventions follow `canonical.md` §8 and `CODE/scc/params.py`. Numerical anchors reference `experiments/` results where available.

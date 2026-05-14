@@ -12,6 +12,9 @@ depends_on:
   - oms_2_0_promotion_audit.md (Session 6)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OMS-2.0 Accepted Audit (Final)
 
 This audit applies the mandated decision tree to the post-Session-7 state and assigns the strongest defensible OMS-2.0 classification.

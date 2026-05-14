@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp01: K_act = #PersComp vs Slot-Count
 
 ## Results

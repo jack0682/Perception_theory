@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 26_deep_dive_theory.md — Deep Dive Theoretical Framework
 
 **Session:** 2026-04-24 (final late night, post-falsification deep analysis)

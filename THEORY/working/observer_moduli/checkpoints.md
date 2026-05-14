@@ -4,6 +4,9 @@ created: 2026-05-07
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Checkpoints — Observer Moduli Space
 
 Progress tracker for the 7-step execution plan (see `plan.md`).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12_C2_final.md — C2 Cluster Final Integration
 
 **Session:** 2026-04-24 (late evening, post-Phase-3 results)

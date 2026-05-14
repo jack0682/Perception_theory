@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # CODE/
 
 Executable assets for Soft Cognitive Cohesion (SCC). **Run everything from this directory** (`cd CODE && ...`), since tests and experiments locate `scc` via sys.path relative to `CODE/`.

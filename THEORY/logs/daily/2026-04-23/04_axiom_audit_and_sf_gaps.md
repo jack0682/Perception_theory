@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04 — Axiom Audit + Single-Formation Gap Deep Analysis
 
 **Session:** 2026-04-23 (continuation). User instruction: "axiom 검토하고 Single formation gap 분석."

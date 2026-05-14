@@ -8,6 +8,9 @@ scope: raw Gibbs kernel vs Sinkhorn-scaled plan 구분,
        P-SINKHORN-STABILITY-CONDITIONAL
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 05. Raw Gibbs Kernel과 Sinkhorn Plan의 관계
 
 ---

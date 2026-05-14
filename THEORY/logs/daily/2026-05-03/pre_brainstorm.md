@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-05-03 W5 Day 7 (post-T-L1-F canonical promotion, pre-L1-M soft-count corollary)
 
 **Title:** 2026-05-03 Pre-Brainstorm — From Hard Count to Soft Count.

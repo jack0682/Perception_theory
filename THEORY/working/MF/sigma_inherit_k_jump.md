@@ -16,6 +16,9 @@ related:
   - CODE/tests/test_sigma_rich.py (246 lines; all passing)
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # σ-Signature Inheritance Through Component Correspondence and K-Jump Events
 
 **Purpose:** Define how the formation signature $\sigma(C_i^t; u_t, \mathcal{P}_t)$ transforms as

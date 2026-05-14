@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 16_NOP_E_H_C_G_I_compact.md — Compact Closures: NOP-E, NOP-H, NOP-C, NOP-G, NOP-I
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening

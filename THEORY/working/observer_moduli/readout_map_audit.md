@@ -5,6 +5,9 @@ stage: OMS-0.2
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Readout Map Audit — OMS-0.2
 
 Every statement is classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.

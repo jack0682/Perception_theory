@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_select_pf_equilibrium.md — T-K-Select-PF: Equilibrium K-Selection under P-F-A1 Package I
 
 **Status:** working draft, tightened Session R (2026-05-06). Cat B — promoted to canonical Cat B in `canonical.md §13` Session R. K_feas defined (§3.5); K_act fixed to D-ST-3; null-boundary stated as proven-by-codimension-argument (Cat B acceptable, Cat A requires explicit σ_M-coordinate computation). Single-topic working file per `THEORY/working/MF/` convention.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # Reformulation Purpose (Stage 0 Locked)
 
 **Selected:** C+E (Thermal Framework + Emergent-K)

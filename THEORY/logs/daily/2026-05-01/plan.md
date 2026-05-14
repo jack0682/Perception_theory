@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-01 (W5 Day 5, RECONCILIATION-FIRST: T-σ-Theorem-4 Audit + CV-1.6 Packet Integration + W6 Preview)
 
 **Session type:** W5 Day 5 — *reconciliation and integration day* after W5 Day 4's theory-deepening burst (3 Waves, ~10,800 working lines, 196/196 tests, 1 🔴 critical finding). Day 4 produced a large volume of working artifacts, several CV-1.6 candidate bridges, one genuinely red critical result around `T-σ-Theorem-4`, and a much larger-than-expected post-EOD output trail from `op-0008-architect` (additional σ_rich derivations + K-Selection candidates + NQ-187b L-extrapolation + Commitment 18/19 packets). Day 5 should integrate the green outputs, isolate the red outputs, convert ambiguity into a bounded audit path, and **set the W6 trajectory** before the weekly close.

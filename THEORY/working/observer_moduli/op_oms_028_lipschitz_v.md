@@ -8,6 +8,9 @@ attacks: OP-OMS-028
 status: PROVED — explicit constant in terms of energy bounds
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-028 — Quantitative Lipschitz Constant for $v(\lambda)$
 
 Theoretical attack on OP-OMS-028: the value function $v(\lambda) = \min_{u \in \Omega} E_\lambda(u)$

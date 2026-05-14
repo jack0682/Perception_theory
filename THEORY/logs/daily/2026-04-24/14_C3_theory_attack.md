@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14_C3_theory_attack.md — C3 Cluster Theory-Only NQ Attack
 
 **Session:** 2026-04-24 (late, 사용자 Phase 3C 실행 대기 중)

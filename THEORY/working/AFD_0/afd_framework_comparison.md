@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # Framework Comparison for AFD
 
 Comparison of 15 candidate mathematical frameworks that AFD-0 might draw on, build with, or be compared against. Ranked roughly by relevance to AFD-0 (Layer 2). Each row notes the framework's degeneracy tolerance, H-MORSE dependence, fit with AFD-0, risks, and priority for AFD development.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 15_NOP_F_lemma20_mori_zwanzig.md — NOP-F: $T_*$ Emergence via Mori-Zwanzig Projection
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening

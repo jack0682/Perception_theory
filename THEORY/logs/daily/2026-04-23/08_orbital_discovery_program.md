@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08 — Orbital Discovery Program: From Metaphor to Substantive Theory
 
 **Session:** 2026-04-23 (continuation; user instruction: 오비탈 유비가 진짜 연결되려면 **다양한 모양이 특정되고 발견되어야 함**. 확률분포 / boundary-blurring / mode-identity / invisible-made-visible 관점 포함).

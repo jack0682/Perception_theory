@@ -10,6 +10,9 @@ scope: L-ENDPOINT-NONSEMI, T-ACT-DP, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND,
 non-overclaim: 모든 Cat A 판정은 유한 site set + additive nonneg local action 조건 하.
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 01. Cat A 후보 증명 — CV-1.15 Action Temporal Cost
 
 ---

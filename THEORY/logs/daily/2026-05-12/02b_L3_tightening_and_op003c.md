@@ -10,6 +10,9 @@ proof_classification:
   OP-AFD-003c (J_K with original K_act): still Cat B worst-case
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 02b — Follow-up Audit and Tightening of OP-AFD-003 Proof
 
 **Session:** 2026-05-12 (follow-up pass after `02_development.md`)

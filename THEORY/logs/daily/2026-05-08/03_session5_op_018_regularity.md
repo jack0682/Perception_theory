@@ -6,6 +6,9 @@ attacks: OP-OMS-018
 deliverables: op_oms_018_regular_u_star.md, vp6_u_star_regular_path_test.py
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 5 — OP-OMS-018 Partial Resolution
 
 ## Setup

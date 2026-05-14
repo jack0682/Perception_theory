@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_C2_phase4_partial.md — Phase 4 Partial Integration (pre-Phase-3 results)
 
 **Session:** 2026-04-24 (evening, 사용자 Phase 3 실행 대기 중)

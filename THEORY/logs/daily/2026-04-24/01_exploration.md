@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_exploration.md — Restatement, Multi-Approach, Primary Selection
 
 **Session:** 2026-04-24

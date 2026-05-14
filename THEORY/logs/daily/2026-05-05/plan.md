@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-05 (W6 Day 2, post-Day-1-overdelivery, slack-week mode)
 
 **Title:** 2026-05-05 Research Plan — W6 Day 2 (closure-rigor + Decision Point 4 capture).

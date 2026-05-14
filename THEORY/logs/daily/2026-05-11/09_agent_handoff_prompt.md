@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09 — Agent Handoff Prompt: W7-CV114 Entry Audit
 
 This is a ready-to-run prompt for the next agent. Copy from below the dividing line and execute.

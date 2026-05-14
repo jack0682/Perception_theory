@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # Experiments 7-8: Allen-Cahn Comparison & Computational Predictions
 
 **Date:** 2026-03-30

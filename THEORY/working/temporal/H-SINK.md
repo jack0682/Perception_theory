@@ -10,6 +10,9 @@ closes: S-B2 (Lemma 8.2 Cat A) — conditionally
 hypothesis_tree: H-SINK (Phase 1 target)
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # H-SINK: Sinkhorn-Lipschitz Stability for the SCC Temporal Cost Class
 
 **Working proof file. W7-T1 session, 2026-05-10.**

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_corner_touching_quantification.md — MO-1 Corner-Touching: KKT Condition + Regime Classification
 
 **Session:** 2026-04-28 (W5 Day 2, Option δ per self-critique).

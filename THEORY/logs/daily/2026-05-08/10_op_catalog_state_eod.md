@@ -4,6 +4,9 @@ date: 2026-05-08
 session: end-of-day OP catalog
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # OP-OMS Catalog Snapshot — End of 2026-05-08
 
 ## Resolved / promoted today

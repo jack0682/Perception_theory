@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_op_0009_pre_substantive_start.md — OP-0009-Pre Substantive Starting Work (Day 3)
 
 **Session:** 2026-05-06 (W6 Day 3 G3.2, P0 — highest-leverage debt).

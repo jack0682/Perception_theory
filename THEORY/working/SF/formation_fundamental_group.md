@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # formation_fundamental_group.md — Formation Fundamental Group π_1(F) (NQ-263 Working File)
 
 > **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**

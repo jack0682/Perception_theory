@@ -7,6 +7,13 @@ status: AUTHORITATIVE
 parent_authority: THEORY/canonical/ (CV-1.16 SEALED, 97 claims)
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_SCC_CT_v0.1]]
+> Pairs with: [[canonical]] (fact authority — CV-1.16)
+> Chapters: [[01_ontology]] → [[02_axioms_and_primitives]] → [[03_energy_and_diagnostics]] → [[04_theorem_registry]] → [[05_open_problems]] → [[06_forbidden_claims]] · [[07_changelog]]
+> Read first: [[DECLARATION]] (2분), then this manifest
+> Status: SCC-CT v0.1 SEALED 2026-05-14 (structural authority)
+
 # SCC-CT — Canonical Soft Cognitive Cohesion Theory
 
 ## Name

@@ -20,6 +20,9 @@ related:
   - CODE/experiments/exp83_temporal_identity_transport.py (Session X anchor)
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # Temporal Identity for Persistent Components — Sharp Form (Cat B-ready, post-closure)
 
 **Purpose.** Promotion-ready Cat B working draft of T-Temporal-Identity (parts a, b, c, d) consolidating Session V definitions + 2026-05-07 sharp-form refinement + NQ-T-Identity-5 closure (margin-only) + OP-0011 Step 2 closure (kernel independence, Cat C → Cat B).

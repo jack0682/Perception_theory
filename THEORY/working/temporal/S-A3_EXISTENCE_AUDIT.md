@@ -9,6 +9,9 @@ predecessor: W7_FINAL_TEMPORAL_CLOSURE.md (S-A3 registered as 0.5-session audit 
 closes: S-A3 task
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # S-A3: External Audit — T-Temporal-Identity Part (a) Existence Proof
 
 **Session:** W7-CV1.13, 2026-05-10  

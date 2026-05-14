@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99 — Session Summary (Final)
 
 **Session:** 2026-04-22 (SF-S1 full — Morning + Rounds 2-10 single-formation deepening)

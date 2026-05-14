@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # multi_formation_sigma.md — Multi-Formation σ Phase 5 Initiation
 
 **Status:** working draft (Phase 5 *initiation*, not closure).

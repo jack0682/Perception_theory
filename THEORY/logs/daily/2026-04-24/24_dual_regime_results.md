@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 24_dual_regime_results.md — Dual-Regime Spectrum Theorem: Phase B Results + Phase C Synthesis
 
 **Session:** 2026-04-24 (very late)

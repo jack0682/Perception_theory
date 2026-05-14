@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — Session Summary 2026-04-24
 
 **Session type:** Orbital structure 의 SCC-intrinsic 승급 (theory-only, no new experiments).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_sigma_numerical.md — G3 Decision + G2 σ-Framework Numerical Verification
 
 **Session:** 2026-04-25

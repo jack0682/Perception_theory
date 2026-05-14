@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Plan — 2026-04-22 (SF-S1: Single-Formation Foundation Consolidation + Multi-Formation Reframing)
 
 ## Target

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_PN_unification.md — V5b-T-(c) Commensurability + V5b-F Corner: Unified PN-Barrier Formula
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E5).

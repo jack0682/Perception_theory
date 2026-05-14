@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — 2026-04-26 (W4 Extended Close — Day 8)
 
 **Session type:** W4 extended close (V5b verification cycle: NQ-170 → NQ-172 → NQ-170b → NQ-170c). Per user direction (mid-session): "아직 내용은 전부 W4로 간주해" — 04-26 work treated as W4 final-day continuation, NOT W5 Day 1.

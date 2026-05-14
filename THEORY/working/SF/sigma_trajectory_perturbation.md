@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_trajectory_perturbation.md — σ-tuple Time Evolution under Small Parameter Perturbation (NQ-244)
 
 **Status:** Working draft — Cat A/B demarcated; W6+ promotion candidate.

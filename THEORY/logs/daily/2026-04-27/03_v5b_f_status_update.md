@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_v5b_f_status_update.md — V5b-F Status Post-NQ-173 (Conditional Verdict Tree)
 
 **Session:** 2026-04-27 (W5 Day 1, G1 Block 4)

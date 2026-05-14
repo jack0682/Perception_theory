@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_pf_stereo_scc_framework_proposal.md
 # P-F Framework + Stereo SCC Observation Layer: Mathematical Documentation
 

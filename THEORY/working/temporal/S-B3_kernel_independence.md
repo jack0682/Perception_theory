@@ -9,6 +9,9 @@ predecessor: THEORY/logs/daily/2026-05-07/06_close_OP0011_step2.md (Lemma 10, 20
 closes: S-B3 → T-Temporal-Identity (c) Cat A conditional path
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # S-B3: Kernel Independence for T-Temporal-Identity (c)
 
 **Working proof file. W7-FINAL session, 2026-05-10.**

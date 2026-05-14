@@ -7,6 +7,9 @@ attacks: OP-OMS-034 — temporal Δ³ separation
 status: SEPARATED — static OMS-2.0 does NOT require temporal Δ³; full temporal remains Conditional
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-034 — Temporal Δ³ Separation
 
 OP-OMS-034 was registered in Session 6 as the requirement for full

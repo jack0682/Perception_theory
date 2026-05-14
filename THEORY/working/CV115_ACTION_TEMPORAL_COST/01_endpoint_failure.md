@@ -6,6 +6,9 @@ created: 2026-05-12
 scope: L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 01. Endpoint Cost 실패 증명
 
 ---

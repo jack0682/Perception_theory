@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_canonical_authority]] · [[THEORY_INDEX]]
+
 # THEORY/canonical/ — Authoritative Specification
 
 **Promoted content only.** Work-in-progress, unverified hypotheses, and exploratory framings live elsewhere (`THEORY/working/` for active development, `THEORY/logs/daily/` for the chronological journal). Anything in this folder must have been promoted through the pipeline below.

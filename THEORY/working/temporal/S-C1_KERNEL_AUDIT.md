@@ -9,6 +9,9 @@ predecessor: S-B3_kernel_independence.md (W7-FINAL working proof)
 closes: S-C1 task
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # S-C1: External Audit — Lemma 11 Kernel Independence (S-B3)
 
 **Session:** W7-CV1.13, 2026-05-10  

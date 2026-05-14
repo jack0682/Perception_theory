@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-G: Empirical L1Hyp Diagnostic
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1G_empirical_diagnostic.md`

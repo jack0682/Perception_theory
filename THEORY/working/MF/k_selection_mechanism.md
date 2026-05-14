@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_selection_mechanism.md — Direct Attack on OP-0005 K-Selection Mechanism
 
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30). Single-topic working file per `THEORY/working/MF/` convention.

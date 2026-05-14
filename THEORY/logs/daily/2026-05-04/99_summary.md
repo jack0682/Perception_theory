@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W6 Day 1 EOD Summary (across all sessions: morning audit + evening G2 + autonomous G3 deep-dive + G1 self-audit closure)
 
 **Session:** 2026-05-04 (W6 Day 1 EOD, after G1 self-audit closure)

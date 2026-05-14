@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 15_C2_thermo_results.md — Phase 3C Results Analysis
 
 **Session:** 2026-04-24 (late evening, Phase 3C 결과 도착 후 즉시 분석)

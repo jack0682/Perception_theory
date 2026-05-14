@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_verification_audit.md — W5 Day 5 Verification + Persistence + Critic Integration
 
 **Session:** 2026-05-01 (W5 Day 5)

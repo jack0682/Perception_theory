@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # WQ-1.C-R2 — Projected Layer-II Aggregate σ Test (Results)
 
 **File:** `THEORY/working/MF/wq1c_r2_projected_layerII_aggregate_sigma_results.md`

@@ -8,6 +8,9 @@ canonical_source: THEORY/canonical/canonical.md (CV-1.16 SEALED)
 total_claims: 97 (68A / 18B / 6C / 5R)
 ---
 
+> [!nav] Linked: [[MOC_SCC_CT_v0.1]] · [[THEORY_INDEX]]
+
+
 # VI. Static Core Theorems & VII. Computational Validation
 
 # VI. Static Core Theorems

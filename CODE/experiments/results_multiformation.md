@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # Experiment 6: Multi-Formation (K=2) Results
 
 **Date:** 2026-03-30

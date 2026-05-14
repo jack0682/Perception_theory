@@ -6,6 +6,13 @@ status: authoritative
 description: SCC 이론 중심축 선언문. canonical.md의 모든 수학보다 먼저 읽어야 할 문서. 이론이 무엇을 위해 존재하는가를 기술한다.
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
+> Pairs with: [[00_manifest]] (SCC-CT v0.1 구조적 권위)
+> Next: [[canonical]] §2 Foundational Orientation → [[hypothesis_tree]] → [[theorem_status]]
+> Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
+> Status: Canonical (DECL-1.0)
+
 # Soft Cognitive Cohesion — 이론 선언문
 
 ---

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_NQ198a_results_and_D5_finalization.md — NQ-198a Numerical Results + D-5 Text Finalization
 
 **Session:** 2026-04-29 (W5 Day 3, post-deepening — D-5-D1 + D-7-A path execution)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W5 Day 4 EOD Reflection
 
 **Session:** 2026-04-30 (W5 Day 4) — 사용자 "그냥 내일 plan이랑 pre_brainstorm지우고 지금하자" + "Paper만드는 단계는 너무 일러 아직 계속 이론을 닦아야해" + "최신 위상수학·군론·집합론 동향 정리 (2024-2026) + 4 mathematical tools" 지시 하에 *theory deepening focus* batch session.

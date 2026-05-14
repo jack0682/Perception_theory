@@ -6,6 +6,9 @@ created: 2026-05-12
 scope: T-ACT-DP, L-ACTION-DELTA-EFF-ZERO
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 03. Dynamic Programming Theorem
 
 ---

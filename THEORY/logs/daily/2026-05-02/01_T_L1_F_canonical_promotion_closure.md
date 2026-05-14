@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_T_L1_F_canonical_promotion_closure.md — 2026-05-02 (W5 Day 6)
 
 **Date:** 2026-05-02

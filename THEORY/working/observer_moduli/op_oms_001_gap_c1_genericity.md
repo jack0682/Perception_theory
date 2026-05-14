@@ -7,6 +7,9 @@ attacks: OP-OMS-001 Gap C1 — H2 generic validity
 status: PROOF SKETCH (analytic-dichotomy core PROVED; one structural hypothesis registered)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-001 Gap C1 — Analytic Genericity
 
 Proves that hypothesis **H2** of `op_oms_001_gap_c1_rank_theorem.md`

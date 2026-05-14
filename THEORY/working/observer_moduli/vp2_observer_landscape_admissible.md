@@ -7,6 +7,9 @@ attacks: OP-OMS-002
 stage: OMS-0.3
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-2: Observer Landscape Admissible Class — OMS-0.3
 
 Every statement classified: **DEFINED** | **PROVED** | **COMPUTATIONALLY SUPPORTED** | **HYPOTHESIZED** | **ASSUMED** | **OPEN** | **REJECTED**.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # F_Kstep_K_triple.md — F / K_step / K_act / K_field Quadruple Bridge + F as Derived Diagnostic Canonical Registration (OAT-2)
 
 **Status:** working draft (OAT-2, post W5 Day 4 morning batch session).

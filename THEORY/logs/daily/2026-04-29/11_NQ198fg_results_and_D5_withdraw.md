@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_NQ198fg_results_and_D5_withdraw.md — NQ-198f + NQ-198g Results: D-5 V5b-T' WITHDRAW
 
 **Session:** 2026-04-29 (W5 Day 3 EOD post-deepening — urgent execution round)

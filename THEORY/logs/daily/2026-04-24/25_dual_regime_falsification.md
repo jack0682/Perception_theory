@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 25_dual_regime_falsification.md — Rigorous Test Falsifies Dual-Regime Claim
 
 **Session:** 2026-04-24 (very late, rigorous verification)

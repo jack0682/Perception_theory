@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # AFD-0 — Compact Handoff for Next Agent
 
 Read time: 5 minutes.

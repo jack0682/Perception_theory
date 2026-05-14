@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_L1M_approach_exploration.md — L1-M Soft-Count Corollary, Approach Generation
 
 > *(Renamed 2026-05-04 audit: previously `01_L1M_approach_exploration.md`. Internal/external references updated for the topic-specific naming convention used elsewhere in the W5 daily structure.)*

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 20_canonical_proposals_F10_F11.md — Canonical Proposal Drafts: V5b-T' + σ_multi A⊕D
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 4, F10 + F11).

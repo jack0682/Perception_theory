@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_rich_wigner_derivation.md — σ_rich Wigner-von Neumann W_jk Formal Derivation
 
 **Status:** working draft (W5 Day 4, Task #3).

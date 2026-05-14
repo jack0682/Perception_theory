@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 31_T1_T2_T3_findings.md — Phase 8 T1+T2+T3 Numerical Findings
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 8, T1+T2+T3).

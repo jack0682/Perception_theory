@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # mathematical_scaffolding_4tools.md — Multi-Formation Theory의 4-Tool Mathematical Scaffolding 검증 + 정식 적용
 
 **Status:** working draft (OAT-supplementary, post W5 Day 3 EOD CV-1.5.1).

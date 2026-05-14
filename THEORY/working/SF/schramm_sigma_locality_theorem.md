@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # schramm_sigma_locality_theorem.md — σ-Framework Locality Theorem at First Pitchfork
 
 **Status:** Working — Cat BC target candidate (σ-tuple locality at first pitchfork via local automorphism stabilizer + irrep-compatible isomorphism).

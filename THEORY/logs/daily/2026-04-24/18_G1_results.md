@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 18_G1_results.md — G1 Cluster Multi-Angle Analysis Results
 
 **Session:** 2026-04-24 (late late evening)

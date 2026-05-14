@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_uniqueness_theorem.md — σ-Uniqueness Theorem (NQ-188 Working File)
 
 **Status:** Working — Cat A target candidate (single-formation σ-class enumeration on $D_4$ free-BC grid).

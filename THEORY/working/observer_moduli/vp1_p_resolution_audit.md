@@ -8,6 +8,9 @@ op_target: OP-OMS-009
 result: RESOLVED-NEGATIVE
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-1: P-Resolution Audit
 
 **Protocol defined in:** `validation_protocols.md` (VP-1)

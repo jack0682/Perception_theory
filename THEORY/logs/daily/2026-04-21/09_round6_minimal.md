@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09 — Round 6 Minimal: γ_eff Analysis + T-Uniform-Stab-T Consistency + Final Stop
 
 **Session:** 2026-04-21 (Round 6, post-saturation continuation per user request)

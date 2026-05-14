@@ -7,6 +7,9 @@ scope: canonical theorem block 초안, theorem_status.md 업데이트 초안,
        hypothesis_tree.md OP-0012-SINK 업데이트 초안
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 07. Promotion Draft — CV-1.15
 
 ---

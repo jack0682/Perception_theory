@@ -7,6 +7,9 @@ attacks: OP-OMS-001 Gap C1
 status: PROVED — explicit sensitivity formula
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-001 Gap C1 — Sensitivity Formula
 
 Derives the explicit formula $J_e(\lambda) = -G_T(\lambda)^\top H_T(\lambda)^{-1} G_T(\lambda)$

@@ -6,6 +6,9 @@ canonical_version: CV-1.13 (unchanged)
 session_label: W7-Day3 (single-target deep-dev branch)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 99 — Session Summary (2026-05-12 W7 Day 3)
 
 ## Headline (twice-corrected: audit + remote-reconciliation, see §4 of `30_remote_verification_and_T5_statement_correction.md`)

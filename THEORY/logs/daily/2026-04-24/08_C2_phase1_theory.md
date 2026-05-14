@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_C2_phase1_theory.md — C2 Conquest Phase 1: Theory
 
 **Session:** 2026-04-24 (evening, C2 attack Phase 1)

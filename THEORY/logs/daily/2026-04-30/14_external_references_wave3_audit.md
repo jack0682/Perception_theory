@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14_external_references_wave3_audit.md — Wave 3 External References Audit
 
 **Date:** 2026-04-30 (W5 Day 4 PM Wave 3 EOD).

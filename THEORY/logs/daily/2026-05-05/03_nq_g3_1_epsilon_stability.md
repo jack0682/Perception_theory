@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_nq_g3_1_epsilon_stability.md — NQ-G3-1 ε-Stability Sweep (W6 D2 G2.3 fill-in, Silver target)
 
 **Session:** 2026-05-05 (W6 Day 2, post-G2.2-Option-B-capture; G2.3 fill-in per `plan.md` §G2.3)

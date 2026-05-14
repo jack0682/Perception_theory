@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01 — Exploration: H-MORSE-Local Cat B First Lemma Structure
 
 **Session:** 2026-05-14 (W7-Day5, post V-AFD + R-2 archives, post CV-1.15 P7 promotion)

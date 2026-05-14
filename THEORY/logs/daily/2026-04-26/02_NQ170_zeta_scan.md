@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_NQ170_zeta_scan.md — W5 Day 1: NQ-170 Results — Method-Level Crisis + V5b Reproducibility Issue
 
 **Session:** 2026-04-26 (W5 Day 1)

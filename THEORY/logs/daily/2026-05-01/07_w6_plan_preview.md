@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_w6_plan_preview.md — W6 (2026-05-04 ~ 2026-05-10) Plan Preview
 
 **Session:** 2026-05-01 (W5 Day 5)

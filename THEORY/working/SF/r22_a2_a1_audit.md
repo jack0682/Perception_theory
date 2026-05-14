@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # r22_a2_a1_audit.md — (β) R22 Cubic-Equivariant Derivation Audit Placeholder
 
 **Status:** placeholder / scope-only. Created 2026-05-04 W6 D1 EOD per Issue #3 deeper audit (parking-lot Issue #3 development).

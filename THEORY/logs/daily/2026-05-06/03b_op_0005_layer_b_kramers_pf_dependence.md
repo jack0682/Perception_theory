@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03b_op_0005_layer_b_kramers_pf_dependence.md — OP-0005 Layer B: Kramers Under P-F
 
 **Session:** 2026-05-06 (W6 Day 3 G3.3, sub-file of `03_pf_framework_escalation_core.md`).

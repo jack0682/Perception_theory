@@ -9,6 +9,9 @@ predecessor: CV113_S-B1_DEEP_CORE_CLOSURE.md
 successor: SYMBOLIC_DEEP_CORE_NECESSITY.md
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # TRACE_084_ORIGIN — Provenance Audit of the Literal Constant 0.84
 
 **Session:** W7-CV113A, 2026-05-10  

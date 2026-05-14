@@ -9,6 +9,9 @@ predecessor: W7_FINAL_TEMPORAL_CLOSURE.md (CV-1.12 sealed 2026-05-10)
 outcome: Outcome B/C — S-B1 Weak Cat A (new); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path unblocked from density side; S-A1-A3 remain
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # CV-1.13 Audit: S-B1 Deep-Core Density Closure for Temporal Identity
 
 **Purpose.** Attack OP-SB1-DEEP (deep-core density lower bound ρ_deep ≥ 0.84) and determine whether T-Temporal-Identity (a,b,d) can be promoted to Cat A, sealing CV-1.13.

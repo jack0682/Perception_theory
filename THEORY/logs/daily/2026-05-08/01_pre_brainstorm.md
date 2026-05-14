@@ -4,6 +4,9 @@ date: 2026-05-08
 session: pre-Session-5 brainstorm
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Pre-brainstorm — Strategy Notes
 
 ## Why $u^*(\lambda)$ regularity is the right next attack

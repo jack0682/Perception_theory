@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # WQ-LAT-1 — Reservoir Resolution Sweep Results
 
 **File:** `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md`

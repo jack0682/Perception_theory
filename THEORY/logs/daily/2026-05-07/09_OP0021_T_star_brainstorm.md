@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_OP0021_T_star_brainstorm.md — Multi-Tool Brainstorm for $T_*$ Canonicalization
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session

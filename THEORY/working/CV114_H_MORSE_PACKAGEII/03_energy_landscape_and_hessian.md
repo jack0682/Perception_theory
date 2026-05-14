@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 03 — Energy Landscape and Hessian
 
 Agent B (Mathematical Analyst) — explicit Hessian structure on $\Sigma_m$ for the full SCC energy.

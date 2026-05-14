@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 41 — Approach (a): Closure Jacobian Spectral Mixing (Optional / Supplementary)
 
 **Session:** 2026-05-14 (extension)

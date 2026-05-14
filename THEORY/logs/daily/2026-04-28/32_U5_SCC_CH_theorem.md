@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 32_U5_SCC_CH_theorem.md — Phase 9 U5: SCC Hybrid γ ↔ Cahn-Hilliard Mobility Theorem
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 9, U5).

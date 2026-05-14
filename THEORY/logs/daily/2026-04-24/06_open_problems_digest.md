@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_open_problems_digest.md — Open Problem Consolidation (Pre-existing + New)
 
 **Session:** 2026-04-24 (evening)

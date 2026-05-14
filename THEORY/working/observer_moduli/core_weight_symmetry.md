@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 attacks: OP-OMS-001
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Core-Weight Symmetry Discovery — OMS-0.3
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **COMPUTATIONALLY TESTABLE** | **OPEN** | **REJECTED**.

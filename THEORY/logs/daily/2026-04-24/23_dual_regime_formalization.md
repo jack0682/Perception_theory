@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 23_dual_regime_formalization.md — Dual-Regime SCC: Mathematical Formalization (Phase A)
 
 **Session:** 2026-04-24 (very late night, post-C3-family)

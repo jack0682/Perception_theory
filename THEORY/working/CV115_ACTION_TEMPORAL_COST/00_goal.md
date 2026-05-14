@@ -8,6 +8,9 @@ scope: Action-Based Temporal Succession Package
 predecessor: CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md (OP-0012-SINK 정의)
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 00. 목표 — CV-1.15 Action-Based Temporal Succession Package
 
 ---

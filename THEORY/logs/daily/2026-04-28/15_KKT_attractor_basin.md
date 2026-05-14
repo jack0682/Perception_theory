@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 15_KKT_attractor_basin.md — IC-Localized Condition Formalization for Corner-Saturation
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E4).

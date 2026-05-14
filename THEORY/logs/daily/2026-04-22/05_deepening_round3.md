@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05 — Deepening Round 3: Structural Single-Formation Closures
 
 **Session:** 2026-04-22 (evening continuation)

@@ -8,6 +8,9 @@ session_label: W7-Day4 (오전 audit-only + 오후/저녁 두 archive 사건)
 session_phases: [Morning: CV-1.15 audit (Blocks A-G), Afternoon: V-AFD discard (Blocks H-I), Evening: R-2 creation+archive (Blocks J-K)]
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 99 — Session Summary (2026-05-13)
 
 ## Headline

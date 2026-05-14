@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 20_final_open_digest.md — Definitive Open-Problem Digest (post-G1-formalization)
 
 **Session:** 2026-04-24 (final)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_morning_state_reload.md — W5 Day 5 Morning State Packet
 
 **Session:** 2026-05-01 (W5 Day 5, RECONCILIATION-FIRST)

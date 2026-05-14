@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-04-28 W5 Day 2 (사전 brainstorm)
 
 **Type:** Pre-session brainstorm. Free-form thinking notes — plan.md의 *strict structure* 옆에 두는 *raw thinking*.

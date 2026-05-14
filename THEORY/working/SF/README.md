@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # working/SF/ — Single-Formation Foundation Audit Results
 
 **Status:** created 2026-04-22 (SF-S1 session).

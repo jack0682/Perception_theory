@@ -5,6 +5,9 @@ stage: OMS-0.7
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Integration with SCC Theory — OMS-0.7
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.

@@ -5,6 +5,9 @@ project: Observer Moduli Space of SCC
 registry: OP-OMS-001 through OP-OMS-008
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Open Problems — Observer Moduli Space
 
 Problems are rated by importance (★★★ critical / ★★ important / ★ useful) and expected difficulty (H/M/L).

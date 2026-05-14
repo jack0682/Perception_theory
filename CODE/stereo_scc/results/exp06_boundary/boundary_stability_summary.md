@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp06: Boundary Stability Summary (OP-0006)
 
 ## Setup

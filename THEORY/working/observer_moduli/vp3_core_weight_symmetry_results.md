@@ -7,6 +7,9 @@ attacks: OP-OMS-001
 status: COMPLETE (exp87, 2026-05-08)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-3: Core-Weight Symmetry Results — OMS-0.3
 
 Every statement classified: **DEFINED** | **PROVED** | **COMPUTATIONALLY SUPPORTED** | **HYPOTHESIZED** | **ASSUMED** | **OPEN** | **REJECTED**.

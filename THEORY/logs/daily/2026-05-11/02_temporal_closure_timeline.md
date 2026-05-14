@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02 — Temporal Closure Timeline (W7 Arc)
 
 All five sessions occurred on 2026-05-10. This file structures the work as a milestone timeline.

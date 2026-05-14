@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-K: External Audit of L1-H2 / L1-J Hard-Bar Bridge Lemmas
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1K_external_audit.md`

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_goldstone_instability_proved.md — T-σ-Multi-1 Goldstone-Pair Instability Cat A Proof
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E3).

@@ -6,6 +6,9 @@ created: 2026-05-06
 session: EOD Closeout
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # SCC → RelationWorld → ONN → ORTSF: Perceptual Pipeline Note
 
 *Conceptual note only. Not a theorem. Not a canonical claim. Created EOD closeout 2026-05-06.*

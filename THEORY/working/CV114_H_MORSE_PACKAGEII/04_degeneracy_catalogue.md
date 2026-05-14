@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 04 — Degeneracy Catalogue
 
 Agent B (Mathematical Analyst). Fourteen classes of potential Morse degeneracy for the SCC energy on $\Sigma_m$. For each: description, source, structural vs removable, blocks H-MORSE?, repair option.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07 — Shape Modes and the Orbital Hypothesis
 
 **Session:** 2026-04-23 (continuation; user instruction: "오비탈처럼 형태적 모드가 있을 수 있나? single formation에서 두 가지로 분리된 것이 모드 변경이라면?").

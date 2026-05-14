@@ -5,6 +5,9 @@ canonical_version_at_start: CV-1.13
 claim_count_at_start: 59A / 14B / 5C / 5R = 83 claims
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Plan — 2026-05-13
 
 ## Target

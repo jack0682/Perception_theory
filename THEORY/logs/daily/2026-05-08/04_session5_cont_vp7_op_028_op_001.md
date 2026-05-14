@@ -6,6 +6,9 @@ attacks: OP-OMS-026 (initial), OP-OMS-028, OP-OMS-001 (initial)
 deliverables: vp7_branch_map.py, op_oms_028_lipschitz_v.md, op_oms_001_formal_proof_attempt.md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 5 Continuation — Three OP Attacks
 
 After the Session-5 final report, the user said "continue". The three

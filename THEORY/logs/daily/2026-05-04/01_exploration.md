@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_exploration.md — G1 L-M-AUDIT Closure: Restatement + Multi-Approach + Primary Selection
 
 **Session:** 2026-05-04 (W6 Day 1, mid-day, post-G3-deep-dive)

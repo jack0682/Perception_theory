@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # cross_validation_stereo_scc_framework.md
 # Cross-Validation of Existing SCC Theories under the Stereo-Conditioned Soft-to-Crisp Framework
 

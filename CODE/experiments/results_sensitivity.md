@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # Experiment 5: Parameter Sensitivity Analysis
 
 **Date:** 2026-03-30

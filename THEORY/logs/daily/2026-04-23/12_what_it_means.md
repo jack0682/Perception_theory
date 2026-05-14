@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12 — "이것은 무엇을 뜻하는가": 5-Level Synthesis
 
 **Session:** 2026-04-23 (user 질문: "지금 이것은 무엇을 뜻하는가").

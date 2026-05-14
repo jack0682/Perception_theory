@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Canonical Bump 체크리스트 (블로그 측 12 페이지)
 
 **언제 사용**: weekly merge 가 canonical.md 에 변경을 가한 주에만. canonical bump 없는 주의 weekly post 는 journal 만 추가하면 끝.

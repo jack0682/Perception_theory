@@ -7,6 +7,9 @@ session: W7 carry-forward
 scope: 내부 일관성 감사, canonical 충돌 확인, promotion readiness 판정
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 09. 최종 감사 (Pre-Promotion Audit) — CV-1.15
 
 ---

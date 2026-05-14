@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01b_lemma2_nodal_count.md — Lemma 2 (σ-Framework, Nodal Count Properties)
 
 **Session:** 2026-04-27 (W5 Day 1, G0 Block 1)

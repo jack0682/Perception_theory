@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # n1_kramers_extension.md — N-1 Soft-Hard Switching ↔ K-Selection (b) Kramers Connection
 
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 2026-05-11 Daily Log — W7 Temporal Closure and CV-1.13 Seal
 
 **Date:** 2026-05-11 (consolidation day; the W7 closure work itself was performed and sealed on 2026-05-10)

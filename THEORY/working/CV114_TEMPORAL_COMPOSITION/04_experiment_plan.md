@@ -9,6 +9,9 @@ target_file: CODE/experiments/exp_cc_stablek_composition.py
 dependencies: CODE/scc/transport.py (sinkhorn_partial_ot), CODE/scc/multi.py, CODE/scc/diagnostics.py
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 04. 실험 계획 — K=2 Stable Temporal Sequence Composition Test
 
 ---

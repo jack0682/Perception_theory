@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_4tool_mapping_summary.md — 4-Tool Mathematical Scaffolding Verification 요약
 
 **Session:** 2026-04-30 (W5 Day 4) — 사용자 4-tool 권고 (2026-04-30 morning, "최신 위상수학·군론·집합론 동향 정리 (2024-2026) + 4 mathematical tools") 기반 multi-formation 22 한계 mapping verification.

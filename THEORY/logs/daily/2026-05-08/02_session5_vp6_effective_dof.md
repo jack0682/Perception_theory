@@ -6,6 +6,9 @@ attacks: OP-OMS-016, OP-OMS-005, Hyp RG1
 deliverables: vp6_effective_dof_jacobian.py, vp6_effective_dof.md, effective_dof_theory.md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 5 — VP-6 Effective DOF via Jacobian Singular Spectrum
 
 ## What was done

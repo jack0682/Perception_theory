@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # THEORY/logs/ — Research Journal
 
 The chronological record of the research process. Daily logs are the raw record; weekly and monthly tiers are retrospective synthesis. **Promotion to canonical does not pass through this directory** — it goes through `THEORY/working/` (the topic-organized middle layer in the 3-stage pipeline).

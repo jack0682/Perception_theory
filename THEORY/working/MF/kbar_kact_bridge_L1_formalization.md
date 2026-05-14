@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L-1 Formalization: Well-Separated \(K_{\mathrm{bar}}\) / \(K_{\mathrm{act}}\) Bridge
 
 ## 1. Status and Scope

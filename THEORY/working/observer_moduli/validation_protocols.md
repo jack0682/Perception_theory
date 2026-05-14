@@ -5,6 +5,9 @@ stage: OMS-0.6
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Validation Protocols — OMS-0.6
 
 Computational and empirical protocols for validating OMS claims. Each protocol is tagged with the open problem or hypothesis it addresses.

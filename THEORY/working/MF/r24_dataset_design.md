@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # r24_dataset_design.md — R24 Dataset Design (R23 Successor) for Bridge B-2 σ-locality
 
 **Status:** working draft (W5 Day 4 PM Wave 3 lead-side direct work, 2026-04-30).

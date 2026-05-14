@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01 — Session Summary
 
 ## 1. Starting State (entering W7 arc, 2026-05-10 morning)

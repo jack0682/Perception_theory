@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # Free Energy Cross-Object — ℱ_C+E Well-Definedness (G3)
 
 **Status:** working (commit, 2026-04-21)

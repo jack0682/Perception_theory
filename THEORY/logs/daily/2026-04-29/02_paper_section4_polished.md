@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_paper_section4_polished.md — Paper §4 Polished Prose (LaTeX-ready, Phase 1-10 integrated)
 
 **Session:** 2026-04-29 (W5 Day 3, Block 2)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # op_resolution.md — Day 1 Surfaced NQ Resolution Pass
 
 **Session:** 2026-05-04 (W6 Day 1, late mid-day, after G3 + G1 deep-dives)

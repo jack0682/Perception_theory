@@ -15,6 +15,9 @@ related:
   - theorem_status.md OP-0008 entries
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # σ_rich Lipschitz Constant (NOP-B / OP-0008-DIST Closure)
 
 **Purpose.** Promotion-ready Cat B working draft of Lemma 16 — the σ_rich Lipschitz constant under field perturbation. Closes OP-0008-DIST and unblocks T-σ-Inherit Cat B (parts a, b, d-direction, e).

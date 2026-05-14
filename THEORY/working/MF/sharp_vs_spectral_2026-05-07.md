@@ -13,6 +13,9 @@ related:
   - canonical.md §13 T-Persist-1(e) Cat A; §12 T-Persist-K-Sep
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # NOP-A — Sharp ↔ Spectral Bound Reconciliation
 
 **Purpose.** T-Temporal-Identity's off-diagonal mass bound has two distinct closed forms today (sharp form via Sinkhorn-Lipschitz; spectral form via joint Hessian gap). Their ε_OT-dependent ceilings differ structurally. This file establishes the reconciliation.

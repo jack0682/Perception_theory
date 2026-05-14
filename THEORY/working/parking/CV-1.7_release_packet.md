@@ -6,6 +6,9 @@ created: 2026-05-06
 sessions: Sessions A–K (W6 D4, 2026-05-06)
 ---
 
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
+
 # CV-1.7 Release Packet — Soft Cognitive Cohesion
 
 **Release date:** 2026-05-06 (W6 D4)

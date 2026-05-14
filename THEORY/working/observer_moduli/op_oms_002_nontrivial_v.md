@@ -7,6 +7,9 @@ attacks: OP-OMS-002+ — non-trivial multi-basin admissible V
 status: PROVED admissible (V_2 and V_{2,τ}); PROVED nontrivial (≥2 basins) on the regular branch class; COMPUTATIONALLY SUPPORTED on representative scenes (Gate 4)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-002+ — Non-Trivial Basin-Generating Admissible V
 
 OP-OMS-002+ asks: does there exist $V \in \mathcal{V}_{\mathrm{adm}}$

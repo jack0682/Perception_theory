@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03 — Integration and New Open Questions
 
 **Session:** 2026-05-14 (W7-Day5)

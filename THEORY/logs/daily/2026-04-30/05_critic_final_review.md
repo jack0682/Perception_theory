@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_critic_final_review.md — W5 Day 4 OAT Batch Session Critical Review (Critic 7-agent verdict)
 
 **Source:** Background critic agent (oh-my-claudecode:critic, ADVERSARIAL mode escalated at Phase 2). Agent dispatched 11:23 KST 2026-04-30; verdict returned 11:35 KST. Mode read-only — content captured by main agent into this daily file.

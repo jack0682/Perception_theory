@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01b_op_priority_reassessment_table.md — OP Priority Reassessment (W6 D3)
 
 **Session:** 2026-05-06 (W6 Day 3 G3.1 supplement).

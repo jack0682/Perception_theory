@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_development.md — G1 L-M-AUDIT Self-Audit Closure: R-0 / R-1 / R-2 / R-3 + Cat-A-Conditional Promotion
 
 **Session:** 2026-05-04 (W6 Day 1, mid-day, post-G3)

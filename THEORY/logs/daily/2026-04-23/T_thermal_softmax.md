@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # T_thermal_softmax.md — Thermal / Stochastic Extension Scoping
 
 **Session:** 2026-04-23 (G5 deliverable; intended promotion target: `working/T/thermal_softmax.md`)

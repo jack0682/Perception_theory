@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_rich_orientation_derivation.md — σ_rich Orientation Tensor Θ_j Formal Derivation
 
 **Status:** working draft (W5 Day 4, Task #2).

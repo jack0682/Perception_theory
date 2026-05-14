@@ -7,6 +7,9 @@ stage: OMS-1.2 patch
 supersedes: parts of `observer_landscape_candidates.md` §3 and `vp2_observer_landscape_admissible.md` §V2
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Admissible Observer Landscape Class — OMS-1.2 Patch
 
 This patch revises the V2 (continuity / smoothness) criterion in

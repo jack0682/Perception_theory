@@ -5,6 +5,9 @@ version: 0.1
 authors: AFD-0 working session
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # Abstract Formation Dynamics — AFD-0 Foundation
 
 ## 0. Executive Summary

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 43 — Approach (c): Numerical Full-Spectrum Verification
 
 **Session:** 2026-05-14 (extension)

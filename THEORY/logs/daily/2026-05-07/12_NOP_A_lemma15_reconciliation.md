@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12_NOP_A_lemma15_reconciliation.md — Sharp ↔ Spectral Reconciliation: Both Conservative; Corrected Form
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening session

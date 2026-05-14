@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_canonical_authority]] · [[THEORY_INDEX]]
+
 # SCC Canonical Figures — Source Layer
 
 **This directory holds figure *sources* (Python scripts + style helpers).**

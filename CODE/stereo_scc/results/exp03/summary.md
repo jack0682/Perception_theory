@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp03: Backprojection + Pullback Round-Trip (Claim C)
 
 ## Setup

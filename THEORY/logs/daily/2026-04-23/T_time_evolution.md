@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # T_time_evolution.md — Time Evolution Theory Scoping
 
 **Session:** 2026-04-23 (G4 deliverable; intended promotion target: `working/T/time_evolution.md`)

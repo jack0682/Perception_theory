@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp02b-Smooth-NEB: T-ST-5b Regime B Summary
 
 ## Setup

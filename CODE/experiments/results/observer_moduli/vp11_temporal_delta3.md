@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-11 Phase 2 — Temporal Δ³ Branch Map Summary
 
 **Date:** 2026-05-08  

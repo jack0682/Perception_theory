@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_canonical_authority]] · [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # CHANGELOG — Session Log
 
 ---

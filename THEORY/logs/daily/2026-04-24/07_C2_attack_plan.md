@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_C2_attack_plan.md — Multi-Phase Strategy for C2 Cluster Conquest
 
 **Session:** 2026-04-24 (evening, extension)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # W7-CV114 — H-MORSE / Package II Entry Audit
 
 **Task:** Multi-agent entry audit for H-MORSE, Package II (Eyring-Kramers), and dynamic K-selection prerequisites.

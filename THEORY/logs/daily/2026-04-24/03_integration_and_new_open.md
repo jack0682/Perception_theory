@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_integration_and_new_open.md — Integration with Canonical, A-01 Revision, CN Sharpening, New Open Questions
 
 **Session:** 2026-04-24

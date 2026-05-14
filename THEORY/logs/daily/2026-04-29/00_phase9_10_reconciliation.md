@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 00_phase9_10_reconciliation.md — Phase 9-10 REVISION ↔ Proposal Text Reconciliation
 
 **Session:** 2026-04-29 (W5 Day 3, Block 0.5)

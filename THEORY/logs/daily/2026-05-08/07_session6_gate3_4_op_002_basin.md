@@ -6,6 +6,9 @@ attacks: OP-OMS-002+
 deliverables: op_oms_002_nontrivial_v.md, vp9_nontrivial_v_basin_test.py + .json + .md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 6 Gates 3 & 4 — OP-OMS-002+ Non-Trivial Admissible $V$
 
 ## Mission

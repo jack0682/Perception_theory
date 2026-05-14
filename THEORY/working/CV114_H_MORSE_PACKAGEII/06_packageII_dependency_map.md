@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 06 — Package II Dependency Map
 
 Agent E (Package II / Eyring-Kramers Mapper). What does Package II (Eyring-Kramers + metastable transition rates) require, what is available from Package I, and what is the entry criterion for CV-1.14?

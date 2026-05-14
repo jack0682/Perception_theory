@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Pre-Brainstorm — 2026-04-21 C+E Stage 1 Hypothesis Map
 
 **Written:** 2026-04-20 저녁 (pre-session).

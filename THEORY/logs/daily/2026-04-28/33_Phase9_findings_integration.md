@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 33_Phase9_findings_integration.md — Phase 9 U1+U2+U3+U4 Integrated Findings
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 9, U1-U5 integrated).

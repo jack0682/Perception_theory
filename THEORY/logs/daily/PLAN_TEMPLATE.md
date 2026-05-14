@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Plan Template — 매일 저녁 작성
 
 > **사용법:** 전날 저녁 다음날 날짜의 디렉토리(`THEORY/logs/daily/YYYY-MM-DD/`)를 미리 생성하고, 이 템플릿을 `plan.md`로 복사한 뒤 각 섹션을 채워 넣는다. 빈 섹션은 "없음" 또는 "N/A"로 명시.

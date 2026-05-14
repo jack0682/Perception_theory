@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09 — Orbital Discovery: Empirical Results
 
 **Session:** 2026-04-23 (continuation; user instruction: "진짜 모드가 있는지 찾아봐야할것같은데").

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_NQ6_spectral_gap_advance.md — NQ-T-Identity-6 Advancement (Spectral-Gap Cat A Path)
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session

@@ -4,6 +4,9 @@ created: 2026-05-08
 session: Session 8 (OP-OMS-034 closure)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-034 — Initial Reading Log
 
 State at session start: **OMS-2.0 Accepted — Static**, Full Temporal Conditional on OP-OMS-034.

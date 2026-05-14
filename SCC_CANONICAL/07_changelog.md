@@ -5,6 +5,9 @@ version: SCC-CT v0.1
 sealed: 2026-05-14
 ---
 
+> [!nav] Linked: [[MOC_SCC_CT_v0.1]] · [[THEORY_INDEX]]
+
+
 # SCC-CT Changelog — Sealing Authority History
 
 ## Versioning convention

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99 — Session Summary (2026-04-20)
 
 **Target:** Stage 0 Purpose Declaration 확정을 위한 의사결정 재료 생산.

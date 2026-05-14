@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02 — Development: 15 Session Sketches (5 candidates × first 3 sessions)
 
 **Session:** 2026-04-20

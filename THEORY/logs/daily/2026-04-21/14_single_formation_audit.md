@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14 — Single-Formation Foundation Audit (Round 12 + 13 + 14 + 15)
 
 **Session:** 2026-04-21 (evening extension, post Stage 5).

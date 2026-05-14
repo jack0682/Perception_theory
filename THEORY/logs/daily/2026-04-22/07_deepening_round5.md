@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07 — Deepening Round 5: Continuous $\mathrm{Aut}$ Groups and Morse-Bott Refinement
 
 **Session:** 2026-04-22 (Round 5, post-Round-4)

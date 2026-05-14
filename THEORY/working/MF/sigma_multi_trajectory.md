@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_multi_trajectory.md — σ_multi^A(t) Dynamic Trajectory Framework
 
 **Status:** working draft (Cat B target in non-corner-saturated regime; Cat C corner-saturated regime; per Critic 7-agent verdict 2026-04-29 EOD + self-critique `09_session_self_critique.md`; promoted from `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` Day 3 W5 deepening pass).

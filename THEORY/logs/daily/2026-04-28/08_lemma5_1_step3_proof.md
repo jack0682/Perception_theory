@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_lemma5_1_step3_proof.md — Lemma 5.1 Step 3 Actual Representation-Theoretic Proof
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E1).

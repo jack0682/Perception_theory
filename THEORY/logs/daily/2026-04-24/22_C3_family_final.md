@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 22_C3_family_final.md — C3 Family Final Integration
 
 **Session:** 2026-04-24 (very late)

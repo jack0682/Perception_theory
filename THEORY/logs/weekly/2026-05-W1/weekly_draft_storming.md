@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # weekly_draft_storming.md — 2026-05-W1 (W6) Working Buffer
 
 **Title:** 2026-05-W1 Weekly Draft Storming (W6 Day 1-7 working buffer).

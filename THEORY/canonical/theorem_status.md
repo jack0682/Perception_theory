@@ -5,6 +5,12 @@ status: accepted
 last_updated: 2026-05-08
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
+> Pairs with: [[canonical]] (fact authority), [[hypothesis_tree]] (dependency authority)
+> Related: [[MOC_open_problems_blockers]] · [[MOC_hypothesis_tree]] · [[CV-1.16_SEAL]]
+> Status: Canonical registry (META-0103, CV-1.16 baseline)
+
 # Theorem Registry
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.

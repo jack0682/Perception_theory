@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-25 Session Plan
 
 **Session type:** W4 Weekly Close (MUST) + NQ-168 Goldstone Commensurability Mechanism + σ-Framework Numerical Verification.

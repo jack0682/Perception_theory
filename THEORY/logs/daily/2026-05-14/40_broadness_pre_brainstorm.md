@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 40 — OP-HMORSE-BROADNESS Pre-Brainstorm
 
 **Session:** 2026-05-14 (extension after CV-1.15 P7 + Track 2 working draft)

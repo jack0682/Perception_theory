@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 15 — Round 13: $c_0^{(K)}(\beta)$ Bracket for $K \geq 2$
 
 **Session:** 2026-04-22 (Round 13, multi-formation)

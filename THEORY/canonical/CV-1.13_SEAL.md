@@ -7,6 +7,13 @@ session: W7-CV1.13
 status: SEALED
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
+> Records: T-Temporal-Identity full Cat A; H-SINK FULLY CLOSED
+> Promoted from: [[MOC_temporal_audit_W7]] (S-A1, S-A3, S-C1 CERTIFIED)
+> Superseded by: [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]]
+> Status: SEALED 2026-05-10 (historical record)
+
 # CV-1.13 Seal Document
 
 **Canonical Version:** CV-1.13  

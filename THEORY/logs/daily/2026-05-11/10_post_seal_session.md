@@ -6,6 +6,9 @@ canonical_version: CV-1.13 (unchanged, read-only)
 files_modified: CLAUDE.md only
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 10 — Post-Seal Session (2026-05-11)
 
 이 파일은 CV-1.13 봉인(2026-05-10) 이후 2026-05-11에 진행된 세션을 기록한다.

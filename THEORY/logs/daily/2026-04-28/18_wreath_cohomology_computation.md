@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 18_wreath_cohomology_computation.md — H¹(B(D_4 ≀ S_2); Z/2) Direct Computation
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 4, F2).

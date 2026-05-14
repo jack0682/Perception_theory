@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # symmetry_moduli.md — G-D Aut(G) Moduli Space $\mathcal{M}_1$ (First-Step Analysis)
 
 **⚠️ STATUS UPDATE (2026-04-22 R22)**:

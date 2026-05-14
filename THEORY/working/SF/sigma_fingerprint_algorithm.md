@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_fingerprint_algorithm.md — Strong + Sub-cubic σ-Fingerprint Algorithm Spec
 
 **Status:** Working — Cat B target candidate (NQ-264, Bridge B-4).

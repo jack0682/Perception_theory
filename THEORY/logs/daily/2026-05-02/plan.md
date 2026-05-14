@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-02 (W5 Day 6, FORWARD-LEANING-EXECUTION + W5 weekly_summary substantive draft)
 
 **Session type:** W5 Day 6 — *forward-leaning execution* day after Day 5's reconciliation/cataloging close. Day 5 produced 12 artifacts / 2926 lines + 9-item retraction inventory + 1 substantive theorem-level finding (R-1: $A_2/A_1 = 2/3$ exactly at every $L \geq 2$, Cat A elementary algebra) + Day 6 productive plan seed (`2026-05-01/09_day6_plan_seed.md`). Day 6 must execute the deferred items that Day 5 catalogued (errata application, NQ-244 launch, OAT-2/3 integration) AND deliver W5 weekly_summary.md substantive draft for Day 7 finalize.

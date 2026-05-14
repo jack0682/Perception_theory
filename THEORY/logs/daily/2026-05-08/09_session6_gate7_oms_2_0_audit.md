@@ -6,6 +6,9 @@ attacks: OMS-2.0 promotion
 deliverables: oms_2_0_promotion_audit.md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 6 Gate 7 — OMS-2.0 Promotion Audit
 
 ## Mandated conservative classification rules

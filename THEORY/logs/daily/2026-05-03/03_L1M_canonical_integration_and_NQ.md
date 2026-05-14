@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_L1M_canonical_integration_and_NQ.md — L1-M Integration with Canonical, New Open Questions
 
 > *(Renamed 2026-05-04 audit: previously `03_integration_and_new_open.md`. Internal/external references updated.)*

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_theorem4_higher_order.md — T-σ-Theorem-4 Higher-Order ε Splitting (NQ-187)
 
 **Status:** REVISED (Wave 3 PM); §3.2 conclusion conditional on continuum extrapolation; numerical falsification on $L \leq 16$ documented (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`); awaiting NQ-187b discrete-grid $A_2/A_1$ verification. (Originally working file, R&D scoping; W5 Day 4 spawn → W7+ candidate.)

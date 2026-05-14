@@ -13,6 +13,9 @@ non_goals:
 status: brainstorm only — no decisions locked
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 20 — AFD-T5 R1 Mathematical Backbone Brain-storming
 
 **Session:** 2026-05-12 W7 Day 3 (extended pass after the OP-AFD-003 development cycle and its audit)

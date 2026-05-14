@@ -9,6 +9,9 @@ scope: OP-0012-CC-StableK 주 정리 + 필요 lemma 구조
 non-overclaim: 아래 정리들은 Cat A/B/C 표시 기준으로만 작성. 미증명 항목에 "proved" 사용 금지.
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 02. 주 정리 및 Lemma 구조 — OP-0012-CC-StableK (v2)
 
 ---

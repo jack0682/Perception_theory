@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # lambda_rep_ontology.md — λ_rep의 Ontological Status Audit (5-term vs Architectural Coupling vs Simplex Lagrange)
 
 **Status:** working draft (OAT-3 spawn 2026-04-30 W5 Day 4 morning; post OAT-supplementary `mathematical_scaffolding_4tools.md` Tool A4 partial-fail finding).

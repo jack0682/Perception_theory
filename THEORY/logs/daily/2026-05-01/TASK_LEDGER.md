@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # TASK_LEDGER.md — W5 Day 5 EOD + W6 D1 Morning Transition
 
 **Last updated:** 2026-05-01 (W5 Day 5 EOD, RECONCILIATION-FIRST close).

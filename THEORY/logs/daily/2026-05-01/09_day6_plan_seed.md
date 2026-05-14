@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_day6_plan_seed.md — Day 6 (2026-05-02 Sat) Productive Plan Seed
 
 **Session:** 2026-05-01 (W5 Day 5 EOD — session close)

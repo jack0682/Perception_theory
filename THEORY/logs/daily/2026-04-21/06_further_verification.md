@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06 — Further Verification (Round 3, substantive deepening)
 
 **Session:** 2026-04-21 (post `04_hypothesis_audit.md` + `05_deepening_and_verification.md`)

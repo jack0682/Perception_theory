@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # cardinality_open.md — G-C Gap (Σ_m Critical-Point Cardinality)
 
 **⚠️ STATUS UPDATE (2026-04-22 R22)** — G-C gap 진짜 **closed** via Formation Quantization:

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp02e: Single-field NEB — T-ST-5b (corrected methodology)
 
 **Session:** W6 D4 Session F (2026-05-06)

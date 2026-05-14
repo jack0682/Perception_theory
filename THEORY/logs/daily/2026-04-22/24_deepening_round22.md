@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 24 — Deepening Round 22: Validation Cascade + Formation Quantization Discovery
 
 **Session:** 2026-04-22 evening → night (post-R21, user-executed 3 critical experiments + 7 validation sub-experiments).

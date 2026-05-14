@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_w7_w10_d_by_d_calendar.md — W7-W10 Day-by-Day Calendar
 
 **Session:** 2026-05-06 (W6 Day 3 G3.12, P1).

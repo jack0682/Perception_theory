@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 34_Phase10_findings.md — Phase 10 V1-V5 Integrated Findings
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 10).

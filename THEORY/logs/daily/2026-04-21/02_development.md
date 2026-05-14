@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02 — Development: Mathematical Body of G1–G6
 
 **Session:** 2026-04-21

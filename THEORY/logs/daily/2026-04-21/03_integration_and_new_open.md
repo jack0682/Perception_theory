@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03 — Integration & New Open: Canonical Impact + canonical_sub Entry + New Open Questions
 
 **Session:** 2026-04-21

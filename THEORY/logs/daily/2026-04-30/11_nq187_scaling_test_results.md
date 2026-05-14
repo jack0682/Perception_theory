@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_nq187_scaling_test_results.md — NQ-187 §8 Numerical Verification
 
 **Date:** 2026-04-30 (W5 Day 4 PM, Wave 3 deep-research)

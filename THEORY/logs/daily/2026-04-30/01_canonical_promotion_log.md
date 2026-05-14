@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_canonical_promotion_log.md — W5 Day 4 CV-1.5.1 Canonical Apply Log
 
 **Session:** 2026-04-30 (W5 Day 4) — 사용자 "그냥 내일 plan이랑 pre_brainstorm지우고 지금하자" 지시 하에 W5 Day 3 EOD 시점부터 batch canonical apply 진행.

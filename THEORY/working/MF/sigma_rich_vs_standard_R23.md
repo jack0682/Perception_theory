@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_rich_vs_standard_R23.md — σ_rich vs σ_standard Equivalence Test on R23 Dataset
 
 **Status:** working draft (W5 Day 4 PM, Task #35).

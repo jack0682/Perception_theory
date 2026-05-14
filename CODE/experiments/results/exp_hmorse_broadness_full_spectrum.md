@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp_hmorse_broadness_full_spectrum — Results Summary
 
 **Experiment:** OP-HMORSE-BROADNESS Approach (c) numerical verification

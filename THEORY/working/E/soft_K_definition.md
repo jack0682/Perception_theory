@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # Soft-K Definition — Persistence-Weighted Canonical Choice (G1)
 
 **Status:** working (commit draft, 2026-04-21)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-05-05 W6 Day 2 (post Day-1-overdelivery; slack-week mode)
 
 **Title:** 2026-05-05 Pre-Brainstorm — What does "all goals closed in Day 1" actually mean?

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_working_stockpile_audit.md — Working Stockpile Audit
 
 **Session:** 2026-05-06 (W6 Day 3 G3.7, P1).

@@ -8,6 +8,9 @@ attacks: OP-OMS-018
 status: PARTIAL RESOLUTION (local R1/R2 PROVED; global C^1 REJECTED; value function and envelope PROVED)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-018 — Regularity of $u^*(\lambda)$
 
 Theoretical attack on OP-OMS-018: under what conditions is $\lambda \mapsto u^*(\lambda)$

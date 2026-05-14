@@ -5,6 +5,9 @@ project: Observer Moduli Space of SCC
 version: 0.7
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Formal Definitions — SCC Observer Moduli Space
 
 Each entry is classified as: **Defined** | **Assumed** | **Hypothesized** | **Open** | **Rejected**

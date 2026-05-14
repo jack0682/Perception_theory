@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-23 Session Plan
 
 **Session type:** Stage 2 Axiom Audit + Single-formation 안정화 + Multi-formation bridge + Framework extension.

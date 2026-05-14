@@ -5,6 +5,9 @@ project: Observer Moduli Space of SCC
 experiment: exp86_vp1_p_resolution_audit.py
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-1 Execution Log
 
 Chronological record of VP-1 design, execution, and interpretation.

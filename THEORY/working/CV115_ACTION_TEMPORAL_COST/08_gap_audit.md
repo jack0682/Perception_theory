@@ -6,6 +6,9 @@ created: 2026-05-12
 scope: 닫힌 것 / 열린 것 분리, CV-1.14 연결 요약, 승격 문장
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 08. Gap Audit — CV-1.15 최종 보고서
 
 ---

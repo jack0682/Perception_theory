@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11a_C2_generalization.md — Theorem 2 의 graph-class 일반화 (Phase 5)
 
 **Session:** 2026-04-24 (evening, 사용자 Phase 3 대기 중)

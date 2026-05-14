@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04 — Deepening Round 2: Residual Closure
 
 **Session:** 2026-04-22 (SF-S1 afternoon continuation)

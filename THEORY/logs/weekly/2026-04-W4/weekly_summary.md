@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Weekly Summary — W4 (2026-04-19 to 2026-04-26, **EXTENDED**)
 
 **Period:** 2026-04-19 (Sun) to **2026-04-26 (Sun)** — April 4th week, extended by 1 day

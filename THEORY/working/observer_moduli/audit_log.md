@@ -4,6 +4,9 @@ created: 2026-05-07
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Audit Log — Observer Moduli Space
 
 Records all significant mathematical decisions, rejected candidates, and overclaim warnings. Each entry is permanent; corrections are appended, not deleted.

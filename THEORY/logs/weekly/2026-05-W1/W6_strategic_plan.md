@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # W6 Strategic Plan (2026-05-04 ~ 2026-05-10) — Audit-Anchored Redesign
 
 **Created:** 2026-05-04 (replacing the deleted W6_strategic_plan.md ~1,691-line draft).

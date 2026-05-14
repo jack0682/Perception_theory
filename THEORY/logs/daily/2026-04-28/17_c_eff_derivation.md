@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 17_c_eff_derivation.md — Mode-Mixing Factor c_eff Perturbation-Theory Derivation
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 4, F1).

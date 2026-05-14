@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10 — Deepening Round 8: G-C Sub-Claim C on General Graphs (Beyond $D_4$)
 
 **Session:** 2026-04-22 (Round 8, post-Round-7)

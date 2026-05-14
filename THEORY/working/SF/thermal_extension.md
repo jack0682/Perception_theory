@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # thermal_extension.md — Prop 1.3a/b Thermal Extension ($T > 0$)
 
 **Status:** commit draft (2026-04-22 Round 2).

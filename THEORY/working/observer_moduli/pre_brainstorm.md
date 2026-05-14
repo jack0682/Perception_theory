@@ -4,6 +4,9 @@ created: 2026-05-07
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Pre-Brainstorm — Observer Moduli Space
 
 ## Central Question

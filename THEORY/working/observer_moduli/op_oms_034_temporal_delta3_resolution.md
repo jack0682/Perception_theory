@@ -7,6 +7,9 @@ attacks: OP-OMS-034 — full temporal Δ³
 status: TARGET DEFINED (Gate 1); experimental verdict pending Gates 3–4
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-034 — Temporal Δ³ Resolution
 
 This file states the **precise theorem target** for OP-OMS-034 closure

@@ -7,6 +7,9 @@ attacks: OP-OMS-001
 status: PROOF SKETCH — three structural reductions; gaps identified for full proof
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-001 — Formal Proof Attempt: $G_{\mathrm{cw}} = \{e\}$ on Dynamic Scenes
 
 OP-OMS-001 is the canonical-promotion blocker requiring a **formal proof**

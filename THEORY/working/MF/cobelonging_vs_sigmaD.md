@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # cobelonging_vs_sigmaD.md — Co-belonging $C_t$ vs σ_multi^D Multi-Formation Status (OAT-5)
 
 > **✅ REJECT-RETIRE-RECOMMENDATION (W6 D1 EOD parking-lot Issue #5 audit, 2026-05-04)**

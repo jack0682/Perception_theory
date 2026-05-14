@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # WQ-1.C — Layer I H_0 Bar-Death Counterexample Protocol
 
 **File:** `THEORY/working/MF/wq1c_layerI_h0_bardeath_protocol.md`

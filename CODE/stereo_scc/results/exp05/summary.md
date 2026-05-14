@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp05: K_act Markov Chain Stationary Distribution (Claim E)
 
 ## Setup

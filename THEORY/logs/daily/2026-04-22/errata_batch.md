@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # errata_batch.md — G7 Errata Batch Application Log
 
 **Session:** 2026-04-22 (SF-S1)

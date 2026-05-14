@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01e_theorem4_first_pitchfork.md — Theorem 4 (σ at First Pitchfork on $D_4$ Free-BC Grid)
 
 > ⚠ **ERRATUM (2026-04-27 evening, post-merge re-review):** §2 statement (ii) and §3 Step 5/5' derivation have **two related errors**:

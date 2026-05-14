@@ -11,6 +11,9 @@ canonical_edits: 0
 afd_0_edits: 0
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 41 — V-AFD 폐기 및 archive 결정
 
 ## 1. 결정

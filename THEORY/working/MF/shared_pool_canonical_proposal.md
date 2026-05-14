@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # shared_pool_canonical_proposal.md — Shared-Pool Architecture I9' Canonical Proposal (OAT-4)
 
 **Status:** working draft (OAT-4, post W5 Day 4 morning batch session).

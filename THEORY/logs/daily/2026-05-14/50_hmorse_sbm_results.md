@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 50 — OP-HMORSE-SBM Robustness Extension Results
 
 **Session:** 2026-05-14 (CV-1.17 continuation, post CV-1.16 SEAL)

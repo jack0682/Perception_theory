@@ -14,6 +14,9 @@ related:
   - pf_a1_lions_sznitman_freidlin_route.md
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # Emergent Multi-Formation from a Shared Soft Field — Synthesis
 
 **Purpose:** This document synthesizes all theorems established through CV-1.10 into a single theory-level narrative, identifies the complete dependency ladder from soft field to multi-formation, and maps the remaining gaps that prevent theoretical completeness. It does not promote new theorems and does not begin Package II.

@@ -6,6 +6,9 @@ status: complete
 last_updated: 2026-04-30
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # W5 Day 4 PM Wave 2 — Critic Re-review of 5 New Working Files
 
 **Trigger**: User directive "무한 디벨롭 ... open problem을 풀려고 노력". Critic re-review of the 5 working drafts persisted in Wave 1 (NQ-187/188/189/190/253).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # op003_mo1_status_review.md — OP-0003 MO-1 SIDESTEPPED Status Review (Wave 3 EOD)
 
 **Status:** working draft (W5 Day 4 PM Wave 3, 2026-04-30).

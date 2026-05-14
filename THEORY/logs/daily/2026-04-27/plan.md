@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-27 (W5 Day 1, AGGRESSIVE)
 
 **Session type:** W5 Day 1 — *MAXIMUM-AMBITION execution*. G0 (σ supporting lemmas full canonical merge with proofs) + G1 (NQ-173 V5b-F full numerical Day 1) + G2 setup (NQ-174 script ready EOD).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # nq242c_explicit_construction.md — NQ-242c Explicit Two-Trajectory Construction (Path B Cat A target)
 
 **Status:** working draft (W5 Day 4 OAT-supplementary; standalone construction file extending `working/MF/sigma_rich_augmentation.md` §6).

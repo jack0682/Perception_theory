@@ -3,6 +3,9 @@ type: working/parking
 created: 2026-05-07
 ---
 
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
+
 # working/parking/ — Stale Planning Artifacts
 
 Files here are no longer actively used but are preserved for historical reference. They are not part of the active theory development pipeline and should not be cited in canonical documents.

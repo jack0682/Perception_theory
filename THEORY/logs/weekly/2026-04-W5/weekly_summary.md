@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Weekly Summary — W5 (2026-04-27 to 2026-05-03)
 
 **Period:** 2026-04-27 (Mon, Day 1) to 2026-05-03 (Sun, Day 7) — April 5th week / May 1st week

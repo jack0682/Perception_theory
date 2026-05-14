@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # Integer-K Dependency Map
 
 **Status:** updating (Round 12-18 post-audit rewrite, 2026-04-22).

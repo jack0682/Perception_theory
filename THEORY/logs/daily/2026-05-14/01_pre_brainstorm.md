@@ -10,6 +10,9 @@ prerequisite_reading:
   - THEORY/logs/daily/2026-05-13/10_scc_current_state_and_next_expansion_report.md (§7.5)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 01 — Pre-Brainstorm (2026-05-14)
 
 ## 1. 두 archive 의 메타-교훈 (W7 Day 3-4 두 사이클)

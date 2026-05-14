@@ -6,6 +6,9 @@ stage: OMS-1.1
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Canonical Promotion Checklist — OMS
 
 Use this checklist to determine when OMS is ready for promotion from `THEORY/working/observer_moduli/` to `THEORY/canonical/canonical.md`.

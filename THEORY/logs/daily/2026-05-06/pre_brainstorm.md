@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-05-06 W6 Day 3 (REDIRECTION mode; v2 supersedes v1 deliberate-taper draft)
 
 **Title:** 2026-05-06 Pre-Brainstorm — W6 Day 3 의 shape를 "deliberate taper" 에서 "scope-redirection" 으로 변경.

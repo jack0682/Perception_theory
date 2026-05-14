@@ -11,6 +11,9 @@ depends_on:
   - vp11_temporal_delta3 (results)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OMS-2.0 Full Accepted Audit
 
 This audit applies the user-mandated promotion rules to the post-Session-8

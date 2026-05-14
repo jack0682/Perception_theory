@@ -1,3 +1,5 @@
+> [!nav] Linked: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · [[INDEX|working/INDEX.md]]
+
 # CLAUDE.md
 
 Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a mathematical theory of how coherent formations emerge prior to discrete objecthood.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14_corner_hessian_rank.md — Corner-Saturated State Hessian Rank Deficiency Analysis
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E8).

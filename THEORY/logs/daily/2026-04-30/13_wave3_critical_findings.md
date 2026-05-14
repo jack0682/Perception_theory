@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13_wave3_critical_findings.md — Wave 3 Critical Findings Bulletin (W5 Day 4 PM, 2026-04-30)
 
 **Trigger:** Wave 3 native team teammates returned numerical + theoretical results requiring immediate lead-side review for canonical impact.

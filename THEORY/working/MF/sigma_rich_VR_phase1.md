@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # sigma_rich_VR_phase1.md — σ_rich + Tool A3 Vietoris-Rips PH Integration (NQ-242 Phase 1)
 
 **Status:** working draft (W5 Day 4, Task #34 V-R Phase 1).

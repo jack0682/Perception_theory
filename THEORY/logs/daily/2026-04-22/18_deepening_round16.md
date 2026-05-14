@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 18 — Round 16: F-1 Multi Verification (Final Medium-Term Round)
 
 **Session:** 2026-04-22 (Round 16, multi-formation closure)

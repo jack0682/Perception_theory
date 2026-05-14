@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # Reservoir Reinterpretation of K: From Finite Slots to Latent Formation Reservoir
 
 **File:** `THEORY/working/MF/reservoir_reinterpretation_of_K.md`

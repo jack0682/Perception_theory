@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 19_PN_fit_and_F4_proof.md — PN-Barrier Multi-Point Fit + Theorem 2.1 Formal Proof
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 4, F3 + F4).

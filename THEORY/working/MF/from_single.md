@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # from_single.md — Multi-Formation Structure Derived from Single-Formation Invariants
 
 **⚠️ MAJOR STATUS UPDATE (2026-04-22 R22)** — see `working/SF/step_cohesion.md` for full reformulation:

@@ -6,6 +6,9 @@ attacks: OP-OMS-001 Gap C1 H4 witness
 deliverables: vp8_gap_c1_rank_witness.py + .json + .md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 6 Gate 2 — VP-8 Rank Witness
 
 ## Mission

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_theorem_status_phase1-10_update.md — theorem_status / CHANGELOG Conditional Refresh Draft
 
 **Session:** 2026-04-29 (W5 Day 3, Block 3)

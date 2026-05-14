@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_w11_w12_v20_outlook.md — W11-W12 v2.0 Outlook
 
 **Session:** 2026-05-06 (W6 Day 3 G3.10, optional).

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # TASK_LEDGER.md — W5 Day 4 PM Wave 3 (Native Team Mode)
 
 **Last updated:** 2026-04-30 (W5 Day 4 PM Wave 3, native agent team activated).

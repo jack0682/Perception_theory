@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13_NOP_D_lemma18_hilbert_metric.md — NOP-D Closure: Hilbert/Birkhoff Metric Sinkhorn Contraction
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening session

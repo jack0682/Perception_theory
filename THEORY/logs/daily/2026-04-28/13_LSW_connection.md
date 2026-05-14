@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13_LSW_connection.md — Goldstone-Pair Instability ↔ Lifshitz-Slyozov-Wagner Coarsening
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E7).

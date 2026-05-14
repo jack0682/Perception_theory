@@ -21,6 +21,9 @@ hypothesis_tree_edits: 0
 theorem_status_edits: 0
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 50 — R-2 Differentiated Cohesion Readout 작성 세션
 
 ## 1. 세션 맥락

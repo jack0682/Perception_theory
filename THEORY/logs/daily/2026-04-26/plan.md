@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-26 Session Plan (W4 Extended Close — Day 8)
 
 **Session type:** W4 extended close (V5b verification cycle). Per user direction (2026-04-26 mid-session): "아직 내용은 전부 W4로 간주해" — 04-26 work treated as W4 final-day continuation, NOT W5 Day 1.

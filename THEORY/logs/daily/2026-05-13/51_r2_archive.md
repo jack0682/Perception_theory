@@ -12,6 +12,9 @@ hypothesis_tree_edits: 0
 theorem_status_edits: 0
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 51 — R-2 archive 결정 (C2 sub-threshold merger demonstration 실패)
 
 ## 1. 결정

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Soft Cognitive Cohesion(SCC) 이론 — 현황 분석 및 다음 확장 설계 보고서
 
 **기준 버전:** CV-1.13 (2026-05-10 봉인, W7-CV1.13 UltraQA 종료감사 직후)

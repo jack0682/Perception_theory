@@ -6,6 +6,9 @@ claim_count_at_start: 59A / 14B / 5C / 5R = 83 claims
 note: originally drafted under wrong date 2026-05-13; relocated to actual session date 2026-05-12. "Day 3" framing in body preserved as authored intent.
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Day 3 Plan — 2026-05-12 (relocated from 2026-05-13)
 
 AFD-0 is in working state with OP-AFD-004 Cat B resolved. Two parallel tracks today.

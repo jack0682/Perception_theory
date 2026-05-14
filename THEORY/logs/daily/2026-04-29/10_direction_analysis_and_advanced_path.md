@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_direction_analysis_and_advanced_path.md — Day 3 방향 분석 + 고도화 방향 제시
 
 **Session:** 2026-04-29 (W5 Day 3 — comprehensive direction synthesis)

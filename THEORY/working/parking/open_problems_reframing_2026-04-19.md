@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # Open Problems — 재프레이밍 (2026-04-19)
 
 **Status:** exploring

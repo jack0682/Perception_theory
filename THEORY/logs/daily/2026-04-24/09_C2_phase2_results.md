@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_C2_phase2_results.md — Phase 2 Light Numerical Verification
 
 **Session:** 2026-04-24 (evening)

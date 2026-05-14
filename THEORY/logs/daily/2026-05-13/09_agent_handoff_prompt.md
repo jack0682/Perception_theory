@@ -4,6 +4,9 @@ date: 2026-05-13
 target: CV-1.15 Promotion Application + Post-Promotion Consistency Audit
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Next Agent Prompt — 2026-05-13
 
 ## 컨텍스트 요약

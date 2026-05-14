@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-06 (W6 Day 3, REDIRECTION mode v3 — substantive plan, "부채가 커지기 전에 잡는다" framing, expanded D-by-D scope)
 
 **Title:** 2026-05-06 Research Plan — W6 Day 3 redirection day (v3 supersedes v2 supersedes v1).

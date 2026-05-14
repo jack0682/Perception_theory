@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_sigma_lemmas_review.md — G0 Decision Packet (σ Supporting Structures Canonical Merge)
 
 **Session:** 2026-04-27 (W5 Day 1 AGGRESSIVE)

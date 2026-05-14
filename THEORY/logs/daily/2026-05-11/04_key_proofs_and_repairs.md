@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04 — Key Proofs and Repairs
 
 Concise summaries of the four mathematical pillars of the W7 arc and the conceptual meaning of the closure.

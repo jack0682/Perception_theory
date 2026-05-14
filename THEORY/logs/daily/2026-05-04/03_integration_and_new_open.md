@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_integration_and_new_open.md — G1 L-M-AUDIT Closure: Integration + Promotion Proposal + New Open Questions
 
 **Session:** 2026-05-04 (W6 Day 1, mid-day, post-G3)

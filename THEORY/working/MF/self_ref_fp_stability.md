@@ -12,6 +12,9 @@ related:
   - CODE/scc/transport.py — sinkhorn_partial_ot, transport_fixed_point
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # NOP-D — Self-Referential Sinkhorn Fixed-Point Stability under (A7') Sharp Regime
 
 **Purpose.** Lemma 10 (`06_close_OP0011_step2.md`) bounds single-step cost-perturbation. SCC self-referential iteration updates cost at each step. Question: does the iteration converge in (A7') sharp regime, or does it diverge?

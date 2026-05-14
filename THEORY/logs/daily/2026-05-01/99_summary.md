@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W5 Day 5 EOD Reflection (Reconciliation Day)
 
 **Session:** 2026-05-01 (W5 Day 5, RECONCILIATION-FIRST)

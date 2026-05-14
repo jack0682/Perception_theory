@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # External References Verification — SCC Multi-Formation Scaffolding
 **Date**: 2026-04-30  
 **Purpose**: Canonical-citable form of all external mathematical references for the four-tool multi-formation scaffolding (Tools A1–A4), SCC contrastive citations, cognitive-science downstream, and general research-front entries.  

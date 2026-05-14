@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_theorem4_canonical_revision.md — T-σ-Theorem-4 Urgent Canonical Revision Packet
 
 **Status:** working draft (W5 Day 4 PM, Task #63 URGENT).

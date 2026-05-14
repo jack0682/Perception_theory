@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_selection_a_free_energy.md — K-Selection (a) Free Energy Variational Derivation
 
 **Status:** working draft (W5 Day 4, Task #5).

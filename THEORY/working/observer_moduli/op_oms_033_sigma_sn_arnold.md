@@ -7,6 +7,9 @@ attacks: OP-OMS-033 — SCC-specific saddle-node / Σ_SN codim-1 verification
 status: PROVED as conditional theorem; PROOF SKETCH for SCC-specific quadratic nondegeneracy (deferred as sub-OP)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-033 — Σ_SN as Conditional Fold Theorem
 
 OP-OMS-033 asks for verification that the saddle-node / fold component

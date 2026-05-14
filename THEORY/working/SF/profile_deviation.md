@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # profile_deviation.md — NQ-32: SCC Full Minimizer vs Tanh Ansatz
 
 **⚠️ MAJOR STATUS UPDATE (2026-04-22 R22)**:

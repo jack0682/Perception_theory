@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14 — Round 12: $u^\ast_2$ Hessian via Lyapunov-Schmidt Reduction
 
 **Session:** 2026-04-22 (Round 12, multi-formation 이어서)

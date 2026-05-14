@@ -4,6 +4,9 @@ status: AFD-0 Draft (2026-05-12)
 version: 0.1
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # AFD-0 — Abstract Formation Dynamics Foundation
 
 ## Purpose

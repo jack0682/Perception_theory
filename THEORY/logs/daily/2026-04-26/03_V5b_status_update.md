@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_V5b_status_update.md — Theorem 1 V5b Status (post-NQ-170, post-W5 Day 1)
 
 **Session:** 2026-04-26 (W5 Day 1)

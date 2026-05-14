@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-7 Σ_branch Mapping Summary
 
 **Date:** 2026-05-08  

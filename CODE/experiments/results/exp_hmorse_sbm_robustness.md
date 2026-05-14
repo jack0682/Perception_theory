@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp_hmorse_sbm_robustness — Results Summary
 
 **Experiment:** OP-HMORSE-SBM numerical robustness extension

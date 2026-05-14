@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 attacks: OP-OMS-012, OP-OMS-013
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Boundary, Corners, Orbifold, and Stratified Dynamics — OMS-0.5
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.

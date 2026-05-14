@@ -8,6 +8,9 @@ version: OMS-2.0 Accepted — Full (Session 8, 2026-05-08)
 status: OMS-2.0 Accepted — Full. Static face PROVED (Sessions 4–7). Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced temporal OMS test (Session 8, VP-11 — 14/14 (Wit-T) witnesses + 19 distinct branches with 7 λ_tr-unique). Canonical Appendix OMS Temporal subsection M added. No remaining hard blockers; sub-OPs 032b/033b/034b/034c are non-blocking formality/robustness upgrades.
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # SCC Observer Moduli Space — OMS-1.2 Candidate
 
 **Version:** OMS-1.2 (2026-05-08, Session 5)

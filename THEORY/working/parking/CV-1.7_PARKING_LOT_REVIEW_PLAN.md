@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # CV-1.7 Parking Lot Review Plan
 
 **Created:** 2026-05-04 (audit pass; W6 strategic plan was deleted concurrently because its G5 task silently downgraded the parking-lot dispatch from "audit" to "checklist preparation only").

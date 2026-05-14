@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_close_NQ5_full.md — NQ-T-Identity-5 Full Closure (Margin-Alone)
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session

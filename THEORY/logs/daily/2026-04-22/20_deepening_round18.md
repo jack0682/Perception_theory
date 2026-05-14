@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 20 — Round 18: $c$-Regime $\widehat K$ Analysis (Regime II vs Regime I)
 
 **Session:** 2026-04-22 (Round 18, numerical continuation)

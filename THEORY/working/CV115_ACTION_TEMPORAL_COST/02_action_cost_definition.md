@@ -7,6 +7,9 @@ scope: 시간 격자, SCC fingerprint, local action, path action, hard-min cost,
        L-FINGERPRINT-ACTION-ADMISSIBLE, P-ACTION-PATH-INHERITANCE
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 02. Action Cost 정의
 
 ---

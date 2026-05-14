@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # WQ-LAT-1.B — Phi-Envelope Refinement Results
 
 **File:** `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md`

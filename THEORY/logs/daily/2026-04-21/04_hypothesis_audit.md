@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04 — Hypothesis Survival Audit + Quality Review (Post-Session)
 
 **Session:** 2026-04-21

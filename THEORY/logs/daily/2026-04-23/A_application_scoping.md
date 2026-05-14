@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # A_application_scoping.md — Application Layer Scoping
 
 **Session:** 2026-04-23 (G6 deliverable; intended promotion target: `working/A/application_scoping.md`)

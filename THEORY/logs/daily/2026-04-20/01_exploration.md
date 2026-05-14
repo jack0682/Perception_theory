@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01 — Exploration: Stage 0 Purpose Decision Material (Dual Matrix)
 
 **Session:** 2026-04-20

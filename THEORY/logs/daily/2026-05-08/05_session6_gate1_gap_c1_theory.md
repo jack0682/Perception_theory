@@ -6,6 +6,9 @@ attacks: OP-OMS-001 Gap C1
 deliverables: op_oms_001_gap_c1_rank_theorem.md, _sensitivity.md, _genericity.md
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # Session 6 Gate 1 — OP-OMS-001 Gap C1 Theory (Three Files)
 
 ## Mission

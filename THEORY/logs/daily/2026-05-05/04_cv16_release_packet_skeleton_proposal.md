@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_cv16_release_packet_skeleton_proposal.md — CV-1.6 Release Packet Skeleton (W6 D2 G2.3-Gold candidate; daily-log proposal pending user-supervised migration)
 
 **Session:** 2026-05-05 (W6 Day 2, post-G2.2-Option-B-capture; Gold-target deliverable per `plan.md` §9 Gold criterion + Option B)

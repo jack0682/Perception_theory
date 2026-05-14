@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05 — G-miss-4 (K̂=1 Sufficient Condition) + G-miss-2 (c_0 Scope Correction)
 
 **Session:** 2026-04-23 (continuation; user instruction "4, 2부터").

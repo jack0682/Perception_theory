@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Soft Cognitive Cohesion (SCC)
 
 A mathematical theory of how coherent formations emerge **prior to discrete objecthood** — before the world is parsed into separately-identified things.

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13_C2_thermo_analysis_template.md — Analysis Template (pre-results)
 
 **Session:** 2026-04-24 (late, 사용자 Phase 3C 실행 대기 중)

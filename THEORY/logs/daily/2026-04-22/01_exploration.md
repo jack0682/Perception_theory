@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01 — Exploration: SF Consolidation + Multi-Formation Derivation
 
 **Session:** 2026-04-22 (SF-S1)

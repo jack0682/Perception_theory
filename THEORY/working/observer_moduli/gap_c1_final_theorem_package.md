@@ -7,6 +7,9 @@ attacks: OP-OMS-001 closure (final form)
 status: PROVED for the static face; rank-equivalence corrected; rigidity stated honestly
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Gap C1 — Final Theorem Package
 
 This file consolidates the OP-OMS-001 closure into a clean theorem

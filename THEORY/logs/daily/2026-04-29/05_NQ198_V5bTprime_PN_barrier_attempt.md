@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_NQ198_V5bTprime_PN_barrier_attempt.md — V5b-T' PN-Barrier-Lifted Goldstone: Cat A Analytic Attempt
 
 **Session:** 2026-04-29 (W5 Day 3, post-Block-5 deepening pass)

@@ -5,6 +5,9 @@ status: open — unresolved architecture migration
 last_updated: 2026-05-06
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # OP-0009-Pre-a: K-Field as Local Chart — Validity Conditions and Architecture Migration
 
 **OP-ID:** OP-0009-Pre-a

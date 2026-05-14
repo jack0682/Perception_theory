@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_selection_c_numerical_anchor.md — K-Selection (c) Symmetry-Broken Numerical Anchor
 
 **Status:** working draft (W5 Day 4, Task #7).

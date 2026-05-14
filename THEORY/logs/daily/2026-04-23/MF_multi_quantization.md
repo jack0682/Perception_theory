@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # MF_multi_quantization.md — Formation Quantization Extended to Multi-Formation
 
 **Session:** 2026-04-23 (G3 deliverable; intended promotion target: `working/MF/multi_quantization.md`)

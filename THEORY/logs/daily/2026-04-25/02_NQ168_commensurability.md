@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_NQ168_commensurability.md — NQ-168: Goldstone Doublet Commensurability Splitting
 
 **Session:** 2026-04-25

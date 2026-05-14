@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # stereo_scc_canonical_memo_v1.1.md
 # Canonical Memo: SCC-Stereo Soft-to-Crisp Stabilization Framework
 

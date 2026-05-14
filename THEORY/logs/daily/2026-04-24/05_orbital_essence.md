@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_orbital_essence.md — Orbital-as-Emergence: Reframing N-1
 
 **Session:** 2026-04-24 (late afternoon)

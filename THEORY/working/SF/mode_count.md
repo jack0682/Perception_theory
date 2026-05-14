@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # mode_count.md — Prop 1.3a/b (Hessian at u_uniform)
 
 **⚠️ STATUS UPDATE (2026-04-22 R22)**:

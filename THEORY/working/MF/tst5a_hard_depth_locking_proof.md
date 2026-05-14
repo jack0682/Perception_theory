@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # T-ST-5a: Hard-Depth Topological Locking — Formal Proof Sketch
 
 *Session D, W6 D4. Status updated Session E, W6 D4: **Cat A — all gaps G1–G4 closed.***

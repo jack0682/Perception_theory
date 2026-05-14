@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ — Working Draft
 
 > **Status:** working-grade theorem candidate; **Cat A conditional under $(P0)$–$(P11)$** *(post-W6 D1 L1-M-AUDIT closure 2026-05-04: R-0 + R-1 + R-2 + R-3 all resolved; was Cat-B sketched pre-audit)*. CV-1.6 promotion candidate; external `l-m-k-audit-prover`-style audit recommended for promotion rigor (NQ-G1-3, deferred to user decision).

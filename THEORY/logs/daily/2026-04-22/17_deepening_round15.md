@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 17 — Round 15: $\widehat K(\beta, c, T)$ Full Phase Diagram
 
 **Session:** 2026-04-22 (Round 15, multi-formation synthesis)

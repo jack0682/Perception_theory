@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_t_sigma_theorem4_reconciliation.md — T-σ-Theorem-4 Red Lane Reconciliation Note
 
 **Session:** 2026-05-01 (W5 Day 5)

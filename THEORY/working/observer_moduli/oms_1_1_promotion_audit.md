@@ -7,6 +7,9 @@ stage: OMS-1.1
 depends_on: oms_1_candidate.md, vp3_core_weight_symmetry_results.md, vp2_observer_landscape_admissible.md
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OMS-1.1 Canonical Promotion Audit
 
 Every statement classified: **DEFINED** | **PROVED** | **COMPUTATIONALLY SUPPORTED** | **HYPOTHESIZED** | **ASSUMED** | **OPEN** | **REJECTED**.

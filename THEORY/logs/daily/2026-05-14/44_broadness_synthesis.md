@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 44 — OP-HMORSE-BROADNESS Synthesis & Closure Verdict
 
 **Session:** 2026-05-14 (extension)

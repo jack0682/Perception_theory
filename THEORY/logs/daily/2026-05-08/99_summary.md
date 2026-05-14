@@ -5,6 +5,9 @@ sessions: Session 5, Session 5 cont., Session 6 (OMS-2.0 push)
 day_arc: OMS-1.1 → OMS-1.2 → OMS-2.0 Conditional Accepted
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 2026-05-08 — Day Summary
 
 ## One-line digest

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12_D_to_A_reduction.md — σ_multi^(D) → σ_multi^(A) Reduction in Well-Separated Regime
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E6).

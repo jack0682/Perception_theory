@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp02-NEB: Stereo Merger Barrier — NEB + K-Stability
 
 ## Physical Mechanism (T-ST-5a — Hard-Cut Topological Locking)

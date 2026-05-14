@@ -1,3 +1,5 @@
+> [!nav] Linked: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · [[INDEX|working/INDEX.md]]
+
 # CONVENTIONS.md — Repository & Theory Discipline
 
 Read at session start with `THEORY/canonical/canonical.md`, `THEORY/canonical/theorem_status.md`, and the last entry of `THEORY/CHANGELOG.md`.

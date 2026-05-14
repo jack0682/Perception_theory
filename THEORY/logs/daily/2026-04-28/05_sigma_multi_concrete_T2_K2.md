@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_sigma_multi_concrete_T2_K2.md — σ_multi^(A) Concrete Worked Example: T²_{20}, K=2, d=8
 
 **Session:** 2026-04-28 (W5 Day 2, Block 3 deepening — Option β per self-critique).

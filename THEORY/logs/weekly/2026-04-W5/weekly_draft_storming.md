@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Weekly Draft Storming — 2026-04-W5 (April 27 – May 3, 2026)
 
 **Status:** OPEN (W4 extended closed 2026-04-26 EOD; W5 starts 2026-04-27).

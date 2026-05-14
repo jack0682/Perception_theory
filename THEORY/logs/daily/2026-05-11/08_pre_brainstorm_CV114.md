@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08 — Pre-Brainstorm: After Temporal Identity, Toward H-MORSE / Package II
 
 Exploratory but disciplined. This file collects candidate routes for CV-1.14 without committing to a proof. Treat as a route audit, not as a plan of record.

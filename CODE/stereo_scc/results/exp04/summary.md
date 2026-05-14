@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp04: Prior / Likelihood Separation in MAP (Claim D)
 
 ## Setup

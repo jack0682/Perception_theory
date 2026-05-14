@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # SF_function_taxonomy.md — Mathematical Function Taxonomy of SCC Transitions
 
 **Session:** 2026-04-23 (G2 deliverable; intended promotion target: `working/SF/function_taxonomy.md`)

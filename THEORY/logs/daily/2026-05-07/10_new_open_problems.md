@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_new_open_problems.md — New Open Problems (NOPs) from 2026-05-07 Closures
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session

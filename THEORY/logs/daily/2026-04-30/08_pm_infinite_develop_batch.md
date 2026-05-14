@@ -6,6 +6,9 @@ status: complete
 last_updated: 2026-04-30
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # W5 Day 4 PM — Infinite-Develop Batch (Persistent Autonomous Execution Mode)
 
 **Trigger:** User directive "아직 close안하고 끝까지 할수있는데까지 가봄 모든 스킬과 에이전트 MCP를 동원해서 무한 디벨롭 multi formation및 single formation을 지속 감사하고 지속적으로 open problem을 풀려고 노력 해야함."

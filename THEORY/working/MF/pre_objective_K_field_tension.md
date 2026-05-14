@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # pre_objective_K_field_tension.md — Pre-Objective Primacy vs K-Field Architecture: 가장 깊은 Ontological Gap
 
 > **✅ REJECT-RETIRE-RECOMMENDATION (W6 D1 EOD parking-lot Issue #5 audit, 2026-05-04)**

@@ -5,6 +5,9 @@ project: Observer Moduli Space of SCC
 depends_on: definitions.md
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Toy Models — Observer Moduli Space
 
 Two fully computed examples of $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ under simplifying assumptions.

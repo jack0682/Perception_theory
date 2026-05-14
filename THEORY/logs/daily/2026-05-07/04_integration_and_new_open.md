@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_integration_and_new_open.md — Integration with Canonical, OP Impact, New Open Questions
 
 **Session:** 2026-05-07 (Thu, W6 Day 5)

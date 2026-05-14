@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 attacks: OP-OMS-005
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Latent Continuous Symmetry — OMS-0.3
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **OPEN** | **REJECTED**.

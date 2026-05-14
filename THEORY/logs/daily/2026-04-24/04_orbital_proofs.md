@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_orbital_proofs.md — Three Additional Cat A Orbital Proofs
 
 **Session:** 2026-04-24 (afternoon extension)

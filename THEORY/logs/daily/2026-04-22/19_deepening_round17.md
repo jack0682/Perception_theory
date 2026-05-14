@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 19 — Round 17: Numerical Validation Analysis (`exp_k_hat_validation.py`)
 
 **Session:** 2026-04-22 (Round 17, numerical analysis)

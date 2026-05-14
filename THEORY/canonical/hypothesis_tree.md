@@ -8,6 +8,13 @@ status: active
 description: SCC 이론 가설 의존성 트리. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10) — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW). Net count unchanged: 80 claims preliminary. HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_hypothesis_tree]]
+> Pairs with: [[theorem_status]] (claim-status authority)
+> Related: [[MOC_open_problems_blockers]] · [[canonical]] · [[CV-1.16_SEAL]]
+> Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
+> Status: HT-3.7 (CV-1.16 baseline)
+
 # SCC Hypothesis Tree (HT-3.5)
 
 ---

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09 — Deepening Round 7: Sharp $c_0(\beta)$ via Pitchfork Cascade Enumeration
 
 **Session:** 2026-04-22 (Round 7, post-Round-6)

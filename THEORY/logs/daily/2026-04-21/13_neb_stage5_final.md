@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 13 — NEB Stage 5 Final Results
 
 **Session:** 2026-04-21 (Stage 5 numerical, post 9-round theory work)

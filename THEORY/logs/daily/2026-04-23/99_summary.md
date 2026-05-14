@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99 — Session Summary 2026-04-23
 
 **Session type:** Stage 2 Axiom Audit 후속 (multi-goal). 6 goals (G1-G6), P0 = {G1, G2, G3}, P1 = {G4, G5}, P2 = {G6}.

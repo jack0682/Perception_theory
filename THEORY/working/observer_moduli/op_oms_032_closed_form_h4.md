@@ -7,6 +7,9 @@ attacks: OP-OMS-032 — closed-form / certified H4 witness for Gap C1
 status: CLOSED UNDER CERTIFIED WITNESS
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-032 — H4 Witness Certification
 
 OP-OMS-032 asks for a closed-form / certified witness for hypothesis (Wit) of `gap_c1_final_theorem_package.md` Theorem C1.3 (= H4 of `op_oms_001_gap_c1_genericity.md`). This file provides the **certification analysis** without descending into a symbolic-algebra swamp.

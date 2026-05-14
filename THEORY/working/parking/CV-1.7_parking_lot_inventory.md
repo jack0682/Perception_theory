@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # CV-1.7 Parking Lot Inventory — Stage 0 Deliverable
 
 **Created:** 2026-05-04 (W6 Day 1 EOD, post G1+G2+G3 closures).

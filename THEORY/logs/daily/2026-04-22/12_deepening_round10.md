@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12 — Deepening Round 10: Higher-Order Pitchfork Cascade (Secondary/Tertiary Bifurcations)
 
 **Session:** 2026-04-22 (Round 10, post-Round-9)

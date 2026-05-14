@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # Latent Index Space Design for SCC / Multi-Formation
 
 **File:** `THEORY/working/MF/latent_index_space_design.md`

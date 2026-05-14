@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_open_problems_development_synthesis.md — Day 3 Deepening Pass: Synthesis
 
 **Session:** 2026-04-29 (W5 Day 3, post-Block-5 deepening pass)

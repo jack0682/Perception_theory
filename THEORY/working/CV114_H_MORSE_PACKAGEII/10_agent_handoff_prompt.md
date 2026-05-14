@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 10 — Next Agent Handoff Prompt
 
 Ready-to-paste prompt for W7-CV114B. Use after this audit (W7-CV114) is complete.

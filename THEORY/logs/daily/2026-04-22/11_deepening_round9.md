@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11 — Deepening Round 9: Cor 2.2 SCC-Minimizer Supra-Lattice Regime
 
 **Session:** 2026-04-22 (Round 9, post-Round-8)

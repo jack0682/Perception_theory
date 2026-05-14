@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # NQ-242c Counterexample Results — WQ-1 Numerical Anchor
 
 **File:** `THEORY/working/MF/nq242c_results.md`

@@ -5,6 +5,9 @@ status: in-progress
 last_updated: 2026-05-06
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # OP-0006: Boundary Precision — Working Formalization
 
 **OP-ID:** OP-0006

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # SF_layer_classification.md — Three-Layer Assignment of 77 Preserved Cat A Theorems
 
 **Session:** 2026-04-23 (G1 deliverable; intended promotion target: `working/SF/layer_classification.md`)

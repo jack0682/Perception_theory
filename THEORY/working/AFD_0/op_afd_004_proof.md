@@ -10,6 +10,9 @@ depends_on:
   - AFD-T7 (K-Jump Cost — well-definedness only)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # OP-AFD-004 — Positive Merge Barrier: Proof Attempt
 
 **Claim to prove.** For all K ≥ 2 and any pair of formation states F_K ∈ V_form with K_F = K and F_{K-1} ∈ V_form with K_{F_{K-1}} = K−1:

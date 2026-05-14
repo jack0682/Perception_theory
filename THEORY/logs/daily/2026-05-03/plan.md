@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-05-03 (W5 Day 7, L1-M Soft-Count Corollary after T-L1-F)
 
 **Title:** 2026-05-03 Research Plan — L1-M Soft-Count Corollary after T-L1-F.

@@ -12,6 +12,9 @@ non-overclaim: |
   canonical.md / theorem_status.md / hypothesis_tree.md 직접 수정 금지.
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 05. Promotion Draft — T-CC-StableK-Kernel (CV-1.14 후보)
 
 ---

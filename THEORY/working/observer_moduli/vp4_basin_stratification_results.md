@@ -7,6 +7,9 @@ experiment: exp88_vp4_basin_stratification.py
 attacks: OP-OMS-002, OP-OMS-010
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-4 Basin Stratification Results
 
 ## §1. Purpose

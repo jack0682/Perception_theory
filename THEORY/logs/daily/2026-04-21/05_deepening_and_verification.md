@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05 — Deepening and Verification (Post-Audit)
 
 **Session:** 2026-04-21 (post-audit deepening)

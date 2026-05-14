@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 script: CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-6 Execution Log
 
 Chronological record of the VP-6 Jacobian experiment runs and the

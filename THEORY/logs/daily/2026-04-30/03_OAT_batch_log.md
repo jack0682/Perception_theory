@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_OAT_batch_log.md — W5 Day 4 morning OAT batch session log
 
 **Session:** 2026-04-30 (W5 Day 4) — 사용자 "모든 수학적 도구 적극 활용 + 모든 스킬 + MCP + 에이전트 + 자율 + 시간제한 없음" 지시 하에 OAT-2 ~ OAT-7 + Theorem 4.6.1 보강 + external references verification batch session.

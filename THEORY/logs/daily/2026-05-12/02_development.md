@@ -10,6 +10,9 @@ proof_classification:
   Q-C (density: bounded-length inf = unrestricted inf): Cat A (proved here for Bar; Cat B for J_K refinement)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 02 — Development: OP-AFD-003 Infimum Attainment
 
 **Session:** 2026-05-12

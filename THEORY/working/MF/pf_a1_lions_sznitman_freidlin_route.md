@@ -8,6 +8,9 @@ session: Session P (Cat A upgrades); Session N (proof review); Session M (initia
 related: pf_tstar_langevin.md, theorem_status.md OP-0021, canonical.md §13 T-P-F-ε0
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 # P-F-A1 Route Memo: Finite-Dimensional Reflected Diffusion Route
 
 ## Overview

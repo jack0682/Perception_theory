@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 42 — Approach (b): Operator-Norm Broadness Proof
 
 **Session:** 2026-05-14 (extension)

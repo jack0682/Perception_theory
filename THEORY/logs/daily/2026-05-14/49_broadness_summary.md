@@ -9,6 +9,9 @@ extension_files: [40_pre_brainstorm, 41_approach_a_jacobian, 42_approach_b_trace
 canonical_state_at_extension_end: CV-1.15 SEALED (unchanged from morning Track 1); 67A/16B/5C/5R = 93 claims; no canonical edits in extension
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 49 — OP-HMORSE-BROADNESS Extension Session Summary (2026-05-14 evening)
 
 ## Headline

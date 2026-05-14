@@ -7,6 +7,13 @@ status: accepted
 description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02); T-L1-M Soft-Count Corollary under Φ_res supervised addition (W6 D1 EOD, 2026-05-04); stereo extension T-ST-5a/b + D-ST-1..5 + T-OP6-B Cat B (CV-1.6 content, W6 D4 Sessions A–G, 2026-05-06); T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B (CV-1.7, Session I, 2026-05-06); T-OP6-B promoted Cat A + OP-0006 RESOLVED (Session K, 2026-05-06); T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B (CV-1.8, Sessions M–N, 2026-05-06); T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (CV-1.9, Session P, 2026-05-06); T-K-Select-PF Cat B + OP-0005-EQ partially resolved (CV-1.10, Session R, 2026-05-06); T-K-Select-OBS Cat B + OP-0005-OBS partially resolved (CV-1.11, Session Y, 2026-05-06); T-Temporal-Identity canonical Cat B + H-SINK full Cat A + Theorem Partial-H-SINK Cat A + OP-0011 PARTIALLY RESOLVED (CV-1.12, W7-FINAL, 2026-05-10); Lemma S-B1-Weak Cat A + S-B1-SYM Cat B (W7-CV113/CV113A, 2026-05-10); **T-Temporal-Identity full Cat A (all 4 parts) — CV-1.13 SEALED (W7-CV1.13, 2026-05-10). 59A/14B/5C/5R = 83 claims, ~71% fully proved**.
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
+> Read first: [[DECLARATION]] (2분)
+> Pairs with: [[00_manifest]] (SCC-CT v0.1 구조적 권위)
+> Related: [[theorem_status]] · [[hypothesis_tree]] · [[CV-1.16_SEAL]] · [[CHANGELOG]]
+> Status: SEALED CV-1.16 (97 claims; 68A/18B/6C/5R)
+
 # Canonical Specification of Soft Cognitive Cohesion (CV-1.11)
 
 > **먼저 읽기:** 이 문서의 수학적 내용에 앞서 [`DECLARATION.md`](DECLARATION.md) (DECL-1.0)를 읽을 것. 이론의 중심축("어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"), Primitive u_t, 중심 정리 T8, 6개 인식론적 질문(Q1~Q6)을 2분 안에 파악할 수 있다.

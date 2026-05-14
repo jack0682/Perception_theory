@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_critic_NQ249_review.md — Critic Final Review of NQ-249 (`scc_mass_gap_connection.md`)
 
 **Date:** 2026-04-30

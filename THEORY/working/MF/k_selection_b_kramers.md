@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # k_selection_b_kramers.md — K-Selection (b) Kramers Metastability Derivation
 
 **Status:** working draft (W5 Day 4, Task #6).

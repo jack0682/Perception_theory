@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_cv16_packet_recalibration.md — CV-1.6 Packet READY/PARTIAL/DEFER + CV-1.7 Parking Lot
 
 **Session:** 2026-05-01 (W5 Day 5)

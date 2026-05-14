@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 00_plan.md — W6 D5 Plan
 
 **Date:** 2026-05-07 (Thu, W6 Day 5)

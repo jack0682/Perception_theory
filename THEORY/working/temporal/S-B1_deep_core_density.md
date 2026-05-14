@@ -9,6 +9,9 @@ predecessor: temporal_identity_sharp_form_2026-05-07.md §5 (0.84 used in Δ_sep
 target: NQ-T-Identity-2 — iso-ratio / deep-core density S-B1
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # S-B1: Deep-Core Density Lower Bound (ρ_deep ≥ 0.84)
 
 **Working proof file. W7-FINAL session, 2026-05-10.**

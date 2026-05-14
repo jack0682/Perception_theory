@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 28_R1_findings_LSW_recovery.md — Phase 7 R1.1+R1.2+R1.3 MAJOR FINDINGS
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 7, R1.1+R1.2+R1.3).

@@ -10,6 +10,9 @@ target: T-Temporal-Identity (b,d) quantitative magnitude — Cat A path open via
 related: TRACE_084_ORIGIN.md, CV113_S-B1_DEEP_CORE_CLOSURE.md
 ---
 
+> [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # SYMBOLIC_DEEP_CORE_NECESSITY
 
 **Session:** W7-CV113A, 2026-05-10  

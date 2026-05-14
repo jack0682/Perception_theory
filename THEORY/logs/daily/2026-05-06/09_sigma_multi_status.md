@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_sigma_multi_status.md — σ-Multi Status + OP-0009-Pre Compatibility
 
 **Session:** 2026-05-06 (W6 Day 3 G3.9, optional).

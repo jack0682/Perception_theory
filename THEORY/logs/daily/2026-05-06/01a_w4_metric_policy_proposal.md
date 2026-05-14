@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01a_w4_metric_policy_proposal.md — W4 Metric: Substance:Administrative Ratio
 
 **Session:** 2026-05-06 (W6 Day 3 G3.11).

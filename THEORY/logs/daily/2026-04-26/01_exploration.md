@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_exploration.md — W5 Day 1: NQ-170 ζ-scan Exploration
 
 **Session:** 2026-04-26 (W5 Day 1)

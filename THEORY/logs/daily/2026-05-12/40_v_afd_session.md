@@ -19,6 +19,9 @@ files_to_modify (deferred): (none in this session)
 session_origin: User autonomous-research mandate (V-AFD vector method)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 40 — V-AFD Vector Abstract Formation Dynamics Session
 
 **Session:** 2026-05-12 W7 Day 3 (V-AFD branch — post-AFD-T5-R1 reconciliation)

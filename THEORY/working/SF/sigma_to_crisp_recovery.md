@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_to_crisp_recovery.md — σ → Crisp K-Object Recovery Procedure (NQ-189)
 
 **Status:** working draft (NQ-189, W5 Day 5+ self-spawn 2026-04-29).

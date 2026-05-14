@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_canonical_md_split_feasibility.md — canonical.md Split Feasibility
 
 **Session:** 2026-05-06 (W6 Day 3 G3.5, P1).

@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 attacks: OP-OMS-005, OP-OMS-016
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # RG-Style Relevance / Irrelevance Flow — OMS-0.4
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **COMPUTATIONALLY TESTABLE** | **OPEN** | **REJECTED**.

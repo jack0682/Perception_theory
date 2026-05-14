@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # CV-1.6 Release Packet Skeleton (working — Option B; W6 D7 deliverable)
 
 **Status:** working draft, Option B-specific (CV-1.6 release deferred to W7 alongside Stage 1 per-file Cat-status header drafting per W6 D2 G2.2 Decision Point 4 capture).

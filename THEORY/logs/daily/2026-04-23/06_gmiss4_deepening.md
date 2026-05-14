@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06 — G-miss-4 Deepening: Multi-Perspective Analysis
 
 **Session:** 2026-04-23 (continuation; user instruction "G-miss-4를 더 정밀히, 다양한 관점에서").

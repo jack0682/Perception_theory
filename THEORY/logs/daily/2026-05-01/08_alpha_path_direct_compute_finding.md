@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_alpha_path_direct_compute_finding.md — α-Path Direct Compute (W5 Day 5 Supplementary)
 
 **Session:** 2026-05-01 (W5 Day 5 EOD — supplementary work after primary 8 outputs delivered)

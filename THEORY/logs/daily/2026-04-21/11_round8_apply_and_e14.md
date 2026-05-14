@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11 — Round 8 Apply Errata + E-14 (T-7 in C+E Conflation)
 
 **Session:** 2026-04-21 (Round 8, post critical self-review)

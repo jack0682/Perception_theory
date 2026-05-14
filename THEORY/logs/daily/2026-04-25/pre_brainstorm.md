@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-04-25 Session Pre-brainstorm
 
 **Purpose:** 오늘 세션 진입 전 open-ended hypothesis exploration + weekly summary 전략 사전 구상.

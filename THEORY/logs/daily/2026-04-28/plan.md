@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-28 (W5 Day 2, MODERATE: Verdict Closure + G3 Opening + Commitment 14 Decision)
 
 **Session type:** W5 Day 2 — *verdict closure + transition day*. G1 (NQ-173 V5b-F numerical 완수 + verdict) + G2 (NQ-174 ζ_*(graph) precise + canonical proposal) + G3 (multi-formation σ Phase 5 *initiation*) + Commitment 14 (O5')/(O7) user decision.

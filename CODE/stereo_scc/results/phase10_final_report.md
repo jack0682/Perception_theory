@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # Phase 10: Final Report — SCC Stereo Soft-to-Crisp Stabilization
 
 Session: 2026-05-06 (W6 D3–D4 continued)

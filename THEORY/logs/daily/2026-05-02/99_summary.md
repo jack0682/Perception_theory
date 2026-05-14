@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — Day 6 (2026-05-02) Session Summary + Day 7 Seed
 
 **Session:** 2026-05-02 (W5 Day 6, single-deliverable canonical promotion).

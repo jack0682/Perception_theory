@@ -5,6 +5,9 @@ project: Observer Moduli Space of SCC
 status: active
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Observer Moduli Space — Execution Plan
 
 ## Objective

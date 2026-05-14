@@ -9,6 +9,9 @@ extension_files: [50_hmorse_sbm_results, 59_hmorse_sbm_summary]
 canonical_state_at_end: CV-1.16 SEALED unchanged (no canonical edits in this OP-HMORSE-SBM continuation)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 59 — OP-HMORSE-SBM Robustness Extension Summary
 
 ## Headline

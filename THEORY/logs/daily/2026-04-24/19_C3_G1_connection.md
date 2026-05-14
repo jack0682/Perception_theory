@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 19_C3_G1_connection.md — Formalization of C3-G1 Structural Connection
 
 **Session:** 2026-04-24 (late)

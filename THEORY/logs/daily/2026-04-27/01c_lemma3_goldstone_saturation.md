@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01c_lemma3_goldstone_saturation.md — Lemma 3 (σ-Framework, Goldstone–ℓ=1 Angular Saturation)
 
 > ⚠ **ERRATUM (2026-04-27 evening, post-merge re-review):** §2 statement (i) and §3.1 derivation give $\mathcal{P}_{\ell=1}[\delta u_x] = -m$ — this **value is wrong** by factor $r_0$. The W4-04-24 source `04_orbital_proofs.md` §3.3 had a Jacobian error in the IBP step that I inherited. Correct value: $\mathcal{P}_{\ell=1}[\delta u_x] = (-\pi \int_0^\infty u^*(r)\, dr,\ 0) \approx (-\pi r_0, 0)$ for tanh disk. **Canonical T-σ-Lemma-3 entry (canonical.md §13 line 1213) has been corrected with the right value + erratum note.** Qualitative content of the lemma (Goldstone basis saturates ℓ=1 angular sector) is unchanged. See `91_critical_review.md` §2 for full discussion.

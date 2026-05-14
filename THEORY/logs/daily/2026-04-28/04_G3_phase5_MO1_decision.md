@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_G3_phase5_MO1_decision.md — MO-1 Face Decision (W5 Strategic Plan §0.4 Decision 2)
 
 **Session:** 2026-04-28 (W5 Day 2 MODERATE, Block 3 14:30-15:30)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_rich_refinement_theorem.md — σ_rich is a Strict Refinement of σ_standard (Cat A target)
 
 **Status:** working draft (W5 Day 4 PM Wave 3 lead-side direct work, 2026-04-30).

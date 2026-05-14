@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 100_day2_carry.md — Day 2 (2026-04-28) Carry-Forward Notes
 
 **Session:** 2026-04-27 (W5 Day 1 close, late-night carry-forward authoring)

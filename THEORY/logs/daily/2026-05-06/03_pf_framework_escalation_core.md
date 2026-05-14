@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_pf_framework_escalation_core.md — P-F Framework Escalation Proposal
 
 **Session:** 2026-05-06 (W6 Day 3 G3.3, P1).

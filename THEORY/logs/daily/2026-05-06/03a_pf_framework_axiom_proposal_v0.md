@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03a_pf_framework_axiom_proposal_v0.md — P-F Framework Axiom Set v0
 
 **Session:** 2026-05-06 (W6 Day 3 G3.3, sub-file of `03_pf_framework_escalation_core.md`).

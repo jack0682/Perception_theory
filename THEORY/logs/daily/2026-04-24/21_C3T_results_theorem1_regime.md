@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 21_C3T_results_theorem1_regime.md — C3-T Torus Test + Theorem 1 Regime-Based Revision
 
 **Session:** 2026-04-24 (final evening, C3-T results)

@@ -3,6 +3,9 @@ type: working/afd
 status: AFD-0 Draft (2026-05-12)
 ---
 
+> [!nav] Linked: [[MOC_AFD_0_foundation]] · [[THEORY_INDEX]]
+
+
 # H-MORSE Reclassification: Layer 3 Regularity, Not Layer 2 Foundation
 
 **Formal claim.** `H-MORSE ∈ Layer 3.   H-MORSE ∉ Layer 2.`

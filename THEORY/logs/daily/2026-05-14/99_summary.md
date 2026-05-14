@@ -8,6 +8,9 @@ session_label: W7-Day5
 session_phases: [Morning: Track 1 CV-1.15 P7 promotion, Afternoon: Track 2 H-MORSE-Local Cat B working draft]
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 99 — Session Summary (2026-05-14)
 
 ## Headline

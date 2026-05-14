@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_NQ170c_graph_extension_nodal.md — V5b Graph-Class Extension + Nodal Count (W4 closing)
 
 **Session:** 2026-04-26 (W4 extended Day 8)

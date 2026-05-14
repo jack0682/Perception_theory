@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 29_paper_section4_full_prose.md — Paper §4 Complete Prose (with Phase 7 LSW revision)
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 7, R1.5+R1.6+R1.7+R1.8).

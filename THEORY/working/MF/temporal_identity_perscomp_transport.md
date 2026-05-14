@@ -16,6 +16,9 @@ related:
   - **temporal_identity_sharp_form_2026-05-07.md** (sharp-form successor; today's promotion target)
 ---
 
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
+
 > **Supersession note (2026-05-07 evening session):** This file remains as the Session V original draft. The promotion-target Cat B form is now in `temporal_identity_sharp_form_2026-05-07.md`, which incorporates: (i) sharp-form Sinkhorn dual-potential analysis improving $\varepsilon_\mathrm{OT}^*$ from ~0.05 to ~0.45; (ii) Lemma 6 (OP-0012-CC partial closure); (iii) Lemma 8 (NQ-T-Identity-5 closure — margin alone implies pairing); (iv) Lemmas 9–11 (OP-0011 Step 2 closure — kernel independence Cat C → Cat B); (v) refined hypothesis package (no postulated (A8) or (MA1)). Original Session V content below is preserved verbatim for history.
 
 

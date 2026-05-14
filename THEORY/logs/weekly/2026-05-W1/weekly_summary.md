@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Weekly Summary — W6 (2026-05-04 to 2026-05-08)
 
 **Period:** 2026-05-04 (Mon, Day 1) to 2026-05-08 (Fri, Day 5) — 5일 마감

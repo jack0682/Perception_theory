@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 17_post_C2_open_digest.md — Open Problem Consolidation Post-C2-Conquest
 
 **Session:** 2026-04-24 (late evening, C2 마무리 후)

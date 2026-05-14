@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # W7 Strategic Plan (2026-05-11 ~ 2026-05-17)
 
 **Created:** 2026-05-11

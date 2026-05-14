@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 14_NOP_J_lemma24_fisher_hessian.md — NOP-J Closure: Fisher Metric ↔ SCC Hessian Conformality
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening session

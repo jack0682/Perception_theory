@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06 — Open Problems and Residuals (Post-CV-1.13)
 
 This file distinguishes **blocking** from **non-blocking** open problems after CV-1.13 seal. The Cat A path for single-formation temporal identity is now complete; what remains is either non-blocking refinement or Phase 2 multi-formation/dynamics work.

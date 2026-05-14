@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W5 Day 2 (MODERATE → AGGRESSIVE-RECOVERED) Reflection
 
 **Session:** 2026-04-28 (W5 Day 2 close — extended)

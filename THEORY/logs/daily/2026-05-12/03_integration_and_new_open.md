@@ -6,6 +6,9 @@ canonical_version: CV-1.13 (NOT modified)
 session_label: W7-Day3
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 03 — Integration and New Open Problems
 
 **Session:** 2026-05-12

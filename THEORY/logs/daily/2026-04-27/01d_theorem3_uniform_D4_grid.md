@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01d_theorem3_uniform_D4_grid.md — Theorem 3 (σ at $u^* = c\mathbf{1}$ on $D_4$ Free-BC Grid)
 
 > ⚠ **ERRATUM (2026-04-27 evening, post-merge re-review):** §2(vi) parity-orbit table and §4 worked-example $L = 4$ table have two errors: (a) "$E \oplus E$" and "$A_1 \oplus B_1 \oplus E$" speculative entries for off-diagonal pairs were not derived from character calculation; correct values are $A_2 \oplus B_2$ (both odd, $p \neq q$) and $E$ (mixed parity). (b) $L = 4$ singlet $(1, 1)$ was listed as $A_1$ — correct $D_4$ character is $B_2$ for odd $p$. **Canonical T-σ-Theorem-3 entry (canonical.md §13 line 1239) has been corrected with rigorous character-table decomposition.** See `91_critical_review.md` §4 + §A.1 for the full Schur orthogonality calculation.

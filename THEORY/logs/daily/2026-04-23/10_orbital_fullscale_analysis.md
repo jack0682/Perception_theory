@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10 — Full-Scale Orbital Enumeration: Analysis of 32×32 Discovery Run
 
 **Session:** 2026-04-23 (continuation; user executed full-scale run per their request).

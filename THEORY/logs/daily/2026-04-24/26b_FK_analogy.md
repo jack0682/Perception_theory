@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 26b_FK_analogy.md — Frenkel-Kontorova Analogy: Deep Theoretical Background
 
 **Session:** 2026-04-24 (while deep dive running)

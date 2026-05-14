@@ -6,6 +6,9 @@ version: SCC-CT v0.1
 sealed: 2026-05-14
 ---
 
+> [!nav] Linked: [[MOC_SCC_CT_v0.1]] · [[THEORY_INDEX]]
+
+
 # II. Primitive Structure & III. Operator Triad
 
 # II. Primitive Structure

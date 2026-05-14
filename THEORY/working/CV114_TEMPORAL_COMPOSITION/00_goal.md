@@ -9,6 +9,9 @@ parent_op: OP-0012 (Persistence Composition)
 predecessor: THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md (Lemma 6, Cat B sketch)
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 00. 목표 및 범위 — OP-0012-CC-StableK
 
 ## 핵심 목표

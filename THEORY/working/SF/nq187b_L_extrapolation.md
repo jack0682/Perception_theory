@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # nq187b_L_extrapolation.md — NQ-187b: Discrete-Grid $A_2/A_1$ Evaluation as Function of L
 
 **Status:** working draft (W5 Day 4 PM, Task #62).

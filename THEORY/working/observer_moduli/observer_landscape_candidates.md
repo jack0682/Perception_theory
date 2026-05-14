@@ -6,6 +6,9 @@ project: Observer Moduli Space of SCC
 attacks: OP-OMS-002
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Observer Landscape Candidates — OMS-0.2
 
 Every statement classified: **DEFINED** | **PROVED** | **ASSUMED** | **HYPOTHESIZED** | **COMPUTATIONALLY TESTABLE** | **OPEN** | **REJECTED**.

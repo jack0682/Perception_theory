@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 09_session_self_critique.md — Day 3 Session Critical Self-Review
 
 **Session:** 2026-04-29 (W5 Day 3 — meta-review of Day 3 deliverables)

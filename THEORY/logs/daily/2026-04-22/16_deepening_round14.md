@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 16 — Round 14: Conjecture 2.1 Analytical Cross-Checks + Validation Protocol
 
 **Session:** 2026-04-22 (Round 14, multi-formation)

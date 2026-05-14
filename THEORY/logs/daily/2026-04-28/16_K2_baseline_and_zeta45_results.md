@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 16_K2_baseline_and_zeta45_results.md — E9 K=2 Baseline + E10 ζ=0.45 Numerical Results
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E9 + E10 integrated analysis).

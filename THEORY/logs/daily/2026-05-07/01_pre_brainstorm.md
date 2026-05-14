@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_pre_brainstorm.md — W6 D5 Pre-Brainstorm
 
 **Date:** 2026-05-07 (Thu, W6 Day 5)

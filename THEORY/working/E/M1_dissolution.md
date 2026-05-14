@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # M-1 Dissolution — Isoperimetric Feature + Kramers Metastability (G5)
 
 **Status:** working (preliminary mapping draft, 2026-04-21)

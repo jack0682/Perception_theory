@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 26_paper_section4_prose.md — Paper §4 σ-framework Section: Actual Prose Draft
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 6, Q4).

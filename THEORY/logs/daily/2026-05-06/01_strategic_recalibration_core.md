@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_strategic_recalibration_core.md — W6 Day 3 Strategic Recalibration Anchor
 
 **Session:** 2026-05-06 (W6 Day 3, redirection mode v3).

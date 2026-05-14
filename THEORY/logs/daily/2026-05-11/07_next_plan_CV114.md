@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07 — Next Plan: CV-1.14 Candidate
 
 > The recommended next target is **H-MORSE / Package II Entry Audit**.

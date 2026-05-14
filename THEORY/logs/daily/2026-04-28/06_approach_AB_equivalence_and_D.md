@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_approach_AB_equivalence_and_D.md — A ≡ B Equivalence + Genuine Approach D
 
 **Session:** 2026-04-28 (W5 Day 2, Option γ per self-critique).

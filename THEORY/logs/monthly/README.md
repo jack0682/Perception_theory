@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # logs/monthly/ — 월간 통합 Summary
 
 **Purpose.** 해당 월의 weekly_summary.md 들을 기반으로 **macro-view + long-arc narrative** 제공. Canonical 의 직접 merge 대상은 아니며, cross-week theme, turning point, meta-lesson 을 정리하는 retrospective layer.

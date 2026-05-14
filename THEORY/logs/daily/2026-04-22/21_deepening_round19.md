@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 21 — Deepening Round 19: c=0.7 (Regime III) Numerical Validation
 
 **Session continuation:** 2026-04-22 evening (post-R18, user-executed Option N1.1)

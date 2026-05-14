@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10 — Critical Self-Review of 6 Rounds (Honest Critique, No New Cat A)
 
 **Session:** 2026-04-21 (post-Round 6 saturation, user requested further analysis)

@@ -6,6 +6,9 @@ canonical_version: CV-1.13 (sealed, untouched)
 prerequisite: 01_pre_brainstorm.md 읽기 (또는 사용자 직접 결정)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 00 — Plan (2026-05-14)
 
 ## Context

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 07_external_references_gauge_extension.md — Gauge Theory + Categorification + YM Mass Gap + Quantum Simulator References: Batch Verification
 
 **Date**: 2026-04-30 (W5 Day 4, post-EOD extension)

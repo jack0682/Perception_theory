@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 03_canonical_proposal_v5b_t_update.md — Canonical Proposal Package (TEXT-PENDING)
 
 **Session:** 2026-04-28 (W5 Day 2 MODERATE, Block 2)

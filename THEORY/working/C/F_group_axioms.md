@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # F-Group Axioms — Thermal SCC Foundation (G2)
 
 **Status:** working (F1–F2 commit + Cat A; F3 **Cat A on Σ_m^ε** per Round 3 verification; F4 statement draft, 2026-04-21)

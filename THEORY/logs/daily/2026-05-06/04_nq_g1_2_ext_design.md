@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_nq_g1_2_ext_design.md — NQ-G1-2-ext: Production Reach Measurement Design
 
 **Session:** 2026-05-06 (W6 Day 3 G3.4, P1).

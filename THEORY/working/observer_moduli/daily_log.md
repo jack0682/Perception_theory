@@ -3,6 +3,9 @@ type: working/daily-log
 project: Observer Moduli Space of SCC
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Daily Log — Observer Moduli Space
 
 ---

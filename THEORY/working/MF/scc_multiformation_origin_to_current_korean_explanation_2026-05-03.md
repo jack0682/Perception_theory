@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # SCC / Multi-Formation 이론 전체 해설  
 ## 무엇으로부터 시작했고, 어떤 과정을 거쳐, 지금 무엇이 증명되었는가
 

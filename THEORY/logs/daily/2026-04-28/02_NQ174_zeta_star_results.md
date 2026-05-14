@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_NQ174_zeta_star_results.md — ζ_*(graph) Precise Results: **ζ_*(2D torus, c=0.10) ≈ 0.40; ζ_*(1D cycle, c=0.10) > 0.15**
 
 **Session:** 2026-04-28 (W5 Day 2 — initial DEFERRED status overturned by EOD numerical run with monkey-patch).

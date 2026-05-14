@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_NQ173_v5b_f_results.md — V5b-F Partial Goldstone Characterization (skeleton + a priori predictions)
 
 **Session:** 2026-04-27 (W5 Day 1, G1 Block 4)

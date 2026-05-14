@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # MAIN AGENT PROMPT — SCC Daily Research Session
 
 > **How to use (user-facing meta).**

@@ -8,6 +8,9 @@ scope: OP-0012-CC-StableK — 정의 패키지
 source: temporal_identity_sharp_form_2026-05-07.md, S-B3_kernel_independence.md, canonical.md §§3,7,8.5
 ---
 
+> [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 01. 정의 패키지 — OP-0012-CC-StableK
 
 모든 정의는 CV-1.13 canonical.md 및 temporal_identity_sharp_form_2026-05-07.md에서 복원함.

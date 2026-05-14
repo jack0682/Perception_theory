@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 05_nq244_launch_note.md — Theorem 4.6.1 Label Hygiene + NQ-244 Background Launch Spec
 
 **Session:** 2026-05-01 (W5 Day 5)

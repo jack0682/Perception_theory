@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_sigma_rich_framework]] · [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # sigma_fingerprint_qrcode.md — σ-Fingerprint Algorithm Specification (Bridge B-4 NQ-264)
 
 **Status:** working draft (W5 Day 4 PM Wave 3 lead-side direct work, 2026-04-30).

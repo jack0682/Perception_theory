@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 11_NOP_B_sigma_lipschitz_development.md — σ_rich Lipschitz Constant (NOP-B / OP-0008-DIST) Multi-Tool Development
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended late-evening session

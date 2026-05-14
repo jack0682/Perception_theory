@@ -6,6 +6,9 @@ created: 2026-05-12
 scope: exp89_endpoint_vs_action_temporal_cost.py
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 06. 실험 계획 — exp89_endpoint_vs_action_temporal_cost.py
 
 ---

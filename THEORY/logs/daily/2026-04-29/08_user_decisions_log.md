@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 08_user_decisions_log.md — Day 3 User-Decision Log (D-5/D-6b/D-7)
 
 **Session:** 2026-04-29 (W5 Day 3 — user-decision execution log post-deepening)

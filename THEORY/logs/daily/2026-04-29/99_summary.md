@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W5 Day 3 (MODERATE-CONSOLIDATION) Reflection
 
 **Session:** 2026-04-29 (W5 Day 3 close)

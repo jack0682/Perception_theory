@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W5 Day 1 Summary (2026-04-27)
 
 **Session:** W5 Day 1 AGGRESSIVE marathon launch

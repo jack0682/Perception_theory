@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_Q1_boundary_T8]] · [[INDEX|working/INDEX.md]] · [[THEORY_INDEX]]
+
 # MO-1 Dissolution — Corner Removal + Witten Laplacian + Fokker-Planck (G6)
 
 **Status:** working (preliminary mapping draft, 2026-04-21)

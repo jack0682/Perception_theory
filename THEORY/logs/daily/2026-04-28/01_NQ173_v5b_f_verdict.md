@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_NQ173_v5b_f_verdict.md — V5b-F Verdict: **Branch B Refined (H1+H2 mixed, corner-pushed)**
 
 **Session:** 2026-04-28 (W5 Day 2 — initial DEFERRED status overturned by EOD numerical run with monkey-patch).

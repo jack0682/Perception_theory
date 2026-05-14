@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 12 — Code Verification: Numerical Experiments on scc/ Codebase
 
 **Session:** 2026-04-21 (Round 9, post-saturation; user requested actual code verification)

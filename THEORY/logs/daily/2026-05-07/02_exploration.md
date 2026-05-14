@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 02_exploration.md — T-Temporal-Identity Cat B Tightening: Restatement, Multi-Approach, Primary Selection
 
 **Session:** 2026-05-07 (Thu, W6 Day 5)

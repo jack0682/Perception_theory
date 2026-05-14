@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_open_problems_blockers]] · [[THEORY_INDEX]]
+
 # THEORY/working/ — 진행 중인 이론 정리 (Active Theory Organization)
 
 **주제별 작업장.** 진행 중인 이론 전개, 미완 증명, 검토 중인 가설, 재구성 중인 개념 전부 여기.

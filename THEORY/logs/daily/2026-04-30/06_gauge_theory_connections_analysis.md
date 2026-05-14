@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06_gauge_theory_connections_analysis.md — 게이지 이론 (2024-2026) ↔ SCC Multi-Formation 정밀 연결 분석
 
 **Source:** 사용자 제공 "최신 게이지 이론 연구 동향 보고서 (2024-2026)" 2026-04-30 W5 Day 4 EOD.

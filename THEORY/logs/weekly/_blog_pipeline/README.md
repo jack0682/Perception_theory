@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Blog Pipeline — Weekly Summary 발행 절차
 
 **위치**: `THEORY/logs/weekly/_blog_pipeline/` (weekly 코호트와 동일 레벨, leading underscore 로 분리)

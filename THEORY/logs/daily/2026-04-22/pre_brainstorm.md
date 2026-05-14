@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # Pre-Brainstorm — 2026-04-22 SF-S1 Hypothesis Map
 
 **Written:** 2026-04-21 저녁 (post Round 12-18, SF-S1 plan 확정 직후).

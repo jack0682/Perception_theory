@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W6 D5 Session Summary
 
 **Date:** 2026-05-07 (Thu, W6 Day 5)

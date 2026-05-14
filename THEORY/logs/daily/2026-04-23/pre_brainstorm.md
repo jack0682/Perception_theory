@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # pre_brainstorm.md — 2026-04-23 Session Pre-brainstorm
 
 **Purpose:** Open-ended mathematical hypothesis exploration before plan execution.

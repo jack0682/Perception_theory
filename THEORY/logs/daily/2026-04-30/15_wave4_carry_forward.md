@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 15_wave4_carry_forward.md — Wave 4 Carry-Forward to Day 5+
 
 **Session:** 2026-04-30 (W5 Day 4 EOD) — Wave 3 native team session 종료 시점에서 Day 5 morning Wave 4로 이행할 carry-forward 항목 정리.

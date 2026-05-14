@@ -4,6 +4,9 @@ created: 2026-05-08
 session: Session 7 (proof closure + canonical promotion)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Proof-Promotion Reading Log
 
 State at session start: **OMS-2.0 Conditional Accepted** with three sub-OPs.

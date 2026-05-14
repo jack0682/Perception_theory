@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-9 — Non-trivial V Basin Test Summary
 
 **Date:** 2026-05-08  

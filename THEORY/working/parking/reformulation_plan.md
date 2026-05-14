@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # Reformulation Plan — C+E Cycle Active
 
 **Status:** **Stage 0 locked (2026-04-20)** — Purpose = **C+E (Thermal Framework + Emergent-K)**. Stage 1 이 2026-04-21 진입 예정.

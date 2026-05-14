@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — W6 Day 3 EOD Summary
 
 **Session:** 2026-05-06 (W6 Day 3, "Redirection Mode v3").

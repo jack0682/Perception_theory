@@ -6,6 +6,9 @@ canonical_version: CV-1.13 (read-only)
 session_label: W7-Day3 (single-target deep-dev branch)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 01 — Exploration: OP-AFD-003 Infimum Attainment
 
 **Session:** 2026-05-12

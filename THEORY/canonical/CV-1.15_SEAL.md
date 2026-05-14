@@ -7,6 +7,14 @@ session: W7-Day5
 status: SEALED
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
+> Records: Action-based temporal succession package (+8A, +2B)
+> Promoted from: [[MOC_action_temporal_cost]]
+> Predecessor: [[CV-1.13_SEAL]]
+> Superseded by: [[CV-1.16_SEAL]]
+> Status: SEALED 2026-05-14 morning (historical record)
+
 # CV-1.15 Seal Document
 
 **Canonical Version:** CV-1.15

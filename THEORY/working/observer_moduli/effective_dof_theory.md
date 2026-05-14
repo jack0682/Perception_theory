@@ -7,6 +7,9 @@ stage: OMS-1.1 → OMS-1.2 candidate
 attacks: OP-OMS-005, OP-OMS-016
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # Effective Degrees of Freedom — Theory
 
 Foundation for VP-6. States the formal definitions of "dimension" relevant to

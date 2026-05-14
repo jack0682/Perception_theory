@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 06 — Deepening Round 4: $\Phi_4$ on Non-D4 Graph Classes
 
 **Session:** 2026-04-22 (Round 4 continuation after Round 3)

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # VP-1 P-Resolution Audit — Results Summary
 
 **Date:** 2026-05-07

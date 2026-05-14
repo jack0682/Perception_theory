@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # Layered Ambient-State Architecture — Next Work Packages
 
 **File:** `THEORY/working/MF/layered_ambient_architecture_next_work.md`

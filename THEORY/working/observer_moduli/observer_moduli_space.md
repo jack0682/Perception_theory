@@ -7,6 +7,9 @@ version: OMS-0.7
 depends_on: definitions.md, toy_models.md, open_problems.md, audit_log.md, readout_map_audit.md, observer_landscape_candidates.md, basin_stratification.md, core_weight_symmetry.md, latent_symmetry.md, rg_relevance_flow.md, stratified_dynamics.md
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # SCC Observer Moduli Space
 
 **Version OMS-0.7 — Working Document**

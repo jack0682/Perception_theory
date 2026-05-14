@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
 # New Open Questions from 2026-04-20 Stage 0 Session
 
 **Status:** exploring

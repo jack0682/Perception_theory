@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 01_canonical_promotion_queue_review.md — Day 3 User Decision Queue (D-1..D-6b)
 
 **Session:** 2026-04-29 (W5 Day 3, Block 1)

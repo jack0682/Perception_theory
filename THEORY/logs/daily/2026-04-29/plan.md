@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # plan.md — 2026-04-29 (W5 Day 3, MODERATE-CONSOLIDATION: Canonical Promotion + Paper Integration)
 
 **Session type:** W5 Day 3 — *consolidation day* after Day 2's 10-elevation-cycle expansion. Day 2 produced **38 daily files, 246 numerical attempts, 57 NQ spawns, 0 canonical edits, 5 user-decision proposals pending**. Day 3 promotes mature Phase 1-10 results to canonical + integrates Paper §4 + processes user-decision queue.

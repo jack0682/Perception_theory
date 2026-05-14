@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # single_high_F_equivalence.md — OAT-7: Single-Formation High-F ↔ K-Field Empirical Equivalence + Tool A3 PH Classification
 
 **OAT task:** OAT-7

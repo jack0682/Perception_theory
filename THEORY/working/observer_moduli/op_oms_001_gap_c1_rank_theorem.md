@@ -7,6 +7,9 @@ attacks: OP-OMS-001 Gap C1
 status: PROVED (conditional on the three explicit hypotheses H1–H3)
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-001 Gap C1 — Rank Obstruction Theorem
 
 The "Gap C1" of `op_oms_001_formal_proof_attempt.md` §4 is the algebraic

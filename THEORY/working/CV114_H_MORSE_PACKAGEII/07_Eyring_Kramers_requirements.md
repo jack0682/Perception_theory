@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_H_MORSE_packageII]] · [[MOC_Q3_stochastic_dynamics]] · [[THEORY_INDEX]]
+
 # 07 — Eyring-Kramers Requirements
 
 Agent E (Package II Mapper). Six EK variants compared against SCC structure; compatibility analysis.

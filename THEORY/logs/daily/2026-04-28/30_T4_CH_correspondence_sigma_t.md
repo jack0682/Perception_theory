@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 30_T4_CH_correspondence_sigma_t.md — Phase 8 T4: NQ-227 Cahn-Hilliard + NQ-228 Time-Varying σ_multi^A
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 8, T4).

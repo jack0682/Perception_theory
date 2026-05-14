@@ -4,6 +4,13 @@ created: 2026-05-07
 last_updated: 2026-05-07
 ---
 
+> [!nav] Theory Navigation
+> Parent: [[THEORY_INDEX]]
+> Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]] · [[MOC_sigma_rich_framework]]
+> Vertical: [[MOC_H_MORSE_packageII]] · [[MOC_action_temporal_cost]] · [[MOC_temporal_composition]] · [[MOC_observer_moduli_OMS]] · [[MOC_AFD_0_foundation]] · [[MOC_temporal_audit_W7]]
+> Ops: [[MOC_open_problems_blockers]] · [[MOC_experiments_validation]] · [[MOC_research_journal]] · [[MOC_parked_superseded]]
+> Status: Active — promotion source for CV-1.16+
+
 # working/ — Navigation Index
 
 Active theory development files, organized by the 6 perceptual questions from `canonical/hypothesis_tree.md` (HT-3.0). Files in `parking/` are stale and not listed here.

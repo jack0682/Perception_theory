@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # NQ-242c Counterexample Protocol — σ-standard Incompleteness Test (WQ-1)
 
 **File:** `THEORY/working/MF/nq242c_counterexample_protocol.md`

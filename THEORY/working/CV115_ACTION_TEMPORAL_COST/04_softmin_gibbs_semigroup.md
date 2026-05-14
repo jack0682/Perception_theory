@@ -7,6 +7,9 @@ scope: Gibbs kernel 정의, T-ACT-GIBBS, soft-min recursion,
        L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO
 ---
 
+> [!nav] Linked: [[MOC_action_temporal_cost]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
+
+
 # 04. Soft-Min / Gibbs Kernel Semigroup
 
 ---

@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_C2_phase3_user_scripts.md — Phase 3 Heavy Numerical: User Execution Protocol
 
 **Session:** 2026-04-24 (evening)

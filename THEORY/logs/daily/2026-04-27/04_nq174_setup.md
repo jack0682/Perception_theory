@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 04_nq174_setup.md — G2 NQ-174 ζ_*(graph) Precise Script Setup (Day 2 Morning Run)
 
 **Session:** 2026-04-27 (W5 Day 1, G2 Block 5)

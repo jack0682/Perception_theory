@@ -1,3 +1,5 @@
+> [!nav] Linked: [[INDEX|working/INDEX.md]] · [[MOC_Q4_K_selection]] · [[MOC_sigma_rich_framework]] · [[THEORY_INDEX]]
+
 # L1-H2: Boundary-Leakage Proof for Local-to-Global Barcode Transfer
 
 **File:** `THEORY/working/MF/kbar_kact_bridge_L1H2_boundary_leakage.md`

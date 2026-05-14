@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_experiments_validation]] · [[THEORY_INDEX]]
+
 # exp02c: Smooth-Barrier Full-Energy Summary
 ## T-ST-5b Claim: ΔE_smooth > ΔE_flat, increasing in Δz and λ_z
 

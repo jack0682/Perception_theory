@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 23_NQ214_to_NQ218_resolutions.md — Phase 5 P2: NQ-214 through NQ-218 Resolutions
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 5, P2.1-P2.5).

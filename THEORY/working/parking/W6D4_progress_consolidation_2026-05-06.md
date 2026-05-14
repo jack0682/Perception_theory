@@ -7,6 +7,9 @@ session: Progress Consolidation Session (post-S)
 scope: W6 D4 Sessions A–S, CV-1.6 → CV-1.10
 ---
 
+> [!nav] Linked: [[MOC_parked_superseded]] · [[THEORY_INDEX]]  — SUPERSEDED (cite 금지)
+
+
 # W6 D4 Progress Consolidation — SCC Theory
 **Date:** 2026-05-06 (W6 Day 4)
 **Scope:** Sessions A–S (CV-1.6 through CV-1.10)

@@ -5,6 +5,9 @@ project: Observer Moduli Space (OMS) of SCC
 sessions: Session 4 (carry-over) → Session 5 → Session 5 cont. → Session 6 (OMS-2.0 push)
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 2026-05-08 Plan
 
 ## Carry-forward state at day-start

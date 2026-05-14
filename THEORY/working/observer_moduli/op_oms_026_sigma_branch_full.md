@@ -7,6 +7,9 @@ attacks: OP-OMS-026 — full Σ_branch on Δ³
 status: PROVED — codim-1 theorem; PROOF SKETCH for degeneracy locus
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # OP-OMS-026 — Full Σ_branch Theory on Δ³
 
 OP-OMS-026 asks for an analytic characterization of the branch-switching

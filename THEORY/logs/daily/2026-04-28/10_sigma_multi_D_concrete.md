@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 10_sigma_multi_D_concrete.md — σ_multi^(D) Concrete Computation: T²_{20} K=2 d=8
 
 **Session:** 2026-04-28 (W5 Day 2 Phase 3, E2).

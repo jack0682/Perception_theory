@@ -7,6 +7,9 @@ experiment: exp86_vp1_p_resolution_audit.py
 op_target: OP-OMS-009
 ---
 
+> [!nav] Linked: [[MOC_observer_moduli_OMS]] · [[THEORY_INDEX]]
+
+
 # VP-1 Counterexample Catalog
 
 Documented counterexamples showing P_min = (Bind, Sep, Inside, Persist) is too coarse to

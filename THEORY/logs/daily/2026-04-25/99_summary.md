@@ -1,3 +1,5 @@
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
 # 99_summary.md — Session Summary 2026-04-25
 
 **Session type:** W4 Weekly Close (G0) + NQ-168 Goldstone Commensurability (G1) + σ-Framework Numerical (G2) + G3 Decision

@@ -8,6 +8,9 @@ status: verification + framing correction
 remote_session_ref: https://claude.ai/code/session_01R5piPpBpftqvKNNDGD91T1
 ---
 
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]]
+
+
 # 30 — Remote-ultraplan Verification and AFD-T5 Statement Framing Correction
 
 **Session:** 2026-05-12 (third pass: reconciling this-session output with a parallel remote-ultraplan investigation)
