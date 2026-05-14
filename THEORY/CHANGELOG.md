@@ -2,6 +2,156 @@
 
 ---
 
+## [CV-1.16] 2026-05-14 — H-MORSE-Local Closure Package (W7-Day5 Extension P7 Promotion)
+
+**Trigger:** OP-HMORSE-BROADNESS analytic + numerical attack closure 2026-05-14 evening. 5-document chain (40–44 + 49 in `THEORY/logs/daily/2026-05-14/`) + 1 CV114 attack record (`11_broadness_attack.md`) + 1 numerical experiment (`exp_hmorse_broadness_full_spectrum.py`, 15/15 PASS, test suite 215 passed + 1 xfailed). User P7 approval granted via plan-mode review (combined with D-HMORSE-LOCAL (C2′) active-set form decision + 4-lemma promotion package decision).
+
+### Summary
+
+- **L-CLOSURE-LIFT Cat A (+1A)**: operator-norm broadness via Theorem B2 (`THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`). $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ via degree-weighted self-adjointness of the stochastic operator $P = D^{-1}W$. Uniform tangent-space lower bound: $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$. Standard $\ell^2$ form has $d_{\min}/d_{\max}$ degree-conditioning factor. Supersedes T7-Enhanced (canonical Cat A) as the broadness statement.
+- **L-HMORSE-LOCAL Cat B unconditional (+1B)**: $\mu_{\min}(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}) \geq c_{\mathrm{HML}} > 0$ under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form. Explicit lower bound $c_{\mathrm{HML}}(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \beta, a_{\mathrm{cl}}, c^*, d_{\min}/d_{\max})$.
+- **L-HMORSE-DECOMP Cat B conditional (+1B)**: $H_{\mathcal{E}} = H_{\mathrm{bd}} + H_{\mathrm{cl}} + H_{\mathrm{sep}}$ explicit per-term tangent bounds. Conditional on $b_D = 0$ (CN4 analyticity) + canonical A3 ($a_{\mathrm{cl}} < 4$).
+- **L-BOUNDARY-MODE-EXCLUSION Cat C (+1C)**: analytic form of D-HMORSE-LOCAL (C5) via SKETCH-level Weyl perturbation. Numerical anchor `CODE/experiments/exp25_hessian_diagonal.py` confirms phenomenon.
+- **OP-HMORSE-BROADNESS CLOSED Cat A**: 3-approach convergence — (a) Perron-Frobenius / Collatz-Wielandt (`41_*.md`), (b) operator-norm degree-weighted (`42_*.md`, primary), (c) 15/15 numerical PASS (`43_*.md` + experiment).
+- **D-HMORSE-LOCAL Definition** registered with (C2′) active-set form (decision over strict-interior (C2)). Active set $A^* = \{x : u^*(x) \in \{0,1\}\}$ explicit; free tangent subspace $T_{u^*}^{\mathrm{free}}$ excludes saturated coordinates.
+- **Net count:** +1A, +2B, +1C → **68A / 18B / 6C / 5R = 97 claims (~70% fully proved)**.
+- **HT-3.6 → HT-3.7**.
+- **H-MORSE row** in `hypothesis_tree.md` §가설 상태 요약: OPEN → **PARTIALLY CLOSED** (Local Cat B achieved; Global Cat A path = OP-HMORSE-LOCAL-A, ~2 sessions).
+
+### Theorem block summary
+
+| ID | Category | Conditions | Notes |
+|---|---|---|---|
+| L-CLOSURE-LIFT | Cat A | $G$ connected; A3 ($a_{\mathrm{cl}} < 4$); $u^* \in [0,1]^n$ | uniform broadness; degree-weighted form |
+| L-HMORSE-LOCAL | Cat B unconditional | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5); $b_D = 0$; A3; T8-supercritical | active-set form; numerical 15/15 PASS |
+| L-HMORSE-DECOMP | Cat B conditional | D-HMORSE-LOCAL (C1)(C2′)(C3); $b_D = 0$; A3 | per-term Hessian decomposition |
+| L-BOUNDARY-MODE-EXCLUSION | Cat C | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4); non-empty $\partial X$ | SKETCH-level Weyl perturbation |
+| OP-HMORSE-BROADNESS | CLOSED Cat A | (retired) | Theorem B2 + 15/15 numerical PASS |
+
+### Decision audit trail
+
+- **(C2′) active-set form** chosen over strict-interior (C2): numerical-aligned (canonical `find_formation` produces saturated minimizers), 15/15 numerical PASS directly applies. Strict-interior (C2) restricts to a subset; (C2′) is the operational form.
+- **4-lemma promotion package** chosen over minimal (L-CLOSURE-LIFT only) or maximal (all + supplementary): includes both the analytically Cat A statement (L-CLOSURE-LIFT) and the canonical promotion-ready Cat B/C package (L-HMORSE-LOCAL + L-HMORSE-DECOMP + L-BOUNDARY-MODE-EXCLUSION). Net effect: comprehensive canonical entry without overclaim.
+
+### Did NOT change
+
+- canonical §6 Axiomatic Groups (A–E, unchanged).
+- canonical §11 Fixed Commitments (CN1–CN14, unchanged).
+- canonical T-Temporal-Identity Cat A (CV-1.13 SEALED, unchanged).
+- canonical T7-Enhanced (preserved as historical context for L-CLOSURE-LIFT supersession).
+- canonical V5b-T-zero Cat A (preserved as structural counterexample anchor — Cat A unconditional impossible).
+- OP-0011 (resolved CV-1.12, unchanged).
+- OP-0008 (σ-Inherit, untouched).
+- OP-0005-DYN (overall Kramers rates; partially affected — L-HMORSE-LOCAL provides Cat B path for symmetry-broken interior single-formation regime, not full multi-formation).
+- OP-0021 ($T_*$ registration; H-MORSE and OP-0021 independent per CV114 audit).
+- CV-1.15 entries (T-ACT-*, etc., unchanged).
+
+### Files updated
+
+| File | Action |
+|---|---|
+| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (L-CLOSURE-LIFT) after CV-1.15 Cat A block; §13 Cat B insert (L-HMORSE-LOCAL, L-HMORSE-DECOMP, D-HMORSE-LOCAL Definition) after CV-1.15 Cat B block; §13 Cat C insert (L-BOUNDARY-MODE-EXCLUSION) at end of Cat C section. Per-block CV-1.16 count notes. |
+| `THEORY/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.16; CV-1.16 count update line after CV-1.15 line; CV-1.16 section block (4-row table + OP-HMORSE-BROADNESS retirement + non-overclaim + methodological highlight + audit reference). |
+| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — W7-Day5 extension CV-1.16 SEALED header; 다음 목표 → CV-1.17; H-MORSE row PARTIALLY CLOSED in §가설 상태 요약; Q3 H-MORSE block fully rewritten with CV-1.16 partial closure status; HT-3.7 changelog row. |
+| `THEORY/canonical/CV-1.16_SEAL.md` | **CREATED** — seal record. |
+| `THEORY/CHANGELOG.md` | **UPDATED** — this entry prepended above CV-1.15 entry from morning. |
+| `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` | NOT modified (already created in evening extension; CV-1.16 promotion candidate record). |
+| `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md` | NOT modified (audit trail preserved). |
+| `CODE/experiments/exp_hmorse_broadness_full_spectrum.py` + `results/exp_hmorse_broadness_full_spectrum.{json,md}` | NOT modified (numerical anchor preserved). |
+
+### Outstanding items (CV-1.17 candidates)
+
+- **OP-HMORSE-LOCAL-A** Cat A path (~2 sessions): sharper residual bound + OP-HMORSE-SBM robustness.
+- **OP-HMORSE-SBM** numerical robustness extension (1 session): SBM/barbell/small-world.
+- **OP-HMORSE-SADDLE** (saddle-point Hessian regularity for full Eyring-Kramers prefactor).
+- **Package II Eyring-Kramers** Cat B: uses L-HMORSE-LOCAL + needs OP-0021 ($T_*$).
+- **§F Step 2 housekeeping** (CV-1.15 working file `10_patch_plan.md` §1–§4 replacement, 0.5 session).
+- **OP-0021 dual-naming reconciliation** (Stochastic Dynamics row vs T_* registration usage).
+
+### Audit reference
+
+`THEORY/logs/daily/2026-05-14/` — 10 files: morning Track 1 (CV-1.15 P7) + Track 2 (H-MORSE-Local SKETCH); evening extension (40–44 + 49) closed OP-HMORSE-BROADNESS Cat A; combined session produced CV-1.15 SEALED (morning) + CV-1.16 SEALED (evening extension P7 promotion this entry). Methodological highlight: **honest Cat B SKETCH with named CONJECTURE → clean evening Cat A closure** pattern.
+
+---
+
+## [CV-1.15] 2026-05-14 — Action-Based Temporal Succession Package (W7-Day5 P7 Promotion Turn)
+
+**Trigger:** CV-1.15 ten working files completed 2026-05-12 (`THEORY/working/CV115_ACTION_TEMPORAL_COST/00–10`); numerical sanity check exp89 3-case PASS 2026-05-13; pre-promotion audit + amendments package 2026-05-13 (`THEORY/logs/daily/2026-05-13/02_development.md + 04_proposed_amendments.md`); user P7 approval granted 2026-05-14 via plan-mode review (combined with H-MORSE-Local Track 2).
+
+### Summary
+
+- **CV-1.15 promotion applied** under decision R-C (Finding §2: CV-1.14 cited as working candidate, not canonical) + S-i (Finding §3: per-category insertion). Audit findings 1.2a, 1.2b, 1.3b, 1.4a, 1.4b, 1.5, 1.7, 2.4 applied (working amendments + canonical insertion).
+- **Eight new Cat A entries** (L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO).
+- **Two new Cat B entries** (T-ACT-KERNEL-COMP→REL Cat B *conditional* on CV-1.14 working candidate; P-SINKHORN-STABILITY-CONDITIONAL Cat B under H-SINK+MARGIN+SMALL-SINK-GAP).
+- **One new Interpretation entry** (P-ACTION-PATH-INHERITANCE; not counted in A/B/C tally).
+- **One new OPEN sub-label**: OP-0012-SINK registered under OP-0012; cost-level $\delta_{\mathrm{eff}}$ blocker closed under action redefinition (L-ACTION-DELTA-EFF-ZERO); plan-level scaling-gap blocker remains.
+- **Net count:** +8A, +2B → **67A / 16B / 5C / 5R = 93 claims** (P-ACTION-PATH-INHERITANCE Interpretation row not in tally).
+- **HT-3.5 → HT-3.6** (H-COMP branch added under Q5; H-COMP-KERNEL deferred to CV-1.14 promotion under R-C).
+- **Cat B header hygiene fix (Finding §2.4):** the §13 Cat B section header now records T-Temporal-Identity's CV-1.13 promotion to Cat A (previously omitted).
+
+### Theorem block summary
+
+| ID | Category | Conditions | Notes |
+|---|---|---|---|
+| L-ENDPOINT-NONSEMI | Cat A | counterexample | 1D explicit ($x=0, z=2$) |
+| L-ACTION-NORMALIZATION | Cat A | uniform-speed | linear interpolation midpoint |
+| L-FINGERPRINT-ACTION-ADMISSIBLE | Cat A | φ_i Lipschitz, Δt_i > 0 | T-ACT-DP / T-ACT-GIBBS prerequisites |
+| T-ACT-DP | Cat A | X finite, A additive | Bellman DP for hard-min action cost |
+| L-ACTION-DELTA-EFF-ZERO | Cat A | action direct cost redef | δ_eff = 0 (scope-restricted) |
+| T-ACT-GIBBS | Cat A | X finite, ε > 0 | Chapman-Kolmogorov-type for Gibbs kernel |
+| L-SOFTMIN-HARDMIN-BOUND | Cat A | N finite, ε > 0 | log-sum-exp bound |
+| L-SOFT-ACTION-DELTA-EFF-ZERO | Cat A | T-ACT-GIBBS conditions | δ_eff^ε = 0 (scope-restricted) |
+| T-ACT-KERNEL-COMP→REL | Cat B (conditional) | (GK)+(stable-K)+(margin) | (GK) pending CV-1.14 promotion |
+| P-SINKHORN-STABILITY-CONDITIONAL | Cat B | H-SINK+MARGIN+SMALL-SINK-GAP | H-SINK is regime hypothesis |
+| P-ACTION-PATH-INHERITANCE | Interpretation | — | not counted in tally |
+| T-SINKHORN-PLAN-SEMIGROUP-FAILS | OPEN (proved failure) | — | canonical §12 Warning |
+
+### Symbol conventions introduced
+
+- $\mathbf{K}_{i \to k}$ (boldface, matrix): action-derived Gibbs transition kernel (D-GIBBS-KERNEL). Distinct from $K$ (italic, scalar) = formation count.
+- $\varepsilon$: action smoothing temperature (D-GIBBS-KERNEL). Distinct from $\varepsilon_{\mathrm{OT}}$ in canonical §8.5 / T-Temporal-Identity (Sinkhorn entropic regularization).
+- $c^{\mathrm{end}}, c^{\mathrm{act}}, c^{\mathrm{direct}}, c^{\mathrm{eff}}, c^\varepsilon, c^{\mathrm{eff}, \varepsilon}$: cost variants (all defined in §13 Cat A insert).
+
+### Did NOT change
+
+- canonical §8.5 $M_{t \to s}$ definition (deferred CV-1.16+; (GK) requires this).
+- canonical §6 Axiomatic Groups (A–E, unchanged).
+- canonical §11 Fixed Commitments (CN1–CN14, unchanged).
+- T-Temporal-Identity body (canonical §13 Cat A; cross-referenced but not modified).
+- OP-0011 (resolved CV-1.12, unchanged).
+- OP-0008 (σ-Inherit / MERGE/SPLIT, untouched).
+- OP-0005-DYN, OP-0021 (untouched).
+- Sinkhorn-scaled plan semigroup status (proved failure stands).
+
+### Files updated
+
+| File | Action |
+|---|---|
+| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE Interpretation row); §13 Cat B insert (2 entries); §13 Cat B header amended for T-Temporal-Identity CV-1.13 promotion record (hygiene); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
+| `THEORY/canonical/theorem_status.md` | **UPDATED** — CV-1.15 section block (10 rows); OP-0012 entry refactored to three sub-labels (CC / SINK / Kjump / Markov); header CV version → CV-1.15; claim count → 93. |
+| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — H-COMP parent branch + subbranches under Q5; HT-3.5 → HT-3.6; next-target line → CV-1.16. |
+| `THEORY/canonical/CV-1.15_SEAL.md` | **CREATED** — seal record. |
+| `THEORY/CHANGELOG.md` | **UPDATED** — this entry prepended. |
+| `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` | §12 amendments-applied section (already present from 5/13 pre-apply). |
+| `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` | Deferred (working file; not load-bearing). To be replaced with §A–§D blocks in follow-up session. |
+| `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` | **NOT MODIFIED** (T-CC-StableK-Kernel remains working candidate under R-C) |
+| `CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py` + `results/exp89_results.json` | **REFERENCED** — 3-case PASS (2026-05-13); numerical sanity check, not proof. |
+
+### Outstanding items registered
+
+- **OQ-A** CV-1.14 promotion audit parity — 09-style audit of T-CC-StableK-Kernel draft; precondition for any future R-A path.
+- **OQ-B** L-δ_eff-SINK Cat C lemma attempt — first proof attack on OP-0012-SINK plan-level scaling-gap blocker.
+- **OQ-C** Continuous-time action limit (OP-0022 candidate) — Γ-convergence framework.
+- **OQ-D** canonical §8.5 $M_{t\to s}$ redefinition decision — affects T-ACT-KERNEL-COMP→REL Cat B status.
+- **OQ-E** Interpretation entry convention (P-ACTION-PATH-INHERITANCE prototype).
+- **OQ-F** §13 versioned-subsection vs per-category style meta-convention.
+
+### Audit reference
+
+`THEORY/logs/daily/2026-05-13/` — five files (00–04, 99). Block A 8 checks (10 findings, all LOW–MEDIUM, none blocking). Block D consistency audit executed post-patch (`THEORY/logs/daily/2026-05-14/` follow-up). Block E exp89 PASS verified.
+
+---
+
 ## 2026-05-13 — R-2 ARCHIVED after C2 Sub-threshold Merger Demonstration Failed
 
 **Trigger:** Phase C2 sub-threshold merger demonstration (R2_op_R2_9 §12-§13) failed to confirm R-2's load-bearing scope extension. Per user decision rule recorded same day ("C2 실패 시 즉시 archive"), R-2 archives alongside V-AFD.

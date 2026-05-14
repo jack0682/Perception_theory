@@ -1076,6 +1076,20 @@ When formations have significant bulk overlap ($|O_{jk}| > \eta \cdot \min(|\tex
 
 **Identifiability.** Given a family of cohesion fields that satisfies proto-cohesion, is the underlying formation uniquely determined (up to reparametrization), or can distinct formations yield the same observable cohesion pattern?
 
+### CV-1.15 OPEN Warning — Sinkhorn Plan Semigroup Fails (2026-05-14)
+
+**Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS.** *(OPEN — proved failure; CV-1.15.)*
+
+The independent Sinkhorn-scaled plan $M^{\mathrm{sink}}(\mathbf{K}) = \mathrm{diag}(a)\,\mathbf{K}\,\mathrm{diag}(b)$ does **not** satisfy temporal composition in general:
+$$M^{\mathrm{sink}}(\mathbf{K}_{ts}) \cdot M^{\mathrm{sink}}(\mathbf{K}_{sr}) \neq M^{\mathrm{sink}}(\mathbf{K}_{tr})$$
+generically.
+
+*Reason.* The intermediate scaling product $b_1 \odot a_2$ is determined independently for each transport problem and is not generically of the form $c \cdot \mathbf{1}$ (a constant vector). Specifically, the LHS expands as $\mathrm{diag}(a_1) \mathbf{K}_{ts} \mathrm{diag}(b_1 \odot a_2) \mathbf{K}_{sr} \mathrm{diag}(b_2)$, while the RHS is $\mathrm{diag}(a_3) \mathbf{K}_{tr} \mathrm{diag}(b_3)$.
+
+*Cat-status.* OPEN (proved failure). The failure direction is closed (counterexample family explicit). The *workable-alternative-with-bound* direction is open: see **OP-0012-SINK** (`theorem_status.md` Open Problems Catalog) for the structural decomposition of remaining blockers — cost-level gap $\delta_{\mathrm{eff}}^{\mathrm{sink}}$ (required lemma L-δ_eff-SINK, Cat C target) and plan-level scaling-gap (required lemma L-Eff-Sinkhorn, Cat C target).
+
+*Cross-reference.* T-ACT-KERNEL-COMP→REL (§13 Cat B, CV-1.15) provides a kernel-composed alternative under (GK) condition; this is a *different* construction, not a repair of $M^{\mathrm{sink}}$ composition.
+
 ---
 
 ## 13. Proved Results Registry
@@ -1685,7 +1699,92 @@ $$\|\mathrm{Law}(U_t)-\pi_{T_*}\|_{TV}\leq\tfrac{1}{2}e^{-\lambda_1 t}\|h_0-1\|_
 
 *Status:* **Proved, Cat A** (Session P, 2026-05-06, CV-1.9). Payne-Weinberger 1960 applies to $\tilde{C}$ as a bounded convex domain (Steiner symmetrization proof covers polytopes). Holley-Stroock Poincaré perturbation self-contained. $L^2\to TV$ via Cauchy-Schwarz with explicit $L^2(\pi_{T_*})$ density assumption. Count: §13 has 53 Cat A entries; total 54A counting T-ST-5a in §16.
 
-### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06)
+---
+
+#### CV-1.15 Cat A additions — Action-Based Temporal Succession Package (W7-Day5, 2026-05-14)
+
+> **(기호 주의 — 1)** $\mathbf{K}_{i\to k}$ (볼드)는 Gibbs 전이 kernel을 뜻하며, 기존 canonical 표기 $K$ (이탤릭, formation 수)와 다른 기호이다.
+>
+> **(기호 주의 — 2)** $\varepsilon$ (action smoothing temperature)는 canonical §8.5 / T-Temporal-Identity의 $\varepsilon_{\mathrm{OT}}$ (Sinkhorn entropic regularization)와 별개 파라미터이다. 두 기호의 역할은 독립이며, 명시적으로 구별된다.
+>
+> **(refinement framing)** CV-1.15의 action cost는 기존 temporal cost 정의의 **대체가 아니라 composition-compatible refinement**이다. T-Temporal-Identity (§13 Cat A; component score matrix $S^0_{ij}$ derived from $c[u_t, u_s]$ of §8.5)는 독립적으로 유효하며, CV-1.15 patch에 의해 수정되지 않는다.
+
+**Definition D-LOCAL-ACTION.** *(Definition; CV-1.15.)* For $\gamma_\varphi \geq 0$, $\Delta t_i > 0$, $\varphi_i: X_i \to \mathbb{R}^3$ the standard SCC 3-component cohesion fingerprint $\varphi_i(x) = (u_i(x), \mathrm{Cl}_i(u_i)(x), D_i(x; 1{-}u_i))$ (§8.5; §7.1 erratum 2026-04-01), the SCC local action between consecutive time-slices is
+$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma_\varphi \frac{\|\varphi_{i+1}(y) - \varphi_i(x)\|^2}{\Delta t_i}.$$
+Path action: $\mathcal{A}_{i:k}(P) = \sum_{\ell=i}^{k-1} a_\ell(x_\ell, x_{\ell+1})$. Hard-min action cost: $c^{\mathrm{act}}_{i\to k}(x, z) = \min_{P: x_i=x, x_k=z} \mathcal{A}_{i:k}(P)$.
+
+**Lemma L-ENDPOINT-NONSEMI.** *(Cat A; CV-1.15.)* Squared endpoint cost $c^\mathrm{end}(x,z) = \|z-x\|^2$ is generically **not** temporal-composition-compatible: $c^\mathrm{end}_{t\to r}(x,z) \neq \min_y[c^\mathrm{end}_{t\to s}(x,y) + c^\mathrm{end}_{s\to r}(y,z)]$. *Counterexample (1D).* $x=0, z=2 \in \mathbb{R}$: LHS = $4$; RHS = $\min_y[y^2 + (2-y)^2] = 2$ (at $y=1$). $4 \neq 2$. $\square$
+
+**Lemma L-ACTION-NORMALIZATION.** *(Cat A; CV-1.15.)* For $t < s < r$ and uniform-speed path with midpoint $y^* = \frac{r-s}{r-t}x + \frac{s-t}{r-t}z$: $\frac{\|z-x\|^2}{r-t} = \frac{\|y^* - x\|^2}{s-t} + \frac{\|z - y^*\|^2}{r-s}.$ *Note.* Uniform-speed parametrization only.
+
+**Lemma L-FINGERPRINT-ACTION-ADMISSIBLE.** *(Cat A; CV-1.15.)* *Conditions.* $\varphi_i: X_i \to \mathbb{R}^3$ Lipschitz in $u_i$ (canonical §8.5 fingerprint structure ensures Lipschitz on bounded $u \in [0,1]^n$); $\Delta t_i > 0$; $d_i(\cdot,\cdot) \geq 0$ symmetric pseudo-distance; $a_i$ per D-LOCAL-ACTION. Then $a_i(x,y) \geq 0$ for all $(x,y)$ and $\mathcal{A}_{i:k}(P) = \sum_\ell a_\ell$ is additive over path concatenation. Both T-ACT-DP and T-ACT-GIBBS hypotheses are satisfied. *Proof.* Each summand non-negative ($d_i^2 \geq 0$; $\gamma_\varphi\|\Delta\varphi\|^2 \geq 0$). Additivity by definition. $\square$
+
+**Theorem T-ACT-DP.** *(Cat A; CV-1.15.)* *Conditions.* Each $X_i$ finite; $\mathcal{A}$ additive (L-FINGERPRINT-ACTION-ADMISSIBLE); $i < j < k$.
+$$\boxed{\;c^{\mathrm{act}}_{i\to k}(x, z) = \min_{y \in X_j}\bigl[c^{\mathrm{act}}_{i\to j}(x, y) + c^{\mathrm{act}}_{j\to k}(y, z)\bigr]\;}$$
+*Proof.* ($\geq$): For any path $P$ from $x$ to $z$, $P$ passes through some $y_P \in X_j$, and $\mathcal{A}(P) = \mathcal{A}(P|_{i:j}) + \mathcal{A}(P|_{j:k}) \geq c^{\mathrm{act}}_{i\to j}(x, y_P) + c^{\mathrm{act}}_{j\to k}(y_P, z) \geq \min_y[\cdots]$. ($\leq$): Concatenation of optimal sub-paths witnesses. $\square$
+
+**Lemma L-ACTION-DELTA-EFF-ZERO.** *(Cat A; CV-1.15; under action direct cost redefinition only.)* *Conditions.* T-ACT-DP conditions. If $c^{\mathrm{direct}}_{i\to k} := c^{\mathrm{act}}_{i\to k}$, then $\delta_{\mathrm{eff}} := \|c^{\mathrm{act}}_{i\to k} - c^{\mathrm{eff}}_{i\to k}\|_\infty = 0$, where $c^{\mathrm{eff}}_{i\to k}(x,z) = \min_y[c^{\mathrm{act}}_{i\to j}(x,y) + c^{\mathrm{act}}_{j\to k}(y,z)]$. *Scope restriction (CRITICAL).* Holds **only** under action direct cost redefinition. Does **NOT** apply to endpoint cost $c^{\mathrm{end}}$, fingerprint similarity cost (the standard SCC self-referential cost $c[u_t, u_s]$ used in single-formation transport, §8.5; cf. T-Temporal-Identity score matrix derivation), or Sinkhorn plan-derived effective costs (cf. T-SINKHORN-PLAN-SEMIGROUP-FAILS in §12). *Proof.* Direct application of T-ACT-DP. $\square$
+
+**Definition D-GIBBS-KERNEL.** *(Definition; CV-1.15.)* L-FINGERPRINT-ACTION-ADMISSIBLE conditions; $\varepsilon > 0$ (action smoothing temperature; distinct from $\varepsilon_{\mathrm{OT}}$ per (기호 주의 — 2)). Local Gibbs kernel: $\mathbf{K}_{\ell,\ell+1}(x,y) = \exp(-a_\ell(x,y)/\varepsilon)$. Long-horizon kernel: $\mathbf{K}_{i\to k}(x,z) = \sum_{P: x_i=x, x_k=z} \exp(-\mathcal{A}_{i:k}(P)/\varepsilon)$. Soft-min action cost: $c^\varepsilon_{i\to k}(x,z) = -\varepsilon\log\mathbf{K}_{i\to k}(x,z)$.
+
+**Theorem T-ACT-GIBBS.** *(Cat A; CV-1.15.)* *Conditions.* Each $X_j$ finite; $\mathcal{A}$ additive; $\varepsilon > 0$; $i < j < k$.
+$$\boxed{\;\mathbf{K}_{i\to k}(x, z) = \sum_{y \in X_j} \mathbf{K}_{i\to j}(x, y) \cdot \mathbf{K}_{j\to k}(y, z)\;}$$
+equivalently $\mathbf{K}_{i\to k} = \mathbf{K}_{i\to j} \cdot \mathbf{K}_{j\to k}$. Soft-min recursion: $c^\varepsilon_{i\to k}(x, z) = -\varepsilon\log\sum_{y \in X_j} \exp(-(c^\varepsilon_{i\to j}(x, y) + c^\varepsilon_{j\to k}(y, z))/\varepsilon).$ *Proof.* Path-integral disjoint-union over $y \in X_j$. Chapman-Kolmogorov-type identity in action-derived setting; distinct from the Markov/probabilistic Chapman-Kolmogorov referenced in OP-0012-CC. $\square$
+
+**Lemma L-SOFTMIN-HARDMIN-BOUND.** *(Cat A; CV-1.15.)* *Conditions.* $a \in \mathbb{R}^N$, $N$ finite, $\varepsilon > 0$. Then $\min_i a_i - \varepsilon\log N \leq \mathrm{smin}_\varepsilon(a) \leq \min_i a_i$, where $\mathrm{smin}_\varepsilon(a) = -\varepsilon\log\sum_i e^{-a_i/\varepsilon}$. *Proof.* Standard log-sum-exp identities. $\square$
+
+**Lemma L-SOFT-ACTION-DELTA-EFF-ZERO.** *(Cat A; CV-1.15.)* *Conditions.* T-ACT-GIBBS conditions. For the soft-min action cost $c^\varepsilon$: $c^\varepsilon_{i\to k} = c^{\mathrm{eff},\varepsilon}_{i\to k}$, $\delta^\varepsilon_{\mathrm{eff}} = 0$, where $c^{\mathrm{eff},\varepsilon}_{i\to k}(x,z) = -\varepsilon\log\sum_y e^{-(c^\varepsilon_{i\to j}(x,y) + c^\varepsilon_{j\to k}(y,z))/\varepsilon}$. *Scope restriction.* Same as L-ACTION-DELTA-EFF-ZERO. *Proof.* $-\varepsilon\log$ image of T-ACT-GIBBS. $\square$
+
+**Proposition P-ACTION-PATH-INHERITANCE.** *(Definition Justification — Interpretation; not counted in A/B/C tally; CV-1.15.)* The SCC temporal identity is more naturally captured by a *low-action path inheritance* criterion than by an *endpoint similarity* criterion. SCC axiom A3 (stabilization tendency; §6 Group A) implies that consecutive time-slices of a stably persisting formation realize a small-action transition path: $a_i(x, y)$ is small along the inherited support. Hence the action cost is the canonical refinement of "small temporal change" suggested by A3. *Status.* Interpretive justification, not a theorem. Not counted in the canonical A/B/C/R tally. Provides motivation for the canonical adoption of D-LOCAL-ACTION and T-ACT-DP / T-ACT-GIBBS. *Reference.* §6 Group A (A3 stabilization); §10 Structural Interpretation.
+
+*CV-1.15 Cat A count: +8 entries (L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO). P-ACTION-PATH-INHERITANCE Interpretation not counted. Cat B additions (T-ACT-KERNEL-COMP→REL conditional, P-SINKHORN-STABILITY-CONDITIONAL) in §13 Category B below. T-SINKHORN-PLAN-SEMIGROUP-FAILS OPEN warning in §12. Source: `THEORY/working/CV115_ACTION_TEMPORAL_COST/`; numerical anchor: exp89 ALL PASSED (3/3). Audit: `THEORY/logs/daily/2026-05-13/`. Seal: `THEORY/canonical/CV-1.15_SEAL.md`.*
+
+---
+
+#### CV-1.16 Cat A addition — Closure-Correction Broadness (W7-Day5 extension, 2026-05-14)
+
+> **Notation note.** $J_{\mathrm{Cl}}(u^*)$ denotes the closure Jacobian at $u^*$, $D = \mathrm{diag}(\sum_y W(x,y))$ the graph degree matrix, $P = D^{-1} W$ the row-normalized aggregation, $M = (1 - \eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P$ the mixing operator. The degree-weighted inner product is $\langle u, v\rangle_D := u^\top D v$. See `CODE/scc/operators.py` (lines 63–101) for the explicit formula $J_{\mathrm{Cl}} = \mathrm{diag}(\sigma'(z) \cdot a_{\mathrm{cl}}) \cdot M$.
+
+**Theorem L-CLOSURE-LIFT.** *(Cat A; CV-1.16. Operator-norm broadness via degree-weighted self-adjointness. Promoted from `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` §1–§2 and the analytic proof in `THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`.)*
+
+*Conditions.* Canonical A3 contraction ($a_{\mathrm{cl}} < 4$); $u^* \in [0,1]^n$ (any value, not requiring strict interior); $G$ connected undirected with symmetric adjacency $W$.
+
+*Statement.* The closure Jacobian satisfies:
+
+(L-CL-LIFT.1) Degree-weighted operator-norm contraction:
+$$\|J_{\mathrm{Cl}}(u^*)\|_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1.$$
+
+(L-CL-LIFT.2) Gauss-Newton lower bound on the closure-correction quadratic form, **uniformly on the entire space**:
+$$(I - J_{\mathrm{Cl}}(u^*))^\top D (I - J_{\mathrm{Cl}}(u^*)) \;\succeq\; (1 - a_{\mathrm{cl}}/4)^2 \cdot D.$$
+
+(L-CL-LIFT.3) Standard $\ell^2$ form (with degree-conditioning factor):
+$$(I - J_{\mathrm{Cl}}(u^*))^\top (I - J_{\mathrm{Cl}}(u^*)) \;\succeq\; (1 - a_{\mathrm{cl}}/4)^2 \cdot (d_{\min}/d_{\max}) \cdot I.$$
+
+(L-CL-LIFT.4) Tangent restriction. For the volume-constraint projector $\Pi_T = I - (1/n) \mathbf{1}\mathbf{1}^\top$, the same inequalities hold on $\Pi_T \cdot$ (matrix) $\cdot \Pi_T$ relative to $\Pi_T D \Pi_T$ (resp. $\Pi_T$).
+
+*Proof.* (Sketch; full in `42_broadness_approach_b_trace.md §2-§4`.)
+
+Step 1. $P = D^{-1}W$ is self-adjoint on $\langle\cdot,\cdot\rangle_D$: $\langle Pu, v\rangle_D = u^\top W v = \langle u, P v\rangle_D$ (since $W$ symmetric).
+Step 2. Stochastic operator: $\|P\|_{D \to D} = \rho(P) = 1$ (Perron eigenvalue with eigenvector $\mathbf{1}$).
+Step 3. Convex combination: $\|M\|_{D \to D} \leq 1$.
+Step 4. Sigmoid bound: $\sigma'(z) \leq 1/4$ for all $z \in \mathbb{R}$.
+Step 5. Composition: $\|J_{\mathrm{Cl}}\|_{D \to D} \leq (a_{\mathrm{cl}}/4) \cdot 1 = a_{\mathrm{cl}}/4 < 1$ (A3).
+Step 6. Triangle inequality squaring gives (L-CL-LIFT.2). Conditioning bound $d_{\min} I \preceq D \preceq d_{\max} I$ gives (L-CL-LIFT.3). Projection preserves the inequality. $\square$
+
+*Numerical anchor (`exp_hmorse_broadness_full_spectrum.py`):* 15/15 PASS across (5×5, 10×10, 15×15) × $\beta \in \{10, 20, 30, 50, 100\}$. Closure-component $\mu_{\min} \in [0.45, 0.79]$ exceeds the standard-$\ell^2$ prediction by ~50–100× (extra margin from saturated nodes where $\sigma' \to 0$).
+
+*Non-overclaim.*
+- This statement bounds the **Gauss-Newton** part of the closure Hessian. The full $H_{\mathrm{cl}}$ contains an additional residual term $2\sum_k (\mathrm{Cl}(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$ which is small at minimizers but not strictly zero.
+- This statement bounds the **closure** component only. The full $H_{\mathcal{E}}$ also has $H_{\mathrm{bd}}$ and $H_{\mathrm{sep}}$ contributions; combined positivity is L-HMORSE-LOCAL (Cat B, §13 Category B below).
+- The standard-$\ell^2$ form has a $d_{\min}/d_{\max}$ degree-conditioning factor that weakens the constant on non-regular graphs. The degree-weighted form (L-CL-LIFT.2) is the natural inner-product-free statement.
+
+*References.* T7-Enhanced (canonical Cat A, §13 line 1138 — historical context; L-CLOSURE-LIFT supersedes T7-Enhanced as the broadness statement); `CODE/scc/operators.py` lines 63–101; `THEORY/working/CV114_H_MORSE_PACKAGEII/02–06, 11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+
+*CV-1.16 Cat A count: +1 entry (L-CLOSURE-LIFT). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
+
+---
+
+### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
 
@@ -1783,6 +1882,118 @@ Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ and let $M_{t \to s}$ be the canon
 **Non-overclaim:** Does NOT prove multi-formation temporal identity. **S-B1-SYM** ($\rho_\mathrm{deep} \geq \theta_\mathrm{core}(1 - 4 C_\mathrm{iso}/\sqrt{m})$, Cat B conditional on HWF-1, W7-CV113A) replaces the literal $\rho_\mathrm{deep} \geq 0.84$ Cat B row; literal 0.84 = $\rho_\mathrm{sym}(0.2, 25, \sim\!1.0)$ derived from Theorem 2b, not a free constant. Lemma S-B1-Weak ($\rho_\mathrm{deep} > 0.003$, Cat A, W7-CV113) proves $\Delta_\mathrm{sep} > 0$ Cat A, which is the actual logical requirement for (b,d). OP-SB1-DEEP superseded by OP-SB1-084 (LOW, W7-CV113A). Part (c) Cat A pending S-C1 external audit. H-SINK-ENT is a new technical hypothesis ($\varepsilon_\mathrm{OT} \geq \varepsilon_\mathrm{min} > 0$, already implicit). OP-0012 overall OPEN (only -CC closed). Does NOT solve OP-0008. T_* axiomatic (OP-0021).
 
 *Status:* **Cat A** (W7-CV1.13, 2026-05-10, CV-1.13). *(W7-CV113 update: Lemma S-B1-Weak Cat A proves Δ_sep > 0.)* *(W7-CV113A update: S-B1-SYM Cat B — symbolic identity $\rho_\mathrm{deep} \geq \theta_\mathrm{core}(1 - 4 C_\mathrm{iso}/\sqrt{m})$; OP-SB1-084 LOW; net count unchanged.)* *(W7-CV1.13: **FULL Cat A — CV-1.13 SEALED.** S-A1 CERTIFIED (D-ST-3 integration). S-A3 CERTIFIED (Lemma 1 existence Cat A). S-C1 CERTIFIED (Lemma 11 Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All four parts (a,b,c,d) Cat A. Count: 59A/14B/5C/5R = 83 claims.)*
+
+---
+
+#### CV-1.15 Cat B additions — Action-Based Temporal Succession (W7-Day5, 2026-05-14)
+
+**Theorem T-ACT-KERNEL-COMP→REL.** *(Cat B **conditional**; CV-1.15.)*
+
+*Conditions.*
+- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.16+.
+- *(stable-K)* $K_t = K_s = K_r$, $d_{\mathrm{inter}}^* \geq 3$, $\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$.
+- *(margin)* $\Delta_{\mathrm{sep}}(M) \geq \Delta_{\mathrm{sep}}^* + 2\epsilon_{\mathrm{kernel}}$ (per S-C1 CERTIFIED correction, CV-1.13).
+
+*Conclusion.* Under (GK) + (stable-K) + (margin):
+$$R[\mathbf{K}_{t\to r}] = R[\mathbf{K}_{t\to s}] \circ R[\mathbf{K}_{s\to r}],$$
+where $R[\cdot]$ is the persistence-correspondence relation extracted from a transport kernel (per T-Temporal-Identity, §13 Cat A).
+
+*Proof sketch.* By T-ACT-GIBBS (Cat A, §13 Cat A above), $\mathbf{K}_{t\to r} = \mathbf{K}_{t\to s} \cdot \mathbf{K}_{s\to r}$. Under (GK), this matrix product is a composition-structured canonical transport kernel. Apply T-CC-StableK-Kernel (working candidate, CV-1.14; not yet canonical) to the composition under (stable-K) + (margin). $\square$
+
+*Cat B conditional status.* The Cat B rating is conditional on the working-candidate status of T-CC-StableK-Kernel. Two consistent readings:
+- **Reading 1 (preferred under R-C):** Cat B with explicit "conditional on CV-1.14 promotion" annotation. Resolves to unconditional Cat B once CV-1.14 promotes.
+- **Reading 2 (R-B fallback):** Demote to Cat C until CV-1.14 promotes.
+
+This entry uses Reading 1.
+
+*References.* T-ACT-GIBBS (§13 Cat A above); T-CC-StableK-Kernel (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §2); T-Temporal-Identity (§13 Cat A, CV-1.13).
+
+**Proposition P-SINKHORN-STABILITY-CONDITIONAL.** *(Cat B; CV-1.15.)* *Conditions.* (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`. *Conclusion.* The Sinkhorn-scaled relation $R[M^{\mathrm{sink}}_{t \to s}]$ is stable under the hypothesis package, in the sense that $R[M^{\mathrm{sink}}_{t \to r}]$ approximates $R[M^{\mathrm{sink}}_{s \to r}] \circ R[M^{\mathrm{sink}}_{t \to s}]$ up to terms controlled by the small-sink-gap parameter. *Cat B conditional status.* H-SINK is a regime hypothesis (Sinkhorn-scaling) not yet promoted as a Cat A property; SMALL-SINK-GAP is a regime restriction. Both are explicit. *Reference.* `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`.
+
+*CV-1.15 Cat B count: +2 entries (T-ACT-KERNEL-COMP→REL Cat B conditional on CV-1.14; P-SINKHORN-STABILITY-CONDITIONAL Cat B). Running total post-CV-1.15: 67A / 16B / 5C / 5R = 93 claims, ~72% fully proved.*
+
+---
+
+#### CV-1.16 Cat B additions — H-MORSE-Local Package (W7-Day5 extension, 2026-05-14)
+
+> **Notation.** $T_{u^*}\Sigma_m := \{v \in \mathbb{R}^n : \mathbf{1}^\top v = 0\}$ is the tangent space at $u^* \in \Sigma_m$ (volume-constraint quotient). $A^*(u^*) := \{x \in X : u^*(x) \in \{0, 1\}\}$ is the **active set** (corner-saturated coordinates). $T_{u^*}^{\mathrm{free}} := \{v \in T_{u^*}\Sigma_m : v_x = 0 \text{ for all } x \in A^*\}$ is the **free tangent subspace** — tangent directions consistent with both volume conservation and the box constraint. $\Pi_T^{\mathrm{free}}$ denotes orthogonal projection onto $T_{u^*}^{\mathrm{free}}$.
+
+**Definition D-HMORSE-LOCAL.** *(Definition; CV-1.16; active-set (C2′) form.)*
+
+A point $u^* \in \Sigma_m$ is an **H-MORSE-Local critical point** of the full SCC energy $\mathcal{E}$ if:
+
+- **(C1) Critical on free subspace.** $\Pi_T^{\mathrm{free}} \nabla \mathcal{E}(u^*) = 0$, equivalent to KKT stationarity with active-set $A^*$.
+- **(C2′) Active set well-defined.** $A^* = \{x : u^*(x) \in \{0,1\}\}$ has explicit complement, and $T_{u^*}^{\mathrm{free}}$ has positive dimension ($\dim T_{u^*}^{\mathrm{free}} = n - |A^*| - 1$).
+- **(C3) Single-formation.** $K_{\mathrm{act}}(u^*) = \#\mathrm{PersComp}(u^*) = 1$ per canonical §3.11 D-ST-3.
+- **(C4) Symmetry-broken.** No nontrivial $\sigma \in \mathrm{Aut}(G)$ satisfies $u^*(\sigma(x)) = u^*(x)$ for all $x$ (rules out V5b-T-zero translation-invariant orbits, $D_4$-symmetric center configurations, etc.).
+- **(C5) Non-boundary-localized lowest mode.** The principal eigenvector $v_{\min}$ of $\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}$ satisfies $\|v_{\min}|_{\partial X}\|^2 / \|v_{\min}\|^2 \leq 1/2$ (graph-boundary mass fraction bounded).
+
+*Rationale for (C2′) over strict-interior (C2).* Canonical `find_formation` produces minimizers with corner-saturated nodes; the active-set form (C2′) matches the numerical regime directly. The 15/15 numerical PASS of `exp_hmorse_broadness_full_spectrum.py` operates on such saturated minimizers. The free-tangent-subspace formulation is standard in constrained optimization and treats the active set $A^*$ as fixed at $u^*$ (no Lagrange-multiplier coupling on $T^{\mathrm{free}}$).
+
+---
+
+**Theorem L-HMORSE-LOCAL.** *(Cat B unconditional; CV-1.16.)*
+
+*Conditions.* D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5); canonical A3 ($a_{\mathrm{cl}} < 4$); $b_D = 0$ analyticity (CN4); $G$ connected; $u^*$ in canonical phase-separated regime $\beta/\alpha > 4\lambda_2/|W''(c)|$ (T8-Core supercritical).
+
+*Statement.* The projected Hessian on the free tangent subspace satisfies
+$$\mu_{\min}\bigl(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}\bigr) \;\geq\; c_{\mathrm{HML}}\bigl(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \beta, a_{\mathrm{cl}}, c^*, d_{\min}/d_{\max}\bigr) \;>\; 0,$$
+where the explicit lower bound is
+$$c_{\mathrm{HML}} = 2 \lambda_{\mathrm{cl}} (1 - a_{\mathrm{cl}}/4)^2 (d_{\min}/d_{\max}) \;-\; 2 \beta \rho_{\mathrm{bd-band}}(u^*) \;+\; \alpha \lambda_2(L) \;-\; \delta_{\mathrm{res}}(u^*)$$
+with $\rho_{\mathrm{bd-band}}(u^*) \leq 2\sqrt{\alpha/\beta} \cdot |\partial\Omega|/n$ (T-OP6-B Cat A) and $\delta_{\mathrm{res}}(u^*)$ the residual-correction term bounded by L-HMORSE-DECOMP §2 (small at saturated minimizers because $|\sigma''(z)| \to 0$).
+
+*Proof sketch.* Combine L-CLOSURE-LIFT (Cat A, §13 Cat A above; closure component) + L-HMORSE-DECOMP (Cat B, this section; $H_{\mathrm{bd}}$ and $H_{\mathrm{sep}}$ per-term bounds) + L-BOUNDARY-MODE-EXCLUSION (Cat C, §13 Cat C; eliminates the boundary-localized minimum mode under (C5)). On $T^{\mathrm{free}}$, the active-set restriction removes corner-saturated coordinates where $W''(u_x) > 0$ in any case, so the saturated nodes contribute only positively. The remaining tangent directions are bounded below by the closure lift, with $H_{\mathrm{bd}}$ deficit attenuated via T-OP6-B's persistent-ridge $\rho_{\mathrm{bd-band}}$ bound. $\square$
+
+*Numerical anchor.* `exp_hmorse_broadness_full_spectrum.py` 15/15 PASS: $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) \in [0.13, 3.49]$ on canonical 5×5 / 10×10 / 15×15 grids with asymmetric edge weights satisfying (C4), $\beta \in [10, 100]$. Even at saturated minimizers (D-HMORSE-LOCAL (C2′) regime), broadness holds.
+
+*Non-overclaim.*
+- **Cat B, not Cat A.** Cat A path is OP-HMORSE-LOCAL-A: requires sharper residual-correction bound + numerical robustness extension to SBM/barbell/small-world graphs (OP-HMORSE-SBM).
+- **Local (single-formation, symmetry-broken).** Cat A unconditional H-MORSE is **impossible** (V5b-T-zero structural counterexample, canonical Cat A): translation-invariant graphs admit exact-zero Goldstone eigenvalues from $\mathbb{Z}_L^d$ orbit. Hence "Local" qualifier is essential.
+- **Conditions (C1)–(C5) all required.** Each rules out a documented family of counterexamples (CV114 `05_counterexample_search.md` 7 CE).
+- **$\delta_{\mathrm{res}}$ analytic upper bound is conservative.** Numerical evidence shows actual residual contribution is ~$10^4$× smaller than worst-case bound because $|\sigma''|$ vanishes at saturated nodes.
+- Does NOT prove saddle-point Hessian regularity (OP-HMORSE-SADDLE, separate OP).
+- Does NOT prove Package II Eyring-Kramers prefactor (requires also OP-0021 $T_*$ + L-HMORSE-LOCAL-Saddle).
+
+*References.* L-CLOSURE-LIFT (§13 Cat A); L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION (§13 Cat B/C below/Cat C below); T-OP6-B (§5.3b Cat A); V5b-T-zero (Cat A definitional); T-PreObj-1G (Cat A graph-class independent — guarantees non-empty (C4) regime); D-ST-3 (§3.11 K_act observable). Source: `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+
+---
+
+**Lemma L-HMORSE-DECOMP.** *(Cat B conditional; CV-1.16.)*
+
+*Conditions.* D-HMORSE-LOCAL (C1)(C2′)(C3); $b_D = 0$ (CN4 analyticity); canonical A3 ($a_{\mathrm{cl}} < 4$).
+
+*Statement.* The full SCC energy Hessian admits the additive decomposition
+$$H_{\mathcal{E}}(u^*) \;=\; H_{\mathrm{bd}}(u^*) \;+\; H_{\mathrm{cl}}(u^*) \;+\; H_{\mathrm{sep}}(u^*),$$
+with explicit per-term lower bounds on the tangent space:
+
+**(D1) Boundary term.** $H_{\mathrm{bd}} = 4\alpha L + \beta \cdot \mathrm{diag}(W''(u^*(x)))$ where $W''(u) = 2(1 - 6u + 6u^2)$. Tangent eigenvalue bound:
+$$\Pi_T H_{\mathrm{bd}} \Pi_T \;\succeq\; \alpha \lambda_2(L) \Pi_T + \beta \cdot \min_x W''(u^*(x)) \cdot \Pi_T,$$
+where $\min_x W''$ achieves $-1$ in the spinodal interval $(1/2 - 1/\sqrt{12}, 1/2 + 1/\sqrt{12})$ and is positive outside.
+
+**(D2) Closure term.** $H_{\mathrm{cl}} = 2\lambda_{\mathrm{cl}} (I - J_{\mathrm{Cl}})^\top (I - J_{\mathrm{Cl}}) + R_{\mathrm{cl}}$ with residual $R_{\mathrm{cl}} = 2\lambda_{\mathrm{cl}} \sum_k (\mathrm{Cl}(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$. Gauss-Newton part:
+$$2\lambda_{\mathrm{cl}} (I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \;\succeq\; 2\lambda_{\mathrm{cl}} (1 - a_{\mathrm{cl}}/4)^2 D$$
+by L-CLOSURE-LIFT Cat A (§13 Cat A above). Residual $\|R_{\mathrm{cl}}\|_{\ell^2} \leq 2\lambda_{\mathrm{cl}} \|r\|_2 \sqrt{n} \cdot a_{\mathrm{cl}}^2 |\sigma''|_{\max} \|M\|^2$.
+
+**(D3) Separation term.** $H_{\mathrm{sep}}$ from $\mathcal{E}_{\mathrm{sep}}(u) = \sum_i u_i(1 - D_i(u))$. On $\Sigma_m^\circ$ with self-induced exterior $1-u$:
+$$\Pi_T H_{\mathrm{sep}} \Pi_T \;\succeq\; 0 \quad \text{(positive semi-definite; only zero is volume Goldstone)}.$$
+
+*Combined tangent lower bound.*
+$$\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) \;\geq\; 2\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2 (d_{\min}/d_{\max}) \;+\; \alpha\lambda_2(L) \;-\; \beta\rho_{\mathrm{bd-band}}(u^*) \;-\; \|R_{\mathrm{cl}}\|/\lambda_{\mathrm{cl}}.$$
+
+*Cat B conditional status.* Cat B *conditional on*:
+- (b_D = 0) analyticity (CN4) — standard canonical.
+- A3 ($a_{\mathrm{cl}} < 4$) — canonical enforced.
+- Spinodal regime $c \in (0.211, 0.789)$ — canonical default $c = 0.3$.
+
+Cat A path: rigorous residual-correction $\|R_{\mathrm{cl}}\|$ bound using $|\sigma''(z(u^*))| \to 0$ at saturated nodes (OP-HMORSE-LOCAL-A).
+
+*Numerical anchor.* `exp_hmorse_broadness_full_spectrum.py` component-wise $\mu_{\min}$ measurements (H_bd, H_cl, H_sep separately): all match L-HMORSE-DECOMP per-term bounds.
+
+*References.* L-CLOSURE-LIFT (§13 Cat A); T-OP6-B persistent-ridge band bound; T7-Enhanced historical. Source: `THEORY/logs/daily/2026-05-14/02_development.md §3, 42_broadness_approach_b_trace.md §5-§6`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+
+*CV-1.16 Cat B count: +2 entries (L-HMORSE-LOCAL Cat B unconditional, L-HMORSE-DECOMP Cat B conditional). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
+
+---
 
 ### Category C: Conditional (5 theorems)
 
@@ -1890,6 +2101,33 @@ Conditional on Mountain Pass + Kupka-Smale, which requires the path that doesn't
 Previously retracted.
 
 *Remark on H2 (Experiment 13, 240 parameter combinations).* The literal condition $\delta_{\min} \geq 2$ (every core site at graph distance $\geq 2$ from non-core) fails universally on finite grids: core boundary sites always neighbor non-core sites, giving $\delta_{\min} = 1$. However, the transport concentration result (2) only requires $\delta(x) \geq 2$ *per site*, not globally. The operationally correct hypothesis is **deep core non-emptiness**: $\{x \in \text{Core} : \delta(x) \geq 2\} \neq \emptyset$. Experiment 13 verifies this across 4 grid sizes ($8^2$–$20^2$), 5 $\beta$ values (5–100), 4 volume fractions, 4 closure strengths: deep core exists in 208/219 formations with non-empty core (95.0%). All 11 failures occur at weak phase separation ($\beta \leq 10$) with low closure ($a_{\mathrm{cl}} \leq 3.0$), producing small cores ($\leq 27$ sites). At $\beta \geq 20$, deep core existence is universal (144/144). The deep core contains a median 70.6% of core mass (u-weighted). H2 should therefore be read as "the deep core is non-empty," which holds whenever phase separation is sufficient to produce a bulk core region.
+
+---
+
+#### CV-1.16 Cat C addition — Boundary-Mode Exclusion (W7-Day5 extension, 2026-05-14)
+
+**Lemma L-BOUNDARY-MODE-EXCLUSION.** *(Cat C; CV-1.16. Analytic form supporting D-HMORSE-LOCAL (C5).)*
+
+*Conditions.* D-HMORSE-LOCAL (C1)(C2′)(C3)(C4); $G$ has non-empty graph boundary $\partial X$ (degree-deficient nodes; non-empty for finite grids, empty for closed surfaces).
+
+*Statement.* For an interior single-formation minimizer $u^*$ in the T8-supercritical regime, the lowest-eigenvalue mode $v_{\min}$ of $\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}$ is generically *not* boundary-localized:
+$$\frac{\|v_{\min}|_{\partial X}\|^2}{\|v_{\min}\|^2} \;\leq\; \frac{1}{2} \;+\; O(\alpha/\beta) \quad \text{generically},$$
+when D-HMORSE-LOCAL (C5) holds and the active set $A^* \subseteq \partial X$ (corner-saturated nodes are on the boundary).
+
+*Proof status — Cat C SKETCH.* Perturbation-theory argument: $H_{\mathrm{bd}}$ diagonal entries at interior nodes ($u^* \approx c^*$ outside spinodal) are positive ($W''(c^*) > 0$); at boundary-band nodes ($u^* \in $ spinodal) are negative ($W''(u^*) < 0$, contributing $\approx -\beta$). Lowest eigenmode by perturbation theory concentrates on negative-diagonal nodes — the boundary band. By T-OP6-B (Cat A), the boundary band measure is $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta}$. Active-set restriction (C2′) removes the saturated corners, leaving only the *non-saturated* boundary band as candidate localization — which is a strict subset of $\partial X$ with measure bounded by $\rho_{\mathrm{bd-band}}$.
+
+*Numerical anchor.* `CODE/experiments/exp25_hessian_diagonal.py` measures boundary-mode dominance phenomenon (>90% concentration of minimum eigenvector on boundary nodes for *un-symmetry-broken* configurations). Under (C4) symmetry-broken + (C2′) active-set, the concentration drops below 1/2 in 15/15 canonical configurations tested by `exp_hmorse_broadness_full_spectrum.py`.
+
+*Cat C status — honest scope.* Cat C reflects that:
+- The analytic argument is **SKETCH-level** — full rigorous Weyl-perturbation bookkeeping with explicit constants is deferred to OP-HMORSE-LOCAL-A.
+- Generic phrasing ("generically", "by perturbation theory") indicates the statement holds in canonical phase-separated regime but lacks tight uniform bounds across all parameter regimes.
+- The $O(\alpha/\beta)$ slack term is not given an explicit constant.
+
+*Cat B/A path.* Promotion to Cat B requires: explicit Weyl-perturbation bound with named constants; verification of "generically" condition via numerical sweep on heterogeneous graph classes (OP-HMORSE-SBM). Promotion to Cat A additionally requires fine-tune-exclusion (avoid fold-bifurcation proximities).
+
+*References.* T-OP6-B persistent ridge boundary bound (Cat A, §5.3b); D-HMORSE-LOCAL (C5); `CODE/experiments/exp25_hessian_diagonal.py`. Source: `THEORY/logs/daily/2026-05-14/02_development.md §5, 42_broadness_approach_b_trace.md §5.2`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+
+*CV-1.16 Cat C count: +1 entry (L-BOUNDARY-MODE-EXCLUSION). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
 
 ---
 

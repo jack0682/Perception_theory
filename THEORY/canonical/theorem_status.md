@@ -9,7 +9,7 @@ last_updated: 2026-05-08
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.12; current = **CV-1.13**) then status (active, challenged, deprecated). *(Updated 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.16; current = **CV-1.16**) then status (active, challenged, deprecated). *(Updated 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
 
 **Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
@@ -59,6 +59,10 @@ last_updated: 2026-05-08
 *CV-1.11 count update (Session Y, 2026-05-06): T-K-Select-OBS Cat B new (+1B). Running total: **54A/14B/5C/5R = 78 claims, ~69% fully proved.** OP-0005-OBS partially resolved.*
 
 *CV-1.12 count update (W7-FINAL, 2026-05-10): T-Temporal-Identity canonical Cat B new (+1B). H-SINK full plan stability promoted Cat A (partial OT closed by Theorem Partial-H-SINK). H-SINK-ENT registered as technical hypothesis. OP-0011 → PARTIALLY RESOLVED (Steps 2–3 closed). Running total: **54A/15B/5C/5R = 79 claims, ~68% fully proved.***
+
+*CV-1.15 count update (W7-Day5, 2026-05-14): action-based temporal succession package — L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO **Cat A (+8A)**; T-ACT-KERNEL-COMP→REL **Cat B conditional** on CV-1.14 working candidate; P-SINKHORN-STABILITY-CONDITIONAL **Cat B (+2B)**. P-ACTION-PATH-INHERITANCE Interpretation (not counted). OP-0012-SINK new sub-label (OPEN; cost-level blocker closed under action redefinition, scaling-gap blocker remains). T-SINKHORN-PLAN-SEMIGROUP-FAILS OPEN warning. **Running total: 67A / 16B / 5C / 5R = 93 claims, ~72% fully proved.** exp89 ALL PASSED (3/3 cases, numerical sanity only). HT-3.6.*
+
+*CV-1.16 count update (W7-Day5 extension, 2026-05-14): H-MORSE-Local closure package — **L-CLOSURE-LIFT Cat A (+1A)** via Theorem B2 operator-norm route ($\|J_\mathrm{Cl}\|_{D\to D} \leq a_\mathrm{cl}/4 < 1$, degree-weighted self-adjointness of stochastic operator $P$); **L-HMORSE-LOCAL Cat B (+1B)** unconditional under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form; **L-HMORSE-DECOMP Cat B (+1B)** conditional on b_D=0 + canonical A3; **L-BOUNDARY-MODE-EXCLUSION Cat C (+1C)** with numerical anchor exp25 + sketch-level Weyl-perturbation. **OP-HMORSE-BROADNESS CLOSED Cat A** (analytic Theorem B2 + 15/15 numerical PASS in `exp_hmorse_broadness_full_spectrum.py`). T7-Enhanced (canonical Cat A) historically related — L-CLOSURE-LIFT supersedes as the broadness statement. **Running total: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.** Source: `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`. HT-3.7.*
 
 *CV-1.8 candidates registered (Session M, 2026-05-06): T-PF-A1-Affine-Reduction, T-PF-A1-Finite-Reflected-SDE, T-PF-A1-Gibbs-Invariance, T-PF-A1-Poincare-Ergodicity. No count change — pending canonical promotion (Session O).*
 
@@ -373,6 +377,63 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 
 ---
 
+### CV-1.15 Canonical Additions — Action-Based Temporal Succession Package (W7-Day5, 2026-05-14)
+
+*CV-1.15 adds 8 Cat A entries + 2 Cat B entries (T-ACT-KERNEL-COMP→REL Cat B **conditional** on CV-1.14 working candidate; P-SINKHORN-STABILITY-CONDITIONAL Cat B under H-SINK+MARGIN+SMALL-SINK-GAP) + 1 Interpretation entry (P-ACTION-PATH-INHERITANCE, **not counted**). Source: `THEORY/working/CV115_ACTION_TEMPORAL_COST/` ten working files completed 2026-05-12; numerical sanity check exp89 3-case PASS 2026-05-13; pre-promotion audit 2026-05-13 (`THEORY/logs/daily/2026-05-13/02_development.md`); promotion turn 2026-05-14 with P7 granted in plan-mode review. Count: +8A, +2B → **67A / 16B / 5C / 5R = 93 claims** (Interpretation row excluded from tally).*
+
+| ID | Statement | Status | Cat | Conditions |
+|---|---|---|---|---|
+| **L-ENDPOINT-NONSEMI** | endpoint² cost is generically not temporal-composition-compatible | Cat A (CV-1.15, 2026-05-14) | A | 1D counterexample explicit ($x=0, z=2$) |
+| **L-ACTION-NORMALIZATION** | time-normalized cost additive under uniform-speed path | Cat A | A | uniform-speed parametrization only |
+| **L-FINGERPRINT-ACTION-ADMISSIBLE** | SCC fingerprint action satisfies T-ACT-DP / T-ACT-GIBBS premises | Cat A | A | $\varphi_i$ Lipschitz, $\Delta t_i > 0$, $d_i \geq 0$ |
+| **T-ACT-DP** | hard-min action cost Bellman DP: $c^{\mathrm{act}}_{i\to k}(x,z) = \min_y[\cdots]$ | Cat A | A | each $X_i$ finite, $\mathcal{A}$ additive |
+| **L-ACTION-DELTA-EFF-ZERO** | $\delta_{\mathrm{eff}} = 0$ under direct-cost redefinition $c^{\mathrm{direct}} := c^{\mathrm{act}}$ | Cat A | A | **scope restriction:** action direct cost only |
+| **T-ACT-GIBBS** | Gibbs kernel semigroup $\mathbf{K}_{i\to k} = \mathbf{K}_{i\to j} \cdot \mathbf{K}_{j\to k}$ | Cat A | A | $X_j$ finite, $\varepsilon > 0$ |
+| **L-SOFTMIN-HARDMIN-BOUND** | $\min a - \varepsilon \log N \leq \mathrm{smin}_\varepsilon(a) \leq \min a$ | Cat A | A | $a \in \mathbb{R}^N$, $N$ finite, $\varepsilon > 0$ |
+| **L-SOFT-ACTION-DELTA-EFF-ZERO** | $\delta^\varepsilon_{\mathrm{eff}} = 0$ (T-ACT-GIBBS image) | Cat A | A | scope: action soft-min only |
+| **T-ACT-KERNEL-COMP→REL** | $(GK)+(stable-K)+(margin) \Rightarrow R[\mathbf{K}_{t\to r}] = R[\mathbf{K}_{t\to s}] \circ R[\mathbf{K}_{s\to r}]$ | Cat B (conditional, CV-1.15) | B | (GK) requires CV-1.14 T-CC-StableK-Kernel promotion; currently working-candidate |
+| **P-SINKHORN-STABILITY-CONDITIONAL** | $R[M^{\mathrm{sink}}]$ stable under (H-SINK)+(MARGIN)+(SMALL-SINK-GAP) | Cat B | B | H-SINK is a regime hypothesis; SMALL-SINK-GAP explicit |
+| **P-ACTION-PATH-INHERITANCE** | action cost = path inheritance interpretation (refinement framing) | Interpretation | — | not counted in tally |
+
+**OP-0012 sub-structure update (CV-1.15):**
+
+- OP-0012-CC: Cat B path (unchanged; canonical §13 Cat B body of T-Temporal-Identity at line 1779).
+- **OP-0012-SINK (NEW SUB-LABEL):** OPEN. Cost-level $\delta_{\mathrm{eff}}$ blocker closed *under action direct-cost redefinition* (L-ACTION-DELTA-EFF-ZERO Cat A); plan-level scaling-gap blocker OPEN. Required: L-δ_eff-SINK (Cat C target), L-Eff-Sinkhorn (Cat C target).
+- OP-0012-Kjump: Cat C, depends on OP-0008, OP-0021.
+
+**Did NOT close:** OP-0012 overall (PARTIALLY STRUCTURED); Sinkhorn-scaled plan semigroup (T-SINKHORN-PLAN-SEMIGROUP-FAILS: proved failure stands); canonical §8.5 $M_{t\to s}$ redefinition (deferred CV-1.16+); OP-0011 (resolved CV-1.12, unchanged); OP-0008, OP-0005-DYN, OP-0021 (untouched).
+
+**Numerical sanity check:** exp89 (3 cases A/B/C) ALL PASS — endpoint nonzero, action zero, soft ≈ machine ε, sinkhorn nonzero. Numerical validation only, not proof; Cat A judgments rest on closed-form proofs in `THEORY/working/CV115_ACTION_TEMPORAL_COST/` files 01–04.
+
+*Audit reference:* `THEORY/logs/daily/2026-05-13/02_development.md + 03_integration_and_new_open.md + 04_proposed_amendments.md`. Seal: `THEORY/canonical/CV-1.15_SEAL.md`.
+
+---
+
+### CV-1.16 Canonical Additions — H-MORSE-Local Closure Package (W7-Day5 extension, 2026-05-14)
+
+*CV-1.16 adds 1 Cat A entry (L-CLOSURE-LIFT) + 2 Cat B entries (L-HMORSE-LOCAL unconditional; L-HMORSE-DECOMP conditional on b_D=0 + canonical A3) + 1 Cat C entry (L-BOUNDARY-MODE-EXCLUSION). **OP-HMORSE-BROADNESS CLOSED Cat A** by Theorem B2 (operator-norm broadness via degree-weighted self-adjointness of stochastic operator $P$). T7-Enhanced (canonical Cat A) preserved as historical context; L-CLOSURE-LIFT supersedes as the broadness statement. Source: 5-document chain `THEORY/logs/daily/2026-05-14/40–44, 49_broadness_*.md` + `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`; numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` 15/15 PASS. User decisions (plan-mode 2026-05-14): D-HMORSE-LOCAL (C2′) active-set form (over strict-interior (C2)); 4-lemma promotion package. Count: +1A, +2B, +1C → **68A / 18B / 6C / 5R = 97 claims** (~70% fully proved).*
+
+| ID | Statement | Status | Cat | Conditions |
+|---|---|---|---|---|
+| **L-CLOSURE-LIFT** | $\|J_\mathrm{Cl}\|_{D\to D} \leq a_\mathrm{cl}/4 < 1$; $(I - J_\mathrm{Cl})^\top D (I - J_\mathrm{Cl}) \succeq (1 - a_\mathrm{cl}/4)^2 D$ uniformly | Cat A (CV-1.16, 2026-05-14) | A | $G$ connected; A3 ($a_\mathrm{cl} < 4$); $u^* \in [0,1]^n$ |
+| **L-HMORSE-LOCAL** | $\mu_\mathrm{min}(\Pi_T^\mathrm{free} H_\mathcal{E}(u^*) \Pi_T^\mathrm{free}) \geq c_\mathrm{HML}(\lambda_\mathrm{cl}, \lambda_\mathrm{sep}, \beta, a_\mathrm{cl}, c^*, d_\mathrm{min}/d_\mathrm{max}) > 0$ | Cat B unconditional (CV-1.16) | B | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5); $b_D = 0$; A3; T8-supercritical |
+| **L-HMORSE-DECOMP** | $H_\mathcal{E} = H_\mathrm{bd} + H_\mathrm{cl} + H_\mathrm{sep}$ with explicit per-term tangent bounds | Cat B conditional (CV-1.16) | B | D-HMORSE-LOCAL (C1)(C2′)(C3); $b_D = 0$ (CN4); A3 |
+| **L-BOUNDARY-MODE-EXCLUSION** | At interior single-formation T8-supercritical minimizers, $\|v_\mathrm{min}\|_{\partial X}^2/\|v_\mathrm{min}\|^2 \leq 1/2 + O(\alpha/\beta)$ generically | Cat C (CV-1.16) | C | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4); non-empty $\partial X$; SKETCH-level perturbation theory |
+
+**D-HMORSE-LOCAL Definition** registered in CV-1.16. (C1)–(C5) per canonical.md §13 Cat B body. **(C2′) active-set form** preferred over strict-interior (C2) for canonical use; numerical evidence (`exp_hmorse_broadness_full_spectrum.py`) directly satisfies (C2′).
+
+**OP-HMORSE-BROADNESS retirement.** Originally registered 2026-05-14 morning (HIGH severity, blocker for L-CLOSURE-LIFT Cat A unconditional). CLOSED Cat A 2026-05-14 evening via Theorem B2 (`THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`) + 15/15 numerical PASS. Three mathematically independent approaches converged: (a) Perron-Frobenius / Collatz-Wielandt (`41_*.md`), (b) operator-norm degree-weighted (`42_*.md`, primary), (c) numerical full-spectrum (`43_*.md`). Result: L-CLOSURE-LIFT Cat A promoted; OP-HMORSE-BROADNESS removed from active OP list.
+
+**Did NOT close.** OP-HMORSE-LOCAL-A (Cat A path for L-HMORSE-LOCAL; requires sharper residual bound + OP-HMORSE-SBM robustness). OP-HMORSE-SADDLE (separate saddle-point Hessian regularity; required for full Eyring-Kramers prefactor). OP-HMORSE-SBM (numerical robustness extension to SBM/barbell/small-world). OP-0005-DYN (overall Kramers rates; partially affected — L-HMORSE-LOCAL provides Cat B path for symmetry-broken interior single-formation regime, not full multi-formation).
+
+**Numerical sanity check.** `exp_hmorse_broadness_full_spectrum.py` (created 2026-05-14): 15-config sweep (3 grids × 5 β values); 15/15 broadness PASS + 15/15 lift PASS. Closure-component $\mu_\mathrm{min} \in [0.45, 0.79]$ exceeding Theorem B2 standard-form prediction by ~50–100×. Full-Hessian $\mu_\mathrm{min}(\Pi_T H_\mathcal{E} \Pi_T) \in [0.13, 3.49]$, all positive. Test suite: 215 passed, 1 xfailed (no regressions).
+
+*Methodological highlight.* Two-pass closure pattern: (1) morning Track 2 produces Cat B SKETCH with **explicit named CONJECTURE-broadness**; (2) evening extension attacks the CONJECTURE directly via 3 independent approaches, closing Cat A. **Honest Cat B SKETCH + named CONJECTURE → clean evening closure**. Compare V-AFD/R-2 (5/12, 5/13) which made unsubstantiated PROVED claims that crumbled — this session's morning was honest about uncertainty.
+
+*Audit reference:* `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+
+---
+
 ## Active Claims (Not Yet Canonical) / Resolved Claims
 
 | C-ID | Name | Status | Category (Intended) | Proof (P-ID) | Experiments | Notes |
@@ -514,7 +575,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | **OP-0010** | Bind Generalization | Medium | OPEN (T-Bind-Proj/Full now Cat A per Phase 13 — see W6 G2 audit; OP-0010 retains for any further generalization questions) |
 | **OP-0011** | Transport kernel exact form | Medium | **RESOLVED** (W7-CV1.13, 2026-05-10): Steps 1–3 all closed Cat A / Cat A conditional (Theorem Partial-H-SINK + S-C1 external audit CERTIFIED with margin correction); T-Temporal-Identity (c) Cat A conditional. |
 | **OP-SB1-DEEP** | Deep-core density $\rho_\mathrm{deep} \geq 0.84$ unconditional | Low | **DOWNGRADED NON-BLOCKING** (W7-CV113, 2026-05-10): blocking condition removed — Lemma S-B1-Weak (ρ_deep > 0.003) Cat A proves Δ_sep > 0; quantitative magnitude Cat B conditional under HWF-1–3 |
-| **OP-0012** | Persistence composition | Medium | PARTIALLY STRUCTURED (Session V, 2026-05-06): OP-0012-CC compositional consistency Cat B path |
+| **OP-0012** | Persistence composition | Medium | PARTIALLY STRUCTURED (Session V, 2026-05-06); sub-structure refined CV-1.15 (2026-05-14): OP-0012-CC Cat B path; **OP-0012-SINK OPEN** (cost-level blocker closed under action redef; scaling-gap remains); OP-0012-Kjump Cat C |
 | **OP-0013** | Closure operator convergence rate | Medium | OPEN |
 | **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file pre-2026-05-04 unification) |
 | **OP-0021** | Stochastic Dynamics | Low | UNDER INVESTIGATION (exp54–exp59 Kramers rate theory) |
@@ -770,13 +831,36 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 #### OP-0012: Persistence Composition
 
+**Quick status (CV-1.15):** PARTIALLY STRUCTURED (Session V, 2026-05-06); sub-structure refined CV-1.15 (2026-05-14). Three sub-labels: **OP-0012-CC** (Cat B path), **OP-0012-SINK** (OPEN, refined), **OP-0012-Kjump** (Cat C). Overall problem **OPEN** — full general-K-jump composition unresolved.
+
 **Statement.** T-Persist-Full (composition of persistence across 3+ time steps) is Cat C (very conditional). Can general composition formula be proved?
 
 **Impact.** Affects long-timescale predictions; currently only T-Persist-1 (two-step) fully proved; limits temporal theory.
 
-**Status:** PARTIALLY STRUCTURED (Session V, 2026-05-06). OP-0012-CC candidate defined: under stable-K + margin condition (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ is conjectured to hold exactly. Full general composition (arbitrary K-jumps) remains Cat C. Probabilistic (Markov/Chapman-Kolmogorov) formulation written. Proof of OP-0012-CC pending.
+**Sub-case A — OP-0012-CC (compositional consistency, Cat B path):** under stable-K + margin (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ holds. Cat B via Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`) and canonical §13 T-Temporal-Identity composition note. See also **T-CC-StableK-Kernel** (working candidate, CV-1.14: `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`) — not yet canonical.
+
+**Sub-case B — OP-0012-SINK (Sinkhorn temporal scaling compatibility, OPEN):** *(CV-1.15 update, 2026-05-14.)*
+
+*Statement.* Independent Sinkhorn-scaled plans $M^{\mathrm{sink}}_{t\to s}, M^{\mathrm{sink}}_{s\to r}, M^{\mathrm{sink}}_{t\to r}$ — computed separately on $(u_t, u_s), (u_s, u_r), (u_t, u_r)$ — do not satisfy temporal composition: $M^{\mathrm{sink}}_{s\to r} \cdot M^{\mathrm{sink}}_{t\to s} \neq M^{\mathrm{sink}}_{t\to r}$ generically (cf. canonical §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS).
+
+*CV-1.15 contribution to OP-0012-SINK structure:*
+- Cost-level $\delta_{\mathrm{eff}}$ blocker (gap between direct and effective costs) is **closed** under the redefinition $c^{\mathrm{direct}} := c^{\mathrm{act}}$ (L-ACTION-DELTA-EFF-ZERO Cat A; L-SOFT-ACTION-DELTA-EFF-ZERO Cat A).
+- Plan-level *scaling-gap* blocker is **not closed**: the obstruction $b_1 \odot a_2 \neq c \cdot \mathbf{1}$ remains.
+
+*Remaining required lemmas:*
+- **L-δ_eff-SINK** (Cat C target): quantitative bound on $\delta_{\mathrm{eff}}^{\mathrm{sink}} := \|c_{\mathrm{direct}}(u_t, u_r) - c^{\mathrm{eff}}(M^{\mathrm{sink}}_{t\to s}, M^{\mathrm{sink}}_{s\to r})\|_\infty$ in terms of marginals, $\varepsilon_{\mathrm{OT}}$, structural separation $\Delta_{\mathrm{sep}}$.
+- **L-Eff-Sinkhorn** (Cat C target): quantitative bound on $\|M^{\mathrm{sink}}(\mathbf{K}_{t\to r}) - M^{\mathrm{sink}}_{s\to r} \cdot M^{\mathrm{sink}}_{t\to s}\|_\infty$ in terms of $\|b_1 \odot a_2 - c \cdot \mathbf{1}\|$.
+
+*Path to Cat B (proposed for CV-1.16+):* L-δ_eff-SINK + L-Eff-Sinkhorn both reach Cat C → under stable-K + margin + small-sink-gap → conditional Cat B theorem T-CC-StableK-Sinkhorn.
+
+*Adjacent candidate (not registered to avoid OP-0022 collision with existing "Continuous-Time Limit" OP):* continuous-time action limit (Γ-convergence of discrete-time $\mathcal{A}_{i:k}$ to a continuous action functional on path space). Deferred CV-1.16+. **Naming note:** existing OP-0022 already denotes "Continuous-Time Limit" (theorem_status.md line 843); this candidate would be a refinement within OP-0022 rather than a new OP — naming to be settled CV-1.16+.
+
+**Sub-case C — OP-0012-Kjump (K-jump general, Cat C):** depends on OP-0008 (σ-Inherit, MERGE/SPLIT) and OP-0021 ($T_*$ registration; note: this references the H-T* "T_* normalization" usage in hypothesis_tree.md HT-3.6, not the "Stochastic Dynamics" OP-0021 row at line 837 of this file — pre-existing OP-0021 dual-naming inconsistency flagged, to be reconciled CV-1.16+). Unchanged from CV-1.13.
+
+**Sub-case D — OP-0012-Markov (Markov-kernel formulation):** deferred post OP-0021 reconciliation. Unchanged.
+
 **Severity:** Medium (temporal extension).
-**References:** canonical.md §13 T-Persist-Full; `temporal_identity_perscomp_transport.md` §7.2.
+**References:** canonical.md §13 T-Persist-Full + CV-1.15 Cat A/B entries; `temporal_identity_perscomp_transport.md` §7.2; canonical.md §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS.
 
 #### OP-0013: Closure Operator Convergence Rate
 
