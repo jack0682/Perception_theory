@@ -1,0 +1,142 @@
+{
+  "status": "ok",
+  "config": {
+    "grid_rows": 15,
+    "grid_cols": 15,
+    "beta": 50.0,
+    "vol_frac": 0.3,
+    "lam_rep": 10.0,
+    "n_steps": 51,
+    "persistence_threshold_used": 0.05
+  },
+  "merge_event": {
+    "s_minus": 42,
+    "s_plus": 43,
+    "alpha_minus": 0.84,
+    "alpha_plus": 0.86,
+    "K_vals_per_step": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "lemma_B2_centroid": {
+    "predicted": [
+      3.400463140213335,
+      8.997902636082674
+    ],
+    "measured": [
+      3.161823390403623,
+      8.888389708421949
+    ],
+    "abs_error": 0.2625681083339432,
+    "rel_error_percent": 2.7832070197061567,
+    "pass_threshold_1pct": false,
+    "pass_threshold_5pct": true
+  },
+  "lemma_B3_orientation": {
+    "predicted": [
+      [
+        724.657059280672,
+        18.988941898886644
+      ],
+      [
+        18.988941898886644,
+        902.3716740321969
+      ]
+    ],
+    "measured": [
+      [
+        651.9777633489042,
+        17.78213114726273
+      ],
+      [
+        17.78213114726271,
+        872.9190478387081
+      ]
+    ],
+    "frob_error": 78.43882986895795,
+    "rel_error_percent": 7.197449531721831,
+    "pass_threshold_2pct": false,
+    "pass_threshold_5pct": false
+  },
+  "pre_merge_attrs": {
+    "bar_1": {
+      "mass": 67.49999999999977,
+      "centroid": [
+        3.2727700377440847,
+        8.858011294742562
+      ],
+      "support_size": 225,
+      "bar_length": 0.9196758880109531
+    },
+    "bar_2": {
+      "mass": 4.283186972193394,
+      "centroid": [
+        5.412816201760976,
+        11.20249132244161
+      ],
+      "support_size": 5,
+      "bar_length": 0.06086078302886622
+    }
+  },
+  "post_merge_attrs": {
+    "merged_bar": {
+      "mass": 67.49999999999984,
+      "centroid": [
+        3.161823390403623,
+        8.888389708421949
+      ],
+      "support_size": 225,
+      "bar_length": 0.9290976950776726
+    }
+  }
+}

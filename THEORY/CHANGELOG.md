@@ -2,6 +2,299 @@
 
 ---
 
+## 2026-05-13 — R-2 ARCHIVED after C2 Sub-threshold Merger Demonstration Failed
+
+**Trigger:** Phase C2 sub-threshold merger demonstration (R2_op_R2_9 §12-§13) failed to confirm R-2's load-bearing scope extension. Per user decision rule recorded same day ("C2 실패 시 즉시 archive"), R-2 archives alongside V-AFD.
+
+### Summary
+
+- **R-2 ARCHIVED.** Entire `THEORY/working/R2_DCR/` directory (8 files, ~3,800 lines, ~140 KB) moved to `_archive/r2_dcr_2026-05-13/`. Directory `THEORY/working/R2_DCR/` removed.
+- **Discard reason.** Three audit rounds converged on the same diagnosis: R-2 produces no new canonical Cat A/B mathematics. Specifically:
+  - Round 2 self-audit: 10/10 PASS — but missed deeper issues.
+  - Round 3 external 3-critic audit: all PARTIAL, identified R-2 as carrying V-AFD's "Cat-A-but-by-construction" failure in more sophisticated form.
+  - Round 4 Explore canonical alignment audit: discovered R-2 Lemmas B2/B3 are *mathematically identical* to existing canonical `MF/sigma_inherit_k_jump.md` §3.3.
+  - Phase C2 decisive test: `exp_r2_subthreshold_merger.py` showed R-2's sub-threshold scope extension is technically real (PD_0 has 2 bars when K_act=1) but NOT load-bearing — no measurable downstream observable (centroid jump |Δc| = 0.0000 vs predicted 0.36-0.52).
+- **Clean boundary.** R-2 did not modify any canonical file (canonical.md, theorem_status.md, hypothesis_tree.md). AFD-0 (parent working folder) untouched. No non-R-2 working file references R-2.
+- **Net count:** unchanged. CV-1.13 remains sealed. 59A/14B/5C/5R = 83 claims preserved.
+- **OP-R2-1 .. OP-R2-10** (10 OPs) and OP-R2-9-* (6 sub-OPs) discarded along with the archive.
+
+### Three audit rounds, three failure-mode discoveries
+
+| Round | Method | Discovery |
+|---|---|---|
+| 2 | Internal self-audit (10 questions) | 10/10 PASS — but did not catch any of the substantive problems below |
+| 3 | External 3-critic opus audit (DECL-1.0 / math / V-AFD) | All PARTIAL; R-2's theorems mostly definitional; carries V-AFD failure mode |
+| 4 | Explore canonical alignment (focused on MF/sigma_inherit_k_jump.md) | Lemmas B2/B3 are canonical's existing formulas, restated in bar-attribute language |
+| C2 | Decisive test: sub-threshold merger demonstration on small graph | R-2's only remaining unique contribution (scope extension) is technically real but NOT load-bearing — no measurable centroid jump in §12 construction |
+
+**Methodological lesson preserved with the archive:** Cross-reference against existing canonical *working* content is a separate, necessary audit dimension. Internal/external/mathematical/framing audits can all pass while missing: "is this content already canonical, just in different language?"
+
+### What R-2 produced that is preserved
+
+Despite the archive, R-2's contributions are not zero:
+
+1. **Numerical experiments** (`CODE/experiments/exp_r2_sigma_inheritance.py`, `exp_r2_subthreshold_merger.py`) remain in CODE/ as standalone evidence. exp_r2_sigma_inheritance documents practical accuracy of canonical OP-0008-MERGE Cat B formulas on realistic SCC pathways (2.78% centroid, 7.20% orientation error vs exp84's idealized 0.4%).
+
+2. **Lemma R2-D-R2-4-verify** (PROVED): formal verification that canonical `K_act = #PersComp` equals `K_read^{ρ_pers, H_0}` for the fixed `ρ_pers`. Closes an audit trail.
+
+3. **Vocabulary for potential R-3 absorption** (S_0 descriptor, K_read readout, D0/D1/D2 phenomenology, "K is read, not selected" slogan) — extractable from archive if useful in future canonical revision.
+
+4. **R2_DISCIPLINE.md** — 6-rule proof discipline reference, methodologically useful for future working-layer reframes.
+
+### V-AFD ↔ R-2 parallel: two-month pattern
+
+V-AFD (2026-05-12) and R-2 (2026-05-13) followed near-identical paths:
+- Both: aspirational working-layer reframes of K-language.
+- Both: internal audit PASS (V-AFD 15/15, R-2 10/10).
+- Both: external review revealed deeper issues.
+- Both: decisive test failed (V-AFD by ARCHIVE_NOTE discovery; R-2 by §12 numerical).
+- Both: archive after ~24h lifetime.
+- Both: zero canonical edit.
+- Both: AFD-0 untouched.
+
+**Pattern**: Working-layer reframes that try to advance the fundamental question by *language refactoring* tend to fail at producing load-bearing math. The fundamental question requires *direct attack* on mathematical bottlenecks, not language reorganization.
+
+### Files
+
+| File | Action |
+|---|---|
+| `THEORY/working/R2_DCR/` (directory + 8 .md files) | **REMOVED** |
+| `_archive/r2_dcr_2026-05-13/` (directory) | **CREATED** — 8 archived R-2 files |
+| `_archive/r2_dcr_2026-05-13/ARCHIVE_NOTE.md` | **CREATED** — frozen archive note |
+| `THEORY/logs/daily/2026-05-13/51_r2_archive.md` | **CREATED** — daily log |
+| `THEORY/CHANGELOG.md` | **UPDATED** (this entry) |
+| `CODE/experiments/exp_r2_sigma_inheritance.py` | NOT moved (numerical reference preserved) |
+| `CODE/experiments/exp_r2_subthreshold_merger.py` | NOT moved |
+| `CODE/experiments/results/exp_r2_*.json` | NOT moved |
+| All canonical files | NOT modified |
+
+### Next direction recorded for future session
+
+Per both V-AFD and R-2 archive notes, the recommended next direction is the maintainer's own `THEORY/logs/daily/2026-05-13/10_scc_current_state_and_next_expansion_report.md` §7.5 **Roadmap C**:
+
+1. **H-MORSE Cat A** (canonical critical-point Hessian positivity, currently Cat B target).
+2. **OP-0021 T_*** (Mori-Zwanzig route, 5 gaps).
+3. **Package II Eyring-Kramers Γ_K** (post-H-MORSE).
+4. **T-σ-Inherit MERGE-σ** (Wigner-projection W9+, canonical OP-0008-MERGE-σ Cat C → Cat B).
+5. **T-K-Select-DYN Cat A** (Q4 closure of DECL-1.0).
+
+Both V-AFD and R-2 chose *not* to take this frontal-attack path. After two consecutive archive cycles, the path forward is to take it.
+
+### Slogan
+
+> Both V-AFD and R-2 were second-order retreats — projections and language refactors that hoped to bypass the hard mathematical work. Both failed to produce load-bearing canonical content. The hard math (H-MORSE, Eyring-Kramers, σ_standard Wigner-projection) remains. The next direction is *toward* the hard math, not *around* it.
+
+---
+
+## 2026-05-13 — R-2 Honest Realignment: Lemmas B2/B3 are Canonical's, R-2 is Language Refactor
+
+**Trigger:** Post-Phase-B follow-up Explore audit cross-checked R-2 Lemmas B2/B3 against existing canonical working content. Discovered that B2 (centroid mass-weighted) and B3 (orientation parallel-axis) are *mathematically identical* to existing canonical `THEORY/working/MF/sigma_inherit_k_jump.md` §3.3(a)(b).
+
+### Summary
+
+- **R-2's "new positive Cat B math" claim withdrawn.** R-2 does not produce new mathematics; B2 and B3 are canonical's existing formulas restated in PD_0-bar-attribute language instead of K-tuple formation language.
+- **R-2's genuine contributions confirmed** (3 items, all non-mathematical-novelty):
+  1. **Bar-attribute language** — scope extension to sub-threshold mergers, non-transversal mergers, continuous bar-attribute trajectories (per R2_op_R2_9 §6.2).
+  2. **Explicit Cat B / Cat C stratification** of σ-inheritance — separating deterministic centroid+orientation from Wigner-dependent σ_standard.
+  3. **Numerical stress-test on realistic SCC pathway** — exp_r2_sigma_inheritance: 2.78% centroid / 7.20% orientation error on canonical K=2→K=1 linear interpolation (compare exp84: 0.4% on idealized Gaussians).
+- **R-2's load-bearing value pending C2 demonstration.** R-2 is classified as a *language refactor with scope extension*. Whether it deserves working-layer survival vs archive depends on the Phase C2 sub-threshold merger demonstration (R2_op_R2_9 §12 + exp_r2_subthreshold_merger.py): does R-2's scope extension capture a structural event invisible to K-tuple AFD-0?
+- **Canonical untouched.** CV-1.13 stays sealed. No canonical edit proposed. 59A/14B/5C/5R = 83 claims unchanged.
+
+### Why prior audits missed this
+
+The Round-1 self-audit (10/10 PASS) and the Round-2 3-critic external audit (3 PARTIAL verdicts) both focused on R-2's *internal* consistency, DECL-1.0 alignment, mathematical correctness, and V-AFD failure-mode avoidance. None of them was directed to compare R-2 against existing canonical *working* content. The follow-up Explore agent, specifically tasked with that comparison, found the alignment in one session.
+
+**Lesson:** Cross-referencing against existing canonical working content (`MF/`, `SF/`, `temporal/`, etc.) is a separate, necessary audit dimension. Internal self-audit + external review against the fundamental question + mathematical correctness check can all pass while missing: "is this content already canonical, just in different language?"
+
+### Patches applied (Round 4 — honesty patches)
+
+| File | Patch |
+|---|---|
+| `R2_op_R2_9_sigma_inheritance.md` §0.5 | NEW alignment block citing canonical §3.3(a)(b)(d) verbatim; explicit R-2 vs canonical formula comparison |
+| `R2_op_R2_9_sigma_inheritance.md` §7 verdict | Reframe: "R-2 graduates conditionally" → "R-2 is language refactor with scope extension; load-bearing test in §12 sub-threshold demo" |
+| `R2_audit.md` | Round-4 addendum — alignment finding + classification recalibration |
+| `R2_external_audit.md` | Round-2 external audit addendum — alignment finding, lesson about audit dimensions, decisive test now in §12 |
+| `THEORY/CHANGELOG.md` | This entry |
+
+### Phase C still pending
+
+- **C2 theoretical construction**: `R2_op_R2_9_sigma_inheritance.md` §12 — sub-threshold merger demonstration on small graph.
+- **C2 numerical**: `CODE/experiments/exp_r2_subthreshold_merger.py` — verify K_read invariance + R-2 bar-attribute capture of structural event.
+- **C3 final classification**: R-2 graduates (load-bearing language layer) OR archives (glossary-only).
+
+If C2 fails (K-tuple form can express the same event, or R-2 form predicts wrongly), per user decision: R-2 archives alongside V-AFD immediately.
+
+### Honest framing of R-2 today
+
+R-2 began as a working-layer reframe attempting to remove K from primitive status. Phase A/B produced:
+- 5 definitions (D-R2-1..5) that classify u^*, S_0, readouts cleanly.
+- 6 theorems (R2-1..6) that are mostly definitional + 1 SKETCH stability via CSEH 2007.
+- 3 lemmas (B2, B3, B4) for σ-inheritance.
+- 1 numerical experiment.
+
+Of these, the *only* substantive new content turns out to be:
+- The bar-attribute language (D-R2-6, D-R2-7).
+- The stratification (Cat B / Cat C split of σ-inheritance).
+- The numerical stress-test bounds (3% / 7% on canonical pathway).
+
+The Lemmas B2/B3 are canonical's. R2-1, R2-2, R2-5, R2-6 are definitional. R2-3 is CSEH-derived.
+
+This is not a failure — it is the *honest* status. R-2 may or may not deserve working-layer survival, but its actual content is now correctly described.
+
+### Slogan revision
+
+Previous (pre-alignment): "R-2 produces new Cat B math in strictly more general language."
+
+Current (post-alignment): "R-2 is a language refactor with scope extension. Whether it's load-bearing or glossary-only is decided by C2 sub-threshold demonstration."
+
+---
+
+## 2026-05-13 — R-2 Differentiated Cohesion Readout (Working-Layer Draft v0.1)
+
+**Trigger:** Phenomenological re-grounding after V-AFD discard. User articulated two key insights: (1) the sensory field arrives *already weakly differentiated*; cohesion stabilizes within this differentiation rather than producing it; (2) counting is *post-cohesive readout*, not part of cohesion itself. R-2 formalizes these as a working-layer reframe of SCC's K-language.
+
+### Summary
+
+- **R-2 CREATED.** Working-layer reframe at `THEORY/working/R2_DCR/`. The primitive remains `u : X → [0,1]` (per DECL-1.0). K appears only as a *readout* `K_read^{θ,π}(u^*) = κ_{θ,π}(S_0(u^*))` parametrized by persistence threshold `θ` and counting protocol `π`. K is *read*, not *selected*.
+- **Invariant rule.** `u^* → S_0(u^*) → I(S_0(u^*))` (phenomenon → structural descriptor → readout). Count is one `I`. Other readouts (topological, relational, spatial, type, semantic) are equally valid.
+- **5 new working-layer definitions** (D-R2-1 through D-R2-5): Cohered Field State, Minimal Differentiated Structure `S_0(u) = (PD_0(u), MT(u))`, Structural Readout, Counting Readout, Structural Dynamics. Each with explicit domain / codomain / classification (phenomenon / descriptor / readout).
+- **6 theorem / proposition candidates** (R2-1..R2-6) with honest status labels:
+  - R2-1 PROVED (K_read factors through S_0, definitional).
+  - R2-2 PROVED (Q_morph factors through S_0, from canonical §7.1).
+  - R2-3 PROOF SKETCH (counting readout local stability via CSEH 2007).
+  - R2-4 PROVED (counting transition ⟹ structural transition; formalizes "K-jump is downstream of structure").
+  - R2-5 PROPOSITION (multi-formation tuples are readout outputs).
+  - R2-6 projection PROVED, strict inequality PROVED BY EXAMPLE, general strictness CONJECTURE.
+- **10 new open problems** (OP-R2-1..10). Two H-severity: OP-R2-4 (temporal × structural inheritance composition, connects to Q5–Q6 of DECL-1.0) and OP-R2-9 (σ-Inheritance restatement, reformulates OP-0008 HIGH-severity canonical OP in R-2 language).
+- **Reinterpretations proposed (not executed).** K_field as computational truncation, K_act as `K_read^{θ_act, H_0}`, T-K-Select-PF/OBS as readout-distribution / readout-conditional statements, K-jump as derived event, σ-Inheritance as bar/branch inheritance, AFD-0 `V_form` / `G_form` as structural equivalence classes.
+- **H-MORSE repositioned.** Primary role shifted from EK-prefactor support to structural-readout regularity. CV-1.14 H-MORSE programme content unchanged; only its *primary motivation* shifts. EK theory becomes secondary application.
+- **Clean boundary.** R-2 does NOT modify canonical, theorem_status, hypothesis_tree, AFD-0 working files, or any other working content. R-2 is parallel working-layer content only.
+- **Self-audit 10/10 PASS** with explicit V-AFD failure-mode cross-check (CC1/CC2/CC3). External audit required before any downstream action.
+- **Net count:** unchanged. CV-1.13 remains sealed. 59A/14B/5C/5R = 83 claims.
+
+### What R-2 does
+
+| Aspect | Before R-2 | After R-2 (working-layer proposal) |
+|---|---|---|
+| Primitive of state | `u` (canonical) but with K creeping in via AFD-0 / OP-0005 / V-AFD | `u` only (restored to DECL-1.0 baseline) |
+| K | Primitive selection target (OP-0005) | Readout `K_read^{θ,π}` |
+| State space | `Σ_m` with `Σ_M^K` parallel multi-formation construction | `Σ_m` (single, K-agnostic) |
+| Differentiated structure | Implicit (PersComp, persistence) | Explicit (`S_0 = (PD_0, MT)`) |
+| K-selection problem | OP-0005 ("which K?") | OP-0005R ("which structure? which readout?") |
+| K-jump | Primitive discrete event | Derived: readout transition caused by structural transition (Theorem R2-4) |
+| AFD-0 nodes | K-indexed `F_1, …, F_K` | Structural equivalence classes `[S_0(u^*)]_~` (proposed §7, not executed) |
+| H-MORSE primary role | EK prefactor support | Structural-readout regularity |
+| σ-Inheritance | "Which `F_i` inherits σ?" | "Which PD_0 bar / MT branch inherits σ-feature?" (OP-R2-9) |
+
+### How R-2 avoids V-AFD's failure modes
+
+V-AFD self-audited 15/15 PASS and was still discarded for being misaligned with the fundamental question. R-2 cross-checks against this:
+
+1. *Vector projection that sectorizes / counts*: R-2 does the opposite — projects to richer descriptor `S_0`, then *post*-reads counting.
+2. *K_act as state-space coordinate*: K appears only as a readout, never as a coordinate.
+3. *Self-audit only*: R-2's audit (`R2_audit.md`) explicitly requires external audit before any action.
+4. *Scope creep into external bridges (T41..T47)*: R-2 baseline restricts to D-R2-1..5, R2-1..6. No external framework bridges.
+5. *Tool-for-tool's-sake*: R-2's tool (`S_0`) follows the question (D0/D1/D2 phenomenology), not vice versa.
+
+### Phenomenological framework
+
+R-2 explicitly separates three differentiation layers:
+- **D0** pre-cohesive sensory differentiation (visibility condition, seed for cohesion).
+- **D1** cohesive differentiation (SCC's true domain; the weak-diff → cohesion → sharper-diff feedback loop).
+- **D2** post-cohesive interpretive differentiation (readouts; counting belongs here).
+
+Two named principles formalize the separation:
+- **Differentiated Cohesion Principle**: a perceptual field is not first parsed into K objects; weak differentiation gives rise to stabilized cohesion through D1, then admits multiple readouts in D2.
+- **Counting-after-Cohesion Principle**: numerical count is not primitive; it is a post-cohesive readout depending on (θ, π).
+
+### Files
+
+| File | Action |
+|------|--------|
+| `THEORY/working/R2_DCR/README.md` | **CREATED** — folder index + slogan + scope discipline |
+| `THEORY/working/R2_DCR/R2_differentiated_cohesion_readout.md` | **CREATED** — main spec (15 sections, ~900 lines) |
+| `THEORY/working/R2_DCR/R2_proofs.md` | **CREATED** — proofs for R2-1..R2-6 with assumptions and failure modes |
+| `THEORY/working/R2_DCR/R2_audit.md` | **CREATED** — 10-Q self-audit (all PASS) + V-AFD cross-check |
+| `THEORY/working/R2_DCR/R2_summary_for_next_agent.md` | **CREATED** — 5-minute handoff |
+| `THEORY/logs/daily/2026-05-13/50_r2_dcr_creation.md` | **CREATED** — session log |
+| `THEORY/CHANGELOG.md` | **UPDATED** (this entry) |
+| `THEORY/canonical/*.md` | NOT modified |
+| `THEORY/working/AFD_0/*.md` | NOT modified |
+| All other working content | NOT modified |
+
+### Next direction (recorded, not yet executed)
+
+Priority A: **external audit of R-2** before any downstream action. Use fresh-context auditor (oh-my-claudecode:critic or equivalent). Test: does R-2 advance DECL-1.0's fundamental question? Are R2-1..6 proofs correct? Does R-2 avoid V-AFD's failure modes?
+
+Priority B: **OP-R2-9 σ-Inheritance restatement** — define σ as PD_0-bar / MT-branch attribute; inheritance via T-Temporal-Identity bar matching. Directly attacks OP-0008 Q6 in R-2 language.
+
+Priority C: **OP-R2-4 temporal × structural composition** — compose T-Temporal-Identity (Cat A) with structural transition. Bridge to Q5–Q6.
+
+Priority D: **AFD-0-R2 parallel folder** proposing §7 reframe (`V_diff` instead of `V_form`). Does NOT modify AFD-0 itself.
+
+NOT yet: R-3 (canonical revision). Premature until R-2 audit + at least one downstream successful application.
+
+### Slogan
+
+> SCC is not a theory of selecting K objects.
+> SCC is a theory of how a single cohesion field stabilizes into differentiated structure, and how that structure becomes readable in multiple ways.
+> Counting is one readout. K is read, not selected.
+
+---
+
+## 2026-05-13 — V-AFD Discarded and Archived
+
+**Trigger:** Author decision after re-grounding analysis against DECLARATION.md (DECL-1.0). V-AFD identified as a second-order retreat from the fundamental question rather than a direct contribution to it.
+
+### Summary
+
+- **V-AFD ARCHIVED.** Entire `THEORY/working/AFD_0/V_AFD/` directory (19 files, ~8000 lines, ~430 KB) moved to `_archive/v_afd_2026-05-12/`. Directory `THEORY/working/AFD_0/V_AFD/` removed.
+- **Discard reason.** V-AFD did not answer SCC's fundamental question ("어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"). It answered a derivative question that was itself the output of two consecutive retreats: (1) CV-1.14 Package II exact EK rates → AFD-0 transition ordering (H-MORSE avoidance, 2026-05-12 morning); (2) AFD-0 → V-AFD vector reformulation (GPT-5 meta-research suggestion, 2026-05-12 evening). V-AFD-T9 (Information Loss Theorem) is an honest admission that V-AFD's projection is non-injective by construction — a *result*, not an *answer* to the fundamental question.
+- **Clean boundary.** V-AFD did not modify any canonical file (canonical.md, theorem_status.md, hypothesis_tree.md). No non-V-AFD working file references V-AFD. AFD-0 (parent) is untouched. Dependency graph severance has no collateral damage.
+- **Net count:** unchanged. CV-1.13 remains sealed. 59A/14B/5C/5R = 83 claims.
+- **OP-VAFD-001..026 (~26 problems)** discarded along with the archive. None were dependencies of non-V-AFD work.
+
+### What V-AFD touched (and didn't)
+
+Q1..Q6 epistemic question contribution from V-AFD:
+
+| Q | DECLARATION question | V-AFD contribution |
+|---|---|---|
+| Q1 | Boundary emergence | None (T8 already Cat A) |
+| Q2 | Multi-formation coexistence | None |
+| Q3 | Stochastic dynamics | None (Package I already Cat A) |
+| Q4 | K-selection | Partial reformulation (V-AFD-T17, T20). Did not resolve OP-0005. |
+| Q5 | Temporal identity | Vector trajectory language on top of already-Cat-A T-Temporal-Identity |
+| Q6 | σ-inheritance | None |
+
+V-AFD added language for Q4/Q5 but did not advance any Q to a stronger Cat. The actual hard opens (Q4 OP-0005, Q6 OP-0008) remain.
+
+### Files
+
+| File | Action |
+|------|--------|
+| `THEORY/working/AFD_0/V_AFD/` (directory) | **REMOVED** |
+| `_archive/v_afd_2026-05-12/` (directory) | **CREATED** — 19 archived V-AFD files |
+| `_archive/v_afd_2026-05-12/ARCHIVE_NOTE.md` | **CREATED** — frozen archive note explaining discard reason |
+| `THEORY/logs/daily/2026-05-13/41_v_afd_discard.md` | **CREATED** — daily log entry for the discard |
+| `THEORY/CHANGELOG.md` | **UPDATED** (this entry) |
+| `THEORY/canonical/*.md` | NOT modified (V-AFD never touched canonical) |
+| `THEORY/working/AFD_0/*.md` (AFD-0 parent) | NOT modified |
+
+### Next direction (recorded, not yet executed)
+
+V-AFD R10–R12's external framework bridges (category theory, FEP, neuroscience, thermodynamic geometry, symbolic dynamics) are **not pursued**. Three frontal-attack candidates on DECLARATION's open questions:
+
+1. **OP-0005 (Q4 K-selection)** — T-K-Select-PF / OBS coincidence or counter-example.
+2. **OP-0008 (Q6 σ-inheritance, HIGH severity)** — K-jump non-determinism.
+3. **λ₂-collapse asymmetry** — formalize the boundary-disappearance side of T8 (the apple-merging side of DECLARATION's example).
+
+### Slogan
+
+> 정보를 줄이면 반드시 뭔가를 잃는다. V-AFD는 그 손실을 정직하게 정리했지만, 그 손실을 근본 질문에 비추어 정당화하지 못했다.
+
+---
+
 ## 2026-05-10 (W7-CV1.13) — CV-1.13 SEALED: T-Temporal-Identity Full Cat A
 
 **Trigger:** Continuation from W7-CV113/W7-CV113A. Three audit tasks (S-A1, S-A3, S-C1) complete; canonical files updated; CV-1.13 sealed.

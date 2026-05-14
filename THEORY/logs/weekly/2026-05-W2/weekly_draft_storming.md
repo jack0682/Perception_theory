@@ -89,13 +89,31 @@
 - AFD-R1 promotion: Claim B.3 검증 후 진행 가능 (OP-AFD-003a-revised).
 - M-A2 수치 검증: Track A, 미실행.
 
+### 오후 — V-AFD discard 사이클
+
+- **V-AFD post-hoc audit** (fresh-context auditor): 5/12 V-AFD 작업 (`THEORY/working/AFD_0/V_AFD/` 19 파일, ~8000 줄) 의 self-audit 15/15 PASS 가 실제로는 R10-R12 scope creep 과 V-AFD-T9 information loss 를 *결과* 로만 인정하고 *원인* (K_act 좌표화) 은 미해결 임을 확인. 산출물: `_archive/v_afd_2026-05-12/v_afd_previous_agent_audit.md`.
+- **V-AFD 폐기 결정** (사용자 결정 "과감히 폐기, 폐기후 로그에 남겨둬"): DECL-1.0 fundamental question 과의 misalignment + 외부 framework bridges (T41-T47) scope creep 두 사유. canonical / AFD-0 무손상.
+- **산출물:** `_archive/v_afd_2026-05-12/ARCHIVE_NOTE.md`, `THEORY/logs/daily/2026-05-13/41_v_afd_discard.md`, CHANGELOG prepend.
+
+### 저녁 — R-2 (Differentiated Cohesion Readout) 작성 후 archive
+
+- **R-2 신규 작성 (Phase A+B):** V-AFD discard 이후 phenomenological re-grounding 으로 "K is read, not selected" 인수분해 invariant `u^* → S_0 → I(S_0)` 시도. Phase A 5 honesty patches + Phase B 7 절 (OP-R2-9 σ-Inheritance Lemmas B2/B3/B4 + numerical verification `exp_r2_sigma_inheritance.py`: centroid 2.78% / orientation 7.20% 오차 on canonical 15×15).
+- **External audit (4 rounds):**
+  - Round 2 internal self-audit: 10/10 PASS.
+  - Round 3 external 3-critic (DECL alignment / math correctness / V-AFD failure modes): 모두 PARTIAL — R-2 가 V-AFD failure 를 더 정교한 형태로 반복.
+  - Round 4 Explore canonical alignment audit: **R-2 Lemmas B2/B3 이 canonical `MF/sigma_inherit_k_jump.md` §3.3 과 수학적으로 동일.** R-2 새 수식 없음 — K-tuple → PD_0 bar identity 라벨 변경.
+- **Phase C2 decisive test (sub-threshold merger demonstration):** `exp_r2_subthreshold_merger.py` 실행 — K_read invariance ✓, n_bars 2→1 ✓, BUT **R-2 absorbing-centroid jump |Δc|=0.0000 (예측 0.36-0.52)**, K-tuple smooth. **R-2 load-bearing scope extension NOT CONFIRMED.**
+- **R-2 archive 결정** (사용자 정책 "C2 실패 시 즉시 archive"): canonical / AFD-0 / MF / SF / temporal 무손상.
+- **산출물:** `_archive/r2_dcr_2026-05-13/` 9 files (8 R-2 + ARCHIVE_NOTE), `THEORY/logs/daily/2026-05-13/50_r2_dcr_creation.md` + `51_r2_archive.md`, `CODE/experiments/exp_r2_*.py` (CODE/ 에 보존), 2 CHANGELOG entries.
+
 ### Day 3 Close Note
 
-- CV-1.15 Action-Based Temporal Succession Package: 10 working files + exp89 완료. Promotion checklist P1–P6 충족.
-- exp89: endpoint residual nonzero, action/Gibbs residual ≈ 0 (~2.84e-14), Sinkhorn residual >0 — 이론 계층 수치 확인.
-- cost/kernel level composition 닫힘; Sinkhorn-scaled plan composition OPEN 유지.
-- SCC temporal identity 해석: endpoint similarity → action-based path inheritance로 이동 (이론 층위에서).
-- 내일(Day 4) 목표: CV-1.15 promotion application (P7 승인 시) + post-promotion consistency audit.
+- **오전 CV-1.15:** Action-Based Temporal Succession Package 10 working files + exp89 3-case PASS. Promotion checklist P1–P6 충족; P7 미허가 상태 (사용자 결정 R-C + S-i 적용, amendments `04_proposed_amendments.md` 에 copy-paste-ready).
+- **오후 V-AFD discard:** ~8000 줄 V-AFD 작업 폐기. fundamental question misalignment + scope creep.
+- **저녁 R-2 작성+archive:** ~3800 줄 R-2 작업, ~24h lifetime. C2 demo 실패 + B2/B3 canonical 중복.
+- **메타-교훈 (두 archive 의 공통 패턴):** language refactoring 만으로는 load-bearing canonical content 생산 불가. *Cross-reference against canonical working content* 는 별도 audit dimension — 내부/외부/수학 audit 모두 통과해도 별도 검사 필요.
+- **다음 방향 (두 archive 공통 권장):** state report §7.5 **Roadmap C 정면 공격** — H-MORSE Cat A → OP-0021 T_* → Package II Eyring-Kramers → T-σ-Inherit MERGE-σ Cat C → Cat B → T-K-Select-DYN Cat A.
+- **내일(Day 4) 결정 사항 (OQ-H):** Roadmap C 진입점 vs CV-1.15 P7 promotion vs deeper pre-brainstorm 중 어느 트랙을 5/14 첫 작업으로? Pre-brainstorm 에서 결정.
 
 ---
 
@@ -111,15 +129,29 @@
 
 ---
 
-## 주간 scoreboard (업데이트 예정)
+## 주간 scoreboard (Day 3 종료 시점)
 
-| 지표 | Entry | Exit (현재) | Δ |
+| 지표 | Entry (Mon 5/11) | Exit (Wed 5/13 23:59) | Δ |
 |---|---|---|---|
-| Canonical version | CV-1.13 | CV-1.13 (CV-1.15 승인 대기) | — |
-| Cat A | 59 | 59 (→67 승인 후) | +8 대기 |
-| Cat B | 14 | 14 (→16 승인 후) | +2 대기 |
-| Total claims | 83 | 83 (→93 승인 후) | +10 대기 |
-| Working 파일 신규 | 0 | CV114: 6, CV115: 11, exp89: 1 | +18 |
+| Canonical version | CV-1.13 | CV-1.13 (sealed 유지; CV-1.15 P7 대기) | — |
+| Cat A | 59 | 59 (→67 P7 승인 후) | +8 대기 |
+| Cat B | 14 | 14 (→16 P7 승인 후) | +2 대기 |
+| Cat C | 5 | 5 | — |
+| Retracted | 5 | 5 | — |
+| Total claims | 83 | 83 (→93 P7 승인 후) | +10 대기 |
+| Working files (CV114 + CV115 + exp89) | 0 | 18 (CV114: 6, CV115: 11, exp89: 1) | **+18** |
+| Working files (V-AFD) | 0 (전날 5/12 작성됨) | 0 (5/13 archive) | **±0 (작성 후 즉일 archive)** |
+| Working files (R-2 DCR) | 0 | 0 (5/13 작성 후 즉일 archive) | **±0 (~24h lifetime)** |
+| Archive entries (this week) | 0 | 2 (V-AFD 19 files, R-2 8 files) | +2 |
 | CV-1.14 봉인 | — | 대기 (T-CC-StableK-Kernel Cat B) | — |
-| CV-1.15 봉인 | — | P7 승인 대기 | — |
+| CV-1.15 봉인 | — | P7 대기 | — |
 | exp89 | — | 3-case PASS | 완료 |
+| exp_r2 numerical 실험 | 0 | 2 (exp_r2_sigma_inheritance, exp_r2_subthreshold_merger) — CODE/ 에 보존 | +2 |
+| CHANGELOG entries (this week) | 0 | +3 (V-AFD discard, R-2 honest realignment, R-2 archive) | +3 |
+| canonical / theorem_status / hypothesis_tree / AFD-0 수정 | — | 0 (clean boundary 유지) | 0 |
+
+## 메타-교훈 (W7 Day 3 추가)
+
+- 두 reframe 시도 (V-AFD, R-2) 가 같은 주에 archive. 둘 다 *language refactoring* 으로 fundamental question 우회 시도; 둘 다 load-bearing canonical content 생산 실패.
+- **Cross-reference against existing canonical working content** 가 별도 audit dimension 으로 식별됨 — 내부 self-audit + 외부 3-critic audit 모두 통과해도 별도 검사 필요. R-2 Round-4 Explore audit 에서 처음 발견.
+- 다음 방향 (V-AFD + R-2 archive note 공통 권장): state report §7.5 **Roadmap C 정면 공격**. 5/14 의 첫 결정사항 (OQ-H).
