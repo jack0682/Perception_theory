@@ -4,6 +4,191 @@
 
 ---
 
+## [CV-1.17] 2026-05-15 — T-CC-StableK-Kernel canonical promotion (Stage B of OPT-B canonical update)
+
+**Trigger:** Plan-mode OPT-B 사용자 채택 (`/Users/ojaehong/.claude/plans/groovy-humming-starlight.md`) → D1 P7 묵시적 승인. Stage A hygiene 완료 후 Stage B 실행 — `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` 의 T-CC-StableK-Kernel Cat B 를 canonical §13 Cat B 에 promote.
+
+### Summary
+
+- **T-CC-StableK-Kernel Cat B (+1B)** canonical promotion: kernel-composed compositional consistency. Under (I_{ts}) + (I_{sr}) (stable-K + well-separated + sharp-OT + margin on both intervals), defining $M_{t\to r}^{\mathrm{comp}} := M_{s\to r} \circ M_{t\to s}$ yields $R_{t\to r}[M^{\mathrm{comp}}] = R_{s\to r} \circ R_{t\to s}$. Source: Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`, W6 D5 2026-05-07 complete proof). Scope: kernel-composed only — independent Sinkhorn recomputation = OP-0012-SINK (OPEN).
+- **T-ACT-KERNEL-COMP→REL conditional lift activated** (CV-1.15 forward-reference closes): (GK) precondition no longer relies on working-candidate. (stable-K) + (margin) regime hypotheses 유지 (lifted X).
+- **H-COMP-KERNEL subbranch CLOSED Cat B** (hypothesis_tree.md): H-COMP-CC 와 H-COMP-ACTION 사이 삽입.
+- **CV-1.14 reserved-version 흡수** (CV-1.17 jumps over CV-1.14 in numeric order while fulfilling its semantic content). 별도 CV-1.14 SEAL 작성 *없음* — CV-1.17 SEAL 이 cover.
+- **Net count:** +1B → **68A/19B/6C/5R = 98 claims (~70% fully proved)**.
+- **HT-3.7 → HT-3.8**.
+- **P7 사용자 승인:** OPT-B plan-mode 채택이 묵시적 P7 승인 (선택지 본문에 "D1 P7 승인 필요" 명시).
+
+### Theorem block
+
+| ID | Category | Conditions | Notes |
+|---|---|---|---|
+| **T-CC-StableK-Kernel** | Cat B | (I_{ts}) + (I_{sr}): stable-K, well-separated ($d_{\mathrm{inter}}^* \geq 3$), sharp-OT ($\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$), margin $\Delta_{\mathrm{sep}} \geq \Delta_{\mathrm{sep}}^*$ on both intervals | Cat B unconditional; exact composition (no $\varepsilon_{\mathrm{comp}}$); scope kernel-composed only; depends on T-Temporal-Identity Cat A (CV-1.13) + Lemma 2 + Lemma 3-sharp + E1–E4. |
+
+### Decision audit trail
+
+- **OPT-B 채택 (plan-mode AskUserQuestion, 2026-05-15):** 선택지 본문에 "Stage B: D1 P7 승인 필요" 명시. 사용자 OPT-B 채택 = D1 묵시적 승인. 추가 explicit confirm 없음.
+- **3-Explore agent 병렬 audit 결과:** Agent 2 (working/ promotion-ready) 가 CV114 T-CC-StableK-Kernel 을 *Class P 즉시 promotion 후보* 로 식별. P1-P6 모두 통과, P7 awaiting. 본 SEAL 이 P7 결승.
+- **CV-1.14 reservation absorption:** *Reservation 의 의도된 content = T-CC-StableK-Kernel canonical promotion*. CV-1.17 가 그 content 를 정확히 충족 → 별도 CV-1.14 SEAL 불필요. Version-ladder 의 numeric jump 는 promotion 자체로 정당화.
+
+### Files modified
+
+- `THEORY/canonical/canonical.md` — frontmatter (CV-1.16 → CV-1.17, 1.16 → 1.17, 2026-05-14 → 2026-05-15) + description (CV-1.17 sealed entry 추가) + title CV-1.17 + version-naming-block + release-state section heading + body CV-1.17 sealed entry + next-target CV-1.18 + §13 Category B section header 카운트 19 + §13 Cat B body 의 *CV-1.17 Cat B addition block 신설* (T-CC-StableK-Kernel full theorem block).
+- `THEORY/canonical/theorem_status.md` — header CV-1.16 → CV-1.17. (Stage A 의 다른 hygiene 작업 이미 적용된 base 위에.)
+- `THEORY/canonical/hypothesis_tree.md` — frontmatter HT-3.7 → HT-3.8; CV-1.17 SEALED block 추가; H-COMP-KERNEL subbranch CLOSED Cat B 활성화; H-COMP-ACTION conditional lift active CV-1.17 표기; HT-3.8 changelog row 추가; 다음 목표 CV-1.18 갱신.
+- `THEORY/canonical/CV-1.17_SEAL.md` (신설) — 인증 / decision audit trail / non-overclaim / files modified / OQ list / CV-1.18 targets / methodological highlight.
+- `THEORY/CHANGELOG.md` — 본 [CV-1.17] entry prepended above [HYGIENE] entry.
+
+### Did NOT change
+
+- `canonical.md §13 Cat A` / Cat C 본문 — unchanged.
+- DECLARATION.md / Appendix OMS / scc/ 모듈 — unchanged.
+- `working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` working draft — 보존 (canonical 진입 후 working file 의 status 변경 = 별도 hygiene plan).
+- CV-1.13/1.15/1.16 SEAL 문서 — unchanged.
+
+### Non-overclaim
+
+- **T-CC-StableK-Kernel Cat B unconditional.** Cat A 아님 — regime hypotheses 가 non-removable.
+- **Scope = kernel-composed only.** Independent Sinkhorn recomputation 에 대해 *어떤 것도 claim 하지 않음*.
+- **T-ACT-KERNEL-COMP→REL lift 는 (GK) precondition closure 만.** (stable-K) + (margin) 여전히 conditional.
+- **CV-1.14 absorption 은 administrative** — mathematical content 보존, retroactive 변경 없음.
+- **본 SEAL 이 close 하지 않는 것:** OP-0012-SINK (independent Sinkhorn), OP-0012-Kjump (K-jump general), OP-0012-Markov (deferred post OP-0021), score-level composition.
+
+### W7 close 의 의미 (CV-1.17 sealing 후)
+
+- W7 (2026-05-11 ~ 2026-05-15) 의 *공식 canonical mutations*: CV-1.15 (5/14 morning) + CV-1.16 (5/14 evening) + CV-1.17 (5/15) = **3 SEALs**.
+- W7 누적 변화: CV-1.13 → CV-1.17, **83 claims (~71%) → 98 claims (~70%)** = **+15 (= +9A +5B +1C)**. HT-3.5 → HT-3.8.
+- 5/15 결정 C (canonical 0 edits in 수학 content) 와 5/15 hygiene + CV-1.17 promotion 이 *동일 일자에 발생*. 결정 C 의 "수학 0 edits" 가 hygiene + CV114 working candidate promotion 을 *명시적으로 cover* (결정 C 가 "통찰의 수학적 부분은 이미 canonical 본체" 라고 명시 → working candidate 의 canonical 진입은 *결정 C 의 *권장 path** 인 "canonical 내부 진척 (OP-HMORSE-LOCAL-A, Package II)" 의 *예비 단계*).
+
+### W8 진입 (2026-05-18 Mon) 권장 첫 작업
+
+- **CV-1.18 primary target: OP-HMORSE-LOCAL-A** (L-HMORSE-LOCAL Cat B → Cat A, ETA ~2 sessions, Package II EK Cat B 진입의 직접 unlock).
+
+---
+
+## [HYGIENE] 2026-05-15 — CV-1.16 post-seal hygiene + parking archive (Stage A of OPT-B canonical update)
+
+**Trigger:** Plan-mode 결정 `/Users/ojaehong/.claude/plans/groovy-humming-starlight.md` (OPT-B 채택). 3-Explore agent 병렬 감사 (W7 로그 unsynced 항목 / working promotion-ready / canonical 현재 상태) 결과 HIGH severity 누락 2 건 + MEDIUM 2 건 + LOW 1 건 (Stage A 범위) 식별. Stage A 는 *count 변동 0* — sealing 이 아니라 *hygiene*.
+
+### Edits (canonical state preserved, sync only)
+
+- **canonical.md frontmatter:** id/version/released/description/title/version-naming-block 모두 CV-1.13 (또는 CV-1.11) → **CV-1.16**. CV-1.14/CV-1.15/CV-1.16 추가 내역 description 에 합산. release-state section heading + body 도 CV-1.16 으로 동기화. CV-1.15/CV-1.16 SEAL 상세 entry 2 줄 추가. Next target → CV-1.17. (H1, primary hygiene)
+- **canonical.md §13 Cat B T-ACT-KERNEL-COMP→REL:** (GK) 조건 deferred 표기 "CV-1.16+" → "CV-1.17+" 갱신; *Conditional lift note (forward reference)* 1 문단 추가 — CV-1.14 T-CC-StableK-Kernel canonical promotion 시 unconditional 로 lift 가능 + 별도 audit 필요 명시. (M1)
+- **theorem_status.md Open Problems Catalog Quick Index:** OP-SB1-084 + OP-HMORSE-BROADNESS (CLOSED Cat A) + OP-HMORSE-LOCAL-A + OP-HMORSE-SADDLE + OP-HMORSE-SBM + OP-HMORSE-GENERIC-PATH (DEPRIORITIZED) + OP-HMORSE-EXCLUSION-VOLUME (DOWNGRADED) + OP-HMORSE-ACTION-INTERACT — 7 행 신규 + W7 changes block (CV-1.13/CV-1.15/CV-1.16/결정 C 요약) 추가. OP-0021 row 에 dual-naming carry-forward note 추가. (H2 + 보조 hygiene)
+- **theorem_status.md OP-0012-SINK body:** L-ACTION-DELTA-EFF-ZERO scope restriction cross-cite 1 항목 추가 — *action direct-cost only, not endpoint or Sinkhorn-derived*. CV-1.16+ → CV-1.17+ carry-forward 표기 갱신 (3 군데). (M2)
+
+### Did NOT edit (already in compliance, Agent 1 의 L1/L2 finding 은 오판)
+
+- `CV-1.15_SEAL.md`: P-ACTION-PATH-INHERITANCE Interpretation entry 가 line 75 에 *이미 존재*.
+- `CV-1.16_SEAL.md`: HT-3.7 라벨이 Files Modified section line 124 에 *이미 명시*.
+
+### Archive operation
+
+- `THEORY/working/parking/` (14 파일, 4월 후반 ~ 5월 초 stale 자료, parking/README.md "모두 SUPERSEDED" 명시) → `_archive/working_parked_2026-05/` 이동. **`_archive/` 디렉토리 신규 생성** (이전 CLAUDE.md / 로그의 `_archive/` references 가 *aspirational* 이었음을 발견 — 본 작업이 실제 archive root 의 첫 instantiation).
+- 영향: `THEORY/working/` 가 14 폴더 → 13 폴더 (CV114_H_MORSE_PACKAGEII, CV114_TEMPORAL_COMPOSITION, CV115_ACTION_TEMPORAL_COST, C, CE, E, MF, SF, AFD_0, temporal, observer_moduli + INDEX.md).
+
+### Count 변동
+
+- **0.** A/B/C/R = 68/18/6/5 = 97 그대로. Hygiene 작업은 *promotion 이 아니라 카탈로그 동기화*.
+
+### Did NOT change
+
+- canonical.md §13 정리 본문 / theorem_status.md 정리 row / hypothesis_tree.md / DECLARATION.md / CV-1.13/1.15/1.16_SEAL.md 의 *seal-recorded 내용* — 모두 unchanged.
+- 공리 층 / u_t primitive / engineering proxy 회피 / DECL-1.0 self-limitation — 모두 유지.
+
+### W7 close 와의 관계
+
+- W7 close [W7 CLOSE] entry (5/15) 가 *결정 C + weekly_summary 작성* 을 기록.
+- 본 [HYGIENE] entry 는 *그 결정 C 가 cover 하지 않은 hygiene drift* 정정. 두 entry 가 *상호 보완* — 결정 C 가 "canonical 0 edits" 라고 한 것은 *수학 내용 0 edits*, 본 hygiene 은 *catalog row sync 만*.
+
+### W7 close + 본 hygiene 후 누적 상태
+
+- CV-1.16 SEALED 2026-05-14 evening, **68A/18B/6C/5R = 97 claims (~70%)** 그대로.
+- HT-3.7.
+- H-MORSE row PARTIALLY CLOSED (Local Cat B).
+- OP Quick Index 동기화 ✓ (OP-HMORSE-* + OP-SB1-084 등재).
+- frontmatter / version label / cross-cite 모두 self-consistent.
+- `_archive/working_parked_2026-05/` 14 파일 첫 instantiation.
+
+### Stage B 진입 게이트
+
+- 본 hygiene 완료 후 OPT-B Stage B = CV-1.17 T-CC-StableK-Kernel promotion. D1 P7 승인 묵시적 채택. T-ACT-KERNEL-COMP→REL conditional lift note 가 Stage B 의 *forward-reference 가 활성화* 됨.
+
+---
+
+## [W7 CLOSE] 2026-05-15 — Weekly Summary + 결정 C (long-breath day, 0 canonical edits)
+
+**Trigger:** W7 (2026-05-11 ~ 2026-05-15) 5 영업일 마감. Day 5 = *결정의 날* (long-breath day) — 사용자 통찰 ($u^* \to S_0 \to K_\mathrm{read}$, D_0/D_1/D_2 삼층) 의 6 stage 정밀 검토 + Decision A/B/C 게이트.
+
+### Session 결과
+
+- **결정 C 채택** (`THEORY/logs/daily/2026-05-15/07_decision.md`):
+  - **V (verified strict-new propositions) = 0** — 새 명제 후보 NP-A ~ NP-D 4 개 모두 trivial Weierstrass / T8 source-language 재진술 / vacuous (parametrized subset) / canonical 자체 결과 — substantive 새 수학 미달.
+  - **archive 패턴 6/6 부합** — 측면 R (S_0/K_read) = R-2 화살표 문자 그대로 재현; 측면 G (z_t 도입) = V-AFD-T9 형태적 동일 + N_t parametrization + §8.5 게이트 미통과.
+  - 결론: 통찰 D_1 + D_2 = canonical 본체, D_0 = DECL-1.0 의 *명시적 self-limitation* 결과. **z_t / S_0 / K_read reformulation 시행 *안 함*** — 셋째 archive 회피.
+- **6 stage 검토 framework** (`02_canonical_inventory` → `03_insight_decomposition` → `04_confrontation` → `05_verification_question` → `06_archive_pattern_diagnosis` → `07_decision` → `99_summary`) — reusable insight-audit tool 후보 (별도 plan 결정).
+
+### Canonical edits
+
+- **0.** canonical / theorem_status / hypothesis_tree / DECLARATION / working/* / _archive/* / CODE/* 모두 *변동 없음*.
+- 본 entry 자체와 `THEORY/logs/weekly/2026-05-W2/weekly_summary.md` 신설 외 *어떤 파일도 수정 안 함*.
+
+### Files created (this session)
+
+- `THEORY/logs/daily/2026-05-15/{02_canonical_inventory.md, 03_insight_decomposition.md, 04_confrontation.md, 05_verification_question.md, 06_archive_pattern_diagnosis.md, 07_decision.md, 99_summary.md}` — 7 files, ~1,640 lines.
+- `THEORY/logs/weekly/2026-05-W2/weekly_summary.md` — W7 close (W6 양식 동형, 8 섹션, §0 exec + §1 day-by-day + §2 count flow + §3 files + §4 hard-constraint sweep + §5 non-claims + §6 W8 entry + §7 meta-lessons + §8 closing).
+
+### W7 누적 변화 (Entry CV-1.13 → Exit CV-1.16)
+
+| 지표 | Entry (05-11) | Exit (05-15) | Δ |
+|---|---|---|---|
+| Canonical version | CV-1.13 | **CV-1.16** | +3 minor |
+| HT version | HT-3.5 | **HT-3.7** | +2 |
+| Cat A / Cat B / Cat C / Retracted / Total | 59/14/5/5/83 | **68/18/6/5/97** | **+9A / +4B / +1C / 0R / +14** |
+| H-MORSE row | OPEN | **PARTIALLY CLOSED** | ✓ |
+| Archives (this week) | 0 | **2** (V-AFD, R-2) | +2 |
+| OP 신규 / 해결 (Cat A) / 부분 해결 (Cat B Resolved) | — | **7 / 1 / 1** | +9 |
+| pytest | 215 + 1 xfailed | 215 + 1 xfailed | clean |
+
+### W7 사건 흐름 요약
+
+- **Day 1 (5/11):** H-MORSE/AFD 배경 감사, CLAUDE.md CV-1.13 동기화.
+- **Day 2 (5/12):** AFD-0 OP-AFD-004 Cat B Resolved (c_low = 0.0221β) + CV-1.15 Action-Based Temporal Cost Package 10 working files + exp89 scaffold.
+- **Day 3 (5/13):** 오전 exp89 3-case PASS (P7 READY) + 오후 V-AFD 폐기 (~8000 줄) + 저녁 R-2 작성→archive (~3800 줄, ~24h lifetime).
+- **Day 4 (5/14):** 오전 CV-1.15 SEAL (83→93) + 오후 H-MORSE-Local Cat B working + 저녁 OP-HMORSE-BROADNESS Cat A 즉시 해결 (3 독립 접근법 수렴) → CV-1.16 SEAL (93→97, L-CLOSURE-LIFT Cat A + L-HMORSE-LOCAL Cat B + L-HMORSE-DECOMP Cat B + L-BOUNDARY-MODE-EXCLUSION Cat C) + 사용자 메타-자각 + z_t 메모.
+- **Day 5 (5/15, 본 entry):** 6 stage 정밀 검토 + 결정 C 채택, canonical 0 edits.
+
+### Hard-Constraint Sweep (W7 전체)
+
+- Silent OP resolution: **0** (OP-AFD-004 / OP-HMORSE-BROADNESS / OP-0012-CC-StableK 모두 명시 기록).
+- Research OS 재도입: **0**.
+- scc/ 코드 직접 수정: 없음. pytest **215 + 1 xfailed** clean throughout.
+- 공리 층 (A1'–A4, B1–B4, E1–E4): **불변**.
+- u_t primitive 지위: **유지** (Day 5 결정 C 의 핵심).
+- Engineering proxy 도입: **0** ($K_{z_t}$ Gaussian similarity = 표준 도구 동일 → §8.5 게이트 미통과로 archive 위험 분류).
+- DECL-1.0 self-limitation: **유지** (amend 보류, 별도 plan 필요).
+
+### W8 진입 권장 (CV-1.17 target)
+
+- **즉시 권장:** **OP-HMORSE-LOCAL-A** (L-HMORSE-LOCAL Cat B → Cat A 승급, ETA ~2 sessions, Package II EK Cat B 진입의 직접 unlock). Sub-task A = sharper residual bound (현재 ~10^4× 느슨); Sub-task B = OP-HMORSE-SBM robustness extension.
+- **보조 (우선순위 순):** Package II EK Cat B / OP-HMORSE-SBM / OP-0008 σ_standard MERGE-SPLIT Wigner-projection / OP-0021 $T_*$ registration / §F Step 2 housekeeping / CV-1.14 promotion audit (OQ-A).
+- **비-목표 (W8 하지 않을 것):** z_t/S_0/K_read 부활 시도 (결정 C 직접 위반), 새 framework letter 도입, V-AFD/R-2 부활, DECL-1.0 amend.
+
+### W7 메타-교훈 (5 항)
+
+1. **Cross-reference against canonical working content** 가 별도 audit dimension (Day 3, R-2 B5).
+2. **Plan-mode 가 target-precision 오류 사전 포착** (Day 4, H-MORSE Cat A unconditional 불가). R7 후보: "Cat A unconditional 시도 전 working/CV*/05_counterexample_search.md grep 의무화".
+3. **3 mathematically independent approach convergence** = 고품질 promotion 패턴 (Day 4, OP-HMORSE-BROADNESS: Perron-Frobenius + operator-norm + numerical).
+4. **회귀 패턴 (3 회 archive 시도) 의 실제 원인** (Day 5): u_t 가 이미 D_1 → D_0→D_1 도구가 canonical 안에 부재 + 가용 도구가 engineering proxy → 어휘만 늘 수밖에 없음.
+5. **결정 C 의 메타-가치:** "통찰이 옳고 + 이미 끝남" 동시 인정 양식. 6 stage 검토 framework = reusable insight-audit tool 후보.
+
+### Did NOT change
+
+- canonical / theorem_status / hypothesis_tree / DECLARATION / OMS Appendix / scc 모듈 — 전부 unchanged.
+- CV-1.15 + CV-1.16 entries (Day 4 prepended; 본 W7 close entry 가 그 위에 prepended).
+- W6 의 결과 (T-Temporal-Identity Cat A, OMS-2.0 Full, T-σ-Inherit working candidates, OP-0005-DYN OPEN 등) — untouched.
+
+---
+
 ## [CV-1.16] 2026-05-14 — H-MORSE-Local Closure Package (W7-Day5 Extension P7 Promotion)
 
 **Trigger:** OP-HMORSE-BROADNESS analytic + numerical attack closure 2026-05-14 evening. 5-document chain (40–44 + 49 in `THEORY/logs/daily/2026-05-14/`) + 1 CV114 attack record (`11_broadness_attack.md`) + 1 numerical experiment (`exp_hmorse_broadness_full_spectrum.py`, 15/15 PASS, test suite 215 passed + 1 xfailed). User P7 approval granted via plan-mode review (combined with D-HMORSE-LOCAL (C2′) active-set form decision + 4-lemma promotion package decision).

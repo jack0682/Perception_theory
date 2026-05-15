@@ -1,10 +1,10 @@
 ---
-id: CV-1.13
+id: CV-1.17
 type: canonical/specification
-version: 1.13
-released: 2026-05-10
+version: 1.17
+released: 2026-05-15
 status: accepted
-description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02); T-L1-M Soft-Count Corollary under Φ_res supervised addition (W6 D1 EOD, 2026-05-04); stereo extension T-ST-5a/b + D-ST-1..5 + T-OP6-B Cat B (CV-1.6 content, W6 D4 Sessions A–G, 2026-05-06); T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B (CV-1.7, Session I, 2026-05-06); T-OP6-B promoted Cat A + OP-0006 RESOLVED (Session K, 2026-05-06); T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B (CV-1.8, Sessions M–N, 2026-05-06); T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (CV-1.9, Session P, 2026-05-06); T-K-Select-PF Cat B + OP-0005-EQ partially resolved (CV-1.10, Session R, 2026-05-06); T-K-Select-OBS Cat B + OP-0005-OBS partially resolved (CV-1.11, Session Y, 2026-05-06); T-Temporal-Identity canonical Cat B + H-SINK full Cat A + Theorem Partial-H-SINK Cat A + OP-0011 PARTIALLY RESOLVED (CV-1.12, W7-FINAL, 2026-05-10); Lemma S-B1-Weak Cat A + S-B1-SYM Cat B (W7-CV113/CV113A, 2026-05-10); **T-Temporal-Identity full Cat A (all 4 parts) — CV-1.13 SEALED (W7-CV1.13, 2026-05-10). 59A/14B/5C/5R = 83 claims, ~71% fully proved**.
+description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarified/sidestepped (W4); T-PreObj-1 family (CV-1.3), T-V5b-T (CV-1.4), σ-framework supporting structures Lemma 1/2/3 + Theorem 3/4 (CV-1.5); D-6a Multi-Static + Commitment 16 K-status + ontological depth + Critic 보강 (CV-1.5.1, 2026-04-29); T-L1-F Hard-Bar / Active-Count Bridge under L1-J Regime (CV-1.5.2, 2026-05-02); T-L1-M Soft-Count Corollary under Φ_res supervised addition (W6 D1 EOD, 2026-05-04); stereo extension T-ST-5a/b + D-ST-1..5 + T-OP6-B Cat B (CV-1.6 content, W6 D4 Sessions A–G, 2026-05-06); T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B (CV-1.7, Session I, 2026-05-06); T-OP6-B promoted Cat A + OP-0006 RESOLVED (Session K, 2026-05-06); T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B (CV-1.8, Sessions M–N, 2026-05-06); T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A (CV-1.9, Session P, 2026-05-06); T-K-Select-PF Cat B + OP-0005-EQ partially resolved (CV-1.10, Session R, 2026-05-06); T-K-Select-OBS Cat B + OP-0005-OBS partially resolved (CV-1.11, Session Y, 2026-05-06); T-Temporal-Identity canonical Cat B + H-SINK full Cat A + Theorem Partial-H-SINK Cat A + OP-0011 PARTIALLY RESOLVED (CV-1.12, W7-FINAL, 2026-05-10); Lemma S-B1-Weak Cat A + S-B1-SYM Cat B (W7-CV113/CV113A, 2026-05-10); T-Temporal-Identity full Cat A (all 4 parts) — CV-1.13 SEALED (W7-CV1.13, 2026-05-10): 59A/14B/5C/5R = 83 claims; Action-Based Temporal Succession Package (8A + T-ACT-KERNEL-COMP→REL Cat B conditional + P-SINKHORN-STABILITY-CONDITIONAL Cat B + P-ACTION-PATH-INHERITANCE Interpretation + T-SINKHORN-PLAN-SEMIGROUP-FAILS §12 Warning) — CV-1.15 SEALED (W7-Day5 morning, 2026-05-14): 67A/16B/5C/5R = 93 claims; H-MORSE-Local Closure Package (L-CLOSURE-LIFT Cat A + L-HMORSE-LOCAL Cat B unconditional + L-HMORSE-DECOMP Cat B conditional + L-BOUNDARY-MODE-EXCLUSION Cat C; D-HMORSE-LOCAL definition; OP-HMORSE-BROADNESS CLOSED Cat A) — CV-1.16 SEALED (W7-Day5 evening extension, 2026-05-14): 68A/18B/6C/5R = 97 claims; **T-CC-StableK-Kernel (Compositional Consistency, Kernel-Composed Case) Cat B canonical promotion + T-ACT-KERNEL-COMP→REL conditional lift activation — CV-1.17 SEALED (W7-Day5 hygiene close, 2026-05-15). 68A/19B/6C/5R = 98 claims, ~70% fully proved**.
 ---
 
 > [!nav] Theory Navigation
@@ -14,26 +14,30 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 > Related: [[theorem_status]] · [[hypothesis_tree]] · [[CV-1.16_SEAL]] · [[CHANGELOG]]
 > Status: SEALED CV-1.16 (97 claims; 68A/18B/6C/5R)
 
-# Canonical Specification of Soft Cognitive Cohesion (CV-1.11)
+# Canonical Specification of Soft Cognitive Cohesion (CV-1.17)
 
 > **먼저 읽기:** 이 문서의 수학적 내용에 앞서 [`DECLARATION.md`](DECLARATION.md) (DECL-1.0)를 읽을 것. 이론의 중심축("어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"), Primitive u_t, 중심 정리 T8, 6개 인식론적 질문(Q1~Q6)을 2분 안에 파악할 수 있다.
 
-> **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → CV-1.5.2 (05-02) → CV-1.6 (05-06) → CV-1.7 (05-06) → CV-1.8 (05-06) → CV-1.9 (05-06) → CV-1.10 (05-06) → **CV-1.11 (05-06, current)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`.
+> **Version naming convention.** This document uses a single release ladder, **CV-x.y[.z]**, incremented per merge: CV-1.0 (2026-04-01) → CV-1.1 (04-03) → CV-1.2 (04-12) → CV-1.3 (04-25) → CV-1.4 (04-26) → CV-1.5 (04-27) → CV-1.5.1 (04-29) → CV-1.5.2 (05-02) → CV-1.6 (05-06) → CV-1.7 (05-06) → CV-1.8 (05-06) → CV-1.9 (05-06) → CV-1.10 (05-06) → CV-1.11 (05-06) → CV-1.12 (W7-FINAL 05-10) → CV-1.13 (W7-CV1.13 05-10, SEALED) → CV-1.15 (W7-Day5 morning 05-14, SEALED; CV-1.14 reserved for T-CC-StableK-Kernel working candidate) → CV-1.16 (W7-Day5 evening extension 05-14, SEALED) → **CV-1.17 (W7-Day5 hygiene close 05-15, SEALED, current; T-CC-StableK-Kernel canonical promotion absorbed CV-1.14 reserved-version)**. Authoritative version index: `theorem_status.md` §Canonical Spec Version History; per-merge log: `THEORY/CHANGELOG.md`. Seal records: `CV-1.13_SEAL.md`, `CV-1.15_SEAL.md`, `CV-1.16_SEAL.md`, `CV-1.17_SEAL.md`.
 >
-> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.11**.*
+> *Body text below contains historical "v1.0 / v2.0 / v2.1" markers describing the theory's ontology evolution (T_t demoted v2.0; C_t demoted v2.0 cycle 2; volume constraint added in v2.0; T-Persist-K-Unified added in v2.1). These are narrative change-log markers within the spec, not a separate active version system. The single current identifier is **CV-1.17**.*
 
 ---
 
-## CV-1.11 Release State (2026-05-08, W6 EOD)
+## CV-1.17 Release State (2026-05-15, W7-Day5 hygiene close)
 
-**Current version:** CV-1.13 — **59A / 14B / 5C / 5R = 83 claims** (~71% fully proved) **SEALED W7-CV1.13 2026-05-10**
-**Released:** 2026-05-10 (sealed W7-CV1.13). **OMS Appendix added:** 2026-05-08 (W6 D6, Sessions 7–8).
+**Current version:** CV-1.17 — **68A / 19B / 6C / 5R = 98 claims** (~70% fully proved) **SEALED W7-Day5 hygiene close 2026-05-15**
+**Released:** 2026-05-15 (sealed CV-1.17). **OMS Appendix added:** 2026-05-08 (W6 D6, Sessions 7–8).
 **CV-1.12 baseline:** 2026-05-10 (sealed W7-FINAL) — 54A/15B/5C/5R = 79 claims.
 **CV-1.12 addition:** T-Temporal-Identity Cat B (+1B, W7-FINAL 2026-05-10) — single-formation temporal persistence/identity.
 **W7-CV113 partial advance (2026-05-10):** Lemma S-B1-Weak Cat A (+1A → **55A/15B/5C/5R = 80 claims preliminary**). OP-SB1-DEEP downgraded non-blocking. T-Temporal-Identity (b,d) Cat A path: S-A1-A3 only.
 **W7-CV113A partial advance (2026-05-10):** S-B1-SYM Cat B — symbolic identity `ρ_deep ≥ θ_core(1 − 4 C_iso/√m)` derived from Theorem 2b (Cat A) under HWF-1. Literal `ρ_deep ≥ 0.84` retracted as standalone, preserved as `ρ_sym(0.2, 25, ~1.0)`. OP-SB1-084 registered (LOW). OP-SB1-DEEP superseded. Net count: **55A/15B/5C/5R = 80 claims unchanged**. HT-3.4.
 **W7-CV1.13 (2026-05-10) — CV-1.13 SEALED:** T-Temporal-Identity full Cat A (+4A, −1B). S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected: $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). **59A/14B/5C/5R = 83 claims**. HT-3.5.
-**Next target:** CV-1.14 — T-σ-Inherit Cat A (OP-0008 MERGE/SPLIT resolution) or H-MORSE / Package II (Eyring-Kramers). *(OP-SB1-084 LOW; T-Temporal-Identity closed.)*
+**W7-Day5 morning (2026-05-14) — CV-1.15 SEALED:** Action-Based Temporal Succession Package — +8A (L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO) + 2B (T-ACT-KERNEL-COMP→REL conditional on CV-1.14 working candidate; P-SINKHORN-STABILITY-CONDITIONAL) + P-ACTION-PATH-INHERITANCE Interpretation (not counted) + T-SINKHORN-PLAN-SEMIGROUP-FAILS §12 Warning + OP-0012-SINK new sub-label. **67A/16B/5C/5R = 93 claims**. HT-3.6. exp89 3/3 PASS.
+**W7-Day5 evening (2026-05-14) — CV-1.16 SEALED:** H-MORSE-Local Closure Package — +1A (L-CLOSURE-LIFT via Theorem B2 operator-norm degree-weighted broadness) + 2B (L-HMORSE-LOCAL unconditional under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form; L-HMORSE-DECOMP conditional on b_D=0 + canonical A3) + 1C (L-BOUNDARY-MODE-EXCLUSION SKETCH Weyl perturbation) + D-HMORSE-LOCAL definition. OP-HMORSE-BROADNESS CLOSED Cat A (3-approach convergence: Perron-Frobenius / operator-norm primary / 15/15 numerical PASS). H-MORSE row: OPEN → PARTIALLY CLOSED. **68A/18B/6C/5R = 97 claims (~70% fully proved)**. HT-3.7.
+**W7-Day5 (2026-05-15 morning) — 결정 C (long-breath day, 0 canonical edits):** 사용자 통찰 (u^* → S_0 → K_read, D_0/D_1/D_2 삼층) 의 6 stage 정밀 검토 + Decision A/B/C 게이트 → 결정 C 채택. V (verified strict-new propositions) = 0, archive 패턴 6/6 부합. z_t / S_0 / K_read reformulation *시행 안 함*. canonical 무변동.
+**W7-Day5 (2026-05-15 hygiene close) — CV-1.17 SEALED:** Canonical update precision sync (OPT-B). Stage A hygiene (frontmatter / OP catalog / cross-cite / parking archive, count 변동 0) + Stage B T-CC-StableK-Kernel **Cat B canonical promotion** (CV114 working candidate → §13 Cat B, kernel-composed compositional consistency under (I_{ts})+(I_{sr})). T-ACT-KERNEL-COMP→REL conditional lift activated (CV-1.15 forward-reference closes). **+1B → 68A/19B/6C/5R = 98 claims (~70% fully proved)**. HT-3.8. P7 user authorization granted via plan-mode OPT-B selection. T-CC-StableK-Kernel canonical promotion absorbs CV-1.14 reserved-version (CV-1.14 was reserved for this exact promotion; CV-1.17 jumps over CV-1.14 in numeric order while fulfilling its semantic content).
+**Next target:** CV-1.18 — OP-HMORSE-LOCAL-A (L-HMORSE-LOCAL Cat B → Cat A, ETA ~2 sessions); Package II Eyring-Kramers prefactor Cat B (Q3 closure path); OP-0008 MERGE/SPLIT σ_standard Wigner-projection (Q6 closure, W9+); OP-0021 T_* registration + dual-naming reconciliation; §F Step 2 housekeeping (CV-1.15 deferred); OQ-A CV-1.14 promotion audit (now absorbed via CV-1.17, may close).
 
 ### W6 Highlights (2026-05-04 to 2026-05-08)
 
@@ -1791,7 +1795,7 @@ Step 6. Triangle inequality squaring gives (L-CL-LIFT.2). Conditioning bound $d_
 
 ---
 
-### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**)
+### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**; **CV-1.16 adds L-HMORSE-LOCAL + L-HMORSE-DECOMP**; **CV-1.17 adds T-CC-StableK-Kernel** — total **19 Cat B entries post-CV-1.17**)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
 
@@ -1897,7 +1901,7 @@ Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ and let $M_{t \to s}$ be the canon
 **Theorem T-ACT-KERNEL-COMP→REL.** *(Cat B **conditional**; CV-1.15.)*
 
 *Conditions.*
-- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.16+.
+- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.17+ (CV-1.16 SEAL §"CV-1.17 Targets" lists T-CC-StableK-Kernel promotion as candidate).
 - *(stable-K)* $K_t = K_s = K_r$, $d_{\mathrm{inter}}^* \geq 3$, $\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$.
 - *(margin)* $\Delta_{\mathrm{sep}}(M) \geq \Delta_{\mathrm{sep}}^* + 2\epsilon_{\mathrm{kernel}}$ (per S-C1 CERTIFIED correction, CV-1.13).
 
@@ -1914,6 +1918,8 @@ where $R[\cdot]$ is the persistence-correspondence relation extracted from a tra
 This entry uses Reading 1.
 
 *References.* T-ACT-GIBBS (§13 Cat A above); T-CC-StableK-Kernel (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §2); T-Temporal-Identity (§13 Cat A, CV-1.13).
+
+*Conditional lift note (forward reference).* Upon CV-1.14 T-CC-StableK-Kernel canonical promotion, the (GK) condition becomes satisfied unconditionally; T-ACT-KERNEL-COMP→REL then lifts from "Cat B conditional" to **Cat B unconditional** (Reading 1). The (stable-K) + (margin) conditions remain as canonical regime hypotheses (not lifted). Whether the unconditional form is automatic or requires a separate audit step is a CV-1.17 SEAL determination.
 
 **Proposition P-SINKHORN-STABILITY-CONDITIONAL.** *(Cat B; CV-1.15.)* *Conditions.* (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`. *Conclusion.* The Sinkhorn-scaled relation $R[M^{\mathrm{sink}}_{t \to s}]$ is stable under the hypothesis package, in the sense that $R[M^{\mathrm{sink}}_{t \to r}]$ approximates $R[M^{\mathrm{sink}}_{s \to r}] \circ R[M^{\mathrm{sink}}_{t \to s}]$ up to terms controlled by the small-sink-gap parameter. *Cat B conditional status.* H-SINK is a regime hypothesis (Sinkhorn-scaling) not yet promoted as a Cat A property; SMALL-SINK-GAP is a regime restriction. Both are explicit. *Reference.* `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`.
 
@@ -1999,6 +2005,41 @@ Cat A path: rigorous residual-correction $\|R_{\mathrm{cl}}\|$ bound using $|\si
 *References.* L-CLOSURE-LIFT (§13 Cat A); T-OP6-B persistent-ridge band bound; T7-Enhanced historical. Source: `THEORY/logs/daily/2026-05-14/02_development.md §3, 42_broadness_approach_b_trace.md §5-§6`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
 
 *CV-1.16 Cat B count: +2 entries (L-HMORSE-LOCAL Cat B unconditional, L-HMORSE-DECOMP Cat B conditional). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
+
+---
+
+#### CV-1.17 Cat B addition — Compositional Consistency (Kernel-Composed) (W7-Day5 hygiene close, 2026-05-15)
+
+**Theorem T-CC-StableK-Kernel (Compositional Consistency, Kernel-Composed Case).** *(Cat B; CV-1.17.)*
+
+*Source.* Lemma 6 in `THEORY/logs/daily/2026-05-07/03_development.md §10` (W6 D5 2026-05-07, complete proof). Working file: `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`. Gap audit v2 (2026-05-12) confirms kernel-composed scope.
+
+*Setup.* Let $u_t, u_s, u_r \in \mathcal{F}_M(\mathcal{P})$ be soft cohesion fields at successive times $t < s < r$. Let $M_{t\to s}, M_{s\to r}$ be E1–E4-admissible transport plans.
+
+*Conditions.*
+- *(I_{ts})* Stable-K on $[t,s]$: $K_t = K_s = K$; well-separated ($d_{\mathrm{inter}}^* \geq d_{\min}^* \geq 3$); sharp-OT ($\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$); margin $\Delta_{\mathrm{sep}}(M_{t\to s}) \geq \Delta_{\mathrm{sep}}^*$.
+- *(I_{sr})* Same conditions on $[s,r]$: $K_s = K_r = K$, with $M_{s\to r}$ E1–E4-admissible and margin $\Delta_{\mathrm{sep}}(M_{s\to r}) \geq \Delta_{\mathrm{sep}}^*$.
+
+*Construction.* Define the **kernel-composed** transport plan:
+$$M_{t\to r}^{\mathrm{comp}} := M_{s\to r} \circ M_{t\to s}, \qquad M_{t\to r}^{\mathrm{comp}}(x,z) = \sum_y M_{t\to s}(x,y)\, M_{s\to r}(y,z).$$
+
+*Conclusion.* Under (I_{ts}) + (I_{sr}):
+$$\boxed{R_{t\to r}\!\left[M_{t\to r}^{\mathrm{comp}}\right] = R_{s\to r}\!\left[M_{s\to r}\right] \circ R_{t\to s}\!\left[M_{t\to s}\right].}$$
+
+In the stable-K bijective case, writing $\pi_{ts}, \pi_{sr}, \pi_{tr}^{\mathrm{comp}}$ for the induced bijections on $[K]$:
+$$\pi_{tr}^{\mathrm{comp}} = \pi_{sr} \circ \pi_{ts} : [K] \to [K].$$
+
+*Proof sketch.* (1) By (I_{ts}) + Lemma 2 (diagonal mass lower bound, canonical persistence framework): $\gamma_{M_{t\to s}}(C_i^t, C_{\pi_{ts}(i)}^s) \geq (1 - \eta_{\mathrm{self}}^K)\, m_i^{t,\mathrm{deep}}$. (2) By (I_{sr}) + Lemma 2: same on $[s,r]$. (3) Composition: $\gamma_{M_{t\to r}^{\mathrm{comp}}}(C_i^t, C_{(\pi_{sr}\circ\pi_{ts})(i)}^r) \geq (1 - \eta_{\mathrm{self}}^K)^2 \min_j m_j^{s,\mathrm{deep}}$. (4) Lemma 3-sharp (off-diagonal control) on the composed plan: $\gamma_{\mathrm{off}} \leq 2\eta_{\mathrm{cross}}^{\mathrm{sharp}} \min(m^t, m^r)$ (factor 2 from leakage at either intermediate step; absorbed by per-interval margin). (5) Apply T-Temporal-Identity (b) Cat A (§13 Cat A, CV-1.13) to $M_{t\to r}^{\mathrm{comp}}$: the composed plan satisfies E1–E4, margin condition at the composed level holds, and bijection $\pi_{tr}^{\mathrm{comp}} = \pi_{sr} \circ \pi_{ts}$ is induced. $\square$
+
+*Cat B rating.* Conditional on the regime conditions (I_{ts}), (I_{sr}) — stable-K + well-separated + sharp-OT + margin — which are *explicit structural hypotheses* (canonical Persistence framework). The composition is *exact* (no $\varepsilon_{\mathrm{comp}}$ error term), since $M_{t\to r}^{\mathrm{comp}}$ is *defined as* the matrix product.
+
+*Limitation (Scope of T-CC-StableK-Kernel).* This theorem applies *only* to the kernel-composed transport plan $M_{t\to r} := M_{s\to r} \circ M_{t\to s}$. **It makes no claim about the independent Sinkhorn-recomputed plan $M_{t\to r}^{\mathrm{Sink}} := \mathrm{Sinkhorn}(u_t, u_r, c[u_t, u_r], \varepsilon_{\mathrm{OT}})$.** In general $M_{t\to r}^{\mathrm{comp}} \neq M_{t\to r}^{\mathrm{Sink}}$. Whether $R_{t\to r}[M_{t\to r}^{\mathrm{Sink}}] = R_{s\to r} \circ R_{t\to s}$ holds is OP-0012-SINK (OPEN, theorem_status.md). The Sinkhorn-semigroup-failure direction is *proved* (T-SINKHORN-PLAN-SEMIGROUP-FAILS, §12 Warning, CV-1.15); the alternative-direction OPEN problem remains.
+
+*T-ACT-KERNEL-COMP→REL conditional lift (CV-1.15 → CV-1.17 forward reference activation).* With T-CC-StableK-Kernel now canonical, the (GK) condition of T-ACT-KERNEL-COMP→REL (CV-1.15 §13 Cat B) is *satisfied via Reading 1* by adopting $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel, T-ACT-GIBBS Cat A). The conditional Cat B status of T-ACT-KERNEL-COMP→REL therefore lifts to **Cat B unconditional** in the sense that the (GK) precondition no longer relies on a working-candidate. The (stable-K) + (margin) regime conditions remain as standard hypotheses (not lifted). **Net effect:** T-ACT-KERNEL-COMP→REL becomes a *direct corollary* of T-CC-StableK-Kernel + T-ACT-GIBBS under the regime hypotheses; the working-candidate dependence is closed.
+
+*References.* T-Temporal-Identity (§13 Cat A, CV-1.13, parts a/b/c/d); Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`); Lemma 2 & Lemma 3-sharp (canonical Persistence framework, §13 supporting); T-CC-StableK-Sinkhorn (NOT proved, OP-0012-SINK, OPEN); T-SINKHORN-PLAN-SEMIGROUP-FAILS (§12 Warning, CV-1.15); T-ACT-KERNEL-COMP→REL (§13 Cat B CV-1.15 above; conditional lift activated here).
+
+*CV-1.17 Cat B count: +1 entry (T-CC-StableK-Kernel). Running total post-CV-1.17: 68A / 19B / 6C / 5R = 98 claims, ~70% fully proved.*
 
 ---
 

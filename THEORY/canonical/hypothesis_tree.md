@@ -1,21 +1,21 @@
 ---
-id: HT-3.5
+id: HT-3.8
 type: theory/hypothesis-tree
-version: 3.5
+version: 3.8
 created: 2026-05-07
-last_updated: 2026-05-10
+last_updated: 2026-05-15
 status: active
-description: SCC 이론 가설 의존성 트리. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10) — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW). Net count unchanged: 80 claims preliminary. HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
+description: SCC 이론 가설 의존성 트리. HT-3.8: CV-1.17 SEALED (W7-Day5 hygiene close 2026-05-15) — T-CC-StableK-Kernel Cat B canonical promotion (kernel-composed compositional consistency under (I_{ts})+(I_{sr})); T-ACT-KERNEL-COMP→REL conditional lift activated. H-COMP-KERNEL OPEN → CLOSED Cat B. Count 68A/19B/6C/5R = 98 claims (~70%). HT-3.7: CV-1.16 SEALED (W7-Day5 ext 2026-05-14) — H-MORSE-Local closure package; L-CLOSURE-LIFT Cat A; L-HMORSE-LOCAL/DECOMP Cat B; L-BOUNDARY-MODE-EXCLUSION Cat C; OP-HMORSE-BROADNESS CLOSED. H-MORSE row OPEN → PARTIALLY CLOSED. 68A/18B/6C/5R = 97. HT-3.6: CV-1.15 SEALED (W7-Day5 morning 2026-05-14) — Action-based temporal succession package; H-COMP branch under Q5. 67A/16B/5C/5R = 93. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10). HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
 ---
 
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]] · [[MOC_hypothesis_tree]]
 > Pairs with: [[theorem_status]] (claim-status authority)
-> Related: [[MOC_open_problems_blockers]] · [[canonical]] · [[CV-1.16_SEAL]]
+> Related: [[MOC_open_problems_blockers]] · [[canonical]] · [[CV-1.17_SEAL]]
 > Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
-> Status: HT-3.7 (CV-1.16 baseline)
+> Status: HT-3.8 (CV-1.17 baseline)
 
-# SCC Hypothesis Tree (HT-3.5)
+# SCC Hypothesis Tree (HT-3.8)
 
 ---
 
@@ -35,23 +35,25 @@ description: SCC 이론 가설 의존성 트리. HT-3.5: CV-1.13 SEALED (W7-CV1.
 
 **W7-Day5 extension (2026-05-14 evening) — CV-1.16 SEALED:** H-MORSE-Local closure package. **+1 Cat A** (L-CLOSURE-LIFT — operator-norm broadness via Theorem B2; supersedes T7-Enhanced as the broadness statement) + **+2 Cat B** (L-HMORSE-LOCAL unconditional under D-HMORSE-LOCAL (C2′) active-set form; L-HMORSE-DECOMP conditional on b_D=0 + A3) + **+1 Cat C** (L-BOUNDARY-MODE-EXCLUSION SKETCH-level Weyl perturbation). **OP-HMORSE-BROADNESS CLOSED Cat A** by 3-approach convergence: (a) Perron-Frobenius, (b) operator-norm degree-weighted, (c) 15/15 numerical PASS in `exp_hmorse_broadness_full_spectrum.py`. T7-Enhanced (canonical Cat A) preserved as historical context. **68A/18B/6C/5R = 97 claims (~70%)**. HT-3.7. H-MORSE row PARTIALLY CLOSED (Local Cat B achieved; Global Cat A path = OP-HMORSE-LOCAL-A, ~2 sessions).
 
-**다음 목표 (CV-1.17 타겟):**
+**W7-Day5 hygiene close (2026-05-15) — CV-1.17 SEALED:** T-CC-StableK-Kernel canonical promotion (CV114 working candidate → §13 Cat B). Kernel-composed compositional consistency under (I_{ts})+(I_{sr}): $R_{t\to r}[M_{s\to r} \circ M_{t\to s}] = R_{s\to r} \circ R_{t\to s}$. Source: Lemma 6 (`logs/daily/2026-05-07/03_development.md §10`), W6 D5 2026-05-07 complete proof. **+1 Cat B** (T-CC-StableK-Kernel). T-ACT-KERNEL-COMP→REL conditional lift activated — (GK) precondition no longer relies on working-candidate; CV-1.15 forward-reference closes. **68A/19B/6C/5R = 98 claims (~70%)**. HT-3.8. H-COMP-KERNEL OPEN → **CLOSED Cat B**. (Note: CV-1.14 reserved-version absorbed; CV-1.17 jumps over CV-1.14 in numeric order while fulfilling its semantic content — promotion 자체가 그 reservation 의 실현.)
 
-> **Package II Eyring-Kramers prefactor Cat B** — L-HMORSE-LOCAL Cat B provides partial H5 replacement; combine with OP-0021 ($T_*$) for full prefactor. Q3 Package II 진입.
+**다음 목표 (CV-1.18 타겟):**
 
-> **OP-HMORSE-LOCAL-A** — Cat A path for L-HMORSE-LOCAL (~2 sessions); requires sharper residual bound (using $|\sigma''(z(u^*))| \to 0$ at saturated nodes) + OP-HMORSE-SBM robustness extension.
+> **OP-HMORSE-LOCAL-A** — Cat A path for L-HMORSE-LOCAL (~2 sessions); requires sharper residual bound (using $|\sigma''(z(u^*))| \to 0$ at saturated nodes) + OP-HMORSE-SBM robustness extension. **CV-1.18 primary target.**
 
-> **OP-HMORSE-SBM** — numerical robustness extension (1 session); SBM / barbell / small-world graph classes verifying L-HMORSE-LOCAL beyond canonical grids.
+> **Package II Eyring-Kramers prefactor Cat B** — L-HMORSE-LOCAL Cat B provides partial H5 replacement; combine with OP-0021 ($T_*$) for full prefactor. Q3 Package II 진입. ETA 3-4 sessions.
+
+> **OP-HMORSE-SBM** — numerical robustness extension (1 session); SBM / barbell / small-world graph classes. OP-HMORSE-LOCAL-A sub-task B 와 중복.
+
+> **OP-0021 $T_*$ registration + dual-naming reconciliation** — H-T* "T_* normalization" (hypothesis_tree) vs OP-0021 "Stochastic Dynamics" (theorem_status) 명명 정리. CV-1.16 SEAL 의 deferred 결정 처리. ETA 0.5 session (cosmetic) + 4-8 sessions (T_* registration 실체 작업).
 
 > **§F Step 2 housekeeping** — replace `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md §1–§4` with §A–§D blocks (CV-1.15 deferred working-file task, 0.5 session).
 
-> **OP-0012-SINK 잔여 blocker** — L-δ_eff-SINK + L-Eff-Sinkhorn (Cat C targets).
+> **OP-0012-SINK 잔여 blocker** — L-δ_eff-SINK + L-Eff-Sinkhorn (Cat C targets). T-CC-StableK-Kernel canonical promotion 후 *kernel-composed scope* 가 명시화됐으므로 Sinkhorn-recomputed scope 차이 더 선명해짐.
 
-> **CV-1.14 T-CC-StableK-Kernel** canonical promotion (working candidate; would unlock T-ACT-KERNEL-COMP→REL unconditional).
+> **T-σ-Inherit** — OP-0008 MERGE/SPLIT Wigner-projection (Phase 2 / W9+).
 
-> **T-σ-Inherit** — OP-0008 MERGE/SPLIT Wigner-projection (Phase 2).
-
-*CV-1.16 closed: H-MORSE-Local closure package + L-CLOSURE-LIFT broadness Cat A. CV-1.15 closed: action-based temporal succession. CV-1.13 closed: T-Temporal-Identity Cat A path complete. Next priority: Package II Cat B 진입 (Q3 closure) — L-HMORSE-LOCAL이 H5 partial replacement 제공; OP-0021 ($T_*$ registration) 완성하면 prefactor 가능. CV-1.17 ETA ~3 sessions.*
+*CV-1.17 closed: T-CC-StableK-Kernel kernel-composed compositional consistency Cat B (CV114 working absorbed). CV-1.16 closed: H-MORSE-Local closure package + L-CLOSURE-LIFT broadness Cat A. CV-1.15 closed: action-based temporal succession. CV-1.13 closed: T-Temporal-Identity Cat A path complete. Next priority: OP-HMORSE-LOCAL-A → Package II Cat B 진입 (Q3 closure).*
 
 ---
 
@@ -299,15 +301,31 @@ H-T*   ──┘         │
 └─────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────┐
-│ H-COMP-ACTION (CV-1.15, 2026-05-14) [NEW]      │
+│ H-COMP-KERNEL (CV-1.17, 2026-05-15) [CLOSED Cat B]│
+│  T-CC-StableK-Kernel (canonical §13 Cat B):     │
+│   M_{t→r}^comp := M_{s→r} ∘ M_{t→s}             │
+│   (I_{ts})+(I_{sr}) →                           │
+│   R[M^comp] = R[M_{s→r}] ∘ R[M_{t→s}]           │
+│  Scope: kernel-composed plan only — independent │
+│   Sinkhorn recomputation = OP-0012-SINK OPEN.   │
+│  CV-1.14 reserved-version 흡수 (CV-1.17 jump).  │
+│  Source: Lemma 6 (W6 D5 2026-05-07, 완전 증명). │
+│  Working file 흡수: CV114_TEMPORAL_COMPOSITION/ │
+│   05_promotion_draft.md.                        │
+└─────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────┐
+│ H-COMP-ACTION (CV-1.15, 2026-05-14; lift active CV-1.17)│
 │  L-ENDPOINT-NONSEMI (Cat A): endpoint² 합성 X   │
 │  T-ACT-DP (Cat A): hard-min Bellman DP          │
 │  T-ACT-GIBBS (Cat A): K_{i→k} = K_{i→j}·K_{j→k} │
-│  T-ACT-KERNEL-COMP→REL (Cat B conditional):     │
+│  T-ACT-KERNEL-COMP→REL (Cat B):                 │
 │   (GK)+(stable-K)+(margin) → R 합성             │
-│  조건 의존성: (GK) requires CV-1.14             │
-│   T-CC-StableK-Kernel promotion. Deferred       │
-│   CV-1.16+.                                     │
+│  조건 lift activated CV-1.17: (GK) satisfied via│
+│   T-CC-StableK-Kernel canonical promotion +     │
+│   T-ACT-GIBBS Cat A. (GK) 더 이상 working-      │
+│   candidate 에 의존 안 함. (stable-K)+(margin)  │
+│   는 regime 가설로 유지 (lifted X).             │
 └─────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────┐
@@ -336,7 +354,7 @@ H-T*   ──┘         │
 └─────────────────────────────────────────────────┘
 ```
 
-*Note.* H-COMP-KERNEL (CV-1.14 candidate) will be inserted between H-COMP-CC and H-COMP-ACTION when CV-1.14 T-CC-StableK-Kernel is promoted to canonical. Under R-C (2026-05-13 decision), it remains a working-layer concept in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`.
+*Note (CV-1.17 update, 2026-05-15).* H-COMP-KERNEL **inserted as CLOSED Cat B** between H-COMP-CC and H-COMP-ACTION (above). CV-1.14 T-CC-StableK-Kernel canonical promotion absorbed; CV-1.17 jumps over CV-1.14 in numeric order while fulfilling its semantic content (promotion 자체가 그 reservation 의 실현). Working file `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` 의 §1–§6 내용이 canonical.md §13 Cat B 의 T-CC-StableK-Kernel block 으로 흡수됨; 같은 working 폴더의 §5 OP-0012-SINK 신규 subproblem 제안은 *현재 CV-1.15 SEAL 의 OP-0012-SINK 와 다르며*, *현재 작업 범위 (OPT-B Stage B) 가 아님* — CV-1.18+ 의 OP-0012-SINK 잔여 blocker 작업과 함께 reconcile 필요.
 
 ---
 
@@ -445,5 +463,6 @@ HT-x.y
 | HT-3.3 | 2026-05-10 | Lemma S-B1-Weak Cat A (W7-CV113): ρ_deep > ρ_* ≈ 0.003은 H2' (Γ-수렴+DMP)에서 Cat A 증명됨. OP-SB1-DEEP 비차단 강등. T-Temporal-Identity (b,d) Cat A 경로: S-A1-A3만 남음 (~1–2 sessions). 80 claims (예비). |
 | HT-3.4 | 2026-05-10 | S-B1-SYM Cat B (W7-CV113A): symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) derived from Theorem 2b (Cat A). Literal 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0). OP-SB1-084 registered (LOW priority, successor of OP-SB1-DEEP). T-Temporal-Identity Cat A path unchanged: S-A1-A3 only. Net count: 55A/15B/5C/5R = 80 claims (예비, no change). CV-1.13 NOT sealed by W7-CV113A. |
 | HT-3.5 | 2026-05-10 | CV-1.13 SEALED (W7-CV1.13): T-Temporal-Identity full Cat A across all four parts (a,b,c,d). S-A1 CERTIFIED (D-ST-3 PersComp integration into §3.11), S-A3 CERTIFIED (part (a) constructive existence proof — Lemma 1), S-C1 CERTIFIED with margin correction (Lemma 11 kernel independence; corrected margin condition `Δ_sep ≥ Δ_sep* + 2 ε_kernel` — numerically negligible at canonical parameters). Net: +4A, −1B → **59A/14B/5C/5R = 83 claims (~71%)**. Seal document: `THEORY/canonical/CV-1.13_SEAL.md`. Next CV-1.14 candidate: H-MORSE / Package II Entry Audit. |
+| HT-3.8 | 2026-05-15 | **CV-1.17 SEALED (W7-Day5 hygiene close)** — T-CC-StableK-Kernel Cat B canonical promotion (CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md 흡수). Kernel-composed compositional consistency: under (I_{ts}) + (I_{sr}) (stable-K + well-separated + sharp-OT + margin on both intervals), defining $M_{t\to r}^{\mathrm{comp}} := M_{s\to r} \circ M_{t\to s}$ yields $R_{t\to r}[M^{\mathrm{comp}}] = R_{s\to r} \circ R_{t\to s}$. Source: Lemma 6 (`logs/daily/2026-05-07/03_development.md §10`, W6 D5 complete proof). **T-ACT-KERNEL-COMP→REL conditional lift activated** — (GK) precondition no longer relies on working-candidate; CV-1.15 forward-reference closes. **H-COMP-KERNEL** subbranch inserted between H-COMP-CC and H-COMP-ACTION as **CLOSED Cat B**. CV-1.14 reserved-version 흡수 (CV-1.17 jumps over CV-1.14 in numeric order while fulfilling its semantic content). Net count: **+1B → 68A/19B/6C/5R = 98 claims (~70%)**. P7 user authorization granted via plan-mode OPT-B selection (Hygiene + CV114 promotion). Seal: `THEORY/canonical/CV-1.17_SEAL.md`. Next CV-1.18 targets: OP-HMORSE-LOCAL-A (Cat A path, ~2 sessions); Package II Eyring-Kramers prefactor Cat B (Q3 closure); OP-HMORSE-SBM robustness; OP-0021 T_* registration + dual-naming reconciliation; §F Step 2 housekeeping; OP-0012-SINK 잔여 lemmas. |
 | HT-3.7 | 2026-05-14 | **CV-1.16 SEALED (W7-Day5 evening extension)** — H-MORSE-Local Closure Package. **+1A** (L-CLOSURE-LIFT via Theorem B2 operator-norm broadness; supersedes T7-Enhanced as the broadness statement) + **+2B** (L-HMORSE-LOCAL Cat B unconditional under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form; L-HMORSE-DECOMP Cat B conditional on b_D=0 + A3) + **+1C** (L-BOUNDARY-MODE-EXCLUSION SKETCH-level Weyl perturbation). **OP-HMORSE-BROADNESS CLOSED Cat A** by 3-approach convergence: (a) Perron-Frobenius / Collatz-Wielandt, (b) operator-norm degree-weighted (primary), (c) 15/15 numerical PASS in `CODE/experiments/exp_hmorse_broadness_full_spectrum.py`. H-MORSE row PARTIALLY CLOSED in §가설 상태 요약 (Local Cat B achieved; Global Cat A path = OP-HMORSE-LOCAL-A). T7-Enhanced (canonical Cat A) preserved as historical context. User decisions (plan-mode 2026-05-14): D-HMORSE-LOCAL (C2′) active-set form (over strict-interior (C2)); 4-lemma promotion package. Net count: **68A / 18B / 6C / 5R = 97 claims (~70%)**. Source: `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`. Next CV-1.17 targets: Package II Eyring-Kramers prefactor Cat B; OP-HMORSE-LOCAL-A Cat A path; OP-HMORSE-SBM robustness extension; §F Step 2 housekeeping (CV-1.15 working file). |
 | HT-3.6 | 2026-05-14 | **CV-1.15 SEALED (W7-Day5)** — Action-Based Temporal Succession Package. H-COMP branch added under Q5 with three new subbranches: H-COMP-ACTION (CV-1.15, Cat A + Cat B conditional), H-COMP-SINK (OP-0012-SINK OPEN; cost-level blocker closed under action redef, scaling-gap remains), and H-COMP-CC (CV-1.12 reference) + H-COMP-Kjump + H-COMP-Markov retained. **+8A +2B** (8 Cat A: L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO; 2 Cat B: T-ACT-KERNEL-COMP→REL conditional on CV-1.14 working candidate, P-SINKHORN-STABILITY-CONDITIONAL). P-ACTION-PATH-INHERITANCE Interpretation (not counted). Under R-C (audit decision 2026-05-13), H-COMP-KERNEL **not** added at this turn — CV-1.14 T-CC-StableK-Kernel remains working candidate. Net count: **67A / 16B / 5C / 5R = 93 claims (~72%)**. T-Temporal-Identity Cat A unchanged. Seal: `THEORY/canonical/CV-1.15_SEAL.md`. Audit ref: `THEORY/logs/daily/2026-05-13/`. Next CV-1.16 target: H-MORSE-Local Cat B (Path B; CV114 audit 2026-05-11 권장) + OP-0012-SINK 잔여 lemma. |
