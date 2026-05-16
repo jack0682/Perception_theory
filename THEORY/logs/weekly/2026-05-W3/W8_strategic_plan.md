@@ -11,9 +11,15 @@
 
 ## 0. 주간 테마
 
-**"Multi-Formation Atlas 작성 + Broad Exploration (국소최소 회피)"**
+**"Multi-Formation Atlas + Broad Exploration + Distinctive Layer Secure (3-축 동시 공격)"**
 
-W7 은 세 갈래 dense track + 한 번의 결정의 호흡으로 +15 claims (CV-1.13→CV-1.17) 를 산출했고, 5/15 결정 C 가 V-AFD/R-2/z_t 회귀 패턴을 종결시켰다. W8 은 그 *결정 C framework 를 prophylactic 하게 매일 적용* 하면서, 사용자 요청 두 축을 동시 달성한다:
+W7 은 세 갈래 dense track + 한 번의 결정의 호흡으로 +15 claims (CV-1.13→CV-1.17) 를 산출했고, 5/15 결정 C 가 V-AFD/R-2/z_t 회귀 패턴을 종결시켰다.
+
+**2026-05-16 사용자 자기-진단 (priority 격상의 직접 사유):**
+
+3-theorem 압축 연습 (T8 + T-L1-F + T-Temporal-Identity) 이 *secured Cat A* 기준으로만 작동한다는 자기-진단. SCC 의 *distinctive content* (σ-inheritance + OMS-2.0 quotient) 는 압축 후보로 올라오지 못함 — Cat B/C/framework-only 상태이기 때문. 외부 평가 좌표계 ("Allen-Cahn + 데코레이션") 와 내부 의미 좌표계 ("observer-relative identity-through-regrouping") 의 미스매치가 *현재 distinctive layer 의 미-secure* 에서 발생. → **W8 priority 가 secured layer 정밀화 (OP-HMORSE-LOCAL-A) 만이 아니라, distinctive layer 의 secure (OP-0008 σ_standard MERGE/SPLIT) 도 동시에 공격하는 방향으로 재조정.**
+
+W8 은 그 *결정 C framework 를 prophylactic 하게 매일 적용* 하면서, 사용자 요청 두 축 + 신규 한 축을 동시 달성한다:
 
 - **트랙 A — Multi-Formation Atlas**: 현재 canonical 의 ~40-50% 형식화 상태 (static/equilibrium 만; dynamics·MERGE-SPLIT·temporal composition 은 open) 를 *설명 가능한 형태로 정리* + *수학적 갭을 좁히는 새 정리 후보 생산*.
 - **트랙 B — Broad Exploration**: 한 OP 에 깊이 파다가 국소최소에 빠지지 않도록 매일 *수학적으로 독립인* 3-5개 후보를 병렬 진행.
@@ -87,16 +93,23 @@ W7 은 세 갈래 dense track + 한 번의 결정의 호흡으로 +15 claims (CV
 
 **+1A → 99 claims = 69A / 19B / 6C / 5R** (최소 보장 net 변화).
 
-### G3 — Secondary SEAL 후보 (트랙 B, stretch)
+### G3 — CV-1.19 SEAL (트랙 B, **COMMITTED, two-gate contingency**)
 
-CV-1.18 primary 가 일찍 완료되거나, Day 2-3 의 working 후보가 P5-P7 통과 시 추가 SEAL. Stretch target = **CV-1.19 SEALED** (W8 총 2 SEAL).
+**Status 변경 (2026-05-16):** 이전 plan 의 "optional stretch" → **committed second SEAL**. Distinctive layer secure 가 W8 의 *core deliverable* 가 됨.
 
-후보 (priority 순):
-1. **P-K-Select-Unified Cat B** (Day 2 working `k_select_pf_obs_unified_view.md` 산출): equilibrium-observer 다리.
-2. **L-Wigner-Projection-MERGE Cat B** (Day 3 working `op0008_merge_wigner_attack.md` 산출, 2-approach 수렴 시): T-σ-Inherit (d-σ_standard) Cat C → Cat B 승급.
-3. **L-Sinkhorn-Plan-Composition-Bound Cat C** (Day 4 working `op0012_sink_scaling_attack.md` 산출): 새 Cat C 등록.
+**Primary target (사용자 확정 aggressive 옵션):** **OP-0008-MERGE/SPLIT σ_standard Wigner-projection Cat C → Cat B 승급** 시도. 2-approach attack:
+- Approach (a) perturbation theory: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\|V_{\mathrm{coup}}\|_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5).
+- Approach (b) RMT level repulsion: GOE projection, $P(s) \sim s$ as $s \to 0$, Aut(G) character data 결여 bypass.
+- 두 route 가 *동일* 결정론적 σ_standard map 산출 시 → Cat C → Cat B 승급 → Gate A 활성.
 
-**+1-3 추가 → 100-101 claims 가능.**
+**Day 4 EOD Contingency Gate (CV-1.19 target 확정):**
+- **Gate A (preferred, 50% 확률)**: 2-approach 수렴 → L-Wigner-Projection-MERGE Cat B 승급.
+- **Gate B (fallback, ~85% 확률 보장)**: 2-approach 수렴 실패 → **T-σ-Inherit 4 parts (a, b, d-direction, e) partial canonical promotion** (이미 P4 working, audit-only 진입).
+- **Gate C (stretch)**: 둘 다 활성 시 = 1B + 4 partial entries.
+
+**Anti-goal**: SEAL 전 *억지 promotion* 금지. 3-조건 safety check (분석적 수렴 명시 + 8×8/12×12 numerical cross-check + RMT bypass 명시) PASS 시에만 Gate A 진입.
+
+**+1B (Gate A) 또는 +4 partial (Gate B) → 99-103 claims**.
 
 ### G4 — Numerical Probes (트랙 C, infra + 4 실험)
 
@@ -146,47 +159,62 @@ W8 의 aggressive 분량 목표는 *새 working 후보를 P3 이상으로 끌어
 세 track 매일 병렬. 한 track 에 60분 막히면 다른 track 으로 전환.
 
 ```
-Day 1 (Mon, 05-18) — Broad Survey + Atlas Skeleton + Sanity Infra
+Day 1 (Mon, 05-18) — Broad Survey + Atlas Skeleton + Sanity Infra (OP-0008 thrust 진입)
   Track A: MF_atlas.md skeleton (12 sections, 각 1 paragraph + xref) → v0.1
-  Track B: 3 Explore agents 병렬 (B1: OP-0021, B2: OP-0008, B3: OP-0005-DYN) → 3 broad_survey 파일
+  Track B (재조정): Agent B2 PRIMARY (OP-0008 Wigner-projection 두 route 매핑 framework — perturbation + RMT 의 동일 σ_standard map 수렴 분석)
+                  + Agent B1 lighter (OP-0021 Mori-Zwanzig, W9 staging only)
+                  + Agent B3 lighter (OP-0005-DYN Kramers, W9+ staging only)
   Track C: test_sanity_canonical_xref.py + exp90 (canonical_k2_hash, subthreshold_demo_check) → PASS
-  Decision gate (EOD): 새 수학 0 — survey day 이므로 정상. canonical 0 edits.
-  Deliverables: MF_atlas.md v0.1 + 3 broad survey + exp90 + daily logs
+  Decision gate (EOD): 새 수학 0 — survey day 이므로 정상. canonical 0 edits. *OP-0008 attack 초기 input 확보가 핵심 metric.*
+  Deliverables: MF_atlas.md v0.1 + 3 broad survey (B2 가 가장 두꺼움) + exp90 + daily logs
 
-Day 2 (Tue, 05-19) — K-Selection Mechanism Deep Dive + OP-0005-DYN Sketch + K-soft Validation
+Day 2 (Tue, 05-19) — K-Selection Deep Dive + OP-0008 Perturbation Theory PRIMARY + K-soft Validation
   Track A: MF_atlas.md §3 (T-K-Select-PF) + §4 (T-K-Select-OBS) full (~80-120줄 each) + k_select_pf_obs_unified_view.md (P-K-Select-Unified Cat B SKETCH)
-  Track B: op0005_dyn_kramers_sketch.md (3-pillar, Cat C target L-KRAMERS-MULTI-RATE)
+  Track B (재조정): 90% 시간 = op0008_merge_wigner_perturbation.md (Kato resolvent expansion, V_coup decay rate, 5×5 toy analytic)
+                  + 10% 시간 = op0005_dyn_kramers_sketch.md (Cat C SKETCH, W9+ staging)
   Track C: exp91 (K-soft hard-K recovery + Lipschitz, gap §B-5 closure) + test_k_soft_recovery.py (2 tests)
-  Decision gate (EOD): 새 수학 = P-K-Select-Unified sketch + L-KRAMERS-MULTI-RATE sketch. K-soft Lipschitz numerical 지지.
+  Decision gate (EOD): 새 수학 = OP-0008 perturbation route candidate Cat B statement 도출. K-soft Lipschitz numerical 지지.
   Deliverables: Atlas §3-§4 + 2 working files + exp91 + pytest 217+1xf
 
-Day 3 (Wed, 05-20) — σ-Inheritance Deep Dive + OP-0008 MERGE Attack + Wigner Robustness
+Day 3 (Wed, 05-20) — σ-Inheritance Deep Dive + OP-0008 RMT Route + 2-Approach Audit
   Track A: MF_atlas.md §5 (σ-Inheritance 6 parts 정밀 표 ~200줄)
-  Track B: op0008_merge_wigner_attack.md (2-approach: perturbation theory + RMT; 5×5 + 8×8 toy)
+  Track B (재조정): op0008_merge_wigner_rmt.md (Day 2 perturbation 과 분리된 파일):
+                    - Approach (b) RMT level repulsion 전개 (GOE projection)
+                    - **2-approach 수렴 audit** (Day 2 + Day 3 통합) — Gate A 진입 조건 확정
+                    - 8×8 + 12×12 toy 에서 두 route 비교
   Track C: exp92 (Wigner projection robustness, K=2 + ε-noise mixing 계수) + test_sigma_rich_formulas.py (Lemma B2/B3 직접 검증)
-  Decision gate (EOD): 새 수학 = OP-0008-MERGE 2-approach 수렴 여부 판정. 수렴 시 → L-Wigner-Projection-MERGE Cat B 후보 P5 audit 트리거.
-  Deliverables: Atlas §5 (가장 두꺼운 섹션) + op0008_merge_wigner_attack.md + exp92 + pytest 219+1xf
+  Decision gate (EOD): OP-0008 2-approach 수렴 여부 *예비* 판정. 수렴 시 → CV-1.19 SEAL prep 진입.
+  Deliverables: Atlas §5 (가장 두꺼운 섹션) + op0008_merge_wigner_rmt.md + exp92 + pytest 219+1xf
 
-Day 4 (Thu, 05-21) — Temporal Composition + OP-0012-SINK Attack + **CV-1.18 SEAL**
+Day 4 (Thu, 05-21) — Temporal Composition + OP-0012-SINK + **CV-1.18 SEAL** + CV-1.19 Gate 결정
   Track A: MF_atlas.md §6 (Temporal composition 통합 그림) + §7 (OMS-2.0 Appendix lift)
-  Track B: op0012_sink_scaling_attack.md (cost-level vs plan-level scaling gap, L-Sinkhorn-Plan-Composition-Bound Cat C target)
+  Track B: op0012_sink_scaling_attack.md (L-Sinkhorn-Plan-Composition-Bound Cat C target — Day 4 working only, SEAL 아님)
   Track A&B 통합 — **CV-1.18 SEAL (primary OP-HMORSE-LOCAL-A)**:
     Step 1: Sub-task A analytic refinement (|σ''| saturation) audit
-    Step 2: Sub-task B numerical (SBM/barbell/small-world) 검증 via exp_hmorse_sbm_robustness 확장
-    Step 3: P-Audit P1-P7 표기 + canonical xref grep (W7 R-2 archive 회피)
+    Step 2: Sub-task B numerical (SBM/barbell/small-world) 검증
+    Step 3: P-Audit P1-P7 표기 + canonical xref grep
     Step 4: SEAL 6-step (CV-1.16 SEAL template 재사용)
     Step 5: canonical.md §13 Cat A insert (L-HMORSE-LOCAL Cat A) + count 갱신
-    Step 6: hypothesis_tree HT-3.8 → HT-3.9 (H-MORSE row PARTIALLY CLOSED → CLOSED, H-EK row 활성화)
-  Track C: exp93 (Multi-step temporal Persist chaining, T-Temporal-Identity 다중 형성 확장)
-  Decision gate (EOD): **CV-1.18 SEALED** 보장. Secondary SEAL 후보 (P-K-Select-Unified, L-Wigner-Projection-MERGE, L-Sinkhorn-Plan-Composition-Bound) 의 P5-P7 통과 여부 판정.
-  Deliverables: Atlas §6-§7 + op0012_sink_scaling_attack.md + **CV-1.18 SEALED** + exp93 + CHANGELOG [CV-1.18] entry + pytest 220+1xf
+    Step 6: hypothesis_tree HT-3.8 → HT-3.9 (H-MORSE CLOSED, H-EK 활성화)
+  **CV-1.19 Day 4 EOD Contingency Gate 결정 (Day 5 SEAL 의 target 확정):**
+    - Gate A (수렴 시): CV-1.19 target = L-Wigner-Projection-MERGE Cat B
+    - Gate B (수렴 실패 시): CV-1.19 target = T-σ-Inherit 4 parts partial canonical promotion (audit-only)
+    - Gate C (이중): 둘 다 활성 시 = 1B + 4 partial entries
+    - 3-조건 safety check (분석 수렴 + numerical cross-check + RMT bypass 명시) 모두 PASS 시에만 Gate A
+  Track C: exp93 (Multi-step temporal Persist chaining)
+  Decision gate (EOD): **CV-1.18 SEALED 보장** + CV-1.19 Gate 결정. CV-1.19 SEAL 은 Day 5 에 execution.
+  Deliverables: Atlas §6-§7 + op0012_sink_scaling_attack.md + **CV-1.18 SEALED** + CV-1.19 Gate 결정 + exp93 + pytest 220+1xf
 
-Day 5 (Fri, 05-22) — Atlas v1.0 + CV-1.19 Optional Second SEAL + W8 Close
-  Track A: MF_atlas.md §8 (Coupling regimes) + §9 (Dynamics gap map unlock chain 그래프) + §10-§11 (OP quick index + code mapping) + §12 (daily log 통합) → **v1.0 P5 promotion-ready**
-  Track B: Secondary SEAL 시도 (stretch, optional) — Day 2-4 산출 중 P5-P7 통과 후보 → **CV-1.19 SEAL** (총 2 SEAL)
+Day 5 (Fri, 05-22) — Atlas v1.0 + **CV-1.19 SEAL Execution (COMMITTED)** + W8 Close
+  Track A: MF_atlas.md §8 (Coupling regimes) + §9 (Dynamics gap map unlock chain) + §10-§11 + §12 → **v1.0 P5 promotion-ready**
+  Track B: **CV-1.19 SEAL execution** (Day 4 의 Gate 결과에 따라):
+    - Gate A: L-Wigner-Projection-MERGE Cat B canonical §13 insert + OP-0008 status: OPEN → PARTIALLY RESOLVED + HT-3.9 → HT-3.10
+    - Gate B: T-σ-Inherit 4 parts canonical §13 insert (4 lemmas 동시) + audit-only path
+    - Gate C: 둘 다 SEAL apply-order 6-step 실행
+    - 모든 gate 실패 (~15%): 정직한 archive → _archive/op0008_failed_attempt_2026-05-W3/
   Track C: exp94 (Phase diagram 3-regime grid, visual deliverable PNG → results/)
-  W8 Close: weekly_summary.md 신설 (W6/W7 동형 8 sections) + Hard-Constraint Sweep + W9 진입 권장 (CV-1.20 target = Package II EK Cat B)
-  Deliverables: Atlas v1.0 + CV-1.19 SEALED (optional) + exp94 + weekly_summary.md
+  W8 Close: weekly_summary.md 신설 (W6/W7 동형 8 sections) + Hard-Constraint Sweep + W9 진입 권장 (CV-1.20 target 은 CV-1.19 gate 결과에 따라 조건부 분기)
+  Deliverables: Atlas v1.0 + **CV-1.19 SEALED** (Gate A/B/C 중 하나) 또는 정직한 archive + exp94 + weekly_summary.md
 ```
 
 ### 분기 룰 (트랙 전환 조건)
@@ -200,19 +228,21 @@ Day 5 (Fri, 05-22) — Atlas v1.0 + CV-1.19 Optional Second SEAL + W8 Close
 
 ## 4. Success Criteria (수치)
 
+**갱신 2026-05-16:** CV-1.19 를 committed second SEAL 로 격상 (이전: optional stretch).
+
 | 항목 | Entry (5/16) | Target (5/22 EOD) | Stretch |
 |---|---|---|---|
-| Canonical version | CV-1.17 | **CV-1.18** (1 SEAL) | **CV-1.19** (2 SEAL) |
-| Total claims | 98 | **99-101** (+1-3) | **105+** (+7) |
-| Cat A 승급 | — | **≥1** (OP-HMORSE-LOCAL-A) | ≥2 |
-| New Cat B candidates | — | **≥3** | ≥5 |
-| New Cat C candidates | — | **≥2** | ≥3 |
+| Canonical version | CV-1.17 | **CV-1.19** (2 committed SEAL) | CV-1.20 (3 SEAL) |
+| Total claims | 98 | **99-103** (+1A + 0-1B + 0-4 partial) | 110+ (+12) |
+| Cat B → Cat A 승급 | — | **≥1** (OP-HMORSE-LOCAL-A) | ≥2 |
+| Cat C → Cat B 승급 | — | **≥1** (OP-0008 σ_standard, Gate A 50%) — contingency Gate B = T-σ-Inherit 4 parts partial canonical | ≥2 |
 | New experiments | — | **≥4** | ≥6 |
 | Multi-Formation Atlas | 없음 | **v1.0** P5-ready | v1.1 promotion review |
 | pytest | 215+1xf | **220+1xf** | 225+1xf |
 | Working files (W8 신규) | 0 | **≥9** | ≥15 |
-| OP 신규 / 해결 | — | ≥2 신규 / **≥1 해결** (OP-HMORSE-LOCAL-A) | ≥4 신규 / ≥2 해결 |
-| HT version | HT-3.8 | **HT-3.9** | HT-3.10 |
+| OP 신규 / 해결 | — | ≥2 신규 / **≥1 Cat A 해결 + 1 Cat B 해결** (또는 contingency partial) | ≥4 신규 / ≥2 해결 |
+| HT version | HT-3.8 | **HT-3.9 또는 HT-3.10** (Gate 따라) | HT-3.10 |
+| **Distinctive layer status** | framework-only (weak R1 반박) | **partially secured** (Gate A 시 Wigner Cat B, Gate B 시 4 parts canonical) | fully secured (Gate C) |
 
 ---
 
@@ -336,32 +366,53 @@ W7 V-AFD/R-2 와 같은 사이클 감지 시:
 
 | Risk | Probability | Mitigation |
 |---|---|---|
-| OP-HMORSE-LOCAL-A sharper residual 가 ~10⁴× gap closure 실패 | MED | Sub-task B (OP-HMORSE-SBM) 로 우회; CV-1.18 SEAL 은 secondary 후보 (P-K-Select-Unified 등) 로 |
-| OP-0008-MERGE 2-approach (perturbation + RMT) 수렴 실패 | MED-HIGH | working candidate 로 보존, Cat C status 유지, W9+ deferred |
+| OP-HMORSE-LOCAL-A sharper residual 가 ~10⁴× gap closure 실패 | MED | Sub-task B (OP-HMORSE-SBM) 로 우회; CV-1.18 SEAL 은 P-K-Select-Unified 또는 L-Sinkhorn-Plan-Composition-Bound 로 대체 |
+| **OP-0008 2-approach (perturbation + RMT) 수렴 실패** | MED-HIGH (50%) | **CV-1.19 Contingency Gate B = T-σ-Inherit 4 parts partial canonical promotion** (audit-only, 거의 보장). 정직한 fallback. |
+| **OP-0008 SEAL 전 working 의 *억지 promotion* 유혹** | MED (distinctive priority 격상으로 증가) | Gate A 진입 전 필수 3-조건 PASS: (a) 두 route 수렴이 *분석적* 으로 명시, (b) 8×8 + 12×12 numerical cross-check (exp92) 일관, (c) Aut(G) character data 결여의 RMT bypass 명시. 셋 모두 PASS 시에만 Gate A. |
+| **Atlas Track A 가 OP-0008 attack 에 시간 잠식** | MED | Day 별 Track 시간 분배 *명시* — Track A ≥1.5h, Track B ≥3h (OP-0008 thrust), Track C ≥1.5h. Atlas §1-§7 은 Day 4 EOD 까지 완성 *보장*. |
 | OP-0012-SINK plan-level scaling gap 닫히지 않음 | HIGH | Cat C 신규 등록 만 (Cat B 승급 시도 안 함) |
 | 사용자 메타-자각 ("또 회귀 아닌가?") | LOW (W7 결정 C 후) | 5/15 6-stage framework 즉시 적용; archive 빠른 결정 |
 | Atlas 가 단순 canonical 재정리에 머무름 | MED | 매 section 끝 *gap 또는 새 후보 1개 이상* 강제 명시 룰 |
 | pytest regression | LOW | Day 1 sanity infra + scc/ 무수정 정책 |
 | 3 트랙 동시 막힘 (드물지만 가능) | LOW | 5/15 6-stage framework 적용 → archive 또는 broad survey 재실행 |
+| **모든 Gate 실패 → CV-1.19 미달** | LOW (15%) | 정직한 archive — W8 close 시 CV-1.18 만 SEAL, CV-1.19 = "attempted, archived". 5/15 결정 C 의 *네 번째 정직한 archive* 가능성 수용. |
 
 ---
 
-## 11. W9+ Preview (W8 close 시 갱신)
+## 11. W9+ Preview (조건부 분기, W8 CV-1.19 Gate 결과에 따라)
 
-W9 (2026-05-25 ~ 2026-05-29) Phase 1 후보:
+W9 priority 는 W8 의 CV-1.19 gate 결과에 따라 *조건부 분기*:
 
-- **CV-1.20 target**: Package II Eyring-Kramers Cat B 진입 (OP-HMORSE-LOCAL-A Cat A + OP-0021 결합)
-- **W9 main work 후보 1**: T-σ-Inherit (d-σ_standard) Cat C → Cat B 승급 (W8 Day 3 op0008_merge_wigner_attack 산출이 기반)
-- **W9 main work 후보 2**: OP-0021 T_* registration 본격 (Mori-Zwanzig Route A or RG Route B — W8 Day 1 Agent B1 survey 가 입력)
-- **W9 어시스턴스**: §F Step 2 housekeeping (CV-1.15 deferred), OP-0021 dual-naming reconciliation (CV-1.15/CV-1.16 carried)
+**Path 1 — W8 CV-1.19 Gate A 성공 시** (OP-0008 Cat C → Cat B 완수):
+- **CV-1.20 primary**: OP-0008 σ_standard MERGE/SPLIT **Cat B → Cat A** 시도 (Aut(G) character data 완전 결정론화 — Wigner-Dyson 분포의 strict 형태 + tail bounds)
+- **CV-1.20 secondary**: Package II Eyring-Kramers Cat B (OP-HMORSE-LOCAL-A + OP-0021 결합 — 원래 plan)
+- W9 = *distinctive layer Cat A push + secured layer dynamics extend* 의 dual track
 
-W10+ 장기 후보:
+**Path 2 — W8 CV-1.19 Gate B 활성화 시** (T-σ-Inherit partial promotion fallback):
+- **CV-1.20 primary**: OP-0008 Cat C → Cat B 재시도 (W8 의 perturbation+RMT 두 route 분석 활용, 3rd approach = topological/group-theoretic 추가)
+- **CV-1.20 secondary**: Package II Eyring-Kramers Cat B (W8 OP-HMORSE-LOCAL-A 기반)
+- W9 = *재시도 + dynamics* 의 dual track
 
+**Path 3 — W8 CV-1.19 모든 gate 실패 시** (정직한 archive):
+- **CV-1.20 primary**: Package II Eyring-Kramers Cat B (원래 plan 복귀)
+- W9 main = secured layer 정밀화. distinctive layer 는 W10+ 로 이연.
+
+**W10+ 공통 (모든 Path):**
+- OP-0021 T_* registration 본격 (Mori-Zwanzig Route A or RG Route B; W8 Day 1 Agent B1 survey 가 입력)
+- T-OMS-Completeness 정리화 시도 (framework → theorem)
 - Package II Eyring-Kramers Cat A 승급
-- OP-0008-MERGE/SPLIT σ_standard Wigner-projection Cat B → Cat A
 - OP-0005-DYN Kramers rate full Cat A (Package II 의존)
 - Commitment 16 (K-status) 최종 결정 plan
 - DECL-1.0 amend plan (필요 시)
+
+### Distinctive vs Secured Layer 메타-지표 (W8 close 시 실측 갱신)
+
+| 지표 | W7 EOD | W8 EOD (target) | W9 EOD (조건부 예측) |
+|---|---|---|---|
+| Secured layer Cat A 정리 수 | 68 | 69 (+OP-HMORSE-LOCAL-A) | 69-71 |
+| Distinctive layer Cat A 정리 수 | 0 (모두 Cat B/C/framework) | 0 (Gate A 성공 시 4 parts canonical 진입; 그러나 모두 Cat B) | 1-2 (Path 1 시 OP-0008 Cat A 1, OMS-Completeness 시 +1) |
+| Distinctive layer "Allen-Cahn 아님" 입증력 | weak (framework only) | medium (partial canonical entry) | strong (Cat A entries) |
+| R1 ("phase-field 가족 instance") 반박 강도 | rhetorical | partial structural | structural |
 
 ---
 
