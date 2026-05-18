@@ -4,6 +4,44 @@
 
 ---
 
+## [ARCHIVE] 2026-05-18 — MAIN_PROMPT v1 + PLAN_TEMPLATE v1 → _archive/main_prompt_v1_2026-05-18/
+
+**Trigger:** W8-Day1 EOD 사용자 결정. v2 (mode-adaptive, `THEORY/logs/daily/MAIN_PROMPT_v2.md`) 채택 → v1 (single deep-attack mode) 레거시화.
+
+### Summary
+
+- **Moved files** (via `git mv`):
+  - `THEORY/logs/daily/MAIN_PROMPT.md` (v1, 385 lines, 2026-04-19 ~ 2026-05-15 사용) → `_archive/main_prompt_v1_2026-05-18/MAIN_PROMPT.md`.
+  - `THEORY/logs/daily/PLAN_TEMPLATE.md` (v1, 69 lines) → `_archive/main_prompt_v1_2026-05-18/PLAN_TEMPLATE.md`.
+- **Archive note**: `_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE.md` (~140 lines) — v1 의 6 어긋남 패턴 (단일 target / 3-file schema / 단일 종료 기준 / ≥3 approach / P1-P6 부재 / 5 self-discipline 부재) + v2 의 대응 + v1 보존 사유 + 부활 조건.
+- **Production default (post-archive)**:
+  - `THEORY/logs/daily/MAIN_PROMPT_v2.md` (713 lines, mode-adaptive — 6 mode dispatch + §8a P1-P6 + §8b 5 self-discipline + §15 Daily Discipline).
+  - `THEORY/logs/daily/PLAN_TEMPLATE_v2.md` (345 lines, mode-aware).
+  - `THEORY/logs/daily/MAIN_PROMPT_v2_dry_run_audit.md` (356 lines, 4 case 4/4 PASS audit).
+- **Broken nav link 갱신**: v2 파일 3건의 `[[MAIN_PROMPT|v1]]` 또는 `[[PLAN_TEMPLATE|v1]]` 링크 모두 `_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE` 로 redirect.
+
+### Rationale
+
+W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-attack mode* schema 와 충돌. 5/15 결정 C 의 직접 lesson (archive pattern P1-P6 + 5 self-discipline) 이 v1 prompt body 에 미반영 — 매 day 의 plan.md 가 별도 carry-forward 부담. v2 가 mode dispatch + carry-forward 의 prompt body 자체 promotion 으로 6 어긋남 해소.
+
+### v2 dry-run audit 결과
+
+- Case 1 (2026-05-18 survey): ✓
+- Case 2 (2026-05-15 review): ✓
+- Case 3 (2026-05-21 가설 SEAL-execute): ✓
+- Case 4 (2026-05-14 hybrid 3-mode mix): ✓
+
+**4/4 PASS** (`THEORY/logs/daily/MAIN_PROMPT_v2_dry_run_audit.md`).
+
+### Non-impact
+
+- Canonical 0 edits.
+- `scc/` 0 edits.
+- 기존 daily log (2026-04-19 ~ 2026-05-15) 의 v1 schema 작성물은 *그대로 보존* — v1 archive 는 *향후* day 의 v2 사용 결정만 변경.
+- 5/15 결정 C 의 "archive 자체는 실패 아님" carry-forward — 본 v1 archive 는 *prompt evolution 의 자연적 진화*, *language refactoring archive* 와 별개.
+
+---
+
 ## [CV-1.17] 2026-05-15 — T-CC-StableK-Kernel canonical promotion (Stage B of OPT-B canonical update)
 
 **Trigger:** Plan-mode OPT-B 사용자 채택 (`/Users/ojaehong/.claude/plans/groovy-humming-starlight.md`) → D1 P7 묵시적 승인. Stage A hygiene 완료 후 Stage B 실행 — `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` 의 T-CC-StableK-Kernel Cat B 를 canonical §13 Cat B 에 promote.
