@@ -1,4 +1,4 @@
-> [!nav] Linked: [[MAIN_PROMPT_v3]] · [[PLAN_TEMPLATE_v3]] · [[MAIN_PROMPT_v2|v2]] · [[MAIN_PROMPT_v2_dry_run_audit|v2 audit]]
+> [!nav] Linked: [[MAIN_PROMPT_v3]] · [[PLAN_TEMPLATE_v3]] · v1 + v2 archived 2026-05-18 → [[../../_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE|v2 archive note]] · [[../../_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE|v1 archive note]]
 
 # MAIN_PROMPT_v3 Dry-Run Audit
 

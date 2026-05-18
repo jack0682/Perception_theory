@@ -4,6 +4,53 @@
 
 ---
 
+## [ARCHIVE] 2026-05-18 (post-v3 작성) — MAIN_PROMPT_v2 + PLAN_TEMPLATE_v2 + v2 dry-run audit → _archive/main_prompt_v2_2026-05-18/
+
+**Trigger:** W8-Day1 EOD 사용자 결정 ("레거시 다시 정리"). v3 (plan-mode-entry + CoT/CoC enforcement, `THEORY/logs/daily/MAIN_PROMPT_v3.md`) 채택 → v2 (mode-adaptive only) 레거시화.
+
+### Summary
+
+- **Moved files** (via `git mv`):
+  - `THEORY/logs/daily/MAIN_PROMPT_v2.md` (713 lines) → `_archive/main_prompt_v2_2026-05-18/MAIN_PROMPT_v2.md`.
+  - `THEORY/logs/daily/PLAN_TEMPLATE_v2.md` (345 lines) → `_archive/main_prompt_v2_2026-05-18/PLAN_TEMPLATE_v2.md`.
+  - `THEORY/logs/daily/MAIN_PROMPT_v2_dry_run_audit.md` (356 lines) → `_archive/main_prompt_v2_2026-05-18/MAIN_PROMPT_v2_dry_run_audit.md`.
+- **Archive note**: `_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE.md` (~150 lines) — v2 의 3 어긋남 (plan.md 충분 가정 / CoT enforcement 부재 / CoC 부재) + v3 의 대응 + 5 expansion (§7/§8/§8a/§8b/§10/§13/Appendix F) + v2 production 사용 0 day 의 *evolutionary bridge* 성격 + 부활 조건.
+- **Production default (post-archive, sole)**:
+  - `THEORY/logs/daily/MAIN_PROMPT_v3.md` (1623 lines, mode-adaptive + plan-mode-entry + CoT/CoC enforcement).
+  - `THEORY/logs/daily/PLAN_TEMPLATE_v3.md` (399 lines, mode-aware + sketch-OK + CoT/CoC notes).
+  - `THEORY/logs/daily/MAIN_PROMPT_v3_dry_run_audit.md` (386 lines, 4/4 PASS audit).
+- **Broken nav link 갱신**: v3 3 file 의 `[[MAIN_PROMPT_v2|v2]]` 또는 `[[PLAN_TEMPLATE_v2|v2]]` 또는 `[[MAIN_PROMPT_v2_dry_run_audit|v2 audit]]` 링크 모두 `_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE` 로 redirect.
+
+### Rationale
+
+W8-Day1 (2026-05-18) EOD 의 *prompt body meta-evolution* 의 *완성 단계*: v1 (single deep-attack) → v2 (mode-adaptive) → v3 (+ plan-mode-entry + CoT/CoC enforcement). v2 는 *evolutionary bridge* — *production 사용 0 day* (v1 → v2 → v3 evolution 이 same day 에 발생). 사용자 결정 "레거시 다시 정리" — v3 가 *sole production*.
+
+### v3 dry-run audit 결과 (재확인)
+
+- Case 1 (2026-05-18 survey): ✓
+- Case 2 (2026-05-15 review): ✓ (CoC ✓ 완전 — 5/15 review = §7b prototype)
+- Case 3 (2026-05-21 가설 SEAL-execute): ✓
+- Case 4 (2026-05-14 hybrid 3-mode): ✓
+
+**4/4 PASS**.
+
+### Non-impact
+
+- Canonical 0 edits.
+- `scc/` 0 edits.
+- 5/15 결정 C 의 "archive 자체는 실패 아님" carry-forward — 본 v2 archive 는 *prompt evolution 의 자연적 진화*, *language refactoring archive* 와 별개.
+
+### W8-Day1 의 archive 활동 종합
+
+| Archive | Date | Files | 사유 |
+|---|---|---|---|
+| `main_prompt_v1_2026-05-18` | 2026-05-18 | 2 (v1) + ARCHIVE_NOTE | single deep-attack → mode-adaptive 진화 |
+| `main_prompt_v2_2026-05-18` | 2026-05-18 (post-v3) | 3 (v2) + ARCHIVE_NOTE | mode-adaptive → +plan-mode-entry+CoT/CoC 진화 |
+
+**총 2 archive event** (모두 same day 의 prompt evolution).
+
+---
+
 ## [ARCHIVE] 2026-05-18 — MAIN_PROMPT v1 + PLAN_TEMPLATE v1 → _archive/main_prompt_v1_2026-05-18/
 
 **Trigger:** W8-Day1 EOD 사용자 결정. v2 (mode-adaptive, `THEORY/logs/daily/MAIN_PROMPT_v2.md`) 채택 → v1 (single deep-attack mode) 레거시화.

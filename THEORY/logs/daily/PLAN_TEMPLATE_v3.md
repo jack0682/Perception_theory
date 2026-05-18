@@ -1,4 +1,4 @@
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[MAIN_PROMPT_v3]] · [[PLAN_TEMPLATE_v2|v2]] · v1 archived 2026-05-18 → [[../../_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE|v1 archive note]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[MAIN_PROMPT_v3]] · v1 + v2 archived 2026-05-18 → [[../../_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE|v2 archive note]] · [[../../_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE|v1 archive note]]
 
 # Plan Template v3 — 매일 저녁 작성 (Mode-Aware + Plan-Mode-Entry Compatible)
 

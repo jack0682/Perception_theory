@@ -240,11 +240,13 @@ new_mathematics: 0 — *survey day 이므로 정상* (5/15 결정 C carry-forwar
 
 v2: 4/4 PASS. v3: 4/4 PASS (with adaptive enforcement awareness).
 
-### v2/v3 의 현재 deployment
+### v1/v2/v3 의 최종 deployment (post-EOD 정리)
 
-- v1: **archived** (`_archive/main_prompt_v1_2026-05-18/`).
-- v2: production active.
-- v3: production candidate (parallel deployment) — W8-Day2 ~ W8-Day5 의 *first real-world use* 후 over-engineering 여부 audit + v2 archive 또는 v4 분기 결정.
+- v1: **archived** (`_archive/main_prompt_v1_2026-05-18/`, single deep-attack mode).
+- v2: **archived** (`_archive/main_prompt_v2_2026-05-18/`, mode-adaptive only — *evolutionary bridge*, production 사용 0 day).
+- v3: **sole production** (`THEORY/logs/daily/MAIN_PROMPT_v3.md`, +plan-mode-entry +CoT/CoC enforcement).
+
+사용자 결정 "레거시 다시 정리" — W8-Day1 EOD 의 *prompt body meta-evolution* 완성 단계. v1 → v2 → v3 evolution 이 *모두 same day* 에 발생, v3 가 *sole production*. v4 분기 시 v2 의 *부분 회귀* candidate.
 
 ### Day 2 (2026-05-19) 시작 시 채택
 
