@@ -10061,3 +10061,179 @@ Not run (docs-only tracker/changelog integration update). Fresh verification thi
 ### Open Items Carried Forward
 - Start the next cycle with a fixed static audit on `scc/multi.py` for variable-`K` object, selector-grade output semantics, and realized-path integration.
 - Do not reopen experiments, mechanism design, or canonical/claim wording unless that audit finds falsifier-grade selector evidence.
+
+## 2026-05-18 — AUX-1.0 Master Registry 신설 (Meta-Document)
+
+### Summary
+SCC 이론의 인식 흐름 7단계(T8 / T-PreObj-1 / D-ST-3 / σ-framework / P-F-A1+K-Select / T-Temporal-Identity / T-σ-Inherit)에서 각 단계가 도입하는 보조구조(매개변수, 함수, 측도, 임계값, 가설 패키지)를 단일 레지스트리로 모았다. 이론이 `u_t`를 유일한 primitive로 약속함에도 실제로는 외생적 보조구조가 단계마다 누적된다는 직관을 *문서적 사실*로 만든다. 새 정리 없음, 클레임 카운트 불변(83), 어느 정리의 상태도 변경하지 않음. Open Problems Catalog도 변경하지 않음 — 미등록 항목(`ρ_pers`, `ε_kernel`, `T_*`, 가설 패키지 호환성)은 registry §4가 명시.
+
+### Files Created
+- `THEORY/canonical/auxiliary_structures_master.md` (AUX-1.0) — Stage 1–7 인벤토리, 단계횡단 drift 표, 후보 1(보조구조 묶음 통일 누락) 진단, 미해결 등록 4항, scale/observer tag 확장 슬롯, 검증 grep 명령.
+
+### Files Modified
+- `THEORY/canonical/theorem_status.md` — Structure 헤더 부근에 master registry 포인터 1줄 추가.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음.
+
+### Test Count
+Not run (메타 문서 신설; 코드 변경 없음). 검증은 registry §6의 grep 명령으로 직접 readback (파일 존재, 카운트 불변, ρ_pers/ε_kernel 미등록 사실, OP-0021 OPEN 상태, §-anchor 유효성).
+
+### Open Items Carried Forward
+- 후속 작업 사용자 결정: A→B (각 표에 scale tag 열 추가), A→C (observer tag 열 추가), A→stop, A→meta-OP 등록 중 하나.
+- `ρ_pers`, `ε_kernel` canonical 등록은 *해결하지 않음* — 미등록임을 명시만 함. 추후 별도 작업으로 결정.
+- 가설 패키지 호환성 (L1-J / H1–H5 / A1–A9 + DR + HWF) 진술 부재는 T-MF-Synthesis Cat A 경로의 잠재적 차단요인.
+
+## 2026-05-18 — AUX-1.1: Stage 0 (Sensor-to-u Transformation T) 추가
+
+### Summary
+사용자의 통찰("균질 초기조건은 제일 마지막에 풀린다; raw sensor data 변환 메서드가 가장 중요")을 받아 AUX 레지스트리에 Stage 0을 추가. 이론이 `u_t`를 primitive로 약속하지만, u_t를 *만드는* 변환 `T : I → u`는 canonical 어디에도 등록되지 않음. 이는 후보 1(보조구조 묶음 통일 누락) 진단의 가장 근본적 사례이며, `(T, Θ)` 쌍이 동시에 결정되는 fixed-point 구조를 가짐 — 시간순으로는 첫 번째 자리이지만 풀이 순서로는 *마지막*. 새 정리 없음, 클레임 카운트 불변(83), 정리 상태 변경 없음, Open Problems Catalog 변경 없음. T 자체의 *구성*은 시도하지 않음 (silent resolution 회피).
+
+### Files Created
+- None.
+
+### Files Modified
+- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.0 → AUX-1.1. (a) Stage 0 row를 §1에 추가; (b) §2 cross-stage table에 T row 추가 (모든 stage에 영향, 메타-불일관 명시); (c) §4.5 신설 — T 미등록의 상세 + 9-조건 downstream hypothesis package 표 + OMS-2.0과의 관계 + fixed-point 구조 설명 + `OP-AUX-T-FIXED-POINT` 시드; (d) §6 검증 grep 4항 추가; (e) 부록 변경 기록에 AUX-1.1 row.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음.
+
+### Test Count
+Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6의 grep 명령 10항(기존 7 + 신설 4: Stage 0 row, §4.5 section, AUX-1.1 CHANGELOG, registry 4번 줄 amended 라벨)으로 직접 readback.
+
+### Open Items Carried Forward
+- T 자체의 *구성*은 *마지막에* 풀릴 fixed-point 일관성 조건. 지금 시도하지 않음.
+- `{I : T(I) ≡ c·𝟙}` (균질 입력 집합)의 operational definition도 T 후순.
+- raw 입력 형식(image/audio/text/multi-modal) 선택 미결.
+- `OP-AUX-T-FIXED-POINT` 정식 등록 여부는 사용자 명시 결정 시.
+- §4.5 9-조건 표가 그 OP의 statement 시드 — Stages 1–7 더 안정될 때 호환성 검증.
+
+## 2026-05-18 — AUX-1.2: Closed Ontological Budget (COB) 감사
+
+### Summary
+사용자의 강한 원칙 ("이 진입점은 반드시 u 혹은 u와 관련된 추가된 조건 그리고 관찰자의 시력, 분해능과 같은 개인적 파라미터들을 통해서만 나와야함. 이외의 외생은 불허해야함")을 받아 AUX 레지스트리에 COB (Closed Ontological Budget) 원칙을 등록하고 Stage 0–7 인벤토리 전체를 감사. 모든 보조구조는 D ($\mathcal{D}_u$, u에서 유도) / A ($\mathcal{A}_u$, u 위 axiom) / P ($\mathcal{P}_{\text{obs}}$, 관찰자-개인) / U (분류 미정) 중 하나로 분류됨. canonical OMS-1이 *이미* 관찰자 파라미터 컨테이너 Θ=(q, λ, ξ)를 axiom 등급으로 등록했음을 확인, 그러나 ξ catch-all의 내용물 카탈로그가 비어있다는 사실이 §4.7.1에 명시됨. 새 정리 없음, 클레임 카운트 불변(83), canonical 본문 변경 없음 (CN-COB axiom 등록은 Step 1로 별도 결정). T_*의 OP-0021 Route A/B가 COB 위반이라는 진단 + Route C (observer-personal) 권장이 §4.7.2에 등록. *해결 시도 없음* — 등록만 함.
+
+### Files Created
+- None.
+
+### Files Modified
+- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.1 → AUX-1.2. (a) §7 COB 원칙 신설 (CN-COB 진술 + 출처 + OMS-1 관계 + registry-internal 적용 범위); (b) §1 Stage 0–7 모든 표 (8개)에 Origin 열 추가 (D/A/P/U 분류); (c) §4.6 신설 (COB 위반/모호 5항: T_* / m / Wigner / Mulliken / 가설 패키지); (d) §4.7 신설 (ξ 카탈로그 시드 + T_* Route C 권장 + 분류 결정 미루어진 항목 표); (e) §6 검증 grep 5항 추가; (f) 부록 변경 기록에 AUX-1.2 row.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음. OP-0021은 OPEN 그대로 (Route C는 권장으로만 등록).
+
+### Test Count
+Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6의 grep 명령 15항 (기존 10 + 신설 5: §7 COB 원칙, §1 Origin 열, §4.6, §4.7, AUX-1.2 CHANGELOG)으로 직접 readback.
+
+### Open Items Carried Forward
+- **Step 1 (사용자 결정 필요):** CN-COB을 canonical.md §14 (Commitment Notes)에 정식 axiom으로 등록할지. 채택 시 이론 전체의 *철학적 색채*를 고정 (SCC = 철저히 first-person).
+- **T_* Route C 채택 결정:** OP-0021에 정식 등록 + Route A/B 폐기 여부.
+- **`m` 출처 결정:** D (T(I) 적분) / P (주의 범위) / 외생(COB 위반) 중 선택.
+- **`Wigner projection` D vs P 결정:** OP-0008 차단요인과 결합.
+- **`Mulliken irrep 순서` A vs P 결정.**
+- **가설 패키지 전수 감사 (AUX-1.3+):** L1-J `(P0)–(P11)`, H1–H5, `(A1)–(A7)+(A7')+(A9)+(DR1)–(DR2)+HWF-1`, LM1–LM3의 *각 P_i* D/A/P 분류.
+- **canonical OMS-1 `B_ξ` enumeration:** §4.7.1 시드를 canonical 본문에 promote.
+
+## 2026-05-18 — AUX-1.3: 가설 패키지 전수 감사 (32개)
+
+### Summary
+사용자 요청으로 가설 패키지 전수 감사를 수행. 3개 패키지 (L1-J `(P0)–(P11)`, T-P-F-ε0 `H1–H5`, T-K-Select-OBS `LM1–LM3`, T-Temporal-Identity `A1–A9 + DR1–DR2 + HWF-1`) 의 *총 32개 가설*을 모두 D ($\mathcal{D}_u$) / A ($\mathcal{A}_u$) / P ($\mathcal{P}_{\text{obs}}$) / U (분류 미정 또는 COB 위반) 중 하나로 분류. 3개 explore agent 병렬 조사 (canonical.md, theorem_status.md, working/MF/, working/temporal/ 파일들). 결과: **9 D + 15 A + 5 P + 3 U** (29개 깨끗 분류, 3개 U). U 항목 3개 모두 §4.6에 새 sub-section으로 등록 (4.6.6 H5, 4.6.7 HWF-1, 4.6.8 P7). 새 정리 없음, 클레임 카운트 불변(83), canonical 본문 변경 없음. *해결 시도 없음* — 32개 가설의 *분류*만 함.
+
+### 중요 정정 (AUX-1.3에서 발견)
+- **`H1–H5`는 Eyring-Kramers 가설이 *아님*.** 이것은 T-P-F-ε0 (Gibbs measure continuity, Cat A) 와 T-P-F-ε0-K (Bernoulli-stable Kramers exponent, Cat B) 의 가정 집합. 실제 Eyring-Kramers 정리 (Package II / Kramers rates) 는 OP-0005-DYN 별도 OPEN. AUX-1.0/1.1/1.2에서 "Eyring-Kramers"로 표기했던 것은 부정확한 통칭.
+- **`HWF-1` 미해결이 Cat A를 깨지 않음.** S-B1-Weak (Cat A) 가 정성적 `Δ_sep > 0` 처리; HWF-1은 S-B1-SYM (Cat B 정량적 `ρ_deep ≥ 0.84`) 에만 필요.
+
+### Files Created
+- None.
+
+### Files Modified
+- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.2 → AUX-1.3. (a) §4.8 신설 — 32개 가설 전수 감사표 (4.8.1 L1-J / 4.8.2 H1–H5 / 4.8.3 LM / 4.8.4 Temporal + HWF-1 / 4.8.5 요약); (b) §4.6 확장 — 4.6.6 H5 COB 위반 후보, 4.6.7 HWF-1 COB 위반 후보, 4.6.8 P7 D/A hybrid; (c) §1 6개 가설 패키지 row Origin 갱신 (Stage 3 L1-J/P7, Stage 5 H1-H5/LM, Stage 6 A1-A9/DR/HWF-1/H-SINK-ENT); (d) §6 검증 grep 3항 추가; (e) §4.7.3 미루어진 항목 표에 H5/HWF-1/P7 추가; (f) 부록 변경 기록에 AUX-1.3 row.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음. OP-0021, OP-0005-DYN, OP-0008 모두 상태 그대로.
+
+### Test Count
+Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6의 grep 명령 18항 (기존 15 + 신설 3: §4.8 / §4.6.6-7-8 / AUX-1.3 CHANGELOG)으로 직접 readback.
+
+### Open Items Carried Forward
+- **`H5` (Morse stability) 처분:** A로 axiom import / D로 SCC 에너지에서 유도 시도 / 별도 OP 등록 — 세 옵션. T-P-F-ε0-K Cat A 승급 및 Package II 와 연관.
+- **`HWF-1` 처분:** A로 grid graph axiom / D로 T 생성 그래프 조건 / 별도 OP — 세 옵션. S-B1-SYM Cat A 승급 가능.
+- **`P7` regime 명시:** strong stationarity regime에서 D, 그 외 A — T-L1-F의 regime 분리 권장.
+- **나머지 5개 P 항목 (LM2, A4, A5, A7', A9) 는 ξ 카탈로그 (§4.7.1) 정식 enumeration 시 자연 등록.**
+- **§4.8 결론: 후보 1 진단의 "패키지 간 호환성 미검토" 우려가 대부분 해소.** 32개 중 29개가 D/A/P 깨끗 분류; 3개 U는 별도 처분 경로 명시.
+
+## 2026-05-18 — AUX-1.4: U 항목 10개에 대한 D-derivation 전수 시도
+
+### Summary
+사용자 지시 ("OOD 완전히 한번 유도들을 전부 시도후 다음단계 고민") 를 받아 모든 U-분류 항목 10개에 대해 D-derivation을 진지하게 시도. 각 항목에 대해 (a) 시도 전략, (b) 시도 결과 (성공/부분/실패), (c) 갱신된 분류, (d) 실패 시 진단을 §4.9에 등록. **핵심 결과: 10개 중 단 2개만 진정한 U 잔류** — `T_*` (fixed-point 구조) 와 `H5` (spinodal Goldstone mode degeneracy). 나머지 8개는 *未-시도* D 또는 *未-등록* A/P 였음이 밝혀짐 — `m` (D-cond on T-chain), `H-SINK-ENT` (H-SINK Cat A 부분 명제, 별도 등록 redundant), `Mulliken` (외부 convention import → A 확정), `Wigner projection` (Schur generic D / degenerate P hybrid), `HWF-1` (T가 iso-regular graph 생성한다는 조건 하 D), `I_t` (raw 입력 — COB 비대상), T hyp pkg 9-조건 (각각 T 위 axiom A). COB 원칙의 *실효성*이 문서적으로 검증됨 — 42개 항목 중 38개가 D/A/P 깨끗 분류, 단 2개만 진정 U. 새 정리 *없음*, 클레임 카운트 *불변 (83)*, canonical 본문 *변경 없음*.
+
+### Files Created
+- None.
+
+### Files Modified
+- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.3 → AUX-1.4. (a) §4.9 신설 — 10개 D-derivation 시도 sub-section (§4.9.1 T_* / §4.9.2 m / §4.9.3 Wigner / §4.9.4 Mulliken / §4.9.5 H5 / §4.9.6 HWF-1 / §4.9.7 P7 / §4.9.8 I_t / §4.9.9 T hyp pkg / §4.9.10 H-SINK-ENT) + §4.9.11 요약; (b) §1 8개 row Origin 갱신 (Stage 0: I_t, T hyp pkg; Stage 1: m; Stage 4: Mulliken; Stage 5: T_*; Stage 6: HWF-1, H-SINK-ENT; Stage 7: Wigner); (c) §6 검증 grep 4항 추가; (d) 부록 변경 기록에 AUX-1.4 row.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음. OP-0021, OP-0005-DYN, OP-0008 모두 상태 그대로. 새 OP 등록 *없음* (권장만).
+
+### Test Count
+Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6의 grep 명령 22항으로 직접 readback.
+
+### Open Items Carried Forward
+- **`OP-T*-FIXED-POINT` 정식 등록 권장** — T_* 가 fixed-point 구조라는 사실 자체를 OP로 명시 (Route C 채택과 함께).
+- **`OP-H5-MORSE-SPINODAL` 정식 등록 권장** — H5 Morse stability가 spinodal critical surface에서 intrinsically 깨짐을 명시; T-P-F-ε0-K Cat A regime은 post-bifurcation stable basin 한정으로.
+- **canonical §3 Σ_m 정의 amendment 권장** — `m := Σ_v T(I)(v)` 명시.
+- **canonical §14 (Commitment Notes) Mulliken axiom 등록 권장** — "Mulliken irrep ordering imported from chemistry convention".
+- **§4.5 T hypothesis package에 HWF-1 흡수 (10번째 조건)** — T가 isoperimetric-regular graph만 생성한다는 axiom 추가.
+- **H-SINK-ENT 별도 hypothesis 등록 해소** — H-SINK Cat A 의 sub-claim으로 정리; T-Temporal-Identity 가설 묶음에서 한 항목 줄어듦.
+- **OP-0008 처분 재검토** — Wigner projection이 generic case에서 D로 검증됨; σ_standard merge/split inheritance가 generic 그래프에서 Cat C → Cat B 승급 원리적으로 가능.
+- **모든 후속 작업은 사용자 별도 결정 사항** — 본 AUX-1.4는 *시도 등록*만; canonical 본문 수정 없음.
+
+## 2026-05-18 — AUX-1.5: END-OF-DAY Consolidation (5-Amendment 통합 마감)
+
+### Summary
+사용자 지시 ("이제 이 분류를 명시하고 분류안된거 따로 빼놔 그렇게해서 오늘 마무리") 를 받아 AUX-1.0 ~ AUX-1.4 의 5번 amendment를 통합 마감. registry에 §8 "최종 분류 상태 (End-of-Day Consolidation)" 신설. 분류 *완료* 항목과 분류 *안 된* 항목을 분리해 명시. 65+ 항목 중 D(~30) / A(~25) / P(~18) / Hybrid(2) / External input(1) / **U 잔류(2)**. **단 2개만 진정 U 잔류** — `T_*` (fixed-point 구조) 와 `H5` (spinodal Goldstone mode degeneracy). 두 잔류가 SCC 이론의 *진짜 핵심 사건*과 직결돼있음이 인식론적으로 의미심장 — 관찰자가 무엇을 noise로 처리하는가 (T_*) + 균질에서 분화가 일어나는 순간 (H5). 새 정리 *없음*, 클레임 카운트 *불변 (83)*, canonical 본문 *0 변경*.
+
+### Files Created
+- None.
+
+### Files Modified
+- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.4 → AUX-1.5. §8 신설 (6 sub-section): 8.1 분류 완료 (D/A/P/hybrid/external input), 8.2 U 잔류 (T_*, H5만, 따로 분리), 8.3 통계, 8.4 5-amendment 결산, 8.5 9개 carry-forward 결정 사항, 8.6 인식론적 결산. 부록 변경 기록에 AUX-1.5 row.
+- `THEORY/CHANGELOG.md` — 이 entry.
+
+### Theorem Status Changes
+- None. 클레임 카운트 `59A/14B/5C/5R = 83` 불변. 어떤 정리도 promote/retract/recategorize 되지 않음. OP-0021, OP-0005-DYN, OP-0008 모두 OPEN 그대로. 새 OP 등록 *없음* (권장만).
+
+### Test Count
+Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6의 grep 명령 22항으로 직접 readback.
+
+### Open Items Carried Forward (End-of-Day, 9개)
+오늘 *작업하지 않은* 후속 결정 — 모두 사용자 별도 결정 사항:
+
+1. `OP-T*-FIXED-POINT` 정식 등록 + Route C (관찰자-개인) 채택 + OP-0021 본문 수정.
+2. `OP-H5-MORSE-SPINODAL` 정식 등록 + T-P-F-ε0-K regime을 post-bifurcation stable basin 한정으로 명시.
+3. `CN-COB` canonical commitment 정식 등록 (§14) — 이론 first-person 색채 고정.
+4. canonical §3 Σ_m amendment — `m := Σ_v T(I)(v)` 명시.
+5. canonical §14 Mulliken axiom — chemistry convention import 명시.
+6. §4.5 T hypothesis package에 HWF-1 흡수 (10번째 조건).
+7. H-SINK-ENT 별도 hypothesis 등록 해소 — H-SINK Cat A sub-claim 명시.
+8. canonical OMS-1 `B_ξ` enumeration — §4.7.1 시드를 canonical 본문에 promote.
+9. OP-0008 처분 재검토 — Wigner generic case D 검증; σ_standard merge/split inheritance Cat C → Cat B 가능성.
+
+### 오늘 작업 결산 (2026-05-18)
+
+- **5 amendments:** AUX-1.0 (registry 신설) → AUX-1.1 (Stage 0 T) → AUX-1.2 (COB 원칙) → AUX-1.3 (가설 전수 감사) → AUX-1.4 (D-derivation 전수 시도) → **AUX-1.5 (END-OF-DAY 마감).**
+- **Registry size:** 0 → 1000+ lines.
+- **분류된 항목:** 65+.
+- **U 잔류:** 2 (T_*, H5).
+- **Canonical body changes:** **0**.
+- **Theorem status changes:** **0**.
+- **Claim count:** 83 → 83 (불변).
+- **인식론적 진전:** 후보 1=2=3 가설 (세 후보가 동일한 균열의 세 얼굴) 의 문서적 증명; 두 잔류 U가 이론의 핵심 사건과 직결됨 식별.
+
+**End of session for 2026-05-18.**

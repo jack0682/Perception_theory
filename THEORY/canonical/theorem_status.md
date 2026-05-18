@@ -19,6 +19,8 @@ last_updated: 2026-05-08
 
 **Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
+**Auxiliary structures registry:** `THEORY/canonical/auxiliary_structures_master.md` (AUX-1.0, 2026-05-18) — Stage 1–7 보조구조(매개변수, 임계값, 가설 패키지, 관찰자 모델) 단일 레지스트리. 메타 문서, 클레임 카운트 영향 없음. ρ_pers / ε_kernel / T_* / 가설 패키지 호환성 등 canonical 미등록 항목 명시.
+
 ---
 
 ## Canonical Theorems (Accepted into Canonical Spec)

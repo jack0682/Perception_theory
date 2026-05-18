@@ -1,25 +1,38 @@
 ---
 type: log/daily/index
 date: 2026-05-19
-session_label: W8-Day2 (Tue) — K-Selection Deep Dive + OP-0008 Perturbation Theory PRIMARY + K-soft Validation
-canonical_version: CV-1.17 (sealed 2026-05-15, untouched)
-mode: hybrid — primary deep-attack (Track B op0008 perturbation, 90% time), secondary survey (Track A Atlas + Track C exp91)
-duration: 단일 세션 가정 안 함 — 3-track 병렬, Track B PRIMARY
-predecessor: 2026-05-18 (W8-Day1 survey day complete + v2/v3 meta-evolution)
-strategic_plan: THEORY/logs/weekly/2026-05-W3/W8_strategic_plan.md §3 Day 2
-prompt_body: MAIN_PROMPT_v3.md (first real-world use; plan-mode-entry + CoT/CoC enforcement audit)
+session_label: W8-Day2 (Tue) — T_*/H5 Deep Work (U-잔류 2항 고도화/증명/정리방법 모색)
+canonical_version: CV-1.17 (sealed 2026-05-15, untouched 예정)
+mode: deep-attack — H5 (spinodal Goldstone mode degeneracy) primary; T_* (fixed-point) secondary
+duration: 단일 세션 ~5.5h 가정
+predecessor: 2026-05-18 (AUX-1.0→1.5 END-OF-DAY consolidation; auxiliary_structures_master.md 통합)
+strategic_plan: 폐기됨 (원래 W8-Day2 OP-0008 perturbation 작업은 _archive_W8Day2_obsolete_00_plan.md 로 보존)
+prompt_body: MAIN_PROMPT_v3.md
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[W8_strategic_plan]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[../MAIN_PROMPT_v3]]
-
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[00_plan|본 plan]] · [[../MAIN_PROMPT_v3]]
 
 # 00 — Index (2026-05-19, W8-Day2)
 
 ## 오늘의 한 줄
 
-> **OP-0008 σ_standard MERGE/SPLIT Wigner-projection 의 *Route (a) Kato resolvent perturbation* 의 explicit form 본격 attack (Track B, 90% time) — 어제 broad_survey_B2.md §3 의 직접 attack day**. 동시에 Track A 의 Atlas §3 (T-K-Select-PF) + §4 (T-K-Select-OBS) full + 신규 `k_select_pf_obs_unified_view.md` 작성 (P-K-Select-Unified Cat B SKETCH). Track C 의 exp91 (K-soft hard-K recovery + Lipschitz) + test_k_soft_recovery.py 2 tests.
+> **AUX-1.5 마감 후 잔류한 2개의 진정한 U 항목 (T_* fixed-point 구조 + H5 spinodal Goldstone mode degeneracy) 에 대한 고도화 / 증명 시도 / 정리 방법 모색.** H5 우선 (Sard transversality + generic Morse + spinodal stratum split), T_* 다음 (Brouwer fixed-point + Route C 정식화). 산출: 2개 working file (H5_morse_spinodal, T_star_fixed_point) + draft OP statements 2개. canonical 본문 0 수정.
 
-W8-Day1 의 *survey day* 가 *입력 확보* 였다면, Day 2 는 *Track B 의 첫 attack day* — primary 의 deep development. Track A + Track C 는 *secondary survey/numerical anchor*.
+어제 AUX-1.0→1.5 의 *registry 작업* (65+ 항목 분류)에서 오늘 *theory 작업* (mathematical content)으로 전환. SCC 이론의 *진짜 미해결*에 처음으로 *형식적으로* 접근하는 day.
+
+---
+
+## Mission shift (어제 → 오늘)
+
+| 어제 (2026-05-18) | 오늘 (2026-05-19) |
+|---|---|
+| Registry 작업 (등록 + 분류) | Theory 작업 (mathematical content) |
+| AUX-1.0 → 1.5 5 amendments | H5 + T_* deep work |
+| 65+ 항목 분류 (D/A/P/hybrid/external/U) | 2 U 잔류 항목 formal attack |
+| canonical 본문 0 수정 | canonical 본문 0 수정 (유지) |
+| 후보 1=2=3 가설 문서적 증명 | 두 잔류 U 의 mathematical 분리 |
+
+**원래 W8-Day2 plan (OP-0008 Kato perturbation 90%)** 은 사용자 지시로 폐기 → `_archive_W8Day2_obsolete_00_plan.md` 로 보존.
 
 ---
 
@@ -28,87 +41,97 @@ W8-Day1 의 *survey day* 가 *입력 확보* 였다면, Day 2 는 *Track B 의 �
 | 파일 | 단계 | 작성 시점 |
 |---|---|---|
 | `00_index.md` | 본 파일 | 세션 시작 ✓ |
-| `00_plan.md` | Day 2 작업 계획 (3 track + mode hybrid + Decision gate + Risk) | 세션 시작 |
-| `01_pre_brainstorm.md` (선택) | 진입 점검 + v3 plan-mode entry 의 *첫 real-world 사용 audit* | 사용자 직접 |
-| `02_track_B_op0008_perturbation.md` | Track B PRIMARY — op0008 Kato expansion explicit form 본격 attack 산출 보고 | Day 2 작업 |
-| `03_track_A_atlas_3_4.md` | Track A — Atlas §3 + §4 full + k_select_pf_obs_unified_view.md 산출 보고 | Day 2 작업 |
-| `04_track_C_exp91_ksoft.md` | Track C — exp91 + test_k_soft_recovery PASS 보고 | Day 2 작업 |
-| `05_track_B_op0005_dyn_secondary.md` (선택, 10% time) | Track B secondary — op0005_dyn_kramers_sketch.md (Cat C SKETCH, W9+ staging) 산출 보고 | Day 2 작업 |
-| `99_summary.md` | EOD — Decision gate 결과 + Day 3 입력 준비 + v3 first real-world 사용 audit | 마지막 |
+| `00_plan.md` | T_*/H5 deep work plan | 세션 시작 ✓ |
+| `01_pre_brainstorm.md` (선택) | 진입 점검 — H5 Sard 가정 + T_* Brouwer existence 첫 sketch | 사용자 직접 |
+| **`02_H5_morse_spinodal.md`** | **PRIMARY** — H5 고도화/증명/정리 방법 | Day 2 작업 |
+| **`03_T_star_fixed_point.md`** | **SECONDARY** — T_* fixed-point + Route C 정식화 | Day 2 작업 |
+| `04_AUX-1.6_amendment.md` (선택) | H5/T_* status registry update | Day 2 EOD |
+| `99_summary.md` | EOD — H5/T_* progress + 후속 결정 | 마지막 |
+| `_archive_W8Day2_obsolete_00_plan.md` | 폐기된 원래 W8-Day2 OP-0008 plan | (보존, 참조용) |
 
-**산출물 예상 (Day 2 EOD)**:
-- `THEORY/working/MF/op0008_merge_wigner_perturbation.md` (P3 target, ~200-300 lines) — **W8-Day2 의 primary deliverable**.
-- `THEORY/working/MF/op0005_dyn_kramers_sketch.md` (P3 target, Cat C SKETCH, ~80-120 lines) — Track B 10% 시간.
-- `THEORY/working/MF/k_select_pf_obs_unified_view.md` (P3 target, P-K-Select-Unified Cat B SKETCH, ~80-120 lines).
-- `THEORY/working/MF/MF_atlas.md` v0.1 → v0.2 (§3 + §4 full 추가).
-- `CODE/experiments/exp91_ksoft_hard_recovery.py` + `CODE/tests/test_k_soft_recovery.py` (2 tests PASS).
-- daily log 7-8 file.
+**산출물 예상 (Day 2 EOD):**
+- `02_H5_morse_spinodal.md` (~200–300 lines): A.2.1–A.2.3 statement + Sard sketch + OP-H5-MORSE-SPINODAL draft + T-P-F-ε0-K regime restriction.
+- `03_T_star_fixed_point.md` (~150–250 lines): B.2.1–B.2.4 statement + Brouwer sketch + OP-T*-FIXED-POINT draft + Route C 정식화.
+- (선택) AUX-1.6 amendment (registry §4.6 / §4.9 status update).
 
 ---
 
-## 진행 규약 (v3 MAIN_PROMPT_v3 의 plan-mode-entry + CoT/CoC enforcement 강제)
+## Time allocation (~5.5h 총)
 
-### v3 의 첫 real-world 사용
+| Step | 작업 | 시간 |
+|---|---|---|
+| 1 | H5 working file (P1 Sard 경로 sketch) | ~2h |
+| 2 | T-P-F-ε0-K regime restriction (H5 결과 사용) | ~1h |
+| 3 | T_* working file (Brouwer + Route C) | ~1.5h |
+| 4 | Cross-reference (H5 ↔ T_*, AUX-1.5 §4.7.1 ξ catalog) | ~30min |
+| 5 | (선택) AUX-1.6 amendment 또는 99_summary | ~30min |
 
-1. **Plan-mode entry**: 에이전트는 plan mode 에서 시작 → `00_plan.md` 의 *재검토 + 보강 plan file §A-§G 작성* → ExitPlanMode 사용자 승인 후 본격 실행.
-2. **§7a CoT enforcement**: 모든 추론의 *Premise / Inference / Conclusion / Anchor* 4-tuple. op0008 perturbation 의 *각 lemma 의 proof step* 의 *정형 form*.
-3. **§7b CoC enforcement**: 각 lemma 의 *prior_anchors + causation_chain + inverse_causation_check* 3-block. canonical §11.1 Commitment 14 + working sigma_rich_wigner_derivation §3.3 + external Reed-Simon IV §XIII.5 anchors.
-4. **Audit dimension**: CoT/CoC 의 *정형 form* 이 *over-engineering* 인지 *적정* 인지 — 99_summary 의 §"v3 first real-world audit" 에 기록.
+---
 
-### Daily Discipline (v3 §15, 모든 mode 강제)
+## 진행 규약
 
-1. **Pre-work canonical xref check** (의무, 새 working file 생성 전 매번):
+### Pre-work canonical xref check (의무, 새 working file 생성 전 매번)
 
 ```bash
-# Track B PRIMARY
-grep -r "op0008_merge_wigner_perturbation\|Kato resolvent.*SCC" THEORY/canonical/ THEORY/working/MF/
+# H5 관련 기존 자료 확인
+grep -nE "Morse stability|H5\b|spinodal.*degenerate" THEORY/canonical/canonical.md
+grep -rn "H5_morse|morse_spinodal" THEORY/working/
 
-# Track B secondary
-grep -r "op0005_dyn_kramers_sketch\|Kramers.*multi.*formation" THEORY/canonical/ THEORY/working/MF/
+# T_* 관련 기존 자료 확인
+grep -nE "T_\*|effective.*stochastic.*temperature|OP-0021" THEORY/canonical/canonical.md
+grep -rn "T_star_fixed|tstar_brouwer" THEORY/working/
 
-# Track A new working
-grep -r "k_select_pf_obs_unified\|P-K-Select-Unified" THEORY/canonical/ THEORY/working/MF/
-
-# Track C
-grep -r "exp91_ksoft\|test_k_soft_recovery" CODE/ THEORY/
+# 어제 AUX-1.5 §4.6.6 (H5), §4.6.1 (T_*), §4.9.5 / §4.9.1 cross-ref
+grep -nE "§4\.6\.[16]|§4\.9\.[15]" THEORY/canonical/auxiliary_structures_master.md
 ```
 
-2. **Sanity meta-check** (어제 Track C 산출 활용): 새 K=2 결과 (exp91 의 K-soft hard-K recovery) 는 항상 `canonical_k2_hash()` + `subthreshold_demo_check()` 호출 + 메트릭 강제 기록.
+### Track switching 60-min 룰
 
-3. **Track switching 60-min 룰**: Track B (PRIMARY) 60분 막힘 → Track A 또는 Track C 로 전환.
+H5 (PRIMARY) 60분 막힘 → T_* (SECONDARY) 로 전환. 둘 다 막히면 §F 메타 노트 단락 작성으로 전환.
 
-4. **Decision gate (EOD)**: Day 2 의 *새 수학* — OP-0008 perturbation route candidate Cat B statement + K-soft Lipschitz numerical 지지.
+### Decision gate (EOD)
 
-5. **CHANGELOG prepend**: SEAL/archive event 0 예상 (Day 2 는 deep-attack day, SEAL 은 Day 4).
-
----
-
-## 모드 표기
-
-- canonical 파일 (`canonical.md`, `theorem_status.md`, `hypothesis_tree.md`, `CHANGELOG.md`, `CV-1.X_SEAL.md`) — **읽기 전용** (Day 2 는 deep-attack + survey, SEAL day 아님).
-- DECL-1.0 — **읽기 전용** (W8 anti-goal §5).
-- `scc/` 모듈 — **읽기 전용** (W8 anti-goal §5 — `experiments/` + `tests/` 만 신규).
-- `_archive/` — **봉인** — V-AFD/R-2/z_t/v1 부활 시도 금지.
-- `MAIN_PROMPT_v3.md` — **읽기** (본 day 의 prompt body 참조).
+오늘의 *새 수학*:
+- H5 Sard transversality 적용 가능성 *명확화* (Yes/No/Partial).
+- T_* Brouwer existence sketch *Cat A 후보* 또는 OP draft.
+- OP-H5-MORSE-SPINODAL + OP-T*-FIXED-POINT formal statements 둘 다 draft.
 
 ---
 
-## Day 2 의 핵심 metric (W8 plan §3 Day 2 EOD decision gate)
+## 모드 표기 (read-only / writable)
 
-> **새 수학 = OP-0008 perturbation route candidate Cat B statement 도출. K-soft Lipschitz numerical 지지.**
-
-→ Track B PRIMARY 가 *어떤 substantive lemma* (예: L-Kato-Order2-Bound) 의 *Cat C SKETCH 또는 Cat B candidate* 산출 + Track C 의 exp91 이 *K-soft Lipschitz constant* 의 *numerical 안정* 산출 → metric 충족.
+- `canonical.md`, `theorem_status.md`, `hypothesis_tree.md`, `CHANGELOG.md`, `CV-1.X_SEAL.md`, `DECLARATION.md` — **읽기 전용** (Day 2는 deep-attack working day, SEAL 아님).
+- `scc/` 모듈 — **읽기 전용** (코드 변경 없음).
+- `_archive/` — **봉인**.
+- `THEORY/canonical/auxiliary_structures_master.md` — **읽기 전용** (어제 마감; AUX-1.6 amendment는 EOD *선택*).
+- `THEORY/working/` — **쓰기 가능** (working file 신규 생성 OK).
+- `THEORY/logs/daily/2026-05-19/` — **쓰기 가능** (본 day 산출).
 
 ---
 
-## v3 first real-world use audit (EOD 의 추가 점검)
+## 메타: 어제 AUX 작업과의 화해
 
-본 day 가 v3 의 *first real-world use* — 다음 항목을 99_summary §"v3 first real-world audit" 에 기록:
+어제 AUX-1.0~1.5 작업에서 "83 claims 불변" 으로 검증했으나, *현재 canonical state* 가 CV-1.17 / 98 claims 일 가능성이 있음 (어제 W8 strategic plan 기준). 정확한 화해는 §11 verification #1 으로 확인:
 
-1. Plan-mode entry §A-§G 작성 비용 (시간 + token budget).
-2. §7a CoT 4-tuple form 의 *정형 form* 사용 빈도 + 사용자가 *실용적* 으로 느꼈는지 inline.
-3. §7b CoC 3-block 의 anchored chain 의 *후속 verify 질문 견딤* 여부.
-4. Over-engineering 위험 (audit v3 §7.2 #1, #5) 의 *실제 발생* 여부.
-5. v4 candidate (adaptive enforcement, light plan-mode entry) 의 *필요성* 평가.
+```bash
+grep -nE "current = \*\*CV-|[0-9]+ claims" THEORY/canonical/theorem_status.md | head -10
+```
 
-결과에 따라 v3 → production primary 또는 v4 분기 결정.
+만약 현재 카운트가 98 이면, AUX-1.0~1.5 의 §1 row anchor 는 영향 없음 (canonical row anchor 기준은 일관) 이나 §3 / §4 commentary 의 일부 historical reference 가 *stale* — 별도 reconciliation 작업 필요 (AUX-1.6 후속 또는 다음 day).
+
+---
+
+## 후속 결정 (사용자 별도 결정 — 본 day 작업 후)
+
+1. AUX-1.6 amendment — H5/T_* status registry §4.6 / §4.9 갱신.
+2. theorem_status.md working candidate 등록 — `T-H5-MORSE-GENERIC` (Cat A 후보), `T-T*-EXIST-FP` (Cat B 후보).
+3. canonical OMS-1 amendment — T_* Route C ξ resident 정식 등록.
+4. OP-0021 본문 수정 — Route C 추가 + Route A/B 폐기.
+5. OP-H5-MORSE-SPINODAL 정식 등록 — canonical Open Problems Catalog 본문 수정.
+6. AUX-1.0~1.5 claim count reconciliation (83 vs 98).
+
+---
+
+## v3 first real-world use audit (carry-over from 어제 polished plan)
+
+원래 plan의 v3 audit dimension은 *폐기되지 않음* — T_*/H5 작업으로도 충분히 v3 plan-mode entry + CoT/CoC enforcement 사용 검증 가능. 99_summary §"v3 first real-world audit" 에 기록 (간소화 가능).
