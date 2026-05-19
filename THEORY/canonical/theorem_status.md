@@ -15,7 +15,7 @@ last_updated: 2026-05-08
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.17; current = **CV-1.17**) then status (active, challenged, deprecated). *(Updated 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.18; current = **CV-1.18**) then status (active, challenged, deprecated). *(Updated 2026-05-19 W8-Day2 evening: **CV-1.18 SEALED — Stage 0 Sensor T axiom package + T_* ξ resident formal entry + OP-0021 Routes A/B deprecation**. Three axiomatic registration acts: Act 1 OMS-1 §A clarification (ξ category Theorem-grade container); Act 2 Appendix OMS §N신설 (9-condition Stage 0 + T_* 6-field entry + Route C G1+G3 hybrid + Routes A/B DEPRECATION); Act 3 OP-0021 status amendment (Routes A/B COB-violating → DEPRECATED, Route C ξ resident → ACCEPTED). **Claim count UNCHANGED (68A/19B/6C/5R = 98)** — axiomatic registration acts, no new Cat A/B/C theorem additions. HT-3.8 → HT-3.9. Source: `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P) + `P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic) + `_SUMMARY_v0.2.md`. Seal: `THEORY/canonical/CV-1.18_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged). Prior 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
 
 **Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
@@ -586,7 +586,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | **OP-0012** | Persistence composition | Medium | PARTIALLY STRUCTURED (Session V, 2026-05-06); sub-structure refined CV-1.15 (2026-05-14): OP-0012-CC Cat B path; **OP-0012-SINK OPEN** (cost-level blocker closed under action redef; scaling-gap remains); OP-0012-Kjump Cat C |
 | **OP-0013** | Closure operator convergence rate | Medium | OPEN |
 | **OP-0020** | Dynamic Topology (Out of Scope) | Low | seed (formerly listed as OP-0007 in this file pre-2026-05-04 unification) |
-| **OP-0021** | Stochastic Dynamics | Low | UNDER INVESTIGATION (exp54–exp59 Kramers rate theory). *Dual-naming with `hypothesis_tree.md` T_* row carried forward to CV-1.17+ per CV-1.16 SEAL §"Pre-existing inconsistency".* |
+| **OP-0021** | Stochastic Dynamics (T_* registration) | Medium | **OPEN (scope revised CV-1.18, 2026-05-19)**: Routes A (Mori-Zwanzig) and B (RG fixed point) **DEPRECATED — COB-violating** (Cugliandolo 2011 anchor; AUX-1.5 §4.9.1). **Route C** (observer-personal, ξ resident under OMS-1) canonical-recognized (canonical Appendix OMS §N, CV-1.18 SEAL). Remaining OPEN: (1) Brouwer existence Cat A 승급 (sub-OP **OP-T*-FIXED-POINT**, L1 quantitative TV bound, W9+); (2) Multiplicity quantification (sub-OP **OP-T*-α**, $\|\mathcal{B}_{T_*}^{\mathrm{FP}}\| = 2K-1$ Cat B 후보, W9+). Source: `working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (Cat A axiomatic verdict). *Dual-naming with `hypothesis_tree.md` T_* row resolved CV-1.18 via H-T* row Route C amendment (HT-3.9).* |
 | **OP-0022** | Continuous-Time Limit | Low | seed |
 | **OP-SB1-084** | Tightest Analytic $C_\mathrm{iso}$ for $\rho_\mathrm{sym} = 0.84$ | Low | OPEN (W7-CV113A, 2026-05-10): registered as successor to downgraded OP-SB1-DEEP; reformulates "ρ_deep ≥ 0.84 unconditional" as "derive HWF-1 from canonical (A1)–(A7)". |
 | **OP-HMORSE-BROADNESS** | Operator-norm broadness of closure-correction Hessian | (was HIGH) | **CLOSED Cat A** (CV-1.16, 2026-05-14 evening): 3-approach convergence (Perron-Frobenius / operator-norm Theorem B2 primary / 15/15 numerical PASS). L-CLOSURE-LIFT Cat A. *Retired from active OP list.* |
@@ -907,11 +907,31 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 **Severity:** Low (future extension).
 **Note:** previously listed as OP-0007 in earlier theorem_status.md OP table; unified to OP-0020 per 2026-05-04 audit pass.
 
-#### OP-0021: Stochastic Dynamics
+#### OP-0021: Stochastic Dynamics (T_* registration)
 
-**Statement.** Theory focuses on deterministic gradient descent. How do thermal fluctuations affect dynamics?
-**Status:** UNDER INVESTIGATION (exp54–exp59 Kramers rate theory).
-**Severity:** Low (extension work).
+**Statement.** Theory focuses on deterministic gradient descent. How do thermal fluctuations affect dynamics? The effective stochastic temperature $T_*$ governs P-F-A1 Langevin / Gibbs equilibrium / Eyring-Kramers Package II.
+
+**Status (revised CV-1.18, 2026-05-19):** **OPEN with scope revision**.
+
+**Routes A and B DEPRECATED — COB-violating:**
+- *Route A (Mori-Zwanzig)*: derives effective $T_*$ via environment memory kernel $K(t-s) = \langle F(0) F(t-s)\rangle_{\mathrm{env}}$ — requires *external environmental statistics* → **CN-COB 위반**.
+- *Route B (RG fixed point)*: derives $T_*$ at universality class fixed point $g^*$ — requires *external physics universality class* → **CN-COB 위반**.
+- *External anchor*: Cugliandolo 2011 (J. Phys. A 44:483001) effective T review confirms *모든* out-of-equilibrium effective T notion (FDT / kinetic / granular / active matter) requires environment statistics.
+- *Mathematical content not refuted*: Routes A/B 의 수학은 *SCC 이론 외부* (non-COB settings) 에서 valid. Deprecation = *ontological incompatibility 명시*, NOT mathematical refutation.
+
+**Route C ACCEPTED — Canonical-recognized (CV-1.18 SEAL):**
+- $T_* \in B_\xi^{\mathrm{OMS-1}}$ — observer-personal axiomatically free parameter under ξ resident category (canonical Appendix OMS §N, CV-1.18 SEAL).
+- Observer selection: $T_* = \mathrm{argmin}_{T \in B_{T_*}^{\mathrm{FP}}(\Theta) \cap B_\xi^{\mathrm{OMS-1}}} \rho_{\mathrm{JND}}(\Theta, T)$ (G1+G3 hybrid, Weber-Fechner JND criterion).
+- Existence: Brouwer 1911 (Cat A 후보 sketch — sub-OP OP-T*-FIXED-POINT).
+- Source: `THEORY/working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (Cat A axiomatic verdict, 952 lines).
+
+**Remaining OPEN:**
+1. **OP-T*-FIXED-POINT** (Brouwer existence Cat A 승급): L1 quantitative TV bound + π_T continuity rigorous. W9+ task.
+2. **OP-T*-α** (multiplicity quantification): $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ Cat B 후보 (decomposed K low-T + K-1 intermediate-T + 1 high-T fixed-points). Sketch in `working/foundation/proofs/P2_OP-T_star-alpha_multiplicity.md` (Cat B conditional). W9+ task.
+
+**Severity:** Medium (Package II Eyring-Kramers prerequisite; affects D-ST-4 + T-K-Select-* family + OP-0005-DYN).
+
+**Cross-references:** CV-1.18_SEAL.md §"Act 3"; hypothesis_tree.md HT-3.9 H-T* row (Route C amendment); AUX-1.5 §4.9.1 (T_* fixed-point diagnosis); canonical Appendix OMS §N.
 
 #### OP-0022: Continuous-Time Limit
 

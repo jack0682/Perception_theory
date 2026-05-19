@@ -2415,6 +2415,8 @@ Each item is labeled:
 
 **Definition OMS-1 (Theorem-grade):** The SCC observer parameter vector is $\Theta = (q, \lambda, \xi)$ with $q = \beta/\alpha \in [q_{\min}, q_{\max}]$, $\lambda \in \Delta^3$ (energy weights, simplex), $\xi \in B_\xi$ (auxiliary box). The observer space $\mathcal{M}_{\mathrm{obs}} = [q_{\min}, q_{\max}] \times \Delta^3 \times B_\xi$ is **compact** (Tychonoff). The static face is $\Delta^2_{\mathrm{static}} = \{\lambda \in \Delta^3 : \lambda_{tr} = 0\}$.
 
+*CV-1.18 amendment (2026-05-19): $\xi$ category 는 *axiomatically-free observer-personal parameters under CN-COB constraint* 의 *Theorem-grade container*. Canonical example: $T_*$ (effective stochastic temperature, Route C under OMS-1; see Appendix OMS §N for full formal entry — Stage 0 sensor T axiom package + T_* ξ resident formalization + Routes A/B deprecation).*
+
 **Definition OMS-2 (Theorem-grade):** The SCC core-preserving gauge group is $G_{\mathrm{SCC}}^{(0)} = S_K \times \mathrm{Aut}_{\mathrm{task}}$, with $G_{\mathrm{cw}} = \{e\}$ as default conservative choice. The observer moduli space is
 
 $$\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} := \mathcal{M}_{\mathrm{obs}} / G_{\mathrm{SCC}}^{(0)}.$$
@@ -2660,4 +2662,89 @@ Neither blocks the present **OMS-2.0 Accepted — Full** classification.
 
 ---
 
-*End of Appendix OMS. Working files: `THEORY/working/observer_moduli/`. Static promotion audit: `oms_2_0_accepted_audit.md`. Full Temporal promotion audit: `oms_2_0_full_accepted_audit.md`. All open sub-OPs (032b, 033b, 034b, 034c) tracked in `open_problems.md`.*
+### N. Stage 0 Sensor T Axiom Package + T_* ξ Resident Entry (CV-1.18 SEAL, 2026-05-19)
+
+본 §N 은 CV-1.18 SEAL (2026-05-19) 의 axiomatic registration acts 를 기록. *Claim count UNCHANGED* (98) — 본 §N 는 *framework consolidation* (Stage 0 sensor T 9-condition axiom package + T_* ξ resident formal entry + Routes A/B deprecation), *새 Cat A/B/C theorem 부재*.
+
+#### N.1 Stage 0 Sensor T — Axiom Package (9 Conditions, Cat A axiomatic on P)
+
+**Definition N.1 (Stage 0 sensor T, observer-personal P, ξ resident under OMS-1):** The Stage 0 sensor transformation $T : \mathcal{I} \to \tilde{\mathcal{I}}$ (raw input $I_t$ → preprocessed retinal LMS signal $\tilde{I}_t$) is an *observer-personal* sensor map (P classification under CN-COB; ξ resident under OMS-1 framework). $T$ is specified axiomatically by the following **9 conditions**:
+
+- **T-cond-1 (Continuity)**: $T$ is continuous: $\forall \epsilon > 0, \exists \delta > 0 : \|I - I'\| < \delta \Rightarrow \|T(I) - T(I')\| < \epsilon$.
+- **T-cond-2 (Boundedness)**: $T(I) \in \mathbb{R}_{\geq 0}^{n \times 3}$ with $\|T(I)\|_\infty \leq L_{\max} < \infty$ (photoreceptor saturation).
+- **T-cond-3 (Spatial linearity, PSF convolution)**: Spatial sub-T factors through linear convolution with optical PSF kernel $K_{\mathrm{PSF}}$ (Zernike-aberrated, derived from anatomical R-an-3/4/5 = corneal curvature + accommodation + HOA).
+- **T-cond-4 (Spectral projection, LMS)**: $T_{\mathrm{LMS}}(I) = \mathbf{M}_{\mathrm{LMS}} \cdot I_{\mathrm{spectral}}$ with $\mathbf{M}_{\mathrm{LMS}} \in \mathbb{R}^{3 \times K_{\mathrm{spectral}}}$ (3-channel projection, depending on R-an-9/10 = LMS cone ratio + color phenotype).
+- **T-cond-5 (Adaptive logarithmic gain)**: $T_{\mathrm{gain}}(L) = G(t; \tau_{\mathrm{adapt}}) \cdot \log(L/L_0)$ (Weber-Fechner-like compression + dynamic gain; depends on R-nn-1/2 = adaptation time constant + pupil baseline). *Strictly monotonic* (injective).
+- **T-cond-6 (Temporal kernel, causal)**: $T_{\mathrm{temp}}$ via convolution with gamma-shaped *causal* kernel $K_{\mathrm{temp}}(\tau; \tau_{\mathrm{int}}, f_{\mathrm{temp}})$ for $\tau \geq 0$ only (R-nn-3/4 = temporal integration window + channel peak Hz). CN-COB *time-direction* enforced.
+- **T-cond-7 (CN-COB compatibility)**: $T$ depends only on *observer-side parameters* $(\Theta_{\mathrm{anat}}, \Theta_{\mathrm{nn}})$ — no external environmental statistics (e.g., natural image priors $p_{\mathrm{env}}$) admitted. *Core CN-COB commitment*.
+- **T-cond-8 (Reversibility up to internal observation noise)**: $T$ admits a well-defined inverse on its image, with internal observation noise model (LM1/LM2/LM3 — Stage 5 T-K-Select-OBS likelihood family). No information *creation* (only lossy compression).
+- **T-cond-9 (Stage 1 coupling)**: Output $\tilde{I}_t \in \mathbb{R}_{\geq 0}^{n \times 3}$ format with $n = |V_{\mathrm{ret}}|$ is *literal type-match* for Stage 1 graph projection $\pi_G$ input.
+
+**Theorem N.1 (Axiom package status, Cat A axiomatic on P):** Each T-cond-$k$ (for $k = 1, \ldots, 9$) is an *axiom on observer-personal sensor T*. The package $\{$T-cond-1, ..., T-cond-9$\}$ defines *admissible* Stage 0 sensor transformations — observer's $T$ chosen freely within this admissibility (ξ resident under OMS-1). PROVED axiomatically: each condition is a definitional constraint, not a derived statement.
+
+**Non-overclaim:** The 9 conditions do *not* constitute a mathematical *theorem* in the Cat A proved sense — they are *axioms* defining the admissible class. Each *individual* observer's specific $T$ instance (6-부 composition, see N.1.1) is *configuration-specific* (canonical CN-Commitment 12 carry-forward; prompt body §12.6).
+
+#### N.1.1 6-Part Composition (Operational Instance, Cat C SKETCH)
+
+A canonical operational instance of $T$ satisfying T-cond-1 ~ T-cond-9 is the 6-part composition (working: `SCC_unified_derivation_v0.1.md` §2):
+
+$$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathrm{gain}} \circ T_{\mathrm{LMS}} \circ T_{\mathrm{sample}} \circ T_{\mathrm{PSF}}$$
+
+- $T_{\mathrm{PSF}}$: Zernike convolution (R-an-3,4,5)
+- $T_{\mathrm{sample}}$: Poisson sampling on retinal mesh (R-an-6,7,8)
+- $T_{\mathrm{LMS}}$: spectral projection (R-an-9,10)
+- $T_{\mathrm{gain}}$: adaptive log-luminance (R-nn-1,2)
+- $T_{\mathrm{CSF}}$: spatial CSF filter (R-nn-5)
+- $T_{\mathrm{temp}}$: temporal kernel (R-nn-3,4)
+
+본 composition 은 **Cat C SKETCH** — *constructive instance* — separate from §N.1 *axiom package* (Cat A axiomatic).
+
+**Non-overclaim:** The 6-part composition is *one canonical instance*, not the *unique* admissible $T$. Other observer-personal $T$ instances satisfying T-cond-1 ~ T-cond-9 are admissible. Empirical validation of each condition (Weber 1834 / Fechner 1860 / Pelli-Robson 1988 / Atick-Redlich 1992 etc.) provided in `working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` §5.
+
+#### N.2 T_* ξ Resident — Formal Entry (Cat A axiomatic)
+
+**Definition N.2 (T_* ξ resident under OMS-1):** The effective stochastic temperature $T_* \in B_\xi^{\mathrm{OMS-1}}$ is formally entered as ξ resident under OMS-1 framework (Definition OMS-1, §A amendment CV-1.18). The 6-field formal structure:
+
+| Field | Content |
+|---|---|
+| **Name/symbol** | $T_* \in \xi^{\mathrm{OMS-1}}$ (effective stochastic temperature) |
+| **Position** | Stage 5 (stochastic dynamics) primary; Stage 2 (Gibbs $\pi_{T_*}$) connection (canonical T-PF-A1-GI Cat A, §13) |
+| **Classification** | ξ resident under OMS-1; observer-personal axiomatically free parameter; CN-COB-compatible |
+| **Range** | $T_* \in B_{T_*}^{\mathrm{FP}}(\Theta) \cap B_\xi^{\mathrm{OMS-1}}$ where $B_{T_*}^{\mathrm{FP}}$ = Brouwer fixed-point set (OP-T*-FIXED-POINT) and $B_\xi^{\mathrm{OMS-1}}$ = ξ admissible range (observer's choice) |
+| **OP connections** | OP-0021 primary (T_* registration); OP-T*-FIXED-POINT (Brouwer existence — Cat A 후보 sketch level); OP-T*-α (multiplicity quantification, $\|\mathcal{B}_{T_*}^{\mathrm{FP}}\| = 2K-1$ Cat B 후보) |
+| **Mathematical role** | Gibbs measure parameter ($\pi_{T_*}(u) \propto \exp(-E/T_*) \cdot d\sigma_M$); Reflected Langevin SDE noise level (canonical T-PF-A1-SDE Cat A, §13); variance map fixed-point ($\psi(T_*) = T_*$ where $\psi(T) = \mathbb{E}_{\pi_T}[\|u - \mathbb{E}u\|^2]$) |
+
+#### N.3 Route C — G1+G3 Hybrid Formalization
+
+**Definition N.3 (Route C, T_* observer selection):** Observer chooses $T_*$ via JND criterion:
+
+$$T_* := \mathrm{argmin}_{T \in B_{T_*}^{\mathrm{FP}}(\Theta) \cap B_\xi^{\mathrm{OMS-1}}} \rho_{\mathrm{JND}}(\Theta, T)$$
+
+where $\rho_{\mathrm{JND}}(\Theta, T) := T/\mathbb{E}_{\pi_T}[u]$ (Weber-Fechner JND ratio).
+
+- **G1 (axiomatically free P)**: $T_* \in B_\xi^{\mathrm{OMS-1}}$ — *not* mathematically determined.
+- **G3 (information-theoretic intersection)**: $T_* \in B_{T_*}^{\mathrm{FP}}(\Theta)$ — fixed-point constraint (self-consistency).
+- **Hybrid**: Existence ensured by Brouwer 1911 (compact convex self-map, OP-T*-FIXED-POINT Cat A 후보); selection grounded in observer's JND.
+
+**Non-overclaim:** Brouwer existence at Cat A 후보 sketch level (working `P6_OMS-1_xi_Tstar_entry.md` §2.4). Uniqueness *not* guaranteed (multi-well $\mathcal{E}_\lambda$ → $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ candidates, OP-T*-α Cat B 후보).
+
+#### N.4 Routes A (Mori-Zwanzig) / B (RG fixed point) — DEPRECATED
+
+**Notice (Routes A/B Deprecation, CV-1.18 SEAL):**
+
+OP-0021 (T_* registration) 의 기존 *Routes A (Mori-Zwanzig) and B (RG fixed point)* 는 **DEPRECATED — COB-violating**.
+
+**Rationale**: 두 routes 가 *external environmental statistics* (Mori-Zwanzig: 환경 메모리 커널 $K(t-s) = \langle F(0) F(t-s)\rangle_{\mathrm{env}}$; RG: universality class) 를 *필요* — CN-COB (AUX-1.5 §7) 위반. 외부 근거: Cugliandolo 2011 (J. Phys. A 44:483001) effective T review 의 *모든* notion (FDT / kinetic / granular / active matter) 이 environment statistics 의존.
+
+**Mathematical content vs Ontological compatibility**: Routes A/B 의 수학은 *SCC 이론 외부* (non-COB settings) 에서 *valid* — 본 deprecation 은 *mathematical refutation* 이 아니라 *ontological incompatibility 의 명시*.
+
+**Route C 채택**: Observer-personal ξ resident (N.2 + N.3) 가 *유일* COB-consistent path. OP-0021 remains OPEN with revised scope:
+1. Brouwer existence Cat A 승급 (OP-T*-FIXED-POINT — L1 quantitative TV bound, P2 D2 sketch → W9+ task)
+2. ξ catalog entry: 본 §N.2 + §N.3 SEAL 직접 처리 ✓
+3. Multiplicity quantification: OP-T*-α (P2 Cat B 후보, W9+ task)
+
+**Silent OP resolution 회피**: OP-0021 의 *primary OPEN status* 유지 — Routes A/B deprecation 은 *scope revision*, *resolution 아님*.
+
+---
+
+*End of Appendix OMS. Working files: `THEORY/working/observer_moduli/`. Static promotion audit: `oms_2_0_accepted_audit.md`. Full Temporal promotion audit: `oms_2_0_full_accepted_audit.md`. CV-1.18 §N source: `working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` + `P6_OMS-1_xi_Tstar_entry.md` + `_SUMMARY_v0.2.md`. All open sub-OPs (032b, 033b, 034b, 034c) tracked in `open_problems.md`.*

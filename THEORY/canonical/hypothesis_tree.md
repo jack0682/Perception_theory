@@ -1,11 +1,11 @@
 ---
-id: HT-3.8
+id: HT-3.9
 type: theory/hypothesis-tree
-version: 3.8
+version: 3.9
 created: 2026-05-07
-last_updated: 2026-05-15
+last_updated: 2026-05-19
 status: active
-description: SCC 이론 가설 의존성 트리. HT-3.8: CV-1.17 SEALED (W7-Day5 hygiene close 2026-05-15) — T-CC-StableK-Kernel Cat B canonical promotion (kernel-composed compositional consistency under (I_{ts})+(I_{sr})); T-ACT-KERNEL-COMP→REL conditional lift activated. H-COMP-KERNEL OPEN → CLOSED Cat B. Count 68A/19B/6C/5R = 98 claims (~70%). HT-3.7: CV-1.16 SEALED (W7-Day5 ext 2026-05-14) — H-MORSE-Local closure package; L-CLOSURE-LIFT Cat A; L-HMORSE-LOCAL/DECOMP Cat B; L-BOUNDARY-MODE-EXCLUSION Cat C; OP-HMORSE-BROADNESS CLOSED. H-MORSE row OPEN → PARTIALLY CLOSED. 68A/18B/6C/5R = 97. HT-3.6: CV-1.15 SEALED (W7-Day5 morning 2026-05-14) — Action-based temporal succession package; H-COMP branch under Q5. 67A/16B/5C/5R = 93. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10). HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
+description: SCC 이론 가설 의존성 트리. HT-3.9: CV-1.18 SEALED (W8-Day2 evening 2026-05-19) — Stage 0 Sensor T axiom package (9 conditions, Cat A axiomatic on P) + T_* ξ resident formal entry (Cat A axiomatic) + OP-0021 Routes A/B (Mori-Zwanzig/RG) DEPRECATED (COB-violating) + Route C ACCEPTED (observer-personal, ξ resident under OMS-1). H-T* row PARTIALLY CLOSED (Route C canonical-recognized; dual-naming with theorem_status OP-0021 resolved). Claim count UNCHANGED (98). Source: `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` + `P6_OMS-1_xi_Tstar_entry.md`. Seal: `THEORY/canonical/CV-1.18_SEAL.md`. HT-3.8: CV-1.17 SEALED (W7-Day5 hygiene close 2026-05-15) — T-CC-StableK-Kernel Cat B canonical promotion (kernel-composed compositional consistency under (I_{ts})+(I_{sr})); T-ACT-KERNEL-COMP→REL conditional lift activated. H-COMP-KERNEL OPEN → CLOSED Cat B. Count 68A/19B/6C/5R = 98 claims (~70%). HT-3.7: CV-1.16 SEALED (W7-Day5 ext 2026-05-14) — H-MORSE-Local closure package; L-CLOSURE-LIFT Cat A; L-HMORSE-LOCAL/DECOMP Cat B; L-BOUNDARY-MODE-EXCLUSION Cat C; OP-HMORSE-BROADNESS CLOSED. H-MORSE row OPEN → PARTIALLY CLOSED. 68A/18B/6C/5R = 97. HT-3.6: CV-1.15 SEALED (W7-Day5 morning 2026-05-14) — Action-based temporal succession package; H-COMP branch under Q5. 67A/16B/5C/5R = 93. HT-3.5: CV-1.13 SEALED (W7-CV1.13 2026-05-10) — T-Temporal-Identity full Cat A. S-A1/S-A3/S-C1 모두 CERTIFIED. Count 59A/14B/5C/5R = 83 claims. HT-3.4: S-B1-SYM Cat B (W7-CV113A 2026-05-10). HT-3.3: Lemma S-B1-Weak Cat A — OP-SB1-DEEP 비차단 강등 (W7-CV113 2026-05-10). HT-3.2: H-SINK FULLY CLOSED (Cat A, W7-FINAL 2026-05-10). CV-1.12 sealed (79 claims). HT-3.1: H-SINK PARTIALLY CLOSED (W7-T1). HT-3.0: initial restructuring 2026-05-07.
 ---
 
 > [!nav] Theory Navigation
@@ -13,9 +13,9 @@ description: SCC 이론 가설 의존성 트리. HT-3.8: CV-1.17 SEALED (W7-Day5
 > Pairs with: [[theorem_status]] (claim-status authority)
 > Related: [[MOC_open_problems_blockers]] · [[canonical]] · [[CV-1.17_SEAL]]
 > Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
-> Status: HT-3.8 (CV-1.17 baseline)
+> Status: HT-3.9 (CV-1.18 baseline)
 
-# SCC Hypothesis Tree (HT-3.8)
+# SCC Hypothesis Tree (HT-3.9)
 
 ---
 
@@ -62,7 +62,7 @@ description: SCC 이론 가설 의존성 트리. HT-3.8: CV-1.17 SEALED (W7-Day5
 | ID | 가설 | 현재 상태 | 차단하는 정리 | 우선순위 | 페이즈 |
 |----|------|----------|-------------|---------|-------|
 | **H-SINK** | Sinkhorn-Lipschitz (S-B2) | **FULLY CLOSED** (Cat A, W7-FINAL 2026-05-10; Partial-H-SINK closes partial OT) | Q5 Cat A ✓ | 완료 | **Phase 1 ✓** |
-| **H-T*** | T_* 정규 등록 (OP-0021) | OPEN | Q3/Q4 수치화 | 최상 | Phase 2 |
+| **H-T*** | T_* 정규 등록 (OP-0021) | **PARTIALLY CLOSED** (CV-1.18, 2026-05-19): Route C (observer-personal, ξ resident under OMS-1) canonical-recognized via Appendix OMS §N. Routes A (Mori-Zwanzig) / B (RG) DEPRECATED — COB-violating. Dual-naming with theorem_status OP-0021 RESOLVED (both rows reference Route C ξ resident). Remaining OPEN: Brouwer existence Cat A 승급 (OP-T*-FIXED-POINT, W9+) + multiplicity quantification (OP-T*-α, W9+). | Q3/Q4 수치화 (Cat A 승급 후) | 최상 | Phase 2 |
 | **H-MORSE** | Morse 안정성 | **PARTIALLY CLOSED** (Local Cat B, W7-Day5 ext 2026-05-14; Global Cat A path = OP-HMORSE-LOCAL-A) | Q3 Package II 진입 | 최상 | Phase 2 |
 | **H-SR** | 스펙트럼 반발 호환성 | OPEN | Q2 무조건화 | 중 | Phase 2 |
 | **H-WS** | Well-separation 도출 | OPEN | Q2 범위 확장 | 중 | Phase 2 |

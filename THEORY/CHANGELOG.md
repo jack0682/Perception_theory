@@ -4,6 +4,73 @@
 
 ---
 
+## [CV-1.18 SEAL] 2026-05-19 (W8-Day2 evening) — Stage 0 Sensor T Axiom Package + T_* ξ Resident Formal Entry + OP-0021 Routes A/B Deprecation
+
+**Trigger:** 사용자 instruction "즉시 (~1 session): CV-1.18 SEAL execution (P5+P6 combined: OMS-1 §A + Appendix §N + OP-0021 amendment)" (2026-05-19 late evening). Predecessor work: 6 detailed proof attempts v0.2 (P1-P6 ~4973L) + V1+V2 verification (6/6 PASS, 41/41 anchors verified) + _SUMMARY_v0.2.md consolidation.
+
+### Three Axiomatic Registration Acts
+
+**Act 1 — OMS-1 §A Clarification (ξ category Theorem-grade Container):**
+- canonical.md L2416 (Definition OMS-1) amendment — inline CV-1.18 note: "ξ category 는 axiomatically-free observer-personal parameters under CN-COB constraint 의 Theorem-grade container. Canonical example: T_* (Route C; see Appendix OMS §N)."
+
+**Act 2 — Appendix OMS §N 신설 (CV-1.18 SEAL):**
+- canonical.md ~L2663 — Appendix §N inserted before "End of Appendix OMS" footer
+- N.1 Stage 0 Sensor T Axiom Package (9 conditions T-cond-1 ~ T-cond-9, Cat A axiomatic on P)
+- N.1.1 6-Part Composition Operational Instance (Cat C SKETCH)
+- N.2 T_* ξ Resident Formal Entry (6-field formal structure, Cat A axiomatic)
+- N.3 Route C G1+G3 Hybrid Formalization
+- N.4 Routes A (Mori-Zwanzig) / B (RG fixed point) DEPRECATION Notice (COB-violating)
+
+**Act 3 — OP-0021 Status Amendment (Routes A/B DEPRECATED, Route C ACCEPTED):**
+- theorem_status.md L589 (OP-0021 main row) — status revised: DEPRECATED routes A/B; Route C ξ resident canonical-recognized; remaining OPEN = OP-T*-FIXED-POINT (Brouwer Cat A 승급) + OP-T*-α (multiplicity Cat B)
+- theorem_status.md L910 (OP-0021 detail section) — full revision with Routes A/B/C status + non-overclaim + W9+ task identification
+
+### Files Modified
+
+- `THEORY/canonical/canonical.md` — Acts 1 + 2 (Definition OMS-1 amendment + Appendix §N 신설)
+- `THEORY/canonical/theorem_status.md` — Act 3 (OP-0021 row + detail amendment) + CV-1.18 SEAL prepend note at structural row
+- `THEORY/canonical/hypothesis_tree.md` — HT-3.8 → HT-3.9 (H-T* row PARTIALLY CLOSED via Route C; dual-naming with OP-0021 resolved)
+- `THEORY/canonical/CV-1.18_SEAL.md` — NEW (seal record, 152 lines)
+- `THEORY/CHANGELOG.md` — this entry
+
+### Claim Count
+
+**UNCHANGED**: 68A/19B/6C/5R = **98 claims (~70% fully proved)**.
+
+Reasoning: 본 SEAL = *axiomatic registration acts*, NOT new Cat A/B/C theorem additions. Stage 0 9-conditions 는 *axioms on P*; T_* ξ resident 는 *axiomatic ξ catalog 형식적 entry*; Routes A/B deprecation 은 *scope revision* (수학적 내용의 refutation 아님). 모든 acts 가 기존 axiom 등급의 내용 refinement.
+
+### HT Version
+
+**HT-3.8 → HT-3.9**. H-T* row PARTIALLY CLOSED (Route C canonical-recognized; dual-naming with OP-0021 resolved).
+
+### Pytest Regression
+
+- Baseline (pre-SEAL): 225 passed + 1 xfailed (216.05s)
+- Post-SEAL: TO VERIFY after this entry
+- Expected: 225 passed + 1 xfailed unchanged (canonical text-only amendments; no scc/ or test code edits)
+
+### Non-Overclaim
+
+- OP-0021 의 *partial resolution 아님* — Routes A/B deprecation = *ontological incompatibility 명시*, scope revision; remaining OPEN (OP-T*-FIXED-POINT Cat A 승급 + OP-T*-α Cat B multiplicity) 명시.
+- Stage 0 9-conditions 는 *axiom on P*, NOT *proved theorems* — empirical validation experiments per condition은 W10+ task.
+- 6-part composition (canonical N.1.1) 는 *Cat C SKETCH operational instance*, NOT *unique* admissible $T$.
+
+### Sources
+
+- `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P verdict)
+- `THEORY/working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic verdict)
+- `THEORY/working/foundation/proofs/_SUMMARY_v0.2.md` (CV-1.18 candidate identification)
+- `THEORY/working/foundation/proofs/V1_rigor_verification.md` (6/6 PASS — `/tmp/scc_proofs_v02/`)
+- `THEORY/working/foundation/proofs/V2_canonical_xref.md` (41/41 anchors verified, 0 silent OP resolution)
+- AUX-1.5 §4.5 + §4.6.1 + §4.7.1 + §4.9.1 — registry-level prior diagnosis sources
+- Cugliandolo 2011 (J. Phys. A 44:483001) — Routes A/B COB violation external anchor
+
+### Next Target
+
+- CV-1.19 (W9+): P4 L-HMORSE-LOCAL Cat B → Cat A (pending (S1)(S2)(S3) closure — δ exponential decay + ε_Cl KKT-explicit + boundary-band $\ell^\infty$ bound). Enables P-F-A1 Package II Eyring-Kramers Cat B entry.
+
+---
+
 ## [ARCHIVE] 2026-05-18 (post-v3 작성) — MAIN_PROMPT_v2 + PLAN_TEMPLATE_v2 + v2 dry-run audit → _archive/main_prompt_v2_2026-05-18/
 
 **Trigger:** W8-Day1 EOD 사용자 결정 ("레거시 다시 정리"). v3 (plan-mode-entry + CoT/CoC enforcement, `THEORY/logs/daily/MAIN_PROMPT_v3.md`) 채택 → v2 (mode-adaptive only) 레거시화.
