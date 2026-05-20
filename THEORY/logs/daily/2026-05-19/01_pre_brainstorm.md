@@ -570,3 +570,136 @@ Marr (1982 *Vision*): 세 분석 수준 — (1) **Computational** ("무엇을 �
 - 내일 plan §11 verification 의 추가 항목: 본 01_pre_brainstorm.md 의 §1–§6 reference 가 02_H5 / 03_T_star 에서 *실제 인용* 됐는지.
 
 **End of pre-brainstorm. 내일 출발 위치 명확.**
+
+---
+
+## §POST-SEAL APPENDIX (2026-05-19 evening) — Topological Mathematics Reference Base
+
+본 day 의 CV-1.18 SEAL 종료 후 evening session 의 *19-phase Manifold Topology Methodology Program* 의 reference base. 사용자가 사전 제공한 *두 개의 위상수학 종합 보고서* 가 informant 였음:
+
+1. **Report A** — 푸앵카레 추측 증명 (Hamilton-Perelman 1982-2003)
+2. **Report B** — 다양체 위상수학 종합 (3D + 4D + ≥5D)
+
+### A.1 Perelman 7-Tool 정리 (Report A 표)
+
+| 도구 | 분야 | 수식/정의 | 증명 역할 |
+|---|---|---|---|
+| Ricci flow + DeTurck gauge | 미분기하학, PDE | $\partial_t g_{ij} = -2 R_{ij}$ | 전체 program 의 동역학적 뼈대 |
+| Hamilton-Ivey pinching | 기하학적 해석학 | $\mathrm{Rm} \geq -\phi(R) R$ | 고곡률 영역을 "거의 비음 아닌 곡률"로 정리 |
+| $\mathcal{F}, \lambda, \mathcal{W}, \mu, \nu$ entropy | 기하학적 해석학 | 엔트로피/에너지 + 단조성 | breathers 배제, 솔리톤 식별, 비붕괴성 기반 |
+| $\mathcal{L}$-길이, 축약거리, 축약부피 | 비교기하 | $L, l, \tilde{V}$ | blow-up limit 비붕괴성 + 축소기하 제어 |
+| 켤레 열방정식, Harnack, log-Sobolev, pseudolocality | 해석학, PDE | $\Box^* u = 0$, $v$-quantity | 곡률 폭주 억제 + 엔트로피 국소화 |
+| 콤팩트성 + blow-up + 고대 $\kappa$-해 | 기하학적 해석학 | rescaling + smooth convergence | 특이점 모델 추출 + 정준 이웃 도출 |
+| 정준 이웃 + Ricci flow with surgery | 미분기하, 3-다양체 | $\varepsilon$-neck, $\varepsilon$-cap, $\delta$-cutoff | neck 절단 + 흐름 재시작 + 위상 추적 |
+| 최소원판 + 곡선단축 + 유한시간 소멸 | 대수적 위상 | $dA_t/dt \leq -2\pi - \frac{1}{2} R_{\min} A_t$ | 푸앵카레 특수경로 마지막 단계 |
+
+### A.2 Perelman 핵심 단조성 공식
+
+$$\mathcal{W}(g, f, \tau) = \int_M [\tau (|\nabla f|^2 + R) + f - n] (4\pi\tau)^{-n/2} e^{-f}\,dV$$
+
+$$\frac{d}{dt} \mathcal{W} = \int_M 2\tau \left|\mathrm{Ric} + \nabla^2 f - \frac{1}{2\tau} g\right|^2 (4\pi\tau)^{-n/2} e^{-f}\,dV \geq 0$$
+
+**SCC Tier 1 매핑 결과** (post-SEAL Phase 1A): Bakry-Émery $W_{SCC}$ framework 시도 → universality misclassification (EW → Allen-Cahn → Model B) 으로 부분 retract.
+
+### B.1 11-Method Category 표 (Report B)
+
+| 방법 범주 | 대표 도구 | 전형적 쓰임 |
+|---|---|---|
+| 대수적 | 교차형식, Whitehead torsion, characteristic classes, assembly map | Freedman, Donaldson, Novikov/Borel/Farrell-Jones |
+| 기하적 | 쌍곡기하, Mostow rigidity, Dehn filling | JSJ → atoroidal hyperbolic 판정 |
+| 해석적/PDE | Ricci flow, 최대원리, 엔트로피, reduced volume | Hamilton-Perelman, no local collapsing |
+| 위상적 절단 | prime decomposition, 비압축 곡면, JSJ, cobordism | Kneser-Milnor, Haken/Waldhausen |
+| Morse + handle | Morse 함수, handle attachment, Cerf 변형 | h-cobordism, surgery, Kirby calculus |
+| 게이지 이론 | ASD Yang-Mills, Seiberg-Witten, moduli | 4D smooth 비가환/가환 불변량 |
+| 수술 이론 | normal map, structure set, surgery exact sequence, $L_n(\mathbb{Z}\pi)$ | ≥5D manifold 분류 표준 |
+| $K/L$-이론 | Whitehead group, $K_*$, quadratic forms | s-cobordism, Novikov/Borel/FJ 대수적 핵심 |
+| 제어 위상수학 | controlled h-cobordism, bounded surgery, ends | 비콤팩트/끝단, Quinn, Farrell-Jones |
+| 기하군론 | hyperbolic groups, CAT(0), cube complexes | Virtual Haken, Agol-Wise |
+| 계산/알고리즘 | normal surface, Regina, SnapPy | 3-sphere recognition, Thurston norm |
+
+### B.2 3-다양체 11 핵심 정리
+
+Kneser-Milnor 소분해 (1929-1962) → Haken/Waldhausen (1968) → JSJ 분해 (Jaco-Shalen-Johannson) → Mostow-Prasad 강직성 (1968-73) → Thurston hyperbolization (Haken) → Hyperbolic Dehn surgery → Thurston geometrization 추측 → Hamilton-Perelman Ricci flow (1982-2003) → Agol-Wise Virtual Haken (2012) → Schoen-Yau minimal surfaces.
+
+### B.3 4D + ≥5D 14 핵심 결과
+
+Morse + handle (Milnor) → Smale h-cobordism (1961, ≥5D Poincaré) → s-cobordism (Whitehead torsion) → BNW Surgery Theory → Novikov conjecture → Borel conjecture → Farrell-Jones conjecture → Controlled topology (Quinn) → Freedman topological 4D (1982) → Donaldson gauge (1983) → Seiberg-Witten (Witten 1994) → Kirby calculus → **Smooth 4D Poincaré (OPEN)**.
+
+### B.4 차원별 *불변량* 분기 (메타-패턴)
+
+> "방법론의 진짜 분기점은 *"무엇을 불변량으로 삼는가"*에 있음."
+
+| 차원 | 불변량 종류 | SCC 유비 시도 |
+|---|---|---|
+| 3D | 기하 그 자체 (Mostow rigidity) | Tier 3 — **DROPPED** (hyperbolicity 부재) |
+| ≥5D | simple homotopy, structure set, $L$-군 | Tier 4 — Phase 4 $R_K^{SCC}$ (L-theory ≠ K_0 정정) |
+| 4D | ASD instanton, monopole moduli | Tier 10 — 추측 only |
+
+### C.1 14-Tier Mapping (post-SEAL Phase 0-18)
+
+| Tier | Report 출처 | post-SEAL 결과 |
+|---|---|---|
+| 1 Ricci Flow (Perelman) | Report A 전체 | ⚠️ Phase 1A universality 잘못 → 4 retractions |
+| 2 Decomposition (JSJ) | Report B §2.1-2.3 | ✓ Phase 3 정정 → graph moduli stratification |
+| 3 Mostow Rigidity | Report B §2.4 | ❌ DROPPED (hyperbolicity 부재) |
+| 4 Surgery Theory | Report B §3.4 | ⚠️ Phase 4 representation ring $R_K^{SCC}$ |
+| 5 h-/s-Cobordism | Report B §3.2-3.3 | 추측, 작업 안 됨 |
+| 6 Novikov/Borel/FJ | Report B §3.5-3.7 | Tier 8 에 subsumed |
+| 7 Controlled Topology | Report B §3.8 | ✓ T11 Γ-convergence Cat A 이미 작동 |
+| 8 Assembly Maps | Report B §3.7 | ✓ Phase 8 CN-COB Assembly Map |
+| 9 Topological 4-Manifold | Report B §3.9 | 추측, 작업 안 됨 |
+| 10 Gauge Theory | Report B §3.10-3.11 | 추측, 작업 안 됨 |
+| 11 Cubulation | Report B §2.9 | 추측, 작업 안 됨 |
+| 12 Minimal Surface | Report B §2.10 | 추측, 작업 안 됨 |
+| 13 Morse + Handle | Report B §3.1 | ✓ 이미 작동 중 |
+| 14 Computational | Report B §"계산" | ✓ scc/ 이미 작동 |
+
+### C.2 *Naive Import 의 8 Systematic Biases* (post-SEAL catch)
+
+1. EW universality (실제: 비국소 Allen-Cahn / Model B)
+2. Model A $z = 2.17$ (실제: Model B $z \approx 3.75$, mass-conserved)
+3. Coarsening $t_\times \sim (\beta/\alpha)^{3/2}$ (실제 Bray 1994: $t_\times \sim \alpha/\beta$)
+4. $D_f^{(k)} = (n-1) - k$ codim 산수 오류
+5. H-int formation 배제
+6. Closure RG-irrelevance tree-level only
+7. $D_f = 11/8$ as theorem (실제: SLE_3 conjecture)
+8. k(k+1)/2-1 single-graph stratification 잘못
+
+### D. References (post-SEAL 추가)
+
+**Hamilton-Perelman 원전**:
+- Hamilton (1982) *J Diff Geom* 17:255; Perelman (2002, 2003 ×2) arXiv:math/0211159, 0303109, 0307245
+- Kleiner-Lott (2008), Morgan-Tian (2007), Cao-Zhu (2006) — 표준 전개
+
+**Statistical physics / dynamic universality**:
+- Hohenberg-Halperin (1977) *RMP* 49:435 — Model A/B classification
+- Edwards-Wilkinson (1982), Kardar-Parisi-Zhang (1986)
+- Allen-Cahn (1979), Lifshitz-Slyozov (1961)
+- Bray (1994) *Adv Phys* 43:357 — phase ordering kinetics
+- Bray-Rutenberg (1994), Funaki-Spohn (1997), Rubinstein-Sternberg (1992)
+
+**Critical phenomena / RG**:
+- Onsager (1944), Wilson-Fisher (1972), Wansleben-Landau (1991), Kamieniarz-Blöte (1993), Pelissetto-Vicari (2002)
+
+**Probability / SDEs**:
+- Bakry-Gentil-Ledoux (2014), Otto-Villani (2000), Lions-Sznitman (1984), Tanaka (1979), Freidlin-Wentzell (1998)
+
+**Random fields / fractals**:
+- Adler-Taylor (2007), Sheffield (2007), Falconer (2003), Schramm (2000), Smirnov (2010), Chelkak-Smirnov (2012), Boissonnat-Pritam (2021)
+
+**Algebraic topology / assembly**:
+- Browder (1972), Wall (1970), Ranicki (2002), Davis-Lück (1998), Hairer (2014)
+
+**3-manifold + 4-manifold**:
+- Kneser, Milnor, Haken, Waldhausen, Jaco-Shalen, Johannson, Thurston, Mostow, Schoen-Yau, Agol-Wise
+- Freedman (1982), Donaldson (1983), Witten (1994), Kirby (1989)
+
+### E. 본 Appendix 의 *의미*
+
+> **Manifold topology 80년 역사 (1904 Poincaré → 2003 Perelman → 2012 Agol) 의 *전체 도구상자* 가 SCC 에 *naive import* 시 *systematic bias 8개* 만들었음을 정직하게 기록. 이게 *learning resource* 로서의 영구 보존 — 향후 작업 시 *동일 함정 회피* 의 reference. Working layer (foundation_reset + v1 + W8_Day2_evening_manifold_topology_report + v0 archives) 가 canonical 보호 + 학습 자료 archive 의 이중 역할.**
+
+본 appendix 가 *내일 작업의 reference 백서* (위 EOD 메모 정신의 *직접 확장*) — `04_manifold_topology_program_plan.md` 의 §B-§J + §R 와 cross-referenced, `99_summary.md §POST-SEAL EXTENSION` 와 *3-file post-SEAL extension reference triangle* 형성.
+
+---
+
+*End of post-SEAL appendix. Topological mathematics reference base 통합 완료.*
