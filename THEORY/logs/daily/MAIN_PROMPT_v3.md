@@ -1,4 +1,16 @@
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · v1 + v2 archived 2026-05-18 → [[../../_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE|v2 archive note]] · [[../../_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE|v1 archive note]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · **v4 (PAI direction)** → [[MAIN_PROMPT_v4_PAI_PIVOT|MAIN_PROMPT_v4_PAI_PIVOT]] · v1 + v2 archived 2026-05-18 → [[../../_archive/main_prompt_v2_2026-05-18/ARCHIVE_NOTE|v2 archive note]] · [[../../_archive/main_prompt_v1_2026-05-18/ARCHIVE_NOTE|v1 archive note]]
+
+> [!important] **2026-05-21 PAI PIVOT — v3 is now LEGACY-FRAMING (substrate prompt)**
+>
+> 본 v3 prompt 는 *LEGACY-FRAMING* 으로 재라벨됩니다. 본 prompt 의 본체는 *수정 없음* — 그러나 main research axis 가 2026-05-21 PAI pivot 으로 변경된 이후 다음을 따라주세요:
+>
+> - **v3 는 substrate (SCC cohesion-morphology) 작업 세션** 에 사용 — 기존 OP-0001..OP-0022, OP-HMORSE-*, 그리고 102 substrate-canonical claims 유지·정밀화 작업.
+> - **v4 는 PAI direction 세션** 에 사용 — OP-PAI-001..006, interpretation gap, action interpretation map, invariance criterion 등 새 main axis 작업.
+> - **선택 기준**: 세션의 scope 가 *substrate-canonical maintenance* 이면 v3, *PAI direction* 이면 v4. 사용자가 명시하지 않은 새 작업은 v4 default.
+> - **v3 의 모든 protocol** (plan-mode entry, CoT/CoC enforcement, 6-mode catalog 등) 은 substrate 작업에서 *그대로 유효*. v4 는 v3 위에 *PAI-specific discipline* (action class commitment, no excessive math, OP-PAI status update format) 만 추가.
+> - **v3 본체는 수정되지 않습니다.** 본 annotation 외 변경 0.
+>
+> Pivot 문서: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[../../canonical/PAI_ROADMAP|Roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md`. Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11.
 
 # MAIN AGENT PROMPT v3 — SCC Daily Research Session (Plan-Mode-Entry + CoT/CoC Enforced)
 

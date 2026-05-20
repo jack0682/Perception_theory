@@ -4,6 +4,159 @@
 
 ---
 
+## [PAI PIVOT] 2026-05-21 (W8-Day4) — Canonical Pivot to Perception-Action Interpretation
+
+**Type**: theoretical pivot. No new canonical theorem. No claim count change. Substrate (CV-1.20, 102 claims) preserved unchanged.
+
+**Trigger**: 2026-05-20 macro_audit + long-form user reasoning concluded that the original SCC motivation is broader than "pre-objective cohesive formation." The deeper motivation is *perception-action interpretation invariance* — the rejection of the double-translation pattern in current AI pipelines (perception unit ≠ action unit).
+
+**New main axis (CANONICAL-DIRECTION)**:
+
+> Perception = cohesive individuation + interpretation invariance across action
+
+> A formation $F$ is a *perception-action formation* iff $(d_{\text{SCC}}(F)$ high$)$ AND $($interpretation invariant under action$)$.
+
+**Substrate (SCC) status**: reclassified as SUBSTRATE-CANONICAL. All 71 Cat A + 20 Cat B + 6 Cat C + 5 Retracted claims **preserved unchanged**. No theorem statement modified. CV-1.20 remains current.
+
+**New canonical vocabulary (all DEFINITION-DRAFT / OPEN)**:
+1. Interpretation Gap $\Delta_{\text{interp}}(F)$
+2. Interpretation-Preserving Formation (IPF)
+3. Perception-Action Formation (PA-formation)
+4. Action Interpretation Invariance (3 candidate forms; none committed)
+5. Shared Unit Principle (thesis-level)
+6. Meaningless Split / Non-semantic Fragmentation (negative target)
+
+**New open problems registered** (all OPEN, no resolution attempted):
+- OP-PAI-001: Formal definition of interpretation gap (High)
+- OP-PAI-002: Action interpretation map $\mathcal{A}(u)$ (High)
+- OP-PAI-003: Interpretation invariance criterion (High)
+- OP-PAI-004: Diagnostic vector extension (Medium)
+- OP-PAI-005: Tokenization/embedding critique formalization (Medium)
+- OP-PAI-006: Formation-to-affordance bridge (Medium)
+
+**Files created (4)**:
+- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — canonical pivot doc
+- `THEORY/canonical/PAI_ROADMAP.md` — Phase 0-6 roadmap (no commitments)
+- `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` — daily log
+- `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` — new agent prompt (v3 preserved as legacy)
+
+**Files modified (annotate/extend only)**: canonical.md (pivot section appended; §1-§13 untouched), theorem_status.md (substrate-canonical note + OP-PAI registration), hypothesis_tree.md (HT-3.11 → HT-3.12, H-PAI branch added), DECLARATION.md (pivot annotation; DECL-1.0 body unchanged), MOC_canonical_authority.md, MOC_hypothesis_tree.md, MOC_open_problems_blockers.md, INDEX.md, THEORY_INDEX.md, MAIN_PROMPT_v3.md (legacy-framing header).
+
+**Claim count change**: 0 (102 unchanged, 71A/20B/6C/5R unchanged).
+**CV version change**: 0 (CV-1.20 unchanged).
+**HT version change**: 3.11 → 3.12 (additive — H-PAI branch only; existing rows unchanged).
+**scc/ edits**: 0; **pytest**: 225 passed + 1 xfailed inherited.
+
+**Non-overclaim** (binding):
+- PAI does not solve perception. It reframes the next research target.
+- New vocabulary is DRAFT, not formalized.
+- 8 retractions remain explicitly retracted; PAI shall not revive them.
+- Action is plural (manipulation / navigation / attention / inspection / communication / repair / etc.); committing to one class is OP-PAI-002.
+- Existing OPs (0001..0022, HMORSE-*) remain in their previous status; PAI is *added*, not *replacing*.
+
+**Discipline (user explicit)**: 쓸데없이 화려한 수학 금지. Only truly necessary formulas. No proof-count pressure pattern. macro_audit §9 hard-stop gates apply.
+
+**Carry-forward to 2026-05-22+**:
+- PAI_ROADMAP Phase 1: candidate forms for $\Delta_{\text{interp}}$ (survey, no commitment).
+- PAI_ROADMAP Phase 2: action class commitment (user decision required).
+- Substrate maintenance: no new SCC SEAL unless it directly advances an OP-PAI.
+
+---
+
+## [MACRO-AUDIT] 2026-05-20 — Big-picture pause audit + navigation sync
+
+**Trigger:** 사용자 우려 — "증명의 증명을 위한 가설을 위한 증명" 식으로 국소 증명 체인이 커지며 SCC 이론의 거시 구조가 흐려졌다는 지적.
+
+**Actions:**
+- Added `THEORY/working/macro_audit_2026-05-20.md` as a working-grade pause audit. It separates origin, grounded results, conditional results, intuition, overreach, known non-claims, and macro gaps.
+- Synced top-level navigation / MOC status references to the current CV-1.20 / HT-3.11 baseline:
+  - `THEORY_INDEX.md`
+  - `THEORY/canonical/MOC_canonical_authority.md`
+  - `THEORY/canonical/MOC_hypothesis_tree.md`
+  - `THEORY/working/MOC_open_problems_blockers.md`
+- Added append-only theory-loop notes in ignored local `research_log.md`.
+
+**Canonical claim count:** unchanged — 71A / 20B / 6C / 5R = 102 claims.
+
+**Non-overclaim:** This audit does not promote any theorem, close any OP, or change canonical mathematical status. It identifies the objecthood theorem, observer/readout layer, dynamic K-selection, and merge/split identity as macro blockers that must remain visible before further proof expansion.
+
+---
+
+## [CV-1.20 SEAL] 2026-05-20 (W8-Day3 POST-99 evening — Option C escalation) — L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A (Proof-First Response)
+
+**Trigger:** W8-Day3 POST-99 evening 사용자 critique — "정리만 하고 지금 뭔가 증명이 된게 하나도 없는데". CV-1.19 SEAL (오후 16:23-16:27) 이후 evening session 14 working files (~10,769L) + 1 exposition refinement (`05_landscape_local_to_global.md`, 1252L) = ~12,021L 산출, 그러나 새 canonical Cat A/B 증명 0건. Option C escalation 으로 두 즉시 증명 가능한 Cat A direct lemma 동시 SEAL 실행.
+
+### Two Cat A Direct Additions
+
+**1. L-UNI-ZMODE (Cat A direct)** — Uniform Zero-Mode Dichotomy. 균일 critical $u^* = c\mathbf{1}$ 에서 constrained Hessian $H(u^*)|_{\mathbf{1}^\perp}$ 의 kernel 이 Type A (critical parameter crossing $\mu_k = 0$) + Type B (eigenvalue multiplicity $\mathrm{mult}(\lambda_k) > 1$) 만 가능; **Type C (continuous Goldstone / orbit-tangent) 부재**. 5-step proof: (1) Aut(G)-orbit triviality $\mathcal{O}(u^*) = \{u^*\}$ singleton → tangent $\{0\}$, (2) Type C exclusion, (3) Hessian Aut(G)-equivariance via T-σ-Lemma-1 Cat A, (4) Schur Lemma + L-S3-KERNEL-MULT Case B → $V_{\lambda_k}$ 가 $H(u^*)$-invariant, scalar action $\mu_k$, (5) A/B classification. CSSL critic 의 "ker = Goldstone only at uniform" misframing (`working/cssl/01_critic_evaluation.md` §A.1) 의 *formal refutation*.
+
+**2. L-SURFACE-TENSION-RESCALE (Cat A direct)** — Surface Tension Parameter Rescaling. $(α, β) \mapsto (sα, sβ)$ 하에서 6-part 구조: (a) T8 wall 불변 (β/α 보존), (b) ℓ_bd = √(α/β) 불변, (c) σ = (√2/6)√(αβ) linear scaling, (d) Hessian linear homogeneity $H(u^*; sα, sβ) = s \cdot H$, (e) Goldstone preservation $\mu_k = 0 \Rightarrow \mu_k(sα, sβ) = 0$, (f) non-Goldstone gap arbitrary expansion. Modica-Mortola standard form + canonical Theorem 4 + T-V5b-T-zero direct. CSSL §3.2 sole survivor formalization. Wave 2 critic Fix #1 (σ √2 correction, $(\sqrt{2}/6)\sqrt{\alpha\beta}$ NOT $\sqrt{\alpha\beta}/3$) + Fix #3 (prefactor invariance retraction) 반영.
+
+### Claim Count Update
+
+**Before:** 69A / 20B / 6C / 5R = 100 claims (post-CV-1.19).
+**After:** **71A / 20B / 6C / 5R = 102 claims** (~70% fully proved).
+**Net:** +2A (L-UNI-ZMODE + L-SURFACE-TENSION-RESCALE) = +2 claims.
+
+### Files Modified (6 files)
+
+1. **canonical.md** §13 Cat A row insertions (+2A after L1814, before Cat B section L1818)
+2. **theorem_status.md** L18 — CV-1.20 amendment prepended to existing CV-1.19 chronology
+3. **hypothesis_tree.md** HT-3.10 → HT-3.11 (H-MORSE row STRENGTHENED; H-UNI-ZMODE + H-RESCALE new rows CLOSED Cat A)
+4. **CV-1.20_SEAL.md** — NEW (~250L; §1-§8 template from CV-1.19_SEAL.md)
+5. **working/foundation/L-UNI-ZMODE_proof.md** — NEW (~430L; 5-step proof + anchors + non-overclaim + Cat A direct classification)
+6. **CHANGELOG.md** — this entry
+
+**0 edit 보호 대상**: DECLARATION.md, scc/*, CODE/scc/*, auxiliary_structures_master.md, working/field_equation_framework/06 (이미 작성된 Cat A direct, 본 SEAL은 *reference only*).
+
+### Pytest Regression
+
+**Pre-SEAL**: 225 passed + 1 xfailed (CV-1.19 post-SEAL baseline).
+**Post-SEAL**: expected unchanged (scc/ 0 edits → baseline inherit automatic).
+
+### P-Audit (CV-1.20_SEAL.md §4 Block D Consistency)
+
+**13/13 PASS expected**:
+- $W$, $W''$ I6 correction; $\lambda_k$ 1-index; $u^* = c\mathbf{1}$ self-consistency $c = m/n$
+- Aut(G)-action on $u^*$ (fixed); T-σ-Lemma-1 commutation; L-S3-KERNEL-MULT Case B
+- V5b-T-zero context (non-uniform contrast)
+- $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ Wave 2 critic Fix #1; $\ell_{bd}$ Allen-Cahn
+- $H(u^*; sα, sβ) = s \cdot H$ linear homogeneity; Goldstone preservation
+- Prefactor linear scaling (Wave 2 critic Fix #3 retraction 명시)
+- CSSL §3.2 sole survivor formalization
+
+### Non-Overclaim
+
+- L-UNI-ZMODE: **uniform critical only**. 비균일 critical (corner-saturated) 은 V5b-T-zero Type C present — distinct scope.
+- L-SURFACE-TENSION-RESCALE: **$\mathcal{E}_{bd}$ only**. Full SCC ($\mathcal{E}_{cl} + \mathcal{E}_{sep} + \mathcal{E}_{tr}$) rescaling 은 W9+ separate.
+- Eyring-Kramers prefactor 는 *invariant 아님*; linear scaling 으로 retraction 명시.
+- 8 retractions 재시도 0; silent OP resolution 0 (NQ-PBC-1, NQ-MULT-SELECT, H-CONT 명시 등록).
+
+### Hypothesis Tree HT-3.10 → HT-3.11
+
+- **H-MORSE STRENGTHENED**: uniform critical Type C absence formally proved (L-UNI-ZMODE direct). Local Cat B + uniform Type C-absence Cat A 모두 폐쇄. 비균일 잔여 = OP-HMORSE-LOCAL-A (W9+).
+- **H-UNI-ZMODE NEW CLOSED Cat A**: L-UNI-ZMODE direct
+- **H-RESCALE NEW CLOSED Cat A**: L-SURFACE-TENSION-RESCALE direct
+
+### W8-Day3 Single-Day Double-SEAL Pattern
+
+**First instance**: same day 에 2개 CV SEAL 실행 (CV-1.19 오후 + CV-1.20 evening). Net W8-Day3 canonical promotion = **+4 claims** (3 Cat A + 1 Cat B).
+
+- CV-1.19 (오후 16:23-16:27): L-S3-KERNEL-MULT Cat A + L-LOJASIEWICZ-CG Cat B
+- CV-1.20 (evening): L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A
+
+v3 prompt body "SEAL-execute escalation" mode 의 *production-grade 검증*: 사용자 critique → proof-first response within 1 session 의 first instance.
+
+### Carry-Forward to W9+
+
+- L-LOJASIEWICZ-CG Cat A path (Kato perturbation degenerate Fiedler, W9-S1 candidate ~3 sessions)
+- L-UNI-ZMODE non-uniform extension (V5b-T-zero context, W9-S2 candidate ~5 sessions)
+- Full SCC rescaling theorem ($\mathcal{E}_{cl}, \mathcal{E}_{sep}, \mathcal{E}_{tr}$ inclusion, W9-S3 candidate ~2 sessions)
+- L-FW-KRAMERS-SCC + L-BAKRY-EMERY-SCC (Wave 3 critic re-review 후 CV-1.21+ SEAL)
+- Branch fate catalog Cat B target (`05` §3.6.2 (a)-(f) 정리화, W9-S4 candidate ~5 sessions)
+
+---
+
 ## [CV-1.19 SEAL] 2026-05-20 (W8-Day3 closing → W8-Day4 execution) — S1 Łojasiewicz $c_G$ Cat B + S3 Full SCC Kernel-Mult Identity Cat A on Standard Regimes
 
 **Trigger:** W8-Day3 Decision A direct closing per `THEORY/logs/daily/2026-05-20/99_summary.md` — S1 (c_G verified = 1.171) Cat B + S3 (full SCC) Cat A on standard regimes (case A regular + case B uniform critical via T-σ-Lemma-1 + case C with H-INV explicit per W8-Day3 03 §6 L-INV-1/2/3 derivation). Predecessor work: W8-Day3 02_cg_numerical_verification.md (308L) + 03_D_L_commutation.md (400L) + 99_summary.md (281L).

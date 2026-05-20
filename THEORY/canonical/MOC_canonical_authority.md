@@ -3,7 +3,7 @@ type: MOC
 cluster: canonical-authority
 id: MOC_canonical_authority
 parent: [[THEORY_INDEX]]
-last_updated: 2026-05-14
+last_updated: 2026-05-20
 ---
 
 # MOC: Canonical Authority Layer
@@ -11,7 +11,9 @@ last_updated: 2026-05-14
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]]
 > Sibling: [[MOC_SCC_CT_v0.1]] · [[MOC_hypothesis_tree]]
-> Status: Canonical (authoritative, CV-1.16 SEALED)
+> Status: Canonical (authoritative, CV-1.20 SEALED substrate + 2026-05-21 PAI direction)
+
+**2026-05-21 PAI PIVOT note**: substrate canonical (102 claims, CV-1.20) **preserved unchanged**. New main research axis registered: **Perception-Action Interpretation (PAI)** — *Perception must produce the same unit that action can act upon*. See: [[perception_action_interpretation_pivot_2026_05_21]] (canonical pivot doc) · [[PAI_ROADMAP]] (Phase 0-6) · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md`. 6 OP-PAI registered (all OPEN). HT-3.11 → HT-3.12 (H-PAI branch added). CV-1.20 unchanged.
 
 ## Purpose
 
@@ -20,10 +22,14 @@ last_updated: 2026-05-14
 ## Core Files
 
 - [[DECLARATION]] — DECL-1.0 이론 선언문 (먼저 읽기, 2분).
-- [[canonical]] — CV-1.16 SEALED, 97 claims authoritative spec.
+- [[canonical]] — CV-1.20 SEALED, 102 claims authoritative spec.
 - [[theorem_status]] — 정리 인덱스 + Open Problems Catalog (OP-0001..OP-0022).
-- [[hypothesis_tree]] — HT-3.7 차단 가설 의존 트리.
-- [[CV-1.16_SEAL]] — 최신 봉인 기록.
+- [[hypothesis_tree]] — HT-3.11 차단 가설 의존 트리.
+- [[CV-1.20_SEAL]] — 최신 봉인 기록.
+- [[CV-1.19_SEAL]] — S3 kernel-multiplicity + Łojasiewicz $c_G$ 봉인.
+- [[CV-1.18_SEAL]] — Stage 0 Sensor T + T_* ξ resident 봉인.
+- [[CV-1.17_SEAL]] — kernel-composed temporal composition 봉인.
+- [[CV-1.16_SEAL]] — H-MORSE-Local closure package 봉인.
 - [[CV-1.15_SEAL]] — Action 기반 시간성 봉인.
 - [[CV-1.13_SEAL]] — T-Temporal-Identity Cat A 봉인.
 - [[CHANGELOG]] — 세션 단위 변경 기록 (THEORY 측).
@@ -34,7 +40,7 @@ last_updated: 2026-05-14
 2. [[canonical]] §2 (Foundational Orientation)
 3. [[hypothesis_tree]] (세션 시작 타겟 절)
 4. [[theorem_status]] (해당 정리 행)
-5. [[CV-1.16_SEAL]] (최근 변경 이유)
+5. [[CV-1.20_SEAL]] (최근 변경 이유)
 6. [[CHANGELOG]] (전체 흐름)
 
 ## Dependencies
@@ -57,16 +63,17 @@ THEORY/CHANGELOG.md
 
 자세히는 [[README|canonical/README.md]] 의 promotion criteria 5조항.
 
-## Current Status (CV-1.16)
+## Current Status (CV-1.20)
 
-- **Sealed version:** CV-1.16 (2026-05-14, W7-Day5 ext).
-- **Count:** 68 A / 18 B / 6 C / 5 R = 97 claims.
-- **Next target:** CV-1.17 Package II Eyring-Kramers prefactor Cat B.
-- **Most recent additions:** L-CLOSURE-LIFT (Cat A), L-HMORSE-LOCAL (Cat B), L-HMORSE-DECOMP (Cat B), L-BOUNDARY-MODE-EXCLUSION (Cat C). OP-HMORSE-BROADNESS CLOSED.
+- **Sealed version:** CV-1.20 (2026-05-20, W8-Day3 POST-99 evening).
+- **Count:** 71 A / 20 B / 6 C / 5 R = 102 claims.
+- **Most recent additions:** L-UNI-ZMODE (Cat A direct), L-SURFACE-TENSION-RESCALE (Cat A direct).
+- **Current carry-forward:** L-LOJASIEWICZ-CG Cat A path, non-uniform H-MORSE / Package II Eyring-Kramers, full SCC rescaling, T-σ-Inherit MERGE/SPLIT.
+- **Macro caution:** [[macro_audit_2026-05-20]] marks objecthood theorem, observer/readout layer, dynamic K-selection, and merge/split identity as the main big-picture gaps.
 
 ## SEAL Chain (Superseded-by)
 
-[[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] (현재).
+[[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [[CV-1.17_SEAL]] → [[CV-1.18_SEAL]] → [[CV-1.19_SEAL]] → [[CV-1.20_SEAL]] (현재).
 
 이전 CV-1.0~1.12 봉인 기록은 [[CHANGELOG]] 에 흡수.
 
@@ -79,4 +86,4 @@ THEORY/CHANGELOG.md
 
 ---
 
-*MOC_canonical_authority, 2026-05-14.*
+*MOC_canonical_authority, 2026-05-20.*

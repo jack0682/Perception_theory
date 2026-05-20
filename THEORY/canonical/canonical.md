@@ -1815,6 +1815,48 @@ $$\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big|_{T\Sigma_m}\Big) 
 
 ---
 
+**L-UNI-ZMODE. Uniform Zero-Mode Dichotomy.** *(New, 2026-05-20 W8-Day3 evening, CV-1.20 SEAL.)*
+
+Let $G = (V, E)$ be a finite connected graph with $|V| = n$. Let $m \in (0, n)$ with $c := m/n \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At the uniform critical $u^* = c\mathbf{1} \in \Sigma_m$, the kernel of the constrained Hessian of the full SCC energy on $\mathbf{1}^\perp$ decomposes purely into Type A (critical zero) and Type B (eigenvalue-multiplicity) modes:
+$$\ker H(u^*)\big|_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G), \qquad K^* := \{k \in \{2,\ldots,n\} : \mu_k = 0\}$$
+where $\mu_k = 4\alpha\lambda_k(L_G) + \beta W''(c)$ (Theorem 4, Cat A). **Type C (continuous Goldstone / orbit-tangent) zero modes are absent at the uniform critical point.**
+
+*Proof (Cat A direct, 5 steps):* (Step 1) For any $\sigma \in \mathrm{Aut}(G)$, $(\sigma \cdot u^*)_i = u^*_{\sigma^{-1}(i)} = c = u^*_i$, so the orbit $\mathcal{O}_{\mathrm{Aut}(G)}(u^*) = \{u^*\}$ is a singleton with tangent space $\{0\}$. (Step 2) Type C zero modes are orbit-tangent by definition; Step 1 forces them empty at $u^*$. (Step 3) $u^* = c\mathbf{1}$ is fixed by all $\sigma \in \mathrm{Aut}(G)$, so the isotropy group $G_{u^*} = \mathrm{Aut}(G)$. By T-σ-Lemma-1 (Cat A) the full Hessian commutes with $\mathrm{Aut}(G)$-action on $\mathbf{1}^\perp$. (Step 4) By T-σ-Lemma-1 + Schur's Lemma + L-S3-KERNEL-MULT Case B (Cat A, CV-1.19, uniform critical case), each $L_G$-eigenspace $V_{\lambda_k}$ is $H(u^*)$-invariant, with $H(u^*)$ acting as the scalar $\mu_k$ on $V_{\lambda_k}$ in the Theorem-4-dominant regime. (Step 5) For $k \in K^*$: $\dim V_{\lambda_k} = 1$ gives single Type A mode; $\mathrm{mult}(\lambda_k) \geq 2$ gives Type B; Type C residue $\equiv 0$ by Step 2. $\square$
+
+*Anchors:* Theorem 4 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); L-S3-KERNEL-MULT (§13 Cat A, CV-1.19); V5b-T-zero (§13 Cat A def, *non-uniform corner-saturated* context — contrast; Type C lives there, not at uniform); L-HMORSE-LOCAL (§13 Cat B, CV-1.16) (C4) condition — consistent with L-UNI-ZMODE's uniform/non-uniform distinction. `THEORY/working/foundation/L-UNI-ZMODE_proof.md` (full proof).
+
+*Non-overclaim:* L-UNI-ZMODE covers *uniform critical $u^* = c\mathbf{1}$ only*. Non-uniform critical (corner-saturated formations) has *Type C present* via V5b-T-zero — distinct scope. Off-$\Sigma_{T8}$ regime: $\ker = \{0\}$ trivially. Theorem-4-dominant regime assumption: in canonical SCC regime where $\lambda_{bd}$ is primary symmetry-breaking coupling, the scalar action on $V_{\lambda_k}$ equals $\mu_k$ to leading order. CSSL critic ("ker = Goldstone only at uniform" misframing) is *formally refuted* by L-UNI-ZMODE. Seal: `CV-1.20_SEAL.md`.
+
+*CV-1.20 Cat A count: +1 entry (L-UNI-ZMODE). Running total post-L-UNI-ZMODE: 70A / 20B / 6C / 5R = 101 claims (intermediate; +1A in L-SURFACE-TENSION-RESCALE below completes the seal to 102).*
+
+---
+
+**L-SURFACE-TENSION-RESCALE. Surface Tension Parameter Rescaling Lemma.** *(New, 2026-05-20 W8-Day3 evening, CV-1.20 SEAL.)*
+
+For finite connected graph $G = (V, E)$ with $|V| = n$, boundary energy $\mathcal{E}_{bd}(u; \alpha, \beta) = \alpha u^T L_G u + \beta \sum_i W(u_i)$ where $W(u) = u^2(1-u)^2$. Under the uniform parameter rescaling $(\alpha, \beta) \mapsto (s\alpha, s\beta)$ for $s > 0$, six structural invariances/scalings hold:
+
+**(a) T8 wall invariance.** $\Sigma_{T8}(s\alpha, s\beta, c) = \Sigma_{T8}(\alpha, \beta, c)$ (since $\beta/\alpha$ unchanged); SB7 codim-1 algebraic structure preserved.
+
+**(b) Boundary width invariance.** $\ell_{bd}(s\alpha, s\beta) = \sqrt{s\alpha / s\beta} = \sqrt{\alpha/\beta} = \ell_{bd}(\alpha, \beta)$ — Allen-Cahn interface width is $s$-invariant.
+
+**(c) Surface tension linear scaling.** $\sigma(s\alpha, s\beta) = (\sqrt{2}/6)\sqrt{(s\alpha)(s\beta)} = s \cdot (\sqrt{2}/6)\sqrt{\alpha\beta} = s \cdot \sigma(\alpha, \beta)$ — Modica-Mortola surface tension scales linearly with $s$.
+
+**(d) Hessian linear homogeneity.** At any critical point $u^*$ of $\mathcal{E}_{bd}(\cdot; \alpha, \beta)$, $H(u^*; s\alpha, s\beta) = s \cdot H(u^*; \alpha, \beta)$; consequently all Hessian eigenvalues scale as $\mu_k(s\alpha, s\beta) = s \cdot \mu_k(\alpha, \beta)$.
+
+**(e) Goldstone preservation.** $\mu_k(\alpha, \beta) = 0 \Rightarrow \mu_k(s\alpha, s\beta) = 0$ for all $s > 0$. T-V5b-T-zero (Cat A) orbit-tangent zero modes remain at zero under rescaling.
+
+**(f) Non-Goldstone spectral gap expansion.** $\mu_{\min}^{(\text{non-Gold})}(s\alpha, s\beta) = s \cdot \mu_{\min}^{(\text{non-Gold})}(\alpha, \beta)$. For target gap $\mu^* > 0$ and baseline $\mu_0 := \mu_{\min}^{(\text{non-Gold})}(\alpha_0, \beta_0) > 0$, choose $s^* = \mu^*/\mu_0$ to achieve target.
+
+*Proof (Cat A direct):* Each part follows from $\mathcal{E}_{bd}$ linear-homogeneity in $(\alpha, \beta)$ + canonical Theorem 4 + Modica-Mortola standard surface tension formula. **(a)** $\beta/\alpha$ ratio unchanged. **(b)** Direct $\sqrt{\cdot/\cdot}$. **(c)** $\sigma = \sqrt{\alpha\beta} \int_0^1 \sqrt{2W(s)}\,ds = (\sqrt{2}/6)\sqrt{\alpha\beta}$ (Modica-Mortola; integrand $\sqrt{2W(s)} = \sqrt{2} \cdot s(1-s)$ since $W(s) = s^2(1-s)^2$). **(d)** $\mathcal{E}_{bd}(u; s\alpha, s\beta) = s\mathcal{E}_{bd}(u; \alpha, \beta)$ by linear homogeneity; differentiation linear → $\nabla^2$ inherits factor $s$. **(e)** Direct from (d). **(f)** Direct from (d) applied to non-Goldstone eigenvalues only. Full 6-part proof: `THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md` §3. $\square$
+
+*Anchors:* Theorem 4 (§13 Cat A); SB7 (§13 Cat A); T-V5b-T-zero (§13 Cat A); CLAUDE.md "Critical Implementation Details" I6 correction; Modica-Mortola Γ-convergence (standard external — Modica 1987); `THEORY/working/field_equation_framework/06` (Cat A direct working layer, 492L); `THEORY/working/field_equation_framework/12` §2 (Wave 2 critic σ √2 fix consolidated).
+
+*Non-overclaim:* (i) Corrected Modica-Mortola constant $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ per Wave 2 critic Fix #1 (previous $\sqrt{\alpha\beta}/3$ off by factor $\sqrt{2}$). (ii) Eyring-Kramers prefactor $\omega_0$ scales linearly ($s^1$), NOT invariant; the file 06 §8.1 *invariance* claim is retracted per Wave 2 critic Fix #3. (iii) Lemma covers $\mathcal{E}_{bd}$ only — full SCC rescaling ($E_{cl}, E_{sep}, E_{tr}$ inclusion) is W9+ separate work. (iv) The expansion (f) preserves T8 wall location (a) and boundary width (b) — *primary purpose* of the lemma: arbitrary H-Morse spectral gap expansion *without altering phase structure*. CSSL §3.2 surface tension scaling idea (Wave 1 sole survivor) is formalized here. Seal: `CV-1.20_SEAL.md`.
+
+*CV-1.20 Cat A count: +1 entry (L-SURFACE-TENSION-RESCALE). Running total post-CV-1.20: 71A / 20B / 6C / 5R = 102 claims, ~70% fully proved.*
+
+---
+
 ### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**; **CV-1.16 adds L-HMORSE-LOCAL + L-HMORSE-DECOMP**; **CV-1.17 adds T-CC-StableK-Kernel**; **CV-1.19 adds L-LOJASIEWICZ-CG** — total **20 Cat B entries post-CV-1.19**)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
@@ -2791,3 +2833,48 @@ OP-0021 (T_* registration) 의 기존 *Routes A (Mori-Zwanzig) and B (RG fixed p
 ---
 
 *End of Appendix OMS. Working files: `THEORY/working/observer_moduli/`. Static promotion audit: `oms_2_0_accepted_audit.md`. Full Temporal promotion audit: `oms_2_0_full_accepted_audit.md`. CV-1.18 §N source: `working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` + `P6_OMS-1_xi_Tstar_entry.md` + `_SUMMARY_v0.2.md`. All open sub-OPs (032b, 033b, 034b, 034c) tracked in `open_problems.md`.*
+
+---
+
+# Canonical Pivot 2026-05-21 — Perception-Action Interpretation (CANONICAL-DIRECTION)
+
+**Status**: CANONICAL-DIRECTION / NOT YET FORMALIZED. This section is a *direction registration*, not a theorem. No claim count change. CV-1.20 unchanged. Substrate (§1-§13 + Appendix OMS) preserved.
+
+## §P.1 — Core Thesis
+
+> **Perception must produce the same unit that action can act upon.**
+>
+> Perception = cohesive individuation + interpretation invariance across action.
+
+A formation $F$ qualifies as a *perception-action formation* iff $d_{\text{SCC}}(F) = (\text{Bind, Sep, Inside, Persist})$ is high (substrate criterion) AND $F$ is invariant — or minimally distorted — under action interpretation (PAI criterion).
+
+The substrate criterion alone is necessary but not sufficient. The PAI criterion adds an action-side constraint that the substrate does not currently formalize.
+
+## §P.2 — Status of §1-§13 + Appendix OMS After Pivot
+
+All prior canonical content is **SUBSTRATE-CANONICAL** — unchanged in statement, unchanged in proof, unchanged in claim count. The pivot is a reclassification of *role*, not of *content*. SCC's 71 Cat A + 20 Cat B + 6 Cat C + 5 Retracted claims continue to be the substrate on which PAI is built. The 8 retractions remain binding.
+
+## §P.3 — New Canonical Vocabulary (all DEFINITION-DRAFT)
+
+1. **Interpretation Gap** — $\Delta_{\text{interp}}(F) := d(\mathcal{I}_{\text{perception}}(F), \mathcal{I}_{\text{action}}(F))$ — three components undefined; OPEN.
+2. **Interpretation-Preserving Formation (IPF)** — $d_{\text{SCC}}(F)$ high AND $\Delta_{\text{interp}}(F)$ small.
+3. **Perception-Action Formation (PA-formation)** — cohesive formation usable as action unit without destructive re-tokenization.
+4. **Action Interpretation Invariance** — three candidate forms (equivariance / commutativity / low-distortion); none committed; OPEN.
+5. **Shared Unit Principle** — thesis-level: minimal perception unit ≈ minimal action interpretation unit.
+6. **Meaningless Split** — fragmentation not constrained to preserve PA-invariance.
+
+Full definitions, candidate forms, and non-overclaim: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`.
+
+## §P.4 — Open Problems Registered
+
+OP-PAI-001..006, all OPEN, all High/Medium severity. See `theorem_status.md` Open Problems Catalog for full bodies. The roadmap is `THEORY/canonical/PAI_ROADMAP.md`.
+
+## §P.5 — Non-Overclaim
+
+- PAI does **not** solve the perception problem.
+- No mathematical proof attempted.
+- CV version not advanced (CV-1.20 stays).
+- 8 retractions not reactivated.
+- Existing OPs (0001..0022, HMORSE-*) untouched in status; PAI is *added*, not *replacing*.
+
+*Pivot source: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`. Substrate-anchor verdict: `THEORY/working/macro_audit_2026-05-20.md`. CV-1.20 baseline preserved.*

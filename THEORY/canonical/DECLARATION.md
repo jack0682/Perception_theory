@@ -154,3 +154,32 @@ hypothesis_tree.md      ← 가설 의존성 구조 (HT-3.0)
 ---
 
 *DECL-1.0, 2026-05-07. 이 선언문은 이론의 방향이 바뀌지 않는 한 수정되지 않는다. 수정 시 CHANGELOG.md에 기록하고 버전을 DECL-2.0으로 올린다.*
+
+---
+
+## 2026-05-21 PAI Pivot Annotation (CANONICAL-DIRECTION; DECL-1.0 본체 불변)
+
+DECL-1.0 본체는 *수정되지 않습니다*. 본 annotation 은 *추가 layer* 를 명시합니다.
+
+2026-05-20 macro audit + long-form 사유로 확인된 *원래 motivation* (이미지 인식의 토큰화 거부 + 행동 가능 단위 형성) 은 DECL-1.0 의 Q1-Q6 만으로는 *충분히 표현되지 않습니다*. 진짜 motivation 은 **이중 번역의 거부**:
+
+> Perception 과 action 이 *같은 단위* 를 공유해야 한다. 두 번 해석되어서는 안 된다.
+
+이로부터 main research axis 가 *Perception-Action Interpretation (PAI)* 로 pivot:
+
+> **Perception = cohesive individuation + interpretation invariance across action.**
+
+DECL-1.0 의 *primitive $u_t$* 와 *Q1-Q6* 는 모두 *substrate* 으로 보존됩니다. PAI 는 그 위의 *추가 layer* 이지 *대체* 가 아닙니다.
+
+새 layer 의 등록 사항:
+- 6 DEFINITION-DRAFT vocabulary (Interpretation Gap / IPF / PA-formation / Action Interpretation Invariance / Shared Unit Principle / Meaningless Split)
+- 6 OPEN problems (OP-PAI-001..006)
+- 증명 0건; CV-1.20 substrate 불변
+
+전체 pivot 문서: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`
+Roadmap: `THEORY/canonical/PAI_ROADMAP.md`
+Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
+
+**DECL-1.0 → DECL-2.0 으로의 version bump 는 아직 하지 않습니다** — PAI 가 수학적으로 형식화 (OP-PAI-001..006 중 적어도 일부의 RESOLVED) 된 이후로 미룹니다. 현 시점에서 PAI 는 *방향 선언* 이지 *수학적 commitment* 가 아닙니다.
+
+*PAI Pivot 2026-05-21. DECL-1.0 본체 보존. Substrate 불변. 새 axis 등록.*

@@ -1,15 +1,18 @@
 ---
 type: working/navigation-index
 created: 2026-05-07
-last_updated: 2026-05-20
+last_updated: 2026-05-21
 ---
+
+**2026-05-21 PAI PIVOT note**: working/ 의 모든 기존 파일은 *substrate-canonical* (cohesion-morphology) 작업으로 유지됩니다. **새 main research axis = Perception-Action Interpretation (PAI)**. PAI 작업 파일은 향후 `THEORY/working/PAI/` 신규 서브디렉토리에 배치 (Phase 1 시작 시 생성). 기존 OP-0001..OP-0022 / OP-HMORSE-* 외에 **6 OP-PAI-001..006** 등록 (모두 OPEN). Pivot 문서: [[../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[../canonical/PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md`.
 
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]]
+> PAI: [[../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[../canonical/PAI_ROADMAP|Roadmap]]
 > Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]] · [[MOC_sigma_rich_framework]]
 > Vertical: [[MOC_H_MORSE_packageII]] · [[MOC_action_temporal_cost]] · [[MOC_temporal_composition]] · [[MOC_observer_moduli_OMS]] · [[MOC_AFD_0_foundation]] · [[MOC_temporal_audit_W7]]
 > Ops: [[MOC_open_problems_blockers]] · [[MOC_experiments_validation]] · [[MOC_research_journal]] · [[MOC_parked_superseded]]
-> Status: Active — promotion source for CV-1.16+
+> Status: Active — CV-1.20 substrate baseline + 2026-05-21 PAI direction
 
 # working/ — Navigation Index
 
