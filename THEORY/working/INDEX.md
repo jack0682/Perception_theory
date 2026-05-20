@@ -1,7 +1,7 @@
 ---
 type: working/navigation-index
 created: 2026-05-07
-last_updated: 2026-05-07
+last_updated: 2026-05-20
 ---
 
 > [!nav] Theory Navigation
@@ -15,7 +15,7 @@ last_updated: 2026-05-07
 
 Active theory development files, organized by the 6 perceptual questions from `canonical/hypothesis_tree.md` (HT-3.0). Files in `parking/` are stale and not listed here.
 
-**Active count (2026-05-07):** ~119 files across MF/, SF/, C/, CE/, E/ subdirs.
+**Active count (2026-05-20):** ~135 files across MF/, SF/, C/, CE/, E/, foundation/, observer_moduli/, AFD_0/, cssl/, field_equation_framework/ subdirs.
 
 ---
 
@@ -376,6 +376,81 @@ Key definitions: AFD-D1 to AFD-D15
 Key theorems: AFD-T1 (Prop), AFD-T2 (Thm), AFD-T3 (Prop), AFD-T4 (Prop), AFD-T5 (Thm), AFD-T6 (Prop), AFD-T7 (Prop), AFD-T8 (LC), AFD-T9 (Thm), AFD-T10 (DP)
 Central claim: AFD-T9 — Layer-2 AFD does NOT require H-MORSE; H-MORSE is reclassified as Layer-3 regularity.
 Open problems: OP-AFD-001 through OP-AFD-010.
+
+---
+
+## foundation/ — Manifold Topology Attempt (W8-Day2 evening → W8-Day3, 2026-05-20)
+
+Status: working (Manifold topology 도구 → SCC import, 8 systematic biases caught, 3 surviving content all promoted via CV-1.19 SEAL)
+
+Files:
+- `foundation/manifold_topology_attempt_v1.md` (~700L, current synthesis; W8-Day3 갱신 §1.1 c_G forensics + §1.3 S3 case A/B/C)
+- `foundation/foundation_reset_v0.md` (~270L, programmatic reset record)
+- `foundation/manifold_topology_attempt_v0.md` (superseded by v1)
+- `foundation/fractal_dynamic_dim_v0.md` (superseded; source of retracted claims, xref reference only)
+- `foundation/W8_Day2_evening_manifold_topology_report.md` (~400L, 4-layer adversarial framework report)
+
+Key surviving content (Cat B verified + Cat A unconditional via CV-1.19 SEAL):
+- L-LOJASIEWICZ-CG ($c_G$ explicit formula, non-degenerate Fiedler stratum) — Cat B
+- L-S3-KERNEL-MULT (dim ker(Hess H_sep) = mult(λ_2(L_G))) — Cat A unconditional on case A/B + Cat A with H-INV on case C
+
+Reference: `THEORY/canonical/CV-1.19_SEAL.md` for promoted content.
+Promotion status: promotion-pipeline complete (foundation/ → CV-1.19 canonical).
+
+---
+
+## cssl/ — Critical Skeleton Surgery Layer (W8-Day3 afternoon, 2026-05-20)
+
+Status: working — **critic-REJECTED, REVISE required** (canonical 진입 차단)
+
+Files:
+- `cssl/00_concept_handoff.md` (529L, CSSL 제안: surgery-admissible kernel decomposition Goldstone ⊕ E_surg at topology-change critical points)
+- `cssl/01_critic_evaluation.md` (799L, adversarial review verdict)
+
+Key findings: core insight (kernel decomposition at topology-change) 수학적으로 흥미로우나 4개 theorem 후보 모두 현재 형태에서 붕괴; ζ E_pers 가 CN4 analyticity 위반; canonical H-MORSE 문제 오해.
+
+Recovery path: (a) Cat C 수치 탐사 + (b) 수정된 Cat B target + (c) 명시적 open problems 등록.
+
+Surviving idea (transferred to field_equation_framework/06): L-SURFACE-TENSION-RESCALE — σ = (√2/6)√(αβ) invariance under (α,β)→(sα,sβ).
+
+Promotion status: **canonical 진입 차단** (REVISE 통과 전).
+
+---
+
+## field_equation_framework/ — NS-Inspired Field Equation Framework (W8-Day3 afternoon, 2026-05-20)
+
+Status: working — **W9+/CV-1.20 promotion candidates** (5 Cat A/B target lemmas; Wave 1 critic 4 CRITICAL fixes 이미 CV-1.19 SEAL 통합 완료)
+
+Wave 1 files (synthesis + initial lemmas, written before critic review):
+- `field_equation_framework/01_ns_inspired_synthesis.md` (790L) — Navier-Stokes 구조에서 12 무차원수 (Sc, Pr, Re, We, ...) + 5 대수 항등식 네트워크 (SCC = field theory on graphs, NOT fluid simulation)
+- `field_equation_framework/02_kramers_prefactor_op_0005_attack.md` (561L) — Eyring-Kramers prefactor in Hänggi-Talkner-Borkovec 1990 over-damped form (L-KRAMERS-PR-SCC, Cat B target, OP-0005 Package II)
+- `field_equation_framework/03_modica_mortola_jacobi_cat_b.md` (680L) — Modica-Mortola Γ-convergence + Jacobi-on-boundary (continuum limit via SCC H-Morse; Cat B conditional)
+- `field_equation_framework/04_h_morse_spectral_quantification.md` (833L) — H-Morse spectral gap quantification: Sc^{(2)} = μ_bulk/μ_active (Schur complement) + Pr^{(bd)} = α W''(u*)/T_* (Poincaré anchor); 2 Cat B target lemmas
+- `field_equation_framework/05_cat_a_direct_catalog_proofs.md` (957L) — 10 무차원수 정의 + 5 algebraic identities + 1 Hessian rescaling identity, all Cat A direct (one-paragraph proofs with canonical anchors and numerical evaluation)
+- `field_equation_framework/06_surface_tension_rescaling_cat_a.md` (492L) — **L-SURFACE-TENSION-RESCALE**: σ = (√2/6)√(αβ) invariance under (α,β)→(sα,sβ) rescaling; Cat A direct; **strongest CV-1.20 promotion candidate** (CSSL 생존 유일 아이디어)
+
+Wave 1 critic (adversarial review of files 02-06):
+- `field_equation_framework/07_critic_full_review.md` (941L) — 4 CRITICAL + 17 MAJOR + 23 MINOR findings; σ formula reconciliation (file 03 correct vs file 05 erroneous), OP line citation drift (file 03 6 errors), det/det' ambiguity
+
+Wave 2 files (additional Cat A/B lemmas from independent toolkits):
+- `field_equation_framework/08_spectral_graph_cheeger.md` (744L) — Cheeger isoperimetric inequality → H-Morse spectral gap lower bound (L-CHEEGER-HMORSE, Cat B target, expander-graph regimes)
+- `field_equation_framework/09_large_deviations_freidlin_wentzell.md` (700L) — Freidlin-Wentzell large deviations principle for reflected Langevin (L-FW-KRAMERS-SCC, Cat A target; lim T_* log Γ_{A→B} = -2ΔE prefactor-free, **OP-HMORSE-SADDLE 우회**)
+- `field_equation_framework/10_forman_discrete_morse.md` (1015L) — Forman discrete Morse theory on SCC graph 1-skeleton (L-FORMAN-HMORSE-DISCRETE, Cat B target; critical cells ↔ interior bulks/boundary saddles/exterior pockets; **graph-native, continuum limit 우회**)
+- `field_equation_framework/11_bakry_emery_cd_condition.md` (874L) — Bakry-Émery CD(κ,∞) curvature-dimension condition for reflected Langevin; Poincaré + Wasserstein contractivity + relative entropy decay (Cat A conditional on convex region; complements file 04 Schur)
+
+Wave 1→W9+ promotion gate:
+- `field_equation_framework/12_wave1_critical_fixes_consolidated.md` (854L) — Wave 1 critic 4 CRITICAL + 8 priority MAJOR fixes consolidated specification; **W8-Day3 evening CV-1.19 SEAL 에 4 CRITICAL 모두 적용됨** (σ formula, file 03 L1967, file 06 §8.1, file 02/05 Identity 2)
+
+Connection to canonical Open Problems:
+- OP-0005 (Kramers prefactor, Package II): files 02 + 09 provide Cat B/A pathways
+- OP-HMORSE (H-Morse classification): files 04 + 08 + 10 + 11 provide multiple toolkits (Schur + Cheeger + Forman + Bakry-Émery)
+
+Promotion candidates for W9+/CV-1.20 SEAL:
+1. **L-SURFACE-TENSION-RESCALE** (Cat A direct, ready) — file 06
+2. **L-KRAMERS-PR-SCC** (Cat B, OP-0005 Package II) — file 02
+3. **L-FW-KRAMERS-SCC** (Cat A, prefactor-free) — file 09
+4. **L-CHEEGER-HMORSE** (Cat B, expander regime) — file 08
+5. **L-FORMAN-HMORSE-DISCRETE** (Cat B, graph-native) — file 10
 
 ---
 

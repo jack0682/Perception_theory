@@ -1795,7 +1795,27 @@ Step 6. Triangle inequality squaring gives (L-CL-LIFT.2). Conditioning bound $d_
 
 ---
 
-### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**; **CV-1.16 adds L-HMORSE-LOCAL + L-HMORSE-DECOMP**; **CV-1.17 adds T-CC-StableK-Kernel** — total **19 Cat B entries post-CV-1.17**)
+**L-S3-KERNEL-MULT. Full SCC Kernel-Multiplicity Identity on Standard Regimes.** *(New, 2026-05-20 W8-Day3 closing → W8-Day4 execution, CV-1.19 SEAL.)*
+
+Let $G = (V, E)$ be a finite connected graph with $|V| = n$, mass $M = c\cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At uniform critical $u^* = c\mathbf{1}$ on the T8 critical surface $\Sigma_{T8}$ (SB7, Cat A), the dimension of the kernel of the constrained Hessian of the full SCC energy $\mathcal{E} = \lambda_{cl}\mathcal{E}_{cl} + \lambda_{sep}\mathcal{E}_{sep} + \lambda_{bd}\mathcal{E}_{bd} + \lambda_{tr}\mathcal{E}_{tr}$ on $T_{c\mathbf{1}}\Sigma_m = \mathbf{1}^\perp$ equals the multiplicity of the Fiedler eigenvalue:
+$$\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big|_{T\Sigma_m}\Big) = \mathrm{mult}\!\Big(\lambda_2(L_G)\Big) =: k_0(G).$$
+
+*Standard regimes — 3 cases (Cat A unconditional except Case C with stated H-INV):*
+- **(Case A) Regular graphs**: $P_t = D_G^{-1}A_G = I - L_G/d$ is polynomial in $L_G$, so $[J_D, L_G] = 0$ globally; all Hessian blocks ($H_{cl}, H_{sep}, H_{bd}$) preserve Fiedler eigenspace.
+- **(Case B) Any graph at uniform critical $u^* = c\mathbf{1}$**: $G_{u^*} = \mathrm{Aut}(G)$ (constant fields fixed by all permutations). By T-σ-Lemma-1 (Cat A) Hessian commutes with $G_u$-action; isotypic block decomposition + Schur's Lemma → $J_D V_{\lambda_2} \subseteq V_{\lambda_2}$. Kernel preserved.
+- **(Case C) Generic (Aut(G) trivial + non-regular)**: requires explicit invariant-subspace hypothesis H-INV: $J_D \cdot V_{\lambda_2}(L_G) \subseteq V_{\lambda_2}(L_G)$ modulo $\mathbf{1}$-projection. Under H-INV, kernel-multiplicity identity holds *Cat A direct with stated hypothesis* (L-INV-1/L-INV-2/L-INV-3 derivation in W8-Day3 03 §6 NEW shows H-INV is necessary and sufficient).
+
+*Status:* **Cat A on standard SCC regimes** (Case A ∪ Case B covers all canonical SCC examples — regular graphs OR uniform critical with full Aut(G) symmetry; Case C is rare and requires H-INV explicit). The math-olympiad random-D finding (random matrix D destroying kernel) is reconciled: random D ≠ canonical §9.3 distinction operator (which is Aut(G)-equivariant by construction via $P_t = D_G^{-1}A_G$).
+
+*Anchors:* Theorem 4 (§13 Cat A); SB7 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); T-V5b-T-zero (§13 Cat A); §9.3 Distinction Candidate; `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working anchor for Case A); `THEORY/logs/daily/2026-05-20/03_D_L_commutation.md` (full derivation + Case C §6 NEW L-INV-1/2/3).
+
+*Non-overclaim:* Covers *uniform critical $u^* = c\mathbf{1}$* only. *Non-uniform critical* (formation regime with explicit boundary $\Gamma$) requires separate analysis (Modica-Mortola Jacobi or discrete Forman — see W8-Day3 evening Wave 3 working files in `field_equation_framework/`). Case C "H-INV" hypothesis is stated *explicitly*, not silently assumed. Seal: `CV-1.19_SEAL.md`.
+
+*CV-1.19 Cat A count: +1 entry (L-S3-KERNEL-MULT). Running total post-CV-1.19: 69A / 19B / 6C / 5R = 99 claims (intermediate; +1B in L-LOJASIEWICZ-CG below completes the seal to 100).*
+
+---
+
+### Category B: Proved with Explicit Structural Parameter (5 theorems + T-P-F-ε0-K CV-1.7 + T-K-Select-PF Session R 2026-05-06 + T-K-Select-OBS Session Y 2026-05-06 CV-1.11 + T-Temporal-Identity W7-FINAL 2026-05-10 CV-1.12; T-OP6-B promoted to Cat A Session K 2026-05-06; T-PF-A1-GI + T-PF-A1-PE promoted to Cat A Session P 2026-05-06; **T-Temporal-Identity promoted to Cat A W7-CV1.13 2026-05-10 (CV-1.13)**; **CV-1.15 adds T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL**; **CV-1.16 adds L-HMORSE-LOCAL + L-HMORSE-DECOMP**; **CV-1.17 adds T-CC-StableK-Kernel**; **CV-1.19 adds L-LOJASIEWICZ-CG** — total **20 Cat B entries post-CV-1.19**)
 
 *(Erratum 2026-04-07: T-Bind-Proj/Full moved to Category A above. T-Persist-K-Sep moved to Category C — regime conditions are non-removable structural hypotheses, making it conditional. T-Beyond-Weyl, T-d_min-Formula, barrier exponent γ_eff, and general-graph birth moved here from former Category A.)*
 
@@ -2040,6 +2060,29 @@ $$\pi_{tr}^{\mathrm{comp}} = \pi_{sr} \circ \pi_{ts} : [K] \to [K].$$
 *References.* T-Temporal-Identity (§13 Cat A, CV-1.13, parts a/b/c/d); Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`); Lemma 2 & Lemma 3-sharp (canonical Persistence framework, §13 supporting); T-CC-StableK-Sinkhorn (NOT proved, OP-0012-SINK, OPEN); T-SINKHORN-PLAN-SEMIGROUP-FAILS (§12 Warning, CV-1.15); T-ACT-KERNEL-COMP→REL (§13 Cat B CV-1.15 above; conditional lift activated here).
 
 *CV-1.17 Cat B count: +1 entry (T-CC-StableK-Kernel). Running total post-CV-1.17: 68A / 19B / 6C / 5R = 98 claims, ~70% fully proved.*
+
+---
+
+**L-LOJASIEWICZ-CG. Łojasiewicz Distance Bound on Non-Degenerate Fiedler Stratum.** *(New, 2026-05-20 W8-Day3 closing → W8-Day4 execution, CV-1.19 SEAL.)*
+
+For SCC at uniform critical point $u = c\mathbf{1}$, with parameter $\Theta = (\alpha, \beta, c)$:
+$$\mu_2(\Theta) \geq c_G(K) \cdot d, \quad d := \mathrm{dist}(\Theta, \Sigma_{T8})$$
+where the Łojasiewicz constant on compact parameter set $K$ is:
+$$c_G(K) = \inf_{\Theta^* \in K \cap \Sigma_{T8}} \sqrt{16 \lambda_2(L_G)^2 + W''(c)^2 + 144\,\beta^2\,(2c-1)^2}.$$
+
+*Reference numerical value:* $c_G(\text{2D torus } 16\times 16, c=1/2, \beta=1) = 1.171$ (3-source verified: manual symbolic + Python scc.GraphState READ-ONLY + multi-graph cross-check P_5/K_4/K_8; W8-Day3 02_cg_numerical_verification.md).
+
+*Validity radius (Lipschitz remainder bound):* $d \leq d_{\max}(K) \approx 0.044$ where $d_{\max}(K) = c_G(K) / |H_\mu|_{op}$ with $|H_\mu|_{op} \leq \sqrt{720}$ for $\beta = 1$.
+
+*Status:* **Cat B verified for non-degenerate Fiedler stratum** (mult($\lambda_2$) = 1). Cat A path requires (W9+): (a) Kato perturbation for degenerate Fiedler case (mult > 1, applicable to torus + $K_n$; possibly *quadratic* scaling rather than linear by Weyl perturbation); (b) Uniformity proof on compact $K$.
+
+*Phase 5 forensics:* Phase 5 agent (W8-Day2 evening Manifold Topology Methodology Program) originally reported $c_G \approx 2.09$ — *incorrect under canonical CV-1.18 convention*. Forensics traced the error to $W''(1/2) = -2$ (factor-2 normalization error, missing CLAUDE.md I6 correction $W'(u) = 2u(1-u)(1-2u)$). Under canonical $W(u) = u^2(1-u)^2$ + I6 correction, $W''(1/2) = -1$, giving $c_G = \sqrt{16 \cdot 0.1522^2 + 1 + 0} = \sqrt{1.371} \approx 1.171$. Math-olympiad agent's original value 1.17 was correct and is adopted as canonical.
+
+*Anchors:* Theorem 4 (§13 Cat A, $\mu_2 = 4\alpha\lambda_2 + \beta W''(c)$); SB7 (§13 Cat A, $\Sigma_{T8}$ codim-1 algebraic); CLAUDE.md "Critical Implementation Details" I6 correction ($W(u) = u^2(1-u)^2$); 2D torus Laplacian spectrum (standard Fourier diagonalization); `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (full verification).
+
+*Non-overclaim:* Covers *non-degenerate Fiedler stratum* only. Degenerate cases (mult $\lambda_2 > 1$) require Kato perturbation — W9+ open. Cat B status reflects 2 remaining gaps (degenerate Fiedler + compact-K uniformity), NOT numerical uncertainty (numerical value 1.171 is *verified* via 3 independent methods). The Phase 5 value 2.09 is *retracted* in W8-Day3 02; this SEAL adopts the math-olympiad value 1.171 as canonical reference for the 2D torus 16×16 worked example. Seal: `CV-1.19_SEAL.md`.
+
+*CV-1.19 Cat B count: +1 entry (L-LOJASIEWICZ-CG). Running total post-CV-1.19: **69A / 20B / 6C / 5R = 100 claims, ~69% fully proved.** HT-3.9 → HT-3.10.*
 
 ---
 

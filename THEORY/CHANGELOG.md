@@ -4,6 +4,56 @@
 
 ---
 
+## [CV-1.19 SEAL] 2026-05-20 (W8-Day3 closing → W8-Day4 execution) — S1 Łojasiewicz $c_G$ Cat B + S3 Full SCC Kernel-Mult Identity Cat A on Standard Regimes
+
+**Trigger:** W8-Day3 Decision A direct closing per `THEORY/logs/daily/2026-05-20/99_summary.md` — S1 (c_G verified = 1.171) Cat B + S3 (full SCC) Cat A on standard regimes (case A regular + case B uniform critical via T-σ-Lemma-1 + case C with H-INV explicit per W8-Day3 03 §6 L-INV-1/2/3 derivation). Predecessor work: W8-Day3 02_cg_numerical_verification.md (308L) + 03_D_L_commutation.md (400L) + 99_summary.md (281L).
+
+### Two Canonical Lemma Additions
+
+**1. L-S3-KERNEL-MULT (Cat A on standard regimes)** — kernel-multiplicity identity dim ker(Hess(E)(c·1)|_{T Σ_m}) = mult(λ_2(L_G)) for full SCC on standard graph regimes. 3-case coverage: (A) regular graphs via P_t = I - L_G/d polynomial in L_G (mode_count.md §2.3a Cat A anchor); (B) any graph at uniform critical via canonical T-σ-Lemma-1 (Cat A) + Schur Lemma applied to isotypic decomposition; (C) generic non-regular + trivial Aut with explicit H-INV hypothesis (L-INV-1/L-INV-2/L-INV-3 derivation in W8-Day3 03 §6 NEW, user-expanded scope). Math-olympiad random-D finding reconciled (random D ≠ canonical §9.3 distinction operator).
+
+**2. L-LOJASIEWICZ-CG (Cat B verified for non-degenerate Fiedler stratum)** — Łojasiewicz distance bound $\mu_2(\Theta) \geq c_G(K) \cdot d$ with $c_G(K) = \inf \sqrt{16\lambda_2^2 + W''(c)^2 + 144\beta^2(2c-1)^2}$. Verified numerical value $c_G(\text{2D torus 16×16}, c=1/2, \beta=1) = 1.171$ via 3-source consistency (manual + Python scc.GraphState READ-ONLY + multi-graph cross-check P_5/K_4/K_8). Phase 5's original 2.09 traced to factor-2 W'' normalization error (CLAUDE.md I6 correction missing in Phase 5 derivation). Cat B status (not Cat A): degenerate Fiedler case (Kato perturbation) + compact-K uniformity remain OPEN for W9+.
+
+### Claim Count Update
+
+**Before:** 68A / 19B / 6C / 5R = 98 claims (CV-1.18 baseline).
+**After:** **69A / 20B / 6C / 5R = 100 claims** (~69% fully proved).
+**Net:** +1A (L-S3-KERNEL-MULT) + 1B (L-LOJASIEWICZ-CG) = +2 claims.
+
+### 5 Canonical Files Modified
+
+1. **canonical.md** §13 Category A + Category B row insertions (+1A + 1B with anchors to W8-Day3 working files)
+2. **theorem_status.md** — count update (98 → 100) + CV-1.19 amendment note in metadata header
+3. **hypothesis_tree.md** — HT-3.9 → HT-3.10 (H-MORSE row strengthened uniform-critical part; H-LOJASIEWICZ row NEW Cat B)
+4. **CV-1.19_SEAL.md** — neu (this seal document, ~250 lines)
+5. **CHANGELOG.md** — this entry
+
+### Working Layer Pre-SEAL Fixes Applied (Wave 2 Critic 4 CRITICAL)
+
+In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave 2 adversarial critic (`THEORY/working/field_equation_framework/07_critic_full_review.md`) were applied to working layer files 02-06 prior to SEAL:
+
+- **Fix #1 (σ formula consensus)**: $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ — corrected files 05, 06 (previously had incorrect $\sqrt{\alpha\beta}/3$ form, off by factor √2).
+- **Fix #2 (file 03 L1967 × 9)**: OP-HMORSE-SADDLE citations updated to `theorem_status.md L594` (registration) with cross-ref `canonical.md L1967` (caveat); 10 instances corrected.
+- **Fix #3 (file 06 §8.1 prefactor invariance retraction)**: corrected to $\omega_0(s) = s \cdot \omega_0(1)$ linear scaling; $\text{Pr}^{(\text{Kramers})}$ ratio IS invariant, prefactor itself is NOT.
+- **Fix #4 (files 02/05 Identity 2 algebraic split)**: split into Identity 2a ($\omega_0 \sim |\mu_{\text{saddle}}|$) and Identity 2b ($\sqrt{\mu_{\text{well}}|\mu_{\text{saddle}}|}$); these are *different* quantities and must not be equated.
+
+### v1 Working File Updated
+
+`THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 ($c_G = 2.09$ → $1.171$ with Phase 5 forensics CoT) + §1.3 (S3 Cat status: conditional → Cat A on standard regimes with case A/B/C breakdown).
+
+### Pytest Status
+
+225 passed + 1 xfailed (entry baseline, unchanged — no scc/ edits in this SEAL).
+
+### Cross-References
+
+- Working files anchored: `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 + §1.3 (updated for CV-1.19) + `THEORY/working/SF/mode_count.md` §2.3a (Cat A anchor for Case A regular graphs).
+- Daily logs: `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (S1) + `03_D_L_commutation.md` (S3) + `99_summary.md` (Decision A).
+- Field equation framework: `THEORY/working/field_equation_framework/12_wave1_critical_fixes_consolidated.md` (Wave 2 critic fix specs source).
+- Seal: `THEORY/canonical/CV-1.19_SEAL.md`.
+
+---
+
 ## [CV-1.18 SEAL] 2026-05-19 (W8-Day2 evening) — Stage 0 Sensor T Axiom Package + T_* ξ Resident Formal Entry + OP-0021 Routes A/B Deprecation
 
 **Trigger:** 사용자 instruction "즉시 (~1 session): CV-1.18 SEAL execution (P5+P6 combined: OMS-1 §A + Appendix §N + OP-0021 amendment)" (2026-05-19 late evening). Predecessor work: 6 detailed proof attempts v0.2 (P1-P6 ~4973L) + V1+V2 verification (6/6 PASS, 41/41 anchors verified) + _SUMMARY_v0.2.md consolidation.

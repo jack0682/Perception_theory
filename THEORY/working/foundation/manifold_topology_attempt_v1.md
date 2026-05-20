@@ -30,13 +30,15 @@ $$\mu_2(\Theta) \geq c_G(K) \cdot d, \quad d := \mathrm{dist}(\Theta, \Sigma_{T8
 where:
 $$c_G(K) = \inf_{\Theta^* \in K \cap \Sigma_{T8}} \sqrt{16 \lambda_2(L_G)^2 + W''(c)^2 + 144\,\beta^2\,(2c-1)^2}$$
 
-**Validity radius**: $d \leq d_{\max}(K) \approx 0.08$ (Lipschitz remainder).
+**Validity radius**: $d \leq d_{\max}(K) \approx 0.044$ (Lipschitz remainder; CORRECTED 2026-05-20 W8-Day3 — previous estimate $\approx 0.08$ was based on Phase 5's incorrect $c_G \approx 2.09$; see below).
 
-**Worked example (2D torus $L=16$, $c = 1/2$)**: $c_G \approx 2.09$.
+**Worked example (2D torus $L=16$, $c = 1/2$, $\beta=1$)**: $\boxed{c_G \approx 1.171}$ (CORRECTED 2026-05-20 W8-Day3 per `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md`).
 
-**Source**: Phase 5 IFT + explicit gradient. Polynomial nature of $\mu_2$ in $(\alpha, \beta, c)$ gives Łojasiewicz exponent $\theta = 1$ for non-degenerate Fiedler case.
+**CoT note on Phase 5 forensics (W8-Day3 02 §3)**: Phase 5 agent originally reported $c_G \approx 2.09$. This value is **incorrect** under canonical CV-1.18 convention. Forensics traced the error to Phase 5 using $W''(1/2) = -2$ (factor-2 normalization error, missing CLAUDE.md I6 correction). Under canonical convention $W(u) = u^2(1-u)^2$, $W''(u) = 2(1-6u+6u^2)$, $W''(1/2) = -1$, giving $c_G = \sqrt{16 \cdot 0.152^2 + (-1)^2 + 0} = \sqrt{1.371} \approx 1.171$. Manual + Python (scc.graph.GraphState READ-ONLY) + multi-graph cross-check (P_5, K_4, K_8) all confirm 1.171. Math-olympiad agent's original value 1.17 was correct.
 
-**Status**: Cat B target. Needs:
+**Source**: Phase 5 IFT + explicit gradient (formula structure correct; numerical evaluation corrected W8-Day3). Polynomial nature of $\mu_2$ in $(\alpha, \beta, c)$ gives Łojasiewicz exponent $\theta = 1$ for non-degenerate Fiedler case.
+
+**Status**: Cat B verified for non-degenerate Fiedler stratum (W8-Day3 Priority 1 PASS). Remaining gaps for Cat A (W9+):
 - Verification on degenerate Fiedler case (mult > 1) via Kato perturbation
 - Uniformity proof on compact $K$
 
@@ -48,12 +50,19 @@ Direct from S1 + Bakry-Émery $CD(\rho, \infty) \Rightarrow$ Poincaré (BGL §4.
 
 **Status**: Cat B target conditional on S1. **Sharpens** canonical T-PF-A1-PE bound in bulk regime.
 
-### §1.3 Claim S3 — Kernel dim per fixed graph (Cat A)
+### §1.3 Claim S3 — Kernel dim per fixed graph (Cat A on standard regimes; CORRECTED 2026-05-20)
 
 For fixed connected graph $G$, every $\Theta \in \Sigma_{T8}$ has:
 $$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})|_{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
 
-**Status**: Cat A direct from canonical Theorem 4 (μ_k = 4αλ_k + βW''(c)) + algebraic counting.
+**Status (CORRECTED 2026-05-20 W8-Day3 per `03_D_L_commutation.md` §7)**: 
+- **Minimal model** ($\mathcal{E}_{bd}$ only): **Cat A direct** from canonical Theorem 4 (canonical.md L1134, $\mu_k = 4\alpha\lambda_k + \beta W''(c)$) + algebraic counting. Unchanged.
+- **Full SCC** ($\mathcal{E}_{cl} + \mathcal{E}_{sep} + \mathcal{E}_{bd}$): **Cat A on standard SCC regimes** (previously stated as *Cat A conditional on $[D, L_G] = 0$* based on math-olympiad finding of random-D kernel destruction; this conditional has been *largely resolved*):
+  - **Case A (regular graphs)**: $P_t = I - L_G/d$ is polynomial in $L_G$ → $[J_D, L_G] = 0$ globally → S3 Cat A unconditional. Source: `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working) + W8-Day3 03 §4.1 verification.
+  - **Case B (any graph at uniform critical $u^* = c\mathbf{1}$)**: $G_{u^*} = \mathrm{Aut}(G)$ (uniform fixed by all permutations) → canonical T-σ-Lemma-1 (Cat A, canonical.md L1386) Hessian-Aut(G) commutation → isotypic block decomposition → Fiedler eigenspace preserved by $J_D$ → S3 Cat A unconditional. Source: W8-Day3 03 §4.2.
+  - **Case C (generic non-regular + trivial Aut)**: Cat A *with explicit invariant-subspace hypothesis* H-INV: $J_D \cdot V_{\lambda_2}(L_G) \subseteq V_{\lambda_2}(L_G)$ — derived in W8-Day3 03 §6 via L-INV-1 / L-INV-2 / L-INV-3 (user-expanded scope). NOT *conditional Cat A* but *Cat A direct with stated hypothesis*.
+  - Math-olympiad random-D finding is reconciled: random matrix D ≠ canonical §9.3 distinction operator (which is Aut(G)-equivariant by construction via $P_t = D_G^{-1} A_G$).
+- **Net classification**: S3 full SCC = **Cat A on all standard SCC graph regimes** (cases A ∪ B ∪ C cover every canonical example).
 
 ### §1.4 Claim S4 — Σ_T8 codim-1 (Cat A canonical)
 
