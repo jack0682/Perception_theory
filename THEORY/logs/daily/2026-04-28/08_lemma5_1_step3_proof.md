@@ -69,17 +69,17 @@ $$V \cong \mathrm{Ind}_{\Delta G}^{G \wr S_2}(V_{\mathrm{base}}).$$
 
 Here $\Delta G = \{(g, g; e) : g \in G\}$ is the "diagonal" subgroup, and the induction adds the swap $\tau$.
 
-**Index**: $|G \wr S_2| / |\Delta G| = (\lvert G \rvert^2 \cdot 2) / \lvert G \rvert = 2 \lvert G \rvert$. Since $\dim V = 2 \dim V_{\mathrm{base}}$, the dimension count matches: $\dim \mathrm{Ind}(V_{\mathrm{base}}) = (2|G|/\lvert G \rvert) \dim V_{\mathrm{base}} = 2 \dim V_{\mathrm{base}}$. ✓
+**Index**: $\vert G \wr S_2\vert / \vert \Delta G\vert = (\lvert G \rvert^2 \cdot 2) / \lvert G \rvert = 2 \lvert G \rvert$. Since $\dim V = 2 \dim V_{\mathrm{base}}$, the dimension count matches: $\dim \mathrm{Ind}(V_{\mathrm{base}}) = (2\vert G\vert /\lvert G \rvert) \dim V_{\mathrm{base}} = 2 \dim V_{\mathrm{base}}$. ✓
 
 ### 2.4 Decomposition via Frobenius reciprocity + Mackey
 
 **Frobenius reciprocity**: $\mathrm{Ind}_{\Delta G}^{G \wr S_2}(V_{\mathrm{base}}) \cong \bigoplus_{[\rho] \in \mathrm{Irr}(G \wr S_2)} m_{[\rho]} [\rho]$,
 where multiplicities $m_{[\rho]}$ are computed via:
-$$m_{[\rho]} = \dim \mathrm{Hom}_{\Delta G}(V_{\mathrm{base}}, [\rho]|_{\Delta G}).$$
+$$m_{[\rho]} = \dim \mathrm{Hom}_{\Delta G}(V_{\mathrm{base}}, [\rho]\vert _{\Delta G}).$$
 
 **Restricting** $[\rho]$ from $G \wr S_2$ to $\Delta G$: each $G \wr S_2$ irrep restricts (via Mackey + Clifford) to a sum of $G$-irreps.
 
-**Specific computation** for $G = D_4$, $|G \wr S_2| = 128$:
+**Specific computation** for $G = D_4$, $\vert G \wr S_2\vert = 128$:
 
 $\mathrm{Irr}(D_4 \wr S_2)$ via James-Kerber 1981 §4.2 has the following structure:
 - For each pair $\{[\rho_1], [\rho_2]\}$ of irreps of $G$ with $[\rho_1] \neq [\rho_2]$: one irrep of $G \wr S_2$ of dimension $2 \dim[\rho_1] \dim[\rho_2]$.
@@ -90,9 +90,9 @@ $\mathrm{Irr}(D_4 \wr S_2)$ via James-Kerber 1981 §4.2 has the following struct
 
   For $D_4$: 5 irreps × 2 $S_2$-characters = 10 wreath irreps. Dimensions: $1^2, 1^2, 1^2, 1^2, 2^2$ for each of $A_1, A_2, B_1, B_2, E$ at $\chi=+1$, and same at $\chi=-1$ → total dim contribution $4 \cdot 1 + 1 \cdot 4 = 8$ each $\chi$, total $16$.
 
-- **Total**: 10 + 10 = **20 irreps of $D_4 \wr S_2$**, total dimension squared sum = $28^2/28 + 16^2/16$ ... wait let me just verify by Burnside: $|G \wr S_2| = \sum (\dim \rho)^2 = 128$. We have $6 \cdot 2^2 + 4 \cdot 4^2 + 10 \cdot (1^2 + 4^2 \cdot \text{counted}...)$. Hmm let me redo:
+- **Total**: 10 + 10 = **20 irreps of $D_4 \wr S_2$**, total dimension squared sum = $28^2/28 + 16^2/16$ ... wait let me just verify by Burnside: $\vert G \wr S_2\vert = \sum (\dim \rho)^2 = 128$. We have $6 \cdot 2^2 + 4 \cdot 4^2 + 10 \cdot (1^2 + 4^2 \cdot \text{counted}...)$. Hmm let me redo:
 
-  Actually for the "diagonal" type (single $[\rho]$ with $\chi$): 5 irreps × 2 = 10, dimensions $\dim[\rho]^2$. Sum of squares: $\sum_{[\rho], \chi} (\dim[\rho]^2)^2 \cdot ?$ Hmm, actual Burnside check: $\sum (\dim \rho_{\text{wreath}})^2 = |G \wr S_2| = 128$.
+  Actually for the "diagonal" type (single $[\rho]$ with $\chi$): 5 irreps × 2 = 10, dimensions $\dim[\rho]^2$. Sum of squares: $\sum_{[\rho], \chi} (\dim[\rho]^2)^2 \cdot ?$ Hmm, actual Burnside check: $\sum (\dim \rho_{\text{wreath}})^2 = \vert G \wr S_2\vert = 128$.
 
   Let me trust James-Kerber and just confirm 20 irreps total for $D_4 \wr S_2$. This was wrongly stated as "10 irreps" in `05_*` §3.6 — **that was my Phase 2 error**. Actually 10 was the count of "Sym/Antisym × Irr($D_4$)" diagonal irreps; the **off-diagonal mixed-pair irreps add another 10**, totaling **20**.
 
@@ -102,7 +102,7 @@ $\mathrm{Irr}(D_4 \wr S_2)$ via James-Kerber 1981 §4.2 has the following struct
 
 Now apply Frobenius reciprocity:
 
-$m_{[\rho]} = \dim \mathrm{Hom}_{\Delta G}(V_{\mathrm{base}}, [\rho]|_{\Delta G})$.
+$m_{[\rho]} = \dim \mathrm{Hom}_{\Delta G}(V_{\mathrm{base}}, [\rho]\vert _{\Delta G})$.
 
 The diagonal $\Delta G \cong G$ acts on $V_{\mathrm{base}}$ as the standard $G$-rep. So $V_{\mathrm{base}}$ decomposes per Maschke into $G$-irreps:
 $$V_{\mathrm{base}} = \bigoplus_{[\sigma] \in \mathrm{Irr}(G)} m_{[\sigma]}^{\mathrm{base}} [\sigma].$$
@@ -167,7 +167,7 @@ But each $[\sigma] \otimes \chi_+$ here is an irrep of $G \wr S_2$ of dimension 
 
 These are DIFFERENT irreps from the wreath-product "diagonal-type" irreps acting on $V_{\mathrm{base}}^{\otimes 2}$. Phase 3 correction: σ_jk irrep labels are a different family — specifically the $G \times \chi_\pm$ type acting on the permutation module.
 
-Let me call them "permutation-module irreps" $[\sigma] \otimes_{\mathrm{perm}} \chi_\pm$, with dimension $\dim[\sigma]$. Total count: $2 \times |\mathrm{Irr}(G)| = 10$ for $G = D_4$.
+Let me call them "permutation-module irreps" $[\sigma] \otimes_{\mathrm{perm}} \chi_\pm$, with dimension $\dim[\sigma]$. Total count: $2 \times \vert \mathrm{Irr}(G)\vert = 10$ for $G = D_4$.
 
 So the **correct count** for σ_jk irrep labels is **10** (matching `05_*` §3.6, which was actually right after all — I confused myself in §2.4 above by conflating two different irrep families).
 
@@ -184,7 +184,7 @@ where $([\sigma], \pm)$ denote the two permutation-module irreps of $G \wr S_2$ 
 
 By Maschke + Schur (analogous to canonical T-σ-Lemma-1 but applied to the **wreath-product** action on the permutation module), each eigenvector of $H_{\mathrm{joint}}$ falls into a unique $([\sigma], \pm)$ irrep sector. The $H_{\mathrm{joint}}$ commutes with $G \wr S_2$ (because $H_{\mathrm{joint}}$ is the Hessian of $G \wr S_2$-invariant joint energy $\mathcal{E}_K$), so eigenspaces are $G \wr S_2$-stable, and hence decompose into irreps.
 
-**Conclusion**: σ_jk irrep label $[\rho_p]$ is well-defined as $([\sigma_p], \pm) \in \mathrm{Irr}(G \wr S_2)|_{\mathrm{permutation module}}$ — finite set of 10 labels for $G = D_4$. **QED**.
+**Conclusion**: σ_jk irrep label $[\rho_p]$ is well-defined as $([\sigma_p], \pm) \in \mathrm{Irr}(G \wr S_2)\vert _{\mathrm{permutation module}}$ — finite set of 10 labels for $G = D_4$. **QED**.
 
 ---
 
@@ -194,7 +194,7 @@ By Maschke + Schur (analogous to canonical T-σ-Lemma-1 but applied to the **wre
 
 `05_*` §3.6 stated: "σ_jk uses 10 irreps as Sym/Antisym × Irr($D_4$)".
 
-This was right by accident — I conflated it with the wreath-product diagonal-type irreps in `05_*` §3.2, which are 10 irreps of $G \wr S_2$ but acting on $V_{\mathrm{base}}^{\otimes 2}$ (tensor module). The correct reasoning: σ_jk uses **permutation-module irreps** of $G \wr S_2$, which happen to also be 10 in number for $G = D_4$ (= $2 \cdot |\mathrm{Irr}(G)|$).
+This was right by accident — I conflated it with the wreath-product diagonal-type irreps in `05_*` §3.2, which are 10 irreps of $G \wr S_2$ but acting on $V_{\mathrm{base}}^{\otimes 2}$ (tensor module). The correct reasoning: σ_jk uses **permutation-module irreps** of $G \wr S_2$, which happen to also be 10 in number for $G = D_4$ (= $2 \cdot \vert \mathrm{Irr}(G)\vert $).
 
 §3.2 claim "20 wreath irreps" was about full Irr($G \wr S_2$), but ONLY 10 appear in σ_jk (those compatible with the permutation-module structure of $V$). The other 10 are "off-diagonal mixed-pair" irreps that act on the tensor product but not on the direct sum.
 
@@ -214,9 +214,9 @@ The Phase 3 E9 numerical at d=8 with λ_rep=0.1 will test the σ_jk structure. E
 - Goldstone irrep $E$ (which contains translation modes) will give the most-relevant pair.
 
 The Phase 2 ±λ_rep prediction needs revision: per `05_*` §4 corrected per §3.2 above, the joint Hessian structure on the permutation module gives:
-$$H_{\mathrm{joint}}|_{\mathrm{perm}([\sigma], \pm)} = H_{11}|_{[\sigma]} \pm \lambda_{\mathrm{rep}} \cdot (\rho^* \rho^{-1})|_{[\sigma]}.$$
+$$H_{\mathrm{joint}}\vert _{\mathrm{perm}([\sigma], \pm)} = H_{11}\vert _{[\sigma]} \pm \lambda_{\mathrm{rep}} \cdot (\rho^* \rho^{-1})\vert _{[\sigma]}.$$
 
-For $\rho^2 = e$, $\rho^* \rho^{-1}|_{[\sigma]}$ is $\pm 1$ depending on the irrep parity. So the splitting becomes $\pm \chi_{[\sigma]}(\rho) \cdot \lambda_{\mathrm{rep}}$ where $\chi$ is the character.
+For $\rho^2 = e$, $\rho^* \rho^{-1}\vert _{[\sigma]}$ is $\pm 1$ depending on the irrep parity. So the splitting becomes $\pm \chi_{[\sigma]}(\rho) \cdot \lambda_{\mathrm{rep}}$ where $\chi$ is the character.
 
 This is the corrected closed form for σ_jk eigenvalue splits.
 

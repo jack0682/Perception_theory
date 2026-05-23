@@ -95,14 +95,14 @@ $$\nabla_\lambda \Phi(\lambda) = e_a(\lambda) - e_b(\lambda) \in \mathbb{R}^4.$$
 
 Restricting to the simplex tangent space $T_\lambda \Delta^3 = \{\delta \lambda : \mathbf{1}^\top \delta \lambda = 0\}$ and using the orthonormal basis $V \in \mathbb{R}^{4 \times 3}$ from VP-6:
 
-$$\nabla_\lambda \Phi\bigr|_{T_\lambda \Delta^3}(\lambda) = V^\top (e_a(\lambda) - e_b(\lambda)) \in \mathbb{R}^3.$$
+$$\nabla_\lambda \Phi\bigr\vert _{T_\lambda \Delta^3}(\lambda) = V^\top (e_a(\lambda) - e_b(\lambda)) \in \mathbb{R}^3.$$
 
 By hypothesis (ii) at $\lambda^*$, $e_a(\lambda^*) \ne e_b(\lambda^*)$ in $\mathbb{R}^4$.
 **Sub-claim:** $V^\top (e_a(\lambda^*) - e_b(\lambda^*)) \ne 0$ generically.
 
 *Proof of sub-claim.* $V^\top$ is the projection orthogonal to $\mathbf{1} \in \mathbb{R}^4$. Thus $V^\top (e_a - e_b) = 0$ iff $e_a - e_b = c \mathbf{1}$ for some $c$. This means each component differs by the same constant: $E_i(u_a) - E_i(u_b) = c$ for all $i$. This is a single algebraic equation on $(u_a, u_b)$ and is generically false. $\square$
 
-So $\nabla_\lambda \Phi\bigr|_{T_\lambda \Delta^3}(\lambda^*) \ne 0$, i.e.\ $\Phi$ has non-zero tangent gradient at $\lambda^*$. By the regular-value theorem (Lee, *Smooth Manifolds*, Cor 5.14), $\Sigma_{ab} \cap U$ is locally a $C^1$ submanifold of codimension 1 near $\lambda^*$.
+So $\nabla_\lambda \Phi\bigr\vert _{T_\lambda \Delta^3}(\lambda^*) \ne 0$, i.e.\ $\Phi$ has non-zero tangent gradient at $\lambda^*$. By the regular-value theorem (Lee, *Smooth Manifolds*, Cor 5.14), $\Sigma_{ab} \cap U$ is locally a $C^1$ submanifold of codimension 1 near $\lambda^*$.
 
 By continuity of the energy gradients, the regular-value condition $V^\top(e_a - e_b) \ne 0$ holds on an open neighborhood of $\lambda^*$. Combined with the analytic-genericity argument of `op_oms_001_gap_c1_genericity.md` (Theorem G4 + G5), the regular-value condition holds on an open dense subset of $\Sigma_{ab}$.
 

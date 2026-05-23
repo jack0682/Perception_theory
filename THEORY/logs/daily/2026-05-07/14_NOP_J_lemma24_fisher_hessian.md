@@ -14,11 +14,11 @@
 ### §1.1 Likelihood + Fisher metric
 
 The canonical observation likelihood (T-K-Select-OBS §2.4):
-$$p(\mathfrak{O} | u) = \prod_{v \in V_\mathrm{obs}} \mathrm{Bern}\!\big(\sigma(\Phi(u(v)))\big)^{\mathfrak{O}_v}\big(1 - \sigma(\Phi(u(v)))\big)^{1-\mathfrak{O}_v},$$
+$$p(\mathfrak{O} \vert u) = \prod_{v \in V_\mathrm{obs}} \mathrm{Bern}\!\big(\sigma(\Phi(u(v)))\big)^{\mathfrak{O}_v}\big(1 - \sigma(\Phi(u(v)))\big)^{1-\mathfrak{O}_v},$$
 where $\sigma$ is sigmoid, $\Phi$ is canonical perception map, $\mathfrak{O}_v \in \{0,1\}$ is per-vertex observation.
 
 **Fisher information matrix at $u$:**
-$$\mathcal{I}_{ij}(u) = \mathbb{E}_{\mathfrak{O} \sim p(\cdot | u)}\!\Big[\partial_{u_i}\log p \cdot \partial_{u_j}\log p\Big] = \sum_{v} \frac{(\Phi'(u(v)))^2 \cdot \delta_{iv}\delta_{jv}}{\sigma(\Phi(u(v)))(1 - \sigma(\Phi(u(v))))}.$$
+$$\mathcal{I}_{ij}(u) = \mathbb{E}_{\mathfrak{O} \sim p(\cdot \vert u)}\!\Big[\partial_{u_i}\log p \cdot \partial_{u_j}\log p\Big] = \sum_{v} \frac{(\Phi'(u(v)))^2 \cdot \delta_{iv}\delta_{jv}}{\sigma(\Phi(u(v)))(1 - \sigma(\Phi(u(v))))}.$$
 
 This is *diagonal* in the $u$-coordinate basis, with diagonal entries:
 $$\mathcal{I}_{vv}(u) = \frac{(\Phi'(u(v)))^2}{\sigma(\Phi(u(v)))(1 - \sigma(\Phi(u(v))))}.$$
@@ -53,10 +53,10 @@ Canonical T-Persist-1(b) (line 1794, Proposition BMD) identifies the *boundary m
 
 *The Fisher information matrix $\mathcal{I}(u^*)$ is conformal to the boundary-restricted SCC Hessian:*
 $$\boxed{\;\mathcal{I}(u^*)\big\vert_{\partial\mathrm{Core}} \;=\; \kappa_F(u^*)\,\cdot\,H[u^*]\big\vert_{\partial\mathrm{Core}}\;,}$$
-*where $\kappa_F(u^*) = (\Phi'(u^*))^2 / (\sigma(1-\sigma)) \cdot 1/(\beta + \alpha)$ is the conformal factor (depending on threshold + Hessian parameters), and the equality holds up to $O(|\partial\mathrm{Core}|^{-1})$ correction.*
+*where $\kappa_F(u^*) = (\Phi'(u^*))^2 / (\sigma(1-\sigma)) \cdot 1/(\beta + \alpha)$ is the conformal factor (depending on threshold + Hessian parameters), and the equality holds up to $O(\vert \partial\mathrm{Core}\vert ^{-1})$ correction.*
 
 *Furthermore:*
-$$T_*^{(\mathrm{Fisher})} = \mathrm{tr}\,\mathcal{I}(u^*)^{-1} = \kappa_F(u^*)^{-1}\,\mathrm{tr}\,(H|_{\partial\mathrm{Core}})^{-1},$$
+$$T_*^{(\mathrm{Fisher})} = \mathrm{tr}\,\mathcal{I}(u^*)^{-1} = \kappa_F(u^*)^{-1}\,\mathrm{tr}\,(H\vert _{\partial\mathrm{Core}})^{-1},$$
 *so $T_*^{(\mathrm{Fisher})}$ is conformally proportional to the average inverse boundary-mode Hessian eigenvalue.*
 
 ---
@@ -73,15 +73,15 @@ The matrix $\mathcal{I}(u^*)$ is *non-zero only on the boundary subspace*.
 ### §3.2 Hessian boundary structure
 
 By Proposition BMD (canonical T-Persist-1(b)): the SCC Hessian $H$ has slow-mode eigenvalues $\mu_1, \mu_2, \ldots$ concentrated on boundary nodes. Specifically:
-$$H|_{\partial\mathrm{Core}}(v, w) \approx 4\alpha\,d_\mathrm{max} - \beta + \mathrm{double\text{-}well}\ \mathrm{contributions}.$$
+$$H\vert _{\partial\mathrm{Core}}(v, w) \approx 4\alpha\,d_\mathrm{max} - \beta + \mathrm{double\text{-}well}\ \mathrm{contributions}.$$
 
 For $v, w$ both in $\partial\mathrm{Core}$ adjacent in graph: $H_{vw} \approx -\beta$ (off-diagonal). For $v = w$: $H_{vv} \approx 4\alpha d_v - \beta + 2(1 - 6u + 6u^2)$.
 
-The boundary-restricted Hessian $H|_{\partial\mathrm{Core}}$ is *banded* in graph topology + has dominant diagonal scaling $4\alpha d_v$.
+The boundary-restricted Hessian $H\vert _{\partial\mathrm{Core}}$ is *banded* in graph topology + has dominant diagonal scaling $4\alpha d_v$.
 
 ### §3.3 Conformality via diagonal proportionality
 
-Both $\mathcal{I}|_{\partial\mathrm{Core}}$ and $H|_{\partial\mathrm{Core}}$ are dominated by their diagonals (with off-diagonal corrections of $O(\beta)$). The diagonal entries:
+Both $\mathcal{I}\vert _{\partial\mathrm{Core}}$ and $H\vert _{\partial\mathrm{Core}}$ are dominated by their diagonals (with off-diagonal corrections of $O(\beta)$). The diagonal entries:
 $$\mathcal{I}_{vv}(u^*) \approx \kappa_F(u^*),\quad H_{vv}(u^*) \approx 4\alpha d_v + (\beta\text{-correction}).$$
 
 Conformality holds when $\mathcal{I}_{vv}/H_{vv}$ is approximately constant across $v \in \partial\mathrm{Core}$. For a 2D grid ($d_v = 4$ uniform): $H_{vv} \approx 16\alpha + \mathrm{const}$, uniform. So $\mathcal{I}_{vv}/H_{vv} = \kappa_F/(16\alpha + \mathrm{const})$ is constant. Conformality holds with factor $\kappa_F^\mathrm{eff} = \kappa_F/(16\alpha + \mathrm{const})$.
@@ -92,8 +92,8 @@ For non-uniform graphs (varying $d_v$): conformality holds *up to* $O(\max d_v /
 
 By Lemma 14 (`09_OP0021_T_star_brainstorm.md` §4): $T_*^{(\mathrm{Fisher})} = \mathrm{tr}\,\mathcal{I}^{-1}$.
 
-By conformality: $\mathcal{I}^{-1} = \kappa_F^{-1}\,(H|_{\partial\mathrm{Core}})^{-1}$. Trace:
-$$T_*^{(\mathrm{Fisher})} = \kappa_F^{-1}\,\mathrm{tr}\,(H|_{\partial\mathrm{Core}})^{-1} = \kappa_F^{-1}\,\sum_{k \in \partial\mathrm{Core}} \mu_k^{-1}.$$
+By conformality: $\mathcal{I}^{-1} = \kappa_F^{-1}\,(H\vert _{\partial\mathrm{Core}})^{-1}$. Trace:
+$$T_*^{(\mathrm{Fisher})} = \kappa_F^{-1}\,\mathrm{tr}\,(H\vert _{\partial\mathrm{Core}})^{-1} = \kappa_F^{-1}\,\sum_{k \in \partial\mathrm{Core}} \mu_k^{-1}.$$
 
 By RG identification (Lemma 14): $\sum_k \mu_k^{-1}\big\vert_{\mathrm{slow}} = T_*^{(\mathrm{RG})}$. Combining:
 $$T_*^{(\mathrm{Fisher})} = \kappa_F^{-1}\,T_*^{(\mathrm{RG})}.$$

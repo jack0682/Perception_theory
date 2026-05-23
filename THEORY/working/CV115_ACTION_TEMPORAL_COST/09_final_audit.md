@@ -145,7 +145,7 @@ $M_1 M_2 = \mathrm{diag}(a_1) K_{ts} \mathrm{diag}(b_1 \odot a_2) K_{sr} \mathrm
 | **T-ACT-DP** | Bellman: $c^{\mathrm{act}}=\min_y[\ldots]$ | 유한 site, additive action | 03 |
 | L-ACTION-DELTA-EFF-ZERO | $\delta_\mathrm{eff}=0$ | action direct cost 정의 하에서만 | 03 |
 | **T-ACT-GIBBS** | $K_{i\to k}=K_{i\to j}K_{j\to k}$ | 유한 site, $\varepsilon>0$, additive | 04 |
-| L-SOFTMIN-HARDMIN-BOUND | $|\mathrm{smin}_\varepsilon-\min|\leq\varepsilon\log N$ | 표준 | 04 |
+| L-SOFTMIN-HARDMIN-BOUND | $\vert \mathrm{smin}_\varepsilon-\min\vert \leq\varepsilon\log N$ | 표준 | 04 |
 | L-SOFT-ACTION-DELTA-EFF-ZERO | $\delta^\varepsilon_\mathrm{eff}=0$ | T-ACT-GIBBS 귀결 | 04 |
 
 ## §5. Cat B 조건부 항목

@@ -30,7 +30,7 @@ Agent E (Package II Mapper). Six EK variants compared against SCC structure; com
 - Sharp $T_* \to 0$ limit.
 
 **Theorem (informal):**
-$$k_{\mathfrak m_i \to \mathfrak m_j} = \frac{|\lambda_-(\mathfrak s_{ij})|}{2\pi} \sqrt{\frac{|\det \nabla^2 \mathcal E(\mathfrak s_{ij})|}{\det \nabla^2 \mathcal E(\mathfrak m_i)}}\, e^{-(\mathcal E(\mathfrak s_{ij}) - \mathcal E(\mathfrak m_i))/T_*} (1 + o(1))$$
+$$k_{\mathfrak m_i \to \mathfrak m_j} = \frac{\vert \lambda_-(\mathfrak s_{ij})\vert}{2\pi} \sqrt{\frac{\vert \det \nabla^2 \mathcal E(\mathfrak s_{ij})\vert}{\det \nabla^2 \mathcal E(\mathfrak m_i)}}\, e^{-(\mathcal E(\mathfrak s_{ij}) - \mathcal E(\mathfrak m_i))/T_*} (1 + o(1))$$
 
 **SCC compatibility:** SCC dynamics are on bounded $\tilde C$, not $\mathbb R^n$. The confining assumption fails (or is replaced by reflection). Cannot apply directly.
 

@@ -53,7 +53,7 @@ For cross-block $\tilde H_{jk}$: per `multi_formation_sigma.md` §5.5 Observatio
 
 **Mechanism**: at near-crossing, the 2D effective Hamiltonian in the eigenspace of the two close eigenvalues has the form
 $$A_{\mathrm{eff}} = \begin{pmatrix} \lambda_+(t) & v(t) \\ v(t) & \lambda_-(t) \end{pmatrix}$$
-where $\lambda_\pm(t)$ are diagonal estimates and $v(t)$ is the off-diagonal coupling. The eigenvalue gap is $\Delta(t) = \sqrt{(\lambda_+ - \lambda_-)^2 + 4v^2}$, achieving minimum $2|v(t_0)|$ at the closest-approach time $t_0$.
+where $\lambda_\pm(t)$ are diagonal estimates and $v(t)$ is the off-diagonal coupling. The eigenvalue gap is $\Delta(t) = \sqrt{(\lambda_+ - \lambda_-)^2 + 4v^2}$, achieving minimum $2\vert v(t_0)\vert $ at the closest-approach time $t_0$.
 
 ### §3.2 Application to $\tilde H_{jk}$ near merger
 
@@ -70,7 +70,7 @@ By Coupling Bound Lemma (canonical T-Persist-K-Sep): in well-separated regime,
 $$\lVert H_{jk} \rVert_{\mathrm{op}} = \lambda_{\mathrm{rep}} \cdot \lVert I \rVert_{\mathrm{op}} + O(\exp(-c_0 d_{\min})) \approx \lambda_{\mathrm{rep}}.$$
 
 Restricting to Goldstone-pair subspace $V_{jk}^{\mathrm{Gold}}$, the cross-block coupling is approximately:
-$$H_{jk}|_{V^{\mathrm{Gold}}} \approx \lambda_{\mathrm{rep}} \cdot O_{\mathrm{Gold}}(d_{\min})$$
+$$H_{jk}\vert _{V^{\mathrm{Gold}}} \approx \lambda_{\mathrm{rep}} \cdot O_{\mathrm{Gold}}(d_{\min})$$
 where $O_{\mathrm{Gold}}$ is an exponentially-small overlap matrix (per Coupling Bound Lemma item 2-3).
 
 **Consequence**: Goldstone-pair eigenvalue split:
@@ -88,7 +88,7 @@ This matches `multi_formation_sigma.md` §5.5 Observation 5.4 prediction.
 $$W_{jk}(\mathbf{u}^*) := (\Delta_{jk}^{\mathrm{Gold}}, \theta_{jk}^{\mathrm{mix}}, s_{jk}^{\mathrm{trend}})$$
 with components:
 
-**(W4.1a) Gap $\Delta_{jk}^{\mathrm{Gold}}$**: $\Delta_{jk}^{\mathrm{Gold}}(\mathbf{u}^*) := |\lambda_{jk}^{\mathrm{Gold},+} - \lambda_{jk}^{\mathrm{Gold},-}|$ where $\lambda_{jk}^{\mathrm{Gold},\pm}$ are the two smallest-absolute-value (Goldstone-pair) eigenvalues of $\tilde H_{jk}|_{V^{\mathrm{Gold}}_{jk}}$.
+**(W4.1a) Gap $\Delta_{jk}^{\mathrm{Gold}}$**: $\Delta_{jk}^{\mathrm{Gold}}(\mathbf{u}^*) := \vert \lambda_{jk}^{\mathrm{Gold},+} - \lambda_{jk}^{\mathrm{Gold},-}\vert $ where $\lambda_{jk}^{\mathrm{Gold},\pm}$ are the two smallest-absolute-value (Goldstone-pair) eigenvalues of $\tilde H_{jk}\vert _{V^{\mathrm{Gold}}_{jk}}$.
 
 **(W4.1b) Mixing angle $\theta_{jk}^{\mathrm{mix}}$**: Let $v_+, v_-$ be the eigenvectors of $\lambda_{jk}^{\mathrm{Gold},\pm}$. Decompose $v_+ = \alpha_j e_j^{\mathrm{trans}} + \alpha_k e_k^{\mathrm{trans}}$ where $e_j^{\mathrm{trans}}, e_k^{\mathrm{trans}}$ are per-formation unperturbed Goldstone modes. Then $\theta_{jk}^{\mathrm{mix}} := \arctan(\alpha_k / \alpha_j) \in [-\pi/2, \pi/2]$.
 
@@ -117,7 +117,7 @@ For Phase 1 numerical pipeline (per `sigma_rich_VR_phase1.md`): $s_{jk}^{\mathrm
 
 **Lemma 5.2.** $\Delta_{jk}^{\mathrm{Gold}}$ is continuous in $\mathbf{u}^*$ on smooth segments where $V_{jk}^{\mathrm{Gold}}$ has constant dimension.
 
-**Proof**: Eigenvalues of restricted $\tilde H_{jk}|_{V^{\mathrm{Gold}}}$ vary continuously by Weyl perturbation. Gap is continuous. ✓
+**Proof**: Eigenvalues of restricted $\tilde H_{jk}\vert _{V^{\mathrm{Gold}}}$ vary continuously by Weyl perturbation. Gap is continuous. ✓
 
 ### §5.3 Mixing angle continuity
 
@@ -250,7 +250,7 @@ By Lemma 5.2, 5.3: $W_{jk}(t)$ is continuous on smooth segments where $V_{jk}^{\
 ### §9.2 Approach to merger
 
 As $d_{\min}(j, k)(t) \searrow 0$:
-- $H_{jk}|_{V^{\mathrm{Gold}}}$: coupling element $\lambda_{\mathrm{rep}} \cdot O_{\mathrm{Gold}}(d_{\min})$ grows from exp-small to $O(\lambda_{\mathrm{rep}})$.
+- $H_{jk}\vert _{V^{\mathrm{Gold}}}$: coupling element $\lambda_{\mathrm{rep}} \cdot O_{\mathrm{Gold}}(d_{\min})$ grows from exp-small to $O(\lambda_{\mathrm{rep}})$.
 - $\Delta_{jk}^{\mathrm{Gold}}(t)$ first widens (avoided-crossing onset), reaches maximum at $\tau_0 > 0$, then either:
   - (Case A) Symmetric merger: closes back to 0 at $t^*$ (true crossing at merger).
   - (Case B) Asymmetric merger: avoided crossing only, gap stays positive but decreases post-$\tau_0$.

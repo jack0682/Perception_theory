@@ -22,10 +22,10 @@ where $\mu_j(t)$ is the per-formation Lagrangian (volume constraint per formatio
 
 ### §1.2 Continuum limit setup
 
-Take $L \to \infty$, $a \to 0$ with $\xi_0 / a \to \infty$. Each formation becomes a domain $\Omega_j(t) \subset \mathbb{R}^d$ with mass $m_j(t) = |\Omega_j(t)|$.
+Take $L \to \infty$, $a \to 0$ with $\xi_0 / a \to \infty$. Each formation becomes a domain $\Omega_j(t) \subset \mathbb{R}^d$ with mass $m_j(t) = \vert \Omega_j(t)\vert $.
 
 In sharp-interface limit (Modica-Mortola, canonical T11):
-$$\mathcal{E}_K \to c_W \sum_j \mathrm{Per}(\Omega_j) + \lambda_{\mathrm{rep}} \sum_{j<k} |\Omega_j \cap \Omega_k| + \mathrm{constraint}. \tag{1.3}$$
+$$\mathcal{E}_K \to c_W \sum_j \mathrm{Per}(\Omega_j) + \lambda_{\mathrm{rep}} \sum_{j<k} \vert \Omega_j \cap \Omega_k\vert + \mathrm{constraint}. \tag{1.3}$$
 
 For $\lambda_{\mathrm{bar}} \to \infty$ (simplex enforced exactly): $\Omega_j \cap \Omega_k = \emptyset$ measure zero.
 
@@ -45,7 +45,7 @@ For two-phase ($\phi \in \{0, 1\}$) sharp-interface limit: domain $\Omega = \{\p
 \begin{theorem}[SCC hybrid-γ ↔ CH mobility correspondence, Cat B target]
 \label{thm:scc-ch}
 In the sharp-interface limit $\xi_0 \to 0$ with $\xi_0 \cdot \beta = O(1)$, the SCC hybrid-γ K-field gradient flow on $T^d$ converges (in some appropriate sense — to be made precise) to a multi-domain mean-curvature flow with mass-transfer rate proportional to γ:
-$$\dot \Omega_j = -\kappa_j + \frac{\gamma}{V} (\bar m - m_j), \quad m_j(t) = |\Omega_j(t)|, \quad V = T^d \text{ volume}, \tag{2.1}$$
+$$\dot \Omega_j = -\kappa_j + \frac{\gamma}{V} (\bar m - m_j), \quad m_j(t) = \vert \Omega_j(t)\vert, \quad V = T^d \text{ volume}, \tag{2.1}$$
 where $\kappa_j$ is the mean curvature of $\partial \Omega_j$ and $\frac{\gamma}{V}(\bar m - m_j)$ is the mass-flow rate from average.
 
 \textbf{Identification with CH}: Equation (2.1) is a multi-domain analog of CH with effective mobility $M_{\mathrm{eff}} = \gamma / V$.
@@ -56,11 +56,11 @@ where $\kappa_j$ is the mean curvature of $\partial \Omega_j$ and $\frac{\gamma}
 **Step 1**: Modica-Mortola Γ-convergence of $\mathcal{E}_K$ → multi-domain perimeter functional.
 
 By canonical T11 + Phase 6+7 analysis (`13_*` §5, `30_*` §1.5):
-$$\xi_0^{-1} \mathcal{E}_K [\mathbf{u}] \xrightarrow{\Gamma} c_W \sum_j \mathrm{Per}(\Omega_j) + \lambda_{\mathrm{rep}} \sum_{j<k} |\Omega_j \cap \Omega_k|.$$
+$$\xi_0^{-1} \mathcal{E}_K [\mathbf{u}] \xrightarrow{\Gamma} c_W \sum_j \mathrm{Per}(\Omega_j) + \lambda_{\mathrm{rep}} \sum_{j<k} \vert \Omega_j \cap \Omega_k\vert.$$
 
 **Step 2**: Volume-preserving gradient flow (per-formation pool, γ=0): converges to motion-by-mean-curvature with PER-FORMATION constraint $m_j$ fixed.
 
-By Bronsard-Stoth 1997 (volume-preserving curvature flow): each $\Omega_j$ evolves by mean curvature minus a Lagrange multiplier enforcing $|\Omega_j| = m_j$ constant.
+By Bronsard-Stoth 1997 (volume-preserving curvature flow): each $\Omega_j$ evolves by mean curvature minus a Lagrange multiplier enforcing $\vert \Omega_j\vert = m_j$ constant.
 
 This is the **per-formation pool dynamics** (Phase 5+6 numerical: NO LSW, just shape evolution).
 

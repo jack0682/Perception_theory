@@ -99,9 +99,9 @@ Yet $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) > 0$ in all 15 runs. This is **stro
 
 $\lVert r \rVert_2 \in [0.73, 2.33]$ across runs — far larger than the conservative analytical bound $\delta < 2 \times 10^{-4}$ derived in `42_broadness_approach_b_trace.md §6` (Theorem B3 (CL-RES)).
 
-**Reason for analytical pessimism.** The residual-correction term $2\sum_k r_k \nabla^2 \mathrm{Cl}_k$ was bounded using worst-case $|\sigma''|_{\max} \leq 0.0962$. But at *saturated* nodes, $\sigma$ is in its flat region: $\sigma'' \approx 0$. Only non-saturated nodes (the boundary band) contribute to $\sigma''$, and that band is a small fraction of $X$ (per T-OP6-B, $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta}$).
+**Reason for analytical pessimism.** The residual-correction term $2\sum_k r_k \nabla^2 \mathrm{Cl}_k$ was bounded using worst-case $\vert \sigma''\vert _{\max} \leq 0.0962$. But at *saturated* nodes, $\sigma$ is in its flat region: $\sigma'' \approx 0$. Only non-saturated nodes (the boundary band) contribute to $\sigma''$, and that band is a small fraction of $X$ (per T-OP6-B, $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta}$).
 
-**Sharper bound (post-numerical insight).** Effective residual contribution: $\lVert r_{\mathrm{band}} \rVert_2 \cdot \rho_{\mathrm{bd-band}} \cdot a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \lVert M \rVert^2$, where $r_{\mathrm{band}}$ is the residual restricted to the boundary band. This is *much smaller* than the worst-case bound, explaining the numerical results.
+**Sharper bound (post-numerical insight).** Effective residual contribution: $\lVert r_{\mathrm{band}} \rVert_2 \cdot \rho_{\mathrm{bd-band}} \cdot a_{\mathrm{cl}}^2 \cdot \vert \sigma''\vert _{\max} \cdot \lVert M \rVert^2$, where $r_{\mathrm{band}}$ is the residual restricted to the boundary band. This is *much smaller* than the worst-case bound, explaining the numerical results.
 
 ### §3.4 Scaling with $\beta$
 
@@ -128,8 +128,8 @@ Full test suite executed after script run: **215 passed, 1 xfailed in 209.20s** 
 | **Broadness numerical confirmation** | **PASS 15/15** | $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) > 0$ uniformly |
 | **L-CLOSURE-LIFT numerical confirmation** | **PASS 15/15** | $\mu_{\min}(\Pi_T H_{\mathrm{cl}} \Pi_T)$ exceeds prediction by ~60× |
 | **D-HMORSE-LOCAL (C2) interior** | **VIOLATED** by canonical `find_formation` output | But broadness holds anyway → (C2) should be relaxed to "active set" formulation |
-| **Theorem B2 prediction tightness** | **Loose by ~60×** | The factor $(d_{\min}/d_{\max}) \approx 0.5$ and worst-case $|\sigma'| = 1/4$ are very conservative; actual $\sigma'$ at saturated minimizers is near 0 |
-| **Theorem B3 (CL-RES) bound** | **Loose** | Worst-case $|\sigma''|_{\max}$ overestimates the residual contribution by ~10⁴× |
+| **Theorem B2 prediction tightness** | **Loose by ~60×** | The factor $(d_{\min}/d_{\max}) \approx 0.5$ and worst-case $\vert \sigma'\vert = 1/4$ are very conservative; actual $\sigma'$ at saturated minimizers is near 0 |
+| **Theorem B3 (CL-RES) bound** | **Loose** | Worst-case $\vert \sigma''\vert _{\max}$ overestimates the residual contribution by ~10⁴× |
 | **Overall OP-HMORSE-BROADNESS** | **CLOSED** | Approach (b) PROVED Cat A analytically; Approach (c) confirms numerically 15/15 PASS |
 
 ---

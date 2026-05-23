@@ -34,9 +34,9 @@
 ### 2.1 The problem
 
 T-σ-Theorem-4 (v) σ-signature on $D_4$:
-$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (2, [+1], 4|W''(c)|\epsilon),\ (2, [-1], 4|W''(c)|\epsilon),\ \ldots\big).$$
+$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (2, [+1], 4\vert W''(c)\vert \epsilon),\ (2, [-1], 4\vert W''(c)\vert \epsilon),\ \ldots\big).$$
 
-Both first two entries have **identical eigenvalue** $\lambda = 4|W''(c)|\epsilon$ but **different irrep labels** ($[+1]$ trivial vs $[-1]$ sign).
+Both first two entries have **identical eigenvalue** $\lambda = 4\vert W''(c)\vert \epsilon$ but **different irrep labels** ($[+1]$ trivial vs $[-1]$ sign).
 
 Commitment 14 (canonical §11.1, line 768): "$\{(n_k, [\rho_k], \lambda_k)\}_{k=0}^{K-1}$" with no specified tie-break rule for $\lambda_k = \lambda_{k+1}$.
 
@@ -80,7 +80,7 @@ $$\mathcal{P}_{\ell=1, \mu}[\delta u_{x_\mu}] = -c_d \int_0^\infty u^*(r)\, dr,\
 
 Cross-axis projection (e.g., $\mathcal{P}_{\ell=1, \mu}[\delta u_{x_\nu}]$ for $\mu \neq \nu$) vanishes by orthogonality of $\hat e_\mu$ and $\hat e_\nu$.
 
-Hence **rank** $\mathcal{P}_{\ell=1}|_{\mathrm{Goldstone subspace}} = d$ — the $d$-dim Goldstone subspace maps injectively onto the $d$-dim ℓ=1 angular subspace. ✓
+Hence **rank** $\mathcal{P}_{\ell=1}\vert _{\mathrm{Goldstone subspace}} = d$ — the $d$-dim Goldstone subspace maps injectively onto the $d$-dim ℓ=1 angular subspace. ✓
 
 For nodal count = 2: $\delta u_{x_\mu} = u^*(\cdot + e_\mu) - u^*$ has sign pattern $\sgn(\delta u_{x_\mu}(i)) = -\sgn(i_{x_\mu} - x_{*,\mu})$. The nodal partition is the half-space $\{i : i_{x_\mu} < x_{*,\mu}\}$ vs $\{i_{x_\mu} > x_{*,\mu}\}$, separated by codimension-1 hyperplane $\{i_{x_\mu} = x_{*,\mu}\}$. Each half-space is connected on the lattice (in any dimension, on grid or torus). Hence $\mathcal{N}(\delta u_{x_\mu}) = 2$ universally.
 
@@ -116,7 +116,7 @@ The convention isn't specified. Both interpretations have advantages:
 
 ### 4.2 Recommended convention
 
-For consistency with T-σ-Theorem-3 (which lists $\sigma(c\mathbf{1})|_{L=4}$ as "$(2, [E], \mu_2)$" for the 2-dim $E$ irrep — interpretation (a)) and T-σ-Theorem-3 worked example "$(3, [A_1 \oplus B_1], \mu_4)$" — interpretation (a):
+For consistency with T-σ-Theorem-3 (which lists $\sigma(c\mathbf{1})\vert _{L=4}$ as "$(2, [E], \mu_2)$" for the 2-dim $E$ irrep — interpretation (a)) and T-σ-Theorem-3 worked example "$(3, [A_1 \oplus B_1], \mu_4)$" — interpretation (a):
 
 **Convention (a) chosen**: "Each Hessian eigenvalue with multiplicity > 1 gets ONE σ-tuple entry; the irrep field is a sum/multi-set of constituent irreps. Each constituent irrep retains its own dimension contribution. Nodal count $n_k$ is the multi-set $\{n^{[\rho]}_k\}$ per irrep component (or summed if convention prefers single number)."
 
@@ -221,9 +221,9 @@ The explicit value is **ancillary** — it tells us the projection magnitude but
 
 ### 8.2 Refined (i) statement
 
-> **(i) Goldstone-ℓ=1 injectivity.** The map $\mathcal{P}_{\ell=1}|_{\mathrm{span}(\delta u_{x_\mu})_{\mu=1}^d}: \mathbb{R}^d \to \mathbb{R}^d$ is injective (rank $d$), making the $d$-dim Goldstone subspace the natural image of the ℓ=1 angular sector restriction.
+> **(i) Goldstone-ℓ=1 injectivity.** The map $\mathcal{P}_{\ell=1}\vert _{\mathrm{span}(\delta u_{x_\mu})_{\mu=1}^d}: \mathbb{R}^d \to \mathbb{R}^d$ is injective (rank $d$), making the $d$-dim Goldstone subspace the natural image of the ℓ=1 angular sector restriction.
 >
-> **Explicit IBP identity (corollary):** $\mathcal{P}_{\ell=1, \mu}[\delta u_{x_\nu}] = -c_d \int_0^\infty u^*(r)\, dr \cdot \delta_{\mu\nu} + O(\xi_0/L)$, with $c_d = $ surface-area constant of $(d-1)$-sphere $/2$ (e.g., $c_2 = \pi$ for 2D). For tanh disk: $|\mathcal{P}_{\ell=1, \mu}[\delta u_{x_\mu}]| \approx c_d r_0$.
+> **Explicit IBP identity (corollary):** $\mathcal{P}_{\ell=1, \mu}[\delta u_{x_\nu}] = -c_d \int_0^\infty u^*(r)\, dr \cdot \delta_{\mu\nu} + O(\xi_0/L)$, with $c_d = $ surface-area constant of $(d-1)$-sphere $/2$ (e.g., $c_2 = \pi$ for 2D). For tanh disk: $\vert \mathcal{P}_{\ell=1, \mu}[\delta u_{x_\mu}]\vert \approx c_d r_0$.
 
 ### 8.3 Action
 

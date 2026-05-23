@@ -31,7 +31,7 @@ Effect on $\widehat K$ via $N_{\mathrm{unst}}^{\mathrm{full}}(c) \approx N^{\mat
 
 $T > 0$: all mode eigenvalues shifted by $+T/[c(1-c)]$. Modes at $\mu_k < T/[c(1-c)]$ become stable. Effective $N_{\mathrm{unst}}(T) < N_{\mathrm{unst}}(0)$.
 
-**Thermal critical $\beta$-shift:** $\beta^{\mathrm{thermal}}_{\mathrm{crit}}(c, T) = \beta_{\mathrm{crit}}^{(2)}(c) + T\lambda_2 \cdot c(1-c)/[\lvert W''(c) \rvert \cdot c(1-c)] = \beta_{\mathrm{crit}}^{(2)}(c)(1 + T/[|W''(c)|c(1-c)])$.
+**Thermal critical $\beta$-shift:** $\beta^{\mathrm{thermal}}_{\mathrm{crit}}(c, T) = \beta_{\mathrm{crit}}^{(2)}(c) + T\lambda_2 \cdot c(1-c)/[\lvert W''(c) \rvert \cdot c(1-c)] = \beta_{\mathrm{crit}}^{(2)}(c)(1 + T/[\vert W''(c)\vert c(1-c)])$.
 
 Higher $T$ → higher critical $\beta$ → more "stable" uniform state.
 

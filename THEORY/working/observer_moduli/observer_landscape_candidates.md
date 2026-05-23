@@ -35,7 +35,7 @@ An observer landscape $V_{\mathrm{raw}} : \mathcal{M}_{\mathrm{obs}} \to \mathbb
 | V2 | Continuous: $V_{\mathrm{raw}} \in C^0(\mathcal{M}_{\mathrm{obs}})$ | **Cont** |
 | V3 | Readout-compatible: $\nabla V_{\mathrm{raw}}(\Theta) = 0 \Rightarrow P(\Theta)$ is locally stable | **Compat** |
 | V4 | Basin-generating: level sets of $V_{\mathrm{raw}}$ decompose $\mathcal{M}_{\mathrm{obs}}$ into attraction regions | **Basin** |
-| V5 | Boundary-aware: $V_{\mathrm{raw}}|_{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$ | **Bdry** |
+| V5 | Boundary-aware: $V_{\mathrm{raw}}\vert _{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$ | **Bdry** |
 
 **Definition (Admissible class).** [DEFINED]
 $$\mathcal{V}_{\mathrm{adm}} = \{ V_{\mathrm{raw}} : \mathcal{M}_{\mathrm{obs}} \to \mathbb{R}_{\geq 0} \mid V_{\mathrm{raw}} \text{ satisfies V1--V5} \}$$
@@ -106,7 +106,7 @@ $$V_T^0(\Theta; X_t, T^*) = D_T(T_\Theta, T^*)$$
 
 2. **Wasserstein-1 distance on barcodes** $d_W$: $d_W(\mathrm{Bar}_0, \mathrm{Bar}_0^*) = \inf_{\gamma} \sum_x \lVert x - \gamma(x) \rVert$. More sensitive than bottleneck.
 
-3. **Component-count difference** (coarser): $D_T^{\mathrm{coarse}} = |K^*_\Theta - K^{*}_*\lvert + \rvert\ell_1 - \ell_1^*|$.
+3. **Component-count difference** (coarser): $D_T^{\mathrm{coarse}} = \vert K^*_\Theta - K^{*}_*\lvert + \rvert\ell_1 - \ell_1^*\vert $.
 
 ### §3.2 Analysis
 

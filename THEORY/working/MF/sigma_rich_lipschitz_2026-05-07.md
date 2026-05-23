@@ -26,11 +26,11 @@ related:
 
 ## §1. Statement
 
-**Lemma 16 (σ_rich Lipschitz, Cat B).** *Let $C \subseteq \mathcal{P}$ be a persistent component (D-ST-3) with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ be two soft cohesion fields with $u'|_{\mathcal{P}\setminus C} = u|_{\mathcal{P}\setminus C}$ (component-localized perturbation). Suppose:*
+**Lemma 16 (σ_rich Lipschitz, Cat B).** *Let $C \subseteq \mathcal{P}$ be a persistent component (D-ST-3) with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ be two soft cohesion fields with $u'\vert _{\mathcal{P}\setminus C} = u\vert _{\mathcal{P}\setminus C}$ (component-localized perturbation). Suppose:*
 
 - *(MP) Mass positivity:* $m(C; u) = \sum_{x \in C} u(x) \geq m_\mathrm{min} := \rho_\mathrm{pers}\,\lvert C \rvert/4 > 0$.
 - *(DB) Diameter bound:* $\mathrm{diam}_\mathrm{intra}(C) := \max_{x,y\in C} d_G(x,y) \leq D_C$.
-- *Smallness:* $\varepsilon := \lVert \delta u|_C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$ where $\delta u = u' - u$.
+- *Smallness:* $\varepsilon := \lVert \delta u\vert _C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$ where $\delta u = u' - u$.
 
 *Then:*
 $$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big \rVert_\Sigma \;\leq\; L_\sigma \cdot \varepsilon,$$
@@ -47,7 +47,7 @@ $$\boxed{\;L_\sigma = \sqrt{\lvert C \rvert}\,\Big(1 + \frac{2 D_C}{m_\mathrm{mi
 
 ### §2.1 Mass
 
-$\lvert m' - m \rvert = |\sum_C \delta u| \leq \sqrt{\lvert C \rvert} \varepsilon$ (Cauchy-Schwarz). Lipschitz constant: $\sqrt{\lvert C \rvert}$.
+$\lvert m' - m \rvert = \vert \sum_C \delta u\vert \leq \sqrt{\lvert C \rvert} \varepsilon$ (Cauchy-Schwarz). Lipschitz constant: $\sqrt{\lvert C \rvert}$.
 
 ### §2.2 Centroid
 

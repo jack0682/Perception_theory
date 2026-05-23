@@ -39,7 +39,7 @@ $$\mathcal{P}_{\ell=1}[v] := \big(\langle v, \psi^{(c)}_{\ell=1}\rangle,\ \langl
 > where $m = \sum_i u^*(i)$ is the formation mass (volume).
 >
 > **(ii) Angular ℓ=1 power saturation.** The normalized angular ℓ=1 power fraction
-> $$\rho_{\ell=1}[\hat\phi] := \frac{|\langle\hat\phi, \hat\psi^{(c)}_{\ell=1}\rangle|^2 + |\langle\hat\phi, \hat\psi^{(s)}_{\ell=1}\rangle|^2}{\lVert \hat\phi \rVert^2}$$
+> $$\rho_{\ell=1}[\hat\phi] := \frac{\vert \langle\hat\phi, \hat\psi^{(c)}_{\ell=1}\rangle\vert ^2 + \vert \langle\hat\phi, \hat\psi^{(s)}_{\ell=1}\rangle\vert ^2}{\lVert \hat\phi \rVert^2}$$
 > ($\hat\psi^{(c, s)}_{\ell=1}$ unit-normalized) for any unit Goldstone vector $\hat\phi \in \mathrm{span}(\delta u_x, \delta u_y)$ satisfies
 > $$\rho_{\ell=1}[\hat\phi] \;\geq\; \kappa_{\ell=1} > 0,$$
 > with $\kappa_{\ell=1} = \kappa_{\ell=1}(r_0, \xi_0, R)$ a positive constant depending on the disk radius $r_0$, interface width $\xi_0$, and graph extent $R$.
@@ -65,7 +65,7 @@ $$\int (\partial_x u^*) \cdot (x/r) \cdot r\,dr\,d\theta = \int (\partial_x u^*)
 
 Apply integration by parts in $x$ (using that $u^*$ decays at infinity / at boundary distance $\geq d_*$):
 $$\int (\partial_x u^*) \cdot x\,dx\,dy = -\int u^* \cdot \partial_x x \,dx\,dy + [\text{boundary}] = -\int u^* \, dx\,dy + [\text{boundary}],$$
-since $\partial_x x = 1$. The boundary term is $O(u^*|_{\partial}) = O(\exp(-d_*/\xi_0))$ by localization (Cor 2.2 of W4-04-24).
+since $\partial_x x = 1$. The boundary term is $O(u^*\vert _{\partial}) = O(\exp(-d_*/\xi_0))$ by localization (Cor 2.2 of W4-04-24).
 
 Hence
 $$\langle \delta u_x, \psi^{(c)}_{\ell=1}\rangle = -\int u^* \,dx\,dy + O(\xi_0/L) = -m + O(\xi_0/L). \checkmark$$
@@ -99,18 +99,18 @@ $$\rho_{\ell=1}[\hat\phi] \approx \frac{\pi^2 r_0^4 \cdot 3\xi_0/(\pi r_0)}{\pi 
 
 Order of magnitude: for $r_0 \sim R/2$ (formation occupies half the support) and $\xi_0 \sim r_0/3$: $\rho_{\ell=1} \sim 6 \cdot (R/2)^3 \cdot (R/6) / R^2 = R^2 / 8$ — dimensionful, indicating I haven't correctly normalized.
 
-**Correct normalization** (from W4-04-24 §3.3): use $\rho_{\ell=1} = (|\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 + |\langle\hat\phi, \hat\psi^{(s)}\rangle|^2) / 1$ with both vectors unit-normalized.
+**Correct normalization** (from W4-04-24 §3.3): use $\rho_{\ell=1} = (\vert \langle\hat\phi, \hat\psi^{(c)}\rangle\vert ^2 + \vert \langle\hat\phi, \hat\psi^{(s)}\rangle\vert ^2) / 1$ with both vectors unit-normalized.
 
 $\hat\phi = \delta u_x / \lVert \delta u_x \rVert$, $\hat\psi^{(c)} = \psi^{(c)}/\lVert \psi^{(c)} \rVert$.
 $\langle\hat\phi, \hat\psi^{(c)}\rangle = (-m + O(\xi_0/L)) / (\lVert \delta u_x \rVert \cdot \lVert \psi^{(c)} \rVert)$.
 
 For tanh disk: $\lVert \delta u_x \rVert \approx \sqrt{\pi r_0/(6\xi_0)}$ (one-quadrant integral; $a^2+b^2$ contribution averaged out so $\lVert \delta u_x \rVert^2 = (1/2)\lVert \delta u_x + \delta u_y \rVert^2 = \pi r_0 / (6\xi_0)$). $\lVert \psi^{(c)} \rVert = \sqrt{\pi R^2/2}$.
 
-$|\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 \approx m^2 / (\pi r_0/(6\xi_0) \cdot \pi R^2/2) = m^2 \cdot 12\xi_0 / (\pi^2 r_0 R^2)$.
+$\vert \langle\hat\phi, \hat\psi^{(c)}\rangle\vert ^2 \approx m^2 / (\pi r_0/(6\xi_0) \cdot \pi R^2/2) = m^2 \cdot 12\xi_0 / (\pi^2 r_0 R^2)$.
 
-For $m = \pi r_0^2$: $|\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 = \pi^2 r_0^4 \cdot 12\xi_0 / (\pi^2 r_0 R^2) = 12 r_0^3 \xi_0 / R^2$.
+For $m = \pi r_0^2$: $\vert \langle\hat\phi, \hat\psi^{(c)}\rangle\vert ^2 = \pi^2 r_0^4 \cdot 12\xi_0 / (\pi^2 r_0 R^2) = 12 r_0^3 \xi_0 / R^2$.
 
-For $r_0/R \sim 1/4$, $\xi_0/r_0 \sim 1/3$: $|\langle\rangle|^2 \approx 12 \cdot (1/4)^3 \cdot (R^2/12) / R^2 \cdot \ldots$ → numeric $\sim 0.05 - 0.5$ depending on geometry.
+For $r_0/R \sim 1/4$, $\xi_0/r_0 \sim 1/3$: $\vert \langle\rangle\vert ^2 \approx 12 \cdot (1/4)^3 \cdot (R^2/12) / R^2 \cdot \ldots$ → numeric $\sim 0.05 - 0.5$ depending on geometry.
 
 **Bottom line:** $\rho_{\ell=1}[\hat\phi] \geq \kappa_{\ell=1}$ with $\kappa_{\ell=1} > 0$ explicitly bounded below by a function of $(r_0, \xi_0, R)$. Ballpark for typical R23 32×32 geometry (W4-04-23): $\rho_{\ell=1} \sim 0.4 - 0.5$, consistent with R23 measurement of "p-dominant fraction $\sim 0.5$". ✓
 
@@ -118,13 +118,13 @@ For $r_0/R \sim 1/4$, $\xi_0/r_0 \sim 1/3$: $|\langle\rangle|^2 \approx 12 \cdot
 
 ### 3.3 Proof of (iii) — Goldstone subspace ⊆ ℓ=1 angular sector
 
-By (i), $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$ and $\mathcal{P}_{\ell=1}[\delta u_y] = (0, -m)$ are linearly independent in $\mathbb{R}^2$ (since $m > 0$). The map $\mathcal{P}_{\ell=1}|_{\mathrm{span}(\delta u_x, \delta u_y)}: \mathrm{span}(\delta u_x, \delta u_y) \to \mathbb{R}^2$ is therefore injective (rank 2, full).
+By (i), $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$ and $\mathcal{P}_{\ell=1}[\delta u_y] = (0, -m)$ are linearly independent in $\mathbb{R}^2$ (since $m > 0$). The map $\mathcal{P}_{\ell=1}\vert _{\mathrm{span}(\delta u_x, \delta u_y)}: \mathrm{span}(\delta u_x, \delta u_y) \to \mathbb{R}^2$ is therefore injective (rank 2, full).
 
 Equivalently: Goldstone basis spans the ℓ=1 image. Conversely, any element of the ℓ=1 angular sector restricted to the Goldstone subspace can be expressed as a Goldstone combination. ✓
 
 ### 3.4 Proof of (iv) — Nodal count = 2
 
-For $\delta u_x = u^*(\cdot + e_x) - u^*$: in continuum, $\delta u_x \approx \partial_x u^*$. For a centered radially-symmetric $u^*$ peaked at origin (decreasing radially): $\partial_x u^*(x, y) = \cos\theta \cdot \partial_r u^*(r) = -\cos\theta \cdot |\partial_r u^*|$ (since $u^*$ decreases in $r$).
+For $\delta u_x = u^*(\cdot + e_x) - u^*$: in continuum, $\delta u_x \approx \partial_x u^*$. For a centered radially-symmetric $u^*$ peaked at origin (decreasing radially): $\partial_x u^*(x, y) = \cos\theta \cdot \partial_r u^*(r) = -\cos\theta \cdot \vert \partial_r u^*\vert $ (since $u^*$ decreases in $r$).
 
 Sign pattern: $\partial_x u^* > 0 \Leftrightarrow \cos\theta < 0 \Leftrightarrow x < 0$ (left half). $\partial_x u^* < 0 \Leftrightarrow x > 0$. Zero set: $\{x = 0\}$ (vertical line through center).
 

@@ -176,7 +176,7 @@ canonical/canonical.md + canonical/theorem_status.md  (main)
 
 **Deepening pass**:
 - **`04_D6b_sigma_trajectory_development.md`**: σ_multi^A(t) trajectory layer development. **Lemma 4.4.1(c): formal σ^A K-jump non-determinism claim (Cat C asserted)**.
-- **`05_NQ198_V5bTprime_PN_barrier_attempt.md`**: V5b-T' Cat A attempt → substantive negative result (mass-independence revealed: $\mu \approx 2\beta\xi_0^2$ vs Phase 3 heuristic $A_\mathrm{R3b}\beta|\partial S|/\xi_0$).
+- **`05_NQ198_V5bTprime_PN_barrier_attempt.md`**: V5b-T' Cat A attempt → substantive negative result (mass-independence revealed: $\mu \approx 2\beta\xi_0^2$ vs Phase 3 heuristic $A_\mathrm{R3b}\beta\vert \partial S\vert /\xi_0$).
 - **`06_open_problems_development_synthesis.md`**: open-problem synthesis with explicit **OP-0008 σ^A K-jump non-determinism** registration (HIGH severity) + D-6b CV-1.6 release path bifurcation (Path A accept non-determinism / Path B σ-rich augmentation).
 - **`07_NQ198a_results_and_D5_finalization.md`** + **`11_NQ198fg_results_and_D5_withdraw.md`**: D-5 V5b-T' new entry candidate WITHDRAWN (NQ-198f phantom on torus).
 
@@ -352,9 +352,9 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 - **Definition L-M-D1**: $\Phi_\mathrm{res}(\ell_\min, \tau)$ envelope class via 5 axioms F1–F5 (range, lower normalization, monotonicity, sub-threshold suppression, dominant retention) with structural-deviation pair $(\varepsilon_\mathrm{sub}^\phi, \varepsilon_\mathrm{dom}^\phi)$.
 - **Claim L-M-V1**: 3 WQ-LAT-1.B sub-classes ($\phi_\mathrm{hard}$, $\phi_\mathrm{logistic}^{s\ge 50}$, $\phi_\mathrm{shift\text{-}sat}^{\beta\ge 20}$) verified against F1–F5 with explicit deviation bounds.
 - **Claim L-M-V2**: Default $\phi$-sat $\phi_0(\ell) = \ell/(\ell+\ell_\min) \notin \Phi_\mathrm{res}$ (F4 violation).
-- **Lemma L-M-1** (envelope-pure, Cat A absolute): $|K_\mathrm{soft}^\phi - K_\mathrm{bar}^{\ell_\min}| \le \rho_\mathrm{sub} + \rho_\mathrm{edge}^\phi + \rho_\phi$ via triangle inequality + 3-region partition.
+- **Lemma L-M-1** (envelope-pure, Cat A absolute): $\vert K_\mathrm{soft}^\phi - K_\mathrm{bar}^{\ell_\min}\vert \le \rho_\mathrm{sub} + \rho_\mathrm{edge}^\phi + \rho_\phi$ via triangle inequality + 3-region partition.
 - **Lemma L-M-2** (edge-band emptiness, Cat B sketched): under $(P0)$–$(P11)$ + $\tau < \tau_* := \min(2\rho_\mathrm{pert}, \rho_\mathrm{res}, r_\mathrm{birth})$, the edge band $[\ell_\min - \tau, \ell_\min + \tau]$ contains no bars. **A4 enhancement**: hypothesis (E) eliminated as separate assumption.
-- **Theorem L-M (Soft-Count Corollary)**: $|K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)| \le \varepsilon_\mathrm{sub}^\phi(\tau) \cdot N_\mathrm{sub} + \varepsilon_\mathrm{dom}^\phi(\tau) \cdot K_\mathrm{act}^\varepsilon$.
+- **Theorem L-M (Soft-Count Corollary)**: $\vert K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)\vert \le \varepsilon_\mathrm{sub}^\phi(\tau) \cdot N_\mathrm{sub} + \varepsilon_\mathrm{dom}^\phi(\tau) \cdot K_\mathrm{act}^\varepsilon$.
 - **3 per-family corollaries**: $\phi_\mathrm{hard}$ EXACT (Cat A absolute under $(P0)$–$(P11)$); $\phi_\mathrm{logistic}^{s\ge 50}$ bound $\le 3e^{-s\tau}\cdot K_\mathrm{act}^\varepsilon$ (Cat B sketched); $\phi_\mathrm{shift\text{-}sat}^{\beta\ge 20}$ bound $\le e^{-\beta\tau}\cdot K_\mathrm{act}^\varepsilon$ (Cat B sketched).
 - **4 counterexample attempts** (default $\phi$-sat / edge-band-dense bar config / insufficient sharpness / $\tau$ too large) — all consistent with L-M's hypothesis package.
 
@@ -422,7 +422,7 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 #### **T2-1: L1-M Soft-Count Corollary (Day 7 working draft)**
 
 **Statement**: Under $(P0)$–$(P11)$ + $\phi \in \Phi_\mathrm{res}(\ell_\min, \tau)$ + $\tau < \tau_* = \min(2\rho_\mathrm{pert}, \rho_\mathrm{res}, r_\mathrm{birth})$:
-$$|K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)| \le \varepsilon_\mathrm{sub}^\phi(\tau) \cdot N_\mathrm{sub} + \varepsilon_\mathrm{dom}^\phi(\tau) \cdot K_\mathrm{act}^\varepsilon.$$
+$$\vert K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)\vert \le \varepsilon_\mathrm{sub}^\phi(\tau) \cdot N_\mathrm{sub} + \varepsilon_\mathrm{dom}^\phi(\tau) \cdot K_\mathrm{act}^\varepsilon.$$
 
 **Status**: 
 - Lemma L-M-1 (envelope-pure inequality): **Cat A absolute**
@@ -458,7 +458,7 @@ $$|K_\mathrm{soft}^\phi(U(\mathbf u)) - K_\mathrm{act}^\varepsilon(\mathbf u)| \
 
 **T3-2: NQ-187 RED Finding (Day 4 working)**: T-σ-Theorem-4 leading-order claim ($A_2/A_1 = 4$ on $D_4$) **falsified on $D_4$ free-BC L≤16**. 3-way discrepancy (2/3 vs 4 vs 8) cleanly bounded into γ/β/α audit paths (Day 5 reconciliation).
 
-**T3-3: V5b-T' Mass-Independence Discovery (Day 3)**: Phase 3 heuristic $\mu \approx A_\mathrm{R3b} \beta |\partial S|/\xi_0$ vs `05_*` §4 derivation $\mu \approx 2\beta\xi_0^2$ (mass-independent). Both magnitude-match at NQ-173 ($m=40$); distinguishable only by varying $m$. D-5 V5b-T' new entry candidate **WITHDRAWN**.
+**T3-3: V5b-T' Mass-Independence Discovery (Day 3)**: Phase 3 heuristic $\mu \approx A_\mathrm{R3b} \beta \vert \partial S\vert /\xi_0$ vs `05_*` §4 derivation $\mu \approx 2\beta\xi_0^2$ (mass-independent). Both magnitude-match at NQ-173 ($m=40$); distinguishable only by varying $m$. D-5 V5b-T' new entry candidate **WITHDRAWN**.
 
 **T3-4: 3D LSW (Phase 10 V5)**: $T^3_{10}$ K=4, α=0.013 (insufficient statistics). NQ-244 spawned for proper $T^3_{15+}$ K=10+ t=1000+ analysis (W6 D4 launch + analysis).
 
@@ -726,7 +726,7 @@ W4 04-24의 SPLIT-RESOLVED (F-1) + LAYER-CLARIFIED (M-1) status은 W5 동안 변
 
 ### 6.2 D-5 V5b-T' Phantom WITHDRAWN (Day 4)
 
-**Source**: NQ-198f phantom on torus — `μ ≈ 2βξ_0^2` mass-independence vs Phase 3 heuristic $A_\mathrm{R3b}\beta|\partial S|/\xi_0$.
+**Source**: NQ-198f phantom on torus — `μ ≈ 2βξ_0^2` mass-independence vs Phase 3 heuristic $A_\mathrm{R3b}\beta\vert \partial S\vert /\xi_0$.
 
 **Replacement**: T-V5b-T sub-statement (V5b-T-zero) Cat A def, registered at CV-1.5.1.
 

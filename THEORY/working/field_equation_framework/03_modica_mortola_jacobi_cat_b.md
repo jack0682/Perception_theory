@@ -103,7 +103,7 @@ CoC anchors:
 **Theorem (Modica-Mortola Γ-Convergence)**. *Let `Ω ⊂ ℝ^d` (d ≥ 2) be open bounded, `W: ℝ → [0,∞)` a double-well potential with `W(0) = W(1) = 0`, `W > 0` on `(0,1)` and `W'(0) = W'(1) = 0`. Define the ε-Allen-Cahn energy*
 
 $$
-\mathcal{F}_\epsilon(u) = \int_\Omega \left( \epsilon |\nabla u|^2 + \frac{1}{\epsilon} W(u) \right) dx, \quad u \in H^1(\Omega).
+\mathcal{F}_\epsilon(u) = \int_\Omega \left( \epsilon \vert \nabla u\vert ^2 + \frac{1}{\epsilon} W(u) \right) dx, \quad u \in H^1(\Omega).
 $$
 
 *Subject to the mass constraint `∫_Ω u dx = m`, the family `{ℱ_ε}` Γ-converges (in `L¹(Ω)`-topology) as `ε → 0` to the perimeter functional*
@@ -223,7 +223,7 @@ where `ν` is the outward unit normal and `f: Γ → ℝ` is the normal variatio
 **Second variation formula** (Allard 1972, *Ann Math* **95**:417; Simon 1968; Reilly 1977, *Indiana Univ Math J* **26**:459):
 
 $$
-\boxed{\delta^2 \mathcal{F}_0(\Gamma)[f, f] = \sigma \int_\Gamma \left( |\nabla_\Gamma f|^2 - \lvert A \rvert^2 f^2 \right) d\mathcal{H}^{d-1},}
+\boxed{\delta^2 \mathcal{F}_0(\Gamma)[f, f] = \sigma \int_\Gamma \left( \vert \nabla_\Gamma f\vert ^2 - \lvert A \rvert^2 f^2 \right) d\mathcal{H}^{d-1},}
 $$
 
 where `∇_Γ` is the surface gradient (intrinsic gradient on `Γ`) and `|A|²` is the squared norm of the second fundamental form (sum of squared principal curvatures).
@@ -431,13 +431,13 @@ Each is a substantive proof obligation, justifying Cat B status.
 **van Gennip & Bertozzi 2012** (*SIAM J. Imaging Sci.* **5**:1115). Theorem 4.1: for sequence of graphs `{G_n}` approximating continuum domain `Ω` with mesh size `h_n → 0`, the discrete graph TV functional Γ-converges (after rescaling) to the continuum TV functional:
 
 $$
-\mathrm{TV}_{G_n}(u) = \sum_{(i,j) \in E_n} w_{ij} \lvert u_i - u_j \rvert \quad \xrightarrow[n \to \infty]{\Gamma} \quad \mathrm{TV}_\Omega(u) = \int_\Omega |\nabla u|\, dx.
+\mathrm{TV}_{G_n}(u) = \sum_{(i,j) \in E_n} w_{ij} \lvert u_i - u_j \rvert \quad \xrightarrow[n \to \infty]{\Gamma} \quad \mathrm{TV}_\Omega(u) = \int_\Omega \vert \nabla u\vert \, dx.
 $$
 
 For the **squared TV / Dirichlet form** (relevant to SCC `α u^T L_G u`):
 
 $$
-\sum_{(i,j) \in E_n} w_{ij} (u_i - u_j)^2 / h_n^{d-2} \quad \xrightarrow[n \to \infty]{\Gamma} \quad \int_\Omega |\nabla u|^2\, dx,
+\sum_{(i,j) \in E_n} w_{ij} (u_i - u_j)^2 / h_n^{d-2} \quad \xrightarrow[n \to \infty]{\Gamma} \quad \int_\Omega \vert \nabla u\vert ^2\, dx,
 $$
 
 under suitable scaling (van Gennip-Bertozzi 2012 §5; Chambolle-Giacomini-Lussardi 2014, *Math Models Methods Appl Sci* **24**:847, full graph-based Modica-Mortola).

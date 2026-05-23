@@ -80,7 +80,7 @@ $$
 :=
 \left\{
 u : X_t \to [0,1]
-\;\middle|\;
+\;\middle\vert \;
 \sum_{x \in X_t} u(x) = m
 \right\},
 \qquad m \in (0, \lvert X_t \rvert).
@@ -129,7 +129,7 @@ $$
 \left\{
 \mathbf u = (u^{(1)}, \dots, u^{(K_{\mathrm{field}})})
 \in [0,1]^{K_{\mathrm{field}} \times X_t}
-\;\middle|\;
+\;\middle\vert \;
 \sum_{j=1}^{K_{\mathrm{field}}} \sum_{x \in X_t} u^{(j)}(x) = M,
 \;\;
 \sum_{j=1}^{K_{\mathrm{field}}} u^{(j)}(x) \le 1

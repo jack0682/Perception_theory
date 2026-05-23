@@ -53,7 +53,7 @@ CV-1.15 canonical state (sealed in morning Track 1) is unchanged by this extensi
 3. **OP-HMORSE-SBM numerical robustness extension** (1 session, originally Tier 1 in morning summary). Extend `exp_hmorse_broadness_full_spectrum.py` to SBM, barbell, small-world graphs. Now serves as **robustness check** rather than blocker validation.
 
 ### Tier 3 — Cat A path (now easier)
-4. **L-HMORSE-LOCAL Cat A** via OP-HMORSE-LOCAL-A (2 sessions, revised down from 4–8 in morning estimate). Requires: (a) (C2′) active-set treatment (Tier 1 #2 above), (b) sharper residual bound using $|\sigma''(z)| \to 0$ at saturated nodes (per `43_*.md §3.3`).
+4. **L-HMORSE-LOCAL Cat A** via OP-HMORSE-LOCAL-A (2 sessions, revised down from 4–8 in morning estimate). Requires: (a) (C2′) active-set treatment (Tier 1 #2 above), (b) sharper residual bound using $\vert \sigma''(z)\vert \to 0$ at saturated nodes (per `43_*.md §3.3`).
 
 ### Tier 4 — Follow-ups
 5. **Round 4 Explore alignment audit** (Rule R5; 0.5 session). Fresh-context Explore agent to verify Track 2 + extension lemmas don't duplicate canonical/working content. *Lower priority now* given CV114 audit (2026-05-11) already establishes the structural facts.

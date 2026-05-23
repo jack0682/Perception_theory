@@ -25,7 +25,7 @@ Multi-formation metastability requires *barrier crossing* — but at zero temper
 
 **Definition candidate.** Let $\Phi_\mathrm{obs}: \Sigma_M \to \mathcal{O}$ be the observation likelihood (canonical §2.4 LM1–LM3). Define:
 $$T_*^{(\mathrm{Fisher})} := \big[\mathrm{tr}\,\mathcal{I}(u^*)\big]^{-1},$$
-where $\mathcal{I}(u^*) = -\mathbb{E}\big[\nabla^2_u \log p(\mathfrak{O}|u)\big]_{u=u^*}$ is the Fisher information matrix of $\Phi_\mathrm{obs}$ at the formation $u^*$.
+where $\mathcal{I}(u^*) = -\mathbb{E}\big[\nabla^2_u \log p(\mathfrak{O}\vert u)\big]_{u=u^*}$ is the Fisher information matrix of $\Phi_\mathrm{obs}$ at the formation $u^*$.
 
 **Tool:** Cramér-Rao bound + Bayesian-frequentist duality. The Fisher info gives the *minimum variance* of any unbiased estimator of $u$ from $\mathfrak{O}$; its inverse is naturally a temperature scale.
 
@@ -36,7 +36,7 @@ where $\mathcal{I}(u^*) = -\mathbb{E}\big[\nabla^2_u \log p(\mathfrak{O}|u)\big]
 ### §2.2 Angle 2 — Renormalization group / coarse-graining
 
 **Definition candidate.** Let $\mathcal{H}(u^*)$ be the formation Hessian. Decompose its eigenvalues into "slow" ($\mu_k \leq \Lambda$) and "fast" ($\mu_k > \Lambda$) modes for some cutoff $\Lambda$. Trace out fast modes:
-$$T_*^{(\mathrm{RG})} := \frac{1}{|\mathrm{fast}|}\sum_{k:\,\mu_k > \Lambda} \mu_k^{-1}.$$
+$$T_*^{(\mathrm{RG})} := \frac{1}{\vert \mathrm{fast}\vert}\sum_{k:\,\mu_k > \Lambda} \mu_k^{-1}.$$
 This is the *average inverse fast-mode curvature* — naturally interpreted as the variance of fluctuations along fast directions when slow modes are fixed.
 
 **Tool:** Wilsonian RG + Gaussian fluctuation analysis. Equilibrium fluctuations along fast modes have variance $\sim 1/\mu_k$ at thermal equilibrium with unit temperature; integrating these out gives effective noise on slow modes.
@@ -126,7 +126,7 @@ This is the optimal "effective temperature" trading off energy gain vs. fluctuat
 
 **1 vs 2 (Fisher vs RG):** *Compatible.* Fisher info matrix at formation = restriction of full Hessian to slow modes (since slow modes determine the formation identity); inverse = $T_*^{(\mathrm{RG})}$ on slow subspace. **Consistency relation:** $T_*^{(\mathrm{Fisher})} \approx T_*^{(\mathrm{RG, slow})}$ when observation channel resolves only slow modes.
 
-**1 vs 3 (Fisher vs DB):** *Conditionally compatible.* Detailed balance + Bayesian posterior gives Cramér-Rao: $\mathrm{Var}(\hat u | \mathfrak{O}) \geq \mathcal{I}^{-1}$. Saturation requires Gaussian likelihood — true asymptotically.
+**1 vs 3 (Fisher vs DB):** *Conditionally compatible.* Detailed balance + Bayesian posterior gives Cramér-Rao: $\mathrm{Var}(\hat u \vert \mathfrak{O}) \geq \mathcal{I}^{-1}$. Saturation requires Gaussian likelihood — true asymptotically.
 
 **2 vs 3 (RG vs DB):** *Compatible if H-theorem holds.* RG gives effective Brownian noise on slow modes; if this noise has time-reversal symmetry (Onsager regression), detailed balance holds with $T_* = T_*^{(\mathrm{RG, slow})}$.
 
@@ -163,9 +163,9 @@ $$T_* \;:=\; \mathrm{tr}\!\big[\mathcal{I}(u^*)\big]^{-1} \;=\; \frac{1}{\sum_k 
 
 ### §4.2 Proof sketch
 
-1. By LM1–LM3, $\Phi_\mathrm{obs}(\mathfrak{O}|u) = \prod_v \mathrm{Bern}(\sigma(\Phi(u(v))))$ (or similar; cf. T-K-Select-OBS canonical likelihood §2.4). The log-likelihood is $\log p(\mathfrak{O}|u) = \sum_v \log \mathrm{Bern}(\sigma(\Phi(u(v))))$.
+1. By LM1–LM3, $\Phi_\mathrm{obs}(\mathfrak{O}\vert u) = \prod_v \mathrm{Bern}(\sigma(\Phi(u(v))))$ (or similar; cf. T-K-Select-OBS canonical likelihood §2.4). The log-likelihood is $\log p(\mathfrak{O}\vert u) = \sum_v \log \mathrm{Bern}(\sigma(\Phi(u(v))))$.
 
-2. Fisher information $\mathcal{I}(u) = -\mathbb{E}[\nabla^2_u \log p(\mathfrak{O}|u)]$. For Bernoulli-sigmoid likelihood: $\mathcal{I}(u) = \mathrm{diag}(\sigma'(\Phi(u))^2 \Phi'(u)^2 / [\sigma(\Phi(u))(1-\sigma(\Phi(u)))])$.
+2. Fisher information $\mathcal{I}(u) = -\mathbb{E}[\nabla^2_u \log p(\mathfrak{O}\vert u)]$. For Bernoulli-sigmoid likelihood: $\mathcal{I}(u) = \mathrm{diag}(\sigma'(\Phi(u))^2 \Phi'(u)^2 / [\sigma(\Phi(u))(1-\sigma(\Phi(u)))])$.
 
 3. At the formation $u^*$ where $\Phi(u^*)$ is large (deep core, $u^* \approx 1$): $\sigma(\Phi(u^*)) \approx 1$, $\sigma'(\Phi(u^*)) \approx 0$, so Fisher info contribution is small at deep core.
 

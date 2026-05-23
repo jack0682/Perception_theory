@@ -41,7 +41,7 @@ archive_pattern_match: 6/6 (측면 R + 측면 G 모두; V-AFD/R-2 와 동일 패
 **왜 가장 시급**: 결정 C 가 채택된 이상 *통찰의 진짜 수학적 진척* 은 *canonical 내부 작업* 으로 이동. CV-1.16 SEAL (2026-05-14) 직후의 *직접 후속 작업* 이며 *L-HMORSE-LOCAL Cat B → Cat A 승급* 을 통해 (a) DECL-1.0 Q3 closure path (Package II 진입) 를 열고, (b) 통찰의 "응집된 구조의 *위상 안정성*" 측면의 *진짜 수학* 을 산출.
 
 **구체 작업**:
-1. **Sub-task A** (sharper residual bound): $|\sigma''(z(u^*))| \to 0$ at saturated nodes 를 사용해 L-HMORSE-LOCAL 의 *closure-component 잔차 bound* 를 sharpen — 현재 worst-case $|\sigma''|_{\max}$ bound 가 numerical 대비 ~10^4× 느슨함 (`CV-1.16_SEAL.md §"Non-Overclaim"`).
+1. **Sub-task A** (sharper residual bound): $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes 를 사용해 L-HMORSE-LOCAL 의 *closure-component 잔차 bound* 를 sharpen — 현재 worst-case $\vert \sigma''\vert _{\max}$ bound 가 numerical 대비 ~10^4× 느슨함 (`CV-1.16_SEAL.md §"Non-Overclaim"`).
 2. **Sub-task B** (OP-HMORSE-SBM): `CODE/experiments/exp_hmorse_local_sbm_sweep.py` 를 작성해 SBM / barbell / small-world graph classes 에서 robustness 검증. 5/14 99_summary 의 권장 작업과 동일.
 
 **예상 결과**: L-HMORSE-LOCAL Cat A unconditional 승급 + Package II Cat B 진입 직접 가능.

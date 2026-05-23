@@ -277,7 +277,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 ### §B.1.6 OP-HMORSE-LOCAL-A (L-HMORSE-LOCAL Cat B → Cat A)
 
 - **Status**: OPEN (W7 Day 4 target)
-- **Cat target**: Cat A (sharper residual via $|\sigma''(z(u^*))|$ saturation)
+- **Cat target**: Cat A (sharper residual via $\vert \sigma''(z(u^*))\vert $ saturation)
 - **Sub-tasks**: A (analytic primary), B (numerical robustness OP-HMORSE-SBM)
 - **위치**: §14.1 OP catalog
 - **Priority**: HIGH (Package II Eyring-Kramers prereq)
@@ -340,7 +340,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 - **위치**: 03_T_star §1.3 + §6 multiplicity OPEN
 - **Cat**: Cat B 후보 sketch (existence Cat A 후보 separate)
-- **Sketch**: $|\mathcal{B}_{T_*}^{\mathrm{FP}}|$ as function of $\Theta \in \mathcal{R}_{\mathrm{post}}$
+- **Sketch**: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert $ as function of $\Theta \in \mathcal{R}_{\mathrm{post}}$
 - **Required work**: $\beta/\alpha$ scan with explicit fixed-point counting
 
 ### §B.2.4 Brouwer L1 Quantitative TV Bound (T_*)
@@ -382,7 +382,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 - **위치**: §5.10
 - **Cat**: Cat C SKETCH (canonical 부분 정의)
-- **Sketch**: $(\lvert C \rvert, |\partial C|, \chi(C), \ldots)$ per-PersComp
+- **Sketch**: $(\lvert C \rvert, \vert \partial C\vert, \chi(C), \ldots)$ per-PersComp
 - **Required work**: Canonical normalization + invariant detection
 
 ---

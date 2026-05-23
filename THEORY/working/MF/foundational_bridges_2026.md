@@ -111,7 +111,7 @@ The SCC analog says: the **first pitchfork bifurcation** in the σ-framework dep
 **NQ-262 (Cat BC, W6+ 4-6 weeks):** *State and prove "σ at first pitchfork depends on local automorphism structure $\mathrm{Aut}(G)_{u^*}$ only"; reframe Theorem 2-G as a "locality theorem in σ-framework."*
 
 - Step 1: Define **local automorphism stabilizer**: $\mathrm{Aut}(G)_{u^*} := \{\phi \in \mathrm{Aut}(G) : \phi^* u^* = u^*\}$ at the would-be minimizer $u^*$.
-- Step 2: Show that the first pitchfork mode (the eigenvector of $\nabla^2 \mathcal{E}|_{u^*}$ with smallest eigenvalue crossing zero) is determined by an irreducible representation of $\mathrm{Aut}(G)_{u^*}$ (Tool A2 quotient picture).
+- Step 2: Show that the first pitchfork mode (the eigenvector of $\nabla^2 \mathcal{E}\vert _{u^*}$ with smallest eigenvalue crossing zero) is determined by an irreducible representation of $\mathrm{Aut}(G)_{u^*}$ (Tool A2 quotient picture).
 - Step 3: Formulate **σ-locality theorem**: two graphs $G_1, G_2$ with isomorphic stabilizers $\mathrm{Aut}(G_1)_{u_1^*} \cong \mathrm{Aut}(G_2)_{u_2^*}$ have identical σ-tuples at the first pitchfork.
 - Step 4: Verify on R23 (D₄ symmetry) vs 1D cycle (Z_n symmetry) vs 2D torus (Z_n × Z_n symmetry).
 

@@ -98,7 +98,7 @@ where each $C_i^t$ is a maximally cohesive connected component of
 $\{x \in \mathcal{P}_t : u_t(x) \geq \rho_\mathrm{pers}\}$ that is stable under $\pm\tau$
 perturbation of the threshold (D-ST-3, canonical definition).
 
-$K_t = K_\mathrm{act}(u_t) = |\mathrm{PersComp}(u_t)|$ is a derived observable, not a primitive.
+$K_t = K_\mathrm{act}(u_t) = \vert \mathrm{PersComp}(u_t)\vert $ is a derived observable, not a primitive.
 
 Similarly at time $s$:
 $$\mathrm{PersComp}(u_s) = \{C_1^s, \ldots, C_{K_s}^s\}$$
@@ -188,7 +188,7 @@ where:
   identifications).
 - $c(x,y)$: transport cost, fingerprint-based: $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}\lVert x - y \rVert^2$.
 
-In compact notation using the restricted plan $\gamma_{ij} = M_{t \to s}|_{C_i^t \times C_j^s}$:
+In compact notation using the restricted plan $\gamma_{ij} = M_{t \to s}\vert _{C_i^t \times C_j^s}$:
 $$S_{ij}^0 = \lambda_m \langle \mathbf{1}, \gamma_{ij} \rangle - \lambda_c \langle c, \gamma_{ij} \rangle$$
 
 ### §4.2 Full score (with $\sigma$-terms; deferred to OP-0008)
@@ -351,7 +351,7 @@ Proof: one-component case has $\tilde{S}_{11}^0 = S_{11}^0 / m_1^t$; $S_{11}^0 =
 
 **Definition 6.2** (Kernel-dependence constant). For two E1–E4-admissible plans $M$, $M'$,
 define:
-$$\epsilon_\mathrm{kernel} = \max_{i,j} |\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)|$$
+$$\epsilon_\mathrm{kernel} = \max_{i,j} \vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert $$
 
 The margin condition (b) ensures unique argmax when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$.
 Bounding $\epsilon_\mathrm{kernel}$ is the component-level analogue of the transport confinement
@@ -409,7 +409,7 @@ This is a site-level bound. It restricts how far any E1–E4-admissible plan can
 reference plan in field space.
 
 Step 2 (component level, open): Lift to component transport mass:
-$$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$$
+$$\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$$
 
 Candidate approach: Use the site-level confinement bound + covering argument. If all plans agree
 on the field to within $C_\mathrm{conf}\sqrt{m}$ pointwise, then component-level mass differences

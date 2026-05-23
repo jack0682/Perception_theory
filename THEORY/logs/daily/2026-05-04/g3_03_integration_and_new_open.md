@@ -163,7 +163,7 @@ These are questions that G3 does *not* answer but became visible during its cons
 
 ### NQ-G3-1. Stability of "439/1920" under ε perturbation
 
-**Question.** The L1-I "439/1920 = 22.9% feasible" empirical claim is computed at exactly $\epsilon = 0.225$. How does the FEASIBLE_WITH_BUDGET fraction change under ε perturbations? Specifically: what is the function $f(\epsilon) = |\{c \in \text{1920 configs} : c \in \text{FEASIBLE\_WITH\_BUDGET}(\epsilon)\}| / 1920$ for $\epsilon \in [0.01, 1.0]$?
+**Question.** The L1-I "439/1920 = 22.9% feasible" empirical claim is computed at exactly $\epsilon = 0.225$. How does the FEASIBLE_WITH_BUDGET fraction change under ε perturbations? Specifically: what is the function $f(\epsilon) = \vert \{c \in \text{1920 configs} : c \in \text{FEASIBLE\_WITH\_BUDGET}(\epsilon)\}\vert / 1920$ for $\epsilon \in [0.01, 1.0]$?
 
 **Severity.** Low-Medium. Practical informativeness: which ε values make the L1-J regime "robustly large" vs "marginally non-empty" vs "vacuous"?
 
@@ -203,7 +203,7 @@ These are questions that G3 does *not* answer but became visible during its cons
 
 ### NQ-G3-6. Cross-ε consistency between K_act and $K_{\mathrm{soft}}^\phi$ (for L-M)
 
-**Question.** L-M corollary (per `logs/daily/2026-05-03/02_L1M_proof_development.md`) bounds $|K_{\mathrm{soft}}^\phi(U) - K_{\mathrm{act}}^\epsilon(\mathbf{u})|$ for $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$. The bound depends on $\ell_{\min}$ (envelope threshold) and $\epsilon$ (K_act threshold). Are these two thresholds independently tunable, or is there a natural coupling (e.g., $\ell_{\min} = c_1 \cdot \epsilon$)?
+**Question.** L-M corollary (per `logs/daily/2026-05-03/02_L1M_proof_development.md`) bounds $\vert K_{\mathrm{soft}}^\phi(U) - K_{\mathrm{act}}^\epsilon(\mathbf{u})\vert $ for $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$. The bound depends on $\ell_{\min}$ (envelope threshold) and $\epsilon$ (K_act threshold). Are these two thresholds independently tunable, or is there a natural coupling (e.g., $\ell_{\min} = c_1 \cdot \epsilon$)?
 
 **Severity.** Low-Medium. Connects to L-M's working-file structure; not blocking.
 

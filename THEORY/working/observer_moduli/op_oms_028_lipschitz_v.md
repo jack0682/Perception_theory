@@ -28,7 +28,7 @@ Classification: **PROVED** with explicit constant.
 $$M_i := \sup_{u \in \Omega} \lvert E_i(u; X_t) \rvert, \quad i \in \{cl, sep, bd, tr\}, \qquad M := (M_{cl}, M_{sep}, M_{bd}, M_{tr}).$$
 Then for all $\lambda, \lambda' \in \Delta^3$:
 
-$$|v(\lambda) - v(\lambda')| \le \lVert M \rVert_\infty \cdot \lVert \lambda - \lambda' \rVert_1 \quad \text{and} \quad |v(\lambda) - v(\lambda')| \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2.$$
+$$\vert v(\lambda) - v(\lambda')\vert \le \lVert M \rVert_\infty \cdot \lVert \lambda - \lambda' \rVert_1 \quad \text{and} \quad \vert v(\lambda) - v(\lambda')\vert \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2.$$
 
 In particular $v$ is **globally** Lipschitz on $\Delta^3$ with constant
 $L_2 := \lVert M \rVert_2$ (Euclidean norm) and $L_\infty := \lVert M \rVert_\infty$
@@ -42,29 +42,29 @@ For each fixed $u \in \Omega$, $L_u(\lambda) := E_\lambda(u) = \sum_{i} \lambda_
 is **affine** in $\lambda$ with gradient $\nabla_\lambda L_u = (E_{cl}, E_{sep}, E_{bd}, E_{tr})(u) =: E(u) \in \mathbb{R}^4$.
 Hence
 
-$$|L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u),\ \lambda - \lambda' \rangle|.$$
+$$\vert L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u),\ \lambda - \lambda' \rangle\vert.$$
 
 The infimum-of-affine value function $v(\lambda) = \inf_{u \in \Omega} L_u(\lambda)$
 satisfies, for any $\lambda, \lambda'$:
 
-$$|v(\lambda) - v(\lambda')| = \left| \inf_u L_u(\lambda) - \inf_u L_u(\lambda') \right| \le \sup_u |L_u(\lambda) - L_u(\lambda')|.$$
+$$\vert v(\lambda) - v(\lambda')\vert = \left\vert \inf_u L_u(\lambda) - \inf_u L_u(\lambda') \right\vert \le \sup_u \vert L_u(\lambda) - L_u(\lambda')\vert.$$
 
 (This standard inequality holds because for any $\epsilon > 0$, there is $u_\epsilon$
 with $L_{u_\epsilon}(\lambda) \le v(\lambda) + \epsilon$, and then
 $v(\lambda') \le L_{u_\epsilon}(\lambda') = L_{u_\epsilon}(\lambda) + (L_{u_\epsilon}(\lambda') - L_{u_\epsilon}(\lambda))
 \le v(\lambda) + \epsilon + |L_{u_\epsilon}(\lambda') - L_{u_\epsilon}(\lambda)|
 \le v(\lambda) + \epsilon + \sup_u |L_u(\lambda) - L_u(\lambda')|$;
-by symmetry and $\epsilon \to 0$, $|v(\lambda') - v(\lambda)| \le \sup_u |L_u(\lambda) - L_u(\lambda')|$.)
+by symmetry and $\epsilon \to 0$, $\vert v(\lambda') - v(\lambda)\vert \le \sup_u \vert L_u(\lambda) - L_u(\lambda')\vert $.)
 
 For each $u$, by Cauchy–Schwarz / Hölder:
-$$|L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u), \lambda - \lambda'\rangle| \le \lVert E(u) \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$$
+$$\vert L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u), \lambda - \lambda'\rangle\vert \le \lVert E(u) \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$$
 $$\quad \text{and} \quad \le \lVert E(u) \rVert_\infty \cdot \lVert \lambda - \lambda' \rVert_1.$$
 
 Taking the supremum over $u \in \Omega$:
 $$\sup_u \lVert E(u) \rVert_2 = \sup_u \sqrt{\sum_i E_i(u)^2} \le \sqrt{\sum_i M_i^2} = \lVert M \rVert_2,$$
 $$\sup_u \lVert E(u) \rVert_\infty = \max_i \sup_u \lvert E_i(u) \rvert = \max_i M_i = \lVert M \rVert_\infty.$$
 
-Combining: $|v(\lambda) - v(\lambda')| \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$ and the $\ell_1$ version. $\square$
+Combining: $\vert v(\lambda) - v(\lambda')\vert \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$ and the $\ell_1$ version. $\square$
 
 ---
 

@@ -165,7 +165,7 @@ $\blacksquare$
 
 $N = \lvert X_j \rvert$로 하면:
 
-$$\left|c_{i\to k}^{\varepsilon}(x,z) - c_{i\to k}^{\mathrm{act}}(x,z)\right| \leq \varepsilon\log|X_j|$$
+$$\left\vert c_{i\to k}^{\varepsilon}(x,z) - c_{i\to k}^{\mathrm{act}}(x,z)\right\vert \leq \varepsilon\log\vert X_j\vert $$
 
 $\varepsilon \to 0$ 시 수렴: $c_{i\to k}^{\varepsilon} \to c_{i\to k}^{\mathrm{act}}$.
 

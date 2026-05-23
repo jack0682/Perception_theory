@@ -851,7 +851,7 @@ $$
 로 둔다. active set을 $A^\varepsilon(\mathbf u)$, active count를
 
 $$
-K_{\mathrm{act}}^\varepsilon(\mathbf u)=|A^\varepsilon(\mathbf u)|
+K_{\mathrm{act}}^\varepsilon(\mathbf u)=\vert A^\varepsilon(\mathbf u)\vert 
 $$
 
 로 둔다. aggregate field의 dominant hard-bar count를
@@ -1308,11 +1308,11 @@ L1-M은 이 위에 soft count를 얹어야 한다.
 목표는 다음 형태일 가능성이 높다.
 
 $$
-\left|
+\left\vert 
 K_{\mathrm{soft}}^\phi(U)
 -
 K_{\mathrm{bar}}^{\ell_{\min}}(U)
-\right|
+\right\vert 
 \le
 \text{controlled error}(\phi,\ell_{\min},\text{bar margins}).
 $$
@@ -1320,11 +1320,11 @@ $$
 그리고 T-L1-F를 대입하면 다음과 같은 corollary가 된다.
 
 $$
-\left|
+\left\vert 
 K_{\mathrm{soft}}^\phi(U)
 -
 K_{\mathrm{act}}^\varepsilon(\mathbf u)
-\right|
+\right\vert 
 \le
 \text{controlled error}.
 $$

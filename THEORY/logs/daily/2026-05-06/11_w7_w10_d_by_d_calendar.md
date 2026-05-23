@@ -153,7 +153,7 @@ Hours in () are estimates; "–" = no output file (planning only).
 - `THEORY/logs/daily/2026-05-22/01_nq_st1_hessian_verification.md` [NQ]
 
 ### W9 D3 (May 23) — OP-0008 Path B + σ^A K-Jump Under P-F
-**Primary:** [W] OP-0008 Path B formulation: $P(\sigma^A_\mathrm{new} | \text{K-jump from } [\hat{\mathbf{u}}])$ as Gibbs-weighted saddle average.
+**Primary:** [W] OP-0008 Path B formulation: $P(\sigma^A_\mathrm{new} \vert \text{K-jump from } [\hat{\mathbf{u}}])$ as Gibbs-weighted saddle average.
 **Secondary:** σ-rich + Φ-rich combined formalism start.
 **Effort:** ~3h.
 **Output:**

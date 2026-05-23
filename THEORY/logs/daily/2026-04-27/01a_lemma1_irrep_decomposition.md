@@ -21,7 +21,7 @@
 > $$H(u^*) := \pi_{\mathbf{1}^\perp}\,\nabla^2\mathcal{E}(u^*)\,\pi_{\mathbf{1}^\perp},\qquad \pi_{\mathbf{1}^\perp} = I - \tfrac{1}{n}\mathbf{1}\mathbf{1}^\top,$$
 > commutes with the $G_u$-action: $H(u^*)\,\rho(\pi) = \rho(\pi)\,H(u^*)$ for all $\pi \in G_u$, where $\rho(\pi)$ is the permutation representation restricted to $\mathbf{1}^\perp$.
 >
-> **(iii)** Each Hessian eigenspace $V_k := \ker(H(u^*) - \lambda_k I)|_{\mathbf{1}^\perp}$ is $G_u$-invariant and decomposes canonically into isotypic components
+> **(iii)** Each Hessian eigenspace $V_k := \ker(H(u^*) - \lambda_k I)\vert _{\mathbf{1}^\perp}$ is $G_u$-invariant and decomposes canonically into isotypic components
 > $$V_k \;=\; \bigoplus_{[\rho] \in \widehat{G_u}} V_k^{[\rho]},\qquad V_k^{[\rho]} := P_{[\rho]} V_k,\quad P_{[\rho]} := \frac{\dim\rho}{\lvert G_u \rvert}\sum_{\pi \in G_u}\overline{\chi_\rho(\pi)}\,\rho_{\mathrm{reg}}(\pi),$$
 > where $\widehat{G_u}$ is the set of irreducible-representation isomorphism classes of $G_u$, $\chi_\rho$ is the character of $[\rho]$, and $\rho_{\mathrm{reg}}$ is the regular representation. The multi-set $\{(\dim V_k^{[\rho]}, [\rho])\}_{[\rho] \in \widehat{G_u}}$ is canonical (independent of basis choice).
 >
@@ -85,7 +85,7 @@ the **isotypic decomposition** with multiplicities $m_\rho \geq 0$.
 By Step 2, $H(u^*)$ commutes with $G_u$. Schur's lemma applied to each isotypic component implies $H(u^*)$ preserves each $W^{[\rho]}$:
 $$H(u^*) \, W^{[\rho]} \subseteq W^{[\rho]}.$$
 
-Therefore each Hessian eigenspace $V_k = \ker(H(u^*) - \lambda_k I)|_{\mathbf{1}^\perp}$ also decomposes:
+Therefore each Hessian eigenspace $V_k = \ker(H(u^*) - \lambda_k I)\vert _{\mathbf{1}^\perp}$ also decomposes:
 $$V_k = \bigoplus_{[\rho] \in \widehat{G_u}} V_k^{[\rho]},\qquad V_k^{[\rho]} = V_k \cap W^{[\rho]} = P_{[\rho]} V_k,$$
 where the **isotypic projector** is the standard formula
 $$P_{[\rho]} = \frac{\dim\rho}{\lvert G_u \rvert} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \cdot \rho_{\mathrm{reg}}(\pi)$$

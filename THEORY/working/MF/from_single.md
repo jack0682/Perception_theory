@@ -54,7 +54,7 @@ See `logs/daily/2026-04-22/02_development.md` §5.2. Key steps:
 
 1. **Eigenbasis decomposition** near $u_{\mathrm{uniform}}$: $u(x,t) = c + \sum_k a_k(t)\phi_k(x)$, with $\dot a_k = -\mu_k a_k + O(a^2)$ from the linearized Euler-Lagrange.
 2. **Exponential growth of unstable modes**: modes in $\mathcal{S}_u = \{k : \mu_k < 0\}$ saturate at nonlinear order; stable modes decay.
-3. **Characteristic wavelength selection**: among the $N_{\mathrm{unst}}$ unstable modes, the most-unstable direction has the largest $|\mu_k|$; in saturation, the characteristic spatial wavelength is $\lambda_{\mathrm{char}} \sim L/(k^\ast)$ where $k^\ast$ is the mode-index radius in spectrum space.
+3. **Characteristic wavelength selection**: among the $N_{\mathrm{unst}}$ unstable modes, the most-unstable direction has the largest $\vert \mu_k\vert $; in saturation, the characteristic spatial wavelength is $\lambda_{\mathrm{char}} \sim L/(k^\ast)$ where $k^\ast$ is the mode-index radius in spectrum space.
 4. **Counting bumps**: number of wavelengths fitting in the domain $= L/\lambda_{\mathrm{char}} \sim (\text{radius in mode space})$. On a $d_{\mathrm{eff}}$-dimensional grid, $N_{\mathrm{unst}} \sim R^{d_{\mathrm{eff}}}$ gives $R = N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}}$. So $\widehat{K} \sim R = N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}}$.
 
 ### 2.3 Graph-class instances
@@ -217,7 +217,7 @@ Dimension analysis: $\sqrt{\beta/\alpha} = 1/\xi_0$ — **backwards**. Round 13 
 
 > **Claim 5.1 (three timescales).** A generic SCC trajectory starting near $u_{\mathrm{uniform}}$ with small noise passes through:
 >
-> - **(a) Emergence** $t \in [0, t_{\mathrm{emerge}}]$: $u_{\mathrm{uniform}}$ saturates into $\widehat{K}$ formations via Fiedler-mode instability. $t_{\mathrm{emerge}} = \ln(1/\sigma_0)/|\mu_{\min}|$.
+> - **(a) Emergence** $t \in [0, t_{\mathrm{emerge}}]$: $u_{\mathrm{uniform}}$ saturates into $\widehat{K}$ formations via Fiedler-mode instability. $t_{\mathrm{emerge}} = \ln(1/\sigma_0)/\vert \mu_{\min}\vert $.
 >
 > - **(b) Metastable plateau** $t \in [t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$: $K_{\mathrm{soft}}(u(t)) \approx \widehat{K}$. At $T=0$, $t_{\mathrm{coarsen}} = \infty$; at $T>0$, $t_{\mathrm{coarsen}} = \tau_0\exp(\Delta\mathcal{F}/T)$ (Kramers, `working/E/M1_dissolution.md` §3).
 >

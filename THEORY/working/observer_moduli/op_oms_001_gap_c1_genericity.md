@@ -65,7 +65,7 @@ Let $\Lambda^{\mathrm{reg}}$ be connected (or restrict to a connected component)
 
 $$r(\lambda) := \mathrm{rank}\,G_T(u^*(\lambda); X_t) \in \{0, 1, 2, 3, 4\}.$$
 
-Equivalently, $r(\lambda) \ge 3$ iff there exists a $3 \times 3$ minor $\det\, G_T^{(\alpha, \beta)}(\lambda) \ne 0$, where $\alpha \subset \{1, \ldots, n-1\}$ has $|\alpha| = 3$ and $\beta \subset \{1, 2, 3, 4\}$ has $|\beta| = 3$.
+Equivalently, $r(\lambda) \ge 3$ iff there exists a $3 \times 3$ minor $\det\, G_T^{(\alpha, \beta)}(\lambda) \ne 0$, where $\alpha \subset \{1, \ldots, n-1\}$ has $\vert \alpha\vert = 3$ and $\beta \subset \{1, 2, 3, 4\}$ has $\vert \beta\vert = 3$.
 
 There are $\binom{n-1}{3} \cdot \binom{4}{3} = 4 \binom{n-1}{3}$ such minors. Each is a real-analytic function of $\lambda$ on $\Lambda^{\mathrm{reg}}$ (Corollary G3 + analyticity of det).
 
@@ -131,7 +131,7 @@ The remaining residual is the non-generic subset (closed nowhere-dense, measure-
 
 ### Corollary G8 (Density extension). [PROVED]
 
-If $g : \Delta^3 \to \Delta^3$ is continuous and $g\bigr|_U = \mathrm{id}_U$ for a dense subset $U$, then $g = \mathrm{id}$.
+If $g : \Delta^3 \to \Delta^3$ is continuous and $g\bigr\vert _U = \mathrm{id}_U$ for a dense subset $U$, then $g = \mathrm{id}$.
 
 *Proof.* Continuity + density: for $\lambda \in \Delta^3$, take a sequence $\lambda_n \in U$ with $\lambda_n \to \lambda$. Then $g(\lambda) = \lim g(\lambda_n) = \lim \lambda_n = \lambda$. $\square$
 

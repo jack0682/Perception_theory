@@ -81,7 +81,7 @@ Each row: (Theory/Concept, Original Role, New Framework Position, Disposition, R
 | 24 | MFPT formula | Mean first passage time to K-basin escape | G (effective dynamics) | **Maintain; distinguish 3 types** | OP-0008, OP-0011 | MFPT conflated across K-escape/persistence/transport |
 | 25 | Transport kernel $M_{t \to s}$ | Temporal transport / inheritance | D (prior) for temporal coherence | **Redefine role** as field-support transport | OP-0011 | $M_{t \to s}$ as object-level matching vs. field transport |
 | 26 | Diagnostic vector $\mathbf{d} = (\mathrm{Bind}, \mathrm{Sep}, \mathrm{Inside}, \mathrm{Persist})$ | 4D quality summary | F (derived observable) | **Maintain** | — | None |
-| 27 | Boundary band $B_t$ | $D_t$-threshold based boundary | F + D interface | **Redefine** as gradient ridge of $|\nabla_{\mathcal{P}_t}\tilde{u}_t|$ | OP-0006 | Threshold boundary unstable under gauge/scale changes |
+| 27 | Boundary band $B_t$ | $D_t$-threshold based boundary | F + D interface | **Redefine** as gradient ridge of $\vert \nabla_{\mathcal{P}_t}\tilde{u}_t\vert $ | OP-0006 | Threshold boundary unstable under gauge/scale changes |
 | 28 | Persistent homology / $H_0$ | Formation count via death-birth persistence | F (topological observable) | **Promote; connect to $K_{\mathrm{act}}$ definition** | — | 2-parameter ($\theta, \ell$) filtration not yet canonical |
 | 29 | $T$-Merge (b) — noiseless $K_{\mathrm{act}} \searrow$ | Monotone decreasing $K_{\mathrm{act}}$ under noiseless flow | G ($T \to 0$ limit) | **Maintain; recovered from BO** | OP-0005 | Noiseless $=$ $T=0$ Kramers; not all physical situations |
 | 30 | T-L1-F Hard-Bar / Active-Count Bridge | $K_{\mathrm{bar}} = K_{\mathrm{act}}$ under L1-J regime | F (counting bridge) | **Maintain; layer-A agnostic** | OP-0005 | Conditional on $(P0)$–$(P11)$ hypothesis package |
@@ -117,8 +117,8 @@ Each row: (Theory/Concept, Original Role, New Framework Position, Disposition, R
 | **C: Latent Scene** | $\mathcal{M}_t$ (full 3D scene manifold including occluded), $\mu_t$ (scene measure), $U_t : \mathcal{M}_t \to [0,1]$ (full latent field); $\tilde{u}_t = U_t\big\vert_{\mathcal{P}_t}$ (restriction to visible) |
 | **D: SCC Prior** | $\mathcal{E}_{\mathrm{SCC}} = E_{\mathrm{cl}} + E_{\mathrm{sep}} + E_{\mathrm{bd}} + E_{\mathrm{tr}}$; closure operator $\mathrm{Cl}_t$; distinction $\mathbf{D}_t$; adjacency $\mathbf{N}_t$; double-well $W(u)$; phase-field analogy (Allen-Cahn on $\mathcal{P}_t$ as contrastive comparison); co-belonging $\mathbf{C}_t$ (diagnostic, NOT in prior) |
 | **E: Observation Likelihood** | $\mathcal{L}_{\mathrm{obs}} = E_{\mathrm{photo}}$ (photometric consistency, stereo matching, reprojection); confidence weighting $c(x_L)$; gauge/scale observation variance; $\Pi_{LR}$-based consistency |
-| **F: Topological Observables** | $K_{\mathrm{act}} = \#\pi_0(\{x : \tilde{u}(x) > \varepsilon\})$; boundary band $B_t = $ gradient ridge of $|\nabla_{\mathcal{P}_t}\tilde{u}_t|$; $\sigma$-signature (Commitment 14, static); $\sigma^A$ (dynamic, K-jump conditioned); $T$-L1-F hard-bar bridge; persistent homology / $H_0$ bars; $\mathcal{Q}_{\mathrm{morph}}$; diagnostic vector $\mathbf{d}$; predicate-energy bridge |
-| **G: Effective Slow Dynamics** | $K_{\mathrm{act}}(t)$ Markov jump process; $\Gamma^{K \to K'}(\mathcal{P})$ Kramers rates; $F(K;\mathcal{P})$ effective free energy; $Z_K(\mathcal{P})$ basin partition function; $P_{\mathrm{eq}}(K|\mathcal{P})$ Boltzmann distribution; N-1 asymmetry ($\Delta E_{\mathrm{birth}} > \Delta E_{\mathrm{merger}}$); T-Merge (b) at $T=0$; CN6 (kinetic determination); CN15 (static/dynamic separation); BO time-scale structure |
+| **F: Topological Observables** | $K_{\mathrm{act}} = \#\pi_0(\{x : \tilde{u}(x) > \varepsilon\})$; boundary band $B_t = $ gradient ridge of $\vert \nabla_{\mathcal{P}_t}\tilde{u}_t\vert $; $\sigma$-signature (Commitment 14, static); $\sigma^A$ (dynamic, K-jump conditioned); $T$-L1-F hard-bar bridge; persistent homology / $H_0$ bars; $\mathcal{Q}_{\mathrm{morph}}$; diagnostic vector $\mathbf{d}$; predicate-energy bridge |
+| **G: Effective Slow Dynamics** | $K_{\mathrm{act}}(t)$ Markov jump process; $\Gamma^{K \to K'}(\mathcal{P})$ Kramers rates; $F(K;\mathcal{P})$ effective free energy; $Z_K(\mathcal{P})$ basin partition function; $P_{\mathrm{eq}}(K\vert \mathcal{P})$ Boltzmann distribution; N-1 asymmetry ($\Delta E_{\mathrm{birth}} > \Delta E_{\mathrm{merger}}$); T-Merge (b) at $T=0$; CN6 (kinetic determination); CN15 (static/dynamic separation); BO time-scale structure |
 
 ### Multi-layer entities (decomposed)
 
@@ -271,7 +271,7 @@ Each energy term under the new framework:
 - Role in new framework: measures how far $\tilde{u}$ deviates from its relationally completed form $P\tilde{u}$.
 - Bayesian interpretation: $P(\tilde{u}) \propto \exp(-\lambda_{\mathrm{cl}} E_{\mathrm{cl}})$ is a Gaussian prior on $\tilde{u} - P\tilde{u}$ (pulling $\tilde{u}$ toward closure-fixed-point).
 - Layer D: pure prior. No observation dependence. **CONFIRMED as prior.**
-- Continuum limit on $\mathcal{P}_t$: $E_{\mathrm{cl}} \approx \epsilon^2 \int_{\mathcal{P}_t} |\nabla_{\mathcal{P}_t}\tilde{u}|^2 dA$ (Laplace-Beltrami; graph Laplacian $L$ approximates $-\Delta_{S_t}$). This is the Dirichlet energy on the visible surface.
+- Continuum limit on $\mathcal{P}_t$: $E_{\mathrm{cl}} \approx \epsilon^2 \int_{\mathcal{P}_t} \vert \nabla_{\mathcal{P}_t}\tilde{u}\vert ^2 dA$ (Laplace-Beltrami; graph Laplacian $L$ approximates $-\Delta_{S_t}$). This is the Dirichlet energy on the visible surface.
 
 **$E_{\mathrm{sep}} = \sum_j \sum_{x \in X} u^{(j)}(x) D(x; 1 - u^{(j)})$ (separation energy in K-field form)** 
 
@@ -284,7 +284,7 @@ Each energy term under the new framework:
 
 - Layer D: pure prior. Measures total "surface area" of the transition layer (Dirichlet form).
 - Bayesian interpretation: regularizes $\tilde{u}$ toward smooth fields; penalizes rough boundaries.
-- Continuum: $E_{\mathrm{bd}} \approx \alpha \int_{\mathcal{P}_t} |\nabla_{\mathcal{P}_t}\tilde{u}|^2 dA$ — same as $E_{\mathrm{cl}}$ in continuum limit. The two terms are mathematically related but conceptually independent (CN5).
+- Continuum: $E_{\mathrm{bd}} \approx \alpha \int_{\mathcal{P}_t} \vert \nabla_{\mathcal{P}_t}\tilde{u}\vert ^2 dA$ — same as $E_{\mathrm{cl}}$ in continuum limit. The two terms are mathematically related but conceptually independent (CN5).
 - **CONFIRMED as prior.**
 
 **$E_{\mathrm{tr}}$ (transport energy)**
@@ -370,7 +370,7 @@ In this reading:
 
 The shared-pool $\widetilde\Sigma^K_M$ (variable $K_{\mathrm{act}}$ within $K_{\mathrm{field}}$ cap) is closer to the correct structure: it allows $K_{\mathrm{act}}$ to vary from 0 to $K_{\mathrm{field}}$ within a single optimization. This is the correct direction. The residual issue: $K_{\mathrm{field}}$ still enters as an architectural parameter.
 
-**Under $\Sigma_M$**: $K_{\mathrm{field}}$ does not appear. $K_{\mathrm{act}}$ ranges freely over $\mathbb{N}_0$, bounded in practice by $|\mathcal{P}_t|$. The shared-pool manifold is the $K \leq K_{\mathrm{field}}$ sub-union of K-basins, which is a proper sub-region of $\Sigma_M$.
+**Under $\Sigma_M$**: $K_{\mathrm{field}}$ does not appear. $K_{\mathrm{act}}$ ranges freely over $\mathbb{N}_0$, bounded in practice by $\vert \mathcal{P}_t\vert $. The shared-pool manifold is the $K \leq K_{\mathrm{field}}$ sub-union of K-basins, which is a proper sub-region of $\Sigma_M$.
 
 ---
 
@@ -451,7 +451,7 @@ $$F(K) = \mathcal{E}^*_K - T \cdot S(K)$$
 
 where:
 - $\mathcal{E}^*_K = \min_{\mathbf{u} \in \widetilde\Sigma^K_M, K_{\mathrm{act}}=K} \mathcal{E}_K(\mathbf{u})$ — energy minimum within K-field sub-manifold.
-- $S(K) = \log|\{\text{inequivalent K-formation minimizers}\}|$ — discrete count of symmetry-inequivalent minimizers.
+- $S(K) = \log\vert \{\text{inequivalent K-formation minimizers}\}\vert $ — discrete count of symmetry-inequivalent minimizers.
 
 **Problems:**
 
@@ -489,7 +489,7 @@ Stereo depth directly affects $E_t^{3D}$ (depth-filtered adjacency), which chang
 ### §7.4 Is $F(K;\mathcal{P})$ sufficient to resolve OP-0005?
 
 **No.** Even with the correct partition function, OP-0005 requires:
-- (i) A mechanism for selecting $K_{\mathrm{act}}$ from $\{1, \ldots, K_{\mathrm{field}}\}$ — $P_{\mathrm{eq}}(K|\mathcal{P})$ gives equilibrium probabilities, not a deterministic selection rule.
+- (i) A mechanism for selecting $K_{\mathrm{act}}$ from $\{1, \ldots, K_{\mathrm{field}}\}$ — $P_{\mathrm{eq}}(K\vert \mathcal{P})$ gives equilibrium probabilities, not a deterministic selection rule.
 - (ii) A protocol for how initial conditions ($u_0$) determine which basin is reached — this is CN15 (initial conditions matter).
 - (iii) The stochastic extension (P-F flag) to define $Z_K$.
 
@@ -512,7 +512,7 @@ Current canonical boundary: $B_t = \{x : D_t(u_t)(x) > \theta\}$ for threshold $
 
 **Definition 1 — Gradient ridge:**
 
-$$B_t = \bigl\{x \in \mathcal{P}_t : |\nabla_{\mathcal{P}_t} \tilde{u}_t(x)| \text{ is a local maximum along the gradient direction}\bigr\}$$
+$$B_t = \bigl\{x \in \mathcal{P}_t : \vert \nabla_{\mathcal{P}_t} \tilde{u}_t(x)\vert \text{ is a local maximum along the gradient direction}\bigr\}$$
 
 This is the gradient magnitude ridge of $\tilde{u}_t$. Properties:
 - Scale-equivariant: if $\tilde{u}$ is scaled, the ridge location is unchanged.
@@ -538,7 +538,7 @@ This is a Layer B quantity (geometry of the visible reconstruction), distinct fr
 | Boundary concept | Layer | Definition quality |
 |-----------------|-------|-------------------|
 | $D_t$-threshold boundary (current canonical) | F (but poorly defined) | Weak: threshold-dependent, scale-sensitive |
-| Gradient ridge of $|\nabla_{\mathcal{P}_t}\tilde{u}_t|$ | F | Better: threshold-free, scale-equivariant |
+| Gradient ridge of $\vert \nabla_{\mathcal{P}_t}\tilde{u}_t\vert $ | F | Better: threshold-free, scale-equivariant |
 | Persistent transition layer ($H_0$ persistence) | F | Best: topologically grounded, threshold-free |
 | Depth discontinuity $\partial\mathcal{P}_t$ | B | Different concept: support boundary, not field boundary |
 | Image edge (pixel-level) | A | Should not be in SCC theory directly |
@@ -641,9 +641,9 @@ A unified framework: both are instances of regularized partial OT on different s
 | Analogy | Type | Status | Notes |
 |---------|------|--------|-------|
 | $W(u) = u^2(1-u)^2$ ↔ $\phi^4$ double well | Mathematical | **Structural only**: $\phi^4$ has $W(\phi) = (\phi^2 - 1)^2 / 4$ near $\phi = \pm 1$; SCC double-well is $(0,1)$-valued, not $(-1,+1)$-valued; related by $u = (\phi+1)/2$ |
-| $E_{\mathrm{cl}} + E_{\mathrm{bd}} \to $ Dirichlet energy on $\mathcal{P}_t$ | Mathematical | **Approximate identity** in continuum limit: $E_{\mathrm{cl}} \approx \epsilon^2 \int |\nabla_{S_t}\tilde{u}|^2 dA$ |
+| $E_{\mathrm{cl}} + E_{\mathrm{bd}} \to $ Dirichlet energy on $\mathcal{P}_t$ | Mathematical | **Approximate identity** in continuum limit: $E_{\mathrm{cl}} \approx \epsilon^2 \int \vert \nabla_{S_t}\tilde{u}\vert ^2 dA$ |
 | Allen-Cahn on $S_t$ | Mathematical | **Approximate identity** for $\mathcal{E}_{\mathrm{SCC}}$ in continuum limit (see §9 of `stereo_observation_framework.md`) |
-| Ginzburg-Landau / Modica-Mortola | Mathematical | **Structural**: $\Gamma$-convergence of $\int[\epsilon|\nabla u|^2 + W(u)/\epsilon]$ to perimeter → T-Merge (b) basis |
+| Ginzburg-Landau / Modica-Mortola | Mathematical | **Structural**: $\Gamma$-convergence of $\int[\epsilon\vert \nabla u\vert ^2 + W(u)/\epsilon]$ to perimeter → T-Merge (b) basis |
 | Cahn-Hilliard | Structural only | **Wrong for SCC**: Cahn-Hilliard is conserved-phase PDE ($\partial_t u = -\Delta(\Delta u - W'(u))$); SCC uses gradient flow on $\Sigma_m$ (conserved mass) which is closer to Allen-Cahn with constraint |
 | Mumford-Shah | Structural only | **Weaker analogy**: Mumford-Shah uses explicit sharp boundary variable $\Gamma$; SCC uses diffuse boundary encoded in $u$ itself; Ambrosio-Tortorelli regularization (uses auxiliary field $v \approx 0$ at boundary) is structurally closer to SCC |
 | LSW coarsening $t^{1/3}$ | Mathematical | **Allen-Cahn 2D prediction**: $R(t) \sim t^{1/3}$; coarsening time $\tau \sim R^3$ for circular components. Applies to $\mathcal{P}_t$ in 2D surface limit. Discrepancy with empirical $\Delta t \propto t^{1.315}$ needs explanation |
@@ -718,15 +718,15 @@ OQ-4 (from daily log): this discrepancy remains unresolved. **Treat empirical ex
 - $\mathcal{X}_t = (\mathcal{M}_t, \mu_t, U_t)$ latent scene (Layer C)
 - Four-layer separation: $\mathfrak{O}_t$ / $\tilde{u}_t$ / prior $\mathcal{E}_{\mathrm{SCC}}$ / likelihood $\mathcal{L}_{\mathrm{obs}}$
 - BO time-scale structure: $\tau_{\mathrm{frame}} \ll \tau_{\mathrm{fast}} \ll \tau_{\mathcal{P}} \lesssim \tau_{\mathrm{slow}}$
-- $Z_K(\mathcal{P})$ partition function, $F(K;\mathcal{P})$, $P_{\mathrm{eq}}(K|\mathcal{P})$
+- $Z_K(\mathcal{P})$ partition function, $F(K;\mathcal{P})$, $P_{\mathrm{eq}}(K\vert \mathcal{P})$
 - P-F Axiom v0
 
 ### §12.2 OP Re-interpretation Table
 
 | OP | Previous framing | New framing under stereo-SCC | Status change |
 |----|-----------------|------------------------------|--------------|
-| OP-0005 K-Selection | Missing mechanism for $K_{\mathrm{act}}$ | $F(K;\mathcal{P}) = -T\log Z_K(\mathcal{P})$ → $P_{\mathrm{eq}}(K|\mathcal{P})$; Kramers rates give dynamics | OPEN; structural path formalized |
-| OP-0006 Boundary precision | Threshold-based $B_t$ imprecise | $B_t$ = persistent transition layer / gradient ridge of $|\nabla_{\mathcal{P}_t}\tilde{u}_t|$ | OPEN; clear resolution candidate |
+| OP-0005 K-Selection | Missing mechanism for $K_{\mathrm{act}}$ | $F(K;\mathcal{P}) = -T\log Z_K(\mathcal{P})$ → $P_{\mathrm{eq}}(K\vert \mathcal{P})$; Kramers rates give dynamics | OPEN; structural path formalized |
+| OP-0006 Boundary precision | Threshold-based $B_t$ imprecise | $B_t$ = persistent transition layer / gradient ridge of $\vert \nabla_{\mathcal{P}_t}\tilde{u}_t\vert $ | OPEN; clear resolution candidate |
 | OP-0008 $\sigma^A$ non-determinism | Label assignment non-deterministic | $P(\sigma' \mid \text{Kramers event}(j,k))$; saddle geometry determines $\sigma^A_{\mathrm{after}}$ | OPEN; posterior formulation proposed |
 | OP-0009-Pre K-field tension | K-field imports object-like K | $\Sigma_M$ is foundational; $\Sigma^K_M$ is local chart; $K_{\mathrm{act}} = \#\pi_0$ derived | OPEN; resolution path clearest yet |
 | OP-0009-K K status | What is K? | $K_{\mathrm{field}}$ = truncation; $K_{\mathrm{act}} = \#\pi_0$ on $\Sigma_M$ | RESOLVED (Commitment 16) + reinforced |
@@ -744,9 +744,9 @@ The following definitions are sufficiently precise to be candidates for canonica
 
 **D-candidate-2**: Back-projection $b_t : X_L \rightharpoonup \mathcal{P}_t$, $b_t(x_L) = z(x_L) K_{\mathrm{cam}}^{-1}[u_L, v_L, 1]^T$; depth-aware adjacency $E_t^{3D} = \{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D}, \lvert z(x) - z(y) \rvert < \delta_z\}$ (both as modeling-layer choices, not canonical axioms).
 
-**D-candidate-3**: Four-layer Bayesian separation: prior $P(\tilde{u}) \propto \exp(-\mathcal{E}_{\mathrm{SCC}}[\tilde{u}])$ with exactly four energy terms; likelihood $P(\mathfrak{O}_t|\tilde{u})$ contains all observation-dependent terms including $E_{\mathrm{photo}}$.
+**D-candidate-3**: Four-layer Bayesian separation: prior $P(\tilde{u}) \propto \exp(-\mathcal{E}_{\mathrm{SCC}}[\tilde{u}])$ with exactly four energy terms; likelihood $P(\mathfrak{O}_t\vert \tilde{u})$ contains all observation-dependent terms including $E_{\mathrm{photo}}$.
 
-**D-candidate-4**: Boundary definition: $B_t = \{x \in \mathcal{P}_t : |\nabla_{\mathcal{P}_t}\tilde{u}_t(x)|$ is a local maximum along gradient direction$\}$ OR the persistent transition layer from $H_0$ persistence.
+**D-candidate-4**: Boundary definition: $B_t = \{x \in \mathcal{P}_t : \vert \nabla_{\mathcal{P}_t}\tilde{u}_t(x)\vert $ is a local maximum along gradient direction$\}$ OR the persistent transition layer from $H_0$ persistence.
 
 **D-candidate-5**: P-F Axiom v0 (as stated in §6.5 above).
 

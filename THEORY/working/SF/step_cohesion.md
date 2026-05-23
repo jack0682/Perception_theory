@@ -142,7 +142,7 @@ $K_{\mathrm{soft}}$는 continuous proxy; $K_{\mathrm{step}}$은 integer truncati
 $$K_{\mathrm{step}}(u) = \lfloor K_{\mathrm{soft}}(u) + 0.5 \rfloor$$
 approximately, when $u$ has well-separated formations.
 
-**Canonical relation proposal**: $K_{\mathrm{soft}} \to K_{\mathrm{step}}$ as $\beta \to \infty$; at finite $\beta$, $|K_{\mathrm{soft}} - K_{\mathrm{step}}| = O(\xi_0 / r_0)$.
+**Canonical relation proposal**: $K_{\mathrm{soft}} \to K_{\mathrm{step}}$ as $\beta \to \infty$; at finite $\beta$, $\vert K_{\mathrm{soft}} - K_{\mathrm{step}}\vert = O(\xi_0 / r_0)$.
 
 ### 5.3 Protocol-specific observable
 
@@ -189,8 +189,8 @@ For graph automorphism group $\Gamma = \mathrm{Aut}(G)$:
 ### 7.2 Connection to G-D (`symmetry_moduli.md`)
 
 $\mathcal{M}_1$ (K=1 moduli) and $\mathcal{M}_K$ (K-formations moduli) are Layer 1 topological objects. Different K-sectors have different moduli dimensions:
-- 2D square free BC, K=1: $|\mathcal{M}_1| = 1$ (axis-aligned)
-- $C_n$, K=1: $|\mathcal{M}_1| = 1$ with 1-dim moduli (circle)
+- 2D square free BC, K=1: $\vert \mathcal{M}_1\vert = 1$ (axis-aligned)
+- $C_n$, K=1: $\vert \mathcal{M}_1\vert = 1$ with 1-dim moduli (circle)
 - $T^2$, K=1: 1-dim (pure-X/Y)
 
 For K≥2, $\mathcal{M}_K$ typically has higher dim (more orbit choices).
@@ -219,7 +219,7 @@ Each transition point: **Heaviside step**.
 ### 8.4 Stochastic smoothing near transitions
 
 Near protocol selector transition $\beta_\pi^*$ with noise $\sigma$:
-$$P(K_\pi = k | \beta) \approx \text{smoothed step}$$
+$$P(K_\pi = k \vert \beta) \approx \text{smoothed step}$$
 with width $\propto \sigma \cdot (\text{geometric factor})$ — may **appear** as softmax in ensemble observation (R20 β=9 bistable range).
 
 ---

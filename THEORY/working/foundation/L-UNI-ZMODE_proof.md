@@ -80,7 +80,7 @@ with $\lambda_1$ corresponding to the constant mode $\mathbf{1}$, removed by $\P
 $$\mathcal{E}(u) = \lambda_{cl}\mathcal{E}_{cl}(u) + \lambda_{sep}\mathcal{E}_{sep}(u) + \lambda_{bd}\mathcal{E}_{bd}(u) + \lambda_{tr}\mathcal{E}_{tr}(u)$$
 with $\mathcal{E}_{bd}(u) = \alpha u^T L_G u + \beta \sum_i W(u_i)$, $W(u) = u^2(1-u)^2$.
 
-**Constrained Hessian at uniform**: $H(u^*) := \nabla^2 \mathcal{E}(u^*) |_{T_{u^*}\Sigma_m} = \Pi^T \nabla^2\mathcal{E}(u^*) \Pi$ where $\Pi = I - (1/n)\mathbf{1}\mathbf{1}^T$.
+**Constrained Hessian at uniform**: $H(u^*) := \nabla^2 \mathcal{E}(u^*) \vert _{T_{u^*}\Sigma_m} = \Pi^T \nabla^2\mathcal{E}(u^*) \Pi$ where $\Pi = I - (1/n)\mathbf{1}\mathbf{1}^T$.
 
 ---
 
@@ -95,7 +95,7 @@ $v \in V_{\lambda_k}$ for some $k \in \{2, \ldots, n\}$ such that the *boundary-
 At the same crossing $\mu_k = 0$, if $\mathrm{mult}(\lambda_k(L_G)) \geq 2$, the kernel has dimension $\geq 2$ spanned by linearly independent eigenvectors of $L_G$ in $V_{\lambda_k}$.
 
 ### Type C — Continuous Goldstone / orbit-tangent zero mode
-$v = \frac{d}{d\theta}(g_\theta \cdot u_\star) |_{\theta=0}$ for some non-trivial 1-parameter subgroup $\{g_\theta\}_{\theta \in \mathbb{R}}$ of a (necessarily continuous) symmetry group $\mathcal{G}$ acting on $\Sigma_m$, where $u_\star$ is a critical point with non-trivial $\mathcal{G}$-orbit $\mathcal{O}(u_\star) := \{g_\theta \cdot u_\star : \theta \in \mathbb{R}\}$.
+$v = \frac{d}{d\theta}(g_\theta \cdot u_\star) \vert _{\theta=0}$ for some non-trivial 1-parameter subgroup $\{g_\theta\}_{\theta \in \mathbb{R}}$ of a (necessarily continuous) symmetry group $\mathcal{G}$ acting on $\Sigma_m$, where $u_\star$ is a critical point with non-trivial $\mathcal{G}$-orbit $\mathcal{O}(u_\star) := \{g_\theta \cdot u_\star : \theta \in \mathbb{R}\}$.
 
 **Note**: Type C requires *continuous* $\mathcal{G}$ acting *non-trivially* on the specific critical point. canonical V5b-T-zero (L1328) instantiates Type C for *corner-saturated* (non-uniform) configurations on $\mathbb{Z}_L^d$-translation-invariant graphs, where the discrete translation orbit is *equienergetic* and its tangent (in the continuum embedding / large-lattice limit) carries the Goldstone mode.
 
@@ -103,7 +103,7 @@ $v = \frac{d}{d\theta}(g_\theta \cdot u_\star) |_{\theta=0}$ for some non-trivia
 
 ## §3 — Statement
 
-**Lemma L-UNI-ZMODE (Uniform Zero-Mode Dichotomy).** Under §1 setup, every $v \in \ker H(u^*)|_{\mathbf{1}^\perp}$ with $v \neq 0$ is of Type A or Type B. **Type C zero modes are absent at $u^* = c\mathbf{1}$.**
+**Lemma L-UNI-ZMODE (Uniform Zero-Mode Dichotomy).** Under §1 setup, every $v \in \ker H(u^*)\vert _{\mathbf{1}^\perp}$ with $v \neq 0$ is of Type A or Type B. **Type C zero modes are absent at $u^* = c\mathbf{1}$.**
 
 Equivalently:
 $$\boxed{\ker H(u^*)\big\vert_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G)}$$
@@ -148,7 +148,7 @@ also commutes with $\mathrm{Aut}(G)$-action on $\mathbf{1}^\perp$.
 
 By Step 3 + Schur's Lemma, $H(u^*)$ on $\mathbf{1}^\perp$ decomposes into $\mathrm{Aut}(G)$-isotypic blocks. Each $L_G$-eigenspace $V_{\lambda_k}$ (for $k = 2, \ldots, n$) is $\mathrm{Aut}(G)$-invariant (since $L_G$ commutes with $\mathrm{Aut}(G)$ by graph automorphism definition $\sigma L_G \sigma^{-1} = L_G$), hence $H(u^*)$-invariant.
 
-By canonical L-S3-KERNEL-MULT (L1798, Cat A, CV-1.19) Case B (uniform critical $u^* = c\mathbf{1}$, any graph), the non-boundary contributions $\nabla^2 \mathcal{E}_{cl}(u^*), \nabla^2 \mathcal{E}_{sep}(u^*), \nabla^2 \mathcal{E}_{tr}(u^*)$ also commute with $L_G$ on $\mathbf{1}^\perp$ (i.e., $[J_D, L_G]|_{\mathbf{1}^\perp} = 0$ where $J_D$ encompasses all linearized SCC operators).
+By canonical L-S3-KERNEL-MULT (L1798, Cat A, CV-1.19) Case B (uniform critical $u^* = c\mathbf{1}$, any graph), the non-boundary contributions $\nabla^2 \mathcal{E}_{cl}(u^*), \nabla^2 \mathcal{E}_{sep}(u^*), \nabla^2 \mathcal{E}_{tr}(u^*)$ also commute with $L_G$ on $\mathbf{1}^\perp$ (i.e., $[J_D, L_G]\vert _{\mathbf{1}^\perp} = 0$ where $J_D$ encompasses all linearized SCC operators).
 
 Therefore $H(u^*)$ acts as a *scalar* on each $V_{\lambda_k}$, say $\hat\mu_k(\alpha, \beta, c, \lambda_{cl}, \lambda_{sep}, \lambda_{tr}) \cdot \mathrm{id}_{V_{\lambda_k}}$. The boundary-energy contribution gives the dominant Theorem 4 term $4\alpha\lambda_k + \beta W''(c) =: \mu_k$. (The non-boundary contributions add bounded corrections that preserve the isotypic block structure but may shift the scalar; in the spinodal interior $W''(c) < 0$ regime, the *zero crossings* of $\hat\mu_k$ are parameter-dependent points and define the *effective critical set* $K^* \subseteq \{2, \ldots, n\}$.)
 

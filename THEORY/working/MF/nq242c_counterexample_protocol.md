@@ -398,10 +398,10 @@ Two σ-standard tuples agree iff:
 
 1. They have the same number of clusters.
 2. For each cluster index $k$, the cluster sizes $n_k^A, n_k^B$ are equal.
-3. For each cluster index $k$, $|\lambda_k^A - \lambda_k^B| < \tau_\lambda$.
+3. For each cluster index $k$, $\vert \lambda_k^A - \lambda_k^B\vert < \tau_\lambda$.
 4. The multiplicity tags $\mathrm{mult}\text{-}n_k$ are identical (this is automatic given (2)).
 
-Mismatch is recorded with the offending cluster index and $|\lambda_k^A - \lambda_k^B|$ value.
+Mismatch is recorded with the offending cluster index and $\vert \lambda_k^A - \lambda_k^B\vert $ value.
 
 ### 7.4 Pre-jump and post-jump sampling times
 
@@ -456,7 +456,7 @@ $$
 \sigma_{\mathrm{standard}}(\mathbf u_A(t^{+}_A)) \;\ne_{\tau}\; \sigma_{\mathrm{standard}}(\mathbf u_B(t^{+}_B)).
 $$
 
-**Status:** PASS iff the agreement test of §7.3 returns False *and* the offending cluster index has $|\lambda_k^A - \lambda_k^B| > 10 \tau_\lambda$ (10× tolerance margin to rule out marginal numerical noise).
+**Status:** PASS iff the agreement test of §7.3 returns False *and* the offending cluster index has $\vert \lambda_k^A - \lambda_k^B\vert > 10 \tau_\lambda$ (10× tolerance margin to rule out marginal numerical noise).
 
 ### 9.3 C3 — Same protocol
 

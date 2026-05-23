@@ -236,7 +236,7 @@ The σ-class count |σ-classes(G, α, β, c)| (NQ-188, `sigma_uniqueness_theorem
 
 **Claim 6.1 (σ-class ↔ π_1-orbit decomposition).** The σ-class count satisfies:
 
-$$|\sigma\text{-classes}(G, \alpha, \beta, c)| = \big\vert\{[\pi_1(\mathcal{F}; u^*)] : u^* \in \mathcal{L}\} \times \{(n_k, \lambda_k)\}\big\vert \;/\; \mathrm{Aut}(G)\text{-conjugation},$$
+$$\vert \sigma\text{-classes}(G, \alpha, \beta, c)\vert = \big\vert\{[\pi_1(\mathcal{F}; u^*)] : u^* \in \mathcal{L}\} \times \{(n_k, \lambda_k)\}\big\vert \;/\; \mathrm{Aut}(G)\text{-conjugation},$$
 
 i.e., σ-classes are in bijection with pairs (conjugacy class of π_1, irrep multiplicity + eigenvalue data) modulo Aut(G)-conjugation.
 

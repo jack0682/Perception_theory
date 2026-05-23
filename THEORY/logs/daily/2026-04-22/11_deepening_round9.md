@@ -57,7 +57,7 @@ Pure tanh, Cat A in continuum limit (`working/SF/interface_scale.md` Cor 2.2 qua
 
 ### 2.3 Shape-parameter generalization (Round 2)
 
-`profile_deviation.md` ansatz: $u_p(x) = \frac{1}{2}(1 - \mathrm{sign}(x)|\tanh(x/2\xi_0)|^p)$ or related generalized shapes. At $p = 1$: pure tanh. For $p \neq 1$: deviation from tanh, quantified by fitting to SCC minimizer.
+`profile_deviation.md` ansatz: $u_p(x) = \frac{1}{2}(1 - \mathrm{sign}(x)\vert \tanh(x/2\xi_0)\vert ^p)$ or related generalized shapes. At $p = 1$: pure tanh. For $p \neq 1$: deviation from tanh, quantified by fitting to SCC minimizer.
 
 Round 2 found $p = 1.256$ at sub-lattice, $p \to 1$ expected at supra-lattice.
 
@@ -140,11 +140,11 @@ $u_1$ is localized around the interface (like $u_0^{(4)}$), modulates the profil
 ### 4.1 Relation between $u_1$ and $p$
 
 The generalized-shape ansatz (Round 2) has profile
-$$u_p(x) = \frac{1}{2}\left[1 - \mathrm{sign}(x) \tanh\left|\frac{x}{2\xi_0}\right|^{p}\right]^{?},$$
+$$u_p(x) = \frac{1}{2}\left[1 - \mathrm{sign}(x) \tanh\left\vert \frac{x}{2\xi_0}\right\vert ^{p}\right]^{?},$$
 or a related form (details depend on profile_deviation.md §10.4). Exactly which form doesn't matter for leading-order analysis; what matters is that $p = 1$ reproduces $u_0$ and $p - 1$ is the small deviation.
 
 Fitting $u_0 + \epsilon u_1$ to a one-parameter family $u_p$: the best-fit $p$ differs from 1 by:
-$$p - 1 = \epsilon \cdot \frac{\langle u_1, \partial_p u_p|_{p=1}\rangle}{\langle \partial_p u_p|_{p=1}, \partial_p u_p|_{p=1}\rangle} + O(\epsilon^2).$$
+$$p - 1 = \epsilon \cdot \frac{\langle u_1, \partial_p u_p\vert _{p=1}\rangle}{\langle \partial_p u_p\vert _{p=1}, \partial_p u_p\vert _{p=1}\rangle} + O(\epsilon^2).$$
 
 The inner product is in $L^2$ or in the chi-squared metric of the fitting procedure. Result: $p - 1 = O(\epsilon) = O(a^2/(12\xi_0^2))$.
 

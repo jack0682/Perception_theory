@@ -28,7 +28,7 @@ The file establishes:
 With P-F-A1 (Langevin on $\Sigma_M$) and P-F-A4/A5/A6:
 
 **Step 1: Replace $k_B T$ with $T_*$.**
-$$k_{K \to K-1} = \frac{|\lambda_-|}{2\pi} \sqrt{\frac{\det H_{\hat{\mathbf{u}}_K}}{\left|\det' H_{\mathbf{u}_{\mathrm{saddle}}^{K \to K-1}}\right|}} \cdot \exp\!\left(-\frac{\Delta E^{(K \to K-1)}}{T_*}\right)$$
+$$k_{K \to K-1} = \frac{\vert \lambda_-\vert}{2\pi} \sqrt{\frac{\det H_{\hat{\mathbf{u}}_K}}{\left\vert \det' H_{\mathbf{u}_{\mathrm{saddle}}^{K \to K-1}}\right\vert}} \cdot \exp\!\left(-\frac{\Delta E^{(K \to K-1)}}{T_*}\right)$$
 where:
 - $\hat{\mathbf{u}}_K \in \Sigma_M$ = the K-formation local minimizer (exists by T-Persist-K-Sep assumption).
 - $\mathbf{u}_{\mathrm{saddle}}^{K \to K-1} \in \Sigma_M$ = the saddle point connecting the K-formation basin to the (K-1)-formation basin.
@@ -37,12 +37,12 @@ where:
 
 **Step 2: $\mathcal{P}$-conditioning (from stereo_observation_framework.md §6).**
 When the observation $\mathfrak{O}_t$ is conditioned on a visible point cloud $\mathcal{P}_t$, the energy is:
-$$\mathcal{E}_{\mathrm{cond}}(\mathbf{u} | \mathcal{P}_t) = \mathcal{E}_{\mathrm{SCC}}(\mathbf{u}) + \mathcal{L}_{\mathrm{obs}}(\mathfrak{O}_t | \mathbf{u})$$
+$$\mathcal{E}_{\mathrm{cond}}(\mathbf{u} \vert \mathcal{P}_t) = \mathcal{E}_{\mathrm{SCC}}(\mathbf{u}) + \mathcal{L}_{\mathrm{obs}}(\mathfrak{O}_t \vert \mathbf{u})$$
 Barriers become $\mathcal{P}$-dependent: $\Delta E^{(K \to K-1)}(\mathcal{P}_t)$ varies with the observation geometry.
 
 **Step 3: Detailed balance → equilibrium K distribution.**
 Under P-F-A3 stationary distribution $p_*$, the effective K-distribution is:
-$$P_{\mathrm{eq}}(K | \mathcal{P}_t, T_*) \propto \exp\!\left(-\frac{F(K; \mathcal{P}_t)}{T_*}\right)$$
+$$P_{\mathrm{eq}}(K \vert \mathcal{P}_t, T_*) \propto \exp\!\left(-\frac{F(K; \mathcal{P}_t)}{T_*}\right)$$
 where $F(K; \mathcal{P}_t) = -T_* \log Z_K(\mathcal{P}_t)$ is the free energy of the K-formation basin (see `stereo_observation_framework.md` §7 for $Z_K(\mathcal{P}) = \int_{\mathcal{B}_K(\mathcal{P})} \exp(-\mathcal{E}_{\mathrm{SCC}}/T_*) D\tilde{u}$).
 
 ---

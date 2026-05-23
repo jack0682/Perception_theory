@@ -72,7 +72,7 @@ These implicit assumptions are surfaced for explicit handling below.
 
 ### §2.2 Approach 2: Stratified-space approach
 
-**Core idea**: $\widetilde\Sigma^K_M$ is **stratified** by the K-active count $K_{\mathrm{act}}(\mathbf{u}) := |\{j : m_j(\mathbf{u}) > 0\}|$ (active formations with positive mass). Strata $\widetilde\Sigma^{(K')}_M$ for $K' = 1, 2, \ldots, K$ are open submanifolds; their boundary is the K-jump locus where one $m_j \to 0$ (formation dissolved).
+**Core idea**: $\widetilde\Sigma^K_M$ is **stratified** by the K-active count $K_{\mathrm{act}}(\mathbf{u}) := \vert \{j : m_j(\mathbf{u}) > 0\}\vert $ (active formations with positive mass). Strata $\widetilde\Sigma^{(K')}_M$ for $K' = 1, 2, \ldots, K$ are open submanifolds; their boundary is the K-jump locus where one $m_j \to 0$ (formation dissolved).
 
 $\sigma^A(t)$ is then a section over the stratified base: on stratum $K'$, σ-tuple has length-$K'$ structure $(F_{\mathrm{total}}; \{\sigma_j\}_{j=1}^{K'}; \{\sigma_{jk}\}_{1 \leq j < k \leq K'})$.
 

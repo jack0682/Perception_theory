@@ -97,7 +97,7 @@ Reminder: the goal is bound on $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T)$ where $
 
 $$\bigl\lVert \sum_k r_k \nabla^2 Cl_k\bigr \rVert_{op} \;\leq\; \lVert r \rVert_\infty \cdot \max_k \lVert \nabla^2 Cl_k \rVert_{op}.$$
 
-At an interior minimizer of $\mathcal{E}$, $\lVert r \rVert_\infty$ is empirically small (close to closure fixed point); $\lVert \nabla^2 Cl_k \rVert_{op}$ bounded by $|\sigma''|_{\max} \cdot a_{\mathrm{cl}}^2 \cdot \lVert M \rVert^2 \leq 0.1 \cdot a_{\mathrm{cl}}^2$ (since $|\sigma''| \leq 0.1$).
+At an interior minimizer of $\mathcal{E}$, $\lVert r \rVert_\infty$ is empirically small (close to closure fixed point); $\lVert \nabla^2 Cl_k \rVert_{op}$ bounded by $\vert \sigma''\vert _{\max} \cdot a_{\mathrm{cl}}^2 \cdot \lVert M \rVert^2 \leq 0.1 \cdot a_{\mathrm{cl}}^2$ (since $\vert \sigma''\vert \leq 0.1$).
 
 Numerical verification of $\lVert r \rVert_\infty$ at the canonical minimizer is part of Approach (c).
 

@@ -84,7 +84,7 @@
 
 > **Lemma 4.1 (Binary profile in sub-lattice).** For $\zeta \ll 1$, the minimizer $u^*$ of pure $\mathcal{E}_\text{bd}$ satisfies:
 > - $u^*(i) \in \{0 + O(e^{-1/\zeta}), 1 + O(e^{-1/\zeta})\}$ for all "interior" or "exterior" $i$
-> - Number of interface sites $\mathcal{I} = \{i : u^*(i) \in (\varepsilon, 1-\varepsilon)\}$ for small $\varepsilon$: $|\mathcal{I}| = O(P(\text{disk}))$ where $P$ is perimeter.
+> - Number of interface sites $\mathcal{I} = \{i : u^*(i) \in (\varepsilon, 1-\varepsilon)\}$ for small $\varepsilon$: $\vert \mathcal{I}\vert = O(P(\text{disk}))$ where $P$ is perimeter.
 
 **Proof sketch**: $\xi_0 < a$ means double-well $W(u)$ 의 near-$0, 1$ attractors 지배. Interface energy $\propto \xi_0$ vs bulk interior/exterior energy → interface sites minimize by choosing nearest ($0$ or $1$). 정확한 bound $O(e^{-1/\zeta})$ 는 Allen-Cahn sharp-interface Γ-convergence 의 discrete analog.
 

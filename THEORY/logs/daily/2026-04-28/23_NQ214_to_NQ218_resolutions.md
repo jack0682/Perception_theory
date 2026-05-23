@@ -73,7 +73,7 @@ Hmm, so first-principles $c_d = 2\pi$ predicts much smaller $\mu_{\mathrm{Gold}}
 
 ### §1.7 Refined: finite-L Brillouin zone
 
-For finite L, the BZ is **discrete**: $\mathbf{k} \in (2\pi/L) \mathbb{Z}_L^d$. Smallest non-zero $\mathbf{k}$ is $|\mathbf{k}_{\min}| = 2\pi/L$.
+For finite L, the BZ is **discrete**: $\mathbf{k} \in (2\pi/L) \mathbb{Z}_L^d$. Smallest non-zero $\mathbf{k}$ is $\vert \mathbf{k}_{\min}\vert = 2\pi/L$.
 
 The effective $c_d^{\mathrm{eff}}$ for finite L:
 $$c_d^{\mathrm{eff}}(L) = 2\pi a \cdot (1 - O(a/L)). \tag{1.4}$$
@@ -109,14 +109,14 @@ Full closed-form requires NQ-214b (W7+ work).
 
 ### §2.1 The cluster geometry
 
-For corner-saturated F=1 minimizer (regime R3b), saturation set $S = \{x : u(x) = 1\}$ has $\lvert S \rvert \approx m$ sites. The cluster-boundary $\partial S = \{(x, y) \in S \times \bar S : x \sim y\}$ has $|\partial S|$ edges.
+For corner-saturated F=1 minimizer (regime R3b), saturation set $S = \{x : u(x) = 1\}$ has $\lvert S \rvert \approx m$ sites. The cluster-boundary $\partial S = \{(x, y) \in S \times \bar S : x \sim y\}$ has $\vert \partial S\vert $ edges.
 
-For an isoperimetric cluster on 2D lattice (square shape): $|\partial S| \sim 4\sqrt{\lvert S \rvert} = 4\sqrt m$.
+For an isoperimetric cluster on 2D lattice (square shape): $\vert \partial S\vert \sim 4\sqrt{\lvert S \rvert} = 4\sqrt m$.
 
-For circular tanh-disk shape (smoother interface): $|\partial S| \sim 2\pi \sqrt{\lvert S \rvert/\pi} = 2\sqrt{\pi \lvert S \rvert} \approx 3.54 \sqrt{\lvert S \rvert}$.
+For circular tanh-disk shape (smoother interface): $\vert \partial S\vert \sim 2\pi \sqrt{\lvert S \rvert/\pi} = 2\sqrt{\pi \lvert S \rvert} \approx 3.54 \sqrt{\lvert S \rvert}$.
 
 **Formula**:
-$$|\partial S| \approx C \sqrt{\lvert S \rvert}, \quad C \in [3.54, 4]. \tag{2.1}$$
+$$\vert \partial S\vert \approx C \sqrt{\lvert S \rvert}, \quad C \in [3.54, 4]. \tag{2.1}$$
 
 ### §2.2 PN-barrier scaling (g_∂Cluster)
 
@@ -126,7 +126,7 @@ $$\mu_{\mathrm{PN}} = A \beta e^{-c_d/\xi_0} f_{\mathrm{comm}}(\phi) g_{\partial
 The boundary factor $g_{\partial \mathrm{Cluster}}$ depends on the cluster perimeter and the distance from formation center to cluster boundary.
 
 For isoperimetric cluster:
-$$g_{\partial \mathrm{Cluster}}(\delta/\xi_0) \sim |\partial S|/\xi_0 = C \sqrt{m}/\xi_0. \tag{2.3}$$
+$$g_{\partial \mathrm{Cluster}}(\delta/\xi_0) \sim \vert \partial S\vert /\xi_0 = C \sqrt{m}/\xi_0. \tag{2.3}$$
 
 ### §2.3 Combined formula (Phase 5 refinement)
 
@@ -144,9 +144,9 @@ $e^{-c_d/\xi_0} = e^{-4\pi} \approx 3.5 \times 10^{-6}$ (or $\min(1, ...) = 3.5 
 
 Hmm, for SUB-lattice $\xi_0 < a$: the exponential factor is intended for SUPER-lattice. In sub-lattice, the formula breaks.
 
-Phase 5 **scope clarification**: NQ-215 boundary perimeter formula applies in SUPER-lattice regime where smooth tanh-disk approximation is valid. In sub-lattice (R3b), cluster has discrete shape, $|\partial S| \approx \mathrm{const}$ (lattice-discrete).
+Phase 5 **scope clarification**: NQ-215 boundary perimeter formula applies in SUPER-lattice regime where smooth tanh-disk approximation is valid. In sub-lattice (R3b), cluster has discrete shape, $\vert \partial S\vert \approx \mathrm{const}$ (lattice-discrete).
 
-For NQ-173 (R3b) at L=20, $\lvert S \rvert \approx 19$ saturated sites: $|\partial S| \approx 4\sqrt{19} \approx 17$ edges. So $g_{\partial} \approx 17/\xi_0 \approx 34$ at $\xi_0 = 0.5$.
+For NQ-173 (R3b) at L=20, $\lvert S \rvert \approx 19$ saturated sites: $\vert \partial S\vert \approx 4\sqrt{19} \approx 17$ edges. So $g_{\partial} \approx 17/\xi_0 \approx 34$ at $\xi_0 = 0.5$.
 
 Then $\mu_{\mathrm{Gold}}^{\mathrm{lifted}} \approx \beta \cdot 34 \approx 136$. But measured $\mu_{\mathrm{Gold}} \approx 0.65$ (NQ-173 mode 2). Off by factor 200.
 
@@ -224,7 +224,7 @@ Number of unstable modes: number of $j$ with $\cos(2\pi j/K) < 0$ = $\lfloor K/2
 ### §4.1 Modica-Mortola for K-field
 
 Single-field Modica-Mortola (canonical T11): 
-$$\mathcal{E}_{\mathrm{bd}}(u) = 2\alpha \int |\nabla u|^2 + \beta \int W(u) \, d^d \mathbf{x}.$$
+$$\mathcal{E}_{\mathrm{bd}}(u) = 2\alpha \int \vert \nabla u\vert ^2 + \beta \int W(u) \, d^d \mathbf{x}.$$
 Γ-convergence as $\xi_0 \to 0$:
 $$\mathcal{E}_{\mathrm{bd}} / \xi_0 \to 2 c_W \cdot \mathrm{Per}(\{u > 1/2\}), \quad c_W = \int_0^1 \sqrt{2 W(s)} \, ds.$$
 
@@ -237,7 +237,7 @@ For K-field $\mathcal{E}_K = \sum_k \mathcal{E}_{\mathrm{bd}}(u^{(k)}) + \lambda
 In sharp-interface limit: each $u^{(k)}$ becomes characteristic function $\chi_{\Omega_k}$ of a set $\Omega_k \subset \mathbb{R}^d$.
 
 **Theorem (NQ-217 Cat B target)**: Γ-convergence:
-$$\mathcal{E}_K / \xi_0 \to 2 c_W \sum_k \mathrm{Per}(\Omega_k) + \lambda_{\mathrm{rep}} \sum_{j<k} |\Omega_j \cap \Omega_k| + \lambda_{\mathrm{bar}} \cdot \mathrm{constraint},$$
+$$\mathcal{E}_K / \xi_0 \to 2 c_W \sum_k \mathrm{Per}(\Omega_k) + \lambda_{\mathrm{rep}} \sum_{j<k} \vert \Omega_j \cap \Omega_k\vert + \lambda_{\mathrm{bar}} \cdot \mathrm{constraint},$$
 with simplex constraint $\sum_k \chi_{\Omega_k} \leq 1$ (i.e., $\Omega_j \cap \Omega_k$ measure-zero).
 
 For $\lambda_{\mathrm{bar}} \to \infty$: constraint enforced exactly, $\Omega_j \cap \Omega_k = \emptyset$. Limit functional:
@@ -249,7 +249,7 @@ The limit functional (4.1) is the **Mumford-Shah-like multi-domain perimeter fun
 
 K-formation gradient flow → motion-by-mean-curvature (with K disjoint domains), per Bronsard-Kohn 1991.
 
-T-σ-Multi-1 instability rate $|\mu_{\mathrm{antisym}}| = \lambda_{\mathrm{rep}}$ in continuum limit (per Phase 4 F13).
+T-σ-Multi-1 instability rate $\vert \mu_{\mathrm{antisym}}\vert = \lambda_{\mathrm{rep}}$ in continuum limit (per Phase 4 F13).
 
 **SCC unifies with classical free-boundary problem theory** in continuum limit.
 
@@ -270,7 +270,7 @@ These are **standard arguments** in geometric measure theory; deferred to W6+ fo
 
 For each (graph $\Gamma$, K, configuration symmetry):
 
-| $\Gamma$ | K | Config | Joint stabilizer | $|G_{\mathbf{u}^*}|$ for D_4 disks |
+| $\Gamma$ | K | Config | Joint stabilizer | $\vert G_{\mathbf{u}^*}\vert $ for D_4 disks |
 |---|---|---|---|---|
 | T²_L | 1 | single disk | $D_4$ | 8 |
 | T²_L | 2 | involutive iso (180° rot) | $D_4 \wr S_2$ | 128 |
@@ -303,7 +303,7 @@ Table covers most SCC-relevant graphs + K combinations. Cat B target — table e
 | NQ | Status before Phase 5 | After Phase 5 |
 |---|---|---|
 | NQ-214 | Open (Phase 4 F3) | **Cat B partial answer**: $c_d \approx 2\pi$ for exp factor; finite-L $L^{-1.5}$ correction |
-| NQ-215 | Open (Phase 4 F3) | **Cat B partial answer**: $|\partial S| \approx C\sqrt m$ + regime-dependent A |
+| NQ-215 | Open (Phase 4 F3) | **Cat B partial answer**: $\vert \partial S\vert \approx C\sqrt m$ + regime-dependent A |
 | NQ-216 | Open (Phase 4 F4) | **Cat B partial answer**: K-fold splitting per (3.2); K=3 cyclic explicit |
 | NQ-217 | Open (Phase 4 F13) | **Cat B target**: Γ-convergence sketch + connection to mean-curvature flow |
 | NQ-218 | Open (Phase 4 F14) | **Cat B target**: 12-row table of wreath structures |

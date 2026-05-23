@@ -39,7 +39,7 @@ Building on `observer_landscape_candidates.md` §1, with updated classifications
 | V2 | Continuous: $V \in C^0(\mathcal{M}_{\mathrm{obs}})$ | **Cont** | See §3 |
 | V3 | Readout-compatible: $\nabla V(\Theta) = 0 \Rightarrow P(\Theta)$ locally stable | **Compat** | See §3 |
 | V4 | Basin-generating: level sets partition $\mathcal{M}_{\mathrm{obs}}$ into attraction regions | **Basin** | See §3 |
-| V5 | Boundary-aware: $V|_{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$ | **Bdry** | See §3 |
+| V5 | Boundary-aware: $V\vert _{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$ | **Bdry** | See §3 |
 
 **Remark (V1 update from VP-3).** The gauge group $G_{\mathrm{SCC}}^{(0)} = S_K \times \mathrm{Aut}_{\mathrm{task}}$ acts on $\mathcal{M}_{\mathrm{obs}}$ by permuting formation labels (K-formations) and by task symmetries. VP-3 established that **no nontrivial $\lambda$-space gauge group** $G_{\mathrm{core\text{-}weight}}$ exists for $P_{\mathrm{top}}$ (all tested transformations A–G are NOT symmetries). Therefore V1 reduces to requiring $G$-invariance under $S_K \times \mathrm{Aut}_{\mathrm{task}}$ only — not any additional $\lambda$-space group.
 
@@ -55,7 +55,7 @@ with $P = P_{\mathrm{top}} = (d_\Theta, T_\Theta)$ and
 
 $$D_{\mathcal{P}}((d, T), (d^*, T^*)) = \alpha \lVert d - d^* \rVert^2 + \beta D_T(T, T^*)$$
 
-$D_T$ = topological signature distance (VP-1, exp86: $3|K_{\mathrm{core},A} - K_{\mathrm{core},B}\lvert + 1.5 \rvert\Delta K_{\mathrm{mid}}\lvert + \rvert\Delta l_{\mathrm{sec}}\lvert + \rvert\Delta l_{\mathrm{thr}}|$).
+$D_T$ = topological signature distance (VP-1, exp86: $3\vert K_{\mathrm{core},A} - K_{\mathrm{core},B}\lvert + 1.5 \rvert\Delta K_{\mathrm{mid}}\lvert + \rvert\Delta l_{\mathrm{sec}}\lvert + \rvert\Delta l_{\mathrm{thr}}\vert $).
 
 ### §3.2 Criterion Analysis (updated)
 
@@ -113,7 +113,7 @@ with $\alpha = \beta = 1$, $d_0^* = (1, 1, 1, 0)$, $T_0^* = $ ideal topological 
 - **V2:** $V^*$ is continuous at interior $\Theta$ (both diagnostic and topological components): HYPOTHESIZED (follows from assumed continuity of $u^*(\Theta)$).
 - **V3:** $V^* = 0$ iff $P(\Theta) = P_0^*$: PROVED (by construction). Critical points of $V^*$ where $\nabla V^* = 0$ correspond to locally stable readouts.
 - **V4:** $V^*$ generates basin structure: HYPOTHESIZED (Prop BS1, basin_stratification.md: $\geq 2$ basins for generic $V \in \mathcal{V}_{\mathrm{adm}}$).
-- **V5:** $V^*|_{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv 0$: $V^*$ vanishes only at configurations achieving $P^*$; boundary observers (e.g., $\lambda_{\mathrm{cl}} = 0$) generically cannot achieve $P^* = (1,1,1,0)$, so $V^*|_{\partial \mathcal{M}} > 0$ generically. HYPOTHESIZED.
+- **V5:** $V^*\vert _{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv 0$: $V^*$ vanishes only at configurations achieving $P^*$; boundary observers (e.g., $\lambda_{\mathrm{cl}} = 0$) generically cannot achieve $P^* = (1,1,1,0)$, so $V^*\vert _{\partial \mathcal{M}} > 0$ generically. HYPOTHESIZED.
 
 **Conclusion.** If V2, V4, V5 hold (all hypothesized), then $V^* \in \mathcal{V}_{\mathrm{adm}}$ and $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$.
 

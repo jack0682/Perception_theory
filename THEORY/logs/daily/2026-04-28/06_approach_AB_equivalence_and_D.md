@@ -135,7 +135,7 @@ So D **does** reduce to (a refinement of) Commitment 14 when K=1.
 For the `05_sigma_multi_concrete_T2_K2.md` setup:
 - Joint stabilizer $G_{\mathbf{u}^*} = D_4 \wr S_2$, order 128.
 - Aut(G) ≀ S_2 = Aut(T²_{20}) ≀ S_2 = (3200 × 3200 × 2) = 20,480,000 elements (huge).
-- Orbit = $|\mathrm{Aut}(G) \wr S_K| / |G_{\mathbf{u}^*}| = 20,480,000 / 128 = 160,000$ ordered K-pairs.
+- Orbit = $\vert \mathrm{Aut}(G) \wr S_K\vert / \vert G_{\mathbf{u}^*}\vert = 20,480,000 / 128 = 160,000$ ordered K-pairs.
 - Conjugacy classes of subgroups of Aut(G) ≀ S_2 isomorphic to $D_4 \wr S_2$: countable finite set.
 
 The orbit-type label of $\mathbf{u}^*$ is the conjugacy class of $D_4 \wr S_2$ in Aut(G) ≀ S_2. **This is a non-perturbative discrete invariant** that A/B/C don't directly capture.

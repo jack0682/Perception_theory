@@ -103,7 +103,7 @@ is a *free parameter* under observer-personal classification **P** (OMS-1 ξ res
 
 **Proof (CoT + CoC):**
 - CoT step 1: $\pi_T(du) = Z(T)^{-1} \exp(-\mathcal{E}/T)\,d\sigma_M$. $T \mapsto \exp(-\mathcal{E}(u)/T)$ is jointly continuous in $(T, u)$ on $(0, \infty) \times \mathcal{F}_M(G)$ (since $\mathcal{E}$ is polynomial bounded on compact $\mathcal{F}_M$).
-- CoT step 2: $Z(T) = \int \exp(-\mathcal{E}/T)\,d\sigma_M$ is continuous (Dominated Convergence Theorem, dominating function $\exp(\sup_T |-\mathcal{E}/T|)$ integrable on compact $\mathcal{F}_M$).
+- CoT step 2: $Z(T) = \int \exp(-\mathcal{E}/T)\,d\sigma_M$ is continuous (Dominated Convergence Theorem, dominating function $\exp(\sup_T \vert -\mathcal{E}/T\vert)$ integrable on compact $\mathcal{F}_M$).
 - CoT step 3: $Z(T) > 0$ for all $T > 0$ (since $\mathcal{F}_M$ non-empty, $\mathcal{E}$ bounded). Therefore $\pi_T \to \pi_{T_0}$ in TV as $T \to T_0$ by direct estimation.
 - CoC anchors: canonical T-PF-A1-GI (Cat A, L1689) provides Gibbs measure structure + the *standard heat kernel regularization argument* used in canonical T-PF-A1-GI proof step (zero-current + heat kernel uniqueness).
 
@@ -213,7 +213,7 @@ L1 + L2 + L3 → B.2.2 (Brouwer existence Cat A 후보).
 *Status*: **OPEN** (existence Cat A 후보 path identified — Brouwer sketch §2; uniqueness OPEN; Route C axiomatic classification recommended).
 
 *Sub-problems (≥3 open questions, plan §C.6)*:
-- **OP-T*-α**: Multi-well multiplicity — quantify $|\mathcal{B}_{T_*}^{\mathrm{FP}}|$ as a function of $\Theta \in \mathcal{R}_{\mathrm{post}}$ (post-bifurcation, 02_H5 §1.3). [W9+ uniqueness 시도]
+- **OP-T*-α**: Multi-well multiplicity — quantify $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert $ as a function of $\Theta \in \mathcal{R}_{\mathrm{post}}$ (post-bifurcation, 02_H5 §1.3). [W9+ uniqueness 시도]
 - **OP-T*-β**: Route C + Stage 0 T hybrid — T_* = f(T-channel-capacity) Route 의 *full formalization* prerequisite to Stage 0 T canonical registration. [W10+ staging]
 - **OP-T*-γ**: Lawvere fixed-point universality — T_* self-reference 가 Lawvere 1969 의 *universal* self-application 구조의 instance 인가 (pre_brainstorm §1.4). [meta-foundational, optional]
 

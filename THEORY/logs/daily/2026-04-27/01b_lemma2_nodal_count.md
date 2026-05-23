@@ -100,9 +100,9 @@ where $\mathcal{C}_{\mathrm{frust}}$ vanishes iff the sign pattern is balanced (
 
 ### 3.6 Proof Sketch of (vi) — Orbit divisibility (Cat C)
 
-**Setup.** The induced action of $G_u$ on subsets of $X$: $\pi \cdot S := \pi(S)$. The nodal partition $\{X^+(\phi_k), X^-(\phi_k)\}$ (unordered pair) has a $G_u$-orbit. If $\phi_k$ is $G_u$-invariant, the partition is fixed (orbit size 1). If $\phi_k$ generates a $G_u$-orbit of size $\lvert G_u \rvert/|\mathrm{Stab}_{G_u}(\phi_k)|$, the partition orbit has comparable size.
+**Setup.** The induced action of $G_u$ on subsets of $X$: $\pi \cdot S := \pi(S)$. The nodal partition $\{X^+(\phi_k), X^-(\phi_k)\}$ (unordered pair) has a $G_u$-orbit. If $\phi_k$ is $G_u$-invariant, the partition is fixed (orbit size 1). If $\phi_k$ generates a $G_u$-orbit of size $\lvert G_u \rvert/\vert \mathrm{Stab}_{G_u}(\phi_k)\vert $, the partition orbit has comparable size.
 
-**Why orbit size constrains nodal count.** If $\pi \in G_u$ permutes the connected components of $G[X^+(\phi_k)]$ non-trivially, the components fall into $\pi$-orbits. The number of components per $\pi$-orbit divides $|\langle\pi\rangle|$. Aggregating over $G_u$, the number of components of $G[X^+(\phi_k)]$ is a sum of orbit sizes, hence divisible by some factor depending on the specific orbit structure.
+**Why orbit size constrains nodal count.** If $\pi \in G_u$ permutes the connected components of $G[X^+(\phi_k)]$ non-trivially, the components fall into $\pi$-orbits. The number of components per $\pi$-orbit divides $\vert \langle\pi\rangle\vert $. Aggregating over $G_u$, the number of components of $G[X^+(\phi_k)]$ is a sum of orbit sizes, hence divisible by some factor depending on the specific orbit structure.
 
 **Why this is conditional.** The divisibility "$\mathcal{N}$ divisible by minimum orbit size" (plan-template wording) is sharp only when all orbits of $G_u$ on connected components have equal size. In general, orbit sizes can vary (some components fixed, others permuted in pairs/triples), and the only universal statement is that the number of components is the sum of orbit sizes.
 

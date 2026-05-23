@@ -126,24 +126,24 @@ $$\mu_k = 4\lambda_k - 1$$
 Key mode values:
 - $\mu_0 = 0$ (zero mode, excluded from $\Sigma_m$ by $\mathbf{1}^\perp$ projection)
 - $\mu_2 = 4 \times 0.152241 - 1 = 0.608964 - 1 = -0.391036$ (NEGATIVE — super-critical, formation regime)
-- $|\mu_2| = 0.391036$
+- $\vert \mu_2\vert = 0.391036$
 
-**Sc_{T8} at reference**: $4\alpha\lambda_2 / (\beta|W''(c)|) = 4 \times 0.152241 / 1 = 0.608964$ (< 1, confirming super-critical).
+**Sc_{T8} at reference**: $4\alpha\lambda_2 / (\beta\vert W''(c)\vert) = 4 \times 0.152241 / 1 = 0.608964$ (< 1, confirming super-critical).
 
 **Summary table for §6 computation**:
 
 | Symbol | Reference value | Formula |
 |---|---|---|
 | $\lambda_2$ | 0.152241 | $4\sin^2(\pi/16)$ |
-| $W''(1/2)$ | −1 | $2(1-6c+6c^2)|_{c=1/2}$ |
+| $W''(1/2)$ | −1 | $2(1-6c+6c^2)\vert _{c=1/2}$ |
 | $\lvert W''(1/2) \rvert$ | 1 | — |
-| $W'''(1/2)$ | 0 | $12(2c-1)|_{c=1/2}$ |
+| $W'''(1/2)$ | 0 | $12(2c-1)\vert _{c=1/2}$ |
 | $\sigma$ | $\sqrt{2}/6 \approx 0.2357$ | $(\sqrt{2}/6)\sqrt{\alpha\beta}$ at $\alpha=\beta=1$ (CORRECTED, file 12 §2) |
 | $\mu_2$ | −0.391036 | $4\lambda_2 - 1$ at $\alpha=\beta=1$ |
 | $\mu_k$ at mode $k$ | $4\lambda_k - 1$ | Theorem 4 |
 | $T_*$ | 0.1 | given |
 | $R$ | 4 | given |
-| $|\nabla E|$ | reference value | left as symbol (E-dependent) |
+| $\vert \nabla E\vert $ | reference value | left as symbol (E-dependent) |
 
 ---
 
@@ -157,9 +157,9 @@ Key mode values:
 
 **Definition**:
 
-$$\boxed{\mathrm{Pe} = \frac{|\nabla \mathcal{E}(u^*)| \cdot R}{T_*}}$$
+$$\boxed{\mathrm{Pe} = \frac{\vert \nabla \mathcal{E}(u^*)\vert \cdot R}{T_*}}$$
 
-where $|\nabla \mathcal{E}(u^*)|$ is the norm of the energy gradient at a reference configuration $u^*$,
+where $\vert \nabla \mathcal{E}(u^*)\vert $ is the norm of the energy gradient at a reference configuration $u^*$,
 $R$ is a characteristic spatial scale (e.g., formation radius), and $T_*$ is the effective stochastic
 temperature (canonical OMS-1 resident, CV-1.18, canonical.md L2711).
 
@@ -167,29 +167,29 @@ temperature (canonical OMS-1 resident, CV-1.18, canonical.md L2711).
 drift to stochastic noise. In the SCC reflected Langevin (T-PF-A1-SDE, Cat A, canonical.md L1668),
 the deterministic drift is $-\Pi_{T\Sigma_m}\nabla\mathcal{E}(U_t)$ and the stochastic noise amplitude
 is $\sqrt{2T_*}$. Over a spatial scale $R$, the deterministic contribution scales as
-$|\nabla\mathcal{E}| \cdot R$ (energy change over $R$), and the stochastic contribution scales as
+$\vert \nabla\mathcal{E}\vert \cdot R$ (energy change over $R$), and the stochastic contribution scales as
 $\sqrt{2T_*} \cdot R^{1/2}$ in the appropriate norm. Taking the ratio of deterministic to stochastic
 characteristic magnitudes, and absorbing the $\sqrt{2}$ and $R^{1/2}$ factors into the definition
 convention, yields Pe as stated. No new mathematics: this is a direct ratio of quantities already
 appearing in T-PF-A1-SDE. The definition is well-posed whenever $T_* > 0$ (guaranteed by canonical
 T-PF-A1-SDE hypothesis) and $R > 0$.
 
-**Domain of validity**: $T_* > 0$ (T-PF-A1-SDE hypothesis); $R > 0$; $|\nabla\mathcal{E}|$ finite
+**Domain of validity**: $T_* > 0$ (T-PF-A1-SDE hypothesis); $R > 0$; $\vert \nabla\mathcal{E}\vert $ finite
 (guaranteed on compact $\Sigma_m$ by T-PF-A1-AR, canonical.md L1652, since $\mathcal{E}$ is $C^2$
 on $[0,1]^n$). Well-posed for all $(\alpha, \beta, c, T_*, R)$ in canonical parameter range.
 
 **Inverse causation check**:
 - If T-PF-A1-SDE (Cat A) removed: $T_*$ loses its role as the stochastic noise level; Pe undefined as drift/noise ratio.
-- If T-PF-A1-AR (Cat A) removed: $\mathcal{E}$ may not be Lipschitz on $\Sigma_m$; $|\nabla\mathcal{E}|$ may be ill-defined.
+- If T-PF-A1-AR (Cat A) removed: $\mathcal{E}$ may not be Lipschitz on $\Sigma_m$; $\vert \nabla\mathcal{E}\vert $ may be ill-defined.
 - Neither anchor can be removed without breaking Pe.
 
 **Reference numerical value** (2D torus L=16, $\alpha=\beta=1$, $c=1/2$, $T_*=0.1$, $R=4$):
 
-$$\mathrm{Pe} = \frac{|\nabla\mathcal{E}| \times 4}{0.1} = 40 \cdot |\nabla\mathcal{E}|$$
+$$\mathrm{Pe} = \frac{\vert \nabla\mathcal{E}\vert \times 4}{0.1} = 40 \cdot \vert \nabla\mathcal{E}\vert $$
 
-(Left in terms of $|\nabla\mathcal{E}|$ since it is configuration-dependent. At a formation critical
-point $|\nabla\mathcal{E}| = 0$; near T8 wall $|\nabla\mathcal{E}|$ is small; typical bulk regime
-$|\nabla\mathcal{E}| \sim O(\beta) = O(1)$, giving Pe $\sim 40$.)
+(Left in terms of $\vert \nabla\mathcal{E}\vert $ since it is configuration-dependent. At a formation critical
+point $\vert \nabla\mathcal{E}\vert = 0$; near T8 wall $\vert \nabla\mathcal{E}\vert $ is small; typical bulk regime
+$\vert \nabla\mathcal{E}\vert \sim O(\beta) = O(1)$, giving Pe $\sim 40$.)
 
 ---
 
@@ -237,7 +237,7 @@ Since Da = 1 > 0.609, reference is super-critical — formation regime confirmed
 
 **Definition**:
 
-$$\boxed{\mathrm{Ca} = \frac{|\nabla\mathcal{E}|}{\sigma}}, \qquad \sigma = \frac{\sqrt{2}}{6}\sqrt{\alpha\beta}$$
+$$\boxed{\mathrm{Ca} = \frac{\vert \nabla\mathcal{E}\vert}{\sigma}}, \qquad \sigma = \frac{\sqrt{2}}{6}\sqrt{\alpha\beta}$$
 
 where $\sigma$ is the Modica-Mortola surface tension for $W(u) = u^2(1-u)^2$ (sharp-interface limit
 of $\mathcal{E}_{\mathrm{bd}}$, canonical T11 Γ-convergence, canonical.md L1167–1169).
@@ -247,11 +247,11 @@ canonical $\mathcal{E}_{\mathrm{bd}}$ via the standard Modica-Mortola profile in
 $\sigma = \sqrt{\alpha\beta}\int_0^1\sqrt{2W(u)}\,du = (\sqrt{2}/6)\sqrt{\alpha\beta}$ for $W(u)=u^2(1-u)^2$.
 This derivation uses only the canonical energy form (CLAUDE.md §Theory Sketch + T11 Γ-convergence)
 and the canonical double-well (CLAUDE.md §"Critical Implementation Details", I6 correction
-$W(u)=u^2(1-u)^2$). The ratio Ca = $|\nabla\mathcal{E}|/\sigma$ measures whether the formation
+$W(u)=u^2(1-u)^2$). The ratio Ca = $\vert \nabla\mathcal{E}\vert /\sigma$ measures whether the formation
 driving force dominates or is dominated by interface energy — the overdamped analog of the fluid
 capillary number (Bond/Ca in overdamped regimes). Definition requires only canonical $\alpha, \beta, \mathcal{E}$.
 
-**Domain of validity**: $\alpha, \beta > 0$; $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta} > 0$; $|\nabla\mathcal{E}|$
+**Domain of validity**: $\alpha, \beta > 0$; $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta} > 0$; $\vert \nabla\mathcal{E}\vert $
 finite on $\Sigma_m$. Well-posed throughout canonical parameter range.
 
 **Inverse causation check**:
@@ -262,9 +262,9 @@ finite on $\Sigma_m$. Well-posed throughout canonical parameter range.
 
 **Reference value** ($\alpha=\beta=1$, $\sigma=\sqrt{2}/6 \approx 0.2357$):
 
-$$\mathrm{Ca} = \frac{|\nabla\mathcal{E}|}{\sqrt{2}/6} = \frac{6}{\sqrt{2}}\cdot|\nabla\mathcal{E}| = 3\sqrt{2}\cdot|\nabla\mathcal{E}| \approx 4.243\,|\nabla\mathcal{E}|$$
+$$\mathrm{Ca} = \frac{\vert \nabla\mathcal{E}\vert}{\sqrt{2}/6} = \frac{6}{\sqrt{2}}\cdot\vert \nabla\mathcal{E}\vert = 3\sqrt{2}\cdot\vert \nabla\mathcal{E}\vert \approx 4.243\,\vert \nabla\mathcal{E}\vert $$
 
-(Numerically: Ca $\approx 4.243$ when $|\nabla\mathcal{E}| \sim 1$.)
+(Numerically: Ca $\approx 4.243$ when $\vert \nabla\mathcal{E}\vert \sim 1$.)
 
 ---
 
@@ -276,11 +276,11 @@ $$\mathrm{Ca} = \frac{|\nabla\mathcal{E}|}{\sqrt{2}/6} = \frac{6}{\sqrt{2}}\cdot
 
 **Definition**:
 
-$$\boxed{\mathrm{Bo} = \frac{R^2 \cdot |\nabla\mathcal{E}|}{\sigma}}$$
+$$\boxed{\mathrm{Bo} = \frac{R^2 \cdot \vert \nabla\mathcal{E}\vert}{\sigma}}$$
 
 **Cat A direct proof**: The Bond number (Weber number analog in overdamped flow) measures the ratio
 of driving force at scale $R^2$ to surface tension $\sigma$. In fluid mechanics, Bo $= \rho g R^2 / \sigma$
-(gravity vs surface tension). In SCC, the role of gravitational body force is played by $|\nabla\mathcal{E}|$
+(gravity vs surface tension). In SCC, the role of gravitational body force is played by $\vert \nabla\mathcal{E}\vert $
 (energy gradient driving formation), and the surface tension is the Modica-Mortola $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$
 (canonical T11; CORRECTED 2026-05-20 per Wave 2 critic Fix #1). The extra factor $R$ relative to Ca gives Bo its area-scaling character:
 $\mathrm{Bo} = R \cdot \mathrm{Ca}$. Since Ca is Cat A direct (L-CAPILLARY-DEF above) and $R > 0$
@@ -295,9 +295,9 @@ is a given scale, Bo is Cat A direct by simple multiplication. No new content be
 
 **Reference value** ($R=4$, $\sigma=\sqrt{2}/6 \approx 0.2357$):
 
-$$\mathrm{Bo} = \frac{4^2 \cdot |\nabla\mathcal{E}|}{\sqrt{2}/6} = \frac{96}{\sqrt{2}}\cdot|\nabla\mathcal{E}| = 48\sqrt{2}\cdot|\nabla\mathcal{E}| \approx 67.88 \cdot |\nabla\mathcal{E}|$$
+$$\mathrm{Bo} = \frac{4^2 \cdot \vert \nabla\mathcal{E}\vert}{\sqrt{2}/6} = \frac{96}{\sqrt{2}}\cdot\vert \nabla\mathcal{E}\vert = 48\sqrt{2}\cdot\vert \nabla\mathcal{E}\vert \approx 67.88 \cdot \vert \nabla\mathcal{E}\vert $$
 
-(At $|\nabla\mathcal{E}| \sim 1$: Bo $\approx 67.88$.)
+(At $\vert \nabla\mathcal{E}\vert \sim 1$: Bo $\approx 67.88$.)
 
 ---
 
@@ -353,7 +353,7 @@ $$\boxed{\mathrm{Sc}^{(1)}_k = \frac{\mu_k}{T_*} = \frac{1}{\mathrm{St}_k}}$$
 trivially Cat A by definition inversion. It measures how strongly the deterministic restoring force
 of mode $k$ dominates thermal fluctuations. $\mathrm{Sc}^{(1)}_k > 0$: mode $k$ is deterministically
 stable and thermally suppressed. $\mathrm{Sc}^{(1)}_k < 0$: mode $k$ is unstable (formation regime).
-$|\mathrm{Sc}^{(1)}_k| \gg 1$: either strongly stable or strongly unstable. This number directly
+$\vert \mathrm{Sc}^{(1)}_k\vert \gg 1$: either strongly stable or strongly unstable. This number directly
 quantifies the T-PF-A1-PE spectral gap (canonical.md L1700–1707) in units of $T_*$: the Poincaré
 gap $\lambda_1 \sim e^{-\mathrm{osc}/T_*} \cdot (\pi^2/n)$ connects to the Hessian spectrum at
 minimizers.
@@ -378,7 +378,7 @@ $$\mathrm{Sc}^{(1)}_2 = \mu_2 / T_* = -0.391036 / 0.1 = -3.91036$$
 
 **Definition**:
 
-$$\boxed{\mathrm{Sc}_{T8} = \frac{4\alpha\lambda_2(L_G)}{\beta|W''(c)|}}$$
+$$\boxed{\mathrm{Sc}_{T8} = \frac{4\alpha\lambda_2(L_G)}{\beta\vert W''(c)\vert}}$$
 
 **Cat A direct proof**: This is a direct dimensionless rename of the canonical T8 phase-transition
 condition. Theorem SB7 (canonical.md L2497–2498) proves that $\Sigma_{T8} = \{(\alpha,\beta,c) : \mu_2 = 0\}$
@@ -428,7 +428,7 @@ spinodal interior; deterministic boundary width $\ell_{\mathrm{bd}} \sim \sqrt{\
 **Cat A direct proof**: The formation boundary band has a deterministic characteristic frequency
 $\sqrt{\alpha W''(u^*) / \ell_{\mathrm{bd}}^2} \sim \sqrt{\beta W''(u^*)}$ (from the Hessian at boundary
 sites: $\mu_{\mathrm{bd}} = 4\alpha\lambda_k^{\mathrm{bd}} + \beta W''(u^*) \approx \beta W''(u^*)$
-when $\alpha\lambda_k^{\mathrm{bd}}$ is smaller than $\beta|W''(u^*)|$ at boundary sites). However,
+when $\alpha\lambda_k^{\mathrm{bd}}$ is smaller than $\beta\vert W''(u^*)\vert $ at boundary sites). However,
 the cleanest definition follows directly from Theorem 4 by evaluating at the boundary field value $u^*$
 and normalizing by $T_*$. The ratio $\alpha W''(u^*)/T_*$ measures deterministic boundary curvature
 vs thermal noise — the Prandtl-type ratio for the boundary layer specifically. This is Cat A direct
@@ -495,7 +495,7 @@ $$\mathrm{Pr}^{(\mathrm{spatial})} = \frac{1 \times 0.152241}{0.1} = 1.52241$$
 
 **Definition**:
 
-$$\boxed{\mathrm{Pr}^{(\mathrm{onsite})} = \frac{\beta|W''(c)|}{T_*}}$$
+$$\boxed{\mathrm{Pr}^{(\mathrm{onsite})} = \frac{\beta\vert W''(c)\vert}{T_*}}$$
 
 **Cat A direct proof**: Symmetric to L-PR-SPATIAL: the onsite contribution to $\mu_k$ from Theorem 4
 is $\beta W''(c)$ (negative in spinodal interior). Its magnitude normalized by $T_*$ gives the ratio of
@@ -526,7 +526,7 @@ $$\mathrm{Pr}^{(\mathrm{onsite})} = \frac{1 \times 1}{0.1} = 10.0$$
 
 **Statement**:
 
-$$\boxed{\frac{\mathrm{Pr}^{(\mathrm{spatial})}}{\mathrm{Pr}^{(\mathrm{onsite})}} = \frac{\alpha\lambda_2(L_G)/T_*}{\beta|W''(c)|/T_*} = \frac{\alpha\lambda_2(L_G)}{\beta|W''(c)|} = \frac{1}{4}\mathrm{Sc}_{T8}}$$
+$$\boxed{\frac{\mathrm{Pr}^{(\mathrm{spatial})}}{\mathrm{Pr}^{(\mathrm{onsite})}} = \frac{\alpha\lambda_2(L_G)/T_*}{\beta\vert W''(c)\vert /T_*} = \frac{\alpha\lambda_2(L_G)}{\beta\vert W''(c)\vert} = \frac{1}{4}\mathrm{Sc}_{T8}}$$
 
 **Equivalence**: The T8 critical condition $\mu_2 = 0$ is equivalent to:
 
@@ -595,11 +595,11 @@ deterministic force (in Prandtl units)".
 
 **Statement**:
 
-$$\boxed{\mathrm{Pe} = \mathrm{Pr}^{(\mathrm{spatial})} \cdot \frac{|\nabla\mathcal{E}| \cdot R}{\alpha\lambda_2(L_G)}}$$
+$$\boxed{\mathrm{Pe} = \mathrm{Pr}^{(\mathrm{spatial})} \cdot \frac{\vert \nabla\mathcal{E}\vert \cdot R}{\alpha\lambda_2(L_G)}}$$
 
 **Geometric factor**:
 
-$$\frac{\mathrm{Pe}}{\mathrm{Pr}^{(\mathrm{spatial})}} = \frac{|\nabla\mathcal{E}| \cdot R / T_*}{\alpha\lambda_2 / T_*} = \frac{|\nabla\mathcal{E}| \cdot R}{\alpha\lambda_2}$$
+$$\frac{\mathrm{Pe}}{\mathrm{Pr}^{(\mathrm{spatial})}} = \frac{\vert \nabla\mathcal{E}\vert \cdot R / T_*}{\alpha\lambda_2 / T_*} = \frac{\vert \nabla\mathcal{E}\vert \cdot R}{\alpha\lambda_2}$$
 
 **Proof**:
 
@@ -610,21 +610,21 @@ CoT step 3: Pe / Pr^{(spatial)} = (|∇E|·R/T_*) / (αλ_2/T_*) = |∇E|·R / (
 → Pe = Pr^{(spatial)} × (|∇E|·R / (αλ_2))
 ```
 
-The geometric factor $|∇\mathcal{E}| \cdot R / (\alpha\lambda_2)$ is the ratio of the energy-gradient
+The geometric factor $\vert ∇\mathcal{E}\vert \cdot R / (\alpha\lambda_2)$ is the ratio of the energy-gradient
 force at scale $R$ to the spatial coupling characteristic "force" $\alpha\lambda_2$ (the spectral
-stiffness of the graph). When $|\nabla\mathcal{E}| \sim \alpha\lambda_2/R$ (gradient comparable
+stiffness of the graph). When $\vert \nabla\mathcal{E}\vert \sim \alpha\lambda_2/R$ (gradient comparable
 to spectral stiffness per unit length), Pe $\sim$ Pr^{(spatial)}: the Péclet number equals the
 spatial Prandtl number. This bridge shows Pe is Pr^{(spatial)}-derived — Pe contains no additional
 information about thermal vs deterministic balance beyond Pr^{(spatial)} and the geometric factor.
 
 **CoC anchors**: L-PECLET-DEF + L-PR-SPATIAL (both Cat A direct from T-PF-A1-SDE + Theorem 4).
 
-**Reference value** ($|\nabla\mathcal{E}|=1$ illustrative, $R=4$, $\alpha=1$, $\lambda_2=0.152241$, $T_*=0.1$):
+**Reference value** ($\vert \nabla\mathcal{E}\vert =1$ illustrative, $R=4$, $\alpha=1$, $\lambda_2=0.152241$, $T_*=0.1$):
 
 $$\text{Geometric factor} = \frac{1 \times 4}{1 \times 0.152241} = 26.273$$
 $$\mathrm{Pe} = 1.52241 \times 26.273 = 40.0$$
 
-(Consistent with §3.1 reference: Pe $= 40 \times |\nabla\mathcal{E}| = 40$ at $|\nabla\mathcal{E}|=1$. ✓)
+(Consistent with §3.1 reference: Pe $= 40 \times \vert \nabla\mathcal{E}\vert = 40$ at $\vert \nabla\mathcal{E}\vert =1$. ✓)
 
 ---
 
@@ -667,7 +667,7 @@ graph-Laplacian spatial scale and double-well boundary scale.
 
 $$\mathrm{Le}_{\mathrm{SCC}} = \frac{0.152241}{-1} = -0.152241$$
 
-(Negative because $W''(u^*)$ is negative in spinodal. The magnitude $|\mathrm{Le}_{\mathrm{SCC}}| = 0.152241$
+(Negative because $W''(u^*)$ is negative in spinodal. The magnitude $\vert \mathrm{Le}_{\mathrm{SCC}}\vert = 0.152241$
 gives the ratio of spatial to boundary scales.)
 
 ---
@@ -706,15 +706,15 @@ adopts Sc$^{(1)}_k$ as the primary notation (Prandtl-family consistency, 01 §7.
 
 **Statement (form — Identity 2a per Wave 2 critic Fix #4, file 12 §5)**:
 
-$$\boxed{\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}} = |\mu_{\mathrm{saddle}}|}, \qquad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}$$
+$$\boxed{\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}} = \vert \mu_{\mathrm{saddle}}\vert}, \qquad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{\vert \mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}\vert}$$
 
-where $\omega_{\mathrm{well}} = |\mu_{\mathrm{well}}|^{1/2}$, $\omega_{\mathrm{saddle}} = |\mu_{\mathrm{saddle}}|^{1/2}$,
-and the full Eyring-Kramers rate is $\Gamma \sim \omega_0 \exp(-\Delta\mathcal{E}/T_*)$. The algebraic equality $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = |\mu_{\mathrm{saddle}}|$ is the *HTB high-friction leading-order form* (file 12 §5 verification).
+where $\omega_{\mathrm{well}} = \vert \mu_{\mathrm{well}}\vert ^{1/2}$, $\omega_{\mathrm{saddle}} = \vert \mu_{\mathrm{saddle}}\vert ^{1/2}$,
+and the full Eyring-Kramers rate is $\Gamma \sim \omega_0 \exp(-\Delta\mathcal{E}/T_*)$. The algebraic equality $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \vert \mu_{\mathrm{saddle}}\vert $ is the *HTB high-friction leading-order form* (file 12 §5 verification).
 
-**Note on Identity 2 split**: The 1D-projection geometric-mean form (Identity 2b in file 02 §5.1) $\omega_0^{(2b)} \sim (1/2\pi)\sqrt{\mu_{\mathrm{well}}\cdot|\mu_{\mathrm{saddle}}|}$ is *DIFFERENT* from Identity 2a above and must not be equated. This file's T-IDENTITY-KRAMERS-PREFACTOR-FORM covers only Identity 2a (the structural Pr^{(Kramers)} reduction). For Identity 2b multi-D derivation see companion `02_kramers_prefactor_op_0005_attack.md` §5.1.
+**Note on Identity 2 split**: The 1D-projection geometric-mean form (Identity 2b in file 02 §5.1) $\omega_0^{(2b)} \sim (1/2\pi)\sqrt{\mu_{\mathrm{well}}\cdot\vert \mu_{\mathrm{saddle}}\vert}$ is *DIFFERENT* from Identity 2a above and must not be equated. This file's T-IDENTITY-KRAMERS-PREFACTOR-FORM covers only Identity 2a (the structural Pr^{(Kramers)} reduction). For Identity 2b multi-D derivation see companion `02_kramers_prefactor_op_0005_attack.md` §5.1.
 
 **Cat A direct (form only)**: The Hänggi-Talkner-Borkovec (1990, Rev Mod Phys 62:251) overdamped
-Kramers formula for a 1D barrier is $\Gamma = (\omega_{\mathrm{well}} \cdot |\omega_{\mathrm{saddle}}|) / (2\pi\gamma) \cdot \exp(-\Delta E/k_BT)$
+Kramers formula for a 1D barrier is $\Gamma = (\omega_{\mathrm{well}} \cdot \vert \omega_{\mathrm{saddle}}\vert) / (2\pi\gamma) \cdot \exp(-\Delta E/k_BT)$
 where $\gamma$ is friction and $\omega^2$ are the local curvatures. In SCC's overdamped Langevin
 (T-PF-A1-SDE, Cat A), the analogous form uses the Hessian eigenvalues at the well ($\mu_{\mathrm{well}} > 0$,
 the Hessian minimum at the formation minimizer) and at the saddle ($\mu_{\mathrm{saddle}} < 0$, the
@@ -732,7 +732,7 @@ eigenvalues at formation minimizers and K-jump saddles is the Cat B work in comp
 
 **Reference value** (form only; explicit values require Cat B):
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} = |\mu_{\mathrm{well}}\lvert / \rvert\mu_{\mathrm{saddle}}| \qquad (\text{Cat B to evaluate})$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} = \vert \mu_{\mathrm{well}}\lvert / \rvert\mu_{\mathrm{saddle}}\vert \qquad (\text{Cat B to evaluate})$$
 
 ---
 
@@ -812,22 +812,22 @@ $$\mathrm{Sc}_{T8}(2,2) = 0.608964 \quad \text{(unchanged)} \checkmark$$
 ## §6 — Numerical Reference Table
 
 All 16 lemmas evaluated at 2D torus L=16, $c=1/2$, $\alpha=\beta=1$, $T_*=0.1$, $R=4$,
-$|\nabla\mathcal{E}|=1$ (illustrative unit gradient).
+$\vert \nabla\mathcal{E}\vert =1$ (illustrative unit gradient).
 
 | # | Label | Formula | Reference value |
 |---|---|---|---|
-| 1 | $\mathrm{Pe}$ | $|\nabla E| R / T_*$ | $40.0$ (at $|\nabla E|=1$) |
+| 1 | $\mathrm{Pe}$ | $\vert \nabla E\vert R / T_*$ | $40.0$ (at $\vert \nabla E\vert =1$) |
 | 2 | $\mathrm{Da}$ | $\beta/\alpha$ | $1.0$ |
-| 3 | $\mathrm{Ca}$ | $|\nabla E| / \sigma$ | $\approx 4.243$ (at $\sigma=\sqrt{2}/6 \approx 0.2357$; CORRECTED per Fix #1) |
-| 4 | $\mathrm{Bo}$ | $R^2 |\nabla E| / \sigma$ | $\approx 67.88$ (CORRECTED per Fix #1) |
+| 3 | $\mathrm{Ca}$ | $\vert \nabla E\vert / \sigma$ | $\approx 4.243$ (at $\sigma=\sqrt{2}/6 \approx 0.2357$; CORRECTED per Fix #1) |
+| 4 | $\mathrm{Bo}$ | $R^2 \vert \nabla E\vert / \sigma$ | $\approx 67.88$ (CORRECTED per Fix #1) |
 | 5 | $\mathrm{St}_2$ | $T_* / \mu_2$ | $-0.2557$ |
 | 6 | $\mathrm{Sc}^{(1)}_2$ | $\mu_2 / T_*$ | $-3.9104$ |
-| 7 | $\mathrm{Sc}_{T8}$ | $4\alpha\lambda_2 / (\beta|W''(c)|)$ | $0.608964$ |
-| 8 | $\mathrm{Pr}^{(\mathrm{bd})}$ | $\alpha|W''(u^*)| / T_*$ | $10.0$ |
+| 7 | $\mathrm{Sc}_{T8}$ | $4\alpha\lambda_2 / (\beta\vert W''(c)\vert)$ | $0.608964$ |
+| 8 | $\mathrm{Pr}^{(\mathrm{bd})}$ | $\alpha\vert W''(u^*)\vert / T_*$ | $10.0$ |
 | 9 | $\mathrm{Pr}^{(\mathrm{spatial})}$ | $\alpha\lambda_2 / T_*$ | $1.52241$ |
-| 10 | $\mathrm{Pr}^{(\mathrm{onsite})}$ | $\beta|W''(c)| / T_*$ | $10.0$ |
+| 10 | $\mathrm{Pr}^{(\mathrm{onsite})}$ | $\beta\vert W''(c)\vert / T_*$ | $10.0$ |
 | 11 | Identity T8-PR | $\mathrm{Pr}^{(\mathrm{spatial})} / \mathrm{Pr}^{(\mathrm{onsite})}$ | $0.152241 = (1/4)\mathrm{Sc}_{T8}$ ✓ |
-| 12 | Identity Pe-Pr | $\mathrm{Pe} / \mathrm{Pr}^{(\mathrm{spatial})}$ | $26.273 = |\nabla E| R / (\alpha\lambda_2)$ |
+| 12 | Identity Pe-Pr | $\mathrm{Pe} / \mathrm{Pr}^{(\mathrm{spatial})}$ | $26.273 = \vert \nabla E\vert R / (\alpha\lambda_2)$ |
 | 13 | Identity Le | $\mathrm{Pr}^{(\mathrm{spatial})} / \mathrm{Pr}^{(\mathrm{bd})}$ | $-0.152241 = \lambda_2/W''(u^*)$ |
 | 14 | Identity St-Sc | $\mathrm{Sc}^{(1)}_2 \times \mathrm{St}_2$ | $1.0$ ✓ |
 | 15 | Kramers form | $\omega_0 \sim 1/\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}$ | Cat B values pending |

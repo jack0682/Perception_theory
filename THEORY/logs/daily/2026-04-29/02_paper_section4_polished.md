@@ -45,7 +45,7 @@ $$\sigma(u^*) := \left(\mathcal{F}(u^*); \big\{(n_k, [\rho_k], \lambda_k)\big\}_
 
 The well-definedness of σ — particularly the irrep label $[\rho_k]$ — relies on:
 
-**Lemma 4.1.2 (σ well-defined; canonical T-σ-Lemma-1).** *The Hessian $H = \nabla^2 \mathcal{E}|_{u^*}$ acting on $T_{u^*} \Sigma_m \cong \mathbf{1}^\perp$ commutes with the $\mathrm{Stab}(u^*)$-action. Hence each Hessian eigenspace*
+**Lemma 4.1.2 (σ well-defined; canonical T-σ-Lemma-1).** *The Hessian $H = \nabla^2 \mathcal{E}\vert _{u^*}$ acting on $T_{u^*} \Sigma_m \cong \mathbf{1}^\perp$ commutes with the $\mathrm{Stab}(u^*)$-action. Hence each Hessian eigenspace*
 $$V_k := \ker(H - \lambda_k I) \cap \mathbf{1}^\perp$$
 *is a $\mathrm{Stab}(u^*)$-representation. By Maschke's theorem and Schur's lemma, $V_k$ decomposes uniquely into irreducible $\mathrm{Stab}(u^*)$-representations:*
 $$V_k = \bigoplus_{[\rho] \in \mathrm{Irr}(\mathrm{Stab}(u^*))} V_k^{[\rho]}, \qquad \dim V_k^{[\rho]} = m_{[\rho]} \dim[\rho]. \tag{4.2}$$
@@ -168,7 +168,7 @@ The lowest eigenvalue of the antisym block is $\mu_{\mathrm{Gold}} - \lambda_{\m
 ### §4.3.3 The Mode-Mixing Factor $c_{\mathrm{eff}}$
 
 The factor $c_{\mathrm{eff}}(L)$ is a precision-correction at finite $L$, given empirically by
-$$c_{\mathrm{eff}}(L) = \big\vertO_{\mathrm{ideal-actual}}\big\vert^2 \cdot \frac{|\mu_{\mathrm{antisym}}^{\mathrm{measured}}|}{\lambda_{\mathrm{rep}}}, \tag{4.17}$$
+$$c_{\mathrm{eff}}(L) = \big\vertO_{\mathrm{ideal-actual}}\big\vert^2 \cdot \frac{\vert \mu_{\mathrm{antisym}}^{\mathrm{measured}}\vert}{\lambda_{\mathrm{rep}}}, \tag{4.17}$$
 where $O_{\mathrm{ideal-actual}}$ is the overlap between the ideal canonical antisym mode and the actual lowest joint-Hessian eigenvector. Numerical measurements (Phase 4 F5 grid) at $c = 0.10$:
 
 | $L$ | 16 | 20 | 24 |
@@ -185,7 +185,7 @@ We verified Theorem 4.3.1 on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12, 16\}$ a
 
 A subtle distinction (Phase 5 P1.1, Phase 6 Q1, Phase 7 R1.1-R1.2): Theorem 4.3.1 is a *static* claim — the joint Hessian has a negative eigenvalue. The corresponding *dynamic* instability under volume-projected gradient flow $\dot{\mathbf{u}} = -P_\Sigma \nabla \mathcal{E}_K$ requires the unstable eigenvector to lie in the volume-preserving subspace $\bigoplus_j (\mathbf{1}_j^\perp)$, *and* to remain accessible under the additional constraints (simplex barrier, $[0,1]$ box clipping).
 
-**Phase 7 R1.2 finding.** *Removing the $[0,1]$ box clipping recovers exponential growth at rate $\approx c_{\mathrm{eff}} \cdot |\lambda_{\mathrm{antisym}}|$.* That is, the box constraint is the **primary dynamical stabilizer**: it freezes the static saddle at a configuration that is not dynamically accessible under the constrained flow. The simplex barrier contributes secondarily (Phase 7 R1.1: removing simplex projection alone gives rate $-0.0062$, still decay; removing box clipping gives rate $+0.0148$, growth).
+**Phase 7 R1.2 finding.** *Removing the $[0,1]$ box clipping recovers exponential growth at rate $\approx c_{\mathrm{eff}} \cdot \vert \lambda_{\mathrm{antisym}}\vert $.* That is, the box constraint is the **primary dynamical stabilizer**: it freezes the static saddle at a configuration that is not dynamically accessible under the constrained flow. The simplex barrier contributes secondarily (Phase 7 R1.1: removing simplex projection alone gives rate $-0.0062$, still decay; removing box clipping gives rate $+0.0148$, growth).
 
 The static-vs-dynamic distinction has further consequences for K-field architecture choice and LSW connection (§4.5 below).
 
@@ -214,10 +214,10 @@ A new phenomenon discovered Phase 3, denoted V5b-T'.
 
 **Theorem 4.4.2 (V5b-T' corner-saturation on translation-invariant graphs; NEW Cat B target).**
 *Hypotheses:* $\beta > 1/a^2$ AND $c < c_s = (3-\sqrt 3)/6$, on translation-invariant $G$; $\mathbf{u}^*$ is the F=1 minimizer of $\mathcal{E}_{\mathrm{bd}}$ from a localized initial condition.
-*Claim (a, corner saturation):* $u^*(x) = 1$ on a connected cluster $S \subset X$ with $\lvert S \rvert \approx m$; $u^*(x) = 0$ on most of $X \setminus S$; transition layer of size $O(|\partial S|)$.
+*Claim (a, corner saturation):* $u^*(x) = 1$ on a connected cluster $S \subset X$ with $\lvert S \rvert \approx m$; $u^*(x) = 0$ on most of $X \setminus S$; transition layer of size $O(\vert \partial S\vert)$.
 *Claim (b, Goldstone of saturated cluster):* The lowest non-tangent Hessian mode is an approximate translation Goldstone of $S$, PN-barrier-lifted from zero by the cluster boundary's interaction with the discrete lattice.
 *Claim (c, PN-barrier formula):*
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{|\partial S|}{\xi_0}, \quad |\partial S| \approx 4\sqrt{m}, \tag{4.19}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{\vert \partial S\vert}{\xi_0}, \quad \vert \partial S\vert \approx 4\sqrt{m}, \tag{4.19}$$
 *of magnitude $\mathcal{O}(\beta)$ — not exponentially small.*
 *Claim (d, mode mixing):* The lowest eigenvector hybridizes the translation Goldstone with cluster-boundary spectral modes; full-space overlap $< 0.9$ (sub-super-lattice signature).
 

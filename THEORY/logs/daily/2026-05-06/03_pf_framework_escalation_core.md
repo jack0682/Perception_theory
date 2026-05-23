@@ -66,7 +66,7 @@ where $T_*$ is the effective temperature, $\omega_0$ the saddle-point prefactor.
 **This statement is vacuous without P-F framework:**
 - $T_*$ is not defined in canonical SCC theory (zero-T determinism).
 - The "barrier" $\Delta E_{\mathrm{barrier}}$ is a property of the energy landscape (computable), but its relevance to selection requires that escape rates follow Arrhenius law — which requires the Langevin equation on $\Sigma_M$.
-- The Eyring-Kramers prefactor formula $A = (|\lambda_-|/2\pi)\sqrt{\det H_{\min}/|\det' H_{\mathrm{saddle}}|}$ requires existence of a saddle point on $\Sigma_M$ and the Hessian spectrum at saddle — purely geometric quantities — but the formula itself comes from the Kramers (1940) / Hänggi-Talkner-Borkovec (1990) escape rate theory under Brownian dynamics.
+- The Eyring-Kramers prefactor formula $A = (\vert \lambda_-\vert /2\pi)\sqrt{\det H_{\min}/\vert \det' H_{\mathrm{saddle}}\vert}$ requires existence of a saddle point on $\Sigma_M$ and the Hessian spectrum at saddle — purely geometric quantities — but the formula itself comes from the Kramers (1940) / Hänggi-Talkner-Borkovec (1990) escape rate theory under Brownian dynamics.
 
 **Conclusion:** OP-0005 Layer B is structurally complete (barrier + prefactor formulas are well-defined geometrically on $\Sigma_M$) but *physically vacuous* without P-F framework declaring the stochastic dynamics. Closing OP-0005 Layer B requires closing OP-P-F first.
 
@@ -83,7 +83,7 @@ where $T_*$ is the effective temperature, $\omega_0$ the saddle-point prefactor.
 - The σ^A distribution after K-jump requires knowledge of: (a) the saddle landscape near the K-threshold (multiple saddles possible); (b) the noise-weighted probability of crossing each saddle; (c) the σ^A value at each saddle.
 - Without P-F, OP-0008 reduces to the trivial statement "K-jumps don't happen deterministically" — which is already known (N-1 + T-Merge(b)). The interesting part of OP-0008 (the *distribution* of σ^A after a jump) requires P-F.
 
-**Conclusion:** OP-0008 Path B (Cat B target) = compute $P(\sigma^A_{\mathrm{new}} | \text{K-jump from } [\hat{\mathbf{u}}])$ as a Gibbs-weighted average over saddles. This is a P-F computation. Closing OP-0008 requires P-F framework.
+**Conclusion:** OP-0008 Path B (Cat B target) = compute $P(\sigma^A_{\mathrm{new}} \vert \text{K-jump from } [\hat{\mathbf{u}}])$ as a Gibbs-weighted average over saddles. This is a P-F computation. Closing OP-0008 requires P-F framework.
 
 ---
 

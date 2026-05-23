@@ -86,7 +86,7 @@ where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \lVert u^{(j)} \rVert_1 > \epsilo
 
 **Verification**:
 - Goresky-MacPherson 1988: stratified Morse theory works on Whitney-stratified spaces.
-- Critical points of energy $\mathcal{E}_K|_{\widetilde\Sigma^K_M}$ are *stratum-wise critical points* (critical on each $S_{K_{\mathrm{act}}}$).
+- Critical points of energy $\mathcal{E}_K\vert _{\widetilde\Sigma^K_M}$ are *stratum-wise critical points* (critical on each $S_{K_{\mathrm{act}}}$).
 - Morse index is well-defined per stratum.
 - MO-1 "single-formation σ on $\Sigma_m$ no corners" 가 정확히 *top stratum smooth Morse*; multi-formation extension은 *stratified Morse* — 동일 framework, 여러 strata로 확장.
 - Option B (stratified Morse) 가 4-tool mapping 하에서 자연 선택.
@@ -244,7 +244,7 @@ $$R_r(C(t)) = \big\{ \sigma \subseteq C(t) : d_G(c_j, c_k) \leq r \,\forall j, k
 **Standard reference**: Garcke-Nestler-Stoth (1999) — multi-phase field standard; Garcia Trillos-Murray (2017) — graph Allen-Cahn convergence; Bertozzi-Esedoğlu-Gillette (2007) — image processing graph Allen-Cahn (per `daily/2026-04-30/04_external_references_verification.md` 7-fact corrections).
 
 N-phase Allen-Cahn energy on a graph:
-$$\mathcal{E}_{\mathrm{NPhase}}(\mathbf{u}) = \sum_x \big[ \alpha |\nabla \mathbf{u}(x)|^2 + \beta W_N(\mathbf{u}(x)) \big] - \lambda(x) \big( \sum_k u^{(k)}(x) - 1 \big)$$
+$$\mathcal{E}_{\mathrm{NPhase}}(\mathbf{u}) = \sum_x \big[ \alpha \vert \nabla \mathbf{u}(x)\vert ^2 + \beta W_N(\mathbf{u}(x)) \big] - \lambda(x) \big( \sum_k u^{(k)}(x) - 1 \big)$$
 where $W_N: \Delta^{K-1} \to \mathbb{R}_{\geq 0}$ is a multi-well potential on Gibbs simplex $\Delta^{K-1} = \{(u^{(1)},\ldots,u^{(K)}) : u^{(k)} \geq 0, \sum u^{(k)} = 1\}$, vanishing only at vertices (pure phases).
 
 **Standard form**: $W_N(\mathbf{u}) = \sum_k u^{(k)\,2}(1 - u^{(k)})^2$ (sum of single-well functions, simplest) or $W_N(\mathbf{u}) = \prod_k u^{(k)\,2}(1 - u^{(k)})^2$ (multiplicative). Cross-coupling between phases enters via $W_N$ structure (e.g., Garcke-Nestler-Stoth obstacle potential).
@@ -359,7 +359,7 @@ $$\frac{\partial}{\partial u^{(j)}(x)} \big( \mu(x) \sum_k u^{(k)}(x) \big) = \m
 
 - $\widetilde\Sigma^K_M$의 정확한 dimension 공식 (per stratum) — claim 2.2(i) 가정.
 - Whitney (B) condition의 SCC-specific 검증 (semi-algebraic set 일반론에서 followed but explicit 검증 권고).
-- Goresky-MacPherson stratified Morse가 SCC energy $\mathcal{E}_K|_{\widetilde\Sigma^K_M}$에 directly applicable한지 (Morse-Bott degeneracies 처리).
+- Goresky-MacPherson stratified Morse가 SCC energy $\mathcal{E}_K\vert _{\widetilde\Sigma^K_M}$에 directly applicable한지 (Morse-Bott degeneracies 처리).
 
 ### §7.2 Tool A3 Persistent homology SCC-specific 적용
 

@@ -38,7 +38,7 @@ A point $u^* \in \Sigma_m^\circ$ is called an **H-MORSE-Local critical point** o
 2. **(C2) Interior.** $u^*(x) \in (0, 1)$ for all $x \in X$. (No corner saturation; $W''(u^*(x))$ well-defined.)
 3. **(C3) Single-formation.** $K_{\mathrm{act}}(u^*) = \#\mathrm{PersComp}(u^*) = 1$ (per canonical §3.11 D-ST-3 K_act observable; rules out multi-formation orbit-Bott degeneracies).
 4. **(C4) Symmetry-broken.** No nontrivial $\sigma \in \mathrm{Aut}(G)$ satisfies $u^*(\sigma(x)) = u^*(x)$ for all $x$. (Excludes V5b-T-zero translation-invariant orbits and similar discrete-symmetry Bott manifolds.)
-5. **(C5) Non-boundary mode.** The principal eigenvector $v_{\min}$ of $\Pi_T H_{\mathcal{E}}(u^*) \Pi_T$ satisfies $\lVert v_{\min}|_{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$, where $\partial X$ is the graph boundary (degree-deficient nodes for finite grids; empty for closed surfaces). This excludes boundary-localized Goldstone modes per exp25 numerical (boundary mode >90% concentration phenomenon).
+5. **(C5) Non-boundary mode.** The principal eigenvector $v_{\min}$ of $\Pi_T H_{\mathcal{E}}(u^*) \Pi_T$ satisfies $\lVert v_{\min}\vert _{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$, where $\partial X$ is the graph boundary (degree-deficient nodes for finite grids; empty for closed surfaces). This excludes boundary-localized Goldstone modes per exp25 numerical (boundary mode >90% concentration phenomenon).
 
 The **H-MORSE-Local property** for $u^*$ is:
 $$\mu_{\min}\bigl(\Pi_T H_{\mathcal{E}}(u^*) \Pi_T\bigr) \;\geq\; c_{\mathrm{HML}}(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \beta, a_{\mathrm{cl}}, c^*) \;>\; 0$$
@@ -107,7 +107,7 @@ For canonical parameters ($\lambda_{\mathrm{cl}} = 1$, $a_{\mathrm{cl}} = 1$, $\
 
 *Statement.* Under (C1)–(C5) and T8-supercritical, the spinodal contribution to $H_{\mathrm{bd}}$ is *confined to a low-measure region of $X$*, and the closure correction lifts the resulting tangent-eigenvalue deficit:
 $$\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) \;\geq\; \underbrace{2\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2}_{\text{closure lift}} \;-\; \underbrace{\beta \cdot \rho_{\mathrm{bd-band}}(u^*)}_{\text{spinodal deficit, attenuated}} \;+\; \underbrace{\alpha \lambda_2(L)}_{\text{Laplacian gap}},$$
-where $\rho_{\mathrm{bd-band}}(u^*) \in [0, 1]$ is the fractional measure of nodes in the boundary band $\{x : u^*(x) \in (1/2 - \sqrt{1/12}, 1/2 + \sqrt{1/12})\}$. By T-OP6-B (Cat A, canonical §5.3b conditional), $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot |\partial \Omega| / n$ where $\Omega$ is the formation core. For 15×15 grid canonical parameters, $\rho_{\mathrm{bd-band}} \approx 4 \cdot 0.18 / 225 \approx 0.0032$.
+where $\rho_{\mathrm{bd-band}}(u^*) \in [0, 1]$ is the fractional measure of nodes in the boundary band $\{x : u^*(x) \in (1/2 - \sqrt{1/12}, 1/2 + \sqrt{1/12})\}$. By T-OP6-B (Cat A, canonical §5.3b conditional), $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot \vert \partial \Omega\vert / n$ where $\Omega$ is the formation core. For 15×15 grid canonical parameters, $\rho_{\mathrm{bd-band}} \approx 4 \cdot 0.18 / 225 \approx 0.0032$.
 
 Numerically: $\mu_{\min} \gtrsim 1.125 - 30 \cdot 0.0032 + 0.043 \approx 1.125 - 0.096 + 0.043 \approx 1.072$, consistent with the lower end of the empirical envelope $[0.96, 60.2]$.
 
@@ -129,7 +129,7 @@ Numerically: $\mu_{\min} \gtrsim 1.125 - 30 \cdot 0.0032 + 0.043 \approx 1.125 -
 *Conditions.* (C1)–(C4); $G$ has a non-empty boundary $\partial X$ (degree-deficient nodes); $u^*$ is the interior minimizer (formation core in $X \setminus \partial X$).
 
 *Statement.* The principal eigenvector $v_{\min}$ of $\Pi_T H_{\mathcal{E}}(u^*) \Pi_T$ satisfies
-$$\lVert v_{\min}|_{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \;\geq\; 1 - O(\alpha/\beta)$$
+$$\lVert v_{\min}\vert _{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \;\geq\; 1 - O(\alpha/\beta)$$
 *if and only if* $u^*$ is non-trivial (single-formation post-T8-supercritical bifurcation). In other words: the minimum eigenmode is *boundary-localized* (>90% mass on $\partial X$ at canonical parameters), as confirmed by exp25 numerical (`CODE/experiments/exp25_hessian_diagonal.py`: $\Delta_{\mathrm{diag}} \sim 1.92\beta$ between core and boundary).
 
 *Proof sketch.*
@@ -139,7 +139,7 @@ $$\lVert v_{\min}|_{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \;\geq\; 1 -
 - Lowest eigenmode concentrates on negative-diagonal nodes (perturbation theory).
 - Hence boundary-band concentration in $v_{\min}$.
 
-*Consequence for D-HMORSE-LOCAL (C5).* (C5) requires $\lVert v_{\min}|_{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$ — i.e., *exclude* configurations where the minimum eigenmode is boundary-localized. This excludes the genuine "boundary Goldstone" family from H-MORSE-Local scope.
+*Consequence for D-HMORSE-LOCAL (C5).* (C5) requires $\lVert v_{\min}\vert _{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$ — i.e., *exclude* configurations where the minimum eigenmode is boundary-localized. This excludes the genuine "boundary Goldstone" family from H-MORSE-Local scope.
 
 *Status.* **SKETCH**. The analytic form requires careful perturbation-theory bookkeeping; the numerical phenomenon is robust (exp25). For CV-1.16+ Cat B: rigorous version needs Weyl perturbation bounds + explicit constants.
 
@@ -155,14 +155,14 @@ To stress-test D-HMORSE-LOCAL, we attempt to construct a counterexample that *sa
 
 **Construction.** On $G$ = 5×5 grid (no $D_4$ symmetry due to asymmetric edge weights $w(e) \in \{1, 1 + 0.1\eta(e)\}$ where $\eta(e) \in [0,1]$ chosen non-symmetrically), set
 $$u^*(x) = c^* \cdot \mathbf{1}_{\Omega}(x) + \epsilon \cdot \mathbf{1}_{X \setminus \Omega}(x), \quad \Omega = \text{asymmetric core}, \quad c^* = 0.7, \quad \epsilon = 0.1$$
-with $|\Omega| = 10$, $m = 10 \cdot 0.7 + 15 \cdot 0.1 = 8.5$.
+with $\vert \Omega\vert = 10$, $m = 10 \cdot 0.7 + 15 \cdot 0.1 = 8.5$.
 
 Check (C1)–(C5):
 - (C1) $u^*$ is *not* an actual critical point of $\mathcal{E}$ — it's a construction. To make it critical, run `find_formation` (canonical optimizer) to convergence; then it satisfies $\Pi_T \nabla \mathcal{E} = 0$.
 - (C2) $u^*(x) \in \{0.1, 0.7\}$; interior ✓.
 - (C3) PersComp = 1 (single connected core $\Omega$); ✓.
 - (C4) By asymmetric edge weights, $\mathrm{Aut}(G) = \{e\}$ (trivial); ✓.
-- (C5) Compute $v_{\min}$; need $\lVert v_{\min}|_{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$.
+- (C5) Compute $v_{\min}$; need $\lVert v_{\min}\vert _{\partial X} \rVert^2 / \lVert v_{\min} \rVert^2 \leq 1/2$.
 
 **Failure of the construction as counterexample.** If we run `find_formation` to actual convergence on this asymmetric setup, the resulting $u^*$:
 - Will have phase-separated support (interior at $u \approx c^* \approx 0.79$, exterior at $u \approx 0.07$, post-T8-supercritical).

@@ -291,7 +291,7 @@ $U(\pi_K(\nu)) \to u_\nu$ as $K \to \infty$, with the rate controlled by the tai
 
 #### 4.3.4 Possible K-selection mechanism
 
-K-selection is *posterior* rather than architectural: $K_{\mathrm{field}}$ is not chosen ex ante but *observed* as a sufficient statistic of the posterior $\nu | u$ given some likelihood $p(u | \nu)$. Standard nonparametric inference machinery (Gibbs sampling, variational inference) gives a posterior distribution on $K_{\mathrm{field}}$.
+K-selection is *posterior* rather than architectural: $K_{\mathrm{field}}$ is not chosen ex ante but *observed* as a sufficient statistic of the posterior $\nu \vert u$ given some likelihood $p(u \vert \nu)$. Standard nonparametric inference machinery (Gibbs sampling, variational inference) gives a posterior distribution on $K_{\mathrm{field}}$.
 
 This connects K-selection to **Bayesian model-complexity selection** — a well-developed area with explicit consistency theorems (Ghosal-van der Vaart 2017 *Fundamentals of Nonparametric Bayesian Inference*).
 
@@ -344,7 +344,7 @@ The three reservoir models predict different relationships between $K_{\mathrm{f
 **Nonparametric / infinite-mixture reservoir (§4.3):**
 
 - Accommodates all four observations naturally (it strictly generalizes §4.1).
-- Static σ difference: explained by different posterior $\nu | u_A$ vs $\nu | u_B$.
+- Static σ difference: explained by different posterior $\nu \vert u_A$ vs $\nu \vert u_B$.
 - Bar-death cluster invariance: explained by atom-merging without atom-disappearance.
 - **Mathematical prerequisite cost: high.** Full nonparametric Bayes machinery; heavyweight CN10 strain.
 - **Powerful but expensive.** Useful for K-selection mechanism if we accept the import cost; otherwise overengineered for the empirical record we have.

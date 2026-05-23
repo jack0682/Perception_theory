@@ -126,7 +126,7 @@ Key result: **Cat B conditional** under explicit well-formedness assumptions.
 **See `THEORY/working/temporal/S-B3_kernel_independence.md`.**
 
 Key result: **ALREADY CLOSED** (Lemma 10, 2026-05-07). Formally verified and documented:
-- Lemma 10 (component confinement): $|\gamma_M(C_i,C_j) - \gamma_{M'}(C_i,C_j)| \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$
+- Lemma 10 (component confinement): $\vert \gamma_M(C_i,C_j) - \gamma_{M'}(C_i,C_j)\vert \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$
 - Lemma 11 (kernel independence): $R_{t\to s}[M] = R_{t\to s}[M']$ when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$
 - Status: Cat B (depends on Lemma 9, which is now Cat A via partial_ot_stability.md)
 - Updated status: Lemma 9 Cat A → Lemma 11 = S-B3 upgrades to **Cat A conditional under canonical E1 + H-SINK-ENT + margin condition**

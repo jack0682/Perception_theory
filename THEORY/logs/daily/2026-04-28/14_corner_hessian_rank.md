@@ -165,8 +165,8 @@ For canonical statement, σ-tuple should **exclude** spurious entries by appropr
 ### 4.3 σ-tuple dimension formula (corner-saturated state)
 
 Effective σ-tuple count for corner-saturated F=1:
-$$|\sigma_{\mathrm{eff}}| \leq d + |\mathrm{Stab}_{D_4}\lvert + O( \rvert\partial S|) + 1, \tag{4.1}$$
-where $d$ = spatial dimension (translation Goldstones), $|\mathrm{Stab}_{D_4}|$ = rotational symmetry contribution, $|\partial S|$ = cluster perimeter (interface modes), +1 for volume tangent.
+$$\vert \sigma_{\mathrm{eff}}\vert \leq d + \vert \mathrm{Stab}_{D_4}\lvert + O( \rvert\partial S\vert) + 1, \tag{4.1}$$
+where $d$ = spatial dimension (translation Goldstones), $\vert \mathrm{Stab}_{D_4}\vert $ = rotational symmetry contribution, $\vert \partial S\vert $ = cluster perimeter (interface modes), +1 for volume tangent.
 
 For 2D K=1 disk-shaped cluster: ≈ 2 + 4 + O(20) + 1 ≈ 27 modes worth tracking. Cutoff K=10 or K=20 captures all relevant ones.
 

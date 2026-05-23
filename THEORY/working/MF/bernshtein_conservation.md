@@ -59,7 +59,7 @@ The σ-trajectory $(\sigma^A_{\mathrm{multi}}(t))_{t \in [0, T]}$ is a càdlàg 
 ### §3.3 Extraction map Φ
 
 $$\Phi(\mathbf{u}(\cdot)) := \Big(\,\{c^{(j)}(t_s) : j \in \mathrm{active}(t_s),\, s = 1, \ldots, T_{\mathrm{snap}}\},\ \{H_j(t_s) : j \in \mathrm{active}(t_s),\, s = 1, \ldots, T_{\mathrm{snap}}\}\,\Big)$$
-where $c^{(j)}(t) = \sum_x x \cdot u^{(j)}(t,x) / \lVert u^{(j)}(t) \rVert_1$ and $H_j(t) = \nabla^2 \mathcal{E}_{\mathrm{self}}|_{u^{(j)}(t)}$ restricted to the per-formation tangent space.
+where $c^{(j)}(t) = \sum_x x \cdot u^{(j)}(t,x) / \lVert u^{(j)}(t) \rVert_1$ and $H_j(t) = \nabla^2 \mathcal{E}_{\mathrm{self}}\vert _{u^{(j)}(t)}$ restricted to the per-formation tangent space.
 
 ### §3.4 Zigzag PH on (centroid + Hessian)
 
@@ -102,10 +102,10 @@ The combination — zigzag PH on $C(t)$ **plus** per-formation Hessian spectrum 
 
 **Zigzag persistence over time:** Carlsson–de Silva–Morozov 2009 + Kim–Mémoli 2021 formigrams; the zigzag complexity scales linearly with the number of arrows in the zigzag diagram, dominated by the snapshot/Rips computation.
 
-**Per-formation Hessian Lanczos extraction:** standard sparse-symmetric eigensolver (Lanczos / LOBPCG) returns the $k$ smallest eigenvalues + eigenvectors of an $\lvert X \rvert \times \lvert X \rvert$ sparse Laplacian-like matrix in $O(\lvert X \rvert \cdot \log|X| \cdot k)$ time per formation per snapshot. Across all formations and snapshots: $O(K_{\mathrm{act}} \cdot \lvert X \rvert \cdot \log|X| \cdot k \cdot T_{\mathrm{snap}})$.
+**Per-formation Hessian Lanczos extraction:** standard sparse-symmetric eigensolver (Lanczos / LOBPCG) returns the $k$ smallest eigenvalues + eigenvectors of an $\lvert X \rvert \times \lvert X \rvert$ sparse Laplacian-like matrix in $O(\lvert X \rvert \cdot \log\vert X\vert \cdot k)$ time per formation per snapshot. Across all formations and snapshots: $O(K_{\mathrm{act}} \cdot \lvert X \rvert \cdot \log\vert X\vert \cdot k \cdot T_{\mathrm{snap}})$.
 
 **Total:**
-$$\mathrm{Time}(\Pi') = O(K_{\mathrm{act}}^3 T_{\mathrm{snap}} + K_{\mathrm{act}} \cdot \lvert X \rvert \log|X| \cdot k \cdot T_{\mathrm{snap}})$$
+$$\mathrm{Time}(\Pi') = O(K_{\mathrm{act}}^3 T_{\mathrm{snap}} + K_{\mathrm{act}} \cdot \lvert X \rvert \log\vert X\vert \cdot k \cdot T_{\mathrm{snap}})$$
 — polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$ with $T_{\mathrm{snap}}$ and $k$ as auxiliary parameters. ✓
 
 ---

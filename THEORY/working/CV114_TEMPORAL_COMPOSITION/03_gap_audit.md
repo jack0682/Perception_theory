@@ -212,7 +212,7 @@ $$\lVert M^\mathrm{Sinkhorn} - M^\mathrm{eff-Sinkhorn} \rVert_\mathrm{TV} \leq 2
 **단계 3**: $M^\mathrm{eff-Sinkhorn} \approx M^\mathrm{kernel-comp}$ 확인 (별도 lemma 필요).
 
 **단계 4**: Lemma 10 (Cat B): TV → 성분 질량 차이:
-$$|\gamma_{M^\mathrm{Sinkhorn}} - \gamma_{M^\mathrm{kernel-comp}}| \leq 2M_\mathrm{tot} \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
+$$\vert \gamma_{M^\mathrm{Sinkhorn}} - \gamma_{M^\mathrm{kernel-comp}}\vert \leq 2M_\mathrm{tot} \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
 
 **단계 5**: 성분 질량 차이 → 정규화 점수 오차 $\varepsilon_\mathrm{comp}$:
 $$\varepsilon_\mathrm{comp} \leq \frac{2M_\mathrm{tot} \cdot \delta_\mathrm{eff}}{\varepsilon_\mathrm{OT} \cdot \min_i m_i}$$

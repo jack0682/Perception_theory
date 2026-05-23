@@ -353,10 +353,10 @@ CSSL §3.2 의 *유일하게 critic-survived* idea: $(\alpha, \beta) \to (s\alph
 
 | # | 번호 | SCC formula | Definition / role | Canonical anchor | Cat 후보 |
 |---|---|---|---|---|---|
-| 1 | **Pe** (Péclet) | $\dfrac{|\nabla E| \cdot R}{T_*}$ | advection vs diffusion (overdamped 표준) | T-PF-A1-SDE | Cat A direct |
+| 1 | **Pe** (Péclet) | $\dfrac{\vert \nabla E\vert \cdot R}{T_*}$ | advection vs diffusion (overdamped 표준) | T-PF-A1-SDE | Cat A direct |
 | 2 | **Da** (Damköhler) | $\dfrac{\beta}{\alpha}$ | reaction (double-well) vs transport (smoothness) | T8 condition 의 part | Cat A direct |
-| 3 | **Ca** (Capillary) | $\dfrac{|\nabla E|}{\sigma}$, $\sigma \sim \sqrt{\alpha\beta}$ | gradient force vs surface tension (overdamped) | Modica-Mortola | Cat A direct |
-| 4 | **Bo** (Bond / overdamped We) | $\dfrac{R^2 \cdot |\nabla E|}{\sigma}$ | size-scaled force/tension (Weber 의 overdamped 대응) | Modica-Mortola scaling | Cat A direct |
+| 3 | **Ca** (Capillary) | $\dfrac{\vert \nabla E\vert}{\sigma}$, $\sigma \sim \sqrt{\alpha\beta}$ | gradient force vs surface tension (overdamped) | Modica-Mortola | Cat A direct |
+| 4 | **Bo** (Bond / overdamped We) | $\dfrac{R^2 \cdot \vert \nabla E\vert}{\sigma}$ | size-scaled force/tension (Weber 의 overdamped 대응) | Modica-Mortola scaling | Cat A direct |
 | 5 | **St** (Stokes) | $\dfrac{T_*}{\mu_k}$ | thermal time vs mode k relaxation time | Hessian + T-PF-A1-SDE | Cat A direct |
 | 6 | **Sc^{(1)}** (mode-Hessian) | $\dfrac{\mu_k}{T_*} = \text{St}^{-1}$ | mode k 의 deterministic vs thermal | Hessian + T_* | Cat A direct |
 | 7 | **Sc^{(2)}** (bulk-active separation) | $\dfrac{\mu_{\text{bulk}}}{\mu_{\text{active}}}$ | H-Morse spectral gap 의 직접 정량화 | L-HMORSE-DECOMP (Cat B) | **Cat B target** |
@@ -364,7 +364,7 @@ CSSL §3.2 의 *유일하게 critic-survived* idea: $(\alpha, \beta) \to (s\alph
 | 9 | **Sc^{(bd)} = Pr^{(bd)}** (boundary layer) | $\dfrac{\alpha \cdot W''(u^*)}{T_*}$ | det/thermal boundary width ratio | det $\sqrt{\alpha/\beta}$ + thermal $\sqrt{T_*/(\beta W'')}$ | Cat A direct |
 | 10 | **Pr^{(spatial)}** | $\dfrac{\alpha \lambda_2(L_G)}{T_*}$ | spatial det vs thermal | Theorem 4 spatial part | Cat A direct |
 | 11 | **Pr^{(onsite)}** | $\dfrac{\beta \lvert W''(c) \rvert}{T_*}$ | onsite det vs thermal | Theorem 4 onsite part | Cat A direct |
-| 12 | **Pr^{(Kramers)}** | $\dfrac{|\mu_{\text{well}}\lvert }{ \rvert\mu_{\text{saddle}}|}$ | Eyring-Kramers prefactor input | Hänggi-Talkner-Borkovec 1990 (외부) + canonical Hessian | **Cat B target (highest leverage)** |
+| 12 | **Pr^{(Kramers)}** | $\dfrac{\vert \mu_{\text{well}}\lvert }{ \rvert\mu_{\text{saddle}}\vert}$ | Eyring-Kramers prefactor input | Hänggi-Talkner-Borkovec 1990 (외부) + canonical Hessian | **Cat B target (highest leverage)** |
 
 ### §6.2 Per-number CoC chain (key entries)
 
@@ -446,7 +446,7 @@ inverse_causation_check:
 
 ### §7.1 Identity 1: T8 Critical = Pr Ratio Equality
 
-$$\boxed{\frac{\text{Pr}^{(\text{spatial})}}{\text{Pr}^{(\text{onsite})}} = \frac{4\alpha\lambda_2(L_G)}{\beta|W''(c)|} = \text{Sc}_{T8} \quad \Longleftrightarrow \quad \mu_2 = 0 \quad \Longleftrightarrow \quad (\alpha, \beta, c) \in \Sigma_{T8}}$$
+$$\boxed{\frac{\text{Pr}^{(\text{spatial})}}{\text{Pr}^{(\text{onsite})}} = \frac{4\alpha\lambda_2(L_G)}{\beta\vert W''(c)\vert} = \text{Sc}_{T8} \quad \Longleftrightarrow \quad \mu_2 = 0 \quad \Longleftrightarrow \quad (\alpha, \beta, c) \in \Sigma_{T8}}$$
 
 **의의**: T8 phase transition 의 *dimensionless 재해석* — *"two Prandtl numbers 가 같아질 때 wall"*. 전통적 statement (β/α > 4λ_2/|W''(c)|) 와 *수학적으로 동치*, 그러나 *dimensionless framework 안에서 unified*.
 
@@ -460,7 +460,7 @@ $$\boxed{\omega_0 \sim \omega_{\text{well}} \cdot \omega_{\text{saddle}} \cdot \
 
 ### §7.3 Identity 3: Pe-Pr Bridge
 
-$$\boxed{\text{Pe} = \frac{|\nabla E| \cdot R}{T_*} = \text{Pr}^{(\text{spatial})} \cdot \frac{|\nabla E|}{\alpha\lambda_2(L_G)} \cdot \frac{R}{1}}$$
+$$\boxed{\text{Pe} = \frac{\vert \nabla E\vert \cdot R}{T_*} = \text{Pr}^{(\text{spatial})} \cdot \frac{\vert \nabla E\vert}{\alpha\lambda_2(L_G)} \cdot \frac{R}{1}}$$
 
 즉 Pe = Pr^{(spatial)} × (gradient-to-spatial-rate ratio) × (length scale). *Pe 가 Pr-derived*.
 
@@ -472,7 +472,7 @@ Lewis number (fluid: thermal vs mass diffusivity 비) 의 SCC analog. 분자 = s
 
 ### §7.5 Identity 5: Surface Tension Rescaling (CSSL §3.2 의 *살아남은 idea*)
 
-$$(\alpha, \beta) \to (s\alpha, s\beta) \quad \Longrightarrow \quad \begin{cases} \beta/\alpha = \text{Da} & \text{보존} \\ \sqrt{\alpha/\beta} = \ell_{bd} & \text{보존} \\ \sigma = \sqrt{\alpha\beta}/3 \to s\sigma & \times s \\ \text{Ca} = |\nabla E|/\sigma \to \text{Ca}/s & /s \\ \text{Hessian} \to s \cdot \text{Hessian} & \times s \\ \text{Goldstone modes } \mu = 0 & \text{보존} \\ \text{non-Goldstone gap} \to s \cdot \text{gap} & \times s \\ \text{Sc}_{T8}, \text{Sc}^{(bd)}, \text{Pr}^{(spatial,onsite)} & \text{보존} \\ \text{Pe}, \text{Bo}, \text{St}, \text{Sc}^{(1)} & \text{depend on T_* 도} \end{cases}$$
+$$(\alpha, \beta) \to (s\alpha, s\beta) \quad \Longrightarrow \quad \begin{cases} \beta/\alpha = \text{Da} & \text{보존} \\ \sqrt{\alpha/\beta} = \ell_{bd} & \text{보존} \\ \sigma = \sqrt{\alpha\beta}/3 \to s\sigma & \times s \\ \text{Ca} = \vert \nabla E\vert /\sigma \to \text{Ca}/s & /s \\ \text{Hessian} \to s \cdot \text{Hessian} & \times s \\ \text{Goldstone modes } \mu = 0 & \text{보존} \\ \text{non-Goldstone gap} \to s \cdot \text{gap} & \times s \\ \text{Sc}_{T8}, \text{Sc}^{(bd)}, \text{Pr}^{(spatial,onsite)} & \text{보존} \\ \text{Pe}, \text{Bo}, \text{St}, \text{Sc}^{(1)} & \text{depend on T_* 도} \end{cases}$$
 
 **의의**: 단일 parameter s 의 rescaling 이 *H-Morse spectral gap 을 linear 로 expand* — Goldstone modes 는 zero 유지, non-Goldstone 만 stiffen. *§8.1 의 primary H-Morse attack path*.
 

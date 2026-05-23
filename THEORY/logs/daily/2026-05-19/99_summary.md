@@ -102,7 +102,7 @@ v3_first_real_world_use: AUDIT — see §"prompt body 개선 제안"
 | Day 3 잠재 target | 본 day 의 입력 file |
 |---|---|
 | **OP-H5-α** (Hironaka algebraic strengthening) — Day 3 PRIMARY 후보 | `02_H5_morse_spinodal.md §2.3` (L3 sketch, *full algebraic geometry proof* OPEN) + pre_brainstorm §6.3 (Hironaka 1964 reference) |
-| **OP-T*-α** (multi-well multiplicity quantification) — Day 3 SECONDARY 후보 | `03_T_star_fixed_point.md §1.3 + §6 검증 필요 (a)` (uniqueness OPEN; multi-well structure 의 quantitative 분석 — $\mathcal{R}_{\mathrm{post}}$ 의 $\beta/\alpha$ scan with $|\mathcal{B}_{T_*}^{\mathrm{FP}}|$ count) |
+| **OP-T*-α** (multi-well multiplicity quantification) — Day 3 SECONDARY 후보 | `03_T_star_fixed_point.md §1.3 + §6 검증 필요 (a)` (uniqueness OPEN; multi-well structure 의 quantitative 분석 — $\mathcal{R}_{\mathrm{post}}$ 의 $\beta/\alpha$ scan with $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert $ count) |
 | **theorem_status.md working candidate 등록** (T-H5-MORSE-GENERIC Cat A 후보 + T-T*-EXIST-FP Cat B 후보) | 본 day 의 *모든* 산출 (02_H5 + 03_T_star); plan §E item 2 |
 | **AUX-1.6 amendment** (registry §4.6 / §4.9 status update) | 본 day 의 *모든* 산출 + AUX-1.5 §4.6.6/§4.9.1/§4.9.5 의 직접 후속; plan §E item 1 |
 | **canonical OMS-1 ξ amendment** (T_* 정식 entry) | `03_T_star_fixed_point.md §5.1` (Route C G1+G3 formalization); plan §E item 3 |

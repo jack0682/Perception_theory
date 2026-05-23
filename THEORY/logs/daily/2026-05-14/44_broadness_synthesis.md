@@ -128,7 +128,7 @@ Saddle-point Hessian analysis is independent of minimum-Hessian broadness. Still
 
 The Cat A path now requires only:
 - *Active-set/(C2′) reformulation*: lift D-HMORSE-LOCAL to permissive variant — straightforward.
-- *Sharper residual bound*: replace worst-case $|\sigma''|_{\max}$ with the *spinodal-band-restricted* bound. The numerical evidence shows the actual residual is much smaller than worst-case.
+- *Sharper residual bound*: replace worst-case $\vert \sigma''\vert _{\max}$ with the *spinodal-band-restricted* bound. The numerical evidence shows the actual residual is much smaller than worst-case.
 
 ETA Cat A: **2 sessions** (down from 4–8 estimated in `03_integration_and_new_open.md §3`).
 

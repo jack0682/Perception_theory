@@ -192,7 +192,7 @@ Agent B (Mathematical Analyst). Fourteen classes of potential Morse degeneracy f
 
 ### 14. Numerical degeneracy vs analytic degeneracy
 
-**Description:** Numerical Hessian eigenvalue computation has finite precision; "near-zero" eigenvalues ($|\mu| < 10^{-8}$) may be either analytically zero (structural) or analytically positive but numerically too small to distinguish. The hypothesis_tree numerical claim "$\mu_\mathrm{min} \in [0.96, 60.2]$" sits above numerical noise but is finite-grid-specific.
+**Description:** Numerical Hessian eigenvalue computation has finite precision; "near-zero" eigenvalues ($\vert \mu\vert < 10^{-8}$) may be either analytically zero (structural) or analytically positive but numerically too small to distinguish. The hypothesis_tree numerical claim "$\mu_\mathrm{min} \in [0.96, 60.2]$" sits above numerical noise but is finite-grid-specific.
 
 **Source:** Finite-precision arithmetic.
 

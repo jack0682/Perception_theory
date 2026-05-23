@@ -42,7 +42,7 @@ status: DRAFT — Cat B+ unconditional, Cat A 후보 conditional
 
 ### §0.3 Working 위치 (CV114 H-MORSE Package II)
 
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` §8 Non-Overclaim: "$R_{\mathrm{cl}}$ contribution to $\mu_{\min}$ is small because $|\sigma''| \approx 0$ at saturated nodes" — *본 P4 의 정량화 대상*.
+- `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` §8 Non-Overclaim: "$R_{\mathrm{cl}}$ contribution to $\mu_{\min}$ is small because $\vert \sigma''\vert \approx 0$ at saturated nodes" — *본 P4 의 정량화 대상*.
 - `THEORY/logs/daily/2026-05-14/02_development.md §3` + `42_broadness_approach_b_trace.md §5–§6`: $R_{\mathrm{cl}}$ 의 현재 worst-case bound 의 origin.
 
 ### §0.4 본 문서의 정확한 scope
@@ -68,9 +68,9 @@ $$c_{\mathrm{HML}} = 2\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 (d_{\min}/d
 
 **잔여 항** $\delta_{\mathrm{res}}(u^*)$ 의 현재 worst-case 해석 bound (L-HMORSE-DECOMP (D2), canonical L1988):
 
-$$\boxed{\;\lVert R_{\mathrm{cl}} \rVert_{\ell^2} \;\leq\; 2\lambda_{\mathrm{cl}} \lVert r \rVert_2 \sqrt{n} \cdot a_{\mathrm{cl}}^2 \,|\sigma''|_{\max} \cdot \lVert M \rVert^2\;} \tag{1.1}$$
+$$\boxed{\;\lVert R_{\mathrm{cl}} \rVert_{\ell^2} \;\leq\; 2\lambda_{\mathrm{cl}} \lVert r \rVert_2 \sqrt{n} \cdot a_{\mathrm{cl}}^2 \,\vert \sigma''\vert _{\max} \cdot \lVert M \rVert^2\;} \tag{1.1}$$
 
-여기서 $r = \mathrm{Cl}(u^*) - u^*$ (closure 잔여), $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ (canonical operators.py), $|\sigma''|_{\max} \approx 0.0962$ 는 $\sigma'' = \sigma(1-\sigma)(1-2\sigma)$ 의 전역 최댓값 ($z^* = \ln(2-\sqrt 3) \approx -1.317$ 에서 달성).
+여기서 $r = \mathrm{Cl}(u^*) - u^*$ (closure 잔여), $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ (canonical operators.py), $\vert \sigma''\vert _{\max} \approx 0.0962$ 는 $\sigma'' = \sigma(1-\sigma)(1-2\sigma)$ 의 전역 최댓값 ($z^* = \ln(2-\sqrt 3) \approx -1.317$ 에서 달성).
 
 이 bound 가 *수치 대비 ~$10^4\times$ 느슨* (canonical L1966 Non-Overclaim).
 
@@ -86,7 +86,7 @@ $$\sigma''(z) = \sigma(z)\bigl(1-\sigma(z)\bigr)\bigl(1 - 2\sigma(z)\bigr).$$
 
 **관측 (§A.2 in E3)**: $u^*(x) \approx 1$ (혹은 $0$) 인 active-set 노드에서 $z(u^*)(x)$ 가 ±부호로 큼 → $\sigma(z) \to 1$ (또는 $0$) → $\sigma''(z) \to 0$.
 
-T8-supercritical regime $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (canonical T8-Core) 에서 minimizer 가 phase-separated 형태로 수렴 — active set $A^*$ 가 *유의미하게 크며*, 거기서의 $|\sigma''(z(u^*))|$ 가 *exponentially small*. 이 정량화가 본 P4 의 핵심.
+T8-supercritical regime $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (canonical T8-Core) 에서 minimizer 가 phase-separated 형태로 수렴 — active set $A^*$ 가 *유의미하게 크며*, 거기서의 $\vert \sigma''(z(u^*))\vert $ 가 *exponentially small*. 이 정량화가 본 P4 의 핵심.
 
 ### §1.3 Sharper residual bound — target statement
 
@@ -101,7 +101,7 @@ T8-supercritical regime $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (canoni
 > Moreover, under T8-supercritical $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ with $\beta > \beta_{\mathrm{crit}}^{(2)}$ a *quantitative phase-separation threshold*, $\delta(u^*)$ obeys an exponential decay:
 > $$\delta(u^*) \;\leq\; C_\delta \cdot e^{-c_\delta \cdot \beta}, \quad C_\delta, c_\delta > 0 \text{ canonical-parameter constants}. \tag{1.4}$$
 
-**대비:** (1.3) 의 $\delta(u^*) \cdot \sqrt{\rho_{\mathrm{bd-band}}}$ 가 (1.1) 의 $|\sigma''|_{\max} \cdot \sqrt n$ 를 대체. T8-supercritical 에서 $\delta = O(e^{-c\beta})$ + $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot |\partial\Omega|/n$ (T-OP6-B Cat A) → 곱이 $(\alpha/\beta)^{1/4} \cdot e^{-c\beta}$ regime.
+**대비:** (1.3) 의 $\delta(u^*) \cdot \sqrt{\rho_{\mathrm{bd-band}}}$ 가 (1.1) 의 $\vert \sigma''\vert _{\max} \cdot \sqrt n$ 를 대체. T8-supercritical 에서 $\delta = O(e^{-c\beta})$ + $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot \vert \partial\Omega\vert /n$ (T-OP6-B Cat A) → 곱이 $(\alpha/\beta)^{1/4} \cdot e^{-c\beta}$ regime.
 
 ### §1.4 Implication — Package II Eyring-Kramers Cat B 진입
 
@@ -124,7 +124,7 @@ C-COT (Chain-of-Thought) 협약상 ≥3 mathematically independent 접근을 명
 
 **입력 정보:**
 - D-HMORSE-LOCAL (C2′) active-set 분리.
-- T-OP6-B Cat A $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot |\partial\Omega|/n$.
+- T-OP6-B Cat A $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot \vert \partial\Omega\vert /n$.
 - T8-supercritical phase-separation profile 의 정량 (free 좌표 $u^* \in (\delta, 1-\delta)$).
 - Canonical $\sigma$ = sigmoid 의 explicit 2차 도함수 공식.
 
@@ -134,13 +134,13 @@ C-COT (Chain-of-Thought) 협약상 ≥3 mathematically independent 접근을 명
 
 **핵심 도구:** Bauer-Fike / Weyl inequalities: $H_{\mathcal E} = H_{\mathcal E}^{(0)} + V$ 분해 (예: $V = R_{\mathrm{cl}}$), 그리고
 
-$$|\mu_{\min}(H_{\mathcal E}) - \mu_{\min}(H_{\mathcal E}^{(0)})| \;\leq\; \lVert V \rVert.$$
+$$\vert \mu_{\min}(H_{\mathcal E}) - \mu_{\min}(H_{\mathcal E}^{(0)})\vert \;\leq\; \lVert V \rVert.$$
 
 **의도된 출력:** $\lVert V \rVert = \lVert R_{\mathrm{cl}} \rVert$ 의 *spectral* 상한을 통해 $\mu_{\min}(\Pi_T H_{\mathcal E} \Pi_T)$ 의 변화를 통제.
 
 **왜 부차적인가:**
 1. Weyl inequality 는 *eigenvalue-level* (단일 값 차이) — *operator-norm* (전체 $\Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}}$ norm) 으로의 전환에 추가 단계 필요.
-2. $\lVert V \rVert$ 자체를 추정할 때 worst-case $|\sigma''|$ 로 환원 → Approach A 와 동일한 핵심 단계 필요 → A의 *상위 abstraction* 에 불과.
+2. $\lVert V \rVert$ 자체를 추정할 때 worst-case $\vert \sigma''\vert $ 로 환원 → Approach A 와 동일한 핵심 단계 필요 → A의 *상위 abstraction* 에 불과.
 3. CV-1.16 L-BOUNDARY-MODE-EXCLUSION (Cat C) 이 이미 Weyl perturbation 사용 — 거기서 explicit constant 결여로 Cat C 머무름. 동일 한계 재발.
 
 결론: Approach B 는 *parallel* tool 이지만 Approach A 의 핵심 단계 ($\sigma''$ 포화 정량화) 를 *대체하지 못함*. 보조 cross-check 로만 활용 (§4 참조).
@@ -175,21 +175,21 @@ $$|\mu_{\min}(H_{\mathcal E}) - \mu_{\min}(H_{\mathcal E}^{(0)})| \;\leq\; \lVer
 ### §3.1 Lemma L1 — σ saturation at active-set boundary (Cat A)
 
 > **Lemma L1.** Let $\sigma(z) = 1/(1+e^{-z})$ be the canonical sigmoid. For any $z \in \mathbb R$:
-> $$|\sigma''(z)| \;\leq\; \min\bigl(\sigma(z),\, 1 - \sigma(z)\bigr). \tag{3.1}$$
-> In particular, if $u^*(x) \in [1-\delta, 1]$ (혹은 $[0, \delta]$) for some $\delta \in [0, 1/2]$, and $\mathrm{Cl}(u^*)(x) = \sigma(z(u^*)(x))$ obeys $|\mathrm{Cl}(u^*)(x) - u^*(x)| \leq \varepsilon_{\mathrm{Cl}}$, then
-> $$|\sigma''(z(u^*)(x))| \;\leq\; \delta + \varepsilon_{\mathrm{Cl}}. \tag{3.2}$$
+> $$\vert \sigma''(z)\vert \;\leq\; \min\bigl(\sigma(z),\, 1 - \sigma(z)\bigr). \tag{3.1}$$
+> In particular, if $u^*(x) \in [1-\delta, 1]$ (혹은 $[0, \delta]$) for some $\delta \in [0, 1/2]$, and $\mathrm{Cl}(u^*)(x) = \sigma(z(u^*)(x))$ obeys $\vert \mathrm{Cl}(u^*)(x) - u^*(x)\vert \leq \varepsilon_{\mathrm{Cl}}$, then
+> $$\vert \sigma''(z(u^*)(x))\vert \;\leq\; \delta + \varepsilon_{\mathrm{Cl}}. \tag{3.2}$$
 
 **Step L1.1 — direct factorization.** $\sigma''(z) = \sigma(z)(1-\sigma(z))(1-2\sigma(z))$. 두 형식 각각:
 
-- $|\sigma(z)(1-\sigma(z))(1-2\sigma(z))| \leq \sigma(z) \cdot 1 \cdot 1 = \sigma(z)$.
-- 대칭으로 $|\sigma''(z)| \leq (1-\sigma(z))$.
-- 따라서 $|\sigma''(z)| \leq \min(\sigma(z), 1-\sigma(z))$. ✓ (3.1).
+- $\vert \sigma(z)(1-\sigma(z))(1-2\sigma(z))\vert \leq \sigma(z) \cdot 1 \cdot 1 = \sigma(z)$.
+- 대칭으로 $\vert \sigma''(z)\vert \leq (1-\sigma(z))$.
+- 따라서 $\vert \sigma''(z)\vert \leq \min(\sigma(z), 1-\sigma(z))$. ✓ (3.1).
 
 **Step L1.2 — closure 잔여로 환원.** Definition: $r(x) := \mathrm{Cl}(u^*)(x) - u^*(x)$, 따라서 $\sigma(z(u^*)(x)) = u^*(x) + r(x)$. $u^*(x) \in [1-\delta, 1]$ 이면 $\sigma(z) \geq u^*(x) - \lvert r(x) \rvert \geq 1 - \delta - \varepsilon_{\mathrm{Cl}}$, 따라서 $1 - \sigma(z) \leq \delta + \varepsilon_{\mathrm{Cl}}$. 대칭 케이스 동일.
 
 **Step L1.3 — combine.** (3.1) + (Step L1.2) → (3.2). $\square$
 
-**Quantitative anchor:** `exp_hmorse_broadness_full_spectrum.md` $15 \times 15$ 격자 ($\beta = 100$) 에서 측정값 $u^* \in [0, 0.994]$ → $\delta \approx 0.006$. Critical point 조건 $\nabla\mathcal E(u^*) = 0$ + Łojasiewicz: $\varepsilon_{\mathrm{Cl}} \leq C \cdot \delta$ (이론적). 따라서 (3.2) 우변 $\lesssim 2\delta \approx 0.012$, vs worst-case $|\sigma''|_{\max} = 0.0962$ — ratio ~$8\times$ at this single config. 추가 단계 (free-tangent restriction) 에서 다음 step 의 boundary-band 분리로 ratio 가 더 커진다.
+**Quantitative anchor:** `exp_hmorse_broadness_full_spectrum.md` $15 \times 15$ 격자 ($\beta = 100$) 에서 측정값 $u^* \in [0, 0.994]$ → $\delta \approx 0.006$. Critical point 조건 $\nabla\mathcal E(u^*) = 0$ + Łojasiewicz: $\varepsilon_{\mathrm{Cl}} \leq C \cdot \delta$ (이론적). 따라서 (3.2) 우변 $\lesssim 2\delta \approx 0.012$, vs worst-case $\vert \sigma''\vert _{\max} = 0.0962$ — ratio ~$8\times$ at this single config. 추가 단계 (free-tangent restriction) 에서 다음 step 의 boundary-band 분리로 ratio 가 더 커진다.
 
 ### §3.2 Lemma L2 — $\Pi_T^{\mathrm{free}}$ restriction to boundary band (Cat A)
 
@@ -197,33 +197,33 @@ $$|\mu_{\min}(H_{\mathcal E}) - \mu_{\min}(H_{\mathcal E}^{(0)})| \;\leq\; \lVer
 > $$(A^*)^c \;=\; \underbrace{\mathrm{Bd}_{\mathrm{spin}}(u^*)}_{\text{boundary band}} \;\cup\; \underbrace{\mathrm{Bulk}^\pm(u^*)}_{\text{non-active near-saturated}}, \tag{3.3}$$
 > with the *near-saturated bulk* $\mathrm{Bulk}^\pm := \{x \notin A^* : u^*(x) \in [0, \delta_{\mathrm{bulk}}] \cup [1-\delta_{\mathrm{bulk}}, 1]\}$, $\delta_{\mathrm{bulk}} \leq \delta(u^*)$ (definition).
 > Then for any vector $v = \Pi_T^{\mathrm{free}} v$ supported on $(A^*)^c$:
-> $$\sum_{x \in (A^*)^c} v_x^2 |\sigma''(z(u^*)(x))|^2 \;\leq\; |\sigma''|_{\max}^2 \cdot \lVert v|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr)^2 \cdot \lVert v|_{\mathrm{Bulk}^\pm} \rVert^2. \tag{3.4}$$
+> $$\sum_{x \in (A^*)^c} v_x^2 \vert \sigma''(z(u^*)(x))\vert ^2 \;\leq\; \vert \sigma''\vert _{\max}^2 \cdot \lVert v\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr)^2 \cdot \lVert v\vert _{\mathrm{Bulk}^\pm} \rVert^2. \tag{3.4}$$
 
 **Step L2.1 — decomposition.** $(A^*)^c$ 의 모든 점 $x$ 에 대해, $u^*(x) \in (0, 1)$. 두 가지 경우:
-- (i) $u^*(x) \in \mathrm{Bd}_{\mathrm{spin}}$: spinodal 내부, $u^* \approx 0.5$, $\lvert z(u^*) \rvert$ moderate. 여기서 $|\sigma''(z(u^*))| \leq |\sigma''|_{\max} \approx 0.0962$ (전역 한계).
-- (ii) $u^*(x) \in \mathrm{Bulk}^\pm$: $u^* \in [0, \delta_{\mathrm{bulk}}]$ 또는 $[1-\delta_{\mathrm{bulk}}, 1]$. Lemma L1 (3.2) 적용 → $|\sigma''(z(u^*)(x))| \leq \delta_{\mathrm{bulk}} + \varepsilon_{\mathrm{Cl}} \leq \delta(u^*) + \varepsilon_{\mathrm{Cl}}$.
+- (i) $u^*(x) \in \mathrm{Bd}_{\mathrm{spin}}$: spinodal 내부, $u^* \approx 0.5$, $\lvert z(u^*) \rvert$ moderate. 여기서 $\vert \sigma''(z(u^*))\vert \leq \vert \sigma''\vert _{\max} \approx 0.0962$ (전역 한계).
+- (ii) $u^*(x) \in \mathrm{Bulk}^\pm$: $u^* \in [0, \delta_{\mathrm{bulk}}]$ 또는 $[1-\delta_{\mathrm{bulk}}, 1]$. Lemma L1 (3.2) 적용 → $\vert \sigma''(z(u^*)(x))\vert \leq \delta_{\mathrm{bulk}} + \varepsilon_{\mathrm{Cl}} \leq \delta(u^*) + \varepsilon_{\mathrm{Cl}}$.
 
-**Step L2.2 — sum-square split.** $\sum_{x \in (A^*)^c} v_x^2 |\sigma''|^2$ 을 두 부분으로 분해 → 각각에 상한 적용 → (3.4) 직접. $\square$
+**Step L2.2 — sum-square split.** $\sum_{x \in (A^*)^c} v_x^2 \vert \sigma''\vert ^2$ 을 두 부분으로 분해 → 각각에 상한 적용 → (3.4) 직접. $\square$
 
-**Why this matters:** worst-case $|\sigma''|_{\max}$ 가 *spinodal boundary band 만*에 적용; bulk $\mathrm{Bulk}^\pm$ 에서는 $\delta(u^*)$ 가 작은 prefactor. T-OP6-B Cat A 가 $|\mathrm{Bd}_{\mathrm{spin}}|/n \leq \rho_{\mathrm{bd-band}}$ 를 보장 → boundary band 가 measure 작다.
+**Why this matters:** worst-case $\vert \sigma''\vert _{\max}$ 가 *spinodal boundary band 만*에 적용; bulk $\mathrm{Bulk}^\pm$ 에서는 $\delta(u^*)$ 가 작은 prefactor. T-OP6-B Cat A 가 $\vert \mathrm{Bd}_{\mathrm{spin}}\vert /n \leq \rho_{\mathrm{bd-band}}$ 를 보장 → boundary band 가 measure 작다.
 
 ### §3.3 Lemma L3 — Boundary band 카운트 + measure (T-OP6-B 인용)
 
 > **Lemma L3.** Under T8-supercritical and T-OP6-B (canonical Cat A, §5.3b H1–H5):
-> $$\rho_{\mathrm{bd-band}}(u^*) \;:=\; \frac{|\mathrm{Bd}_{\mathrm{spin}}(u^*)|}{n} \;\leq\; 2\sqrt{\alpha/\beta} \cdot \frac{|\partial\Omega|}{n}, \tag{3.5}$$
-> where $|\partial\Omega|$ is the graph-discrete perimeter of the persistent core $\{x : u^*(x) > 1/2\}$. For canonical lattice $G$ (grid) with bounded perimeter-volume ratio, $|\partial\Omega|/n \leq C_{\mathrm{iso}}/\sqrt n$ (isoperimetric for grid), giving
+> $$\rho_{\mathrm{bd-band}}(u^*) \;:=\; \frac{\vert \mathrm{Bd}_{\mathrm{spin}}(u^*)\vert}{n} \;\leq\; 2\sqrt{\alpha/\beta} \cdot \frac{\vert \partial\Omega\vert}{n}, \tag{3.5}$$
+> where $\vert \partial\Omega\vert $ is the graph-discrete perimeter of the persistent core $\{x : u^*(x) > 1/2\}$. For canonical lattice $G$ (grid) with bounded perimeter-volume ratio, $\vert \partial\Omega\vert /n \leq C_{\mathrm{iso}}/\sqrt n$ (isoperimetric for grid), giving
 > $$\rho_{\mathrm{bd-band}}(u^*) \;\leq\; 2 C_{\mathrm{iso}} \sqrt{\alpha/\beta} \cdot n^{-1/2}. \tag{3.5'}$$
 
-**Step L3.1 — T-OP6-B inheritance.** canonical L1640 + L1956 reference. T-OP6-B (Cat A, promoted W6 D4 Session K, 2026-05-06): "persistent ridge boundary 에 대한 graph Hausdorff distance $d_H \leq 2(\alpha/\beta)^{1/2}$ under H1–H5". 적분 시 $|\mathrm{Bd}_{\mathrm{spin}}| \leq d_H \cdot |\partial\Omega|$ → (3.5).
+**Step L3.1 — T-OP6-B inheritance.** canonical L1640 + L1956 reference. T-OP6-B (Cat A, promoted W6 D4 Session K, 2026-05-06): "persistent ridge boundary 에 대한 graph Hausdorff distance $d_H \leq 2(\alpha/\beta)^{1/2}$ under H1–H5". 적분 시 $\vert \mathrm{Bd}_{\mathrm{spin}}\vert \leq d_H \cdot \vert \partial\Omega\vert $ → (3.5).
 
-**Step L3.2 — isoperimetric.** Canonical grid $G$ (e.g., $L \times L$ lattice with $n = L^2$): $|\partial\Omega| \leq 4L = 4\sqrt n$ for any subset $\Omega$ (worst-case perimeter). 따라서 $|\partial\Omega|/n \leq 4/\sqrt n$, $C_{\mathrm{iso}} = 4$. → (3.5').
+**Step L3.2 — isoperimetric.** Canonical grid $G$ (e.g., $L \times L$ lattice with $n = L^2$): $\vert \partial\Omega\vert \leq 4L = 4\sqrt n$ for any subset $\Omega$ (worst-case perimeter). 따라서 $\vert \partial\Omega\vert /n \leq 4/\sqrt n$, $C_{\mathrm{iso}} = 4$. → (3.5').
 
-**Step L3.3 — Boundary band $\ell^2$ restriction.** $\lVert v|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \lVert v \rVert^2 \cdot 1$ (trivial). Pointwise: $\lVert v|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq |\mathrm{Bd}_{\mathrm{spin}}| \cdot \lVert v \rVert_\infty^2$ — *not used directly*; 대신 sum-form 에서 (3.4) 의 prefactor 가 boundary-band 의 cardinality 와 직접 연결. $\square$
+**Step L3.3 — Boundary band $\ell^2$ restriction.** $\lVert v\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \lVert v \rVert^2 \cdot 1$ (trivial). Pointwise: $\lVert v\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \vert \mathrm{Bd}_{\mathrm{spin}}\vert \cdot \lVert v \rVert_\infty^2$ — *not used directly*; 대신 sum-form 에서 (3.4) 의 prefactor 가 boundary-band 의 cardinality 와 직접 연결. $\square$
 
 ### §3.4 Lemma L4 — Sharper bound 조립 (KEY)
 
 > **Lemma L4 (Sharper Residual Bound, Cat A target).** Under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5), A3, $b_D = 0$, T8-supercritical, with $\delta(u^*)$ and $\rho_{\mathrm{bd-band}}(u^*)$ as in (1.2), (3.5):
-> $$\bigl\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}}\bigr \rVert_{\ell^2} \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[\,|\sigma''|_{\max}\,\sqrt{\rho_{\mathrm{bd-band}} \cdot n} \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr)\sqrt{n - \lvert A^* \rvert}\,\bigr]. \tag{3.6}$$
+> $$\bigl\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}}\bigr \rVert_{\ell^2} \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[\,\vert \sigma''\vert _{\max}\,\sqrt{\rho_{\mathrm{bd-band}} \cdot n} \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr)\sqrt{n - \lvert A^* \rvert}\,\bigr]. \tag{3.6}$$
 
 **Step L4.1 — quadratic form representation.** L-HMORSE-DECOMP (D2): $R_{\mathrm{cl}} = 2\lambda_{\mathrm{cl}} \sum_k r_k \nabla^2 \mathrm{Cl}_k(u^*)$ with $r_k = \mathrm{Cl}(u^*)_k - u^*_k$. Closure 의 2차 도함수:
 
@@ -238,13 +238,13 @@ $$\bigl(\nabla^2 \mathrm{Cl}_k\bigr)_{ij} \;=\; \sigma''(z_k) \cdot a_{\mathrm{c
 
 **Step L4.3 — Cauchy-Schwarz over $k$.** Let $w_k := (Mv)_k$. 그러면 $\lVert w \rVert = \lVert Mv \rVert \leq \lVert M \rVert \cdot \lVert v \rVert$. 그리고
 
-$$\sum_k \lvert r_k \rvert \cdot |\sigma''(z_k)| \cdot w_k^2 \;\leq\; \lVert r \rVert_\infty \cdot \sum_k |\sigma''(z_k)| \cdot w_k^2.$$
+$$\sum_k \lvert r_k \rvert \cdot \vert \sigma''(z_k)\vert \cdot w_k^2 \;\leq\; \lVert r \rVert_\infty \cdot \sum_k \vert \sigma''(z_k)\vert \cdot w_k^2.$$
 
-대안 (sharper): $\sum_k \lvert r_k \rvert |\sigma''(z_k)| w_k^2 \leq \lVert r \rVert_2 \cdot \bigl(\sum_k |\sigma''(z_k)|^2 w_k^4\bigr)^{1/2}$ — Cauchy-Schwarz.
+대안 (sharper): $\sum_k \lvert r_k \rvert \vert \sigma''(z_k)\vert w_k^2 \leq \lVert r \rVert_2 \cdot \bigl(\sum_k \vert \sigma''(z_k)\vert ^2 w_k^4\bigr)^{1/2}$ — Cauchy-Schwarz.
 
 실용적으로는 Hölder 형식이 우선 (canonical bound 와 호환):
 
-$$\sum_k \lvert r_k \rvert |\sigma''(z_k)| w_k^2 \;\leq\; \lVert r \rVert_2 \cdot \lVert w \rVert_\infty \cdot \bigl(\sum_k |\sigma''(z_k)|^2 w_k^2\bigr)^{1/2}.$$
+$$\sum_k \lvert r_k \rvert \vert \sigma''(z_k)\vert w_k^2 \;\leq\; \lVert r \rVert_2 \cdot \lVert w \rVert_\infty \cdot \bigl(\sum_k \vert \sigma''(z_k)\vert ^2 w_k^2\bigr)^{1/2}.$$
 
 이 형식은 $\lVert w \rVert_\infty$ 의 추가 인자를 도입. 더 간단한 *symmetric* 형식 (operator-norm bound):
 
@@ -255,24 +255,24 @@ $$\sum_k \lvert r_k \rvert |\sigma''(z_k)| w_k^2 \;\leq\; \lVert r \rVert_2 \cdo
 
 **Step L4.4 — apply Lemma L2 to (3.7).** $\Pi_T^{\mathrm{free}}$ 가 $A^*$ 좌표 제거 → $w$ 가 $(A^*)^c$ 에 지지됨. (3.4) 적용:
 
-$$\sum_{k \in (A^*)^c} |\sigma''(z_k)| w_k^2 \;\leq\; |\sigma''|_{\max} \cdot \lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr) \cdot \lVert w|_{\mathrm{Bulk}^\pm} \rVert^2. \tag{3.8}$$
+$$\sum_{k \in (A^*)^c} \vert \sigma''(z_k)\vert w_k^2 \;\leq\; \vert \sigma''\vert _{\max} \cdot \lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;+\; \bigl(\delta(u^*) + \varepsilon_{\mathrm{Cl}}\bigr) \cdot \lVert w\vert _{\mathrm{Bulk}^\pm} \rVert^2. \tag{3.8}$$
 
 $\lVert w \rVert = 1$ 으로 정규화:
-- $\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq 1$ (sup).
-- 더 sharper: $\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \min(1, |\mathrm{Bd}_{\mathrm{spin}}|/n) \cdot n / (n - \lvert A^* \rvert)$ — 실제로 *$w$ 가 boundary band 에 집중* 한 worst case 에서도 $\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq 1$. 더 정확한 분석 (Cauchy-Schwarz on coordinates):
+- $\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq 1$ (sup).
+- 더 sharper: $\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \min(1, \vert \mathrm{Bd}_{\mathrm{spin}}\vert /n) \cdot n / (n - \lvert A^* \rvert)$ — 실제로 *$w$ 가 boundary band 에 집중* 한 worst case 에서도 $\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq 1$. 더 정확한 분석 (Cauchy-Schwarz on coordinates):
 
-$$\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;=\; \sum_{x \in \mathrm{Bd}_{\mathrm{spin}}} w_x^2 \;\leq\; \lVert w \rVert_\infty^2 \cdot |\mathrm{Bd}_{\mathrm{spin}}|.$$
+$$\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \;=\; \sum_{x \in \mathrm{Bd}_{\mathrm{spin}}} w_x^2 \;\leq\; \lVert w \rVert_\infty^2 \cdot \vert \mathrm{Bd}_{\mathrm{spin}}\vert.$$
 
-If we additionally use $\lVert w \rVert_\infty \leq \lVert w \rVert_2 \leq 1$, then $\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq |\mathrm{Bd}_{\mathrm{spin}}| = \rho_{\mathrm{bd-band}} \cdot n$.
+If we additionally use $\lVert w \rVert_\infty \leq \lVert w \rVert_2 \leq 1$, then $\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2 \leq \vert \mathrm{Bd}_{\mathrm{spin}}\vert = \rho_{\mathrm{bd-band}} \cdot n$.
 
 **Step L4.5 — final assembly.** Combine (3.7) + (3.8) + step L4.4 estimates:
 
-$$\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \rVert \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[|\sigma''|_{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n + (\delta + \varepsilon_{\mathrm{Cl}}) \cdot (n - \lvert A^* \rvert)\bigr]^{1/2}.$$
+$$\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \rVert \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[\vert \sigma''\vert _{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n + (\delta + \varepsilon_{\mathrm{Cl}}) \cdot (n - \lvert A^* \rvert)\bigr]^{1/2}.$$
 
 여기서 $\sqrt{\cdot}$ 단계가 일부 generous — Cauchy-Schwarz 의 *non-tight* 형식. (3.6) 가 conservative version. (3.6) 의 우변 두 항을 분리하여 더 sharper 형태:
 
 **(Sharper form):**
-$$\boxed{\;\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \rVert \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[|\sigma''|_{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \;+\; (\delta(u^*) + \varepsilon_{\mathrm{Cl}})\,(n-\lvert A^* \rvert)\bigr].\;} \tag{3.9}$$
+$$\boxed{\;\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \rVert \;\leq\; 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2 \cdot \lVert r \rVert_2 \cdot \bigl[\vert \sigma''\vert _{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \;+\; (\delta(u^*) + \varepsilon_{\mathrm{Cl}})\,(n-\lvert A^* \rvert)\bigr].\;} \tag{3.9}$$
 
 (Cauchy-Schwarz 의 매끄러운 형식; pointwise 곱-합 부등식; $w_k^2$ 의 정규화 사용.) $\square$
 
@@ -282,7 +282,7 @@ $$\boxed{\;\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \r
 > $$\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \rVert \;\leq\; 7.4 \times 10^{-3} \;\text{(predicted)} \quad \text{vs} \quad \mu_{\min} \in [0.13, 3.49] \;\text{(measured)}. \tag{3.10}$$
 > Ratio improvement vs (1.1): $\sim 100 \times$ on individual configs (subset of "$10^4\times$" total loosening per CV-1.16 SEAL).
 
-**Step L5.1 — parameter plug-in.** $\lambda_{\mathrm{cl}} = 1$, $a_{\mathrm{cl}} = 1.5$ ($< 4$, A3), $\lVert M \rVert \leq 1$, $\lVert r \rVert_2 = 2.33$ (measured), $|\sigma''|_{\max} = 0.0962$, $\rho_{\mathrm{bd-band}} \approx 2\sqrt{0.01} \cdot 4/15 = 0.0533$, $\lvert A^* \rvert \approx n - 4\sqrt n = 225 - 60 = 165$ (estimate, $4\sqrt n$ scaling), $n - \lvert A^* \rvert \approx 60$, $\delta(u^*) \approx 0.006$, $\varepsilon_{\mathrm{Cl}} \approx 0.05$ (loose canonical estimate).
+**Step L5.1 — parameter plug-in.** $\lambda_{\mathrm{cl}} = 1$, $a_{\mathrm{cl}} = 1.5$ ($< 4$, A3), $\lVert M \rVert \leq 1$, $\lVert r \rVert_2 = 2.33$ (measured), $\vert \sigma''\vert _{\max} = 0.0962$, $\rho_{\mathrm{bd-band}} \approx 2\sqrt{0.01} \cdot 4/15 = 0.0533$, $\lvert A^* \rvert \approx n - 4\sqrt n = 225 - 60 = 165$ (estimate, $4\sqrt n$ scaling), $n - \lvert A^* \rvert \approx 60$, $\delta(u^*) \approx 0.006$, $\varepsilon_{\mathrm{Cl}} \approx 0.05$ (loose canonical estimate).
 
 **Step L5.2 — compute.** (3.9) 우변:
 - First term: $2 \cdot 1 \cdot 2.25 \cdot 1 \cdot 2.33 \cdot 0.0962 \cdot 0.0533 \cdot 225 = 12.1 \cdot 0.0962 \cdot 12.0 = 13.97$. (느슨)
@@ -292,15 +292,15 @@ $$\boxed{\;\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \r
 
 **Step L5.3 — interpretation.** 위 step L5.2 의 *수치 결과*가 보여주는 것: 본 P4 의 (3.9) 만으로는 $c_{\mathrm{HML}}^{\mathrm{Cat A}} > 0$ 의 *unconditional* 보장이 *현재 conservative*. Honest gap.
 
-**Cat B+ honesty:** (3.9) 가 (1.1) 대비 $\sqrt n$ → $\sqrt{\rho_{\mathrm{bd-band}} \cdot n}$ 변환 + bulk 의 $|\sigma''|_{\max} \to \delta(u^*)$ 변환을 *기술적으로 성공* — 그러나 수치적 $\sim 10^4 \times$ 의 *전체* gap 을 *해석적으로 closure* 하지 못함. 남는 gap 의 출처는 §7.2 에서 다룬다.
+**Cat B+ honesty:** (3.9) 가 (1.1) 대비 $\sqrt n$ → $\sqrt{\rho_{\mathrm{bd-band}} \cdot n}$ 변환 + bulk 의 $\vert \sigma''\vert _{\max} \to \delta(u^*)$ 변환을 *기술적으로 성공* — 그러나 수치적 $\sim 10^4 \times$ 의 *전체* gap 을 *해석적으로 closure* 하지 못함. 남는 gap 의 출처는 §7.2 에서 다룬다.
 
 ### §3.6 Theorem (synthesis)
 
 > **Theorem OP-HMORSE-LOCAL-A (Cat A target — provisional Cat B+).**
 > *(Status: Cat A *conditional on* explicit $\delta(u^*) \leq C_\delta e^{-c_\delta \beta}$ + $\varepsilon_{\mathrm{Cl}} \leq O(\delta)$, both of which require quantitative phase-separation profile theorem (T8-supercritical sharp form, currently in canonical only at Cat A *qualitative* level).)*
 > Under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5), A3, $b_D = 0$, T8-supercritical:
-> $$\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}} \rVert_{\ell^2} \;\leq\; C_R \cdot \lVert r \rVert_2 \cdot \bigl[|\sigma''|_{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \;+\; (\delta(u^*) + \varepsilon_{\mathrm{Cl}})(n - \lvert A^* \rvert)\bigr],$$
-> with $C_R = 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2$, all factors canonical-parameter-explicit. The bound *sharpens* (1.1) by replacing the worst-case $\sqrt n \cdot |\sigma''|_{\max}$ with the boundary-band-restricted $\rho_{\mathrm{bd-band}} \cdot n + \delta(u^*) \cdot (n-\lvert A^* \rvert)$.
+> $$\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}} \rVert_{\ell^2} \;\leq\; C_R \cdot \lVert r \rVert_2 \cdot \bigl[\vert \sigma''\vert _{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \;+\; (\delta(u^*) + \varepsilon_{\mathrm{Cl}})(n - \lvert A^* \rvert)\bigr],$$
+> with $C_R = 2\lambda_{\mathrm{cl}} a_{\mathrm{cl}}^2 \lVert M \rVert^2$, all factors canonical-parameter-explicit. The bound *sharpens* (1.1) by replacing the worst-case $\sqrt n \cdot \vert \sigma''\vert _{\max}$ with the boundary-band-restricted $\rho_{\mathrm{bd-band}} \cdot n + \delta(u^*) \cdot (n-\lvert A^* \rvert)$.
 
 **Proof.** L1 + L2 + L3 + L4 chain (§3.1–§3.4) → bound. L5 (§3.5) 가 numerical verification — quantitative *gap* 가 honest. $\square$
 
@@ -311,7 +311,7 @@ $$\boxed{\;\lVert \Pi_T^{\mathrm{free}} R_{\mathrm{cl}} \Pi_T^{\mathrm{free}} \r
 ### §4.1 Weyl inequality 적용
 
 $H = H_0 + V$, $H_0 = 2\lambda_{\mathrm{cl}}(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) + H_{\mathrm{bd}} + H_{\mathrm{sep}}$, $V = R_{\mathrm{cl}}$. Weyl:
-$$|\mu_{\min}(\Pi_T H \Pi_T) - \mu_{\min}(\Pi_T H_0 \Pi_T)| \;\leq\; \lVert \Pi_T V \Pi_T \rVert. \tag{4.1}$$
+$$\vert \mu_{\min}(\Pi_T H \Pi_T) - \mu_{\min}(\Pi_T H_0 \Pi_T)\vert \;\leq\; \lVert \Pi_T V \Pi_T \rVert. \tag{4.1}$$
 
 L-CLOSURE-LIFT (Cat A) + L-HMORSE-DECOMP (D1)(D3) → $\mu_{\min}(\Pi_T H_0 \Pi_T) \geq 2\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2 (d_{\min}/d_{\max}) + \alpha\lambda_2(L) - 2\beta\rho_{\mathrm{bd-band}}$. 우변이 양수일 조건이 T8-supercritical + canonical bound (이미 canonical L1958 sketch).
 
@@ -372,7 +372,7 @@ C-COC (Chain-of-Counterexample) 협약: ≥3 명시적 반례 시도 + 각각의
 
 **Setup:** $\beta = 12 > \beta_{\mathrm{crit}}^{(2)}$ (supercritical, but small margin), 5×5 grid → $\rho_{\mathrm{bd-band}} = 2\sqrt{1/12} \cdot 4/5 = 0.462$ — 절반 가까이 boundary band.
 
-**Hypothetical issue:** (3.9) 첫째 항 $|\sigma''|_{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \to 0.0962 \cdot 0.462 \cdot 25 = 1.11$. $\lVert R_{\mathrm{cl}} \rVert$ 가 worst-case 와 비교해 *덜 감소*.
+**Hypothetical issue:** (3.9) 첫째 항 $\vert \sigma''\vert _{\max} \cdot \rho_{\mathrm{bd-band}} \cdot n \to 0.0962 \cdot 0.462 \cdot 25 = 1.11$. $\lVert R_{\mathrm{cl}} \rVert$ 가 worst-case 와 비교해 *덜 감소*.
 
 **Failure mode (부분적 실패; Cat B+ 머무름):** 본 정리의 sharper bound 가 still gives improvement, but the residual term 이 $c_{\mathrm{HML}}^{\mathrm{Cat A}} > 0$ 보장에 *충분하지 않음*. → Cat A 조건이 *"sufficiently supercritical"* 추가 명시 필요.
 
@@ -425,7 +425,7 @@ C-COC (Chain-of-Counterexample) 협약: ≥3 명시적 반례 시도 + 각각의
 ### §7.3 Cat A path (concrete next steps)
 
 1. **(S1) 해결**: T8-supercritical 의 *quantitative* phase-separation theorem 도출 — Modica-Mortola Γ-convergence 의 *quantitative rate* (W9+ task). 입력: spinodal $W''$ 의 spectrum.
-2. **(S2) 해결**: Critical-point $\nabla\mathcal E = 0$ + 분석성 → $\lvert r \rvert = |\mathrm{Cl}(u^*) - u^*|$ 가 saturation defect $\delta$ 의 *linear* in $\delta$ — Łojasiewicz quantitative.
+2. **(S2) 해결**: Critical-point $\nabla\mathcal E = 0$ + 분석성 → $\lvert r \rvert = \vert \mathrm{Cl}(u^*) - u^*\vert $ 가 saturation defect $\delta$ 의 *linear* in $\delta$ — Łojasiewicz quantitative.
 3. **(S3) 해결**: $w \in T^{\mathrm{free}}$ 의 boundary-band 분포 가 *경계 모드 배제* (L-BOUNDARY-MODE-EXCLUSION Cat C → Cat B 승급) 와 함께 — Weyl explicit constant 와 합쳐서.
 
 이 3 sub-claims 가 Cat A 화 되면 본 정리 unconditional Cat A → L-HMORSE-LOCAL Cat A (CV-1.18 target).
@@ -481,7 +481,7 @@ C-COQ (Chain-of-Open-Question) 협약: 정리 attempt 후 ≥3 새 OP 식별.
 
 ### §9.1 OP-HMORSE-LOCAL-A-1: Boundary band 의 $O(1)$ constant explicit
 
-**Statement:** §3.4 step L4.4 의 $\lVert w|_{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2$ bound 가 현재 $\rho_{\mathrm{bd-band}} \cdot n$ — 그러나 *실제* worst-case 분포가 boundary band 에 *비균등* 집중 시 더 sharper bound 가능. **(S3) sub-claim 의 정량화.**
+**Statement:** §3.4 step L4.4 의 $\lVert w\vert _{\mathrm{Bd}_{\mathrm{spin}}} \rVert^2$ bound 가 현재 $\rho_{\mathrm{bd-band}} \cdot n$ — 그러나 *실제* worst-case 분포가 boundary band 에 *비균등* 집중 시 더 sharper bound 가능. **(S3) sub-claim 의 정량화.**
 
 **Status:** OPEN. 입력: T-OP6-B Cat A + L-BOUNDARY-MODE-EXCLUSION Cat B 승급.
 
@@ -505,7 +505,7 @@ C-COQ (Chain-of-Open-Question) 협약: 정리 attempt 후 ≥3 새 OP 식별.
 
 ### §9.4 (보너스) OP-HMORSE-LOCAL-A-4: $\varepsilon_{\mathrm{Cl}}$ 의 KKT-explicit bound
 
-**Statement:** (S2) sub-claim: critical-point 조건 $\nabla\mathcal E(u^*) = 0$ + canonical analyticity → $|\mathrm{Cl}(u^*) - u^*|$ 가 saturation defect $\delta(u^*)$ 의 explicit linear function 인지 분석. Łojasiewicz–Simon quantitative gradient bound 와 결합.
+**Statement:** (S2) sub-claim: critical-point 조건 $\nabla\mathcal E(u^*) = 0$ + canonical analyticity → $\vert \mathrm{Cl}(u^*) - u^*\vert $ 가 saturation defect $\delta(u^*)$ 의 explicit linear function 인지 분석. Łojasiewicz–Simon quantitative gradient bound 와 결합.
 
 **Status:** OPEN. 입력: canonical CN4 ($b_D = 0$ 분석성) + Łojasiewicz exponent estimate.
 
@@ -517,7 +517,7 @@ C-COQ (Chain-of-Open-Question) 협약: 정리 attempt 후 ≥3 새 OP 식별.
 
 ### §10.1 핵심 결과 1줄 요약
 
-> $\Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}}$ 의 $\ell^2$-operator-norm 이 *active-set restriction* + *boundary-band restriction* + *sigmoid $\sigma''$ pointwise bound* 의 3-단계 분리를 통해 $|\sigma''|_{\max} \cdot \sqrt n \to |\sigma''|_{\max} \cdot \sqrt{\rho_{\mathrm{bd-band}} \cdot n} + \delta(u^*) \cdot \sqrt{n - \lvert A^* \rvert}$ 의 *sharper* form 으로 표현됨 (3.9).
+> $\Pi_T^{\mathrm{free}} R_{\mathrm{cl}}(u^*) \Pi_T^{\mathrm{free}}$ 의 $\ell^2$-operator-norm 이 *active-set restriction* + *boundary-band restriction* + *sigmoid $\sigma''$ pointwise bound* 의 3-단계 분리를 통해 $\vert \sigma''\vert _{\max} \cdot \sqrt n \to \vert \sigma''\vert _{\max} \cdot \sqrt{\rho_{\mathrm{bd-band}} \cdot n} + \delta(u^*) \cdot \sqrt{n - \lvert A^* \rvert}$ 의 *sharper* form 으로 표현됨 (3.9).
 
 ### §10.2 Cat 자기 verdict
 
@@ -535,7 +535,7 @@ C-COQ (Chain-of-Open-Question) 협약: 정리 attempt 후 ≥3 새 OP 식별.
 ### §10.3 Gap status
 
 **Closed (본 P4 기여):**
-- (G1) $|\sigma''|_{\max}$ → active-set-restricted form *해석적* 분리 단계.
+- (G1) $\vert \sigma''\vert _{\max}$ → active-set-restricted form *해석적* 분리 단계.
 - (G2) $\sqrt n$ → $\sqrt{\rho_{\mathrm{bd-band}} \cdot n} + \sqrt{n-\lvert A^* \rvert}$ *해석적* refinement.
 - (G3) T-OP6-B Cat A 인용을 통한 boundary band measure explicit.
 

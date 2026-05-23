@@ -196,7 +196,7 @@ $V_{\mathrm{raw}} : \mathcal{M}_{\mathrm{obs}} \to \mathbb{R}_{\geq 0}$ is admis
 - **V2 (Continuous):** $V_{\mathrm{raw}} \in C^0$
 - **V3 (Readout-compatible):** $\nabla V_{\mathrm{raw}}(\Theta) = 0 \Rightarrow P(\Theta)$ locally stable
 - **V4 (Basin-generating):** Level sets decompose $\mathcal{M}_{\mathrm{obs}}$ into attraction regions
-- **V5 (Boundary-aware):** $V_{\mathrm{raw}}|_{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$
+- **V5 (Boundary-aware):** $V_{\mathrm{raw}}\vert _{\partial \mathcal{M}_{\mathrm{obs}}} \not\equiv \mathrm{const}$
 
 **Definition (Admissible class).** $\mathcal{V}_{\mathrm{adm}} = \{V_{\mathrm{raw}} : V_{\mathrm{raw}} \text{ satisfies V1–V5}\}$. [DEFINED]
 

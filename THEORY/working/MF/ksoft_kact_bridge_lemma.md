@@ -147,7 +147,7 @@ $$
 
 A sketch of the implication (1)–(4) ⇒ (5):
 
-- Conditions (3), (4) imply that on each $\delta$-support $\mathrm{Supp}_\delta(u^{(j)})$, the aggregate $U(\mathbf u) = u^{(j)} + \sum_{k \ne j} u^{(k)}$ is dominated by $u^{(j)}$ alone (since $u^{(k)}|_{\mathrm{Supp}_\delta(u^{(j)})} \le \delta$ in the disjoint case, plus a small overlap correction $\le \eta$).
+- Conditions (3), (4) imply that on each $\delta$-support $\mathrm{Supp}_\delta(u^{(j)})$, the aggregate $U(\mathbf u) = u^{(j)} + \sum_{k \ne j} u^{(k)}$ is dominated by $u^{(j)}$ alone (since $u^{(k)}\vert _{\mathrm{Supp}_\delta(u^{(j)})} \le \delta$ in the disjoint case, plus a small overlap correction $\le \eta$).
 - By condition (2), $\mathrm{Supp}_\delta(u^{(j)})$ is graph-connected. Thus on $\mathrm{Supp}_\delta(u^{(j)})$, $U$ is a single peak (one $H_0$ feature in the local superlevel filtration).
 - Condition (3) ensures the $\lvert A \rvert$ peaks remain separated under aggregation: the inter-support graph distance $\ge D_{\mathrm{sep}}$ guarantees the peaks do not merge in the superlevel filtration above any $\theta > \delta$.
 - Therefore $U$ has exactly $\lvert A \rvert$ robust peaks, and their bar lengths in $\mathrm{Dgm}_0^{\sup}(U)$ are bounded below by $\min_j \max_x u^{(j)}(x) - O(\delta + \eta)$, which can be made $\ge \ell_{\min}$ for appropriate parameter choice.
@@ -299,8 +299,8 @@ $$
 The error terms are:
 
 - $\rho_{\mathrm{sub}} := \sum_{i:\ell_i(U)<\ell_{\min}}\phi(\ell_i(U))$ — residual contribution from sub-threshold bars.
-- $\rho_{\mathrm{edge}}$ — contribution from bars in the edge band $|\ell_i(U)-\ell_{\min}|\le\tau$, where soft-threshold uncertainty matters.
-- $\rho_\phi := \sum_{i:\ell_i(U)\ge\ell_{\min}+\tau}|\phi(\ell_i(U))-1|$ — dominant-bar normalization / envelope bias for count-like envelopes.
+- $\rho_{\mathrm{edge}}$ — contribution from bars in the edge band $\vert \ell_i(U)-\ell_{\min}\vert \le\tau$, where soft-threshold uncertainty matters.
+- $\rho_\phi := \sum_{i:\ell_i(U)\ge\ell_{\min}+\tau}\vert \phi(\ell_i(U))-1\vert $ — dominant-bar normalization / envelope bias for count-like envelopes.
 - $\rho_{\mathrm{sep}}$ — separation / overlap error linking $K_{\mathrm{bar}}^{\ell_{\min}}(U)$ to $K_{\mathrm{act}}^\varepsilon(\mathbf u)$; this is small only in the well-separated single-mode regime.
 
 For the hard threshold, $\rho_{\mathrm{sub}}=0$ by definition. For sharp logistic and shifted-saturating envelopes, $\rho_{\mathrm{sub}}$ is small only when all sub-threshold bars lie sufficiently below $\ell_{\min}$ relative to the transition width / sharpness parameter.
@@ -440,7 +440,7 @@ $$
 
 $K_{\mathrm{soft}}^\phi$ is a *smooth* relative of $K_{\mathrm{step}}$ and $\mathcal{F}$:
 
-- $K_{\mathrm{step}}(v; \tau) = \dim H_0(G|_{\{v > \tau\}})$ is a single-slice count of the superlevel filtration. Threshold-dependent.
+- $K_{\mathrm{step}}(v; \tau) = \dim H_0(G\vert _{\{v > \tau\}})$ is a single-slice count of the superlevel filtration. Threshold-dependent.
 - $\mathcal{F}(v)$ is the total number of $H_0$ generators ever born in the superlevel filtration of $v$ (per `F_Kstep_K_triple.md` §7.4.2). Threshold-free, integer.
 - $K_{\mathrm{soft}}^\phi(v) = \sum_i \phi(\ell_i(v))$ weights each generator by an envelope of its bar length. Threshold-free in the *birth-threshold* sense. It acts as a prominence-filtered count only when $\phi$ suppresses sub-threshold bars; default smooth saturating envelopes can leak sub-resolution bar count.
 - $K_{\mathrm{bar}}^{\ell_{\min}}(v) = \#\{i : \ell_i(v) \ge \ell_{\min}\}$ is the integer-valued step-function form of $K_{\mathrm{soft}}^\phi$.

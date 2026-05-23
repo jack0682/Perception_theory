@@ -37,7 +37,7 @@ For Eyring-Kramers transition rates between metastable basins, the following are
 | Nondegenerate local minima of $\mathcal E$ on $\Sigma_m^\circ$ | **OPEN (H-MORSE)** | this audit |
 | Nondegenerate index-1 saddles connecting basins | **OPEN (H-MORSE-Saddle)** | not yet registered |
 | Saddle path uniqueness (instanton) | OPEN | requires Freidlin-Wentzell |
-| Hessian determinant prefactors $|\det H^\mathrm{proj}|^{1/2}$ at minima and saddles | derives from H-MORSE | conditional |
+| Hessian determinant prefactors $\vert \det H^\mathrm{proj}\vert ^{1/2}$ at minima and saddles | derives from H-MORSE | conditional |
 
 ### 2.2 Barrier structure
 
@@ -80,7 +80,7 @@ For Eyring-Kramers transition rates between metastable basins, the following are
 
 For overdamped Langevin $dX = -\nabla \mathcal E(X) dt + \sqrt{2T_*} dW_t$ on $\mathbb R^n$ with Morse $\mathcal E$ having two basins $\mathfrak m_1, \mathfrak m_2$ separated by index-1 saddle $\mathfrak s$:
 
-$$k_{1 \to 2} = \frac{|\lambda_-(\mathfrak s)|}{2\pi} \cdot \sqrt{\frac{|\det H^\mathrm{proj}_\mathcal E(\mathfrak s)|}{\det H^\mathrm{proj}_\mathcal E(\mathfrak m_1)}} \cdot e^{-(\mathcal E(\mathfrak s) - \mathcal E(\mathfrak m_1))/T_*}$$
+$$k_{1 \to 2} = \frac{\vert \lambda_-(\mathfrak s)\vert}{2\pi} \cdot \sqrt{\frac{\vert \det H^\mathrm{proj}_\mathcal E(\mathfrak s)\vert}{\det H^\mathrm{proj}_\mathcal E(\mathfrak m_1)}} \cdot e^{-(\mathcal E(\mathfrak s) - \mathcal E(\mathfrak m_1))/T_*}$$
 
 where $\lambda_-(\mathfrak s)$ is the unique negative eigenvalue of $H^\mathrm{proj}$ at the saddle.
 
@@ -99,7 +99,7 @@ On the **interior** of $\tilde C$, the same formula applies in the projected coo
 3. **Symmetry quotient.** If multiple equivalent saddles exist by graph automorphism (degeneracy class #5), the EK formula aggregates rates over the orbit.
 
 **Determinant form (SCC):**
-$$k_{1 \to 2} = \frac{|\lambda_-^\mathrm{proj}(\mathfrak s)|}{2\pi} \sqrt{\frac{|\det \Pi_T H_\mathcal E(\mathfrak s) \Pi_T|_{\mathbf 1^\perp}}{\det \Pi_T H_\mathcal E(\mathfrak m_1) \Pi_T|_{\mathbf 1^\perp}}} e^{-\Delta\mathcal E / T_*}$$
+$$k_{1 \to 2} = \frac{\vert \lambda_-^\mathrm{proj}(\mathfrak s)\vert}{2\pi} \sqrt{\frac{\vert \det \Pi_T H_\mathcal E(\mathfrak s) \Pi_T\vert _{\mathbf 1^\perp}}{\det \Pi_T H_\mathcal E(\mathfrak m_1) \Pi_T\vert _{\mathbf 1^\perp}}} e^{-\Delta\mathcal E / T_*}$$
 
 with $\Delta\mathcal E = \mathcal E(\mathfrak s) - \mathcal E(\mathfrak m_1)$.
 

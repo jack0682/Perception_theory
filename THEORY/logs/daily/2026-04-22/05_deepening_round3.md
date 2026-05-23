@@ -49,7 +49,7 @@ $F(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + A_1(a^4 + b^4) + A_2 a^2 b^2$, where
 - **Axis $(A, 0)$:** $A^2 = -\mu/(4A_1)$; $F_{\mathrm{axis}} = -\mu^2/(16 A_1)$.
 - **Diagonal $(B, B)$:** $B^2 = -\mu/(4A_1 + 2A_2) = -\mu/(12A_1)$; $F_{\mathrm{diag}} = -\mu^2/(24 A_1)$.
 
-**Comparison:** $|F_{\mathrm{axis}}| > |F_{\mathrm{diag}}|$ (since $1/16 > 1/24$) ⇒ **axis is lower energy** (more stable).
+**Comparison:** $\vert F_{\mathrm{axis}}\vert > \vert F_{\mathrm{diag}}\vert $ (since $1/16 > 1/24$) ⇒ **axis is lower energy** (more stable).
 
 ### 2.4 Stability (Hessian)
 
@@ -66,7 +66,7 @@ $F(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + A_1(a^4 + b^4) + A_2 a^2 b^2$, where
 
 ### 2.6 Consequences for $\mathcal{M}_1$
 
-At $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$: $|\mathcal{M}_1| = 1$ (axis orbit), orbit size 4. Diagonal orbit present but not in $\mathcal{M}_1$ (not a minimum).
+At $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$: $\vert \mathcal{M}_1\vert = 1$ (axis orbit), orbit size 4. Diagonal orbit present but not in $\mathcal{M}_1$ (not a minimum).
 
 **Cardinality bracket check (`cardinality_open.md` §8.1):** $c_0 - c_1 + c_2 = 1 - 1 + 1 = 1 = \chi(\Sigma_m)$. ✓
 (Axis orbit = 1 class at index 0; diagonal orbit = 1 class at index 1; $u_{\mathrm{uniform}}$ = 1 class at index 2.)

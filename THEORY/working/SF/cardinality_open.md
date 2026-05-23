@@ -28,8 +28,8 @@
 Canonical §13 proves **existence** of minimizers (T1: Weierstrass on compact $\Sigma_m$) and various **local** statements (T14: gradient-flow convergence, T-Birth-Parametric: pitchfork birth). It asserts "multiple local minima" (CN1, CN8, CN9) but does not **count** them.
 
 No Cat A claim in canonical provides:
-- $N_{\mathrm{crit}}(\beta, \alpha, G, c) := |\{u^\ast \in \Sigma_m : \nabla\mathcal{E}(u^\ast) = 0\}|$ modulo $\mathrm{Aut}(G)$.
-- $N_{\mathrm{min}}(\beta, \alpha, G, c) := |\{u^\ast : \text{local minimum}\}|$ modulo $\mathrm{Aut}(G)$.
+- $N_{\mathrm{crit}}(\beta, \alpha, G, c) := \vert \{u^\ast \in \Sigma_m : \nabla\mathcal{E}(u^\ast) = 0\}\vert $ modulo $\mathrm{Aut}(G)$.
+- $N_{\mathrm{min}}(\beta, \alpha, G, c) := \vert \{u^\ast : \text{local minimum}\}\vert $ modulo $\mathrm{Aut}(G)$.
 
 ### 1.2 Empirical evidence
 
@@ -161,7 +161,7 @@ This is a **constraint**, not a lower bound, but combined with Prop 1.3a:
 ### 8.2 Lower bound on $c_0$ via pitchfork cascade
 
 **Claim 8.2.** Under T-Birth-Parametric (Cat A on D4, Cat B on general graphs):
-$$c_0(\beta) \geq 1 + \sum_{k : \beta_{\mathrm{crit}}^{(k)} < \beta}\mathbf{1}[\text{supercritical at }k] \cdot |\{\text{distinct pitchfork branches at }k\}/\mathrm{Aut}(G)|.$$
+$$c_0(\beta) \geq 1 + \sum_{k : \beta_{\mathrm{crit}}^{(k)} < \beta}\mathbf{1}[\text{supercritical at }k] \cdot \vert \{\text{distinct pitchfork branches at }k\}/\mathrm{Aut}(G)\vert.$$
 
 **Proof sketch.** Each supercritical pitchfork at $\beta = \beta_{\mathrm{crit}}^{(k)}$ creates at least one new orbit of local minimizers (paired by the sign flip $a_k \to -a_k$ if the graph has $\mathbb Z_2$ symmetry along $\phi_k$; otherwise a continuous orbit). Gradient-flow cascade (T14 Cat A): descending from $u_{\mathrm{uniform}}$ along $\phi_k$ direction reaches a local minimizer of the $k$-mode-saturated pattern. Distinct $k$ values yield distinct orbits by linear independence of eigenmodes.
 
@@ -183,7 +183,7 @@ For 2D $L\times L$ grid with $m = cn$: the perimeter-minimizers are approximatel
 
 **So $c_0 = O(L) = O(\sqrt n)$ at large $\beta$.**
 
-Combined with §8.2 lower bound: $c_0 \in [1 + N_{\mathrm{unst}}^{\mathrm{orbit}}, O(\sqrt n)]$, where $N_{\mathrm{unst}}^{\mathrm{orbit}}$ is the pitchfork-orbit-counted unstable mode number (typically $\leq N_{\mathrm{unst}}/|\mathrm{Aut}(G)|$).
+Combined with §8.2 lower bound: $c_0 \in [1 + N_{\mathrm{unst}}^{\mathrm{orbit}}, O(\sqrt n)]$, where $N_{\mathrm{unst}}^{\mathrm{orbit}}$ is the pitchfork-orbit-counted unstable mode number (typically $\leq N_{\mathrm{unst}}/\vert \mathrm{Aut}(G)\vert $).
 
 ### 8.4 Relationship to $\widehat{K}$ prediction
 

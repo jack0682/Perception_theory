@@ -401,7 +401,7 @@ $$
 - normalization bound for dominant bars:
 
 $$
-\sum_{\ell_i\ge\ell_{\min}+\tau}|\phi(\ell_i)-1|;
+\sum_{\ell_i\ge\ell_{\min}+\tau}\vert \phi(\ell_i)-1\vert;
 $$
 
 - continuity / differentiability statement appropriate to the selected \(\phi\).

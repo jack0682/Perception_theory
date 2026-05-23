@@ -98,7 +98,7 @@ The observed coefficient 13.2 might equal $\pi\beta$, or $4\beta - 3$, or $\beta
 
 This is the original Phase 3 V5b-F text. NQ-198a (post-deepening) finds μ_G ∈ [0.381, 1.750] across (m, L) variation — **not "[1, 4]"** in general. The "[1, 4]" range was specific to NQ-173 setup (m=40, L=20).
 
-**Correction**: `02_*` §4.4.3 should be updated to reflect NQ-198a empirical scaling $\mu \approx C |\partial S|/n$. The "regime-R3b magnitude" range in `02_*` was misleading — it didn't capture the (m, L) dependence.
+**Correction**: `02_*` §4.4.3 should be updated to reflect NQ-198a empirical scaling $\mu \approx C \vert \partial S\vert /n$. The "regime-R3b magnitude" range in `02_*` was misleading — it didn't capture the (m, L) dependence.
 
 This is a **Day 4 morning correction** task before any LaTeX integration.
 
@@ -315,7 +315,7 @@ If Day 4 morning runs Block 1 application as planned:
 
 1. **§3.4 reconciliation update**: amend `00_*` §2 D-5 to flag "FINAL pending Day 3 deepening + NQ-198a" — done implicitly via `07_*` §6.1 supersession, but should be cross-referenced in `00_*` if user re-reads.
 
-2. **§3.1 `02_*` §4.4.3 V5b-F update**: replace "$\mu \in [1, 4]$ (regime-R3b magnitude)" with NQ-198a empirical scaling $\mu \approx C |\partial S|/n$ + caveat. ~15-20 lines diff.
+2. **§3.1 `02_*` §4.4.3 V5b-F update**: replace "$\mu \in [1, 4]$ (regime-R3b magnitude)" with NQ-198a empirical scaling $\mu \approx C \vert \partial S\vert /n$ + caveat. ~15-20 lines diff.
 
 3. **§3.2 `02_*` §4.6.4 LSW α**: align "α ≈ 0.28" with §4.5 "α plateau 0.25-0.30". 1-line edit.
 

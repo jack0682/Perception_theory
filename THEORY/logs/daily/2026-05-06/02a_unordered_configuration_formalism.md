@@ -37,7 +37,7 @@ $$\sigma \cdot \mathbf{u} := \left( u^{(\sigma^{-1}(1))}, u^{(\sigma^{-1}(2))}, 
 
 **Orbit of $\mathbf{u}$:** $S_K \cdot \mathbf{u} = \{ \sigma \cdot \mathbf{u} : \sigma \in S_K \}$ — the set of all permutations of the slot tuple.
 
-**Stabilizer of $\mathbf{u}$:** $\mathrm{Stab}(\mathbf{u}) = \{ \sigma \in S_K : \sigma \cdot \mathbf{u} = \mathbf{u} \}$ — permutations that leave $\mathbf{u}$ fixed. By the orbit-stabilizer theorem: $|S_K \cdot \mathbf{u}\lvert = K! / \rvert\mathrm{Stab}(\mathbf{u})|$.
+**Stabilizer of $\mathbf{u}$:** $\mathrm{Stab}(\mathbf{u}) = \{ \sigma \in S_K : \sigma \cdot \mathbf{u} = \mathbf{u} \}$ — permutations that leave $\mathbf{u}$ fixed. By the orbit-stabilizer theorem: $\vert S_K \cdot \mathbf{u}\lvert = K! / \rvert\mathrm{Stab}(\mathbf{u})\vert $.
 
 *Example:* If all slots are distinct ($u^{(j)} \neq u^{(k)}$ for $j \neq k$), then $\mathrm{Stab}(\mathbf{u}) = \{e\}$ (only identity fixes $\mathbf{u}$), orbit size $= K!$. If $u^{(1)} = u^{(2)} \neq u^{(3)}, \ldots$, then the transposition $(12) \in \mathrm{Stab}(\mathbf{u})$, orbit size $= K!/2$.
 
@@ -80,7 +80,7 @@ Properties:
 - $D_P$ requires $u^{(j)} = u^{(k)}$ for all pairs in $P$: this is $\lvert P \rvert - 1$ independent equality constraints, each of codimension $n-1$ (since $u^{(j)} = u^{(k)} \in \Sigma_m$ is an $(n-1)$-dimensional set).
 - Actually, the constraint $u^{(j)} = u^{(k)}$ forces the pair $(u^{(j)}, u^{(k)}) \in \Sigma_m \times \Sigma_m$ to lie on the diagonal $\Delta_m := \{(u, u) : u \in \Sigma_m\}$, which has dim $n-1$ inside the $(2(n-1))$-dimensional $\Sigma_m \times \Sigma_m$ — so codim $= n-1$ per equality constraint.
 - **Dimension of $D_P$:** $K(n-1) - (\lvert P \rvert-1)(n-1) = (K - \lvert P \rvert + 1)(n-1)$.
-- Stabilizer of $\mathbf{u} \in D_P$ (with all other slots distinct): contains $S_P$ (all permutations within $P$), so $|\mathrm{Stab}(\mathbf{u})| \geq \lvert P \rvert!$.
+- Stabilizer of $\mathbf{u} \in D_P$ (with all other slots distinct): contains $S_P$ (all permutations within $P$), so $\vert \mathrm{Stab}(\mathbf{u})\vert \geq \lvert P \rvert!$.
 - Codimension of $D_P$ in $\Sigma^K_M$: $(\lvert P \rvert-1)(n-1)$.
 
 **Important special case $P = \{j, k\}$ (pair equality):** codim $= n-1$, dim $= (K-1)(n-1)$. These are the "walls" of the open stratum.

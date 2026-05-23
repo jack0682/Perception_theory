@@ -35,7 +35,7 @@ The well-definedness of $\sigma$ — particularly the irrep label $[\rho_k]$ —
 
 \begin{lemma}[Single-formation σ well-defined; canonical T-σ-Lemma-1]
 \label{lem:sigma-well-def}
-The Hessian $H = \nabla^2 \mathcal{E}|_{u^*}$ acting on $T_{u^*} \Sigma_m \cong \mathbf{1}^\perp$ commutes with the $\mathrm{Stab}(u^*)$-action. Hence each Hessian eigenspace $V_k = \ker(H - \lambda_k I)$ is a $\mathrm{Stab}(u^*)$-representation. By Maschke's theorem and Schur's lemma, $V_k$ decomposes uniquely into irreducible $\mathrm{Stab}(u^*)$-representations:
+The Hessian $H = \nabla^2 \mathcal{E}\vert _{u^*}$ acting on $T_{u^*} \Sigma_m \cong \mathbf{1}^\perp$ commutes with the $\mathrm{Stab}(u^*)$-action. Hence each Hessian eigenspace $V_k = \ker(H - \lambda_k I)$ is a $\mathrm{Stab}(u^*)$-representation. By Maschke's theorem and Schur's lemma, $V_k$ decomposes uniquely into irreducible $\mathrm{Stab}(u^*)$-representations:
 \begin{equation}
 V_k = \bigoplus_{[\rho] \in \mathrm{Irr}(\mathrm{Stab}(u^*))} V_k^{[\rho]}, \qquad \dim V_k^{[\rho]} = m_{[\rho]} \dim[\rho].
 \end{equation}
@@ -207,7 +207,7 @@ We verified Theorem~\ref{thm:tsm1} on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12
 
 #### §4.3.5 Static vs Dynamic Instability
 
-A subtle distinction: Theorem~\ref{thm:tsm1} as stated is a \emph{static} instability claim (joint Hessian has negative eigenvalue). The corresponding \emph{dynamic} instability under volume-projected gradient flow $\dot u = -P_\Sigma \nabla \mathcal{E}_K$ requires the unstable eigenvector to lie in the volume-preserving subspace $\bigoplus_j (\mathbf{1}_j^\perp)$. Phase 5 P1.1 numerical reveals that this distinction matters: random perturbations along the unconstrained Hessian eigenvector decay rather than grow, while perturbations along the volume-projected joint Hessian eigenvector are expected to grow at rate $|\lambda_{\mathrm{antisym}}|$ (Phase 6 Q1 numerical verification).
+A subtle distinction: Theorem~\ref{thm:tsm1} as stated is a \emph{static} instability claim (joint Hessian has negative eigenvalue). The corresponding \emph{dynamic} instability under volume-projected gradient flow $\dot u = -P_\Sigma \nabla \mathcal{E}_K$ requires the unstable eigenvector to lie in the volume-preserving subspace $\bigoplus_j (\mathbf{1}_j^\perp)$. Phase 5 P1.1 numerical reveals that this distinction matters: random perturbations along the unconstrained Hessian eigenvector decay rather than grow, while perturbations along the volume-projected joint Hessian eigenvector are expected to grow at rate $\vert \lambda_{\mathrm{antisym}}\vert $ (Phase 6 Q1 numerical verification).
 
 The relationship between static and dynamic instability is the subject of ongoing investigation (NQ-219).
 

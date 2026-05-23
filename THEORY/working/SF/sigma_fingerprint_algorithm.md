@@ -78,7 +78,7 @@ Inter-formation separation, u-weighted distinction integral. $O(\lvert E \rvert)
 - **(E2)** $\mathrm{stab}(u_1^*) \cong \mathrm{stab}(u_2^*)$ as labelled groups.
 - **(E3)** $\vec{\nu}(u_1^*) = \vec{\nu}(u_2^*)$ entry-wise.
 - **(E4)** There exists $\varphi: G_{u_1^*} \to G_{u_2^*}$ isomorphism such that $[\rho_k(u_2^*)] = [\varphi_* \rho_k(u_1^*)]$ for all $k$, modulo conjugation per Definition 2.1' clause (c) (Schur-degenerate isomorphism class).
-- **(E5)** $|\lambda_k(u_1^*) - \lambda_k(u_2^*)| < \epsilon_\lambda$ for $k = 1, \ldots, K$ ($\epsilon_\lambda = 10^{-4}$ default).
+- **(E5)** $\vert \lambda_k(u_1^*) - \lambda_k(u_2^*)\vert < \epsilon_\lambda$ for $k = 1, \ldots, K$ ($\epsilon_\lambda = 10^{-4}$ default).
 - **(E6)** $\lvert B(u_1^*) - B(u_2^*) \rvert < \epsilon_B$ and $\lvert S(u_1^*) - S(u_2^*) \rvert < \epsilon_S$ ($\epsilon_B = \epsilon_S = 10^{-3}$).
 
 **Lemma 2.3 (Aut(G)-orbit invariance).** *Within a fixed graph $G$, $\Phi$ is constant on $\mathrm{Aut}(G)$-orbits, modulo canonical conjugation.*
@@ -120,7 +120,7 @@ ALGORITHM ComputeSigmaFingerprint(u*, G, α, β, c, K_max=15):
 
 **Step 3 (LANCZOS_LOWEST_K).** Use `scipy.sparse.linalg.eigsh(H, k=K_max+1, which='SM')`. Lanczos cost: $O(K_{\max} \cdot \lvert E \rvert)$ per matrix-vector product, $O(K_{\max}^2)$ orthogonalization, $K_{\max}$ iterations → $O(K_{\max}^2 \cdot \lvert E \rvert)$. On R23 ($n = 1024$, $\lvert E \rvert \approx 2 \cdot 1024 = 2048$, $K_{\max} = 15$): $\sim 15^2 \cdot 2048 \approx 0.5\mathrm{M}$ flops, sub-millisecond.
 
-**Step 4 (volume-mode filter).** Reuse `filter_non_volume_modes` from `sigma_locality_R23_cycle_torus.py`: drop the eigenvector with $|\langle \phi, \mathbf{1}/\sqrt{n} \rangle| > 0.5$. $O(K_{\max} \cdot n)$ inner products.
+**Step 4 (volume-mode filter).** Reuse `filter_non_volume_modes` from `sigma_locality_R23_cycle_torus.py`: drop the eigenvector with $\vert \langle \phi, \mathbf{1}/\sqrt{n} \rangle\vert > 0.5$. $O(K_{\max} \cdot n)$ inner products.
 
 **Step 5 (SIGMA_CUTOFF).** Walk through sorted $\lambda_{\mathrm{phys}}$ ascending; return smallest $k$ such that $\lambda_k > 10 \cdot \lambda_1$. Trivially $O(K_{\max})$. Per Commitment 14 (O3 K-A).
 
@@ -145,7 +145,7 @@ Time per eigenvector $O(\lvert E \rvert)$ (BFS); total over $K$ eigenvectors $O(
 - Compute the isotypic projection norms $\lVert P_{[\rho]} \phi_k \rVert^2$ for each $[\rho] \in \widehat{G_{u^*}}$ via the projector $P_{[\rho]} = \frac{\dim\rho}{\lvert G_u \rvert} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \pi$.
 - $[\rho_k] := \arg\max_{[\rho]} \lVert P_{[\rho]} \phi_k \rVert^2$.
 
-Time $O(\lvert G_{u^*} \rvert \cdot n)$ per irrep × $|\widehat{G_{u^*}}|$ irreps × $K$ eigenvectors $= O(K \cdot \lvert G_{u^*} \rvert \cdot |\widehat{G_{u^*}}| \cdot n)$. On $D_4$ ($\lvert G \rvert = 8$, $|\widehat{G}| = 5$, $n = 1024$, $K = 15$): $\sim 615\mathrm{K}$ flops. Sub-second.
+Time $O(\lvert G_{u^*} \rvert \cdot n)$ per irrep × $\vert \widehat{G_{u^*}}\vert $ irreps × $K$ eigenvectors $= O(K \cdot \lvert G_{u^*} \rvert \cdot \vert \widehat{G_{u^*}}\vert \cdot n)$. On $D_4$ ($\lvert G \rvert = 8$, $\vert \widehat{G}\vert = 5$, $n = 1024$, $K = 15$): $\sim 615\mathrm{K}$ flops. Sub-second.
 
 For multi-dimensional irreps (e.g., $D_4$ E-irrep), record the **isomorphism class** label only per Definition 2.1' clause (c); basis-choice ambiguity is absorbed (Schur orthogonality, Serre 1977 §2.2).
 
@@ -158,9 +158,9 @@ For known small groups, augment with isomorphism-class label from a hardcoded lo
 ### §3.3 Total complexity
 
 Summing:
-$$T(\Phi) = O(\lvert E \rvert) + O(K_{\max}^2 \lvert E \rvert) + O(K \lvert E \rvert) + T_{\mathrm{stab}}(G) + O(K \lvert G_u \rvert |\widehat{G_u}| n) + O(\lvert G_u \rvert^2)$$
+$$T(\Phi) = O(\lvert E \rvert) + O(K_{\max}^2 \lvert E \rvert) + O(K \lvert E \rvert) + T_{\mathrm{stab}}(G) + O(K \lvert G_u \rvert \vert \widehat{G_u}\vert n) + O(\lvert G_u \rvert^2)$$
 
-For R23 ($n = 1024$, $\lvert E \rvert = 2048$, $K = 15$, $\lvert G_u \rvert = 8$, $|\widehat{G_u}| = 5$):
+For R23 ($n = 1024$, $\lvert E \rvert = 2048$, $K = 15$, $\lvert G_u \rvert = 8$, $\vert \widehat{G_u}\vert = 5$):
 - Lanczos: $\sim 5 \cdot 10^5$ flops.
 - Nodal counts: $\sim 3 \cdot 10^4$ flops.
 - Irrep projection: $\sim 6 \cdot 10^5$ flops.
@@ -170,7 +170,7 @@ For R23 ($n = 1024$, $\lvert E \rvert = 2048$, $K = 15$, $\lvert G_u \rvert = 8$
 
 For 56 minimizers: full R23 fingerprint enumeration $\approx 0.6$ s.
 
-**Asymptotic complexity (excluding stabilizer):** $O(K_{\max}^2 \lvert E \rvert + K \lvert G_u \rvert |\widehat{G_u}| n)$ = **$O(n \log n)$ in $\lvert X \rvert$ for sparse graphs with bounded-symmetry stabilizers**. ✓ Sub-cubic, in fact near-linear (F2 satisfied with significant margin).
+**Asymptotic complexity (excluding stabilizer):** $O(K_{\max}^2 \lvert E \rvert + K \lvert G_u \rvert \vert \widehat{G_u}\vert n)$ = **$O(n \log n)$ in $\lvert X \rvert$ for sparse graphs with bounded-symmetry stabilizers**. ✓ Sub-cubic, in fact near-linear (F2 satisfied with significant margin).
 
 **Including PyNauty stabilizer (W7+ option):** practical $O(\lvert X \rvert^2 \log \lvert X \rvert)$ worst-case, $O(\lvert X \rvert)$ typical.
 
@@ -183,13 +183,13 @@ For 56 minimizers: full R23 fingerprint enumeration $\approx 0.6$ s.
 **Dataset.** R23 fullscale (`CODE/scripts/results/exp_orbital_fullscale.json`) — 56 stable minimizers on $32 \times 32$ $D_4$ free-BC grid at $(\alpha, \beta, c) = (1, 30, 0.5)$. Each minimizer carries pre-stored Hessian eigenvalues (`eigenvalues` field, 12 modes).
 
 **Strength claim (BC-264-emp).**
-$$|\Phi(\mathcal{L}_{R23})| \in [12, 30]$$
+$$\vert \Phi(\mathcal{L}_{R23})\vert \in [12, 30]$$
 strictly greater than `sigma_class_count_R23.py` eigenvalue-only proxy (currently $\sim$8 classes; rerun pending) but strictly less than 56 (full minimizer count).
 
 ### §4.2 Falsifiable predictions
 
-- **(P1) Refinement.** $|\Phi(\mathcal{L}_{R23})| \geq |\sigma\text{-proxy classes}|$. Fingerprint should be $\geq$ as strong.
-- **(P2) Concentration.** $|\Phi(\mathcal{L}_{R23})| \leq 30$. The σ-fingerprint should not be so fine that every minimizer becomes its own class.
+- **(P1) Refinement.** $\vert \Phi(\mathcal{L}_{R23})\vert \geq \vert \sigma\text{-proxy classes}\vert $. Fingerprint should be $\geq$ as strong.
+- **(P2) Concentration.** $\vert \Phi(\mathcal{L}_{R23})\vert \leq 30$. The σ-fingerprint should not be so fine that every minimizer becomes its own class.
 - **(P3) PH-σ refinement (per OAT-7).** σ-fingerprint refines persistent-homology classes. The (F=51, K=5) $p$-vs-$g$ pair from `working/MF/single_high_F_equivalence.md` §5 should land in **distinct σ-fingerprint classes** but identical PH classes.
 
 ### §4.3 Implementation outline

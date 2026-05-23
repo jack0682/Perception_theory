@@ -167,11 +167,11 @@ For finite-L lattice with commensurability + mode-mixing: $c_{\mathrm{eff}} \in 
 ## §5. Connection to LSW Coarsening (E7 preview)
 
 The antisym Goldstone instability with eigenvalue $\lambda_{\mathrm{antisym}} \approx -\lambda_{\mathrm{rep}}$ gives the **linear merge rate** of K=2 → K=1:
-$$\dot \mathbf{u}_{\mathrm{antisym}} = -\nabla \mathcal{E}_K = +|\lambda_{\mathrm{antisym}}| \mathbf{u}_{\mathrm{antisym}}.$$
+$$\dot \mathbf{u}_{\mathrm{antisym}} = -\nabla \mathcal{E}_K = +\vert \lambda_{\mathrm{antisym}}\vert \mathbf{u}_{\mathrm{antisym}}.$$
 
-Antisym coordinate grows exponentially with rate $|\lambda_{\mathrm{antisym}}|$.
+Antisym coordinate grows exponentially with rate $\vert \lambda_{\mathrm{antisym}}\vert $.
 
-For LSW-type coarsening (NQ-192), the merge timescale $\tau_{\mathrm{merge}} \sim 1/|\lambda_{\mathrm{antisym}}| \sim 1/\lambda_{\mathrm{rep}}$ in well-separated regime.
+For LSW-type coarsening (NQ-192), the merge timescale $\tau_{\mathrm{merge}} \sim 1/\vert \lambda_{\mathrm{antisym}}\vert \sim 1/\lambda_{\mathrm{rep}}$ in well-separated regime.
 
 This is a **linear instability rate**, not the LSW power-law $t^{1/3}$ which arises from nonlinear evolution averaged over many mergers. The connection is:
 - **Linear rate** (T-σ-Multi-1 immediate consequence): $\tau_{\mathrm{linear}} \sim 1/\lambda_{\mathrm{rep}}$ for any single Goldstone-pair.

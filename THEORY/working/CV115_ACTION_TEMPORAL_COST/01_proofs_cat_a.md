@@ -256,7 +256,7 @@ $\blacksquare$
 
 **적용**: hard-min과 soft-min effective cost의 차이:
 
-$$\left|c_{i\to k}^{\varepsilon,\mathrm{eff}}(x,z) - c_{i\to k}^{\mathrm{act}}(x,z)\right| \leq \varepsilon\log|X_j|$$
+$$\left\vert c_{i\to k}^{\varepsilon,\mathrm{eff}}(x,z) - c_{i\to k}^{\mathrm{act}}(x,z)\right\vert \leq \varepsilon\log\vert X_j\vert $$
 
 $\varepsilon \to 0$ 극한에서 $c^{\varepsilon} \to c^{\mathrm{act}}$ (soft-min → hard-min 수렴).
 
@@ -374,7 +374,7 @@ $$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\lVert \varphi_{i+1}(y)
 | L-ACTION-NORMALIZATION | Time-normalized cost는 등속 경로에서 합성 정합 | **Cat A** | 등속 경로에서만 |
 | **T-ACT-DP** | Hard-min action cost의 Bellman DP | **Cat A** | 유한 site, additive action |
 | **T-ACT-GIBBS** | Gibbs kernel semigroup $K_{i\to k}=K_{i\to j}K_{j\to k}$ | **Cat A** | 유한 site, $\varepsilon>0$, additive action |
-| L-SOFTMIN-HARDMIN-BOUND | $|\operatorname{smin}_\varepsilon - \min| \leq \varepsilon\log N$ | **Cat A** | 표준 log-sum-exp |
+| L-SOFTMIN-HARDMIN-BOUND | $\vert \operatorname{smin}_\varepsilon - \min\vert \leq \varepsilon\log N$ | **Cat A** | 표준 log-sum-exp |
 | L-ACTION-DELTA-EFF-ZERO | Hard-min action에서 $\delta_\mathrm{eff}=0$ | **Cat A** | action cost 재정의 전제 |
 | L-SOFT-ACTION-DELTA-EFF-ZERO | Soft-min action에서 $\delta_\mathrm{eff}^\varepsilon=0$ | **Cat A** | T-ACT-GIBBS 직접 귀결 |
 | L-FINGERPRINT-ACTION-ADMISSIBLE | SCC fingerprint action은 DP/Gibbs 전제 만족 | **Cat A** | 구조적 확인 (not fingerprint quality) |

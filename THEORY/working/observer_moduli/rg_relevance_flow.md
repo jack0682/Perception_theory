@@ -186,9 +186,9 @@ At a critical point $\Theta^* \in \mathcal{M}_{\mathrm{obs}}$ with $\nabla V(\Th
 
 $$\mathrm{Hess}[V]_{\Theta^*} = D^2_\Theta V \in \mathbb{R}^{8 \times 8}$$
 
-**Relevant directions:** eigenvectors of $\mathrm{Hess}[V]_{\Theta^*}$ with eigenvalue $|\mu_i| \geq \varepsilon_H$.
+**Relevant directions:** eigenvectors of $\mathrm{Hess}[V]_{\Theta^*}$ with eigenvalue $\vert \mu_i\vert \geq \varepsilon_H$.
 
-**Irrelevant directions:** eigenvectors with $|\mu_i| < \varepsilon_H$ (flat directions of $V$).
+**Irrelevant directions:** eigenvectors with $\vert \mu_i\vert < \varepsilon_H$ (flat directions of $V$).
 
 **Relation to Jacobian-based relevance:** In general, Jacobian-based relevance (via $J_P$) and Hessian-based relevance (via $\mathrm{Hess}[V]$) need not agree. They agree if $V = D_{\mathcal{P}}(P(\Theta), P^*)^2$ (readout-induced potential), in which case $\mathrm{Hess}[V] \approx J_P^\top J_P$ near $P^{-1}(P^*)$.
 

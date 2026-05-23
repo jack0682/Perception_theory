@@ -51,9 +51,9 @@ $ grep -rn "ψ.*fixed.*point|variance map" THEORY/working/
 - 03_T_star §1.1–§1.3 (B.2.1–B.2.3) defines the ψ map and registers the multiplicity question as OPEN.
 
 **Silent OP resolution check (3-part, §8.2-style)**:
-- (a) *Which part of OP-T*-α this addresses*: the *quantitative formula* $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ — the previously OPEN multiplicity count under generic Morse conditions.
+- (a) *Which part of OP-T*-α this addresses*: the *quantitative formula* $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K(\Theta) - 1$ — the previously OPEN multiplicity count under generic Morse conditions.
 - (b) *Which part remains open (verbatim)*: (i) the *degenerate-Morse boundary regime* (L5 sub-step 3 fails when bifurcations coalesce); (ii) the *exact characterization of $K(\Theta)$ as a function of $(\beta, \alpha, \lambda_2, c, m)$* (T8 spinodal divides into $K=1, 2, 3, \ldots$ regions, but the regional boundaries are themselves Open Problems); (iii) the *uniqueness of $K(\Theta)$ stable basin labeling* across continuous $\Theta$ deformation.
-- (c) *Newly claimed (verbatim)*: under H5 Morse stability (canonical CV-1.16 L-HMORSE-LOCAL Cat B unconditional) + T-PF-A1-GI Cat A + T-PF-A1-PE Cat A + "generic regime" assumption (no degenerate saddle-node coalescence), the count $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$ holds with explicit topological correspondence: $K$ low-T basin-localized + $K-1$ intermediate-T transitional + 1 high-T delocalized fixed-points.
+- (c) *Newly claimed (verbatim)*: under H5 Morse stability (canonical CV-1.16 L-HMORSE-LOCAL Cat B unconditional) + T-PF-A1-GI Cat A + T-PF-A1-PE Cat A + "generic regime" assumption (no degenerate saddle-node coalescence), the count $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K - 1$ holds with explicit topological correspondence: $K$ low-T basin-localized + $K-1$ intermediate-T transitional + 1 high-T delocalized fixed-points.
 
 ---
 
@@ -68,7 +68,7 @@ $$\mathrm{Min}(\mathcal{E}_\lambda) \;=\; \{u^{*(1)}, u^{*(2)}, \ldots, u^{*(K)}
 is finite. Each $u^{*(k)}$ generates a basin of attraction
 $$B_k \;:=\; \{u \in \mathcal{F}_M(G) : \text{gradient flow of } \mathcal{E}_\lambda \text{ from } u \text{ converges to } u^{*(k)}\}.$$
 
-We define $K(\Theta) := |\mathrm{Min}(\mathcal{E}_\lambda) \cap \mathrm{int}(\mathcal{R}_{\mathrm{post}})|$, the number of distinct *stable interior* basins under the post-bifurcation regime
+We define $K(\Theta) := \vert \mathrm{Min}(\mathcal{E}_\lambda) \cap \mathrm{int}(\mathcal{R}_{\mathrm{post}})\vert $, the number of distinct *stable interior* basins under the post-bifurcation regime
 $$\mathcal{R}_{\mathrm{post}} \;:=\; \{\Theta : \beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert, \; c = m \in \mathrm{int}(\mathrm{spinodal})\}$$
 (T8 supercritical, canonical §13).
 
@@ -101,7 +101,7 @@ $$\deg(\mathrm{Id} - \psi, [T_{\min}, T_{\max}], 0) \;=\; \underbrace{K(+1)}_{\t
 The Cat B target formula provides explicit *cardinality* for the observer's selection set in Route C (03_T_star §5.1, G1+G3 hybrid):
 $$\big\vert\mathcal{B}_{T_*}^{\mathrm{FP}}\big\vert = 2K(\Theta) - 1 \quad\Longrightarrow\quad \text{observer chooses one of } 2K-1 \text{ self-consistent } T_*.$$
 
-Without further criterion (e.g., Weber-Fechner JND minimization, 03_T_star §5.1), the observer faces a *non-trivial choice* whose cardinality grows linearly in $K$. For *binary regime* ($K = 2$, simplest post-bifurcation), $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 3$; for $K = 3$, $5$; for $K = 4$, $7$.
+Without further criterion (e.g., Weber-Fechner JND minimization, 03_T_star §5.1), the observer faces a *non-trivial choice* whose cardinality grows linearly in $K$. For *binary regime* ($K = 2$, simplest post-bifurcation), $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 3$; for $K = 3$, $5$; for $K = 4$, $7$.
 
 **Forward hook to Route C JND criterion**:
 $$T_*^{\mathrm{JND-opt}} \;=\; \mathrm{argmin}_{T \in \mathcal{B}_{T_*}^{\mathrm{FP}}} \frac{T}{\mathbb{E}_{\pi_T}[u]}$$
@@ -194,7 +194,7 @@ $$0 \;\leq\; \psi(T) \;\leq\; M_*, \qquad M_* \;:=\; \mathrm{diam}(\mathcal{F}_M
 This lemma is already established in 03_T_star_fixed_point.md §2.1 (L1) + §2.2 (L2). We restate the argument concisely:
 
 - **CoT step 1**: $T \mapsto \exp(-\mathcal{E}_\lambda(u)/T)$ is jointly continuous on $(0, \infty) \times \mathcal{F}_M(G)$ — $\mathcal{E}_\lambda$ is polynomial on compact $\mathcal{F}_M$, so bounded; ratio $\mathcal{E}_\lambda(u)/T$ is continuous in $(T, u)$ for $T > 0$; exp is continuous.
-- **CoT step 2**: $Z(T) = \int \exp(-\mathcal{E}_\lambda/T) d\sigma_M$ is continuous on $(0, \infty)$ by dominated convergence (dominating function $\exp(\sup_{T \in K} |\mathcal{E}_\lambda|/T)$ for compact $K \subset (0, \infty)$).
+- **CoT step 2**: $Z(T) = \int \exp(-\mathcal{E}_\lambda/T) d\sigma_M$ is continuous on $(0, \infty)$ by dominated convergence (dominating function $\exp(\sup_{T \in K} \vert \mathcal{E}_\lambda\vert /T)$ for compact $K \subset (0, \infty)$).
 - **CoT step 3**: $Z(T) > 0$ everywhere → $\pi_T$ continuous in $T$ in total variation (TV) metric (this is exactly 03_T_star L1).
 - **CoT step 4**: For each fixed bounded continuous function $f$, $T \mapsto \mathbb{E}_{\pi_T}[f]$ is continuous by TV-continuity + boundedness.
 - **CoT step 5**: Apply step 4 to $f(u) = u_i$ (then $\mathbb{E}u$ continuous), then to $f(u) = u_i u_j$ (then $\mathbb{E}[u_i u_j]$ continuous), then to $\lVert u - \mathbb{E}u \rVert^2 = \sum_i u_i^2 - n(\bar u)^2$ (with $\bar u = \mathbb{E}u_i$): all combinations continuous, hence $\psi(T) = \mathrm{tr}(\mathrm{Cov}_{\pi_T})$ continuous.
@@ -219,12 +219,12 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
   $$\pi_T(B_k) \;\to\; \frac{w_k}{\sum_{j=1}^K w_j}, \qquad w_k \;:=\; \det(\mathrm{Hess}\,\mathcal{E}_\lambda(u^{*(k)}))^{-1/2}.$$
   This is the standard low-temperature Laplace asymptotic (see e.g. Berglund-Gentz 2010, Bovier-den Hollander 2015).
 
-- **CoT step 2 (basin-restricted variance)**: Within each basin $B_k$ at low $T$, $\pi_T |_{B_k}$ concentrates on $u^{*(k)}$. The local-Gaussian approximation gives
-  $$\mathrm{Var}_{\pi_T|_{B_k}}(u_i) \;\approx\; T \cdot \big(\mathrm{Hess}^{-1}\big)_{ii} \cdot (1 + O(T)).$$
-  Summing over $i$: $\mathrm{tr}\,\mathrm{Cov}_{\pi_T|_{B_k}} \approx T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)})$.
+- **CoT step 2 (basin-restricted variance)**: Within each basin $B_k$ at low $T$, $\pi_T \vert _{B_k}$ concentrates on $u^{*(k)}$. The local-Gaussian approximation gives
+  $$\mathrm{Var}_{\pi_T\vert _{B_k}}(u_i) \;\approx\; T \cdot \big(\mathrm{Hess}^{-1}\big)_{ii} \cdot (1 + O(T)).$$
+  Summing over $i$: $\mathrm{tr}\,\mathrm{Cov}_{\pi_T\vert _{B_k}} \approx T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)})$.
 
 - **CoT step 3 (full variance)**: The full variance $\psi(T) = \mathrm{tr}\,\mathrm{Cov}_{\pi_T}$ decomposes via the law of total variance:
-  $$\psi(T) \;=\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \mathrm{tr}\,\mathrm{Cov}_{\pi_T|_{B_k}}}_{\text{intra-basin}} \;+\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \lVert \mathbb{E}_{\pi_T|_{B_k}}[u] - \mathbb{E}_{\pi_T}[u] \rVert^2}_{\text{inter-basin}}.$$
+  $$\psi(T) \;=\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \mathrm{tr}\,\mathrm{Cov}_{\pi_T\vert _{B_k}}}_{\text{intra-basin}} \;+\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \lVert \mathbb{E}_{\pi_T\vert _{B_k}}[u] - \mathbb{E}_{\pi_T}[u] \rVert^2}_{\text{inter-basin}}.$$
   At *very low T* ($T \ll T_{\mathrm{barrier}}$), the Eyring-Kramers timescale separation gives that one basin dominates effectively (depending on initial condition / sampling protocol). But under the *equilibrium* Gibbs distribution, the weights $p_k(T)$ approach $w_k / \sum w_j$ (CoT step 1).
   
   **Subtle point**: At equilibrium, all $K$ basins are accessed with weights $p_k(T)$. The *inter-basin term* dominates the variance ($\sim O(\lVert u^{*(j)} - u^{*(k)} \rVert^2)$, finite as $T \to 0$). The *intra-basin term* vanishes ($\sim T$).
@@ -233,8 +233,8 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
 
 - **CoT step 4 (fixed-point at low-T)**: Since $\psi(0^+) = C_\infty > 0$ (positive constant by step 3) and $\psi$ continuous (L2), the equation $\psi(T) = T$ has solutions in $(0, C_\infty]$ depending on the shape of $\psi$. 
   
-  **Refined claim**: The *basin-localized fixed-point* $T_*^{(k),\mathrm{low}}$ does *not* refer to the *equilibrium* Gibbs sampling but to a *metastable* (basin-restricted) Gibbs measure $\pi_T |_{B_k}$. Specifically, define the *metastable variance map*
-  $$\psi^{(k)}(T) \;:=\; \mathbb{E}_{\pi_T|_{B_k}}\!\left[\lVert u - \mathbb{E}_{\pi_T|_{B_k}}u \rVert^2\right] \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) + O(T^2)$$
+  **Refined claim**: The *basin-localized fixed-point* $T_*^{(k),\mathrm{low}}$ does *not* refer to the *equilibrium* Gibbs sampling but to a *metastable* (basin-restricted) Gibbs measure $\pi_T \vert _{B_k}$. Specifically, define the *metastable variance map*
+  $$\psi^{(k)}(T) \;:=\; \mathbb{E}_{\pi_T\vert _{B_k}}\!\left[\lVert u - \mathbb{E}_{\pi_T\vert _{B_k}}u \rVert^2\right] \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) + O(T^2)$$
   in the low-T regime. The fixed-point equation $\psi^{(k)}(T) = T$ gives
   $$T_*^{(k),\mathrm{low}} \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) \quad\Longrightarrow\quad \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) = 1.$$
   
@@ -274,7 +274,7 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
 
 - **CoT step 4 (fixed-point existence)**: The map $T \mapsto \psi(T) - T$ satisfies $\psi(T) - T \to \psi_\infty - T \to -\infty$ as $T \to \infty$, and $\psi(T) - T > 0$ at $T = \psi_\infty / 2$ (since $\psi$ continuous and approaching $\psi_\infty$). By IVT, there exists $T_*^{\mathrm{high}} > 0$ such that $\psi(T_*^{\mathrm{high}}) = T_*^{\mathrm{high}}$.
 
-- **CoT step 5 (uniqueness at high-T)**: For $T$ sufficiently large (beyond the multi-basin range), $\psi(T)$ becomes *monotonically decreasing* in $T$ (because higher T → more uniform → less structure-dependent variance). Specifically, in the regime $T > T_{\mathrm{barrier}}$, the basin structure is washed out, and $\psi(T) \approx \psi_\infty + C/T$ with $C \in \mathbb{R}$ (sign depends on whether $\mathcal{E}_\lambda$ increases or decreases variance on average). The equation $T = \psi_\infty + C/T$ has a unique positive solution $T = (\psi_\infty + \sqrt{\psi_\infty^2 + 4|C|})/2$ for large enough domain.
+- **CoT step 5 (uniqueness at high-T)**: For $T$ sufficiently large (beyond the multi-basin range), $\psi(T)$ becomes *monotonically decreasing* in $T$ (because higher T → more uniform → less structure-dependent variance). Specifically, in the regime $T > T_{\mathrm{barrier}}$, the basin structure is washed out, and $\psi(T) \approx \psi_\infty + C/T$ with $C \in \mathbb{R}$ (sign depends on whether $\mathcal{E}_\lambda$ increases or decreases variance on average). The equation $T = \psi_\infty + C/T$ has a unique positive solution $T = (\psi_\infty + \sqrt{\psi_\infty^2 + 4\vert C\vert})/2$ for large enough domain.
   
   Hence $T_*^{\mathrm{high}}$ is unique (in the high-T regime).
 
@@ -310,7 +310,7 @@ GH is *generic* in the parameter space sense: it holds on an open dense subset o
 - **Sub-step 2 (boundary behavior of $\phi_\Theta$).** From L3 and L4:
   - At $T \to 0^+$: $\psi(T) \to C_\infty(\Theta) > 0$ (equilibrium inter-basin variance) ⟹ $\phi_\Theta(T) = T - C_\infty < 0$ for $T < C_\infty$.
   
-    However, this *equilibrium* picture conflicts with the *metastable* picture of L3. Resolving the conflict: the *equilibrium* Gibbs measure $\pi_T$ at $T \to 0$ gives weight $w_k / \sum w_j$ to each basin and the variance is *bimodal* (intra-basin contribution $O(T)$ + inter-basin contribution $O(1)$). Hence $\psi(0^+) = C_\infty(\Theta)$. The *metastable* L3 picture used $\pi_T|_{B_k}$ (a *different* measure), generating $K$ separate fixed-points of $\psi^{(k)}$, not of the equilibrium $\psi$.
+    However, this *equilibrium* picture conflicts with the *metastable* picture of L3. Resolving the conflict: the *equilibrium* Gibbs measure $\pi_T$ at $T \to 0$ gives weight $w_k / \sum w_j$ to each basin and the variance is *bimodal* (intra-basin contribution $O(T)$ + inter-basin contribution $O(1)$). Hence $\psi(0^+) = C_\infty(\Theta)$. The *metastable* L3 picture used $\pi_T\vert _{B_k}$ (a *different* measure), generating $K$ separate fixed-points of $\psi^{(k)}$, not of the equilibrium $\psi$.
     
     **Reconciliation**: The $2K-1$ count is properly interpreted as follows:
     - $K$ *metastable* fixed-points $T_*^{(k),\mathrm{low}}$ (one per basin, basin-restricted measure).
@@ -347,7 +347,7 @@ GH is *generic* in the parameter space sense: it holds on an open dense subset o
 **CoC anchors**:
 - canonical T8 (multi-basin structure, §13) — provides $K \geq 2$.
 - canonical T-PF-A1-PE (L1700+) — spectral gap $\sim e^{-\mathrm{osc}/T}$ tracks basin escape barriers.
-- E2 §A.5 Q3 (saddle-node scaling $\lVert u^{*(1)} - u^{*(2)} \rVert \sim |\beta/\alpha - \mathrm{crit}|^{1/2}$) — confirms saddle-node mean-field exponent.
+- E2 §A.5 Q3 (saddle-node scaling $\lVert u^{*(1)} - u^{*(2)} \rVert \sim \vert \beta/\alpha - \mathrm{crit}\vert ^{1/2}$) — confirms saddle-node mean-field exponent.
 - E2 §A.5 Q4 (degree bound $K$ stable + $K-1$ saddles = $2K-1$ in 1-D) — directly cited as the strategic argument.
 
 ### §3.6 Lemma L6 — Brouwer degree consistency check
@@ -437,8 +437,8 @@ for relative Betti numbers, where $\mathcal{F}_M(G)_c = \{\mathcal{E}_\lambda \l
 The derivative
 $$\psi'(T) \;=\; -\frac{1}{T^2}\,\mathrm{Cov}_{\pi_T}(\lVert u - \mathbb{E}_{\pi_T}u \rVert^2, \mathcal{E}_\lambda(u))$$
 arises from differentiating $\pi_T \propto e^{-\mathcal{E}_\lambda/T}$ with respect to $T$ and applying the *fluctuation* identity (cf. Reed-Simon III §X). Fixed-points of $\psi$ are zeros of $T - \psi(T)$; their stability under iteration is governed by $\psi'(T^*)$:
-- $|\psi'(T^*)| < 1$: stable (contractive in iteration).
-- $|\psi'(T^*)| > 1$: unstable.
+- $\vert \psi'(T^*)\vert < 1$: stable (contractive in iteration).
+- $\vert \psi'(T^*)\vert > 1$: unstable.
 
 ### §5.2 Inflection points of ψ
 
@@ -463,14 +463,14 @@ Approach A bypasses this by working at the topological-degree level, requiring o
 
 **Setup**: Consider $\Theta$ outside $\mathcal{R}_{\mathrm{post}}$, e.g., $\beta/\alpha < 4\lambda_2/\lvert W''(c) \rvert$ (T8 subcritical). The energy $\mathcal{E}_\lambda$ has a *single* global minimizer (uniform / spatially homogeneous), so $K = 1$.
 
-**Formula prediction**: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2(1) - 1 = 1$ — single fixed-point.
+**Formula prediction**: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2(1) - 1 = 1$ — single fixed-point.
 
 **Check**: With $K = 1$, the equilibrium measure $\pi_T$ has a single mode for all $T$. The variance $\psi(T) \approx T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^*)$ for small $T$, and $\psi(T) \to \psi_\infty$ for large $T$. The fixed-point equation $\psi(T) = T$:
 - Low T: $\psi(T) \approx T \cdot c < T$ if $c < 1$ ⟹ only one crossing.
 - High T: $\psi(T) \approx \psi_\infty < T$ for $T > \psi_\infty$.
 - IVT + monotonicity → one fixed-point.
 
-**Verdict**: ✓ The formula correctly predicts $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 1$ outside $\mathcal{R}_{\mathrm{post}}$. *Not a counterexample* — but also outside the theorem's scope (we explicitly required $\Theta \in \mathcal{R}_{\mathrm{post}}$).
+**Verdict**: ✓ The formula correctly predicts $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 1$ outside $\mathcal{R}_{\mathrm{post}}$. *Not a counterexample* — but also outside the theorem's scope (we explicitly required $\Theta \in \mathcal{R}_{\mathrm{post}}$).
 
 **Lesson**: The formula degenerates gracefully at the boundary of $\mathcal{R}_{\mathrm{post}}$.
 
@@ -490,7 +490,7 @@ Approach A bypasses this by working at the topological-degree level, requiring o
 
 **Setup**: Consider a *multi-formation* scenario where two formations (K=2 each, so $K = 4$ in single-formation count) are coupled via $\Lambda_{\mathrm{coupling}}$ (canonical D-6a Multi-Static + T-Persist-K-Unified). Strong coupling may "merge" formations, effectively reducing $K$.
 
-**Failure mode (apparent)**: The single-formation theorem 1.2 predicts $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2(4) - 1 = 7$ for $K = 4$. But under strong coupling, the effective basin structure has $K_{\mathrm{eff}} < 4$, so the actual fixed-point count is $2 K_{\mathrm{eff}} - 1 < 7$.
+**Failure mode (apparent)**: The single-formation theorem 1.2 predicts $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2(4) - 1 = 7$ for $K = 4$. But under strong coupling, the effective basin structure has $K_{\mathrm{eff}} < 4$, so the actual fixed-point count is $2 K_{\mathrm{eff}} - 1 < 7$.
 
 **Check**: The theorem's scope is *single-formation* — it operates on the single-formation field polytope $\Sigma_m$, not on the multi-formation shared pool $\widetilde\Sigma^{K_{\mathrm{field}}}_M$. Multi-formation coupling effects are governed by canonical D-6a + T-L1-F + Commitment 16, not by Theorem 1.2.
 
@@ -535,10 +535,10 @@ The proof attempt has identified the following *Cat A blockers* (for full uncond
 
 ### §7.4 Forward hook — numerical verification
 
-The Cat B target $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$ is *numerically testable* on canonical SCC test cases:
-- **K=2 (binary basin)**: 2×2 grid or small bipartite, post-bifurcation $\beta/\alpha = 4 \cdot 4\lambda_2/\lvert W''(c) \rvert$ (2× supercritical). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 3$.
-- **K=3**: 3-basin landscape (e.g., 3-mode mean-field). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 5$.
-- **K=4**: 4-basin orbital pattern (cf. Orbital discovery 2026-04-23 memory). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 7$.
+The Cat B target $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K - 1$ is *numerically testable* on canonical SCC test cases:
+- **K=2 (binary basin)**: 2×2 grid or small bipartite, post-bifurcation $\beta/\alpha = 4 \cdot 4\lambda_2/\lvert W''(c) \rvert$ (2× supercritical). Expected: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 3$.
+- **K=3**: 3-basin landscape (e.g., 3-mode mean-field). Expected: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 5$.
+- **K=4**: 4-basin orbital pattern (cf. Orbital discovery 2026-04-23 memory). Expected: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 7$.
 
 **Proposed experiment exp9X**: Numerical Langevin sampling at varying $T$, identify fixed-points of empirical $\psi(T)$, count them, verify $2K - 1$ formula. Forward-hooked in §9.2 OP-T*-α-2.
 
@@ -558,7 +558,7 @@ The proof relies *fundamentally* on T-PF-A1-GI Cat A (CV-1.9 promotion) for the 
 
 ### §8.2 03_T_star §5.1 Route C G1+G3 hybrid
 
-The multiplicity formula $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$ enters Route C (03_T_star §5.1, G1+G3 hybrid) as the *cardinality* of the observer's selection set. Specifically:
+The multiplicity formula $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K - 1$ enters Route C (03_T_star §5.1, G1+G3 hybrid) as the *cardinality* of the observer's selection set. Specifically:
 - **G1 (axiomatic free)**: $T_* \in B_\xi^{\mathrm{OMS-1}}$ — *any* of the $2K - 1$ values is admissible.
 - **G3 (information-theoretic intersection)**: $T_* \in \mathcal{B}_{T_*}^{\mathrm{FP}}$ — Brouwer existence + multiplicity formula gives $2K - 1$ candidates.
 - **Selection criterion (JND)**: $T_* = \mathrm{argmin}_{T \in \mathcal{B}_{T_*}^{\mathrm{FP}}} \rho_{\mathrm{JND}}(\Theta, T)$ — observer picks one of $2K - 1$ via Weber-Fechner JND minimizer.
@@ -569,7 +569,7 @@ The multiplicity formula $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$ enters Rou
 
 OP-0021 (canonical theorem_status.md L589) asks for *T_* canonical registration*. The combined effort of:
 - **Brouwer existence** (03_T_star §2 sketch, Cat A 후보) — guarantees $\mathcal{B}_{T_*}^{\mathrm{FP}} \neq \emptyset$.
-- **Multiplicity formula** (this file, Cat B conditional) — quantifies $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$.
+- **Multiplicity formula** (this file, Cat B conditional) — quantifies $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K - 1$.
 - **Route C selection** (03_T_star §5.1) — observer-personal JND minimizer.
 
 provides a *combined Cat B path* for OP-0021. The canonical registration would be:
@@ -603,9 +603,9 @@ provides a *combined Cat B path* for OP-0021. The canonical registration would b
 - Setup: 16×16 grid, $\beta/\alpha \in \{2, 4, 8\} \cdot (\beta/\alpha)_{\mathrm{crit}}$ (varying supercriticality → varying $K$).
 - Method: Reflected Langevin (canonical T-PF-A1-SDE Cat A) at $T \in [0.001, 10]$ logarithmic grid (200 points); empirical variance $\psi_{\mathrm{emp}}(T)$ via long-time sampling; count fixed-points of $\psi_{\mathrm{emp}}$ via intersection with $y = T$ line.
 - Expected outcome:
-  - $\beta/\alpha = 2 \cdot \mathrm{crit}$: $K = 2$, expect $|\mathcal{B}| = 3$.
-  - $\beta/\alpha = 4 \cdot \mathrm{crit}$: $K = 3$ (estimated), expect $|\mathcal{B}| = 5$.
-  - $\beta/\alpha = 8 \cdot \mathrm{crit}$: $K = 4$ (estimated), expect $|\mathcal{B}| = 7$.
+  - $\beta/\alpha = 2 \cdot \mathrm{crit}$: $K = 2$, expect $\vert \mathcal{B}\vert = 3$.
+  - $\beta/\alpha = 4 \cdot \mathrm{crit}$: $K = 3$ (estimated), expect $\vert \mathcal{B}\vert = 5$.
+  - $\beta/\alpha = 8 \cdot \mathrm{crit}$: $K = 4$ (estimated), expect $\vert \mathcal{B}\vert = 7$.
 - Falsification criterion: deviation from $2K - 1$ count by $> 1$ in any case ⟹ formula or GH assumption fails.
 
 **Difficulty**: Cat B verification. CODE-side task. W9+ executable.
@@ -614,9 +614,9 @@ provides a *combined Cat B path* for OP-0021. The canonical registration would b
 
 ### §9.3 OP-T*-α-3: Λ_coupling-modified formula for multi-formation
 
-**Statement**: Generalize $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ to multi-formation scenarios on $\widetilde\Sigma^{K_{\mathrm{field}}}_M$ with coupling measure $\Lambda_{\mathrm{coupling}}$.
+**Statement**: Generalize $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K(\Theta) - 1$ to multi-formation scenarios on $\widetilde\Sigma^{K_{\mathrm{field}}}_M$ with coupling measure $\Lambda_{\mathrm{coupling}}$.
 
-**Conjectured form**: $|\mathcal{B}_{T_*}^{\mathrm{FP},\,\mathrm{multi}}| = 2 K_{\mathrm{eff}}(\Theta, \Lambda_{\mathrm{coupling}}) - 1$ where $K_{\mathrm{eff}}$ accounts for inter-formation coupling reducing effective basin count.
+**Conjectured form**: $\vert \mathcal{B}_{T_*}^{\mathrm{FP},\,\mathrm{multi}}\vert = 2 K_{\mathrm{eff}}(\Theta, \Lambda_{\mathrm{coupling}}) - 1$ where $K_{\mathrm{eff}}$ accounts for inter-formation coupling reducing effective basin count.
 
 **Approach**: 
 - Multi-formation D-6a (CV-1.5.1) provides Multi-Static framework.
@@ -686,4 +686,4 @@ with decomposition $K + (K-1) + 1$ across low/mid/high-T regimes.
 
 ---
 
-*End of P2_OP-T_star-alpha_multiplicity.md. Cat B verdict: target proved conditional on Generic regime hypothesis (GH) + L5 sub-step 3 spanning tree argument + L-HMORSE-LOCAL Cat B (canonical CV-1.16). Net contribution: quantitative formula $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ promoted from OPEN to Cat B target with explicit gap declaration.*
+*End of P2_OP-T_star-alpha_multiplicity.md. Cat B verdict: target proved conditional on Generic regime hypothesis (GH) + L5 sub-step 3 spanning tree argument + L-HMORSE-LOCAL Cat B (canonical CV-1.16). Net contribution: quantitative formula $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K(\Theta) - 1$ promoted from OPEN to Cat B target with explicit gap declaration.*

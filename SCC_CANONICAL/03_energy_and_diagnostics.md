@@ -64,7 +64,7 @@ Two canonical formulations (both Cat A as of CV-1.13):
 
 For consecutive time slices $u_t, u_s$ with persistent components $C_t, C_s$:
 
-$$\mathsf{Persist}_{\mathrm{core}}(u_t, u_s) \;=\; \frac{|C_t \cap C_s|}{|C_t \cup C_s|} \cdot \text{(transport-weighted)}$$
+$$\mathsf{Persist}_{\mathrm{core}}(u_t, u_s) \;=\; \frac{\vert C_t \cap C_s\vert}{\vert C_t \cup C_s\vert} \cdot \text{(transport-weighted)}$$
 
 ### §5.2 Component-level correspondence (multi-formation, T-Temporal-Identity)
 

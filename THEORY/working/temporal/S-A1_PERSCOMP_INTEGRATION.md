@@ -36,7 +36,7 @@ This is an integration/formalization task, not a mathematical proof task. It was
 > **§3.11. Active Formation Count K_act as Persistent Component Count**
 > *(Migrated from §16 D-ST-3, W6 D4 Session C. Canonical from CV-1.6.)*
 >
-> $$K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}) := |\{(b,d) \in \mathrm{Bars}_0(\tilde{u}; G) : b - d > \rho_\mathrm{pers}\}|$$
+> $$K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}) := \vert \{(b,d) \in \mathrm{Bars}_0(\tilde{u}; G) : b - d > \rho_\mathrm{pers}\}\vert $$
 
 **Status:** ✓ Definition present and canonical since CV-1.6. Uses $H_0$ superlevel filtration on graph $G$ with persistence threshold $\rho_\mathrm{pers} > 0$.
 

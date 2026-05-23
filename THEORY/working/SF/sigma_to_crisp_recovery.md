@@ -58,8 +58,8 @@ This realizes Commitment 11's "thresholding" branch. The "stabilization" branch 
 
 ### §2.3 Cardinality dependencies
 
-The cardinality $|\mathcal{O}_\theta(u^*)| = K_{\mathrm{step}}(u^*; \theta)$ (canonical §12 line 827; cf. F_Kstep_K_triple.md §2.2). Hence
-$$|\mathcal{O}_\theta(u^*)| \leq \mathcal{F}(u^*) \quad \text{(canonical §12 line 832)}$$
+The cardinality $\vert \mathcal{O}_\theta(u^*)\vert = K_{\mathrm{step}}(u^*; \theta)$ (canonical §12 line 827; cf. F_Kstep_K_triple.md §2.2). Hence
+$$\vert \mathcal{O}_\theta(u^*)\vert \leq \mathcal{F}(u^*) \quad \text{(canonical §12 line 832)}$$
 with equality iff every peak is isolated above threshold (no bridged-bilobed configuration).
 
 This makes **the crisp recovery output explicitly threshold-dependent**, a feature that §7 will address via $\theta^*$ canonicalization.
@@ -102,7 +102,7 @@ This is the discrete analogue of the Morse-theoretic stable manifold decompositi
 The σ-tuple's $k$-th entry $n_k$ is the nodal-domain count of the $k$-th Hessian eigenvector (Courant; canonical §11.1 #14). For unstable directions $\lambda_k < 0$, the nodal pattern indicates *how peaks split* under perturbation along $\phi_k$.
 
 **Boundary structure rule**: assign each basin pair $(B_i, B_j)$ a *boundary type* based on how the Hessian eigenvectors restricted to $B_i \cup B_j$ behave at the inter-basin edge:
-- if $\sum_k \mathbb{1}[\phi_k|_{B_i \cup B_j} \text{ has nodal wall between } B_i, B_j]$ is large, $\partial(B_i, B_j)$ is *strongly distinct*.
+- if $\sum_k \mathbb{1}[\phi_k\vert _{B_i \cup B_j} \text{ has nodal wall between } B_i, B_j]$ is large, $\partial(B_i, B_j)$ is *strongly distinct*.
 - if all $\phi_k$ are co-aligned across $B_i \cup B_j$, the basins are *weakly distinct* (candidate for merging at finer threshold).
 
 This step is a refinement, not a partition revision; it labels each inter-basin boundary edge with a structural-strength score derived from the σ Hessian.
@@ -111,9 +111,9 @@ This step is a refinement, not a partition revision; it labels each inter-basin 
 
 Each peak $p_i$ inherits the irrep label of the dominant Hessian eigenvector determined by projection onto the basin indicator — computed on the **full eigenspace**, not a basin-restricted subspace:
 $$\mathrm{irrep}(O_i) := [\rho_{k^*(i)}], \quad k^*(i) := \arg\max_k \bigl\{\mathrm{Re}\langle \psi_k, \chi_{B_i} \rangle^2\bigr\},$$
-where $\psi_k$ are the eigenvectors of $H(u^*)$ on the full space $\mathbb{R}^n$ (equivalently, the constrained Hessian $H(u^*)|_{T_u\Sigma_m}$ restricted to the full eigenspace), $\chi_{B_i} \in \{0,1\}^n$ is the basin indicator function with $(\chi_{B_i})_x = \mathbb{1}[x \in B_i]$, and $\langle \cdot, \cdot \rangle$ is the canonical inner product on $\mathbb{R}^n$.
+where $\psi_k$ are the eigenvectors of $H(u^*)$ on the full space $\mathbb{R}^n$ (equivalently, the constrained Hessian $H(u^*)\vert _{T_u\Sigma_m}$ restricted to the full eigenspace), $\chi_{B_i} \in \{0,1\}^n$ is the basin indicator function with $(\chi_{B_i})_x = \mathbb{1}[x \in B_i]$, and $\langle \cdot, \cdot \rangle$ is the canonical inner product on $\mathbb{R}^n$.
 
-**Rationale for full-eigenspace formulation**: the basin-restricted norm $\lVert \psi_k|_{B_i} \rVert^2$ was the prior formulation; it is ill-posed because $\psi_k$ supported mostly outside $B_i$ (e.g., a delocalized global mode) can still score large by normalization of the restriction. The projection $\langle \psi_k, \chi_{B_i} \rangle^2$ instead measures how much of the unit-normalized $\psi_k$ aligns with the basin's characteristic function — a well-defined, basis-independent quantity on the full space. Tie-break: by lex order in $(n_k, [\rho_k])$ Mulliken order (smaller $n_k$ first, then alphabetical irrep label).
+**Rationale for full-eigenspace formulation**: the basin-restricted norm $\lVert \psi_k\vert _{B_i} \rVert^2$ was the prior formulation; it is ill-posed because $\psi_k$ supported mostly outside $B_i$ (e.g., a delocalized global mode) can still score large by normalization of the restriction. The projection $\langle \psi_k, \chi_{B_i} \rangle^2$ instead measures how much of the unit-normalized $\psi_k$ aligns with the basin's characteristic function — a well-defined, basis-independent quantity on the full space. Tie-break: by lex order in $(n_k, [\rho_k])$ Mulliken order (smaller $n_k$ first, then alphabetical irrep label).
 
 This assigns each crisp object a *symmetry class* under the residual stabilizer $\mathrm{Stab}_G(u^*)$. On $D_4$-symmetric graphs, $\mathrm{irrep}(O_i) \in \{A_1, A_2, B_1, B_2, E\}$, mapping each crisp object to one of 5 atomic-orbital-style classes (canonical §11.1 #14 W4 04-25 NQ-141 anchor: $\ell \bmod 4 \to D_4$ irrep table, 0-exception correspondence on R23 dataset).
 
@@ -168,14 +168,14 @@ The K-field architecture *labels* objects ex ante through slot index $j$. The cr
 ### §4.2 Active stratum filtering (Commitment 16 K_act)
 
 Active objects are those above support threshold $\epsilon$ (Commitment 16(ii)):
-$$\mathcal{O}_{\mathrm{act}} := \{O_j : \lVert u^{(j)*} \rVert_1 > \epsilon\}, \quad |\mathcal{O}_{\mathrm{act}}| = K_{\mathrm{act}}.$$
+$$\mathcal{O}_{\mathrm{act}} := \{O_j : \lVert u^{(j)*} \rVert_1 > \epsilon\}, \quad \vert \mathcal{O}_{\mathrm{act}}\vert = K_{\mathrm{act}}.$$
 Inactive slots (those with $\lVert u^{(j)*} \rVert_1 \leq \epsilon$) produce empty crisp objects, excluded from $\mathcal{O}_{\mathrm{act}}$ by convention.
 
 ### §4.3 Cat A status
 
 > **Cat A (conditional)**: under the disjoint-support hypothesis. Multi.py minimizers with $\lambda_{\mathrm{rep}} > 0$ generically satisfy small inter-formation overlap (see canonical CN5 + `working/MF/multi_formation_sigma.md`), making this hypothesis generically applicable in the K-field architecture. **Cat B target** for the generic overlap regime (NQ-242 PH pipeline addresses this in W6+).
 
-**Theorem candidate (Cat A K-field recovery)**. Under K-field architecture with disjoint-support condition $\mathrm{supp}_\theta(u^{(j)*}) \cap \mathrm{supp}_\theta(u^{(j')*}) = \emptyset$ for $j \neq j'$, the crisp recovery $\mathcal{O}_{\mathrm{act}} = \{O_j : j \in \mathrm{active}(\mathbf{u}^*)\}$ is well-defined as a crisp object family per Definition 2.2, with $|\mathcal{O}_{\mathrm{act}}| = K_{\mathrm{act}}$.
+**Theorem candidate (Cat A K-field recovery)**. Under K-field architecture with disjoint-support condition $\mathrm{supp}_\theta(u^{(j)*}) \cap \mathrm{supp}_\theta(u^{(j')*}) = \emptyset$ for $j \neq j'$, the crisp recovery $\mathcal{O}_{\mathrm{act}} = \{O_j : j \in \mathrm{active}(\mathbf{u}^*)\}$ is well-defined as a crisp object family per Definition 2.2, with $\vert \mathcal{O}_{\mathrm{act}}\vert = K_{\mathrm{act}}$.
 
 **Proof sketch**: (D1) by activation filter; (D2) by hypothesis; (D3) reduces to: each peak of $\mathbf{u}^*$ (locally maximal in the joint state) lies in some active slot's support, which holds whenever $\theta < \max_j \max_x u^{(j)*}(x)$. ∎
 
@@ -293,17 +293,17 @@ The PH barcode tracks $H_0$ (connected components) and $H_1$ (loops) across this
 - **Death**: bar $b_i$ dies at the threshold where its component merges with a higher peak's component (a *saddle merge*).
 - **At $\theta = 0$**: all bars merge into the single component $X$ (assuming $G$ connected). One bar is *infinite* (the global maximum's component); the rest die at finite saddle thresholds.
 
-$$|\{H_0 \text{ bars at } \theta\}| = K_{\mathrm{step}}(u^*; \theta).$$
+$$\vert \{H_0 \text{ bars at } \theta\}\vert = K_{\mathrm{step}}(u^*; \theta).$$
 
 ### §8.3 $\mathcal{F}$ recovery from $H_0$ barcode
 
-$$\mathcal{F}(u^*) = |\{H_0 \text{ bars total}\}\lvert = \rvert\{\text{birth times}\}|.$$
+$$\mathcal{F}(u^*) = \vert \{H_0 \text{ bars total}\}\lvert = \rvert\{\text{birth times}\}\vert.$$
 Per F_Kstep_K_triple.md §7.1: "F는 persistent homology의 0차 invariant. 4-quantity bridge가 PH 표준 framework로 reformulate됨."
 
 ### §8.4 Crisp recovery via PH barcode persistence
 
 **Persistence-based recovery**: given persistence threshold $\delta > 0$, retain only $H_0$ bars with $\mathrm{lifetime}(b_i) := \mathrm{birth}(b_i) - \mathrm{death}(b_i) \geq \delta$.
-$$K^{\delta}(u^*) := |\{b_i : \mathrm{lifetime}(b_i) \geq \delta\}|.$$
+$$K^{\delta}(u^*) := \vert \{b_i : \mathrm{lifetime}(b_i) \geq \delta\}\vert.$$
 - $\delta = 0$: $K^0 = \mathcal{F}$ (all peaks).
 - $\delta \to \infty$: $K^\infty = 1$ (only the global max survives; total mass coarsens to single object).
 - intermediate $\delta$: gives a *robust* object count, filtering out shallow peaks.
@@ -514,7 +514,7 @@ The Paper 1 §1 minimum (§11.2: items 1–3 + 5 with item 4 as flagged outlook)
 
 ### §16.1 Fix 1 — Step 4 irrep-label well-definedness (§3.4)
 
-**Problem**: Prior formulation $k^*(i) = \arg\max_k \lVert \phi_k|_{B_i} \rVert^2$ used basin-restricted norm. Critic identified gap: eigenvectors delocalized outside $B_i$ can score large by normalization of the restriction, making the "dominant eigenvector for basin $B_i$" ill-defined in the basin-restriction sense.
+**Problem**: Prior formulation $k^*(i) = \arg\max_k \lVert \phi_k\vert _{B_i} \rVert^2$ used basin-restricted norm. Critic identified gap: eigenvectors delocalized outside $B_i$ can score large by normalization of the restriction, making the "dominant eigenvector for basin $B_i$" ill-defined in the basin-restriction sense.
 
 **Fix**: Replaced with full-eigenspace inner product: $k^*(i) = \arg\max_k \{\mathrm{Re}\langle \psi_k, \chi_{B_i} \rangle^2\}$ where $\psi_k$ are eigenvectors of $H(u^*)$ on the full space $\mathbb{R}^n$ and $\chi_{B_i}$ is the basin indicator function. Added explicit rationale paragraph explaining why full-eigenspace projection is well-posed where basin restriction is not. Tie-break: lex order in $(n_k, [\rho_k])$ Mulliken order.
 

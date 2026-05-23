@@ -229,7 +229,7 @@ $$G_\Theta = \{g \in G \mid g \cdot \Theta = \Theta\}$$
 $G_\Theta$ is a subgroup of $G$ (the stabilizer or isotropy group at $\Theta$).
 
 **Interpretation:**
-- $|G_\Theta|$ large $\Rightarrow$ high-symmetry observer configuration (more structurally canonical)
+- $\vert G_\Theta\vert $ large $\Rightarrow$ high-symmetry observer configuration (more structurally canonical)
 - $G_\Theta = \{e\}$ $\Rightarrow$ generic observer (trivial stabilizer, smooth point in quotient)
 - Large stabilizer at $\Theta$ $\Rightarrow$ orbifold singularity at $[\Theta]_G$
 
@@ -278,7 +278,7 @@ Not from finite gauge quotient.
 
 A fundamental domain $\mathcal{F} \subset \mathcal{M}_{\text{obs}}$ for the $G$-action is a closed subset such that:
 1. Every $G$-orbit intersects $\mathcal{F}$: $\mathcal{M}_{\text{obs}} = G \cdot \mathcal{F}$
-2. The restriction $\pi|_\mathcal{F} : \mathcal{F} \to \mathfrak{M}$ is surjective
+2. The restriction $\pi\vert _\mathcal{F} : \mathcal{F} \to \mathfrak{M}$ is surjective
 
 The interior of $\mathcal{F}$ contains exactly one representative from each generic (trivial-stabilizer) orbit.
 
@@ -324,7 +324,7 @@ $$\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \bigsqcup_{[H] \leq G} \mathfrak{
 where $\mathfrak{M}_{(H)} = \{[\Theta] : G_\Theta \text{ is conjugate to } H\}$ is the stratum of observers with stabilizer type $[H]$.
 
 **Interpretation** [Hypothesis, not theorem]:
-The stratum with maximum stabilizer $|G_\Theta| = \lvert G \rvert$ (fixed points of full $G$) may correspond to highly canonical or "species-typical" observer configurations. This is an interpretation, not a proved claim.
+The stratum with maximum stabilizer $\vert G_\Theta\vert = \lvert G \rvert$ (fixed points of full $G$) may correspond to highly canonical or "species-typical" observer configurations. This is an interpretation, not a proved claim.
 
 ---
 

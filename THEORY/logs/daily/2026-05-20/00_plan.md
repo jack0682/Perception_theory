@@ -146,7 +146,7 @@ where $\lambda_1$ is the spectral gap of the SCC Langevin generator on $L^2(\pi_
 
 **Statement (Phase 3 산출)**:
 For fixed connected graph $G$, every $\Theta \in \Sigma_{T8}$ has:
-$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})|_{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
+$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})\vert _{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
 
 **Direct algebraic proof (minimal model, $E_{bd}$ only)**:
 - $\mu_k(\Theta, c) = 4\alpha\lambda_k(L_G) + \beta W''(c)$ for eigenvalue index $k$
@@ -292,12 +292,12 @@ print(f"c_G = {c_G:.6f}")
 **Math-olympiad stated**: $d_{\max} \approx 0.04$ (factor 2 off)
 
 **Formula** (from Phase 5):
-$$d_{\max}(K) = c_G(K) / |H_\mu|_{op}$$
+$$d_{\max}(K) = c_G(K) / \vert H_\mu\vert _{op}$$
 
-where $|H_\mu|_{op} \leq \sqrt{576\beta^2 + 144}$ is the Hessian-of-$\mu_2$ operator norm.
+where $\vert H_\mu\vert _{op} \leq \sqrt{576\beta^2 + 144}$ is the Hessian-of-$\mu_2$ operator norm.
 
 **For $\beta = 1$**:
-$$|H_\mu|_{op} \leq \sqrt{576 + 144} = \sqrt{720} \approx 26.83$$
+$$\vert H_\mu\vert _{op} \leq \sqrt{576 + 144} = \sqrt{720} \approx 26.83$$
 $$d_{\max} = c_G / 26.83$$
 
 - If $c_G = 1.17$: $d_{\max} \approx 0.0436$

@@ -281,7 +281,7 @@ W7 의 *단일 최대 dense day*. 2 SEAL + 1 OP closure + 사용자 메타-자�
 
 > **OP-HMORSE-LOCAL-A** — L-HMORSE-LOCAL Cat B → Cat A 승급. ETA ~2 sessions. **Package II Eyring-Kramers Cat B 진입의 직접 unlock.**
 >
-> - **Sub-task A** (sharper residual bound): $|\sigma''(z(u^*))| \to 0$ at saturated nodes 를 사용해 L-HMORSE-LOCAL 의 closure-component 잔차 bound 를 sharpen. 현재 worst-case $|\sigma''|_{\max}$ bound 가 numerical 대비 ~10^4× 느슨함 (`CV-1.16_SEAL.md §"Non-Overclaim"`).
+> - **Sub-task A** (sharper residual bound): $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes 를 사용해 L-HMORSE-LOCAL 의 closure-component 잔차 bound 를 sharpen. 현재 worst-case $\vert \sigma''\vert _{\max}$ bound 가 numerical 대비 ~10^4× 느슨함 (`CV-1.16_SEAL.md §"Non-Overclaim"`).
 > - **Sub-task B** (OP-HMORSE-SBM): `CODE/experiments/exp_hmorse_local_sbm_sweep.py` — SBM / barbell / small-world 에서 robustness.
 
 **보조 옵션 (5/15 99_summary §"대안 다음 OPs" 우선순위 순):**

@@ -155,7 +155,7 @@ The condition (iii) is automatic if (ii) is met sufficiently strongly (concentra
 
 Where $E_{\mathrm{act}}$ is the energy barrier between $u_{\mathrm{corner}}^*$ and $u_{\mathrm{flat}}$ via the saddle of the linearized antisym Goldstone.
 
-For NQ-173 setup: $E_{\mathrm{act}} \approx \beta \cdot |\partial S| \cdot \xi_0 \approx 4 \cdot 20 \cdot 0.5 = 40$. Sufficient as long as IC energy < 40 + corner-saturated energy.
+For NQ-173 setup: $E_{\mathrm{act}} \approx \beta \cdot \vert \partial S\vert \cdot \xi_0 \approx 4 \cdot 20 \cdot 0.5 = 40$. Sufficient as long as IC energy < 40 + corner-saturated energy.
 
 ---
 

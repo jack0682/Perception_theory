@@ -188,7 +188,7 @@ The observation-conditioned K-selection formula (§3, Definition 3.4) uses $K_\m
 
 **(iii)** $K^*(\mathfrak{O}_t) = \arg\max_K p_K(\mathfrak{O}_t)$ exists since $K_\mathrm{feas}$ is finite (A2). Equivalence with $\arg\min F_\mathrm{obs}$: $p_K(\mathfrak{O}_t) \propto Z_K^{obs} = \exp(-F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)/T_*)$. □
 
-**(iv)** From $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$ and $Z_K^{obs} = \int_{\mathcal{B}_K}\mathcal{L}_\mathrm{obs} e^{-E/T_*}d\sigma_M = Z \cdot p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}|K_\mathrm{act}=K]$. Substituting: $p_K(\mathfrak{O}_t) = p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}(\mathfrak{O}_t|U)|K_\mathrm{act}(U)=K] \cdot Z/Z^{obs}$. When $\mathcal{L}_\mathrm{obs} \equiv 1$: all conditional expectations = 1, $Z^{obs} = Z$, recovered $p_K(\mathfrak{O}_t) = p_K$. □
+**(iv)** From $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$ and $Z_K^{obs} = \int_{\mathcal{B}_K}\mathcal{L}_\mathrm{obs} e^{-E/T_*}d\sigma_M = Z \cdot p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}\vert K_\mathrm{act}=K]$. Substituting: $p_K(\mathfrak{O}_t) = p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}(\mathfrak{O}_t\vert U)\vert K_\mathrm{act}(U)=K] \cdot Z/Z^{obs}$. When $\mathcal{L}_\mathrm{obs} \equiv 1$: all conditional expectations = 1, $Z^{obs} = Z$, recovered $p_K(\mathfrak{O}_t) = p_K$. □
 
 **(v)** Strict ordering from $Z_K^{obs}/Z_K^{obs'} = \exp(-(F_\mathrm{obs}(K)-F_\mathrm{obs}(K'))/T_*)$. □
 

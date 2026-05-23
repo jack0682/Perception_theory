@@ -16,7 +16,7 @@
 Yesterday's Round 12-18 produced **four Cat A candidates** with substantial numerical backing but no formal home in `working/`:
 
 1. **Proposition 1.3a** (pure $\mathcal{E}_{\mathrm{bd}}$ Morse index).
-   $\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{uniform}}}\big) = N_{\mathrm{unst}}(\beta, \alpha, c)$ with
+   $\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\vert _{u_{\mathrm{uniform}}}\big) = N_{\mathrm{unst}}(\beta, \alpha, c)$ with
    $$N_{\mathrm{unst}} = \#\{k \geq 2 : \mu_k^{\mathrm{bd}} < 0\},\qquad \mu_k^{\mathrm{bd}} = \beta W''(c) + 4\alpha\lambda_k(G).$$
    Numerically confirmed 9/9 PASS at $n=4096$ on the canonical 64×64 grid (Round 16 `exp_hessian_uniform_v2`).
 
@@ -26,11 +26,11 @@ Yesterday's Round 12-18 produced **four Cat A candidates** with substantial nume
    a shift of the pure-bd spectrum by a $\beta$-invariant perturbation $\{\nu_k^{\mathrm{cl,sep}}\}$.
 
 3. **Corollary 2.2 (qualitative).** Every local minimizer $u^\ast$ of $\mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$ satisfies
-   $$|B(u^\ast)| = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big),\qquad B(u^\ast) := \{x : 0.1 < u^\ast_x < 0.9\},\;A^\ast := \{x : u^\ast_x \geq 0.5\}.$$
+   $$\vert B(u^\ast)\vert = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big),\qquad B(u^\ast) := \{x : 0.1 < u^\ast_x < 0.9\},\;A^\ast := \{x : u^\ast_x \geq 0.5\}.$$
    Confirmed via three independent axes (exp42 slope −0.5, exp_interface_ansatz 20/20 PASS, exp_alpha_scan_v2 asymptotic).
 
 4. **Corollary 2.2 (quantitative).** On 2D grids with tanh-profile circular interface of width $\xi_0 = \sqrt{\alpha/\beta}$,
-   $$\frac{|B(u^\ast)|}{\mathrm{Per}_G(A^\ast)} = \frac{\pi\ln 9}{2}\cdot \xi_0 + O(1/\sqrt{n}) \approx 3.449\,\xi_0.$$
+   $$\frac{\vert B(u^\ast)\vert}{\mathrm{Per}_G(A^\ast)} = \frac{\pi\ln 9}{2}\cdot \xi_0 + O(1/\sqrt{n}) \approx 3.449\,\xi_0.$$
    Confirmed 20/20 at $n \in \{1024, \ldots, 262144\}$; constant agrees with ansatz to 1‰ at $n=262144$.
 
 **What "formalization" means in this session.** (a) Statement in the canonical style (hypotheses, claim, conditions), (b) proof at the step-granularity of `working/` files (every step cites a canonical theorem, an external theorem, or a lemma proved in the same file), (c) numerical verification table (data file + pass count + grid invariance), (d) a bridge line to multi-formation structure (Axis B).

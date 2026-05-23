@@ -273,7 +273,7 @@ QFT 진공은 "비어 있음" 이 *비어 있지 않다* 는 *가장 잘 정착�
 
 너의 식
 
-$$C_A(\tau) = \langle \Omega_{\mathfrak{P}} | A(t)\, A(t+\tau) | \Omega_{\mathfrak{P}}\rangle$$
+$$C_A(\tau) = \langle \Omega_{\mathfrak{P}} \vert A(t)\, A(t+\tau) \vert \Omega_{\mathfrak{P}}\rangle$$
 
 이 *0이 아니다* 라는 가정은 *작은 것* 같지만 *엄청난 것을 자동으로* 함의해:
 
@@ -314,7 +314,7 @@ QFT 에서 *입자* 는 *진공의 *국소적 들뜸 (excitation)*. 너의 frame
 
 "세계는 하나" 의 형식화가 *어렵게 *남아 있었어*. 진공 framework 에서는 *부분 답* 가능:
 
-- 관측자 $O_1$ 의 진공 $|\Omega_{\mathfrak{P}}^{(1)}\rangle$ 와 $O_2$ 의 $|\Omega_{\mathfrak{P}}^{(2)}\rangle$ 는 *다를 수 있음* (다른 관측자).
+- 관측자 $O_1$ 의 진공 $\vert \Omega_{\mathfrak{P}}^{(1)}\rangle$ 와 $O_2$ 의 $\vert \Omega_{\mathfrak{P}}^{(2)}\rangle$ 는 *다를 수 있음* (다른 관측자).
 - 그러나 *두 진공 위의 *공통 observable 의 *교차-autocorrelation* 이 *0 이 아니면* — *세계의 단일성이 *그 공통성으로 *드러남*.
 - 두 관측자가 *완전 독립 진공* 위에 있다면 cross-correlation 은 0. 그러면 솔립시즘.
 - 우리의 일상은 *둘 사이* — 부분적 cross-correlation. *정확히 *우리가 경험하는 *부분 공유성*.
@@ -327,7 +327,7 @@ QFT 에서 *입자* 는 *진공의 *국소적 들뜸 (excitation)*. 너의 frame
 
 이 도약이 *진짜로 작동* 하려면 *몇 가지 *날카로운 문제* 를 *피하지 말고 *명시적으로 *직면* 해야 해:
 
-### 문제 1 — *진공 상태 $|\Omega_\mathfrak{P}\rangle$ 가 *유일한가*
+### 문제 1 — *진공 상태 $\vert \Omega_\mathfrak{P}\rangle$ 가 *유일한가*
 
 QFT 진공은 *Lorentz 불변 + Hamiltonian 의 최저 고유상태* 라는 *강한 조건* 으로 *유일성 가정*. 너의 framework 에는 *그런 대칭이 없어*. 따라서:
 

@@ -16,7 +16,7 @@ The wreath product $D_4 \wr S_2$ fits into the short exact sequence:
 $$1 \to D_4 \times D_4 \to D_4 \wr S_2 \to S_2 \to 1, \tag{1.1}$$
 where $D_4 \times D_4$ is the kernel (base subgroup) and $S_2 = \mathbb{Z}/2$ is the quotient (swap).
 
-$|D_4 \wr S_2| = 8^2 \cdot 2 = 128$.
+$\vert D_4 \wr S_2\vert = 8^2 \cdot 2 = 128$.
 
 Group structure: elements are $(g_1, g_2; \sigma)$ with $g_1, g_2 \in D_4$, $\sigma \in \{e, \tau\}$. Multiplication:
 $(g_1, g_2; e) \cdot (h_1, h_2; e) = (g_1 h_1, g_2 h_2; e)$

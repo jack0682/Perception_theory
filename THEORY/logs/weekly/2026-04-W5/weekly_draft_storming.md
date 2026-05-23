@@ -808,7 +808,7 @@ User asked: "4차 자기-비판 → Phase 4 의 F6 (random perturb 실패), F7 (
 
 **Phase 5 NQ closures (5 to Cat B target)**:
 - NQ-214: c_d^eff ≈ 2π + $L^{-1.5}$ finite-size.
-- NQ-215: $|\partial S| \approx 4\sqrt m$ isoperimetric.
+- NQ-215: $\vert \partial S\vert \approx 4\sqrt m$ isoperimetric.
 - NQ-216: K-fold splitting $\mu_{\mathrm{Gold}} + \lambda_{\mathrm{rep}} \cos(2\pi j/K)$.
 - NQ-217: Γ-convergence sketch for K-field.
 - NQ-218: 12-row wreath structure table.
@@ -1227,7 +1227,7 @@ The α/β/γ/δ recovery pattern after self-critique demonstrates: **substantive
 User-requested re-audit caught **3 substantive math errors** propagated from W4-04-24 source. All errors fixed in canonical entries with embedded `*Erratum 2026-04-27 evening:*` notes. **Theorem status NOT changed** — all 5 σ structures remain Cat A.
 
 - **R1-E1 — T-σ-Lemma-3 (i)**: $\mathcal{P}_{\ell=1}[\delta u_x] = -m$ → corrected to $-c_d \int u^*(r) dr \approx -\pi r_0$ for tanh disk (factor-$r_0$). W4-04-24 source had Jacobian error in IBP polar-Cartesian conversion. Cauchy–Schwarz violation ($\rho_{\ell=1} \approx 12 > 1$) was the catch indicator.
-- **R1-E2 — T-σ-Theorem-4 (ii)**: $0 < K_1 < K_0$ "would-be Goldstone" → corrected to $K_1 = (A_2/A_1)\lvert W''(c) \rvert = 4|W''(c)| = K_0$ on $D_4$ (cubic equivariant degenerate at leading order). Discrete symmetry breaking has no Goldstone. In-text contradiction ($\mu_1 < 0$ vs Morse-0) was the catch indicator.
+- **R1-E2 — T-σ-Theorem-4 (ii)**: $0 < K_1 < K_0$ "would-be Goldstone" → corrected to $K_1 = (A_2/A_1)\lvert W''(c) \rvert = 4\vert W''(c)\vert = K_0$ on $D_4$ (cubic equivariant degenerate at leading order). Discrete symmetry breaking has no Goldstone. In-text contradiction ($\mu_1 < 0$ vs Morse-0) was the catch indicator.
 - **R1-E3 — T-σ-Theorem-3 (vi)**: hand-waved "$E \oplus E$ or $A_1 \oplus B_1 \oplus E$" → rigorous Schur character calculation: both-odd off-diagonal pair → $A_2 \oplus B_2$; mixed parity → single $E$; both-even → $A_1 \oplus B_1$. Also $L = 4$ singlet $(1, 1)$: $A_1$ → $B_2$ (correct $D_4$ char for odd $p$).
 
 → `THEORY/logs/daily/2026-04-27/91_critical_review.md` (332 lines) + canonical erratum trail + 01c/01d/01e ⚠ ERRATUM banners.

@@ -53,7 +53,7 @@ $ grep -nE "§4\.6\.6|§4\.9\.5" THEORY/canonical/auxiliary_structures_master.md
 **Statement A.2.1** *(Generic Morse, Cat A 후보 conditional).* SCC energy
 $$\mathcal{E}_\lambda(u) = \lambda_{\mathrm{cl}}\,\mathcal{E}_{\mathrm{cl}}(u) + \lambda_{\mathrm{sep}}\,\mathcal{E}_{\mathrm{sep}}(u) + \lambda_{\mathrm{bd}}(u),$$
 restricted to the volume-constrained simplex $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$, is a polynomial in $u$ of total degree $\leq 4$ (degree 4 from $\mathcal{E}_{\mathrm{bd}}$'s double-well $W$; degree $\leq 2$ from $\mathcal{E}_{\mathrm{cl}}, \mathcal{E}_{\mathrm{sep}}$). Let $\Theta := (\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \alpha, \beta, m) \in \mathbb{R}^{4}_{>0} \times (0,1)$ be the SCC parameter point. Then:
-$$\mathcal{D}_{\mathrm{Morse}}(G) := \{\,\Theta \in \mathbb{R}^4_{>0} \times (0,1) \;:\; \text{every critical point of } \mathcal{E}_\Theta|_{\Sigma_m} \text{ is non-degenerate}\,\}$$
+$$\mathcal{D}_{\mathrm{Morse}}(G) := \{\,\Theta \in \mathbb{R}^4_{>0} \times (0,1) \;:\; \text{every critical point of } \mathcal{E}_\Theta\vert _{\Sigma_m} \text{ is non-degenerate}\,\}$$
 contains an *open dense* subset (in standard topology); furthermore $\mathcal{D}_{\mathrm{Morse}}(G)$ is *Zariski-open* (i.e., its complement is contained in a real algebraic subvariety of positive codimension).
 
 **CoT step 1**: $\mathcal{E}_\Theta(u)$ 가 $u$ 에 대해 polynomial (canonical-confirmed by §13 Theorem-4 등 다수 row 의 explicit polynomial form) → $\nabla \mathcal{E}_\Theta$ 도 polynomial.
@@ -63,7 +63,7 @@ contains an *open dense* subset (in standard topology); furthermore $\mathcal{D}
 ### §1.2 Statement A.2.2 — Spinodal Stratum is Σ_T8 (Σ_Hess = Σ_T8 일치)
 
 **Statement A.2.2** *(Spinodal critical surface identification, Cat A — direct from canonical SB7).* The Hessian degeneracy locus
-$$\Sigma_{\mathrm{Hess}} := \{\,(\Theta, u^*) : u^* \text{ critical, } \det \mathrm{Hess}\,\mathcal{E}_\Theta(u^*)|_{T_{u^*}\Sigma_m} = 0\,\}$$
+$$\Sigma_{\mathrm{Hess}} := \{\,(\Theta, u^*) : u^* \text{ critical, } \det \mathrm{Hess}\,\mathcal{E}_\Theta(u^*)\vert _{T_{u^*}\Sigma_m} = 0\,\}$$
 *equals* the T8 phase transition surface
 $$\Sigma_{T8} := \{ \,(\Theta, u^*) : \beta/\alpha = 4\lambda_2(G)/ \mid W''(c(u^*)) \mid \, \}$$
 on the uniform critical sheet $u^* = c\mathbf{1}$ (c the equilibrium concentration). In particular $\Sigma_{T8}$ is codim-1 in $\Theta$-space (parameterized by $\beta/\alpha$).
@@ -74,7 +74,7 @@ on the uniform critical sheet $u^* = c\mathbf{1}$ (c the equilibrium concentrati
 
 **Statement A.2.3** *(Stratified Morse, Cat A 후보 conditional).* For $\Theta$ in the *post-bifurcation supercritical regime*
 $$\mathcal{R}_{\mathrm{post}} := \{\,\Theta : \beta/\alpha > 4\lambda_2(G)/\lvert W''(c) \rvert, \; c \in (\tfrac{3-\sqrt{3}}{6}, \tfrac{3+\sqrt{3}}{6})\,\}$$
-(spinodal interior + supercritical), the *stable basin* $\mathcal{B}_{\mathrm{stable}}(\Theta) \subset \Sigma_m$ — defined as the union of basins of all local energy minima with $\mathrm{Hess}\,\mathcal{E}_\Theta > 0$ on $T_{u^*}\Sigma_m$ — admits a *stratified Morse decomposition* (in the sense of A.2.1) outside the codim-1 stratum $\Sigma_{T8}$. Equivalently: $\mathcal{E}_\Theta|_{\mathcal{B}_{\mathrm{stable}}}$ is Morse for $\Theta$ in an open dense subset of $\mathcal{R}_{\mathrm{post}}$.
+(spinodal interior + supercritical), the *stable basin* $\mathcal{B}_{\mathrm{stable}}(\Theta) \subset \Sigma_m$ — defined as the union of basins of all local energy minima with $\mathrm{Hess}\,\mathcal{E}_\Theta > 0$ on $T_{u^*}\Sigma_m$ — admits a *stratified Morse decomposition* (in the sense of A.2.1) outside the codim-1 stratum $\Sigma_{T8}$. Equivalently: $\mathcal{E}_\Theta\vert _{\mathcal{B}_{\mathrm{stable}}}$ is Morse for $\Theta$ in an open dense subset of $\mathcal{R}_{\mathrm{post}}$.
 
 **CoT step 1**: $\mathcal{R}_{\mathrm{post}}$ 는 *post-bifurcation* — uniform critical $c\mathbf{1}$ 이 *Hessian-unstable* (T8 supercritical 의 정의) → 새 non-uniform critical (formation) 가 *stable* sheet 으로 출현 (pitchfork bifurcation 의 직접 후속).
 **CoT step 2**: A.2.1 의 Generic Morse 가 stable critical sheet 위에서 적용 가능 (non-uniform critical) — uniform $c\mathbf{1}$ 의 spinodal degeneracy (Σ_T8) 와 *분리된* sheet.
@@ -99,7 +99,7 @@ is real-analytic (in fact polynomial) of total degree $\leq 3$ in $(u, \Theta)$ 
 
 ### §2.2 Lemma L2 — Generic regularity via Sard's theorem
 
-**Lemma L2.** Let $\mathcal{S}_\Theta := \{\,u \in \Sigma_m : \Phi(\Theta, u) = 0, \; \det \mathrm{Hess}\,\mathcal{E}_\Theta(u)|_{T\Sigma_m} = 0\,\}$ be the degenerate critical set at parameter $\Theta$. Let $\mathrm{proj}_\Theta(\Sigma_{\mathrm{degen}}) \subset \mathbb{R}^4_{>0}$ be the projection of $\Sigma_{\mathrm{degen}} := \{(\Theta, u) : u \in \mathcal{S}_\Theta\}$. Then $\mathrm{proj}_\Theta(\Sigma_{\mathrm{degen}})$ has *Lebesgue measure zero*.
+**Lemma L2.** Let $\mathcal{S}_\Theta := \{\,u \in \Sigma_m : \Phi(\Theta, u) = 0, \; \det \mathrm{Hess}\,\mathcal{E}_\Theta(u)\vert _{T\Sigma_m} = 0\,\}$ be the degenerate critical set at parameter $\Theta$. Let $\mathrm{proj}_\Theta(\Sigma_{\mathrm{degen}}) \subset \mathbb{R}^4_{>0}$ be the projection of $\Sigma_{\mathrm{degen}} := \{(\Theta, u) : u \in \mathcal{S}_\Theta\}$. Then $\mathrm{proj}_\Theta(\Sigma_{\mathrm{degen}})$ has *Lebesgue measure zero*.
 
 **Proof (CoT + CoC):**
 - CoT step 1: $\Sigma_{\mathrm{degen}}$ 는 polynomial equations 의 zero set (L1 + Hessian determinant polynomial form) → real algebraic subvariety of $\mathbb{R}^4_{>0} \times \Sigma_m$.
@@ -121,10 +121,10 @@ is real-analytic (in fact polynomial) of total degree $\leq 3$ in $(u, \Theta)$ 
 
 ### §2.4 Lemma L4 — Goldstone direction on uniform sheet is exactly Σ_T8
 
-**Lemma L4.** On the uniform critical sheet $u^* = c\mathbf{1} \in \Sigma_m$ (so $m = c$), the Hessian $\mathrm{Hess}\,\mathcal{E}_\Theta(c\mathbf{1})|_{T\Sigma_m}$ has zero eigenvalue *if and only if* $\beta/\alpha = 4\lambda_2(G)/\lvert W''(c) \rvert$ (i.e., $\Theta \in \Sigma_{T8}$).
+**Lemma L4.** On the uniform critical sheet $u^* = c\mathbf{1} \in \Sigma_m$ (so $m = c$), the Hessian $\mathrm{Hess}\,\mathcal{E}_\Theta(c\mathbf{1})\vert _{T\Sigma_m}$ has zero eigenvalue *if and only if* $\beta/\alpha = 4\lambda_2(G)/\lvert W''(c) \rvert$ (i.e., $\Theta \in \Sigma_{T8}$).
 
 **Proof (CoT + CoC):**
-- CoT step 1: On uniform $c\mathbf{1}$, the Hessian eigenvalues are $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)|$ for $k = 2, \ldots, n$ (canonical §13 Theorem 4 cited).
+- CoT step 1: On uniform $c\mathbf{1}$, the Hessian eigenvalues are $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta\vert W''(c)\vert $ for $k = 2, \ldots, n$ (canonical §13 Theorem 4 cited).
 - CoT step 2: Zero eigenvalue ⟺ $\mu_2 = 0$ (smallest eigenvalue first; $k=1$ excluded by $\Sigma_m$ projection) ⟺ $\beta/\alpha = 4\lambda_2/\lvert W''(c) \rvert$.
 - CoT step 3: 본 condition 은 *exactly* T8 phase transition (canonical DECLARATION.md 중심 정리).
 - CoC anchors: canonical §13 Theorem 4 (CV-1.5.1, L1466 *spinodal interior* hypothesis discussion 직접 인용); canonical SB7 (Cat A) confirms $\Sigma_{\mathrm{Hess}} = \Sigma_{T8}$ as global identity (본 lemma 는 uniform sheet 에서의 *local* form).

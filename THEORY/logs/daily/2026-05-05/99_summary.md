@@ -366,7 +366,7 @@ Per §8 item 4 above:
 - $\Sigma_M$ (not $\Sigma^K_M$) established as correct foundational state space; $K_{\text{act}}$ = derived $\pi_0$ observable.
 - Four-layer separation: $\mathfrak{O}_t$ / $\tilde{u}_t$ / prior $\mathcal{E}_{\text{SCC}}$ / likelihood $\mathcal{L}_{\text{obs}}$ — $E_{\text{photo}}$ placed in likelihood, preserving CN5 strictly.
 - BO time scales $\tau_{\text{frame}} \ll \tau_{\text{fast}} \ll \tau_{\mathcal{P}} \lesssim \tau_{\text{slow}}$: fast variable $\tilde{u}_t$ integrates out → effective Markov jump process over $K_{\text{act}}(t)$.
-- $\mathcal{P}$-conditional partition function $Z_K(\mathcal{P})$ → free energy $F(K;\mathcal{P})$ → $P_{\text{eq}}(K|\mathcal{P})$: structural OP-0005 resolution path (NOT resolved; structural path only).
+- $\mathcal{P}$-conditional partition function $Z_K(\mathcal{P})$ → free energy $F(K;\mathcal{P})$ → $P_{\text{eq}}(K\vert \mathcal{P})$: structural OP-0005 resolution path (NOT resolved; structural path only).
 - P-F Axiom v0 candidate: "no metastability rate claim without stochastic SCC extension (Langevin on $\Sigma_M$)."
 
 **Hard-constraint sweep (evening session):**

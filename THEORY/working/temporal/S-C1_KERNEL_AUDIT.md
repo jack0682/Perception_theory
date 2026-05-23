@@ -41,11 +41,11 @@ The SCC canonical E1 transport uses one-sided Sinkhorn (row marginals fixed at $
 
 ### 2.2 Lemma 10 — Component confinement
 
-**Statement:** $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq 2m_t\delta/\varepsilon_\mathrm{OT}$.
+**Statement:** $\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \leq 2m_t\delta/\varepsilon_\mathrm{OT}$.
 
 **Status:** ✓ **Cat A** — follows directly from Lemma 9 by summing over $C_i^t \times C_j^s$:
 
-$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s}(M-M')(x,y)\right| \leq \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}} = \epsilon_\mathrm{kernel}.$$
+$$\vert \gamma_M - \gamma_{M'}\vert = \left\vert \sum_{x \in C_i^t, y \in C_j^s}(M-M')(x,y)\right\vert \leq \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}} = \epsilon_\mathrm{kernel}.$$
 
 This is correct: summing absolute values of a matrix over a subset is bounded by $\ell_1$ norm, which is bounded by twice the total variation. ✓
 
@@ -55,7 +55,7 @@ This is correct: summing absolute values of a matrix over a subset is bounded by
 
 Under:
 1. Margin condition: $\Delta_\mathrm{sep}^\mathrm{row}(M) \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}$, where $\epsilon_\mathrm{kernel} = 2m_t\delta/\varepsilon_\mathrm{OT}$
-2. Score perturbation: $|\tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']| \leq \epsilon_\mathrm{kernel}$ (from Lemma 10)
+2. Score perturbation: $\vert \tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']\vert \leq \epsilon_\mathrm{kernel}$ (from Lemma 10)
 
 **Claimed conclusion:** $\tilde S^0_{ij^*}[M'] - \tilde S^0_{ij}[M'] \geq \Delta_\mathrm{sep}^* > 0$.
 
@@ -112,14 +112,14 @@ $$\tilde S^0_{ij^*}[M'] - \tilde S^0_{ij}[M'] \geq (\tilde S^0_{ij^*}[M] - \epsi
 
 ## 5. Score Perturbation Claim Verification
 
-**Claim in S-B3:** "from Lemma 10, $|\tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']| \leq \epsilon_\mathrm{kernel}$."
+**Claim in S-B3:** "from Lemma 10, $\vert \tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']\vert \leq \epsilon_\mathrm{kernel}$."
 
 **Verification:**
 
 The score $S^0_{ij} = \lambda_m \gamma(C_i^t, C_j^s) - \lambda_c \sum_{x,y} c(x,y) M(x,y)$ has:
-- Transport term perturbation: $\lambda_m |\gamma_M - \gamma_{M'}| \leq \lambda_m \epsilon_\mathrm{kernel}$
+- Transport term perturbation: $\lambda_m \vert \gamma_M - \gamma_{M'}\vert \leq \lambda_m \epsilon_\mathrm{kernel}$
 - Cost term perturbation (for $\lVert c - c' \rVert_\infty \leq \delta$):
-  $$\lambda_c |\sum c M - \sum c' M'| \leq \lambda_c \lVert c \rVert_\infty \lVert M-M' \rVert_1 + \lambda_c \lVert c-c' \rVert_\infty \cdot \gamma_{M'}(C_i^t, C_j^s)$$
+  $$\lambda_c \vert \sum c M - \sum c' M'\vert \leq \lambda_c \lVert c \rVert_\infty \lVert M-M' \rVert_1 + \lambda_c \lVert c-c' \rVert_\infty \cdot \gamma_{M'}(C_i^t, C_j^s)$$
   $$\leq \lambda_c \bar{c} \cdot 2\epsilon_\mathrm{kernel}/\lambda_m \cdot \lambda_m + \lambda_c \delta \cdot m_j$$
 
 where $\bar{c} = \lVert c \rVert_\infty$ and $m_j = \gamma_{M'}(C_i^t, C_j^s) \leq m_t$.

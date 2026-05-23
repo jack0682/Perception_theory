@@ -285,7 +285,7 @@ After the initial 5-deliverable consolidation completed, user requested deepenin
   - Theorem 4.6.1 (synthesis): càdlàg trajectory characterization.
   - **Substantive negative result**: σ^A K-jump inheritance is non-deterministic in pre-merger σ alone — requires merger-geometry data $\mathcal{M}$.
 
-- **`05_NQ198_V5bTprime_PN_barrier_attempt.md`** (~440 lines): V5b-T' PN-barrier-lifted Goldstone Cat A attempt via sharp-interface + discrete-lattice hybrid. **Result**: derivation gives $\mu \approx 2\alpha = 2\beta\xi_0^2$, **independent of $|\partial S|$**. Matches empirical magnitude at NQ-173 ($\mu \in [1, 4]$ observed; $\mu \approx 2$ predicted) but **disagrees with Phase 3 heuristic** $\mu \propto |\partial S|/\xi_0$ on cluster-mass scaling. **Substantive negative result**: Phase 3 V5b-T'-(c) over-claims $|\partial S|$ dependence.
+- **`05_NQ198_V5bTprime_PN_barrier_attempt.md`** (~440 lines): V5b-T' PN-barrier-lifted Goldstone Cat A attempt via sharp-interface + discrete-lattice hybrid. **Result**: derivation gives $\mu \approx 2\alpha = 2\beta\xi_0^2$, **independent of $\vert \partial S\vert $**. Matches empirical magnitude at NQ-173 ($\mu \in [1, 4]$ observed; $\mu \approx 2$ predicted) but **disagrees with Phase 3 heuristic** $\mu \propto \vert \partial S\vert /\xi_0$ on cluster-mass scaling. **Substantive negative result**: Phase 3 V5b-T'-(c) over-claims $\vert \partial S\vert $ dependence.
 
 - **`06_open_problems_development_synthesis.md`** (~280 lines): synthesis of `04_*` + `05_*`. Identifies which open problems advanced; new spawn inventory (10 new NQs); updated W6+ priority order; impact on user-decision queue (D-5 text revision; D-6b upgrade; D-7 new proposal).
 
@@ -311,10 +311,10 @@ After the initial 5-deliverable consolidation completed, user requested deepenin
 Three substantive updates to user-decision queue beyond `01_*` original:
 
 **D-5 V5b-T' canonical entry — TEXT REVISION RECOMMENDED**:
-- Original V5b-T'-(c) text (from `2026-04-28/20_*` Part 1): "$\mu \approx A_{\mathrm{R3b}} \cdot \beta \cdot |\partial S|/\xi_0$" — Phase 3 heuristic.
+- Original V5b-T'-(c) text (from `2026-04-28/20_*` Part 1): "$\mu \approx A_{\mathrm{R3b}} \cdot \beta \cdot \vert \partial S\vert /\xi_0$" — Phase 3 heuristic.
 - `05_*` §4 derivation gives "$\mu \approx 2\beta\xi_0^2$" (mass-independent).
 - Both match magnitude at NQ-173 ($m=40$); distinguishable only by varying $m$ (NQ-198a).
-- **Recommended text revision** (per `06_*` §4.2): replace functional-form claim with magnitude claim + explicit "$|\partial S|$ dependence open caveat". ~5-10 line refinement.
+- **Recommended text revision** (per `06_*` §4.2): replace functional-form claim with magnitude claim + explicit "$\vert \partial S\vert $ dependence open caveat". ~5-10 line refinement.
 - **Updated D-5 options**:
   - **D-5-A1 (revised)**: Approve D-5 with revised text. Cat B target with caveat.
   - **D-5-D1 (RECOMMENDED)**: Short-defer ~30 min for NQ-198a; merge after numerical resolves.

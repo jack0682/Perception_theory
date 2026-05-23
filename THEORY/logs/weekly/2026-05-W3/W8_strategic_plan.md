@@ -84,7 +84,7 @@ W8 은 그 *결정 C framework 를 prophylactic 하게 매일 적용* 하면서,
 
 **Primary target (사용자 확정 2026-05-16):** **OP-HMORSE-LOCAL-A** — L-HMORSE-LOCAL Cat B → Cat A 승급.
 
-- **Sub-task A (analytic primary):** sharper residual bound via $|\sigma''(z(u^*))| \to 0$ at saturated nodes. 현재 worst-case $|\sigma''|_{\max}$ bound 가 numerical 대비 ~10⁴× 느슨 (`CV-1.16_SEAL.md §"Non-Overclaim"` 명시).
+- **Sub-task A (analytic primary):** sharper residual bound via $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes. 현재 worst-case $\vert \sigma''\vert _{\max}$ bound 가 numerical 대비 ~10⁴× 느슨 (`CV-1.16_SEAL.md §"Non-Overclaim"` 명시).
 - **Sub-task B (numerical robustness):** OP-HMORSE-SBM extension — barbell / small-world 에서 L-HMORSE-LOCAL 의 robustness.
 
 **근거:** 모든 SEAL 문서 (CV-1.15, CV-1.16, CV-1.17) + W7 weekly summary §6 이 일관되게 CV-1.18 target 으로 지목.

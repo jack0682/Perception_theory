@@ -51,7 +51,7 @@ $$p_*(\mathbf{u}) \propto \exp\!\left(-\frac{\mathcal{E}(\mathbf{u})}{T_*}\right
 
 *v0 status:* Detailed balance argument: $p_*$ satisfies the Fokker-Planck equation $\partial_t p = \nabla \cdot (p \nabla \mathcal{E}) + T_* \Delta p = 0$ (stationary). Existence of $p_*$ as a probability measure: $\mathcal{E}$ is bounded below (by 0, since all energy terms $\geq 0$) and $\Sigma_M$ is compact, so $\exp(-\mathcal{E}/T_*)$ is integrable. ✓ (rigorous). Convergence to $p_*$: requires spectral gap argument (hypoellipticity on $\Sigma_M$); deferred to W9 D1.
 
-*P-F-A3 connection to CN15 (Static/Dynamic Separation):* Under P-F, long-time $K_{\mathrm{act}}$ distribution is $P_{eq}(K | T_*)$ derived from $p_*$. This gives quantitative meaning to CN15's "protocol-endpoint $K_{\mathrm{act}}$" in the stochastic setting.
+*P-F-A3 connection to CN15 (Static/Dynamic Separation):* Under P-F, long-time $K_{\mathrm{act}}$ distribution is $P_{eq}(K \vert T_*)$ derived from $p_*$. This gives quantitative meaning to CN15's "protocol-endpoint $K_{\mathrm{act}}$" in the stochastic setting.
 
 ### P-F-A4: Arrhenius Escape Rate
 
@@ -64,10 +64,10 @@ where $A > 0$ is a prefactor and $\Delta E = \mathcal{E}(\mathbf{u}_{\mathrm{sad
 ### P-F-A5: Mean First Passage Time (MFPT)
 
 The mean time to escape from the basin of $\hat{\mathbf{u}}$ is:
-$$\tau_{\mathrm{MFPT}} \approx \frac{2\pi}{|\lambda_-|} \sqrt{\frac{\det H_{\hat{\mathbf{u}}}}{\left|\det' H_{\mathbf{u}_{\mathrm{saddle}}}\right|}} \cdot \exp\!\left(\frac{\Delta E}{T_*}\right)$$
+$$\tau_{\mathrm{MFPT}} \approx \frac{2\pi}{\vert \lambda_-\vert} \sqrt{\frac{\det H_{\hat{\mathbf{u}}}}{\left\vert \det' H_{\mathbf{u}_{\mathrm{saddle}}}\right\vert}} \cdot \exp\!\left(\frac{\Delta E}{T_*}\right)$$
 where:
-- $H_{\hat{\mathbf{u}}} = \nabla^2 \mathcal{E}|_{\hat{\mathbf{u}}}$ (Hessian at minimum, restricted to $T_{\hat{\mathbf{u}}} \Sigma_M$).
-- $H_{\mathbf{u}_{\mathrm{saddle}}}$ = Hessian at saddle; $\det'$ = product of all eigenvalues except the unique negative one; $|\lambda_-|$ = magnitude of the negative eigenvalue.
+- $H_{\hat{\mathbf{u}}} = \nabla^2 \mathcal{E}\vert _{\hat{\mathbf{u}}}$ (Hessian at minimum, restricted to $T_{\hat{\mathbf{u}}} \Sigma_M$).
+- $H_{\mathbf{u}_{\mathrm{saddle}}}$ = Hessian at saddle; $\det'$ = product of all eigenvalues except the unique negative one; $\vert \lambda_-\vert $ = magnitude of the negative eigenvalue.
 
 This is the *Eyring-Kramers formula* (Hänggi-Talkner-Borkovec 1990, Eq. 4.56). All quantities are computable from `scc/energy.py` (energy + gradient + Hessian).
 

@@ -63,7 +63,7 @@ Etc.
 
 Only $\mu_2 < 0$; all other $\mu_k > 0$.
 
-**Linearized dynamics**: $\dot v_2 = |\mu_2| v_2 + O(v_2^3)$ where $v_2 = \langle u - u_{\mathrm{unif}}, \phi_2\rangle$ is the Fiedler-mode amplitude. Other modes decay.
+**Linearized dynamics**: $\dot v_2 = \vert \mu_2\vert v_2 + O(v_2^3)$ where $v_2 = \langle u - u_{\mathrm{unif}}, \phi_2\rangle$ is the Fiedler-mode amplitude. Other modes decay.
 
 $v_2$ saturates via cubic term → $v_2 \to \pm A^*$ (supercritical pitchfork, T-Birth-Parametric).
 
@@ -127,9 +127,9 @@ $$\mathrm{Vol}(\mathcal{B}_K) \approx \text{(some function of )} \det(H_K)^{-1/2
 
 More precisely, using thin-basin approximation and Stanley's formula (or simpler: basin radius $\sim 1/\sqrt{\lambda_{\min}(H_K)}$):
 
-$$\mathrm{Vol}(\mathcal{B}_K) \sim |\mathcal{M}_K| \cdot \prod_i \lambda_i(H_K)^{-1/2}\text{ (within small region around each minimizer)}$$
+$$\mathrm{Vol}(\mathcal{B}_K) \sim \vert \mathcal{M}_K\vert \cdot \prod_i \lambda_i(H_K)^{-1/2}\text{ (within small region around each minimizer)}$$
 
-where $\lambda_i(H_K)$ are positive Hessian eigenvalues and $|\mathcal{M}_K|$ is the number of K-formation minimizers modulo $\mathrm{Aut}(G)$.
+where $\lambda_i(H_K)$ are positive Hessian eigenvalues and $\vert \mathcal{M}_K\vert $ is the number of K-formation minimizers modulo $\mathrm{Aut}(G)$.
 
 ### A.3.3 K=1 vs K>1 volume ratio
 
@@ -144,12 +144,12 @@ For K=2 formation: Hessian $H_2$ has:
 **Generally**: higher K → more soft modes → smaller $\det(H_K)$ per formation → **larger basin volume per minimizer**. But also fewer minimizers in $\mathcal{M}_K$ on small-$K$ side.
 
 **Key tension**:
-$$\mathrm{Vol}(\mathcal{B}_K) \sim |\mathcal{M}_K(\beta, c, G)| \cdot (\text{basin vol per min})$$
+$$\mathrm{Vol}(\mathcal{B}_K) \sim \vert \mathcal{M}_K(\beta, c, G)\vert \cdot (\text{basin vol per min})$$
 
-- $|\mathcal{M}_K|$ grows fast with K (combinatorial).
+- $\vert \mathcal{M}_K\vert $ grows fast with K (combinatorial).
 - Per-minimizer vol grows slower but still grows with K.
 
-Thus **K>>1 has dominant total volume unless $|\mathcal{M}_K|$ is restricted**.
+Thus **K>>1 has dominant total volume unless $\vert \mathcal{M}_K\vert $ is restricted**.
 
 ### A.3.4 Why c ≈ 1/2 gives $\mathcal{B}_1$ dominance
 
@@ -167,7 +167,7 @@ For K=2: $u^*_2$ and $1 - u^*_2$ are both K=2 configurations (but now $1 - u^*_2
 
 **Proof**:
 - $c = 1/2$ ⟹ mass $m = n/2$. $(1 - u)$ has mass $n - n/2 = n/2 = m$. ✓ stays on $\Sigma_m$.
-- $\mathcal{E}(u) = \mathcal{E}(1-u)$ (4-term energy all symmetric under $u \leftrightarrow 1-u$ at c=1/2, by direct check: $W(u) = u^2(1-u)^2$ symmetric; $\mathcal{E}_{\mathrm{bd}}$ via $|\nabla u|^2 = |\nabla(1-u)|^2$; $\mathcal{E}_{\mathrm{cl}}$ requires $\tau_{\mathrm{cl}} = 1/2$ — which is canonical default).
+- $\mathcal{E}(u) = \mathcal{E}(1-u)$ (4-term energy all symmetric under $u \leftrightarrow 1-u$ at c=1/2, by direct check: $W(u) = u^2(1-u)^2$ symmetric; $\mathcal{E}_{\mathrm{bd}}$ via $\vert \nabla u\vert ^2 = \vert \nabla(1-u)\vert ^2$; $\mathcal{E}_{\mathrm{cl}}$ requires $\tau_{\mathrm{cl}} = 1/2$ — which is canonical default).
 - $u \mapsto 1-u$ is an involution on $\Sigma_m$.
 - Super-threshold set of $1-u$ at $\tau=1/2$ = $\{x : u(x) < 1/2\}$ = complement of $\{u \geq 1/2\}$.
 - If $\{u \geq 1/2\}$ has K disk components on connected $X$, then **complement is connected** (ambient region minus K holes is connected in 2D/higher-D).
@@ -202,7 +202,7 @@ from involution argument alone.
 > **Hypothesis G-miss-4 refined**: $\widehat K = 1$ a.s. iff **one of**:
 > (i) Single-mode dominance: $\beta \in (\beta_{\mathrm{crit}}^{(2)}, \beta_{\mathrm{crit}}^{(3)})$ (Claim A.2.1 Cat A).
 > (ii) Complement self-symmetry: $c = 1/2$ AND $X$ is "topologically simple" (2D-like, connected complement) (Claim A.3.1 partial; Cat B).
-> (iii) Large $\mathrm{Vol}(\mathcal{B}_1)$ dominance: $|\mathcal{M}_1|$ large relative to $|\mathcal{M}_K|$ per-minimizer volume sum (Cat C basin-volume argument).
+> (iii) Large $\mathrm{Vol}(\mathcal{B}_1)$ dominance: $\vert \mathcal{M}_1\vert $ large relative to $\vert \mathcal{M}_K\vert $ per-minimizer volume sum (Cat C basin-volume argument).
 
 Conditions (i) and (ii) **together** cover: near-critical, OR c=1/2 on 2D-like $X$.
 

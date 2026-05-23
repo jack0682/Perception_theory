@@ -45,7 +45,7 @@ This is the **standard Goldstone theorem on lattice with translation symmetry**:
 ### §1.4 Implication for V5b-T' canonical proposal
 
 **V5b-T' as defined in `2026-04-28/20_*` Part 1 §1.2** claims (V5b-T'-c):
-> $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot |\partial S|/\xi_0$, magnitude $\mathcal{O}(\beta)$, **not exponentially small**.
+> $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \vert \partial S\vert /\xi_0$, magnitude $\mathcal{O}(\beta)$, **not exponentially small**.
 
 NQ-198f measurements: $\mu_G \approx 0$ on torus.
 
@@ -77,15 +77,15 @@ NQ-198f measurements: $\mu_G \approx 0$ on torus.
 
 **$C(\beta)$ is NOT simply $\pi\beta$**. The hypothesis "$C \approx \pi\beta$" (`07_*` §3.3) gave $\pi\beta \in [6.28, 25.13]$ across this β-range; observed $C_{\mathrm{emp}} \in [8, 23]$. Roughly the right magnitude but $C/\beta$ varies from 4.0 (low β) to 2.4 (mid β) to 2.86 (high β) — **not constant**.
 
-**Cluster perimeter $|\partial S|$ also changes with β**: 16 → 20 → 21 across the scan. At larger β (smaller ξ_0), the cluster is sharper with larger effective discrete perimeter.
+**Cluster perimeter $\vert \partial S\vert $ also changes with β**: 16 → 20 → 21 across the scan. At larger β (smaller ξ_0), the cluster is sharper with larger effective discrete perimeter.
 
-**Controlling for $|\partial S|$**: at fixed $|\partial S| = 20$ (β=4 vs β=6): μ ratio = 1.10; β ratio = 1.5; ξ_0 ratio = 1.225. **μ ratio doesn't match β alone or ξ_0 alone or simple combinations**.
+**Controlling for $\vert \partial S\vert $**: at fixed $\vert \partial S\vert = 20$ (β=4 vs β=6): μ ratio = 1.10; β ratio = 1.5; ξ_0 ratio = 1.225. **μ ratio doesn't match β alone or ξ_0 alone or simple combinations**.
 
 ### §2.4 Conclusion from NQ-198g
 
-The empirical formula $\mu \approx C |\partial S|/n$ is valid at $\beta = 4$ specifically (NQ-198a). Across β, $C$ varies by factor ~3× and **doesn't have a clean $\beta^p$ form**. Higher-resolution β-scan with $|\partial S|$-controlled experiments needed (NQ-198g extension; W6+).
+The empirical formula $\mu \approx C \vert \partial S\vert /n$ is valid at $\beta = 4$ specifically (NQ-198a). Across β, $C$ varies by factor ~3× and **doesn't have a clean $\beta^p$ form**. Higher-resolution β-scan with $\vert \partial S\vert $-controlled experiments needed (NQ-198g extension; W6+).
 
-**Cat status**: $\mu \approx C |\partial S|/n$ is **at-fixed-β empirical**; full $C(\beta, \xi_0)$ functional form **open**.
+**Cat status**: $\mu \approx C \vert \partial S\vert /n$ is **at-fixed-β empirical**; full $C(\beta, \xi_0)$ functional form **open**.
 
 ---
 
@@ -98,14 +98,14 @@ Day 3 has now produced **three** substantive negative results, each refuting a p
 | Negative Result | What was refuted | Discovered when |
 |---|---|---|
 | 1. σ^A K-jump non-determinism | Implicit assumption: σ-trajectory is deterministic from σ data alone (Phase 8 T4 framework) | `04_*` Lemma 4.4.1(c) |
-| 2. V5b-F mass dependence | Phase 3 heuristic ($\mu \propto |\partial S|/\xi_0$) AND Day 3 §4 derivation ($\mu \approx 2\alpha$ const) | `07_*` NQ-198a |
+| 2. V5b-F mass dependence | Phase 3 heuristic ($\mu \propto \vert \partial S\vert /\xi_0$) AND Day 3 §4 derivation ($\mu \approx 2\alpha$ const) | `07_*` NQ-198a |
 | **3. V5b-T' does not exist as separate phenomenon on torus** | V5b-T' canonical proposal (`20_*` Part 1) — claims "PN-barrier-lifted O(β) Goldstone on translation-invariant graphs" | **THIS file** NQ-198f |
 
 ### §3.2 Cumulative impact
 
 **Three theoretical claims refuted in one day**:
 - σ_multi^A(t) trajectory: rich-σ augmentation needed (NQ-242).
-- V5b-F scaling: $\mu \propto |\partial S|/n$ (finite-size collective).
+- V5b-F scaling: $\mu \propto \vert \partial S\vert /n$ (finite-size collective).
 - **V5b-T' phenomenon: does not exist as separate concept** (subsumes V5b-T super-lattice trivially).
 
 ### §3.3 What this says about Day 2 Phase 3 work
@@ -117,7 +117,7 @@ recovering V5b-T (super-lattice), V5b-T' (cluster-saturated translation-invarian
 **Day 3 EOD revision**:
 - V5b-T (super-lattice): correct (Cat A canonical CV-1.4).
 - V5b-T' (sub-lattice translation-invariant): **does NOT lift Goldstone — μ ≈ 0 exactly** (this NQ-198f).
-- V5b-F (sub-lattice translation-broken): $\mu \propto |\partial S|/n$ (NQ-198a; Phase 3 form refuted).
+- V5b-F (sub-lattice translation-broken): $\mu \propto \vert \partial S\vert /n$ (NQ-198a; Phase 3 form refuted).
 
 The "unified formula" was **wrong**. PN-barrier-lifting only manifests on translation-broken graphs (V5b-F). Translation-invariant graphs preserve cluster Goldstone exactly.
 
@@ -127,7 +127,7 @@ The "unified formula" was **wrong**. PN-barrier-lifting only manifests on transl
 
 ### §4.1 D-5 status before NQ-198f/g
 
-Per `07_*` §6 + `08_*` §1: **D-5-A1 with revised text** (NQ-198a empirical $\mu \propto |\partial S|/n$ + V5b-T' torus open caveat).
+Per `07_*` §6 + `08_*` §1: **D-5-A1 with revised text** (NQ-198a empirical $\mu \propto \vert \partial S\vert /n$ + V5b-T' torus open caveat).
 
 ### §4.2 D-5 status after NQ-198f/g (Day 3 EOD)
 
@@ -136,7 +136,7 @@ Per `07_*` §6 + `08_*` §1: **D-5-A1 with revised text** (NQ-198a empirical $\m
 Reason: V5b-T' as a *new and distinct phenomenon* is refuted by NQ-198f. The proposed canonical entry "V5b-T' Pre-Objective Goldstone on Translation-Invariant Graphs in Corner-Saturated Regime" describes a phenomenon that **measurably does not exist** in the regime claimed.
 
 What DOES exist:
-- V5b-F (translation-broken, corner-saturated): $\mu \propto |\partial S|/n$. **Replace D-5 with a refined V5b-F entry**.
+- V5b-F (translation-broken, corner-saturated): $\mu \propto \vert \partial S\vert /n$. **Replace D-5 with a refined V5b-F entry**.
 - Torus + corner-saturated: trivial extension of V5b-T (super-lattice translation-invariant) to lower c regime. No canonical entry needed; subsumed by T-V5b-T discussion.
 
 ### §4.3 What replaces D-5
@@ -216,9 +216,9 @@ What was Phase 3 actually observing? The R3a/R3b transition was real (mode-cross
 
 **NQ-198j (URGENT W6 Day 1)**: Does V5b-T' exist in a *different* regime not tested by NQ-198f? E.g., on torus with mass m perfectly commensurate with lattice (m = k² for integer k)? Or with non-square cluster shape?
 
-**NQ-198k**: V5b-F β-dependence with $|\partial S|$-controlled experiments. NQ-198g varied β but $|\partial S|$ also changed. Need fixed-$|\partial S|$ β-scan (e.g., fix L, c, but adjust IC to give same cluster shape across β).
+**NQ-198k**: V5b-F β-dependence with $\vert \partial S\vert $-controlled experiments. NQ-198g varied β but $\vert \partial S\vert $ also changed. Need fixed-$\vert \partial S\vert $ β-scan (e.g., fix L, c, but adjust IC to give same cluster shape across β).
 
-**NQ-198l**: V5b-F vs V5b-T-zero **continuity**: as graph topology smoothly interpolates from torus to free-BC (e.g., adding boundary edges one by one), does $\mu$ smoothly transition from 0 to $C|\partial S|/n$? Or is there a phase boundary?
+**NQ-198l**: V5b-F vs V5b-T-zero **continuity**: as graph topology smoothly interpolates from torus to free-BC (e.g., adding boundary edges one by one), does $\mu$ smoothly transition from 0 to $C\vert \partial S\vert /n$? Or is there a phase boundary?
 
 **NQ-198m (cancels NQ-198a-c)**: Now that V5b-T' is empirically shown not to exist, several Day 2 Phase 3 spawns become obsolete:
 - NQ-198 (was: V5b-T' Cat A WKB+tight-binding; W7+) — **CANCEL** (no V5b-T' to derive Cat A for).

@@ -201,7 +201,7 @@ The full moduli space $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is a **strati
 
 $$\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \bigsqcup_{I \subseteq \{cl,sep,bd,tr\},\ [H] \leq G} \mathfrak{M}_{I,[H]}$$
 
-where $\mathfrak{M}_{I,[H]} = \{[\Theta] : \lambda|_I = 0 \text{ and } G_{[\Theta]} \in [H]\}$.
+where $\mathfrak{M}_{I,[H]} = \{[\Theta] : \lambda\vert _I = 0 \text{ and } G_{[\Theta]} \in [H]\}$.
 
 **Classification:** DEFINED formally. Detailed computation of each stratum's topology: OPEN.
 
@@ -274,13 +274,13 @@ flow of $V$ is classically defined by Theorem R1 / R2 of
 ### Filippov sliding-mode at $\Sigma_{\mathrm{branch}}$
 
 At a point $\lambda \in \Sigma_{\mathrm{branch}}$ between branches $\alpha$
-and $\alpha'$, $V$ has two one-sided gradients $\nabla V|_{\alpha}(\lambda)$
-and $\nabla V|_{\alpha'}(\lambda)$. The classical projected gradient flow is
+and $\alpha'$, $V$ has two one-sided gradients $\nabla V\vert _{\alpha}(\lambda)$
+and $\nabla V\vert _{\alpha'}(\lambda)$. The classical projected gradient flow is
 not defined. Following piecewise-smooth dynamical systems theory
 (Filippov, *Differential Equations with Discontinuous Right-Hand Side*),
 adopt the **convex-hull convention**:
 
-$$\dot \lambda \in -\Pi_{T_\lambda \Delta^3}\, \mathrm{conv}\bigl\{\nabla V|_{\alpha}(\lambda),\ \nabla V|_{\alpha'}(\lambda)\bigr\}.$$
+$$\dot \lambda \in -\Pi_{T_\lambda \Delta^3}\, \mathrm{conv}\bigl\{\nabla V\vert _{\alpha}(\lambda),\ \nabla V\vert _{\alpha'}(\lambda)\bigr\}.$$
 
 This is a differential inclusion. The flow exists in the Filippov sense
 (by upper hemicontinuity of the convex-hull right-hand side and the Hartman

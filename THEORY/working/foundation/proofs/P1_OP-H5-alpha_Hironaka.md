@@ -69,7 +69,7 @@ $$\mathcal{E}_\Theta(u) = \lambda_{\mathrm{cl}}\,\mathcal{E}_{\mathrm{cl}}(u) + 
 where $\Theta := (\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \alpha, \beta) \in \mathbb{R}^4_{>0}$ (mass $m$ absorbed as $\Sigma_m$ constraint), and the four terms have the explicit polynomial form derived in §3.1 below.
 
 **Definition (Σ_degen)**. The *singular locus*:
-$$\boxed{\;\Sigma_{\mathrm{degen}} := \Bigl\{(\Theta, u) \in \mathbb{R}^4_{>0} \times \Sigma_m \;\Big\vert\; \nabla_{\Sigma_m}\mathcal{E}_\Theta(u) = 0 \;\wedge\; \det\bigl(\mathrm{Hess}\,\mathcal{E}_\Theta(u)|_{T_u\Sigma_m}\bigr) = 0\Bigr\}\;}$$
+$$\boxed{\;\Sigma_{\mathrm{degen}} := \Bigl\{(\Theta, u) \in \mathbb{R}^4_{>0} \times \Sigma_m \;\Big\vert\; \nabla_{\Sigma_m}\mathcal{E}_\Theta(u) = 0 \;\wedge\; \det\bigl(\mathrm{Hess}\,\mathcal{E}_\Theta(u)\vert _{T_u\Sigma_m}\bigr) = 0\Bigr\}\;}$$
 
 **Claim (1)**. $\Sigma_{\mathrm{degen}}$ is a *real algebraic subvariety* (modulo clearing of resolvent denominators; cf. §3.1) of the ambient *semialgebraic* set $\mathbb{R}^4_{>0} \times \Sigma_m$.
 
@@ -88,7 +88,7 @@ hence its complement contains a Zariski-open dense subset.
 **Definition**. The *Morse parameter domain*:
 $$\mathcal{D}_{\mathrm{Morse}}(G, m) := \mathbb{R}^4_{>0} \setminus \mathrm{proj}_\Theta(\Sigma_{\mathrm{degen}}).$$
 
-**Consequence**. By (2), $\mathcal{D}_{\mathrm{Morse}}(G, m)$ is *Zariski-open and dense* (in standard topology). For every $\Theta \in \mathcal{D}_{\mathrm{Morse}}$, the restricted energy $\mathcal{E}_\Theta|_{\Sigma_m}$ is a *Morse function*: every critical point is non-degenerate (Hessian invertible on $T_u\Sigma_m$).
+**Consequence**. By (2), $\mathcal{D}_{\mathrm{Morse}}(G, m)$ is *Zariski-open and dense* (in standard topology). For every $\Theta \in \mathcal{D}_{\mathrm{Morse}}$, the restricted energy $\mathcal{E}_\Theta\vert _{\Sigma_m}$ is a *Morse function*: every critical point is non-degenerate (Hessian invertible on $T_u\Sigma_m$).
 
 ### §1.4 Implication for T-P-F-ε0-K Cat A Path
 
@@ -178,7 +178,7 @@ a polynomial of degree 2 in $u$, degree $\leq n$ in $a_{\mathrm{cl}}$ (from $\de
 *CoT step 2 — Separation term*. canonical:
 $$\mathcal{E}_{\mathrm{sep}}(u) = -\frac{\sum_i u_i D_i}{\sum_i u_i}, \quad D_i := \text{degree-weighted distinction (graph-fixed)}.$$
 On $\Sigma_m$, the denominator $\sum_i u_i = m$ is *constant*. Hence
-$$\mathcal{E}_{\mathrm{sep}}(u)|_{\Sigma_m} = -\frac{1}{m}\sum_i u_i D_i,$$
+$$\mathcal{E}_{\mathrm{sep}}(u)\vert _{\Sigma_m} = -\frac{1}{m}\sum_i u_i D_i,$$
 which is *linear in $u$* (degree 1), independent of $\Theta$ except for the $\lambda_{\mathrm{sep}}$ prefactor (degree 1 in $\lambda_{\mathrm{sep}}$).
 
 *Gotcha #5 (E1)*: the rational form $\sum u_i D_i / \sum u_i$ in *general* (off $\Sigma_m$) would obstruct polynomiality; *restriction to $\Sigma_m$* (mass constraint enforced) is what makes it polynomial. This is the *explicit* polynomial form claimed in canonical §13.
@@ -249,7 +249,7 @@ This lemma is the *core remaining gap* (E1 §8 Step 2). Decompose into three sub
 
 *Claim 1*. The first $n-1$ rows of $J$ — i.e., partials of $\bigl(\nabla_{\Sigma_m}\widetilde{\mathcal{E}}\bigr)_i$ — are linearly independent on the Zariski-open subset of $\Sigma_{\mathrm{degen}}$ where $\nabla_{\Sigma_m}\widetilde{\mathcal{E}}$ is non-singular.
 
-*Argument*. The block $\frac{\partial \nabla_{\Sigma_m}\widetilde{\mathcal{E}}}{\partial u}|_{T_u\Sigma_m}$ is *precisely* the projected Hessian $\mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}}$, an $(n-1) \times (n-1)$ matrix. The first $n-1$ rows of $J$ contain this $(n-1) \times (n-1)$ block (under $\partial/\partial u$ columns) plus $(n-1) \times 4$ block (under $\partial/\partial\Theta$).
+*Argument*. The block $\frac{\partial \nabla_{\Sigma_m}\widetilde{\mathcal{E}}}{\partial u}\vert _{T_u\Sigma_m}$ is *precisely* the projected Hessian $\mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}}$, an $(n-1) \times (n-1)$ matrix. The first $n-1$ rows of $J$ contain this $(n-1) \times (n-1)$ block (under $\partial/\partial u$ columns) plus $(n-1) \times 4$ block (under $\partial/\partial\Theta$).
 
 Linear independence of the $n-1$ rows fails iff this $(n-1) \times (n+3)$ submatrix has rank $< n-1$. But on $\Sigma_{\mathrm{degen}}$ we *only* know $\det\mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}} = 0$ — this means the *$u$-block* alone can have rank $< n-1$; however the full $(n-1)\times(n+3)$ matrix has *extra columns* from $\partial/\partial\Theta$.
 
@@ -300,7 +300,7 @@ is *quadratic* in $\xi$. Generic $\xi$ (the null direction of $H$) produces a 4-
 - $H^{(3)} = 4L$ (Laplacian, factor 4 per CLAUDE.md "Critical Implementation Details");
 - $H^{(4)} = \mathrm{diag}(W''(u_i)) = \mathrm{diag}(2(1 - 6u_i + 6u_i^2))$ (per-vertex).
 
-**CRITICAL OBSERVATION**: $H^{(2)} = 0$! The separation Hessian vanishes because $\mathcal{E}_{\mathrm{sep}}|_{\Sigma_m}$ is *linear* in $u$ (L1 step 2). This forces $\xi^\top H^{(2)}\xi = 0$ for *all* $\xi$ — a *non-trivial structural dependence*.
+**CRITICAL OBSERVATION**: $H^{(2)} = 0$! The separation Hessian vanishes because $\mathcal{E}_{\mathrm{sep}}\vert _{\Sigma_m}$ is *linear* in $u$ (L1 step 2). This forces $\xi^\top H^{(2)}\xi = 0$ for *all* $\xi$ — a *non-trivial structural dependence*.
 
 This means the 4-vector $(\xi^\top H^{(j)}\xi)_j$ always has a *zero $j=2$ component*. The corresponding column in the gradient-rows $\Theta$-block is $\nabla\mathcal{E}_{\mathrm{sep}} = -\tfrac{1}{m} D$ — *non-zero* generically.
 

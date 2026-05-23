@@ -3,7 +3,7 @@
 # 08 — Orbital Discovery Program: From Metaphor to Substantive Theory
 
 **Session:** 2026-04-23 (continuation; user instruction: 오비탈 유비가 진짜 연결되려면 **다양한 모양이 특정되고 발견되어야 함**. 확률분포 / boundary-blurring / mode-identity / invisible-made-visible 관점 포함).
-**Target:** (i) 확률분포 parallel 정형화 (u_field ↔ $|\psi|^2$); (ii) mode identity가 경계 흐릿에도 불구하고 robust하다는 점 증명; (iii) "invisible made visible" 의미 정확화 + SCC에서 보이지 않는 구조 enumerate; (iv) **per-graph 구체적 orbital enumeration** (2D sq, 2D torus, 1D cycle, $K_n$, trees); (v) **Discovery protocol** — SCC에서 orbital을 실제로 발견하는 알고리즘.
+**Target:** (i) 확률분포 parallel 정형화 (u_field ↔ $\vert \psi\vert ^2$); (ii) mode identity가 경계 흐릿에도 불구하고 robust하다는 점 증명; (iii) "invisible made visible" 의미 정확화 + SCC에서 보이지 않는 구조 enumerate; (iv) **per-graph 구체적 orbital enumeration** (2D sq, 2D torus, 1D cycle, $K_n$, trees); (v) **Discovery protocol** — SCC에서 orbital을 실제로 발견하는 알고리즘.
 **Depends on:** `07_shape_modes_orbital_hypothesis.md` (orbital hypothesis 정형화, S1' Axiom), `canonical.md` §13 T-Birth-Parametric (D_4 pitchfork), `working/SF/symmetry_moduli.md` (Round 4 equivariant CR), `working/SF/mode_count.md` (Prop 1.3a/b spectral base).
 
 ---
@@ -16,7 +16,7 @@
 
 네 가지 논점으로 분해:
 
-- **(P1)** 확률 분포 유비: atomic orbital은 sharp boundary가 아닌 continuous $|\psi|^2$. SCC의 $u$도 그렇다 (soft cohesion).
+- **(P1)** 확률 분포 유비: atomic orbital은 sharp boundary가 아닌 continuous $\vert \psi\vert ^2$. SCC의 $u$도 그렇다 (soft cohesion).
 - **(P2)** Mode-identity robustness: boundary가 흐릿해도 **mode label은 이산**이고 robust.
 - **(P3)** 보이지 않는 상태의 가시화: orbital 관점은 기존 관측 (classical density)이 놓치는 구조를 드러낸다.
 - **(P4)** Substantive challenge: 진짜 연결이 되려면 **구체적 shape enumeration** + **실제 discovery**가 있어야.
@@ -30,8 +30,8 @@
 ### 2.1 Atomic orbital
 
 Quantum mechanics:
-- Wave function $\psi(\mathbf{r}, t) \in \mathbb{C}$, normalized $\int |\psi|^2 d^3r = 1$.
-- Probability density $\rho(\mathbf{r}) := |\psi(\mathbf{r})|^2 \in [0, \infty)$ with $\int \rho = 1$.
+- Wave function $\psi(\mathbf{r}, t) \in \mathbb{C}$, normalized $\int \vert \psi\vert ^2 d^3r = 1$.
+- Probability density $\rho(\mathbf{r}) := \vert \psi(\mathbf{r})\vert ^2 \in [0, \infty)$ with $\int \rho = 1$.
 - $\rho$는 **asymptotic exponential decay** — sharp boundary 없음.
 - Orbital SHAPE: labels $(n, \ell, m)$. Radial factor + spherical harmonic $Y_{\ell m}$.
 - $\rho$는 연속 scalar field; **orbital label은 이산**.
@@ -49,7 +49,7 @@ Soft Cognitive Cohesion:
 
 | 구조 | Quantum orbital | SCC cohesion |
 |---|---|---|
-| 연속 scalar 장 | $\rho = |\psi|^2 \in [0, \infty)$ | $u \in [0, 1]$ |
+| 연속 scalar 장 | $\rho = \vert \psi\vert ^2 \in [0, \infty)$ | $u \in [0, 1]$ |
 | 정규화 | $\int \rho = 1$ | $\sum u_i = m$ |
 | Soft boundary | Exponential tails $\rho \sim e^{-r/a_0}$ | Sigmoid $u \sim \tanh(r/\xi_0)$ |
 | 기저 방정식 | Schrödinger $H\psi = E\psi$ | Variational $\nabla\mathcal{E}(u) = 0$ (KKT) |
@@ -69,7 +69,7 @@ Quantum mechanics는 **spectroscopy**로 orbital label을 직접 관측 (photon 
 
 ### 3.1 왜 이산 label이 연속 분포를 살아남는가
 
-**Hydrogen atom**: 2p orbital과 3d orbital의 $|\psi|^2$은 **continuous smooth functions**. 둘 다 exponential tails. 그러나 각각 고유한:
+**Hydrogen atom**: 2p orbital과 3d orbital의 $\vert \psi\vert ^2$은 **continuous smooth functions**. 둘 다 exponential tails. 그러나 각각 고유한:
 - **Radial node 수**: 2p = 0, 3d = 0. 2s = 1.
 - **Angular pattern**: s (spherical), p (dumbbell), d (four-lobe or donut).
 - **에너지**: 2p는 3d보다 낮음.

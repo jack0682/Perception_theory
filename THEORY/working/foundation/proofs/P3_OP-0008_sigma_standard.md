@@ -69,8 +69,8 @@
 $$\sigma_{\mathrm{std}}(C_j^t) := \mathrm{sort}_{\downarrow}\bigl(\mathrm{spec}(H_{jj}(u^{(j)*}))\bigr) \in \mathbb{R}^{n_j}_{\geq 0}$$
 
 여기서:
-- $H_{jj}(u^{(j)*}) = \nabla^2 \mathcal{E}_K(\mathbf{u}^*)|_{jj\text{-block}}$ — formation $j$ 의 self-Hessian block.
-- $n_j = |\mathrm{supp}(u^{(j)})| = \lvert C_j^t \rvert$ — formation $j$ 의 node 수.
+- $H_{jj}(u^{(j)*}) = \nabla^2 \mathcal{E}_K(\mathbf{u}^*)\vert _{jj\text{-block}}$ — formation $j$ 의 self-Hessian block.
+- $n_j = \vert \mathrm{supp}(u^{(j)})\vert = \lvert C_j^t \rvert$ — formation $j$ 의 node 수.
 - $\mathrm{sort}_{\downarrow}$ — 내림차순 정렬 (Commitment 14 (O5')).
 - well-separated regime 에서 Coupling Bound Lemma (`canonical.md §12`) 에 의해 $H_{jj} = H_{\mathrm{single}}(u^{(j)*}) + O(\exp(-c_0 D_{\mathrm{sep}}))$.
 
@@ -257,7 +257,7 @@ $\Box$ (Cat A).
 
 ### §3.2 Lemma L_a2 — Kato type-A convergence condition
 
-**Statement**. Define $\varepsilon := \lVert V_{\mathrm{coup}} \rVert_F / \delta_{\min}$, where $\delta_{\min} := \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (spectral gap of $H_0$). If $\varepsilon < 1/2$, then the Kato analytic perturbation series for $H(\tau) = H_0 + \tau V_{\mathrm{coup}}$ converges uniformly on $|\tau| \leq 1$, and each eigenvalue $\lambda_a(\tau)$ is analytic in $\tau$.
+**Statement**. Define $\varepsilon := \lVert V_{\mathrm{coup}} \rVert_F / \delta_{\min}$, where $\delta_{\min} := \min_{a \neq b} \vert \lambda_a^{(0)} - \lambda_b^{(0)}\vert $ (spectral gap of $H_0$). If $\varepsilon < 1/2$, then the Kato analytic perturbation series for $H(\tau) = H_0 + \tau V_{\mathrm{coup}}$ converges uniformly on $\vert \tau\vert \leq 1$, and each eigenvalue $\lambda_a(\tau)$ is analytic in $\tau$.
 
 **Proof (CoT)**:
 
@@ -266,8 +266,8 @@ $$\lVert V_{\mathrm{coup}} f \rVert \leq \lVert V_{\mathrm{coup}} \rVert_{\mathr
 (operator norm bound by Frobenius). Hence $a = 0, b = \lVert V_{\mathrm{coup}} \rVert_F < 1$ in Kato-Rellich form for type-A (Kato 1995 §VII.2 Theorem 2.6).
 
 **Step 2**: Convergence radius (Kato 1995 Theorem IV-3.6, Reed-Simon IV §XIII.5):
-$$|\tau| < \tau_a^* := \frac{\delta_a}{2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}}$$
-where $\delta_a := \min_{b \neq a} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (gap from eigenvalue $a$). The uniform convergence radius is $\tau^* := \min_a \tau_a^* = \delta_{\min} / (2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$.
+$$\vert \tau\vert < \tau_a^* := \frac{\delta_a}{2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}}$$
+where $\delta_a := \min_{b \neq a} \vert \lambda_a^{(0)} - \lambda_b^{(0)}\vert $ (gap from eigenvalue $a$). The uniform convergence radius is $\tau^* := \min_a \tau_a^* = \delta_{\min} / (2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$.
 
 **Step 3**: $\tau^* > 1 \iff \delta_{\min} > 2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}$, equivalently $\varepsilon := \lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}/\delta_{\min} < 1/2$.
 
@@ -290,7 +290,7 @@ $$\lambda_a(1) = \lambda_a^{(0)} + \delta\lambda_a^{(1)} + \delta\lambda_a^{(2)}
 with:
 - $\lambda_a^{(0)}$ = eigenvalue of $H_0$, simple.
 - $\delta\lambda_a^{(1)} = \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_a^{(0)} \rangle$ (first-order Rayleigh-Schrödinger).
-- $\delta\lambda_a^{(2)} = \sum_{b \neq a} \frac{|\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$ (second-order).
+- $\delta\lambda_a^{(2)} = \sum_{b \neq a} \frac{\vert \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$ (second-order).
 
 Crucially, $\phi_a^{(0)}$ (eigenvectors of $H_0 = H_1 \oplus H_2$) decompose as:
 - $\phi_a^{(0)} = (\phi_a^{(1)}, 0)$ if $\lambda_a^{(0)} \in \mathrm{spec}(H_1)$.
@@ -298,13 +298,13 @@ Crucially, $\phi_a^{(0)}$ (eigenvectors of $H_0 = H_1 \oplus H_2$) decompose as:
 
 Therefore:
 - $\delta\lambda_a^{(1)} = 0$ (since $V_{\mathrm{coup}}$ is off-block-diagonal, $\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_a^{(0)} \rangle = 0$).
-- $\delta\lambda_a^{(2)} = \sum_{b: \lambda_b^{(0)} \in \mathrm{spec}(H_{\bar{\mathrm{block}}(a)})} \frac{|\langle \phi_a^{(1)}, V_{12} \phi_b^{(2)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$ where $\bar{\mathrm{block}}(a)$ denotes the opposite block.
+- $\delta\lambda_a^{(2)} = \sum_{b: \lambda_b^{(0)} \in \mathrm{spec}(H_{\bar{\mathrm{block}}(a)})} \frac{\vert \langle \phi_a^{(1)}, V_{12} \phi_b^{(2)} \rangle\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$ where $\bar{\mathrm{block}}(a)$ denotes the opposite block.
 
 **Proof (CoT)**:
 
 **Step 1**: Kato resolvent expansion (Reed-Simon IV §XIII.5 eq. (XIII.21)):
 $$R(\zeta; \tau) := (H_0 + \tau V_{\mathrm{coup}} - \zeta I)^{-1} = R_0(\zeta) \cdot \sum_{k=0}^\infty [-\tau V_{\mathrm{coup}} R_0(\zeta)]^k$$
-convergent for $|\tau| < \delta_{\min}/(2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$ (by L_a2).
+convergent for $\vert \tau\vert < \delta_{\min}/(2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$ (by L_a2).
 
 **Step 2**: Eigenvalue extraction via contour integral over small circle $\Gamma_a$ around $\lambda_a^{(0)}$:
 $$P_a(\tau) := \frac{-1}{2\pi i} \oint_{\Gamma_a} R(\zeta; \tau) \, d\zeta = P_a^{(0)} + \tau P_a^{(1)} + \tau^2 P_a^{(2)} + \cdots$$
@@ -313,7 +313,7 @@ $$P_a(\tau) := \frac{-1}{2\pi i} \oint_{\Gamma_a} R(\zeta; \tau) \, d\zeta = P_a
 **Step 3**: Eigenvalue:
 $$\lambda_a(\tau) = \frac{\mathrm{tr}(H(\tau) P_a(\tau))}{\mathrm{tr}(P_a(\tau))}$$
 1-dimensional projector ($\mathrm{tr}(P_a^{(0)}) = 1$ by simple eigenvalue): Taylor expansion at $\tau = 0$ yields standard Rayleigh-Schrödinger formula:
-$$\lambda_a(\tau) = \lambda_a^{(0)} + \tau \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_a^{(0)} \rangle + \tau^2 \sum_{b \neq a} \frac{|\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\tau^3)$$
+$$\lambda_a(\tau) = \lambda_a^{(0)} + \tau \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_a^{(0)} \rangle + \tau^2 \sum_{b \neq a} \frac{\vert \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\tau^3)$$
 
 **Step 4**: Block structure exploitation. Since $H_0 = H_1 \oplus H_2$, eigenvectors split:
 $$\phi_a^{(0)} = \begin{pmatrix} \phi_a^{(1)} \\ 0 \end{pmatrix} \text{ or } \begin{pmatrix} 0 \\ \phi_a^{(2)} \end{pmatrix}$$
@@ -330,10 +330,10 @@ $$\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle = (\phi_a^{(1)})^
 For $b$ in *same block* as $a$ (both in block 1):
 $$\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle = (\phi_a^{(1)})^\top \cdot 0 + 0 = 0$$
 Hence only *cross-block* coupling contributes:
-$$\delta\lambda_a^{(2)} = \sum_{b: \phi_b^{(0)} \in \text{opposite block}} \frac{|(\phi_a^{(1)})^\top V_{12} \phi_b^{(2)}|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$$
+$$\delta\lambda_a^{(2)} = \sum_{b: \phi_b^{(0)} \in \text{opposite block}} \frac{\vert (\phi_a^{(1)})^\top V_{12} \phi_b^{(2)}\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$$
 
 **Step 6**: Magnitude. Each numerator $\leq \lVert V_{12} \rVert^2_{\mathrm{op}} \leq \lVert V_{\mathrm{coup}} \rVert^2_F$; sum over $\sim n_{\bar{\mathrm{block}}(a)}$ terms; denominator $\geq \delta_{\min}$. Hence:
-$$|\delta\lambda_a^{(2)}| \leq \frac{n_{\bar{\mathrm{block}}(a)} \cdot \lVert V_{\mathrm{coup}} \rVert^2_F}{\delta_{\min}} = O\!\left(\frac{n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}}}{\delta_{\min}}\right)$$
+$$\vert \delta\lambda_a^{(2)}\vert \leq \frac{n_{\bar{\mathrm{block}}(a)} \cdot \lVert V_{\mathrm{coup}} \rVert^2_F}{\delta_{\min}} = O\!\left(\frac{n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}}}{\delta_{\min}}\right)$$
 
 **Step 7**: Φ_Kato map definition:
 $$\Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}}) := \mathrm{sort}_{\downarrow}\left\{\lambda_a^{(0)} + \delta\lambda_a^{(2)} + O(\lVert V_{\mathrm{coup}} \rVert^3) : a = 1, \ldots, n_1 + n_2\right\}$$
@@ -406,7 +406,7 @@ with $C_m = \binom{2m}{m}/(m+1)$ (Catalan number). For odd $k = 2m+1$: $= 0$.
 **Step 4**. Convergence in probability → almost sure (AGZ Theorem 2.1.21, Borel-Cantelli + concentration).
 
 **Step 5** (Self-averaging variance). By Lipschitz continuity of $\mathrm{tr}(f(W_n))/n$ in $W_n$ entries (with Lipschitz constant $O(1/\sqrt{n})$) + Gaussian concentration (Herbst):
-$$\Pr(|\mu_{W_n}(I) - \mathbb{E}\mu_{W_n}(I)| > t) \leq 2 \exp(-c n t^2 / \lVert I \rVert_{\mathrm{Lip}}^2)$$
+$$\Pr(\vert \mu_{W_n}(I) - \mathbb{E}\mu_{W_n}(I)\vert > t) \leq 2 \exp(-c n t^2 / \lVert I \rVert_{\mathrm{Lip}}^2)$$
 Hence $\mathrm{Var}(\mu_{W_n}(I)) = \int_0^\infty 2t \Pr(\cdots > t) dt = O(1/n)$.
 
 $\Box$ (Cat A, direct AGZ citation).
@@ -488,7 +488,7 @@ with configuration-specific constants $C, c > 0$.
 
 **Sub-step 1**: Kato limit as $d_{\mathrm{inter}} \to \infty$.
 
-By L_a3 Step 6, $|\delta\lambda_a^{(2)}| \leq O(n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$. Higher-order corrections $\delta\lambda_a^{(k \geq 3)} \leq O(e^{-k c_0 d_{\mathrm{inter}}})$. Therefore:
+By L_a3 Step 6, $\vert \delta\lambda_a^{(2)}\vert \leq O(n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$. Higher-order corrections $\delta\lambda_a^{(k \geq 3)} \leq O(e^{-k c_0 d_{\mathrm{inter}}})$. Therefore:
 $$\lim_{d_{\mathrm{inter}} \to \infty} \Phi_{\mathrm{Kato}} = \mathrm{sort}_{\downarrow}\bigl(\sigma^{(1)} \cup \sigma^{(2)}\bigr) \setminus \{\text{mass-mode}\}$$
 i.e., the unperturbed block-decoupled spectrum. **Convergence rate**: $\lVert \Phi_{\mathrm{Kato}} - (\sigma^{(1)} \cup \sigma^{(2)}) \rVert_2 \leq O(n^{1/2} \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$ (Cat A).
 
@@ -504,7 +504,7 @@ Two limits *both yield* $\sigma^{(1)} \cup \sigma^{(2)}$, but at *different rate
 - Kato: $e^{-2 c_0 d_{\mathrm{inter}}}$ (exponential in $d_{\mathrm{inter}}$).
 - RMT: $1/\sqrt{n_{\mathrm{merged}}}$ (polynomial in $n_{\mathrm{merged}}$).
 
-Question: can we bound $|\Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n|$ uniformly on $\mathcal{D}_{\mathrm{conv}}$?
+Question: can we bound $\vert \Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n\vert $ uniformly on $\mathcal{D}_{\mathrm{conv}}$?
 
 **Sketch (Cat B)**:
 Triangle inequality:

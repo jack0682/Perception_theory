@@ -106,7 +106,7 @@ K-jump event $t^*$ with $\Delta K_{\mathrm{act}} = 1$ (single merger): trajector
 ### §3.3 Goresky-MacPherson stratified Morse applicability
 
 Stratified Morse theory (Goresky-MacPherson 1988) applies to Whitney-stratified spaces. For $\widetilde\Sigma^K_M$:
-- Critical points of $\mathcal{E}_K|_{\widetilde\Sigma^K_M}$ are *stratum-wise critical*.
+- Critical points of $\mathcal{E}_K\vert _{\widetilde\Sigma^K_M}$ are *stratum-wise critical*.
 - Morse index well-defined per stratum.
 - Inter-stratum analysis via tangent cone variation theorem.
 

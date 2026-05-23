@@ -488,7 +488,7 @@ If MO-1 Option B (stratified Morse) chosen and substantively progressed:
 
 격상 후보 5개:
 
-**Lemma 1** (irrep decomposition well-defined). Let $u^* \in \Sigma_m$ be Morse-0 local minimum of full $\mathcal{E}$. Let $G_u = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) \subseteq \mathrm{Aut}(G)$ be the residual automorphism group. The Hessian $H = \nabla^2 \mathcal{E}|_{T\Sigma_m}(u^*)$ commutes with the $G_u$-action on $T_{u^*}\Sigma_m$. Therefore, eigenspaces of $H$ decompose into $G_u$-isotypic components. Each non-trivial eigenspace carries a unique irrep label $[\rho_k] \in \mathrm{Irr}(G_u)$ (uniqueness up to multiplicity within isotypic).
+**Lemma 1** (irrep decomposition well-defined). Let $u^* \in \Sigma_m$ be Morse-0 local minimum of full $\mathcal{E}$. Let $G_u = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) \subseteq \mathrm{Aut}(G)$ be the residual automorphism group. The Hessian $H = \nabla^2 \mathcal{E}\vert _{T\Sigma_m}(u^*)$ commutes with the $G_u$-action on $T_{u^*}\Sigma_m$. Therefore, eigenspaces of $H$ decompose into $G_u$-isotypic components. Each non-trivial eigenspace carries a unique irrep label $[\rho_k] \in \mathrm{Irr}(G_u)$ (uniqueness up to multiplicity within isotypic).
 
 **Lemma 2** (nodal count properties). For Hessian eigenvector $\phi_k$ at minimizer $u^*$:
 (i) Courant nodal count $n_k = \#\{\text{connected components of } \{x : \phi_k(x) > 0\}\} + \#\{\text{components of } \{x : \phi_k(x) < 0\}\}$.
@@ -1042,7 +1042,7 @@ Continuum-limit family Morse-Bott refinement. Critical orbits = submanifolds of 
 
 #### A-2026-04-22-R5-02: $C_n$ Lock-In Theorem
 
-$F(r, \theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ (even) or $2n$ (odd at $c=1/2$). Lock-in energy $\Delta F \sim |\mu|^{p(n)/2}$.
+$F(r, \theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ (even) or $2n$ (odd at $c=1/2$). Lock-in energy $\Delta F \sim \vert \mu\vert ^{p(n)/2}$.
 
 **Proposed canonical merge**: §13 new entry T-Cn-LockIn (Cat A).
 
@@ -1122,9 +1122,9 @@ W4-04-23: 8 hypotheses (H-T1..4 time, H-Th1..4 thermal).
 
 #### Sub-task 6.1 (09:00-11:00, 2h): H-Th2 development
 
-Basin-volume-weighted: $P(\text{basin } k | \beta) = \frac{V_k \cdot e^{-E_k/T_{eff}}}{\sum_j V_j \cdot e^{-E_j/T_{eff}}}$ where $V_k$ = basin volume.
+Basin-volume-weighted: $P(\text{basin } k \vert \beta) = \frac{V_k \cdot e^{-E_k/T_{eff}}}{\sum_j V_j \cdot e^{-E_j/T_{eff}}}$ where $V_k$ = basin volume.
 
-**Cat B target**: With $V_k$ from Hessian determinant → $V_k \propto |\det H_k|^{-1/2}$. Boltzmann correction이 $T \to 0$ limit에서 *thermo가 아니라 dynamic*임을 보임.
+**Cat B target**: With $V_k$ from Hessian determinant → $V_k \propto \vert \det H_k\vert ^{-1/2}$. Boltzmann correction이 $T \to 0$ limit에서 *thermo가 아니라 dynamic*임을 보임.
 
 W4-04-22 X1 V7 P3 1 data point 사용 + theoretical derivation.
 

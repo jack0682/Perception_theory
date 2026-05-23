@@ -122,7 +122,7 @@ $$\sigma_{\text{multi}}^{(A)}(\mathbf{u}^*) = \big(\mathcal{F}; \{\sigma_j\}_{j=
 **Failure modes**:
 (M1) **Tensor-space irrep handling**: Under the *full* joint stabilizer $G_{\mathbf{u}}$ (which includes $S_K$ permutation when formations are interchangeable), σ_jk is not a per-pair invariant — pair labels (j, k) are permuted by $S_K$, and the σ_jk tuple must be canonically associated to *unordered pairs*, not ordered pairs. This is fixable via multi-set treatment, but adds complexity.
 (M2) **Boundary handling**: At $\Sigma^K_M$ corners (some $u^{(j)}_i = 0$ or $= 1$), the diagonal blocks $H_{jj}$ may not be defined as Morse-Hessians (touching boundary). MO-1 issue. σ_j undefined at corners.
-(M3) **Beyond well-separated**: Coupling Bound Lemma assumes $\lvert O_{jk} \rvert \leq 0.2 \cdot \min(|\text{Core}_j|, |\text{Core}_k|)$ (well-separated regime). For overlapping formations (T-Persist-K-Weak regime), the off-diagonal $H_{jk}$ is no longer $\lambda_{\text{rep}} I$ + exp-small correction; it can be a complex spatial pattern. σ_jk extraction becomes messy.
+(M3) **Beyond well-separated**: Coupling Bound Lemma assumes $\lvert O_{jk} \rvert \leq 0.2 \cdot \min(\vert \text{Core}_j\vert, \vert \text{Core}_k\vert)$ (well-separated regime). For overlapping formations (T-Persist-K-Weak regime), the off-diagonal $H_{jk}$ is no longer $\lambda_{\text{rep}} I$ + exp-small correction; it can be a complex spatial pattern. σ_jk extraction becomes messy.
 
 **Strengths**:
 (P1) Most direct generalization of Commitment 14 — every single-formation σ_j is the Commitment 14 σ unchanged; cross-block σ_jk is new but conceptually parallel.
@@ -283,7 +283,7 @@ Let $G_{\mathbf{u}^*, jk} := \mathrm{Stab}_{\mathrm{Aut}(G) \wr S_2}(u^{(j)*}, u
 Define σ_jk-tuple via:
 - **Cross-eigenvalue tuple**: $(\lambda_{jk}^{(p)})_{p=1}^{n_j + n_k}$ where $\lambda_{jk}^{(p)}$ are eigenvalues of $\tilde H_{jk}$ in increasing order.
 - **Cross-irrep tuple**: $([\rho_{jk}^{(p)}])_{p}$ where $[\rho_{jk}^{(p)}]$ is the irrep of the $p$-th eigenvector of $\tilde H_{jk}$ under $G_{\mathbf{u}^*, jk}$ acting on the joint pair tangent space.
-- **Cross-nodal tuple**: $(n_{jk}^{(p)})_p$ where $n_{jk}^{(p)}$ is the Courant nodal count of the $p$-th eigenvector restricted to *each* formation's component (definition: $n_{jk}^{(p)} := (\mathcal{N}(v_p|_j), \mathcal{N}(v_p|_k))$ — pair of integers, one per formation; total nodal "size" if scalarization needed).
+- **Cross-nodal tuple**: $(n_{jk}^{(p)})_p$ where $n_{jk}^{(p)}$ is the Courant nodal count of the $p$-th eigenvector restricted to *each* formation's component (definition: $n_{jk}^{(p)} := (\mathcal{N}(v_p\vert _j), \mathcal{N}(v_p\vert _k))$ — pair of integers, one per formation; total nodal "size" if scalarization needed).
 
 $\sigma_{jk} := \big( \{(n_{jk}^{(p)}, [\rho_{jk}^{(p)}], \lambda_{jk}^{(p)})\}_p \big)$ — the multi-tuple of cross-eigenvalue triples.
 
@@ -336,7 +336,7 @@ Take $G = $ 2D torus $T^2_L$, $L = 20$. Two K=2 configurations:
 
 **Config 1**: Two well-separated tanh-disk formations $u^{(1), (1)}, u^{(1), (2)}$ at distance $d_{\min}^{(1)} = 8$ from each other (well-separated regime, $\lvert O_{12} \rvert = 0$).
 
-**Config 2**: Same per-formation profiles but at distance $d_{\min}^{(2)} = 5$ (still well-separated per WI assumption $\lvert O \rvert \leq 0.2 \min |\text{Core}|$, but tighter).
+**Config 2**: Same per-formation profiles but at distance $d_{\min}^{(2)} = 5$ (still well-separated per WI assumption $\lvert O \rvert \leq 0.2 \min \vert \text{Core}\vert $, but tighter).
 
 Each config has same per-formation σ_j (same single-disk minimizers, same individual $H_{jj}$ spectrum). But:
 

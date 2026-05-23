@@ -206,7 +206,7 @@ Problem: $(n, \ell)$ 은 atomic QM 용어. "Dominant" 는 vague.
 
 > **Axiom S1' (Cohesion Mode Quantization).** Let $u^*$ be a Morse-index-0 local minimum of $\mathcal{E}[u]$ on $\Sigma_m$. Then:
 >
-> (i) $\mathcal{F}(u^*) := |\{i \in X : u^*(i) > u^*(j) \ \forall j \sim i\}| \in \mathbb{Z}_{\geq 1}$ is well-defined.
+> (i) $\mathcal{F}(u^*) := \vert \{i \in X : u^*(i) > u^*(j) \ \forall j \sim i\}\vert \in \mathbb{Z}_{\geq 1}$ is well-defined.
 >
 > (ii) For each $k = 1, \ldots, K$ where $K$ is spectral-dimension cutoff, the $k$-th lowest nontrivial (post-Goldstone) eigenvector $\phi_k$ of $\mathrm{Hess}\,\mathcal{E}(u^*)$ admits:
 >    - nodal domain count $n_k \in \mathbb{Z}_{\geq 0}$ (M3, graph-intrinsic)

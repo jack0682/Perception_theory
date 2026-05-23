@@ -210,7 +210,7 @@ $$\Gamma^{K \to K-1}(\mathcal{P}) = \sum_{j < k,\, j,k \in A_{K}} A_{K \to K-1}^
 
 ### §6.2 Prefactor (Eyring-Kramers form)
 
-$$A^{(jk)}_{K \to K-1}(\mathcal{P}) = \frac{|\lambda_-^{(jk)}|}{2\pi} \sqrt{\frac{\det H_{\min,K}(\mathcal{P})}{\bigl|\det' H_{\text{saddle}}^{(jk)}(\mathcal{P})\bigr|}}$$
+$$A^{(jk)}_{K \to K-1}(\mathcal{P}) = \frac{\vert \lambda_-^{(jk)}\vert}{2\pi} \sqrt{\frac{\det H_{\min,K}(\mathcal{P})}{\bigl\vert \det' H_{\text{saddle}}^{(jk)}(\mathcal{P})\bigr\vert}}$$
 
 where:
 - $\lambda_-^{(jk)}$: the unique negative eigenvalue of $H_{\text{saddle}}^{(jk)}$ (index-1 saddle condition).
@@ -310,13 +310,13 @@ The saddle-point field $u_{\text{saddle}}^{(jk)}$ has a well-defined $\sigma$-si
 
 Under continuum limit of SCC on $\mathcal{P}_t$, with $\mathcal{P}_t$ approximating the visible scene surface $S_t \subset \mathbb{R}^3$:
 
-$$\mathcal{E}_{\text{SCC}}[\tilde{u};S_t] \to \int_{S_t} \left[\frac{\alpha}{2} \bigl|\nabla_{S_t}\tilde{u}\bigr|^2 + \beta W(\tilde{u})\right] dA_{S_t}$$
+$$\mathcal{E}_{\text{SCC}}[\tilde{u};S_t] \to \int_{S_t} \left[\frac{\alpha}{2} \bigl\vert \nabla_{S_t}\tilde{u}\bigr\vert ^2 + \beta W(\tilde{u})\right] dA_{S_t}$$
 
 where $\nabla_{S_t}$ is the surface gradient (Laplace-Beltrami), $dA_{S_t}$ is the surface area element, and $W(u) = u^2(1-u)^2$ is the double-well potential.
 
 **Mechanistic correspondence:**
-- $E_{\text{cl}} = \lVert (I-P)\tilde{u} \rVert^2 \approx \epsilon^2 \int_{S_t} |\nabla_{S_t}\tilde{u}|^2 dA_{S_t}$ (Laplace-Beltrami approximation of closure energy; $\epsilon$ = graph mesh scale).
-- $E_{\text{bd}} = 2\alpha \tilde{u}^T L \tilde{u} \approx \frac{\alpha}{2}\int_{S_t}|\nabla_{S_t}\tilde{u}|^2 dA_{S_t}$ (boundary energy as Dirichlet form).
+- $E_{\text{cl}} = \lVert (I-P)\tilde{u} \rVert^2 \approx \epsilon^2 \int_{S_t} \vert \nabla_{S_t}\tilde{u}\vert ^2 dA_{S_t}$ (Laplace-Beltrami approximation of closure energy; $\epsilon$ = graph mesh scale).
+- $E_{\text{bd}} = 2\alpha \tilde{u}^T L \tilde{u} \approx \frac{\alpha}{2}\int_{S_t}\vert \nabla_{S_t}\tilde{u}\vert ^2 dA_{S_t}$ (boundary energy as Dirichlet form).
 - $E_{\text{sep}}$: phase separation, proportional to $\int W(\tilde{u}) dA$.
 
 This is an Allen-Cahn equation on the visible 2D surface $S_t$ embedded in $\mathbb{R}^3$. The Allen-Cahn coarsening exponent in 2D is $t^{1/3}$ (area law by Bray 1994). The LSW (Lifshitz-Slyozov-Wagner) coarsening exponent for 2D Ostwald ripening is $t^{1/3}$.

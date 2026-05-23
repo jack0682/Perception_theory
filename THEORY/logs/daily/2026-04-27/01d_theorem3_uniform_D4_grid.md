@@ -13,7 +13,7 @@
 
 ## §1. Setup
 
-$G$ = free-BC $L \times L$ 2D square grid. $\lvert X \rvert = n = L^2$. $\Gamma = \mathrm{Aut}(G) = D_4$ (4 rotations + 4 reflections about grid center; $|\Gamma| = 8$). Combinatorial Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1^{\mathrm{Lap}} < \lambda_2^{\mathrm{Lap}} \leq \cdots \leq \lambda_n^{\mathrm{Lap}}$.
+$G$ = free-BC $L \times L$ 2D square grid. $\lvert X \rvert = n = L^2$. $\Gamma = \mathrm{Aut}(G) = D_4$ (4 rotations + 4 reflections about grid center; $\vert \Gamma\vert = 8$). Combinatorial Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1^{\mathrm{Lap}} < \lambda_2^{\mathrm{Lap}} \leq \cdots \leq \lambda_n^{\mathrm{Lap}}$.
 
 Take $u^* = c\mathbf{1}$ with **spinodal regime** $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6) \approx (0.211, 0.789)$ (canonical §11 Commitment 10 spinodal). Stabilizer $G_u = D_4$ (full graph automorphism preserves constant function).
 
@@ -67,9 +67,9 @@ At $c = 0.5$: $W''(0.5) = -1$. Hence $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - 
 
 **Spectrum positivity at $u^* = c\mathbf{1}$:** All modes positive iff $\beta < 4\alpha\lambda_2^{\mathrm{Lap}}$ — this is exactly the standard pitchfork bifurcation $\beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}$ (lowest non-volume Laplacian eigenvalue triggers instability first).
 
-**Sign of $W''(c)$ in spinodal:** $W''(c) < 0$ throughout spinodal interior. Hence $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c) = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)|$.
+**Sign of $W''(c)$ in spinodal:** $W''(c) < 0$ throughout spinodal interior. Hence $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c) = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta\vert W''(c)\vert $.
 
-For sub-critical $\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}} / \lvert W''(c) \rvert$: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)| > 4\alpha(\lambda_k^{\mathrm{Lap}} - \lambda_2^{\mathrm{Lap}}) \geq 0$ (positive for $k \geq 2$, zero for $k = 2$ at $\beta = \beta_{\mathrm{crit}}^{(2)}$). ✓ Morse-0 confirmed.
+For sub-critical $\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}} / \lvert W''(c) \rvert$: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta\vert W''(c)\vert > 4\alpha(\lambda_k^{\mathrm{Lap}} - \lambda_2^{\mathrm{Lap}}) \geq 0$ (positive for $k \geq 2$, zero for $k = 2$ at $\beta = \beta_{\mathrm{crit}}^{(2)}$). ✓ Morse-0 confirmed.
 
 **At $c$ near $c = 0.5$ symmetric:** $W'''(0.5) = 12(2 \cdot 0.5 - 1) = 0$ (using $W''' = -12 + 24u$). This vanishing has consequences for Theorem 4 (first-pitchfork analysis) — the leading-order $\sqrt{\epsilon}$ perturbation in Hessian vanishes at $c = 0.5$, requiring $O(\epsilon)$ second-order terms.
 
@@ -106,7 +106,7 @@ $L = 4$, $L - 1 = 3$. Laplacian eigenvalues:
 | 6 | $(2, 2)$ | $24\alpha + \beta W''(c)$ | 9 | $A_1$ |
 | ... | ... | ... | ... | ... |
 
-**$\sigma(c\mathbf{1})|_{L=4}$ first 3 entries:**
+**$\sigma(c\mathbf{1})\vert _{L=4}$ first 3 entries:**
 $$\sigma(c\mathbf{1}) = \big(0;\ (2, [E], 4\alpha + \beta W''(c)),\ (4, [A_1], 8\alpha + \beta W''(c)),\ (3, [A_1 \oplus B_1], 12\alpha + \beta W''(c)),\ \ldots\big).$$
 
 Cutoff $K$ (option K-A with $c_{\mathrm{cut}} = 10$): $\mu_{0+} = 4\alpha + \beta W''(c)$. Cutoff at $\mu_k > 10 \cdot (4\alpha + \beta W''(c))$. For $\beta W''(c)$ small relative to $4\alpha$ (e.g. $\beta = 0$): cutoff at $\mu_k > 40\alpha$, i.e., $\lambda_k^{\mathrm{Lap}} > 10$. From table: keep modes through $(3, 3)$ ($\lambda = 8$); discard higher.

@@ -130,10 +130,10 @@ All downstream §3–§9 derivations use *exactly these values* without re-deriv
 ### §1.1 What this file *does*
 
 1. **Cheeger inequality recap** (§2): standard tool from spectral graph theory (Chung 1997, Spielman 2007) — *contrastive*, not new.
-2. **Apply to SCC active-band subgraph** (§3): formation $u^*$ has boundary $\Gamma(u^*)$ separating $\{u \approx 1\}$ bulk from $\{u \approx 0\}$ exterior. The induced subgraph $G|_A$ on the *active band* (transition layer, where $u^* \in (\varepsilon, 1-\varepsilon)$) has its own Cheeger constant $h(G|_A)$.
+2. **Apply to SCC active-band subgraph** (§3): formation $u^*$ has boundary $\Gamma(u^*)$ separating $\{u \approx 1\}$ bulk from $\{u \approx 0\}$ exterior. The induced subgraph $G\vert _A$ on the *active band* (transition layer, where $u^* \in (\varepsilon, 1-\varepsilon)$) has its own Cheeger constant $h(G\vert _A)$.
 3. **Derive L-CHEEGER-HMORSE Cat B target** (§4): μ_min^{non-Gold}(u*) ≥ C · h(Γ) · α + (W'' correction), via Hessian-Laplacian comparison + Cheeger lower bound.
 4. **Connect to canonical Theorem 4 + L-HMORSE-LOCAL** (§5): at uniform critical, the bound reduces to Theorem 4 exactly; at non-uniform critical, extends L-HMORSE-LOCAL with an *isoperimetric channel*.
-5. **Expander graph regime** (§6): if $G|_A$ is an expander, $h \geq c > 0$ unconditionally, giving H-Morse stability independent of $\beta/\alpha$ ratio.
+5. **Expander graph regime** (§6): if $G\vert _A$ is an expander, $h \geq c > 0$ unconditionally, giving H-Morse stability independent of $\beta/\alpha$ ratio.
 6. **Discrete-continuum compatibility** (§7): graph Cheeger vs continuum perimeter via van Gennip-Bertozzi 2012 scaling — connects to file 03's Modica-Mortola continuum analysis.
 7. **2D torus 16×16 numerical example** (§8): explicit numerical lower bound using consensus baseline; comparison with file 02/04 Hessian estimates.
 8. **OPEN problem leverage** (§9): map L-CHEEGER-HMORSE attack channels to OP-HMORSE-LOCAL-A (theorem_status.md L435), OP-HMORSE-SADDLE (theorem_status.md L594), OP-0005-DYN (theorem_status.md L803).
@@ -184,9 +184,9 @@ inverse_causation_check:
 
 **Definition (Cheeger constant of a finite graph).** Let $G = (V, E)$ be a finite, connected, undirected graph with $\lvert V \rvert = n$. For $S \subset V$ with $1 \leq \lvert S \rvert \leq n/2$, define the **edge boundary** $\partial S = E(S, \bar S) = \{(i,j) \in E : i \in S, j \in \bar S\}$, where $\bar S = V \setminus S$. The **Cheeger constant** (edge isoperimetric number) is
 
-$$h(G) := \min_{S \subset V,\, 1 \leq \lvert S \rvert \leq n/2} \frac{|\partial S|}{\lvert S \rvert}.$$
+$$h(G) := \min_{S \subset V,\, 1 \leq \lvert S \rvert \leq n/2} \frac{\vert \partial S\vert}{\lvert S \rvert}.$$
 
-Equivalent volume-weighted form (Chung 1997 §2.2): $h_{\mathrm{vol}}(G) = \min_S |\partial S|/\min(\mathrm{vol}(S), \mathrm{vol}(\bar S))$ where $\mathrm{vol}(S) = \sum_{i \in S} d_i$. For our purposes (mostly $d$-regular grids and tori), $h$ and $h_{\mathrm{vol}}$ differ by at most a factor of $d_{\max}/d_{\min}$.
+Equivalent volume-weighted form (Chung 1997 §2.2): $h_{\mathrm{vol}}(G) = \min_S \vert \partial S\vert /\min(\mathrm{vol}(S), \mathrm{vol}(\bar S))$ where $\mathrm{vol}(S) = \sum_{i \in S} d_i$. For our purposes (mostly $d$-regular grids and tori), $h$ and $h_{\mathrm{vol}}$ differ by at most a factor of $d_{\max}/d_{\min}$.
 
 ### §2.2 Cheeger inequality (discrete graph form)
 
@@ -201,7 +201,7 @@ $$\boxed{\;\frac{h(G)^2}{2 \Delta} \;\leq\; \lambda_2(L_G) \;\leq\; 2\, h(G).\;}
 - $G = C_{16} \times C_{16}$ (PBC, $n = 256$, $d_i = 4$ for all $i$, so $\Delta = 4$).
 - Laplacian eigenvalues: $\lambda_{(k_1, k_2)} = 4\sin^2(\pi k_1/16) + 4 \sin^2(\pi k_2/16)$, $k_1, k_2 \in \{0, 1, \ldots, 15\}$.
 - $\lambda_2 = 4\sin^2(\pi/16) \approx 0.1522$ (mode $(1, 0)$ or $(0, 1)$). **CONSENSUS BASELINE** ✓.
-- Cheeger constant: for a half-torus cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $|\partial S| = 2 \cdot 16 = 32$ (two PBC-wrap boundaries × 16 vertical edges each). So $|\partial S|/\lvert S \rvert = 32/128 = 0.25$. This gives an *upper bound* $h \leq 0.25$. Computing the true minimum over all $S$ with $\lvert S \rvert \leq 128$ shows $h(C_{16} \times C_{16}) = 4/L = 0.25$ exactly (standard 2D torus isoperimetric result, Bollobás-Leader 1991).
+- Cheeger constant: for a half-torus cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $\vert \partial S\vert = 2 \cdot 16 = 32$ (two PBC-wrap boundaries × 16 vertical edges each). So $\vert \partial S\vert /\lvert S \rvert = 32/128 = 0.25$. This gives an *upper bound* $h \leq 0.25$. Computing the true minimum over all $S$ with $\lvert S \rvert \leq 128$ shows $h(C_{16} \times C_{16}) = 4/L = 0.25$ exactly (standard 2D torus isoperimetric result, Bollobás-Leader 1991).
 - **Cheeger inequality check**: $h^2/(2\Delta) = 0.0625/8 = 0.0078$ and $2h = 0.50$. The Fiedler value $\lambda_2 = 0.1522$ satisfies $0.0078 \leq 0.1522 \leq 0.50$ ✓.
 
 The inequality is **tight to within factor ~20× on the lower side** for the 2D torus (the lower-bound Cheeger inequality $h^2/(2\Delta) \leq \lambda_2$ is generally loose; the upper-bound side $\lambda_2 \leq 2h$ is loose by factor ~3 here).
@@ -210,7 +210,7 @@ The inequality is **tight to within factor ~20× on the lower side** for the 2D 
 
 - $G = $ 16×16 grid with Neumann (open) BC: $n = 256$, $d_i \in \{2, 3, 4\}$ (corners, edges, interior), $\Delta = 4$.
 - Laplacian eigenvalues: $\lambda_{(k_1, k_2)} = 4\sin^2(\pi k_1/(2 \cdot 16)) + 4\sin^2(\pi k_2/(2 \cdot 16)) = \sin^2(\pi k_1/16) + \sin^2(\pi k_2/16)$ (after convention adjustment; canonical scc package uses Neumann with $\lambda_2 = \sin^2(\pi/16) \approx 0.0381$ per CONSENSUS BASELINE).
-- Cheeger constant: for a half-grid vertical cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $|\partial S| = 16$ (single vertical line × 16 edges, no PBC wrap). $|\partial S|/\lvert S \rvert = 16/128 = 0.125$. So $h \leq 0.125$. True minimum $h(16 \times 16 \text{ grid, Neumann}) = 1/L = 1/16 = 0.0625$ exactly (open-grid isoperimetric, by Loomis-Whitney plus corner adjustment).
+- Cheeger constant: for a half-grid vertical cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $\vert \partial S\vert = 16$ (single vertical line × 16 edges, no PBC wrap). $\vert \partial S\vert /\lvert S \rvert = 16/128 = 0.125$. So $h \leq 0.125$. True minimum $h(16 \times 16 \text{ grid, Neumann}) = 1/L = 1/16 = 0.0625$ exactly (open-grid isoperimetric, by Loomis-Whitney plus corner adjustment).
 - **Cheeger inequality check**: $h^2/(2\Delta) = 0.0039/8 = 0.000488$ and $2h = 0.125$. The Fiedler value $\lambda_2 = 0.0381$ satisfies $0.000488 \leq 0.0381 \leq 0.125$ ✓.
 
 Both reference baselines pass the Cheeger inequality; the inequality is *informative* (gives non-trivial lower and upper bounds on $\lambda_2$) but not tight on either side for grids/tori — a known phenomenon (the inequality is tight for "expander" graphs but loose for grid-like graphs).
@@ -243,17 +243,17 @@ For the canonical $W(u) = u^2(1-u)^2$ double-well, the natural saturation thresh
 
 ### §3.2 Cheeger structure on the active band
 
-The active band $A(u^*) \subset V$ inherits a subgraph structure $G|_A = (A, E_A)$ where $E_A = \{(i,j) \in E : i, j \in A\}$. The **induced-subgraph Cheeger constant** is
+The active band $A(u^*) \subset V$ inherits a subgraph structure $G\vert _A = (A, E_A)$ where $E_A = \{(i,j) \in E : i, j \in A\}$. The **induced-subgraph Cheeger constant** is
 
-$$h(G|_A) := \min_{S \subset A,\, 1 \leq \lvert S \rvert \leq \lvert A \rvert/2} \frac{|E_A(S, A \setminus S)|}{\lvert S \rvert}.$$
+$$h(G\vert _A) := \min_{S \subset A,\, 1 \leq \lvert S \rvert \leq \lvert A \rvert/2} \frac{\vert E_A(S, A \setminus S)\vert}{\lvert S \rvert}.$$
 
 For the canonical $u^*$ supported on a "disk" $\Omega \approx B_R(x_0) \cap V$ of radius $R$ on a 2D torus, the active band is an *annulus* of inner radius $R - 1$ and outer radius $R + 1$ (thickness $\sim \sqrt{\alpha/\beta}$), with $\lvert A \rvert \approx 2 \pi R \cdot (\text{thickness})$ for large $R$.
 
-**Key observation**: the active band on a 2D torus is *topologically a cycle* $C_{|\Gamma|}$ (annulus collapses to its 1D boundary in the sharp-interface limit). For a cycle $C_n$, $h(C_n) = 2/n$ (cut into two halves). So in the continuum limit,
+**Key observation**: the active band on a 2D torus is *topologically a cycle* $C_{\vert \Gamma\vert}$ (annulus collapses to its 1D boundary in the sharp-interface limit). For a cycle $C_n$, $h(C_n) = 2/n$ (cut into two halves). So in the continuum limit,
 
-$$h(G|_A) \;\sim\; \frac{2}{|\Gamma|}\quad \text{(2D torus, sharp interface limit)}.$$
+$$h(G\vert _A) \;\sim\; \frac{2}{\vert \Gamma\vert}\quad \text{(2D torus, sharp interface limit)}.$$
 
-For the L=16 reference with formation $\Omega$ of radius $R = 4$ (CONSENSUS BASELINE), $|\Gamma| \approx 2\pi R = 8\pi \approx 25.1$, so $h(G|_A) \approx 2/25.1 \approx 0.0797$.
+For the L=16 reference with formation $\Omega$ of radius $R = 4$ (CONSENSUS BASELINE), $\vert \Gamma\vert \approx 2\pi R = 8\pi \approx 25.1$, so $h(G\vert _A) \approx 2/25.1 \approx 0.0797$.
 
 ### §3.3 Connection to Hessian boundary block
 
@@ -265,15 +265,15 @@ On the active band $A$, $u^*(x) \approx 1/2$ ($c = 1/2$ choice), so $W''(u^*(x))
 
 The **restriction of $H_{\mathrm{bd}}$ to the active band** is approximately
 
-$$H_{\mathrm{bd}}|_A \;\approx\; 4\alpha L_{G|_A} + \beta \cdot (-1) \cdot I_A \;=\; 4\alpha L_{G|_A} - \beta I_A,$$
+$$H_{\mathrm{bd}}\vert _A \;\approx\; 4\alpha L_{G\vert _A} + \beta \cdot (-1) \cdot I_A \;=\; 4\alpha L_{G\vert _A} - \beta I_A,$$
 
-where $L_{G|_A}$ is the *induced-subgraph Laplacian* on $A$ (with appropriate boundary correction for edges leaving $A$). The Cheeger inequality applied to $L_{G|_A}$ gives
+where $L_{G\vert _A}$ is the *induced-subgraph Laplacian* on $A$ (with appropriate boundary correction for edges leaving $A$). The Cheeger inequality applied to $L_{G\vert _A}$ gives
 
-$$\lambda_2(L_{G|_A}) \;\geq\; \frac{h(G|_A)^2}{2 \Delta_A},$$
+$$\lambda_2(L_{G\vert _A}) \;\geq\; \frac{h(G\vert _A)^2}{2 \Delta_A},$$
 
-where $\Delta_A = \max_{x \in A} d_x^{G|_A}$. Hence
+where $\Delta_A = \max_{x \in A} d_x^{G\vert _A}$. Hence
 
-$$\mu_{\min}(H_{\mathrm{bd}}|_A) \;\geq\; \frac{4\alpha h(G|_A)^2}{2 \Delta_A} - \beta \;=\; \frac{2 \alpha h(G|_A)^2}{\Delta_A} - \beta.$$
+$$\mu_{\min}(H_{\mathrm{bd}}\vert _A) \;\geq\; \frac{4\alpha h(G\vert _A)^2}{2 \Delta_A} - \beta \;=\; \frac{2 \alpha h(G\vert _A)^2}{\Delta_A} - \beta.$$
 
 This bound is **not yet useful** ($-\beta$ dominates) — we need the full Hessian (including $H_{\mathrm{cl}}$ + $H_{\mathrm{sep}}$ + isoperimetric coupling between bulk and active band) to recover positivity. This motivates the L-CHEEGER-HMORSE statement in §4.
 
@@ -313,21 +313,21 @@ inverse_causation_check:
 
 ### §4.1 Statement
 
-**Lemma L-CHEEGER-HMORSE (Cat B target).** Let $u^* \in \Sigma_m^{\circ}$ be a formation satisfying D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) (canonical L1934) on a finite connected graph $G$. Let $\Omega(u^*), A(u^*), \Gamma(u^*)$ be defined as in §3.1, and let $h(G|_A)$ be the induced-subgraph Cheeger constant on the active band $A$. Then the **non-Goldstone H-Morse spectral gap** of the full SCC energy Hessian satisfies
+**Lemma L-CHEEGER-HMORSE (Cat B target).** Let $u^* \in \Sigma_m^{\circ}$ be a formation satisfying D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) (canonical L1934) on a finite connected graph $G$. Let $\Omega(u^*), A(u^*), \Gamma(u^*)$ be defined as in §3.1, and let $h(G\vert _A)$ be the induced-subgraph Cheeger constant on the active band $A$. Then the **non-Goldstone H-Morse spectral gap** of the full SCC energy Hessian satisfies
 
 $$\boxed{\;\mu_{\min}^{(\mathrm{non\text{-}Gold})}\bigl(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}\bigr) \;\geq\; C_{\mathrm{Cheeger}} \cdot h(\Gamma(u^*)) \cdot \alpha \;-\; \delta_{\mathrm{res}}^{\mathrm{Ch}}(u^*),\;}$$
 
 where:
-- $h(\Gamma(u^*)) := h(G|_A)$ is the **boundary Cheeger constant** (induced subgraph isoperimetric number on the active band $A$).
-- $C_{\mathrm{Cheeger}} = c_0 / \Delta_A$ for an explicit universal constant $c_0 \in [1, 4]$ (graph-class dependent, $c_0 = 2$ for $d$-regular subgraphs by direct Cheeger application to $L_{G|_A}$).
-- $\delta_{\mathrm{res}}^{\mathrm{Ch}}(u^*)$ = residual term bounded by $|\beta| \cdot \rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) + \lVert R_{\mathrm{cl}} \rVert / \lambda_{\mathrm{cl}}$, with $\rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) \leq \lvert A \rvert/n \cdot \sqrt{\alpha/\beta}$ (analogous to T-OP6-B bound, canonical L1956).
+- $h(\Gamma(u^*)) := h(G\vert _A)$ is the **boundary Cheeger constant** (induced subgraph isoperimetric number on the active band $A$).
+- $C_{\mathrm{Cheeger}} = c_0 / \Delta_A$ for an explicit universal constant $c_0 \in [1, 4]$ (graph-class dependent, $c_0 = 2$ for $d$-regular subgraphs by direct Cheeger application to $L_{G\vert _A}$).
+- $\delta_{\mathrm{res}}^{\mathrm{Ch}}(u^*)$ = residual term bounded by $\vert \beta\vert \cdot \rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) + \lVert R_{\mathrm{cl}} \rVert / \lambda_{\mathrm{cl}}$, with $\rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) \leq \lvert A \rvert/n \cdot \sqrt{\alpha/\beta}$ (analogous to T-OP6-B bound, canonical L1956).
 
 ### §4.2 Hypotheses (made explicit)
 
 - **(H1)** D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) — canonical L1934. Active set $A^*$ well-defined; single formation; symmetry-broken; non-boundary-localized lowest mode.
-- **(H2)** Graph regularity for Cheeger applicability: $G$ finite, connected; $G|_A$ also connected (otherwise $h(G|_A) = 0$ and the bound is trivial). For $G$ with bounded degree $\Delta = O(1)$, the Cheeger constant $C_{\mathrm{Cheeger}}$ is uniformly bounded.
+- **(H2)** Graph regularity for Cheeger applicability: $G$ finite, connected; $G\vert _A$ also connected (otherwise $h(G\vert _A) = 0$ and the bound is trivial). For $G$ with bounded degree $\Delta = O(1)$, the Cheeger constant $C_{\mathrm{Cheeger}}$ is uniformly bounded.
 - **(H3)** Spinodal interior $c \in ((3 - \sqrt 3)/6, (3 + \sqrt 3)/6) \approx (0.211, 0.789)$ (canonical T-σ-Theorem-4 hypothesis discussion L1466).
-- **(H4)** Sharp-interface separation: $|\Omega|, |\Omega^c| \geq c_{\mathrm{sep}} \cdot n$ for $c_{\mathrm{sep}} > 0$ uniform (rules out the marginal $|\Omega| \to 0$ collapse limit).
+- **(H4)** Sharp-interface separation: $\vert \Omega\vert, \vert \Omega^c\vert \geq c_{\mathrm{sep}} \cdot n$ for $c_{\mathrm{sep}} > 0$ uniform (rules out the marginal $\vert \Omega\vert \to 0$ collapse limit).
 
 ### §4.3 Proof sketch (4-step Cheeger + Hessian-Laplacian comparison)
 
@@ -410,7 +410,7 @@ Bridge regime (moderate h):
 **Cat B target**, because:
 1. The discrete Cheeger inequality itself (Chung 1997, Spielman 2007) is Cat A in spectral graph theory — *external* anchor.
 2. The SCC adaptation requires (a) the L-HMORSE-DECOMP per-term bounds (canonical Cat B), (b) the active-band restriction lemma (this file, conditional on (H4) sharp-interface separation), and (c) the closure-lift L-CLOSURE-LIFT Cat A.
-3. The active-band-to-induced-subgraph step Steps 1–2 above use $L_{G|_A}$ rather than $L_G$ — the relationship $v^T L_G v \geq v^T L_{G|_A} v$ for $v \in T_A$ requires boundary-edge accounting that is rigorous for $v \in T_A$ (where $v_x = 0$ outside $A$) and gives the exact restriction.
+3. The active-band-to-induced-subgraph step Steps 1–2 above use $L_{G\vert _A}$ rather than $L_G$ — the relationship $v^T L_G v \geq v^T L_{G\vert _A} v$ for $v \in T_A$ requires boundary-edge accounting that is rigorous for $v \in T_A$ (where $v_x = 0$ outside $A$) and gives the exact restriction.
 4. The constant $C_{\mathrm{Cheeger}}$ has an explicit form $c_0 / \Delta_A$ with $c_0 \in [1, 4]$ but the optimal $c_0$ for SCC formations is graph-class dependent and not yet pinned down for general $(G, u^*)$.
 5. Cat A path (OP-HMORSE-LOCAL-A): (i) sharper residual $\delta_{\mathrm{res}}^{\mathrm{Ch}}$ bound using L-HMORSE-DECOMP §2 sharper estimates; (ii) explicit $C_{\mathrm{Cheeger}}$ derivation for SBM/barbell/small-world (also addresses OP-HMORSE-SBM at theorem_status.md L435); (iii) consistency check with file 03 continuum Jacobi spectrum and file 04 Schur decomposition bounds.
 
@@ -422,7 +422,7 @@ This is **honest Cat B** — comparable to canonical L-HMORSE-LOCAL/DECOMP Cat B
 
 ### §5.1 Theorem 4 reduction (uniform critical)
 
-At uniform critical $u^* = c \mathbf{1}$, the active band $A = V$ (everything is "active" since $u^*$ is constant), so $G|_A = G$ entirely, and $h(G|_A) = h(G)$. The induced-subgraph Cheeger reduces to the global Cheeger. Then the L-CHEEGER-HMORSE bound becomes:
+At uniform critical $u^* = c \mathbf{1}$, the active band $A = V$ (everything is "active" since $u^*$ is constant), so $G\vert _A = G$ entirely, and $h(G\vert _A) = h(G)$. The induced-subgraph Cheeger reduces to the global Cheeger. Then the L-CHEEGER-HMORSE bound becomes:
 
 $$\mu_2 \;\geq\; 4\alpha \cdot \frac{h(G)^2}{2\Delta} + \beta W''(c).$$
 
@@ -446,11 +446,11 @@ with explicit form
 
 $$c_{\mathrm{HML}} = 2\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 (d_{\min}/d_{\max}) - 2\beta \rho_{\mathrm{bd-band}}(u^*) + \alpha \lambda_2(L) - \delta_{\mathrm{res}}(u^*).$$
 
-L-CHEEGER-HMORSE provides an **alternative form** with $h(G|_A)^2/(2\Delta_A)$ replacing $\lambda_2(L)$ (which is a *global* eigenvalue, not formation-localized). The two bounds are **incomparable in general**:
+L-CHEEGER-HMORSE provides an **alternative form** with $h(G\vert _A)^2/(2\Delta_A)$ replacing $\lambda_2(L)$ (which is a *global* eigenvalue, not formation-localized). The two bounds are **incomparable in general**:
 - L-HMORSE-LOCAL uses *global* Fiedler eigenvalue $\lambda_2(L)$, captures the *graph-wide* smoothness cost.
-- L-CHEEGER-HMORSE uses *active-band* Cheeger $h(G|_A)$, captures the *formation-localized* boundary structure.
+- L-CHEEGER-HMORSE uses *active-band* Cheeger $h(G\vert _A)$, captures the *formation-localized* boundary structure.
 
-For grids/tori with one localized formation, $\lambda_2(L) \sim 1/L^2$ (small) while $h(G|_A) \sim 1/|\Gamma|$ (depends on formation perimeter). For $|\Gamma| \ll L^2$ (small formation), $h(G|_A) \gg \lambda_2(L)$ and L-CHEEGER-HMORSE is *tighter*. For large formations $|\Gamma| \sim L$, the two are comparable.
+For grids/tori with one localized formation, $\lambda_2(L) \sim 1/L^2$ (small) while $h(G\vert _A) \sim 1/\vert \Gamma\vert $ (depends on formation perimeter). For $\vert \Gamma\vert \ll L^2$ (small formation), $h(G\vert _A) \gg \lambda_2(L)$ and L-CHEEGER-HMORSE is *tighter*. For large formations $\vert \Gamma\vert \sim L$, the two are comparable.
 
 ### §5.3 Combining the two bounds
 
@@ -470,7 +470,7 @@ A graph $G$ is an **(n, d, λ)-expander** if it is $d$-regular and $\lambda_2(L_
 
 ### §6.2 SCC formation on expander subgraph
 
-If the active band $G|_A$ is itself an expander (e.g., when $G$ is globally an expander and the formation $\Omega$ is a vertex-balanced partition), then $h(G|_A) \geq c_{\mathrm{exp}} > 0$ unconditionally. The L-CHEEGER-HMORSE bound becomes:
+If the active band $G\vert _A$ is itself an expander (e.g., when $G$ is globally an expander and the formation $\Omega$ is a vertex-balanced partition), then $h(G\vert _A) \geq c_{\mathrm{exp}} > 0$ unconditionally. The L-CHEEGER-HMORSE bound becomes:
 
 $$\mu_{\min}^{(\mathrm{non\text{-}Gold})} \;\geq\; C_{\mathrm{Cheeger}} \cdot c_{\mathrm{exp}} \cdot \alpha - \delta_{\mathrm{res}}^{\mathrm{Ch}}.$$
 
@@ -524,13 +524,13 @@ where $c_d$ is a $d$-dimensional constant (e.g., $c_2 = 1/\sqrt 2$ on square gri
 File 03 §6.1 (per critic file 07 §B.5) requires joint scaling ($h \to 0$, $\varepsilon = \sqrt{\alpha/\beta} \to 0$) for the continuum Jacobi-operator spectrum to be the limit of the discrete Hessian spectrum. The Cheeger-based bound L-CHEEGER-HMORSE is **directly discrete** — it does not require any continuum limit. So the two approaches:
 
 - **File 03 (Modica-Mortola continuum Jacobi)**: requires $h \to 0$ + $\varepsilon \to 0$ joint scaling. Gives sphere-Jacobi spectrum $\mu_2(J_\Gamma) = (d+1)/R^2$ with surface tension $\sigma = (\sqrt 2/6)\sqrt{\alpha\beta}$. Cat B target, conditional on $h \to 0$.
-- **File 08 (this file, discrete Cheeger)**: directly on finite graph, no continuum limit. Gives $\mu_{\min} \geq C \cdot h(G|_A) \cdot \alpha$. Cat B target, conditional on (H4) sharp-interface separation.
+- **File 08 (this file, discrete Cheeger)**: directly on finite graph, no continuum limit. Gives $\mu_{\min} \geq C \cdot h(G\vert _A) \cdot \alpha$. Cat B target, conditional on (H4) sharp-interface separation.
 
-**Consistency check (sanity)**: In the continuum limit $h \to 0$ with formation $\Omega$ a disk of radius $R$ on torus $D = [0, L]^2$, the discrete Cheeger $h(G|_A) \to c_2 \cdot \mathrm{Perim}(\Gamma)/\mathrm{Vol}(\Omega)$ for the active band approximated as an annulus. For $\Omega = B_R$: $\mathrm{Perim}(\Gamma) = 2\pi R$, $\mathrm{Vol}(\Omega) = \pi R^2$, so ratio $= 2/R$. Then $\mu_{\min}^{\mathrm{Cheeger}} \sim C \cdot c_2 \cdot (2/R) \cdot \alpha = 2 C c_2 \alpha/R$.
+**Consistency check (sanity)**: In the continuum limit $h \to 0$ with formation $\Omega$ a disk of radius $R$ on torus $D = [0, L]^2$, the discrete Cheeger $h(G\vert _A) \to c_2 \cdot \mathrm{Perim}(\Gamma)/\mathrm{Vol}(\Omega)$ for the active band approximated as an annulus. For $\Omega = B_R$: $\mathrm{Perim}(\Gamma) = 2\pi R$, $\mathrm{Vol}(\Omega) = \pi R^2$, so ratio $= 2/R$. Then $\mu_{\min}^{\mathrm{Cheeger}} \sim C \cdot c_2 \cdot (2/R) \cdot \alpha = 2 C c_2 \alpha/R$.
 
 Compare to file 03 sphere-Jacobi: $\mu_2(J_\Gamma) = 3/R^2$ (for $d = 2$, so $d + 1 = 3$). At $\alpha = 1$, $R = 4$: file 03 gives $\mu \sim \sigma \cdot 3/R^2 = 0.745 \cdot 3/16 = 0.140$. L-CHEEGER-HMORSE gives $\mu \sim 2 C c_2 \cdot 1/4 = 0.5 C c_2$. With $C c_2 \sim 0.1$ (rough), this gives $\mu \sim 0.05$, same order of magnitude as file 03.
 
-**Discrepancy of factor ~3**: explained by the Cheeger inequality being loose by factor $\sim \Delta_A$ in this regime. Tightening requires either (a) Cat A path for Cheeger (using $\lambda_2(L_{G|_A})$ directly instead of $h^2/(2\Delta)$ lower bound), or (b) cross-validation with file 04 Schur block decomposition.
+**Discrepancy of factor ~3**: explained by the Cheeger inequality being loose by factor $\sim \Delta_A$ in this regime. Tightening requires either (a) Cat A path for Cheeger (using $\lambda_2(L_{G\vert _A})$ directly instead of $h^2/(2\Delta)$ lower bound), or (b) cross-validation with file 04 Schur block decomposition.
 
 ### §7.3 Three-way cross-check as Cat A promotion criterion
 
@@ -552,16 +552,16 @@ If all three give comparable lower bounds (within constant factor) on a fixed te
 
 - $G = C_{16} \times C_{16}$ (PBC, $n = 256$, $d_i = 4$, $\Delta = 4$).
 - Parameters: $c = 1/2$, $\alpha = 1$, $\beta = 10$, $T_* = 0.1$, $R = 4$.
-- Formation: $u^* \approx \chi_{\Omega}$ where $\Omega = B_R(x_0) \cap V$ is a discrete disk of radius $R = 4$, $|\Omega| \approx \pi R^2 = 50$.
-- Boundary: $|\Gamma| \approx 2\pi R = 25$ (vertex boundary on grid).
-- Active band $A$ is annulus of $\sim$ 2 vertices thick (since $\sqrt{\alpha/\beta} = \sqrt{1/10} \approx 0.316$, but on integer grid we round up to nearest discrete band), so $\lvert A \rvert \approx 2 \cdot |\Gamma| \approx 50$.
+- Formation: $u^* \approx \chi_{\Omega}$ where $\Omega = B_R(x_0) \cap V$ is a discrete disk of radius $R = 4$, $\vert \Omega\vert \approx \pi R^2 = 50$.
+- Boundary: $\vert \Gamma\vert \approx 2\pi R = 25$ (vertex boundary on grid).
+- Active band $A$ is annulus of $\sim$ 2 vertices thick (since $\sqrt{\alpha/\beta} = \sqrt{1/10} \approx 0.316$, but on integer grid we round up to nearest discrete band), so $\lvert A \rvert \approx 2 \cdot \vert \Gamma\vert \approx 50$.
 - $W''(1/2) = -1$ in active band; $W''(1) = W''(0) = 2$ in bulk/exterior.
 
 ### §8.2 Cheeger constants
 
 - $h(G) = 4/L = 0.25$ (full 2D torus, §2.3).
-- $h(G|_A) \approx 2/|\Gamma| = 2/25 = 0.08$ (annulus on torus collapses to $C_{|\Gamma|}$ cycle in sharp-interface limit, §3.2).
-- $\Delta_A = $ max degree on induced subgraph $G|_A \leq 4$ (annulus on grid, mostly degree 2-3, max 4 at corners).
+- $h(G\vert _A) \approx 2/\vert \Gamma\vert = 2/25 = 0.08$ (annulus on torus collapses to $C_{\vert \Gamma\vert}$ cycle in sharp-interface limit, §3.2).
+- $\Delta_A = $ max degree on induced subgraph $G\vert _A \leq 4$ (annulus on grid, mostly degree 2-3, max 4 at corners).
 
 ### §8.3 L-CHEEGER-HMORSE lower bound at reference
 
@@ -593,13 +593,13 @@ $$\mu_{\min}^{(\mathrm{non\text{-}Gold})} \;\geq\; 1.531 + 0.04 - 0.617 \;=\; 0.
 - **File 04 Schur**: comparable order to L-HMORSE-LOCAL (file 04 §6 specifically calibrated to canonical L1960).
 - **File 08 (this)**: bound $\geq 0.954$ on 2D torus L=16 with $\beta = 10$. Within the canonical anchor range $[0.13, 3.49]$ ✓ (consistent with L-HMORSE-LOCAL numerical anchor).
 
-**Verification proposal**: `CODE/scripts/test_cheeger_hmorse_torus.py` to compute (i) actual discrete Hessian spectrum at $u^*$ on $C_{16} \times C_{16}$, (ii) Cheeger constant $h(G|_A)$ at the active band, (iii) compare lower bound 0.954 to actual $\mu_{\min}$. Estimated to be a $\sim 1$-hour Claude-runs-in-session task per CLAUDE.md numerical validation pattern.
+**Verification proposal**: `CODE/scripts/test_cheeger_hmorse_torus.py` to compute (i) actual discrete Hessian spectrum at $u^*$ on $C_{16} \times C_{16}$, (ii) Cheeger constant $h(G\vert _A)$ at the active band, (iii) compare lower bound 0.954 to actual $\mu_{\min}$. Estimated to be a $\sim 1$-hour Claude-runs-in-session task per CLAUDE.md numerical validation pattern.
 
 ### §8.6 Cheeger-T8 scaling on torus
 
 The Cheeger-T8 condition (§4.3 Step 4 rearranged at $\lambda_{\mathrm{cl}} = 0$):
 
-$$\frac{\beta}{\alpha} < \frac{2 h(G|_A)^2}{\Delta_A} = \frac{2 \cdot 0.08^2}{4} = 0.0032.$$
+$$\frac{\beta}{\alpha} < \frac{2 h(G\vert _A)^2}{\Delta_A} = \frac{2 \cdot 0.08^2}{4} = 0.0032.$$
 
 This is the **threshold below which boundary-only ($H_{\mathrm{bd}}$) gives positive H-Morse**. For $\beta/\alpha = 10/1 = 10 \gg 0.0032$, boundary-only Cheeger is insufficient — *closure must contribute*, as confirmed §8.4.
 
@@ -614,8 +614,8 @@ Comparing to canonical T8 threshold $\beta_{\mathrm{T8}}/\alpha = 4\lambda_2/\lv
 **Status**: OPEN. Path: L-HMORSE-LOCAL Cat B → Cat A; requires sharper residual bound + OP-HMORSE-SBM (numerical robustness extension to SBM/barbell/small-world).
 
 **L-CHEEGER-HMORSE leverage**:
-- Provides an **alternative Cat B bound** that is *formation-localized* (via $h(G|_A)$) rather than *graph-global* (via $\lambda_2(L_G)$).
-- For graph classes where $\lambda_2(L_G) \to 0$ (grids, large $n$), $h(G|_A)$ remains bounded by formation perimeter — does not degenerate.
+- Provides an **alternative Cat B bound** that is *formation-localized* (via $h(G\vert _A)$) rather than *graph-global* (via $\lambda_2(L_G)$).
+- For graph classes where $\lambda_2(L_G) \to 0$ (grids, large $n$), $h(G\vert _A)$ remains bounded by formation perimeter — does not degenerate.
 - **3-way cross-check** with file 03 (Modica-Mortola) and file 04 (Schur) provides triangulation Cat A path (§7.3).
 - **Expander-graph regime** (§6) gives a *Cat A path for the expander sub-case*: on expanders, all hypothesis (H1)-(H4) are uniformly satisfied, and the residual term $\delta_{\mathrm{res}}^{\mathrm{Ch}}$ has explicit bounds.
 
@@ -653,11 +653,11 @@ The inverse causation check in §4.4 confirms: $h(\Gamma) \to 0$ ⟹ $\mu_{\min}
 - L-CHEEGER-HMORSE gives **lower bounds** on $\mu_k(\mathrm{well})$ (large at minima, $\sim C \cdot h(\Gamma_{\min}) \cdot \alpha$) and **upper bounds** on the smallest $\mu_k(\mathrm{saddle})$ (small at saddles, $\sim C \cdot h(\Gamma^\dagger) \cdot \alpha$ with $h(\Gamma^\dagger) \to 0$).
 - This gives a **structural form** of the prefactor:
 
-$$\omega_0 \;\sim\; \alpha^{(N - 1)/2} \cdot \frac{h(\Gamma_{\min})^{(N-1)/2}}{h(\Gamma^\dagger)^{(N-1)/2 - 1}} \cdot |\mu_{\mathrm{neck}}|$$
+$$\omega_0 \;\sim\; \alpha^{(N - 1)/2} \cdot \frac{h(\Gamma_{\min})^{(N-1)/2}}{h(\Gamma^\dagger)^{(N-1)/2 - 1}} \cdot \vert \mu_{\mathrm{neck}}\vert $$
 
 (rough form, requires combinatorial counting for exact powers; Cat B target).
 
-- **Inverse causation**: as $h(\Gamma^\dagger) \to 0$ (saddle becomes thinner), $\omega_0 \to \infty$ formally — but this is regulated by the $|\mu_{\mathrm{neck}}| \to 0$ at the same rate, giving finite limit. Physically: thin necks have *high* transition attempt frequency (Arrhenius preexponential is enhanced by saddle softness), consistent with Kramers' original 1940 derivation.
+- **Inverse causation**: as $h(\Gamma^\dagger) \to 0$ (saddle becomes thinner), $\omega_0 \to \infty$ formally — but this is regulated by the $\vert \mu_{\mathrm{neck}}\vert \to 0$ at the same rate, giving finite limit. Physically: thin necks have *high* transition attempt frequency (Arrhenius preexponential is enhanced by saddle softness), consistent with Kramers' original 1940 derivation.
 
 **Cat A path channel for OP-0005-DYN via Cheeger**: combine L-CHEEGER-HMORSE saddle-version (§9.2) with file 02 Kramers-prefactor formula gives a *Cheeger-based* Eyring-Kramers expression — *complementary* to file 03's surface-tension based form. Cross-check between the two channels is a Cat A consistency criterion.
 
@@ -737,7 +737,7 @@ All four OPs (OP-HMORSE-LOCAL-A, OP-HMORSE-SADDLE, OP-0005-DYN, OP-0021) remain 
 
 ## §12 — One-Paragraph Summary
 
-This file derives **L-CHEEGER-HMORSE** as a **Cat B target** lower bound on the H-Morse spectral gap of SCC formations: $\mu_{\min}^{(\mathrm{non\text{-}Gold})}(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}) \geq C_{\mathrm{Cheeger}} \cdot h(\Gamma(u^*)) \cdot \alpha - \delta_{\mathrm{res}}^{\mathrm{Ch}}$, where $h(\Gamma(u^*)) = h(G|_A)$ is the **induced-subgraph Cheeger constant** on the formation active band. Combining with the L-HMORSE-DECOMP closure-lift contribution recovers explicit positivity on the 2D torus L=16 CONSENSUS BASELINE reference ($\mu_{\min} \geq 0.954$ at $\alpha = 1$, $\beta = 10$, $R = 4$, $c = 1/2$, using $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ per critic Wave 2 consensus). The bound is **complementary** (NOT redundant) to file 03's Modica-Mortola continuum Jacobi spectrum and file 04's Schur block decomposition — providing a *third* independent attack channel on OP-HMORSE-LOCAL-A (`theorem_status.md` L435), a **primary attack channel** on OP-HMORSE-SADDLE (`theorem_status.md` L594) via the boundary-Cheeger saddle-detection diagnostic ($h(\Gamma^\dagger) \to 0$ identifies saddles), and an infrastructure contribution to OP-0005-DYN (`theorem_status.md` L803) Eyring-Kramers prefactor via Cheeger-based determinant ratio. The **expander-graph regime** (§6) gives the cleanest sub-case where H-Morse spectral gap is structurally bounded below by $C \cdot \alpha$ uniformly in $n$ and $\beta$. All four canonical OPs remain explicitly OPEN (CN15); 16/16 hard constraints satisfied; zero canonical edits.
+This file derives **L-CHEEGER-HMORSE** as a **Cat B target** lower bound on the H-Morse spectral gap of SCC formations: $\mu_{\min}^{(\mathrm{non\text{-}Gold})}(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}) \geq C_{\mathrm{Cheeger}} \cdot h(\Gamma(u^*)) \cdot \alpha - \delta_{\mathrm{res}}^{\mathrm{Ch}}$, where $h(\Gamma(u^*)) = h(G\vert _A)$ is the **induced-subgraph Cheeger constant** on the formation active band. Combining with the L-HMORSE-DECOMP closure-lift contribution recovers explicit positivity on the 2D torus L=16 CONSENSUS BASELINE reference ($\mu_{\min} \geq 0.954$ at $\alpha = 1$, $\beta = 10$, $R = 4$, $c = 1/2$, using $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ per critic Wave 2 consensus). The bound is **complementary** (NOT redundant) to file 03's Modica-Mortola continuum Jacobi spectrum and file 04's Schur block decomposition — providing a *third* independent attack channel on OP-HMORSE-LOCAL-A (`theorem_status.md` L435), a **primary attack channel** on OP-HMORSE-SADDLE (`theorem_status.md` L594) via the boundary-Cheeger saddle-detection diagnostic ($h(\Gamma^\dagger) \to 0$ identifies saddles), and an infrastructure contribution to OP-0005-DYN (`theorem_status.md` L803) Eyring-Kramers prefactor via Cheeger-based determinant ratio. The **expander-graph regime** (§6) gives the cleanest sub-case where H-Morse spectral gap is structurally bounded below by $C \cdot \alpha$ uniformly in $n$ and $\beta$. All four canonical OPs remain explicitly OPEN (CN15); 16/16 hard constraints satisfied; zero canonical edits.
 
 ---
 

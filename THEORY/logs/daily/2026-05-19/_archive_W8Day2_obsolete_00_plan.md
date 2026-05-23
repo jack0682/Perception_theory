@@ -86,7 +86,7 @@ W8-Day1 (어제) 의 산출:
    - Cross-block $V$ 의 *explicit decay* (Coupling Bound Lemma 적용).
 
 3. **§3 Kato resolvent expansion**:
-   - $\lambda_a(\varepsilon) = \lambda_a^{(0)} + \varepsilon \langle \phi_a^{(0)}, V \phi_a^{(0)} \rangle + \varepsilon^2 \sum_{b \neq a} \frac{|\langle \phi_a^{(0)}, V \phi_b^{(0)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\varepsilon^3)$.
+   - $\lambda_a(\varepsilon) = \lambda_a^{(0)} + \varepsilon \langle \phi_a^{(0)}, V \phi_a^{(0)} \rangle + \varepsilon^2 \sum_{b \neq a} \frac{\vert \langle \phi_a^{(0)}, V \phi_b^{(0)} \rangle\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\varepsilon^3)$.
    - 5×5 toy 의 *각 항* 의 explicit calculation.
    - $O(\varepsilon^2)$ 까지 의 deterministic form.
 

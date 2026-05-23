@@ -59,14 +59,14 @@ User authorization context: "지금 하자" 직접 진행 (W5 Day 3 EOD 7-에이
 
 **File**: `canonical.md` §13 T-V5b-T entry, after (V5b-T-c) "Distinct from non-translation-invariant (V5b-F)" paragraph.
 **Change**: New sub-statement (V5b-F-empirical) added.
-**Content**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot |\partial S|/n$, $C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$ (NQ-198a 6 corner-sat data points). Phase 3 heuristic + Day 3 §4 derivation refuted.
+**Content**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot \vert \partial S\vert /n$, $C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$ (NQ-198a 6 corner-sat data points). Phase 3 heuristic + Day 3 §4 derivation refuted.
 **Lines added**: ~12.
 
 ### §2.5 D-5 V5b-T' — WITHDRAWN, replaced by V5b-T-zero sub-statement
 
 **File**: `canonical.md` §13 T-V5b-T entry, after (V5b-F-empirical).
 **Change**: D-5 V5b-T' new entry candidate WITHDRAWN; replaced by (V5b-T-zero) sub-statement.
-**Content**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T-zero}} = 0$ exactly on translation-invariant graphs sub-spinodal. Discrete translation orbit $\mathbb{Z}_L^d$ produces exact zero subspace (standard Goldstone theorem on lattice). Empirical anchor NQ-198f $T^2_{20}/T^2_{28}$ 4 corner-sat $|\mu| \leq 0.028$.
+**Content**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T-zero}} = 0$ exactly on translation-invariant graphs sub-spinodal. Discrete translation orbit $\mathbb{Z}_L^d$ produces exact zero subspace (standard Goldstone theorem on lattice). Empirical anchor NQ-198f $T^2_{20}/T^2_{28}$ 4 corner-sat $\vert \mu\vert \leq 0.028$.
 **Lines added**: ~15.
 **Net effect**: D-5 V5b-T' new top-level §13 entry NOT created (WITHDRAWN); V5b-T-zero embedded in T-V5b-T entry.
 

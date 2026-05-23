@@ -93,7 +93,7 @@ Approach (a) is **redundant** with (b) but provides independent verification. Th
 - **Procedure:** `find_formation` → projected Hessian via FD → eigendecomposition → check $\mu_{\min} > 0$ + L-CLOSURE-LIFT prediction.
 - **Result:** **15/15 PASS** for both broadness and lift.
 - **Quantitative:** $\mu_{\min}(\Pi_T H_{\mathrm{cl}} \Pi_T) \in [0.45, 0.79]$, exceeding Theorem B2 standard-form prediction (~0.0075) by ~60×. The conservative prediction reflects $d_{\min}/d_{\max}$ and worst-case $\sigma'$; actual sigmoid derivative at saturated minimizers is much smaller, making the lift stronger.
-- **Residual norm:** $\lVert r \rVert_2 \in [0.73, 2.33]$ — large in absolute terms but does not break $\mu_{\min} > 0$, because residual contribution is concentrated in the boundary band where $|\sigma''| \approx 0$ at saturated minimizers.
+- **Residual norm:** $\lVert r \rVert_2 \in [0.73, 2.33]$ — large in absolute terms but does not break $\mu_{\min} > 0$, because residual contribution is concentrated in the boundary band where $\vert \sigma''\vert \approx 0$ at saturated minimizers.
 - **Regression check:** Full test suite passes (215 passed, 1 xfailed).
 
 Results: `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.{json, md}`.
@@ -146,7 +146,7 @@ The CV114 final recommendation in `09_CV114_recommendation.md` ("Path B — H-MO
 
 ## §8. Non-Overclaim (preserved into CV-1.16+ entry)
 
-- **L-CLOSURE-LIFT is the Gauss-Newton (linearized) part.** The full $H_{\mathrm{cl}}$ has an additional residual-correction term $2 \sum_k (Cl(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$. At full-energy critical points, this residual is small but nonzero. Numerical: $\lVert r \rVert_2$ moderate (up to ~2.3 on 15×15) but residual-correction *contribution* to $\mu_{\min}$ is small because $|\sigma''| \approx 0$ at saturated nodes.
+- **L-CLOSURE-LIFT is the Gauss-Newton (linearized) part.** The full $H_{\mathrm{cl}}$ has an additional residual-correction term $2 \sum_k (Cl(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$. At full-energy critical points, this residual is small but nonzero. Numerical: $\lVert r \rVert_2$ moderate (up to ~2.3 on 15×15) but residual-correction *contribution* to $\mu_{\min}$ is small because $\vert \sigma''\vert \approx 0$ at saturated nodes.
 - **L-CLOSURE-LIFT is only the closure component.** Full L-HMORSE-LOCAL also requires $H_{\mathrm{bd}} + H_{\mathrm{sep}}$ contributions. Total $\mu_{\min}$ depends on combined behavior; see L-HMORSE-DECOMP (`02_development.md §3`).
 - **D-HMORSE-LOCAL conditions (C1)–(C5) or (C2′) variant required.** L-CLOSURE-LIFT alone is parameter-graph-independent (just needs $a_{\mathrm{cl}} < 4$ + connected graph). L-HMORSE-LOCAL needs the symmetry-broken + active-set conditions of D-HMORSE-LOCAL.
 - **Cat A is for the closure-component bound, not for L-HMORSE-LOCAL as a whole.** L-HMORSE-LOCAL is Cat B unconditional (analytic + numerical); Cat A path goes via OP-HMORSE-LOCAL-A (OP-HMORSE-SBM extension + sharper residual + active-set treatment).

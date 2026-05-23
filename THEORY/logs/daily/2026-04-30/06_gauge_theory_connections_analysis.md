@@ -57,7 +57,7 @@ where $\lambda_k$ are constrained Hessian eigenvalues.
 | V5b-T-zero (sub-spinodal torus) | $\lambda = 0$ exact | **Zero gap** (Goldstone, no gap) |
 | V5b-F translation-broken | $\lambda \approx C(\beta) \cdot \lVert \partial S \rVert/n$ empirical | **Polynomial-$1/n$ gap** (vanishes in thermodynamic limit) |
 | V5b uniform spinodal interior | $\lambda = 4\alpha\lambda_2^{\mathrm{Lap}} + \beta W''(c)$ (T-σ-Theorem-3) | **Finite gap** (genuine mass-like) |
-| V5b first-pitchfork ε-small | $\lambda = 4|W''(c)|\epsilon$ leading order (T-σ-Theorem-4) | **ε-scaling gap** |
+| V5b first-pitchfork ε-small | $\lambda = 4\vert W''(c)\vert \epsilon$ leading order (T-σ-Theorem-4) | **ε-scaling gap** |
 
 → SCC가 *mass gap classification scheme*을 자연스럽게 produce. Yang-Mills에서 mass gap *존재*가 미해결인 반면, SCC에서는 *V5b family* 분류로 mass gap *spectrum*이 명시적으로 분류됨.
 

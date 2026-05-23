@@ -120,7 +120,7 @@ Let $u^* \in \Sigma_m$ be an H-Morse-Local critical point satisfying D-HMORSE-LO
 - $A$ = **active** sites: $u^*_i \in (0, 1)$ non-saturated (boundary band; $W''(u^*_i) \in [-1, 2]$ depending on saturation; spinodal interior gives $W''(u^*_i) = -1$ at $u^*_i = c^* = 1/2$).
 - $E$ = **exterior** sites: $u^*_i \approx 0$ (saturated-exterior; $\lvert W''(u^*_i) \rvert = W''(0) = 2 > 0$).
 
-The active-set restriction (C2′) sets $A^* = B \cup E$ (corner-saturated) and $A$ = free interior. The free tangent subspace $T_{u^*}^{\mathrm{free}}$ restricts $v$ to $v|_{A^*} = 0$, i.e., $v$ supported on $A$ only. **However**, for the Schur complement analysis, we work on the full Hessian $H_{\mathcal{E}}(u^*) \in \mathbb{R}^{n \times n}$ pre-restriction; the active-set restriction is recovered post-Schur via the effective $H_{\text{eff}}^{AA}$ block.
+The active-set restriction (C2′) sets $A^* = B \cup E$ (corner-saturated) and $A$ = free interior. The free tangent subspace $T_{u^*}^{\mathrm{free}}$ restricts $v$ to $v\vert _{A^*} = 0$, i.e., $v$ supported on $A$ only. **However**, for the Schur complement analysis, we work on the full Hessian $H_{\mathcal{E}}(u^*) \in \mathbb{R}^{n \times n}$ pre-restriction; the active-set restriction is recovered post-Schur via the effective $H_{\text{eff}}^{AA}$ block.
 
 ### §2.2 3-block Hessian structure
 
@@ -128,14 +128,14 @@ The full SCC Hessian on $\mathbb{R}^n$ admits the block form
 $$H_{\mathcal{E}}(u^*) \;=\; \begin{pmatrix} H_{BB} & H_{BA} & H_{BE} \\ H_{AB} & H_{AA} & H_{AE} \\ H_{EB} & H_{EA} & H_{EE} \end{pmatrix}$$
 
 where:
-- **Diagonal blocks** $H_{BB}, H_{AA}, H_{EE}$ contain the per-site $\beta W''(u^*_i) I$ and $4\alpha L_G|_{\text{block}}$ contributions (from L-HMORSE-DECOMP (D1) boundary term, canonical.md:1982-1984).
+- **Diagonal blocks** $H_{BB}, H_{AA}, H_{EE}$ contain the per-site $\beta W''(u^*_i) I$ and $4\alpha L_G\vert _{\text{block}}$ contributions (from L-HMORSE-DECOMP (D1) boundary term, canonical.md:1982-1984).
 - **Off-diagonal blocks** $H_{BA}, H_{AE}, H_{BE}, H_{AB}, H_{EA}, H_{EB}$ couple via the graph Laplacian $4\alpha L_G$ edges + the closure/separation Jacobian off-diagonal entries.
 
 **Approximate vanishing $H_{BE} \approx 0$**: by graph locality, bulk and exterior are *not adjacent* (active band $A$ separates them spatially — this is the geometric content of D-HMORSE-LOCAL (C3) single-formation + (C2′) active set). Specifically:
 
 $$H_{BE,ij} = 4\alpha (L_G)_{ij} + \text{(closure + separation off-diagonal at saturated nodes)} \approx 0$$
 
-because (i) bulk and exterior are graph-distance $\geq 2$ apart in the canonical phase-separated regime (T8-supercritical, D-HMORSE-LOCAL (C3)), hence $(L_G)_{ij} = 0$; (ii) the closure/separation Jacobian at saturated nodes $u^*_i \in \{0, 1\}$ has $|\sigma''(z(u^*_i))| \to 0$ (canonical.md:1956 "$\delta_{\mathrm{res}}$ small at saturated minimizers").
+because (i) bulk and exterior are graph-distance $\geq 2$ apart in the canonical phase-separated regime (T8-supercritical, D-HMORSE-LOCAL (C3)), hence $(L_G)_{ij} = 0$; (ii) the closure/separation Jacobian at saturated nodes $u^*_i \in \{0, 1\}$ has $\vert \sigma''(z(u^*_i))\vert \to 0$ (canonical.md:1956 "$\delta_{\mathrm{res}}$ small at saturated minimizers").
 
 This gives the approximation
 $$H_{\mathcal{E}}(u^*) \;\approx\; \begin{pmatrix} H_{BB} & H_{BA} & 0 \\ H_{AB} & H_{AA} & H_{AE} \\ 0 & H_{EA} & H_{EE} \end{pmatrix} \quad \text{(saturated-minimizer approximation)}.$$
@@ -279,12 +279,12 @@ $$\boxed{\;\text{Sc}^{(2)} \;=\; \frac{\mu_{\text{bulk}}}{\mu_{\text{active}}} \
 - *(H2)* $H_{BB}$, $H_{EE}$ PSD strict (saturated bulk and exterior at $W''(1) = W''(0) = 2 > 0$).
 - *(H3)* Canonical phase-separated regime $\beta/\alpha > 4\lambda_2(L_G)/\lvert W''(c^*) \rvert$ (T8-Core supercritical, canonical SB7 Cat A).
 - *(H4)* $b_D = 0$ analyticity (CN4 canonical commitment).
-- *(H5)* Active set $A$ has bounded boundary-edge degree: $|\partial A \to B|, |\partial A \to E| \leq C \cdot \lvert A \rvert \cdot d_{\max}$ for an explicit constant $C \leq 1$ (graph-structural; holds on finite grids/tori).
+- *(H5)* Active set $A$ has bounded boundary-edge degree: $\vert \partial A \to B\vert, \vert \partial A \to E\vert \leq C \cdot \lvert A \rvert \cdot d_{\max}$ for an explicit constant $C \leq 1$ (graph-structural; holds on finite grids/tori).
 
 *Statement.*
 $$\text{Sc}^{(2)} \;=\; \frac{\mu_{\text{bulk}}}{\mu_{\text{active}}} \;\geq\; \frac{1}{1 + 4\alpha d_{\max}/\beta} \cdot \bigl(1 - O(\delta_{\text{sat}}/\beta)\bigr)$$
 
-where $\delta_{\text{sat}} = O(|\sigma''(z(u^*))| \cdot a_{\mathrm{cl}}^2 \lVert M \rVert^2)$ is exponentially small at saturated minimizers (canonical L-HMORSE-DECOMP §1988 residual bound).
+where $\delta_{\text{sat}} = O(\vert \sigma''(z(u^*))\vert \cdot a_{\mathrm{cl}}^2 \lVert M \rVert^2)$ is exponentially small at saturated minimizers (canonical L-HMORSE-DECOMP §1988 residual bound).
 
 *Corollary 1 (deep-formation regime).* If $\beta/\alpha > 4 d_{\max}$ (deep T8-supercritical), then
 $$\text{Sc}^{(2)} \;\geq\; \frac{1}{2} \cdot (1 - O(\delta_{\text{sat}}/\beta))$$
@@ -366,7 +366,7 @@ $$\text{Pr}^{(\text{bd})} \;:=\; \frac{\alpha \cdot W''(u^*)}{T_*}$$
 
 $$\ell_{\text{det}} \;:=\; \sqrt{\alpha / \beta}$$
 
-(standard Allen-Cahn-like interface width derived from energy minimization $\alpha (\partial u)^2 + \beta W(u)$ scaling; cf. Modica-Mortola 1987 Arch Rat Mech Anal 98:123; T-OP6-B persistent-ridge boundary band measure $\rho_{\mathrm{bd-band}} \leq 2 \ell_{\text{det}} \cdot |\partial\Omega|/n$, canonical.md:1956).
+(standard Allen-Cahn-like interface width derived from energy minimization $\alpha (\partial u)^2 + \beta W(u)$ scaling; cf. Modica-Mortola 1987 Arch Rat Mech Anal 98:123; T-OP6-B persistent-ridge boundary band measure $\rho_{\mathrm{bd-band}} \leq 2 \ell_{\text{det}} \cdot \vert \partial\Omega\vert /n$, canonical.md:1956).
 
 **Thermal smearing width** (from canonical T-PF-A1-PE Cat A Poincaré + harmonic potential approximation):
 
@@ -436,7 +436,7 @@ CoT step 3: Pr^{(bd)} threshold derivation.
 ### §6.2 Variance bound via T-PF-A1-PE
 
 Canonical T-PF-A1-PE Cat A (canonical.md:1700-1711) provides Poincaré inequality
-$$\text{Var}_{\pi_{T_*}}(f) \leq C_P \cdot T_* \cdot \int |\nabla_H f|^2 \, d\pi_{T_*}$$
+$$\text{Var}_{\pi_{T_*}}(f) \leq C_P \cdot T_* \cdot \int \vert \nabla_H f\vert ^2 \, d\pi_{T_*}$$
 with $C_P = (n/\pi^2) e^{\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$ (canonical.md:1704).
 
 Applied to the local linear functional $f_i(u) = u_i - u^*_i$ at active-band node $i \in A$:

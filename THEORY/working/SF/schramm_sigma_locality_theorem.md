@@ -65,7 +65,7 @@ satisfying:
 
 - **(IC1) Equivariance.** $\Phi(\pi \cdot v) = \varphi(\pi) \cdot \Phi(v)$ for all $\pi \in \mathrm{Aut}(G_1)_{u_1^*}$ and $v \in T_{u_1^*}\Sigma_m^{(1)}$.
 - **(IC2) Hessian intertwining.** $\Phi \circ H(u_1^*) = H(u_2^*) \circ \Phi$ at the uniform Hessian (Prop 1.3a closed form $H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I$).
-- **(IC3) Irrep-multiplicity matching.** For each irrep $[\rho] \in \widehat{\mathrm{Aut}(G_1)_{u_1^*}}$ and corresponding $[\varphi_*\rho] \in \widehat{\mathrm{Aut}(G_2)_{u_2^*}}$, the multiplicities in the smallest non-volume eigenspace agree: $m_{[\rho]}(V_1^{\min}) = m_{[\varphi_*\rho]}(V_2^{\min})$, where $V_i^{\min} := \ker(H(u_i^*) - \mu_2(G_i, c, \alpha, \beta) I)|_{\mathbf{1}^\perp}$ is the lowest non-volume Hessian eigenspace at $u_i^*$.
+- **(IC3) Irrep-multiplicity matching.** For each irrep $[\rho] \in \widehat{\mathrm{Aut}(G_1)_{u_1^*}}$ and corresponding $[\varphi_*\rho] \in \widehat{\mathrm{Aut}(G_2)_{u_2^*}}$, the multiplicities in the smallest non-volume eigenspace agree: $m_{[\rho]}(V_1^{\min}) = m_{[\varphi_*\rho]}(V_2^{\min})$, where $V_i^{\min} := \ker(H(u_i^*) - \mu_2(G_i, c, \alpha, \beta) I)\vert _{\mathbf{1}^\perp}$ is the lowest non-volume Hessian eigenspace at $u_i^*$.
 
 *Remark.* (IC3) is the heart of irrep-compatibility: it forces the **first-pitchfork eigenvector irrep label** to coincide between $G_1$ and $G_2$. Combined with T-σ-Theorem-3 (Hessian spectrum closed-form on uniform) and T-σ-Theorem-4 (post-pitchfork σ-tuple structure), this propagates to σ-tuple agreement.
 
@@ -97,7 +97,7 @@ By T-σ-Lemma-1 + Tool A2 (`mathematical_scaffolding_4tools.md` §4 — proposed
 $$T_{u_i^*}\Sigma_m^{(i)} = \bigoplus_{[\rho] \in \widehat{\mathrm{Aut}(G_i)_{u_i^*}}} V^{(i), [\rho]},$$
 where $V^{(i), [\rho]} = P_{[\rho]} T_{u_i^*}\Sigma_m^{(i)}$ via the standard isotypic projector $P_{[\rho]} = \frac{\dim \rho}{\lvert G_u \rvert} \sum_{\pi} \overline{\chi_\rho(\pi)} \pi$ (Serre 1977 §2.6).
 
-**The smallest-eigenvalue eigenspace at criticality determines the first pitchfork.** Specifically, $V_i^{\min} := \ker(H(u_i^*) - \mu_2(G_i) I) |_{\mathbf{1}^\perp}$ is the eigenspace whose Hessian eigenvalue first crosses zero as $\beta \to \beta_{\mathrm{crit}}^{(2)}(G_i)^+$. By T-σ-Theorem-4 (canonical §13, W5 Day 1, Cat A on $D_4$ free-BC; generalization conditional), the post-bifurcation minimizer $u_{i, \mathrm{pitchfork}}^* = c\mathbf{1} + a_\epsilon \phi_{\min}^{(i)} + O(\epsilon)$ has its symmetry breaking pattern governed by the irrep decomposition of $V_i^{\min}$.
+**The smallest-eigenvalue eigenspace at criticality determines the first pitchfork.** Specifically, $V_i^{\min} := \ker(H(u_i^*) - \mu_2(G_i) I) \vert _{\mathbf{1}^\perp}$ is the eigenspace whose Hessian eigenvalue first crosses zero as $\beta \to \beta_{\mathrm{crit}}^{(2)}(G_i)^+$. By T-σ-Theorem-4 (canonical §13, W5 Day 1, Cat A on $D_4$ free-BC; generalization conditional), the post-bifurcation minimizer $u_{i, \mathrm{pitchfork}}^* = c\mathbf{1} + a_\epsilon \phi_{\min}^{(i)} + O(\epsilon)$ has its symmetry breaking pattern governed by the irrep decomposition of $V_i^{\min}$.
 
 **Step 4 — Irrep-compatibility forces first-pitchfork irrep agreement.**
 

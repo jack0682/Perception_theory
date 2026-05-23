@@ -99,7 +99,7 @@ is required for σ to be a stable observable under noise.
 ### §3.3 Candidate first lemma
 
 **Lemma 16 (σ_rich Lipschitz, Cat C):** *Under (A1)–(A3) + σ-rich definition (`canonical.md` Commitment 18 candidate):*
-$$\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P) \rVert_2 \;\leq\; L_\sigma \cdot \lVert \delta u|_C \rVert_2,$$
+$$\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P) \rVert_2 \;\leq\; L_\sigma \cdot \lVert \delta u\vert _C \rVert_2,$$
 *with $L_\sigma \leq O(\rho_\mathrm{pers}^{-1})$ depending on the persistence threshold (smaller threshold ⇒ more sensitive σ).*
 
 **Proof sketch.** σ_rich = (mass, centroid, inertia tensor) on subgraph. Each component is polynomial in $u$:
@@ -155,7 +155,7 @@ $$\lim_{N \to \infty} \frac{1}{N} \log\!\left(\frac{\gamma_{t \to t+N}(C, C^{\pi
 
 ### §5.1 Statement
 
-Lemma 10 (`06_close_OP0011_step2.md` §2.3) bounds $|\gamma_M - \gamma_{M'}| \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost difference $\delta$. But the SCC self-referential cost $c[u]$ depends on $u$ via the fingerprint $\varphi(u)$; perturbing $u$ by $\delta u$ changes cost by $\delta c \approx L_\varphi \lVert \delta u \rVert$.
+Lemma 10 (`06_close_OP0011_step2.md` §2.3) bounds $\vert \gamma_M - \gamma_{M'}\vert \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost difference $\delta$. But the SCC self-referential cost $c[u]$ depends on $u$ via the fingerprint $\varphi(u)$; perturbing $u$ by $\delta u$ changes cost by $\delta c \approx L_\varphi \lVert \delta u \rVert$.
 
 Iteratively: at each Sinkhorn fixed-point iteration, the cost is updated, perturbing the next plan. Question: is the sequence of plans Cauchy? Does the Schauder fixed-point exist for any $\varepsilon_\mathrm{OT} > 0$?
 

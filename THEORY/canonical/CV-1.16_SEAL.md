@@ -103,7 +103,7 @@ User choice (plan-mode 2026-05-14): **(C2′) active-set form** over strict-inte
 ## Non-Overclaim (mandatory)
 
 - **L-HMORSE-LOCAL is Cat B unconditional, not Cat A.** Cat A path is OP-HMORSE-LOCAL-A (~2 sessions): requires sharper residual-correction bound + OP-HMORSE-SBM robustness extension.
-- **L-CLOSURE-LIFT Cat A is for the closure-component Gauss-Newton part only.** The full $H_{\mathrm{cl}}$ has a residual term $2\sum_k (\mathrm{Cl}(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$ which is small at minimizers (because $|\sigma''(z)| \to 0$ at saturated nodes) but not strictly zero. The residual analytic bound is loose by ~$10^4$× compared to numerical reality.
+- **L-CLOSURE-LIFT Cat A is for the closure-component Gauss-Newton part only.** The full $H_{\mathrm{cl}}$ has a residual term $2\sum_k (\mathrm{Cl}(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$ which is small at minimizers (because $\vert \sigma''(z)\vert \to 0$ at saturated nodes) but not strictly zero. The residual analytic bound is loose by ~$10^4$× compared to numerical reality.
 - **Cat A unconditional H-MORSE is *impossible*.** V5b-T-zero (canonical Cat A) provides structural counterexample on translation-invariant graphs ($\mathbb{Z}_L^d$ orbit gives exact-zero Goldstone). The "Local" qualifier in L-HMORSE-LOCAL is essential.
 - **D-HMORSE-LOCAL conditions (C1)–(C5) are all required.** Each rules out a documented family of counterexamples (CV114 `05_counterexample_search.md` 7 CE: cycle, torus, $D_4$-symmetric center, T8-Full bifurcation threshold, reflection-symmetric path, boundary saturated, two-identical-formation permutation).
 - **L-BOUNDARY-MODE-EXCLUSION is Cat C SKETCH-level.** Full rigorous Weyl-perturbation bookkeeping with explicit constants is deferred to OP-HMORSE-LOCAL-A. Numerical anchor exp25 supports the phenomenon.
@@ -132,7 +132,7 @@ User choice (plan-mode 2026-05-14): **(C2′) active-set form** over strict-inte
 
 ## Outstanding Items Registered (OQ for follow-up — CV-1.17 candidates)
 
-- **OP-HMORSE-LOCAL-A** Cat A path for L-HMORSE-LOCAL (~2 sessions): (a) sharper residual-correction bound using $|\sigma''(z(u^*))| \to 0$ at saturated nodes — replaces the loose worst-case $|\sigma''|_{\max}$; (b) OP-HMORSE-SBM robustness extension. Unlocks L-HMORSE-LOCAL Cat A unconditional canonical promotion.
+- **OP-HMORSE-LOCAL-A** Cat A path for L-HMORSE-LOCAL (~2 sessions): (a) sharper residual-correction bound using $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes — replaces the loose worst-case $\vert \sigma''\vert _{\max}$; (b) OP-HMORSE-SBM robustness extension. Unlocks L-HMORSE-LOCAL Cat A unconditional canonical promotion.
 - **OP-HMORSE-SBM** numerical robustness extension (1 session): extend `exp_hmorse_broadness_full_spectrum.py` to SBM, barbell, small-world graph classes. Robustness check beyond canonical grid topology.
 - **OP-HMORSE-SADDLE** (MEDIUM severity, 2–4 sessions): saddle-point Hessian regularity for full Eyring-Kramers prefactor Cat B. Independent of minimum-Hessian L-HMORSE-LOCAL.
 - **OP-HMORSE-GENERIC-PATH** (REPRIORITIZED, MEDIUM): Smale-Sard transversality / generic Morse Cat A alternative. With L-CLOSURE-LIFT Cat A direct, this fallback becomes lower priority.

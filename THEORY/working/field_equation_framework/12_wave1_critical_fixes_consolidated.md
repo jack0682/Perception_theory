@@ -406,7 +406,7 @@ Additionally, file 02 §5.1 appends an extra `·ω_well^{1/2}` factor in one ver
 
 **Identity 2a — Structural Kramers Prefactor Form** (multi-D leading-order):
 
-$$\boxed{\omega_0 \;\sim\; \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (Pr^{(Kramers)})^{-1/2} = |\mu_{\mathrm{saddle}}|}$$
+$$\boxed{\omega_0 \;\sim\; \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (Pr^{(Kramers)})^{-1/2} = \vert \mu_{\mathrm{saddle}}\vert}$$
 
 where the equality holds by the algebra above: `√|μ_well|·√|μ_saddle|·√(|μ_saddle|/|μ_well|) = |μ_saddle|`.
 
@@ -418,7 +418,7 @@ where the det'/det' ratio is the subleading correction.
 
 **Identity 2b — 1D-Projection Geometric Mean Form:**
 
-$$\boxed{\omega_0^{1D-proj} = \frac{1}{2\pi} \cdot \sqrt{\mu_{\mathrm{well}} \cdot |\mu_{\mathrm{saddle}}|} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}$$
+$$\boxed{\omega_0^{1D-proj} = \frac{1}{2\pi} \cdot \sqrt{\mu_{\mathrm{well}} \cdot \vert \mu_{\mathrm{saddle}}\vert} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}$$
 
 **Interpretation of Identity 2b:** The 1D-projection (Kramers 1940 §VII, HTB 1990 eq. 4.55a) gives the geometric mean of well and saddle curvatures. This is the direct product `ω_well·ω_saddle = √(μ_well·|μ_saddle|)` with no Pr^{(Kramers)} ratio needed.
 

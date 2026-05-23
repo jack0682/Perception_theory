@@ -85,7 +85,7 @@ of $V_D^0$ at 6 strategic $\lambda$-points (31.1s runtime). Results:
 
 | Claim | Pre-VP-4 | Post-VP-4 |
 |---|---|---|
-| $|\{\mathcal{B}_i\}| \geq 2$ (Prop BS1) | PROVED (construction) | **COMPUTATIONALLY CONFIRMED** (2 types on S3: Δd=0.40; S4: Δd=0.52) |
+| $\vert \{\mathcal{B}_i\}\vert \geq 2$ (Prop BS1) | PROVED (construction) | **COMPUTATIONALLY CONFIRMED** (2 types on S3: Δd=0.40; S4: Δd=0.52) |
 | OP-OMS-010(c) (basin count) | OPEN | **COMPUTATIONALLY SUPPORTED** |
 | $V_D^0$ satisfies V4 (basin-generating) | HYPOTHESIZED | **COMPUTATIONALLY SUPPORTED** |
 | V5 (boundary-aware) of $V_D^0$ | OPEN | **NOT TESTED** (boundary face experiments deferred) |

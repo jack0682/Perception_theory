@@ -22,7 +22,7 @@ Estimated effort: 1–2 sessions for audit; CV-1.14 seal estimated 3–6 more se
 
 - **T7-Enhanced metastability exists.** The metastable basin structure on $\Sigma_m$ (volume-constraint polytope) is empirically supported (μ_min ∈ [0.96, 60.2] across configurations) but unproven.
 - **H-MORSE is needed for nondegenerate critical points / saddle structure.** Without it, Hessian analysis at critical points cannot be lifted into a Morse decomposition, and the Kramers prefactor is undefined.
-- **Package II needs Eyring-Kramers rates.** $\Gamma_K = \frac{1}{2\pi} \sqrt{\frac{|\lambda_-|\det(\nabla^2 E|_*)}{|\det(\nabla^2 E|_s)|}} \exp(-\Delta E / T_*)$ requires:
+- **Package II needs Eyring-Kramers rates.** $\Gamma_K = \frac{1}{2\pi} \sqrt{\frac{\vert \lambda_-\vert \det(\nabla^2 E\vert _*)}{\vert \det(\nabla^2 E\vert _s)\vert}} \exp(-\Delta E / T_*)$ requires:
   - Morse minima (T-PF-A1 Package I gives Gibbs invariance; H-MORSE gives nondegeneracy).
   - Morse saddles (index-1 transition states between minima).
   - $T_*$ registered (OP-0021, currently axiomatic).
@@ -36,7 +36,7 @@ Estimated effort: 1–2 sessions for audit; CV-1.14 seal estimated 3–6 more se
 The entry audit must answer these eight questions before any proof attempt:
 
 1. **What is the exact H-MORSE statement?** Likely form:
-> For every critical point $u^* \in \Sigma_m$ of $E$, the Hessian $H(u^*)|_{T_{u^*}\Sigma_m}$ (projected onto the tangent space of the volume-constraint polytope) has $\mu_\mathrm{min}(H|_*) > 0$ modulo symmetry-zero eigenvalues.
+> For every critical point $u^* \in \Sigma_m$ of $E$, the Hessian $H(u^*)\vert _{T_{u^*}\Sigma_m}$ (projected onto the tangent space of the volume-constraint polytope) has $\mu_\mathrm{min}(H\vert _*) > 0$ modulo symmetry-zero eigenvalues.
    Identify the exact registered form (likely scattered across `working/MF/`); reconcile.
 
 2. **Which energy landscape is used?** $E = \lambda_\mathrm{cl} E_\mathrm{cl} + \lambda_\mathrm{sep} E_\mathrm{sep} + \lambda_\mathrm{bd} E_\mathrm{bd} + \lambda_\mathrm{tr} E_\mathrm{tr}$ on $\Sigma_m$? Or a restricted variant?

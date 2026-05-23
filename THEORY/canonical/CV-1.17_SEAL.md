@@ -146,7 +146,7 @@ OPT-B selection (2026-05-15) via plan-mode AskUserQuestion. 선택지 본문에 
 
 ## Outstanding Items Registered (OQ for follow-up — CV-1.18 candidates)
 
-- **OP-HMORSE-LOCAL-A** (CV-1.18 primary, ~2 sessions): L-HMORSE-LOCAL Cat B → Cat A 승급 path. (a) sharper residual bound using $|\sigma''(z(u^*))| \to 0$ at saturated nodes — 현재 worst-case $|\sigma''|_{\max}$ ~10^4× loose vs numerical; (b) OP-HMORSE-SBM robustness extension.
+- **OP-HMORSE-LOCAL-A** (CV-1.18 primary, ~2 sessions): L-HMORSE-LOCAL Cat B → Cat A 승급 path. (a) sharper residual bound using $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes — 현재 worst-case $\vert \sigma''\vert _{\max}$ ~10^4× loose vs numerical; (b) OP-HMORSE-SBM robustness extension.
 - **Package II Eyring-Kramers prefactor Cat B** (CV-1.18 secondary, 3-4 sessions): L-HMORSE-LOCAL Cat B provides partial H5 replacement; combine with OP-0021 ($T_*$) for full prefactor. Q3 closure path.
 - **OP-HMORSE-SBM** (1 session): numerical robustness extension to SBM / barbell / small-world. OP-HMORSE-LOCAL-A sub-task B 와 중복.
 - **OP-0021 dual-naming reconciliation** (0.5 session, hygiene): H-T* "T_* normalization" (hypothesis_tree) vs OP-0021 "Stochastic Dynamics" (theorem_status). CV-1.16 SEAL 의 deferred 결정 처리.

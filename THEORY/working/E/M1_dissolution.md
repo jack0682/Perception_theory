@@ -79,7 +79,7 @@ where:
 - `τ_0` is the **prefactor**, depending on Hessian determinants:
 
 $$
-\tau_0 \;=\; \frac{2\pi}{|\omega_s|}\cdot \sqrt{\frac{\det H(u_a^*)}{|\det H(u_s^*)|}},
+\tau_0 \;=\; \frac{2\pi}{\vert \omega_s\vert}\cdot \sqrt{\frac{\det H(u_a^*)}{\vert \det H(u_s^*)\vert}},
 $$
 
 with `|ω_s|` the magnitude of the unique negative-eigenvalue at the saddle, and `H` the constrained Hessian on `T_{u^*} Σ_m`.
@@ -214,7 +214,7 @@ Next file: `working/E/MO1_dissolution.md` (G6).
 
 **Round 12-18 + Axis B 에서 밝혀진 두 timescale:**
 
-- **$t_{\mathrm{emerge}} \sim 1/|\mu_{\min}|$** (emergence): $u_{\mathrm{uniform}}$ 의 $N_{\mathrm{unst}}$ 불안정 방향에서 $\widehat{K} \approx 1 + \sqrt{N_{\mathrm{unst}}}$ formations 가 **자연 생성** (Conjecture 2.1 of MF §2).
+- **$t_{\mathrm{emerge}} \sim 1/\vert \mu_{\min}\vert $** (emergence): $u_{\mathrm{uniform}}$ 의 $N_{\mathrm{unst}}$ 불안정 방향에서 $\widehat{K} \approx 1 + \sqrt{N_{\mathrm{unst}}}$ formations 가 **자연 생성** (Conjecture 2.1 of MF §2).
 - **$t_{\mathrm{coarsen}} \sim \exp(\Delta\mathcal{F}/T)$** (coarsening): Kramers metastability escape 로 점진적 merge, 최종 $K^\ast = 1$ (T-Merge (b) Cat A).
 
 **M-1 진단.** "K=1 always preferred" 는 $t_{\mathrm{coarsen}} \to \infty$ limit statement. Short-time $[t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$ window 에서는 $\widehat{K} \geq 2$ preferred. M-1 은 두 timescale 의 **conflation**.

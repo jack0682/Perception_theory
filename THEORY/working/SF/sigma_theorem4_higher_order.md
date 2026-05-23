@@ -19,7 +19,7 @@
 
 T-σ-Theorem-4 (canonical §13 line 1377+, status revised 2026-04-29 CV-1.5.1) gives the σ-tuple at the first $D_4$ pitchfork on the free-BC $L \times L$ grid. The leading-order Hessian in the Fiedler doublet $V_2 = \mathrm{span}(\phi_{(1, 0)}, \phi_{(0, 1)})$ is
 
-$$\mu_0 = 4|W''(c)|\,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\lvert W''(c) \rvert\,\epsilon + O(\epsilon^{3/2}),$$
+$$\mu_0 = 4\vert W''(c)\vert \,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\lvert W''(c) \rvert\,\epsilon + O(\epsilon^{3/2}),$$
 
 with R22 cubic-equivariant ratio $A_2/A_1 = 4$ on the $D_4$ free-BC grid (Cat A, `working/SF/symmetry_moduli.md` §3.3). Hence $\mu_0 = \mu_1$ at leading order — the σ-tuple's first two entries have **equal eigenvalue** but **distinct irrep labels** ($A_1$ trivial vs $A_2$ sign under $\mathbb{Z}_2 = \langle s_y\rangle$). Tie-break is currently resolved by Commitment 14 (O7) (added CV-1.5.1; Mulliken character order: $A_1$ before $A_2$; D-2 approved 2026-04-29 `08_user_decisions_log.md`).
 
@@ -38,23 +38,23 @@ R22 (`working/SF/symmetry_moduli.md` §3.3) reduces the Σ_m-restricted energy a
 
 $$F(x, y;\,\beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + A_1 (x^4 + y^4) + A_2\, x^2 y^2 + (\text{higher order}),$$
 
-where $\mu(\beta) = -\epsilon|W''(c)| < 0$ above criticality, $(x, y)$ are amplitudes of $(\phi_{(1, 0)}, \phi_{(0, 1)})$, and the cubic-equivariant ratio is
+where $\mu(\beta) = -\epsilon\vert W''(c)\vert < 0$ above criticality, $(x, y)$ are amplitudes of $(\phi_{(1, 0)}, \phi_{(0, 1)})$, and the cubic-equivariant ratio is
 
 $$A_2/A_1 = 4 \qquad \text{(R22 Cat A; ratio of }\int \phi_{(1,0)}^2 \phi_{(0,1)}^2\text{ to }\int \phi_{(1,0)}^4\text{ on $L \times L$ free-BC, continuum limit).}$$
 
 The axis-aligned minimum sits at $(x, y) = (a_\epsilon, 0)$ with $a_\epsilon = \sqrt{-\mu/(4 A_1)} = c_R\sqrt{\epsilon}$. The post-bifurcation Hessian along $V_2$ is
 
-$$F_{xx}(a_\epsilon, 0) = -2\mu = 2\epsilon|W''(c)|,\quad F_{yy}(a_\epsilon, 0) = -\mu \cdot (A_2/A_1) = 4\epsilon|W''(c)|,\quad F_{xy} = 0.$$
+$$F_{xx}(a_\epsilon, 0) = -2\mu = 2\epsilon\vert W''(c)\vert,\quad F_{yy}(a_\epsilon, 0) = -\mu \cdot (A_2/A_1) = 4\epsilon\vert W''(c)\vert,\quad F_{xy} = 0.$$
 
-(The factor difference between (ii)'s "$\mu_0 = 4|W''(c)|\epsilon$" and the normal-form direct calculation is absorbed into the Σ_m-Hessian normalization — see canonical §13 T-σ-Theorem-4 (ii) for the canonical statement; this working file uses the canonical convention.) **At cubic-equivariant order, both eigenvalues collapse to the same $4|W''(c)|\epsilon$ scale because $A_2/A_1 = 4$ — a coincidence of the $D_4$ free-BC continuum integral, not a generic feature.**
+(The factor difference between (ii)'s "$\mu_0 = 4\vert W''(c)\vert \epsilon$" and the normal-form direct calculation is absorbed into the Σ_m-Hessian normalization — see canonical §13 T-σ-Theorem-4 (ii) for the canonical statement; this working file uses the canonical convention.) **At cubic-equivariant order, both eigenvalues collapse to the same $4\vert W''(c)\vert \epsilon$ scale because $A_2/A_1 = 4$ — a coincidence of the $D_4$ free-BC continuum integral, not a generic feature.**
 
 This is the leading-order degeneracy. Splitting requires going beyond cubic equivariants.
 
 ### 2.1 Σ_m-Hessian normalization: derivation of the absorption factor
 
-The R22 normal form $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + A_1(x^4 + y^4) + A_2 x^2 y^2 + \cdots$ is the **C-R reduced Lyapunov function** on the 2D Fiedler subspace $V_2 \subset T_{u_*}\Sigma_m$. Its Hessian eigenvalues at the axis-aligned minimum $(a_\epsilon, 0)$ are $F_{xx} = 2\epsilon|W''(c)|$ and $F_{yy} = (A_2/A_1)\epsilon|W''(c)| = 4\epsilon|W''(c)|$ on $D_4$ free-BC.
+The R22 normal form $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + A_1(x^4 + y^4) + A_2 x^2 y^2 + \cdots$ is the **C-R reduced Lyapunov function** on the 2D Fiedler subspace $V_2 \subset T_{u_*}\Sigma_m$. Its Hessian eigenvalues at the axis-aligned minimum $(a_\epsilon, 0)$ are $F_{xx} = 2\epsilon\vert W''(c)\vert $ and $F_{yy} = (A_2/A_1)\epsilon\vert W''(c)\vert = 4\epsilon\vert W''(c)\vert $ on $D_4$ free-BC.
 
-The canonical T-σ-Theorem-4 (ii) (canonical.md line 1385–1387) states $\mu_0 = 4|W''(c)|\epsilon$ and $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon = 4|W''(c)|\epsilon$. The factor-of-2 gap between $F_{xx} = 2\epsilon|W''(c)|$ (R22 reduced Lyapunov) and $\mu_0 = 4\epsilon|W''(c)|$ (canonical Σ_m-Hessian eigenvalue) is **not a notational accident** — it is the ordered-pair convention applied to the smoothness quadratic form, propagated through the C-R reduction. We derive it explicitly below to close the load-bearing gap flagged by the W5 Day 4 PM Wave 2 critic re-review (`logs/daily/2026-04-30/09_critic_re_review_5files.md` §3.1 issue #4).
+The canonical T-σ-Theorem-4 (ii) (canonical.md line 1385–1387) states $\mu_0 = 4\vert W''(c)\vert \epsilon$ and $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon = 4\vert W''(c)\vert \epsilon$. The factor-of-2 gap between $F_{xx} = 2\epsilon\vert W''(c)\vert $ (R22 reduced Lyapunov) and $\mu_0 = 4\epsilon\vert W''(c)\vert $ (canonical Σ_m-Hessian eigenvalue) is **not a notational accident** — it is the ordered-pair convention applied to the smoothness quadratic form, propagated through the C-R reduction. We derive it explicitly below to close the load-bearing gap flagged by the W5 Day 4 PM Wave 2 critic re-review (`logs/daily/2026-04-30/09_critic_re_review_5files.md` §3.1 issue #4).
 
 #### 2.1.1 The two Hessian conventions
 
@@ -89,27 +89,27 @@ since $\lambda_{(1, 0)}^{\mathrm{Lap}} = \lambda_{(0, 1)}^{\mathrm{Lap}} = \lamb
 
 Linearizing $\mathcal{E}(c\mathbf{1} + v) = \mathcal{E}(c\mathbf{1}) + \tfrac{1}{2}v^T H_\Sigma(c\mathbf{1})v + (\text{quartic and higher})$, the leading-order Σ_m-Hessian on $V_2$ is
 
-$$H_\Sigma(c\mathbf{1})\big\vert_{V_2} = (4\alpha\lambda_2^{\mathrm{Lap}} + \beta W''(c)) \cdot \mathbb{1}_{V_2} = -\epsilon|W''(c)| \cdot \mathbb{1}_{V_2}$$
+$$H_\Sigma(c\mathbf{1})\big\vert_{V_2} = (4\alpha\lambda_2^{\mathrm{Lap}} + \beta W''(c)) \cdot \mathbb{1}_{V_2} = -\epsilon\vert W''(c)\vert \cdot \mathbb{1}_{V_2}$$
 
 (at $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$ with $\beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}/\lvert W''(c) \rvert$, T8-Core).
 
 So the quadratic-in-$(x, y)$ part of $\mathcal{E}(c\mathbf{1} + v)$ is
 
-$$\mathcal{E}^{(2)}(x, y) = \tfrac{1}{2} \cdot (-\epsilon|W''(c)|) \cdot (x^2 + y^2) = -\tfrac{\epsilon|W''(c)|}{2}(x^2 + y^2).$$
+$$\mathcal{E}^{(2)}(x, y) = \tfrac{1}{2} \cdot (-\epsilon\vert W''(c)\vert) \cdot (x^2 + y^2) = -\tfrac{\epsilon\vert W''(c)\vert}{2}(x^2 + y^2).$$
 
-Identifying with the R22 normal form $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + \cdots$, we read off $\mu(\beta) = -\epsilon|W''(c)|$, consistent with §2.
+Identifying with the R22 normal form $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + \cdots$, we read off $\mu(\beta) = -\epsilon\vert W''(c)\vert $, consistent with §2.
 
 #### 2.1.5 Hessian eigenvalues at the axis-aligned minimum
 
-At the C-R reduced minimizer $(a_\epsilon, 0)$ with $a_\epsilon^2 = -\mu/(4 A_1) = \epsilon|W''(c)|/(4 A_1)$, the **C-R Lyapunov Hessian** is
+At the C-R reduced minimizer $(a_\epsilon, 0)$ with $a_\epsilon^2 = -\mu/(4 A_1) = \epsilon\vert W''(c)\vert /(4 A_1)$, the **C-R Lyapunov Hessian** is
 
-$$F_{xx}(a_\epsilon, 0) = -2\mu = 2\epsilon|W''(c)|, \qquad F_{yy}(a_\epsilon, 0) = -\mu \cdot (A_2/A_1) = 4\epsilon|W''(c)|.$$
+$$F_{xx}(a_\epsilon, 0) = -2\mu = 2\epsilon\vert W''(c)\vert, \qquad F_{yy}(a_\epsilon, 0) = -\mu \cdot (A_2/A_1) = 4\epsilon\vert W''(c)\vert.$$
 
 The **Σ_m-Hessian eigenvalues** are obtained by *un-doing the factor 1/2 in the R22 prefactor convention*: the canonical convention writes the normal form *without* a $1/2$ on the quadratic, so $\partial^2_{kk} F_{\mathrm{can}}$ is twice $\partial^2_{kk} F_{\mathrm{R22}}$ for the diagonal entries arising from the $\mu/2$ term. Carrying this absorption through to the post-bifurcation diagonal gives
 
-$$\boxed{\mu_0 = 4\epsilon|W''(c)|, \qquad \mu_1 = (A_2/A_1)\epsilon|W''(c)| = 4\epsilon|W''(c)| \quad (D_4\text{ free-BC}).}$$
+$$\boxed{\mu_0 = 4\epsilon\vert W''(c)\vert, \qquad \mu_1 = (A_2/A_1)\epsilon\vert W''(c)\vert = 4\epsilon\vert W''(c)\vert \quad (D_4\text{ free-BC}).}$$
 
-The naive doubling $\mu_k \stackrel{?}{=} 2 F_{kk}^{\mathrm{R22}}$ applied uniformly would give $\mu_1 = 8\epsilon|W''(c)|$, which is *incorrect* because the factor-2 absorption only acts on the quadratic-prefactor part, not on the post-bifurcation correction $-\mu (A_2/A_1)$ which is already in canonical units. The careful convention map (§2.1.7) makes this explicit.
+The naive doubling $\mu_k \stackrel{?}{=} 2 F_{kk}^{\mathrm{R22}}$ applied uniformly would give $\mu_1 = 8\epsilon\vert W''(c)\vert $, which is *incorrect* because the factor-2 absorption only acts on the quadratic-prefactor part, not on the post-bifurcation correction $-\mu (A_2/A_1)$ which is already in canonical units. The careful convention map (§2.1.7) makes this explicit.
 
 #### 2.1.6 Resolution of the apparent factor-2 conflict
 
@@ -117,11 +117,11 @@ The canonical T-σ-Theorem-4 (ii) statement (line 1399) writes the normal form a
 
 $$F_{\mathrm{can}}(x, y; \beta) = \beta(x^2 + y^2) + A_1(x^2 + y^2)^2 + A_2 x^2 y^2,$$
 
-i.e., **without the 1/2 prefactor on the quadratic term**. With this convention, $\partial_x^2 F_{\mathrm{can}} = 2\beta + \cdots$, so at $\beta = -\epsilon|W''(c)|/2$ (canonical convention, half the working-file's $\mu$ by absorbing the 1/2), the canonical computation gives $\partial_x^2 F_{\mathrm{can}}|_{(a_\epsilon, 0)} = 4\epsilon|W''(c)| = \mu_0$ directly — no further factor-of-2 doubling is needed.
+i.e., **without the 1/2 prefactor on the quadratic term**. With this convention, $\partial_x^2 F_{\mathrm{can}} = 2\beta + \cdots$, so at $\beta = -\epsilon\vert W''(c)\vert /2$ (canonical convention, half the working-file's $\mu$ by absorbing the 1/2), the canonical computation gives $\partial_x^2 F_{\mathrm{can}}\vert _{(a_\epsilon, 0)} = 4\epsilon\vert W''(c)\vert = \mu_0$ directly — no further factor-of-2 doubling is needed.
 
-The working file §2 uses the alternative R22 convention $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + A_1(x^4 + y^4) + A_2 x^2 y^2$ (with $\mu(\beta) = -\epsilon|W''(c)|$), under which $F_{xx}^{\mathrm{R22}} = 2\epsilon|W''(c)|$ and $F_{yy}^{\mathrm{R22}} = 4\epsilon|W''(c)|$, and the canonical Σ_m-Hessian eigenvalues $\mu_k$ are obtained via the convention map (§2.1.7) — *not* via uniform doubling.
+The working file §2 uses the alternative R22 convention $F(x, y; \beta) = \tfrac{\mu(\beta)}{2}(x^2 + y^2) + A_1(x^4 + y^4) + A_2 x^2 y^2$ (with $\mu(\beta) = -\epsilon\vert W''(c)\vert $), under which $F_{xx}^{\mathrm{R22}} = 2\epsilon\vert W''(c)\vert $ and $F_{yy}^{\mathrm{R22}} = 4\epsilon\vert W''(c)\vert $, and the canonical Σ_m-Hessian eigenvalues $\mu_k$ are obtained via the convention map (§2.1.7) — *not* via uniform doubling.
 
-**The two conventions agree on $\mu_0 = \mu_1 = 4\epsilon|W''(c)|$** at leading order on $D_4$ free-BC where $A_2/A_1 = 4$. The factor-of-2 gap between $F_{xx}^{\mathrm{R22}} = 2\epsilon|W''(c)|$ and $\mu_0^{\mathrm{can}} = 4\epsilon|W''(c)|$ is precisely the parametrization Jacobian from the R22-convention $F$ to the Σ_m-Hessian, **not** an absorbed unphysical degree of freedom and **not** a hidden inconsistency.
+**The two conventions agree on $\mu_0 = \mu_1 = 4\epsilon\vert W''(c)\vert $** at leading order on $D_4$ free-BC where $A_2/A_1 = 4$. The factor-of-2 gap between $F_{xx}^{\mathrm{R22}} = 2\epsilon\vert W''(c)\vert $ and $\mu_0^{\mathrm{can}} = 4\epsilon\vert W''(c)\vert $ is precisely the parametrization Jacobian from the R22-convention $F$ to the Σ_m-Hessian, **not** an absorbed unphysical degree of freedom and **not** a hidden inconsistency.
 
 #### 2.1.7 Reconciliation summary
 
@@ -143,16 +143,16 @@ To prevent confusion at canonical promotion time (CV-1.6 candidate), this workin
 **Critical update (2026-04-30):** The numerical scaling test executed on $L \in \{4, 8, 16\}$ per §8 protocol (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`; cross-ref `13_wave3_critical_findings.md`) **does not corroborate** the boxed leading-order claim of §2.1.5 + canonical T-σ-Theorem-4 (ii) at the grid sizes accessible to the Lanczos extraction. Specifically:
 
 - Observed scaling exponent: $p \approx 1.03$ (not $p = 2$ as predicted by §3.2 polynomial-equivariant analysis, and not $p = 3/2$ as ruled out by the same).
-- Observed Σ_m-Hessian eigenvalue ratio at finite $L$: $\mu_1 / \mu_0 \approx 2$ (i.e., $\mu_0 \approx \epsilon|W''(c)|$, $\mu_1 \approx 2\epsilon|W''(c)|$), **not** $\mu_0 = \mu_1 = 4\epsilon|W''(c)|$.
+- Observed Σ_m-Hessian eigenvalue ratio at finite $L$: $\mu_1 / \mu_0 \approx 2$ (i.e., $\mu_0 \approx \epsilon\vert W''(c)\vert $, $\mu_1 \approx 2\epsilon\vert W''(c)\vert $), **not** $\mu_0 = \mu_1 = 4\epsilon\vert W''(c)\vert $.
 - The leading-order *degeneracy* on which §3.2's $O(\epsilon^2)$ splitting prediction depends is therefore **not observed** at $L \leq 16$. The R22 canonical-Cat-A claim "$A_2/A_1 = 4$" is in tension with the finite-$L$ numerical evidence (effective $A_2/A_1 \approx 1$).
 
 **Interpretation hypotheses (under active examination, not yet adjudicated):**
 
 1. **Continuum-limit hypothesis** (preserves §3.2 conclusion): the $A_2/A_1 = 4$ identity is a continuum-limit ($L \to \infty$) statement. Finite-$L$ corrections are $O(1/L^2)$ or worse, large enough at $L \leq 16$ to dominate the leading-order behaviour. Under this hypothesis, the §3.2 splitting prediction $\mu_1 - \mu_0 = O(\epsilon^2)$ is conditional on continuum extrapolation, recoverable on $L \geq L_*$ for some explicit $L_*$ (likely $L_* \gg 16$). Falsifiable by the NQ-187b protocol (§11).
-2. **Convention-mismatch hypothesis** (challenges §2.1.6): the data fits the R22 working convention $F_{xx}^{\mathrm{R22}} = 2\epsilon|W''(c)|$, $F_{yy}^{\mathrm{R22}} = 4\epsilon|W''(c)|$ directly *without* the factor-2 doubling encoded in the canonical-convention map. Under this hypothesis, canonical T-σ-Theorem-4 (ii)'s $\mu_0 = 4\epsilon|W''(c)|$ would be a notational artifact rather than a Σ_m-Hessian eigenvalue — requires re-examination of the canonical convention itself. Falsifiable by independent symbolic verification of the canonical-vs-R22 prefactor map.
+2. **Convention-mismatch hypothesis** (challenges §2.1.6): the data fits the R22 working convention $F_{xx}^{\mathrm{R22}} = 2\epsilon\vert W''(c)\vert $, $F_{yy}^{\mathrm{R22}} = 4\epsilon\vert W''(c)\vert $ directly *without* the factor-2 doubling encoded in the canonical-convention map. Under this hypothesis, canonical T-σ-Theorem-4 (ii)'s $\mu_0 = 4\epsilon\vert W''(c)\vert $ would be a notational artifact rather than a Σ_m-Hessian eigenvalue — requires re-examination of the canonical convention itself. Falsifiable by independent symbolic verification of the canonical-vs-R22 prefactor map.
 3. **Discrete-graph $A_2/A_1 \neq 4$ hypothesis** (challenges R22 working file `symmetry_moduli.md` §3.3): the $A_2/A_1 = 4$ identity holds in continuum but the discrete-graph $L \times L$ free-BC version gives a different effective ratio that *converges to* 4 only in the continuum limit. Independent of which convention is used. NQ-187b (§11) is the operational test.
 
-**Status:** the §2.1 absorption derivation is **mathematically self-consistent within the canonical convention**, but its load-bearing numerical instantiation (boxed claim $\mu_0 = \mu_1 = 4\epsilon|W''(c)|$) is **not supported** by the finite-$L$ data. We retain §2.1.1–§2.1.7 as the *convention-derivation scaffolding*, with the explicit caveat that the prediction "$\mu_0 = \mu_1$ at leading order on $D_4$ free-BC" is now **conditional on continuum extrapolation pending NQ-187b**.
+**Status:** the §2.1 absorption derivation is **mathematically self-consistent within the canonical convention**, but its load-bearing numerical instantiation (boxed claim $\mu_0 = \mu_1 = 4\epsilon\vert W''(c)\vert $) is **not supported** by the finite-$L$ data. We retain §2.1.1–§2.1.7 as the *convention-derivation scaffolding*, with the explicit caveat that the prediction "$\mu_0 = \mu_1$ at leading order on $D_4$ free-BC" is now **conditional on continuum extrapolation pending NQ-187b**.
 
 ---
 
@@ -231,7 +231,7 @@ The post-bifurcation amplitude correction comes from solving $g(x, y; \beta) = 0
 The post-bifurcation Hessian eigenvalues are $\partial_x^2 F$ and $\partial_y^2 F$ evaluated at $(a_\epsilon, 0)$. Since $F = F^{(2)} + F^{(4)} + F^{(6)} + \cdots$ with all odd-degree pieces vanishing:
 
 - $\partial_x^2 F^{(2)} \sim \epsilon$ (leading order, both eigenvalues equal on $D_4$ free-BC).
-- $\partial_x^2 F^{(4)} \sim a_\epsilon^2 \sim \epsilon$ (already part of $\mu_0 = \mu_1 = 4|W''(c)|\epsilon$ via R22).
+- $\partial_x^2 F^{(4)} \sim a_\epsilon^2 \sim \epsilon$ (already part of $\mu_0 = \mu_1 = 4\vert W''(c)\vert \epsilon$ via R22).
 - $\partial_x^2 F^{(5)} \equiv 0$ (no degree-5 invariant).
 - $\partial_x^2 F^{(6)} \sim a_\epsilon^4 \sim \epsilon^2$ — **first non-trivial splitting**.
 
@@ -313,7 +313,7 @@ The W5 Day 4 PM Wave 2 critic (`logs/daily/2026-04-30/09_critic_re_review_5files
 
 Decompose the perturbation $u - c\mathbf{1} = v_{\mathrm{soft}} + v_{\mathrm{hard}}$ where
 
-$$v_{\mathrm{soft}} = x \phi_{(1, 0)} + y \phi_{(0, 1)} \in V_2 \quad \text{(soft, } |\mu_{V_2}| \to 0\text{ at }\beta_{\mathrm{crit}}^{(2)}\text{)},$$
+$$v_{\mathrm{soft}} = x \phi_{(1, 0)} + y \phi_{(0, 1)} \in V_2 \quad \text{(soft, } \vert \mu_{V_2}\vert \to 0\text{ at }\beta_{\mathrm{crit}}^{(2)}\text{)},$$
 
 $$v_{\mathrm{hard}} = \sum_{k \geq 4} z_k \phi_k \in V_2^\perp \cap T_{u_*}\Sigma_m \quad \text{(hard, } \mu_k \geq \mu_*\text{ uniformly)},$$
 
@@ -468,9 +468,9 @@ $$F_{xx}^{(6)} = 30 B_3 a_\epsilon^4, \qquad F_{yy}^{(6)} = (6 B_3 + 2 B_4) a_\e
 
 So the corrected Hessian eigenvalues to $O(\epsilon^2)$ are
 
-$$\mu_0 = 4|W''(c)|\epsilon + 30 B_3 a_\epsilon^4 + O(\epsilon^3), \qquad \mu_1 = 4|W''(c)|\epsilon + (6 B_3 + 2 B_4) a_\epsilon^4 + O(\epsilon^3).$$
+$$\mu_0 = 4\vert W''(c)\vert \epsilon + 30 B_3 a_\epsilon^4 + O(\epsilon^3), \qquad \mu_1 = 4\vert W''(c)\vert \epsilon + (6 B_3 + 2 B_4) a_\epsilon^4 + O(\epsilon^3).$$
 
-Using $a_\epsilon^2 = -\mu/(4 A_1) = \epsilon|W''(c)|/(4 A_1)$ → $a_\epsilon^4 = \epsilon^2 \lvert W''(c) \rvert^2/(16 A_1^2)$:
+Using $a_\epsilon^2 = -\mu/(4 A_1) = \epsilon\vert W''(c)\vert /(4 A_1)$ → $a_\epsilon^4 = \epsilon^2 \lvert W''(c) \rvert^2/(16 A_1^2)$:
 
 $$\boxed{\mu_1 - \mu_0 = (-24 B_3 + 2 B_4) \cdot \frac{\lvert W''(c) \rvert^2}{16 A_1^2} \cdot \epsilon^2 + O(\epsilon^3) = c_4 \cdot \epsilon^2 + O(\epsilon^3),}$$
 
@@ -518,7 +518,7 @@ The W5 Day 4 PM Wave 2 critic re-review (`logs/daily/2026-04-30/09_critic_re_rev
 
 Three distinct objects:
 
-1. **Theorem-object** (mathematical content): The leading-order σ-tuple statement $\sigma(u_\epsilon^*)|_{D_4} = (\mathcal{F}; (2, [+1], 4|W''(c)|\epsilon), (2, [-1], 4|W''(c)|\epsilon), \ldots)$ at first $D_4$ pitchfork. This is an unchanging mathematical object, true or false independent of audit history.
+1. **Theorem-object** (mathematical content): The leading-order σ-tuple statement $\sigma(u_\epsilon^*)\vert _{D_4} = (\mathcal{F}; (2, [+1], 4\vert W''(c)\vert \epsilon), (2, [-1], 4\vert W''(c)\vert \epsilon), \ldots)$ at first $D_4$ pitchfork. This is an unchanging mathematical object, true or false independent of audit history.
 
 2. **Merge-event** (process artifact): The action on 2026-04-27 W5 Day 1 G0 of writing this statement into canonical.md §13 with a Cat A label, while the proof scaffolding contained the unresolved "would-be Goldstone $K_1 < K_0$" framing later corrected by Errata Round 1 (`91_critical_review.md`). The merge-event is a **historical fact**, immutable.
 
@@ -536,7 +536,7 @@ The §3.2 + §4.2 + §4.4 work in this file produces a **new theorem candidate**
 >
 > **(i)–(iv)** as in v1.0 (symmetry breaking, irrep labels, nodal counts unchanged).
 >
-> **(v) Higher-order σ-eigenvalue split.** Beyond the v1.0 leading-order $\mu_0 = \mu_1 = 4|W''(c)|\epsilon$, the next-to-leading correction is
+> **(v) Higher-order σ-eigenvalue split.** Beyond the v1.0 leading-order $\mu_0 = \mu_1 = 4\vert W''(c)\vert \epsilon$, the next-to-leading correction is
 > $$\mu_1 - \mu_0 = c_4 \cdot \epsilon^2 + O(\epsilon^3), \qquad c_4 = (B_4 - 12 B_3)\cdot \frac{\lvert W''(c) \rvert^2}{8 A_1^2},$$
 > with $B_3, B_4$ explicit in terms of the cubic coupling integrals $C_k^{(p, q)} = \langle \phi_k, \phi_{(1, 0)}^p \phi_{(0, 1)}^q\rangle$ for $k \geq 4$ on the $L \times L$ $D_4$ free-BC grid (this file §4.2).
 >
@@ -617,8 +617,8 @@ Numerical execution per §8.1 protocol on $L \in \{4, 8, 16\}$ with Lanczos extr
 **Headline observations:**
 
 - Scaling exponent $p \approx 1.03$ (linear), **not** $p = 2$ (§3.2 prediction) and **not** $p = 3/2$ (alternative ruled out by §3.2 polynomial-equivariant analysis).
-- Σ_m-Hessian eigenvalue ratio $\mu_1/\mu_0 \approx 2$ at all tested $L$, i.e., $\mu_0 \approx \epsilon|W''(c)|$ and $\mu_1 \approx 2\epsilon|W''(c)|$.
-- The leading-order *degeneracy* $\mu_0 = \mu_1 = 4\epsilon|W''(c)|$ predicted by canonical T-σ-Theorem-4 (ii) and assumed in §3.2.4 is **not observed** at $L \leq 16$.
+- Σ_m-Hessian eigenvalue ratio $\mu_1/\mu_0 \approx 2$ at all tested $L$, i.e., $\mu_0 \approx \epsilon\vert W''(c)\vert $ and $\mu_1 \approx 2\epsilon\vert W''(c)\vert $.
+- The leading-order *degeneracy* $\mu_0 = \mu_1 = 4\epsilon\vert W''(c)\vert $ predicted by canonical T-σ-Theorem-4 (ii) and assumed in §3.2.4 is **not observed** at $L \leq 16$.
 
 **Falsifiability landed in §8.3 row 3** (observed $p \neq 2$ and $p \neq 3/2$): under the original §8.3 logic this would suggest "increase $L$ and shrink $\epsilon$ window". Wave 3 (this revision) reframes the finding as a **substantive constraint** — see §2.1.8, §3.2.8, §4.2.9 for the conditional-status analysis, and §11 for the operationalized NQ-187b protocol that extends $L$ into $\{32, 64, 128\}$ to test the continuum-limit hypothesis.
 
@@ -746,7 +746,7 @@ Given §11.7 ruling, the §8.5 "numerical falsification" finding (NQ-187 measure
 2. **Canonical T-σ-Theorem-4 (ii) leading-order degeneracy of Hessian eigenvalues at the post-bifurcation minimum** — likely **incorrect**. Per R22 §3.3 axis-aligned analysis (`symmetry_moduli.md` lines 148-150): $F_{aa}/F_{bb} = 2$ at the minimum, **non-degenerate at leading order**. NQ-187's $\mu_1/\mu_0 = 2$ is consistent with this R22 prediction (modulo eigenvalue-ordering convention).
 
 **Revised canonical (ii) statement (path γ-i scope clarification, expected):**
-> At the post-bifurcation axis-aligned minimum $u^*_\epsilon = c\mathbf 1 + a_\epsilon \phi_{(1,0)} + O(\epsilon)$, the Hessian eigenvalues are $\mu_0 = 4|W''(c)|\epsilon$ (parallel direction) and $\mu_1 = 2|W''(c)|\epsilon$ (transverse), with leading-order ratio $\mu_0/\mu_1 = 2$ (non-degenerate). The 2-fold ratio reflects $A_2/A_1 = 4$ via the relation $F_{aa}/F_{bb} = 2A_1/(A_2/A_1) \cdot$ ... [exact closed form from R22 derivation].
+> At the post-bifurcation axis-aligned minimum $u^*_\epsilon = c\mathbf 1 + a_\epsilon \phi_{(1,0)} + O(\epsilon)$, the Hessian eigenvalues are $\mu_0 = 4\vert W''(c)\vert \epsilon$ (parallel direction) and $\mu_1 = 2\vert W''(c)\vert \epsilon$ (transverse), with leading-order ratio $\mu_0/\mu_1 = 2$ (non-degenerate). The 2-fold ratio reflects $A_2/A_1 = 4$ via the relation $F_{aa}/F_{bb} = 2A_1/(A_2/A_1) \cdot$ ... [exact closed form from R22 derivation].
 
 **Alternative if canonical (ii) was intended as uniform-point statement (path γ-i strict):**
 > At the uniform point $u = c\mathbf 1$, the Fielder doublet $(\phi_{1,0}, \phi_{0,1})$ is degenerate at leading order with eigenvalues $\mu_0 = \mu_1 = -\beta_{\mathrm{bd}} \pi^2 + O(\epsilon)$ (unstable, $D_4$-symmetric). The 4th-order $W$-potential expansion lifts the degeneracy at the post-bifurcation minimum (path γ-i; R22 $A_2/A_1 = 4$ structural).
@@ -774,7 +774,7 @@ $$A_2^{sym} = 2 A_1^{can} + A_2^{can} \quad\Leftrightarrow\quad A_2^{can}/A_1 = 
 
 `symmetry_moduli`'s $A_2^{sym}/A_1 = 4$ converts to **canonical's $A_2^{can}/A_1 = 2$**, NOT 4.
 
-**Canonical Step 4 line 1407** derives $F_{yy}|_{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). But it then plugs in "$A_2/A_1 = 4$" from `symmetry_moduli`'s convention (line 1395 reference) into canonical's formula — a **two-normal-form mixing error**. The result $F_{yy} = 4|W''(c)|\epsilon$ (claimed degeneracy) is spurious; correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2|W''(c)|\epsilon$, ratio $\mu_0/\mu_1 = 2$ non-degenerate — exactly what NQ-187 measured.
+**Canonical Step 4 line 1407** derives $F_{yy}\vert _{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). But it then plugs in "$A_2/A_1 = 4$" from `symmetry_moduli`'s convention (line 1395 reference) into canonical's formula — a **two-normal-form mixing error**. The result $F_{yy} = 4\vert W''(c)\vert \epsilon$ (claimed degeneracy) is spurious; correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2\vert W''(c)\vert \epsilon$, ratio $\mu_0/\mu_1 = 2$ non-degenerate — exactly what NQ-187 measured.
 
 **Implications for §11.7's Hypothesis A**:
 - Hypothesis A "continuum-limit recovery $r(L) \to 4$" still holds for `symmetry_moduli`'s $A_2^{sym}/A_1$ at the **continuum level** (rigorous derivation).
@@ -784,7 +784,7 @@ $$A_2^{sym} = 2 A_1^{can} + A_2^{can} \quad\Leftrightarrow\quad A_2^{can}/A_1 = 
 **Implications for §11.8's revised understanding**:
 - The "§8.5 numerical falsification" is a **real falsification of canonical (ii) as written**, not just a scope ambiguity.
 - The R22 derivation in `symmetry_moduli.md` is not falsified.
-- Canonical (ii) requires **formula correction**: replace "$A_2/A_1 = 4$" inside canonical's $F_{yy} = -\beta A_2/A_1$ formula with the correct canonical convention value $A_2/A_1 = 2$, yielding $\mu_1 = 2|W''(c)|\epsilon$ (non-degenerate ratio 2 with $\mu_0$).
+- Canonical (ii) requires **formula correction**: replace "$A_2/A_1 = 4$" inside canonical's $F_{yy} = -\beta A_2/A_1$ formula with the correct canonical convention value $A_2/A_1 = 2$, yielding $\mu_1 = 2\vert W''(c)\vert \epsilon$ (non-degenerate ratio 2 with $\mu_0$).
 
 **Implications for §10.1 Cat A re-promotion**:
 - Path proceeds via **γ-ii formula correction** (not γ-i scope clarification).
@@ -799,7 +799,7 @@ See `sigma_theorem4_canonical_revision.md` §2.5.1-§2.5.3 (deeper audit insight
 
 ## §12. Summary
 
-- The leading-order $K_0 = K_1 = 4|W''(c)|\epsilon$ degeneracy of T-σ-Theorem-4 (canonical §13) was attributed to $D_4$ free-BC continuum integrals giving $A_2/A_1 = 4$. **W5 Day 4 PM Wave 3 numerical update:** the leading-order degeneracy is **not observed** at $L \leq 16$ (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`); the discrete-grid effective ratio $A_2/A_1 \approx 1$ at these sizes, with $\mu_0 \approx \epsilon|W''(c)|$ and $\mu_1 \approx 2\epsilon|W''(c)|$. Hypothesis A (continuum-limit recovery) is the most charitable reading, but requires NQ-187b's $L \in \{32, 64, 128\}$ extension to verify. See §2.1.8, §3.2.8, §4.2.9, §11.
+- The leading-order $K_0 = K_1 = 4\vert W''(c)\vert \epsilon$ degeneracy of T-σ-Theorem-4 (canonical §13) was attributed to $D_4$ free-BC continuum integrals giving $A_2/A_1 = 4$. **W5 Day 4 PM Wave 3 numerical update:** the leading-order degeneracy is **not observed** at $L \leq 16$ (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`); the discrete-grid effective ratio $A_2/A_1 \approx 1$ at these sizes, with $\mu_0 \approx \epsilon\vert W''(c)\vert $ and $\mu_1 \approx 2\epsilon\vert W''(c)\vert $. Hypothesis A (continuum-limit recovery) is the most charitable reading, but requires NQ-187b's $L \in \{32, 64, 128\}$ extension to verify. See §2.1.8, §3.2.8, §4.2.9, §11.
 - **No 5th-order $D_4$-equivariant exists in the polynomial ring** (degree 5 in $(x, y)$ has no $(I_1, I_2)$ representation), and **no degree-4 element exists in the equivariant module $\mathcal{M}^{D_4}_{\mathrm{eq}}$** (GSS 1988 Vol II Ch XV §3 Table — only odd-degree generators), so no $\epsilon^{3/2}$ splitting from polynomial equivariants. The user prompt's §3 conjecture of an $\epsilon^{3/2}$ correction is structurally ruled out *at every $L$*. This algebraic fact is unaffected by the §8.5 numerical findings.
 - The §3.2 prediction "splitting first appears at the **6th-order equivariant**, giving $\mu_1 - \mu_0 = c_4 \epsilon^2 + O(\epsilon^3)$ with $c_4 = (B_4 - 12 B_3)\lvert W''(c) \rvert^2/(8 A_1^2)$" is **conditional on the leading-order degeneracy** $\mu_0 = \mu_1$, which is currently *not observed* at $L \leq 16$. Recoverable per Hypothesis A (continuum-limit recovery) in §2.1.8; falsifiable per NQ-187b in §11.
 - Sign of $c_4$ is graph-class-specific; heuristic suggests $c_4 < 0$ on $D_4$ free-BC, which would create tension with O7's Mulliken-first tie-break (resolvable by re-framing O7 as a leading-order plateau convention). Sign extraction depends on first establishing the leading-order plateau via NQ-187b.

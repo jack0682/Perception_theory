@@ -204,7 +204,7 @@ Suppose:
 1. **Strict complementarity:** $\mu^-_{0,i} > 0$ for $i \in A^=_0$ and $\mu^+_{0,i} > 0$ for $i \in A^=_n$.
 2. **LICQ:** the gradients of the active constraints (the basis vectors $e_i$ for
    $i \in A^=_0 \cup A^=_n$, plus $\mathbf{1}$) are linearly independent in $\mathbb{R}^n$.
-   (Automatic when $|A^=_0 \cup A^=_n| < n$.)
+   (Automatic when $\vert A^=_0 \cup A^=_n\vert < n$.)
 3. **Second-order sufficiency:** the projected Hessian on the tangent space
    to the active constraint manifold is positive definite:
    $H^{\perp,\mathrm{act}}_0 := \tilde P^\top \nabla^2_u E_{\lambda_0}(u^*_0) \tilde P \succ 0$,
@@ -476,7 +476,7 @@ The fourth is the canonical SCC phase transition translated to OMS coordinates.
   derivative result (Mordukhovich).
 - **Quantitative Lipschitz estimates** for $v(\lambda)$ via the explicit
   energy bounds — these would give a priori control on
-  $|v(\lambda + h\xi) - v(\lambda)| \le L \lVert h\xi \rVert$ and constrain the
+  $\vert v(\lambda + h\xi) - v(\lambda)\vert \le L \lVert h\xi \rVert$ and constrain the
   geometry of basin level sets.
 
 These are the concrete OPs to register: OP-OMS-027 (corner cases),

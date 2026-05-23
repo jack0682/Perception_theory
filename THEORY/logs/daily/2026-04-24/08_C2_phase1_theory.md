@@ -73,7 +73,7 @@ $$g_\text{cl} = a_\text{cl} \sum_{k \geq 2} (1 - \mu_c \lambda_k(P^\top)) \hat\r
 For the disk shape: $\hat\rho_k$ is concentrated in low-$k$ modes (rotationally symmetric ~ radial $\phi_{(0,0)}$ + small angular). $\hat\rho_2$ (Fiedler) is small unless $L$ is small or disk is asymmetric.
 
 Dominant contribution to $\lVert g_\text{cl} \rVert^2$:
-$$\lVert g_\text{cl} \rVert^2 \approx a_\text{cl}^2 \sum_{k \geq 2} (1 - \mu_c \lambda_k)^2 |\hat\rho_k|^2.$$
+$$\lVert g_\text{cl} \rVert^2 \approx a_\text{cl}^2 \sum_{k \geq 2} (1 - \mu_c \lambda_k)^2 \vert \hat\rho_k\vert ^2.$$
 
 For low-$k$ ($\lambda_k$ small): $(1 - \mu_c \lambda_k)^2 \approx 1$. Approximation:
 $$\boxed{\;\lVert g_\text{cl} \rVert^2 \approx a_\text{cl}^2 (1-\mu_c)^2 \cdot \big[(1-c^*)^2 \pi r_0^2 + (c^*)^2 (L^2 - \pi r_0^2)\big] - a_\text{cl}^2 \cdot (\text{mean removed})\;}$$
@@ -97,19 +97,19 @@ $= (1 - D(u)_i) - \kappa_D (P^\top \xi(u))_i$, with $\xi(u)_j := u_j D(u)_j (1 -
 
 ### 3.2 Disk-specific evaluation
 
-Interior ($u \approx 1$, neighbors $\approx 1$): $Pu \approx 1$, $D \approx \sigma(\kappa_D - \delta_D)$. Choose canonical $\delta_D = \kappa_D / 2$ so $D(c\mathbf{1})|_{c=1/2} = \sigma(0) = 1/2$. Then for $c \neq 1/2$: $D(c\mathbf{1}) = \sigma(\kappa_D(c - 1/2))$.
+Interior ($u \approx 1$, neighbors $\approx 1$): $Pu \approx 1$, $D \approx \sigma(\kappa_D - \delta_D)$. Choose canonical $\delta_D = \kappa_D / 2$ so $D(c\mathbf{1})\vert _{c=1/2} = \sigma(0) = 1/2$. Then for $c \neq 1/2$: $D(c\mathbf{1}) = \sigma(\kappa_D(c - 1/2))$.
 
 For interior of disk: $D \approx \sigma(\kappa_D \cdot 1/2) \approx 1$ for $\kappa_D > 4$. Then:
-$\nabla \mathcal{E}_\text{sep}|_\text{int} \approx (1 - 1) - \kappa_D \cdot (\text{P}^\top \xi)_\text{int} = -\kappa_D \cdot (P^\top \xi)_\text{int}$
+$\nabla \mathcal{E}_\text{sep}\vert _\text{int} \approx (1 - 1) - \kappa_D \cdot (\text{P}^\top \xi)_\text{int} = -\kappa_D \cdot (P^\top \xi)_\text{int}$
 where $\xi_\text{int} = 1 \cdot 1 \cdot 0 = 0$ (since $D \to 1$, $(1-D) \to 0$). 
-$\to \nabla \mathcal{E}_\text{sep}|_\text{int} \approx 0$.
+$\to \nabla \mathcal{E}_\text{sep}\vert _\text{int} \approx 0$.
 
 Exterior ($u \approx 0$): $D \approx 0$, $(1-D) \approx 1$, $\xi \approx 0 \cdot 0 \cdot 1 = 0$:
-$\nabla \mathcal{E}_\text{sep}|_\text{ext} \approx 1 - 0 = 1$.
+$\nabla \mathcal{E}_\text{sep}\vert _\text{ext} \approx 1 - 0 = 1$.
 
 Interface ($u \in (0,1)$): nontrivial. $D$ smoothly transitions, $\xi$ peaked at $u \approx 1/2$ where $D(1-D) = 1/4$ maximal.
 
-**Constrained $g_\text{sep}$**: $g_\text{sep} = \pi_{\mathbf{1}^\perp} \nabla \mathcal{E}_\text{sep}$. The leading interior $\approx 0$, exterior $\approx 1$ structure has nonzero mean → projection removes a uniform $\bar = \langle 1\rangle_{exterior} \cdot |\text{Ext}|/L^2$.
+**Constrained $g_\text{sep}$**: $g_\text{sep} = \pi_{\mathbf{1}^\perp} \nabla \mathcal{E}_\text{sep}$. The leading interior $\approx 0$, exterior $\approx 1$ structure has nonzero mean → projection removes a uniform $\bar = \langle 1\rangle_{exterior} \cdot \vert \text{Ext}\vert /L^2$.
 
 After projection:
 - Interior: $- \bar$ (negative)
@@ -117,8 +117,8 @@ After projection:
 - Interface: peaked correction
 
 **Scaling**:
-$$\lVert g_\text{sep} \rVert^2 \sim |\text{Int}| \cdot \bar^2 + |\text{Ext}|(1-\bar)^2 + (\text{interface peak})^2.$$
-With $\bar = |\text{Ext}|/L^2$ and $|\text{Int}| = \pi r_0^2$:
+$$\lVert g_\text{sep} \rVert^2 \sim \vert \text{Int}\vert \cdot \bar^2 + \vert \text{Ext}\vert (1-\bar)^2 + (\text{interface peak})^2.$$
+With $\bar = \vert \text{Ext}\vert /L^2$ and $\vert \text{Int}\vert = \pi r_0^2$:
 $$\boxed{\;\lVert g_\text{sep} \rVert^2 \approx \pi r_0^2 \cdot (1 - \pi r_0^2/L^2)^2 + (L^2 - \pi r_0^2) \cdot (\pi r_0^2/L^2)^2 + O(\kappa_D \xi_0)\;}$$
 $$= \pi r_0^2 (L^2 - \pi r_0^2)/L^2 + O(...).$$
 For $r_0 \ll L$: $\lVert g_\text{sep} \rVert^2 \approx \pi r_0^2$.
@@ -185,9 +185,9 @@ R23 empirical: F_* = 5 for $(c, \beta, L) = (0.5, 30, 32)$. 이론 예측 lower 
 
 ### 5.2 Disk Hessian linearization
 
-At disk, full $\mathcal{E}$ Hessian $H_\text{disk} = H_\text{bd}|_\text{disk} + \lambda_\text{cl} H_\text{cl}|_\text{disk} + \lambda_\text{sep} H_\text{sep}|_\text{disk}$.
+At disk, full $\mathcal{E}$ Hessian $H_\text{disk} = H_\text{bd}\vert _\text{disk} + \lambda_\text{cl} H_\text{cl}\vert _\text{disk} + \lambda_\text{sep} H_\text{sep}\vert _\text{disk}$.
 
-Pure $H_\text{bd}|_\text{disk}$: from Cor 2.2 + spectral analysis 의 continuum limit (`02_development.md` §7), shell-Schrödinger Hamiltonian. Eigenmodes labeled by $(n, \ell)$ = (radial node, angular mode). Eigenvalues:
+Pure $H_\text{bd}\vert _\text{disk}$: from Cor 2.2 + spectral analysis 의 continuum limit (`02_development.md` §7), shell-Schrödinger Hamiltonian. Eigenmodes labeled by $(n, \ell)$ = (radial node, angular mode). Eigenvalues:
 $$\lambda_{n, \ell}^\text{bd} \approx 4\alpha \big[\lambda_n^{(0)} + \ell^2/r_0^2\big] + O(\beta).$$
 Bound states 의 spectrum 이 shell-well depth $\beta/\alpha$ 에 의해 결정.
 
@@ -195,13 +195,13 @@ Bound states 의 spectrum 이 shell-well depth $\beta/\alpha$ 에 의해 결정.
 
 ### 5.3 Closure / sep Hessian shifts
 
-$H_\text{cl}|_\text{disk}$ at the disk: since $u^*_\text{disk}$ is not at the closure FP, $H_\text{cl}$ has nontrivial spatial structure. The block has positive semidefinite contribution from interior ($u \approx 1 \neq c^*$) and exterior ($u \approx 0 \neq c^*$), with PSD bounded by $a_\text{cl} \cdot$ ($u^*$-residual scale).
+$H_\text{cl}\vert _\text{disk}$ at the disk: since $u^*_\text{disk}$ is not at the closure FP, $H_\text{cl}$ has nontrivial spatial structure. The block has positive semidefinite contribution from interior ($u \approx 1 \neq c^*$) and exterior ($u \approx 0 \neq c^*$), with PSD bounded by $a_\text{cl} \cdot$ ($u^*$-residual scale).
 
 Effect on $\ell$-th mode eigenvalue:
 $$\Delta_\text{cl} \lambda_\ell \approx \lambda_\text{cl} a_\text{cl} \cdot \langle \phi_\ell, (I - J_\text{Cl}^\top)(I - J_\text{Cl}) \phi_\ell\rangle.$$
 For low-$\ell$ (smooth) modes, this shift is positive but small. For high-$\ell$ (oscillatory) modes, shift larger.
 
-$H_\text{sep}|_\text{disk}$: from Prop 1.3b (`mode_count.md` §2.1(d)), $H_\text{sep}|_{c\mathbf{1}} = -\gamma_D(P + P^\top) - c \gamma_D'' P^\top P$. At disk minimizer, similar structure but evaluated at non-uniform point. Negative-definite contribution from $-\gamma_D(P + P^\top)$ for low-$\lambda$ modes (where $P\phi \approx \phi$).
+$H_\text{sep}\vert _\text{disk}$: from Prop 1.3b (`mode_count.md` §2.1(d)), $H_\text{sep}\vert _{c\mathbf{1}} = -\gamma_D(P + P^\top) - c \gamma_D'' P^\top P$. At disk minimizer, similar structure but evaluated at non-uniform point. Negative-definite contribution from $-\gamma_D(P + P^\top)$ for low-$\lambda$ modes (where $P\phi \approx \phi$).
 
 **Net effect**: low-$\ell$ modes (e.g. $\ell = 1, 2$) get net negative contribution from $H_\text{sep}$ (destabilization). High-$\ell$ modes unaffected or stabilized.
 

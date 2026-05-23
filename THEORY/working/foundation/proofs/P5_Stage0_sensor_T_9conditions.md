@@ -199,7 +199,7 @@ $$\forall \, G \in \mathcal{G}_{\mathrm{admissible}} : \quad T(I) \big\vert_{V_G
 
 **COB rationale**: T-PreObj-1G (Stage 2) 는 *그래프-보편 정리* — graph-class 무관하게 Stage 2 에너지 최소화가 작동. 만약 $T$ 가 특정 $G_0$ 에 의존한다면 Stage 2 universality 위반.
 
-**Validation requirement**: 다양한 admissible graph $G$ 에 대해 $T(I)|_{V_G}$ 의 일관성 (Stage 2 수렴 거동의 graph 무관성).
+**Validation requirement**: 다양한 admissible graph $G$ 에 대해 $T(I)\vert _{V_G}$ 의 일관성 (Stage 2 수렴 거동의 graph 무관성).
 
 ---
 
@@ -216,7 +216,7 @@ $$\dim H_k\bigl(\mathrm{PersComp}(I; \tau)\bigr) \;=\; \dim H_k\bigl(\mathrm{Per
 $$T_*: H_k(\mathcal{I}) \to H_k(\tilde{\mathcal{I}}) \quad \text{is well-defined and rank-preserving}$$
 
 **Composition-level analysis**:
-- $T_{\mathrm{PSF}}$: blurring 이 *충분히 smooth* 하면 위상 보존 (small-scale features 만 smoothing); $|\sigma_{\mathrm{PSF}}| < $ 위상 특성 scale 일 때 성립.
+- $T_{\mathrm{PSF}}$: blurring 이 *충분히 smooth* 하면 위상 보존 (small-scale features 만 smoothing); $\vert \sigma_{\mathrm{PSF}}\vert < $ 위상 특성 scale 일 때 성립.
 - $T_{\mathrm{sample}}$: Poisson sampling 이 *충분히 dense* 하면 위상 보존; Nyquist-type 조건.
 - $T_{\mathrm{LMS}}$: pointwise affine — 위상 보존 (선형, full-rank $\mathbf{M}_{\mathrm{LMS}}$).
 - $T_{\mathrm{gain}}$: pointwise monotonic ($\log$) — 위상 보존.
@@ -299,9 +299,9 @@ $$\mathcal{L}_{\mathrm{LM}k}\bigl(T(I) \mid u_t, \Theta_{\mathrm{obs}}\bigr) \;>
 (positivity of likelihood across LM1-LM3 family).
 
 **Mathematical form**: LM1 (Gaussian), LM2 (Poisson), LM3 (heavy-tail) — `canonical.md §13` T-K-Select-OBS family. 각 LM 의 $T(I)$ likelihood 가 *non-degenerate*:
-- LM1: $T(I) | u_t \sim \mathcal{N}(\mu_{\mathrm{LM1}}(u_t), \Sigma_{\mathrm{LM1}})$ — $T(I) \in \mathbb{R}_{\geq 0}^3$ 호환 (positivity 후 truncation 처리).
-- LM2: $T(I) | u_t \sim \mathrm{Poisson}(\lambda_{\mathrm{LM2}}(u_t))$ — SCC unified §2.3 의 $T_{\mathrm{sample}}$ Poisson 통계와 *직접 매칭*.
-- LM3: $T(I) | u_t \sim \mathrm{StudentT}_\nu(\mu_{\mathrm{LM3}}(u_t), \Sigma_{\mathrm{LM3}})$ — heavy-tail noise 모델, $T(I)$ 의 outlier 처리.
+- LM1: $T(I) \vert u_t \sim \mathcal{N}(\mu_{\mathrm{LM1}}(u_t), \Sigma_{\mathrm{LM1}})$ — $T(I) \in \mathbb{R}_{\geq 0}^3$ 호환 (positivity 후 truncation 처리).
+- LM2: $T(I) \vert u_t \sim \mathrm{Poisson}(\lambda_{\mathrm{LM2}}(u_t))$ — SCC unified §2.3 의 $T_{\mathrm{sample}}$ Poisson 통계와 *직접 매칭*.
+- LM3: $T(I) \vert u_t \sim \mathrm{StudentT}_\nu(\mu_{\mathrm{LM3}}(u_t), \Sigma_{\mathrm{LM3}})$ — heavy-tail noise 모델, $T(I)$ 의 outlier 처리.
 
 **Composition-level instance**: $T_{\mathrm{sample}}$ 의 Poisson 통계 (SCC unified §2.3 L312-314):
 
@@ -337,7 +337,7 @@ $$\pi_G: \bigl\{\tilde{I}_t : V_{\mathrm{ret}} \to \mathbb{R}_{\geq 0}^3\bigr\} 
 
 **Composition-level instance**: SCC unified §2.9 (output specification) L492-510 의 explicit form:
 
-$$\tilde{I}_t = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathrm{gain}} \circ T_{\mathrm{LMS}} \circ T_{\mathrm{sample}} \circ T_{\mathrm{PSF}}(I_t) \;\in\; \mathbb{R}_{\geq 0}^{|V_{\mathrm{ret}}| \times 3}$$
+$$\tilde{I}_t = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathrm{gain}} \circ T_{\mathrm{LMS}} \circ T_{\mathrm{sample}} \circ T_{\mathrm{PSF}}(I_t) \;\in\; \mathbb{R}_{\geq 0}^{\vert V_{\mathrm{ret}}\vert \times 3}$$
 
 format match check:
 - vertex: ✓ ($V_{\mathrm{ret}}$ from $T_{\mathrm{sample}}$)
@@ -363,7 +363,7 @@ $$\boxed{\;T_{\mathrm{sensor}} \;=\; T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \c
 
 **Form**:
 
-$$I_t^{\mathrm{PSF}}(x, y) \;=\; (K_{\mathrm{PSF}} * I_t^{\mathrm{pre}})(x, y), \quad K_{\mathrm{PSF}} = |\mathcal{F}[P]|^2, \quad P(x,y) = \mathbf{1}_{\lvert (x,y) \rvert \leq r_{\mathrm{pup}}} \cdot e^{i \frac{2\pi}{\lambda} W(x,y)}$$
+$$I_t^{\mathrm{PSF}}(x, y) \;=\; (K_{\mathrm{PSF}} * I_t^{\mathrm{pre}})(x, y), \quad K_{\mathrm{PSF}} = \vert \mathcal{F}[P]\vert ^2, \quad P(x,y) = \mathbf{1}_{\lvert (x,y) \rvert \leq r_{\mathrm{pup}}} \cdot e^{i \frac{2\pi}{\lambda} W(x,y)}$$
 
 with $W(x, y) = \sum_{n,m} Z_n^m \mathcal{Z}_n^m(x/r_{\mathrm{pup}}, y/r_{\mathrm{pup}})$ (OSA/ANSI Zernike).
 
@@ -668,7 +668,7 @@ Phase: W10+ (멀티-세션, 각 sub-T 의 Cat A 격상 후 동시 적합성 분�
 ### §5.4 T-cond-4 (Graph independence): Multi-Mesh Consistency
 
 **Validation experiment**: 동일 $I$ 입력에 대해 다양한 admissible graph $G$ (square grid, hex, Voronoi mesh) 에 투영한 후 Stage 2 수렴 거동 비교
-- $T(I)|_{V_G}$ 의 graph-별 distribution 비교
+- $T(I)\vert _{V_G}$ 의 graph-별 distribution 비교
 - Stage 2 ($u_t$) 의 graph-invariance 확인
 
 **Anchor**: theoretical only — 6-부 composition 의 graph-free property (continuous PSF, pointwise LMS/gain, vertex-rule sampling)
@@ -697,7 +697,7 @@ Phase: W10+ (멀티-세션, 각 sub-T 의 Cat A 격상 후 동시 적합성 분�
 
 **Anchor**: Derrington-Krauskopf-Lennie (1984) DKL color space — LMS group structure
 
-**Cat A path**: ⭕ Commuting subgroup $\mathrm{Aut}(G)|_{\mathrm{compat}}$ 의 정량적 특성화.
+**Cat A path**: ⭕ Commuting subgroup $\mathrm{Aut}(G)\vert _{\mathrm{compat}}$ 의 정량적 특성화.
 
 ---
 
@@ -730,7 +730,7 @@ Phase: W10+ (멀티-세션, 각 sub-T 의 Cat A 격상 후 동시 적합성 분�
 ### §5.9 T-cond-9 (Stage 1 coupling): Pipeline Integration Test
 
 **Validation experiment**: Stage 0 output 을 Stage 1 $\pi_G$ 에 *직접* 입력 → type-check
-- Output format ($|V_{\mathrm{ret}}| \times 3$, $\mathbb{R}_{\geq 0}$) literal match
+- Output format ($\vert V_{\mathrm{ret}}\vert \times 3$, $\mathbb{R}_{\geq 0}$) literal match
 - Stage 1 진입 후 spinodal regime 통과 확률 측정
 
 **Anchor**: theoretical only — pipeline interface

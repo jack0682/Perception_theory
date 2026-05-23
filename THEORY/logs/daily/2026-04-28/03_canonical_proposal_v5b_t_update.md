@@ -174,7 +174,7 @@ irrep labels at this eigenvalue. The lex-ordering of the multi-set follows O7.
 **Consistency check (Day 2 review)**:
 
 - ✓ Consistent with T-σ-Theorem-3 (vi) usage: existing entry "$(2, [E], \mu_2)$" treats 2-dim $E$ irrep as a single σ-tuple entry. O5' generalizes this to multi-irrep eigenspaces.
-- ✓ Consistent with T-σ-Theorem-4 (v) σ-signature: the "two entries with $\lambda = 4|W''(c)|\epsilon$ but irreps $[+1]$ vs $[-1]$" case is a 2-dim eigenspace splitting into 1-dim irreps each — this is **NOT** a single multi-set entry per O5' but two separate entries (because the two irreps are at the *same* eigenvalue but in distinct *sub-eigenspaces* that happen to be 1-dim each). The O5' convention applies when a single eigenspace block has multiple irreps; the Theorem-4 case is a degenerate-eigenvalue / distinct-eigenspace case (handled by O7).
+- ✓ Consistent with T-σ-Theorem-4 (v) σ-signature: the "two entries with $\lambda = 4\vert W''(c)\vert \epsilon$ but irreps $[+1]$ vs $[-1]$" case is a 2-dim eigenspace splitting into 1-dim irreps each — this is **NOT** a single multi-set entry per O5' but two separate entries (because the two irreps are at the *same* eigenvalue but in distinct *sub-eigenspaces* that happen to be 1-dim each). The O5' convention applies when a single eigenspace block has multiple irreps; the Theorem-4 case is a degenerate-eigenvalue / distinct-eigenspace case (handled by O7).
 
 **The two cases are subtly different**:
 - O5' case: $V_k$ is a single Hessian eigenspace (geometric multiplicity ≥ 2) with multi-irrep isotypic decomposition.
@@ -226,7 +226,7 @@ User asked in `92_critical_review_round2.md` §13 discussion topics:
 
 **With O5' + O7 jointly applied**, the T-σ-Theorem-4 (v) σ-tuple becomes:
 
-$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (1, [+1], 4|W''(c)|\epsilon),\ (1, [-1], 4|W''(c)|\epsilon),\ \ldots\big)$$
+$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (1, [+1], 4\vert W''(c)\vert \epsilon),\ (1, [-1], 4\vert W''(c)\vert \epsilon),\ \ldots\big)$$
 
 The two entries are separately listed (O5' multi-set doesn't apply because each is a 1-dim sub-eigenspace at the same eigenvalue, not a multi-irrep block). Their ordering follows O7: $[+1]$ before $[-1]$ (Z_2 convention).
 

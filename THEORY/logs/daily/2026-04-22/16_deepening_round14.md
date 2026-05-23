@@ -72,8 +72,8 @@ This bounds the extensive growth at saturation.
 R11 identified $\beta^{\mathrm{sec}}_{1 \to 2}$. At $\beta$ just above this threshold: $\widehat K$ increases from $\sim 1$ to $\sim 2$ (depending on timescale).
 
 **Dynamical interpretation (M-1 two-timescale, R12):**
-- Fast: internal relaxation $\sim 1/(\beta|W''|)$.
-- Intermediate: formation location equilibration $\sim 1/|\mu_{\mathrm{amp}}|$.
+- Fast: internal relaxation $\sim 1/(\beta\vert W''\vert)$.
+- Intermediate: formation location equilibration $\sim 1/\vert \mu_{\mathrm{amp}}\vert $.
 - Slow: inter-formation coarsening $\sim e^{d_{\min}/\xi_0}$.
 
 At fast timescale: $\widehat K = $ # active modes; Conjecture 2.1 applies.

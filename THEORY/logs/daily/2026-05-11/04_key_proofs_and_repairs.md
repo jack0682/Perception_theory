@@ -42,7 +42,7 @@ $$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon_\mat
 
 Linear regime ($\delta \leq \varepsilon_\mathrm{OT}/4$): $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$.
 
-Proof uses only log-sum-exp: $|\log\sum a_i e^{r_i} - \log\sum a_i| \leq \max_i|r_i|$. No Hilbert projective metric, no Séjourné et al. 2019 — direct elementary proof for the canonical SCC E1 case.
+Proof uses only log-sum-exp: $\vert \log\sum a_i e^{r_i} - \log\sum a_i\vert \leq \max_i\vert r_i\vert $. No Hilbert projective metric, no Séjourné et al. 2019 — direct elementary proof for the canonical SCC E1 case.
 
 ### Why H-SINK became Cat A
 
@@ -77,7 +77,7 @@ The literal 0.84 was therefore **not** a first-principles analytic constant — 
 
 ### Symbolic replacement (S-B1-SYM)
 
-From canonical **Theorem 2b** (Deep Core Dominance, Cat A, `canonical.md §13`), under HWF-1 isoperimetric regularity ($\mathrm{iso\_ratio}(\mathrm{Core}) \leq C_\mathrm{iso}$), $m = |\mathrm{Core}| \geq 25$, $\beta > 7\alpha$:
+From canonical **Theorem 2b** (Deep Core Dominance, Cat A, `canonical.md §13`), under HWF-1 isoperimetric regularity ($\mathrm{iso\_ratio}(\mathrm{Core}) \leq C_\mathrm{iso}$), $m = \vert \mathrm{Core}\vert \geq 25$, $\beta > 7\alpha$:
 
 $$\rho_\mathrm{deep} = \frac{m^\mathrm{deep}}{m^\mathrm{total}} \geq \theta_\mathrm{core}\!\left(1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}\right) =: \rho_\mathrm{sym}(C_\mathrm{iso}, m, \theta_\mathrm{core}).$$
 
@@ -91,7 +91,7 @@ For T-Temporal-Identity (b), only $\Delta_\mathrm{sep} > 0$ is needed, which req
 
 $$\rho_\mathrm{deep} \geq \frac{\theta_\mathrm{core}}{n} = \frac{0.7}{225} \approx 0.00311 > \rho_*$$
 
-is provable Cat A from H2' (deep-core non-emptiness via Γ-convergence + DMP, Theorem 1 of CORE-DEPTH-ISOPERIMETRIC.md), which gives $|\mathrm{Core}^2| \geq 1$ on the canonical 15×15 grid under $|\mathrm{Core}| \geq 25$ and $\beta > 7\alpha$.
+is provable Cat A from H2' (deep-core non-emptiness via Γ-convergence + DMP, Theorem 1 of CORE-DEPTH-ISOPERIMETRIC.md), which gives $\vert \mathrm{Core}^2\vert \geq 1$ on the canonical 15×15 grid under $\vert \mathrm{Core}\vert \geq 25$ and $\beta > 7\alpha$.
 
 This is **Lemma S-B1-Weak (Cat A)**, sufficient for the Cat A path of T-Temporal-Identity (b).
 

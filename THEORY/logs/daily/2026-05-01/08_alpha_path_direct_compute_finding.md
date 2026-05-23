@@ -126,7 +126,7 @@ With α-path now Cat A definitively *L-independent* 2/3 (not just an asymptotic)
 - β-path audit (`r22_a2_a1_audit.md` NEW W6 D4-W7) must identify which convention R22 uses, not whether finite-L corrections matter.
 
 **Updated priority ordering** (revised from `03_*` §3.4):
-- 🥇 **γ-path** (Σ_m-Hessian convention) — **still first**. Reason: γ explains the $\mu_0$ factor mismatch (canonical $4|W''(c)|\epsilon$ vs numerical $\epsilon|W''(c)|$). α-path closure does not address this.
+- 🥇 **γ-path** (Σ_m-Hessian convention) — **still first**. Reason: γ explains the $\mu_0$ factor mismatch (canonical $4\vert W''(c)\vert \epsilon$ vs numerical $\epsilon\vert W''(c)\vert $). α-path closure does not address this.
 - 🥈 **β-path** — priority raised to *parallel-with-γ* (vs original conditional-on-γ-inconclusive). The 2/3 ≠ 4 mismatch is *structural*, not asymptotic. β-path can run W6 D2 immediately rather than D4-W7 conditionally.
 - 🥉 **α-path** — **closed Cat A today** under naive convention C1; remaining α-path work is alternative conventions C2/C3/C4 evaluation (different question; can be folded into β-path).
 
@@ -134,7 +134,7 @@ With α-path now Cat A definitively *L-independent* 2/3 (not just an asymptotic)
 
 γ-path scope (Σ_m-Hessian convention, factor 4 in $\mu_0$) is *separate* from the A_2/A_1 ratio question. γ-path explains the $\mu_0$ value; β-path explains the $A_2/A_1$ ratio. They are two independent audit lanes that happen to both bear on T-σ-Theorem-4.
 
-If γ-path finds canonical $\mu_0 = 4|W''(c)|\epsilon$ is correct under one convention but $\mu_0 = \epsilon|W''(c)|$ under another → γ closes; T-σ-Theorem-4 (ii) factor of 4 in the $\mu_0$ formula explained.
+If γ-path finds canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ is correct under one convention but $\mu_0 = \epsilon\vert W''(c)\vert $ under another → γ closes; T-σ-Theorem-4 (ii) factor of 4 in the $\mu_0$ formula explained.
 
 If β-path finds R22's $A_2/A_1 = 4$ derivation actually uses convention C3 (mass-conservation simplex projection) where the ratio is genuinely 4 → β closes; T-σ-Theorem-4 (ii) factor in the $\mu_1$ formula explained as convention-specific.
 
@@ -171,7 +171,7 @@ Replace L-dependent table with:
 ### §5.3 §5 prediction table correction
 
 The "α-naive: $\mu_1/\mu_0 \to 1/6$ as $L \to \infty$" prediction in §5.1 was based on the assumption of L-dependent extrapolation. With L-independent ratio, the prediction simplifies:
-- α-naive: $\mu_1/\mu_0 = (A_2/A_1)/4 = (2/3)/4 = 1/6$ at *every* L (under canonical $\mu_0 = 4|W''(c)|\epsilon$ formula + naive A_2/A_1 = 2/3).
+- α-naive: $\mu_1/\mu_0 = (A_2/A_1)/4 = (2/3)/4 = 1/6$ at *every* L (under canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ formula + naive A_2/A_1 = 2/3).
 - NQ-187 numerical $\mu_1/\mu_0 = 2$ at L=16 → **incompatible** with α-naive at *any* L.
 
 So if α-naive C1 convention is the correct convention, NQ-187 numerical extension to L=32, L=64 should *still* show $\mu_1/\mu_0 = 1/6$, not converge from 2 toward something else. If NQ-187 numerical at L=32, 64 stays at 2, then naive C1 convention is **rejected** as the operative convention — β-path must identify which convention NQ-187 numerical actually used.

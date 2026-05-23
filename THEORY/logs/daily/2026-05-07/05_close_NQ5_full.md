@@ -56,7 +56,7 @@ In the regime where component masses are comparable ($m_{j_1}^s \approx m_{j_2}^
 $$\tilde S_{i,j_1}^0 - \tilde S_{i,j_2}^0 \approx \frac{\lambda_m(\gamma_{i,j_1} - \gamma_{i,j_2}) - \lambda_c(\langle c, \gamma_{i,j_1}\rangle - \langle c, \gamma_{i,j_2}\rangle)}{\min(m_i^t, m_{j_1}^s)}.$$
 
 The cost term $\langle c, \gamma_{i,j_*}\rangle \leq \bar c_\mathrm{intra} \cdot \gamma_{i,j_*}$ for intra-component (deep-core) and $\leq c_\mathrm{max} \cdot \gamma_{i,j_*}$ for cross-component. Worst case:
-$$|\langle c, \gamma_{i,j_1}\rangle - \langle c, \gamma_{i,j_2}\rangle| \leq c_\mathrm{max}\,(\gamma_{i,j_1} + \gamma_{i,j_2}).$$
+$$\vert \langle c, \gamma_{i,j_1}\rangle - \langle c, \gamma_{i,j_2}\rangle\vert \leq c_\mathrm{max}\,(\gamma_{i,j_1} + \gamma_{i,j_2}).$$
 
 Hence:
 $$\tilde S_{i,j_1}^0 - \tilde S_{i,j_2}^0 \geq \frac{\lambda_m(\gamma_{i,j_1} - \gamma_{i,j_2})}{\min(\cdot)} - \frac{\lambda_c\,c_\mathrm{max}\,(\gamma_{i,j_1}+\gamma_{i,j_2})}{\min(\cdot)}.$$

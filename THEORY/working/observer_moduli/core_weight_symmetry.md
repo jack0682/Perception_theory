@@ -66,12 +66,12 @@ Since $E_{\mathrm{cl}} \neq E_{\mathrm{sep}}$ as functionals, $E \neq E'$ in gen
 
 **Definition CW1 (Discovered core-weight symmetry group).** [DEFINED]
 
-$$G_{\mathrm{cw}}(P) = \left\{ g \in \mathrm{Diff}(\Delta^3) \;\middle|\; P(g(\lambda), q, \xi; X_t) = P(\lambda, q, \xi; X_t) \quad \forall (q, \xi, X_t) \right\}$$
+$$G_{\mathrm{cw}}(P) = \left\{ g \in \mathrm{Diff}(\Delta^3) \;\middle\vert \; P(g(\lambda), q, \xi; X_t) = P(\lambda, q, \xi; X_t) \quad \forall (q, \xi, X_t) \right\}$$
 
 This is the **global** core-weight symmetry group for readout $P$.
 
 **Local version** (on open set $U \subset \mathcal{M}_{\mathrm{obs}}$):
-$$G_{\mathrm{cw}}(P, U) = \left\{ g \in \mathrm{Diff}(\Delta^3) \;\middle|\; P(g(\lambda), q, \xi; X_t) = P(\lambda, q, \xi; X_t) \quad \forall (\lambda, q, \xi, X_t) \in U \right\}$$
+$$G_{\mathrm{cw}}(P, U) = \left\{ g \in \mathrm{Diff}(\Delta^3) \;\middle\vert \; P(g(\lambda), q, \xi; X_t) = P(\lambda, q, \xi; X_t) \quad \forall (\lambda, q, \xi, X_t) \in U \right\}$$
 
 **Default.** $G_{\mathrm{cw}}(P) = \{e\}$ until a non-trivial element is found. [ASSUMED]
 

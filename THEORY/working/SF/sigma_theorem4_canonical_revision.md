@@ -14,7 +14,7 @@
 
 ## §1. Mission and Severity
 
-> **"NQ-187 numerical test 가 T-σ-Theorem-4 (ii) leading-order claim $\mu_0 = \mu_1 = 4|W''(c)|\epsilon$ 를 finite L $\in \{4, 8, 16\}$ 에서 falsify ($\mu_1/\mu_0 = 2$ asymptotically; power-law p ≈ 1.03 confirms leading-order non-degeneracy). Canonical revision urgent before CV-1.6 P4 G5 SF Round merge — caveat 추가, R22 $A_2/A_1 = 4$ 가정 verify, NQ-187b L → ∞ extrapolation 등록."**
+> **"NQ-187 numerical test 가 T-σ-Theorem-4 (ii) leading-order claim $\mu_0 = \mu_1 = 4\vert W''(c)\vert \epsilon$ 를 finite L $\in \{4, 8, 16\}$ 에서 falsify ($\mu_1/\mu_0 = 2$ asymptotically; power-law p ≈ 1.03 confirms leading-order non-degeneracy). Canonical revision urgent before CV-1.6 P4 G5 SF Round merge — caveat 추가, R22 $A_2/A_1 = 4$ 가정 verify, NQ-187b L → ∞ extrapolation 등록."**
 
 이 working file 은 T-σ-Theorem-4 의 **3 핵심 이슈** 를 정식 정리하고 CV-1.6 packet 직전 canonical revision text 를 produce 한다:
 
@@ -79,14 +79,14 @@ Per `symmetry_moduli.md` line 113-130, the ratio $A_2/A_1 = 6K/I_4 = 6 \cdot (2/
 - **Naive integral ratio $K/I_4 = 2/3$ is consistent with $A_2/A_1 = 4$ via the multinomial factor 6** — they are the same quantity in different normalizations, not contradictory values.
 - nq187b §2.5 `discrete sum tables show $K^L/I_4^L \to 2/3$ at $L \to \infty$; multiplying by 6 gives $A_2^L/A_1^L \to 4$ ✓ R22 confirmed.
 
-**Claim 2 (Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ degenerate"): LIKELY PARTIALLY INCORRECT.**
+**Claim 2 (Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4\vert W''(c)\vert \epsilon$ degenerate"): LIKELY PARTIALLY INCORRECT.**
 
 Per R22 axis-aligned minimum analysis (`symmetry_moduli.md` lines 148-150), the Hessian at the post-bifurcation minimum $(A, 0)$ is:
 - $F_{aa} = -2\mu$ (Mode parallel to breaking direction).
 - $F_{bb} = -\mu$ (Mode transverse to breaking direction).
 - Ratio $F_{aa}/F_{bb} = 2$ at leading order.
 
-If $\mu \propto -\epsilon$ (specifically $\mu = -2\epsilon|W''(c)|$ under one common convention), then $F_{aa} = 4\epsilon|W''(c)|$ and $F_{bb} = 2\epsilon|W''(c)|$. **R22 axis-aligned predicts $\mu_0/\mu_1 = 2$ at the post-bifurcation minimum, not 1.**
+If $\mu \propto -\epsilon$ (specifically $\mu = -2\epsilon\vert W''(c)\vert $ under one common convention), then $F_{aa} = 4\epsilon\vert W''(c)\vert $ and $F_{bb} = 2\epsilon\vert W''(c)\vert $. **R22 axis-aligned predicts $\mu_0/\mu_1 = 2$ at the post-bifurcation minimum, not 1.**
 
 NQ-187 measured $\mu_1/\mu_0 = 2$ at the minimizer (per §2.1 protocol "Hessian at first-pitchfork minimizer"). Inverting: $\mu_0/\mu_1 = 1/2$, i.e., $\mu_1$ corresponds to the parallel direction (larger eigenvalue), $\mu_0$ to the transverse — opposite sort order from R22's $F_{aa}, F_{bb}$ but the **factor 2 ratio is exactly the R22 prediction**.
 
@@ -112,8 +112,8 @@ $$F_{sym}(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + A_1^{sym}(a^4 + b^4) + A_2^{sym} a
 **Canonical line 1395 claims "$A_2/A_1 = 4$"**, but this is using `symmetry_moduli`'s value INSIDE canonical's normal form. The correct value for canonical's normal form is $A_2/A_1 = 2$.
 
 **Recomputed canonical Step 4** (using correct $A_2^{can}/A_1 = 2$):
-- $F_{xx}|_{(A,0)} = -4\beta = 4|W''(c)|\epsilon$ ✓ (unchanged, doesn't depend on $A_2$)
-- $F_{yy}|_{(A,0)} = -\beta \cdot A_2^{can}/A_1 = -\beta \cdot 2 = 2|W''(c)|\epsilon$ (corrected; canonical's "$4|W''(c)|\epsilon$" was wrong)
+- $F_{xx}\vert _{(A,0)} = -4\beta = 4\vert W''(c)\vert \epsilon$ ✓ (unchanged, doesn't depend on $A_2$)
+- $F_{yy}\vert _{(A,0)} = -\beta \cdot A_2^{can}/A_1 = -\beta \cdot 2 = 2\vert W''(c)\vert \epsilon$ (corrected; canonical's "$4\vert W''(c)\vert \epsilon$" was wrong)
 - **Ratio $\mu_0/\mu_1 = 2$ at leading order, NON-DEGENERATE** ← matches NQ-187 numerical measurement exactly.
 
 ### §2.5.2 Revised falsification verdict
@@ -125,7 +125,7 @@ The "falsification" is **NOT a normalization difference (path γ-i)**, **NOT a s
 **Implication for Cat A re-promotion**:
 - The **R22 derivation in `symmetry_moduli.md` §3.3 is correct** ($A_2^{sym}/A_1 = 4$ is rigorous).
 - Canonical Step 4 has a **two-normal-form mixing error**: takes $A_2^{sym}$ value (= 4) and plugs into canonical's $F_{yy} = -\beta A_2^{can}/A_1$ formula (which expects canonical's $A_2$, = 2 under proper conversion).
-- **The corrected canonical (ii) statement** matches NQ-187 measurement exactly: $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2 (non-degenerate).
+- **The corrected canonical (ii) statement** matches NQ-187 measurement exactly: $\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$, ratio 2 (non-degenerate).
 - T-σ-Theorem-4 with corrected (ii) is **Cat A candidate at CV-1.7+** (after applying the formula correction); the corrected statement is mathematically rigorous.
 
 ### §2.5.3 What the original Phase 2 reconciliation missed
@@ -136,7 +136,7 @@ Upon direct re-examination of `canonical.md` lines 1385-1433 (Issue #3 re-examin
 - $A_2^{sym}/A_1 = 4$ ✓ (correct in `symmetry_moduli`'s normal form, derived from $\int \phi^2 \psi^2$ multinomial expansion)
 - $A_2^{can}/A_1 = 2$ ✓ (correct in canonical's normal form, derived from $A_2^{can} = A_2^{sym} - 2 A_1$)
 
-**Canonical Step 4 line 1407 mixed the two**: derived $F_{yy} = -\beta A_2^{can}/A_1$ (correct in canonical's normal form), then plugged in $A_2/A_1 = 4$ from `symmetry_moduli`'s convention. This produces the spurious result $F_{yy} = 4|W''(c)|\epsilon$ instead of the correct $F_{yy} = 2|W''(c)|\epsilon$.
+**Canonical Step 4 line 1407 mixed the two**: derived $F_{yy} = -\beta A_2^{can}/A_1$ (correct in canonical's normal form), then plugged in $A_2/A_1 = 4$ from `symmetry_moduli`'s convention. This produces the spurious result $F_{yy} = 4\vert W''(c)\vert \epsilon$ instead of the correct $F_{yy} = 2\vert W''(c)\vert \epsilon$.
 
 This explains:
 - Why NQ-187 measurement ($\mu_1/\mu_0 = 2$) is in real conflict with canonical's claim (degeneracy) — the canonical claim is algebraically wrong, not just a different evaluation point.
@@ -300,7 +300,7 @@ After audits (γ) + (β) + (α) execute, the following decision tree determines 
 
 **Path γ-ii (formula correction, less likely):**
 - (γ) audit confirms canonical (ii) was intended to describe axis-minimum Hessian but contains a formula error.
-- Action: **correct canonical (ii) statement** to $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$ at leading order; ratio 2 (non-degenerate); higher-order $\epsilon^{3/2}$ correction unchanged.
+- Action: **correct canonical (ii) statement** to $\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$ at leading order; ratio 2 (non-degenerate); higher-order $\epsilon^{3/2}$ correction unchanged.
 - Status: T-σ-Theorem-4 → **Cat B retained with corrected formula** at CV-1.6 (canonical revision packet §3.1 already drafted with this option as fallback).
 - Severity: moderate (correction needed but not retraction).
 
@@ -343,7 +343,7 @@ This correction:
 - **Preserves NQ-187 numerical measurement** as evidence — directly confirms the corrected formula.
 - **Replaces the "degeneracy" claim** with the corrected "ratio 2 non-degenerate" claim.
 - **Preserves the (i) symmetry-breaking + (iii) irrep + (iv) nodal + (v) σ-signature substatements** — they don't depend on the (ii) eigenvalue formula.
-- **Changes the (v) σ-signature** to reflect non-degenerate eigenvalues: $(2, [+1], 4|W''(c)|\epsilon), (2, [-1], 2|W''(c)|\epsilon)$ — the trivial-irrep-first ordering is now via *eigenvalue magnitude* (4 > 2), not the "tie-break by Mulliken character order" of the original (vi). The (vi) tie-break convention and Commitment 14 (O7) become **inapplicable** for this theorem (no tie at leading order); they remain useful for higher-order or different theorem applications.
+- **Changes the (v) σ-signature** to reflect non-degenerate eigenvalues: $(2, [+1], 4\vert W''(c)\vert \epsilon), (2, [-1], 2\vert W''(c)\vert \epsilon)$ — the trivial-irrep-first ordering is now via *eigenvalue magnitude* (4 > 2), not the "tie-break by Mulliken character order" of the original (vi). The (vi) tie-break convention and Commitment 14 (O7) become **inapplicable** for this theorem (no tie at leading order); they remain useful for higher-order or different theorem applications.
 
 ---
 

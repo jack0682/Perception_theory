@@ -51,7 +51,7 @@ $K_\mathrm{act}$.
 
 **Latent primitive:** $U_t : \mathcal{M}_t \to [0,1]$ on 3D manifold $\mathcal{M}_t$
 
-**Visible working field:** $\tilde{u}_t = U_t|_{\mathcal{P}_t} \in \mathcal{F}_0(\mathcal{P}_t)$
+**Visible working field:** $\tilde{u}_t = U_t\vert _{\mathcal{P}_t} \in \mathcal{F}_0(\mathcal{P}_t)$
 
 *Distinction matters:* $U_t$ and $\tilde{u}_t$ are not the same object. $\tilde{u}_t$ is the
 restriction of $U_t$ to the observed point cloud — not a separate field. Conflating them (writing
@@ -77,7 +77,7 @@ from 1 to 0; count connected components of $\mathcal{G}^P$ restricted to the sup
 keep only components with persistence $> \rho_\mathrm{pers}$ (born at $\theta = b$, die at
 $\theta = d$; persistence $= b - d > \rho_\mathrm{pers}$).
 
-**NOT** $|\{j : \lVert \tilde{u}^{(j)} \rVert_\infty > \varepsilon\}|$ — that is a K-field architecture
+**NOT** $\vert \{j : \lVert \tilde{u}^{(j)} \rVert_\infty > \varepsilon\}\vert $ — that is a K-field architecture
 artifact (slot-counting). The slot-count is a proxy valid only within $\mathcal{A}_{K,\alpha}$
 when slots are fully activated and well-separated.
 
@@ -233,7 +233,7 @@ $$\tilde{u}_t^* = \arg\min_{\tilde{u} \in \mathcal{F}_M(\mathcal{P}_t)} \bigl[\u
 
 where:
 - $\mathcal{E}_\mathrm{SCC} = \lambda_\mathrm{cl} E_\mathrm{cl} + \lambda_\mathrm{sep} E_\mathrm{sep} + \lambda_\mathrm{bd} E_\mathrm{bd} + \lambda_\mathrm{tr} E_\mathrm{tr}$ (exactly 4 terms, CN5)
-- $\mathcal{L}_\mathrm{obs}[\mathfrak{O}_t | \tilde{u}] = \lambda_\mathrm{photo} \sum_{x_L} c(x_L) \cdot \Psi(f_L(x_L), f_R(\Pi_{LR}(x_L)), \tilde{u}_t(b_t(x_L)))$
+- $\mathcal{L}_\mathrm{obs}[\mathfrak{O}_t \vert \tilde{u}] = \lambda_\mathrm{photo} \sum_{x_L} c(x_L) \cdot \Psi(f_L(x_L), f_R(\Pi_{LR}(x_L)), \tilde{u}_t(b_t(x_L)))$
 
 $E_\mathrm{photo}$ (photometric consistency) is in $\mathcal{L}_\mathrm{obs}$ — the **likelihood** —
 NOT in $\mathcal{E}_\mathrm{SCC}$. Adding it to the prior would violate CN5 (5th energy term
@@ -243,7 +243,7 @@ with qualitatively different role). This is the only CN5-compliant placement.
 
 **T-ST-5a (Cat A — W6 D4 Session E):** Hard-cut topological locking. If depth threshold removes all bridge edges ($G^P = G_1 \sqcup G_2$, disconnected), K=2 is topologically locked — barrier = +∞. No P-F flag.
 
-**T-ST-5b (Cat B — formally signed off W6 D4 Session G):** Smooth barrier raising under full SCC energy. For smooth depth-weighted adjacency ($w_{ij} = w_{2D} \cdot \exp(-\lambda_z|z_i - z_j|^2)$), the K=2→K=1 merger barrier exceeds the flat-adjacency baseline **under full SCC energy (E_cl + E_sep active).** GL-only energy is NULL. Monotone dependence on $\Delta z$ is NOT confirmed.
+**T-ST-5b (Cat B — formally signed off W6 D4 Session G):** Smooth barrier raising under full SCC energy. For smooth depth-weighted adjacency ($w_{ij} = w_{2D} \cdot \exp(-\lambda_z\vert z_i - z_j\vert ^2)$), the K=2→K=1 merger barrier exceeds the flat-adjacency baseline **under full SCC energy (E_cl + E_sep active).** GL-only energy is NULL. Monotone dependence on $\Delta z$ is NOT confirmed.
 
 *Original claim text (superseded):* "increases with $\Delta z_{jk}$" — monotonicity is NOT established by exp02e (barrier plateaus from $\Delta z=0.5$ at $\beta=10$; non-monotone at $\beta=20$).
 
@@ -297,7 +297,7 @@ K-basin before $\mathcal{P}$ changes.
 
 ## §7. Hard Constraint Verification
 
-- [x] **$u_t$ primitive**: $\tilde{u}_t$ (= $U_t|_{\mathcal{P}_t}$) is primitive throughout. $K_\mathrm{act}$ derived.
+- [x] **$u_t$ primitive**: $\tilde{u}_t$ (= $U_t\vert _{\mathcal{P}_t}$) is primitive throughout. $K_\mathrm{act}$ derived.
 - [x] **CN5**: prior has exactly 4 energy terms; $E_\mathrm{photo}$ in likelihood only.
 - [x] **CN10 contrastive**: stereo correspondence, depth estimation, etc. are upstream inputs; SCC is not identified with them.
 - [x] **P-F flagged**: all stochastic claims (T2, T3, Kramers rates, $Z_K$) carry P-F flags.
@@ -347,9 +347,9 @@ Nine corrections applied:
 
 | # | Item | v1 error | v1.1 correction |
 |---|---|---|---|
-| 1 | K_act definition | Slot-count $|\{j: \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ | $K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u})$ via persistence filtration |
+| 1 | K_act definition | Slot-count $\vert \{j: \lVert u^{(j)} \rVert_\infty > \varepsilon\}\vert $ | $K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u})$ via persistence filtration |
 | 2 | OP-0006 | K-dynamics (how K changes) | Boundary precision (how soft $\tilde{u}$ transition → crisp persistent boundary) |
-| 3 | Field notation | $\tilde{u}_t = U_t$ (conflation) | $\tilde{u}_t = U_t|_{\mathcal{P}_t}$ (restriction of latent $U_t$ to $\mathcal{P}_t$) |
+| 3 | Field notation | $\tilde{u}_t = U_t$ (conflation) | $\tilde{u}_t = U_t\vert _{\mathcal{P}_t}$ (restriction of latent $U_t$ to $\mathcal{P}_t$) |
 | 4 | Pixel-P_t | Ambiguous $b_L$ domain | $b_t: X_L^\mathrm{valid} \rightharpoonup \mathcal{P}_t$ (partial map; undefined at occlusions) |
 | 5 | Gauge/scale | $\rho_\mathrm{pers}$ controls robustness | $\rho_\mathrm{pers}$ = filtration threshold only; full robustness requires admissible $\mathcal{G} \times \mathcal{B}$ family |
 | 6 | $\Pi_{LR}$, $M_{t \to s}$ | Doubly stochastic / general transport | Unbalanced partial couplings (sub-stochastic; source ≠ target measure) |

@@ -73,8 +73,8 @@ Let $F : X \times \Lambda \to Y$ be a $C^2$ map between finite-dimensional smoot
 (a) a neighborhood $U \subset \Lambda$ of $\lambda_0$;
 (b) a one-dimensional submanifold $\gamma \subset U \times X$ passing through $(\lambda_0, z_0)$ — the **fold curve**;
 (c) a codim-1 submanifold $\Sigma \subset U$ — the **fold surface in parameter space** — such that for $\lambda \in U$:
-- if $\lambda \in U \setminus \Sigma$ on the "inside", $F^{-1}(0)|_\lambda$ has two solutions near $z_0$;
-- if $\lambda \in U \setminus \Sigma$ on the "outside", $F^{-1}(0)|_\lambda$ has no solutions near $z_0$;
+- if $\lambda \in U \setminus \Sigma$ on the "inside", $F^{-1}(0)\vert _\lambda$ has two solutions near $z_0$;
+- if $\lambda \in U \setminus \Sigma$ on the "outside", $F^{-1}(0)\vert _\lambda$ has no solutions near $z_0$;
 - if $\lambda \in \Sigma$, exactly one solution exists, with the kernel direction $\phi$ as tangent.
 
 In particular, the fold surface $\Sigma \subset U$ is a $C^1$ codim-1 submanifold of $\Lambda$.

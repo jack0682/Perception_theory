@@ -65,7 +65,7 @@ Between δ = 0 and δ = −0.05: `‖u^0 − u^{−0.05}‖_∞ = 0.05`. Differe
 For (φ-sat) `φ(ℓ) = ℓ/(1+ℓ)`: `φ(0.10) = 0.10/1.10 ≈ 0.091`. Lipschitz check:
 
 $$
-\frac{|K_{\mathrm{soft}}(u^{-0.05}) - K_{\mathrm{soft}}(u^0)|}{\lVert u^{-0.05} - u^0 \rVert_\infty} = \frac{0.091}{0.05} = 1.82.
+\frac{\vert K_{\mathrm{soft}}(u^{-0.05}) - K_{\mathrm{soft}}(u^0)\vert}{\lVert u^{-0.05} - u^0 \rVert_\infty} = \frac{0.091}{0.05} = 1.82.
 $$
 
 Cor 4.1 bound: `L_K ≤ 2 L_φ n = 2 · 1 · 4 = 8`. Empirical 1.82 ≤ 8 ✓.
@@ -88,7 +88,7 @@ Let γ be an optimal bottleneck matching realizing this distance. γ pairs each 
 
 For matched pairs (a):
 $$
-|\ell_u - \ell_v| = \lvert (d_u - b_u) - (d_v - b_v) \rvert \leq \lvert d_u - d_v \rvert + \lvert b_u - b_v \rvert \leq 2 W_\infty.
+\vert \ell_u - \ell_v\vert = \lvert (d_u - b_u) - (d_v - b_v) \rvert \leq \lvert d_u - d_v \rvert + \lvert b_u - b_v \rvert \leq 2 W_\infty.
 $$
 
 For diagonal-paired (b):
@@ -107,7 +107,7 @@ Total bars (matched + diagonal-u + diagonal-v) ≤ N(u) + N(v) ≤ 2 · max(N(u)
 Therefore:
 
 $$
-|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq 2 L_\varphi \cdot 2n \cdot \lVert u - v \rVert_\infty = 4 L_\varphi n \cdot \lVert u - v \rVert_\infty.
+\vert K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\vert \leq 2 L_\varphi \cdot 2n \cdot \lVert u - v \rVert_\infty = 4 L_\varphi n \cdot \lVert u - v \rVert_\infty.
 $$
 
 So `L_K ≤ 4 L_φ n` (slightly looser than the dev §4.1 claim of `2 L_φ n`; the factor of 2 difference comes from counting both matched and diagonal contributions separately).

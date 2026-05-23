@@ -36,7 +36,7 @@ OP-0008 는 CV-1.5.1 시점 σ^A 인 K-jump 시 inheritance map $\Phi : \sigma^A
 
 ### §2.1 Underlying setup
 
-K-field gradient flow trajectory $\mathbf{u}(t) : [0, T] \to \widetilde\Sigma^K_M$ on shared-pool stratified space (per `working/MF/mathematical_scaffolding_4tools.md` Tool A1 §2). Active formation set at time $t$: $\mathrm{act}(t) = \{j : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$. $K_{\mathrm{act}}(t) = |\mathrm{act}(t)|$.
+K-field gradient flow trajectory $\mathbf{u}(t) : [0, T] \to \widetilde\Sigma^K_M$ on shared-pool stratified space (per `working/MF/mathematical_scaffolding_4tools.md` Tool A1 §2). Active formation set at time $t$: $\mathrm{act}(t) = \{j : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$. $K_{\mathrm{act}}(t) = \vert \mathrm{act}(t)\vert $.
 
 For each $j \in \mathrm{act}(t)$, the formation $u^{(j)}(t) : X \to [0, 1]$ has support $\mathrm{supp}(u^{(j)}) := \{x \in X : u^{(j)}(x) > \delta\}$ (with $\delta < \epsilon$ a small threshold).
 
@@ -75,7 +75,7 @@ $M_j$ is a real symmetric positive-semidefinite matrix. Diagonalize $M_j = \sum_
 
 **Definition (orientation)**: $\Theta_j(\mathbf{u}) := (\mu_{j,\alpha}, [v_{j,\alpha}])_\alpha$ where $[v_{j,\alpha}]$ denotes the principal-axis eigenvector modulo $\pm 1$ (RP^{dim X-1} representative; sign-ambiguity resolved by canonical convention, e.g., first non-zero coordinate $> 0$).
 
-For 2D ($\dim X = 2$): $\Theta_j = ((\mu_{j,1}, \mu_{j,2}), \theta_j)$ where $\theta_j \in [0, \pi)$ is the angle of the principal axis from a fixed reference. **Orientation alignment** between formations $j, k$ is captured by $|\theta_j - \theta_k| \mod \pi$.
+For 2D ($\dim X = 2$): $\Theta_j = ((\mu_{j,1}, \mu_{j,2}), \theta_j)$ where $\theta_j \in [0, \pi)$ is the angle of the principal axis from a fixed reference. **Orientation alignment** between formations $j, k$ is captured by $\vert \theta_j - \theta_k\vert \mod \pi$.
 
 **Status as derived diagnostic**: $\Theta_j$ is the spectral data of the second-moment tensor of $u^{(j)}$ — derived from primitive field. Matches the "orientation alignment" merger-geometry component $\mathcal{M}$ identified in OP-0008.
 
@@ -121,7 +121,7 @@ Per `sigma_multi_trajectory.md` Lemma 4.2: left and right limits $\sigma^A(t^{*\
 
 **Claim 3.1 (merger pair identification from σ_rich).** Given $\sigma_{\mathrm{rich}}(t^{*-})$, the merging pair $(j, k)$ is identifiable as the unique pair satisfying:
 1. $\lVert c_j(t^{*-}) - c_k(t^{*-}) \rVert$ is the unique minimum in $\{\lVert c_a - c_b \rVert : a, b \in \mathrm{act}, a < b\}$.
-2. $\Delta_{jk}^{\mathrm{Gold}} \to 0$ approach (Goldstone-pair softening: of all $W_{ab}$, the pair $(j,k)$ has $W_{jk}$ with $\mathrm{sign}(d\Delta/dt) = -1$ and minimum $|\Delta_{jk}^{\mathrm{Gold}}|$).
+2. $\Delta_{jk}^{\mathrm{Gold}} \to 0$ approach (Goldstone-pair softening: of all $W_{ab}$, the pair $(j,k)$ has $W_{jk}$ with $\mathrm{sign}(d\Delta/dt) = -1$ and minimum $\vert \Delta_{jk}^{\mathrm{Gold}}\vert $).
 
 **Verification sketch**: Two formations merge when their boundaries touch and the inter-formation barrier softens. Both centroid-distance minimum (geometric) and Goldstone-pair gap softening (spectral) characterize this softening. In the well-separated regime, both criteria identify the same pair (consistent in non-degenerate trajectories).
 

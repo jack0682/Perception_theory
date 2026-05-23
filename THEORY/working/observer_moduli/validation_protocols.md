@@ -156,7 +156,7 @@ For each face $F_i$ ($i \in \{cl, sep, bd, tr\}$):
 
 1. **Toy latent model:** Define $Z = \mathbb{R}^2$ (2D latent space). Define generator $\Gamma : Z \to \Delta^3$ by:
    $$\Gamma(z_1, z_2) = \mathrm{softmax}(z_1^2 + z_2^2,\ \lvert z_1 - z_2 \rvert,\ \lvert z_1 + z_2 \rvert,\ 0)$$
-   (depends only on $r^2 = z_1^2 + z_2^2$ and $|z_1 \pm z_2|$).
+   (depends only on $r^2 = z_1^2 + z_2^2$ and $\vert z_1 \pm z_2\vert $).
 
 2. **$SO(2)$ symmetry check:** Compute $\Gamma(R_\phi z)$ for various $\phi$. If $\Gamma(R_\phi z) = \Gamma(z)$ for all $\phi$, $SO(2)$ is a latent symmetry of $\Gamma$.
 

@@ -60,7 +60,7 @@ This audit applies the mandated decision tree to the post-Session-7 state and as
 **Best witness:**
 - Scene: S3 (6×6 grid).
 - $\lambda^\star = (0.2397, 0.3838, 0.3765)$.
-- $|\det 3 \times 3$ minor of $G_T| = 0.0845$.
+- $\vert \det 3 \times 3$ minor of $G_T\vert = 0.0845$.
 - cond$(H_T) = 9.46$, $H_T \succ 0$.
 - Margin over IEEE error bound: $4 \times 10^{13}$.
 - Margin over optimizer-residual bound: $84$.

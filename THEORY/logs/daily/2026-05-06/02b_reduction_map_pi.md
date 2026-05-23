@@ -47,7 +47,7 @@ with tie-breaking by lexicographic order on $u^{(j)}$ (compare componentwise).
 
 **Claim (continuity of $s$ on open stratum).** On the open stratum $\pi(\Sigma^K_{M,\mathrm{free}})$, the section $s$ is continuous.
 
-*Proof sketch:* On a small neighborhood $U$ around $[\mathbf{u}] \in \pi(\Sigma^K_{M,\mathrm{free}})$ with all slots distinct and centroids $c^{(1)} < c^{(2)} < \cdots < c^{(K)}$ (strict ordering — valid on open set), the sorted representative is determined by the same permutation $\sigma_0$ throughout $U$. Thus $s|_U = $ the composition of $\pi^{-1}$ (inverse to $\pi|_{\sigma_0 \cdot \text{neighborhood}}$, which is continuous) and the sorting, which is locally constant at $\sigma_0$. Continuity follows. $\square$
+*Proof sketch:* On a small neighborhood $U$ around $[\mathbf{u}] \in \pi(\Sigma^K_{M,\mathrm{free}})$ with all slots distinct and centroids $c^{(1)} < c^{(2)} < \cdots < c^{(K)}$ (strict ordering — valid on open set), the sorted representative is determined by the same permutation $\sigma_0$ throughout $U$. Thus $s\vert _U = $ the composition of $\pi^{-1}$ (inverse to $\pi\vert _{\sigma_0 \cdot \text{neighborhood}}$, which is continuous) and the sorting, which is locally constant at $\sigma_0$. Continuity follows. $\square$
 
 **Limitation:** At the symmetric stratum boundary ($u^{(j)} = u^{(k)}$ for some $j, k$), the centroid ordering becomes degenerate (tie between $c^{(j)}$ and $c^{(k)}$) and $s$ is not continuous. The lexicographic tie-break extends continuity to measure-zero edge cases but not to the entire symmetric stratum (where $u^{(j)} = u^{(k)}$ identically). This is expected: local sections of a non-free group action are necessarily discontinuous at fixed-point strata.
 
@@ -61,7 +61,7 @@ the orbit of $\mathbf{u}$ under $S_K$.
 
 **Fiber sizes:**
 
-| Configuration type | $|\mathrm{Stab}(\mathbf{u})|$ | Fiber size $|\pi^{-1}([\mathbf{u}])|$ |
+| Configuration type | $\vert \mathrm{Stab}(\mathbf{u})\vert $ | Fiber size $\vert \pi^{-1}([\mathbf{u}])\vert $ |
 |---|---|---|
 | All slots distinct (generic) | 1 | $K!$ |
 | Exactly one pair equal $u^{(j)} = u^{(k)}$ | 2 | $K!/2$ |
@@ -83,7 +83,7 @@ the orbit of $\mathbf{u}$ under $S_K$.
 
 **Application:** The SCC energy $\mathcal{E}$ is $S_K$-equivariant (proved in `02c_minimization_principle_unordered.md` §3.1). Therefore $\mathcal{E}$ factors through $\pi$: there is a well-defined $\widetilde{\mathcal{E}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{R}$ with $\mathcal{E} = \widetilde{\mathcal{E}} \circ \pi$.
 
-Similarly, $K_{\mathrm{act}}(\mathbf{u}) = |\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ is $S_K$-equivariant (permuting slots doesn't change the count). So $K_{\mathrm{act}}$ factors through $\pi$ to a well-defined $\widetilde{K}_{\mathrm{act}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{Z}_{\geq 0}$. This is how $K_{\mathrm{act}}$ is already orbit-invariant in the canonical theory.
+Similarly, $K_{\mathrm{act}}(\mathbf{u}) = \vert \{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}\vert $ is $S_K$-equivariant (permuting slots doesn't change the count). So $K_{\mathrm{act}}$ factors through $\pi$ to a well-defined $\widetilde{K}_{\mathrm{act}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{Z}_{\geq 0}$. This is how $K_{\mathrm{act}}$ is already orbit-invariant in the canonical theory.
 
 ---
 

@@ -63,10 +63,10 @@ which matches Lemma 9 with $M_\mathrm{tot} = m_t$ (total source mass). The linea
 **Lemma 10** (from `06_close_OP0011_step2.md §2.3`): Given the transport plan mass for components $C_i^t, C_j^s$:
 $$\gamma_M(C_i^t, C_j^s) := \sum_{x \in C_i^t, y \in C_j^s} M(x,y),$$
 under plan stability $\lVert M - M' \rVert_\mathrm{TV} \leq \epsilon_\mathrm{conf}$:
-$$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}.$$
+$$\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}.$$
 
 **Proof:** Directly from Lemma 9 by summing over $C_i^t \times C_j^s \subseteq \mathcal{P} \times \mathcal{P}$:
-$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s} (M - M')(x,y)\right| \leq \sum_{x,y}\lvert M-M' \rvert(x,y) = \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}. \square$$
+$$\vert \gamma_M - \gamma_{M'}\vert = \left\vert \sum_{x \in C_i^t, y \in C_j^s} (M - M')(x,y)\right\vert \leq \sum_{x,y}\lvert M-M' \rvert(x,y) = \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}. \square$$
 
 **Lemma 10 status: Cat A** (follows directly from Cat A Lemma 9).
 
@@ -76,7 +76,7 @@ $$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s} (M - M')(x,y)
 
 Under:
 - Margin condition: $\Delta_\mathrm{sep}^\mathrm{row}(M) := \min_i (\tilde S_{i,\pi(i)}^0 - \max_{j \neq \pi(i)} \tilde S_{i,j}^0) \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$ where $\epsilon_\mathrm{kernel} = 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ *(margin factor corrected by S-C1 audit, W7-CV1.13)*
-- Score perturbation: from Lemma 10, $|\tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']| \leq \epsilon_\mathrm{kernel}$
+- Score perturbation: from Lemma 10, $\vert \tilde S^0_{ij}[M] - \tilde S^0_{ij}[M']\vert \leq \epsilon_\mathrm{kernel}$
 
 **Conclusion:** For any $i$, the argmax assignment $j^*(i) = \arg\max_j \tilde S^0_{ij}[M]$ is the same for $M$ and $M'$:
 $$j^*(i)[M] = j^*(i)[M'] \quad \text{for all } i.$$

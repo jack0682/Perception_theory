@@ -37,7 +37,7 @@ Non-regular graphs handled via Round 3 §2.3c similarity $T_D$; the $c$-structur
 ## §2. Closed-form spectrum
 
 From Round 3 §2.3d Prop 1.3b (d) consolidated:
-$$H_{\mathrm{sep}}|_{u_{\mathrm{uniform}}} = -\gamma_D(c)(P + P^\top) - c\gamma_D''(c)(P^\top P).$$
+$$H_{\mathrm{sep}}\vert _{u_{\mathrm{uniform}}} = -\gamma_D(c)(P + P^\top) - c\gamma_D''(c)(P^\top P).$$
 
 On regular graph with $P = P^\top$: $H_{\mathrm{sep}} = -2\gamma_D P - c\gamma_D'' P^2$, diagonal in Laplacian basis:
 $$\boxed{\;\nu_k(c) = -2\gamma_D(c) p_k - c\gamma_D''(c) p_k^2.\;}$$
@@ -86,7 +86,7 @@ $s(c) = 10 c (1 - 2\sigma(10c - 5))$.
 
 ### 3.3 Structural summary of $p^\ast(c)$
 
-- **Left-sided critical threshold $c_{\mathrm{bif}}^- \approx 0.385$** where $|p^\ast|$ first enters the spectrum from below. Determined by $s(c) \cdot \max|p_k| = 2$, i.e., $s(c_{\mathrm{bif}}^-) \cdot 1 = 2$, i.e., $5c(1-2d_0(c)) = 1$. Numerical: $c_{\mathrm{bif}}^- \approx 0.385$ at $a_D = 5$ (depends on $a_D$).
+- **Left-sided critical threshold $c_{\mathrm{bif}}^- \approx 0.385$** where $\vert p^\ast\vert $ first enters the spectrum from below. Determined by $s(c) \cdot \max\vert p_k\vert = 2$, i.e., $s(c_{\mathrm{bif}}^-) \cdot 1 = 2$, i.e., $5c(1-2d_0(c)) = 1$. Numerical: $c_{\mathrm{bif}}^- \approx 0.385$ at $a_D = 5$ (depends on $a_D$).
 - **Right-sided critical threshold $c_{\mathrm{bif}}^+ \approx 0.545$** where $p^\ast$ first enters $(0, 1]$ from above. At $c$ just above $1/2$, $p^\ast$ is large (above 1); as $c$ increases, $p^\ast$ decreases below 1 and enters the spectrum. Determined by $\lvert s(c) \rvert = 2$, i.e., $5c(2d_0 - 1) = 1$. Symmetric to left under $c \to 1 - c$ approximately but not exactly (sigmoid is not linear).
 - **No bifurcation crossing** for $c \in (c_{\mathrm{bif}}^-, c_{\mathrm{bif}}^+) \approx (0.385, 0.545)$: the Morse index of $H_{\mathrm{sep}}$ is constant in this "central spinodal" regime.
 
@@ -143,11 +143,11 @@ Only low-smoothness modes (smooth enough to destabilize linearly, but not so smo
 
 ### 5.1 Morse-index function
 
-Define $N^{\mathrm{sep}}_{\mathrm{unst}}(c) := |\mathcal{U}^{\mathrm{sep}}(c)|$.
+Define $N^{\mathrm{sep}}_{\mathrm{unst}}(c) := \vert \mathcal{U}^{\mathrm{sep}}(c)\vert $.
 
 For 2D grid (regular, $L \times L$, large $L$): Laplacian spectrum approximates continuous density $\rho(\lambda)$ on $[0, 2d] = [0, 8]$; positive-$p_k$ modes ($\lambda_k < d = 4$) number approximately $n/2$, similar for negative.
 
-**Asymmetry magnitude.** Let $N_+ := |\{p_k > 0\}|$, $N_- := |\{p_k < 0\}|$ (both $\approx n/2$ on 2D grid bulk). Denote $N_{\mathrm{tail}}^-(q) := |\{p_k < q\}|$ and $N_{\mathrm{tail}}^+(q) := |\{p_k > q\}|$.
+**Asymmetry magnitude.** Let $N_+ := \vert \{p_k > 0\}\vert $, $N_- := \vert \{p_k < 0\}\vert $ (both $\approx n/2$ on 2D grid bulk). Denote $N_{\mathrm{tail}}^-(q) := \vert \{p_k < q\}\vert $ and $N_{\mathrm{tail}}^+(q) := \vert \{p_k > q\}\vert $.
 
 | Regime | $N^{\mathrm{sep}}_{\mathrm{unst}}(c)$ |
 |---|---|
@@ -166,7 +166,7 @@ For 2D grid (regular, $L \times L$, large $L$): Laplacian spectrum approximates 
 ### 5.3 Explicit formula at canonical $c = 0.3$
 
 At $c = 0.3$: $p^\ast = -0.875$. On 2D 64×64 grid (regular bulk approximation):
-$N_{\mathrm{tail}}^-(-0.875) = |\{k : \lambda_k > d(1 - p^\ast) = 4 \cdot 1.875 = 7.5\}|$
+$N_{\mathrm{tail}}^-(-0.875) = \vert \{k : \lambda_k > d(1 - p^\ast) = 4 \cdot 1.875 = 7.5\}\vert $
 
 For 2D Laplacian on $64 \times 64$, max $\lambda \approx 8$ (at $(\cos \pi + \cos \pi)$ mode); modes with $\lambda > 7.5$ are in the top 5% or so. Estimate $N_{\mathrm{tail}}^-(-0.875) \approx 0.05 \cdot n \approx 200$.
 
@@ -180,7 +180,7 @@ Compare to $c = 0.5$: $N^{\mathrm{sep}}_{\mathrm{unst}} = N_+ \approx 2048$.
 
 At $c = 0.7$: $p^\ast = +0.375$. Modes with $p_k > 0.375$ (i.e., $\lambda_k < d(1 - 0.375) = 2.5$) are **excluded** from instability.
 
-$N_{\mathrm{tail}}^+(0.375) = |\{k : \lambda_k < 2.5\}|$
+$N_{\mathrm{tail}}^+(0.375) = \vert \{k : \lambda_k < 2.5\}\vert $
 
 On 2D $64 \times 64$: bottom 25-30% of spectrum. Estimate $N_{\mathrm{tail}}^+(0.375) \approx 0.28 \cdot n \approx 1150$.
 
@@ -260,7 +260,7 @@ Moreover, Round 6 shows that $c = 1/2$ sits in a **robust central regime** $(c_{
 
 1. **Closed-form $\nu_k(c) = -d_0\bar d_0\kappa_D p_k[2 + c(1-2d_0)\kappa_D p_k]$** — explicit function of $c$, universal on regular graphs.
 
-2. **Bifurcation eigenvalue $p^\ast(c) = -2/[c(1-2d_0)\kappa_D]$** — two critical $c$-thresholds $c_{\mathrm{bif}}^\pm$ at which $|p^\ast(c)| = 1$.
+2. **Bifurcation eigenvalue $p^\ast(c) = -2/[c(1-2d_0)\kappa_D]$** — two critical $c$-thresholds $c_{\mathrm{bif}}^\pm$ at which $\vert p^\ast(c)\vert = 1$.
 
 3. **Three-regime classification** — Regimes I/II/III with distinct destabilized-set characterizations.
 

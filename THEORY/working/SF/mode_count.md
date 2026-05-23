@@ -26,7 +26,7 @@
 > **Proposition 1.3a.** Let $G = (X, E)$ be a finite connected graph with $n = \lvert X \rvert$, Laplacian $L$, ordered-pair-convention eigenvalues $\lambda_1 = 0 < \lambda_2 \leq \cdots \leq \lambda_n$. Let $c \in (c_-, c_+) = \big((3-\sqrt 3)/6, (3+\sqrt 3)/6\big)$ strictly in the spinodal range, $\alpha, \beta > 0$. The constrained Hessian
 > $$H_{\mathrm{bd}} := \mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\Big\vert_{u = c\mathbf{1}}^{T_u\Sigma_m} = \big(4\alpha L + \beta W''(c) I\big)\Big\vert_{\mathbf{1}^\perp}$$
 > has Morse index
-> $$N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) \;=\; \#\{k \in \{2,\ldots,n\} \;:\; 4\alpha\lambda_k(G) < \beta|W''(c)|\}.$$
+> $$N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) \;=\; \#\{k \in \{2,\ldots,n\} \;:\; 4\alpha\lambda_k(G) < \beta\vert W''(c)\vert \}.$$
 
 ### 1.2 Proof
 
@@ -42,7 +42,7 @@ See `logs/daily/2026-04-22/02_development.md` §2.2 for the step-granularity pro
 
 Setup: 64×64 grid ($n = 4096$, max possible Morse index $= 4095$), $\alpha = 1$, $c = 0.5$ (so $\lvert W''(c) \rvert = 1$), $\lambda_2 = 4\sin^2(\pi/(2\cdot 64)) \approx 0.00964$.
 
-| $\beta$ | $4\alpha\lambda_2/(\beta|W''(c)|)$ threshold check | Predicted $N_{\mathrm{unst}}^{\mathrm{bd}}$ | Measured Morse index | Match |
+| $\beta$ | $4\alpha\lambda_2/(\beta\vert W''(c)\vert)$ threshold check | Predicted $N_{\mathrm{unst}}^{\mathrm{bd}}$ | Measured Morse index | Match |
 |---|---|---|---|---|
 | 1 | $4\lambda_2 = 0.039 < 1$ ⇒ $k=2$ unstable | 93 | 93 | ✓ |
 | 2 | same, more $k$ | 182 | 182 | ✓ |
@@ -115,13 +115,13 @@ $\partial \mathcal{E}_{\mathrm{sep}}/\partial u_k = -(1 - D_k) + \sum_i u_i \par
 $(H_{\mathrm{sep}})_{k\ell} = -\partial D_k/\partial u_\ell - \partial(J_D^\top u)_k/\partial u_\ell = -(J_D)_{k\ell} - (J_D)_{\ell k} - \mathcal{T}_{k\ell},$
 where $\mathcal{T}_{k\ell} := \sum_i u_i \partial^2 D_i/\partial u_k \partial u_\ell$.
 
-*Step 3 (eval at $u_{\mathrm{uniform}}$).* $Pu|_{u=c\mathbf 1} = c\mathbf 1$ ⇒ $D(c\mathbf 1) = d_0 \mathbf 1$ with $d_0 = \sigma(c\kappa_D - \delta_D)$.
-$\sigma'(z_i)|_{u_{\mathrm{uniform}}} = d_0(1-d_0)$. Hence $J_D|_{u_{\mathrm{uniform}}} = d_0(1-d_0)\kappa_D P = \gamma_D P$.
-$\sigma''(z) = \sigma(1-\sigma)(1-2\sigma)$ ⇒ $\sigma''|_{u_{\mathrm{uniform}}} = d_0(1-d_0)(1-2d_0)$.
-$\partial^2 D_i/\partial u_k \partial u_\ell = \sigma''\kappa_D^2 P_{ik}P_{i\ell}$, so $\mathcal{T}_{k\ell}|_{u_{\mathrm{uniform}}} = \gamma_D'' \cdot c \cdot (P^\top P)_{k\ell}$.
+*Step 3 (eval at $u_{\mathrm{uniform}}$).* $Pu\vert _{u=c\mathbf 1} = c\mathbf 1$ ⇒ $D(c\mathbf 1) = d_0 \mathbf 1$ with $d_0 = \sigma(c\kappa_D - \delta_D)$.
+$\sigma'(z_i)\vert _{u_{\mathrm{uniform}}} = d_0(1-d_0)$. Hence $J_D\vert _{u_{\mathrm{uniform}}} = d_0(1-d_0)\kappa_D P = \gamma_D P$.
+$\sigma''(z) = \sigma(1-\sigma)(1-2\sigma)$ ⇒ $\sigma''\vert _{u_{\mathrm{uniform}}} = d_0(1-d_0)(1-2d_0)$.
+$\partial^2 D_i/\partial u_k \partial u_\ell = \sigma''\kappa_D^2 P_{ik}P_{i\ell}$, so $\mathcal{T}_{k\ell}\vert _{u_{\mathrm{uniform}}} = \gamma_D'' \cdot c \cdot (P^\top P)_{k\ell}$.
 
 *Step 4 (combine).*
-$(H_{\mathrm{sep}})_{k\ell}|_{u_{\mathrm{uniform}}} = -\gamma_D P_{k\ell} - \gamma_D P_{\ell k} - c\gamma_D''(P^\top P)_{k\ell}$. Hence the boxed formula. ∎
+$(H_{\mathrm{sep}})_{k\ell}\vert _{u_{\mathrm{uniform}}} = -\gamma_D P_{k\ell} - \gamma_D P_{\ell k} - c\gamma_D''(P^\top P)_{k\ell}$. Hence the boxed formula. ∎
 
 **Remark (simplification at canonical symmetric defaults).** At $c = 1/2$, $\tau_D = 0$, $\lambda_D = 1$ (code defaults): $\kappa_D = 2a_D$, $\delta_D = a_D$, pre-activation $z = 2a_D c - a_D = a_D(2c-1) = 0$ ⇒ $d_0 = 1/2$. Thus **$\gamma_D'' = 0$** (cubic correction vanishes) and
 $$H_{\mathrm{sep}}\big\vert_{u_{\mathrm{uniform}}}^{\text{canonical}} = -\gamma_D(P + P^\top) = -\tfrac{a_D(1+\lambda_D)}{4}\cdot (P + P^\top).$$
@@ -130,7 +130,7 @@ For canonical $a_D = 5$, $\lambda_D = 1$: $\gamma_D = 5 \cdot 2 \cdot 1/4 = 5/2$
 **Remark (commutation with $L$).** On 2D square grid with uniform edge weights and free BC, the aggregation $P = D^{-1} N$ (with $D = \mathrm{diag}(\deg)$). For a 4-regular interior, $P = N/4$ approximately (boundary effects aside). $P$ is symmetric iff $D$ is constant (regular graph). On $L \times L$ grid with periodic BC: $P$ symmetric, $P + P^\top = 2P$. On free BC: $P$ not quite symmetric near the boundary. In the regular-bulk approximation, $P$ and $L$ share the eigenbasis $\{\phi_k\}$; eigenvalue of $P$ corresponding to $\phi_k$ is $p_k = 1 - \lambda_k^L/d$ where $d$ is the (effective) degree.
 
 Hence in the eigenbasis of $L$:
-$\nu_k^{\mathrm{sep}} := \mathrm{eig}_k(H_{\mathrm{sep}})|_{u_{\mathrm{uniform}}}^{\text{canonical}} = -2\gamma_D\cdot p_k - c\gamma_D'' p_k^2 = -p_k(2\gamma_D + c\gamma_D'' p_k),$
+$\nu_k^{\mathrm{sep}} := \mathrm{eig}_k(H_{\mathrm{sep}})\vert _{u_{\mathrm{uniform}}}^{\text{canonical}} = -2\gamma_D\cdot p_k - c\gamma_D'' p_k^2 = -p_k(2\gamma_D + c\gamma_D'' p_k),$
 and at $c = 1/2$, symmetric defaults: $\nu_k^{\mathrm{sep}} = -2\gamma_D p_k$.
 
 This is a clean diagonal formula in the Laplacian eigenbasis, provided closure's block also commutes with $L$ (approximately true when $Q$ and $L$ commute — same regular-bulk assumption).
@@ -152,7 +152,7 @@ $H_{\mathrm{cl}}$ is PSD (all non-negative eigenvalues) ⇒ adding $H_{\mathrm{c
 
 Expected: #negative of $H_{\mathrm{cl,sep}}$ ≤ #negative of $H_{\mathrm{sep}}$ ≈ 2000. Measured 1641 ≈ 2000 × 0.82 — consistent with $H_{\mathrm{cl}}$ pushing ~400 eigenvalues from negative to non-negative. ✓
 
-**Magnitude check.** Largest $\lvert p_k \rvert$ ≈ 1 (at $k=2$ Fiedler mode, or at highest Laplacian eigenvalue). So max $|\nu_k^{\mathrm{sep}}|$ ≈ $2\gamma_D \cdot 1 = 5$. Measured $|\nu|_{\max} \approx 5$. ✓ ($H_{\mathrm{cl}}$ contribution can extend the upper edge to +7 via its positive spectrum.)
+**Magnitude check.** Largest $\lvert p_k \rvert$ ≈ 1 (at $k=2$ Fiedler mode, or at highest Laplacian eigenvalue). So max $\vert \nu_k^{\mathrm{sep}}\vert $ ≈ $2\gamma_D \cdot 1 = 5$. Measured $\vert \nu\vert _{\max} \approx 5$. ✓ ($H_{\mathrm{cl}}$ contribution can extend the upper edge to +7 via its positive spectrum.)
 
 **Conclusion.** The 1641 count at canonical 64×64 is **not a config-specific accident**; it follows structurally from the Laplacian spectrum on 2D grid modulo $H_{\mathrm{cl}}$ contribution. This elevates Prop 1.3b (d) spectrum from **Cat B (config-specific numerics)** to **Cat A (structural prediction with numerical agreement)** at canonical $c=1/2$ symmetric defaults.
 
@@ -196,7 +196,7 @@ $d_0 = \sigma(z_0)$. Hence:
 
 - $P^\top P$ is PSD, all eigenvalues $\geq 0$.
 - At $c < 1/2$: $c > 0$, $\gamma_D'' > 0$ ⇒ $-c\gamma_D''(P^\top P)$ is **negative semidefinite**: **destabilizing**, adds more negative eigenvalues to $H_{\mathrm{sep}}$.
-- At $c > 1/2$: $c > 0$, $\gamma_D'' < 0$ ⇒ $-c\gamma_D''(P^\top P) = c|\gamma_D''|(P^\top P)$ is **positive semidefinite**: **stabilizing**, fewer negative eigenvalues.
+- At $c > 1/2$: $c > 0$, $\gamma_D'' < 0$ ⇒ $-c\gamma_D''(P^\top P) = c\vert \gamma_D''\vert (P^\top P)$ is **positive semidefinite**: **stabilizing**, fewer negative eigenvalues.
 - At $c = 1/2$: cubic vanishes.
 
 **Asymmetry between $c < 1/2$ and $c > 1/2$.** Consider Prop 1.3b full-energy Morse index $N_{\mathrm{unst}}^{\mathrm{full}}$:
@@ -245,7 +245,7 @@ with $d_0(c) = \sigma(a_D(2c-1))$, $p_k \in [-1, 1]$ the normalized adjacency ei
 - $c = 1/2$: $p^\ast = \pm\infty$ (no finite crossing, $\nu_k = -2\gamma_D p_k$).
 - $c > 1/2$: $p^\ast(c) > 0$.
 
-**Critical $c$-thresholds** where $|p^\ast(c)| = 1$ (enters spectrum): at canonical $a_D = 5$, $\kappa_D = 10$:
+**Critical $c$-thresholds** where $\vert p^\ast(c)\vert = 1$ (enters spectrum): at canonical $a_D = 5$, $\kappa_D = 10$:
 - $c_{\mathrm{bif}}^- \approx 0.385$ (below which bipartite modes $p_k < -1$... wait, $p_k \geq -1$ always; below which the formula bites at $p^\ast \in (-1, 0)$).
 - $c_{\mathrm{bif}}^+ \approx 0.545$ (above which $p^\ast \in (0, 1)$).
 

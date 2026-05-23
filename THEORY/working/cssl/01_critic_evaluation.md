@@ -163,7 +163,7 @@ In other words, the proposal's `r_i(u)` is not a new construct — it is the *in
 2. **Definition is reasonable in graph-discrete setting**, but is *not new*: r_i(u) is just the per-site discrete-gradient-squared, which already exists in canonical implementation (`CODE/scc/energy.py` per-site E_bd contributions). Canonical `T-OP6-B` (Cat A, §5.3b) and canonical persistent gradient ridge `B_PersRidge(u)` already extract a "ridge boundary" structure from `|∇_G u|²` via persistence homology of the *gradient magnitude field*. The proposal's R(u) is a *less rigorous* version of `B_PersRidge` and reinvents (badly) what canonical already has at Cat A.
 
 *Anchor check.* canonical §5.3b (canonical.md:367–404, T-OP6-B Cat A) constructs:
-$$B_{\text{PersRidge}}(u) = \{x \in X : (b_x, d_x) \in \text{Bars}_0(|\nabla_G u|; G),\ b_x - d_x > \rho_{\text{bd}}\}$$
+$$B_{\text{PersRidge}}(u) = \{x \in X : (b_x, d_x) \in \text{Bars}_0(\vert \nabla_G u\vert; G),\ b_x - d_x > \rho_{\text{bd}}\}$$
 with `|∇_G u(x)| = √(Σ_{y~x} (u(x) - u(y))²) = √(r_x(u)/w_norm)`. So `B_PersRidge` is *already* the persistence-filtered ridge set of exactly the proposal's `r_i(u)`. The proposal's S(u) construction "ridge-critical points inducing topology change" is essentially asking for the *connected-component birth/death structure* of `B_PersRidge(u)` — which is what `T-OP6-B`'s persistence barcode `Bars_0(|∇_G u|; G)` *measures*.
 
 **Fix (recovery path).** Drop the proposal's invented R(u)/S(u) definitions. Re-anchor on canonical `B_PersRidge(u)` (Cat A) and persistence barcode. Then S(u) becomes:

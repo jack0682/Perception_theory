@@ -17,7 +17,7 @@ User approved D-5-D1 (short-defer for NQ-198a) per Day 3 deepening pass `06_*` �
 ### §1.2 NQ-198a result summary
 
 Both prior derivations (Phase 3 and `05_*` §4) were **refuted by data**. Empirical scaling:
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C \cdot \frac{|\partial S|}{n}, \quad C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C \cdot \frac{\vert \partial S\vert}{n}, \quad C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$$
 
 (Cluster-perimeter to graph-volume ratio scaling; vanishes in thermodynamic limit.)
 

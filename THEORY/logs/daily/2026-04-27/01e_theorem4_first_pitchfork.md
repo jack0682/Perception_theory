@@ -4,7 +4,7 @@
 
 > ⚠ **ERRATUM (2026-04-27 evening, post-merge re-review):** §2 statement (ii) and §3 Step 5/5' derivation have **two related errors**:
 >
-> 1. **$K_1 < K_0$ wrong.** Stated "$0 < K_1 < K_0$ would-be transverse Goldstone, partial lifting from discrete $D_4 \to \mathbb{Z}_2$" — this is incorrect. Discrete symmetry breaking does NOT produce Goldstone modes (Goldstones require continuous symmetry). The R22 normal-form analysis on $D_4$ free-BC gives $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)\lvert W''(c) \rvert$, with $A_2/A_1 = 4$, hence **$K_1 = K_0$** at leading order. The two modes are degenerate but irrep-distinct ($[+1]$ trivial vs $[-1]$ sign).
+> 1. **$K_1 < K_0$ wrong.** Stated "$0 < K_1 < K_0$ would-be transverse Goldstone, partial lifting from discrete $D_4 \to \mathbb{Z}_2$" — this is incorrect. Discrete symmetry breaking does NOT produce Goldstone modes (Goldstones require continuous symmetry). The R22 normal-form analysis on $D_4$ free-BC gives $K_0 = 4\vert W''(c)\vert $, $K_1 = (A_2/A_1)\lvert W''(c) \rvert$, with $A_2/A_1 = 4$, hence **$K_1 = K_0$** at leading order. The two modes are degenerate but irrep-distinct ($[+1]$ trivial vs $[-1]$ sign).
 >
 > 2. **In-text contradiction not resolved.** §3 Step 5 admitted "this gives Morse-1, not Morse-0" without resolution. The fix is to defer Morse-0 establishment to R22 normal-form (which gives the correct positive eigenvalues above), not to the ad-hoc partial second-order calculation I did.
 >
@@ -91,24 +91,24 @@ $W'''(u) = -12 + 24u$ for $W(u) = u^2(1-u)^2$. $W'''(c) = 12(2c - 1)$.
 
 ### Step 4 — Spectral split: degenerate first-order perturbation theory on the Fiedler doublet.
 
-At $u^* = c\mathbf{1}$, modes $\phi_{(1, 0)}$ and $\phi_{(0, 1)}$ are degenerate (both at $\mu = 4\alpha + \beta W''(c)$). At $\beta = \beta_{\mathrm{crit}}^{(2)}$ exactly: $\mu = 0$. For $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$, before perturbation by $u^*_\epsilon - c\mathbf{1}$: $\mu = 4\alpha + (\beta_{\mathrm{crit}}^{(2)} + \epsilon)W''(c) = -\epsilon \lvert W''(c) \rvert + 4\alpha\lambda_2^{\mathrm{Lap}}\cdot 0 = -\epsilon|W''(c)|$ (since $4\alpha\lambda_2^{\mathrm{Lap}} = \beta_{\mathrm{crit}}^{(2)}\lvert W''(c) \rvert$ from definition).
+At $u^* = c\mathbf{1}$, modes $\phi_{(1, 0)}$ and $\phi_{(0, 1)}$ are degenerate (both at $\mu = 4\alpha + \beta W''(c)$). At $\beta = \beta_{\mathrm{crit}}^{(2)}$ exactly: $\mu = 0$. For $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$, before perturbation by $u^*_\epsilon - c\mathbf{1}$: $\mu = 4\alpha + (\beta_{\mathrm{crit}}^{(2)} + \epsilon)W''(c) = -\epsilon \lvert W''(c) \rvert + 4\alpha\lambda_2^{\mathrm{Lap}}\cdot 0 = -\epsilon\vert W''(c)\vert $ (since $4\alpha\lambda_2^{\mathrm{Lap}} = \beta_{\mathrm{crit}}^{(2)}\lvert W''(c) \rvert$ from definition).
 
-So the unperturbed Fiedler doublet has $\mu = -\epsilon|W''(c)|$ at $u = c\mathbf{1}$ — both modes negative (instability). The post-bifurcation $u^*_\epsilon$ adds the Hessian perturbation $\delta\mathbf{H}$.
+So the unperturbed Fiedler doublet has $\mu = -\epsilon\vert W''(c)\vert $ at $u = c\mathbf{1}$ — both modes negative (instability). The post-bifurcation $u^*_\epsilon$ adds the Hessian perturbation $\delta\mathbf{H}$.
 
 **Compute degenerate first-order matrix elements** in Fiedler doublet:
 
 For $c \neq 0.5$:
-- $\langle \phi_{(1, 0)} | \delta\mathbf{H} | \phi_{(1, 0)}\rangle = \beta a_\epsilon W'''(c)\,\langle\phi_{(1, 0)}, \mathrm{diag}(\phi_{(1, 0)}) \phi_{(1, 0)}\rangle = \beta a_\epsilon W'''(c) \sum_i \phi_{(1, 0)}(i)^3$.
+- $\langle \phi_{(1, 0)} \vert \delta\mathbf{H} \vert \phi_{(1, 0)}\rangle = \beta a_\epsilon W'''(c)\,\langle\phi_{(1, 0)}, \mathrm{diag}(\phi_{(1, 0)}) \phi_{(1, 0)}\rangle = \beta a_\epsilon W'''(c) \sum_i \phi_{(1, 0)}(i)^3$.
 
 For $\phi_{(1, 0)}(x, y) = N\cos(\pi x/(L-1))$ (independent of $y$): $\sum_i \phi_{(1, 0)}^3 = N^3 \sum_x \cos^3(\pi x/(L-1)) \cdot \sum_y 1$. The $x$-sum: $\sum_{x=0}^{L-1} \cos^3(\pi x/(L-1))$ — odd function over symmetric interval (cos cubed is odd around $\pi/2$). For $L - 1$ even (so half-integer $\pi/2$): sum = 0. For general $L$: sum $\neq 0$ in general (one-vertex-asymmetric).
 
-Continuum limit: $\int_0^{\pi} \cos^3(s) \, ds = 0$ (odd around $\pi/2$). So $\langle\phi_{(1, 0)} | \delta\mathbf{H} | \phi_{(1, 0)}\rangle = O(1/L)$ (discrete correction). Effectively zero in continuum.
+Continuum limit: $\int_0^{\pi} \cos^3(s) \, ds = 0$ (odd around $\pi/2$). So $\langle\phi_{(1, 0)} \vert \delta\mathbf{H} \vert \phi_{(1, 0)}\rangle = O(1/L)$ (discrete correction). Effectively zero in continuum.
 
-- $\langle \phi_{(0, 1)} | \delta\mathbf{H} | \phi_{(0, 1)}\rangle = \beta a_\epsilon W'''(c) \sum_i \phi_{(0, 1)}^2 \phi_{(1, 0)} = \beta a_\epsilon W'''(c) \cdot N^3 \sum_y \cos^2(\pi y/(L-1)) \cdot \sum_x \cos(\pi x/(L-1))$.
+- $\langle \phi_{(0, 1)} \vert \delta\mathbf{H} \vert \phi_{(0, 1)}\rangle = \beta a_\epsilon W'''(c) \sum_i \phi_{(0, 1)}^2 \phi_{(1, 0)} = \beta a_\epsilon W'''(c) \cdot N^3 \sum_y \cos^2(\pi y/(L-1)) \cdot \sum_x \cos(\pi x/(L-1))$.
 
-The $x$-sum: $\sum_x \cos(\pi x/(L-1)) = 0$ (sum of cosines over period). So $\langle\phi_{(0, 1)} | \delta\mathbf{H} | \phi_{(0, 1)}\rangle = 0$ exactly in continuum, $O(1/L)$ discrete.
+The $x$-sum: $\sum_x \cos(\pi x/(L-1)) = 0$ (sum of cosines over period). So $\langle\phi_{(0, 1)} \vert \delta\mathbf{H} \vert \phi_{(0, 1)}\rangle = 0$ exactly in continuum, $O(1/L)$ discrete.
 
-- $\langle \phi_{(1, 0)} | \delta\mathbf{H} | \phi_{(0, 1)}\rangle = \beta a_\epsilon W'''(c) \cdot N^3 \sum_x \cos^2(\pi x/(L-1)) \cdot \sum_y \cos(\pi y/(L-1)) = 0$ similarly.
+- $\langle \phi_{(1, 0)} \vert \delta\mathbf{H} \vert \phi_{(0, 1)}\rangle = \beta a_\epsilon W'''(c) \cdot N^3 \sum_x \cos^2(\pi x/(L-1)) \cdot \sum_y \cos(\pi y/(L-1)) = 0$ similarly.
 
 **All first-order matrix elements vanish in continuum.** Need second-order perturbation.
 
@@ -117,25 +117,25 @@ For $c = 0.5$: $W'''(0.5) = 0$ — first-order trivially zero. Second-order dire
 ### Step 5 — Second-order perturbation theory.
 
 Standard formula:
-$$\mu_k^{(2)} = -\sum_{l \neq k} \frac{|\langle \phi_l | \delta\mathbf{H} | \phi_k\rangle|^2}{\mu_l^{(0)} - \mu_k^{(0)}}.$$
+$$\mu_k^{(2)} = -\sum_{l \neq k} \frac{\vert \langle \phi_l \vert \delta\mathbf{H} \vert \phi_k\rangle\vert ^2}{\mu_l^{(0)} - \mu_k^{(0)}}.$$
 
 Plus the **direct second-order Hessian shift** from the $O((u^*_\epsilon - c\mathbf{1})^2)$ expansion of $W''$:
 $$W''(u^*_\epsilon) = W''(c) + W'''(c)(a_\epsilon \phi_{(1, 0)}) + \tfrac{1}{2} W''''(c) (a_\epsilon \phi_{(1, 0)})^2 + \ldots$$
 $W''''(u) = 24$ for our quartic $W$. So $\delta^{(2)}\mathbf{H}_{\mathrm{direct}} = \beta \cdot \tfrac{1}{2} \cdot 24 \cdot a_\epsilon^2 \cdot \mathrm{diag}(\phi_{(1, 0)}^2) = 12\beta a_\epsilon^2 \mathrm{diag}(\phi_{(1, 0)}^2)$.
 
-$\langle\phi_{(1, 0)} | \delta^{(2)}\mathbf{H}_{\mathrm{direct}} | \phi_{(1, 0)}\rangle = 12\beta a_\epsilon^2 \sum_i \phi_{(1, 0)}^4 = 12\beta a_\epsilon^2 \cdot N^4 \sum_x \cos^4(\pi x/(L-1)) \cdot L$.
+$\langle\phi_{(1, 0)} \vert \delta^{(2)}\mathbf{H}_{\mathrm{direct}} \vert \phi_{(1, 0)}\rangle = 12\beta a_\epsilon^2 \sum_i \phi_{(1, 0)}^4 = 12\beta a_\epsilon^2 \cdot N^4 \sum_x \cos^4(\pi x/(L-1)) \cdot L$.
 For continuum: $\int_0^\pi \cos^4 s \,ds = 3\pi/8$, so $\sum \cos^4 = 3L(L-1)/8$ leading order. With $a_\epsilon^2 = c_R^2 \epsilon$: shift is $K_0 \epsilon$ with $K_0 = 12 \beta c_R^2 \cdot N^4 \cdot 3 L^2(L-1) / 8$ — explicit but $L$-dependent.
 
-$\langle\phi_{(0, 1)} | \delta^{(2)}\mathbf{H}_{\mathrm{direct}} | \phi_{(0, 1)}\rangle = 12\beta a_\epsilon^2 \sum_i \phi_{(0, 1)}^2 \phi_{(1, 0)}^2 = 12\beta a_\epsilon^2 \cdot N^4 \sum_y \cos^2(\pi y/(L-1)) \sum_x \cos^2(\pi x/(L-1))$.
+$\langle\phi_{(0, 1)} \vert \delta^{(2)}\mathbf{H}_{\mathrm{direct}} \vert \phi_{(0, 1)}\rangle = 12\beta a_\epsilon^2 \sum_i \phi_{(0, 1)}^2 \phi_{(1, 0)}^2 = 12\beta a_\epsilon^2 \cdot N^4 \sum_y \cos^2(\pi y/(L-1)) \sum_x \cos^2(\pi x/(L-1))$.
 Continuum: $\int \cos^2 = \pi/2$, so product $= L^2(L-1)^2/4 \cdot \ldots$. $K_1 \epsilon$ with $K_1 < K_0$ explicit.
 
 **Net pre-existing eigenvalue (negative from $\beta > \beta_{\mathrm{crit}}$) plus direct second-order correction:**
-$$\mu_0(u^*_\epsilon) = -\epsilon|W''(c)| + K_0 \epsilon + O(\epsilon^{3/2}),$$
-$$\mu_1(u^*_\epsilon) = -\epsilon|W''(c)| + K_1 \epsilon + O(\epsilon^{3/2}).$$
+$$\mu_0(u^*_\epsilon) = -\epsilon\vert W''(c)\vert + K_0 \epsilon + O(\epsilon^{3/2}),$$
+$$\mu_1(u^*_\epsilon) = -\epsilon\vert W''(c)\vert + K_1 \epsilon + O(\epsilon^{3/2}).$$
 
-For Mode 0 (broken-symmetry direction): R22 normal-form analysis of pitchfork ensures $K_0 = 2|W''(c)|$ at leading order (cubic equivariant gives this factor), so $\mu_0 = +\epsilon|W''(c)| > 0$. Recovered stability. ✓
+For Mode 0 (broken-symmetry direction): R22 normal-form analysis of pitchfork ensures $K_0 = 2\vert W''(c)\vert $ at leading order (cubic equivariant gives this factor), so $\mu_0 = +\epsilon\vert W''(c)\vert > 0$. Recovered stability. ✓
 
-For Mode 1 (would-be transverse Goldstone): $K_1 < K_0$ (smaller direct correction), specifically R22 cubic ratio $K_1 = (2/A_2 \cdot A_1)\lvert W''(c) \rvert$ where $A_2/A_1 = 4$ on $D_4$ axis-aligned: $K_1 = (1/2)\lvert W''(c) \rvert$. Net: $\mu_1 = -\epsilon|W''(c)| + (1/2)\epsilon|W''(c)| = -(1/2)\epsilon|W''(c)|$ — STILL NEGATIVE.
+For Mode 1 (would-be transverse Goldstone): $K_1 < K_0$ (smaller direct correction), specifically R22 cubic ratio $K_1 = (2/A_2 \cdot A_1)\lvert W''(c) \rvert$ where $A_2/A_1 = 4$ on $D_4$ axis-aligned: $K_1 = (1/2)\lvert W''(c) \rvert$. Net: $\mu_1 = -\epsilon\vert W''(c)\vert + (1/2)\epsilon\vert W''(c)\vert = -(1/2)\epsilon\vert W''(c)\vert $ — STILL NEGATIVE.
 
 **Wait — this gives Morse-1, not Morse-0.** Re-check:
 

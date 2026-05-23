@@ -46,19 +46,19 @@ $$\sigma^A(\sigma \cdot \mathbf{u})_j = \sigma^A(\mathbf{u})_{\sigma^{-1}(j)} \q
 
 ## §5.3 T-L1-F / T-L1-M Compatibility
 
-**T-L1-F (canonical §13 ~line 1452, Cat A conditional under L1-J regime):** The L1-J feasibility theorem states that an active set $A^\varepsilon(\mathbf{u}) = \{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}$ satisfies $|A^\varepsilon| = K_{\mathrm{act}}^\varepsilon$ and there is a bijection $\mathcal{A}_{\mathrm{bar}} : \bar{A}^\varepsilon \to \text{(threshold active formations)}$.
+**T-L1-F (canonical §13 ~line 1452, Cat A conditional under L1-J regime):** The L1-J feasibility theorem states that an active set $A^\varepsilon(\mathbf{u}) = \{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}$ satisfies $\vert A^\varepsilon\vert = K_{\mathrm{act}}^\varepsilon$ and there is a bijection $\mathcal{A}_{\mathrm{bar}} : \bar{A}^\varepsilon \to \text{(threshold active formations)}$.
 
 **Class-level question:** T-L1-F's bijection $\mathcal{A}_{\mathrm{bar}}$ uses *ordered* slot indices to construct the correspondence. Does this lift to the class level?
 
 **Sketch answer:**
-- $K_{\mathrm{act}}^\varepsilon(\mathbf{u}) = |A^\varepsilon(\mathbf{u})\lvert = \rvert\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$. This is $S_K$-invariant (just a count). ✓
+- $K_{\mathrm{act}}^\varepsilon(\mathbf{u}) = \vert A^\varepsilon(\mathbf{u})\lvert = \rvert\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}\vert $. This is $S_K$-invariant (just a count). ✓
 - The active *set* $A^\varepsilon(\mathbf{u}) \subseteq \{1, \ldots, K\}$ is an index set — it is $S_K$-equivariant: $A^\varepsilon(\sigma \cdot \mathbf{u}) = \sigma(A^\varepsilon(\mathbf{u}))$.
 - The active *fields* $\{u^{(j)} : j \in A^\varepsilon(\mathbf{u})\}$ form an unordered multi-set of cohesion fields. This is $S_K$-invariant. ✓
 - The bijection $\mathcal{A}_{\mathrm{bar}}$: at the class level, the correct statement is a *multi-set bijection* (not an ordered bijection). The number of active formations $K_{\mathrm{act}}^\varepsilon$ equals the size of the active formation multi-set. The "bar" structure (bar active set in L1-J sense) carries over to the multi-set level.
 
-**What is new at class level (T-L1-F lift):** The ordered bijection $\mathcal{A}_{\mathrm{bar}}$ becomes a *cardinality equality* at the class level: $|\text{active class multi-set}| = K_{\mathrm{act}}^\varepsilon$. The bijection itself (ordering of formations) is a modeling-layer artifact.
+**What is new at class level (T-L1-F lift):** The ordered bijection $\mathcal{A}_{\mathrm{bar}}$ becomes a *cardinality equality* at the class level: $\vert \text{active class multi-set}\vert = K_{\mathrm{act}}^\varepsilon$. The bijection itself (ordering of formations) is a modeling-layer artifact.
 
-**T-L1-M compatibility:** T-L1-M counts $K_{\mathrm{soft}} = |\{j : \lVert u^{(j)} \rVert_\infty \in (\varepsilon, 1-\varepsilon)\}|$ (soft slots). This is also $S_K$-invariant (count of fields satisfying a unilateral threshold condition). ✓
+**T-L1-M compatibility:** T-L1-M counts $K_{\mathrm{soft}} = \vert \{j : \lVert u^{(j)} \rVert_\infty \in (\varepsilon, 1-\varepsilon)\}\vert $ (soft slots). This is also $S_K$-invariant (count of fields satisfying a unilateral threshold condition). ✓
 
 **W8 D3 work needed:** Formalize the multi-set bijection statement for T-L1-F at class level; derive the correct class-level statement of the L1-J regime conditions.
 
@@ -66,14 +66,14 @@ $$\sigma^A(\sigma \cdot \mathbf{u})_j = \sigma^A(\mathbf{u})_{\sigma^{-1}(j)} \q
 
 ## §5.4 Commitment 16 Compatibility (K_field / K_act Two-Tier)
 
-**Commitment 16 (canonical, CV-1.5.1):** $K_{\mathrm{field}}$ = numerical truncation parameter (maximum slot count; modeling-layer ceiling); $K_{\mathrm{act}} = |\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ = derived active formation count (orbit-invariant by §5.3).
+**Commitment 16 (canonical, CV-1.5.1):** $K_{\mathrm{field}}$ = numerical truncation parameter (maximum slot count; modeling-layer ceiling); $K_{\mathrm{act}} = \vert \{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}\vert $ = derived active formation count (orbit-invariant by §5.3).
 
 **Class-level reading:**
-- $K_{\mathrm{field}}$ = the number of slots in the ordered representative, which equals the orbit group order ($|S_{K_{\mathrm{field}}}| = K_{\mathrm{field}}!$). At the class level, $K_{\mathrm{field}}$ is the "ambient" size of the modeling layer — it determines the *capacity* but not the *actual* formation count.
+- $K_{\mathrm{field}}$ = the number of slots in the ordered representative, which equals the orbit group order ($\vert S_{K_{\mathrm{field}}}\vert = K_{\mathrm{field}}!$). At the class level, $K_{\mathrm{field}}$ is the "ambient" size of the modeling layer — it determines the *capacity* but not the *actual* formation count.
 - $K_{\mathrm{act}} = \widetilde{K}_{\mathrm{act}}([\mathbf{u}])$ = orbit-invariant derived count. This is well-defined at the class level as established in `02b` §2.5. ✓
 
 **Commitment 16 unordered version:**
-- Layer I (architectural): $K_{\mathrm{field}}$ = size of the unordered class $|[\mathbf{u}]|$ (multiset cardinality including inactive slots) = a modeling-layer parameter.
+- Layer I (architectural): $K_{\mathrm{field}}$ = size of the unordered class $\vert [\mathbf{u}]\vert $ (multiset cardinality including inactive slots) = a modeling-layer parameter.
 - Layer II (active): $K_{\mathrm{act}} = \widetilde{K}_{\mathrm{act}}([\mathbf{u}])$ = derived from the actual cohesion fields, orbit-invariant.
 
 This is fully consistent with Commitment 16; it sharpens the layer distinction by making explicit that $K_{\mathrm{field}}$ is the ambient group order and $K_{\mathrm{act}}$ is the orbit-invariant count. ✓

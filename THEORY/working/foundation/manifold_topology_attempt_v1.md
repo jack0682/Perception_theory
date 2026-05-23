@@ -53,7 +53,7 @@ Direct from S1 + Bakry-Émery $CD(\rho, \infty) \Rightarrow$ Poincaré (BGL §4.
 ### §1.3 Claim S3 — Kernel dim per fixed graph (Cat A on standard regimes; CORRECTED 2026-05-20)
 
 For fixed connected graph $G$, every $\Theta \in \Sigma_{T8}$ has:
-$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})|_{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
+$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})\vert _{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
 
 **Status (CORRECTED 2026-05-20 W8-Day3 per `03_D_L_commutation.md` §7)**: 
 - **Minimal model** ($\mathcal{E}_{bd}$ only): **Cat A direct** from canonical Theorem 4 (canonical.md L1134, $\mu_k = 4\alpha\lambda_k + \beta W''(c)$) + algebraic counting. Unchanged.

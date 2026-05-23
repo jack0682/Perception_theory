@@ -15,14 +15,14 @@ We fix notation consistent with `canonical.md` §§3, 7.1, 8.5 and `working/MF/t
 
 | Symbol | Meaning |
 |--------|---------|
-| $\mathcal{P}$ | finite vertex set, $|\mathcal{P}| = n$ |
+| $\mathcal{P}$ | finite vertex set, $\vert \mathcal{P}\vert = n$ |
 | $G = (\mathcal{P}, E)$ | finite graph, connected; same at $t$ and $s$ |
 | $u_t, u_s \in [0,1]^n$ | soft cohesion fields with $\sum_x u_t(x) = \sum_x u_s(x) = M$ |
 | $\mathcal{F}_M(\mathcal{P})$ | field polytope $\{u \in [0,1]^n : \mathbf{1}^\top u = M\}$ |
 | $\rho_\mathrm{pers}$ | persistent-component threshold (D-ST-3); fixed in $(0,1)$ |
 | $\theta_\mathrm{core}$ | core threshold (canonical §7.1); $\theta_\mathrm{core} \in [\rho_\mathrm{pers}, 1)$ |
 | $\mathrm{PersComp}(u_t) = \{C_1^t,\ldots,C_{K_t}^t\}$ | D-ST-3 components |
-| $K_t = K_\mathrm{act}(u_t) = |\mathrm{PersComp}(u_t)|$ | derived integer observable |
+| $K_t = K_\mathrm{act}(u_t) = \vert \mathrm{PersComp}(u_t)\vert $ | derived integer observable |
 | $\mathrm{Core}(C_i^t)$ | $\{x \in C_i^t : u_t(x) \geq \theta_\mathrm{core}\}$ |
 | $m_i^t = \sum_{x \in C_i^t} u_t(x)$ | component cohesive mass |
 | $M_{t \to s} \in \mathbb{R}_{\geq 0}^{n \times n}$ | E1–E4 admissible transport plan; entries $M(x,y)$ |
@@ -48,7 +48,7 @@ $$S_{ij}^0 = \lambda_m\,\gamma(C_i^t, C_j^s) - \lambda_c\,\sum_{x \in C_i^t,\, y
 
 We commit to a finite, explicit, instance-verifiable assumption package. Each assumption is named, stated, and tagged with "verifiable on a finite graph in poly time" (V) or "structural regime hypothesis" (S).
 
-**(A1) Finite shared graph** [V]. $G = (\mathcal{P}, E)$ is finite, connected, with $|\mathcal{P}| = n < \infty$, and is the *same* graph at times $t$ and $s$. (Time-varying topology out of scope.)
+**(A1) Finite shared graph** [V]. $G = (\mathcal{P}, E)$ is finite, connected, with $\vert \mathcal{P}\vert = n < \infty$, and is the *same* graph at times $t$ and $s$. (Time-varying topology out of scope.)
 
 **(A2) Field admissibility** [V]. $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ with the same total mass $M > 0$.
 
@@ -126,7 +126,7 @@ $$\gamma(C_i^t, C_{\pi(i)}^s) \;\geq\; (1 - \eta_\mathrm{self}^{\,K})\,m_i^{t,\m
 
 **Status:** Cat B (chains T-Persist-1(e) Cat A with a routine union-bound + restriction-to-deep-core).
 
-**Remark 3.2.1.** $m_i^{t,\mathrm{deep}}$ vs $m_i^t$: deep-core mass is a fraction of total component mass, $m_i^{t,\mathrm{deep}} / m_i^t \geq 1 - 4C/\sqrt{|\mathrm{Core}(C_i^t)|}$ (Deep Core Dominance, canonical §13 T-Persist-1(d) Theorem 2b, conditional on iso-ratio $\leq C$). At default parameters and $|\mathrm{Core}| \geq 25$: $m_i^{t,\mathrm{deep}} / m_i^t \geq 0.84$. Plugging into Lemma 2: $\gamma(C_i^t, C_{\pi(i)}^s) \geq 0.84 (1 - \eta_\mathrm{self}^{\,K}) m_i^t$.
+**Remark 3.2.1.** $m_i^{t,\mathrm{deep}}$ vs $m_i^t$: deep-core mass is a fraction of total component mass, $m_i^{t,\mathrm{deep}} / m_i^t \geq 1 - 4C/\sqrt{\vert \mathrm{Core}(C_i^t)\vert}$ (Deep Core Dominance, canonical §13 T-Persist-1(d) Theorem 2b, conditional on iso-ratio $\leq C$). At default parameters and $\vert \mathrm{Core}\vert \geq 25$: $m_i^{t,\mathrm{deep}} / m_i^t \geq 0.84$. Plugging into Lemma 2: $\gamma(C_i^t, C_{\pi(i)}^s) \geq 0.84 (1 - \eta_\mathrm{self}^{\,K}) m_i^t$.
 
 ### §3.3 Lemma 3 — Off-diagonal mass upper bound (Sinkhorn dual-potential refinement)
 
@@ -158,7 +158,7 @@ Then $j^*$ is a bijection $\{1,\ldots,K\} \to \{1,\ldots,K\}$ and $i^* = (j^*)^{
 1. By (M1), $j^*$ is well-defined as a function $\{1,\ldots,K\} \to \{1,\ldots,K\}$.
 2. Suppose for contradiction $j^*(i_1) = j^*(i_2) = j_0$ with $i_1 \neq i_2$. Then $A_{i_1, j_0} = \max_j A_{i_1, j}$ and $A_{i_2, j_0} = \max_j A_{i_2, j}$. By (M2), the column-argmax $i^*(j_0)$ is unique; WLOG $i^*(j_0) = i_1$. Then $A_{i_1, j_0} > A_{i_2, j_0}$ (strict).
 3. By (M1) applied to row $i_2$: $A_{i_2, j_0} > A_{i_2, j}$ for all $j \neq j_0$. In particular $A_{i_2, j_0} > A_{i_2, j^*(i_1)}$.
-   Wait — we already have $j^*(i_1) = j_0$, so the inequality becomes $A_{i_2, j_0} > A_{i_2, j_0}$, contradiction. Hence step 2's premise fails: $j^*$ is injective. Since $|{j^*}^{-1}(\{1,\ldots,K\})| = K$, $j^*$ is a bijection.
+   Wait — we already have $j^*(i_1) = j_0$, so the inequality becomes $A_{i_2, j_0} > A_{i_2, j_0}$, contradiction. Hence step 2's premise fails: $j^*$ is injective. Since $\vert {j^*}^{-1}(\{1,\ldots,K\})\vert = K$, $j^*$ is a bijection.
 4. To see $i^* = (j^*)^{-1}$: if $j^*(i) = j$, then $A_{i,j} = \max_{j'} A_{i,j'} \geq A_{i^*(j), j}$. By column-uniqueness of $i^*(j)$ at column $j$: $A_{i^*(j), j} > A_{i'', j}$ for $i'' \neq i^*(j)$. If $i \neq i^*(j)$, then $A_{i,j} < A_{i^*(j), j}$, but row-uniqueness at row $i^*(j)$ gives $A_{i^*(j), j} = \max_{j'} A_{i^*(j), j'}$; if $j^*(i^*(j)) = j$, then both $j^*(i) = j$ and $j^*(i^*(j)) = j$ — contradicting injectivity. Hence $i = i^*(j)$. $\square$
 
 **Status:** Cat A (elementary finite-matrix algebra; depends only on uniqueness of argmax with strict gap).
@@ -206,7 +206,7 @@ $$\mathsf{persist\_transport}(u_t, u_s, M_{t\to s}, \theta_\mathrm{core}) \;\geq
 **Theorem 4.2 (closed-form $\Delta_\mathrm{sep}^*$, sharp form).** Under (A1)–(A8) and the Sinkhorn dual-potential regularity hypothesis (DR1)–(DR2) of §8.1:
 $$\boxed{\;\Delta_\mathrm{sep}^* \;\geq\; \lambda_m\Big(\,\rho_\mathrm{deep}\,(1 - \eta_\mathrm{self}^{\,K}) \,-\, \eta_\mathrm{cross}^\mathrm{sharp}\Big) \;-\; \lambda_c\,\bar c_\mathrm{intra}\;}$$
 where:
-- $\rho_\mathrm{deep} = m_i^{t,\mathrm{deep}}/m_i^t \in (0,1]$ is the deep-core mass fraction (Deep Core Dominance, canonical §13 T-Persist-1(d) Theorem 2b: $\rho_\mathrm{deep} \geq 1 - 4C_\mathrm{iso}/\sqrt{|\mathrm{Core}|}$ under iso-ratio $\leq C_\mathrm{iso}$, $\geq 0.84$ at default parameters; explicit numerics in §9);
+- $\rho_\mathrm{deep} = m_i^{t,\mathrm{deep}}/m_i^t \in (0,1]$ is the deep-core mass fraction (Deep Core Dominance, canonical §13 T-Persist-1(d) Theorem 2b: $\rho_\mathrm{deep} \geq 1 - 4C_\mathrm{iso}/\sqrt{\vert \mathrm{Core}\vert}$ under iso-ratio $\leq C_\mathrm{iso}$, $\geq 0.84$ at default parameters; explicit numerics in §9);
 - $\eta_\mathrm{self}^{\,K} = \eta_\mathrm{self} + (K-1)\eta_\mathrm{cross}^\mathrm{sharp}$;
 - $\eta_\mathrm{self} = \exp\!\big(-(\gamma_\mathrm{OT}\,\Delta_\varphi^2(\delta\!\geq\!2) - L_g\,d_\mathrm{eff})/\varepsilon_\mathrm{OT}\big)$ (T-Persist-1(e) deep-core, sharp form);
 - $\eta_\mathrm{cross}^\mathrm{sharp} = \exp\!\big(-(\gamma_\mathrm{OT}\,\Delta_\varphi^2_\mathrm{inter} - L_g\,d_\mathrm{eff})/\varepsilon_\mathrm{OT}\big)$ (Lemma 3 sharp; §8.2);
@@ -358,7 +358,7 @@ The following are **NOT** claimed by this development:
 
 6. **Does not solve OP-0008.** The σ-extension (full score $S_{ij}$ with σ-terms) is deferred to T-σ-Inherit (separate working candidate, Session W).
 
-7. **Does not solve OP-0011.** Component confinement bound on $|\gamma_M - \gamma_{M'}|$ is the open Step 2 of OP-0011.
+7. **Does not solve OP-0011.** Component confinement bound on $\vert \gamma_M - \gamma_{M'}\vert $ is the open Step 2 of OP-0011.
 
 8. **Does not solve OP-0021.** $T_*$ canonicalization is independent; this development uses no $T_*$.
 
@@ -414,7 +414,7 @@ $$\lvert g(y) - g(y') \rvert \;\leq\; L_c \cdot d_G(y, y').$$
 $$g(y) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\sum_x e^{(f(x) - c(x,y))/\varepsilon_\mathrm{OT}}\,u_t(x)\Big) + \mathrm{const}.$$
 For $y, y' \in \mathcal{P}$:
 $$g(y) - g(y') = -\varepsilon_\mathrm{OT}\,\log\!\Big(\frac{\sum_x e^{(f(x) - c(x,y))/\varepsilon_\mathrm{OT}}\,u_t(x)}{\sum_x e^{(f(x) - c(x,y'))/\varepsilon_\mathrm{OT}}\,u_t(x)}\Big).$$
-Using $\lvert c(x,y) - c(x,y') \rvert \leq L_c \cdot d_G(y,y')$ ((DR2)) and the elementary log-sum-exp inequality $|\log\sum a_x e^{u_x} - \log\sum a_x e^{v_x}| \leq \max_x \lvert u_x - v_x \rvert$:
+Using $\lvert c(x,y) - c(x,y') \rvert \leq L_c \cdot d_G(y,y')$ ((DR2)) and the elementary log-sum-exp inequality $\vert \log\sum a_x e^{u_x} - \log\sum a_x e^{v_x}\vert \leq \max_x \lvert u_x - v_x \rvert$:
 $$\lvert g(y) - g(y') \rvert \leq \varepsilon_\mathrm{OT} \cdot \frac{L_c \cdot d_G(y,y')}{\varepsilon_\mathrm{OT}} = L_c \cdot d_G(y,y'). \qquad \square$$
 
 **Numerical value at default parameters.** $L_g \leq L_c \leq 5.86$ at default; $L_g \leq 2.4$ in the formation-conditioned regime (where the OT support is restricted to deep-core × deep-core blocks; the effective $\mathrm{diam}_\varphi$ is bounded by deep-core fingerprint range $\approx 0.7$, giving $L_c \approx 2(1+0.7) + 0.4 = 3.8$ — and $L_g$ tighter still under c-cyclical monotonicity restrictions; conservative working value $L_g = 2.4$).
@@ -461,7 +461,7 @@ For canonical default SCC parameters (15×15 grid, $\beta = 20\alpha$, $\alpha =
 | Dual-potential Lipschitz constant | $L_g$ | $\leq L_c$ | Lemma 8.2 |
 | Effective Sinkhorn-ball radius | $d_\mathrm{eff}$ | $\leq 4$ (deep-core block) | (S), §8.3 |
 | Iso-ratio (2D grid components) | $C_\mathrm{iso}$ | $O(1)$ (typical $\leq 1.5$) | Deep-Core Dom. Th 2b |
-| Deep-core mass fraction | $\rho_\mathrm{deep}$ | $\geq 0.84$ at $|\mathrm{Core}| \geq 25$ | Th 2b |
+| Deep-core mass fraction | $\rho_\mathrm{deep}$ | $\geq 0.84$ at $\vert \mathrm{Core}\vert \geq 25$ | Th 2b |
 | Cross-component mass fraction (sharp) | $\eta_\mathrm{cross}^\mathrm{sharp}$ | $\exp(-(2.33 - 9.6)/\varepsilon_\mathrm{OT})$ | Lemma 3-sharp |
 | Self-mass leakage | $\eta_\mathrm{self}$ | $\exp(-(2.38 - 9.6)/\varepsilon_\mathrm{OT})$ | T-Persist-1(e) sharp |
 | Intra-component cost upper bound | $\bar c_\mathrm{intra}$ | $\leq 0.5 + 16/392 \approx 0.54$ | $\Delta_\varphi^2_\mathrm{intra,deep} + \mathrm{diam}_\mathrm{intra}^2/\sigma_\mathrm{sp}^2$ |
@@ -646,7 +646,7 @@ For each part of T-Temporal-Identity, we now articulate the Cat A promotion path
 **Cat A path (Sub-steps S-B1, S-B2, S-B3, S-B4):**
 - **S-B1.** Tighten (A8a) iso-ratio dependency: prove $\rho_\mathrm{deep} \geq 0.84$ for all 2D grid components $\lvert C \rvert \geq 25$ unconditionally (today: conditional on $C_\mathrm{iso} \leq 1.5$). **Difficulty:** mid; geometric-isoperimetric. **Estimate:** 1 session.
 - **S-B2.** Promote Lemma 8.2 (Sinkhorn-Lipschitz) to canonical Cat A: needs Bigot–Cazelles–Papadakis Lipschitz bound formalized for our cost class. **Difficulty:** mid; analytic. **Estimate:** 1 session.
-- **S-B3.** Resolve OP-0011 Step 2 (component confinement bound on $|\gamma_M - \gamma_{M'}|$). **Difficulty:** mid-high. **Estimate:** 1–2 sessions. *This is NQ-T-Identity-1.*
+- **S-B3.** Resolve OP-0011 Step 2 (component confinement bound on $\vert \gamma_M - \gamma_{M'}\vert $). **Difficulty:** mid-high. **Estimate:** 1–2 sessions. *This is NQ-T-Identity-1.*
 - **S-B4.** Prove margin-alone implies pairing (NQ-T-Identity-5 full): MA1-free version of Lemma 7. **Difficulty:** mid. **Estimate:** 1 session.
 
 **Total for Cat A (b):** 4–5 sessions.

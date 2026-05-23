@@ -35,21 +35,21 @@ The **rate of K decrease over time** is the SCC analog of LSW $\langle R \rangle
 For K=2 well-separated minimizer with antisym Goldstone-pair eigenvalue $\lambda_{\mathrm{antisym}} = \mu_{\mathrm{Gold}} - c_{\mathrm{eff}} \lambda_{\mathrm{rep}}$ (from `09_*` §4):
 
 When (Inst) holds, gradient flow of $\mathcal{E}_K$ near the K=2 minimizer pushes $\mathbf{u}$ along the antisym mode at rate:
-$$\frac{d}{dt} \mathbf{u}_{\mathrm{antisym}} = -\nabla \mathcal{E}_K = +|\lambda_{\mathrm{antisym}}| \mathbf{u}_{\mathrm{antisym}}. \tag{2.1}$$
+$$\frac{d}{dt} \mathbf{u}_{\mathrm{antisym}} = -\nabla \mathcal{E}_K = +\vert \lambda_{\mathrm{antisym}}\vert \mathbf{u}_{\mathrm{antisym}}. \tag{2.1}$$
 
 Antisym coordinate grows exponentially:
-$$|\mathbf{u}_{\mathrm{antisym}}(t)| \sim |\mathbf{u}_{\mathrm{antisym}}(0)| \cdot e^{|\lambda_{\mathrm{antisym}}| t}. \tag{2.2}$$
+$$\vert \mathbf{u}_{\mathrm{antisym}}(t)\vert \sim \vert \mathbf{u}_{\mathrm{antisym}}(0)\vert \cdot e^{\vert \lambda_{\mathrm{antisym}}\vert t}. \tag{2.2}$$
 
-This is the **linear merge timescale**: $\tau_{\mathrm{linear}} = 1 / |\lambda_{\mathrm{antisym}}| = 1 / (c_{\mathrm{eff}} \lambda_{\mathrm{rep}})$.
+This is the **linear merge timescale**: $\tau_{\mathrm{linear}} = 1 / \vert \lambda_{\mathrm{antisym}}\vert = 1 / (c_{\mathrm{eff}} \lambda_{\mathrm{rep}})$.
 
 For $\lambda_{\mathrm{rep}} = 0.1$, $c_{\mathrm{eff}} \approx 0.33$ (Phase 3 E9 measurement): $\tau_{\mathrm{linear}} \approx 30$ time units.
 
 ### 2.1 Stage limit: linear regime ends at antisym ~ O(1)
 
-The linear approximation breaks down when $|\mathbf{u}_{\mathrm{antisym}}| \approx |\mathbf{u}^*|$, i.e., the perturbation is comparable to the unperturbed state. This is the threshold where formations begin merging structurally.
+The linear approximation breaks down when $\vert \mathbf{u}_{\mathrm{antisym}}\vert \approx \vert \mathbf{u}^*\vert $, i.e., the perturbation is comparable to the unperturbed state. This is the threshold where formations begin merging structurally.
 
 Time to reach this threshold:
-$$t_{\mathrm{merge}} = \tau_{\mathrm{linear}} \cdot \log\big(|\mathbf{u}^*\lvert / \rvert\mathbf{u}_{\mathrm{antisym}}(0)|\big) \sim \tau_{\mathrm{linear}} \cdot \log(\sigma^{-1}). \tag{2.3}$$
+$$t_{\mathrm{merge}} = \tau_{\mathrm{linear}} \cdot \log\big(\vert \mathbf{u}^*\lvert / \rvert\mathbf{u}_{\mathrm{antisym}}(0)\vert \big) \sim \tau_{\mathrm{linear}} \cdot \log(\sigma^{-1}). \tag{2.3}$$
 
 For typical IC perturbation $\sigma \sim 10^{-2}$: $\log(100) \approx 4.6$. So $t_{\mathrm{merge}} \approx 4.6 \tau_{\mathrm{linear}} \sim 140$ time units (at $\lambda_{\mathrm{rep}}=0.1$, c_eff=0.33).
 
@@ -146,7 +146,7 @@ Phase 3 E9 K=2 baseline (`scripts/results/e9_k2_baseline.json`) measures linear 
 
 Phase 3 E9 only measures **static Hessian** (linear approximation). The actual K=2 → K=1 merger (nonlinear stage) requires time-dependent simulation. Out of E9 scope; possible follow-up.
 
-NQ-209 (Phase 3 E7 NEW, W6+): Time-dependent K=2 simulation to measure $t_{\mathrm{merge}}$ + verify $\tau_{\mathrm{linear}}$ matches predicted $1/|\mu_{\mathrm{antisym}}|$.
+NQ-209 (Phase 3 E7 NEW, W6+): Time-dependent K=2 simulation to measure $t_{\mathrm{merge}}$ + verify $\tau_{\mathrm{linear}}$ matches predicted $1/\vert \mu_{\mathrm{antisym}}\vert $.
 
 NQ-210 (Phase 3 E7 NEW, W7+): K=10 or K=100 simulation to measure $R(t) \sim t^{1/d}$ scaling. SCC numerical verification of LSW analog.
 
@@ -160,7 +160,7 @@ The classical LSW law arises in the limit $\beta \to \infty$ of the Allen-Cahn e
 
 In this limit, SCC K-field becomes formally equivalent to **mean-curvature flow** on the interface — and LSW law emerges from interface energetics.
 
-The **σ-framework T-σ-Multi-1** instability rate $|\lambda_{\mathrm{antisym}}| = c_{\mathrm{eff}} \lambda_{\mathrm{rep}}$ provides the **first-order finite-ξ_0 correction** to the sharp-interface limit. The corrections arise from:
+The **σ-framework T-σ-Multi-1** instability rate $\vert \lambda_{\mathrm{antisym}}\vert = c_{\mathrm{eff}} \lambda_{\mathrm{rep}}$ provides the **first-order finite-ξ_0 correction** to the sharp-interface limit. The corrections arise from:
 1. PN-barrier ($\xi_0$-dependent, per `11_*` §2.1).
 2. Coupling Bound Lemma exponentially-small corrections.
 3. Mode-mixing factor $c_{\mathrm{eff}}$ (Phase 3 E3 finding).

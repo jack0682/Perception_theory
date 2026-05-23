@@ -41,7 +41,7 @@ $$\mathrm{MF}(u) = \mathrm{PersComp}_{\rho_\mathrm{pers},\tau}(u)$$
 
 The formation count is the derived observable:
 
-$$K_\mathrm{act}(u) = |\mathrm{MF}(u)|$$
+$$K_\mathrm{act}(u) = \vert \mathrm{MF}(u)\vert $$
 
 **Key interpretive commitments:**
 
@@ -87,7 +87,7 @@ $$\mathfrak{F}_i(u) = (C_i,\; \partial C_i,\; K_i,\; \sigma_i^?)$$
 
 - $C_i \in \mathrm{MF}(u) = \mathrm{PersComp}(u;\rho_\mathrm{pers},\tau)$: the $i$-th persistent connected component of the soft field $u$. Well-defined by D-ST-3 / canonical §3.11.
 - $\partial C_i \approx B_\mathrm{PersRidge} \cap \bar{C}_i$: the crisp boundary approximation, established by T-OP6-B (Cat A conditional) within $d_H \leq 2(\alpha/\beta)^{1/2}$. Requires H1–H5 (phase separation, boundary regularity, etc.).
-- $K_i$: the count of components; derived from $u$ via $K_\mathrm{act}(u) = |\mathrm{MF}(u)|$.
+- $K_i$: the count of components; derived from $u$ via $K_\mathrm{act}(u) = \vert \mathrm{MF}(u)\vert $.
 - $\sigma_i^?$: the σ-signature — a spectral fingerprint of the formation's internal structure. Formally defined (T-Commitment-14-Multi-Static, canonical D-6a), but its dynamics under K-jumps are NOT fully integrated. OP-0008 governs how $\sigma_i$ transforms when two formations merge or split.
 
 **What is established:** Spatial objecthood. A formation is a maximal cohesive persistent region with crisp boundary, characterized by a spectral fingerprint. These properties are graded (not binary), derived from $u$, and stable under bounded perturbation.

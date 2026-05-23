@@ -48,7 +48,7 @@ where $\Pi_{\Sigma_m}$ projects onto $T_u\Sigma_m = \{v : \sum v_i = 0\}$.
 
 From T11 Γ-convergence: $\mathcal{E}_{\mathrm{bd}} / \sqrt{\alpha\beta} \to C_* \mathrm{Per}$ as $\xi_0 \to 0$. Gradient flow of perimeter = mean curvature flow in continuum limit (Brakke flow).
 
-On graph: perimeter = edge boundary $|\partial A| = \#\{\text{edges between } A \text{ and } A^c\}$. Gradient flow of $|\partial A|$ on graph = edge-boundary minimization = **graph mean curvature flow** (discrete analog).
+On graph: perimeter = edge boundary $\vert \partial A\vert = \#\{\text{edges between } A \text{ and } A^c\}$. Gradient flow of $\vert \partial A\vert $ on graph = edge-boundary minimization = **graph mean curvature flow** (discrete analog).
 
 ### 2.3 Self-referential correction
 
@@ -150,7 +150,7 @@ For $\beta$ near critical, nucleation rate rises sharply.
 ### 5.1 Statement
 
 > **Hypothesis H-T4 (Short-time protocol dependence)**. Gradient flow from initial condition $u_0 \sim \mu_{\pi, \mathrm{init}}$ passes through three phases:
-> (a) **Emergence**: $t \in [0, t_{\mathrm{emerge}}]$, unstable Fiedler modes grow exponentially. $t_{\mathrm{emerge}} \sim \ln(1/\sigma_0) / |\mu_{\min}|$.
+> (a) **Emergence**: $t \in [0, t_{\mathrm{emerge}}]$, unstable Fiedler modes grow exponentially. $t_{\mathrm{emerge}} \sim \ln(1/\sigma_0) / \vert \mu_{\min}\vert $.
 > (b) **Metastable plateau**: $t \in [t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$, $\widehat K(t) \approx \widehat K_{\mathrm{emergence}}$ constant.
 > (c) **Coarsening** (if $T > 0$ or slow noise): $t > t_{\mathrm{coarsen}}$, $\widehat K(t) \to 1$.
 > Protocol $\pi$ determines $\widehat K_{\mathrm{emergence}}$ via Fiedler-mode initial alignment.
@@ -174,7 +174,7 @@ R17/R19/R20 empirical:
 ### 5.4 Category
 
 - **Three-phase decomposition**: Cat A empirical (confirmed by R17-R22).
-- **$t_{\mathrm{emerge}} \sim \ln(1/\sigma_0)/|\mu_{\min}|$**: Cat A (standard linearization).
+- **$t_{\mathrm{emerge}} \sim \ln(1/\sigma_0)/\vert \mu_{\min}\vert $**: Cat A (standard linearization).
 - **$\widehat K_{\mathrm{emergence}}$ from protocol**: Cat B (R22 V5 confirmed protocol-dependence, quantitative formula open).
 - **$t_{\mathrm{coarsen}}$ at T=0**: Open, depends on whether landscape has kinetic traps.
 

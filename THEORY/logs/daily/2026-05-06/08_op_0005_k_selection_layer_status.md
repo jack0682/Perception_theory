@@ -35,7 +35,7 @@
 
 **The key Day 3 result** (from G3.3 `03b_op_0005_layer_b_kramers_pf_dependence.md`):
 With OP-0014 (P-F framework) providing $T_*$, Layer B becomes substantive:
-$$k_{K \to K-1} = \frac{|\lambda_-|}{2\pi}\sqrt{\frac{\det H_{\hat{\mathbf{u}}_K}}{|\det' H_{\mathbf{u}_\mathrm{saddle}}|}}\cdot\exp\!\left(-\frac{\Delta E^{(K \to K-1)}}{T_*}\right)$$
+$$k_{K \to K-1} = \frac{\vert \lambda_-\vert}{2\pi}\sqrt{\frac{\det H_{\hat{\mathbf{u}}_K}}{\vert \det' H_{\mathbf{u}_\mathrm{saddle}}\vert}}\cdot\exp\!\left(-\frac{\Delta E^{(K \to K-1)}}{T_*}\right)$$
 
 **Before Day 3:** Layer B formula correct but physically vacuous ($T_*$ undefined).
 **After Day 3:** Layer B formula has well-defined $T_*$ via P-F-A1; N-1 asymmetry recovered via P-F-A6; detailed balance gives equilibrium $K$ distribution from Layer A.

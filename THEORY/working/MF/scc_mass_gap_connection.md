@@ -39,9 +39,9 @@ This question is registered as **NQ-249** in the gauge-theory connections enumer
 
 Pure $\mathrm{SU}(N)$ Yang–Mills theory on $\mathbb{R}^{1,3}$ with Hamiltonian $H_{\mathrm{YM}}$ on physical Hilbert space $\mathcal{H}_{\mathrm{phys}}$ (BRST cohomology of unphysical states) is conjectured to satisfy
 $$
-\Delta_{\mathrm{YM}} \;:=\; \inf_{\substack{|\Psi\rangle \in \mathcal{H}_{\mathrm{phys}}\\ \langle \Omega | \Psi\rangle = 0}} \frac{\langle \Psi | H_{\mathrm{YM}} | \Psi \rangle}{\langle \Psi | \Psi\rangle} \;\geq\; m^2 > 0,
+\Delta_{\mathrm{YM}} \;:=\; \inf_{\substack{\vert \Psi\rangle \in \mathcal{H}_{\mathrm{phys}}\\ \langle \Omega \vert \Psi\rangle = 0}} \frac{\langle \Psi \vert H_{\mathrm{YM}} \vert \Psi \rangle}{\langle \Psi \vert \Psi\rangle} \;\geq\; m^2 > 0,
 $$
-where $|\Omega\rangle$ is the vacuum, the infimum is over states orthogonal to the vacuum, and the existence of $m>0$ uniformly in volume is the open millennium problem (Jaffe & Witten, Clay Math. Inst.).
+where $\vert \Omega\rangle$ is the vacuum, the infimum is over states orthogonal to the vacuum, and the existence of $m>0$ uniformly in volume is the open millennium problem (Jaffe & Witten, Clay Math. Inst.).
 
 ### §1.3 SCC parallel structure (CN10 contrastive lock)
 

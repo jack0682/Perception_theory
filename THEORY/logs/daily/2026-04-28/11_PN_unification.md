@@ -66,7 +66,7 @@ $$\mu_{\mathrm{PN}}(\xi_0, \mathbf{x}_*, \partial \Gamma) = A \cdot \beta \cdot 
 Where:
 - $A$ is a graph-specific prefactor (typically $\sim 1$).
 - $c_d$ is a dimension-dependent constant ($c_1 = \pi$, $c_2 = 2\pi$ for typical lattices).
-- $f_{\mathrm{comm}}(\phi) \in [0, 1]$ is the **commensurability factor**, periodic in $\phi$. Captures direction-flipping of V5b-T-(c). For 2D: $f_{\mathrm{comm}} = |\sin(\pi \phi^{(1)}) \sin(\pi \phi^{(2)})|$ (peaks at half-integer phase, vanishes at integer phase).
+- $f_{\mathrm{comm}}(\phi) \in [0, 1]$ is the **commensurability factor**, periodic in $\phi$. Captures direction-flipping of V5b-T-(c). For 2D: $f_{\mathrm{comm}} = \vert \sin(\pi \phi^{(1)}) \sin(\pi \phi^{(2)})\vert $ (peaks at half-integer phase, vanishes at integer phase).
 - $g_{\partial}(\delta/\xi_0)$ is the **boundary factor**, captures V5b-F enhancement near boundary. Asymptotic forms:
   - $g_{\partial} \to 1$ as $\delta/\xi_0 \to \infty$ (formation deep in interior; V5b-T-(c) limit recovered).
   - $g_{\partial} \to G_{\mathrm{boundary}} \neq 1$ as $\delta/\xi_0 \to 0$ (formation pushed to boundary; V5b-F enhancement).
@@ -101,11 +101,11 @@ For $\delta \gg \xi_0$: $g_{\partial} \to 1$. For $\delta = 0$: $g_{\partial} = 
 ### 2.5 Functional form of $f_{\mathrm{comm}}$ (2D specific)
 
 For 2D square lattice with translation x and y:
-$$f_{\mathrm{comm}}(\phi^{(1)}, \phi^{(2)}) = \max(|\sin \pi \phi^{(1)}\lvert , \rvert\sin \pi \phi^{(2)}|). \tag{2.5}$$
+$$f_{\mathrm{comm}}(\phi^{(1)}, \phi^{(2)}) = \max(\vert \sin \pi \phi^{(1)}\lvert , \rvert\sin \pi \phi^{(2)}\vert). \tag{2.5}$$
 
 Peaks at $\phi^{(1)} = 0.5, \phi^{(2)} = 0$ (or vice versa) → x-translation easier than y. As phase shifts, peaks swap → direction-flipping.
 
-For 1D cycle: $f_{\mathrm{comm}} = |\sin \pi \phi^{(1)}|$ (single direction).
+For 1D cycle: $f_{\mathrm{comm}} = \vert \sin \pi \phi^{(1)}\vert $ (single direction).
 
 ---
 

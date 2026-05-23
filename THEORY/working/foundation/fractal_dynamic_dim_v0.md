@@ -221,7 +221,7 @@ Total: $(n-2-k) + (k-1) + 1 = n-1-k$.
 | F1 (universality) | exp-Fractal-3 | $(\alpha, \beta)$ vs EW prediction |
 | F2 (crossover) | exp-Fractal-2 | $\chi^2$ of scaling collapse |
 | F3 (static D_f) | exp-Fractal-1 | $D_f^{(k)}$ jump = 1 ± 0.2 |
-| F1 ↔ F3 | exp-Fractal-4 | $|D_f - 1/\gamma_k| < 0.1$ |
+| F1 ↔ F3 | exp-Fractal-4 | $\vert D_f - 1/\gamma_k\vert < 0.1$ |
 
 ### F5.2 Specifications
 
@@ -240,7 +240,7 @@ Total: $(n-2-k) + (k-1) + 1 = n-1-k$.
 - F1 refuted: $D_f^{(1)} - D_f^{(2)}$ CI excludes $1 \pm 0.2$
 - F2 refuted: scaling collapse $\chi^2 p < 0.01$ or $c_G$ varies > 30%
 - F3 refuted: $(\alpha, \beta)$ deviates from EW by 3σ in $d \to \infty$ limit
-- F4 refuted: $|D_f^{box} - 1/\gamma_k| > 0.2$ non-overlapping CI
+- F4 refuted: $\vert D_f^{box} - 1/\gamma_k\vert > 0.2$ non-overlapping CI
 
 ### F5.4 Total budget
 
@@ -361,7 +361,7 @@ These are *physically measurable* and *numerically testable* — turning H5 from
 **Lemma 1.1 explicit $c_G$ Łojasiewicz calculation** → Theorem F2.A,B Cat B 확정.
 
 Łojasiewicz constant 의 explicit form:
-$$c_G = \min_{(\Theta,c) \in \Sigma_{T8}} |\nabla_\Theta \mu_2(\Theta, c)| / (4\alpha\lambda_2(L) + \beta \lvert W''(c) \rvert)$$
+$$c_G = \min_{(\Theta,c) \in \Sigma_{T8}} \vert \nabla_\Theta \mu_2(\Theta, c)\vert / (4\alpha\lambda_2(L) + \beta \lvert W''(c) \rvert)$$
 
 이게 계산되면 distance-controlled Poincaré gap Cat B 승급 + Theorem F2.A-B 자동 Cat B.
 
@@ -520,7 +520,7 @@ $$\mu_2 \asymp d^2$$
 
 ### §13.6 *Strongest Surviving Synthesis Statement* (Cat B honest)
 
-> *In the interior linearized regime near a non-degenerate critical point $u^*$ of $\mathcal{E}$ on $\Sigma_m$, away from $\partial(\Sigma_m \cap [0,1]^n)$ and **outside the spinodal interval** (i.e., at stable wells $u^* \approx 0$ or $u^* \approx 1$), SCC reflected Langevin dynamics is approximated by a finite-dimensional Ornstein-Uhlenbeck process with covariance matrix determined by $\mathrm{Hess}\,\mathcal{E}(u^*)|_{T_{u^*}\Sigma_m}$.*
+> *In the interior linearized regime near a non-degenerate critical point $u^*$ of $\mathcal{E}$ on $\Sigma_m$, away from $\partial(\Sigma_m \cap [0,1]^n)$ and **outside the spinodal interval** (i.e., at stable wells $u^* \approx 0$ or $u^* \approx 1$), SCC reflected Langevin dynamics is approximated by a finite-dimensional Ornstein-Uhlenbeck process with covariance matrix determined by $\mathrm{Hess}\,\mathcal{E}(u^*)\vert _{T_{u^*}\Sigma_m}$.*
 >
 > *Variance of each mode $k$ saturates at $T_*/\mu_k$ on timescale $1/\mu_k$. Off-stratum soft modes (near but not on $\Sigma_{T8}^{(k)}$) inherit small positive curvature; their crossover time diverges as the stratum is approached, with scaling exponent determined by the Morse-Bott normal form (to be computed — likely $\mu_2 \asymp d^2$ giving $\tau_d \asymp 1/d^2$).*
 

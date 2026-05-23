@@ -78,7 +78,7 @@ Discrete lattice 에서 "translation" 은 permutation (finite group action). 하
 
 **Eigenvector overlap** with $\delta u_x$ vs **Rayleigh quotient** along $\delta u_x$ 구분:
 
-- **Overlap test**: lowest eigenvector $\phi_0$ 와 $\delta u_x$ 의 inner product. 만약 $|\langle \phi_0, \delta u_x\rangle| > 0.7$, Goldstone character dominant.
+- **Overlap test**: lowest eigenvector $\phi_0$ 와 $\delta u_x$ 의 inner product. 만약 $\vert \langle \phi_0, \delta u_x\rangle\vert > 0.7$, Goldstone character dominant.
 - **Rayleigh test**: $\delta u_x$ 를 candidate 방향으로 쓰고 Hessian projection quotient 계산. 만약 작으면 "soft along this direction".
 
 두 test 가 다를 수 있다 — e.g., $\delta u_x$ 가 여러 eigenmodes 의 combination 이면 overlap 이 분산되어 작지만 Rayleigh 는 여전히 작음.
@@ -100,7 +100,7 @@ with $r(\beta) = c_r (\beta - \beta_c)$.
 **Above critical** ($\beta > \beta_c$, $r > 0$): minimum at $a^* = \sqrt{r/u}$. Energy $F(a^*) = -r^2/(4u)$.
 
 **Hessian at minimum**: 
-$$\partial^2_a F|_{a = a^*} = -r + 3u a^{*2} = 2r = 2c_r(\beta - \beta_c)$$
+$$\partial^2_a F\vert _{a = a^*} = -r + 3u a^{*2} = 2r = 2c_r(\beta - \beta_c)$$
 
 So soft mode eigenvalue **exactly linear in $(\beta - \beta_c)$** with Landau.
 

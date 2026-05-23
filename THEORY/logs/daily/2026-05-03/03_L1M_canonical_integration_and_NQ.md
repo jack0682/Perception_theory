@@ -83,11 +83,11 @@ This placement keeps the L1 chain together: T-L1-F (hard count bridge) immediate
 ### §2.2 Strengthening relative to plan.md §2
 
 plan.md §2 stated:
-$$|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$$
+$$\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$$
 with **edge-band control (E)** as a separate hypothesis (plan.md §4.3).
 
 `02_L1M_proof_development.md` Theorem L-M instead delivers the cleaner form:
-$$|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}+\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot K_{\mathrm{act}}^\varepsilon$$
+$$\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le\varepsilon_{\mathrm{sub}}^\phi(\tau)\cdot N_{\mathrm{sub}}+\varepsilon_{\mathrm{dom}}^\phi(\tau)\cdot K_{\mathrm{act}}^\varepsilon$$
 where $\rho_{\mathrm{edge}}^\phi$ has been *eliminated* via Lemma L-M-2 (edge-band emptiness derived from $(P0)$–$(P11) + \tau<\tau_*$).
 
 This is a **substantive strengthening** of the plan.md statement: hypothesis (E) is no longer needed as a separate assumption; it becomes a consequence of the existing L1-J regime constants. The L-M hypothesis package collapses to:
@@ -220,7 +220,7 @@ These are questions that L-M does not answer but that became visible during its 
 
 ### NQ-L1M-2. CSEH 2007 factor-2 sharpness in L-M-2 §5.4
 
-**Question.** L-M-2's Type-N bar bound used $|\ell_i-\ell_i^{(u^{(j)})}|\le 2\cdot\rho_{\mathrm{pert}}/2=\rho_{\mathrm{pert}}$. The factor $2$ comes from both birth and death of a single bar potentially shifting under bottleneck stability. Is this factor sharp on the L1-J regime, or can we tighten it using the terminal-death convention (which fixes $d_i=0$ for matched bars)?
+**Question.** L-M-2's Type-N bar bound used $\vert \ell_i-\ell_i^{(u^{(j)})}\vert \le 2\cdot\rho_{\mathrm{pert}}/2=\rho_{\mathrm{pert}}$. The factor $2$ comes from both birth and death of a single bar potentially shifting under bottleneck stability. Is this factor sharp on the L1-J regime, or can we tighten it using the terminal-death convention (which fixes $d_i=0$ for matched bars)?
 
 **Severity.** Low. Tightening would shrink $\tau_*$'s required margin on the Type-N side from $2\rho_{\mathrm{pert}}$ to potentially $\rho_{\mathrm{pert}}$, expanding the admissible $\tau$ range by factor $2$.
 
@@ -244,11 +244,11 @@ These are questions that L-M does not answer but that became visible during its 
 
 ### NQ-L1M-5. L-M extension to perturbation analysis
 
-**Question.** L-M states a *static* bound. For two states $\mathbf u_1,\mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1-\mathbf u_2 \rVert$? `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_K\le 4L_\phi n$ (Lipschitz constant of $K_{\mathrm{soft}}^\phi$) via CSEH bottleneck stability. Combined with L-M, can we bound $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|$ by smooth quantities?
+**Question.** L-M states a *static* bound. For two states $\mathbf u_1,\mathbf u_2$ in the same regime, is there a quantitative bound on $\vert K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)\vert $ in terms of $\lVert \mathbf u_1-\mathbf u_2 \rVert$? `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_K\le 4L_\phi n$ (Lipschitz constant of $K_{\mathrm{soft}}^\phi$) via CSEH bottleneck stability. Combined with L-M, can we bound $\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert $ by smooth quantities?
 
 **Severity.** Medium. Useful for future dynamics analysis (NQ-L1M-7 connection).
 
-**Connection.** Triangle inequality: $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|\le|K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{soft}}^\phi(U_1)|+|K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)|+|K_{\mathrm{soft}}^\phi(U_2)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|$. Each term bounded by L-M (first and third) or `soft_K_definition.md` Cor 2.2 (second). But $K_{\mathrm{act}}^\varepsilon$ is integer-valued — left side is in $\{0,1,2,\ldots\}$, so the bound is non-vacuous only when right side $<1$, i.e., when both states are "well within" their regimes and $\mathbf u_1$ close to $\mathbf u_2$. This is a coarse bound; refinement is possible.
+**Connection.** Triangle inequality: $\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert \le\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{soft}}^\phi(U_1)\vert +\vert K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)\vert +\vert K_{\mathrm{soft}}^\phi(U_2)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert $. Each term bounded by L-M (first and third) or `soft_K_definition.md` Cor 2.2 (second). But $K_{\mathrm{act}}^\varepsilon$ is integer-valued — left side is in $\{0,1,2,\ldots\}$, so the bound is non-vacuous only when right side $<1$, i.e., when both states are "well within" their regimes and $\mathbf u_1$ close to $\mathbf u_2$. This is a coarse bound; refinement is possible.
 
 ### NQ-L1M-6. L-M as differentiable surrogate for variational SCC dynamics
 
@@ -268,7 +268,7 @@ These are questions that L-M does not answer but that became visible during its 
 
 ### NQ-L1M-8. The role of $K_{\mathrm{field}}$ in L-M
 
-**Question.** L-M uses $K_{\mathrm{act}}^\varepsilon$ (active count) but not $K_{\mathrm{field}}$ (chart cap). The architectural cap $K_{\mathrm{field}}$ does not appear in L-M's bound. WQ-LAT-1.B's reservoir-resolution sweep showed $K_{\mathrm{soft}}^{\phi_{\mathrm{hard}}}$ is *chart-invariant* under split-bump refinement (constant across $K_{\mathrm{field}}\in\{3,4,6,8,12\}$). L-M predicts this for $\phi_{\mathrm{hard}}$ exactly (it equals $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$, both architecturally invariant). Is L-M's chart-invariance for $\phi\in\Phi_{\mathrm{res}}$ generally true, i.e., does $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon|$'s bound depend only on $K_{\mathrm{act}}^\varepsilon$, not on $K_{\mathrm{field}}$?
+**Question.** L-M uses $K_{\mathrm{act}}^\varepsilon$ (active count) but not $K_{\mathrm{field}}$ (chart cap). The architectural cap $K_{\mathrm{field}}$ does not appear in L-M's bound. WQ-LAT-1.B's reservoir-resolution sweep showed $K_{\mathrm{soft}}^{\phi_{\mathrm{hard}}}$ is *chart-invariant* under split-bump refinement (constant across $K_{\mathrm{field}}\in\{3,4,6,8,12\}$). L-M predicts this for $\phi_{\mathrm{hard}}$ exactly (it equals $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$, both architecturally invariant). Is L-M's chart-invariance for $\phi\in\Phi_{\mathrm{res}}$ generally true, i.e., does $\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon\vert $'s bound depend only on $K_{\mathrm{act}}^\varepsilon$, not on $K_{\mathrm{field}}$?
 
 **Severity.** Medium. Informs OP-0009-A (architecture choice) sub-item.
 

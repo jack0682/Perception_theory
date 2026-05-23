@@ -175,7 +175,7 @@ $$\Gamma(f, g) \;:=\; \tfrac{1}{2}\bigl[L(fg) \,-\, f L g \,-\, g L f\bigr]$$
 
 For the standard diffusion form (L = T_* Δ − ∇V · ∇), direct computation gives
 
-$$\Gamma(f, g) \;=\; T_* \,\nabla f \cdot \nabla g, \qquad \Gamma(f) := \Gamma(f, f) = T_* |\nabla f|^2.$$
+$$\Gamma(f, g) \;=\; T_* \,\nabla f \cdot \nabla g, \qquad \Gamma(f) := \Gamma(f, f) = T_* \vert \nabla f\vert ^2.$$
 
 **Definition (iterated carré du champ Γ_2).**
 
@@ -197,7 +197,7 @@ For the Euclidean (or polytope-restricted Euclidean) setting:
 
 $$\kappa \;=\; \inf_{x \in D} \,\lambda_{\min}\bigl(\mathrm{Hess}(V)(x)\bigr) \;=\; \inf_{x \in D} \,T_*^{-1} \lambda_{\min}\bigl(\mathrm{Hess}(\tilde{\mathcal{E}})(x)\bigr)$$
 
-(after factoring the diffusion coefficient T_*; in the SCC setting, V = Ẽ / T_* so Hess(V) = Hess(Ẽ)/T_*; **but** the relevant κ as a *rate* in the Γ_2 ≥ κ Γ form refers to the energy Hessian directly: $\Gamma_2 \geq T_* \langle \nabla f, \mathrm{Hess}(\tilde{\mathcal{E}})\, \nabla f\rangle$, so the inequality becomes $T_* \langle \nabla f, \mathrm{Hess}(\tilde{\mathcal{E}}) \,\nabla f\rangle \geq \kappa \cdot T_* |\nabla f|^2$, i.e., $\kappa = \lambda_{\min}(\mathrm{Hess}\,\tilde{\mathcal{E}})$, *without* a T_* factor when κ refers to the energy Hessian.)
+(after factoring the diffusion coefficient T_*; in the SCC setting, V = Ẽ / T_* so Hess(V) = Hess(Ẽ)/T_*; **but** the relevant κ as a *rate* in the Γ_2 ≥ κ Γ form refers to the energy Hessian directly: $\Gamma_2 \geq T_* \langle \nabla f, \mathrm{Hess}(\tilde{\mathcal{E}})\, \nabla f\rangle$, so the inequality becomes $T_* \langle \nabla f, \mathrm{Hess}(\tilde{\mathcal{E}}) \,\nabla f\rangle \geq \kappa \cdot T_* \vert \nabla f\vert ^2$, i.e., $\kappa = \lambda_{\min}(\mathrm{Hess}\,\tilde{\mathcal{E}})$, *without* a T_* factor when κ refers to the energy Hessian.)
 
 **Convention adopted henceforth** (BGL 2014 §4.7): κ = λ_min(Hess Ẽ) on a region R where this is ≥ 0; in convex region with κ > 0, all downstream consequences hold with κ in this energy-Hessian units.
 
@@ -246,7 +246,7 @@ By T-PF-A1-AR Cat A (canonical.md L1652-1666), the affine isometry from $\Sigma_
 
 Applying §2.2:
 
-$$\Gamma_{\mathrm{SCC}}(f) \;=\; T_* |\nabla_{\mathbf{1}^\perp} f|^2 \;=\; T_* |\Pi_{T\Sigma_m} \nabla f|^2$$
+$$\Gamma_{\mathrm{SCC}}(f) \;=\; T_* \vert \nabla_{\mathbf{1}^\perp} f\vert ^2 \;=\; T_* \vert \Pi_{T\Sigma_m} \nabla f\vert ^2$$
 
 (the projector enters because gradients live in T_{u^*}Σ_m = $\mathbf{1}^\perp$).
 
@@ -262,9 +262,9 @@ where Hess_{$\mathbf{1}^\perp$}(Ẽ) = $\Pi_{T\Sigma_m} \mathrm{Hess}(\mathcal{E
 
 Drop the (non-negative) first term and apply Cauchy-Schwarz to the second:
 
-$$\Gamma_{2,\mathrm{SCC}}(f) \;\geq\; T_* \cdot \lambda_{\min}\bigl(\mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})|_R\bigr) \cdot |\nabla_{\mathbf{1}^\perp} f|^2$$
+$$\Gamma_{2,\mathrm{SCC}}(f) \;\geq\; T_* \cdot \lambda_{\min}\bigl(\mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})\vert _R\bigr) \cdot \vert \nabla_{\mathbf{1}^\perp} f\vert ^2$$
 
-Hence on a convex region R ⊂ $\tilde{C}$ where the constrained Hessian satisfies $\mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})|_R \succeq \kappa_R \, I$:
+Hence on a convex region R ⊂ $\tilde{C}$ where the constrained Hessian satisfies $\mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})\vert _R \succeq \kappa_R \, I$:
 
 $$\boxed{\;\kappa_{\mathrm{SCC}}(R) \;:=\; \inf_{x \in R}\, \mu_{\min}^{\mathrm{(non\text{-}Gold)}}\bigl(\mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})(x)\bigr)\;}$$
 
@@ -304,19 +304,19 @@ Given CD(κ,∞) with κ > 0 in a convex region R, three downstream consequences
 
 ### §4.1 Poincaré inequality (Bakry-Émery 1985)
 
-**Consequence 1 (Poincaré).** For any smooth f compactly supported in R with $\int_R f \,d\pi_{T_*}|_R = 0$:
+**Consequence 1 (Poincaré).** For any smooth f compactly supported in R with $\int_R f \,d\pi_{T_*}\vert _R = 0$:
 
-$$\mathrm{Var}_{\pi_{T_*}|_R}(f) \;\leq\; \frac{1}{\kappa_{\mathrm{SCC}}(R)} \int_R \Gamma_{\mathrm{SCC}}(f) \,d\pi_{T_*}|_R \;=\; \frac{T_*}{\kappa_{\mathrm{SCC}}(R)} \int_R |\nabla_{\mathbf{1}^\perp} f|^2 \,d\pi_{T_*}|_R$$
+$$\mathrm{Var}_{\pi_{T_*}\vert _R}(f) \;\leq\; \frac{1}{\kappa_{\mathrm{SCC}}(R)} \int_R \Gamma_{\mathrm{SCC}}(f) \,d\pi_{T_*}\vert _R \;=\; \frac{T_*}{\kappa_{\mathrm{SCC}}(R)} \int_R \vert \nabla_{\mathbf{1}^\perp} f\vert ^2 \,d\pi_{T_*}\vert _R$$
 
-Equivalently, the spectral gap of L_SCC on $L^2(\pi_{T_*}|_R)$ satisfies
+Equivalently, the spectral gap of L_SCC on $L^2(\pi_{T_*}\vert _R)$ satisfies
 
-$$\boxed{\;\lambda_1\bigl(L^2(\pi_{T_*}|_R)\bigr) \;\geq\; \kappa_{\mathrm{SCC}}(R)\;}$$
+$$\boxed{\;\lambda_1\bigl(L^2(\pi_{T_*}\vert _R)\bigr) \;\geq\; \kappa_{\mathrm{SCC}}(R)\;}$$
 
 **Comparison with canonical T-PF-A1-PE.** Canonical gives $\lambda_1 \geq (\pi^2/n) e^{-\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$ (Cat A, canonical.md L1700). In the metastable regime where osc(Ẽ) ≫ T_*, this is exponentially small. Inside a convex basin where κ_SCC > 0 is O(1) (not exponentially small), the Bakry-Émery bound is **vastly sharper**.
 
 ### §4.2 W_2 Wasserstein contractivity (Otto-Villani 2000)
 
-**Consequence 2 (W_2-contractivity).** Let $\mu_t = \mathrm{Law}(X_t | X_0 \sim \mu_0)$ and $\nu_t = \mathrm{Law}(X_t | X_0 \sim \nu_0)$ for two initial laws supported in R. Then:
+**Consequence 2 (W_2-contractivity).** Let $\mu_t = \mathrm{Law}(X_t \vert X_0 \sim \mu_0)$ and $\nu_t = \mathrm{Law}(X_t \vert X_0 \sim \nu_0)$ for two initial laws supported in R. Then:
 
 $$\boxed{\;W_2(\mu_t, \nu_t) \;\leq\; e^{-\kappa_{\mathrm{SCC}}(R) \, t} \, W_2(\mu_0, \nu_0)\;}$$
 
@@ -324,15 +324,15 @@ where W_2 is the quadratic Wasserstein distance.
 
 This is the *displacement convexity* form (Otto-Villani 2000 §1; McCann 1997). In particular, taking ν_0 = π_{T_*}|_R:
 
-$$W_2(\mu_t, \pi_{T_*}|_R) \;\leq\; e^{-\kappa_{\mathrm{SCC}}(R) \, t} \, W_2(\mu_0, \pi_{T_*}|_R)$$
+$$W_2(\mu_t, \pi_{T_*}\vert _R) \;\leq\; e^{-\kappa_{\mathrm{SCC}}(R) \, t} \, W_2(\mu_0, \pi_{T_*}\vert _R)$$
 
 — **the diffusion contracts toward equilibrium at rate κ in W_2-metric**.
 
 ### §4.3 Relative-entropy decay (Bakry-Émery 1985)
 
-**Consequence 3 (entropy decay).** Define relative entropy $H(\mu | \pi) := \int \log(d\mu/d\pi)\, d\mu$. Under CD(κ,∞) with κ > 0 (and the additional regularity for the log-Sobolev inequality — BGL 2014 §5.7 give this for free in convex bounded domains):
+**Consequence 3 (entropy decay).** Define relative entropy $H(\mu \vert \pi) := \int \log(d\mu/d\pi)\, d\mu$. Under CD(κ,∞) with κ > 0 (and the additional regularity for the log-Sobolev inequality — BGL 2014 §5.7 give this for free in convex bounded domains):
 
-$$\boxed{\;H(\mu_t | \pi_{T_*}|_R) \;\leq\; e^{-2 \kappa_{\mathrm{SCC}}(R) \, t} \, H(\mu_0 | \pi_{T_*}|_R)\;}$$
+$$\boxed{\;H(\mu_t \vert \pi_{T_*}\vert _R) \;\leq\; e^{-2 \kappa_{\mathrm{SCC}}(R) \, t} \, H(\mu_0 \vert \pi_{T_*}\vert _R)\;}$$
 
 The factor 2 vs the W_2-contractivity rate κ is the standard BGL 2014 result (Theorem 5.7.3: log-Sobolev inequality with constant κ implies entropy decay at rate 2κ).
 
@@ -423,13 +423,13 @@ inverse_causation_check:
 
 *Statement.* Under (H1)(H2)(H3), the SCC reflected Langevin generator L_SCC on R satisfies the CD(κ,∞) condition. Consequently:
 
-**(a) Poincaré on R.** $\lambda_1(L^2(\pi_{T_*}|_R)) \;\geq\; \kappa.$
+**(a) Poincaré on R.** $\lambda_1(L^2(\pi_{T_*}\vert _R)) \;\geq\; \kappa.$
 
 **(b) W_2-contractivity on R.** For any two initial laws μ_0, ν_0 supported in R:
 $$W_2(\mu_t, \nu_t) \;\leq\; e^{-\kappa t} \, W_2(\mu_0, \nu_0).$$
 
 **(c) Entropy decay on R.** Under additional LSI regularity (automatic for bounded convex domains, BGL 2014 §5.7.3):
-$$H(\mu_t \mid \pi_{T_*}|_R) \;\leq\; e^{-2\kappa t} \, H(\mu_0 \mid \pi_{T_*}|_R).$$
+$$H(\mu_t \mid \pi_{T_*}\vert _R) \;\leq\; e^{-2\kappa t} \, H(\mu_0 \mid \pi_{T_*}\vert _R).$$
 
 ### §6.2 Proof sketch (4 steps)
 
@@ -621,7 +621,7 @@ inverse_causation_check:
 
 Otto-Villani 2000 + Jordan-Kinderlehrer-Otto 1998 ("The variational formulation of the Fokker-Planck equation", SIAM J. Math. Anal. 29): the heat flow / Fokker-Planck equation can be written as the **W_2 gradient flow of relative entropy**. For the SCC reflected Langevin:
 
-$$\partial_t \mu_t \;=\; -\mathrm{grad}_{W_2} F(\mu_t), \qquad F(\mu) := \int \tilde{\mathcal{E}} \,d\mu \;+\; T_* \int \log\mu \, d\mu \;=\; T_* \cdot H(\mu | \pi_{T_*})$$
+$$\partial_t \mu_t \;=\; -\mathrm{grad}_{W_2} F(\mu_t), \qquad F(\mu) := \int \tilde{\mathcal{E}} \,d\mu \;+\; T_* \int \log\mu \, d\mu \;=\; T_* \cdot H(\mu \vert \pi_{T_*})$$
 
 (modulo constant). So the diffusion is the gradient descent (in W_2-metric) of the relative entropy functional.
 
@@ -737,7 +737,7 @@ $$\kappa = \mu_2 = 4\alpha\lambda_2 + \beta W''(c) = 4 \cdot 0.152241 + 0.1 \cdo
 
 By continuity (CN4 analyticity), there is an open neighborhood R_* ∋ u* on which Hess remains ⪰ (κ/2)·I = 0.254·I. Within R_*:
 
-- **Poincaré**: $\lambda_1(L^2(\pi_{T_*}|_{R_*})) \geq 0.254$
+- **Poincaré**: $\lambda_1(L^2(\pi_{T_*}\vert _{R_*})) \geq 0.254$
 - **W_2-contractivity rate**: 0.254
 - **Entropy decay rate**: 0.509
 - **In-basin mixing time**: ≈ 1/0.254 ≈ 3.94 (natural time units)

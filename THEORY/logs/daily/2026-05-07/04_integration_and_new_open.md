@@ -100,12 +100,12 @@ This is consistent with `00_plan.md`'s expected delta (14B → 15B).
 **Today's impact:** No new resolution. Today's session **isolates** OP-0011 Step 2 as the *sole* remaining sub-step for part (c) of T-Temporal-Identity to be promoted from Cat C to Cat B. Specifically:
 
 - Step 1 (site-level): T-Persist-1(e) Cat A bound — already canonical.
-- Step 2 (component-level): bound $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$ for two E1–E4-admissible plans $M, M'$. **OPEN**. The candidate approach is a covering argument: $|\gamma_M - \gamma_{M'}| \leq \lvert C_i^t \rvert \cdot \lVert M - M' \rVert_{\infty,C_i^t \times C_j^s}$, but a Cat B-grade bound requires connecting to the site-level confinement bound $C_\mathrm{conf}\sqrt{m}$ properly.
+- Step 2 (component-level): bound $\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$ for two E1–E4-admissible plans $M, M'$. **OPEN**. The candidate approach is a covering argument: $\vert \gamma_M - \gamma_{M'}\vert \leq \lvert C_i^t \rvert \cdot \lVert M - M' \rVert_{\infty,C_i^t \times C_j^s}$, but a Cat B-grade bound requires connecting to the site-level confinement bound $C_\mathrm{conf}\sqrt{m}$ properly.
 - Step 3 (identity-level): once Step 2 closes, $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$ implies $R_{t\to s}[M] = R_{t\to s}[M']$. This is now expressible via Theorem 4.2's closed-form $\Delta_\mathrm{sep}^*$.
 
 **Refined OP-0011 sub-status entry (suggestion for `theorem_status.md`):**
 
-> **OP-0011** Status: STRUCTURED — Step 1 (T-Persist-1(e) Cat A, canonical); Step 2 (OPEN, component confinement bound: $|\gamma_M - \gamma_{M'}| \leq \epsilon_\mathrm{kernel} \cdot \min(m_i^t, m_j^s)$, candidate via covering argument over $C_i^t \times C_j^s$ blocks of the site-level bound $C_\mathrm{conf}\sqrt{m}$); Step 3 (CONDITIONAL: $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel} \Rightarrow R[M] = R[M']$, closed-form via T-Temporal-Identity Theorem 4.2 (working draft 2026-05-07)). Feeds into T-Temporal-Identity part (c) Cat C → Cat B promotion.
+> **OP-0011** Status: STRUCTURED — Step 1 (T-Persist-1(e) Cat A, canonical); Step 2 (OPEN, component confinement bound: $\vert \gamma_M - \gamma_{M'}\vert \leq \epsilon_\mathrm{kernel} \cdot \min(m_i^t, m_j^s)$, candidate via covering argument over $C_i^t \times C_j^s$ blocks of the site-level bound $C_\mathrm{conf}\sqrt{m}$); Step 3 (CONDITIONAL: $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel} \Rightarrow R[M] = R[M']$, closed-form via T-Temporal-Identity Theorem 4.2 (working draft 2026-05-07)). Feeds into T-Temporal-Identity part (c) Cat C → Cat B promotion.
 
 ### §2.2 OP-0012 — Persistence composition
 
@@ -199,7 +199,7 @@ Six open questions surfaced during today's development. Numbered NQ-T-Identity-1
 
 ### §3.1 NQ-T-Identity-1 — Component confinement bound (OP-0011 Step 2)
 
-**Question.** Find an explicit, instance-computable upper bound on $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)|$ for two E1–E4-admissible plans $M, M'$ on the same fields and cost.
+**Question.** Find an explicit, instance-computable upper bound on $\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert $ for two E1–E4-admissible plans $M, M'$ on the same fields and cost.
 
 **Why it matters.** This is the sole remaining sub-step to promote T-Temporal-Identity part (c) from Cat C to Cat B (kernel independence under margin condition).
 

@@ -34,7 +34,7 @@ core_finding: "$c_G(\\text{2D torus 16}\\times 16, c=1/2, \\beta=1) = 1.170827$ 
 
 $$c_G(K) = \inf_{\Theta^* \in K \cap \Sigma_{T8}} \sqrt{16\,\lambda_2(L_G)^2 + W''(c)^2 + 144\,\beta^2\,(2c-1)^2}$$
 
-derived from $|\nabla_\Theta \mu_2|^2 = (\partial_\alpha \mu_2)^2 + (\partial_\beta \mu_2)^2 + (\partial_c \mu_2)^2$ via canonical Theorem 4 $\mu_k = 4\alpha\lambda_k + \beta W''(c)$:
+derived from $\vert \nabla_\Theta \mu_2\vert ^2 = (\partial_\alpha \mu_2)^2 + (\partial_\beta \mu_2)^2 + (\partial_c \mu_2)^2$ via canonical Theorem 4 $\mu_k = 4\alpha\lambda_k + \beta W''(c)$:
 
 - $\partial \mu_2 / \partial \alpha = 4\lambda_2$, squared $\Rightarrow 16\lambda_2^2$
 - $\partial \mu_2 / \partial \beta = W''(c)$, squared $\Rightarrow W''(c)^2$
@@ -170,9 +170,9 @@ CoT step 3: Confirm the I6 correction is the relevant canonical fix.
 
 ## §4 Validity Radius Recomputation (Sub-task 1.4)
 
-Per v1 §1.1 Lipschitz remainder: $d_{\max}(K) = c_G(K) / |H_\mu|_{\text{op}}$ where $|H_\mu|_{\text{op}} \leq \sqrt{576\beta^2 + 144}$.
+Per v1 §1.1 Lipschitz remainder: $d_{\max}(K) = c_G(K) / \vert H_\mu\vert _{\text{op}}$ where $\vert H_\mu\vert _{\text{op}} \leq \sqrt{576\beta^2 + 144}$.
 
-For $\beta = 1$: $|H_\mu|_{\text{op}} \leq \sqrt{720} = 26.833$.
+For $\beta = 1$: $\vert H_\mu\vert _{\text{op}} \leq \sqrt{720} = 26.833$.
 
 | Convention | $c_G$ | $d_{\max} = c_G / 26.833$ | Source claim |
 |---|---|---|---|

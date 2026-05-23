@@ -122,7 +122,7 @@ For Goldstone $k = \mathrm{Gold}$ with $\mu_{\mathrm{Gold}} \approx 0$ and $\lan
 
 ### 4.3 2nd-order correction via mixing with non-Goldstone modes
 
-$$\mu_{\mathrm{Gold}}^{\mathrm{Sym}} = \mu_{\mathrm{Gold}} + \lambda_{\mathrm{rep}}^2 \sum_{k \neq \mathrm{Gold}} \frac{|\langle \psi_k, \rho^* \psi_{\mathrm{Gold}} \rangle|^2}{\mu_{\mathrm{Gold}} - \mu_k}. \tag{4.2}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{Sym}} = \mu_{\mathrm{Gold}} + \lambda_{\mathrm{rep}}^2 \sum_{k \neq \mathrm{Gold}} \frac{\vert \langle \psi_k, \rho^* \psi_{\mathrm{Gold}} \rangle\vert ^2}{\mu_{\mathrm{Gold}} - \mu_k}. \tag{4.2}$$
 
 The sign: since $\mu_k > \mu_{\mathrm{Gold}}$, denominator is negative → 2nd-order shift is NEGATIVE.
 
@@ -130,7 +130,7 @@ Antisym 2nd-order: similar with opposite sign of $\rho^*$ contribution → simil
 
 For Goldstone-pair: the dominant matrix elements come from modes $\psi_k$ that are **rotation conjugates** of $\psi_{\mathrm{Gold}}$ (translation in y, rotational pseudo-mode, etc.) with eigenvalue gap $\sim \mu_{\mathrm{next}} - \mu_{\mathrm{Gold}}$.
 
-Estimate: $|\langle \psi_k, \rho^* \psi_{\mathrm{Gold}} \rangle|^2 \sim O(1)$ (modes have similar localization), $\mu_{\mathrm{next}} - \mu_{\mathrm{Gold}} \sim \mu_{\mathrm{next}}$ (Goldstone close to zero).
+Estimate: $\vert \langle \psi_k, \rho^* \psi_{\mathrm{Gold}} \rangle\vert ^2 \sim O(1)$ (modes have similar localization), $\mu_{\mathrm{next}} - \mu_{\mathrm{Gold}} \sim \mu_{\mathrm{next}}$ (Goldstone close to zero).
 
 Phase 3 E9: $\mu_{\mathrm{next}} \approx 0.0064$ (next Hessian eigenvalue after Goldstone). So 2nd-order shift:
 $$\delta \mu^{(2)} \approx \lambda_{\mathrm{rep}}^2 / \mu_{\mathrm{next}} = 0.01 / 0.0064 \approx 1.6. \tag{4.3}$$
@@ -207,7 +207,7 @@ Thus $u^{(1)*} \notin V_1^{(+)}$ — it has both $V_1^{(+)}$ and $V_1^{(-)}$ com
 
 The correct framing: $\rho^*: V_1 \to V_2$, $\rho^* \rho^*: V_1 \to V_1$ (composition is the identity for involution).
 
-So $\rho^* \rho^*|_{V_1} = I$. This means $\rho^*$ is a "swap" between $V_1$ and $V_2$, NOT an automorphism of $V_1$ alone.
+So $\rho^* \rho^*\vert _{V_1} = I$. This means $\rho^*$ is a "swap" between $V_1$ and $V_2$, NOT an automorphism of $V_1$ alone.
 
 The Sym/Antisym block-diagonalization (1.2) requires the **identified** coordinates where $V_1$ and $V_2$ are merged into one space $V_{\mathrm{base}}$. In identified coords, $\rho^*$ is the IDENTITY (since it's the canonical iso). $V_{12}$ in identified coords becomes $\lambda_{\mathrm{rep}} \cdot I_{V_{\mathrm{base}}}$ → clean ±λ_rep splitting.
 
@@ -343,7 +343,7 @@ Specifically, the closest joint eigenvector to "ideal antisym" is at -0.033, whi
 
 ### 5.8 Final c_eff formula
 
-$$c_{\mathrm{eff}} = \left|\langle \psi_{\mathrm{antisym, ideal}}, \psi_{\mathrm{lowest joint eigvec}} \rangle\right|^2 \cdot \frac{|\lambda_{\mathrm{lowest joint eigvec}} - \mu_{\mathrm{Gold}}|}{\lambda_{\mathrm{rep}}}. \tag{5.9}$$
+$$c_{\mathrm{eff}} = \left\vert \langle \psi_{\mathrm{antisym, ideal}}, \psi_{\mathrm{lowest joint eigvec}} \rangle\right\vert ^2 \cdot \frac{\vert \lambda_{\mathrm{lowest joint eigvec}} - \mu_{\mathrm{Gold}}\vert}{\lambda_{\mathrm{rep}}}. \tag{5.9}$$
 
 In Phase 3 E9 d=8: overlap ≈ 0.94 (= 0.94²=0.88 in fractional sense, actually need to think about this), eigenvalue gap ≈ 0.033, λ_rep = 0.1. So $c_{\mathrm{eff}} \approx 0.88 \cdot 0.033/0.1 = 0.29 \approx 0.33$.
 
@@ -390,7 +390,7 @@ E9 confirms: λ_rep = 0.01 marginal (joint λ near zero), λ_rep = 0.1 strongly 
 
 ### 8.1 Direct check from E9 data
 
-For each (d, λ_rep) in `e9_k2_baseline.json`, compute O_{ideal-actual} (overlap of antisym with lowest joint eigenvec) and gap_actual (joint λ_min) → estimate c_eff and compare to lifetime $|\lambda_{\mathrm{antisym}}|/\lambda_{\mathrm{rep}}$:
+For each (d, λ_rep) in `e9_k2_baseline.json`, compute O_{ideal-actual} (overlap of antisym with lowest joint eigenvec) and gap_actual (joint λ_min) → estimate c_eff and compare to lifetime $\vert \lambda_{\mathrm{antisym}}\vert /\lambda_{\mathrm{rep}}$:
 
 For d=8, λ_rep=0.1: lowest joint λ = -0.0332, lifetime $\lvert 0.0332 \rvert/0.1 = 0.332 \approx c_{\mathrm{eff}}$. ✓
 

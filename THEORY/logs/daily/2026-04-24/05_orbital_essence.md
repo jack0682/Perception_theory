@@ -44,7 +44,7 @@ SCC 의 σ-framework 의 세 component 는 각각 다른 source 의 이산성:
 
 ### 2.1 Topological source — $\mathcal{F}(u^*)$
 
-$\mathcal{F}(u^*) = |\{i : u^*(i) > u^*(j) \forall j \sim i\}|$ ∈ $\mathbb{Z}_{\geq 0}$.
+$\mathcal{F}(u^*) = \vert \{i : u^*(i) > u^*(j) \forall j \sim i\}\vert $ ∈ $\mathbb{Z}_{\geq 0}$.
 
 - **연속 입력** $u^*$ 으로부터 **이산 출력** (정수)
 - 메커니즘: 그래프 위의 strict-max 비교 (combinatorial)

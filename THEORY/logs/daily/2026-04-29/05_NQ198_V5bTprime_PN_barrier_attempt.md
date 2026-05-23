@@ -3,7 +3,7 @@
 # 05_NQ198_V5bTprime_PN_barrier_attempt.md — V5b-T' PN-Barrier-Lifted Goldstone: Cat A Analytic Attempt
 
 **Session:** 2026-04-29 (W5 Day 3, post-Block-5 deepening pass)
-**Target:** Attempt analytic Cat A derivation of V5b-T' PN-barrier-lifted Goldstone eigenvalue formula. Currently Cat B target with Phase 3 E5 heuristic formula $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot |\partial S|/\xi_0$. Goal: derive $A_{\mathrm{R3b}}$ from first principles via cluster-boundary spectral analysis, OR identify why this is harder than anticipated and characterize the failure mode + spawn refined NQ.
+**Target:** Attempt analytic Cat A derivation of V5b-T' PN-barrier-lifted Goldstone eigenvalue formula. Currently Cat B target with Phase 3 E5 heuristic formula $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \vert \partial S\vert /\xi_0$. Goal: derive $A_{\mathrm{R3b}}$ from first principles via cluster-boundary spectral analysis, OR identify why this is harder than anticipated and characterize the failure mode + spawn refined NQ.
 **This file covers:** §1 Restatement; §2 Five approaches; §3 Primary selection; §4 Substantive attempt (sharp-interface boundary integral); §5 **Discrepancy with Phase 3 heuristic** (substantive negative result); §6 Diagnosis + Cat A refined path (WKB / tight-binding); §7 New open questions; §8 Impact on D-3 / D-5 user decisions.
 **Depends on reading:** `2026-04-28/11_PN_unification.md` §3.1 + §4.1 (V5b-T' Phase 3 finding); `2026-04-28/01_NQ173_v5b_f_verdict.md` §3 (V5b-F numerical anchor); `2026-04-28/20_canonical_proposals_F10_F11.md` Part 1 (V5b-T' canonical proposal text); `2026-04-28/02_NQ174_zeta_star_results.md` §3 (ζ_* heuristic ratio analysis).
 
@@ -15,26 +15,26 @@
 
 Derive analytically the V5b-T' PN-barrier-lifted Goldstone eigenvalue
 $$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} = ? \tag{5.1.1}$$
-as a function of $(\beta, c, |\partial S|, \xi_0, a, G)$, where:
+as a function of $(\beta, c, \vert \partial S\vert, \xi_0, a, G)$, where:
 - $\xi_0 := \sqrt{\alpha/\beta}$ is the SCC interface width.
 - $a$ is lattice spacing (set $a = 1$ in formulas).
-- $|\partial S|$ is the cluster boundary perimeter (in lattice units).
+- $\vert \partial S\vert $ is the cluster boundary perimeter (in lattice units).
 - $G$ is the underlying graph (assumed translation-invariant: $T^d$ or $C_n$ or periodic lattice).
 
 ### §1.2 Phase 3 heuristic (Cat B target)
 
 Per `2026-04-28/11_PN_unification.md` §4.1:
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{|\partial S|}{\xi_0}, \tag{5.1.2}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{\vert \partial S\vert}{\xi_0}, \tag{5.1.2}$$
 proposed by analogy to Peierls-Nabarro dislocation theory in solid-state physics. The coefficient $A_{\mathrm{R3b}}$ was not derived; only "$\mathcal{O}(\beta)$ magnitude" was empirically anchored. Empirical observation in NQ-173 (15/15 attempts at $L=20, c=0.10$, $\zeta \in \{0.5, 0.7, 1.0\}$): $\mu \in [1, 4]$.
 
 ### §1.3 What Cat A would mean
 
-Cat A would derive the *coefficient* and *exact functional form* (powers of $|\partial S|$, $\xi_0$, $\beta$) from first principles, with explicit error bounds. Currently Cat B target = "form proposed by analogy + magnitude empirically OK". Cat A = "form derived from first principles + matches empirical to leading order".
+Cat A would derive the *coefficient* and *exact functional form* (powers of $\vert \partial S\vert $, $\xi_0$, $\beta$) from first principles, with explicit error bounds. Currently Cat B target = "form proposed by analogy + magnitude empirically OK". Cat A = "form derived from first principles + matches empirical to leading order".
 
 ### §1.4 What success / failure looks like
 
-- **Success-A1**: Derive $\mu = (\text{const}) \cdot \beta \cdot |\partial S|/\xi_0$ matching Phase 3 form, with const ≈ 0.005 (so $\mu \sim 0.005 \cdot 4 \cdot 25 / 0.5 = 1$ — matches empirical).
-- **Success-A2**: Derive $\mu = (\text{const}) \cdot \beta^p \cdot |\partial S|^q \cdot \xi_0^r$ with possibly different $p, q, r$, matching empirical magnitude at NQ-173 setup.
+- **Success-A1**: Derive $\mu = (\text{const}) \cdot \beta \cdot \vert \partial S\vert /\xi_0$ matching Phase 3 form, with const ≈ 0.005 (so $\mu \sim 0.005 \cdot 4 \cdot 25 / 0.5 = 1$ — matches empirical).
+- **Success-A2**: Derive $\mu = (\text{const}) \cdot \beta^p \cdot \vert \partial S\vert ^q \cdot \xi_0^r$ with possibly different $p, q, r$, matching empirical magnitude at NQ-173 setup.
 - **Failure-F**: Derive a formula whose magnitude/scaling differs from empirical, exposing that Phase 3 heuristic is qualitatively wrong AND first-principles derivation gives non-trivial different answer. Spawn refined NQ.
 
 (Failure-F is the most informative outcome — identifies a real theoretical gap.)
@@ -77,7 +77,7 @@ Cat A would derive the *coefficient* and *exact functional form* (powers of $|\p
 
 ### §2.5 Approach 5: Numerical fitting + dimensional analysis (heuristic)
 
-**Core idea**: Postulate $\mu = C \beta^p |\partial S|^q \xi_0^r$; fit $(p, q, r, C)$ to numerical data from Phase 3+4+10. Already partially done in Phase 3 E5; refine.
+**Core idea**: Postulate $\mu = C \beta^p \vert \partial S\vert ^q \xi_0^r$; fit $(p, q, r, C)$ to numerical data from Phase 3+4+10. Already partially done in Phase 3 E5; refine.
 
 **Success form**: Empirical formula with confidence intervals.
 
@@ -87,7 +87,7 @@ Cat A would derive the *coefficient* and *exact functional form* (powers of $|\p
 
 ## §3. Primary Selection: Approaches 1 + 2 (Hybrid)
 
-**Decision**: Primary path = Approach 1 (sharp-interface boundary integral, continuum) + Approach 2 (discrete lattice variational, finite-$\xi_0$). They are complementary: 1 gives the surface-tension energy scale ($\sigma_{\mathrm{AC}} \cdot |\partial S|$); 2 captures the lattice-discrete PN-barrier amplitude $V_0$.
+**Decision**: Primary path = Approach 1 (sharp-interface boundary integral, continuum) + Approach 2 (discrete lattice variational, finite-$\xi_0$). They are complementary: 1 gives the surface-tension energy scale ($\sigma_{\mathrm{AC}} \cdot \vert \partial S\vert $); 2 captures the lattice-discrete PN-barrier amplitude $V_0$.
 
 **Rationale**:
 - Approaches 1 + 2 are mathematically independent (continuum vs discrete).
@@ -107,10 +107,10 @@ Cat A would derive the *coefficient* and *exact functional form* (powers of $|\p
 ### §4.1 Setup
 
 Continuum SCC energy:
-$$\mathcal{E}_{\mathrm{cont}}[u] = \alpha \int |\nabla u|^2 \,d\mathbf{x} + \beta \int W(u) \,d\mathbf{x}, \qquad W(u) = u^2(1-u)^2. \tag{5.4.1}$$
+$$\mathcal{E}_{\mathrm{cont}}[u] = \alpha \int \vert \nabla u\vert ^2 \,d\mathbf{x} + \beta \int W(u) \,d\mathbf{x}, \qquad W(u) = u^2(1-u)^2. \tag{5.4.1}$$
 
 Sharp-interface minimizer (continuum, ignoring lattice): $u^* = \mathbf{1}_S$ (indicator of cluster $S$), with transition layer of width $\xi_0$ across $\partial S$. Standard Modica-Mortola:
-$$\mathcal{E}_{\mathrm{cont}}[u^*] = \sigma_{\mathrm{AC}} \cdot |\partial S| + O(\xi_0), \quad \sigma_{\mathrm{AC}} = \sqrt{\alpha\beta} \cdot c_W, \tag{5.4.2}$$
+$$\mathcal{E}_{\mathrm{cont}}[u^*] = \sigma_{\mathrm{AC}} \cdot \vert \partial S\vert + O(\xi_0), \quad \sigma_{\mathrm{AC}} = \sqrt{\alpha\beta} \cdot c_W, \tag{5.4.2}$$
 where $c_W = \int_0^1 \sqrt{2W(u)} \,du = \int_0^1 u(1-u)\sqrt 2 \,du = \frac{\sqrt 2}{6}$.
 
 Numerically: $\sigma_{\mathrm{AC}} = \sqrt{\alpha\beta}/{\rm const}$, with $\alpha\beta = (\xi_0)^{-2} \alpha^2$, so $\sigma_{\mathrm{AC}} = \alpha/\xi_0 \cdot c_W = \alpha c_W /\xi_0$.
@@ -125,9 +125,9 @@ $$\langle \delta u, H_{\mathrm{cont}} \delta u\rangle = \frac{1}{2}\frac{\partia
 So continuum Goldstone is exactly zero — as expected.
 
 Norm of perturbation:
-$$\lVert \delta u \rVert_2^2 = |\boldsymbol\xi|^2 \int |\nabla u^*|^2 \,d\mathbf{x} \approx |\boldsymbol\xi|^2 \cdot |\partial S| / \xi_0 \cdot c_W' \tag{5.4.4}$$
+$$\lVert \delta u \rVert_2^2 = \vert \boldsymbol\xi\vert ^2 \int \vert \nabla u^*\vert ^2 \,d\mathbf{x} \approx \vert \boldsymbol\xi\vert ^2 \cdot \vert \partial S\vert / \xi_0 \cdot c_W' \tag{5.4.4}$$
 
-(gradient is sharp across interface of width $\xi_0$; $|\nabla u^*|^2 \sim 1/\xi_0$ on $|\partial S| \cdot \xi_0$ measure; integral $\sim |\partial S|/\xi_0$).
+(gradient is sharp across interface of width $\xi_0$; $\vert \nabla u^*\vert ^2 \sim 1/\xi_0$ on $\vert \partial S\vert \cdot \xi_0$ measure; integral $\sim \vert \partial S\vert /\xi_0$).
 
 So Hessian eigenvalue from continuum perturbation:
 $$\mu_{\mathrm{Gold}}^{\mathrm{cont}} = \frac{\langle \delta u, H \delta u\rangle}{\lVert \delta u \rVert^2} = 0. \tag{5.4.5}$$
@@ -136,12 +136,12 @@ $$\mu_{\mathrm{Gold}}^{\mathrm{cont}} = \frac{\langle \delta u, H \delta u\rangl
 
 On lattice, translation by $\boldsymbol\xi \in [0, a)$ gives non-zero energy shift due to lattice discretization. We compute this via direct discrete sum.
 
-**Setup**: Let $u^*: \mathbb{Z}^d \to [0,1]$ be the sharp-interface minimizer with transition layer width $\xi_0$. The *interface band* $\mathcal{B} := \{x \in \mathbb{Z}^d : 0 < u^*(x) < 1\}$ has cardinality $|\mathcal{B}| \approx |\partial S| \cdot \xi_0/a$ (a strip of width $\sim \xi_0$ in physical units = $\xi_0/a$ lattice steps).
+**Setup**: Let $u^*: \mathbb{Z}^d \to [0,1]$ be the sharp-interface minimizer with transition layer width $\xi_0$. The *interface band* $\mathcal{B} := \{x \in \mathbb{Z}^d : 0 < u^*(x) < 1\}$ has cardinality $\vert \mathcal{B}\vert \approx \vert \partial S\vert \cdot \xi_0/a$ (a strip of width $\sim \xi_0$ in physical units = $\xi_0/a$ lattice steps).
 
 Consider sub-lattice translation: define $u^*_{\boldsymbol\xi}(x) := u^*(x - \boldsymbol\xi)$ for $\boldsymbol\xi \in [0, 1)^d$ (in lattice units). Energy shift:
 $$\Delta \mathcal{E}(\boldsymbol\xi) := \mathcal{E}_{\mathrm{lattice}}[u^*_{\boldsymbol\xi}] - \mathcal{E}_{\mathrm{lattice}}[u^*]. \tag{5.4.6}$$
 
-For sub-lattice $\boldsymbol\xi$ ($|\boldsymbol\xi| < 1$ lattice unit), no edge crosses $\partial S$ changes, so the *combinatorial* lattice perimeter is constant. The energy shift comes from the **transition-layer profile** mismatching the lattice.
+For sub-lattice $\boldsymbol\xi$ ($\vert \boldsymbol\xi\vert < 1$ lattice unit), no edge crosses $\partial S$ changes, so the *combinatorial* lattice perimeter is constant. The energy shift comes from the **transition-layer profile** mismatching the lattice.
 
 Specifically, the continuum profile $u^*(\mathbf{x})$ is sampled on lattice points $x \in \mathbb{Z}^d$. When shifted by $\boldsymbol\xi$, each interface site $x \in \mathcal{B}$ gets a slightly different sampled value $u^*(x - \boldsymbol\xi) \neq u^*(x)$.
 
@@ -151,38 +151,38 @@ $$\mathcal{E}_{\mathrm{site}}(u^*(x)) = \alpha \cdot (\text{neighbor differences
 PN-barrier amplitude per interface site:
 $$\delta E_{\mathrm{site}} \sim \alpha \cdot \mathcal{O}((1/\xi_0)^2 \cdot \boldsymbol\xi^2) + \beta \cdot \mathcal{O}(W'(u^*) \cdot \boldsymbol\xi/\xi_0). \tag{5.4.8}$$
 
-The first term (gradient energy) is $\alpha/\xi_0^2 \cdot |\boldsymbol\xi|^2$. The second term (potential) is $\beta \cdot |\boldsymbol\xi|/\xi_0$ at first order in $\boldsymbol\xi$, but $W'(u^*) = 0$ along the equilibrium profile $u^*$ (Euler-Lagrange), so this term is suppressed; second-order is $\beta \cdot |\boldsymbol\xi|^2 / \xi_0^2$ similar to first.
+The first term (gradient energy) is $\alpha/\xi_0^2 \cdot \vert \boldsymbol\xi\vert ^2$. The second term (potential) is $\beta \cdot \vert \boldsymbol\xi\vert /\xi_0$ at first order in $\boldsymbol\xi$, but $W'(u^*) = 0$ along the equilibrium profile $u^*$ (Euler-Lagrange), so this term is suppressed; second-order is $\beta \cdot \vert \boldsymbol\xi\vert ^2 / \xi_0^2$ similar to first.
 
-Summing over $|\mathcal{B}|$ interface sites:
-$$V_0 \cdot |\boldsymbol\xi|^2 \approx |\mathcal{B}| \cdot \alpha/\xi_0^2 \cdot |\boldsymbol\xi|^2 = (|\partial S| \cdot \xi_0/a) \cdot \alpha/\xi_0^2 \cdot |\boldsymbol\xi|^2 = \frac{\alpha |\partial S|}{a \cdot \xi_0} \cdot |\boldsymbol\xi|^2. \tag{5.4.9}$$
+Summing over $\vert \mathcal{B}\vert $ interface sites:
+$$V_0 \cdot \vert \boldsymbol\xi\vert ^2 \approx \vert \mathcal{B}\vert \cdot \alpha/\xi_0^2 \cdot \vert \boldsymbol\xi\vert ^2 = (\vert \partial S\vert \cdot \xi_0/a) \cdot \alpha/\xi_0^2 \cdot \vert \boldsymbol\xi\vert ^2 = \frac{\alpha \vert \partial S\vert}{a \cdot \xi_0} \cdot \vert \boldsymbol\xi\vert ^2. \tag{5.4.9}$$
 
 So PN-barrier amplitude:
-$$V_0 \sim \frac{\alpha |\partial S|}{a \xi_0}. \tag{5.4.10}$$
+$$V_0 \sim \frac{\alpha \vert \partial S\vert}{a \xi_0}. \tag{5.4.10}$$
 
-(In units $a = 1$, $\alpha = 1$: $V_0 \sim |\partial S|/\xi_0 = \beta\xi_0 \cdot |\partial S|$.)
+(In units $a = 1$, $\alpha = 1$: $V_0 \sim \vert \partial S\vert /\xi_0 = \beta\xi_0 \cdot \vert \partial S\vert $.)
 
 ### §4.4 Goldstone Eigenvalue from PN-Barrier Amplitude
 
 Use Approach 3 (effective Schrödinger). PN-well at minimum $\boldsymbol\xi = 0$:
-$$V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0 \cdot |\boldsymbol\xi|^2 + \mathcal{O}(|\boldsymbol\xi|^4) \tag{5.4.11}$$
+$$V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0 \cdot \vert \boldsymbol\xi\vert ^2 + \mathcal{O}(\vert \boldsymbol\xi\vert ^4) \tag{5.4.11}$$
 (quadratic approximation near minimum).
 
 Hessian eigenvalue: pull back from energy second-derivative w.r.t. translation parameter $\boldsymbol\xi$ to second-derivative w.r.t. $u$-perturbation.
 
 Translation perturbation: $\delta u = -\boldsymbol\xi \cdot \nabla u^*$, so
 $$\frac{\partial^2 \mathcal{E}}{\partial \boldsymbol\xi^2}\bigg\vert_{\boldsymbol\xi=0} = 2 V_0 \tag{5.4.12}$$
-in our quadratic approximation. Norm $\lVert \delta u \rVert^2 \approx |\partial S|/\xi_0 \cdot |\boldsymbol\xi|^2 / a$ from (5.4.4).
+in our quadratic approximation. Norm $\lVert \delta u \rVert^2 \approx \vert \partial S\vert /\xi_0 \cdot \vert \boldsymbol\xi\vert ^2 / a$ from (5.4.4).
 
 Hessian eigenvalue (Rayleigh quotient):
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} = \frac{\partial^2 \mathcal{E}/\partial\boldsymbol\xi^2}{\lVert \partial_{\boldsymbol\xi} u \rVert^2 / |\boldsymbol\xi|^2}\bigg\vert_{\boldsymbol\xi=0} = \frac{2V_0}{|\partial S|/(\xi_0 a)} = \frac{2 \alpha |\partial S|/(a \xi_0)}{|\partial S|/(\xi_0 a)} = 2\alpha = 2 \beta \xi_0^2. \tag{5.4.13}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} = \frac{\partial^2 \mathcal{E}/\partial\boldsymbol\xi^2}{\lVert \partial_{\boldsymbol\xi} u \rVert^2 / \vert \boldsymbol\xi\vert ^2}\bigg\vert_{\boldsymbol\xi=0} = \frac{2V_0}{\vert \partial S\vert /(\xi_0 a)} = \frac{2 \alpha \vert \partial S\vert /(a \xi_0)}{\vert \partial S\vert /(\xi_0 a)} = 2\alpha = 2 \beta \xi_0^2. \tag{5.4.13}$$
 
-**Result**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx 2\alpha = 2\beta\xi_0^2$ — **independent of $|\partial S|$**, scaling as $\beta \xi_0^2$.
+**Result**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx 2\alpha = 2\beta\xi_0^2$ — **independent of $\vert \partial S\vert $**, scaling as $\beta \xi_0^2$.
 
 ### §4.5 Comparison with Empirical NQ-173 Data
 
 **Empirical** (NQ-173 W5 Day 2):
 - $L = 20, c = 0.10, \beta = 4$, so $\xi_0 = \sqrt{1/4} = 0.5$, $\alpha = 1$.
-- Cluster mass $m = 40$; cluster perimeter $|\partial S| \approx 4\sqrt{40} \approx 25$.
+- Cluster mass $m = 40$; cluster perimeter $\vert \partial S\vert \approx 4\sqrt{40} \approx 25$.
 - Observed $\mu \in [1, 4]$.
 
 **My formula (5.4.13)**: $\mu \approx 2 \cdot 1 = 2$.
@@ -195,13 +195,13 @@ This is a **partial Cat A success**: derivation matches empirical magnitude.
 
 ### §4.6 Functional-Form Discrepancy Diagnosis
 
-**Crucial observation**: My derivation gives $\mu \approx 2\alpha = 2\beta\xi_0^2$, **independent of $|\partial S|$**. Phase 3 heuristic gives $\mu \propto \beta |\partial S|/\xi_0$, which DOES depend on $|\partial S|$.
+**Crucial observation**: My derivation gives $\mu \approx 2\alpha = 2\beta\xi_0^2$, **independent of $\vert \partial S\vert $**. Phase 3 heuristic gives $\mu \propto \beta \vert \partial S\vert /\xi_0$, which DOES depend on $\vert \partial S\vert $.
 
-**Test**: vary cluster mass $m$ at fixed $\beta, \xi_0$. Phase 3 predicts $\mu \propto \sqrt m$ ($|\partial S| \sim 4\sqrt m$). My formula predicts $\mu \approx \mathrm{const}$.
+**Test**: vary cluster mass $m$ at fixed $\beta, \xi_0$. Phase 3 predicts $\mu \propto \sqrt m$ ($\vert \partial S\vert \sim 4\sqrt m$). My formula predicts $\mu \approx \mathrm{const}$.
 
 Phase 3 NQ-173 data tested only one mass $m = 40$. Cannot distinguish without varying $m$.
 
-**Hypothesis**: My derivation is correct; Phase 3 heuristic was wrong about $|\partial S|$ dependence.
+**Hypothesis**: My derivation is correct; Phase 3 heuristic was wrong about $\vert \partial S\vert $ dependence.
 
 **Verification needed**: numerical experiment varying $m \in \{20, 40, 80, 160\}$ at fixed $\beta = 4, \xi_0 = 0.5$ in V5b-T' regime. If $\mu \approx 2$ across all $m$ → my formula vindicated; if $\mu \propto \sqrt m$ → Phase 3 vindicated; if neither → both wrong, refined NQ.
 
@@ -214,14 +214,14 @@ $$\mu \to 2\alpha = \mathrm{const}. \tag{5.4.14}$$
 
 So sharp-interface Goldstone eigenvalue is finite (not zero). This is consistent with V5b-T' being a *non-Goldstone* (PN-barrier-pinned) eigenvalue — finite even in sharp limit.
 
-In super-lattice limit ($\xi_0 \gg a$, $\beta \to 0$): $V_0 \to 0$ (since $V_0 \sim |\partial S|/(a \xi_0)$); my formula breaks down because the quadratic approximation $V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0 |\boldsymbol\xi|^2$ is a poor approximation of $V_{\mathrm{PN}}(\boldsymbol\xi) \sim e^{-c/\xi_0}$ (exponentially-suppressed Goldstone, i.e., V5b-T regime).
+In super-lattice limit ($\xi_0 \gg a$, $\beta \to 0$): $V_0 \to 0$ (since $V_0 \sim \vert \partial S\vert /(a \xi_0)$); my formula breaks down because the quadratic approximation $V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0 \vert \boldsymbol\xi\vert ^2$ is a poor approximation of $V_{\mathrm{PN}}(\boldsymbol\xi) \sim e^{-c/\xi_0}$ (exponentially-suppressed Goldstone, i.e., V5b-T regime).
 
 ### §4.8 Cat status of (5.4.13)
 
 **Cat B sketch**. My derivation has gaps:
 - Step (5.4.8): claimed "second-order in $\boldsymbol\xi^2$ contribution from gradient energy" — the precise coefficient (the $\mathcal{O}(1)$ multiplier) was not computed; only scaling was tracked.
-- Step (5.4.10): summing $|\mathcal{B}|$ sites with $\mathcal{O}(1)$ correlations between sites — for sites not at interface band edges, correction is suppressed; this needs careful counting.
-- Step (5.4.13): the cancellation of $|\partial S|$ between $V_0$ (numerator) and $\lVert \delta u \rVert^2$ (denominator) is delicate; relies on both scaling as $|\partial S|/\xi_0$ exactly. The exact coefficient ratio (giving "2" prefactor) is approximate.
+- Step (5.4.10): summing $\vert \mathcal{B}\vert $ sites with $\mathcal{O}(1)$ correlations between sites — for sites not at interface band edges, correction is suppressed; this needs careful counting.
+- Step (5.4.13): the cancellation of $\vert \partial S\vert $ between $V_0$ (numerator) and $\lVert \delta u \rVert^2$ (denominator) is delicate; relies on both scaling as $\vert \partial S\vert /\xi_0$ exactly. The exact coefficient ratio (giving "2" prefactor) is approximate.
 
 **For Cat A**: need rigorous Allen-Cahn discrete analysis. Approach 4 (Modica-Mortola limit + lattice correction) likely yields cleaner derivation.
 
@@ -233,7 +233,7 @@ In super-lattice limit ($\xi_0 \gg a$, $\beta \to 0$): $V_0 \to 0$ (since $V_0 \
 
 | Source | Formula | Cluster-mass scaling |
 |---|---|---|
-| Phase 3 E5 heuristic | $\mu \sim \beta \cdot |\partial S|/\xi_0$ | $\mu \propto \sqrt m$ |
+| Phase 3 E5 heuristic | $\mu \sim \beta \cdot \vert \partial S\vert /\xi_0$ | $\mu \propto \sqrt m$ |
 | §4 derivation | $\mu \sim 2\beta \xi_0^2$ | $\mu \propto m^0 = \mathrm{const}$ |
 
 Both match the single empirical anchor (NQ-173 $m = 40$, $\mu \in [1, 4]$) within order of magnitude. Distinguishing requires varying $m$.
@@ -246,7 +246,7 @@ Phase 3 form was used to **define** V5b-T' canonical proposal text in `2026-04-2
     μ_Gold^lifted ≈ A_R3b · β · (cluster perimeter)/ξ_0 (regime R3b)
 ```
 
-If Phase 3 heuristic is wrong about $|\partial S|$ dependence, then the **D-5 canonical proposal text contains an unverified scaling claim**. This is a Day 3 finding that affects D-5 user decision.
+If Phase 3 heuristic is wrong about $\vert \partial S\vert $ dependence, then the **D-5 canonical proposal text contains an unverified scaling claim**. This is a Day 3 finding that affects D-5 user decision.
 
 ### §5.3 Recommended D-5 text revision
 
@@ -288,10 +288,10 @@ Per `01_canonical_promotion_queue_review.md` §2 D-5 (current), the proposal tex
 **Right**:
 - Order of magnitude $\mu \sim \alpha \sim \beta\xi_0^2$ matches empirical at NQ-173.
 - Sharp-interface scaling check (§4.7) gives finite limit, consistent with V5b-T' non-Goldstone interpretation.
-- Independence of $|\partial S|$ if §4 derivation is correct — non-trivial physical prediction.
+- Independence of $\vert \partial S\vert $ if §4 derivation is correct — non-trivial physical prediction.
 
 **Possibly wrong**:
-- The cancellation of $|\partial S|$ between $V_0$ and $\lVert \delta u \rVert^2$ — both scale as $|\partial S|$, so ratio is constant. But the *coefficients* of these scalings have different geometric origins (gradient energy vs profile-overlap norm). The ratio "2" is approximate; could be off by factor 2-3.
+- The cancellation of $\vert \partial S\vert $ between $V_0$ and $\lVert \delta u \rVert^2$ — both scale as $\vert \partial S\vert $, so ratio is constant. But the *coefficients* of these scalings have different geometric origins (gradient energy vs profile-overlap norm). The ratio "2" is approximate; could be off by factor 2-3.
 - Sub-leading corrections (curvature of cluster boundary; corner contributions for corner-saturated cluster) not analyzed.
 
 ### §6.2 Why is Cat A hard?
@@ -300,11 +300,11 @@ Several technical obstacles:
 
 1. **Discrete-Γ-limit error analysis**: Going beyond Modica-Mortola Γ-convergence (which gives leading-order surface tension) to capture lattice-correction $V_0$ term requires next-order asymptotic analysis on lattice. This is genuinely technical; involves both Allen-Cahn machinery and discrete Fourier analysis.
 
-2. **Cluster shape dependence**: Real clusters have non-trivial geometry (corners for square clusters; smooth boundaries for circular). $V_0$ depends on $\int |\nabla u^*|^2$ along boundary, which has boundary-curvature corrections.
+2. **Cluster shape dependence**: Real clusters have non-trivial geometry (corners for square clusters; smooth boundaries for circular). $V_0$ depends on $\int \vert \nabla u^*\vert ^2$ along boundary, which has boundary-curvature corrections.
 
 3. **Corner-saturation regime specifics**: V5b-T' assumes corner-saturated cluster (R3b regime). Corners have higher gradient energy; PN-barrier amplitude near corners is enhanced. This is **lost** in the §4 sharp-interface analysis (assumed smooth boundary).
 
-4. **Interaction with cluster Goldstone wavefunction**: My §4.4 calculation used quadratic approximation $V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0|\boldsymbol\xi|^2$. For larger PN-barrier (sub-lattice), the wavefunction is localized in a small region near $\boldsymbol\xi = 0$; tight-binding analysis appropriate. For weaker barrier, plane-wave analysis with band gap.
+4. **Interaction with cluster Goldstone wavefunction**: My §4.4 calculation used quadratic approximation $V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0\vert \boldsymbol\xi\vert ^2$. For larger PN-barrier (sub-lattice), the wavefunction is localized in a small region near $\boldsymbol\xi = 0$; tight-binding analysis appropriate. For weaker barrier, plane-wave analysis with band gap.
 
 ### §6.3 Cat A refined path: WKB + tight-binding
 
@@ -313,7 +313,7 @@ Several technical obstacles:
 1. **Sharp-interface limit**: $u^* = \mathbf{1}_S$ in continuum; PN-barrier $V_{\mathrm{PN}}(\mathbf{x}_*)$ is the energy of cluster centered at $\mathbf{x}_*$.
 
 2. **Cluster-translation effective Schrödinger**: $\hat H_{\mathrm{eff}} = -\hbar^2 \partial^2_{\mathbf{x}_*}/(2 M_{\mathrm{cluster}}) + V_{\mathrm{PN}}(\mathbf{x}_*)$, where:
-   - $\hbar^2/M_{\mathrm{cluster}} = $ inverse cluster inertia from gradient norm $\int |\nabla u^*|^2 = c_W \cdot |\partial S|/\xi_0$.
+   - $\hbar^2/M_{\mathrm{cluster}} = $ inverse cluster inertia from gradient norm $\int \vert \nabla u^*\vert ^2 = c_W \cdot \vert \partial S\vert /\xi_0$.
    - $V_{\mathrm{PN}}(\mathbf{x}_*)$ is $a$-periodic with amplitude $V_0$.
 
 3. **Tight-binding band structure**: For sub-lattice $\xi_0 < a$, $V_0$ is large; cluster wavefunction is localized; band gap (Goldstone eigenvalue) is $\sim V_0$ scale. For super-lattice $\xi_0 > a$, $V_0$ is exponentially small; band gap exponentially small.
@@ -344,7 +344,7 @@ Alternative: rigorous discrete Allen-Cahn / Modica-Mortola analysis, computing t
 **Estimated runtime**: ~30 min (4 mass values × 5 seeds × 1-2 min per Hessian-eigvec computation).
 
 **NQ-198b (Cat A WKB + tight-binding derivation; W7+).** Rigorous derivation of $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}}$ via cluster-translation effective Schrödinger Hamiltonian. Includes:
-- Closed-form $V_0$ amplitude as function of $(\xi_0/a, \beta, |\partial S|, \text{shape})$.
+- Closed-form $V_0$ amplitude as function of $(\xi_0/a, \beta, \vert \partial S\vert, \text{shape})$.
 - Tight-binding band structure for sub-lattice.
 - Plane-wave band structure for super-lattice.
 - WKB interpolation across regime R3a/R3b boundary.

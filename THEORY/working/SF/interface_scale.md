@@ -39,12 +39,12 @@ Define $\xi_0 := \sqrt{\alpha/\beta}$, the natural interface width for $\mathcal
 ### 2.1 Formal statement
 
 > **Cor 2.2 (qualitative, interface concentration).** Let $G$ be a finite connected graph, $u^\ast$ any local minimizer of $\mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$, $A^\ast := \{x : u^\ast_x \geq 0.5\}$, $B(u^\ast) := \{x : 0.1 < u^\ast_x < 0.9\}$. Then
-> $$|B(u^\ast)| \;\leq\; \frac{16}{\ln 9}\cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^\ast)}{\beta} \;=\; O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big) \;=\; O(\xi_0\cdot \mathrm{Per}_G(A^\ast)).$$
+> $$\vert B(u^\ast)\vert \;\leq\; \frac{16}{\ln 9}\cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^\ast)}{\beta} \;=\; O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big) \;=\; O(\xi_0\cdot \mathrm{Per}_G(A^\ast)).$$
 
 ### 2.2 Proof
 
 See `logs/daily/2026-04-22/02_development.md` §4.2 for the three-step proof:
-1. Boundary-band lower bound $\mathcal{E}_{\mathrm{bd}} \geq \beta|B|/16$ (elementary: $W(u) \geq 1/16$ on $(0.1, 0.9)$ after normalization).
+1. Boundary-band lower bound $\mathcal{E}_{\mathrm{bd}} \geq \beta\vert B\vert /16$ (elementary: $W(u) \geq 1/16$ on $(0.1, 0.9)$ after normalization).
 2. Modica-Mortola upper bound $\mathcal{E}_{\mathrm{bd}}(u^\ast) \leq C_\ast\sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)$ (canonical T11 Cat A).
 3. Combine: $\lvert B \rvert \leq (16/\ln 9)\cdot C_\ast\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G = O(\xi_0\cdot \mathrm{Per})$. ∎
 
@@ -73,17 +73,17 @@ All three confirm the qualitative statement $\lvert B \rvert/\mathrm{Per} \propt
 > **Cor 2.2 (quantitative, tanh ansatz).** Let the configuration $u^{\mathrm{tanh}}(x)$ on 2D square grid be the radial profile
 > $$u^{\mathrm{tanh}}(x) = \tfrac{1}{2}\big(1 - \tanh\!\big(s(x)/\xi_0\big)\big),$$
 > where $s(x)$ is the signed distance from a circular interface. Then
-> $$\frac{|B(u^{\mathrm{tanh}})|}{\mathrm{Per}_G(A^{\mathrm{tanh}})} \;=\; \frac{\pi\ln 9}{2}\cdot \xi_0 \;+\; O(1/\sqrt n) \;\approx\; 3.449\cdot \xi_0.$$
+> $$\frac{\vert B(u^{\mathrm{tanh}})\vert}{\mathrm{Per}_G(A^{\mathrm{tanh}})} \;=\; \frac{\pi\ln 9}{2}\cdot \xi_0 \;+\; O(1/\sqrt n) \;\approx\; 3.449\cdot \xi_0.$$
 
 ### 3.2 Derivation (analytic, grid-invariant constant)
 
 See `logs/daily/2026-04-22/02_development.md` §4.4. Five steps:
 
 1. **Interval width at $0.1 < u < 0.9$.** Solving $\tanh(s/\xi_0) = \pm 0.8$: $s/\xi_0 = \pm \tfrac{1}{2}\ln 9$. Total width: $\ln 9\cdot \xi_0 \approx 2.197\cdot \xi_0$.
-2. **Continuum boundary-band area.** $|B_{\mathrm{cts}}| = \mathrm{Per}_{\mathrm{cts}}\cdot \ln 9 \cdot \xi_0$.
+2. **Continuum boundary-band area.** $\vert B_{\mathrm{cts}}\vert = \mathrm{Per}_{\mathrm{cts}}\cdot \ln 9 \cdot \xi_0$.
 3. **Grid-to-continuum perimeter factor.** $\mathrm{Per}_{\mathrm{edge}} = (2/\pi)\cdot \mathrm{Per}_{\mathrm{cts}}$ on 4-connected grid. Hence $\mathrm{Per}_{\mathrm{cts}} = (\pi/2)\mathrm{Per}_{\mathrm{edge}}$.
-4. **Grid boundary-band count.** $|B_{\mathrm{sites}}| \approx |B_{\mathrm{cts}}|$ (lattice spacing 1).
-5. **Ratio.** $|B_{\mathrm{sites}}|/\mathrm{Per}_{\mathrm{edge}} = \mathrm{Per}_{\mathrm{cts}}\ln 9\, \xi_0 / ((2/\pi)\mathrm{Per}_{\mathrm{cts}}) = (\pi\ln 9/2)\cdot \xi_0 \approx 3.449\cdot \xi_0$. ∎
+4. **Grid boundary-band count.** $\vert B_{\mathrm{sites}}\vert \approx \vert B_{\mathrm{cts}}\vert $ (lattice spacing 1).
+5. **Ratio.** $\vert B_{\mathrm{sites}}\vert /\mathrm{Per}_{\mathrm{edge}} = \mathrm{Per}_{\mathrm{cts}}\ln 9\, \xi_0 / ((2/\pi)\mathrm{Per}_{\mathrm{cts}}) = (\pi\ln 9/2)\cdot \xi_0 \approx 3.449\cdot \xi_0$. ∎
 
 ### 3.3 Numerical verification (Round 17 exp_interface_ansatz)
 

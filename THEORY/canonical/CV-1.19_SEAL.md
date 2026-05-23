@@ -100,7 +100,7 @@ is the *Łojasiewicz constant* on the compact parameter set $K$.
 
 $$c_G(\text{2D torus 16×16}, c=1/2, \beta=1) \approx 1.171$$
 
-**Validity radius**: $d \leq d_{\max}(K) \approx 0.044$ (Lipschitz remainder bound, $d_{\max} = c_G / |H_\mu|_{op}$ with $|H_\mu|_{op} \leq \sqrt{720}$ for $\beta=1$).
+**Validity radius**: $d \leq d_{\max}(K) \approx 0.044$ (Lipschitz remainder bound, $d_{\max} = c_G / \vert H_\mu\vert _{op}$ with $\vert H_\mu\vert _{op} \leq \sqrt{720}$ for $\beta=1$).
 
 **Verification**: 3-source consistency (per W8-Day3 02):
 - Manual symbolic: $\sqrt{16 \cdot (0.1522)^2 + (-1)^2 + 0} = \sqrt{1.371} \approx 1.171$

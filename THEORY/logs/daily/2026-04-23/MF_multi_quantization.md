@@ -307,7 +307,7 @@ Constraints:
 Modulo $\mathrm{Aut}(G)$: translations (2 for torus, 0 for free-BC square), rotations (4 for D_4).
 
 Heuristic dim:
-$$\dim \mathcal{M}_K \approx 3K - 1 - |\mathrm{Aut}(G)_{\mathrm{continuous}}|.$$
+$$\dim \mathcal{M}_K \approx 3K - 1 - \vert \mathrm{Aut}(G)_{\mathrm{continuous}}\vert.$$
 
 For 2D free-BC square (only discrete rotations): $\dim \mathcal{M}_K \approx 3K - 1$.
 For 2D torus (2 continuous translations): $\dim \mathcal{M}_K \approx 3K - 3$.

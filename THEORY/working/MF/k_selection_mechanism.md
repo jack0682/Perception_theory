@@ -82,7 +82,7 @@ where $E^*(K)$ is the SCC energy of the K-minimum-energy K-formation configurati
 **SCC-specific subtleties**:
 
 - SCC at zero noise (canonical default) has **no temperature parameter**. The natural $T$-analog is the protocol's noise scale (P-F flag in working/E framing) or the inverse of $\beta$ (closure scale).
-- Configurational entropy: per Commitment 14-Multi (D-6a), σ-class count on $\widetilde\Sigma^{K_{\mathrm{field}},\circ}_M$ is finite; one obtains $S_{\mathrm{config}}(K) = \log |\Omega_K|$ where $\Omega_K = \{[\sigma_{\mathrm{multi}}^A] : K_{\mathrm{act}} = K\}$.
+- Configurational entropy: per Commitment 14-Multi (D-6a), σ-class count on $\widetilde\Sigma^{K_{\mathrm{field}},\circ}_M$ is finite; one obtains $S_{\mathrm{config}}(K) = \log \vert \Omega_K\vert $ where $\Omega_K = \{[\sigma_{\mathrm{multi}}^A] : K_{\mathrm{act}} = K\}$.
 - $E^*(K)$ is computable from the K-field minimizer via `scc/multi.py` per fixed K.
 
 **Cat target**: C. Requires (i) explicit T-parameter introduction (extends canonical with thermal layer), (ii) entropy formula validation on R23, (iii) crossover empirical confirmation.
@@ -117,7 +117,7 @@ where $\Delta E(K \to K')$ is the energy barrier separating the K-active basin f
 ### §3.3 Candidate (c): Symmetry-Broken Automorphism-Stabilizer Selection (NEW)
 
 **Statement (informal):** Among the K-minimum configurations $\{u^*(K) : K \in \{1, \ldots, K_{\mathrm{field}}\}\}$, the protocol selects the K with **smallest local automorphism stabilizer**:
-$$K_{\mathrm{act}}^{(c)} = \arg\min_{K} \dim \mathrm{Aut}(G)_{u^*(K)} \quad \text{(or } \arg\min_K |\mathrm{Aut}(G)_{u^*(K)}|\text{ for finite groups)}$$
+$$K_{\mathrm{act}}^{(c)} = \arg\min_{K} \dim \mathrm{Aut}(G)_{u^*(K)} \quad \text{(or } \arg\min_K \vert \mathrm{Aut}(G)_{u^*(K)}\vert \text{ for finite groups)}$$
 where $\mathrm{Aut}(G)_{u^*(K)} := \{\phi \in \mathrm{Aut}(G) : \phi^* u^*(K) = u^*(K)\}$ is the stabilizer of $u^*(K)$ under graph-automorphism action.
 
 **Reading**: K_act is the most **symmetry-broken** value — the configuration whose automorphism stabilizer is smallest among the candidates.
@@ -183,7 +183,7 @@ $$E^*(K; G, \beta, \alpha, c) := \min_{\mathbf{u} \in \widetilde\Sigma^{K_{\math
 i.e., the minimum SCC energy over K-field minimizers with specified active count $K$. (Computable via `scc/multi.py` per fixed K, restricted to active-count stratum.)
 
 For configurational entropy, define
-$$S_{\mathrm{config}}(K; G) := \log\left|\Omega_K\right|, \qquad \Omega_K := \{[\sigma_{\mathrm{multi}}^A(\mathbf{u}^*(K))] : \mathbf{u}^*(K) \in \arg\min_{K_{\mathrm{act}} = K} \mathcal{E}_K\}$$
+$$S_{\mathrm{config}}(K; G) := \log\left\vert \Omega_K\right\vert, \qquad \Omega_K := \{[\sigma_{\mathrm{multi}}^A(\mathbf{u}^*(K))] : \mathbf{u}^*(K) \in \arg\min_{K_{\mathrm{act}} = K} \mathcal{E}_K\}$$
 i.e., the log of the number of distinct σ-classes (under $S_{K_{\mathrm{field}}}$ multi-set treatment, Definition 5.1(c) of `multi_formation_sigma.md`) achievable at active count K. Finite by Commitment 14-Multi finiteness (D-6a, CV-1.5.1, Cat A).
 
 ### §5.2 Free-energy form
@@ -205,7 +205,7 @@ Using the 56 distinct minimizers from `sigma_class_count_R23.json`:
 | 2 | (axis or diagonal split) | mid | suppressed | competitive |
 | 4 | (quadrant-localized) | highest | suppressed | competitive |
 
-**Concrete numeric prediction (NQ-301 deliverable)**: Run `scc/multi.py` per fixed-K_act stratum; extract $E^*(K)$ and $|\Omega_K|$; compute $T_c$; check whether observed adaptive-IC R23 distribution (W4 04-23, 90 runs) matches $T_c$ implied by protocol noise.
+**Concrete numeric prediction (NQ-301 deliverable)**: Run `scc/multi.py` per fixed-K_act stratum; extract $E^*(K)$ and $\vert \Omega_K\vert $; compute $T_c$; check whether observed adaptive-IC R23 distribution (W4 04-23, 90 runs) matches $T_c$ implied by protocol noise.
 
 If protocol noise scale $T_{\mathrm{eff}} \approx T_c$, candidate (a) is *empirically anchored*. Otherwise, candidate (a) is rejected (or refined with non-trivial $S_{\mathrm{config}}$ formula).
 
@@ -235,7 +235,7 @@ quotienting by the joint graph-automorphism × formation-permutation action.
 
 ### §6.2 Selection rule
 
-$$K_{\mathrm{act}}^{(c)} := \arg\min_{K \in \{1, \ldots, K_{\mathrm{field}}\}} \left|\mathrm{Aut}(G)_{[\mathbf{u}^*(K)]}\right|$$
+$$K_{\mathrm{act}}^{(c)} := \arg\min_{K \in \{1, \ldots, K_{\mathrm{field}}\}} \left\vert \mathrm{Aut}(G)_{[\mathbf{u}^*(K)]}\right\vert $$
 
 with ties broken by lower energy ($E^*$).
 
@@ -353,7 +353,7 @@ The R23 90-run dataset (W4 04-23, c=0.5, β=30, 32×32 free-BC D₄, 3 IC modes 
 Existing: `scripts/sigma_class_count_R23.py` + `results/sigma_class_count_R23.json` give 56 distinct minimizers and σ-class enumeration. **Missing**:
 
 1. Per-K_act-stratum $E^*(K)$ values (subset of existing minimizers, organized by K_act).
-2. $|\Omega_K|$ = σ-class count per K_act stratum (computable from existing JSON).
+2. $\vert \Omega_K\vert $ = σ-class count per K_act stratum (computable from existing JSON).
 3. Per-IC-mode $K_{\mathrm{act}}$ histogram (was the dataset organized by IC mode? verify in scripts/results/).
 4. $\mathrm{Aut}(G)_{[\mathbf{u}^*]}$ per minimizer (NEW computation — graph-automorphism stabilizer).
 5. Per-IC-mode horizon-dependent K_act trajectory (for kinetic candidate (b)).
@@ -389,7 +389,7 @@ Three new NQ items registered:
 
 ### §11.1 NQ-301 (Free-energy)
 
-- Compute $E^*(K)$ and $|\Omega_K|$ from existing R23 56-minimizer data; estimate $T_c$.
+- Compute $E^*(K)$ and $\vert \Omega_K\vert $ from existing R23 56-minimizer data; estimate $T_c$.
 - Run `scc/multi.py` with synthetic-noise injection at $T \in \{0, 0.5 T_c^{\mathrm{est}}, T_c^{\mathrm{est}}, 2 T_c^{\mathrm{est}}\}$; check K_act crossover.
 - Deliverable: `working/MF/k_selection_free_energy.md` (Wave 4) + numerical results.
 
@@ -402,7 +402,7 @@ Three new NQ items registered:
 
 ### §11.3 NQ-303 (Bayesian)
 
-- Specify Gibbs likelihood $P(u | K, G; \beta) \propto \exp(-\beta \mathcal{E}_K)$.
+- Specify Gibbs likelihood $P(u \vert K, G; \beta) \propto \exp(-\beta \mathcal{E}_K)$.
 - Compute BIC per K on R23 minimizers; identify K minimizing BIC.
 - Compare with chi-squared on adaptive-IC histogram.
 - Deliverable: `working/MF/k_selection_bayesian.md` (Wave 4 W8+) + BIC table.

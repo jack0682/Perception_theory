@@ -44,7 +44,7 @@ The fix: read V2 in the **stratified** sense.
 > a closed set of codimension $\ge 1$ (the branch-switching set) and
 > $\mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}}$ open and dense, such that:
 >
-> 1. $V|_{\mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}}} \in C^2$ and Morse on $\mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}}$ (finite, non-degenerate critical points
+> 1. $V\vert _{\mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}}} \in C^2$ and Morse on $\mathcal{M}_{\mathrm{obs}}^{\mathrm{reg}}$ (finite, non-degenerate critical points
 >    in the open stratum).
 > 2. Across $\Sigma$, $V$ is continuous and admits one-sided directional
 >    derivatives that may differ.

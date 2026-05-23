@@ -528,7 +528,7 @@ to the discrete-subgroup case.
 
 **Statement.** Theorem R2 (`op_oms_018_regular_u_star.md`) assumes LICQ. At
 a corner of $\Omega$ where many box constraints are simultaneously active
-(say $|A^=_0 \cup A^=_n| = n - 1$), R2 may fail. Establish a
+(say $\vert A^=_0 \cup A^=_n\vert = n - 1$), R2 may fail. Establish a
 directional-derivative version of $u^*(\lambda)$ regularity at corners
 using Mordukhovich generalized differentiation or tangent-cone analysis.
 

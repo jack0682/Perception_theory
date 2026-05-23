@@ -20,7 +20,7 @@
 > Let $G = (X, E)$ be a finite simple connected graph, $\Gamma = \text{Aut}(G)$, $\mathcal{E} : \Sigma_m \to \mathbb{R}$ the SCC energy with $b_D = 0$ and $\mathcal{E}_\text{tr}$ omitted (single-time formation analysis). Suppose $u^* \in \Sigma_m$ is a Morse-index-0 local minimum of $\mathcal{E}$ on $\Sigma_m$.
 >
 > **(S1'-i) Local-maxima count.** The integer
-> $$\mathcal{F}(u^*) := |\{i \in X : u^*(i) > u^*(j) \text{ for all } j \sim i\}|$$
+> $$\mathcal{F}(u^*) := \vert \{i \in X : u^*(i) > u^*(j) \text{ for all } j \sim i\}\vert $$
 > is the **threshold-independent formation count** of $u^*$.
 >
 > **(S1'-ii) Spectral signature.** Fix a cutoff $K \leq n - 1$ via the spectral-gap rule
@@ -120,7 +120,7 @@ R23 의 A-01 (Cat A empirical) 의 statement 가 Theorem 1 (`02_development.md` 
 
 ### 2.2 수정 권고 (revised A-01)
 
-> **A-01' (revised 2026-04-24).** Across all tested configurations (16×16, 32×32 free-BC grids), the lowest non-trivial mode of $H(u^*)|_{\mathbf{1}^\perp}$ at any bulk-localized stable minimizer $u^*$ has eigenvalue $\lambda_0 \ll \lambda_1$ and angular multipole power concentrated in the ℓ=1 channel. Per Theorem 1 (`THEORY/logs/daily/2026-04-24/02_development.md` §5), this Mode 0 is the **translation pseudo-Goldstone** carrying the $E$ irrep of $D_4$, with $\lambda_0 = O(\exp(-d_*/\xi_0))$. **It is not a genuine orbital excitation** in the same sense as ℓ ≥ 2 modes; the apparent "p-dominant" character reflects the basis $(x, y)$ of the $E$ irrep matching ℓ=1 angular Fourier components.
+> **A-01' (revised 2026-04-24).** Across all tested configurations (16×16, 32×32 free-BC grids), the lowest non-trivial mode of $H(u^*)\vert _{\mathbf{1}^\perp}$ at any bulk-localized stable minimizer $u^*$ has eigenvalue $\lambda_0 \ll \lambda_1$ and angular multipole power concentrated in the ℓ=1 channel. Per Theorem 1 (`THEORY/logs/daily/2026-04-24/02_development.md` §5), this Mode 0 is the **translation pseudo-Goldstone** carrying the $E$ irrep of $D_4$, with $\lambda_0 = O(\exp(-d_*/\xi_0))$. **It is not a genuine orbital excitation** in the same sense as ℓ ≥ 2 modes; the apparent "p-dominant" character reflects the basis $(x, y)$ of the $E$ irrep matching ℓ=1 angular Fourier components.
 >
 > The first **non-Goldstone** orbital excitation is Mode 1, with angular power 0.38–0.41 in the ℓ=2 channel, irrep label $\in \{B_1, B_2\}$ generically. **Cat A empirical** (existence of mode hierarchy); **Cat B** (Mode 0 = Goldstone interpretation, pending direct verification of $\lambda_0 \ll \lambda_1$ on R23 dataset).
 

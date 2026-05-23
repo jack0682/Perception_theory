@@ -47,9 +47,9 @@
 
 ## §3. Cross-Sweep Analysis
 
-### §3.1 Test against Phase 3 heuristic ($\mu \propto |\partial S| / \xi_0$ at fixed β)
+### §3.1 Test against Phase 3 heuristic ($\mu \propto \vert \partial S\vert / \xi_0$ at fixed β)
 
-At fixed β=4, ξ_0=0.5: Phase 3 predicts $\mu = A_{\mathrm{R3b}} \cdot \beta \cdot |\partial S| / \xi_0 = 8 A_{\mathrm{R3b}} \cdot |\partial S|$.
+At fixed β=4, ξ_0=0.5: Phase 3 predicts $\mu = A_{\mathrm{R3b}} \cdot \beta \cdot \vert \partial S\vert / \xi_0 = 8 A_{\mathrm{R3b}} \cdot \vert \partial S\vert $.
 
 Fitting $A_{\mathrm{R3b}}$ per data point (predicted/observed = $A_{\mathrm{R3b}}^{-1}$):
 
@@ -64,7 +64,7 @@ Fitting $A_{\mathrm{R3b}}$ per data point (predicted/observed = $A_{\mathrm{R3b}
 
 $A_{\mathrm{R3b}}$ varies by factor 4× across setups → **Phase 3 form is NOT a single coefficient × universal scaling**. Phase 3 captures fixed-L behavior (sweep a coefficient ~0.0041 ± 0.0002) but FAILS to capture L-dependence (sweep b coefficient drops to 0.001-0.002).
 
-**Phase 3 heuristic is wrong about pure $|\partial S|$ scaling**.
+**Phase 3 heuristic is wrong about pure $\vert \partial S\vert $ scaling**.
 
 ### §3.2 Test against Day 3 §4 derivation ($\mu \approx 2\alpha = $ const)
 
@@ -72,9 +72,9 @@ Predicted constant μ ≈ 2 (with α=1, β=4, ξ_0=0.5).
 
 Observed μ ∈ [0.381, 1.750]. Variation factor 4.6×. **Far from constant** — Day 3 §4 is wrong.
 
-### §3.3 Discovery: $\mu \propto |\partial S| / n$ where $n = L^2$
+### §3.3 Discovery: $\mu \propto \vert \partial S\vert / n$ where $n = L^2$
 
-Compute $\mu \cdot n / |\partial S|$ across all 6 valid data points:
+Compute $\mu \cdot n / \vert \partial S\vert $ across all 6 valid data points:
 
 | Setup | μ | \|∂S\| | n | $\mu \cdot n / \lvert ∂S \rvert$ |
 |---|---|---|---|---|
@@ -87,34 +87,34 @@ Compute $\mu \cdot n / |\partial S|$ across all 6 valid data points:
 
 **Coefficient nearly constant!** Mean = 13.21, std = 0.40 (3% variation). The empirical scaling is
 
-$$\boxed{\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx C \cdot \frac{|\partial S|}{n}, \quad C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4} \tag{7.3.1}$$
+$$\boxed{\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx C \cdot \frac{\vert \partial S\vert}{n}, \quad C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4} \tag{7.3.1}$$
 
 **Hypothesis**: $C = \pi \beta = 4\pi \approx 12.57$, matching observed 13.2 within 5%. Or $C = \beta \cdot c_W^{-1}$ where $c_W = \sqrt{2}/6 \approx 0.236$ (Modica-Mortola constant), giving $C \approx 4/0.236 \approx 16.95$ — overshoots.
 
-Best dimensional guess: **$\mu \approx \pi \beta \cdot |\partial S|/n = \pi \cdot \alpha/\xi_0^2 \cdot |\partial S|/n$**.
+Best dimensional guess: **$\mu \approx \pi \beta \cdot \vert \partial S\vert /n = \pi \cdot \alpha/\xi_0^2 \cdot \vert \partial S\vert /n$**.
 
 (Cannot definitively pin $\beta$- and $\xi_0$-dependence without full sweep — spawn NQ-198e.)
 
 ### §3.4 Why μ ∝ 1/n?
 
-Physical interpretation: the Goldstone-like eigenvector is a **collective translation** of the cluster. On a finite system of size n, the volume-projection $P = I - \frac{1}{n}\mathbf{1}\mathbf{1}^T$ subtracts the mean — but on free-BC graph, the translation perturbation $\partial_x u^*$ has *non-zero mean* (boundary integration by parts has $u(L) \neq 0$ residual). The volume-projection subtracts this nonzero mean, giving a perturbation with norm proportional to $|\partial S|/n$.
+Physical interpretation: the Goldstone-like eigenvector is a **collective translation** of the cluster. On a finite system of size n, the volume-projection $P = I - \frac{1}{n}\mathbf{1}\mathbf{1}^T$ subtracts the mean — but on free-BC graph, the translation perturbation $\partial_x u^*$ has *non-zero mean* (boundary integration by parts has $u(L) \neq 0$ residual). The volume-projection subtracts this nonzero mean, giving a perturbation with norm proportional to $\vert \partial S\vert /n$.
 
-Specifically: $\lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ in continuum, but after volume projection $\lVert P \partial_x u^* \rVert^2 \sim |\partial S|^2 / n$ (the boundary residual scaled by 1/n). Hessian quadratic form $\langle \partial_x u^*, H \partial_x u^* \rangle \sim$ surface tension $\times |\partial S|$, divided by squared norm $\sim |\partial S|^2/n \cdot$ (some factor). Ratio: $\mu \sim |\partial S| / |\partial S|^2 \cdot n = n / |\partial S|$.
+Specifically: $\lVert \partial_x u^* \rVert^2 \sim \vert \partial S\vert /\xi_0$ in continuum, but after volume projection $\lVert P \partial_x u^* \rVert^2 \sim \vert \partial S\vert ^2 / n$ (the boundary residual scaled by 1/n). Hessian quadratic form $\langle \partial_x u^*, H \partial_x u^* \rangle \sim$ surface tension $\times \vert \partial S\vert $, divided by squared norm $\sim \vert \partial S\vert ^2/n \cdot$ (some factor). Ratio: $\mu \sim \vert \partial S\vert / \vert \partial S\vert ^2 \cdot n = n / \vert \partial S\vert $.
 
-That gives $\mu \propto n/|\partial S|$ — **opposite** of observed!
+That gives $\mu \propto n/\vert \partial S\vert $ — **opposite** of observed!
 
 Hmm, my heuristic is wrong. Let me redo.
 
-Actually: $\langle \partial_x u^*, H \partial_x u^* \rangle$ in continuum is **zero** (translation invariance). On lattice, it's non-zero due to PN-barrier — proportional to $V_0 \sim \alpha |\partial S|/\xi_0$ from §4.3 of `05_*`.
+Actually: $\langle \partial_x u^*, H \partial_x u^* \rangle$ in continuum is **zero** (translation invariance). On lattice, it's non-zero due to PN-barrier — proportional to $V_0 \sim \alpha \vert \partial S\vert /\xi_0$ from §4.3 of `05_*`.
 
 Squared norm of projected $\partial_x u^*$:
-- Pre-projection: $\lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ (gradient localized to perimeter).
+- Pre-projection: $\lVert \partial_x u^* \rVert^2 \sim \vert \partial S\vert /\xi_0$ (gradient localized to perimeter).
 - Mean: $\sum_x \partial_x u^*(x) = u^*(L) - u^*(0) \sim 1$ on free BC (nonzero).
 - After projection: $\lVert P \partial_x u^* \rVert^2 = \lVert \partial_x u^* \rVert^2 - (mean)^2 \cdot n / n^2 \cdot n = \lVert \partial_x u^* \rVert^2 - 1/n$. The 1/n correction is small for large n.
 
-So projected norm $\approx \lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ to leading order.
+So projected norm $\approx \lVert \partial_x u^* \rVert^2 \sim \vert \partial S\vert /\xi_0$ to leading order.
 
-μ ratio: $V_0 / \lVert \partial_x u^* \rVert^2 = (\alpha |\partial S|/\xi_0) / (|\partial S|/\xi_0) = \alpha$. CONSTANT — recovers `05_*` §4 prediction.
+μ ratio: $V_0 / \lVert \partial_x u^* \rVert^2 = (\alpha \vert \partial S\vert /\xi_0) / (\vert \partial S\vert /\xi_0) = \alpha$. CONSTANT — recovers `05_*` §4 prediction.
 
 But empirical data says μ ∝ |∂S|/n ≠ const. **Where does the 1/n come from?**
 
@@ -134,11 +134,11 @@ Honestly I don't have a clean derivation that produces μ ∝ |∂S|/n. The empi
 
 ### §4.1 Key result
 
-**Phase 3 V5b-T'-(c) heuristic** ($\mu \propto |\partial S|/\xi_0$): WRONG. Captures fixed-L scaling but misses L-dependence.
+**Phase 3 V5b-T'-(c) heuristic** ($\mu \propto \vert \partial S\vert /\xi_0$): WRONG. Captures fixed-L scaling but misses L-dependence.
 
-**Day 3 §4 derivation** ($\mu \approx 2\alpha = $ const): WRONG. Misses both $|\partial S|$ and L scaling.
+**Day 3 §4 derivation** ($\mu \approx 2\alpha = $ const): WRONG. Misses both $\vert \partial S\vert $ and L scaling.
 
-**Empirical truth**: $\mu \approx C \cdot |\partial S|/n$ with $C(\beta=4, \xi_0=0.5) \approx 13.2$. Possibly $C \approx \pi\beta$.
+**Empirical truth**: $\mu \approx C \cdot \vert \partial S\vert /n$ with $C(\beta=4, \xi_0=0.5) \approx 13.2$. Possibly $C \approx \pi\beta$.
 
 ### §4.2 Methodological observation
 
@@ -148,15 +148,15 @@ This is exactly the kind of result the meta-prompt §4.4 + §7 explicit-failure-
 
 ### §4.3 What was missed
 
-Both `05_*` §4 (continuum derivation) and Phase 3 (analogy to dislocation theory) treated V5b-T'-(c) as a **bulk** phenomenon — energy/norm both scale as $|\partial S|$ extensively, ratio constant.
+Both `05_*` §4 (continuum derivation) and Phase 3 (analogy to dislocation theory) treated V5b-T'-(c) as a **bulk** phenomenon — energy/norm both scale as $\vert \partial S\vert $ extensively, ratio constant.
 
-The empirical 1/n scaling indicates V5b-T'-(c) is a **finite-size collective mode** — the Goldstone-like eigenvalue depends not just on cluster perimeter but on cluster-fraction-of-system $|\partial S|/n$. This is **explicit finite-size physics not present in the continuum limit**.
+The empirical 1/n scaling indicates V5b-T'-(c) is a **finite-size collective mode** — the Goldstone-like eigenvalue depends not just on cluster perimeter but on cluster-fraction-of-system $\vert \partial S\vert /n$. This is **explicit finite-size physics not present in the continuum limit**.
 
 In thermodynamic limit n → ∞ at fixed cluster: μ → 0. Recovers continuum Goldstone (translation invariance).
 
 ### §4.4 Cat status of the finding
 
-**Empirical Cat B**: $\mu \approx 13 |\partial S|/n$ at β=4, ξ_0=0.5, free-BC, R3b regime. 6 corner-saturated data points; no exceptions; coefficient std/mean ~3%.
+**Empirical Cat B**: $\mu \approx 13 \vert \partial S\vert /n$ at β=4, ξ_0=0.5, free-BC, R3b regime. 6 corner-saturated data points; no exceptions; coefficient std/mean ~3%.
 
 **Cat A path**: Derive 1/n scaling from first principles (NQ-198e new spawn). Suspect connection to volume-projection induced mean-subtraction at finite n.
 
@@ -164,7 +164,7 @@ In thermodynamic limit n → ∞ at fixed cluster: μ → 0. Recovers continuum 
 
 ## §5. Diagnosis: Where Day 3 §4 Missed n-Dependence
 
-In `05_*` §4.4, equations (5.4.4) and (5.4.10) treated $\lVert \delta u \rVert^2$ and $V_0$ as both extensive in $|\partial S|$, giving constant μ. The empirical 1/n shows this is wrong.
+In `05_*` §4.4, equations (5.4.4) and (5.4.10) treated $\lVert \delta u \rVert^2$ and $V_0$ as both extensive in $\vert \partial S\vert $, giving constant μ. The empirical 1/n shows this is wrong.
 
 **Hypothesis**: the volume projection on free-BC graph introduces explicit n-dependence absent from the continuum or torus calculation. The translation perturbation on free BC has nonzero mean (boundary integration); volume projection *subtracts this mean*, but the resulting projected mode has different norm structure.
 
@@ -175,7 +175,7 @@ This is consistent with the empirical observation that **on torus** (translation
 This changes the interpretation:
 
 - **NQ-198a measured V5b-F (free-BC) corner-saturated Goldstone**, NOT V5b-T' (torus).
-- V5b-F: $\mu \approx C |\partial S|/n$ (this finding).
+- V5b-F: $\mu \approx C \vert \partial S\vert /n$ (this finding).
 - V5b-T' (torus): $\mu \approx 2\alpha$ const possible (`05_*` §4 derivation; not directly tested by NQ-198a).
 
 The mass-independence claim of `05_*` §4 may STILL HOLD for V5b-T' on torus; what NQ-198a refuted is its applicability to V5b-F on free-BC.
@@ -184,10 +184,10 @@ The mass-independence claim of `05_*` §4 may STILL HOLD for V5b-T' on torus; wh
 
 **Revised understanding**:
 - `05_*` §4 prediction ($\mu \approx 2\alpha$): possibly correct for V5b-T' (torus), NOT V5b-F (free BC).
-- Phase 3 ($\mu \propto |\partial S|/\xi_0$): wrong for V5b-F at variable L; possibly approximately correct at fixed L.
-- NQ-198a empirical ($\mu \propto |\partial S|/n$): correct for V5b-F at this β=4, ξ_0=0.5.
+- Phase 3 ($\mu \propto \vert \partial S\vert /\xi_0$): wrong for V5b-F at variable L; possibly approximately correct at fixed L.
+- NQ-198a empirical ($\mu \propto \vert \partial S\vert /n$): correct for V5b-F at this β=4, ξ_0=0.5.
 
-**Spawn NQ-198f (urgent)**: Test V5b-T' on torus T²_L for varying (m, L) at fixed β, ξ_0. If torus gives $\mu \approx $ const (independent of n), confirms `05_*` §4 derivation; if torus also gives $\mu \propto |\partial S|/n$, then both regimes agree on the 1/n scaling and `05_*` §4 needs revision.
+**Spawn NQ-198f (urgent)**: Test V5b-T' on torus T²_L for varying (m, L) at fixed β, ξ_0. If torus gives $\mu \approx $ const (independent of n), confirms `05_*` §4 derivation; if torus also gives $\mu \propto \vert \partial S\vert /n$, then both regimes agree on the 1/n scaling and `05_*` §4 needs revision.
 
 ---
 
@@ -258,7 +258,7 @@ Per `06_*` §4.2:
 
 **NQ-198f (urgent W6 Day 1)**: V5b-T' torus mass-dependence test — same setup as NQ-198a but on $T^2_L$ (translation-invariant) instead of free-BC. Resolves whether `05_*` §4 derivation applies to V5b-T' specifically. **Effort**: ~30 min compute. **Priority**: **CRITICAL** for completing V5b family characterization.
 
-**NQ-198g**: β-dependence of $C(\beta, \xi_0)$ in $\mu \approx C |\partial S|/n$. Test β ∈ {1, 2, 4, 8} at fixed L=20, c=0.10. Determines whether $C \propto \beta$ (Phase 3-like) or $C \propto \beta^p$ for some other p. **Effort**: ~30 min compute (4 β-values × 3 seeds × L=20 = 12 attempts). **Priority**: HIGH.
+**NQ-198g**: β-dependence of $C(\beta, \xi_0)$ in $\mu \approx C \vert \partial S\vert /n$. Test β ∈ {1, 2, 4, 8} at fixed L=20, c=0.10. Determines whether $C \propto \beta$ (Phase 3-like) or $C \propto \beta^p$ for some other p. **Effort**: ~30 min compute (4 β-values × 3 seeds × L=20 = 12 attempts). **Priority**: HIGH.
 
 **NQ-198h**: ξ_0-dependence of $C$. At fixed L=20, c=0.10, vary β (and hence ξ_0). Combined with NQ-198g for full $C(\beta, \xi_0)$.
 

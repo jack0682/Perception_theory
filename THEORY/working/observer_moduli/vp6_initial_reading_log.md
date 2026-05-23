@@ -65,7 +65,7 @@ where:
 - $A = \ell_{\max} - \ell_{\mathrm{sec}}$ is the articulation gap (continuous; on a regular branch).
 - $c_{\max} = \max_i u^*_i$ is the peak amplitude (continuous on regular branches).
 
-We also record the **discrete** quantities $K_{\mathrm{core}}$, $n_{\mathrm{high}} = |\{i : u_i > 0.5\}|$
+We also record the **discrete** quantities $K_{\mathrm{core}}$, $n_{\mathrm{high}} = \vert \{i : u_i > 0.5\}\vert $
 as **diagnostics for branch identification** but exclude them from $R_{\mathrm{vec}}$ used in the Jacobian.
 
 ### Tangent basis on the simplex

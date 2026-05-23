@@ -4,7 +4,7 @@
 
 > **⚠️ PARTIAL RETIRE-CANDIDATE (W6 D1 EOD parking-lot Issue #4 audit, 2026-05-04)**
 > **Retire scope:** QCD string-breaking analog framing + 't Hooft 1974 / Bali 2001 / QuEra-Harvard-Innsbruck 2025 cross-domain rhetoric (motivational only; CN10 contrastive — no mathematical import from gauge theory).
-> **Preserve scope:** (1) **NQ-198a empirical anchor** ($C(\beta) \approx 13.2$ at $\beta = 4, \xi_0 = 0.5$ — V5b-F empirical scaling); (2) **R23 F=63 single-web configuration** observation; (3) **Critical boundary-size threshold formulation** $|\partial S|_{\mathrm{crit}}$ from §3 — SCC-intrinsic geometric criterion for formation birth.
+> **Preserve scope:** (1) **NQ-198a empirical anchor** ($C(\beta) \approx 13.2$ at $\beta = 4, \xi_0 = 0.5$ — V5b-F empirical scaling); (2) **R23 F=63 single-web configuration** observation; (3) **Critical boundary-size threshold formulation** $\vert \partial S\vert _{\mathrm{crit}}$ from §3 — SCC-intrinsic geometric criterion for formation birth.
 > **Future split (W7+ recommended):** extract NQ-253 SCC-intrinsic threshold formulation into `working/MF/formation_birth_threshold_NQ253.md`, retire gauge-theory framing to `_archive/cv17_speculative_retired_2026-05-04/`.
 > **5 active inbound references** (n1_kramers_extension, cn15_static_dynamic_separation, sigma_to_crisp_recovery, sigma_topological_invariance, parking_lot_inventory) → split must preserve link integrity.
 > **CN10 disclosure**: SCC formation birth is mass-conserving gradient-flow + double-well dynamics; gauge-theory string breaking is dynamical confinement-deconfinement transition. Structural parallel ("threshold-driven nucleation") is heuristic motivation only; mathematical content is SCC-intrinsic.
@@ -32,10 +32,10 @@ This file formalizes the **formation birth mechanism** in SCC by exploiting the 
 | Gauge theory | SCC analog |
 |---|---|
 | Flux tube / string between static charges | Elongated single formation $u^{(j)}$ in V5b-F regime |
-| String tension $T_{\mathrm{str}}$ | SCC tension proxy $C(\beta) \cdot |\partial S|/n$ (V5b-F mass-gap coefficient) |
-| String length $L$ | Formation boundary size $|\partial S(u^{(j)})|$ |
+| String tension $T_{\mathrm{str}}$ | SCC tension proxy $C(\beta) \cdot \vert \partial S\vert /n$ (V5b-F mass-gap coefficient) |
+| String length $L$ | Formation boundary size $\vert \partial S(u^{(j)})\vert $ |
 | String breaking: new charge pair creation | Formation birth: $K_{\mathrm{act}} \to K_{\mathrm{act}} + 1$ |
-| Critical string length $L_{\mathrm{crit}}$ | Critical boundary $|\partial S|_{\mathrm{crit}}$ |
+| Critical string length $L_{\mathrm{crit}}$ | Critical boundary $\vert \partial S\vert _{\mathrm{crit}}$ |
 
 **NQ-200 cluster connection:** Formation birth ($\Delta K = +1$) is the entry point for the non-involution canonical isomorphism problem for $K \geq 3$ (NQ-200, W7+ undeveloped). This file constitutes the **NQ-253 Phase 1** attack on NQ-200.
 
@@ -57,17 +57,17 @@ This file formalizes the **formation birth mechanism** in SCC by exploiting the 
 - Single connected component ($K_{\mathrm{step}}(u^{(j)*}; \tau_{1/2}) = 1$ for threshold $\tau_{1/2} = 0.5$)
 - Multiple local maxima ($\mathcal{F}(u^{(j)*}) \geq 2$) — two endpoint peaks + possible intermediate peaks
 
-The V5b-F regime is empirically documented (NQ-198a): at $\beta = 4$, $\xi_0 = 0.5$, the formation develops a connecting region with characteristic energy contribution proportional to $|\partial S|$ (boundary size of support set $S(u^{(j)*}) := \{x : u^{(j)*}(x) > \tau\}$).
+The V5b-F regime is empirically documented (NQ-198a): at $\beta = 4$, $\xi_0 = 0.5$, the formation develops a connecting region with characteristic energy contribution proportional to $\vert \partial S\vert $ (boundary size of support set $S(u^{(j)*}) := \{x : u^{(j)*}(x) > \tau\}$).
 
 **Empirical anchor (R23 F=63):** The R23 high-F minimizer with $\mathcal{F} = 63$, $K_{\mathrm{step}} = 1$ (`single_high_F_equivalence.md` §4.2, IC=random, $E = 508.9$) is the extreme SCC string: a single connected formation with 63 local maxima (peaks) connected through a network of shared boundary regions. This is the "maximally stretched" SCC string observed in R23.
 
 ### §2.2 String length proxy
 
 **Definition 2.2 (SCC String Length).** For an SCC string $u^{(j)*}$ with support $S(u^{(j)*}; \tau)$:
-$$L_{\mathrm{str}} := |\partial S(u^{(j)*}; \tau)| = \#\{x \in S : \exists y \sim x,\; y \notin S\}$$
+$$L_{\mathrm{str}} := \vert \partial S(u^{(j)*}; \tau)\vert = \#\{x \in S : \exists y \sim x,\; y \notin S\}$$
 the graph-boundary size (number of nodes in $S$ with at least one neighbor outside $S$). This is the **string length proxy** — a threshold-dependent but monotone measure of the elongation of the formation support.
 
-**Justification**: In the V5b-F regime, the boundary energy $E_{\mathrm{bd}} = 2\alpha \cdot u^{\top} L u \propto |\partial S|$ (canonical §8, boundary term) dominates the shape cost of the elongated formation. The boundary $|\partial S|$ measures how much "surface" the connecting tube exposes.
+**Justification**: In the V5b-F regime, the boundary energy $E_{\mathrm{bd}} = 2\alpha \cdot u^{\top} L u \propto \vert \partial S\vert $ (canonical §8, boundary term) dominates the shape cost of the elongated formation. The boundary $\vert \partial S\vert $ measures how much "surface" the connecting tube exposes.
 
 **Alternative proxy**: For a formation with two separated endpoint peaks at positions $c_1, c_2 \in X$:
 $$L_{\mathrm{str}}^{(\mathrm{alt})} := d_G(c_1, c_2)$$
@@ -76,13 +76,13 @@ the graph distance between endpoints. This is threshold-free but ignores the tub
 ### §2.3 String tension
 
 **Definition 2.3 (SCC String Tension).** From V5b-F mass scaling (NQ-198a empirical, W6+ Cat B):
-$$\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \frac{|\partial S|}{n}$$
+$$\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \frac{\vert \partial S\vert}{n}$$
 where $n = \lvert X \rvert$ is the graph size and $\mu_{\mathrm{Gold}}$ is the Goldstone mode pseudo-mass. The coefficient:
 $$T_{\mathrm{str}} \equiv C(\beta) \approx 13.2 \quad \text{at } \beta = 4,\; \xi_0 = 0.5 \; (\text{NQ-198a empirical})$$
 is interpreted as the **SCC string tension**: energy cost per unit boundary length.
 
 **Natural interpretation**: The energy contribution of the connecting flux tube is:
-$$E_{\mathrm{str}} \approx T_{\mathrm{str}} \cdot L_{\mathrm{str}} = C(\beta) \cdot |\partial S|$$
+$$E_{\mathrm{str}} \approx T_{\mathrm{str}} \cdot L_{\mathrm{str}} = C(\beta) \cdot \vert \partial S\vert $$
 This matches the standard gauge theory string energy formula $E_{\mathrm{str}} = T_{\mathrm{str}} \cdot L$ (Bali 2001). The $1/n$ factor in $\mu_{\mathrm{Gold}}$ is a **thermodynamic limit dilution**: as graph size grows, the string tension contribution per site decreases as $O(1/n)$, consistent with an extensive boundary energy divided by system size.
 
 **Status**: $C(\beta)$ numerical value is empirical (Cat B, NQ-198a). The **functional form $C(\beta)$** as a function of $\beta/\alpha$ and $\xi_0$ is NQ-198k (W6+, Cat C open). The string tension analog requires $C(\beta)$ functional form for a complete theory — this is the primary theoretical gap.
@@ -91,7 +91,7 @@ This matches the standard gauge theory string energy formula $E_{\mathrm{str}} =
 
 The V5b-F mechanism (canonical §13, Cat C empirical with NQ-173 Branch B verdict $\sim 70\%$) describes a single formation with:
 - Bulk-localized translation Goldstone mode (partial, not exact)
-- Mass $\mu_{\mathrm{Gold}} \propto C(\beta) \cdot |\partial S| / n$
+- Mass $\mu_{\mathrm{Gold}} \propto C(\beta) \cdot \vert \partial S\vert / n$
 
 **Reinterpretation**: $\mu_{\mathrm{Gold}}$ is the energy cost of translating the formation — which for an elongated string means *stretching one endpoint while keeping the other fixed*. The string tension $C(\beta)$ resists this translation. As the string is stretched (endpoints moved apart, $L_{\mathrm{str}}$ increases), the Goldstone mass increases proportionally. This is precisely the gauge theory string in tension: translation breaks the string's zero mode.
 
@@ -105,7 +105,7 @@ The V5b-F mechanism (canonical §13, Cat C empirical with NQ-173 Branch B verdic
 
 **Setup**: Consider a single formation $u^{(j)*}$ in SCC string configuration with endpoints separated by distance $L = d_G(c_1, c_2)$. As $L$ increases (controlled externally, e.g., by initial condition protocol), the string energy is:
 $$E_{\mathrm{str}}(L) \approx T_{\mathrm{str}} \cdot 2L \cdot w_{\mathrm{tube}} + E_{\mathrm{endpoint}}$$
-where $2L \cdot w_{\mathrm{tube}} \approx |\partial S|$ is the boundary count of the tube and $E_{\mathrm{endpoint}}$ is the fixed cost of the two endpoint disks (independent of $L$).
+where $2L \cdot w_{\mathrm{tube}} \approx \vert \partial S\vert $ is the boundary count of the tube and $E_{\mathrm{endpoint}}$ is the fixed cost of the two endpoint disks (independent of $L$).
 
 **Breaking cost**: If the string breaks into **two independent disk formations** $u^{(1)*}$, $u^{(2)*}$ (each a single peak, K=2), the energy is:
 $$E_{\mathrm{broken}}(L) \approx 2 \cdot E_{\mathrm{disk}} + E_{\mathrm{sep}}^{(12)}$$
@@ -142,8 +142,8 @@ At $\beta = 30$ the correlation length $\xi_0 = \sqrt{\alpha/\beta} \approx 0.18
 |---|---|---|
 | Static charges at string endpoints | Two peaks of elongated formation | Structural (positions) |
 | Flux tube = confined chromoelectric field | Connecting low-cohesion bridge region | Structural (topology) |
-| Vacuum pair creation at $L_{\mathrm{crit}}$ | New formation birth ($\Delta K = +1$) at $|\partial S|_{\mathrm{crit}}$ | Functional (threshold mechanism) |
-| String tension prevents breaking at $L < L_{\mathrm{crit}}$ | Single formation preferred at short $|\partial S|$ | Functional (energy comparison) |
+| Vacuum pair creation at $L_{\mathrm{crit}}$ | New formation birth ($\Delta K = +1$) at $\vert \partial S\vert _{\mathrm{crit}}$ | Functional (threshold mechanism) |
+| String tension prevents breaking at $L < L_{\mathrm{crit}}$ | Single formation preferred at short $\vert \partial S\vert $ | Functional (energy comparison) |
 | Two shorter strings after breaking | Two separated disk formations after birth | Structural (final state) |
 
 **Key disanalogy (CN10)**: In gauge theory, pair creation comes from *quantum vacuum fluctuations* (spontaneous process at finite coupling). In SCC, formation birth requires *external perturbation or noise* (see §4 — noiseless gradient flow forbids birth events). The SCC analog captures the **threshold structure** of the transition but NOT the spontaneous quantum mechanism.
@@ -204,21 +204,21 @@ where $H_{u_{\mathrm{dormant}}=0}$ is the Hessian at the zero-mass formation. By
 ### §5.1 Boundary-energy formula
 
 The V5b-F pseudo-mass formula (NQ-198a, empirical Cat B):
-$$\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \frac{|\partial S|}{n}$$
-is interpreted **solely** as the boundary-energy contribution per site: the Goldstone mode pseudo-mass is proportional to the fraction of boundary nodes, with $C(\beta)$ the proportionality coefficient (units: energy). This formula characterizes how the translational softness of a formation scales with its boundary size — formations with larger $|\partial S|$ are harder to translate (higher $\mu_{\mathrm{Gold}}$), consistent with greater boundary exposure requiring more energy to shift.
+$$\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \frac{\vert \partial S\vert}{n}$$
+is interpreted **solely** as the boundary-energy contribution per site: the Goldstone mode pseudo-mass is proportional to the fraction of boundary nodes, with $C(\beta)$ the proportionality coefficient (units: energy). This formula characterizes how the translational softness of a formation scales with its boundary size — formations with larger $\vert \partial S\vert $ are harder to translate (higher $\mu_{\mathrm{Gold}}$), consistent with greater boundary exposure requiring more energy to shift.
 
 | Factor | Meaning |
 |---|---|
 | $C(\beta)$ | Boundary energy coefficient (energy units); SCC string tension analog |
-| $|\partial S|/n$ | Boundary fraction (dimensionless); intensive boundary measure |
+| $\vert \partial S\vert /n$ | Boundary fraction (dimensionless); intensive boundary measure |
 | $\mu_{\mathrm{Gold}}$ | Goldstone mode pseudo-mass; grows with $L_{\mathrm{str}}$ (§2.4) |
 
-**This is Connection H (Very Strong)** from `06_gauge_theory_connections_analysis.md`: the SCC V5b-F mass formula is the graph-theoretic analog of the string tension / mass gap relation in confinement. The formula $\mu_{\mathrm{Gold}} = C(\beta) \cdot |\partial S|/n$ corresponds to $T_{\mathrm{str}} \cdot L / V$ in large-N gauge theory ('t Hooft 1974).
+**This is Connection H (Very Strong)** from `06_gauge_theory_connections_analysis.md`: the SCC V5b-F mass formula is the graph-theoretic analog of the string tension / mass gap relation in confinement. The formula $\mu_{\mathrm{Gold}} = C(\beta) \cdot \vert \partial S\vert /n$ corresponds to $T_{\mathrm{str}} \cdot L / V$ in large-N gauge theory ('t Hooft 1974).
 
 ### §5.2 $C(\beta)$ as SCC string tension coefficient
 
 **Definition 5.2.** The SCC string tension $C(\beta)$ is defined by the V5b-F scaling law:
-$$C(\beta) := \lim_{n \to \infty} n \cdot \frac{\mu_{\mathrm{Gold}}(u^{(j)*})}{|\partial S(u^{(j)*})|}$$
+$$C(\beta) := \lim_{n \to \infty} n \cdot \frac{\mu_{\mathrm{Gold}}(u^{(j)*})}{\vert \partial S(u^{(j)*})\vert}$$
 (thermodynamic limit of the boundary-normalized Goldstone mass). At $\beta = 4$, $\xi_0 = 0.5$: $C(4) \approx 13.2$ (NQ-198a measurement).
 
 **Predicted $\beta$-dependence**: As $\beta/\alpha$ increases (stronger double-well driving):
@@ -230,10 +230,10 @@ $$C(\beta) := \lim_{n \to \infty} n \cdot \frac{\mu_{\mathrm{Gold}}(u^{(j)*})}{|
 
 ### §5.3 Dimensional analysis of string energy
 
-**Units clarification (addressing M-3)**: $T_{\mathrm{str}}$ has units [energy]/[length] (energy per unit boundary length). On the discrete graph, "length" is measured in node count. $C(\beta)$ has units [energy] (since $1/n$ is dimensionless and $|\partial S|/n$ is a length-fraction). The string energy is:
-$$E_{\mathrm{str}} = T_{\mathrm{str}} \cdot L_{\mathrm{str}} = \frac{C(\beta)}{\text{correlation length scale}} \cdot |\partial S| \cdot (\text{correlation length per node})$$
+**Units clarification (addressing M-3)**: $T_{\mathrm{str}}$ has units [energy]/[length] (energy per unit boundary length). On the discrete graph, "length" is measured in node count. $C(\beta)$ has units [energy] (since $1/n$ is dimensionless and $\vert \partial S\vert /n$ is a length-fraction). The string energy is:
+$$E_{\mathrm{str}} = T_{\mathrm{str}} \cdot L_{\mathrm{str}} = \frac{C(\beta)}{\text{correlation length scale}} \cdot \vert \partial S\vert \cdot (\text{correlation length per node})$$
 
-At graph level with all lengths in node count, units balance: $E_{\mathrm{str}}$ has units of energy, $T_{\mathrm{str}} = C(\beta)$ (energy), $L_{\mathrm{str}} = |\partial S|$ (count). The formula $E_{\mathrm{str}} \approx C(\beta) \cdot |\partial S|/n \cdot n = C(\beta) \cdot |\partial S|$ is derived from $E_{\mathrm{bd}} = 2\alpha u^\top L u$ (canonical §8), with $C(\beta)$ absorbing all $\alpha$- and $\beta$-dependent prefactors. This derivation is empirical (NQ-198a Cat B); the exact prefactor relationship to $\alpha$ and $\beta$ is NQ-198k.
+At graph level with all lengths in node count, units balance: $E_{\mathrm{str}}$ has units of energy, $T_{\mathrm{str}} = C(\beta)$ (energy), $L_{\mathrm{str}} = \vert \partial S\vert $ (count). The formula $E_{\mathrm{str}} \approx C(\beta) \cdot \vert \partial S\vert /n \cdot n = C(\beta) \cdot \vert \partial S\vert $ is derived from $E_{\mathrm{bd}} = 2\alpha u^\top L u$ (canonical §8), with $C(\beta)$ absorbing all $\alpha$- and $\beta$-dependent prefactors. This derivation is empirical (NQ-198a Cat B); the exact prefactor relationship to $\alpha$ and $\beta$ is NQ-198k.
 
 ### §5.4 Bifurcation criterion (independent)
 
@@ -264,11 +264,11 @@ projected onto $\Sigma_m$ (normalized to mass $m$).
    - Final $\mathcal{F}(u^*)$ — number of peaks.
    - Energy $\mathcal{E}(u^*)$ — compare single-string vs two-disk energies.
    - Hessian minimum eigenvalue $\lambda_{\min}(H(u^*))$ — passes through zero at bifurcation.
-   - Boundary size $|\partial S(u^*; 0.5)|$ — string length proxy.
+   - Boundary size $\vert \partial S(u^*; 0.5)\vert $ — string length proxy.
 
 5. **Verdict criteria**:
    - $L_{\mathrm{crit}}$ detected when: $K_{\mathrm{step}}$ jumps from 1 to 2; Hessian changes sign; energy of K=2 configuration first falls below K=1 energy.
-   - $C(\beta)$ consistency check: does $\mu_{\mathrm{Gold}} \approx C(\beta) \cdot |\partial S|/n$ hold at the pre-critical $d < L_{\mathrm{crit}}$ configurations?
+   - $C(\beta)$ consistency check: does $\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \vert \partial S\vert /n$ hold at the pre-critical $d < L_{\mathrm{crit}}$ configurations?
 
 6. **K=2 formation confirmation**: At $d > L_{\mathrm{crit}}$, run K-field optimization with $K_{\mathrm{field}} = 2$ to confirm the two-disk configuration is a stable K-field minimizer (σ_multi^A defined, `multi_formation_sigma.md` §5).
 
@@ -434,7 +434,7 @@ If the experiment realizes SCC formation birth:
 - `F_Kstep_K_triple.md` §3 (BC-1 fails generically in R23 = string breaking precondition: K_act < K_field means dormant formation available for birth)
 - `single_high_F_equivalence.md` §4.2 (R23 F=63 = maximally stretched SCC string; K_step=1 = string not broken; E=508.9 = high energy consistent with long string)
 - `working/SF/sigma_topological_invariance.md` §4.2, §6.3 (NQ-190; W5 Day 4 PM Wave 3 cross-link, carry-forward #10): $L_{\mathrm{crit}}$ is a **graph-class-specific** quantity — §4.2 subdivision counterexample $(P_3, P_4)$ predicts $L_{\mathrm{crit}}$ rescales linearly under edge subdivision (boundary-count is not subdivision-invariant), and §6.3 continuum-limit conjecture (NQ-190b) is the topological-invariance test for $L_{\mathrm{crit}}/n$ universality. Bilateral with NQ-190 §13.
-- `working/SF/sigma_lie_algebra_structure.md` §6, §7 (NQ-258; W5 Day 4 PM Wave 3 cross-link): V5b-F mass formula reinterpreted as broken-symmetry generator near-zero mass; §7 supports the boundary-energy $C(\beta) \cdot |\partial S| / n$ reading that replaces the dropped Goldstone-zero approach (C-2).
+- `working/SF/sigma_lie_algebra_structure.md` §6, §7 (NQ-258; W5 Day 4 PM Wave 3 cross-link): V5b-F mass formula reinterpreted as broken-symmetry generator near-zero mass; §7 supports the boundary-energy $C(\beta) \cdot \vert \partial S\vert / n$ reading that replaces the dropped Goldstone-zero approach (C-2).
 
 ### §11.2 Daily logs
 
@@ -459,7 +459,7 @@ If the experiment realizes SCC formation birth:
 1. Plot of $E(u^*; d)$ vs $d$ (energy as function of endpoint separation)
 2. Plot of $\lambda_{\min}(H(u^*; d))$ vs $d$ (Hessian minimum eigenvalue = zero at $L_{\mathrm{crit}}$)
 3. Plot of $K_{\mathrm{step}}(u^*; d; 0.5)$ vs $d$ (connectivity jump at $L_{\mathrm{crit}}$)
-4. $C(\beta)$ consistency check: $\mu_{\mathrm{Gold}} \approx C(4) \cdot |\partial S| / n = 13.2 \cdot |\partial S| / 400$
+4. $C(\beta)$ consistency check: $\mu_{\mathrm{Gold}} \approx C(4) \cdot \vert \partial S\vert / n = 13.2 \cdot \vert \partial S\vert / 400$
 
 **Cat B upgrade condition**: Measurement of $L_{\mathrm{crit}}$ with $\pm 1$ node resolution on two different grid sizes ($L = 16, 20$) showing consistent $L_{\mathrm{crit}}$ value (finite-size convergence check).
 
@@ -512,7 +512,7 @@ The following items remain open after this working file:
 
 4. **§4.3 Hessian verification (M-2)**: Inserted full "Verification of Claim 4.3" paragraph showing that the K-field-extended Hessian $H_K = H_{u^*} \oplus H_{u_{\mathrm{dormant}}=0}$ is positive definite at the $K_{\mathrm{act}}=1$ minimizer, using T-Merge (b) Cat A for the dormant block and the direct sum structure for the active block.
 
-5. **§5.3 dimensional analysis fix (M-3)**: Added new §5.3 "Dimensional analysis of string energy" deriving how units balance at graph level: $T_{\mathrm{str}} = C(\beta)$ (energy), $L_{\mathrm{str}} = |\partial S|$ (count), with the $1/n$ normalization explained as thermodynamic dilution. Clarifies that $C(β)$ absorbs all $\alpha$- and $\beta$-dependent prefactors from $E_{\mathrm{bd}} = 2\alpha u^\top L u$.
+5. **§5.3 dimensional analysis fix (M-3)**: Added new §5.3 "Dimensional analysis of string energy" deriving how units balance at graph level: $T_{\mathrm{str}} = C(\beta)$ (energy), $L_{\mathrm{str}} = \vert \partial S\vert $ (count), with the $1/n$ normalization explained as thermodynamic dilution. Clarifies that $C(β)$ absorbs all $\alpha$- and $\beta$-dependent prefactors from $E_{\mathrm{bd}} = 2\alpha u^\top L u$.
 
 6. **§7.3 cascade ordering weakened (M-4)**: Replaced the asserted monotone ordering $L_{\mathrm{crit}}^{(1)} > L_{\mathrm{crit}}^{(2)} > \cdots$ with an explicit open question (NQ-253-cascade), presenting both directions (decreasing: pool mass shrinks; increasing: inter-formation repulsion stabilizes shorter strings) as plausible, with numerical investigation deferred to W7+.
 

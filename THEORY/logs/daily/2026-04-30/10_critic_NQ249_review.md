@@ -308,7 +308,7 @@ This affects §3.1 conjecture statement: BC-249-1 may need stratum indices.
 
 §8 currently shows no parallelization plan, no batching strategy, no estimated runtime. The "1 week" effort estimate in §11.1 (NQ-249a) for empirical anchor is **plausible but tight**: it requires non-trivial CODE/ infrastructure work (extending `CODE/scc/diagnostics.py` to multi-formation Hessian — flagged in §14.4 line 385).
 
-**Severity justification.** Major (not critical) because §11.1 already flags this as 1 week effort and §14.4 acknowledges the CODE extension dependency. But the absence of a compute budget estimate, a parallelization plan, and a finite-difference accuracy note (Hessian via FD is noisy at $\epsilon = 10^{-4}$ — see canonical V5b-T-zero anchor at line 1199 noting $|\mu_{\mathrm{Gold}}| \leq 0.028$ within FD noise) means the empirical anchor will likely fail to detect $\Delta_K$ near zero (mass-gap closure) — exactly the regime BC-249-1 is most interesting in.
+**Severity justification.** Major (not critical) because §11.1 already flags this as 1 week effort and §14.4 acknowledges the CODE extension dependency. But the absence of a compute budget estimate, a parallelization plan, and a finite-difference accuracy note (Hessian via FD is noisy at $\epsilon = 10^{-4}$ — see canonical V5b-T-zero anchor at line 1199 noting $\vert \mu_{\mathrm{Gold}}\vert \leq 0.028$ within FD noise) means the empirical anchor will likely fail to detect $\Delta_K$ near zero (mass-gap closure) — exactly the regime BC-249-1 is most interesting in.
 
 **Recommended fix (M5).**
 

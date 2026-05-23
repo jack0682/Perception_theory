@@ -59,7 +59,7 @@ Previous session notes (Session 6) referenced a "4×4 minor" requirement for the
 
 - $\Delta^3$ has tangent dimension **3** (not 4), because the simplex constraint $\sum \lambda_i = 1$ removes one direction.
 - The energy decomposition $e_{\mathrm{temp}}(\lambda) = (E_{cl}, E_{sep}, E_{bd}, E_{tr})(u^*(\lambda)) \in \mathbb{R}^4$ is 4-dimensional in the codomain.
-- The Jacobian $J_e^{\mathrm{tan}} = D_\lambda e_{\mathrm{temp}}\bigr|_{T_\lambda \Delta^3} \in \mathbb{R}^{4 \times 3}$ is 4×3 in the tangent direction.
+- The Jacobian $J_e^{\mathrm{tan}} = D_\lambda e_{\mathrm{temp}}\bigr\vert _{T_\lambda \Delta^3} \in \mathbb{R}^{4 \times 3}$ is 4×3 in the tangent direction.
 - Full rank means **rank 3** (not 4), as $\min(4, 3) = 3$.
 
 This session uses the correct **rank-3 condition** throughout.

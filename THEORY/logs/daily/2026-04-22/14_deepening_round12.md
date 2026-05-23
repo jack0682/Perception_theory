@@ -45,7 +45,7 @@ $$\mathrm{Source}(x) \sim W'(u_1 + u_2 - c) - W'(u_1) - W'(u_2) + W'(c) \sim O(u
 
 where $u_i := u_0(x - x_i)$. The cross-term $u_1 u_2$ is non-negligible only near the midpoint between formations; it decays exponentially when either $u_1$ or $u_2$ is far from its formation center.
 
-**Magnitude:** $|\mathrm{Source}| \lesssim e^{-d_{\min}/\xi_0}$ at the midpoint.
+**Magnitude:** $\vert \mathrm{Source}\vert \lesssim e^{-d_{\min}/\xi_0}$ at the midpoint.
 
 ### 2.3 Correction $v$
 
@@ -146,7 +146,7 @@ $$\mu_{\mathrm{sep}}(d_{\min}^\ast) \sim V_{\mathrm{int}}''(d_{\min}^\ast) \sim 
 ### 5.2 Two-timescale picture (M-1 from this viewpoint)
 
 Time scales in the K=2 configuration:
-- **Fast**: internal formation modes (timescale $\sim 1/(\beta|W''(c)|)$).
+- **Fast**: internal formation modes (timescale $\sim 1/(\beta\vert W''(c)\vert)$).
 - **Slow**: separation-mode relaxation (timescale $\sim 1/\mu_{\mathrm{sep}} \sim e^{+d_{\min}/\xi_0}/\xi_0^{-2}$, exponentially long).
 
 **Explanation for M-1 dissolution:** K=2 is "effectively stable" at observational timescales < $1/\mu_{\mathrm{sep}}$, even though it's NOT the global minimum (T11 says global min = single large disk). The two-timescale emerges naturally from Round 12 Hessian structure.

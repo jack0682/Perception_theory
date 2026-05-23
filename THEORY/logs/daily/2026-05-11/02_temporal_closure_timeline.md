@@ -69,7 +69,7 @@ The trace audit established that any claim of the form "ρ_deep ≥ 0.84 as a un
 **Key insight:** The blocking condition was based on misidentifying the positivity threshold. Only $\rho_\mathrm{deep} > 0$ is needed for $\Delta_\mathrm{sep} > 0$; explicitly only $\rho_\mathrm{deep} > \rho_* \approx 0.00282$.
 
 **Outputs:**
-- **Lemma S-B1-Weak (Cat A NEW):** $\rho_\mathrm{deep} \geq \theta_\mathrm{core}/n = 0.7/225 \approx 0.00311 > \rho_* \approx 0.00282$. Proof: H2' (Γ-convergence + DMP, Theorem 1 of CORE-DEPTH-ISOPERIMETRIC.md) gives $|\mathrm{Core}^2| \geq 1$, hence $m^\mathrm{deep} \geq 0.7$, and $m \leq 225$.
+- **Lemma S-B1-Weak (Cat A NEW):** $\rho_\mathrm{deep} \geq \theta_\mathrm{core}/n = 0.7/225 \approx 0.00311 > \rho_* \approx 0.00282$. Proof: H2' (Γ-convergence + DMP, Theorem 1 of CORE-DEPTH-ISOPERIMETRIC.md) gives $\vert \mathrm{Core}^2\vert \geq 1$, hence $m^\mathrm{deep} \geq 0.7$, and $m \leq 225$.
 - **Corollary (Cat A):** $\Delta_\mathrm{sep} > 0$ under canonical assumptions — logical uniqueness condition for T-Temporal-Identity (b) satisfied Cat A.
 - **OP-SB1-DEEP downgraded** from HIGH-BLOCKING to NON-BLOCKING. The Cat A path for T-Temporal-Identity (b,d) is unblocked at the density side.
 - S-B1 Strong (literal $\rho_\mathrm{deep} \geq 0.84$ unconditional): remains **Cat B conditional** with explicit counterexample.

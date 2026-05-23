@@ -135,8 +135,8 @@ where $P$ is the readout map (§4).
 | Group | Order | Type |
 |---|---|---|
 | $S_K$ | $K!$ | Symmetric group; acts on $K$ labels |
-| $\mathrm{Aut}_{\mathrm{task}}$ | Divides $|\mathrm{Aut}(X_t)|$ | Subgroup of graph automorphisms |
-| $G_{\mathrm{SCC}}^{(0)}$ | $K! \cdot |\mathrm{Aut}_{\mathrm{task}}|$ | Direct product (both finite) |
+| $\mathrm{Aut}_{\mathrm{task}}$ | Divides $\vert \mathrm{Aut}(X_t)\vert $ | Subgroup of graph automorphisms |
+| $G_{\mathrm{SCC}}^{(0)}$ | $K! \cdot \vert \mathrm{Aut}_{\mathrm{task}}\vert $ | Direct product (both finite) |
 
 Both components are finite groups, hence $G_{\mathrm{SCC}}^{(0)}$ is a finite group.
 

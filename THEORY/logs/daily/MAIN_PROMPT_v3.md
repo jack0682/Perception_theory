@@ -1431,7 +1431,7 @@ P-Audit P1-P7 + 6-step ready 점검 순서: ...
 
 #### Lemma L1 (예시):
 
-> **Lemma L1.** $H_\mathrm{merged}(u^*) = H_0 + V$, $\lVert V \rVert_\mathrm{op} \leq \lambda_\mathrm{rep} c e^{-c_0 d_\mathrm{inter}}$. 이때 perturbative regime $\lVert V \rVert < \min_a |\lambda_a^{(0)} - \lambda_b^{(0)}|$ 에서 post-merger eigenvalue $\lambda_a$ 의 Kato expansion 은 $O(\varepsilon^2)$ 까지 *deterministic* 형태로 산출됨.
+> **Lemma L1.** $H_\mathrm{merged}(u^*) = H_0 + V$, $\lVert V \rVert_\mathrm{op} \leq \lambda_\mathrm{rep} c e^{-c_0 d_\mathrm{inter}}$. 이때 perturbative regime $\lVert V \rVert < \min_a \vert \lambda_a^{(0)} - \lambda_b^{(0)}\vert $ 에서 post-merger eigenvalue $\lambda_a$ 의 Kato expansion 은 $O(\varepsilon^2)$ 까지 *deterministic* 형태로 산출됨.
 
 ##### Proof (CoT + CoC):
 

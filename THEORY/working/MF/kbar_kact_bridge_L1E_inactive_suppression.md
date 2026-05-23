@@ -502,11 +502,11 @@ Inactive residuals affect the L-1 bridge in two different locations.
 Inside active neighborhoods \(N_j^r\), residuals perturb active slot topology:
 
 $$
-U|_{N_j^r}
+U\vert _{N_j^r}
 =
-U_{\mathrm{act}}|_{N_j^r}
+U_{\mathrm{act}}\vert _{N_j^r}
 +
-R_{\mathrm{inact}}|_{N_j^r}.
+R_{\mathrm{inact}}\vert _{N_j^r}.
 $$
 
 The needed bound is:
@@ -541,7 +541,7 @@ On the background region, the required condition is:
 $$
 K_{\mathrm{bar}}^{\ell_{\min}}
 \left(
-R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}
+R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}
 \right)
 =
 0,

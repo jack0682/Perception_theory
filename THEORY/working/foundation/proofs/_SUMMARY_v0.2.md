@@ -66,7 +66,7 @@ Phase 2 Opus + Sonnet agents 의 detailed proof attempts 결과:
 
 ### §2.2 P2 OP-T*-α (Multi-Well Multiplicity Quantification)
 
-**Target**: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ where $K$ = number of stable basins.
+**Target**: $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K(\Theta) - 1$ where $K$ = number of stable basins.
 
 **Primary approach**: Poincaré-Hopf + Brouwer degree (E2 §A.5 recommended).
 
@@ -123,10 +123,10 @@ Phase 2 Opus + Sonnet agents 의 detailed proof attempts 결과:
 **Primary approach**: Active-set + σ saturation (E3 §A primary).
 
 **Proof structure**: 5-lemma chain L1-L5 + synthesis
-- L1: σ saturation at active-set: $|\sigma''(z(u^*))| \leq O(e^{-2c\beta})$ at saturated nodes
+- L1: σ saturation at active-set: $\vert \sigma''(z(u^*))\vert \leq O(e^{-2c\beta})$ at saturated nodes
 - L2: $\Pi_T^{\mathrm{free}}$ restriction to boundary band ($w_{\mathrm{bd}} = O(\sqrt{\alpha/\beta})$)
 - L3: Boundary band measure $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta}$ (T-OP6-B Cat A anchor)
-- L4: Sharper bound assembly: improvement factor $\sqrt{n}\cdot|\sigma''|_{\max} \to (\alpha/\beta)^{1/4}$
+- L4: Sharper bound assembly: improvement factor $\sqrt{n}\cdot\vert \sigma''\vert _{\max} \to (\alpha/\beta)^{1/4}$
 - L5: Numerical verification ratio ~18-472× (close to claimed ~10⁴×)
 
 **Cat verdict**:

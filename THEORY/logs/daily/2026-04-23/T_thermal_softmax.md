@@ -117,7 +117,7 @@ For 1D cycle c=0.7 at β=9: $E(\mathcal{B}_1) < E(\mathcal{B}_K)$ for $K \geq 2$
 Near basin boundary $\beta = \beta_\pi^*$, two nearby basins $\mathcal{B}_K$ and $\mathcal{B}_{K+1}$ exist. At T=0, protocol deterministically lands in one. At T>0, thermal fluctuation gives finite probability for either.
 
 For Gaussian barrier $\Delta\mathcal{F}(\beta - \beta_\pi^*) \sim (\beta - \beta_\pi^*)^2$ (smooth approach), Kramers rate gives:
-$$P(\mathcal{B}_K | \beta, T) \approx \sigma((\beta - \beta_\pi^*) \cdot \Delta / T)$$
+$$P(\mathcal{B}_K \vert \beta, T) \approx \sigma((\beta - \beta_\pi^*) \cdot \Delta / T)$$
 
 where $\Delta$ is barrier height scale. Sharpness $\kappa(T) = \Delta/T$, so $\gamma = 1$ (linear in 1/T).
 
@@ -211,7 +211,7 @@ Per G2 function taxonomy §5.3: basic softmax (Class S) is **refuted**. Replacem
 
 ### 7.1 Class N (spectral Gaussian) — tentative
 
-$P(\widehat K | \beta, T, \pi) \approx \mathcal{N}(\widehat K; \bar K(\beta, T, G, \pi), \sigma_K^2(\beta, T, G, \pi))$.
+$P(\widehat K \vert \beta, T, \pi) \approx \mathcal{N}(\widehat K; \bar K(\beta, T, G, \pi), \sigma_K^2(\beta, T, G, \pi))$.
 
 Variance $\sigma_K^2$ depends on spectral structure of initial perturbation and basin geometry.
 

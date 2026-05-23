@@ -132,7 +132,7 @@ R22 §3.3 (`symmetry_moduli.md` lines 149-150) computes the Hessian at the axis-
 
 **NQ-187 measured $\mu_1 / \mu_0 \approx 2$ on $L \le 16$ free-BC grids.** Inverting: $\mu_0 / \mu_1 \approx 1/2$. **Contradicts R22's $\mu_0 / \mu_1 = 2$ at axis-aligned minimum.**
 
-But: NQ-187 may have measured $(\mu_0, \mu_1)$ at the **uniform point** ($u = c\mathbf{1}$, the spinodal saddle), NOT at the axis-aligned minimum. At the uniform point, the leading-order eigenvalues of the Hessian are the Fiedler eigenvalues of the discrete Laplacian, which are degenerate at $L \to \infty$ for the $(1,0)$ vs $(0,1)$ modes (translation symmetry of the torus, or square symmetry of the grid). The 4th-order $W$-potential expansion lifts this degeneracy via the $A_1 / A_2$ structure — this is the canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ at leading order" claim.
+But: NQ-187 may have measured $(\mu_0, \mu_1)$ at the **uniform point** ($u = c\mathbf{1}$, the spinodal saddle), NOT at the axis-aligned minimum. At the uniform point, the leading-order eigenvalues of the Hessian are the Fiedler eigenvalues of the discrete Laplacian, which are degenerate at $L \to \infty$ for the $(1,0)$ vs $(0,1)$ modes (translation symmetry of the torus, or square symmetry of the grid). The 4th-order $W$-potential expansion lifts this degeneracy via the $A_1 / A_2$ structure — this is the canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4\vert W''(c)\vert \epsilon$ at leading order" claim.
 
 **The remaining ambiguity (resolution needed via (γ) Σ_m-Hessian convention audit):**
 - If NQ-187 measured at the uniform point: $\mu_0 / \mu_1 \to 1$ at $L \to \infty$ (continuum degeneracy preserved); finite-$L$ correction gives a non-unit ratio. The 2 measured at $L=16$ is finite-$L$ correction, NOT a falsification of R22.
@@ -146,13 +146,13 @@ The (γ) audit must resolve which point + which convention NQ-187 measured at. *
 
 Conversion: $A_1(x^2+y^2)^2$ expands to $A_1(x^4 + 2x^2 y^2 + y^4)$, so canonical's $A_2$ corresponds to `symmetry_moduli`'s $A_2^{sym} - 2A_1$. With $A_2^{sym}/A_1 = 4$ (R22, rigorous), **canonical's $A_2/A_1 = 2$**, not 4.
 
-Canonical Step 4 of the proof (line 1407) derives $F_{yy} = -\beta A_2/A_1$ in canonical's normal form (correct algebra), then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention, NOT canonical's). This **two-normal-form mixing error** produces the spurious $F_{yy} = 4|W''(c)|\epsilon$ degeneracy claim. Correctly using $A_2^{can}/A_1 = 2$: $F_{yy} = -2\beta = 2|W''(c)|\epsilon$, ratio $\mu_0/\mu_1 = 2$ — non-degenerate, matching NQ-187 measurement exactly.
+Canonical Step 4 of the proof (line 1407) derives $F_{yy} = -\beta A_2/A_1$ in canonical's normal form (correct algebra), then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention, NOT canonical's). This **two-normal-form mixing error** produces the spurious $F_{yy} = 4\vert W''(c)\vert \epsilon$ degeneracy claim. Correctly using $A_2^{can}/A_1 = 2$: $F_{yy} = -2\beta = 2\vert W''(c)\vert \epsilon$, ratio $\mu_0/\mu_1 = 2$ — non-degenerate, matching NQ-187 measurement exactly.
 
 **Therefore, NQ-187's $\mu_1/\mu_0 = 2$ is in agreement with R22 derivation AND in conflict with canonical's claimed degeneracy. The conflict is not scope or evaluation point; it is a real algebraic inconsistency in canonical Step 4.**
 
-**Path γ-ii (formula correction) is the likely outcome (~75% probability)**, NOT γ-i (~10%) as originally estimated. The corrected canonical (ii) should read $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$ at axis minimum, ratio 2 non-degenerate. See `sigma_theorem4_canonical_revision.md` §2.5.1-§2.5.3 + §4.6 for the full corrected canonical text.
+**Path γ-ii (formula correction) is the likely outcome (~75% probability)**, NOT γ-i (~10%) as originally estimated. The corrected canonical (ii) should read $\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$ at axis minimum, ratio 2 non-degenerate. See `sigma_theorem4_canonical_revision.md` §2.5.1-§2.5.3 + §4.6 for the full corrected canonical text.
 
-**(γ) audit refocus**: rather than identifying which evaluation point NQ-187 measures (still useful but secondary), the (γ) audit should now **independently verify the two-normal-form conversion** ($A_2^{sym} = 2A_1 + A_2^{can}$ identity) on $L = 4$ small grid and confirm that the corrected canonical formula $\mu_1 = 2|W''(c)|\epsilon$ matches NQ-187. This is a clean algebraic check, expected to PASS.
+**(γ) audit refocus**: rather than identifying which evaluation point NQ-187 measures (still useful but secondary), the (γ) audit should now **independently verify the two-normal-form conversion** ($A_2^{sym} = 2A_1 + A_2^{can}$ identity) on $L = 4$ small grid and confirm that the corrected canonical formula $\mu_1 = 2\vert W''(c)\vert \epsilon$ matches NQ-187. This is a clean algebraic check, expected to PASS.
 
 ### §2.6 Discrete ratio (corrected statement)
 
@@ -249,7 +249,7 @@ If NQ-187 numerical $r_\infty \to$ value matching one of the conventions: identi
 ### §5.1 Hypothesis (α-naive)
 
 Naive cubic-equivariant ratio: $A_2/A_1 \to 2/3$ in continuum.
-- $\mu_1/\mu_0 = (A_2/A_1) / 4 \to (2/3)/4 = 1/6$ at L → ∞ (per canonical T-σ-Theorem-4 (ii) formula: $\mu_0 = 4|W''(c)|\epsilon$, $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon$).
+- $\mu_1/\mu_0 = (A_2/A_1) / 4 \to (2/3)/4 = 1/6$ at L → ∞ (per canonical T-σ-Theorem-4 (ii) formula: $\mu_0 = 4\vert W''(c)\vert \epsilon$, $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon$).
 
 NQ-187 numerical at L=16: $\mu_1/\mu_0 = 2$.
 

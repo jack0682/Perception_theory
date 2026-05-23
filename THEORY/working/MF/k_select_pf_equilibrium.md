@@ -146,10 +146,10 @@ The sector free energy satisfies: $p_K \propto \exp(-F(K;\mathcal{P})/T_*)$, so 
 
 The previous working formulation (`k_selection_a_free_energy.md` §3.3) used:
 $$F_{\mathrm{approx}}(K; T) = \mathcal{E}^*_K - T \cdot S(K)$$
-where $\mathcal{E}^*_K = \min_{B_K} E_{\mathrm{SCC}}$ and $S(K) = \log |\Omega_K|$ (configurational entropy, combinatorial count).
+where $\mathcal{E}^*_K = \min_{B_K} E_{\mathrm{SCC}}$ and $S(K) = \log \vert \Omega_K\vert $ (configurational entropy, combinatorial count).
 
 This is the **saddle-point (Laplace) approximation** of the exact sector free energy:
-$$F(K;\mathcal{P}) = -T_* \log Z_K = -T_* \log \int_{B_K} e^{-E/T_*} d\sigma_M \approx \mathcal{E}^*_K - T_* \log |\Omega_K| + O(T_*)$$
+$$F(K;\mathcal{P}) = -T_* \log Z_K = -T_* \log \int_{B_K} e^{-E/T_*} d\sigma_M \approx \mathcal{E}^*_K - T_* \log \vert \Omega_K\vert + O(T_*)$$
 valid when the Gibbs measure is concentrated near the minimum (small T_* regime, well-separated minima). The exact formula F(K;P) = −T_* log Z_K is now available without approximation.
 
 **Resolution of P-F flag**: The P-F flag "⚠️ Z_K defined only when stochastic SCC canonically formalized" in `k_selection_a_free_energy.md` §3.3 is **RESOLVED** by Package I (CV-1.9). Z_K = ∫_{B_K} e^{-E/T_*} dσ_M is well-defined as a Lebesgue integral over a compact measurable set.
@@ -204,7 +204,7 @@ Since the process is stationary under π_{T_*}, the distribution of K_act(U_t) i
 By T-PF-A1-PE (exponential ergodicity), for any initial density U_0 with law ν_0 ∈ L²(π_{T_*}):
 $$\lVert \nu_t - \pi_{T_*} \rVert_{TV} \leq C_0 e^{-\lambda_1 t}$$
 where λ_1 ≥ (π²/n)·exp(−osc(Ẽ)/T_*) > 0 and the TV norm uses the L²(π_{T_*}) density assumption. Hence:
-$$\lvert p_K^{(t)} - p_K \rvert := |\mathbb{P}_{\nu_t}[K_{\mathrm{act}} = K] - p_K| \leq \lVert \nu_t - \pi_{T_*} \rVert_{TV} \leq C_0 e^{-\lambda_1 t}.$$
+$$\lvert p_K^{(t)} - p_K \rvert := \vert \mathbb{P}_{\nu_t}[K_{\mathrm{act}} = K] - p_K\vert \leq \lVert \nu_t - \pi_{T_*} \rVert_{TV} \leq C_0 e^{-\lambda_1 t}.$$
 
 The K-distribution converges to the equilibrium {p_K} exponentially fast for L²(π_{T_*}) initial laws.
 

@@ -67,13 +67,13 @@ $$\rho_\mathrm{deep} := \frac{m^\mathrm{deep}}{m^\mathrm{total}}, \quad m^\mathr
 
 ### 1.3 Morphological constants
 
-**Core size:** $m := |\mathrm{Core}|$ (cardinality).
+**Core size:** $m := \vert \mathrm{Core}\vert $ (cardinality).
 
 **Vertex boundary:**
 $$\partial_V \mathrm{Core} := \{x \in V \setminus \mathrm{Core} : \exists y \in \mathrm{Core},\, (x,y) \in E\}$$
 
 **Isoperimetric ratio:**
-$$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{|\partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}|}$$
+$$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{\vert \partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}\vert}$$
 
 **Isoperimetric constant** $C_\mathrm{iso} > 0$: a parameter bounding the isoperimetric ratio.
 
@@ -81,10 +81,10 @@ $$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{|\partial_V \mathrm{Core}\lvert }{
 
 **(A1)–(A7):** Canonical SCC single-formation axioms (see canonical.md §2).
 
-**H2'** (deep-core non-emptiness; Cat A from Γ-convergence + DMP): For $m = |\mathrm{Core}| \geq 25$ and $\beta > 7\alpha$: $|\mathrm{Core}^2| \geq 1$.
+**H2'** (deep-core non-emptiness; Cat A from Γ-convergence + DMP): For $m = \vert \mathrm{Core}\vert \geq 25$ and $\beta > 7\alpha$: $\vert \mathrm{Core}^2\vert \geq 1$.
 
 **HWF-1** (isoperimetric regularity; structural, Cat B):
-$$\mathrm{iso\_ratio}(\mathrm{Core}) = \frac{|\partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}|} \leq C_\mathrm{iso}.$$
+$$\mathrm{iso\_ratio}(\mathrm{Core}) = \frac{\vert \partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}\vert} \leq C_\mathrm{iso}.$$
 
 HWF-1 is **not derivable** from (A1)–(A7) alone. It is violated by elongated formations (counterexample: $2 \times 10$ rectangle, iso_ratio ≈ 0.73, ρ_deep ≈ 0.10). For canonical compact disk-like SCC minimizers, numerical evidence gives $C_\mathrm{iso} \in [0.155, 0.2]$ (exp49, exp83).
 
@@ -95,8 +95,8 @@ HWF-1 is **not derivable** from (A1)–(A7) alone. It is violated by elongated f
 > **Theorem S-B1-SYM (Cat B, conditional on HWF-1).**
 >
 > Let $u_t$ be a canonical SCC single-formation configuration on $G$ with:
-> - $m = |\mathrm{Core}(u_t)| \geq 25$,
-> - $\beta > 7\alpha$ (so H2' applies: $|\mathrm{Core}^2| \geq 1$),
+> - $m = \vert \mathrm{Core}(u_t)\vert \geq 25$,
+> - $\beta > 7\alpha$ (so H2' applies: $\vert \mathrm{Core}^2\vert \geq 1$),
 > - HWF-1: $\mathrm{iso\_ratio}(\mathrm{Core}) \leq C_\mathrm{iso}$.
 >
 > Then:
@@ -107,7 +107,7 @@ HWF-1 is **not derivable** from (A1)–(A7) alone. It is violated by elongated f
 **Step 1. Invoke Theorem 2b (Deep Core Dominance, Cat A).**
 
 Theorem 2b (canonical.md §13, Cat A): Under HWF-1 ($\mathrm{iso\_ratio} \leq C_\mathrm{iso}$) on a $\mathbb{Z}^d$-like grid:
-$$\frac{|\mathrm{Core}^2|}{|\mathrm{Core}|} \geq 1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}.$$
+$$\frac{\vert \mathrm{Core}^2\vert}{\vert \mathrm{Core}\vert} \geq 1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}.$$
 
 This inequality holds for all $m \geq 1$ (the RHS may be negative for very small $m$; positivity requires $C_\mathrm{iso} < \sqrt{m}/4$, which is satisfied for $m \geq 25$ and $C_\mathrm{iso} \leq 0.2$ since $\sqrt{25}/4 = 1.25 > 0.2$). Combined with H2', the bound is meaningful.
 
@@ -119,12 +119,12 @@ In particular, for every $x \in \mathrm{Core}^2 \subseteq \mathrm{Core}$: $u_t(x
 
 **Step 3. Deep-core mass aggregation.**
 
-$$m^\mathrm{deep} = \sum_{x \in \mathrm{Core}^2} u_t(x) \geq \theta_\mathrm{core} \cdot |\mathrm{Core}^2| \geq \theta_\mathrm{core} \cdot m \cdot \left(1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}\right).$$
+$$m^\mathrm{deep} = \sum_{x \in \mathrm{Core}^2} u_t(x) \geq \theta_\mathrm{core} \cdot \vert \mathrm{Core}^2\vert \geq \theta_\mathrm{core} \cdot m \cdot \left(1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}\right).$$
 
 **Step 4. Total core mass upper bound.**
 
 Since $u_t(x) \leq 1$ for all $x$:
-$$m^\mathrm{total} = \sum_{x \in \mathrm{Core}} u_t(x) \leq \sum_{x \in \mathrm{Core}} 1 = |\mathrm{Core}| = m.$$
+$$m^\mathrm{total} = \sum_{x \in \mathrm{Core}} u_t(x) \leq \sum_{x \in \mathrm{Core}} 1 = \vert \mathrm{Core}\vert = m.$$
 
 **Step 5. Take the ratio.**
 
@@ -134,7 +134,7 @@ $$\rho_\mathrm{deep} = \frac{m^\mathrm{deep}}{m^\mathrm{total}} \geq \frac{\thet
 
 The Cat B classification is inherited from **HWF-1** in Step 1. The rest of the proof uses only Cat A ingredients (Theorem 2b, axioms (A1)–(A7), H2'). The structural assumption HWF-1 is the sole Cat B ingredient.
 
-**Why HWF-1 cannot be removed:** The counterexample (CV113_S-B1_DEEP_CORE_CLOSURE.md §4.2) is a $3 \times 10$ elongated rectangle with $m = 30$, iso_ratio ≈ 22/30 ≈ 0.73. For this formation: $|\mathrm{Core}^2| = 8$, $\rho_\mathrm{deep} \approx 0.27$. This is a valid SCC configuration satisfying canonical axioms (A1)–(A7), so S-B1-SYM cannot hold unconditionally.
+**Why HWF-1 cannot be removed:** The counterexample (CV113_S-B1_DEEP_CORE_CLOSURE.md §4.2) is a $3 \times 10$ elongated rectangle with $m = 30$, iso_ratio ≈ 22/30 ≈ 0.73. For this formation: $\vert \mathrm{Core}^2\vert = 8$, $\rho_\mathrm{deep} \approx 0.27$. This is a valid SCC configuration satisfying canonical axioms (A1)–(A7), so S-B1-SYM cannot hold unconditionally.
 
 ---
 

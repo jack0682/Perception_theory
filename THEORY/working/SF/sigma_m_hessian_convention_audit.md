@@ -3,7 +3,7 @@
 # sigma_m_hessian_convention_audit.md — (γ) Σ_m-Hessian Convention Audit Placeholder
 
 **Status:** placeholder / scope-only. Created 2026-05-04 W6 D1 EOD per Issue #3 deeper audit (parking-lot Issue #3 development).
-**Type:** Audit working file. Target: identify whether canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ at leading order" is a uniform-point statement (γ-i, scope clarification) or an axis-minimum statement with formula error (γ-ii, formula correction).
+**Type:** Audit working file. Target: identify whether canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4\vert W''(c)\vert \epsilon$ at leading order" is a uniform-point statement (γ-i, scope clarification) or an axis-minimum statement with formula error (γ-ii, formula correction).
 **Estimated effort:** 3-5 days W6+ once executed.
 **Priority:** **highest** of the three reconciliation paths α/β/γ per `sigma_theorem4_canonical_revision.md` §4.4.
 
@@ -14,13 +14,13 @@
 > **"Determine which Hessian-evaluation point + which Σ_m-projection convention NQ-187 uses, and cross-check against canonical T-σ-Theorem-4 (ii) and R22 derivation. Resolve the apparent 'leading-order ratio 2 vs degenerate' contradiction."**
 
 The canonical T-σ-Theorem-4 (ii) statement reads (per `theorem_status.md` C-0716):
-> "Continuum-limit Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ degenerate; discrete-grid measured $\mu_1/\mu_0 \approx 2$"
+> "Continuum-limit Mode 0 = Mode 1 = $4\vert W''(c)\vert \epsilon$ degenerate; discrete-grid measured $\mu_1/\mu_0 \approx 2$"
 
 R22 derivation (`symmetry_moduli.md` lines 148-150) computes axis-aligned minimum Hessian $F_{aa}/F_{bb} = 2$ — non-degenerate at leading order.
 
 NQ-187 measurement (`sigma_theorem4_canonical_revision.md` §2.1) measures Hessian "at first-pitchfork minimizer" — also at the post-bifurcation minimum, finds $\mu_1/\mu_0 \approx 2$.
 
-**Question**: where does the "$4|W''(c)|\epsilon$ degenerate" claim come from, and does it correspond to the same evaluation point as R22 + NQ-187?
+**Question**: where does the "$4\vert W''(c)\vert \epsilon$ degenerate" claim come from, and does it correspond to the same evaluation point as R22 + NQ-187?
 
 ---
 
@@ -51,9 +51,9 @@ For each (Convention, Evaluation point) combination, compute $(\mu_0, \mu_1)$ sy
 | (Conv I) Centered | TBD | TBD | TBD |
 | (Conv II) Lagrangian | TBD | TBD | TBD |
 
-Predicted (R22 §3.3): At (P2) under either convention, $F_{aa}/F_{bb} = 2$, leading order $\mu_0 / \mu_1 = 2$ with $\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$ (assuming $\mu = -2\epsilon|W''(c)|$ convention).
+Predicted (R22 §3.3): At (P2) under either convention, $F_{aa}/F_{bb} = 2$, leading order $\mu_0 / \mu_1 = 2$ with $\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$ (assuming $\mu = -2\epsilon\vert W''(c)\vert $ convention).
 
-Predicted (canonical ii): At (P1) under Conv I (centered), Fiedler doublet eigenvalues $\mu_0 = \mu_1 = -2\epsilon|W''(c)|$ degenerate at leading order; 4th-order correction lifts degeneracy with $A_2/A_1 = 4$ structure.
+Predicted (canonical ii): At (P1) under Conv I (centered), Fiedler doublet eigenvalues $\mu_0 = \mu_1 = -2\epsilon\vert W''(c)\vert $ degenerate at leading order; 4th-order correction lifts degeneracy with $A_2/A_1 = 4$ structure.
 
 ### §2.4 Decision criterion
 

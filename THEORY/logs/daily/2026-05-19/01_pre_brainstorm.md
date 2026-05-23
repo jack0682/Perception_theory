@@ -595,9 +595,9 @@ Marr (1982 *Vision*): 세 분석 수준 — (1) **Computational** ("무엇을 �
 
 ### A.2 Perelman 핵심 단조성 공식
 
-$$\mathcal{W}(g, f, \tau) = \int_M [\tau (|\nabla f|^2 + R) + f - n] (4\pi\tau)^{-n/2} e^{-f}\,dV$$
+$$\mathcal{W}(g, f, \tau) = \int_M [\tau (\vert \nabla f\vert ^2 + R) + f - n] (4\pi\tau)^{-n/2} e^{-f}\,dV$$
 
-$$\frac{d}{dt} \mathcal{W} = \int_M 2\tau \left|\mathrm{Ric} + \nabla^2 f - \frac{1}{2\tau} g\right|^2 (4\pi\tau)^{-n/2} e^{-f}\,dV \geq 0$$
+$$\frac{d}{dt} \mathcal{W} = \int_M 2\tau \left\vert \mathrm{Ric} + \nabla^2 f - \frac{1}{2\tau} g\right\vert ^2 (4\pi\tau)^{-n/2} e^{-f}\,dV \geq 0$$
 
 **SCC Tier 1 매핑 결과** (post-SEAL Phase 1A): Bakry-Émery $W_{SCC}$ framework 시도 → universality misclassification (EW → Allen-Cahn → Model B) 으로 부분 retract.
 

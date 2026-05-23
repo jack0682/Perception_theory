@@ -17,7 +17,7 @@
 
 The Cahn-Hilliard (CH) equation describes phase separation in a binary mixture with conserved order parameter $\phi$:
 $$\partial_t \phi = M \Delta \mu, \quad \mu = \frac{\delta \mathcal{F}}{\delta \phi}, \tag{1.1}$$
-where $\mathcal{F}[\phi] = \int [\frac{\epsilon^2}{2} |\nabla \phi|^2 + W(\phi)] dx$ is the free-energy functional, $M$ is the mobility, and $\mu$ is the chemical potential.
+where $\mathcal{F}[\phi] = \int [\frac{\epsilon^2}{2} \vert \nabla \phi\vert ^2 + W(\phi)] dx$ is the free-energy functional, $M$ is the mobility, and $\mu$ is the chemical potential.
 
 Conservation: $\int \phi \, dx$ is conserved (mass-preserving dynamics).
 
@@ -28,7 +28,7 @@ LSW law for late-time coarsening: $R(t) \sim t^{1/3}$ in 3D; $t^{1/2}$ in 2D (de
 Phase 7 R1.3 introduced shared-pool K-field with:
 - Total mass $M_{\mathrm{total}} = \sum_j \sum_x u^{(j)}(x)$ conserved.
 - Per-formation masses $m_j(t) = \sum_x u^{(j)}(x)$ allowed to vary in time.
-- Gradient flow: $\dot u^{(j)} = -\nabla \mathcal{E}_K|_{\mathrm{shared}}$, with shared-pool projection redistributing total mass uniformly.
+- Gradient flow: $\dot u^{(j)} = -\nabla \mathcal{E}_K\vert _{\mathrm{shared}}$, with shared-pool projection redistributing total mass uniformly.
 
 The **mass-redistribution dynamics** is specifically what enables LSW-like coarsening (R1.3 α ≈ 0.281).
 
@@ -62,7 +62,7 @@ This would be a third K-field architecture (NQ-230 spawn): **diffusive shared-po
 
 In the sharp-interface limit $\xi_0 \to 0$:
 - SCC shared-pool $\mathcal{E}_K \to c_{\mathrm{MM}} \sum_j \mathrm{Per}(\Omega_j)$ (multi-domain perimeter).
-- Mass conservation $\sum_j |\Omega_j| = M_{\mathrm{total}}$.
+- Mass conservation $\sum_j \vert \Omega_j\vert = M_{\mathrm{total}}$.
 - Gradient flow → motion-by-mean-curvature with constraint.
 
 This is **exactly the constraint motion-by-mean-curvature** studied in geometric measure theory (e.g., Bronsard-Stoth 1996, Kim-Jerrard 2004).
@@ -71,7 +71,7 @@ This is **exactly the constraint motion-by-mean-curvature** studied in geometric
 
 \begin{theorem}[SCC shared-pool ↔ constrained motion-by-MCF, Cat B target]
 \label{thm:scc-mcf}
-In the sharp-interface limit ($\xi_0 \to 0$, $\beta \to \infty$ with $\beta \xi_0^2 = O(1)$), the SCC shared-pool K-field gradient flow converges (in some appropriate sense) to a constrained motion-by-mean-curvature flow on K disjoint domains $\Omega_j$ with conserved total measure $\sum_j |\Omega_j| = M_{\mathrm{total}}$.
+In the sharp-interface limit ($\xi_0 \to 0$, $\beta \to \infty$ with $\beta \xi_0^2 = O(1)$), the SCC shared-pool K-field gradient flow converges (in some appropriate sense) to a constrained motion-by-mean-curvature flow on K disjoint domains $\Omega_j$ with conserved total measure $\sum_j \vert \Omega_j\vert = M_{\mathrm{total}}$.
 \end{theorem}
 
 **Proof sketch**: Modica-Mortola Γ-convergence + standard arguments for variational mean-curvature flow with constraint. Full proof requires careful analysis of the simplex barrier in the limit. Cat A target (NQ-227-Cat-A spawn).

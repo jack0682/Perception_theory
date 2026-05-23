@@ -78,11 +78,11 @@ $$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{2m_t \delta}{\varepsilon_\ma
 Let $v(x,y) = -c(x,y)/\varepsilon_\mathrm{OT}$ and $v'(x,y) = -c'(x,y)/\varepsilon_\mathrm{OT}$. Then $\lVert v - v' \rVert_\infty \leq \delta/\varepsilon_\mathrm{OT}$.
 
 Define the row-softmax distributions:
-$$p(y|x) = \frac{e^{v(x,y)}}{\sum_{y'} e^{v(x,y')}}, \qquad p'(y|x) = \frac{e^{v'(x,y)}}{\sum_{y'} e^{v'(x,y')}}.$$
+$$p(y\vert x) = \frac{e^{v(x,y)}}{\sum_{y'} e^{v(x,y')}}, \qquad p'(y\vert x) = \frac{e^{v'(x,y)}}{\sum_{y'} e^{v'(x,y')}}.$$
 
-Then $M^*(x,y) = u_t(x) \cdot p(y|x)$ and $M^{*'}(x,y) = u_t(x) \cdot p'(y|x)$.
+Then $M^*(x,y) = u_t(x) \cdot p(y\vert x)$ and $M^{*'}(x,y) = u_t(x) \cdot p'(y\vert x)$.
 
-**Step 1: Bound $\lVert p(\cdot|x) - p'(\cdot|x) \rVert_1$ for each row $x$.**
+**Step 1: Bound $\lVert p(\cdot\vert x) - p'(\cdot\vert x) \rVert_1$ for each row $x$.**
 
 For any two probability distributions $p, p'$ of the form $p(y) = e^{v_y}/Z$ and $p'(y) = e^{v'_y}/Z'$:
 
@@ -90,19 +90,19 @@ By the softmax Lipschitz bound (elementary):
 Since $\lvert v_y - v'_y \rvert \leq \delta/\varepsilon$, we have $e^{-\delta/\varepsilon} e^{v_y} \leq e^{v'_y} \leq e^{\delta/\varepsilon} e^{v_y}$, hence $e^{-\delta/\varepsilon} Z \leq Z' \leq e^{\delta/\varepsilon} Z$.
 
 For any $y$:
-$$\left|\frac{e^{v_y}}{Z} - \frac{e^{v'_y}}{Z'}\right| = \frac{1}{Z}\left|e^{v_y} - e^{v'_y} \cdot \frac{Z}{Z'}\right| \leq \frac{e^{v_y}}{Z} \cdot \left|1 - e^{v'_y - v_y} \cdot \frac{Z}{Z'}\right|.$$
+$$\left\vert \frac{e^{v_y}}{Z} - \frac{e^{v'_y}}{Z'}\right\vert = \frac{1}{Z}\left\vert e^{v_y} - e^{v'_y} \cdot \frac{Z}{Z'}\right\vert \leq \frac{e^{v_y}}{Z} \cdot \left\vert 1 - e^{v'_y - v_y} \cdot \frac{Z}{Z'}\right\vert.$$
 
 Let $r = v'_y - v_y$ (so $\lvert r \rvert \leq \delta/\varepsilon$) and $s = \log(Z'/Z)$ (so $\lvert s \rvert \leq \delta/\varepsilon$ by the log-sum-exp inequality applied to both directions). Then:
 $$\lvert p'(y) - p(y) \rvert = p(y) \cdot \lvert e^{r-s} - 1 \rvert \leq p(y) \cdot (e^{\lvert r-s \rvert} - 1) \leq p(y) \cdot (e^{2\delta/\varepsilon} - 1).$$
 
 Summing over $y$:
-$$\lVert p(\cdot|x) - p'(\cdot|x) \rVert_1 = \sum_y |p(y|x) - p'(y|x)| \leq (e^{2\delta/\varepsilon} - 1) \leq \frac{2\delta}{\varepsilon} \cdot e^{2\delta/\varepsilon}.$$
+$$\lVert p(\cdot\vert x) - p'(\cdot\vert x) \rVert_1 = \sum_y \vert p(y\vert x) - p'(y\vert x)\vert \leq (e^{2\delta/\varepsilon} - 1) \leq \frac{2\delta}{\varepsilon} \cdot e^{2\delta/\varepsilon}.$$
 
 (Using $e^t - 1 \leq t \cdot e^t$ for $t \geq 0$.)
 
 **Step 2: Sum over all rows.**
 
-$$\lVert M^* - M^{*'} \rVert_1 = \sum_{x,y} \lvert M^*(x,y) - M^{*'}(x,y) \rvert = \sum_x u_t(x) \lVert p(\cdot|x) - p'(\cdot|x) \rVert_1$$
+$$\lVert M^* - M^{*'} \rVert_1 = \sum_{x,y} \lvert M^*(x,y) - M^{*'}(x,y) \rvert = \sum_x u_t(x) \lVert p(\cdot\vert x) - p'(\cdot\vert x) \rVert_1$$
 $$\leq \sum_x u_t(x) \cdot \frac{2\delta}{\varepsilon} e^{2\delta/\varepsilon} = m_t \cdot \frac{2\delta}{\varepsilon} e^{2\delta/\varepsilon}.$$
 
 Since $\lVert M \rVert_\mathrm{TV} = \frac{1}{2}\lVert M \rVert_1$ for matrices:
@@ -115,7 +115,7 @@ $$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon} e^{
 ## 2. Log-Sum-Exp Stability Lemma (used in Step 1)
 
 **Lemma LSE.** *For any positive weights $a_1, \ldots, a_n > 0$ and perturbations $\lvert r_i \rvert \leq \alpha$:*
-$$\left|\log\sum_i a_i e^{r_i} - \log\sum_i a_i\right| \leq \alpha.$$
+$$\left\vert \log\sum_i a_i e^{r_i} - \log\sum_i a_i\right\vert \leq \alpha.$$
 
 **Proof.** $\sum_i a_i e^{-\alpha} \leq \sum_i a_i e^{r_i} \leq \sum_i a_i e^{\alpha}$. Taking logs: $-\alpha \leq \log(\sum a_i e^{r_i}/\sum a_i) \leq \alpha$. $\square$
 
@@ -162,7 +162,7 @@ This lemma is the same log-sum-exp inequality used in H-SINK-6 (balanced case). 
 
 T-Temporal-Identity part (c) relies on:
 - Lemma 9 (plan stability under cost perturbation): $\lVert M - M' \rVert_\mathrm{TV} \leq 2M_\mathrm{tot}\delta/\varepsilon$
-- Lemma 10 (component confinement): $|\gamma_M - \gamma_{M'}| \leq 2M_\mathrm{tot}\delta/\varepsilon$
+- Lemma 10 (component confinement): $\vert \gamma_M - \gamma_{M'}\vert \leq 2M_\mathrm{tot}\delta/\varepsilon$
 - Lemma 11 (kernel independence): $R_{t\to s}[M] = R_{t\to s}[M']$ when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$
 
 **Previous status:** Lemma 9 was Cat B (partial OT pending). Now, Theorem Partial-H-SINK gives Lemma 9 with the matching form ($2m_t\delta/\varepsilon$ linear regime), which is the SCC E1 version.

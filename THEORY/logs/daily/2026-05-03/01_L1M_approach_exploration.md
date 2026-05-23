@@ -7,7 +7,7 @@
 **Session:** 2026-05-03 (W5 Day 7, post-T-L1-F canonical promotion)
 **Target (from plan.md §2):** Develop **L1-M — Soft-Count Corollary under $\Phi_{\mathrm{res}}$**: under T-L1-F's $(P0)$–$(P11)$ and $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$, prove
 $$
-\bigl|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi.
+\bigl\vert K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi.
 $$
 **This file covers:** §4.1 Restatement, §4.2 Multi-approach (4 candidates), §4.3 Primary-approach selection.
 **Depends on reading:** `canonical.md` §13 Cat A T-L1-F; `theorem_status.md` CV-1.5.2; `working/MF/ksoft_kact_bridge_lemma.md` §5.3 + §13; `working/MF/wq_lat1b_phi_envelope_refinement_results.md` §5.1, §6, §8.3; `working/E/soft_K_definition.md` §1, §2.1; `working/MF/ksoft_kact_bridge_proof_status.md` C-09/C-10/C-11; `logs/daily/2026-05-02/01_T_L1_F_canonical_promotion_closure.md` §2.
@@ -24,7 +24,7 @@ K_{\mathrm{soft}}^\phi(U)=K_{\mathrm{act}}^\varepsilon(\mathbf u)+O(\rho_{\mathr
 $$
 under $(P0)$–$(P11)$ and $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$, written rigorously as the absolute-value inequality
 $$
-\bigl|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi. \tag{L1-M}
+\bigl\vert K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi. \tag{L1-M}
 $$
 plan.md §4.3 marks this as a **THEOREM_CANDIDATE_DRAFT** under $(P0)$–$(P11) + \Phi_{\mathrm{res}} + \text{(E)}$, with Cat-A pending audit.
 
@@ -36,20 +36,20 @@ Three layers must be distinguished cleanly.
 
 2. **The soft observable.** $K_{\mathrm{soft}}^\phi(U)=\sum_i\phi(\ell_i(U))$ is a *real-valued* sum over all positive-length bars, weighted by an envelope $\phi:[0,1]\to[0,\infty)$. It is a different kind of object: $\mathbb R_{\ge 0}$-valued, smooth (when $\phi$ is), envelope-dependent, and sensitive to the entire bar-length distribution including sub-resolution noise.
 
-3. **The bridge.** The L1-M question is: *for which envelopes $\phi$ does $K_{\mathrm{soft}}^\phi(U)$ track $K_{\mathrm{bar}}^{\ell_{\min}}(U)$ — and consequently $K_{\mathrm{act}}^\varepsilon(\mathbf u)$ — up to a controllable error?* WQ-LAT-1.B already answered the empirical version: hard threshold, sharp logistic ($s\ge 50$), shifted-saturating ($\beta\ge 20$) are stable; default $\phi$-sat is not. L1-M asks for the *theoretical* version: a class $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ of envelopes for which $|K_{\mathrm{soft}}^\phi - K_{\mathrm{bar}}^{\ell_{\min}}|$ admits an explicit bound from the bar-length distribution + the envelope's structural parameters.
+3. **The bridge.** The L1-M question is: *for which envelopes $\phi$ does $K_{\mathrm{soft}}^\phi(U)$ track $K_{\mathrm{bar}}^{\ell_{\min}}(U)$ — and consequently $K_{\mathrm{act}}^\varepsilon(\mathbf u)$ — up to a controllable error?* WQ-LAT-1.B already answered the empirical version: hard threshold, sharp logistic ($s\ge 50$), shifted-saturating ($\beta\ge 20$) are stable; default $\phi$-sat is not. L1-M asks for the *theoretical* version: a class $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ of envelopes for which $\vert K_{\mathrm{soft}}^\phi - K_{\mathrm{bar}}^{\ell_{\min}}\vert $ admits an explicit bound from the bar-length distribution + the envelope's structural parameters.
 
 ### §1.3 What is data, what is question, what is success, what is failure
 
 - **Data:** the multi-formation state $\mathbf u\in\widetilde\Sigma_M^{K_{\mathrm{field}}}(G)$, the aggregate $U=\sum_j u^{(j)}$, its $H_0$ superlevel persistence diagram $\mathrm{Dgm}_0^{\sup}(U;G)$ with bar-length list $\{\ell_i(U)\}_i$, the regime parameters $(P0)$–$(P11)$, and an envelope $\phi$ from a class $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$.
-- **Question:** find the smallest absolute-value bound on $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|$ in terms of (i) the bar-length distribution of $U$, (ii) the envelope's structural parameters $(\ell_{\min},\tau,s/\beta)$, and (iii) the regime constants from $(P0)$–$(P11)$.
+- **Question:** find the smallest absolute-value bound on $\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert $ in terms of (i) the bar-length distribution of $U$, (ii) the envelope's structural parameters $(\ell_{\min},\tau,s/\beta)$, and (iii) the regime constants from $(P0)$–$(P11)$.
 - **Success:** an inequality of the form (L1-M) with each of $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ explicitly defined, computable from $\{\ell_i(U)\}_i$ and $\phi$, and bounded above by quantities derivable from envelope sub-class + regime constants.
-- **Failure:** any of (a) the inequality requires a hypothesis that is not a consequence of $(P0)$–$(P11) + \Phi_{\mathrm{res}}$, (b) the envelope class $\Phi_{\mathrm{res}}$ admits a member for which one of $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ is unbounded, (c) the inequality is vacuous (right-hand side $\ge|A|$ trivially).
+- **Failure:** any of (a) the inequality requires a hypothesis that is not a consequence of $(P0)$–$(P11) + \Phi_{\mathrm{res}}$, (b) the envelope class $\Phi_{\mathrm{res}}$ admits a member for which one of $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ is unbounded, (c) the inequality is vacuous (right-hand side $\ge\vert A\vert $ trivially).
 
 ### §1.4 Surfacing implicit assumptions
 
 plan.md §4.5 and §4.3 quietly carry three assumptions that L1-M must make explicit.
 
-- **(A-impl-1) The bar-set is finite.** $G$ is a finite graph (T-L1-F P0 stipulates this). Hence $\#\{i:\ell_i(U)>0\}\le|X|$. This makes all three $\rho$-terms finite sums.
+- **(A-impl-1) The bar-set is finite.** $G$ is a finite graph (T-L1-F P0 stipulates this). Hence $\#\{i:\ell_i(U)>0\}\le\vert X\vert $. This makes all three $\rho$-terms finite sums.
 - **(A-impl-2) Every active slot's dominant bar has length $\ge\ell_{\min}$.** This is a *consequence* of T-L1-F + P6 (birth height $b_j\ge h_{\min}\ge\ell_{\min}$) + P0 (terminal-death). Each dominant bar $\mathcal A_{\mathrm{bar}}(j)$ has length $b_j-d_j$ where $d_j=0$ (terminal-death convention) and $b_j\ge\ell_{\min}$, hence $\ell_{\mathcal A_{\mathrm{bar}}(j)}\ge\ell_{\min}$. So in fact dominant bars sit in $[\ell_{\min},1]$. This rules out the degenerate case where every bar is exactly at threshold.
 - **(A-impl-3) "Edge-band control (E)" is an extra hypothesis on top of $(P0)$–$(P11) + \Phi_{\mathrm{res}}$.** plan.md §4.3 lists (E) as separate. But P8 (tightened H6: $\ell_{j,2}(u^{(j)};G_j^r)\le\ell_{\min}-3\rho_{\mathrm{pert}}$) and P9 ($\lVert R_j \rVert_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$) jointly constrain *non-dominant* bars to lie below $\ell_{\min}-3\rho_{\mathrm{pert}}+O(\rho_{\mathrm{pert}})=\ell_{\min}-2\rho_{\mathrm{pert}}$, leaving a per-slot built-in margin of $\sim 2\rho_{\mathrm{pert}}$ between the highest non-dominant bar and $\ell_{\min}$. This suggests (E) might be derivable rather than postulated — if so, the L1-M hypothesis package collapses to $(P0)$–$(P11) + \Phi_{\mathrm{res}}$. *(This is a substantive observation flagged for §4.4.4 below.)*
 
@@ -68,7 +68,7 @@ I generate four candidate approaches. Each is mathematically independent — dis
 
 ### §2.1 Approach A1 — Bar-by-bar absolute deviation + three-region partition (plan-aligned)
 
-**Core idea.** Apply $|\sum_i x_i|\le\sum_i|x_i|$ to the per-bar deviation $\phi(\ell_i)-\mathbf 1_{\ell_i\ge\ell_{\min}}$, partition the bar set $\{\ell_i\}_i$ into three regions $\{\ell_i<\ell_{\min}-\tau\}$, $\{|\ell_i-\ell_{\min}|\le\tau\}$, $\{\ell_i\ge\ell_{\min}+\tau\}$, and identify each region's contribution with $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ respectively. Then combine with T-L1-F's $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$ identity.
+**Core idea.** Apply $\vert \sum_i x_i\vert \le\sum_i\vert x_i\vert $ to the per-bar deviation $\phi(\ell_i)-\mathbf 1_{\ell_i\ge\ell_{\min}}$, partition the bar set $\{\ell_i\}_i$ into three regions $\{\ell_i<\ell_{\min}-\tau\}$, $\{\vert \ell_i-\ell_{\min}\vert \le\tau\}$, $\{\ell_i\ge\ell_{\min}+\tau\}$, and identify each region's contribution with $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ respectively. Then combine with T-L1-F's $K_{\mathrm{bar}}^{\ell_{\min}}=K_{\mathrm{act}}^\varepsilon$ identity.
 
 **Form of the result.** A theorem-candidate of the form (L1-M), with each $\rho$-term defined as an explicit sum over its region, and envelope-sub-class bounds (Phi-1: $\rho_{\mathrm{sub}}=\rho_\phi=0$; Phi-4c $s=100$: $\rho_{\mathrm{sub}},\rho_\phi\le e^{-s\tau}$ tail; Phi-3d $\beta=20$: $\rho_{\mathrm{sub}}=0$, $\rho_\phi\le e^{-\beta\tau}$).
 
@@ -76,13 +76,13 @@ I generate four candidate approaches. Each is mathematically independent — dis
 
 **Success when.** $\phi$ is in $\Phi_{\mathrm{res}}$ and the bar-length distribution of $U$ has either no mass in the edge band $[\ell_{\min}-\tau,\ell_{\min}+\tau]$ or sharpness parameter sufficiently large to suppress edge-band contribution.
 
-**Failure mode.** If the bar-length distribution of $U$ has many bars in the edge band $[\ell_{\min}-\tau,\ell_{\min}+\tau]$ and $\phi$ has finite sharpness, $\rho_{\mathrm{edge}}^\phi$ can be of order $|\{\text{edge-band bars}\}|$ — potentially large enough to break the bound. Hypothesis (E) is needed to rule this out; without (E) the result is vacuous.
+**Failure mode.** If the bar-length distribution of $U$ has many bars in the edge band $[\ell_{\min}-\tau,\ell_{\min}+\tau]$ and $\phi$ has finite sharpness, $\rho_{\mathrm{edge}}^\phi$ can be of order $\vert \{\text{edge-band bars}\}\vert $ — potentially large enough to break the bound. Hypothesis (E) is needed to rule this out; without (E) the result is vacuous.
 
 **Interaction with canonical.** Substitution into T-L1-F is one line. No reverse interaction (does not weaken T-L1-F or any other canonical theorem). Adds new envelope-class $\Phi_{\mathrm{res}}$ to canonical vocabulary if promoted.
 
 ### §2.2 Approach A2 — Sharpness-driven asymptotic via mollified hard threshold
 
-**Core idea.** Treat $\phi_{\mathrm{logistic}}^s$ and $\phi_{\mathrm{shift\text{-}sat}}^\beta$ as one-parameter families that converge pointwise (and in $L^\infty([0,1]\setminus[\ell_{\min}-\tau,\ell_{\min}+\tau])$) to $\phi_{\mathrm{hard}}$ as $s\to\infty$ or $\beta\to\infty$. Quantify the convergence rate (exponential in $s\tau$, $\beta\tau$). Then for any $\varepsilon_*>0$, choose sharpness so that $\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty([0,1]\setminus[\ell_{\min}-\tau,\ell_{\min}+\tau])}<\varepsilon_*$. The corollary becomes a parametric statement: "given target tolerance $\varepsilon_*$, there exists sharpness $s^*$ such that for all $\phi\in\Phi_{\mathrm{res}}$ with sharpness $\ge s^*$, $|K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}^\varepsilon|\le N(U)\varepsilon_*+\rho_{\mathrm{edge}}^\phi$" where $N(U)=\#\{\text{positive bars}\}$.
+**Core idea.** Treat $\phi_{\mathrm{logistic}}^s$ and $\phi_{\mathrm{shift\text{-}sat}}^\beta$ as one-parameter families that converge pointwise (and in $L^\infty([0,1]\setminus[\ell_{\min}-\tau,\ell_{\min}+\tau])$) to $\phi_{\mathrm{hard}}$ as $s\to\infty$ or $\beta\to\infty$. Quantify the convergence rate (exponential in $s\tau$, $\beta\tau$). Then for any $\varepsilon_*>0$, choose sharpness so that $\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty([0,1]\setminus[\ell_{\min}-\tau,\ell_{\min}+\tau])}<\varepsilon_*$. The corollary becomes a parametric statement: "given target tolerance $\varepsilon_*$, there exists sharpness $s^*$ such that for all $\phi\in\Phi_{\mathrm{res}}$ with sharpness $\ge s^*$, $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}^\varepsilon\vert \le N(U)\varepsilon_*+\rho_{\mathrm{edge}}^\phi$" where $N(U)=\#\{\text{positive bars}\}$.
 
 **Form of the result.** A parameter-controllable approximation theorem; the sharpness parameter is the main control. Envelope sub-classes at finite sharpness become *quantitative approximations* to $\phi_{\mathrm{hard}}$, with explicit error rates.
 
@@ -96,15 +96,15 @@ I generate four candidate approaches. Each is mathematically independent — dis
 
 ### §2.3 Approach A3 — Functional-analytic supremum-bound on the bar-length distribution support
 
-**Core idea.** Treat the bar-length list $\{\ell_i(U)\}_i$ as a finite empirical measure $\nu_U=\sum_i\delta_{\ell_i(U)}$ on $[0,1]$. Then $K_{\mathrm{soft}}^\phi(U)=\int\phi\,d\nu_U$ and $K_{\mathrm{bar}}^{\ell_{\min}}(U)=\int\mathbf 1_{[\ell_{\min},1]}\,d\nu_U$. Their difference is $\int(\phi-\mathbf 1_{[\ell_{\min},1]})\,d\nu_U$, which is bounded by $\lVert \phi-\mathbf 1_{[\ell_{\min},1]} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}\cdot|\nu_U|$ where $|\nu_U|=\#\{\text{positive bars}\}$. The bound depends on (a) how $\phi$ deviates from $\phi_{\mathrm{hard}}$ on the support of $\nu_U$, and (b) the cardinality of the bar set.
+**Core idea.** Treat the bar-length list $\{\ell_i(U)\}_i$ as a finite empirical measure $\nu_U=\sum_i\delta_{\ell_i(U)}$ on $[0,1]$. Then $K_{\mathrm{soft}}^\phi(U)=\int\phi\,d\nu_U$ and $K_{\mathrm{bar}}^{\ell_{\min}}(U)=\int\mathbf 1_{[\ell_{\min},1]}\,d\nu_U$. Their difference is $\int(\phi-\mathbf 1_{[\ell_{\min},1]})\,d\nu_U$, which is bounded by $\lVert \phi-\mathbf 1_{[\ell_{\min},1]} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}\cdot\vert \nu_U\vert $ where $\vert \nu_U\vert =\#\{\text{positive bars}\}$. The bound depends on (a) how $\phi$ deviates from $\phi_{\mathrm{hard}}$ on the support of $\nu_U$, and (b) the cardinality of the bar set.
 
-**Form of the result.** $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{bar}}^{\ell_{\min}}(U)|\le\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}\cdot N_+(U)$ where $N_+(U)=|\nu_U|$. Combined with T-L1-F: $|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le N_+(U)\cdot\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}$.
+**Form of the result.** $\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{bar}}^{\ell_{\min}}(U)\vert \le\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}\cdot N_+(U)$ where $N_+(U)=\vert \nu_U\vert $. Combined with T-L1-F: $\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le N_+(U)\cdot\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}$.
 
-**Tools.** Hölder's inequality / $\int f\,d\nu\le\lVert f \rVert_\infty|\nu|$ + bottleneck stability of $\mathrm{Dgm}_0^{\sup}$ (CSEH 2007) for any future perturbation analysis.
+**Tools.** Hölder's inequality / $\int f\,d\nu\le\lVert f \rVert_\infty\vert \nu\vert $ + bottleneck stability of $\mathrm{Dgm}_0^{\sup}$ (CSEH 2007) for any future perturbation analysis.
 
-**Success when.** $\phi$ is close to $\phi_{\mathrm{hard}}$ in $L^\infty$ on the support of the bar-length distribution. This is essentially a *uniform-deviation* statement, which is too crude when the bar distribution clusters near $\ell_{\min}$ (the deviation $|\phi-\phi_{\mathrm{hard}}|$ is largest exactly there).
+**Success when.** $\phi$ is close to $\phi_{\mathrm{hard}}$ in $L^\infty$ on the support of the bar-length distribution. This is essentially a *uniform-deviation* statement, which is too crude when the bar distribution clusters near $\ell_{\min}$ (the deviation $\vert \phi-\phi_{\mathrm{hard}}\vert $ is largest exactly there).
 
-**Failure mode.** A3 systematically over-estimates: it does not distinguish between bars far from $\ell_{\min}$ (where $|\phi-\phi_{\mathrm{hard}}|$ is small) and bars near $\ell_{\min}$ (where the deviation is order 1 for finite-sharpness envelopes). Hence $\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}$ can be order 1 even when most bars are well separated. This makes A3 the *coarsest* bound; A1's region-by-region refinement is strictly tighter.
+**Failure mode.** A3 systematically over-estimates: it does not distinguish between bars far from $\ell_{\min}$ (where $\vert \phi-\phi_{\mathrm{hard}}\vert $ is small) and bars near $\ell_{\min}$ (where the deviation is order 1 for finite-sharpness envelopes). Hence $\lVert \phi-\phi_{\mathrm{hard}} \rVert_{L^\infty(\mathrm{supp}\,\nu_U)}$ can be order 1 even when most bars are well separated. This makes A3 the *coarsest* bound; A1's region-by-region refinement is strictly tighter.
 
 **Interaction with canonical.** Connects naturally to QM3 (Q_morph continuity via persistence stability, Cat A) since CSEH bottleneck stability is the same anchor. A3 could be promoted as a baseline lemma; A1 then refines it.
 
@@ -114,7 +114,7 @@ I generate four candidate approaches. Each is mathematically independent — dis
 
 **Form of the result.** A *strengthened* L1-M: the hypothesis (E) becomes a *theorem* under $(P0)$–$(P11)$, and L1-M's hypothesis package collapses to $(P0)$–$(P11) + \Phi_{\mathrm{res}}$ alone. The corollary becomes:
 $$
-|K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon|\le\rho_{\mathrm{sub}}+\rho_\phi
+\vert K_{\mathrm{soft}}^\phi(U)-K_{\mathrm{act}}^\varepsilon\vert \le\rho_{\mathrm{sub}}+\rho_\phi
 $$
 with $\rho_{\mathrm{edge}}^\phi$ identically zero (no bars in the edge band) provided $\tau<\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{res}},\rho_{\mathrm{birth}})$.
 
@@ -163,7 +163,7 @@ This combination yields the tightest publishable corollary:
 
 ### §3.3 Why A4 strengthens A1 (rather than replacing it)
 
-A4 derives the edge-band hypothesis (E) from regime constants. This does not change the *form* of the corollary — the inequality $|K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}^\varepsilon|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$ remains. A4's role is to show that $\rho_{\mathrm{edge}}^\phi=0$ under $(P0)$–$(P11) + \tau\le\tau_*$, which simplifies the bound to $\rho_{\mathrm{sub}}+\rho_\phi$ in the resolved regime.
+A4 derives the edge-band hypothesis (E) from regime constants. This does not change the *form* of the corollary — the inequality $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}^\varepsilon\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$ remains. A4's role is to show that $\rho_{\mathrm{edge}}^\phi=0$ under $(P0)$–$(P11) + \tau\le\tau_*$, which simplifies the bound to $\rho_{\mathrm{sub}}+\rho_\phi$ in the resolved regime.
 
 Key insight: $\rho_{\mathrm{edge}}^\phi$ is the *most fragile* of the three error terms in A1. By eliminating it via A4, the corollary becomes structurally sound *for any* $\phi\in\Phi_{\mathrm{res}}$, without the need for case-by-case (E) verification. This is a non-trivial improvement over plan.md's stated form, and it should be developed in §02.
 
@@ -171,7 +171,7 @@ Key insight: $\rho_{\mathrm{edge}}^\phi$ is the *most fragile* of the three erro
 
 **A2 is preserved** because it provides the *quantitative rate* at which $\phi_{\mathrm{logistic}}^s$ and $\phi_{\mathrm{shift\text{-}sat}}^\beta$ approximate $\phi_{\mathrm{hard}}$. This rate ($e^{-s\tau}$, $e^{-\beta\tau}$) is *embedded* in A1's per-region $\rho_{\mathrm{sub}},\rho_\phi$ bounds. If A1 fails (e.g., a future SCC application uses an envelope at finite sharpness with bars dense in the edge band), A2 provides the natural fallback: tune sharpness to drive $\rho$ below threshold. A2 is the envelope-design tool.
 
-**A3 is preserved** because it provides the *baseline* uniform-norm bound, useful as a sanity check and as a connection to QM3's CSEH 2007 anchor. A3 by itself is too coarse for L1-M, but the moment we extend L1-M to a perturbation analysis (e.g., $|K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)|$ for nearby states), A3's CSEH machinery becomes the load-bearing tool. A3 is the perturbation tool.
+**A3 is preserved** because it provides the *baseline* uniform-norm bound, useful as a sanity check and as a connection to QM3's CSEH 2007 anchor. A3 by itself is too coarse for L1-M, but the moment we extend L1-M to a perturbation analysis (e.g., $\vert K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)\vert $ for nearby states), A3's CSEH machinery becomes the load-bearing tool. A3 is the perturbation tool.
 
 A2 and A3 will reappear in §03 as future-work threads.
 
@@ -179,8 +179,8 @@ A2 and A3 will reappear in §03 as future-work threads.
 
 I considered and excluded:
 
-- **A5: Wasserstein-1 between persistence-weighted measures.** Initially attractive — lift bar lists to measures on $[0,1]$ and bound $W_1$. But this collapses: comparing $\nu_U^\phi=\sum_i\phi(\ell_i)\delta_{\ell_i}$ vs $\nu_U^{\mathrm{hard}}=\sum_i\mathbf 1_{\ell_i\ge\ell_{\min}}\delta_{\ell_i}$ has $W_1=0$ (same support, just different masses), so the comparison reduces to $|\sum_i\phi(\ell_i)-\sum_i\mathbf 1_{\ell_i\ge\ell_{\min}}|$, which is exactly A1's starting point. No new content.
-- **A6: Functional-derivative analysis at the envelope level.** Treat $\phi\mapsto K_{\mathrm{soft}}^\phi$ as a linear functional on $C([0,1])$ and compute its Fréchet derivative $\delta K_{\mathrm{soft}}^\phi/\delta\phi=\nu_U$. Then $|K_{\mathrm{soft}}^\phi-K_{\mathrm{soft}}^{\phi_{\mathrm{hard}}}|\le\sup_t|\phi(t)-\phi_{\mathrm{hard}}(t)|\cdot|\nu_U|$. This is a re-derivation of A3.
+- **A5: Wasserstein-1 between persistence-weighted measures.** Initially attractive — lift bar lists to measures on $[0,1]$ and bound $W_1$. But this collapses: comparing $\nu_U^\phi=\sum_i\phi(\ell_i)\delta_{\ell_i}$ vs $\nu_U^{\mathrm{hard}}=\sum_i\mathbf 1_{\ell_i\ge\ell_{\min}}\delta_{\ell_i}$ has $W_1=0$ (same support, just different masses), so the comparison reduces to $\vert \sum_i\phi(\ell_i)-\sum_i\mathbf 1_{\ell_i\ge\ell_{\min}}\vert $, which is exactly A1's starting point. No new content.
+- **A6: Functional-derivative analysis at the envelope level.** Treat $\phi\mapsto K_{\mathrm{soft}}^\phi$ as a linear functional on $C([0,1])$ and compute its Fréchet derivative $\delta K_{\mathrm{soft}}^\phi/\delta\phi=\nu_U$. Then $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{soft}}^{\phi_{\mathrm{hard}}}\vert \le\sup_t\vert \phi(t)-\phi_{\mathrm{hard}}(t)\vert \cdot\vert \nu_U\vert $. This is a re-derivation of A3.
 - **A7: SCC-intrinsic argument via dual-mode self-referentiality.** Try to use closure $Cl_t$ + distinction $D_t$ structure to derive a relationship between bar lengths and slot identification. This conflates two layers — the bridge is at the *aggregate* level (single field $U$), where dual-mode structure does not directly act. SCC-intrinsic arguments belong to the per-slot $u^{(j)}$ level, which is already absorbed into T-L1-F via $K_{\mathrm{act}}$.
 
 ---
@@ -191,7 +191,7 @@ I considered and excluded:
 
 - **§1.** Notation summary (objects, regime constants, envelope class $\Phi_{\mathrm{res}}$).
 - **§2.** Envelope class $\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ — formal definition (axioms F1–F5) + verification of WQ-LAT-1.B empirical sub-classes.
-- **§3.** Three-region bar partition + lemma L-M-1 (envelope-pure inequality $|K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}^{\ell_{\min}}|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$).
+- **§3.** Three-region bar partition + lemma L-M-1 (envelope-pure inequality $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}^{\ell_{\min}}\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$).
 - **§4.** Envelope sub-class bounds — Phi-1 (exact), Phi-4c (logistic, $\rho_{\mathrm{sub}}\le e^{-s\tau}$, $\rho_\phi\le e^{-s\tau}$), Phi-3d (shift-sat, $\rho_{\mathrm{sub}}=0$, $\rho_\phi\le e^{-\beta\tau}$).
 - **§5.** Edge-band derivation lemma L-M-2 (A4 strengthening): under $(P0)$–$(P11)$, no bar of $U$ lies in $(\ell_{\min}-\tau_*,\ell_{\min})$ for $\tau_*$ derivable from $(\rho_{\mathrm{pert}},\rho_{\mathrm{res}},\rho_{\mathrm{birth}})$.
 - **§6.** L1-M Theorem-Candidate: combining L-M-1 + L-M-2 + T-L1-F substitution.

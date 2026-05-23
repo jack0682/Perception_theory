@@ -106,7 +106,7 @@ Script written as G5 deliverable this session: `CODE/experiments/exp_profile_fit
 ## §5. Effect on Cor 2.2 quantitative
 
 If $\xi_0^{\mathrm{fitted}} = \xi_0^{\mathrm{theory}}\cdot (1 + \delta_{\mathrm{SCC}})$ with $\delta_{\mathrm{SCC}} \approx 0.6$:
-$$\frac{|B_{\mathrm{SCC}}|}{\mathrm{Per}_G(A^\ast_{\mathrm{SCC}})} = 3.449\cdot \xi_0^{\mathrm{fitted}} = 3.449\cdot 1.6\cdot \xi_0^{\mathrm{theory}} \approx 5.52\cdot \xi_0^{\mathrm{theory}}.$$
+$$\frac{\vert B_{\mathrm{SCC}}\vert}{\mathrm{Per}_G(A^\ast_{\mathrm{SCC}})} = 3.449\cdot \xi_0^{\mathrm{fitted}} = 3.449\cdot 1.6\cdot \xi_0^{\mathrm{theory}} \approx 5.52\cdot \xi_0^{\mathrm{theory}}.$$
 
 This would recover the 60% deviation in ratio_edge. But the 16% disagreement in ratio_site shows the correction is not uniform — $f_{\mathrm{SCC}}$ shape departs from tanh.
 

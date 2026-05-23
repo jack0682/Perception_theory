@@ -65,7 +65,7 @@ where:
 
 **H-G1-2-ext-C (intermediate):** Mixed distribution — some configs satisfy (P9-tight), others exceed $\rho_{\mathrm{pert}}/2$, with regime-dependent clustering.
 
-→ *Interpretation:* T-L1-F reach is regime-dependent; extended regime characterization needed. **Action:** NQ-G1-2-ext-2 follow-up: characterize which initial configs (by $\lVert R_j \rVert_\infty|_{t=0}$ or by formation separation) predict post-flow reach.
+→ *Interpretation:* T-L1-F reach is regime-dependent; extended regime characterization needed. **Action:** NQ-G1-2-ext-2 follow-up: characterize which initial configs (by $\lVert R_j \rVert_\infty\vert _{t=0}$ or by formation separation) predict post-flow reach.
 
 ---
 

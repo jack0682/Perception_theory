@@ -200,7 +200,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 
 ### §3.1 `gamma-path-prover`
 
-**Scope**: Σ_m-Hessian convention audit on $L \in \{4, 8\}$ small grids; symbolic computation under both centered (Convention I) and Lagrange (Convention II) projection conventions; identify which (if either) reproduces canonical $\mu_0 = 4|W''(c)|\epsilon$ formula.
+**Scope**: Σ_m-Hessian convention audit on $L \in \{4, 8\}$ small grids; symbolic computation under both centered (Convention I) and Lagrange (Convention II) projection conventions; identify which (if either) reproduces canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ formula.
 
 **Working file ownership**: NEW `working/SF/sigma_m_hessian_convention_audit.md`.
 

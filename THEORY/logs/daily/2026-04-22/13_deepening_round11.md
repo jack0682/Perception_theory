@@ -121,7 +121,7 @@ Each orbit type has a center-of-mass $\bar x = (x_1 + x_2)/2$. On free-BC square
 **Size of $\mathcal{M}_2$:**
 - (Axis-pair at fixed $d$, $\theta = 0$): $L^2/8$ center positions × (fixed orientation) = $O(L^2)$ orbits per value of $d$.
 - Varying $d$: discrete values $d \in \{1, 2, \ldots, L\}$ (minimum $d = O(1)$ for discretization, max $d = O(L)$).
-- Total: $|\mathcal{M}_2| \sim L^2 \cdot L = O(L^3)$ for axis-pairs alone.
+- Total: $\vert \mathcal{M}_2\vert \sim L^2 \cdot L = O(L^3)$ for axis-pairs alone.
 
 ### 4.4 Minimum-energy configurations
 
@@ -137,7 +137,7 @@ On 2D square grid (anisotropic): axis-pair has different interaction than diagon
 
 ### 4.5 Enumeration summary
 
-> **$\mathcal{M}_2$ on 2D square grid (Round 11, Cat A structural).** Well-separated K=2 configurations parametrize by $(\bar x, d, \theta) \in L^2 \times [d_{\min}, L] \times [0, \pi/4]$. After $D_4 \times S_2$-quotient: $|\mathcal{M}_2| = O(L^3)$ orbit classes. Minimum-energy orbit class: axis-pair at $d = d_{\min}^\ast(\beta)$, center $\bar x$ in fundamental domain of $D_4$-action on grid.
+> **$\mathcal{M}_2$ on 2D square grid (Round 11, Cat A structural).** Well-separated K=2 configurations parametrize by $(\bar x, d, \theta) \in L^2 \times [d_{\min}, L] \times [0, \pi/4]$. After $D_4 \times S_2$-quotient: $\vert \mathcal{M}_2\vert = O(L^3)$ orbit classes. Minimum-energy orbit class: axis-pair at $d = d_{\min}^\ast(\beta)$, center $\bar x$ in fundamental domain of $D_4$-action on grid.
 
 **Category: Cat A structural** — orbit classification via group action.
 
@@ -159,7 +159,7 @@ $\Delta x \in T^2$, modulo $D_4$ (rotate/reflect). Fundamental domain of $D_4$ o
 
 **$\mathcal{M}_2(T^2)$ = fundamental domain of $T^2/D_4$ = 2-dim moduli space.**
 
-At fixed $d = |\Delta x|$: 1-dim moduli (angle $\theta \in [0, \pi/4]$).
+At fixed $d = \vert \Delta x\vert $: 1-dim moduli (angle $\theta \in [0, \pi/4]$).
 
 ### 5.3 Goldstone structure
 
@@ -171,7 +171,7 @@ This matches Round 5 expectation: continuous-Aut graphs have positive-dim moduli
 
 ### 5.4 Enumeration summary
 
-> **$\mathcal{M}_2$ on 2D torus (Round 11, Cat A).** $\mathcal{M}_2(T^2) = T^2/D_4$ (2-dim moduli from relative coordinate $\Delta x$). Minimum-energy locus: circle $|\Delta x| = d_{\min}^\ast(\beta)$ with preferred angle $\theta \in \{0, \pi/2\}$ (axis-pair) modulo $D_4$.
+> **$\mathcal{M}_2$ on 2D torus (Round 11, Cat A).** $\mathcal{M}_2(T^2) = T^2/D_4$ (2-dim moduli from relative coordinate $\Delta x$). Minimum-energy locus: circle $\vert \Delta x\vert = d_{\min}^\ast(\beta)$ with preferred angle $\theta \in \{0, \pi/2\}$ (axis-pair) modulo $D_4$.
 
 **Category: Cat A**.
 
@@ -185,7 +185,7 @@ This matches Round 5 expectation: continuous-Aut graphs have positive-dim moduli
 
 2. **Split-direction selection** — $\phi_{2, 0}$ mode couples to axis orbit $\phi_{1, 0}$ via $\langle\phi_{2, 0}, \phi_{1, 0}^2\rangle = 1/2 \neq 0$.
 
-3. **$\mathcal{M}_2$ on 2D square grid** — orbit classification by $(\bar x, d, \theta)$; $|\mathcal{M}_2| = O(L^3)$.
+3. **$\mathcal{M}_2$ on 2D square grid** — orbit classification by $(\bar x, d, \theta)$; $\vert \mathcal{M}_2\vert = O(L^3)$.
 
 4. **$\mathcal{M}_2$ on 2D torus** — 2-dim moduli $(T^2/D_4)$; continuous relative coordinate.
 

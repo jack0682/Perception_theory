@@ -57,9 +57,9 @@ Define block-diagonal *unperturbed* operator $H_0 = H_{i_1, i_1} \oplus H_{i_2, 
 
 Reed-Simon IV §XIII.5 (resolvent expansion for *isolated simple eigenvalues* under analytic perturbation):
 
-$$\lambda_a(\varepsilon) = \lambda_a^{(0)} + \varepsilon \langle \phi_a^{(0)}, V \phi_a^{(0)} \rangle + \varepsilon^2 \sum_{b \neq a} \frac{|\langle \phi_a^{(0)}, V \phi_b^{(0)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\varepsilon^3)$$
+$$\lambda_a(\varepsilon) = \lambda_a^{(0)} + \varepsilon \langle \phi_a^{(0)}, V \phi_a^{(0)} \rangle + \varepsilon^2 \sum_{b \neq a} \frac{\vert \langle \phi_a^{(0)}, V \phi_b^{(0)} \rangle\vert ^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\varepsilon^3)$$
 
-with $\varepsilon = \lVert V \rVert_\mathrm{op} / \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$.
+with $\varepsilon = \lVert V \rVert_\mathrm{op} / \min_{a \neq b} \vert \lambda_a^{(0)} - \lambda_b^{(0)}\vert $.
 
 ### §3.3 Post-merger relation
 
@@ -69,7 +69,7 @@ The expansion (§3.2) under Schur-complement boundary condition produces *explic
 
 ### §3.4 Success conditions (Route (a))
 
-1. **Perturbative regime**: $\lVert V \rVert < \min_a |\lambda_a^{(0)} - \lambda_{a+1}^{(0)}|$ — eigenvalue spacing exceeds coupling. Equivalently $\lambda_\mathrm{rep} \cdot e^{-c_0 d_\mathrm{inter}} < $ spectral gap of $H_0$.
+1. **Perturbative regime**: $\lVert V \rVert < \min_a \vert \lambda_a^{(0)} - \lambda_{a+1}^{(0)}\vert $ — eigenvalue spacing exceeds coupling. Equivalently $\lambda_\mathrm{rep} \cdot e^{-c_0 d_\mathrm{inter}} < $ spectral gap of $H_0$.
 2. **Simple eigenvalues**: $\lambda_a^{(0)} \neq \lambda_b^{(0)}$ for $a \neq b$ — no symmetry-forced multiplicities.
 3. **Analytic family**: $V(\varepsilon)$ smooth in merger parameter $\varepsilon$ — guaranteed by gradient-flow continuity on smooth segments (`sigma_rich_wigner_derivation.md §9`).
 

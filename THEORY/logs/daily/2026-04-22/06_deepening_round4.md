@@ -128,7 +128,7 @@ The circle is not a true continuous family of the full problem — it is a famil
 
 **Summary (Round 4 result for $C_n$):**
 
-> **$C_n$ First-Pitchfork Theorem.** On the 1D cycle $C_n$ ($n \geq 5$) at $c = 1/2$, the reduced Lyapunov function at first Fiedler pitchfork is $F(r) = \tfrac{\mu}{2}r^2 + \tfrac{3}{2}\Lambda r^4$ (purely radial), giving a 1-dim circle of degenerate minima with radius $R = \sqrt{-\mu/(6\Lambda)}$. The circle is broken to $2n$ discrete standing-wave orbits at sextic or higher order, but all $2n$ are $D_n$-equivalent. Therefore $|\mathcal{M}_1(C_n)| = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$, with **orbit size $= n$** (much larger than $D_4$'s size 4 on square grid).
+> **$C_n$ First-Pitchfork Theorem.** On the 1D cycle $C_n$ ($n \geq 5$) at $c = 1/2$, the reduced Lyapunov function at first Fiedler pitchfork is $F(r) = \tfrac{\mu}{2}r^2 + \tfrac{3}{2}\Lambda r^4$ (purely radial), giving a 1-dim circle of degenerate minima with radius $R = \sqrt{-\mu/(6\Lambda)}$. The circle is broken to $2n$ discrete standing-wave orbits at sextic or higher order, but all $2n$ are $D_n$-equivalent. Therefore $\vert \mathcal{M}_1(C_n)\vert = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$, with **orbit size $= n$** (much larger than $D_4$'s size 4 on square grid).
 
 **Category: Cat A** — exact discrete integrals (no $O(1/n^2)$ correction), elementary algebra.
 
@@ -193,7 +193,7 @@ $F_X = \tfrac{\mu}{2}R^2 + \tfrac{3\Lambda}{2}R^4 = -\mu^2/(24\Lambda)$.
 **(c) Diagonal orbit** $(s, s)$: $\mu + 18\Lambda s^2 = 0 \Rightarrow s^2 = -\mu/(18\Lambda)$.
 $F_\Delta = \mu s^2 + 9\Lambda s^4 = \mu \cdot (-\mu/(18\Lambda)) + 9\Lambda \cdot \mu^2/(324\Lambda^2) = -\mu^2/(18\Lambda) + \mu^2/(36\Lambda) = -\mu^2/(36\Lambda)$.
 
-**Comparison:** $\lvert F_X \rvert = \mu^2/(24\Lambda) > \mu^2/(36\Lambda) = |F_\Delta|$ (since $1/24 > 1/36$).
+**Comparison:** $\lvert F_X \rvert = \mu^2/(24\Lambda) > \mu^2/(36\Lambda) = \vert F_\Delta\vert $ (since $1/24 > 1/36$).
 
 **Pure-X and pure-Y orbits are both lower energy than the diagonal orbit.**
 
@@ -246,14 +246,14 @@ Eigenvalues: $12\Lambda s^2 \pm 24\Lambda s^2 = \{36\Lambda s^2, -12\Lambda s^2\
 | Pure-Y $(0, 0, R, 0)$ | $-\mu^2/(24\Lambda)$ | $(+, +, +, 0)$ | 1 | Minimum (modulo Y-translation) |
 | Diagonal $(s, 0, s, 0)$ | $-\mu^2/(36\Lambda)$ | $(+, 0, -, 0)$ | 2 | Saddle, Morse index 1 |
 
-**$|\mathcal{M}_1(T^2)|$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$:**
+**$\vert \mathcal{M}_1(T^2)\vert $ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$:**
 - In continuum limit: $\mathcal{M}_1 \cong (S^1 \sqcup S^1)/D_4$. The two circles are exchanged by the $D_4$ action (90° rotation $x \leftrightarrow y$), giving a single circle after quotient.
-- $|\mathcal{M}_1| = 1$ (continuum moduli is 1-dim circle).
-- At finite $L$: circle is discretized to $L$ standing-wave positions per direction, all equivalent under $D_4 \ltimes (\mathbb Z_L)^2$. So $|\mathcal{M}_1| = 1$ at finite $L$ as well.
+- $\vert \mathcal{M}_1\vert = 1$ (continuum moduli is 1-dim circle).
+- At finite $L$: circle is discretized to $L$ standing-wave positions per direction, all equivalent under $D_4 \ltimes (\mathbb Z_L)^2$. So $\vert \mathcal{M}_1\vert = 1$ at finite $L$ as well.
 
 **Summary (Round 4 result for $T^2$):**
 
-> **$T^2$ First-Pitchfork Theorem.** On the 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, the reduced Lyapunov function at first Fiedler pitchfork is $F(r_1, r_2) = \tfrac{\mu}{2}(r_1^2 + r_2^2) + \Lambda[\tfrac{3}{2}(r_1^2+r_2^2)^2 + 3r_1^2 r_2^2]$. **Pure-X and pure-Y orbits** are degenerate minima (modulo Goldstone translation direction) with energy $-\mu^2/(24\Lambda)$. **Diagonal orbit** is a saddle (Morse index 1) with higher energy $-\mu^2/(36\Lambda)$. Therefore $|\mathcal{M}_1(T^2)| = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$, with orbit consisting of **$2L^2$ standing-wave configurations** (vs $D_4$'s 4 on free-BC square grid).
+> **$T^2$ First-Pitchfork Theorem.** On the 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, the reduced Lyapunov function at first Fiedler pitchfork is $F(r_1, r_2) = \tfrac{\mu}{2}(r_1^2 + r_2^2) + \Lambda[\tfrac{3}{2}(r_1^2+r_2^2)^2 + 3r_1^2 r_2^2]$. **Pure-X and pure-Y orbits** are degenerate minima (modulo Goldstone translation direction) with energy $-\mu^2/(24\Lambda)$. **Diagonal orbit** is a saddle (Morse index 1) with higher energy $-\mu^2/(36\Lambda)$. Therefore $\vert \mathcal{M}_1(T^2)\vert = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$, with orbit consisting of **$2L^2$ standing-wave configurations** (vs $D_4$'s 4 on free-BC square grid).
 
 **Category: Cat A** — exact discrete integrals, elementary algebra.
 
@@ -263,7 +263,7 @@ Eigenvalues: $12\Lambda s^2 \pm 24\Lambda s^2 = \{36\Lambda s^2, -12\Lambda s^2\
 
 Unified table of first-pitchfork orbit structure at $c = 1/2$:
 
-| Graph | $\mathrm{Aut}(G)$ | Fiedler dim | $A_2/A_1$ | Isotropy broken? | Orbit selection | $|\mathcal{M}_1|$ | Min orbit size | Goldstones |
+| Graph | $\mathrm{Aut}(G)$ | Fiedler dim | $A_2/A_1$ | Isotropy broken? | Orbit selection | $\vert \mathcal{M}_1\vert $ | Min orbit size | Goldstones |
 |---|---|---|---|---|---|---|---|---|
 | 2D square (free BC) | $D_4$ | 2 | **4** | Yes (4 > 2) | **Axis-aligned** (Round 3) | 1 | 4 | 0 |
 | 1D cycle $C_n$ | $D_n$ | 2 | **2** | No (2 = 2) | Continuous ring | 1 | $n$ | 1 (in continuum) |
@@ -277,12 +277,12 @@ Unified table of first-pitchfork orbit structure at $c = 1/2$:
 
 3. **Goldstones reflect continuous symmetry.** 1D cycle has 1 Goldstone per minimum (from $O(2)$ at quartic order, though exact-$D_n$ breaks it at sextic). 2D torus has 1 Goldstone per pure-axis orbit (X-translation for pure-X, Y-translation for pure-Y). 2D square with free BC has 0 Goldstones (D_4 is discrete).
 
-4. **Moduli dimension interpretation.** The $|\mathcal{M}_1| = 1$ in all three cases masks a key difference:
+4. **Moduli dimension interpretation.** The $\vert \mathcal{M}_1\vert = 1$ in all three cases masks a key difference:
    - 2D square: discrete 4-point orbit (moduli 0-dim).
    - 1D cycle: continuous $S^1/D_n$ orbit (moduli 1-dim).
    - 2D torus: continuous $(S^1 \sqcup S^1)/D_4$ orbit (moduli 1-dim after $D_4$ quotient).
 
-So **"$|\mathcal{M}_1|$ as a set-cardinality" is not the sharp invariant** — the **moduli dimension** is. Continuous-Aut graphs have positive-dimensional moduli; discrete-Aut have 0-dim.
+So **"$\vert \mathcal{M}_1\vert $ as a set-cardinality" is not the sharp invariant** — the **moduli dimension** is. Continuous-Aut graphs have positive-dimensional moduli; discrete-Aut have 0-dim.
 
 ---
 
@@ -290,9 +290,9 @@ So **"$|\mathcal{M}_1|$ as a set-cardinality" is not the sharp invariant** — t
 
 ### 5.1 New Cat A claims (Round 4)
 
-1. **$C_n$ first-pitchfork radial reduction.** $F(r) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4$; 1-dim circle of minima; orbit size $n$; $|\mathcal{M}_1| = 1$.
+1. **$C_n$ first-pitchfork radial reduction.** $F(r) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4$; 1-dim circle of minima; orbit size $n$; $\vert \mathcal{M}_1\vert = 1$.
 
-2. **$T^2$ first-pitchfork orbit selection.** Pure-X or pure-Y orbits are minima (linked by $D_4$); diagonal orbit is saddle; orbit size $2L^2$; $|\mathcal{M}_1| = 1$.
+2. **$T^2$ first-pitchfork orbit selection.** Pure-X or pure-Y orbits are minima (linked by $D_4$); diagonal orbit is saddle; orbit size $2L^2$; $\vert \mathcal{M}_1\vert = 1$.
 
 3. **Ratio $A_2/A_1$ classification.** The 2D grid value $A_2/A_1 = 4$ is characteristic of **product-structure $D_4$**; the cycle value $A_2/A_1 = 2$ is characteristic of **single-direction translation** (isotropic / $O(2)$-invariant). These two values are universal across all product-structure and single-cycle graph classes.
 

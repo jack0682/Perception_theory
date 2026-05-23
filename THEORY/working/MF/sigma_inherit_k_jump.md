@@ -387,7 +387,7 @@ relation (T-Temporal-Identity, Session V). For each event type in $R_{t \to s}$:
 
 **(a) Continuation (CONT-CAT-B)**: In the V3-separated, stable-K, small-step regime:
 the centroid $c_j^s$ and orientation $\Theta_j^s$ are continuously differentiable in
-$(\sigma_i^t,\, M_{t \to s}|_{C_i^t \times C_j^s})$ with Lipschitz constant
+$(\sigma_i^t,\, M_{t \to s}\vert _{C_i^t \times C_j^s})$ with Lipschitz constant
 $\leq C_\mathrm{CONT}$ (determined by V3 inter-formation gap and transport displacement).
 
 **(b) Merge centroid + orientation (MERGE-Cat-B)**: Under mass conservation (H3) and

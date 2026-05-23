@@ -263,7 +263,7 @@ $$B_{T_*}^{\mathrm{FP}}(\Theta) := \{\,T \in [T_{\min}, T_{\max}] : \psi(T) = T\
 → Brouwer (존재) + OMS-1 framework consistency (허용) 의 결합.
 
 **CoT step 3**: Multiplicity — multi-well $E$ (formation regime, T8 supercritical)
-가 $|B_{T_*}^{\mathrm{FP}}| > 1$ 가능성. OP-T*-α (W9+) 에서 정량화.
+가 $\vert B_{T_*}^{\mathrm{FP}}\vert > 1$ 가능성. OP-T*-α (W9+) 에서 정량화.
 
 **CoC anchor**: 03_T_star §1.2 (B.2.2: Brouwer existence), §1.3 (B.2.3: multiplicity
 open), §5.1 (Route C formalization with intersection form).
@@ -483,7 +483,7 @@ $$B_{T_*}^{\mathrm{FP}}(\Theta) \neq \emptyset$$
   Brouwer — Banach contraction principle would give uniqueness, but SCC E is *not*
   a contraction in T globally."
 
-**Observer choice**: $|B_{T_*}^{\mathrm{FP}}| > 1$ 인 경우 관찰자는 *하나를 선택*
+**Observer choice**: $\vert B_{T_*}^{\mathrm{FP}}\vert > 1$ 인 경우 관찰자는 *하나를 선택*
 — JND argmin 이 선택 기준. Argmin 자체의 uniqueness 도 미보장 (다중 minimizer 가능)
 — OP-T*-α 의 정량화 대상.
 
@@ -618,11 +618,11 @@ $T_* = f(q, \lambda)$ 로 정의.
 
 ### §6.2 Attempt 2: T_* 가 유일하다 (no multiplicity)
 
-**주장**: $|B_{T_*}^{\mathrm{FP}}| = 1$ — fixed-point 유일, 관찰자 선택 불필요.
+**주장**: $\vert B_{T_*}^{\mathrm{FP}}\vert = 1$ — fixed-point 유일, 관찰자 선택 불필요.
 
 **실패 분석**:
 
-- **단계 1**: 유일성은 Banach contraction 이 필요 — $|\psi'(T)| < 1$ globally.
+- **단계 1**: 유일성은 Banach contraction 이 필요 — $\vert \psi'(T)\vert < 1$ globally.
 - **단계 2**: Formation regime (T8 supercritical) 의 multi-well $E$ →
   $\pi_T$ 의 다중 metastable basin. $\psi(T) = \mathbb{E}_{\pi_T}[\mathrm{Var}]$
   가 각 basin 에서 다른 값 → multiple branches.

@@ -40,7 +40,7 @@ Records all significant mathematical decisions, rejected candidates, and overcla
 
 **Justification.** A finite group has dimension 0 as a Lie group. The dimension formula for orbit spaces under free proper actions of a Lie group $G$ of dimension $k$ is $\dim(M/G) = n - k$. For $k = 0$ (finite $G$), dimension is preserved at generic points. At fixed points, local structure is $\mathbb{R}^n / G_p$ (orbifold singularity), still of real dimension $n$.
 
-**Application.** $S_K$ (order $K!$) and $\mathrm{Aut}_{task}$ (order divides $|\mathrm{Aut}(X_t)|$) are both finite, hence $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ has the same dimension as $\mathcal{M}_{\mathrm{obs}}$ at generic points.
+**Application.** $S_K$ (order $K!$) and $\mathrm{Aut}_{task}$ (order divides $\vert \mathrm{Aut}(X_t)\vert $) are both finite, hence $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ has the same dimension as $\mathcal{M}_{\mathrm{obs}}$ at generic points.
 
 **Overclaim warning.** It would be an error to claim that "the gauge group reduces the DOF count." The gauge group removes representation redundancy (identifies physically equivalent states) but does not lower the ambient dimension.
 
@@ -547,7 +547,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 
 | Prop | Statement | Source |
 |---|---|---|
-| RT1 | Rank obstruction: $\mathrm{rank}\,J_e\bigr|_{T\Delta^3} = 3$ under H1, H2, H3 | `op_oms_001_gap_c1_rank_theorem.md` (Gate 1) |
+| RT1 | Rank obstruction: $\mathrm{rank}\,J_e\bigr\vert _{T\Delta^3} = 3$ under H1, H2, H3 | `op_oms_001_gap_c1_rank_theorem.md` (Gate 1) |
 | RT2 | $e : \Lambda^{\mathrm{reg}} \to \mathbb{R}^4$ is locally an immersion | id. |
 | RT3 | Reduction-C closure: $g \in G_{\mathrm{cw}} \Rightarrow g = \mathrm{id}$ on regular subset | id. |
 | S1 | Interior sensitivity: $J_e = -G_T^\top H_T^{-1} G_T$ | `op_oms_001_gap_c1_sensitivity.md` |
@@ -574,7 +574,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 
 | Witness | Source | Status |
 |---|---|---|
-| H4: $|\det G_T^{(\mathrm{3 \times 3})}| > 0$ at multiple $\lambda$ | VP-8 (`vp8_gap_c1_rank_witness.json`): 34/42 = 81% across P12/S3/asymmetric scenes | **CONFIRMED** |
+| H4: $\vert \det G_T^{(\mathrm{3 \times 3})}\vert > 0$ at multiple $\lambda$ | VP-8 (`vp8_gap_c1_rank_witness.json`): 34/42 = 81% across P12/S3/asymmetric scenes | **CONFIRMED** |
 | Rank(J_e_tan) = 2 (full simplex tangent rank) | VP-8: 42/42 cases | **UNIVERSAL** |
 | $V_{2,τ=0.01}$ has ≥ 2 distinct-readout basins on P12 (3 attractors, 2 distinct pairs) and S3 (4 attractors, 4 distinct pairs) | VP-9 (`vp9_nontrivial_v_basin.json`) | **CONFIRMED for τ=0.01** |
 | $V_{2,τ=0.1}$: basins collapse (over-smoothing) | VP-9 | **NV10 caveat confirmed** |

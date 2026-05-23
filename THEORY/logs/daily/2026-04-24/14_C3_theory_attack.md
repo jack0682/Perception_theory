@@ -63,7 +63,7 @@ $$\rho_{\ell=1}[\delta u_x / \lVert \delta u_x \rVert] = \frac{(\pi r_0)^2 + 0^2
 
 Wait, need to normalize properly. Let me re-derive.
 
-Numerator: $\sum_i |\langle \hat\phi, \psi_{\ell=1}^{(i)}\rangle|^2 = \langle \hat\phi, \psi^{(c)}\rangle^2 + \langle \hat\phi, \psi^{(s)}\rangle^2$.
+Numerator: $\sum_i \vert \langle \hat\phi, \psi_{\ell=1}^{(i)}\rangle\vert ^2 = \langle \hat\phi, \psi^{(c)}\rangle^2 + \langle \hat\phi, \psi^{(s)}\rangle^2$.
 
 Note $\hat\phi = \delta u_x / \lVert \delta u_x \rVert$, so $\langle \hat\phi, \psi\rangle = \langle \delta u_x, \psi\rangle / \lVert \delta u_x \rVert$.
 

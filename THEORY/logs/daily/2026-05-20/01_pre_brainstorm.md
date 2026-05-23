@@ -42,7 +42,7 @@ $$c_G(K) = \inf_{\Theta^* \in K \cap \Sigma_{T8}} \sqrt{16 \lambda_2(L_G)^2 + W'
 - $\frac{\partial \mu_2}{\partial c} = \beta \cdot W'''(c) = 12\beta(2c-1)$
 
 **Euclidean gradient norm**:
-$$|\nabla_\Theta \mu_2|^2 = 16\lambda_2^2 + W''(c)^2 + 144\beta^2(2c-1)^2$$
+$$\vert \nabla_\Theta \mu_2\vert ^2 = 16\lambda_2^2 + W''(c)^2 + 144\beta^2(2c-1)^2$$
 
 ### §1.2 2D 토러스 L=16 worked example (검증 input)
 
@@ -134,7 +134,7 @@ where $D_G$ = degree diagonal matrix, $A_G$ = adjacency matrix. $L_G$ is symmetr
 ### §2.4 Implications for S3 (Kernel-multiplicity identity)
 
 **S3 statement**:
-$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})|_{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
+$$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})\vert _{T\Sigma_m}) = \mathrm{mult}(\lambda_2(L_G)) =: k_0(G)$$
 
 **Minimal model** (just $E_{bd}$): direct algebraic from Theorem 4. Cat A unconditional.
 

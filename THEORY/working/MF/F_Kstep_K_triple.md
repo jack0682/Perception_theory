@@ -290,10 +290,10 @@ OAT-supplementary §12.2: NQ-242 reframe as computational PH pipeline. F + K_ste
 Given soft cohesion field $u : X \to [0,1]$ on graph $G = (X, E)$, define the **superlevel set filtration** indexed by $c \in [0, 1]$ in *decreasing* order:
 $$U_c := \{x \in X : u(x) \geq c\}, \qquad U_{c_2} \subseteq U_{c_1} \quad (c_1 \leq c_2).$$
 
-The induced subgraph $G|_{U_c} = (U_c, E \cap U_c \times U_c)$ is finite simplicial; its 0-th simplicial homology $H_0(G|_{U_c}; \mathbb{F})$ counts connected components of the threshold-$c$ superlevel set, with coefficients in field $\mathbb{F}$ (typically $\mathbb{F}_2$ for combinatorial efficiency).
+The induced subgraph $G\vert _{U_c} = (U_c, E \cap U_c \times U_c)$ is finite simplicial; its 0-th simplicial homology $H_0(G\vert _{U_c}; \mathbb{F})$ counts connected components of the threshold-$c$ superlevel set, with coefficients in field $\mathbb{F}$ (typically $\mathbb{F}_2$ for combinatorial efficiency).
 
 The persistence module (descending parameter convention):
-$$\mathbb{V}_*: H_0(G|_{U_{c_1}}) \to H_0(G|_{U_{c_2}}) \to \cdots \quad (c_1 > c_2 > \cdots),$$
+$$\mathbb{V}_*: H_0(G\vert _{U_{c_1}}) \to H_0(G\vert _{U_{c_2}}) \to \cdots \quad (c_1 > c_2 > \cdots),$$
 where each map is induced by inclusion $U_{c_i} \supseteq U_{c_{i+1}}$. By the structure theorem for persistence modules over a field (Crawley-Boevey 2015 / Zomorodian-Carlsson 2005), $\mathbb{V}_*$ decomposes into interval modules — the **superlevel barcode** $\mathrm{Dgm}_0^{\sup}(u)$.
 
 #### §7.4.2 Formal identity: F = number of H_0 generators *born* at strict local maxima
@@ -302,7 +302,7 @@ where each map is induced by inclusion $U_{c_i} \supseteq U_{c_{i+1}}$. By the s
 $$\mathcal{F}(u) \;=\; \#\big\{\text{intervals in } \mathrm{Dgm}_0^{\sup}(u) \text{ born at } c = u(x_*) \text{ for some } x_* \text{ strict local max}\big\}.$$
 
 **Equivalently**, F equals the number of H_0 generators introduced (as new bars) by the superlevel set filtration over the entire range $c \in [0, 1]$:
-$$\mathcal{F}(u) = \sum_{c \in [0,1]} \big[ \dim H_0(G|_{U_{c^-}}) - \dim H_0(G|_{U_{c^+}}) \big]_+$$
+$$\mathcal{F}(u) = \sum_{c \in [0,1]} \big[ \dim H_0(G\vert _{U_{c^-}}) - \dim H_0(G\vert _{U_{c^+}}) \big]_+$$
 (positive part of H_0 jumps under descending $c$).
 
 **Proof sketch**:
@@ -315,7 +315,7 @@ $$\mathcal{F}(u) = \sum_{c \in [0,1]} \big[ \dim H_0(G|_{U_{c^-}}) - \dim H_0(G|
 #### §7.4.3 K_step as superlevel H_0 at fixed threshold
 
 The threshold-dependent diagnostic $K_{\mathrm{step}}(u; \tau)$ corresponds to a **single slice** of the superlevel filtration:
-$$K_{\mathrm{step}}(u; \tau) = \dim H_0\big(G|_{\{u > \tau\}}\big) \;=\; \dim H_0(G|_{U_{\tau + 0^+}}).$$
+$$K_{\mathrm{step}}(u; \tau) = \dim H_0\big(G\vert _{\{u > \tau\}}\big) \;=\; \dim H_0(G\vert _{U_{\tau + 0^+}}).$$
 
 The inequality $K_{\mathrm{step}}(u; \tau) \leq \mathcal{F}(u)$ for all $\tau$ (canonical §12 line 832) is now reread as the *standard* PH fact: the number of H_0 generators *alive at parameter* $\tau$ is at most the total number of H_0 generators ever born. Equality holds iff no merge events occurred above $\tau$.
 

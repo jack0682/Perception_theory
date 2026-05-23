@@ -213,7 +213,7 @@
 - **파일:** `THEORY/working/E/soft_K_definition.md`
 - **내용 요약:**
   **정의:** $K_{\mathrm{soft}}(u) = \sum_{i \in \mathrm{H_0 bars}} \phi(\ell_i)$ where $\ell_i$ = persistence bar length (death − birth) in the superlevel-set filtration of $u$, $\phi: \mathbb{R}_{\geq 0} \to [0,1]$ monotone with $\phi(0) = 0$, $\phi(\ell) \to 1$ as $\ell \to \infty$ (예: $\phi(\ell) = 1 - \exp(-\ell / \ell_{\mathrm{scale}})$).
-  **Well-definedness:** $K_{\mathrm{soft}}$ 는 persistence stability theorem 에 의해 $\lVert u - v \rVert_\infty$ 에 Lipschitz. 즉 $|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq L_\phi \cdot n \cdot \lVert u - v \rVert_\infty$ (n = |X_t|).
+  **Well-definedness:** $K_{\mathrm{soft}}$ 는 persistence stability theorem 에 의해 $\lVert u - v \rVert_\infty$ 에 Lipschitz. 즉 $\vert K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\vert \leq L_\phi \cdot n \cdot \lVert u - v \rVert_\infty$ (n = |X_t|).
   **기존 이론 연결:** Q_morph 의 $\ell_{\max}$ 는 이미 같은 filtration 의 longest bar. $K_{\mathrm{soft}}$ 는 동일 filtration 의 total bar count weighted by length. 즉 **기존 Q_morph 인프라 재활용 가능**.
   **한계:** $\phi$ 선택의 자유 — 이는 새 free parameter. 최소화는 $\phi = \mathrm{id}$ 근사 사용.
 - **수학 작업 유형:** 정의 + Lipschitz 증명.

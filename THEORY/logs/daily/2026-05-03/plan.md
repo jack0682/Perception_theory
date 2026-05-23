@@ -169,7 +169,7 @@ Day 7 is successful if:
 2. The document contains a **theorem candidate** (L1-M-Theorem-Candidate) or **corollary candidate** with explicit hypothesis package (T-L1-F (P0)–(P11) + $\Phi_{\mathrm{res}}$ + edge-band control (E)).
 3. **Error terms** are explicit: $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ with formulas + envelope-sub-class bounds.
 4. **$\Phi_{\mathrm{res}}$** is formalized or referenced cleanly (point to `ksoft_kact_bridge_lemma.md` §5.3.2 + WQ-LAT-1.B empirical sub-classes).
-5. **Relation to T-L1-F is explicit**: T-L1-F gives $K_{\mathrm{bar}}=K_{\mathrm{act}}$; L1-M gives $|K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}|\le\rho$; combine for $|K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}|\le\rho$.
+5. **Relation to T-L1-F is explicit**: T-L1-F gives $K_{\mathrm{bar}}=K_{\mathrm{act}}$; L1-M gives $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}\vert \le\rho$; combine for $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{act}}\vert \le\rho$.
 6. **Non-claims preserved** explicitly in the document.
 7. **Next step after L1-M is identified** (L1-M-AUDIT, L1-M-FORMALIZE, or canonical adoption path).
 
@@ -178,7 +178,7 @@ Day 7 is successful if:
 ## §6. Risk Register
 
 - **Risk 1 — Arbitrary $\phi$ creates chart-rank drift.** Default $\phi$-sat fails (WQ-LAT-1.B Phi-0 range 0.943). L1-M MUST restrict to $\Phi_{\mathrm{res}}$. **Mitigation**: §L1-M.1 audit; §L1-M.6 non-claim.
-- **Risk 2 — Edge bars near $\ell_{\min}$ create instability.** Bars with $|\ell_i-\ell_{\min}|\le\tau$ are envelope-sensitive. **Mitigation**: edge-band control hypothesis (E) — either no bars in edge band (margin assumption) OR sharpness parameter large enough.
+- **Risk 2 — Edge bars near $\ell_{\min}$ create instability.** Bars with $\vert \ell_i-\ell_{\min}\vert \le\tau$ are envelope-sensitive. **Mitigation**: edge-band control hypothesis (E) — either no bars in edge band (margin assumption) OR sharpness parameter large enough.
 - **Risk 3 — $K_{\mathrm{soft}}$ is real-valued, not integer-valued.** $K_{\mathrm{soft}}^\phi(U)\in\mathbb R_{\ge 0}$ while $K_{\mathrm{act}}\in\mathbb N$. **Mitigation**: state corollary as an INEQUALITY, not equality; absolute-value error bound is the natural form.
 - **Risk 4 — Hard threshold is non-smooth.** $\phi_{\mathrm{hard}}$ is exact but not differentiable; smooth $\phi$ is needed for variational analysis. **Mitigation**: distinguish "exact integer" branch (hard) from "smooth approximation" branch (logistic, shift-sat).
 - **Risk 5 — Smooth logistic approximation needs sharpness parameter.** $s,\beta$ values must be large enough; $s=100$, $\beta=20$ are empirically supported. **Mitigation**: state explicit sharpness threshold; cite WQ-LAT-1.B.

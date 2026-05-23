@@ -63,7 +63,7 @@ Commitment 1 (u_t primitive directionality) preserved throughout (§14.2 explici
 1. **§3.2 invariant-vs-equivariant confusion**: argument absent integer solution to $2a + 4b = 5$ rules out 5th-order *invariant* but the Crandall-Rabinowitz expansion is on the *equivariant* (gradient) side. Need to clarify: scalar Lyapunov function has no odd-degree polynomials, hence no $\epsilon^{3/2}$ contribution at any C-R order.
 2. **§4.2 center-manifold slaving iteration not shown**: file claims $W^{(4)}$ slaving iterates to give sextic corrections; this is the load-bearing computation but not derived. Need Carr (1981) §2 or explicit iteration.
 3. **§7 process-audit retroactive-reversal framing**: a process audit (Cat A → Cat B retroactive) cannot be "reversed" by new analysis. New theorem if proved is a *new* Cat A statement, not a reversal.
-4. **§2 leading-order absorption gap**: $F_{xx} = 2\epsilon|W''(c)|$ vs $F_{yy} = 4\epsilon|W''(c)|$ are stated as different by 2× but then claimed to "absorb into Σ_m-Hessian normalization" without derivation. Load-bearing for the entire degenerate-plateau hypothesis.
+4. **§2 leading-order absorption gap**: $F_{xx} = 2\epsilon\vert W''(c)\vert $ vs $F_{yy} = 4\epsilon\vert W''(c)\vert $ are stated as different by 2× but then claimed to "absorb into Σ_m-Hessian normalization" without derivation. Load-bearing for the entire degenerate-plateau hypothesis.
 
 ### §3.2 NQ-188 (3 major)
 

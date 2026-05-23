@@ -34,7 +34,7 @@ Full $\Delta^3$ result is split off and treated in `op_oms_034_temporal_delta3_s
 
 For each smooth point $u \in \mathrm{relint}(\Omega)$ and each $i$:
 - $g_i(u) = \nabla_u E_i(u) \in \mathbb{R}^n$.
-- $G(u) = [g_{cl}\,|\,g_{sep}\,|\,g_{bd}](u) \in \mathbb{R}^{n \times 3}$.
+- $G(u) = [g_{cl}\,\vert \,g_{sep}\,\vert \,g_{bd}](u) \in \mathbb{R}^{n \times 3}$.
 - $G_T(u) = P_T^\top G(u) \in \mathbb{R}^{(n-1) \times 3}$.
 - $H(u; \lambda) = \nabla^2_u E_\lambda(u)$, symmetric.
 - $H_T(u; \lambda) = P_T^\top H(u; \lambda) P_T \in \mathbb{R}^{(n-1) \times (n-1)}$.

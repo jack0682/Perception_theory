@@ -48,7 +48,7 @@ CLAUDE.md Ontological Constraint #4: "Not fuzzy segmentation, not clustering, no
 
 ### 3.1 Contrastive positioning
 
-**Mumford-Shah (1989)**: minimizes $\mathcal{E}_{\mathrm{MS}}(u, \Gamma) = \int_\Omega \lvert u - f \rvert^2 + \mu \int_{\Omega \setminus \Gamma} |\nabla u|^2 + \nu |\Gamma|$ (piecewise smooth u + boundary $\Gamma$). Assumes **Euclidean domain**, **gradient-based** boundary term.
+**Mumford-Shah (1989)**: minimizes $\mathcal{E}_{\mathrm{MS}}(u, \Gamma) = \int_\Omega \lvert u - f \rvert^2 + \mu \int_{\Omega \setminus \Gamma} \vert \nabla u\vert ^2 + \nu \vert \Gamma\vert $ (piecewise smooth u + boundary $\Gamma$). Assumes **Euclidean domain**, **gradient-based** boundary term.
 
 **Chan-Vese (2001)**: level-set based; $u$ is piecewise constant; interface is zero level-set of level-set function $\phi$.
 
@@ -75,7 +75,7 @@ CLAUDE.md Ontological Constraint #4: "Not fuzzy segmentation, not clustering, no
 
 **Metrics**:
 - **Intersection-over-Union (IoU)** vs ground truth.
-- **Formation count error** $|\widehat K_{\mathrm{SCC}} - K_{\mathrm{GT}}|$.
+- **Formation count error** $\vert \widehat K_{\mathrm{SCC}} - K_{\mathrm{GT}}\vert $.
 - **Boundary quality**: Hausdorff distance between SCC boundary and GT.
 - **Protocol sensitivity**: std of IoU across 10 random initializations.
 
@@ -150,7 +150,7 @@ $$\widehat K_{\mathrm{SCC}} = K_{\mathrm{block}} \text{ exactly when SNR} > \tex
 
 **SCC difference**:
 - **Graph substrate** (not continuum).
-- **Three-component energy** (not just $\int |\nabla u|^2$).
+- **Three-component energy** (not just $\int \vert \nabla u\vert ^2$).
 - **Volume-constrained simplex** $\Sigma_m$ (not free).
 - **Closure self-referentiality**: novel primitive absent from classical pattern formation.
 

@@ -16,7 +16,7 @@
 ### §1.1 The Goldstone overlap integral
 
 For tanh-disk $u^*$ on T²_L with center $\mathbf{c}_*$, translation Goldstone $\delta u_x = \partial u^*/\partial x$. The Hessian eigenvalue:
-$$\mu_{\mathrm{Gold}} = \frac{\langle \delta u_x \lvert H \rvert \delta u_x \rangle}{\langle \delta u_x | \delta u_x \rangle}, \quad H = 4\alpha L_{\mathrm{Lap}} + \beta D_{W''(u^*)}.$$
+$$\mu_{\mathrm{Gold}} = \frac{\langle \delta u_x \lvert H \rvert \delta u_x \rangle}{\langle \delta u_x \vert \delta u_x \rangle}, \quad H = 4\alpha L_{\mathrm{Lap}} + \beta D_{W''(u^*)}.$$
 
 In **continuum infinite-volume**: $\mu_{\mathrm{Gold}} = 0$ exactly (continuous translation symmetry).
 
@@ -34,10 +34,10 @@ For tanh disk centered at $(0, 0)$ with width $\xi_0$ and radius $r_0 = \sqrt{m/
 $\delta u_x = \partial u^*/\partial x = -\frac{\sech^2((r-r_0)/\xi_0)}{2\xi_0} \cdot \frac{x}{r}$.
 
 Fourier transform (well-known for radial profile):
-$\widetilde{\delta u_x}(\mathbf{k}) = i k_x \cdot \widetilde{u^*}(|\mathbf{k}|)$
+$\widetilde{\delta u_x}(\mathbf{k}) = i k_x \cdot \widetilde{u^*}(\vert \mathbf{k}\vert)$
 where $\widetilde{u^*}$ is the radial Fourier transform.
 
-For tanh-profile (smooth Gaussian-like decay): $\widetilde{u^*}(|\mathbf{k}|) \sim r_0^2 e^{-\xi_0 |\mathbf{k}|}$ at large $|\mathbf{k}|$.
+For tanh-profile (smooth Gaussian-like decay): $\widetilde{u^*}(\vert \mathbf{k}\vert) \sim r_0^2 e^{-\xi_0 \vert \mathbf{k}\vert}$ at large $\vert \mathbf{k}\vert $.
 
 ### §1.3 Hessian in Fourier space
 
@@ -46,29 +46,29 @@ For uniform $u^* \approx c$ background (treating disk as small perturbation): $D
 But for actual disk profile: $D_{W''}$ varies with site, weighted toward interface $u \in (c, 1-c)$ where $W''$ is most negative.
 
 Effective Hessian on $\delta u_x$:
-$\mu_{\mathrm{Gold}} \approx 4\alpha \langle \delta u_x | L_{\mathrm{Lap}} | \delta u_x \rangle / \lVert \delta u_x \rVert^2 - O(\beta)$ correction from W''.
+$\mu_{\mathrm{Gold}} \approx 4\alpha \langle \delta u_x \vert L_{\mathrm{Lap}} \vert \delta u_x \rangle / \lVert \delta u_x \rVert^2 - O(\beta)$ correction from W''.
 
-For 2D lattice Laplacian: $\langle \delta u_x | L_{\mathrm{Lap}} | \delta u_x \rangle = \sum_{\mathbf{k}} \lambda_{\mathbf{k}} |\widetilde{\delta u_x}(\mathbf{k})|^2$.
+For 2D lattice Laplacian: $\langle \delta u_x \vert L_{\mathrm{Lap}} \vert \delta u_x \rangle = \sum_{\mathbf{k}} \lambda_{\mathbf{k}} \vert \widetilde{\delta u_x}(\mathbf{k})\vert ^2$.
 
 Lattice Laplacian eigenvalues: $\lambda_{\mathbf{k}} = 4 - 2\cos(k_x a) - 2\cos(k_y a)$ for nearest-neighbor 2D.
 
-For small $|\mathbf{k}| a \ll 1$: $\lambda_{\mathbf{k}} \approx |\mathbf{k}\lvert ^2 a^2 + O(( \rvert\mathbf{k}| a)^4)$.
+For small $\vert \mathbf{k}\vert a \ll 1$: $\lambda_{\mathbf{k}} \approx \vert \mathbf{k}\lvert ^2 a^2 + O(( \rvert\mathbf{k}\vert a)^4)$.
 
 ### §1.4 The $L^{-2}$ result (continuum-Goldstone leading order)
 
 For continuum tanh-disk and continuous $\mathbf{k}$ integration:
-$\langle \delta u_x | (-\Delta) | \delta u_x \rangle / \lVert \delta u_x \rVert^2 = \int |\mathbf{k}\lvert ^2 \rvert\widetilde{\delta u_x}|^2 d^2 \mathbf{k} / \int |\widetilde{\delta u_x}|^2 d^2 \mathbf{k}$.
+$\langle \delta u_x \vert (-\Delta) \vert \delta u_x \rangle / \lVert \delta u_x \rVert^2 = \int \vert \mathbf{k}\lvert ^2 \rvert\widetilde{\delta u_x}\vert ^2 d^2 \mathbf{k} / \int \vert \widetilde{\delta u_x}\vert ^2 d^2 \mathbf{k}$.
 
-Using $\widetilde{\delta u_x}(\mathbf{k}) = i k_x \widetilde{u^*}(|\mathbf{k}|)$ and isotropy:
-$\int \lvert k_x \rvert^2 \cdot |\mathbf{k}\lvert ^2 \rvert\widetilde{u^*}|^2 d^2\mathbf{k} / \int \lvert k_x \rvert^2 |\widetilde{u^*}|^2 d^2\mathbf{k}$.
+Using $\widetilde{\delta u_x}(\mathbf{k}) = i k_x \widetilde{u^*}(\vert \mathbf{k}\vert)$ and isotropy:
+$\int \lvert k_x \rvert^2 \cdot \vert \mathbf{k}\lvert ^2 \rvert\widetilde{u^*}\vert ^2 d^2\mathbf{k} / \int \lvert k_x \rvert^2 \vert \widetilde{u^*}\vert ^2 d^2\mathbf{k}$.
 
-For Gaussian-decaying $\widetilde{u^*} \sim e^{-\xi_0 |\mathbf{k}|}$: integrals are convergent.
+For Gaussian-decaying $\widetilde{u^*} \sim e^{-\xi_0 \vert \mathbf{k}\vert}$: integrals are convergent.
 
 In **infinite-volume continuum**: $\mu_{\mathrm{Gold}}^{\mathrm{cont}} = 0$ exactly (continuous translation).
 
-For **finite L torus**: smallest non-zero $\mathbf{k}$ is $|\mathbf{k}_{\min}| = 2\pi/L$. The "missing" continuum integration over $|\mathbf{k}| < 2\pi/L$ generates finite-size correction:
+For **finite L torus**: smallest non-zero $\mathbf{k}$ is $\vert \mathbf{k}_{\min}\vert = 2\pi/L$. The "missing" continuum integration over $\vert \mathbf{k}\vert < 2\pi/L$ generates finite-size correction:
 
-$\mu_{\mathrm{Gold}}^{\mathrm{finite-L}} \approx 4\alpha \cdot |\mathbf{k}_{\min}|^2 a^2 = 4\alpha (2\pi a/L)^2 = (4\pi)^2 \alpha a^2 / L^2$. 
+$\mu_{\mathrm{Gold}}^{\mathrm{finite-L}} \approx 4\alpha \cdot \vert \mathbf{k}_{\min}\vert ^2 a^2 = 4\alpha (2\pi a/L)^2 = (4\pi)^2 \alpha a^2 / L^2$. 
 
 For $\alpha = 1, a = 1$: $\mu_{\mathrm{Gold}}^{\mathrm{finite-L}} \approx 16 \pi^2 / L^2 \approx 158/L^2$.
 
@@ -80,17 +80,17 @@ For $L = 24$: $\mu \approx 0.27$. Measured 0.0021. Off by factor 130.
 
 ### §1.5 The discrepancy: tanh-disk profile suppresses small-k weight
 
-The naive estimate above overcounts contributions from small $|\mathbf{k}|$. For localized tanh-disk, $\widetilde{\delta u_x}(\mathbf{k} \to 0)$ is **finite** (the disk has no IR divergence), so small-$\mathbf{k}$ contributions are weighted but not divergent.
+The naive estimate above overcounts contributions from small $\vert \mathbf{k}\vert $. For localized tanh-disk, $\widetilde{\delta u_x}(\mathbf{k} \to 0)$ is **finite** (the disk has no IR divergence), so small-$\mathbf{k}$ contributions are weighted but not divergent.
 
 More careful: for tanh-disk centered at $(0,0)$ with parameter $\xi_0 \sim a$:
-$|\widetilde{\delta u_x}|^2 \propto (k_x)^2 \cdot |\widetilde{u^*}|^2$. With $|\widetilde{u^*}|^2$ peaking around $|\mathbf{k}| \sim 1/r_0$ (= disk radius), contributions are dominated by $|\mathbf{k}| \sim 1/r_0$, not at $|\mathbf{k}_{\min}| = 2\pi/L$.
+$\vert \widetilde{\delta u_x}\vert ^2 \propto (k_x)^2 \cdot \vert \widetilde{u^*}\vert ^2$. With $\vert \widetilde{u^*}\vert ^2$ peaking around $\vert \mathbf{k}\vert \sim 1/r_0$ (= disk radius), contributions are dominated by $\vert \mathbf{k}\vert \sim 1/r_0$, not at $\vert \mathbf{k}_{\min}\vert = 2\pi/L$.
 
-For our setup ($r_0 \approx 3.6$ at L=20 c=0.10), the dominant $|\mathbf{k}| \sim 0.28$. Compared to $|\mathbf{k}_{\min}| = 0.31$ for L=20: very close.
+For our setup ($r_0 \approx 3.6$ at L=20 c=0.10), the dominant $\vert \mathbf{k}\vert \sim 0.28$. Compared to $\vert \mathbf{k}_{\min}\vert = 0.31$ for L=20: very close.
 
 ### §1.6 Refined finite-L estimate
 
-For dominant $|\mathbf{k}| \sim 1/r_0 = \sqrt{\pi/m}$:
-$\mu_{\mathrm{Gold}}^{\mathrm{finite-L}} \approx 4\alpha \cdot \langle |\mathbf{k}|^2 \rangle \approx 4\alpha \cdot \pi/m = 4\pi/(c L^2)$.
+For dominant $\vert \mathbf{k}\vert \sim 1/r_0 = \sqrt{\pi/m}$:
+$\mu_{\mathrm{Gold}}^{\mathrm{finite-L}} \approx 4\alpha \cdot \langle \vert \mathbf{k}\vert ^2 \rangle \approx 4\alpha \cdot \pi/m = 4\pi/(c L^2)$.
 
 For c=0.10, L=20: $\mu \approx 4\pi / 40 \approx 0.31$. Still much larger than measured 0.0025.
 

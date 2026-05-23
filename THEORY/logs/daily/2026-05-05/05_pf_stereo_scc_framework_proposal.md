@@ -191,7 +191,7 @@ $$\Gamma^{K \to K'}(\mathcal{P}) = A_{K \to K'}(\mathcal{P}) \cdot \exp\!\left(-
 where:
 - $\Delta\mathcal{E}^{K \to K'}_{\text{barrier}}(\mathcal{P}) = \mathcal{E}_{\text{SCC}}(u_{\text{saddle}}^{(K \to K')};\mathcal{P}) - \mathcal{E}_{\text{SCC}}(u_{\min,K};\mathcal{P})$ — energy barrier between $K$-basin minimum and saddle point connecting $K \to K'$ basin.
 - $A_{K \to K'}(\mathcal{P})$ — prefactor (Kramers attempt frequency); in full Eyring-Kramers form:
-$$A_{K \to K-1}(\mathcal{P}) = \frac{|\lambda_-|}{2\pi} \sqrt{\frac{\det H_{\min,K}}{\bigl|\det' H_{\text{saddle}}^{K \to K-1}\bigr|}}$$
+$$A_{K \to K-1}(\mathcal{P}) = \frac{\vert \lambda_-\vert}{2\pi} \sqrt{\frac{\det H_{\min,K}}{\bigl\vert \det' H_{\text{saddle}}^{K \to K-1}\bigr\vert}}$$
 where $\lambda_-$ is the unique negative eigenvalue of $H_{\text{saddle}}$, $\det'$ is the product of all nonzero eigenvalues.
 - $T$ — effective noise temperature (P-F flagged; requires stochastic SCC extension, i.e., Langevin on $\Sigma_M$, before quantitative claims).
 
@@ -314,7 +314,7 @@ The following items from tonight's session are not explicitly in any existing wo
 
 5. **Revised BO time scale chain**: $\tau_{\text{frame}} \ll \tau_{\text{fast}} \ll \tau_{\mathcal{P}} \lesssim \tau_{\text{slow}}$ — the distinction between $\tau_{\text{frame}}$ and $\tau_{\text{fast}}$ and between $\tau_{\mathcal{P}}$ and $\tau_{\text{slow}}$ is new; existing files only discuss the fast/slow split.
 
-6. **Allen-Cahn / surface field theory connection** — SCC on $\mathcal{P}_t$ → continuum limit on visible surface $S_t$: $\int_{S_t}[\frac{\alpha}{2}|\nabla_{S_t}\tilde{u}|^2 + \beta W(\tilde{u})]dA_{S_t}$, connecting to LSW coarsening $t^{4/3}$ (k_selection_b_kramers Phase 10 V4 exponent $\approx 1.315 \approx 4/3$).
+6. **Allen-Cahn / surface field theory connection** — SCC on $\mathcal{P}_t$ → continuum limit on visible surface $S_t$: $\int_{S_t}[\frac{\alpha}{2}\vert \nabla_{S_t}\tilde{u}\vert ^2 + \beta W(\tilde{u})]dA_{S_t}$, connecting to LSW coarsening $t^{4/3}$ (k_selection_b_kramers Phase 10 V4 exponent $\approx 1.315 \approx 4/3$).
 
 7. **Two-protagonist articulation** — explicit naming: $\tilde{u}_t$ = ontological/microscopic protagonist; $K_{\text{act}}(t)$ = effective/macroscopic protagonist after BO reduction. Neither can be eliminated; they operate on different time scales.
 

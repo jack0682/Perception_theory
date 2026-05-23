@@ -108,7 +108,7 @@ The following axiom formalizes the P-F flag operationally. It is a CV-1.7 Axiom 
 
 ### 4.1 In Kramers' formula (D-ST-4)
 
-$$\Gamma_{\alpha \to \beta} \approx \underbrace{\frac{|\lambda_-(\tilde{u}^{\mathrm{sad}})|}{2\pi} \cdot \sqrt{\frac{\det H_\alpha}{\det H_{\mathrm{sad}}}}}_{\text{attempt frequency } A} \cdot \exp\!\left(-\frac{\Delta E_{\alpha \to \beta}}{T_*}\right)$$
+$$\Gamma_{\alpha \to \beta} \approx \underbrace{\frac{\vert \lambda_-(\tilde{u}^{\mathrm{sad}})\vert}{2\pi} \cdot \sqrt{\frac{\det H_\alpha}{\det H_{\mathrm{sad}}}}}_{\text{attempt frequency } A} \cdot \exp\!\left(-\frac{\Delta E_{\alpha \to \beta}}{T_*}\right)$$
 
 where:
 - $\tilde{u}^{\mathrm{sad}}$ is the saddle point on the MEP between basins $\alpha$ and $\beta$ (computable via NEB, exp02-NEB / exp02b)
@@ -359,10 +359,10 @@ Add and subtract $\frac{1}{Z_0}\int f \cdot g_\varepsilon \, d\sigma$:
 
 $$= \frac{1}{Z_\varepsilon}\int f(g_\varepsilon - g_0) d\sigma + \left(\frac{1}{Z_\varepsilon}-\frac{1}{Z_0}\right)\int f \cdot g_0 \, d\sigma$$
 
-**Term I:** $\left|\frac{1}{Z_\varepsilon}\int f(g_\varepsilon - g_0)d\sigma\right| \leq \frac{M_f}{Z_\varepsilon}\int|g_\varepsilon - g_0|d\sigma \to 0$
-by dominated convergence ($|g_\varepsilon - g_0| \to 0$ pointwise, $\leq h + g_0 \leq 2h$ integrable).
+**Term I:** $\left\vert \frac{1}{Z_\varepsilon}\int f(g_\varepsilon - g_0)d\sigma\right\vert \leq \frac{M_f}{Z_\varepsilon}\int\vert g_\varepsilon - g_0\vert d\sigma \to 0$
+by dominated convergence ($\vert g_\varepsilon - g_0\vert \to 0$ pointwise, $\leq h + g_0 \leq 2h$ integrable).
 
-**Term II:** $\left|\left(\frac{1}{Z_\varepsilon}-\frac{1}{Z_0}\right)\int f \cdot g_0 d\sigma\right| \leq M_f \cdot Z_0 \cdot \left|\frac{1}{Z_\varepsilon}-\frac{1}{Z_0}\right| \to 0$ since $Z_\varepsilon \to Z_0 > 0$.
+**Term II:** $\left\vert \left(\frac{1}{Z_\varepsilon}-\frac{1}{Z_0}\right)\int f \cdot g_0 d\sigma\right\vert \leq M_f \cdot Z_0 \cdot \left\vert \frac{1}{Z_\varepsilon}-\frac{1}{Z_0}\right\vert \to 0$ since $Z_\varepsilon \to Z_0 > 0$.
 
 Both terms vanish. Therefore $\int f \, d\mu_\varepsilon \to \int f \, d\mu_0$ for all bounded continuous $f$. $\square$
 
@@ -386,7 +386,7 @@ $$\Gamma_\varepsilon = \Gamma_0 \cdot \exp\!\left(-\frac{\varepsilon \cdot \Delt
 
 $$\frac{\Gamma_B}{\Gamma_A} = \exp\!\left(\frac{\Delta S_{\mathrm{Bern}}}{1}\right) = \exp\!\left(S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{sad}}) - S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{min}})\right)$$
 
-At phase-separated configurations: $\tilde{u}^*_{\mathrm{min}} \approx \{0,1\}$-valued, so $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{min}}) \approx 0$. The saddle has $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{sad}}) = O(|\partial S|/n) = O(\delta)$ where $\delta \sim \exp(-c\sqrt{\beta/\alpha})$ is the Allen-Cahn interface width. Therefore:
+At phase-separated configurations: $\tilde{u}^*_{\mathrm{min}} \approx \{0,1\}$-valued, so $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{min}}) \approx 0$. The saddle has $S_{\mathrm{Bern}}(\tilde{u}^*_{\mathrm{sad}}) = O(\vert \partial S\vert /n) = O(\delta)$ where $\delta \sim \exp(-c\sqrt{\beta/\alpha})$ is the Allen-Cahn interface width. Therefore:
 
 $$\frac{\Gamma_B}{\Gamma_A} = \exp(O(\delta)) = 1 + O(\delta) \quad (\text{exponentially small correction in } \sqrt{\beta/\alpha})$$
 

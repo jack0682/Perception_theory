@@ -19,7 +19,7 @@ The redesigned W6 plan G1 (`W6_strategic_plan.md` lines 18-30) targets:
 
 Three refinements were flagged in `02_L1M_proof_development.md` §5.7 by the L-M working-draft author (W5 Day 7):
 
-- **R-1**: bottleneck-stability factor sharpness in §5.4 Type-N bound (whether the factor 2 in $|\ell_i - \ell_i^{(u^{(j)})}| \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}$ is sharp or expandable to factor 1 via terminal-death convention).
+- **R-1**: bottleneck-stability factor sharpness in §5.4 Type-N bound (whether the factor 2 in $\vert \ell_i - \ell_i^{(u^{(j)})}\vert \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}$ is sharp or expandable to factor 1 via terminal-death convention).
 - **R-2**: Type-B bound LG-7 reuse explicit reproof in §5.5 (whether the §5.5 invocation of "Type-B classification as background" cleanly follows from re-deriving LG-7 within L-M-2's scope, or implicitly assumes T-L1-F's proof structure).
 - **R-3**: terminal-death convention Type-N consistency in §5.4 (whether the §5.4 bottleneck-stability comparison correctly handles Type-N bars as finite-death merge bars, not terminal bars).
 

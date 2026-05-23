@@ -191,7 +191,7 @@ Sep을 $u$-weighted로 고친 후 C_t는 어느 술어·에너지에도 들어�
 | **T8-Core / T8-Full 위상전이** | 해상도가 충분할 때만 경계가 출현 | $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ | T8-Core/Full Cat A |
 | **Gradient flow convergence** | 경사하강이 임계점에 안전하게 도달 | Łojasiewicz–Simon | T14 |
 | **Diagnostic vector 계산 가능성** | (Bind, Sep, Inside, Persist)을 실제로 계산할 수 있음 | Predicate-Energy Bridge Cat A | T-Bind-Proj/Full |
-| **Deep Core Dominance 2b** | 핵 안의 핵이 이만큼 크다는 isoperimetric 부등식 | $|{\rm Core}^2|/|{\rm Core}| \ge 1 - 4C/\sqrt m$ | canonical §13 |
+| **Deep Core Dominance 2b** | 핵 안의 핵이 이만큼 크다는 isoperimetric 부등식 | $\vert {\rm Core}^2\vert /\vert {\rm Core}\vert \ge 1 - 4C/\sqrt m$ | canonical §13 |
 | **T-OP6-B Persistent Gradient Ridge Boundary** | 경계가 “물감 띠”이지만 그 띠와 위상적 경계의 거리는 $\le 2\sqrt{\alpha/\beta}$ | $d_H \le 2(\alpha/\beta)^{1/2}$, H1–H5 하 | T-OP6-B (Session K) |
 | **σ-framework supporting (Lemma 1/2/3, Theorem 3)** | 응집 핵심에 어떤 “지문(signature)” 구조가 있는지에 대한 표준 토대 | irrep decomposition + nodal count + Goldstone-ℓ=1 | T-σ-Lemma-1/2/3, T-σ-Theorem-3 |
 | **P-F-A1 Package I 완전 Cat A** | 잡음 속에서 안개가 어떻게 흐르고 어떤 분포에 도달하는지 | reflected Langevin SDE on polytope + Gibbs 유일 불변 + Poincaré ergodic | T-PF-A1-AR / SDE / GI / PE |

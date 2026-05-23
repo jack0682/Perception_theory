@@ -43,7 +43,7 @@ D_2 의 사용자 측 정의 (`01b §2`, `00_plan §Mission`):
 
 직접 인용 (canonical.md §3.11 line 285):
 
-> $$K_{\mathrm{act}}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}) := \bigl|\{(b,d) \in \mathrm{Bars}_0(\tilde{u}; G) : b - d > \rho_{\mathrm{pers}}\}\bigr|$$
+> $$K_{\mathrm{act}}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u}) := \bigl\vert \{(b,d) \in \mathrm{Bars}_0(\tilde{u}; G) : b - d > \rho_{\mathrm{pers}}\}\bigr\vert $$
 >
 > where $\mathrm{Bars}_0(\tilde{u}; G)$ is the $H_0$ persistent homology barcode of $\tilde{u}$ via the superlevel-set filtration on $G$.
 

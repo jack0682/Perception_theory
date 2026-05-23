@@ -191,30 +191,30 @@ $$
 
 ### §4.3 Per-slot vs aggregate matching (under L1-J)
 
-By L-M-2 §5.4 R-1 closure (factor 2 sharp): bars of $U|_{G_j^r}$ match bars of $u^{(j)}|_{G_j^r}$ within bottleneck distance $\rho_{\mathrm{pert}}/2$, with length differences bounded by $\rho_{\mathrm{pert}}$ (factor-2).
+By L-M-2 §5.4 R-1 closure (factor 2 sharp): bars of $U\vert _{G_j^r}$ match bars of $u^{(j)}\vert _{G_j^r}$ within bottleneck distance $\rho_{\mathrm{pert}}/2$, with length differences bounded by $\rho_{\mathrm{pert}}$ (factor-2).
 
 So:
-- Type-D bar of $U$ in slot $j$ corresponds to slot-primary bar of $u^{(j)}$, with $|\ell_i^U - \ell_{\mathrm{prim}}^{(j)}| \le \rho_{\mathrm{pert}}$.
+- Type-D bar of $U$ in slot $j$ corresponds to slot-primary bar of $u^{(j)}$, with $\vert \ell_i^U - \ell_{\mathrm{prim}}^{(j)}\vert \le \rho_{\mathrm{pert}}$.
 - Type-N bars of $U$ in slot $j$ correspond to slot-subdominant bars of $u^{(j)}$, similarly bounded.
 - Type-B bars of $U$ have no per-slot $u^{(j)}$ counterpart (background only).
 
 **Lemma L-M-G1-4 (per-formation aggregation, sketched).** Under $(P0)$–$(P11)$, for $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$:
 
 $$
-\Bigl|\sum_{j \in A^\varepsilon} K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)}) - K_{\mathrm{soft}}^\phi(U(\mathbf u))\Bigr| \le L_\phi \cdot \rho_{\mathrm{pert}} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u) + L_\phi \cdot \rho_{\mathrm{pert}} \cdot N_N(U) + \sum_{i \in I_B} \phi(\ell_i^U)
+\Bigl\vert \sum_{j \in A^\varepsilon} K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)}) - K_{\mathrm{soft}}^\phi(U(\mathbf u))\Bigr\vert \le L_\phi \cdot \rho_{\mathrm{pert}} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u) + L_\phi \cdot \rho_{\mathrm{pert}} \cdot N_N(U) + \sum_{i \in I_B} \phi(\ell_i^U)
 $$
 
 where $L_\phi$ here denotes the Lipschitz constant of $\phi$ on $[0,1]$ as a scalar function of bar length (the per-bar pointwise Lipschitz, used in the contributions below). *Note (re-review correction W6 D1 late): `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives the **K_soft functional** Lipschitz constant $L_K \le 4 L_\phi n$, where the $L_\phi$ on the RHS is the same per-bar Lipschitz constant used here. The earlier wording "$L_\phi \le 4 L_{\phi,\mathrm{family}} n$" inadvertently labeled $L_K$ as $L_\phi$; the bound below uses $L_\phi$ in the per-bar sense.*
 
 ### §4.4 Proof sketch
 
-**Per-Type-D contribution:** $|\phi(\ell_i^U) - \phi(\ell_{\mathrm{prim}}^{(j)})| \le L_\phi \cdot |\ell_i^U - \ell_{\mathrm{prim}}^{(j)}| \le L_\phi \cdot \rho_{\mathrm{pert}}$ (R-1 closure factor-2). Summed over $K_{\mathrm{act}}^\varepsilon$ slots: $L_\phi \cdot \rho_{\mathrm{pert}} \cdot K_{\mathrm{act}}^\varepsilon$.
+**Per-Type-D contribution:** $\vert \phi(\ell_i^U) - \phi(\ell_{\mathrm{prim}}^{(j)})\vert \le L_\phi \cdot \vert \ell_i^U - \ell_{\mathrm{prim}}^{(j)}\vert \le L_\phi \cdot \rho_{\mathrm{pert}}$ (R-1 closure factor-2). Summed over $K_{\mathrm{act}}^\varepsilon$ slots: $L_\phi \cdot \rho_{\mathrm{pert}} \cdot K_{\mathrm{act}}^\varepsilon$.
 
 **Per-Type-N contribution:** similarly, summed over $N_N$ Type-N bars: $L_\phi \cdot \rho_{\mathrm{pert}} \cdot N_N$.
 
 **Per-Type-B contribution:** background bars have no per-slot counterpart; aggregate side has $\sum_{i \in I_B} \phi(\ell_i^U)$ extra contribution. By L-M-2 §5.5 (R-2 closure): Type-B bars have $\ell_i \le \ell_{\min} - \rho_{\mathrm{bg}}$, so $\phi(\ell_i^U) \le \varepsilon_{\mathrm{sub}}^\phi$ (F4). Bound: $\varepsilon_{\mathrm{sub}}^\phi \cdot N_B$.
 
-Combining: $|K_{\mathrm{soft}}^\phi(U) - \sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)})| \le L_\phi \rho_{\mathrm{pert}} (K_{\mathrm{act}}^\varepsilon + N_N) + \varepsilon_{\mathrm{sub}}^\phi N_B$.
+Combining: $\vert K_{\mathrm{soft}}^\phi(U) - \sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)})\vert \le L_\phi \rho_{\mathrm{pert}} (K_{\mathrm{act}}^\varepsilon + N_N) + \varepsilon_{\mathrm{sub}}^\phi N_B$.
 
 ### §4.5 Verdict
 
@@ -230,7 +230,7 @@ Combining: $|K_{\mathrm{soft}}^\phi(U) - \sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{
 
 ### §5.1 Question
 
-T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$?
+T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $\vert K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)\vert $ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$?
 
 ### §5.2 Composition argument
 
@@ -238,12 +238,12 @@ Three pieces:
 
 **(a) T-L1-M static bound** (per `02_development.md` §6, post-repair Cat A conditional):
 $$
-|K_{\mathrm{soft}}^\phi(U_k) - K_{\mathrm{act}}^\varepsilon(\mathbf u_k)| \le \varepsilon_{\mathrm{sub}}^\phi N_{\mathrm{sub}}^{(k)} + \varepsilon_{\mathrm{dom}}^\phi K_{\mathrm{act}}^{(k)}, \quad k = 1, 2.
+\vert K_{\mathrm{soft}}^\phi(U_k) - K_{\mathrm{act}}^\varepsilon(\mathbf u_k)\vert \le \varepsilon_{\mathrm{sub}}^\phi N_{\mathrm{sub}}^{(k)} + \varepsilon_{\mathrm{dom}}^\phi K_{\mathrm{act}}^{(k)}, \quad k = 1, 2.
 $$
 
 **(b) K_soft^φ Lipschitz bound** (per `working/E/soft_K_definition.md` §2.2 Cor 2.2):
 $$
-|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)| \le 4 L_\phi n \cdot \lVert U_1 - U_2 \rVert_\infty
+\vert K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)\vert \le 4 L_\phi n \cdot \lVert U_1 - U_2 \rVert_\infty
 $$
 where $L_\phi$ is the Lipschitz constant of $\phi$ on $[0,1]$ and $n = \lvert X \rvert$ is graph size.
 
@@ -256,12 +256,12 @@ $$
 
 For $K_{\mathrm{act}}^\varepsilon$ (integer-valued):
 $$
-|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le |K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{soft}}^\phi(U_1)| + |K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)| + |K_{\mathrm{soft}}^\phi(U_2) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|.
+\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert \le \vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{soft}}^\phi(U_1)\vert + \vert K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)\vert + \vert K_{\mathrm{soft}}^\phi(U_2) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert.
 $$
 
 Substituting (a) + (b) + (c):
 $$
-|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le \varepsilon_{\mathrm{sub}}^\phi (N_{\mathrm{sub}}^{(1)} + N_{\mathrm{sub}}^{(2)}) + \varepsilon_{\mathrm{dom}}^\phi (K_{\mathrm{act}}^{(1)} + K_{\mathrm{act}}^{(2)}) + 4 L_\phi n \cdot K_{\mathrm{field}} \cdot \max_j \lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty.
+\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert \le \varepsilon_{\mathrm{sub}}^\phi (N_{\mathrm{sub}}^{(1)} + N_{\mathrm{sub}}^{(2)}) + \varepsilon_{\mathrm{dom}}^\phi (K_{\mathrm{act}}^{(1)} + K_{\mathrm{act}}^{(2)}) + 4 L_\phi n \cdot K_{\mathrm{field}} \cdot \max_j \lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty.
 $$
 
 ### §5.4 Refinement: integer-valuedness exploitation
@@ -270,7 +270,7 @@ $K_{\mathrm{act}}^\varepsilon$ is integer; the bound is **non-vacuous only when 
 - Sharp envelope: $\varepsilon_{\mathrm{sub}}^\phi, \varepsilon_{\mathrm{dom}}^\phi$ small (both ≤ $1 / (3 K_{\mathrm{act}}^{(1)} + 3 K_{\mathrm{act}}^{(2)})$ roughly).
 - Close states: $\lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty$ small (bound by $1 / (4 L_\phi n K_{\mathrm{field}} \cdot 3)$ roughly).
 
-When non-vacuous: $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le 0$ (since right side < 1 and LHS is integer non-negative), i.e., **$K_{\mathrm{act}}^\varepsilon$ is preserved** across small perturbations within sharp regimes.
+When non-vacuous: $\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert \le 0$ (since right side < 1 and LHS is integer non-negative), i.e., **$K_{\mathrm{act}}^\varepsilon$ is preserved** across small perturbations within sharp regimes.
 
 ### §5.5 Verdict
 
@@ -481,9 +481,9 @@ For the FEASIBLE configurations, $\rho_{\mathrm{bg}} > 0$ by FEASIBLE definition
 ### §9.4 Theoretical comparison
 
 P5 ($\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$) is a stronger condition than P10 ($\lVert R_{\mathrm{inact}} \rVert_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$):
-- $U|_{X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ AND active-slot decay tails into background (per P7).
+- $U\vert _{X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$ AND active-slot decay tails into background (per P7).
 - Therefore $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
-- Hence $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$ in general (P5 gives smaller margin to ℓ_min than P10 does, when the active-slot decay tails contribute to $U|_{X_{\mathrm{bg}}}$).
+- Hence $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$ in general (P5 gives smaller margin to ℓ_min than P10 does, when the active-slot decay tails contribute to $U\vert _{X_{\mathrm{bg}}}$).
 
 **Wait — this contradicts §9.3's empirical estimate.** Let me re-examine.
 
@@ -514,7 +514,7 @@ This **contradicts** the assertion in `03_integration_and_new_open.md` §3.2 ("p
 
 Append to `02_development.md` §3.4 (or as an erratum):
 
-> *(NQ-G1-1 closure correction, W6 D1 op_resolution.md §9)*: The §3.4 implication "post-R2 admissible τ range is at least as wide as pre-R2" is **incorrect**. P5 ($\rho_{\mathrm{bg}}$) is a stronger constraint than P10 ($\rho_{\mathrm{res}}$) since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$). Generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$, giving $\tau_*^{\mathrm{post-R2}} \le \tau_*$. The post-R2 derivation gains theoretical clarity (P5 direct, no implicit T-L1-F dependency) at the cost of slightly tighter admissible τ range. Net trade-off acceptable for canonical promotion.
+> *(NQ-G1-1 closure correction, W6 D1 op_resolution.md §9)*: The §3.4 implication "post-R2 admissible τ range is at least as wide as pre-R2" is **incorrect**. P5 ($\rho_{\mathrm{bg}}$) is a stronger constraint than P10 ($\rho_{\mathrm{res}}$) since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U\vert _{X_{\mathrm{bg}}}$). Generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$, giving $\tau_*^{\mathrm{post-R2}} \le \tau_*$. The post-R2 derivation gains theoretical clarity (P5 direct, no implicit T-L1-F dependency) at the cost of slightly tighter admissible τ range. Net trade-off acceptable for canonical promotion.
 
 (I'll mark this in §13 summary as a follow-on action.)
 
@@ -530,7 +530,7 @@ The §9.4 claim "$\rho_{\mathrm{bg}}^{\mathrm{actual}} \le \rho_{\mathrm{res}}^{
 - $\rho_{\mathrm{res}}^{\mathrm{max}}(\text{config}) = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$ (over **full** graph, not just $X_{\mathrm{bg}}$)
 
 Comparison:
-- $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ AND active-slot decay tails → $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
+- $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$ AND active-slot decay tails → $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
 - $\lVert R_{\mathrm{inact}} \rVert_\infty$ is global → $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
 - Hence the relationship between $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ and $\lVert R_{\mathrm{inact}} \rVert_\infty$ depends on whether (i) active decay tails into background dominate over (ii) inactive residual peaks outside $X_{\mathrm{bg}}$.
 
@@ -540,7 +540,7 @@ Comparison:
 
 **Implication:** the original `03_integration_and_new_open.md` §3.2 claim ("post-R2 regime is at least as wide as pre-repair") and my §9.4 reverse claim ("generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$") are **both oversimplifications**. The correct statement is: **the comparison is configuration-dependent and requires empirical measurement of both $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ and $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately**.
 
-The L-M draft §5.5 note "P5 bound only tightens the constant" assumes the implicit identification $U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ (i.e., no active decay tails into background). Under that assumption, $\rho_{\mathrm{bg}} \ge \rho_{\mathrm{res}}$ holds. **Without that assumption (R-2 closure removed it), the comparison is open.**
+The L-M draft §5.5 note "P5 bound only tightens the constant" assumes the implicit identification $U\vert _{X_{\mathrm{bg}}} = R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$ (i.e., no active decay tails into background). Under that assumption, $\rho_{\mathrm{bg}} \ge \rho_{\mathrm{res}}$ holds. **Without that assumption (R-2 closure removed it), the comparison is open.**
 
 ### §9.10 Recommended action (revised)
 
@@ -639,7 +639,7 @@ Total wall-clock 75.7s (5 × ~15s). Identical INFEASIBLE=1233 + MARGINAL=20 base
 
 ### §11.1 Question
 
-How does the L1-I FEASIBLE_WITH_BUDGET fraction change under ε perturbations? Specifically: $f(\epsilon) = |\text{FEASIBLE\_WITH\_BUDGET}(\epsilon)| / 1920$ for $\epsilon \in [0.01, 1.0]$?
+How does the L1-I FEASIBLE_WITH_BUDGET fraction change under ε perturbations? Specifically: $f(\epsilon) = \vert \text{FEASIBLE\_WITH\_BUDGET}(\epsilon)\vert / 1920$ for $\epsilon \in [0.01, 1.0]$?
 
 ### §11.2 What execution would entail
 
@@ -814,7 +814,7 @@ Three documentation-precision corrections applied during a late-day re-review of
 
 **Erratum 5 — §4.2 notational conflation of $L_\phi$ and $L_K$ corrected.**
 - **Before:** §4.2 wrote "$L_\phi$ is the Lipschitz constant of $\phi$ (per `working/E/soft_K_definition.md` §2.2 Cor 2.2: $L_\phi \le 4 L_{\phi,\mathrm{family}} n$)".
-- **Issue:** `soft_K_definition.md` §2.2 Cor 2.2 actually provides the K_soft **functional** Lipschitz $L_K \le 4 L_\phi n$, where the $L_\phi$ on the RHS is the per-bar scalar Lipschitz of φ on [0,1]. The op_resolution.md wording inadvertently relabeled $L_K$ as $L_\phi$. The Lemma L-M-G1-4 bound uses $L_\phi$ correctly in the per-bar sense (since the contributions are per-bar differences $|\phi(\ell_1) - \phi(\ell_2)| \le L_\phi |\ell_1 - \ell_2|$); the verbal explanation conflated the two scales.
+- **Issue:** `soft_K_definition.md` §2.2 Cor 2.2 actually provides the K_soft **functional** Lipschitz $L_K \le 4 L_\phi n$, where the $L_\phi$ on the RHS is the per-bar scalar Lipschitz of φ on [0,1]. The op_resolution.md wording inadvertently relabeled $L_K$ as $L_\phi$. The Lemma L-M-G1-4 bound uses $L_\phi$ correctly in the per-bar sense (since the contributions are per-bar differences $\vert \phi(\ell_1) - \phi(\ell_2)\vert \le L_\phi \vert \ell_1 - \ell_2\vert $); the verbal explanation conflated the two scales.
 - **Fix:** §4.2 footnote clarifies that the $L_\phi$ in L-M-G1-4 is per-bar Lipschitz, while the cited $L_K \le 4 L_\phi n$ from Cor 2.2 is the functional Lipschitz of K_soft. The bound's mathematical correctness is unaffected; only the textual citation is precised.
 
 **Net effect of all 5 errata on theorem-status / OP catalog:** zero. All corrections are internal documentation precision. None change Cat status, OP catalog, canonical/working content, or numerical results. The 75% closure rate (9 of 12 NQs addressed; 6 fully + 3 partially) is preserved.

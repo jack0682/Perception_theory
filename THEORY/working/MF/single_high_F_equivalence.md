@@ -247,7 +247,7 @@ This is the empirical realization of the §7.2 theoretical claim in `mathematica
 | **Definition** | Hessian eigenvalue sequence + nodal counts + D₄ irrep per mode | Vietoris-Rips barcode of peak centroids |
 | **Mathematical object** | $((\lambda_k, \mathcal{N}(\phi_k), \rho_k))_{k=1}^{K_H}$ | Multiset of $[b_i, d_i)$ intervals in $H_0, H_1$ |
 | **Captures** | Spectral + representation-theoretic + topological (nodal) | Cluster-level topology only |
-| **Dimension** | $3 \times K_H$ scalars (e.g., $3 \times 12 = 36$ for NQ-141) | $2 \times |\mathrm{bars}|$ scalars (variable) |
+| **Dimension** | $3 \times K_H$ scalars (e.g., $3 \times 12 = 36$ for NQ-141) | $2 \times \vert \mathrm{bars}\vert $ scalars (variable) |
 | **Sensitivity** | Hessian-level (quadratic form of energy landscape) | Metric-level (centroid distances) |
 | **D₄ symmetry** | Explicit irrep decomposition per mode | No symmetry label — only distances |
 | **Stability** | Weyl perturbation bounds | Cohen-Steiner bottleneck distance |
@@ -365,7 +365,7 @@ In the well-separated limit ($d_{\min} \gg \xi_0$), the Hessian comparison betwe
 
 **$\mathbf{u}^*$ on $\Sigma^F_M$:** Joint Hessian $H_{\mathrm{joint}}(\mathbf{u}^*) = \mathrm{diag}(H_1, \ldots, H_F) + V$ where $V_{jk} \sim \lambda_{\mathrm{rep}} P_{jk}$ (off-diagonal coupling from $\lambda_{\mathrm{rep}} \langle u^j, u^k \rangle$ term).
 
-**Spectral identity (well-separated):** By Weyl's theorem, $|\lambda_k(H(u^*)) - \lambda_k(H_{\mathrm{joint}})| \leq \max_k \lVert V_{1k} \rVert = O(\lambda_{\mathrm{rep}} \cdot e^{-d_{\min}/\xi_0})$.
+**Spectral identity (well-separated):** By Weyl's theorem, $\vert \lambda_k(H(u^*)) - \lambda_k(H_{\mathrm{joint}})\vert \leq \max_k \lVert V_{1k} \rVert = O(\lambda_{\mathrm{rep}} \cdot e^{-d_{\min}/\xi_0})$.
 
 The two Hessians have the same spectrum up to exponentially small corrections — but the **eigenvectors differ**: $H(u^*)$ eigenvectors are global modes on $\Sigma_m$ (with orbital $\ell$ decomposition per NQ-141), while $H_{\mathrm{joint}}$ eigenvectors are approximately confined to individual formation supports.
 

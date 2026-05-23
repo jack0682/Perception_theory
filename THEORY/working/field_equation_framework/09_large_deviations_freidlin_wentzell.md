@@ -99,7 +99,7 @@ This file uses *exactly* the following values; no per-section drift permitted.
 
 ### §1.1 What this file *does*
 
-1. **Set up Freidlin-Wentzell small-noise LDP** (§2) for T-PF-A1-SDE in the regime $T_* \to 0$, with $\epsilon := T_*$ as the small parameter. Rate function $I_{[0,T]}(\phi) = (1/2)\int_0^T |\dot\phi + \Pi\nabla\mathcal{E}|^2\,dt$ on absolutely continuous paths.
+1. **Set up Freidlin-Wentzell small-noise LDP** (§2) for T-PF-A1-SDE in the regime $T_* \to 0$, with $\epsilon := T_*$ as the small parameter. Rate function $I_{[0,T]}(\phi) = (1/2)\int_0^T \vert \dot\phi + \Pi\nabla\mathcal{E}\vert ^2\,dt$ on absolutely continuous paths.
 2. **Define the SCC quasipotential** $V(u^*, u)$ (§3) as the infimum of $I$ over paths from $u^*$ to $u$. Prove the *gradient-flow simplification* $V(u^*, u) = 2(\mathcal{E}(u) - \mathcal{E}(u^*))$ on the basin of attraction of well $u^*$.
 3. **Derive the Eyring-Kramers exponential rate** (§4) from the quasipotential via the standard Freidlin-Wentzell exit-time / Markov-chain-of-wells / contraction-principle argument: $\lim_{T_*\to 0} T_*\log\mathbb{E}[\tau_{A\to B}] = V_{\min} = 2\Delta\mathcal{E}_{A\to\text{saddle}}$.
 4. **State L-FW-KRAMERS-SCC Cat A target lemma** (§5): statement + 3 hypotheses (H1 T-PF-A1-SDE Cat A applicability + H2 reflected boundary regularity + H3 gradient-flow basin structure) + 5-step proof sketch + inverse causation.
@@ -177,7 +177,7 @@ for measurable $A \subset C([0,T]; \tilde{C})$ ("LDP with rate function $I$ and 
 
 ### §2.3 Why the factor 1/4 (not 1/2)
 
-The standard Freidlin-Wentzell convention writes the SDE as $dX^\epsilon = b\,dt + \sqrt{\epsilon}\sigma\,dB$ giving $I = (1/2)\int|\dot\phi - b|^2_{(\sigma\sigma^\top)^{-1}}\,dt$. SCC's T-PF-A1-SDE has $\sqrt{2T_*}$ (not $\sqrt{T_*}$), so $\epsilon \cdot (\sigma_{\text{SCC}}\sigma_{\text{SCC}}^\top)^{-1} = T_* \cdot (1/2)$, halving the rate function. *This factor-1/4 will reappear in §7 as the factor-2 reconciliation.* For now, the rate function for interior tangent paths is $I = (1/4)\int|\dot\phi + \nabla_{T\Sigma_m}\mathcal{E}|^2\,dt$.
+The standard Freidlin-Wentzell convention writes the SDE as $dX^\epsilon = b\,dt + \sqrt{\epsilon}\sigma\,dB$ giving $I = (1/2)\int\vert \dot\phi - b\vert ^2_{(\sigma\sigma^\top)^{-1}}\,dt$. SCC's T-PF-A1-SDE has $\sqrt{2T_*}$ (not $\sqrt{T_*}$), so $\epsilon \cdot (\sigma_{\text{SCC}}\sigma_{\text{SCC}}^\top)^{-1} = T_* \cdot (1/2)$, halving the rate function. *This factor-1/4 will reappear in §7 as the factor-2 reconciliation.* For now, the rate function for interior tangent paths is $I = (1/4)\int\vert \dot\phi + \nabla_{T\Sigma_m}\mathcal{E}\vert ^2\,dt$.
 
 ---
 
@@ -225,9 +225,9 @@ with $\Delta\mathcal{E}_{A\to\text{saddle}} := \mathcal{E}(u^{*,\text{saddle}_{A
 
 At $\partial\tilde{C}$ (where $u_i = 0$ or $1$), the Skorokhod reflection contributes an extra term to $I$:
 
-$$I^{\partial}_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2\,dt + \int_0^T \mathbb{1}_{\phi(t) \in \partial\tilde{C}} \cdot \langle n(\phi(t)), \dot\phi(t) - (\dot\phi)_\parallel \rangle\,d|K|_t$$
+$$I^{\partial}_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2\,dt + \int_0^T \mathbb{1}_{\phi(t) \in \partial\tilde{C}} \cdot \langle n(\phi(t)), \dot\phi(t) - (\dot\phi)_\parallel \rangle\,d\vert K\vert _t$$
 
-where $n$ is the inward normal at $\partial\tilde{C}$ and $|K|_t$ the local-time measure (Skorokhod regulator). Per Anderson-Orey 1976 + Dupuis-Ishii 1991, for paths *strictly interior* to $\tilde{C}$ this boundary contribution vanishes. For SCC formation regime with well + saddle interior (hypothesis H2), the minimum-action path can be taken interior, so the boundary correction is zero. *This is precisely the analog of file 02 §5.2 (H3) "interior well-separation from $\partial\tilde{C}$".*
+where $n$ is the inward normal at $\partial\tilde{C}$ and $\vert K\vert _t$ the local-time measure (Skorokhod regulator). Per Anderson-Orey 1976 + Dupuis-Ishii 1991, for paths *strictly interior* to $\tilde{C}$ this boundary contribution vanishes. For SCC formation regime with well + saddle interior (hypothesis H2), the minimum-action path can be taken interior, so the boundary correction is zero. *This is precisely the analog of file 02 §5.2 (H3) "interior well-separation from $\partial\tilde{C}$".*
 
 ---
 

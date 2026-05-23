@@ -229,10 +229,17 @@ def transform_math_content(s):
         abs_repl, s)
     changes += c
 
+    # 5. Residual cleanup: any remaining RAW | (not preceded by \) -> \vert
+    #    This catches conditional/such-that bars, unmatched bars, or any
+    #    table-cell-breaking | that survived the targeted transforms.
+    #    \vert renders identically to | but is safe in markdown tables.
+    s = re.sub(r"(?<!\\)\|", r"\\vert ", s)
+
     # Cleanup multiple spaces (only within math; conservative)
-    # Don't aggressively collapse - just collapse \vert + space artifacts
     s = re.sub(r"\\vert  +", r"\\vert ", s)
     s = re.sub(r"  +\\vert", r" \\vert", s)
+    # Trim trailing space before closing braces or $ boundary symbols added
+    s = re.sub(r"\\vert\s+(\}|\)|\]|,|;|\.)", r"\\vert\1", s)
 
     return s, (1 if s != original else 0)
 

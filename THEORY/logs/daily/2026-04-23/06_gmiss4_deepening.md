@@ -47,20 +47,20 @@ Prop 1.3a Hessian eigenvalues $\mu_k = 4\alpha\lambda_k + \beta W''(c)$, $k = 1,
 Linearized gradient flow on tangent $T_{u_{\mathrm{unif}}}\Sigma_m$:
 $$\dot v_k = -\mu_k v_k + O(\lVert v \rVert^2), \quad v_k = \langle u - u_{\mathrm{unif}}, \phi_k\rangle.$$
 
-Unstable modes grow exponentially: $v_k(t) = \sigma_0 e^{|\mu_k| t}$ until nonlinear saturation.
+Unstable modes grow exponentially: $v_k(t) = \sigma_0 e^{\vert \mu_k\vert t}$ until nonlinear saturation.
 
 ### P1.2 Saturation timing
 
-Saturation happens at $v_k \sim O(1)$, i.e., $t_k^{\mathrm{sat}} = |\mu_k|^{-1} \ln(1/\sigma_0)$.
+Saturation happens at $v_k \sim O(1)$, i.e., $t_k^{\mathrm{sat}} = \vert \mu_k\vert ^{-1} \ln(1/\sigma_0)$.
 
-**Ordering**: $t_2^{\mathrm{sat}} < t_3^{\mathrm{sat}} < \cdots$ because $|\mu_2| > |\mu_3| > \cdots$ (eigenvalues of $L$ ordered).
+**Ordering**: $t_2^{\mathrm{sat}} < t_3^{\mathrm{sat}} < \cdots$ because $\vert \mu_2\vert > \vert \mu_3\vert > \cdots$ (eigenvalues of $L$ ordered).
 
-Fiedler mode saturates **first**. During $t \in [t_2^{\mathrm{sat}}, t_3^{\mathrm{sat}}]$, mode 2 is nonlinear $O(1)$ while mode 3 is still $v_3 \sim \sigma_0 e^{|\mu_3| t_2^{\mathrm{sat}}} = \sigma_0^{1 - |\mu_3|/|\mu_2|}$ (if $|\mu_3| < |\mu_2|$).
+Fiedler mode saturates **first**. During $t \in [t_2^{\mathrm{sat}}, t_3^{\mathrm{sat}}]$, mode 2 is nonlinear $O(1)$ while mode 3 is still $v_3 \sim \sigma_0 e^{\vert \mu_3\vert t_2^{\mathrm{sat}}} = \sigma_0^{1 - \vert \mu_3\vert /\vert \mu_2\vert}$ (if $\vert \mu_3\vert < \vert \mu_2\vert $).
 
 ### P1.3 Quantitative spectral dominance
 
 Define **spectral dominance ratio**:
-$$\rho_{23}(\beta, c) := \frac{|\mu_2|}{|\mu_3|}\quad\text{ when both unstable}.$$
+$$\rho_{23}(\beta, c) := \frac{\vert \mu_2\vert}{\vert \mu_3\vert}\quad\text{ when both unstable}.$$
 
 Mode 3's amplitude at mode-2 saturation:
 $$v_3(t_2^{\mathrm{sat}}) = \sigma_0^{1 - 1/\rho_{23}}.$$
@@ -112,7 +112,7 @@ $$\mathrm{Vol}(\mathcal{B}_K^{\mathrm{local}}) \sim \det(H_K^\perp)^{-1/2} \cdot
 where $\Omega_{n-1}$ is unit-sphere volume in $T_{u^*_K}\Sigma_m$.
 
 Total basin volume (summed over moduli):
-$$\mathrm{Vol}(\mathcal{B}_K) \sim |\mathcal{M}_K| \cdot \det(H_K^\perp)^{-1/2}.$$
+$$\mathrm{Vol}(\mathcal{B}_K) \sim \vert \mathcal{M}_K\vert \cdot \det(H_K^\perp)^{-1/2}.$$
 
 ### P2.3 Hessian determinant scaling
 
@@ -128,7 +128,7 @@ $$\det(H_K^\perp)^{-1/2} \sim \mu_{\mathrm{bd}}^{-K/2} \cdot \mu_{\mathrm{sep}}^
 
 ### P2.4 Basin ratio $\mathrm{Vol}(\mathcal{B}_K)/\mathrm{Vol}(\mathcal{B}_1)$
 
-$$\frac{\mathrm{Vol}(\mathcal{B}_K)}{\mathrm{Vol}(\mathcal{B}_1)} \sim \frac{|\mathcal{M}_K|}{|\mathcal{M}_1|} \cdot \mu_{\mathrm{bd}}^{-(K-1)/2} \cdot \mu_{\mathrm{sep}}^{-K(K-1)/4}$$
+$$\frac{\mathrm{Vol}(\mathcal{B}_K)}{\mathrm{Vol}(\mathcal{B}_1)} \sim \frac{\vert \mathcal{M}_K\vert}{\vert \mathcal{M}_1\vert} \cdot \mu_{\mathrm{bd}}^{-(K-1)/2} \cdot \mu_{\mathrm{sep}}^{-K(K-1)/4}$$
 
 Since $\mu_{\mathrm{sep}} \ll \mu_{\mathrm{bd}}$ (exponentially small inter-formation coupling), $\mu_{\mathrm{sep}}^{-K(K-1)/4}$ grows explosively with K.
 
@@ -145,9 +145,9 @@ $$\mathrm{Vol}(\mathcal{B}_K^{\mathrm{local}}) \sim \mu_{\mathrm{bd}}^{-K/2} \cd
 
 Configuration volume $\sim L^{2(K-1)}$ for K formations on 2D domain of size $L^2$ (positions modulo total translation).
 
-With moduli count $|\mathcal{M}_K|$ already accounting for automorphism quotient: effectively $|\mathcal{M}_K| \sim (L/r_0)^{2K} / |\mathrm{Aut}(G)|$.
+With moduli count $\vert \mathcal{M}_K\vert $ already accounting for automorphism quotient: effectively $\vert \mathcal{M}_K\vert \sim (L/r_0)^{2K} / \vert \mathrm{Aut}(G)\vert $.
 
-$$\mathrm{Vol}(\mathcal{B}_K) \sim \frac{(L/r_0)^{2K}}{|\mathrm{Aut}(G)|} \cdot \mu_{\mathrm{bd}}^{-K/2}.$$
+$$\mathrm{Vol}(\mathcal{B}_K) \sim \frac{(L/r_0)^{2K}}{\vert \mathrm{Aut}(G)\vert} \cdot \mu_{\mathrm{bd}}^{-K/2}.$$
 
 ### P2.6 Claim P2 (basin volume K=1 dominance)
 
@@ -193,7 +193,7 @@ Freidlin-Wentzell theory: for Langevin dynamics at $T \to 0$, transition probabi
 $$\mathbb{P}(\text{reach }\mathcal{B}_K \text{ from IC } u_0) \asymp \exp(-I(u_0 \to \mathcal{B}_K)/T)$$
 
 where $I$ is action functional:
-$$I(\gamma) = \frac{1}{2} \int |\dot\gamma + \nabla\mathcal{E}(\gamma)|^2 dt$$
+$$I(\gamma) = \frac{1}{2} \int \vert \dot\gamma + \nabla\mathcal{E}(\gamma)\vert ^2 dt$$
 
 along the reverse-gradient path, minimized over paths.
 
@@ -220,7 +220,7 @@ where $A_K = $ {ξ : gradient flow from $u_{\mathrm{unif}} + \sigma_0 \xi$ lands
 
 ### P3.4 Fiedler-cone analysis
 
-The "Fiedler cone" for noise IC is directions $\xi$ with $|\langle \xi, \phi_2\rangle| > (\text{threshold})$. Its complement has exponentially small Gaussian measure for small $\sigma_0$.
+The "Fiedler cone" for noise IC is directions $\xi$ with $\vert \langle \xi, \phi_2\rangle\vert > (\text{threshold})$. Its complement has exponentially small Gaussian measure for small $\sigma_0$.
 
 **Claim P3.1 (Fiedler cone dominance)**: For $\sigma_0 \to 0$,
 $$\mathbb{P}(\mathcal{B}_K) \to \mathbb{P}_{\mathrm{Fiedler}}(\mathcal{B}_K)$$
@@ -242,7 +242,7 @@ Gradient flow from $u_{\mathrm{unif}} + \epsilon\phi_2$ amplifies $\phi_2$ satur
 
 At finite $\sigma_0$ (say $\sigma_0 = 0.1$, not arbitrarily small): Fiedler cone no longer dominates. Other modes ($\phi_3, \phi_4$) have comparable Gaussian weight.
 
-Flow from $u_{\mathrm{unif}} + \sigma_0(\xi_2\phi_2 + \xi_3\phi_3 + \ldots)$ depends on all modes. If $|\mu_3| \approx |\mu_2|$ and $\xi_3 \sim \xi_2$, mode 3 saturates simultaneously → multi-nodal pattern → K ≥ 2.
+Flow from $u_{\mathrm{unif}} + \sigma_0(\xi_2\phi_2 + \xi_3\phi_3 + \ldots)$ depends on all modes. If $\vert \mu_3\vert \approx \vert \mu_2\vert $ and $\xi_3 \sim \xi_2$, mode 3 saturates simultaneously → multi-nodal pattern → K ≥ 2.
 
 **Regime boundary**: P3 applies in **small-noise limit** $\sigma_0 \to 0$. Real protocols have finite $\sigma_0$ (e.g., $\sigma_0 = 0.01-0.1$); P3 predicts K=1 dominance only if cone dominance is stronger than finite-$\sigma_0$ spread.
 
@@ -258,7 +258,7 @@ If P3.7 says "K=1 in small-noise limit for all G, β, c", why does R17 give K=7.
 
 **Resolution**: R17 protocol used noise amplitude $\epsilon_{\mathrm{init}} = 0.01$ or similar, which is **NOT small enough** relative to spectral gap at c=0.3 2D sq β=30.
 
-Quantitatively: $\sigma_0^*$ ~ spectral gap $|\mu_2|/|\mu_3| \cdot$ (geometric factor). When Fiedler cone is narrow (near-degenerate spectrum), $\sigma_0^* \to 0$, and finite-noise protocol sees multi-mode mixing.
+Quantitatively: $\sigma_0^*$ ~ spectral gap $\vert \mu_2\vert /\vert \mu_3\vert \cdot$ (geometric factor). When Fiedler cone is narrow (near-degenerate spectrum), $\sigma_0^* \to 0$, and finite-noise protocol sees multi-mode mixing.
 
 **Prediction**: R17 with $\sigma_0 \to 0$ (say $10^{-6}$) should recover K=1. **Not tested**.
 

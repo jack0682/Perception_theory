@@ -69,7 +69,7 @@ Total: 4 files. The single-deliverable structure (only `01_*` rather than the st
 ## §5. Day 7 Seed (W5 close)
 
 Day 7 (2026-05-03) target was **L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$**: combining T-L1-F count equality with the WQ-LAT-1.B reservoir-admissible envelope class to derive
-$$|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$$
+$$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le\rho_{\mathrm{sub}}+\rho_{\mathrm{edge}}^\phi+\rho_\phi$$
 as a Cat-B sketched corollary; CV-1.6 promotion target via L1-M-AUDIT (W6 G1).
 
 Parallel Day 7 ceremony: W5 weekly_summary draft + W6 strategic plan seeding.

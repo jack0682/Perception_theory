@@ -53,7 +53,7 @@ with ℰ the canonical four-term energy (canonical §8.1).
 **Lemma 1.5 (CSEH-derived Lipschitz of K_soft on Σ_m^ε).** For `u, v ∈ Σ_m^ε := Σ_m ∩ [ε, 1-ε]^n` (or generically on Σ_m \ V):
 
 $$
-|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \;\leq\; 2 L_\varphi \cdot N_{\max}(u, v) \cdot \lVert u - v \rVert_\infty,
+\vert K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\vert \;\leq\; 2 L_\varphi \cdot N_{\max}(u, v) \cdot \lVert u - v \rVert_\infty,
 $$
 
 with `N_{\max}(u,v) ≤ n`. Hence `L_K ≤ 2 L_φ · n` *(initial commit; corrected to `L_K ≤ 4 L_φ · n` per `05_deepening_and_verification.md` §1.5 — full proof reveals factor-of-2 from counting both u-side AND v-side diagonal pairings; total bar count is N(u) + N(v) ≤ 2n, not N_max ≤ n)*.
@@ -184,13 +184,13 @@ This is the rigorous derivation of Kramers via Helffer-Sjöstrand semiclassical 
 **Step 4 (sharp asymptotic formula — Helffer-Sjöstrand 1985).**
 
 $$
-\lambda_1 \;=\; \frac{1}{2\pi}\,|\omega_s|\,\sqrt{\frac{|\det H_s|}{\det H_a}}\, \exp(-\Delta\mathcal{F}/T) \cdot (1 + o(1)) \quad (T \to 0).
+\lambda_1 \;=\; \frac{1}{2\pi}\,\vert \omega_s\vert \,\sqrt{\frac{\vert \det H_s\vert}{\det H_a}}\, \exp(-\Delta\mathcal{F}/T) \cdot (1 + o(1)) \quad (T \to 0).
 $$
 
 This is the **inverse Kramers MFPT**. Compare with G5 §3.2:
 
 $$
-\tau \;=\; \frac{2\pi}{|\omega_s|}\,\sqrt{\frac{\det H_a}{|\det H_s|}}\,\exp(\Delta\mathcal{F}/T).
+\tau \;=\; \frac{2\pi}{\vert \omega_s\vert}\,\sqrt{\frac{\det H_a}{\vert \det H_s\vert}}\,\exp(\Delta\mathcal{F}/T).
 $$
 
 **Identical to first order — Kramers and Witten agree.**

@@ -37,7 +37,7 @@ A new phenomenon discovered in Phase 3, denoted V5b-T'.
 \begin{theorem}[V5b-T' corner-saturation on translation-invariant graphs, NEW]
 \label{thm:v5bTprime}
 For $\beta > 1/a^2$ AND $c < c_s$ on translation-invariant graph: the F=1 minimizer of $\mathcal{E}_{\mathrm{bd}}$ from localized initial condition is corner-saturated (i.e., $u^*(x) = 1$ on a connected cluster $S \subset X$ with $\lvert S \rvert \approx m$). The lowest non-tangent Hessian mode is the bulk-localized translation Goldstone of the saturated cluster, with PN-barrier-lifted eigenvalue
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{|\partial S|}{\xi_0}, \quad |\partial S| \approx 4\sqrt{m},$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{\vert \partial S\vert}{\xi_0}, \quad \vert \partial S\vert \approx 4\sqrt{m},$$
 of magnitude $\mathcal{O}(\beta)$ (not exponentially small).
 \end{theorem}
 
@@ -92,7 +92,7 @@ Under the per-formation-pool K-field architecture with volume + simplex constrai
 
 This statement is supported by Phase 5+6 numerical evidence (`24_*`, `27_*`): K=2-10 trajectories on $T^2$ with $L \in [16, 40]$ remain stable for $t = O(100)$.
 
-The mechanism: the $[0, 1]$ box constraint clipping prevents the antisym Goldstone mode from manifesting as exponential growth. The static instability remains "frozen" at a saddle that is not dynamically accessible. Phase 7 R1.2 verified that removing the clipping recovers exponential growth at rate $\approx c_{\mathrm{eff}} \cdot |\lambda_{\mathrm{antisym}}|$.
+The mechanism: the $[0, 1]$ box constraint clipping prevents the antisym Goldstone mode from manifesting as exponential growth. The static instability remains "frozen" at a saddle that is not dynamically accessible. Phase 7 R1.2 verified that removing the clipping recovers exponential growth at rate $\approx c_{\mathrm{eff}} \cdot \vert \lambda_{\mathrm{antisym}}\vert $.
 
 ### §4.5.3 Shared pool: LSW-like coarsening
 

@@ -47,7 +47,7 @@ trigger: "W8-Day3 POST-99 evening Option C escalation — user critique '정리�
 CV-1.19 SEAL (오후 16:23-16:27) 이후 evening session 의 산출물 (14 working files + 1 exposition refinement = ~12,021L) 은 *대부분 organization / framework / contrastive analysis*. 새 canonical Cat A/B 증명 **0건**. Option C escalation 으로 두 즉시 증명 가능한 Cat A direct lemma 를 동시 SEAL:
 
 **Scope**: Add 2 new canonical theorem rows (both Cat A direct):
-- **L-UNI-ZMODE** (Cat A direct): 균일 critical $u^* = c\mathbf{1}$ 에서 $\ker H|_{\mathbf{1}^\perp}$ 의 Type A/B/C 분류, Type C 부재 증명
+- **L-UNI-ZMODE** (Cat A direct): 균일 critical $u^* = c\mathbf{1}$ 에서 $\ker H\vert _{\mathbf{1}^\perp}$ 의 Type A/B/C 분류, Type C 부재 증명
 - **L-SURFACE-TENSION-RESCALE** (Cat A direct): $(α, β) → (sα, sβ)$ rescaling 의 6-part 구조 (T8 invariance + ℓ_bd invariance + σ linear scaling + Hessian linear homogeneity + Goldstone preservation + non-Goldstone gap expansion)
 
 **Predecessors** (working layer):

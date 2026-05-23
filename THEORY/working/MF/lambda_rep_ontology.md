@@ -168,7 +168,7 @@ Distinguish four layers in the multi-formation SCC framework, ranked by ontologi
 
 #### §2.4.5 Formal Claim B4: Tool A1 stratified-space integration
 
-**Claim B4**: Within the Whitney-stratified space picture (`mathematical_scaffolding_4tools.md` §2 Tool A1), $\lambda_{\mathrm{rep}}$ parametrizes the *energy functional* defined on $\widetilde\Sigma^K_M$; varying $\lambda_{\mathrm{rep}}$ does *not* change the stratification $\widetilde\Sigma^K_M = \bigsqcup_{K_{\mathrm{act}}=0}^{K_{\mathrm{field}}} S_{K_{\mathrm{act}}}$ but *does* change the stratum-wise critical-point structure of $\mathcal{E}_K|_{S_{K_{\mathrm{act}}}}$ and the gradient-flow dynamics across strata.
+**Claim B4**: Within the Whitney-stratified space picture (`mathematical_scaffolding_4tools.md` §2 Tool A1), $\lambda_{\mathrm{rep}}$ parametrizes the *energy functional* defined on $\widetilde\Sigma^K_M$; varying $\lambda_{\mathrm{rep}}$ does *not* change the stratification $\widetilde\Sigma^K_M = \bigsqcup_{K_{\mathrm{act}}=0}^{K_{\mathrm{field}}} S_{K_{\mathrm{act}}}$ but *does* change the stratum-wise critical-point structure of $\mathcal{E}_K\vert _{S_{K_{\mathrm{act}}}}$ and the gradient-flow dynamics across strata.
 
 **Verification**:
 - The configuration space $\widetilde\Sigma^K_M$ depends on graph $G$, total mass $M$, and architectural cap $K_{\mathrm{field}}$ — none on $\lambda_{\mathrm{rep}}$.

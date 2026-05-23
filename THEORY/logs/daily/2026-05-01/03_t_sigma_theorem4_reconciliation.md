@@ -16,9 +16,9 @@
 
 Per CV-1.5.1 frozen text (`canonical.md` §13 lines 1377-1413), T-σ-Theorem-4 is **Cat B retroactive** with the following load-bearing claim at leading order:
 
-$$\mu_0 = 4|W''(c)|\,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\,\lvert W''(c) \rvert\,\epsilon + O(\epsilon^{3/2}),$$
+$$\mu_0 = 4\vert W''(c)\vert \,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\,\lvert W''(c) \rvert\,\epsilon + O(\epsilon^{3/2}),$$
 
-with **continuum claim** $A_2/A_1 = 4$ (sourced to `working/SF/symmetry_moduli.md` §3.3, R22 working file) ⇒ leading-order degeneracy $\mu_0 = \mu_1 = 4|W''(c)|\,\epsilon$. The σ-tuple at first pitchfork on $D_4$ free-BC inherits this degeneracy and is broken only by Commitment 14 (O7) Mulliken tie-break on irrep label (trivial $A_1$ before sign $A_2$).
+with **continuum claim** $A_2/A_1 = 4$ (sourced to `working/SF/symmetry_moduli.md` §3.3, R22 working file) ⇒ leading-order degeneracy $\mu_0 = \mu_1 = 4\vert W''(c)\vert \,\epsilon$. The σ-tuple at first pitchfork on $D_4$ free-BC inherits this degeneracy and is broken only by Commitment 14 (O7) Mulliken tie-break on irrep label (trivial $A_1$ before sign $A_2$).
 
 ### §1.2 The three sources of disagreement
 
@@ -26,7 +26,7 @@ with **continuum claim** $A_2/A_1 = 4$ (sourced to `working/SF/symmetry_moduli.m
 |---|---:|---|---|
 | **Continuum naive integral** (post-EOD op-0008-architect closed-form) | **2/3 ≈ 0.667** | Standard $L^2$-normalized continuum eigenmodes; ratio of $A_2 = \int \phi_{(1,0)}^2 \phi_{(0,1)}^2$ over $A_1 = \int \phi_{(1,0)}^4$ | `working/SF/nq187b_L_extrapolation.md` §2.5 + §2.6 closed-form trigonometric identity |
 | **R22 working-file claim** | **4** | Asserted (un-derived) on $D_4$ free-BC grid | `working/SF/symmetry_moduli.md` §3.3 |
-| **NQ-187 numerical *implied*** | **≈ 8** | Derived from observed $\mu_1/\mu_0 \to 2$ asymptotically + assumed canonical $\mu_0 = 4|W''(c)|\epsilon$ → effective $A_2/A_1 = 4 \cdot (\mu_1/\mu_0) = 8$ | `CODE/scripts/test_sigma_theorem4_scaling.py` + `results/sigma_theorem4_scaling.json` ($L \in \{4, 8, 16\}$, $p_{16} = 1.03$) |
+| **NQ-187 numerical *implied*** | **≈ 8** | Derived from observed $\mu_1/\mu_0 \to 2$ asymptotically + assumed canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ → effective $A_2/A_1 = 4 \cdot (\mu_1/\mu_0) = 8$ | `CODE/scripts/test_sigma_theorem4_scaling.py` + `results/sigma_theorem4_scaling.json` ($L \in \{4, 8, 16\}$, $p_{16} = 1.03$) |
 
 This is **three sources, not one**. The observed gaps:
 - naive vs R22: factor **6** (2/3 vs 4).
@@ -83,7 +83,7 @@ Day 5 confirms the partition introduced in `sigma_theorem4_canonical_revision.md
 - *Convention I (centered)*: project gradient + Hessian onto tangent simplex; eigenvalues are intrinsic to Σ_m geometry.
 - *Convention II (Lagrange)*: extrinsic reduction via Lagrange multipliers; eigenvalues include constraint-multiplier contributions.
 
-These differ by factors of order unity in some cases — exactly the kind of factor that could explain the 4× gap between canonical $\mu_0 = 4|W''(c)|\epsilon$ and numerical $\mu_0 = \epsilon|W''(c)|$.
+These differ by factors of order unity in some cases — exactly the kind of factor that could explain the 4× gap between canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ and numerical $\mu_0 = \epsilon\vert W''(c)\vert $.
 
 **Why first priority**: if the comparison quantities ($\mu_0$ canonical vs $\mu_0$ numerical) are mismapped at the convention level, then the apparent disagreement is *partially artificial*. Day 5 should remove artificial disagreement before studying genuine disagreement.
 
@@ -151,7 +151,7 @@ The CV-1.6 release narrative (W6 D7 EOD) needs one sentence about T-σ-Theorem-4
 
 For consideration at W6 D6-D7 packet finalize (after γ-path audit at minimum closes):
 
-> **T-σ-Theorem-4 (ii) finite-L caveat (CV-1.6 candidate — text proposal only).** Numerical scaling test on $L \in \{4, 8, 16\}$ (`CODE/scripts/test_sigma_theorem4_scaling.py`, W5 Day 4) measures $\mu_0 = \epsilon|W''(c)|$, $\mu_1 = 2\epsilon|W''(c)|$ asymptotically with power-law $p = 1.03 \pm 0.014$ at $L = 16$, contradicting the leading-order degeneracy $\mu_0 = \mu_1 = 4|W''(c)|\epsilon$ predicted by the canonical formula with $A_2/A_1 = 4$. Three reconciliation paths registered: (γ) Σ_m-Hessian convention audit (highest priority, W6 D1-D3), (β) R22 cubic-equivariant ratio derivation audit (W6 D4-W7), (α) finite-L vs continuum extrapolation (W6 D3 direct + W6 D4-W7 numerical extension). **Cat A re-promotion deferred to CV-1.7+**, conditional on γ + β + α closing to a consistent value.
+> **T-σ-Theorem-4 (ii) finite-L caveat (CV-1.6 candidate — text proposal only).** Numerical scaling test on $L \in \{4, 8, 16\}$ (`CODE/scripts/test_sigma_theorem4_scaling.py`, W5 Day 4) measures $\mu_0 = \epsilon\vert W''(c)\vert $, $\mu_1 = 2\epsilon\vert W''(c)\vert $ asymptotically with power-law $p = 1.03 \pm 0.014$ at $L = 16$, contradicting the leading-order degeneracy $\mu_0 = \mu_1 = 4\vert W''(c)\vert \epsilon$ predicted by the canonical formula with $A_2/A_1 = 4$. Three reconciliation paths registered: (γ) Σ_m-Hessian convention audit (highest priority, W6 D1-D3), (β) R22 cubic-equivariant ratio derivation audit (W6 D4-W7), (α) finite-L vs continuum extrapolation (W6 D3 direct + W6 D4-W7 numerical extension). **Cat A re-promotion deferred to CV-1.7+**, conditional on γ + β + α closing to a consistent value.
 
 ### §4.2 Conditional decision rule for CV-1.6 release
 
@@ -190,7 +190,7 @@ The following may move forward at the *working-file* level (not canonical):
 
 If γ-path discovers that the canonical convention was correct but R22's $A_2/A_1 = 4$ is still wrong, then Day 4's apparent disagreement structure changes: the issue moves from "convention map" (artificial) to "derivation error" (real). This shifts T-σ-Theorem-4 from Cat B with finite-L caveat → Cat C requiring substantive rework.
 
-**Mitigation**: γ-path execution must compute *both* canonical $\mu_0 = 4|W''(c)|\epsilon$ derivation (under the canonical convention) and the corresponding consistent $\mu_1$ formula on the same convention. If both come out to numerical-matching values, γ-path closes T-σ-Theorem-4. If only $\mu_0$ matches and $\mu_1$ doesn't, β-path is the necessary follow-on.
+**Mitigation**: γ-path execution must compute *both* canonical $\mu_0 = 4\vert W''(c)\vert \epsilon$ derivation (under the canonical convention) and the corresponding consistent $\mu_1$ formula on the same convention. If both come out to numerical-matching values, γ-path closes T-σ-Theorem-4. If only $\mu_0$ matches and $\mu_1$ doesn't, β-path is the necessary follow-on.
 
 ### §6.2 Risk — Two of three audit paths agree, one disagrees
 

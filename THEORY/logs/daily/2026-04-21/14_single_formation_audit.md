@@ -50,7 +50,7 @@ $$
 
 > **Proposition 1.3 (Hessian unstable-direction count, Round 12 §1.5.3).**
 > $$
-> \mathrm{Morse\,index}(\mathrm{Hess}\,\mathcal{F}_{C+E}|_{u_{\mathrm{uniform}}}) \;=\; N_{\mathrm{unst}}(\beta, \alpha, T, c).
+> \mathrm{Morse\,index}(\mathrm{Hess}\,\mathcal{F}_{C+E}\vert _{u_{\mathrm{uniform}}}) \;=\; N_{\mathrm{unst}}(\beta, \alpha, T, c).
 > $$
 > where `N_unst = #{k ≥ 2 : 4αλ_k < β|W''(c)| - T/(c(1-c)) - r_cl_sep}`.
 

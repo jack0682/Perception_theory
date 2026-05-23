@@ -36,7 +36,7 @@ $\phi: G = (X, E) \to G' = (X', E')$ is a graph isomorphism iff $\phi$ is a vert
 
 ### §2.2 Edge subdivision
 
-Replace edge $\{x, y\} \in E$ by a path $x — z — y$ with $z \notin X$ a fresh vertex. Iterating subdivisions on $G$ produces a *topological refinement* $G_{\mathrm{sub}}$. Diestel (2017) §1.10. The 1-dim CW complex $\lvert G \rvert$ underlying $G$ is unchanged up to homeomorphism by subdivisions: $|G_{\mathrm{sub}}| \cong_{\mathrm{Top}} \lvert G \rvert$.
+Replace edge $\{x, y\} \in E$ by a path $x — z — y$ with $z \notin X$ a fresh vertex. Iterating subdivisions on $G$ produces a *topological refinement* $G_{\mathrm{sub}}$. Diestel (2017) §1.10. The 1-dim CW complex $\lvert G \rvert$ underlying $G$ is unchanged up to homeomorphism by subdivisions: $\vert G_{\mathrm{sub}}\vert \cong_{\mathrm{Top}} \lvert G \rvert$.
 
 ### §2.3 Edge contraction
 
@@ -134,7 +134,7 @@ This is the key partial-invariance hint: **under a symmetry-respecting refinemen
 
 Let $M \subset \mathbb{R}^d$ be a compact smooth manifold with boundary, and $\{G_h\}_{h \to 0}$ a family of graphs embedded in $M$ with mesh $h$ (e.g., $L \times L$ grid with $L = 1/h$). Suitably rescaled SCC energy $\mathcal{E}_{G_h}$ converges to a continuum SCC functional
 
-$$\mathcal{E}_M[u] = \int_M \left[\lambda_{\mathrm{cl}} F_{\mathrm{cl}}(u) + \lambda_{\mathrm{sep}} F_{\mathrm{sep}}(u) + \lambda_{\mathrm{bd}}\big(\alpha |\nabla u|^2 + \beta W(u)\big)\right] dV_M$$
+$$\mathcal{E}_M[u] = \int_M \left[\lambda_{\mathrm{cl}} F_{\mathrm{cl}}(u) + \lambda_{\mathrm{sep}} F_{\mathrm{sep}}(u) + \lambda_{\mathrm{bd}}\big(\alpha \vert \nabla u\vert ^2 + \beta W(u)\big)\right] dV_M$$
 
 for $u \in H^1(M; [0,1])$, $\int_M u\, dV = m$. The discrete-Hessian spectrum of $L_{G_h}$ converges (in the distributional / pseudo-spectral sense) to that of $-\Delta_M$ (Burago–Ivanov–Kurylev 2011 for GH spectral convergence).
 

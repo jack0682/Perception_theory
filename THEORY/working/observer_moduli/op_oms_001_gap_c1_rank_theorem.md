@@ -68,7 +68,7 @@ Suppose at $\lambda_0 \in \Lambda^{\mathrm{reg}}$:
 
 Then the restriction of $J_e(\lambda_0)$ to the simplex tangent space $T_{\lambda_0} \Delta^3 = \{\delta \lambda : \mathbf{1}^\top \delta \lambda = 0\}$ has **full rank 3**:
 
-$$\mathrm{rank}\, J_e(\lambda_0)\bigr|_{T_{\lambda_0}\Delta^3} = 3.$$
+$$\mathrm{rank}\, J_e(\lambda_0)\bigr\vert _{T_{\lambda_0}\Delta^3} = 3.$$
 
 ### Corollary RT2 (Local injectivity of $e$). [PROVED conditional on H1–H3]
 
@@ -77,7 +77,7 @@ restricted to a neighborhood of $\lambda_0$ in $\mathrm{int}(\Delta^3)$ is an **
 
 ### Corollary RT3 (Reduction-C closure). [PROVED conditional on H1–H3 + envelope]
 
-If a diffeomorphism $g : \Delta^3 \to \Delta^3$ satisfies $\nabla v(g \cdot \lambda) = \nabla v(\lambda)$ on a non-empty open subset $U \subset \Lambda^{\mathrm{reg}} \cap \mathrm{int}(\Delta^3)$ where H1–H3 hold, then $g\bigr|_U = \mathrm{id}_U$.
+If a diffeomorphism $g : \Delta^3 \to \Delta^3$ satisfies $\nabla v(g \cdot \lambda) = \nabla v(\lambda)$ on a non-empty open subset $U \subset \Lambda^{\mathrm{reg}} \cap \mathrm{int}(\Delta^3)$ where H1–H3 hold, then $g\bigr\vert _U = \mathrm{id}_U$.
 
 ### Proof of RT1.
 
@@ -100,13 +100,13 @@ But $J_e(\lambda_0) \cdot \mathbf{1} = -G_T^\top H_T^{-1} G_T \cdot \mathbf{1}$.
 
 So $J_e \cdot \mathbf{1}$ is generically non-zero — meaning $\mathbf{1}$ is **not** in $\ker J_e$. However we are restricting to $T_{\lambda_0} \Delta^3 = \{\delta \lambda : \mathbf{1}^\top \delta \lambda = 0\}$, which is the orthogonal complement of $\mathbf{1}$ in $\mathbb{R}^4$. The rank of $J_e$ restricted to $T_{\lambda_0}\Delta^3$:
 
-$$\mathrm{rank}\, J_e\bigr|_{T_{\lambda_0}\Delta^3} = \dim\bigl( J_e(T_{\lambda_0}\Delta^3) \bigr) = \dim\bigl( \mathrm{im}(J_e) \cap (\text{some subspace}) \bigr).$$
+$$\mathrm{rank}\, J_e\bigr\vert _{T_{\lambda_0}\Delta^3} = \dim\bigl( J_e(T_{\lambda_0}\Delta^3) \bigr) = \dim\bigl( \mathrm{im}(J_e) \cap (\text{some subspace}) \bigr).$$
 
 A clean way: choose an orthonormal basis $V \in \mathbb{R}^{4 \times 3}$ of $T_{\lambda_0}\Delta^3$ (e.g., the columns of `TANGENT_4` from VP-6). Then the "tangent Jacobian"
 
 $$J_e^{\mathrm{tan}}(\lambda_0) := V^\top J_e(\lambda_0) V \in \mathbb{R}^{3 \times 3}$$
 
-has rank equal to $\mathrm{rank}\, J_e\bigr|_{T_{\lambda_0}\Delta^3}$. And
+has rank equal to $\mathrm{rank}\, J_e\bigr\vert _{T_{\lambda_0}\Delta^3}$. And
 
 $$J_e^{\mathrm{tan}} = -V^\top G_T^\top H_T^{-1} G_T V = -(G_T V)^\top H_T^{-1} (G_T V).$$
 
@@ -121,7 +121,7 @@ Equivalently: if $G_T \mathbf{1}$ is non-zero (i.e., $\sum_i P_T^\top g_i \ne 0$
 
 Hence under H2 ($\mathrm{rank}\, G_T \ge 3$), $\mathrm{rank}\,\tilde G = 3$. $\square$
 
-Combining: $\mathrm{rank}\, J_e^{\mathrm{tan}}(\lambda_0) = 3$, i.e., $J_e\bigr|_{T_{\lambda_0}\Delta^3}$ has full rank. $\square$
+Combining: $\mathrm{rank}\, J_e^{\mathrm{tan}}(\lambda_0) = 3$, i.e., $J_e\bigr\vert _{T_{\lambda_0}\Delta^3}$ has full rank. $\square$
 
 ### Proof of RT2.
 

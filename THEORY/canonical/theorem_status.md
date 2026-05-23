@@ -273,7 +273,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | Sub-ID | Name | Status | Category | Notes |
 |--------|------|--------|----------|-------|
 | **(V5b-F-empirical)** | V5b-F Goldstone Mass Scaling | accepted | B target | $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot \lVert \partial S \rVert/n$, $C(\beta=4, \xi_0=0.5) \approx 13.2 \pm 0.4$ (NQ-198a 6 corner-sat, SNR 35). Refutes Phase 3 heuristic + Day 3 §4 derivation. Full $C(\beta, \xi_0)$ open via NQ-198k W6+ |
-| **(V5b-T-zero)** | Sub-Spinodal Translation-Invariant Regime | accepted | A definitional | $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T-zero}} = 0$ exactly (discrete translation orbit on $\mathbb{Z}_L^d$). Replaces V5b-T' WITHDRAWN. Empirical anchor NQ-198f $T^2_{20}/T^2_{28}$ $|\mu| \leq 0.028$ within FD numerical noise |
+| **(V5b-T-zero)** | Sub-Spinodal Translation-Invariant Regime | accepted | A definitional | $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T-zero}} = 0$ exactly (discrete translation orbit on $\mathbb{Z}_L^d$). Replaces V5b-T' WITHDRAWN. Empirical anchor NQ-198f $T^2_{20}/T^2_{28}$ $\vert \mu\vert \leq 0.028$ within FD numerical noise |
 
 **Status changes to existing entries**:
 
@@ -592,7 +592,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 | **OP-0022** | Continuous-Time Limit | Low | seed |
 | **OP-SB1-084** | Tightest Analytic $C_\mathrm{iso}$ for $\rho_\mathrm{sym} = 0.84$ | Low | OPEN (W7-CV113A, 2026-05-10): registered as successor to downgraded OP-SB1-DEEP; reformulates "ρ_deep ≥ 0.84 unconditional" as "derive HWF-1 from canonical (A1)–(A7)". |
 | **OP-HMORSE-BROADNESS** | Operator-norm broadness of closure-correction Hessian | (was HIGH) | **CLOSED Cat A** (CV-1.16, 2026-05-14 evening): 3-approach convergence (Perron-Frobenius / operator-norm Theorem B2 primary / 15/15 numerical PASS). L-CLOSURE-LIFT Cat A. *Retired from active OP list.* |
-| **OP-HMORSE-LOCAL-A** | Cat A path for L-HMORSE-LOCAL | Medium | OPEN (NEW CV-1.16): (a) sharper residual bound (current $|\sigma''|_\mathrm{max}$ ~10^4× loose vs numerical) + (b) OP-HMORSE-SBM robustness extension. ETA ~2 sessions. CV-1.17 target. |
+| **OP-HMORSE-LOCAL-A** | Cat A path for L-HMORSE-LOCAL | Medium | OPEN (NEW CV-1.16): (a) sharper residual bound (current $\vert \sigma''\vert _\mathrm{max}$ ~10^4× loose vs numerical) + (b) OP-HMORSE-SBM robustness extension. ETA ~2 sessions. CV-1.17 target. |
 | **OP-HMORSE-SADDLE** | Saddle-point Hessian regularity | Medium | OPEN (NEW CV-1.16): required for full Eyring-Kramers prefactor Cat B; independent of OP-HMORSE-LOCAL-A. ETA 2–4 sessions. |
 | **OP-HMORSE-SBM** | Numerical robustness extension (SBM/barbell/small-world) | Low | OPEN (NEW CV-1.16): 1 session extension beyond canonical grid 15×15. Sub-task B of OP-HMORSE-LOCAL-A. |
 | **OP-HMORSE-GENERIC-PATH** | Smale-Sard transversality generic Morse | Medium | DEPRIORITIZED (CV-1.16): L-CLOSURE-LIFT Cat A direct route made this fallback lower priority. |
@@ -734,7 +734,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 5. **OP-0009-C ($C_t$ multi-formation)**: Co-belonging $C_t$ demoted single-formation; multi-formation status (subsumed by $\sigma_{\mathrm{multi}}^D$ vs revived primitive). OPEN (OAT-5 W6 Day 3).
 6. **OP-0009-Pre-a (K-field as local chart)**: The K-field product manifold $\Sigma_M^K = \prod_j \Sigma_{m_j}$ is a local coordinate chart within one energy basin $\mathcal{A}_{K,\alpha}(\mathcal{P})$, NOT the foundational state space. The foundational state space is $\mathcal{F}_M(\mathcal{P})$; K-act is derived via #PersComp on this space. PARTIALLY RESOLVED (2026-05-06 W6 D4): canonical argument established in D-ST-1..D-ST-4 (canonical.md §16); $\mathcal{B}_K(\mathcal{P})$ registered as correct integration domain replacing $\Sigma_M^K$. Working files updated: `k_selection_a_free_energy.md`, `k_selection_b_kramers.md`.
 
-6b. **OP-0009-Pre-b ($K_{\mathrm{act}}$ as #PersComp observable)**: $K_{\mathrm{act}}(\tilde{u})$ is derived as the count of persistent connected components of $\tilde{u}$ via threshold filtration — NOT a slot-count $|\{j: \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$. The slot-count is a regime-conditional approximation (T-L1-F under L1-J package), not a definition. PARTIALLY RESOLVED (2026-05-06 W6 D4): D-ST-3 (canonical.md §16) registers the correct definition; `CODE/stereo_scc/topology.py:persistent_component_count` implements it. Empirical support: exp01 (W6 D4). **FURTHER RESOLVED (W6 D4 Session C):** D-ST-3 body migrated to canonical.md §3.11 (Formal Universe). The §3 migration satisfies the CV-1.6 §3 amendment requirement. Remaining blocker: OP-0009-Pre-a foundational fix (§3.9/§3.10 already migrated; the remaining tension is the K-field architecture I9 vs shared-pool I9').
+6b. **OP-0009-Pre-b ($K_{\mathrm{act}}$ as #PersComp observable)**: $K_{\mathrm{act}}(\tilde{u})$ is derived as the count of persistent connected components of $\tilde{u}$ via threshold filtration — NOT a slot-count $\vert \{j: \lVert u^{(j)} \rVert_\infty > \varepsilon\}\vert $. The slot-count is a regime-conditional approximation (T-L1-F under L1-J package), not a definition. PARTIALLY RESOLVED (2026-05-06 W6 D4): D-ST-3 (canonical.md §16) registers the correct definition; `CODE/stereo_scc/topology.py:persistent_component_count` implements it. Empirical support: exp01 (W6 D4). **FURTHER RESOLVED (W6 D4 Session C):** D-ST-3 body migrated to canonical.md §3.11 (Formal Universe). The §3 migration satisfies the CV-1.6 §3 amendment requirement. Remaining blocker: OP-0009-Pre-a foundational fix (§3.9/§3.10 already migrated; the remaining tension is the K-field architecture I9 vs shared-pool I9').
 7. **OP-0009-Emp (R23 F=9 σ verification)**: σ-framework Cat A claims (CV-1.5) anchored at F=1 uniform / F=2 first-pitchfork; F=9 default ground state σ behavior empirical only (NQ-141). OPEN (OAT-7 W6 Day 5+6).
 
 **Evidence.**
@@ -855,7 +855,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Impact.** Theoretical completeness; robustness of persistence results; may affect characterization of formation inheritance.
 
-**Status:** UNDER INVESTIGATION → STRUCTURED (Session V, 2026-05-06) → **PARTIALLY RESOLVED** (W7-FINAL, 2026-05-10). Step 1: site-level (T-Persist-1(e) $C_\mathrm{conf}$ Cat A). Step 2: component-level — $|\gamma_M(C_i^t,C_j^s) - \gamma_{M'}(C_i^t,C_j^s)| \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ proved **Cat A** (Lemma 10, via Theorem Partial-H-SINK; `working/temporal/partial_ot_stability.md`). Step 3: identity-level — kernel independence under margin condition $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$ proved **Cat A conditional** (Lemma 11 = S-B3; `working/temporal/S-B3_kernel_independence.md`). All three steps closed at Cat A level.
+**Status:** UNDER INVESTIGATION → STRUCTURED (Session V, 2026-05-06) → **PARTIALLY RESOLVED** (W7-FINAL, 2026-05-10). Step 1: site-level (T-Persist-1(e) $C_\mathrm{conf}$ Cat A). Step 2: component-level — $\vert \gamma_M(C_i^t,C_j^s) - \gamma_{M'}(C_i^t,C_j^s)\vert \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ proved **Cat A** (Lemma 10, via Theorem Partial-H-SINK; `working/temporal/partial_ot_stability.md`). Step 3: identity-level — kernel independence under margin condition $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$ proved **Cat A conditional** (Lemma 11 = S-B3; `working/temporal/S-B3_kernel_independence.md`). All three steps closed at Cat A level.
 **Severity:** Medium → **RESOLVED at working level** (pending S-C1 external audit for canonical Cat A).
 **Related:** T-Persist-1(a–e); T-Temporal-Identity part (c); Theorem Partial-H-SINK (`working/temporal/partial_ot_stability.md`).
 
@@ -935,7 +935,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Remaining OPEN:**
 1. **OP-T*-FIXED-POINT** (Brouwer existence Cat A 승급): L1 quantitative TV bound + π_T continuity rigorous. W9+ task.
-2. **OP-T*-α** (multiplicity quantification): $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K(\Theta) - 1$ Cat B 후보 (decomposed K low-T + K-1 intermediate-T + 1 high-T fixed-points). Sketch in `working/foundation/proofs/P2_OP-T_star-alpha_multiplicity.md` (Cat B conditional). W9+ task.
+2. **OP-T*-α** (multiplicity quantification): $\vert \mathcal{B}_{T_*}^{\mathrm{FP}}\vert = 2K(\Theta) - 1$ Cat B 후보 (decomposed K low-T + K-1 intermediate-T + 1 high-T fixed-points). Sketch in `working/foundation/proofs/P2_OP-T_star-alpha_multiplicity.md` (Cat B conditional). W9+ task.
 
 **Severity:** Medium (Package II Eyring-Kramers prerequisite; affects D-ST-4 + T-K-Select-* family + OP-0005-DYN).
 

@@ -125,7 +125,7 @@ $$\lVert M^\mathrm{Sinkhorn}(c_\mathrm{direct}) - M^\mathrm{Sinkhorn}(c^\mathrm{
 (entropic regularization과 marginal constraints의 차이 처리 필요)
 
 **단계 5** [Cat B, Lemma 10]: TV → 성분 질량 차이:
-$$|\gamma_{M^\mathrm{Sinkhorn}} - \gamma_{M^\mathrm{kernel-comp}}| \leq \varepsilon_\mathrm{comp}$$
+$$\vert \gamma_{M^\mathrm{Sinkhorn}} - \gamma_{M^\mathrm{kernel-comp}}\vert \leq \varepsilon_\mathrm{comp}$$
 
 **현재 상태**: **Cat C** — 단계 1, 2, 4 미완성.  
 

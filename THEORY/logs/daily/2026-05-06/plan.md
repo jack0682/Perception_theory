@@ -155,7 +155,7 @@ Day 3 v3 는 v2 의 4 goals 를 12 goals 로 확장. 산출 file 도 25+ 개 exp
 
 - §1.1 **Symmetric group action** definition. $S_K = S_{K_{\mathrm{field}}}$ 가 K개 slot index 의 permutation. Action on configuration $\mathbf{u} = (u^{(1)}, \ldots, u^{(K)}) \in \Sigma_M^K$ via $\sigma \cdot \mathbf{u} = (u^{(\sigma^{-1}(1))}, \ldots, u^{(\sigma^{-1}(K))})$.
 - §1.2 **Quotient construction**. $\widetilde{\widetilde\Sigma}^K_M := \Sigma_M^K / S_K$ 의 quotient topology. Equivalence class $[\mathbf{u}]$ 의 explicit 정의.
-- §1.3 **Stratification analysis**. Orbit structure: open stratum (free orbit, $|S_K \cdot \mathbf{u}| = K!$) vs symmetric strata (stabilizer non-trivial; e.g., 2개 slot 의 $u^{(j)} = u^{(k)}$ identical 의 경우 $\mathbb{Z}_2$ stabilizer). Symmetric strata 의 codimension count.
+- §1.3 **Stratification analysis**. Orbit structure: open stratum (free orbit, $\vert S_K \cdot \mathbf{u}\vert = K!$) vs symmetric strata (stabilizer non-trivial; e.g., 2개 slot 의 $u^{(j)} = u^{(k)}$ identical 의 경우 $\mathbb{Z}_2$ stabilizer). Symmetric strata 의 codimension count.
 - §1.4 **Dimension count**. Open stratum 의 dimension = $K \cdot (n-1)$ (per-slot Σ_m 의 dim = n-1, K slots). Symmetric strata dimension reduction by orbit structure.
 - §1.5 **Worked example**: $T^2_4$ (n=16) graph, $K=2$. Open stratum dim = $2 \cdot 15 = 30$. Symmetric stratum (mirror $u^{(1)} = u^{(2)}$) dim = 15, codim 15. Explicit configuration sample + class representative selection rule.
 
@@ -184,8 +184,8 @@ Day 3 v3 는 v2 의 4 goals 를 12 goals 로 확장. 산출 file 도 25+ 개 exp
 
 - §5.1 **with σ-framework (T-σ-Lemma-1/2/3, T-σ-Theorem-3/4)**. σ-framework 는 fixed K (single-formation) 위에서 정의됨. Multi-formation σ_multi (D-6a) 가 unordered configuration level 에서 잘 정의되는가? T-σ-multi-A-Static / T-σ-multi-D-Static 이 $S_K$-invariant 인가? Sketch.
 - §5.2 **with T-Persist-K-Sep / Weak / Unified**. Persistence theorems 는 K-field architecture 위에서 well-separated / weakly-interacting / strongly-interacting regime classification. 각 regime 이 unordered configuration level 로 lift 되는가? — 부분적으로 yes (orbit-based regime 정의 가능); 완전한 lift 는 W7-W8 work.
-- §5.3 **with T-L1-F / T-L1-M (multi-formation L1 chain)**. T-L1-F 의 active set $A^\varepsilon$ + $K_{\mathrm{act}}^\varepsilon$ 는 ordered representative dependent. Unordered level 에서는 $|A^\varepsilon|$ 만 well-defined (label 정보 사라짐). T-L1-F 의 bijection $\mathcal{A}_{\mathrm{bar}}$ 는 ordered level 의 statement; unordered level lift 는 새 statement 필요 (multi-set bijection).
-- §5.4 **with Commitment 16 (K_field/K_act two-tier)**. K_field = layer I (architectural; ordered 또는 unordered count, modeling choice). K_act = layer II (active count; orbit-invariant). Commitment 16 의 unordered version 은 K_act = $|A^\varepsilon|$ (orbit-invariant), K_field = $|[\mathbf{u}]|$ (orbit-class size, finite).
+- §5.3 **with T-L1-F / T-L1-M (multi-formation L1 chain)**. T-L1-F 의 active set $A^\varepsilon$ + $K_{\mathrm{act}}^\varepsilon$ 는 ordered representative dependent. Unordered level 에서는 $\vert A^\varepsilon\vert $ 만 well-defined (label 정보 사라짐). T-L1-F 의 bijection $\mathcal{A}_{\mathrm{bar}}$ 는 ordered level 의 statement; unordered level lift 는 새 statement 필요 (multi-set bijection).
+- §5.4 **with Commitment 16 (K_field/K_act two-tier)**. K_field = layer I (architectural; ordered 또는 unordered count, modeling choice). K_act = layer II (active count; orbit-invariant). Commitment 16 의 unordered version 은 K_act = $\vert A^\varepsilon\vert $ (orbit-invariant), K_field = $\vert [\mathbf{u}]\vert $ (orbit-class size, finite).
 - §5.5 **with closure operators**. Per-slot closure $\mathrm{Cl}^{(j)} u^{(j)}$ 는 ordered. Class 위에서는 $\{\mathrm{Cl}(u^{(j)})\}_{j=1}^K$ 의 multi-set 으로 lift. 즉 closure 는 multi-set operator on $\widetilde{\widetilde\Sigma}^K_M$.
 
 ### §2.2.6 `02_op_0009_pre_substantive_start.md` (main, ~5-7 KB)

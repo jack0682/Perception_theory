@@ -112,13 +112,13 @@ This identity is derived from **canonical Theorem 2b** (Deep Core Dominance, Cat
 ## 4. Symbolic Decomposition
 
 **Theorem 2b** (Deep Core Dominance, canonical.md §13, Cat A):
-> Under iso_ratio(Core) ≤ C_iso on a $\mathbb{Z}^d$-like grid: $|\mathrm{Core}^2|/|\mathrm{Core}| \geq 1 - 4 C_\mathrm{iso}/\sqrt{m}.$
+> Under iso_ratio(Core) ≤ C_iso on a $\mathbb{Z}^d$-like grid: $\vert \mathrm{Core}^2\vert /\vert \mathrm{Core}\vert \geq 1 - 4 C_\mathrm{iso}/\sqrt{m}.$
 
 **Derivation of ρ_sym:**
 
-$$m^\mathrm{deep} = \sum_{x \in \mathrm{Core}^2} u(x) \geq \theta_\mathrm{core} \cdot |\mathrm{Core}^2| \geq \theta_\mathrm{core} \cdot m \cdot \left(1 - \frac{4 C_\mathrm{iso}}{\sqrt{m}}\right)$$
+$$m^\mathrm{deep} = \sum_{x \in \mathrm{Core}^2} u(x) \geq \theta_\mathrm{core} \cdot \vert \mathrm{Core}^2\vert \geq \theta_\mathrm{core} \cdot m \cdot \left(1 - \frac{4 C_\mathrm{iso}}{\sqrt{m}}\right)$$
 
-$$m^\mathrm{total} = \sum_{x \in \mathrm{Core}} u(x) \leq |\mathrm{Core}| = m$$
+$$m^\mathrm{total} = \sum_{x \in \mathrm{Core}} u(x) \leq \vert \mathrm{Core}\vert = m$$
 
 $$\rho_\mathrm{deep} = \frac{m^\mathrm{deep}}{m^\mathrm{total}} \geq \theta_\mathrm{core}\!\left(1 - \frac{4 C_\mathrm{iso}}{\sqrt{m}}\right) = \rho_\mathrm{sym}(C_\mathrm{iso}, m, \theta_\mathrm{core}).$$
 

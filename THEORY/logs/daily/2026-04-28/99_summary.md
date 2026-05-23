@@ -428,7 +428,7 @@ User asked Phase 5: "4차 자기-비판 → Phase 4 의 F6 (random perturb 실�
 **Theory (P2.1-P2.5)**:
 - `23_NQ214_to_NQ218_resolutions.md` (~410 lines): closes 5 Phase 4 NQs to Cat B target with substantive partial answers.
   - NQ-214: $c_d \approx 2\pi$ + $L^{-1.5}$ finite-size correction.
-  - NQ-215: $|\partial S| \approx C\sqrt m$ isoperimetric.
+  - NQ-215: $\vert \partial S\vert \approx C\sqrt m$ isoperimetric.
   - NQ-216: K-fold splitting $\mu_k + \lambda_{\mathrm{rep}} \cos(2\pi j/K)$.
   - NQ-217: Γ-convergence sketch for K-field → multi-domain perimeter.
   - NQ-218: 12-row wreath structure systematic table.
@@ -441,7 +441,7 @@ User asked Phase 5: "4차 자기-비판 → Phase 4 의 F6 (random perturb 실�
 1. **Static instability ≠ dynamic instability under volume-projected gradient flow** (P1.1): T-σ-Multi-1 is a Hessian/static claim; dynamic verification requires volume-projected joint Hessian eigvec analysis.
 2. **LSW coarsening regime is narrow** (P1.2): K-formation generically stable at λ_rep < c_eff · μ_Gold; LSW law applies only in below-spinodal corner-saturated regime OR strong-coupling regime.
 3. **First-principles c_d^eff ≈ 2π** (NQ-214): Brillouin-zone integration constant; with finite-L $L^{-1.5}$ power-law correction.
-4. **Isoperimetric cluster perimeter** (NQ-215): $|\partial S| \approx 4\sqrt m$ for square-shape cluster; $\approx 3.54\sqrt m$ for circular.
+4. **Isoperimetric cluster perimeter** (NQ-215): $\vert \partial S\vert \approx 4\sqrt m$ for square-shape cluster; $\approx 3.54\sqrt m$ for circular.
 5. **K-fold Goldstone splitting** (NQ-216): K-formation with cyclic $\mathbb{Z}_K$ symmetry has K splittings $\mu_{\mathrm{Gold}} + \lambda_{\mathrm{rep}} \cos(2\pi j/K)$.
 6. **Γ-convergence framework** (NQ-217): SCC K-field → multi-domain perimeter functional in continuum limit; connects to motion-by-mean-curvature.
 7. **Wreath structure systematic** (NQ-218): 12-row table covering T^d, free BC, cycle for K=1,2,3,4 cases.

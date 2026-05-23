@@ -25,7 +25,7 @@ $\mathcal{E} : \Sigma_m \to \mathbb{R}$, $\mathcal{E} = \lambda_\text{cl} \mathc
 
 $u^*$ 가 $\mathcal{E}$ 의 local minimizer 이면 unconstrained Hessian $\mathbf{H}(u^*) := \nabla^2 \mathcal{E}(u^*) \in \mathbb{R}^{X \times X}$ 의 $T_{u^*}\Sigma_m = \mathbf{1}^\perp$ 위로의 restriction
 $$H(u^*) := \pi_{\mathbf{1}^\perp} \mathbf{H}(u^*) \pi_{\mathbf{1}^\perp},\qquad \pi_{\mathbf{1}^\perp} = I - \tfrac{1}{n}\mathbf{1}\mathbf{1}^\top$$
-의 spectrum 을 분석한다. **Morse index 0 minimizer** 의 정의: $H(u^*)|_{\mathbf{1}^\perp} \succeq 0$ 그리고 모든 nonzero eigenvalue $> 0$.
+의 spectrum 을 분석한다. **Morse index 0 minimizer** 의 정의: $H(u^*)\vert _{\mathbf{1}^\perp} \succeq 0$ 그리고 모든 nonzero eigenvalue $> 0$.
 
 ### 1.3 Group action
 
@@ -34,8 +34,8 @@ $\Gamma := \text{Aut}(G) = \{\pi \in S_n : (i,j) \in E \iff (\pi(i), \pi(j)) \in
 **Stabilizer:** $u^* \in \Sigma_m$ 의 stabilizer $S(u^*) := \{\pi \in \Gamma : \pi \cdot u^* = u^*\} \leq \Gamma$. $S(u^*)$ 는 $\mathbf{H}(u^*)$ 와 commute → eigenspaces 는 $S(u^*)$-invariant.
 
 **Examples** (canonical):
-- $L \times L$ free-BC grid: $\Gamma = D_4$ (4 rot + 4 refl, $|\Gamma| = 8$).
-- $L \times L$ torus: $\Gamma = D_4 \ltimes (\mathbb{Z}_L)^2$ ($|\Gamma| = 8L^2$).
+- $L \times L$ free-BC grid: $\Gamma = D_4$ (4 rot + 4 refl, $\vert \Gamma\vert = 8$).
+- $L \times L$ torus: $\Gamma = D_4 \ltimes (\mathbb{Z}_L)^2$ ($\vert \Gamma\vert = 8L^2$).
 - $C_n$ cycle: $\Gamma = D_n$.
 - 일반 random graph: $\Gamma = \{e\}$.
 
@@ -66,7 +66,7 @@ $\mathcal{F}(u^*) \in \mathbb{Z}_{\geq 0}$. **Threshold-independent**, **graph-i
 $$\mathcal{N}(\phi_k) := \#\{\text{connected components of } \{i : \phi_k(i) > 0\}\} + \#\{\text{c.c. of } \{i : \phi_k(i) < 0\}\}.$$
 ("Connected" 는 graph-induced 부분그래프 위에서.) $\phi_k(i) = 0$ 인 site 는 두 sign 영역 어디에도 포함하지 않음 (boundary). $n_k := \mathcal{N}(\phi_k) \in \mathbb{Z}_{\geq 1}$.
 
-**(O5) Irrep label** ($[\rho_k]$). $S(u^*)$ 가 $\mathbf{1}^\perp$ 에 작용. $\phi_k$ 의 eigenspace $V_k := \ker(H - \lambda_k I)|_{\mathbf{1}^\perp}$ 가 $S(u^*)$-invariant, 따라서 $S(u^*)$ 의 representation 으로 분해
+**(O5) Irrep label** ($[\rho_k]$). $S(u^*)$ 가 $\mathbf{1}^\perp$ 에 작용. $\phi_k$ 의 eigenspace $V_k := \ker(H - \lambda_k I)\vert _{\mathbf{1}^\perp}$ 가 $S(u^*)$-invariant, 따라서 $S(u^*)$ 의 representation 으로 분해
 $$V_k = \bigoplus_{[\rho] \in \widehat{S(u^*)}} m_{k,\rho} \cdot V_\rho.$$
 $\phi_k$ 가 simple eigenvector ($\dim V_k = 1$) 이면 $V_k$ 는 1-dim irrep 이고 $[\rho_k] := [V_\rho]$. $\dim V_k > 1$ 이면 isotypic decomposition 의 한 component 를 (eigenvector 의 group-equivariant Gram-Schmidt 로) canonical 선택 — see §3 Lemma 2 detail.
 
@@ -316,7 +316,7 @@ Sep 항 (self-contrast) 도 같은 방향: interior uniformity 가 sep 비용을
 ### 7.1 Linearization around circular minimizer
 
 Continuum 위 disk minimizer $u^*(r) = \tfrac{1}{2}(1 - \tanh((r - r_0)/\xi_0))$ 에서 $\delta u$ fluctuation:
-$$\delta \mathcal{E} = \int (4\alpha |\nabla \delta u|^2 + V(r) (\delta u)^2) dx + \mathcal{O}(\delta u^3)$$
+$$\delta \mathcal{E} = \int (4\alpha \vert \nabla \delta u\vert ^2 + V(r) (\delta u)^2) dx + \mathcal{O}(\delta u^3)$$
 with $V(r) = \beta W''(u^*(r))$, $W(u) = u^2(1-u)^2$, $W''(u) = 2(1 - 6u + 6u^2)$.
 
 Polar coordinates $(r, \theta)$, separation $\delta u(r, \theta) = R(r) e^{i \ell \theta}$:
@@ -342,7 +342,7 @@ Continuum 은 $SO(2)$ rotational symmetry. Finite grid 의 $D_4$ 는 $SO(2)$ 의
 
 **Ramifications**:
 - Pure $SO(2)$: ℓ=2 doublet $(\cos 2\theta, \sin 2\theta)$ degenerate.
-- $D_4$ correction $\delta V_4 \cos 4\theta$: ℓ=2 doublet 와 ℓ=6 doublet 가 mix (matrix element $\langle \cos 2\theta | \cos 4\theta | \cos 6\theta \rangle \neq 0$). Mixing strength $\sim \delta V_4 / |\Delta \lambda_{\ell=2 \to 6}|$.
+- $D_4$ correction $\delta V_4 \cos 4\theta$: ℓ=2 doublet 와 ℓ=6 doublet 가 mix (matrix element $\langle \cos 2\theta \vert \cos 4\theta \vert \cos 6\theta \rangle \neq 0$). Mixing strength $\sim \delta V_4 / \vert \Delta \lambda_{\ell=2 \to 6}\vert $.
 
 ### 7.4 Translation Goldstone in continuum vs free-BC
 

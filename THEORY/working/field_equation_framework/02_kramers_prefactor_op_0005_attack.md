@@ -142,7 +142,7 @@ A **saddle** for K-jump in the formation regime is a critical configuration `u^{
 - (S2) `u^{*,saddle}` is a **Morse index-1 critical point** of `E_SCC` on F_M(G): exactly *one* negative-eigenvalue direction in the constrained Hessian, corresponding to the *K-jump normal*.
 - (S3) Decomposing `spec(H_{\mathrm{saddle}}) = \{-|\mu_{\mathrm{saddle}}|\} \cup \{0\}^{d_G} \cup \{\mu_i^{(+,\mathrm{saddle})} > 0\}_{i=1}^{n-1-d_G-1}` with `d_G =` Goldstone dimension at the saddle:
 
-  $$|\mu_{\mathrm{saddle}}| := \text{magnitude of the unique negative eigenvalue of } H_{\mathrm{saddle}}$$
+  $$\vert \mu_{\mathrm{saddle}}\vert := \text{magnitude of the unique negative eigenvalue of } H_{\mathrm{saddle}}$$
 
   is the **unstable direction's curvature** along the K-jump normal.
 
@@ -196,7 +196,7 @@ with `ω_well^{1D} = √(V''(x_well))`, `ω_saddle^{1D} = √(|V''(x_saddle)|)`.
 
 Hänggi–Talkner–Borkovec 1990 eq. (4.56), multi-dimensional overdamped spatial-diffusion regime (Langer 1969 generalization):
 
-$$\boxed{\omega_0^{\mathrm{multi\text{-}D}} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \sqrt{\frac{|\det \mathrm{Hess}(V)(x_{\mathrm{well}})\lvert }{ \rvert\det' \mathrm{Hess}(V)(x_{\mathrm{saddle}})|}}}$$
+$$\boxed{\omega_0^{\mathrm{multi\text{-}D}} = \frac{\vert \mu_{\mathrm{saddle}}\vert}{2\pi} \cdot \sqrt{\frac{\vert \det \mathrm{Hess}(V)(x_{\mathrm{well}})\lvert }{ \rvert\det' \mathrm{Hess}(V)(x_{\mathrm{saddle}})\vert}}}$$
 
 with `det'` denoting the product over **non-zero eigenvalues** (excluding the single negative one and any zero / Goldstone modes). The Eyring–Kramers rate is
 
@@ -206,7 +206,7 @@ $$\Gamma^{\mathrm{multi\text{-}D}} = \omega_0^{\mathrm{multi\text{-}D}} \cdot \e
 
 Parent file `01_ns_inspired_synthesis.md` §6 row 12 defines
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} := \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}.$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} := \frac{\vert \mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}\vert}.$$
 
 Identity 2 (parent §7.2, boxed):
 
@@ -222,7 +222,7 @@ In the multi-D form, `ω_well = √(|μ_well|)` is the geometric-mean curvature 
 
 Combining §2 (SCC well/saddle identification) + §3.3 (HTB multi-D form), the SCC formation regime Eyring–Kramers prefactor is
 
-$$\boxed{\omega_0^{\mathrm{SCC}} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \sqrt{\frac{\prod_{k \notin \ker_{\mathrm{Goldstone}}^{\mathrm{well}}} \mu_k(u^{*,\mathrm{well}})}{\prod_{k \notin \ker_{\mathrm{Goldstone}}^{\mathrm{saddle}}, k \neq k_{\mathrm{unstable}}} \mu_k(u^{*,\mathrm{saddle}})}}}$$
+$$\boxed{\omega_0^{\mathrm{SCC}} = \frac{\vert \mu_{\mathrm{saddle}}\vert}{2\pi} \cdot \sqrt{\frac{\prod_{k \notin \ker_{\mathrm{Goldstone}}^{\mathrm{well}}} \mu_k(u^{*,\mathrm{well}})}{\prod_{k \notin \ker_{\mathrm{Goldstone}}^{\mathrm{saddle}}, k \neq k_{\mathrm{unstable}}} \mu_k(u^{*,\mathrm{saddle}})}}}$$
 
 with: (a) `μ_k(u^{*,well/saddle})` the eigenvalues of `Π_{TΣ_m} ∇²E_SCC(u^{*,well/saddle}) Π_{TΣ_m}` on the tangent space of the field polytope (T-PF-A1-AR (n−1)-dim affine chart `Φ`); (b) Goldstone kernels excluded (V5b-T-zero, T-PreObj-1G on translation-invariant graphs; Aut(G)-equivariant decomposition on symmetric graphs per 03_D_L_commutation.md §4.2); (c) `k_unstable` the unique negative-eigenvalue index at saddle (S2).
 
@@ -240,7 +240,7 @@ $$\bar\mu_{\mathrm{well}}^{\mathrm{geom}} := \left( \prod_{k \notin \ker^{\mathr
 
 If `d_G^{well} = d_G^{saddle} =: d_G` and `n - 2 - d_G` is large (typical for SCC on 2D grids with `n = L²`, `d_G ≤ 2`), then up to subleading factors
 
-$$\omega_0^{\mathrm{SCC}} \approx \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \left(\frac{\bar\mu_{\mathrm{well}}^{\mathrm{geom}}}{\bar\mu_{\mathrm{saddle}}^{\mathrm{geom}}}\right)^{(n-1-d_G)/2} \cdot \bar\mu_{\mathrm{well}}^{\mathrm{geom},\,1/2}.$$
+$$\omega_0^{\mathrm{SCC}} \approx \frac{\vert \mu_{\mathrm{saddle}}\vert}{2\pi} \cdot \left(\frac{\bar\mu_{\mathrm{well}}^{\mathrm{geom}}}{\bar\mu_{\mathrm{saddle}}^{\mathrm{geom}}}\right)^{(n-1-d_G)/2} \cdot \bar\mu_{\mathrm{well}}^{\mathrm{geom},\,1/2}.$$
 
 The 1D-equivalent projection (parent §7.2 Identity 2) corresponds to the dominant K-jump-normal mode only: replacing `bar μ_well^geom` by `μ_well` (smallest non-Goldstone) and `bar μ_saddle^geom` by an effective transverse-mode geometric mean, we recover the parent's `Pr^{(Kramers)}^{-1/2}` form.
 
@@ -266,19 +266,19 @@ $$\Gamma_{\mathrm{K\to K'}} = \omega_0^{\mathrm{SCC}} \cdot \exp\left(-\frac{\De
 
 is well-defined with prefactor
 
-$$\omega_0^{\mathrm{SCC}} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \sqrt{\frac{\prod_{k \notin \ker_G^{\mathrm{well}}} \mu_k(u^{*,\mathrm{well}})}{\prod_{k \notin \ker_G^{\mathrm{saddle}},\, k \neq k_{\mathrm{unstable}}} \mu_k(u^{*,\mathrm{saddle}})}}$$
+$$\omega_0^{\mathrm{SCC}} = \frac{\vert \mu_{\mathrm{saddle}}\vert}{2\pi} \cdot \sqrt{\frac{\prod_{k \notin \ker_G^{\mathrm{well}}} \mu_k(u^{*,\mathrm{well}})}{\prod_{k \notin \ker_G^{\mathrm{saddle}},\, k \neq k_{\mathrm{unstable}}} \mu_k(u^{*,\mathrm{saddle}})}}$$
 
 and 1D-projected reduced forms (parent §7.2 — *Identity 2 SPLIT into 2a + 2b per Wave 2 critic Fix #4, file 12 §5* — the original W8-Day3 13:50 form equating these two reductions was algebraically WRONG):
 
 **Identity 2a (Pr^{(Kramers)} reduction, structural leading order)**:
-$$\omega_0^{\mathrm{SCC},\,2a} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi}$$
+$$\omega_0^{\mathrm{SCC},\,2a} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \frac{\vert \mu_{\mathrm{saddle}}\vert}{2\pi}$$
 
-(Algebraic verification: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \sqrt{|\mu_{\mathrm{well}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}\lvert / \rvert\mu_{\mathrm{well}}\lvert } = \rvert\mu_{\mathrm{saddle}}|$.)
+(Algebraic verification: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \sqrt{\vert \mu_{\mathrm{well}}\vert}\cdot\sqrt{\vert \mu_{\mathrm{saddle}}\vert}\cdot\sqrt{\vert \mu_{\mathrm{saddle}}\lvert / \rvert\mu_{\mathrm{well}}\lvert } = \rvert\mu_{\mathrm{saddle}}\vert $.)
 
 **Identity 2b (1D-projection geometric mean form)**:
-$$\omega_0^{\mathrm{SCC},\,2b} = \frac{1}{2\pi} \sqrt{\mu_{\mathrm{well}} \cdot |\mu_{\mathrm{saddle}}|} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}$$
+$$\omega_0^{\mathrm{SCC},\,2b} = \frac{1}{2\pi} \sqrt{\mu_{\mathrm{well}} \cdot \vert \mu_{\mathrm{saddle}}\vert} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}$$
 
-(Direct: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} = \sqrt{|\mu_{\mathrm{well}}|\cdot|\mu_{\mathrm{saddle}}|}$.)
+(Direct: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} = \sqrt{\vert \mu_{\mathrm{well}}\vert \cdot\vert \mu_{\mathrm{saddle}}\vert}$.)
 
 **These two forms are DIFFERENT quantities and MUST NOT be equated.** They correspond to distinct reductions of the multi-D prefactor: Identity 2a is HTB's high-friction leading order showing "ω_0 ~ |μ_saddle|"; Identity 2b is the geometric mean appearing in 1D barrier crossings. For the *primary multi-D form* see the §5.1 boxed formula above; for *structural leading-order shape* use 2a; for *1D-projection limit* use 2b. The original "= " sign between them (W8-Day3 13:50 KST version) was a dimensional/algebraic error caught by Wave 2 critic §A.3.
 
@@ -376,11 +376,11 @@ A K-jump saddle between `K=1` and `K=2` formations at `β/α = 10` on `T^2_{16}`
 
 ### §6.4 Pr^{(Kramers)} and prefactor
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|} \sim \frac{10}{30} \approx 0.33.$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} = \frac{\vert \mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}\vert} \sim \frac{10}{30} \approx 0.33.$$
 
 Reduced 1D-projection prefactor (parent §7.2 Identity 2):
 
-$$\omega_0^{\mathrm{SCC,\,1D-proj}} = \frac{1}{2\pi} \sqrt{\mu_{\mathrm{well}} \cdot |\mu_{\mathrm{saddle}}|} \approx \frac{1}{2\pi} \sqrt{10 \cdot 30} \approx \frac{\sqrt{300}}{2\pi} \approx \frac{17.3}{6.28} \approx 2.76 \quad (\text{in units of }\sqrt{\beta}/\sqrt{\alpha} \cdot 1/\tau_0).$$
+$$\omega_0^{\mathrm{SCC,\,1D-proj}} = \frac{1}{2\pi} \sqrt{\mu_{\mathrm{well}} \cdot \vert \mu_{\mathrm{saddle}}\vert} \approx \frac{1}{2\pi} \sqrt{10 \cdot 30} \approx \frac{\sqrt{300}}{2\pi} \approx \frac{17.3}{6.28} \approx 2.76 \quad (\text{in units of }\sqrt{\beta}/\sqrt{\alpha} \cdot 1/\tau_0).$$
 
 The dimensional factor `1/τ_0` is absorbed into the T-PF-A1-SDE time normalization (`τ_0` = unit-noise relaxation timescale `~ 1/(2T_* λ_2(L_G)) ~ 1/(2·0.1·0.152) ≈ 33` units). Reporting `ω_0` in raw time units: `ω_0 ≈ 2.76 / 33 ≈ 0.084` (per unit time).
 

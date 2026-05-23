@@ -611,7 +611,7 @@ where $n_k$ = nodal domain count of $k$-th Hessian eigenvector; $[\rho_k] \in \m
 **출처:** `logs/daily/2026-04-23/SF_function_taxonomy.md` §5; cross-references `logs/daily/2026-04-22/X1 V7 P1 experiment` (이미 2026-04-22 empirical refutation, today formalized into taxonomy).
 
 **Statement.** The basic Boltzmann softmax hypothesis
-$$P_\pi(\widehat K = k | \beta) = \frac{e^{-E_k^\ast(\beta)/T_{\mathrm{eff}}}}{\sum_j e^{-E_j^\ast(\beta)/T_{\mathrm{eff}}}}$$
+$$P_\pi(\widehat K = k \vert \beta) = \frac{e^{-E_k^\ast(\beta)/T_{\mathrm{eff}}}}{\sum_j e^{-E_j^\ast(\beta)/T_{\mathrm{eff}}}}$$
 is **refuted** as a universal model for SCC protocol-bistable basin selection. X1 V7 P1 data (2026-04-22 session) exhibits $\widehat K$ distribution that does not match any single $T_{\mathrm{eff}}$. **Replacement**: Class N (spectral Gaussian, new) or Class H-Th2 (basin-volume-weighted, proposal) — see P-03 below.
 
 **Scope.** Basic Boltzmann softmax over basin energies is refuted. More careful formulations (basin-volume-weighted, protocol-conditional) remain open hypotheses.
@@ -882,7 +882,7 @@ where $(n_k, \ell_k)$ is the dominant Hessian eigenmode at each local peak. Obse
 **출처:** `working/SF/mode_count.md` §1.
 
 **Statement.** On finite connected $G$ with Laplacian eigenvalues $\{\lambda_k\}$, $c \in (c_-, c_+)$ strictly spinodal, $\alpha, \beta > 0$:
-$$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{uniform}}}^{\mathbf{1}^\perp}\big) = N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) = \#\{ k \geq 2 : 4\alpha\lambda_k(G) < \beta \mid W''(c) \mid \}.$$
+$$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\vert _{u_{\mathrm{uniform}}}^{\mathbf{1}^\perp}\big) = N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) = \#\{ k \geq 2 : 4\alpha\lambda_k(G) < \beta \mid W''(c) \mid \}.$$
 
 **Proof.** Three steps at file-level granularity (`mode_count.md` §1.2 + `logs/daily/2026-04-22/02_development.md` §2.2): (i) diagonalize in $\phi$-basis, (ii) tangent-space restriction to $\mathbf{1}^\perp$, (iii) sign analysis with $W''(c) < 0$.
 
@@ -921,7 +921,7 @@ $$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{unifo
 
 **출처:** `working/SF/interface_scale.md` §2.
 
-**Statement.** Any local minimizer $u^\ast$ of $\mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$ satisfies $|B(u^\ast)| = O(\xi_0\cdot \mathrm{Per}_G(A^\ast))$ where $\xi_0 = \sqrt{\alpha/\beta}$, $B = \{x : 0.1 < u < 0.9\}$, $A = \{x : u \geq 0.5\}$.
+**Statement.** Any local minimizer $u^\ast$ of $\mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$ satisfies $\vert B(u^\ast)\vert = O(\xi_0\cdot \mathrm{Per}_G(A^\ast))$ where $\xi_0 = \sqrt{\alpha/\beta}$, $B = \{x : 0.1 < u < 0.9\}$, $A = \{x : u \geq 0.5\}$.
 
 **Proof.** Modica-Mortola (T11 Cat A) + lower-bound $W(u) \geq 1/16$ on $(0.1, 0.9)$ + combine (`interface_scale.md` §2.2 + `02_development.md` §4.2).
 
@@ -1016,7 +1016,7 @@ Integer $K$ is a derivable statistic, not a primitive."
 
 **출처:** `working/MF/from_single.md` §6.
 
-**Proposed addendum to CN6.** "'K is kinetically determined' is specified quantitatively by: $\widehat{K}(t_{\mathrm{emerge}}) = 1 + N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}}$ (Fiedler-instability emergence); $\widehat{K}(t_{\mathrm{coarsen}}) = 1$ (Kramers metastability escape + isoperimetric limit, T-Merge (b)). The two timescales $t_{\mathrm{emerge}} \sim 1/|\mu_{\min}|$ and $t_{\mathrm{coarsen}} \sim \exp(\Delta\mathcal{F}/T)$ separate emergence from thermodynamic limit."
+**Proposed addendum to CN6.** "'K is kinetically determined' is specified quantitatively by: $\widehat{K}(t_{\mathrm{emerge}}) = 1 + N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}}$ (Fiedler-instability emergence); $\widehat{K}(t_{\mathrm{coarsen}}) = 1$ (Kramers metastability escape + isoperimetric limit, T-Merge (b)). The two timescales $t_{\mathrm{emerge}} \sim 1/\vert \mu_{\min}\vert $ and $t_{\mathrm{coarsen}} \sim \exp(\Delta\mathcal{F}/T)$ separate emergence from thermodynamic limit."
 
 #### P-2026-04-22-06. Canonical §13 — 8 Retirements (Integer-K Dependency Map Update)
 
@@ -1118,7 +1118,7 @@ SF-S1 session 2026-04-22 의 plan.md deliverables G1-G7 모두 산출. Axis A (C
 #### Strengthened / Upgraded claims (6 Cat A)
 
 **A-2026-04-22-R2-01. Prop 1.3b (d) explicit $H_{\mathrm{sep}}$** — `working/SF/mode_count.md` §2 derivation:
-$$H_{\mathrm{sep}}|_{u_{\mathrm{uniform}}} = -\gamma_D(P + P^\top) - c\gamma_D''(P^\top P),$$
+$$H_{\mathrm{sep}}\vert _{u_{\mathrm{uniform}}} = -\gamma_D(P + P^\top) - c\gamma_D''(P^\top P),$$
 where $\gamma_D = d_0(1-d_0)\kappa_D$, $\gamma_D'' = d_0(1-d_0)(1-2d_0)\kappa_D^2$, $\kappa_D = a_D(1+\lambda_D)$, $d_0 = \sigma(c\kappa_D - a_D\lambda_D - \tau_D)$. Four-step derivation with each step elementary. Category: **Cat A** (upgrade from Cat C / sketched).
 
 **A-2026-04-22-R2-02. Prop 1.3b fine-spectrum universality** at canonical $c = 1/2$, $\tau_D = 0$, $\lambda_D = 1$: cubic coefficient vanishes $\gamma_D'' = 0$; $H_{\mathrm{sep}} = -\gamma_D(P + P^\top)$; on regular commuting graphs, eigenvalues $\nu_k^{\mathrm{sep}} = -2\gamma_D p_k$. Round 16's 1641 negative eigenvalues at 64×64 canonical predicted structurally (not config-specific Cat B). Category: **Cat A** (upgrade from Cat B).
@@ -1261,9 +1261,9 @@ None of these are **"single-formation audit gaps"** per the Round 15 original sc
 
 #### Strengthened / Promoted claims (3 new Cat A)
 
-**A-2026-04-22-R4-01. $C_n$ First-Pitchfork Theorem** — `working/SF/symmetry_moduli.md` §3.6.1. On 1D cycle $C_n$ ($n \geq 5$) at $c = 1/2$, first Fiedler pitchfork yields reduced Lyapunov $F(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + \tfrac{3\Lambda}{2}(a^2 + b^2)^2$ with $A_2/A_1 = 2$ (the $O(2)$-invariant case). Critical set is a **1-dim circle** of degenerate quartic-level minima ($R = \sqrt{-\mu/(6\Lambda)}$); Hessian at each point has signature $\{-2\mu, 0\}$ with one Goldstone direction. $D_n$ breaks $O(2)$ at sextic+ via exponentially small $\cos(n\theta)$ lock-in. $|\mathcal{M}_1(C_n)| = 1$ with orbit size $n$. Category: **Cat A** — exact discrete integrals via trig identities ($\sum \cos^{2k}(2\pi j/n)$ exact for $n \geq 5$).
+**A-2026-04-22-R4-01. $C_n$ First-Pitchfork Theorem** — `working/SF/symmetry_moduli.md` §3.6.1. On 1D cycle $C_n$ ($n \geq 5$) at $c = 1/2$, first Fiedler pitchfork yields reduced Lyapunov $F(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + \tfrac{3\Lambda}{2}(a^2 + b^2)^2$ with $A_2/A_1 = 2$ (the $O(2)$-invariant case). Critical set is a **1-dim circle** of degenerate quartic-level minima ($R = \sqrt{-\mu/(6\Lambda)}$); Hessian at each point has signature $\{-2\mu, 0\}$ with one Goldstone direction. $D_n$ breaks $O(2)$ at sextic+ via exponentially small $\cos(n\theta)$ lock-in. $\vert \mathcal{M}_1(C_n)\vert = 1$ with orbit size $n$. Category: **Cat A** — exact discrete integrals via trig identities ($\sum \cos^{2k}(2\pi j/n)$ exact for $n \geq 5$).
 
-**A-2026-04-22-R4-02. $T^2$ First-Pitchfork Theorem** — `working/SF/symmetry_moduli.md` §3.6.2. On 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, Fiedler subspace is 4-dim (from $(k_1, k_2) \in \{(\pm 1, 0), (0, \pm 1)\}$). Reduced Lyapunov $F(r_1, r_2) = \tfrac{\mu}{2}(r_1^2 + r_2^2) + \Lambda[\tfrac{3}{2}(r_1^2 + r_2^2)^2 + 3 r_1^2 r_2^2]$ where $r_1^2 = a^2 + b^2$ (X-amp), $r_2^2 = c'^2 + d^2$ (Y-amp). **Pure-X** $(r_1, r_2) = (R, 0)$ and **pure-Y** $(0, R)$ orbits (linked by $D_4$) are selected with $F = -\mu^2/(24\Lambda)$, each with 1 Goldstone (translation in chosen direction). **Diagonal** orbit $(s, s)$ is Morse-saddle index 1 with $F = -\mu^2/(36\Lambda)$. $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$. Category: **Cat A**.
+**A-2026-04-22-R4-02. $T^2$ First-Pitchfork Theorem** — `working/SF/symmetry_moduli.md` §3.6.2. On 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, Fiedler subspace is 4-dim (from $(k_1, k_2) \in \{(\pm 1, 0), (0, \pm 1)\}$). Reduced Lyapunov $F(r_1, r_2) = \tfrac{\mu}{2}(r_1^2 + r_2^2) + \Lambda[\tfrac{3}{2}(r_1^2 + r_2^2)^2 + 3 r_1^2 r_2^2]$ where $r_1^2 = a^2 + b^2$ (X-amp), $r_2^2 = c'^2 + d^2$ (Y-amp). **Pure-X** $(r_1, r_2) = (R, 0)$ and **pure-Y** $(0, R)$ orbits (linked by $D_4$) are selected with $F = -\mu^2/(24\Lambda)$, each with 1 Goldstone (translation in chosen direction). **Diagonal** orbit $(s, s)$ is Morse-saddle index 1 with $F = -\mu^2/(36\Lambda)$. $\vert \mathcal{M}_1(T^2)\vert = 1$ with orbit size $2L^2$. Category: **Cat A**.
 
 **A-2026-04-22-R4-03. Universal $A_2/A_1$ classification** — `working/SF/symmetry_moduli.md` §3.6.3. The within-block quartic-coefficient ratio takes two universal values:
 - $A_2/A_1 = 2$: single-direction free translation (1D cycle and each X/Y block of torus). Isotropic $O(2)$-invariant at quartic order.
@@ -1275,7 +1275,7 @@ The torus combines both: within-block isotropic, between-block anisotropic — t
 
 #### Moduli-dimension refinement (Clarified)
 
-$|\mathcal{M}_1|$ as a set cardinality is not the sharp invariant; the **continuous-moduli dimension** distinguishes:
+$\vert \mathcal{M}_1\vert $ as a set cardinality is not the sharp invariant; the **continuous-moduli dimension** distinguishes:
 - 2D square (free BC): 0-dim moduli (discrete 4-point orbit).
 - $C_n$: 1-dim moduli (circle, discretized to $2n$ by $D_n$ at sextic+).
 - $T^2$: 1-dim moduli (translation along selected axis).
@@ -1329,9 +1329,9 @@ $|\mathcal{M}_1|$ as a set cardinality is not the sharp invariant; the **continu
 
 **A-2026-04-22-R5-01. Prop 1.3a-Bott (continuous-Aut Morse-Bott refinement)** — `working/SF/symmetry_moduli.md` §3.7.2. For a continuum-limit graph family $\{G_n\} \to (M, g)$ with $\mathrm{Iso}_0(M)$ positive-dimensional, critical orbits are **submanifolds** (not isolated points) of dimension $\dim\mathrm{Iso}_0(M) - \dim\mathrm{Stab}(u^\ast)$. Morse-Bott index replaces standard Morse index: at $u_{\mathrm{uniform}}$, index = $N_{\mathrm{unst}}^{\mathrm{bd}}$ (standard); at bifurcated orbit on $C_n \to S^1$, orbit dim 1, index 0; at pure-X orbit on $T^2$, orbit dim 1, index 0. Recovers Round 4 Hessian spectra (1 Goldstone per continuum orbit). Category: **Cat A** — direct Bott 1954 application.
 
-**A-2026-04-22-R5-02. $C_n$ Lock-In Theorem** — `working/SF/symmetry_moduli.md` §3.7.3. On $C_n$ at $c = 1/2$, the reduced Lyapunov at full order is $F(r, \theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ for even $n$ and $p(n) = 2n$ for odd $n$ (parity at $c = 1/2$ eliminates odd-$n$ lowest invariants). Lock-in energy $\Delta F \sim |\mu|^{p(n)/2}$; Goldstone mass $m_G^2 \sim |\mu|^{p(n)/2}$, vanishing in $n \to \infty$. **This closes the "when does Goldstone acquire mass" question from Round 4.** Category: **Cat A structural** — $D_n$-invariant polynomial classification + parity argument.
+**A-2026-04-22-R5-02. $C_n$ Lock-In Theorem** — `working/SF/symmetry_moduli.md` §3.7.3. On $C_n$ at $c = 1/2$, the reduced Lyapunov at full order is $F(r, \theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ for even $n$ and $p(n) = 2n$ for odd $n$ (parity at $c = 1/2$ eliminates odd-$n$ lowest invariants). Lock-in energy $\Delta F \sim \vert \mu\vert ^{p(n)/2}$; Goldstone mass $m_G^2 \sim \vert \mu\vert ^{p(n)/2}$, vanishing in $n \to \infty$. **This closes the "when does Goldstone acquire mass" question from Round 4.** Category: **Cat A structural** — $D_n$-invariant polynomial classification + parity argument.
 
-**A-2026-04-22-R5-03. $\mathcal{M}_1$ topology invariant** — `working/SF/symmetry_moduli.md` §3.7.4. The set cardinality $|\mathcal{M}_1|$ does NOT distinguish discrete-Aut from continuous-Aut graphs (all three Round 4 cases give $|\mathcal{M}_1| = 1$). The sharp invariants are:
+**A-2026-04-22-R5-03. $\mathcal{M}_1$ topology invariant** — `working/SF/symmetry_moduli.md` §3.7.4. The set cardinality $\vert \mathcal{M}_1\vert $ does NOT distinguish discrete-Aut from continuous-Aut graphs (all three Round 4 cases give $\vert \mathcal{M}_1\vert = 1$). The sharp invariants are:
 - $\dim_{\mathrm{moduli}} := \dim N_1 - \dim\mathrm{Iso}_0(M)$ (moduli dim after continuous-Aut quotient).
 - $\mathrm{Vol}(N_1) := \mathrm{Vol}(\mathrm{Iso}_0(M)/\mathrm{Stab})$ (orbit volume = nucleation sites count).
 
@@ -1366,7 +1366,7 @@ On torus at first pitchfork: $\widehat K \approx 1 + 2L$ (**extensive in $L$**),
 
 - **Q32 (new).** Conjecture 2.1-Bott (continuous-Aut extension) 을 canonical §11 Multi-formation section 에 어떻게 반영? 별도 CN vs original Conjecture 2.1 의 "on continuum-Aut graphs" qualifier 추가.
 - **Q33 (new).** Morse-Bott 를 canonical §5 (landscape/Morse) 에 새 subsection 으로 추가할지 — Prop 1.3a-Bott 가 standard Prop 1.3a 의 자연 일반화.
-- **Q34 (new).** Lock-in scaling $|\mu|^{p(n)/2}$ 결과를 canonical §13 에 independent Cat A 로 추가할지 — 이는 구조적 finite-$n$ correction 정량화로 독자적 가치 있음.
+- **Q34 (new).** Lock-in scaling $\vert \mu\vert ^{p(n)/2}$ 결과를 canonical §13 에 independent Cat A 로 추가할지 — 이는 구조적 finite-$n$ correction 정량화로 독자적 가치 있음.
 
 #### Round 5 conclusion
 
@@ -1386,7 +1386,7 @@ with $d_0(c) = \sigma(a_D(2c-1))$. Explicit function of $c$, universal on regula
 
 **A-2026-04-22-R6-02. Bifurcation eigenvalue $p^\ast(c)$** — `mode_count.md` §2.3e. $p^\ast(c) := -2/[c(1-2d_0(c))\kappa_D]$ is the second zero of $\nu_k(c) = 0$ (beyond $p_k = 0$). Sign: negative for $c < 1/2$, $\pm\infty$ at $c = 1/2$, positive for $c > 1/2$. **Category: Cat A**.
 
-**A-2026-04-22-R6-03. Critical $c$-thresholds $c_{\mathrm{bif}}^\pm$** — `mode_count.md` §2.3e. At canonical $a_D = 5, \kappa_D = 10$: $c_{\mathrm{bif}}^- \approx 0.385$ (below which $|p^\ast|$ enters spectrum from below), $c_{\mathrm{bif}}^+ \approx 0.545$ (above which $p^\ast$ enters spectrum from above). Defined by $\lvert s(c) \rvert \cdot \max|p_k| = 2$ where $s(c) := c(1-2d_0(c))\kappa_D$. **Category: Cat A**.
+**A-2026-04-22-R6-03. Critical $c$-thresholds $c_{\mathrm{bif}}^\pm$** — `mode_count.md` §2.3e. At canonical $a_D = 5, \kappa_D = 10$: $c_{\mathrm{bif}}^- \approx 0.385$ (below which $\vert p^\ast\vert $ enters spectrum from below), $c_{\mathrm{bif}}^+ \approx 0.545$ (above which $p^\ast$ enters spectrum from above). Defined by $\lvert s(c) \rvert \cdot \max\vert p_k\vert = 2$ where $s(c) := c(1-2d_0(c))\kappa_D$. **Category: Cat A**.
 
 **A-2026-04-22-R6-04. Three-regime classification** — `mode_count.md` §2.3e. Spinodal $(c_-, c_+)$ decomposes into three regimes with distinct destabilized-set characterizations:
 - **I** ($c_-, c_{\mathrm{bif}}^-$) $\approx$ (0.21, 0.39): $\{p_k > 0\} \cup \{p_k < p^\ast(c)\}$ (gains bipartite).
@@ -1674,7 +1674,7 @@ NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2
 **A-R11-01 through A-R11-06** (in `13_deepening_round11.md`):
 - Secondary pitchfork $\beta^{\mathrm{sec}}_{1 \to 2}$ from K=1 axis orbit to K=2.
 - Split-direction: $\phi_{2,0}$ couples to $\phi_{1,0}^2$; split along primary axis.
-- $\mathcal{M}_2$ on 2D square: $(\bar x, d, \theta)$ parameterization, $|\mathcal{M}_2| = O(L^3)$.
+- $\mathcal{M}_2$ on 2D square: $(\bar x, d, \theta)$ parameterization, $\vert \mathcal{M}_2\vert = O(L^3)$.
 - $\mathcal{M}_2$ on 2D torus: 2-dim continuous moduli $T^2/D_4$.
 - Axis-pair vs diagonal-pair: axis preferred (analogous to R3).
 - Moduli-dim grows linearly with K: K=2 on torus has dim 2 (vs dim 1 at K=1).
@@ -1694,7 +1694,7 @@ NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2
 **A-R13-01 through A-R13-06** (in `15_deepening_round13.md`):
 - $c_0^{(K)}$ definition + K-additivity $c_0 = \sum_K c_0^{(K)}$.
 - Partition-based cascade (Stirling numbers mod Aut + $S_K$).
-- Bracket: $\binom{|\mathcal{M}_1|}{K} \leq c_0^{(K)}(\beta) \leq c_0^{(1)K}/K!$.
+- Bracket: $\binom{\vert \mathcal{M}_1\vert}{K} \leq c_0^{(K)}(\beta) \leq c_0^{(1)K}/K!$.
 - K=2 on 2D square: $c_0^{(2)} = O(L^3)$ moderate / O(L) saturation metastable.
 - K ≥ 2 metastability at saturation; Γ-convergence selects K=1.
 - Hyp. Thm. 4.1*-K four sub-claims at each K.

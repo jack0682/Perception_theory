@@ -91,7 +91,7 @@ Specialized to gradient flow $F(x) = -\nabla E(x)$:
 
 ### §3.2 Effective randomness and Gaussian approximation
 
-For deterministic systems, $R(t)$ is determined by $x_F(0)$. If the initial fast-mode data is drawn from an *equilibrium ensemble* $\rho_\mathrm{eq}(x_F | x_S(0)) \propto \exp(-E(x_S(0), x_F)/T_*)$ for some $T_*$, then $R(t)$ becomes a random variable with:
+For deterministic systems, $R(t)$ is determined by $x_F(0)$. If the initial fast-mode data is drawn from an *equilibrium ensemble* $\rho_\mathrm{eq}(x_F \vert x_S(0)) \propto \exp(-E(x_S(0), x_F)/T_*)$ for some $T_*$, then $R(t)$ becomes a random variable with:
 - Mean: zero (by construction of $Q$ projector).
 - Covariance: $\langle R(0) R(t)^\top \rangle = K(t)$ (Mori-Kubo identity).
 

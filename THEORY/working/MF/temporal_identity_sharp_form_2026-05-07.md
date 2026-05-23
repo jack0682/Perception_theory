@@ -89,7 +89,7 @@ $$S_{ij}^0 = \lambda_m\,\gamma(C_i^t, C_j^s) - \lambda_c\,\sum_{x\in C_i^t,\,y\i
 | **8** | **(A9) + margin > 0 ⇒ (MA1) + (A8) both induced** | `05_close_NQ5_full.md` §3 | **Cat B (today's closure)** |
 | 8.2 | Sinkhorn dual potentials are $L_g \leq L_c$-Lipschitz | `03_development.md` §8.2 | Cat B (Bigot–Cazelles–Papadakis-style; standard) |
 | **9** | **Sinkhorn cost-perturbation: $\lVert M - M' \rVert_\mathrm{TV} \leq M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.2 | **Cat B (today's closure)** |
-| **10** | **Component confinement: $|\gamma_M - \gamma_{M'}| \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.3 | **Cat B (today's closure)** |
+| **10** | **Component confinement: $\vert \gamma_M - \gamma_{M'}\vert \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.3 | **Cat B (today's closure)** |
 | **11** | **Kernel independence: under margin > $\epsilon_\mathrm{kernel}$, $R_{t \to s}[M] = R_{t \to s}[M']$** | `06_close_OP0011_step2.md` §2.4 | **Cat B (today's closure, part (c))** |
 | 12 | Variance-corrected dual-potential bound (does not improve $\varepsilon_\mathrm{OT}^*$) | `07_close_NQ4_robust.md` §3 | Cat B |
 | 13 | Spectral-form $\eta_\mathrm{cross}^\mathrm{spec} \leq e^{-\mu_\mathrm{joint}(d_\mathrm{inter}^*)^2/(2\varepsilon_\mathrm{OT})}$ | `08_NQ6_spectral_gap_advance.md` §3 | Cat C target Cat A — **Lemma 13 not closed**; advancement only |

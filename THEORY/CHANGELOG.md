@@ -168,7 +168,7 @@
 
 ### Two Cat A Direct Additions
 
-**1. L-UNI-ZMODE (Cat A direct)** — Uniform Zero-Mode Dichotomy. 균일 critical $u^* = c\mathbf{1}$ 에서 constrained Hessian $H(u^*)|_{\mathbf{1}^\perp}$ 의 kernel 이 Type A (critical parameter crossing $\mu_k = 0$) + Type B (eigenvalue multiplicity $\mathrm{mult}(\lambda_k) > 1$) 만 가능; **Type C (continuous Goldstone / orbit-tangent) 부재**. 5-step proof: (1) Aut(G)-orbit triviality $\mathcal{O}(u^*) = \{u^*\}$ singleton → tangent $\{0\}$, (2) Type C exclusion, (3) Hessian Aut(G)-equivariance via T-σ-Lemma-1 Cat A, (4) Schur Lemma + L-S3-KERNEL-MULT Case B → $V_{\lambda_k}$ 가 $H(u^*)$-invariant, scalar action $\mu_k$, (5) A/B classification. CSSL critic 의 "ker = Goldstone only at uniform" misframing (`working/cssl/01_critic_evaluation.md` §A.1) 의 *formal refutation*.
+**1. L-UNI-ZMODE (Cat A direct)** — Uniform Zero-Mode Dichotomy. 균일 critical $u^* = c\mathbf{1}$ 에서 constrained Hessian $H(u^*)\vert _{\mathbf{1}^\perp}$ 의 kernel 이 Type A (critical parameter crossing $\mu_k = 0$) + Type B (eigenvalue multiplicity $\mathrm{mult}(\lambda_k) > 1$) 만 가능; **Type C (continuous Goldstone / orbit-tangent) 부재**. 5-step proof: (1) Aut(G)-orbit triviality $\mathcal{O}(u^*) = \{u^*\}$ singleton → tangent $\{0\}$, (2) Type C exclusion, (3) Hessian Aut(G)-equivariance via T-σ-Lemma-1 Cat A, (4) Schur Lemma + L-S3-KERNEL-MULT Case B → $V_{\lambda_k}$ 가 $H(u^*)$-invariant, scalar action $\mu_k$, (5) A/B classification. CSSL critic 의 "ker = Goldstone only at uniform" misframing (`working/cssl/01_critic_evaluation.md` §A.1) 의 *formal refutation*.
 
 **2. L-SURFACE-TENSION-RESCALE (Cat A direct)** — Surface Tension Parameter Rescaling. $(α, β) \mapsto (sα, sβ)$ 하에서 6-part 구조: (a) T8 wall 불변 (β/α 보존), (b) ℓ_bd = √(α/β) 불변, (c) σ = (√2/6)√(αβ) linear scaling, (d) Hessian linear homogeneity $H(u^*; sα, sβ) = s \cdot H$, (e) Goldstone preservation $\mu_k = 0 \Rightarrow \mu_k(sα, sβ) = 0$, (f) non-Goldstone gap arbitrary expansion. Modica-Mortola standard form + canonical Theorem 4 + T-V5b-T-zero direct. CSSL §3.2 sole survivor formalization. Wave 2 critic Fix #1 (σ √2 correction, $(\sqrt{2}/6)\sqrt{\alpha\beta}$ NOT $\sqrt{\alpha\beta}/3$) + Fix #3 (prefactor invariance retraction) 반영.
 
@@ -268,7 +268,7 @@ In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave
 - **Fix #1 (σ formula consensus)**: $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ — corrected files 05, 06 (previously had incorrect $\sqrt{\alpha\beta}/3$ form, off by factor √2).
 - **Fix #2 (file 03 L1967 × 9)**: OP-HMORSE-SADDLE citations updated to `theorem_status.md L594` (registration) with cross-ref `canonical.md L1967` (caveat); 10 instances corrected.
 - **Fix #3 (file 06 §8.1 prefactor invariance retraction)**: corrected to $\omega_0(s) = s \cdot \omega_0(1)$ linear scaling; $\text{Pr}^{(\text{Kramers})}$ ratio IS invariant, prefactor itself is NOT.
-- **Fix #4 (files 02/05 Identity 2 algebraic split)**: split into Identity 2a ($\omega_0 \sim |\mu_{\text{saddle}}|$) and Identity 2b ($\sqrt{\mu_{\text{well}}|\mu_{\text{saddle}}|}$); these are *different* quantities and must not be equated.
+- **Fix #4 (files 02/05 Identity 2 algebraic split)**: split into Identity 2a ($\omega_0 \sim \vert \mu_{\text{saddle}}\vert $) and Identity 2b ($\sqrt{\mu_{\text{well}}\vert \mu_{\text{saddle}}\vert}$); these are *different* quantities and must not be equated.
 
 ### v1 Working File Updated
 
@@ -2198,7 +2198,7 @@ Searched canonical.md, theorem_status.md, emergent_multi_formation_synthesis.md 
 
 **`THEORY/working/MF/emergent_multi_formation_synthesis.md`** — 9 sections:
 
-**§1 Central Thesis:** Multi-formation is not primitive — it emerges from a shared soft field. $K_\mathrm{act}(u) = |\mathrm{PersComp}(u)|$ is derived, not assumed. $\Sigma_M^K$ is local chart, not foundational.
+**§1 Central Thesis:** Multi-formation is not primitive — it emerges from a shared soft field. $K_\mathrm{act}(u) = \vert \mathrm{PersComp}(u)\vert $ is derived, not assumed. $\Sigma_M^K$ is local chart, not foundational.
 
 **§2 Theorem Ladder:** 13-entry table mapping support → field polytope → boundary → depth locking → stochastic dynamics → Gibbs equilibrium → K-selection → observation-conditioned K-selection. Each row marked Cat A / Cat B / working / open.
 
@@ -2424,7 +2424,7 @@ Read `stereo_observation_framework.md` (W6 D2 evening, working draft):
 - Observation energy (negative log-likelihood): $\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = -\log \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u)$
 - Likelihood conditions LM1–LM3: measurability, positivity, posterior normalizability.
 - Posterior measure: $\pi_t^{obs}(du) = (Z^{obs})^{-1} \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u) e^{-E(u)/T_*} d\sigma_M(u)$
-- Posterior sector partition function: $Z_K^{obs}(\mathfrak{O}_t) = \int_{\mathcal{B}_K} \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t|u) e^{-E/T_*} d\sigma_M$
+- Posterior sector partition function: $Z_K^{obs}(\mathfrak{O}_t) = \int_{\mathcal{B}_K} \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t\vert u) e^{-E/T_*} d\sigma_M$
 - Posterior sector mass: $p_K(\mathfrak{O}_t) = Z_K^{obs}/Z^{obs}$
 - Observation-conditioned free energy: $F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t) = -T_* \log Z_K^{obs}(\mathfrak{O}_t)$
 - Selection: $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs}(K;\mathcal{P},\mathfrak{O}_t)$
@@ -2433,7 +2433,7 @@ Read `stereo_observation_framework.md` (W6 D2 evening, working draft):
 (i) $\pi_t^{obs}$ well-defined probability measure.
 (ii) $\{p_K(\mathfrak{O}_t)\}$ probability distribution on $K_\mathrm{feas}$.
 (iii) $K^*(\mathfrak{O}_t) \in \arg\min_K F_\mathrm{obs} = \arg\max_K p_K(\mathfrak{O}_t)$.
-(iv) Prior–posterior relationship: $p_K(\mathfrak{O}_t) = p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}|K_\mathrm{act}=K] \cdot Z/Z^{obs}$; $\mathcal{L}_\mathrm{obs} \equiv 1$ recovers T-K-Select-PF.
+(iv) Prior–posterior relationship: $p_K(\mathfrak{O}_t) = p_K \cdot \mathbb{E}_{\pi_{T_*}}[\mathcal{L}_\mathrm{obs}\vert K_\mathrm{act}=K] \cdot Z/Z^{obs}$; $\mathcal{L}_\mathrm{obs} \equiv 1$ recovers T-K-Select-PF.
 (v) Strict ordering: $p_K > p_{K'}$ iff $F_\mathrm{obs}(K) < F_\mathrm{obs}(K')$.
 
 **Proofs**: Complete given Package I + T-K-Select-PF + LM1–LM3. Mathematical content is Bayes' theorem on the Gibbs probability space established by Package I.
@@ -2461,7 +2461,7 @@ Critical non-overclaims explicitly in §5:
 - Observation tuple condensed from `stereo_observation_framework.md` §3.2.
 - D-ST-5 (canonical §16) backprojection $b_t$ connects $u \in \mathcal{F}_M(G)$ to pixel space.
 - Photometric likelihood form $\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = \lambda_\mathrm{photo}\sum_{x_L}c(x_L)\Psi(\ldots)$ satisfies LM1–LM3 automatically.
-- Operator form $\mathcal{L}_\mathrm{obs} = \mathcal{L}_L(f_L|H_L u)\cdot\mathcal{L}_R(f_R|H_R u)$ also given as alternative.
+- Operator form $\mathcal{L}_\mathrm{obs} = \mathcal{L}_L(f_L\vert H_L u)\cdot\mathcal{L}_R(f_R\vert H_R u)$ also given as alternative.
 
 ---
 
@@ -4201,7 +4201,7 @@ Also clarified: Σ_M^K → B_K(P) domain fix already done (D-ST-4); chart map Φ
 **3. OP-0006 boundary precision — PersRidge extension + exp06:**
 
 *op_0006_boundary_precision.md:* Extended §2 with §2b "Persistent Gradient Ridge":
-$$B_t(\tilde{u}) = \mathrm{PersRidge}(|\nabla_G \tilde{u}|, \rho_{\mathrm{bd}}) = \{x : (b_x,d_x) \in \mathrm{Bars}_0(|\nabla_G \tilde{u}|; G),\; b_x - d_x > \rho_{\mathrm{bd}}\}$$
+$$B_t(\tilde{u}) = \mathrm{PersRidge}(\vert \nabla_G \tilde{u}\vert, \rho_{\mathrm{bd}}) = \{x : (b_x,d_x) \in \mathrm{Bars}_0(\vert \nabla_G \tilde{u}\vert; G),\; b_x - d_x > \rho_{\mathrm{bd}}\}$$
 This is the $H_0$ barcode of the gradient magnitude field (not the field itself), analogous to D-ST-3 (§3.11). Promotion criteria updated: Cat B target is §2b, not §2.
 
 *exp06 — Boundary stability (shadow + blur):*
@@ -4302,7 +4302,7 @@ Results saved: `CODE/stereo_scc/results/exp02_neb/{k_stability.csv, barrier_vs_d
 **4. OP-0006 boundary precision — working formalization:**
 `THEORY/working/MF/op_0006_boundary_precision.md` (new, ~185 lines). Contents:
 - §1: Problem statement (soft boundary band §5.3 → crisp persistent boundary)
-- §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : |\nabla_G \tilde{u}(x)| > \theta\}$; persistent if stable under $\lVert \delta \rVert_\infty$ small
+- §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : \vert \nabla_G \tilde{u}(x)\vert > \theta\}$; persistent if stable under $\lVert \delta \rVert_\infty$ small
 - §3: Distinction from raw image edge (table: 5 properties)
 - §4: Open sub-questions (convergence, topological stability, stereo conditioning)
 - §5: Toy experiment proposal — boundary stability ratio under shadow/blur perturbation
@@ -4677,7 +4677,7 @@ Created `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (post-processing wrappe
 ### Theoretical interpretation
 
 Factor-1 sharpening in R-1 was theoretically inapplicable under standard (P9) (per `02_development.md` §2.4 verdict: factor-2 sharp under (P0)–(P11)). Under (P9-tight), the Type-N bottleneck-stability shift bound becomes:
-$$|\ell_i^U - \ell_i^{u^{(j)}}| \le 2 \cdot \rho_{\mathrm{pert}}/4 \cdot 2 = \rho_{\mathrm{pert}} \quad \text{(factor 1 in } \rho_{\mathrm{pert}}/2\text{)},$$
+$$\vert \ell_i^U - \ell_i^{u^{(j)}}\vert \le 2 \cdot \rho_{\mathrm{pert}}/4 \cdot 2 = \rho_{\mathrm{pert}} \quad \text{(factor 1 in } \rho_{\mathrm{pert}}/2\text{)},$$
 expanding $\tau_*^{\mathrm{post-R2}}$ from $\min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ to $\min(\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ (NOT looser; same 2ρ_pert vs ρ_pert' = ρ_pert in the second term — neutral net effect on $\tau_*$ since 2·(ρ_pert/2) = ρ_pert).
 
 **Net theoretical effect:** factor-1 sharpening leaves $\tau_*^{\mathrm{post-R2}}$ unchanged in form (different parameterization, same admissible range when ρ_pert is the binding term). The benefit is conceptual rigor (factor-1 cleaner), not regime expansion.
@@ -4909,7 +4909,7 @@ For PARTIAL RETIRE files, the substantive content slated for preservation:
 
 1. **`scc_mass_gap_connection.md`** → extract BC-249-1 conjecture (`§3.1` revised form with $\delta_0$ bifurcation-distance dependence) into new `working/MF/spectral_gap_BC249.md` (SCC-intrinsic; no Yang-Mills framing).
 
-2. **`formation_birth_string_breaking.md`** → extract NQ-198a empirical anchor + threshold formulation $|\partial S|_{\mathrm{crit}}$ into `working/MF/formation_birth_threshold_NQ253.md` (SCC-intrinsic; no QCD framing).
+2. **`formation_birth_string_breaking.md`** → extract NQ-198a empirical anchor + threshold formulation $\vert \partial S\vert _{\mathrm{crit}}$ into `working/MF/formation_birth_threshold_NQ253.md` (SCC-intrinsic; no QCD framing).
 
 3. **`formation_fundamental_group.md`** → consolidate Definition 3.1 ($\pi_1(F) := \mathrm{Aut}(G)_{u^*}$) into `working/SF/sigma_uniqueness_theorem.md` (Aut(G)_{u*} formalism already there). Rename suggestion: `Stab(F)` or `Aut(F; u*)` instead of misleading `π_1(F)`.
 
@@ -4978,13 +4978,13 @@ $$A_2^{sym} = 2 A_1^{can} + A_2^{can} \quad\Leftrightarrow\quad A_2^{can}/A_1 = 
 
 **Canonical line 1395** claims "$A_2/A_1 = 4$" for canonical's normal form. **This is wrong**: the value 4 is correct only in `symmetry_moduli`'s normal form; canonical's value should be 2.
 
-**Canonical Step 4 (line 1407)** derives $F_{yy}|_{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). It then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention) into canonical's formula. The result $F_{yy} = 4|W''(c)|\epsilon$ (claimed degeneracy with $\mu_0$) is **spurious due to convention-mixing**; the correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2|W''(c)|\epsilon$.
+**Canonical Step 4 (line 1407)** derives $F_{yy}\vert _{(A,0)} = -\beta A_2/A_1$ algebraically in canonical's normal form (verified correct). It then plugs in "$A_2/A_1 = 4$" (from `symmetry_moduli`'s convention) into canonical's formula. The result $F_{yy} = 4\vert W''(c)\vert \epsilon$ (claimed degeneracy with $\mu_0$) is **spurious due to convention-mixing**; the correct value with $A_2^{can}/A_1 = 2$ is $F_{yy} = 2\vert W''(c)\vert \epsilon$.
 
 ### Recomputed canonical (ii) — corrected formula
 
 With $A_2^{can}/A_1 = 2$ (correct conversion in canonical's normal form):
-- $\mu_0 = F_{xx}|_{(A,0)} = -4\beta = 4|W''(c)|\epsilon$ (unchanged)
-- $\mu_1 = F_{yy}|_{(A,0)} = -\beta A_2^{can}/A_1 = -2\beta = 2|W''(c)|\epsilon$ (corrected; was $4|W''(c)|\epsilon$)
+- $\mu_0 = F_{xx}\vert _{(A,0)} = -4\beta = 4\vert W''(c)\vert \epsilon$ (unchanged)
+- $\mu_1 = F_{yy}\vert _{(A,0)} = -\beta A_2^{can}/A_1 = -2\beta = 2\vert W''(c)\vert \epsilon$ (corrected; was $4\vert W''(c)\vert \epsilon$)
 - **Ratio $\mu_0/\mu_1 = 2$ at leading order, NON-DEGENERATE**
 
 This **matches NQ-187 numerical measurement** $\mu_1/\mu_0 \approx 2$ exactly (modulo eigenvalue-ordering convention). The "falsification" is a real algebraic inconsistency in canonical Step 4, not a scope error or normalization-only difference.
@@ -5006,7 +5006,7 @@ This **matches NQ-187 numerical measurement** $\mu_1/\mu_0 \approx 2$ exactly (m
 ### Corrected canonical statement (γ-ii path text)
 
 `sigma_theorem4_canonical_revision.md` §4.6 NEW — recommended canonical correction text. Key changes from original canonical T-σ-Theorem-4 (ii):
-- Replace "$\mu_0 = \mu_1 = 4|W''(c)|\epsilon$ degenerate" with "$\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2 non-degenerate".
+- Replace "$\mu_0 = \mu_1 = 4\vert W''(c)\vert \epsilon$ degenerate" with "$\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$, ratio 2 non-degenerate".
 - Replace "$A_2/A_1 = 4$" claim in canonical line 1395 with "convention-aware: $A_2^{sym}/A_1 = 4$ in `symmetry_moduli`'s form, $A_2^{can}/A_1 = 2$ in canonical's form, related by $A_2^{can} = A_2^{sym} - 2 A_1$".
 - Update (v) σ-signature: ordering by eigenvalue magnitude (4 > 2), not by Mulliken character order tie-break.
 - Mark Commitment 14 (O7) tie-break convention as **not applicable** for this theorem (no tie at leading order); convention remains useful for higher-order theorems.
@@ -5048,7 +5048,7 @@ This **matches NQ-187 numerical measurement** $\mu_1/\mu_0 \approx 2$ exactly (m
 
 ### Path forward (refined)
 
-- **W6 Day 2 (priority highest)**: execute (γ) audit per refocused scope: independently verify the conversion identity $A_2^{sym} = 2 A_1 + A_2^{can}$ on $L = 4$ small grid via desk computation; confirm corrected canonical formula $\mu_1 = 2|W''(c)|\epsilon$. **Expected outcome: PASS, confirming γ-ii path.**
+- **W6 Day 2 (priority highest)**: execute (γ) audit per refocused scope: independently verify the conversion identity $A_2^{sym} = 2 A_1 + A_2^{can}$ on $L = 4$ small grid via desk computation; confirm corrected canonical formula $\mu_1 = 2\vert W''(c)\vert \epsilon$. **Expected outcome: PASS, confirming γ-ii path.**
 - **W6+ (priority medium)**: execute (β) R22 derivation audit per `r22_a2_a1_audit.md` §3 — confirms `symmetry_moduli`'s internal logic.
 - **W7+ (priority lowest)**: (α) NQ-187b L → ∞ extrapolation — useful cross-validation only.
 - **CV-1.7+ T-σ-Theorem-4 Cat A re-promotion**: contingent on (γ) audit confirmation + canonical correction applied per §4.6 corrected text. **Cat A re-promotion is feasible; the corrected statement is mathematically rigorous and matches NQ-187 numerical exactly.**
@@ -5076,11 +5076,11 @@ Per refined understanding (§2.5 of `sigma_theorem4_canonical_revision.md` post-
 
 **R22 cubic-equivariant ratio $A_2/A_1 = 4$**: **LIKELY CORRECT** at continuum (confirmed by multinomial factor 6 reconciliation + discrete table $A_2^L/A_1^L \to 4$ as $L \to \infty$ in `nq187b_L_extrapolation.md` §2.6).
 
-**Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4|W''(c)|\epsilon$ degenerate at leading order"**: **LIKELY PARTIALLY INCORRECT** — but the error is most likely **scope** (path γ-i: canonical (ii) describes uniform-point Hessian degeneracy; NQ-187 measures axis-minimum Hessian which is non-degenerate per R22 axis-aligned analysis $F_{aa}/F_{bb} = 2$), not formula. Path γ-i resolution: clarify canonical (ii) scope; add separate sub-statement for axis-minimum Hessian.
+**Canonical T-σ-Theorem-4 (ii) "Mode 0 = Mode 1 = $4\vert W''(c)\vert \epsilon$ degenerate at leading order"**: **LIKELY PARTIALLY INCORRECT** — but the error is most likely **scope** (path γ-i: canonical (ii) describes uniform-point Hessian degeneracy; NQ-187 measures axis-minimum Hessian which is non-degenerate per R22 axis-aligned analysis $F_{aa}/F_{bb} = 2$), not formula. Path γ-i resolution: clarify canonical (ii) scope; add separate sub-statement for axis-minimum Hessian.
 
 **Refined 4-path decision tree** (`sigma_theorem4_canonical_revision.md` §4.5):
 - **Path γ-i** (scope clarification, ~70% probability): canonical (ii) measures uniform-point Hessian; NQ-187 measures axis-minimum Hessian; both correct, statement scope unclear → **clarify scope**, no formula error, **Cat A re-promotion candidate at CV-1.7+**.
-- **Path γ-ii** (formula correction, ~20%): canonical (ii) intended axis-minimum but contains formula error → **correct formula** ($\mu_0 = 4|W''(c)|\epsilon, \mu_1 = 2|W''(c)|\epsilon$, ratio 2) at CV-1.6, Cat B retained.
+- **Path γ-ii** (formula correction, ~20%): canonical (ii) intended axis-minimum but contains formula error → **correct formula** ($\mu_0 = 4\vert W''(c)\vert \epsilon, \mu_1 = 2\vert W''(c)\vert \epsilon$, ratio 2) at CV-1.6, Cat B retained.
 - **Path β-fail** (R22 derivation error, ~5%): retract R22 + Cat C retraction.
 - **Path α-fail** (continuum extrapolation rejects A_2/A_1 = 4, ~5%): retract.
 
@@ -5457,7 +5457,7 @@ User decision after Day 1 EOD G1 closure + external audit PASS: apply the T-L1-M
 ### Canonical T-L1-M new entry summary
 
 **Statement:** Under T-L1-F's $(P0)$–$(P11)$ and $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ with $\tau \in (0, \tau_*^{\mathrm{post-R2}})$ where $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$:
-$$|K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)| \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}}(U;\tau) + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).$$
+$$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}}(U;\tau) + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).$$
 
 **Status:** Cat A conditional under (P0)–(P11) + $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ + $\tau < \tau_*^{\mathrm{post-R2}}$.
 
@@ -5505,11 +5505,11 @@ W6 Day 1 G1 deliverable closed at the working layer. The R-0/R-1/R-2/R-3 specifi
 **§2.2 (R-0 closure)** — Phi-4c F1 wording simplified: "clip at 0" hedge replaced with monotonicity-only argument (uses F2+F3 only; no clipping or restriction needed). Cat A absolute.
 
 **§5.4 (R-1 closure + R-3 closure)** — Two notes appended after Type-N main derivation:
-- **R-1 sharpness note**: factor 2 in CSEH bottleneck stability shift bound is sharp under (P0)–(P11). Verified via explicit admissible perturbation $R_j(v) = +\rho_{\mathrm{pert}}/2, R_j(w) = -\rho_{\mathrm{pert}}/2$ at peak/saddle vertices achieving $|\ell_i^U - \ell_i^{u^{(j)}}| = \rho_{\mathrm{pert}}$ exactly. Type-N bars are NOT terminal (P3 disjointness + $N_j^r$ connectedness force intra-slot merging at saddle $w$ with $d_i = U(w) > 0$), so (P0) factor-1 sharpening is structurally inapplicable. Persistence-skeleton preservation disclosure added per external auditor's recommendation. Cat A absolute.
+- **R-1 sharpness note**: factor 2 in CSEH bottleneck stability shift bound is sharp under (P0)–(P11). Verified via explicit admissible perturbation $R_j(v) = +\rho_{\mathrm{pert}}/2, R_j(w) = -\rho_{\mathrm{pert}}/2$ at peak/saddle vertices achieving $\vert \ell_i^U - \ell_i^{u^{(j)}}\vert = \rho_{\mathrm{pert}}$ exactly. Type-N bars are NOT terminal (P3 disjointness + $N_j^r$ connectedness force intra-slot merging at saddle $w$ with $d_i = U(w) > 0$), so (P0) factor-1 sharpening is structurally inapplicable. Persistence-skeleton preservation disclosure added per external auditor's recommendation. Cat A absolute.
 - **R-3 consistency note**: Type-N non-terminal nature (per R-1) is consistent with CSEH applied identically to both diagrams under (P0) global death convention. Cat A absolute.
 
 **§5.5 (R-2 closure + NQ-G1-1 self-correction)** — Type-B chain replaced with explicit P5-direct derivation:
-- Original: $b_i \le \ell_{\min} - \rho_{\mathrm{res}}$ via P10 + implicit "$U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion + (P0) terminal-death.
+- Original: $b_i \le \ell_{\min} - \rho_{\mathrm{res}}$ via P10 + implicit "$U\vert _{X_{\mathrm{bg}}} = R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$" assertion + (P0) terminal-death.
 - Post-R2: $b_i \le \lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ via P5 directly; $\ell_i = b_i - d_i \le b_i$ since $d_i \ge 0$.
 - Removes: implicit assertion (which fails when active decay tails extend into bg via P7); LG-7 dependency; (P0) dependency for the bound.
 - Side effect: $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ replaces $\tau_* = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$.
@@ -5792,7 +5792,7 @@ W5 Day 7 (final day, W5 close ceremony). Single-thread session producing **L1-M 
 
 **Theorem L-M (Soft-Count Corollary)**: Under T-L1-F's $(P0)$–$(P11)$ + $\phi \in \Phi_{\mathrm{res}}(\ell_{\min}, \tau)$ + $\tau < \tau_* := \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$:
 
-$$|K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)| \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}} + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon$$
+$$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}} + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon$$
 
 with three per-family corollaries — $\phi_{\mathrm{hard}}$ EXACT, $\phi_{\mathrm{logistic}}^{s\ge 50}$ bound $\le 3e^{-s\tau}\cdot K_{\mathrm{act}}^\varepsilon$, $\phi_{\mathrm{shift\text{-}sat}}^{\beta\ge 20}$ bound $\le e^{-\beta\tau}\cdot K_{\mathrm{act}}^\varepsilon$.
 
@@ -6156,7 +6156,7 @@ W5 Day 4 PM autonomous-execution batch under user directive "아직 close안하�
 ### Files Added (working/SF — 4 new σ-framework drafts)
 
 - `THEORY/working/SF/sigma_theorem4_higher_order.md` (303 lines, NQ-187): T-σ-Theorem-4 higher-order ε splitting via $D_4$ equivariant polynomial ring. Critical correction: previously-conjectured $\epsilon^{3/2}$ splitting **structurally ruled out** — no integer solution to $2a + 4b = 5$ in the equivariant ring; actual splitting is $O(\epsilon^2)$ via 6th-order equivariant. Cat A target reformulation staged via CV-1.6-candidate refined statement (§10).
-- `THEORY/working/SF/sigma_uniqueness_theorem.md` (~360 lines, NQ-188): σ-class enumeration on $D_4$ free-BC grid. T-σ-Uniqueness candidate (i) finiteness Cat A, (ii) parameter independence Cat B target, (iii) R23 enumeration $|σ\text{-classes}| \in [6, 20]$ Cat A target. BC-188-1 (parameter independence) + BC-188-2 (universality) conjectures registered.
+- `THEORY/working/SF/sigma_uniqueness_theorem.md` (~360 lines, NQ-188): σ-class enumeration on $D_4$ free-BC grid. T-σ-Uniqueness candidate (i) finiteness Cat A, (ii) parameter independence Cat B target, (iii) R23 enumeration $\vert σ\text{-classes}\vert \in [6, 20]$ Cat A target. BC-188-1 (parameter independence) + BC-188-2 (universality) conjectures registered.
 - `THEORY/working/SF/sigma_to_crisp_recovery.md` (~430 lines, NQ-189): σ → crisp K-object recovery 5-step procedure (peak / basin / boundary / irrep / stability). Closes Critic 7-agent verdict §"What's Missing" foundational gap. K-field disjoint-support Cat A (§4.3), single-field F-multi Cat B target (§5), σ-driven $\theta^*$ Cat C (§7.2). Commitment 11 upgraded from declaration to procedurally-specified commitment.
 - `THEORY/working/SF/sigma_topological_invariance.md` (268 lines, NQ-190): σ-tuple decomposition into topological skeleton (preserved under graph homeomorphism) + geometric skeleton (perturbation-sensitive). Cat C topology classification of σ; T-σ-Lemma-1 corollary candidate (§4.1).
 
@@ -6301,7 +6301,7 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
 - **T-σ-Multi-1** (C-0720): Multi-Formation Goldstone-Pair Instability; Cat A pending NQ-242 numerical anchor.
 
 **New sub-statements within T-V5b-T**:
-- (V5b-F-empirical) Cat B target: $\mu \approx C(\beta) \cdot |\partial S|/n$ with $C(\beta=4) \approx 13.2$ (NQ-198a).
+- (V5b-F-empirical) Cat B target: $\mu \approx C(\beta) \cdot \vert \partial S\vert /n$ with $C(\beta=4) \approx 13.2$ (NQ-198a).
 - (V5b-T-zero) Cat A def: $\mu = 0$ exact on translation-invariant graphs sub-spinodal (NQ-198f).
 
 **Status revisions**:
@@ -6531,7 +6531,7 @@ User-requested re-audit ("아직 좀 부족한데 제대로 좀더 재검토해�
 
 1. **T-σ-Lemma-3 (i) IBP identity** (`canonical.md` line 1217 + 1235 erratum): $\mathcal{P}_{\ell=1}[\delta u_x] = -m$ (2D mass) was wrong. Correct value: $-\pi \int_0^\infty u^*(r)\, dr \approx -\pi r_0$ for tanh disk. The W4-04-24 source had a Jacobian error in the polar-Cartesian change of variables (substituted $\cos\theta \cdot r = x$ but kept $dr\, d\theta$ instead of $dx\, dy$). Original wrong value would have given $\rho_{\ell=1} \approx 12 > 1$, violating Cauchy–Schwarz — a sanity check that should have caught it on first pass.
 
-2. **T-σ-Theorem-4 (ii) Hessian eigenvalues** (`canonical.md` line 1287 + 1302 erratum): "$0 < K_1 < K_0$ would-be transverse Goldstone" was wrong. R22 normal-form on $D_4$ with cubic ratio $A_2/A_1 = 4$ gives $K_1 = (A_2/A_1)\lvert W''(c) \rvert = 4|W''(c)| = K_0$ — equal at leading order. Modes are degenerate but irrep-distinct (trivial $[+1]$ vs sign $[-1]$ under residual $\mathbb{Z}_2$). The "would-be Goldstone" framing was incorrect (discrete symmetry breaking has no Goldstone). My ad-hoc partial second-order calculation in `01e` §3 Step 5 had given $\mu_1 < 0$, contradicting Morse-0 — an in-text contradiction I noted but didn't resolve.
+2. **T-σ-Theorem-4 (ii) Hessian eigenvalues** (`canonical.md` line 1287 + 1302 erratum): "$0 < K_1 < K_0$ would-be transverse Goldstone" was wrong. R22 normal-form on $D_4$ with cubic ratio $A_2/A_1 = 4$ gives $K_1 = (A_2/A_1)\lvert W''(c) \rvert = 4\vert W''(c)\vert = K_0$ — equal at leading order. Modes are degenerate but irrep-distinct (trivial $[+1]$ vs sign $[-1]$ under residual $\mathbb{Z}_2$). The "would-be Goldstone" framing was incorrect (discrete symmetry breaking has no Goldstone). My ad-hoc partial second-order calculation in `01e` §3 Step 5 had given $\mu_1 < 0$, contradicting Morse-0 — an in-text contradiction I noted but didn't resolve.
 
 3. **T-σ-Theorem-3 (vi) irrep table** (`canonical.md` line 1248 + 1270 erratum): hand-waved entries "$A_1 \oplus B_1 \oplus E$ or $E \oplus E$" for off-diagonal pairs were wrong. Rigorous Schur-orthogonality character calculation gives: both-odd off-diagonal pair → $A_2 \oplus B_2$ (NOT $E \oplus E$); mixed parity → single $E$ (NOT $E \oplus E$); even pair → $A_1 \oplus B_1$. Also $L = 4$ worked example listed $(1, 1)$ singlet as $A_1$ — correct $D_4$ character is $B_2$ for odd $p$.
 
@@ -7306,7 +7306,7 @@ Investigation revealed:
 - Symmetry: τ*(c) + τ*(1-c) = 1
 
 **Explicit Formulas:**
-- **Binary mass-balance:** $\Phi(\tau; a_{\mathrm{cl}}, c) = |(1-c)(1-\sigma(a_{\mathrm{cl}}\tau)) - c(1-\sigma(a_{\mathrm{cl}}(1-\tau)))|$
+- **Binary mass-balance:** $\Phi(\tau; a_{\mathrm{cl}}, c) = \vert (1-c)(1-\sigma(a_{\mathrm{cl}}\tau)) - c(1-\sigma(a_{\mathrm{cl}}(1-\tau)))\vert $
 - **Residual bound:** $\bar{r}_0(\tau) = \Phi(\tau) + O(n^{-1/d})$ (closed-form, computable to arbitrary precision)
 - **Experimental validation:** R² = 0.995 across 68 data points (17 τ × 4 grid sizes)
 

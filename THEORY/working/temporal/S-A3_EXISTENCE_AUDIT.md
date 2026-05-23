@@ -73,8 +73,8 @@ Every target component $C_j^s$ either has at least one matched source (not Birth
 
 The partition is:
 - Continuation: exactly one match on both sides
-- Merge: $|$source$| > 1$ matched to one target
-- Split: one source matched to $|$target$| > 1$
+- Merge: $\vert $source$\vert > 1$ matched to one target
+- Split: one source matched to $\vert $target$\vert > 1$
 - Death: source with no matches
 - Birth: target with no matches
 

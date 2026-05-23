@@ -30,8 +30,8 @@ For each grid point $\lambda^{(i,j,k)} = (i/K, j/K, k/K)$ with $i + j + k = K$:
 
 1. Run `find_formation` (n_restarts = 2 for speed).
 2. Record the **branch identifier** $\mathrm{br}(\lambda) := (n_{\mathrm{core}}, n_{\mathrm{high}})$ where
-   $n_{\mathrm{core}} = |\{i : u^*_i \ge \theta_{\mathrm{core}}\}|$ and
-   $n_{\mathrm{high}} = |\{i : u^*_i > 0.5\}|$.
+   $n_{\mathrm{core}} = \vert \{i : u^*_i \ge \theta_{\mathrm{core}}\}\vert $ and
+   $n_{\mathrm{high}} = \vert \{i : u^*_i > 0.5\}\vert $.
 3. Connect adjacent grid points (six neighbors per interior point in the
    triangular grid). An **edge is a $\Sigma_{\mathrm{branch}}$ crossing**
    iff the two endpoints have different branch identifiers.

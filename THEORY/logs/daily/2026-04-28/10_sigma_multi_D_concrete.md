@@ -13,14 +13,14 @@
 ## §1. Setup (matches `05_*` §1)
 
 - 2D torus $T^2_{20}$, $\lvert X \rvert = 400$.
-- $\mathrm{Aut}(G) = (\mathbb{Z}_{20})^2 \rtimes D_4$, $|\mathrm{Aut}(G)| = 3200$.
+- $\mathrm{Aut}(G) = (\mathbb{Z}_{20})^2 \rtimes D_4$, $\vert \mathrm{Aut}(G)\vert = 3200$.
 - K=2, two disks at $\mathbf{c}_1 = (0, 0), \mathbf{c}_2 = (8, 0)$.
 - Each disk $D_4$-symmetric tanh profile, c=0.10 each.
 - Inter-disk distance $d_{\min} = 8$ (well-separated, regime R1).
 
 The full symmetry group acting on the K=2 configuration space:
 $$\Gamma := \mathrm{Aut}(G) \wr S_2 = (\mathrm{Aut}(G) \times \mathrm{Aut}(G)) \rtimes S_2.$$
-$|\Gamma| = 3200^2 \cdot 2 = 20\,480\,000$.
+$\vert \Gamma\vert = 3200^2 \cdot 2 = 20\,480\,000$.
 
 ---
 
@@ -28,7 +28,7 @@ $|\Gamma| = 3200^2 \cdot 2 = 20\,480\,000$.
 
 ### 2.1 Joint stabilizer (per `05_*` §2.4 + `08_*` corrected)
 
-$G_{\mathbf{u}^*, 12} = D_4 \wr S_2$, $|G_{\mathbf{u}^*, 12}| = 128$.
+$G_{\mathbf{u}^*, 12} = D_4 \wr S_2$, $\vert G_{\mathbf{u}^*, 12}\vert = 128$.
 
 The conjugacy class of this subgroup in $\Gamma$ is the **orbit-type label**:
 $$[\mathbf{u}^*]_{\Gamma} := \big[ \mathrm{Stab}_{\Gamma}(\mathbf{u}^*) \big]_{\mathrm{conj}} = [D_4 \wr S_2]_{\mathrm{conj}, \Gamma}. \tag{2.1}$$
@@ -41,7 +41,7 @@ Subgroups of $\Gamma$ isomorphic to $D_4 \wr S_2$: the conjugacy class is determ
 - Modulo conjugation by $\Gamma$.
 
 For $T^2_{20}$:
-- $D_4$ subgroups of $\mathrm{Aut}(G)$: there are $|\mathrm{Aut}(G)\lvert / \rvert\mathrm{Norm}(D_4)|$ conjugates of any single $D_4$, and modulo conjugation just one conjugacy class ($D_4$ at origin / center / lattice corners are all conjugate by translation).
+- $D_4$ subgroups of $\mathrm{Aut}(G)$: there are $\vert \mathrm{Aut}(G)\lvert / \rvert\mathrm{Norm}(D_4)\vert $ conjugates of any single $D_4$, and modulo conjugation just one conjugacy class ($D_4$ at origin / center / lattice corners are all conjugate by translation).
 - Pairs $(D_4, D_4)$ of subgroups in $\mathrm{Aut}(G)$: parameterized by relative position of their "centers" on $T^2_{20}$.
 - Involutive $\rho$: 180° rotation about midpoint, requires the two centers to be antipodally placed (i.e., separation vector compatible with 180° rotation: must be self-mapped under $-\mathrm{id}$, which on torus means separation $(d_x, d_y)$ with $2 d_x \equiv 0 \mod 20$ AND $2 d_y \equiv 0 \mod 20$, i.e., $d_x \in \{0, 10\}$, $d_y \in \{0, 10\}$).
 

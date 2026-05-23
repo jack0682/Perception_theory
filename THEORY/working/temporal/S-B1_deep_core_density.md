@@ -66,23 +66,23 @@ T-Persist-1(e) (canonical Cat A) bounds $\eta_\mathrm{self}^K$. S-B1 bounds $\rh
 
 **From T-Persist-1(e) §T-Persist-1(e) deep core statement (canonical Cat A):**
 - The interior gap: for $x \in \text{Core}^2$, $\hat{u}(x) \geq \theta_\mathrm{core} + g_\mathrm{int}(x)$ where $g_\mathrm{int}(x) > 0$ by the Interior Gap Lower Bound.
-- The boundary layer: $|\partial\text{Core}| \leq |\{x : d_G(x, \partial\text{Core}) = 1\}|$ — the "thin shell" of one-step boundary nodes.
+- The boundary layer: $\vert \partial\text{Core}\vert \leq \vert \{x : d_G(x, \partial\text{Core}) = 1\}\vert $ — the "thin shell" of one-step boundary nodes.
 
 **Deep-core mass decomposition:**
 $$m = m^\mathrm{deep} + m^\mathrm{boundary}$$
 where $m^\mathrm{boundary} = \sum_{x \in \text{Core} \setminus \text{Core}^2} \hat{u}(x)$.
 
 **Boundary mass bound:**
-Since $\hat{u}(x) \leq 1$ for all $x$: $m^\mathrm{boundary} \leq |\partial_2\text{Core}|$ where $\partial_2\text{Core} = \text{Core} \setminus \text{Core}^2$ (the two-step boundary layer).
+Since $\hat{u}(x) \leq 1$ for all $x$: $m^\mathrm{boundary} \leq \vert \partial_2\text{Core}\vert $ where $\partial_2\text{Core} = \text{Core} \setminus \text{Core}^2$ (the two-step boundary layer).
 
-For a convex set of size $m$ on a 2D grid: $|\partial_2\text{Core}| \leq 2\sqrt{2\pi m}$ (discrete isoperimetric: boundary layer $\approx 2 \times$ perimeter width).
+For a convex set of size $m$ on a 2D grid: $\vert \partial_2\text{Core}\vert \leq 2\sqrt{2\pi m}$ (discrete isoperimetric: boundary layer $\approx 2 \times$ perimeter width).
 
-Actually, from T-Persist-1(e) "Boundary thinness": $\text{Core} \setminus \text{Core}^{\delta \geq 2} = \partial\text{Core}$ (one-step boundary). So $|\partial_2\text{Core}\lvert = \rvert\partial_1\text{Core}|$ (one-step boundary nodes).
+Actually, from T-Persist-1(e) "Boundary thinness": $\text{Core} \setminus \text{Core}^{\delta \geq 2} = \partial\text{Core}$ (one-step boundary). So $\vert \partial_2\text{Core}\lvert = \rvert\partial_1\text{Core}\vert $ (one-step boundary nodes).
 
-For a disk-like core of area $m$ on 2D grid: perimeter $\approx 2\sqrt{\pi m}$, so $|\partial_1\text{Core}| \approx 2\sqrt{\pi m}$.
+For a disk-like core of area $m$ on 2D grid: perimeter $\approx 2\sqrt{\pi m}$, so $\vert \partial_1\text{Core}\vert \approx 2\sqrt{\pi m}$.
 
 **Ratio bound:**
-$$\rho_\mathrm{deep} \geq 1 - \frac{m^\mathrm{boundary}}{m} \geq 1 - \frac{|\partial_1\text{Core}|}{m \cdot \theta_\mathrm{core}/1} \geq 1 - \frac{2\sqrt{\pi m}}{m \cdot \theta_\mathrm{core}} = 1 - \frac{2\sqrt{\pi}}{\sqrt{m} \cdot \theta_\mathrm{core}}.$$
+$$\rho_\mathrm{deep} \geq 1 - \frac{m^\mathrm{boundary}}{m} \geq 1 - \frac{\vert \partial_1\text{Core}\vert}{m \cdot \theta_\mathrm{core}/1} \geq 1 - \frac{2\sqrt{\pi m}}{m \cdot \theta_\mathrm{core}} = 1 - \frac{2\sqrt{\pi}}{\sqrt{m} \cdot \theta_\mathrm{core}}.$$
 
 For $\rho_\mathrm{deep} \geq 0.84$: need $\frac{2\sqrt{\pi}}{\sqrt{m} \cdot 0.7} \leq 0.16$, i.e., $\sqrt{m} \geq \frac{2\sqrt{\pi}}{0.7 \cdot 0.16} \approx \frac{3.54}{0.112} \approx 31.6$, i.e., $m \geq 1000$.
 
@@ -102,24 +102,24 @@ for $x$ deep inside the core (distance $d \geq 1$). So deep-core sites have $\ha
 Boundary sites: $\hat{u}(x)$ varies from $\theta_\mathrm{core} \approx 0.7$ to $\approx 1$ over 1–2 steps.
 
 **Deep-core mass:**
-$$m^\mathrm{deep} = \sum_{x \in \text{Core}^2} \hat{u}(x) \approx |\text{Core}^2| \cdot (1 - \epsilon_\mathrm{int})$$
+$$m^\mathrm{deep} = \sum_{x \in \text{Core}^2} \hat{u}(x) \approx \vert \text{Core}^2\vert \cdot (1 - \epsilon_\mathrm{int})$$
 
 where $\epsilon_\mathrm{int} \approx C_\mathrm{int} e^{-2\sqrt{\beta/(2\alpha)}} \ll 1$ at default parameters ($\beta \gg \alpha$).
 
 **Boundary mass:**
-$$m^\mathrm{boundary} = \sum_{x \in \partial_1\text{Core}} \hat{u}(x) \approx |\partial_1\text{Core}| \cdot \bar u_\partial$$
+$$m^\mathrm{boundary} = \sum_{x \in \partial_1\text{Core}} \hat{u}(x) \approx \vert \partial_1\text{Core}\vert \cdot \bar u_\partial$$
 
 where $\bar u_\partial \in [\theta_\mathrm{core}, 1]$ is the average cohesion on the boundary ring.
 
 **Ratio:**
-$$\rho_\mathrm{deep} \approx \frac{|\text{Core}^2|}{|\text{Core}|} \cdot \frac{1 - \epsilon_\mathrm{int}}{1} \approx 1 - \frac{|\partial_1\text{Core}\lvert }{ \rvert\text{Core}|}.$$
+$$\rho_\mathrm{deep} \approx \frac{\vert \text{Core}^2\vert}{\vert \text{Core}\vert} \cdot \frac{1 - \epsilon_\mathrm{int}}{1} \approx 1 - \frac{\vert \partial_1\text{Core}\lvert }{ \rvert\text{Core}\vert}.$$
 
-The $\rho_\mathrm{deep}$ depends purely on the geometric ratio $|\partial_1\text{Core}\lvert / \rvert\text{Core}|$. For typical SCC formations on 15×15 grid, we need this ratio $\leq 0.16$ (for $\rho_\mathrm{deep} \geq 0.84$).
+The $\rho_\mathrm{deep}$ depends purely on the geometric ratio $\vert \partial_1\text{Core}\lvert / \rvert\text{Core}\vert $. For typical SCC formations on 15×15 grid, we need this ratio $\leq 0.16$ (for $\rho_\mathrm{deep} \geq 0.84$).
 
 **For a circular core of radius $r$ on 2D grid:**
-- $|\text{Core}| = \pi r^2$ (approximately)
-- $|\partial_1\text{Core}| \approx 2\pi r$ (boundary ring of width 1)
-- Ratio: $|\partial_1\text{Core}\lvert / \rvert\text{Core}| \approx 2/r$
+- $\vert \text{Core}\vert = \pi r^2$ (approximately)
+- $\vert \partial_1\text{Core}\vert \approx 2\pi r$ (boundary ring of width 1)
+- Ratio: $\vert \partial_1\text{Core}\lvert / \rvert\text{Core}\vert \approx 2/r$
 
 For ratio $\leq 0.16$: need $r \geq 12.5$, i.e., core area $\geq \pi \cdot 12.5^2 \approx 491$ nodes.
 
@@ -164,14 +164,14 @@ This is confirmed by the Cat B status of Lemma 2 in the lemma table: Lemma 2 is 
 
 ### Route 5: Conditional theorem under HWF (well-formedness) assumptions
 
-**Hypothesis HWF-1 (Deep-core non-degenerate):** Core $C_i^t$ has isoperimetric ratio $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.16$ (a "round enough" formation).
+**Hypothesis HWF-1 (Deep-core non-degenerate):** Core $C_i^t$ has isoperimetric ratio $\vert \partial_1 C_i^t\vert / \lvert C_i^t \rvert \leq 0.16$ (a "round enough" formation).
 
 **Hypothesis HWF-2 (Interior saturation):** For all $x \in C_i^t$ with $d_G(x, \partial C_i^t) \geq 2$: $u_t(x) \geq 0.90$.
 
 **Hypothesis HWF-3 (Boundary regularity):** For $x \in \partial_1 C_i^t$: $u_t(x) \geq \theta_\mathrm{core} = 0.70$.
 
 **Under HWF-1, HWF-2, HWF-3:**
-$$m_i^{t,\mathrm{deep}} = \sum_{x \in C_i^t : d \geq 2} u_t(x) \geq 0.90 \cdot |\text{Core}^2| = 0.90 \cdot (\lvert C_i^t \rvert - |\partial_1 C_i^t|)$$
+$$m_i^{t,\mathrm{deep}} = \sum_{x \in C_i^t : d \geq 2} u_t(x) \geq 0.90 \cdot \vert \text{Core}^2\vert = 0.90 \cdot (\lvert C_i^t \rvert - \vert \partial_1 C_i^t\vert)$$
 $$\geq 0.90 \cdot \lvert C_i^t \rvert \cdot (1 - 0.16) = 0.90 \cdot 0.84 \cdot \lvert C_i^t \rvert.$$
 
 $$m_i^t = \sum_{x \in C_i^t} u_t(x) \leq 1 \cdot \lvert C_i^t \rvert.$$
@@ -184,18 +184,18 @@ Hmm, this gives 0.756, below the 0.84 target. We need sharper bounds.
 $$\rho_\mathrm{deep} = \frac{m_i^{t,\mathrm{deep}}}{m_i^t} \geq \frac{0.90 (1 - 0.16) \lvert C_i^t \rvert}{1.0 \cdot \lvert C_i^t \rvert} = 0.756.$$
 
 For $\rho_\mathrm{deep} \geq 0.84$, we need interior saturation $\geq 1.0$ (i.e., $u(x) = 1$ in deep core) and boundary fraction $\leq 0.16$:
-$$\rho_\mathrm{deep} = \frac{\lvert C_i^t \rvert - |\partial_1 C_i^t|}{\lvert C_i^t \rvert} \geq 1 - 0.16 = 0.84.$$
+$$\rho_\mathrm{deep} = \frac{\lvert C_i^t \rvert - \vert \partial_1 C_i^t\vert}{\lvert C_i^t \rvert} \geq 1 - 0.16 = 0.84.$$
 
-So $\rho_\mathrm{deep} \geq 0.84$ **exactly when HWF-1 holds** ($|\partial_1 C_i^t|/\lvert C_i^t \rvert \leq 0.16$) AND deep-core values are $u(x) = 1$ (phase-transition regime).
+So $\rho_\mathrm{deep} \geq 0.84$ **exactly when HWF-1 holds** ($\vert \partial_1 C_i^t\vert /\lvert C_i^t \rvert \leq 0.16$) AND deep-core values are $u(x) = 1$ (phase-transition regime).
 
 **Theorem S-B1 (Cat B conditional).** *Under:*
-- **(HWF-1)** $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.16$ (isoperimetric ratio bound),
+- **(HWF-1)** $\vert \partial_1 C_i^t\vert / \lvert C_i^t \rvert \leq 0.16$ (isoperimetric ratio bound),
 - **(HWF-2')** $u_t(x) \geq 0.99$ for all $x \in C_i^t$ with $d_G(x, \partial C_i^t) \geq 2$ (near-unit interior),
 - **(HWF-3')** Standard SCC well-formedness: $\beta > 7\alpha$, $m_i^t \geq 25$ (from canonical T-Persist-1(d) Cat C + T8-Core):
 
 $$\rho_\mathrm{deep}(C_i^t) \geq (1 - 0.16) \cdot 0.99 / 1.0 \approx 0.831.$$
 
-*With HWF-1 strengthened to $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.155$ and near-unit interior $u \geq 0.99$: $\rho_\mathrm{deep} \geq 0.84$.*
+*With HWF-1 strengthened to $\vert \partial_1 C_i^t\vert / \lvert C_i^t \rvert \leq 0.155$ and near-unit interior $u \geq 0.99$: $\rho_\mathrm{deep} \geq 0.84$.*
 
 **Status: Cat B conditional** under HWF-1 (tightened) + HWF-2' + standard SCC well-formedness.
 
@@ -218,7 +218,7 @@ The fact that $\Delta_\mathrm{sep} \approx 0.726 > 0$ at $\varepsilon_\mathrm{OT
 
 **Attempt:** Can we construct a legal SCC formation satisfying canonical assumptions but with $\rho_\mathrm{deep} < 0.84$?
 
-**Construction:** Take a thin elongated formation (high aspect ratio). On a 15×15 grid, a 2×10 rectangular core has $\lvert C \rvert = 20$, $|\partial_1 C| = 18$ (almost all boundary!), $\rho_\mathrm{deep} \approx 2/20 = 0.10$.
+**Construction:** Take a thin elongated formation (high aspect ratio). On a 15×15 grid, a 2×10 rectangular core has $\lvert C \rvert = 20$, $\vert \partial_1 C\vert = 18$ (almost all boundary!), $\rho_\mathrm{deep} \approx 2/20 = 0.10$.
 
 But is a 2×10 rectangle a legal SCC single-formation minimizer? With SCC separation energy, thin elongated formations are penalized — the separation energy $\mathcal{E}_\mathrm{sep}$ favors compact round formations. The canonical SCC minimizer is "disk-like" by the morphological constraint $\mathcal{Q}_\mathrm{morph}$.
 
@@ -231,7 +231,7 @@ But is a 2×10 rectangle a legal SCC single-formation minimizer? With SCC separa
 ## 2. Final Classification
 
 **Theorem S-B1 (Cat B conditional).** $\rho_\mathrm{deep}(C_i^t) \geq 0.84$ holds under:
-1. **HWF-1:** $|\partial_1 C_i^t|/\lvert C_i^t \rvert \leq 0.155$ (round formation, isoperimetric bound)
+1. **HWF-1:** $\vert \partial_1 C_i^t\vert /\lvert C_i^t \rvert \leq 0.155$ (round formation, isoperimetric bound)
 2. **HWF-2':** Near-unit interior: $u_t(x) \geq 0.99$ for $x$ in deep core
 3. **SCC well-formedness:** $\beta > 7\alpha$ (canonical H3 condition, T-Persist-1(d) Cat C), core size ≥ 25
 
@@ -284,7 +284,7 @@ The value $0.84$ in the formula is the **observed** $\rho_\mathrm{deep}$ from ex
 **Lemma S-B1-Weak (Cat A).** Under canonical SCC single-formation assumptions with $\lvert C_i^t \rvert \geq 25$ and $\beta > 7\alpha$:
 $$\rho_\mathrm{deep}(C_i^t) \geq \frac{\theta_\mathrm{core}}{n} = \frac{0.7}{225} \approx 0.00311 > \rho_*.$$
 
-*Proof.* H2' (deep core non-emptiness, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives $|\mathrm{Core}^2| \geq 1$. For any $x^* \in \mathrm{Core}^2$: $u(x^*) \geq \theta_\mathrm{core} = 0.7$, so $m^\mathrm{deep} \geq 0.7$. Since $m \leq \lvert C_i^t \rvert \leq n = 225$: $\rho_\mathrm{deep} \geq 0.7/225 > \rho_*$. ∎
+*Proof.* H2' (deep core non-emptiness, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives $\vert \mathrm{Core}^2\vert \geq 1$. For any $x^* \in \mathrm{Core}^2$: $u(x^*) \geq \theta_\mathrm{core} = 0.7$, so $m^\mathrm{deep} \geq 0.7$. Since $m \leq \lvert C_i^t \rvert \leq n = 225$: $\rho_\mathrm{deep} \geq 0.7/225 > \rho_*$. ∎
 
 **Corollary (Cat A):** $\Delta_\mathrm{sep} > 0$ under canonical assumptions. Therefore T-Temporal-Identity (b,d) Cat A is NOT blocked by ρ_deep ≥ 0.84. Remaining blockers: S-A1, S-A3.
 
@@ -309,7 +309,7 @@ $$\rho_\mathrm{sym}(0.2, 25, 1.0) = 1.0 \times (1 - 0.8/5) = 0.84.$$
 
 ### 6.2 New canonical statement: Theorem S-B1-SYM (Cat B)
 
-Under canonical SCC single-formation assumptions with $m = |\mathrm{Core}| \geq 25$,
+Under canonical SCC single-formation assumptions with $m = \vert \mathrm{Core}\vert \geq 25$,
 $\beta > 7\alpha$ (H2' applies), and HWF-1 ($\mathrm{iso\_ratio}(\mathrm{Core}) \leq C_\mathrm{iso}$):
 $$\rho_\mathrm{deep} \geq \theta_\mathrm{core}\!\left(1 - \frac{4\,C_\mathrm{iso}}{\sqrt{m}}\right).$$
 Proof: Theorem 2b (Deep Core Dominance, Cat A) + pointwise core lower bound

@@ -25,7 +25,7 @@ where:
 **The OP-0008-DIST question.** Under perturbation $u \to u + \delta u$, with $\lVert \delta u \rVert_2 \leq \varepsilon$ small, how does $\sigma_\mathrm{rich}$ change?
 
 **Lipschitz target.** Find an explicit constant $L_\sigma$ such that:
-$$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u)\big \rVert_\Sigma \;\leq\; L_\sigma \cdot \lVert \delta u|_C \rVert_2,$$
+$$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u)\big \rVert_\Sigma \;\leq\; L_\sigma \cdot \lVert \delta u\vert _C \rVert_2,$$
 where $\lVert \cdot \rVert_\Sigma$ is a natural product norm on $\mathbb{R}_{\geq 0} \times \mathbb{R}^d \times \mathrm{Sym}^+_d$.
 
 ### §1.2 Why this matters now
@@ -100,11 +100,11 @@ $$\lVert \sin\Theta(V_A, V_{A+E}) \rVert \leq \lVert E \rVert/\delta.$$
 
 ### §3.1 Setup
 
-Fix component $C \subseteq \mathcal{P}$ with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ with $\sum_x u(x) = \sum_x u'(x) = M$ (volume conservation). Set $\delta u = u' - u$ with $\delta u|_{\mathcal{P} \setminus C} = 0$ (perturbation localized in $C$). Let $\varepsilon = \lVert \delta u|_C \rVert_2$.
+Fix component $C \subseteq \mathcal{P}$ with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ with $\sum_x u(x) = \sum_x u'(x) = M$ (volume conservation). Set $\delta u = u' - u$ with $\delta u\vert _{\mathcal{P} \setminus C} = 0$ (perturbation localized in $C$). Let $\varepsilon = \lVert \delta u\vert _C \rVert_2$.
 
 **Mass-positivity assumption (MP).** $m(C; u) = \sum_C u \geq m_\mathrm{min} = \rho_\mathrm{pers} \cdot \lvert C \rvert/4$ (D-ST-3 ensures this for valid PersComp).
 
-**Component-localized perturbation (PL).** $\delta u|_{\mathcal{P} \setminus C} = 0$.
+**Component-localized perturbation (PL).** $\delta u\vert _{\mathcal{P} \setminus C} = 0$.
 
 **Diameter bound (DB).** $\mathrm{diam}_\mathrm{intra}(C) := \max_{x, y \in C} d_G(x, y) \leq D_C$.
 
@@ -138,7 +138,7 @@ $$\lVert \mathcal{J}' - \mathcal{J} \rVert_F \leq \frac{D_C^2 \sqrt{\lvert C \rv
 
 ### §3.3 Lemma 16 statement
 
-**Lemma 16 (σ_rich Lipschitz, Cat B).** *Under (MP) + (PL) + (DB), and for $\varepsilon = \lVert \delta u|_C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$:*
+**Lemma 16 (σ_rich Lipschitz, Cat B).** *Under (MP) + (PL) + (DB), and for $\varepsilon = \lVert \delta u\vert _C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$:*
 $$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big \rVert_\Sigma \;\leq\; L_\sigma\,\varepsilon,$$
 *where $\lVert \cdot \rVert_\Sigma$ is the product norm $(\lvert m \rvert, \lVert \bar x \rVert_2, \lVert \mathcal{J} \rVert_F)$ and:*
 $$L_\sigma = \sqrt{\lvert C \rvert}\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{2 D_C^2}{m_\mathrm{min}}\Big) \;\approx\; \frac{2\sqrt{\lvert C \rvert}\,D_C^2}{m_\mathrm{min}} \quad\text{(dominant term)}.$$
@@ -198,7 +198,7 @@ Trivial: σ_rich is well-defined for any $C$ with $\lvert C \rvert \geq 1$ + $m(
 ### §5.2 Part (b) CONT (continuation)
 
 Under T-Temporal-Identity bijection $\pi$ + Lemma 16:
-$$\sigma_\mathrm{rich}(C_{\pi(i)}^s) = \sigma_\mathrm{rich}(C_i^t) + O(\lVert u_s - u_t|_{C_i} \rVert_2 \cdot L_\sigma).$$
+$$\sigma_\mathrm{rich}(C_{\pi(i)}^s) = \sigma_\mathrm{rich}(C_i^t) + O(\lVert u_s - u_t\vert _{C_i} \rVert_2 \cdot L_\sigma).$$
 
 If transport is small ($\lVert u_s - u_t \rVert_2 \leq \varepsilon_\mathrm{transp}$), σ-inheritance is approximate with quantified error.
 

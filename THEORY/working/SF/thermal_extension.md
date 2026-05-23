@@ -22,7 +22,7 @@ where:
 - $H_{\mathrm{bd}} = 4\alpha L + \beta W''(c) I$ (Prop 1.3a).
 - $H_{\mathrm{cl,sep}} = \lambda_{\mathrm{cl}} H_{\mathrm{cl}} + \lambda_{\mathrm{sep}} H_{\mathrm{sep}}$ (Prop 1.3b).
 - $H_S := \mathrm{Hess}(-S)$ diagonal: $(H_S)_{ii} = 1/[u_i(1-u_i)]$. At $u_{\mathrm{uniform}}$: $(H_S)_{ii} = 1/[c(1-c)]$ **constant**, so $-T H_S = -T/[c(1-c)] \cdot I$ — **a negative diagonal shift**.
-- $H_K$ from $\nabla^2 K_{\mathrm{soft}}$: at $u_{\mathrm{uniform}}$ this vanishes because $K_{\mathrm{soft}}(c\mathbf{1}) = \varphi(0) \cdot (\text{one bar of zero length}) = 0$, and near $u_{\mathrm{uniform}}$ the bar structure is degenerate (all sites at same level). $H_K|_{u_{\mathrm{uniform}}} = 0$ at the uniform configuration itself (vineyard singularity).
+- $H_K$ from $\nabla^2 K_{\mathrm{soft}}$: at $u_{\mathrm{uniform}}$ this vanishes because $K_{\mathrm{soft}}(c\mathbf{1}) = \varphi(0) \cdot (\text{one bar of zero length}) = 0$, and near $u_{\mathrm{uniform}}$ the bar structure is degenerate (all sites at same level). $H_K\vert _{u_{\mathrm{uniform}}} = 0$ at the uniform configuration itself (vineyard singularity).
 
 Hence:
 $$\boxed{\;\mathrm{Hess}\,\mathcal{F}_{C+E}\big\vert_{u_{\mathrm{uniform}}} = H_{\mathrm{bd}}(\beta, \alpha) + H_{\mathrm{cl,sep}}(\alpha, \ldots) - \frac{T}{c(1-c)}\,I\;}.$$
@@ -46,10 +46,10 @@ Negative count is the stated formula. ∎
 
 ### 2.3 T-Uniform-Stab-T recovery
 
-T-Uniform-Stab-T (canonical_sub 2026-04-21 Round 4): $u_{\mathrm{uniform}}$ is a **local min** iff $\mu_k^{\mathrm{bd,thermal}} > 0$ for all $k \geq 2$, which is equivalent to $T > T^\ast_{\mathrm{uniform}} := c(1-c)[\beta|W''(c)| - 4\alpha\lambda_2]$.
+T-Uniform-Stab-T (canonical_sub 2026-04-21 Round 4): $u_{\mathrm{uniform}}$ is a **local min** iff $\mu_k^{\mathrm{bd,thermal}} > 0$ for all $k \geq 2$, which is equivalent to $T > T^\ast_{\mathrm{uniform}} := c(1-c)[\beta\vert W''(c)\vert - 4\alpha\lambda_2]$.
 
 This is the $k=2$ case ($\lambda_2$ is smallest for $k \geq 2$ on connected graph) of Prop 1.3a-thermal. The full Prop 1.3a-thermal generalizes to ALL modes: the $k$-th mode is thermally re-stabilized at
-$$T^\ast_k := c(1-c)[\beta|W''(c)| - 4\alpha\lambda_k],$$
+$$T^\ast_k := c(1-c)[\beta\vert W''(c)\vert - 4\alpha\lambda_k],$$
 with $T^\ast_{\mathrm{uniform}} = T^\ast_2 = \max_k T^\ast_k$.
 
 **Monotonicity.** $T^\ast_k$ is monotone decreasing in $k$ (since $\lambda_k$ increases). The number of unstable modes at $T$ is $N_{\mathrm{unst}}^{\mathrm{bd}}(T) = \#\{k \geq 2 : T^\ast_k > T\}$, non-increasing in $T$.
@@ -133,10 +133,10 @@ The thermal dependence enters entirely through $N_{\mathrm{unst}}^{\mathrm{full}
 ### 4.2 M-1 two-timescale at $T > 0$
 
 `working/E/M1_dissolution.md` §8 two-timescale picture acquires thermal content:
-- $t_{\mathrm{emerge}}(T) \sim 1/|\mu_{\min}(T)|$ where $\mu_{\min}(T) = \min_k \mu_k^{\mathrm{full}}(T)$.
+- $t_{\mathrm{emerge}}(T) \sim 1/\vert \mu_{\min}(T)\vert $ where $\mu_{\min}(T) = \min_k \mu_k^{\mathrm{full}}(T)$.
 - $t_{\mathrm{coarsen}}(T) \sim \exp(\Delta\mathcal{F}(T)/T)$ Kramers.
 
-As $T \to T^\ast_{\mathrm{uniform}}$ from below: $|\mu_{\min}(T)| \to 0$, so $t_{\mathrm{emerge}} \to \infty$. The "emergence" regime disappears into a **critical slowing-down** near $T^\ast_{\mathrm{uniform}}$ (standard Landau-Ginzburg behavior near 2nd-order phase transition).
+As $T \to T^\ast_{\mathrm{uniform}}$ from below: $\vert \mu_{\min}(T)\vert \to 0$, so $t_{\mathrm{emerge}} \to \infty$. The "emergence" regime disappears into a **critical slowing-down** near $T^\ast_{\mathrm{uniform}}$ (standard Landau-Ginzburg behavior near 2nd-order phase transition).
 
 ---
 

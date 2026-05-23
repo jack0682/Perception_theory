@@ -19,7 +19,7 @@ Two-dimensional torus $T^2_{20}$ with $n = 400$ vertices on $\mathbb{Z}_{20}^2$,
 **Aut(G)** = $\mathbb{Z}_{20}^2 \rtimes D_4$ where:
 - Translation subgroup $T \cong \mathbb{Z}_{20}^2$, acts as $(a, b) \cdot (x, y) = (x + a, y + b)$.
 - Point group $D_4$ at origin: 4 rotations $\{e, r_{90}, r_{180}, r_{270}\}$ + 4 reflections $\{\sigma_x, \sigma_y, \sigma_{d_1}, \sigma_{d_2}\}$.
-- $|\mathrm{Aut}(G)| = 400 \times 8 = 3200$.
+- $\vert \mathrm{Aut}(G)\vert = 400 \times 8 = 3200$.
 
 ### 1.2 K=2 Configuration
 
@@ -28,7 +28,7 @@ Two identical tanh-disk profiles, placed symmetrically along the x-axis:
 - **Disk 2**: $u^{(2)*}$ centered at $\mathbf{c}_2 = (8, 0)$, identical profile structure.
 - $r_0 = \sqrt{c L^2 / \pi}$ with $c = 0.10$, $L = 20$ → $r_0 \approx 3.57$ (each disk radius ≈ 3.57 lattice units).
 - $\beta_{\mathrm{bd}} = 4.0$ → $\xi_0 = 1/\sqrt{\beta} = 0.5$ → super-lattice regime $\zeta = 0.5$ ≥ $\zeta_*(2D) \approx 0.35$ (per `02_NQ174_zeta_star_results.md` §3 a priori).
-- Inter-disk distance $d_{\min} = 8$ (well-separated per CBL hypothesis (WI): $\lvert O_{12} \rvert / \min |\mathrm{Core}| \ll 0.2$ since disk supports of radius ~3.57 don't overlap at separation 8).
+- Inter-disk distance $d_{\min} = 8$ (well-separated per CBL hypothesis (WI): $\lvert O_{12} \rvert / \min \vert \mathrm{Core}\vert \ll 0.2$ since disk supports of radius ~3.57 don't overlap at separation 8).
 
 ### 1.3 K=2 Joint Field
 
@@ -178,7 +178,7 @@ where:
 
 For σ_multi^(A) cross-block σ_jk, each entry's irrep label is now an element of $\mathrm{Irr}(D_4 \wr S_2)$ — labeled by **pairs** $([\rho], \pm)$ where $[\rho] \in \mathrm{Irr}(D_4)$ and $\pm$ indicates symmetric/antisymmetric under swap.
 
-Total: $|\mathrm{Irr}(D_4)| \times 2 = 5 \times 2 = 10$ irrep labels for σ_jk.
+Total: $\vert \mathrm{Irr}(D_4)\vert \times 2 = 5 \times 2 = 10$ irrep labels for σ_jk.
 
 This is a **canonical extension** of Commitment 14: σ_jk uses irreps of $D_4 \wr S_2$ instead of $D_4$.
 
@@ -217,8 +217,8 @@ $$U^* H_{\mathrm{joint}} U = \bigoplus_{[\rho]} \big( (H_{11}^{[\rho]} + \lambda
 Each $(H_{11}^{[\rho]} \pm \lambda_{\mathrm{rep}} I)$ block has dim $m_{[\rho]} \dim[\rho]$.
 
 **Eigenvalues per irrep sector $([\rho], \pm)$**:
-$$\mathrm{spec}(H_{\mathrm{joint}})|_{([\rho], +)} = \{\mu_k(H_{11}^{[\rho]}) + \lambda_{\mathrm{rep}}\}_{k=1}^{m_{[\rho]} \dim[\rho]},$$
-$$\mathrm{spec}(H_{\mathrm{joint}})|_{([\rho], -)} = \{\mu_k(H_{11}^{[\rho]}) - \lambda_{\mathrm{rep}}\}_{k=1}^{m_{[\rho]} \dim[\rho]}.$$
+$$\mathrm{spec}(H_{\mathrm{joint}})\vert _{([\rho], +)} = \{\mu_k(H_{11}^{[\rho]}) + \lambda_{\mathrm{rep}}\}_{k=1}^{m_{[\rho]} \dim[\rho]},$$
+$$\mathrm{spec}(H_{\mathrm{joint}})\vert _{([\rho], -)} = \{\mu_k(H_{11}^{[\rho]}) - \lambda_{\mathrm{rep}}\}_{k=1}^{m_{[\rho]} \dim[\rho]}.$$
 
 This is the **explicit closed-form computation** that `multi_formation_sigma.md` §5.1 Lemma 5.1 Step 2 was missing.
 
@@ -241,7 +241,7 @@ The cross-eigenvector for $([\rho], \pm)$ sector at index $k$ is:
 $$\phi_k^{[\rho], \pm} = \frac{1}{\sqrt{2}} (\phi_k^{[\rho]}, \pm \rho \phi_k^{[\rho]}) \in V_1 \oplus V_2,$$
 where $\phi_k^{[\rho]}$ is the $k$-th eigenvector of $H_{11}^{[\rho]}$.
 
-Per Definition 5.1(b), nodal count $n_k^{[\rho], \pm} = (\mathcal{N}(\phi_k^{[\rho], \pm}|_1), \mathcal{N}(\phi_k^{[\rho], \pm}|_2))$ — pair of integers.
+Per Definition 5.1(b), nodal count $n_k^{[\rho], \pm} = (\mathcal{N}(\phi_k^{[\rho], \pm}\vert _1), \mathcal{N}(\phi_k^{[\rho], \pm}\vert _2))$ — pair of integers.
 
 For the symmetric sector: both restrictions are $\phi_k^{[\rho]}$ (up to $\rho$ translation), same nodal structure → $n_k^{[\rho], +} = (\mathcal{N}(\phi_k^{[\rho]}), \mathcal{N}(\phi_k^{[\rho]}))$.
 
@@ -275,7 +275,7 @@ This **prediction is testable** by Day 3 K=2 baseline numerical (`g3_baseline_k2
 
 Per canonical T-V5b-T-(b), super-lattice ($\zeta = 0.5$) on 2D torus has **2-fold Goldstone** (translation x + y, both in irrep $E$ of $D_4$). Eigenvalue $\mu_{\mathrm{Gold}} \approx 0$ (continuous translation symmetry approximately preserved on translation-invariant graphs).
 
-Per W4-04-26 NQ-170c numerical: at $\zeta = 0.5$ on $T^2_{20}$, mean Goldstone overlap = 0.968 (super-lattice). Eigenvalue typically $|\mu_{\mathrm{Gold}}| < 10^{-2}$.
+Per W4-04-26 NQ-170c numerical: at $\zeta = 0.5$ on $T^2_{20}$, mean Goldstone overlap = 0.968 (super-lattice). Eigenvalue typically $\vert \mu_{\mathrm{Gold}}\vert < 10^{-2}$.
 
 For this prediction, take $\mu_{\mathrm{Gold}} \approx 5 \times 10^{-3}$ (within typical numerical precision).
 
@@ -297,7 +297,7 @@ For $\lambda_{\mathrm{rep}} \in \{0.01, 0.1, 1.0\}$ (per `g3_baseline_k2_sigma.p
 - **Sym Goldstone-pair**: both formations translate together (in-phase). Energy cost $\sim \mu_{\mathrm{Gold}} + \lambda_{\mathrm{rep}}$ — coupling tries to keep formations apart, in-phase translation maintains separation.
 - **Antisym Goldstone-pair**: formations translate oppositely (out-of-phase). Energy cost $\sim \mu_{\mathrm{Gold}} - \lambda_{\mathrm{rep}}$ — coupling DRIVES out-of-phase motion (formations "want" to repel further).
 
-The antisym mode being unstable for $\lambda_{\mathrm{rep}} > \mu_{\mathrm{Gold}}$ means the K=2 minimizer is **dynamically meta-stable** under K-field gradient flow: any infinitesimal antisym perturbation grows exponentially (ratio $|\lambda|$). The **K=2 minimizer is a saddle point** for $\lambda_{\mathrm{rep}} > \mu_{\mathrm{Gold}}$.
+The antisym mode being unstable for $\lambda_{\mathrm{rep}} > \mu_{\mathrm{Gold}}$ means the K=2 minimizer is **dynamically meta-stable** under K-field gradient flow: any infinitesimal antisym perturbation grows exponentially (ratio $\vert \lambda\vert $). The **K=2 minimizer is a saddle point** for $\lambda_{\mathrm{rep}} > \mu_{\mathrm{Gold}}$.
 
 This recovers and refines canonical T-Persist-K-Sep / T-Persist-K-Weak conclusion: K=2 stability requires $\mu_{\mathrm{joint}} > 0$, which per Weyl bound requires $\min_k \mu_k > (K-1) \lambda_{\mathrm{rep}}$. With Goldstone $\mu_k = \mu_{\mathrm{Gold}} \approx 0$, **stability fails for any $\lambda_{\mathrm{rep}} > 0$** — **this is the Goldstone instability of multi-formation under repulsive coupling**.
 

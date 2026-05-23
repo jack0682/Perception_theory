@@ -92,7 +92,7 @@ The post-R2 $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\math
 > ***(Erratum, W6 D1 late re-review per `op_resolution.md` §9.7 + §13.6)***: An earlier draft of this paragraph claimed "$\rho_{\mathrm{bg}} \ge \rho_{\mathrm{res}}$ in general, so $\tau_*^{\mathrm{post-R2}} \ge \tau_*$ — the post-R2 admissible $\tau$ range is at least as wide as the pre-repair range." **This is incorrect.** The relationship is **configuration-dependent**:
 > - $\rho_{\mathrm{bg}}^{\mathrm{actual}} = \ell_{\min} - \lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ (P5 form, restricted to $X_{\mathrm{bg}}$).
 > - $\rho_{\mathrm{res}}^{\mathrm{actual}} = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$ (P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$).
-> - Since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other.
+> - Since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U\vert _{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other.
 >
 > **Corrected reading:** the comparison $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (NQ-G1-1, deferred to NQ-G1-1-ext W7+ for empirical anchor via L1-I extension recording $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately). The post-R2 derivation gains theoretical clarity (P5 direct on $U$, no implicit T-L1-F LG-7 dependency) at potentially the cost of a slightly tighter or wider $\tau$ range depending on configuration. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: the lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint. Net trade-off accepted for canonical promotion (post-R2 derivation more honest about regime structure).
 
@@ -212,7 +212,7 @@ These are questions that G1 closure does *not* answer but became visible during 
 
 ### NQ-G1-4. Per-formation $K_{\mathrm{soft}}^{\phi,(j)}$ vs aggregate $K_{\mathrm{soft}}^\phi(U)$
 
-**Question.** T-L1-M provides $|K_{\mathrm{soft}}^\phi(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)|$ bound at the **aggregate** field level. Per-formation $K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)})$ may also be of interest (e.g., for per-formation persistence diagnostics). Is there a per-formation analog of T-L1-M? Specifically: under $(P0)$–$(P11)$, is $\sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)}) \approx K_{\mathrm{soft}}^\phi(U)$ within some bound?
+**Question.** T-L1-M provides $\vert K_{\mathrm{soft}}^\phi(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert $ bound at the **aggregate** field level. Per-formation $K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)})$ may also be of interest (e.g., for per-formation persistence diagnostics). Is there a per-formation analog of T-L1-M? Specifically: under $(P0)$–$(P11)$, is $\sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{(j)}) \approx K_{\mathrm{soft}}^\phi(U)$ within some bound?
 
 **Severity.** Low-Medium. Connects to OP-0009-F (per-formation F vs aggregate F bridge).
 
@@ -230,11 +230,11 @@ These are questions that G1 closure does *not* answer but became visible during 
 
 ### NQ-G1-6. T-L1-M extension to perturbation analysis (NQ-L1M-5 carry-over)
 
-**Question.** T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$? This extends T-L1-M to perturbation analysis. (Was NQ-L1M-5 in W5 D7; preserved.)
+**Question.** T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $\vert K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)\vert $ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$? This extends T-L1-M to perturbation analysis. (Was NQ-L1M-5 in W5 D7; preserved.)
 
 **Severity.** Medium. Useful for future dynamics analysis.
 
-**Connection.** `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_{K_{\mathrm{soft}}} \le 4 L_\phi n$ via CSEH bottleneck stability. Combined with T-L1-M's static bound, a triangle-inequality argument gives a perturbation bound on $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|$ — non-vacuous only when right side $< 1$.
+**Connection.** `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_{K_{\mathrm{soft}}} \le 4 L_\phi n$ via CSEH bottleneck stability. Combined with T-L1-M's static bound, a triangle-inequality argument gives a perturbation bound on $\vert K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)\vert $ — non-vacuous only when right side $< 1$.
 
 ---
 

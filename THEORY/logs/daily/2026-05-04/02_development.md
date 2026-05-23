@@ -46,7 +46,7 @@ and σ(-s ℓ_min) ≥ 0, we have φ(ℓ) ≤ 1. Hence F1 is satisfied: φ(ℓ) 
 Type-N bar $i$ of $\mathrm{Dgm}_0^{\sup}(U;G_j^r)$ (subdominant local maximum within active neighborhood $N_j^r$) is matched via CSEH bottleneck stability to a bar of $\mathrm{Dgm}_0^{\sup}(u^{(j)};G_j^r)$ under perturbation $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ (P9). The L-M draft uses:
 
 $$
-\bigl|\ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)\bigr| \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}, \tag{F2}
+\bigl\vert \ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)\bigr\vert \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}, \tag{F2}
 $$
 
 with the factor 2 arising from "both birth and death of a single bar potentially shifting under bottleneck-stability matching." R-1 asks whether this factor 2 is sharp or expandable to factor 1 via terminal-death convention $(P0)$.
@@ -56,18 +56,18 @@ with the factor 2 arising from "both birth and death of a single bar potentially
 Under terminal-death convention $(P0)$, **terminal** matched bars have $d_i = d_{\sigma(i)} = 0$, so
 
 $$
-|\ell_i - \ell_{\sigma(i)}| = |b_i - b_{\sigma(i)}| \le \rho_{\mathrm{pert}}/2 \quad (\text{factor } 1, \text{ for terminal pairs}). \tag{T}
+\vert \ell_i - \ell_{\sigma(i)}\vert = \vert b_i - b_{\sigma(i)}\vert \le \rho_{\mathrm{pert}}/2 \quad (\text{factor } 1, \text{ for terminal pairs}). \tag{T}
 $$
 
 But Type-N bars are **NOT terminal**. Specifically: a subdominant local maximum at vertex $v \in N_j^r \setminus \{q_j^U\}$ births a $H_0$ component at level $U(v) < U(q_j^U) = b_{\mathrm{primary}}$. As the descending superlevel sweep continues, this component eventually merges with the slot-primary component (the one born at $q_j^U$) at some saddle vertex $w \in N_j^r$ (by P3 disjointness of $N_j^r \cap N_k^r$, the merge cannot escape $N_j^r$; by connectedness of $N_j^r$, the merge must occur within $N_j^r$). The death of the Type-N bar is $d_i = U(w) > 0$ — finite, not terminal.
 
-The same analysis on $u^{(j)}|_{G_j^r}$: subdominant local maxima of $u^{(j)}$ produce merge bars on $G_j^r$, with finite death at intra-slot saddle levels.
+The same analysis on $u^{(j)}\vert _{G_j^r}$: subdominant local maxima of $u^{(j)}$ produce merge bars on $G_j^r$, with finite death at intra-slot saddle levels.
 
-So the matched bars in CSEH applied to $(U|_{G_j^r}, u^{(j)}|_{G_j^r})$ for the Type-N case have $d_i, d_{\sigma(i)} > 0$ in **both** diagrams. Condition (T) fails. The factor-1 sharpening is **structurally inapplicable**.
+So the matched bars in CSEH applied to $(U\vert _{G_j^r}, u^{(j)}\vert _{G_j^r})$ for the Type-N case have $d_i, d_{\sigma(i)} > 0$ in **both** diagrams. Condition (T) fails. The factor-1 sharpening is **structurally inapplicable**.
 
 ### §2.3 Explicit perturbation realizing the factor-2 bound (sharpness verification)
 
-To show that (F2) is sharp under L1-J, construct an admissible perturbation $R_j$ (satisfying $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ per P9) such that $|\ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)| = \rho_{\mathrm{pert}}$ exactly.
+To show that (F2) is sharp under L1-J, construct an admissible perturbation $R_j$ (satisfying $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ per P9) such that $\vert \ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)\vert = \rho_{\mathrm{pert}}$ exactly.
 
 **Construction.** Let $i$ be a Type-N bar of $\mathrm{Dgm}_0^{\sup}(u^{(j)};G_j^r)$ with birth at vertex $v$ and death at saddle vertex $w$ (both in $N_j^r$). Define $R_j$ by:
 - $R_j(v) = +\rho_{\mathrm{pert}}/2$.
@@ -88,7 +88,7 @@ $$
 \ell_i^U = U(v) - U(w) = \bigl(u^{(j)}(v) + \rho_{\mathrm{pert}}/2\bigr) - \bigl(u^{(j)}(w) - \rho_{\mathrm{pert}}/2\bigr) = \ell_i^{u^{(j)}} + \rho_{\mathrm{pert}}.
 $$
 
-So $|\ell_i^U - \ell_i^{u^{(j)}}| = \rho_{\mathrm{pert}}$ exactly — **the factor-2 bound is achieved**.
+So $\vert \ell_i^U - \ell_i^{u^{(j)}}\vert = \rho_{\mathrm{pert}}$ exactly — **the factor-2 bound is achieved**.
 
 ### §2.4 Sharpness verdict
 
@@ -143,7 +143,7 @@ sufficient for the conclusion; the stronger P5 bound only tightens the constant.
 
 ### §3.2 Identified problems
 
-1. The assertion "$U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" is **not quite right**. Active fields $u^{(j)}$ can extend (via decay-to-cut, P7) into the background region. The aggregate $U = \sum_j u^{(j)} + R_{\mathrm{inact}}$ on $X_{\mathrm{bg}}$ includes both the inactive residual and small contributions from active-slot decay tails.
+1. The assertion "$U\vert _{X_{\mathrm{bg}}} = R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$" is **not quite right**. Active fields $u^{(j)}$ can extend (via decay-to-cut, P7) into the background region. The aggregate $U = \sum_j u^{(j)} + R_{\mathrm{inact}}$ on $X_{\mathrm{bg}}$ includes both the inactive residual and small contributions from active-slot decay tails.
 2. The claim "by P0 the death is $d_i = 0$" implicitly assumes Type-B bars are terminal under $(P0)$. But Type-B bars may merge with active-slot components as the descending superlevel sweep crosses through transition regions; whether they are "terminal" under $(P0)$ depends on the specific structure.
 3. The chain implicitly relies on T-L1-F's proof structure (LG-7 coverage) to establish the "Type-B as background" classification, rather than re-deriving it within L-M-2's own scope.
 
@@ -169,7 +169,7 @@ $$
 
 For $\tau < \rho_{\mathrm{bg}}$: $\ell_i \le \ell_{\min} - \rho_{\mathrm{bg}} < \ell_{\min} - \tau$, so $i \in I_{\mathrm{sub}} \not\subseteq I_{\mathrm{edge}}$.
 
-**No reliance on P0 terminal-death convention; no implicit T-L1-F proof structure dependency; no implicit "$U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion.**
+**No reliance on P0 terminal-death convention; no implicit T-L1-F proof structure dependency; no implicit "$U\vert _{X_{\mathrm{bg}}} = R_{\mathrm{inact}}\vert _{X_{\mathrm{bg}}}$" assertion.**
 
 ### §3.4 Implication for $\tau_*$
 
@@ -231,7 +231,7 @@ This is a **substantive change** (not just wording) — it affects the admissibl
 
 L-M draft §5.7 item 3:
 
-> **The terminal-death convention's role for Type-N.** §5.4 implicitly assumed Type-N bars also use terminal death. This is correct under P0 (which is global), but the argument should make this explicit: the comparison between $U|_{G_j^r}$ and $u^{(j)}|_{G_j^r}$ both use terminal death on $G_j^r$, giving consistent diagram-comparisons.
+> **The terminal-death convention's role for Type-N.** §5.4 implicitly assumed Type-N bars also use terminal death. This is correct under P0 (which is global), but the argument should make this explicit: the comparison between $U\vert _{G_j^r}$ and $u^{(j)}\vert _{G_j^r}$ both use terminal death on $G_j^r$, giving consistent diagram-comparisons.
 
 The flag here is that §5.4's bottleneck-stability argument doesn't make explicit how the terminal-death convention applies to Type-N bars. R-1 closure (§2 above) clarifies: **Type-N bars are intra-slot merge bars, not terminal**. The §5.4 argument works because bottleneck stability between two diagrams with consistent (P0) global death convention is well-defined; the factor 2 comes from the standard CSEH bound + non-terminality of Type-N bars (so factor-1 sharpening is unavailable).
 
@@ -313,7 +313,7 @@ $$
 
 $$
 \boxed{
-\bigl|K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr| \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}}(U; \tau) + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u),
+\bigl\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr\vert \le \varepsilon_{\mathrm{sub}}^\phi(\tau) \cdot N_{\mathrm{sub}}(U; \tau) + \varepsilon_{\mathrm{dom}}^\phi(\tau) \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u),
 } \tag{L-M post-R}
 $$
 
@@ -322,7 +322,7 @@ where the structural pair $(\varepsilon_{\mathrm{sub}}^\phi, \varepsilon_{\mathr
 ### §6.2 Proof (post-repair, Cat A conditional)
 
 The proof composition is:
-- L-M-1 (envelope-pure inequality, §3 of L-M draft): $|K_{\mathrm{soft}}^\phi - K_{\mathrm{bar}}^{\ell_{\min}}| \le \rho_{\mathrm{sub}} + \rho_{\mathrm{edge}}^\phi + \rho_\phi$. **Cat A absolute** (no regime hypothesis used).
+- L-M-1 (envelope-pure inequality, §3 of L-M draft): $\vert K_{\mathrm{soft}}^\phi - K_{\mathrm{bar}}^{\ell_{\min}}\vert \le \rho_{\mathrm{sub}} + \rho_{\mathrm{edge}}^\phi + \rho_\phi$. **Cat A absolute** (no regime hypothesis used).
 - L-M-2 post-repair (§5 above): under $(P0)$–$(P11) + \tau < \tau_*^{\mathrm{post-R2}}$, $N_{\mathrm{edge}} = 0$ ⇒ $\rho_{\mathrm{edge}}^\phi = 0$.
 - L-M-Sub + L-M-Dom (§4 of L-M draft): $\rho_{\mathrm{sub}} \le \varepsilon_{\mathrm{sub}}^\phi N_{\mathrm{sub}}$ + $\rho_\phi \le \varepsilon_{\mathrm{dom}}^\phi K_{\mathrm{act}}^\varepsilon$ (using $N_{\mathrm{dom}} = K_{\mathrm{act}}^\varepsilon$ via T-L1-F bijection $\mathcal A_{\mathrm{bar}}$).
 - T-L1-F substitution: $K_{\mathrm{bar}}^{\ell_{\min}}(U(\mathbf u)) = K_{\mathrm{act}}^\varepsilon(\mathbf u)$.
@@ -357,7 +357,7 @@ $$
 
 **Statement (post-R2):** For $\phi = \phi_{\mathrm{logistic}}^s$, $\tau \in (0, \tau_*^{\mathrm{post-R2}})$, $s \ge 50$:
 $$
-\bigl|K_{\mathrm{soft}}^{\phi_{\mathrm{logistic}}^s}(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr| \le e^{-s\tau} \cdot N_{\mathrm{sub}}(U; \tau) + 2 e^{-s\tau} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).
+\bigl\vert K_{\mathrm{soft}}^{\phi_{\mathrm{logistic}}^s}(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr\vert \le e^{-s\tau} \cdot N_{\mathrm{sub}}(U; \tau) + 2 e^{-s\tau} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).
 $$
 
 **Status:** **Cat A conditional under $(P0)$–$(P11) + \tau < \tau_*^{\mathrm{post-R2}}$ + $s \ge 50$**. Inherits Theorem L-M (post-repair).
@@ -366,7 +366,7 @@ $$
 
 **Statement (post-R2):** For $\phi = \phi_{\mathrm{shift\text{-}sat}}^\beta$, $\tau \in (0, \tau_*^{\mathrm{post-R2}})$, $\beta \ge 20$:
 $$
-\bigl|K_{\mathrm{soft}}^{\phi_{\mathrm{shift\text{-}sat}}^\beta}(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr| \le e^{-\beta\tau} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).
+\bigl\vert K_{\mathrm{soft}}^{\phi_{\mathrm{shift\text{-}sat}}^\beta}(U) - K_{\mathrm{act}}^\varepsilon(\mathbf u)\bigr\vert \le e^{-\beta\tau} \cdot K_{\mathrm{act}}^\varepsilon(\mathbf u).
 $$
 
 (Note: $N_{\mathrm{sub}}$ term vanishes since $\varepsilon_{\mathrm{sub}}^{\phi_{\mathrm{shift\text{-}sat}}^\beta} = 0$ — Phi-3d is identically zero on $[0, \ell_{\min}]$.)

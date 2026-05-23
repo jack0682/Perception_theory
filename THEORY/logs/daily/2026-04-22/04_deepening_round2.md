@@ -30,7 +30,7 @@ After the main session (morning), 7 residuals remained (`99_summary.md` §7):
 ### 2.1 Prop 1.3b (d) explicit $H_{\mathrm{sep}}$ — CLOSED Cat A
 
 **Resolution.** `working/SF/mode_count.md` §2 updated with explicit closed form:
-$$H_{\mathrm{sep}}|_{u_{\mathrm{uniform}}} = -\gamma_D(P + P^\top) - c\gamma_D''(P^\top P),$$
+$$H_{\mathrm{sep}}\vert _{u_{\mathrm{uniform}}} = -\gamma_D(P + P^\top) - c\gamma_D''(P^\top P),$$
 where $\gamma_D = d_0(1-d_0)\kappa_D$, $\gamma_D'' = d_0(1-d_0)(1-2d_0)\kappa_D^2$, $\kappa_D = a_D(1+\lambda_D)$, $d_0 = \sigma(c\kappa_D - \delta_D)$.
 
 Four-step derivation (mode_count.md §2.2 "Derivation of (d)") with each step elementary.
@@ -40,7 +40,7 @@ Four-step derivation (mode_count.md §2.2 "Derivation of (d)") with each step el
 ### 2.2 Prop 1.3b fine-spectrum universality — CLOSED Cat A (structural)
 
 **Resolution.** At canonical symmetric defaults ($c = 1/2$, $\tau_D = 0$, $\lambda_D = 1$): $d_0 = 1/2$ so $\gamma_D'' = 0$. Simplification:
-$$H_{\mathrm{sep}}|_{u_{\mathrm{uniform}}}^{\text{canonical}} = -\gamma_D(P + P^\top).$$
+$$H_{\mathrm{sep}}\vert _{u_{\mathrm{uniform}}}^{\text{canonical}} = -\gamma_D(P + P^\top).$$
 
 On regular graph (commuting $P$ and $L$), eigenvalues diagonalize in Laplacian basis:
 $\nu_k^{\mathrm{sep}} = -2\gamma_D p_k = -2\gamma_D(1 - \lambda_k^L/d)$.
@@ -67,7 +67,7 @@ Measured $H_{\mathrm{cl,sep}}$ negative count at 64×64 canonical: 1641 (Round 1
 - Definition of $\mathcal{M}_1$ (K=1 minimizers modulo Aut(G)).
 - Equivariant Crandall-Rabinowitz: first Fiedler pitchfork on 2D grid yields **axis-aligned vs diagonal orbits** via $D_4$ isotropy analysis. **Cat A** (reuses Sattinger 1979 + T-Birth-Parametric).
 - Selection of axis vs diagonal at cubic order: **sketched Cat C** ($\Phi_4$ coefficient computation carry).
-- Mode cascade $|\mathcal{M}_1(\beta)|$: sketched Cat B.
+- Mode cascade $\vert \mathcal{M}_1(\beta)\vert $: sketched Cat B.
 
 G-D was explicitly scoped out for audit in Round 15; now has **first-step structural framework**. Full computation (Golubitsky-Stewart cubic-coefficient) still post-Stage-1.
 

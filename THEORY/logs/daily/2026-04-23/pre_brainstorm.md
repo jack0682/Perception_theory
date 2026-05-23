@@ -38,8 +38,8 @@ $$f(\beta) = \sigma(\kappa(\beta - \beta^*)) = \frac{1}{1 + e^{-\kappa(\beta - \
 
 - Bounded $\in [0, 1]$
 - Smooth S-curve
-- **가설 (H-log-2)**: Transition probability $P(K=k+1 | \beta)$ at protocol-bistable region is logistic:
-$$P(\text{escape to } k+1 | \beta) = \sigma\!\left(\kappa(\beta - \beta_{K \to K+1}^*)\right)$$
+- **가설 (H-log-2)**: Transition probability $P(K=k+1 \vert \beta)$ at protocol-bistable region is logistic:
+$$P(\text{escape to } k+1 \vert \beta) = \sigma\!\left(\kappa(\beta - \beta_{K \to K+1}^*)\right)$$
 - $\kappa$ sharpness = function of noise $\sigma$ and basin geometry
 
 #### C. Tanh with asymptotes — **bounded with saturation**
@@ -63,7 +63,7 @@ $$f(\beta) = H(\beta - \beta^*)$$
 $$P_k(\beta) \propto e^{-E_k^*(\beta)/T_{\mathrm{eff}}}$$
 
 - **가설 (H-softmax-1)**: 유한 noise에서 protocol이 bistable region (selector transition 근처)에 있으면, basin $k$ 선택 probability가 **effective thermal softmax**:
-$$P_\pi(\widehat K = k | \beta) = \frac{e^{-E_k^*(\beta)/T_{\mathrm{eff}}(\pi, \sigma)}}{\sum_j e^{-E_j^*(\beta)/T_{\mathrm{eff}}(\pi, \sigma)}}$$
+$$P_\pi(\widehat K = k \vert \beta) = \frac{e^{-E_k^*(\beta)/T_{\mathrm{eff}}(\pi, \sigma)}}{\sum_j e^{-E_j^*(\beta)/T_{\mathrm{eff}}(\pi, \sigma)}}$$
 - Noise $\sigma \to 0$에서 deterministic 극한 (Heaviside); $\sigma$ 증가하면 softmax spread 증가
 - **R20 β=9 range 1-7 bistable**은 이 framework의 empirical signature일 수 있음 — 단, V7 P1에서 basic softmax는 refuted, more careful formulation 필요
 
@@ -250,7 +250,7 @@ $$\tau_{k \to k'} = \tau_0 \cdot e^{\Delta\mathcal{F}_{kk'}/T}$$
 ### 4.5 Stochastic softmax formalization
 
 각 β에서 basin $k$ 선택 확률:
-$$P_\pi(\widehat K = k | \beta) = \frac{e^{-E_k^*(\beta)/T_{\mathrm{eff}}(\pi)}}{\sum_j e^{-E_j^*(\beta)/T_{\mathrm{eff}}(\pi)}}$$
+$$P_\pi(\widehat K = k \vert \beta) = \frac{e^{-E_k^*(\beta)/T_{\mathrm{eff}}(\pi)}}{\sum_j e^{-E_j^*(\beta)/T_{\mathrm{eff}}(\pi)}}$$
 
 - $T_{\mathrm{eff}}(\pi)$ = protocol's effective temperature
 - Fiedler-init at small $\sigma$: $T_{\mathrm{eff}} \to 0$ (deterministic)

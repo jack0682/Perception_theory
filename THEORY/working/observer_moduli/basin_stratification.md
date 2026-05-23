@@ -61,7 +61,7 @@ where $\overline{\nabla V}$ is the quotient gradient (well-defined on the smooth
 
 **At orbifold singular points** (stabilizer $G_\Theta \neq \{e\}$): the flow must be $G_\Theta$-equivariant. The quotient gradient is the $G_\Theta$-invariant component of $\nabla V_{\mathrm{raw}}$ at $\Theta$:
 
-$$(\overline{\nabla V})([\Theta]) = \frac{1}{|G_\Theta|} \sum_{g \in G_\Theta} g \cdot \nabla V_{\mathrm{raw}}(\Theta)$$
+$$(\overline{\nabla V})([\Theta]) = \frac{1}{\vert G_\Theta\vert} \sum_{g \in G_\Theta} g \cdot \nabla V_{\mathrm{raw}}(\Theta)$$
 
 **Classification:** DEFINED (smooth stratum); ASSUMED (orbifold singular stratum, requiring orbifold gradient theory).
 
@@ -88,7 +88,7 @@ A compact set $A \subset \mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is an **att
 
 For an attractor $A_i \subset \mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$, its **basin of attraction** is:
 
-$$\mathcal{B}_i = \left\{ [\Theta] \in \mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} \;\middle|\; \lim_{t \to \infty} d(\Phi_t([\Theta]), A_i) = 0 \right\}$$
+$$\mathcal{B}_i = \left\{ [\Theta] \in \mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} \;\middle\vert \; \lim_{t \to \infty} d(\Phi_t([\Theta]), A_i) = 0 \right\}$$
 
 **Properties (PROVED, conditional on flow regularity):**
 - Basins are open in the complement of basin boundaries.
@@ -120,13 +120,13 @@ $$\mathrm{Type}_i = \bar{P}(A_i) \in \mathcal{P}$$
 
 **Statement.** $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is connected (Prop 6, observer_moduli_space.md). Nevertheless, for a generic admissible landscape $\bar{V} \in \mathcal{V}_{\mathrm{adm}}$, the number of distinct basins satisfies:
 
-$$|\{\mathcal{B}_i\}| \geq 1$$
+$$\vert \{\mathcal{B}_i\}\vert \geq 1$$
 
-and there exist admissible landscapes with $|\{\mathcal{B}_i\}| \geq 2$.
+and there exist admissible landscapes with $\vert \{\mathcal{B}_i\}\vert \geq 2$.
 
 **Proof.**
 
-*(1) At least one basin:* Since $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is compact and $\bar{V}$ is continuous, $\bar{V}$ achieves its minimum on $\mathfrak{M}$. The set of global minimizers is non-empty. By gradient flow compactness, all trajectories converge to the critical set. Hence $|\{\mathcal{B}_i\}| \geq 1$. $\square$
+*(1) At least one basin:* Since $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is compact and $\bar{V}$ is continuous, $\bar{V}$ achieves its minimum on $\mathfrak{M}$. The set of global minimizers is non-empty. By gradient flow compactness, all trajectories converge to the critical set. Hence $\vert \{\mathcal{B}_i\}\vert \geq 1$. $\square$
 
 *(2) At least two basins — construction:* Take $\mathfrak{M}_{\min} \cong \Delta^3$ (K=1 minimal model). Define $\bar{V} : \Delta^3 \to \mathbb{R}$ by:
 
@@ -215,7 +215,7 @@ $$\mathcal{B}_i^{F} = \mathcal{B}_i \cap F_i$$
 
 **Hypothesis BS2 (Basin stability).** [HYPOTHESIZED — registered as OP-OMS-011]
 
-The basin stratification of $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ under $\bar{V}$ is stable under small perturbations of the scene distribution $\mathcal{D}$. Specifically: the number of basins $|\{\mathcal{B}_i\}|$ and their topological types are preserved under $C^0$-small perturbations of $\mathcal{D}$.
+The basin stratification of $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ under $\bar{V}$ is stable under small perturbations of the scene distribution $\mathcal{D}$. Specifically: the number of basins $\vert \{\mathcal{B}_i\}\vert $ and their topological types are preserved under $C^0$-small perturbations of $\mathcal{D}$.
 
 **Evidence for hypothesis:** Structural stability of gradient flows under $C^1$-small perturbations of $V$ (Palis-Smale stability). If the scene distribution changes $V$ continuously, structural stability applies.
 

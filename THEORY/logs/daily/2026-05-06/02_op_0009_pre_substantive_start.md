@@ -97,7 +97,7 @@ These 6 starting points are the W7 D2 Phase 1 reference material. OP-0009-Pre `w
 
 | W8 Day | Task | Output |
 |---|---|---|
-| D1 (Mon) | T-L1-F multi-set lift (unordered active count $|A^\varepsilon|$ = $K_{\mathrm{act}}$) | Extend working file §5 T-L1-F section |
+| D1 (Mon) | T-L1-F multi-set lift (unordered active count $\vert A^\varepsilon\vert $ = $K_{\mathrm{act}}$) | Extend working file §5 T-L1-F section |
 | D6 (Sat) | Canonical §1 amendment proposal final draft (daily-log form for user supervised application) | `THEORY/logs/daily/2026-05-XX/canonical_s1_amendment_proposal.md` |
 
 **Promotion path:** W10 supervised candidate (CV-1.7) or W11-W12 v2.0.

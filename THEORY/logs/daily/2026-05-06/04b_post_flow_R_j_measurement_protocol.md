@@ -10,7 +10,7 @@
 
 ## §1. Sampling Protocol
 
-**Measurement variable:** $\lVert R_j(t) \rVert_\infty = \max_{i \in V} |u^{(j)}(t)_i - u^{(j),\mathrm{ideal}}_i|$ for each active slot $j$.
+**Measurement variable:** $\lVert R_j(t) \rVert_\infty = \max_{i \in V} \vert u^{(j)}(t)_i - u^{(j),\mathrm{ideal}}_i\vert $ for each active slot $j$.
 
 **Sampling schedule:** Every 50 gradient steps, at $t \in \{50, 100, 150, \ldots, 1000\}$ → 20 measurement snapshots per config.
 
@@ -27,7 +27,7 @@ For each of the 960 wq1 configs, compute:
 | Quantity | Formula | Purpose |
 |---|---|---|
 | `max_R_inf` | $\max_{t, j\,\mathrm{active}} \lVert R_j(t) \rVert_\infty$ | Worst-case residual; primary hypothesis test |
-| `avg_R_inf` | $\frac{1}{|\text{active slots}| \cdot 20}\sum_{t,j} \lVert R_j(t) \rVert_\infty$ | Average regime deviation |
+| `avg_R_inf` | $\frac{1}{\vert \text{active slots}\vert \cdot 20}\sum_{t,j} \lVert R_j(t) \rVert_\infty$ | Average regime deviation |
 | `final_R_inf` | $\max_{j\,\mathrm{active}} \lVert R_j(1000) \rVert_\infty$ | Near-convergence residual; stable-regime check |
 | `t_exit_50` | first $t$ s.t. $\max_j \lVert R_j(t) \rVert_\infty > \rho_\mathrm{pert}/2$, or $\infty$ | Regime exit time |
 

@@ -35,7 +35,7 @@ D-ST-3 (canonical §3.11) 기준:
 $$\mathrm{PersComp}(u_t) = \{C_1^t, \ldots, C_{K_t}^t\}$$
 
 - 각 $C_i^t$: $\{x : u_t(x) \geq \rho_\mathrm{pers}\}$의 연결 성분 중 $\pm\tau$ 임계값 섭동에 대해 안정적인 것
-- $K_t = K_\mathrm{act}(u_t) = |\mathrm{PersComp}(u_t)|$: 파생 관측량 (primitive 아님)
+- $K_t = K_\mathrm{act}(u_t) = \vert \mathrm{PersComp}(u_t)\vert $: 파생 관측량 (primitive 아님)
 - $m_i^t = \sum_{x \in C_i^t} u_t(x)$: 성분 $i$의 응집 질량
 
 **출처**: canonical §3.11 (D-ST-3), temporal_identity_sharp_form §2 (A3).

@@ -23,7 +23,7 @@
 
 ### 1.1 Setup
 
-$G$ = free-BC $L \times L$ 2D square grid, vertices $X = \{0, 1, \ldots, L-1\}^2$, $n = L^2$. $\Gamma = \text{Aut}(G) = D_4$ (4 rotations $\{e, r, r^2, r^3\}$ around grid center + 4 reflections $\{s, rs, r^2 s, r^3 s\}$). $|\Gamma| = 8$. Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1 < \lambda_2 \leq \cdots \leq \lambda_n$.
+$G$ = free-BC $L \times L$ 2D square grid, vertices $X = \{0, 1, \ldots, L-1\}^2$, $n = L^2$. $\Gamma = \text{Aut}(G) = D_4$ (4 rotations $\{e, r, r^2, r^3\}$ around grid center + 4 reflections $\{s, rs, r^2 s, r^3 s\}$). $\vert \Gamma\vert = 8$. Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1 < \lambda_2 \leq \cdots \leq \lambda_n$.
 
 Take $u^* = c\mathbf{1}$ with $c \in ((3-\sqrt 3)/6, (3+\sqrt 3)/6)$ (spinodal). $S(u^*) = D_4$ (full stabilizer). $\mathcal{F}(u^*) = 0$ (no local maxima above neighbors when constant).
 
@@ -33,7 +33,7 @@ Take $u^* = c\mathbf{1}$ with $c \in ((3-\sqrt 3)/6, (3+\sqrt 3)/6)$ (spinodal).
 > $$\sigma(c\mathbf{1}) \;=\; \big(0;\; \{(n_k, [\rho_k], \mu_k)\}_{k=2}^{K+1}\big),$$
 > where:
 > - $\mu_k = 4\alpha \lambda_k + \beta W''(c) > 0$ for $k = 2, \ldots, K+1$ (Prop 1.3a, with cutoff $K$ from §2.1 (O3));
-> - $[\rho_k] \in \widehat{D_4} = \{A_1, A_2, B_1, B_2, E\}$ is the irrep of the Laplacian eigenspace $V_k = \ker(L_G - \lambda_k I)|_{\mathbf{1}^\perp}$;
+> - $[\rho_k] \in \widehat{D_4} = \{A_1, A_2, B_1, B_2, E\}$ is the irrep of the Laplacian eigenspace $V_k = \ker(L_G - \lambda_k I)\vert _{\mathbf{1}^\perp}$;
 > - $n_k = \mathcal{N}(\phi_k)$ with $\phi_k$ the (canonical-basis) Laplacian eigenvector.
 >
 > The map $k \mapsto [\rho_k]$ is determined by the standard product structure of grid eigenmodes: $\phi_{(p, q)}(x, y) = N_{p,q} \cos(\pi p x / (L-1)) \cos(\pi q y / (L-1))$ for $(p, q) \in \{0, \ldots, L-1\}^2 \setminus \{(0,0)\}$, with eigenvalue $\lambda_{(p,q)} = 2(1-\cos(\pi p / (L-1))) + 2(1-\cos(\pi q / (L-1)))$.
@@ -176,13 +176,13 @@ $W'''(u) = 12 - 24u$ (from $W(u) = u^2(1-u)^2$, $W'' = 2 - 12u + 12u^2$, $W''' =
 For generic $c \neq 0.5$, perturbation $\delta H = \beta a_\epsilon (12)(2c-1) \text{diag}(\phi_{(1,0)}) = O(\sqrt\epsilon)$.
 
 **Step 5 (Spectral split).** First-order perturbation theory on the degenerate pair $(\phi_{(1,0)}, \phi_{(0,1)})$ at $\mu = 4\alpha + \beta W''(c)$:
-- $\langle \phi_{(1,0)} | \delta H | \phi_{(1,0)} \rangle = \beta a_\epsilon (12)(2c-1) \int \phi_{(1,0)}^3 \, dV$.
+- $\langle \phi_{(1,0)} \vert \delta H \vert \phi_{(1,0)} \rangle = \beta a_\epsilon (12)(2c-1) \int \phi_{(1,0)}^3 \, dV$.
 - $\int \phi_{(1,0)}^3 \, dV = N^3 \int \cos^3(\pi x/(L-1)) \, dx \int dy = N^3 \cdot 0 \cdot L = 0$ (odd integral over symmetric interval).
 - → diagonal element vanishes!
-- $\langle \phi_{(0,1)} | \delta H | \phi_{(0,1)} \rangle = \beta a_\epsilon (12)(2c-1) \int \phi_{(1,0)} \phi_{(0,1)}^2 \, dV = \beta a_\epsilon (12)(2c-1) N^3 \int \cos(\pi x/(L-1)) \, dx \int \cos^2(\pi y/(L-1)) \, dy = 0 \cdot \tfrac{L}{2}$. = 0.
+- $\langle \phi_{(0,1)} \vert \delta H \vert \phi_{(0,1)} \rangle = \beta a_\epsilon (12)(2c-1) \int \phi_{(1,0)} \phi_{(0,1)}^2 \, dV = \beta a_\epsilon (12)(2c-1) N^3 \int \cos(\pi x/(L-1)) \, dx \int \cos^2(\pi y/(L-1)) \, dy = 0 \cdot \tfrac{L}{2}$. = 0.
 - → both diagonal first-order perturbations vanish. Need second-order.
 
-**Step 5'.** Second-order perturbation: $\lambda^{(2)} = -\sum_{k \neq } \frac{|\langle \phi_k | \delta H | \phi_{(1,0)}\rangle|^2}{\mu_k - \mu_{(1,0)}}$. Numerator nonzero for some $k$ (e.g., $k = (3, 0)$ via $\cos^2 \cdot \cos = $ contributions). Net effect: $\lambda_0 = O(\epsilon)$ positive (since the $(\phi_{(1,0)})$ direction is "saturated" by the bifurcation, recovering stability), $\lambda_1$ for $\phi_{(0,1)}$ remains near zero (this is the would-be rotational Goldstone — $D_4$ broken to $\mathbb{Z}_2$, leaving an "incipient" Goldstone in the $\phi_{(0,1)}$ direction).
+**Step 5'.** Second-order perturbation: $\lambda^{(2)} = -\sum_{k \neq } \frac{\vert \langle \phi_k \vert \delta H \vert \phi_{(1,0)}\rangle\vert ^2}{\mu_k - \mu_{(1,0)}}$. Numerator nonzero for some $k$ (e.g., $k = (3, 0)$ via $\cos^2 \cdot \cos = $ contributions). Net effect: $\lambda_0 = O(\epsilon)$ positive (since the $(\phi_{(1,0)})$ direction is "saturated" by the bifurcation, recovering stability), $\lambda_1$ for $\phi_{(0,1)}$ remains near zero (this is the would-be rotational Goldstone — $D_4$ broken to $\mathbb{Z}_2$, leaving an "incipient" Goldstone in the $\phi_{(0,1)}$ direction).
 
 **Step 6 (Irrep labels under $S = \langle s_y \rangle$).**
 - $\phi_{(1,0)}(x, y) = \cos(\pi x/(L-1))$: under $s_y: y \to L-1-y$, invariant (no $y$-dependence). $\to$ trivial irrep $+1$.

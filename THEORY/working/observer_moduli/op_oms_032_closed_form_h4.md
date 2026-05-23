@@ -68,17 +68,17 @@ The **dominant** error source is the optimizer residual, not roundoff. Conservat
 
 A witness $(\lambda^\star, X_t)$ is **INTERVAL_CERTIFIED** iff:
 
-$$|\det\, G_T^{(3 \times 3, \mathrm{numeric})}(\lambda^\star)| \;>\; 10 \times \text{(numerical error budget)} \;=\; 10^{-2}.$$
+$$\vert \det\, G_T^{(3 \times 3, \mathrm{numeric})}(\lambda^\star)\vert \;>\; 10 \times \text{(numerical error budget)} \;=\; 10^{-2}.$$
 
-(The factor 10 is a safety margin; the strict inequality $|\det| > 10^{-3}$ would already be enough.)
+(The factor 10 is a safety margin; the strict inequality $\vert \det\vert > 10^{-3}$ would already be enough.)
 
 ---
 
 ## §4. Application to VP-8 data
 
-From `vp8_gap_c1_rank_witness.json`, the table below shows the **certified-witness subset** (filtered: $|\det| > 0.01$, cond($H_T$) < 200, $H_T \succ 0$):
+From `vp8_gap_c1_rank_witness.json`, the table below shows the **certified-witness subset** (filtered: $\vert \det\vert > 0.01$, cond($H_T$) < 200, $H_T \succ 0$):
 
-| Scene | Label | $\lambda$ | cond($H_T$) | $|\det 3 \times 3$ minor$|$ | Certified? |
+| Scene | Label | $\lambda$ | cond($H_T$) | $\vert \det 3 \times 3$ minor$\vert $ | Certified? |
 |---|---|---|---|---|---|
 | P12_path     | random_4     | (0.10, 0.31, 0.59) | 5.45e+01 | 3.25e-02 | YES |
 | S3_grid6x6   | sep_dominant | (0.15, 0.70, 0.15) | 1.25e+01 | 1.15e-02 | YES |
@@ -89,7 +89,7 @@ From `vp8_gap_c1_rank_witness.json`, the table below shows the **certified-witne
 | asym_K4+tail | sep_dominant | (0.15, 0.70, 0.15) | 1.66e+01 | 6.58e-02 | YES |
 | asym_K4+tail | random_5/6/8 | various             | < 22     | 0.029–0.072 | YES |
 
-(12 certified witnesses total; 34 if the certification threshold is loosened to $|\det| > 10^{-6}$.)
+(12 certified witnesses total; 34 if the certification threshold is loosened to $\vert \det\vert > 10^{-6}$.)
 
 ### The best certified witness.
 
@@ -98,9 +98,9 @@ From `vp8_gap_c1_rank_witness.json`, the table below shows the **certified-witne
 - $\lambda^\star = (\lambda_{cl}, \lambda_{sep}, \lambda_{bd}) = (0.2397, 0.3838, 0.3765)$.
 - $u^*(\lambda^\star)$ at branch $(n_{\mathrm{core}}, n_{\mathrm{high}}) = (7, 11)$ on the 6×6 grid.
 - Projected Hessian $H_T \succ 0$ with cond$(H_T) = 9.46$.
-- Top-3 row 3×3 minor of $G_T$: $|\det| = 0.0845$.
-- IEEE error bound: cond × eps × $|\det| = 9.46 \times 2.2 \times 10^{-16} \times 0.0845 \approx 1.8 \times 10^{-16}$.
-- **Margin: $|\det| / \text{IEEE bound} = 4 \times 10^{13}$**.
+- Top-3 row 3×3 minor of $G_T$: $\vert \det\vert = 0.0845$.
+- IEEE error bound: cond × eps × $\vert \det\vert = 9.46 \times 2.2 \times 10^{-16} \times 0.0845 \approx 1.8 \times 10^{-16}$.
+- **Margin: $\vert \det\vert / \text{IEEE bound} = 4 \times 10^{13}$**.
 - Even with the loose optimizer-residual budget $10^{-3}$: margin $= 0.0845 / 10^{-3} = 84.5$, still well above the threshold.
 
 This single witness is sufficient for (Wit) by Theorem C1.3.
@@ -147,7 +147,7 @@ $$\boxed{\text{OP-OMS-032: CLOSED UNDER CERTIFIED WITNESS.}}$$
 
 **Witness type:** INTERVAL_CERTIFIED.
 
-**Best witness:** S3_grid6x6 / random_8 / $\lambda^\star = (0.2397, 0.3838, 0.3765)$, $|\det 3 \times 3$ minor of $G_T| = 0.0845$, cond$(H_T) = 9.46$, $H_T \succ 0$, margin $4 \times 10^{13}$ above IEEE error bound, margin $84$ above optimizer-residual bound.
+**Best witness:** S3_grid6x6 / random_8 / $\lambda^\star = (0.2397, 0.3838, 0.3765)$, $\vert \det 3 \times 3$ minor of $G_T\vert = 0.0845$, cond$(H_T) = 9.46$, $H_T \succ 0$, margin $4 \times 10^{13}$ above IEEE error bound, margin $84$ above optimizer-residual bound.
 
 **Backup witnesses:** 11 additional certified witnesses across 3 scenes (P12, S3, asym K4+tail).
 

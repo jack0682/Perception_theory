@@ -18,7 +18,7 @@ Consider the **uniform configuration** `u_uniform = c·1 ∈ Σ_m` where `c = m/
 The constrained Hessian at uniform on `T_uniform Σ_m = 1^⊥` (orthogonal complement of constant direction):
 
 $$
-H_{C+E}(u_{\mathrm{uniform}}) \;=\; \nabla^2\mathcal{E}|_{u_{\mathrm{uniform}}} \;+\; T\cdot \nabla^2(-S)|_{u_{\mathrm{uniform}}} \;+\; \lambda_K \cdot \nabla^2 K_{\mathrm{soft}}|_{u_{\mathrm{uniform}}}.
+H_{C+E}(u_{\mathrm{uniform}}) \;=\; \nabla^2\mathcal{E}\vert _{u_{\mathrm{uniform}}} \;+\; T\cdot \nabla^2(-S)\vert _{u_{\mathrm{uniform}}} \;+\; \lambda_K \cdot \nabla^2 K_{\mathrm{soft}}\vert _{u_{\mathrm{uniform}}}.
 $$
 
 ### 1.2 Each term explicitly
@@ -31,7 +31,7 @@ $$
 
 Restricted to 1^⊥, dominant eigenvalue in lowest direction:
 $$
-\lambda_{\min}(\nabla^2\mathcal{E}|_{u_{\mathrm{uniform}}}\, \mathrm{on}\, 1^\perp) \;=\; 4\alpha\lambda_2(G) \;+\; \beta\, W''(c) \;+\; (\mathrm{cl, sep \ contributions}).
+\lambda_{\min}(\nabla^2\mathcal{E}\vert _{u_{\mathrm{uniform}}}\, \mathrm{on}\, 1^\perp) \;=\; 4\alpha\lambda_2(G) \;+\; \beta\, W''(c) \;+\; (\mathrm{cl, sep \ contributions}).
 $$
 
 **T · ∇²(-S) at uniform:** diag(1/c + 1/(1-c)). At c = 0.5: diag(4). Restricted to 1^⊥: still diag(4) in coordinate directions. Adds **4·T to all eigenvalues** in 1^⊥.

@@ -131,7 +131,7 @@ SCC의 주요 7개 transition (pre_brainstorm §1.1):
 
 ### 3.1 Additional phenomena (not in pre_brainstorm)
 
-- **Ph8 — Amplitude at first pitchfork**: $|u - u_{\mathrm{unif}}| \propto (\beta - \beta_c)^{1/2}$ (T-Birth-Parametric).
+- **Ph8 — Amplitude at first pitchfork**: $\vert u - u_{\mathrm{unif}}\vert \propto (\beta - \beta_c)^{1/2}$ (T-Birth-Parametric).
 - **Ph9 — $\xi_0(\beta)$ interface width scaling**: $\xi_0 = \sqrt{\alpha/\beta}$.
 - **Ph10 — $d_{\min}^*$ critical separation**: $d_{\min}^* = \sqrt{2}\,\xi_0\ln(1/\epsilon_0) + O(\xi_0)$ (`from_single.md` §4.3b).
 
@@ -222,7 +222,7 @@ $$\text{Class R (purely algebraic in c, fixed graph)}$$
 
 $$\text{Class P, }\gamma = 1/2\ (\text{Crandall-Rabinowitz)}$$
 
-단일 class. $|u - u_{\mathrm{unif}}| \propto (\beta - \beta_c)^{1/2}$.
+단일 class. $\vert u - u_{\mathrm{unif}}\vert \propto (\beta - \beta_c)^{1/2}$.
 
 ### 4.9 Ph9 ($\xi_0(\beta)$) — trajectory
 
@@ -288,7 +288,7 @@ Composite: $d_{\min}^* = \sqrt{2}\xi_0\ln(1/\epsilon_0) + O(\xi_0)$ — product 
 
 ### 6.1 Proposed definition
 
-$$P_{\mathrm{spec}}(K | \beta) \approx \mathcal{N}(K; \bar K(\beta, G), \sigma^2_K(\beta, G))$$
+$$P_{\mathrm{spec}}(K \vert \beta) \approx \mathcal{N}(K; \bar K(\beta, G), \sigma^2_K(\beta, G))$$
 
 where $\bar K$ and $\sigma_K^2$ are graph-spectral functionals determined by the Fiedler-mode distribution at saturation.
 

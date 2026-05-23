@@ -244,7 +244,7 @@ Setup: state space $\Sigma_{\mathrm{state}} := S(\mathcal{A})$ (or a regular sub
 
 Statement:
 $$
-\exists \mu \in \mathrm{Prob}(\Sigma_{\mathrm{state}}) \text{ with } P_t^\ast \mu = \mu \;\; \forall t, \quad |\mathrm{supp}(\mu)| \geq 2, \quad H(\mu) > 0.
+\exists \mu \in \mathrm{Prob}(\Sigma_{\mathrm{state}}) \text{ with } P_t^\ast \mu = \mu \;\; \forall t, \quad \vert \mathrm{supp}(\mu)\vert \geq 2, \quad H(\mu) > 0.
 $$
 $H$ is the Boltzmann entropy $H(\mu) = -\int \log(d\mu / d\lambda) \, d\mu$ relative to a reference $\lambda$ when absolutely continuous, or Kolmogorov–Sinai entropy of $(\Sigma_{\mathrm{state}}, P_t, \mu)$ when no $\lambda$ exists. $\mu$ is not a Dirac mass on any fixed point.
 
@@ -302,10 +302,10 @@ Setup: $\mathfrak{L}$ from M20.
 
 Statement:
 $$
-\not\exists \bot \in \mathrm{Ob}(\mathfrak{L}) \text{ with } |\mathrm{Hom}_{\mathfrak{L}}(\bot, X)| = 1 \;\; \forall X \in \mathrm{Ob}(\mathfrak{L}),
+\not\exists \bot \in \mathrm{Ob}(\mathfrak{L}) \text{ with } \vert \mathrm{Hom}_{\mathfrak{L}}(\bot, X)\vert = 1 \;\; \forall X \in \mathrm{Ob}(\mathfrak{L}),
 $$
 $$
-\not\exists \top \in \mathrm{Ob}(\mathfrak{L}) \text{ with } |\mathrm{Hom}_{\mathfrak{L}}(X, \top)| = 1 \;\; \forall X \in \mathrm{Ob}(\mathfrak{L}).
+\not\exists \top \in \mathrm{Ob}(\mathfrak{L}) \text{ with } \vert \mathrm{Hom}_{\mathfrak{L}}(X, \top)\vert = 1 \;\; \forall X \in \mathrm{Ob}(\mathfrak{L}).
 $$
 No label is structurally preferred ($\Lambda$ does not collapse stable substructures into a privileged class).
 
@@ -351,15 +351,15 @@ Statement: the admissible vacua form
 $$
 \mathrm{VAC} := \big\{\, \omega_o \in S(\mathcal{A}) \mid \omega_o \text{ satisfies (B1)–(B3)} \,\big\}_{o \in \mathrm{Ob}(\mathcal{O})},
 $$
-with (B1) faithfulness, (B2) translation invariance under $\varphi$ at $o$, (B3) cluster decomposition / minimum variance under $L_o$. $|\mathrm{VAC}| > 1$ in general, and the equivalence
+with (B1) faithfulness, (B2) translation invariance under $\varphi$ at $o$, (B3) cluster decomposition / minimum variance under $L_o$. $\vert \mathrm{VAC}\vert > 1$ in general, and the equivalence
 $$
 \omega_o \sim \omega_{o'} \;\iff\; \exists \text{ unitary } U: \mathcal{H}_{\omega_o} \to \mathcal{H}_{\omega_{o'}} \text{ with } U \pi_{\omega_o}(a) U^\ast = \pi_{\omega_{o'}}(a)
 $$
-partitions $\mathrm{VAC}$ into more than one class: $|\mathrm{VAC}/{\sim}| > 1$.
+partitions $\mathrm{VAC}$ into more than one class: $\vert \mathrm{VAC}/{\sim}\vert > 1$.
 
 ### M25 — Threshold structure [S]
 
-Setup: $\omega \in S(\mathcal{A})$; a norm $\lVert \cdot \rVert_C$ on the space of two-point correlation functions $C_\omega: \mathbb{R} \to \mathbb{C}$, e.g., $\lVert C \rVert_C := \sup_\tau |C(\tau)|$.
+Setup: $\omega \in S(\mathcal{A})$; a norm $\lVert \cdot \rVert_C$ on the space of two-point correlation functions $C_\omega: \mathbb{R} \to \mathbb{C}$, e.g., $\lVert C \rVert_C := \sup_\tau \vert C(\tau)\vert $.
 
 Statement: there exists $\theta_O > 0$ such that
 $$

@@ -351,7 +351,7 @@ Two σ-standard tuples agree iff:
 2. For each cluster, same cluster size.
 3. For each cluster, eigenvalue agreement within $\tau_\lambda = 10^{-3}$.
 
-Mismatch is recorded with the offending cluster index and $|\lambda^A - \lambda^B|$ value.
+Mismatch is recorded with the offending cluster index and $\vert \lambda^A - \lambda^B\vert $ value.
 
 For C3 (post-event differ), require additionally that the maximum eigenvalue difference exceeds $10 \tau_\lambda = 10^{-2}$ (margin to rule out marginal numerical noise — same convention as WQ-1 protocol §7.3).
 

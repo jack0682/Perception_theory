@@ -68,7 +68,7 @@ The cost update $u \mapsto c[u]$ has multiplicative effect — perturbation of $
 For $u, u'$ with $d_H(u, u') = \delta$: $u' = \lambda(x) u$ where $\log\lambda \in [\log(\inf u'/u), \log(\sup u'/u)]$ has range $\delta$.
 
 Effect on $\varphi$: $\varphi(u) = (u, \mathrm{Cl}(u), D(x; 1-u))$. Each component is a function of $u$:
-- $u$ direct: $|\varphi_1(u') - \varphi_1(u)| = \lvert u' - u \rvert \leq u(\lambda - 1) \leq u \cdot e^\delta - u = u(e^\delta - 1)$. For small $\delta$: $\approx u \delta$.
+- $u$ direct: $\vert \varphi_1(u') - \varphi_1(u)\vert = \lvert u' - u \rvert \leq u(\lambda - 1) \leq u \cdot e^\delta - u = u(e^\delta - 1)$. For small $\delta$: $\approx u \delta$.
 - $\mathrm{Cl}(u)$: closure operator is contractive (canonical), so similar $\delta$-scaling.
 - $D$: local distinction operator, multiplicative.
 

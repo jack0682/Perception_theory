@@ -26,13 +26,13 @@
 
 ### §1.2 V5b-T' PN-Barrier Cat A — PARTIAL DERIVATION + FAILURE ANALYSIS
 
-**Status before deepening (per `2026-04-28/11_*` §4.1)**: Heuristic formula $\mu \approx A_{\mathrm{R3b}} \cdot \beta \cdot |\partial S|/\xi_0$ proposed by analogy to Peierls-Nabarro dislocation theory. $A_{\mathrm{R3b}}$ undetermined.
+**Status before deepening (per `2026-04-28/11_*` §4.1)**: Heuristic formula $\mu \approx A_{\mathrm{R3b}} \cdot \beta \cdot \vert \partial S\vert /\xi_0$ proposed by analogy to Peierls-Nabarro dislocation theory. $A_{\mathrm{R3b}}$ undetermined.
 
 **Status after `05_*` deepening**: **Cat B sketch with diagnosed failure mode**. Sharp-interface + discrete lattice hybrid derivation gives:
 $$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx 2\alpha = 2\beta\xi_0^2 \tag{6.1}$$
-**independent of $|\partial S|$**. Matches empirical magnitude at NQ-173 setup ($\mu \in [1, 4]$ observed; $\mu \approx 2$ predicted) but **disagrees with Phase 3 heuristic on cluster-mass scaling**.
+**independent of $\vert \partial S\vert $**. Matches empirical magnitude at NQ-173 setup ($\mu \in [1, 4]$ observed; $\mu \approx 2$ predicted) but **disagrees with Phase 3 heuristic on cluster-mass scaling**.
 
-**This is a substantive negative result**: Phase 3 V5b-T'-(c) over-claims $|\partial S|$ dependence; rigorous derivation suggests scaling is mass-independent.
+**This is a substantive negative result**: Phase 3 V5b-T'-(c) over-claims $\vert \partial S\vert $ dependence; rigorous derivation suggests scaling is mass-independent.
 
 **Cat A path** (3-7 weeks): NQ-198b (WKB + tight-binding), NQ-198c (discrete Allen-Cahn lattice correction), NQ-198d (corner-saturation regime corrections).
 
@@ -51,7 +51,7 @@ $$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx 2\alpha = 2\beta\xi_0^2 \tag{6.1
 Both `04_*` and `05_*` produced **substantive negative results**:
 
 - `04_*`: σ^A K-jump inheritance is **non-deterministic in σ^A alone** (Lemma 4.4.1c).
-- `05_*`: V5b-T' PN-barrier scaling is **independent of $|\partial S|$** (Phase 3 heuristic over-claims).
+- `05_*`: V5b-T' PN-barrier scaling is **independent of $\vert \partial S\vert $** (Phase 3 heuristic over-claims).
 
 These are not "failures to prove"; they are **discoveries that the original heuristic claims were quantitatively wrong or qualitatively incomplete**. This is exactly the kind of progress that meta-prompt §7 (rigorous failure analysis) calls for, and it has implications for D-5 / D-6b user decisions (see §4 below).
 

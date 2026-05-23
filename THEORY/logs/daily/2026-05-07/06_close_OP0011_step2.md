@@ -3,7 +3,7 @@
 # 06_close_OP0011_step2.md — OP-0011 Step 2 / NQ-T-Identity-1 Closure
 
 **Session:** 2026-05-07 (Thu, W6 Day 5) — extended evening session
-**Closure target:** OP-0011 Step 2 (component-level transport-kernel confinement bound on $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)|$). Equivalently: NQ-T-Identity-1 closure → unblocks T-Temporal-Identity part (c) (kernel independence) Cat C → Cat B.
+**Closure target:** OP-0011 Step 2 (component-level transport-kernel confinement bound on $\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert $). Equivalently: NQ-T-Identity-1 closure → unblocks T-Temporal-Identity part (c) (kernel independence) Cat C → Cat B.
 **Depends on:** `02_exploration.md`, `03_development.md` §§3.3, 8 (Sinkhorn-Lipschitz machinery); canonical T-Persist-1(e); `working/MF/temporal_identity_perscomp_transport.md` §7.1.
 
 ---
@@ -12,7 +12,7 @@
 
 **Original (working-file §7.1, Session V):**
 > Lift the site-level transport confinement bound $\lVert \tilde u - u_t \rVert_2 \leq C_\mathrm{conf}\sqrt{m}$ (T-Persist-1(e), canonical) to the component-level mass bound:
-> $$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \;\leq\; \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$$
+> $$\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \;\leq\; \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$$
 > for any two E1–E4-admissible plans $M, M'$ on the same fields and cost.
 
 **Two routes today.**
@@ -45,7 +45,7 @@ $$f_M(x) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\sum_y \exp((g_M(y) - c(x,y))/\v
 similarly for $M'$. Subtracting:
 $$f_M(x) - f_{M'}(x) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\frac{\sum_y \exp((g_M(y) - c(x,y))/\varepsilon_\mathrm{OT})}{\sum_y \exp((g_{M'}(y) - c'(x,y))/\varepsilon_\mathrm{OT})}\Big).$$
 
-Using the log-sum-exp bound $|\log\sum a e^{u_x} - \log \sum a e^{v_x}| \leq \max_x \lvert u_x - v_x \rvert$:
+Using the log-sum-exp bound $\vert \log\sum a e^{u_x} - \log \sum a e^{v_x}\vert \leq \max_x \lvert u_x - v_x \rvert$:
 $$\lvert f_M - f_{M'} \rvert \leq \max_y \Big\vert\frac{g_M(y) - g_{M'}(y) - c(x,y) + c'(x,y)}{\varepsilon_\mathrm{OT}}\Big\vert \cdot \varepsilon_\mathrm{OT}.$$
 
 Combining with the symmetric bound on $g$ and the contraction property of Sinkhorn iteration (Hilbert metric contraction with rate $1 - 2\eta$ where $\eta$ depends on cost spread):
@@ -68,12 +68,12 @@ $$\lVert M - M' \rVert_\mathrm{TV} \leq \frac{M_\mathrm{tot} \delta}{\varepsilon
 ### §2.3 Lemma 10 — Component-level confinement bound
 
 **Lemma 10 (OP-0011 Step 2 Cat B closure).** *Under hypotheses of Lemma 9:*
-$$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \;\leq\; \frac{2\,M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}} \;=:\; \epsilon_\mathrm{kernel},$$
+$$\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\vert \;\leq\; \frac{2\,M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}} \;=:\; \epsilon_\mathrm{kernel},$$
 *independent of the specific component $(i,j)$.*
 
-**Proof.** $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\lvert = \rvert\sum_{x \in C_i^t, y \in C_j^s} (M(x,y) - M'(x,y))| \leq \lVert M - M' \rVert_1 \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$. $\square$
+**Proof.** $\vert \gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\lvert = \rvert\sum_{x \in C_i^t, y \in C_j^s} (M(x,y) - M'(x,y))\vert \leq \lVert M - M' \rVert_1 \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$. $\square$
 
-**Note on tightness.** The bound is uniform across $(i,j)$, not tightened by component sizes. Tighter component-aware bounds (factor $|C_i^t \times C_j^s|/n^2$) are possible but require entry-wise rather than total-mass control; Cat B holds at the uniform level.
+**Note on tightness.** The bound is uniform across $(i,j)$, not tightened by component sizes. Tighter component-aware bounds (factor $\vert C_i^t \times C_j^s\vert /n^2$) are possible but require entry-wise rather than total-mass control; Cat B holds at the uniform level.
 
 ### §2.4 Lemma 11 — Kernel independence under margin > $\epsilon_\mathrm{kernel}$
 

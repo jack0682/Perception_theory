@@ -283,7 +283,7 @@ This body-level promotion-target line was **not updated** by the 12th addendum (
 ### §5.2 Adversarial probes attempted
 
 1. **Probe: does §3.2 erratum's three-line P5 vs P10 derivation chain match §9.9's analysis?**
-   - §3.2 reads: "P5 form, restricted to $X_{\mathrm{bg}}$" / "P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$" / "$\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other."
+   - §3.2 reads: "P5 form, restricted to $X_{\mathrm{bg}}$" / "P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$" / "$\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U\vert _{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other."
    - §9.9 (op_resolution.md): consistent — both quantities are restricted vs global, with active-slot decay tails on the $U$ side. ✓
    No drift between the two derivations.
 

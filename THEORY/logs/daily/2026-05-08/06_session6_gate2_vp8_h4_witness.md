@@ -22,7 +22,7 @@ to open-dense full rank.
 
 For each scene × λ-point:
 1. Run `find_formation` → $u^*(\lambda)$.
-2. Compute $G = [\nabla_u E_{cl}\,|\,\nabla_u E_{sep}\,|\,\nabla_u E_{bd}](u^*)$ ∈ $\mathbb{R}^{n \times 3}$ (static face).
+2. Compute $G = [\nabla_u E_{cl}\,\vert \,\nabla_u E_{sep}\,\vert \,\nabla_u E_{bd}](u^*)$ ∈ $\mathbb{R}^{n \times 3}$ (static face).
 3. Project $G_T = P_T^\top G$ via Householder of $\mathbf{1}$.
 4. FD Hessian $H_T = P_T^\top H P_T$ ($h = 10^{-4}$).
 5. Solve $H_T X = G_T$ → $X$. Then $J_e = -G_T^\top X \in \mathbb{R}^{3 \times 3}$.

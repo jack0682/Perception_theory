@@ -26,7 +26,7 @@ NQ-187 §8 protocol: power-law fit of $\mu_1 - \mu_0 \sim \epsilon^p$ at first $
 ### §1.3 Implication for canonical T-σ-Theorem-4
 
 **T-σ-Theorem-4 (canonical §13 line 1377+, Cat B retroactive at CV-1.5.1)** claims:
-> $\mu_0 = 4|W''(c)|\epsilon$ and $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon = 4|W''(c)|\epsilon$ (using $A_2/A_1 = 4$ from R22 working file `symmetry_moduli.md` §3.3).
+> $\mu_0 = 4\vert W''(c)\vert \epsilon$ and $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon = 4\vert W''(c)\vert \epsilon$ (using $A_2/A_1 = 4$ from R22 working file `symmetry_moduli.md` §3.3).
 
 The numerical data on $L \in \{4, 8, 16\}$ shows **leading-order non-degeneracy**: $\mu_0 \neq \mu_1$ at finite L; ratio is 2 not 1. This either:
 - **(α)** Implies $A_2/A_1 \neq 4$ on finite L; continuum claim $A_2/A_1 = 4$ must be verified by L → ∞ extrapolation (NQ-187b proposed Task #62).

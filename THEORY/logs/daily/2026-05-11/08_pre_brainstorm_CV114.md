@@ -28,7 +28,7 @@ T-Temporal-Identity Cat A: $R_{t \to s} \subseteq \mathrm{PersComp}(u_t) \times 
 
 **To:** *metastable transition rates / energy landscape geometry.*
 
-Eyring-Kramers regime: $\Gamma_K = (1/2\pi)\sqrt{|\lambda_-|\det H_*/|\det H_s|}\exp(-\Delta E/T_*)$. Saddle indices, barrier heights, prefactors, and confinement on the polytope $\Sigma_m$.
+Eyring-Kramers regime: $\Gamma_K = (1/2\pi)\sqrt{\vert \lambda_-\vert \det H_*/\vert \det H_s\vert}\exp(-\Delta E/T_*)$. Saddle indices, barrier heights, prefactors, and confinement on the polytope $\Sigma_m$.
 
 The shift is from **Lipschitz analysis** (continuity / stability) to **Morse analysis** (critical-point structure / saddle indices / Hessian determinants).
 
@@ -46,7 +46,7 @@ Establish Morse decomposition of the SCC energy on the constrained polytope $\Si
 - **Analytic energy.** $E$ involves $\sigma(z) = (1+e^{-z})^{-1}$, $W(u) = u^2(1-u)^2$, smooth quadratic boundary term $\alpha u^T L u$ — all real-analytic. Łojasiewicz inequality applies; trajectories converge to single critical points.
 - **Genericity.** By Smale's transversality / Sard, generic perturbation makes Hessians nondegenerate. But canonical SCC has fixed parameter structure — need to verify the canonical landscape is itself Morse, not just generically so.
 - **Symmetry breaking.** Translation on torus, rotation around disk-symmetric centers — these give Morse-Bott structure. Resolve by either (a) fixing gauge (modding out translation), (b) computing on the reduced moduli space, or (c) admitting Morse-Bott and lifting Eyring-Kramers via Bismut-Lebeau.
-- **Projected Hessian.** $H(u^*)|_{T\Sigma_m}$ — project away the volume-constraint normal direction. Verify projection preserves spectral structure for SCC critical points.
+- **Projected Hessian.** $H(u^*)\vert _{T\Sigma_m}$ — project away the volume-constraint normal direction. Verify projection preserves spectral structure for SCC critical points.
 - **Boundary strata.** $\partial \Sigma_m$ has corners; critical points on the boundary face $u_i = 0$ or $u_i = 1$ require boundary-Morse analysis (stratified Morse, Goresky-MacPherson).
 
 ### Likely sub-blockers
@@ -65,7 +65,7 @@ Given H-MORSE, derive transition rates between $K$ and $K \pm 1$ sectors via Fri
 
 ### Sub-ideas
 
-- **Transition rates.** Standard Eyring-Kramers: $\Gamma_{K \to K-1} = (1/2\pi)\sqrt{|\lambda_-|\det H_K/|\det H_s|}\exp(-\Delta E_{K \to s}/T_*)$.
+- **Transition rates.** Standard Eyring-Kramers: $\Gamma_{K \to K-1} = (1/2\pi)\sqrt{\vert \lambda_-\vert \det H_K/\vert \det H_s\vert}\exp(-\Delta E_{K \to s}/T_*)$.
 - **Saddle indices.** Index-1 saddles connect adjacent K-basins; verify uniqueness of minimal-action path (instanton).
 - **Barrier heights.** $\Delta E_{K \to s} = E(s) - E(\mathrm{argmin}_K E)$ — already partially Cat B (T-ST-5b, exp02-NEB).
 - **Prefactors.** Require Hessian determinants at both minimum and saddle; needs H-MORSE Cat A.

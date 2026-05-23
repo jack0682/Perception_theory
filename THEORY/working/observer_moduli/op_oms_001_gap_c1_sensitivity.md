@@ -27,7 +27,7 @@ fixed-active-set case under strict complementarity.
 - $T = \ker(\mathbf{1}^\top) \subset \mathbb{R}^n$, of dimension $n - 1$.
 - $P_T \in \mathbb{R}^{n \times (n-1)}$ orthonormal columns spanning $T$ (e.g.\ Householder of $\mathbf{1}$).
 - For each $i \in \mathcal{I} = \{cl, sep, bd, tr\}$: $g_i(u) = \nabla_u E_i(u) \in \mathbb{R}^n$.
-- $G(u) = [g_{cl}\,|\,g_{sep}\,|\,g_{bd}\,|\,g_{tr}](u) \in \mathbb{R}^{n \times 4}$.
+- $G(u) = [g_{cl}\,\vert \,g_{sep}\,\vert \,g_{bd}\,\vert \,g_{tr}](u) \in \mathbb{R}^{n \times 4}$.
 - $G_T(u) = P_T^\top G(u) \in \mathbb{R}^{(n-1) \times 4}$.
 - $H(u; \lambda) = \nabla^2_u E_\lambda(u) = \sum_i \lambda_i \, \nabla^2_u E_i(u) \in \mathbb{R}^{n \times n}$ symmetric.
 - $H_T(u; \lambda) = P_T^\top H(u; \lambda) P_T \in \mathbb{R}^{(n-1) \times (n-1)}$ symmetric, the projected Hessian.

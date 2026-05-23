@@ -12,7 +12,7 @@
 
 Day 7 produced **Theorem L-M (Soft-Count Corollary)**: under T-L1-F's $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ + $\tau<\tau_*=\min(2\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$,
 $$
-|K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)|\le\varepsilon_{\mathrm{sub}}^\phi\cdot N_{\mathrm{sub}}+\varepsilon_{\mathrm{dom}}^\phi\cdot K_{\mathrm{act}}^\varepsilon,
+\vert K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathbf u)\vert \le\varepsilon_{\mathrm{sub}}^\phi\cdot N_{\mathrm{sub}}+\varepsilon_{\mathrm{dom}}^\phi\cdot K_{\mathrm{act}}^\varepsilon,
 $$
 with three per-family corollaries — $\phi_{\mathrm{hard}}$ EXACT, $\phi_{\mathrm{logistic}}^{s\ge 50}$ bound $\le 3e^{-s\tau}\cdot K_{\mathrm{act}}^\varepsilon$, $\phi_{\mathrm{shift\text{-}sat}}^{\beta\ge 20}$ bound $\le e^{-\beta\tau}\cdot K_{\mathrm{act}}^\varepsilon$. Substantively, the **edge-band control hypothesis (E)** that plan.md §4.3 listed as a separate assumption was *eliminated* via Lemma L-M-2: under $(P0)$–$(P11)$ the L1-J regime constants $(\rho_{\mathrm{pert}},\rho_{\mathrm{res}},r_{\mathrm{birth}})$ already force the edge band $[\ell_{\min}-\tau,\ell_{\min}+\tau]$ to contain no bars, so the L-M hypothesis package collapses to $\{(P0)$–$(P11), \phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau), \tau<\tau_*\}$. L-M is downstream of T-L1-F and does not modify any canonical theorem; it does not solve OP-0005, OP-0008, or any sub-item of OP-0009 beyond marginal clarification of OP-0009-F.
 

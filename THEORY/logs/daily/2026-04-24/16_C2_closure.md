@@ -67,7 +67,7 @@ Define two protocol-specific minimum functions:
 
 **Step 1 (Random IC 의 basin 분포).** Random IC $u_\text{init} \sim \text{Unif}(0.3, 0.7)^X$ 는 $c\mathbf{1}$ 근방의 $O(\sqrt n)$-ball 의 random perturbation 이지만 특정 eigenmode 방향으로 aligned 되지 않음.
 
-**Step 2 (High-mode excitation).** $u_\text{init}$ 의 Laplacian eigenmode 분해: $u_\text{init} - c\mathbf{1} = \sum_k \hat u_k \phi_k$. Random amplitudes $\hat u_k \sim \mathcal{N}(0, 1/\sqrt n)$. Energy of high-$k$ mode $(|\hat u_k|^2 \cdot \lambda_k)$ 가 low-$k$ 를 dominate in initial state.
+**Step 2 (High-mode excitation).** $u_\text{init}$ 의 Laplacian eigenmode 분해: $u_\text{init} - c\mathbf{1} = \sum_k \hat u_k \phi_k$. Random amplitudes $\hat u_k \sim \mathcal{N}(0, 1/\sqrt n)$. Energy of high-$k$ mode $(\vert \hat u_k\vert ^2 \cdot \lambda_k)$ 가 low-$k$ 를 dominate in initial state.
 
 **Step 3 (Gradient flow 의 high-mode basin).** High-$k$ mode 가 excited 상태에서 gradient flow 는 local high-F attractor 에 도달. 구체적으로 Cheeger-like 분할 에 의해 $\sim \sqrt n$ 개의 sub-region 이 각 local maximum 이 됨 (intuition: $n$ 개의 grid site 가 $\sqrt n$ segment 로 분할).
 

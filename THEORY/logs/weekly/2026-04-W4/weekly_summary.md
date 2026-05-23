@@ -219,8 +219,8 @@ canonical/theorem_status.md                        (main 동기 update)
 
 #### Round 5: Continuous Aut Groups + Morse-Bott (4 Cat A)
 - **A-2026-04-22-R5-01**: Prop 1.3a-Bott (continuous-Aut Morse-Bott refinement) — critical orbits = submanifolds of dimension $\dim\text{Iso}_0(M) - \dim\text{Stab}(u^*)$
-- **A-2026-04-22-R5-02**: $C_n$ Lock-In Theorem — $F(r,\theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ (even) or $2n$ (odd at $c=1/2$ parity). Lock-in energy $\Delta F \sim |\mu|^{p(n)/2}$, Goldstone mass $m_G^2 \sim |\mu|^{p(n)/2}$ vanishing in $n \to \infty$.
-- **A-2026-04-22-R5-03**: $\mathcal{M}_1$ topology invariants — set cardinality $|\mathcal{M}_1|$ NOT distinguishing; $\dim_\text{moduli}$ + $\text{Vol}(N_1)$ are sharp.
+- **A-2026-04-22-R5-02**: $C_n$ Lock-In Theorem — $F(r,\theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2})$ where $p(n) = n$ (even) or $2n$ (odd at $c=1/2$ parity). Lock-in energy $\Delta F \sim \vert \mu\vert ^{p(n)/2}$, Goldstone mass $m_G^2 \sim \vert \mu\vert ^{p(n)/2}$ vanishing in $n \to \infty$.
+- **A-2026-04-22-R5-03**: $\mathcal{M}_1$ topology invariants — set cardinality $\vert \mathcal{M}_1\vert $ NOT distinguishing; $\dim_\text{moduli}$ + $\text{Vol}(N_1)$ are sharp.
 - **A-2026-04-22-R5-04**: Conjecture 2.1-Bott — $\widehat{K}(G_n; \beta) = 1 + \text{Vol}(\text{Iso}_0(M)/\text{Stab}) \cdot N_\text{unst}^{1/d_\text{eff}(M)} + O(1)$. **On torus $\widehat{K} \approx 1 + 2L$ (extensive)** vs intensive $\widehat{K} = 3$ on 2D square free BC.
 
 #### Round 6: Prop 1.3b (d) Full Spectrum (6 Cat A)
@@ -291,7 +291,7 @@ canonical/theorem_status.md                        (main 동기 update)
 
 **A-2026-04-23-05**: **Class S (Basic Boltzmann Softmax) Refutation — Negative Cat A**
 - Source: `SF_function_taxonomy.md` §5 + cross-ref X1 V7 P1 (04-22)
-- $P_\pi(\widehat K = k | \beta) = \dfrac{e^{-E_k^*(\beta)/T_\text{eff}}}{\sum_j e^{-E_j^*(\beta)/T_\text{eff}}}$ refuted as universal model
+- $P_\pi(\widehat K = k \vert \beta) = \dfrac{e^{-E_k^*(\beta)/T_\text{eff}}}{\sum_j e^{-E_j^*(\beta)/T_\text{eff}}}$ refuted as universal model
 - X1 V7 P1 data: $\widehat K$ distribution이 single $T_\text{eff}$로 fit 불가
 - 대체 후보: Class N (spectral Gaussian), Class H-Th2 (basin-volume-weighted)
 

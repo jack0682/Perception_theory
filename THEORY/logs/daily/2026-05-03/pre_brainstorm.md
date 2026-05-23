@@ -100,7 +100,7 @@ K_{\mathrm{soft}}^\phi(U)=K_{\mathrm{act}}^\varepsilon(\mathbf u)+O(\rho_{\mathr
 Day 7 should keep these distinctions cleanly separated:
 
 - **Hard threshold $\phi_{\mathrm{hard}}$ vs smooth envelope $\phi_s,\phi_\beta$.** Hard is exact integer; smooth is approximation with sharpness parameter. L1-M should treat them as two SUB-CASES, not bundle them.
-- **Dominant bars (length $\ge\ell_{\min}+\tau$) vs sub-threshold bars (length $<\ell_{\min}-\tau$) vs edge-band bars ($|\ell-\ell_{\min}|\le\tau$).** The error decomposition is exactly the partition into these three.
+- **Dominant bars (length $\ge\ell_{\min}+\tau$) vs sub-threshold bars (length $<\ell_{\min}-\tau$) vs edge-band bars ($\vert \ell-\ell_{\min}\vert \le\tau$).** The error decomposition is exactly the partition into these three.
 - **Real-valued $K_{\mathrm{soft}}^\phi\in\mathbb R_{\ge 0}$ vs integer $K_{\mathrm{act}}\in\mathbb N$.** They cannot be globally equal; only approximately equal.
 - **Resolved regime (T-L1-F applies) vs overlap regime (T-L1-F fails).** L1-M only operates in the resolved regime. Outside, $K_{\mathrm{bar}}\neq K_{\mathrm{act}}$ already, so $K_{\mathrm{soft}}^\phi\neq K_{\mathrm{act}}$ is also expected.
 - **Approximation-of-$K_{\mathrm{bar}}$ vs surrogate-for-variational-$K_{\mathrm{bar}}$.** L1-M is the first; the latter (using $K_{\mathrm{soft}}^\phi$ as a differentiable surrogate in optimization) is downstream and not in scope for Day 7.
@@ -114,8 +114,8 @@ These are the open questions Day 7 should consider — not all need to be resolv
 - Should $\Phi_{\mathrm{res}}$ be defined by **threshold suppression + dominant retention + normalization**, or is there a cleaner axiomatic definition?
 - Is **hard threshold the canonical count** and smooth $\phi$ only an approximation? (The CV-1.5.2 status of T-L1-F via $K_{\mathrm{bar}}=K_{\mathrm{act}}$ uses hard threshold; soft count is downstream.)
 - Can $\phi_{\mathrm{logistic}}^s$ converge to $\phi_{\mathrm{hard}}$ as $s\to\infty$? (Yes, pointwise + uniformly on $[0,\ell_{\min}-\tau]\cup[\ell_{\min}+\tau,\infty)$; transition band shrinks.) What is the rate?
-- What is the **cleanest error norm**? Sup-norm of bar lengths? $L^1$? Per-bar pointwise vs aggregate? The $|K_{\mathrm{soft}}-K_{\mathrm{bar}}|$ form is the simplest; per-bar error is finer.
-- Should **edge-band bars be excluded by a margin hypothesis** (E)? "No bars in $[\ell_{\min}-\tau,\ell_{\min}+\tau]$" is clean but restrictive; bound $\rho_{\mathrm{edge}}^\phi\le 2\tau\cdot|\{i:|\ell_i-\ell_{\min}|\le\tau\}|$ is more general.
+- What is the **cleanest error norm**? Sup-norm of bar lengths? $L^1$? Per-bar pointwise vs aggregate? The $\vert K_{\mathrm{soft}}-K_{\mathrm{bar}}\vert $ form is the simplest; per-bar error is finer.
+- Should **edge-band bars be excluded by a margin hypothesis** (E)? "No bars in $[\ell_{\min}-\tau,\ell_{\min}+\tau]$" is clean but restrictive; bound $\rho_{\mathrm{edge}}^\phi\le 2\tau\cdot\vert \{i:\vert \ell_i-\ell_{\min}\vert \le\tau\}\vert $ is more general.
 - Can $K_{\mathrm{soft}}^\phi$ become a **differentiable surrogate** for $K_{\mathrm{bar}}$ that's useful in variational SCC dynamics? (Not in scope for Day 7, but flag for future work.)
 - Is L1-M useful for **future $\sigma$-rich / K-jump diagnostics**? (Likely yes — soft count is sensitive to bar prominence, which captures aggregate-merger events that integer count misses. But this is OP-0008 territory and beyond Day 7.)
 - How does L1-M relate to the **WQ-LAT-1.C $\Phi_{\mathrm{res}}$ correction** already flagged in `ksoft_kact_bridge_lemma.md` §5.3.3? L1-M should be the rigorous version of WQ-LAT-1.C under T-L1-F.
@@ -145,7 +145,7 @@ These non-claims should be repeated explicitly in the L1-M document §non-claims
 The goal is **not** to force softness to equal discreteness. The goal is to understand:
 
 - **when** a soft morphology score $K_{\mathrm{soft}}^\phi$ faithfully shadows a resolved hard count $K_{\mathrm{bar}}^{\ell_{\min}}$, and
-- **when** its deviation $|K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}|$ becomes meaningful information rather than envelope artifact.
+- **when** its deviation $\vert K_{\mathrm{soft}}^\phi-K_{\mathrm{bar}}\vert $ becomes meaningful information rather than envelope artifact.
 
 The CV-1.5.2 hard count is the **anchor**. Soft count is a real-valued shadow with envelope-dependent fidelity. L1-M characterizes that fidelity precisely under the L1-J regime + $\Phi_{\mathrm{res}}$ + edge-band control.
 

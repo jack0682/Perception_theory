@@ -68,7 +68,7 @@ $$\widehat{K}(\beta, \alpha, T, c, G) = 1 + N_{\mathrm{unst}}(\beta, \alpha, T, 
 ### §2.4 Use 4: K as Continuous K_soft (Persistence-Weighted)
 
 **Source**: `working/E/soft_K_definition.md` (W4 04-21, dormant after R22 cascade). Definition (paraphrased):
-$$K_{\mathrm{soft}}(u) := \sum_i \frac{|\mathrm{persist}_i(u)|}{\max_j |\mathrm{persist}_j(u)|}$$
+$$K_{\mathrm{soft}}(u) := \sum_i \frac{\vert \mathrm{persist}_i(u)\vert}{\max_j \vert \mathrm{persist}_j(u)\vert}$$
 where $\mathrm{persist}_i$ is the persistence diagram bar length of the $i$-th critical point of $u$.
 
 **Reading**: K is **continuous-valued** in $[1, n)$. Integer K is *discretization* of continuous $K_{\mathrm{soft}}$ at thresholds.

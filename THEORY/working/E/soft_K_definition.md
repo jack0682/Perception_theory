@@ -77,7 +77,7 @@ $$
 **Corollary 2.2 (Uniform Lipschitz on Σ_m).** Because `X_t` is finite, the total bar count (matched + diagonal-paired in u-side + diagonal-paired in v-side) is bounded by `2n`. Hence:
 
 $$
-L_K := \sup_{u, v \in \Sigma_m,\, u \neq v} \frac{|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)|}{\lVert u - v \rVert_\infty} \;\leq\; 4\, L_\varphi \cdot n.
+L_K := \sup_{u, v \in \Sigma_m,\, u \neq v} \frac{\vert K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\vert}{\lVert u - v \rVert_\infty} \;\leq\; 4\, L_\varphi \cdot n.
 $$
 
 For (φ-sat): `L_K ≤ 4n`. For (φ-lin) with `ℓ_0 = 0.1`: `L_K ≤ 40n`. Tighter bounds possible via graph structure; deferred to C-S2 / E-S2 (NQ-9, NQ-15).

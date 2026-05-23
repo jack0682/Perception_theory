@@ -105,7 +105,7 @@ Major OPEN piece: σ_standard inheritance via Wigner-projection.
 ### §2.5 Morse-stability follow-ups (CV-1.16 derivatives)
 
 #### OP-HMORSE-LOCAL-A (Cat A path for L-HMORSE-LOCAL, MEDIUM-HIGH severity)
-- Requires: (a) sharper residual-correction bound using $|\sigma''(z(u^*))| \to 0$ at saturated nodes; (b) OP-HMORSE-SBM robustness extension; (c) (C2′) → strict-interior (C2) generalization OR generic-Morse (γ).
+- Requires: (a) sharper residual-correction bound using $\vert \sigma''(z(u^*))\vert \to 0$ at saturated nodes; (b) OP-HMORSE-SBM robustness extension; (c) (C2′) → strict-interior (C2) generalization OR generic-Morse (γ).
 - ETA: 2 sessions.
 
 #### OP-HMORSE-SBM (PARTIALLY RESOLVED 2026-05-14)

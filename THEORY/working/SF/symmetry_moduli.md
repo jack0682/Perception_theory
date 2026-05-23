@@ -52,11 +52,11 @@ Let $G = (X, E)$ be a finite connected graph. Let $\mathrm{Aut}(G) = \{\pi \in S
 > **Definition 2.1 ($\mathcal{M}_1$).** The **moduli space of K=1 single-formation minimizers** on Σ_m is
 > $$\mathcal{M}_1(\beta, \alpha, c, G) := \{u^\ast \in \Sigma_m : u^\ast \text{ is a local min of }\mathcal{E},\; K_{\mathrm{soft}}(u^\ast) \approx 1\}/\mathrm{Aut}(G).$$
 
-This is the quotient of K=1 local minima by the graph automorphism group. It is a **set** (generally discrete) for generic Morse $\mathcal{E}$, with size $|\mathcal{M}_1| = N_{\mathrm{min}}^{K=1} / |\mathrm{Aut}(G)|_{\mathrm{avg}}$.
+This is the quotient of K=1 local minima by the graph automorphism group. It is a **set** (generally discrete) for generic Morse $\mathcal{E}$, with size $\vert \mathcal{M}_1\vert = N_{\mathrm{min}}^{K=1} / \vert \mathrm{Aut}(G)\vert _{\mathrm{avg}}$.
 
 **Special cases:**
-- **D4 square grid:** $|\mathcal{M}_1|$ typically equals number of orbit classes of K=1 minimizers; on 2D grid at $\beta$ slightly above $\beta_{\mathrm{crit}}^{(2)}$, only 1 orbit (all Fiedler-mode minimizers equivalent up to D4). At larger $\beta$ (multi-location possible), more orbits emerge.
-- **1D cycle $C_n$:** translations of the single-formation bump all equivalent under $D_n$; $|\mathcal{M}_1| = 1$ at all $\beta$.
+- **D4 square grid:** $\vert \mathcal{M}_1\vert $ typically equals number of orbit classes of K=1 minimizers; on 2D grid at $\beta$ slightly above $\beta_{\mathrm{crit}}^{(2)}$, only 1 orbit (all Fiedler-mode minimizers equivalent up to D4). At larger $\beta$ (multi-location possible), more orbits emerge.
+- **1D cycle $C_n$:** translations of the single-formation bump all equivalent under $D_n$; $\vert \mathcal{M}_1\vert = 1$ at all $\beta$.
 - **Random graph:** $\mathrm{Aut} = \{e\}$, so $\mathcal{M}_1 = \{$all K=1 minimizers$\}$ no identification.
 
 ### 2.2 Relation to Prop 1.3a
@@ -67,7 +67,7 @@ From Prop 1.3a: $u_{\mathrm{uniform}}$ has Morse index $N_{\mathrm{unst}}^{\math
 
 **Descent from $u_{\mathrm{uniform}}$ along this 2D irrep** yields a $D_4$-orbit of minimizers, not a single pair. Specifically: the parametrized direction $a\phi_{1,0} + b\phi_{0,1}$ has amplitude that saturates to $\lvert (a,b) \rvert = O(1)$ via the nonlinear Allen-Cahn dynamics. Rotating $(a,b) \to (a\cos\theta - b\sin\theta, a\sin\theta + b\cos\theta)$ moves through a **continuous family** if the descent were rotationally invariant — but the grid discretization breaks continuous $SO(2)$ to $D_4$ (4 rotations + 4 reflections = 8 discrete orbit points).
 
-So the first Fiedler pitchfork at $\beta = \beta_{\mathrm{crit}}^{(2)}$ on 2D grid gives an **8-point orbit** of minimizers. After quotienting: $|\mathcal{M}_1| = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$.
+So the first Fiedler pitchfork at $\beta = \beta_{\mathrm{crit}}^{(2)}$ on 2D grid gives an **8-point orbit** of minimizers. After quotienting: $\vert \mathcal{M}_1\vert = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$.
 
 ---
 
@@ -145,7 +145,7 @@ $F_{\mathrm{diag}} = -\tfrac{\mu^2 \cdot 6 A_1}{(12 A_1)^2} = -\tfrac{\mu^2}{24 
 
 $F_{\mathrm{axis}} = -\tfrac{\mu^2}{16 A_1}$, $F_{\mathrm{diag}} = -\tfrac{\mu^2}{24 A_1}$.
 
-**Comparison:** $|F_{\mathrm{axis}}| = \mu^2/(16 A_1) > \mu^2/(24 A_1) = |F_{\mathrm{diag}}|$ ⇒ **axis energy is LOWER (more negative)** since $1/16 > 1/24$.
+**Comparison:** $\vert F_{\mathrm{axis}}\vert = \mu^2/(16 A_1) > \mu^2/(24 A_1) = \vert F_{\mathrm{diag}}\vert $ ⇒ **axis energy is LOWER (more negative)** since $1/16 > 1/24$.
 
 **Stability check (Hessian at each orbit).** At axis $(A, 0)$:
 $F_{aa} = \mu + 12 A_1 A^2 + 2 A_2 \cdot 0 = \mu + 12 A_1\cdot(-\mu/(4A_1)) = \mu - 3\mu = -2\mu > 0$ (since $\mu < 0$). ✓ 
@@ -177,7 +177,7 @@ The ratio $A_2/A_1 = 4$ is preserved up to $O(1/L^2)$. **Axis selection holds at
 ### 3.5 Implication for $\mathcal{M}_1$ structure
 
 **At $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$ on 2D square grid:**
-- $|\mathcal{M}_1| = 1$ (single minimum orbit = axis-aligned).
+- $\vert \mathcal{M}_1\vert = 1$ (single minimum orbit = axis-aligned).
 - Orbit size = 4 (4 axis directions: $\pm x, \pm y$).
 - Diagonal orbit (4 saddles) present but not minimum.
 - Prop 1.3a's $N_{\mathrm{unst}}^{\mathrm{bd}} = 2$ (Fiedler eigenspace is 2D), but $c_1$ (Morse index-1 saddles) gets contribution from the 4 diagonal saddles.
@@ -193,12 +193,12 @@ Checking: $c_0 - c_1 + c_2 \geq 1 - 1 + 1 = 1$. ✓ (Exact if no other critical 
 
 ### 3.2 Consequence for $\mathcal{M}_1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$
 
-$|\mathcal{M}_1| = $ number of orbit types selected by the cubic coefficient analysis.
-- If axis-aligned selected: $|\mathcal{M}_1| = 1$ (the axis-aligned orbit).
-- If diagonal selected: $|\mathcal{M}_1| = 1$ (diagonal orbit).
-- Symmetric case ($A_{\mathrm{axis}} = A_{\mathrm{diag}}$ accidentally): both orbit types are local minima, $|\mathcal{M}_1| = 2$.
+$\vert \mathcal{M}_1\vert = $ number of orbit types selected by the cubic coefficient analysis.
+- If axis-aligned selected: $\vert \mathcal{M}_1\vert = 1$ (the axis-aligned orbit).
+- If diagonal selected: $\vert \mathcal{M}_1\vert = 1$ (diagonal orbit).
+- Symmetric case ($A_{\mathrm{axis}} = A_{\mathrm{diag}}$ accidentally): both orbit types are local minima, $\vert \mathcal{M}_1\vert = 2$.
 
-For generic parameters, either axis or diagonal is selected, not both; $|\mathcal{M}_1| = 1$ near $\beta_{\mathrm{crit}}^{(2)}$.
+For generic parameters, either axis or diagonal is selected, not both; $\vert \mathcal{M}_1\vert = 1$ near $\beta_{\mathrm{crit}}^{(2)}$.
 
 ---
 
@@ -231,7 +231,7 @@ $$F(a, b) = \tfrac{\mu}{2}(a^2 + b^2) + \Lambda\!\left[\tfrac{3}{2}(a^4 + b^4) +
 
 **$\mathcal{M}_1(C_n) \cong $ point** (after $D_n$ quotient), orbit size $n$, continuous-moduli dimension 1 at quartic order.
 
-> **$C_n$ First-Pitchfork Theorem (Round 4, Cat A).** On cycle $C_n$ ($n \geq 5$) at $c = 1/2$, first Fiedler pitchfork gives a 1-parameter circle of degenerate quartic-level minima (radius $R = \sqrt{-\mu/(6\Lambda)}$). $|\mathcal{M}_1(C_n)| = 1$ with orbit size $n$.
+> **$C_n$ First-Pitchfork Theorem (Round 4, Cat A).** On cycle $C_n$ ($n \geq 5$) at $c = 1/2$, first Fiedler pitchfork gives a 1-parameter circle of degenerate quartic-level minima (radius $R = \sqrt{-\mu/(6\Lambda)}$). $\vert \mathcal{M}_1(C_n)\vert = 1$ with orbit size $n$.
 
 **Category: Cat A** — exact discrete integrals via trig identities.
 
@@ -262,9 +262,9 @@ Within each block: $O(2)$-invariant (inherited from 1D-cycle factor). Between bl
 - **Pure-Y** $(0, R)$: by symmetry, $F_Y = F_X$, same structure (Goldstone in Y-translation).
 - **Diagonal** $(s, s)$: $s^2 = -\mu/(18\Lambda)$, $F_\Delta = -\mu^2/(36\Lambda)$. Hessian in $(a, c')$-block $\{36\Lambda s^2, -12\Lambda s^2\}$ plus 2 Goldstones: **Morse saddle index 1**.
 
-**Orbit selection:** $\lvert F_X \rvert = \lvert F_Y \rvert > |F_\Delta|$, so pure-X and pure-Y orbits are selected. $D_4$ links X ↔ Y (via 90° rotation), so after quotient $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$.
+**Orbit selection:** $\lvert F_X \rvert = \lvert F_Y \rvert > \vert F_\Delta\vert $, so pure-X and pure-Y orbits are selected. $D_4$ links X ↔ Y (via 90° rotation), so after quotient $\vert \mathcal{M}_1(T^2)\vert = 1$ with orbit size $2L^2$.
 
-> **$T^2$ First-Pitchfork Theorem (Round 4, Cat A).** On 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, first Fiedler pitchfork selects the **pure-X and pure-Y orbit class** (linked by $D_4$); the diagonal orbit is a saddle (Morse index 1). $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$.
+> **$T^2$ First-Pitchfork Theorem (Round 4, Cat A).** On 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, first Fiedler pitchfork selects the **pure-X and pure-Y orbit class** (linked by $D_4$); the diagonal orbit is a saddle (Morse index 1). $\vert \mathcal{M}_1(T^2)\vert = 1$ with orbit size $2L^2$.
 
 **Category: Cat A** — exact discrete integrals.
 
@@ -272,7 +272,7 @@ Within each block: $O(2)$-invariant (inherited from 1D-cycle factor). Between bl
 
 Assembling Rounds 3 and 4:
 
-| Graph | $\mathrm{Aut}(G)$ | Fiedler dim | $A_2/A_1$ within-block | Selected orbit | $|\mathcal{M}_1|$ | Orbit size | Goldstones |
+| Graph | $\mathrm{Aut}(G)$ | Fiedler dim | $A_2/A_1$ within-block | Selected orbit | $\vert \mathcal{M}_1\vert $ | Orbit size | Goldstones |
 |---|---|---|---|---|---|---|---|
 | 2D square (free BC) | $D_4$ | 2 | **4** (product-structure) | Axis-aligned | 1 | 4 | 0 |
 | 1D cycle $C_n$ | $D_n$ | 2 | **2** (single-translation) | Continuous circle | 1 | $n$ | 1 |
@@ -284,9 +284,9 @@ Assembling Rounds 3 and 4:
 
 The torus combines both: within each X or Y block, ratio is $2$ (isotropic); between blocks, the effective ratio is $4$ (anisotropic). This explains why the torus result is "pure axis selected among Cartesian orbits" rather than either "fully continuous (like $C_n$)" or "discrete 4-point (like free-BC square)".
 
-### 3.6.4 Moduli dimension is the sharp invariant, not $|\mathcal{M}_1|$
+### 3.6.4 Moduli dimension is the sharp invariant, not $\vert \mathcal{M}_1\vert $
 
-All three cases give $|\mathcal{M}_1| = 1$ (after Aut quotient), but the continuous-moduli dimension differs:
+All three cases give $\vert \mathcal{M}_1\vert = 1$ (after Aut quotient), but the continuous-moduli dimension differs:
 - 2D square: 0-dim (discrete 4-point orbit).
 - $C_n$: 1-dim (circle modulo discrete $D_n$, exponentially small lock-in at sextic+).
 - $T^2$: 1-dim (two circles glued by $D_4$; each continuous in translation direction).
@@ -326,12 +326,12 @@ with
 $$p(n) = \begin{cases} n & n \text{ even} \\ 2n & n \text{ odd at } c = 1/2 \end{cases}$$
 (parity at $c = 1/2$ eliminates odd-$n$ lowest invariants).
 
-**Lock-in scaling:** At critical minimum $r^\ast \sim |\mu|^{1/2}$, lock-in energy
-$$\Delta F_{\mathrm{lock-in}} \sim |\Lambda_n| \cdot |\mu|^{p(n)/2}.$$
+**Lock-in scaling:** At critical minimum $r^\ast \sim \vert \mu\vert ^{1/2}$, lock-in energy
+$$\Delta F_{\mathrm{lock-in}} \sim \vert \Lambda_n\vert \cdot \vert \mu\vert ^{p(n)/2}.$$
 
-Goldstone mass at lock-in site: $m_G^2 \sim |\mu|^{p(n)/2}$.
+Goldstone mass at lock-in site: $m_G^2 \sim \vert \mu\vert ^{p(n)/2}$.
 
-> **$C_n$ Lock-In Theorem (Round 5, Cat A).** For $C_n$ at $c = 1/2$, the $D_n$-anisotropy appears at order $r^{p(n)}$ with $p(n)$ as above. The Goldstone acquires a small mass $\sim |\mu|^{p(n)/4}$ at finite $n$, vanishing in $n \to \infty$ continuum limit. Lock-in energy $\sim |\mu|^{p(n)/2}$, exponentially small for large $n$ fixed $|\mu|$.
+> **$C_n$ Lock-In Theorem (Round 5, Cat A).** For $C_n$ at $c = 1/2$, the $D_n$-anisotropy appears at order $r^{p(n)}$ with $p(n)$ as above. The Goldstone acquires a small mass $\sim \vert \mu\vert ^{p(n)/4}$ at finite $n$, vanishing in $n \to \infty$ continuum limit. Lock-in energy $\sim \vert \mu\vert ^{p(n)/2}$, exponentially small for large $n$ fixed $\vert \mu\vert $.
 
 **Category: Cat A structural.** $D_n$-invariant polynomial classification ($\{r^{2k}, r^{n+2k}\cos(n\theta)\}$ generators) + parity argument at $c = 1/2$. Explicit $\Lambda_n$ coefficient requires Lyapunov-Schmidt reduction (open).
 
@@ -343,7 +343,7 @@ Goldstone mass at lock-in site: $m_G^2 \sim |\mu|^{p(n)/2}$.
 | $C_n \to S^1$ | 0 | $2\pi$ (circumference; $n$ in lattice units) |
 | $T^2$ | 0 | $2 \cdot (2\pi)^2$ (two X/Y circles) |
 
-$|\mathcal{M}_1| = 1$ after $\mathrm{Iso}(M)$-quotient is not the sharp invariant; **$\mathrm{Vol}(N_1)$** distinguishes the three cases quantitatively.
+$\vert \mathcal{M}_1\vert = 1$ after $\mathrm{Iso}(M)$-quotient is not the sharp invariant; **$\mathrm{Vol}(N_1)$** distinguishes the three cases quantitatively.
 
 ### 3.7.5 Conjecture 2.1-Bott refinement
 
@@ -371,7 +371,7 @@ At $\beta = \beta_{\mathrm{crit}}^{(k)}$ for $k \geq 3$, additional Fiedler-like
 - 1D trivial-reflected (diagonal symmetric).
 
 For each new active mode, an orbit of minimizers is added to $\mathcal{M}_1$. Total:
-$$|\mathcal{M}_1(\beta)| = \sum_{k \geq 2 : \beta_{\mathrm{crit}}^{(k)} < \beta} \mathbf{1}[\text{orbit}_k \text{ is a local min}].$$
+$$\vert \mathcal{M}_1(\beta)\vert = \sum_{k \geq 2 : \beta_{\mathrm{crit}}^{(k)} < \beta} \mathbf{1}[\text{orbit}_k \text{ is a local min}].$$
 
 **Relation to `cardinality_open.md` §8.2 (pitchfork lower bound $c_0 \geq 1 + N_{\mathrm{unst}}^{\mathrm{orbit}}$).** The $\mathrm{Aut}(G)$-orbit enumeration gives the precise meaning of $N_{\mathrm{unst}}^{\mathrm{orbit}}$: it is the number of distinct $\mathrm{Aut}(G)$-irrep components of the unstable Laplacian eigenspaces up to $\beta$.
 
@@ -380,7 +380,7 @@ $$|\mathcal{M}_1(\beta)| = \sum_{k \geq 2 : \beta_{\mathrm{crit}}^{(k)} < \beta}
 `working/MF/from_single.md` §2 Conjecture 2.1: $\widehat{K} = 1 + N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}(G)} + O(1)$.
 
 $\mathrm{Aut}(G)$ plays a **multiplicity role**, not a scaling role. On 2D grid: $N_{\mathrm{unst}}$ (total unstable mode count) is the dimensional quantity setting $\widehat{K}$; $N_{\mathrm{unst}}^{\mathrm{orbit}} \approx N_{\mathrm{unst}}/\lvert D_4 \rvert \approx N_{\mathrm{unst}}/8$ is the orbit count. Thus:
-$$|\mathcal{M}_1(\beta)| \approx N_{\mathrm{unst}}(\beta)/|\mathrm{Aut}(G)|$$
+$$\vert \mathcal{M}_1(\beta)\vert \approx N_{\mathrm{unst}}(\beta)/\vert \mathrm{Aut}(G)\vert $$
 while $\widehat{K}(\beta) \approx \sqrt{N_{\mathrm{unst}}(\beta)}$. These are two different statistical quantifications of the landscape.
 
 ---
@@ -401,7 +401,7 @@ while $\widehat{K}(\beta) \approx \sqrt{N_{\mathrm{unst}}(\beta)}$. These are tw
 
 ### 5.4 Isolation of grid symmetry effects
 
-On 2D square grid: $D_4$ is small (8 elements). On larger grids (torus, 3D lattice, SBM with block symmetry), $\mathrm{Aut}(G)$ can be much larger (torus: $D_4 \times T^2$ infinite). The "moduli space size" $|\mathcal{M}_1|$ is much smaller than the raw minimizer count at high-symmetry graphs.
+On 2D square grid: $D_4$ is small (8 elements). On larger grids (torus, 3D lattice, SBM with block symmetry), $\mathrm{Aut}(G)$ can be much larger (torus: $D_4 \times T^2$ infinite). The "moduli space size" $\vert \mathcal{M}_1\vert $ is much smaller than the raw minimizer count at high-symmetry graphs.
 
 ---
 
@@ -438,7 +438,7 @@ On 2D square grid: $D_4$ is small (8 elements). On larger grids (torus, 3D latti
 | §3.7.3 $C_n$ Lock-In Theorem ($D_n$-anisotropy at order $r^{p(n)}$) | **Cat A structural** (Round 5, $D_n$-invariant polynomial classification) |
 | §3.7.4 $\mathcal{M}_1$ topology invariant (moduli-dim + orbit-volume) | **Cat A** (Round 5, structural) |
 | §3.7.5 Conjecture 2.1-Bott ($\widehat K$ extensive on continuum-Aut) | **Cat A conjecture** (Round 5, numerical verification open) |
-| §4 mode cascade $|\mathcal{M}_1(\beta)|$ | **Sketched Cat B** — each new irrep contributes but specifics config-dependent |
+| §4 mode cascade $\vert \mathcal{M}_1(\beta)\vert $ | **Sketched Cat B** — each new irrep contributes but specifics config-dependent |
 | §5 integration with other OPs | **Cat A commitment** |
 
 ---

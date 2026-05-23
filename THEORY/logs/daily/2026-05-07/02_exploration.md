@@ -68,7 +68,7 @@ The narrowed Cat B target is:
 - (d) K=1 reduction — Cat B candidate (algebra).
 
 Explicit Cat C riders (kept open):
-- (c) Kernel independence — Cat C, blocked by OP-0011 Step 2 (component confinement bound on $|\gamma_M - \gamma_{M'}|$).
+- (c) Kernel independence — Cat C, blocked by OP-0011 Step 2 (component confinement bound on $\vert \gamma_M - \gamma_{M'}\vert $).
 - (b') Stochastic / Langevin transport plan from Package II — Cat C, blocked by OP-0021 (T_* registration) + Package II (Eyring-Kramers).
 - (b'') Multi-step composition $R_{t\to r} = R_{s\to r} \circ R_{t\to s}$ — Cat C overall; OP-0012-CC candidate is the Cat B target (separate session).
 - $\sigma$-extension (full score $S_{ij}$) — Cat C, blocked by OP-0008 / T-σ-Inherit.

@@ -582,7 +582,7 @@ $k = 1$ (constant mode) 은 $\Pi$ 에 의해 *물리적으로 제거*. spectrum 
 ### §3.2.2 임계 조건 — Mode 별
 
 Spinodal interior $W''(c) < 0$ 가정. Mode $k$ 가 불안정해지는 조건:
-$$\mu_k < 0 \iff 4\alpha\lambda_k < \beta|W''(c)| \iff \frac{\beta}{\alpha} > \frac{4\lambda_k}{\lvert W''(c) \rvert}$$
+$$\mu_k < 0 \iff 4\alpha\lambda_k < \beta\vert W''(c)\vert \iff \frac{\beta}{\alpha} > \frac{4\lambda_k}{\lvert W''(c) \rvert}$$
 
 **Critical ratio 정의** (Correction #1 적용 1-index):
 $$\boxed{r_k^{\text{crit}} := \frac{4\lambda_k(L_G)}{\lvert W''(c) \rvert}, \quad k = 2, 3, \ldots, n}$$
@@ -861,13 +861,13 @@ $$\mu_k(\alpha, \beta, c) = 0 \quad \text{at} \quad \frac{\beta}{\alpha} = r_k^{
 
 **성질**:
 - Parameter 변화로 인한 것이 아니라 *graph 의 대칭 구조* 에 의한 것
-- $\dim\ker(H(u^*)|_{\mathbf{1}^\perp}) = \mathrm{mult}(\lambda_k)$ at corresponding crossing
+- $\dim\ker(H(u^*)\vert _{\mathbf{1}^\perp}) = \mathrm{mult}(\lambda_k)$ at corresponding crossing
 - *Degenerate bifurcation* (multidimensional center manifold)
 
 **예시**: 2D torus $L \times L$ 에서 $\mathrm{mult}(\lambda_2) = 4$ → 4차원 unstable subspace 동시 열림.
 
 **수식**:
-$$\dim\ker\bigl(H(u^*)|_{\mathbf{1}^\perp}\bigr) = \mathrm{mult}(\lambda_k(L_G)) \quad \text{at parameter where } \mu_k = 0$$
+$$\dim\ker\bigl(H(u^*)\vert _{\mathbf{1}^\perp}\bigr) = \mathrm{mult}(\lambda_k(L_G)) \quad \text{at parameter where } \mu_k = 0$$
 
 **canonical anchor**: L-S3-KERNEL-MULT (L1798, Cat A, CV-1.19) — 이 type 의 *full SCC* 형태 (case A/B 무조건, case C with H-INV).
 

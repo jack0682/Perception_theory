@@ -337,7 +337,7 @@ $\phi$는 bounded saturating function (예: $\phi(r)=r/(1+r)$ 또는 $\phi(r)=1-
 
 $$E_{\mathrm{wild}}(u) = \sum_i(\Delta_G u_i)^2$$
 
-또는 더 강하게 $\sum_i|\Delta_G^2 u_i|^2$. 역할: checkerboard instability, lattice spike, fractal boundary를 억제한다.
+또는 더 강하게 $\sum_i\vert \Delta_G^2 u_i\vert ^2$. 역할: checkerboard instability, lattice spike, fractal boundary를 억제한다.
 
 ### 12.3 Persistence filter
 

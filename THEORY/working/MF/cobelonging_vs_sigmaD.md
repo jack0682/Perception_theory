@@ -176,7 +176,7 @@ $D_4$-symmetric grid 32×32에 K=2 well-separated formations:
 | Codomain | $H^1(\mathrm{Aut}(G) \wr S_{K_{\mathrm{act}}}; \mathrm{Stab}(\mathbf{u}^*))$ — finite set of conjugacy classes | $[0, \infty)$ — real-valued kernel |
 | Granularity | Discrete (label) | Continuous (matrix) |
 | Transform group | $\mathrm{Aut}(G) \wr S_{K_{\mathrm{act}}}$ orbit-invariant | $\mathrm{Aut}(G)$ conjugation (per formation) |
-| Information content | $O(|H^1(\ldots)|)$ — typically small ($K_{\mathrm{act}}!$ class) | $O(n^2)$ matrix entries |
+| Information content | $O(\vert H^1(\ldots)\vert)$ — typically small ($K_{\mathrm{act}}!$ class) | $O(n^2)$ matrix entries |
 | Computational role | Discrete classification | Sitewise diagnostic |
 
 → **Dimensionality 다른 차원**. σ_multi^D는 σ_multi^A의 between-formation cohomology pull-back; $C_t$는 within-formation distance kernel.

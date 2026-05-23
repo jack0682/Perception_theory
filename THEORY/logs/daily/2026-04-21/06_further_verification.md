@@ -101,7 +101,7 @@ where `v_i = e_{v_b^i} - e_{v_d^i}` are ±1-support vectors with `‖v_i‖² = 
 
 **Consequence.** ∇²K_soft is a sum of rank-1 **negative semi-definite** matrices ⇒ `∇²K_soft ≼ 0`, with:
 $$
-\lVert \nabla^2 K_{\mathrm{soft}}(u) \rVert_{op} \;\leq\; \max_i |\varphi''(\ell_i)| \cdot 2 \cdot \lvert B_+(u) \rvert \;\leq\; 2 \cdot 2 \cdot n \;=\; 4n.
+\lVert \nabla^2 K_{\mathrm{soft}}(u) \rVert_{op} \;\leq\; \max_i \vert \varphi''(\ell_i)\vert \cdot 2 \cdot \lvert B_+(u) \rvert \;\leq\; 2 \cdot 2 \cdot n \;=\; 4n.
 $$
 (Using `|φ''| ≤ 2` at ℓ = 0 and `|B_+| ≤ n`.)
 
@@ -342,7 +342,7 @@ CN12 commits to persistence-based morphology (Q_morph). K_soft also persistence-
 
 In `02_development.md` §3.2 step 4, I wrote:
 $$
-\lambda_1(\Delta_{\mathcal{F}, T}) \;=\; \frac{|\omega_s|}{2\pi}\cdot \sqrt{\frac{|\det H_s|}{\det H_a}}\cdot \exp(-\Delta\mathcal{F}/T)\cdot (1 + o(1)).
+\lambda_1(\Delta_{\mathcal{F}, T}) \;=\; \frac{\vert \omega_s\vert}{2\pi}\cdot \sqrt{\frac{\vert \det H_s\vert}{\det H_a}}\cdot \exp(-\Delta\mathcal{F}/T)\cdot (1 + o(1)).
 $$
 
 Cross-check against Bovier-Eckhoff-Gayrard-Klein (2004), *Metastability in reversible diffusion processes I: Sharp asymptotics for capacities and exit times*, J. Eur. Math. Soc. 6.
@@ -350,7 +350,7 @@ Cross-check against Bovier-Eckhoff-Gayrard-Klein (2004), *Metastability in rever
 **BEGK Theorem.** For reversible diffusion on compact manifold with potential F, the inverse MFPT from basin of u_a^* (local minimum) to basin of global minimum satisfies:
 
 $$
-\mathbb{E}[\tau]^{-1} \;=\; \frac{|\omega_s|}{2\pi}\cdot \sqrt{\frac{|\det \nabla^2 F(u_s^*)|}{\det \nabla^2 F(u_a^*)}}\cdot \exp(-(F(u_s^*) - F(u_a^*))/T) \cdot (1 + o(1)),
+\mathbb{E}[\tau]^{-1} \;=\; \frac{\vert \omega_s\vert}{2\pi}\cdot \sqrt{\frac{\vert \det \nabla^2 F(u_s^*)\vert}{\det \nabla^2 F(u_a^*)}}\cdot \exp(-(F(u_s^*) - F(u_a^*))/T) \cdot (1 + o(1)),
 $$
 
 as T → 0, where `ω_s` is the magnitude of the unique negative eigenvalue of `∇²F(u_s^*)` (the saddle).

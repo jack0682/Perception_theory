@@ -13,7 +13,7 @@
 | `README.md` | This overview | — |
 | `mode_count.md` | Prop 1.3a (pure $\mathcal{E}_{\mathrm{bd}}$ Morse index) + Prop 1.3b (cl_sep structural operator) | Cat A (1.3a full) + Cat A structural / Cat C explicit form (1.3b) |
 | `interface_scale.md` | Cor 2.2 qualitative + quantitative (tanh ansatz) | Cat A qualitative + Cat A ansatz + Cat B SCC-minimizer |
-| `cardinality_open.md` | G-C gap: $|\{\text{local minima}\}|$ on $\Sigma_m$ (NQ-31) | Open |
+| `cardinality_open.md` | G-C gap: $\vert \{\text{local minima}\}\vert $ on $\Sigma_m$ (NQ-31) | Open |
 | `profile_deviation.md` | NQ-32: SCC full minimizer profile vs tanh ansatz | Open |
 
 ## Naming Convention

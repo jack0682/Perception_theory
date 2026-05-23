@@ -143,9 +143,9 @@ $$\lVert r \rVert_\infty := \lVert \mathrm{Cl}(u^*) - u^* \rVert_\infty.$$
 The closure operator second derivative:
 $$\nabla^2 \mathrm{Cl}_k(u) = a_{\mathrm{cl}}^2 \cdot \sigma''(z_k) \cdot M_k^\top M_k,$$
 where $M_k$ is the $k$-th row of $M$ as a column-vector (rank-1 outer product if exact, but here we have $\nabla^2$ as a matrix per coordinate). Operator norm:
-$$\lVert \nabla^2 \mathrm{Cl}_k \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \lVert M \rVert_{\ell^2 \to \ell^2}^2.$$
+$$\lVert \nabla^2 \mathrm{Cl}_k \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot \vert \sigma''\vert _{\max} \cdot \lVert M \rVert_{\ell^2 \to \ell^2}^2.$$
 
-With $|\sigma''(z)| \leq \sup_z |\sigma(z)(1-\sigma(z))(1-2\sigma(z))| \leq 1/(6\sqrt{3}) \approx 0.0962$ (closed-form maximum of $\sigma''$), and $\lVert M \rVert_{\ell^2}^2 \leq d_{\max}/d_{\min}$ (B1 sub-bound), we get
+With $\vert \sigma''(z)\vert \leq \sup_z \vert \sigma(z)(1-\sigma(z))(1-2\sigma(z))\vert \leq 1/(6\sqrt{3}) \approx 0.0962$ (closed-form maximum of $\sigma''$), and $\lVert M \rVert_{\ell^2}^2 \leq d_{\max}/d_{\min}$ (B1 sub-bound), we get
 $$\lVert \nabla^2 \mathrm{Cl}_k \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min}).$$
 
 The sum $\sum_k r_k \nabla^2 \mathrm{Cl}_k$ is bounded in operator norm by $\lVert r \rVert_\infty \cdot n \cdot \max_k \lVert \nabla^2 \mathrm{Cl}_k \rVert$ in the worst case, but more carefully:
@@ -179,7 +179,7 @@ At canonical 15×15 with $a_{\mathrm{cl}} = 3.5$, $d_{\min}/d_{\max} = 1/2$, $n 
 
 If $\lVert r \rVert_2$ at canonical minimizer turns out **not** small enough (>2 × 10^{-4}), then:
 - Theorem B3 still gives positivity in degree-weighted form, but the standard $\ell^2$ form may be insufficient.
-- Tighten via: (i) $a_{\mathrm{cl}}$ choice (smaller → larger leading constant); (ii) sharper $|\sigma''|_{\max}$ bound (depend on $u^*$ regime); (iii) work in degree-weighted form throughout (which has tighter constants).
+- Tighten via: (i) $a_{\mathrm{cl}}$ choice (smaller → larger leading constant); (ii) sharper $\vert \sigma''\vert _{\max}$ bound (depend on $u^*$ regime); (iii) work in degree-weighted form throughout (which has tighter constants).
 
 Numerical Approach (c) is the decisive check.
 

@@ -20,9 +20,9 @@
 
 **NQ-188 statement.** *Within a fixed (G, parameters) regime — graph $G$ with automorphism group $\mathrm{Aut}(G)$, parameter triple $(\alpha, \beta, c)$ in spinodal interior — how many distinct σ-classes does the local-minimizer set $\mathcal{L}(G, \alpha, \beta, c) \subset \Sigma_m^{\circ}$ partition into?*
 
-**Cat A target.** Enumerate $|\sigma\text{-classes}|$ on small $D_4$ free-BC grids ($L \in \{4, 6, 8\}$) by direct computation of the σ-tuple for each minimizer in $\mathcal{L}$ and grouping by σ-equivalence (§2 below). The empirical count is the first quantitative statement.
+**Cat A target.** Enumerate $\vert \sigma\text{-classes}\vert $ on small $D_4$ free-BC grids ($L \in \{4, 6, 8\}$) by direct computation of the σ-tuple for each minimizer in $\mathcal{L}$ and grouping by σ-equivalence (§2 below). The empirical count is the first quantitative statement.
 
-**Why it matters.** σ-tuple is the §11.1 Commitment 14 invariant designating "formation identity". If $|\sigma\text{-classes}|$ is small and bounded by a structural quantity (e.g., $\mathcal{F}_{\max}$ or a function of $\mathrm{Aut}(G)$), then σ-tuple is a *strong discriminative invariant* — every formation can be uniquely tagged by an element of a finite catalog. If $|\sigma\text{-classes}|$ grows freely with grid size, the σ-tuple is at most a relative invariant. The uniqueness conjecture (§6) probes which case obtains.
+**Why it matters.** σ-tuple is the §11.1 Commitment 14 invariant designating "formation identity". If $\vert \sigma\text{-classes}\vert $ is small and bounded by a structural quantity (e.g., $\mathcal{F}_{\max}$ or a function of $\mathrm{Aut}(G)$), then σ-tuple is a *strong discriminative invariant* — every formation can be uniquely tagged by an element of a finite catalog. If $\vert \sigma\text{-classes}\vert $ grows freely with grid size, the σ-tuple is at most a relative invariant. The uniqueness conjecture (§6) probes which case obtains.
 
 **Relation to OP-0008/OP-0009.** OP-0008 (σ^A K-jump non-determinism) and OP-0009 (Multi-Formation Ontological Foundations) extend σ-classes into multi-formation regime via $\mathrm{Aut}(G) \wr S_{K_{\mathrm{act}}}$. NQ-188 fixes the single-formation case first; multi-formation σ-uniqueness is W7+ deferred.
 
@@ -52,9 +52,9 @@ with the (O5')(O7) ordering conventions: ascending $\lambda_k$, then Mulliken ch
 **Definition 2.2 (σ-class).** A **σ-class** is an equivalence class of $\mathcal{L}(G, \alpha, \beta, c)$ under $\sim_\sigma$. Write
 $$[\sigma_0] := \{u^* \in \mathcal{L} : \sigma(u^*) \equiv \sigma_0 \text{ (mod conjugation)}\}.$$
 
-**The σ-class count.** $|\sigma\text{-classes}(G, \alpha, \beta, c)| := \#\{[\sigma_0] : \sigma_0 = \sigma(u^*) \text{ for some } u^* \in \mathcal{L}\}$. This is the cardinality of the σ-tuple image of $\mathcal{L}$.
+**The σ-class count.** $\vert \sigma\text{-classes}(G, \alpha, \beta, c)\vert := \#\{[\sigma_0] : \sigma_0 = \sigma(u^*) \text{ for some } u^* \in \mathcal{L}\}$. This is the cardinality of the σ-tuple image of $\mathcal{L}$.
 
-**Trivial bounds.** $1 \leq |\sigma\text{-classes}| \leq |\mathcal{L}|$. The first inequality is saturated when $\mathcal{L}$ itself is a single $\mathrm{Aut}(G)$-orbit (e.g., $L = 4$ at $\beta$ slightly above $\beta_{\mathrm{crit}}^{(2)}$ where only the first pitchfork is active; T-σ-Theorem-4 single σ-class). The second is saturated only if every minimizer has a distinct σ-tuple — unlikely on highly symmetric $G$ where graph automorphisms naturally cluster minimizers.
+**Trivial bounds.** $1 \leq \vert \sigma\text{-classes}\vert \leq \vert \mathcal{L}\vert $. The first inequality is saturated when $\mathcal{L}$ itself is a single $\mathrm{Aut}(G)$-orbit (e.g., $L = 4$ at $\beta$ slightly above $\beta_{\mathrm{crit}}^{(2)}$ where only the first pitchfork is active; T-σ-Theorem-4 single σ-class). The second is saturated only if every minimizer has a distinct σ-tuple — unlikely on highly symmetric $G$ where graph automorphisms naturally cluster minimizers.
 
 ---
 
@@ -89,8 +89,8 @@ $$\underbrace{\mathrm{Orb}(u_1^*)}_{\subset\ [\sigma_0]} \cup \underbrace{\mathr
    - $\lambda_k \in \mathbb{R}_{>0}$ (continuous; not a finite combinatorial coordinate). The σ-tuple as defined is "labelled" by exact $\lambda_k$ values, but practical equivalence quotients $\lambda_k$ at finite resolution.
 
 **Bound 4.1 (Combinatorial upper bound).** Treating $\lambda_k$ at fixed resolution $\Delta\lambda$ over $[\mu_2, 10\mu_2]$:
-$$|\sigma\text{-classes}| \leq (\mathcal{F}_{\max} + 1) \cdot \prod_{k=1}^{K}\big[\,n_{\max} \cdot |\widehat{G_u}| \cdot M_\lambda\,\big]$$
-where $M_\lambda := \lceil 9\mu_2/\Delta\lambda \rceil$ is the eigenvalue resolution count and $n_{\max} \leq K + 1$. For $D_4$ on 32×32, $K = 12$, $|\widehat{D_4}| = 5$, $\mathcal{F}_{\max} = 63$, $\Delta\lambda = 0.01\mu_2$: bound is exponentially large ($\sim 64 \cdot (12 \cdot 5 \cdot 900)^{12} \approx 10^{55}$). **This bound is uninformative for a uniqueness statement** — combinatorial space is far too large for σ-class concentration to be detected by counting alone. Empirical concentration (§5) is the only path to a meaningful $|\sigma\text{-classes}|$ count.
+$$\vert \sigma\text{-classes}\vert \leq (\mathcal{F}_{\max} + 1) \cdot \prod_{k=1}^{K}\big[\,n_{\max} \cdot \vert \widehat{G_u}\vert \cdot M_\lambda\,\big]$$
+where $M_\lambda := \lceil 9\mu_2/\Delta\lambda \rceil$ is the eigenvalue resolution count and $n_{\max} \leq K + 1$. For $D_4$ on 32×32, $K = 12$, $\vert \widehat{D_4}\vert = 5$, $\mathcal{F}_{\max} = 63$, $\Delta\lambda = 0.01\mu_2$: bound is exponentially large ($\sim 64 \cdot (12 \cdot 5 \cdot 900)^{12} \approx 10^{55}$). **This bound is uninformative for a uniqueness statement** — combinatorial space is far too large for σ-class concentration to be detected by counting alone. Empirical concentration (§5) is the only path to a meaningful $\vert \sigma\text{-classes}\vert $ count.
 
 **Specht polynomial analogy.** The σ-tuple is conceptually parallel to a multi-set of Specht-irrep labels (Specht 1935; James–Kerber 1981 §6) on each Hessian eigenspace. The uniqueness question parallels: "how many distinct Specht patterns appear in $\mathcal{L}$?" — a question that does not admit closed-form answers without strong structural restrictions on $G$.
 
@@ -117,11 +117,11 @@ where $M_\lambda := \lceil 9\mu_2/\Delta\lambda \rceil$ is the eigenvalue resolu
 - $K(u_1^*) = K(u_2^*)$ (sequence length match);
 - $\mathcal{N}(\phi_k^{(1)}) = \mathcal{N}(\phi_k^{(2)})$ for $k = 1, \ldots, K$ (nodal-count match);
 - $[\rho_k^{(1)}]$ and $[\rho_k^{(2)}]$ are conjugate in $\widehat{G_{u^*}}$ for all $k$;
-- $|\lambda_k^{(1)} - \lambda_k^{(2)}| < \epsilon_\lambda$ for some tolerance $\epsilon_\lambda$ (default: $10^{-6} \mu_2$ per `exp_hessian_uniform_v2.json` precision).
+- $\vert \lambda_k^{(1)} - \lambda_k^{(2)}\vert < \epsilon_\lambda$ for some tolerance $\epsilon_\lambda$ (default: $10^{-6} \mu_2$ per `exp_hessian_uniform_v2.json` precision).
 
-**Expected outcome.** Per OAT-7's PH-vs-σ analysis (working/MF/single_high_F_equivalence.md §5), the (F=51, K=5) pair with $p$-dominant vs $g$-dominant modes belongs to **distinct σ-classes** but identical PH classes. This implies $|\sigma\text{-classes}\lvert > \rvert\text{PH classes}|$; σ refines PH. Empirically: 6 orbital letters × per-letter sub-clusters ≈ 8–14 σ-classes (rough estimate; actual count requires running the protocol above on R23).
+**Expected outcome.** Per OAT-7's PH-vs-σ analysis (working/MF/single_high_F_equivalence.md §5), the (F=51, K=5) pair with $p$-dominant vs $g$-dominant modes belongs to **distinct σ-classes** but identical PH classes. This implies $\vert \sigma\text{-classes}\lvert > \rvert\text{PH classes}\vert $; σ refines PH. Empirically: 6 orbital letters × per-letter sub-clusters ≈ 8–14 σ-classes (rough estimate; actual count requires running the protocol above on R23).
 
-**Falsifiable prediction (BC-188-emp).** $|\sigma\text{-classes}(R23)| \in [6, 20]$, strictly less than the 56 minimizer count. Run via:
+**Falsifiable prediction (BC-188-emp).** $\vert \sigma\text{-classes}(R23)\vert \in [6, 20]$, strictly less than the 56 minimizer count. Run via:
 ```python
 # CODE/scripts/sigma_class_count_R23.py (proposed)
 from scc import GraphState, ParameterRegistry, find_formation
@@ -139,19 +139,19 @@ This empirical extraction is the first NQ-188 deliverable; W5 Day 4+ scope.
 ## §6. Uniqueness conjecture
 
 **Conjecture BC-188-1 (Parameter Independence of σ-Class Count).** *On fixed $G = D_4$ free-BC $L \times L$ grid, fixed mass $m$, the σ-class count*
-$$|\sigma\text{-classes}(G, \alpha, \beta, c)|$$
+$$\vert \sigma\text{-classes}(G, \alpha, \beta, c)\vert $$
 *depends only on $(G, \mathcal{F}_{\max}(G, \alpha, \beta, c))$ — not on the precise $(\alpha, \beta, c)$ specifics within the spinodal-interior stable-minimizer regime.*
 
 **Heuristic motivation.** σ-tuples are determined by the discrete Hessian-eigenvector structure (Laplacian eigenfunctions on $G$) and their $D_4$ irrep decomposition (a finite catalog). As $(\alpha, \beta, c)$ vary smoothly within spinodal interior, eigenvalues $\lambda_k$ shift continuously, but the **ordering and irrep assignment** of σ-tuple entries stay invariant outside of pitchfork-bifurcation surfaces. Between bifurcations, the σ-class structure is constant; at bifurcation crossings, σ-classes may split or merge by exactly one entry.
 
-**Stronger Conjecture BC-188-2 (Universality).** *$|\sigma\text{-classes}|$ is a function only of $|\mathrm{Aut}(G)|$ and $\mathcal{F}_{\max}$:*
-$$|\sigma\text{-classes}(G, \cdot, \cdot, \cdot)| = f_{\sigma}(|\mathrm{Aut}(G)|,\ \mathcal{F}_{\max}).$$
-This is a universality claim: the σ-class count is determined by the symmetry group order and the maximum nodal count, independent of graph specifics. **Status: speculative.** Evidence is needed across multiple $G$ classes (cycles, tori, complete graphs, random graphs at fixed $|\mathrm{Aut}(G)|$).
+**Stronger Conjecture BC-188-2 (Universality).** *$\vert \sigma\text{-classes}\vert $ is a function only of $\vert \mathrm{Aut}(G)\vert $ and $\mathcal{F}_{\max}$:*
+$$\vert \sigma\text{-classes}(G, \cdot, \cdot, \cdot)\vert = f_{\sigma}(\vert \mathrm{Aut}(G)\vert,\ \mathcal{F}_{\max}).$$
+This is a universality claim: the σ-class count is determined by the symmetry group order and the maximum nodal count, independent of graph specifics. **Status: speculative.** Evidence is needed across multiple $G$ classes (cycles, tori, complete graphs, random graphs at fixed $\vert \mathrm{Aut}(G)\vert $).
 
 **Verification path.**
-- **Step 1 (Cat A target).** Run §5 protocol on R23 ($L = 32$) to get $|\sigma\text{-classes}|$ at $\beta = 30, c = 0.5$. ETA: 1 week.
+- **Step 1 (Cat A target).** Run §5 protocol on R23 ($L = 32$) to get $\vert \sigma\text{-classes}\vert $ at $\beta = 30, c = 0.5$. ETA: 1 week.
 - **Step 2 (Cat B intermediate).** Run on $L \in \{8, 16\}$ at the same parameters; check that the count scales predictably with $\mathcal{F}_{\max}(L)$.
-- **Step 3 (Cat A or Cat B definitive).** Vary $\beta \in [\beta_{\mathrm{crit}}^{(2)}, 50]$ and $c \in [(3-\sqrt{3})/6, 0.7]$ at $L = 16$; check whether $|\sigma\text{-classes}|$ stays constant within $\mathcal{F}$-fixed parameter strata.
+- **Step 3 (Cat A or Cat B definitive).** Vary $\beta \in [\beta_{\mathrm{crit}}^{(2)}, 50]$ and $c \in [(3-\sqrt{3})/6, 0.7]$ at $L = 16$; check whether $\vert \sigma\text{-classes}\vert $ stays constant within $\mathcal{F}$-fixed parameter strata.
 
 **Risk of refutation.** If $\beta$-sweep at fixed $\mathcal{F}_{\max}$ shows σ-class count drift, BC-188-1 falls and σ-tuple is parameter-sensitive (Cat C status). The uniqueness theorem then requires a different formulation (e.g., σ-class as a function of $(G, \mathcal{F}_{\max}, \beta)$).
 
@@ -159,23 +159,23 @@ This is a universality claim: the σ-class count is determined by the symmetry g
 
 ## §7. σ-class uniqueness as foundational lemma
 
-**Strong invariant claim.** If BC-188-1 holds and $|\sigma\text{-classes}|$ is small (e.g., $\leq 20$ for R23), then σ-tuple is a **strong discriminative invariant** — every formation can be canonically tagged by a finite catalog of σ-classes that does not depend on parameter fine-tuning.
+**Strong invariant claim.** If BC-188-1 holds and $\vert \sigma\text{-classes}\vert $ is small (e.g., $\leq 20$ for R23), then σ-tuple is a **strong discriminative invariant** — every formation can be canonically tagged by a finite catalog of σ-classes that does not depend on parameter fine-tuning.
 
 **Cat A target reformulation.**
 
 > **T-σ-Uniqueness (NQ-188 candidate, single-formation, $D_4$ free-BC).** Let $G$ be the $D_4$ free-BC $L \times L$ grid with $L \in \{4, 8, 16, 32\}$, parameters $(\alpha, \beta, c)$ in spinodal interior with $\beta \in (\beta_{\mathrm{crit}}^{(2)}, \beta_{\mathrm{merge}})$ (single-formation regime), and $\mathcal{L}(G, \alpha, \beta, c) \subset \Sigma_m^{\circ}$ the set of Morse-0 stable local minimizers. Then:
 >
-> **(i)** $|\sigma\text{-classes}(G, \alpha, \beta, c)|$ is finite.
+> **(i)** $\vert \sigma\text{-classes}(G, \alpha, \beta, c)\vert $ is finite.
 >
-> **(ii)** $|\sigma\text{-classes}|$ depends only on $(G, \mathcal{F}_{\max}(G, \alpha, \beta, c))$ and not on $(\alpha, \beta, c)$ specifics within strata of fixed $\mathcal{F}_{\max}$ (Conjecture BC-188-1).
+> **(ii)** $\vert \sigma\text{-classes}\vert $ depends only on $(G, \mathcal{F}_{\max}(G, \alpha, \beta, c))$ and not on $(\alpha, \beta, c)$ specifics within strata of fixed $\mathcal{F}_{\max}$ (Conjecture BC-188-1).
 >
-> **(iii)** For $L = 32$, $\beta = 30$, $c = 0.5$ (R23 regime): $|\sigma\text{-classes}|$ is bounded by the orbital-letter count (6) times an irrep-assignment factor; empirical target $|\sigma\text{-classes}| \in [6, 20]$.
+> **(iii)** For $L = 32$, $\beta = 30$, $c = 0.5$ (R23 regime): $\vert \sigma\text{-classes}\vert $ is bounded by the orbital-letter count (6) times an irrep-assignment factor; empirical target $\vert \sigma\text{-classes}\vert \in [6, 20]$.
 >
 > *Status:* (i) **Cat A** (finiteness — combinatorial $\mathcal{F}$-bound + $\widehat{G_u}$ finiteness + Lemma 2 (iii)/(v) bounded $n_k$); (ii) **Cat B target** (parameter independence — empirical verification needed across spinodal interior); (iii) **Cat A target** (R23 enumeration — direct computation).
 
 **Proof sketch of (i).**
 
-*Finiteness argument.* Bound 4.1 establishes $|\sigma\text{-classes}| \leq C \cdot |\widehat{G_u}|^K \cdot \mathcal{F}_{\max}$ at fixed resolution $\Delta\lambda$. For finite graphs, $G_u \subseteq \mathrm{Aut}(G)$ is finite, so $\widehat{G_u}$ is finite. $K$ is finite per (O3) cutoff. $\mathcal{F}_{\max}$ is finite per $\mathcal{F}(u^*) \leq \lvert X \rvert$ (every site is a candidate local max). Hence $|\sigma\text{-classes}|$ is finite. $\Box$ **Cat A.**
+*Finiteness argument.* Bound 4.1 establishes $\vert \sigma\text{-classes}\vert \leq C \cdot \vert \widehat{G_u}\vert ^K \cdot \mathcal{F}_{\max}$ at fixed resolution $\Delta\lambda$. For finite graphs, $G_u \subseteq \mathrm{Aut}(G)$ is finite, so $\widehat{G_u}$ is finite. $K$ is finite per (O3) cutoff. $\mathcal{F}_{\max}$ is finite per $\mathcal{F}(u^*) \leq \lvert X \rvert$ (every site is a candidate local max). Hence $\vert \sigma\text{-classes}\vert $ is finite. $\Box$ **Cat A.**
 
 *Proof sketch of (ii).* Parameter continuity. As $(\alpha, \beta, c)$ vary smoothly within spinodal interior away from pitchfork bifurcations, $\mathcal{L}(G, \alpha, \beta, c)$ varies smoothly (implicit function theorem on $\nabla\mathcal{E} = 0$ equation). σ-tuples assigned by Lemma 1 (ii) project + Lemma 2 (i) nodal count are determined by Hessian eigenvector signs and irrep labels — both **locally constant** in parameter (eigenvalue ordering and irrep types do not change without crossing a bifurcation surface). On parameter strata where $\mathcal{F}_{\max}$ is constant, σ-class count is locally constant. **Cat B target** — full proof requires bifurcation-surface analysis which is open.
 
@@ -191,7 +191,7 @@ V5b (T-V5b-T canonical + V5b-T-zero sub-statement + V5b-F sub-statement) decompo
 
 **V5b-T-zero sub-class (Cat A definitional).** σ-tuple with $\lambda_0 = 0$ exact (degenerate Goldstone), distinct from V5b-T because zero is achieved at finite-graph translation-invariant cases. σ-tuple structure: $(\mathcal{F}; (2, [\rho_{\mathrm{trans}}], 0), \ldots)$ with the leading entry encoding the discrete translation pseudosymmetry.
 
-**V5b-F sub-class (Cat C, NQ-173 dependent).** σ-tuple on boundary-modified graphs where partial Goldstone is broken: $\mu \approx C(\beta) |\partial S|/n$ — *finite but small* (boundary suppression of would-be Goldstone). σ-tuple structure: $(\mathcal{F}; (2, [\rho_{\mathrm{partial-Goldstone}}], C(\beta)|\partial S|/n), \ldots)$. The $\lambda_0$ entry distinguishes it from V5b-T/V5b-T-zero.
+**V5b-F sub-class (Cat C, NQ-173 dependent).** σ-tuple on boundary-modified graphs where partial Goldstone is broken: $\mu \approx C(\beta) \vert \partial S\vert /n$ — *finite but small* (boundary suppression of would-be Goldstone). σ-tuple structure: $(\mathcal{F}; (2, [\rho_{\mathrm{partial-Goldstone}}], C(\beta)\vert \partial S\vert /n), \ldots)$. The $\lambda_0$ entry distinguishes it from V5b-T/V5b-T-zero.
 
 **Implication for σ-uniqueness.** The V5b family produces 3 distinct σ-classes within a single graph topology by varying boundary conditions. This shows σ-class structure depends on **graph** $G$ (including boundary conditions), confirming the (G, parameters) refinement in NQ-188's regime statement. σ-uniqueness as Cat A holds **per graph topology**; transitions between topology classes (free-BC ↔ periodic ↔ boundary-modified) shift the σ-class catalog.
 
@@ -203,16 +203,16 @@ V5b (T-V5b-T canonical + V5b-T-zero sub-statement + V5b-F sub-statement) decompo
 
 **Cat A target (R23 enumeration).** Direct σ-class computation on R23 32×32 fullscale dataset. ETA 1 week. Deliverable: `CODE/scripts/sigma_class_count_R23.py` + JSON output `CODE/scripts/results/sigma_class_R23.json`. Anchors §7 statement (iii).
 
-**Cat A target ($L = 8$ definitive enumeration).** Run on $L = 8$ where $\mathcal{F}_{\max} \approx 6$ and $\mathcal{L}$ is small enough for exhaustive enumeration via random initialization sweeps + xNES population dump. Target: definitive count $|\sigma\text{-classes}(L = 8)|$ as Cat A. Anchors §7 statement (i) at small scale.
+**Cat A target ($L = 8$ definitive enumeration).** Run on $L = 8$ where $\mathcal{F}_{\max} \approx 6$ and $\mathcal{L}$ is small enough for exhaustive enumeration via random initialization sweeps + xNES population dump. Target: definitive count $\vert \sigma\text{-classes}(L = 8)\vert $ as Cat A. Anchors §7 statement (i) at small scale.
 
 **Cat B target ($\beta$-sweep parameter independence).** Vary $\beta \in [\beta_{\mathrm{crit}}^{(2)}, 50]$ at $L = 16$ in 10 increments; compute σ-class count at each. Check stratified constancy. Anchors §7 statement (ii) (BC-188-1).
 
 **Cat C conjecture (asymptotic scaling formula).**
-$$|\sigma\text{-classes}(G_L, \alpha, \beta, c)|\ \overset{?}{\sim}\ f_{\sigma}(\mathcal{F}_{\max}(L), |\mathrm{Aut}(G_L)|).$$
+$$\vert \sigma\text{-classes}(G_L, \alpha, \beta, c)\vert \ \overset{?}{\sim}\ f_{\sigma}(\mathcal{F}_{\max}(L), \vert \mathrm{Aut}(G_L)\vert).$$
 Possible forms:
 - *Linear in $\mathcal{F}_{\max}$*: $f \sim a + b \cdot \mathcal{F}_{\max}$.
 - *Logarithmic*: $f \sim c \log \mathcal{F}_{\max}$.
-- *Bounded*: $f \leq |\widehat{D_4}|^K = 5^K$ for $K$ fixed by O3 cutoff.
+- *Bounded*: $f \leq \vert \widehat{D_4}\vert ^K = 5^K$ for $K$ fixed by O3 cutoff.
 
 The bounded case is most physical: σ-tuples form a finite catalog whose size is set by symmetry-group representation theory, not by graph size.
 
@@ -245,8 +245,8 @@ The bounded case is most physical: σ-tuples form a finite catalog whose size is
 - **Working `working/SF/symmetry_moduli.md` §2 ($\mathcal{M}_1$)**: K=1 single-formation moduli space quotient $\mathcal{L}/\mathrm{Aut}(G)$; σ-class quotient $\mathcal{L}/\sim_\sigma$ is a further quotient (§3 hierarchy).
 - **Working `working/SF/mode_count.md` Prop 1.3a**: closed-form Hessian on $D_4$ grid; computational base for §5 protocol step 1.
 - **Working `working/SF/cardinality_open.md` §8**: Morse index structure relevant to bifurcation-surface analysis underlying BC-188-1 proof of (ii).
-- **Working `working/SF/sigma_theorem4_higher_order.md` §3, §10 (NQ-187; W5 Day 4 PM Wave 3 cross-link, carry-forward #10)**: 5th-order $D_4$-equivariant non-existence + sextic $\epsilon^2$ first-order splitting. Refines the σ-class denominator on R23: σ-classes that collapse at leading-order Hessian (T-σ-Theorem-4 (ii) $K_0 = K_1$) split at $\epsilon^2$, increasing the empirical $|\sigma\text{-classes}|$ count under §5 protocol when the higher-order spectrum is resolved.
-- **Working `working/SF/sigma_lie_algebra_structure.md` §4, §9 (NQ-258; W5 Day 4 PM Wave 3 cross-link)**: σ-tuple recognized as the $\mathrm{Aut}(G)_{u^*}$-irrep decomposition of $T_{u^*}\Sigma_m$; this is the Lie-algebra/representation-theoretic restatement of Definition 2.1 used in §4 (irrep-label assignment via isotypic projection). NQ-258 McKay-spirit conjecture upper-bounds $|\sigma\text{-classes}|$ via $|\mathrm{Irr}(N_\Gamma(P))|$ at fixed Sylow $P$.
+- **Working `working/SF/sigma_theorem4_higher_order.md` §3, §10 (NQ-187; W5 Day 4 PM Wave 3 cross-link, carry-forward #10)**: 5th-order $D_4$-equivariant non-existence + sextic $\epsilon^2$ first-order splitting. Refines the σ-class denominator on R23: σ-classes that collapse at leading-order Hessian (T-σ-Theorem-4 (ii) $K_0 = K_1$) split at $\epsilon^2$, increasing the empirical $\vert \sigma\text{-classes}\vert $ count under §5 protocol when the higher-order spectrum is resolved.
+- **Working `working/SF/sigma_lie_algebra_structure.md` §4, §9 (NQ-258; W5 Day 4 PM Wave 3 cross-link)**: σ-tuple recognized as the $\mathrm{Aut}(G)_{u^*}$-irrep decomposition of $T_{u^*}\Sigma_m$; this is the Lie-algebra/representation-theoretic restatement of Definition 2.1 used in §4 (irrep-label assignment via isotypic projection). NQ-258 McKay-spirit conjecture upper-bounds $\vert \sigma\text{-classes}\vert $ via $\vert \mathrm{Irr}(N_\Gamma(P))\vert $ at fixed Sylow $P$.
 - **Open Problems**: OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Ontological Foundations) — both extend NQ-188 to multi-formation regime.
 
 ---
@@ -268,7 +268,7 @@ The bounded case is most physical: σ-tuples form a finite catalog whose size is
 
 Specifically:
 
-- **Cat A (conditional)** — T-σ-Uniqueness (i) (finiteness of $|\sigma\text{-classes}|$, §7): The proof via Bound 4.1 is complete *given* that "σ-class" means equivalence under Definition 2.1'. Without a canonical conjugation rule, two minimizers in the same $\mathrm{Aut}(G)$-orbit could be miscounted as distinct classes (basis-choice artifact on $D_4$ E-irrep eigenspaces). Definition 2.1' closes this loophole.
+- **Cat A (conditional)** — T-σ-Uniqueness (i) (finiteness of $\vert \sigma\text{-classes}\vert $, §7): The proof via Bound 4.1 is complete *given* that "σ-class" means equivalence under Definition 2.1'. Without a canonical conjugation rule, two minimizers in the same $\mathrm{Aut}(G)$-orbit could be miscounted as distinct classes (basis-choice artifact on $D_4$ E-irrep eigenspaces). Definition 2.1' closes this loophole.
 
 - **Cat A (conditional)** — R23 enumeration target (§7 (iii), §9): The σ-class count from the §5 protocol depends on step 5 (irrep-label assignment via isotypic projection). Without clause (c) of Definition 2.1', two runs on the same minimizer with different eigenbasis choices could yield different $[\rho_k]$ labels on degenerate eigenspaces, inflating the empirical class count. Definition 2.1' makes the empirical protocol basis-independent.
 
@@ -298,4 +298,4 @@ Specifically:
 
 ---
 
-**End of working file.** Promotion pipeline next stage: §5 R23 protocol execution → empirical $|\sigma\text{-classes}|$ count → §7 statement (iii) Cat A claim → W6 review → W7+ canonical §13 candidate entry "T-σ-Uniqueness".
+**End of working file.** Promotion pipeline next stage: §5 R23 protocol execution → empirical $\vert \sigma\text{-classes}\vert $ count → §7 statement (iii) Cat A claim → W6 review → W7+ canonical §13 candidate entry "T-σ-Uniqueness".

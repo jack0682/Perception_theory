@@ -108,7 +108,7 @@ $b_1 \odot a_2 \neq c \cdot \mathbf{1}$은 두 개의 독립 transport 문제에
 **질문**: discrete-time action $\mathcal{A}_{i:k}(P) = \sum_\ell a_\ell(x_\ell, x_{\ell+1})$을 $\Delta t \to 0$ 극한으로 보내면 어떤 continuous-time functional이 나오는가?
 
 **예상 답변**:
-$a_\ell(x,y) = d(x,y)^2/\Delta t + \gamma \lVert \Delta\varphi \rVert^2/\Delta t$에서 $\Delta t \to 0$ 극한은 Lagrangian $L(x, \dot{x}, \varphi, \dot{\varphi}) = |\dot{x}|^2 + \gamma|\dot{\varphi}|^2$를 가진 action integral 형태. 이것은 Riemannian manifold 위의 geodesic energy와 유사한 구조.
+$a_\ell(x,y) = d(x,y)^2/\Delta t + \gamma \lVert \Delta\varphi \rVert^2/\Delta t$에서 $\Delta t \to 0$ 극한은 Lagrangian $L(x, \dot{x}, \varphi, \dot{\varphi}) = \vert \dot{x}\vert ^2 + \gamma\vert \dot{\varphi}\vert ^2$를 가진 action integral 형태. 이것은 Riemannian manifold 위의 geodesic energy와 유사한 구조.
 
 **CV-1.16/OP-0022 후보**:
 - Γ-수렴 분석: $\mathcal{A}^h \to \mathcal{A}$ as $h = \Delta t \to 0$.

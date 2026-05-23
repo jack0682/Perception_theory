@@ -328,7 +328,7 @@ This procedure is algorithmic and deterministic once `μ_0` is measured from the
 
 Rescaling `(α,β) → (sα, sβ)` scales both `|μ_well|` and `|μ_saddle|` by `s` (per part (d) Hessian scaling, established in §3 above). The Eyring-Kramers prefactor (synthesis §7.2 Identity 2a — see also file 12 §5 Identity 2 split):
 
-$$\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}}, \quad \omega_{\mathrm{well}} = \sqrt{|\mu_{\mathrm{well}}|}, \quad \omega_{\mathrm{saddle}} = \sqrt{|\mu_{\mathrm{saddle}}|}, \quad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}$$
+$$\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}}, \quad \omega_{\mathrm{well}} = \sqrt{\vert \mu_{\mathrm{well}}\vert}, \quad \omega_{\mathrm{saddle}} = \sqrt{\vert \mu_{\mathrm{saddle}}\vert}, \quad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{\vert \mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}\vert}$$
 
 Under rescaling:
 - `ω_well → √s · ω_well` (since `|μ_well| → s|μ_well|`)

@@ -46,8 +46,8 @@ This is simultaneously diagonal in $\{\phi_k\}$: eigenvalues $\mu_k^{\mathrm{bd}
 
 ### 2.3 Corollaries
 
-- **Corollary 2.3.a** (T8-Core recovery). $N_{\mathrm{unst}}^{\mathrm{bd}} \geq 1 \iff 4\alpha\lambda_2 < \beta|W''(c)| \iff \beta > \beta_{\mathrm{crit}}^{(2)}$, the T8-Core threshold.
-- **Corollary 2.3.b** (saturation). $N_{\mathrm{unst}}^{\mathrm{bd}} = n-1 \iff 4\alpha\lambda_n < \beta|W''(c)| \iff \beta > \beta_{\mathrm{crit}}^{(n)}$. Beyond this $\beta$, the uniform state is a local maximum.
+- **Corollary 2.3.a** (T8-Core recovery). $N_{\mathrm{unst}}^{\mathrm{bd}} \geq 1 \iff 4\alpha\lambda_2 < \beta\vert W''(c)\vert \iff \beta > \beta_{\mathrm{crit}}^{(2)}$, the T8-Core threshold.
+- **Corollary 2.3.b** (saturation). $N_{\mathrm{unst}}^{\mathrm{bd}} = n-1 \iff 4\alpha\lambda_n < \beta\vert W''(c)\vert \iff \beta > \beta_{\mathrm{crit}}^{(n)}$. Beyond this $\beta$, the uniform state is a local maximum.
 - **Corollary 2.3.c** (monotonicity). $N_{\mathrm{unst}}^{\mathrm{bd}}$ is monotone non-decreasing in $\beta$ and non-increasing in $\alpha$ (via $4\alpha\lambda_k$ increasing in $\alpha$).
 
 ### 2.4 Numerical verification
@@ -134,9 +134,9 @@ This structure is the Hessian-level origin of NQ-32 (profile deviation): cl_sep 
 ### 4.1 Qualitative statement
 
 > **Cor 2.2 (qualitative).** Let $u^\ast$ be a local minimizer of $\mathcal{E}_{\mathrm{bd}}$ on $\Sigma_m$. Then
-> $$|B(u^\ast)| \leq \frac{16}{\ln 9}\cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^\ast)}{\beta},$$
+> $$\vert B(u^\ast)\vert \leq \frac{16}{\ln 9}\cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^\ast)}{\beta},$$
 > and by Modica-Mortola ($\mathcal{E}_{\mathrm{bd}}(u^\ast) \leq C_\ast \sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)$):
-> $$|B(u^\ast)| = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big) = O(\xi_0\cdot \mathrm{Per}_G(A^\ast)).$$
+> $$\vert B(u^\ast)\vert = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big) = O(\xi_0\cdot \mathrm{Per}_G(A^\ast)).$$
 
 ### 4.2 Proof (Approach A2)
 
@@ -154,7 +154,7 @@ $$\lvert B \rvert \leq \frac{16}{\ln 9}\cdot \frac{C_\ast \sqrt{\alpha\beta}\cdo
 ### 4.3 Quantitative constant derivation (2D-grid tanh ansatz)
 
 > **Cor 2.2 (quantitative, tanh ansatz).** On a 2D square grid with a single circular K=1 formation whose radial profile is the tanh soliton $u(s) = \frac{1}{2}(1 - \tanh(s/\xi_0))$ where $s$ is the signed distance from the interface, the boundary-band-to-perimeter ratio is
-> $$\frac{|B(u^\ast)|}{\mathrm{Per}_G(A^\ast)} = \frac{\pi \ln 9}{2}\cdot \xi_0 + O(1/\sqrt n).$$
+> $$\frac{\vert B(u^\ast)\vert}{\mathrm{Per}_G(A^\ast)} = \frac{\pi \ln 9}{2}\cdot \xi_0 + O(1/\sqrt n).$$
 
 ### 4.4 Derivation
 
@@ -162,14 +162,14 @@ $$\lvert B \rvert \leq \frac{16}{\ln 9}\cdot \frac{C_\ast \sqrt{\alpha\beta}\cdo
 
 **Step 4.4.2 (continuum boundary-band area).** For a disk of continuum perimeter $\mathrm{Per}_{\mathrm{cts}}$, boundary-band area $\approx \mathrm{Per}_{\mathrm{cts}}\cdot \ln 9 \cdot \xi_0$.
 
-**Step 4.4.3 (grid-to-continuum perimeter factor).** On 4-connected 2D grid with Manhattan-taxi metric, $\mathrm{Per}_{\mathrm{edge}} = (2/\pi)\cdot \mathrm{Per}_{\mathrm{cts}}$ in the asymptotic limit (standard discrete geometry, integrating $|\cos\theta| + |\sin\theta|$ over $\theta \in [0,\pi/2]$ gives $4/\pi$, and per-edge counting gives the $2/\pi$ factor). Inverting: $\mathrm{Per}_{\mathrm{cts}} = (\pi/2) \cdot \mathrm{Per}_{\mathrm{edge}}$.
+**Step 4.4.3 (grid-to-continuum perimeter factor).** On 4-connected 2D grid with Manhattan-taxi metric, $\mathrm{Per}_{\mathrm{edge}} = (2/\pi)\cdot \mathrm{Per}_{\mathrm{cts}}$ in the asymptotic limit (standard discrete geometry, integrating $\vert \cos\theta\vert + \vert \sin\theta\vert $ over $\theta \in [0,\pi/2]$ gives $4/\pi$, and per-edge counting gives the $2/\pi$ factor). Inverting: $\mathrm{Per}_{\mathrm{cts}} = (\pi/2) \cdot \mathrm{Per}_{\mathrm{edge}}$.
 
-**Step 4.4.4 (boundary-band site count in grid units).** $|B_{\mathrm{sites}}|$ counts grid sites with $0.1 < u < 0.9$. For tanh profile, $|B_{\mathrm{sites}}| \approx \mathrm{Per}_{\mathrm{cts}}\cdot \ln 9 \cdot \xi_0$ (site density ≈ 1 per unit area in lattice spacing).
+**Step 4.4.4 (boundary-band site count in grid units).** $\vert B_{\mathrm{sites}}\vert $ counts grid sites with $0.1 < u < 0.9$. For tanh profile, $\vert B_{\mathrm{sites}}\vert \approx \mathrm{Per}_{\mathrm{cts}}\cdot \ln 9 \cdot \xi_0$ (site density ≈ 1 per unit area in lattice spacing).
 
 **Step 4.4.5 (ratio).**
-$$\frac{|B_{\mathrm{sites}}|}{\mathrm{Per}_{\mathrm{edge}}} = \frac{\mathrm{Per}_{\mathrm{cts}} \ln 9 \xi_0}{(2/\pi)\mathrm{Per}_{\mathrm{cts}}} = \frac{\pi \ln 9}{2}\cdot \xi_0 \approx 3.449\cdot \xi_0. \square$$
+$$\frac{\vert B_{\mathrm{sites}}\vert}{\mathrm{Per}_{\mathrm{edge}}} = \frac{\mathrm{Per}_{\mathrm{cts}} \ln 9 \xi_0}{(2/\pi)\mathrm{Per}_{\mathrm{cts}}} = \frac{\pi \ln 9}{2}\cdot \xi_0 \approx 3.449\cdot \xi_0. \square$$
 
-**Step 4.4.6 (linear profile alternative).** For linear profile $u(s) = 0.5 - 0.4 s/(\xi_0/2)$ across width $\xi_0$: $|B_{\mathrm{cts}}| \approx 0.8\cdot \mathrm{Per}_{\mathrm{cts}}\cdot \xi_0$, ratio $= (\pi/2)(0.8) = 0.4\pi \approx 1.257$. Empirical edge-ratio for linear profile at grid 512: 2.52. Factor 2 discrepancy — this is because the empirical linear profile in the experiment uses full width $\xi_0$ across $u \in (0.1, 0.9)$, i.e., width $0.8\xi_0$ in the "extended interior 0.1-0.9". Recompute: continuum width $= 0.8 \xi_0 \cdot (\ln 9/2)$? No — need care. For exp_interface_ansatz reported 2.520, the matching constant is $C_{\mathrm{lin}} = 0.8\pi$ per Round 17 §8.4. Agreement: $0.8\pi \approx 2.513$; measured 2.520, 3‰ off. ✓
+**Step 4.4.6 (linear profile alternative).** For linear profile $u(s) = 0.5 - 0.4 s/(\xi_0/2)$ across width $\xi_0$: $\vert B_{\mathrm{cts}}\vert \approx 0.8\cdot \mathrm{Per}_{\mathrm{cts}}\cdot \xi_0$, ratio $= (\pi/2)(0.8) = 0.4\pi \approx 1.257$. Empirical edge-ratio for linear profile at grid 512: 2.52. Factor 2 discrepancy — this is because the empirical linear profile in the experiment uses full width $\xi_0$ across $u \in (0.1, 0.9)$, i.e., width $0.8\xi_0$ in the "extended interior 0.1-0.9". Recompute: continuum width $= 0.8 \xi_0 \cdot (\ln 9/2)$? No — need care. For exp_interface_ansatz reported 2.520, the matching constant is $C_{\mathrm{lin}} = 0.8\pi$ per Round 17 §8.4. Agreement: $0.8\pi \approx 2.513$; measured 2.520, 3‰ off. ✓
 
 ### 4.5 Numerical verification (Round 17 exp_interface_ansatz)
 
@@ -204,7 +204,7 @@ Round 18 exp_alpha_scan_v3: at $(\alpha=2, \beta=80, \xi_0=0.158)$ with sharp K=
 
 ### 5.1 Definitions and scope
 
-Let the unstable spectrum be $\mathcal{S}_u(\beta, \alpha, c) = \{k \in \{2, \ldots, n\} : \mu_k^{\mathrm{bd}} < 0\}$ with $|\mathcal{S}_u| = N_{\mathrm{unst}}$. Let $\widehat{K}(\beta, \alpha, T, c, G)$ be the observed number of formations after short-time instability saturation, formally $\widehat{K} := \langle K_{\mathrm{soft}}(u(t_{\mathrm{emerge}})) \rangle$ averaged over noise realizations. (Here $t_{\mathrm{emerge}}$ is defined in §8.)
+Let the unstable spectrum be $\mathcal{S}_u(\beta, \alpha, c) = \{k \in \{2, \ldots, n\} : \mu_k^{\mathrm{bd}} < 0\}$ with $\vert \mathcal{S}_u\vert = N_{\mathrm{unst}}$. Let $\widehat{K}(\beta, \alpha, T, c, G)$ be the observed number of formations after short-time instability saturation, formally $\widehat{K} := \langle K_{\mathrm{soft}}(u(t_{\mathrm{emerge}})) \rangle$ averaged over noise realizations. (Here $t_{\mathrm{emerge}}$ is defined in §8.)
 
 Three candidate laws:
 
@@ -222,9 +222,9 @@ Unstable modes ($\mu_k^{\mathrm{bd}} < 0$) grow exponentially; stable modes deca
 $$\phi_{p,q}(i, j) = \cos(\pi p (i + 1/2)/L)\cos(\pi q (j + 1/2)/L)$$
 with eigenvalue $\lambda_{p,q} = 4\sin^2(\pi p/(2L)) + 4\sin^2(\pi q/(2L)) \approx \pi^2 (p^2 + q^2)/L^2$ for small $p, q$.
 
-**Step 5.2.3 (unstable mode set as 2D-grid of modes).** The unstable set $\mathcal{S}_u$ consists of $(p,q)$ with $4\alpha \lambda_{p,q} < \beta \lvert W''(c) \rvert$, i.e., $p^2 + q^2 < \beta|W''(c)| L^2 / (4\alpha\pi^2) =: R^2$. Thus $\mathcal{S}_u$ is approximately a quarter-disk of radius $R$ in $(p,q)$-space, giving $N_{\mathrm{unst}} \approx \pi R^2/4$.
+**Step 5.2.3 (unstable mode set as 2D-grid of modes).** The unstable set $\mathcal{S}_u$ consists of $(p,q)$ with $4\alpha \lambda_{p,q} < \beta \lvert W''(c) \rvert$, i.e., $p^2 + q^2 < \beta\vert W''(c)\vert L^2 / (4\alpha\pi^2) =: R^2$. Thus $\mathcal{S}_u$ is approximately a quarter-disk of radius $R$ in $(p,q)$-space, giving $N_{\mathrm{unst}} \approx \pi R^2/4$.
 
-**Step 5.2.4 (spatial-pattern count via amplitude saturation).** At nonlinear saturation, modes with comparable growth rates interact. For a product-form Fiedler mode $\phi_{p,q}$, the saturated pattern has $p$ nodal lines in the $x$-direction and $q$ in the $y$-direction, forming a $p \times q$ grid of bumps. The "characteristic" mode after saturation is the most unstable (largest $|\mu_{p,q}^{\mathrm{bd}}|$) — corresponding to $(p^\ast, q^\ast) = $ the maximum of $\mathcal{S}_u$.
+**Step 5.2.4 (spatial-pattern count via amplitude saturation).** At nonlinear saturation, modes with comparable growth rates interact. For a product-form Fiedler mode $\phi_{p,q}$, the saturated pattern has $p$ nodal lines in the $x$-direction and $q$ in the $y$-direction, forming a $p \times q$ grid of bumps. The "characteristic" mode after saturation is the most unstable (largest $\vert \mu_{p,q}^{\mathrm{bd}}\vert $) — corresponding to $(p^\ast, q^\ast) = $ the maximum of $\mathcal{S}_u$.
 
 Hitting the unstable boundary at typical $(p^\ast, q^\ast)$: number of spatial bumps ≈ $p^\ast q^\ast$. With $(p^\ast)^2 + (q^\ast)^2 = R^2$ and isotropic saturation $p^\ast \sim q^\ast \sim R/\sqrt 2$: bump count $\sim R^2/2 = 2N_{\mathrm{unst}}/\pi$. Cleaner: if a single most-unstable mode $(p^\ast, q^\ast)$ saturates, it creates $p^\ast q^\ast$ bumps; averaged over the quarter-disk, $\langle p q\rangle \sim R^2/(\pi) \cdot (1/2) \approx N_{\mathrm{unst}}/\pi$.
 
@@ -331,7 +331,7 @@ Prefactor $C_{\mathrm{spacing}} \approx 7$: **sketched** — depends on $\epsilo
 
 > **Claim 8.1 (three timescales).** A generic SCC trajectory initialized near $u_{\mathrm{uniform}}$ with small noise passes through three regimes:
 >
-> (a) **Emergence** $t \in [0, t_{\mathrm{emerge}}]$: $u_{\mathrm{uniform}}$ saturates into $\widehat{K}$ formations via Fiedler-mode instability. $t_{\mathrm{emerge}} = O(1/|\mu_{\min}^{\mathrm{bd}}|)$.
+> (a) **Emergence** $t \in [0, t_{\mathrm{emerge}}]$: $u_{\mathrm{uniform}}$ saturates into $\widehat{K}$ formations via Fiedler-mode instability. $t_{\mathrm{emerge}} = O(1/\vert \mu_{\min}^{\mathrm{bd}}\vert)$.
 >
 > (b) **Metastable plateau** $t \in [t_{\mathrm{emerge}}, t_{\mathrm{coarsen}}]$: $K_{\mathrm{soft}}(u(t)) \approx \widehat{K}$, slow mass redistribution. At $T=0$, $t_{\mathrm{coarsen}} = \infty$; at $T>0$, $t_{\mathrm{coarsen}} = \tau_0 \exp(\Delta\mathcal{F}/T)$ (Kramers).
 >
@@ -339,7 +339,7 @@ Prefactor $C_{\mathrm{spacing}} \approx 7$: **sketched** — depends on $\epsilo
 
 ### 8.2 Derivation
 
-**Step 8.2.1 (emergence).** Linearization $\dot a_k = -\mu_k^{\mathrm{bd}} a_k$. For $\mu_k^{\mathrm{bd}} < 0$, $\lvert a_k(t) \rvert = \lvert a_k(0) \rvert\exp(-\mu_k^{\mathrm{bd}} t) = \lvert a_k(0) \rvert\exp(|\mu_k^{\mathrm{bd}}| t)$. Saturation occurs when $a_k = O(1)$: $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/|\mu_{\min}^{\mathrm{bd}}|$, where $\mu_{\min}^{\mathrm{bd}} = \min_{k \in \mathcal{S}_u}\mu_k^{\mathrm{bd}}$ is the most-unstable eigenvalue. At $c = 0.5$ with $\beta = 30, \alpha = 1, n = 8^2 = 64$: $\mu_{\min}^{\mathrm{bd}} \approx -\beta + 4\alpha\lambda_2 \approx -30$, so $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/30 \approx 0.23$ for $\sigma_0 = 0.001$.
+**Step 8.2.1 (emergence).** Linearization $\dot a_k = -\mu_k^{\mathrm{bd}} a_k$. For $\mu_k^{\mathrm{bd}} < 0$, $\lvert a_k(t) \rvert = \lvert a_k(0) \rvert\exp(-\mu_k^{\mathrm{bd}} t) = \lvert a_k(0) \rvert\exp(\vert \mu_k^{\mathrm{bd}}\vert t)$. Saturation occurs when $a_k = O(1)$: $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/\vert \mu_{\min}^{\mathrm{bd}}\vert $, where $\mu_{\min}^{\mathrm{bd}} = \min_{k \in \mathcal{S}_u}\mu_k^{\mathrm{bd}}$ is the most-unstable eigenvalue. At $c = 0.5$ with $\beta = 30, \alpha = 1, n = 8^2 = 64$: $\mu_{\min}^{\mathrm{bd}} \approx -\beta + 4\alpha\lambda_2 \approx -30$, so $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/30 \approx 0.23$ for $\sigma_0 = 0.001$.
 
 **Step 8.2.2 (metastable plateau).** Once in a $\widehat{K}$-formation configuration, the system sits at a local minimum of $\mathcal{E}$. At $T=0$, this is an absorbing state (gradient flow cannot escape). At $T>0$, escape requires barrier crossing. Kramers (canonical T-Kinetic-2 in development, M1_dissolution.md §3): $\tau_{\mathrm{metastable}} = \tau_0 \exp(\Delta\mathcal{F}/T)$.
 

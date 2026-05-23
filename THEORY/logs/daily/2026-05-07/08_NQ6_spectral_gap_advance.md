@@ -92,7 +92,7 @@ This is the sketched bound.
    - These field perturbations live in the joint-formation tangent space.
    - The joint Hessian acts on $(\delta u^t, \delta u^s) \in T \mathcal{F}^K_M \times T \mathcal{F}^K_M$.
 
-   A clean formulation: $\Delta E_\mathrm{form}[\delta u^s | \delta M_{ij}, u_t] \geq \mu_\mathrm{joint} \cdot \lVert \delta u^s_{(j)} \rVert^2$ — energy increment for the $j$-th formation slot deformation. Need to formalize.
+   A clean formulation: $\Delta E_\mathrm{form}[\delta u^s \vert \delta M_{ij}, u_t] \geq \mu_\mathrm{joint} \cdot \lVert \delta u^s_{(j)} \rVert^2$ — energy increment for the $j$-th formation slot deformation. Need to formalize.
 
 3. **Step 3 Boltzmann factor.** The entropic-OT plan is a *constrained* Boltzmann distribution (marginal constraints), not a free one. The naive Boltzmann argument needs adjustment for the marginal constraints — typically a saddle-point / Legendre-transform argument.
 

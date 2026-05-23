@@ -25,7 +25,7 @@ the **theorem + witness** level. Three theory files were mandated.
 - H2: energy gradients span $\ge 3$-dim subspace of $T$;
 - H3: interior simplex,
 
-we have $\mathrm{rank}\, J_e(\lambda_0)\bigr|_{T_{\lambda_0}\Delta^3} = 3$.
+we have $\mathrm{rank}\, J_e(\lambda_0)\bigr\vert _{T_{\lambda_0}\Delta^3} = 3$.
 
 **Corollary RT2.** $e : \Lambda^{\mathrm{reg}} \to \mathbb{R}^4$ is locally an immersion.
 

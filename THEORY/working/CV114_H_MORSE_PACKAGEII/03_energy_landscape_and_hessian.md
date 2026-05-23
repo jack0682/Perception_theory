@@ -113,7 +113,7 @@ T7-Enhanced (Theorem 7 enhanced metastability, hypothesis_tree.md Q3 reference) 
 
 $$\Delta \mathcal E := \mathcal E(\text{saddle}) - \mathcal E(\text{minimum}) > \Delta \mathcal E_0 > 0$$
 
-— a positive barrier. This is essential for Eyring-Kramers (the Arrhenius exponent $\exp(-\Delta\mathcal E/T_*)$), but it says **nothing** about nondegeneracy of the saddle Hessian. A degenerate saddle still has a barrier height but the EK prefactor (involving $|\det H^\mathrm{proj}|^{1/2}$ at the saddle) becomes singular or undefined.
+— a positive barrier. This is essential for Eyring-Kramers (the Arrhenius exponent $\exp(-\Delta\mathcal E/T_*)$), but it says **nothing** about nondegeneracy of the saddle Hessian. A degenerate saddle still has a barrier height but the EK prefactor (involving $\vert \det H^\mathrm{proj}\vert ^{1/2}$ at the saddle) becomes singular or undefined.
 
 **Conclusion:** T7-Enhanced gates the Arrhenius exponent; H-MORSE gates the prefactor. They are independent.
 

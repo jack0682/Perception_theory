@@ -49,7 +49,7 @@ Each partition corresponds to "which modes contribute to formation 1 vs 2 vs ...
 
 For $N = N_{\mathrm{unst}}^{\mathrm{bd}}(\beta)$ active modes, partitions into $K$ nonempty blocks: Stirling number $S(N, K)$.
 
-**Modulo $\mathrm{Aut}(G)$ and $S_K$:** many partitions are equivalent. Reduced count $\sim S(N, K)/(|\mathrm{Aut}| \cdot K!)$.
+**Modulo $\mathrm{Aut}(G)$ and $S_K$:** many partitions are equivalent. Reduced count $\sim S(N, K)/(\vert \mathrm{Aut}\vert \cdot K!)$.
 
 ---
 
@@ -71,7 +71,7 @@ Once $\beta$ exceeds the K-th cascade threshold, K-formation configurations beco
 ### 3.3 Growth with $\beta$
 
 At $\beta$ in the moderate regime:
-$$c_0^{(K)}(\beta) \sim |\mathcal{M}_K(\beta)| \sim |\mathcal{M}_1|^K/(K!|\mathrm{Aut}|^{K-1})$$
+$$c_0^{(K)}(\beta) \sim \vert \mathcal{M}_K(\beta)\vert \sim \vert \mathcal{M}_1\vert ^K/(K!\vert \mathrm{Aut}\vert ^{K-1})$$
 
 (approximate — valid for well-separated non-interacting formations; more precise via R11 orbit enumeration).
 
@@ -80,7 +80,7 @@ $$c_0^{(K)}(\beta) \sim |\mathcal{M}_K(\beta)| \sim |\mathcal{M}_1|^K/(K!|\mathr
 > **$c_0^{(K)}$ Bracket (Round 13, Cat A structural).** At moderate $\beta$:
 > $$\mathrm{Lower}_K(\beta) \leq c_0^{(K)}(\beta) \leq \mathrm{Upper}_K(\beta),$$
 > where
-> $$\mathrm{Lower}_K(\beta) := \binom{|\mathcal{M}_1(\beta)|}{K}\cdot \mathbf{1}[\beta > \beta_{\mathrm{sec},K}],\qquad \mathrm{Upper}_K(\beta) := c_0(\beta)^K/K!.$$
+> $$\mathrm{Lower}_K(\beta) := \binom{\vert \mathcal{M}_1(\beta)\vert}{K}\cdot \mathbf{1}[\beta > \beta_{\mathrm{sec},K}],\qquad \mathrm{Upper}_K(\beta) := c_0(\beta)^K/K!.$$
 
 **Interpretation:**
 - Lower bound: K distinct K=1 minima independently chosen.
@@ -94,7 +94,7 @@ $$c_0^{(K)}(\beta) \sim |\mathcal{M}_K(\beta)| \sim |\mathcal{M}_1|^K/(K!|\mathr
 
 ### 4.1 $c_0^{(2)}$ on 2D square grid (free BC)
 
-From R11: $|\mathcal{M}_2| = O(L^3)$ well-separated orbit classes.
+From R11: $\vert \mathcal{M}_2\vert = O(L^3)$ well-separated orbit classes.
 
 At $\beta$ just above $\beta^{\mathrm{sec}}_{1 \to 2}$: single K=2 orbit (axis-pair, optimal distance $d_{\min}^\ast(\beta)$). $c_0^{(2)}(\beta^{\mathrm{sec}}) = 1$.
 
@@ -108,7 +108,7 @@ At higher $\beta$: multiple K=2 orbits active (different separation $d$, differe
 
 From R11: $\mathcal{M}_2(T^2) = T^2/D_4$, 2-dim continuous moduli. Orbit classes within fundamental domain form a continuum.
 
-**After discretization:** $|\mathcal{M}_2(T^2, \text{lattice})| \sim L^2$ (discrete lattice points in fundamental domain).
+**After discretization:** $\vert \mathcal{M}_2(T^2, \text{lattice})\vert \sim L^2$ (discrete lattice points in fundamental domain).
 
 **Bracket:** $c_0^{(2)}(T^2; \beta) \in [1, O(L^2)]$.
 
@@ -135,7 +135,7 @@ At large $\beta$, K-formation configs undergo saddle-node collisions → count s
 For 2D grid: $K$ disks of radius $\sqrt{m/(\pi K)}$ each; positions in $L^2$ domain; pairwise distances $d \geq 2r = O(\sqrt{m/K})$. Count of such configs: $O(L^{2K}/K!)$ modulo $\mathrm{Aut}$.
 
 Thus:
-$$c_0^{(K)}(\beta \to \infty) \sim \frac{L^{2(K-1)}}{K!} \cdot |\mathrm{Aut}(G)|^{-1}.$$
+$$c_0^{(K)}(\beta \to \infty) \sim \frac{L^{2(K-1)}}{K!} \cdot \vert \mathrm{Aut}(G)\vert ^{-1}.$$
 
 Wait, this grows with $K$. Crosscheck: $c_0^{\mathrm{total}}(\infty) = \sum_K c_0^{(K)}(\infty) \sim \sum_K L^{2(K-1)}/K! \sim e^{L^2}/L^2$? Probably incorrect; need the actual Γ-convergence analysis.
 
@@ -143,7 +143,7 @@ Actually T11 says perimeter-minimizing configs are indexed by disjoint disks; th
 
 **Implication:** For K ≥ 2, the K-formation configs are NOT global minima at saturation; they are **metastable** local minima. $c_0^{(K)}(\beta \to \infty)$ counts local minima including these metastable configs.
 
-Revised estimate: $c_0^{(K)} \sim L^{2(K-1)}/K! \cdot |\mathrm{Aut}|^{-1}$ at saturation, but these are metastable. Relaxation to K=1 via Arrhenius $e^{-\Delta\mathcal{F}/T}$ barrier.
+Revised estimate: $c_0^{(K)} \sim L^{2(K-1)}/K! \cdot \vert \mathrm{Aut}\vert ^{-1}$ at saturation, but these are metastable. Relaxation to K=1 via Arrhenius $e^{-\Delta\mathcal{F}/T}$ barrier.
 
 ### 5.2 Total count
 
@@ -158,7 +158,7 @@ where $K_{\max}$ = maximum K such that K disjoint disks fit in the graph. For 2D
 > **Hyp. Thm. 4.1*-K (Round 13, Cat A structural).** For each K ≥ 1:
 > - (A-K) Euler sub-sum: $\sum_k (-1)^k c_k^{(K)}$ = Euler characteristic of K-formation critical submanifold.
 > - (B-K) $c_{N^{\mathrm{full}}(u^\ast_K)}^{(K)} \geq 1$ via existence of $u^\ast_K$ (R12 Lyapunov-Schmidt).
-> - (C-K) $c_0^{(K)}(\beta) \geq |\mathcal{M}_K(\beta)|_{\mathrm{min-orbit}}$ via R11 enumeration + R12 Hessian sign.
+> - (C-K) $c_0^{(K)}(\beta) \geq \vert \mathcal{M}_K(\beta)\vert _{\mathrm{min-orbit}}$ via R11 enumeration + R12 Hessian sign.
 > - (D-K) $c_0^{(K)}(\beta \to \infty) = O(L^{2(K-1)})$ via isoperimetric on 2D grid.
 
 **Category: Cat A structural**.
@@ -173,7 +173,7 @@ where $K_{\max}$ = maximum K such that K disjoint disks fit in the graph. For 2D
 
 2. **Partition-based cascade formula** — Stirling numbers + Aut + $S_K$ quotient.
 
-3. **Lower/upper bracket**: $\binom{|\mathcal{M}_1|}{K} \leq c_0^{(K)} \leq c_0^{(1)K}/K!$ (moderate $\beta$).
+3. **Lower/upper bracket**: $\binom{\vert \mathcal{M}_1\vert}{K} \leq c_0^{(K)} \leq c_0^{(1)K}/K!$ (moderate $\beta$).
 
 4. **$K = 2$ specific values**: $c_0^{(2)}(2\text{D square, moderate }\beta) = O(L^3)$ vs $c_0^{(1)} = O(L)$; ratio $O(L)$.
 

@@ -191,8 +191,8 @@ where $c_G(K) = \inf_{K \cap \Sigma_{T8}} \sqrt{16\lambda_2^2 + W''(c)^2 + 144\b
 **Verification Layers (most complex of all S1-S4)**:
 1. **Layer 1 — Formula verification**:
    - $\nabla_\Theta \mu_2 = (4\lambda_2, W''(c), \beta W'''(c))$ where $W'''(c) = 12(2c-1)$
-   - $|\nabla_\Theta \mu_2|^2 = 16\lambda_2^2 + W''(c)^2 + 144\beta^2(2c-1)^2$ ✓ verified
-   - IFT: $|\mu_2(\Theta)| \geq |\nabla_\Theta \mu_2| \cdot d - O(d^2)$ → linear scaling ✓
+   - $\vert \nabla_\Theta \mu_2\vert ^2 = 16\lambda_2^2 + W''(c)^2 + 144\beta^2(2c-1)^2$ ✓ verified
+   - IFT: $\vert \mu_2(\Theta)\vert \geq \vert \nabla_\Theta \mu_2\vert \cdot d - O(d^2)$ → linear scaling ✓
 2. **Layer 2 — Worked example verification**:
    - 2D torus L=16, c=1/2, β=1:
      - $\lambda_2 = 4\sin^2(\pi/16) \approx 0.1522$
@@ -206,7 +206,7 @@ where $c_G(K) = \inf_{K \cap \Sigma_{T8}} \sqrt{16\lambda_2^2 + W''(c)^2 + 144\b
    - **(H-S1-b)** $c$ bounded away from spinodal boundary $(3 \pm \sqrt{3})/6$: when $W''(c) \to 0$, Łojasiewicz exponent drops from 1 to 2/3 — linear bound FAILS
    - **(H-S1-c)** Non-degenerate Fiedler: for $\mathrm{mult}(\lambda_2) \geq 2$, kernel is multi-dim, need Kato perturbation theory
 4. **Layer 4 — Validity radius**:
-   - $d_{\max}(K) = c_G/|H_\mu|_{op}$ where $|H_\mu|_{op} \leq \sqrt{576\beta^2 + 144}$
+   - $d_{\max}(K) = c_G/\vert H_\mu\vert _{op}$ where $\vert H_\mu\vert _{op} \leq \sqrt{576\beta^2 + 144}$
    - For β=1: $d_{\max} \approx 1.17/\sqrt{720} \approx 0.044$
    - Phase 5 stated $0.08$, math-olympiad $0.04$ — another factor-2 discrepancy
    - **Resolution needed**: Reconcile $d_{\max}$ estimates

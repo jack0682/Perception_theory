@@ -56,7 +56,7 @@ V5b family
 ```
 
 **관찰**: V5b family 가 Day 2에서는 3개 (T, T', F)였고 Day 3에 **regime/topology gradient** 가 더 명확화됨. 그러나 V5b-T'와 V5b-F의 **scaling difference** 가 처음 인식됨 (`07_*` §5):
-- V5b-F: $\mu \propto |\partial S|/n$ (finite-size collective)
+- V5b-F: $\mu \propto \vert \partial S\vert /n$ (finite-size collective)
 - V5b-T' (untested): possibly $\mu \approx $ const (continuum-Goldstone-like)
 
 이 분화는 **단일 PN-barrier formula** 가설 (`2026-04-28/11_*` §4) 을 약화시킴. Cat A unified formula는 더 어려운 목표가 됨.

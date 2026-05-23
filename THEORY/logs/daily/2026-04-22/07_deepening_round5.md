@@ -29,9 +29,9 @@ Round 5 closes both.
 This round covers:
 - **Formal definition** of "continuum-limit graph family" and the Aut-inflation to a continuous group.
 - **Morse-Bott replacement** of Morse when critical sets are positive-dimensional manifolds.
-- **Precise $D_n$-lock-in scaling** on $C_n$: $\Delta F_{\mathrm{lock-in}} \sim |\mu|^{n/2}$ (or $|\mu|^n$ for odd $n$ at $c = 1/2$).
+- **Precise $D_n$-lock-in scaling** on $C_n$: $\Delta F_{\mathrm{lock-in}} \sim \vert \mu\vert ^{n/2}$ (or $\vert \mu\vert ^n$ for odd $n$ at $c = 1/2$).
 - **Prop 1.3a Bott-refinement:** Morse-Bott index on continuous-Aut graphs.
-- **$\mathcal{M}_1$ topology** as an invariant finer than $|\mathcal{M}_1|$.
+- **$\mathcal{M}_1$ topology** as an invariant finer than $\vert \mathcal{M}_1\vert $.
 - **Conjecture 2.1 prefactor** correction from continuous-moduli volume.
 
 This round does NOT cover:
@@ -61,7 +61,7 @@ This round does NOT cover:
 | $K_n$ | $n$-simplex? | $S_n$ | — (singular limit) |
 | 3D torus $C_L^3$ | Flat $T^3$ | $S_4 \ltimes (\mathbb Z_L)^3$ | $S_4 \ltimes T^3$ |
 
-**Key observation:** The enlargement $|\mathrm{Aut}(G_n)| \to |\mathrm{Iso}(M)|$ happens only for graph families with **translation-or-rotation symmetry**. The 2D square (free BC) has no enlargement: $\lvert D_4 \rvert = 8$ finite, preserved.
+**Key observation:** The enlargement $\vert \mathrm{Aut}(G_n)\vert \to \vert \mathrm{Iso}(M)\vert $ happens only for graph families with **translation-or-rotation symmetry**. The 2D square (free BC) has no enlargement: $\lvert D_4 \rvert = 8$ finite, preserved.
 
 ### 2.3 What "continuous-Aut" means operationally
 
@@ -82,7 +82,7 @@ When $\mathrm{Iso}_0(M)$ is positive-dimensional and acts on $\Sigma_m$, a criti
 Standard Morse theory requires isolated critical points with non-degenerate Hessian. **Morse-Bott theory** (Bott 1954) relaxes to:
 - Critical set $\mathrm{Crit} = \bigsqcup_\alpha N_\alpha$ where each $N_\alpha$ is a smooth submanifold.
 - Hessian $H(u^\ast)$ for $u^\ast \in N_\alpha$ is **non-degenerate on $(T_{u^\ast} N_\alpha)^\perp$**.
-- Morse-Bott index: $\dim$ of negative-eigenvalue subspace of $H(u^\ast)|_{(T_{u^\ast}N_\alpha)^\perp}$.
+- Morse-Bott index: $\dim$ of negative-eigenvalue subspace of $H(u^\ast)\vert _{(T_{u^\ast}N_\alpha)^\perp}$.
 
 ### 3.2 Application to SCC energy
 
@@ -146,41 +146,41 @@ $$F(r, \theta) = F_4(r) + \Lambda_n \cdot r^{p(n)} \cos(p(n) \theta / n \cdot n)
 where
 $$p(n) = \begin{cases} n & n \text{ even} \\ 2n & n \text{ odd at } c = 1/2 \end{cases}$$
 
-The coefficient $\Lambda_n$ arises from **Lyapunov-Schmidt reduction**: integrating out non-Fiedler modes (modes at $\lambda_k > \lambda_2$) gives an effective $D_n$-anisotropic contribution at order $r^{p(n)}$. Generically, $|\Lambda_n| > 0$.
+The coefficient $\Lambda_n$ arises from **Lyapunov-Schmidt reduction**: integrating out non-Fiedler modes (modes at $\lambda_k > \lambda_2$) gives an effective $D_n$-anisotropic contribution at order $r^{p(n)}$. Generically, $\vert \Lambda_n\vert > 0$.
 
 ### 4.4 Lock-in energy at critical
 
 At the minimum $r^\ast = \sqrt{-\mu/(6\Lambda)}$:
-$$\Delta F_{\mathrm{lock-in}} = |\Lambda_n| \cdot (r^\ast)^{p(n)} = |\Lambda_n| \cdot \left(\frac{-\mu}{6\Lambda}\right)^{p(n)/2} \sim |\mu|^{p(n)/2}.$$
+$$\Delta F_{\mathrm{lock-in}} = \vert \Lambda_n\vert \cdot (r^\ast)^{p(n)} = \vert \Lambda_n\vert \cdot \left(\frac{-\mu}{6\Lambda}\right)^{p(n)/2} \sim \vert \mu\vert ^{p(n)/2}.$$
 
-**Scaling in $|\mu|$:**
-- $n = 4$: $|\mu|^2$ (quartic, already appears in Round 4 quartic if $n = 4$ is within the anisotropic regime).
-- $n = 5$: $|\mu|^5$ (decic via $p(5) = 10$).
-- $n = 6$: $|\mu|^3$ (sextic, $p(6) = 6$).
-- $n = 8$: $|\mu|^4$ (octic).
-- $n = 10$: $|\mu|^5$ (decic).
-- $n \to \infty$: $|\Delta F_{\mathrm{lock-in}}| \to 0$ exponentially fast in $n$ for fixed $|\mu|$.
+**Scaling in $\vert \mu\vert $:**
+- $n = 4$: $\vert \mu\vert ^2$ (quartic, already appears in Round 4 quartic if $n = 4$ is within the anisotropic regime).
+- $n = 5$: $\vert \mu\vert ^5$ (decic via $p(5) = 10$).
+- $n = 6$: $\vert \mu\vert ^3$ (sextic, $p(6) = 6$).
+- $n = 8$: $\vert \mu\vert ^4$ (octic).
+- $n = 10$: $\vert \mu\vert ^5$ (decic).
+- $n \to \infty$: $\vert \Delta F_{\mathrm{lock-in}}\vert \to 0$ exponentially fast in $n$ for fixed $\vert \mu\vert $.
 
-**Interpretation:** The lock-in scale $|\mu|^{p(n)/2}$ shrinks as $n$ grows, so the Goldstone direction becomes effectively continuous for large $n$.
+**Interpretation:** The lock-in scale $\vert \mu\vert ^{p(n)/2}$ shrinks as $n$ grows, so the Goldstone direction becomes effectively continuous for large $n$.
 
 ### 4.5 Goldstone mass
 
 At a lock-in minimum (say $\theta = 0$, $\cos(n\theta) = 1$, $\Lambda_n < 0$):
-$$\text{Goldstone mass}^2 = \partial_\theta^2 F|_{\theta=0} = -\Lambda_n \cdot p(n)^2 \cdot (r^\ast)^{p(n)} \sim |\mu|^{p(n)/2}.$$
+$$\text{Goldstone mass}^2 = \partial_\theta^2 F\vert _{\theta=0} = -\Lambda_n \cdot p(n)^2 \cdot (r^\ast)^{p(n)} \sim \vert \mu\vert ^{p(n)/2}.$$
 
-**So the Goldstone acquires a small "mass"** $\sim |\mu|^{p(n)/4}$ at finite $n$, and becomes massless only in the $n \to \infty$ continuum limit.
+**So the Goldstone acquires a small "mass"** $\sim \vert \mu\vert ^{p(n)/4}$ at finite $n$, and becomes massless only in the $n \to \infty$ continuum limit.
 
 ### 4.6 Summary theorem
 
-> **$C_n$ Lock-In Theorem (Round 5, Cat A).** Let $C_n$ at $c = 1/2$, $\mu := \beta_{\mathrm{crit}}^{(2)} - \beta|W''(c)|/4\alpha\lambda_2$ (near-critical scaling). The reduced Lyapunov is
+> **$C_n$ Lock-In Theorem (Round 5, Cat A).** Let $C_n$ at $c = 1/2$, $\mu := \beta_{\mathrm{crit}}^{(2)} - \beta\vert W''(c)\vert /4\alpha\lambda_2$ (near-critical scaling). The reduced Lyapunov is
 > $$F(r, \theta) = \tfrac{\mu}{2}r^2 + \tfrac{3\Lambda}{2}r^4 + \Lambda_n r^{p(n)}\cos(p(n)\theta) + O(r^{p(n)+2}),$$
 > with $p(n) = n$ for even $n$ and $p(n) = 2n$ for odd $n$ at $c = 1/2$.
 > - The $O(2)$-invariant part gives a circle of degenerate quartic minima.
 > - The $\Lambda_n$ term breaks $O(2)$ to $D_n$, locking to $2p(n)/n$ discrete standing-wave minima.
-> - Lock-in energy scale: $\Delta F \sim |\mu|^{p(n)/2}$.
-> - Goldstone mass: $m_G^2 \sim |\mu|^{p(n)/2}$, vanishing in $n \to \infty$.
+> - Lock-in energy scale: $\Delta F \sim \vert \mu\vert ^{p(n)/2}$.
+> - Goldstone mass: $m_G^2 \sim \vert \mu\vert ^{p(n)/2}$, vanishing in $n \to \infty$.
 
-**Category: Cat A structural** — $D_n$-invariant polynomial classification + parity arguments. Coefficient $\Lambda_n$ explicit computation not needed (generic $|\Lambda_n| > 0$ sufficient for structural claim).
+**Category: Cat A structural** — $D_n$-invariant polynomial classification + parity arguments. Coefficient $\Lambda_n$ explicit computation not needed (generic $\vert \Lambda_n\vert > 0$ sufficient for structural claim).
 
 ---
 
@@ -262,9 +262,9 @@ Practical implication for numerical validation: `exp_mode_emergence.py` (from C'
 
 1. **Prop 1.3a-Bott (continuous-Aut Morse-Bott refinement).** Critical manifolds $N_\alpha$ with Morse-Bott index and orbit-stabilizer dim counting.
 
-2. **$C_n$ Lock-In Theorem.** Leading-order $D_n$-anisotropy at order $r^{p(n)}$ with $p(n) = n$ (even $n$) or $2n$ (odd $n$ at $c = 1/2$); lock-in scale $|\mu|^{p(n)/2}$.
+2. **$C_n$ Lock-In Theorem.** Leading-order $D_n$-anisotropy at order $r^{p(n)}$ with $p(n) = n$ (even $n$) or $2n$ (odd $n$ at $c = 1/2$); lock-in scale $\vert \mu\vert ^{p(n)/2}$.
 
-3. **$\mathcal{M}_1$ topology invariant.** $\dim_{\mathrm{moduli}}$ + $\mathrm{Vol}(N_1)$ classification distinguishes discrete- vs continuous-Aut graphs beyond the $|\mathcal{M}_1|$ cardinality.
+3. **$\mathcal{M}_1$ topology invariant.** $\dim_{\mathrm{moduli}}$ + $\mathrm{Vol}(N_1)$ classification distinguishes discrete- vs continuous-Aut graphs beyond the $\vert \mathcal{M}_1\vert $ cardinality.
 
 4. **Conjecture 2.1-Bott (continuous-Aut refinement).** $\widehat K$ prefactor modified by orbit volume, giving extensive-in-$L$ scaling on torus.
 

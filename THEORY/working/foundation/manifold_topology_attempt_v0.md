@@ -73,10 +73,10 @@ $$\Gamma(f, g) = T_* \nabla f \cdot \nabla g$$
 ### §2.2 Γ_2 calculation (corrected sign)
 
 **Lemma 2.1 (Γ_2 explicit).** For $L = -\nabla \mathcal{E} \cdot \nabla + T_* \Delta$ on $\tilde{C} \subset \mathbb{R}^{n-1}$ (T-PF-A1-AR Cat A affine chart):
-$$\Gamma_2(f) = T_*^2 |\mathrm{Hess}(f)|_{HS}^2 + T_* \langle \nabla^2 \mathcal{E} \cdot \nabla f, \nabla f \rangle$$
+$$\Gamma_2(f) = T_*^2 \vert \mathrm{Hess}(f)\vert _{HS}^2 + T_* \langle \nabla^2 \mathcal{E} \cdot \nabla f, \nabla f \rangle$$
 
 **Proof.** BGL 2014, Example 2.3.2 (overdamped Langevin Γ_2). For drift $b = -\nabla\mathcal{E}$, the Bochner-Weitzenböck identity gives:
-$$\Gamma_2(f) = T_*^2|\mathrm{Hess}(f)|_{HS}^2 + T_* \cdot \mathrm{sym}(-\mathrm{Jac}(b))[\nabla f, \nabla f]$$
+$$\Gamma_2(f) = T_*^2\vert \mathrm{Hess}(f)\vert _{HS}^2 + T_* \cdot \mathrm{sym}(-\mathrm{Jac}(b))[\nabla f, \nabla f]$$
 where $\mathrm{sym}(-\mathrm{Jac}(b)) = \mathrm{sym}(\nabla^2 \mathcal{E}) = \nabla^2 \mathcal{E}$ (symmetric by smoothness). $\square$
 
 ### §2.3 CD(ρ, ∞) condition (corrected — no T_* on RHS in BGL convention)
@@ -84,7 +84,7 @@ where $\mathrm{sym}(-\mathrm{Jac}(b)) = \mathrm{sym}(\nabla^2 \mathcal{E}) = \na
 **Definition 2.2 (BGL convention CD).** The Langevin SDE satisfies $\mathrm{CD}(\rho, \infty)$ iff:
 $$\Gamma_2(f) \geq \rho \cdot \Gamma(f, f)$$
 for all smooth $f$. Equivalently (using Lemma 2.1):
-$$T_*^2 |\mathrm{Hess}(f)|^2 + T_* \langle \nabla^2 \mathcal{E} \cdot \nabla f, \nabla f\rangle \geq \rho T_* |\nabla f|^2$$
+$$T_*^2 \vert \mathrm{Hess}(f)\vert ^2 + T_* \langle \nabla^2 \mathcal{E} \cdot \nabla f, \nabla f\rangle \geq \rho T_* \vert \nabla f\vert ^2$$
 
 Choosing $f$ linear (Hess = 0):
 $$\langle \nabla^2 \mathcal{E} \cdot v, v\rangle \geq \rho \lvert v \rvert^2 \quad \forall v$$
@@ -96,8 +96,8 @@ So the *correct* CD condition: $\boxed{\nabla^2 \mathcal{E} \geq \rho \cdot I}$ 
 ### §2.4 W_SCC definition (BGL-consistent)
 
 **Definition 2.3.** For probability measure $\mu = \rho \cdot \pi_{T_*}$ on $\tilde{C}$ and $\tau > 0$:
-$$\mathcal{W}_{\mathrm{SCC}}(\mu, \tau) := \tau \cdot I(\mu | \pi_{T_*}) - T_* \cdot H(\mu | \pi_{T_*})$$
-where $I = \int \rho |\nabla \log\rho|^2 d\pi_{T_*}$, $H = \int \rho \log\rho\,d\pi_{T_*}$.
+$$\mathcal{W}_{\mathrm{SCC}}(\mu, \tau) := \tau \cdot I(\mu \vert \pi_{T_*}) - T_* \cdot H(\mu \vert \pi_{T_*})$$
+where $I = \int \rho \vert \nabla \log\rho\vert ^2 d\pi_{T_*}$, $H = \int \rho \log\rho\,d\pi_{T_*}$.
 
 (*Note*: 이전 agent 정의 `τ·I/T_* - H` 에서 normalization 조정. 결과 dimensionally consistent.)
 
@@ -113,8 +113,8 @@ For $\tau \geq 1/(2\rho_0)$: $d\mathcal{W}_{\mathrm{SCC}}/dt \leq 0$.
 ### §2.6 Failure mode on Σ_T8 (Critic interp A clarification)
 
 **Theorem FAIL.** On $\Sigma_{T8}$ (specifically at uniform critical sheet $u = c\mathbf{1}$):
-- (a) $\nabla^2 \mathcal{E}_{bd}(c\mathbf{1})|_{T\Sigma_m} \geq 0$ (PSD), with Fiedler direction $\phi_2$ giving exact zero eigenvalue
-- (b) For any $\rho_0 > 0$: $\mathrm{CD}(\rho_0, \infty)$ fails *pointwise on $\Sigma_{T8}$* because $\langle\nabla^2\mathcal{E}\,\phi_2,\phi_2\rangle = 0 < \rho_0 |\phi_2|^2$
+- (a) $\nabla^2 \mathcal{E}_{bd}(c\mathbf{1})\vert _{T\Sigma_m} \geq 0$ (PSD), with Fiedler direction $\phi_2$ giving exact zero eigenvalue
+- (b) For any $\rho_0 > 0$: $\mathrm{CD}(\rho_0, \infty)$ fails *pointwise on $\Sigma_{T8}$* because $\langle\nabla^2\mathcal{E}\,\phi_2,\phi_2\rangle = 0 < \rho_0 \vert \phi_2\vert ^2$
 - (c) **Critic ambiguity resolution**: CD failure is *pointwise on $\Sigma_{T8}$*, NOT *in neighborhood*. In bulk neighborhood, $\rho_0 > 0$ holds — this is the content of §2.7 (distance-controlled).
 
 **Critic finding #5 corrected**: previous statement `"on Σ_T8: CD(0,∞) holds but CD(ρ_0>0,∞) FAILS"` was ambiguous (Interpretation A pointwise vs B neighborhood). The correct reading is **Interpretation A (pointwise on Σ_T8)**. In open complement of Σ_T8, CD holds with $\rho_0 > 0$ depending on distance — §2.7.
@@ -168,7 +168,7 @@ Parameter space: $\mathcal{P} = \mathbb{R}^4_{>0} \times I_{sp}$, $\dim = 5$. Σ
 ### §3.2 Stratification by Goldstone kernel dim
 
 **Definition 3.1.** For $k \geq 1$:
-$$\Sigma_{T8}^{(k)} := \{(G, \Theta, u^*) \in \Sigma_{T8} : \dim \ker(\mathrm{Hess}(\mathcal{E}_\Theta)(u^*)|_{T\Sigma_m}) = k\}$$
+$$\Sigma_{T8}^{(k)} := \{(G, \Theta, u^*) \in \Sigma_{T8} : \dim \ker(\mathrm{Hess}(\mathcal{E}_\Theta)(u^*)\vert _{T\Sigma_m}) = k\}$$
 
 ### §3.3 Codimension formula (corrected with miniversal hypothesis)
 
@@ -464,7 +464,7 @@ Three new structural items:
 
 ### §7.4 H5 location
 
-H5 sits at **exactly one place**: the failure of CD($\rho_0 > 0$, ∞) along the Goldstone direction on $\Sigma_{T8}^{(k)}$. Formally: $\ker \nabla^2 \mathcal{E}_\Theta|_{\Sigma_{T8}^{(k)}}$ is the $k$-dim Aut(G)-submodule on which Bakry-Émery curvature is exactly zero. This is the **sole** residual under assembly map μ.
+H5 sits at **exactly one place**: the failure of CD($\rho_0 > 0$, ∞) along the Goldstone direction on $\Sigma_{T8}^{(k)}$. Formally: $\ker \nabla^2 \mathcal{E}_\Theta\vert _{\Sigma_{T8}^{(k)}}$ is the $k$-dim Aut(G)-submodule on which Bakry-Émery curvature is exactly zero. This is the **sole** residual under assembly map μ.
 
 H5 is therefore not "missing" — it is **localized to a codim-$(k(k+1)/2-1)$ stratum and identified as Goldstone curvature vanishing**.
 
