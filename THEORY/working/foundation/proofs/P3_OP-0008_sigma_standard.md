@@ -46,7 +46,7 @@
 | Lemma | Self-Cat | Conditional on |
 |---|---|---|
 | L_a1 (block decomposition) | Cat A | well-separated regime, $d_{\mathrm{inter}} \geq D_{\mathrm{sep}} \geq 3$ |
-| L_a2 (Kato convergence) | Cat A | $\|V_{\mathrm{coup}}\|_F < \delta_{\min}/2$ |
+| L_a2 (Kato convergence) | Cat A | $\lVert V_{\mathrm{coup}} \rVert_F < \delta_{\min}/2$ |
 | L_a3 (explicit expansion) | Cat A | L_a1 + L_a2 |
 | L_a4 (Kato route synthesis) | Cat A | $\mathcal{D}_a$ regime |
 | L_b1 (GOE setup) | Cat B | $\mathrm{Aut}(G) = \{e\}$, n moderate (≥ 20) |
@@ -70,7 +70,7 @@ $$\sigma_{\mathrm{std}}(C_j^t) := \mathrm{sort}_{\downarrow}\bigl(\mathrm{spec}(
 
 여기서:
 - $H_{jj}(u^{(j)*}) = \nabla^2 \mathcal{E}_K(\mathbf{u}^*)|_{jj\text{-block}}$ — formation $j$ 의 self-Hessian block.
-- $n_j = |\mathrm{supp}(u^{(j)})| = |C_j^t|$ — formation $j$ 의 node 수.
+- $n_j = |\mathrm{supp}(u^{(j)})| = \lvert C_j^t \rvert$ — formation $j$ 의 node 수.
 - $\mathrm{sort}_{\downarrow}$ — 내림차순 정렬 (Commitment 14 (O5')).
 - well-separated regime 에서 Coupling Bound Lemma (`canonical.md §12`) 에 의해 $H_{jj} = H_{\mathrm{single}}(u^{(j)*}) + O(\exp(-c_0 D_{\mathrm{sep}}))$.
 
@@ -92,7 +92,7 @@ $$V_{\mathrm{coup}} := H_{\mathrm{pre}} - H_0 = \begin{pmatrix} 0 & V_{12} \\ V_
 
 **Frobenius norm bound** (Coupling Bound Lemma, `canonical.md §12` Item 6):
 
-$$\|V_{\mathrm{coup}}\|_F \leq \lambda_{\mathrm{rep}} \cdot c \cdot e^{-c_0 \cdot d_{\mathrm{inter}}}$$
+$$\lVert V_{\mathrm{coup}} \rVert_F \leq \lambda_{\mathrm{rep}} \cdot c \cdot e^{-c_0 \cdot d_{\mathrm{inter}}}$$
 
 with:
 - $d_{\mathrm{inter}} := d_G(\mathrm{core}(u^{(1)}), \mathrm{core}(u^{(2)}))$ — minimum graph distance between PersComp supports.
@@ -116,7 +116,7 @@ via Kato resolvent expansion (Reed-Simon IV §XIII.5, Kato 1995 Theorem IV-3.6).
 ### §1.4 Route (b) RMT distributional map $\Phi_{\mathrm{Wigner}}$
 
 Define:
-$$\Phi_{\mathrm{Wigner}} : (\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \|V_{\mathrm{coup}}\|_F) \mapsto \mathbb{E}_{\mathrm{GOE}}[\sigma^{\mathrm{merged, RMT}}]$$
+$$\Phi_{\mathrm{Wigner}} : (\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \lVert V_{\mathrm{coup}} \rVert_F) \mapsto \mathbb{E}_{\mathrm{GOE}}[\sigma^{\mathrm{merged, RMT}}]$$
 
 via Wigner-Dyson level repulsion + semicircle law + self-averaging (Anderson-Guionnet-Zeitouni 2010 Theorem 2.1.1 + 4.3.24, Mehta 2004 Ch. 6). §4 에서 명시적 형태 도출.
 
@@ -124,7 +124,7 @@ via Wigner-Dyson level repulsion + semicircle law + self-averaging (Anderson-Gui
 
 Define two open conditions:
 - $\mathcal{D}_a := \{(d_{\mathrm{inter}}, \delta_{\min}) : \lambda_{\mathrm{rep}} \cdot e^{-c_0 d_{\mathrm{inter}}} < \delta_{\min}/2\}$ — Kato perturbative convergence.
-- $\mathcal{D}_b := \{(n_1, n_2, \|V_{\mathrm{coup}}\|_F) : n_{\mathrm{merged}} := n_1 + n_2 \gg 1, \|V_{\mathrm{coup}}\|_F / \sqrt{n_{\mathrm{merged}}} \leq \mathrm{const}\}$ — RMT self-averaging activation.
+- $\mathcal{D}_b := \{(n_1, n_2, \lVert V_{\mathrm{coup}} \rVert_F) : n_{\mathrm{merged}} := n_1 + n_2 \gg 1, \lVert V_{\mathrm{coup}} \rVert_F / \sqrt{n_{\mathrm{merged}}} \leq \mathrm{const}\}$ — RMT self-averaging activation.
 
 Convergence regime:
 $$\mathcal{D}_{\mathrm{conv}} := \mathcal{D}_a \cap \mathcal{D}_b = \{d_{\mathrm{inter}} > d_*, n_{\mathrm{merged}} > n_*\}$$
@@ -144,11 +144,11 @@ for some thresholds $d_*, n_*$ determined by §5.1.
 >
 > *Route (a) Kato*: $\sigma^{\mathrm{merged, Kato}} = \Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}})$ is well-defined and convergent on $\mathcal{D}_a$ (§3, L_a4).
 >
-> *Route (b) RMT*: $\sigma^{\mathrm{merged, RMT}} = \mathbb{E}_{\mathrm{GOE}}[\Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \|V_{\mathrm{coup}}\|_F)]$ is well-defined as $n_{\mathrm{merged}} \to \infty$ on $\mathcal{D}_b$ (§4, L_b3).
+> *Route (b) RMT*: $\sigma^{\mathrm{merged, RMT}} = \mathbb{E}_{\mathrm{GOE}}[\Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \lVert V_{\mathrm{coup}} \rVert_F)]$ is well-defined as $n_{\mathrm{merged}} \to \infty$ on $\mathcal{D}_b$ (§4, L_b3).
 >
 > *Convergence (Cat B claim)*: On $\mathcal{D}_{\mathrm{conv}} = \mathcal{D}_a \cap \mathcal{D}_b$, there exist constants $C, c > 0$ (configuration-specific) such that:
 >
-> $$\bigl\| \sigma^{\mathrm{merged, Kato}} - \sigma^{\mathrm{merged, RMT}} \bigr\|_{2} \leq C \cdot \bigl(e^{-c \cdot d_{\mathrm{inter}}} + 1/\sqrt{n_{\mathrm{merged}}}\bigr) \quad (\dagger)$$
+> $$\bigl\lVert \sigma^{\mathrm{merged, Kato}} - \sigma^{\mathrm{merged, RMT}} \bigr \rVert_{2} \leq C \cdot \bigl(e^{-c \cdot d_{\mathrm{inter}}} + 1/\sqrt{n_{\mathrm{merged}}}\bigr) \quad (\dagger)$$
 >
 > with **honest gap**: the *exact* matching of the convergence rates in $(\dagger)$ requires Anderson-Guionnet-Zeitouni Theorem 4.3.24 (bulk universality) + a free-probability-style limit exchange (Voiculescu), both of which are *sketched* but not *fully verified* in §5.2 sub-step 3. Hence the **Cat B** classification (conditional on Sub-step 3 rate matching sketch).
 >
@@ -230,7 +230,7 @@ prompt body §4.2 quality 기준:
 ### §3.1 Lemma L_a1 — H_merged = H_1 ⊕ H_2 + V_coup decomposition
 
 **Statement**. Let $u^{(1)}, u^{(2)}$ be two well-separated formations ($d_{\mathrm{inter}} \geq D_{\mathrm{sep}} \geq 3$) under L1-J regime $(P0)$–$(P11)$. The pre-merger Hessian $H_{\mathrm{pre}}(t^{*-})$ admits the block decomposition:
-$$H_{\mathrm{pre}} = H_0 + V_{\mathrm{coup}}, \quad H_0 = H_1 \oplus H_2, \quad \|V_{\mathrm{coup}}\|_F \leq \lambda_{\mathrm{rep}} \cdot c \cdot e^{-c_0 d_{\mathrm{inter}}}$$
+$$H_{\mathrm{pre}} = H_0 + V_{\mathrm{coup}}, \quad H_0 = H_1 \oplus H_2, \quad \lVert V_{\mathrm{coup}} \rVert_F \leq \lambda_{\mathrm{rep}} \cdot c \cdot e^{-c_0 d_{\mathrm{inter}}}$$
 with $H_1, H_2 \succ 0$ each diagonalizable with simple spectrum (generic graph assumption).
 
 **Proof (CoT)**:
@@ -246,7 +246,7 @@ $$H_{\mathrm{pre}} = \nabla^2 \mathcal{E}_2(\mathbf{u}^*) \in \mathbb{R}^{(n_1+n
 **Step 3**: $H_0 := H_1 \oplus H_2$ 정의. $H_1 := H_{\mathrm{single}}(u^{(1)*})$, $H_2 := H_{\mathrm{single}}(u^{(2)*})$.
 
 **Step 4**: $V_{\mathrm{coup}} := H_{\mathrm{pre}} - H_0$. Self-block residual $O(\exp(-c_0 D_{\mathrm{sep}}))$ + cross-block $H_{12}$ 모두 exponentially small in $d_{\mathrm{inter}}$. Frobenius bound:
-$$\|V_{\mathrm{coup}}\|_F \leq \|H_{11} - H_1\|_F + \|H_{22} - H_2\|_F + 2\|H_{12}\|_F \leq C \cdot e^{-c_0 d_{\mathrm{inter}}}$$
+$$\lVert V_{\mathrm{coup}} \rVert_F \leq \lVert H_{11} - H_1 \rVert_F + \lVert H_{22} - H_2 \rVert_F + 2\lVert H_{12} \rVert_F \leq C \cdot e^{-c_0 d_{\mathrm{inter}}}$$
 with $C = O(\lambda_{\mathrm{rep}} \cdot c)$.
 
 **Step 5**: Simple spectrum of $H_1, H_2$ — generic graph ($\mathrm{Aut}(G) = \{e\}$, Q9 bypass) ensures no symmetry-forced multiplicity. Generic perturbation of grid 의 $u^{(j)*}$ 가 simple eigenvalue 를 제공 (Sard 정리 + open dense 조건).
@@ -257,19 +257,19 @@ $\Box$ (Cat A).
 
 ### §3.2 Lemma L_a2 — Kato type-A convergence condition
 
-**Statement**. Define $\varepsilon := \|V_{\mathrm{coup}}\|_F / \delta_{\min}$, where $\delta_{\min} := \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (spectral gap of $H_0$). If $\varepsilon < 1/2$, then the Kato analytic perturbation series for $H(\tau) = H_0 + \tau V_{\mathrm{coup}}$ converges uniformly on $|\tau| \leq 1$, and each eigenvalue $\lambda_a(\tau)$ is analytic in $\tau$.
+**Statement**. Define $\varepsilon := \lVert V_{\mathrm{coup}} \rVert_F / \delta_{\min}$, where $\delta_{\min} := \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (spectral gap of $H_0$). If $\varepsilon < 1/2$, then the Kato analytic perturbation series for $H(\tau) = H_0 + \tau V_{\mathrm{coup}}$ converges uniformly on $|\tau| \leq 1$, and each eigenvalue $\lambda_a(\tau)$ is analytic in $\tau$.
 
 **Proof (CoT)**:
 
 **Step 1**: Kato type-A 조건 verification. $H_0$ self-adjoint (real symmetric Hessian of SCC energy on $\Sigma_m$); $V_{\mathrm{coup}}$ symmetric (Hessian of symmetric energy); $V_{\mathrm{coup}}$ 의 $H_0$-rel boundedness:
-$$\|V_{\mathrm{coup}} f\| \leq \|V_{\mathrm{coup}}\|_{\mathrm{op}} \cdot \|f\| \leq \|V_{\mathrm{coup}}\|_F \cdot \|f\|$$
-(operator norm bound by Frobenius). Hence $a = 0, b = \|V_{\mathrm{coup}}\|_F < 1$ in Kato-Rellich form for type-A (Kato 1995 §VII.2 Theorem 2.6).
+$$\lVert V_{\mathrm{coup}} f \rVert \leq \lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}} \cdot \lVert f \rVert \leq \lVert V_{\mathrm{coup}} \rVert_F \cdot \lVert f \rVert$$
+(operator norm bound by Frobenius). Hence $a = 0, b = \lVert V_{\mathrm{coup}} \rVert_F < 1$ in Kato-Rellich form for type-A (Kato 1995 §VII.2 Theorem 2.6).
 
 **Step 2**: Convergence radius (Kato 1995 Theorem IV-3.6, Reed-Simon IV §XIII.5):
-$$|\tau| < \tau_a^* := \frac{\delta_a}{2\|V_{\mathrm{coup}}\|_{\mathrm{op}}}$$
-where $\delta_a := \min_{b \neq a} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (gap from eigenvalue $a$). The uniform convergence radius is $\tau^* := \min_a \tau_a^* = \delta_{\min} / (2\|V_{\mathrm{coup}}\|_{\mathrm{op}})$.
+$$|\tau| < \tau_a^* := \frac{\delta_a}{2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}}$$
+where $\delta_a := \min_{b \neq a} |\lambda_a^{(0)} - \lambda_b^{(0)}|$ (gap from eigenvalue $a$). The uniform convergence radius is $\tau^* := \min_a \tau_a^* = \delta_{\min} / (2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$.
 
-**Step 3**: $\tau^* > 1 \iff \delta_{\min} > 2\|V_{\mathrm{coup}}\|_{\mathrm{op}}$, equivalently $\varepsilon := \|V_{\mathrm{coup}}\|_{\mathrm{op}}/\delta_{\min} < 1/2$.
+**Step 3**: $\tau^* > 1 \iff \delta_{\min} > 2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}$, equivalently $\varepsilon := \lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}}/\delta_{\min} < 1/2$.
 
 **Step 4**: Combining with L_a1's Frobenius bound:
 $$\lambda_{\mathrm{rep}} \cdot c \cdot e^{-c_0 d_{\mathrm{inter}}} < \delta_{\min}/2$$
@@ -286,7 +286,7 @@ $\Box$ (Cat A, conditional on L_a1).
 ### §3.3 Lemma L_a3 — Kato expansion explicit form
 
 **Statement**. Under L_a1 + L_a2, the perturbation series for eigenvalues of $H(\tau) = H_0 + \tau V_{\mathrm{coup}}$ at $\tau = 1$ (i.e., $H_{\mathrm{pre}}$) is:
-$$\lambda_a(1) = \lambda_a^{(0)} + \delta\lambda_a^{(1)} + \delta\lambda_a^{(2)} + O(\|V_{\mathrm{coup}}\|^3)$$
+$$\lambda_a(1) = \lambda_a^{(0)} + \delta\lambda_a^{(1)} + \delta\lambda_a^{(2)} + O(\lVert V_{\mathrm{coup}} \rVert^3)$$
 with:
 - $\lambda_a^{(0)}$ = eigenvalue of $H_0$, simple.
 - $\delta\lambda_a^{(1)} = \langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_a^{(0)} \rangle$ (first-order Rayleigh-Schrödinger).
@@ -304,7 +304,7 @@ Therefore:
 
 **Step 1**: Kato resolvent expansion (Reed-Simon IV §XIII.5 eq. (XIII.21)):
 $$R(\zeta; \tau) := (H_0 + \tau V_{\mathrm{coup}} - \zeta I)^{-1} = R_0(\zeta) \cdot \sum_{k=0}^\infty [-\tau V_{\mathrm{coup}} R_0(\zeta)]^k$$
-convergent for $|\tau| < \delta_{\min}/(2\|V_{\mathrm{coup}}\|_{\mathrm{op}})$ (by L_a2).
+convergent for $|\tau| < \delta_{\min}/(2\lVert V_{\mathrm{coup}} \rVert_{\mathrm{op}})$ (by L_a2).
 
 **Step 2**: Eigenvalue extraction via contour integral over small circle $\Gamma_a$ around $\lambda_a^{(0)}$:
 $$P_a(\tau) := \frac{-1}{2\pi i} \oint_{\Gamma_a} R(\zeta; \tau) \, d\zeta = P_a^{(0)} + \tau P_a^{(1)} + \tau^2 P_a^{(2)} + \cdots$$
@@ -332,11 +332,11 @@ $$\langle \phi_a^{(0)}, V_{\mathrm{coup}} \phi_b^{(0)} \rangle = (\phi_a^{(1)})^
 Hence only *cross-block* coupling contributes:
 $$\delta\lambda_a^{(2)} = \sum_{b: \phi_b^{(0)} \in \text{opposite block}} \frac{|(\phi_a^{(1)})^\top V_{12} \phi_b^{(2)}|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}}$$
 
-**Step 6**: Magnitude. Each numerator $\leq \|V_{12}\|^2_{\mathrm{op}} \leq \|V_{\mathrm{coup}}\|^2_F$; sum over $\sim n_{\bar{\mathrm{block}}(a)}$ terms; denominator $\geq \delta_{\min}$. Hence:
-$$|\delta\lambda_a^{(2)}| \leq \frac{n_{\bar{\mathrm{block}}(a)} \cdot \|V_{\mathrm{coup}}\|^2_F}{\delta_{\min}} = O\!\left(\frac{n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}}}{\delta_{\min}}\right)$$
+**Step 6**: Magnitude. Each numerator $\leq \lVert V_{12} \rVert^2_{\mathrm{op}} \leq \lVert V_{\mathrm{coup}} \rVert^2_F$; sum over $\sim n_{\bar{\mathrm{block}}(a)}$ terms; denominator $\geq \delta_{\min}$. Hence:
+$$|\delta\lambda_a^{(2)}| \leq \frac{n_{\bar{\mathrm{block}}(a)} \cdot \lVert V_{\mathrm{coup}} \rVert^2_F}{\delta_{\min}} = O\!\left(\frac{n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}}}{\delta_{\min}}\right)$$
 
 **Step 7**: Φ_Kato map definition:
-$$\Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}}) := \mathrm{sort}_{\downarrow}\left\{\lambda_a^{(0)} + \delta\lambda_a^{(2)} + O(\|V_{\mathrm{coup}}\|^3) : a = 1, \ldots, n_1 + n_2\right\}$$
+$$\Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}}) := \mathrm{sort}_{\downarrow}\left\{\lambda_a^{(0)} + \delta\lambda_a^{(2)} + O(\lVert V_{\mathrm{coup}} \rVert^3) : a = 1, \ldots, n_1 + n_2\right\}$$
 where $\lambda_a^{(0)} \in \sigma^{(1)} \cup \sigma^{(2)}$ (block-decoupled spectrum) and $\delta\lambda_a^{(2)}$ as Step 5.
 
 **Step 8**: Schur-complement adjustment. Post-merger mass constraint ($\Sigma_{m_1+m_2}^{n_1+n_2}$) imposes one additional linear constraint (mass conservation). Schur-complement reduction on this 1-dim constraint subtracts one Lagrange-multiplier mode; the remaining $n_1 + n_2 - 1$ eigenvalues form $\sigma^{\mathrm{merged, Kato}}$. Detailed boundary-condition matching deferred to broad_survey_B2 §3.3 + NQ-B2-1 (open).
@@ -371,7 +371,7 @@ $\Box$ (Cat A, conditional on L_a1 + L_a2).
 - $H_{\mathrm{merged}}$ symmetric: ✓ (energy Hessian symmetric).
 - Off-diagonal entries iid up to symmetry: *approximate* (gradient flow 의 noise 가 *uniform across pairs*; exact iid 는 *coarse-graining* 이후만 성립).
 - Mean 0: subtract $\mathbb{E}[H_{\mathrm{merged}}]$ (block-diagonal part of L_a3 contributes mean).
-- Variance $\sigma^2_{\mathrm{ens}} = O(\|V_{\mathrm{coup}}\|_F^2 / n_{\mathrm{merged}})$ — scaled by 1/n for Wigner condition.
+- Variance $\sigma^2_{\mathrm{ens}} = O(\lVert V_{\mathrm{coup}} \rVert_F^2 / n_{\mathrm{merged}})$ — scaled by 1/n for Wigner condition.
 
 **Step 4**: Aut(G) trivial bypass. character data (irreducible reps) 가 trivial → 1-dim representations 만 존재 → 블록 분해 없음 → 전체 Hessian 이 단일 GOE 블록 (Mehta §4.3, Dyson III §4 threefold way). Detail in §4 of broad_survey_B2 + E2 §B.4.
 
@@ -386,7 +386,7 @@ $\Box$ (Cat B, conditional on $\mathrm{Aut}(G) = \{e\}$ + smooth-segment ensembl
 **Statement** (AGZ 2010 Theorem 2.1.1 + Theorem 2.4.10 self-averaging). Let $W_n$ be a real symmetric Wigner matrix of size $n \times n$ with iid Gaussian off-diagonal entries (mean 0, variance $\sigma^2_{\mathrm{ens}}$). The empirical spectral distribution:
 $$\mu_{W_n} := \frac{1}{n} \sum_{a=1}^n \delta_{\lambda_a(W_n)}$$
 converges *weakly* (in probability and almost surely) as $n \to \infty$ to the semicircle distribution:
-$$\rho_{\mathrm{sc}}(x) \, dx = \frac{1}{2\pi \sigma^2_{\mathrm{ens}}} \sqrt{4\sigma^2_{\mathrm{ens}} - x^2} \, \mathbf{1}_{|x| \leq 2\sigma_{\mathrm{ens}}} \, dx$$
+$$\rho_{\mathrm{sc}}(x) \, dx = \frac{1}{2\pi \sigma^2_{\mathrm{ens}}} \sqrt{4\sigma^2_{\mathrm{ens}} - x^2} \, \mathbf{1}_{\lvert x \rvert \leq 2\sigma_{\mathrm{ens}}} \, dx$$
 
 Self-averaging bound: for any bounded interval $I \subset \mathbb{R}$:
 $$\mathrm{Var}\!\bigl(\mu_{W_n}(I)\bigr) = O(1/n)$$
@@ -406,7 +406,7 @@ with $C_m = \binom{2m}{m}/(m+1)$ (Catalan number). For odd $k = 2m+1$: $= 0$.
 **Step 4**. Convergence in probability → almost sure (AGZ Theorem 2.1.21, Borel-Cantelli + concentration).
 
 **Step 5** (Self-averaging variance). By Lipschitz continuity of $\mathrm{tr}(f(W_n))/n$ in $W_n$ entries (with Lipschitz constant $O(1/\sqrt{n})$) + Gaussian concentration (Herbst):
-$$\Pr(|\mu_{W_n}(I) - \mathbb{E}\mu_{W_n}(I)| > t) \leq 2 \exp(-c n t^2 / \|I\|_{\mathrm{Lip}}^2)$$
+$$\Pr(|\mu_{W_n}(I) - \mathbb{E}\mu_{W_n}(I)| > t) \leq 2 \exp(-c n t^2 / \lVert I \rVert_{\mathrm{Lip}}^2)$$
 Hence $\mathrm{Var}(\mu_{W_n}(I)) = \int_0^\infty 2t \Pr(\cdots > t) dt = O(1/n)$.
 
 $\Box$ (Cat A, direct AGZ citation).
@@ -416,17 +416,17 @@ $\Box$ (Cat A, direct AGZ citation).
 ### §4.3 Lemma L_b3 — Φ_Wigner deterministic limit
 
 **Statement**. Define:
-$$\Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \|V_{\mathrm{coup}}\|_F) := \lim_{n_{\mathrm{merged}} \to \infty} \mathbb{E}_{\mathrm{GOE}}\bigl[\sigma^{\mathrm{merged, RMT}}_{n_{\mathrm{merged}}}\bigr]$$
+$$\Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \lVert V_{\mathrm{coup}} \rVert_F) := \lim_{n_{\mathrm{merged}} \to \infty} \mathbb{E}_{\mathrm{GOE}}\bigl[\sigma^{\mathrm{merged, RMT}}_{n_{\mathrm{merged}}}\bigr]$$
 This limit exists (as a measure-valued limit via L_b2) and is determined uniquely by:
 - The block structure $\sigma^{(1)} \cup \sigma^{(2)}$ (mean of $H_{\mathrm{merged}}$).
-- The coupling magnitude $\|V_{\mathrm{coup}}\|_F$ (variance scale $\sigma^2_{\mathrm{ens}}$).
+- The coupling magnitude $\lVert V_{\mathrm{coup}} \rVert_F$ (variance scale $\sigma^2_{\mathrm{ens}}$).
 - $n_{\mathrm{merged}} = n_1 + n_2$ — large-$n$ limit.
 
-Finite-$n$ residual: $\|\sigma^{\mathrm{merged, RMT}}_n - \Phi_{\mathrm{Wigner}}\| = O(1/\sqrt{n_{\mathrm{merged}}})$ with high probability.
+Finite-$n$ residual: $\lVert \sigma^{\mathrm{merged, RMT}}_n - \Phi_{\mathrm{Wigner}} \rVert = O(1/\sqrt{n_{\mathrm{merged}}})$ with high probability.
 
 **Proof (CoT)**:
 
-**Step 1**: $H_{\mathrm{merged}}$ decompose into *mean* (block-diagonal, fixed by $\sigma^{(1)}, \sigma^{(2)}$) + *fluctuation* (off-diagonal coupling, scaled $\|V_{\mathrm{coup}}\|_F / \sqrt{n_{\mathrm{merged}}}$).
+**Step 1**: $H_{\mathrm{merged}}$ decompose into *mean* (block-diagonal, fixed by $\sigma^{(1)}, \sigma^{(2)}$) + *fluctuation* (off-diagonal coupling, scaled $\lVert V_{\mathrm{coup}} \rVert_F / \sqrt{n_{\mathrm{merged}}}$).
 
 **Step 2**: Apply L_b2 to the fluctuation part. Fluctuation matrix $\tilde W_n := H_{\mathrm{merged}} - \mathbb{E}[H_{\mathrm{merged}}]$ has empirical spectral measure converging to semicircle (after rescaling).
 
@@ -439,7 +439,7 @@ $$\sigma^{\mathrm{merged, RMT}}_k := F^{-1}_{\boxplus}(k / n_{\mathrm{merged}}),
 where $F_{\boxplus}$ is the CDF of $\mu_{\sigma^{(1)} \cup \sigma^{(2)}} \boxplus \rho_{\mathrm{sc}}$.
 
 **Step 5**: Finite-$n$ residual. By L_b2 self-averaging, single-sample $\mu_{H_{\mathrm{merged}}, n}$ deviates from $\mathbb{E}\mu_{H_{\mathrm{merged}}, n}$ by $O(1/\sqrt n)$ in Kolmogorov distance (AGZ Theorem 2.4.10 + Wasserstein-Kolmogorov inequality). Hence:
-$$\|\sigma^{\mathrm{merged, RMT}}_n - \Phi_{\mathrm{Wigner}}\|_2 \leq O(1/\sqrt{n_{\mathrm{merged}}})$$
+$$\lVert \sigma^{\mathrm{merged, RMT}}_n - \Phi_{\mathrm{Wigner}} \rVert_2 \leq O(1/\sqrt{n_{\mathrm{merged}}})$$
 with probability $\geq 1 - e^{-c n}$.
 
 **Step 6**: Cat B classification. The *limit map* is deterministic (free convolution is fully determined by inputs). The *finite-n residual* is sub-Gaussian — Cat B because:
@@ -450,7 +450,7 @@ $\Box$ (Cat B, conditional on L_b1 + L_b2 + free probability interpretation).
 
 **CoC anchor**: AGZ 2010 Theorem 5.3.5 (free convolution); Mehta §6.3; broad_survey_B2 §4.2.
 
-**Practical implication**: At $n_{\mathrm{merged}} \to \infty$ with $\|V_{\mathrm{coup}}\|_F$ fixed, $\sigma^2_{\mathrm{ens}} \to 0$ (scaled by 1/n), so $\rho_{\mathrm{sc}} \to \delta_0$ (Dirac at 0), and $\mu \boxplus \delta_0 = \mu$ — recovering the block-decoupled spectrum $\sigma^{(1)} \cup \sigma^{(2)}$. Key for §5.2 sub-step 2.
+**Practical implication**: At $n_{\mathrm{merged}} \to \infty$ with $\lVert V_{\mathrm{coup}} \rVert_F$ fixed, $\sigma^2_{\mathrm{ens}} \to 0$ (scaled by 1/n), so $\rho_{\mathrm{sc}} \to \delta_0$ (Dirac at 0), and $\mu \boxplus \delta_0 = \mu$ — recovering the block-decoupled spectrum $\sigma^{(1)} \cup \sigma^{(2)}$. Key for §5.2 sub-step 2.
 
 ---
 
@@ -460,11 +460,11 @@ $\Box$ (Cat B, conditional on L_b1 + L_b2 + free probability interpretation).
 
 **Statement**. The Kato convergence regime $\mathcal{D}_a$ and the RMT convergence regime $\mathcal{D}_b$ admit a non-empty intersection:
 $$\mathcal{D}_{\mathrm{conv}} := \mathcal{D}_a \cap \mathcal{D}_b = \{(d_{\mathrm{inter}}, n_{\mathrm{merged}}) : d_{\mathrm{inter}} > d_*, n_{\mathrm{merged}} > n_*\}$$
-for thresholds $d_* := c_0^{-1} \log(2\lambda_{\mathrm{rep}} c / \delta_{\min})$ (from L_a2) and $n_* := \max(20, \lceil (\|V_{\mathrm{coup}}\|_F / \mathrm{const})^2 \rceil)$ (from L_b1's "n moderate" + L_b2's variance scaling).
+for thresholds $d_* := c_0^{-1} \log(2\lambda_{\mathrm{rep}} c / \delta_{\min})$ (from L_a2) and $n_* := \max(20, \lceil (\lVert V_{\mathrm{coup}} \rVert_F / \mathrm{const})^2 \rceil)$ (from L_b1's "n moderate" + L_b2's variance scaling).
 
 **Proof**:
 - $\mathcal{D}_a$ depends only on $d_{\mathrm{inter}}, \delta_{\min}, \lambda_{\mathrm{rep}}$ — *operator-theoretic* parameters.
-- $\mathcal{D}_b$ depends only on $n_{\mathrm{merged}}, \|V_{\mathrm{coup}}\|_F$ — *probabilistic-asymptotic* parameters.
+- $\mathcal{D}_b$ depends only on $n_{\mathrm{merged}}, \lVert V_{\mathrm{coup}} \rVert_F$ — *probabilistic-asymptotic* parameters.
 - These constraints are *not contradictory*: large $d_{\mathrm{inter}}$ + large $n_{\mathrm{merged}}$ can coexist on any sufficiently large graph (e.g., $k \times k$ grid with $k \geq 16$, two formations separated by $d_{\mathrm{inter}} \geq 8$ each of size $\geq 20$).
 - Non-emptiness verification: on a $16 \times 16$ grid ($N = 256$), two formations of $n_1 = n_2 = 30$ separated by $d_{\mathrm{inter}} = 8$ satisfy both: $e^{-c_0 \cdot 8} \cdot \lambda_{\mathrm{rep}} \cdot c \ll \delta_{\min}$ (typical $c_0 = 0.5$, $\delta_{\min} \approx 0.1$, $\lambda_{\mathrm{rep}} \approx 0.5$ gives RHS $\approx 0.009 \ll 0.05$); $n_{\mathrm{merged}} = 60 > n_* = 20$.
 
@@ -475,11 +475,11 @@ $\Box$ (Cat A).
 ### §5.2 Lemma L_conv2 — Limit exchange justification (KEY GAP)
 
 **Statement** (Cat B claim). On the convergence regime $\mathcal{D}_{\mathrm{conv}}$ defined in L_conv1, the two limits commute:
-$$\lim_{d_{\mathrm{inter}} \to \infty} \Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}}(d_{\mathrm{inter}})) = \lim_{n_{\mathrm{merged}} \to \infty} \Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \|V_{\mathrm{coup}}\|_F)$$
+$$\lim_{d_{\mathrm{inter}} \to \infty} \Phi_{\mathrm{Kato}}(\sigma^{(1)}, \sigma^{(2)}, V_{\mathrm{coup}}(d_{\mathrm{inter}})) = \lim_{n_{\mathrm{merged}} \to \infty} \Phi_{\mathrm{Wigner}}(\sigma^{(1)}, \sigma^{(2)}, n_1, n_2, \lVert V_{\mathrm{coup}} \rVert_F)$$
 both yielding the *block-decoupled multi-set union* $\sigma^{(1)} \cup \sigma^{(2)}$ (with one mass-constraint mode subtracted).
 
 Furthermore, on the finite-but-large regime, the difference is bounded:
-$$\bigl\| \sigma^{\mathrm{merged, Kato}} - \sigma^{\mathrm{merged, RMT}} \bigr\|_2 \leq C \bigl(e^{-c \cdot d_{\mathrm{inter}}} + 1/\sqrt{n_{\mathrm{merged}}}\bigr) \tag{$\dagger$}$$
+$$\bigl\lVert \sigma^{\mathrm{merged, Kato}} - \sigma^{\mathrm{merged, RMT}} \bigr \rVert_2 \leq C \bigl(e^{-c \cdot d_{\mathrm{inter}}} + 1/\sqrt{n_{\mathrm{merged}}}\bigr) \tag{$\dagger$}$$
 with configuration-specific constants $C, c > 0$.
 
 **Honest gap declaration**: The bound $(\dagger)$ is **Cat B with sub-step 3 sketch** — the *exact* matching of the two convergence rates requires AGZ Theorem 4.3.24 (bulk universality) + free-probability deconvolution, both of which are *sketched* but not *fully verified* in the current SCC setting (W9+ Cat A path, §9.3).
@@ -490,13 +490,13 @@ with configuration-specific constants $C, c > 0$.
 
 By L_a3 Step 6, $|\delta\lambda_a^{(2)}| \leq O(n \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$. Higher-order corrections $\delta\lambda_a^{(k \geq 3)} \leq O(e^{-k c_0 d_{\mathrm{inter}}})$. Therefore:
 $$\lim_{d_{\mathrm{inter}} \to \infty} \Phi_{\mathrm{Kato}} = \mathrm{sort}_{\downarrow}\bigl(\sigma^{(1)} \cup \sigma^{(2)}\bigr) \setminus \{\text{mass-mode}\}$$
-i.e., the unperturbed block-decoupled spectrum. **Convergence rate**: $\|\Phi_{\mathrm{Kato}} - (\sigma^{(1)} \cup \sigma^{(2)})\|_2 \leq O(n^{1/2} \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$ (Cat A).
+i.e., the unperturbed block-decoupled spectrum. **Convergence rate**: $\lVert \Phi_{\mathrm{Kato}} - (\sigma^{(1)} \cup \sigma^{(2)}) \rVert_2 \leq O(n^{1/2} \cdot \lambda_{\mathrm{rep}}^2 \cdot e^{-2 c_0 d_{\mathrm{inter}}} / \delta_{\min})$ (Cat A).
 
-**Sub-step 2**: RMT limit as $n_{\mathrm{merged}} \to \infty$ with $\|V_{\mathrm{coup}}\|_F$ fixed.
+**Sub-step 2**: RMT limit as $n_{\mathrm{merged}} \to \infty$ with $\lVert V_{\mathrm{coup}} \rVert_F$ fixed.
 
-By L_b3 Step 6 / practical implication, $\sigma^2_{\mathrm{ens}} := \|V_{\mathrm{coup}}\|_F^2 / n_{\mathrm{merged}} \to 0$, so $\rho_{\mathrm{sc}}(\sigma^2_{\mathrm{ens}}) \to \delta_0$ weakly. Hence $\mu_{\sigma^{(1)} \cup \sigma^{(2)}} \boxplus \rho_{\mathrm{sc}} \to \mu_{\sigma^{(1)} \cup \sigma^{(2)}} \boxplus \delta_0 = \mu_{\sigma^{(1)} \cup \sigma^{(2)}}$. Therefore:
+By L_b3 Step 6 / practical implication, $\sigma^2_{\mathrm{ens}} := \lVert V_{\mathrm{coup}} \rVert_F^2 / n_{\mathrm{merged}} \to 0$, so $\rho_{\mathrm{sc}}(\sigma^2_{\mathrm{ens}}) \to \delta_0$ weakly. Hence $\mu_{\sigma^{(1)} \cup \sigma^{(2)}} \boxplus \rho_{\mathrm{sc}} \to \mu_{\sigma^{(1)} \cup \sigma^{(2)}} \boxplus \delta_0 = \mu_{\sigma^{(1)} \cup \sigma^{(2)}}$. Therefore:
 $$\lim_{n_{\mathrm{merged}} \to \infty} \Phi_{\mathrm{Wigner}} = \mathrm{sort}_{\downarrow}(\sigma^{(1)} \cup \sigma^{(2)}) \setminus \{\text{mass-mode}\}$$
-**Convergence rate**: $\|\Phi_{\mathrm{Wigner}}^{n} - (\sigma^{(1)} \cup \sigma^{(2)})\|_2 \leq O(\|V_{\mathrm{coup}}\|_F / \sqrt{n_{\mathrm{merged}}})$ (Wasserstein bound via L_b3 Step 5).
+**Convergence rate**: $\lVert \Phi_{\mathrm{Wigner}}^{n} - (\sigma^{(1)} \cup \sigma^{(2)}) \rVert_2 \leq O(\lVert V_{\mathrm{coup}} \rVert_F / \sqrt{n_{\mathrm{merged}}})$ (Wasserstein bound via L_b3 Step 5).
 
 **Sub-step 3 (KEY GAP — rate matching)**:
 
@@ -508,13 +508,13 @@ Question: can we bound $|\Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n|$ unifo
 
 **Sketch (Cat B)**:
 Triangle inequality:
-$$\|\Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n\|_2 \leq \|\Phi_{\mathrm{Kato}} - (\sigma^{(1)} \cup \sigma^{(2)})\|_2 + \|(\sigma^{(1)} \cup \sigma^{(2)}) - \Phi_{\mathrm{Wigner}}^n\|_2$$
+$$\lVert \Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n \rVert_2 \leq \lVert \Phi_{\mathrm{Kato}} - (\sigma^{(1)} \cup \sigma^{(2)}) \rVert_2 + \lVert (\sigma^{(1)} \cup \sigma^{(2)}) - \Phi_{\mathrm{Wigner}}^n \rVert_2$$
 $$\leq O(e^{-2 c_0 d_{\mathrm{inter}}}) + O(1/\sqrt{n_{\mathrm{merged}}})$$
 
 Substituting $C := \max(\text{Kato prefactor}, \text{RMT prefactor})$ and $c := 2 c_0$, this gives bound $(\dagger)$. **Cat B** because:
 - The Kato prefactor depends on $n^{1/2} \cdot \lambda_{\mathrm{rep}}^2 / \delta_{\min}$ — *configuration-specific*.
-- The RMT prefactor depends on $\|V_{\mathrm{coup}}\|_F$ — *configuration-specific*.
-- Both prefactors *increase with n*, so the Kato bound is *not uniform in n*; the RMT bound is *not uniform in $d_{\mathrm{inter}}$* via $\|V_{\mathrm{coup}}\|_F$ scaling.
+- The RMT prefactor depends on $\lVert V_{\mathrm{coup}} \rVert_F$ — *configuration-specific*.
+- Both prefactors *increase with n*, so the Kato bound is *not uniform in n*; the RMT bound is *not uniform in $d_{\mathrm{inter}}$* via $\lVert V_{\mathrm{coup}} \rVert_F$ scaling.
 
 **Honest gap**: A *Cat A* statement would require *exact* rate matching showing that the two routes agree on $O(\min(e^{-2c_0 d_{\mathrm{inter}}}, 1/\sqrt n))$ rather than $O(\text{sum})$. This requires AGZ Theorem 4.3.24 (bulk universality with explicit edge bounds) + free-probability deconvolution of the Schur-complement reduction, neither of which is currently established in SCC.
 
@@ -566,7 +566,7 @@ where $R_\mu(z) = G_\mu^{-1}(z) - 1/z$ and $G_\mu(z) = \int (z - x)^{-1} d\mu(x)
 ### §6.2 Application to OP-0008
 
 **Approach B map**:
-$$\Phi_{\mathrm{free}}(\sigma^{(1)}, \sigma^{(2)}) := \text{spec-data of } \mu_{\sigma^{(1)}} \boxplus \mu_{\sigma^{(2)}} \boxplus \rho_{\mathrm{sc}}(\|V_{\mathrm{coup}}\|_F^2)$$
+$$\Phi_{\mathrm{free}}(\sigma^{(1)}, \sigma^{(2)}) := \text{spec-data of } \mu_{\sigma^{(1)}} \boxplus \mu_{\sigma^{(2)}} \boxplus \rho_{\mathrm{sc}}(\lVert V_{\mathrm{coup}} \rVert_F^2)$$
 
 **Where it works**: Asymptotic freeness of $H_1, H_2$ when:
 - $H_1, H_2$ are *independent rotations* of fixed spectra → automatic asymptotic freeness (AGZ Theorem 5.4.5).
@@ -613,9 +613,9 @@ Direct check via Taylor expansion of exact form: $\frac{\lambda_1 + \lambda_2}{2
 
 **Setup**: Two formations on adjacent sites ($d_{\mathrm{inter}} = 1$, e.g., 2D grid 8×8 with two formations sharing a boundary).
 
-**Construction**: $\|V_{\mathrm{coup}}\|_F = O(\lambda_{\mathrm{rep}})$ (not exponentially small); $\delta_{\min} \approx 0.05$ (typical SCC grid). Then $\varepsilon = \|V_{\mathrm{coup}}\|_F / \delta_{\min} \approx 10 \gg 1/2$.
+**Construction**: $\lVert V_{\mathrm{coup}} \rVert_F = O(\lambda_{\mathrm{rep}})$ (not exponentially small); $\delta_{\min} \approx 0.05$ (typical SCC grid). Then $\varepsilon = \lVert V_{\mathrm{coup}} \rVert_F / \delta_{\min} \approx 10 \gg 1/2$.
 
-**Failure mode**: L_a2 's convergence radius $\tau^* = \delta_{\min}/(2\|V_{\mathrm{coup}}\|_F) \approx 0.05$ — Kato series at $\tau = 1$ *diverges*. L_a3 's expansion is *not even formally meaningful*.
+**Failure mode**: L_a2 's convergence radius $\tau^* = \delta_{\min}/(2\lVert V_{\mathrm{coup}} \rVert_F) \approx 0.05$ — Kato series at $\tau = 1$ *diverges*. L_a3 's expansion is *not even formally meaningful*.
 
 **Conclusion**: Outside $\mathcal{D}_a$ regime. Kato route *fails*; only RMT route (b) remains. The *theorem statement* of §1.6 is *not applicable* — restricted to $\mathcal{D}_{\mathrm{conv}}$ regime. This is a *known limitation*, not a refutation.
 
@@ -627,7 +627,7 @@ Direct check via Taylor expansion of exact form: $\frac{\lambda_1 + \lambda_2}{2
 
 **Construction**: Even with $d_{\mathrm{inter}}$ large (Route (a) succeeds), the RMT route requires $n_{\mathrm{merged}}$ large enough for self-averaging.
 
-**Failure mode**: L_b2 's variance bound $\mathrm{Var}(\mu_{W_n}(I)) = O(1/n) \approx 0.17$ for $n = 6$ — not small. Single-sample $\mu_{W_6}$ deviates significantly from semicircle average. L_b3 's $O(1/\sqrt n)$ bound = $O(0.4)$ — not useful for σ_standard at $\|\sigma\|_2 \approx 1$.
+**Failure mode**: L_b2 's variance bound $\mathrm{Var}(\mu_{W_n}(I)) = O(1/n) \approx 0.17$ for $n = 6$ — not small. Single-sample $\mu_{W_6}$ deviates significantly from semicircle average. L_b3 's $O(1/\sqrt n)$ bound = $O(0.4)$ — not useful for σ_standard at $\lVert \sigma \rVert_2 \approx 1$.
 
 **Conclusion**: Outside $\mathcal{D}_b$ regime. RMT route fails; only Kato route (a) remains. Approach C (§7) symbolic computation becomes relevant for $n \leq 6$.
 
@@ -665,7 +665,7 @@ Direct check via Taylor expansion of exact form: $\frac{\lambda_1 + \lambda_2}{2
 
 ### §9.2 Honest gap (explicit statement)
 
-**Gap 1 (L_conv2 sub-step 3)**: The rate matching $\|\Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}\| \leq O(\min(\cdot, \cdot))$ would be Cat A; the current bound is $O(\mathrm{sum})$ which is *Cat B* (triangle inequality, not optimal).
+**Gap 1 (L_conv2 sub-step 3)**: The rate matching $\lVert \Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}} \rVert \leq O(\min(\cdot, \cdot))$ would be Cat A; the current bound is $O(\mathrm{sum})$ which is *Cat B* (triangle inequality, not optimal).
 
 **Gap 2 (L_b1 ensemble interpretation)**: The "fine-scale perturbation ensemble" of merger trajectory perturbations is *operationally adopted* from broad_survey_B2 §4.1 — *Cat B* because the precise ensemble measure (with iid-Gaussian property) is *assumed* rather than *derived* from SCC's gradient flow.
 
@@ -776,7 +776,7 @@ If exp92 (SC-c) fails: T-σ-Inherit (a, b, d-direction, e) 의 *partial promotio
 
 ### §11.1 OP-0008-1: Sub-step 3 rate matching full proof (Cat A path)
 
-**Question**: Establish $\|\Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n\|_2 \leq O(\min(e^{-c d_{\mathrm{inter}}}, 1/\sqrt n))$ — replacing the *triangle inequality* of L_conv2 sub-step 3 with *exact rate matching*.
+**Question**: Establish $\lVert \Phi_{\mathrm{Kato}} - \Phi_{\mathrm{Wigner}}^n \rVert_2 \leq O(\min(e^{-c d_{\mathrm{inter}}}, 1/\sqrt n))$ — replacing the *triangle inequality* of L_conv2 sub-step 3 with *exact rate matching*.
 
 **Why important**: Cat A → Cat B 의 *direct upgrade path* — the only honest gap in the current Cat B argument.
 
@@ -793,7 +793,7 @@ If exp92 (SC-c) fails: T-σ-Inherit (a, b, d-direction, e) 의 *partial promotio
 
 **Setup**: broad_survey_B2 §5.3 's 8-step protocol — Day 3 exp92.
 
-**Acceptance criterion**: convergence indicator $\|(\sigma^{(a)} - \sigma^{(b)})\|/\|\sigma^{(\mathrm{num})}\| < 0.15$ on $d \in [3, 5]$ overlap regime.
+**Acceptance criterion**: convergence indicator $\lVert (\sigma^{(a)} - \sigma^{(b)}) \rVert/\lVert \sigma^{(\mathrm{num})} \rVert < 0.15$ on $d \in [3, 5]$ overlap regime.
 
 **Why important**: Gate A SC-c condition — promotion to canonical conditional on this PASS.
 
@@ -816,7 +816,7 @@ $$\Phi_{\mathrm{MERGE}}\bigl(\Phi_{\mathrm{MERGE}}(\sigma^{(1)}, \sigma^{(2)}, V
 
 **Why important**: T-σ-Inherit *full* (CV-1.14 target) requires σ_standard inheritance to *commute* with K-jump composition.
 
-**Approach**: Iterate L_a3 expansion; verify convergence radius is *not* shrunken by composition (each step adds $\|V\|$ at risk of breaking $\mathcal{D}_a$ at later step).
+**Approach**: Iterate L_a3 expansion; verify convergence radius is *not* shrunken by composition (each step adds $\lVert V \rVert$ at risk of breaking $\mathcal{D}_a$ at later step).
 
 **Estimated effort**: 2 sessions Opus W11+.
 

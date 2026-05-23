@@ -40,7 +40,7 @@ For each graph $G$:
 1. Compute Aut(G) explicitly via NetworkX or PyNAUTY.
 2. Compute Aut(G)_{u_uniform} (= Aut(G) at uniform vacuum).
 3. Compute first non-trivial Laplacian eigenvalue $\lambda_2^{\mathrm{Lap}}$ + Fiedler eigenvector $\phi_2$.
-4. Compute $\beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2 / |W''(c)|$ at $\alpha=1$, $c=0.5$, $|W''|=1$.
+4. Compute $\beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2 / \lvert W''(c) \rvert$ at $\alpha=1$, $c=0.5$, $\lvert W'' \rvert=1$.
 5. Run `find_formation` from $u_0 = c\mathbf{1} + 0.30 \phi_2$ at $\beta = \beta_{\mathrm{crit}}^{(2)} + 0.05$ (post-pitchfork).
 6. Compute σ-tuple at minimizer: bottom-k Hessian eigenvalues (k=4-12 depending on n).
 7. Identify Aut(G)_{u_*}-irrep labels via character projection.

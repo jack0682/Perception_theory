@@ -47,7 +47,7 @@ $$H_{\mathrm{pre}}(t^{*-}) = \begin{pmatrix} H_{i_1, i_1} & H_{i_1, i_2} \\ H_{i
 
 with $H_{i, i} \succ 0$ (formation $i$ 의 self-Hessian, single-formation σ_standard 의 source) 과 cross-block $H_{i_1, i_2}$ which by **Coupling Bound Lemma** (`sigma_rich_wigner_derivation.md §3.3`) satisfies:
 
-$$\|H_{i_1, i_2}\|_{\mathrm{op}} \leq \lambda_\mathrm{rep} \cdot c \cdot e^{-c_0 \cdot d_{\mathrm{inter}}(i_1, i_2)}$$
+$$\lVert H_{i_1, i_2} \rVert_{\mathrm{op}} \leq \lambda_\mathrm{rep} \cdot c \cdot e^{-c_0 \cdot d_{\mathrm{inter}}(i_1, i_2)}$$
 
 where $d_{\mathrm{inter}} = d_\mathrm{graph}(\mathrm{core}(u^{i_1}), \mathrm{core}(u^{i_2}))$.
 
@@ -59,23 +59,23 @@ Reed-Simon IV §XIII.5 (resolvent expansion for *isolated simple eigenvalues* un
 
 $$\lambda_a(\varepsilon) = \lambda_a^{(0)} + \varepsilon \langle \phi_a^{(0)}, V \phi_a^{(0)} \rangle + \varepsilon^2 \sum_{b \neq a} \frac{|\langle \phi_a^{(0)}, V \phi_b^{(0)} \rangle|^2}{\lambda_a^{(0)} - \lambda_b^{(0)}} + O(\varepsilon^3)$$
 
-with $\varepsilon = \|V\|_\mathrm{op} / \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$.
+with $\varepsilon = \lVert V \rVert_\mathrm{op} / \min_{a \neq b} |\lambda_a^{(0)} - \lambda_b^{(0)}|$.
 
 ### §3.3 Post-merger relation
 
-**Claim (Route (a) target Cat B)**: As $t \to t^*$ (merger), $\|V\|_\mathrm{op} \uparrow O(\lambda_\mathrm{rep})$, and at $t^{*+}$ the merged $u_s^j$ Hessian $H_\mathrm{post}$ relates to $H_\mathrm{pre}$ via a *Schur-complement reduction* on the merged-mass subspace.
+**Claim (Route (a) target Cat B)**: As $t \to t^*$ (merger), $\lVert V \rVert_\mathrm{op} \uparrow O(\lambda_\mathrm{rep})$, and at $t^{*+}$ the merged $u_s^j$ Hessian $H_\mathrm{post}$ relates to $H_\mathrm{pre}$ via a *Schur-complement reduction* on the merged-mass subspace.
 
-The expansion (§3.2) under Schur-complement boundary condition produces *explicit polynomials* in $(\lambda_{i_1,a}^{(0)}, \lambda_{i_2,b}^{(0)}, \|V\|, m_{i_1}, m_{i_2})$ that compute $\sigma_\mathrm{std}(C_j^s)$ to any order in $\varepsilon$.
+The expansion (§3.2) under Schur-complement boundary condition produces *explicit polynomials* in $(\lambda_{i_1,a}^{(0)}, \lambda_{i_2,b}^{(0)}, \lVert V \rVert, m_{i_1}, m_{i_2})$ that compute $\sigma_\mathrm{std}(C_j^s)$ to any order in $\varepsilon$.
 
 ### §3.4 Success conditions (Route (a))
 
-1. **Perturbative regime**: $\|V\| < \min_a |\lambda_a^{(0)} - \lambda_{a+1}^{(0)}|$ — eigenvalue spacing exceeds coupling. Equivalently $\lambda_\mathrm{rep} \cdot e^{-c_0 d_\mathrm{inter}} < $ spectral gap of $H_0$.
+1. **Perturbative regime**: $\lVert V \rVert < \min_a |\lambda_a^{(0)} - \lambda_{a+1}^{(0)}|$ — eigenvalue spacing exceeds coupling. Equivalently $\lambda_\mathrm{rep} \cdot e^{-c_0 d_\mathrm{inter}} < $ spectral gap of $H_0$.
 2. **Simple eigenvalues**: $\lambda_a^{(0)} \neq \lambda_b^{(0)}$ for $a \neq b$ — no symmetry-forced multiplicities.
 3. **Analytic family**: $V(\varepsilon)$ smooth in merger parameter $\varepsilon$ — guaranteed by gradient-flow continuity on smooth segments (`sigma_rich_wigner_derivation.md §9`).
 
 ### §3.5 Failure modes (Route (a))
 
-- **Deep merger** ($d_\mathrm{inter} \to 0$): $\|V\| \uparrow$, perturbative gap closes. Series diverges. → Route (b) needed.
+- **Deep merger** ($d_\mathrm{inter} \to 0$): $\lVert V \rVert \uparrow$, perturbative gap closes. Series diverges. → Route (b) needed.
 - **Goldstone degeneracy**: $H_{i_i}$ 의 lowest eigenvalues 가 graph translation-invariance 의 Goldstone modes — degenerate $\lambda^{(0)} = 0$ (translation-invariant graph case). Simple-eigenvalue 가정 위배. → 2×2 Goldstone-pair Wigner-von Neumann avoided-crossing analysis (`sigma_rich_wigner_derivation.md §3`) 필요.
 - **High symmetry**: $\mathrm{Aut}(G)$ 에 의한 forced multiplicity. → Group-theoretic decomposition (Route (c)) 필요.
 
@@ -103,7 +103,7 @@ with the *level repulsion* $P(s) \to (\pi/2) s$ as $s \to 0$ (no eigenvalue cros
 
 **Claim (Route (b) target Cat B)**: For generic $\mathrm{Aut}(G) = 1$, the *distributional* relation
 
-$$\sigma_\mathrm{std}(C_j^s) \,\big|\, (\sigma_\mathrm{std}(C_{i_1}^t), \sigma_\mathrm{std}(C_{i_2}^t); m_{i_1}, m_{i_2}) \;\sim\; \mathrm{GOE}\text{-conditional}\bigl[\dots\bigr]$$
+$$\sigma_\mathrm{std}(C_j^s) \,\big\vert\, (\sigma_\mathrm{std}(C_{i_1}^t), \sigma_\mathrm{std}(C_{i_2}^t); m_{i_1}, m_{i_2}) \;\sim\; \mathrm{GOE}\text{-conditional}\bigl[\dots\bigr]$$
 
 is *determined* — even though the *single-instance* σ_standard is not determined.
 
@@ -130,8 +130,8 @@ Cat B *distributional* (조건부 §4.3). Cat A 는 (a) ensemble averaging 의 *
 ### §5.1 *Distinct domains*
 
 Route (a) 와 Route (b) 는 **수학적으로 독립** (prompt body §5 의 quality 기준):
-- Route (a): *low-coupling regime* ($\|V\| <$ spectral gap), *deterministic per-instance*.
-- Route (b): *high-coupling regime* ($\|V\| \to O(\lambda_\mathrm{rep})$), *distributional ensemble*.
+- Route (a): *low-coupling regime* ($\lVert V \rVert <$ spectral gap), *deterministic per-instance*.
+- Route (b): *high-coupling regime* ($\lVert V \rVert \to O(\lambda_\mathrm{rep})$), *distributional ensemble*.
 
 실패 모드 가 서로 다름:
 - Route (a) 실패 = deep merger.
@@ -162,7 +162,7 @@ Route (a) 성공 + Route (b) 성공 의 **교집합** = (i) 적절한 coupling r
 | 5 | Route (b) prediction: §4.2 RMT distributional, compute Wigner-Dyson cdf of $P_\mathrm{GOE}(s)$ for predicted spectrum. |
 | 6 | Numerical merger simulation (semi-implicit gradient flow): obtain $\sigma_\mathrm{std}(C_j^s)$ ground truth. |
 | 7 | 3-way 비교: Route (a) vs Route (b) vs ground truth. |
-| 8 | Convergence indicator: $\|(\sigma_\mathrm{std}^{(a)} - \sigma_\mathrm{std}^{(b)})\| / \|\sigma_\mathrm{std}^{(\mathrm{num})}\|$. Small for $d \in [3, 5]$ ⇒ overlap regime confirmed. |
+| 8 | Convergence indicator: $\lVert (\sigma_\mathrm{std}^{(a)} - \sigma_\mathrm{std}^{(b)}) \rVert / \lVert \sigma_\mathrm{std}^{(\mathrm{num})} \rVert$. Small for $d \in [3, 5]$ ⇒ overlap regime confirmed. |
 
 ### §5.4 Gate A 진입 조건 (Day 4 EOD)
 
@@ -170,7 +170,7 @@ W8 plan §2 G3 의 3-condition safety check 의 *수학적 형태*:
 
 - **(SC-a)** Route (a) 의 Kato 전개가 §3.4 의 perturbative condition 하에서 *closed-form polynomial map* $\Phi^{(a)}$ 산출 — 본 broad survey §3 매핑 완료 후 Day 2 PRIMARY (`op0008_merge_wigner_perturbation.md`) 에서 explicit form 도출.
 - **(SC-b)** Route (b) 의 RMT 가 §4.3 의 generic-graph condition 하에서 *distributional map* $\Phi^{(b)}$ 산출 — 본 broad survey §4 매핑 완료 후 Day 3 secondary (`op0008_merge_wigner_rmt.md`) 에서 explicit form 도출.
-- **(SC-c)** §5.3 의 numerical protocol exp92 가 8×8 + 12×12 toy 에서 *convergence* (overlap regime 의 $\|\Phi^{(a)} - \Phi^{(b)}\| < \mathrm{tol}$) 를 confirm.
+- **(SC-c)** §5.3 의 numerical protocol exp92 가 8×8 + 12×12 toy 에서 *convergence* (overlap regime 의 $\lVert \Phi^{(a)} - \Phi^{(b)} \rVert < \mathrm{tol}$) 를 confirm.
 
 세 조건 모두 PASS → Gate A 활성 → L-Wigner-Projection-MERGE Cat B 승급 + canonical §13 insertion candidate.
 

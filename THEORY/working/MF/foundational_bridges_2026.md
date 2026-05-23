@@ -68,7 +68,7 @@ The structural lesson is that **σ-trajectory PH formulation is a Bernshtein-sty
 **NQ-261 (Cat BC, W6+ 4-6 weeks):** *State the SCC formation problem as a finite-graph algorithm via Vietoris-Rips on σ-trajectory; formalize a Bernshtein-style bridge precisely.*
 
 - Step 1: Define the bridge explicitly. Let $\mathcal{P}_{\mathrm{SCC}}(G, K, M, \lambda)$ = "compute $\sigma_{\mathrm{multi}}^A(t)$ for given graph + parameters." Let $\mathcal{P}_{\mathrm{algo}}(G, K, M, \lambda)$ = "run zigzag PH on centroid trajectory output by `scc/multi.py`." Show $\mathcal{P}_{\mathrm{SCC}}$ and $\mathcal{P}_{\mathrm{algo}}$ are equivalent up to PH-stable invariants.
-- Step 2: Prove a Bernshtein-style **conservation lemma**: any σ-tuple invariant determinable by SCC ODE integration is determinable by a finite zigzag-PH computation on $C(t)$ + per-formation Hessian data, in time polynomial in $K_{\mathrm{act}} \cdot |X|$.
+- Step 2: Prove a Bernshtein-style **conservation lemma**: any σ-tuple invariant determinable by SCC ODE integration is determinable by a finite zigzag-PH computation on $C(t)$ + per-formation Hessian data, in time polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$.
 - Step 3: Empirically verify equivalence on R23 + 1D cycle + 2D torus benchmarks.
 
 **Cat target:** BC. The bridge is a definitional equivalence (Cat A in spirit) but the polynomial-time complexity claim requires structural parameter (Cat B in practice).
@@ -184,7 +184,7 @@ SCC's σ-framework has reached an analogous multi-layer state at CV-1.5.1:
 
 - Step 1: Define a **σ-fingerprint** as a tuple $(K_{\mathrm{act}}, \text{Bind-vector}, \text{Sep-vector}, \text{nodal-count multiset}, \mathrm{Aut}(G)_{u^*}\text{-irrep labels})$.
 - Step 2: Prove (or empirically verify) that the σ-fingerprint distinguishes all 56 R23 minimizers.
-- Step 3: Verify computational complexity is sub-cubic in $|X|$.
+- Step 3: Verify computational complexity is sub-cubic in $\lvert X \rvert$.
 - Step 4: Test strength on extended R23 enumeration.
 
 **Cat target:** B.

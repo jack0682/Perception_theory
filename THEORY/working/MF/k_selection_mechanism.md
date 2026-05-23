@@ -36,7 +36,7 @@ The goal is **not** to silently resolve OP-0005. The goal is to convert OP-0005 
 Per `K_status_commitment.md` §4.1, Commitment 16 (CV-1.5.1, canonical §11.1 #16):
 
 - **K_field**: architectural cap, modeling-layer commitment, integer set externally before instantiation.
-- **K_act(t)**: derived integer diagnostic, $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j : \|u^{(j)}(t)\|_1 > \epsilon\}$ for support threshold $\epsilon$.
+- **K_act(t)**: derived integer diagnostic, $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$ for support threshold $\epsilon$.
 - Inequality $K_{\mathrm{act}}(t) \leq K_{\mathrm{field}}$.
 - CN6 refined: "K kinetically determined" applies to **K_act** within $\{1, \ldots, K_{\mathrm{field}}\}$.
 
@@ -303,7 +303,7 @@ $$P(K \mid u_{\mathrm{obs}}, G, \mathrm{prior}) \propto P(u_{\mathrm{obs}} \mid 
 with BIC penalty (Schwarz 1978):
 $$\mathrm{BIC}(K) = -2 \log P(u_{\mathrm{obs}} \mid K, G; \hat\theta_K) + k(K) \log n$$
 
-where $k(K)$ is the parameter count for the K-field model and $n = |V|$.
+where $k(K)$ is the parameter count for the K-field model and $n = \lvert V \rvert$.
 
 **Cat target**: B (with structural parameter) — provided a specific likelihood model $P(u_{\mathrm{obs}} \mid K, G)$ is adopted. Natural choice: Gibbs measure $P(u \mid K, G) \propto \exp(-\beta \mathcal{E}_K(u))$ for a thermal SCC extension.
 

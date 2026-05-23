@@ -30,7 +30,7 @@ This memo proposes a layered ambient-state architecture for SCC / Multi-Formatio
 
 The architecture is restricted to:
 
-- finite graphs $G_t = (X_t, N_t)$ with $|X_t| < \infty$;
+- finite graphs $G_t = (X_t, N_t)$ with $\lvert X_t \rvert < \infty$;
 - finite total mass $M$;
 - finite architectural cap $K_{\mathrm{field}} \in \mathbb{Z}_{\ge 1}$;
 - gradient-flow dynamics on the K-field energy $\mathcal{E}_K$ as defined in `canonical.md` §11.
@@ -83,7 +83,7 @@ u : X_t \to [0,1]
 \;\middle|\;
 \sum_{x \in X_t} u(x) = m
 \right\},
-\qquad m \in (0, |X_t|).
+\qquad m \in (0, \lvert X_t \rvert).
 $$
 
 The soft cohesion field $u : X_t \to [0,1]$ is the primitive ontological entity per Commitment 1 of `canonical.md` §11.
@@ -140,7 +140,7 @@ $$
 Parameters:
 
 - $K_{\mathrm{field}} \in \mathbb{Z}_{\ge 1}$ — architectural cap, external modeling-layer commitment per Commitment 16 (CV-1.5.1).
-- $M \in (0, |X_t|]$ — conserved total mass.
+- $M \in (0, \lvert X_t \rvert]$ — conserved total mass.
 
 ### 5.2 Status and use
 
@@ -247,11 +247,11 @@ Properties:
 - By Cohen-Steiner–Edelsbrunner–Harer (2007) bottleneck stability and the Lipschitz hypothesis on $\phi$:
 
   $$
-  \big| K_{\mathrm{soft}}^\phi(v) - K_{\mathrm{soft}}^\phi(v') \big|
+  \big\vert K_{\mathrm{soft}}^\phi(v) - K_{\mathrm{soft}}^\phi(v') \big\vert
   \;\le\;
-  C_\phi \cdot \big| \mathrm{Dgm}_0(v) - \mathrm{Dgm}_0(v') \big|_{\mathrm{bot}}
+  C_\phi \cdot \big\vert \mathrm{Dgm}_0(v) - \mathrm{Dgm}_0(v') \big\vert_{\mathrm{bot}}
   \;\le\;
-  C_\phi \cdot \| v - v' \|_\infty,
+  C_\phi \cdot \lVert v - v' \rVert_\infty,
   $$
 
   where $C_\phi$ is the Lipschitz constant of $\phi$ scaled by an upper bound on the number of bars.
@@ -301,7 +301,7 @@ S_r^\varepsilon(G_t)
 \bigsqcup_{
 \substack{
 A \subseteq \{1, \dots, K_{\mathrm{field}}\} \\
-|A| = r
+\lvert A \rvert = r
 }
 }
 S_A^\varepsilon(G_t),
@@ -367,7 +367,7 @@ These are open questions handled by downstream work packages, principally NQ-242
 
 ### 8.1 Definition
 
-For $A \subseteq \{1, \dots, K_{\mathrm{field}}\}$, $|A| = r$, and a per-formation mass vector $\mathbf m_A = (m_j)_{j \in A}$ with each $m_j > 0$ and $\sum_{j \in A} m_j = M$, define the **occupancy-constrained fixed-mass slice**
+For $A \subseteq \{1, \dots, K_{\mathrm{field}}\}$, $\lvert A \rvert = r$, and a per-formation mass vector $\mathbf m_A = (m_j)_{j \in A}$ with each $m_j > 0$ and $\sum_{j \in A} m_j = M$, define the **occupancy-constrained fixed-mass slice**
 
 $$
 \Sigma_M^A(\mathbf m_A; G_t)
@@ -442,9 +442,9 @@ A state $\mathbf u \in S_A^\varepsilon(G_t)$ is **$(\varepsilon, \delta, D_{\mat
    $d_{G_t}\!\big(\mathrm{Supp}_\delta(u^{(j)}), \mathrm{Supp}_\delta(u^{(k)})\big) \ge D_{\mathrm{sep}}$
    for all $j \ne k$ in $A$.
 
-4. The aggregate $H_0$ persistence diagram $\mathrm{Dgm}_0(U(\mathbf u); G_t)$ contains exactly $|A|$ bars of length $\ge \ell_{\min}$, and at most $|A|$ bars of any length above an auxiliary robustness threshold.
+4. The aggregate $H_0$ persistence diagram $\mathrm{Dgm}_0(U(\mathbf u); G_t)$ contains exactly $\lvert A \rvert$ bars of length $\ge \ell_{\min}$, and at most $\lvert A \rvert$ bars of any length above an auxiliary robustness threshold.
 
-Under these hypotheses, $K_{\mathrm{soft}}^\phi(U(\mathbf u))$ and $K_{\mathrm{act}}^\varepsilon(\mathbf u) = |A|$ become comparable as an approximation statement with explicit error term. The exact form of this approximation is the content of the **K-soft / K-act bridge lemma** (work package WQ-2).
+Under these hypotheses, $K_{\mathrm{soft}}^\phi(U(\mathbf u))$ and $K_{\mathrm{act}}^\varepsilon(\mathbf u) = \lvert A \rvert$ become comparable as an approximation statement with explicit error term. The exact form of this approximation is the content of the **K-soft / K-act bridge lemma** (work package WQ-2).
 
 **Status:** working-definition safe (the hypotheses); bridge identity is **conjectural / downstream**.
 
@@ -491,7 +491,7 @@ A correctly disciplined analysis on Layer II:
 | 6 | $U(\mathbf u)$ | working-definition safe | Simplex constraint forces $U \in \Sigma_M(G_t)$ | Bridge from Layer II to Layer I | Treating as faithful inverse |
 | 7 | $K_{\mathrm{soft}}^\phi(v) = \sum_i \phi(\ell_i(v))$ | working-definition safe | Cohen-Steiner stability + Lipschitz $\phi$ + $\phi(0)=0$ | Unlabelled soft count of aggregate field | Suppressing $\phi$, $G_t$, or filtration dependence; threshold-free framing |
 | 8 | $S_A^\varepsilon$ active-set cell | working-definition safe | Labelled refinement of count stratum | Region notation; precondition for NQ-242c labelled trajectory analysis | Calling a Whitney stratum or a CW cell |
-| 9 | $S_r^\varepsilon = \bigsqcup_{|A|=r} S_A^\varepsilon$ | working-definition safe | Disjoint union; count-collapsing | Operational ε-active-count region | Identifying with intrinsic-count strata $S_{K_{\mathrm{act}}}$ of `mathematical_scaffolding_4tools.md` §2.2 |
+| 9 | $S_r^\varepsilon = \bigsqcup_{\lvert A \rvert=r} S_A^\varepsilon$ | working-definition safe | Disjoint union; count-collapsing | Operational ε-active-count region | Identifying with intrinsic-count strata $S_{K_{\mathrm{act}}}$ of `mathematical_scaffolding_4tools.md` §2.2 |
 | 10 | $\Sigma_M^A(\mathbf m_A; G_t)$ | working-definition safe (Layer III scope) | Occupancy-constrained subset of Layer II | Smooth-segment fixed-K fixed-mass theorems (T-Persist-K-Sep / Weak / Unified, D-6a static σ-multi) | Substituting unconstrained product $\prod_{j\in A}\Sigma_{m_j}(G_t)$; treating as global lifecycle ambient |
 | 11 | K-jump event definition | working-definition safe (event-only) | Direct from continuity + $K_{\mathrm{act}}^\varepsilon$ drop | Identifying jump times; staging NQ-242c | Asserting deterministic σ-inheritance, deterministic $A$-inheritance, single-merger genericity, unique right-limit |
 | 12 | $K_{\mathrm{soft}} \leftrightarrow K_{\mathrm{act}}$ bridge | conjectural / downstream | Requires (well-separated, $\delta$, $D_{\mathrm{sep}}$, $\ell_{\min}$) hypotheses | Approximation statement with explicit hypotheses and error term (work package WQ-2) | Global identity; identity in overlap or corner-saturated regimes |

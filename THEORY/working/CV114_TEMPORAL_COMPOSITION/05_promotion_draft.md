@@ -190,13 +190,13 @@ T-CC-StableK-Kernel (Cat B)은 $M_{t\to r} := M_{s\to r}\circ M_{t\to s}$로 정
 **필요한 새 lemma**:
 
 **Lemma δ_eff (NEW, Cat C)**:
-$$\delta_\mathrm{eff} := \left\|c_\mathrm{direct}(x,z;\,u_t,u_r) - c^\mathrm{eff}(x,z;\,M_{t\to s},M_{s\to r})\right\|_\infty$$
+$$\delta_\mathrm{eff} := \left\lVert c_\mathrm{direct}(x,z;\,u_t,u_r) - c^\mathrm{eff}(x,z;\,M_{t\to s},M_{s\to r})\right \rVert_\infty$$
 여기서 $c^\mathrm{eff}(x,z) = -\varepsilon_\mathrm{OT}\log\!\sum_y M_{t\to s}(x,y)M_{s\to r}(y,z)/u_t(x)$.
 
 stable-K + well-separated 하에서 $\delta_\mathrm{eff}$의 명시적 bound 유도가 핵심.
 
 **Lemma Eff-Sinkhorn (NEW, Cat C)**:
-$$\left\|M^\mathrm{Sinkhorn}(c^\mathrm{eff}) - M_{s\to r}\circ M_{t\to s}\right\|_\mathrm{TV} \leq \zeta_\mathrm{marg}$$
+$$\left\lVert M^\mathrm{Sinkhorn}(c^\mathrm{eff}) - M_{s\to r}\circ M_{t\to s}\right \rVert_\mathrm{TV} \leq \zeta_\mathrm{marg}$$
 entropic regularization과 marginal constraint 불일치로 인한 $\zeta_\mathrm{marg}$ bound.
 
 **ε_comp formula (proposed)**:

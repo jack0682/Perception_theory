@@ -78,7 +78,7 @@ $$\mathcal{M}_{\mathrm{obs}} = [q_{\min}, q_{\max}] \times \Delta^3 \times B_\xi
 
 ### DEF-3. Critical Observer Space [DEFINED]
 
-Under the **criticality hypothesis** ($q = q_c(X_t) = 4\lambda_2/|W''(c)|$):
+Under the **criticality hypothesis** ($q = q_c(X_t) = 4\lambda_2/\lvert W''(c) \rvert$):
 
 $$\mathcal{M}_{\mathrm{obs}}^{\mathrm{crit}} \cong \Delta^3 \times B_\xi, \quad \dim = 7$$
 
@@ -202,9 +202,9 @@ $V_{\mathrm{raw}} : \mathcal{M}_{\mathrm{obs}} \to \mathbb{R}_{\geq 0}$ is admis
 
 **OMS position:** OMS-1.0 defines the class $\mathcal{V}_{\mathrm{adm}}$, not a unique $V$. The canonical $V$ is an open problem (OP-OMS-002). [OPEN]
 
-**Computational placeholder:** $V_D^0(\lambda) = \|d_\lambda - d^*\|^2$ with $d^* = (1,1,1,0)$. [DEFINED, COMPUTATIONALLY TESTABLE]
+**Computational placeholder:** $V_D^0(\lambda) = \lVert d_\lambda - d^* \rVert^2$ with $d^* = (1,1,1,0)$. [DEFINED, COMPUTATIONALLY TESTABLE]
 
-**Recommended representative:** $V_P(\Theta) = D_{\mathcal{P}}(P(\Theta), P^*)$ with $D_{\mathcal{P}} = \alpha\|\cdot\|^2 + \beta D_T$. [DEFINED, V3 PROVED conditional]
+**Recommended representative:** $V_P(\Theta) = D_{\mathcal{P}}(P(\Theta), P^*)$ with $D_{\mathcal{P}} = \alpha\lVert \cdot \rVert^2 + \beta D_T$. [DEFINED, V3 PROVED conditional]
 
 ---
 
@@ -221,7 +221,7 @@ $$\mathrm{Type}_i = (\mathcal{B}_i,\ \bar{P}(A_i))$$
 
 **Proposition BS1 (Multiple types on connected space).** [PROVED]
 
-$\mathfrak{M}$ is connected AND can support $\geq 2$ distinct perceptual types. Construction: $\bar{V}(\lambda) = \|\lambda - \lambda^{(1)}\|^2 \cdot \|\lambda - \lambda^{(2)}\|^2$ on $\Delta^3$ has two minima at $\lambda^{(1)}, \lambda^{(2)}$ with disjoint basins.
+$\mathfrak{M}$ is connected AND can support $\geq 2$ distinct perceptual types. Construction: $\bar{V}(\lambda) = \lVert \lambda - \lambda^{(1)} \rVert^2 \cdot \lVert \lambda - \lambda^{(2)} \rVert^2$ on $\Delta^3$ has two minima at $\lambda^{(1)}, \lambda^{(2)}$ with disjoint basins.
 
 > **Mandatory central statement:** Perceptual types are not connected components of the observer moduli space; they are attractor basins of an admissible observer landscape on that space.
 

@@ -219,9 +219,9 @@ $$
 On a local neighborhood \(N_j^r\), define the residual perturbation size
 
 $$
-\|R_j\|_{\infty,N_j^r}
+\lVert R_j \rVert_{\infty,N_j^r}
 =
-\max_{x\in N_j^r}|R_j(x)|.
+\max_{x\in N_j^r}\lvert R_j(x) \rvert.
 $$
 
 The standard persistence-stability input is the bottleneck stability theorem for tame finite filtrations:
@@ -229,19 +229,19 @@ The standard persistence-stability input is the bottleneck stability theorem for
 $$
 d_B\!\left(\mathrm{Dgm}_0(f),\mathrm{Dgm}_0(g)\right)
 \le
-\|f-g\|_\infty.
+\lVert f-g \rVert_\infty.
 $$
 
 For bar lengths, a conservative consequence is that matched lengths can shift by at most roughly
 
 $$
-2\|f-g\|_\infty,
+2\lVert f-g \rVert_\infty,
 $$
 
 because both birth and death values may move by \(\|f-g\|_\infty\). Therefore, if
 
 $$
-\|R_j\|_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2,
+\lVert R_j \rVert_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2,
 $$
 
 then a local secondary bar satisfying
@@ -275,7 +275,7 @@ $$
 **NE-2 Local residual perturbation bound.**
 
 $$
-\|R_j\|_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2.
+\lVert R_j \rVert_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2.
 $$
 
 **NE-3 No residual dominant birth inside the slot neighborhood.**
@@ -312,7 +312,7 @@ $$
 and the aggregate perturbation from other slots in the relevant local neighborhood satisfies
 
 $$
-\|R_j\|_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2.
+\lVert R_j \rVert_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2.
 $$
 
 Assume also local-to-global barcode compatibility for bars born in \(N_j^r\), no residual dominant birth inside \(N_j^r\), and a positive tie margin. Then no secondary bar generated inside the \(j\)-th active support can cross the dominance threshold \(\ell_{\min}\) in the aggregate field \(U\). Hence active slot \(j\) contributes at most one dominant \(H_0\) bar to
@@ -476,7 +476,7 @@ $$
 plus a residual perturbation margin such as
 
 $$
-\|R_j\|_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2.
+\lVert R_j \rVert_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2.
 $$
 
 This controls overcount from active slots, but it does not control inactive residual bars and does not prove the full L-1 bridge. The next proof target is L1-E, with L1-F needed soon after to make the local-to-global barcode transfer theorem-grade.

@@ -86,8 +86,8 @@ By T-PreObj-1G (canonical §13, W4-04-24, Cat A), under hypotheses (G1)–(G4) t
 By T-σ-Theorem-3 (canonical §13, W5 Day 1, Cat A on $D_4$ free-BC; **graph-class lift Cat C target** for general $G$), the constrained Hessian at $u_i^* = c\mathbf{1}$ takes the form
 $$H(c\mathbf{1}_{X_i}) = 4\alpha L_{G_i} + \beta W''(c) I \quad \text{on } \mathbf{1}_{X_i}^\perp,$$
 with eigenvalues
-$$\mu_k(G_i) = 4\alpha \lambda_k^{\mathrm{Lap}}(G_i) + \beta W''(c), \qquad k = 2, 3, \ldots, |X_i|,$$
-and Hessian eigenvectors coinciding with Laplacian eigenvectors on $\mathbf{1}_{X_i}^\perp$ (Prop 1.3a). The smallest non-volume eigenvalue is $\mu_2(G_i) = 4\alpha \lambda_2^{\mathrm{Lap}}(G_i) + \beta W''(c)$, governing the first pitchfork crossing $\beta_{\mathrm{crit}}^{(2)}(G_i) = 4\alpha \lambda_2^{\mathrm{Lap}}(G_i) / |W''(c)|$.
+$$\mu_k(G_i) = 4\alpha \lambda_k^{\mathrm{Lap}}(G_i) + \beta W''(c), \qquad k = 2, 3, \ldots, \lvert X_i \rvert,$$
+and Hessian eigenvectors coinciding with Laplacian eigenvectors on $\mathbf{1}_{X_i}^\perp$ (Prop 1.3a). The smallest non-volume eigenvalue is $\mu_2(G_i) = 4\alpha \lambda_2^{\mathrm{Lap}}(G_i) + \beta W''(c)$, governing the first pitchfork crossing $\beta_{\mathrm{crit}}^{(2)}(G_i) = 4\alpha \lambda_2^{\mathrm{Lap}}(G_i) / \lvert W''(c) \rvert$.
 
 *Caveat (Cat C lift).* T-σ-Theorem-3 is currently Cat A on $D_4$ free-BC. Generalization to arbitrary finite connected $G$ requires either (a) direct verification on each graph class (e.g., $C_n$, $T^d$, complete graphs), or (b) a graph-class-independent restatement based on Prop 1.3a structure alone (which generalizes verbatim because $H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I$ uses no graph-specific structure beyond the Laplacian). The latter is the **CV-1.6 promotion target** — see §6.
 
@@ -95,7 +95,7 @@ and Hessian eigenvectors coinciding with Laplacian eigenvectors on $\mathbf{1}_{
 
 By T-σ-Lemma-1 + Tool A2 (`mathematical_scaffolding_4tools.md` §4 — proposed Commitment 17), the tangent space $T_{u_i^*}\Sigma_m^{(i)}$ decomposes canonically into $\mathrm{Aut}(G_i)_{u_i^*}$-isotypic components:
 $$T_{u_i^*}\Sigma_m^{(i)} = \bigoplus_{[\rho] \in \widehat{\mathrm{Aut}(G_i)_{u_i^*}}} V^{(i), [\rho]},$$
-where $V^{(i), [\rho]} = P_{[\rho]} T_{u_i^*}\Sigma_m^{(i)}$ via the standard isotypic projector $P_{[\rho]} = \frac{\dim \rho}{|G_u|} \sum_{\pi} \overline{\chi_\rho(\pi)} \pi$ (Serre 1977 §2.6).
+where $V^{(i), [\rho]} = P_{[\rho]} T_{u_i^*}\Sigma_m^{(i)}$ via the standard isotypic projector $P_{[\rho]} = \frac{\dim \rho}{\lvert G_u \rvert} \sum_{\pi} \overline{\chi_\rho(\pi)} \pi$ (Serre 1977 §2.6).
 
 **The smallest-eigenvalue eigenspace at criticality determines the first pitchfork.** Specifically, $V_i^{\min} := \ker(H(u_i^*) - \mu_2(G_i) I) |_{\mathbf{1}^\perp}$ is the eigenspace whose Hessian eigenvalue first crosses zero as $\beta \to \beta_{\mathrm{crit}}^{(2)}(G_i)^+$. By T-σ-Theorem-4 (canonical §13, W5 Day 1, Cat A on $D_4$ free-BC; generalization conditional), the post-bifurcation minimizer $u_{i, \mathrm{pitchfork}}^* = c\mathbf{1} + a_\epsilon \phi_{\min}^{(i)} + O(\epsilon)$ has its symmetry breaking pattern governed by the irrep decomposition of $V_i^{\min}$.
 
@@ -169,18 +169,18 @@ Therefore $\sigma(u_{1, \mathrm{pitchfork}}^*) \equiv \sigma(u_{2, \mathrm{pitch
 
 **Three-graph-class comparison.** Verify the locality theorem on three structurally distinct graph classes, each with non-trivial uniform stabilizer:
 
-1. **R23 (D₄ free-BC grid, $L = 8$).** $\mathrm{Aut}(G)_{u^*} = D_4$, $|G_u| = 8$. First-pitchfork mode by T-σ-Theorem-4: $\phi_{(1, 0)}/\phi_{(0, 1)}$ doublet, irrep $E$ (2-dim).
-2. **$Z_n$ cycle ($n = 20$).** $\mathrm{Aut}(G)_{u^*} = D_{20}$, $|G_u| = 40$. First-pitchfork mode: lowest non-volume Laplacian eigenvector $\phi_1(x) = \cos(2\pi x/n)$ doublet, irrep is the 2-dim $D_{20}$-irrep $E_1$.
-3. **$Z_n \times Z_n$ torus ($n = 10$).** $\mathrm{Aut}(G)_{u^*} = (\mathbb{Z}_{10} \times \mathbb{Z}_{10}) \rtimes D_4$, $|G_u| = 800$. First-pitchfork mode: lowest non-volume torus eigenvector doublet $\{\phi_{(1,0)}, \phi_{(0,1)}\}$, 4-dimensional irrep.
+1. **R23 (D₄ free-BC grid, $L = 8$).** $\mathrm{Aut}(G)_{u^*} = D_4$, $\lvert G_u \rvert = 8$. First-pitchfork mode by T-σ-Theorem-4: $\phi_{(1, 0)}/\phi_{(0, 1)}$ doublet, irrep $E$ (2-dim).
+2. **$Z_n$ cycle ($n = 20$).** $\mathrm{Aut}(G)_{u^*} = D_{20}$, $\lvert G_u \rvert = 40$. First-pitchfork mode: lowest non-volume Laplacian eigenvector $\phi_1(x) = \cos(2\pi x/n)$ doublet, irrep is the 2-dim $D_{20}$-irrep $E_1$.
+3. **$Z_n \times Z_n$ torus ($n = 10$).** $\mathrm{Aut}(G)_{u^*} = (\mathbb{Z}_{10} \times \mathbb{Z}_{10}) \rtimes D_4$, $\lvert G_u \rvert = 800$. First-pitchfork mode: lowest non-volume torus eigenvector doublet $\{\phi_{(1,0)}, \phi_{(0,1)}\}$, 4-dimensional irrep.
 
 **Protocol.**
 
-1. **Compute uniform stabilizer.** For each graph $G$, compute $\mathrm{Aut}(G)_{u^*} = \mathrm{Aut}(G)$ at $u^* = c\mathbf{1}$ via permutation-group enumeration (PyNautyq/SageMath). Record $|G_u|$ and irrep set $\widehat{G_u}$.
+1. **Compute uniform stabilizer.** For each graph $G$, compute $\mathrm{Aut}(G)_{u^*} = \mathrm{Aut}(G)$ at $u^* = c\mathbf{1}$ via permutation-group enumeration (PyNautyq/SageMath). Record $\lvert G_u \rvert$ and irrep set $\widehat{G_u}$.
 2. **Compute first-pitchfork minimizer.** For each $G$, set $\beta = \beta_{\mathrm{crit}}^{(2)}(G) + \epsilon$ with matched $\epsilon = 0.01 \cdot \beta_{\mathrm{crit}}^{(2)}(G)$. Run `find_formation` from random IC near $u^* = c\mathbf{1}$ to obtain $u_{\mathrm{pitchfork}}^*$.
 3. **Extract σ-tuple.** Apply `sigma_uniqueness_theorem.md` §5 protocol (steps 1–7) to compute $\sigma(u_{\mathrm{pitchfork}}^*)$.
 4. **Test irrep-compatibility.** Pairwise: do there exist $\varphi: G_u^{(1)} \to G_u^{(2)}$ satisfying Definition 3.3? — Note: $D_4 \not\cong D_{20}$ as groups, so direct $\varphi$ existence fails between R23 and $Z_n$ cycle. The test is **negative** — confirming that σ-tuples differ between non-isomorphic stabilizers.
 5. **Test isomorphism-class consistency within fixed $G_u$.** Vary the graph topology while preserving $\mathrm{Aut}(G)_{u^*}$ — e.g., $D_4$ free-BC $L = 8$ vs $D_4$ free-BC $L = 16$ vs a $D_4$-symmetric SBM with locally-isomorphic structure. Predict identical first-pitchfork σ-tuple modulo conjugation.
-6. **Output.** `CODE/scripts/results/sigma_locality_R23_cycle_torus.json` containing per-graph $(|G_u|, \widehat{G_u}, \mu_2, \beta_{\mathrm{crit}}^{(2)}, \sigma(u_{\mathrm{pitchfork}}^*))$ and pairwise locality-consistency Boolean.
+6. **Output.** `CODE/scripts/results/sigma_locality_R23_cycle_torus.json` containing per-graph $(\lvert G_u \rvert, \widehat{G_u}, \mu_2, \beta_{\mathrm{crit}}^{(2)}, \sigma(u_{\mathrm{pitchfork}}^*))$ and pairwise locality-consistency Boolean.
 
 **Implementation outline** (`CODE/scripts/sigma_locality_R23_cycle_torus.py`):
 

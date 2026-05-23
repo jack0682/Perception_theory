@@ -26,18 +26,18 @@ related:
 
 ## §1. Statement
 
-**Lemma 16 (σ_rich Lipschitz, Cat B).** *Let $C \subseteq \mathcal{P}$ be a persistent component (D-ST-3) with $|C| \geq 1$. Let $u, u' \in [0,1]^n$ be two soft cohesion fields with $u'|_{\mathcal{P}\setminus C} = u|_{\mathcal{P}\setminus C}$ (component-localized perturbation). Suppose:*
+**Lemma 16 (σ_rich Lipschitz, Cat B).** *Let $C \subseteq \mathcal{P}$ be a persistent component (D-ST-3) with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ be two soft cohesion fields with $u'|_{\mathcal{P}\setminus C} = u|_{\mathcal{P}\setminus C}$ (component-localized perturbation). Suppose:*
 
-- *(MP) Mass positivity:* $m(C; u) = \sum_{x \in C} u(x) \geq m_\mathrm{min} := \rho_\mathrm{pers}\,|C|/4 > 0$.
+- *(MP) Mass positivity:* $m(C; u) = \sum_{x \in C} u(x) \geq m_\mathrm{min} := \rho_\mathrm{pers}\,\lvert C \rvert/4 > 0$.
 - *(DB) Diameter bound:* $\mathrm{diam}_\mathrm{intra}(C) := \max_{x,y\in C} d_G(x,y) \leq D_C$.
-- *Smallness:* $\varepsilon := \|\delta u|_C\|_2 \leq m_\mathrm{min}/(2\sqrt{|C|})$ where $\delta u = u' - u$.
+- *Smallness:* $\varepsilon := \lVert \delta u|_C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$ where $\delta u = u' - u$.
 
 *Then:*
-$$\big\|\sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big\|_\Sigma \;\leq\; L_\sigma \cdot \varepsilon,$$
+$$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big \rVert_\Sigma \;\leq\; L_\sigma \cdot \varepsilon,$$
 *with explicit constant:*
-$$\boxed{\;L_\sigma = \sqrt{|C|}\,\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{2 D_C^2}{m_\mathrm{min}}\Big) \;\approx\; \frac{2\sqrt{|C|}\,D_C^2}{m_\mathrm{min}}.\;}$$
+$$\boxed{\;L_\sigma = \sqrt{\lvert C \rvert}\,\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{2 D_C^2}{m_\mathrm{min}}\Big) \;\approx\; \frac{2\sqrt{\lvert C \rvert}\,D_C^2}{m_\mathrm{min}}.\;}$$
 
-*The σ-component product norm $\|\cdot\|_\Sigma$ is the natural product on $\mathbb{R}_{\geq 0} \times \mathbb{R}^d \times \mathrm{Sym}^+_d$ (mass, centroid, inertia tensor).*
+*The σ-component product norm $\lVert \cdot \rVert_\Sigma$ is the natural product on $\mathbb{R}_{\geq 0} \times \mathbb{R}^d \times \mathrm{Sym}^+_d$ (mass, centroid, inertia tensor).*
 
 ---
 
@@ -47,21 +47,21 @@ $$\boxed{\;L_\sigma = \sqrt{|C|}\,\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{
 
 ### §2.1 Mass
 
-$|m' - m| = |\sum_C \delta u| \leq \sqrt{|C|} \varepsilon$ (Cauchy-Schwarz). Lipschitz constant: $\sqrt{|C|}$.
+$\lvert m' - m \rvert = |\sum_C \delta u| \leq \sqrt{\lvert C \rvert} \varepsilon$ (Cauchy-Schwarz). Lipschitz constant: $\sqrt{\lvert C \rvert}$.
 
 ### §2.2 Centroid
 
 Identity: $\bar x' - \bar x = \sum_C \delta u(x) (x - \bar x)/m'$. Cauchy-Schwarz + (DB):
-$$\|\bar x' - \bar x\|_2 \leq D_C \sqrt{|C|}\,\varepsilon / m'.$$
-Smallness gives $m' \geq m_\mathrm{min}/2$, so Lipschitz: $2 D_C\sqrt{|C|}/m_\mathrm{min}$.
+$$\lVert \bar x' - \bar x \rVert_2 \leq D_C \sqrt{\lvert C \rvert}\,\varepsilon / m'.$$
+Smallness gives $m' \geq m_\mathrm{min}/2$, so Lipschitz: $2 D_C\sqrt{\lvert C \rvert}/m_\mathrm{min}$.
 
 ### §2.3 Inertia
 
-Similar with second moments. Lipschitz: $2 D_C^2 \sqrt{|C|}/m_\mathrm{min}$.
+Similar with second moments. Lipschitz: $2 D_C^2 \sqrt{\lvert C \rvert}/m_\mathrm{min}$.
 
 ### §2.4 Combination
 
-Product-norm Lipschitz = sum of components: $\sqrt{|C|}\,(1 + 2D_C/m_\mathrm{min} + 2D_C^2/m_\mathrm{min})$.
+Product-norm Lipschitz = sum of components: $\sqrt{\lvert C \rvert}\,(1 + 2D_C/m_\mathrm{min} + 2D_C^2/m_\mathrm{min})$.
 
 $\square$
 
@@ -69,7 +69,7 @@ $\square$
 
 ## §3. Numerical instance
 
-At exp83 default ($|C| \leq 25$, $D_C \leq 7$, $\rho_\mathrm{pers} = 0.5$, $m_\mathrm{min} \geq 3.125$):
+At exp83 default ($\lvert C \rvert \leq 25$, $D_C \leq 7$, $\rho_\mathrm{pers} = 0.5$, $m_\mathrm{min} \geq 3.125$):
 $$L_\sigma \leq 5 \cdot (1 + 4.48 + 31.36) \approx 185.$$
 
 For 1% noise ($\varepsilon = 0.01$): σ-shift bounded by $1.85$. Mass shift $\leq 0.05$, centroid shift $\leq 0.224$, inertia shift $\leq 1.568$. All small relative to natural scales.

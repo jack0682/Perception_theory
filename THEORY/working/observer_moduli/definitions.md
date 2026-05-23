@@ -113,10 +113,10 @@ In the minimal model ($\xi$ fixed): $\dim \mathcal{M}_{\text{obs}}^{\text{min}} 
 **The criticality hypothesis** [Hypothesized]:
 The observer tracks the phase-transition critical point, so that:
 
-$$q \approx q_c(X_t) := \frac{4\lambda_2(X_t)}{|W''(c)|}$$
+$$q \approx q_c(X_t) := \frac{4\lambda_2(X_t)}{\lvert W''(c) \rvert}$$
 
 where $\lambda_2(X_t)$ is the Fiedler eigenvalue of graph $X_t$, $c = m/n$, and:
-$$|W''(c)| = 2(6c - 6c^2 - 1) \quad \text{for } c \in \left(\tfrac{3-\sqrt{3}}{6}, \tfrac{3+\sqrt{3}}{6}\right)$$
+$$\lvert W''(c) \rvert = 2(6c - 6c^2 - 1) \quad \text{for } c \in \left(\tfrac{3-\sqrt{3}}{6}, \tfrac{3+\sqrt{3}}{6}\right)$$
 
 **Strict critical observer space:**
 $$\mathcal{M}_{\text{obs}}^{\text{crit}} = \{q_c(X_t)\} \times \Delta^3 \times B_\xi \cong \Delta^3 \times B_\xi$$
@@ -129,7 +129,7 @@ $$\mathcal{M}_{\text{obs}}^{\text{crit}} \cong \Delta^3 \times B_\xi$$
 *Proof:* The map $(q, \lambda, \xi) \mapsto (\lambda, \xi)$ is a homeomorphism on $\{q_c\} \times \Delta^3 \times B_\xi \cong \Delta^3 \times B_\xi$. $\square$
 
 **Band version** (approximate criticality with tolerance $\varepsilon > 0$):
-$$\mathcal{M}_{\text{obs}}^{\text{crit},\varepsilon} = \{(q, \lambda, \xi) \in \mathcal{M}_{\text{obs}} : |q - q_c(X_t)| \leq \varepsilon\}$$
+$$\mathcal{M}_{\text{obs}}^{\text{crit},\varepsilon} = \{(q, \lambda, \xi) \in \mathcal{M}_{\text{obs}} : \lvert q - q_c(X_t) \rvert \leq \varepsilon\}$$
 
 This is a closed subset of $\mathcal{M}_{\text{obs}}$, hence compact.
 
@@ -324,7 +324,7 @@ $$\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \bigsqcup_{[H] \leq G} \mathfrak{
 where $\mathfrak{M}_{(H)} = \{[\Theta] : G_\Theta \text{ is conjugate to } H\}$ is the stratum of observers with stabilizer type $[H]$.
 
 **Interpretation** [Hypothesis, not theorem]:
-The stratum with maximum stabilizer $|G_\Theta| = |G|$ (fixed points of full $G$) may correspond to highly canonical or "species-typical" observer configurations. This is an interpretation, not a proved claim.
+The stratum with maximum stabilizer $|G_\Theta| = \lvert G \rvert$ (fixed points of full $G$) may correspond to highly canonical or "species-typical" observer configurations. This is an interpretation, not a proved claim.
 
 ---
 
@@ -401,12 +401,12 @@ $$\mathcal{B}(\Theta^*) = \{\Theta_0 \in \mathcal{M}_{\mathrm{obs}} : \lim_{t \t
 For observer $\Theta \in \mathcal{M}_{\mathrm{obs}}$, let $J_P(\Theta)$ be the Jacobian of the readout map $P_{\mathrm{top}} : \mathcal{M}_{\mathrm{obs}} \to \mathcal{Y}$ (see DEF-22).
 
 **Relevant direction at $\Theta$:** A unit tangent vector $v \in T_\Theta \mathcal{M}_{\mathrm{obs}}$ is $\varepsilon$-relevant if:
-$$\|J_P(\Theta) \cdot v\| \geq \varepsilon$$
+$$\lVert J_P(\Theta) \cdot v \rVert \geq \varepsilon$$
 
 i.e., small perturbations in direction $v$ produce changes of magnitude $\geq \varepsilon$ in the readout.
 
 **Irrelevant direction at $\Theta$:** A unit vector $v$ is $\varepsilon$-irrelevant if:
-$$\|J_P(\Theta) \cdot v\| < \varepsilon$$
+$$\lVert J_P(\Theta) \cdot v \rVert < \varepsilon$$
 
 **Relevant subspace:** $V_{\mathrm{rel}}(\Theta; \varepsilon) = \mathrm{span}\{v_i : \sigma_i(J_P(\Theta)) \geq \varepsilon\}$ where $\sigma_i$ are singular values of $J_P(\Theta)$ and $v_i$ are corresponding right singular vectors.
 
@@ -445,11 +445,11 @@ This hypothesis must be tested by VP-6 (Jacobian singular spectrum computation).
 For index set $I \subseteq \{cl, sep, bd, tr\}$, the $I$-face of $\Delta^3$ is:
 $$\partial_I \Delta^3 = \{\lambda \in \Delta^3 : \lambda_i = 0\ \forall i \in I\}$$
 
-**Dimension of stratum:** $\dim(\partial_I \Delta^3) = 3 - |I|$ (number of surviving active coordinates minus normalization constraint).
+**Dimension of stratum:** $\dim(\partial_I \Delta^3) = 3 - \lvert I \rvert$ (number of surviving active coordinates minus normalization constraint).
 
 **Full stratification of $\Delta^3$:** There are $2^4 = 16$ faces (including the interior and the four vertices):
 
-| $|I|$ | Count | Dimension | Interpretation |
+| $\lvert I \rvert$ | Count | Dimension | Interpretation |
 |---|---|---|---|
 | 0 | 1 | 3 | Interior: full observer (all terms active) |
 | 1 | 4 | 2 | Faces: one term ablated |

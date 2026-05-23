@@ -107,7 +107,7 @@ Grounded status: strongest part of the theory.
 The T8 line is still the macro heart:
 
 $$
-\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}
+\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}
 $$
 
 The important content is not only the formula. It is the claim that object-like boundary emergence is condition-dependent, especially through resolution / graph spectrum.

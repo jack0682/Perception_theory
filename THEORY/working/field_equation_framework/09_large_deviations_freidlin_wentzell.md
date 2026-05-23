@@ -161,13 +161,13 @@ $$dU_t = -\Pi_{T\Sigma_m}\nabla\mathcal{E}(U_t)\,dt + \sqrt{2T_*}\,\Pi_{T\Sigma_
 
 Set $\sigma = \sqrt{2}\,\Pi_{T\Sigma_m}$ so $\sigma\sigma^\top = 2\Pi_{T\Sigma_m}\Pi_{T\Sigma_m}^\top = 2\Pi_{T\Sigma_m}$ (idempotent projector). Then the Freidlin-Wentzell rate function on $C([0,T]; \tilde{C})$ (continuous paths into the polytope) is
 
-$$\boxed{I_{[0,T]}(\phi) = \frac{1}{2}\int_0^T \langle \dot\phi(t) + \Pi\nabla\mathcal{E}(\phi(t)),\, (\sigma\sigma^\top)^+\, [\dot\phi(t) + \Pi\nabla\mathcal{E}(\phi(t))] \rangle\,dt = \frac{1}{4}\int_0^T \|\dot\phi + \Pi\nabla\mathcal{E}\|^2\,dt}$$
+$$\boxed{I_{[0,T]}(\phi) = \frac{1}{2}\int_0^T \langle \dot\phi(t) + \Pi\nabla\mathcal{E}(\phi(t)),\, (\sigma\sigma^\top)^+\, [\dot\phi(t) + \Pi\nabla\mathcal{E}(\phi(t))] \rangle\,dt = \frac{1}{4}\int_0^T \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2\,dt}$$
 
 on absolutely continuous paths $\phi: [0,T] \to \tilde{C}$ with $\phi(t) \in T\Sigma_m$ component (the reflection $dK_t$ contributes additional boundary terms vanishing in the interior — Anderson-Orey 1976). The Moore-Penrose pseudoinverse $(\sigma\sigma^\top)^+ = (1/2)\Pi$ accounts for the rank-$(n-1)$ degenerate diffusion (zero mode = mass-conservation direction $\mathbf{1}/\sqrt{n}$ is *deterministically conserved* by drift projection).
 
 For paths *in the interior* and *tangent to* $\Sigma_m$ (so $\Pi\dot\phi = \dot\phi$), the rate function simplifies to
 
-$$I_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \|\dot\phi(t) + \nabla_{T\Sigma_m}\mathcal{E}(\phi(t))\|^2\,dt.$$
+$$I_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \lVert \dot\phi(t) + \nabla_{T\Sigma_m}\mathcal{E}(\phi(t)) \rVert^2\,dt.$$
 
 **LDP statement (Freidlin-Wentzell 1998 Theorem 3.1, specialized to SCC):** Under hypotheses (H1)–(H3) of §5.2,
 
@@ -225,7 +225,7 @@ with $\Delta\mathcal{E}_{A\to\text{saddle}} := \mathcal{E}(u^{*,\text{saddle}_{A
 
 At $\partial\tilde{C}$ (where $u_i = 0$ or $1$), the Skorokhod reflection contributes an extra term to $I$:
 
-$$I^{\partial}_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \|\dot\phi + \Pi\nabla\mathcal{E}\|^2\,dt + \int_0^T \mathbb{1}_{\phi(t) \in \partial\tilde{C}} \cdot \langle n(\phi(t)), \dot\phi(t) - (\dot\phi)_\parallel \rangle\,d|K|_t$$
+$$I^{\partial}_{[0,T]}(\phi) = \frac{1}{4}\int_0^T \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2\,dt + \int_0^T \mathbb{1}_{\phi(t) \in \partial\tilde{C}} \cdot \langle n(\phi(t)), \dot\phi(t) - (\dot\phi)_\parallel \rangle\,d|K|_t$$
 
 where $n$ is the inward normal at $\partial\tilde{C}$ and $|K|_t$ the local-time measure (Skorokhod regulator). Per Anderson-Orey 1976 + Dupuis-Ishii 1991, for paths *strictly interior* to $\tilde{C}$ this boundary contribution vanishes. For SCC formation regime with well + saddle interior (hypothesis H2), the minimum-action path can be taken interior, so the boundary correction is zero. *This is precisely the analog of file 02 §5.2 (H3) "interior well-separation from $\partial\tilde{C}$".*
 
@@ -271,7 +271,7 @@ $$\lim_{T_*\to 0} T_*\log\Gamma_{\text{Eyring}} = -\Delta E.$$
 
 ### §5.1 Statement
 
-**L-FW-KRAMERS-SCC (working-layer Cat A target).** Let $G=(V,E)$ be a finite connected graph with $|V|=n$, mass $M = c\cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior), SCC parameters $(\alpha,\beta,\lambda_{cl},\lambda_{sep},\lambda_{bd},\lambda_{tr})$ in the formation regime $\beta/\alpha > 4\lambda_2(L_G)/|W''(c)|$ (DECL T8 super-critical). Let $T_* > 0$ be the canonical ξ resident (OMS-1, Route C, CV-1.18 SEAL). Let $u^{*,A}, u^{*,B} \in \mathrm{int}(\mathcal{F}_M(G))$ be two metastable formation states (interior local minima of $\mathcal{E}_{\text{SCC}}$), and let $u^{*,\text{saddle}_{AB}}$ be a critical point of $\mathcal{E}_{\text{SCC}}$ on the minimum-energy path connecting them, with energy barrier
+**L-FW-KRAMERS-SCC (working-layer Cat A target).** Let $G=(V,E)$ be a finite connected graph with $\lvert V \rvert=n$, mass $M = c\cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior), SCC parameters $(\alpha,\beta,\lambda_{cl},\lambda_{sep},\lambda_{bd},\lambda_{tr})$ in the formation regime $\beta/\alpha > 4\lambda_2(L_G)/\lvert W''(c) \rvert$ (DECL T8 super-critical). Let $T_* > 0$ be the canonical ξ resident (OMS-1, Route C, CV-1.18 SEAL). Let $u^{*,A}, u^{*,B} \in \mathrm{int}(\mathcal{F}_M(G))$ be two metastable formation states (interior local minima of $\mathcal{E}_{\text{SCC}}$), and let $u^{*,\text{saddle}_{AB}}$ be a critical point of $\mathcal{E}_{\text{SCC}}$ on the minimum-energy path connecting them, with energy barrier
 
 $$\Delta\mathcal{E}_{A\to\text{saddle}} := \mathcal{E}_{\text{SCC}}(u^{*,\text{saddle}_{AB}}) - \mathcal{E}_{\text{SCC}}(u^{*,A}) > 0.$$
 
@@ -422,14 +422,14 @@ The two SCC reading have $\sqrt{2T_*}$ noise, matching standard Kramers exactly 
 
 Let us redo the rate function calculation carefully. With $\sigma\sigma^\top = 2\Pi$ on the tangent space:
 
-$$I^{\text{FW-standard}}(\phi) = \frac{1}{2}\int_0^T \langle\dot\phi + \Pi\nabla\mathcal{E},\, (\sigma\sigma^\top)^{-1}\,[\dot\phi + \Pi\nabla\mathcal{E}]\rangle\,dt = \frac{1}{2}\cdot\frac{1}{2}\int_0^T \|\dot\phi + \Pi\nabla\mathcal{E}\|^2\,dt = \frac{1}{4}\int_0^T \|\cdots\|^2\,dt.$$
+$$I^{\text{FW-standard}}(\phi) = \frac{1}{2}\int_0^T \langle\dot\phi + \Pi\nabla\mathcal{E},\, (\sigma\sigma^\top)^{-1}\,[\dot\phi + \Pi\nabla\mathcal{E}]\rangle\,dt = \frac{1}{2}\cdot\frac{1}{2}\int_0^T \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2\,dt = \frac{1}{4}\int_0^T \lVert \cdots \rVert^2\,dt.$$
 
 The LDP is $\mathbb{P}(\cdots) \asymp \exp(-I/\epsilon_{\text{FW}})$. *But what is $\epsilon_{\text{FW}}$?* In the Freidlin-Wentzell convention $dX = b\,dt + \sqrt{\epsilon}\sigma\,dB$, our SCC SDE has $\sqrt{2T_*}\Pi$ as the noise — so $\sqrt{\epsilon_{\text{FW}}}\sigma_{\text{FW}} = \sqrt{2T_*}\Pi$. We can set $\sigma_{\text{FW}} = \Pi$ and $\epsilon_{\text{FW}} = 2T_*$, or $\sigma_{\text{FW}} = \sqrt{2}\Pi$ and $\epsilon_{\text{FW}} = T_*$. The product $I/\epsilon_{\text{FW}}$ is invariant:
 
-- Choice A ($\sigma_{\text{FW}} = \Pi$, $\epsilon = 2T_*$): $I = (1/2)\int \|\dot\phi + \Pi\nabla\mathcal{E}\|^2 dt$ (since $(\sigma\sigma^\top)^+ = \Pi$). LDP: $\mathbb{P} \asymp \exp(-I/(2T_*))$.
-- Choice B ($\sigma_{\text{FW}} = \sqrt{2}\Pi$, $\epsilon = T_*$): $I = (1/4)\int \|\dot\phi + \Pi\nabla\mathcal{E}\|^2 dt$. LDP: $\mathbb{P} \asymp \exp(-I/T_*)$.
+- Choice A ($\sigma_{\text{FW}} = \Pi$, $\epsilon = 2T_*$): $I = (1/2)\int \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2 dt$ (since $(\sigma\sigma^\top)^+ = \Pi$). LDP: $\mathbb{P} \asymp \exp(-I/(2T_*))$.
+- Choice B ($\sigma_{\text{FW}} = \sqrt{2}\Pi$, $\epsilon = T_*$): $I = (1/4)\int \lVert \dot\phi + \Pi\nabla\mathcal{E} \rVert^2 dt$. LDP: $\mathbb{P} \asymp \exp(-I/T_*)$.
 
-Both give the same $\mathbb{P} \asymp \exp(-(1/(4T_*))\int\|\cdot\|^2 dt)$. The quasipotential is then
+Both give the same $\mathbb{P} \asymp \exp(-(1/(4T_*))\int\lVert \cdot \rVert^2 dt)$. The quasipotential is then
 
 $$V(u^{*,A}, u^{*,B}) = \inf I = \frac{1}{2}\cdot 2(\mathcal{E}(\text{sad}) - \mathcal{E}(\text{well})) = \mathcal{E}(\text{sad}) - \mathcal{E}(\text{well}) = \Delta\mathcal{E}$$
 
@@ -447,7 +447,7 @@ i.e., the *standard Kramers exponent* with factor 1.
 
 ### §7.3 Where the "factor 2" came from and why it's a convention artifact
 
-The "$V = 2(\mathcal{E}(x) - \mathcal{E}(x^*))$" formula in §3.2 (Freidlin-Wentzell §4.3 Lemma 3.1) is stated for the *standard FW SDE* $dX = -\nabla V\,dt + \sqrt{2\epsilon}\,dB$, which has $\sigma\sigma^\top = 2I$ and the rate function $I = (1/(4\epsilon))\int\|\dot\phi + \nabla V\|^2 dt$. The quasipotential being $2(V(x) - V(x^*))$ refers to the *bare* rate function $I$ (not $I/\epsilon$). The Eyring-Kramers exponential rate is $V/\epsilon = 2\Delta V/\epsilon$, which *equals* $\Delta V/T_*$ when $\epsilon = 2T_*$ — i.e., the standard Kramers result.
+The "$V = 2(\mathcal{E}(x) - \mathcal{E}(x^*))$" formula in §3.2 (Freidlin-Wentzell §4.3 Lemma 3.1) is stated for the *standard FW SDE* $dX = -\nabla V\,dt + \sqrt{2\epsilon}\,dB$, which has $\sigma\sigma^\top = 2I$ and the rate function $I = (1/(4\epsilon))\int\lVert \dot\phi + \nabla V \rVert^2 dt$. The quasipotential being $2(V(x) - V(x^*))$ refers to the *bare* rate function $I$ (not $I/\epsilon$). The Eyring-Kramers exponential rate is $V/\epsilon = 2\Delta V/\epsilon$, which *equals* $\Delta V/T_*$ when $\epsilon = 2T_*$ — i.e., the standard Kramers result.
 
 **Reconciliation verdict:** the factor 2 in "$V = 2\Delta\mathcal{E}$" *is exactly cancelled* by the factor 2 in the noise normalization $\sqrt{2T_*}$ (vs FW's $\sqrt{\epsilon}$). The net LDP rate of the SCC transition is
 
@@ -481,7 +481,7 @@ $$\lambda_1(\pi_{T_*}) \geq \frac{\pi^2}{n} e^{-\mathrm{osc}(\tilde{\mathcal{E}}
 
 with $\mathrm{osc}(\tilde{\mathcal{E}}) := \max\tilde{\mathcal{E}} - \min\tilde{\mathcal{E}}$ on $\tilde{C}$.
 
-The TV mixing rate is $\|\mathrm{Law}(U_t) - \pi_{T_*}\|_{TV} \leq (1/2)e^{-\lambda_1 t}\|h_0 - 1\|_{L^2}$.
+The TV mixing rate is $\lVert \mathrm{Law}(U_t) - \pi_{T_*} \rVert_{TV} \leq (1/2)e^{-\lambda_1 t}\lVert h_0 - 1 \rVert_{L^2}$.
 
 ### §8.2 Comparison with LDP rate
 
@@ -526,7 +526,7 @@ inverse_causation_check:
 - $W(u) = u^2(1-u)^2$, $W'(u) = 2u(1-u)(1-2u)$, $W''(1/2) = -1$.
 - Surface tension $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta} = (\sqrt{2}/6)\sqrt{10} \approx 0.7454$.
 - Spinodal interior: $c = 1/2 \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6) \approx (0.2113, 0.7887)$. ✓
-- T8 formation regime check: $\beta/\alpha = 10 > 4\lambda_2/|W''(c)| = 4(0.1522)/1 = 0.6087$. ✓ (Deep formation regime.)
+- T8 formation regime check: $\beta/\alpha = 10 > 4\lambda_2/\lvert W''(c) \rvert = 4(0.1522)/1 = 0.6087$. ✓ (Deep formation regime.)
 
 ### §9.2 Energy barrier estimate
 

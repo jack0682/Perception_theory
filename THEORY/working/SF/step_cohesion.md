@@ -20,7 +20,7 @@
 > - $K(u^*) \in \mathbb{Z}_{\geq 0}$: **formation quantum number** (topological invariant within each landscape basin)
 > - $\phi_k^* : X \to [0, 1]$: $k$-th formation's localized soft-indicator (tanh-like soliton)
 > - $\mathrm{supp}(\phi_k^*) \cap \mathrm{supp}(\phi_j^*) = \emptyset$ for $k \neq j$ (disjoint formations)
-> - $r(u^*)$: residual with $\|r\|_\infty = O(\exp(-d_{\min}/\xi_0))$
+> - $r(u^*)$: residual with $\lVert r \rVert_\infty = O(\exp(-d_{\min}/\xi_0))$
 >
 > **Two limits**:
 > - **Step limit** ($\beta \to \infty$): $\phi_k^* \to \chi_{A_k^*}$ (Heaviside indicator of formation support $A_k^* \subset X$)
@@ -105,7 +105,7 @@ This is the **graph-based analog of wave-particle duality in continuous field th
 At $\beta \to \infty$ (step limit):
 $$u^*_{\text{step}}(x) = \sum_{k=1}^K \chi_{A_k^*}(x)$$
 
-with $A_k^* \subset X$ pairwise disjoint, $\sum_k |A_k^*| = m$.
+with $A_k^* \subset X$ pairwise disjoint, $\sum_k \lvert A_k^* \rvert = m$.
 
 **Energy in step limit**:
 - $\mathcal{E}_{\mathrm{bd}}[u_{\text{step}}] = \beta \sum_k W(0) + \text{interface terms}$ — singular, require regularization
@@ -121,7 +121,7 @@ For $k$-th formation at center $x_k$ with boundary $\partial A_k^*$:
 $$\phi_k^*(x) \approx \frac{1}{2}\left(1 - \tanh\!\left(\frac{d(x, x_k) - r_k}{\xi_0}\right)\right)$$
 
 where:
-- $r_k$: effective radius (from $|A_k^*| = \pi r_k^2$ on 2D, $|A_k^*| = 2r_k$ on 1D cycle)
+- $r_k$: effective radius (from $\lvert A_k^* \rvert = \pi r_k^2$ on 2D, $\lvert A_k^* \rvert = 2r_k$ on 1D cycle)
 - $d(x, x_k)$: graph-distance from formation center
 
 ---

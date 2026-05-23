@@ -70,13 +70,13 @@ satisfies $H_\mathcal E(u^*) \delta u_x = 0$ (sub-spinodal) or $H_\mathcal E(u^*
 
 **Graph:** Any finite connected graph with Fiedler $\lambda_2 > 0$.
 
-**Configuration:** $u^* \equiv c \mathbf 1$ (uniform state), with $c$ in spinodal interior and $\beta/\alpha = 4\lambda_2 / |W''(c)|$ — exactly at the T8-Full bifurcation threshold.
+**Configuration:** $u^* \equiv c \mathbf 1$ (uniform state), with $c$ in spinodal interior and $\beta/\alpha = 4\lambda_2 / \lvert W''(c) \rvert$ — exactly at the T8-Full bifurcation threshold.
 
-**Degeneracy:** Projected Hessian is $4\alpha \Pi_T L \Pi_T + \beta W''(c) \Pi_T = 4\alpha \cdot \mathrm{diag}(\lambda_2, \lambda_3, \ldots) - \beta |W''(c)|$. At the threshold, the lowest eigenvalue (along the Fiedler direction $\phi_2$) is exactly $4\alpha\lambda_2 - \beta|W''(c)| = 0$.
+**Degeneracy:** Projected Hessian is $4\alpha \Pi_T L \Pi_T + \beta W''(c) \Pi_T = 4\alpha \cdot \mathrm{diag}(\lambda_2, \lambda_3, \ldots) - \beta \lvert W''(c) \rvert$. At the threshold, the lowest eigenvalue (along the Fiedler direction $\phi_2$) is exactly $4\alpha\lambda_2 - \beta|W''(c)| = 0$.
 
 **Verdict:** **Unconditional H-MORSE FAILS at the bifurcation parameter.** This is a codimension-1 set in parameter space — measure zero, but structural.
 
-**Repair:** Impose M-A1' that **excludes the bifurcation locus** — work in the open set $\beta/\alpha > 4\lambda_2 / |W''(c)| + \eta$ for some $\eta > 0$, away from threshold.
+**Repair:** Impose M-A1' that **excludes the bifurcation locus** — work in the open set $\beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert + \eta$ for some $\eta > 0$, away from threshold.
 
 ---
 

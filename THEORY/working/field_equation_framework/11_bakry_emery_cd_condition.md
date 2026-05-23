@@ -183,7 +183,7 @@ $$\Gamma_2(f) \;:=\; \tfrac{1}{2}\bigl[L \Gamma(f) \,-\, 2 \Gamma(f, L f)\bigr]$
 
 For the standard form, the Bochner-Lichnerowicz identity (BGL 2014 §1.16) yields
 
-$$\Gamma_2(f) \;=\; T_*^2 \,\|\mathrm{Hess}\,f\|_{HS}^2 \;+\; T_* \,\langle \nabla f,\, \mathrm{Hess}(V) \,\nabla f \rangle$$
+$$\Gamma_2(f) \;=\; T_*^2 \,\lVert \mathrm{Hess}\,f \rVert_{HS}^2 \;+\; T_* \,\langle \nabla f,\, \mathrm{Hess}(V) \,\nabla f \rangle$$
 
 where ‖·‖_HS is the Hilbert-Schmidt norm.
 
@@ -254,7 +254,7 @@ $$\Gamma_{\mathrm{SCC}}(f) \;=\; T_* |\nabla_{\mathbf{1}^\perp} f|^2 \;=\; T_* |
 
 By Bochner-Lichnerowicz applied to L_SCC:
 
-$$\boxed{\;\Gamma_{2,\mathrm{SCC}}(f) \;=\; T_*^2 \|\mathrm{Hess}_{\mathbf{1}^\perp} f\|_{HS}^2 \;+\; T_* \langle \nabla_{\mathbf{1}^\perp} f,\; \mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})\, \nabla_{\mathbf{1}^\perp} f \rangle\;}$$
+$$\boxed{\;\Gamma_{2,\mathrm{SCC}}(f) \;=\; T_*^2 \lVert \mathrm{Hess}_{\mathbf{1}^\perp} f \rVert_{HS}^2 \;+\; T_* \langle \nabla_{\mathbf{1}^\perp} f,\; \mathrm{Hess}_{\mathbf{1}^\perp}(\tilde{\mathcal{E}})\, \nabla_{\mathbf{1}^\perp} f \rangle\;}$$
 
 where Hess_{$\mathbf{1}^\perp$}(Ẽ) = $\Pi_{T\Sigma_m} \mathrm{Hess}(\mathcal{E}) \Pi_{T\Sigma_m}$ is the constrained Hessian on the tangent space (canonical Theorem 4 spectrum: $\mu_k$ on $\mathbf{1}^\perp$).
 

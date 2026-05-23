@@ -55,7 +55,7 @@ $$A_2^{\mathrm{cont}} = \int_0^L \int_0^L \phi_{(1, 0)}^2 \phi_{(0, 1)}^2 \, dx 
 **WAIT — discrepancy with R22 claim**. R22 `symmetry_moduli.md` §3.3 claims $A_2/A_1 = 4$. The naive integration gives $2/3$. There must be a normalization difference (e.g., L²-norm normalized eigenmodes, or different cubic-equivariant convention).
 
 **Reconciliation**: the R22 cubic-equivariant ratio depends on the *normalization convention* for $\phi_{(p, q)}$:
-- If eigenmodes normalized to $\|\phi\|_2 = 1$ (L² unit norm): $\phi_{(1, 0)}^{\mathrm{norm}} = \sqrt{2/L^2} \cdot \cos(\pi x / L)$. Then $A_1^{\mathrm{norm}} = (3/8) \cdot (2/L^2)^2 \cdot L^2 = 3/(2L^2)$, $A_2^{\mathrm{norm}} = (1/4) \cdot (2/L^2)^2 \cdot L^2 = 1/L^2$. Ratio $A_2/A_1 = 1/(3/2) = 2/3$.
+- If eigenmodes normalized to $\lVert \phi \rVert_2 = 1$ (L² unit norm): $\phi_{(1, 0)}^{\mathrm{norm}} = \sqrt{2/L^2} \cdot \cos(\pi x / L)$. Then $A_1^{\mathrm{norm}} = (3/8) \cdot (2/L^2)^2 \cdot L^2 = 3/(2L^2)$, $A_2^{\mathrm{norm}} = (1/4) \cdot (2/L^2)^2 \cdot L^2 = 1/L^2$. Ratio $A_2/A_1 = 1/(3/2) = 2/3$.
 - If R22's $A_1, A_2$ have additional $W''(c)$ or $\beta$ factors: ratio may differ.
 - If the convention is *energy expansion in axis-aligned vs symmetric coordinates*: factor of 4 may arise from a 4-element orbit ($\phi_{(1, 0)} \pm \phi_{(0, 1)}$ as orbit elements vs single-mode amplitude).
 
@@ -190,7 +190,7 @@ Compute $A_2^L / A_1^L$ at $L \in \{4, 8, 16, 32, 64, 128\}$ via:
 
 Multiple R22-compatible conventions to test:
 - **C1 (naive integral)**: §2.5 closed-form. Continuum $\to 2/3$.
-- **C2 (normalized eigenmodes)**: $\|\phi\|_2 = 1$. Ratio same as C1 (normalization cancels).
+- **C2 (normalized eigenmodes)**: $\lVert \phi \rVert_2 = 1$. Ratio same as C1 (normalization cancels).
 - **C3 (mass-conservation simplex projection)**: cubic equivariants computed on Σ_m-tangent space (subtract mean). Ratio differs.
 - **C4 (W-potential expansion coefficients)**: $A_1, A_2$ pulled out of full potential expansion $\mathcal{E}(c\mathbf{1} + a\phi + b\psi)$, including $W$-potential cross-terms. Ratio differs.
 
@@ -249,7 +249,7 @@ If NQ-187 numerical $r_\infty \to$ value matching one of the conventions: identi
 ### §5.1 Hypothesis (α-naive)
 
 Naive cubic-equivariant ratio: $A_2/A_1 \to 2/3$ in continuum.
-- $\mu_1/\mu_0 = (A_2/A_1) / 4 \to (2/3)/4 = 1/6$ at L → ∞ (per canonical T-σ-Theorem-4 (ii) formula: $\mu_0 = 4|W''(c)|\epsilon$, $\mu_1 = (A_2/A_1)|W''(c)|\epsilon$).
+- $\mu_1/\mu_0 = (A_2/A_1) / 4 \to (2/3)/4 = 1/6$ at L → ∞ (per canonical T-σ-Theorem-4 (ii) formula: $\mu_0 = 4|W''(c)|\epsilon$, $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon$).
 
 NQ-187 numerical at L=16: $\mu_1/\mu_0 = 2$.
 

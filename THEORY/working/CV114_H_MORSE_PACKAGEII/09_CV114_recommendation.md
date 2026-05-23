@@ -62,7 +62,7 @@ Path D (Package II Pre-Theorem) is bibliographic + notation work — no new math
 
 > **Theorem H-MORSE-Local (Cat B candidate).** Let $G$ be a finite connected graph on $n$ vertices (canonical: 15×15 grid, free BC, $n = 225$). Let $u^* \in \Sigma_m^\circ$ be a non-uniform single-formation local minimizer of the full SCC energy $\mathcal E = \lambda_\mathrm{cl}\mathcal E_\mathrm{cl} + \lambda_\mathrm{sep}\mathcal E_\mathrm{sep} + \lambda_\mathrm{bd}\mathcal E_\mathrm{bd}$, satisfying:
 >
-> **(M-A1)** Canonical parameter window: $a_\mathrm{cl} \in (0, 4)$ (axiom A3), $b_D = 0$ (canonical), $\beta / \alpha > 4\lambda_2 / |W''(c)| + \eta$ for some $\eta > 0$ (strictly above T8-Full threshold).
+> **(M-A1)** Canonical parameter window: $a_\mathrm{cl} \in (0, 4)$ (axiom A3), $b_D = 0$ (canonical), $\beta / \alpha > 4\lambda_2 / \lvert W''(c) \rvert + \eta$ for some $\eta > 0$ (strictly above T8-Full threshold).
 >
 > **(M-A2)** Trivial stabilizer: $\mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) = \{e\}$.
 >

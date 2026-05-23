@@ -163,7 +163,7 @@ Until an explicit non-trivial $g \in G_{\mathrm{cw}}(P_{\mathrm{top}})$ is compu
 4. Compute $u^*(\lambda^{(1)}, X_t)$ and $P_{\mathrm{top}}(\lambda^{(1)})$.
 5. Compute $\lambda^{(2)} = (\lambda_{\mathrm{sep}}, \lambda_{\mathrm{cl}}, \lambda_{\mathrm{bd}}, 0)$ (swapped).
 6. Compute $u^*(\lambda^{(2)}, X_t)$ and $P_{\mathrm{top}}(\lambda^{(2)})$.
-7. Measure $\|P_{\mathrm{top}}(\lambda^{(1)}) - P_{\mathrm{top}}(\lambda^{(2)})\|$.
+7. Measure $\lVert P_{\mathrm{top}}(\lambda^{(1)}) - P_{\mathrm{top}}(\lambda^{(2)}) \rVert$.
 
 **Expected result:** Non-zero difference for $\lambda_{\mathrm{cl}} \neq \lambda_{\mathrm{sep}}$, confirming $g_1 \notin G_{\mathrm{cw}}$.
 

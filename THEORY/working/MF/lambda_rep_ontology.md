@@ -172,7 +172,7 @@ Distinguish four layers in the multi-formation SCC framework, ranked by ontologi
 
 **Verification**:
 - The configuration space $\widetilde\Sigma^K_M$ depends on graph $G$, total mass $M$, and architectural cap $K_{\mathrm{field}}$ — none on $\lambda_{\mathrm{rep}}$.
-- The strata $S_{K_{\mathrm{act}}} = \{\mathbf{u} : \#\{j : \|u^{(j)}\|_1 > \epsilon\} = K_{\mathrm{act}}\}$ are defined by support cardinalities, independent of any energy choice.
+- The strata $S_{K_{\mathrm{act}}} = \{\mathbf{u} : \#\{j : \lVert u^{(j)} \rVert_1 > \epsilon\} = K_{\mathrm{act}}\}$ are defined by support cardinalities, independent of any energy choice.
 - $\lambda_{\mathrm{rep}}$ enters $\mathcal{E}_K = \sum_k \mathcal{E}_{\mathrm{self}}(u^{(k)}) + \lambda_{\mathrm{rep}} \cdot B(\mathbf{u})$ where $B(\mathbf{u}) = \sum_{j<k} \langle u^j, u^k \rangle$ is fixed; $\lambda_{\mathrm{rep}}$ scales the bilinear penalty.
 - Critical points of $\mathcal{E}_K$ within each stratum *do* shift with $\lambda_{\mathrm{rep}}$ (well-separated → weakly-interacting → strongly-interacting regimes correspond to different effective Hessian eigenstructures); K-jump events (stratum-boundary crossings, `mathematical_scaffolding_4tools.md` Claim 2.4) shift in *time* but not in *type* with $\lambda_{\mathrm{rep}}$.
 

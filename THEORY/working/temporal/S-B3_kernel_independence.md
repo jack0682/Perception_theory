@@ -27,7 +27,7 @@ Goal: Verify that S-B3 (kernel independence / iso-ratio dependence removal) is c
 S-B3 is the claim that the temporal identity correspondence $R_{t \to s}$ is **independent of the specific admissible transport kernel $M_{t \to s}$**, up to a margin condition on $\Delta_\mathrm{sep}$.
 
 Formal statement (T-Temporal-Identity part (c)):
-*Under the stable-K assumption and margin $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$, for any two E1–E4-admissible plans $M, M'$ with $\|c[M] - c[M']\|_\infty \leq \delta$: $R_{t \to s}[M] = R_{t \to s}[M']$.*
+*Under the stable-K assumption and margin $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$, for any two E1–E4-admissible plans $M, M'$ with $\lVert c[M] - c[M'] \rVert_\infty \leq \delta$: $R_{t \to s}[M] = R_{t \to s}[M']$.*
 
 Here $\epsilon_\mathrm{kernel} = 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ is the kernel distance bound.
 
@@ -44,15 +44,15 @@ The proof of S-B3 follows the chain: Lemma 9 → Lemma 10 → Lemma 11.
 ### 1.1 Lemma 9 — Plan stability under cost perturbation
 
 **Lemma 9** (from `06_close_OP0011_step2.md §2.2`):
-$$\|M^*(c) - M^*(c')\|_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}$$
-for $\|c - c'\|_\infty \leq \delta$, where $M_\mathrm{tot}$ is the total plan mass.
+$$\lVert M^*(c) - M^*(c') \rVert_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}$$
+for $\lVert c - c' \rVert_\infty \leq \delta$, where $M_\mathrm{tot}$ is the total plan mass.
 
 **Previous status (before W7-FINAL):** Cat B — "partial OT stability pending."
 
 **New status (after W7-FINAL):** **Cat A** — proved by Theorem Partial-H-SINK in `partial_ot_stability.md`.
 
 Specifically, Theorem Partial-H-SINK gives (for $\delta \leq \varepsilon_\mathrm{OT}/4$):
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}}$$
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}}$$
 
 which matches Lemma 9 with $M_\mathrm{tot} = m_t$ (total source mass). The linear-regime bound is exact.
 
@@ -62,11 +62,11 @@ which matches Lemma 9 with $M_\mathrm{tot} = m_t$ (total source mass). The linea
 
 **Lemma 10** (from `06_close_OP0011_step2.md §2.3`): Given the transport plan mass for components $C_i^t, C_j^s$:
 $$\gamma_M(C_i^t, C_j^s) := \sum_{x \in C_i^t, y \in C_j^s} M(x,y),$$
-under plan stability $\|M - M'\|_\mathrm{TV} \leq \epsilon_\mathrm{conf}$:
+under plan stability $\lVert M - M' \rVert_\mathrm{TV} \leq \epsilon_\mathrm{conf}$:
 $$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}.$$
 
 **Proof:** Directly from Lemma 9 by summing over $C_i^t \times C_j^s \subseteq \mathcal{P} \times \mathcal{P}$:
-$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s} (M - M')(x,y)\right| \leq \sum_{x,y}|M-M'|(x,y) = \|M-M'\|_1 \leq 2\|M-M'\|_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}. \square$$
+$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s} (M - M')(x,y)\right| \leq \sum_{x,y}\lvert M-M' \rvert(x,y) = \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2M_\mathrm{tot}\delta}{\varepsilon_\mathrm{OT}}. \square$$
 
 **Lemma 10 status: Cat A** (follows directly from Cat A Lemma 9).
 

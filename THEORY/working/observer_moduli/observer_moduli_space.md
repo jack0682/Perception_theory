@@ -76,7 +76,7 @@ $$\mathcal{M}_{\mathrm{obs}} = [q_{\min}, q_{\max}] \times \Delta^3 \times B_\xi
 
 **Criticality hypothesis.** If the observer operates at criticality — the phase transition threshold of T8 — then $q$ is scene-determined:
 
-$$q_c(X_t) = \frac{4\lambda_2}{|W''(c)|} = \frac{4\lambda_2}{2(1 - 6c + 6c^2)}$$
+$$q_c(X_t) = \frac{4\lambda_2}{\lvert W''(c) \rvert} = \frac{4\lambda_2}{2(1 - 6c + 6c^2)}$$
 
 where $\lambda_2$ is the Fiedler eigenvalue of $X_t$ and $c = m/n$ is in the spinodal zone.
 
@@ -224,14 +224,14 @@ where $\mathfrak{M}_{[H]} = \{[\Theta] : G_\Theta \in [H]\}$ and $[H]$ denotes t
 
 **Principal stratum.** $\mathfrak{M}_{\{e\}} = \{[\Theta] : G_\Theta = \{e\}\}$ — the open dense stratum of generic observer states. Here the action is free and the quotient is locally a smooth manifold.
 
-**Singular strata.** $\mathfrak{M}_{[H]}$ for $|H| > 1$ — the strata of highly symmetric observers. These correspond to observers for whom the gauge action has non-trivial fixed points (e.g., a two-formation observer with identical weights for both formations).
+**Singular strata.** $\mathfrak{M}_{[H]}$ for $\lvert H \rvert > 1$ — the strata of highly symmetric observers. These correspond to observers for whom the gauge action has non-trivial fixed points (e.g., a two-formation observer with identical weights for both formations).
 
 ### §6.2. Orbifold Structure
 
 **Proposition 7 (Orbifold).** $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}}$ is a compact Hausdorff orbifold with:
 - Underlying topological space: $\mathcal{M}_{\mathrm{obs}} / G_{\mathrm{SCC}}^{(0)}$ (compact, Hausdorff by Props 3, 4)
 - Generic stratum: smooth manifold of dimension 8
-- Singular strata: indexed by conjugacy classes $[H]$ with $|H| > 1$; local model near each point $[\Theta]$ is $\mathbb{R}^8 / G_\Theta$
+- Singular strata: indexed by conjugacy classes $[H]$ with $\lvert H \rvert > 1$; local model near each point $[\Theta]$ is $\mathbb{R}^8 / G_\Theta$
 
 *Proof sketch.* $G_{\mathrm{SCC}}^{(0)}$ is finite, acting properly (automatically, since $G$ is finite) on the manifold-with-corners $\mathcal{M}_{\mathrm{obs}}$. The orbit space of a proper finite group action on a manifold is an orbifold. $\square$
 
@@ -523,7 +523,7 @@ where $\Pi$ projects onto the tangent space (required because $\mathcal{M}_{\mat
 
 **Warning:** The number of perceptual types (basins) depends on $V \in \mathcal{V}_{\mathrm{adm}}$. OMS-1.0 does not assert a universal basin count. Any claim "there are exactly $N$ observer types" requires specifying $V$.
 
-VP-2 (basin discovery protocol) can empirically estimate the basin count for the specific landscape $V_D^0(\lambda) = \|d_\lambda - d^*\|^2$.
+VP-2 (basin discovery protocol) can empirically estimate the basin count for the specific landscape $V_D^0(\lambda) = \lVert d_\lambda - d^* \rVert^2$.
 
 ---
 
@@ -537,7 +537,7 @@ $$\Delta^3 = \bigsqcup_{I \subseteq \{cl,sep,bd,tr\}} \mathrm{int}(\partial_I \D
 
 **Boundary face dimensions:**
 
-| $|I|$ | Count | Dimension | Observer type |
+| $\lvert I \rvert$ | Count | Dimension | Observer type |
 |---|---|---|---|
 | 0 | 1 | 3 | Generic interior (all weights active) |
 | 1 | 4 | 2 | One-weight-ablated face |

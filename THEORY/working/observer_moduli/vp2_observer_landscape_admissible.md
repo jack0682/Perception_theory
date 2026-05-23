@@ -53,9 +53,9 @@ $$V_P(\Theta; X_t, P^*, D_{\mathcal{P}}) = D_{\mathcal{P}}(P(\Theta; X_t), P^*)$
 
 with $P = P_{\mathrm{top}} = (d_\Theta, T_\Theta)$ and
 
-$$D_{\mathcal{P}}((d, T), (d^*, T^*)) = \alpha \|d - d^*\|^2 + \beta D_T(T, T^*)$$
+$$D_{\mathcal{P}}((d, T), (d^*, T^*)) = \alpha \lVert d - d^* \rVert^2 + \beta D_T(T, T^*)$$
 
-$D_T$ = topological signature distance (VP-1, exp86: $3|K_{\mathrm{core},A} - K_{\mathrm{core},B}| + 1.5|\Delta K_{\mathrm{mid}}| + |\Delta l_{\mathrm{sec}}| + |\Delta l_{\mathrm{thr}}|$).
+$D_T$ = topological signature distance (VP-1, exp86: $3|K_{\mathrm{core},A} - K_{\mathrm{core},B}\lvert + 1.5 \rvert\Delta K_{\mathrm{mid}}\lvert + \rvert\Delta l_{\mathrm{sec}}\lvert + \rvert\Delta l_{\mathrm{thr}}|$).
 
 ### §3.2 Criterion Analysis (updated)
 
@@ -105,7 +105,7 @@ $\mathcal{V}_{\mathrm{adm}} \neq \emptyset$.
 
 **Argument.** We construct an explicit element $V^* \in \mathcal{V}_{\mathrm{adm}}$:
 
-$$V^*(\Theta) = V_P(\Theta; X_0, P_0^*, D_{\mathcal{P}}) = \alpha \|d_\Theta - d_0^*\|^2 + \beta D_T(T_\Theta, T_0^*)$$
+$$V^*(\Theta) = V_P(\Theta; X_0, P_0^*, D_{\mathcal{P}}) = \alpha \lVert d_\Theta - d_0^* \rVert^2 + \beta D_T(T_\Theta, T_0^*)$$
 
 with $\alpha = \beta = 1$, $d_0^* = (1, 1, 1, 0)$, $T_0^* = $ ideal topological signature (one tight component: $K_{\mathrm{core}} = 1$, $l_{\mathrm{max}} = 0.9$, $l_{\mathrm{second}} = 0$).
 
@@ -126,12 +126,12 @@ with $\alpha = \beta = 1$, $d_0^* = (1, 1, 1, 0)$, $T_0^* = $ ideal topological 
 **Question OP-OMS-002(b).** Does there exist $V \in \mathcal{V}_{\mathrm{adm}} \cap C^1(\mathcal{M}_{\mathrm{obs}})$?
 
 **Analysis.** $V_P$ has two components:
-1. $\alpha \|d_\Theta - d^*\|^2$: smooth in $\Theta$ wherever $u^*(\Theta)$ is smooth. The optimizer uses semi-implicit projected gradient descent; regularity of $u^*$ as a function of $\Theta$ is not proved. **Status: OPEN (OP-OMS-016).**
+1. $\alpha \lVert d_\Theta - d^* \rVert^2$: smooth in $\Theta$ wherever $u^*(\Theta)$ is smooth. The optimizer uses semi-implicit projected gradient descent; regularity of $u^*$ as a function of $\Theta$ is not proved. **Status: OPEN (OP-OMS-016).**
 2. $\beta D_T(T_\Theta, T^*)$: piecewise constant in $\Theta$ (topological invariants are integers). Hence $D_T$ has zero gradient almost everywhere, with jump discontinuities at topology change boundaries. **Not $C^1$ globally.**
 
 **Conclusion.** $V_P$ is not $C^1$ in general due to the topological component. A smooth surrogate is needed for gradient flow:
 
-$$V_P^{\mathrm{smooth}}(\Theta) = \alpha \|d_\Theta - d^*\|^2 + \beta \|\phi_\Theta - \phi^*\|^2$$
+$$V_P^{\mathrm{smooth}}(\Theta) = \alpha \lVert d_\Theta - d^* \rVert^2 + \beta \lVert \phi_\Theta - \phi^* \rVert^2$$
 
 where $\phi_\Theta$ is a smooth topological surrogate (e.g., soft component count via spectral gap $\lambda_2$ of $L_{u^*}$). The smooth surrogate has the same V1, V3 properties but avoids jump discontinuities.
 
@@ -190,6 +190,6 @@ OMS-1.0 does not uniquely specify $V$. Instead:
 
 **Partial evidence.** VP-3 computational results show that $d_\Theta$ changes continuously across tested $\lambda$ transformations (no sudden jumps beyond those explained by topology changes). This is consistent with (but does not prove) $C^1$ regularity.
 
-**Obstructions.** Phase transitions in $u^*$ (T8: bifurcation at $\beta/\alpha > 4\lambda_2/|W''(c)|$) can cause $u^*$ to jump discontinuously as $\lambda$ crosses the bifurcation boundary. Hence $C^1$ regularity holds only away from bifurcation boundaries.
+**Obstructions.** Phase transitions in $u^*$ (T8: bifurcation at $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$) can cause $u^*$ to jump discontinuously as $\lambda$ crosses the bifurcation boundary. Hence $C^1$ regularity holds only away from bifurcation boundaries.
 
 **Refined version.** $\lambda \mapsto u^*(\lambda; X_t, q, \xi)$ is $C^1$ on connected components of $\Delta^3$ separated by bifurcation boundaries. These components are the **perceptual phases** of the observer moduli space.

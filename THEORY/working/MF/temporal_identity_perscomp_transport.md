@@ -119,7 +119,7 @@ The core is the structural nucleus whose inheritance under transport defines for
 ### §2.4 Cohesion measures
 
 Define the cohesion measure restricted to component $C_i^t$:
-$$\mu_i^t = u_t\big|_{C_i^t} \cdot \mu_{\mathcal{P}_t}, \qquad m_i^t = \sum_{x \in C_i^t} u_t(x)$$
+$$\mu_i^t = u_t\big\vert_{C_i^t} \cdot \mu_{\mathcal{P}_t}, \qquad m_i^t = \sum_{x \in C_i^t} u_t(x)$$
 
 with total cohesive mass $m_i^t$. The total field mass satisfies $\sum_i m_i^t \leq M$
 (components do not tile the full field mass; low-$u$ background is not captured by PersComp).
@@ -162,7 +162,7 @@ deterministic limit of the transport plan.
 
 In the general case (split, merge, partial occlusion), use the restricted transport plan between
 component $C_i^t$ and component $C_j^s$:
-$$\gamma_{ij} = M_{t \to s}\big|_{C_i^t \times C_j^s}$$
+$$\gamma_{ij} = M_{t \to s}\big\vert_{C_i^t \times C_j^s}$$
 
 with total transported mass:
 $$\gamma(C_i^t, C_j^s) = \sum_{x \in C_i^t,\, y \in C_j^s} M_{t \to s}(x,y)$$
@@ -186,7 +186,7 @@ where:
 - $\lambda_m > 0$: rewards high transported mass (high fraction of $C_i^t$ mass reaching $C_j^s$).
 - $\lambda_c > 0$: penalizes high transport cost (discourages structurally/spatially distant
   identifications).
-- $c(x,y)$: transport cost, fingerprint-based: $c(x,y) = \|\varphi(x) - \varphi(y)\|^2 + \sigma_\mathrm{sp}^{-2}\|x - y\|^2$.
+- $c(x,y)$: transport cost, fingerprint-based: $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}\lVert x - y \rVert^2$.
 
 In compact notation using the restricted plan $\gamma_{ij} = M_{t \to s}|_{C_i^t \times C_j^s}$:
 $$S_{ij}^0 = \lambda_m \langle \mathbf{1}, \gamma_{ij} \rangle - \lambda_c \langle c, \gamma_{ij} \rangle$$
@@ -404,7 +404,7 @@ OP-0011 restricted to the coarse-grained component level.
 **Structured path to resolution**:
 
 Step 1 (site level, already partial): Transport confinement bound from T-Persist-1(e):
-$$\|\tilde{u} - u_t\|_2 \leq C_\mathrm{conf}\sqrt{m}, \quad C_\mathrm{conf} = O(\sigma\sqrt{\varepsilon_\mathrm{OT}\log n})$$
+$$\lVert \tilde{u} - u_t \rVert_2 \leq C_\mathrm{conf}\sqrt{m}, \quad C_\mathrm{conf} = O(\sigma\sqrt{\varepsilon_\mathrm{OT}\log n})$$
 This is a site-level bound. It restricts how far any E1–E4-admissible plan can deviate from the
 reference plan in field space.
 
@@ -413,7 +413,7 @@ $$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq \epsilon_\mathrm{ker
 
 Candidate approach: Use the site-level confinement bound + covering argument. If all plans agree
 on the field to within $C_\mathrm{conf}\sqrt{m}$ pointwise, then component-level mass differences
-are bounded by $|C_i^t| \cdot C_\mathrm{conf}\sqrt{m}$.
+are bounded by $\lvert C_i^t \rvert \cdot C_\mathrm{conf}\sqrt{m}$.
 
 Step 3 (identity level, conditional): When $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$, the
 argmax assignment is the same for all admissible plans, giving part (c) of T-Temporal-Identity.
@@ -516,9 +516,9 @@ event types. Not implemented in Session V; plan only.
 
 - 2D grid, $n = 20 \times 20 = 400$ nodes (graph: grid adjacency).
 - Cohesion fields constructed as soft Gaussian bumps:
-  $u_t(x) = \mathrm{sigmoid}(\beta(h_i - \|x - c_i\|^2/r^2))$ for each center $c_i$.
+  $u_t(x) = \mathrm{sigmoid}(\beta(h_i - \lVert x - c_i \rVert^2/r^2))$ for each center $c_i$.
 - Transport plan: `sinkhorn_partial_ot(cost, mu=u_t, nu=u_s, eps=0.5, mass_fraction=0.9)`.
-- Cost: fingerprint distance $c(x,y) = \|\varphi(x) - \varphi(y)\|^2 + 0.1\|x-y\|^2$.
+- Cost: fingerprint distance $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + 0.1\lVert x-y \rVert^2$.
 - Score matrix $\mathbf{S}$: constructed from component decomposition of $M_{t \to s}$.
 - Thresholds: $\tau_\mathrm{id} = \tau_\mathrm{split} = \tau_\mathrm{merge} = 0.1$,
   $\tau_\mathrm{birth} = \tau_\mathrm{death} = 0.05$.

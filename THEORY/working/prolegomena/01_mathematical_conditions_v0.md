@@ -82,7 +82,7 @@ constraint_compliance:
 | **M11** | $\mathcal{W}$ 는 *internal characterization 없음*. *universal property* 만으로 specified. Element-level access 부재 | N | C11 |
 | **M12** | 외부 coupling 은 *perturbation / boundary condition* 으로만 등장. *Source term 으로 등장하지 않음* | N | C12 |
 | **M13** | Dynamical generator $L$ 은 zero coupling 에서 non-vanishing: $L\|_{h=0} \neq 0$. Coupling 은 multiplicative (modulating), additive (initiating) 아님 | N | C13 |
-| **M14** | Decoupling limit 존재: $\|L\| \gg \|h\|$ regime 가능. Strong autonomy condition | S | C14 |
+| **M14** | Decoupling limit 존재: $\lVert L \rVert \gg \lVert h \rVert$ regime 가능. Strong autonomy condition | S | C14 |
 
 ### IV. 자기-질서 (Autonomous Order)
 
@@ -108,8 +108,8 @@ constraint_compliance:
 |---|---|---|---|
 | **M23** | State 는 $*$-algebra $\mathcal{A}$ 위의 linear functional $\omega: \mathcal{A} \to \mathbb{C}$ (positive, normalized). *Fixed Hilbert vector 아님* | S | C23 |
 | **M24** | Admissible states (vacua/ground states) 는 frame-indexed family $\{\omega_o\}_{o \in \mathcal{O}}$. *유일성 없음* | N | C24 |
-| **M25** | Threshold structure: $\exists \theta > 0$ such that baseline regime $\{0 < \|C_o(\tau; \Omega_o)\| < \theta\}$ 비어있지 않음 | S | C25 |
-| **M26** | Substructure emergence: $\|C_o\| \geq \theta$ + $G$-invariance + spatial cohesion (compact support up to decay) 일 때 stable substructure 생성 | S | C26 |
+| **M25** | Threshold structure: $\exists \theta > 0$ such that baseline regime $\{0 < \lVert C_o(\tau; \Omega_o) \rVert < \theta\}$ 비어있지 않음 | S | C25 |
+| **M26** | Substructure emergence: $\lVert C_o \rVert \geq \theta$ + $G$-invariance + spatial cohesion (compact support up to decay) 일 때 stable substructure 생성 | S | C26 |
 
 ### VII. Invariance Structure
 
@@ -124,7 +124,7 @@ constraint_compliance:
 
 | Code | 수학적 조건 | Grade | C_k |
 |---|---|---|---|
-| **M31** | Spatial metric/topology 는 cross-correlation decay 로 유도: $d(x,y) = -\log \|C(x,y)\|$ 형태 또는 그 일반화 | S | C31 |
+| **M31** | Spatial metric/topology 는 cross-correlation decay 로 유도: $d(x,y) = -\log \lVert C(x,y) \rVert$ 형태 또는 그 일반화 | S | C31 |
 | **M32** | Temporal flow 은 state $\omega$ 의 *modular automorphism group* $\sigma_t^\omega$ (Tomita-Takesaki) 로 유도 가능 | O | C32 |
 | **M33** | Underlying carrier $X$ (그래프·다양체·이산집합 등) 는 derived; input datum 아님 | N | C33 |
 | **M34** | Value space (예: $[0,1]$) 는 *accumulated order relations* 의 completion 으로 구성. Primitive 로 가정되지 않음 | S | C34 |

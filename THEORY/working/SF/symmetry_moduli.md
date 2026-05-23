@@ -65,7 +65,7 @@ From Prop 1.3a: $u_{\mathrm{uniform}}$ has Morse index $N_{\mathrm{unst}}^{\math
 
 **On 2D square grid ($D_4$-equivariance):** Laplacian eigenspaces decompose into $D_4$ irreps (trivial, sign, $(1,1)$, two 2D irreps — total five irreps of $D_4$). Degenerate eigenspaces (same $\lambda_k$) occur when eigenvalues cluster, e.g., the Fiedler eigenspace $\{\phi_{1,0}, \phi_{0,1}\}$ carries the 2D irrep (standard representation of $D_4$).
 
-**Descent from $u_{\mathrm{uniform}}$ along this 2D irrep** yields a $D_4$-orbit of minimizers, not a single pair. Specifically: the parametrized direction $a\phi_{1,0} + b\phi_{0,1}$ has amplitude that saturates to $|(a,b)| = O(1)$ via the nonlinear Allen-Cahn dynamics. Rotating $(a,b) \to (a\cos\theta - b\sin\theta, a\sin\theta + b\cos\theta)$ moves through a **continuous family** if the descent were rotationally invariant — but the grid discretization breaks continuous $SO(2)$ to $D_4$ (4 rotations + 4 reflections = 8 discrete orbit points).
+**Descent from $u_{\mathrm{uniform}}$ along this 2D irrep** yields a $D_4$-orbit of minimizers, not a single pair. Specifically: the parametrized direction $a\phi_{1,0} + b\phi_{0,1}$ has amplitude that saturates to $\lvert (a,b) \rvert = O(1)$ via the nonlinear Allen-Cahn dynamics. Rotating $(a,b) \to (a\cos\theta - b\sin\theta, a\sin\theta + b\cos\theta)$ moves through a **continuous family** if the descent were rotationally invariant — but the grid discretization breaks continuous $SO(2)$ to $D_4$ (4 rotations + 4 reflections = 8 discrete orbit points).
 
 So the first Fiedler pitchfork at $\beta = \beta_{\mathrm{crit}}^{(2)}$ on 2D grid gives an **8-point orbit** of minimizers. After quotienting: $|\mathcal{M}_1| = 1$ at $\beta$ just above $\beta_{\mathrm{crit}}^{(2)}$.
 
@@ -155,7 +155,7 @@ Both positive ⇒ **axis is minimum**.
 At diagonal $(B, B)$:
 $F_{aa} = \mu + 12 A_1 B^2 + 2 A_2 B^2 = \mu + (12 A_1 + 2 A_2) B^2 = \mu + (12 + 8) A_1\cdot(-\mu/(12 A_1)) = \mu - 20\mu/12 = -8\mu/12 = -2\mu/3 > 0$. ✓
 $F_{ab} = 4 A_2 B\cdot B = 4 A_2 B^2 = 32 A_1 \cdot (-\mu/(12 A_1)) = -32\mu/12 = -8\mu/3 > 0$. 
-Hessian eigenvalues at diagonal $= F_{aa} \pm F_{ab} = -2\mu/3 \pm -8\mu/3 = \{-10\mu/3, +2\mu\}$. With $\mu < 0$: $\{+10|\mu|/3, -2|\mu|\}$ — **one negative eigenvalue, diagonal is SADDLE** (Morse index 1).
+Hessian eigenvalues at diagonal $= F_{aa} \pm F_{ab} = -2\mu/3 \pm -8\mu/3 = \{-10\mu/3, +2\mu\}$. With $\mu < 0$: $\{ +10 \mid \mu \mid /3, -2 \mid \mu \mid \}$ — **one negative eigenvalue, diagonal is SADDLE** (Morse index 1).
 
 **Summary (Round 3 Cat A):**
 
@@ -262,7 +262,7 @@ Within each block: $O(2)$-invariant (inherited from 1D-cycle factor). Between bl
 - **Pure-Y** $(0, R)$: by symmetry, $F_Y = F_X$, same structure (Goldstone in Y-translation).
 - **Diagonal** $(s, s)$: $s^2 = -\mu/(18\Lambda)$, $F_\Delta = -\mu^2/(36\Lambda)$. Hessian in $(a, c')$-block $\{36\Lambda s^2, -12\Lambda s^2\}$ plus 2 Goldstones: **Morse saddle index 1**.
 
-**Orbit selection:** $|F_X| = |F_Y| > |F_\Delta|$, so pure-X and pure-Y orbits are selected. $D_4$ links X ↔ Y (via 90° rotation), so after quotient $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$.
+**Orbit selection:** $\lvert F_X \rvert = \lvert F_Y \rvert > |F_\Delta|$, so pure-X and pure-Y orbits are selected. $D_4$ links X ↔ Y (via 90° rotation), so after quotient $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$.
 
 > **$T^2$ First-Pitchfork Theorem (Round 4, Cat A).** On 2D torus $C_L \times C_L$ ($L \geq 5$) at $c = 1/2$, first Fiedler pitchfork selects the **pure-X and pure-Y orbit class** (linked by $D_4$); the diagonal orbit is a saddle (Morse index 1). $|\mathcal{M}_1(T^2)| = 1$ with orbit size $2L^2$.
 
@@ -379,7 +379,7 @@ $$|\mathcal{M}_1(\beta)| = \sum_{k \geq 2 : \beta_{\mathrm{crit}}^{(k)} < \beta}
 
 `working/MF/from_single.md` §2 Conjecture 2.1: $\widehat{K} = 1 + N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}(G)} + O(1)$.
 
-$\mathrm{Aut}(G)$ plays a **multiplicity role**, not a scaling role. On 2D grid: $N_{\mathrm{unst}}$ (total unstable mode count) is the dimensional quantity setting $\widehat{K}$; $N_{\mathrm{unst}}^{\mathrm{orbit}} \approx N_{\mathrm{unst}}/|D_4| \approx N_{\mathrm{unst}}/8$ is the orbit count. Thus:
+$\mathrm{Aut}(G)$ plays a **multiplicity role**, not a scaling role. On 2D grid: $N_{\mathrm{unst}}$ (total unstable mode count) is the dimensional quantity setting $\widehat{K}$; $N_{\mathrm{unst}}^{\mathrm{orbit}} \approx N_{\mathrm{unst}}/\lvert D_4 \rvert \approx N_{\mathrm{unst}}/8$ is the orbit count. Thus:
 $$|\mathcal{M}_1(\beta)| \approx N_{\mathrm{unst}}(\beta)/|\mathrm{Aut}(G)|$$
 while $\widehat{K}(\beta) \approx \sqrt{N_{\mathrm{unst}}(\beta)}$. These are two different statistical quantifications of the landscape.
 

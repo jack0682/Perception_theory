@@ -76,7 +76,7 @@ to a crisp object family $\{O_j\}_{j=1}^{K_{\mathrm{out}}}$. Steps 1–2 produce
 
 From $u^*$, extract the set of strict local maxima:
 $$P(u^*) := \{x \in X : u^*(x) > u^*(y)\ \forall y \sim x\}.$$
-Then $|P(u^*)| = \mathcal{F}(u^*)$. These are the *candidate object centers*.
+Then $\lvert P(u^*) \rvert = \mathcal{F}(u^*)$. These are the *candidate object centers*.
 
 **Output of Step 1**: ordered peak set $P = \{p_1, \ldots, p_{\mathcal{F}}\}$ (ordering convention: descending $u^*(p_i)$, tie-break by lexicographic vertex index).
 
@@ -113,7 +113,7 @@ Each peak $p_i$ inherits the irrep label of the dominant Hessian eigenvector det
 $$\mathrm{irrep}(O_i) := [\rho_{k^*(i)}], \quad k^*(i) := \arg\max_k \bigl\{\mathrm{Re}\langle \psi_k, \chi_{B_i} \rangle^2\bigr\},$$
 where $\psi_k$ are the eigenvectors of $H(u^*)$ on the full space $\mathbb{R}^n$ (equivalently, the constrained Hessian $H(u^*)|_{T_u\Sigma_m}$ restricted to the full eigenspace), $\chi_{B_i} \in \{0,1\}^n$ is the basin indicator function with $(\chi_{B_i})_x = \mathbb{1}[x \in B_i]$, and $\langle \cdot, \cdot \rangle$ is the canonical inner product on $\mathbb{R}^n$.
 
-**Rationale for full-eigenspace formulation**: the basin-restricted norm $\|\psi_k|_{B_i}\|^2$ was the prior formulation; it is ill-posed because $\psi_k$ supported mostly outside $B_i$ (e.g., a delocalized global mode) can still score large by normalization of the restriction. The projection $\langle \psi_k, \chi_{B_i} \rangle^2$ instead measures how much of the unit-normalized $\psi_k$ aligns with the basin's characteristic function — a well-defined, basis-independent quantity on the full space. Tie-break: by lex order in $(n_k, [\rho_k])$ Mulliken order (smaller $n_k$ first, then alphabetical irrep label).
+**Rationale for full-eigenspace formulation**: the basin-restricted norm $\lVert \psi_k|_{B_i} \rVert^2$ was the prior formulation; it is ill-posed because $\psi_k$ supported mostly outside $B_i$ (e.g., a delocalized global mode) can still score large by normalization of the restriction. The projection $\langle \psi_k, \chi_{B_i} \rangle^2$ instead measures how much of the unit-normalized $\psi_k$ aligns with the basin's characteristic function — a well-defined, basis-independent quantity on the full space. Tie-break: by lex order in $(n_k, [\rho_k])$ Mulliken order (smaller $n_k$ first, then alphabetical irrep label).
 
 This assigns each crisp object a *symmetry class* under the residual stabilizer $\mathrm{Stab}_G(u^*)$. On $D_4$-symmetric graphs, $\mathrm{irrep}(O_i) \in \{A_1, A_2, B_1, B_2, E\}$, mapping each crisp object to one of 5 atomic-orbital-style classes (canonical §11.1 #14 W4 04-25 NQ-141 anchor: $\ell \bmod 4 \to D_4$ irrep table, 0-exception correspondence on R23 dataset).
 
@@ -168,8 +168,8 @@ The K-field architecture *labels* objects ex ante through slot index $j$. The cr
 ### §4.2 Active stratum filtering (Commitment 16 K_act)
 
 Active objects are those above support threshold $\epsilon$ (Commitment 16(ii)):
-$$\mathcal{O}_{\mathrm{act}} := \{O_j : \|u^{(j)*}\|_1 > \epsilon\}, \quad |\mathcal{O}_{\mathrm{act}}| = K_{\mathrm{act}}.$$
-Inactive slots (those with $\|u^{(j)*}\|_1 \leq \epsilon$) produce empty crisp objects, excluded from $\mathcal{O}_{\mathrm{act}}$ by convention.
+$$\mathcal{O}_{\mathrm{act}} := \{O_j : \lVert u^{(j)*} \rVert_1 > \epsilon\}, \quad |\mathcal{O}_{\mathrm{act}}| = K_{\mathrm{act}}.$$
+Inactive slots (those with $\lVert u^{(j)*} \rVert_1 \leq \epsilon$) produce empty crisp objects, excluded from $\mathcal{O}_{\mathrm{act}}$ by convention.
 
 ### §4.3 Cat A status
 
@@ -297,7 +297,7 @@ $$|\{H_0 \text{ bars at } \theta\}| = K_{\mathrm{step}}(u^*; \theta).$$
 
 ### §8.3 $\mathcal{F}$ recovery from $H_0$ barcode
 
-$$\mathcal{F}(u^*) = |\{H_0 \text{ bars total}\}| = |\{\text{birth times}\}|.$$
+$$\mathcal{F}(u^*) = |\{H_0 \text{ bars total}\}\lvert = \rvert\{\text{birth times}\}|.$$
 Per F_Kstep_K_triple.md §7.1: "F는 persistent homology의 0차 invariant. 4-quantity bridge가 PH 표준 framework로 reformulate됨."
 
 ### §8.4 Crisp recovery via PH barcode persistence
@@ -514,7 +514,7 @@ The Paper 1 §1 minimum (§11.2: items 1–3 + 5 with item 4 as flagged outlook)
 
 ### §16.1 Fix 1 — Step 4 irrep-label well-definedness (§3.4)
 
-**Problem**: Prior formulation $k^*(i) = \arg\max_k \|\phi_k|_{B_i}\|^2$ used basin-restricted norm. Critic identified gap: eigenvectors delocalized outside $B_i$ can score large by normalization of the restriction, making the "dominant eigenvector for basin $B_i$" ill-defined in the basin-restriction sense.
+**Problem**: Prior formulation $k^*(i) = \arg\max_k \lVert \phi_k|_{B_i} \rVert^2$ used basin-restricted norm. Critic identified gap: eigenvectors delocalized outside $B_i$ can score large by normalization of the restriction, making the "dominant eigenvector for basin $B_i$" ill-defined in the basin-restriction sense.
 
 **Fix**: Replaced with full-eigenspace inner product: $k^*(i) = \arg\max_k \{\mathrm{Re}\langle \psi_k, \chi_{B_i} \rangle^2\}$ where $\psi_k$ are eigenvectors of $H(u^*)$ on the full space $\mathbb{R}^n$ and $\chi_{B_i}$ is the basin indicator function. Added explicit rationale paragraph explaining why full-eigenspace projection is well-posed where basin restriction is not. Tie-break: lex order in $(n_k, [\rho_k])$ Mulliken order.
 

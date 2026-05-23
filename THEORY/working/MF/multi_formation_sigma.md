@@ -106,7 +106,7 @@ Per Coupling Bound Lemma (canonical T-Persist-K), in the well-separated regime $
 **σ_j definition (per-formation)**: Apply Commitment 14 directly to $H_{jj}$. Get $\sigma_j = (\mathcal{F}_j; \{(n_{jk}, [\rho_{jk}], \lambda_{jk})\}_k)$ where the indices in the inner tuple now refer to single-formation $H_{jj}$ eigenvalues.
 
 **σ_jk definition (cross-formation)**: For each pair $(j, k)$ with $j < k$, the coupling block $H_{jk}$ is (in the well-separated limit) $\lambda_{\text{rep}} I$. The σ_jk tuple captures:
-- Coupling strength $\lambda_{\text{rep}}^{(jk)} := \|H_{jk}\|_{\text{op}}$ (operator norm of coupling block).
+- Coupling strength $\lambda_{\text{rep}}^{(jk)} := \lVert H_{jk} \rVert_{\text{op}}$ (operator norm of coupling block).
 - Stabilizer-of-pair representation: under the action of $G_{\mathbf{u}}$, the pair $(u^{(j)}, u^{(k)})$ has a stabilizer $G_{\mathbf{u},jk}$ that may permute or fix the pair. The coupling block $H_{jk}$ transforms under $G_{\mathbf{u},jk}$ representations on $T_{u^{(j)*}} \Sigma_{m_j} \otimes T_{u^{(k)*}} \Sigma_{m_k}$ — define the irrep decomposition of this tensor space, get $[\rho_{jk}^{(p)}]$ multiset.
 - Joint-block eigenvalue: smallest eigenvalue of the 2-block sub-Hessian $\begin{pmatrix} H_{jj} & H_{jk} \\ H_{kj} & H_{kk} \end{pmatrix}$ — this is the Weyl-bound-relevant quantity per T-Persist-K-Sep.
 
@@ -122,7 +122,7 @@ $$\sigma_{\text{multi}}^{(A)}(\mathbf{u}^*) = \big(\mathcal{F}; \{\sigma_j\}_{j=
 **Failure modes**:
 (M1) **Tensor-space irrep handling**: Under the *full* joint stabilizer $G_{\mathbf{u}}$ (which includes $S_K$ permutation when formations are interchangeable), σ_jk is not a per-pair invariant — pair labels (j, k) are permuted by $S_K$, and the σ_jk tuple must be canonically associated to *unordered pairs*, not ordered pairs. This is fixable via multi-set treatment, but adds complexity.
 (M2) **Boundary handling**: At $\Sigma^K_M$ corners (some $u^{(j)}_i = 0$ or $= 1$), the diagonal blocks $H_{jj}$ may not be defined as Morse-Hessians (touching boundary). MO-1 issue. σ_j undefined at corners.
-(M3) **Beyond well-separated**: Coupling Bound Lemma assumes $|O_{jk}| \leq 0.2 \cdot \min(|\text{Core}_j|, |\text{Core}_k|)$ (well-separated regime). For overlapping formations (T-Persist-K-Weak regime), the off-diagonal $H_{jk}$ is no longer $\lambda_{\text{rep}} I$ + exp-small correction; it can be a complex spatial pattern. σ_jk extraction becomes messy.
+(M3) **Beyond well-separated**: Coupling Bound Lemma assumes $\lvert O_{jk} \rvert \leq 0.2 \cdot \min(|\text{Core}_j|, |\text{Core}_k|)$ (well-separated regime). For overlapping formations (T-Persist-K-Weak regime), the off-diagonal $H_{jk}$ is no longer $\lambda_{\text{rep}} I$ + exp-small correction; it can be a complex spatial pattern. σ_jk extraction becomes messy.
 
 **Strengths**:
 (P1) Most direct generalization of Commitment 14 — every single-formation σ_j is the Commitment 14 σ unchanged; cross-block σ_jk is new but conceptually parallel.
@@ -179,8 +179,8 @@ Apply Commitment 14 directly: σ_multi(B) = $(\mathcal{F}_{\text{total}}; \{(n_k
 
 Define an **interaction graph** $\mathcal{I}(\mathbf{u}^*) = (V_{\mathcal{I}}, E_{\mathcal{I}})$ where:
 - $V_{\mathcal{I}} = \{1, \ldots, K\}$, vertex $j$ labeled by single-formation σ_j (Commitment 14).
-- $E_{\mathcal{I}} = \{(j, k) : j < k, \|H_{jk}\|_{\text{op}} > \theta_{\mathcal{I}}\}$ for a coupling-strength threshold $\theta_{\mathcal{I}}$.
-- Each edge $(j, k)$ labeled by the **coupling fingerprint** $\phi_{jk} := (\|H_{jk}\|_{\text{op}}, \langle u^{(j)}, u^{(k)} \rangle / m_j m_k, d_{\min}(u^{(j)}, u^{(k)}))$ — coupling strength, normalized inner product, support distance.
+- $E_{\mathcal{I}} = \{(j, k) : j < k, \lVert H_{jk} \rVert_{\text{op}} > \theta_{\mathcal{I}}\}$ for a coupling-strength threshold $\theta_{\mathcal{I}}$.
+- Each edge $(j, k)$ labeled by the **coupling fingerprint** $\phi_{jk} := (\lVert H_{jk} \rVert_{\text{op}}, \langle u^{(j)}, u^{(k)} \rangle / m_j m_k, d_{\min}(u^{(j)}, u^{(k)}))$ — coupling strength, normalized inner product, support distance.
 
 **Combined σ_multi(C)**: $\sigma_{\text{multi}}^{(C)}(\mathbf{u}^*) = (\mathcal{F}, \mathcal{I}(\mathbf{u}^*))$ — the F count plus the labeled interaction graph.
 
@@ -276,7 +276,7 @@ A maximizes (1) and (2); B is theoretically richer but computationally heavier; 
 
 (a) **Per-formation σ_j**: For each $j \in \{1, \ldots, K\}$, let $\sigma_j := \sigma(u^{(j)*})$ via Commitment 14 applied to $H_{jj}$ on $T_{u^{(j)*}} \Sigma_{m_j}$ with stabilizer $G_{u^{(j)*}} = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^{(j)*})$.
 
-(b) **Cross-formation σ_jk**: For each ordered pair $(j, k)$ with $j < k$ and $\|H_{jk}\|_{\text{op}} > 0$, define the cross-block 2×2 sub-Hessian $\tilde H_{jk} := \begin{pmatrix} H_{jj} & H_{jk} \\ H_{kj} & H_{kk} \end{pmatrix}$ acting on $T_{u^{(j)*}} \Sigma_{m_j} \oplus T_{u^{(k)*}} \Sigma_{m_k}$.
+(b) **Cross-formation σ_jk**: For each ordered pair $(j, k)$ with $j < k$ and $\lVert H_{jk} \rVert_{\text{op}} > 0$, define the cross-block 2×2 sub-Hessian $\tilde H_{jk} := \begin{pmatrix} H_{jj} & H_{jk} \\ H_{kj} & H_{kk} \end{pmatrix}$ acting on $T_{u^{(j)*}} \Sigma_{m_j} \oplus T_{u^{(k)*}} \Sigma_{m_k}$.
 
 Let $G_{\mathbf{u}^*, jk} := \mathrm{Stab}_{\mathrm{Aut}(G) \wr S_2}(u^{(j)*}, u^{(k)*})$ be the pair-stabilizer (treating $j, k$ as distinguishable indices but acted on by $S_2$ if $u^{(j)*}, u^{(k)*}$ are in the same $\mathrm{Aut}(G)$-orbit).
 
@@ -303,7 +303,7 @@ where $\mathcal{F}_{\text{total}} := \sum_j \mathcal{F}_j$ in the well-separated
 
 *Step 1 (per-formation σ_j is well-defined and Aut(G)-orbit-invariant)*: By Commitment 14 + canonical T-σ-Lemma-1, σ_j is well-defined and invariant under $\mathrm{Aut}(G)$. Each $u^{(j)*}$ is a Morse-0 minimizer of the *single-formation* effective energy $\mathcal{E}_{\text{eff},j}$ on $\Sigma_{m_j}$ obtained by restricting $\mathcal{E}_K$ to fix $\{u^{(k)*}\}_{k \neq j}$. By T-Persist-K-Sep Coupling Bound Lemma, this restriction is $\mathcal{E}_{\text{single}}(u^{(j)}) + O(\exp(-c_0 d_{\min}))$, and Hessian $H_{jj}$ inherits the same decomposition. Thus σ_j extraction is Commitment 14 unchanged. ✓
 
-*Step 2 (σ_jk is well-defined)*: The cross-block 2×2 sub-Hessian $\tilde H_{jk}$ is symmetric (by Hessian symmetry of $\mathcal{E}_K$), hence diagonalizable with real eigenvalues. By Coupling Bound Lemma in well-separated regime, $\|H_{jk}\|_{\text{op}} = \lambda_{\text{rep}} \cdot \|I\|_{\text{op}} + O(\exp(-c_0 d_{\min})) = \lambda_{\text{rep}} + O(\exp(-c_0 d_{\min}))$, finite. Spectrum of $\tilde H_{jk}$ has $n_j + n_k$ eigenvalues; ordering is canonical. ✓
+*Step 2 (σ_jk is well-defined)*: The cross-block 2×2 sub-Hessian $\tilde H_{jk}$ is symmetric (by Hessian symmetry of $\mathcal{E}_K$), hence diagonalizable with real eigenvalues. By Coupling Bound Lemma in well-separated regime, $\lVert H_{jk} \rVert_{\text{op}} = \lambda_{\text{rep}} \cdot \lVert I \rVert_{\text{op}} + O(\exp(-c_0 d_{\min})) = \lambda_{\text{rep}} + O(\exp(-c_0 d_{\min}))$, finite. Spectrum of $\tilde H_{jk}$ has $n_j + n_k$ eigenvalues; ordering is canonical. ✓
 
 *Step 3 (σ_jk is $G_{\mathbf{u}^*, jk}$-invariant)*: By Lemma 1 application to $\tilde H_{jk}$ with stabilizer $G_{\mathbf{u}^*, jk}$. Tensor-space irrep theory of subgroup $G_{\mathbf{u}^*, jk} \leq \mathrm{Aut}(G) \wr S_2$ gives well-defined irrep labels $[\rho_{jk}^{(p)}]$ of eigenvectors. ✓ *(This step has a subtle dependency on whether* $u^{(j)*}$ *and* $u^{(k)*}$ *are in the same* $\mathrm{Aut}(G)$*-orbit; if so, $S_2$ acts; if not, only the diagonal subgroup of $\mathrm{Aut}(G) \times \mathrm{Aut}(G)$ acts.)*
 
@@ -334,14 +334,14 @@ Hence $\sigma_{\text{multi}}^{(A)} = (\mathcal{F}_1; \{\sigma_1\}; \emptyset)$ w
 
 Take $G = $ 2D torus $T^2_L$, $L = 20$. Two K=2 configurations:
 
-**Config 1**: Two well-separated tanh-disk formations $u^{(1), (1)}, u^{(1), (2)}$ at distance $d_{\min}^{(1)} = 8$ from each other (well-separated regime, $|O_{12}| = 0$).
+**Config 1**: Two well-separated tanh-disk formations $u^{(1), (1)}, u^{(1), (2)}$ at distance $d_{\min}^{(1)} = 8$ from each other (well-separated regime, $\lvert O_{12} \rvert = 0$).
 
-**Config 2**: Same per-formation profiles but at distance $d_{\min}^{(2)} = 5$ (still well-separated per WI assumption $|O| \leq 0.2 \min |\text{Core}|$, but tighter).
+**Config 2**: Same per-formation profiles but at distance $d_{\min}^{(2)} = 5$ (still well-separated per WI assumption $\lvert O \rvert \leq 0.2 \min |\text{Core}|$, but tighter).
 
 Each config has same per-formation σ_j (same single-disk minimizers, same individual $H_{jj}$ spectrum). But:
 
-- $\|H_{12}^{(1)}\|_{\text{op}}$ vs $\|H_{12}^{(2)}\|_{\text{op}}$: per Coupling Bound Lemma, $\|H_{jk}\|_{\text{op}} \approx \lambda_{\text{rep}} \cdot \exp(-c_0 \cdot d_{\min})$ (heuristic; actual scaling per CBL Item 2-3). Different $d_{\min}$ → different op-norms.
-- Cross-eigenvalues $\lambda_{12}^{(1, p)}$ vs $\lambda_{12}^{(2, p)}$: by Weyl interlacing applied to $\tilde H_{12} = \mathrm{block-diag}(H_{11}, H_{22}) + \begin{pmatrix} 0 & H_{12} \\ H_{21} & 0 \end{pmatrix}$, the perturbation magnitude $\|H_{12}\|$ shifts the joint eigenvalues by amount $O(\|H_{12}\|)$. Different $d_{\min}$ → different shifts → different $\sigma_{jk}$ tuples.
+- $\lVert H_{12}^{(1)} \rVert_{\text{op}}$ vs $\lVert H_{12}^{(2)} \rVert_{\text{op}}$: per Coupling Bound Lemma, $\lVert H_{jk} \rVert_{\text{op}} \approx \lambda_{\text{rep}} \cdot \exp(-c_0 \cdot d_{\min})$ (heuristic; actual scaling per CBL Item 2-3). Different $d_{\min}$ → different op-norms.
+- Cross-eigenvalues $\lambda_{12}^{(1, p)}$ vs $\lambda_{12}^{(2, p)}$: by Weyl interlacing applied to $\tilde H_{12} = \mathrm{block-diag}(H_{11}, H_{22}) + \begin{pmatrix} 0 & H_{12} \\ H_{21} & 0 \end{pmatrix}$, the perturbation magnitude $\lVert H_{12} \rVert$ shifts the joint eigenvalues by amount $O(\lVert H_{12} \rVert)$. Different $d_{\min}$ → different shifts → different $\sigma_{jk}$ tuples.
 
 Hence $\sigma_{\text{multi}}^{(A)}(\mathbf{u}^{(1)}) \neq \sigma_{\text{multi}}^{(A)}(\mathbf{u}^{(2)})$ even though $\{\sigma_j\}$ multi-sets are identical. ✓
 
@@ -354,7 +354,7 @@ Hence $\sigma_{\text{multi}}^{(A)}(\mathbf{u}^{(1)}) \neq \sigma_{\text{multi}}^
 In the well-separated translation-invariant graph case (e.g., 2D torus), each per-formation $u^{(j)*}$ has its own translation Goldstone (canonical T-V5b-T-(b)). In the joint Hessian $\tilde H_{jk}$, these per-formation Goldstones are **two near-zero eigenvalues** (one per formation), shifted by coupling.
 
 By Weyl perturbation theorem applied to $\tilde H_{jk} = \mathrm{block-diag}(H_{jj}, H_{kk}) + V_{jk}$ where $V_{jk}$ has off-diagonal coupling $H_{jk}$, the two near-zero eigenvalues split into two close-but-not-equal eigenvalues:
-$$\lambda_{jk}^{(\text{Goldstone-pair})} \in \{\lambda_{\text{single},j}^{(\text{Goldstone})} \pm O(\|H_{jk}\|), \lambda_{\text{single},k}^{(\text{Goldstone})} \pm O(\|H_{jk}\|)\}.$$
+$$\lambda_{jk}^{(\text{Goldstone-pair})} \in \{\lambda_{\text{single},j}^{(\text{Goldstone})} \pm O(\lVert H_{jk} \rVert), \lambda_{\text{single},k}^{(\text{Goldstone})} \pm O(\lVert H_{jk} \rVert)\}.$$
 
 The joint eigenvectors are linear combinations of per-formation translation modes plus boundary corrections.
 
@@ -378,7 +378,7 @@ To meet meta-prompt §7 rigor:
 
   **Both cases need explicit treatment**; not done in this initiation. **Forward gap.**
 
-- **Approach A's M3 (overlapping formations beyond well-separated regime)**: when $|O_{jk}| > 0.2 \min$, Coupling Bound Lemma's $H_{jk} \approx \lambda_{\text{rep}} I$ approximation fails; off-diagonal blocks become spatial patterns, not multiples of identity. σ_jk extraction needs different handling. **Forward gap (NQ-188 / NQ-186 territory).**
+- **Approach A's M3 (overlapping formations beyond well-separated regime)**: when $\lvert O_{jk} \rvert > 0.2 \min$, Coupling Bound Lemma's $H_{jk} \approx \lambda_{\text{rep}} I$ approximation fails; off-diagonal blocks become spatial patterns, not multiples of identity. σ_jk extraction needs different handling. **Forward gap (NQ-188 / NQ-186 territory).**
 
 - **Approach A's M2 (MO-1 corners)**: σ_j undefined when $u^{(j)*}$ touches boundary; σ_jk inherits this issue. **Decision deferred to companion file `04_G3_phase5_MO1_decision.md`.**
 
@@ -448,8 +448,8 @@ Per plan.md §3 Block 3 (15:30-16:00) — script skeleton drafted in `CODE/scrip
 
 **Verdict criteria**:
 - Lemma 5.3 non-triviality: do different $d_{\min}$ produce different $\sigma_{12}$? Expected YES.
-- §5.5 cross-Goldstone transfer: do per-formation Goldstones split into Goldstone-pair? Expected YES with magnitude $\sim \|H_{12}\|$.
-- σ_multi^(A) consistency: as $d_{\min}$ → ∞, $\|H_{12}\|$ → 0, σ_multi^(A) reduces to two decoupled σ_1, σ_2. Expected YES.
+- §5.5 cross-Goldstone transfer: do per-formation Goldstones split into Goldstone-pair? Expected YES with magnitude $\sim \lVert H_{12} \rVert$.
+- σ_multi^(A) consistency: as $d_{\min}$ → ∞, $\lVert H_{12} \rVert$ → 0, σ_multi^(A) reduces to two decoupled σ_1, σ_2. Expected YES.
 
 ---
 

@@ -36,7 +36,7 @@ OP-0008 는 CV-1.5.1 시점 σ^A 인 K-jump 시 inheritance map $\Phi : \sigma^A
 
 ### §2.1 Underlying setup
 
-K-field gradient flow trajectory $\mathbf{u}(t) : [0, T] \to \widetilde\Sigma^K_M$ on shared-pool stratified space (per `working/MF/mathematical_scaffolding_4tools.md` Tool A1 §2). Active formation set at time $t$: $\mathrm{act}(t) = \{j : \|u^{(j)}(t)\|_1 > \epsilon\}$. $K_{\mathrm{act}}(t) = |\mathrm{act}(t)|$.
+K-field gradient flow trajectory $\mathbf{u}(t) : [0, T] \to \widetilde\Sigma^K_M$ on shared-pool stratified space (per `working/MF/mathematical_scaffolding_4tools.md` Tool A1 §2). Active formation set at time $t$: $\mathrm{act}(t) = \{j : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$. $K_{\mathrm{act}}(t) = |\mathrm{act}(t)|$.
 
 For each $j \in \mathrm{act}(t)$, the formation $u^{(j)}(t) : X \to [0, 1]$ has support $\mathrm{supp}(u^{(j)}) := \{x \in X : u^{(j)}(x) > \delta\}$ (with $\delta < \epsilon$ a small threshold).
 
@@ -60,7 +60,7 @@ with the four extension components defined as follows.
 
 For each $j \in \mathrm{act}(\mathbf{u})$:
 $$c_j(\mathbf{u}) := \frac{\sum_{x \in X} x \cdot u^{(j)}(x)}{\sum_{x \in X} u^{(j)}(x)} \quad \in \mathbb{R}^{\dim X}$$
-(treating $X \subseteq \mathbb{R}^{\dim X}$ for embedded graphs; for abstract graphs use vertex-position embedding from $G$'s ambient geometry). The denominator $\|u^{(j)}\|_1 > \epsilon$ for active formations, so $c_j$ is well-defined.
+(treating $X \subseteq \mathbb{R}^{\dim X}$ for embedded graphs; for abstract graphs use vertex-position embedding from $G$'s ambient geometry). The denominator $\lVert u^{(j)} \rVert_1 > \epsilon$ for active formations, so $c_j$ is well-defined.
 
 **Status as derived diagnostic**: $c_j$ is a $u$-weighted spatial average — derived from primitive $u_t$ field, not a new primitive. Compatible with CN10 (preserves u_t primacy).
 
@@ -88,7 +88,7 @@ For each pair $j < k$ with $j, k \in \mathrm{act}(\mathbf{u})$, define:
 $$W_{jk}(\mathbf{u}) := \big(\Delta_{jk}^{\mathrm{Gold}}, \theta_{jk}^{\mathrm{mix}}, \mathrm{sign}(d/dt[\Delta_{jk}^{\mathrm{Gold}}])\big)$$
 
 where:
-- **$\Delta_{jk}^{\mathrm{Gold}}$**: gap between the two near-zero (Goldstone-pair) eigenvalues of the cross-block 2×2 sub-Hessian $\tilde H_{jk} = \begin{pmatrix} H_{jj} & H_{jk} \\ H_{kj} & H_{kk} \end{pmatrix}$. By `multi_formation_sigma.md` §5.5 (Observation 5.4): $\Delta_{jk}^{\mathrm{Gold}} = O(\|H_{jk}\|_{\mathrm{op}}) = O(\lambda_{\mathrm{rep}} \cdot \exp(-c_0 d_{\min}))$ in the well-separated regime.
+- **$\Delta_{jk}^{\mathrm{Gold}}$**: gap between the two near-zero (Goldstone-pair) eigenvalues of the cross-block 2×2 sub-Hessian $\tilde H_{jk} = \begin{pmatrix} H_{jj} & H_{jk} \\ H_{kj} & H_{kk} \end{pmatrix}$. By `multi_formation_sigma.md` §5.5 (Observation 5.4): $\Delta_{jk}^{\mathrm{Gold}} = O(\lVert H_{jk} \rVert_{\mathrm{op}}) = O(\lambda_{\mathrm{rep}} \cdot \exp(-c_0 d_{\min}))$ in the well-separated regime.
 - **$\theta_{jk}^{\mathrm{mix}}$**: mixing angle of the two Goldstone-pair eigenvectors — the linear combination coefficient $\alpha$ in $v_{\mathrm{Gold},+} = \alpha \, e_j^{\mathrm{trans}} + \sqrt{1-\alpha^2} \, e_k^{\mathrm{trans}}$ (each $e_j^{\mathrm{trans}}$ being the per-formation translation Goldstone). $\theta_{jk}^{\mathrm{mix}} = \arctan(\alpha / \sqrt{1-\alpha^2}) \in [-\pi/2, \pi/2]$.
 - **$\mathrm{sign}(d/dt[\Delta_{jk}^{\mathrm{Gold}}])$**: temporal sign of the Goldstone-pair gap derivative. As $j, k$ approach merger ($d_{\min}(j,k) \searrow 0$), $\Delta_{jk}^{\mathrm{Gold}}$ first widens (avoided crossing onset), then contracts (one mode goes to true zero post-merger as $j \oplus k = \ell$). Sign flips at the avoided-crossing onset, providing a *temporal* fingerprint.
 
@@ -99,7 +99,7 @@ where:
 **Claim 2.4.** Each component $\sigma_{\mathrm{multi}}^{A,\mathrm{standard}}, \{c_j\}, \{\Theta_j\}, \{W_{jk}\}$ is:
 - **(W1) $u_t$-derived**: function of primitive $u^{(j)} : X \to [0,1]$ via spatial integrals or Hessian-spectral computation.
 - **(W2) Aut-orbit-invariant**: under $\mathrm{Aut}(G) \wr S_{K_{\mathrm{field}}}$ action, each component transforms covariantly; multi-set treatment under $S_{K_{\mathrm{act}}}$ yields invariance.
-- **(W3) Stratum-interior well-defined**: $K_{\mathrm{act}}$-stratum interior (no boundary touching, no formation coincidence) ensures denominators $\|u^{(j)}\|_1 > \epsilon$ and Goldstone-pair non-degeneracy.
+- **(W3) Stratum-interior well-defined**: $K_{\mathrm{act}}$-stratum interior (no boundary touching, no formation coincidence) ensures denominators $\lVert u^{(j)} \rVert_1 > \epsilon$ and Goldstone-pair non-degeneracy.
 
 (W1)+(W2)+(W3) ⇒ σ_rich is well-defined Aut-orbit invariant on stratum interiors.
 
@@ -120,7 +120,7 @@ Per `sigma_multi_trajectory.md` Lemma 4.2: left and right limits $\sigma^A(t^{*\
 ### §3.2 Encoding of $(j,k)$ in σ_rich
 
 **Claim 3.1 (merger pair identification from σ_rich).** Given $\sigma_{\mathrm{rich}}(t^{*-})$, the merging pair $(j, k)$ is identifiable as the unique pair satisfying:
-1. $\|c_j(t^{*-}) - c_k(t^{*-})\|$ is the unique minimum in $\{\|c_a - c_b\| : a, b \in \mathrm{act}, a < b\}$.
+1. $\lVert c_j(t^{*-}) - c_k(t^{*-}) \rVert$ is the unique minimum in $\{\lVert c_a - c_b \rVert : a, b \in \mathrm{act}, a < b\}$.
 2. $\Delta_{jk}^{\mathrm{Gold}} \to 0$ approach (Goldstone-pair softening: of all $W_{ab}$, the pair $(j,k)$ has $W_{jk}$ with $\mathrm{sign}(d\Delta/dt) = -1$ and minimum $|\Delta_{jk}^{\mathrm{Gold}}|$).
 
 **Verification sketch**: Two formations merge when their boundaries touch and the inter-formation barrier softens. Both centroid-distance minimum (geometric) and Goldstone-pair gap softening (spectral) characterize this softening. In the well-separated regime, both criteria identify the same pair (consistent in non-degenerate trajectories).

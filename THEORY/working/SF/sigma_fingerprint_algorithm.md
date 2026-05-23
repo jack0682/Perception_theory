@@ -23,7 +23,7 @@
 **Goal.** Specify an algorithm computing a **σ-fingerprint** $\Phi(u^*) \in \mathbb{Z}^* \times \mathbb{R}^*$ (an integer/real labelled tuple) that:
 
 - **(F1) Strength.** Distinguishes all 56 stable minimizers of the R23 fullscale dataset (`exp_orbital_fullscale.json`, $32 \times 32$ $D_4$ free-BC grid, $\beta = 30$, $c = 0.5$, $\alpha = 1$); strictly refines the eigenvalue-proxy σ-class proxy (`sigma_class_count_R23.py`).
-- **(F2) Computational cheapness.** Runs in sub-cubic $O(|X|^{2.5})$ or better wall-clock time per minimizer; in particular avoids full $O(|X|^3)$ Hessian diagonalization at the bulk level (only the lowest $K = 12$ eigenvectors are needed via Lanczos).
+- **(F2) Computational cheapness.** Runs in sub-cubic $O(\lvert X \rvert^{2.5})$ or better wall-clock time per minimizer; in particular avoids full $O(\lvert X \rvert^3)$ Hessian diagonalization at the bulk level (only the lowest $K = 12$ eigenvectors are needed via Lanczos).
 - **(F3) Locality compatibility.** Composes with T-σ-Schramm-Locality (Bridge B-2 / NQ-262): the fingerprint at first-pitchfork minimizers is determined by $\mathrm{Aut}(G)_{u^*}$-irrep structure, so locality-theorem applications inherit from the fingerprint.
 - **(F4) Aut(G)-orbit invariance.** $\Phi$ is constant on $\mathrm{Aut}(G)$-orbits (per T-σ-Lemma-1 (ii)) up to canonical conjugation (Definition 2.1' from `sigma_uniqueness_theorem.md` §2).
 
@@ -37,38 +37,38 @@
 
 **Definition 2.1 (σ-fingerprint).** For a stable minimizer $u^* \in \Sigma_m^\circ$ of full SCC energy on a finite connected graph $G$ with stabilizer $G_{u^*} := \mathrm{Aut}(G)_{u^*}$, the σ-fingerprint is the labelled tuple
 $$\Phi(u^*) := \big( \mathcal{F}(u^*),\ K(u^*),\ \mathrm{stab}(u^*),\ \vec{\nu}(u^*),\ \vec{\rho}(u^*),\ \vec{\lambda}(u^*),\ B(u^*),\ S(u^*)\big),$$
-with components defined below. The fingerprint refines the σ-tuple of Commitment 14 by augmenting with diagnostic-vector data (Bind, Sep) which are SCC-intrinsic and computable in $O(|E|)$ time.
+with components defined below. The fingerprint refines the σ-tuple of Commitment 14 by augmenting with diagnostic-vector data (Bind, Sep) which are SCC-intrinsic and computable in $O(\lvert E \rvert)$ time.
 
 ### §2.1 Component definitions
 
 **(C1) $\mathcal{F}(u^*) \in \mathbb{Z}_{\geq 0}$ — formation count.**
-Strict-local-maxima count: $\mathcal{F}(u^*) := \#\{i \in X : u^*(i) > u^*(j) \text{ for all } j \sim i\}$. Computable in $O(|E|)$ time.
+Strict-local-maxima count: $\mathcal{F}(u^*) := \#\{i \in X : u^*(i) > u^*(j) \text{ for all } j \sim i\}$. Computable in $O(\lvert E \rvert)$ time.
 
 **(C2) $K(u^*) \in \mathbb{Z}_{\geq 0}$ — σ-tuple cutoff length.**
 $K := \min\{k : \mu_k > 10 \mu_{0+}\}$ per Commitment 14 (O3 K-A) where $\mu_{0+}$ is the smallest positive Hessian eigenvalue (Goldstone-aware). Cutoff is data-dependent, typically $K \approx 5$–$15$ on R23.
 
 **(C3) $\mathrm{stab}(u^*)$ — stabilizer fingerprint.**
 A small structural invariant of $G_{u^*} = \mathrm{Aut}(G)_{u^*}$ encoding:
-- $|G_{u^*}|$ (group order),
+- $\lvert G_{u^*} \rvert$ (group order),
 - a canonical conjugacy-class signature $\mathrm{cc}(G_{u^*}) := \{(\#g, \mathrm{ord}(g))\}_{g \text{-class reps}}$ (multiset of orders, weighted),
 - an isomorphism-class label from a small lookup table (e.g., $D_4$, $D_n$, $\mathbb{Z}_2$, $\{e\}$ for known cases, otherwise GAP small-group ID).
 
-This component is intentionally lightweight: the full $\mathrm{Aut}(G)$ enumeration via PyNauty is $O(|X|^{c \log |X|})$ in pathological cases but typically tractable in practice on $|X| \leq 1024$ (R23 = 1024).
+This component is intentionally lightweight: the full $\mathrm{Aut}(G)$ enumeration via PyNauty is $O(\lvert X \rvert^{c \log \lvert X \rvert})$ in pathological cases but typically tractable in practice on $\lvert X \rvert \leq 1024$ (R23 = 1024).
 
 **(C4) $\vec{\nu}(u^*) = (\nu_1, \nu_2, \ldots, \nu_K) \in \mathbb{Z}_{\geq 2}^K$ — nodal count vector.**
-$\nu_k := \mathcal{N}(\phi_k)$ where $\phi_k$ is the $k$-th Hessian eigenvector and $\mathcal{N}$ is the nodal-count function (T-σ-Lemma-2 (i)). Computable in $O(|E|)$ per eigenvector via BFS on signed components.
+$\nu_k := \mathcal{N}(\phi_k)$ where $\phi_k$ is the $k$-th Hessian eigenvector and $\mathcal{N}$ is the nodal-count function (T-σ-Lemma-2 (i)). Computable in $O(\lvert E \rvert)$ per eigenvector via BFS on signed components.
 
 **(C5) $\vec{\rho}(u^*) = ([\rho_1], [\rho_2], \ldots, [\rho_K])$ — irrep label vector.**
-$[\rho_k] \in \widehat{G_{u^*}}$ = irrep label of $\phi_k$ via isotypic projection $P_{[\rho]}$ (T-σ-Lemma-1 (ii)). Computed via character orthogonality: $[\rho_k] := \arg\max_{[\rho]} \|P_{[\rho]} \phi_k\|^2$.
+$[\rho_k] \in \widehat{G_{u^*}}$ = irrep label of $\phi_k$ via isotypic projection $P_{[\rho]}$ (T-σ-Lemma-1 (ii)). Computed via character orthogonality: $[\rho_k] := \arg\max_{[\rho]} \lVert P_{[\rho]} \phi_k \rVert^2$.
 
 **(C6) $\vec{\lambda}(u^*) = (\lambda_1, \ldots, \lambda_K) \in \mathbb{R}_{>0}^K$ — Hessian eigenvalue vector.**
 Lowest $K$ non-volume eigenvalues of the constrained Hessian, sorted ascending, rounded to 4 decimal places to absorb numerical noise (per `sigma_class_count_R23.py` precedent).
 
 **(C7) $B(u^*) \in [0, 1]$ — Bind diagnostic.**
-Cohesion-weighted boundary tightness, computed via `scc/diagnostics.py` `diagnostic_vector`. $O(|E|)$ time. Intrinsic SCC quantity.
+Cohesion-weighted boundary tightness, computed via `scc/diagnostics.py` `diagnostic_vector`. $O(\lvert E \rvert)$ time. Intrinsic SCC quantity.
 
 **(C8) $S(u^*) \in [0, 1]$ — Sep diagnostic.**
-Inter-formation separation, u-weighted distinction integral. $O(|E|)$ time. Intrinsic SCC quantity.
+Inter-formation separation, u-weighted distinction integral. $O(\lvert E \rvert)$ time. Intrinsic SCC quantity.
 
 ### §2.2 Equivalence and conjugation
 
@@ -79,7 +79,7 @@ Inter-formation separation, u-weighted distinction integral. $O(|E|)$ time. Intr
 - **(E3)** $\vec{\nu}(u_1^*) = \vec{\nu}(u_2^*)$ entry-wise.
 - **(E4)** There exists $\varphi: G_{u_1^*} \to G_{u_2^*}$ isomorphism such that $[\rho_k(u_2^*)] = [\varphi_* \rho_k(u_1^*)]$ for all $k$, modulo conjugation per Definition 2.1' clause (c) (Schur-degenerate isomorphism class).
 - **(E5)** $|\lambda_k(u_1^*) - \lambda_k(u_2^*)| < \epsilon_\lambda$ for $k = 1, \ldots, K$ ($\epsilon_\lambda = 10^{-4}$ default).
-- **(E6)** $|B(u_1^*) - B(u_2^*)| < \epsilon_B$ and $|S(u_1^*) - S(u_2^*)| < \epsilon_S$ ($\epsilon_B = \epsilon_S = 10^{-3}$).
+- **(E6)** $\lvert B(u_1^*) - B(u_2^*) \rvert < \epsilon_B$ and $\lvert S(u_1^*) - S(u_2^*) \rvert < \epsilon_S$ ($\epsilon_B = \epsilon_S = 10^{-3}$).
 
 **Lemma 2.3 (Aut(G)-orbit invariance).** *Within a fixed graph $G$, $\Phi$ is constant on $\mathrm{Aut}(G)$-orbits, modulo canonical conjugation.*
 
@@ -112,13 +112,13 @@ ALGORITHM ComputeSigmaFingerprint(u*, G, α, β, c, K_max=15):
 
 ### §3.2 Step-by-step justifications
 
-**Step 1 (COUNT_LOCAL_MAXIMA).** Scan each vertex; check $u^*[i] > u^*[j]$ for all $j \sim i$. Time $O(\sum_i \deg(i)) = O(|E|)$. Already implemented in `sigma_locality_R23_cycle_torus.py` `count_local_maxima`. ✓
+**Step 1 (COUNT_LOCAL_MAXIMA).** Scan each vertex; check $u^*[i] > u^*[j]$ for all $j \sim i$. Time $O(\sum_i \deg(i)) = O(\lvert E \rvert)$. Already implemented in `sigma_locality_R23_cycle_torus.py` `count_local_maxima`. ✓
 
-**Step 2 (BUILD_CONSTRAINED_HESSIAN).** At minimizer $u^*$ (non-uniform), use leading-order approximation $H(u^*) \approx 4\alpha L_G + \beta W''(u^*) \cdot \mathrm{diag}$ where $W''(u) = 2(1 - 6u + 6u^2)$ per `scc/energy.py` `double_well_second_deriv`. Volume tangent direction is filtered in step 4. Time $O(|E|)$ for Laplacian + $O(n)$ diagonal.
+**Step 2 (BUILD_CONSTRAINED_HESSIAN).** At minimizer $u^*$ (non-uniform), use leading-order approximation $H(u^*) \approx 4\alpha L_G + \beta W''(u^*) \cdot \mathrm{diag}$ where $W''(u) = 2(1 - 6u + 6u^2)$ per `scc/energy.py` `double_well_second_deriv`. Volume tangent direction is filtered in step 4. Time $O(\lvert E \rvert)$ for Laplacian + $O(n)$ diagonal.
 
-*Caveat (Cat B → Cat A path):* The full Hessian includes closure + separation contributions. Step 2 currently uses a $\mathcal{E}_{\mathrm{bd}}$-only approximation; full-Hessian inclusion is a Cat A target via finite-differences on `energy.gradient` (already validated to 1e-9 precision per `scc/energy.py` FD-verified gradient). Cost: $O(K \cdot n)$ Hessian-vector products, each $O(|E|)$.
+*Caveat (Cat B → Cat A path):* The full Hessian includes closure + separation contributions. Step 2 currently uses a $\mathcal{E}_{\mathrm{bd}}$-only approximation; full-Hessian inclusion is a Cat A target via finite-differences on `energy.gradient` (already validated to 1e-9 precision per `scc/energy.py` FD-verified gradient). Cost: $O(K \cdot n)$ Hessian-vector products, each $O(\lvert E \rvert)$.
 
-**Step 3 (LANCZOS_LOWEST_K).** Use `scipy.sparse.linalg.eigsh(H, k=K_max+1, which='SM')`. Lanczos cost: $O(K_{\max} \cdot |E|)$ per matrix-vector product, $O(K_{\max}^2)$ orthogonalization, $K_{\max}$ iterations → $O(K_{\max}^2 \cdot |E|)$. On R23 ($n = 1024$, $|E| \approx 2 \cdot 1024 = 2048$, $K_{\max} = 15$): $\sim 15^2 \cdot 2048 \approx 0.5\mathrm{M}$ flops, sub-millisecond.
+**Step 3 (LANCZOS_LOWEST_K).** Use `scipy.sparse.linalg.eigsh(H, k=K_max+1, which='SM')`. Lanczos cost: $O(K_{\max} \cdot \lvert E \rvert)$ per matrix-vector product, $O(K_{\max}^2)$ orthogonalization, $K_{\max}$ iterations → $O(K_{\max}^2 \cdot \lvert E \rvert)$. On R23 ($n = 1024$, $\lvert E \rvert \approx 2 \cdot 1024 = 2048$, $K_{\max} = 15$): $\sim 15^2 \cdot 2048 \approx 0.5\mathrm{M}$ flops, sub-millisecond.
 
 **Step 4 (volume-mode filter).** Reuse `filter_non_volume_modes` from `sigma_locality_R23_cycle_torus.py`: drop the eigenvector with $|\langle \phi, \mathbf{1}/\sqrt{n} \rangle| > 0.5$. $O(K_{\max} \cdot n)$ inner products.
 
@@ -129,38 +129,38 @@ ALGORITHM ComputeSigmaFingerprint(u*, G, α, β, c, K_max=15):
 - BFS-count connected components of $G[X^+]$ and $G[X^-]$.
 - $\mathcal{N}(\phi_k) := \#\mathrm{cc}(G[X^+]) + \#\mathrm{cc}(G[X^-])$.
 
-Time per eigenvector $O(|E|)$ (BFS); total over $K$ eigenvectors $O(K \cdot |E|)$. ✓ Per T-σ-Lemma-2 (i).
+Time per eigenvector $O(\lvert E \rvert)$ (BFS); total over $K$ eigenvectors $O(K \cdot \lvert E \rvert)$. ✓ Per T-σ-Lemma-2 (i).
 
 **Step 7 (COMPUTE_STABILIZER).** Currently the bottleneck step. Three sub-options:
 
   - **(a) Analytical fast path** (W6 implementation, default): For known graph classes (grid-$D_4$, cycle-$D_n$, torus-$\mathbb{Z}_n^2 \rtimes D_4$, complete-$S_n$), use a lookup table indexed by graph-class identifier. $O(1)$ time. Already implemented for the 3 graphs in `sigma_locality_R23_cycle_torus.py`.
 
-  - **(b) PyNauty integration** (W7+ target, NQ-259): Use `pynauty` to compute $\mathrm{Aut}(G)$ generators in $O(|X|^c \log |X|)$ practical time on $|X| \leq 1024$. Then filter by $u^*$-invariance: $G_{u^*} := \{\pi : u^*[\pi(i)] = u^*[i] \forall i\}$. Filter cost $O(|X|^2)$ in worst case but typically $O(|X|)$ via canonical orbit refinement.
+  - **(b) PyNauty integration** (W7+ target, NQ-259): Use `pynauty` to compute $\mathrm{Aut}(G)$ generators in $O(\lvert X \rvert^c \log \lvert X \rvert)$ practical time on $\lvert X \rvert \leq 1024$. Then filter by $u^*$-invariance: $G_{u^*} := \{\pi : u^*[\pi(i)] = u^*[i] \forall i\}$. Filter cost $O(\lvert X \rvert^2)$ in worst case but typically $O(\lvert X \rvert)$ via canonical orbit refinement.
 
-  - **(c) Color-refinement fallback** (lightweight, NQ-264 default for unknown graphs): Use Weisfeiler-Lehman color refinement seeded by $u^*$-values: $\mathrm{stab}(u^*)$ is bounded above by automorphisms preserving the WL color partition. Time $O(|X|^2 \log |X|)$. Not exact but provides a structural lower-bound fingerprint.
+  - **(c) Color-refinement fallback** (lightweight, NQ-264 default for unknown graphs): Use Weisfeiler-Lehman color refinement seeded by $u^*$-values: $\mathrm{stab}(u^*)$ is bounded above by automorphisms preserving the WL color partition. Time $O(\lvert X \rvert^2 \log \lvert X \rvert)$. Not exact but provides a structural lower-bound fingerprint.
 
   W6 default: option (a) for the 3 standard graphs (R23, cycle, torus); option (c) for arbitrary graphs.
 
 **Step 8 (IRREP_LABEL).** For each $\phi_k$:
-- Compute the isotypic projection norms $\|P_{[\rho]} \phi_k\|^2$ for each $[\rho] \in \widehat{G_{u^*}}$ via the projector $P_{[\rho]} = \frac{\dim\rho}{|G_u|} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \pi$.
-- $[\rho_k] := \arg\max_{[\rho]} \|P_{[\rho]} \phi_k\|^2$.
+- Compute the isotypic projection norms $\lVert P_{[\rho]} \phi_k \rVert^2$ for each $[\rho] \in \widehat{G_{u^*}}$ via the projector $P_{[\rho]} = \frac{\dim\rho}{\lvert G_u \rvert} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \pi$.
+- $[\rho_k] := \arg\max_{[\rho]} \lVert P_{[\rho]} \phi_k \rVert^2$.
 
-Time $O(|G_{u^*}| \cdot n)$ per irrep × $|\widehat{G_{u^*}}|$ irreps × $K$ eigenvectors $= O(K \cdot |G_{u^*}| \cdot |\widehat{G_{u^*}}| \cdot n)$. On $D_4$ ($|G| = 8$, $|\widehat{G}| = 5$, $n = 1024$, $K = 15$): $\sim 615\mathrm{K}$ flops. Sub-second.
+Time $O(\lvert G_{u^*} \rvert \cdot n)$ per irrep × $|\widehat{G_{u^*}}|$ irreps × $K$ eigenvectors $= O(K \cdot \lvert G_{u^*} \rvert \cdot |\widehat{G_{u^*}}| \cdot n)$. On $D_4$ ($\lvert G \rvert = 8$, $|\widehat{G}| = 5$, $n = 1024$, $K = 15$): $\sim 615\mathrm{K}$ flops. Sub-second.
 
 For multi-dimensional irreps (e.g., $D_4$ E-irrep), record the **isomorphism class** label only per Definition 2.1' clause (c); basis-choice ambiguity is absorbed (Schur orthogonality, Serre 1977 §2.2).
 
-**Step 9 (STABILIZER_SIGNATURE).** Compute $\mathrm{cc}(G_{u^*})$ via group-element enumeration: for each $\pi \in G_{u^*}$, compute order. Bin by order; record multiset $\{(\#g, \mathrm{ord}(g))\}$. Time $O(|G_{u^*}|^2)$ generic, $O(|G_{u^*}| \log |G_{u^*}|)$ with caching.
+**Step 9 (STABILIZER_SIGNATURE).** Compute $\mathrm{cc}(G_{u^*})$ via group-element enumeration: for each $\pi \in G_{u^*}$, compute order. Bin by order; record multiset $\{(\#g, \mathrm{ord}(g))\}$. Time $O(\lvert G_{u^*} \rvert^2)$ generic, $O(\lvert G_{u^*} \rvert \log \lvert G_{u^*} \rvert)$ with caching.
 
 For known small groups, augment with isomorphism-class label from a hardcoded lookup ($D_4 \leftrightarrow \langle 2, 1, 0, 0, 1 \rangle$ conjugacy signature; $\mathbb{Z}_2 \leftrightarrow \langle 1, 1 \rangle$; etc.).
 
-**Step 10 (DIAGNOSTIC_VECTOR).** Reuse `scc/diagnostics.py` `diagnostic_vector` which returns `DiagnosticVector(Bind, Sep, Inside, Persist)`. Already $O(|E|)$ optimized.
+**Step 10 (DIAGNOSTIC_VECTOR).** Reuse `scc/diagnostics.py` `diagnostic_vector` which returns `DiagnosticVector(Bind, Sep, Inside, Persist)`. Already $O(\lvert E \rvert)$ optimized.
 
 ### §3.3 Total complexity
 
 Summing:
-$$T(\Phi) = O(|E|) + O(K_{\max}^2 |E|) + O(K |E|) + T_{\mathrm{stab}}(G) + O(K |G_u| |\widehat{G_u}| n) + O(|G_u|^2)$$
+$$T(\Phi) = O(\lvert E \rvert) + O(K_{\max}^2 \lvert E \rvert) + O(K \lvert E \rvert) + T_{\mathrm{stab}}(G) + O(K \lvert G_u \rvert |\widehat{G_u}| n) + O(\lvert G_u \rvert^2)$$
 
-For R23 ($n = 1024$, $|E| = 2048$, $K = 15$, $|G_u| = 8$, $|\widehat{G_u}| = 5$):
+For R23 ($n = 1024$, $\lvert E \rvert = 2048$, $K = 15$, $\lvert G_u \rvert = 8$, $|\widehat{G_u}| = 5$):
 - Lanczos: $\sim 5 \cdot 10^5$ flops.
 - Nodal counts: $\sim 3 \cdot 10^4$ flops.
 - Irrep projection: $\sim 6 \cdot 10^5$ flops.
@@ -170,9 +170,9 @@ For R23 ($n = 1024$, $|E| = 2048$, $K = 15$, $|G_u| = 8$, $|\widehat{G_u}| = 5$)
 
 For 56 minimizers: full R23 fingerprint enumeration $\approx 0.6$ s.
 
-**Asymptotic complexity (excluding stabilizer):** $O(K_{\max}^2 |E| + K |G_u| |\widehat{G_u}| n)$ = **$O(n \log n)$ in $|X|$ for sparse graphs with bounded-symmetry stabilizers**. ✓ Sub-cubic, in fact near-linear (F2 satisfied with significant margin).
+**Asymptotic complexity (excluding stabilizer):** $O(K_{\max}^2 \lvert E \rvert + K \lvert G_u \rvert |\widehat{G_u}| n)$ = **$O(n \log n)$ in $\lvert X \rvert$ for sparse graphs with bounded-symmetry stabilizers**. ✓ Sub-cubic, in fact near-linear (F2 satisfied with significant margin).
 
-**Including PyNauty stabilizer (W7+ option):** practical $O(|X|^2 \log |X|)$ worst-case, $O(|X|)$ typical.
+**Including PyNauty stabilizer (W7+ option):** practical $O(\lvert X \rvert^2 \log \lvert X \rvert)$ worst-case, $O(\lvert X \rvert)$ typical.
 
 ---
 
@@ -225,7 +225,7 @@ Run side-by-side with `sigma_class_count_R23.py` eigenvalue-only proxy:
 | Eigenvalue proxy (current) | $\sim 8$ classes | $O(K \log K)$ trivial |
 | **σ-fingerprint (this spec)** | **12–30 classes** | $\sim 10$ ms/minimizer, $O(n \log n)$ |
 | PH coarseness (OAT-7) | $\sim 5$ classes | $O(n^2)$ Vietoris-Rips |
-| Full irrep-aware σ (W7+ NQ-188) | exact, $\leq 30$ | depends on $|G_u|$ enumeration |
+| Full irrep-aware σ (W7+ NQ-188) | exact, $\leq 30$ | depends on $\lvert G_u \rvert$ enumeration |
 
 Expectation: σ-fingerprint sits between eigenvalue proxy and full irrep-aware σ-class, providing the **practical sweet spot** of strength + computability.
 
@@ -305,7 +305,7 @@ $$\Phi(u_{1, \mathrm{pitchfork}}^*) \sim_\Phi \Phi(u_{2, \mathrm{pitchfork}}^*).
 - `working/SF/sigma_lie_algebra_structure.md` §4 (σ-tuple as $\mathrm{Aut}(G)_{u^*}$-irrep decomposition).
 
 **Code references.**
-- `CODE/scc/diagnostics.py` — `DiagnosticVector` (Bind, Sep) at $O(|E|)$.
+- `CODE/scc/diagnostics.py` — `DiagnosticVector` (Bind, Sep) at $O(\lvert E \rvert)$.
 - `CODE/scc/energy.py` — `double_well_second_deriv`; `EnergyComputer.gradient` for FD-Hessian.
 - `CODE/scripts/sigma_class_count_R23.py` — eigenvalue-proxy precedent.
 - `CODE/scripts/sigma_locality_R23_cycle_torus.py` (Bridge B-2 numerical, this Wave 3) — reusable infrastructure for nodal-count, Hessian-at-uniform, stabilizer info.

@@ -128,7 +128,7 @@ Each part follows from canonical Theorem 4 + linear homogeneity of `Ẽ_bd`, wit
 
 Canonical SB7 (Cat A) defines:
 
-$$\Sigma_{T8} = \left\{(\alpha, \beta, c) : \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{|W''(c)|}\right\}$$
+$$\Sigma_{T8} = \left\{(\alpha, \beta, c) : \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{\lvert W''(c) \rvert}\right\}$$
 
 The ratio `β/α` is unchanged by `(α, β) → (sα, sβ)`:
 
@@ -164,7 +164,7 @@ $$\mathcal{E}_{bd}(u;\, s\alpha, s\beta) = s\alpha\,u^T L_G u + s\beta \sum_i W(
 
 Differentiation is a linear operator, so:
 
-$$H(u^*;\, s\alpha, s\beta) = \nabla^2 \mathcal{E}_{bd}(u^*;\, s\alpha, s\beta)\big|_{T\Sigma_m} = s \cdot \nabla^2 \mathcal{E}_{bd}(u^*;\, \alpha, \beta)\big|_{T\Sigma_m} = s \cdot H(u^*;\, \alpha, \beta).$$
+$$H(u^*;\, s\alpha, s\beta) = \nabla^2 \mathcal{E}_{bd}(u^*;\, s\alpha, s\beta)\big\vert_{T\Sigma_m} = s \cdot \nabla^2 \mathcal{E}_{bd}(u^*;\, \alpha, \beta)\big\vert_{T\Sigma_m} = s \cdot H(u^*;\, \alpha, \beta).$$
 
 Since `H(sα, sβ) = s·H(α,β)`, all eigenvalues satisfy `μ_k(sα, sβ) = s·μ_k(α, β)`. `□`
 
@@ -284,7 +284,7 @@ By parts (a) and (b): the T8 wall and boundary width are unchanged, so the non-u
 
 ### §7.2 T8 check at baseline
 
-$$\frac{\beta_0}{\alpha_0} = 5 \qquad \text{vs} \qquad \frac{4\lambda_2}{|W''(1/2)|} = 4 \times 0.152 \approx 0.608$$
+$$\frac{\beta_0}{\alpha_0} = 5 \qquad \text{vs} \qquad \frac{4\lambda_2}{\lvert W''(1/2) \rvert} = 4 \times 0.152 \approx 0.608$$
 
 Since `5 ≫ 0.608`, the baseline is well inside the formation regime (T8 condition satisfied with large margin).
 
@@ -328,7 +328,7 @@ This procedure is algorithmic and deterministic once `μ_0` is measured from the
 
 Rescaling `(α,β) → (sα, sβ)` scales both `|μ_well|` and `|μ_saddle|` by `s` (per part (d) Hessian scaling, established in §3 above). The Eyring-Kramers prefactor (synthesis §7.2 Identity 2a — see also file 12 §5 Identity 2 split):
 
-$$\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}}, \quad \omega_{\mathrm{well}} = \sqrt{|\mu_{\mathrm{well}}|}, \quad \omega_{\mathrm{saddle}} = \sqrt{|\mu_{\mathrm{saddle}}|}, \quad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}|}{|\mu_{\mathrm{saddle}}|}$$
+$$\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}}, \quad \omega_{\mathrm{well}} = \sqrt{|\mu_{\mathrm{well}}|}, \quad \omega_{\mathrm{saddle}} = \sqrt{|\mu_{\mathrm{saddle}}|}, \quad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}$$
 
 Under rescaling:
 - `ω_well → √s · ω_well` (since `|μ_well| → s|μ_well|`)

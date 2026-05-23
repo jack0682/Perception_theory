@@ -23,7 +23,7 @@ closes: S-C1 task
 
 **T-Temporal-Identity part (c) — Kernel independence:**
 
-> "Under (b) hypotheses and strengthened margin $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}$ with $\epsilon_\mathrm{kernel} = 2m_t\delta/\varepsilon_\mathrm{OT}$: $R_{t \to s}[M] = R_{t \to s}[M']$ for any two E1–E4-admissible plans with $\|c-c'\|_\infty \leq \delta$."
+> "Under (b) hypotheses and strengthened margin $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}$ with $\epsilon_\mathrm{kernel} = 2m_t\delta/\varepsilon_\mathrm{OT}$: $R_{t \to s}[M] = R_{t \to s}[M']$ for any two E1–E4-admissible plans with $\lVert c-c' \rVert_\infty \leq \delta$."
 
 Proof chain: Lemma 9 (plan stability) → Lemma 10 (component confinement) → Lemma 11 (kernel independence).
 
@@ -33,11 +33,11 @@ Proof chain: Lemma 9 (plan stability) → Lemma 10 (component confinement) → L
 
 ### 2.1 Lemma 9 — Plan stability
 
-**Statement:** $\|M^*(c) - M^*(c')\|_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ for $\|c-c'\|_\infty \leq \delta$.
+**Statement:** $\lVert M^*(c) - M^*(c') \rVert_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ for $\lVert c-c' \rVert_\infty \leq \delta$.
 
 **Status:** ✓ **Cat A** — proved by Theorem Partial-H-SINK (W7-FINAL, `partial_ot_stability.md`). Independent verification:
 
-The SCC canonical E1 transport uses one-sided Sinkhorn (row marginals fixed at $u_t$). For entropic OT with regularization $\varepsilon_\mathrm{OT}$, the dual potential Lipschitz bound (H-SINK-S2, Cat A) gives $|f(x) - f'(x)| \leq \delta$ for dual potentials $f, f'$ corresponding to $c, c'$. The transport plan satisfies $M^*(x,y) \propto u_t(x) \exp((f(x) - c(x,y))/\varepsilon_\mathrm{OT})$, giving TV bound $2m_t\delta/\varepsilon_\mathrm{OT}$. ✓
+The SCC canonical E1 transport uses one-sided Sinkhorn (row marginals fixed at $u_t$). For entropic OT with regularization $\varepsilon_\mathrm{OT}$, the dual potential Lipschitz bound (H-SINK-S2, Cat A) gives $\lvert f(x) - f'(x) \rvert \leq \delta$ for dual potentials $f, f'$ corresponding to $c, c'$. The transport plan satisfies $M^*(x,y) \propto u_t(x) \exp((f(x) - c(x,y))/\varepsilon_\mathrm{OT})$, giving TV bound $2m_t\delta/\varepsilon_\mathrm{OT}$. ✓
 
 ### 2.2 Lemma 10 — Component confinement
 
@@ -45,7 +45,7 @@ The SCC canonical E1 transport uses one-sided Sinkhorn (row marginals fixed at $
 
 **Status:** ✓ **Cat A** — follows directly from Lemma 9 by summing over $C_i^t \times C_j^s$:
 
-$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s}(M-M')(x,y)\right| \leq \|M-M'\|_1 \leq 2\|M-M'\|_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}} = \epsilon_\mathrm{kernel}.$$
+$$|\gamma_M - \gamma_{M'}| = \left|\sum_{x \in C_i^t, y \in C_j^s}(M-M')(x,y)\right| \leq \lVert M-M' \rVert_1 \leq 2\lVert M-M' \rVert_\mathrm{TV} \leq \frac{2m_t\delta}{\varepsilon_\mathrm{OT}} = \epsilon_\mathrm{kernel}.$$
 
 This is correct: summing absolute values of a matrix over a subset is bounded by $\ell_1$ norm, which is bounded by twice the total variation. ✓
 
@@ -118,17 +118,17 @@ $$\tilde S^0_{ij^*}[M'] - \tilde S^0_{ij}[M'] \geq (\tilde S^0_{ij^*}[M] - \epsi
 
 The score $S^0_{ij} = \lambda_m \gamma(C_i^t, C_j^s) - \lambda_c \sum_{x,y} c(x,y) M(x,y)$ has:
 - Transport term perturbation: $\lambda_m |\gamma_M - \gamma_{M'}| \leq \lambda_m \epsilon_\mathrm{kernel}$
-- Cost term perturbation (for $\|c - c'\|_\infty \leq \delta$):
-  $$\lambda_c |\sum c M - \sum c' M'| \leq \lambda_c \|c\|_\infty \|M-M'\|_1 + \lambda_c \|c-c'\|_\infty \cdot \gamma_{M'}(C_i^t, C_j^s)$$
+- Cost term perturbation (for $\lVert c - c' \rVert_\infty \leq \delta$):
+  $$\lambda_c |\sum c M - \sum c' M'| \leq \lambda_c \lVert c \rVert_\infty \lVert M-M' \rVert_1 + \lambda_c \lVert c-c' \rVert_\infty \cdot \gamma_{M'}(C_i^t, C_j^s)$$
   $$\leq \lambda_c \bar{c} \cdot 2\epsilon_\mathrm{kernel}/\lambda_m \cdot \lambda_m + \lambda_c \delta \cdot m_j$$
 
-where $\bar{c} = \|c\|_\infty$ and $m_j = \gamma_{M'}(C_i^t, C_j^s) \leq m_t$.
+where $\bar{c} = \lVert c \rVert_\infty$ and $m_j = \gamma_{M'}(C_i^t, C_j^s) \leq m_t$.
 
 At canonical parameters with normalized costs ($\lambda_c \bar{c} \ll \lambda_m$), the dominant term is the transport term. The score perturbation claim holds approximately when $\lambda_c \bar{c} + \lambda_c \delta \ll \lambda_m$.
 
 **Audit result:** The score perturbation claim is valid at canonical parameters under the assumption $\lambda_c(\bar{c} + \delta) \ll \lambda_m$. For strict rigor, the full perturbation bound should be stated explicitly. However, since part (c) is conditional on the margin condition (which is satisfied at canonical parameters), this does not affect the Cat A conditional status.
 
-**Recommendation:** Add a note to S-B3 §1.3 stating: "The score perturbation bound $\leq \epsilon_\mathrm{kernel}$ holds at canonical parameters under $\lambda_c(\|c\|_\infty + \delta) \ll \lambda_m$."
+**Recommendation:** Add a note to S-B3 §1.3 stating: "The score perturbation bound $\leq \epsilon_\mathrm{kernel}$ holds at canonical parameters under $\lambda_c(\lVert c \rVert_\infty + \delta) \ll \lambda_m$."
 
 ---
 

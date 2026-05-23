@@ -118,7 +118,7 @@ Phase 2 Opus + Sonnet agents 의 detailed proof attempts 결과:
 
 ### §2.4 P4 OP-HMORSE-LOCAL-A (Sharper Residual via σ Saturation)
 
-**Target**: $\|R_{\mathrm{cl}}\| \leq C \cdot \delta(u^*) \cdot \|r\|_2$ with $\delta = O(e^{-c\beta})$ on T8-supercritical regime.
+**Target**: $\lVert R_{\mathrm{cl}} \rVert \leq C \cdot \delta(u^*) \cdot \lVert r \rVert_2$ with $\delta = O(e^{-c\beta})$ on T8-supercritical regime.
 
 **Primary approach**: Active-set + σ saturation (E3 §A primary).
 
@@ -148,7 +148,7 @@ Phase 2 Opus + Sonnet agents 의 detailed proof attempts 결과:
 
 **9 conditions** (T-cond-1 ~ T-cond-9):
 1. T-cond-1: Continuity ($\delta-\epsilon$)
-2. T-cond-2: Boundedness ($\|T(I)\|_\infty \leq L_{\max}$)
+2. T-cond-2: Boundedness ($\lVert T(I) \rVert_\infty \leq L_{\max}$)
 3. T-cond-3: Spatial linearity (PSF convolution, Zernike)
 4. T-cond-4: Spectral projection (LMS, $\mathbf{M}_{\mathrm{LMS}} \in \mathbb{R}^{3 \times K}$)
 5. T-cond-5: Adaptive gain (log compression, Weber-Fechner)

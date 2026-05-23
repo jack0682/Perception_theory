@@ -71,13 +71,13 @@ $$\mathcal{E}^*_K(\mathcal{P}) := \min_{\tilde{u} \in \mathcal{B}_K(\mathcal{P})
 ### §3.2 Configurational entropy
 
 For each $K$, the **configurational entropy** $S(K)$ counts the equivalence classes of $K$-formation minimizers (modulo Aut(G) ⋊ S_K):
-$$S(K) := \log\big|\{\mathbf{u}^* : K_{\mathrm{act}}(\mathbf{u}^*) = K, \mathbf{u}^* \text{ is local minimum}\}/(\mathrm{Aut}(G) \wr S_K)\big|.$$
+$$S(K) := \log\big\vert\{\mathbf{u}^* : K_{\mathrm{act}}(\mathbf{u}^*) = K, \mathbf{u}^* \text{ is local minimum}\}/(\mathrm{Aut}(G) \wr S_K)\big\vert.$$
 
 For $K = 1$: typically $S(1) = O(1)$ — few inequivalent single-formation minimizers (e.g., uniform; F=1 ground state).
 
-For $K > 1$: $S(K)$ grows polynomially or logarithmically in $K$ (for a graph with $|X|$ vertices, $K$-formation configurations have $\sim O(|X|^K / K!)$ choices modulo symmetry).
+For $K > 1$: $S(K)$ grows polynomially or logarithmically in $K$ (for a graph with $\lvert X \rvert$ vertices, $K$-formation configurations have $\sim O(\lvert X \rvert^K / K!)$ choices modulo symmetry).
 
-Specifically: $S(K) \sim K \log(|X|/K) + O(1)$ for $K \ll |X|$ (combinatorial K-subset placements).
+Specifically: $S(K) \sim K \log(\lvert X \rvert/K) + O(1)$ for $K \ll \lvert X \rvert$ (combinatorial K-subset placements).
 
 ### §3.3 Free energy
 
@@ -125,7 +125,7 @@ $$T_c := \frac{\mathcal{E}^*_2 - \mathcal{E}^*_1}{S(2) - S(1)}.$$
 For $T < T_c$: $K^* = 1$.
 For $T > T_c$: $K^* \geq 2$.
 
-For SCC default parameters ($\beta = 4$, $\lambda_{\mathrm{rep}} = 0.1$ on $T^2_{20}$): $\mathcal{E}^*_2 - \mathcal{E}^*_1 \sim O(\lambda_{\mathrm{rep}} \cdot \mathrm{overlap}) \sim 0.01$ (small, perturbative); $S(2) - S(1) \sim \log |X| = \log 400 \approx 6$. Hence $T_c \sim 0.01/6 \approx 1.7 \times 10^{-3}$ — small thermal noise suffices to flip K=1 → K=2 preferred.
+For SCC default parameters ($\beta = 4$, $\lambda_{\mathrm{rep}} = 0.1$ on $T^2_{20}$): $\mathcal{E}^*_2 - \mathcal{E}^*_1 \sim O(\lambda_{\mathrm{rep}} \cdot \mathrm{overlap}) \sim 0.01$ (small, perturbative); $S(2) - S(1) \sim \log \lvert X \rvert = \log 400 \approx 6$. Hence $T_c \sim 0.01/6 \approx 1.7 \times 10^{-3}$ — small thermal noise suffices to flip K=1 → K=2 preferred.
 
 ---
 
@@ -161,8 +161,8 @@ Free-energy reconciliation: even if F=1 were a critical point, finite-$T$ free-e
 
 Bayesian Information Criterion: $\mathrm{BIC} = -2 \log L + k \log n$ where $k$ is parameter count, $n$ is sample size, $L$ is likelihood.
 
-For K-formation model: $k = K \cdot d_j$ (parameters per formation) and $n = |X|$ (graph vertices). Hence BIC contribution:
-$$\Delta_{\mathrm{BIC}}(K) = K \cdot d_j \cdot \log |X|.$$
+For K-formation model: $k = K \cdot d_j$ (parameters per formation) and $n = \lvert X \rvert$ (graph vertices). Hence BIC contribution:
+$$\Delta_{\mathrm{BIC}}(K) = K \cdot d_j \cdot \log \lvert X \rvert.$$
 
 ### §6.2 Mapping to free energy
 
@@ -176,7 +176,7 @@ This penalty form *opposes* the entropy form (entropy favors high K, BIC penaliz
 
 ### §6.3 Combined Helmholtz + BIC form
 
-A more refined model: $F(K; T) = \mathcal{E}^*_K - T S_{\mathrm{conf}}(K) + (T_0 / 2) \cdot K \log |X|$ where $T_0$ encodes the BIC complexity scale (independent of thermal $T$).
+A more refined model: $F(K; T) = \mathcal{E}^*_K - T S_{\mathrm{conf}}(K) + (T_0 / 2) \cdot K \log \lvert X \rvert$ where $T_0$ encodes the BIC complexity scale (independent of thermal $T$).
 
 For $T \gg T_0$: entropy dominates, $K^* \to K_{\mathrm{field}}$.
 For $T \ll T_0$: BIC dominates, $K^* \to 1$.

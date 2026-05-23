@@ -298,7 +298,7 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 |---|---|---|
 | `observer_moduli/vp1_p_resolution_audit.md` | VP-1 | Main audit document; Prop R1 PROVED; OP-OMS-009 RESOLVED-NEGATIVE |
 | `observer_moduli/vp1_p_resolution_audit_log.md` | VP-1 | Execution log; design rationale; interpretation decisions |
-| `observer_moduli/vp1_counterexamples.md` | VP-1 | 4 documented CEs; CE-1 tightest ($\|d\|=0.071$, $K_{\mathrm{core}}$ 2 vs 1) |
+| `observer_moduli/vp1_counterexamples.md` | VP-1 | 4 documented CEs; CE-1 tightest ($\lVert d \rVert=0.071$, $K_{\mathrm{core}}$ 2 vs 1) |
 | `observer_moduli/vp1_results.md` | VP-1 | Final classification; updated Prop + OP status; next steps |
 
 **Experiment data:** `CODE/experiments/exp86_vp1_p_resolution_audit.py`, `CODE/experiments/results/observer_moduli/vp1_pairs.json`, `vp1_summary.md`

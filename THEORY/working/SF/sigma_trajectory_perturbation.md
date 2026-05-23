@@ -20,18 +20,18 @@
 
 ## §1. Setup — Small-Perturbation Regime
 
-**Parameter space.** Fix a finite connected graph $G = (X, E)$ with $|X| = n$, and a base parameter triple $(\alpha_0, \beta_0, c_0)$ with:
+**Parameter space.** Fix a finite connected graph $G = (X, E)$ with $\lvert X \rvert = n$, and a base parameter triple $(\alpha_0, \beta_0, c_0)$ with:
 - $c_0 \in \mathcal{S} := ((3-\sqrt{3})/6,\, (3+\sqrt{3})/6)$ (spinodal interior; $W''(c_0) < 0$; canonical §3),
-- $\beta_0 > \beta_{\mathrm{crit}}^{(2)} = 4\alpha_0 \lambda_2^{\mathrm{Lap}}/|W''(c_0)|$ (post-bifurcation, non-uniform minimizer regime),
+- $\beta_0 > \beta_{\mathrm{crit}}^{(2)} = 4\alpha_0 \lambda_2^{\mathrm{Lap}}/\lvert W''(c_0) \rvert$ (post-bifurcation, non-uniform minimizer regime),
 - $u_0^* \in \Sigma_m^\circ$ a Morse-0 non-uniform critical point of $\mathcal{E}(\cdot;\, \alpha_0, \beta_0, c_0)$.
 
 **Small-perturbation regime.** A perturbation $\delta\mathbf{p} = (\delta\alpha, \delta\beta, \delta c)$ is *admissible* if:
 1. $c_0 + \delta c$ remains in spinodal interior $\mathcal{S}$;
 2. $\beta_0 + \delta\beta$ does not cross any bifurcation critical value $\beta_{\mathrm{crit}}^{(k)}$ for the family $u^*(\mathbf{p})$;
-3. $\|\delta\mathbf{p}\|$ is small enough for the implicit function theorem (IFT) to apply at $u_0^*$.
+3. $\lVert \delta\mathbf{p} \rVert$ is small enough for the implicit function theorem (IFT) to apply at $u_0^*$.
 
 **IFT smooth family.** Under admissible $\delta\mathbf{p}$, the critical-point equation $\nabla_u \mathcal{E}(u^*; \mathbf{p}) = \mu(\mathbf{p})\,\mathbf{1}$ (Lagrange stationarity on $\Sigma_m$) is a smooth equation in $(u^*, \mathbf{p})$. At a Morse-0 minimizer, the constrained Hessian $H(u_0^*;\mathbf{p}_0)$ restricted to $\mathbf{1}^\perp$ is positive definite (all eigenvalues $> 0$). By IFT applied to $F(u, \mathbf{p}) := \nabla_u \mathcal{E}(u;\mathbf{p}) - \mu\,\mathbf{1} = 0$ on $\mathbf{1}^\perp$, there exists a neighborhood $\mathcal{U}(\mathbf{p}_0)$ and a smooth map $\mathbf{p} \mapsto u^*(\mathbf{p})$ such that:
-$$u^*(\mathbf{p}_0 + \delta\mathbf{p}) = u_0^* + J_\mathbf{p}\,\delta\mathbf{p} + O(\|\delta\mathbf{p}\|^2),$$
+$$u^*(\mathbf{p}_0 + \delta\mathbf{p}) = u_0^* + J_\mathbf{p}\,\delta\mathbf{p} + O(\lVert \delta\mathbf{p} \rVert^2),$$
 where $J_\mathbf{p} = -[H(u_0^*)]^{-1} \partial_\mathbf{p}(\nabla_u \mathcal{E})$ is the IFT Jacobian. **Cat A for the IFT existence** (standard Banach IFT on $\mathbb{R}^n$; positivity of $H$ guaranteed by Morse-0 hypothesis).
 
 **Bifurcation surface avoidance.** The condition "no bifurcation crossing" in item (2) above is the key non-degeneracy assumption. The set of bifurcation surfaces in $(\alpha, \beta, c)$-space is catalogued in §3 and §5. Outside this set, the σ-tuple trajectory is smooth.
@@ -79,7 +79,7 @@ There are exactly four types of events at which the σ-tuple has a discontinuity
 
 **Type (i): Bifurcation events** ($\beta$ crosses $\beta_{\mathrm{crit}}^{(k)}$ for some $k$).
 
-At $\beta = \beta_{\mathrm{crit}}^{(k)} = 4\alpha \lambda_k^{\mathrm{Lap}}/|W''(c)|$, the $k$-th Laplacian eigenmode becomes a soft direction; a supercritical pitchfork bifurcation (T-Birth-Parametric, Cat A) creates two new Morse-0 minimizers on the Fiedler subspace $V_k$. The existing minimizer $u_0^*$ changes continuously but the σ-tuple acquires new low-eigenvalue entries as the new soft mode's eigenvalue descends to zero. Specifically: $\mathcal{F}$ increases (new peak born), new low-$\lambda$ entry appended to the $\sigma$-sequence, and $K$ increases. **Type (i) events occur on the codimension-1 surface** $\beta = \beta_{\mathrm{crit}}^{(k)}$ in $(\alpha, \beta, c)$-space.
+At $\beta = \beta_{\mathrm{crit}}^{(k)} = 4\alpha \lambda_k^{\mathrm{Lap}}/\lvert W''(c) \rvert$, the $k$-th Laplacian eigenmode becomes a soft direction; a supercritical pitchfork bifurcation (T-Birth-Parametric, Cat A) creates two new Morse-0 minimizers on the Fiedler subspace $V_k$. The existing minimizer $u_0^*$ changes continuously but the σ-tuple acquires new low-eigenvalue entries as the new soft mode's eigenvalue descends to zero. Specifically: $\mathcal{F}$ increases (new peak born), new low-$\lambda$ entry appended to the $\sigma$-sequence, and $K$ increases. **Type (i) events occur on the codimension-1 surface** $\beta = \beta_{\mathrm{crit}}^{(k)}$ in $(\alpha, \beta, c)$-space.
 
 **Type (ii): Eigenvalue crossings** at fixed $\beta$ (varying $\alpha$ or $c$).
 
@@ -128,7 +128,7 @@ When an energy crossing occurs between two minimizers on distinct $\mathrm{Aut}(
 
 **Type (i) surfaces** — $\beta_{\mathrm{crit}}^{(k)}$ hypersurfaces in $(\beta, c)$-plane (fixing $\alpha = 1$):
 
-$$\mathcal{B}_i^{(k)} = \left\{(\beta, c) : \beta = \frac{4\lambda_k^{\mathrm{Lap}}}{|W''(c)|}\right\}, \quad k = 2, 3, 4, \ldots$$
+$$\mathcal{B}_i^{(k)} = \left\{(\beta, c) : \beta = \frac{4\lambda_k^{\mathrm{Lap}}}{\lvert W''(c) \rvert}\right\}, \quad k = 2, 3, 4, \ldots$$
 
 For $D_4$ free-BC $L \times L$ grid, the Laplacian eigenvalues are $\lambda_{pq}^{\mathrm{Lap}} = 4\sin^2(\pi p/(2L)) + 4\sin^2(\pi q/(2L))$ for $(p, q) \in \{0,\ldots,L-1\}^2$ (unnormalized, $p+q > 0$). The Fiedler value is $\lambda_2 = \lambda_{10} = 4\sin^2(\pi/(2L))$.
 
@@ -136,7 +136,7 @@ For $D_4$ free-BC $L \times L$ grid, the Laplacian eigenvalues are $\lambda_{pq}
 
 By T-σ-Theorem-4 and NQ-187 (sigma_theorem4_higher_order.md §4.4), the eigenvalue split between the Fiedler-doublet modes is:
 $$\lambda_1(\mathbf{p}) - \lambda_0(\mathbf{p}) = c_4(\alpha, c)\,\epsilon^2 + O(\epsilon^3), \quad \epsilon = \beta - \beta_{\mathrm{crit}}^{(2)},$$
-where $c_4 = (B_4 - 12 B_3)|W''(c)|^2/(8A_1^2)$ depends on $\alpha, c$ through the sextic-coefficient slaving sums. The eigenvalue-crossing surface $\mathcal{B}_{ii}^{(12)}$ is thus $\epsilon = 0$ (the bifurcation surface itself) with a leading-order tangency — the crossing is approached as $O(\epsilon^2)$ splits open, not as a transverse crossing. This means the eigenvalue-crossing Type (ii) event at the first pitchfork is geometrically coincident with the Type (i) bifurcation surface, not an independent surface. **NQ-244-a (open):** are all Type (ii) surfaces on $D_4$ free-BC either coincident with Type (i) surfaces or isolated from them?
+where $c_4 = (B_4 - 12 B_3)\lvert W''(c) \rvert^2/(8A_1^2)$ depends on $\alpha, c$ through the sextic-coefficient slaving sums. The eigenvalue-crossing surface $\mathcal{B}_{ii}^{(12)}$ is thus $\epsilon = 0$ (the bifurcation surface itself) with a leading-order tangency — the crossing is approached as $O(\epsilon^2)$ splits open, not as a transverse crossing. This means the eigenvalue-crossing Type (ii) event at the first pitchfork is geometrically coincident with the Type (i) bifurcation surface, not an independent surface. **NQ-244-a (open):** are all Type (ii) surfaces on $D_4$ free-BC either coincident with Type (i) surfaces or isolated from them?
 
 **σ-class count per stratum.** The parameter space $(\beta, c) \in (\beta_{\mathrm{crit}}^{(2)}, \infty) \times \mathcal{S}$ is partitioned into strata by $\mathcal{B}(G)$. Per BC-188-1 (NQ-188 sigma_uniqueness_theorem.md §6), the σ-class count is conjectured constant within each $\mathcal{F}$-fixed stratum. The NQ-244 contribution: within each stratum, the σ-tuple of the tracked minimizer $u^*(\mathbf{p})$ is exactly constant (not just σ-class count, but the full tuple).
 

@@ -78,7 +78,7 @@ coc_enforced: yes
 Canonical L-HMORSE-LOCAL Cat B (CV-1.16) provides
 $$\mu_{\min}\bigl(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}\bigr) \;\geq\; c_{\mathrm{HML}}\bigl(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \beta, a_{\mathrm{cl}}, c^*, d_{\min}/d_{\max}\bigr) > 0,$$
 with explicit but *coarse* lower bound (canonical.md:1953-1956). The Cat A path (OP-HMORSE-LOCAL-A) requires:
-- *(Path A)* sharper residual-correction $\|R_{\mathrm{cl}}\|$ bound (via Schur complement structure on 3-block decomposition).
+- *(Path A)* sharper residual-correction $\lVert R_{\mathrm{cl}} \rVert$ bound (via Schur complement structure on 3-block decomposition).
 - *(Path B)* explicit verification of (C2′) "active set well-defined" against thermal smearing.
 
 These two paths are the two Cat B targets of this file:
@@ -116,9 +116,9 @@ Following 03_D_L_commutation §1-§4 (bulk/active/exterior 3-block decomposition
 
 Let $u^* \in \Sigma_m$ be an H-Morse-Local critical point satisfying D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5). Partition the vertex set $X = B \sqcup A \sqcup E$:
 
-- $B$ = **bulk** sites: $u^*_i \approx 1$ (saturated-interior; $|W''(u^*_i)| = W''(1) = 2 > 0$).
+- $B$ = **bulk** sites: $u^*_i \approx 1$ (saturated-interior; $\lvert W''(u^*_i) \rvert = W''(1) = 2 > 0$).
 - $A$ = **active** sites: $u^*_i \in (0, 1)$ non-saturated (boundary band; $W''(u^*_i) \in [-1, 2]$ depending on saturation; spinodal interior gives $W''(u^*_i) = -1$ at $u^*_i = c^* = 1/2$).
-- $E$ = **exterior** sites: $u^*_i \approx 0$ (saturated-exterior; $|W''(u^*_i)| = W''(0) = 2 > 0$).
+- $E$ = **exterior** sites: $u^*_i \approx 0$ (saturated-exterior; $\lvert W''(u^*_i) \rvert = W''(0) = 2 > 0$).
 
 The active-set restriction (C2′) sets $A^* = B \cup E$ (corner-saturated) and $A$ = free interior. The free tangent subspace $T_{u^*}^{\mathrm{free}}$ restricts $v$ to $v|_{A^*} = 0$, i.e., $v$ supported on $A$ only. **However**, for the Schur complement analysis, we work on the full Hessian $H_{\mathcal{E}}(u^*) \in \mathbb{R}^{n \times n}$ pre-restriction; the active-set restriction is recovered post-Schur via the effective $H_{\text{eff}}^{AA}$ block.
 
@@ -277,14 +277,14 @@ $$\boxed{\;\text{Sc}^{(2)} \;=\; \frac{\mu_{\text{bulk}}}{\mu_{\text{active}}} \
 *Conditions.*
 - *(H1)* D-HMORSE-LOCAL (C1)(C2′)(C3) — well-defined 3-block bulk/active/exterior structure with $H_{BE} \approx 0$ (canonical L-HMORSE-LOCAL hypothesis; canonical.md:1934-1944).
 - *(H2)* $H_{BB}$, $H_{EE}$ PSD strict (saturated bulk and exterior at $W''(1) = W''(0) = 2 > 0$).
-- *(H3)* Canonical phase-separated regime $\beta/\alpha > 4\lambda_2(L_G)/|W''(c^*)|$ (T8-Core supercritical, canonical SB7 Cat A).
+- *(H3)* Canonical phase-separated regime $\beta/\alpha > 4\lambda_2(L_G)/\lvert W''(c^*) \rvert$ (T8-Core supercritical, canonical SB7 Cat A).
 - *(H4)* $b_D = 0$ analyticity (CN4 canonical commitment).
-- *(H5)* Active set $A$ has bounded boundary-edge degree: $|\partial A \to B|, |\partial A \to E| \leq C \cdot |A| \cdot d_{\max}$ for an explicit constant $C \leq 1$ (graph-structural; holds on finite grids/tori).
+- *(H5)* Active set $A$ has bounded boundary-edge degree: $|\partial A \to B|, |\partial A \to E| \leq C \cdot \lvert A \rvert \cdot d_{\max}$ for an explicit constant $C \leq 1$ (graph-structural; holds on finite grids/tori).
 
 *Statement.*
 $$\text{Sc}^{(2)} \;=\; \frac{\mu_{\text{bulk}}}{\mu_{\text{active}}} \;\geq\; \frac{1}{1 + 4\alpha d_{\max}/\beta} \cdot \bigl(1 - O(\delta_{\text{sat}}/\beta)\bigr)$$
 
-where $\delta_{\text{sat}} = O(|\sigma''(z(u^*))| \cdot a_{\mathrm{cl}}^2 \|M\|^2)$ is exponentially small at saturated minimizers (canonical L-HMORSE-DECOMP §1988 residual bound).
+where $\delta_{\text{sat}} = O(|\sigma''(z(u^*))| \cdot a_{\mathrm{cl}}^2 \lVert M \rVert^2)$ is exponentially small at saturated minimizers (canonical L-HMORSE-DECOMP §1988 residual bound).
 
 *Corollary 1 (deep-formation regime).* If $\beta/\alpha > 4 d_{\max}$ (deep T8-supercritical), then
 $$\text{Sc}^{(2)} \;\geq\; \frac{1}{2} \cdot (1 - O(\delta_{\text{sat}}/\beta))$$
@@ -407,7 +407,7 @@ inverse_causation_check:
 ### §6.1 (C2′) "active set well-defined" — implicit content
 
 Canonical D-HMORSE-LOCAL (C2′) states (canonical.md:1939):
-> $A^* = \{x : u^*(x) \in \{0,1\}\}$ has explicit complement, and $T_{u^*}^{\mathrm{free}}$ has positive dimension ($\dim T_{u^*}^{\mathrm{free}} = n - |A^*| - 1$).
+> $A^* = \{x : u^*(x) \in \{0,1\}\}$ has explicit complement, and $T_{u^*}^{\mathrm{free}}$ has positive dimension ($\dim T_{u^*}^{\mathrm{free}} = n - \lvert A^* \rvert - 1$).
 
 This is a *purely combinatorial* definition at the deterministic minimizer $u^*$. However, under the stochastic dynamics T-PF-A1-SDE Cat A (canonical.md:1668), the *typical* configuration sampled from the stationary Gibbs measure $\pi_{T_*}$ fluctuates around $u^*$ with characteristic width $\ell_{\text{therm}}$. For (C2′) to be *non-vacuously* satisfied in the stochastic-mean sense, the fluctuation width at active-band sites must not blur active vs saturated.
 
@@ -563,7 +563,7 @@ inverse_causation_check:
 ### §8.1 Setup
 
 - Graph: $G = C_{16} \times C_{16}$ (2D torus, $n = 256$ vertices, $d = 4$ regular)
-- Canonical parameters: $\alpha = 1$, $\beta = 5$ (canonical T8-supercritical at $\beta/\alpha = 5 > 4\lambda_2/|W''(c)| = 4 \cdot 0.152/1 \approx 0.61$ for torus Fiedler $\lambda_2 \approx 0.152$ on 16×16 torus)
+- Canonical parameters: $\alpha = 1$, $\beta = 5$ (canonical T8-supercritical at $\beta/\alpha = 5 > 4\lambda_2/\lvert W''(c) \rvert = 4 \cdot 0.152/1 \approx 0.61$ for torus Fiedler $\lambda_2 \approx 0.152$ on 16×16 torus)
 - Formation at $c^* = 1/2$ ($u^*$ = single connected formation occupying half the torus by mass conservation $m = n/2$)
 - Effective temperature: $T_* = 0.1$ (working P-F-A1 Package II default)
 

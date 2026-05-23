@@ -58,7 +58,7 @@ Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
 
 | 질문 | MOC | 수학적 구조 | 현재 상태 |
 | --- | --- | --- | --- |
-| Q1. 경계는 언제 출현하는가? | [[MOC_Q1_boundary_T8]] | T8 위상전이 $\beta/\alpha > 4\lambda_2/|W''(c)|$ | 대부분 Cat A |
+| Q1. 경계는 언제 출현하는가? | [[MOC_Q1_boundary_T8]] | T8 위상전이 $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ | 대부분 Cat A |
 | Q2. 여럿이 공존할 수 있는가? | [[MOC_Q2_multi_formation]] | Multi-formation, Count bridge (T-L1-F) | Cat A (조건부) |
 | Q3. 어떻게 변하는가? | [[MOC_Q3_stochastic_dynamics]] | Langevin / Gibbs / Lions-Sznitman | Package I Cat A |
 | Q4. 몇으로 안정화되는가? | [[MOC_Q4_K_selection]] | K-selection (EQ / OBS / DYN) | Cat B |

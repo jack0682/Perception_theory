@@ -64,7 +64,7 @@ constraint_compliance:
 
 ## §1 — Setup and Notation
 
-Let $G = (V, E)$ be a finite connected graph with $|V| = n$. Let $m \in (0, n)$ be a fixed mass parameter, and define $c := m/n$. Assume $c \in (s_-, s_+)$ where $s_\pm := (3 \mp \sqrt{3})/6$ are the spinodal boundaries (so that $W''(c) < 0$, $|W''(c)| > 0$).
+Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$. Let $m \in (0, n)$ be a fixed mass parameter, and define $c := m/n$. Assume $c \in (s_-, s_+)$ where $s_\pm := (3 \mp \sqrt{3})/6$ are the spinodal boundaries (so that $W''(c) < 0$, $\lvert W''(c) \rvert > 0$).
 
 **State space**: $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$ (canonical T-PF-A1-AR, L1953, Cat A).
 
@@ -106,7 +106,7 @@ $v = \frac{d}{d\theta}(g_\theta \cdot u_\star) |_{\theta=0}$ for some non-trivia
 **Lemma L-UNI-ZMODE (Uniform Zero-Mode Dichotomy).** Under §1 setup, every $v \in \ker H(u^*)|_{\mathbf{1}^\perp}$ with $v \neq 0$ is of Type A or Type B. **Type C zero modes are absent at $u^* = c\mathbf{1}$.**
 
 Equivalently:
-$$\boxed{\ker H(u^*)\big|_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G)}$$
+$$\boxed{\ker H(u^*)\big\vert_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G)}$$
 where $K^* = \{k \in \{2, \ldots, n\} : \mu_k = 0 \text{ at current } (\alpha, \beta, c)\}$ is the *critical mode index set*. Goldstone/orbit-tangent contributions are zero.
 
 ---
@@ -122,7 +122,7 @@ $$\mathcal{O}_{\mathrm{Aut}(G)}(u^*) = \{u^*\}.$$
 The tangent space to this orbit at $u^*$ is $\{0\}$.
 
 Furthermore, for *any* continuous symmetry group $\mathcal{G}$ acting on $\Sigma_m$ by permutation-of-coordinates extension (which is the only natural lift of $\mathrm{Aut}(G)$), the fixed-point property $\sigma \cdot u^* = u^*$ for all $\sigma$ implies that any 1-parameter family $\{g_\theta\}$ acting trivially on the uniform value $c$ generates no non-zero tangent at $u^*$. Specifically:
-$$\frac{d}{d\theta}\bigl(g_\theta \cdot u^*\bigr)\bigg|_{\theta=0} = 0 \quad \forall \{g_\theta\} \text{ acting on coordinates by permutation extension.}$$
+$$\frac{d}{d\theta}\bigl(g_\theta \cdot u^*\bigr)\bigg\vert_{\theta=0} = 0 \quad \forall \{g_\theta\} \text{ acting on coordinates by permutation extension.}$$
 
 ### Step 2 — Type C exclusion at uniform
 
@@ -155,10 +155,10 @@ Therefore $H(u^*)$ acts as a *scalar* on each $V_{\lambda_k}$, say $\hat\mu_k(\a
 For the canonical Theorem-4-dominant regime (i.e., when $\lambda_{cl}, \lambda_{sep}, \lambda_{tr}$ are bounded and $\mu_k$ dominates the scalar action), $\hat\mu_k = 0 \Leftrightarrow \mu_k = 0$, and $K^* = \{k : \mu_k = 0\}$.
 
 Thus:
-$$\ker H(u^*)\big|_{V_{\lambda_k}} = \begin{cases} V_{\lambda_k} & \text{if } \hat\mu_k = 0 \text{ (equivalently } \mu_k = 0 \text{ in Theorem-4-dominant regime)} \\ \{0\} & \text{otherwise} \end{cases}$$
+$$\ker H(u^*)\big\vert_{V_{\lambda_k}} = \begin{cases} V_{\lambda_k} & \text{if } \hat\mu_k = 0 \text{ (equivalently } \mu_k = 0 \text{ in Theorem-4-dominant regime)} \\ \{0\} & \text{otherwise} \end{cases}$$
 
 Summing over $k \in K^*$:
-$$\ker H(u^*)\big|_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G).$$
+$$\ker H(u^*)\big\vert_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G).$$
 
 ### Step 5 — Type A/B classification
 

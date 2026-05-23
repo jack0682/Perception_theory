@@ -223,7 +223,7 @@ where `ν` is the outward unit normal and `f: Γ → ℝ` is the normal variatio
 **Second variation formula** (Allard 1972, *Ann Math* **95**:417; Simon 1968; Reilly 1977, *Indiana Univ Math J* **26**:459):
 
 $$
-\boxed{\delta^2 \mathcal{F}_0(\Gamma)[f, f] = \sigma \int_\Gamma \left( |\nabla_\Gamma f|^2 - |A|^2 f^2 \right) d\mathcal{H}^{d-1},}
+\boxed{\delta^2 \mathcal{F}_0(\Gamma)[f, f] = \sigma \int_\Gamma \left( |\nabla_\Gamma f|^2 - \lvert A \rvert^2 f^2 \right) d\mathcal{H}^{d-1},}
 $$
 
 where `∇_Γ` is the surface gradient (intrinsic gradient on `Γ`) and `|A|²` is the squared norm of the second fundamental form (sum of squared principal curvatures).
@@ -233,7 +233,7 @@ where `∇_Γ` is the surface gradient (intrinsic gradient on `Γ`) and `|A|²` 
 The *Jacobi operator* `J_Γ` is the negative of the symmetric bilinear form's defining operator:
 
 $$
-\boxed{J_\Gamma = -\Delta_\Gamma - |A|^2,}
+\boxed{J_\Gamma = -\Delta_\Gamma - \lvert A \rvert^2,}
 $$
 
 where `Δ_Γ` is the Laplace-Beltrami operator on `Γ`. Equivalently:
@@ -431,7 +431,7 @@ Each is a substantive proof obligation, justifying Cat B status.
 **van Gennip & Bertozzi 2012** (*SIAM J. Imaging Sci.* **5**:1115). Theorem 4.1: for sequence of graphs `{G_n}` approximating continuum domain `Ω` with mesh size `h_n → 0`, the discrete graph TV functional Γ-converges (after rescaling) to the continuum TV functional:
 
 $$
-\mathrm{TV}_{G_n}(u) = \sum_{(i,j) \in E_n} w_{ij} |u_i - u_j| \quad \xrightarrow[n \to \infty]{\Gamma} \quad \mathrm{TV}_\Omega(u) = \int_\Omega |\nabla u|\, dx.
+\mathrm{TV}_{G_n}(u) = \sum_{(i,j) \in E_n} w_{ij} \lvert u_i - u_j \rvert \quad \xrightarrow[n \to \infty]{\Gamma} \quad \mathrm{TV}_\Omega(u) = \int_\Omega |\nabla u|\, dx.
 $$
 
 For the **squared TV / Dirichlet form** (relevant to SCC `α u^T L_G u`):

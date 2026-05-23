@@ -94,7 +94,7 @@ This memo formalizes the latent potential as the index space $\mathcal A$ and th
 ### 3.1 Three layers (preserved)
 
 $$
-\text{Layer I: } \quad \Sigma_m(G_t) = \Big\{ u : X_t \to [0, 1] \;\Big|\; \sum_{x \in X_t} u(x) = m \Big\}.
+\text{Layer I: } \quad \Sigma_m(G_t) = \Big\{ u : X_t \to [0, 1] \;\Big\vert\; \sum_{x \in X_t} u(x) = m \Big\}.
 $$
 
 $$
@@ -120,7 +120,7 @@ The latent index space $\mathcal A$ and reservoir state $\rho$ form a candidate 
 The reservoir ambient is denoted
 
 $$
-\mathcal R_M(G_t, \mathcal A) := \Big\{ \rho : \mathcal A \times X_t \to [0, 1] \;\Big|\; (\text{constraints, §4 below}) \Big\}.
+\mathcal R_M(G_t, \mathcal A) := \Big\{ \rho : \mathcal A \times X_t \to [0, 1] \;\Big\vert\; (\text{constraints, §4 below}) \Big\}.
 $$
 
 **Layer II∞ is not a fourth canonical layer.** It is a non-canonical extension that makes precise *where Layer II's $K_{\mathrm{field}}$-slot structure comes from*.
@@ -280,7 +280,7 @@ The truncation map $\pi_K : \rho \mapsto \rho_K$ is realized e.g. by Wasserstein
 
 ### 6.1 Index space
 
-$\mathcal A = \mathbb N$ (or $\{0, 1, \ldots, |X_t| - 1\}$ for the finite-graph case) — a *spectral parameter set*. Each index $\alpha$ corresponds to an eigenmode of an operator on $G_t$ (graph Laplacian $L_t$, SCC linearized Hessian at a reference state, or similar).
+$\mathcal A = \mathbb N$ (or $\{ 0, 1, \ldots, \mid X_t \mid - 1 \}$ for the finite-graph case) — a *spectral parameter set*. Each index $\alpha$ corresponds to an eigenmode of an operator on $G_t$ (graph Laplacian $L_t$, SCC linearized Hessian at a reference state, or similar).
 
 Let $\{\varphi_n : X_t \to \mathbb R\}_{n \in \mathcal A}$ be the corresponding orthonormal eigenmodes ordered by increasing eigenvalue $\lambda_n$.
 
@@ -316,7 +316,7 @@ If $\bigcup_j A_j = \mathcal A$ then $U$ is the full reconstruction; if a strict
 
 Two truncation knobs:
 
-- **Mode-set truncation:** keep only top-$N$ modes by amplitude $|a_n|$ or by spectral-weight $|a_n|^2$. Discards small-amplitude modes.
+- **Mode-set truncation:** keep only top-$N$ modes by amplitude $\lvert a_n \rvert$ or by spectral-weight $\lvert a_n \rvert^2$. Discards small-amplitude modes.
 - **Packet-set truncation:** group retained modes into $K_{\mathrm{field}}$ packets via a clustering on $\mathcal A$ (e.g. by spectral proximity, by spatial localization of $\varphi_n$, or by frequency band).
 
 A specific finite truncation is parameterized by $(N, K_{\mathrm{field}})$ with $K_{\mathrm{field}} \le N$.

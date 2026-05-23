@@ -79,7 +79,7 @@ $b_x - d_x > \rho_{\mathrm{bd}}$ around $\theta$, $x \in B_t \Leftrightarrow x \
 special case where $\rho_{\mathrm{bd}} \to 0$.
 
 **Persistent boundary stability:** $B_t(\tilde{u})$ is stable under perturbations
-$\tilde{u} \to \tilde{u} + \delta$ if $\|\delta\|_\infty < \rho_{\mathrm{bd}}/2$
+$\tilde{u} \to \tilde{u} + \delta$ if $\lVert \delta \rVert_\infty < \rho_{\mathrm{bd}}/2$
 (persistence stability theorem for barcodes — Chazal et al.).
 
 **Relationship to §5.3 Boundary Band:** The canonical §5.3 boundary band is defined as nodes
@@ -162,7 +162,7 @@ stable than a raw image edge under photometric perturbation.
 
 4. **Compare boundaries:**
    - SCC boundary: $|\partial_{\mathrm{SCC}}(\tilde{u}^*_\sigma) \triangle \partial_{\mathrm{SCC}}(\tilde{u}^*)|$ (symmetric difference)
-   - Raw edge: $\|\,|\nabla_G \tilde{u}^*_\sigma| - |\nabla_G \tilde{u}^*|\,\|_1$
+   - Raw edge: $\lVert \,|\nabla_G \tilde{u}^*_\sigma| - |\nabla_G \tilde{u}^*|\, \rVert_1$
 
 5. **Metric:** Boundary stability ratio = $\Delta_{\mathrm{raw}} / \Delta_{\mathrm{SCC}}$.
    If > 1: SCC boundary more stable than raw edge.
@@ -231,7 +231,7 @@ definition.
 
 **Promotion criteria to Cat B:**
 1. Formal proof that the persistent gradient ridge $B_t(\tilde{u})$ (§2b) is stable under
-   perturbations $\|\delta\|_\infty < \rho_{\mathrm{bd}}/2$ (follows from barcode stability;
+   perturbations $\lVert \delta \rVert_\infty < \rho_{\mathrm{bd}}/2$ (follows from barcode stability;
    main gap: formalizing $\rho_{\mathrm{bd}}$ in terms of $\mathcal{E}_{\mathrm{SCC}}$ parameters).
 2. Equivalence theorem: §5.3 boundary band $= B_t(\tilde{u})$ in the phase-separated regime
    ($\beta$ large, $\tilde{u}^* \approx \{0,1\}$-valued).
@@ -267,8 +267,8 @@ definition.
 3. The energy minimizer profile (the exact interface shape depends on boundary conditions)
 
 *Possible routes:*
-- **Route A (Explicit profile computation):** For a regular grid graph, compute the 1D Allen-Cahn profile analytically: $u^*(x) = \tfrac{1}{2}(1 + \tanh((x - x_0)/\xi))$ where $\xi = (2\alpha/\beta|W''(c)|)^{1/2}$. The gradient at the interface is $|\nabla u^*| \approx (2\alpha/\beta)^{1/2}/(2\xi)$ ... Wait, let me think more carefully. The interface profile has $|du/dx| \approx 1/(2\xi)$. On a grid: $|\nabla_G u^*| \approx 1/(2\xi) = (\beta|W''(c)|/(8\alpha))^{1/2}$. This determines both the ridge height (determines $\rho_{\mathrm{bd}}$ compatibility) and the ridge width (determines $C$). Specifically, the region where $|\nabla_G u^*| > \rho_{\mathrm{bd}}$ has width $\approx \xi \cdot 2\,\mathrm{artanh}(\sqrt{1 - 4\rho_{\mathrm{bd}}^2\xi^2})$ — giving the effective $C$. For $\rho_{\mathrm{bd}} \ll 1/\xi$: $C \approx 2$.
-- **Route B (Barcode stability quantification):** Use the Chazal et al. stability theorem: $d_B(\mathrm{Bars}(f), \mathrm{Bars}(g)) \leq \|f - g\|_\infty$ for $H_0$ barcodes. Apply to $f = |\nabla_G u^*|$ and $g = |\nabla_G u^*| + \delta$ (perturbation). The persistence of the ridge is $1/\xi \approx (\beta/\alpha)^{1/2}$. The Hausdorff distance from the ridge to $\partial\mathrm{PersComp}$ is at most $\xi$ — yielding $C = 1$ in natural units. This is the cleanest route.
+- **Route A (Explicit profile computation):** For a regular grid graph, compute the 1D Allen-Cahn profile analytically: $u^*(x) = \tfrac{1}{2}(1 + \tanh((x - x_0)/\xi))$ where $\xi = (2\alpha/\beta|W''(c)|)^{1/2}$. The gradient at the interface is $|\nabla u^*| \approx (2\alpha/\beta)^{1/2}/(2\xi)$ ... Wait, let me think more carefully. The interface profile has $\lvert du/dx \rvert \approx 1/(2\xi)$. On a grid: $|\nabla_G u^*| \approx 1/(2\xi) = (\beta|W''(c)|/(8\alpha))^{1/2}$. This determines both the ridge height (determines $\rho_{\mathrm{bd}}$ compatibility) and the ridge width (determines $C$). Specifically, the region where $|\nabla_G u^*| > \rho_{\mathrm{bd}}$ has width $\approx \xi \cdot 2\,\mathrm{artanh}(\sqrt{1 - 4\rho_{\mathrm{bd}}^2\xi^2})$ — giving the effective $C$. For $\rho_{\mathrm{bd}} \ll 1/\xi$: $C \approx 2$.
+- **Route B (Barcode stability quantification):** Use the Chazal et al. stability theorem: $d_B(\mathrm{Bars}(f), \mathrm{Bars}(g)) \leq \lVert f - g \rVert_\infty$ for $H_0$ barcodes. Apply to $f = |\nabla_G u^*|$ and $g = |\nabla_G u^*| + \delta$ (perturbation). The persistence of the ridge is $1/\xi \approx (\beta/\alpha)^{1/2}$. The Hausdorff distance from the ridge to $\partial\mathrm{PersComp}$ is at most $\xi$ — yielding $C = 1$ in natural units. This is the cleanest route.
 - **Route C (Numerical verification):** Run exp06-style experiment with varying $\beta$ and measure $d_H(B_t, \partial C_j)$ vs $(\alpha/\beta)^{1/2}$. Fit the constant $C$. Not a proof but provides a working estimate.
 
 *Recommended route:* Route A (explicit 1D profile) for Cat A. Effort: ~1 day (requires checking the profile against discrete grid boundary conditions).
@@ -285,22 +285,22 @@ definition.
 
 **Setup.** Consider a 1D segment graph $(\mathbb{Z}, E)$ with uniform edge weights $w=1$. The SCC boundary energy on this graph is $E_{\mathrm{bd}} = \alpha \sum_i (u_{i+1} - u_i)^2 + \lambda_{\mathrm{bd}} W(u_i)$ where $W(u) = u^2(1-u)^2$. At a phase-separated minimum, the interface near site $x_0$ has the 1D Allen-Cahn profile:
 
-$$u^*(x) = \frac{1}{2}\!\left(1 + \tanh\!\frac{x - x_0}{\xi}\right), \qquad \xi = \left(\frac{2\alpha}{\beta |W''(c)|}\right)^{1/2}$$
+$$u^*(x) = \frac{1}{2}\!\left(1 + \tanh\!\frac{x - x_0}{\xi}\right), \qquad \xi = \left(\frac{2\alpha}{\beta \lvert W''(c) \rvert}\right)^{1/2}$$
 
-where $c = 1/2$ is the spinodal point and $|W''(1/2)| = 1$ for $W(u)=u^2(1-u)^2$ (computed: $W''(u)=2(1-2u)^2-4u(1-u)$; at $u=1/2$: $W''(1/2)=-1$). Therefore $\xi = (2\alpha/\beta)^{1/2}$.
+where $c = 1/2$ is the spinodal point and $\lvert W''(1/2) \rvert = 1$ for $W(u)=u^2(1-u)^2$ (computed: $W''(u)=2(1-2u)^2-4u(1-u)$; at $u=1/2$: $W''(1/2)=-1$). Therefore $\xi = (2\alpha/\beta)^{1/2}$.
 
 **Candidate bound derivation (Session I — contains errors corrected in §8).** The gradient magnitude at site $x$ is:
 
-$$|u^*{}'(x)| = \frac{1}{2\xi}\,\mathrm{sech}^2\!\frac{x-x_0}{\xi}, \qquad \max_x |u^*{}'| = \frac{1}{2\xi} = \frac{1}{2}\!\left(\frac{\beta}{2\alpha}\right)^{1/2}$$
+$$\lvert u^*{}'(x) \rvert = \frac{1}{2\xi}\,\mathrm{sech}^2\!\frac{x-x_0}{\xi}, \qquad \max_x \lvert u^*{}' \rvert = \frac{1}{2\xi} = \frac{1}{2}\!\left(\frac{\beta}{2\alpha}\right)^{1/2}$$
 
-The PersRidge set $B_t = \{x : |u^*{}'(x)| > \rho_{\mathrm{bd}}\}$ is the interval $|x - x_0| < \Delta$, where *(⚠ formula incorrect — see §8.1)*:
+The PersRidge set $B_t = \{x : \lvert u^*{}'(x) \rvert > \rho_{\mathrm{bd}}\}$ is the interval $\lvert x - x_0 \rvert < \Delta$, where *(⚠ formula incorrect — see §8.1)*:
 
 $$\Delta = \xi\,\mathrm{arctanh}\!\left(\sqrt{1 - 4\rho_{\mathrm{bd}}^2\xi^2}\right) \quad \text{[wrong; correct formula in §8.2]}$$
 
 For $\rho_{\mathrm{bd}} \xi \ll 1$ (thin-ridge regime): $\Delta \approx \xi|\log(2\rho_{\mathrm{bd}}\xi)| = O(\xi) = O((\alpha/\beta)^{1/2})$.
 
 **Gaps before Cat A (4 items):**
-1. *1D → 2D:* The tanh profile is for a 1D segment. On a 2D grid ($d=4$), the interface curves; $|u^*{}'|$ at interface nodes is bounded by the 1D value times a geometry factor $\leq \sqrt{d}$. Need explicit bound for $d=4$.
+1. *1D → 2D:* The tanh profile is for a 1D segment. On a 2D grid ($d=4$), the interface curves; $\lvert u^*{}' \rvert$ at interface nodes is bounded by the 1D value times a geometry factor $\leq \sqrt{d}$. Need explicit bound for $d=4$.
 2. *Hausdorff distance vs. ridge width:* $\Delta$ gives the half-width of the ridge (distance from center). The Hausdorff distance $d_H(B_t, \partial\mathrm{PersComp})$ requires both directions: nearest-$B_t$-point-to-$\partial C$ and nearest-$\partial C$-point-to-$B_t$. The reverse direction needs interface completeness (every $\partial C$ point is within $\Delta$ of $B_t$) — requires showing the interface has no isolated crossing points.
 3. *Discretization correction:* The tanh profile is continuum. Discrete lattice profile differs by $O(1/\xi^2)$ corrections (negligible for $\xi \gg 1$, i.e., $\beta \ll 2\alpha n^2$; standard SCC operating regime satisfies this).
 4. *$\partial\mathrm{PersComp}$ identification:* Need to verify that the PersComp boundary $\partial\mathrm{PersComp}(\tilde{u}^*)$ coincides with $\{x : \tilde{u}^*(x) \approx 1/2\}$ (level-set interface), not merely a topological boundary. Requires connecting the barcode definition to the Allen-Cahn interface location.
@@ -316,7 +316,7 @@ For $\rho_{\mathrm{bd}} \xi \ll 1$ (thin-ridge regime): $\Delta \approx \xi|\log
 *Why this is hard:* D-ST-1 removes edges across depth discontinuities. But the persistent gradient ridge may still detect boundary-like structure AT depth-gap pixels via in-plane edges (edges within the same depth layer). The claim is that boundary nodes cannot straddle depth gaps (cannot have high cross-depth gradient if no cross-depth edges exist).
 
 *Possible routes:*
-- **Route A (Direct argument from D-ST-1 and gradient definition):** Under hard-cut D-ST-1 ($w_{ij} = 0$ for $|z_i - z_j| > \Delta z_{\mathrm{thresh}}$), the gradient at depth-gap pixels is:
+- **Route A (Direct argument from D-ST-1 and gradient definition):** Under hard-cut D-ST-1 ($w_{ij} = 0$ for $\lvert z_i - z_j \rvert > \Delta z_{\mathrm{thresh}}$), the gradient at depth-gap pixels is:
   $|\nabla_G \tilde{u}^*(x)| = \sqrt{\sum_{y \sim x} w_{xy}(\tilde{u}^*(x) - \tilde{u}^*(y))^2}$
   where the sum is only over in-plane edges (cross-depth edges removed). For $x$ at a depth gap with $\tilde{u}^*(x) \approx 1$ (inside a formation) and all in-plane neighbors also $\approx 1$: $|\nabla_G \tilde{u}^*(x)| \approx 0$. Therefore depth-gap pixels have near-zero gradient and cannot appear in $B_t$. This is essentially immediate from D-ST-1.
 - **Route B (Formal proof for hard-cut case):** Under D-ST-1 hard-cut, depth-gap pixels belong to exactly one connected component of $G_t^\mathcal{P}$. Their gradient is determined by in-layer neighbors only. Claim: for a well-formed formation (K_act=1, phase-separated), $|\nabla_G \tilde{u}^*|$ at depth-gap pixels is $< \rho_{\mathrm{bd}}$. Proof: by the formation smoothness within each depth layer. Needs the claim that the local minimum $\tilde{u}^*$ is smooth within-layer.
@@ -334,7 +334,7 @@ For $\rho_{\mathrm{bd}} \xi \ll 1$ (thin-ridge regime): $\Delta \approx \xi|\log
 *Why this is hard:* $\rho_{\mathrm{bd}}$ must satisfy a compatibility window: $0 < \rho_{\mathrm{bd}} < \min_{x \in \partial C_j} |\nabla_G \tilde{u}^*(x)|$. If $\rho_{\mathrm{bd}}$ is too large, $B_t$ is empty. If too small, all nodes with any gradient appear. The correct value depends on the interface height, which scales as $(\beta/\alpha)^{1/2}$.
 
 *Possible routes:*
-- **Route A (Derived from interface analysis):** From Blocker 2 Route A: $\min_{x \in \partial C_j} |\nabla_G \tilde{u}^*(x)| \approx (2\alpha/\beta)^{1/2} \cdot |W''(c)|^{1/2}$ on regular grids. Set $\rho_{\mathrm{bd}} = \rho_0 \cdot (\alpha/\beta)^{1/2}$ for some $\rho_0 \in (0, 1)$ (dimensionless constant). The compatibility window then becomes $0 < \rho_0 < C_{\mathrm{grad}}$ where $C_{\mathrm{grad}} \approx (2|W''(c)|)^{1/2}$. For canonical SCC parameters: $|W''(c)| = 1/2$ (at $c=1/2$), so $C_{\mathrm{grad}} \approx 1$. Recommended: $\rho_0 = 0.5$ (middle of compatibility window).
+- **Route A (Derived from interface analysis):** From Blocker 2 Route A: $\min_{x \in \partial C_j} |\nabla_G \tilde{u}^*(x)| \approx (2\alpha/\beta)^{1/2} \cdot \lvert W''(c) \rvert^{1/2}$ on regular grids. Set $\rho_{\mathrm{bd}} = \rho_0 \cdot (\alpha/\beta)^{1/2}$ for some $\rho_0 \in (0, 1)$ (dimensionless constant). The compatibility window then becomes $0 < \rho_0 < C_{\mathrm{grad}}$ where $C_{\mathrm{grad}} \approx (2|W''(c)|)^{1/2}$. For canonical SCC parameters: $\lvert W''(c) \rvert = 1/2$ (at $c=1/2$), so $C_{\mathrm{grad}} \approx 1$. Recommended: $\rho_0 = 0.5$ (middle of compatibility window).
 - **Route B (Data-driven from exp06):** Measure $|\nabla_G \tilde{u}^*(x)|$ at boundary nodes in exp06 experiments across $\beta$ values. Fit $\rho_{\mathrm{bd}}(\beta) = c \cdot (\alpha/\beta)^{1/2}$ with empirical constant $c$. This is calibration only, not a proof, but establishes the scaling law.
 - **Route C (OP-0006 specific theorem):** Register the calibration as part of the OP-0006 canonical definition: "the canonical choice is $\rho_{\mathrm{bd}} = (\alpha/\beta)^{1/2}/2$." This is definitional (Cat A by adoption) but requires verification that the choice is always compatible (i.e., never empty $B_t$).
 
@@ -393,7 +393,7 @@ $$\frac{1}{2\xi}\,\mathrm{sech}^2\!\frac{\Delta}{\xi} = \frac{1}{4\xi} \;\implie
 
 $$\boxed{\Delta_{1D} = \xi\,\mathrm{arctanh}\!\left(\tfrac{1}{\sqrt{2}}\right) \approx 0.881\xi = 0.881\cdot(2\alpha/\beta)^{1/2} \approx 1.246\,(\alpha/\beta)^{1/2}}$$
 
-The ridge $B_t = \{x : |u^*{}'(x)| > \rho_{\mathrm{bd}}\}$ is the interval $|x - x_0| < \Delta_{1D}$.
+The ridge $B_t = \{x : \lvert u^*{}'(x) \rvert > \rho_{\mathrm{bd}}\}$ is the interval $\lvert x - x_0 \rvert < \Delta_{1D}$.
 
 **Hausdorff distance (Direction 1):** $\sup_{x \in B_t} d(x, \partial\mathrm{PersComp}) = \Delta_{1D}$ (the ridge has half-width $\Delta_{1D}$ centered at $x_0 \in \partial\mathrm{PersComp}$).
 
@@ -408,7 +408,7 @@ $$|\nabla_G u^*(i,j)|^2 = (u^*(i+1)-u^*(i))^2 + (u^*(i-1)-u^*(i))^2 \approx 2\,(
 
 so $|\nabla_G u^*|_{2D} \approx \sqrt{2}\,|u^*{}'|_{1D}$.
 
-**Effective 1D threshold.** The condition $|\nabla_G u^*|_{2D} > \rho_{\mathrm{bd}}$ becomes $|u^*{}'| > \rho_{\mathrm{bd}}/\sqrt{2}$, with:
+**Effective 1D threshold.** The condition $|\nabla_G u^*|_{2D} > \rho_{\mathrm{bd}}$ becomes $\lvert u^*{}' \rvert > \rho_{\mathrm{bd}}/\sqrt{2}$, with:
 $$\rho_{\mathrm{bd}}^{\mathrm{eff}} \cdot \xi = \frac{\rho_{\mathrm{bd}}}{\sqrt{2}} \cdot \xi = \frac{1}{4\sqrt{2}} \approx 0.177$$
 
 **Ridge half-width (2D flat):**
@@ -428,7 +428,7 @@ The Hausdorff distance requires two directions:
 
 **Direction 2** (boundary to ridge): $\sup_{y \in \partial\mathrm{PersComp}} d(y, B_t) = 0$.
 
-*Proof:* For $y \in \partial\mathrm{PersComp}$, $y$ lies at the Allen-Cahn interface (§8.6 below). The gradient magnitude at the interface center $x_0$ is the peak: $|u^*{}'(x_0)| = 1/(2\xi) > 1/(4\xi) = \rho_{\mathrm{bd}}$. Therefore $y \in B_t$ (the boundary node is inside the ridge). Hence $d(y, B_t) = 0$. ✓
+*Proof:* For $y \in \partial\mathrm{PersComp}$, $y$ lies at the Allen-Cahn interface (§8.6 below). The gradient magnitude at the interface center $x_0$ is the peak: $\lvert u^*{}'(x_0) \rvert = 1/(2\xi) > 1/(4\xi) = \rho_{\mathrm{bd}}$. Therefore $y \in B_t$ (the boundary node is inside the ridge). Hence $d(y, B_t) = 0$. ✓
 
 **Gap 2 is closed** for flat interface in phase-separated regime. $d_H(B_t, \partial\mathrm{PersComp}) = \max(\Delta, 0) = \Delta \leq C(\alpha/\beta)^{1/2}$. □
 
@@ -457,7 +457,7 @@ $$\partial\mathrm{PersComp}(\tilde{u}^*) \;=\; \bigl\{x \in C_j : \exists y \sim
 *Proof sketch:*
 1. $C_j = \{x : \tilde{u}^*(x) \geq 1/2\}$ (PersComp at threshold $1/2$, as $\rho_{\mathrm{pers}}$ selects the $u \geq 1/2$ component under deep phase separation).
 2. $\partial C_j = \{x \in C_j : \exists y\sim x,\; \tilde{u}^*(y) < 1/2\}$ — nodes on the boundary of the half-level set.
-3. For the Allen-Cahn profile, $\tilde{u}^*(x) = 1/2$ defines the interface center $x_0$. The ∂C_j nodes are those within 1 hop of $x_0$, which by the tanh profile sit at $\tilde{u}^*(x) \approx 1/2 \pm \Delta u$ where $\Delta u = |u^*{}'(x_0)| \cdot 1 = 1/(2\xi) \ll 1$ for large $\xi$.
+3. For the Allen-Cahn profile, $\tilde{u}^*(x) = 1/2$ defines the interface center $x_0$. The ∂C_j nodes are those within 1 hop of $x_0$, which by the tanh profile sit at $\tilde{u}^*(x) \approx 1/2 \pm \Delta u$ where $\Delta u = \lvert u^*{}'(x_0) \rvert \cdot 1 = 1/(2\xi) \ll 1$ for large $\xi$.
 
 **Gap 4 closed** for flat interface in phase-separated regime: $\partial\mathrm{PersComp} \approx$ Allen-Cahn interface $\approx \{u^* = 1/2\}$. For curved interface, the connection requires the same argument applied locally to each interface arc. □
 
@@ -530,7 +530,7 @@ $$\tilde{u}^*(x) = u_0\!\left(\frac{r}{\xi}\right) + \xi\,\kappa_{\mathrm{mean}}
 where $u_0(s) = \tfrac{1}{2}(1 + \tanh s)$ is the 1D Allen-Cahn profile and $v_1$ is the first-order curvature correction satisfying the linearized Allen-Cahn equation:
 $$-v_1''(s) + W''(u_0(s))\,v_1(s) = u_0''(s), \qquad v_1(\pm\infty) = 0.$$
 
-The potential is $W''(u_0(s)) = 2 - 3\,\mathrm{sech}^2(s)$ (Pöschl-Teller type). The solution $v_1$ is bounded and exponentially decaying: $|v_1(s)| \leq C_v e^{-|s|}$ and $|v_1'(s)| \leq C_v$ for a universal constant $C_v$ of order 1.
+The potential is $W''(u_0(s)) = 2 - 3\,\mathrm{sech}^2(s)$ (Pöschl-Teller type). The solution $v_1$ is bounded and exponentially decaying: $\lvert v_1(s) \rvert \leq C_v e^{-\lvert s \rvert}$ and $\lvert v_1'(s) \rvert \leq C_v$ for a universal constant $C_v$ of order 1.
 
 *Conservative estimate:* $C_v \leq 1$ (the Pöschl-Teller operator has minimum eigenvalue $3/4$; an explicit computation gives $C_v < 0.8$; we use $C_v = 1$ for safety).
 
@@ -614,7 +614,7 @@ The proof in §10.1 uses **only** the graph-theoretic fact that $\partial C_j$ s
 
 ### §10.3 Intermediate β and Phase-Separation Condition
 
-For intermediate $\beta$ (where H1 is satisfied but ξ ≈ 1): the Allen-Cahn profile is valid (H1 ensures $\beta/\alpha > 4\lambda_2/|W''(c)|$, the phase-transition threshold). The formation $C_j$ may have ξ ≈ 1, but the Direction 2 proof in §8.4 still holds: $\partial C_j$ nodes are at the gradient peak $|u_0'(0)|/\xi = 1/(2\xi)$. For any $\rho_{\mathrm{bd}} < 1/(2\xi)$ (which H3 ensures: $\rho_{\mathrm{bd}} = 1/(4\xi) < 1/(2\xi)$), $\partial C_j \subset B_t$, and the separator argument goes through.
+For intermediate $\beta$ (where H1 is satisfied but ξ ≈ 1): the Allen-Cahn profile is valid (H1 ensures $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$, the phase-transition threshold). The formation $C_j$ may have ξ ≈ 1, but the Direction 2 proof in §8.4 still holds: $\partial C_j$ nodes are at the gradient peak $\lvert u_0'(0) \rvert/\xi = 1/(2\xi)$. For any $\rho_{\mathrm{bd}} < 1/(2\xi)$ (which H3 ensures: $\rho_{\mathrm{bd}} = 1/(4\xi) < 1/(2\xi)$), $\partial C_j \subset B_t$, and the separator argument goes through.
 
 **Margin condition (formal version per Session K instruction).**
 
@@ -636,7 +636,7 @@ This is immediate from §10.1 (since $C_j^{\mathrm{deep}} \subset C_j^{\mathrm{i
 
 ### §11.1 Formal Statement (B3)
 
-**Proposition (Stereo PersRidge, B3).** Let $G_t^{\mathcal{P}}$ be the stereo-conditioned graph from D-ST-1 (hard-cut: $w_{xy} = 0$ when $|z_x - z_y| > \Delta z_{\mathrm{thresh}}$). Then:
+**Proposition (Stereo PersRidge, B3).** Let $G_t^{\mathcal{P}}$ be the stereo-conditioned graph from D-ST-1 (hard-cut: $w_{xy} = 0$ when $\lvert z_x - z_y \rvert > \Delta z_{\mathrm{thresh}}$). Then:
 
 $$B_{\mathrm{PersRidge}}^{\mathcal{P}}(\tilde{u}^*) \;=\; \mathrm{PersRidge}\!\left(\left|\nabla_{G_t^{\mathcal{P}}} \tilde{u}^*\right|\right)$$
 
@@ -646,7 +646,7 @@ Furthermore, under H1–H3 and D-ST-1 hard-cut:
 
 $$B_{\mathrm{PersRidge}}^{\mathcal{P}}(\tilde{u}^*) \;\subset\; X_t \;\setminus\; \bigl\{x : x \text{ is a depth-gap pixel with uniform in-layer field}\bigr\}$$
 
-where "depth-gap pixel with uniform in-layer field" means: $x$ has no cross-depth edges ($w_{xy}=0$ for all $y$ with $|z_x - z_y| > \Delta z$) and all in-layer neighbors $y \sim_{\mathcal{P}} x$ satisfy $|\tilde{u}^*(x) - \tilde{u}^*(y)| < \rho_{\mathrm{bd}}$ componentwise.
+where "depth-gap pixel with uniform in-layer field" means: $x$ has no cross-depth edges ($w_{xy}=0$ for all $y$ with $\lvert z_x - z_y \rvert > \Delta z$) and all in-layer neighbors $y \sim_{\mathcal{P}} x$ satisfy $|\tilde{u}^*(x) - \tilde{u}^*(y)| < \rho_{\mathrm{bd}}$ componentwise.
 
 ---
 
@@ -664,7 +664,7 @@ summed over in-layer neighbors only. If $x$ is inside a well-formed formation wi
 
 **Part 3 (Distinction from raw image edge).** A depth-gap pixel $x$ may have large raw image gradient $|\nabla I(x)|$ (the pixel intensity jumps across a depth discontinuity). But $|\nabla_{G_t^{\mathcal{P}}} \tilde{u}^*(x)|$ is computed on $G_t^{\mathcal{P}}$, which has the cross-depth edge removed. The SCC boundary $B_t^{\mathcal{P}}$ is therefore immune to spurious depth-edge responses that appear in $|\nabla I|$. ✓
 
-**Soft-cut D-ST-1 (partial, conditional):** Under soft-cut ($w_{xy} = \exp(-|z_x - z_y|/\sigma_z)$ small but nonzero), the gradient at depth-gap pixels is $O(\exp(-\Delta z/\sigma_z)) \cdot O(1)$. For large depth gap $\Delta z \gg \sigma_z$: gradient $\approx 0 < \rho_{\mathrm{bd}}$, so B3 holds. For small $\Delta z$: soft-cut does not fully suppress cross-depth gradients; B3 is conditional on $\Delta z / \sigma_z \gg 1$. This is the interface with T-ST-5b (deferred).
+**Soft-cut D-ST-1 (partial, conditional):** Under soft-cut ($w_{xy} = \exp(-\lvert z_x - z_y \rvert/\sigma_z)$ small but nonzero), the gradient at depth-gap pixels is $O(\exp(-\Delta z/\sigma_z)) \cdot O(1)$. For large depth gap $\Delta z \gg \sigma_z$: gradient $\approx 0 < \rho_{\mathrm{bd}}$, so B3 holds. For small $\Delta z$: soft-cut does not fully suppress cross-depth gradients; B3 is conditional on $\Delta z / \sigma_z \gg 1$. This is the interface with T-ST-5b (deferred).
 
 **B3 status: CLOSED for hard-cut D-ST-1.** Soft-cut: conditional on $\Delta z/\sigma_z \gg 1$.
 
@@ -687,7 +687,7 @@ summed over in-layer neighbors only. If $x$ is inside a well-formed formation wi
 
 ### §12.2 Explicit Assumption Package (H1–H5) for Cat A
 
-**H1 (Phase separation):** $\beta/\alpha > 4\lambda_2/|W''(c)|$ — canonical SCC phase-transition condition.
+**H1 (Phase separation):** $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ — canonical SCC phase-transition condition.
 
 **H2 (Well-formed):** $\tilde{u}^*$ is a phase-separated local minimum with $K_{\mathrm{act}} = 1$ (single formation core), $\tilde{u}^* \approx \{0,1\}$-valued.
 

@@ -52,7 +52,7 @@ OMS-1.0 may define the observer landscape as a choice of element from $\mathcal{
 
 Given a target diagnostic vector $d^* = (\mathrm{Bind}^*, \mathrm{Sep}^*, \mathrm{Inside}^*, \mathrm{Persist}^*) \in [0,1]^4$ and a positive weight matrix $W \succ 0$:
 
-$$V_D(\Theta; X_t, d^*, W) = \|d_\Theta - d^*\|_W^2 = (d_\Theta - d^*)^\top W (d_\Theta - d^*)$$
+$$V_D(\Theta; X_t, d^*, W) = \lVert d_\Theta - d^* \rVert_W^2 = (d_\Theta - d^*)^\top W (d_\Theta - d^*)$$
 
 Unweighted version ($W = I$):
 $$V_D^0(\Theta; X_t) = \sum_{i \in \{\mathrm{Bind, Sep, In, Pers}\}} (d^i_\Theta - d^{*,i})^2$$
@@ -93,7 +93,7 @@ $$V_D^0(\Theta; X_t) = \sum_{i \in \{\mathrm{Bind, Sep, In, Pers}\}} (d^i_\Theta
 
 Let $T_\Theta$ be the topological formation signature (DEF-R2, readout_map_audit.md), and $T^*$ a target signature. Let $D_T$ be a pseudometric on the space of topological signatures $\mathcal{T}$.
 
-$$V_T(\Theta; X_t, T^*, \alpha) = D_T(T_\Theta, T^*) + \alpha \|d_\Theta - d^*\|^2$$
+$$V_T(\Theta; X_t, T^*, \alpha) = D_T(T_\Theta, T^*) + \alpha \lVert d_\Theta - d^* \rVert^2$$
 
 where $\alpha \geq 0$ is a regularization weight.
 
@@ -102,11 +102,11 @@ $$V_T^0(\Theta; X_t, T^*) = D_T(T_\Theta, T^*)$$
 
 **Choice of $D_T$.** Two options:
 
-1. **Bottleneck distance** $d_B$: $d_B(\mathrm{Bar}_0, \mathrm{Bar}_0^*) = \inf_{\gamma} \sup_{x} \|x - \gamma(x)\|_\infty$ over bijections $\gamma$ (extended to allow matching with diagonal). Stable, well-studied.
+1. **Bottleneck distance** $d_B$: $d_B(\mathrm{Bar}_0, \mathrm{Bar}_0^*) = \inf_{\gamma} \sup_{x} \lVert x - \gamma(x) \rVert_\infty$ over bijections $\gamma$ (extended to allow matching with diagonal). Stable, well-studied.
 
-2. **Wasserstein-1 distance on barcodes** $d_W$: $d_W(\mathrm{Bar}_0, \mathrm{Bar}_0^*) = \inf_{\gamma} \sum_x \|x - \gamma(x)\|$. More sensitive than bottleneck.
+2. **Wasserstein-1 distance on barcodes** $d_W$: $d_W(\mathrm{Bar}_0, \mathrm{Bar}_0^*) = \inf_{\gamma} \sum_x \lVert x - \gamma(x) \rVert$. More sensitive than bottleneck.
 
-3. **Component-count difference** (coarser): $D_T^{\mathrm{coarse}} = |K^*_\Theta - K^{*}_*| + |\ell_1 - \ell_1^*|$.
+3. **Component-count difference** (coarser): $D_T^{\mathrm{coarse}} = |K^*_\Theta - K^{*}_*\lvert + \rvert\ell_1 - \ell_1^*|$.
 
 ### §3.2 Analysis
 
@@ -194,7 +194,7 @@ $$V_P^{\mathrm{rel}}(\Theta; X_t, \Theta_0) = D_{\mathcal{P}}(P(\Theta), P(\Thet
 
 For $P = P_{\mathrm{top}} = (d, T) \in [0,1]^4 \times \mathcal{T}$:
 
-$$D_{\mathcal{P}}((d, T), (d^*, T^*)) = \alpha \|d - d^*\|^2 + \beta D_T(T, T^*)$$
+$$D_{\mathcal{P}}((d, T), (d^*, T^*)) = \alpha \lVert d - d^* \rVert^2 + \beta D_T(T, T^*)$$
 
 This combines V-D and V-T into a unified readout-induced potential.
 
@@ -319,7 +319,7 @@ $$V_{\mathrm{pop}}(\Theta) = -\log p_{\mathrm{pop}}(\Theta)$$
 
 **Position (DEFINED):** OMS-1.0 does not uniquely specify $V$. Instead, it defines:
 1. The admissible class $\mathcal{V}_{\mathrm{adm}}$ (criteria V1–V5).
-2. The recommended representative: $V_P$ with $D_{\mathcal{P}} = \alpha \|\cdot\|^2 + \beta D_T$.
+2. The recommended representative: $V_P$ with $D_{\mathcal{P}} = \alpha \lVert \cdot \rVert^2 + \beta D_T$.
 3. The computational placeholder: $V_D^0$ with $d^* = (1,1,1,0)$.
 
 Any $V \in \mathcal{V}_{\mathrm{adm}}$ is a valid observer landscape for OMS purposes. The specific choice is scene-distribution-dependent and observer-adaptation-context-dependent.

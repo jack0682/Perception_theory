@@ -38,7 +38,7 @@ $$\mathcal{G}_t^P = (V_t, E_t, w_t, \mu_t)$$
 
 - $V_t = \mathcal{P}_t$ — finite 3D point cloud from stereo disparity at time $t$
 - $E_t$ — depth-filtered adjacency: $(b_t(x), b_t(y)) \in E_t$ iff $(x,y) \in E_t^{2D}$ and
-  $|z(x) - z(y)| < \delta_z$ (depth threshold)
+  $\lvert z(x) - z(y) \rvert < \delta_z$ (depth threshold)
 - $w_t : E_t \to \mathbb{R}_{>0}$ — edge weights encoding 3D distance and depth discontinuity
 - $\mu_t : V_t \to \mathbb{R}_{>0}$ — vertex measure (e.g. uniform or confidence-weighted)
 
@@ -77,7 +77,7 @@ from 1 to 0; count connected components of $\mathcal{G}^P$ restricted to the sup
 keep only components with persistence $> \rho_\mathrm{pers}$ (born at $\theta = b$, die at
 $\theta = d$; persistence $= b - d > \rho_\mathrm{pers}$).
 
-**NOT** $|\{j : \|\tilde{u}^{(j)}\|_\infty > \varepsilon\}|$ — that is a K-field architecture
+**NOT** $|\{j : \lVert \tilde{u}^{(j)} \rVert_\infty > \varepsilon\}|$ — that is a K-field architecture
 artifact (slot-counting). The slot-count is a proxy valid only within $\mathcal{A}_{K,\alpha}$
 when slots are fully activated and well-separated.
 
@@ -347,7 +347,7 @@ Nine corrections applied:
 
 | # | Item | v1 error | v1.1 correction |
 |---|---|---|---|
-| 1 | K_act definition | Slot-count $|\{j: \|u^{(j)}\|_\infty > \varepsilon\}|$ | $K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u})$ via persistence filtration |
+| 1 | K_act definition | Slot-count $|\{j: \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ | $K_\mathrm{act}(\tilde{u}) = \#\mathrm{PersComp}(\tilde{u})$ via persistence filtration |
 | 2 | OP-0006 | K-dynamics (how K changes) | Boundary precision (how soft $\tilde{u}$ transition → crisp persistent boundary) |
 | 3 | Field notation | $\tilde{u}_t = U_t$ (conflation) | $\tilde{u}_t = U_t|_{\mathcal{P}_t}$ (restriction of latent $U_t$ to $\mathcal{P}_t$) |
 | 4 | Pixel-P_t | Ambiguous $b_L$ domain | $b_t: X_L^\mathrm{valid} \rightharpoonup \mathcal{P}_t$ (partial map; undefined at occlusions) |

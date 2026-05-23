@@ -30,7 +30,7 @@ These two conditions are mutually exclusive at default parameters. **The questio
 ## §1. Setup
 
 **SCC self-referential cost.**
-$$c[u](x,y) = \|\varphi(u)(x) - \varphi(u)(y)\|^2 + \sigma_\mathrm{sp}^{-2}d_G(x,y)^2,$$
+$$c[u](x,y) = \lVert \varphi(u)(x) - \varphi(u)(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}d_G(x,y)^2,$$
 with $\varphi(u) = (u, \mathrm{Cl}(u), D(x;1{-}u)) \in [0,1]^3$.
 
 **Iteration.**
@@ -45,18 +45,18 @@ This is the self-referential Schauder fixed-point iteration (canonical T-Persist
 ### §2.1 Per-step cost perturbation
 
 By chain rule:
-$$\delta c \approx 2 \langle \delta\varphi(u), \varphi(u)\rangle = 2 \|\partial\varphi/\partial u\|_\mathrm{op} \cdot \|u\|_\infty \cdot \|\delta u\|_\infty \leq 2 L_\varphi \|\delta u\|_\infty.$$
+$$\delta c \approx 2 \langle \delta\varphi(u), \varphi(u)\rangle = 2 \lVert \partial\varphi/\partial u \rVert_\mathrm{op} \cdot \lVert u \rVert_\infty \cdot \lVert \delta u \rVert_\infty \leq 2 L_\varphi \lVert \delta u \rVert_\infty.$$
 At canonical default: $L_\varphi = 1.43$ (canonical line 1807; formation-conditioned).
 
 ### §2.2 Per-step plan perturbation (Lemma 10)
 
 By Lemma 10:
-$$\|M^{(k+1)} - M^{(k)}\|_\mathrm{TV} \leq \frac{M_\mathrm{tot} \cdot \delta c}{\varepsilon_\mathrm{OT}} \leq \frac{2 L_\varphi M_\mathrm{tot}}{\varepsilon_\mathrm{OT}} \cdot \|\delta u^{(k)}\|.$$
+$$\lVert M^{(k+1)} - M^{(k)} \rVert_\mathrm{TV} \leq \frac{M_\mathrm{tot} \cdot \delta c}{\varepsilon_\mathrm{OT}} \leq \frac{2 L_\varphi M_\mathrm{tot}}{\varepsilon_\mathrm{OT}} \cdot \lVert \delta u^{(k)} \rVert.$$
 
 ### §2.3 Per-step field perturbation
 
 Field update: $\delta u^{(k+1)} = (\delta M^{(k+1)})^\top \mathbf{1}$. Hence:
-$$\|\delta u^{(k+1)}\|_\infty \leq \|\delta M^{(k+1)}\|_\mathrm{TV} \cdot 1 \leq \frac{2 L_\varphi M_\mathrm{tot}}{\varepsilon_\mathrm{OT}} \cdot \|\delta u^{(k)}\|.$$
+$$\lVert \delta u^{(k+1)} \rVert_\infty \leq \lVert \delta M^{(k+1)} \rVert_\mathrm{TV} \cdot 1 \leq \frac{2 L_\varphi M_\mathrm{tot}}{\varepsilon_\mathrm{OT}} \cdot \lVert \delta u^{(k)} \rVert.$$
 
 ### §2.4 Banach contraction condition
 

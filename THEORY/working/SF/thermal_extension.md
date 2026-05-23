@@ -17,7 +17,7 @@ $$\mathcal{F}_{C+E}[u; T] = \mathcal{E}[u] - T \cdot S(u) + \lambda_K K_{\mathrm
 where $S(u) = -\sum_x[u_x\ln u_x + (1-u_x)\ln(1-u_x)]$ is Bernoulli entropy (F2, Cat A).
 
 **Hessian at $u_{\mathrm{uniform}} = c\mathbf{1}$:**
-$$\mathrm{Hess}\,\mathcal{F}_{C+E}\big|_{u_{\mathrm{uniform}}} = H_{\mathrm{bd}}(\beta, \alpha) + H_{\mathrm{cl,sep}}(\alpha, \ldots) - T \cdot H_S(c) + \lambda_K \cdot H_K(c),$$
+$$\mathrm{Hess}\,\mathcal{F}_{C+E}\big\vert_{u_{\mathrm{uniform}}} = H_{\mathrm{bd}}(\beta, \alpha) + H_{\mathrm{cl,sep}}(\alpha, \ldots) - T \cdot H_S(c) + \lambda_K \cdot H_K(c),$$
 where:
 - $H_{\mathrm{bd}} = 4\alpha L + \beta W''(c) I$ (Prop 1.3a).
 - $H_{\mathrm{cl,sep}} = \lambda_{\mathrm{cl}} H_{\mathrm{cl}} + \lambda_{\mathrm{sep}} H_{\mathrm{sep}}$ (Prop 1.3b).
@@ -25,7 +25,7 @@ where:
 - $H_K$ from $\nabla^2 K_{\mathrm{soft}}$: at $u_{\mathrm{uniform}}$ this vanishes because $K_{\mathrm{soft}}(c\mathbf{1}) = \varphi(0) \cdot (\text{one bar of zero length}) = 0$, and near $u_{\mathrm{uniform}}$ the bar structure is degenerate (all sites at same level). $H_K|_{u_{\mathrm{uniform}}} = 0$ at the uniform configuration itself (vineyard singularity).
 
 Hence:
-$$\boxed{\;\mathrm{Hess}\,\mathcal{F}_{C+E}\big|_{u_{\mathrm{uniform}}} = H_{\mathrm{bd}}(\beta, \alpha) + H_{\mathrm{cl,sep}}(\alpha, \ldots) - \frac{T}{c(1-c)}\,I\;}.$$
+$$\boxed{\;\mathrm{Hess}\,\mathcal{F}_{C+E}\big\vert_{u_{\mathrm{uniform}}} = H_{\mathrm{bd}}(\beta, \alpha) + H_{\mathrm{cl,sep}}(\alpha, \ldots) - \frac{T}{c(1-c)}\,I\;}.$$
 
 The entropy contribution is a **uniform shift** of all eigenvalues by $-T/[c(1-c)]$.
 

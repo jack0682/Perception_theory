@@ -43,7 +43,7 @@ jump at $\Sigma_{\mathrm{branch}}$).
 
 ### Definition NV2 (Readout distance). [DEFINED]
 
-$$D_{\mathcal{P}}(P^{\mathrm{sm}}_1, P^{\mathrm{sm}}_2) := \|P^{\mathrm{sm}}_1 - P^{\mathrm{sm}}_2\|_2 \in \mathbb{R}_{\ge 0}.$$
+$$D_{\mathcal{P}}(P^{\mathrm{sm}}_1, P^{\mathrm{sm}}_2) := \lVert P^{\mathrm{sm}}_1 - P^{\mathrm{sm}}_2 \rVert_2 \in \mathbb{R}_{\ge 0}.$$
 
 ### Two distinct targets from VP-1 / VP-4. [DEFINED]
 
@@ -53,8 +53,8 @@ $y_2 := P^{\mathrm{sm}}(\lambda^{(2)}; X_t)$ for $\lambda^{(2)} = $ a
 "sep-dominant" or "balanced" base point.
 
 For S3 from VP-4 (`vp4_basin_summary.md`): the two clusters have
-$\Delta d = 0.40$, so $\|y_1 - y_2\| \ge 0.40$. For VP-1's CE-1 pair:
-$\|d_A - d_B\| = 0.071$ but $\|T_A - T_B\| > 0.5$ (different $K_{\mathrm{core}}$).
+$\Delta d = 0.40$, so $\lVert y_1 - y_2 \rVert \ge 0.40$. For VP-1's CE-1 pair:
+$\lVert d_A - d_B \rVert = 0.071$ but $\lVert T_A - T_B \rVert > 0.5$ (different $K_{\mathrm{core}}$).
 Either choice gives **distinct** targets.
 
 ---
@@ -128,9 +128,9 @@ for tangent $v$). Distinctness of readouts follows from $y_1 \ne y_2$
 (VP-4 evidence: $\Delta d = 0.40$).
 
 **Caveat.** If $c$ is too large, basin 2 disappears (the $y_1$-basin
-swallows everything). Choose $c \in [0, \tfrac{1}{2} \|y_1 - y_2\|^2)$ to
+swallows everything). Choose $c \in [0, \tfrac{1}{2} \lVert y_1 - y_2 \rVert^2)$ to
 ensure both basins survive. (This is automatic if we set $c = 0$, in
-which case both basins are present whenever $\|y_1 - y_2\| > 0$.) $\square$
+which case both basins are present whenever $\lVert y_1 - y_2 \rVert > 0$.) $\square$
 
 ### Net result for $V_2$.
 
@@ -164,7 +164,7 @@ stratification.
 
 ### Proposition NV10 (Basin structure preserved). [PROVED for small $\tau$]
 
-For $\tau > 0$ sufficiently small (specifically $\tau < c_{\mathrm{crit}}$ for some $c_{\mathrm{crit}}$ depending on $\|y_1 - y_2\|$ and the local Hessian of $D_i$), the two-basin structure of $V_2$ persists: $V_{2,\tau}$ has two local minima near $\lambda^{(1)}, \lambda^{(2)}$, separated by a saddle in between.
+For $\tau > 0$ sufficiently small (specifically $\tau < c_{\mathrm{crit}}$ for some $c_{\mathrm{crit}}$ depending on $\lVert y_1 - y_2 \rVert$ and the local Hessian of $D_i$), the two-basin structure of $V_2$ persists: $V_{2,\tau}$ has two local minima near $\lambda^{(1)}, \lambda^{(2)}$, separated by a saddle in between.
 
 *Proof.* Standard perturbation argument: for $\tau \to 0$, $V_{2,\tau} \to V_2$ uniformly on compact sets; the local-min property of $V_2$ at $\lambda^{(i)}$ persists by continuity of the Hessian under $\tau$-perturbation. $\square$
 
@@ -185,7 +185,7 @@ where smooth gradient flow is preferred over piecewise-smooth.
 | $V_{2,\tau} \in \mathcal{V}_{\mathrm{adm}}$ (V1+V2_smooth+V3) | **PROVED** (NV9 + analogues of NV4, NV6) |
 | $V_2$ has $\ge 2$ basins with distinct readouts | **PROVED conditional on H5** (NV7); H5 holds generically by analyticity |
 | $V_{2,\tau}$ has $\ge 2$ basins for small $\tau$ | **PROVED** (NV10) |
-| Existence of $y_1, y_2$ with $\|y_1 - y_2\| > 0$ on representative scenes | **COMPUTATIONALLY CONFIRMED** (VP-4 / VP-1) |
+| Existence of $y_1, y_2$ with $\lVert y_1 - y_2 \rVert > 0$ on representative scenes | **COMPUTATIONALLY CONFIRMED** (VP-4 / VP-1) |
 | Computational basin counting on Δ² for $V_2 / V_{2,\tau}$ | Gate 4 (VP-9) |
 
 **Net OP-OMS-002+ status:** **PROVED admissible**, **PROVED nontrivial conditional on H5**, with both H5 and the basin existence COMPUTATIONALLY VERIFIED in Gate 4 (VP-9).

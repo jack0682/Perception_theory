@@ -32,13 +32,13 @@
 
 ### §2.1 Definition (recap from `sigma_rich_augmentation.md` §2.3.1)
 
-For trajectory $\mathbf{u}(t) \in \widetilde\Sigma^K_M$ at time $t$, active formation set $\mathrm{act}(t) = \{j : \|u^{(j)}(t)\|_1 > \epsilon\}$. For each $j \in \mathrm{act}(t)$:
+For trajectory $\mathbf{u}(t) \in \widetilde\Sigma^K_M$ at time $t$, active formation set $\mathrm{act}(t) = \{j : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$. For each $j \in \mathrm{act}(t)$:
 $$c_j(t) := \frac{\sum_{x \in X} x \cdot u^{(j)}(t, x)}{\sum_{x \in X} u^{(j)}(t, x)} \in \mathbb{R}^{\dim X}.$$
 
 The **centroid trajectory** is:
 $$C(t) := \{c_j(t) : j \in \mathrm{act}(t)\} \subseteq \mathbb{R}^{\dim X}.$$
 
-$|C(t)| = K_{\mathrm{act}}(t)$ (number of active formations at time $t$).
+$\lvert C(t) \rvert = K_{\mathrm{act}}(t)$ (number of active formations at time $t$).
 
 ### §2.2 Continuity properties
 
@@ -51,7 +51,7 @@ $|C(t)| = K_{\mathrm{act}}(t)$ (number of active formations at time $t$).
 **Proposition 2.2 (K-jump discontinuity in $C(t)$).** At K-jump time $t^*$ with $\Delta K = 1$ simple merger of $(j, k) \to \ell$:
 - $C(t^{*-}) = \{\ldots, c_j(t^{*-}), c_k(t^{*-}), \ldots\}$ with $K'$ points.
 - $C(t^{*+}) = \{\ldots, c_\ell(t^{*+}), \ldots\}$ with $K' - 1$ points.
-- The two points $c_j(t^{*-}), c_k(t^{*-})$ converge: $\|c_j(t^{*-}) - c_k(t^{*-})\| \to 0$ as $t \nearrow t^*$ (under the merger-geometry convention; see §5 below for refinement).
+- The two points $c_j(t^{*-}), c_k(t^{*-})$ converge: $\lVert c_j(t^{*-}) - c_k(t^{*-}) \rVert \to 0$ as $t \nearrow t^*$ (under the merger-geometry convention; see §5 below for refinement).
 
 This makes $C(t)$ a **time-varying point cloud** with births/deaths at K-jump times — exactly the input expected by zigzag persistence (Carlsson-de Silva-Morozov 2009).
 
@@ -76,7 +76,7 @@ where $d_G$ is graph-shortest-path distance. Vertices of $R_r$ are points in $C(
 ### §3.2 Two metric conventions
 
 - **Convention G (graph-metric)**: $d_G(c_j, c_k) = $ shortest-path graph distance between *nearest vertices* of $X$ to centroids. Requires snapping centroids to vertices.
-- **Convention E (Euclidean)**: $d_E(c_j, c_k) = \|c_j - c_k\|_2$ via embedding $\iota$. Native real-valued.
+- **Convention E (Euclidean)**: $d_E(c_j, c_k) = \lVert c_j - c_k \rVert_2$ via embedding $\iota$. Native real-valued.
 
 For lattice graphs (e.g., $T^2_L$), Convention E is preferred (centroids are real-valued in $\mathbb{R}^2$, no need to snap). For abstract graphs, Convention G via Fiedler embedding.
 
@@ -137,7 +137,7 @@ At K-jump time $t^*$ with $(j, k) \to \ell$ merger:
 - Pre-merger: $H_0(R_r(C(t^{*-})))$ has $K' - 1$ finite bars + 1 infinite.
 - Post-merger: $H_0(R_r(C(t^{*+})))$ has $K' - 2$ finite bars + 1 infinite.
 
-The "lost" finite bar corresponds to the merger pair $(j, k)$: as $\|c_j - c_k\| \to 0$ approaching $t^*$, the finite bar's death scale $r_d^{(jk)} \to 0$, and at $t^{*+}$ the bar disappears entirely (post-merger formation $\ell$ is a single component, not two).
+The "lost" finite bar corresponds to the merger pair $(j, k)$: as $\lVert c_j - c_k \rVert \to 0$ approaching $t^*$, the finite bar's death scale $r_d^{(jk)} \to 0$, and at $t^{*+}$ the bar disappears entirely (post-merger formation $\ell$ is a single component, not two).
 
 **Claim 5.1 (K-jump detection).** A K-jump event at $t^*$ is identified as a discontinuity in the H_0 barcode time-series — specifically, the disappearance of one finite bar between $t^{*-}$ and $t^{*+}$.
 

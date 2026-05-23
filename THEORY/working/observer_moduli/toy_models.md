@@ -53,7 +53,7 @@ This is the convex hull of the four standard basis vectors $\{e_1, e_2, e_3, e_4
 
 **Proposition A1 (Compactness).** $\Delta^3$ is compact.
 
-*Proof.* $\Delta^3$ is closed (defined by equality + inequality constraints on a Euclidean space) and bounded ($\|\lambda\|_1 = 1$ implies $\|\lambda\|_2 \leq 1$). By Heine–Borel, compact. $\square$
+*Proof.* $\Delta^3$ is closed (defined by equality + inequality constraints on a Euclidean space) and bounded ($\lVert \lambda \rVert_1 = 1$ implies $\lVert \lambda \rVert_2 \leq 1$). By Heine–Borel, compact. $\square$
 
 **Proposition A2 (Convexity).** $\Delta^3$ is convex.
 

@@ -28,7 +28,7 @@ canonical.md §13 (Theorem Catalog) 삽입용.
 
 **Lemma L-ENDPOINT-NONSEMI** *(Cat A)*
 
-Squared endpoint cost $c^\mathrm{end}(x,z)=\|z-x\|^2$는 일반적으로 temporal composition과 호환되지 않는다:
+Squared endpoint cost $c^\mathrm{end}(x,z)=\lVert z-x \rVert^2$는 일반적으로 temporal composition과 호환되지 않는다:
 
 $$c^\mathrm{end}_{t\to r}(x,z) \neq \min_y\!\bigl[c^\mathrm{end}_{t\to s}(x,y)+c^\mathrm{end}_{s\to r}(y,z)\bigr]$$
 
@@ -40,7 +40,7 @@ $$c^\mathrm{end}_{t\to r}(x,z) \neq \min_y\!\bigl[c^\mathrm{end}_{t\to s}(x,y)+c
 
 $t<s<r$. 선형 보간 중간점 $y^*=\frac{r-s}{r-t}x+\frac{s-t}{r-t}z$에서:
 
-$$\frac{\|z-x\|^2}{r-t}=\frac{\|y^*-x\|^2}{s-t}+\frac{\|z-y^*\|^2}{r-s}$$
+$$\frac{\lVert z-x \rVert^2}{r-t}=\frac{\lVert y^*-x \rVert^2}{s-t}+\frac{\lVert z-y^* \rVert^2}{r-s}$$
 
 *(Proof: 01_endpoint_failure.md §L-ACTION-NORMALIZATION)*
 
@@ -50,7 +50,7 @@ $$\frac{\|z-x\|^2}{r-t}=\frac{\|y^*-x\|^2}{s-t}+\frac{\|z-y^*\|^2}{r-s}$$
 
 SCC local action:
 
-$$a_i(x,y)=\frac{d_i(x,y)^2}{\Delta t_i}+\gamma\frac{\|\varphi_{i+1}(y)-\varphi_i(x)\|^2}{\Delta t_i}$$
+$$a_i(x,y)=\frac{d_i(x,y)^2}{\Delta t_i}+\gamma\frac{\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2}{\Delta t_i}$$
 
 $\varphi_i(x)=(u_i(x),\,\mathrm{Cl}_i(u_i)(x),\,D_i(x;\,1-u_i))$: SCC fingerprint ($\gamma\geq0$, $\Delta t_i>0$).
 
@@ -68,7 +68,7 @@ SCC fingerprint action은 (1) $a_i\geq0$ (nonnegativity), (2) $\mathcal{A}_{i:k}
 
 **Theorem T-ACT-DP** *(Cat A)*
 
-*가정*: $X_i$ 유한 ($|X_i|<\infty$), $\mathcal{A}_{i:k}$ additive, $i<j<k$.
+*가정*: $X_i$ 유한 ($\lvert X_i \rvert<\infty$), $\mathcal{A}_{i:k}$ additive, $i<j<k$.
 
 *결론*:
 
@@ -118,7 +118,7 @@ $$\min_i a_i-\varepsilon\log N\;\leq\;\operatorname{smin}_\varepsilon(a)\;\leq\;
 
 Direct cost를 $c_{i\to k}^{\mathrm{act}}$로 정의하면 effective cost와 정확히 같다:
 
-$$\delta_\mathrm{eff}=\left\|c_{i\to k}^{\mathrm{act}}-c_{i\to k}^{\mathrm{eff}}\right\|_\infty=0$$
+$$\delta_\mathrm{eff}=\left\lVert c_{i\to k}^{\mathrm{act}}-c_{i\to k}^{\mathrm{eff}}\right \rVert_\infty=0$$
 
 *주의*: endpoint/fingerprint similarity direct cost에는 적용 불가. Sinkhorn plan과 무관. *(Proof: 03_dynamic_programming_theorem.md §L-ACTION-DELTA-EFF-ZERO)*
 

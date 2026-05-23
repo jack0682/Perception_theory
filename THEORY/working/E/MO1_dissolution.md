@@ -81,7 +81,7 @@ This is a **direct dissolution** of MO-1's smoothness obstruction at the soft-K 
 **Witten Laplacian (1982).** For a smooth function `ℱ : M → ℝ` on a Riemannian manifold M (with metric g, Laplace-Beltrami `Δ_g`) and parameter `T > 0`, the **T-Witten Laplacian** acting on functions is:
 
 $$
-\Delta_{\mathcal{F}, T} \;=\; -T^2\,\Delta_g \;+\; \|\nabla \mathcal{F}\|^2 \;-\; T\,\Delta_g \mathcal{F}.
+\Delta_{\mathcal{F}, T} \;=\; -T^2\,\Delta_g \;+\; \lVert \nabla \mathcal{F} \rVert^2 \;-\; T\,\Delta_g \mathcal{F}.
 $$
 
 (Some conventions absorb T differently. Above is the "semiclassical" parametrization where T is small and the operator's ground state encodes equilibrium.)

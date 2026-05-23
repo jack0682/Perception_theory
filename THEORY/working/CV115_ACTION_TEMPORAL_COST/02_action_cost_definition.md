@@ -18,7 +18,7 @@ scope: 시간 격자, SCC fingerprint, local action, path action, hard-min cost,
 
 $$t_0 < t_1 < \cdots < t_L, \quad \Delta t_i = t_{i+1}-t_i > 0$$
 
-각 시각 $t_i$의 site 집합: $X_i$ (유한; $|X_i| < \infty$).
+각 시각 $t_i$의 site 집합: $X_i$ (유한; $\lvert X_i \rvert < \infty$).
 
 단순화 시 $X_i = X$ (공통 site set) 사용 가능. 일반적으로 $X_i$ 상이 허용.
 
@@ -51,7 +51,7 @@ $$\varphi_i(x) = \bigl(u_i(x),\; \mathrm{Cl}_i(u_i)(x),\; D_i(x;\,1-u_i)\bigr) \
 
 **정의 D-LOCAL-ACTION**:
 
-$$\boxed{a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\,\frac{\|\varphi_{i+1}(y)-\varphi_i(x)\|^2}{\Delta t_i}}$$
+$$\boxed{a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\,\frac{\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2}{\Delta t_i}}$$
 
 $x \in X_i$, $y \in X_{i+1}$, $\gamma \geq 0$.
 
@@ -60,11 +60,11 @@ $x \in X_i$, $y \in X_{i+1}$, $\gamma \geq 0$.
 | 항 | 의미 | 단위 |
 |---|---|---|
 | $d_i(x,y)^2/\Delta t_i$ | 공간 이동 비용 (time-normalized) | [거리²/시간] |
-| $\gamma\|\Delta\varphi\|^2/\Delta t_i$ | SCC 상태 변화 비용 (time-normalized) | [무차원/시간] |
+| $\gamma\lVert \Delta\varphi \rVert^2/\Delta t_i$ | SCC 상태 변화 비용 (time-normalized) | [무차원/시간] |
 
 **Optional term** $V_i(x,y)$:
 
-$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\,\frac{\|\varphi_{i+1}(y)-\varphi_i(x)\|^2}{\Delta t_i} + V_i(x,y)$$
+$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\,\frac{\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2}{\Delta t_i} + V_i(x,y)$$
 
 이 패키지에서는 $V_i(x,y) = 0$으로 둔다. $V_i \geq 0$ 조건이 추가되면 Admissibility Lemma 결론 그대로 유지.
 
@@ -102,7 +102,7 @@ $$\boxed{c_{i\to k}^{\mathrm{act}}(x,z) = \min_{\substack{(x_i,\ldots,x_k):\\x_i
 
 **문장**:
 
-> SCC fingerprint action $a_i(x,y) = d_i(x,y)^2/\Delta t_i + \gamma\|\varphi_{i+1}(y)-\varphi_i(x)\|^2/\Delta t_i$는:
+> SCC fingerprint action $a_i(x,y) = d_i(x,y)^2/\Delta t_i + \gamma\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2/\Delta t_i$는:
 >
 > 1. $a_i(x,y) \geq 0$ (nonnegativity)
 > 2. $\mathcal{A}_{i:k}(P) = \sum_\ell a_\ell(x_\ell, x_{\ell+1})$ (additivity, by definition)
@@ -112,7 +112,7 @@ $$\boxed{c_{i\to k}^{\mathrm{act}}(x,z) = \min_{\substack{(x_i,\ldots,x_k):\\x_i
 
 **(1) Nonnegativity**:
 
-$$d_i(x,y)^2 \geq 0 \quad\text{(거리의 제곱)},\quad \|\varphi_{i+1}(y)-\varphi_i(x)\|^2 \geq 0 \quad\text{(norm square)}$$
+$$d_i(x,y)^2 \geq 0 \quad\text{(거리의 제곱)},\quad \lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2 \geq 0 \quad\text{(norm square)}$$
 
 $\Delta t_i > 0$, $\gamma \geq 0$이므로 각 항 $\geq 0$. 따라서 $a_i(x,y) \geq 0$. $\checkmark$
 
@@ -125,7 +125,7 @@ $$\mathcal{A}_{i:k}(P) = \sum_{\ell=i}^{k-1}a_\ell = \sum_{\ell=i}^{j-1}a_\ell +
 **(3) T-ACT-DP 전제 확인**:
 
 T-ACT-DP는 (a) additive path action, (b) finite site set $X_j$ 조건만 사용.
-(a) ✓ (2번), (b) ✓ ($|X_j|<\infty$ 가정). $\checkmark$
+(a) ✓ (2번), (b) ✓ ($\lvert X_j \rvert<\infty$ 가정). $\checkmark$
 
 **(4) T-ACT-GIBBS 전제 확인**:
 

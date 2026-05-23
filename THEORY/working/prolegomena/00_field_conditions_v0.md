@@ -97,8 +97,8 @@ constraint_compliance:
 |---|---|---|
 | **C23** | 측정은 *state functional* $\omega(\cdot)$ 로 (algebraic; Hilbert vector 아님) | S |
 | **C24** | *Vacuum / baseline 은 유일하지 않음*. 관측자-상태-맥락 별 family | N |
-| **C25** | 객체성 발생은 *threshold 구조*: $0 < \\|C_o(\\tau;\\Omega_o)\\| < \\theta_O$ 가 baseline | S |
-| **C26** | 객체성은 $\\|C_o\\| \\geq \\theta_O$ + 응집성 + G-invariance 일 때 발생 | S |
+| **C25** | 객체성 발생은 *threshold 구조*: $0 < \\lVert C_o(\\tau;\\Omega_o)\ \rVert < \\theta_O$ 가 baseline | S |
+| **C26** | 객체성은 $\\lVert C_o\ \rVert \\geq \\theta_O$ + 응집성 + G-invariance 일 때 발생 | S |
 
 ### VII. 불변성 조건
 

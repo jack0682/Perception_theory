@@ -49,7 +49,7 @@
 
 ### §2.3 Asymptotic ratio
 
-**Numerical result**: $\mu_0 = \epsilon |W''(c)|$, $\mu_1 = 2 \epsilon |W''(c)|$ asymptotically.
+**Numerical result**: $\mu_0 = \epsilon \lvert W''(c) \rvert$, $\mu_1 = 2 \epsilon \lvert W''(c) \rvert$ asymptotically.
 
 **Ratio** $\mu_1 / \mu_0 = 2$ (NOT 1 as canonical claims, NOT 4/1 either).
 

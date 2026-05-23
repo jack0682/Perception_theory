@@ -29,7 +29,7 @@ Round 18 executed `exp_alpha_scan_v3` at 9 $(\alpha, \beta)$ configurations with
 
 | Quantity | Measured | Tanh ansatz prediction | Deviation |
 |---|---|---|---|
-| ratio_edge = $|B|/\mathrm{Per}_{\mathrm{edge}}$ | 0.875 | 3.449·$\xi_0$ = 0.546 | **+60%** |
+| ratio_edge = $\lvert B \rvert/\mathrm{Per}_{\mathrm{edge}}$ | 0.875 | 3.449·$\xi_0$ = 0.546 | **+60%** |
 | ratio_site | 0.323 | 3.449·$\xi_0/\sqrt 2$ = 0.386 | −16% |
 
 ---
@@ -54,7 +54,7 @@ The tanh profile is the 1D solution of $4\alpha u'' - \beta W'(u) = 0$ (Allen-Ca
 Write the SCC minimizer as
 $$u^\ast_{\mathrm{SCC}}(x) = u^\ast_{\mathrm{tanh}}(x) + \epsilon\cdot \delta u(x) + O(\epsilon^2),$$
 where $\epsilon \ll 1$ is small (representing cl_sep contribution relative to bd). The first-order correction $\delta u$ satisfies the linearized Euler-Lagrange:
-$$\big(H_{\mathrm{bd}}\big|_{u_{\mathrm{tanh}}^\ast}\big)\delta u = -\nabla(\mathcal{E}_{\mathrm{cl}} + \mathcal{E}_{\mathrm{sep}})\big|_{u_{\mathrm{tanh}}^\ast}.$$
+$$\big(H_{\mathrm{bd}}\big\vert_{u_{\mathrm{tanh}}^\ast}\big)\delta u = -\nabla(\mathcal{E}_{\mathrm{cl}} + \mathcal{E}_{\mathrm{sep}})\big\vert_{u_{\mathrm{tanh}}^\ast}.$$
 
 The LHS is the "tanh-Hessian", well-understood in Allen-Cahn theory (isolated zero eigenvalue from translation mode, positive spectrum elsewhere on $\Sigma_m$). The RHS is the cl_sep gradient at the tanh configuration.
 
@@ -69,7 +69,7 @@ where $\delta_{\mathrm{SCC}}$ is the "effective profile-width correction" due to
 
 **Interpretation.** The two metrics disagreeing by direction (+60% vs −16%) suggests the true profile shape is NOT a rescaled tanh but a **qualitatively different function** $f_{\mathrm{SCC}}(s/\xi)$. Options:
 
-- (i) **Double-shouldered profile**: $f_{\mathrm{SCC}}$ has a flat region around $u = 0.5$, raising $|B|$ at the expense of sharpness.
+- (i) **Double-shouldered profile**: $f_{\mathrm{SCC}}$ has a flat region around $u = 0.5$, raising $\lvert B \rvert$ at the expense of sharpness.
 - (ii) **Skewed profile**: asymmetric in $u \to 1-u$, breaking tanh's parity.
 - (iii) **Shape modulated by graph topology**: non-radial contributions from $H_{\mathrm{cl,sep}}$'s anisotropic eigenvectors.
 
@@ -281,7 +281,7 @@ $\mathcal{L}_0 := -2\alpha\partial_x^2 + \beta W''(u_0)$ is the linearized Allen
 ### 11.4 Supra-Lattice Theorem
 
 > **Cor 2.2 Supra-Lattice Theorem (Round 9, Cat A).** In the regime $\xi_0 \gg a$:
-> $$\|u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot)\|_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),\qquad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4),$$
+> $$\lVert u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot) \rVert_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),\qquad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4),$$
 > with $C_p = O(1)$ numerical constant.
 
 **Pure tanh recovered exactly as $\xi_0/a \to \infty$, with quadratic convergence rate.**

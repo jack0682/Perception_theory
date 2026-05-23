@@ -62,7 +62,7 @@ For each $K' \in \{1, \ldots, K_{\mathrm{field}}\}$, the K'-active topological s
 
 ### §3.2 Saddle between K' and K'-1
 
-To transition K' → K'-1 (e.g., merger of formations $j, k$), the trajectory crosses a *saddle point* $u_s^{(jk)}$ on the boundary of $S_{K'}$ (where $\|u^{(j)}\|_1 \to 0$ or $\|u^{(k)}\|_1 \to 0$, or where $j, k$ coalesce).
+To transition K' → K'-1 (e.g., merger of formations $j, k$), the trajectory crosses a *saddle point* $u_s^{(jk)}$ on the boundary of $S_{K'}$ (where $\lVert u^{(j)} \rVert_1 \to 0$ or $\lVert u^{(k)} \rVert_1 \to 0$, or where $j, k$ coalesce).
 
 **Definition 3.1 ($\mathcal{P}$-conditioned K-jump barrier)**:
 $$\Delta\mathcal{E}_{K' \to K'-1}^{(jk)}(\mathcal{P}) := \mathcal{E}_\mathrm{SCC}(u_\mathrm{saddle}^{(jk)}(\mathcal{P});\mathcal{P}) - \mathcal{E}_\mathrm{SCC}(u_{\mathrm{min},K'}(\mathcal{P});\mathcal{P})$$
@@ -74,7 +74,7 @@ where $u_{\mathrm{min},K'}(\mathcal{P})$ is the local minimum in $\mathcal{A}_{K
 
 From Coupling Bound Lemma (canonical T-Persist-K-Sep) + V5b-T Goldstone analysis:
 - For well-separated formations $(j, k)$ at distance $d_{\min}$: barrier height
-$$\Delta E_{K' \to K'-1}^{(jk)} \sim \lambda_{\mathrm{rep}} \cdot m_j m_k / |X|^{d-2} + O(\exp(-c_0 d_{\min}))$$
+$$\Delta E_{K' \to K'-1}^{(jk)} \sim \lambda_{\mathrm{rep}} \cdot m_j m_k / \lvert X \rvert^{d-2} + O(\exp(-c_0 d_{\min}))$$
 (for $d$-dimensional graph; rough scaling).
 - For closely-spaced formations: barrier shrinks as $d_{\min} \to 0$, becoming $O(\lambda_{\mathrm{rep}} \cdot \mathrm{overlap})$ at near-merger.
 
@@ -237,7 +237,7 @@ If SCC K-jump cascade is **LSW-type coarsening** of formations (smaller formatio
 
 ### §8.2 Cat B pending
 
-- §3.3 barrier scaling estimate $\Delta E_{(jk)} \sim \lambda_{\mathrm{rep}} m_j m_k / |X|^{d-2}$: **Cat B sketch** — explicit analytical proof requires saddle-point analysis on $\widetilde\Sigma^K_M$ which is W7+ work.
+- §3.3 barrier scaling estimate $\Delta E_{(jk)} \sim \lambda_{\mathrm{rep}} m_j m_k / \lvert X \rvert^{d-2}$: **Cat B sketch** — explicit analytical proof requires saddle-point analysis on $\widetilde\Sigma^K_M$ which is W7+ work.
 - §4.4 cascade time $\tau_{\mathrm{cascade}}$: **Cat B** under time-scale-separation assumption (P-F flagged).
 - §7.3 V4 exponent $1.315$ analytical match: **Cat B target** — requires NQ-242 PH pipeline.
 - §7.4 LSW correspondence: **Cat B** sketch level; full SCC↔LSW identification W8+.

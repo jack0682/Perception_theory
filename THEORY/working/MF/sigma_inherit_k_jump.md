@@ -205,7 +205,7 @@ The inheritance residual $\mathcal{R}_\sigma$ (§4) measures the prediction erro
 The formation moves, deforms, and possibly rotates, but does not merge or split. The inherited
 signature is the updated signature at the new field configuration:
 
-$$\sigma_j^s = \Phi_\mathrm{CONT}(\sigma_i^t;\; M_{t \to s}\big|_{C_i^t \times C_j^s},\; u_s)$$
+$$\sigma_j^s = \Phi_\mathrm{CONT}(\sigma_i^t;\; M_{t \to s}\big\vert_{C_i^t \times C_j^s},\; u_s)$$
 
 In the **small-step regime** (small time increment $\delta t = s - t$, V3 condition):
 
@@ -230,7 +230,7 @@ gradient flow trajectory. For small $\delta t$: $\sigma_\mathrm{standard}(C_j^s)
 **Hypothesis for Cat B** (CONT-CAT-B): The map
 $\sigma_\mathrm{standard}(C_i^t) \mapsto \sigma_\mathrm{standard}(C_j^s)$ is continuous in
 the V3-separated stable-K regime, with Lipschitz constant bounded by the transport displacement
-$\|M_{t \to s} - I\|_F$.
+$\lVert M_{t \to s} - I \rVert_F$.
 
 ---
 
@@ -356,9 +356,9 @@ $d_\sigma$ is a distance on σ-space.
 
 **Choice of $d_\sigma$**: The σ-space distance decomposes per component:
 
-$$d_\sigma(\sigma, \sigma') = \alpha_c \|c - c'\|^2
-  + \alpha_\Theta \|\Theta - \Theta'\|_F^2
-  + \alpha_\lambda \|\lambda_\sigma - \lambda_{\sigma'}\|^2$$
+$$d_\sigma(\sigma, \sigma') = \alpha_c \lVert c - c' \rVert^2
+  + \alpha_\Theta \lVert \Theta - \Theta' \rVert_F^2
+  + \alpha_\lambda \lVert \lambda_\sigma - \lambda_{\sigma'} \rVert^2$$
 
 where $\lambda_\sigma$ is the vector of σ_standard eigenvalues.
 
@@ -369,8 +369,8 @@ the Hessian prediction (Cat C) capture the true post-merger signature.
 
 **For MERGE centroid+orientation sub-components** (Cat B claim):
 $$\mathcal{R}_\sigma^{c,\Theta}(i_1, i_2 \to j)
-  := \alpha_c \|c_j^s - c_j^{s,\mathrm{pred}}\|^2
-  + \alpha_\Theta \|\Theta_j^s - \Theta_j^{s,\mathrm{pred}}\|_F^2 \leq \delta_\mathrm{merge}$$
+  := \alpha_c \lVert c_j^s - c_j^{s,\mathrm{pred}} \rVert^2
+  + \alpha_\Theta \lVert \Theta_j^s - \Theta_j^{s,\mathrm{pred}} \rVert_F^2 \leq \delta_\mathrm{merge}$$
 
 for a small $\delta_\mathrm{merge}$ proportional to the post-merger relaxation displacement.
 
@@ -433,11 +433,11 @@ $$c_j^s = \frac{\sum_x u_j^s(x)\, x}{\sum_x u_j^s(x)}
 \approx \frac{\sum_x (u_{i_1}^t + u_{i_2}^t)(x)\, x}{m_{i_1}^t + m_{i_2}^t}
 = \frac{m_{i_1}^t c_{i_1}^t + m_{i_2}^t c_{i_2}^t}{m_{i_1}^t + m_{i_2}^t}$$
 
-The prediction error $\|c_j^s - c_j^{s,\mathrm{pred}}\|$ is bounded by the post-merger
-relaxation displacement $\|\delta u\|$ (the field change during post-merger optimization):
-$$\|c_j^s - c_j^{s,\mathrm{pred}}\| \leq \frac{\|\delta u\|_1 \cdot \mathrm{diam}(G)}{m_j^s}$$
+The prediction error $\lVert c_j^s - c_j^{s,\mathrm{pred}} \rVert$ is bounded by the post-merger
+relaxation displacement $\lVert \delta u \rVert$ (the field change during post-merger optimization):
+$$\lVert c_j^s - c_j^{s,\mathrm{pred}} \rVert \leq \frac{\lVert \delta u \rVert_1 \cdot \mathrm{diam}(G)}{m_j^s}$$
 
-In the well-separated regime with V3 condition, $\|\delta u\|_1$ is small (bounded by the
+In the well-separated regime with V3 condition, $\lVert \delta u \rVert_1$ is small (bounded by the
 basin radius from T-Persist-1). $\square$ (modulo V3 + H3).
 
 ---
@@ -629,7 +629,7 @@ Not implemented in Session W; plan only.
 - $u_t$: one Gaussian bump at $(5,5)$.
 - $u_s$: same bump translated to $(6,5)$ (small step).
 - Compute $\sigma_i^t$ and $\sigma_j^s$.
-- Compute $\mathcal{R}_\sigma^{c,\Theta}$: centroid residual $\|c_j^s - \hat{c}_j^s\|$ via transport prediction.
+- Compute $\mathcal{R}_\sigma^{c,\Theta}$: centroid residual $\lVert c_j^s - \hat{c}_j^s \rVert$ via transport prediction.
 - Verify: residual is small (< 0.1 grid units), proportional to displacement.
 
 ### §8.3 Scenario B: Merge (MERGE)
@@ -638,7 +638,7 @@ Not implemented in Session W; plan only.
 - $u_s$: one merged bump at $(10,10)$.
 - Compute σ_rich for each of $C_{i_1}^t, C_{i_2}^t$ and for $C_j^s$.
 - Apply $\Phi_\mathrm{MERGE}$: compute $c_j^{s,\mathrm{pred}}$ and $\Theta_j^{s,\mathrm{pred}}$.
-- Verify: $\|c_j^s - c_j^{s,\mathrm{pred}}\| < \delta_\mathrm{merge}$ (Cat B centroid residual).
+- Verify: $\lVert c_j^s - c_j^{s,\mathrm{pred}} \rVert < \delta_\mathrm{merge}$ (Cat B centroid residual).
 - Report: σ_standard residual (expected larger — Cat C gap).
 
 ### §8.4 Scenario C: Split (SPLIT)

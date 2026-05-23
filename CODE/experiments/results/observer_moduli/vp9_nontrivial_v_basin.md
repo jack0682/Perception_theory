@@ -9,7 +9,7 @@
 
 ## Method
 
-Build $V_{2,\tau}(\lambda) = -\tau \log(\exp(-D_1/\tau) + \exp(-D_2/\tau))$ with $D_i = \|P^{\mathrm{sm}}(\lambda) - y_i\|_2^2$ for two targets $y_1, y_2$ (cl-dominant and sep-dominant readouts).
+Build $V_{2,\tau}(\lambda) = -\tau \log(\exp(-D_1/\tau) + \exp(-D_2/\tau))$ with $D_i = \lVert P^{\mathrm{sm}}(\lambda) - y_i \rVert_2^2$ for two targets $y_1, y_2$ (cl-dominant and sep-dominant readouts).
 Evaluate on triangular Δ² grid; discrete gradient descent on the 6-neighbor adjacency; cluster grid points by attractor; report basin sizes and P^sm distinctness.
 
 ## Per-scene results

@@ -23,12 +23,12 @@ non-overclaim: 모든 Cat A 판정은 유한 site set + additive nonneg local ac
 
 $$t_0 < t_1 < \cdots < t_L, \quad \Delta t_i = t_{i+1} - t_i > 0$$
 
-각 시각 $t_i$의 site 집합 $X_i$ (유한; $|X_i| < \infty$).  
+각 시각 $t_i$의 site 집합 $X_i$ (유한; $\lvert X_i \rvert < \infty$).  
 단순화 시 $X_i = X$ 공통, 일반적으로 $X_i$ 상이 허용.
 
 ### Local action
 
-$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\|\varphi_{i+1}(y) - \varphi_i(x)\|^2}{\Delta t_i}, \quad x \in X_i,\; y \in X_{i+1}$$
+$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\lVert \varphi_{i+1}(y) - \varphi_i(x) \rVert^2}{\Delta t_i}, \quad x \in X_i,\; y \in X_{i+1}$$
 
 여기서:
 - $d_i(x,y)$: 공간 거리
@@ -60,7 +60,7 @@ $$c_{i\to k}^{\varepsilon}(x,z) = -\varepsilon \log K_{i\to k}(x,z)$$
 
 ## Lemma L-ENDPOINT-NONSEMI — Squared Endpoint Cost는 합성 불가
 
-**문장**: Squared endpoint cost $c^\mathrm{end}_{i\to k}(x,z) = \|z-x\|^2$는 일반적으로
+**문장**: Squared endpoint cost $c^\mathrm{end}_{i\to k}(x,z) = \lVert z-x \rVert^2$는 일반적으로
 
 $$c^\mathrm{end}_{i\to k}(x,z) \;\neq\; \min_{y} \!\left[c^\mathrm{end}_{i\to j}(x,y) + c^\mathrm{end}_{j\to k}(y,z)\right]$$
 
@@ -69,17 +69,17 @@ $$c^\mathrm{end}_{i\to k}(x,z) \;\neq\; \min_{y} \!\left[c^\mathrm{end}_{i\to j}
 **증명** ($\mathbb{R}^1$, $x=0$, $z=2$):
 
 직접:
-$$c^\mathrm{end}_{0\to2}(0,2) = |2-0|^2 = 4$$
+$$c^\mathrm{end}_{0\to2}(0,2) = \lvert 2-0 \rvert^2 = 4$$
 
 중간점 $y=1$ 경유:
-$$c^\mathrm{end}_{0\to1}(0,1) + c^\mathrm{end}_{1\to2}(1,2) = |1|^2 + |1|^2 = 2$$
+$$c^\mathrm{end}_{0\to1}(0,1) + c^\mathrm{end}_{1\to2}(1,2) = \lvert 1 \rvert^2 + \lvert 1 \rvert^2 = 2$$
 
 $\min_y \leq 2 < 4$이므로 equality 불성립.  
 반례 존재이므로 일반적으로 성립하지 않는다. $\blacksquare$
 
 **검증 메모**:
-- 우변의 $\min_y$ 값은 $y = (x+z)/2 = 1$에서 최소 $\|z-x\|^2/2$를 가짐.
-- $\|z-x\|^2 \neq \|z-x\|^2/2$ (일반적), 등호는 $x=z$일 때만.
+- 우변의 $\min_y$ 값은 $y = (x+z)/2 = 1$에서 최소 $\lVert z-x \rVert^2/2$를 가짐.
+- $\lVert z-x \rVert^2 \neq \lVert z-x \rVert^2/2$ (일반적), 등호는 $x=z$일 때만.
 - 이 lemma의 의미: endpoint cost는 "경로를 통한 계승"이 아니라 "직접 유사성"만 측정함.
   SCC temporal identity의 목적과 어긋남.
 
@@ -95,7 +95,7 @@ $$y = \frac{r-s}{r-t}\,x + \frac{s-t}{r-t}\,z$$
 
 에서 time-normalized squared cost는 additive:
 
-$$\frac{\|z-x\|^2}{r-t} = \frac{\|y-x\|^2}{s-t} + \frac{\|z-y\|^2}{r-s}$$
+$$\frac{\lVert z-x \rVert^2}{r-t} = \frac{\lVert y-x \rVert^2}{s-t} + \frac{\lVert z-y \rVert^2}{r-s}$$
 
 **증명**:
 
@@ -103,19 +103,19 @@ $$\frac{\|z-x\|^2}{r-t} = \frac{\|y-x\|^2}{s-t} + \frac{\|z-y\|^2}{r-s}$$
 $$y-x = \frac{s-t}{r-t}(z-x), \qquad z-y = \frac{r-s}{r-t}(z-x)$$
 
 계산:
-$$\frac{\|y-x\|^2}{s-t} = \frac{\left(\frac{s-t}{r-t}\right)^2\|z-x\|^2}{s-t} = \frac{s-t}{(r-t)^2}\|z-x\|^2$$
+$$\frac{\lVert y-x \rVert^2}{s-t} = \frac{\left(\frac{s-t}{r-t}\right)^2\lVert z-x \rVert^2}{s-t} = \frac{s-t}{(r-t)^2}\lVert z-x \rVert^2$$
 
-$$\frac{\|z-y\|^2}{r-s} = \frac{\left(\frac{r-s}{r-t}\right)^2\|z-x\|^2}{r-s} = \frac{r-s}{(r-t)^2}\|z-x\|^2$$
+$$\frac{\lVert z-y \rVert^2}{r-s} = \frac{\left(\frac{r-s}{r-t}\right)^2\lVert z-x \rVert^2}{r-s} = \frac{r-s}{(r-t)^2}\lVert z-x \rVert^2$$
 
 합산:
-$$\frac{s-t}{(r-t)^2}\|z-x\|^2 + \frac{r-s}{(r-t)^2}\|z-x\|^2 = \frac{(s-t)+(r-s)}{(r-t)^2}\|z-x\|^2 = \frac{\|z-x\|^2}{r-t}$$
+$$\frac{s-t}{(r-t)^2}\lVert z-x \rVert^2 + \frac{r-s}{(r-t)^2}\lVert z-x \rVert^2 = \frac{(s-t)+(r-s)}{(r-t)^2}\lVert z-x \rVert^2 = \frac{\lVert z-x \rVert^2}{r-t}$$
 
 $\blacksquare$
 
 **검증 메모**:
 - 이 정리는 "등속 경로에서만" 성립함. 일반 경로에서는 부등호 ($\geq$) 방향.
 - Local action의 $d^2/\Delta t$ 항 설계 근거: $1/\Delta t$ normalization이 없으면 합성 시 오차 발생.
-- 연속 시간 버전: $\int_t^r \|\dot\xi(\tau)\|^2 d\tau$의 등속 최소값이 $\|z-x\|^2/(r-t)$.
+- 연속 시간 버전: $\int_t^r \lVert \dot\xi(\tau) \rVert^2 d\tau$의 등속 최소값이 $\lVert z-x \rVert^2/(r-t)$.
 
 **판정**: $\boxed{\text{Cat A}}$
 
@@ -262,7 +262,7 @@ $\varepsilon \to 0$ 극한에서 $c^{\varepsilon} \to c^{\mathrm{act}}$ (soft-mi
 
 **검증 메모**:
 - bound가 tight함: $a_i$가 모두 $m$이면 soft-min = $m$ (상한 달성); $a_i$가 균등 분포되면 soft-min → $m - \varepsilon\log N$ (하한 달성).
-- $|X_j|$에 의존하므로 site 수가 많으면 gap이 커짐. Fingerprint well-separation 조건 하에서 effective 최솟값 항 1개 지배 → gap 감소.
+- $\lvert X_j \rvert$에 의존하므로 site 수가 많으면 gap이 커짐. Fingerprint well-separation 조건 하에서 effective 최솟값 항 1개 지배 → gap 감소.
 
 **판정**: $\boxed{\text{Cat A}}$
 
@@ -276,7 +276,7 @@ $$c_{i\to k}^{\mathrm{eff}}(x,z) = \min_{y \in X_j}\!\left[c_{i\to j}^{\mathrm{a
 
 로 정의하면:
 
-$$\boxed{\delta_{\mathrm{eff}} = \left\|c_{i\to k}^{\mathrm{act}} - c_{i\to k}^{\mathrm{eff}}\right\|_\infty = 0}$$
+$$\boxed{\delta_{\mathrm{eff}} = \left\lVert c_{i\to k}^{\mathrm{act}} - c_{i\to k}^{\mathrm{eff}}\right \rVert_\infty = 0}$$
 
 **증명**:
 
@@ -289,7 +289,7 @@ sup norm 차이는 0. $\blacksquare$
 **중요한 조건 (non-overclaim)**:
 
 > 이 결과는 $c_{i\to k}^{\mathrm{direct}}$를 **action cost로 재정의**했을 때만 성립한다.
-> 기존 endpoint cost $\|z-x\|^2$ 또는 fingerprint similarity cost로 정의한 direct cost에는 적용 불가.
+> 기존 endpoint cost $\lVert z-x \rVert^2$ 또는 fingerprint similarity cost로 정의한 direct cost에는 적용 불가.
 > 또한 이것은 raw action cost level의 결과이며,  
 > **Sinkhorn-scaled plan과는 무관**하다.
 
@@ -339,7 +339,7 @@ $$c_{i\to k}^{\varepsilon}(x,z) = -\varepsilon\log\sum_y \exp\!\left(-\frac{c_{i
 
 **문장**: SCC fingerprint action
 
-$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\|\varphi_{i+1}(y)-\varphi_i(x)\|^2}{\Delta t_i}$$
+$$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2}{\Delta t_i}$$
 
 는 다음을 만족:
 1. $a_i(x,y) \geq 0$ (nonnegativity)
@@ -348,7 +348,7 @@ $$a_i(x,y) = \frac{d_i(x,y)^2}{\Delta t_i} + \gamma\frac{\|\varphi_{i+1}(y)-\var
 
 **증명**:
 
-(1) $d_i(x,y)^2 \geq 0$ (거리의 제곱), $\|\varphi_{i+1}(y)-\varphi_i(x)\|^2 \geq 0$ (norm square), $\Delta t_i > 0$, $\gamma \geq 0$이므로 $a_i(x,y) \geq 0$. $\checkmark$
+(1) $d_i(x,y)^2 \geq 0$ (거리의 제곱), $\lVert \varphi_{i+1}(y)-\varphi_i(x) \rVert^2 \geq 0$ (norm square), $\Delta t_i > 0$, $\gamma \geq 0$이므로 $a_i(x,y) \geq 0$. $\checkmark$
 
 (2) Path action은 정의상 local action의 합산이므로 additivity 자동 성립. $\checkmark$
 

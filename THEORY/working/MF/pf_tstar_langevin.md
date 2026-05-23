@@ -351,7 +351,7 @@ for all $\varepsilon \in [0,1]$. Since $h$ is continuous and $\mathcal{F}_M$ is 
 $$Z_\varepsilon = \int g_\varepsilon \, d\sigma \xrightarrow{\varepsilon \to 0} \int g_0 \, d\sigma = Z_0 > 0$$
 
 **Step 4. Convergence of expectations.**
-Let $|f| \leq M_f$. Write:
+Let $\lvert f \rvert \leq M_f$. Write:
 
 $$\int f \, d\mu_\varepsilon - \int f \, d\mu_0 = \frac{1}{Z_\varepsilon}\int f \cdot g_\varepsilon \, d\sigma - \frac{1}{Z_0}\int f \cdot g_0 \, d\sigma$$
 
@@ -507,7 +507,7 @@ This **derives** $T_*$ from deterministic dynamics + slow/fast separation. No ex
 **Question.** Fisher information $\mathcal{I}(u^*)$ defines a Riemannian metric on $\mathcal{F}_M$. SCC Hessian $H = \nabla^2 E$ also defines a metric. Compatibility?
 
 **Lemma 24 (Fisher ↔ Hessian compatibility, Cat C):** *Under canonical $\Phi_\mathrm{obs}$ + LM1–LM3, the Fisher metric is conformal to the boundary-restriction of the SCC Hessian:*
-$$\mathcal{I}_\mathrm{Fisher}(u^*)\big|_{\partial\mathrm{Core}} = T_*^{(\mathrm{Fisher})} \cdot H\big|_{\partial\mathrm{Core}}.$$
+$$\mathcal{I}_\mathrm{Fisher}(u^*)\big\vert_{\partial\mathrm{Core}} = T_*^{(\mathrm{Fisher})} \cdot H\big\vert_{\partial\mathrm{Core}}.$$
 
 **Status:** Cat C, sketched. Compatible with Lemma 14 (combined Fisher + RG). Difficulty: 1 session.
 

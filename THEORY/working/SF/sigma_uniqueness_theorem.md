@@ -119,7 +119,7 @@ where $M_\lambda := \lceil 9\mu_2/\Delta\lambda \rceil$ is the eigenvalue resolu
 - $[\rho_k^{(1)}]$ and $[\rho_k^{(2)}]$ are conjugate in $\widehat{G_{u^*}}$ for all $k$;
 - $|\lambda_k^{(1)} - \lambda_k^{(2)}| < \epsilon_\lambda$ for some tolerance $\epsilon_\lambda$ (default: $10^{-6} \mu_2$ per `exp_hessian_uniform_v2.json` precision).
 
-**Expected outcome.** Per OAT-7's PH-vs-σ analysis (working/MF/single_high_F_equivalence.md §5), the (F=51, K=5) pair with $p$-dominant vs $g$-dominant modes belongs to **distinct σ-classes** but identical PH classes. This implies $|\sigma\text{-classes}| > |\text{PH classes}|$; σ refines PH. Empirically: 6 orbital letters × per-letter sub-clusters ≈ 8–14 σ-classes (rough estimate; actual count requires running the protocol above on R23).
+**Expected outcome.** Per OAT-7's PH-vs-σ analysis (working/MF/single_high_F_equivalence.md §5), the (F=51, K=5) pair with $p$-dominant vs $g$-dominant modes belongs to **distinct σ-classes** but identical PH classes. This implies $|\sigma\text{-classes}\lvert > \rvert\text{PH classes}|$; σ refines PH. Empirically: 6 orbital letters × per-letter sub-clusters ≈ 8–14 σ-classes (rough estimate; actual count requires running the protocol above on R23).
 
 **Falsifiable prediction (BC-188-emp).** $|\sigma\text{-classes}(R23)| \in [6, 20]$, strictly less than the 56 minimizer count. Run via:
 ```python
@@ -175,7 +175,7 @@ This is a universality claim: the σ-class count is determined by the symmetry g
 
 **Proof sketch of (i).**
 
-*Finiteness argument.* Bound 4.1 establishes $|\sigma\text{-classes}| \leq C \cdot |\widehat{G_u}|^K \cdot \mathcal{F}_{\max}$ at fixed resolution $\Delta\lambda$. For finite graphs, $G_u \subseteq \mathrm{Aut}(G)$ is finite, so $\widehat{G_u}$ is finite. $K$ is finite per (O3) cutoff. $\mathcal{F}_{\max}$ is finite per $\mathcal{F}(u^*) \leq |X|$ (every site is a candidate local max). Hence $|\sigma\text{-classes}|$ is finite. $\Box$ **Cat A.**
+*Finiteness argument.* Bound 4.1 establishes $|\sigma\text{-classes}| \leq C \cdot |\widehat{G_u}|^K \cdot \mathcal{F}_{\max}$ at fixed resolution $\Delta\lambda$. For finite graphs, $G_u \subseteq \mathrm{Aut}(G)$ is finite, so $\widehat{G_u}$ is finite. $K$ is finite per (O3) cutoff. $\mathcal{F}_{\max}$ is finite per $\mathcal{F}(u^*) \leq \lvert X \rvert$ (every site is a candidate local max). Hence $|\sigma\text{-classes}|$ is finite. $\Box$ **Cat A.**
 
 *Proof sketch of (ii).* Parameter continuity. As $(\alpha, \beta, c)$ vary smoothly within spinodal interior away from pitchfork bifurcations, $\mathcal{L}(G, \alpha, \beta, c)$ varies smoothly (implicit function theorem on $\nabla\mathcal{E} = 0$ equation). σ-tuples assigned by Lemma 1 (ii) project + Lemma 2 (i) nodal count are determined by Hessian eigenvector signs and irrep labels — both **locally constant** in parameter (eigenvalue ordering and irrep types do not change without crossing a bifurcation surface). On parameter strata where $\mathcal{F}_{\max}$ is constant, σ-class count is locally constant. **Cat B target** — full proof requires bifurcation-surface analysis which is open.
 

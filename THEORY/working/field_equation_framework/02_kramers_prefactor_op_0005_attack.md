@@ -196,7 +196,7 @@ with `ω_well^{1D} = √(V''(x_well))`, `ω_saddle^{1D} = √(|V''(x_saddle)|)`.
 
 Hänggi–Talkner–Borkovec 1990 eq. (4.56), multi-dimensional overdamped spatial-diffusion regime (Langer 1969 generalization):
 
-$$\boxed{\omega_0^{\mathrm{multi\text{-}D}} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \sqrt{\frac{|\det \mathrm{Hess}(V)(x_{\mathrm{well}})|}{|\det' \mathrm{Hess}(V)(x_{\mathrm{saddle}})|}}}$$
+$$\boxed{\omega_0^{\mathrm{multi\text{-}D}} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi} \cdot \sqrt{\frac{|\det \mathrm{Hess}(V)(x_{\mathrm{well}})\lvert }{ \rvert\det' \mathrm{Hess}(V)(x_{\mathrm{saddle}})|}}}$$
 
 with `det'` denoting the product over **non-zero eigenvalues** (excluding the single negative one and any zero / Goldstone modes). The Eyring–Kramers rate is
 
@@ -206,7 +206,7 @@ $$\Gamma^{\mathrm{multi\text{-}D}} = \omega_0^{\mathrm{multi\text{-}D}} \cdot \e
 
 Parent file `01_ns_inspired_synthesis.md` §6 row 12 defines
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} := \frac{|\mu_{\mathrm{well}}|}{|\mu_{\mathrm{saddle}}|}.$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} := \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}.$$
 
 Identity 2 (parent §7.2, boxed):
 
@@ -273,7 +273,7 @@ and 1D-projected reduced forms (parent §7.2 — *Identity 2 SPLIT into 2a + 2b 
 **Identity 2a (Pr^{(Kramers)} reduction, structural leading order)**:
 $$\omega_0^{\mathrm{SCC},\,2a} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \frac{|\mu_{\mathrm{saddle}}|}{2\pi}$$
 
-(Algebraic verification: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \sqrt{|\mu_{\mathrm{well}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}|/|\mu_{\mathrm{well}}|} = |\mu_{\mathrm{saddle}}|$.)
+(Algebraic verification: $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = \sqrt{|\mu_{\mathrm{well}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}|}\cdot\sqrt{|\mu_{\mathrm{saddle}}\lvert / \rvert\mu_{\mathrm{well}}\lvert } = \rvert\mu_{\mathrm{saddle}}|$.)
 
 **Identity 2b (1D-projection geometric mean form)**:
 $$\omega_0^{\mathrm{SCC},\,2b} = \frac{1}{2\pi} \sqrt{\mu_{\mathrm{well}} \cdot |\mu_{\mathrm{saddle}}|} = \frac{1}{2\pi} \cdot \omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}$$
@@ -376,7 +376,7 @@ A K-jump saddle between `K=1` and `K=2` formations at `β/α = 10` on `T^2_{16}`
 
 ### §6.4 Pr^{(Kramers)} and prefactor
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}|}{|\mu_{\mathrm{saddle}}|} \sim \frac{10}{30} \approx 0.33.$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|} \sim \frac{10}{30} \approx 0.33.$$
 
 Reduced 1D-projection prefactor (parent §7.2 Identity 2):
 

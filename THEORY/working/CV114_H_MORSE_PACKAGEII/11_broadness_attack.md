@@ -29,7 +29,7 @@ be the canonical sigmoid closure (canonical §9.2). Assume the canonical A3 cont
 Then for any $u^* \in [0,1]^n$:
 
 (i) The closure Jacobian $J_{\mathrm{Cl}}(u^*) = \mathrm{diag}(\sigma'(z(u^*)) \cdot a_{\mathrm{cl}}) \cdot M$ with $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ satisfies
-$$\|J_{\mathrm{Cl}}(u^*)\|_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1.$$
+$$\lVert J_{\mathrm{Cl}}(u^*) \rVert_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1.$$
 
 (ii) The Gauss-Newton lower bound on the closure Hessian holds uniformly:
 $$2 (I - J_{\mathrm{Cl}}(u^*))^\top D (I - J_{\mathrm{Cl}}(u^*)) \;\succeq\; 2(1 - a_{\mathrm{cl}}/4)^2 \cdot D.$$
@@ -49,20 +49,20 @@ The proof is in `THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md �
 
 **Step 1 (Lemma B1' — degree-weighted self-adjointness of $P$).** For symmetric $W$, the row-stochastic operator $P = D^{-1} W$ is self-adjoint on the degree-weighted inner product $\langle u, v\rangle_D := u^\top D v$:
 $$\langle Pu, v\rangle_D = u^\top P^\top D v = u^\top W v = u^\top D P v = \langle u, P v\rangle_D.$$
-Hence $\|P\|_{D \to D} = \rho(P) = 1$ (Perron eigenvalue, eigenvector $\mathbf{1}$).
+Hence $\lVert P \rVert_{D \to D} = \rho(P) = 1$ (Perron eigenvalue, eigenvector $\mathbf{1}$).
 
-**Step 2 (Convex combination).** $M = (1 - \eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P$ with $\eta_{\mathrm{cl}} \in [0,1]$. Since $\|I\|_{D \to D} = 1 = \|P\|_{D \to D}$, by convexity $\|M\|_{D \to D} \leq 1$.
+**Step 2 (Convex combination).** $M = (1 - \eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P$ with $\eta_{\mathrm{cl}} \in [0,1]$. Since $\lVert I \rVert_{D \to D} = 1 = \lVert P \rVert_{D \to D}$, by convexity $\lVert M \rVert_{D \to D} \leq 1$.
 
-**Step 3 (Sigmoid bound).** $\sigma'(z) = \sigma(z)(1 - \sigma(z)) \leq 1/4$ for all real $z$. Hence $\|\mathrm{diag}(\sigma' \cdot a_{\mathrm{cl}})\|_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4$.
+**Step 3 (Sigmoid bound).** $\sigma'(z) = \sigma(z)(1 - \sigma(z)) \leq 1/4$ for all real $z$. Hence $\lVert \mathrm{diag}(\sigma' \cdot a_{\mathrm{cl}}) \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4$.
 
 **Step 4 (Composition).** $J_{\mathrm{Cl}} = D_\sigma M$ with $D_\sigma = \mathrm{diag}(\sigma' a_{\mathrm{cl}})$. We have $D_\sigma$ as a diagonal positive scaling, which is self-adjoint on $\langle\cdot,\cdot\rangle_D$ (since diagonal matrices commute with $D$ in the inner-product structure). Then
-$$\|J_{\mathrm{Cl}}\|_{D \to D} = \|D_\sigma M\|_{D \to D} \leq \|D_\sigma\|_{D \to D} \cdot \|M\|_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} \cdot 1 = \frac{a_{\mathrm{cl}}}{4}.$$
+$$\lVert J_{\mathrm{Cl}} \rVert_{D \to D} = \lVert D_\sigma M \rVert_{D \to D} \leq \lVert D_\sigma \rVert_{D \to D} \cdot \lVert M \rVert_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} \cdot 1 = \frac{a_{\mathrm{cl}}}{4}.$$
 
 This is *less than 1* by canonical A3 ($a_{\mathrm{cl}} < 4$). Statement (i) proved.
 
 **Step 5 (Lower bound on $I - J_{\mathrm{Cl}}$).** For any $v \in \mathbb{R}^n$:
-$$\|(I - J_{\mathrm{Cl}}) v\|_D \geq \|v\|_D - \|J_{\mathrm{Cl}} v\|_D \geq (1 - a_{\mathrm{cl}}/4) \|v\|_D.$$
-Squaring: $\langle (I - J_{\mathrm{Cl}}) v, (I - J_{\mathrm{Cl}}) v\rangle_D \geq (1 - a_{\mathrm{cl}}/4)^2 \|v\|_D^2$. Statement (ii) proved.
+$$\lVert (I - J_{\mathrm{Cl}}) v \rVert_D \geq \lVert v \rVert_D - \lVert J_{\mathrm{Cl}} v \rVert_D \geq (1 - a_{\mathrm{cl}}/4) \lVert v \rVert_D.$$
+Squaring: $\langle (I - J_{\mathrm{Cl}}) v, (I - J_{\mathrm{Cl}}) v\rangle_D \geq (1 - a_{\mathrm{cl}}/4)^2 \lVert v \rVert_D^2$. Statement (ii) proved.
 
 **Step 6 (Standard-$\ell^2$ form).** Using $d_{\min} I \preceq D \preceq d_{\max} I$:
 $$d_{\max} \cdot A^\top A \succeq A^\top D A \succeq (1 - a_{\mathrm{cl}}/4)^2 D \succeq (1 - a_{\mathrm{cl}}/4)^2 d_{\min} \cdot I,$$
@@ -93,7 +93,7 @@ Approach (a) is **redundant** with (b) but provides independent verification. Th
 - **Procedure:** `find_formation` → projected Hessian via FD → eigendecomposition → check $\mu_{\min} > 0$ + L-CLOSURE-LIFT prediction.
 - **Result:** **15/15 PASS** for both broadness and lift.
 - **Quantitative:** $\mu_{\min}(\Pi_T H_{\mathrm{cl}} \Pi_T) \in [0.45, 0.79]$, exceeding Theorem B2 standard-form prediction (~0.0075) by ~60×. The conservative prediction reflects $d_{\min}/d_{\max}$ and worst-case $\sigma'$; actual sigmoid derivative at saturated minimizers is much smaller, making the lift stronger.
-- **Residual norm:** $\|r\|_2 \in [0.73, 2.33]$ — large in absolute terms but does not break $\mu_{\min} > 0$, because residual contribution is concentrated in the boundary band where $|\sigma''| \approx 0$ at saturated minimizers.
+- **Residual norm:** $\lVert r \rVert_2 \in [0.73, 2.33]$ — large in absolute terms but does not break $\mu_{\min} > 0$, because residual contribution is concentrated in the boundary band where $|\sigma''| \approx 0$ at saturated minimizers.
 - **Regression check:** Full test suite passes (215 passed, 1 xfailed).
 
 Results: `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.{json, md}`.
@@ -146,7 +146,7 @@ The CV114 final recommendation in `09_CV114_recommendation.md` ("Path B — H-MO
 
 ## §8. Non-Overclaim (preserved into CV-1.16+ entry)
 
-- **L-CLOSURE-LIFT is the Gauss-Newton (linearized) part.** The full $H_{\mathrm{cl}}$ has an additional residual-correction term $2 \sum_k (Cl(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$. At full-energy critical points, this residual is small but nonzero. Numerical: $\|r\|_2$ moderate (up to ~2.3 on 15×15) but residual-correction *contribution* to $\mu_{\min}$ is small because $|\sigma''| \approx 0$ at saturated nodes.
+- **L-CLOSURE-LIFT is the Gauss-Newton (linearized) part.** The full $H_{\mathrm{cl}}$ has an additional residual-correction term $2 \sum_k (Cl(u^*)_k - u^*_k) \nabla^2 \mathrm{Cl}_k(u^*)$. At full-energy critical points, this residual is small but nonzero. Numerical: $\lVert r \rVert_2$ moderate (up to ~2.3 on 15×15) but residual-correction *contribution* to $\mu_{\min}$ is small because $|\sigma''| \approx 0$ at saturated nodes.
 - **L-CLOSURE-LIFT is only the closure component.** Full L-HMORSE-LOCAL also requires $H_{\mathrm{bd}} + H_{\mathrm{sep}}$ contributions. Total $\mu_{\min}$ depends on combined behavior; see L-HMORSE-DECOMP (`02_development.md §3`).
 - **D-HMORSE-LOCAL conditions (C1)–(C5) or (C2′) variant required.** L-CLOSURE-LIFT alone is parameter-graph-independent (just needs $a_{\mathrm{cl}} < 4$ + connected graph). L-HMORSE-LOCAL needs the symmetry-broken + active-set conditions of D-HMORSE-LOCAL.
 - **Cat A is for the closure-component bound, not for L-HMORSE-LOCAL as a whole.** L-HMORSE-LOCAL is Cat B unconditional (analytic + numerical); Cat A path goes via OP-HMORSE-LOCAL-A (OP-HMORSE-SBM extension + sharper residual + active-set treatment).

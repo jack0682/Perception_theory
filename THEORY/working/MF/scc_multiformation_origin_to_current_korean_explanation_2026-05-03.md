@@ -1420,7 +1420,7 @@ canonical SCC는 primitive field로부터 다음 derived geometry를 만든다.
 | Interior | $\mathrm{Int}_t(u_t)=\{x:u_t(x)\ge\theta_{\mathrm{in}}\}$ | core를 포함하는 내부 영역 |
 | Boundary band | $\mathrm{Bd}_t(u_t)=\{x:\theta_1<u_t(x)<\theta_2\}$ | sharp line이 아니라 transition band |
 | Exterior | $\mathrm{Ext}_t(u_t)=\{x:u_t(x)\le\theta_{\mathrm{ext}}\}$ | distinction을 측정하는 외부 |
-| gradient indicator | $g_t(x;u)=\sum_y N_t(x,y)|u_t(x)-u_t(y)|$ | boundary / transition intensity |
+| gradient indicator | $g_t(x;u)=\sum_y N_t(x,y)\lvert u_t(x)-u_t(y) \rvert$ | boundary / transition intensity |
 | morphology quality | $\mathcal Q_{\mathrm{morph}}$ | persistence-based morphology diagnostic |
 
 쉬운 말로 하면, canonical SCC는 “object boundary”를 선으로 먼저 긋지 않는다. field의 core, interior, boundary band, exterior가 먼저 정의되고, object-like boundary는 그 뒤의 해석이다.

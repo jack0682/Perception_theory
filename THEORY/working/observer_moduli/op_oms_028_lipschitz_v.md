@@ -25,13 +25,13 @@ Classification: **PROVED** with explicit constant.
 ## §1. Statement
 
 **Theorem L1 (Global Lipschitz bound for $v$).** Let
-$$M_i := \sup_{u \in \Omega} |E_i(u; X_t)|, \quad i \in \{cl, sep, bd, tr\}, \qquad M := (M_{cl}, M_{sep}, M_{bd}, M_{tr}).$$
+$$M_i := \sup_{u \in \Omega} \lvert E_i(u; X_t) \rvert, \quad i \in \{cl, sep, bd, tr\}, \qquad M := (M_{cl}, M_{sep}, M_{bd}, M_{tr}).$$
 Then for all $\lambda, \lambda' \in \Delta^3$:
 
-$$|v(\lambda) - v(\lambda')| \le \|M\|_\infty \cdot \|\lambda - \lambda'\|_1 \quad \text{and} \quad |v(\lambda) - v(\lambda')| \le \|M\|_2 \cdot \|\lambda - \lambda'\|_2.$$
+$$|v(\lambda) - v(\lambda')| \le \lVert M \rVert_\infty \cdot \lVert \lambda - \lambda' \rVert_1 \quad \text{and} \quad |v(\lambda) - v(\lambda')| \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2.$$
 
 In particular $v$ is **globally** Lipschitz on $\Delta^3$ with constant
-$L_2 := \|M\|_2$ (Euclidean norm) and $L_\infty := \|M\|_\infty$
+$L_2 := \lVert M \rVert_2$ (Euclidean norm) and $L_\infty := \lVert M \rVert_\infty$
 (componentwise sup).
 
 ---
@@ -42,7 +42,7 @@ For each fixed $u \in \Omega$, $L_u(\lambda) := E_\lambda(u) = \sum_{i} \lambda_
 is **affine** in $\lambda$ with gradient $\nabla_\lambda L_u = (E_{cl}, E_{sep}, E_{bd}, E_{tr})(u) =: E(u) \in \mathbb{R}^4$.
 Hence
 
-$$|L_u(\lambda) - L_u(\lambda')| = |\langle E(u),\ \lambda - \lambda' \rangle|.$$
+$$|L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u),\ \lambda - \lambda' \rangle|.$$
 
 The infimum-of-affine value function $v(\lambda) = \inf_{u \in \Omega} L_u(\lambda)$
 satisfies, for any $\lambda, \lambda'$:
@@ -57,27 +57,27 @@ $v(\lambda') \le L_{u_\epsilon}(\lambda') = L_{u_\epsilon}(\lambda) + (L_{u_\eps
 by symmetry and $\epsilon \to 0$, $|v(\lambda') - v(\lambda)| \le \sup_u |L_u(\lambda) - L_u(\lambda')|$.)
 
 For each $u$, by Cauchy–Schwarz / Hölder:
-$$|L_u(\lambda) - L_u(\lambda')| = |\langle E(u), \lambda - \lambda'\rangle| \le \|E(u)\|_2 \cdot \|\lambda - \lambda'\|_2$$
-$$\quad \text{and} \quad \le \|E(u)\|_\infty \cdot \|\lambda - \lambda'\|_1.$$
+$$|L_u(\lambda) - L_u(\lambda')\lvert = \rvert\langle E(u), \lambda - \lambda'\rangle| \le \lVert E(u) \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$$
+$$\quad \text{and} \quad \le \lVert E(u) \rVert_\infty \cdot \lVert \lambda - \lambda' \rVert_1.$$
 
 Taking the supremum over $u \in \Omega$:
-$$\sup_u \|E(u)\|_2 = \sup_u \sqrt{\sum_i E_i(u)^2} \le \sqrt{\sum_i M_i^2} = \|M\|_2,$$
-$$\sup_u \|E(u)\|_\infty = \max_i \sup_u |E_i(u)| = \max_i M_i = \|M\|_\infty.$$
+$$\sup_u \lVert E(u) \rVert_2 = \sup_u \sqrt{\sum_i E_i(u)^2} \le \sqrt{\sum_i M_i^2} = \lVert M \rVert_2,$$
+$$\sup_u \lVert E(u) \rVert_\infty = \max_i \sup_u \lvert E_i(u) \rvert = \max_i M_i = \lVert M \rVert_\infty.$$
 
-Combining: $|v(\lambda) - v(\lambda')| \le \|M\|_2 \cdot \|\lambda - \lambda'\|_2$ and the $\ell_1$ version. $\square$
+Combining: $|v(\lambda) - v(\lambda')| \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$ and the $\ell_1$ version. $\square$
 
 ---
 
 ## §3. Explicit bounds on $M_i$
 
-The constant $L_2 = \|M\|_2$ is in turn bounded by the explicit energy
+The constant $L_2 = \lVert M \rVert_2$ is in turn bounded by the explicit energy
 bounds. From `scc/energy.py` and `definitions.md` DEF-1:
 
 ### $M_{cl}$ (closure energy).
 
 $E_{cl}(u; X_t)$ is a non-negative resolvent-based functional bounded by:
 
-$$M_{cl} \le \|u\|_\infty^2 \cdot \frac{1}{1 - \alpha_C \rho(W_{\mathrm{sym}})} \le \frac{1}{1 - \alpha_C \rho(W_{\mathrm{sym}})}$$
+$$M_{cl} \le \lVert u \rVert_\infty^2 \cdot \frac{1}{1 - \alpha_C \rho(W_{\mathrm{sym}})} \le \frac{1}{1 - \alpha_C \rho(W_{\mathrm{sym}})}$$
 
 since $u \in [0,1]^n$. The ParameterRegistry default $\alpha_C \rho(W_{\mathrm{sym}}) < 1$
 (Tier 1 constraint, `params.py`) ensures this bound is finite.
@@ -96,7 +96,7 @@ So $M_{sep} \le m$ where $m$ is the mass.
 
 $E_{bd}(u) = 2\alpha\, u^\top L u + \beta \sum_i W(u_i)$ with $W(u) = u^2(1-u)^2 \in [0, 1/16]$.
 Hence:
-$$u^\top L u \le \rho(L) \cdot \|u\|_2^2 \le \rho(L) \cdot n,$$
+$$u^\top L u \le \rho(L) \cdot \lVert u \rVert_2^2 \le \rho(L) \cdot n,$$
 $$\sum_i W(u_i) \le \frac{n}{16}.$$
 
 So $M_{bd} \le 2\alpha \rho(L) n + \beta n / 16$.
@@ -123,12 +123,12 @@ $\beta = 10$ — defaults from `ParameterRegistry`), the bounds become
    $M_{bd} \le 600$.
 - $M_{tr} = 0$ on static.
 
-So $\|M\|_2 \approx \sqrt{1 + 117 + 360000} \approx 600$ — dominated by
+So $\lVert M \rVert_2 \approx \sqrt{1 + 117 + 360000} \approx 600$ — dominated by
 the boundary term.
 
 These bounds are **conservative**; the actual values from the optimizer
 are much smaller because $u^*$ does not saturate the bounds. From VP-6
-data, $\|E\|_2$ at typical $u^*$ is order 1 (consistent with VP-6
+data, $\lVert E \rVert_2$ at typical $u^*$ is order 1 (consistent with VP-6
 $\sigma_{\max}$ avg of 4.22 multiplied by typical FD step / readout
 rescaling).
 
@@ -166,7 +166,7 @@ follows.
 
 | Claim | Status |
 |---|---|
-| Global Lipschitz constant $L_2 = \|M\|_2$ for $v$ on $\Delta^3$ | **PROVED** (Theorem L1) |
+| Global Lipschitz constant $L_2 = \lVert M \rVert_2$ for $v$ on $\Delta^3$ | **PROVED** (Theorem L1) |
 | Explicit $L_2$ bound for S3-like scenes | $L_2 \le O(\rho(L) \cdot n)$ ≈ 600; **PROVED** (conservative); VP-6 empirical $L_2 \approx 4$ |
 | $v$ strictly concave off $\Sigma_{\mathrm{branch}}$ | **PROVED** (L2, conditional on energy gradient distinguishability) |
 

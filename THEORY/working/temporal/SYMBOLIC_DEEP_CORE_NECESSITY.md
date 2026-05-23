@@ -73,7 +73,7 @@ $$\rho_\mathrm{deep} := \frac{m^\mathrm{deep}}{m^\mathrm{total}}, \quad m^\mathr
 $$\partial_V \mathrm{Core} := \{x \in V \setminus \mathrm{Core} : \exists y \in \mathrm{Core},\, (x,y) \in E\}$$
 
 **Isoperimetric ratio:**
-$$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{|\partial_V \mathrm{Core}|}{|\mathrm{Core}|}$$
+$$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{|\partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}|}$$
 
 **Isoperimetric constant** $C_\mathrm{iso} > 0$: a parameter bounding the isoperimetric ratio.
 
@@ -84,7 +84,7 @@ $$\mathrm{iso\_ratio}(\mathrm{Core}) := \frac{|\partial_V \mathrm{Core}|}{|\math
 **H2'** (deep-core non-emptiness; Cat A from Γ-convergence + DMP): For $m = |\mathrm{Core}| \geq 25$ and $\beta > 7\alpha$: $|\mathrm{Core}^2| \geq 1$.
 
 **HWF-1** (isoperimetric regularity; structural, Cat B):
-$$\mathrm{iso\_ratio}(\mathrm{Core}) = \frac{|\partial_V \mathrm{Core}|}{|\mathrm{Core}|} \leq C_\mathrm{iso}.$$
+$$\mathrm{iso\_ratio}(\mathrm{Core}) = \frac{|\partial_V \mathrm{Core}\lvert }{ \rvert\mathrm{Core}|} \leq C_\mathrm{iso}.$$
 
 HWF-1 is **not derivable** from (A1)–(A7) alone. It is violated by elongated formations (counterexample: $2 \times 10$ rectangle, iso_ratio ≈ 0.73, ρ_deep ≈ 0.10). For canonical compact disk-like SCC minimizers, numerical evidence gives $C_\mathrm{iso} \in [0.155, 0.2]$ (exp49, exp83).
 

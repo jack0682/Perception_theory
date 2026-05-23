@@ -134,7 +134,7 @@ $$\bar{V}(\lambda) = (\lambda_{\mathrm{cl}} - 1/2)^2 (\lambda_{\mathrm{sep}} - 1
 
 This function is continuous on $\Delta^3$, vanishes on the two-dimensional algebraic set $\{\lambda_{\mathrm{cl}} = 1/2\} \cup \{\lambda_{\mathrm{sep}} = 1/2\}$, and is positive elsewhere. It has local maxima and the flow converges to the zero-set from generic starting points.
 
-More concretely: take $\bar{V}(\lambda) = \|\lambda - \lambda^{(1)}\|^2 \cdot \|\lambda - \lambda^{(2)}\|^2$ for two distinct interior points $\lambda^{(1)}, \lambda^{(2)} \in \mathrm{int}(\Delta^3)$. This is a degree-4 polynomial on $\Delta^3$ with two local minima (at $\lambda^{(1)}$ and $\lambda^{(2)}$, where $\bar{V} = 0$) separated by a saddle. For appropriate $\lambda^{(1)}, \lambda^{(2)}$, the two basins $\mathcal{B}_1 = \{\lambda : \Phi_t(\lambda) \to \lambda^{(1)}\}$ and $\mathcal{B}_2 = \{\lambda : \Phi_t(\lambda) \to \lambda^{(2)}\}$ are non-empty, open, and disjoint. $\Delta^3 = \overline{\mathcal{B}_1} \cup \overline{\mathcal{B}_2}$ with $\mathcal{B}_1 \cap \mathcal{B}_2 = \emptyset$.
+More concretely: take $\bar{V}(\lambda) = \lVert \lambda - \lambda^{(1)} \rVert^2 \cdot \lVert \lambda - \lambda^{(2)} \rVert^2$ for two distinct interior points $\lambda^{(1)}, \lambda^{(2)} \in \mathrm{int}(\Delta^3)$. This is a degree-4 polynomial on $\Delta^3$ with two local minima (at $\lambda^{(1)}$ and $\lambda^{(2)}$, where $\bar{V} = 0$) separated by a saddle. For appropriate $\lambda^{(1)}, \lambda^{(2)}$, the two basins $\mathcal{B}_1 = \{\lambda : \Phi_t(\lambda) \to \lambda^{(1)}\}$ and $\mathcal{B}_2 = \{\lambda : \Phi_t(\lambda) \to \lambda^{(2)}\}$ are non-empty, open, and disjoint. $\Delta^3 = \overline{\mathcal{B}_1} \cup \overline{\mathcal{B}_2}$ with $\mathcal{B}_1 \cap \mathcal{B}_2 = \emptyset$.
 
 This construction is valid because $\bar{V} \in \mathcal{V}_{\mathrm{adm}}$ (it is continuous, $G$-invariant for trivial $G$, readout-compatible by construction, basin-generating, and boundary-aware). $\square$
 
@@ -301,7 +301,7 @@ on S3 localizes another such surface. Within-branch Morse boundaries are
 predicted by Prop BS1's construction but not yet computationally mapped.
 
 **Prop BS1 stays valid.** Prop BS1's construction
-$\bar V(\lambda) = \|\lambda - \lambda^{(1)}\|^2 \cdot \|\lambda - \lambda^{(2)}\|^2$
+$\bar V(\lambda) = \lVert \lambda - \lambda^{(1)} \rVert^2 \cdot \lVert \lambda - \lambda^{(2)} \rVert^2$
 gives a *within-branch* basin-separator example. The S3 / S4 VP-1+VP-4
 evidence adds the *between-branch* type to the picture. Both are valid
 realizations of "$\ge 2$ basins on connected $\mathfrak{M}$".
@@ -310,5 +310,5 @@ realizations of "$\ge 2$ basins on connected $\mathfrak{M}$".
 perturbation must be analyzed separately for the two boundary types:
 within-branch Morse saddles are structurally stable (Palis–Smale);
 between-branch transitions are **bifurcation surfaces** and may move
-continuously with the scene (the spinodal threshold $\beta/\alpha = 4\lambda_2 / |W''(c)|$
+continuously with the scene (the spinodal threshold $\beta/\alpha = 4\lambda_2 / \lvert W''(c) \rvert$
 shifts with $\lambda_2(X_t)$).

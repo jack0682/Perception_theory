@@ -81,14 +81,14 @@ where:
 **Definition RG3 (Relevant direction).** [DEFINED]
 
 A tangent direction $v \in T_\Theta \mathcal{M}_{\mathrm{obs}}$ is **$\varepsilon$-relevant** if:
-$$\|J_P(\Theta) v\| \geq \varepsilon \|v\|$$
+$$\lVert J_P(\Theta) v \rVert \geq \varepsilon \lVert v \rVert$$
 
 Equivalently: $v$ has significant singular value components above $\varepsilon$.
 
 **Definition RG4 (Irrelevant direction).** [DEFINED]
 
 A tangent direction $v$ is **$\varepsilon$-irrelevant** if:
-$$\|J_P(\Theta) v\| < \varepsilon \|v\|$$
+$$\lVert J_P(\Theta) v \rVert < \varepsilon \lVert v \rVert$$
 
 These are directions in $\mathcal{M}_{\mathrm{obs}}$ along which moving the observer causes negligible change in perceptual output.
 

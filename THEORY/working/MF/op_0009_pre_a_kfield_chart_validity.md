@@ -77,7 +77,7 @@ If the energy landscape has multiple K-basins (e.g., two different K=2 configura
 
 *Failure mode:* If the gradient flow crosses a basin boundary (escapes to a different K=2 configuration), the labeling of formations j=1,2 may swap or permute. The K-field chart is still valid but the labeling needs updating.
 
-*Operational check:* Monitor $\|\tilde{u}(t) - \tilde{u}^{(K)}_{\mathrm{ref}}\|$ where $\tilde{u}^{(K)}_{\mathrm{ref}}$ is the local minimum of the selected basin. If drift exceeds a threshold, re-identify the basin.
+*Operational check:* Monitor $\lVert \tilde{u}(t) - \tilde{u}^{(K)}_{\mathrm{ref}} \rVert$ where $\tilde{u}^{(K)}_{\mathrm{ref}}$ is the local minimum of the selected basin. If drift exceeds a threshold, re-identify the basin.
 
 ### V3 (Formation Separation). The K formations are well-separated.
 

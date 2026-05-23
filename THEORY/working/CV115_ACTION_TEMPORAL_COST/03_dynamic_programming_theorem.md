@@ -128,7 +128,7 @@ $$c_{i\to k}^{\mathrm{act}}(x,z) = \mathrm{BV}(x,z) = \min_{y\in X_j}\!\bigl[c_{
 >
 > 로 정의하면:
 >
-> $$\delta_{\mathrm{eff}} = \left\|c_{i\to k}^{\mathrm{act}} - c_{i\to k}^{\mathrm{eff}}\right\|_\infty = 0$$
+> $$\delta_{\mathrm{eff}} = \left\lVert c_{i\to k}^{\mathrm{act}} - c_{i\to k}^{\mathrm{eff}}\right \rVert_\infty = 0$$
 
 **증명**: T-ACT-DP에 의해 $c_{i\to k}^{\mathrm{act}}(x,z) = c_{i\to k}^{\mathrm{eff}}(x,z)$ 모든 $x,z$에서. $\blacksquare$
 
@@ -136,7 +136,7 @@ $$c_{i\to k}^{\mathrm{act}}(x,z) = \mathrm{BV}(x,z) = \min_{y\in X_j}\!\bigl[c_{
 
 > 이 결과는 $c_{i\to k}^{\mathrm{direct}}$를 **action cost로 재정의**했을 때만 성립한다.
 >
-> - Endpoint cost $\|z-x\|^2$: $\delta_\mathrm{eff} = \|z-x\|^2/2 \neq 0$ (L-ENDPOINT-NONSEMI).
+> - Endpoint cost $\lVert z-x \rVert^2$: $\delta_\mathrm{eff} = \lVert z-x \rVert^2/2 \neq 0$ (L-ENDPOINT-NONSEMI).
 > - Fingerprint similarity cost: 일반적으로 $\delta_\mathrm{eff} \neq 0$.
 > - Sinkhorn plan: cost level이 아닌 plan level 이슈 (05_relation_to_sinkhorn.md §2 참조).
 

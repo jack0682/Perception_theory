@@ -576,7 +576,7 @@ Same issue as §A.3 — the equivalence between Identity 2 form (`ω_0 ∼ ω_we
 
 ### §D.5 — MINOR Findings (file 05)
 
-- M05.1: §3.1 L-PECLET-DEF "$Pe = |∇E|·R/T_*$" is a definitional choice. The derivation paragraph is hand-wavy ("absorbing the √2 and R^{1/2} factors into the definition convention"). MINOR rigor issue.
+- M05.1: §3.1 L-PECLET-DEF "$Pe = \lvert ∇E \rvert·R/T_*$" is a definitional choice. The derivation paragraph is hand-wavy ("absorbing the √2 and R^{1/2} factors into the definition convention"). MINOR rigor issue.
 - M05.2: §3.5 L-STOKES-DEF "$St_k = T_*/μ_k$" — for unstable modes (μ_k<0), St_k<0 has no standard physical interpretation. File acknowledges but doesn't resolve.
 - M05.3: §3.7 L-SC-T8-RATIO "Sc_{T8} = 4αλ_2/(β|W''(c)|)" matches Theorem 4 with factor 4. ✓
 - M05.4: §3.8 L-SC-BD-BOUNDARY: notes the sign-convention issue ("W''(u*) < 0 in spinodal; magnitude used"). MINOR rigor.

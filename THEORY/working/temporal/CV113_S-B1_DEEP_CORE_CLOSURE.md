@@ -66,7 +66,7 @@ $$\Delta_\mathrm{sep}^* \geq 1.0 \cdot \bigl(\rho_\mathrm{deep}(1-\eta_\mathrm{s
 
 ### 0.6 HWF-1–3 assumptions (as registered)
 
-- **HWF-1:** $|\partial_1 C_i^t|/|C_i^t| \leq 0.155$ (isoperimetric ratio ≤ 0.155)
+- **HWF-1:** $|\partial_1 C_i^t|/\lvert C_i^t \rvert \leq 0.155$ (isoperimetric ratio ≤ 0.155)
 - **HWF-2':** $u_t(x) \geq 0.99$ for all $x \in C_i^t$ with $d_G(x, \partial C_i^t) \geq 2$
 - **HWF-3':** $\beta > 7\alpha$, core size $\geq 25$ (canonical H3 + T-Persist-1(d))
 
@@ -129,12 +129,12 @@ T-Temporal-Identity (b) requires only $\Delta_\mathrm{sep} > 0$ (logical uniquen
 
 ### 3.1 Statement
 
-**Lemma S-B1-Weak (Cat A, W7-CV113, 2026-05-10).** *Under canonical SCC single-formation assumptions with $|C_i^t| \geq 25$ and $\beta > 7\alpha$ (equivalently $\beta \geq 20$ for H2' deep core existence), the deep-core mass fraction satisfies:*
+**Lemma S-B1-Weak (Cat A, W7-CV113, 2026-05-10).** *Under canonical SCC single-formation assumptions with $\lvert C_i^t \rvert \geq 25$ and $\beta > 7\alpha$ (equivalently $\beta \geq 20$ for H2' deep core existence), the deep-core mass fraction satisfies:*
 $$\rho_\mathrm{deep}(C_i^t) \geq \frac{\theta_\mathrm{core}}{n} = \frac{0.7}{225} \approx 0.00311 > \rho_* \approx 0.00282.$$
 
 ### 3.2 Proof
 
-**Step 1 — Deep core non-emptiness (H2').** By H2' (proved for $|C_i^t| \geq 25$ via Γ-convergence isoperimetric analysis + discrete maximum principle, Theorem 1, `CORE-DEPTH-ISOPERIMETRIC.md`; requires β ≥ 20, satisfied at canonical parameters), the deep core is non-empty:
+**Step 1 — Deep core non-emptiness (H2').** By H2' (proved for $\lvert C_i^t \rvert \geq 25$ via Γ-convergence isoperimetric analysis + discrete maximum principle, Theorem 1, `CORE-DEPTH-ISOPERIMETRIC.md`; requires β ≥ 20, satisfied at canonical parameters), the deep core is non-empty:
 $$\mathrm{Core}^2(C_i^t) = \{x \in C_i^t : d_G(x, \partial C_i^t) \geq 2\} \neq \emptyset, \quad \text{so } |\mathrm{Core}^2| \geq 1.$$
 
 **Step 2 — Deep core node lower bound.** Let $x^* \in \mathrm{Core}^2$. Since $x^* \in C_i^t = \{x : u_t(x) \geq \theta_\mathrm{core}\}$:
@@ -144,14 +144,14 @@ $$u_t(x^*) \geq \theta_\mathrm{core} = 0.7.$$
 $$m_i^{t,\mathrm{deep}} = \sum_{x \in \mathrm{Core}^2} u_t(x) \geq u_t(x^*) \geq 0.7.$$
 
 **Step 4 — Core mass upper bound.** Since $u_t(x) \leq 1$ for all $x$ (field range):
-$$m_i^t = \sum_{x \in C_i^t} u_t(x) \leq |C_i^t| \leq n = 225 \quad \text{(canonical 15×15 grid)}.$$
+$$m_i^t = \sum_{x \in C_i^t} u_t(x) \leq \lvert C_i^t \rvert \leq n = 225 \quad \text{(canonical 15×15 grid)}.$$
 
 **Step 5 — Ratio lower bound.**
 $$\rho_\mathrm{deep}(C_i^t) = \frac{m_i^{t,\mathrm{deep}}}{m_i^t} \geq \frac{0.7}{225} \approx 0.00311. \qquad \square$$
 
 ### 3.3 Corollary: Δ_sep > 0 is Cat A
 
-**Corollary (Cat A).** *Under canonical SCC single-formation assumptions with $|C_i^t| \geq 25$ and $\beta > 7\alpha$:*
+**Corollary (Cat A).** *Under canonical SCC single-formation assumptions with $\lvert C_i^t \rvert \geq 25$ and $\beta > 7\alpha$:*
 $$\Delta_\mathrm{sep}^* > 0.$$
 
 **Proof.** Substituting Lemma S-B1-Weak:
@@ -184,7 +184,7 @@ $$\Delta_\mathrm{sep}^* \geq 1.0 \cdot (0.00311 \times 0.99976 - 1.2\times10^{-4
 
 Let $G$ be the 15×15 grid. Take a rectangular core $C = \{(i,j) : 1 \leq i \leq 3, 3 \leq j \leq 12\}$ (3×10 rectangle, |C| = 30 ≥ 25). Then:
 - $\partial_1 C = \{(i,j) : i \in \{1,3\} \text{ or } j \in \{3,12\}\}$, so $|\partial_1 C| = 2 \times 10 + 2 \times 3 - 4 = 22$.
-- $C^2 = \{(2, j) : 4 \leq j \leq 11\}$, so $|C^2| = 8$.
+- $C^2 = \{(2, j) : 4 \leq j \leq 11\}$, so $\lvert C^2 \rvert = 8$.
 - $\rho_\mathrm{deep} \approx 8/30 \approx 0.267 \ll 0.84$.
 
 This formation can satisfy SCC separation energy (Sep ≥ θ_S) without violating canonical axioms (A1)–(A7). Therefore ρ_deep ≥ 0.84 is **not universally true** under canonical axioms alone.

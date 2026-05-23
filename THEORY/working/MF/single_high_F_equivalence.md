@@ -80,7 +80,7 @@ In particular, **σ-class is strictly finer than PH class**: two minimizers with
 ### §3.1 Formation centroid filtration (from `mathematical_scaffolding_4tools.md` §4.1)
 
 **Definition 3.1.** Given a stable minimizer $u^* \in \Sigma_m$ on the 32×32 grid $G = (X, E)$ with $\mathcal{F}(u^*) = F$ peaks at positions $c_1, \ldots, c_F \in X$, define the **formation centroid point cloud**:
-$$C(u^*) := \{c_1, \ldots, c_F\} \subset X, \quad |C| = F.$$
+$$C(u^*) := \{c_1, \ldots, c_F\} \subset X, \quad \lvert C \rvert = F.$$
 
 For each $r \geq 0$, define the **Vietoris-Rips complex** on graph distance $d_G$:
 $$R_r(C(u^*)) := \bigl\{\sigma \subseteq C(u^*) : d_G(c_j, c_k) \leq r \;\forall\, j, k \in \sigma\bigr\}.$$
@@ -335,7 +335,7 @@ Let $u^*$ be a stable Morse-0 minimizer with $\mathcal{F}(u^*) = F$ and $K_{\mat
 For the special case $K_{\mathrm{step}}(u^*) = F$ (each peak is its own connected component) AND well-separated ($d_{\min} \gg \xi_0 \approx 0.183$):
 
 The Formation Quantization Uniqueness Theorem (MF_multi_quantization.md §3.6, Cat A structural) guarantees:
-$$u^*(x) = \sum_{k=1}^F \phi_k^*(x) + r(u^*), \quad \|r\|_\infty \leq F \cdot e^{-d_{\min}/\xi_0}$$
+$$u^*(x) = \sum_{k=1}^F \phi_k^*(x) + r(u^*), \quad \lVert r \rVert_\infty \leq F \cdot e^{-d_{\min}/\xi_0}$$
 
 where each $\phi_k^*$ is the per-peak profile. In this regime:
 - $U^*(x) \approx u^*(x)$ up to $O(F e^{-d_{\min}/\xi_0})$
@@ -365,7 +365,7 @@ In the well-separated limit ($d_{\min} \gg \xi_0$), the Hessian comparison betwe
 
 **$\mathbf{u}^*$ on $\Sigma^F_M$:** Joint Hessian $H_{\mathrm{joint}}(\mathbf{u}^*) = \mathrm{diag}(H_1, \ldots, H_F) + V$ where $V_{jk} \sim \lambda_{\mathrm{rep}} P_{jk}$ (off-diagonal coupling from $\lambda_{\mathrm{rep}} \langle u^j, u^k \rangle$ term).
 
-**Spectral identity (well-separated):** By Weyl's theorem, $|\lambda_k(H(u^*)) - \lambda_k(H_{\mathrm{joint}})| \leq \max_k \|V_{1k}\| = O(\lambda_{\mathrm{rep}} \cdot e^{-d_{\min}/\xi_0})$.
+**Spectral identity (well-separated):** By Weyl's theorem, $|\lambda_k(H(u^*)) - \lambda_k(H_{\mathrm{joint}})| \leq \max_k \lVert V_{1k} \rVert = O(\lambda_{\mathrm{rep}} \cdot e^{-d_{\min}/\xi_0})$.
 
 The two Hessians have the same spectrum up to exponentially small corrections — but the **eigenvectors differ**: $H(u^*)$ eigenvectors are global modes on $\Sigma_m$ (with orbital $\ell$ decomposition per NQ-141), while $H_{\mathrm{joint}}$ eigenvectors are approximately confined to individual formation supports.
 

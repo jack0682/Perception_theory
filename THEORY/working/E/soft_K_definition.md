@@ -47,7 +47,7 @@ $$
 **Theorem (CSEH 2007, Theorem 4.2).** For any two real-valued functions `f, g` on a finite filtered complex:
 
 $$
-W_\infty\!\big(\mathrm{Dgm}(f),\,\mathrm{Dgm}(g)\big) \;\leq\; \|f - g\|_\infty,
+W_\infty\!\big(\mathrm{Dgm}(f),\,\mathrm{Dgm}(g)\big) \;\leq\; \lVert f - g \rVert_\infty,
 $$
 
 where `W_∞` is the bottleneck distance on the persistence diagrams.
@@ -55,7 +55,7 @@ where `W_∞` is the bottleneck distance on the persistence diagrams.
 **Application to SCC.** For `u, v ∈ Σ_m ⊂ [0,1]^n`, viewing `u` as a function `X_t → [0,1]` and using the superlevel filtration, CSEH directly gives:
 
 $$
-W_\infty\!\big(\mathrm{Dgm}_0(u),\, \mathrm{Dgm}_0(v)\big) \;\leq\; \|u - v\|_\infty.
+W_\infty\!\big(\mathrm{Dgm}_0(u),\, \mathrm{Dgm}_0(v)\big) \;\leq\; \lVert u - v \rVert_\infty.
 $$
 
 ### 2.2 Lipschitz of K_soft (skeleton)
@@ -63,13 +63,13 @@ $$
 **Proposition 2.1 (K_soft generic Lipschitz).** Let `B_+(u)` denote the set of positive-length bars of `Dgm_0(u)`. Let `N(u) = |B_+(u)|`. Assume **generic u** (no bar has birth = death in `B_+(u)`). Then:
 
 $$
-\big|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\big| \;\leq\; L_\varphi \cdot \sum_{i} \big|\ell_i(u) - \ell_i(v)\big| \;\leq\; L_\varphi \cdot 2\, N_{\max}(u,v) \cdot W_\infty\!\big(\mathrm{Dgm}_0(u), \mathrm{Dgm}_0(v)\big).
+\big\vertK_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\big\vert \;\leq\; L_\varphi \cdot \sum_{i} \big\vert\ell_i(u) - \ell_i(v)\big\vert \;\leq\; L_\varphi \cdot 2\, N_{\max}(u,v) \cdot W_\infty\!\big(\mathrm{Dgm}_0(u), \mathrm{Dgm}_0(v)\big).
 $$
 
 Combining with CSEH 2.1:
 
 $$
-\big|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\big| \;\leq\; 2\, L_\varphi \cdot N_{\max}(u,v) \cdot \|u - v\|_\infty.
+\big\vertK_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\big\vert \;\leq\; 2\, L_\varphi \cdot N_{\max}(u,v) \cdot \lVert u - v \rVert_\infty.
 $$
 
 *Proof sketch.* (i) φ is L_φ-Lipschitz ⇒ `|φ(ℓ_i(u)) - φ(ℓ_i(v))| ≤ L_φ · |ℓ_i(u) - ℓ_i(v)|`. (ii) For a generic optimal matching `γ : B_+(u) → B_+(v)` realizing W_∞, each paired bar shifts both birth and death by at most `W_∞`, so `|ℓ_i(u) - ℓ_{γ(i)}(v)| ≤ 2 W_∞`. Unmatched bars in either diagram pair with the diagonal, contributing `ℓ ≤ 2W_∞` each. (iii) Sum over at most `N_{\max}(u,v) = max(N(u), N(v))` bars yields the stated bound. Combined with CSEH (2.1): stated inequality. ∎
@@ -77,7 +77,7 @@ $$
 **Corollary 2.2 (Uniform Lipschitz on Σ_m).** Because `X_t` is finite, the total bar count (matched + diagonal-paired in u-side + diagonal-paired in v-side) is bounded by `2n`. Hence:
 
 $$
-L_K := \sup_{u, v \in \Sigma_m,\, u \neq v} \frac{|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)|}{\|u - v\|_\infty} \;\leq\; 4\, L_\varphi \cdot n.
+L_K := \sup_{u, v \in \Sigma_m,\, u \neq v} \frac{|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)|}{\lVert u - v \rVert_\infty} \;\leq\; 4\, L_\varphi \cdot n.
 $$
 
 For (φ-sat): `L_K ≤ 4n`. For (φ-lin) with `ℓ_0 = 0.1`: `L_K ≤ 40n`. Tighter bounds possible via graph structure; deferred to C-S2 / E-S2 (NQ-9, NQ-15).

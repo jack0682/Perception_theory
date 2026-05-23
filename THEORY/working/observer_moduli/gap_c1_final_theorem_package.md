@@ -24,7 +24,7 @@ Full $\Delta^3$ result is split off and treated in `op_oms_034_temporal_delta3_s
 
 ## §1. Standing setup
 
-- Finite weighted graph $X = (V, E, W)$ with $n = |V|$, $W = W^\top \ge 0$, $X$ connected.
+- Finite weighted graph $X = (V, E, W)$ with $n = \lvert V \rvert$, $W = W^\top \ge 0$, $X$ connected.
 - Mass parameter $m \in (0, n)$; volume fraction $c = m/n$ in the spinodal interval.
 - Energy components $E_i : [0,1]^n \to \mathbb{R}$, $i \in \mathcal{J} = \{cl, sep, bd\}$ on the static face.
 - Static-face energy: $E_\lambda(u) = \sum_{i \in \mathcal{J}} \lambda_i E_i(u)$ for $\lambda \in \Delta^2_{\mathrm{static}}$ (3-simplex, 2 tangent dims).
@@ -95,7 +95,7 @@ Equivalently: $\ker J_e = \ker G_T$ (column-kernel as a subspace of $\mathbb{R}^
 
 ### Proof.
 
-For $w \in \mathbb{R}^3$: $J_e w = 0$ iff $G_T^\top H_T^{-1} G_T w = 0$ iff $w^\top G_T^\top H_T^{-1} G_T w = 0$ (using symmetry + positive-definite quadratic form is zero only on its null) iff $\|H_T^{-1/2} G_T w\|^2 = 0$ iff $H_T^{-1/2} G_T w = 0$. Since $H_T^{-1/2}$ is invertible (positive definite), this is iff $G_T w = 0$. So $\ker J_e = \ker G_T$. By rank-nullity $\mathrm{rank}\,J_e = 3 - \dim \ker J_e = 3 - \dim \ker G_T = \mathrm{rank}\,G_T$. $\square$
+For $w \in \mathbb{R}^3$: $J_e w = 0$ iff $G_T^\top H_T^{-1} G_T w = 0$ iff $w^\top G_T^\top H_T^{-1} G_T w = 0$ (using symmetry + positive-definite quadratic form is zero only on its null) iff $\lVert H_T^{-1/2} G_T w \rVert^2 = 0$ iff $H_T^{-1/2} G_T w = 0$. Since $H_T^{-1/2}$ is invertible (positive definite), this is iff $G_T w = 0$. So $\ker J_e = \ker G_T$. By rank-nullity $\mathrm{rank}\,J_e = 3 - \dim \ker J_e = 3 - \dim \ker G_T = \mathrm{rank}\,G_T$. $\square$
 
 ### Status.
 

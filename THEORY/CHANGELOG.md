@@ -630,7 +630,7 @@ W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-att
 
 ### Summary
 
-- **L-CLOSURE-LIFT Cat A (+1A)**: operator-norm broadness via Theorem B2 (`THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`). $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ via degree-weighted self-adjointness of the stochastic operator $P = D^{-1}W$. Uniform tangent-space lower bound: $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$. Standard $\ell^2$ form has $d_{\min}/d_{\max}$ degree-conditioning factor. Supersedes T7-Enhanced (canonical Cat A) as the broadness statement.
+- **L-CLOSURE-LIFT Cat A (+1A)**: operator-norm broadness via Theorem B2 (`THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`). $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ via degree-weighted self-adjointness of the stochastic operator $P = D^{-1}W$. Uniform tangent-space lower bound: $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$. Standard $\ell^2$ form has $d_{\min}/d_{\max}$ degree-conditioning factor. Supersedes T7-Enhanced (canonical Cat A) as the broadness statement.
 - **L-HMORSE-LOCAL Cat B unconditional (+1B)**: $\mu_{\min}(\Pi_T^{\mathrm{free}} H_{\mathcal{E}}(u^*) \Pi_T^{\mathrm{free}}) \geq c_{\mathrm{HML}} > 0$ under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form. Explicit lower bound $c_{\mathrm{HML}}(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \beta, a_{\mathrm{cl}}, c^*, d_{\min}/d_{\max})$.
 - **L-HMORSE-DECOMP Cat B conditional (+1B)**: $H_{\mathcal{E}} = H_{\mathrm{bd}} + H_{\mathrm{cl}} + H_{\mathrm{sep}}$ explicit per-term tangent bounds. Conditional on $b_D = 0$ (CN4 analyticity) + canonical A3 ($a_{\mathrm{cl}} < 4$).
 - **L-BOUNDARY-MODE-EXCLUSION Cat C (+1C)**: analytic form of D-HMORSE-LOCAL (C5) via SKETCH-level Weyl perturbation. Numerical anchor `CODE/experiments/exp25_hessian_diagonal.py` confirms phenomenon.
@@ -1248,9 +1248,9 @@ Full temporal chain closed at Cat B / Cat A conditional level. **CV-1.12 sealed:
 
 **Key results:**
 
-- **Theorem Partial-H-SINK (Cat A NEW):** For SCC E1 one-sided (row-normalized) entropic partial OT, the optimal transport plan is Lipschitz-stable under cost perturbation: $\|M^* - M^{*'}\|_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$. Key insight: SCC E1 is one-sided (no column constraints) — rows are independent; stability follows from row-softmax Lipschitz. No Séjourné et al. needed.
+- **Theorem Partial-H-SINK (Cat A NEW):** For SCC E1 one-sided (row-normalized) entropic partial OT, the optimal transport plan is Lipschitz-stable under cost perturbation: $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$. Key insight: SCC E1 is one-sided (no column constraints) — rows are independent; stability follows from row-softmax Lipschitz. No Séjourné et al. needed.
 - **H-SINK full theorem: Cat B → Cat A** (Theorem Partial-H-SINK closes partial OT gap).
-- **Lemma 9 (plan stability): Cat B → Cat A** ($\|M^* - M^{*'}\|_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ linear-regime bound).
+- **Lemma 9 (plan stability): Cat B → Cat A** ($\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$ linear-regime bound).
 - **Lemma 10 (component confinement): Cat B → Cat A** (derived from Cat A Lemma 9).
 - **S-B3 = Lemma 11 (kernel independence): Cat B → Cat A conditional** (margin condition $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}$; guaranteed at canonical parameters by T-Temporal-Identity (b), $\Delta_\mathrm{sep}^* \geq 0.837$).
 - **OP-0011 (transport kernel exact form): STRUCTURED → PARTIALLY RESOLVED** (Steps 2–3 closed Cat A).
@@ -1314,7 +1314,7 @@ H-SINK attacked via 6-lemma chain. **S-B2 (Lemma 8.2) proved Cat A.** Full plan-
 - **Lemma H-SINK-5 (Cat A):** DR2 verified — SCC cost Lipschitz from first principles. $L_c = \mathrm{diam}/\sigma_\mathrm{sp}^2 + 6\gamma \approx 6.14$.
 - **Lemma H-SINK-6 (Cat A balanced OT; Cat B partial OT):** Sinkhorn plan stability via Hilbert projective metric contraction. Partial OT (canonical SCC sub-stochastic E1) requires Séjourné et al. 2019 instantiation.
 - **Sub-theorem H-SINK-S2 = Lemma 8.2 = S-B2 (Cat A):** $L_g \leq L_c$ proved under canonical assumptions + H-SINK-ENT. **This is the critical-path bottleneck closure.**
-- **Theorem H-SINK (Cat B):** Full plan stability $\|\pi_{u,v}-\pi_{u',v'}\|_\mathrm{TV} \leq K_\mathrm{HSINK}(\|u-u'\|+\|v-v'\|)$ — balanced OT Cat A; partial OT Cat B.
+- **Theorem H-SINK (Cat B):** Full plan stability $\lVert \pi_{u,v}-\pi_{u',v'} \rVert_\mathrm{TV} \leq K_\mathrm{HSINK}(\lVert u-u' \rVert+\lVert v-v' \rVert)$ — balanced OT Cat A; partial OT Cat B.
 
 **Critical finding on 4-component fingerprint:** Task brief used 4-component (including $C_u(x,x)$) but canonical fingerprint is 3-component ($C_u$ demoted). Resolvent Jacobian norm $\approx 9300$ makes 4-component Lipschitz bound vacuous. Demotion formally justified.
 
@@ -1734,18 +1734,18 @@ VP-6 Jacobian experiment: 42 stencils on S3 + S4 (12 static + 9 full per scene),
 ### Summary
 
 - **VP-1 실행 결과:** `exp86_vp1_p_resolution_audit.py` (4개 부분: 합성 필드, 최적화기 스윕 12×12, 해석적 구성 10×10, 고해상도 스윕 15×15)
-- **핵심 결과:** **4개 확정적 반례 발견** (기준: $\|d\| < 0.15$ AND $D_T > 0.5$)
-  - CE-1 (가장 좁은 진단 거리): $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\|d\|=0.071$, $D_T=3.028$, $K_{\mathrm{core}}$ 2 vs 1
-  - CE-2: $\|d\|=0.116$, $K_{\mathrm{core}}$ 2 vs 1
-  - CE-3: $\|d\|=0.140$, $K_{\mathrm{core}}$ 2 vs 1
-  - CE-4 (독립 복제, 15×15): $\|d\|=0.122$, $K_{\mathrm{core}}$ 1 vs 0
+- **핵심 결과:** **4개 확정적 반례 발견** (기준: $\lVert d \rVert < 0.15$ AND $D_T > 0.5$)
+  - CE-1 (가장 좁은 진단 거리): $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\lVert d \rVert=0.071$, $D_T=3.028$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-2: $\lVert d \rVert=0.116$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-3: $\lVert d \rVert=0.140$, $K_{\mathrm{core}}$ 2 vs 1
+  - CE-4 (독립 복제, 15×15): $\lVert d \rVert=0.122$, $K_{\mathrm{core}}$ 1 vs 0
 - **OP-OMS-009 분류:** RESOLVED-NEGATIVE — $P_{\min}$이 너무 거칠다 (4개 반례로 확정)
 - **Prop R1 상태:** HYPOTHESIZED → **PROVED** (CE-1이 구성적 증명 제공)
 - **정규 승격 차단 요인:** 3개 → **2개** (OP-OMS-009 제거; OP-OMS-001, OP-OMS-002 잔존)
 
 ### Mechanism
 
-Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$가 H0 막대 코드를 하나의 스칼라로 붕괴시킴. $K_{\mathrm{core}}$ 정수값은 이 스칼라에서 단사적으로 복원 불가. cl-dominant $\lambda$ (w_cl=0.6)는 12×12 그리드에서 $K_{\mathrm{core}}=2$ 균형 (이중 블롭)을 생성하며, 균형 잡힌 $\lambda$는 $K_{\mathrm{core}}=1$ (단일 블롭)을 생성 — 두 경우의 진단 4-벡터가 $\|d\|<0.15$ 이내로 근접 가능.
+Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$가 H0 막대 코드를 하나의 스칼라로 붕괴시킴. $K_{\mathrm{core}}$ 정수값은 이 스칼라에서 단사적으로 복원 불가. cl-dominant $\lambda$ (w_cl=0.6)는 12×12 그리드에서 $K_{\mathrm{core}}=2$ 균형 (이중 블롭)을 생성하며, 균형 잡힌 $\lambda$는 $K_{\mathrm{core}}=1$ (단일 블롭)을 생성 — 두 경우의 진단 4-벡터가 $\lVert d \rVert<0.15$ 이내로 근접 가능.
 
 ### Files created
 
@@ -1954,7 +1954,7 @@ Added §2.4 "Canonical likelihood model (minimal admissible form)" to `k_select_
 
 ### 3. Phase 3 — exp85 Implementation
 
-Created `CODE/experiments/exp85_posterior_k_selection_toy.py`. Design: Method B zero-temperature — evaluate $F_\mathrm{obs}(K) = E_\mathrm{SCC}(u_K^*) + \lambda_\mathrm{photo}\|u_K^*-I\|^2$ at prior sector MAPs found via `find_formation(u_init=sector_K_init)`. Grid: 12×12, volume_fraction=0.3, lambda_photo=3.0. Three scenarios: obs_2blobs (F_obs(K=2)<F_obs(K=1)), obs_1blob (F_obs(K=1)<F_obs(K=2)), lambda→0 (ordering matches prior). Debugging: combined optimizer (800 steps) failed because lambda=3.0 dragged both inits to same basin; redesigned to direct evaluation at prior MAPs. ALL PASSED (3/3).
+Created `CODE/experiments/exp85_posterior_k_selection_toy.py`. Design: Method B zero-temperature — evaluate $F_\mathrm{obs}(K) = E_\mathrm{SCC}(u_K^*) + \lambda_\mathrm{photo}\lVert u_K^*-I \rVert^2$ at prior sector MAPs found via `find_formation(u_init=sector_K_init)`. Grid: 12×12, volume_fraction=0.3, lambda_photo=3.0. Three scenarios: obs_2blobs (F_obs(K=2)<F_obs(K=1)), obs_1blob (F_obs(K=1)<F_obs(K=2)), lambda→0 (ordering matches prior). Debugging: combined optimizer (800 steps) failed because lambda=3.0 dragged both inits to same basin; redesigned to direct evaluation at prior MAPs. ALL PASSED (3/3).
 
 **exp85 results:** Prior MAPs: K1_act=1 (E=4.3378), K2_act=2 (E=3.5637). obs_2blobs δF=+89.89 [PASS]; obs_1blob δF=+107.37 [PASS]; lambda→0 δF=+0.80 [PASS].
 
@@ -2075,7 +2075,7 @@ Sections: §1 problem statement ($\mathfrak{F}_i = (C_i, \partial C_i, K, \sigma
 - **MERGE**: $c_j^s = (m_{i_1}c_{i_1} + m_{i_2}c_{i_2})/(m_{i_1}+m_{i_2})$ deterministic Cat B; $\Theta_j^s$ via parallel-axis theorem deterministic Cat B; $\sigma_{\mathrm{standard}}$ Cat C (Wigner-projection W9+). Status: PARTIALLY STRUCTURED.
 - **SPLIT**: split direction $v_1$ (lowest Hessian eigenvector = Goldstone mode) Cat B; $\sigma_{\mathrm{standard}}$ both daughters Cat C. Status: STRUCTURED (direction only).
 - **BIRTH**: σ computed fresh; no residual. **DEATH**: σ discarded; no residual.
-- Inheritance residual: $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))$ decomposed into centroid ($\|c_j^s - \hat{c}_j^s\|$), orientation ($\|\Theta_j^s - \hat{\Theta}_j^s\|_F$), eigenvalue ($\|\lambda_j^s - \hat{\lambda}_j^s\|$) components.
+- Inheritance residual: $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))$ decomposed into centroid ($\lVert c_j^s - \hat{c}_j^s \rVert$), orientation ($\lVert \Theta_j^s - \hat{\Theta}_j^s \rVert_F$), eigenvalue ($\lVert \lambda_j^s - \hat{\lambda}_j^s \rVert$) components.
 
 ### 5. Phase 5 — T-σ-Inherit candidate theorem
 
@@ -3520,8 +3520,8 @@ Both `Perception/CLAUDE.md` and `Perception_theory/CLAUDE.md`:
 **Added to `THEORY/working/MF/op_0006_boundary_precision.md` §7 Blocker 2:**
 
 New subsection "Working Note — 1D Allen-Cahn Profile Bound for C (W6 D4 Session I, 2026-05-06)":
-- Profile: $u^*(x)=\frac{1}{2}(1+\tanh((x-x_0)/\xi))$, $\xi=(2\alpha/\beta)^{1/2}$ (using $|W''(1/2)|=1$ for $W(u)=u^2(1-u)^2$)
-- Gradient magnitude: $|u^*{}'|\le 1/(2\xi)$ at interface
+- Profile: $u^*(x)=\frac{1}{2}(1+\tanh((x-x_0)/\xi))$, $\xi=(2\alpha/\beta)^{1/2}$ (using $\lvert W''(1/2) \rvert=1$ for $W(u)=u^2(1-u)^2$)
+- Gradient magnitude: $\lvert u^*{}' \rvert\le 1/(2\xi)$ at interface
 - Hausdorff bound: $d_H\le\Delta=\xi\,\mathrm{arctanh}(\sqrt{1-4\rho_{\mathrm{bd}}^2\xi^2})$; with canonical $\rho_{\mathrm{bd}}=\frac{1}{2}(\alpha/\beta)^{1/2}$: $\Delta\approx 0.88\xi$
 - Candidate bound: $C=\sqrt{2}\approx 1.41$ (1D); $C\le 2$ (2D, $d=4$)
 - 4 gaps before Cat A: (1) 1D→2D extension; (2) Hausdorff vs ridge width; (3) discretization correction; (4) $\partial\mathrm{PersComp}$ identification
@@ -4183,7 +4183,7 @@ Also clarified: Σ_M^K → B_K(P) domain fix already done (D-ST-4); chart map Φ
 **1. T-ST-5 regime split (canonical.md §16):**
 - T-ST-5 replaced by T-ST-5a (Cat B candidate) and T-ST-5b (Cat C pending).
 - **T-ST-5a:** Hard-depth topological locking. Claim: if depth threshold removes all bridge edges, $G^P = G_1 \sqcup G_2$ and K=2 is topologically locked (barrier=∞). This is a support-topology result, not a smooth GL barrier result. No P-F flag. Status: Cat B candidate — supported by exp02-NEB (W6 D4, K_flat=1, K_stereo=2).
-- **T-ST-5b:** Smooth-depth barrier raising. Claim: under $w_{ij} = w_{2D} \cdot \exp(-\lambda_z |z_i-z_j|^2)$, merger barrier increases monotonically with $\Delta z$ and $\lambda_z$. Status: Cat C pending — exp02b null-barrier result (see below).
+- **T-ST-5b:** Smooth-depth barrier raising. Claim: under $w_{ij} = w_{2D} \cdot \exp(-\lambda_z \lvert z_i-z_j \rvert^2)$, merger barrier increases monotonically with $\Delta z$ and $\lambda_z$. Status: Cat C pending — exp02b null-barrier result (see below).
 
 **2. exp02b — Smooth-adjacency NEB (T-ST-5b Regime B):**
 `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py` (new). Sweep Δz ∈ {0.25, 0.5, 1.0, 2.0} × λ_z ∈ {0.5, 1.0, 2.0, 4.0, 8.0} = 20 configurations.
@@ -4302,7 +4302,7 @@ Results saved: `CODE/stereo_scc/results/exp02_neb/{k_stability.csv, barrier_vs_d
 **4. OP-0006 boundary precision — working formalization:**
 `THEORY/working/MF/op_0006_boundary_precision.md` (new, ~185 lines). Contents:
 - §1: Problem statement (soft boundary band §5.3 → crisp persistent boundary)
-- §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : |\nabla_G \tilde{u}(x)| > \theta\}$; persistent if stable under $\|\delta\|_\infty$ small
+- §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : |\nabla_G \tilde{u}(x)| > \theta\}$; persistent if stable under $\lVert \delta \rVert_\infty$ small
 - §3: Distinction from raw image edge (table: 5 properties)
 - §4: Open sub-questions (convergence, topological stability, stereo conditioning)
 - §5: Toy experiment proposal — boundary stability ratio under shadow/blur perturbation
@@ -4424,7 +4424,7 @@ Checked 10 residue categories (slot-counting K_act, foundational Σ_M^K, E_photo
 
 **G3.2 — OP-0009-Pre: $\widetilde{\widetilde\Sigma}^K_M$ unordered K-field formalism (Bronze/Silver/Gold):**
 - `02_op_0009_pre_substantive_start.md`: mission statement; sub-file outline; 6 starting points; W7-W8 phase plan.
-- `02a_unordered_configuration_formalism.md`: $S_K$ action; quotient $\widetilde{\widetilde\Sigma}^K_M = \Sigma^K_M / S_K$; stratification (open stratum dim $K(n-1)$; symmetric strata $D_P$ codim $(|P|-1)(n-1)$); worked example $T^2_4$ n=16 K=2.
+- `02a_unordered_configuration_formalism.md`: $S_K$ action; quotient $\widetilde{\widetilde\Sigma}^K_M = \Sigma^K_M / S_K$; stratification (open stratum dim $K(n-1)$; symmetric strata $D_P$ codim $(\lvert P \rvert-1)(n-1)$); worked example $T^2_4$ n=16 K=2.
 - `02b_reduction_map_pi.md`: $\pi$ continuity; local centroid-ordering sections; fiber size table; functoriality ($\mathcal{E}$, $K_\mathrm{act}$ both factor through $\pi$).
 - `02c_minimization_principle_unordered.md`: $\mathcal{E}$ $S_K$-equivariant (single-slot sums + symmetric repulsion); $\widetilde{\mathcal{E}}$ well-defined; existence + uniqueness sketches on quotient.
 - `02d_ontological_reading.md`: Commitment 1 auto-satisfied at class level ✓; 5-layer ontological table (primitive/class/modeling/derived/cog-sci); CN10 refined chain.
@@ -4436,7 +4436,7 @@ Checked 10 residue categories (slot-counting K_act, foundational Σ_M^K, E_photo
 - `03b_op_0005_layer_b_kramers_pf_dependence.md`: Full Eyring-Kramers $k_{K\to K-1}$ under P-F; $\mathcal{P}$-conditioning; 4 remaining open problems.
 
 **G3.4 — NQ-G1-2-ext production reach design:**
-- `04_nq_g1_2_ext_design.md`: post-flow $\|R_j\|_\infty$ measurement; $T^2_{20}$ n=400, K=4, 960 wq1 configs, 1000 steps; 3 hypothesis branches H-A/B/C; wall-clock ~1-2h.
+- `04_nq_g1_2_ext_design.md`: post-flow $\lVert R_j \rVert_\infty$ measurement; $T^2_{20}$ n=400, K=4, 960 wq1 configs, 1000 steps; 3 hypothesis branches H-A/B/C; wall-clock ~1-2h.
 - `04a_l1i_extension_script_outline.md`: `exp58_nq_g1_2_ext.py` pseudo-code; `compute_ideal_gaussian` helper; module dependency map.
 - `04b_post_flow_R_j_measurement_protocol.md`: sampling (every 50 steps, 20 snapshots); aggregation (max/avg/final/t_exit); hypothesis determination rule; population-level statistical reporting.
 
@@ -4699,7 +4699,7 @@ expanding $\tau_*^{\mathrm{post-R2}}$ from $\min(2\rho_{\mathrm{pert}}, \rho_{\m
 
 ### NQ-G1-2-ext (W7+ follow-on)
 
-Direct measurement of $\|R_j\|_\infty$ under shared-pool gradient-flow dynamics (perturbation magnitude after time evolution). The current l1i tests INITIAL Gaussian-bump configurations; perturbations $R_j$ in the L-M proof are dynamic (post-flow). Whether empirical $R_j$ satisfies $\|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$ requires extending l1i to compute $R_j$ across time evolution and measuring the max norm over $N_j^r$. Estimated effort ~1-2 hours; not a blocker.
+Direct measurement of $\lVert R_j \rVert_\infty$ under shared-pool gradient-flow dynamics (perturbation magnitude after time evolution). The current l1i tests INITIAL Gaussian-bump configurations; perturbations $R_j$ in the L-M proof are dynamic (post-flow). Whether empirical $R_j$ satisfies $\lVert R_j \rVert_\infty \le \rho_{\mathrm{pert}}/4$ requires extending l1i to compute $R_j$ across time evolution and measuring the max norm over $N_j^r$. Estimated effort ~1-2 hours; not a blocker.
 
 ### Lesson logged
 
@@ -5510,10 +5510,10 @@ W6 Day 1 G1 deliverable closed at the working layer. The R-0/R-1/R-2/R-3 specifi
 
 **§5.5 (R-2 closure + NQ-G1-1 self-correction)** — Type-B chain replaced with explicit P5-direct derivation:
 - Original: $b_i \le \ell_{\min} - \rho_{\mathrm{res}}$ via P10 + implicit "$U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$" assertion + (P0) terminal-death.
-- Post-R2: $b_i \le \|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ via P5 directly; $\ell_i = b_i - d_i \le b_i$ since $d_i \ge 0$.
+- Post-R2: $b_i \le \lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ via P5 directly; $\ell_i = b_i - d_i \le b_i$ since $d_i \ge 0$.
 - Removes: implicit assertion (which fails when active decay tails extend into bg via P7); LG-7 dependency; (P0) dependency for the bound.
 - Side effect: $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ replaces $\tau_* = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$.
-- **NQ-G1-1 nuance integrated**: $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison is configuration-dependent (not generically ordered); $\|U\|_{\infty,X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (active tails) but $\|R_{\mathrm{inact}}\|_\infty \ge \|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}$ (global $\ge$ restricted). NQ-G1-1-ext (W7+) for empirical anchor. Cat A conditional self-classification unaffected (lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds either way). Cat A absolute (for the chain itself).
+- **NQ-G1-1 nuance integrated**: $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison is configuration-dependent (not generically ordered); $\lVert U \rVert_{\infty,X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty,X_{\mathrm{bg}}}$ (active tails) but $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty,X_{\mathrm{bg}}}$ (global $\ge$ restricted). NQ-G1-1-ext (W7+) for empirical anchor. Cat A conditional self-classification unaffected (lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds either way). Cat A absolute (for the chain itself).
 
 **§5.6 conclusion** — $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$.
 
@@ -5529,7 +5529,7 @@ Cold-review general-purpose agent dispatched with input package (working/MF/ rev
 
 - **R-0 PASS** — F2+F3 monotonicity argument is standard.
 - **R-1 PASS** (with one minor disclosure recommended) — sharpness construction admissible under P9; achieves factor-2 bound; Type-N-not-terminal argument correct (P3 + connectedness force intra-slot merge). The persistence-skeleton preservation assumption (generic vineyard-nonsingular regime) was not explicitly stated; recommended one-line disclosure now applied. **Not a structural gap.**
-- **R-2 PASS** — P5-direct chain is correct; $b_i = U(b_i) \le \|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ tautological once Type-B is defined as $b_i \in X_{\mathrm{bg}}$. NQ-G1-1 nuance soundly handled (does not affect Cat A conditional).
+- **R-2 PASS** — P5-direct chain is correct; $b_i = U(b_i) \le \lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ tautological once Type-B is defined as $b_i \in X_{\mathrm{bg}}$. NQ-G1-1 nuance soundly handled (does not affect Cat A conditional).
 - **R-3 PASS** — consistency with R-1 captured correctly.
 - **Theorem L-M composition PASS** — L-M-1 (Cat A absolute) + L-M-2 (Cat A conditional, post-repair) + L-M-Sub/Dom (Cat A absolute) + T-L1-F bijection (canonical Cat A conditional) compose tightly.
 
@@ -5860,16 +5860,16 @@ and the map $\mathcal A_{\mathrm{bar}} : A^\varepsilon(\mathbf u) \to \mathrm{Ba
 - P4 LG-2 low boundary collar $\max_{\partial N_j^r} U \le b_j - \ell_{\min} - r_{\mathrm{assoc}}$
 - P5 LG-4 background suppression on $U$ (not just $R_{\mathrm{inact}}$)
 - P6 birth height $b_j \ge h_{\min} \ge \ell_{\min}$
-- P7 decay-to-cut (heterogeneous): $u^{(\ell)}(x) \le \psi_\ell(d_G(x, S_\ell^\delta))$ + $H_{C_{jk}}(U) \le \sum_\ell \psi_\ell(q_{\ell,jk}) + \|R_{\mathrm{inact}}\|_{\infty,C_{jk}}$
+- P7 decay-to-cut (heterogeneous): $u^{(\ell)}(x) \le \psi_\ell(d_G(x, S_\ell^\delta))$ + $H_{C_{jk}}(U) \le \sum_\ell \psi_\ell(q_{\ell,jk}) + \lVert R_{\mathrm{inact}} \rVert_{\infty,C_{jk}}$
 - P8 tightened H6 on $G_j^r$: $\ell_{j,2}(u^{(j)}; G_j^r) \le \ell_{\min} - 3\rho_{\mathrm{pert}}$
-- P9 NE-2 perturbation $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$
-- P10 inactive residual $\|R_{\mathrm{inact}}\|_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$
+- P9 NE-2 perturbation $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$
+- P10 inactive residual $\lVert R_{\mathrm{inact}} \rVert_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$
 - P11 margin ledger $h_{\min} - \max_{k \ne j} B_{jk} \ge \ell_{\min} + r_{\mathrm{assoc}} + r_{\mathrm{birth}}$
 
 ### Proof Structure
 
-- **Lower bound** $K_{\mathrm{bar}} \ge |A|$: LG-2 boundary collar + LG-3 inter-neighborhood bridge + $h_{\min} \ge \ell_{\min}$ (L1-H §8 step 2).
-- **Upper bound** $K_{\mathrm{bar}} \le |A|$: (α) LG-7 coverage derived from LG-4 + terminal-death (every dominant bar's birth has $U \ge \ell_{\min}$, hence not in $X_{\mathrm{bg}}$); (β) per-neighborhood at-most-one-dominant-bar via L1-H2 Lemma 1 (graph-inclusion: $\ell_{\mathrm{glob}} \le \ell_{\mathrm{loc}}$ on $G_j^r \subseteq G$) + L1-H2 Lemma 2 (contradiction-based bottleneck-stability under tightened H6).
+- **Lower bound** $K_{\mathrm{bar}} \ge \lvert A \rvert$: LG-2 boundary collar + LG-3 inter-neighborhood bridge + $h_{\min} \ge \ell_{\min}$ (L1-H §8 step 2).
+- **Upper bound** $K_{\mathrm{bar}} \le \lvert A \rvert$: (α) LG-7 coverage derived from LG-4 + terminal-death (every dominant bar's birth has $U \ge \ell_{\min}$, hence not in $X_{\mathrm{bg}}$); (β) per-neighborhood at-most-one-dominant-bar via L1-H2 Lemma 1 (graph-inclusion: $\ell_{\mathrm{glob}} \le \ell_{\mathrm{loc}}$ on $G_j^r \subseteq G$) + L1-H2 Lemma 2 (contradiction-based bottleneck-stability under tightened H6).
 - **PO-1 decay-to-cut** (P7) bounds $\theta_{\mathrm{bridge}}^{jk}(U)$ via L1-J §8.1 + L1-B Cat-A cut lemma.
 
 ### Empirical Anchoring
@@ -6060,7 +6060,7 @@ Source: lanczos-engineer, `CODE/scripts/test_sigma_theorem4_scaling.py` + `logs/
 | §5 alternative (5th-equivariant non-zero) | $3/2$ | **1.03** | **REJECTED** |
 | Leading-order non-degeneracy ($A_2/A_1 \neq 4$) | $1$ | **1.03** | **CONFIRMED** |
 
-Numerical: $\mu_0 = \epsilon |W''(c)|$, $\mu_1 = 2\epsilon |W''(c)|$. Ratio $\mu_1/\mu_0 = 2$, **not** $1$ as canonical T-σ-Theorem-4 (ii) claims with $A_2/A_1 = 4$ from R22. Three branching diagnoses: (α) $A_2/A_1 \neq 4$ on finite $L$ (continuum extrapolation needed); (β) R22 cubic-equivariant ratio derivation incorrect on $D_4$ free-BC; (γ) Σ_m-Hessian convention map (NQ-187 §2.1 absorption) incorrect.
+Numerical: $\mu_0 = \epsilon \lvert W''(c) \rvert$, $\mu_1 = 2\epsilon \lvert W''(c) \rvert$. Ratio $\mu_1/\mu_0 = 2$, **not** $1$ as canonical T-σ-Theorem-4 (ii) claims with $A_2/A_1 = 4$ from R22. Three branching diagnoses: (α) $A_2/A_1 \neq 4$ on finite $L$ (continuum extrapolation needed); (β) R22 cubic-equivariant ratio derivation incorrect on $D_4$ free-BC; (γ) Σ_m-Hessian convention map (NQ-187 §2.1 absorption) incorrect.
 
 **Direct consequences:**
 - NQ-187 §2 + §3.2 + §4 + §10 conclusions all dependent on $A_2/A_1 = 4$ → working-file revision required (Task #9, #10).
@@ -6531,7 +6531,7 @@ User-requested re-audit ("아직 좀 부족한데 제대로 좀더 재검토해�
 
 1. **T-σ-Lemma-3 (i) IBP identity** (`canonical.md` line 1217 + 1235 erratum): $\mathcal{P}_{\ell=1}[\delta u_x] = -m$ (2D mass) was wrong. Correct value: $-\pi \int_0^\infty u^*(r)\, dr \approx -\pi r_0$ for tanh disk. The W4-04-24 source had a Jacobian error in the polar-Cartesian change of variables (substituted $\cos\theta \cdot r = x$ but kept $dr\, d\theta$ instead of $dx\, dy$). Original wrong value would have given $\rho_{\ell=1} \approx 12 > 1$, violating Cauchy–Schwarz — a sanity check that should have caught it on first pass.
 
-2. **T-σ-Theorem-4 (ii) Hessian eigenvalues** (`canonical.md` line 1287 + 1302 erratum): "$0 < K_1 < K_0$ would-be transverse Goldstone" was wrong. R22 normal-form on $D_4$ with cubic ratio $A_2/A_1 = 4$ gives $K_1 = (A_2/A_1)|W''(c)| = 4|W''(c)| = K_0$ — equal at leading order. Modes are degenerate but irrep-distinct (trivial $[+1]$ vs sign $[-1]$ under residual $\mathbb{Z}_2$). The "would-be Goldstone" framing was incorrect (discrete symmetry breaking has no Goldstone). My ad-hoc partial second-order calculation in `01e` §3 Step 5 had given $\mu_1 < 0$, contradicting Morse-0 — an in-text contradiction I noted but didn't resolve.
+2. **T-σ-Theorem-4 (ii) Hessian eigenvalues** (`canonical.md` line 1287 + 1302 erratum): "$0 < K_1 < K_0$ would-be transverse Goldstone" was wrong. R22 normal-form on $D_4$ with cubic ratio $A_2/A_1 = 4$ gives $K_1 = (A_2/A_1)\lvert W''(c) \rvert = 4|W''(c)| = K_0$ — equal at leading order. Modes are degenerate but irrep-distinct (trivial $[+1]$ vs sign $[-1]$ under residual $\mathbb{Z}_2$). The "would-be Goldstone" framing was incorrect (discrete symmetry breaking has no Goldstone). My ad-hoc partial second-order calculation in `01e` §3 Step 5 had given $\mu_1 < 0$, contradicting Morse-0 — an in-text contradiction I noted but didn't resolve.
 
 3. **T-σ-Theorem-3 (vi) irrep table** (`canonical.md` line 1248 + 1270 erratum): hand-waved entries "$A_1 \oplus B_1 \oplus E$ or $E \oplus E$" for off-diagonal pairs were wrong. Rigorous Schur-orthogonality character calculation gives: both-odd off-diagonal pair → $A_2 \oplus B_2$ (NOT $E \oplus E$); mixed parity → single $E$ (NOT $E \oplus E$); even pair → $A_1 \oplus B_1$. Also $L = 4$ worked example listed $(1, 1)$ singlet as $A_1$ — correct $D_4$ character is $B_2$ for odd $p$.
 

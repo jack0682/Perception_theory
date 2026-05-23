@@ -34,9 +34,9 @@ Classification: **DEFINED** | **COMPUTATIONALLY TESTABLE** | **EMPIRICALLY TESTA
    - Run optimizer.
    - Record $u^{B*}$, diagnostic $d^B$, component count $K^{B*}$.
 
-4. **Check:** If $\|d^A - d^B\| < \delta$ (small) but $K^{A*} \neq K^{B*}$ (different component counts), Proposition R1 is confirmed.
+4. **Check:** If $\lVert d^A - d^B \rVert < \delta$ (small) but $K^{A*} \neq K^{B*}$ (different component counts), Proposition R1 is confirmed.
 
-5. **Parameter scan:** Vary $(\lambda^A, \lambda^B)$ over a grid to find pairs minimizing $\|d^A - d^B\|$ while maximizing $|K^{A*} - K^{B*}|$.
+5. **Parameter scan:** Vary $(\lambda^A, \lambda^B)$ over a grid to find pairs minimizing $\lVert d^A - d^B \rVert$ while maximizing $\lvert K^{A*} - K^{B*} \rvert$.
 
 **Expected result:** For convex-shaped scenes, closure-dominant observers ($\lambda_{cl}$ large) produce compact single-component formations; separation-dominant observers ($\lambda_{sep}$ large) produce dispersed multi-component formations — with similar aggregate diagnostic values due to averaging.
 
@@ -47,7 +47,7 @@ Classification: **DEFINED** | **COMPUTATIONALLY TESTABLE** | **EMPIRICALLY TESTA
 # CODE/scc/graph.py: GraphState
 ```
 
-**Success criterion:** $\|d^A - d^B\| < 0.05$ AND $K^{A*} \neq K^{B*}$. **COMPUTATIONALLY TESTABLE.**
+**Success criterion:** $\lVert d^A - d^B \rVert < 0.05$ AND $K^{A*} \neq K^{B*}$. **COMPUTATIONALLY TESTABLE.**
 
 ---
 
@@ -61,7 +61,7 @@ Classification: **DEFINED** | **COMPUTATIONALLY TESTABLE** | **EMPIRICALLY TESTA
 
 1. **Fix scene $X_t$** (e.g., grid graph $G_{10 \times 10}$, $m = 50$).
 
-2. **Define landscape:** $V_D^0(\lambda) = \|d_\lambda - d^*\|^2$ with $d^* = (1, 1, 1, 0)$, varying $\lambda \in \Delta^3$ with $q = q_c(X_t)$, $\xi = \xi_0$.
+2. **Define landscape:** $V_D^0(\lambda) = \lVert d_\lambda - d^* \rVert^2$ with $d^* = (1, 1, 1, 0)$, varying $\lambda \in \Delta^3$ with $q = q_c(X_t)$, $\xi = \xi_0$.
 
 3. **Grid sampling:** Sample $N = 1000$ points $\lambda^{(i)} \sim \mathrm{Uniform}(\Delta^3)$.
 
@@ -96,7 +96,7 @@ Classification: **DEFINED** | **COMPUTATIONALLY TESTABLE** | **EMPIRICALLY TESTA
 1. Fix $q = q_c(X_t)$, $\xi = \xi_0$.
 2. Sample 100 values of $\lambda = (\lambda_{cl}, \lambda_{sep}, \lambda_{bd}, 0)$ with $\lambda_{cl} \neq \lambda_{sep}$.
 3. For each $\lambda$: compute $P_{\mathrm{top}}(\lambda)$ and $P_{\mathrm{top}}(g_1(\lambda))$ where $g_1 = (\lambda_{sep}, \lambda_{cl}, \lambda_{bd}, 0)$.
-4. Compute symmetry deviation: $\Delta_1 = \|P_{\mathrm{top}}(\lambda) - P_{\mathrm{top}}(g_1(\lambda))\|$.
+4. Compute symmetry deviation: $\Delta_1 = \lVert P_{\mathrm{top}}(\lambda) - P_{\mathrm{top}}(g_1(\lambda)) \rVert$.
 5. Report: mean and max $\Delta_1$ over samples.
 
 **Success criterion for symmetry:** $\Delta_1 < 0.01$ for all samples. (Symmetry confirmed.)
@@ -155,7 +155,7 @@ For each face $F_i$ ($i \in \{cl, sep, bd, tr\}$):
 **Procedure:**
 
 1. **Toy latent model:** Define $Z = \mathbb{R}^2$ (2D latent space). Define generator $\Gamma : Z \to \Delta^3$ by:
-   $$\Gamma(z_1, z_2) = \mathrm{softmax}(z_1^2 + z_2^2,\ |z_1 - z_2|,\ |z_1 + z_2|,\ 0)$$
+   $$\Gamma(z_1, z_2) = \mathrm{softmax}(z_1^2 + z_2^2,\ \lvert z_1 - z_2 \rvert,\ \lvert z_1 + z_2 \rvert,\ 0)$$
    (depends only on $r^2 = z_1^2 + z_2^2$ and $|z_1 \pm z_2|$).
 
 2. **$SO(2)$ symmetry check:** Compute $\Gamma(R_\phi z)$ for various $\phi$. If $\Gamma(R_\phi z) = \Gamma(z)$ for all $\phi$, $SO(2)$ is a latent symmetry of $\Gamma$.

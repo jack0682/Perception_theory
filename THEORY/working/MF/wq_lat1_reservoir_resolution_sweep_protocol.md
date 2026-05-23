@@ -105,7 +105,7 @@ Match WQ-1 / WQ-2 / WQ-1.C-R2 baseline as closely as possible:
 
 | Parameter | Value |
 |---|---|
-| Graph $G$ | $T^2_{20}$ (4-regular periodic, $|X| = 400$) |
+| Graph $G$ | $T^2_{20}$ (4-regular periodic, $\lvert X \rvert = 400$) |
 | Total mass $M$ | 90 |
 | Per-cluster mass | 30 (always 3 clusters; sub-atom mass = 30 / cluster size) |
 | Activity threshold $\varepsilon$ | 0.225 ($= 0.01 \cdot 30 = 0.01 \cdot$ cluster mass) |
@@ -233,13 +233,13 @@ For cross-$K$ analysis (final snapshot only):
 
 | Diagnostic | Source |
 |---|---|
-| Aggregate-field final-state distance: $\|U_K(T) - U_{K'}(T)\|_2 / \sqrt{|X|}$ | $L^2$ |
-| Aggregate-field final-state distance: $\|U_K(T) - U_{K'}(T)\|_\infty$ | $L^\infty$ |
-| Dominant-bar-vector distance: $\|\boldsymbol\ell_K - \boldsymbol\ell_{K'}\|_2$ | top 6 bars |
+| Aggregate-field final-state distance: $\lVert U_K(T) - U_{K'}(T) \rVert_2 / \sqrt{\lvert X \rvert}$ | $L^2$ |
+| Aggregate-field final-state distance: $\lVert U_K(T) - U_{K'}(T) \rVert_\infty$ | $L^\infty$ |
+| Dominant-bar-vector distance: $\lVert \boldsymbol\ell_K - \boldsymbol\ell_{K'} \rVert_2$ | top 6 bars |
 | $K_{\mathrm{bar}}^{\ell_{\min}}$ agreement: $K_{\mathrm{bar}}(U_K) - K_{\mathrm{bar}}(U_{K'})$ at each $\ell_{\min}$ | direct integer diff |
-| $K_{\mathrm{soft}}^\phi$ difference: $\|K_{\mathrm{soft}}^\phi(U_K) - K_{\mathrm{soft}}^\phi(U_{K'})\|$ | scalar |
+| $K_{\mathrm{soft}}^\phi$ difference: $\lVert K_{\mathrm{soft}}^\phi(U_K) - K_{\mathrm{soft}}^\phi(U_{K'}) \rVert$ | scalar |
 
-σ extraction via `compute_sigma_rich(U_K(T), ...)` is **optional** (--with_sigma flag). Default off because FD-Hessian is $O(|X|^2)$ per snapshot; running it on 20 snapshots adds ~10 minutes of compute. WQ-LAT-1 does not require σ for the primary criteria.
+σ extraction via `compute_sigma_rich(U_K(T), ...)` is **optional** (--with_sigma flag). Default off because FD-Hessian is $O(\lvert X \rvert^2)$ per snapshot; running it on 20 snapshots adds ~10 minutes of compute. WQ-LAT-1 does not require σ for the primary criteria.
 
 ---
 
@@ -256,7 +256,7 @@ All $K$ values use the same graph, mass, energy parameters, integrator, time ste
 There exists $K^* \in \{3, 4, 6, 8, 12\}$ such that, for all $K, K' \ge K^*$,
 
 $$
-\|U_K(T) - U_{K'}(T)\|_2 / \sqrt{|X|} \le \tau_U,
+\lVert U_K(T) - U_{K'}(T) \rVert_2 / \sqrt{\lvert X \rvert} \le \tau_U,
 $$
 
 with $\tau_U = 0.05$ default (relative tolerance on per-vertex aggregate value).
@@ -276,7 +276,7 @@ $$
 For all $K, K' \ge K^*$:
 
 $$
-\big| K_{\mathrm{soft}}^\phi(U_K(T)) - K_{\mathrm{soft}}^\phi(U_{K'}(T)) \big| \le \tau_{\mathrm{soft}},
+\big\vert K_{\mathrm{soft}}^\phi(U_K(T)) - K_{\mathrm{soft}}^\phi(U_{K'}(T)) \big\vert \le \tau_{\mathrm{soft}},
 $$
 
 with $\tau_{\mathrm{soft}} = 0.10$ default.
@@ -286,7 +286,7 @@ with $\tau_{\mathrm{soft}} = 0.10$ default.
 Top-6 dominant bar lengths $\boldsymbol\ell_K = (\ell_K^{(1)}, \ldots, \ell_K^{(6)})$ stabilize: for all $K, K' \ge K^*$,
 
 $$
-\| \boldsymbol\ell_K - \boldsymbol\ell_{K'} \|_2 \le \tau_{\mathrm{Dgm}},
+\lVert \boldsymbol\ell_K - \boldsymbol\ell_{K'} \rVert_2 \le \tau_{\mathrm{Dgm}},
 $$
 
 with $\tau_{\mathrm{Dgm}} = 0.10$ default.

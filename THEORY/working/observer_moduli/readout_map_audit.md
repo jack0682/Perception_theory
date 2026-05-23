@@ -119,7 +119,7 @@ By continuity of diagnostics in $\lambda$, there exist nearby parameter values w
 There exist $\Theta_1, \Theta_2 \in \mathcal{M}_{\mathrm{obs}}$ and a scene $X_t$ such that:
 $$P_{\min}(\Theta_1; X_t) = P_{\min}(\Theta_2; X_t) \quad \text{but} \quad P_{\mathrm{top}}(\Theta_1; X_t) \neq P_{\mathrm{top}}(\Theta_2; X_t)$$
 
-*Proof (constructive).* Experiment exp86_vp1_p_resolution_audit.py (2026-05-07) found 4 explicit counterexamples on 12×12 and 15×15 grids. CE-1 (tightest): $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\|P_{\min}(\Theta_A) - P_{\min}(\Theta_B)\| = 0.071 < 0.15$, while $K_{\mathrm{core}}(\Theta_A)=2 \neq 1 = K_{\mathrm{core}}(\Theta_B)$, giving $D_T = 3.028$. Thus $P_{\mathrm{top}}$ distinguishes the pair but $P_{\min}$ does not. Mechanism: Inside predicate collapses H0 barcode to one scalar; $K_{\mathrm{core}}$ integer is not injectively recoverable.
+*Proof (constructive).* Experiment exp86_vp1_p_resolution_audit.py (2026-05-07) found 4 explicit counterexamples on 12×12 and 15×15 grids. CE-1 (tightest): $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\lVert P_{\min}(\Theta_A) - P_{\min}(\Theta_B) \rVert = 0.071 < 0.15$, while $K_{\mathrm{core}}(\Theta_A)=2 \neq 1 = K_{\mathrm{core}}(\Theta_B)$, giving $D_T = 3.028$. Thus $P_{\mathrm{top}}$ distinguishes the pair but $P_{\min}$ does not. Mechanism: Inside predicate collapses H0 barcode to one scalar; $K_{\mathrm{core}}$ integer is not injectively recoverable.
 
 **Evidence:** `vp1_counterexamples.md`, `CODE/experiments/results/observer_moduli/vp1_pairs.json`. OP-OMS-009 sub-question (a): RESOLVED-NEGATIVE.
 

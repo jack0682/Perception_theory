@@ -28,7 +28,7 @@ SCC energy:
 $$E = \lambda_{cl} E_{cl} + \lambda_{sep} E_{sep} + \lambda_{bd} E_{bd} + \lambda_{tr} E_{tr}$$
 
 Phase transition:
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}$$
 
 Between two observers, the following can differ:
 - The ratio $q = \beta/\alpha$ (boundary vs separation balance)
@@ -93,10 +93,10 @@ $$W''(u) = 2(1 - 6u + 6u^2)$$
 
 Spinodal zone: $W''(c) < 0$ for $c \in \left(\frac{3-\sqrt{3}}{6}, \frac{3+\sqrt{3}}{6}\right) \approx (0.211, 0.789)$
 
-At $c = 1/2$: $W''(1/2) = 2(1 - 3 + 3/2) = -1$, so $|W''(1/2)| = 1$.
+At $c = 1/2$: $W''(1/2) = 2(1 - 3 + 3/2) = -1$, so $\lvert W''(1/2) \rvert = 1$.
 
 Phase transition ratio:
-$$q_c = \frac{4\lambda_2}{|W''(c)|} = \frac{4\lambda_2}{2(6c - 6c^2 - 1)}$$
+$$q_c = \frac{4\lambda_2}{\lvert W''(c) \rvert} = \frac{4\lambda_2}{2(6c - 6c^2 - 1)}$$
 
 ---
 

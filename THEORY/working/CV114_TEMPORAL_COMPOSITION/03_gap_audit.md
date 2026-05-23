@@ -121,7 +121,7 @@ Semigroup 성질 (composition = direct) is an open problem, NOT proved.
 
 **v2 재정의**: CC-2는 이제 두 수송 계획의 TV distance를 묻는 문제:
 
-$$\|M_{t\to r}^\mathrm{Sinkhorn} - M_{t\to r}^\mathrm{kernel-comp}\|_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$$
+$$\lVert M_{t\to r}^\mathrm{Sinkhorn} - M_{t\to r}^\mathrm{kernel-comp} \rVert_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$$
 
 여기서:
 - $M_{t\to r}^\mathrm{Sinkhorn} = \mathrm{Sinkhorn}(u_t, u_r, c[u_t,u_r], \varepsilon_\mathrm{OT})$ (독립 계산)
@@ -202,10 +202,10 @@ canonical.md §8.5:
 #### Route A (유일한 경로, Cat C → B 목표)
 
 **단계 1**: $\delta_\mathrm{eff}$ 계산 — kernel-comp의 effective cost와 직접 cost의 차이:
-$$\delta_\mathrm{eff} = \|c_\mathrm{direct}(x,z; u_t,u_r) - c^\mathrm{eff}(x,z; M_{t\to s}, M_{s\to r})\|_\infty$$
+$$\delta_\mathrm{eff} = \lVert c_\mathrm{direct}(x,z; u_t,u_r) - c^\mathrm{eff}(x,z; M_{t\to s}, M_{s\to r}) \rVert_\infty$$
 
 **단계 2**: Partial-H-SINK (Cat A) 적용:
-$$\|M^\mathrm{Sinkhorn} - M^\mathrm{eff-Sinkhorn}\|_\mathrm{TV} \leq 2m_t \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
+$$\lVert M^\mathrm{Sinkhorn} - M^\mathrm{eff-Sinkhorn} \rVert_\mathrm{TV} \leq 2m_t \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
 
 여기서 $M^\mathrm{eff-Sinkhorn} = \mathrm{Sinkhorn}(u_t, u_r, c^\mathrm{eff}, \varepsilon_\mathrm{OT})$.
 

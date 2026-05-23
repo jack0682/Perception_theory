@@ -117,7 +117,7 @@ These are the OMS theorems with the **highest** mathematical status (PROVED unco
 | **R3 (3)** | No global continuous selection of $u^*$ on $\Delta^3$ | op_oms_018 |
 | **R4** | $v(\lambda)$ continuous, concave, locally Lipschitz | op_oms_018 |
 | **R5** | Envelope on regular branch: $\partial v / \partial \lambda_i = E_i(u^*)$ | op_oms_018 |
-| **L1** | Global Lipschitz constant for $v$: $L_2 = \|M\|_2$ | op_oms_028 |
+| **L1** | Global Lipschitz constant for $v$: $L_2 = \lVert M \rVert_2$ | op_oms_028 |
 | **L2** | $v$ strictly concave off $\Sigma_{\mathrm{branch}}$ | op_oms_028 |
 | **ED1** | Finite gauge does not reduce formal dimension | effective_dof_theory |
 | **ED2** | Constant-rank ⇒ immersed response submanifold | effective_dof_theory |

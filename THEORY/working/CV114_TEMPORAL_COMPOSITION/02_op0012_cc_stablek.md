@@ -85,7 +85,7 @@ $$R_{t \to r}\!\left[M_{s\to r} \circ M_{t\to s}\right] = R_{s \to r}[M_{s\to r}
 $$R_{t \to r}^\mathrm{Sinkhorn}[M_{t\to r}] = R_{s \to r}[M_{s\to r}] \;\circ\; R_{t \to s}[M_{t\to s}]$$
 
 **현재 상태**: **Cat C** — CC-2, CC-4 미해결.  
-핵심 gap: $\|M_{t\to r}^\mathrm{Sinkhorn} - M_{s\to r} \circ M_{t\to s}\|_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$ bound 없음.
+핵심 gap: $\lVert M_{t\to r}^\mathrm{Sinkhorn} - M_{s\to r} \circ M_{t\to s} \rVert_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$ bound 없음.
 
 ---
 
@@ -108,18 +108,18 @@ $$R_{t \to r}^\mathrm{Sinkhorn}[M_{t\to r}] = R_{s \to r}[M_{s\to r}] \;\circ\; 
 
 **문장** (수준 2 T-CC-StableK-Sinkhorn에만 필요):
 
-$$\left\|M_{t\to r}^\mathrm{Sinkhorn} - M_{s\to r} \circ M_{t\to s}\right\|_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$$
+$$\left\lVert M_{t\to r}^\mathrm{Sinkhorn} - M_{s\to r} \circ M_{t\to s}\right \rVert_\mathrm{TV} \leq \varepsilon_\mathrm{comp}$$
 
 **증명 전략 (Route A, 미완성)**:
 
 **단계 1** [NEW NEEDED]: kernel-comp의 effective cost 계산:
 $$c^\mathrm{eff}(x,z) = -\varepsilon_\mathrm{OT} \log \sum_y \frac{M_{t\to s}(x,y)\,M_{s\to r}(y,z)}{u_t(x)}$$
 
-**단계 2** [NEW NEEDED]: $\delta_\mathrm{eff} = \|c_\mathrm{direct}(x,z) - c^\mathrm{eff}(x,z)\|_\infty$ bound.  
+**단계 2** [NEW NEEDED]: $\delta_\mathrm{eff} = \lVert c_\mathrm{direct}(x,z) - c^\mathrm{eff}(x,z) \rVert_\infty$ bound.  
 이것이 핵심 블로커. Stable-K + well-separated 하에서 두 cost의 차이를 bound하는 명시적 계산 없음.
 
 **단계 3** [Cat A, Partial-H-SINK 적용가능]:  
-$$\|M^\mathrm{Sinkhorn}(c_\mathrm{direct}) - M^\mathrm{Sinkhorn}(c^\mathrm{eff})\|_\mathrm{TV} \leq 2m_t \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
+$$\lVert M^\mathrm{Sinkhorn}(c_\mathrm{direct}) - M^\mathrm{Sinkhorn}(c^\mathrm{eff}) \rVert_\mathrm{TV} \leq 2m_t \cdot \delta_\mathrm{eff}/\varepsilon_\mathrm{OT}$$
 
 **단계 4** [NEW NEEDED]: $M^\mathrm{Sinkhorn}(c^\mathrm{eff}) \approx M_{s\to r} \circ M_{t\to s}$ 확인  
 (entropic regularization과 marginal constraints의 차이 처리 필요)
@@ -171,7 +171,7 @@ $$\varepsilon_\mathrm{comp} \leq \frac{2 M_\mathrm{tot} \cdot \delta_\mathrm{com
 **증명 전략 (후보, 미검증)**:
 
 Route A (TV bound 경유):
-1. Lemma 9 (Partial-H-SINK, Cat A): $\|M^* - M^{*'}\|_\mathrm{TV} \leq M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$
+1. Lemma 9 (Partial-H-SINK, Cat A): $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$
 2. 합성 OT 계획 $\hat{M}_{t \to r}$ (marginal composition 근사)와  
    실제 계획 $M_{t \to r}$ 사이의 TV distance를 Lemma 9로 bound
 3. Lemma 10 (Component confinement, Cat B): 성분 질량 차이로 전환

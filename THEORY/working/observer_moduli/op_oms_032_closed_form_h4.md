@@ -50,7 +50,7 @@ For each tested $(\lambda, X_t)$:
 2. **Energy gradients** $g_i(u^*) = \nabla_u E_i(u^*) \in \mathbb{R}^n$ via `grad_cl`, `grad_sep`, `grad_bd`. These are explicit closed-form formulas (Neumann expansion + polynomials). Computed in IEEE double; component-wise relative error $\le 2 n \cdot \mathrm{eps} \le 10^{-13}$ for $n \le 50$.
 3. **Tangent projection** $G_T = P_T^\top G \in \mathbb{R}^{(n-1) \times 3}$ via Householder. Orthonormal $P_T$ has component error $\le n \cdot \mathrm{eps}$.
 4. **Top-3 row selection** by largest L2-norm — exact integer choice.
-5. **Determinant** of the $3 \times 3$ minor via `np.linalg.det`. By Wilkinson's analysis, the relative error in $\det A$ for $A \in \mathbb{R}^{3 \times 3}$ in IEEE double is bounded by $\le 6 \cdot \mathrm{eps} \cdot \kappa(A) / \det(A)$, but more practically $\sim 3! \cdot \mathrm{eps} \cdot \|A\|_F^3$ in absolute terms (Higham, *Accuracy and Stability of Numerical Algorithms*, Ch. 14).
+5. **Determinant** of the $3 \times 3$ minor via `np.linalg.det`. By Wilkinson's analysis, the relative error in $\det A$ for $A \in \mathbb{R}^{3 \times 3}$ in IEEE double is bounded by $\le 6 \cdot \mathrm{eps} \cdot \kappa(A) / \det(A)$, but more practically $\sim 3! \cdot \mathrm{eps} \cdot \lVert A \rVert_F^3$ in absolute terms (Higham, *Accuracy and Stability of Numerical Algorithms*, Ch. 14).
 
 ### Error budget.
 
@@ -58,9 +58,9 @@ For each tested $(\lambda, X_t)$:
 |---|---|
 | Gradient roundoff | $\sim 10^{-13}$ relative |
 | Tangent projection roundoff | $\sim 10^{-13}$ relative |
-| Determinant roundoff | $\sim 10^{-15}$ absolute (for $\|G_T\|_F = O(1)$) |
+| Determinant roundoff | $\sim 10^{-15}$ absolute (for $\lVert G_T \rVert_F = O(1)$) |
 | **Total numerical error in $\det$** | $\le 10^{-12}$ absolute |
-| Optimizer residual contribution | KKT residual $\times$ Lipschitz of $G_T$ in $u$. For $\|G_T\|_{\mathrm{Lip}} = O(1)$ and KKT residual $\le 10^{-3}$, error $\le 10^{-3}$ |
+| Optimizer residual contribution | KKT residual $\times$ Lipschitz of $G_T$ in $u$. For $\lVert G_T \rVert_{\mathrm{Lip}} = O(1)$ and KKT residual $\le 10^{-3}$, error $\le 10^{-3}$ |
 
 The **dominant** error source is the optimizer residual, not roundoff. Conservatively bound the witness uncertainty by $10^{-3}$ in absolute determinant value.
 

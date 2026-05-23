@@ -93,7 +93,7 @@ $$\boxed{\;\Theta_{\mathrm{hyp}} \;=\; \bigl(r_1,\; r_2,\; r_3,\; a_{\mathrm{cl}
 | R-an-11 | FOV angular extent | $(\omega_h, \omega_v)$ | $\mathbb{R}_+^2$ |
 | R-an-12 | Eye dominance | binary | $\{L, R\}$ |
 | R-an-13 | V1 cortical magnification | $M_{V1}(\theta)$ | function |
-| R-an-14 | V1 area size | $|V_{V1}|$ | scalar |
+| R-an-14 | V1 area size | $\lvert V_{V1} \rvert$ | scalar |
 
 **Neural perceptual roots** $\Theta_{\mathrm{nn}}^{\mathrm{root}} \in \mathbb{R}^{12}$ (12 entries from MG-3 neural, MG-4, MG-5 neural):
 
@@ -126,7 +126,7 @@ $$\Theta_{\mathrm{idio}}^{(s)} = \mathrm{decode}(s) = (r_1, r_2, r_3, a_{\mathrm
 
 $$\boxed{\;u_t \,:\, X_t \to [0, 1], \quad u_t \in \Sigma_M(\Theta_{\mathrm{root}}) \;}$$
 
-where $\Sigma_M := \{u \in [0,1]^n : \sum_i u_i = M, \; n = |V|(\Theta_{\mathrm{anat}}, \Theta_{\mathrm{cat}})\}$ — *volume-constrained simplex*.
+where $\Sigma_M := \{u \in [0,1]^n : \sum_i u_i = M, \; n = \lvert V \rvert(\Theta_{\mathrm{anat}}, \Theta_{\mathrm{cat}})\}$ — *volume-constrained simplex*.
 
 **Primitive 위상**: $u_t$ 는 SCC 의 *유일한 primitive* (DECL-1.0); 객체 (PersComp 등) 는 *derivative* (CN8.5). 모든 derivation 에서 *u_t* 가 *input 또는 output* 의 위치를 차지 — 결코 *intermediate construct* 으로 *derived from objects* 형식 사용 금지.
 
@@ -268,7 +268,7 @@ $$W(x, y) \;=\; \sum_{n,m} Z_n^m \cdot \mathcal{Z}_n^m\!\left(\frac{x}{r_{\mathr
 
 $$Z_2^0 \;\propto\; \frac{1}{R_{\mathrm{cor}}} \;-\; \frac{1}{f_{\mathrm{acc}}(A_{\mathrm{acc}})}, \qquad f_{\mathrm{acc}}(A_{\mathrm{acc}}) = \text{현재 조절 초점 거리}.$$
 
-**CoT step 2** (PSF 합성): Pupil function $P(x,y) = \mathbf{1}_{|(x,y)| \leq r_{\mathrm{pup}}} \cdot \exp\!\left(\mathrm{i} \frac{2\pi}{\lambda} W(x,y)\right)$ 에서 coherent PSF = $|\mathcal{F}[P]|^2$ (Fraunhofer approximation). 다채널 (LMS-pre) 에서 각 채널 $c \in \{L_{\mathrm{pre}}, M_{\mathrm{pre}}, S_{\mathrm{pre}}\}$ 에 대해 동일 PSF 커널 $K_{\mathrm{PSF}}$ 를 적용 (단, chromatic aberration 무시 — Cat C SKETCH 수준):
+**CoT step 2** (PSF 합성): Pupil function $P(x,y) = \mathbf{1}_{\lvert (x,y) \rvert \leq r_{\mathrm{pup}}} \cdot \exp\!\left(\mathrm{i} \frac{2\pi}{\lambda} W(x,y)\right)$ 에서 coherent PSF = $|\mathcal{F}[P]|^2$ (Fraunhofer approximation). 다채널 (LMS-pre) 에서 각 채널 $c \in \{L_{\mathrm{pre}}, M_{\mathrm{pre}}, S_{\mathrm{pre}}\}$ 에 대해 동일 PSF 커널 $K_{\mathrm{PSF}}$ 를 적용 (단, chromatic aberration 무시 — Cat C SKETCH 수준):
 
 $$I_t^{\mathrm{PSF}}(x,y) \;=\; (K_{\mathrm{PSF}} * I_t^{\mathrm{pre}})(x,y) \;:=\; \int_{\mathcal{X}_{\mathrm{ret}}} K_{\mathrm{PSF}}(x - x', y - y') \, I_t^{\mathrm{pre}}(x', y') \, dx' \, dy'.$$
 
@@ -633,10 +633,10 @@ cat_overall: "Cat A (T8 + spinodal + SB7); Cat C SKETCH ($\Psi$ + $\mathrm{Norm}
 2. **피질 확대 보정** (R-an-13, R-an-14): V1 피질 확대 곡선(cortical magnification curve) $m_{\mathrm{V1}}(e)$ 으로 정점 밀도를 재조정한다. V1 의 단위 피질 면적이 처리하는 시야각이 중심와에서 더 좁으므로, 중심와 영역에 더 많은 유효 정점이 할당된다.
    $$n_{\mathrm{fov}} \propto \int_0^{e_{\mathrm{fov}}} m_{\mathrm{V1}}(e)\, \rho_{\mathrm{fov}}(e)\, de, \quad n_{\mathrm{per}} \propto \int_{e_{\mathrm{fov}}}^{e_{\mathrm{max}}} m_{\mathrm{V1}}(e)\, \rho_{\mathrm{rod}}(e)\, de$$
 
-3. **시야 범위** (R-an-11): FOV 범위 $[\theta_{\mathrm{min}}, \theta_{\mathrm{max}}]$ 가 $|V|$ 의 상한을 결정한다.
+3. **시야 범위** (R-an-11): FOV 범위 $[\theta_{\mathrm{min}}, \theta_{\mathrm{max}}]$ 가 $\lvert V \rvert$ 의 상한을 결정한다.
 
 총 정점 수:
-$$n = |V| = n_{\mathrm{fov}} + n_{\mathrm{per}} \quad (\text{R-an-6, R-an-7, R-an-11, R-an-13, R-an-14 통합})$$
+$$n = \lvert V \rvert = n_{\mathrm{fov}} + n_{\mathrm{per}} \quad (\text{R-an-6, R-an-7, R-an-11, R-an-13, R-an-14 통합})$$
 
 **CoC anchor**: scc/`graph.py` `GraphState` 는 임의 가중 인접 행렬 $W$ 로 초기화된다. $n$ 은 위 해부학 파라미터로 결정되며, `grid_2d(rows, cols)` 는 균일 격자의 특수 경우다.
 
@@ -645,7 +645,7 @@ $$n = |V| = n_{\mathrm{fov}} + n_{\mathrm{per}} \quad (\text{R-an-6, R-an-7, R-a
 에지는 세 종류로 구성된다.
 
 **(i) 공간 8-인접** (기본 구조):
-$$E_{\mathrm{spatial}} = \{(i, j) : \|x_i - x_j\| \leq \sqrt{2}\,\Delta x\}$$
+$$E_{\mathrm{spatial}} = \{(i, j) : \lVert x_i - x_j \rVert \leq \sqrt{2}\,\Delta x\}$$
 8-인접은 대각 방향 경계를 포함하여, 이방성 형태의 응집을 허용한다.
 
 **(ii) 입체시 인접** (D-ST-1, R-an-1 IPD): §3.3 에서 상세히 전개. 깊이 차 $d^{\mathrm{depth}}(i,j)$ 가 임계값 $\delta_{\mathrm{stereo}}$ 미만인 경우에만 에지를 추가한다.
@@ -653,7 +653,7 @@ $$E_{\mathrm{spatial}} = \{(i, j) : \|x_i - x_j\| \leq \sqrt{2}\,\Delta x\}$$
 **(iii) 기하 왜곡 편향** $g_{\mathrm{bias}}$: 시드 디코딩(seed-decoded) 모듈레이션으로 에지 가중치를 조정한다. 광학 수차, 안구 운동 잔류 오차 등의 기하 왜곡을 인코딩한다.
 
 에지 가중치 — **SCC 응집 가중 대칭 형식** $W_{\mathrm{sym}}$:
-$$w_{ij} = w_{ji} = \frac{1}{2}\bigl(c_i + c_j\bigr) \cdot \exp\!\bigl(-\|x_i - x_j\|^2 / 2\sigma_r^2\bigr) \cdot g_{\mathrm{bias}}(i,j)$$
+$$w_{ij} = w_{ji} = \frac{1}{2}\bigl(c_i + c_j\bigr) \cdot \exp\!\bigl(-\lVert x_i - x_j \rVert^2 / 2\sigma_r^2\bigr) \cdot g_{\mathrm{bias}}(i,j)$$
 
 여기서 $c_i \in [0,1]$ 은 응집 강도 (초기에는 $\tilde{I}_t$ 로부터 추정), $\sigma_r$ 은 연결 반경. 이 형식은 canonical `graph.py` 의 `W_sym` (cohesion-weighted, CLAUDE.md §"Code Architecture") 과 직접 대응한다.
 
@@ -671,7 +671,7 @@ $$L = D - W, \qquad D_{ii} = \sum_j w_{ij} \quad (D = \text{degree diagonal})$$
 $L$ 은 반양정치(positive semidefinite)이며, 영공간은 $\mathrm{span}(\mathbf{1})$ (연결 그래프 가정).
 
 **정의 (Fiedler 값)**:
-$$\lambda_2(G) := \lambda_2(L) = \min_{v \perp \mathbf{1},\, \|v\|=1} v^T L v$$
+$$\lambda_2(G) := \lambda_2(L) = \min_{v \perp \mathbf{1},\, \lVert v \rVert=1} v^T L v$$
 
 $\lambda_2$ 는 $L$ 의 두 번째로 작은 고유값이다 (첫 번째 = 0 은 상수 모드).
 
@@ -730,9 +730,9 @@ $$W''(c) = 2 - 12c + 12c^2 = 2(1 - 6c + 6c^2)$$
 
 **정리 T8 (대칭 깨짐 위상전이)**:
 
-$$\boxed{\text{대칭 깨짐 발생} \iff \frac{\beta}{\alpha} > \frac{4\lambda_2(G)}{|W''(c)|}}$$
+$$\boxed{\text{대칭 깨짐 발생} \iff \frac{\beta}{\alpha} > \frac{4\lambda_2(G)}{\lvert W''(c) \rvert}}$$
 
-**CoT step 4 (위상비 의존성).** $r_3 := \beta/\alpha$ 는 초매개변수 $\Theta_{\mathrm{hyp}}$ 의 L3=7 중 하나로, T8 의 *제어 초매개변수*다. $r_3$ 이 임계값 $r_3^{\mathrm{crit}} = 4\lambda_2/|W''(c)|$ 를 넘으면 균일 상태가 불안정해지고 비균일 formation 이 출현한다.
+**CoT step 4 (위상비 의존성).** $r_3 := \beta/\alpha$ 는 초매개변수 $\Theta_{\mathrm{hyp}}$ 의 L3=7 중 하나로, T8 의 *제어 초매개변수*다. $r_3$ 이 임계값 $r_3^{\mathrm{crit}} = 4\lambda_2/\lvert W''(c) \rvert$ 를 넘으면 균일 상태가 불안정해지고 비균일 formation 이 출현한다.
 
 **CoT step 5 (그래프 $\lambda_2$ 의 해상도 역할).** $\lambda_2(G)$ 가 T8 의 임계값 분모에 등장한다. $\lambda_2 \downarrow$ 이면 임계값 $r_3^{\mathrm{crit}} \downarrow$ → 더 작은 $r_3$ 에서도 T8 조건이 붕괴 → 객체 경계가 사라짐. 이것이 "그래프 해상도가 낮을수록 T8 임계조건이 붕괴"하는 정확한 메커니즘이다.
 
@@ -755,14 +755,14 @@ $$\boxed{\text{대칭 깨짐 발생} \iff \frac{\beta}{\alpha} > \frac{4\lambda_
 ### §3.5.1 두 곡면의 정의
 
 **T8 위상전이 곡면**:
-$$\Sigma_{T8} := \Bigl\{\Theta \in \Theta_{\mathrm{hyp}} : \frac{\beta}{\alpha} = \frac{4\lambda_2(G)}{|W''(c)|}\Bigr\}$$
+$$\Sigma_{T8} := \Bigl\{\Theta \in \Theta_{\mathrm{hyp}} : \frac{\beta}{\alpha} = \frac{4\lambda_2(G)}{\lvert W''(c) \rvert}\Bigr\}$$
 
 이는 파라미터 공간에서 codim-1 곡면이다 — 단 하나의 scalar 조건 $r_3 = r_3^{\mathrm{crit}}$ 로 결정된다.
 
 **Hessian 퇴화 집합**:
-$$\Sigma_{\mathrm{Hess}} := \bigl\{\,(\Theta, u^*) : u^* \text{ critical},\; \det \mathrm{Hess}\,\mathcal{E}(u^*)\big|_{T_{u^*}\Sigma_m} = 0\,\bigr\}$$
+$$\Sigma_{\mathrm{Hess}} := \bigl\{\,(\Theta, u^*) : u^* \text{ critical},\; \det \mathrm{Hess}\,\mathcal{E}(u^*)\big\vert_{T_{u^*}\Sigma_m} = 0\,\bigr\}$$
 
-균일 임계 시트 $u^* = c\mathbf{1}$ 위에서, $\mathrm{Hess}$ 의 최소 고유값이 0 이 되는 조건은 $\mu_2 = 0 \iff \beta/\alpha = 4\lambda_2/|W''(c)|$ — 이것이 정확히 $\Sigma_{T8}$ 의 조건이다.
+균일 임계 시트 $u^* = c\mathbf{1}$ 위에서, $\mathrm{Hess}$ 의 최소 고유값이 0 이 되는 조건은 $\mu_2 = 0 \iff \beta/\alpha = 4\lambda_2/\lvert W''(c) \rvert$ — 이것이 정확히 $\Sigma_{T8}$ 의 조건이다.
 
 ### §3.5.2 canonical SB7 (Cat A, L2495) — $\Sigma_{\mathrm{Hess}} = \Sigma_{T8}$
 
@@ -814,12 +814,12 @@ $$w_{\mathrm{int}} = O\!\bigl(\sqrt{\alpha/\beta}\bigr)$$
 ### §3.7.1 정의 (canonical Theorem 4 직접 형식)
 
 **canonical §13 Theorem 4 (L1466)** 의 T-σ-Theorem-3 설명에서 명시된 임계값:
-$$\beta_{\mathrm{crit}}^{(2)} = \frac{4\alpha\,\lambda_2(G)}{|W''(c)|}$$
+$$\beta_{\mathrm{crit}}^{(2)} = \frac{4\alpha\,\lambda_2(G)}{\lvert W''(c) \rvert}$$
 
 이 값이 *첫 번째 비자명 pitchfork 분기*의 임계 $\beta$ 값이다.
 
 **$r_3^{\mathrm{crit}}$ 와의 직접 대응**:
-$$r_3^{\mathrm{crit}} = \frac{\beta_{\mathrm{crit}}^{(2)}}{\alpha} = \frac{4\lambda_2(G)}{|W''(c)|}$$
+$$r_3^{\mathrm{crit}} = \frac{\beta_{\mathrm{crit}}^{(2)}}{\alpha} = \frac{4\lambda_2(G)}{\lvert W''(c) \rvert}$$
 
 초매개변수 $r_3 = \beta/\alpha$ 와의 비교: $r_3 > r_3^{\mathrm{crit}} \iff \beta > \beta_{\mathrm{crit}}^{(2)}$ (고정 $\alpha$).
 
@@ -834,7 +834,7 @@ $$r_3^{\mathrm{crit}} = \frac{\beta_{\mathrm{crit}}^{(2)}}{\alpha} = \frac{4\lam
 
 그래프 의존성: $\beta_{\mathrm{crit}}^{(2)} \propto \lambda_2(G)$ — small-world 그래프 ($\lambda_2$ 큼) 는 격자 그래프 ($\lambda_2$ 작음) 에 비해 더 큰 $\beta$ 를 요구한다. 동일한 관측 조건에서 small-world 연결성은 formation 형성을 억제한다.
 
-**CoC anchor**: canonical §13 Theorem 4 (L1466, T-σ-Theorem-3) — "$\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}/|W''(c)|$ (sub-critical, Morse-0)" 직접 인용 + spinodal interior hypothesis discussion.
+**CoC anchor**: canonical §13 Theorem 4 (L1466, T-σ-Theorem-3) — "$\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}/\lvert W''(c) \rvert$ (sub-critical, Morse-0)" 직접 인용 + spinodal interior hypothesis discussion.
 
 ---
 
@@ -968,7 +968,7 @@ Stage 0 에서 $\tilde{I}_t$ 가 시간 $t$ 에 따라 변하면 $G = G_t$ 도 �
 
 ### §4.1 Multi-peak F≥2 (canonical Stage 2)
 
-**설정.** Stage 1 에서 spinodal bifurcation (T8: $\beta/\alpha > 4\lambda_2/|W''(c)|$) 이 발생하면, 균일장 $c\mathbf{1}$ 은 불안정해지고 Fiedler 벡터 방향으로 대칭 깨짐이 시작된다. Stage 2 는 이 bifurcation *이후* 의 체제로, $u$ 가 공간 상에서 여러 개의 peak (응집 후보) 를 형성한 상태이다.
+**설정.** Stage 1 에서 spinodal bifurcation (T8: $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$) 이 발생하면, 균일장 $c\mathbf{1}$ 은 불안정해지고 Fiedler 벡터 방향으로 대칭 깨짐이 시작된다. Stage 2 는 이 bifurcation *이후* 의 체제로, $u$ 가 공간 상에서 여러 개의 peak (응집 후보) 를 형성한 상태이다.
 
 **Peak 수 F의 정의.** 역치 독립적 극소 개수 $F = \mathcal{F}(u)$ 를 다음과 같이 정의한다:
 
@@ -990,7 +990,7 @@ $$F = \mathcal{F}(u) = \#\{\text{local maxima of } u \text{ on } G\}$$
 
 **정의.**
 
-$$E_{\mathrm{cl}}(u;\, a_{\mathrm{cl}}, G) = \|\mathrm{Cl}_{a_{\mathrm{cl}}}(u) - u\|^2 = \langle u - \mathrm{Cl}_{a_{\mathrm{cl}}}(u),\; u - \mathrm{Cl}_{a_{\mathrm{cl}}}(u)\rangle$$
+$$E_{\mathrm{cl}}(u;\, a_{\mathrm{cl}}, G) = \lVert \mathrm{Cl}_{a_{\mathrm{cl}}}(u) - u \rVert^2 = \langle u - \mathrm{Cl}_{a_{\mathrm{cl}}}(u),\; u - \mathrm{Cl}_{a_{\mathrm{cl}}}(u)\rangle$$
 
 **닫힘 연산자 $\mathrm{Cl}_{a_{\mathrm{cl}}}$ 의 명시적 형태.** 집계 연산자 $P_t = D^{-1}W$ (행 정규화) 와 혼합 파라미터 $\eta_{\mathrm{cl}}$ 를 통해:
 
@@ -1020,9 +1020,9 @@ $$\nabla_u E_{\mathrm{cl}} = 2(J_{\mathrm{Cl}}(u) - I)^\top(\mathrm{Cl}_{a_{\mat
 
 **도수 가중 연산자 노름 수축 (L-CLOSURE-LIFT).** 연결된 무방향 그래프 $G$, $a_{\mathrm{cl}} < 4$, $u^* \in [0,1]^n$ 에서:
 
-$$\|J_{\mathrm{Cl}}(u^*)\|_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1$$
+$$\lVert J_{\mathrm{Cl}}(u^*) \rVert_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1$$
 
-여기서 $\|\cdot\|_{D \to D}$ 는 도수 가중 내적 $\langle u,v\rangle_D = u^\top D v$ 에 대한 연산자 노름.
+여기서 $\lVert \cdot \rVert_{D \to D}$ 는 도수 가중 내적 $\langle u,v\rangle_D = u^\top D v$ 에 대한 연산자 노름.
 
 **CoC.** canonical L-CLOSURE-LIFT (Cat A, CV-1.16, §13 L1759–1794); scc/operators.py lines 49–101; scc/energy.py `energy_cl`, `grad_cl`; scc/predicates.py.
 
@@ -1085,7 +1085,7 @@ $$W''(u) = 12u^2 - 12u + 2$$
 
 $$E_{\mathrm{bd}}(u;\, r_3, G) = \alpha\Bigl(2\langle u, Lu \rangle + r_3 \sum_i W(u_i)\Bigr)$$
 
-$r_3 > 4\lambda_2 / |W''(c)|$ (T8 조건) 에서 spinodal regime 진입. $\alpha$ 는 절대 에너지 스케일, $r_3$ 는 두 항의 균형을 결정한다.
+$r_3 > 4\lambda_2 / \lvert W''(c) \rvert$ (T8 조건) 에서 spinodal regime 진입. $\alpha$ 는 절대 에너지 스케일, $r_3$ 는 두 항의 균형을 결정한다.
 
 **기울기 (factor 4 보정, CLAUDE.md).** 순서쌍 합산에 의한 인수 4:
 
@@ -1097,9 +1097,9 @@ $$\nabla_u E_{\mathrm{bd}} = 4\alpha L u + \beta W'(u) = 4\alpha L u + 2\beta u 
 
 **CoT 2 — Hessian 스펙트럼.** $u = c\mathbf{1}$ (균일장) 에서 $E_{\mathrm{bd}}$ 의 Hessian:
 
-$$H_{\mathrm{bd}}\big|_{c\mathbf{1}} = 4\alpha L + \beta W''(c) I$$
+$$H_{\mathrm{bd}}\big\vert_{c\mathbf{1}} = 4\alpha L + \beta W''(c) I$$
 
-고유값: $4\alpha\lambda_k + \beta W''(c)$ ($k = 0,1,\ldots,n-1$). $k=1$ (Fiedler) 에서 $4\alpha\lambda_2 + \beta W''(c) < 0$ iff $\beta/\alpha > 4\lambda_2/|W''(c)|$ (T8 조건). 따라서 $E_{\mathrm{bd}}$ 의 $H$ 가 부정치가 되는 순간이 Stage 1 spinodal bifurcation 이다.
+고유값: $4\alpha\lambda_k + \beta W''(c)$ ($k = 0,1,\ldots,n-1$). $k=1$ (Fiedler) 에서 $4\alpha\lambda_2 + \beta W''(c) < 0$ iff $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (T8 조건). 따라서 $E_{\mathrm{bd}}$ 의 $H$ 가 부정치가 되는 순간이 Stage 1 spinodal bifurcation 이다.
 
 **CoC.** canonical Allen-Cahn 유사체 §9 + §13 (T8 phase transition Cat A); scc/energy.py `energy_bd`, `grad_bd` (lines 42–65); CLAUDE.md §"E_bd smoothness: 2α·uᵀLu → gradient 4α·Lu" + "W'(u) = 2u(1-u)(1-2u)".
 
@@ -1117,7 +1117,7 @@ $$E_{\mathrm{tr}}^\varepsilon(u_t, u_s) = \min_{M \in \Pi(u_t, u_s)} \Bigl[\sum_
 
 여기서 $c(x,y)$ 는 코헤시온 지문 (fingerprint) 기반 비용:
 
-$$c(x,y) = \|\varphi(x) - \varphi(y)\|^2, \quad \varphi(x) = (u(x),\, \mathrm{Cl}(u)(x),\, D(x;1-u))$$
+$$c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2, \quad \varphi(x) = (u(x),\, \mathrm{Cl}(u)(x),\, D(x;1-u))$$
 
 **단일 시간 Stage 2 에서의 부재.** 본 Stage 2 는 단일 시각 $t$ 에서의 에너지 최소화이다. $E_{\mathrm{tr}}$ 는 *두 시각 간의* 차이를 측정하므로, 단일 시간 최적화에서는 등장하지 않는다. $E_{\mathrm{tr}}$ 는 Stage 6 (시간적 합성, §6) 에서 본격적으로 등장한다.
 
@@ -1179,7 +1179,7 @@ $$\nabla_{\Sigma_M} E = \Pi_M \nabla_u E$$
 1. $u^{(0)} = u_0 \in \Sigma_M$ (또는 무작위 초기화 다수)
 2. 반복: $\tilde{u}^{(k+1)} = u^{(k)} - \eta_k \nabla_{\Sigma_M} E(u^{(k)})$
 3. 사영: $u^{(k+1)} = \Pi_{\Sigma_M}(\tilde{u}^{(k+1)}) = \mathrm{clip}_{[0,1]}(\tilde{u}^{(k+1)} + \nu\mathbf{1})$ ($\nu$ 질량 보정)
-4. BB 스텝: $\eta_k = \frac{\|\delta u\|^2}{\langle \delta u, \delta g \rangle}$ ($\delta u = u^{(k)} - u^{(k-1)}$, $\delta g = g^{(k)} - g^{(k-1)}$)
+4. BB 스텝: $\eta_k = \frac{\lVert \delta u \rVert^2}{\langle \delta u, \delta g \rangle}$ ($\delta u = u^{(k)} - u^{(k-1)}$, $\delta g = g^{(k)} - g^{(k-1)}$)
 5. 다중 시작으로 여러 국소 최솟값 탐색 → 최소 에너지 선택
 
 **수렴.** $E$ 가 Łojasiewicz 조건을 만족하면 ($b_D = 0$ 요구 — canonical CLAUDE.md "b_D = 0 required for analyticity"), 기울기 흐름은 임계점으로 수렴한다.
@@ -1222,7 +1222,7 @@ $$\lambda_1^{\mathrm{P}} \geq \frac{\pi^2}{n} e^{-\mathrm{osc}(\tilde{E})/T_*}$$
 
 $L^2 \to TV$ Cauchy-Schwarz 합성으로 지수 에르고딕 수렴:
 
-$$\|P_t^* \mu - \pi_{T_*}\|_{\mathrm{TV}} \leq C e^{-\lambda_1^{\mathrm{P}} t} \|\mu - \pi_{T_*}\|_{L^2(\pi_{T_*})}$$
+$$\lVert P_t^* \mu - \pi_{T_*} \rVert_{\mathrm{TV}} \leq C e^{-\lambda_1^{\mathrm{P}} t} \lVert \mu - \pi_{T_*} \rVert_{L^2(\pi_{T_*})}$$
 
 **CoT 1 — 결정론적 극한 $T_* \to 0$.** $T_* \to 0$ 에서 $\pi_{T_*}$ 는 $E$ 의 전역 최솟값에 집중된다 (Laplace 방법). 즉 확률론적 Stage 2 는 결정론적 Stage 2 (§4.7) 를 포함하며, 후자는 전자의 영-온도 극한이다.
 
@@ -1261,7 +1261,7 @@ $E_{\mathrm{bd}}$ 는 순수 기하 항 (경계), $E_{\mathrm{tr}}$ 는 시간 �
 
 **H5 Morse 속성.** 총 에너지 $E$ 의 임계점이 비퇴화 (non-degenerate) Morse 임계점인지 여부는 H5 핵심 가정이다 (02_H5_morse_spinodal.md §1.1). $\mathcal{R}_{\mathrm{post}} \cap \mathcal{B}_{\mathrm{stable}}$ 체제에 한정된 Cat A 진입 경로가 탐색 중이다 (02_H5 §5). 일반적으로는 Cat B 이상 확인되지 않는 상태.
 
-**Spinodal 층 $\Sigma_{T8}$ 의 내재적 퇴화.** T8 임계면 ($r_3 = 4\lambda_2/|W''(c)|$) 위에서, Fiedler 모드 방향의 Hessian 고유값이 0 이 된다. 이 방향에서 Goldstone-유사 soft mode 가 발생한다 (spinodal Goldstone, 02_H5 §spinodal 절). Morse 비퇴화가 spinodal 근방에서 위반될 수 있으므로, Morse 분석은 $r_3$ 가 임계값으로부터 충분히 멀어진 regime 에 국한된다.
+**Spinodal 층 $\Sigma_{T8}$ 의 내재적 퇴화.** T8 임계면 ($r_3 = 4\lambda_2/\lvert W''(c) \rvert$) 위에서, Fiedler 모드 방향의 Hessian 고유값이 0 이 된다. 이 방향에서 Goldstone-유사 soft mode 가 발생한다 (spinodal Goldstone, 02_H5 §spinodal 절). Morse 비퇴화가 spinodal 근방에서 위반될 수 있으므로, Morse 분석은 $r_3$ 가 임계값으로부터 충분히 멀어진 regime 에 국한된다.
 
 **$T_*$ 공리적 위상 (OP-0021).** $T_* = \tau \cdot \alpha$ 는 현재 공리적으로 주어진다. Route C (고정점 이론, 03_T_star_fixed_point.md §5) 를 통한 $T_*$ 의 자기-일관적 도출이 별도 과제이다. $T_*$ 를 내생적으로 결정하면 $\tau$ 초매개변수가 불필요해진다.
 
@@ -1334,9 +1334,9 @@ $$\mathrm{PersComp}(u;\, \rho_{\mathrm{pers}},\, \tau_{\mathrm{pers}}) = \bigl\{
 
 **안정성 (Cohen-Steiner et al.):** 두 장 $u, \tilde{u}$에 대해
 
-$$d_B\bigl(\mathrm{Bars}_0(u), \mathrm{Bars}_0(\tilde{u})\bigr) \leq \|u - \tilde{u}\|_{L^\infty}$$
+$$d_B\bigl(\mathrm{Bars}_0(u), \mathrm{Bars}_0(\tilde{u})\bigr) \leq \lVert u - \tilde{u} \rVert_{L^\infty}$$
 
-여기서 $d_B$는 병목 거리(bottleneck distance)이다. 결과적으로 $\|u - \tilde{u}\|_\infty < \tau_{\mathrm{pers}}/2$ 범위의 교란에서는 PersComp의 성분 구조가 보존된다.
+여기서 $d_B$는 병목 거리(bottleneck distance)이다. 결과적으로 $\lVert u - \tilde{u} \rVert_\infty < \tau_{\mathrm{pers}}/2$ 범위의 교란에서는 PersComp의 성분 구조가 보존된다.
 
 **CoC-1:** canonical D-ST-3 (canonical §3.11); scc/persistence.py (`persistence_h0`, union-find); scc/k_soft.py (`k_soft`, bar 집계).
 
@@ -1395,7 +1395,7 @@ $$K_{\mathrm{act}}(u_t^*) := |\mathrm{PersComp}(u_t^*;\, \rho_{\mathrm{pers}},\,
 
 4. **T-L1-F 연결 (L1-J 레짐 조건부):** L1-J 레짐 $(P0)$–$(P11)$ 하에서 $K_{\mathrm{act}} = K_{\mathrm{bar}}^{\ell_{\min}}$ (hard-bar count와의 동치). 이 동치는 레짐 가설 조건부이며 일반적으로 성립하지 않는다.
 
-**CoT-4:** 슬롯 카운트 $|\{j : \|u^{(j)}\|_\infty > \varepsilon\}|$는 K-field 아키텍처의 부산물로서 노이즈 시 부풀어오르는 경향이 있다. 반면 $K_{\mathrm{act}} = \#\mathrm{PersComp}$는 위상학적 정보를 활용하므로 노이즈 성분을 bar 길이 임계로 걸러낼 수 있다 (exp01: 2-blob field에서 PersComp=2 정확, slot-count=4 과팽창).
+**CoT-4:** 슬롯 카운트 $|\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$는 K-field 아키텍처의 부산물로서 노이즈 시 부풀어오르는 경향이 있다. 반면 $K_{\mathrm{act}} = \#\mathrm{PersComp}$는 위상학적 정보를 활용하므로 노이즈 성분을 bar 길이 임계로 걸러낼 수 있다 (exp01: 2-blob field에서 PersComp=2 정확, slot-count=4 과팽창).
 
 **전방 참조:** $K_{\mathrm{soft}}$ (§10) = $\sum_i \varphi(\ell_i)$는 $K_{\mathrm{act}}$의 미분 가능한 스무스 근사로서, 기울기 기반 최적화에 사용 가능.
 
@@ -1413,7 +1413,7 @@ $$d(u_t^*) = \bigl(\mathrm{Bind},\; \mathrm{Sep},\; \mathrm{Inside},\; \mathrm{P
 
 **Bind** (결합도): 형성체 내부의 위상 닫힘 정도.
 
-$$\mathrm{Bind}(u) = 1 - \frac{\|u - \mathrm{Cl}_t(u)\|_2}{\sqrt{n}}$$
+$$\mathrm{Bind}(u) = 1 - \frac{\lVert u - \mathrm{Cl}_t(u) \rVert_2}{\sqrt{n}}$$
 
 $\mathrm{Cl}_t(u)$는 닫힘 연산자(§8 참조). Bind $\approx 1$ ↔ $u$가 거의 고정점.
 
@@ -1546,13 +1546,13 @@ $$B_{\mathrm{PersRidge}}(u) := \bigl\{x \in V : (b_x, d_x) \in \mathrm{Bars}_0(|
 $$d_H\bigl(B_{\mathrm{PersRidge}}(u^*),\; \partial\mathrm{PersComp}(u^*)\bigr) \leq 2 \cdot (\alpha/\beta)^{1/2}$$
 
 가정 패키지 요약:
-- **H1** 위상분리: $\beta/\alpha > 4\lambda_2 / |W''(c)|$ (T8 임계 위).
+- **H1** 위상분리: $\beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert$ (T8 임계 위).
 - **H2** 잘 형성된 성분: $C_j$ 연결 + 비어있지 않은 내부.
 - **H3** 정준 임계: $\rho_{\mathrm{bd}} = 1/(4\xi)$.
 - **H4** 곡률 유계: $\kappa_{\mathrm{max}} \cdot \xi \leq 0.1$.
 - **H5** Hard-cut 스테레오 인접 (입체 확장 시 적용).
 
-**안정성:** 광도측정 교란(photometric perturbation) $\|\delta u\|_\infty < \rho_{\mathrm{bd}}/2$에서 $B_{\mathrm{PersRidge}}$ 구조 보존. 실험 exp06에서 그림자/흐림 교란 대비 4–51× 안정성 확인.
+**안정성:** 광도측정 교란(photometric perturbation) $\lVert \delta u \rVert_\infty < \rho_{\mathrm{bd}}/2$에서 $B_{\mathrm{PersRidge}}$ 구조 보존. 실험 exp06에서 그림자/흐림 교란 대비 4–51× 안정성 확인.
 
 **§5.3 Boundary와의 관계:** H1–H5 레짐에서 $\mathrm{Bd}_t(u^*) \approx B_{\mathrm{PersRidge}}(u^*) \approx \partial\mathrm{PersComp}(u^*)$ 세 정의가 근사적으로 일치.
 
@@ -1564,10 +1564,10 @@ $$d_H\bigl(B_{\mathrm{PersRidge}}(u^*),\; \partial\mathrm{PersComp}(u^*)\bigr) \
 
 **CoT-11:** PersComp 성분 하나의 크기, 둘레, 위상 복잡도를 정량화하면 형성체의 형태 유형을 구분할 수 있다 (예: 원판형 vs 고리형 vs 세장형). 이를 형태 구조 벡터라 한다.
 
-$$Q_{\mathrm{morph}}(C) = \bigl(|C|,\; |\partial C|,\; \chi(C),\; \lambda_1^{\mathrm{shape}},\; \lambda_2^{\mathrm{shape}},\; \ldots\bigr)$$
+$$Q_{\mathrm{morph}}(C) = \bigl(\lvert C \rvert,\; |\partial C|,\; \chi(C),\; \lambda_1^{\mathrm{shape}},\; \lambda_2^{\mathrm{shape}},\; \ldots\bigr)$$
 
 여기서:
-- $|C|$ — 성분의 노드 수(면적 대용).
+- $\lvert C \rvert$ — 성분의 노드 수(면적 대용).
 - $|\partial C| = |\{i \in C : \exists\, j \sim i,\; j \notin C\}|$ — 경계 노드 수(둘레 대용).
 - $\chi(C)$ — Euler 특성 ($\chi = \text{정점} - \text{간선} + \text{면}$; 위상 유형).
 - $\lambda_1^{\mathrm{shape}},\, \lambda_2^{\mathrm{shape}}$ — $C$ 위에서의 이차 모멘트 텐서의 주 고유값 (형태 이심율, eccentricity 측정).
@@ -1576,7 +1576,7 @@ $$Q_{\mathrm{morph}}(C) = \bigl(|C|,\; |\partial C|,\; \chi(C),\; \lambda_1^{\ma
 
 $$\mathrm{Inside}(u) = \ell_{\max} \cdot \mathrm{Artic} \cdot \frac{\ell_{\max} - \bar{u}}{1 - \bar{u}}$$
 
-(정규화 후; $\bar{u} = |V|^{-1}\sum_i u(i)$)
+(정규화 후; $\bar{u} = \lvert V \rvert^{-1}\sum_i u(i)$)
 
 **궤도 발견 (2026-04-23):** 32×32 격자에서 56개의 안정적인 궤도 형태 모드가 수치적으로 확인되었다. 전체 SCC 에너지는 F=1 단일 디스크 최소화 기를 제거하며, 다양한 $Q_{\mathrm{morph}}$ 값을 가지는 안정 형성체 집합이 존재함이 경험적으로 입증되었다 (Axiom S1' 후보).
 
@@ -1615,7 +1615,7 @@ $f_\rho$의 구체적 함수형 (선형, 쌍곡선, V1 경험 공식 직접 대�
 $K_{\mathrm{soft}} = \sum_i \varphi(\ell_i)$가 특정 $\varphi$ 선택 하에 $K_{\mathrm{act}}$를 얼마나 정확히 근사하는지의 *회복 성질*(recovery property)은 아직 완전히 확립되지 않았다. §10에서 전개.
 
 **M-5.3 Per-PersComp $Q_{\mathrm{morph}}$ 정규화 (canonical 부분):**
-$Q_{\mathrm{morph}}$ 벡터의 정규화 방식 — 예: $|C|$를 $n$으로 나누는지, $|V_\rho|$로 나누는지 — 가 canonical에 고정되지 않았다 (Cat C SKETCH 상태).
+$Q_{\mathrm{morph}}$ 벡터의 정규화 방식 — 예: $\lvert C \rvert$를 $n$으로 나누는지, $|V_\rho|$로 나누는지 — 가 canonical에 고정되지 않았다 (Cat C SKETCH 상태).
 
 **M-5.4 $B_{\mathrm{PersRidge}}$ 스테레오 확장:**
 H5(hard-cut 스테레오)가 없는 soft-cut 스테레오 설정에서 T-OP6-B 동치의 성립 여부가 미해결 (D-ST-1 + H5 조건 제거 시).
@@ -1722,7 +1722,7 @@ $$M_j = \sum_{x \in V} u^{(j)}(x)\,(x - c_j)(x - c_j)^\top, \quad c_j = \frac{\s
 
 둘째, 이 56개 mode는 R23 데이터셋($56$-minimizer $\times 324$ mode-$\ell$ pair)에서 σ-irrep $[\rho_k]$와 orbital 문자 ($\ell \bmod 4 \to D_4$ irrep 테이블)의 완전한 대응을 보인다 (0 예외, canonical §13 D-6a 실증 앵커).
 
-**CoT-6:** 이 실증적 발견이 **Axiom S1'** (canonical merge-ready)의 근거다. Axiom S1'는 다음을 공리화한다: Full SCC 에너지를 갖는 finite connected graph $G$ 위에서, 위상 전이 이상 regime ($\beta/\alpha > 4\lambda_2/|W''(c)|$)의 국소 최소자들은 σ-orbital 구조에 의해 (orbit 동등성 아래) 분류된다. 즉 σ-튜플이 formation 정체성의 *완전한 정적 서명*을 제공한다.
+**CoT-6:** 이 실증적 발견이 **Axiom S1'** (canonical merge-ready)의 근거다. Axiom S1'는 다음을 공리화한다: Full SCC 에너지를 갖는 finite connected graph $G$ 위에서, 위상 전이 이상 regime ($\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$)의 국소 최소자들은 σ-orbital 구조에 의해 (orbit 동등성 아래) 분류된다. 즉 σ-튜플이 formation 정체성의 *완전한 정적 서명*을 제공한다.
 
 Stage 4의 수학적 핵심이 바로 이 orbital shape mode 분류다: $u_t^*$로부터 PersComp를 추출하고, 각 PersComp의 σ-튜플 $(\theta_C, r_C, \omega_C^{\mathrm{centroid}})$을 계산하면, 해당 formation의 shape mode 클래스가 결정된다.
 
@@ -1759,9 +1759,9 @@ $$dU_t = -\Pi_M \nabla \mathcal{E}_{\mathrm{SCC}}(U_t)\,dt + \sqrt{2T_*}\,\Pi_M\
 
 **유일성** (Tanaka 인수, 볼록 도메인): 두 해 $X^1_t, X^2_t$에 대해 반사항의 기하적 성질 $(X^1_t - X^2_t) \cdot (dK^1_t - dK^2_t) \leq 0$ (볼록 법추형의 단조성)으로부터:
 
-$$d|X^1_t - X^2_t|^2 \leq 2M_H |X^1_t - X^2_t|^2\,dt$$
+$$d|X^1_t - X^2_t|^2 \leq 2M_H \lvert X^1_t - X^2_t \rvert^2\,dt$$
 
-Gronwall 부등식: $|X^1_t - X^2_t|^2 = 0$ for all $t \geq 0$.
+Gronwall 부등식: $\lvert X^1_t - X^2_t \rvert^2 = 0$ for all $t \geq 0$.
 
 **Lifting:** Itô 공식을 $U_t = u^* + QX_t$에 적용 → 원래 공간의 SDE 복원.
 
@@ -1793,7 +1793,7 @@ $Z < \infty$: $\mathcal{E}_{\mathrm{SCC}}$가 compact $\mathcal{F}_M(G)$ 위 연
 
 *상태:* **T-PF-A1-GI, Cat A** (canonical L1686–1696, CV-1.9, 2026-05-06).
 
-**T_* ↔ 분산 연결 (03_T_star §1):** 분산 맵 $\psi(T) = \mathbb{E}_{\pi_T}[\|u - \mathbb{E}_{\pi_T}[u]\|^2]$는 $T$에 연속 (L1, L2 보조정리, 03_T_star §2). Brouwer 1911: $\mathcal{B}_{T_*}^{\mathrm{FP}} = \{\psi(T_*) = T_*\} \neq \emptyset$ — observer가 선택한 $T_*$가 *자기-일관적*임을 보장. Route C 분류: $T_* \in \mathcal{B}_{T_*}^{\mathrm{FP}} \cap B_\xi^{\mathrm{OMS-1}}$ (03_T_star §5.1 G1+G3 hybrid).
+**T_* ↔ 분산 연결 (03_T_star §1):** 분산 맵 $\psi(T) = \mathbb{E}_{\pi_T}[\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2]$는 $T$에 연속 (L1, L2 보조정리, 03_T_star §2). Brouwer 1911: $\mathcal{B}_{T_*}^{\mathrm{FP}} = \{\psi(T_*) = T_*\} \neq \emptyset$ — observer가 선택한 $T_*$가 *자기-일관적*임을 보장. Route C 분류: $T_* \in \mathcal{B}_{T_*}^{\mathrm{FP}} \cap B_\xi^{\mathrm{OMS-1}}$ (03_T_star §5.1 G1+G3 hybrid).
 
 **CoC 앵커:** canonical T-PF-A1-GI Cat A (L1686–1696); Aronson 1968 (열핵, 균일 타원 방정식); 03_T_star_fixed_point.md §1.1-§1.4 (ψ 자기-일관성); canonical OP-0021 (T_* 등록, OPEN, Route C).
 
@@ -1817,17 +1817,17 @@ $$\lambda_1(\pi_{T_*}) \geq \frac{\pi^2}{n}\,e^{-\mathrm{osc}(\tilde{\mathcal{E}
 
 2. *Holley-Stroock 섭동:* 밀도 비 $c_0/C_0 = e^{-\mathrm{osc}(\tilde{\mathcal{E}})/T_*}$ → $\mathrm{gap}(\pi_{T_*}) \geq e^{-\mathrm{osc}/T_*} \cdot (\pi^2/n)$.
 
-3. *$L^2$ 에르고딕성:* 자기수반 반군 (T-PF-A1-GI) + $\lambda_1 > 0$ → $\|P_t f - \pi_{T_*}(f)\|_{L^2} \leq e^{-\lambda_1 t}\|f - \pi_{T_*}(f)\|_{L^2}$.
+3. *$L^2$ 에르고딕성:* 자기수반 반군 (T-PF-A1-GI) + $\lambda_1 > 0$ → $\lVert P_t f - \pi_{T_*}(f) \rVert_{L^2} \leq e^{-\lambda_1 t}\lVert f - \pi_{T_*}(f) \rVert_{L^2}$.
 
-4. *$L^2 \to TV$:* Cauchy-Schwarz ($\pi_{T_*}$ 확률 측도, $\|g\|_{L^1(\pi)} \leq \|g\|_{L^2(\pi)}$):
+4. *$L^2 \to TV$:* Cauchy-Schwarz ($\pi_{T_*}$ 확률 측도, $\lVert g \rVert_{L^1(\pi)} \leq \lVert g \rVert_{L^2(\pi)}$):
 
-$$\|\mathrm{Law}(U_t) - \pi_{T_*}\|_{TV} \leq \tfrac{1}{2}\,e^{-\lambda_1 t}\,\|h_0 - 1\|_{L^2(\pi_{T_*})}$$
+$$\lVert \mathrm{Law}(U_t) - \pi_{T_*} \rVert_{TV} \leq \tfrac{1}{2}\,e^{-\lambda_1 t}\,\lVert h_0 - 1 \rVert_{L^2(\pi_{T_*})}$$
 
 **혼합 시간:**
 
 $$t_{\mathrm{mix}} = O(\lambda_1^{-1}) = O\!\left(\frac{n}{\pi^2}\,e^{\mathrm{osc}(\tilde{\mathcal{E}})/T_*}\right)$$
 
-**CoT-12 (메타안정 스케일링):** $\mathrm{osc}(\tilde{\mathcal{E}}) \sim \beta n / 16$ (double-well 에너지 barrier의 extensive 스케일링) → $t_{\mathrm{mix}} \sim e^{\beta n/(16 T_*)}$. 이것은 올바르고 예상된 결과다: 위상 전이 근방 ($\beta/\alpha \gtrsim 4\lambda_2/|W''(c)|$)에서 혼합 시간이 $n$에 지수적으로 커지는 *메타안정 스케일링*. 수치 시뮬레이션에서 Langevin 궤적이 서로 다른 formation 사이를 천천히 이동하는 현상의 이론적 근거.
+**CoT-12 (메타안정 스케일링):** $\mathrm{osc}(\tilde{\mathcal{E}}) \sim \beta n / 16$ (double-well 에너지 barrier의 extensive 스케일링) → $t_{\mathrm{mix}} \sim e^{\beta n/(16 T_*)}$. 이것은 올바르고 예상된 결과다: 위상 전이 근방 ($\beta/\alpha \gtrsim 4\lambda_2/\lvert W''(c) \rvert$)에서 혼합 시간이 $n$에 지수적으로 커지는 *메타안정 스케일링*. 수치 시뮬레이션에서 Langevin 궤적이 서로 다른 formation 사이를 천천히 이동하는 현상의 이론적 근거.
 
 비-과다주장: Eyring-Kramers 명시 상수 (Package II, H5 조건부)와 canonical $T_*$ (OP-0021) 는 본 정리에서 주장하지 않는다.
 
@@ -1991,7 +1991,7 @@ $$
 $$
 \mathbf{K}_{t\to s}(x,y) \;=\; \exp\!\left(-\,a(x,y)/\varepsilon\right),
 \qquad
-a(x,y)\;=\;\frac{\|y-x\|^2}{\Delta t} + \gamma_\varphi\,\frac{\|\Delta\varphi\|^2}{\Delta t}
+a(x,y)\;=\;\frac{\lVert y-x \rVert^2}{\Delta t} + \gamma_\varphi\,\frac{\lVert \Delta\varphi \rVert^2}{\Delta t}
 $$
 
 (D-LOCAL-ACTION; L-FINGERPRINT-ACTION-ADMISSIBLE Cat A 가 $a \geq 0$ + additivity 보증).
@@ -2030,7 +2030,7 @@ $$
 R_{t\to s}[M] \;=\; R_{t\to s}[M']
 $$
 
-for any two E1–E4-admissible plans with $\|c-c'\|_\infty \leq \delta$ (Lemmas 9–11; Lemma 9 Cat A via *Theorem Partial-H-SINK Cat A*; Lemma 11 Cat A via S-B3, S-C1 CERTIFIED). Self-referential regime $\delta=0$: trivial. **방향-감수성**: $R_{t\to s}\neq R_{s\to t}$ 일반적으로 성립 — score matrix $S_{ij}^0$ 의 row/column marginal 비대칭에서 직접 귀결. — **Cat A** via *S-C1 CERTIFIED*.
+for any two E1–E4-admissible plans with $\lVert c-c' \rVert_\infty \leq \delta$ (Lemmas 9–11; Lemma 9 Cat A via *Theorem Partial-H-SINK Cat A*; Lemma 11 Cat A via S-B3, S-C1 CERTIFIED). Self-referential regime $\delta=0$: trivial. **방향-감수성**: $R_{t\to s}\neq R_{s\to t}$ 일반적으로 성립 — score matrix $S_{ij}^0$ 의 row/column marginal 비대칭에서 직접 귀결. — **Cat A** via *S-C1 CERTIFIED*.
 
 **(d) K=1 reduction.** $K_t=K_s=1$ 일 때:
 
@@ -2042,7 +2042,7 @@ $$
 
 — **Cat A** (직접 귀결: K=1 score matrix 는 스칼라이며 (a)–(c) 가 trivially specialize).
 
-**CoT step.** (a)→(b): score matrix 정의 후 (A4)–(DR2) 하에서 *off-diagonal absorption* $\eta_{\mathrm{cross}}^{\mathrm{sharp}} \leq \rho_{\mathrm{deep}}(1-\eta_{\mathrm{self}}^K)/2$ 를 확보, 이로부터 bijection. (b)→(c): kernel perturbation $\delta$ 의 Sinkhorn 안정성 (Lemma 9 = Partial-H-SINK Cat A) 으로부터 score matrix 의 $\|S - S'\|_\infty \leq 2 m_t \delta/\varepsilon_{\mathrm{OT}}$ bound, 이를 margin 으로 흡수 (factor-2). (a)+(b)+(c)→(d): K=1 specialization 은 *유일한 cell* $(1,1)$ 의 stability question 이므로 $\theta_{\mathrm{diag}}\geq 0.83$ 이 그대로 동작.
+**CoT step.** (a)→(b): score matrix 정의 후 (A4)–(DR2) 하에서 *off-diagonal absorption* $\eta_{\mathrm{cross}}^{\mathrm{sharp}} \leq \rho_{\mathrm{deep}}(1-\eta_{\mathrm{self}}^K)/2$ 를 확보, 이로부터 bijection. (b)→(c): kernel perturbation $\delta$ 의 Sinkhorn 안정성 (Lemma 9 = Partial-H-SINK Cat A) 으로부터 score matrix 의 $\lVert S - S' \rVert_\infty \leq 2 m_t \delta/\varepsilon_{\mathrm{OT}}$ bound, 이를 margin 으로 흡수 (factor-2). (a)+(b)+(c)→(d): K=1 specialization 은 *유일한 cell* $(1,1)$ 의 stability question 이므로 $\theta_{\mathrm{diag}}\geq 0.83$ 이 그대로 동작.
 
 **CoC anchor (§7.3).** canonical §13 Cat A T-Temporal-Identity (CV-1.13 SEALED, W7-CV1.13 2026-05-10); `CV-1.13_SEAL.md` (S-A1/S-A3/S-C1 all CERTIFIED); 수치 anchor exp83 4/4 PASS.
 
@@ -2098,7 +2098,7 @@ Bijective stable-K case 에서 induced bijection $\pi_{tr}^{\mathrm{comp}} = \pi
 $$
 \mathcal{A}_{i:k}(P) \;=\; \sum_{\ell=i}^{k-1} a_\ell(x_\ell, x_{\ell+1}),
 \quad
-a_\ell(x,y) \;=\; \frac{d_\ell(x,y)^2}{\Delta t_\ell} \;+\; \gamma_\varphi\,\frac{\|\varphi_{\ell+1}(y) - \varphi_\ell(x)\|^2}{\Delta t_\ell}.
+a_\ell(x,y) \;=\; \frac{d_\ell(x,y)^2}{\Delta t_\ell} \;+\; \gamma_\varphi\,\frac{\lVert \varphi_{\ell+1}(y) - \varphi_\ell(x) \rVert^2}{\Delta t_\ell}.
 $$
 
 여기서 $\varphi_i$ 는 canonical §8.5 fingerprint (Lipschitz on $u\in[0,1]^n$), $d_\ell\geq 0$ symmetric pseudo-distance.
@@ -2107,8 +2107,8 @@ $$
 
 | 코드 | 진술 | 역할 |
 |---|---|---|
-| L-ENDPOINT-NONSEMI | $c^{\mathrm{end}}(x,z) = \|z-x\|^2$ 는 temporal-composition-compatible 이 *아니다* (counterexample $x=0,z=2$: 4≠2). | 왜 endpoint cost 가 아닌 action 이 필요한지 정당화. |
-| L-ACTION-NORMALIZATION | Uniform-speed path midpoint $y^* = \tfrac{r-s}{r-t}x + \tfrac{s-t}{r-t}z$ 에서 $\tfrac{\|z-x\|^2}{r-t} = \tfrac{\|y^*-x\|^2}{s-t} + \tfrac{\|z-y^*\|^2}{r-s}$. | Action 정규화. |
+| L-ENDPOINT-NONSEMI | $c^{\mathrm{end}}(x,z) = \lVert z-x \rVert^2$ 는 temporal-composition-compatible 이 *아니다* (counterexample $x=0,z=2$: 4≠2). | 왜 endpoint cost 가 아닌 action 이 필요한지 정당화. |
+| L-ACTION-NORMALIZATION | Uniform-speed path midpoint $y^* = \tfrac{r-s}{r-t}x + \tfrac{s-t}{r-t}z$ 에서 $\tfrac{\lVert z-x \rVert^2}{r-t} = \tfrac{\lVert y^*-x \rVert^2}{s-t} + \tfrac{\lVert z-y^* \rVert^2}{r-s}$. | Action 정규화. |
 | L-FINGERPRINT-ACTION-ADMISSIBLE | $\varphi_i$ Lipschitz, $\Delta t_i>0$, $d_i\geq 0$ ⇒ $a_i\geq 0$ + additive on path concatenation. | T-ACT-DP + T-ACT-GIBBS 의 가설 충족. |
 | T-ACT-DP | $X_i$ finite, $\mathcal{A}$ additive, $i<j<k$ ⇒ Bellman: $c^{\mathrm{act}}_{i\to k}(x,z) = \min_y[c^{\mathrm{act}}_{i\to j}(x,y) + c^{\mathrm{act}}_{j\to k}(y,z)]$. | Action 의 dynamic programming. |
 | L-ACTION-DELTA-EFF-ZERO | T-ACT-DP 가정 하에 $c^{\mathrm{direct}}_{i\to k}:=c^{\mathrm{act}}_{i\to k}$ 이면 $\delta_{\mathrm{eff}}=0$. *Scope*: action direct cost redefinition 하에만; endpoint / fingerprint similarity / Sinkhorn-plan-effective cost 에는 적용 *불가*. | δ-effective zero. |
@@ -2205,7 +2205,7 @@ $$
 **MERGE orientation.** Parallel-axis theorem — *Working Cat B (deterministic).*
 
 $$
-I_j^s \;=\; I_{i_1} + m_{i_1}\,\|c_{i_1} - c_j^s\|^2\,P_\perp \;+\; I_{i_2} + m_{i_2}\,\|c_{i_2} - c_j^s\|^2\,P_\perp,
+I_j^s \;=\; I_{i_1} + m_{i_1}\,\lVert c_{i_1} - c_j^s \rVert^2\,P_\perp \;+\; I_{i_2} + m_{i_2}\,\lVert c_{i_2} - c_j^s \rVert^2\,P_\perp,
 $$
 
 orientation $\Theta_j^s$ = principal axes of $I_j^s$.
@@ -2218,7 +2218,7 @@ orientation $\Theta_j^s$ = principal axes of $I_j^s$.
 **(d-direction) SPLIT direction $v_1$ well-defined.** — *Working Cat B*. Lowest Hessian eigenvector (Goldstone mode):
 
 $$
-v_1 \;=\; \arg\min_{\|v\|=1}\,\langle v,\,H_i^t\,v\rangle.
+v_1 \;=\; \arg\min_{\lVert v \rVert=1}\,\langle v,\,H_i^t\,v\rangle.
 $$
 
 Gap condition $\lambda_1<\lambda_2$ 가 가설.
@@ -2355,12 +2355,12 @@ $$\mathrm{Cl}_t(u)(x) = \sigma\!\left(a_{\mathrm{cl}}\!\left[(1-\eta_{\mathrm{cl
 **핵심 성질 (L-CLOSURE-LIFT, Cat A, CV-1.16).**
 
 (L-CL-LIFT.1) Degree-weighted operator-norm 수축:
-$$\|J_{\mathrm{Cl}}(u^*)\|_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1.$$
+$$\lVert J_{\mathrm{Cl}}(u^*) \rVert_{D \to D} \leq \frac{a_{\mathrm{cl}}}{4} < 1.$$
 
 (L-CL-LIFT.2) Gauss–Newton lower bound (전체 공간에서 균일):
 $$(I - J_{\mathrm{Cl}})^\top D\,(I - J_{\mathrm{Cl}}) \succeq \!\left(1 - \tfrac{a_{\mathrm{cl}}}{4}\right)^{\!2} D.$$
 
-증명 핵심: $P$ 는 $\langle\cdot,\cdot\rangle_D$ 상 self-adjoint (W 대칭), $\|P\|_{D\to D}=1$ (Perron), $\sigma'(z)\leq 1/4$, 따라서 Jacobian $\|J_{\mathrm{Cl}}\|_{D\to D} \leq (a_{\mathrm{cl}}/4)\cdot 1 < 1$.
+증명 핵심: $P$ 는 $\langle\cdot,\cdot\rangle_D$ 상 self-adjoint (W 대칭), $\lVert P \rVert_{D\to D}=1$ (Perron), $\sigma'(z)\leq 1/4$, 따라서 Jacobian $\lVert J_{\mathrm{Cl}} \rVert_{D\to D} \leq (a_{\mathrm{cl}}/4)\cdot 1 < 1$.
 
 **A3 — Stabilization Tendency (CN1 보존).** $\mathrm{Cl}_t$ 는 수축자(contraction)이므로 반복 적용은 Cauchy 조건을 만족하며 고정점으로 수렴하나, $\mathrm{Cl}_t \circ \mathrm{Cl}_t \neq \mathrm{Cl}_t$ 이다 (비멱등, CN1). 이는 수학적 고정점 자체가 아니라 *수렴 경향*을 공리화한 것이다. 비멱등성의 payoff: Closure Hessian 기여 $2(I-J_{\mathrm{Cl}})^\top(I-J_{\mathrm{Cl}})$ 가 엄격 양정치(strictly positive definite, $n/n$ 양의 고유값) — 멱등 closure 의 준정치와 대조된다.
 
@@ -2381,7 +2381,7 @@ $$D_t(u)(x) = \sigma\!\left(a_D\!\left[(1+\lambda_D)(Pu)(x) - \lambda_D (P\mathb
 
 **타입 서명.** $D_t : [0,1]^n \to [0,1]^n$.
 
-**Jacobian.** $J_D = \mathrm{diag}(\sigma'_D \cdot a_D(1+\lambda_D))\,P$. Jacobian transpose-vector product 는 $O(|E|)$ 으로 계산된다.
+**Jacobian.** $J_D = \mathrm{diag}(\sigma'_D \cdot a_D(1+\lambda_D))\,P$. Jacobian transpose-vector product 는 $O(\lvert E \rvert)$ 으로 계산된다.
 
 **해석.** $D_t(u)(x) \approx 1$ 은 $x$ 의 이웃이 $u$-고값 노드로 주로 구성됨(formation 내부)을 의미하고, $\approx 0$ 은 이웃이 $1-u$-고값 노드로 구성됨(formation 외부)을 의미한다. Sep 술어는 $u$-가중 평균 $\sum_x u(x)D_t(u)(x)/\sum_x u(x)$ 로 계산된다 (I8 수정, 비축퇴적).
 
@@ -2443,7 +2443,7 @@ $$(P_t u)(x) = \sum_{y \in N_t(x)} W_{xy}\, u(y) \Big/ \sum_{y \in N_t(x)} W_{xy
 
 **P1 trick.** $P_t(1-u) = P\mathbf{1} - Pu$ (precomputed $P\mathbf{1}$ = `graph.P_1`). $D_t$ 에서 complement 의 aggregation 을 $O(n)$ 추가 비용 없이 계산한다.
 
-**Spectral 성질.** $P$ 는 $\langle\cdot,\cdot\rangle_D$ 상 self-adjoint ($W$ 대칭), $\|P\|_{D\to D} = 1$ (Perron-Frobenius). L-CLOSURE-LIFT 증명의 핵심 재료.
+**Spectral 성질.** $P$ 는 $\langle\cdot,\cdot\rangle_D$ 상 self-adjoint ($W$ 대칭), $\lVert P \rVert_{D\to D} = 1$ (Perron-Frobenius). L-CLOSURE-LIFT 증명의 핵심 재료.
 
 **CoC 앵커.** `CODE/scc/operators.py` `aggregation` (line 37–42); `CODE/scc/graph.py` `GraphState.P`, `GraphState.P_1`.
 
@@ -2497,9 +2497,9 @@ $$\mathrm{PersComp}(u; \rho_{\mathrm{pers}}, \tau) = \{C \subset V : C \text{ �
 
 **타입 서명.** $\mathrm{PersComp} : [0,1]^n \to 2^{2^V}$ (field → 성분 집합의 집합).
 
-**안정성 (D-ST-3 + Cohen-Steiner).** $\|\tilde{u} - u\|_\infty < \varepsilon$ 이면 PersComp 의 병목(bottleneck) 거리가 $\varepsilon$ 이내. 따라서 $\mathrm{PersComp}$ 는 $L^\infty$ perturbation 에 대해 Lipschitz-stable.
+**안정성 (D-ST-3 + Cohen-Steiner).** $\lVert \tilde{u} - u \rVert_\infty < \varepsilon$ 이면 PersComp 의 병목(bottleneck) 거리가 $\varepsilon$ 이내. 따라서 $\mathrm{PersComp}$ 는 $L^\infty$ perturbation 에 대해 Lipschitz-stable.
 
-**구현.** `CODE/scc/diagnostics.py` `_persistence_h0_graph`: Union-Find + 내림차순 처리, $O(n \log n + |E|)$; `inside_predicate` (Q_morph = $\ell_{\max} \cdot \mathrm{Artic}$) 은 PersComp 에서 파생.
+**구현.** `CODE/scc/diagnostics.py` `_persistence_h0_graph`: Union-Find + 내림차순 처리, $O(n \log n + \lvert E \rvert)$; `inside_predicate` (Q_morph = $\ell_{\max} \cdot \mathrm{Artic}$) 은 PersComp 에서 파생.
 
 **CoC 앵커.** D-ST-3 (§3.11 Cat A, CV-1.6); `CODE/scc/diagnostics.py`; canonical §5 PersComp 정의.
 
@@ -2532,7 +2532,7 @@ $$K_{\mathrm{act}}(u) = |\mathrm{PersComp}(u; \rho_{\mathrm{pers}}, \tau)|$$
 $$\mathbf{d}(u) = (\mathrm{Bind}(u),\, \mathrm{Sep}(u),\, \mathrm{Inside}(u),\, \mathrm{Persist}(u)) \in [0,1]^4$$
 
 각 성분:
-- $\mathrm{Bind}(u) = 1 - \|u - \mathrm{Cl}_t(u)\|_2/\sqrt{n}$ (closure residual, scale-independent)
+- $\mathrm{Bind}(u) = 1 - \lVert u - \mathrm{Cl}_t(u) \rVert_2/\sqrt{n}$ (closure residual, scale-independent)
 - $\mathrm{Sep}(u) = \sum_x u(x)D_t(u)(x)/\sum_x u(x)$ (u-weighted distinction, I8 수정)
 - $\mathrm{Inside}(u) = Q_{\mathrm{morph}} = \ell_{\max} \cdot \mathrm{Artic}$ (H₀ persistence + 단일성 비율)
 - $\mathrm{Persist}(u) = \mathrm{overlap}(u_{\mathrm{prev}}, u_{\mathrm{curr}})$ (또는 transport 기반)
@@ -2571,7 +2571,7 @@ $$\sigma_{\mathrm{standard}}(u^*) = (\text{irrep labels of negative-curvature mo
 
 **핵심 내용 (Cat A, CV-1.16).** $J_{\mathrm{Cl}}$ 은 3중 표현으로 상계가 주어진다:
 
-1. Degree-weighted: $\|J_{\mathrm{Cl}}\|_{D\to D} \leq a_{\mathrm{cl}}/4$
+1. Degree-weighted: $\lVert J_{\mathrm{Cl}} \rVert_{D\to D} \leq a_{\mathrm{cl}}/4$
 2. Gauss-Newton form: $(I-J_{\mathrm{Cl}})^\top D (I-J_{\mathrm{Cl}}) \succeq (1-a_{\mathrm{cl}}/4)^2 D$
 3. Standard $\ell^2$ form: $(I-J_{\mathrm{Cl}})^\top(I-J_{\mathrm{Cl}}) \succeq (1-a_{\mathrm{cl}}/4)^2(d_{\min}/d_{\max})I$
 
@@ -2591,7 +2591,7 @@ $$\sigma_{\mathrm{standard}}(u^*) = (\text{irrep labels of negative-curvature mo
 
 $$B_{\mathrm{PersRidge}}(u) = \{x \in V : |\nabla_G u(x)| \geq \theta,\, \text{gradient ridge pers.} > \rho_{\mathrm{bd}}\}$$
 
-여기서 $|\nabla_G u(x)| = \sqrt{\sum_{j\in N(x)} W_{xj}(u_j - u_x)^2}$ (그래프 국소 경사 크기). "Gradient ridge" = $\{x : |\nabla_G u(x)| \geq \theta\}$ 의 초수준 집합 filtration 에서 $\rho_{\mathrm{bd}}$ 초과 생존 연결 성분.
+여기서 $|\nabla_G u(x)| = \sqrt{\sum_{j\in N(x)} W_{xj}(u_j - u_x)^2}$ (그래프 국소 경사 크기). "Gradient ridge" = $\{ x : \mid \nabla_G u(x) \mid \geq \theta \}$ 의 초수준 집합 filtration 에서 $\rho_{\mathrm{bd}}$ 초과 생존 연결 성분.
 
 **T-OP6-B (Cat A, CV-1.7, OP-0006 RESOLVED).** H1–H5 가정 하:
 $$d_H\!\left(B_{\mathrm{PersRidge}}(\tilde{u}),\, \partial\mathrm{Core}(\tilde{u})\right) \leq \delta_{\mathrm{Haus}}$$
@@ -2685,9 +2685,9 @@ $u \in \Sigma_M$ 와 PersComp 집합이 주어졌을 때, SCC 이론은 formatio
 
 **정의.** Bind predicate 는 cohesion field $u$ 가 closure operator $\mathrm{Cl}_t$ 아래에서 *자기-지지* (self-support) 에 얼마나 근접하는지를 측정한다:
 
-$$\mathrm{Bind}(u) = 1 - \frac{\|u - \mathrm{Cl}_t(u)\|_2}{\sqrt{n}}$$
+$$\mathrm{Bind}(u) = 1 - \frac{\lVert u - \mathrm{Cl}_t(u) \rVert_2}{\sqrt{n}}$$
 
-여기서 $n = |X_t|$ 이고, 노름은 $\ell^2$ 이다. $u = \mathrm{Cl}_t(u)$ 이면 $\mathrm{Bind} = 1$ (완전 자기-지지), $u$ 와 $\mathrm{Cl}_t(u)$ 가 최대로 이탈하면 $\mathrm{Bind} \to 0$ 이다.
+여기서 $n = \lvert X_t \rvert$ 이고, 노름은 $\ell^2$ 이다. $u = \mathrm{Cl}_t(u)$ 이면 $\mathrm{Bind} = 1$ (완전 자기-지지), $u$ 와 $\mathrm{Cl}_t(u)$ 가 최대로 이탈하면 $\mathrm{Bind} \to 0$ 이다.
 
 **CoT — $\ell^2$ 노름 선택의 이유.** $\ell^\infty$ 노름은 사용 불가: 경계 사이트에서 $|u_i - \mathrm{Cl}_t(u)_i| \sim 0.21$ 의 구조적 잔차가 발생한다 (double-well 퍼텐셜과 closure 의 긴장으로 인해). 이 잔차는 잘 형성된 formation 에서도 사라지지 않으므로 $\ell^\infty$ Bind 는 항상 낮게 나온다. $\ell^2$ 은 이 경계 기여를 $1/\sqrt{n}$ 으로 희석하여, formation 의 bulk 응집도를 정확히 반영한다.
 
@@ -2810,7 +2810,7 @@ $$u_t : X_t \to [0,1] \quad \text{(primitive)} \quad \Longrightarrow \quad d(u_t
 
 이 방향성은 일방적이다 (CN8.5 primitive non-inversion). $d$ 값으로부터 $u$ 를 역산하는 것은 이 이론의 scope 밖이다. 구체적으로:
 
-- **Bind** = $1 - \|u - \mathrm{Cl}_t(u)\|_2/\sqrt{n}$: $u$ 와 $\mathrm{Cl}_t$ operator 의 함수
+- **Bind** = $1 - \lVert u - \mathrm{Cl}_t(u) \rVert_2/\sqrt{n}$: $u$ 와 $\mathrm{Cl}_t$ operator 의 함수
 - **Sep** = $\sum_i u_i D_i / \sum_i u_i$: $u$ 와 $\mathbf{D}_t$ operator 의 함수
 - **Inside** = $\mathcal{Q}_{\mathrm{morph}}(u)$: superlevel-set filtration 의 함수
 - **Persist** = transport-based or overlap measure: $u_t, u_s$ 와 $\mathbf{M}_{t\to s}$ 의 함수
@@ -2895,7 +2895,7 @@ $$\bar{m} := M / K_{\mathrm{field}}^{\mathrm{cap}} = 90/4 = 22.5, \quad \varepsi
 
 로 $\varepsilon$-슬롯 카운트와 PersComp 카운트가 L1-J 레짐 하에서 일치함이 T-L1-F로 확인된다.
 
-**슬롯 카운트와의 구별.** $K_{\mathrm{act}} \neq |\{j : \|u^{(j)}\|_\infty > \varepsilon\}|$ 일반적으로. 슬롯 카운트는 L1-J 레짐 하의 레짐-조건부 근사이지 정의가 아니다 (OP-0009-Pre-b, D-ST-3).
+**슬롯 카운트와의 구별.** $K_{\mathrm{act}} \neq |\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ 일반적으로. 슬롯 카운트는 L1-J 레짐 하의 레짐-조건부 근사이지 정의가 아니다 (OP-0009-Pre-b, D-ST-3).
 
 **아키텍처 제약.**
 
@@ -2979,7 +2979,7 @@ WQ-LAT-1.B 경험적 앵커: $K_{\mathrm{field}} \in \{3, 4, 6, 8, 12\}$에서 $
 | 양 | 타입 | 역할 | 값 형태 | 설정 시점 |
 |---|---|---|---|---|
 | $K_{\mathrm{field}}^{\mathrm{cap}}$ | $\mathbb{Z}_+$ 모델링 커밋먼트 | 아키텍처 상한 | 관찰자 고정 (R-nn-11) | 사전 (prior) |
-| $K_{\mathrm{act}}$ | $\mathbb{Z}_+$ 동역학적 카운트 | $u_t$의 사후 카운트 | $\|\mathrm{PersComp}(u_t)\|$ | 사후 (post-hoc) |
+| $K_{\mathrm{act}}$ | $\mathbb{Z}_+$ 동역학적 카운트 | $u_t$의 사후 카운트 | $\lVert \mathrm{PersComp}(u_t) \rVert$ | 사후 (post-hoc) |
 | $K_{\mathrm{soft}}$ | $\mathbb{R}_+$ 진단량 | 부드러운 유사체 | $\sum_i \phi(\ell_i)$ | 파생 (derived) |
 
 **CoT step 5 — 3-quantity 필요성.** 세 양 각각은 독립적인 역할을 수행한다:
@@ -3000,7 +3000,7 @@ WQ-LAT-1.B 경험적 앵커: $K_{\mathrm{field}} \in \{3, 4, 6, 8, 12\}$에서 $
 $$\Lambda_{\mathrm{coupling}}(C_j, C_k) := \frac{\lambda_{\mathrm{rep}} \cdot \omega_{jk}}{\min(\mu_j, \mu_k)}$$
 
 여기서:
-- $\omega_{jk} = \langle u^j, u^k \rangle / \min(\|u^j\|^2, \|u^k\|^2)$: 쌍별 부드러운 중첩 가중치 (soft overlap weight)
+- $\omega_{jk} = \langle u^j, u^k \rangle / \min(\lVert u^j \rVert^2, \lVert u^k \rVert^2)$: 쌍별 부드러운 중첩 가중치 (soft overlap weight)
 - $\mu_k$: 형성 $k$의 에너지 제한 Hessian의 스펙트럼 간극 (spectral gap)
 - $\lambda_{\mathrm{rep}}$: 반발 강도 (multi.py `lambda_rep`)
 
@@ -3217,7 +3217,7 @@ E += lambda_bar * float(violation @ violation)     # barrier 항
 
 두 formation $j, k$ 사이의 *연성 중첩 가중치(soft overlap weight)* 는
 
-$$\omega_{jk} := \frac{\sum_i u_i^{(j)} \cdot u_i^{(k)}}{\min\!\left(\|u^{(j)}\|^2,\ \|u^{(k)}\|^2\right)} = \frac{\langle u^{(j)}, u^{(k)} \rangle}{\min(\|u^{(j)}\|^2, \|u^{(k)}\|^2)}$$
+$$\omega_{jk} := \frac{\sum_i u_i^{(j)} \cdot u_i^{(k)}}{\min\!\left(\lVert u^{(j)} \rVert^2,\ \lVert u^{(k)} \rVert^2\right)} = \frac{\langle u^{(j)}, u^{(k)} \rangle}{\min(\lVert u^{(j)} \rVert^2, \lVert u^{(k)} \rVert^2)}$$
 
 로 정의된다. 이 정규화된 내적은:
 - $\omega_{jk} \approx 0$: formation $j$, $k$ 가 공간적으로 분리됨 (disjoint support)
@@ -3488,15 +3488,15 @@ $$G^{\mathcal{P}}_t = \text{depth-conditioned form of } G_t$$
 
 **CoT step.** Depth-gap이 임계값 $\Delta z$를 초과하는 엣지를 *완전 제거*하는 것이 hard-cut variant이다.
 
-$$\boxed{G^{\mathcal{P}}_t(i,j) = G_t(i,j) \cdot \mathbf{1}\bigl[|z_i - z_j| < \Delta z\bigr]}$$
+$$\boxed{G^{\mathcal{P}}_t(i,j) = G_t(i,j) \cdot \mathbf{1}\bigl[\lvert z_i - z_j \rvert < \Delta z\bigr]}$$
 
-구체적으로: $(i,j) \in E_t$인 엣지는 $|z_i - z_j| \geq \Delta z$이면 완전히 제거되고, $|z_i - z_j| < \Delta z$이면 원래 가중치 $w_{ij}$를 유지한다.
+구체적으로: $(i,j) \in E_t$인 엣지는 $\lvert z_i - z_j \rvert \geq \Delta z$이면 완전히 제거되고, $\lvert z_i - z_j \rvert < \Delta z$이면 원래 가중치 $w_{ij}$를 유지한다.
 
 **매개변수 해석.** $\Delta z$는 *stereo bandwidth* — binocular 융합 한계에서 결정된다. 두 물체가 깊이 방향으로 $\Delta z$ 이상 분리되어 있으면 단일 formation으로 융합되기 어렵다는 인지적 사실을 그래프 위상(topology)으로 인코딩한다. IPD (R-an-1)와 binocular 융합 한계(Panum's fusional area)로부터 $\Delta z$의 생리학적 상한을 추정할 수 있다.
 
-**위상적 결과.** Hard-cut이 적용된 결과, 두 깊이 층 $S_1$, $S_2$에 놓인 노드들이 $|z_i - z_j| \geq \Delta z$ ($\forall i \in S_1, j \in S_2$)를 만족하면
+**위상적 결과.** Hard-cut이 적용된 결과, 두 깊이 층 $S_1$, $S_2$에 놓인 노드들이 $\lvert z_i - z_j \rvert \geq \Delta z$ ($\forall i \in S_1, j \in S_2$)를 만족하면
 
-$$G^{\mathcal{P}}_t\big|_{S_1 \cup S_2} = G_1 \sqcup G_2 \qquad \text{(disconnected)}$$
+$$G^{\mathcal{P}}_t\big\vert_{S_1 \cup S_2} = G_1 \sqcup G_2 \qquad \text{(disconnected)}$$
 
 이 된다. 이 그래프 단절이 T-ST-5a의 위상적 잠금의 직접적 원인이다 (§12.6).
 
@@ -3514,7 +3514,7 @@ $$G^{\mathcal{P}}_t\big|_{S_1 \cup S_2} = G_1 \sqcup G_2 \qquad \text{(disconnec
 
 **CoT step.** Hard-cut 대신, 깊이 차이에 따라 *연속적으로* 엣지 가중치를 감쇠시키는 variant가 D-ST-2이다.
 
-$$\boxed{G^{\mathcal{P}}_t(i,j) = G_t(i,j) \cdot \exp\!\bigl(-\lambda_z |z_i - z_j|^2\bigr)}$$
+$$\boxed{G^{\mathcal{P}}_t(i,j) = G_t(i,j) \cdot \exp\!\bigl(-\lambda_z \lvert z_i - z_j \rvert^2\bigr)}$$
 
 $\lambda_z > 0$은 깊이 감쇠 계수이다. $\lambda_z \to \infty$ (또는 동등하게 $\Delta z \to 0^+$인 hard-cut 극한)에서 D-ST-1이 회복된다. $\lambda_z \to 0$ 극한에서 $G^{\mathcal{P}}_t \to G_t$ (monocular 그래프).
 
@@ -3606,7 +3606,7 @@ Photometric likelihood $\mathcal{L}_{\mathrm{obs}}$은 $\tilde{u}_t^{\mathrm{pix
 
 가정 패키지:
 - **(A-HARDCUT)**: $G^{\mathcal{P}}_t$는 D-ST-1의 hard-threshold 구조.
-- **(A-DEPTH-SEP)**: $|z_i - z_j| \geq \Delta z$, $\forall i \in S_1, j \in S_2$.
+- **(A-DEPTH-SEP)**: $\lvert z_i - z_j \rvert \geq \Delta z$, $\forall i \in S_1, j \in S_2$.
 - **(A-LOCAL)**: $\mathcal{E}[\tilde{u}; G^{\mathcal{P}}]$는 엣지-국소 (각 gradient term이 graph-adjacent 쌍만 결합).
 - **(A-NO-BRIDGE)**: A-HARDCUT 구조 외부 엣지 없음.
 - **(A-PERSISTENCE)**: $K_{\mathrm{act}}$ = §3.11 D-ST-3 형태, 고정 $\rho_{\mathrm{pers}} > 0$.
@@ -3614,7 +3614,7 @@ Photometric likelihood $\mathcal{L}_{\mathrm{obs}}$은 $\tilde{u}_t^{\mathrm{pix
 
 **주장:**
 
-(a) 인접 그래프가 분해된다: $G^{\mathcal{P}}_t\big|_{S_1 \cup S_2} = G_1 \sqcup G_2$.
+(a) 인접 그래프가 분해된다: $G^{\mathcal{P}}_t\big\vert_{S_1 \cup S_2} = G_1 \sqcup G_2$.
 
 (b) $\mathcal{F}_M(\mathcal{P})$ 위의 gradient flow는 $K_{\mathrm{act}} = 2$를 보존 — merger 경로 없음.
 
@@ -3644,7 +3644,7 @@ Photometric likelihood $\mathcal{L}_{\mathrm{obs}}$은 $\tilde{u}_t^{\mathrm{pix
 
 **정리 T-ST-5b** (canonical Cat B, W6 D4 Session G 공식 서명).
 
-Smooth depth-weighted adjacency $w_{ij} = w_{ij}^{2D} \cdot \exp(-\lambda_z |z_i - z_j|^2)$ 하에서, 깊이 불연속 $\Delta z$에 걸쳐 있는 $K=2$ field에 대해:
+Smooth depth-weighted adjacency $w_{ij} = w_{ij}^{2D} \cdot \exp(-\lambda_z \lvert z_i - z_j \rvert^2)$ 하에서, 깊이 불연속 $\Delta z$에 걸쳐 있는 $K=2$ field에 대해:
 
 $$\Delta E^{\mathrm{merge}}_{\mathrm{stereo}}(\Delta z, \lambda_z) > \Delta E^{\mathrm{merge}}_{\mathrm{flat}}$$
 
@@ -3697,7 +3697,7 @@ $$\boxed{d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\,\mathrm{Core}
 - $\partial\,\mathrm{Core}(\mathrm{PersComp}(\tilde{u}^*))$: PersComp core의 위상적 경계
 - $\rho_{\mathrm{bd\text{-}band}} \leq 2\sqrt{\alpha/\beta}$: 경계 band 너비 (명시적 상수)
 
-**증명 요약 (B1–B4, 모두 폐쇄).** **B1 (위상적 분리자):** $C_j^{\mathrm{int}}$에서 $C_j^{\mathrm{ext}}$로의 임의의 경로는 $\partial C_j \subset B_t$를 가로지른다 — $B_t$는 vertex separator. **B2 (곡선 Hausdorff):** matched-asymptotic expansion: $u^*(x) = u_0(r/\xi) + \xi\kappa_{\mathrm{mean}} v_1(r/\xi) + O((\kappa_{\mathrm{max}}\xi)^2)$, Pöschl-Teller correction $|v_1'(s)| \leq 1$; H4 하에서 $d_H \leq 1.37\xi < 2(\alpha/\beta)^{1/2}$. **B3 (Stereo conditioning):** $G^{\mathcal{P}}_t$가 depth-gap 엣지를 끊음; stereo graph 위의 PersRidge가 동일한 bound를 상속. **B4 ($\rho_{\mathrm{bd}}$ 보정):** $\rho_{\mathrm{bd}} = 1/(4\xi)$이 $\rho_{\mathrm{bd}} \cdot \xi = 1/4$를 줌; 1D bound $\Delta_{1D} = \xi \cdot \mathrm{arctanh}(1/\sqrt{2}) \approx 1.246\sqrt{\alpha/\beta}$ (Session J). 전체 증명: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`.
+**증명 요약 (B1–B4, 모두 폐쇄).** **B1 (위상적 분리자):** $C_j^{\mathrm{int}}$에서 $C_j^{\mathrm{ext}}$로의 임의의 경로는 $\partial C_j \subset B_t$를 가로지른다 — $B_t$는 vertex separator. **B2 (곡선 Hausdorff):** matched-asymptotic expansion: $u^*(x) = u_0(r/\xi) + \xi\kappa_{\mathrm{mean}} v_1(r/\xi) + O((\kappa_{\mathrm{max}}\xi)^2)$, Pöschl-Teller correction $\lvert v_1'(s) \rvert \leq 1$; H4 하에서 $d_H \leq 1.37\xi < 2(\alpha/\beta)^{1/2}$. **B3 (Stereo conditioning):** $G^{\mathcal{P}}_t$가 depth-gap 엣지를 끊음; stereo graph 위의 PersRidge가 동일한 bound를 상속. **B4 ($\rho_{\mathrm{bd}}$ 보정):** $\rho_{\mathrm{bd}} = 1/(4\xi)$이 $\rho_{\mathrm{bd}} \cdot \xi = 1/4$를 줌; 1D bound $\Delta_{1D} = \xi \cdot \mathrm{arctanh}(1/\sqrt{2}) \approx 1.246\sqrt{\alpha/\beta}$ (Session J). 전체 증명: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`.
 
 **수치 검증.** exp06: shadow 5/5 ratio 4.09, blur 5/5 ratio 50.8 — 예측 경계 폭과 일치.
 
@@ -3804,7 +3804,7 @@ $$\mathrm{Cl}_t(u)(x) \geq u(x) \quad \text{whenever } u(x) \leq c^* \text{ and 
 
 여기서 $c^* \in (0,1)$ 은 $\sigma(a_{\mathrm{cl}}(c - \tau_{\mathrm{cl}})) = c$ 의 유일 해 ($a_{\mathrm{cl}} < 4$ 조건 하 Banach 수축 사상 정리 보장).
 
-- **본 derivation preservation**: PASS — §8.1 Closure operator 가 sigmoid 형식 $\mathrm{Cl}_t(u) = \sigma(a_{\mathrm{cl}}(P_t u - \tau_{\mathrm{cl}}))$ 로 $a_{\mathrm{cl}} < 4$ 하에 정의. §4.2 closure energy term $E_{\mathrm{cl}} = \|u - \mathrm{Cl}_t(u)\|_2^2$ 는 A1' 의 조건부 확장성을 *측정 도구*로 활용 (low-cohesion sites 에서 $u \leq \mathrm{Cl}(u)$).
+- **본 derivation preservation**: PASS — §8.1 Closure operator 가 sigmoid 형식 $\mathrm{Cl}_t(u) = \sigma(a_{\mathrm{cl}}(P_t u - \tau_{\mathrm{cl}}))$ 로 $a_{\mathrm{cl}} < 4$ 하에 정의. §4.2 closure energy term $E_{\mathrm{cl}} = \lVert u - \mathrm{Cl}_t(u) \rVert_2^2$ 는 A1' 의 조건부 확장성을 *측정 도구*로 활용 (low-cohesion sites 에서 $u \leq \mathrm{Cl}(u)$).
 - **CoT step**: A1' 의 layer-crossing 주석 (canonical 450) — $P_t$ 의 형식이 Group B (B1–B4) 의 구조적 성질만 보존하면 A1' 가 유지됨. §8.5 Aggregation $P_t$ 가 row-normalized degree-weighted 형식, B1–B4 만족.
 
 **A2 — Monotonicity** (canonical 452-458): $u \leq v \Rightarrow \mathrm{Cl}_t(u) \leq \mathrm{Cl}_t(v)$ (pointwise).
@@ -4077,7 +4077,7 @@ K-jump merger event $(C_{i_1}^t, C_{i_2}^t) \to C_j^s$ 에서 합성된 formatio
 
 **W8-Day1 2-route framework (broad_survey_B2.md).**
 
-- **Route (a) Kato resolvent perturbation:** pre-merger limit 에서 cross-block Hessian $H_{\mathrm{pre}}$ 를 block-diagonal $H_0 \oplus V$ 로 분해. Reed-Simon IV §XIII.5 resolvent expansion → $\sigma_{\mathrm{std}}$ 의 $(\lambda_{i_1,a}^{(0)}, \|V\|, m_{i_1}, m_{i_2})$ 의 명시적 다항식. 성공 조건: perturbative gap $\|V\| < \min |\lambda_a^{(0)} - \lambda_{a+1}^{(0)}|$. 예상 Cat 상태: **Cat B** (conditional on perturbative regime). 실패 모드: deep merger ($d_{\mathrm{inter}} \to 0$), Goldstone degeneracy.
+- **Route (a) Kato resolvent perturbation:** pre-merger limit 에서 cross-block Hessian $H_{\mathrm{pre}}$ 를 block-diagonal $H_0 \oplus V$ 로 분해. Reed-Simon IV §XIII.5 resolvent expansion → $\sigma_{\mathrm{std}}$ 의 $(\lambda_{i_1,a}^{(0)}, \lVert V \rVert, m_{i_1}, m_{i_2})$ 의 명시적 다항식. 성공 조건: perturbative gap $\lVert V \rVert < \min |\lambda_a^{(0)} - \lambda_{a+1}^{(0)}|$. 예상 Cat 상태: **Cat B** (conditional on perturbative regime). 실패 모드: deep merger ($d_{\mathrm{inter}} \to 0$), Goldstone degeneracy.
 - **Route (b) RMT Wigner-Dyson level repulsion:** trivial $\mathrm{Aut}(G)$ (generic graph) 하에서 merged Hessian $H_{\mathrm{post}}$ 의 eigenvalue spacing 이 GOE 통계를 따름을 적용. $P_{\mathrm{GOE}}(s) = (\pi s/2) \exp(-\pi s^2/4)$ — level repulsion $P(s) \to (\pi/2)s$ as $s \to 0$. 예상 Cat 상태: **Cat B** (conditional on generic graph). 실패 모드: symmetric graphs, high-symmetry formations.
 
 **CoT step.** 두 route 의 수렴 조건: Route (a) 는 perturbative regime ($d_{\mathrm{inter}}$ 충분히 크고 spectral gap 충분히 넓은 경우), Route (b) 는 non-symmetric generic regime. 두 route 가 같은 $\sigma_{\mathrm{std}}$ map 을 산출함을 검증하는 것이 W9+ 의 핵심 과제이다 (Conjecture 8.1 of sigma_rich_wigner_derivation.md §8.2). OP-0008 은 명시적으로 **OPEN** 이며, broad_survey_B2.md 는 Cat B 승급의 *가능성 있는 두 경로를 식별*한 것에 불과하다.
@@ -4118,7 +4118,7 @@ $$\Theta_{\mathrm{OMS}} = (q,\, \lambda,\, \xi)$$
 
 세 구성요소의 의미는 다음과 같다.
 
-- $q = \beta/\alpha \in [q_{\min}, q_{\max}]$: *quantitative* — 특정 스칼라 값. SCC 상전이 조건 T8 ($q > 4\lambda_2 / |W''(c)|$) 의 직접 파라미터. Gibbs measure 의 역온도 비.
+- $q = \beta/\alpha \in [q_{\min}, q_{\max}]$: *quantitative* — 특정 스칼라 값. SCC 상전이 조건 T8 ($q > 4\lambda_2 / \lvert W''(c) \rvert$) 의 직접 파라미터. Gibbs measure 의 역온도 비.
 - $\lambda \in \Delta^3$: *lambda parameters* — 에너지 가중치 $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}}, \lambda_{\mathrm{tr}})$, 4-simplex. Static face: $\lambda_{\mathrm{tr}} = 0$ → $\Delta^2_{\mathrm{static}}$. Theorem L3 hyperparam $r_1, r_2$ 를 통해 canonical target 과 연결.
 - $\xi \in B_\xi$: *observer-personal free residents* — 공리적으로 자유로운 보조 파라미터 박스. CN-COB (co-belonging constraint) 하에서 $\xi$ 의 선택이 관찰자마다 상이할 수 있다. Route C 하에서 $T_* \in B_\xi$ 로 편입 *제안* (OP-0021 OPEN, canonical 미등록).
 
@@ -4178,7 +4178,7 @@ $$\lambda \;\mapsto\; \text{energy weights via L3 hyperparam } (r_1, r_2): E = \
 
 $$\xi \;\mapsto\; \text{observer-personal free parameters (e.g., } T_* \text{ under Route C proposal, OP-0021 OPEN)}$$
 
-**Theorem R-OMS-1 (canonical Cat A):** $P_{\min} = d_\Theta$ alone 은 informationally too coarse — $\|d_{\Theta_1} - d_{\Theta_2}\| < 0.1$ 이지만 $T_{\Theta_1} \neq T_{\Theta_2}$ (different $K_{\mathrm{core}}$) 인 쌍이 존재한다. 4 explicit counterexamples (VP-1, exp86). 따라서 full readout $P_{\mathrm{top}} = (d_\Theta, T_\Theta)$ 가 필요하다.
+**Theorem R-OMS-1 (canonical Cat A):** $P_{\min} = d_\Theta$ alone 은 informationally too coarse — $\lVert d_{\Theta_1} - d_{\Theta_2} \rVert < 0.1$ 이지만 $T_{\Theta_1} \neq T_{\Theta_2}$ (different $K_{\mathrm{core}}$) 인 쌍이 존재한다. 4 explicit counterexamples (VP-1, exp86). 따라서 full readout $P_{\mathrm{top}} = (d_\Theta, T_\Theta)$ 가 필요하다.
 
 **Bridge 역할.** Readout map 은 본 file §1 (foundation: $u_t: X_t \to [0,1]$, 에너지 $E$, 진단 벡터 $d$) 과 OMS-2.0 framework ($\Theta_{\mathrm{OMS}}$) 사이의 *공식 연결 고리*이다. Observer 가 $\Theta$ 를 선택하면 → SCC optimizer 가 $u^*(\Theta; X_t)$ 를 산출하고 → Readout 이 $(d_\Theta, T_\Theta)$ 를 제공한다.
 
@@ -4268,7 +4268,7 @@ Route C 채택 시 OMS-1 Definition (canonical.md §A) 의 $B_\xi$ 항목에 "$T
 | 본 file § | Derived content | Canonical anchor | Line / Version ref | Cat |
 |---|---|---|---|---|
 | **§2** Stage 0 sensor T | 6-부 composition (PSF + sampling + LMS + gain + spatial + temporal) | **canonical 미등록** — pre_brainstorm §5.3 9-조건 hypothesis package | OPEN, W10+ staging | Cat C SKETCH |
-| §3.4 T8 phase transition | $\beta/\alpha > 4\lambda_2/|W''(c)|$ inequality + spinodal interior | canonical §13 Theorem 4 + DECL-1.0 중심 정리 | L1466 (Theorem 4 spinodal discussion) | Cat A (T8 inequality) |
+| §3.4 T8 phase transition | $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ inequality + spinodal interior | canonical §13 Theorem 4 + DECL-1.0 중심 정리 | L1466 (Theorem 4 spinodal discussion) | Cat A (T8 inequality) |
 | §3.5 $\Sigma_{T8} = \Sigma_{\mathrm{Hess}}$ | spinodal critical surface identification | canonical §13 SB7 | L2495 (SB7) | Cat A |
 | §3.7 $\beta_{\mathrm{crit}}^{(2)}$ | second-bifurcation threshold | canonical Theorem 4 + envelope (Theorem T5) | L1466 + envelope | Cat A |
 | §4.2 $E_{\mathrm{cl}}$ + Cl resolvent | $\mathrm{Cl}_{a_{\mathrm{cl}}}$ contraction + L-CLOSURE-LIFT | canonical L-CLOSURE-LIFT (CV-1.16) | CV-1.16 SEAL | Cat A |
@@ -4484,7 +4484,7 @@ Route C 채택 시 OMS-1 Definition (canonical.md §A) 의 $B_\xi$ 항목에 "$T
 | R-an-11 | FOV angular extent | $(\omega_h, \omega_v)$ | $\mathbb{R}_+^2$ | 200° × 135° | perimetry |
 | R-an-12 | Eye dominance | binary | discrete | $\{L, R\}$ | hole-in-card test |
 | R-an-13 | V1 cortical magnification | $M_{V1}(\theta)$ | function | eccentricity profile | retinotopic fMRI |
-| R-an-14 | V1 area size | $|V_{V1}|$ | $\mathbb{R}_+$ | individual | structural MRI |
+| R-an-14 | V1 area size | $\lvert V_{V1} \rvert$ | $\mathbb{R}_+$ | individual | structural MRI |
 
 **A.2 Neural perceptual roots (12, R-nn-1 ~ R-nn-12)**
 

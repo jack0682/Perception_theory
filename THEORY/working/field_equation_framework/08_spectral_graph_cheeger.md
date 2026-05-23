@@ -182,9 +182,9 @@ inverse_causation_check:
 
 ### §2.1 Discrete Cheeger constant
 
-**Definition (Cheeger constant of a finite graph).** Let $G = (V, E)$ be a finite, connected, undirected graph with $|V| = n$. For $S \subset V$ with $1 \leq |S| \leq n/2$, define the **edge boundary** $\partial S = E(S, \bar S) = \{(i,j) \in E : i \in S, j \in \bar S\}$, where $\bar S = V \setminus S$. The **Cheeger constant** (edge isoperimetric number) is
+**Definition (Cheeger constant of a finite graph).** Let $G = (V, E)$ be a finite, connected, undirected graph with $\lvert V \rvert = n$. For $S \subset V$ with $1 \leq \lvert S \rvert \leq n/2$, define the **edge boundary** $\partial S = E(S, \bar S) = \{(i,j) \in E : i \in S, j \in \bar S\}$, where $\bar S = V \setminus S$. The **Cheeger constant** (edge isoperimetric number) is
 
-$$h(G) := \min_{S \subset V,\, 1 \leq |S| \leq n/2} \frac{|\partial S|}{|S|}.$$
+$$h(G) := \min_{S \subset V,\, 1 \leq \lvert S \rvert \leq n/2} \frac{|\partial S|}{\lvert S \rvert}.$$
 
 Equivalent volume-weighted form (Chung 1997 §2.2): $h_{\mathrm{vol}}(G) = \min_S |\partial S|/\min(\mathrm{vol}(S), \mathrm{vol}(\bar S))$ where $\mathrm{vol}(S) = \sum_{i \in S} d_i$. For our purposes (mostly $d$-regular grids and tori), $h$ and $h_{\mathrm{vol}}$ differ by at most a factor of $d_{\max}/d_{\min}$.
 
@@ -201,7 +201,7 @@ $$\boxed{\;\frac{h(G)^2}{2 \Delta} \;\leq\; \lambda_2(L_G) \;\leq\; 2\, h(G).\;}
 - $G = C_{16} \times C_{16}$ (PBC, $n = 256$, $d_i = 4$ for all $i$, so $\Delta = 4$).
 - Laplacian eigenvalues: $\lambda_{(k_1, k_2)} = 4\sin^2(\pi k_1/16) + 4 \sin^2(\pi k_2/16)$, $k_1, k_2 \in \{0, 1, \ldots, 15\}$.
 - $\lambda_2 = 4\sin^2(\pi/16) \approx 0.1522$ (mode $(1, 0)$ or $(0, 1)$). **CONSENSUS BASELINE** ✓.
-- Cheeger constant: for a half-torus cut $S = \{(i, j) : i < 8\}$, $|S| = 128$, $|\partial S| = 2 \cdot 16 = 32$ (two PBC-wrap boundaries × 16 vertical edges each). So $|\partial S|/|S| = 32/128 = 0.25$. This gives an *upper bound* $h \leq 0.25$. Computing the true minimum over all $S$ with $|S| \leq 128$ shows $h(C_{16} \times C_{16}) = 4/L = 0.25$ exactly (standard 2D torus isoperimetric result, Bollobás-Leader 1991).
+- Cheeger constant: for a half-torus cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $|\partial S| = 2 \cdot 16 = 32$ (two PBC-wrap boundaries × 16 vertical edges each). So $|\partial S|/\lvert S \rvert = 32/128 = 0.25$. This gives an *upper bound* $h \leq 0.25$. Computing the true minimum over all $S$ with $\lvert S \rvert \leq 128$ shows $h(C_{16} \times C_{16}) = 4/L = 0.25$ exactly (standard 2D torus isoperimetric result, Bollobás-Leader 1991).
 - **Cheeger inequality check**: $h^2/(2\Delta) = 0.0625/8 = 0.0078$ and $2h = 0.50$. The Fiedler value $\lambda_2 = 0.1522$ satisfies $0.0078 \leq 0.1522 \leq 0.50$ ✓.
 
 The inequality is **tight to within factor ~20× on the lower side** for the 2D torus (the lower-bound Cheeger inequality $h^2/(2\Delta) \leq \lambda_2$ is generally loose; the upper-bound side $\lambda_2 \leq 2h$ is loose by factor ~3 here).
@@ -210,7 +210,7 @@ The inequality is **tight to within factor ~20× on the lower side** for the 2D 
 
 - $G = $ 16×16 grid with Neumann (open) BC: $n = 256$, $d_i \in \{2, 3, 4\}$ (corners, edges, interior), $\Delta = 4$.
 - Laplacian eigenvalues: $\lambda_{(k_1, k_2)} = 4\sin^2(\pi k_1/(2 \cdot 16)) + 4\sin^2(\pi k_2/(2 \cdot 16)) = \sin^2(\pi k_1/16) + \sin^2(\pi k_2/16)$ (after convention adjustment; canonical scc package uses Neumann with $\lambda_2 = \sin^2(\pi/16) \approx 0.0381$ per CONSENSUS BASELINE).
-- Cheeger constant: for a half-grid vertical cut $S = \{(i, j) : i < 8\}$, $|S| = 128$, $|\partial S| = 16$ (single vertical line × 16 edges, no PBC wrap). $|\partial S|/|S| = 16/128 = 0.125$. So $h \leq 0.125$. True minimum $h(16 \times 16 \text{ grid, Neumann}) = 1/L = 1/16 = 0.0625$ exactly (open-grid isoperimetric, by Loomis-Whitney plus corner adjustment).
+- Cheeger constant: for a half-grid vertical cut $S = \{(i, j) : i < 8\}$, $\lvert S \rvert = 128$, $|\partial S| = 16$ (single vertical line × 16 edges, no PBC wrap). $|\partial S|/\lvert S \rvert = 16/128 = 0.125$. So $h \leq 0.125$. True minimum $h(16 \times 16 \text{ grid, Neumann}) = 1/L = 1/16 = 0.0625$ exactly (open-grid isoperimetric, by Loomis-Whitney plus corner adjustment).
 - **Cheeger inequality check**: $h^2/(2\Delta) = 0.0039/8 = 0.000488$ and $2h = 0.125$. The Fiedler value $\lambda_2 = 0.0381$ satisfies $0.000488 \leq 0.0381 \leq 0.125$ ✓.
 
 Both reference baselines pass the Cheeger inequality; the inequality is *informative* (gives non-trivial lower and upper bounds on $\lambda_2$) but not tight on either side for grids/tori — a known phenomenon (the inequality is tight for "expander" graphs but loose for grid-like graphs).
@@ -221,7 +221,7 @@ For SCC on a grid/torus, the canonical Theorem 4 (canonical L1134) gives $\mu_k 
 
 $$\mu_2 \;\geq\; 4\alpha \cdot \frac{h(G)^2}{2\Delta} + \beta W''(c) \;=\; \frac{2\alpha h(G)^2}{\Delta} + \beta W''(c).$$
 
-For the 2D torus reference ($h = 0.25$, $\Delta = 4$, $\alpha = 1$, $\beta = 10$, $c = 1/2$, $W''(1/2) = -1$): $\mu_2 \geq 2 \cdot 0.25^2 / 4 + 10 \cdot (-1) = 0.03125 - 10 = -9.97$. Negative — but this is *expected* at $c = 1/2$ in the spinodal interior; T8 condition $\beta/\alpha > 4\lambda_2/|W''(c)|$ is satisfied ($10 > 4 \cdot 0.1522/1 = 0.609$) so we are in formation regime, and the uniform critical is unstable.
+For the 2D torus reference ($h = 0.25$, $\Delta = 4$, $\alpha = 1$, $\beta = 10$, $c = 1/2$, $W''(1/2) = -1$): $\mu_2 \geq 2 \cdot 0.25^2 / 4 + 10 \cdot (-1) = 0.03125 - 10 = -9.97$. Negative — but this is *expected* at $c = 1/2$ in the spinodal interior; T8 condition $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ is satisfied ($10 > 4 \cdot 0.1522/1 = 0.609$) so we are in formation regime, and the uniform critical is unstable.
 
 The non-trivial information is for the *non-uniform* critical (formation), which is where §3 onwards adapts the Cheeger inequality.
 
@@ -239,15 +239,15 @@ Let $u^* \in \Sigma_m$ be a formation (non-uniform local minimizer of $\mathcal{
 
 The **formation boundary** is $\Gamma(u^*) := \partial \Omega = \{x \in \Omega : \exists y \sim x, y \notin \Omega\}$ (graph-vertex boundary). Edge-boundary: $E(\Gamma) := E(\Omega, \Omega^c \cup A)$.
 
-For the canonical $W(u) = u^2(1-u)^2$ double-well, the natural saturation threshold is $\varepsilon_{\mathrm{sat}} \approx 0.05$ (where $|W'(u)|$ exceeds the bulk Lagrange-multiplier scale). The active band width is $\sim \sqrt{\alpha/\beta}$ vertices wide (canonical T-OP6-B Cat A bound).
+For the canonical $W(u) = u^2(1-u)^2$ double-well, the natural saturation threshold is $\varepsilon_{\mathrm{sat}} \approx 0.05$ (where $\lvert W'(u) \rvert$ exceeds the bulk Lagrange-multiplier scale). The active band width is $\sim \sqrt{\alpha/\beta}$ vertices wide (canonical T-OP6-B Cat A bound).
 
 ### §3.2 Cheeger structure on the active band
 
 The active band $A(u^*) \subset V$ inherits a subgraph structure $G|_A = (A, E_A)$ where $E_A = \{(i,j) \in E : i, j \in A\}$. The **induced-subgraph Cheeger constant** is
 
-$$h(G|_A) := \min_{S \subset A,\, 1 \leq |S| \leq |A|/2} \frac{|E_A(S, A \setminus S)|}{|S|}.$$
+$$h(G|_A) := \min_{S \subset A,\, 1 \leq \lvert S \rvert \leq \lvert A \rvert/2} \frac{|E_A(S, A \setminus S)|}{\lvert S \rvert}.$$
 
-For the canonical $u^*$ supported on a "disk" $\Omega \approx B_R(x_0) \cap V$ of radius $R$ on a 2D torus, the active band is an *annulus* of inner radius $R - 1$ and outer radius $R + 1$ (thickness $\sim \sqrt{\alpha/\beta}$), with $|A| \approx 2 \pi R \cdot (\text{thickness})$ for large $R$.
+For the canonical $u^*$ supported on a "disk" $\Omega \approx B_R(x_0) \cap V$ of radius $R$ on a 2D torus, the active band is an *annulus* of inner radius $R - 1$ and outer radius $R + 1$ (thickness $\sim \sqrt{\alpha/\beta}$), with $\lvert A \rvert \approx 2 \pi R \cdot (\text{thickness})$ for large $R$.
 
 **Key observation**: the active band on a 2D torus is *topologically a cycle* $C_{|\Gamma|}$ (annulus collapses to its 1D boundary in the sharp-interface limit). For a cycle $C_n$, $h(C_n) = 2/n$ (cut into two halves). So in the continuum limit,
 
@@ -320,7 +320,7 @@ $$\boxed{\;\mu_{\min}^{(\mathrm{non\text{-}Gold})}\bigl(\Pi_T^{\mathrm{free}} H_
 where:
 - $h(\Gamma(u^*)) := h(G|_A)$ is the **boundary Cheeger constant** (induced subgraph isoperimetric number on the active band $A$).
 - $C_{\mathrm{Cheeger}} = c_0 / \Delta_A$ for an explicit universal constant $c_0 \in [1, 4]$ (graph-class dependent, $c_0 = 2$ for $d$-regular subgraphs by direct Cheeger application to $L_{G|_A}$).
-- $\delta_{\mathrm{res}}^{\mathrm{Ch}}(u^*)$ = residual term bounded by $|\beta| \cdot \rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) + \|R_{\mathrm{cl}}\| / \lambda_{\mathrm{cl}}$, with $\rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) \leq |A|/n \cdot \sqrt{\alpha/\beta}$ (analogous to T-OP6-B bound, canonical L1956).
+- $\delta_{\mathrm{res}}^{\mathrm{Ch}}(u^*)$ = residual term bounded by $|\beta| \cdot \rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) + \lVert R_{\mathrm{cl}} \rVert / \lambda_{\mathrm{cl}}$, with $\rho_{\mathrm{bd-band}}^{\mathrm{Ch}}(u^*) \leq \lvert A \rvert/n \cdot \sqrt{\alpha/\beta}$ (analogous to T-OP6-B bound, canonical L1956).
 
 ### §4.2 Hypotheses (made explicit)
 
@@ -478,7 +478,7 @@ For $\beta/\alpha$ in the formation regime and $\delta_{\mathrm{res}}^{\mathrm{C
 
 ### §6.3 Why this matters
 
-Standard SCC theory has the **T8 scaling caveat** (canonical L1138-1140): for grid-like graphs with $\lambda_2 \to 0$ as $n \to \infty$, the T8 threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)| \to 0$, and formation regime is trivially entered for any $\beta > 0$. This is a *degeneration* of the spectral picture in the thermodynamic limit.
+Standard SCC theory has the **T8 scaling caveat** (canonical L1138-1140): for grid-like graphs with $\lambda_2 \to 0$ as $n \to \infty$, the T8 threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/\lvert W''(c) \rvert \to 0$, and formation regime is trivially entered for any $\beta > 0$. This is a *degeneration* of the spectral picture in the thermodynamic limit.
 
 **Expander SCC formations** are the *opposite* extreme: $\lambda_2 = \Omega(1)$ bounded away from zero uniformly, so T8 threshold is a genuine non-trivial constraint, AND the H-Morse spectral gap is bounded below uniformly. This means:
 
@@ -488,7 +488,7 @@ Standard SCC theory has the **T8 scaling caveat** (canonical L1138-1140): for gr
 
 ### §6.4 Connection to DECL Q1
 
-DECL-1.0 Q1 ("when does boundary emerge?") via T8 critical $\beta/\alpha > 4\lambda_2/|W''(c)|$ has an **expander interpretation**: on expander graphs, the T8 threshold is a *finite non-trivial* number (e.g., $\beta_{\mathrm{crit}} = 4 \cdot 1 \cdot (2\sqrt{d-1})/1 = 8\sqrt{d-1}$ for $d$-regular Ramanujan graphs at $c = 1/2$). This is the only graph class where T8 gives a sharp parameter selection criterion in the $n \to \infty$ limit.
+DECL-1.0 Q1 ("when does boundary emerge?") via T8 critical $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ has an **expander interpretation**: on expander graphs, the T8 threshold is a *finite non-trivial* number (e.g., $\beta_{\mathrm{crit}} = 4 \cdot 1 \cdot (2\sqrt{d-1})/1 = 8\sqrt{d-1}$ for $d$-regular Ramanujan graphs at $c = 1/2$). This is the only graph class where T8 gives a sharp parameter selection criterion in the $n \to \infty$ limit.
 
 ```
 CoC:
@@ -554,7 +554,7 @@ If all three give comparable lower bounds (within constant factor) on a fixed te
 - Parameters: $c = 1/2$, $\alpha = 1$, $\beta = 10$, $T_* = 0.1$, $R = 4$.
 - Formation: $u^* \approx \chi_{\Omega}$ where $\Omega = B_R(x_0) \cap V$ is a discrete disk of radius $R = 4$, $|\Omega| \approx \pi R^2 = 50$.
 - Boundary: $|\Gamma| \approx 2\pi R = 25$ (vertex boundary on grid).
-- Active band $A$ is annulus of $\sim$ 2 vertices thick (since $\sqrt{\alpha/\beta} = \sqrt{1/10} \approx 0.316$, but on integer grid we round up to nearest discrete band), so $|A| \approx 2 \cdot |\Gamma| \approx 50$.
+- Active band $A$ is annulus of $\sim$ 2 vertices thick (since $\sqrt{\alpha/\beta} = \sqrt{1/10} \approx 0.316$, but on integer grid we round up to nearest discrete band), so $\lvert A \rvert \approx 2 \cdot |\Gamma| \approx 50$.
 - $W''(1/2) = -1$ in active band; $W''(1) = W''(0) = 2$ in bulk/exterior.
 
 ### §8.2 Cheeger constants
@@ -569,7 +569,7 @@ Using $C_{\mathrm{Cheeger}} = c_0/\Delta_A$ with $c_0 = 2$ (Cheeger inequality l
 
 $$\mu_{\min}^{(\mathrm{non\text{-}Gold})} \;\geq\; (2/4) \cdot 0.08 \cdot 1 - \delta_{\mathrm{res}}^{\mathrm{Ch}} \;=\; 0.04 - \delta_{\mathrm{res}}^{\mathrm{Ch}}.$$
 
-With $\delta_{\mathrm{res}}^{\mathrm{Ch}} \leq \beta \cdot |A|/n \cdot \sqrt{\alpha/\beta} = 10 \cdot 50/256 \cdot 0.316 = 0.617$.
+With $\delta_{\mathrm{res}}^{\mathrm{Ch}} \leq \beta \cdot \lvert A \rvert/n \cdot \sqrt{\alpha/\beta} = 10 \cdot 50/256 \cdot 0.316 = 0.617$.
 
 **Net bound**: $\mu_{\min}^{(\mathrm{non\text{-}Gold})} \geq 0.04 - 0.617 = -0.577$. **Not yet positive** at these reference parameters with the conservative bound.
 
@@ -603,7 +603,7 @@ $$\frac{\beta}{\alpha} < \frac{2 h(G|_A)^2}{\Delta_A} = \frac{2 \cdot 0.08^2}{4}
 
 This is the **threshold below which boundary-only ($H_{\mathrm{bd}}$) gives positive H-Morse**. For $\beta/\alpha = 10/1 = 10 \gg 0.0032$, boundary-only Cheeger is insufficient — *closure must contribute*, as confirmed §8.4.
 
-Comparing to canonical T8 threshold $\beta_{\mathrm{T8}}/\alpha = 4\lambda_2/|W''(c)| = 4 \cdot 0.1522/1 = 0.609$ for uniform critical: the formation regime begins at $\beta/\alpha > 0.609$. So at $\beta/\alpha = 10$, we are *deep* in the formation regime; the closure contribution is essential for H-Morse positivity at the non-uniform critical (consistent with L-HMORSE-LOCAL needing $\lambda_{\mathrm{cl}} > 0$).
+Comparing to canonical T8 threshold $\beta_{\mathrm{T8}}/\alpha = 4\lambda_2/\lvert W''(c) \rvert = 4 \cdot 0.1522/1 = 0.609$ for uniform critical: the formation regime begins at $\beta/\alpha > 0.609$. So at $\beta/\alpha = 10$, we are *deep* in the formation regime; the closure contribution is essential for H-Morse positivity at the non-uniform critical (consistent with L-HMORSE-LOCAL needing $\lambda_{\mathrm{cl}} > 0$).
 
 ---
 
@@ -689,7 +689,7 @@ $$\omega_0 \;\sim\; \alpha^{(N - 1)/2} \cdot \frac{h(\Gamma_{\min})^{(N-1)/2}}{h
 | C3 | 2D torus L=16 $\lambda_2 = 4\sin^2(\pi/16) \approx 0.1522$ | A (computational) | §2.3 standard torus Laplacian spectrum | CONSENSUS BASELINE |
 | C4 | Cheeger inequality satisfied on 2D torus reference | A (computational) | §2.3 direct check | This file §2.3 |
 | C5 | Active-band restriction Hessian comparison | B (this file) | §3.3 + §4.3 Step 1 | canonical L1982 (L-HMORSE-DECOMP D1) |
-| C6 | $h(G\|_A) \sim 2/\|\Gamma\|$ on torus sharp-interface | A (cycle Cheeger) | §3.2 active band → cycle | Standard cycle isoperimetric |
+| C6 | $h(G\lVert _A) \sim 2/ \rVert\Gamma\|$ on torus sharp-interface | A (cycle Cheeger) | §3.2 active band → cycle | Standard cycle isoperimetric |
 | C7 | L-CHEEGER-HMORSE main statement | **B (target, this file)** | §4.3 4-step proof sketch | canonical L1948 L-HMORSE-LOCAL Cat B; canonical L1974 L-HMORSE-DECOMP Cat B |
 | C8 | Cheeger-T8 condition $\beta/\alpha < 2h(G\|_A)^2/\Delta_A$ | B (this file) | §4.3 Step 4 + §8.6 | canonical L1134 T8-Core |
 | C9 | Reduction to Theorem 4 at uniform critical | A (algebraic) | §5.1 | canonical L1134-1136 |

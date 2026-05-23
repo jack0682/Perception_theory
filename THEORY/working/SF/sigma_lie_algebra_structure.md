@@ -90,7 +90,7 @@ $$\mathrm{Aut}(G)_{u^*} := \{ \pi \in \mathrm{Aut}(G) : P_\pi u^* = u^* \}.$$
 
 This is a subgroup of Aut(G), hence a finite group. Its order divides |Aut(G)| by Lagrange's theorem. The orbit-stabilizer theorem gives:
 
-$$|\mathrm{Aut}(G) \cdot u^*| \cdot |\mathrm{Aut}(G)_{u^*}| = |\mathrm{Aut}(G)|.$$
+$$|\mathrm{Aut}(G) \cdot u^*| \cdot |\mathrm{Aut}(G)_{u^*}\lvert = \rvert\mathrm{Aut}(G)|.$$
 
 **Single-formation analog of σ_multi^D.** In the multi-formation context (working/MF/multi_formation_sigma.md §1.4), the joint stabilizer of a K-field minimizer **u** = (u^(1), ..., u^(K)) under Aut(G) ≀ S_K is σ_multi^D = Stab_{Aut(G) ≀ S_K}(**u**). The single-formation analog is exactly Aut(G)_{u*}: the stabilizer of a single minimizer u* under Aut(G) alone. This is the σ^D component for K=1.
 
@@ -144,7 +144,7 @@ is precisely the irreducible decomposition of T_{u^*}\Sigma_m as an Aut(G)_{u^*}
 
 The McKay conjecture (originally stated 1972, proved Cabanes-Späth 2023 for all finite groups) states: for a finite group Γ and prime p,
 
-$$|\mathrm{Irr}_{p'}(\Gamma)| = |\mathrm{Irr}_{p'}(N_\Gamma(P))|,$$
+$$|\mathrm{Irr}_{p'}(\Gamma)\lvert = \rvert\mathrm{Irr}_{p'}(N_\Gamma(P))|,$$
 
 where Irr_{p'}(Γ) is the set of irreducible characters of Γ with degree not divisible by p, P is a Sylow p-subgroup of Γ, and N_Γ(P) is the normalizer of P in Γ. The spirit: complex representation data of the full group Γ is *determined* by the representation data of the much smaller subgroup N_Γ(P).
 

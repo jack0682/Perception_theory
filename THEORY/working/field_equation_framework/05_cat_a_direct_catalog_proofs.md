@@ -103,7 +103,7 @@ $$\lambda_2(L_{C_{16} \times C_{16}}) = 4\sin^2(\pi/16) = 4 \times 0.038060 = 0.
 **Double-well** $W(u) = u^2(1-u)^2$ under canonical I6 convention (CLAUDE.md):
 
 $$W'(u) = 2u(1-u)(1-2u), \quad W''(u) = 2(1 - 6u + 6u^2)$$
-$$W''(1/2) = 2(1 - 3 + 3/2) = -1, \quad |W''(1/2)| = 1$$
+$$W''(1/2) = 2(1 - 3 + 3/2) = -1, \quad \lvert W''(1/2) \rvert = 1$$
 $$W'''(u) = 12(2u-1), \quad W'''(1/2) = 0$$
 
 **Spinodal check**: $c = 1/2 \in ((3-\sqrt{3})/6,\, (3+\sqrt{3})/6) \approx (0.211, 0.789)$ — confirmed in spinodal interior.
@@ -136,7 +136,7 @@ Key mode values:
 |---|---|---|
 | $\lambda_2$ | 0.152241 | $4\sin^2(\pi/16)$ |
 | $W''(1/2)$ | −1 | $2(1-6c+6c^2)|_{c=1/2}$ |
-| $|W''(1/2)|$ | 1 | — |
+| $\lvert W''(1/2) \rvert$ | 1 | — |
 | $W'''(1/2)$ | 0 | $12(2c-1)|_{c=1/2}$ |
 | $\sigma$ | $\sqrt{2}/6 \approx 0.2357$ | $(\sqrt{2}/6)\sqrt{\alpha\beta}$ at $\alpha=\beta=1$ (CORRECTED, file 12 §2) |
 | $\mu_2$ | −0.391036 | $4\lambda_2 - 1$ at $\alpha=\beta=1$ |
@@ -208,7 +208,7 @@ reaction rate to transport rate. In the SCC energy $\mathcal{E}_{\mathrm{bd}} = 
 the parameter $\alpha$ controls spatial coupling (graph-Laplacian smoothness, analogous to diffusion)
 and $\beta$ controls the double-well reaction (pointwise bistability). Their ratio $\beta/\alpha$ is
 the unique dimensionless combination that governs the T8 phase transition: the T8 condition reads
-$\beta/\alpha > 4\lambda_2/|W''(c)|$ (canonical T8-Core, canonical.md L1134–1136). The definition
+$\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (canonical T8-Core, canonical.md L1134–1136). The definition
 $\mathrm{Da} = \beta/\alpha$ is thus an immediate algebraic extraction from the canonical T8-Core
 proof. No new content.
 
@@ -224,7 +224,7 @@ independent of $c$, $T_*$, $R$.
 
 **Reference value** ($\alpha=1, \beta=1$): $\mathrm{Da} = 1/1 = 1.0$.
 
-(At reference, Da = 1; T8 condition requires Da $> 4\lambda_2/|W''(c)| = 4 \times 0.152241 = 0.609$.
+(At reference, Da = 1; T8 condition requires Da $> 4\lambda_2/\lvert W''(c) \rvert = 4 \times 0.152241 = 0.609$.
 Since Da = 1 > 0.609, reference is super-critical — formation regime confirmed.)
 
 ---
@@ -391,17 +391,17 @@ In the spinodal interior $W''(c) < 0$, so $\mu_2 = 0 \Leftrightarrow 4\alpha\lam
 - $\mathrm{Sc}_{T8} = 1$: T8 wall ($\Sigma_{T8}$, onset of instability)
 - $\mathrm{Sc}_{T8} < 1$: super-critical (formation regime, $\mu_2 < 0$)
 
-The T8 condition $\beta/\alpha > 4\lambda_2/|W''(c)|$ from DECL-1.0 is equivalently $\mathrm{Sc}_{T8} < 1$.
+The T8 condition $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ from DECL-1.0 is equivalently $\mathrm{Sc}_{T8} < 1$.
 Sc_{T8} is a dimensionless rename with zero new content.
 
 **Domain of validity**: Spinodal interior $c \in ((3-\sqrt{3})/6,\, (3+\sqrt{3})/6)$ (so $W''(c) < 0$,
-$|W''(c)| > 0$); $\alpha, \beta > 0$; $\lambda_2 > 0$ (connected graph). Well-posed throughout.
+$\lvert W''(c) \rvert > 0$); $\alpha, \beta > 0$; $\lambda_2 > 0$ (connected graph). Well-posed throughout.
 
 **Inverse causation check**:
 - If Theorem 4 removed: $\mu_2$ formula unavailable; Sc_{T8} loses its Hessian interpretation.
 - If SB7 removed: $\Sigma_{T8}$ no longer certified as codim-1 algebraic; Sc_{T8} = 1 condition
   loses its topological significance.
-- If spinodal interior condition violated ($W''(c) > 0$): $|W''(c)|$ still positive but no T8
+- If spinodal interior condition violated ($W''(c) > 0$): $\lvert W''(c) \rvert$ still positive but no T8
   transition possible ($\mu_k > 0$ always); Sc_{T8} > 1 trivially for all $\alpha,\beta > 0$.
 
 **Reference value** ($\alpha=\beta=1$, $c=1/2$, $\lambda_2=0.152241$):
@@ -434,7 +434,7 @@ and normalizing by $T_*$. The ratio $\alpha W''(u^*)/T_*$ measures deterministic
 vs thermal noise — the Prandtl-type ratio for the boundary layer specifically. This is Cat A direct
 because $W''(u^*)$ is evaluated at a canonical field value using the canonical double-well
 (CLAUDE.md I6 convention), and $T_*$ is the canonical T-PF-A1-SDE noise level (canonical.md L1668).
-Note: $W''(u^*) < 0$ at boundary sites in the spinodal interior; the magnitude $|W''(u^*)|$ is used
+Note: $W''(u^*) < 0$ at boundary sites in the spinodal interior; the magnitude $\lvert W''(u^*) \rvert$ is used
 for the boundary instability measure; the sign-convention follows 01_ns_inspired_synthesis.md §6.1 #9.
 
 **Domain of validity**: $T_* > 0$; $u^*$ defined (formation must exist, i.e., super-critical regime
@@ -447,7 +447,7 @@ $\mathrm{Sc}_{T8} < 1$); $\alpha > 0$.
 
 **Reference value** (using $u^* = 1/2$ as proxy for boundary, $\alpha=1$, $T_*=0.1$):
 
-$$\mathrm{Pr}^{(\mathrm{bd})} = \frac{1 \times |W''(1/2)|}{0.1} = \frac{1}{0.1} = 10.0$$
+$$\mathrm{Pr}^{(\mathrm{bd})} = \frac{1 \times \lvert W''(1/2) \rvert}{0.1} = \frac{1}{0.1} = 10.0$$
 
 (Pr^{(bd)} = 10 $\gg$ 1: deterministic boundary curvature strongly dominates thermal noise at reference.
 Precondition for D-HMORSE-LOCAL (C2′) active-set well-definiteness satisfied, per 01 §8.3.)
@@ -503,14 +503,14 @@ double-well deterministic force to thermal noise at the uniform critical point. 
 "onsite Prandtl" — how strongly the double-well drives instability relative to thermal mixing.
 Directly from Theorem 4 with no new mathematics.
 
-**Domain of validity**: $T_* > 0$; $c$ in spinodal interior ($W''(c) < 0$, $|W''(c)| > 0$); $\beta > 0$.
+**Domain of validity**: $T_* > 0$; $c$ in spinodal interior ($W''(c) < 0$, $\lvert W''(c) \rvert > 0$); $\beta > 0$.
 
 **Inverse causation check**:
 - If Theorem 4 removed: onsite contribution $\beta W''(c)$ not available as a Hessian component.
 - If spinodal interior condition violated: $W''(c) \geq 0$; Pr^{(onsite)} still definable as
   $\beta W''(c)/T_*$ but loses its instability interpretation (it becomes a stabilizing, not destabilizing, term).
 
-**Reference value** ($\beta=1$, $|W''(1/2)|=1$, $T_*=0.1$):
+**Reference value** ($\beta=1$, $\lvert W''(1/2) \rvert=1$, $T_*=0.1$):
 
 $$\mathrm{Pr}^{(\mathrm{onsite})} = \frac{1 \times 1}{0.1} = 10.0$$
 
@@ -565,14 +565,14 @@ CoT step 4 (factor-4 verification):
 **CoC anchors**:
 - Theorem 4 (canonical.md L1134–1136): $\mu_k = 4\alpha\lambda_k + \beta W''(c)$.
 - SB7 (canonical.md L2497–2498): $\Sigma_{T8}$ codim-1, identical to Hessian-degeneracy locus.
-- DECL-1.0 T8 central theorem: $\beta/\alpha > 4\lambda_2/|W''(c)|$.
+- DECL-1.0 T8 central theorem: $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$.
 - Ordered-pair convention (canonical.md L80): factor 4 in Hessian is load-bearing.
 
 **Inverse causation**: If either L-PR-SPATIAL or L-PR-ONSITE breaks, the identity breaks.
 If ordered-pair convention changed (factor 2 instead of 4): Pr ratio = 1/2 × Sc_{T8}, not 1/4.
 Factor 4 is essential and non-negotiable.
 
-**Reference verification** ($\alpha=\beta=1$, $\lambda_2=0.152241$, $|W''(1/2)|=1$, $T_*=0.1$):
+**Reference verification** ($\alpha=\beta=1$, $\lambda_2=0.152241$, $\lvert W''(1/2) \rvert=1$, $T_*=0.1$):
 
 $$\frac{\mathrm{Pr}^{(\mathrm{spatial})}}{\mathrm{Pr}^{(\mathrm{onsite})}} = \frac{1.52241}{10.0} = 0.152241$$
 
@@ -706,7 +706,7 @@ adopts Sc$^{(1)}_k$ as the primary notation (Prandtl-family consistency, 01 §7.
 
 **Statement (form — Identity 2a per Wave 2 critic Fix #4, file 12 §5)**:
 
-$$\boxed{\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}} = |\mu_{\mathrm{saddle}}|}, \qquad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}|}{|\mu_{\mathrm{saddle}}|}$$
+$$\boxed{\omega_0 \sim \frac{\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}}}{\sqrt{\mathrm{Pr}^{(\mathrm{Kramers})}}} = |\mu_{\mathrm{saddle}}|}, \qquad \mathrm{Pr}^{(\mathrm{Kramers})} = \frac{|\mu_{\mathrm{well}}\lvert }{ \rvert\mu_{\mathrm{saddle}}|}$$
 
 where $\omega_{\mathrm{well}} = |\mu_{\mathrm{well}}|^{1/2}$, $\omega_{\mathrm{saddle}} = |\mu_{\mathrm{saddle}}|^{1/2}$,
 and the full Eyring-Kramers rate is $\Gamma \sim \omega_0 \exp(-\Delta\mathcal{E}/T_*)$. The algebraic equality $\omega_{\mathrm{well}} \cdot \omega_{\mathrm{saddle}} \cdot (\mathrm{Pr}^{(\mathrm{Kramers})})^{-1/2} = |\mu_{\mathrm{saddle}}|$ is the *HTB high-friction leading-order form* (file 12 §5 verification).
@@ -732,7 +732,7 @@ eigenvalues at formation minimizers and K-jump saddles is the Cat B work in comp
 
 **Reference value** (form only; explicit values require Cat B):
 
-$$\mathrm{Pr}^{(\mathrm{Kramers})} = |\mu_{\mathrm{well}}| / |\mu_{\mathrm{saddle}}| \qquad (\text{Cat B to evaluate})$$
+$$\mathrm{Pr}^{(\mathrm{Kramers})} = |\mu_{\mathrm{well}}\lvert / \rvert\mu_{\mathrm{saddle}}| \qquad (\text{Cat B to evaluate})$$
 
 ---
 
@@ -751,7 +751,7 @@ $$\boxed{\mu_k(s\alpha, s\beta, c) = s \cdot \mu_k(\alpha, \beta, c)}$$
 **Corollaries**:
 1. Goldstone modes preserved: if $\mu_k = 0$ then $\mu_k(s\alpha,s\beta,c) = 0$.
 2. Non-Goldstone modes scale linearly: $\mu_k \to s\mu_k$ (gap increases by factor $s$).
-3. Sc_{T8} preserved: $\mathrm{Sc}_{T8}(s\alpha,s\beta) = 4(s\alpha)\lambda_2/((s\beta)|W''(c)|) = \mathrm{Sc}_{T8}(\alpha,\beta)$.
+3. Sc_{T8} preserved: $\mathrm{Sc}_{T8}(s\alpha,s\beta) = 4(s\alpha)\lambda_2/((s\beta)\lvert W''(c) \rvert) = \mathrm{Sc}_{T8}(\alpha,\beta)$.
 4. $\sigma \to s\sigma$: $\sigma(s\alpha,s\beta) = (\sqrt{2}/6)\sqrt{(s\alpha)(s\beta)} = s \cdot (\sqrt{2}/6)\sqrt{\alpha\beta} = s\sigma$ (homogeneity preserved regardless of prefactor).
 5. $\mathrm{Da} = \beta/\alpha$ preserved: $(s\beta)/(s\alpha) = \beta/\alpha$.
 

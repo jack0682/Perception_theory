@@ -85,7 +85,7 @@ By the bordered-Hessian / IFT argument (Theorem R1, see also `op_oms_001_gap_c1_
 
 $$\boxed{J_e(\lambda) = -G_T(\lambda)^\top \, H_T(\lambda)^{-1} \, G_T(\lambda),}\tag{$\star$}$$
 
-where $G_T(\lambda) := P_T^\top \, G(\lambda) \in \mathbb{R}^{(n-1) \times 4}$ and $G(\lambda) := \bigl[\, \nabla_u E_{cl}(u^*) \,\big|\, \nabla_u E_{sep}(u^*) \,\big|\, \nabla_u E_{bd}(u^*) \,\big|\, \nabla_u E_{tr}(u^*)\, \bigr] \in \mathbb{R}^{n \times 4}$.
+where $G_T(\lambda) := P_T^\top \, G(\lambda) \in \mathbb{R}^{(n-1) \times 4}$ and $G(\lambda) := \bigl[\, \nabla_u E_{cl}(u^*) \,\big\vert\, \nabla_u E_{sep}(u^*) \,\big\vert\, \nabla_u E_{bd}(u^*) \,\big\vert\, \nabla_u E_{tr}(u^*)\, \bigr] \in \mathbb{R}^{n \times 4}$.
 
 The full $J_e$ is a $4 \times 4$ symmetric **negative-semidefinite** matrix
 (by $H_T \succ 0$, $J_e = -G_T^\top H_T^{-1} G_T \preceq 0$).

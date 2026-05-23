@@ -244,7 +244,7 @@ results = {
 
 | 측정값 | 이론 예측 | 이유 |
 |---|---|---|
-| `endpoint_residual` | $> 0$ (= $\|z-x\|^2/2$) | L-ENDPOINT-NONSEMI |
+| `endpoint_residual` | $> 0$ (= $\lVert z-x \rVert^2/2$) | L-ENDPOINT-NONSEMI |
 | `action_residual` | $\approx 0$ | T-ACT-DP |
 | `action_dp_residual` | $\approx 0$ | T-ACT-DP (3-hop) |
 | `soft_action_residual` | $\approx 0$ | T-ACT-GIBBS |

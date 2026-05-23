@@ -67,7 +67,7 @@ For SCC trajectory $\mathbf{u}(t)$ approaching K-jump time $t^*$ with $(j, k) \t
 ### §3.3 Goldstone-pair gap formula
 
 By Coupling Bound Lemma (canonical T-Persist-K-Sep): in well-separated regime,
-$$\|H_{jk}\|_{\mathrm{op}} = \lambda_{\mathrm{rep}} \cdot \|I\|_{\mathrm{op}} + O(\exp(-c_0 d_{\min})) \approx \lambda_{\mathrm{rep}}.$$
+$$\lVert H_{jk} \rVert_{\mathrm{op}} = \lambda_{\mathrm{rep}} \cdot \lVert I \rVert_{\mathrm{op}} + O(\exp(-c_0 d_{\min})) \approx \lambda_{\mathrm{rep}}.$$
 
 Restricting to Goldstone-pair subspace $V_{jk}^{\mathrm{Gold}}$, the cross-block coupling is approximately:
 $$H_{jk}|_{V^{\mathrm{Gold}}} \approx \lambda_{\mathrm{rep}} \cdot O_{\mathrm{Gold}}(d_{\min})$$
@@ -94,7 +94,7 @@ with components:
 
 (For multiple Goldstones per formation, $g_j > 1$: extend to a multi-component mixing tuple, one per Goldstone-direction pair.)
 
-**(W4.1c) Trend sign $s_{jk}^{\mathrm{trend}}$**: Along trajectory $\mathbf{u}(t)$, $s_{jk}^{\mathrm{trend}}(\mathbf{u}^*) := \mathrm{sign}\big(\frac{d \Delta_{jk}^{\mathrm{Gold}}}{dt}\big|_{t = t^*}\big) \in \{-1, 0, +1\}$.
+**(W4.1c) Trend sign $s_{jk}^{\mathrm{trend}}$**: Along trajectory $\mathbf{u}(t)$, $s_{jk}^{\mathrm{trend}}(\mathbf{u}^*) := \mathrm{sign}\big(\frac{d \Delta_{jk}^{\mathrm{Gold}}}{dt}\big\vert_{t = t^*}\big) \in \{-1, 0, +1\}$.
 
 ### §4.2 Static vs dynamic data
 

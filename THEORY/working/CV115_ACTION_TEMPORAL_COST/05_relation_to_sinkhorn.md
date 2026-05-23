@@ -79,7 +79,7 @@ $$b_{1,i}\cdot a_{2,i} = c \quad\text{(모든 } i \text{에 대해 동일한 상
 - 두 벡터는 **서로 다른 transport 문제**에서 독립적으로 결정된다.
 - 일반적으로 $b_{1,i}\cdot a_{2,i}$는 $i$에 따라 다르다.
 
-**반례 구성** ($|X_s| = 2$):
+**반례 구성** ($\lvert X_s \rvert = 2$):
 
 $X_s = \{y_1, y_2\}$, $u_s = (1/3, 2/3)$ (비균등 분포).
 
@@ -100,7 +100,7 @@ $\Rightarrow$ $b_1 \odot a_2 \neq c\cdot\mathbf{1}$ $\Rightarrow$ $M_1 M_2 \neq 
 > Sinkhorn-scaled plan은 **일반적으로 semigroup 구조를 만족하지 않는다**.  
 > 이것이 OP-0012-SINK가 OPEN으로 유지되는 근본적인 algebraic 이유이다.
 >
-> 단, $u_s$가 균등 분포인 특수 경우 ($b_1 = a_2 = \mathbf{1}/|X_s|$) 에는 근사적으로 복원 가능할 수 있다.
+> 단, $u_s$가 균등 분포인 특수 경우 ($b_1 = a_2 = \mathbf{1}/\lvert X_s \rvert$) 에는 근사적으로 복원 가능할 수 있다.
 
 **판정**: $\boxed{\text{OPEN (proved failure; generically false)}}$
 
@@ -118,7 +118,7 @@ $\Rightarrow$ $b_1 \odot a_2 \neq c\cdot\mathbf{1}$ $\Rightarrow$ $M_1 M_2 \neq 
 >
 > **(MARGIN)**: 각 단계 $\Delta_\mathrm{sep}^{ts} > \eta_{ts}$, $\Delta_\mathrm{sep}^{sr} > \eta_{sr}$ (충분한 margin).
 >
-> **(SMALL-SINK-GAP)**: $\|M_1 M_2 - M^{\mathrm{sink}}(K_{t\to r})\|_\infty \leq \delta_\mathrm{gap}$ (semigroup gap이 작음; 충분히 작은 $u_s$ 비균등성 등 추가 조건 필요).
+> **(SMALL-SINK-GAP)**: $\lVert M_1 M_2 - M^{\mathrm{sink}}(K_{t\to r}) \rVert_\infty \leq \delta_\mathrm{gap}$ (semigroup gap이 작음; 충분히 작은 $u_s$ 비균등성 등 추가 조건 필요).
 >
 > 결론:
 >

@@ -13,7 +13,7 @@
 
 ## §1. Mission
 
-> **"Formalize the Bernshtein-style conservation lemma for SCC σ-trajectory: any σ-tuple invariant determinable by SCC ODE integration is equivalent to a finite zigzag-PH computation on (centroid trajectory + per-formation Hessian timeseries), in time poly($K_{\mathrm{act}} \cdot |X|$)."**
+> **"Formalize the Bernshtein-style conservation lemma for SCC σ-trajectory: any σ-tuple invariant determinable by SCC ODE integration is equivalent to a finite zigzag-PH computation on (centroid trajectory + per-formation Hessian timeseries), in time poly($K_{\mathrm{act}} \cdot \lvert X \rvert$)."**
 
 This file instantiates Bridge B-1 (`foundational_bridges_2026.md` §2) as a **formal Cat BC lemma** with a proof outline grounded in three components:
 
@@ -36,8 +36,8 @@ $$\Phi(\mathbf{u}(\cdot)) = \big(\,(c^{(j)}(t))_{j, t},\ (H_j(t))_{j, t}\,\big)$
 — centroid trajectory + per-formation Hessian time-series — and $\mathcal{Z}_{\mathrm{PH}}$ is the space of zigzag-PH input data on this pair.
 
 **Complexity claim:** Computing $\Pi'$ from $\Phi(\mathbf{u}(\cdot))$ runs in time
-$$\mathrm{Time}(\Pi') = O\!\left( K_{\mathrm{act}}^3 \cdot T_{\mathrm{snap}} + |X| \cdot \log |X| \cdot k \cdot T_{\mathrm{snap}} \right),$$
-where $T_{\mathrm{snap}}$ is the number of trajectory snapshots, $k$ is the number of bottom Hessian eigenvalues retained per formation, and $K_{\mathrm{act}}^3$ accounts for Vietoris–Rips PH on a $K_{\mathrm{act}}$-point cloud per snapshot. Total: **polynomial in $K_{\mathrm{act}} \cdot |X|$**.
+$$\mathrm{Time}(\Pi') = O\!\left( K_{\mathrm{act}}^3 \cdot T_{\mathrm{snap}} + \lvert X \rvert \cdot \log \lvert X \rvert \cdot k \cdot T_{\mathrm{snap}} \right),$$
+where $T_{\mathrm{snap}}$ is the number of trajectory snapshots, $k$ is the number of bottom Hessian eigenvalues retained per formation, and $K_{\mathrm{act}}^3$ accounts for Vietoris–Rips PH on a $K_{\mathrm{act}}$-point cloud per snapshot. Total: **polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$**.
 
 ---
 
@@ -59,7 +59,7 @@ The σ-trajectory $(\sigma^A_{\mathrm{multi}}(t))_{t \in [0, T]}$ is a càdlàg 
 ### §3.3 Extraction map Φ
 
 $$\Phi(\mathbf{u}(\cdot)) := \Big(\,\{c^{(j)}(t_s) : j \in \mathrm{active}(t_s),\, s = 1, \ldots, T_{\mathrm{snap}}\},\ \{H_j(t_s) : j \in \mathrm{active}(t_s),\, s = 1, \ldots, T_{\mathrm{snap}}\}\,\Big)$$
-where $c^{(j)}(t) = \sum_x x \cdot u^{(j)}(t,x) / \|u^{(j)}(t)\|_1$ and $H_j(t) = \nabla^2 \mathcal{E}_{\mathrm{self}}|_{u^{(j)}(t)}$ restricted to the per-formation tangent space.
+where $c^{(j)}(t) = \sum_x x \cdot u^{(j)}(t,x) / \lVert u^{(j)}(t) \rVert_1$ and $H_j(t) = \nabla^2 \mathcal{E}_{\mathrm{self}}|_{u^{(j)}(t)}$ restricted to the per-formation tangent space.
 
 ### §3.4 Zigzag PH on (centroid + Hessian)
 
@@ -102,11 +102,11 @@ The combination — zigzag PH on $C(t)$ **plus** per-formation Hessian spectrum 
 
 **Zigzag persistence over time:** Carlsson–de Silva–Morozov 2009 + Kim–Mémoli 2021 formigrams; the zigzag complexity scales linearly with the number of arrows in the zigzag diagram, dominated by the snapshot/Rips computation.
 
-**Per-formation Hessian Lanczos extraction:** standard sparse-symmetric eigensolver (Lanczos / LOBPCG) returns the $k$ smallest eigenvalues + eigenvectors of an $|X| \times |X|$ sparse Laplacian-like matrix in $O(|X| \cdot \log|X| \cdot k)$ time per formation per snapshot. Across all formations and snapshots: $O(K_{\mathrm{act}} \cdot |X| \cdot \log|X| \cdot k \cdot T_{\mathrm{snap}})$.
+**Per-formation Hessian Lanczos extraction:** standard sparse-symmetric eigensolver (Lanczos / LOBPCG) returns the $k$ smallest eigenvalues + eigenvectors of an $\lvert X \rvert \times \lvert X \rvert$ sparse Laplacian-like matrix in $O(\lvert X \rvert \cdot \log|X| \cdot k)$ time per formation per snapshot. Across all formations and snapshots: $O(K_{\mathrm{act}} \cdot \lvert X \rvert \cdot \log|X| \cdot k \cdot T_{\mathrm{snap}})$.
 
 **Total:**
-$$\mathrm{Time}(\Pi') = O(K_{\mathrm{act}}^3 T_{\mathrm{snap}} + K_{\mathrm{act}} \cdot |X| \log|X| \cdot k \cdot T_{\mathrm{snap}})$$
-— polynomial in $K_{\mathrm{act}} \cdot |X|$ with $T_{\mathrm{snap}}$ and $k$ as auxiliary parameters. ✓
+$$\mathrm{Time}(\Pi') = O(K_{\mathrm{act}}^3 T_{\mathrm{snap}} + K_{\mathrm{act}} \cdot \lvert X \rvert \log|X| \cdot k \cdot T_{\mathrm{snap}})$$
+— polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$ with $T_{\mathrm{snap}}$ and $k$ as auxiliary parameters. ✓
 
 ---
 
@@ -116,7 +116,7 @@ $$\mathrm{Time}(\Pi') = O(K_{\mathrm{act}}^3 T_{\mathrm{snap}} + K_{\mathrm{act}
 - **Cat B (complexity claim):** Step 3 establishes polynomial-time complexity with explicit constants depending on PH library implementation. Cat B because the constants depend on Ripser/GUDHI engineering choices.
 - **Final classification:** **Cat BC** — Cat A in spirit (definitional bridge) + Cat B in practice (complexity).
 
-The bridge is the **formal target** of NQ-261 (`foundational_bridges_2026.md` §2.3 Step 2): "Prove a Bernshtein-style conservation lemma: any σ-tuple invariant determinable by SCC ODE integration is determinable by a finite zigzag-PH computation on $C(t)$ + per-formation Hessian data, in time polynomial in $K_{\mathrm{act}} \cdot |X|$." This file is that proof outline.
+The bridge is the **formal target** of NQ-261 (`foundational_bridges_2026.md` §2.3 Step 2): "Prove a Bernshtein-style conservation lemma: any σ-tuple invariant determinable by SCC ODE integration is determinable by a finite zigzag-PH computation on $C(t)$ + per-formation Hessian data, in time polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$." This file is that proof outline.
 
 ---
 

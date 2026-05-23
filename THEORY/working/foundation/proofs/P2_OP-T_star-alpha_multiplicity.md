@@ -25,7 +25,7 @@ status: draft (Cat B attempt with explicit gap declaration)
 
 **Mission**: Detailed proof attempt of *Cat B target*
 
-$$\big|\mathcal{B}_{T_*}^{\mathrm{FP}}\big| \;=\; 2K(\Theta) - 1$$
+$$\big\vert\mathcal{B}_{T_*}^{\mathrm{FP}}\big\vert \;=\; 2K(\Theta) - 1$$
 
 where $K(\Theta)$ is the number of basins of attraction of $\mathcal{E}_\lambda$ on $\mathcal{F}_M(G)$ at post-bifurcation $\Theta \in \mathcal{R}_{\mathrm{post}}$, via **Poincaré-Hopf index sum + Brouwer degree** (E2 §A.3 recommended path).
 
@@ -61,7 +61,7 @@ $ grep -rn "ψ.*fixed.*point|variance map" THEORY/working/
 
 ### §1.1 Definition of K(Θ) — Morse basin count
 
-**Definition 1.1 (Basin count $K(\Theta)$).** Let $G = (V, E)$ be a finite connected graph with $|V| = n$, mass $M \in (0, 1)$, and $\Theta = (\beta, \alpha, \lambda_2, c, m)$ the SCC parameter tuple. The energy
+**Definition 1.1 (Basin count $K(\Theta)$).** Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$, mass $M \in (0, 1)$, and $\Theta = (\beta, \alpha, \lambda_2, c, m)$ the SCC parameter tuple. The energy
 $$\mathcal{E}_\lambda(u) \;=\; \lambda_{\mathrm{cl}} E_{\mathrm{cl}}(u) + \lambda_{\mathrm{sep}} E_{\mathrm{sep}}(u) + \lambda_{\mathrm{bd}} E_{\mathrm{bd}}(u)$$
 is defined on the field polytope $\mathcal{F}_M(G) \subset \Sigma_m$ (canonical T-PF-A1-AR Cat A, L1652+). Under H5 Morse stability (L-HMORSE-LOCAL Cat B unconditional, CV-1.16), every local minimizer is non-degenerate, and the local-minimum set
 $$\mathrm{Min}(\mathcal{E}_\lambda) \;=\; \{u^{*(1)}, u^{*(2)}, \ldots, u^{*(K)}\} \subset \mathcal{F}_M(G)$$
@@ -69,7 +69,7 @@ is finite. Each $u^{*(k)}$ generates a basin of attraction
 $$B_k \;:=\; \{u \in \mathcal{F}_M(G) : \text{gradient flow of } \mathcal{E}_\lambda \text{ from } u \text{ converges to } u^{*(k)}\}.$$
 
 We define $K(\Theta) := |\mathrm{Min}(\mathcal{E}_\lambda) \cap \mathrm{int}(\mathcal{R}_{\mathrm{post}})|$, the number of distinct *stable interior* basins under the post-bifurcation regime
-$$\mathcal{R}_{\mathrm{post}} \;:=\; \{\Theta : \beta/\alpha > 4\lambda_2 / |W''(c)|, \; c = m \in \mathrm{int}(\mathrm{spinodal})\}$$
+$$\mathcal{R}_{\mathrm{post}} \;:=\; \{\Theta : \beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert, \; c = m \in \mathrm{int}(\mathrm{spinodal})\}$$
 (T8 supercritical, canonical §13).
 
 **Remark 1.1**: $K(\Theta) \geq 2$ in $\mathcal{R}_{\mathrm{post}}$ (T8 supercritical guarantees at least two distinct local minimizers by double-well structure; canonical §13 T8-Full).
@@ -77,7 +77,7 @@ $$\mathcal{R}_{\mathrm{post}} \;:=\; \{\Theta : \beta/\alpha > 4\lambda_2 / |W''
 ### §1.2 |B_{T_*}^{FP}| explicit formula (Cat B target)
 
 **Theorem 1.2 (Cat B target, OP-T*-α main).** Let $\Theta \in \mathrm{int}(\mathcal{R}_{\mathrm{post}})$ such that H5 Morse stability holds (canonical L-HMORSE-LOCAL Cat B). Let $K = K(\Theta) \geq 2$. Then under T-PF-A1-GI Cat A (canonical $\pi_T$ well-defined for any $T > 0$, L1689+) + T-PF-A1-PE Cat A (canonical Poincaré inequality, L1700+):
-$$\big|\mathcal{B}_{T_*}^{\mathrm{FP}}\big| \;=\; 2K(\Theta) - 1$$
+$$\big\vert\mathcal{B}_{T_*}^{\mathrm{FP}}\big\vert \;=\; 2K(\Theta) - 1$$
 
 The fixed-point set decomposes (under generic regime, §3.5 Lemma L5) as:
 - $\mathbf{N_{\mathrm{low}} = K}$ *low-T fixed-points* $\{T_*^{(k),\mathrm{low}}\}_{k=1}^K$: each $\pi_{T_*^{(k),\mathrm{low}}}$ concentrates on basin $B_k$, variance $\psi(T_*^{(k),\mathrm{low}}) = T_*^{(k),\mathrm{low}}$ at low (basin-localized) value.
@@ -99,7 +99,7 @@ $$\deg(\mathrm{Id} - \psi, [T_{\min}, T_{\max}], 0) \;=\; \underbrace{K(+1)}_{\t
 ### §1.4 Implication for T_* Route C selection
 
 The Cat B target formula provides explicit *cardinality* for the observer's selection set in Route C (03_T_star §5.1, G1+G3 hybrid):
-$$\big|\mathcal{B}_{T_*}^{\mathrm{FP}}\big| = 2K(\Theta) - 1 \quad\Longrightarrow\quad \text{observer chooses one of } 2K-1 \text{ self-consistent } T_*.$$
+$$\big\vert\mathcal{B}_{T_*}^{\mathrm{FP}}\big\vert = 2K(\Theta) - 1 \quad\Longrightarrow\quad \text{observer chooses one of } 2K-1 \text{ self-consistent } T_*.$$
 
 Without further criterion (e.g., Weber-Fechner JND minimization, 03_T_star §5.1), the observer faces a *non-trivial choice* whose cardinality grows linearly in $K$. For *binary regime* ($K = 2$, simplest post-bifurcation), $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 3$; for $K = 3$, $5$; for $K = 4$, $7$.
 
@@ -138,7 +138,7 @@ $$\#\{\text{critical points of } \Psi\} \;\geq\; \mathrm{cat}([T_{\min}, T_{\max
 **Strategy**: Analyze $\psi'(T)$ explicitly. Fixed-points of $\psi$ are zeros of $T - \psi(T)$, and the number of zeros of a $C^1$ function on $[T_{\min}, T_{\max}]$ relates to the number of sign-changes of $1 - \psi'(T)$.
 
 **Computation**:
-$$\psi'(T) \;=\; \frac{d}{dT}\mathbb{E}_{\pi_T}[\|u - \mathbb{E}u\|^2] \;=\; \frac{1}{T^2}\Big(\mathrm{Cov}_{\pi_T}(\|u-\mathbb{E}u\|^2, \mathcal{E}_\lambda(u))\Big)$$
+$$\psi'(T) \;=\; \frac{d}{dT}\mathbb{E}_{\pi_T}[\lVert u - \mathbb{E}u \rVert^2] \;=\; \frac{1}{T^2}\Big(\mathrm{Cov}_{\pi_T}(\lVert u-\mathbb{E}u \rVert^2, \mathcal{E}_\lambda(u))\Big)$$
 
 via the standard "fluctuation-dissipation" identity for Gibbs measures (cf. Reed-Simon III §X). The right-hand side involves a *third-moment-style* correlation, which requires resolving correlations between energy and squared-displacement — explicit only in mean-field limits.
 
@@ -165,7 +165,7 @@ The proof of Theorem 1.2 proceeds via six lemmata L1–L6.
 ### §3.1 Lemma L1 — ψ map well-definedness + boundedness
 
 **Lemma L1.** Under canonical T-PF-A1-GI (Cat A, L1689+) and T-PF-A1-AR (Cat A, L1652+), the variance map
-$$\psi(T) \;=\; \mathbb{E}_{\pi_T}\!\left[\|u - \mathbb{E}_{\pi_T}[u]\|^2\right]$$
+$$\psi(T) \;=\; \mathbb{E}_{\pi_T}\!\left[\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2\right]$$
 is well-defined for every $T \in (0, \infty)$, and is bounded:
 $$0 \;\leq\; \psi(T) \;\leq\; M_*, \qquad M_* \;:=\; \mathrm{diam}(\mathcal{F}_M(G))^2 \;\leq\; n.$$
 
@@ -175,7 +175,7 @@ $$0 \;\leq\; \psi(T) \;\leq\; M_*, \qquad M_* \;:=\; \mathrm{diam}(\mathcal{F}_M
 - **CoT step 2**: T-PF-A1-GI (Cat A, L1689+) states that for any $T > 0$, the Gibbs measure
   $$\pi_T(du) \;=\; \frac{1}{Z(T)} \exp\!\left(-\mathcal{E}_\lambda(u)/T\right) d\sigma_M(u)$$
   is well-defined (partition function $Z(T) \in (0, \infty)$ since $\mathcal{E}_\lambda$ continuous on compact $\mathcal{F}_M$).
-- **CoT step 3**: $u \in \mathcal{F}_M(G) \subset [0,1]^n$ implies $\|u\|^2 \leq n$ pointwise, so $\|u - \mathbb{E}u\|^2 \leq 4n$ as a random variable. Hence $\mathbb{E}_{\pi_T}[\|u - \mathbb{E}u\|^2] < \infty$.
+- **CoT step 3**: $u \in \mathcal{F}_M(G) \subset [0,1]^n$ implies $\lVert u \rVert^2 \leq n$ pointwise, so $\lVert u - \mathbb{E}u \rVert^2 \leq 4n$ as a random variable. Hence $\mathbb{E}_{\pi_T}[\lVert u - \mathbb{E}u \rVert^2] < \infty$.
 - **CoT step 4**: The diameter bound $M_* \leq \mathrm{diam}([0,1]^n)^2 = n$. For *any* probability measure $\mu$ on a compact convex set of diameter $d$, $\mathrm{Var}_\mu(u) \leq d^2$. Hence $\psi(T) \leq M_* \leq n$.
 - **CoT step 5**: $\psi(T) \geq 0$ since variance is non-negative.
 
@@ -197,7 +197,7 @@ This lemma is already established in 03_T_star_fixed_point.md §2.1 (L1) + §2.2
 - **CoT step 2**: $Z(T) = \int \exp(-\mathcal{E}_\lambda/T) d\sigma_M$ is continuous on $(0, \infty)$ by dominated convergence (dominating function $\exp(\sup_{T \in K} |\mathcal{E}_\lambda|/T)$ for compact $K \subset (0, \infty)$).
 - **CoT step 3**: $Z(T) > 0$ everywhere → $\pi_T$ continuous in $T$ in total variation (TV) metric (this is exactly 03_T_star L1).
 - **CoT step 4**: For each fixed bounded continuous function $f$, $T \mapsto \mathbb{E}_{\pi_T}[f]$ is continuous by TV-continuity + boundedness.
-- **CoT step 5**: Apply step 4 to $f(u) = u_i$ (then $\mathbb{E}u$ continuous), then to $f(u) = u_i u_j$ (then $\mathbb{E}[u_i u_j]$ continuous), then to $\|u - \mathbb{E}u\|^2 = \sum_i u_i^2 - n(\bar u)^2$ (with $\bar u = \mathbb{E}u_i$): all combinations continuous, hence $\psi(T) = \mathrm{tr}(\mathrm{Cov}_{\pi_T})$ continuous.
+- **CoT step 5**: Apply step 4 to $f(u) = u_i$ (then $\mathbb{E}u$ continuous), then to $f(u) = u_i u_j$ (then $\mathbb{E}[u_i u_j]$ continuous), then to $\lVert u - \mathbb{E}u \rVert^2 = \sum_i u_i^2 - n(\bar u)^2$ (with $\bar u = \mathbb{E}u_i$): all combinations continuous, hence $\psi(T) = \mathrm{tr}(\mathrm{Cov}_{\pi_T})$ continuous.
 
 **CoC anchors**:
 - 03_T_star §2.1 L1 (TV continuity of $\pi_T$).
@@ -224,17 +224,17 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
   Summing over $i$: $\mathrm{tr}\,\mathrm{Cov}_{\pi_T|_{B_k}} \approx T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)})$.
 
 - **CoT step 3 (full variance)**: The full variance $\psi(T) = \mathrm{tr}\,\mathrm{Cov}_{\pi_T}$ decomposes via the law of total variance:
-  $$\psi(T) \;=\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \mathrm{tr}\,\mathrm{Cov}_{\pi_T|_{B_k}}}_{\text{intra-basin}} \;+\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \|\mathbb{E}_{\pi_T|_{B_k}}[u] - \mathbb{E}_{\pi_T}[u]\|^2}_{\text{inter-basin}}.$$
+  $$\psi(T) \;=\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \mathrm{tr}\,\mathrm{Cov}_{\pi_T|_{B_k}}}_{\text{intra-basin}} \;+\; \underbrace{\sum_{k=1}^K p_k(T) \cdot \lVert \mathbb{E}_{\pi_T|_{B_k}}[u] - \mathbb{E}_{\pi_T}[u] \rVert^2}_{\text{inter-basin}}.$$
   At *very low T* ($T \ll T_{\mathrm{barrier}}$), the Eyring-Kramers timescale separation gives that one basin dominates effectively (depending on initial condition / sampling protocol). But under the *equilibrium* Gibbs distribution, the weights $p_k(T)$ approach $w_k / \sum w_j$ (CoT step 1).
   
-  **Subtle point**: At equilibrium, all $K$ basins are accessed with weights $p_k(T)$. The *inter-basin term* dominates the variance ($\sim O(\|u^{*(j)} - u^{*(k)}\|^2)$, finite as $T \to 0$). The *intra-basin term* vanishes ($\sim T$).
+  **Subtle point**: At equilibrium, all $K$ basins are accessed with weights $p_k(T)$. The *inter-basin term* dominates the variance ($\sim O(\lVert u^{*(j)} - u^{*(k)} \rVert^2)$, finite as $T \to 0$). The *intra-basin term* vanishes ($\sim T$).
   
-  **Consequence**: $\psi(T) \to \sum_{k<j} p_k p_j \|u^{*(j)} - u^{*(k)}\|^2 + O(T)$ as $T \to 0^+$. This *limit* $\psi(0^+)$ is a *positive* constant $C_\infty(\Theta) > 0$.
+  **Consequence**: $\psi(T) \to \sum_{k<j} p_k p_j \lVert u^{*(j)} - u^{*(k)} \rVert^2 + O(T)$ as $T \to 0^+$. This *limit* $\psi(0^+)$ is a *positive* constant $C_\infty(\Theta) > 0$.
 
 - **CoT step 4 (fixed-point at low-T)**: Since $\psi(0^+) = C_\infty > 0$ (positive constant by step 3) and $\psi$ continuous (L2), the equation $\psi(T) = T$ has solutions in $(0, C_\infty]$ depending on the shape of $\psi$. 
   
   **Refined claim**: The *basin-localized fixed-point* $T_*^{(k),\mathrm{low}}$ does *not* refer to the *equilibrium* Gibbs sampling but to a *metastable* (basin-restricted) Gibbs measure $\pi_T |_{B_k}$. Specifically, define the *metastable variance map*
-  $$\psi^{(k)}(T) \;:=\; \mathbb{E}_{\pi_T|_{B_k}}\!\left[\|u - \mathbb{E}_{\pi_T|_{B_k}}u\|^2\right] \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) + O(T^2)$$
+  $$\psi^{(k)}(T) \;:=\; \mathbb{E}_{\pi_T|_{B_k}}\!\left[\lVert u - \mathbb{E}_{\pi_T|_{B_k}}u \rVert^2\right] \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) + O(T^2)$$
   in the low-T regime. The fixed-point equation $\psi^{(k)}(T) = T$ gives
   $$T_*^{(k),\mathrm{low}} \;\approx\; T \cdot \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) \quad\Longrightarrow\quad \mathrm{tr}\,\mathrm{Hess}^{-1}(u^{*(k)}) = 1.$$
   
@@ -262,7 +262,7 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
 - **CoT step 1 (uniform limit)**: $\pi_T(du) = Z(T)^{-1} \exp(-\mathcal{E}_\lambda/T) d\sigma_M(u)$. As $T \to \infty$, $\exp(-\mathcal{E}_\lambda/T) \to 1$ uniformly on compact $\mathcal{F}_M$. By dominated convergence, $Z(T) \to \sigma_M(\mathcal{F}_M)$ and $\pi_T \to \mathrm{Unif}(\mathcal{F}_M)$ in TV.
 
 - **CoT step 2 (variance under uniform)**: For uniform $\mathrm{Unif}(\mathcal{F}_M)$ on a compact convex polytope,
-  $$\psi_\infty \;:=\; \mathrm{Var}_{\mathrm{Unif}(\mathcal{F}_M)}(\|u - \mathbb{E}u\|^2) \;=\; \mathrm{tr}\,\mathrm{Cov}_{\mathrm{Unif}}(u) \;\leq\; \mathrm{diam}(\mathcal{F}_M)^2 / 12 \cdot n$$
+  $$\psi_\infty \;:=\; \mathrm{Var}_{\mathrm{Unif}(\mathcal{F}_M)}(\lVert u - \mathbb{E}u \rVert^2) \;=\; \mathrm{tr}\,\mathrm{Cov}_{\mathrm{Unif}}(u) \;\leq\; \mathrm{diam}(\mathcal{F}_M)^2 / 12 \cdot n$$
   (using the bound $\mathrm{Var}_{\mathrm{Unif}(\mathrm{convex})}(u_i) \leq \mathrm{diam}^2/12$ from John ellipsoid / classical isoperimetric on convex bodies).
 
   **Refined**: $\psi_\infty$ is a *finite positive constant* depending only on the geometry of $\mathcal{F}_M(G)$ (independent of $\Theta$, since $\Theta$ enters only via $\mathcal{E}_\lambda$ which drops out in the $T \to \infty$ limit).
@@ -279,7 +279,7 @@ For each basin $B_k$ ($k = 1, \ldots, K$), there exists a *low-T fixed-point* $T
   Hence $T_*^{\mathrm{high}}$ is unique (in the high-T regime).
 
 **Honest gap (L4)**:
-- The *monotone decay* of $\psi$ at high T is plausible but not proved rigorously here (requires sign analysis of $\mathrm{Cov}_{\mathrm{Unif}}(\|u - \mathbb{E}u\|^2, \mathcal{E}_\lambda)$). For Cat B, we *assume* the monotone-decay regime holds in $T > T_{\mathrm{barrier}}$.
+- The *monotone decay* of $\psi$ at high T is plausible but not proved rigorously here (requires sign analysis of $\mathrm{Cov}_{\mathrm{Unif}}(\lVert u - \mathbb{E}u \rVert^2, \mathcal{E}_\lambda)$). For Cat B, we *assume* the monotone-decay regime holds in $T > T_{\mathrm{barrier}}$.
 
 **CoC anchors**:
 - canonical T-PF-A1-GI Cat A — Gibbs measure structure → uniform limit.
@@ -347,7 +347,7 @@ GH is *generic* in the parameter space sense: it holds on an open dense subset o
 **CoC anchors**:
 - canonical T8 (multi-basin structure, §13) — provides $K \geq 2$.
 - canonical T-PF-A1-PE (L1700+) — spectral gap $\sim e^{-\mathrm{osc}/T}$ tracks basin escape barriers.
-- E2 §A.5 Q3 (saddle-node scaling $\|u^{*(1)} - u^{*(2)}\| \sim |\beta/\alpha - \mathrm{crit}|^{1/2}$) — confirms saddle-node mean-field exponent.
+- E2 §A.5 Q3 (saddle-node scaling $\lVert u^{*(1)} - u^{*(2)} \rVert \sim |\beta/\alpha - \mathrm{crit}|^{1/2}$) — confirms saddle-node mean-field exponent.
 - E2 §A.5 Q4 (degree bound $K$ stable + $K-1$ saddles = $2K-1$ in 1-D) — directly cited as the strategic argument.
 
 ### §3.6 Lemma L6 — Brouwer degree consistency check
@@ -435,7 +435,7 @@ for relative Betti numbers, where $\mathcal{F}_M(G)_c = \{\mathcal{E}_\lambda \l
 ### §5.1 ψ'(T) sign analysis
 
 The derivative
-$$\psi'(T) \;=\; -\frac{1}{T^2}\,\mathrm{Cov}_{\pi_T}(\|u - \mathbb{E}_{\pi_T}u\|^2, \mathcal{E}_\lambda(u))$$
+$$\psi'(T) \;=\; -\frac{1}{T^2}\,\mathrm{Cov}_{\pi_T}(\lVert u - \mathbb{E}_{\pi_T}u \rVert^2, \mathcal{E}_\lambda(u))$$
 arises from differentiating $\pi_T \propto e^{-\mathcal{E}_\lambda/T}$ with respect to $T$ and applying the *fluctuation* identity (cf. Reed-Simon III §X). Fixed-points of $\psi$ are zeros of $T - \psi(T)$; their stability under iteration is governed by $\psi'(T^*)$:
 - $|\psi'(T^*)| < 1$: stable (contractive in iteration).
 - $|\psi'(T^*)| > 1$: unstable.
@@ -461,7 +461,7 @@ Approach A bypasses this by working at the topological-degree level, requiring o
 
 ### §6.1 Attempt 1: K=1 (single basin, Θ outside spinodal)
 
-**Setup**: Consider $\Theta$ outside $\mathcal{R}_{\mathrm{post}}$, e.g., $\beta/\alpha < 4\lambda_2/|W''(c)|$ (T8 subcritical). The energy $\mathcal{E}_\lambda$ has a *single* global minimizer (uniform / spatially homogeneous), so $K = 1$.
+**Setup**: Consider $\Theta$ outside $\mathcal{R}_{\mathrm{post}}$, e.g., $\beta/\alpha < 4\lambda_2/\lvert W''(c) \rvert$ (T8 subcritical). The energy $\mathcal{E}_\lambda$ has a *single* global minimizer (uniform / spatially homogeneous), so $K = 1$.
 
 **Formula prediction**: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2(1) - 1 = 1$ — single fixed-point.
 
@@ -521,7 +521,7 @@ The proof attempt has identified the following *Cat A blockers* (for full uncond
 
 - **Gap G2 (metastable ↔ equilibrium reconciliation)**: §3.5 sub-step 2 introduced a "mixed picture" combining metastable (basin-restricted) and equilibrium fixed-points. The *generic identification* of $K + (K-1) + 1 - 1 = 2K - 1$ requires explicit Eyring-Kramers timescale separation: the metastable measure is the *long-time* effective measure within a basin (timescale $\tau_{\mathrm{intra}}$), while the equilibrium measure is the *very-long-time* full sampling (timescale $\tau_{\mathrm{eq}} \sim e^{H_{\mathrm{barrier}}/T}$). At low T, $\tau_{\mathrm{intra}} \ll \tau_{\mathrm{eq}}$, justifying the metastable picture.
 
-- **Gap G3 (L4 high-T monotonicity)**: The uniqueness of the high-T fixed-point assumes monotone decay of $\psi$ at large $T$. This is plausible (high-T washes out structure) but not rigorously proved; the sign of the $O(1/T)$ correction in $\psi(T) = \psi_\infty + O(1/T)$ depends on $\mathrm{Cov}_{\mathrm{Unif}}(\|u-\mathbb{E}u\|^2, \mathcal{E}_\lambda)$, which is *non-trivially computable*.
+- **Gap G3 (L4 high-T monotonicity)**: The uniqueness of the high-T fixed-point assumes monotone decay of $\psi$ at large $T$. This is plausible (high-T washes out structure) but not rigorously proved; the sign of the $O(1/T)$ correction in $\psi(T) = \psi_\infty + O(1/T)$ depends on $\mathrm{Cov}_{\mathrm{Unif}}(\lVert u-\mathbb{E}u \rVert^2, \mathcal{E}_\lambda)$, which is *non-trivially computable*.
 
 ### §7.3 Cat A path
 
@@ -536,7 +536,7 @@ The proof attempt has identified the following *Cat A blockers* (for full uncond
 ### §7.4 Forward hook — numerical verification
 
 The Cat B target $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 2K - 1$ is *numerically testable* on canonical SCC test cases:
-- **K=2 (binary basin)**: 2×2 grid or small bipartite, post-bifurcation $\beta/\alpha = 4 \cdot 4\lambda_2/|W''(c)|$ (2× supercritical). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 3$.
+- **K=2 (binary basin)**: 2×2 grid or small bipartite, post-bifurcation $\beta/\alpha = 4 \cdot 4\lambda_2/\lvert W''(c) \rvert$ (2× supercritical). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 3$.
 - **K=3**: 3-basin landscape (e.g., 3-mode mean-field). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 5$.
 - **K=4**: 4-basin orbital pattern (cf. Orbital discovery 2026-04-23 memory). Expected: $|\mathcal{B}_{T_*}^{\mathrm{FP}}| = 7$.
 
@@ -632,7 +632,7 @@ provides a *combined Cat B path* for OP-0021. The canonical registration would b
 ### §10.1 Main result
 
 **Theorem 1.2 (Cat B target, OP-T*-α main)**: Under H5 Morse + T-PF-A1-GI Cat A + T-PF-A1-PE Cat A + GH (generic regime hypothesis), 
-$$\big|\mathcal{B}_{T_*}^{\mathrm{FP}}\big| \;=\; 2K(\Theta) - 1$$
+$$\big\vert\mathcal{B}_{T_*}^{\mathrm{FP}}\big\vert \;=\; 2K(\Theta) - 1$$
 with decomposition $K + (K-1) + 1$ across low/mid/high-T regimes.
 
 ### §10.2 Proof structure (6 lemmata)
@@ -652,7 +652,7 @@ with decomposition $K + (K-1) + 1$ across low/mid/high-T regimes.
 
 - **Gap G1 (L5 sub-step 3)**: spanning tree argument — sketch level. Cat A path: bifurcation diagram + Whitney-Thom transversality (W11+).
 - **Gap G2 (metastable-equilibrium reconciliation)**: generic identification of one metastable with one equilibrium fixed-point — informal. Cat A path: Eyring-Kramers timescale separation (P-F-A1 Package II).
-- **Gap G3 (L4 high-T monotonicity)**: uniqueness assumes monotone decay — plausible. Cat A path: explicit sign analysis of $\mathrm{Cov}_{\mathrm{Unif}}(\|u-\mathbb{E}u\|^2, \mathcal{E}_\lambda)$.
+- **Gap G3 (L4 high-T monotonicity)**: uniqueness assumes monotone decay — plausible. Cat A path: explicit sign analysis of $\mathrm{Cov}_{\mathrm{Unif}}(\lVert u-\mathbb{E}u \rVert^2, \mathcal{E}_\lambda)$.
 
 ### §10.4 Implications for canonical
 

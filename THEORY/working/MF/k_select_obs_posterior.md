@@ -69,7 +69,7 @@ $$\mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u) = \exp\!\left(-\Phi_\mathrm{ob
 where the **observation energy** (negative log-likelihood):
 $$\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = \lambda_\mathrm{photo}\sum_{x_L \in X_L^\mathrm{valid}} c(x_L)\,\Psi\!\bigl(f_L(x_L),\,f_R(\Pi_{LR}(x_L)),\,u(b_L(x_L))\bigr)$$
 
-with $\Psi \geq 0$ a photometric consistency measure (e.g., $\Psi = \|f_L - f_R\|^2$). $\Phi_\mathrm{obs}$ does NOT enter $E_\mathrm{SCC}$ — it is in the likelihood, not the prior (CN5).
+with $\Psi \geq 0$ a photometric consistency measure (e.g., $\Psi = \lVert f_L - f_R \rVert^2$). $\Phi_\mathrm{obs}$ does NOT enter $E_\mathrm{SCC}$ — it is in the likelihood, not the prior (CN5).
 
 **Likelihood model conditions (LM1–LM3):**
 - **(LM1) Measurability:** $u \mapsto \mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u)$ is Borel measurable on $\mathcal{F}_M(G)$ for each fixed $\mathfrak{O}_t$.
@@ -92,9 +92,9 @@ so that $\mathcal{L}_\mathrm{obs}(\mathcal{O} \mid u) = \exp(-\Phi_\mathrm{obs}(
 
 - **(LM1) Measurability.** $u \mapsto \Phi_\mathrm{obs}(u;\mathcal{O})$ is a finite sum of continuous functions of the node values $u(x) \in [0,1]$. It is continuous on $\mathcal{F}_M(G)$ (compact subset of $\mathbb{R}^n$), hence Borel measurable. $\checkmark$
 
-- **(LM2) Positivity.** $\Phi_\mathrm{obs}(u;\mathcal{O}) = \frac{\lambda_\mathrm{photo}}{2}\sum_x (u(x)-f(x))^2 \in [0,\,\frac{\lambda_\mathrm{photo}}{2}|X|] < +\infty$ for all $u \in [0,1]^n$. Hence $\mathcal{L}_\mathrm{obs} = e^{-\Phi_\mathrm{obs}} \geq e^{-\lambda_\mathrm{photo}|X|/2} > 0$. $\checkmark$
+- **(LM2) Positivity.** $\Phi_\mathrm{obs}(u;\mathcal{O}) = \frac{\lambda_\mathrm{photo}}{2}\sum_x (u(x)-f(x))^2 \in [0,\,\frac{\lambda_\mathrm{photo}}{2}\lvert X \rvert] < +\infty$ for all $u \in [0,1]^n$. Hence $\mathcal{L}_\mathrm{obs} = e^{-\Phi_\mathrm{obs}} \geq e^{-\lambda_\mathrm{photo}\lvert X \rvert/2} > 0$. $\checkmark$
 
-- **(LM3) Posterior normalizability.** By LM2: $\mathcal{L}_\mathrm{obs}(u)\,e^{-E(u)/T_*} \geq e^{-\lambda_\mathrm{photo}|X|/2 - \sup_{\mathcal{F}_M(G)} E / T_*} > 0$ everywhere on $\mathcal{F}_M(G)$. Combined with $\sigma_M(\mathcal{F}_M(G)) > 0$ (T-PF-A1-AR), the integral $Z^\mathrm{obs} > 0$. $\checkmark$
+- **(LM3) Posterior normalizability.** By LM2: $\mathcal{L}_\mathrm{obs}(u)\,e^{-E(u)/T_*} \geq e^{-\lambda_\mathrm{photo}\lvert X \rvert/2 - \sup_{\mathcal{F}_M(G)} E / T_*} > 0$ everywhere on $\mathcal{F}_M(G)$. Combined with $\sigma_M(\mathcal{F}_M(G)) > 0$ (T-PF-A1-AR), the integral $Z^\mathrm{obs} > 0$. $\checkmark$
 
 *Remark.* This model satisfies strict LM2 (not just $\geq 0$), so $K_\mathrm{feas}^\mathrm{obs} = K_\mathrm{feas}$ (Lemma 3.2). The stereo form in §6.2 is a generalization via backprojection $b_t$ and correspondence $\Pi_{LR}$. For Cat B, the canonical monocular form suffices as the admissible instance; Cat A would canonicalize the full stereo form.
 
@@ -239,7 +239,7 @@ Under this bridge:
 - $u^{pix}(x_L) = u(b_t(x_L))$ for $x_L \in X_L^\mathrm{valid}$ is the pullback to pixel space (D-ST-5).
 - The photometric likelihood $\Phi_\mathrm{obs}(u;\mathfrak{O}_t) = \lambda_\mathrm{photo}\sum_{x_L} c(x_L)\,\Psi(f_L(x_L), f_R(\Pi_{LR}(x_L)), u^{pix}(x_L))$ depends on $u$ only through the pullback $u^{pix}$.
 
-**Condition LM2 (positivity)** holds for $\Psi = \|f_L - f_R\|^2\cdot u$: $\Phi_\mathrm{obs}$ is finite for all $u$ (bounded $u$, bounded images, finite $X_L^\mathrm{valid}$).
+**Condition LM2 (positivity)** holds for $\Psi = \lVert f_L - f_R \rVert^2\cdot u$: $\Phi_\mathrm{obs}$ is finite for all $u$ (bounded $u$, bounded images, finite $X_L^\mathrm{valid}$).
 **Condition LM1** holds: $u \mapsto u^{pix}$ is continuous; $\Psi$ is continuous in $u^{pix}$; composition is Borel measurable.
 **Condition LM3** follows from LM2 + T-PF-A1-AR compactness.
 
@@ -283,7 +283,7 @@ OP-0005 overall remains OPEN.
 **Regime 1 — prior favors K=1, observation pushes K=2:**
 - Start from K=1 energy minimum $u_1^*$ (single blob).
 - Construct synthetic image $I$ with two spatially separated bright patches.
-- Likelihood: $\mathcal{L}_\mathrm{obs}(u) = \exp(-\lambda_\mathrm{photo}\|u - I\|^2)$ with $\lambda_\mathrm{photo} = 2.0$.
+- Likelihood: $\mathcal{L}_\mathrm{obs}(u) = \exp(-\lambda_\mathrm{photo}\lVert u - I \rVert^2)$ with $\lambda_\mathrm{photo} = 2.0$.
 - Expected: posterior shifts $p_K(\mathfrak{O}_t)$ toward K=2.
 
 **Regime 2 — prior favors K=2, observation pushes K=1:**
@@ -301,8 +301,8 @@ OP-0005 overall remains OPEN.
 ```
 
 **Method B (Sector energy comparison):**
-1. Find $u_K^* = \arg\min_{u \in \mathcal{B}_K} [E_\mathrm{SCC}(u) + \lambda_\mathrm{photo}\|u-I\|^2]$ for K=1,2 (MAP per-sector).
-2. Compute $F_\mathrm{obs}(K) \approx E_\mathrm{SCC}(u_K^*) + \lambda_\mathrm{photo}\|u_K^* - I\|^2$ (zero-temperature approximation).
+1. Find $u_K^* = \arg\min_{u \in \mathcal{B}_K} [E_\mathrm{SCC}(u) + \lambda_\mathrm{photo}\lVert u-I \rVert^2]$ for K=1,2 (MAP per-sector).
+2. Compute $F_\mathrm{obs}(K) \approx E_\mathrm{SCC}(u_K^*) + \lambda_\mathrm{photo}\lVert u_K^* - I \rVert^2$ (zero-temperature approximation).
 3. Compare $F_\mathrm{obs}(1)$ vs $F_\mathrm{obs}(2)$: lower = posterior-preferred K.
 
 Method B is implementable with existing `find_formation` in `optimizer.py` (initialize in K-sector via multi-formation initialization).

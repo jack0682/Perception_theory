@@ -77,7 +77,7 @@ If (C1) fails on $T^2_{20}$ with the default parameters of `nq242c_explicit_cons
 
 - The two trajectories live in $\widetilde{\Sigma}^{K_{\mathrm{field}} = 4}_{M = 90}(T^2_{20})$ — Layer II.
 - The active-set cell at $t = 0$ is $S_A^\varepsilon$ with $A = \{1, 2, 3\}$, $K_{\mathrm{act}}^\varepsilon = 3$.
-- The K-jump is an event-only transition $S_A^\varepsilon \to S_{A'}^\varepsilon$ with $|A'| < |A|$.
+- The K-jump is an event-only transition $S_A^\varepsilon \to S_{A'}^\varepsilon$ with $\lvert A' \rvert < \lvert A \rvert$.
 - σ-standard / σ-rich are derived diagnostics on Layer II states; their bridge to aggregate $H_0$ topology uses $U(\mathbf u)$ and $K_{\mathrm{soft}}^\phi(U(\mathbf u))$ from Layer II → Layer I.
 - WQ-1 is the empirical anchor that makes WQ-3 well-posed.
 
@@ -92,10 +92,10 @@ State and either prove (or refute by counterexample) a bridge lemma of the form:
 > **Lemma (target).** Under the well-separated regime hypotheses $(\varepsilon, \delta, D_{\mathrm{sep}}, \ell_{\min})$ of `..._candidate.md` §9.1, for any monotone Lipschitz $\phi : [0,1] \to [0, \infty)$ with $\phi(0) = 0$,
 >
 > $$
-> K_{\mathrm{soft}}^\phi\big(U(\mathbf u)\big) \;=\; |A| \cdot \phi(\ell_*(\mathbf u)) \;+\; e(\phi, \varepsilon, \delta, D_{\mathrm{sep}}, \ell_{\min}, G_t),
+> K_{\mathrm{soft}}^\phi\big(U(\mathbf u)\big) \;=\; \lvert A \rvert \cdot \phi(\ell_*(\mathbf u)) \;+\; e(\phi, \varepsilon, \delta, D_{\mathrm{sep}}, \ell_{\min}, G_t),
 > $$
 >
-> with $K_{\mathrm{act}}^\varepsilon(\mathbf u) = |A|$, where $\ell_*(\mathbf u)$ is a typical bar length and $e$ is an explicit error term that vanishes as $D_{\mathrm{sep}} \to \infty$, $\delta \to 0^+$, $\ell_{\min} \to \ell_*$, with explicit dependence on $G_t$ through graph diameter / spectral gap.
+> with $K_{\mathrm{act}}^\varepsilon(\mathbf u) = \lvert A \rvert$, where $\ell_*(\mathbf u)$ is a typical bar length and $e$ is an explicit error term that vanishes as $D_{\mathrm{sep}} \to \infty$, $\delta \to 0^+$, $\ell_{\min} \to \ell_*$, with explicit dependence on $G_t$ through graph diameter / spectral gap.
 
 The output is the lemma in *its actual provable form* — which may differ from the target form above; precise statement, hypotheses, and error term are part of the deliverable.
 

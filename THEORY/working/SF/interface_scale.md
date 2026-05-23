@@ -46,7 +46,7 @@ Define $\xi_0 := \sqrt{\alpha/\beta}$, the natural interface width for $\mathcal
 See `logs/daily/2026-04-22/02_development.md` §4.2 for the three-step proof:
 1. Boundary-band lower bound $\mathcal{E}_{\mathrm{bd}} \geq \beta|B|/16$ (elementary: $W(u) \geq 1/16$ on $(0.1, 0.9)$ after normalization).
 2. Modica-Mortola upper bound $\mathcal{E}_{\mathrm{bd}}(u^\ast) \leq C_\ast\sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)$ (canonical T11 Cat A).
-3. Combine: $|B| \leq (16/\ln 9)\cdot C_\ast\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G = O(\xi_0\cdot \mathrm{Per})$. ∎
+3. Combine: $\lvert B \rvert \leq (16/\ln 9)\cdot C_\ast\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G = O(\xi_0\cdot \mathrm{Per})$. ∎
 
 ### 2.3 Category self-classification
 
@@ -62,7 +62,7 @@ Three independent experiments support the ∝ $\xi_0$ scaling:
 | **exp42** (`scale_verification.py`) | Boundary/Core ratio vs $n$: slope ≈ −0.5 fit, theory −0.5 within 5%. | Round 14 |
 | **exp_alpha_scan_v2** (asymptotic) | $\xi_0$-axis scan, asymptotic regime. | Round 15 |
 
-All three confirm the qualitative statement $|B|/\mathrm{Per} \propto \xi_0$ along three independent axes (grid size, $n$-scaling, $\alpha$-axis).
+All three confirm the qualitative statement $\lvert B \rvert/\mathrm{Per} \propto \xi_0$ along three independent axes (grid size, $n$-scaling, $\alpha$-axis).
 
 ---
 
@@ -117,9 +117,9 @@ Runtime: 43.8 seconds total (no `find_formation`; ansatz construction only).
 
 ### 3.5 Linear profile alternative
 
-For linear profile $u(s) = 0.5 - 0.5(s/(\xi_0/2))$ with $|s| < \xi_0/2$:
+For linear profile $u(s) = 0.5 - 0.5(s/(\xi_0/2))$ with $\lvert s \rvert < \xi_0/2$:
 - Continuum boundary-band width (where $u \in (0.1, 0.9)$): $0.8\cdot \xi_0$.
-- Ratio: $(\pi/2)(0.8) = 0.4\pi \approx 1.257$ edge → measured 2.520 (factor 2 larger because the $|B|$ definition uses $\xi_0$ full-width convention in experiment).
+- Ratio: $(\pi/2)(0.8) = 0.4\pi \approx 1.257$ edge → measured 2.520 (factor 2 larger because the $\lvert B \rvert$ definition uses $\xi_0$ full-width convention in experiment).
 - Reconciled via Round 17 §8.4: $C_{\mathrm{lin,edge}} = 0.8\pi \approx 2.513$, measured 2.520, 3‰ off. ✓
 
 ---

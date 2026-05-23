@@ -44,7 +44,7 @@ optimization while keeping $E_{tr}$ non-trivially λ-dependent.
 The transport-coupling energy is the L2 mismatch under a fixed
 graph-Gaussian kernel $M_G \in \mathbb{R}^{n \times n}$:
 
-$$E_{tr}(u_0; u_1^{\mathrm{fixed}}, M_G) := \tfrac{1}{2} \|M_G u_0 - u_1^{\mathrm{fixed}}\|_2^2.$$
+$$E_{tr}(u_0; u_1^{\mathrm{fixed}}, M_G) := \tfrac{1}{2} \lVert M_G u_0 - u_1^{\mathrm{fixed}} \rVert_2^2.$$
 
 Here $M_G$ is a row-stochastic graph-distance kernel:
 
@@ -62,7 +62,7 @@ We classify this **DEFINED** as a faithful reduced temporal OMS test.
 
 For each $\lambda \in \Delta^3$, the temporal optimizer minimizes
 
-$$E_\lambda(u_0; u_1^{\mathrm{fixed}}) = \lambda_{cl} E_{cl}(u_0) + \lambda_{sep} E_{sep}(u_0) + \lambda_{bd} E_{bd}(u_0) + \lambda_{tr} \cdot \tfrac{1}{2}\|M_G u_0 - u_1^{\mathrm{fixed}}\|_2^2$$
+$$E_\lambda(u_0; u_1^{\mathrm{fixed}}) = \lambda_{cl} E_{cl}(u_0) + \lambda_{sep} E_{sep}(u_0) + \lambda_{bd} E_{bd}(u_0) + \lambda_{tr} \cdot \tfrac{1}{2}\lVert M_G u_0 - u_1^{\mathrm{fixed}} \rVert_2^2$$
 
 over $u_0 \in \Sigma_m \cap [0,1]^n$. Implementation: projected gradient descent with multi-start.
 
@@ -112,7 +112,7 @@ $$G_{\mathrm{cw}}^{\mathrm{temp}}(P_{\mathrm{top}}) = \{e\}.$$
 
 ### Lemma T7 — Analyticity of temporal optimizer. [PROVED for the reduced setup]
 
-Under Definition T2 (reduced temporal setup with $E_{tr} = \tfrac{1}{2}\|M_G u_0 - u_1^{\mathrm{fixed}}\|^2$), the joint map $(\lambda, u_0)$-feasibility-and-KKT is real-analytic in $\lambda$ on the regular branch (where $H_T \succ 0$ and all box constraints are inactive). The transport term contributes a quadratic form $\tfrac{1}{2} u_0^\top M_G^\top M_G u_0 - u_0^\top M_G^\top u_1^{\mathrm{fixed}}$, which is polynomial (and hence analytic) in $u_0$. Combined with the analyticity of $E_{cl}, E_{sep}, E_{bd}$ (Lemma G1), the analytic IFT gives a real-analytic $u_0^*(\lambda)$ on the regular branch.
+Under Definition T2 (reduced temporal setup with $E_{tr} = \tfrac{1}{2}\lVert M_G u_0 - u_1^{\mathrm{fixed}} \rVert^2$), the joint map $(\lambda, u_0)$-feasibility-and-KKT is real-analytic in $\lambda$ on the regular branch (where $H_T \succ 0$ and all box constraints are inactive). The transport term contributes a quadratic form $\tfrac{1}{2} u_0^\top M_G^\top M_G u_0 - u_0^\top M_G^\top u_1^{\mathrm{fixed}}$, which is polynomial (and hence analytic) in $u_0$. Combined with the analyticity of $E_{cl}, E_{sep}, E_{bd}$ (Lemma G1), the analytic IFT gives a real-analytic $u_0^*(\lambda)$ on the regular branch.
 
 PROVED by direct application of analytic IFT.
 

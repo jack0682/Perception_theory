@@ -48,7 +48,7 @@ $$S_{ij}^0(t \to s) = \lambda_m\,\gamma(C_i^t, C_j^s) - \lambda_c \sum_{x \in C_
 
 여기서:
 - $\gamma(C_i^t, C_j^s) = \sum_{x \in C_i^t, y \in C_j^s} M_{t \to s}(x,y)$: 성분 간 수송 질량
-- $c(x,y) = \|\varphi(x) - \varphi(y)\|^2 + \sigma_\mathrm{sp}^{-2}\|x - y\|^2$: fingerprint 기반 수송 비용
+- $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}\lVert x - y \rVert^2$: fingerprint 기반 수송 비용
 - $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x; 1-u))$: 응집 fingerprint
 - $\lambda_m > 0$: 질량 수송 보상 가중치
 - $\lambda_c > 0$: 비용 패널티 가중치

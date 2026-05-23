@@ -154,7 +154,7 @@ Therefore mass suppression is only an activity-label definition. It is not a mor
 For nonnegative fields, a stronger special case exists:
 
 $$
-\|u^{(j)}\|_\infty\le \|u^{(j)}\|_1=m_j(\mathbf u).
+\lVert u^{(j)} \rVert_\infty\le \lVert u^{(j)} \rVert_1=m_j(\mathbf u).
 $$
 
 Thus if one additionally assumes \(\varepsilon<\ell_{\min}\), then individual inactive slots have height below \(\ell_{\min}\). But this still does not control the aggregate residual sum
@@ -226,7 +226,7 @@ Define the inactive aggregate height
 $$
 h_{\mathrm{inact}}
 =
-\|R_{\mathrm{inact}}\|_\infty
+\lVert R_{\mathrm{inact}} \rVert_\infty
 =
 \max_{x\in X}R_{\mathrm{inact}}(x).
 $$
@@ -236,7 +236,7 @@ For each inactive slot \(j\in I^\varepsilon(\mathbf u)\), define its per-slot he
 $$
 h_j^\infty
 =
-\|u^{(j)}\|_\infty.
+\lVert u^{(j)} \rVert_\infty.
 $$
 
 For active-slot neighborhoods from L1-D, let
@@ -284,7 +284,7 @@ $$
 Per-slot height suppression is:
 
 $$
-\|u^{(j)}\|_\infty\le h_{\mathrm{slot}},
+\lVert u^{(j)} \rVert_\infty\le h_{\mathrm{slot}},
 \qquad
 j\in I^\varepsilon(\mathbf u).
 $$
@@ -292,19 +292,19 @@ $$
 Aggregate residual height suppression is:
 
 $$
-\|R_{\mathrm{inact}}\|_\infty\le h_{\mathrm{res}}.
+\lVert R_{\mathrm{inact}} \rVert_\infty\le h_{\mathrm{res}}.
 $$
 
 Height suppression is more primitive than a barcode condition and directly bounds residual birth heights. Because terminal-death bar lengths satisfy
 
 $$
-\ell=b-d\le b\le \|R_{\mathrm{inact}}\|_\infty
+\ell=b-d\le b\le \lVert R_{\mathrm{inact}} \rVert_\infty
 $$
 
 for residual-only bars with death \(d\ge0\), the strong condition
 
 $$
-\|R_{\mathrm{inact}}\|_\infty<\ell_{\min}
+\lVert R_{\mathrm{inact}} \rVert_\infty<\ell_{\min}
 $$
 
 implies the residual field alone has no terminal-death bar of length at least \(\ell_{\min}\).
@@ -368,7 +368,7 @@ The strongest simple version requires:
 **IS-H1 Global residual height bound.**
 
 $$
-\|R_{\mathrm{inact}}\|_\infty
+\lVert R_{\mathrm{inact}} \rVert_\infty
 \le
 \ell_{\min}-\rho_{\mathrm{res}}.
 $$
@@ -380,7 +380,7 @@ This implies that residual-only bars cannot reach \(\ell_{\min}\), since all res
 For every active slot \(j\in A\),
 
 $$
-\|R_{\mathrm{inact}}\|_{\infty,N_j^r}
+\lVert R_{\mathrm{inact}} \rVert_{\infty,N_j^r}
 \le
 \rho_{\mathrm{pert}}/2.
 $$
@@ -451,7 +451,7 @@ $$
 including the global residual height bound
 
 $$
-\|R_{\mathrm{inact}}\|_\infty
+\lVert R_{\mathrm{inact}} \rVert_\infty
 \le
 \ell_{\min}-\rho_{\mathrm{res}},
 $$
@@ -459,7 +459,7 @@ $$
 and local perturbation bounds near all active supports:
 
 $$
-\|R_{\mathrm{inact}}\|_{\infty,N_j^r}
+\lVert R_{\mathrm{inact}} \rVert_{\infty,N_j^r}
 \le
 \rho_{\mathrm{pert}}/2,
 \qquad
@@ -512,7 +512,7 @@ $$
 The needed bound is:
 
 $$
-\|R_{\mathrm{inact}}\|_{\infty,N_j^r}
+\lVert R_{\mathrm{inact}} \rVert_{\infty,N_j^r}
 \le
 \rho_{\mathrm{pert}}/2.
 $$
@@ -550,7 +550,7 @@ $$
 or a stronger height version:
 
 $$
-\|R_{\mathrm{inact}}\|_{\infty,X_{\mathrm{bg}}}
+\lVert R_{\mathrm{inact}} \rVert_{\infty,X_{\mathrm{bg}}}
 <
 \ell_{\min}.
 $$
@@ -593,7 +593,7 @@ A slot satisfies \(m_j(\mathbf u)\le\varepsilon\) but has a spike with height at
 Many inactive slots are individually small, but their sum satisfies
 
 $$
-\|R_{\mathrm{inact}}\|_\infty\ge\ell_{\min}
+\lVert R_{\mathrm{inact}} \rVert_\infty\ge\ell_{\min}
 $$
 
 or creates a persistent residual component. The aggregate residual, not each slot alone, is the dangerous object.
@@ -719,7 +719,7 @@ Low inactive mass is insufficient. A mass-inactive slot can still create a domin
 Inactive suppression must control height and persistence:
 
 $$
-\|R_{\mathrm{inact}}\|_\infty<\ell_{\min}
+\lVert R_{\mathrm{inact}} \rVert_\infty<\ell_{\min}
 \quad\text{or}\quad
 K_{\mathrm{bar}}^{\ell_{\min}}(R_{\mathrm{inact}})=0,
 $$

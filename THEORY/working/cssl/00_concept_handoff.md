@@ -140,7 +140,7 @@ $$\lambda_{\min}^{\perp}\left(H_{\mathrm{eff}}^{AA}\right) \ge c_{\mathrm{gap}}>
 
 ### 3.1 Smoothness 계수 $\alpha$ 증가
 
-기본 smoothness 항이 $E_{\mathrm{smooth}} = \alpha \sum_{(i,j)}(u_i-u_j)^2$ 라면 $\alpha$를 키우면 boundary wobble이 줄어들 수 있다. 하지만 formation 발생 조건이 대략 $\beta/\alpha > 4\lambda_2(L_G)/|W''(c)|$ 형태라서 $\alpha$만 키우면 $\beta/\alpha$가 줄어들어 T8 formation emergence 자체가 약해질 수 있다. 즉 $\alpha$ 증가는 boundary를 안정화하지만, 동시에 formation의 자연 발생을 죽일 수 있다.
+기본 smoothness 항이 $E_{\mathrm{smooth}} = \alpha \sum_{(i,j)}(u_i-u_j)^2$ 라면 $\alpha$를 키우면 boundary wobble이 줄어들 수 있다. 하지만 formation 발생 조건이 대략 $\beta/\alpha > 4\lambda_2(L_G)/\lvert W''(c) \rvert$ 형태라서 $\alpha$만 키우면 $\beta/\alpha$가 줄어들어 T8 formation emergence 자체가 약해질 수 있다. 즉 $\alpha$ 증가는 boundary를 안정화하지만, 동시에 formation의 자연 발생을 죽일 수 있다.
 
 ### 3.2 계면장력 surface tension 증가
 

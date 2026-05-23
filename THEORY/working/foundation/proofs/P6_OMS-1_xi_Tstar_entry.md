@@ -242,7 +242,7 @@ $$T_* \;\in\; B_{T_*}^{\mathrm{FP}}(\Theta) \;\cap\; B_\xi^{\mathrm{OMS-1}}$$
 **$B_{T_*}^{\mathrm{FP}}(\Theta)$ (fixed-point set)**:
 
 $$B_{T_*}^{\mathrm{FP}}(\Theta) := \{\,T \in [T_{\min}, T_{\max}] : \psi(T) = T\,\},
-\qquad \psi(T) := \mathbb{E}_{\pi_T}\!\left[\,\|u - \mathbb{E}_{\pi_T}[u]\|^2\,\right]$$
+\qquad \psi(T) := \mathbb{E}_{\pi_T}\!\left[\,\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2\,\right]$$
 
 - $T_{\min} := \min\{1, \inf\psi\}$, $T_{\max} := \max\{M_* + 1, \sup\psi\}$
   (03_T_star §1.2 B.2.2 선택).
@@ -298,7 +298,7 @@ $L_t$: 반사항 (Lions-Sznitman 1984, canonical Cat A). $T_*$ 가 클수록
 
 **역할 3 — Variance map fixed-point** (P6 핵심 수학 기여):
 $$\psi(T_*) = T_* \qquad \text{where} \quad \psi(T) = \mathbb{E}_{\pi_T}
-\!\bigl[\,\|u - \mathbb{E}_{\pi_T}[u]\|^2\,\bigr]$$
+\!\bigl[\,\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2\,\bigr]$$
 자기-참조 순환의 해 — Brouwer 존재 보장, 유일성 미보장.
 
 **역할 4 — Poincaré gap exponent** (T-PF-A1-PE, Cat A):
@@ -477,7 +477,7 @@ $$B_{T_*}^{\mathrm{FP}}(\Theta) \neq \emptyset$$
 
 - **이유 1**: Brouwer 1911 은 *존재*만 보장. 유일성 보장은 Banach contraction
   theorem 요구 → $\psi$ 가 contraction 이어야 함.
-- **이유 2**: Formation regime ($\beta/\alpha > 4\lambda_2/|W''(c)|$) 의 multi-well
+- **이유 2**: Formation regime ($\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$) 의 multi-well
   에너지 $E$ → $\pi_T$ 의 다중 metastable basin → $\psi(T) = T$ 의 다중 해 가능.
 - **이유 3**: 03_T_star §1.3 (B.2.3 verbatim): "Uniqueness is NOT guaranteed by
   Brouwer — Banach contraction principle would give uniqueness, but SCC E is *not*

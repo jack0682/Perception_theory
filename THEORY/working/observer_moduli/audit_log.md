@@ -204,7 +204,7 @@ Product of finitely many compact spaces is compact (Tychonoff for finite product
 **Statement.** OMS-1.0 does NOT designate a unique canonical observer landscape $V : \mathcal{M}_{\mathrm{obs}} \to \mathbb{R}_{\geq 0}$. Instead, it defines the admissible class $\mathcal{V}_{\mathrm{adm}}$ by five criteria (V1–V5: continuity, Morse-like genericity, bounded below, SCC-derived, gauge-invariant).
 
 **Why the class, not a unique V.** Different scientific contexts call for different $V$:
-- Computational work: $V_D^0(\lambda) = \|d_\lambda - d^*\|^2$ (diagnostic loss)
+- Computational work: $V_D^0(\lambda) = \lVert d_\lambda - d^* \rVert^2$ (diagnostic loss)
 - Theoretical work: $V_P$ (readout-induced)
 - Empirical work: $V_{\mathrm{pop}}$ (population distribution)
 
@@ -247,7 +247,7 @@ Forcing a unique $V$ at this stage would be an overclaim not supported by existi
 **Reason for rejection.** The four energy terms $E_{cl}, E_{sep}, E_{bd}, E_{tr}$ have distinct functional forms:
 - $E_{cl}$: resolvent-based compactness
 - $E_{sep}$: distinction-weighted u-separation
-- $E_{bd}$: boundary term via $\|Lu\|^2$
+- $E_{bd}$: boundary term via $\lVert Lu \rVert^2$
 - $E_{tr}$: Sinkhorn OT transport cost
 
 Swapping $\lambda_{cl} \leftrightarrow \lambda_{sep}$ generically changes the optimizer solution $u^*(\Theta)$ and hence $P_{\mathrm{top}}(\Theta)$. Therefore $\sigma \cdot \Theta \not\equiv \Theta$ under $P_{\mathrm{top}}$ for most $\sigma \in S_4$.
@@ -418,9 +418,9 @@ Swapping $\lambda_{cl} \leftrightarrow \lambda_{sep}$ generically changes the op
 
 **Context.** Protocol VP-1 was run to attack sub-question (a) of OP-OMS-009: is $P_{\min}$ strictly coarser than $P_{\mathrm{top}}$? Prop R1 in `readout_map_audit.md` hypothesized affirmatively but lacked computational evidence.
 
-**Execution.** `exp86_vp1_p_resolution_audit.py` on 2026-05-07. Four complementary approaches (synthetic fields, optimizer sweep on 12×12, analytic construction on 10×10, dense $\lambda$ sweep on 15×15). Total: 4 definitive counterexamples (criterion: $\|d(\Theta_1) - d(\Theta_2)\| < 0.15$ AND $D_T > 0.5$).
+**Execution.** `exp86_vp1_p_resolution_audit.py` on 2026-05-07. Four complementary approaches (synthetic fields, optimizer sweep on 12×12, analytic construction on 10×10, dense $\lambda$ sweep on 15×15). Total: 4 definitive counterexamples (criterion: $\lVert d(\Theta_1) - d(\Theta_2) \rVert < 0.15$ AND $D_T > 0.5$).
 
-**Key counterexample (CE-1).** $\lambda_A = (0.6, 0.2, 0.2)$ vs $\lambda_B = (0.5, 0.3, 0.2)$ on 12×12 grid. Diagnostic distance $\|d_A - d_B\| = 0.071$. Topology distance $D_T = 3.028$. $K_{\mathrm{core}}(\Theta_A) = 2$, $K_{\mathrm{core}}(\Theta_B) = 1$. P_min sees near-identical 4-vectors; $P_{\mathrm{top}}$ immediately distinguishes via $K_{\mathrm{core}}$.
+**Key counterexample (CE-1).** $\lambda_A = (0.6, 0.2, 0.2)$ vs $\lambda_B = (0.5, 0.3, 0.2)$ on 12×12 grid. Diagnostic distance $\lVert d_A - d_B \rVert = 0.071$. Topology distance $D_T = 3.028$. $K_{\mathrm{core}}(\Theta_A) = 2$, $K_{\mathrm{core}}(\Theta_B) = 1$. P_min sees near-identical 4-vectors; $P_{\mathrm{top}}$ immediately distinguishes via $K_{\mathrm{core}}$.
 
 **Mechanism.** Inside predicate $= (l_{\max} - c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$ collapses H0 bar information. A two-component field with one small satellite produces $l_{\mathrm{sec}} \approx 0$, giving Inside $\approx (l_{\max}-c)/(1-c)$ — the same as a one-component field with identical $l_{\max}$. Integer count $K_{\mathrm{core}}$ is lost.
 

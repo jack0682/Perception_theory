@@ -88,7 +88,7 @@ $$S_{ij}^0 = \lambda_m\,\gamma(C_i^t, C_j^s) - \lambda_c\,\sum_{x\in C_i^t,\,y\i
 | 7 | (MA1) + margin > 0 ⇒ (A8) induced | `03_development.md` §11 | Cat B |
 | **8** | **(A9) + margin > 0 ⇒ (MA1) + (A8) both induced** | `05_close_NQ5_full.md` §3 | **Cat B (today's closure)** |
 | 8.2 | Sinkhorn dual potentials are $L_g \leq L_c$-Lipschitz | `03_development.md` §8.2 | Cat B (Bigot–Cazelles–Papadakis-style; standard) |
-| **9** | **Sinkhorn cost-perturbation: $\|M - M'\|_\mathrm{TV} \leq M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.2 | **Cat B (today's closure)** |
+| **9** | **Sinkhorn cost-perturbation: $\lVert M - M' \rVert_\mathrm{TV} \leq M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.2 | **Cat B (today's closure)** |
 | **10** | **Component confinement: $|\gamma_M - \gamma_{M'}| \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$** | `06_close_OP0011_step2.md` §2.3 | **Cat B (today's closure)** |
 | **11** | **Kernel independence: under margin > $\epsilon_\mathrm{kernel}$, $R_{t \to s}[M] = R_{t \to s}[M']$** | `06_close_OP0011_step2.md` §2.4 | **Cat B (today's closure, part (c))** |
 | 12 | Variance-corrected dual-potential bound (does not improve $\varepsilon_\mathrm{OT}^*$) | `07_close_NQ4_robust.md` §3 | Cat B |
@@ -107,7 +107,7 @@ $$\Delta_\mathrm{sep}^\mathrm{row} > 0 \;\wedge\; \Delta_\mathrm{sep}^\mathrm{co
 
 *Then $R_{t \to s}$ is a unique bijection $\pi := j^*$ (Lemmas 4 + 5 + 8). The induced pairing satisfies (A8a)' (mass-positivity, Lemma 8 step 3) and (A8b) (fingerprint-gap positivity, Lemma 8 step 4). The diagonal magnitude (MA1) is automatic with $\theta_\mathrm{diag} \geq 0.83$ at default parameters.*
 
-**(c) Kernel independence (Cat B).** *Under hypotheses of (b) and the strengthened margin condition $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}\lambda_m/\min(m^t,m^s)$ where $\epsilon_\mathrm{kernel} = 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ is the cost-perturbation kernel-distance: $R_{t \to s}[M] = R_{t \to s}[M']$ for any two E1–E4-admissible plans with $\|c - c'\|_\infty \leq \delta$ (Lemma 11). In the self-referential cost regime $\delta = 0$ ⇒ $\epsilon_\mathrm{kernel} = 0$ ⇒ trivial uniqueness. Refined E3 (Route B, `06_close_OP0011_step2.md` §3) gives same conclusion definitionally.*
+**(c) Kernel independence (Cat B).** *Under hypotheses of (b) and the strengthened margin condition $\Delta_\mathrm{sep}(M) \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}\lambda_m/\min(m^t,m^s)$ where $\epsilon_\mathrm{kernel} = 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ is the cost-perturbation kernel-distance: $R_{t \to s}[M] = R_{t \to s}[M']$ for any two E1–E4-admissible plans with $\lVert c - c' \rVert_\infty \leq \delta$ (Lemma 11). In the self-referential cost regime $\delta = 0$ ⇒ $\epsilon_\mathrm{kernel} = 0$ ⇒ trivial uniqueness. Refined E3 (Route B, `06_close_OP0011_step2.md` §3) gives same conclusion definitionally.*
 
 **(d) K=1 reduction (Cat B).** *When $K_t = K_s = 1$, $R_{t \to s}$ is non-empty $\iff$ $\mathsf{persist\_transport}(u_t, u_s, M, \theta_\mathrm{core}) \geq \tau_\mathrm{id}'$ for $\tau_\mathrm{id}' = (\tau_\mathrm{id} + \lambda_c \bar c_\mathrm{intra})/(\lambda_m \rho_\mathrm{deep,core}(1 - \eta_\mathrm{self}))$.*
 

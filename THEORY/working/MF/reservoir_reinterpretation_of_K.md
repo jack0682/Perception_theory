@@ -224,7 +224,7 @@ $$
 \pi_K(\mathbf c) := (c_1, c_2, \ldots, c_K, 0, 0, \ldots),
 $$
 
-where the order of $\{c_k\}$ is by decreasing $|c_k|$ (or by decreasing energy contribution).
+where the order of $\{c_k\}$ is by decreasing $\lvert c_k \rvert$ (or by decreasing energy contribution).
 
 A *labelled* Layer II view requires a re-labelling of the top-$K$ modes as $K$ slot-fields:
 
@@ -248,7 +248,7 @@ $$
 K^*(\mathbf c, \eta) := \min \{ K : \sum_{k > K} c_k^2 \le \eta \},
 $$
 
-i.e. the smallest $K$ that captures fraction $1 - \eta/\|\mathbf c\|^2$ of the spectral energy. This is essentially the *participation ratio* or *effective dimension* familiar from spectral theory.
+i.e. the smallest $K$ that captures fraction $1 - \eta/\lVert \mathbf c \rVert^2$ of the spectral energy. This is essentially the *participation ratio* or *effective dimension* familiar from spectral theory.
 
 This connects K-selection to the *concentration* of the field's spectral content — fields with rapidly-decaying coefficients have small $K^*$, broadband fields have large $K^*$.
 

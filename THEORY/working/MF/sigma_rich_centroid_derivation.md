@@ -23,16 +23,16 @@
 
 ### §2.1 Graph and embedding
 
-Let $G = (X, E)$ be a finite graph with $|X| < \infty$. An **embedding** is a function $\iota : X \to \mathbb{R}^d$ for some $d \geq 1$.
+Let $G = (X, E)$ be a finite graph with $\lvert X \rvert < \infty$. An **embedding** is a function $\iota : X \to \mathbb{R}^d$ for some $d \geq 1$.
 
 **Convention 2.1**: For lattice graphs ($T^2_L, \mathbb{Z}^d$ subsets), $\iota$ is the natural coordinate embedding. For arbitrary graphs, $\iota$ is the spectral embedding via Fiedler vectors of the graph Laplacian $L$ (lowest $d$ non-trivial eigenvectors).
 
 ### §2.2 K-field configuration
 
 $\mathbf{u} = (u^{(1)}, \ldots, u^{(K_{\mathrm{field}})}) \in \widetilde\Sigma^K_M$ (shared-pool stratified space, per `mathematical_scaffolding_4tools.md` Tool A1). Active formation set:
-$$\mathrm{act}(\mathbf{u}) := \{j \in \{1, \ldots, K_{\mathrm{field}}\} : \|u^{(j)}\|_1 > \epsilon\}, \quad \|u^{(j)}\|_1 = \sum_{x \in X} u^{(j)}(x).$$
+$$\mathrm{act}(\mathbf{u}) := \{j \in \{1, \ldots, K_{\mathrm{field}}\} : \lVert u^{(j)} \rVert_1 > \epsilon\}, \quad \lVert u^{(j)} \rVert_1 = \sum_{x \in X} u^{(j)}(x).$$
 
-For $K_{\mathrm{act}}$-stratum interior: $\mathbf{u} \in S^\circ_{K_{\mathrm{act}}}$, all active formations satisfy $\|u^{(j)}\|_1 > \epsilon$ strictly; inactive formations satisfy $\|u^{(j)}\|_1 < \delta_0$ for some $\delta_0 < \epsilon$.
+For $K_{\mathrm{act}}$-stratum interior: $\mathbf{u} \in S^\circ_{K_{\mathrm{act}}}$, all active formations satisfy $\lVert u^{(j)} \rVert_1 > \epsilon$ strictly; inactive formations satisfy $\lVert u^{(j)} \rVert_1 < \delta_0$ for some $\delta_0 < \epsilon$.
 
 ### §2.3 Centroid definition (formal)
 
@@ -58,7 +58,7 @@ $$C(\mathbf{u}; \iota) := \{c_j(\mathbf{u}; \iota) : j \in \mathrm{act}(\mathbf{
 
 ### §3.2 Continuity in $\mathbf{u}$
 
-**Lemma 3.3.** $\mathbf{u} \mapsto c_j(\mathbf{u}; \iota)$ is real-analytic on the open set $\{\mathbf{u} : \|u^{(j)}\|_1 > \epsilon\}$.
+**Lemma 3.3.** $\mathbf{u} \mapsto c_j(\mathbf{u}; \iota)$ is real-analytic on the open set $\{\mathbf{u} : \lVert u^{(j)} \rVert_1 > \epsilon\}$.
 
 **Proof**: The map is a quotient of two real-analytic functions of $\mathbf{u}$ (numerator: linear in $u^{(j)}$; denominator: linear in $u^{(j)}$). Quotient of real-analytic functions with non-vanishing denominator is real-analytic. ✓
 
@@ -68,7 +68,7 @@ $$C(\mathbf{u}; \iota) := \{c_j(\mathbf{u}; \iota) : j \in \mathrm{act}(\mathbf{
 
 **Lemma 3.5.** $c_j(\mathbf{u}; \iota) \in \mathrm{Conv}(\iota(X))$ — the convex hull of $\iota(X)$ in $\mathbb{R}^d$.
 
-**Proof**: $c_j$ is a probability-weighted average of $\iota(x)$ values with weights $u^{(j)}(x) / \|u^{(j)}\|_1$, which sum to 1 and are all non-negative. Such an average lies in the convex hull. ✓
+**Proof**: $c_j$ is a probability-weighted average of $\iota(x)$ values with weights $u^{(j)}(x) / \lVert u^{(j)} \rVert_1$, which sum to 1 and are all non-negative. Such an average lies in the convex hull. ✓
 
 ---
 
@@ -133,9 +133,9 @@ $$C(\sigma \cdot \mathbf{u}; \iota) = \hat\sigma(C(\mathbf{u}; \iota)) := \{\hat
 
 ### §5.4 Aut(G)-invariant features
 
-**Corollary 5.3 (pair-distance invariance).** Pair-distance multi-set $\{\|c_j(\mathbf{u}) - c_k(\mathbf{u})\|\}_{j < k}$ is $\mathrm{Aut}(G)$-invariant.
+**Corollary 5.3 (pair-distance invariance).** Pair-distance multi-set $\{\lVert c_j(\mathbf{u}) - c_k(\mathbf{u}) \rVert\}_{j < k}$ is $\mathrm{Aut}(G)$-invariant.
 
-**Proof**: $\|c_j(\sigma \mathbf{u}) - c_k(\sigma \mathbf{u})\| = \|\hat\sigma(c_j) - \hat\sigma(c_k)\| = \|c_j - c_k\|$ (isometry preserves distances). ✓
+**Proof**: $\lVert c_j(\sigma \mathbf{u}) - c_k(\sigma \mathbf{u}) \rVert = \lVert \hat\sigma(c_j) - \hat\sigma(c_k) \rVert = \lVert c_j - c_k \rVert$ (isometry preserves distances). ✓
 
 **Implication**: σ_rich centroid component, when stripped to its Aut-invariant content, reduces to the *pair-distance multi-set* (or equivalently, the centroid configuration modulo isometry).
 
@@ -200,7 +200,7 @@ For embeddings not graph-isometry-related (e.g., random vertex-position embeddin
 - (U2) Mass-normalization: $c_j$ is invariant under uniform rescaling $u^{(j)} \to \alpha u^{(j)}$ ($\alpha > 0$).
 - (U3) Concentration: for $u^{(j)}$ concentrated at single vertex $x_0$ ($u^{(j)}(x) = m \delta_{x, x_0}$), $c_j = \iota(x_0)$.
 
-**Proof sketch**: Translation-equivariance + mass-normalization fix $c_j$ to be a probability-weighted average of $\iota(x)$ with weights $w(u^{(j)})_x$ satisfying $\sum_x w(u^{(j)})_x = 1$. Concentration condition fixes $w(u^{(j)})_x = u^{(j)}(x) / \|u^{(j)}\|_1$. ✓
+**Proof sketch**: Translation-equivariance + mass-normalization fix $c_j$ to be a probability-weighted average of $\iota(x)$ with weights $w(u^{(j)})_x$ satisfying $\sum_x w(u^{(j)})_x = 1$. Concentration condition fixes $w(u^{(j)})_x = u^{(j)}(x) / \lVert u^{(j)} \rVert_1$. ✓
 
 ### §8.2 Distinguishing power
 
@@ -221,13 +221,13 @@ By Lemma 3.3 (real-analyticity), $c_j(\mathbf{u}(t))$ is real-analytic in $t$ on
 ### §9.2 K-jump discontinuity
 
 At K-jump time $t^*$ with $(j, k) \to \ell$ merger:
-- $c_j(t^{*-}), c_k(t^{*-})$ converge: $\|c_j(t^{*-}) - c_k(t^{*-})\| \to 0$ as $t \nearrow t^*$ (under generic merger geometry).
+- $c_j(t^{*-}), c_k(t^{*-})$ converge: $\lVert c_j(t^{*-}) - c_k(t^{*-}) \rVert \to 0$ as $t \nearrow t^*$ (under generic merger geometry).
 - At $t^{*+}$: only $c_\ell(t^{*+})$ exists; $c_j, c_k$ become *undefined* (no longer in $\mathrm{act}$).
 
 **Continuity claim 9.1**: $c_\ell(t^{*+}) = \lim_{t \nearrow t^*} \frac{m_j c_j(t) + m_k c_k(t)}{m_j + m_k}$ — the mass-weighted limit of pre-merger centroids.
 
 **Justification**: instantaneously after merger, $u^{(\ell)}(t^{*+}) = u^{(j)}(t^{*-}) + u^{(k)}(t^{*-})$ (mass conservation in shared-pool). Linearity of centroid in $u$ + total mass aggregation:
-$$c_\ell = \frac{\sum_x \iota(x) (u^{(j)} + u^{(k)})}{\sum_x (u^{(j)} + u^{(k)})} = \frac{\|u^{(j)}\|_1 c_j + \|u^{(k)}\|_1 c_k}{\|u^{(j)}\|_1 + \|u^{(k)}\|_1} = \frac{m_j c_j + m_k c_k}{m_j + m_k}.$$
+$$c_\ell = \frac{\sum_x \iota(x) (u^{(j)} + u^{(k)})}{\sum_x (u^{(j)} + u^{(k)})} = \frac{\lVert u^{(j)} \rVert_1 c_j + \lVert u^{(k)} \rVert_1 c_k}{\lVert u^{(j)} \rVert_1 + \lVert u^{(k)} \rVert_1} = \frac{m_j c_j + m_k c_k}{m_j + m_k}.$$
 ✓
 
 This justifies Φ_rich §3.3(b) post-merger centroid formula in `sigma_rich_augmentation.md`.

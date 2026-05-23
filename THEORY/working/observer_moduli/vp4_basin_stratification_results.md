@@ -23,7 +23,7 @@ Primary targets:
 
 ## §2. Approach
 
-**Direct evaluation** of $V_D^0(\lambda) = \|d(\lambda) - d^*\|^2$ with $d^* = (1,1,1,0)$ at 6 strategic $\lambda$-points,
+**Direct evaluation** of $V_D^0(\lambda) = \lVert d(\lambda) - d^* \rVert^2$ with $d^* = (1,1,1,0)$ at 6 strategic $\lambda$-points,
 followed by d-vector clustering ($d_{\mathrm{tol}} = 0.15$).
 
 Gradient descent on $V_D^0$ was also attempted (exp88, runs 1–2) but proved computationally too expensive
@@ -165,7 +165,7 @@ This is expected: V_D^0 is not a universal landscape but a scene-conditioned fun
 VP-1 (exp86, 2026-05-07) already proved Prop BS1 constructively:
 
 - CE-1: $\lambda_A = (0.6, 0.2, 0.2, 0.0)$ → $K_{\mathrm{core}} = 2$; $\lambda_B = (0.5, 0.3, 0.2, 0.0)$ → $K_{\mathrm{core}} = 1$
-- $\|d_A - d_B\| = 0.071$; $D_T = 3.028 > 0.5$
+- $\lVert d_A - d_B \rVert = 0.071$; $D_T = 3.028 > 0.5$
 
 VP-4 extends this constructive proof to a broader sampling of $\Delta^3$ (6 orientations) and shows
 that the cl-dominant type (associated with $K_{\mathrm{core}} = 2$ in VP-1) is consistently distinguishable

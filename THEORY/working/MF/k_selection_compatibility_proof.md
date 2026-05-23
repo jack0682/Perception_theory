@@ -109,7 +109,7 @@ Per `K_status_commitment.md` (OAT-1) and CV-1.5.1 canonical:
 
 > **Commitment 16 (K_field/K_act two-tier decomposition).**
 > - $K_{\mathrm{field}} \in \mathbb{Z}_{\geq 1}$: modeling-layer architectural cap (set ex ante).
-> - $K_{\mathrm{act}}(\mathbf{u}) := |\{j : \|u^{(j)}\|_1 > \epsilon\}|$: dynamical state observable.
+> - $K_{\mathrm{act}}(\mathbf{u}) := |\{j : \lVert u^{(j)} \rVert_1 > \epsilon\}|$: dynamical state observable.
 > - $K_{\mathrm{act}}(\mathbf{u}) \leq K_{\mathrm{field}}$ always.
 
 ### §4.2 Compatibility theorem

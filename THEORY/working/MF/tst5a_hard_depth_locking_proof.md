@@ -20,10 +20,10 @@ This file formalizes the proof sketch sufficient for Cat A consideration. The cl
 Let the support space be a stereo point cloud P with depths {z_i}. Fix parameters Δz > 0 (depth threshold), δ_3D > 0 (3D proximity threshold), ρ_pers > 0 (persistence threshold).
 
 **A-HARDCUT.** The support graph is the hard-threshold stereo adjacency (§3.10):
-$$G^\mathcal{P} = (X_t, E^\mathcal{P}), \quad E^\mathcal{P} = \{(x_i, x_j) : d_{3D}(x_i, x_j) \leq \delta_{3D},\; |z_i - z_j| < \Delta z\}$$
+$$G^\mathcal{P} = (X_t, E^\mathcal{P}), \quad E^\mathcal{P} = \{(x_i, x_j) : d_{3D}(x_i, x_j) \leq \delta_{3D},\; \lvert z_i - z_j \rvert < \Delta z\}$$
 
 **A-DEPTH-SEP.** Two non-empty subsets S₁, S₂ ⊆ X_t (formation supports) satisfy:
-$$\forall x_i \in S_1,\; x_j \in S_2:\quad |z_i - z_j| \geq \Delta z$$
+$$\forall x_i \in S_1,\; x_j \in S_2:\quad \lvert z_i - z_j \rvert \geq \Delta z$$
 
 **A-LOCAL.** The SCC energy E[u; G^P] is **edge-local**: for each node i, ∂E/∂u_i depends only on {u_j : j ∈ N_{G^P}(i)} (the graph neighbors of i). Formally:
 $$E[u; G] = \sum_{i \in X_t} \phi(u_i) + \sum_{(i,j) \in E^\mathcal{P}} \psi(u_i, u_j, w_{ij})$$
@@ -44,7 +44,7 @@ This holds for all four SCC energy terms: E_cl (Laplacian quadratic), E_sep (poi
 ### Lemma 1 (Graph Decomposition)
 
 *Under A-HARDCUT and A-DEPTH-SEP, the graph restricted to S₁ ∪ S₂ decomposes as a disjoint union:*
-$$G^\mathcal{P}\big|_{S_1 \cup S_2} = G_1 \sqcup G_2$$
+$$G^\mathcal{P}\big\vert_{S_1 \cup S_2} = G_1 \sqcup G_2$$
 *where G_k = G^P|_{S_k} (k=1,2) and there are no edges between S₁ and S₂.*
 
 **Proof.** By A-HARDCUT, edge (x_i, x_j) ∈ E^P requires |z_i − z_j| < Δz. By A-DEPTH-SEP, every pair (x_i ∈ S₁, x_j ∈ S₂) satisfies |z_i − z_j| ≥ Δz. Hence no such edge exists. □
@@ -52,7 +52,7 @@ $$G^\mathcal{P}\big|_{S_1 \cup S_2} = G_1 \sqcup G_2$$
 ### Lemma 2 (Gradient Locality)
 
 *Under A-LOCAL and Lemma 1, for any i ∈ S₁:*
-$$\frac{\partial E}{\partial u_i}\bigg|_{u} \text{ is independent of } \{u_j : j \in S_2\}$$
+$$\frac{\partial E}{\partial u_i}\bigg\vert_{u} \text{ is independent of } \{u_j : j \in S_2\}$$
 *and symmetrically for i ∈ S₂.*
 
 **Proof.** By Lemma 1, N_{G^P}(i) ⊆ S₁ for all i ∈ S₁. By A-LOCAL, ∂E/∂u_i depends only on {u_j : j ∈ N_{G^P}(i)} ⊆ S₁. The S₂ components do not appear. □

@@ -29,7 +29,7 @@ State at session start: **OMS-2.0 Accepted — Static**, Full Temporal Condition
 
 - `cohesion_fingerprint(u, graph, params)` → φ ∈ R^{n×3}: $(u, \mathrm{Cl}(u), D(u))$.
 - `graph_distance_matrix(graph)` → $d_G \in R^{n×n}$ (shortest-path distances).
-- `transport_cost(phi_t, phi_s, dist_matrix, sigma, gamma)` → $c \in R^{n×n}$: $d_G^2/(2\sigma^2) + \gamma \|\phi_t - \phi_s\|^2$.
+- `transport_cost(phi_t, phi_s, dist_matrix, sigma, gamma)` → $c \in R^{n×n}$: $d_G^2/(2\sigma^2) + \gamma \lVert \phi_t - \phi_s \rVert^2$.
 - `sinkhorn_partial_ot(cost, mu, nu, eps)` → transport plan $M$ + info dict. Log-domain Sinkhorn.
 - `transport_field(M, u_s)`, `persist_transport(u_t, u_s, M, theta_core)`, `transport_fixed_point(...)`.
 
@@ -47,7 +47,7 @@ State at session start: **OMS-2.0 Accepted — Static**, Full Temporal Condition
 Hence to make $\lambda_{tr}$ a non-trivial direction in the per-time-slice optimizer, we cannot reuse `find_formation` directly. Two options:
 
 1. Use the full $K$-formation transport fixed-point loop (`scc.multi.transport_k_formations`) — heavy but principled.
-2. **Use a faithful reduced temporal OMS test** (per the user's explicit fallback): a fixed transport kernel $M$ (Gaussian-shift on graph distance) plus an L2 transport-mismatch term $E_{tr}(u_0, u_1) = \tfrac{1}{2}\|M u_0 - u_1\|^2$ with closed-form gradient $M^\top(M u_0 - u_1)$.
+2. **Use a faithful reduced temporal OMS test** (per the user's explicit fallback): a fixed transport kernel $M$ (Gaussian-shift on graph distance) plus an L2 transport-mismatch term $E_{tr}(u_0, u_1) = \tfrac{1}{2}\lVert M u_0 - u_1 \rVert^2$ with closed-form gradient $M^\top(M u_0 - u_1)$.
 
 Option 2 is the right choice for OP-OMS-034: tractable runtime, closed-form gradient, **non-degenerate** $\lambda_{tr}$-direction (the optimizer's $u_0^*$ depends on $\lambda_{tr}$). It is documented as a **faithful reduced temporal OMS test**, not full Sinkhorn OT.
 

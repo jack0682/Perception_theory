@@ -28,7 +28,7 @@ $$\boxed{K_{i\to k}(x,z) = \sum_{\substack{(x_i,\ldots,x_k):\\ x_i=x,\, x_k=z}} 
 
 이것은 모든 $x \to z$ 경로에 대해 $e^{-\mathrm{action}/\varepsilon}$ 가중합이다.
 
-**행렬 표기**: $K_{i\to k} \in \mathbb{R}^{|X_i| \times |X_k|}_{\geq 0}$ (nonneg 행렬).
+**행렬 표기**: $K_{i\to k} \in \mathbb{R}^{\lvert X_i \rvert \times \lvert X_k \rvert}_{\geq 0}$ (nonneg 행렬).
 
 단계별 적용:
 $$K_{i\to i+1} = K_{i,i+1} \quad\text{(local Gibbs kernel)}$$
@@ -163,7 +163,7 @@ $\blacksquare$
 
 **Action cost 적용**:
 
-$N = |X_j|$로 하면:
+$N = \lvert X_j \rvert$로 하면:
 
 $$\left|c_{i\to k}^{\varepsilon}(x,z) - c_{i\to k}^{\mathrm{act}}(x,z)\right| \leq \varepsilon\log|X_j|$$
 

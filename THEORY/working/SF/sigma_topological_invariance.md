@@ -36,7 +36,7 @@ $\phi: G = (X, E) \to G' = (X', E')$ is a graph isomorphism iff $\phi$ is a vert
 
 ### §2.2 Edge subdivision
 
-Replace edge $\{x, y\} \in E$ by a path $x — z — y$ with $z \notin X$ a fresh vertex. Iterating subdivisions on $G$ produces a *topological refinement* $G_{\mathrm{sub}}$. Diestel (2017) §1.10. The 1-dim CW complex $|G|$ underlying $G$ is unchanged up to homeomorphism by subdivisions: $|G_{\mathrm{sub}}| \cong_{\mathrm{Top}} |G|$.
+Replace edge $\{x, y\} \in E$ by a path $x — z — y$ with $z \notin X$ a fresh vertex. Iterating subdivisions on $G$ produces a *topological refinement* $G_{\mathrm{sub}}$. Diestel (2017) §1.10. The 1-dim CW complex $\lvert G \rvert$ underlying $G$ is unchanged up to homeomorphism by subdivisions: $|G_{\mathrm{sub}}| \cong_{\mathrm{Top}} \lvert G \rvert$.
 
 ### §2.3 Edge contraction
 
@@ -44,7 +44,7 @@ Identify endpoints of $\{x, y\} \in E$ to a single vertex $z$, removing the edge
 
 ### §2.4 Homotopy equivalence as 1-complex
 
-Realize $G$ as 1-dim CW complex $|G|$. Two graphs $G, G'$ are *topologically homotopy equivalent* iff $|G| \simeq |G'|$ in $\mathrm{Top}$ (continuous maps $f: |G| \to |G'|, g: |G'| \to |G|$ with $f \circ g \simeq \mathrm{id}$, $g \circ f \simeq \mathrm{id}$). For finite connected graphs, $|G| \simeq \bigvee^r S^1$ where $r = |E| - |X| + 1$ is the cycle rank (Hatcher 2002 Ch. 0). Hence: **two finite connected graphs are homotopy equivalent iff they have the same cycle rank $r$.** A tree ($r=0$) is contractible; any cycle ($r=1$) is $\simeq S^1$.
+Realize $G$ as 1-dim CW complex $\lvert G \rvert$. Two graphs $G, G'$ are *topologically homotopy equivalent* iff $\lvert G \rvert \simeq \lvert G' \rvert$ in $\mathrm{Top}$ (continuous maps $f: \lvert G \rvert \to \lvert G' \rvert, g: \lvert G' \rvert \to \lvert G \rvert$ with $f \circ g \simeq \mathrm{id}$, $g \circ f \simeq \mathrm{id}$). For finite connected graphs, $\lvert G \rvert \simeq \bigvee^r S^1$ where $r = \lvert E \rvert - \lvert X \rvert + 1$ is the cycle rank (Hatcher 2002 Ch. 0). Hence: **two finite connected graphs are homotopy equivalent iff they have the same cycle rank $r$.** A tree ($r=0$) is contractible; any cycle ($r=1$) is $\simeq S^1$.
 
 ### §2.5 Quasi-isometry
 
@@ -52,7 +52,7 @@ $\phi: G \to G'$ is a $(K, C)$-quasi-isometry iff $\frac{1}{K} d_G(x, y) - C \le
 
 ### §2.6 Continuum limit (graph homeomorphism in scaling sense)
 
-Sequence $G_h$ ($h \to 0$ mesh) embedded in $M \subset \mathbb{R}^d$ with $|X_h| \to \infty$, edges $\to$ infinitesimal links. In the GH (Gromov–Hausdorff) limit, $G_h \to (M, d_M)$ as a metric space; combinatorial Laplacian $L_{G_h}$ (suitably rescaled) converges in spectrum to $-\Delta_M$ (Burago–Ivanov–Kurylev 2011). This is the "graph homeomorphism" sense of NQ-217.
+Sequence $G_h$ ($h \to 0$ mesh) embedded in $M \subset \mathbb{R}^d$ with $\lvert X_h \rvert \to \infty$, edges $\to$ infinitesimal links. In the GH (Gromov–Hausdorff) limit, $G_h \to (M, d_M)$ as a metric space; combinatorial Laplacian $L_{G_h}$ (suitably rescaled) converges in spectrum to $-\Delta_M$ (Burago–Ivanov–Kurylev 2011). This is the "graph homeomorphism" sense of NQ-217.
 
 ---
 
@@ -89,9 +89,9 @@ Combining: $\mathcal{F}(u^*) = \mathcal{F}(u'^*)$ (local-maxima count is graph-i
 
 Subdividing edge $\{x, y\}$ into $x - z - y$ adds vertex $z$ (degree 2) and changes:
 
-- $|X| \to |X| + 1$ (manifold dimension of $\Sigma_m$ increases by 1).
+- $\lvert X \rvert \to \lvert X \rvert + 1$ (manifold dimension of $\Sigma_m$ increases by 1).
 - Combinatorial Laplacian $L_G \to L_{G_{\mathrm{sub}}}$: row/column for $z$ has $\deg(z) = 2$ on diagonal, $-1$ to $x$ and $y$.
-- Total mass constraint $\sum u_i = m$ now sums over $|X| + 1$ vertices; the old minimizer $u^*$ does *not* directly extend (need to specify $u^*(z)$).
+- Total mass constraint $\sum u_i = m$ now sums over $\lvert X \rvert + 1$ vertices; the old minimizer $u^*$ does *not* directly extend (need to specify $u^*(z)$).
 
 ### §4.2 Counterexample (single-edge subdivision changes spectrum)
 
@@ -104,7 +104,7 @@ The Fiedler eigenvalue $\lambda_2$ drops from $1$ to $0.586$; the spectrum is st
 
 ### §4.3 Generic non-invariance under homotopy equivalence
 
-A path graph $P_n$ has cycle rank $r = 0$ for all $n \geq 1$, so $|P_n| \simeq \mathrm{point}$ for all $n$ — all path graphs are homotopy-equivalent to a point. But the σ-tuples differ: $L_{P_n}$ eigenvalues are $\{2(1 - \cos(k\pi/n)) : k = 0, 1, \ldots, n-1\}$, which depend on $n$. SCC Hessian at uniform $c\mathbf{1}$ gives $H = 4\alpha L_{P_n} + \beta W''(c) I$, so the eigenvalue tuple $\{\lambda_k\}$ explicitly depends on $n$.
+A path graph $P_n$ has cycle rank $r = 0$ for all $n \geq 1$, so $\lvert P_n \rvert \simeq \mathrm{point}$ for all $n$ — all path graphs are homotopy-equivalent to a point. But the σ-tuples differ: $L_{P_n}$ eigenvalues are $\{2(1 - \cos(k\pi/n)) : k = 0, 1, \ldots, n-1\}$, which depend on $n$. SCC Hessian at uniform $c\mathbf{1}$ gives $H = 4\alpha L_{P_n} + \beta W''(c) I$, so the eigenvalue tuple $\{\lambda_k\}$ explicitly depends on $n$.
 
 **Conclusion 4.3 (Conjecture BC-2 — σ-tuple is NOT a topological homotopy invariant).** σ-tuple distinguishes graphs with the same cycle rank $r$ but different vertex count $n$. This is *expected*: σ-tuple encodes geometric (eigenvalue, eigenvector) data, while homotopy equivalence is a coarse topological relation that erases vertex count.
 

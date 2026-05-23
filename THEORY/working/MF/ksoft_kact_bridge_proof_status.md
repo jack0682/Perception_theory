@@ -202,7 +202,7 @@ K_{\mathrm{bar}}^{\ell_{\min}}(U(\mathbf u))
 =
 K_{\mathrm{act}}^\varepsilon(\mathbf u)
 =
-|A|.
+\lvert A \rvert.
 $$
 
 **Status:** LEMMA-CAND.

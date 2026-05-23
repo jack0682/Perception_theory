@@ -27,7 +27,7 @@ The OMS is a Level-2 extension of SCC — it uses SCC as its foundation without 
 | SCC Layer | Key object | OMS role | OMS dependency |
 |---|---|---|---|
 | **Static single-formation** | $u^* \in \Sigma_m$, $E_\Theta(u)$, $d_\Theta$ | Foundation: defines readout $P_{\min}$ and formation structure | Direct |
-| **Phase transition (T8)** | $\beta/\alpha > 4\lambda_2/|W''(c)|$ | Supplies $q_c(X_t)$; used to define $\mathcal{M}_{\mathrm{obs}}^{\mathrm{crit}}$ | Direct |
+| **Phase transition (T8)** | $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ | Supplies $q_c(X_t)$; used to define $\mathcal{M}_{\mathrm{obs}}^{\mathrm{crit}}$ | Direct |
 | **Multi-formation (K-field)** | $K$ formations, $S_K$ labels | Provides label permutation gauge group $S_K$ | Direct |
 | **Temporal identity (OT transport)** | $E_{\mathrm{tr}}$, persistence readout | Provides transport weight $\lambda_{\mathrm{tr}}$; face $F_{tr}$ = static observer | Direct |
 | **Diagnostic vector** | $d = (\mathrm{Bind, Sep, In, Persist})$ | Provides $P_{\min}$; coarser component of $P_{\mathrm{top}}$ | Direct |
@@ -66,7 +66,7 @@ The OMS is a Level-2 extension of SCC — it uses SCC as its foundation without 
 **Short answer:** No.
 
 **Detail:**
-- T8 states: $\beta/\alpha > 4\lambda_2/|W''(c)|$ is the formation condition.
+- T8 states: $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ is the formation condition.
 - OMS uses T8 in one direction only: the criticality hypothesis sets $q = q_c(X_t)$, removing $q$ from the observer's free parameters.
 - This is an ADDITIONAL ASSUMPTION in OMS (not a modification of T8). T8 remains unchanged.
 - OMS is consistent with T8 in the following sense: any observer $\Theta \in \mathcal{M}_{\mathrm{obs}}$ with $q < q_c(X_t)$ will be in the sub-critical regime (no formation); the observer moduli space implicitly includes sub-critical observers (they form a region in $[q_{\min}, q_{\max}] \times \Delta^3 \times B_\xi$ below the phase transition).

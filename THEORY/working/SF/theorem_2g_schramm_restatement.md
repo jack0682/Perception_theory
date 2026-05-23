@@ -51,7 +51,7 @@ The "local data" sufficient to determine the σ at first pitchfork comprises fou
 Each of (G1) finite connected, (G2) finite degree, (G3) Laplacian spectrum admits spinodal interior at $c=1/2$, (G4) graph automorphism group well-defined, is verifiable on a finite-radius ball around any node. **Local.**
 
 ### §3.2 Bottom-k Laplacian eigenvalue spectrum
-The first pitchfork at $\beta = \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}/|W''(c)|$ is determined by $\lambda_2^{\mathrm{Lap}}(G)$. Higher-order $O(\epsilon^2)$ corrections (cf. NQ-187 §4 sextic computation) involve the bottom-$k$ Laplacian eigenvalues. By spectral approximation theorems (Cheeger-style inequalities + Weyl's law for graph Laplacians), the bottom-$k$ Laplacian eigenvalues are determined up to $O(1/L^2)$ corrections by the **finite-ball local structure** of $G$ at radius $R \sim \sqrt{|X|}$. For practical purposes (up to corrections that vanish in the thermodynamic limit), the bottom-$k$ spectrum is **local**.
+The first pitchfork at $\beta = \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}}/\lvert W''(c) \rvert$ is determined by $\lambda_2^{\mathrm{Lap}}(G)$. Higher-order $O(\epsilon^2)$ corrections (cf. NQ-187 §4 sextic computation) involve the bottom-$k$ Laplacian eigenvalues. By spectral approximation theorems (Cheeger-style inequalities + Weyl's law for graph Laplacians), the bottom-$k$ Laplacian eigenvalues are determined up to $O(1/L^2)$ corrections by the **finite-ball local structure** of $G$ at radius $R \sim \sqrt{\lvert X \rvert}$. For practical purposes (up to corrections that vanish in the thermodynamic limit), the bottom-$k$ spectrum is **local**.
 
 ### §3.3 Automorphism stabilizer Aut(G)_{u*}
 At the uniform vacuum $u_* = c\mathbf{1}$, the local stabilizer is the full automorphism group: $\mathrm{Aut}(G)_{c\mathbf{1}} = \mathrm{Aut}(G)$ (since constants are automorphism-invariant). The stabilizer acts on the Fiedler doublet $V_2 = \mathrm{span}(\phi_2, \phi_3)$ where $\phi_2, \phi_3$ are eigenvectors of the bottom-2 non-trivial Laplacian eigenvalue. **Local in the sense that $\mathrm{Aut}(G)$ is determined by local edge-incidence structure.**
@@ -67,7 +67,7 @@ The first pitchfork irrep is determined by the action of $\mathrm{Aut}(G)$ on $V
 
 *Let $G_1, G_2$ be finite connected graphs satisfying (G1)–(G4). Suppose:*
 
-1. *(Local-ball isomorphism) For some radius $R \gg \xi_0(\beta_{\mathrm{crit}}^{(2)}) = \sqrt{\alpha/|W''(c)|}$ at the uniform vacuum, every ball $B_R(x_1) \subseteq G_1$ is isomorphic (as a graph with automorphism action) to some ball $B_R(x_2) \subseteq G_2$.*
+1. *(Local-ball isomorphism) For some radius $R \gg \xi_0(\beta_{\mathrm{crit}}^{(2)}) = \sqrt{\alpha/\lvert W''(c) \rvert}$ at the uniform vacuum, every ball $B_R(x_1) \subseteq G_1$ is isomorphic (as a graph with automorphism action) to some ball $B_R(x_2) \subseteq G_2$.*
 2. *(Compatible automorphism stabilizers) $\mathrm{Aut}(G_1) \cong \mathrm{Aut}(G_2)$ via an isomorphism that preserves the irrep structure of $V_2$.*
 
 *Then:*

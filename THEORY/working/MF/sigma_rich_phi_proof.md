@@ -50,17 +50,17 @@ By Task #1, #2, #3, σ_rich($\mathbf{u}(t^{*\pm})$) is well-defined under (H1)-(
 ### §3.1 Identification claim
 
 **Theorem 3.1 (pair identification from σ_rich).** Under (H1)-(H4), the merging pair $(j, k)$ is uniquely determined by $\sigma_{\mathrm{rich}}(\mathbf{u}(t^{*-}))$ via the following criterion:
-$$(j, k) = \arg\min_{(a, b) : a < b, \, a, b \in \mathrm{act}(t^{*-})} \big\{ \|c_a - c_b\| \,\big|\, s_{ab}^{\mathrm{trend}} = -1 \big\}$$
+$$(j, k) = \arg\min_{(a, b) : a < b, \, a, b \in \mathrm{act}(t^{*-})} \big\{ \lVert c_a - c_b \rVert \,\big\vert\, s_{ab}^{\mathrm{trend}} = -1 \big\}$$
 i.e., the pair with **minimum centroid distance** among those with **decreasing Goldstone-pair gap** (i.e., post-avoided-crossing onset, $s = -1$).
 
 ### §3.2 Proof
 
-**Step 1**: By Task #1 §9.2, in the merging pair $(j, k)$, $\|c_j - c_k\| \to 0$ as $t \nearrow t^*$ (centroids converge under merger). Hence there exists a time-window $[t^*_{\mathrm{onset}}, t^*]$ on which $\|c_j - c_k\|$ is minimum among active pairs.
+**Step 1**: By Task #1 §9.2, in the merging pair $(j, k)$, $\lVert c_j - c_k \rVert \to 0$ as $t \nearrow t^*$ (centroids converge under merger). Hence there exists a time-window $[t^*_{\mathrm{onset}}, t^*]$ on which $\lVert c_j - c_k \rVert$ is minimum among active pairs.
 
 **Step 2**: By Task #3 §9.2, the Goldstone-pair gap $\Delta_{jk}^{\mathrm{Gold}}(t)$ widens (avoided-crossing onset) at some $\tau_0 > 0$ before merger, then either closes to 0 (symmetric merger) or contracts (asymmetric). In the post-onset regime $t \in (\tau_0, t^*)$, $s_{jk}^{\mathrm{trend}} = -1$.
 
 **Step 3**: For non-merging pairs $(a, b) \neq (j, k)$ at the same time $t$ near $t^*$:
-- $\|c_a - c_b\|$ does not converge to 0 (they don't merge at $t^*$).
+- $\lVert c_a - c_b \rVert$ does not converge to 0 (they don't merge at $t^*$).
 - $\Delta_{ab}^{\mathrm{Gold}}$ remains exponentially small in $d_{\min}(a, b)$ (well-separated regime); $s_{ab}^{\mathrm{trend}}$ is determined by the (slow) overall flow.
 
 **Step 4**: For times $t$ sufficiently close to $t^*$ (within an open neighborhood), the merging pair $(j, k)$ uniquely satisfies *both* "min centroid distance" AND "$s = -1$". Other pairs may have larger distance OR different sign.
@@ -85,7 +85,7 @@ For configurations with discrete symmetry (e.g., $D_3$ equilateral configuration
 
 **Theorem 4.1 (post-merger centroid)**. Under (H1)-(H3):
 $$c_\ell(t^{*+}) = \frac{m_j c_j(t^{*-}) + m_k c_k(t^{*-})}{m_j + m_k}$$
-where $m_j = \|u^{(j)}(t^{*-})\|_1$, $m_k = \|u^{(k)}(t^{*-})\|_1$.
+where $m_j = \lVert u^{(j)}(t^{*-}) \rVert_1$, $m_k = \lVert u^{(k)}(t^{*-}) \rVert_1$.
 
 ### §4.2 Proof
 

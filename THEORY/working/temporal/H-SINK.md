@@ -68,7 +68,7 @@ The task brief specifies a 4-component fingerprint including $C_u(x,x)$. **This 
 ### 0.5 Lemma 9 current state
 
 From `logs/daily/2026-05-07/06_close_OP0011_step2.md §2.2`:
-- **Statement:** $\|M - M'\|_\mathrm{TV} \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost perturbation $\|c - c'\|_\infty \leq \delta$.
+- **Statement:** $\lVert M - M' \rVert_\mathrm{TV} \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost perturbation $\lVert c - c' \rVert_\infty \leq \delta$.
 - **Status: Cat B** — same Cat B status as Lemma 8.2 (needs S-B2 for Cat A).
 
 ### 0.6 Dependencies already proved (canonical Cat A or working Cat A)
@@ -104,28 +104,28 @@ $$D(u)(x) = \sigma\!\bigl(a_D\cdot[(1+\lambda_D)(Pu)(x) - \lambda_D(P\mathbf{1})
 Jacobian: $J_D(u) = \mathrm{diag}(\sigma'_D \cdot a_D(1+\lambda_D))\cdot P$.
 Defaults: $a_D = 5.0$, $\lambda_D = 1.0$, $\tau_D = 0.0$. **$b_D = 0$ enforced** (analyticity requirement, code-canonical).
 
-**Aggregation:** $P$ is the row-stochastic normalized adjacency. $\|P\|_{\ell^\infty \to \ell^\infty} = 1$, $\|P\|_{\ell^2 \to \ell^2} \leq 1$ (Riesz-Thorin for doubly-bounded operators).
+**Aggregation:** $P$ is the row-stochastic normalized adjacency. $\lVert P \rVert_{\ell^\infty \to \ell^\infty} = 1$, $\lVert P \rVert_{\ell^2 \to \ell^2} \leq 1$ (Riesz-Thorin for doubly-bounded operators).
 
 **Sigmoid:** $\sigma(z) = 1/(1+e^{-z})$. Derivative: $\sigma'(z) = \sigma(z)(1-\sigma(z)) \leq 1/4$ globally.
 
 **Fingerprint:** $\varphi_u(x) = (u(x), \mathrm{Cl}(u)(x), D(u)(x)) \in [0,1]^3$.
 
 **Transport cost:**
-$$c_{u,v}(x,y) = \frac{d_G(x,y)^2}{2\sigma_\mathrm{sp}^2} + \gamma\,\|\varphi_u(x) - \varphi_v(y)\|^2$$
+$$c_{u,v}(x,y) = \frac{d_G(x,y)^2}{2\sigma_\mathrm{sp}^2} + \gamma\,\lVert \varphi_u(x) - \varphi_v(y) \rVert^2$$
 
 ---
 
 ## 2. Lemma H-SINK-1: Closure Lipschitz
 
 **Lemma H-SINK-1 (Closure Lipschitz, ℓ∞).** *Under the canonical closure definition with parameters $(a_\mathrm{cl}, \eta_\mathrm{cl}, \tau_\mathrm{cl})$ and any row-stochastic $P$:*
-$$\|\mathrm{Cl}(u) - \mathrm{Cl}(u')\|_\infty \;\leq\; L_\mathrm{cl}\,\|u - u'\|_\infty, \qquad L_\mathrm{cl} := \frac{a_\mathrm{cl}}{4}.$$
+$$\lVert \mathrm{Cl}(u) - \mathrm{Cl}(u') \rVert_\infty \;\leq\; L_\mathrm{cl}\,\lVert u - u' \rVert_\infty, \qquad L_\mathrm{cl} := \frac{a_\mathrm{cl}}{4}.$$
 *The bound is global on $[0,1]^n$, requires no norm on $a_\mathrm{cl}$, and holds for any $\eta_\mathrm{cl} \in [0,1]$.*
 
 **Proof.** By the mean value theorem and $\sigma'(z) \leq 1/4$:
 $$|\mathrm{Cl}(u)(x) - \mathrm{Cl}(u')(x)| \leq \frac{1}{4}\cdot a_\mathrm{cl}\cdot|(1-\eta_\mathrm{cl})(u(x)-u'(x)) + \eta_\mathrm{cl}((Pu)(x)-(Pu')(x))|.$$
 Bounding $\ell^\infty$ term-by-term:
-$$\leq \frac{a_\mathrm{cl}}{4}\Bigl[(1-\eta_\mathrm{cl})|u(x)-u'(x)| + \eta_\mathrm{cl}|(Pu-Pu')(x)|\Bigr] \leq \frac{a_\mathrm{cl}}{4}\Bigl[(1-\eta_\mathrm{cl})\|u-u'\|_\infty + \eta_\mathrm{cl}\|P\|_{\ell^\infty\to\ell^\infty}\|u-u'\|_\infty\Bigr].$$
-Since $P$ is row-stochastic: $\|P\|_{\ell^\infty\to\ell^\infty} = 1$. Hence the bracket $= \|u-u'\|_\infty$, giving $L_\mathrm{cl} = a_\mathrm{cl}/4$. $\square$
+$$\leq \frac{a_\mathrm{cl}}{4}\Bigl[(1-\eta_\mathrm{cl})\lvert u(x)-u'(x) \rvert + \eta_\mathrm{cl}\lvert (Pu-Pu')(x) \rvert\Bigr] \leq \frac{a_\mathrm{cl}}{4}\Bigl[(1-\eta_\mathrm{cl})\lVert u-u' \rVert_\infty + \eta_\mathrm{cl}\lVert P \rVert_{\ell^\infty\to\ell^\infty}\lVert u-u' \rVert_\infty\Bigr].$$
+Since $P$ is row-stochastic: $\lVert P \rVert_{\ell^\infty\to\ell^\infty} = 1$. Hence the bracket $= \lVert u-u' \rVert_\infty$, giving $L_\mathrm{cl} = a_\mathrm{cl}/4$. $\square$
 
 **Numerical values:**
 - Default $a_\mathrm{cl} = 3.5$: $L_\mathrm{cl} \leq 0.875$.
@@ -138,11 +138,11 @@ Since $P$ is row-stochastic: $\|P\|_{\ell^\infty\to\ell^\infty} = 1$. Hence the 
 ## 3. Lemma H-SINK-2: Distinction Lipschitz
 
 **Lemma H-SINK-2 (Distinction Lipschitz, ℓ∞).** *Under the canonical distinction definition with $b_D = 0$ and row-stochastic $P$:*
-$$\|D(u) - D(u')\|_\infty \;\leq\; L_D\,\|u - u'\|_\infty, \qquad L_D := \frac{a_D(1+\lambda_D)}{4}.$$
+$$\lVert D(u) - D(u') \rVert_\infty \;\leq\; L_D\,\lVert u - u' \rVert_\infty, \qquad L_D := \frac{a_D(1+\lambda_D)}{4}.$$
 *Global on $[0,1]^n$.*
 
 **Proof.** Since $D(u)(x) = \sigma(a_D[(1+\lambda_D)(Pu)(x) - \lambda_D(P\mathbf{1})(x)] - \tau_D)$, only $Pu$ depends on $u$:
-$$|D(u)(x) - D(u')(x)| \leq \frac{a_D(1+\lambda_D)}{4}\,|(Pu - Pu')(x)| \leq \frac{a_D(1+\lambda_D)}{4}\,\|u-u'\|_\infty.$$
+$$\lvert D(u)(x) - D(u')(x) \rvert \leq \frac{a_D(1+\lambda_D)}{4}\,\lvert (Pu - Pu')(x) \rvert \leq \frac{a_D(1+\lambda_D)}{4}\,\lVert u-u' \rVert_\infty.$$
 $\square$
 
 **Numerical values:**
@@ -167,17 +167,17 @@ $$C_u - C_{u'} = (I-\alpha_C W(u))^{-1}\,\alpha_C(W(u)-W(u'))\,(I-\alpha_C W(u')
 **Spectral margin assumption (H-CRES-MARGIN):**
 $$\alpha_C\,\rho(W_\mathrm{sym}(u)) \leq 1 - \delta_C \quad \text{and} \quad \alpha_C\,\rho(W_\mathrm{sym}(u')) \leq 1 - \delta_C \quad \text{for some } \delta_C > 0.$$
 
-Under H-CRES-MARGIN: $\|C_u\|_\mathrm{op} \leq 1/\delta_C$, hence
-$$\|C_u - C_{u'}\|_\mathrm{op} \leq \frac{\alpha_C}{\delta_C^2}\,\|W_\mathrm{sym}(u) - W_\mathrm{sym}(u')\|_\mathrm{op}.$$
+Under H-CRES-MARGIN: $\lVert C_u \rVert_\mathrm{op} \leq 1/\delta_C$, hence
+$$\lVert C_u - C_{u'} \rVert_\mathrm{op} \leq \frac{\alpha_C}{\delta_C^2}\,\lVert W_\mathrm{sym}(u) - W_\mathrm{sym}(u') \rVert_\mathrm{op}.$$
 
 **W_sym Lipschitz sub-problem.** The matrix $W_\mathrm{sym}(u)$ typically involves $\sqrt{u(x)}$ factors (cohesion-weighted edge weights). Since $\sqrt{\cdot}$ is **not globally Lipschitz near 0** (derivative $\to \infty$ as $u \to 0^+$), the following alternative assumptions are needed:
 
-**(H-CRES-LIP option A):** $u(x) \geq \kappa > 0$ on the formation support (core-interior lower bound). Under this: $|\sqrt{u(x)} - \sqrt{u'(x)}| \leq |u(x)-u'(x)|/(2\sqrt{\kappa})$, so $\|W_\mathrm{sym}(u)-W_\mathrm{sym}(u')\|_\mathrm{op} \leq L_W\|u-u'\|_\infty$ with $L_W = O(1/(2\sqrt{\kappa}))$.
+**(H-CRES-LIP option A):** $u(x) \geq \kappa > 0$ on the formation support (core-interior lower bound). Under this: $|\sqrt{u(x)} - \sqrt{u'(x)}| \leq \lvert u(x)-u'(x) \rvert/(2\sqrt{\kappa})$, so $\lVert W_\mathrm{sym}(u)-W_\mathrm{sym}(u') \rVert_\mathrm{op} \leq L_W\lVert u-u' \rVert_\infty$ with $L_W = O(1/(2\sqrt{\kappa}))$.
 
 **(H-CRES-LIP option B):** The canonical implementation uses regularized $W_\mathrm{sym}$ with $\sqrt{u + \varepsilon_C}$ for small $\varepsilon_C > 0$. Under this: $L_W \leq 1/(2\sqrt{\varepsilon_C})$.
 
 **Conditional lemma statement.** *Under H-CRES-MARGIN + H-CRES-LIP (option A or B):*
-$$\|C_u(x,x) - C_{u'}(x,x)\| \leq L_C\,\|u-u'\|_\infty, \qquad L_C = \frac{\alpha_C\,L_W}{\delta_C^2}.$$
+$$\lVert C_u(x,x) - C_{u'}(x,x) \rVert \leq L_C\,\lVert u-u' \rVert_\infty, \qquad L_C = \frac{\alpha_C\,L_W}{\delta_C^2}.$$
 
 **Status: Cat B (conditional).** Two unregistered conditions (H-CRES-MARGIN, H-CRES-LIP) required. Neither is currently canonical. **For the 3-component canonical fingerprint, this lemma is not invoked.**
 
@@ -186,17 +186,17 @@ $$\|C_u(x,x) - C_{u'}(x,x)\| \leq L_C\,\|u-u'\|_\infty, \qquad L_C = \frac{\alph
 ## 5. Lemma H-SINK-4: Fingerprint Lipschitz (3-component canonical)
 
 **Lemma H-SINK-4 (Fingerprint Lipschitz, 3-component, ℓ∞).** *Under canonical 3-component fingerprint and Lemmas H-SINK-1,2:*
-$$\sup_x\|\varphi_u(x) - \varphi_{u'}(x)\| \;\leq\; L_\varphi\,\|u - u'\|_\infty,$$
+$$\sup_x\lVert \varphi_u(x) - \varphi_{u'}(x) \rVert \;\leq\; L_\varphi\,\lVert u - u' \rVert_\infty,$$
 $$L_\varphi = \sqrt{1 + L_\mathrm{cl}^2 + L_D^2} \;\leq\; \sqrt{1 + (a_\mathrm{cl}/4)^2 + (a_D(1+\lambda_D)/4)^2}.$$
 
 **Proof.** Componentwise:
-$$\|\varphi_u(x) - \varphi_{u'}(x)\|^2 = (u(x)-u'(x))^2 + (\mathrm{Cl}(u)(x)-\mathrm{Cl}(u')(x))^2 + (D(u)(x)-D(u')(x))^2$$
-$$\leq \|u-u'\|_\infty^2 + L_\mathrm{cl}^2\|u-u'\|_\infty^2 + L_D^2\|u-u'\|_\infty^2 = (1+L_\mathrm{cl}^2+L_D^2)\|u-u'\|_\infty^2.$$
+$$\lVert \varphi_u(x) - \varphi_{u'}(x) \rVert^2 = (u(x)-u'(x))^2 + (\mathrm{Cl}(u)(x)-\mathrm{Cl}(u')(x))^2 + (D(u)(x)-D(u')(x))^2$$
+$$\leq \lVert u-u' \rVert_\infty^2 + L_\mathrm{cl}^2\lVert u-u' \rVert_\infty^2 + L_D^2\lVert u-u' \rVert_\infty^2 = (1+L_\mathrm{cl}^2+L_D^2)\lVert u-u' \rVert_\infty^2.$$
 Taking sup over $x$ and square root gives the bound. $\square$
 
 **Numerical values (defaults):** $L_\varphi \leq \sqrt{1 + 0.875^2 + 2.5^2} = \sqrt{8.016} \approx 2.83$.
 
-**Fingerprint range:** $\varphi_u(x) \in [0,1]^3$ for all $u \in [0,1]^n$, so $\|\varphi_u(x)\| \leq \sqrt{3}$ and $\|\varphi_u(x) - \varphi_v(y)\| \leq 2\sqrt{3}$.
+**Fingerprint range:** $\varphi_u(x) \in [0,1]^3$ for all $u \in [0,1]^n$, so $\lVert \varphi_u(x) \rVert \leq \sqrt{3}$ and $\lVert \varphi_u(x) - \varphi_v(y) \rVert \leq 2\sqrt{3}$.
 
 **Status: Cat A** (follows from H-SINK-1,2 by triangle inequality in $\mathbb{R}^3$).
 
@@ -204,23 +204,23 @@ Taking sup over $x$ and square root gives the bound. $\square$
 
 ## 6. Lemma H-SINK-5: SCC Cost Lipschitz (DR2 verification)
 
-**Lemma H-SINK-5 (SCC Cost Lipschitz, DR2).** *For the canonical SCC temporal cost $c_{u,v}(x,y) = d_G(x,y)^2/(2\sigma_\mathrm{sp}^2) + \gamma\|\varphi_u(x)-\varphi_v(y)\|^2$ on a finite graph $G$ with diameter $\mathrm{diam}(G)$:*
+**Lemma H-SINK-5 (SCC Cost Lipschitz, DR2).** *For the canonical SCC temporal cost $c_{u,v}(x,y) = d_G(x,y)^2/(2\sigma_\mathrm{sp}^2) + \gamma\lVert \varphi_u(x)-\varphi_v(y) \rVert^2$ on a finite graph $G$ with diameter $\mathrm{diam}(G)$:*
 
 **(DR2-fields)** Field-perturbation Lipschitz:
-$$\|c_{u,v} - c_{u',v'}\|_\infty \leq L_5\bigl(\|u-u'\|_\infty + \|v-v'\|_\infty\bigr), \quad L_5 = 2\gamma\sqrt{3}\,L_\varphi.$$
+$$\lVert c_{u,v} - c_{u',v'} \rVert_\infty \leq L_5\bigl(\lVert u-u' \rVert_\infty + \lVert v-v' \rVert_\infty\bigr), \quad L_5 = 2\gamma\sqrt{3}\,L_\varphi.$$
 
 **(DR2-spatial)** Spatial Lipschitz (used in Lemma 8.2):
-$$\sup_x |c_{u,v}(x,y) - c_{u,v}(x,y')| \leq L_c \cdot d_G(y,y'), \quad L_c = \frac{\mathrm{diam}(G)}{\sigma_\mathrm{sp}^2} + 6\gamma.$$
+$$\sup_x \lvert c_{u,v}(x,y) - c_{u,v}(x,y') \rvert \leq L_c \cdot d_G(y,y'), \quad L_c = \frac{\mathrm{diam}(G)}{\sigma_\mathrm{sp}^2} + 6\gamma.$$
 
 **Proof of DR2-fields.** The spatial term $d_G(x,y)^2/(2\sigma_\mathrm{sp}^2)$ is independent of $u,v$. For the fingerprint term, let $a = \varphi_u(x)-\varphi_v(y)$ and $a' = \varphi_{u'}(x)-\varphi_{v'}(y)$:
-$$\|a\|^2 - \|a'\|^2 = (\|a\|+\|a'\|)(\|a\|-\|a'\|) \leq 2\sqrt{3}\cdot\|a-a'\|$$
-since $\|a\|, \|a'\| \leq 2\sqrt{3}$. Now $\|a-a'\| \leq \|\varphi_u(x)-\varphi_{u'}(x)\| + \|\varphi_v(y)-\varphi_{v'}(y)\| \leq L_\varphi(\|u-u'\|_\infty + \|v-v'\|_\infty)$. Multiplying: DR2-fields with $L_5 = 2\sqrt{3}L_\varphi$. $\square$
+$$\lVert a \rVert^2 - \lVert a' \rVert^2 = (\lVert a \rVert+\lVert a' \rVert)(\lVert a \rVert-\lVert a' \rVert) \leq 2\sqrt{3}\cdot\lVert a-a' \rVert$$
+since $\lVert a \rVert, \lVert a' \rVert \leq 2\sqrt{3}$. Now $\lVert a-a' \rVert \leq \lVert \varphi_u(x)-\varphi_{u'}(x) \rVert + \lVert \varphi_v(y)-\varphi_{v'}(y) \rVert \leq L_\varphi(\lVert u-u' \rVert_\infty + \lVert v-v' \rVert_\infty)$. Multiplying: DR2-fields with $L_5 = 2\sqrt{3}L_\varphi$. $\square$
 
 **Proof of DR2-spatial.** Fix $u,v,x$; consider varying $y$ vs $y'$ with $d_G(y,y') \geq 1$:
 
-*Spatial part:* $|d_G(x,y)^2 - d_G(x,y')^2| \leq |d_G(x,y)+d_G(x,y')|\cdot|d_G(x,y)-d_G(x,y')| \leq 2\mathrm{diam}(G)\cdot d_G(y,y')$. Divided by $2\sigma_\mathrm{sp}^2$: $\leq \mathrm{diam}(G)/\sigma_\mathrm{sp}^2 \cdot d_G(y,y')$.
+*Spatial part:* $\lvert d_G(x,y)^2 - d_G(x,y')^2 \rvert \leq \lvert d_G(x,y)+d_G(x,y') \rvert\cdot|d_G(x,y)-d_G(x,y')| \leq 2\mathrm{diam}(G)\cdot d_G(y,y')$. Divided by $2\sigma_\mathrm{sp}^2$: $\leq \mathrm{diam}(G)/\sigma_\mathrm{sp}^2 \cdot d_G(y,y')$.
 
-*Fingerprint part:* Let $b = \varphi_v(y)$, $b' = \varphi_v(y')$. Then $\gamma|\|a-b\|^2 - \|a-b'\|^2| \leq \gamma\cdot 2\sqrt{3}\cdot\|b-b'\| \leq \gamma\cdot 2\sqrt{3}\cdot\sqrt{3} = 6\gamma$ for any single step $d_G(y,y')=1$ (since $\|b-b'\| \leq \sqrt{3}$). By triangle inequality (summing steps): $\leq 6\gamma \cdot d_G(y,y')$.
+*Fingerprint part:* Let $b = \varphi_v(y)$, $b' = \varphi_v(y')$. Then $\gamma|\lVert a-b \rVert^2 - \lVert a-b' \rVert^2| \leq \gamma\cdot 2\sqrt{3}\cdot\lVert b-b' \rVert \leq \gamma\cdot 2\sqrt{3}\cdot\sqrt{3} = 6\gamma$ for any single step $d_G(y,y')=1$ (since $\lVert b-b' \rVert \leq \sqrt{3}$). By triangle inequality (summing steps): $\leq 6\gamma \cdot d_G(y,y')$.
 
 Combining: $L_c = \mathrm{diam}(G)/\sigma_\mathrm{sp}^2 + 6\gamma$. $\square$
 
@@ -238,9 +238,9 @@ has a unique solution with the Sinkhorn structure $\pi^*(x,y) = \exp((f^*(x)+g^*
 
 **Hypothesis H-SINK-ENT:** $\varepsilon_\mathrm{OT} \geq \varepsilon_\mathrm{min} > 0$. (Registered as a new canonical technical hypothesis.)
 
-**Lemma H-SINK-6 (Sinkhorn stability, balanced OT, Cat A).** *Under H-SINK-ENT, finite graph $G$, strictly positive marginals $p, q > 0$, and $\|c - c'\|_\infty \leq \delta$:*
-$$\|\pi^*_c - \pi^*_{c'}\|_\mathrm{TV} \leq \frac{M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}}\cdot\frac{2}{1-\kappa},$$
-*where $\kappa = \tanh\!\bigl(\mathrm{osc}(c)/(4\varepsilon_\mathrm{OT})\bigr) < 1$ and $\mathrm{osc}(c) = \max_{x,y,x',y'}|c(x,y)-c(x',y)+c(x',y')-c(x,y')|$.*
+**Lemma H-SINK-6 (Sinkhorn stability, balanced OT, Cat A).** *Under H-SINK-ENT, finite graph $G$, strictly positive marginals $p, q > 0$, and $\lVert c - c' \rVert_\infty \leq \delta$:*
+$$\lVert \pi^*_c - \pi^*_{c'} \rVert_\mathrm{TV} \leq \frac{M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}}\cdot\frac{2}{1-\kappa},$$
+*where $\kappa = \tanh\!\bigl(\mathrm{osc}(c)/(4\varepsilon_\mathrm{OT})\bigr) < 1$ and $\mathrm{osc}(c) = \max_{x,y,x',y'}\lvert c(x,y)-c(x',y)+c(x',y')-c(x,y') \rvert$.*
 
 **Proof.** We prove dual-potential stability first, then lift to plan stability.
 
@@ -252,27 +252,27 @@ is a contraction in the Hilbert projective metric on $\mathbb{R}^n_+$ with rate
 $$\kappa = \tanh\!\Bigl(\frac{\mathrm{osc}(c)}{4\varepsilon_\mathrm{OT}}\Bigr) < 1$$
 for any bounded cost $c$ and $\varepsilon_\mathrm{OT} > 0$ (Sinkhorn 1964; Birkhoff 1957; Franklin-Lorenz 1989). The fixed points $f^*_c, g^*_c$ are unique (up to normalization).
 
-For the perturbed cost $c' = c + \Delta$ with $\|\Delta\|_\infty \leq \delta$: $T_{c'}$ is also a contraction with the same rate (since $\mathrm{osc}(c')=\mathrm{osc}(c)$ to leading order for small $\delta$, and in any case $\kappa' \leq \tanh((\mathrm{osc}(c)+2\delta)/(4\varepsilon_\mathrm{OT}))$).
+For the perturbed cost $c' = c + \Delta$ with $\lVert \Delta \rVert_\infty \leq \delta$: $T_{c'}$ is also a contraction with the same rate (since $\mathrm{osc}(c')=\mathrm{osc}(c)$ to leading order for small $\delta$, and in any case $\kappa' \leq \tanh((\mathrm{osc}(c)+2\delta)/(4\varepsilon_\mathrm{OT}))$).
 
 Bounding the one-step discrepancy between $T_c$ and $T_{c'}$ at the same argument $g$:
-$$\|(T_c g - T_{c'} g)\|_\infty = \varepsilon_\mathrm{OT}\sup_x\left|\log\frac{\sum_y e^{(g(y)-c(x,y))/\varepsilon_\mathrm{OT}}}{\sum_y e^{(g(y)-c'(x,y))/\varepsilon_\mathrm{OT}}}\right| \leq \sup_{x,y}|c(x,y)-c'(x,y)| = \delta,$$
+$$\lVert (T_c g - T_{c'} g) \rVert_\infty = \varepsilon_\mathrm{OT}\sup_x\left|\log\frac{\sum_y e^{(g(y)-c(x,y))/\varepsilon_\mathrm{OT}}}{\sum_y e^{(g(y)-c'(x,y))/\varepsilon_\mathrm{OT}}}\right| \leq \sup_{x,y}\lvert c(x,y)-c'(x,y) \rvert = \delta,$$
 using the log-sum-exp inequality $|\log\sum a_y e^{u_y} - \log\sum a_y e^{v_y}| \leq \max_y|u_y-v_y|$.
 
 By the standard fixed-point perturbation lemma (for $\kappa$-contractions):
-$$\|f^*_c - f^*_{c'}\|_\infty \leq \frac{\delta}{1-\kappa}.$$
+$$\lVert f^*_c - f^*_{c'} \rVert_\infty \leq \frac{\delta}{1-\kappa}.$$
 
 By symmetry (the $g$-update is also a $\kappa$-contraction):
-$$\|g^*_c - g^*_{c'}\|_\infty \leq \frac{\delta}{1-\kappa}.$$
+$$\lVert g^*_c - g^*_{c'} \rVert_\infty \leq \frac{\delta}{1-\kappa}.$$
 
 *Step 2: Plan stability.*
 
-Using the plan formula and $|e^a - e^b| \leq e^{\max(a,b)}|a-b|$ with the total-mass normalization:
-$$\|\pi^*_c - \pi^*_{c'}\|_1 = \sum_{x,y}|\pi^*_c(x,y) - \pi^*_{c'}(x,y)|$$
-$$\leq \frac{1}{\varepsilon_\mathrm{OT}}\sum_{x,y}\max(\pi^*_c,\pi^*_{c'})(x,y)\cdot\bigl(|f^*-f'^*|+|g^*-g'^*|+|c-c'|\bigr)$$
+Using the plan formula and $\lvert e^a - e^b \rvert \leq e^{\max(a,b)}\lvert a-b \rvert$ with the total-mass normalization:
+$$\lVert \pi^*_c - \pi^*_{c'} \rVert_1 = \sum_{x,y}|\pi^*_c(x,y) - \pi^*_{c'}(x,y)|$$
+$$\leq \frac{1}{\varepsilon_\mathrm{OT}}\sum_{x,y}\max(\pi^*_c,\pi^*_{c'})(x,y)\cdot\bigl(\lvert f^*-f'^* \rvert+\lvert g^*-g'^* \rvert+\lvert c-c' \rvert\bigr)$$
 $$\leq \frac{M_\mathrm{tot}}{\varepsilon_\mathrm{OT}}\cdot\Bigl(\frac{2\delta}{1-\kappa} + \delta\Bigr) = \frac{M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}}\cdot\Bigl(\frac{2}{1-\kappa}+1\Bigr).$$
 
-Since $\|\pi - \pi'\|_\mathrm{TV} = \frac{1}{2}\|\pi-\pi'\|_1$:
-$$\|\pi^*_c - \pi^*_{c'}\|_\mathrm{TV} \leq \frac{M_\mathrm{tot}\,\delta}{2\varepsilon_\mathrm{OT}}\cdot\Bigl(\frac{2}{1-\kappa}+1\Bigr) \leq \frac{M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}}\cdot\frac{2}{1-\kappa}. \qquad\square$$
+Since $\lVert \pi - \pi' \rVert_\mathrm{TV} = \frac{1}{2}\lVert \pi-\pi' \rVert_1$:
+$$\lVert \pi^*_c - \pi^*_{c'} \rVert_\mathrm{TV} \leq \frac{M_\mathrm{tot}\,\delta}{2\varepsilon_\mathrm{OT}}\cdot\Bigl(\frac{2}{1-\kappa}+1\Bigr) \leq \frac{M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}}\cdot\frac{2}{1-\kappa}. \qquad\square$$
 
 **Contraction rate for SCC cost class.** The oscillation:
 $$\mathrm{osc}(c) \leq 2\max_{x,y}c(x,y) \leq \frac{\mathrm{diam}(G)^2}{\sigma_\mathrm{sp}^2} + 12\gamma.$$
@@ -285,7 +285,7 @@ $$\mathrm{osc}(c) \leq 2 + 12 = 14, \qquad \kappa = \tanh(14/0.4) = \tanh(35) \a
 For H-SINK's canonical application (Lemma 8.2 = S-B2): we do NOT need the full plan-stability bound. We only need the dual-potential Lipschitz $L_g \leq L_c$ (Step 1 alone suffices).
 
 **Lemma H-SINK-6 for partial OT (canonical SCC, Cat A — W7-FINAL upgrade).** Canonical SCC uses one-sided row-normalized transport (E1: $M^*(x,y) = u_t(x)\cdot\mathrm{softmax}(-c(x,\cdot)/\varepsilon_\mathrm{OT})(y)$). Each row is independent — there are NO column constraints. Plan stability therefore follows directly from row-softmax Lipschitz (Theorem Partial-H-SINK, `partial_ot_stability.md`):
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{m_t\delta}{\varepsilon_\mathrm{OT}}e^{2\delta/\varepsilon_\mathrm{OT}}.$$
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t\delta}{\varepsilon_\mathrm{OT}}e^{2\delta/\varepsilon_\mathrm{OT}}.$$
 No Séjourné et al. 2019 needed. The previous "Cat B — Séjourné instantiation pending" gap is now **closed**.
 
 **Status: Cat A for both balanced OT and partial/one-sided OT (canonical SCC E1 case). W7-FINAL 2026-05-10.**
@@ -303,16 +303,16 @@ No Séjourné et al. 2019 needed. The previous "Cat B — Séjourné instantiati
 - **(G)** Fixed strictly positive marginals $p(x) > 0$, $q(y) > 0$ (balanced OT).
 
 *The SCC temporal Sinkhorn plan satisfies:*
-$$\|\pi^*_{u,v} - \pi^*_{u',v'}\|_\mathrm{TV} \;\leq\; K_\mathrm{HSINK}\,\bigl(\|u-u'\|_\infty + \|v-v'\|_\infty\bigr),$$
+$$\lVert \pi^*_{u,v} - \pi^*_{u',v'} \rVert_\mathrm{TV} \;\leq\; K_\mathrm{HSINK}\,\bigl(\lVert u-u' \rVert_\infty + \lVert v-v' \rVert_\infty\bigr),$$
 *where*
 $$K_\mathrm{HSINK} = \frac{M_\mathrm{tot}\,L_5}{\varepsilon_\mathrm{OT}}\cdot\frac{2}{1-\kappa}, \qquad L_5 = 2\gamma\sqrt{3}\,L_\varphi, \qquad \kappa = \tanh\!\Bigl(\frac{\mathrm{osc}(c)}{4\varepsilon_\mathrm{OT}}\Bigr).$$
 
 **Proof.** Chain of lemmas:
-1. H-SINK-4: $\|\varphi_u(x)-\varphi_{u'}(x)\| \leq L_\varphi \|u-u'\|_\infty$ for all $x$.
-2. H-SINK-5 (DR2-fields): $\|c_{u,v}-c_{u',v'}\|_\infty \leq L_5(\|u-u'\|_\infty + \|v-v'\|_\infty)$.
-3. H-SINK-6 (balanced OT): $\|\pi^*_c - \pi^*_{c'}\|_\mathrm{TV} \leq M_\mathrm{tot}\delta\cdot\tfrac{2}{(1-\kappa)\varepsilon_\mathrm{OT}}$ where $\delta = \|c-c'\|_\infty$.
+1. H-SINK-4: $\lVert \varphi_u(x)-\varphi_{u'}(x) \rVert \leq L_\varphi \lVert u-u' \rVert_\infty$ for all $x$.
+2. H-SINK-5 (DR2-fields): $\lVert c_{u,v}-c_{u',v'} \rVert_\infty \leq L_5(\lVert u-u' \rVert_\infty + \lVert v-v' \rVert_\infty)$.
+3. H-SINK-6 (balanced OT): $\lVert \pi^*_c - \pi^*_{c'} \rVert_\mathrm{TV} \leq M_\mathrm{tot}\delta\cdot\tfrac{2}{(1-\kappa)\varepsilon_\mathrm{OT}}$ where $\delta = \lVert c-c' \rVert_\infty$.
 
-Setting $\delta = L_5(\|u-u'\|_\infty + \|v-v'\|_\infty)$ and composing gives the theorem. $\square$
+Setting $\delta = L_5(\lVert u-u' \rVert_\infty + \lVert v-v' \rVert_\infty)$ and composing gives the theorem. $\square$
 
 **Sub-theorem H-SINK-S2 (Dual-potential Lipschitz = S-B2 = Lemma 8.2).** *Under assumptions (A), (B), (C), (F):*
 $$L_g(\varepsilon_\mathrm{OT}) \leq L_c := \frac{\mathrm{diam}(G)}{\sigma_\mathrm{sp}^2} + 6\gamma.$$
@@ -320,7 +320,7 @@ $$L_g(\varepsilon_\mathrm{OT}) \leq L_c := \frac{\mathrm{diam}(G)}{\sigma_\mathr
 *The optimal Sinkhorn dual potentials $f^*, g^*$ for the SCC temporal cost class are $L_c$-Lipschitz with respect to the graph metric on $\mathcal{P}$.*
 
 **Proof.** By the Sinkhorn fixed-point identity (Step 1 of Lemma H-SINK-6 proof):
-$$|g^*(y) - g^*(y')| \leq \max_x|c(x,y) - c(x,y')| \leq L_c \cdot d_G(y,y')$$
+$$\lvert g^*(y) - g^*(y') \rvert \leq \max_x|c(x,y) - c(x,y')| \leq L_c \cdot d_G(y,y')$$
 using DR2-spatial (Lemma H-SINK-5). No plan-stability or contraction argument needed. $\square$
 
 **Classification:**

@@ -109,7 +109,7 @@ CV-1.15 (T-ACT-GIBBS, Cat A):
 
 **CV-1.15로 해소되지 않은 블로커**:
 
-- Sinkhorn scaling gap: $\|M^{\mathrm{sink}}(K_{t\to r}) - M_1 M_2\|_\infty$의 bound.
+- Sinkhorn scaling gap: $\lVert M^{\mathrm{sink}}(K_{t\to r}) - M_1 M_2 \rVert_\infty$의 bound.
 - 이것은 cost level 문제가 아니라 **normalization level 문제**이다.
 
 **OP-0012-SINK 해소를 위해 여전히 필요한 것**:
@@ -130,10 +130,10 @@ CV-1.15 (T-ACT-GIBBS, Cat A):
 **완료 사항**:
 
 1. **Endpoint cost 실패 증명 (Cat A)**  
-   $c^\mathrm{end}(x,z)=\|z-x\|^2$는 temporal composition과 호환되지 않는다. 반례: $x=0,z=2$에서 좌변 $4$, 우변 $\leq 2$. Time-normalized cost $\|z-x\|^2/(r-t)$는 등속 경로에서 additive (L-ACTION-NORMALIZATION).
+   $c^\mathrm{end}(x,z)=\lVert z-x \rVert^2$는 temporal composition과 호환되지 않는다. 반례: $x=0,z=2$에서 좌변 $4$, 우변 $\leq 2$. Time-normalized cost $\lVert z-x \rVert^2/(r-t)$는 등속 경로에서 additive (L-ACTION-NORMALIZATION).
 
 2. **Action cost 정의 및 admissibility (Cat A)**  
-   SCC fingerprint action $a_i(x,y)=d^2/\Delta t + \gamma\|\Delta\varphi\|^2/\Delta t$는 $a_i\geq0$ + additive 조건 만족 (L-FINGERPRINT-ACTION-ADMISSIBLE).
+   SCC fingerprint action $a_i(x,y)=d^2/\Delta t + \gamma\lVert \Delta\varphi \rVert^2/\Delta t$는 $a_i\geq0$ + additive 조건 만족 (L-FINGERPRINT-ACTION-ADMISSIBLE).
 
 3. **T-ACT-DP — Hard-min Bellman DP (Cat A, 핵심)**  
    $c_{i\to k}^{\mathrm{act}}=\min_y[c_{i\to j}^{\mathrm{act}}+c_{j\to k}^{\mathrm{act}}]$. 양방향 부등식 증명 완결. 이 결과로 $\delta_\mathrm{eff}=0$ (action cost 재정의 시).
@@ -161,7 +161,7 @@ canonical.md §13 CV-1.15 항목으로 삽입 가능한 최소 문장:
 ---
 
 > **CV-1.15 (Action-Based Temporal Succession Package, 2026-05-12)**.
-> SCC fingerprint action $a_i(x,y)=d_i^2/\Delta t_i+\gamma\|\Delta\varphi\|^2/\Delta t_i$에 대해 두 결과를 증명한다.
+> SCC fingerprint action $a_i(x,y)=d_i^2/\Delta t_i+\gamma\lVert \Delta\varphi \rVert^2/\Delta t_i$에 대해 두 결과를 증명한다.
 >
 > **T-ACT-DP** (Cat A): 유한 site set에서 hard-min action cost는 Bellman 원리를 만족한다:
 > $c_{i\to k}^{\mathrm{act}}(x,z)=\min_{y}[c_{i\to j}^{\mathrm{act}}(x,y)+c_{j\to k}^{\mathrm{act}}(y,z)]$.

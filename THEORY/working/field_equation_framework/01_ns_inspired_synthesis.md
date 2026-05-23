@@ -168,7 +168,7 @@ eigenvalues of constrained Hessian on $T_{u^*}\Sigma_m = \mathbf{1}^\perp$, inde
 
 ### §3.4 T8 phase transition (canonical SB7, Cat A)
 
-$$\Sigma_{T8} = \left\{(\alpha, \beta, c) : \mu_2 = 0\right\} = \left\{(\alpha, \beta, c) : \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{|W''(c)|}\right\}$$
+$$\Sigma_{T8} = \left\{(\alpha, \beta, c) : \mu_2 = 0\right\} = \left\{(\alpha, \beta, c) : \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{\lvert W''(c) \rvert}\right\}$$
 
 codim-1 algebraic hypersurface in parameter space. *Wall 위*: formation regime. *아래*: uniform stable.
 
@@ -360,11 +360,11 @@ CSSL §3.2 의 *유일하게 critic-survived* idea: $(\alpha, \beta) \to (s\alph
 | 5 | **St** (Stokes) | $\dfrac{T_*}{\mu_k}$ | thermal time vs mode k relaxation time | Hessian + T-PF-A1-SDE | Cat A direct |
 | 6 | **Sc^{(1)}** (mode-Hessian) | $\dfrac{\mu_k}{T_*} = \text{St}^{-1}$ | mode k 의 deterministic vs thermal | Hessian + T_* | Cat A direct |
 | 7 | **Sc^{(2)}** (bulk-active separation) | $\dfrac{\mu_{\text{bulk}}}{\mu_{\text{active}}}$ | H-Morse spectral gap 의 직접 정량화 | L-HMORSE-DECOMP (Cat B) | **Cat B target** |
-| 8 | **Sc_{T8}** (T8 ratio) | $\dfrac{4\alpha \lambda_2(L_G)}{\beta |W''(c)|}$ | T8 임계 ratio (canonical SB7 의 dimensionless rename) | SB7 (Cat A) | Cat A direct (rename) |
+| 8 | **Sc_{T8}** (T8 ratio) | $\dfrac{4\alpha \lambda_2(L_G)}{\beta \lvert W''(c) \rvert}$ | T8 임계 ratio (canonical SB7 의 dimensionless rename) | SB7 (Cat A) | Cat A direct (rename) |
 | 9 | **Sc^{(bd)} = Pr^{(bd)}** (boundary layer) | $\dfrac{\alpha \cdot W''(u^*)}{T_*}$ | det/thermal boundary width ratio | det $\sqrt{\alpha/\beta}$ + thermal $\sqrt{T_*/(\beta W'')}$ | Cat A direct |
 | 10 | **Pr^{(spatial)}** | $\dfrac{\alpha \lambda_2(L_G)}{T_*}$ | spatial det vs thermal | Theorem 4 spatial part | Cat A direct |
-| 11 | **Pr^{(onsite)}** | $\dfrac{\beta |W''(c)|}{T_*}$ | onsite det vs thermal | Theorem 4 onsite part | Cat A direct |
-| 12 | **Pr^{(Kramers)}** | $\dfrac{|\mu_{\text{well}}|}{|\mu_{\text{saddle}}|}$ | Eyring-Kramers prefactor input | Hänggi-Talkner-Borkovec 1990 (외부) + canonical Hessian | **Cat B target (highest leverage)** |
+| 11 | **Pr^{(onsite)}** | $\dfrac{\beta \lvert W''(c) \rvert}{T_*}$ | onsite det vs thermal | Theorem 4 onsite part | Cat A direct |
+| 12 | **Pr^{(Kramers)}** | $\dfrac{|\mu_{\text{well}}\lvert }{ \rvert\mu_{\text{saddle}}|}$ | Eyring-Kramers prefactor input | Hänggi-Talkner-Borkovec 1990 (외부) + canonical Hessian | **Cat B target (highest leverage)** |
 
 ### §6.2 Per-number CoC chain (key entries)
 

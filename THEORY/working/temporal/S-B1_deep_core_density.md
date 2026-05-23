@@ -77,7 +77,7 @@ Since $\hat{u}(x) \leq 1$ for all $x$: $m^\mathrm{boundary} \leq |\partial_2\tex
 
 For a convex set of size $m$ on a 2D grid: $|\partial_2\text{Core}| \leq 2\sqrt{2\pi m}$ (discrete isoperimetric: boundary layer $\approx 2 \times$ perimeter width).
 
-Actually, from T-Persist-1(e) "Boundary thinness": $\text{Core} \setminus \text{Core}^{\delta \geq 2} = \partial\text{Core}$ (one-step boundary). So $|\partial_2\text{Core}| = |\partial_1\text{Core}|$ (one-step boundary nodes).
+Actually, from T-Persist-1(e) "Boundary thinness": $\text{Core} \setminus \text{Core}^{\delta \geq 2} = \partial\text{Core}$ (one-step boundary). So $|\partial_2\text{Core}\lvert = \rvert\partial_1\text{Core}|$ (one-step boundary nodes).
 
 For a disk-like core of area $m$ on 2D grid: perimeter $\approx 2\sqrt{\pi m}$, so $|\partial_1\text{Core}| \approx 2\sqrt{\pi m}$.
 
@@ -112,14 +112,14 @@ $$m^\mathrm{boundary} = \sum_{x \in \partial_1\text{Core}} \hat{u}(x) \approx |\
 where $\bar u_\partial \in [\theta_\mathrm{core}, 1]$ is the average cohesion on the boundary ring.
 
 **Ratio:**
-$$\rho_\mathrm{deep} \approx \frac{|\text{Core}^2|}{|\text{Core}|} \cdot \frac{1 - \epsilon_\mathrm{int}}{1} \approx 1 - \frac{|\partial_1\text{Core}|}{|\text{Core}|}.$$
+$$\rho_\mathrm{deep} \approx \frac{|\text{Core}^2|}{|\text{Core}|} \cdot \frac{1 - \epsilon_\mathrm{int}}{1} \approx 1 - \frac{|\partial_1\text{Core}\lvert }{ \rvert\text{Core}|}.$$
 
-The $\rho_\mathrm{deep}$ depends purely on the geometric ratio $|\partial_1\text{Core}|/|\text{Core}|$. For typical SCC formations on 15×15 grid, we need this ratio $\leq 0.16$ (for $\rho_\mathrm{deep} \geq 0.84$).
+The $\rho_\mathrm{deep}$ depends purely on the geometric ratio $|\partial_1\text{Core}\lvert / \rvert\text{Core}|$. For typical SCC formations on 15×15 grid, we need this ratio $\leq 0.16$ (for $\rho_\mathrm{deep} \geq 0.84$).
 
 **For a circular core of radius $r$ on 2D grid:**
 - $|\text{Core}| = \pi r^2$ (approximately)
 - $|\partial_1\text{Core}| \approx 2\pi r$ (boundary ring of width 1)
-- Ratio: $|\partial_1\text{Core}|/|\text{Core}| \approx 2/r$
+- Ratio: $|\partial_1\text{Core}\lvert / \rvert\text{Core}| \approx 2/r$
 
 For ratio $\leq 0.16$: need $r \geq 12.5$, i.e., core area $\geq \pi \cdot 12.5^2 \approx 491$ nodes.
 
@@ -164,38 +164,38 @@ This is confirmed by the Cat B status of Lemma 2 in the lemma table: Lemma 2 is 
 
 ### Route 5: Conditional theorem under HWF (well-formedness) assumptions
 
-**Hypothesis HWF-1 (Deep-core non-degenerate):** Core $C_i^t$ has isoperimetric ratio $|\partial_1 C_i^t| / |C_i^t| \leq 0.16$ (a "round enough" formation).
+**Hypothesis HWF-1 (Deep-core non-degenerate):** Core $C_i^t$ has isoperimetric ratio $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.16$ (a "round enough" formation).
 
 **Hypothesis HWF-2 (Interior saturation):** For all $x \in C_i^t$ with $d_G(x, \partial C_i^t) \geq 2$: $u_t(x) \geq 0.90$.
 
 **Hypothesis HWF-3 (Boundary regularity):** For $x \in \partial_1 C_i^t$: $u_t(x) \geq \theta_\mathrm{core} = 0.70$.
 
 **Under HWF-1, HWF-2, HWF-3:**
-$$m_i^{t,\mathrm{deep}} = \sum_{x \in C_i^t : d \geq 2} u_t(x) \geq 0.90 \cdot |\text{Core}^2| = 0.90 \cdot (|C_i^t| - |\partial_1 C_i^t|)$$
-$$\geq 0.90 \cdot |C_i^t| \cdot (1 - 0.16) = 0.90 \cdot 0.84 \cdot |C_i^t|.$$
+$$m_i^{t,\mathrm{deep}} = \sum_{x \in C_i^t : d \geq 2} u_t(x) \geq 0.90 \cdot |\text{Core}^2| = 0.90 \cdot (\lvert C_i^t \rvert - |\partial_1 C_i^t|)$$
+$$\geq 0.90 \cdot \lvert C_i^t \rvert \cdot (1 - 0.16) = 0.90 \cdot 0.84 \cdot \lvert C_i^t \rvert.$$
 
-$$m_i^t = \sum_{x \in C_i^t} u_t(x) \leq 1 \cdot |C_i^t|.$$
+$$m_i^t = \sum_{x \in C_i^t} u_t(x) \leq 1 \cdot \lvert C_i^t \rvert.$$
 
-$$\rho_\mathrm{deep} \geq \frac{0.90 \cdot 0.84 \cdot |C_i^t|}{|C_i^t|} = 0.756.$$
+$$\rho_\mathrm{deep} \geq \frac{0.90 \cdot 0.84 \cdot \lvert C_i^t \rvert}{\lvert C_i^t \rvert} = 0.756.$$
 
 Hmm, this gives 0.756, below the 0.84 target. We need sharper bounds.
 
 **Refined under HWF-1,2:**
-$$\rho_\mathrm{deep} = \frac{m_i^{t,\mathrm{deep}}}{m_i^t} \geq \frac{0.90 (1 - 0.16) |C_i^t|}{1.0 \cdot |C_i^t|} = 0.756.$$
+$$\rho_\mathrm{deep} = \frac{m_i^{t,\mathrm{deep}}}{m_i^t} \geq \frac{0.90 (1 - 0.16) \lvert C_i^t \rvert}{1.0 \cdot \lvert C_i^t \rvert} = 0.756.$$
 
 For $\rho_\mathrm{deep} \geq 0.84$, we need interior saturation $\geq 1.0$ (i.e., $u(x) = 1$ in deep core) and boundary fraction $\leq 0.16$:
-$$\rho_\mathrm{deep} = \frac{|C_i^t| - |\partial_1 C_i^t|}{|C_i^t|} \geq 1 - 0.16 = 0.84.$$
+$$\rho_\mathrm{deep} = \frac{\lvert C_i^t \rvert - |\partial_1 C_i^t|}{\lvert C_i^t \rvert} \geq 1 - 0.16 = 0.84.$$
 
-So $\rho_\mathrm{deep} \geq 0.84$ **exactly when HWF-1 holds** ($|\partial_1 C_i^t|/|C_i^t| \leq 0.16$) AND deep-core values are $u(x) = 1$ (phase-transition regime).
+So $\rho_\mathrm{deep} \geq 0.84$ **exactly when HWF-1 holds** ($|\partial_1 C_i^t|/\lvert C_i^t \rvert \leq 0.16$) AND deep-core values are $u(x) = 1$ (phase-transition regime).
 
 **Theorem S-B1 (Cat B conditional).** *Under:*
-- **(HWF-1)** $|\partial_1 C_i^t| / |C_i^t| \leq 0.16$ (isoperimetric ratio bound),
+- **(HWF-1)** $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.16$ (isoperimetric ratio bound),
 - **(HWF-2')** $u_t(x) \geq 0.99$ for all $x \in C_i^t$ with $d_G(x, \partial C_i^t) \geq 2$ (near-unit interior),
 - **(HWF-3')** Standard SCC well-formedness: $\beta > 7\alpha$, $m_i^t \geq 25$ (from canonical T-Persist-1(d) Cat C + T8-Core):
 
 $$\rho_\mathrm{deep}(C_i^t) \geq (1 - 0.16) \cdot 0.99 / 1.0 \approx 0.831.$$
 
-*With HWF-1 strengthened to $|\partial_1 C_i^t| / |C_i^t| \leq 0.155$ and near-unit interior $u \geq 0.99$: $\rho_\mathrm{deep} \geq 0.84$.*
+*With HWF-1 strengthened to $|\partial_1 C_i^t| / \lvert C_i^t \rvert \leq 0.155$ and near-unit interior $u \geq 0.99$: $\rho_\mathrm{deep} \geq 0.84$.*
 
 **Status: Cat B conditional** under HWF-1 (tightened) + HWF-2' + standard SCC well-formedness.
 
@@ -218,7 +218,7 @@ The fact that $\Delta_\mathrm{sep} \approx 0.726 > 0$ at $\varepsilon_\mathrm{OT
 
 **Attempt:** Can we construct a legal SCC formation satisfying canonical assumptions but with $\rho_\mathrm{deep} < 0.84$?
 
-**Construction:** Take a thin elongated formation (high aspect ratio). On a 15×15 grid, a 2×10 rectangular core has $|C| = 20$, $|\partial_1 C| = 18$ (almost all boundary!), $\rho_\mathrm{deep} \approx 2/20 = 0.10$.
+**Construction:** Take a thin elongated formation (high aspect ratio). On a 15×15 grid, a 2×10 rectangular core has $\lvert C \rvert = 20$, $|\partial_1 C| = 18$ (almost all boundary!), $\rho_\mathrm{deep} \approx 2/20 = 0.10$.
 
 But is a 2×10 rectangle a legal SCC single-formation minimizer? With SCC separation energy, thin elongated formations are penalized — the separation energy $\mathcal{E}_\mathrm{sep}$ favors compact round formations. The canonical SCC minimizer is "disk-like" by the morphological constraint $\mathcal{Q}_\mathrm{morph}$.
 
@@ -231,7 +231,7 @@ But is a 2×10 rectangle a legal SCC single-formation minimizer? With SCC separa
 ## 2. Final Classification
 
 **Theorem S-B1 (Cat B conditional).** $\rho_\mathrm{deep}(C_i^t) \geq 0.84$ holds under:
-1. **HWF-1:** $|\partial_1 C_i^t|/|C_i^t| \leq 0.155$ (round formation, isoperimetric bound)
+1. **HWF-1:** $|\partial_1 C_i^t|/\lvert C_i^t \rvert \leq 0.155$ (round formation, isoperimetric bound)
 2. **HWF-2':** Near-unit interior: $u_t(x) \geq 0.99$ for $x$ in deep core
 3. **SCC well-formedness:** $\beta > 7\alpha$ (canonical H3 condition, T-Persist-1(d) Cat C), core size ≥ 25
 
@@ -281,10 +281,10 @@ The value $0.84$ in the formula is the **observed** $\rho_\mathrm{deep}$ from ex
 
 ### 5.2 New result: Lemma S-B1-Weak (Cat A)
 
-**Lemma S-B1-Weak (Cat A).** Under canonical SCC single-formation assumptions with $|C_i^t| \geq 25$ and $\beta > 7\alpha$:
+**Lemma S-B1-Weak (Cat A).** Under canonical SCC single-formation assumptions with $\lvert C_i^t \rvert \geq 25$ and $\beta > 7\alpha$:
 $$\rho_\mathrm{deep}(C_i^t) \geq \frac{\theta_\mathrm{core}}{n} = \frac{0.7}{225} \approx 0.00311 > \rho_*.$$
 
-*Proof.* H2' (deep core non-emptiness, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives $|\mathrm{Core}^2| \geq 1$. For any $x^* \in \mathrm{Core}^2$: $u(x^*) \geq \theta_\mathrm{core} = 0.7$, so $m^\mathrm{deep} \geq 0.7$. Since $m \leq |C_i^t| \leq n = 225$: $\rho_\mathrm{deep} \geq 0.7/225 > \rho_*$. ∎
+*Proof.* H2' (deep core non-emptiness, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives $|\mathrm{Core}^2| \geq 1$. For any $x^* \in \mathrm{Core}^2$: $u(x^*) \geq \theta_\mathrm{core} = 0.7$, so $m^\mathrm{deep} \geq 0.7$. Since $m \leq \lvert C_i^t \rvert \leq n = 225$: $\rho_\mathrm{deep} \geq 0.7/225 > \rho_*$. ∎
 
 **Corollary (Cat A):** $\Delta_\mathrm{sep} > 0$ under canonical assumptions. Therefore T-Temporal-Identity (b,d) Cat A is NOT blocked by ρ_deep ≥ 0.84. Remaining blockers: S-A1, S-A3.
 

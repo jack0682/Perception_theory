@@ -113,7 +113,7 @@ A state $\mathbf u \in S_A^\varepsilon(G_t)$ is **$(\varepsilon, \delta, D_{\mat
    \langle u^{(j)}, u^{(k)} \rangle := \sum_x u^{(j)}(x) u^{(k)}(x) \;\le\; \eta.
    $$
 
-5. **Single-mode per formation (aggregate-side).** The aggregate $U(\mathbf u)$ has exactly $|A|$ $H_0$ bars of length $\ge \ell_{\min}$ in the superlevel filtration $\mathrm{Dgm}_0^{\sup}(U)$, and all remaining bars have length below an auxiliary noise threshold $\ell_{\mathrm{noise}} \ll \ell_{\min}$.
+5. **Single-mode per formation (aggregate-side).** The aggregate $U(\mathbf u)$ has exactly $\lvert A \rvert$ $H_0$ bars of length $\ge \ell_{\min}$ in the superlevel filtration $\mathrm{Dgm}_0^{\sup}(U)$, and all remaining bars have length below an auxiliary noise threshold $\ell_{\mathrm{noise}} \ll \ell_{\min}$.
 
 These hypotheses are sufficient. They are not minimal. Condition 5 is the load-bearing one for the bridge: it says each labelled slot contributes exactly one robust aggregate-$H_0$ feature, and no additional features arise from per-formation internal multimodality, overlap-induced peak fission, or substrate noise.
 
@@ -140,17 +140,17 @@ where $\ell_i(v)$ are the lengths of the bars in the $H_0$ superlevel persistenc
 **Bridge identity (exact).** Suppose $\mathbf u \in S_A^\varepsilon(G_t)$ is $(\varepsilon, \delta, D_{\mathrm{sep}}, \ell_{\min}, \eta)$-well-separated per §4 with condition (5) holding. Then
 
 $$
-K_{\mathrm{bar}}^{\ell_{\min}}\!\big(U(\mathbf u)\big) \;=\; K_{\mathrm{act}}^\varepsilon(\mathbf u) \;=\; |A|.
+K_{\mathrm{bar}}^{\ell_{\min}}\!\big(U(\mathbf u)\big) \;=\; K_{\mathrm{act}}^\varepsilon(\mathbf u) \;=\; \lvert A \rvert.
 $$
 
-**Status:** theorem-grade under the stated hypotheses (Cat B target). The proof is by reduction: condition (5) directly states the equality $K_{\mathrm{bar}}^{\ell_{\min}}(U) = |A|$; condition (1) directly states $K_{\mathrm{act}}^\varepsilon = |A|$. The work is in the *hypothesis verification*: when does (5) hold given (1)–(4)?
+**Status:** theorem-grade under the stated hypotheses (Cat B target). The proof is by reduction: condition (5) directly states the equality $K_{\mathrm{bar}}^{\ell_{\min}}(U) = \lvert A \rvert$; condition (1) directly states $K_{\mathrm{act}}^\varepsilon = \lvert A \rvert$. The work is in the *hypothesis verification*: when does (5) hold given (1)–(4)?
 
 A sketch of the implication (1)–(4) ⇒ (5):
 
 - Conditions (3), (4) imply that on each $\delta$-support $\mathrm{Supp}_\delta(u^{(j)})$, the aggregate $U(\mathbf u) = u^{(j)} + \sum_{k \ne j} u^{(k)}$ is dominated by $u^{(j)}$ alone (since $u^{(k)}|_{\mathrm{Supp}_\delta(u^{(j)})} \le \delta$ in the disjoint case, plus a small overlap correction $\le \eta$).
 - By condition (2), $\mathrm{Supp}_\delta(u^{(j)})$ is graph-connected. Thus on $\mathrm{Supp}_\delta(u^{(j)})$, $U$ is a single peak (one $H_0$ feature in the local superlevel filtration).
-- Condition (3) ensures the $|A|$ peaks remain separated under aggregation: the inter-support graph distance $\ge D_{\mathrm{sep}}$ guarantees the peaks do not merge in the superlevel filtration above any $\theta > \delta$.
-- Therefore $U$ has exactly $|A|$ robust peaks, and their bar lengths in $\mathrm{Dgm}_0^{\sup}(U)$ are bounded below by $\min_j \max_x u^{(j)}(x) - O(\delta + \eta)$, which can be made $\ge \ell_{\min}$ for appropriate parameter choice.
+- Condition (3) ensures the $\lvert A \rvert$ peaks remain separated under aggregation: the inter-support graph distance $\ge D_{\mathrm{sep}}$ guarantees the peaks do not merge in the superlevel filtration above any $\theta > \delta$.
+- Therefore $U$ has exactly $\lvert A \rvert$ robust peaks, and their bar lengths in $\mathrm{Dgm}_0^{\sup}(U)$ are bounded below by $\min_j \max_x u^{(j)}(x) - O(\delta + \eta)$, which can be made $\ge \ell_{\min}$ for appropriate parameter choice.
 
 The above is a **sketch, not a proof**. A full proof would quantify the constants and the parameter range over which (1)–(4) ⇒ (5) holds. This is downstream work — see §11 next-step item.
 
@@ -276,7 +276,7 @@ This was stable in WQ-LAT-1.B, but it measures excess persistence above $\ell_{\
 
 #### 5.3.3 Corrected smooth bridge candidate
 
-**Corrected Smooth Bridge Candidate.** Suppose $\mathbf u\in S_A^\varepsilon(G_t)$ is well-separated and the aggregate persistence diagram has exactly $|A|$ dominant $H_0$ bars above $\ell_{\min}$, with all subdominant bars below $\ell_{\min}$. If $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ suppresses sub-threshold bars and retains dominant bars, then
+**Corrected Smooth Bridge Candidate.** Suppose $\mathbf u\in S_A^\varepsilon(G_t)$ is well-separated and the aggregate persistence diagram has exactly $\lvert A \rvert$ dominant $H_0$ bars above $\ell_{\min}$, with all subdominant bars below $\ell_{\min}$. If $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ suppresses sub-threshold bars and retains dominant bars, then
 
 $$
 K_{\mathrm{soft}}^\phi\!\big(U(\mathbf u)\big)
@@ -481,16 +481,16 @@ For each snapshot $\mathbf u(t)$ of a Layer II trajectory, compute the following
 
 | # | Quantity | Source | Computation cost |
 |---|---|---|---|
-| 1 | per-slot mass $m_j(t) = \sum_x u^{(j)}(t, x)$ | direct sum | $O(K \cdot |X|)$ |
+| 1 | per-slot mass $m_j(t) = \sum_x u^{(j)}(t, x)$ | direct sum | $O(K \cdot \lvert X \rvert)$ |
 | 2 | active count $K_{\mathrm{act}}^\varepsilon(t) = \#\{j : m_j(t) > \varepsilon\}$ | direct | $O(K)$ |
 | 3 | active set $A(t) = \{j : m_j(t) > \varepsilon\}$ | direct | $O(K)$ |
-| 4 | aggregate field $U(t) = \sum_j u^{(j)}(t)$ | sum | $O(K \cdot |X|)$ |
-| 5 | $H_0$ superlevel barcode $\mathrm{Dgm}_0^{\sup}(U(t); G)$ | `scc.persistence.persistence_h0` (adapted to general `GraphState`) or `_persistence_h0_graph` | $O(|X| \log |X| + |E|)$ Union-Find |
-| 6 | dominant bar lengths $\ell_1, \ell_2, \ldots$ of $\mathrm{Dgm}_0^{\sup}(U(t))$ | sort barcode by length descending | $O(|X| \log |X|)$ |
-| 7 | hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}(U(t)) = \#\{i : \ell_i(U(t)) \ge \ell_{\min}\}$ | direct | $O(|X|)$ |
-| 8 | soft count $K_{\mathrm{soft}}^\phi(U(t)) = \sum_i \phi(\ell_i(U(t)))$ | with explicitly reported $\phi$; use §5.3.2 envelopes for reservoir-invariant count diagnostics | $O(|X|)$ |
-| 9 | pairwise overlaps $O_{jk}(t) = \langle u^{(j)}(t), u^{(k)}(t) \rangle$ | dot products | $O(K^2 \cdot |X|)$ |
-| 10 | pairwise $\delta$-support graph distances $d^\delta_{jk}(t)$ | multi-source BFS via `scc.multi.inter_formation_distances` | $O(K \cdot |E|)$ |
+| 4 | aggregate field $U(t) = \sum_j u^{(j)}(t)$ | sum | $O(K \cdot \lvert X \rvert)$ |
+| 5 | $H_0$ superlevel barcode $\mathrm{Dgm}_0^{\sup}(U(t); G)$ | `scc.persistence.persistence_h0` (adapted to general `GraphState`) or `_persistence_h0_graph` | $O(\lvert X \rvert \log \lvert X \rvert + \lvert E \rvert)$ Union-Find |
+| 6 | dominant bar lengths $\ell_1, \ell_2, \ldots$ of $\mathrm{Dgm}_0^{\sup}(U(t))$ | sort barcode by length descending | $O(\lvert X \rvert \log \lvert X \rvert)$ |
+| 7 | hard-bar count $K_{\mathrm{bar}}^{\ell_{\min}}(U(t)) = \#\{i : \ell_i(U(t)) \ge \ell_{\min}\}$ | direct | $O(\lvert X \rvert)$ |
+| 8 | soft count $K_{\mathrm{soft}}^\phi(U(t)) = \sum_i \phi(\ell_i(U(t)))$ | with explicitly reported $\phi$; use §5.3.2 envelopes for reservoir-invariant count diagnostics | $O(\lvert X \rvert)$ |
+| 9 | pairwise overlaps $O_{jk}(t) = \langle u^{(j)}(t), u^{(k)}(t) \rangle$ | dot products | $O(K^2 \cdot \lvert X \rvert)$ |
+| 10 | pairwise $\delta$-support graph distances $d^\delta_{jk}(t)$ | multi-source BFS via `scc.multi.inter_formation_distances` | $O(K \cdot \lvert E \rvert)$ |
 | 11 | regime label | classify into well-separated / overlap / corner-saturated / ambiguous (§8.2) | $O(K^2)$ |
 
 ### 8.2 Regime classification

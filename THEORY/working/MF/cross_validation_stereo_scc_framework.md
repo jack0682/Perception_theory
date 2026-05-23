@@ -56,7 +56,7 @@ Each row: (Theory/Concept, Original Role, New Framework Position, Disposition, R
 | # | Theory / Concept | Original role | New layer | Disposition | OPs | Dangerous assumptions |
 |---|-----------------|--------------|-----------|-------------|-----|----------------------|
 | 1 | SCC primitive $u_t : X_t \to [0,1]$ | Foundational primitive | B (if $X_t = \mathcal{P}_t$) | **Maintain** | OP-0009-Pre | $X_t$ interpreted as 2D pixel grid conflates layers A and B |
-| 2 | Closure energy $E_{\mathrm{cl}} = \|(I-P)u\|^2$ | Self-reinforcement term in prior | D (SCC prior) | **Maintain** | — | None; well-defined on any graph |
+| 2 | Closure energy $E_{\mathrm{cl}} = \lVert (I-P)u \rVert^2$ | Self-reinforcement term in prior | D (SCC prior) | **Maintain** | — | None; well-defined on any graph |
 | 3 | Separation energy $E_{\mathrm{sep}}$ | Inter-formation repulsion prior | D (SCC prior) | **Maintain** | OP-0009-λ | $\lambda_{\mathrm{rep}}$ as a 5th energy term risks CN5 violation |
 | 4 | Boundary energy $E_{\mathrm{bd}} = 2\alpha u^T L u$ | Interface regularity prior | D (SCC prior) | **Maintain** | OP-0006 | Threshold-based boundary conflates D and F |
 | 5 | Transport energy $E_{\mathrm{tr}}$ | Temporal coherence prior | D (SCC prior) | **Maintain with clarification** | OP-0011 | May conflate temporal prior with likelihood |
@@ -65,7 +65,7 @@ Each row: (Theory/Concept, Original Role, New Framework Position, Disposition, R
 | 8 | Shared-pool manifold $\widetilde\Sigma^K_M$ | Alternative state space | Modeling-layer sub-manifold | **Demote** (same as above) | OP-0009-A | Same pre-supposition as K-field |
 | 9 | $\Sigma_M$ | Single-field simplex | **B: correct foundational state space** | **Promote to foundational** | OP-0009-Pre | None; $K_{\mathrm{act}}$ derived from $\pi_0$ |
 | 10 | Commitment 16 ($K_{\mathrm{field}}/K_{\mathrm{act}}$) | Two-tier K decomposition | G (architectural cap) + F (derived count) | **Maintain; re-read** | OP-0009-K | $K_{\mathrm{field}}$ as ontological entity; should be numerical truncation |
-| 11 | $K_{\mathrm{act}} = \#\{j : \|u^{(j)}\|_1 > \varepsilon\}$ | Active-slot count | F (topological observable) | **Maintain; redefine cleanly** | — | Threshold $\varepsilon$ as free parameter; should be $\pi_0$ of $\varepsilon$-superlevel |
+| 11 | $K_{\mathrm{act}} = \#\{j : \lVert u^{(j)} \rVert_1 > \varepsilon\}$ | Active-slot count | F (topological observable) | **Maintain; redefine cleanly** | — | Threshold $\varepsilon$ as free parameter; should be $\pi_0$ of $\varepsilon$-superlevel |
 | 12 | $K_{\mathrm{act}} = \#\pi_0(\{x : \tilde{u}(x) > \varepsilon\})$ | New definition (this session) | F (topological observable on $\Sigma_M$) | **New canonical candidate** | OP-0009-Pre | None given $\varepsilon$ fixed by Commitment 16 calibration |
 | 13 | Multi-formation static $\sigma$ | $\sigma$-signature at static minimizer | F (topological / group-theoretic label) | **Maintain** | OP-0008 | $\sigma$ at static minimizer may differ from $\sigma$ at dynamic endpoint |
 | 14 | $\sigma^A$ K-jump inheritance | Deterministic label rule at K-jump | F + G interface | **Redefine** as conditional posterior | OP-0008 | Deterministic $\sigma^A$ assumes no randomness in Kramers path |
@@ -114,7 +114,7 @@ Each row: (Theory/Concept, Original Role, New Framework Position, Disposition, R
 |-------|----------------------|
 | **A: Observation** | $\mathfrak{O}_t$, $X_L$, $X_R$, $f_L$, $f_R$, $\Pi_{LR}$, $\delta$, $z$, $c$, camera intrinsics $K_{\mathrm{cam}}$, disparity error model, frame rate $\tau_{\mathrm{frame}}$; raw pixel field $f_t$; gauge/scale appearance $\mathcal{B}(f)$ |
 | **B: Visible Reconstruction** | $\mathcal{P}_t$ (3D point cloud), $\tilde{u}_t : \mathcal{P}_t \to [0,1]$, depth-aware graph $G_t = (\mathcal{P}_t, E_t^{3D})$, back-projection $b_t$, pullback $u_L^{\mathrm{pix}}$; 2D pixel-SCC as degenerate case when $\mathcal{P}_t = X_L$ |
-| **C: Latent Scene** | $\mathcal{M}_t$ (full 3D scene manifold including occluded), $\mu_t$ (scene measure), $U_t : \mathcal{M}_t \to [0,1]$ (full latent field); $\tilde{u}_t = U_t\big|_{\mathcal{P}_t}$ (restriction to visible) |
+| **C: Latent Scene** | $\mathcal{M}_t$ (full 3D scene manifold including occluded), $\mu_t$ (scene measure), $U_t : \mathcal{M}_t \to [0,1]$ (full latent field); $\tilde{u}_t = U_t\big\vert_{\mathcal{P}_t}$ (restriction to visible) |
 | **D: SCC Prior** | $\mathcal{E}_{\mathrm{SCC}} = E_{\mathrm{cl}} + E_{\mathrm{sep}} + E_{\mathrm{bd}} + E_{\mathrm{tr}}$; closure operator $\mathrm{Cl}_t$; distinction $\mathbf{D}_t$; adjacency $\mathbf{N}_t$; double-well $W(u)$; phase-field analogy (Allen-Cahn on $\mathcal{P}_t$ as contrastive comparison); co-belonging $\mathbf{C}_t$ (diagnostic, NOT in prior) |
 | **E: Observation Likelihood** | $\mathcal{L}_{\mathrm{obs}} = E_{\mathrm{photo}}$ (photometric consistency, stereo matching, reprojection); confidence weighting $c(x_L)$; gauge/scale observation variance; $\Pi_{LR}$-based consistency |
 | **F: Topological Observables** | $K_{\mathrm{act}} = \#\pi_0(\{x : \tilde{u}(x) > \varepsilon\})$; boundary band $B_t = $ gradient ridge of $|\nabla_{\mathcal{P}_t}\tilde{u}_t|$; $\sigma$-signature (Commitment 14, static); $\sigma^A$ (dynamic, K-jump conditioned); $T$-L1-F hard-bar bridge; persistent homology / $H_0$ bars; $\mathcal{Q}_{\mathrm{morph}}$; diagnostic vector $\mathbf{d}$; predicate-energy bridge |
@@ -266,7 +266,7 @@ The 15 verification questions:
 
 Each energy term under the new framework:
 
-**$E_{\mathrm{cl}} = \|(I-P)\tilde{u}\|^2$** (closure energy)
+**$E_{\mathrm{cl}} = \lVert (I-P)\tilde{u} \rVert^2$** (closure energy)
 
 - Role in new framework: measures how far $\tilde{u}$ deviates from its relationally completed form $P\tilde{u}$.
 - Bayesian interpretation: $P(\tilde{u}) \propto \exp(-\lambda_{\mathrm{cl}} E_{\mathrm{cl}})$ is a Gaussian prior on $\tilde{u} - P\tilde{u}$ (pulling $\tilde{u}$ toward closure-fixed-point).
@@ -290,10 +290,10 @@ Each energy term under the new framework:
 **$E_{\mathrm{tr}}$ (transport energy)**
 
 - Original role: temporal coherence prior — penalizes deviation from the transported previous field.
-- Layer ambiguity: if $E_{\mathrm{tr}} = \|u_t - M_{t-1 \to t}^* u_{t-1}\|^2$ (deviation from transported predecessor), this is a **prior** on temporal consistency — Layer D.
+- Layer ambiguity: if $E_{\mathrm{tr}} = \lVert u_t - M_{t-1 \to t}^* u_{t-1} \rVert^2$ (deviation from transported predecessor), this is a **prior** on temporal consistency — Layer D.
 - However: if the transport $M_{t-1 \to t}$ depends on observed image features ($\varphi(x) = f_t(x)$), then the realization mixes Layer A (observation) into Layer D (prior). This is a CN5 violation risk.
 - **Assessment**: The transport kernel axioms (E1-E4) are pure field-level; the *realization* using external features $\varphi$ mixes layers.
-- **Minimum modification**: Separate the transport prior (D) from the transport likelihood ($E_{\mathrm{tr,obs}}$, Layer E). Pure transport prior: $E_{\mathrm{tr}}^{\mathrm{prior}} = \|u_t - P^*(G_t, G_{t-1}) u_{t-1}\|^2$ where $P^*(G_t, G_{t-1})$ depends only on graph structure, not image features.
+- **Minimum modification**: Separate the transport prior (D) from the transport likelihood ($E_{\mathrm{tr,obs}}$, Layer E). Pure transport prior: $E_{\mathrm{tr}}^{\mathrm{prior}} = \lVert u_t - P^*(G_t, G_{t-1}) u_{t-1} \rVert^2$ where $P^*(G_t, G_{t-1})$ depends only on graph structure, not image features.
 
 ### §4.2 Photometric term placement
 
@@ -427,7 +427,7 @@ These are NOT the same quantity. Prior work (k_selection_b_kramers.md §4.4 "MFP
 | OP-0005 | $F(K;\mathcal{P})$ cannot be computed without $T$ and $D\tilde{u}$ defined | Langevin on $\Sigma_M$ → partition function $Z_K$ → $P_{\mathrm{eq}}(K)$ |
 | OP-0008 | $\sigma^A$ posterior at K-jump requires stochastic path integral over transition event | Kramers path distribution → conditional $P(\sigma' \mid \mathrm{event})$ |
 | OP-0011 | Transport kernel uniqueness: without stochastic formulation, transport axioms E1-E4 may have multiple realizations with no natural selection | Stochastic optimal transport on $\Sigma_M$ → natural entropy-regularized unique solution |
-| OP-0012 | Persistence composition requires bounding multi-step transport uncertainty | Stochastic bound on $\|M_{t_1 \to t_2} \circ M_{t_2 \to t_3} - M_{t_1 \to t_3}\|$ |
+| OP-0012 | Persistence composition requires bounding multi-step transport uncertainty | Stochastic bound on $\lVert M_{t_1 \to t_2} \circ M_{t_2 \to t_3} - M_{t_1 \to t_3} \rVert$ |
 
 ### §6.5 P-F Axiom v0 (formal statement)
 
@@ -529,7 +529,7 @@ The persistent transition layer is the set of sites that remain in the "boundary
 
 In the stereo setting, depth discontinuities in $\mathcal{P}_t$ (from $E_t^{3D}$ construction) mark physical scene boundaries. These are NOT boundaries of $\tilde{u}_t$ but boundaries of the *support space*:
 
-$$\partial\mathcal{P}_t = \{b_t(x_L) : |z(x_L) - z(y_L)| \geq \delta_z \text{ for some neighbor } y_L\}$$
+$$\partial\mathcal{P}_t = \{b_t(x_L) : \lvert z(x_L) - z(y_L) \rvert \geq \delta_z \text{ for some neighbor } y_L\}$$
 
 This is a Layer B quantity (geometry of the visible reconstruction), distinct from the Layer F boundary $B_t$ of the soft field $\tilde{u}_t$. Confusing them is a Layer B/F conflation error.
 
@@ -742,7 +742,7 @@ The following definitions are sufficiently precise to be candidates for canonica
 
 **D-candidate-1**: State space $\Sigma_M = \{u \in [0,1]^n : \sum_x u(x) = M\}$ as the foundational single-field state space; $K_{\mathrm{act}}(u) = \#\pi_0(\{x : u(x) > \varepsilon\})$ as the canonical derived formation count.
 
-**D-candidate-2**: Back-projection $b_t : X_L \rightharpoonup \mathcal{P}_t$, $b_t(x_L) = z(x_L) K_{\mathrm{cam}}^{-1}[u_L, v_L, 1]^T$; depth-aware adjacency $E_t^{3D} = \{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D}, |z(x) - z(y)| < \delta_z\}$ (both as modeling-layer choices, not canonical axioms).
+**D-candidate-2**: Back-projection $b_t : X_L \rightharpoonup \mathcal{P}_t$, $b_t(x_L) = z(x_L) K_{\mathrm{cam}}^{-1}[u_L, v_L, 1]^T$; depth-aware adjacency $E_t^{3D} = \{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D}, \lvert z(x) - z(y) \rvert < \delta_z\}$ (both as modeling-layer choices, not canonical axioms).
 
 **D-candidate-3**: Four-layer Bayesian separation: prior $P(\tilde{u}) \propto \exp(-\mathcal{E}_{\mathrm{SCC}}[\tilde{u}])$ with exactly four energy terms; likelihood $P(\mathfrak{O}_t|\tilde{u})$ contains all observation-dependent terms including $E_{\mathrm{photo}}$.
 

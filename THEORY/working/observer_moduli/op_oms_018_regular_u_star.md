@@ -274,7 +274,7 @@ $\lambda_c \in (\lambda_A, \lambda_B)$.
 
 At $\lambda_c$ both branches achieve the same energy; $S(\lambda_c)$
 contains at least two distinct points $u^{*,(1)}, u^{*,(2)}$ with
-$\|u^{*,(1)} - u^{*,(2)}\|_{L^2} > 0$. **Any** selection $u^*(\lambda)$ that
+$\lVert u^{*,(1)} - u^{*,(2)} \rVert_{L^2} > 0$. **Any** selection $u^*(\lambda)$ that
 agrees with the two-blob branch on one side of $\lambda_c$ and the
 single-blob branch on the other has a discontinuity at $\lambda_c$. There
 is no continuous global selection. $\square$
@@ -393,7 +393,7 @@ VP-6.
 | **Spinodal Hessian direction** | $H^\perp$ has a zero eigenvalue (inflection in concave-envelope sense) | $u^*$ may bifurcate; pitchfork or saddle-node |
 | **Active-set change without strict complementarity** | $\mu^\pm_i = 0$ at active site | $u^*$ may exit / enter the boundary discontinuously |
 | **Two separated local minima exchange dominance** | $\lambda \in \Sigma_{\mathrm{branch}}$ | $u^*$ jumps; selection discontinuous |
-| **Phase transition (T8: $\beta/\alpha > 4\lambda_2/|W''(c)|$)** | scene-dependent threshold; here $\lambda_{cl}, \lambda_{bd}$ enter via the effective $\alpha, \beta$ | bifurcation surface in $\Delta^3$ |
+| **Phase transition (T8: $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$)** | scene-dependent threshold; here $\lambda_{cl}, \lambda_{bd}$ enter via the effective $\alpha, \beta$ | bifurcation surface in $\Delta^3$ |
 | **OT singularity** | $\varepsilon_{OT} \to 0$ regime | not relevant here; we keep $\varepsilon_{OT}$ bounded away from 0 |
 
 The first three are the dominant concerns inside $\mathrm{int}(\Delta^3)$.
@@ -476,7 +476,7 @@ The fourth is the canonical SCC phase transition translated to OMS coordinates.
   derivative result (Mordukhovich).
 - **Quantitative Lipschitz estimates** for $v(\lambda)$ via the explicit
   energy bounds — these would give a priori control on
-  $|v(\lambda + h\xi) - v(\lambda)| \le L \|h\xi\|$ and constrain the
+  $|v(\lambda + h\xi) - v(\lambda)| \le L \lVert h\xi \rVert$ and constrain the
   geometry of basin level sets.
 
 These are the concrete OPs to register: OP-OMS-027 (corner cases),

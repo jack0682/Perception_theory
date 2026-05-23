@@ -118,7 +118,7 @@ with orbifold singularities at fixed points.
 Arises when the latent space $Z = \mathbb{R}^r$ and the generator $\Gamma$ is equivariant:
 $$\Gamma(R z) = \Gamma(z) \quad \forall R \in O(r)$$
 
-Example: $\Gamma(z) = f(\|z\|^2)$ (depends only on norm). Then $O(r)$ is a latent gauge symmetry. Effective dimension reduction: $r \to 1$ (only the norm matters).
+Example: $\Gamma(z) = f(\lVert z \rVert^2)$ (depends only on norm). Then $O(r)$ is a latent gauge symmetry. Effective dimension reduction: $r \to 1$ (only the norm matters).
 
 **Realistic in SCC?** HYPOTHESIZED if the field generator $\mathcal{G}_\theta$ depends only on the norm of a latent feature vector. Not justified by current SCC structure.
 

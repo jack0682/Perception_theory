@@ -83,11 +83,11 @@ non-smoothness.
 
 Under the stratified-V2 reading:
 
-- **$V_D^0(\lambda) := \|d(\lambda) - d^*\|^2$** (with $d^* = (1,1,1,0)$):
+- **$V_D^0(\lambda) := \lVert d(\lambda) - d^* \rVert^2$** (with $d^* = (1,1,1,0)$):
   Continuous on $\Delta^3$ (since $d$ is continuous on regular branches and
   has bounded jumps at $\Sigma_{\mathrm{branch}}$). $C^2$ on each open
   branch domain. **Admissible** under stratified V2.
-- **$V_P(\Theta) := D_{\mathcal{P}}(P(\Theta), P^*) = \alpha \|d - d^*\|^2 + \beta D_T(T_\Theta, T^*)$:**
+- **$V_P(\Theta) := D_{\mathcal{P}}(P(\Theta), P^*) = \alpha \lVert d - d^* \rVert^2 + \beta D_T(T_\Theta, T^*)$:**
   The $D_T$ term has discrete components, so $V_P$ is **not** continuous
   at $\Sigma_{\mathrm{branch}}$ — it has level jumps when $K_{\mathrm{core}}$
   flips. **Not admissible** as written; would require either dropping $D_T$

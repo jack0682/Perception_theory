@@ -135,7 +135,7 @@ the IFT fails. Concretely:
 $$\Sigma_{\mathrm{Hess}} := \bigl\{\lambda \in \mathrm{int}(\Delta^3) : \det H_T(u^*(\lambda); \lambda) = 0\bigr\}.$$
 
 For the SCC double-well boundary energy, $\det H_T = 0$ corresponds
-exactly to the **T8 phase-transition** condition $\beta_{\mathrm{eff}}(\lambda) / \alpha_{\mathrm{eff}}(\lambda) = 4 \lambda_2(X_t) / |W''(c)|$.
+exactly to the **T8 phase-transition** condition $\beta_{\mathrm{eff}}(\lambda) / \alpha_{\mathrm{eff}}(\lambda) = 4 \lambda_2(X_t) / \lvert W''(c) \rvert$.
 By the analytic-genericity dichotomy, $\Sigma_{\mathrm{Hess}}$ is a codim-1
 algebraic surface in $\Delta^3$.
 

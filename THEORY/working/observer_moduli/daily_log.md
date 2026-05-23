@@ -135,12 +135,12 @@ project: Observer Moduli Space of SCC
 **Session achievements:**
 - Context restored from summary after compaction; session resumed at VP-1 execution step
 - VP-1 script `exp86_vp1_p_resolution_audit.py` run (2 executions: first failed due to json.dump bug at line 890; bug fixed; second run succeeded)
-- **4 definitive counterexamples found** (criterion: $\|d\| < 0.15$ AND $D_T > 0.5$)
+- **4 definitive counterexamples found** (criterion: $\lVert d \rVert < 0.15$ AND $D_T > 0.5$)
 - 3 CEs from Part B (optimizer sweep 12×12): all involve cl_dominant (λ_cl=0.6) giving K_core=2 vs balanced λ giving K_core=1
 - 1 CE from Part D (dense sweep 15×15): independent replication at larger grid
 - Mechanism documented: Inside = $(l_{\max}-c)/(1-c) \times \mathrm{artic}$ collapses H0 barcode; K_core integer is not injectively recoverable from Inside
 - OP-OMS-009 (sub-question a) classified: **RESOLVED-NEGATIVE**
-- Prop R1 upgraded: HYPOTHESIZED → **PROVED** (constructive CE-1, $\|d\|=0.071$)
+- Prop R1 upgraded: HYPOTHESIZED → **PROVED** (constructive CE-1, $\lVert d \rVert=0.071$)
 - OP-OMS-009 blocker removed from canonical promotion checklist
 
 **Files created this session:**
@@ -160,7 +160,7 @@ project: Observer Moduli Space of SCC
 - `daily_log.md` — this entry
 
 **Key mathematical decisions made:**
-1. **Prop R1 is PROVED** — constructive proof by CE-1: λ_A=(0.6,0.2,0.2) vs λ_B=(0.5,0.3,0.2), K_core 2 vs 1, $\|d\|=0.071$
+1. **Prop R1 is PROVED** — constructive proof by CE-1: λ_A=(0.6,0.2,0.2) vs λ_B=(0.5,0.3,0.2), K_core 2 vs 1, $\lVert d \rVert=0.071$
 2. **Inside cannot track K_core injectively** — proved by mechanism analysis: the scalar collapse of H0 bars loses integer count information
 3. **P_top is confirmed necessary** — all 4 CEs immediately resolved by K_core component of T_Θ
 4. **OP-OMS-009 has two sub-questions** — (a) resolution: CLOSED; (b) continuity of u*(Θ): OPEN but no longer a blocker for the resolution finding
@@ -328,8 +328,8 @@ work attacked three OPs in the recommended priority order:
 
 2. **OP-OMS-028 (quantitative Lipschitz of v):**
    `op_oms_028_lipschitz_v.md` written. **Theorem L1 PROVED**: $v$ is
-   globally Lipschitz on $\Delta^3$ with constant $L_2 = \|M\|_2$ where
-   $M_i = \sup_{u \in \Omega} |E_i(u; X_t)|$. Explicit bounds for S3-like
+   globally Lipschitz on $\Delta^3$ with constant $L_2 = \lVert M \rVert_2$ where
+   $M_i = \sup_{u \in \Omega} \lvert E_i(u; X_t) \rvert$. Explicit bounds for S3-like
    scenes ($L_2 \le O(\rho(L) \cdot n)$ ≈ 600 conservative; VP-6 empirical
    $L_2 \approx 4$). **Prop L2 PROVED**: strict concavity of $v$ off
    Σ_branch under energy-gradient distinguishability. **OP-OMS-028 CLOSED.**
@@ -530,7 +530,7 @@ three OMS-2.0 hard blockers. All gates completed.
 ### Session achievements:
 
 - **Gate 1** — `op_oms_034_temporal_delta3_resolution.md`: temporal energy + reduced-temporal scene + Theorems T1–T8 stated; **rank-3 (corrected from prior rank-4 confusion)**.
-- **Gate 2** — `vp11_temporal_delta3.py`: minimal 2-time scene (6×6 grid, M_G Gaussian σ=1.5, u_1 blob at (4,4)); reduced $E_{tr} = \tfrac{1}{2}\|M_G u_0 - u_1\|^2$ with closed-form gradient; projected-gradient + multi-start optimizer.
+- **Gate 2** — `vp11_temporal_delta3.py`: minimal 2-time scene (6×6 grid, M_G Gaussian σ=1.5, u_1 blob at (4,4)); reduced $E_{tr} = \tfrac{1}{2}\lVert M_G u_0 - u_1 \rVert^2$ with closed-form gradient; projected-gradient + multi-start optimizer.
 - **Gate 3** — VP-11 Phase 1 (rank witness): 14 λ-points; **14/14 rank 3** at threshold abs σ ≥ 1e-3; **14/14 λ_tr-nontrivial**. **(Wit-T) CONFIRMED.** Best σ-spectrum (8.39, 0.77, 0.031). 5.5s.
 - **Gate 4** — VP-11 Phase 2 (Δ³ branch map K=5): 19 distinct branches; **7 λ_tr-unique branches**; transition fraction 0.671 vs simple-budget 0.600 — codim-1 supported at budget-tight level (excess due to branch density, not codim-1 violation). Two macro-regimes: static-cohesive (26.8%) + transport-coherent (17.9%). 3.2s.
 - **Gate 5** — Resolution file §6 verdict filled — Case A: Full Temporal Accepted COMPUTATIONALLY SUPPORTED.

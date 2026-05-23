@@ -109,7 +109,7 @@ where $R_r(\cdot)$ denotes the Vietoris-Rips complex at scale $r$.
 **Hypotheses (working version):**
 - (H1) $\mathbf{u}(t)$ is the gradient flow of $\mathcal{E}_K$ on shared-pool $\widetilde\Sigma^K_M$, smooth in $t$ on a smooth segment $(t_n^*, t_{n+1}^*)$.
 - (H2) $\mathcal{E}_K$ is real-analytic on $\widetilde\Sigma^K_M$ (true for explicit form with $W$ polynomial).
-- (H3) On the segment, $H_{\mathrm{joint}}(\mathbf{u}(t))$ has dimension $N := K' \cdot |X|$ constant.
+- (H3) On the segment, $H_{\mathrm{joint}}(\mathbf{u}(t))$ has dimension $N := K' \cdot \lvert X \rvert$ constant.
 - **(H4) [ADDED post `09_*` self-critique]** Trajectory $\mathbf{u}(t)$ remains in interior of $\widetilde\Sigma^K_M$ — bounded away from $u_i^{(j)} \in \{0, 1\}$ for all $i, j$, and $\sum_k u^{(k)}(x) < 1$ for all $x$. Excludes corner-saturated regime (V5b-T'/V5b-F).
 
 **Claim:** $\sigma^A_{\mathrm{multi}}(t)$ is piecewise constant in $t$ on the segment, with discrete jump times at avoided crossings of $H_{\mathrm{joint}}$ eigenvalues.

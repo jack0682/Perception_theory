@@ -202,9 +202,9 @@ Since the process is stationary under π_{T_*}, the distribution of K_act(U_t) i
 ### §5.3 Convergence to equilibrium
 
 By T-PF-A1-PE (exponential ergodicity), for any initial density U_0 with law ν_0 ∈ L²(π_{T_*}):
-$$\|\nu_t - \pi_{T_*}\|_{TV} \leq C_0 e^{-\lambda_1 t}$$
+$$\lVert \nu_t - \pi_{T_*} \rVert_{TV} \leq C_0 e^{-\lambda_1 t}$$
 where λ_1 ≥ (π²/n)·exp(−osc(Ẽ)/T_*) > 0 and the TV norm uses the L²(π_{T_*}) density assumption. Hence:
-$$|p_K^{(t)} - p_K| := |\mathbb{P}_{\nu_t}[K_{\mathrm{act}} = K] - p_K| \leq \|\nu_t - \pi_{T_*}\|_{TV} \leq C_0 e^{-\lambda_1 t}.$$
+$$\lvert p_K^{(t)} - p_K \rvert := |\mathbb{P}_{\nu_t}[K_{\mathrm{act}} = K] - p_K| \leq \lVert \nu_t - \pi_{T_*} \rVert_{TV} \leq C_0 e^{-\lambda_1 t}.$$
 
 The K-distribution converges to the equilibrium {p_K} exponentially fast for L²(π_{T_*}) initial laws.
 

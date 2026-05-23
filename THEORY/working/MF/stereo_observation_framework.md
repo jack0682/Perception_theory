@@ -104,7 +104,7 @@ $$\Phi(x_L) = \bigl(f_L(x_L),\; f_R(\Pi_{LR}(x_L)),\; z(x_L),\; c(x_L),\; \tilde
 
 **Depth-aware adjacency.** The adjacency graph on $\mathcal{P}_t$ uses depth-filtered edges:
 
-$$E_t^{3D} = \bigl\{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D},\;\; |z(x) - z(y)| < \delta_z\bigr\}$$
+$$E_t^{3D} = \bigl\{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D},\;\; \lvert z(x) - z(y) \rvert < \delta_z\bigr\}$$
 
 for depth threshold $\delta_z > 0$. This prevents closure support from bridging across depth discontinuities (foreground/background boundaries). The resulting graph $G_t = (\mathcal{P}_t, E_t^{3D})$ is the substrate for $\mathbf{N}_t$ in this instantiation.
 
@@ -131,7 +131,7 @@ A natural form for $\mathcal{L}_{\text{obs}}$:
 
 $$\mathcal{L}_{\text{obs}} = \lambda_{\text{photo}} \sum_{x_L \in \text{dom}(b_t)} c(x_L) \cdot \Psi\!\bigl(f_L(x_L),\, f_R(\Pi_{LR}(x_L)),\, \tilde{u}_t(b_t(x_L))\bigr)$$
 
-where $\Psi$ measures photometric consistency weighted by the coherence field value and disparity confidence $c(x_L)$. The exact form of $\Psi$ is a modeling choice (e.g., $\Psi = \|f_L - f_R\|^2 \cdot \tilde{u}$ — inconsistent regions with high cohesion are penalized).
+where $\Psi$ measures photometric consistency weighted by the coherence field value and disparity confidence $c(x_L)$. The exact form of $\Psi$ is a modeling choice (e.g., $\Psi = \lVert f_L - f_R \rVert^2 \cdot \tilde{u}$ — inconsistent regions with high cohesion are penalized).
 
 **(MAP inference)**:
 $$\tilde{u}_t^* = \arg\min_{\tilde{u} \in \Sigma_M(\mathcal{P}_t)} \bigl[\mathcal{E}_{\text{SCC}}[\tilde{u};\mathcal{P}_t] + \mathcal{L}_{\text{obs}}[\mathfrak{O}_t \mid \tilde{u}]\bigr]$$
@@ -223,7 +223,7 @@ $$\Delta E_{K' \to K'-1}^{(jk)} = \mathcal{E}_K(u_s^{(jk)}) - \mathcal{E}_K(u_{\
 
 The present $\mathcal{P}$-conditional formulation is the single-field $\Sigma_M$ analogue; in the K-field architecture limit, $\mathcal{E}_K = \mathcal{E}_{\text{SCC}}$ on the per-field sub-manifold, and the two agree.
 
-**Barrier scaling.** From `k_selection_b_kramers.md` §4: $\Delta E \sim \lambda_{\text{rep}} m_j m_k / |X|^{d-2}$ (scaling with inter-formation mass product). This is the K-field architecture form; the single-field $\Sigma_M$ analogue involves the isoperimetric barrier for two connected-component mergers (barrier $\sim$ boundary length between components, $O(\beta^{0.89})$ empirically, exp38/55).
+**Barrier scaling.** From `k_selection_b_kramers.md` §4: $\Delta E \sim \lambda_{\text{rep}} m_j m_k / \lvert X \rvert^{d-2}$ (scaling with inter-formation mass product). This is the K-field architecture form; the single-field $\Sigma_M$ analogue involves the isoperimetric barrier for two connected-component mergers (barrier $\sim$ boundary length between components, $O(\beta^{0.89})$ empirically, exp38/55).
 
 ### §6.3 N-1 asymmetry recovered
 
@@ -315,7 +315,7 @@ $$\mathcal{E}_{\text{SCC}}[\tilde{u};S_t] \to \int_{S_t} \left[\frac{\alpha}{2} 
 where $\nabla_{S_t}$ is the surface gradient (Laplace-Beltrami), $dA_{S_t}$ is the surface area element, and $W(u) = u^2(1-u)^2$ is the double-well potential.
 
 **Mechanistic correspondence:**
-- $E_{\text{cl}} = \|(I-P)\tilde{u}\|^2 \approx \epsilon^2 \int_{S_t} |\nabla_{S_t}\tilde{u}|^2 dA_{S_t}$ (Laplace-Beltrami approximation of closure energy; $\epsilon$ = graph mesh scale).
+- $E_{\text{cl}} = \lVert (I-P)\tilde{u} \rVert^2 \approx \epsilon^2 \int_{S_t} |\nabla_{S_t}\tilde{u}|^2 dA_{S_t}$ (Laplace-Beltrami approximation of closure energy; $\epsilon$ = graph mesh scale).
 - $E_{\text{bd}} = 2\alpha \tilde{u}^T L \tilde{u} \approx \frac{\alpha}{2}\int_{S_t}|\nabla_{S_t}\tilde{u}|^2 dA_{S_t}$ (boundary energy as Dirichlet form).
 - $E_{\text{sep}}$: phase separation, proportional to $\int W(\tilde{u}) dA$.
 

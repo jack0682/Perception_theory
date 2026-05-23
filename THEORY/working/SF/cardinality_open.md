@@ -177,7 +177,7 @@ For the 2D square grid: $\beta_{\mathrm{crit}}^{(k)}$ are discrete values; betwe
 
 **Claim 8.3 (saturation upper bound).** At $\beta \to \infty$ (all modes unstable, Prop 1.3a saturation corollary): $c_0 \leq $ (number of distinct sharp-interface configurations modulo $\mathrm{Aut}(G)$).
 
-**Observation.** At $\beta \to \infty$, minimizers become sharp-interface (characteristic functions of subsets); by Γ-convergence (T11 Cat A), they concentrate on perimeter-minimizing subsets. On a connected graph with volume $m$, the perimeter-minimizing configurations are indexed by **combinatorial cuts** with $|A| = m$, modulo $\mathrm{Aut}(G)$.
+**Observation.** At $\beta \to \infty$, minimizers become sharp-interface (characteristic functions of subsets); by Γ-convergence (T11 Cat A), they concentrate on perimeter-minimizing subsets. On a connected graph with volume $m$, the perimeter-minimizing configurations are indexed by **combinatorial cuts** with $\lvert A \rvert = m$, modulo $\mathrm{Aut}(G)$.
 
 For 2D $L\times L$ grid with $m = cn$: the perimeter-minimizers are approximately disks (or rectangles for $m$ a perfect square). The number of $\mathrm{Aut}(G)$-inequivalent such disks is $O(L)$ (indexed by location in the fundamental domain of D4 action).
 

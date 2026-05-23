@@ -67,54 +67,54 @@ At canonical SCC parameters with finite graph $G$, $c(x,y) \geq d_G(x,y)^2/(2\si
 
 **Theorem Partial-H-SINK (One-Sided SCC Partial OT Stability).** *Under the canonical SCC partial OT formulation (E1, one-sided row-marginal, normalized to equality at $u_t$), with entropy regularization $\varepsilon_\mathrm{OT} \geq \varepsilon_\mathrm{min} > 0$ (H-SINK-ENT), finite graph $G$, and fields $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$:*
 
-*For any cost perturbation $\|c_{u_t,u_s} - c'_{u_t,u_s}\|_\infty \leq \delta$, the optimal plans $M^*$ and $M^{*'}$ satisfy:*
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon_\mathrm{OT}} \cdot e^{2\delta/\varepsilon_\mathrm{OT}}$$
+*For any cost perturbation $\lVert c_{u_t,u_s} - c'_{u_t,u_s} \rVert_\infty \leq \delta$, the optimal plans $M^*$ and $M^{*'}$ satisfy:*
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon_\mathrm{OT}} \cdot e^{2\delta/\varepsilon_\mathrm{OT}}$$
 
 *where $m_t = \sum_x u_t(x)$ is the total source mass. For small perturbations $\delta \leq \varepsilon_\mathrm{OT}/4$:*
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{2m_t \delta}{\varepsilon_\mathrm{OT}}.$$
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{2m_t \delta}{\varepsilon_\mathrm{OT}}.$$
 
 **Proof.**
 
-Let $v(x,y) = -c(x,y)/\varepsilon_\mathrm{OT}$ and $v'(x,y) = -c'(x,y)/\varepsilon_\mathrm{OT}$. Then $\|v - v'\|_\infty \leq \delta/\varepsilon_\mathrm{OT}$.
+Let $v(x,y) = -c(x,y)/\varepsilon_\mathrm{OT}$ and $v'(x,y) = -c'(x,y)/\varepsilon_\mathrm{OT}$. Then $\lVert v - v' \rVert_\infty \leq \delta/\varepsilon_\mathrm{OT}$.
 
 Define the row-softmax distributions:
 $$p(y|x) = \frac{e^{v(x,y)}}{\sum_{y'} e^{v(x,y')}}, \qquad p'(y|x) = \frac{e^{v'(x,y)}}{\sum_{y'} e^{v'(x,y')}}.$$
 
 Then $M^*(x,y) = u_t(x) \cdot p(y|x)$ and $M^{*'}(x,y) = u_t(x) \cdot p'(y|x)$.
 
-**Step 1: Bound $\|p(\cdot|x) - p'(\cdot|x)\|_1$ for each row $x$.**
+**Step 1: Bound $\lVert p(\cdot|x) - p'(\cdot|x) \rVert_1$ for each row $x$.**
 
 For any two probability distributions $p, p'$ of the form $p(y) = e^{v_y}/Z$ and $p'(y) = e^{v'_y}/Z'$:
 
 By the softmax Lipschitz bound (elementary):
-Since $|v_y - v'_y| \leq \delta/\varepsilon$, we have $e^{-\delta/\varepsilon} e^{v_y} \leq e^{v'_y} \leq e^{\delta/\varepsilon} e^{v_y}$, hence $e^{-\delta/\varepsilon} Z \leq Z' \leq e^{\delta/\varepsilon} Z$.
+Since $\lvert v_y - v'_y \rvert \leq \delta/\varepsilon$, we have $e^{-\delta/\varepsilon} e^{v_y} \leq e^{v'_y} \leq e^{\delta/\varepsilon} e^{v_y}$, hence $e^{-\delta/\varepsilon} Z \leq Z' \leq e^{\delta/\varepsilon} Z$.
 
 For any $y$:
 $$\left|\frac{e^{v_y}}{Z} - \frac{e^{v'_y}}{Z'}\right| = \frac{1}{Z}\left|e^{v_y} - e^{v'_y} \cdot \frac{Z}{Z'}\right| \leq \frac{e^{v_y}}{Z} \cdot \left|1 - e^{v'_y - v_y} \cdot \frac{Z}{Z'}\right|.$$
 
-Let $r = v'_y - v_y$ (so $|r| \leq \delta/\varepsilon$) and $s = \log(Z'/Z)$ (so $|s| \leq \delta/\varepsilon$ by the log-sum-exp inequality applied to both directions). Then:
-$$|p'(y) - p(y)| = p(y) \cdot |e^{r-s} - 1| \leq p(y) \cdot (e^{|r-s|} - 1) \leq p(y) \cdot (e^{2\delta/\varepsilon} - 1).$$
+Let $r = v'_y - v_y$ (so $\lvert r \rvert \leq \delta/\varepsilon$) and $s = \log(Z'/Z)$ (so $\lvert s \rvert \leq \delta/\varepsilon$ by the log-sum-exp inequality applied to both directions). Then:
+$$\lvert p'(y) - p(y) \rvert = p(y) \cdot \lvert e^{r-s} - 1 \rvert \leq p(y) \cdot (e^{\lvert r-s \rvert} - 1) \leq p(y) \cdot (e^{2\delta/\varepsilon} - 1).$$
 
 Summing over $y$:
-$$\|p(\cdot|x) - p'(\cdot|x)\|_1 = \sum_y |p(y|x) - p'(y|x)| \leq (e^{2\delta/\varepsilon} - 1) \leq \frac{2\delta}{\varepsilon} \cdot e^{2\delta/\varepsilon}.$$
+$$\lVert p(\cdot|x) - p'(\cdot|x) \rVert_1 = \sum_y |p(y|x) - p'(y|x)| \leq (e^{2\delta/\varepsilon} - 1) \leq \frac{2\delta}{\varepsilon} \cdot e^{2\delta/\varepsilon}.$$
 
 (Using $e^t - 1 \leq t \cdot e^t$ for $t \geq 0$.)
 
 **Step 2: Sum over all rows.**
 
-$$\|M^* - M^{*'}\|_1 = \sum_{x,y} |M^*(x,y) - M^{*'}(x,y)| = \sum_x u_t(x) \|p(\cdot|x) - p'(\cdot|x)\|_1$$
+$$\lVert M^* - M^{*'} \rVert_1 = \sum_{x,y} \lvert M^*(x,y) - M^{*'}(x,y) \rvert = \sum_x u_t(x) \lVert p(\cdot|x) - p'(\cdot|x) \rVert_1$$
 $$\leq \sum_x u_t(x) \cdot \frac{2\delta}{\varepsilon} e^{2\delta/\varepsilon} = m_t \cdot \frac{2\delta}{\varepsilon} e^{2\delta/\varepsilon}.$$
 
-Since $\|M\|_\mathrm{TV} = \frac{1}{2}\|M\|_1$ for matrices:
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon} e^{2\delta/\varepsilon}. \qquad \square$$
+Since $\lVert M \rVert_\mathrm{TV} = \frac{1}{2}\lVert M \rVert_1$ for matrices:
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon} e^{2\delta/\varepsilon}. \qquad \square$$
 
-**Corollary (linear regime).** For $\delta \leq \varepsilon/4$: $e^{2\delta/\varepsilon} \leq e^{1/2} < 2$, so $\|M^* - M^{*'}\|_\mathrm{TV} \leq 2m_t\delta/\varepsilon$. $\square$
+**Corollary (linear regime).** For $\delta \leq \varepsilon/4$: $e^{2\delta/\varepsilon} \leq e^{1/2} < 2$, so $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq 2m_t\delta/\varepsilon$. $\square$
 
 ---
 
 ## 2. Log-Sum-Exp Stability Lemma (used in Step 1)
 
-**Lemma LSE.** *For any positive weights $a_1, \ldots, a_n > 0$ and perturbations $|r_i| \leq \alpha$:*
+**Lemma LSE.** *For any positive weights $a_1, \ldots, a_n > 0$ and perturbations $\lvert r_i \rvert \leq \alpha$:*
 $$\left|\log\sum_i a_i e^{r_i} - \log\sum_i a_i\right| \leq \alpha.$$
 
 **Proof.** $\sum_i a_i e^{-\alpha} \leq \sum_i a_i e^{r_i} \leq \sum_i a_i e^{\alpha}$. Taking logs: $-\alpha \leq \log(\sum a_i e^{r_i}/\sum a_i) \leq \alpha$. $\square$
@@ -161,7 +161,7 @@ This lemma is the same log-sum-exp inequality used in H-SINK-6 (balanced case). 
 ## 5. Consequence for T-Temporal-Identity (c) — Kernel Independence
 
 T-Temporal-Identity part (c) relies on:
-- Lemma 9 (plan stability under cost perturbation): $\|M - M'\|_\mathrm{TV} \leq 2M_\mathrm{tot}\delta/\varepsilon$
+- Lemma 9 (plan stability under cost perturbation): $\lVert M - M' \rVert_\mathrm{TV} \leq 2M_\mathrm{tot}\delta/\varepsilon$
 - Lemma 10 (component confinement): $|\gamma_M - \gamma_{M'}| \leq 2M_\mathrm{tot}\delta/\varepsilon$
 - Lemma 11 (kernel independence): $R_{t\to s}[M] = R_{t\to s}[M']$ when $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$
 

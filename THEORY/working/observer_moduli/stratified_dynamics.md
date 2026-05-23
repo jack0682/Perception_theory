@@ -26,7 +26,7 @@ The observer space $\mathcal{M}_{\mathrm{obs}} = [q_{\min}, q_{\max}] \times \De
 For an index set $I \subseteq \{cl, sep, bd, tr\}$:
 $$\partial_I \Delta^3 = \{\lambda \in \Delta^3 : \lambda_i = 0 \text{ for all } i \in I\}$$
 
-The codimension-$|I|$ face $\partial_I \Delta^3$ is a $(3 - |I|)$-simplex.
+The codimension-$\lvert I \rvert$ face $\partial_I \Delta^3$ is a $(3 - \lvert I \rvert)$-simplex.
 
 **Enumeration of faces:**
 
@@ -124,7 +124,7 @@ $$\Pi_{T_\lambda \Delta^3}(-\nabla V)_i \geq 0 \quad \text{for } i \in I, \lambd
 ### §2.3 Flow at Corner Points
 
 **At vertex $e_j$:** The tangent cone is a simplicial cone. The projected flow is:
-$$\frac{d\lambda}{dt} = \Pi_{\text{cone}}(-\nabla V(\lambda))\big|_{\lambda = e_j}$$
+$$\frac{d\lambda}{dt} = \Pi_{\text{cone}}(-\nabla V(\lambda))\big\vert_{\lambda = e_j}$$
 
 This may be zero even if $\nabla V(e_j) \neq 0$ — vertices can be "spurious fixed points" of the projected flow if the gradient points outward from the simplex in all feasible directions.
 

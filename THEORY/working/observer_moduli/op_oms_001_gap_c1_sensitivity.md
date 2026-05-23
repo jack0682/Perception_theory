@@ -127,7 +127,7 @@ are constant, and:
 
 (a) The sensitivity matrix on the **inactive sub-space** $T^{I_0} = \{\delta u \in T : \delta u_i = 0\ \forall i \in A^=_0 \cup A^=_n\}$ is
 
-$$\frac{\partial u^*}{\partial \lambda_j}\bigg|_{I_0}(\lambda_0) = -P_{T^{I_0}}\, H_{T^{I_0}}^{-1}\, G_{T^{I_0}}\, e_j,$$
+$$\frac{\partial u^*}{\partial \lambda_j}\bigg\vert_{I_0}(\lambda_0) = -P_{T^{I_0}}\, H_{T^{I_0}}^{-1}\, G_{T^{I_0}}\, e_j,$$
 
 where $H_{T^{I_0}}$ is the Hessian projected onto $T^{I_0}$ and $G_{T^{I_0}}$ are the energy gradients restricted to $I_0$ and projected.
 

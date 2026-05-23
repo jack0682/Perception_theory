@@ -208,7 +208,7 @@ inheritance non-determinism for related open problems.)
 ### §5.2 Commitment 11 (crisp objects derivative) — line 761
 > "Crisp objects may be recovered from the soft system by thresholding or stabilization, but they are derivative constructs, not foundational primitives."
 
-**Audit verdict**: **Extended naturally**. K_act is a *crisp count* derived by support-thresholding $\|u^{(j)}\|_1 > \epsilon$. K_field is a *modeling commitment*, parallel to X_t structure choice. ✓
+**Audit verdict**: **Extended naturally**. K_act is a *crisp count* derived by support-thresholding $\lVert u^{(j)} \rVert_1 > \epsilon$. K_field is a *modeling commitment*, parallel to X_t structure choice. ✓
 
 ### §5.3 Commitment 14 (σ-signature, single-formation) — line 783
 > "Orbital character is constitutive, not analogical."

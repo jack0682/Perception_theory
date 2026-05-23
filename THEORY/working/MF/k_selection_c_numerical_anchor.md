@@ -52,7 +52,7 @@ Four representative graphs:
 
 **Goal**: measure $K_{\mathrm{act}}(t)$ as a function of time on each graph + parameter set.
 
-**Method**: gradient flow with $K_{\mathrm{act}}(0) = K_{\mathrm{field}} = 4$ (random symmetry-broken IC); detect K-jumps via $\|u^{(j)}\|_1$ crossings.
+**Method**: gradient flow with $K_{\mathrm{act}}(0) = K_{\mathrm{field}} = 4$ (random symmetry-broken IC); detect K-jumps via $\lVert u^{(j)} \rVert_1$ crossings.
 
 **Output**: time-series $\{(t_i, K_{\mathrm{act}}(t_i))\}_{i=1}^N$ for each (graph, parameters, $T$, IC) configuration. ~50-100 trajectories.
 
@@ -90,7 +90,7 @@ Alternative: equilibrium ensemble approach — sample many IC's, measure $K_{\ma
 
 **Output**: $\{\Delta E_n\}$ time-series; scaling $\Delta E_n$ vs $K_n = K_{\mathrm{act}}(t_n)$.
 
-**Validation target**: Task #6 §3.3 barrier scaling $\Delta E \sim \lambda_{\mathrm{rep}} m_j m_k / |X|^{d-2}$.
+**Validation target**: Task #6 §3.3 barrier scaling $\Delta E \sim \lambda_{\mathrm{rep}} m_j m_k / \lvert X \rvert^{d-2}$.
 
 ### §3.5 M5: Pair-distance at merger
 
@@ -133,8 +133,8 @@ Alternative: equilibrium ensemble approach — sample many IC's, measure $K_{\ma
 
 ### §4.2 A2: $T^2_{30}$ size scaling
 
-- Tests $|X|$-dependence of $T_c$, barrier heights.
-- Predicts: $T_c$ shifts as $\log |X|$ (Task #5 §4.3 with $S(2) - S(1) \sim \log |X|$).
+- Tests $\lvert X \rvert$-dependence of $T_c$, barrier heights.
+- Predicts: $T_c$ shifts as $\log \lvert X \rvert$ (Task #5 §4.3 with $S(2) - S(1) \sim \log \lvert X \rvert$).
 
 ### §4.3 A3: R23 dataset
 
@@ -333,7 +333,7 @@ if __name__ == "__main__":
 For Cat B target (post W6 Day 4-7 + W7 execution):
 - (V1) M3 $\alpha \approx 1.315$ (V4) or $4/3$ (LSW) on A1 $T^2_{20}$.
 - (V2) M3 $\alpha$ universality across A2, A4 (within 5% tolerance).
-- (V3) M2 $T_c \propto 1/\log |X|$ scaling between A1, A2.
+- (V3) M2 $T_c \propto 1/\log \lvert X \rvert$ scaling between A1, A2.
 - (V4) M4 barrier scaling $\Delta E \propto \lambda_{\mathrm{rep}}$ at fixed $d_{\min}$ regime.
 - (V5) M5 $d_{\min}$ at K-jumps approaches 0 (small distance ⇒ low barrier triggers crossing).
 - (V6) M6 NQ-242c-Standard non-determinism + NQ-242c-Rich determinism (per `nq242c_explicit_construction.md` §6.1 (C1)-(C3)).

@@ -139,7 +139,7 @@ OP-0008 retains 🟠 HIGH severity unconditionally.
 ### 5.1 Graph
 
 $$
-G = T^2_{20}, \qquad X = \mathbb Z_{20} \times \mathbb Z_{20}, \qquad |X| = 400.
+G = T^2_{20}, \qquad X = \mathbb Z_{20} \times \mathbb Z_{20}, \qquad \lvert X \rvert = 400.
 $$
 
 4-regular periodic boundary, identical to the WQ-1 / WQ-2 torus construction (`nq242c_counterexample.py::build_torus`). Reused via import.
@@ -147,7 +147,7 @@ $$
 ### 5.2 Layer I single-field ambient
 
 $$
-\Sigma_M(G) = \Big\{ u : X \to [0, 1] \;\Big|\; \sum_{x \in X} u(x) = M \Big\}, \qquad M = 90 \text{ (default)}.
+\Sigma_M(G) = \Big\{ u : X \to [0, 1] \;\Big\vert\; \sum_{x \in X} u(x) = M \Big\}, \qquad M = 90 \text{ (default)}.
 $$
 
 This is the **primitive single-field ambient** of `..._candidate.md` Layer I. No labels. No multi-field structure. No simplex barrier (the constraint $u(x) \in [0, 1]$ is a per-coordinate box, not a simplex over $K$ slots).
@@ -230,9 +230,9 @@ Construct $\tilde u(x) = \sum_{j=1}^{3} \exp(-d_T(x, c_j)^2 / (2 \sigma_b^2))$ w
 
 Same construction as V0, but cap $u(x) \le u_{\max} = 0.7$ before re-projection. Iteratively: clip to $[0, u_{\max}]$, redistribute the excess uniformly across remaining capacity, repeat until both constraints hold (or up to 5 iterations). Then $\sum_x u(x) = M$ and $\max_x u(x) \le u_{\max}$ approximately.
 
-If $M / (u_{\max} \cdot |X|) > 1$, the cap is infeasible — V1 is then skipped or run with reduced $M$.
+If $M / (u_{\max} \cdot \lvert X \rvert) > 1$, the cap is infeasible — V1 is then skipped or run with reduced $M$.
 
-For $M = 90$, $u_{\max} = 0.7$, $|X| = 400$: $M / (u_{\max} \cdot |X|) = 90 / 280 \approx 0.32 < 1$, so V1 is feasible.
+For $M = 90$, $u_{\max} = 0.7$, $\lvert X \rvert = 400$: $M / (u_{\max} \cdot \lvert X \rvert) = 90 / 280 \approx 0.32 < 1$, so V1 is feasible.
 
 #### V2 (optional) — low_mass
 
@@ -281,7 +281,7 @@ for τ = 1, ..., max_iter:
 | $dt$ | $10^{-3}$ | initial time step |
 | `max_iter` | 5000 | maximum outer iterations |
 | `snapshot_every` | 25 | snapshot interval |
-| stopping | $\max \|g\|_\infty < 10^{-5}$ for ≥ 50 iter | gradient stagnation |
+| stopping | $\max \lVert g \rVert_\infty < 10^{-5}$ for ≥ 50 iter | gradient stagnation |
 | seed | 42 (default; configurable) | not strictly needed at Layer I (no random init) but recorded |
 
 ### 7.4 Snapshot recording

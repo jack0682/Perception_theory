@@ -66,7 +66,7 @@ $$\tau_{\mathrm{mix}}(\Theta) \asymp \tau_d = \frac{1}{2 c_G d}$$
 ### F1.1 Statement
 
 **Theorem (Cat B linearized, 후보)**:
-Under hypotheses (H1)-(H5) [(H1) torus graph, (H2) admissible Θ, (H3) critical point u*, (H4) F3 axiom, (H5) linearization regime $\|\xi_t\| \leq \delta_0$]:
+Under hypotheses (H1)-(H5) [(H1) torus graph, (H2) admissible Θ, (H3) critical point u*, (H4) F3 axiom, (H5) linearization regime $\lVert \xi_t \rVert \leq \delta_0$]:
 
 **(A) Bulk** ($u^* = c\mathbf{1}$ strictly off $\Sigma_{T8}$): Linearized SCC is discrete EW
 $$\partial_t \xi = -\nu_{\mathrm{eff}} L \xi - m_{\mathrm{eff}} \xi + \sqrt{2T_*} \eta$$
@@ -153,7 +153,7 @@ With $\mathrm{osc}(\mathcal{E}) = O(\beta n)$, RHS $\sim (\pi^2/n) e^{-\beta n/T
 ### F2.5 Gaps
 
 1. **Reflection rigor**: OU reduction exact modulo Skorokhod $K_t$. Cat A requires $\mathbb{P}[\tau_\partial < \tau_d] \to 0$.
-2. **$c_G$ explicit form**: Lemma 1.1 existence only; sharp $c_G(G, m)$ in $\lambda_2(L), \|\phi_2\|_\infty$, spinodal width.
+2. **$c_G$ explicit form**: Lemma 1.1 existence only; sharp $c_G(G, m)$ in $\lambda_2(L), \lVert \phi_2 \rVert_\infty$, spinodal width.
 3. **Mixing lower bound**: BGL gives upper $\tau_{\mathrm{mix}} \leq 1/\lambda_1$; matching $\tau_{\mathrm{mix}} \geq c \tau_d$ needs spectral two-sided.
 4. **Nonlinear corrections**: $W'''(c)$ at $O(a_2^3)$ renormalizes $\tau_d$ but preserves $d^{-1}$ scaling (Freidlin-Wentzell perturbative).
 
@@ -361,7 +361,7 @@ These are *physically measurable* and *numerically testable* — turning H5 from
 **Lemma 1.1 explicit $c_G$ Łojasiewicz calculation** → Theorem F2.A,B Cat B 확정.
 
 Łojasiewicz constant 의 explicit form:
-$$c_G = \min_{(\Theta,c) \in \Sigma_{T8}} |\nabla_\Theta \mu_2(\Theta, c)| / (4\alpha\lambda_2(L) + \beta |W''(c)|)$$
+$$c_G = \min_{(\Theta,c) \in \Sigma_{T8}} |\nabla_\Theta \mu_2(\Theta, c)| / (4\alpha\lambda_2(L) + \beta \lvert W''(c) \rvert)$$
 
 이게 계산되면 distance-controlled Poincaré gap Cat B 승급 + Theorem F2.A-B 자동 Cat B.
 
@@ -471,7 +471,7 @@ $$c_G = \min_{(\Theta,c) \in \Sigma_{T8}} |\nabla_\Theta \mu_2(\Theta, c)| / (4\
 
 ### §13.1 Critical Finding C1 — "Goldstone confusion" (HIGH confidence)
 
-**문제**: Theorem F1 ($z=2$ "Brownian on Goldstone $V_k$", linear growth $\mathbb{E}\|P_k\xi_t\|^2 = 2T_*kt$) 와 Theorem F2 ($\mu_2 \geq c_G d > 0$, OU crossover) 가 *동일 모드를 가리키는 것처럼* 작성됨. 이는 **잘못**:
+**문제**: Theorem F1 ($z=2$ "Brownian on Goldstone $V_k$", linear growth $\mathbb{E}\lVert P_k\xi_t \rVert^2 = 2T_*kt$) 와 Theorem F2 ($\mu_2 \geq c_G d > 0$, OU crossover) 가 *동일 모드를 가리키는 것처럼* 작성됨. 이는 **잘못**:
 
 - **On $\Sigma_{T8}^{(k)}$** ($d=0$): $\mu = 0$ exact. *True Goldstone*. Pure Brownian, linear unbounded growth (a measure-zero stratum 위에서만).
 - **Near $\Sigma_{T8}$** ($d > 0$): $\mu_2 > 0$ small but positive. *Near-soft Fiedler mode*, **NOT Goldstone**. OU process, variance saturates at $T_*/\mu_2$.

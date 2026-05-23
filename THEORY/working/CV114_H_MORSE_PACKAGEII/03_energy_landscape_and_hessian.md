@@ -18,7 +18,7 @@ with components (using canonical conventions, $b_D = 0$, $a_\mathrm{cl} \in (0,4
 $$\mathcal E_\mathrm{bd}(u) = 2\alpha \cdot u^T L u + \beta \sum_{i \in X_t} W(u_i),\quad W(u) = u^2 (1-u)^2.$$
 Note canonical factor 4 in the gradient: $\nabla \mathcal E_\mathrm{bd} = 4\alpha L u + \beta W'(u)$, with $W'(u) = 2u(1-u)(1-2u)$ (CLAUDE.md "ordered-pair sum" convention).
 
-- **Closure**: $\mathcal E_\mathrm{cl}(u) = \frac{1}{2}\|u - \mathrm{Cl}(u)\|^2$, where $\mathrm{Cl}$ is the canonical closure operator (sigmoid + $a_\mathrm{cl}$-scaled smoothing, `operators.py`).
+- **Closure**: $\mathcal E_\mathrm{cl}(u) = \frac{1}{2}\lVert u - \mathrm{Cl}(u) \rVert^2$, where $\mathrm{Cl}$ is the canonical closure operator (sigmoid + $a_\mathrm{cl}$-scaled smoothing, `operators.py`).
 
 - **Separation**: $\mathcal E_\mathrm{sep}(u)$ — penalty for boundary co-belonging (u-weighted, see `predicates.py` and canonical §9.3).
 
@@ -83,7 +83,7 @@ For $u \equiv c \mathbf 1$ (uniform state), $\Pi_T H_\mathrm{bd} \Pi_T = 4\alpha
 - $\Pi_T L \Pi_T$ has eigenvalues $\{0, \lambda_2, \lambda_3, \ldots, \lambda_n\}$ where the 0-eigenvalue is $\Pi_T$'s null space. On $T_{u^*}\Sigma_m^\circ$ the effective spectrum starts at $\lambda_2$ (Fiedler).
 - $W''(c)$ is negative on the **spinodal interval** $c \in ((3-\sqrt 3)/6, (3+\sqrt 3)/6)$.
 
-**Phase transition condition (T8-Full, Cat A):** uniform state $u \equiv c$ in spinodal interior is unstable iff $\beta/\alpha > 4\lambda_2 / |W''(c)|$. **At the threshold $\beta/\alpha = 4\lambda_2/|W''(c)|$, the Hessian has an exact zero eigenvalue** (the Fiedler direction) — bifurcation point, **non-Morse**.
+**Phase transition condition (T8-Full, Cat A):** uniform state $u \equiv c$ in spinodal interior is unstable iff $\beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert$. **At the threshold $\beta/\alpha = 4\lambda_2/\lvert W''(c) \rvert$, the Hessian has an exact zero eigenvalue** (the Fiedler direction) — bifurcation point, **non-Morse**.
 
 This is itself a structural counterexample to unconditional H-MORSE: at any threshold parameter, the system has a zero Hessian eigenvalue. (CV-1.14 H-MORSE-Local must explicitly exclude bifurcation parameters by working strictly above threshold.)
 
@@ -147,7 +147,7 @@ For uniform $u = (1/2, 1/2)$:
 - $\Pi_T L \Pi_T$ has the single nontrivial eigenvalue 2.
 - $\Pi_T W''(1/2) I \Pi_T = W''(1/2) \cdot 1 = -1$ (since $W''(1/2) = -1$, in spinodal).
 - $\Pi_T H_\mathrm{bd} \Pi_T = 4\alpha \cdot 2 - \beta = 8\alpha - \beta$.
-- Sign: at $\beta/\alpha = 8$, zero eigenvalue (bifurcation); for $\beta/\alpha > 8 = 4\lambda_2/|W''(1/2)| = 4 \cdot 2 / 1$, the uniform state is unstable.
+- Sign: at $\beta/\alpha = 8$, zero eigenvalue (bifurcation); for $\beta/\alpha > 8 = 4\lambda_2/\lvert W''(1/2) \rvert = 4 \cdot 2 / 1$, the uniform state is unstable.
 
 This matches T8-Full. The non-uniform minimizers of the full SCC energy break the $\mathbb Z_2$ symmetry of $K_2$; they have stabilizer $\{e\}$, so M-A2 holds and the closure-correction gap applies. **H-MORSE-Local would yield $\mu_\mathrm{min} > 0$ at the non-uniform minimizer on $K_2$, $m=1$.**
 
@@ -194,7 +194,7 @@ $D_4$ symmetry, $n = 225$. Single-formation $K = 1$ minimizers from `find_format
 The Hessian structure on $\Sigma_m^\circ$ has:
 - A **clearly identifiable positive contribution** from the closure-correction gap (Cat A).
 - **Structural zero modes** from discrete translation (V5b-T-zero / V5b-T-b Cat A) and graph automorphism (Theorem 1 orbital Cat A).
-- A **bifurcation singularity** at the T8-Full threshold (must be excluded by working in the spinodal interior with strict $\beta/\alpha > 4\lambda_2/|W''(c)|$).
+- A **bifurcation singularity** at the T8-Full threshold (must be excluded by working in the spinodal interior with strict $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$).
 - A **boundary stratum** $\partial\Sigma_m$ requiring stratified Morse (deferred).
 
 H-MORSE-Local on $\Sigma_m^\circ$ at symmetry-broken minimizers in the canonical phase-separated regime is **the right CV-1.14 target**. Cat B classification appropriate.

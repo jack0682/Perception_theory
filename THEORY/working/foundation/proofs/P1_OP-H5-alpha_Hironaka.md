@@ -61,7 +61,7 @@ $ grep -nE "Σ_Hess.*codim|Σ_T8.*codim" THEORY/canonical/canonical.md
 
 ### §1.1 Σ_degen Definition + Algebraic Subvariety Verification
 
-**Setup**. Fix a finite connected graph $G = (V, E)$ with $|V| = n$, graph Laplacian $L$, second eigenvalue $\lambda_2 = \lambda_2(L) > 0$. Fix mass $m \in (0,1)$ and define the affine simplex
+**Setup**. Fix a finite connected graph $G = (V, E)$ with $\lvert V \rvert = n$, graph Laplacian $L$, second eigenvalue $\lambda_2 = \lambda_2(L) > 0$. Fix mass $m \in (0,1)$ and define the affine simplex
 $$\Sigma_m := \{u \in [0,1]^n : \mathbf{1}^\top u = m\}, \qquad T_u \Sigma_m = \{v \in \mathbb{R}^n : \mathbf{1}^\top v = 0\} \quad (\text{intrinsic dim } n-1).$$
 
 SCC energy on $\Sigma_m$ (canonical §13 Theorem 4 + CLAUDE.md "Critical Implementation Details"):
@@ -69,7 +69,7 @@ $$\mathcal{E}_\Theta(u) = \lambda_{\mathrm{cl}}\,\mathcal{E}_{\mathrm{cl}}(u) + 
 where $\Theta := (\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \alpha, \beta) \in \mathbb{R}^4_{>0}$ (mass $m$ absorbed as $\Sigma_m$ constraint), and the four terms have the explicit polynomial form derived in §3.1 below.
 
 **Definition (Σ_degen)**. The *singular locus*:
-$$\boxed{\;\Sigma_{\mathrm{degen}} := \Bigl\{(\Theta, u) \in \mathbb{R}^4_{>0} \times \Sigma_m \;\Big|\; \nabla_{\Sigma_m}\mathcal{E}_\Theta(u) = 0 \;\wedge\; \det\bigl(\mathrm{Hess}\,\mathcal{E}_\Theta(u)|_{T_u\Sigma_m}\bigr) = 0\Bigr\}\;}$$
+$$\boxed{\;\Sigma_{\mathrm{degen}} := \Bigl\{(\Theta, u) \in \mathbb{R}^4_{>0} \times \Sigma_m \;\Big\vert\; \nabla_{\Sigma_m}\mathcal{E}_\Theta(u) = 0 \;\wedge\; \det\bigl(\mathrm{Hess}\,\mathcal{E}_\Theta(u)|_{T_u\Sigma_m}\bigr) = 0\Bigr\}\;}$$
 
 **Claim (1)**. $\Sigma_{\mathrm{degen}}$ is a *real algebraic subvariety* (modulo clearing of resolvent denominators; cf. §3.1) of the ambient *semialgebraic* set $\mathbb{R}^4_{>0} \times \Sigma_m$.
 
@@ -280,10 +280,10 @@ $$\frac{\partial \det H}{\partial \Theta_j} = \det H \cdot \mathrm{tr}\bigl(H^{-
 where $\mathrm{adj}(H)$ is the classical adjugate (cofactor matrix transpose). When $\det H = 0$ with rank-deficiency exactly 1 (simple zero eigenvalue, *generic* on $\Sigma_{\mathrm{degen}}$), $\mathrm{adj}(H) = \xi \eta^\top$ (rank-1) for left/right null vectors $\xi, \eta$ of $H$.
 
 Thus:
-$$\frac{\partial \det H}{\partial \Theta_j}\bigg|_{\Sigma_{\mathrm{degen}}} = \xi^\top \frac{\partial H}{\partial\Theta_j}\, \eta.$$
+$$\frac{\partial \det H}{\partial \Theta_j}\bigg\vert_{\Sigma_{\mathrm{degen}}} = \xi^\top \frac{\partial H}{\partial\Theta_j}\, \eta.$$
 
 Since $H$ is symmetric, $\xi = \eta$. So:
-$$\frac{\partial \det H}{\partial \Theta_j}\bigg|_{\Sigma_{\mathrm{degen}}} = \xi^\top \cdot H^{(j)}\, \xi, \quad H^{(j)} := \frac{\partial H}{\partial\Theta_j} = \mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}}^{(j)},$$
+$$\frac{\partial \det H}{\partial \Theta_j}\bigg\vert_{\Sigma_{\mathrm{degen}}} = \xi^\top \cdot H^{(j)}\, \xi, \quad H^{(j)} := \frac{\partial H}{\partial\Theta_j} = \mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}}^{(j)},$$
 the Hessian of the $j$-th energy component.
 
 For the row to be *independent* from the gradient rows under $\partial/\partial\Theta$, we need the 4-vector
@@ -318,7 +318,7 @@ The $j=2$ component gives $\mathbf{c}^\top \nabla\mathcal{E}_{\mathrm{sep}} = 0$
 *Saving grace — $\partial/\partial u$ block*. The above analysis only used the *$\Theta$-block* (4 columns). The full row of $J$ has *additional $(n-1)$ columns* from $\partial/\partial u$. We need to examine whether the $\partial/\partial u$ block of the last row $\partial(\det H)/\partial u_k$ is in the span of the *$\partial/\partial u$ blocks* of gradient rows under the same coefficients $(\mathbf{c}, c_0)$.
 
 By Jacobi:
-$$\frac{\partial \det H}{\partial u_k}\bigg|_{\Sigma_{\mathrm{degen}}} = \xi^\top \frac{\partial H}{\partial u_k} \xi = 2 \sum_{i} \xi_i \frac{\partial^2 \mathcal{E}_\Theta}{\partial u_i \partial u_k}\bigg|_{\mathrm{partial}} \cdot \xi_i = \xi^\top T_k \xi,$$
+$$\frac{\partial \det H}{\partial u_k}\bigg\vert_{\Sigma_{\mathrm{degen}}} = \xi^\top \frac{\partial H}{\partial u_k} \xi = 2 \sum_{i} \xi_i \frac{\partial^2 \mathcal{E}_\Theta}{\partial u_i \partial u_k}\bigg\vert_{\mathrm{partial}} \cdot \xi_i = \xi^\top T_k \xi,$$
 where $T_k := \partial H / \partial u_k$ is the third-derivative tensor sliced at index $k$. By L1, $\widetilde{\mathcal{E}}$ has degree $\leq 4$ in $u$ — so third derivative is *linear in $u$*, generically non-zero.
 
 The gradient rows' $\partial/\partial u$ block is *precisely* $H = \mathrm{Hess}_{\Sigma_m}\widetilde{\mathcal{E}}$ (the $(n-1) \times (n-1)$ projected Hessian).

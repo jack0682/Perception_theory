@@ -87,7 +87,7 @@ for all smooth $f$. Equivalently (using Lemma 2.1):
 $$T_*^2 |\mathrm{Hess}(f)|^2 + T_* \langle \nabla^2 \mathcal{E} \cdot \nabla f, \nabla f\rangle \geq \rho T_* |\nabla f|^2$$
 
 Choosing $f$ linear (Hess = 0):
-$$\langle \nabla^2 \mathcal{E} \cdot v, v\rangle \geq \rho |v|^2 \quad \forall v$$
+$$\langle \nabla^2 \mathcal{E} \cdot v, v\rangle \geq \rho \lvert v \rvert^2 \quad \forall v$$
 
 So the *correct* CD condition: $\boxed{\nabla^2 \mathcal{E} \geq \rho \cdot I}$ (NO T_* on RHS).
 
@@ -122,7 +122,7 @@ For $\tau \geq 1/(2\rho_0)$: $d\mathcal{W}_{\mathrm{SCC}}/dt \leq 0$.
 ### §2.7 The ONE concrete new claim — Distance-controlled CD bound
 
 **Lemma 2.4 (Distance-controlled Hessian — Cat C, target Cat B).** There exists $c_G > 0$ depending only on $(G, m)$ such that for all $\Theta \in \tilde{C}_\Theta := \mathbb{R}^4_{>0} \times I_{sp}$ with $d(\Theta) := \mathrm{dist}(\Theta, \Sigma_{T8}) > 0$:
-$$\inf_{u \in \tilde{C}, |v|=1, v \perp \mathbf{1}} \langle \nabla^2 \mathcal{E}_\Theta(u) \cdot v, v\rangle \geq c_G \cdot d(\Theta)$$
+$$\inf_{u \in \tilde{C}, \lvert v \rvert=1, v \perp \mathbf{1}} \langle \nabla^2 \mathcal{E}_\Theta(u) \cdot v, v\rangle \geq c_G \cdot d(\Theta)$$
 
 **Proof sketch (Łojasiewicz approach).** The Fiedler eigenvalue
 $$\mu_2(\Theta, c) = 4\alpha\lambda_2(L_G) + \beta W''(c)$$
@@ -207,7 +207,7 @@ Lyapunov-Schmidt at $p_0 = (G, \Theta_0, c_0\mathbf{1}) \in \Sigma_{T8}^{(1)}$:
 
 2-dim kernel (e.g., two coincident Laplacian eigenvalues on cylindrical graph):
 - Equivariant Lyapunov-Schmidt to ℝ²
-- Reduced potential: $E_{red}(t_1, t_2) = a(t_1^2 + t_2^2) + b(t_1^2 + t_2^2)^2 + \tilde{c}\,t_1^2 t_2^2 + O(|t|^6)$
+- Reduced potential: $E_{red}(t_1, t_2) = a(t_1^2 + t_2^2) + b(t_1^2 + t_2^2)^2 + \tilde{c}\,t_1^2 t_2^2 + O(\lvert t \rvert^6)$
 - D_4 symmetry breaks O(2) to D_4 at quartic order → 4 minima selected
 - Morse-Bott structure on circle $t_1^2 + t_2^2 = r^2$
 
@@ -422,7 +422,7 @@ Status: Cat D speculative.
 
 **SCC Energy Landscape Structure Theorem (Cat C synthesis, W8-Day3 candidate)**
 
-Let $(G, \Theta)$ be a finite connected graph with $\Theta = (\alpha, \beta, \lambda_{cl}, \lambda_{sep}, c) \in \mathbb{R}^4_{>0} \times I_{sp}$ in the post-bifurcation regime $\beta/\alpha > 4\lambda_2(L_G)/|W''(c)|$ (T8). Let $\mathcal{E}_\Theta: \Sigma_m \to \mathbb{R}$ be the SCC energy with $T_* \in B_\xi^{\mathrm{OMS\text{-}1}}$ (CV-1.18 §N).
+Let $(G, \Theta)$ be a finite connected graph with $\Theta = (\alpha, \beta, \lambda_{cl}, \lambda_{sep}, c) \in \mathbb{R}^4_{>0} \times I_{sp}$ in the post-bifurcation regime $\beta/\alpha > 4\lambda_2(L_G)/\lvert W''(c) \rvert$ (T8). Let $\mathcal{E}_\Theta: \Sigma_m \to \mathbb{R}$ be the SCC energy with $T_* \in B_\xi^{\mathrm{OMS\text{-}1}}$ (CV-1.18 §N).
 
 The energy landscape $(\Sigma_m, \mathcal{E}_\Theta)$ admits the following 4-part decomposition:
 

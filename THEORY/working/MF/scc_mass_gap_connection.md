@@ -29,7 +29,7 @@
 
 We ask whether the **minimum non-trivial Hessian eigenvalue** of an SCC multi-formation minimizer
 $$
-\lambda_1^{(K)}(\mathbf{u}^*) \;:=\; \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\Big|_{\text{non-trivial subspace}}
+\lambda_1^{(K)}(\mathbf{u}^*) \;:=\; \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\Big\vert_{\text{non-trivial subspace}}
 $$
 admits a graph-theoretic, parameter-uniform lower bound that is the formal analog of the **Yang–Mills mass gap conjecture** in the SCC pre-objective formation regime.
 
@@ -65,12 +65,12 @@ be the parameter-fixed minimizer set with $K_{\mathrm{act}}(\mathbf{u}^*) = K$. 
 
 For $\mathbf{u}^* \in \mathcal{L}_K$, let $\{\lambda_k(\mathbf{u}^*)\}_k$ be the Hessian eigenvalues on the orthogonal complement of (i) the volume-tangent direction $\mathbf{1}_{\mathrm{multi}}$, and (ii) the **discrete-translation Goldstone subspace** (canonical §13 T-V5b-T-zero, `canonical.md:1199–1201`; T-σ-Lemma-3, `canonical.md:1301–1320`) when present. Define
 $$
-\boxed{\;\Delta_K(G, \alpha, \beta, c) \;:=\; \inf_{\mathbf{u}^* \in \mathcal{L}_K}\; \min_{k}\; \lambda_k\!\big(H(\mathbf{u}^*)\big)\Big|_{\big(\mathbf{1}\,\oplus\,\mathrm{Gold}\big)^\perp}.\;}
+\boxed{\;\Delta_K(G, \alpha, \beta, c) \;:=\; \inf_{\mathbf{u}^* \in \mathcal{L}_K}\; \min_{k}\; \lambda_k\!\big(H(\mathbf{u}^*)\big)\Big\vert_{\big(\mathbf{1}\,\oplus\,\mathrm{Gold}\big)^\perp}.\;}
 $$
 
 ### §2.3 Immediate properties
 
-(a) **$\mathcal{L}_K$ Morse-0 ⇒ $\Delta_K > 0$ pointwise.** Each $\mathbf{u}^* \in \mathcal{L}_K$ is a Morse-0 minimizer ⇒ $H(\mathbf{u}^*)\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \succ 0$ ⇒ $\min_k \lambda_k > 0$ at this point. (See canonical §13 T-σ-Theorem-3, `canonical.md:1262–1265`, on Hessian eigenspace decomposition.)
+(a) **$\mathcal{L}_K$ Morse-0 ⇒ $\Delta_K > 0$ pointwise.** Each $\mathbf{u}^* \in \mathcal{L}_K$ is a Morse-0 minimizer ⇒ $H(\mathbf{u}^*)\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \succ 0$ ⇒ $\min_k \lambda_k > 0$ at this point. (See canonical §13 T-σ-Theorem-3, `canonical.md:1262–1265`, on Hessian eigenspace decomposition.)
 
 (b) **Infimum may collapse.** Whether $\Delta_K > 0$ (uniform) or $\Delta_K = 0$ (collapse) depends on whether $\mathcal{L}_K$ is bounded away from bifurcation surfaces / merger boundaries. This is the substance of §3.
 
@@ -107,7 +107,7 @@ Strict positivity of the spectral floor across the post-bifurcation parameter re
 
 Yang–Mills mass gap demands uniformity in the IR (large-volume) limit. SCC's $\Delta_*(G, K)$ is uniform across $(\alpha, \beta, c)$ within the spinodal interior; the analog of the IR limit is the *thermodynamic limit* of $G \to \infty$ via $L \to \infty$ on a $L^d$ lattice, which yields a separate continuum-limit mass-gap statement (NQ-217 interaction, see §11). BC-249-1 is the *finite-graph* statement; the continuum extension is BC-249-2 (deferred).
 
-**Caveat (T8-Core Scaling, canonical line 1009; M2 fix W5 Day 4 PM).** On $L^d$ grids, $\beta_{\mathrm{crit}}^{(2)} \sim 4\alpha\pi^2/(L^2 |W''(c)|) \to 0$ as $L \to \infty$, and the T8-Core selection criterion degenerates: the post-bifurcation regime $\{\beta > \beta_{\mathrm{crit}}^{(2)}\}$ collapses to "$\beta > 0$" trivially, providing only minimizer *existence* without a meaningful selection criterion (T8-Core Scaling Caveat, `canonical.md:1009`). BC-249-2 inherits this thermodynamic-limit pathology: any uniform mass-gap statement across $L \to \infty$ must specify how the bifurcation-distance threshold $\delta_0$ (per C1 fix in §3.2 / §9.1) scales with $L$. If $\delta_0(L) \to 0$ faster than the bifurcation locus accumulates in the post-bifurcation parameter region, the uniform infimum collapses and BC-249-2 fails. Dependence on NQ-217 graph-to-continuum convergence machinery is therefore *non-trivial*: BC-249-2 requires a joint statement on (i) lattice spectral-gap scaling $\lambda_2(L)$, (ii) bifurcation-distance scaling $\delta_0(L)$, and (iii) NQ-217 weak-convergence of $H(\mathbf{u}^*)$ spectra. BC-249-1 (finite-graph) avoids these scaling issues by definition; BC-249-2 promotion is *gated* on a thermodynamic-limit regularity hypothesis to be specified jointly with NQ-217 (W7+).
+**Caveat (T8-Core Scaling, canonical line 1009; M2 fix W5 Day 4 PM).** On $L^d$ grids, $\beta_{\mathrm{crit}}^{(2)} \sim 4\alpha\pi^2/(L^2 \lvert W''(c) \rvert) \to 0$ as $L \to \infty$, and the T8-Core selection criterion degenerates: the post-bifurcation regime $\{\beta > \beta_{\mathrm{crit}}^{(2)}\}$ collapses to "$\beta > 0$" trivially, providing only minimizer *existence* without a meaningful selection criterion (T8-Core Scaling Caveat, `canonical.md:1009`). BC-249-2 inherits this thermodynamic-limit pathology: any uniform mass-gap statement across $L \to \infty$ must specify how the bifurcation-distance threshold $\delta_0$ (per C1 fix in §3.2 / §9.1) scales with $L$. If $\delta_0(L) \to 0$ faster than the bifurcation locus accumulates in the post-bifurcation parameter region, the uniform infimum collapses and BC-249-2 fails. Dependence on NQ-217 graph-to-continuum convergence machinery is therefore *non-trivial*: BC-249-2 requires a joint statement on (i) lattice spectral-gap scaling $\lambda_2(L)$, (ii) bifurcation-distance scaling $\delta_0(L)$, and (iii) NQ-217 weak-convergence of $H(\mathbf{u}^*)$ spectra. BC-249-1 (finite-graph) avoids these scaling issues by definition; BC-249-2 promotion is *gated* on a thermodynamic-limit regularity hypothesis to be specified jointly with NQ-217 (W7+).
 
 ---
 
@@ -184,7 +184,7 @@ Assume the following hypothesis chain:
 
 Then:
 $$
-\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\quad \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0
+\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\quad \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0
 $$
 pointwise — i.e., $\Delta_K(G,\alpha,\beta,c) > 0$ at each individual minimizer (uniform lower bound across $\mathcal{L}_K$ is the separate Cat B BC-249-1 statement, §3).
 
@@ -207,9 +207,9 @@ pointwise — i.e., $\Delta_K(G,\alpha,\beta,c) > 0$ at each individual minimize
 
 **Cat C target:** Closed-form expression
 $$
-\Delta_*(G, K) \;\stackrel{?}{=}\; F\!\big(\{\lambda_k^{\mathrm{Lap}}(G)\}, |W''(c)|, \mathrm{Stab}(\mathbf{u}^*), K, \lambda_{\mathrm{rep}}\big)
+\Delta_*(G, K) \;\stackrel{?}{=}\; F\!\big(\{\lambda_k^{\mathrm{Lap}}(G)\}, \lvert W''(c) \rvert, \mathrm{Stab}(\mathbf{u}^*), K, \lambda_{\mathrm{rep}}\big)
 $$
-in terms of (i) Laplacian spectrum of $G$, (ii) double-well curvature $|W''(c)|$, (iii) symmetry-breaking pattern via $\mathrm{Stab}(\mathbf{u}^*)$, (iv) $K$-dependence, (v) repulsion coupling.
+in terms of (i) Laplacian spectrum of $G$, (ii) double-well curvature $\lvert W''(c) \rvert$, (iii) symmetry-breaking pattern via $\mathrm{Stab}(\mathbf{u}^*)$, (iv) $K$-dependence, (v) repulsion coupling.
 
 **Reference:** `SF/mode_count.md` provides the closed-form Hessian *at the uniform vacuum* $u^* = c\mathbf{1}$ (sub-critical, $\beta < \beta_{\mathrm{crit}}^{(2)}$): $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ (canonical §13 T-σ-Theorem-3, lines 1334–1371; cf. `mode_count.md` Prop 1.3a). However, $\Delta_K$ is defined at **post-bifurcation** $K$-formation minimizers ($\beta > \beta_{\mathrm{crit}}^{(2)}$, $u^* \neq c\mathbf{1}$), where the uniform-vacuum closed-form does *not* apply. The post-bifurcation Hessian closed-form requires a separate normal-form expansion derived in T-σ-Theorem-4 (canonical lines 1378–1409); see also `SF/symmetry_moduli.md` for $D_4$-normal-form coefficients $A_1, A_2$. Multi-formation analog with $K \geq 2$ Goldstone-pair coupling: open. *(Erratum 2026-04-30 per critic M6: earlier draft cited the uniform-vacuum closed-form as the Cat C target, conflating sub-critical $u^* = c\mathbf{1}$ with post-bifurcation $u^* \in \mathcal{L}_K$. The Cat C target $\Delta_*(G, K, \delta_0)$ closed-form must be derived in the post-bifurcation regime — substantially harder than the uniform-vacuum case, justifying the 6–8 week effort estimate.)*
 
@@ -246,7 +246,7 @@ If $\min_k \lambda_k \to 0$ uniformly as $\beta \uparrow$ a bifurcation surface 
 | Regime | Predicted $\min_k \lambda_k$ behavior | Mass-gap status |
 |---|---|---|
 | $\beta \in (\beta_{\mathrm{crit}}^{(2)}, \beta_*)$ near pitchfork | $\to 0$ as $\beta \to \beta_{\mathrm{crit}}^{(2)+}$ | Mass-gap closure at phase transition |
-| $\beta \gg \beta_{\mathrm{crit}}^{(2)}$ deep in spinodal | $\geq c_1 \beta |W''(c)|$ | Mass-gap saturates double-well scale |
+| $\beta \gg \beta_{\mathrm{crit}}^{(2)}$ deep in spinodal | $\geq c_1 \beta \lvert W''(c) \rvert$ | Mass-gap saturates double-well scale |
 | Near $K$-formation merger | $\to 0$ as $D_{\mathrm{sep}} \to D_{\mathrm{merge}}^*$ | Mass-gap closure at merger |
 | Generic interior | Bounded below | BC-249-1 holds |
 
@@ -282,7 +282,7 @@ If $\min_k \lambda_k \to 0$ uniformly as $\beta \uparrow$ a bifurcation surface 
 
 `06_gauge_theory_connections_analysis.md` Connection G (line 26): SCC K-jump fragmented strata correspond to statistical-localization regime in lattice gauge theory.
 
-**Mass-gap correspondence:** *Localization ↔ large $\Delta_K$.* Strongly localized formations have stiff Hessian → $\Delta_K$ saturated at $\sim \beta |W''(c)|$ scale. Delocalized / drifting formations have soft Hessian → $\Delta_K$ small. Rigorous parallel with Anderson-localization mass-gap analog deferred (NQ-251 candidate).
+**Mass-gap correspondence:** *Localization ↔ large $\Delta_K$.* Strongly localized formations have stiff Hessian → $\Delta_K$ saturated at $\sim \beta \lvert W''(c) \rvert$ scale. Delocalized / drifting formations have soft Hessian → $\Delta_K$ small. Rigorous parallel with Anderson-localization mass-gap analog deferred (NQ-251 candidate).
 
 ### §10.2 Connection H — string breaking (QuEra 2025)
 

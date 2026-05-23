@@ -61,7 +61,7 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 - V5: Boundary awareness: $V(\partial \mathcal{M}_{\mathrm{obs}})$ not identically constant
 
 **Candidate forms:**
-1. $V(\Theta) = \|P(\Theta) - P_{\mathrm{ref}}\|^2$ (distance from reference perceptual state)
+1. $V(\Theta) = \lVert P(\Theta) - P_{\mathrm{ref}} \rVert^2$ (distance from reference perceptual state)
 2. $V(\Theta) = H(P(\Theta))$ (entropy of perceptual distribution)
 3. $V(\Theta) = E_{\mathrm{min}}(\Theta, X_t)$ (minimal energy at optimum, scene-dependent)
 
@@ -190,7 +190,7 @@ Problems are rated by importance (★★★ critical / ★★ important / ★ us
 - (c) Is $u^*(\Theta)$ unique for generic $\Theta$? What is the non-unique set? (OPEN)
 - (d) What tie-breaking rule should be used when multiple global minima exist? (OPEN)
 
-**Resolution of (a).** Protocol VP-1 (exp86_vp1_p_resolution_audit.py, 2026-05-07) found 4 definitive counterexamples: observer configurations with $\|P_{\min}(\Theta_1) - P_{\min}(\Theta_2)\| < 0.15$ and $K_{\mathrm{core}}(\Theta_1) \neq K_{\mathrm{core}}(\Theta_2)$. Tightest: $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\|d\|=0.071$, $D_T=3.028$, $K_{\mathrm{core}}$ 2 vs 1. Prop R1 promoted from HYPOTHESIZED to PROVED.
+**Resolution of (a).** Protocol VP-1 (exp86_vp1_p_resolution_audit.py, 2026-05-07) found 4 definitive counterexamples: observer configurations with $\lVert P_{\min}(\Theta_1) - P_{\min}(\Theta_2) \rVert < 0.15$ and $K_{\mathrm{core}}(\Theta_1) \neq K_{\mathrm{core}}(\Theta_2)$. Tightest: $\lambda_A=(0.6,0.2,0.2)$ vs $\lambda_B=(0.5,0.3,0.2)$, $\lVert d \rVert=0.071$, $D_T=3.028$, $K_{\mathrm{core}}$ 2 vs 1. Prop R1 promoted from HYPOTHESIZED to PROVED.
 
 **Residual (b)–(d).** The continuity of $u^*(\Theta)$ (needed for Prop R3 / $P_{\mathrm{top}}$ descent to quotient) remains open but is no longer a blocker for the resolution question. Sub-questions (b)–(d) are tracked as open concerns within OP-OMS-009.
 
@@ -552,7 +552,7 @@ $E(u) = (E_{cl}, E_{sep}, E_{bd}, E_{tr})(u)$.
 \le \sup_u |L_u(\lambda) - L_u(\lambda')| \le \sup_u \|E(u)\|_2 \cdot \|\lambda - \lambda'\|_2$.
 
 **What would resolve it.** Bound the SCC energy components on $\Omega$ in
-closed form (in terms of graph quantities $\|L\|_\mathrm{op}$, $n$, $m$).
+closed form (in terms of graph quantities $\lVert L \rVert_\mathrm{op}$, $n$, $m$).
 
 ---
 

@@ -16,7 +16,7 @@ last_updated: 2026-05-14
 
 ## Purpose
 
-T8 위상전이 조건 $\beta/\alpha > 4\lambda_2/|W''(c)|$ 가 성립할 때 비균일 최솟값과 경계가 출현한다는 SCC 이론의 **중심 정리**. Q1 은 경계 출현·붕괴의 임계조건과 그 sharp/spectral 형태를 다룬다.
+T8 위상전이 조건 $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ 가 성립할 때 비균일 최솟값과 경계가 출현한다는 SCC 이론의 **중심 정리**. Q1 은 경계 출현·붕괴의 임계조건과 그 sharp/spectral 형태를 다룬다.
 
 ## Core Files (Active)
 

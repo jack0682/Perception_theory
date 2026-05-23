@@ -57,7 +57,7 @@ parameterized by threshold $\tau \in (0, 1)$.
 ### §2.3 K_act (active stratum index, derived from K-field state)
 
 **Definition** (Commitment 16 (ii), CV-1.5.1):
-$$K_{\mathrm{act}}(\mathbf{u}) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \|u^{(j)}\|_1 > \epsilon\}$$
+$$K_{\mathrm{act}}(\mathbf{u}) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \lVert u^{(j)} \rVert_1 > \epsilon\}$$
 where $\epsilon$ is a fixed support threshold (default $\epsilon = 0.01 \cdot \bar{m}$).
 
 **Properties**:
@@ -97,7 +97,7 @@ $$K_{\mathrm{act}}(\mathbf{u}) \leq K_{\mathrm{field}}.$$
 
 For each active formation $u^{(j)}$ in K-field state $\mathbf{u}$:
 $$\mathcal{F}(u^{(j)}) \geq 1$$
-(active formation has at least one local maximum, by support nonemptiness $\|u^{(j)}\|_1 > \epsilon$).
+(active formation has at least one local maximum, by support nonemptiness $\lVert u^{(j)} \rVert_1 > \epsilon$).
 
 Under full SCC at per-formation minimum (T-PreObj-1 (i)):
 $$\mathcal{F}(u^{(j)}) \geq 2 \quad \text{(generic full SCC minimizer)}.$$
@@ -322,7 +322,7 @@ The inequality $K_{\mathrm{step}}(u; \tau) \leq \mathcal{F}(u)$ for all $\tau$ (
 #### §7.4.4 Stability under perturbation
 
 By Cohen-Steiner-Edelsbrunner-Harer 2007 (stability of persistence diagrams):
-$$d_B\big(\mathrm{Dgm}_0^{\sup}(u), \mathrm{Dgm}_0^{\sup}(u')\big) \leq \|u - u'\|_\infty.$$
+$$d_B\big(\mathrm{Dgm}_0^{\sup}(u), \mathrm{Dgm}_0^{\sup}(u')\big) \leq \lVert u - u' \rVert_\infty.$$
 
 **Corollary**: $\mathcal{F}$ is *upper semi-continuous* (USCO, already noted §2.1): $u_n \to u$ in $L^\infty$ implies $\mathcal{F}(u) \geq \limsup \mathcal{F}(u_n)$ — peaks may *merge* under perturbation (births coalesce) but cannot *spawn* without perturbation magnitude exceeding the smallest peak prominence. **Peak prominence** $\mathrm{prom}(x_*) := u(x_*) - \max\{c : x_* \text{ in same component as a higher-valued site at parameter } c\}$ is exactly the *bar length* of the H_0 generator born at $x_*$.
 

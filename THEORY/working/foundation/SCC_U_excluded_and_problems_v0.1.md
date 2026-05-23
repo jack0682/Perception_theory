@@ -173,7 +173,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 | Mass $M$ | $(0,1)$ | per-trial structural choice | §1.1 |
 | $\delta_{\mathrm{stereo}}$ (D-ST-1 bandwidth) | $\mathbb{R}_+$ | IPD + binocular fusion-derived | §12.2 |
 | $T_{\min}, T_{\max}$ (T_* bounds) | $\mathbb{R}_+^2$ | study-fixed | §A.1 ref |
-| FOV cardinality $|V|$ | $\mathbb{Z}_+$ | R-an-11 derived | §1.2 |
+| FOV cardinality $\lvert V \rvert$ | $\mathbb{Z}_+$ | R-an-11 derived | §1.2 |
 | K_field cap | $\mathbb{Z}_+$ | R-nn-11 (cognitive capacity) | §A.7 |
 | $\Lambda_{\mathrm{coupling}}$ functional form | varies | configuration-specific | §11.4 |
 | $\Psi_{\mathrm{LMS}\to \mathrm{scalar}}$ | function | achromatic vs chromatic balance | §3.8 |
@@ -347,7 +347,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 - **위치**: 03_T_star §2.1 L1 (qualitative continuity)
 - **Cat**: Cat A 후보 sketch (quantitative refinement)
-- **Sketch**: $\|\pi_T - \pi_{T_0}\|_{\mathrm{TV}} \leq C |T - T_0|^\gamma$ for some explicit $C, \gamma$
+- **Sketch**: $\lVert \pi_T - \pi_{T_0} \rVert_{\mathrm{TV}} \leq C \lvert T - T_0 \rvert^\gamma$ for some explicit $C, \gamma$
 - **Required work**: Holley-Stroock perturbation 의 quantitative form
 
 ### §B.2.5 T-σ-Inherit (c) σ_standard MERGE Explicit
@@ -382,7 +382,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 - **위치**: §5.10
 - **Cat**: Cat C SKETCH (canonical 부분 정의)
-- **Sketch**: $(|C|, |\partial C|, \chi(C), \ldots)$ per-PersComp
+- **Sketch**: $(\lvert C \rvert, |\partial C|, \chi(C), \ldots)$ per-PersComp
 - **Required work**: Canonical normalization + invariant detection
 
 ---
@@ -644,7 +644,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 ### §B.7.2 Seed Cardinality 충분성
 
-- $|s| = 256$ bits, $2^{256} \approx 10^{77}$ distinct observers
+- $\lvert s \rvert = 256$ bits, $2^{256} \approx 10^{77}$ distinct observers
 - *Physical universe 의 모든 개인* 표현 충분 — 단 *higher-resolution* regime 존재?
 - Cryptographic hash function (SHA256) 의 *computational indistinguishability* 가정 의 한계
 

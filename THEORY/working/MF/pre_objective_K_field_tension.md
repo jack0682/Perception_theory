@@ -207,7 +207,7 @@ $$\widetilde{\widetilde\Sigma}^K_M := \widetilde\Sigma^K_M / S_{K_{\mathrm{field
 
 **Verification**:
 - Quotient projection $\pi: \widetilde\Sigma^K_M \to \widetilde{\widetilde\Sigma}^K_M$, $\mathbf{u} \mapsto [\mathbf{u}]$.
-- Lift $\sigma: \widetilde{\widetilde\Sigma}^K_M \to \widetilde\Sigma^K_M$ (section of $\pi$): orbit class $[\mathbf{u}]$에서 *one ordered representative*를 선택. Section은 *non-canonical* — modeler choice (e.g., ordering by mass: $\|u^{(1)}\|_1 \geq \|u^{(2)}\|_1 \geq \ldots$).
+- Lift $\sigma: \widetilde{\widetilde\Sigma}^K_M \to \widetilde\Sigma^K_M$ (section of $\pi$): orbit class $[\mathbf{u}]$에서 *one ordered representative*를 선택. Section은 *non-canonical* — modeler choice (e.g., ordering by mass: $\lVert u^{(1)} \rVert_1 \geq \lVert u^{(2)} \rVert_1 \geq \ldots$).
 - Lift는 *computational scaffold*: ordered representation에서 SCC 4-energy + λ_rep + simplex constraint 등 standard operations 수행 후, 결과를 quotient로 project (S_K-invariant outputs only).
 
 **Computational scaffold function**:
@@ -225,7 +225,7 @@ $$u_t \text{ (Commitment 1 primitive)} \to [\mathbf{u}] \in \widetilde{\widetild
 **Verification**:
 - **First arrow** ($u_t \to [\mathbf{u}]$): single field aggregate $u = \sum_k u^{(k)}$가 multi-mode structure를 emergence시킴. Quotient level에서 mode decomposition은 H₀ persistence (Tool A3 zigzag PH) 또는 spectral cluster decomposition으로 derived. *Reverse forbidden*: $[\mathbf{u}]$가 single $u_t$ primitive를 *대체*할 수 없음 (Commitment 1 보호).
 - **Second arrow** ($[\mathbf{u}] \to \mathbf{u}$): ordered lift = labeling choice. *Reverse forbidden*: ordered representation을 fundamental로 취급하면 Commitment 1 위반.
-- **Third arrow** ($\mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}})$): K_field = modeling-layer cap (Commitment 16); K_act($\tilde{u}$) = $\#$PersComp($\tilde{u}$) — derived integer diagnostic (persistent connected components via threshold filtration; NOT K-field slot-count $|\{j:\|u^{(j)}\|_\infty>\varepsilon\}|$ which is a K-field architecture artifact — see Canonical Memo v1.1 §D4). *Reverse forbidden*: K_field 또는 K_act가 u_t를 *replace*할 수 없음.
+- **Third arrow** ($\mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}})$): K_field = modeling-layer cap (Commitment 16); K_act($\tilde{u}$) = $\#$PersComp($\tilde{u}$) — derived integer diagnostic (persistent connected components via threshold filtration; NOT K-field slot-count $|\{j:\lVert u^{(j)} \rVert_\infty>\varepsilon\}|$ which is a K-field architecture artifact — see Canonical Memo v1.1 §D4). *Reverse forbidden*: K_field 또는 K_act가 u_t를 *replace*할 수 없음.
 - **Fourth arrow** ($(K_{\mathrm{field}}, K_{\mathrm{act}}) \to$ cog-sci): downstream comparison only. *Reverse forbidden* (CN10 contrastive vs reductive): cognitive science K (Pylyshyn FINSTs, Treisman groups)이 SCC의 K_field 또는 K_act를 *define*할 수 없음 — only *compare*.
 
 ---

@@ -31,12 +31,12 @@
 
 ### §2.1 Graph and parameters
 
-- **Graph $G$**: 2D torus $T^2_{20}$ — vertex set $X = (\mathbb{Z}/20\mathbb{Z})^2$, $|X| = 400$, 4-regular nearest-neighbor edges, $\mathrm{Aut}(G) = \mathbb{Z}_{20}^2 \rtimes D_4$ (translation + dihedral).
+- **Graph $G$**: 2D torus $T^2_{20}$ — vertex set $X = (\mathbb{Z}/20\mathbb{Z})^2$, $\lvert X \rvert = 400$, 4-regular nearest-neighbor edges, $\mathrm{Aut}(G) = \mathbb{Z}_{20}^2 \rtimes D_4$ (translation + dihedral).
 - **K-field cap**: $K_{\mathrm{field}} = 4$ (slack > $K_{\mathrm{act}} = 3$ initial; allows for K-jump down to 2).
 - **Initial active count**: $K_{\mathrm{act}}(t = 0) = 3$.
 - **Per-formation mass**: $m_j = 30$ each ($M = 90$ total).
 - **Energy parameters**: $\beta = 4.0$ (super-lattice $\zeta = 0.5$ regime), $\lambda_{\mathrm{rep}} = 0.1$, $\alpha = 1.0$, $a_{\mathrm{cl}} = 2.0$ (canonical defaults from CV-1.5.1).
-- **Disk profile**: tanh-disk per-formation IC, $u^{(j)}(x) = \frac{1}{2}(1 - \tanh((|x - c_j^{(0)}| - r_0) / \delta))$ with $r_0 = 3$, $\delta = 0.5$; per-formation profile identical across $j$ and across configs A, B.
+- **Disk profile**: tanh-disk per-formation IC, $u^{(j)}(x) = \frac{1}{2}(1 - \tanh((\lvert x - c_j^{(0)} \rvert - r_0) / \delta))$ with $r_0 = 3$, $\delta = 0.5$; per-formation profile identical across $j$ and across configs A, B.
 
 ### §2.2 Configuration A (equilateral)
 
@@ -46,7 +46,7 @@ Initial centroids:
 - $c_3^{A,(0)} = (10, 5 + 5\sqrt{3}) \approx (10, 13.66)$
 
 Pair distances (Euclidean, on torus shortest-path):
-- $\|c_1^A - c_2^A\| = 10$, $\|c_1^A - c_3^A\| = 10$, $\|c_2^A - c_3^A\| = 10$.
+- $\lVert c_1^A - c_2^A \rVert = 10$, $\lVert c_1^A - c_3^A \rVert = 10$, $\lVert c_2^A - c_3^A \rVert = 10$.
 
 **Symmetry**: $D_3$ permutation (cyclic + reflection) of formations + 그래프 reflection = nontrivial pair-stabilizer of size 6.
 
@@ -58,7 +58,7 @@ Initial centroids:
 - $c_3^{B,(0)} = (10, 12)$
 
 Pair distances:
-- $\|c_1^B - c_2^B\| = 10$, $\|c_1^B - c_3^B\| = \sqrt{74} \approx 8.60$, $\|c_2^B - c_3^B\| = \sqrt{74} \approx 8.60$.
+- $\lVert c_1^B - c_2^B \rVert = 10$, $\lVert c_1^B - c_3^B \rVert = \sqrt{74} \approx 8.60$, $\lVert c_2^B - c_3^B \rVert = \sqrt{74} \approx 8.60$.
 
 **Symmetry**: $\mathbb{Z}_2$ reflection (swap 1 ↔ 2 only) of formations.
 
@@ -165,9 +165,9 @@ This is consistent with §3.3 of `sigma_rich_augmentation.md`: σ_rich is càdl�
 
 ### §4.3 σ_rich($t^{*-}$) just before merger
 
-Configuration A: as $t \nearrow t^*_A$, one pair (say $(1,2)$ under symmetry-breaking noise) approaches merger ⇒ $\|c_1^A - c_2^A\|(t^{*-}_A) \to 0$, $\Delta_{12}^{\mathrm{Gold}}(t^{*-}_A) \to 0$ (Goldstone-pair softening).
+Configuration A: as $t \nearrow t^*_A$, one pair (say $(1,2)$ under symmetry-breaking noise) approaches merger ⇒ $\lVert c_1^A - c_2^A \rVert(t^{*-}_A) \to 0$, $\Delta_{12}^{\mathrm{Gold}}(t^{*-}_A) \to 0$ (Goldstone-pair softening).
 
-Configuration B: pair $(1, 3)$ approaches merger ⇒ $\|c_1^B - c_3^B\|(t^{*-}_B) \to 0$, $\Delta_{13}^{\mathrm{Gold}}(t^{*-}_B) \to 0$.
+Configuration B: pair $(1, 3)$ approaches merger ⇒ $\lVert c_1^B - c_3^B \rVert(t^{*-}_B) \to 0$, $\Delta_{13}^{\mathrm{Gold}}(t^{*-}_B) \to 0$.
 
 **Distinctness**: even at $t^{*-}$, the merging-pair index pattern differs (A: pair $(1,2)$; B: pair $(1,3)$) — encoded as which $\Delta_{ij}^{\mathrm{Gold}}$ is the minimum-going-to-zero. ⇒ σ_rich($t^{*-}_A$) ≠ σ_rich($t^{*-}_B$). ✓
 

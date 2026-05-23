@@ -61,7 +61,7 @@ since $u^{(j)}(x) \geq 0$ and squares are non-negative. ✓
 
 ### §3.3 Continuity in $\mathbf{u}$
 
-**Lemma 3.4.** $\mathbf{u} \mapsto M_j(\mathbf{u}; \iota)$ is real-analytic on $\{\mathbf{u} : \|u^{(j)}\|_1 > \epsilon\}$.
+**Lemma 3.4.** $\mathbf{u} \mapsto M_j(\mathbf{u}; \iota)$ is real-analytic on $\{\mathbf{u} : \lVert u^{(j)} \rVert_1 > \epsilon\}$.
 
 **Proof**: $M_j$ is a sum of products of $u^{(j)}(x)$ (linear in $\mathbf{u}$) and $(\iota(x) - c_j)(\iota(x) - c_j)^T$ where $c_j$ is real-analytic (Task #1 Lemma 3.3). Sum of products of real-analytic functions is real-analytic. ✓
 
@@ -83,7 +83,7 @@ since $u^{(j)}(x) \geq 0$ and squares are non-negative. ✓
 
 **Justification**:
 - $M_j$ is the second central moment of $u^{(j)}$ — $u^{(j)}$-weighted covariance of vertex positions.
-- Standard probability theory: first moment (centroid) + second moment (covariance) = mean + spread; both are derived statistics of the underlying distribution $u^{(j)} / \|u^{(j)}\|_1$.
+- Standard probability theory: first moment (centroid) + second moment (covariance) = mean + spread; both are derived statistics of the underlying distribution $u^{(j)} / \lVert u^{(j)} \rVert_1$.
 - $\iota$ depends on $G$, not on $\mathbf{u}$ (per Task #1 Convention 2.1).
 - ⇒ $\Theta_j$ extracts shape/orientation information from $u^{(j)}$; CN10 contrastive: derived diagnostic class.
 
@@ -186,7 +186,7 @@ By Lemma 3.4, $M_j(\mathbf{u}(t))$ is real-analytic on smooth segments. Eigenval
 
 **Theorem 7.1 (parallel-axis at K-jump).** At a K-jump time $t^*$ with $(j, k) \to \ell$ merger, the post-merger inertia tensor satisfies:
 $$M_\ell(t^{*+}) = M_j(t^{*-}) + M_k(t^{*-}) + \frac{m_j m_k}{m_j + m_k} (c_j - c_k)(c_j - c_k)^T$$
-where $m_j = \|u^{(j)}\|_1$, $m_k = \|u^{(k)}\|_1$, evaluated at $t^{*-}$.
+where $m_j = \lVert u^{(j)} \rVert_1$, $m_k = \lVert u^{(k)} \rVert_1$, evaluated at $t^{*-}$.
 
 **Proof**: At merger instant, $u^{(\ell)}(t^{*+}) = u^{(j)}(t^{*-}) + u^{(k)}(t^{*-})$ (mass conservation in shared-pool). Apply Definition 2.1 with the new centroid $c_\ell = (m_j c_j + m_k c_k)/(m_j + m_k)$ (per Task #1 Continuity claim 9.1):
 $$M_\ell = \sum_x (u^{(j)} + u^{(k)})(x) (\iota(x) - c_\ell)(\iota(x) - c_\ell)^T.$$

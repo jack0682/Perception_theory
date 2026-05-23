@@ -33,12 +33,12 @@
 ### §2.1 K-field architecture I9 (canonical, current binding decision)
 
 **Definition** (canonical line 846):
-$$\Sigma^K_M = \Sigma_{m_1} \times \cdots \times \Sigma_{m_K} = \prod_{j=1}^K \big\{ u^{(j)} \in [0, 1]^{|X|} : \sum_x u^{(j)}(x) = m_j \big\}$$
+$$\Sigma^K_M = \Sigma_{m_1} \times \cdots \times \Sigma_{m_K} = \prod_{j=1}^K \big\{ u^{(j)} \in [0, 1]^{\lvert X \rvert} : \sum_x u^{(j)}(x) = m_j \big\}$$
 Cartesian product manifold; **K and $\{m_j\}_{j=1}^K$ fixed externally** at architecture instantiation.
 
 **Properties**:
 - Smooth manifold (product of simplices).
-- Dimension: $\sum_{j=1}^K (|X| - 1) = K(|X| - 1)$.
+- Dimension: $\sum_{j=1}^K (\lvert X \rvert - 1) = K(\lvert X \rvert - 1)$.
 - T-Persist-K-Sep/Weak/Unified (canonical §13) all proved on this manifold.
 - `scc/multi.py` `find_k_formations` direct implementation.
 
@@ -51,7 +51,7 @@ $$\widetilde\Sigma^K_M := \big\{ \mathbf{u} = (u^{(1)}, \ldots, u^{(K_{\mathrm{f
 **Properties**:
 - Whitney-stratified semi-algebraic space (Tool A1 verification PASSED).
 - Stratification: $\widetilde\Sigma^K_M = \bigsqcup_{K_{\mathrm{act}}=0}^{K_{\mathrm{field}}} S_{K_{\mathrm{act}}}$.
-- $S_{K_{\mathrm{act}}}$ = stratum of dimension $K_{\mathrm{act}}(|X| - 1) - 1$ (one less for total mass conservation).
+- $S_{K_{\mathrm{act}}}$ = stratum of dimension $K_{\mathrm{act}}(\lvert X \rvert - 1) - 1$ (one less for total mass conservation).
 - K-jump events = stratum boundary transitions ($S_K \to S_{K-1}$ codim-1).
 
 ### §2.3 Relationship — Complementary Modeling-Layer Commitments per Whitney Stratification
@@ -60,7 +60,7 @@ $$\widetilde\Sigma^K_M := \big\{ \mathbf{u} = (u^{(1)}, \ldots, u^{(K_{\mathrm{f
 
 **Formal**:
 $$\Sigma^{K_{\mathrm{field}}}_M = S_{K_{\mathrm{field}}} \cap \{m_j(\mathbf{u}) = m_{j,0}\;\forall j\}$$
-where $m_j(\mathbf{u}) = \|u^{(j)}\|_1$, and $\{m_{j,0}\}_{j=1}^{K_{\mathrm{field}}}$ are external parameters with $\sum_j m_{j,0} = M$.
+where $m_j(\mathbf{u}) = \lVert u^{(j)} \rVert_1$, and $\{m_{j,0}\}_{j=1}^{K_{\mathrm{field}}}$ are external parameters with $\sum_j m_{j,0} = M$.
 
 **Codimension**: K_field - 1 (mass partition fixes K_field-1 free parameters).
 

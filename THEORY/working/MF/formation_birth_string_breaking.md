@@ -77,7 +77,7 @@ the graph distance between endpoints. This is threshold-free but ignores the tub
 
 **Definition 2.3 (SCC String Tension).** From V5b-F mass scaling (NQ-198a empirical, W6+ Cat B):
 $$\mu_{\mathrm{Gold}} \approx C(\beta) \cdot \frac{|\partial S|}{n}$$
-where $n = |X|$ is the graph size and $\mu_{\mathrm{Gold}}$ is the Goldstone mode pseudo-mass. The coefficient:
+where $n = \lvert X \rvert$ is the graph size and $\mu_{\mathrm{Gold}}$ is the Goldstone mode pseudo-mass. The coefficient:
 $$T_{\mathrm{str}} \equiv C(\beta) \approx 13.2 \quad \text{at } \beta = 4,\; \xi_0 = 0.5 \; (\text{NQ-198a empirical})$$
 is interpreted as the **SCC string tension**: energy cost per unit boundary length.
 

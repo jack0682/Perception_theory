@@ -50,7 +50,7 @@ for all $\lambda$ and $X_t$.
 By the SCC central theorem (T8), the field $u^*(\lambda; X_t)$ undergoes a
 phase transition at the surface
 
-$$\Sigma_{T8}(X_t) := \left\{\lambda : \frac{\beta_{\mathrm{eff}}(\lambda)}{\alpha_{\mathrm{eff}}(\lambda)} = \frac{4 \lambda_2(X_t)}{|W''(c)|}\right\} \subset \Delta^3,$$
+$$\Sigma_{T8}(X_t) := \left\{\lambda : \frac{\beta_{\mathrm{eff}}(\lambda)}{\alpha_{\mathrm{eff}}(\lambda)} = \frac{4 \lambda_2(X_t)}{\lvert W''(c) \rvert}\right\} \subset \Delta^3,$$
 
 where $\alpha_{\mathrm{eff}}, \beta_{\mathrm{eff}}$ are the effective boundary-smoothness
 and double-well coefficients in $E_\lambda$, depending on $\lambda$ in a

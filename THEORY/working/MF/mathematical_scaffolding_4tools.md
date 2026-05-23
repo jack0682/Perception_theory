@@ -31,11 +31,11 @@
 ### §2.1 정식 정의 (proposed canonical)
 
 **Definition 2.1 (Shared-Pool Stratified Space).** $\widetilde\Sigma^K_M$ on graph $G = (X, E)$ with total mass $M > 0$ and architectural cap $K_{\mathrm{field}} \in \mathbb{Z}_{\geq 1}$:
-$$\widetilde\Sigma^K_M := \big\{ \mathbf{u} = (u^{(1)}, \ldots, u^{(K_{\mathrm{field}})}) \in [0,1]^{K_{\mathrm{field}} \cdot |X|} : \sum_{j,x} u^{(j)}(x) = M, \sum_k u^{(k)}(x) \leq 1\ \forall x \big\}.$$
+$$\widetilde\Sigma^K_M := \big\{ \mathbf{u} = (u^{(1)}, \ldots, u^{(K_{\mathrm{field}})}) \in [0,1]^{K_{\mathrm{field}} \cdot \lvert X \rvert} : \sum_{j,x} u^{(j)}(x) = M, \sum_k u^{(k)}(x) \leq 1\ \forall x \big\}.$$
 
 For each $K_{\mathrm{act}} \in \{0, 1, \ldots, K_{\mathrm{field}}\}$ define
 $$S_{K_{\mathrm{act}}} := \big\{ \mathbf{u} \in \widetilde\Sigma^K_M : K_{\mathrm{act}}(\mathbf{u}) = K_{\mathrm{act}} \big\}$$
-where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \|u^{(j)}\|_1 > \epsilon\}$ (per Commitment 16).
+where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \lVert u^{(j)} \rVert_1 > \epsilon\}$ (per Commitment 16).
 
 **Stratification**: $\widetilde\Sigma^K_M = \bigsqcup_{K_{\mathrm{act}}=0}^{K_{\mathrm{field}}} S_{K_{\mathrm{act}}}$.
 
@@ -45,7 +45,7 @@ where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \|u^{(j)}\|_1 > \epsilon\}$ (per 
 
 **Verification (sketch)**:
 
-(i) **Locally closed strata**: Each $S_{K_{\mathrm{act}}}$ is a smooth manifold of dimension $K_{\mathrm{act}} \cdot (|X| - 1) - 1$ (each active formation: $|X|-1$ degrees on simplex; minus 1 for total mass conservation; inactive formations contribute 0 dim). $S_{K_{\mathrm{act}}}$ is locally closed in $\widetilde\Sigma^K_M$ (open subset of its closure). ✓
+(i) **Locally closed strata**: Each $S_{K_{\mathrm{act}}}$ is a smooth manifold of dimension $K_{\mathrm{act}} \cdot (\lvert X \rvert - 1) - 1$ (each active formation: $\lvert X \rvert-1$ degrees on simplex; minus 1 for total mass conservation; inactive formations contribute 0 dim). $S_{K_{\mathrm{act}}}$ is locally closed in $\widetilde\Sigma^K_M$ (open subset of its closure). ✓
 
 (ii) **Frontier condition**: $\overline{S_{K_1}} \cap S_{K_2} \neq \emptyset \Rightarrow \overline{S_{K_1}} \supseteq S_{K_2}$. 검증: 만약 $\mathbf{u}^{(n)} \in S_{K_1}$ → $\mathbf{u} \in S_{K_2}$ ($K_1 > K_2$, formations dying) 면 limit configuration이 $S_{K_2}$ 전체를 포함 (continuous deformation argument on simplex constraint). ✓
 
@@ -73,7 +73,7 @@ where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \|u^{(j)}\|_1 > \epsilon\}$ (per 
 
 **Verification**:
 - Trajectory $\mathbf{u}(t)$ is continuous (gradient flow ODE solution).
-- $K_{\mathrm{act}}(t)$ jumps as some $\|u^{(j)}\|_1$ crosses below $\epsilon$.
+- $K_{\mathrm{act}}(t)$ jumps as some $\lVert u^{(j)} \rVert_1$ crosses below $\epsilon$.
 - The crossing point is in $\partial S_{K_{\mathrm{act}}(t^{*-})}$ = stratum boundary.
 - Post-crossing: $\mathbf{u}(t^{*+}) \in S_{K_{\mathrm{act}}(t^{*+})}$ (lower-dimensional stratum).
 - Single-merger ($\Delta K = 1$): codim-1 transition (standard).
@@ -110,7 +110,7 @@ where $K_{\mathrm{act}}(\mathbf{u}) := \#\{j : \|u^{(j)}\|_1 > \epsilon\}$ (per 
 
 **Definition 3.1 (Unordered Configuration Space).** $S_{K_{\mathrm{act}}}$ acts on $\widetilde\Sigma^K_M$ by permuting active formation indices:
 $$\pi \cdot (u^{(1)}, \ldots, u^{(K_{\mathrm{field}})}) := (u^{(\pi^{-1}(1))}, \ldots, u^{(\pi^{-1}(K_{\mathrm{field}}))}), \quad \pi \in S_{K_{\mathrm{field}}}$$
-where $\pi$ permutes indices of active formations (those with $\|u^{(j)}\|_1 > \epsilon$); inactive formations are permuted among themselves trivially.
+where $\pi$ permutes indices of active formations (those with $\lVert u^{(j)} \rVert_1 > \epsilon$); inactive formations are permuted among themselves trivially.
 
 The **unordered shared-pool space** is the orbit space:
 $$\widetilde{\widetilde\Sigma}^K_M := \widetilde\Sigma^K_M / S_{K_{\mathrm{field}}}.$$
@@ -173,7 +173,7 @@ $$\widetilde{\widetilde\Sigma}^K_M := \widetilde\Sigma^K_M / S_{K_{\mathrm{field
 ### §4.1 정식 정의
 
 **Definition 4.1 (Formation Centroid Filtration).** Given trajectory $\mathbf{u}(t) \in \widetilde\Sigma^K_M$, $t \in [0, T]$, define formation centroids
-$$c_j(t) := \frac{\sum_x x \cdot u^{(j)}(t, x)}{\|u^{(j)}(t)\|_1}, \quad j: \|u^{(j)}(t)\|_1 > \epsilon$$
+$$c_j(t) := \frac{\sum_x x \cdot u^{(j)}(t, x)}{\lVert u^{(j)}(t) \rVert_1}, \quad j: \lVert u^{(j)}(t) \rVert_1 > \epsilon$$
 (undefined when formation inactive). Define time-dependent point cloud $C(t) = \{c_j(t) : j \in \mathrm{active}(t)\}$.
 
 For each $r \geq 0$, define **Vietoris-Rips complex** $R_r(C(t))$ on graph distance $d_G$:
@@ -220,7 +220,7 @@ $$R_r(C(t)) = \big\{ \sigma \subseteq C(t) : d_G(c_j, c_k) \leq r \,\forall j, k
 
 **Verification**:
 - Centroid trajectory: SCC `scc/multi.py` 출력에서 직접 추출 가능 ($u^{(j)}$ centroids).
-- Vietoris-Rips on graph metric: finite computation, polynomial in $K_{\mathrm{act}} \cdot |X|$.
+- Vietoris-Rips on graph metric: finite computation, polynomial in $K_{\mathrm{act}} \cdot \lvert X \rvert$.
 - Zigzag persistence over time: GUDHI library `Zigzag_persistence` module 표준.
 - σ-tuple integration: per-formation Hessian (이미 SCC에서 계산) + PH 위상 정보 결합.
 

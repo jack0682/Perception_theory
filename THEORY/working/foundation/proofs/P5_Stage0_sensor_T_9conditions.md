@@ -121,7 +121,7 @@ $$\pi_G(T(I)) \in \Sigma_m \;:=\; \Bigl\{u \in [0,1]^n : \sum_{v \in V_{\mathrm{
 
 **Composition-level instance**:
 
-$$\bigl\|T(I)\bigr\|_{L^1(V_{\mathrm{ret}})} \;=\; m \cdot c_{\mathrm{norm}}(I, T)$$
+$$\bigl\lVert T(I)\bigr \rVert_{L^1(V_{\mathrm{ret}})} \;=\; m \cdot c_{\mathrm{norm}}(I, T)$$
 
 여기서 $c_{\mathrm{norm}}$ 은 $T_{\mathrm{gain}}$ 의 log-baseline $L_0$ + $T_{\mathrm{LMS}}$ 의 cone-ratio normalization 조합으로 결정 (SCC unified §2.5 L380, $L_0 = \pi (d_{\mathrm{pup}}^0/2)^2 L_{\mathrm{ambient}}$).
 
@@ -133,7 +133,7 @@ $$\bigl\|T(I)\bigr\|_{L^1(V_{\mathrm{ret}})} \;=\; m \cdot c_{\mathrm{norm}}(I, 
 
 ### §2.2 T-cond-2: Spinodal-Compatible Smoothness (적당한 매끄러움)
 
-**Statement (formal)**: $T(I)$ 의 *spectral content* 가 Stage 1 의 spinodal regime ($q = \beta/\alpha > q_{\mathrm{crit}} := 4\lambda_2 / |W''(c)|$) 와 호환되는 매끄러움 등급에 속한다. 구체적으로:
+**Statement (formal)**: $T(I)$ 의 *spectral content* 가 Stage 1 의 spinodal regime ($q = \beta/\alpha > q_{\mathrm{crit}} := 4\lambda_2 / \lvert W''(c) \rvert$) 와 호환되는 매끄러움 등급에 속한다. 구체적으로:
 
 $$\exists \, s \in (0, 1) : \quad T(I) \in H^s(V_{\mathrm{ret}}) \quad \text{(fractional Sobolev)}, \quad s \neq 0, \; s \neq \infty$$
 
@@ -174,7 +174,7 @@ $$\bigl\{I \in \mathcal{I} : T(I) \equiv c \cdot \mathbf{1}, \; c \in (0, 1)\big
 
 **Open issue**: CSF 의 *bandpass* 특성으로 인해 DC 가 *완전* 통과되지 않음 (peak ≈ 3-6 cpd). 따라서 *strict* 균질 fiber 는 통과되기 어렵고, *near-homogeneous* fiber 가 실질적 instance. T-cond-3 의 정확한 statement 는:
 
-$$\bigl\|\,T(I^{\mathrm{hom}}) - c^{\mathrm{hom}} \mathbf{1}\,\bigr\|_{L^2(V_{\mathrm{ret}})} \;\leq\; \epsilon_{\mathrm{hom}}, \quad \epsilon_{\mathrm{hom}} \to 0 \text{ as bandpass } \to \text{DC-passing}$$
+$$\bigl\lVert \,T(I^{\mathrm{hom}}) - c^{\mathrm{hom}} \mathbf{1}\,\bigr \rVert_{L^2(V_{\mathrm{ret}})} \;\leq\; \epsilon_{\mathrm{hom}}, \quad \epsilon_{\mathrm{hom}} \to 0 \text{ as bandpass } \to \text{DC-passing}$$
 
 (weak form). Cat A 격상 시 strict vs weak form 의 명시.
 
@@ -188,7 +188,7 @@ $$\bigl\|\,T(I^{\mathrm{hom}}) - c^{\mathrm{hom}} \mathbf{1}\,\bigr\|_{L^2(V_{\m
 
 **Statement (formal)**: $T$ 의 output 이 Stage 2 의 *T-PreObj-1G* (canonical, `canonical.md §6`) 의 graph-class universality 와 호환된다. 구체적으로:
 
-$$\forall \, G \in \mathcal{G}_{\mathrm{admissible}} : \quad T(I) \big|_{V_G} \in \mathcal{D}_G^{\mathrm{admissible}}$$
+$$\forall \, G \in \mathcal{G}_{\mathrm{admissible}} : \quad T(I) \big\vert_{V_G} \in \mathcal{D}_G^{\mathrm{admissible}}$$
 
 여기서 $\mathcal{G}_{\mathrm{admissible}}$ 는 SCC 의 admissible graph class (grid, hexagonal, irregular mesh, $\mathrm{Cay}(\Gamma)$ 등), $\mathcal{D}_G^{\mathrm{admissible}}$ 는 $G$ 위에서의 admissible signal class.
 
@@ -363,7 +363,7 @@ $$\boxed{\;T_{\mathrm{sensor}} \;=\; T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \c
 
 **Form**:
 
-$$I_t^{\mathrm{PSF}}(x, y) \;=\; (K_{\mathrm{PSF}} * I_t^{\mathrm{pre}})(x, y), \quad K_{\mathrm{PSF}} = |\mathcal{F}[P]|^2, \quad P(x,y) = \mathbf{1}_{|(x,y)| \leq r_{\mathrm{pup}}} \cdot e^{i \frac{2\pi}{\lambda} W(x,y)}$$
+$$I_t^{\mathrm{PSF}}(x, y) \;=\; (K_{\mathrm{PSF}} * I_t^{\mathrm{pre}})(x, y), \quad K_{\mathrm{PSF}} = |\mathcal{F}[P]|^2, \quad P(x,y) = \mathbf{1}_{\lvert (x,y) \rvert \leq r_{\mathrm{pup}}} \cdot e^{i \frac{2\pi}{\lambda} W(x,y)}$$
 
 with $W(x, y) = \sum_{n,m} Z_n^m \mathcal{Z}_n^m(x/r_{\mathrm{pup}}, y/r_{\mathrm{pup}})$ (OSA/ANSI Zernike).
 

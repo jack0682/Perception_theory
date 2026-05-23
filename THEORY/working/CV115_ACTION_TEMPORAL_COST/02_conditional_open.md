@@ -170,7 +170,7 @@ $b_{1,1}\cdot a_{2,1}$ vs $b_{1,2}\cdot a_{2,2}$: 일반적으로 다름 $\Right
 
 CV-1.14 gap audit에서 확인된 OP-0012-SINK의 핵심 blocker:
 
-> $\delta_{\mathrm{eff}} = \|c_{\mathrm{direct}} - c_{\mathrm{eff}}\|_\infty$가 bound되지 않는다.
+> $\delta_{\mathrm{eff}} = \lVert c_{\mathrm{direct}} - c_{\mathrm{eff}} \rVert_\infty$가 bound되지 않는다.
 
 CV-1.15 Cat A 결과 (01_proofs_cat_a.md):
 
@@ -203,7 +203,7 @@ Sinkhorn plan level:     M^sink(K_{i→k}) ≠ M^sink(K_{i→j}) M^sink(K_{i→k
 
 | 필요 Lemma | 내용 | 현재 상태 |
 |-----------|------|----------|
-| Lemma-δ_eff | $\|M^\mathrm{sink}(K_{t\to r}) - M_1 M_2\|_\infty \leq \delta_\mathrm{eff}$ bound | Cat C (OPEN) |
+| Lemma-δ_eff | $\lVert M^\mathrm{sink}(K_{t\to r}) - M_1 M_2 \rVert_\infty \leq \delta_\mathrm{eff}$ bound | Cat C (OPEN) |
 | Lemma-Eff-Sinkhorn | $M^\mathrm{sink}(K_{t\to r}) \approx M^\mathrm{sink}(K_{t\to s}) M^\mathrm{sink}(K_{s\to r})$ 조건 | Cat C (OPEN) |
 
 두 lemma가 모두 Cat C / OPEN 상태이며 §2의 반례가 일반적 성립을 막는다.
