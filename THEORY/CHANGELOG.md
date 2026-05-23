@@ -4,6 +4,86 @@
 
 ---
 
+## [PAI PROLEGOMENA] 2026-05-23 — Formula Catalog v0 (44 M_k full formal candidate notation)
+
+**Type**: candidate formal notation. No new canonical theorem. No claim count change. canonical.md / theorem_status.md / DECLARATION.md / scc/ 모두 무수정. CV-1.20 그대로. 102 claims (71A/20B/6C/5R) 그대로. M_k 등급 (N/S/O) 그대로.
+
+**Trigger**: 02 (4-layer architecture) 작성 후 user 요청 — *44 조건을 각각 수학적 수식으로 정리한 문서*. User 결정: full formal definitions (~3-5 lines per condition), 분량 ~600-900L.
+
+**Files created (1)**:
+- `THEORY/working/prolegomena/03_formula_catalog_v0.md` (~400L) — 44 M_k entry 각각의 signature + definition (candidate); shared notation key (§1); 10 categories (§2-§11); O-grade summary (§12); PAI vocabulary placeholder (§13, *NOT formalized*); inter-condition reference (§14).
+
+**Files modified (backref 등록만)**:
+- `THEORY/working/INDEX.md` — Prolegomena Layer 섹션에 03 entry 추가.
+- `THEORY/canonical/MOC_canonical_authority.md` — Prolegomena Layer 섹션에 03 entry 추가.
+
+**Discipline (5/21 원칙 준수)**:
+- 모든 44 정의는 *candidate notation* — committed definition 아님. 표기 갱신 가능.
+- 6 O-grade (M9, M18, M29, M30, M32, M43) 모두 *Formal status open* 마크 유지.
+- **M29 cross-fiber invariance** 의 PAI 핵심 위치 명시 (OP-NEW-C from 02 §6) — *native model 부재 in 5 영역*.
+- PAI 6 vocabulary (Δ_interp, IPF, PA-formation, Action Invariance, Shared Unit Principle, Meaningless Split) 모두 §13 placeholder; *자체 형식 정의 0*; OP-PAI-001..006 미해결 인용.
+- 새 vocabulary 0. 정리 0. 명제 0. 증명 0. 새 OP 등록 0.
+
+**Claim count change**: 0 (102 unchanged).
+**CV version change**: 0 (CV-1.20 unchanged).
+**HT version change**: 0 (HT-3.12 unchanged).
+**scc/ edits**: 0; **pytest**: 무영향.
+**theorem_status.md edits**: 0.
+
+**Non-overclaim**:
+- 03 는 *prose → symbol* 의 표기 정형화. *수학적 내용은 01 그대로*.
+- "full formal" 은 *후보 표기* 의 완전성이지, *committed definition* 의 완전성 아님.
+- 4-layer (02) 의 layer-by-layer 형식화 아님 — *M_k 별* 형식화. layer 별 형식화는 별도 미작성.
+- PAI thesis 의 형식화 아님 — §13 가 명시적으로 PAI vocabulary 를 *형식화하지 않음*.
+
+**Carry-forward**:
+- 03 가 *형식화 catalog* 산출 → 다음 작업은 (a) 어느 M_k 의 *candidate notation* 을 verify / refine 하거나, (b) PAI vocabulary 의 자체 형식화 (Phase 1 OP-PAI-001) 진입.
+- 우선순위 결정 보류 — 다음 세션 user.
+
+---
+
+## [PAI PROLEGOMENA] 2026-05-23 — Framework Skeleton v0 (4-layer architecture, pre-formal)
+
+**Type**: pre-formal prolegomena. No new canonical theorem. No claim count change. canonical.md / theorem_status.md / DECLARATION.md / scc/ 모두 무수정. CV-1.20 그대로. 102 claims (71A/20B/6C/5R) 그대로.
+
+**Trigger**: 2026-05-21 PAI pivot 의 *기술 substrate* 가 부재했음 — `00_field_conditions_v0.md` (perception-side 44 조건) 와 `01_mathematical_conditions_v0.md` (math-side 평행) 는 *조건 catalog* 만 제공. *어떤 수학적 객체가 어느 layer 에 거주하는지* 의 분담 미명시. 2026-05-22 5-영역 광범위 리서치 (작용소대수 / 범주론 / 동역학 / 이산-관계론 / 정보-인지) 가 *4-layer hybrid* 로 수렴.
+
+**Files created (1)**:
+- `THEORY/working/prolegomena/02_framework_skeleton_v0.md` — 4-layer architecture scaffold (L0 cohesion field dynamics on Prob(X_t) / L1 derived carrier + correlation metric / L2 algebraic state + autonomous dynamics + time / L3 frame / observer / no global section / L4 self-reference scaffold). 각 layer 의 primitive / derived / 후보 framework / 담당 M_k 클러스터 명시.
+
+**Files modified (backref 등록만; 본문 보존)**:
+- `THEORY/working/INDEX.md` — `## Prolegomena Layer (PAI track)` 섹션 신설 (00/01/02 entry).
+- `THEORY/canonical/MOC_canonical_authority.md` — `## Prolegomena Layer (PAI track, pre-formal)` 섹션 추가.
+- `THEORY/canonical/PAI_ROADMAP.md` — Phase 1 의 *Technical substrate* 단락 추가 (3 prolegomena 문서 참조).
+
+**5 OP-NEW identified (NOT registered; 02 §6 내부 언급만)**:
+- OP-NEW-A — `σ_t`-공변 spectral triple 의 완전 특성화 (Layer 1 ↔ Layer 2).
+- OP-NEW-B — M8 의 작용소대수적 내부 파생 (Layer 2 ↔ Layer 3).
+- **OP-NEW-C — M29 cross-fiber groupoid invariance 의 native model (Layer 3 ↔ Layer 4) — PAI 핵심 entry point**. 5 영역 어디에도 *기본 구조 수준* 에서 존재하지 않음.
+- OP-NEW-D — M13 + M16 동시 만족 (Layer 2 내부).
+- OP-NEW-E — M5 + M41 의 코호몰로지 장애물 (Layer 1 내부).
+
+**Claim count change**: 0 (102 unchanged).
+**CV version change**: 0 (CV-1.20 unchanged).
+**HT version change**: 0 (HT-3.12 unchanged; H-PAI-FRAMEWORK 등 신규 노드 등록 안 함).
+**scc/ edits**: 0; **pytest**: 무영향 (no code touched).
+**theorem_status.md edits**: 0 (5 OP-NEW 등록 안 함 — user 결정).
+
+**Non-overclaim**:
+- 02 는 *layer 분담 catalog* 일 뿐. 어느 layer 도 *internal formalization* 되지 않음.
+- 4 후보 framework (BFV / Tomita-Takesaki / Doering-Isham / NCG 등) 들은 *이름 표시* 일 뿐 *채택* 이 아님.
+- 4-layer 의 *유일성* 주장 없음. 다른 분담도 가능.
+- 5 OP-NEW 는 *문제 등록* 일 뿐 *해결 시도 0*.
+- PAI roadmap Phase 1 의 *해결* 이 아님 — *기술 substrate* 일 뿐.
+
+**Discipline 계승**: 5/21 의 "쓸데없이 화려한 수학 금지" + macro_audit §9 hard-stop gates + "산출 압력 없음" 정신 유지. 02 는 *카탈로그 산출* 이지 *수학 산출* 아님.
+
+**Carry-forward**:
+- 02 §9 의 4 entry points (A_math / B_math / C_math / D_math) — 우선순위 미명시; 다음 세션 user 결정.
+- OP-NEW-C 가 PAI roadmap Phase 1 의 *진짜 entry* 일 가능성 — Phase 1 survey 시 cross-fiber invariance candidate forms 우선 검토.
+
+---
+
 ## [PAI PIVOT] 2026-05-21 (W8-Day4) — Canonical Pivot to Perception-Action Interpretation
 
 **Type**: theoretical pivot. No new canonical theorem. No claim count change. Substrate (CV-1.20, 102 claims) preserved unchanged.

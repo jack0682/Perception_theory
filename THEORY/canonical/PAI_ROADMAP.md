@@ -49,6 +49,8 @@ description: |
 
 **Output**: working file in `THEORY/working/PAI/` (subdirectory to be created) with status DEFINITION-DRAFT.
 
+**Technical substrate (pre-formal, 2026-05-23)**: `THEORY/working/prolegomena/` 의 3 문서가 Phase 1 의 *기술 substrate* 로 등록됨 — `00_field_conditions_v0.md` (perception-side 44 조건) + `01_mathematical_conditions_v0.md` (math-side 평행) + `02_framework_skeleton_v0.md` (4-layer architecture; OP-NEW-C 가 *PAI 핵심 entry point* 로 식별됨, *interpretation invariance* 의 native model 부재가 5 영역 광범위 리서치의 수렴 결과). Phase 1 의 candidate form survey 시 이 substrate 참조.
+
 **Anti-targets**: proving that the chosen form is "the right one." Selection is not justification.
 
 ---

@@ -22,6 +22,19 @@ Active theory development files, organized by the 6 perceptual questions from `c
 
 ---
 
+## Prolegomena Layer (PAI track)
+
+`prolegomena/` 는 PAI pivot 이후 *조건 catalog → framework skeleton* 의 pre-formal 작업층. 증명 0, 형식화 0, canonical 무수정.
+
+| File | Status | Notes |
+|---|---|---|
+| `prolegomena/00_field_conditions_v0.md` | Stage 0.5 | Perception-side 44 조건 catalog (C1-C44; N 22 / S 14 / O 8) |
+| `prolegomena/01_mathematical_conditions_v0.md` | Stage 0.5 | Math-side 44 조건 평행 번역 (M1-M44; 00 과 일대일) |
+| `prolegomena/02_framework_skeleton_v0.md` | **Stage 1.0** | 4-layer architecture scaffold (L0 cohesion field / L1 derived carrier / L2 algebraic state + time / L3 frame / L4 self-ref). 2026-05-22 5-영역 리서치 수렴. 5 OP-NEW 식별 (등록 안 함). |
+| `prolegomena/03_formula_catalog_v0.md` | **Stage 1.5** | 44 M_k 의 full formal candidate notation. 6 O-grade *Formal status open* 마크. PAI vocabulary (Δ_interp 등) 형식화 0 (placeholder 만, §13). Inter-condition reference 표 (§14). canonical / scc 무수정. |
+
+---
+
 ## Phase 1 Target (Read First)
 
 | File | Status | Notes |

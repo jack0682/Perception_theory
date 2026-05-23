@@ -71,6 +71,15 @@ THEORY/CHANGELOG.md
 - **Current carry-forward:** L-LOJASIEWICZ-CG Cat A path, non-uniform H-MORSE / Package II Eyring-Kramers, full SCC rescaling, T-σ-Inherit MERGE/SPLIT.
 - **Macro caution:** [[macro_audit_2026-05-20]] marks objecthood theorem, observer/readout layer, dynamic K-selection, and merge/split identity as the main big-picture gaps.
 
+## Prolegomena Layer (PAI track, pre-formal)
+
+`THEORY/working/prolegomena/` — PAI pivot 이후 *조건 catalog → framework skeleton* 의 pre-formal 작업층. canonical 무수정; *후보 framework 의 이름 표시* 만.
+
+- [[../working/prolegomena/00_field_conditions_v0|00 Field Conditions]] — Perception-side 44 조건 (C1-C44).
+- [[../working/prolegomena/01_mathematical_conditions_v0|01 Mathematical Conditions]] — Math-side 44 조건 평행 번역 (M1-M44).
+- [[../working/prolegomena/02_framework_skeleton_v0|02 Framework Skeleton]] — 4-layer architecture (L0-L4); 2026-05-22 5-영역 리서치 수렴; 5 OP-NEW 식별 (등록 안 함).
+- [[../working/prolegomena/03_formula_catalog_v0|03 Formula Catalog]] — 44 M_k 의 full formal candidate notation; 6 O-grade open 마크; PAI vocabulary 형식화 0 (§13 placeholder).
+
 ## SEAL Chain (Superseded-by)
 
 [[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [[CV-1.17_SEAL]] → [[CV-1.18_SEAL]] → [[CV-1.19_SEAL]] → [[CV-1.20_SEAL]] (현재).
