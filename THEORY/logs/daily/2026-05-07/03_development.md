@@ -26,10 +26,10 @@ We fix notation consistent with `canonical.md` §§3, 7.1, 8.5 and `working/MF/t
 | $\mathrm{Core}(C_i^t)$ | $\{x \in C_i^t : u_t(x) \geq \theta_\mathrm{core}\}$ |
 | $m_i^t = \sum_{x \in C_i^t} u_t(x)$ | component cohesive mass |
 | $M_{t \to s} \in \mathbb{R}_{\geq 0}^{n \times n}$ | E1–E4 admissible transport plan; entries $M(x,y)$ |
-| $\gamma_{ij} := M_{t\to s}\big|_{C_i^t \times C_j^s}$ | restricted plan |
+| $\gamma_{ij} := M_{t\to s}\big\vert_{C_i^t \times C_j^s}$ | restricted plan |
 | $\gamma(C_i^t, C_j^s) := \sum_{x \in C_i^t,\, y \in C_j^s} M(x,y)$ | total restricted mass |
 | $\varphi(x) = (u(x), \mathrm{Cl}(u)(x), D(x;1{-}u))$ | canonical 3-component fingerprint |
-| $c(x,y) = \|\varphi(x) - \varphi(y)\|^2 + \sigma_\mathrm{sp}^{-2}\|x-y\|_G^2$ | canonical fingerprint cost |
+| $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}\lVert x-y \rVert_G^2$ | canonical fingerprint cost |
 | $\varepsilon_\mathrm{OT}$ | entropic regularization (Sinkhorn); $\varepsilon_\mathrm{OT} > 0$ |
 | $\sigma_\mathrm{sp}^2$ | spatial-cost length-scale; $\sigma_\mathrm{sp}^2 \geq \mathrm{diam}(G)^2 / 2$ (T-Persist-1(e) TC2) |
 | $\gamma_\mathrm{OT}$ | fingerprint-gap concentration constant from T-Persist-1(e); canonical $\gamma_\mathrm{OT} = 1$ |
@@ -64,7 +64,7 @@ with $d_\mathrm{min}^* \geq 3$ (canonical T-Persist-K-Sep WS regime, §12). This
 - E1 (sub-stochastic): $\sum_y M(x,y) \leq u_t(x)$ for all $x$.
 - E2 (non-injective): row/column degeneracy permitted.
 - E3 (core-inheritance solution constraint): the canonical entropic-OT plan with cost $c$ is used (or any plan within $\varepsilon_\mathrm{OT}$-OT optimality).
-- E4 (fingerprint-cost structural sensitivity): $c(x,y) = \|\varphi(x)-\varphi(y)\|^2 + \sigma_\mathrm{sp}^{-2} d_G(x,y)^2$ as in canonical §7.1.
+- E4 (fingerprint-cost structural sensitivity): $c(x,y) = \lVert \varphi(x)-\varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2} d_G(x,y)^2$ as in canonical §7.1.
 
 **(A7) T-Persist-1(e) preconditions hold** [V on parameters]. The two-tier concentration regime applies:
 - (TC1) $\Delta_\varphi^2(\delta) > 0$ for $\delta \geq 2$ (deep-core fingerprint gap, canonical: $\geq 2.38$ measured, $\geq 2.87$ theory).
@@ -75,7 +75,7 @@ These are the canonical Cat A preconditions of T-Persist-1(e).
 
 **(A8) Pairing existence with dominant matching** [S, locally checkable]. There exists a permutation $\pi: \{1,\ldots,K\} \to \{1,\ldots,K\}$ such that:
 - (A8a) inter-component fingerprint gap at the pair scale:
-$$\Delta_\varphi^2_\mathrm{inter} := \min_{i\,\neq\,i'} \min_{x \in \mathrm{Core}^2(C_i^t),\,y \in \mathrm{Core}^2(C_{\pi(i')}^s)} \|\varphi(x) - \varphi(y)\|^2 \;>\; 0,$$
+$$\Delta_\varphi^2_\mathrm{inter} := \min_{i\,\neq\,i'} \min_{x \in \mathrm{Core}^2(C_i^t),\,y \in \mathrm{Core}^2(C_{\pi(i')}^s)} \lVert \varphi(x) - \varphi(y) \rVert^2 \;>\; 0,$$
 where $\mathrm{Core}^2 = \{x \in \mathrm{Core} : d_G(x, \partial\mathrm{Core}) \geq 2\}$ is the depth-$\geq 2$ deep core (canonical T-Persist-1(d) deep-core notion; the *existence* of the deep core is Cat A via H2', the *positive interior gap* invokes H3 only for Cat A purity — Cat B usage of H2' alone suffices to pick the deep-core sites).
 - (A8b) the gap is large enough relative to the entropic regularization:
 $$\gamma_\mathrm{OT}\,\Delta_\varphi^2_\mathrm{inter} > \varepsilon_\mathrm{OT}\,\log n + \mathrm{diam}(G)^2 / \sigma_\mathrm{sp}^2.$$
@@ -94,7 +94,7 @@ Note: (A8a) is verifiable on the instance once D-ST-3 components and the deep co
 
 **Statement.** Under (A1)–(A3), the score matrix $\mathbf{S} \in \mathbb{R}^{K_t \times K_s}$ and normalized matrix $\tilde{\mathbf{S}}$ are well-defined; all entries are finite and $\tilde{S}_{ij}^0 \in [-\lambda_c\,c_\mathrm{max},\,\lambda_m]$ where $c_\mathrm{max} = \max_{x,y} c(x,y) \leq 4 + \mathrm{diam}(G)^2/\sigma_\mathrm{sp}^2$.
 
-**Proof.** Finiteness: $K_t, K_s$ are finite ((A1) + (A3)); $\gamma(C_i^t, C_j^s)$ is a finite sum over a $|C_i^t| \times |C_j^s|$ block of non-negative entries bounded by $u_t \leq 1$, hence $\gamma \leq \min(m_i^t, m_j^s)$. By (A1)–(A2), $m_i^t \geq \rho_\mathrm{pers} \cdot |C_i^t| > 0$ (since $C_i^t$ is non-empty by D-ST-3), hence the denominator $\min(m_i^t, m_j^s) > 0$ and the normalization is well-defined.
+**Proof.** Finiteness: $K_t, K_s$ are finite ((A1) + (A3)); $\gamma(C_i^t, C_j^s)$ is a finite sum over a $\lvert C_i^t \rvert \times \lvert C_j^s \rvert$ block of non-negative entries bounded by $u_t \leq 1$, hence $\gamma \leq \min(m_i^t, m_j^s)$. By (A1)–(A2), $m_i^t \geq \rho_\mathrm{pers} \cdot \lvert C_i^t \rvert > 0$ (since $C_i^t$ is non-empty by D-ST-3), hence the denominator $\min(m_i^t, m_j^s) > 0$ and the normalization is well-defined.
 
 Bounds: $0 \leq \gamma \leq \min(m_i^t, m_j^s)$ gives $S_{ij}^0 \leq \lambda_m \min(m_i^t, m_j^s)$, hence $\tilde{S}_{ij}^0 \leq \lambda_m$. The cost term $\lambda_c \sum c(x,y) M(x,y) \leq \lambda_c c_\mathrm{max} \min(m_i^t, m_j^s)$, hence $\tilde S_{ij}^0 \geq -\lambda_c c_\mathrm{max}$. $\square$
 
@@ -139,7 +139,7 @@ with $L_g$ the Sinkhorn dual-potential Lipschitz constant (bounded explicitly in
 **Proof (sharp form).** Sinkhorn dual-potential analysis: see §8 below for the full derivation. The crude union bound (factor $n$) is replaced by a Lipschitz dual-potential argument that removes the $\log n$ overhead and brings the certified regime $\varepsilon_\mathrm{OT}^*$ from $O(\Delta_\varphi^2/(\log n))$ up to $O(\Delta_\varphi^2 / L_g \mathrm{diam}_\mathrm{cost})$.
 
 **Coarse-form proof (for self-containment of (A1)–(A8) without §8).**
-1. Apply the cost-comparison step of T-Persist-1(e) (canonical §13 line 1814 step 2) at the inter-component scale: for $x \in C_i^t$, $y \in C_j^s$ with $j \neq \pi(i)$, $\|\varphi(x) - \varphi(y)\|^2 \geq \Delta_\varphi^2_\mathrm{inter} - O(e^{-c_0 d_\mathrm{inter}^*})$ by (A5) + (A8a).
+1. Apply the cost-comparison step of T-Persist-1(e) (canonical §13 line 1814 step 2) at the inter-component scale: for $x \in C_i^t$, $y \in C_j^s$ with $j \neq \pi(i)$, $\lVert \varphi(x) - \varphi(y) \rVert^2 \geq \Delta_\varphi^2_\mathrm{inter} - O(e^{-c_0 d_\mathrm{inter}^*})$ by (A5) + (A8a).
 2. By the Sinkhorn structure $M^*(x,y) = a(x)e^{-c(x,y)/\varepsilon_\mathrm{OT}}b(y)$ and the column-ratio union bound (canonical T-Persist-1(e) lines 1810–1814):
 $$\frac{\sum_{y \in C_j^s} M^*(x,y)}{\sum_y M^*(x,y)} \;\leq\; n\,\exp\!\Big(-\frac{\gamma_\mathrm{OT}\,\Delta_\varphi^2_\mathrm{inter} - \mathrm{diam}^2/\sigma_\mathrm{sp}^2}{\varepsilon_\mathrm{OT}}\Big) \;=:\; \eta_\mathrm{cross}^\mathrm{coarse}.$$
 3. Multiplying by row sum and summing $x \in C_i^t$: $\gamma(C_i^t, C_j^s) \leq \eta_\mathrm{cross}^\mathrm{coarse}\,m_i^t$. Symmetrically: $\gamma(C_i^t, C_j^s) \leq \eta_\mathrm{cross}^\mathrm{coarse}\,m_j^s$. $\square$
@@ -212,7 +212,7 @@ where:
 - $\eta_\mathrm{cross}^\mathrm{sharp} = \exp\!\big(-(\gamma_\mathrm{OT}\,\Delta_\varphi^2_\mathrm{inter} - L_g\,d_\mathrm{eff})/\varepsilon_\mathrm{OT}\big)$ (Lemma 3 sharp; §8.2);
 - $L_g$ is the Sinkhorn dual-potential Lipschitz constant (Lemma 8.2): $L_g \leq \mathrm{Lip}(c)$ for c-cyclically-monotone potentials on the realized support (bounded by $2(1 + \mathrm{diam}_\varphi) + 2\mathrm{diam}(G)/\sigma_\mathrm{sp}^2$ in our cost class; numeric value at default: $L_g \leq 2.4$);
 - $d_\mathrm{eff} \leq \min(\mathrm{diam}_\mathrm{cost}(G), \mathrm{diam}(G))$ is the effective Sinkhorn-ball radius;
-- $\bar c_\mathrm{intra} \leq \Delta_\varphi^2_\mathrm{intra,deep} + \mathrm{diam}_\mathrm{intra}(C)^2/\sigma_\mathrm{sp}^2$ is the intra-component cost upper bound; bounded by $|C|^{1/2}$ for typical 2D-grid components.
+- $\bar c_\mathrm{intra} \leq \Delta_\varphi^2_\mathrm{intra,deep} + \mathrm{diam}_\mathrm{intra}(C)^2/\sigma_\mathrm{sp}^2$ is the intra-component cost upper bound; bounded by $\lvert C \rvert^{1/2}$ for typical 2D-grid components.
 
 The bound is **strictly positive** whenever:
 $$\rho_\mathrm{deep}\,(1 - \eta_\mathrm{self}^{\,K}) - \eta_\mathrm{cross}^\mathrm{sharp} \;>\; \frac{\lambda_c}{\lambda_m}\,\bar c_\mathrm{intra}.$$
@@ -397,7 +397,7 @@ $$\sum_{i=1}^k c(x_i, y_i) \;\leq\; \sum_{i=1}^k c(x_i, y_{i+1}),\qquad y_{k+1} 
 
 This is automatic for the entropic-OT optimum at any $\varepsilon_\mathrm{OT} > 0$ (it is the entropy-augmented analogue of c-monotonicity; cf. Léonard 2014). **No additional assumption needed.**
 
-**(DR2)** *Cost regularity.* The cost $c(x,y) = \|\varphi(x) - \varphi(y)\|^2 + \sigma_\mathrm{sp}^{-2}\,d_G(x,y)^2$ is jointly $L_c$-Lipschitz in each argument with
+**(DR2)** *Cost regularity.* The cost $c(x,y) = \lVert \varphi(x) - \varphi(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}\,d_G(x,y)^2$ is jointly $L_c$-Lipschitz in each argument with
 $$L_c \;\leq\; 2(1 + \mathrm{diam}_\varphi(\mathcal{P})) + 2\,\mathrm{diam}(G) / \sigma_\mathrm{sp}^2.$$
 
 For the canonical 3-component fingerprint $\varphi = (u, \mathrm{Cl}(u), D(x;1{-}u)) \in [0,1]^3$, $\mathrm{diam}_\varphi \leq \sqrt{3}$, hence $L_c \leq 2(1+\sqrt{3}) + 2\,\mathrm{diam}(G)/\sigma_\mathrm{sp}^2 \approx 5.46 + 0.4 \approx 5.86$ at default $\sigma_\mathrm{sp}^2 = \mathrm{diam}^2/2 = 100$. **(DR2) holds with an explicit constant.**
@@ -408,14 +408,14 @@ For the canonical 3-component fingerprint $\varphi = (u, \mathrm{Cl}(u), D(x;1{-
 $$L_g \;\leq\; L_c.$$
 
 In particular, for any $y, y' \in \mathrm{supp}_y(M^*)$:
-$$|g(y) - g(y')| \;\leq\; L_c \cdot d_G(y, y').$$
+$$\lvert g(y) - g(y') \rvert \;\leq\; L_c \cdot d_G(y, y').$$
 
 **Proof.** By the Sinkhorn fixed-point identity:
 $$g(y) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\sum_x e^{(f(x) - c(x,y))/\varepsilon_\mathrm{OT}}\,u_t(x)\Big) + \mathrm{const}.$$
 For $y, y' \in \mathcal{P}$:
 $$g(y) - g(y') = -\varepsilon_\mathrm{OT}\,\log\!\Big(\frac{\sum_x e^{(f(x) - c(x,y))/\varepsilon_\mathrm{OT}}\,u_t(x)}{\sum_x e^{(f(x) - c(x,y'))/\varepsilon_\mathrm{OT}}\,u_t(x)}\Big).$$
-Using $|c(x,y) - c(x,y')| \leq L_c \cdot d_G(y,y')$ ((DR2)) and the elementary log-sum-exp inequality $|\log\sum a_x e^{u_x} - \log\sum a_x e^{v_x}| \leq \max_x |u_x - v_x|$:
-$$|g(y) - g(y')| \leq \varepsilon_\mathrm{OT} \cdot \frac{L_c \cdot d_G(y,y')}{\varepsilon_\mathrm{OT}} = L_c \cdot d_G(y,y'). \qquad \square$$
+Using $\lvert c(x,y) - c(x,y') \rvert \leq L_c \cdot d_G(y,y')$ ((DR2)) and the elementary log-sum-exp inequality $|\log\sum a_x e^{u_x} - \log\sum a_x e^{v_x}| \leq \max_x \lvert u_x - v_x \rvert$:
+$$\lvert g(y) - g(y') \rvert \leq \varepsilon_\mathrm{OT} \cdot \frac{L_c \cdot d_G(y,y')}{\varepsilon_\mathrm{OT}} = L_c \cdot d_G(y,y'). \qquad \square$$
 
 **Numerical value at default parameters.** $L_g \leq L_c \leq 5.86$ at default; $L_g \leq 2.4$ in the formation-conditioned regime (where the OT support is restricted to deep-core × deep-core blocks; the effective $\mathrm{diam}_\varphi$ is bounded by deep-core fingerprint range $\approx 0.7$, giving $L_c \approx 2(1+0.7) + 0.4 = 3.8$ — and $L_g$ tighter still under c-cyclical monotonicity restrictions; conservative working value $L_g = 2.4$).
 
@@ -429,7 +429,7 @@ $$\gamma(C_i^t, C_j^s) \;\leq\; \eta_\mathrm{cross}^\mathrm{sharp}\,\min(m_i^t, 
 
 **Proof.** For $x \in C_i^t$ and $y \in C_j^s$ with $j \neq \pi(i)$:
 $$\frac{M^*(x,y)}{M^*(x,y_0)} \;=\; \exp\!\Big(\frac{c(x,y_0) - c(x,y) + g(y) - g(y_0)}{\varepsilon_\mathrm{OT}}\Big).$$
-By the inter-component fingerprint gap (A8a), $c(x,y) - c(x, y_0) \geq \Delta_\varphi^2_\mathrm{inter} - L_c\,d_G(y_0,y_0)/\sigma_\mathrm{sp}^2$ where the second term is small; for the deep-core $y_0$ the spatial-cost difference is $\geq 0$. By Lemma 8.2: $|g(y) - g(y_0)| \leq L_g\,d_G(y, y_0) \leq L_g\,d_\mathrm{eff}$. Hence:
+By the inter-component fingerprint gap (A8a), $c(x,y) - c(x, y_0) \geq \Delta_\varphi^2_\mathrm{inter} - L_c\,d_G(y_0,y_0)/\sigma_\mathrm{sp}^2$ where the second term is small; for the deep-core $y_0$ the spatial-cost difference is $\geq 0$. By Lemma 8.2: $\lvert g(y) - g(y_0) \rvert \leq L_g\,d_G(y, y_0) \leq L_g\,d_\mathrm{eff}$. Hence:
 $$\frac{M^*(x,y)}{M^*(x,y_0)} \leq \exp\!\Big(-\frac{\Delta_\varphi^2_\mathrm{inter} - L_g\,d_\mathrm{eff}}{\varepsilon_\mathrm{OT}}\Big).$$
 Summing over $y \in C_j^s$ (using (S) to bound the support cardinality by a constant independent of $n$ — the Sinkhorn ball at $\varepsilon_\mathrm{OT} \leq \varepsilon_\mathrm{OT}^*$ has effective volume $O(1)$ in graph distance):
 $$\sum_{y \in C_j^s} M^*(x, y) \;\leq\; \exp\!\Big(-\frac{\Delta_\varphi^2_\mathrm{inter} - L_g\,d_\mathrm{eff}}{\varepsilon_\mathrm{OT}}\Big) \cdot \sum_y M^*(x, y).$$
@@ -644,7 +644,7 @@ For each part of T-Temporal-Identity, we now articulate the Cat A promotion path
 **Current status:** Cat B (under (A1)–(A8)+(A7')).
 
 **Cat A path (Sub-steps S-B1, S-B2, S-B3, S-B4):**
-- **S-B1.** Tighten (A8a) iso-ratio dependency: prove $\rho_\mathrm{deep} \geq 0.84$ for all 2D grid components $|C| \geq 25$ unconditionally (today: conditional on $C_\mathrm{iso} \leq 1.5$). **Difficulty:** mid; geometric-isoperimetric. **Estimate:** 1 session.
+- **S-B1.** Tighten (A8a) iso-ratio dependency: prove $\rho_\mathrm{deep} \geq 0.84$ for all 2D grid components $\lvert C \rvert \geq 25$ unconditionally (today: conditional on $C_\mathrm{iso} \leq 1.5$). **Difficulty:** mid; geometric-isoperimetric. **Estimate:** 1 session.
 - **S-B2.** Promote Lemma 8.2 (Sinkhorn-Lipschitz) to canonical Cat A: needs Bigot–Cazelles–Papadakis Lipschitz bound formalized for our cost class. **Difficulty:** mid; analytic. **Estimate:** 1 session.
 - **S-B3.** Resolve OP-0011 Step 2 (component confinement bound on $|\gamma_M - \gamma_{M'}|$). **Difficulty:** mid-high. **Estimate:** 1–2 sessions. *This is NQ-T-Identity-1.*
 - **S-B4.** Prove margin-alone implies pairing (NQ-T-Identity-5 full): MA1-free version of Lemma 7. **Difficulty:** mid. **Estimate:** 1 session.

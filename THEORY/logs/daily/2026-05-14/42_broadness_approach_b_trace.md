@@ -11,7 +11,7 @@
 ```
 grep -r "\|\|J_Cl\|\|\|operator norm.*closure\|sigma_min.*Cl\|||J_Cl||" THEORY/canonical/ THEORY/working/
 ```
-→ No prior canonical/working bound on $\|J_{\mathrm{Cl}}\|_{\ell^2\to\ell^2}$ in the explicit form below. T7-Enhanced (canonical Cat A) gives the closure-correction *quadratic-form* lower bound but does not state the equivalent operator-norm fact. This file extends T7-Enhanced.
+→ No prior canonical/working bound on $\lVert J_{\mathrm{Cl}} \rVert_{\ell^2\to\ell^2}$ in the explicit form below. T7-Enhanced (canonical Cat A) gives the closure-correction *quadratic-form* lower bound but does not state the equivalent operator-norm fact. This file extends T7-Enhanced.
 
 ---
 
@@ -37,53 +37,53 @@ Constants (canonical parameters):
 ## §2. Lemma B1 — Spectral bound on the mixing operator $M$
 
 **Lemma B1.** *(PROVED, elementary.)* For the row-normalized aggregation $P = D^{-1}W$ on an undirected, weighted graph $G$ with symmetric adjacency $W$:
-$$\|P\|_{\ell^2 \to \ell^2} = 1.$$
+$$\lVert P \rVert_{\ell^2 \to \ell^2} = 1.$$
 Consequently, for $M = (1-\eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P$ with $\eta_{\mathrm{cl}} \in [0,1]$,
-$$\|M\|_{\ell^2 \to \ell^2} \leq 1.$$
+$$\lVert M \rVert_{\ell^2 \to \ell^2} \leq 1.$$
 
 *Proof.* $P$ is similar to a symmetric matrix via $D^{1/2}$:
 $$D^{1/2} P D^{-1/2} = D^{1/2} D^{-1} W D^{-1/2} = D^{-1/2} W D^{-1/2} =: \tilde P,$$
-which is **symmetric**. Hence $P$ has real spectrum, equal to that of $\tilde P$, and the singular values of $P$ on $\ell^2$ are bounded by $\|\tilde P\|_{\ell^2}$. Since $W$ is non-negative and symmetric, $\tilde P$ has spectral radius 1 (Perron–Frobenius eigenvalue with eigenvector $D^{1/2}\mathbf{1}$). Standard symmetric-matrix fact: $\|\tilde P\|_{\ell^2 \to \ell^2} = \rho(\tilde P) = 1$.
+which is **symmetric**. Hence $P$ has real spectrum, equal to that of $\tilde P$, and the singular values of $P$ on $\ell^2$ are bounded by $\lVert \tilde P \rVert_{\ell^2}$. Since $W$ is non-negative and symmetric, $\tilde P$ has spectral radius 1 (Perron–Frobenius eigenvalue with eigenvector $D^{1/2}\mathbf{1}$). Standard symmetric-matrix fact: $\lVert \tilde P \rVert_{\ell^2 \to \ell^2} = \rho(\tilde P) = 1$.
 
-However, $\|P\|_{\ell^2 \to \ell^2}$ is the operator norm of $P$ on the standard $\ell^2$ inner product, which **is not** equal to $\|\tilde P\|_{\ell^2}$ in general — they differ by the change-of-basis $D^{1/2}$. So we need to be more careful.
+However, $\lVert P \rVert_{\ell^2 \to \ell^2}$ is the operator norm of $P$ on the standard $\ell^2$ inner product, which **is not** equal to $\lVert \tilde P \rVert_{\ell^2}$ in general — they differ by the change-of-basis $D^{1/2}$. So we need to be more careful.
 
 Take a fresh approach. Compute $P^\top P$:
 $$P^\top P = W^\top D^{-1} \cdot D^{-1} W = W D^{-2} W \quad (W^\top = W).$$
 
-We want $\rho(P^\top P) = \|P\|_{\ell^2}^2$. Equivalently, $\max_{v \neq 0} \frac{\langle v, W D^{-2} W v\rangle}{\langle v, v\rangle}$.
+We want $\rho(P^\top P) = \lVert P \rVert_{\ell^2}^2$. Equivalently, $\max_{v \neq 0} \frac{\langle v, W D^{-2} W v\rangle}{\langle v, v\rangle}$.
 
-This is not obviously bounded by 1 in general for non-regular graphs. Counterexample: star graph with center of degree $n-1$ and leaves of degree $1$. Then $D^{-1}_{\text{center}} = 1/(n-1)$ while $D^{-1}_{\text{leaf}} = 1$. For $v = e_{\text{leaf}}$, $P v$ has support at center with magnitude $1$, and $\|Pv\| = 1 = \|v\|$. For $v$ = uniform over leaves, $Pv$ at center has magnitude $1 \cdot (n-1)/(n-1) = 1$, $\|Pv\| = 1$, $\|v\| = \sqrt{n-1}$, ratio $= 1/\sqrt{n-1} < 1$.
+This is not obviously bounded by 1 in general for non-regular graphs. Counterexample: star graph with center of degree $n-1$ and leaves of degree $1$. Then $D^{-1}_{\text{center}} = 1/(n-1)$ while $D^{-1}_{\text{leaf}} = 1$. For $v = e_{\text{leaf}}$, $P v$ has support at center with magnitude $1$, and $\lVert Pv \rVert = 1 = \lVert v \rVert$. For $v$ = uniform over leaves, $Pv$ at center has magnitude $1 \cdot (n-1)/(n-1) = 1$, $\lVert Pv \rVert = 1$, $\lVert v \rVert = \sqrt{n-1}$, ratio $= 1/\sqrt{n-1} < 1$.
 
-So on the star graph, $\|P\|_{\ell^2 \to \ell^2} = 1$ (achieved at the leaf basis vector). Generally:
+So on the star graph, $\lVert P \rVert_{\ell^2 \to \ell^2} = 1$ (achieved at the leaf basis vector). Generally:
 
-**Sub-lemma B1a.** $\|P\|_{\ell^2 \to \ell^2} \leq 1$ when $D$ is "regular enough", but **NOT** in general. Counter: star graph with $\|P e_{\text{leaf}}\|_2 = 1 = \|e_{\text{leaf}}\|_2$, so $\|P\|_{\ell^2} \geq 1$, but actually equal to 1 since $\|Pv\|_2^2 = \sum_x (\sum_y P_{xy} v_y)^2 \leq \sum_x (\sum_y P_{xy})(\sum_y P_{xy} v_y^2) = \sum_x \sum_y P_{xy} v_y^2 = \sum_y v_y^2 \sum_x P_{xy}$. But $\sum_x P_{xy} = $ column sum of $P = (D^{-1}W)$ = $\sum_x W_{xy}/D_{xx}$. This is *not* necessarily 1.
+**Sub-lemma B1a.** $\lVert P \rVert_{\ell^2 \to \ell^2} \leq 1$ when $D$ is "regular enough", but **NOT** in general. Counter: star graph with $\lVert P e_{\text{leaf}} \rVert_2 = 1 = \lVert e_{\text{leaf}} \rVert_2$, so $\lVert P \rVert_{\ell^2} \geq 1$, but actually equal to 1 since $\lVert Pv \rVert_2^2 = \sum_x (\sum_y P_{xy} v_y)^2 \leq \sum_x (\sum_y P_{xy})(\sum_y P_{xy} v_y^2) = \sum_x \sum_y P_{xy} v_y^2 = \sum_y v_y^2 \sum_x P_{xy}$. But $\sum_x P_{xy} = $ column sum of $P = (D^{-1}W)$ = $\sum_x W_{xy}/D_{xx}$. This is *not* necessarily 1.
 
-For **regular graphs** (all degrees equal), $D = d \cdot I$, and $P = W/d$ is symmetric with $\|P\|_{\ell^2} = \rho(P) \leq 1$. For non-regular, $\|P\|_{\ell^2}$ can exceed 1 in pathological cases.
+For **regular graphs** (all degrees equal), $D = d \cdot I$, and $P = W/d$ is symmetric with $\lVert P \rVert_{\ell^2} = \rho(P) \leq 1$. For non-regular, $\lVert P \rVert_{\ell^2}$ can exceed 1 in pathological cases.
 
-**Revised approach.** Use the *symmetric-conjugate* form: $\tilde P = D^{-1/2} W D^{-1/2}$, which IS symmetric and has $\|\tilde P\|_{\ell^2} = \rho(\tilde P) \leq 1$. Then $P = D^{-1/2} \tilde P D^{1/2}$, so on the standard $\ell^2$:
-$$\|Pv\|_2 = \|D^{-1/2} \tilde P D^{1/2} v\|_2 \leq \|D^{-1/2}\|_\infty \cdot \|\tilde P\|_{\ell^2} \cdot \|D^{1/2}\|_\infty \cdot \|v\|_2 = \sqrt{\frac{d_{\max}}{d_{\min}}} \cdot \|v\|_2.$$
+**Revised approach.** Use the *symmetric-conjugate* form: $\tilde P = D^{-1/2} W D^{-1/2}$, which IS symmetric and has $\lVert \tilde P \rVert_{\ell^2} = \rho(\tilde P) \leq 1$. Then $P = D^{-1/2} \tilde P D^{1/2}$, so on the standard $\ell^2$:
+$$\lVert Pv \rVert_2 = \lVert D^{-1/2} \tilde P D^{1/2} v \rVert_2 \leq \lVert D^{-1/2} \rVert_\infty \cdot \lVert \tilde P \rVert_{\ell^2} \cdot \lVert D^{1/2} \rVert_\infty \cdot \lVert v \rVert_2 = \sqrt{\frac{d_{\max}}{d_{\min}}} \cdot \lVert v \rVert_2.$$
 
-So $\|P\|_{\ell^2 \to \ell^2} \leq \sqrt{d_{\max}/d_{\min}}$. For canonical 15×15 grid, $d_{\min} = 2$ (corners), $d_{\max} = 4$ (interior), so $\sqrt{d_{\max}/d_{\min}} = \sqrt{2}$.
+So $\lVert P \rVert_{\ell^2 \to \ell^2} \leq \sqrt{d_{\max}/d_{\min}}$. For canonical 15×15 grid, $d_{\min} = 2$ (corners), $d_{\max} = 4$ (interior), so $\sqrt{d_{\max}/d_{\min}} = \sqrt{2}$.
 
-**Conclusion of B1.** The naive operator-norm bound $\|P\|_{\ell^2 \to \ell^2} \leq 1$ **does not hold** for non-regular graphs in the standard $\ell^2$ inner product. We need to work in a **degree-weighted inner product** to get the clean contraction.
+**Conclusion of B1.** The naive operator-norm bound $\lVert P \rVert_{\ell^2 \to \ell^2} \leq 1$ **does not hold** for non-regular graphs in the standard $\ell^2$ inner product. We need to work in a **degree-weighted inner product** to get the clean contraction.
 
 ---
 
 ## §3. Degree-Weighted Inner Product (B1 revised)
 
 **Sub-lemma B1' (correct form).** Equip $\mathbb{R}^n$ with the degree-weighted inner product:
-$$\langle u, v\rangle_D := u^\top D v = \sum_x d_x u_x v_x, \qquad \|v\|_D := \sqrt{\langle v, v\rangle_D}.$$
+$$\langle u, v\rangle_D := u^\top D v = \sum_x d_x u_x v_x, \qquad \lVert v \rVert_D := \sqrt{\langle v, v\rangle_D}.$$
 
 In this inner product, $P$ is *self-adjoint*:
 $$\langle P u, v\rangle_D = u^\top P^\top D v = u^\top W^\top D^{-1} D v = u^\top W v,$$
 $$\langle u, P v\rangle_D = u^\top D P v = u^\top W v.$$
 Equal — hence $P$ is self-adjoint on $(\mathbb{R}^n, \langle\cdot,\cdot\rangle_D)$. Its spectrum is real and bounded by $\rho(P) = 1$ (Perron), so
-$$\|P\|_{D \to D} \leq 1, \qquad \|M\|_{D \to D} \leq 1.$$
+$$\lVert P \rVert_{D \to D} \leq 1, \qquad \lVert M \rVert_{D \to D} \leq 1.$$
 
 **Implication for $J_{\mathrm{Cl}}$:**
-$$\|J_{\mathrm{Cl}}\|_{D \to D} \leq \max_x \bigl(a_{\mathrm{cl}} \sigma'(z_x)\bigr) \cdot \|M\|_{D \to D} \leq a_{\mathrm{cl}} \cdot \tfrac{1}{4} \cdot 1 = \tfrac{a_{\mathrm{cl}}}{4}.$$
+$$\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq \max_x \bigl(a_{\mathrm{cl}} \sigma'(z_x)\bigr) \cdot \lVert M \rVert_{D \to D} \leq a_{\mathrm{cl}} \cdot \tfrac{1}{4} \cdot 1 = \tfrac{a_{\mathrm{cl}}}{4}.$$
 
-Since $a_{\mathrm{cl}} < 4$ (A3), $\|J_{\mathrm{Cl}}\|_{D \to D} < 1$.
+Since $a_{\mathrm{cl}} < 4$ (A3), $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} < 1$.
 
 ---
 
@@ -101,8 +101,8 @@ $$(I - J_{\mathrm{Cl}}(u^*))^\top (I - J_{\mathrm{Cl}}(u^*)) \;\succeq\; (1 - a_
 
 *Proof.*
 
-(Degree-weighted form.) Let $A := I - J_{\mathrm{Cl}}$. By §3, $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 =: \kappa < 1$. For any $v \in \mathbb{R}^n$:
-$$\|Av\|_D \geq \|v\|_D - \|J_{\mathrm{Cl}} v\|_D \geq (1 - \kappa) \|v\|_D.$$
+(Degree-weighted form.) Let $A := I - J_{\mathrm{Cl}}$. By §3, $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 =: \kappa < 1$. For any $v \in \mathbb{R}^n$:
+$$\lVert Av \rVert_D \geq \lVert v \rVert_D - \lVert J_{\mathrm{Cl}} v \rVert_D \geq (1 - \kappa) \lVert v \rVert_D.$$
 Squaring: $\langle Av, Av\rangle_D \geq (1-\kappa)^2 \langle v, v\rangle_D$, i.e., $A^\top D A \succeq (1-\kappa)^2 D$.
 
 (Standard $\ell^2$ form.) Using $D \succeq d_{\min} I$ and $D \preceq d_{\max} I$:
@@ -110,7 +110,7 @@ $$d_{\max} \cdot A^\top A \succeq A^\top D A \succeq (1-\kappa)^2 \cdot D \succe
 so $A^\top A \succeq (1-\kappa)^2 \cdot (d_{\min}/d_{\max}) \cdot I$. $\square$
 
 *Status.* **PROVED Cat A**. The proof uses only:
-- Linear-algebra fact $\|P\|_{D \to D} = \rho(P) = 1$ (Perron on stochastic operator self-adjoint in degree-weighted inner product).
+- Linear-algebra fact $\lVert P \rVert_{D \to D} = \rho(P) = 1$ (Perron on stochastic operator self-adjoint in degree-weighted inner product).
 - Triangle inequality.
 - A3 contraction ($a_{\mathrm{cl}} < 4$, canonical).
 
@@ -120,7 +120,7 @@ No CONJECTURE remaining.
 
 ## §5. From B2 to $H_{\mathrm{cl}}$ Hessian on Tangent Space
 
-The closure energy is $E_{\mathrm{cl}}(u) = \|\mathrm{Cl}(u) - u\|^2$ (standard $\ell^2$ norm). Its Hessian is
+The closure energy is $E_{\mathrm{cl}}(u) = \lVert \mathrm{Cl}(u) - u \rVert^2$ (standard $\ell^2$ norm). Its Hessian is
 $$H_{\mathrm{cl}}(u) = 2 (J_{\mathrm{Cl}}(u) - I)^\top (J_{\mathrm{Cl}}(u) - I) + 2 \sum_k \bigl(\mathrm{Cl}(u)_k - u_k\bigr) \cdot \nabla^2 \mathrm{Cl}_k(u).$$
 
 The first ("Gauss-Newton") term is dominant; the second is the **residual correction**.
@@ -138,23 +138,23 @@ $$\Pi_T \cdot 2 (J_{\mathrm{Cl}} - I)^\top (J_{\mathrm{Cl}} - I) \cdot \Pi_T \su
 ### §5.2 Residual correction: bounded perturbation
 
 At a critical point $u^*$ of full $\mathcal{E}$ (not $E_{\mathrm{cl}}$ alone), $\mathrm{Cl}(u^*) - u^* \neq 0$ in general. The residual norm:
-$$\|r\|_\infty := \|\mathrm{Cl}(u^*) - u^*\|_\infty.$$
+$$\lVert r \rVert_\infty := \lVert \mathrm{Cl}(u^*) - u^* \rVert_\infty.$$
 
 The closure operator second derivative:
 $$\nabla^2 \mathrm{Cl}_k(u) = a_{\mathrm{cl}}^2 \cdot \sigma''(z_k) \cdot M_k^\top M_k,$$
 where $M_k$ is the $k$-th row of $M$ as a column-vector (rank-1 outer product if exact, but here we have $\nabla^2$ as a matrix per coordinate). Operator norm:
-$$\|\nabla^2 \mathrm{Cl}_k\|_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \|M\|_{\ell^2 \to \ell^2}^2.$$
+$$\lVert \nabla^2 \mathrm{Cl}_k \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \lVert M \rVert_{\ell^2 \to \ell^2}^2.$$
 
-With $|\sigma''(z)| \leq \sup_z |\sigma(z)(1-\sigma(z))(1-2\sigma(z))| \leq 1/(6\sqrt{3}) \approx 0.0962$ (closed-form maximum of $\sigma''$), and $\|M\|_{\ell^2}^2 \leq d_{\max}/d_{\min}$ (B1 sub-bound), we get
-$$\|\nabla^2 \mathrm{Cl}_k\|_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min}).$$
+With $|\sigma''(z)| \leq \sup_z |\sigma(z)(1-\sigma(z))(1-2\sigma(z))| \leq 1/(6\sqrt{3}) \approx 0.0962$ (closed-form maximum of $\sigma''$), and $\lVert M \rVert_{\ell^2}^2 \leq d_{\max}/d_{\min}$ (B1 sub-bound), we get
+$$\lVert \nabla^2 \mathrm{Cl}_k \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min}).$$
 
-The sum $\sum_k r_k \nabla^2 \mathrm{Cl}_k$ is bounded in operator norm by $\|r\|_\infty \cdot n \cdot \max_k \|\nabla^2 \mathrm{Cl}_k\|$ in the worst case, but more carefully:
-$$\bigl\|\sum_k r_k \nabla^2 \mathrm{Cl}_k\bigr\|_{\ell^2 \to \ell^2} \leq \|r\|_2 \cdot \sqrt{\sum_k \|\nabla^2 \mathrm{Cl}_k\|^2} \leq \|r\|_2 \cdot \sqrt{n} \cdot \max_k \|\nabla^2 \mathrm{Cl}_k\|.$$
+The sum $\sum_k r_k \nabla^2 \mathrm{Cl}_k$ is bounded in operator norm by $\lVert r \rVert_\infty \cdot n \cdot \max_k \lVert \nabla^2 \mathrm{Cl}_k \rVert$ in the worst case, but more carefully:
+$$\bigl\lVert \sum_k r_k \nabla^2 \mathrm{Cl}_k\bigr \rVert_{\ell^2 \to \ell^2} \leq \lVert r \rVert_2 \cdot \sqrt{\sum_k \lVert \nabla^2 \mathrm{Cl}_k \rVert^2} \leq \lVert r \rVert_2 \cdot \sqrt{n} \cdot \max_k \lVert \nabla^2 \mathrm{Cl}_k \rVert.$$
 
-In practice (numerical), $\|r\|_2 \leq \sqrt{E_{\mathrm{cl}}(u^*)}$, which is small at a deep minimizer.
+In practice (numerical), $\lVert r \rVert_2 \leq \sqrt{E_{\mathrm{cl}}(u^*)}$, which is small at a deep minimizer.
 
 **Conclusion §5.2.** Residual correction is bounded:
-$$\bigl\|H_{\mathrm{cl}}(u^*) - 2(J_{\mathrm{Cl}} - I)^\top(J_{\mathrm{Cl}} - I)\bigr\|_{\ell^2 \to \ell^2} \leq 2 \sqrt{n} \cdot \|r\|_2 \cdot a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min}).$$
+$$\bigl\lVert H_{\mathrm{cl}}(u^*) - 2(J_{\mathrm{Cl}} - I)^\top(J_{\mathrm{Cl}} - I)\bigr \rVert_{\ell^2 \to \ell^2} \leq 2 \sqrt{n} \cdot \lVert r \rVert_2 \cdot a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min}).$$
 
 ---
 
@@ -162,22 +162,22 @@ $$\bigl\|H_{\mathrm{cl}}(u^*) - 2(J_{\mathrm{Cl}} - I)^\top(J_{\mathrm{Cl}} - I)
 
 **Theorem B3.** *(Cat B, post-residual; CV-1.16+ candidate.)*
 
-Under D-HMORSE-LOCAL (C1)–(C5) + A3 + assumption (CL-RES) $\|r\|_2 \leq \delta$ for some $\delta > 0$ explicit at the minimizer, the closure Hessian on tangent space satisfies
+Under D-HMORSE-LOCAL (C1)–(C5) + A3 + assumption (CL-RES) $\lVert r \rVert_2 \leq \delta$ for some $\delta > 0$ explicit at the minimizer, the closure Hessian on tangent space satisfies
 $$\Pi_T H_{\mathrm{cl}}(u^*) \Pi_T \;\succeq\; \bigl[2(1 - a_{\mathrm{cl}}/4)^2 \cdot (d_{\min}/d_{\max}) - 2 \sqrt{n} \delta a_{\mathrm{cl}}^2 \cdot 0.1 \cdot (d_{\max}/d_{\min})\bigr] \cdot \Pi_T.$$
 
 At canonical 15×15 with $a_{\mathrm{cl}} = 3.5$, $d_{\min}/d_{\max} = 1/2$, $n = 225$:
 - Leading term: $2 \cdot (1 - 3.5/4)^2 \cdot 1/2 = 2 \cdot 0.0156 \cdot 0.5 = 0.0156$.
 - Residual term: $2\sqrt{225} \cdot \delta \cdot 12.25 \cdot 0.1 \cdot 2 = 73.5 \delta$.
 
-**Required for $\mu_{\min} > 0$:** $\delta < 0.0156 / 73.5 \approx 2.1 \times 10^{-4}$. Numerical verification of $\|r\|_2$ at canonical minimizer is needed (Approach (c)).
+**Required for $\mu_{\min} > 0$:** $\delta < 0.0156 / 73.5 \approx 2.1 \times 10^{-4}$. Numerical verification of $\lVert r \rVert_2$ at canonical minimizer is needed (Approach (c)).
 
-*Status.* **Cat B** (conditional on (CL-RES) numerical verification). Cat A unconditional if $\|r\|_2$ can be analytically bounded at full-$\mathcal{E}$ critical points.
+*Status.* **Cat B** (conditional on (CL-RES) numerical verification). Cat A unconditional if $\lVert r \rVert_2$ can be analytically bounded at full-$\mathcal{E}$ critical points.
 
 ---
 
 ## §7. Failure mode analysis
 
-If $\|r\|_2$ at canonical minimizer turns out **not** small enough (>2 × 10^{-4}), then:
+If $\lVert r \rVert_2$ at canonical minimizer turns out **not** small enough (>2 × 10^{-4}), then:
 - Theorem B3 still gives positivity in degree-weighted form, but the standard $\ell^2$ form may be insufficient.
 - Tighten via: (i) $a_{\mathrm{cl}}$ choice (smaller → larger leading constant); (ii) sharper $|\sigma''|_{\max}$ bound (depend on $u^*$ regime); (iii) work in degree-weighted form throughout (which has tighter constants).
 

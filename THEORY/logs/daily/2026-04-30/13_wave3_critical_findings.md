@@ -21,12 +21,12 @@ NQ-187 §8 protocol: power-law fit of $\mu_1 - \mu_0 \sim \epsilon^p$ at first $
 | §5 alternative (5th-equivariant non-zero) | 3/2 | **1.03** | **REJECTED** |
 | Leading-order non-degeneracy (cubic-equivariant ratio ≠ 4) | 1 | **1.03** | **CONFIRMED** |
 
-**Numerical result:** $\mu_0 = \epsilon |W''(c)|$, $\mu_1 = 2 \epsilon |W''(c)|$. Ratio $\mu_1/\mu_0 = 2$ (asymptotically), **not** $\mu_1/\mu_0 = 1$ (degenerate, as canonical T-σ-Theorem-4 (ii) claims).
+**Numerical result:** $\mu_0 = \epsilon \lvert W''(c) \rvert$, $\mu_1 = 2 \epsilon \lvert W''(c) \rvert$. Ratio $\mu_1/\mu_0 = 2$ (asymptotically), **not** $\mu_1/\mu_0 = 1$ (degenerate, as canonical T-σ-Theorem-4 (ii) claims).
 
 ### §1.3 Implication for canonical T-σ-Theorem-4
 
 **T-σ-Theorem-4 (canonical §13 line 1377+, Cat B retroactive at CV-1.5.1)** claims:
-> $\mu_0 = 4|W''(c)|\epsilon$ and $\mu_1 = (A_2/A_1)|W''(c)|\epsilon = 4|W''(c)|\epsilon$ (using $A_2/A_1 = 4$ from R22 working file `symmetry_moduli.md` §3.3).
+> $\mu_0 = 4|W''(c)|\epsilon$ and $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon = 4|W''(c)|\epsilon$ (using $A_2/A_1 = 4$ from R22 working file `symmetry_moduli.md` §3.3).
 
 The numerical data on $L \in \{4, 8, 16\}$ shows **leading-order non-degeneracy**: $\mu_0 \neq \mu_1$ at finite L; ratio is 2 not 1. This either:
 - **(α)** Implies $A_2/A_1 \neq 4$ on finite L; continuum claim $A_2/A_1 = 4$ must be verified by L → ∞ extrapolation (NQ-187b proposed Task #62).

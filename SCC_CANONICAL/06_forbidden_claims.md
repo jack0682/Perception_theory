@@ -192,10 +192,10 @@ These are *patterns of speech* that overclaim what SCC-CT actually proves. Banne
 **Why forbidden:** Notation error from unordered-pair summation. Under canonical ordered-pair convention (§II.3), the correct ratio is **4λ₂**, not 2λ₂.
 
 **Allowed:**
-- ✓ "$\beta/\alpha > 4\lambda_2/|W''(c)|$ (T8-Core, ordered-pair summation convention)."
+- ✓ "$\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ (T8-Core, ordered-pair summation convention)."
 
 **Forbidden:**
-- ❌ "$\beta/\alpha > 2\lambda_2/|W''(c)|$."
+- ❌ "$\beta/\alpha > 2\lambda_2/\lvert W''(c) \rvert$."
 - ❌ "Phase transition at $2\lambda_2$ ratio."
 
 ### §3.10 "Object-level statements"

@@ -87,7 +87,7 @@ $s(c) = 10 c (1 - 2\sigma(10c - 5))$.
 ### 3.3 Structural summary of $p^\ast(c)$
 
 - **Left-sided critical threshold $c_{\mathrm{bif}}^- \approx 0.385$** where $|p^\ast|$ first enters the spectrum from below. Determined by $s(c) \cdot \max|p_k| = 2$, i.e., $s(c_{\mathrm{bif}}^-) \cdot 1 = 2$, i.e., $5c(1-2d_0(c)) = 1$. Numerical: $c_{\mathrm{bif}}^- \approx 0.385$ at $a_D = 5$ (depends on $a_D$).
-- **Right-sided critical threshold $c_{\mathrm{bif}}^+ \approx 0.545$** where $p^\ast$ first enters $(0, 1]$ from above. At $c$ just above $1/2$, $p^\ast$ is large (above 1); as $c$ increases, $p^\ast$ decreases below 1 and enters the spectrum. Determined by $|s(c)| = 2$, i.e., $5c(2d_0 - 1) = 1$. Symmetric to left under $c \to 1 - c$ approximately but not exactly (sigmoid is not linear).
+- **Right-sided critical threshold $c_{\mathrm{bif}}^+ \approx 0.545$** where $p^\ast$ first enters $(0, 1]$ from above. At $c$ just above $1/2$, $p^\ast$ is large (above 1); as $c$ increases, $p^\ast$ decreases below 1 and enters the spectrum. Determined by $\lvert s(c) \rvert = 2$, i.e., $5c(2d_0 - 1) = 1$. Symmetric to left under $c \to 1 - c$ approximately but not exactly (sigmoid is not linear).
 - **No bifurcation crossing** for $c \in (c_{\mathrm{bif}}^-, c_{\mathrm{bif}}^+) \approx (0.385, 0.545)$: the Morse index of $H_{\mathrm{sep}}$ is constant in this "central spinodal" regime.
 
 ### 3.4 Extended sub-threshold region at $c < c_{\mathrm{bif}}^-$
@@ -206,7 +206,7 @@ So at $c = 0.7$, $N^{\mathrm{sep}}_{\mathrm{unst}} \approx N_+ - 1150 \approx 20
 ## §6. Phase diagram in $(c, \beta)$
 
 Combining with Prop 1.3a bd-Morse index:
-$$N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, c) = \#\{k : 4\alpha\lambda_k < \beta|W''(c)|\}.$$
+$$N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, c) = \#\{ k : 4\alpha\lambda_k < \beta \mid W''(c) \mid \}.$$
 
 And Prop 1.3b (e) Weyl bracket:
 $$N_{\mathrm{unst}}^{\mathrm{bd}} - N^{\mathrm{sep}}_+ \leq N_{\mathrm{unst}}^{\mathrm{full}} \leq N_{\mathrm{unst}}^{\mathrm{bd}} + N^{\mathrm{sep}}_-.$$
@@ -221,9 +221,9 @@ On Regime I (low $c$) or III (high $c$): $N_{\mathrm{unst}}^{\mathrm{full}}$ has
 
 ### 6.3 Critical $\beta_{\mathrm{crit}}^{(2)}(c)$
 
-$\beta_{\mathrm{crit}}^{(2)}(c) = 4\alpha\lambda_2/|W''(c)|$. $W''(c) = 2 - 12c + 12c^2$, which is negative in spinodal and symmetric around $c = 1/2$ (since $W''(1 - c) = 2 - 12(1-c) + 12(1-c)^2 = 2 - 12 + 12c + 12 - 24c + 12c^2 = 2 - 12c + 12c^2 = W''(c)$).
+$\beta_{\mathrm{crit}}^{(2)}(c) = 4\alpha\lambda_2/\lvert W''(c) \rvert$. $W''(c) = 2 - 12c + 12c^2$, which is negative in spinodal and symmetric around $c = 1/2$ (since $W''(1 - c) = 2 - 12(1-c) + 12(1-c)^2 = 2 - 12 + 12c + 12 - 24c + 12c^2 = 2 - 12c + 12c^2 = W''(c)$).
 
-So $|W''(c)|$ is symmetric in $c \to 1-c$, and $\beta_{\mathrm{crit}}^{(2)}(c) = \beta_{\mathrm{crit}}^{(2)}(1-c)$.
+So $\lvert W''(c) \rvert$ is symmetric in $c \to 1-c$, and $\beta_{\mathrm{crit}}^{(2)}(c) = \beta_{\mathrm{crit}}^{(2)}(1-c)$.
 
 But $N^{\mathrm{sep}}_{\mathrm{unst}}(c)$ is asymmetric in $c \to 1-c$ (Regime I ≠ Regime III). So **Prop 1.3b contribution breaks the $c \to 1-c$ symmetry** that $W''$ would otherwise preserve.
 

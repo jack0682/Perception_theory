@@ -10,11 +10,11 @@
 
 ## §1. Sampling Protocol
 
-**Measurement variable:** $\|R_j(t)\|_\infty = \max_{i \in V} |u^{(j)}(t)_i - u^{(j),\mathrm{ideal}}_i|$ for each active slot $j$.
+**Measurement variable:** $\lVert R_j(t) \rVert_\infty = \max_{i \in V} |u^{(j)}(t)_i - u^{(j),\mathrm{ideal}}_i|$ for each active slot $j$.
 
 **Sampling schedule:** Every 50 gradient steps, at $t \in \{50, 100, 150, \ldots, 1000\}$ → 20 measurement snapshots per config.
 
-**Active slot filter:** Only measure $j$ with $\|u^{(j)}(t)\|_\infty > \varepsilon = 0.225$ at snapshot time (inactive slots excluded from statistics; their $\|R_j\|_\infty$ is trivially small and uninformative for regime assessment).
+**Active slot filter:** Only measure $j$ with $\lVert u^{(j)}(t) \rVert_\infty > \varepsilon = 0.225$ at snapshot time (inactive slots excluded from statistics; their $\lVert R_j \rVert_\infty$ is trivially small and uninformative for regime assessment).
 
 **Reference held fixed:** $u^{(j),\mathrm{ideal}}$ is computed once from $\mathbf{u}_0$ (see `04a` §3) and reused for all 20 snapshots. This tests whether the flow *exits* the regime, not whether the ideal *tracks* the flow.
 
@@ -26,10 +26,10 @@ For each of the 960 wq1 configs, compute:
 
 | Quantity | Formula | Purpose |
 |---|---|---|
-| `max_R_inf` | $\max_{t, j\,\mathrm{active}} \|R_j(t)\|_\infty$ | Worst-case residual; primary hypothesis test |
-| `avg_R_inf` | $\frac{1}{|\text{active slots}| \cdot 20}\sum_{t,j} \|R_j(t)\|_\infty$ | Average regime deviation |
-| `final_R_inf` | $\max_{j\,\mathrm{active}} \|R_j(1000)\|_\infty$ | Near-convergence residual; stable-regime check |
-| `t_exit_50` | first $t$ s.t. $\max_j \|R_j(t)\|_\infty > \rho_\mathrm{pert}/2$, or $\infty$ | Regime exit time |
+| `max_R_inf` | $\max_{t, j\,\mathrm{active}} \lVert R_j(t) \rVert_\infty$ | Worst-case residual; primary hypothesis test |
+| `avg_R_inf` | $\frac{1}{|\text{active slots}| \cdot 20}\sum_{t,j} \lVert R_j(t) \rVert_\infty$ | Average regime deviation |
+| `final_R_inf` | $\max_{j\,\mathrm{active}} \lVert R_j(1000) \rVert_\infty$ | Near-convergence residual; stable-regime check |
+| `t_exit_50` | first $t$ s.t. $\max_j \lVert R_j(t) \rVert_\infty > \rho_\mathrm{pert}/2$, or $\infty$ | Regime exit time |
 
 ---
 

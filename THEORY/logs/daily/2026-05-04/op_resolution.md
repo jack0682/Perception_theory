@@ -86,8 +86,8 @@ Currently ε is defined in Commitment 16 (canonical.md line 810) and used in T-L
 ### §2.2 Analysis
 
 **Where ε currently appears in T-L1-F:**
-- Commitment 16 line 810: $K_{\mathrm{act}}^\varepsilon(\mathbf u) := \#\{j : \|u^{(j)}\|_1 > \varepsilon\}$ with default $\varepsilon = 0.01 \cdot \bar m$ (post-G3 amendment: $\bar m = M / K_{\mathrm{field}}$).
-- T-L1-F line 1483 P2: "active mass + connected $\delta$-support". P2 says active slots ($\|u^{(j)}\|_1 > \varepsilon$) have connected $\delta$-support (some level $\delta$). The ε here is the **same** as Commitment 16's.
+- Commitment 16 line 810: $K_{\mathrm{act}}^\varepsilon(\mathbf u) := \#\{j : \lVert u^{(j)} \rVert_1 > \varepsilon\}$ with default $\varepsilon = 0.01 \cdot \bar m$ (post-G3 amendment: $\bar m = M / K_{\mathrm{field}}$).
+- T-L1-F line 1483 P2: "active mass + connected $\delta$-support". P2 says active slots ($\lVert u^{(j)} \rVert_1 > \varepsilon$) have connected $\delta$-support (some level $\delta$). The ε here is the **same** as Commitment 16's.
 
 So ε is **already implicitly in T-L1-F's regime hypothesis package** via P2. Promoting to (P12) would just make this explicit.
 
@@ -138,7 +138,7 @@ Different units. **No direct dimensional coupling.** They live in orthogonal coo
 T-L1-F's hypothesis package $(P0)$–$(P11)$ links ε and $\ell_{\min}$ via:
 - **P6**: $b_j \ge h_{\min} \ge \ell_{\min}$ — birth heights of active slots dominated below by $\ell_{\min}$.
 - **P11**: $h_{\min} - \max_{k \ne j} B_{jk} \ge \ell_{\min} + r_{\mathrm{assoc}} + r_{\mathrm{birth}}$ — margin ledger.
-- **P2**: $\|u^{(j)}\|_1 > \varepsilon$ — mass threshold.
+- **P2**: $\lVert u^{(j)} \rVert_1 > \varepsilon$ — mass threshold.
 
 For both T-L1-F bijection ($K_{\mathrm{bar}}^{\ell_{\min}} = K_{\mathrm{act}}^\varepsilon$) and T-L1-M (post-repair Cat A conditional) to hold, **both ε and $\ell_{\min}$ must be calibrated within the L1-J regime constants**. They are not free parameters; their ranges are constrained jointly by the regime.
 
@@ -230,7 +230,7 @@ Combining: $|K_{\mathrm{soft}}^\phi(U) - \sum_j K_{\mathrm{soft}}^{\phi,(j)}(u^{
 
 ### §5.1 Question
 
-T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\|\mathbf u_1 - \mathbf u_2\|$?
+T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$?
 
 ### §5.2 Composition argument
 
@@ -243,13 +243,13 @@ $$
 
 **(b) K_soft^φ Lipschitz bound** (per `working/E/soft_K_definition.md` §2.2 Cor 2.2):
 $$
-|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)| \le 4 L_\phi n \cdot \|U_1 - U_2\|_\infty
+|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)| \le 4 L_\phi n \cdot \lVert U_1 - U_2 \rVert_\infty
 $$
-where $L_\phi$ is the Lipschitz constant of $\phi$ on $[0,1]$ and $n = |X|$ is graph size.
+where $L_\phi$ is the Lipschitz constant of $\phi$ on $[0,1]$ and $n = \lvert X \rvert$ is graph size.
 
 **(c) Aggregate vs per-slot bound** (composition of $u^{(j)}$ shifts):
 $$
-\|U_1 - U_2\|_\infty = \|\sum_j (u^{(j)}_1 - u^{(j)}_2)\|_\infty \le \sum_j \|u^{(j)}_1 - u^{(j)}_2\|_\infty \le K_{\mathrm{field}} \cdot \max_j \|u^{(j)}_1 - u^{(j)}_2\|_\infty.
+\lVert U_1 - U_2 \rVert_\infty = \lVert \sum_j (u^{(j)}_1 - u^{(j)}_2) \rVert_\infty \le \sum_j \lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty \le K_{\mathrm{field}} \cdot \max_j \lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty.
 $$
 
 ### §5.3 Triangle inequality composition
@@ -261,14 +261,14 @@ $$
 
 Substituting (a) + (b) + (c):
 $$
-|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le \varepsilon_{\mathrm{sub}}^\phi (N_{\mathrm{sub}}^{(1)} + N_{\mathrm{sub}}^{(2)}) + \varepsilon_{\mathrm{dom}}^\phi (K_{\mathrm{act}}^{(1)} + K_{\mathrm{act}}^{(2)}) + 4 L_\phi n \cdot K_{\mathrm{field}} \cdot \max_j \|u^{(j)}_1 - u^{(j)}_2\|_\infty.
+|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le \varepsilon_{\mathrm{sub}}^\phi (N_{\mathrm{sub}}^{(1)} + N_{\mathrm{sub}}^{(2)}) + \varepsilon_{\mathrm{dom}}^\phi (K_{\mathrm{act}}^{(1)} + K_{\mathrm{act}}^{(2)}) + 4 L_\phi n \cdot K_{\mathrm{field}} \cdot \max_j \lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty.
 $$
 
 ### §5.4 Refinement: integer-valuedness exploitation
 
 $K_{\mathrm{act}}^\varepsilon$ is integer; the bound is **non-vacuous only when right side $< 1$**. Conditions:
 - Sharp envelope: $\varepsilon_{\mathrm{sub}}^\phi, \varepsilon_{\mathrm{dom}}^\phi$ small (both ≤ $1 / (3 K_{\mathrm{act}}^{(1)} + 3 K_{\mathrm{act}}^{(2)})$ roughly).
-- Close states: $\|u^{(j)}_1 - u^{(j)}_2\|_\infty$ small (bound by $1 / (4 L_\phi n K_{\mathrm{field}} \cdot 3)$ roughly).
+- Close states: $\lVert u^{(j)}_1 - u^{(j)}_2 \rVert_\infty$ small (bound by $1 / (4 L_\phi n K_{\mathrm{field}} \cdot 3)$ roughly).
 
 When non-vacuous: $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1) - K_{\mathrm{act}}^\varepsilon(\mathbf u_2)| \le 0$ (since right side < 1 and LHS is integer non-negative), i.e., **$K_{\mathrm{act}}^\varepsilon$ is preserved** across small perturbations within sharp regimes.
 
@@ -391,7 +391,7 @@ For a fixed multi-formation state $\mathbf u$, $K_{\mathrm{act}}^\epsilon(\mathb
 For the standard L1-I configuration ($T^2_{20}$, $M=90$, $K_{\mathrm{field}}=4$, `initial_masses=(30, 30, 30, 0)`):
 - Take initial state $\mathbf u_0$.
 - Sweep $\epsilon \in [0, M / K_{\mathrm{field}}]$ at fine granularity (e.g., 100 points logarithmic).
-- For each ε, compute $K_{\mathrm{act}}^\epsilon(\mathbf u_0) = \#\{j : \|u^{(j)}_0\|_1 > \epsilon\}$.
+- For each ε, compute $K_{\mathrm{act}}^\epsilon(\mathbf u_0) = \#\{j : \lVert u^{(j)}_0 \rVert_1 > \epsilon\}$.
 - Plot $K_{\mathrm{act}}$ vs ε; identify jump points.
 
 For initial_masses=(30, 30, 30, 0), the per-slot masses are exactly $\{30, 30, 30, 0\}$. So $K_{\mathrm{act}}^\epsilon = 3$ for $\epsilon \in [0, 30)$ and $K_{\mathrm{act}}^\epsilon = 0$ for $\epsilon > 30$ — a single jump at $\epsilon = 30$.
@@ -402,9 +402,9 @@ This is **trivial for the initial state** (per-slot masses are clearly separated
 
 For the standard L1-I initial state, the K_act stability is trivially: K_act = 3 for all ε ∈ [0, 30), jumps to 0 at ε = 30. **Single structural jump.**
 
-For dynamic states (e.g., post-gradient-flow with slot masses redistributed via shared-pool dynamics), the per-slot masses $\|u^{(j)}\|_1$ are continuous functions of dynamic time. K_act jumps occur when any $\|u^{(j)}\|_1$ crosses ε from above. The set of jump points in ε is the **support of the per-slot mass distribution**.
+For dynamic states (e.g., post-gradient-flow with slot masses redistributed via shared-pool dynamics), the per-slot masses $\lVert u^{(j)} \rVert_1$ are continuous functions of dynamic time. K_act jumps occur when any $\lVert u^{(j)} \rVert_1$ crosses ε from above. The set of jump points in ε is the **support of the per-slot mass distribution**.
 
-**Theoretical statement (Cat A absolute):** Under shared-pool gradient-flow dynamics that conserve total mass ($\sum_j \|u^{(j)}\|_1 = M$), the per-slot masses evolve continuously in time. K_act^ε is right-continuous in ε (raising ε deactivates slots at each crossing). **Jump points in ε are the per-slot mass values $\{\|u^{(j)}_0\|_1\}_{j=1}^{K_{\mathrm{field}}}$.** "Structural" vs "noise-driven" is a value judgment about how close per-slot masses are.
+**Theoretical statement (Cat A absolute):** Under shared-pool gradient-flow dynamics that conserve total mass ($\sum_j \lVert u^{(j)} \rVert_1 = M$), the per-slot masses evolve continuously in time. K_act^ε is right-continuous in ε (raising ε deactivates slots at each crossing). **Jump points in ε are the per-slot mass values $\{\lVert u^{(j)}_0 \rVert_1\}_{j=1}^{K_{\mathrm{field}}}$.** "Structural" vs "noise-driven" is a value judgment about how close per-slot masses are.
 
 ### §8.4 Small-script execution (verification)
 
@@ -461,39 +461,39 @@ R-2 closure (`02_development.md` §3) changed $\tau_*^{\mathrm{post-R2}}$ to use
 
 ### §9.2 Approach: post-process existing l1i JSON
 
-The existing `CODE/scripts/results/l1i_constants_feasibility.json` (2.3MB, 1920 configs) was produced by the morning audit. It contains LG-4 measurement (= $\|U\|_{\infty, X_{\mathrm{bg}}}$) for each config. To extract ρ_bg and ρ_res:
+The existing `CODE/scripts/results/l1i_constants_feasibility.json` (2.3MB, 1920 configs) was produced by the morning audit. It contains LG-4 measurement (= $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$) for each config. To extract ρ_bg and ρ_res:
 
-- $\rho_{\mathrm{bg}} = \ell_{\min} - \|U\|_{\infty, X_{\mathrm{bg}}}$ (LG-4 margin in P5 form).
-- $\rho_{\mathrm{res}} = \ell_{\min} - \|R_{\mathrm{inact}}\|_\infty$ (P10 form).
+- $\rho_{\mathrm{bg}} = \ell_{\min} - \lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ (LG-4 margin in P5 form).
+- $\rho_{\mathrm{res}} = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$ (P10 form).
 
-The JSON contains LG-4 margin data; need to check if $\|R_{\mathrm{inact}}\|_\infty$ is also recorded.
+The JSON contains LG-4 margin data; need to check if $\lVert R_{\mathrm{inact}} \rVert_\infty$ is also recorded.
 
 ### §9.3 Quick post-processing
 
 (See script execution below for actual results.)
 
-The l1i JSON's per-config record includes `bg_max_U` (= $\|U\|_{\infty, X_{\mathrm{bg}}}$); this gives $\rho_{\mathrm{bg}} = \ell_{\min} - bg\_max\_U$. The inactive-residual norm $\|R_{\mathrm{inact}}\|_\infty$ is **not** separately recorded in the JSON (LG-4 is computed on $U$ directly per P5; P10 chain is not separately measured).
+The l1i JSON's per-config record includes `bg_max_U` (= $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$); this gives $\rho_{\mathrm{bg}} = \ell_{\min} - bg\_max\_U$. The inactive-residual norm $\lVert R_{\mathrm{inact}} \rVert_\infty$ is **not** separately recorded in the JSON (LG-4 is computed on $U$ directly per P5; P10 chain is not separately measured).
 
-**Limitation:** Without re-running l1i with explicit $\|R_{\mathrm{inact}}\|_\infty$ measurement, we can only check $\rho_{\mathrm{bg}}$ (not $\rho_{\mathrm{res}}$).
+**Limitation:** Without re-running l1i with explicit $\lVert R_{\mathrm{inact}} \rVert_\infty$ measurement, we can only check $\rho_{\mathrm{bg}}$ (not $\rho_{\mathrm{res}}$).
 
 For the FEASIBLE configurations, $\rho_{\mathrm{bg}} > 0$ by FEASIBLE definition (LG-4 margin > 0 + budget). For the standard $T^2_{20}, \ell_{\min}=0.10$ with the specific FEASIBLE configs, $bg\_max\_U \approx 0.0183$ (per `kbar_kact_bridge_L1I_constants_feasibility.md` line 229), giving $\rho_{\mathrm{bg}} \approx 0.10 - 0.018 = 0.082$. So $\rho_{\mathrm{bg}}$ is comfortable.
 
 ### §9.4 Theoretical comparison
 
-P5 ($\|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$) is a stronger condition than P10 ($\|R_{\mathrm{inact}}\|_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$):
+P5 ($\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$) is a stronger condition than P10 ($\lVert R_{\mathrm{inact}} \rVert_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$):
 - $U|_{X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ AND active-slot decay tails into background (per P7).
-- Therefore $\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$.
+- Therefore $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
 - Hence $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$ in general (P5 gives smaller margin to ℓ_min than P10 does, when the active-slot decay tails contribute to $U|_{X_{\mathrm{bg}}}$).
 
 **Wait — this contradicts §9.3's empirical estimate.** Let me re-examine.
 
-If P5 says $\|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ and P10 says $\|R_{\mathrm{inact}}\|_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$, then $\rho_{\mathrm{bg}}$ and $\rho_{\mathrm{res}}$ are independent **regime parameters** (constants chosen to ensure the bounds hold). They are not derived from each other.
+If P5 says $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ and P10 says $\lVert R_{\mathrm{inact}} \rVert_\infty \le \ell_{\min} - \rho_{\mathrm{res}}$, then $\rho_{\mathrm{bg}}$ and $\rho_{\mathrm{res}}$ are independent **regime parameters** (constants chosen to ensure the bounds hold). They are not derived from each other.
 
 For a given configuration:
-- The **measured** $\rho_{\mathrm{bg}}^{\mathrm{actual}} = \ell_{\min} - \|U\|_{\infty, X_{\mathrm{bg}}}$.
-- The **measured** $\rho_{\mathrm{res}}^{\mathrm{actual}} = \ell_{\min} - \|R_{\mathrm{inact}}\|_\infty$.
+- The **measured** $\rho_{\mathrm{bg}}^{\mathrm{actual}} = \ell_{\min} - \lVert U \rVert_{\infty, X_{\mathrm{bg}}}$.
+- The **measured** $\rho_{\mathrm{res}}^{\mathrm{actual}} = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$.
 
-Since $\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (active tails add to $U$), we have $\rho_{\mathrm{bg}}^{\mathrm{actual}} \le \rho_{\mathrm{res}}^{\mathrm{actual}}$ — **P5 is a tighter constraint than P10 for the same configuration**.
+Since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active tails add to $U$), we have $\rho_{\mathrm{bg}}^{\mathrm{actual}} \le \rho_{\mathrm{res}}^{\mathrm{actual}}$ — **P5 is a tighter constraint than P10 for the same configuration**.
 
 ### §9.5 Implication for $\tau_*^{\mathrm{post-R2}}$
 
@@ -514,7 +514,7 @@ This **contradicts** the assertion in `03_integration_and_new_open.md` §3.2 ("p
 
 Append to `02_development.md` §3.4 (or as an erratum):
 
-> *(NQ-G1-1 closure correction, W6 D1 op_resolution.md §9)*: The §3.4 implication "post-R2 admissible τ range is at least as wide as pre-R2" is **incorrect**. P5 ($\rho_{\mathrm{bg}}$) is a stronger constraint than P10 ($\rho_{\mathrm{res}}$) since $\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$). Generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$, giving $\tau_*^{\mathrm{post-R2}} \le \tau_*$. The post-R2 derivation gains theoretical clarity (P5 direct, no implicit T-L1-F dependency) at the cost of slightly tighter admissible τ range. Net trade-off acceptable for canonical promotion.
+> *(NQ-G1-1 closure correction, W6 D1 op_resolution.md §9)*: The §3.4 implication "post-R2 admissible τ range is at least as wide as pre-R2" is **incorrect**. P5 ($\rho_{\mathrm{bg}}$) is a stronger constraint than P10 ($\rho_{\mathrm{res}}$) since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$). Generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$, giving $\tau_*^{\mathrm{post-R2}} \le \tau_*$. The post-R2 derivation gains theoretical clarity (P5 direct, no implicit T-L1-F dependency) at the cost of slightly tighter admissible τ range. Net trade-off acceptable for canonical promotion.
 
 (I'll mark this in §13 summary as a follow-on action.)
 
@@ -526,25 +526,25 @@ Append to `02_development.md` §3.4 (or as an erratum):
 
 The §9.4 claim "$\rho_{\mathrm{bg}}^{\mathrm{actual}} \le \rho_{\mathrm{res}}^{\mathrm{actual}}$ generically" is **not strictly correct**. Detailed analysis:
 
-- $\rho_{\mathrm{bg}}^{\mathrm{max}}(\text{config}) = \ell_{\min} - \|U\|_{\infty, X_{\mathrm{bg}}}$
-- $\rho_{\mathrm{res}}^{\mathrm{max}}(\text{config}) = \ell_{\min} - \|R_{\mathrm{inact}}\|_\infty$ (over **full** graph, not just $X_{\mathrm{bg}}$)
+- $\rho_{\mathrm{bg}}^{\mathrm{max}}(\text{config}) = \ell_{\min} - \lVert U \rVert_{\infty, X_{\mathrm{bg}}}$
+- $\rho_{\mathrm{res}}^{\mathrm{max}}(\text{config}) = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$ (over **full** graph, not just $X_{\mathrm{bg}}$)
 
 Comparison:
-- $\|U\|_{\infty, X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ AND active-slot decay tails → $\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$.
-- $\|R_{\mathrm{inact}}\|_\infty$ is global → $\|R_{\mathrm{inact}}\|_\infty \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$.
-- Hence the relationship between $\|U\|_{\infty, X_{\mathrm{bg}}}$ and $\|R_{\mathrm{inact}}\|_\infty$ depends on whether (i) active decay tails into background dominate over (ii) inactive residual peaks outside $X_{\mathrm{bg}}$.
+- $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ includes both $R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ AND active-slot decay tails → $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
+- $\lVert R_{\mathrm{inact}} \rVert_\infty$ is global → $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$.
+- Hence the relationship between $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ and $\lVert R_{\mathrm{inact}} \rVert_\infty$ depends on whether (i) active decay tails into background dominate over (ii) inactive residual peaks outside $X_{\mathrm{bg}}$.
 
 **Configuration-dependent verdict:**
 - If active tails into background dominate: $\rho_{\mathrm{bg}} < \rho_{\mathrm{res}}$ ⇒ $\tau_*^{\mathrm{post-R2}} < \tau_*$ (post-R2 tighter).
 - If inactive residual peaks outside $X_{\mathrm{bg}}$ (e.g., $R_{\mathrm{inact}}$ has peaks on $N_j^r$): $\rho_{\mathrm{bg}} > \rho_{\mathrm{res}}$ ⇒ $\tau_*^{\mathrm{post-R2}} > \tau_*$ (post-R2 wider).
 
-**Implication:** the original `03_integration_and_new_open.md` §3.2 claim ("post-R2 regime is at least as wide as pre-repair") and my §9.4 reverse claim ("generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$") are **both oversimplifications**. The correct statement is: **the comparison is configuration-dependent and requires empirical measurement of both $\|U\|_{\infty, X_{\mathrm{bg}}}$ and $\|R_{\mathrm{inact}}\|_\infty$ separately**.
+**Implication:** the original `03_integration_and_new_open.md` §3.2 claim ("post-R2 regime is at least as wide as pre-repair") and my §9.4 reverse claim ("generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$") are **both oversimplifications**. The correct statement is: **the comparison is configuration-dependent and requires empirical measurement of both $\lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ and $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately**.
 
 The L-M draft §5.5 note "P5 bound only tightens the constant" assumes the implicit identification $U|_{X_{\mathrm{bg}}} = R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$ (i.e., no active decay tails into background). Under that assumption, $\rho_{\mathrm{bg}} \ge \rho_{\mathrm{res}}$ holds. **Without that assumption (R-2 closure removed it), the comparison is open.**
 
 ### §9.10 Recommended action (revised)
 
-Both `03_integration_and_new_open.md` §3.2 AND this op_resolution.md §9.4–§9.5 require correction to the configuration-dependent statement. Empirical measurement (extending l1i to record $\|R_{\mathrm{inact}}\|_\infty$ separately) would settle the question for the L1-I FEASIBLE set. Defer as **NQ-G1-1-ext** (W7+ work).
+Both `03_integration_and_new_open.md` §3.2 AND this op_resolution.md §9.4–§9.5 require correction to the configuration-dependent statement. Empirical measurement (extending l1i to record $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately) would settle the question for the L1-I FEASIBLE set. Defer as **NQ-G1-1-ext** (W7+ work).
 
 **Cat status of T-L1-M post-repair is unaffected:** Lemma L-M-2's $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ is correct as a regime hypothesis; whether the post-R2 admissible τ range is wider or tighter than pre-R2 depends on configuration. The Cat A conditional self-classification stands either way.
 
@@ -554,12 +554,12 @@ Both `03_integration_and_new_open.md` §3.2 AND this op_resolution.md §9.4–§
 
 ### §10.1 Question
 
-R-1 closure (`02_development.md` §2) noted that "(P9-tight): $\|R_j\|_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/4$" would tighten the Type-N bar bound to use $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$. Empirically: how often is (P9-tight) satisfied in the L1-I FEASIBLE configurations?
+R-1 closure (`02_development.md` §2) noted that "(P9-tight): $\lVert R_j \rVert_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/4$" would tighten the Type-N bar bound to use $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$. Empirically: how often is (P9-tight) satisfied in the L1-I FEASIBLE configurations?
 
 ### §10.2 What execution would entail
 
 Modify `l1i_constants_feasibility.py` to:
-1. Replace P9 condition $\|R_j\|_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/2$ with $\|R_j\|_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/4$.
+1. Replace P9 condition $\lVert R_j \rVert_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/2$ with $\lVert R_j \rVert_{\infty, N_j^r} \le \rho_{\mathrm{pert}}/4$.
 2. Re-classify the 1920 configs under P9-tight.
 3. Compare FEASIBLE_WITH_BUDGET counts: pre-tight (439/1920) vs P9-tight (TBD).
 
@@ -607,7 +607,7 @@ Minor script modification + re-run: ~30 minutes total. The l1i script's H6' cond
 
 **Status:** **✅ EXECUTED** — NQ-G1-2 closure Cat C target met (empirical feasibility verified for L1-J' regime candidate). Canonical adoption deferred to W7+ pending NQ-G1-2-ext (direct ‖R_j‖_∞ measurement under shared-pool dynamics).
 
-**New follow-on:** NQ-G1-2-ext (W7+) — empirically verify whether physical perturbations $R_j$ satisfy $\|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$ under shared-pool gradient-flow dynamics. L1-I currently tests initial-state geometry only; the perturbation-magnitude question requires extending l1i to compute $R_j$ across time evolution. Estimated effort ~1-2 hours.
+**New follow-on:** NQ-G1-2-ext (W7+) — empirically verify whether physical perturbations $R_j$ satisfy $\lVert R_j \rVert_\infty \le \rho_{\mathrm{pert}}/4$ under shared-pool gradient-flow dynamics. L1-I currently tests initial-state geometry only; the perturbation-magnitude question requires extending l1i to compute $R_j$ across time evolution. Estimated effort ~1-2 hours.
 
 **Files:** `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` (script), `CODE/scripts/results/op_resolution_nq_g1_2_p9_tight.json` (output), CHANGELOG W6 D1 EOD thirteenth addendum (full audit trail).
 
@@ -647,7 +647,7 @@ Modify `l1i_constants_feasibility.py` to accept ε as a sweep parameter (current
 
 ### §11.3 Theoretical pre-analysis
 
-ε's role in l1i: it determines the active set $A^\varepsilon = \{j : \|u^{(j)}\|_1 > \varepsilon\}$. Changing ε changes which slots are active.
+ε's role in l1i: it determines the active set $A^\varepsilon = \{j : \lVert u^{(j)} \rVert_1 > \varepsilon\}$. Changing ε changes which slots are active.
 
 For the standard L1-I configurations (`initial_masses=(30, 30, 30, 0)`):
 - For $\epsilon < 30$: 3 slots are active. L1-I feasibility is computed for the 3-active configuration.
@@ -761,7 +761,7 @@ Canonical changes APPLIED W6 D1 EOD (post-supervision):
 
 ### §13.3 New follow-on NQs surfaced
 
-- **NQ-G1-1-ext**: Empirically measure ρ_bg AND ρ_res in L1-I FEASIBLE configs simultaneously (requires l1i extension to record $\|R_{\mathrm{inact}}\|_\infty$ separately).
+- **NQ-G1-1-ext**: Empirically measure ρ_bg AND ρ_res in L1-I FEASIBLE configs simultaneously (requires l1i extension to record $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately).
 - **NQ-G3-3-dynamic**: K_act stability under ε perturbation for **dynamic states** (post-gradient-flow), not just initial state.
 - **NQ-G3-4-broader**: Pass 3 audit across all working/canonical/log files (cross-doc consistency check).
 

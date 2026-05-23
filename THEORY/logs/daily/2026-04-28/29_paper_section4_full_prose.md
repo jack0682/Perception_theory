@@ -36,7 +36,7 @@ A new phenomenon discovered in Phase 3, denoted V5b-T'.
 
 \begin{theorem}[V5b-T' corner-saturation on translation-invariant graphs, NEW]
 \label{thm:v5bTprime}
-For $\beta > 1/a^2$ AND $c < c_s$ on translation-invariant graph: the F=1 minimizer of $\mathcal{E}_{\mathrm{bd}}$ from localized initial condition is corner-saturated (i.e., $u^*(x) = 1$ on a connected cluster $S \subset X$ with $|S| \approx m$). The lowest non-tangent Hessian mode is the bulk-localized translation Goldstone of the saturated cluster, with PN-barrier-lifted eigenvalue
+For $\beta > 1/a^2$ AND $c < c_s$ on translation-invariant graph: the F=1 minimizer of $\mathcal{E}_{\mathrm{bd}}$ from localized initial condition is corner-saturated (i.e., $u^*(x) = 1$ on a connected cluster $S \subset X$ with $\lvert S \rvert \approx m$). The lowest non-tangent Hessian mode is the bulk-localized translation Goldstone of the saturated cluster, with PN-barrier-lifted eigenvalue
 $$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{|\partial S|}{\xi_0}, \quad |\partial S| \approx 4\sqrt{m},$$
 of magnitude $\mathcal{O}(\beta)$ (not exponentially small).
 \end{theorem}

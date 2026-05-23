@@ -109,7 +109,7 @@ LSW predicts $K(t) \sim t^{-d/(d+1)}$ for d-dim. Inverting: $t_n - t_{n-1} \sim 
 
 For R(t) ~ t^α: $K \cdot R^d = $ const → $K \sim t^{-\alpha d}$.
 
-For α=0.28, d=2: $K \sim t^{-0.56}$. Inter-jump time when K decreases by 1: $\Delta K = K \log(K/(K-1)) \approx 1$ for large K, but for small K: $\Delta t \cdot dK/dt \sim 1$ means $\Delta t \sim |dK/dt|^{-1} = (\alpha d/t \cdot K)^{-1} = t/(\alpha d K) \sim t / (\alpha d \cdot t^{-\alpha d}) = t^{1+\alpha d} / (\alpha d)$.
+For α=0.28, d=2: $K \sim t^{-0.56}$. Inter-jump time when K decreases by 1: $\Delta K = K \log(K/(K-1)) \approx 1$ for large K, but for small K: $\Delta t \cdot dK/dt \sim 1$ means $\Delta t \sim \lvert dK/dt \rvert^{-1} = (\alpha d/t \cdot K)^{-1} = t/(\alpha d K) \sim t / (\alpha d \cdot t^{-\alpha d}) = t^{1+\alpha d} / (\alpha d)$.
 
 For α=0.28, d=2: $\Delta t \sim t^{1.56}/0.56 \approx t^{1.56}$.
 

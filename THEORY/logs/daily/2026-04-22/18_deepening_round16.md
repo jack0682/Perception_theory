@@ -108,7 +108,7 @@ Morning dissolution: K=1 is the "eventual" state via coarsening; observational $
 **R12 explicit mechanism:** $\mu_{\mathrm{sep}} \sim e^{-d_{\min}/\xi_0}$ gives exponentially slow separation-mode relaxation. This IS the coarsening timescale.
 
 **Two-timescale confirmed:**
-- Fast: internal modes, $\tau_{\mathrm{fast}} \sim 1/(\beta |W''|)$.
+- Fast: internal modes, $\tau_{\mathrm{fast}} \sim 1/(\beta \lvert W'' \rvert)$.
 - Slow: coarsening, $\tau_{\mathrm{slow}} \sim e^{+d_{\min}/\xi_0}$.
 
 $\tau_{\mathrm{slow}}/\tau_{\mathrm{fast}} \sim e^{d_{\min}/\xi_0}/\xi_0^{-2}$. For canonical ($d_{\min} = 15$, $\xi_0 = 0.2$): $e^{75} \approx 10^{32}$. Astronomical.

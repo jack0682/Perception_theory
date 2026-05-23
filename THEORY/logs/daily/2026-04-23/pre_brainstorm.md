@@ -46,7 +46,7 @@ $$P(\text{escape to } k+1 | \beta) = \sigma\!\left(\kappa(\beta - \beta_{K \to K
 
 $$f(s) = \tanh(s/\xi)$$
 
-- $|f| \to 1$ as $|s| \to \infty$
+- $\lvert f \rvert \to 1$ as $\lvert s \rvert \to \infty$
 - **Spatial profile** of formation: $\phi_k^*(r) = \frac{1}{2}(1 - \tanh((r - r_0)/\xi_0))$ — 이미 Cat A (Cor 2.2)
 - **가설 (H-tanh-1)**: Step decomposition의 $\phi_k^*$는 **universal tanh** in supra-lattice regime (α ≥ 20) per X2 D1 — 이미 확인됨
 
@@ -114,11 +114,11 @@ $$u^*_K = \sum_{k=1}^K \phi_k^* \quad (k\text{-th formation)}$$
 
 - **가설 (H-multi-1)**: 각 K-sector $\mathcal{B}_K$는 "K-formation manifold"로 자연스럽게 분해. 각 $\phi_k^*$는 single-formation 이론 (tanh soliton)과 **동일한 구조** — 단지 center 위치와 size만 다름.
 - K-sector 내에서: geometric parameters $r_0(K), \xi_0, d_{\min}(K)$ 계산 가능
-- $K$가 mass conservation $\sum |A_k^*| = m = cn$에 의해 제약됨
+- $K$가 mass conservation $\sum \lvert A_k^* \rvert = m = cn$에 의해 제약됨
 
 #### Path β — **Multi-formation moduli space $\mathcal{M}_K$**
 
-$$\mathcal{M}_K(\beta, c, G) = \{(A_1^*, \ldots, A_K^*) : \sum |A_k^*| = m\} / \mathrm{Aut}(G)$$
+$$\mathcal{M}_K(\beta, c, G) = \{ (A_1^*, \ldots, A_K^*) : \sum \mid A_k^* \mid = m \} / \mathrm{Aut}(G)$$
 
 - Configuration space of K disjoint subsets modulo graph symmetry
 - Dim $\mathcal{M}_K \sim K \cdot \dim(\text{location space}) - \text{constraint}$
@@ -193,7 +193,7 @@ Multi-formation의 대규모 t → ∞ behavior:
 
 ### 3.3 Allen-Cahn PDE (finite $\beta$)
 
-$$\partial_t u = -\frac{\delta \mathcal{E}}{\delta u}\bigg|_{\Sigma_m}$$
+$$\partial_t u = -\frac{\delta \mathcal{E}}{\delta u}\bigg\vert_{\Sigma_m}$$
 
 - Gradient flow on constrained simplex
 - Linear stability around $u_{\mathrm{uniform}}$ → Prop 1.3a/b (already Cat A)

@@ -37,7 +37,7 @@ At $c = 1/2$, all cubic-in-$v$ terms vanish (double-well symmetry), so the reduc
 ### 1.2 Normalization conventions
 
 Use $L^2$-normalized eigenvectors: $\int \phi_k^2 = 1$ (continuum) or $\sum_i \phi_k(i)^2 = 1$ (lattice). At $c = 1/2$ the double-well $W(c + v) = 1/16 - v^2/2 + v^4$ has quartic coefficient $W^{(4)}(c)/24 = 1$ (since $W^{(4)}(c) = 24$). Absorbing this into $\Lambda := \beta_{\mathrm{bd}}$, the reduced energy is
-$$F(\vec v) = \tfrac{\mu}{2}\|\vec v\|^2 + \Lambda \int (\text{expansion of } v^4).$$
+$$F(\vec v) = \tfrac{\mu}{2}\lVert \vec v \rVert^2 + \Lambda \int (\text{expansion of } v^4).$$
 
 This matches Round 3 conventions (§3.3, `symmetry_moduli.md`).
 
@@ -78,7 +78,7 @@ Hmm, this seems to have $1/n$ scaling — but that's because the sum is over $n$
 
 Actually, to match Round 3's continuum convention (where $\int \phi^4 dx$ over unit interval $= 3/2$), we should think of $\phi$ as a **density**: the discrete sum $\sum_j \phi^4(j)$ corresponds to $\int \phi^4 dx$ with lattice spacing $\Delta x = 1/n$... but with $\phi$ L²-normalized on the total mass, the factor of $1/n$ in the expectation vanishes.
 
-**Clean convention.** Let $\phi_1(j) = \sqrt 2 \cos(2\pi j/n)$, $\phi_2(j) = \sqrt 2 \sin(2\pi j/n)$ (without $1/\sqrt n$ factor). Then $\|\phi_k\|^2 = \sum_j 2\cos^2(2\pi j/n) = n$ (normalized to total-mass). Dividing by $n$ gives $\langle \phi_k^2 \rangle = 1$ as expected.
+**Clean convention.** Let $\phi_1(j) = \sqrt 2 \cos(2\pi j/n)$, $\phi_2(j) = \sqrt 2 \sin(2\pi j/n)$ (without $1/\sqrt n$ factor). Then $\lVert \phi_k \rVert^2 = \sum_j 2\cos^2(2\pi j/n) = n$ (normalized to total-mass). Dividing by $n$ gives $\langle \phi_k^2 \rangle = 1$ as expected.
 
 For the quartic form, use $\int \phi^4 := (1/n)\sum_j \phi^4(j)$:
 $$I_4 = (1/n) \sum (\sqrt 2)^4 \cos^4 = (4/n)(3n/8) = 3/2.$$ 
@@ -123,7 +123,7 @@ The circle is not a true continuous family of the full problem — it is a famil
 
 **Consequence for $\mathcal{M}_1$:**
 - **In continuum limit ($n \to \infty$)**: $\mathcal{M}_1 \cong S^1/D_\infty = [0, \pi]$ (interval, 1-dim moduli).
-- **At finite $n$**: circle is broken into $2n$ standing-wave orbits at high order; $\mathcal{M}_1$ is a discrete set of size $2n/|D_n| = 1$ after quotienting (all standing waves are equivalent under $D_n$).
+- **At finite $n$**: circle is broken into $2n$ standing-wave orbits at high order; $\mathcal{M}_1$ is a discrete set of size $2n/\lvert D_n \rvert = 1$ after quotienting (all standing waves are equivalent under $D_n$).
 - **Practical observation**: Any local minimum at first pitchfork on $C_n$ is a single-bump standing wave $\sim \cos(2\pi(j - j_0)/n)$ with center $j_0 \in \{0, 1, \ldots, n-1\}$. All such are $D_n$-equivalent.
 
 **Summary (Round 4 result for $C_n$):**
@@ -193,7 +193,7 @@ $F_X = \tfrac{\mu}{2}R^2 + \tfrac{3\Lambda}{2}R^4 = -\mu^2/(24\Lambda)$.
 **(c) Diagonal orbit** $(s, s)$: $\mu + 18\Lambda s^2 = 0 \Rightarrow s^2 = -\mu/(18\Lambda)$.
 $F_\Delta = \mu s^2 + 9\Lambda s^4 = \mu \cdot (-\mu/(18\Lambda)) + 9\Lambda \cdot \mu^2/(324\Lambda^2) = -\mu^2/(18\Lambda) + \mu^2/(36\Lambda) = -\mu^2/(36\Lambda)$.
 
-**Comparison:** $|F_X| = \mu^2/(24\Lambda) > \mu^2/(36\Lambda) = |F_\Delta|$ (since $1/24 > 1/36$).
+**Comparison:** $\lvert F_X \rvert = \mu^2/(24\Lambda) > \mu^2/(36\Lambda) = |F_\Delta|$ (since $1/24 > 1/36$).
 
 **Pure-X and pure-Y orbits are both lower energy than the diagonal orbit.**
 
@@ -206,7 +206,7 @@ $\partial^2 F/\partial c'^2 = \mu + 6\Lambda(a^2 + b^2 + 3c'^2 + d^2) + 6\Lambda
 $\partial^2 F/\partial d^2 = -\mu > 0$. Stable.
 All cross-derivatives vanish at $(R, 0, 0, 0)$.
 
-**Hessian spectrum at pure-X:** $\{-2\mu, 0, -\mu, -\mu\}$ = $\{2|\mu|, 0, |\mu|, |\mu|\}$ (all $\geq 0$; 1 Goldstone).
+**Hessian spectrum at pure-X:** $\{-2\mu, 0, -\mu, -\mu\}$ = $\{ 2 \mid \mu \mid , 0, \mid \mu \mid , \mid \mu \mid \}$ (all $\geq 0$; 1 Goldstone).
 
 **Pure-X is a minimum modulo 1 Goldstone direction** (the $b$-direction = X-translation).
 

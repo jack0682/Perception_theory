@@ -11,7 +11,7 @@
 
 ## §1. Setup
 
-$G = (X, E)$ finite simple connected graph, $|X| = n$. $u^* \in \Sigma_m^{\circ}$ Morse-0 local minimum of $\mathcal{E}$. $H(u^*) = \pi_{\mathbf{1}^\perp}\nabla^2\mathcal{E}(u^*)\pi_{\mathbf{1}^\perp}$ with eigenpairs $(\lambda_k, \phi_k)_{k=0}^{n-2}$ (sorted ascending), $\phi_k \in \mathbf{1}^\perp$.
+$G = (X, E)$ finite simple connected graph, $\lvert X \rvert = n$. $u^* \in \Sigma_m^{\circ}$ Morse-0 local minimum of $\mathcal{E}$. $H(u^*) = \pi_{\mathbf{1}^\perp}\nabla^2\mathcal{E}(u^*)\pi_{\mathbf{1}^\perp}$ with eigenpairs $(\lambda_k, \phi_k)_{k=0}^{n-2}$ (sorted ascending), $\phi_k \in \mathbf{1}^\perp$.
 
 **Nodal count** (canonical Commitment 14, O4):
 $$\mathcal{N}(\phi) := \#\{\text{c.c. of } G[X^+(\phi)]\} + \#\{\text{c.c. of } G[X^-(\phi)]\},$$
@@ -100,7 +100,7 @@ where $\mathcal{C}_{\mathrm{frust}}$ vanishes iff the sign pattern is balanced (
 
 ### 3.6 Proof Sketch of (vi) — Orbit divisibility (Cat C)
 
-**Setup.** The induced action of $G_u$ on subsets of $X$: $\pi \cdot S := \pi(S)$. The nodal partition $\{X^+(\phi_k), X^-(\phi_k)\}$ (unordered pair) has a $G_u$-orbit. If $\phi_k$ is $G_u$-invariant, the partition is fixed (orbit size 1). If $\phi_k$ generates a $G_u$-orbit of size $|G_u|/|\mathrm{Stab}_{G_u}(\phi_k)|$, the partition orbit has comparable size.
+**Setup.** The induced action of $G_u$ on subsets of $X$: $\pi \cdot S := \pi(S)$. The nodal partition $\{X^+(\phi_k), X^-(\phi_k)\}$ (unordered pair) has a $G_u$-orbit. If $\phi_k$ is $G_u$-invariant, the partition is fixed (orbit size 1). If $\phi_k$ generates a $G_u$-orbit of size $\lvert G_u \rvert/|\mathrm{Stab}_{G_u}(\phi_k)|$, the partition orbit has comparable size.
 
 **Why orbit size constrains nodal count.** If $\pi \in G_u$ permutes the connected components of $G[X^+(\phi_k)]$ non-trivially, the components fall into $\pi$-orbits. The number of components per $\pi$-orbit divides $|\langle\pi\rangle|$. Aggregating over $G_u$, the number of components of $G[X^+(\phi_k)]$ is a sum of orbit sizes, hence divisible by some factor depending on the specific orbit structure.
 

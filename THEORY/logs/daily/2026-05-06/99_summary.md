@@ -56,7 +56,7 @@
 ### Debt 1 (W1 Ontological-Foundational) — G3.2: $\widetilde{\widetilde\Sigma}^K_M$ Quotient Formalism
 The most substantial Day 3 advance. The K-field labeled-index conflict with pre-objecthood is resolved via:
 - $S_K$ action on $\Sigma^K_M$; quotient $\widetilde{\widetilde\Sigma}^K_M = \Sigma^K_M / S_K$.
-- Stratification (open stratum + codim-$(|P|-1)(n-1)$ symmetric strata).
+- Stratification (open stratum + codim-$(\lvert P \rvert-1)(n-1)$ symmetric strata).
 - Reduction map $\pi$ (continuous; local sections via centroid ordering).
 - $\mathcal{E}$ descends to $\widetilde{\mathcal{E}}$ (all energy terms $S_K$-equivariant).
 - Ontological layer table (5 levels: primitive/class/modeling/derived/cog-sci).
@@ -65,7 +65,7 @@ The most substantial Day 3 advance. The K-field labeled-index conflict with pre-
 **Status:** Cat C (sketch quality). W7 D4-D5 formalization target.
 
 ### Debt 2 (W2 Production Reach) — G3.4: NQ-G1-2-ext Full Design
-- Post-flow $\|R_j\|_\infty$ measurement protocol designed (04_*.md, 04a_*.md, 04b_*.md).
+- Post-flow $\lVert R_j \rVert_\infty$ measurement protocol designed (04_*.md, 04a_*.md, 04b_*.md).
 - 3 hypothesis branches (H-A/B/C) with canonical implications.
 - `exp58_nq_g1_2_ext.py` pseudo-code + `compute_ideal_gaussian` helper written.
 - Statistical reporting protocol (fraction A/B/C + histogram).

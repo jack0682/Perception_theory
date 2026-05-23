@@ -84,7 +84,7 @@ description: SCC 이론 가설 의존성 트리. HT-3.12: 2026-05-21 PAI PIVOT �
 
 **중심 정리 (T8 — 위상전이):**
 
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}$$
 
 $\lambda_2$ = 그래프 해상도. 이 조건이 성립할 때 경계가 출현한다. 붕괴할 때 융합된다.
 

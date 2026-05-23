@@ -154,7 +154,7 @@ Round 4 §1.3 wrote `T*_uniform = c(1-c) · [β·|W''(c)| - 4α·λ_2(G) - r_{cl
 
 A conservative bound:
 $$
-T^*_{\mathrm{uniform}}(c) \;\leq\; c(1-c) \cdot \big[\beta\, |W''(c)| - 4\alpha\lambda_2(G) - r_{cl} + |r_{sep}|\big],
+T^*_{\mathrm{uniform}}(c) \;\leq\; c(1-c) \cdot \big[\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - r_{cl} + \lvert r_{sep} \rvert\big],
 $$
 
 where `r_cl > 0` (closure positive) and `r_sep` could be either sign.

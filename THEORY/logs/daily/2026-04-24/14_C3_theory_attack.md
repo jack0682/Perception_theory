@@ -23,10 +23,10 @@
 ### 1.2 Normalized ℓ=1 power fraction
 
 Definition (본 세션 `04_*.md` §3.1):
-$$\rho_{\ell=1}[\hat\phi] = \frac{\langle\hat\phi, \psi_{\ell=1}^{(c)}\rangle^2 + \langle\hat\phi, \psi_{\ell=1}^{(s)}\rangle^2}{\|\hat\phi\|^2 \cdot (\|\psi_{\ell=1}^{(c)}\|^2 + \|\psi_{\ell=1}^{(s)}\|^2)/2},$$
+$$\rho_{\ell=1}[\hat\phi] = \frac{\langle\hat\phi, \psi_{\ell=1}^{(c)}\rangle^2 + \langle\hat\phi, \psi_{\ell=1}^{(s)}\rangle^2}{\lVert \hat\phi \rVert^2 \cdot (\lVert \psi_{\ell=1}^{(c)} \rVert^2 + \lVert \psi_{\ell=1}^{(s)} \rVert^2)/2},$$
 with $\psi_{\ell=1}^{(c)} = \cos\theta$, $\psi_{\ell=1}^{(s)} = \sin\theta$.
 
-Goldstone basis: $\hat\phi = \delta u_x / \|\delta u_x\|$.
+Goldstone basis: $\hat\phi = \delta u_x / \lVert \delta u_x \rVert$.
 
 ### 1.3 Continuum evaluation (circular disk, free-BC or torus large)
 
@@ -45,7 +45,7 @@ $\langle \delta u_x, \psi_{\ell=1}^{(s)}\rangle = \int \cos\theta \cdot \partial
 
 ### 1.4 Norms
 
-$\|\delta u_x\|^2 = \int (\cos\theta)^2 (\partial_r u^*)^2 \cdot r \, dr \, d\theta = \pi \int_0^\infty (\partial_r u^*)^2 \cdot r \, dr$.
+$\lVert \delta u_x \rVert^2 = \int (\cos\theta)^2 (\partial_r u^*)^2 \cdot r \, dr \, d\theta = \pi \int_0^\infty (\partial_r u^*)^2 \cdot r \, dr$.
 
 For tanh ansatz: $\partial_r u^* = -\tfrac{1}{2\xi_0} \text{sech}^2((r-r_0)/\xi_0)$. 
 $(\partial_r u^*)^2 = \tfrac{1}{4\xi_0^2}\text{sech}^4((r-r_0)/\xi_0)$.
@@ -53,26 +53,26 @@ $(\partial_r u^*)^2 = \tfrac{1}{4\xi_0^2}\text{sech}^4((r-r_0)/\xi_0)$.
 $\int_0^\infty \tfrac{1}{4\xi_0^2}\text{sech}^4((r-r_0)/\xi_0) \cdot r \, dr$. For $r_0 \gg \xi_0$ (narrow interface, wide disk):
 $\approx \tfrac{r_0}{4\xi_0^2} \int_{-\infty}^\infty \text{sech}^4(s) \xi_0 \, ds = \tfrac{r_0}{4\xi_0} \cdot \tfrac{4}{3} = \tfrac{r_0}{3\xi_0}$.
 
-So $\|\delta u_x\|^2 \approx \pi r_0/(3\xi_0)$.
+So $\lVert \delta u_x \rVert^2 \approx \pi r_0/(3\xi_0)$.
 
-$\|\psi_{\ell=1}^{(c)}\|^2 = \int \cos^2\theta \cdot r \, dr \, d\theta = \pi \cdot R^2/2$ where $R$ is boundary radius. Similarly $\|\psi_{\ell=1}^{(s)}\|^2 = \pi R^2/2$. Sum $= \pi R^2$.
+$\lVert \psi_{\ell=1}^{(c)} \rVert^2 = \int \cos^2\theta \cdot r \, dr \, d\theta = \pi \cdot R^2/2$ where $R$ is boundary radius. Similarly $\lVert \psi_{\ell=1}^{(s)} \rVert^2 = \pi R^2/2$. Sum $= \pi R^2$.
 
 ### 1.5 ρ_{ℓ=1} computation
 
-$$\rho_{\ell=1}[\delta u_x / \|\delta u_x\|] = \frac{(\pi r_0)^2 + 0^2}{(\pi r_0/(3\xi_0)) \cdot \pi R^2/1}$$
+$$\rho_{\ell=1}[\delta u_x / \lVert \delta u_x \rVert] = \frac{(\pi r_0)^2 + 0^2}{(\pi r_0/(3\xi_0)) \cdot \pi R^2/1}$$
 
 Wait, need to normalize properly. Let me re-derive.
 
 Numerator: $\sum_i |\langle \hat\phi, \psi_{\ell=1}^{(i)}\rangle|^2 = \langle \hat\phi, \psi^{(c)}\rangle^2 + \langle \hat\phi, \psi^{(s)}\rangle^2$.
 
-Note $\hat\phi = \delta u_x / \|\delta u_x\|$, so $\langle \hat\phi, \psi\rangle = \langle \delta u_x, \psi\rangle / \|\delta u_x\|$.
+Note $\hat\phi = \delta u_x / \lVert \delta u_x \rVert$, so $\langle \hat\phi, \psi\rangle = \langle \delta u_x, \psi\rangle / \lVert \delta u_x \rVert$.
 
-Numerator: $(\pi r_0)^2 / \|\delta u_x\|^2 = \pi^2 r_0^2 / (\pi r_0/(3\xi_0)) = 3\pi r_0 \xi_0$.
+Numerator: $(\pi r_0)^2 / \lVert \delta u_x \rVert^2 = \pi^2 r_0^2 / (\pi r_0/(3\xi_0)) = 3\pi r_0 \xi_0$.
 
-Denominator (normalization convention): $\|\hat\phi\|^2 \cdot (\|\psi^{(c)}\|^2 + \|\psi^{(s)}\|^2)/2 = 1 \cdot \pi R^2 / 2 = \pi R^2 / 2$.
+Denominator (normalization convention): $\lVert \hat\phi \rVert^2 \cdot (\lVert \psi^{(c)} \rVert^2 + \lVert \psi^{(s)} \rVert^2)/2 = 1 \cdot \pi R^2 / 2 = \pi R^2 / 2$.
 
 So:
-$$\rho_{\ell=1}[\delta u_x / \|\delta u_x\|] = \frac{3\pi r_0 \xi_0}{\pi R^2 / 2} = \frac{6 r_0 \xi_0}{R^2}.$$
+$$\rho_{\ell=1}[\delta u_x / \lVert \delta u_x \rVert] = \frac{3\pi r_0 \xi_0}{\pi R^2 / 2} = \frac{6 r_0 \xi_0}{R^2}.$$
 
 **Simplification**. $r_0 = \sqrt{m/\pi}$, $R \approx L/2$ or $L/\sqrt{\pi}$ for square grid size $L$. 
 
@@ -112,7 +112,7 @@ At $\beta = 30$, $L = 32$: $\kappa = 0.043$. At $\beta = 30$, $L = 16$: $\kappa 
 
 Phase 2 ballpark 에서 $\rho \sim 0.5$ 으로 estimate 했으나, §1.6 의 exact value 는 $\approx 0.043$. **약 10× 차이**.
 
-**왜**: ballpark 는 $\|\psi_{\ell=1}\|^2$ 를 $O(L)$ 가 아니라 $O(\sqrt{n})$ 으로 가정한 오류. Exact formula 가 $\|\psi_{\ell=1}\|^2 = \pi R^2$ 를 사용.
+**왜**: ballpark 는 $\lVert \psi_{\ell=1} \rVert^2$ 를 $O(L)$ 가 아니라 $O(\sqrt{n})$ 으로 가정한 오류. Exact formula 가 $\lVert \psi_{\ell=1} \rVert^2 = \pi R^2$ 를 사용.
 
 **Revised Lemma 3 statement**: $\rho_{\ell=1}[\hat\phi_0] \geq \kappa_{\ell=1}^{D_4}$ with $\kappa \approx 0.04$ (R23 setup). Still **nontrivial positive**, and scales as $1/(L\sqrt\beta)$ — disappearing at thermodynamic limit.
 
@@ -167,7 +167,7 @@ $a_1 = \frac{1}{8}(1 \cdot 2 + 1 \cdot 2 + 2 \cdot (-2) + 2 \cdot 0 + 2 \cdot 0)
 $a_2 = \frac{1}{8}(2 + 2 - 4 - 0 - 0) = 0$ wait same as $a_1$.
 Actually $a_2 = \frac{1}{8}(1\cdot2 + 1\cdot2 + 2\cdot(-2)\cdot1 + 2\cdot0\cdot(-1) + 2\cdot0\cdot(-1))$. Let me redo.
 
-Character inner product: $\langle \chi, \chi_{[\rho]}\rangle = \frac{1}{|G|} \sum_g \chi(g) \overline{\chi_{[\rho]}(g)}$.
+Character inner product: $\langle \chi, \chi_{[\rho]}\rangle = \frac{1}{\lvert G \rvert} \sum_g \chi(g) \overline{\chi_{[\rho]}(g)}$.
 
 For $\chi$ of ℓ=2 (values by class): $(2, 2, -2, 0, 0)$.
 - $\langle \chi, A_1\rangle = (1 \cdot 2 + 1 \cdot 2 + 2 \cdot (-2)(1) + 2 \cdot 0 \cdot 1 + 2 \cdot 0 \cdot 1)/8 = (2 + 2 - 4)/8 = 0$.

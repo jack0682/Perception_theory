@@ -72,7 +72,7 @@ Discrete lattice 에서 "translation" 은 permutation (finite group action). 하
 - $\delta u_x$ becomes continuum $\partial_x u^*$
 - Near-null direction 의 eigenvalue $\approx$ PN barrier
 
-**Test**: $\langle \delta u_x, H \delta u_x\rangle / \|\delta u_x\|^2 \ll \lambda_1$ (first non-tangent eigenvalue).
+**Test**: $\langle \delta u_x, H \delta u_x\rangle / \lVert \delta u_x \rVert^2 \ll \lambda_1$ (first non-tangent eigenvalue).
 
 ### 3.3 중요한 distinction
 

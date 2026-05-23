@@ -55,7 +55,7 @@ where $\lambda_k$ are constrained Hessian eigenvalues.
 |---|---|---|
 | V5b-T super-lattice | $\lambda \propto e^{-c_d/\xi_0}$ exp-suppressed | **Exp-suppressed** (massless-limit candidate) |
 | V5b-T-zero (sub-spinodal torus) | $\lambda = 0$ exact | **Zero gap** (Goldstone, no gap) |
-| V5b-F translation-broken | $\lambda \approx C(\beta) \cdot \|\partial S\|/n$ empirical | **Polynomial-$1/n$ gap** (vanishes in thermodynamic limit) |
+| V5b-F translation-broken | $\lambda \approx C(\beta) \cdot \lVert \partial S \rVert/n$ empirical | **Polynomial-$1/n$ gap** (vanishes in thermodynamic limit) |
 | V5b uniform spinodal interior | $\lambda = 4\alpha\lambda_2^{\mathrm{Lap}} + \beta W''(c)$ (T-σ-Theorem-3) | **Finite gap** (genuine mass-like) |
 | V5b first-pitchfork ε-small | $\lambda = 4|W''(c)|\epsilon$ leading order (T-σ-Theorem-4) | **ε-scaling gap** |
 
@@ -359,7 +359,7 @@ Formation birth: NQ-200 cluster (W7+ candidate) — currently undeveloped in SCC
 |---|---|
 | Flux tube (string) between charge pair | Single formation $u^{(j)}$ with two distant peaks |
 | String length increase | Formation support stretching (V5b-F mechanism) |
-| Energy cost $\propto$ length | $\mathcal{E}_{\mathrm{bd}} \propto \|\partial S\|$ (boundary energy per perimeter) |
+| Energy cost $\propto$ length | $\mathcal{E}_{\mathrm{bd}} \propto \lVert \partial S \rVert$ (boundary energy per perimeter) |
 | New charge pair creation | Formation split: $u^{(j)} \to u^{(j_1)} + u^{(j_2)}$ |
 | String breaks in two | $K_{\mathrm{act}}$ increases by 1 |
 
@@ -367,9 +367,9 @@ Formation birth: NQ-200 cluster (W7+ candidate) — currently undeveloped in SCC
 
 ### §10.4 V5b-F mass scaling ↔ string tension
 
-NQ-198a empirical: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot \|\partial S\|/n$.
+NQ-198a empirical: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-F}} \approx C(\beta) \cdot \lVert \partial S \rVert/n$.
 
-Interpretation: $C(\beta) \cdot \|\partial S\|$ = boundary-energy-per-perimeter coefficient × cluster perimeter ≈ *string tension* × *string length*.
+Interpretation: $C(\beta) \cdot \lVert \partial S \rVert$ = boundary-energy-per-perimeter coefficient × cluster perimeter ≈ *string tension* × *string length*.
 
 → V5b-F는 *SCC's string-tension regime*. C(β) is "SCC string tension".
 

@@ -165,7 +165,7 @@
 - **내용 요약:** 후보:
   (i) **Correlation-based:** $\mathbf{N}_t[u](x,y) = f(u(x), u(y), \text{similar context})$ for some kernel $f$.
   (ii) **Cohesion-weighted distance:** 기존 graph 위에서 adjacency 를 u 로 reweight — $\mathbf{N}_t[u](x,y) = \mathbf{N}_t^{\mathrm{base}}(x,y) \cdot g(u(x), u(y))$. (이것은 "partial D" — site 는 고정, edge weight 만 u-derived.)
-  (iii) **Gradient-based:** $\mathbf{N}_t[u](x,y) \propto \exp(-|u(x) - u(y)|/\sigma)$ — feature-space adjacency.
+  (iii) **Gradient-based:** $\mathbf{N}_t[u](x,y) \propto \exp(-\lvert u(x) - u(y) \rvert/\sigma)$ — feature-space adjacency.
   (iv) **Persistence-based:** 0-dim persistence 의 merge tree 에서 adjacency 유도.
   각 후보: well-definedness, circular dependency (N 이 u 에 영향 → u 가 N 에 영향), canonical §6 Group B B1-B4 와의 compatibility, 계산 비용.
 - **수학 작업 유형:** 정의 + 예비 분석.
@@ -213,7 +213,7 @@
 - **파일:** `THEORY/working/E/soft_K_definition.md`
 - **내용 요약:**
   **정의:** $K_{\mathrm{soft}}(u) = \sum_{i \in \mathrm{H_0 bars}} \phi(\ell_i)$ where $\ell_i$ = persistence bar length (death − birth) in the superlevel-set filtration of $u$, $\phi: \mathbb{R}_{\geq 0} \to [0,1]$ monotone with $\phi(0) = 0$, $\phi(\ell) \to 1$ as $\ell \to \infty$ (예: $\phi(\ell) = 1 - \exp(-\ell / \ell_{\mathrm{scale}})$).
-  **Well-definedness:** $K_{\mathrm{soft}}$ 는 persistence stability theorem 에 의해 $\|u - v\|_\infty$ 에 Lipschitz. 즉 $|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq L_\phi \cdot n \cdot \|u - v\|_\infty$ (n = |X_t|).
+  **Well-definedness:** $K_{\mathrm{soft}}$ 는 persistence stability theorem 에 의해 $\lVert u - v \rVert_\infty$ 에 Lipschitz. 즉 $|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq L_\phi \cdot n \cdot \lVert u - v \rVert_\infty$ (n = |X_t|).
   **기존 이론 연결:** Q_morph 의 $\ell_{\max}$ 는 이미 같은 filtration 의 longest bar. $K_{\mathrm{soft}}$ 는 동일 filtration 의 total bar count weighted by length. 즉 **기존 Q_morph 인프라 재활용 가능**.
   **한계:** $\phi$ 선택의 자유 — 이는 새 free parameter. 최소화는 $\phi = \mathrm{id}$ 근사 사용.
 - **수학 작업 유형:** 정의 + Lipschitz 증명.

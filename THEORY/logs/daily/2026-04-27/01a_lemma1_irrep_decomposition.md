@@ -11,7 +11,7 @@
 
 ## §1. Statement
 
-> **Lemma 1 (σ-Framework, Irrep Decomposition Well-Defined).** Let $G = (X, E)$ be a **finite** simple connected graph with $|X| = n$, and let $u^* \in \Sigma_m$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex. Let
+> **Lemma 1 (σ-Framework, Irrep Decomposition Well-Defined).** Let $G = (X, E)$ be a **finite** simple connected graph with $\lvert X \rvert = n$, and let $u^* \in \Sigma_m$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex. Let
 > $$G_u := \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) = \{\pi \in \mathrm{Aut}(G) : \pi \cdot u^* = u^*\} \leq \mathrm{Aut}(G)$$
 > be the residual graph-automorphism stabilizer of $u^*$. Then:
 >
@@ -22,7 +22,7 @@
 > commutes with the $G_u$-action: $H(u^*)\,\rho(\pi) = \rho(\pi)\,H(u^*)$ for all $\pi \in G_u$, where $\rho(\pi)$ is the permutation representation restricted to $\mathbf{1}^\perp$.
 >
 > **(iii)** Each Hessian eigenspace $V_k := \ker(H(u^*) - \lambda_k I)|_{\mathbf{1}^\perp}$ is $G_u$-invariant and decomposes canonically into isotypic components
-> $$V_k \;=\; \bigoplus_{[\rho] \in \widehat{G_u}} V_k^{[\rho]},\qquad V_k^{[\rho]} := P_{[\rho]} V_k,\quad P_{[\rho]} := \frac{\dim\rho}{|G_u|}\sum_{\pi \in G_u}\overline{\chi_\rho(\pi)}\,\rho_{\mathrm{reg}}(\pi),$$
+> $$V_k \;=\; \bigoplus_{[\rho] \in \widehat{G_u}} V_k^{[\rho]},\qquad V_k^{[\rho]} := P_{[\rho]} V_k,\quad P_{[\rho]} := \frac{\dim\rho}{\lvert G_u \rvert}\sum_{\pi \in G_u}\overline{\chi_\rho(\pi)}\,\rho_{\mathrm{reg}}(\pi),$$
 > where $\widehat{G_u}$ is the set of irreducible-representation isomorphism classes of $G_u$, $\chi_\rho$ is the character of $[\rho]$, and $\rho_{\mathrm{reg}}$ is the regular representation. The multi-set $\{(\dim V_k^{[\rho]}, [\rho])\}_{[\rho] \in \widehat{G_u}}$ is canonical (independent of basis choice).
 >
 > **(iv)** When $\dim V_k = 1$, $V_k = V_k^{[\rho]}$ for a unique $[\rho] \in \widehat{G_u}$, and the σ-framework irrep label $[\rho_k] := [\rho]$ in `canonical.md` §11.1 Commitment 14 (O5) is well-defined.
@@ -88,7 +88,7 @@ $$H(u^*) \, W^{[\rho]} \subseteq W^{[\rho]}.$$
 Therefore each Hessian eigenspace $V_k = \ker(H(u^*) - \lambda_k I)|_{\mathbf{1}^\perp}$ also decomposes:
 $$V_k = \bigoplus_{[\rho] \in \widehat{G_u}} V_k^{[\rho]},\qquad V_k^{[\rho]} = V_k \cap W^{[\rho]} = P_{[\rho]} V_k,$$
 where the **isotypic projector** is the standard formula
-$$P_{[\rho]} = \frac{\dim\rho}{|G_u|} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \cdot \rho_{\mathrm{reg}}(\pi)$$
+$$P_{[\rho]} = \frac{\dim\rho}{\lvert G_u \rvert} \sum_{\pi \in G_u} \overline{\chi_\rho(\pi)} \cdot \rho_{\mathrm{reg}}(\pi)$$
 (Serre, *Linear Representations of Finite Groups*, 1977, §2.6).
 
 The projector $P_{[\rho]}$ depends only on $G_u$ and the irrep class $[\rho]$ — not on a basis choice. Hence the multi-set $\{(\dim V_k^{[\rho]}, [\rho])\}_{[\rho] \in \widehat{G_u}}$ is canonical. ✓

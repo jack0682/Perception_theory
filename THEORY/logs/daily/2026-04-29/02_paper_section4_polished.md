@@ -33,7 +33,7 @@ Soft cohesion fields $u_t : X \to [0, 1]$ on finite graphs admit a canonical dis
 
 ### §4.1.1 Definition
 
-Let $G = (X, E)$ be a finite connected simple graph with $|X| = n$, and let $u^* \in \Sigma_m^\circ \subset (0, 1)^n$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex
+Let $G = (X, E)$ be a finite connected simple graph with $\lvert X \rvert = n$, and let $u^* \in \Sigma_m^\circ \subset (0, 1)^n$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex
 $$\Sigma_m = \{u \in [0,1]^n : \textstyle\sum_i u_i = m\}.$$
 Let $\mathrm{Stab}(u^*) := \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) \leq \mathrm{Aut}(G)$ denote the stabilizer of $u^*$ under graph automorphisms, acting on coordinates by $(\pi \cdot v)_i = v_{\pi^{-1}(i)}$.
 
@@ -158,7 +158,7 @@ where $\mu_{\mathrm{Gold}}^{\mathrm{lifted}}$ is the per-formation Goldstone eig
 ### §4.3.2 Proof Sketch
 
 By the Coupling Bound Lemma (canonical T-Persist-K-Sep), in the well-separated regime
-$$H_{\mathrm{joint}} = \begin{pmatrix} H_{11} & \lambda_{\mathrm{rep}} I + \epsilon \\ \lambda_{\mathrm{rep}} I + \epsilon & H_{22} \end{pmatrix}, \quad \|\epsilon\| = O(e^{-c_0 d_{\min}}). \tag{4.14}$$
+$$H_{\mathrm{joint}} = \begin{pmatrix} H_{11} & \lambda_{\mathrm{rep}} I + \epsilon \\ \lambda_{\mathrm{rep}} I + \epsilon & H_{22} \end{pmatrix}, \quad \lVert \epsilon \rVert = O(e^{-c_0 d_{\min}}). \tag{4.14}$$
 After identification of $V_1, V_2$ via the involutive iso $\rho^*$ (which yields $H_{22} = \rho^* H_{11} \rho^*$ in original coordinates, or $H_{22} = H_{11}$ in identified coordinates), the unitary
 $$U^{\mathrm{id}} = \frac{1}{\sqrt 2}\begin{pmatrix} I & I \\ I & -I \end{pmatrix} \tag{4.15}$$
 block-diagonalizes:
@@ -168,7 +168,7 @@ The lowest eigenvalue of the antisym block is $\mu_{\mathrm{Gold}} - \lambda_{\m
 ### §4.3.3 The Mode-Mixing Factor $c_{\mathrm{eff}}$
 
 The factor $c_{\mathrm{eff}}(L)$ is a precision-correction at finite $L$, given empirically by
-$$c_{\mathrm{eff}}(L) = \big|O_{\mathrm{ideal-actual}}\big|^2 \cdot \frac{|\mu_{\mathrm{antisym}}^{\mathrm{measured}}|}{\lambda_{\mathrm{rep}}}, \tag{4.17}$$
+$$c_{\mathrm{eff}}(L) = \big\vertO_{\mathrm{ideal-actual}}\big\vert^2 \cdot \frac{|\mu_{\mathrm{antisym}}^{\mathrm{measured}}|}{\lambda_{\mathrm{rep}}}, \tag{4.17}$$
 where $O_{\mathrm{ideal-actual}}$ is the overlap between the ideal canonical antisym mode and the actual lowest joint-Hessian eigenvector. Numerical measurements (Phase 4 F5 grid) at $c = 0.10$:
 
 | $L$ | 16 | 20 | 24 |
@@ -179,7 +179,7 @@ Linear extrapolation: $c_{\mathrm{eff}}(L) \approx 0.18 + 0.0085\, L$, suggestin
 
 ### §4.3.4 Numerical Verification
 
-We verified Theorem 4.3.1 on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12, 16\}$ and $\lambda_{\mathrm{rep}} \in \{0.01, 0.1, 1.0\}$ with $c = 0.10$, $\beta = 4.0$. The cross-block operator norm $\|H_{12}\|_{\mathrm{op}} = \lambda_{\mathrm{rep}}$ exactly in the well-separated regime, confirming the Coupling Bound Lemma. Joint Hessian lowest eigenvalues are negative for $\lambda_{\mathrm{rep}} \geq 0.1$ across all $d_{\min}$ tested, confirming static instability.
+We verified Theorem 4.3.1 on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12, 16\}$ and $\lambda_{\mathrm{rep}} \in \{0.01, 0.1, 1.0\}$ with $c = 0.10$, $\beta = 4.0$. The cross-block operator norm $\lVert H_{12} \rVert_{\mathrm{op}} = \lambda_{\mathrm{rep}}$ exactly in the well-separated regime, confirming the Coupling Bound Lemma. Joint Hessian lowest eigenvalues are negative for $\lambda_{\mathrm{rep}} \geq 0.1$ across all $d_{\min}$ tested, confirming static instability.
 
 ### §4.3.5 Static vs Dynamic Instability
 
@@ -214,7 +214,7 @@ A new phenomenon discovered Phase 3, denoted V5b-T'.
 
 **Theorem 4.4.2 (V5b-T' corner-saturation on translation-invariant graphs; NEW Cat B target).**
 *Hypotheses:* $\beta > 1/a^2$ AND $c < c_s = (3-\sqrt 3)/6$, on translation-invariant $G$; $\mathbf{u}^*$ is the F=1 minimizer of $\mathcal{E}_{\mathrm{bd}}$ from a localized initial condition.
-*Claim (a, corner saturation):* $u^*(x) = 1$ on a connected cluster $S \subset X$ with $|S| \approx m$; $u^*(x) = 0$ on most of $X \setminus S$; transition layer of size $O(|\partial S|)$.
+*Claim (a, corner saturation):* $u^*(x) = 1$ on a connected cluster $S \subset X$ with $\lvert S \rvert \approx m$; $u^*(x) = 0$ on most of $X \setminus S$; transition layer of size $O(|\partial S|)$.
 *Claim (b, Goldstone of saturated cluster):* The lowest non-tangent Hessian mode is an approximate translation Goldstone of $S$, PN-barrier-lifted from zero by the cluster boundary's interaction with the discrete lattice.
 *Claim (c, PN-barrier formula):*
 $$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx A_{\mathrm{R3b}} \cdot \beta \cdot \frac{|\partial S|}{\xi_0}, \quad |\partial S| \approx 4\sqrt{m}, \tag{4.19}$$

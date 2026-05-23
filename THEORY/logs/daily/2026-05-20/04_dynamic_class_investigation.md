@@ -86,7 +86,7 @@ The W8-Day2 evening retraction #2 noted: "With mass conservation via P, SCC is a
 
 The closer continuum analogue to SCC is **constrained Allen-Cahn**:
 
-$$\partial_t \phi = -\frac{\delta H}{\delta \phi} + \mu(t), \quad \mu(t) = \frac{1}{|D|}\int_D \frac{\delta H}{\delta \phi}\,d^d x$$
+$$\partial_t \phi = -\frac{\delta H}{\delta \phi} + \mu(t), \quad \mu(t) = \frac{1}{\lvert D \rvert}\int_D \frac{\delta H}{\delta \phi}\,d^d x$$
 
 where $\mu(t)$ is a *Lagrange multiplier* enforcing global conservation $\int_D \phi = $ const. (Rubinstein & Sternberg 1992, *IMA J. Appl. Math.* 48:249.)
 
@@ -158,7 +158,7 @@ inverse_causation_check:
 ### §6.2 Lemma L-PROJ-2: Cahn-Hilliard's $\nabla^2$ is mode-dependent (continuous spectrum)
 
 **Lemma L-PROJ-2**. The continuum Laplacian $\nabla^2$ on the torus $\mathbb{T}^d = (\mathbb{R}/L\mathbb{Z})^d$ has spectrum
-$$\sigma(\nabla^2) = \{-|q|^2 : q \in (2\pi/L) \mathbb{Z}^d\},$$
+$$\sigma(\nabla^2) = \{-\lvert q \rvert^2 : q \in (2\pi/L) \mathbb{Z}^d\},$$
 which (for $d \geq 1$) is a *countably infinite, mode-dependent* spectrum. On the discrete $L \times L$ torus (Cahn-Hilliard regularized), the spectrum is
 $$\sigma(\nabla^2_\text{discrete}) = \{-4\sin^2(\pi j/L) - 4\sin^2(\pi k/L) : (j,k) \in \mathbb{Z}/L \times \mathbb{Z}/L\}.$$
 

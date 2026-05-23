@@ -363,7 +363,7 @@ T-CC-StableK-Kernel CV-1.14 promotion draft (`working/CV114/05_promotion_draft.m
 ### §4.2 OQ-2026-05-13-B — L-δ_eff-SINK Cat C lemma attempt
 
 OP-0012-SINK's remaining blocker after CV-1.15 narrowing is the Sinkhorn-scaling gap. The first proof attempt should be L-δ_eff-SINK: a quantitative bound on
-$\delta_{\mathrm{eff}}^{\mathrm{sink}} := \|c_{\mathrm{direct}}(u_t, u_r) - c^{\mathrm{eff}}(M^{\mathrm{sink}}_{t\to s}, M^{\mathrm{sink}}_{s\to r})\|_\infty$
+$\delta_{\mathrm{eff}}^{\mathrm{sink}} := \lVert c_{\mathrm{direct}}(u_t, u_r) - c^{\mathrm{eff}}(M^{\mathrm{sink}}_{t\to s}, M^{\mathrm{sink}}_{s\to r}) \rVert_\infty$
 in terms of marginals, $\varepsilon_{\mathrm{OT}}$, and the structural separation $\Delta_{\mathrm{sep}}$. Estimated 2–4 sessions. Output: `working/CV115/.../L-delta-eff-SINK.md` Cat C draft.
 
 ### §4.3 OQ-2026-05-13-C — Continuous-time action limit (OP-0022 candidate)

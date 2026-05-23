@@ -26,7 +26,7 @@ $$\eta_\mathrm{cross}^\mathrm{sharp} = \exp\!\Big(-\frac{\gamma_\mathrm{OT}\Delt
 
 The numerator $\gamma_\mathrm{OT}\Delta_\varphi^2_\mathrm{inter} - L_g d_\mathrm{eff}$ is the *effective concentration gap*. At default parameters it's $\approx 0.9$.
 
-**The key observation:** the Lipschitz bound $|g(y) - g(y_0)| \leq L_g d_G(y,y_0)$ is *worst-case*. In the actual entropic-OT optimum, $g$ is much smoother on the support — its *average* variation is much smaller than the Lipschitz constant suggests.
+**The key observation:** the Lipschitz bound $\lvert g(y) - g(y_0) \rvert \leq L_g d_G(y,y_0)$ is *worst-case*. In the actual entropic-OT optimum, $g$ is much smoother on the support — its *average* variation is much smaller than the Lipschitz constant suggests.
 
 **Replacement strategy.** Use a *variance-corrected* bound: replace $L_g d_\mathrm{eff}$ in the exponent with $\sqrt{\mathrm{Var}_y(g)}$, the standard deviation of $g$ on the relevant support.
 

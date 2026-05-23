@@ -45,7 +45,7 @@ Cat A would derive the *coefficient* and *exact functional form* (powers of $|\p
 
 ### §2.1 Approach 1: Sharp-interface boundary integral (continuum limit)
 
-**Core idea**: In sharp-interface limit ($\xi_0 \ll a$, R3b regime), the cluster $S$ has step-function $u^*$ with thin transition layer width $\xi_0$. Translation perturbation $\delta u(\mathbf{x}) = -\boldsymbol\xi \cdot \nabla u^*(\mathbf{x})$ is supported on $\partial S$ (interface). Compute $\langle \delta u, H \delta u\rangle / \|\delta u\|^2$ via Allen-Cahn surface tension scaling.
+**Core idea**: In sharp-interface limit ($\xi_0 \ll a$, R3b regime), the cluster $S$ has step-function $u^*$ with thin transition layer width $\xi_0$. Translation perturbation $\delta u(\mathbf{x}) = -\boldsymbol\xi \cdot \nabla u^*(\mathbf{x})$ is supported on $\partial S$ (interface). Compute $\langle \delta u, H \delta u\rangle / \lVert \delta u \rVert^2$ via Allen-Cahn surface tension scaling.
 
 **Success form**: closed formula for $\mu$ in terms of surface tension $\sigma_{\mathrm{AC}}(\beta) = \sqrt{\alpha\beta}\cdot c_W$ and PN-modulation amplitude $V_0$.
 
@@ -120,17 +120,17 @@ Numerically: $\sigma_{\mathrm{AC}} = \sqrt{\alpha\beta}/{\rm const}$, with $\alp
 Translation perturbation: $\delta u(\mathbf{x}) = -\boldsymbol\xi \cdot \nabla u^*(\mathbf{x})$.
 
 In continuum, $\mathcal{E}[u^*(\cdot - \boldsymbol\xi)] = \mathcal{E}[u^*]$ exactly (translation invariance). Hessian quadratic form:
-$$\langle \delta u, H_{\mathrm{cont}} \delta u\rangle = \frac{1}{2}\frac{\partial^2 \mathcal{E}[u^*(\cdot - \boldsymbol\xi)]}{\partial \boldsymbol\xi^2}\bigg|_{\boldsymbol\xi = 0} = 0. \tag{5.4.3}$$
+$$\langle \delta u, H_{\mathrm{cont}} \delta u\rangle = \frac{1}{2}\frac{\partial^2 \mathcal{E}[u^*(\cdot - \boldsymbol\xi)]}{\partial \boldsymbol\xi^2}\bigg\vert_{\boldsymbol\xi = 0} = 0. \tag{5.4.3}$$
 
 So continuum Goldstone is exactly zero — as expected.
 
 Norm of perturbation:
-$$\|\delta u\|_2^2 = |\boldsymbol\xi|^2 \int |\nabla u^*|^2 \,d\mathbf{x} \approx |\boldsymbol\xi|^2 \cdot |\partial S| / \xi_0 \cdot c_W' \tag{5.4.4}$$
+$$\lVert \delta u \rVert_2^2 = |\boldsymbol\xi|^2 \int |\nabla u^*|^2 \,d\mathbf{x} \approx |\boldsymbol\xi|^2 \cdot |\partial S| / \xi_0 \cdot c_W' \tag{5.4.4}$$
 
 (gradient is sharp across interface of width $\xi_0$; $|\nabla u^*|^2 \sim 1/\xi_0$ on $|\partial S| \cdot \xi_0$ measure; integral $\sim |\partial S|/\xi_0$).
 
 So Hessian eigenvalue from continuum perturbation:
-$$\mu_{\mathrm{Gold}}^{\mathrm{cont}} = \frac{\langle \delta u, H \delta u\rangle}{\|\delta u\|^2} = 0. \tag{5.4.5}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{cont}} = \frac{\langle \delta u, H \delta u\rangle}{\lVert \delta u \rVert^2} = 0. \tag{5.4.5}$$
 
 ### §4.3 Lattice Correction — PN-Barrier Amplitude
 
@@ -170,11 +170,11 @@ $$V_{\mathrm{PN}}(\boldsymbol\xi) \approx V_0 \cdot |\boldsymbol\xi|^2 + \mathca
 Hessian eigenvalue: pull back from energy second-derivative w.r.t. translation parameter $\boldsymbol\xi$ to second-derivative w.r.t. $u$-perturbation.
 
 Translation perturbation: $\delta u = -\boldsymbol\xi \cdot \nabla u^*$, so
-$$\frac{\partial^2 \mathcal{E}}{\partial \boldsymbol\xi^2}\bigg|_{\boldsymbol\xi=0} = 2 V_0 \tag{5.4.12}$$
-in our quadratic approximation. Norm $\|\delta u\|^2 \approx |\partial S|/\xi_0 \cdot |\boldsymbol\xi|^2 / a$ from (5.4.4).
+$$\frac{\partial^2 \mathcal{E}}{\partial \boldsymbol\xi^2}\bigg\vert_{\boldsymbol\xi=0} = 2 V_0 \tag{5.4.12}$$
+in our quadratic approximation. Norm $\lVert \delta u \rVert^2 \approx |\partial S|/\xi_0 \cdot |\boldsymbol\xi|^2 / a$ from (5.4.4).
 
 Hessian eigenvalue (Rayleigh quotient):
-$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} = \frac{\partial^2 \mathcal{E}/\partial\boldsymbol\xi^2}{\|\partial_{\boldsymbol\xi} u\|^2 / |\boldsymbol\xi|^2}\bigg|_{\boldsymbol\xi=0} = \frac{2V_0}{|\partial S|/(\xi_0 a)} = \frac{2 \alpha |\partial S|/(a \xi_0)}{|\partial S|/(\xi_0 a)} = 2\alpha = 2 \beta \xi_0^2. \tag{5.4.13}$$
+$$\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} = \frac{\partial^2 \mathcal{E}/\partial\boldsymbol\xi^2}{\lVert \partial_{\boldsymbol\xi} u \rVert^2 / |\boldsymbol\xi|^2}\bigg\vert_{\boldsymbol\xi=0} = \frac{2V_0}{|\partial S|/(\xi_0 a)} = \frac{2 \alpha |\partial S|/(a \xi_0)}{|\partial S|/(\xi_0 a)} = 2\alpha = 2 \beta \xi_0^2. \tag{5.4.13}$$
 
 **Result**: $\mu_{\mathrm{Gold}}^{\mathrm{V5b-T'}} \approx 2\alpha = 2\beta\xi_0^2$ — **independent of $|\partial S|$**, scaling as $\beta \xi_0^2$.
 
@@ -221,7 +221,7 @@ In super-lattice limit ($\xi_0 \gg a$, $\beta \to 0$): $V_0 \to 0$ (since $V_0 \
 **Cat B sketch**. My derivation has gaps:
 - Step (5.4.8): claimed "second-order in $\boldsymbol\xi^2$ contribution from gradient energy" — the precise coefficient (the $\mathcal{O}(1)$ multiplier) was not computed; only scaling was tracked.
 - Step (5.4.10): summing $|\mathcal{B}|$ sites with $\mathcal{O}(1)$ correlations between sites — for sites not at interface band edges, correction is suppressed; this needs careful counting.
-- Step (5.4.13): the cancellation of $|\partial S|$ between $V_0$ (numerator) and $\|\delta u\|^2$ (denominator) is delicate; relies on both scaling as $|\partial S|/\xi_0$ exactly. The exact coefficient ratio (giving "2" prefactor) is approximate.
+- Step (5.4.13): the cancellation of $|\partial S|$ between $V_0$ (numerator) and $\lVert \delta u \rVert^2$ (denominator) is delicate; relies on both scaling as $|\partial S|/\xi_0$ exactly. The exact coefficient ratio (giving "2" prefactor) is approximate.
 
 **For Cat A**: need rigorous Allen-Cahn discrete analysis. Approach 4 (Modica-Mortola limit + lattice correction) likely yields cleaner derivation.
 
@@ -291,7 +291,7 @@ Per `01_canonical_promotion_queue_review.md` §2 D-5 (current), the proposal tex
 - Independence of $|\partial S|$ if §4 derivation is correct — non-trivial physical prediction.
 
 **Possibly wrong**:
-- The cancellation of $|\partial S|$ between $V_0$ and $\|\delta u\|^2$ — both scale as $|\partial S|$, so ratio is constant. But the *coefficients* of these scalings have different geometric origins (gradient energy vs profile-overlap norm). The ratio "2" is approximate; could be off by factor 2-3.
+- The cancellation of $|\partial S|$ between $V_0$ and $\lVert \delta u \rVert^2$ — both scale as $|\partial S|$, so ratio is constant. But the *coefficients* of these scalings have different geometric origins (gradient energy vs profile-overlap norm). The ratio "2" is approximate; could be off by factor 2-3.
 - Sub-leading corrections (curvature of cluster boundary; corner contributions for corner-saturated cluster) not analyzed.
 
 ### §6.2 Why is Cat A hard?

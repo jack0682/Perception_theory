@@ -29,7 +29,7 @@ Take $u^* = c\mathbf{1}$ with $c \in ((3-\sqrt 3)/6, (3+\sqrt 3)/6)$ (spinodal).
 
 ### 1.2 Statement
 
-> **Theorem 3.** For $u^* = c\mathbf{1}$ on $D_4$ free-BC grid in spinodal regime with $\beta < \beta_\text{crit}^{(2)} := 4\alpha \lambda_2 / |W''(c)|$ (so that $u^*$ is Morse-0), the cohesion signature is
+> **Theorem 3.** For $u^* = c\mathbf{1}$ on $D_4$ free-BC grid in spinodal regime with $\beta < \beta_\text{crit}^{(2)} := 4\alpha \lambda_2 / \lvert W''(c) \rvert$ (so that $u^*$ is Morse-0), the cohesion signature is
 > $$\sigma(c\mathbf{1}) \;=\; \big(0;\; \{(n_k, [\rho_k], \mu_k)\}_{k=2}^{K+1}\big),$$
 > where:
 > - $\mu_k = 4\alpha \lambda_k + \beta W''(c) > 0$ for $k = 2, \ldots, K+1$ (Prop 1.3a, with cutoff $K$ from §2.1 (O3));
@@ -52,7 +52,7 @@ Take $u^* = c\mathbf{1}$ with $c \in ((3-\sqrt 3)/6, (3+\sqrt 3)/6)$ (spinodal).
 ### 1.3 Proof
 
 **Step 1 (Hessian at uniform).** By Prop 1.3a (`working/SF/mode_count.md` §1.1, Cat A), the constrained Hessian
-$$H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I \;\Big|_{\mathbf{1}^\perp}.$$
+$$H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I \;\Big\vert_{\mathbf{1}^\perp}.$$
 Eigenvectors of $H$ on $\mathbf{1}^\perp$ coincide with eigenvectors of $L_G$ on $\mathbf{1}^\perp$ (only the eigenvalues shift uniformly by $\beta W''(c)$). Hence $V_k(H) = V_k(L_G)$ for $k = 2, \ldots, n$. ✓ (Prop 1.3a.)
 
 **Step 2 (Eigenvalues).** $\mu_k = 4\alpha \lambda_k + \beta W''(c)$. For $\beta < \beta_\text{crit}^{(2)}$, $\mu_2 > 0$ and all $\mu_k > 0$. ✓
@@ -81,7 +81,7 @@ These actions on the basis $\{\phi_{(p, q)}\}$ of $L_G$ eigenspaces (degeneracy 
 | $\lambda_{(p, p)}$ with $p$ even, $p > 0$ | $(p, p)$ singlet | $A_1$ |
 | $\lambda_{(p, q)}$ with $p, q$ distinct, $\{p, q\}$ unordered | 4 vectors $\{(p,q), (q,p), (L-1-p, q), \ldots\}$ | $E \oplus E$ or $A_1 \oplus B_1 \oplus E$ depending on parity | varies |
 
-(Exact entries per $(p, q)$ parity follow from character-table calculation; the $D_4$ character table has $|D_4| = 8$ with 5 conjugacy classes $\{e, r^2, \{r, r^3\}, \{s, r^2 s\}, \{rs, r^3 s\}\}$ and 5 irreps $A_1, A_2, B_1, B_2, E$.)
+(Exact entries per $(p, q)$ parity follow from character-table calculation; the $D_4$ character table has $\lvert D_4 \rvert = 8$ with 5 conjugacy classes $\{e, r^2, \{r, r^3\}, \{s, r^2 s\}, \{rs, r^3 s\}\}$ and 5 irreps $A_1, A_2, B_1, B_2, E$.)
 
 **Step 7 (Nodal count).** For grid Laplacian eigenmodes, nodal count of $\phi_{(p, q)}$:
 - Sign of $\phi_{(p, q)}(x, y)$ flips whenever $\cos(\pi p x / (L-1))$ or $\cos(\pi q y / (L-1))$ changes sign.
@@ -157,7 +157,7 @@ Numerics consistent with `exp_hessian_uniform_v2.json` (Prop 1.3a 의 Cat A chec
 
 ### 2.3 Proof
 
-**Step 1 (Existence of pitchfork minimizer).** T-Birth-Parametric (`canonical.md` §13, Cat A): for $\beta = \beta_\text{crit}^{(2)} + \epsilon$, $\epsilon > 0$ small, there exists a non-uniform local minimum $u^*_\epsilon$ on $\Sigma_m$, bifurcating from $c\mathbf{1}$ along the Fiedler subspace, with $\|u^*_\epsilon - c\mathbf{1}\|_2 = O(\sqrt\epsilon)$. ✓
+**Step 1 (Existence of pitchfork minimizer).** T-Birth-Parametric (`canonical.md` §13, Cat A): for $\beta = \beta_\text{crit}^{(2)} + \epsilon$, $\epsilon > 0$ small, there exists a non-uniform local minimum $u^*_\epsilon$ on $\Sigma_m$, bifurcating from $c\mathbf{1}$ along the Fiedler subspace, with $\lVert u^*_\epsilon - c\mathbf{1} \rVert_2 = O(\sqrt\epsilon)$. ✓
 
 **Step 2 (Axis-aligned orbit).** R22 §3.3 (`working/SF/symmetry_moduli.md` §3.3, Cat A): the axis-aligned orbit element ($u^*_\epsilon = c\mathbf{1} + a_\epsilon \phi_{(1,0)}$, up to $D_4$ orbit choice) is selected over diagonal orbit by cubic coefficient ($A_2/A_1 = 4$ on D₄ free-BC). $a_\epsilon = c_R \sqrt\epsilon$ with $c_R$ explicit (R22 §3.3). ✓
 
@@ -226,14 +226,14 @@ $G$ = free-BC $L \times L$ grid, $u^*$ Morse-0 minimizer with $S(u^*) \supseteq 
 - **Angular ℓ=1 multipole** of any vector $v \in \mathbb{R}^X$:
 $$\mathcal{P}_{\ell=1}[v] := \sum_i v(i) \cdot \big(\cos\theta_i,\ \sin\theta_i\big), \quad \theta_i = \arg((i_x - x_*) + \mathrm{i}(i_y - y_*))$$
 where $(x_*, y_*)$ is the center of mass of $u^*$, and $\mathcal{P}_{\ell=1}[v] \in \mathbb{R}^2$.
-- **ℓ=1 angular power** of $v$: $\|\mathcal{P}_{\ell=1}[v]\|^2 / \|v\|^2$.
+- **ℓ=1 angular power** of $v$: $\lVert \mathcal{P}_{\ell=1}[v] \rVert^2 / \lVert v \rVert^2$.
 
 ### 3.2 Statement
 
 > **Lemma 3 (Goldstone saturation).** Suppose $S(u^*) \supseteq D_4$ at center, and $\phi_0 \in \mathbf{1}^\perp$ is a unit Hessian eigenvector with eigenvalue $\lambda_0 \leq C \exp(-d_*/\xi_0)$ (Theorem 1 hypothesis). Then $\phi_0$ lies in the $E$-irrep subspace of $T_{u^*}\Sigma_m$ under $D_4$, and
 > $$\mathcal{P}_{\ell=1}[\phi_0]\ \neq\ 0\quad\text{generically},$$
 > with the angular ℓ=1 power
-> $$\frac{\|\mathcal{P}_{\ell=1}[\phi_0]\|^2}{\|\phi_0\|^2} \;\geq\; \kappa_{\ell=1}^{D_4} \;>\; 0,$$
+> $$\frac{\lVert \mathcal{P}_{\ell=1}[\phi_0] \rVert^2}{\lVert \phi_0 \rVert^2} \;\geq\; \kappa_{\ell=1}^{D_4} \;>\; 0,$$
 > where $\kappa_{\ell=1}^{D_4}$ is a $u^*$-and-$L$-dependent constant equal to the ℓ=1-power of the canonical $E$-irrep basis. In particular, **$\phi_0$'s angular-multipole projection is concentrated in ℓ=1 channel**, agreeing with R23 §09's "Mode 0 = p-dominant" measurement.
 
 ### 3.3 Proof
@@ -264,28 +264,28 @@ So $\mathcal{P}_{\ell=1}[\delta u_x] \approx (-m, 0)$. **Magnitude $= m$, nonzer
 
 Similarly $\mathcal{P}_{\ell=1}[\delta u_y] \approx (0, -m)$.
 
-**Step 3 (Angular power computation).** $\|\mathcal{P}_{\ell=1}[\delta u_x]\|^2 / \|\delta u_x\|^2 \approx m^2 / \|\delta u_x\|^2$. The norm $\|\delta u_x\|^2 = \sum_i (\partial_x u^*(i))^2 \approx \int (\partial_x u^*)^2 \, dx\, dy$. For tanh ansatz $u^*(r) = \tfrac{1}{2}(1 - \tanh((r-r_0)/\xi_0))$:
+**Step 3 (Angular power computation).** $\lVert \mathcal{P}_{\ell=1}[\delta u_x] \rVert^2 / \lVert \delta u_x \rVert^2 \approx m^2 / \lVert \delta u_x \rVert^2$. The norm $\lVert \delta u_x \rVert^2 = \sum_i (\partial_x u^*(i))^2 \approx \int (\partial_x u^*)^2 \, dx\, dy$. For tanh ansatz $u^*(r) = \tfrac{1}{2}(1 - \tanh((r-r_0)/\xi_0))$:
 $$\partial_x u^* = \partial_r u^* \cdot \cos\theta = -\frac{1}{2\xi_0}\text{sech}^2\big((r-r_0)/\xi_0\big) \cdot \cos\theta.$$
-$$\|\delta u_x\|^2 \approx \int_0^\infty \frac{1}{4\xi_0^2}\text{sech}^4((r-r_0)/\xi_0) \cdot r \, dr \cdot \int_0^{2\pi} \cos^2\theta \, d\theta = \pi \cdot \frac{r_0}{4\xi_0^2} \cdot \int_{-r_0/\xi_0}^\infty \text{sech}^4(s) \cdot \xi_0 \, ds.$$
-For $r_0 \gg \xi_0$: $\int_{-\infty}^\infty \text{sech}^4 = 4/3$, so $\|\delta u_x\|^2 \approx \pi r_0 / (3\xi_0)$.
+$$\lVert \delta u_x \rVert^2 \approx \int_0^\infty \frac{1}{4\xi_0^2}\text{sech}^4((r-r_0)/\xi_0) \cdot r \, dr \cdot \int_0^{2\pi} \cos^2\theta \, d\theta = \pi \cdot \frac{r_0}{4\xi_0^2} \cdot \int_{-r_0/\xi_0}^\infty \text{sech}^4(s) \cdot \xi_0 \, ds.$$
+For $r_0 \gg \xi_0$: $\int_{-\infty}^\infty \text{sech}^4 = 4/3$, so $\lVert \delta u_x \rVert^2 \approx \pi r_0 / (3\xi_0)$.
 $m \approx \pi r_0^2$ (disk mass).
 
-$\|\mathcal{P}_{\ell=1}[\delta u_x]\|^2 / \|\delta u_x\|^2 \approx (\pi r_0^2)^2 / (\pi r_0 / (3\xi_0)) = 3\pi r_0^3 \xi_0$.
+$\lVert \mathcal{P}_{\ell=1}[\delta u_x] \rVert^2 / \lVert \delta u_x \rVert^2 \approx (\pi r_0^2)^2 / (\pi r_0 / (3\xi_0)) = 3\pi r_0^3 \xi_0$.
 
 Wait normalize: this should be a dimensionless ratio. Let me recompute with explicit normalization.
 
-$\delta u_x$ itself is unnormalized. In σ-framework, we use unit eigenvector $\hat\phi_0 = \delta u_x / \|\delta u_x\|$. Then $\mathcal{P}_{\ell=1}[\hat\phi_0] = \mathcal{P}_{\ell=1}[\delta u_x]/\|\delta u_x\|$. $\|\mathcal{P}_{\ell=1}[\hat\phi_0]\|^2$ has units of $|m|^2 / \|\delta u_x\|^2$, dimensionful.
+$\delta u_x$ itself is unnormalized. In σ-framework, we use unit eigenvector $\hat\phi_0 = \delta u_x / \lVert \delta u_x \rVert$. Then $\mathcal{P}_{\ell=1}[\hat\phi_0] = \mathcal{P}_{\ell=1}[\delta u_x]/\lVert \delta u_x \rVert$. $\lVert \mathcal{P}_{\ell=1}[\hat\phi_0] \rVert^2$ has units of $\lvert m \rvert^2 / \lVert \delta u_x \rVert^2$, dimensionful.
 
-A proper "angular ℓ=1 power **fraction**" is $\|\mathcal{P}_{\ell=1}[\hat\phi]\|^2 / \|\hat\phi \otimes (\cos\theta, \sin\theta)\|^2$ — i.e., normalize against the ℓ=1 basis itself.
+A proper "angular ℓ=1 power **fraction**" is $\lVert \mathcal{P}_{\ell=1}[\hat\phi] \rVert^2 / \lVert \hat\phi \otimes (\cos\theta, \sin\theta) \rVert^2$ — i.e., normalize against the ℓ=1 basis itself.
 
 Define the normalized ℓ=1 basis function $\psi_{\ell=1}^{(c)}(i) = \cos\theta_i$, $\psi_{\ell=1}^{(s)}(i) = \sin\theta_i$. The ℓ=1 power **fraction** is
-$$\rho_{\ell=1}[\hat\phi] := \frac{\langle\hat\phi, \psi_{\ell=1}^{(c)}\rangle^2 + \langle\hat\phi, \psi_{\ell=1}^{(s)}\rangle^2}{\|\hat\phi\|^2 \cdot (\|\psi_{\ell=1}^{(c)}\|^2 + \|\psi_{\ell=1}^{(s)}\|^2)/2}.$$
+$$\rho_{\ell=1}[\hat\phi] := \frac{\langle\hat\phi, \psi_{\ell=1}^{(c)}\rangle^2 + \langle\hat\phi, \psi_{\ell=1}^{(s)}\rangle^2}{\lVert \hat\phi \rVert^2 \cdot (\lVert \psi_{\ell=1}^{(c)} \rVert^2 + \lVert \psi_{\ell=1}^{(s)} \rVert^2)/2}.$$
 
-For Goldstone $\hat\phi = \delta u_x / \|\delta u_x\|$, by Step 2, $\langle \hat\phi, \psi_{\ell=1}^{(c)}\rangle \approx -m / \|\delta u_x\|$, and $\|\psi_{\ell=1}^{(c)}\|^2 = \sum_i \cos^2\theta_i \approx \int r\,dr\,d\theta \cdot \cos^2\theta = \pi R^2 / 2$ for boundary $R$.
+For Goldstone $\hat\phi = \delta u_x / \lVert \delta u_x \rVert$, by Step 2, $\langle \hat\phi, \psi_{\ell=1}^{(c)}\rangle \approx -m / \lVert \delta u_x \rVert$, and $\lVert \psi_{\ell=1}^{(c)} \rVert^2 = \sum_i \cos^2\theta_i \approx \int r\,dr\,d\theta \cdot \cos^2\theta = \pi R^2 / 2$ for boundary $R$.
 
-$\rho_{\ell=1}[\hat\phi] \approx (m^2 / \|\delta u_x\|^2) / (\pi R^2 / 2) \cdot \text{normalization factor}$.
+$\rho_{\ell=1}[\hat\phi] \approx (m^2 / \lVert \delta u_x \rVert^2) / (\pi R^2 / 2) \cdot \text{normalization factor}$.
 
-Numeric ballpark for typical $u^*$ on 32×32: $m \sim 100$ (mass of disk), $\|\delta u_x\|^2 \sim 10$ (interface contributions only), $R \sim 16$. Estimate $\rho_{\ell=1} \sim 0.5$ — i.e., **about half the angular power in ℓ=1**. ✓ (consistent with R23 measurement of 0.4–0.5 for "p-dominant" mode 0).
+Numeric ballpark for typical $u^*$ on 32×32: $m \sim 100$ (mass of disk), $\lVert \delta u_x \rVert^2 \sim 10$ (interface contributions only), $R \sim 16$. Estimate $\rho_{\ell=1} \sim 0.5$ — i.e., **about half the angular power in ℓ=1**. ✓ (consistent with R23 measurement of 0.4–0.5 for "p-dominant" mode 0).
 
 **Step 4 (ℓ=1 saturation).** Since $\hat\phi_0 \in E$-irrep subspace $\subseteq$ Goldstone subspace, and Goldstone basis $(\delta u_x, \delta u_y)$ has dominant ℓ=1 power, **any vector in the $E$-isotypic Goldstone subspace** is a linear combination $a \hat{\delta u_x} + b \hat{\delta u_y}$, which inherits dominant ℓ=1 power. Hence $\rho_{\ell=1}[\hat\phi_0] \geq \kappa_{\ell=1}^{D_4} > 0$ as claimed. $\Box$
 

@@ -43,7 +43,7 @@ Stage 1 = canonical 측정. Stage 2 = 통찰 측정. Stage 3 = *대조*.
 | **P-1** | 다채널 약한 차이 *존재* | (해당 primitive 없음) | §3.2 modeling layer note | **canonical 외부** | DECL-1.0 화살표 시작점 위 — *명시적 외부* |
 | **P-2** | 상호 지지 응집 (closure) | A1'/A2/A3 contraction | §6 Group A | **이미 담김 (Cat A)** | $a_{\mathrm{cl}}<4$ 강제 |
 | **P-3** | 응집 → 경계 선명 | T8-Core/Full + T-OP6-B | §13 (Cat A) | **이미 담김 (Cat A)** | DECL-1.0 의 "심장" |
-| **P-4** | 분해 한계 (사과 융합) | T8 collapse: $\beta/\alpha \leq 4\lambda_2/\|W''(c)\|$ | §13 + DECL-1.0 | **이미 담김 (Cat A)** | $\lambda_2 \to 0$ 의 직접적 결과 |
+| **P-4** | 분해 한계 (사과 융합) | T8 collapse: $\beta/\alpha \leq 4\lambda_2/\lVert W''(c) \rVert$ | §13 + DECL-1.0 | **이미 담김 (Cat A)** | $\lambda_2 \to 0$ 의 직접적 결과 |
 | **P-5** | 셈 = 응집 결과 readout | $K_{\mathrm{act}} = \#\mathrm{PersComp}(u^*)$ + Comm.16 (ii) | §3.11 + §11.1 | **이미 담김 (Def + Cat A 조건부)** | T-L1-F/T-L1-M Cat A 가 $K_{\mathrm{soft}}=K_{\mathrm{act}}$ 다리 |
 | **P-6** | $S_0(u^*)$ 내부 데이터 | $\sigma_{\mathrm{rich}} = (\mathrm{centroid}, \mathrm{orient}, \sigma_{\mathrm{std}}, \mathrm{wigner})$ derived | derived diagnostic + OP-0008 | **부분적** | centroid/orient Cat B; σ_std MERGE/SPLIT Cat C |
 | **P-7** | $u^* \to S_0 \to K$ 방향성 | function composition + CN10 one-way | §3.11 + §14 CN10 | **이미 담김** | trivial 정의 + 메타 commitment |
@@ -82,10 +82,10 @@ $$K_{z_t}(x,y) = \exp\left(-\frac{d_X(x,y)^2}{2\rho^2}\right) \cdot \exp\left(-\
 
 **사용자 제안 (`01b §8`)**: "$z_t$ 의 차이가 비균일 $u_t^*$ 를 유도하는 조건."
 
-**canonical T8-Core (Cat A)**: 임계 $\beta/\alpha > 4\lambda_2(L)/|W''(c)|$ 충족 시, $E$ 의 minimizer 는 *uniform field 가 critical 이지만 unstable*, 따라서 *비균일 minimizer 가 존재*. $\lambda_2(L)$ 은 그래프 Laplacian $L = D - W$ 의 spectral gap, $W$ 는 *N_t 로부터 유도된 weight matrix*.
+**canonical T8-Core (Cat A)**: 임계 $\beta/\alpha > 4\lambda_2(L)/\lvert W''(c) \rvert$ 충족 시, $E$ 의 minimizer 는 *uniform field 가 critical 이지만 unstable*, 따라서 *비균일 minimizer 가 존재*. $\lambda_2(L)$ 은 그래프 Laplacian $L = D - W$ 의 spectral gap, $W$ 는 *N_t 로부터 유도된 weight matrix*.
 
 **비교**:
-- T8 가설: $N_t$ 의 *spectral 성질 ($\lambda_2$)* 와 double-well curvature ($|W''(c)|$) 의 비교.
+- T8 가설: $N_t$ 의 *spectral 성질 ($\lambda_2$)* 와 double-well curvature ($\lvert W''(c) \rvert$) 의 비교.
 - T-D0D1-Nonuniformity 가설: $z_t$ 의 *feature variation* 이 *비균일 $u^*$ 유도*.
 
 **관계**:
@@ -151,7 +151,7 @@ Stage 4 의 verification 대상 — 본 §6 가 *그 verification 의 입력* �
 
 ### §6.1 후보 NP-A: T-D0D1-Existence (P-11 의 정식)
 
-> **(NP-A)** 임의의 finite connected graph $G = (X, E)$, 임의의 measurable feature space $(\mathcal{F}, d_\mathcal{F})$, 임의의 함수 $z : X \to \mathcal{F}$, 임의의 mass $m \in (0, |X|)$, 임의의 parameters $\rho, \sigma > 0$, 임의의 SCC parameters $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}}, a_{\mathrm{cl}} \in (0,4), \beta, \alpha)$:
+> **(NP-A)** 임의의 finite connected graph $G = (X, E)$, 임의의 measurable feature space $(\mathcal{F}, d_\mathcal{F})$, 임의의 함수 $z : X \to \mathcal{F}$, 임의의 mass $m \in (0, \lvert X \rvert)$, 임의의 parameters $\rho, \sigma > 0$, 임의의 SCC parameters $(\lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, \lambda_{\mathrm{bd}}, a_{\mathrm{cl}} \in (0,4), \beta, \alpha)$:
 >
 > $$E(u; K_z) := \lambda_{\mathrm{cl}} E_{\mathrm{cl}}(u; K_z) + \lambda_{\mathrm{sep}} E_{\mathrm{sep}}(u; K_z) + \lambda_{\mathrm{bd}} E_{\mathrm{bd}}(u; K_z)$$
 >
@@ -165,11 +165,11 @@ Stage 4 의 verification 대상 — 본 §6 가 *그 verification 의 입력* �
 
 > **(NP-B)** Above setting. 정의:
 >
-> $$\mathrm{Var}_X(z) := \frac{1}{|X|} \sum_x d_\mathcal{F}(z(x), \bar{z})^2, \quad \bar{z} := \arg\min_{w \in \mathcal{F}} \sum_x d_\mathcal{F}(z(x), w)^2$$
+> $$\mathrm{Var}_X(z) := \frac{1}{\lvert X \rvert} \sum_x d_\mathcal{F}(z(x), \bar{z})^2, \quad \bar{z} := \arg\min_{w \in \mathcal{F}} \sum_x d_\mathcal{F}(z(x), w)^2$$
 >
 > Then there exists a function $\Theta: \mathbb{R}^+ \to \mathbb{R}^+$ such that:
 >
-> $$\mathrm{Var}_X(z) \geq \Theta(\rho, \sigma, \beta/\alpha, |X|) \quad \Longrightarrow \quad u^*(z) \in \arg\min_{\Sigma_m} E(\cdot; K_z) \text{ is non-uniform}$$
+> $$\mathrm{Var}_X(z) \geq \Theta(\rho, \sigma, \beta/\alpha, \lvert X \rvert) \quad \Longrightarrow \quad u^*(z) \in \arg\min_{\Sigma_m} E(\cdot; K_z) \text{ is non-uniform}$$
 >
 > i.e. $u^*$ 가 constant 가 아님 (∃ $x, y \in X, u^*(x) \neq u^*(y)$).
 
@@ -177,7 +177,7 @@ Stage 4 의 verification 대상 — 본 §6 가 *그 verification 의 입력* �
 
 분석:
 1. $\mathrm{Var}_X(z) \uparrow \Rightarrow K_{z}(x,y)$ matrix 가 *block structure* 강해짐 → $L = D - W$ 의 *Fiedler value $\lambda_2$ 증가*.
-2. $\lambda_2 \uparrow$ → T8 임계 $\beta/\alpha > 4\lambda_2/|W''(c)|$ *충족 어려워짐* — 따라서 직관 *역방향*: 강한 feature variation 이 비균일 $u^*$ 을 *방해* 할 수 있음.
+2. $\lambda_2 \uparrow$ → T8 임계 $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ *충족 어려워짐* — 따라서 직관 *역방향*: 강한 feature variation 이 비균일 $u^*$ 을 *방해* 할 수 있음.
 3. 또는 *반대로*: $K_{z}$ 가 disconnected 에 가까워지면 (예: $\sigma \to 0$ 으로 cross-cluster edge weight $\to 0$) → *T8 와 무관한 분리* — 그래프가 *실질적으로 multiple component*. 이 regime 에서 비균일 $u^*$ 자명 (각 component 에 mass 분배).
 
 **판정 1 (분석 1+2)**: T8 hypothesis 영역 내에서 NP-B 는 T8 의 corollary — 새 수학 아님.
@@ -199,7 +199,7 @@ Stage 4 의 verification 대상 — 본 §6 가 *그 verification 의 입력* �
 > **(NP-D)** SCC 의 energy $\mathcal{E}(u; K_z)$ 가 spectral clustering / mean-shift / bilateral filter 의 *어떤* 표준 objective 와도 *수학적으로 구별*.
 
 **분석**:
-- Spectral clustering objective: $\min_{u \in \{0,1\}^X, |u|=k} u^T L u$ — *Boolean indicator + Ncut style*. SCC 의 $u \in [0,1]^X$ continuous + 4 항 energy 와 *명백히 다름*.
+- Spectral clustering objective: $\min_{u \in \{0,1\}^X, \lvert u \rvert=k} u^T L u$ — *Boolean indicator + Ncut style*. SCC 의 $u \in [0,1]^X$ continuous + 4 항 energy 와 *명백히 다름*.
 - Bilateral filter: *non-variational* — direct iterative update $u_{t+1}(x) = \sum_y K_z(x,y) u_t(y) / \sum_y K_z(x,y)$. SCC 의 *energy gradient flow* 와 다름.
 - Mean-shift: *mode finding* on density $p(z) = \sum K_z(x, \cdot)$. SCC 의 $u$-field 와 *카테고리 다름* (mean-shift 는 site 가 아니라 mode 을 반환).
 - Diffusion maps: spectral *embedding*, not clustering. SCC 와 *목적 다름*.

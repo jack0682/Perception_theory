@@ -68,13 +68,13 @@ The cost update $u \mapsto c[u]$ has multiplicative effect — perturbation of $
 For $u, u'$ with $d_H(u, u') = \delta$: $u' = \lambda(x) u$ where $\log\lambda \in [\log(\inf u'/u), \log(\sup u'/u)]$ has range $\delta$.
 
 Effect on $\varphi$: $\varphi(u) = (u, \mathrm{Cl}(u), D(x; 1-u))$. Each component is a function of $u$:
-- $u$ direct: $|\varphi_1(u') - \varphi_1(u)| = |u' - u| \leq u(\lambda - 1) \leq u \cdot e^\delta - u = u(e^\delta - 1)$. For small $\delta$: $\approx u \delta$.
+- $u$ direct: $|\varphi_1(u') - \varphi_1(u)| = \lvert u' - u \rvert \leq u(\lambda - 1) \leq u \cdot e^\delta - u = u(e^\delta - 1)$. For small $\delta$: $\approx u \delta$.
 - $\mathrm{Cl}(u)$: closure operator is contractive (canonical), so similar $\delta$-scaling.
 - $D$: local distinction operator, multiplicative.
 
-Effect on $c[u](x,y) = \|\varphi(u)(x) - \varphi(u)(y)\|^2 + \mathrm{spatial}$: cost changes by $O(u\delta)$ per entry. Hilbert diameter of $A(x,y) = e^{-c[u]/\varepsilon_\mathrm{OT}}$ changes by $O(u\delta/\varepsilon_\mathrm{OT})$.
+Effect on $c[u](x,y) = \lVert \varphi(u)(x) - \varphi(u)(y) \rVert^2 + \mathrm{spatial}$: cost changes by $O(u\delta)$ per entry. Hilbert diameter of $A(x,y) = e^{-c[u]/\varepsilon_\mathrm{OT}}$ changes by $O(u\delta/\varepsilon_\mathrm{OT})$.
 
-For Sinkhorn solution: $d_H(M^*(c), M^*(c')) \leq C_\mathrm{Bigot}\,\|c - c'\|/\varepsilon_\mathrm{OT}$ (Bigot–Cazelles–Papadakis Hilbert-metric Sinkhorn-Lipschitz). The constant $C_\mathrm{Bigot} = O(1)$.
+For Sinkhorn solution: $d_H(M^*(c), M^*(c')) \leq C_\mathrm{Bigot}\,\lVert c - c' \rVert/\varepsilon_\mathrm{OT}$ (Bigot–Cazelles–Papadakis Hilbert-metric Sinkhorn-Lipschitz). The constant $C_\mathrm{Bigot} = O(1)$.
 
 Hence Step A Lipschitz in Hilbert: $L_A^H = O(\bar u \cdot L_\varphi/\varepsilon_\mathrm{OT})$ where $\bar u$ is mean field value, $L_\varphi$ is fingerprint Lipschitz.
 

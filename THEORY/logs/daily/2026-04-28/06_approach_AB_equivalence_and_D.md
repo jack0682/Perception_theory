@@ -45,13 +45,13 @@ More precisely:
 
 **Step 1**: In well-separated regime, joint Hessian on ordered K-tuple basis:
 $$H_{\text{joint}} = \mathrm{block-diag}(H_{11}, \ldots, H_{KK}) + V,$$
-where $\|V_{jk}\|_{\text{op}} \leq \lambda_{\text{rep}} + O(e^{-c_0 d_{\min}})$ (Coupling Bound Lemma).
+where $\lVert V_{jk} \rVert_{\text{op}} \leq \lambda_{\text{rep}} + O(e^{-c_0 d_{\min}})$ (Coupling Bound Lemma).
 
 **Step 2**: For two-formation case (K=2, generalizable), unitary change of basis $U = \frac{1}{\sqrt{2}} \begin{pmatrix} I & I \\ I & -I \end{pmatrix}$ block-diagonalizes:
 $$U^* H_{\text{joint}} U = \begin{pmatrix} H_{11} + V_{12} \rho_{1 \leftrightarrow 2} & 0 \\ 0 & H_{11} - V_{12} \rho_{1 \leftrightarrow 2} \end{pmatrix} + O(e^{-c_0 d}),$$
 where $\rho_{1 \leftrightarrow 2}$ is the canonical iso between formations (assuming identical disks).
 
-**Step 3**: The sym (top-left) and antisym (bottom-right) blocks have eigenvalues $\mu_k(H_{11}) \pm \|V_{12}\rho_{1 \leftrightarrow 2}\|$ acting per-irrep. Per `05_*` §4.3:
+**Step 3**: The sym (top-left) and antisym (bottom-right) blocks have eigenvalues $\mu_k(H_{11}) \pm \lVert V_{12}\rho_{1 \leftrightarrow 2} \rVert$ acting per-irrep. Per `05_*` §4.3:
 - Sym block: spec$(H_{11}) + \lambda_{\text{rep}}$ (each eigenvalue shifted up).
 - Antisym block: spec$(H_{11}) - \lambda_{\text{rep}}$.
 

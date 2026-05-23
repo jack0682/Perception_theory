@@ -262,12 +262,12 @@ OP-0005 Layer B (Kramers escape rate for K-Selection) 가 P-F (P-F-A4 + P-F-A5) 
 
 ### `04_nq_g1_2_ext_design.md` (main, ~3-5 KB)
 
-- §1 측정 quantity: $\|R_j\|_\infty$ under shared-pool gradient-flow dynamics 의 post-flow snapshots. *Initial-state* 가 아니라 *time evolution 후* perturbation magnitude.
-- §2 Theoretical motivation: T-L1-F P9 hypothesis $\|R_j\|_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2$ 가 production WQ-1 trajectories 에서 만족되는가. (P9-tight) 변형 $\le \rho_{\mathrm{pert}}/4$ 의 production 만족도. NQ-G1-2 이미 initial-state 측면에서는 H6' 비-binding 보였지만, dynamic-state 측정 미수행.
+- §1 측정 quantity: $\lVert R_j \rVert_\infty$ under shared-pool gradient-flow dynamics 의 post-flow snapshots. *Initial-state* 가 아니라 *time evolution 후* perturbation magnitude.
+- §2 Theoretical motivation: T-L1-F P9 hypothesis $\lVert R_j \rVert_{\infty,N_j^r}\le \rho_{\mathrm{pert}}/2$ 가 production WQ-1 trajectories 에서 만족되는가. (P9-tight) 변형 $\le \rho_{\mathrm{pert}}/4$ 의 production 만족도. NQ-G1-2 이미 initial-state 측면에서는 H6' 비-binding 보였지만, dynamic-state 측정 미수행.
 - §3 Test configuration: $T^2_{20}$ + $K_{\mathrm{field}}=4$ + initial_masses=(30,30,30,0) + production canonical setup + gradient flow integration with `scc/multi.py` 또는 분리된 wrapper.
 - §4 분기 hypothesis:
-  - (H-G1-2-ext-A) post-flow $\|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$ frequently → (P9-tight) production reach substantial → T-L1-J' regime promotion candidate.
-  - (H-G1-2-ext-B) post-flow $\|R_j\|_\infty > \rho_{\mathrm{pert}}/4$ frequently → production reach narrow → T-L1-F/M Cat A conditional 의 의미 reclassify (similar to T-σ-Theorem-4 retroactive Cat A→B pattern).
+  - (H-G1-2-ext-A) post-flow $\lVert R_j \rVert_\infty \le \rho_{\mathrm{pert}}/4$ frequently → (P9-tight) production reach substantial → T-L1-J' regime promotion candidate.
+  - (H-G1-2-ext-B) post-flow $\lVert R_j \rVert_\infty > \rho_{\mathrm{pert}}/4$ frequently → production reach narrow → T-L1-F/M Cat A conditional 의 의미 reclassify (similar to T-σ-Theorem-4 retroactive Cat A→B pattern).
   - (H-G1-2-ext-C) 중간 case → regime-dependent production reach; extended regime characterization.
 - §5 Wall-clock estimation: gradient flow ~100-1000 steps × 1920 configs × ~10 measurements per trajectory = ~1.5-2h W7 D1.
 - §6 Implications for canonical claims (각 hypothesis 분기별):
@@ -284,7 +284,7 @@ Pseudo-code + module dependencies:
 
 ### Sub-file `04b_post_flow_R_j_measurement_protocol.md` (~1-2 KB)
 
-- Sampling protocol: every ~10 gradient steps, measure $\|R_j\|_\infty$ for each active slot j.
+- Sampling protocol: every ~10 gradient steps, measure $\lVert R_j \rVert_\infty$ for each active slot j.
 - Aggregation: per-config `max_t \|R_j\|_\infty` + per-slot avg.
 - Statistical reporting: distribution histogram + fraction of configs satisfying $\rho_{\mathrm{pert}}/2$ vs $\rho_{\mathrm{pert}}/4$ thresholds.
 
@@ -803,7 +803,7 @@ Day 3 EOD 99_summary.md 에서 explicit answer:
 ## §11.3 G3.4 NQ-G1-2-ext — methodology
 
 - **Reference**: gradient flow integration in `scc/multi.py` `transport_k_formations` 또는 `scc/optimizer.py` `find_formation`; per-snapshot $R_j$ 측정 via subtracting from idealized Gaussian shape.
-- **Concrete tools**: snapshot every ~10 steps; per-active-slot $\|R_j\|_\infty$ over $N_j^r$; aggregated max-over-time per config.
+- **Concrete tools**: snapshot every ~10 steps; per-active-slot $\lVert R_j \rVert_\infty$ over $N_j^r$; aggregated max-over-time per config.
 - **Statistical reporting**: distribution histogram over 1920 configs; fraction satisfying $\rho_{\mathrm{pert}}/2$ vs $\rho_{\mathrm{pert}}/4$ thresholds.
 
 ---

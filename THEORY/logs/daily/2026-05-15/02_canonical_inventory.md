@@ -137,7 +137,7 @@ D_1 의 사용자 측 정의:
 
 직접 인용 (DECLARATION §"중심 정리 — T8"):
 
-> $$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+> $$\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}$$
 >
 > 이 임계조건이 성립할 때: 장은 비균일 최솟값을 가진다. 경계가 출현한다. 객체성이 발생한다.
 

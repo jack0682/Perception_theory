@@ -98,9 +98,9 @@ At $c = 1/2$ on 2D square grid: $A_2/A_1 = 4 > 2$, axis is min (Round 3). On 1D 
 
 The $(n-1)$-dim standard rep has isotropy lattice richer: subgroups $S_{k_1} \times S_{k_2} \times \ldots$ for partitions of $n$. Each corresponds to a distinct orbit type.
 
-**Energy comparison at pitchfork:** At $c = 1/2$, the symmetric partition $|A| = n/2$ (for even $n$) minimizes $\int W(u) dx$ locally. Explicit cubic-coefficient analysis favors the balanced partition.
+**Energy comparison at pitchfork:** At $c = 1/2$, the symmetric partition $\lvert A \rvert = n/2$ (for even $n$) minimizes $\int W(u) dx$ locally. Explicit cubic-coefficient analysis favors the balanced partition.
 
-**Rule (for $S_n$ standard rep on $K_n$ Laplacian eigenspace):** $\mathrm{min}_k = 1$ (balanced partition $|A| = \lfloor n/2 \rfloor$).
+**Rule (for $S_n$ standard rep on $K_n$ Laplacian eigenspace):** $\mathrm{min}_k = 1$ (balanced partition $\lvert A \rvert = \lfloor n/2 \rfloor$).
 
 **Generalization:** For standard rep of any large group $\Gamma$ with "balanced partition" structure, one dominant min-orbit.
 
@@ -165,7 +165,7 @@ Round 4 gave $\mathrm{min}_k^{\text{Fiedler}} = 1$ (pure-X or pure-Y linked by $
 
 **Irrep at $\beta_{\mathrm{crit}}^{(2)}$:** $(n-1)$-dim standard rep of $S_n$.
 
-**Max-isotropy subgroups:** $S_k \times S_{n-k}$ for $k = 1, \ldots, \lfloor n/2 \rfloor$. Each corresponds to an orbit type "partition $\{A, A^c\}$ with $|A| = k$".
+**Max-isotropy subgroups:** $S_k \times S_{n-k}$ for $k = 1, \ldots, \lfloor n/2 \rfloor$. Each corresponds to an orbit type "partition $\{A, A^c\}$ with $\lvert A \rvert = k$".
 
 **Cubic analysis at pitchfork:** On $V_{\text{std}}$, the partition direction $v_A = \mathbf{1}_A - (k/n)\mathbf{1}$ has quartic $\int v_A^4$ that depends on $k$. Isoperimetric: balanced $k = \lfloor n/2 \rfloor$ minimizes $\int W(u)$.
 
@@ -177,7 +177,7 @@ Round 4 gave $\mathrm{min}_k^{\text{Fiedler}} = 1$ (pure-X or pure-Y linked by $
 
 ### 4.4 Stochastic Block Model (SBM, 2 blocks balanced)
 
-**Structure:** $n$ nodes partitioned into two blocks $A, B$ with $|A| = |B| = n/2$. Edge prob $p$ within, $q$ between, $p > q$. $\mathrm{Aut} = S_{n/2} \times S_{n/2} \rtimes \mathbb Z_2$.
+**Structure:** $n$ nodes partitioned into two blocks $A, B$ with $\lvert A \rvert = \lvert B \rvert = n/2$. Edge prob $p$ within, $q$ between, $p > q$. $\mathrm{Aut} = S_{n/2} \times S_{n/2} \rtimes \mathbb Z_2$.
 
 **Laplacian spectrum:** Two distinct eigenvalues below the bulk:
 - $\lambda_1 = 0$ (trivial).

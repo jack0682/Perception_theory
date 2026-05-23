@@ -4,7 +4,7 @@
 
 > ⚠ **ERRATUM (2026-04-27 evening, post-merge re-review):** §2 statement (ii) and §3 Step 5/5' derivation have **two related errors**:
 >
-> 1. **$K_1 < K_0$ wrong.** Stated "$0 < K_1 < K_0$ would-be transverse Goldstone, partial lifting from discrete $D_4 \to \mathbb{Z}_2$" — this is incorrect. Discrete symmetry breaking does NOT produce Goldstone modes (Goldstones require continuous symmetry). The R22 normal-form analysis on $D_4$ free-BC gives $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)|W''(c)|$, with $A_2/A_1 = 4$, hence **$K_1 = K_0$** at leading order. The two modes are degenerate but irrep-distinct ($[+1]$ trivial vs $[-1]$ sign).
+> 1. **$K_1 < K_0$ wrong.** Stated "$0 < K_1 < K_0$ would-be transverse Goldstone, partial lifting from discrete $D_4 \to \mathbb{Z}_2$" — this is incorrect. Discrete symmetry breaking does NOT produce Goldstone modes (Goldstones require continuous symmetry). The R22 normal-form analysis on $D_4$ free-BC gives $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)\lvert W''(c) \rvert$, with $A_2/A_1 = 4$, hence **$K_1 = K_0$** at leading order. The two modes are degenerate but irrep-distinct ($[+1]$ trivial vs $[-1]$ sign).
 >
 > 2. **In-text contradiction not resolved.** §3 Step 5 admitted "this gives Morse-1, not Morse-0" without resolution. The fix is to defer Morse-0 establishment to R22 normal-form (which gives the correct positive eigenvalues above), not to the ad-hoc partial second-order calculation I did.
 >
@@ -21,7 +21,7 @@
 
 Same $G$ as Theorem 3: $D_4$ free-BC $L \times L$ grid, $c \in $ spinodal interior. Now take $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$ with $\epsilon > 0$ small.
 
-**Existence of post-bifurcation minimizer (T-Birth-Parametric, `canonical.md` §13, Cat A):** for $\beta$ slightly above critical, $u^* = c\mathbf{1}$ becomes Morse-1 (one negative eigenvalue along $V_2$ Fiedler subspace), and a new local minimum $u^*_\epsilon$ bifurcates from $c\mathbf{1}$ along a direction in $V_2 = \mathrm{span}(\phi_{(1,0)}, \phi_{(0,1)})$, with $\|u^*_\epsilon - c\mathbf{1}\|_2 = O(\sqrt{\epsilon})$.
+**Existence of post-bifurcation minimizer (T-Birth-Parametric, `canonical.md` §13, Cat A):** for $\beta$ slightly above critical, $u^* = c\mathbf{1}$ becomes Morse-1 (one negative eigenvalue along $V_2$ Fiedler subspace), and a new local minimum $u^*_\epsilon$ bifurcates from $c\mathbf{1}$ along a direction in $V_2 = \mathrm{span}(\phi_{(1,0)}, \phi_{(0,1)})$, with $\lVert u^*_\epsilon - c\mathbf{1} \rVert_2 = O(\sqrt{\epsilon})$.
 
 **R22 axis-aligned selection (`working/SF/symmetry_moduli.md` §3.3, Cat A):** the cubic equivariant analysis at the bifurcation point selects, among the orbit of $D_4$-equivalent post-bifurcation minimizers, **axis-aligned** ones (single Fiedler direction $\phi_{(1, 0)}$ or $\phi_{(0, 1)}$, not diagonal $\phi_{(1, 0)} + \phi_{(0, 1)}$) over diagonal orbit, with cubic coefficient ratio $A_2/A_1 = 4$ on $D_4$ free-BC.
 
@@ -91,7 +91,7 @@ $W'''(u) = -12 + 24u$ for $W(u) = u^2(1-u)^2$. $W'''(c) = 12(2c - 1)$.
 
 ### Step 4 — Spectral split: degenerate first-order perturbation theory on the Fiedler doublet.
 
-At $u^* = c\mathbf{1}$, modes $\phi_{(1, 0)}$ and $\phi_{(0, 1)}$ are degenerate (both at $\mu = 4\alpha + \beta W''(c)$). At $\beta = \beta_{\mathrm{crit}}^{(2)}$ exactly: $\mu = 0$. For $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$, before perturbation by $u^*_\epsilon - c\mathbf{1}$: $\mu = 4\alpha + (\beta_{\mathrm{crit}}^{(2)} + \epsilon)W''(c) = -\epsilon |W''(c)| + 4\alpha\lambda_2^{\mathrm{Lap}}\cdot 0 = -\epsilon|W''(c)|$ (since $4\alpha\lambda_2^{\mathrm{Lap}} = \beta_{\mathrm{crit}}^{(2)}|W''(c)|$ from definition).
+At $u^* = c\mathbf{1}$, modes $\phi_{(1, 0)}$ and $\phi_{(0, 1)}$ are degenerate (both at $\mu = 4\alpha + \beta W''(c)$). At $\beta = \beta_{\mathrm{crit}}^{(2)}$ exactly: $\mu = 0$. For $\beta = \beta_{\mathrm{crit}}^{(2)} + \epsilon$, before perturbation by $u^*_\epsilon - c\mathbf{1}$: $\mu = 4\alpha + (\beta_{\mathrm{crit}}^{(2)} + \epsilon)W''(c) = -\epsilon \lvert W''(c) \rvert + 4\alpha\lambda_2^{\mathrm{Lap}}\cdot 0 = -\epsilon|W''(c)|$ (since $4\alpha\lambda_2^{\mathrm{Lap}} = \beta_{\mathrm{crit}}^{(2)}\lvert W''(c) \rvert$ from definition).
 
 So the unperturbed Fiedler doublet has $\mu = -\epsilon|W''(c)|$ at $u = c\mathbf{1}$ — both modes negative (instability). The post-bifurcation $u^*_\epsilon$ adds the Hessian perturbation $\delta\mathbf{H}$.
 
@@ -135,11 +135,11 @@ $$\mu_1(u^*_\epsilon) = -\epsilon|W''(c)| + K_1 \epsilon + O(\epsilon^{3/2}).$$
 
 For Mode 0 (broken-symmetry direction): R22 normal-form analysis of pitchfork ensures $K_0 = 2|W''(c)|$ at leading order (cubic equivariant gives this factor), so $\mu_0 = +\epsilon|W''(c)| > 0$. Recovered stability. ✓
 
-For Mode 1 (would-be transverse Goldstone): $K_1 < K_0$ (smaller direct correction), specifically R22 cubic ratio $K_1 = (2/A_2 \cdot A_1)|W''(c)|$ where $A_2/A_1 = 4$ on $D_4$ axis-aligned: $K_1 = (1/2)|W''(c)|$. Net: $\mu_1 = -\epsilon|W''(c)| + (1/2)\epsilon|W''(c)| = -(1/2)\epsilon|W''(c)|$ — STILL NEGATIVE.
+For Mode 1 (would-be transverse Goldstone): $K_1 < K_0$ (smaller direct correction), specifically R22 cubic ratio $K_1 = (2/A_2 \cdot A_1)\lvert W''(c) \rvert$ where $A_2/A_1 = 4$ on $D_4$ axis-aligned: $K_1 = (1/2)\lvert W''(c) \rvert$. Net: $\mu_1 = -\epsilon|W''(c)| + (1/2)\epsilon|W''(c)| = -(1/2)\epsilon|W''(c)|$ — STILL NEGATIVE.
 
 **Wait — this gives Morse-1, not Morse-0.** Re-check:
 
-Actually for axis-aligned post-bifurcation minimizer to be Morse-0 (stable), we need $K_1 > |W''(c)|$. R22 cubic analysis says diagonal vs axis-aligned: $A_2/A_1 = 4$, axis-aligned selected because diagonal has higher cubic; the *stability* question is separate from the *selection* question.
+Actually for axis-aligned post-bifurcation minimizer to be Morse-0 (stable), we need $K_1 > \lvert W''(c) \rvert$. R22 cubic analysis says diagonal vs axis-aligned: $A_2/A_1 = 4$, axis-aligned selected because diagonal has higher cubic; the *stability* question is separate from the *selection* question.
 
 **Re-examining `04-24/04_orbital_proofs.md` §2.3 Step 5'**: states "$\lambda_1$ remains near zero (would-be rotational Goldstone)". This is the *transverse* mode direction $\phi_{(0, 1)}$. The Goldstone-character means $\mu_1 \to 0$ from above as $\epsilon \to 0^+$, but is **nonnegative** (otherwise $u^*_\epsilon$ would not be a local min).
 

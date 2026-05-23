@@ -158,7 +158,7 @@ For each k, partition `[0,1]` into `N_k = N(k)` equal subintervals and replace `
 **Step B.2.5 (Bar bound on PL approximant).** By uniform continuity of E on compact Σ_m, with modulus `ω_E`:
 
 $$
-|E(γ_k^{PL}(s)) - E(γ_k(s))| \le ω_E(1/k).
+\lvert E(γ_k^{PL}(s)) - E(γ_k(s)) \rvert \le ω_E(1/k).
 $$
 
 Hence `Bar(γ_k^{PL}, F_i) ≤ Bar(γ_k, F_i) + ω_E(1/k) = B_k + ω_E(1/k) \to B^*` as k → ∞.

@@ -30,7 +30,7 @@ The W7 arc proceeded as five sessions on 2026-05-10:
 
 ### 2. W7-FINAL — Partial-H-SINK closure → CV-1.12 sealed
 - Wrote `partial_ot_stability.md`: **Theorem Partial-H-SINK (Cat A)** for canonical SCC E1 one-sided sub-stochastic OT. Direct row-softmax Lipschitz proof — no Séjourné et al. 2019 needed.
-- Bound: $\|M^* - M^{*'}\|_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT}) e^{2\delta/\varepsilon_\mathrm{OT}}$; linear regime $\leq 2m_t\delta/\varepsilon_\mathrm{OT}$ for $\delta \leq \varepsilon_\mathrm{OT}/4$.
+- Bound: $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT}) e^{2\delta/\varepsilon_\mathrm{OT}}$; linear regime $\leq 2m_t\delta/\varepsilon_\mathrm{OT}$ for $\delta \leq \varepsilon_\mathrm{OT}/4$.
 - Cascade: Lemma 9 (plan stability) Cat B → **Cat A**; Lemma 10 (component confinement) → **Cat A**; Lemma 11 (kernel independence) = S-B3 → **Cat A conditional** (margin condition).
 - H-SINK full theorem → **Cat A** for canonical SCC E1.
 - **T-Temporal-Identity promoted canonical Cat B** (all four parts a/b/c/d).

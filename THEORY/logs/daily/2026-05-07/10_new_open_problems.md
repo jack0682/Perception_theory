@@ -81,14 +81,14 @@ $$L_g^2 \;\leq\; \frac{C_\mathrm{geom}}{\mu_\mathrm{joint} \cdot d_\mathrm{inter
 OP-0008-DIST (registered Session W, 2026-05-06): *σ-stability under perturbation.* The σ-rich signature $\sigma_\mathrm{rich}(C; u, P)$ uses subgraph + restricted field. Question: under small perturbations $\delta u$, how does $\sigma_\mathrm{rich}$ change?
 
 A bound of the form
-$$\|\sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u)\| \;\leq\; L_\sigma \cdot \|\delta u\|$$
+$$\lVert \sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u) \rVert \;\leq\; L_\sigma \cdot \lVert \delta u \rVert$$
 is required for σ to be a stable observable under noise.
 
 **Today no progress on this.** Listed as "OPEN, no structured path yet" in Session W. Now that T-Temporal-Identity Cat B is essentially closed, σ-inheritance becomes the next natural target — and σ-stability is a prerequisite.
 
 ### §3.2 Multi-tool angles
 
-**Angle B1 — Spectral perturbation theorem.** σ_standard uses Wigner-projection eigenvectors. By Davis-Kahan theorem, eigenspace perturbation $\|\delta v\| \leq \|\delta H\|/\mathrm{gap}$. Combined with Hessian perturbation $\|\delta H\| \leq L_H \|\delta u\|$: σ-Lipschitz with constant $L_H/\mathrm{gap}$.
+**Angle B1 — Spectral perturbation theorem.** σ_standard uses Wigner-projection eigenvectors. By Davis-Kahan theorem, eigenspace perturbation $\lVert \delta v \rVert \leq \lVert \delta H \rVert/\mathrm{gap}$. Combined with Hessian perturbation $\lVert \delta H \rVert \leq L_H \lVert \delta u \rVert$: σ-Lipschitz with constant $L_H/\mathrm{gap}$.
 
 **Angle B2 — Functional analysis (variational).** σ_rich = restricted field on subgraph; perturbation propagates through restriction operator (linear, bounded). σ-Lipschitz constant = subgraph operator norm.
 
@@ -99,15 +99,15 @@ is required for σ to be a stable observable under noise.
 ### §3.3 Candidate first lemma
 
 **Lemma 16 (σ_rich Lipschitz, Cat C):** *Under (A1)–(A3) + σ-rich definition (`canonical.md` Commitment 18 candidate):*
-$$\|\sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\|_2 \;\leq\; L_\sigma \cdot \|\delta u|_C\|_2,$$
+$$\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P) \rVert_2 \;\leq\; L_\sigma \cdot \lVert \delta u|_C \rVert_2,$$
 *with $L_\sigma \leq O(\rho_\mathrm{pers}^{-1})$ depending on the persistence threshold (smaller threshold ⇒ more sensitive σ).*
 
 **Proof sketch.** σ_rich = (mass, centroid, inertia tensor) on subgraph. Each component is polynomial in $u$:
 - mass = $\sum_x u(x)$, Lipschitz constant 1.
-- centroid = mass-weighted average of position, Lipschitz constant $\propto |C|/m$.
-- inertia tensor = mass-weighted second moment, Lipschitz constant $\propto |C|^2/m$.
+- centroid = mass-weighted average of position, Lipschitz constant $\propto \lvert C \rvert/m$.
+- inertia tensor = mass-weighted second moment, Lipschitz constant $\propto \lvert C \rvert^2/m$.
 
-In each case, mass appears in denominator (via $1/m$); since $m \geq \rho_\mathrm{pers}|C|$ (D-ST-3), the Lipschitz constant is bounded by $|C|^2/(\rho_\mathrm{pers}|C|) = |C|/\rho_\mathrm{pers}$. $\square$
+In each case, mass appears in denominator (via $1/m$); since $m \geq \rho_\mathrm{pers}\lvert C \rvert$ (D-ST-3), the Lipschitz constant is bounded by $\lvert C \rvert^2/(\rho_\mathrm{pers}\lvert C \rvert) = \lvert C \rvert/\rho_\mathrm{pers}$. $\square$
 
 **Status:** Cat C, sketched. Cat B target: 1–2 sessions.
 
@@ -155,7 +155,7 @@ $$\lim_{N \to \infty} \frac{1}{N} \log\!\left(\frac{\gamma_{t \to t+N}(C, C^{\pi
 
 ### §5.1 Statement
 
-Lemma 10 (`06_close_OP0011_step2.md` §2.3) bounds $|\gamma_M - \gamma_{M'}| \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost difference $\delta$. But the SCC self-referential cost $c[u]$ depends on $u$ via the fingerprint $\varphi(u)$; perturbing $u$ by $\delta u$ changes cost by $\delta c \approx L_\varphi \|\delta u\|$.
+Lemma 10 (`06_close_OP0011_step2.md` §2.3) bounds $|\gamma_M - \gamma_{M'}| \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ for cost difference $\delta$. But the SCC self-referential cost $c[u]$ depends on $u$ via the fingerprint $\varphi(u)$; perturbing $u$ by $\delta u$ changes cost by $\delta c \approx L_\varphi \lVert \delta u \rVert$.
 
 Iteratively: at each Sinkhorn fixed-point iteration, the cost is updated, perturbing the next plan. Question: is the sequence of plans Cauchy? Does the Schauder fixed-point exist for any $\varepsilon_\mathrm{OT} > 0$?
 
@@ -284,7 +284,7 @@ Lemma 13's exponent $\mu_\mathrm{joint}\,(d_\mathrm{inter}^*)^2/(2\varepsilon_\m
 
 ### §9.2 Multi-tool angles
 
-**Angle H1 — Formation-conditioned spectral analysis.** For deep-core regions, Wigner projection and subgraph restriction give similar inertia tensors. Equivalence at order $O(1/|C|)$.
+**Angle H1 — Formation-conditioned spectral analysis.** For deep-core regions, Wigner projection and subgraph restriction give similar inertia tensors. Equivalence at order $O(1/\lvert C \rvert)$.
 
 **Angle H2 — Generic vs degenerate Hessian.** Wigner projection is well-defined when Hessian is non-degenerate; σ_rich is always well-defined. σ_standard fails at bifurcation; σ_rich does not.
 

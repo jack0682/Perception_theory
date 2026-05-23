@@ -244,7 +244,7 @@ These are questions that L-M does not answer but that became visible during its 
 
 ### NQ-L1M-5. L-M extension to perturbation analysis
 
-**Question.** L-M states a *static* bound. For two states $\mathbf u_1,\mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\|\mathbf u_1-\mathbf u_2\|$? `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_K\le 4L_\phi n$ (Lipschitz constant of $K_{\mathrm{soft}}^\phi$) via CSEH bottleneck stability. Combined with L-M, can we bound $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|$ by smooth quantities?
+**Question.** L-M states a *static* bound. For two states $\mathbf u_1,\mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1)-K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1-\mathbf u_2 \rVert$? `working/E/soft_K_definition.md` §2.2 Cor 2.2 gives $L_K\le 4L_\phi n$ (Lipschitz constant of $K_{\mathrm{soft}}^\phi$) via CSEH bottleneck stability. Combined with L-M, can we bound $|K_{\mathrm{act}}^\varepsilon(\mathbf u_1)-K_{\mathrm{act}}^\varepsilon(\mathbf u_2)|$ by smooth quantities?
 
 **Severity.** Medium. Useful for future dynamics analysis (NQ-L1M-7 connection).
 

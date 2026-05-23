@@ -705,7 +705,7 @@ $$C_{AB}(\tau) = \omega(A_t B_{t+\tau})$$
 
 T8 의 phase transition 조건:
 
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}$$
 
 새 framework 에서 *재해석 후보*:
 
@@ -715,7 +715,7 @@ $$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
 
 일반 명제는 *대략* 다음 형태:
 
-$$\omega \in \text{object-emergent} \iff \|C_o\|_{\text{coherent}} > \theta_O(\omega, G_o)$$
+$$\omega \in \text{object-emergent} \iff \lVert C_o \rVert_{\text{coherent}} > \theta_O(\omega, G_o)$$
 
 T8 은 *그래프 위 cohesion 의 *경우* 에서 *이 조건의 *구체적 부등식*. 
 

@@ -32,9 +32,9 @@ W5 ended with CV-1.5.2 (T-L1-F canonical) plus a working draft for L-M (Cat-B sk
 **Priority:** P0 (must) — ✅ CLOSED.
 
 **Open follow-ons (not blockers):**
-- NQ-G1-1-ext (W7+): empirical $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison via L1-I script extension to record $\|R_{\mathrm{inact}}\|_\infty$ separately.
+- NQ-G1-1-ext (W7+): empirical $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ comparison via L1-I script extension to record $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately.
 - NQ-G1-2: ✅ **EXECUTED** (W6 D1 EOD thirteenth addendum). Post-processing wrapper `CODE/scripts/op_resolution_nq_g1_2_p9_tight.py` re-classified all 1920 baseline configurations under 5 budget regimes without re-computation. Verdict: R0 = R1 = 439/1920 (faithful (P9-tight) interpretation); H6' is **non-binding** in L1-I FEASIBLE set; (P9-tight) is CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening **without empirical penalty** (R0 ⊆ R1 with |R1\R0| = 0). Cat A conditional status of T-L1-M unchanged.
-- NQ-G1-2-ext (W7+): direct $\|R_j\|_\infty$ measurement under shared-pool gradient-flow dynamics (whether physical perturbations actually satisfy $(P9$-$\mathrm{tight}): \|R_j\|_\infty \le \rho_{\mathrm{pert}}/4$). Required for canonical adoption of (P9-tight) → L1-J'. Estimated ~1-2h.
+- NQ-G1-2-ext (W7+): direct $\lVert R_j \rVert_\infty$ measurement under shared-pool gradient-flow dynamics (whether physical perturbations actually satisfy $(P9$-$\mathrm{tight}): \lVert R_j \rVert_\infty \le \rho_{\mathrm{pert}}/4$). Required for canonical adoption of (P9-tight) → L1-J'. Estimated ~1-2h.
 
 ### G2 — Resolve the T-Bind-Proj / T-Bind-Full categorical disagreement
 

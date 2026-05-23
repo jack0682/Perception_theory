@@ -307,7 +307,7 @@ $A_{kk} = \langle \psi_k, \rho^* \psi_k \rangle$. Since $\rho^*$ moves $\psi_k$ 
 So 1st-order shift ≈ 0. Need 2nd-order.
 
 2nd-order shift:
-$\delta \mu_k^{(2)} = \lambda_{\mathrm{rep}}^2 \sum_{l \neq k} \frac{|A_{kl}|^2}{\mu_k - \mu_l}$.
+$\delta \mu_k^{(2)} = \lambda_{\mathrm{rep}}^2 \sum_{l \neq k} \frac{\lvert A_{kl} \rvert^2}{\mu_k - \mu_l}$.
 
 For $A_{kl} = \langle \psi_k, \rho^* \psi_l \rangle$: these are overlap integrals between $\psi_k$ at disk 1 and $\rho^* \psi_l$ supported at disk 2.
 
@@ -392,7 +392,7 @@ E9 confirms: λ_rep = 0.01 marginal (joint λ near zero), λ_rep = 0.1 strongly 
 
 For each (d, λ_rep) in `e9_k2_baseline.json`, compute O_{ideal-actual} (overlap of antisym with lowest joint eigenvec) and gap_actual (joint λ_min) → estimate c_eff and compare to lifetime $|\lambda_{\mathrm{antisym}}|/\lambda_{\mathrm{rep}}$:
 
-For d=8, λ_rep=0.1: lowest joint λ = -0.0332, lifetime $|0.0332|/0.1 = 0.332 \approx c_{\mathrm{eff}}$. ✓
+For d=8, λ_rep=0.1: lowest joint λ = -0.0332, lifetime $\lvert 0.0332 \rvert/0.1 = 0.332 \approx c_{\mathrm{eff}}$. ✓
 
 For d=12, λ_rep=0.1: lowest λ = -0.0332, $c_{\mathrm{eff}} \approx 0.332$. ✓ Same as d=8 (consistent with well-separated regime).
 

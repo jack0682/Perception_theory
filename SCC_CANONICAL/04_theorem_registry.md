@@ -30,7 +30,7 @@ For the per-claim *historical* status (proof method, who proved it, when, in whi
 | T1 | Existence of formation | Ground-level non-vacuity |
 | T-A2 | Monotonicity of closure | A2 axiom realization |
 | T3 / T6-Stability | Non-idempotent closure strict positivity | $H_{\mathrm{cl}} \succ 0$ at fixed point |
-| T8-Core | Phase transition $\beta/\alpha > 4\lambda_2/\|W''(c)\|$ | Central T8 theorem |
+| T8-Core | Phase transition $\beta/\alpha > 4\lambda_2/\lVert W''(c) \rVert$ | Central T8 theorem |
 | T8-Full | Phase transition full version | Extended to T8-Core hypotheses |
 | T11 | Γ-convergence to perimeter functional | Sharp-interface limit |
 | T14 | Gradient flow convergence | Łojasiewicz-Simon |
@@ -111,7 +111,7 @@ For the per-claim *historical* status (proof method, who proved it, when, in whi
 
 | ID | Name | Role |
 |---|---|---|
-| Theorem 2b (Deep Core Dominance) | $\|\mathrm{Core}^2\|/\|\mathrm{Core}\| \geq 1 - 4 C_{\mathrm{iso}}/\sqrt{m}$ | Isoperimetric on $\mathbb{Z}^d$ |
+| Theorem 2b (Deep Core Dominance) | $\lVert \mathrm{Core}^2 \rVert/\lVert \mathrm{Core} \rVert \geq 1 - 4 C_{\mathrm{iso}}/\sqrt{m}$ | Isoperimetric on $\mathbb{Z}^d$ |
 
 ### §2.12 Persistence (single-step)
 
@@ -124,7 +124,7 @@ For the per-claim *historical* status (proof method, who proved it, when, in whi
 | ID | Name | Role |
 |---|---|---|
 | L-ENDPOINT-NONSEMI | Endpoint² cost generically not composition-compatible | counterexample (1D) |
-| L-ACTION-NORMALIZATION | Uniform-speed action additivity | $\frac{\|z-x\|^2}{r-t}$ identity |
+| L-ACTION-NORMALIZATION | Uniform-speed action additivity | $\frac{\lVert z-x \rVert^2}{r-t}$ identity |
 | L-FINGERPRINT-ACTION-ADMISSIBLE | SCC fingerprint action ≥ 0 and additive | T-ACT-DP/GIBBS premises |
 | T-ACT-DP | Hard-min action cost Bellman DP | $c^{\mathrm{act}}_{i \to k}$ recursion |
 | L-ACTION-DELTA-EFF-ZERO | $\delta_{\mathrm{eff}} = 0$ under action direct cost | scope-restricted |
@@ -136,7 +136,7 @@ For the per-claim *historical* status (proof method, who proved it, when, in whi
 
 | ID | Name | Role |
 |---|---|---|
-| **L-CLOSURE-LIFT** | Operator-norm broadness: $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$; uniform tangent lower bound | **Supersedes T7-Enhanced as the broadness statement** |
+| **L-CLOSURE-LIFT** | Operator-norm broadness: $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$; uniform tangent lower bound | **Supersedes T7-Enhanced as the broadness statement** |
 
 ### §2.15 OMS Appendix (W6 D6, 2026-05-08)
 
@@ -304,7 +304,7 @@ The SCC-CT theoretical structure is supported by a comprehensive computational i
 | Fact | Validation method |
 |---|---|
 | Existence of formation on canonical 15×15 grid | exp01 + grid sweep |
-| Phase transition at $\beta/\alpha > 4\lambda_2/\|W''(c)\|$ | β sweep with exp25, exp51 |
+| Phase transition at $\beta/\alpha > 4\lambda_2/\lVert W''(c) \rVert$ | β sweep with exp25, exp51 |
 | Gradient flow convergence | exp38, exp55, exp57 |
 | Diagnostic vector computability | All 4 components verified |
 | Closure non-idempotent stability | T7-Enhanced supporting numerical |

@@ -129,7 +129,7 @@ Pre-session: "K=2 vacuity without external per-formation mass constraint."
 Session contribution (§MF §3.6 Thm 3.2):
 - Well-separated K-formation minimizer $u^* \in \mathcal{B}_K \subset \Sigma_m$ (single simplex, no product $\Sigma^K_M$).
 - $K(u^*) \in \mathbb{Z}_+$ topological invariant (Formation Quantization).
-- No external mass constraint needed; $\sum_k |A_k^*| = m$ is **internal consequence** of single $\Sigma_m$ constraint.
+- No external mass constraint needed; $\sum_k \lvert A_k^* \rvert = m$ is **internal consequence** of single $\Sigma_m$ constraint.
 
 **New residual**: NQ-46 protocol-selection rules (which basins do various protocols land in?). Not silent-resolved. Explicitly carried.
 

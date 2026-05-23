@@ -96,7 +96,7 @@ $$E = \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{
 
 | 시험 | 비유 | 수식 의미 |
 |---|---|---|
-| **$E_{\mathrm{cl}}$ Closure** | “너는 너 스스로를 지지하니?” — 너 자신의 closure 연산 결과와 너는 얼마나 일치하니? | $\|u - \mathrm{Cl}(u)\|^2$ 류 |
+| **$E_{\mathrm{cl}}$ Closure** | “너는 너 스스로를 지지하니?” — 너 자신의 closure 연산 결과와 너는 얼마나 일치하니? | $\lVert u - \mathrm{Cl}(u) \rVert^2$ 류 |
 | **$E_{\mathrm{sep}}$ Separation** | “너는 배경과 충분히 다르니?” | $u$-weighted distinction의 부족분 |
 | **$E_{\mathrm{bd}}$ Boundary** | “너의 모양이 너무 거칠지 않고, 핵-경계-외부의 매끄러운 전이가 있니?” | $\alpha\,u^\top L u + \beta\,W(u)$ (Allen–Cahn형) |
 | **$E_{\mathrm{tr}}$ Transport** | “시간이 지나도 너의 핵이 이어지니?” | 시간 transport 비용 |
@@ -140,7 +140,7 @@ $$E = \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{
 
 ### 2.4 T8 / 위상전이 — **이론의 심장**
 
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{|W''(c)|}$$
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2}{\lvert W''(c) \rvert}$$
 
 비유로 한 줄 — **시야의 해상도가 충분히 높을 때만 두 사물이 둘로 보인다**. 멀어서 $\lambda_2$(스펙트럼 간격, 즉 해상도)가 작아지면 두 사과가 하나로 융합되어 보인다. 이것은 오류가 아니라 **그 해상도에서의 유효한 인식**.
 
@@ -188,7 +188,7 @@ Sep을 $u$-weighted로 고친 후 C_t는 어느 술어·에너지에도 들어�
 | **정적 single-formation SCC core** | 안개가 하나의 덩어리로 굳어지는 메커니즘 전반 | T1(존재), T-A2(monotone), T14(수렴), T11(Γ-수렴), T20(공리 정합성) | canonical §13 Cat A |
 | **Volume-constrained variational backbone** | $\Sigma_m$ 위의 에너지 최소화 골격 | $E$ analytic on $\Sigma_m$, $\Pi_{\Sigma_m}$ projection | §7–§9 |
 | **Non-idempotent closure 안정성** | closure를 idempotent로 두지 않은 덕분에 안정성이 더 강해짐 | $2(I-J_{\mathrm{Cl}})^\top(I-J_{\mathrm{Cl}}) \succ 0$ | T3/T6-Stability |
-| **T8-Core / T8-Full 위상전이** | 해상도가 충분할 때만 경계가 출현 | $\beta/\alpha > 4\lambda_2/|W''(c)|$ | T8-Core/Full Cat A |
+| **T8-Core / T8-Full 위상전이** | 해상도가 충분할 때만 경계가 출현 | $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ | T8-Core/Full Cat A |
 | **Gradient flow convergence** | 경사하강이 임계점에 안전하게 도달 | Łojasiewicz–Simon | T14 |
 | **Diagnostic vector 계산 가능성** | (Bind, Sep, Inside, Persist)을 실제로 계산할 수 있음 | Predicate-Energy Bridge Cat A | T-Bind-Proj/Full |
 | **Deep Core Dominance 2b** | 핵 안의 핵이 이만큼 크다는 isoperimetric 부등식 | $|{\rm Core}^2|/|{\rm Core}| \ge 1 - 4C/\sqrt m$ | canonical §13 |

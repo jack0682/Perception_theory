@@ -693,7 +693,7 @@ After self-critique acknowledged 8 weakness areas (numerical deferral too quick;
 ### Option δ (KKT corner-touching quantification)
 
 - `THEORY/logs/daily/2026-04-28/07_corner_touching_quantification.md` (NEW, ~330 lines):
-  - §2: **Closed-form corner condition** via KKT analysis. Site $x_0$ saturates upper iff $4\alpha (Lu)(x_0) \leq \mu$. Interior band: $|μ - 4α(Lu)(x_0)| \leq \beta/(6\sqrt 3)$.
+  - §2: **Closed-form corner condition** via KKT analysis. Site $x_0$ saturates upper iff $4\alpha (Lu)(x_0) \leq \mu$. Interior band: $\lvert μ - 4α(Lu)(x_0) \rvert \leq \beta/(6\sqrt 3)$.
   - §2.7: **Theorem (Cat B target)**: Corner regime iff $\beta > 1/a^2$ AND $c \notin [c_s, 1-c_s]$.
   - §3: **NQ-173 numerical confirmation**: 15/15 attempts at NQ-173 setup are corner-saturated (bmf ≈ 0.17). Cat A empirical for the closed-form regime classification.
   - §5: **R1/R2/R3/R4 regime classification table**.

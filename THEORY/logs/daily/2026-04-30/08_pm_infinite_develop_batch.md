@@ -65,7 +65,7 @@ The architect's analysis of the $D_4$ equivariant polynomial ring shows there is
 
 ### §3.2 Tool A4 — SCC has no simplex constraint
 
-The critic's review found that the PHR (Penalized Hilbert Rescaling) comparison framework in `working/MF/mathematical_scaffolding_4tools.md` §5 was based on the assumption that SCC enforces $\sum_j u^j \leq 1$ per site. **This is incorrect.** SCC enforces only per-field mass conservation $\|u^j\|_1 = m_j$. The "fabricated quantitative comparison" was preempted by the critic's REJECT verdict.
+The critic's review found that the PHR (Penalized Hilbert Rescaling) comparison framework in `working/MF/mathematical_scaffolding_4tools.md` §5 was based on the assumption that SCC enforces $\sum_j u^j \leq 1$ per site. **This is incorrect.** SCC enforces only per-field mass conservation $\lVert u^j \rVert_1 = m_j$. The "fabricated quantitative comparison" was preempted by the critic's REJECT verdict.
 
 **Implication:** Tool A4 PARTIAL FAIL status (recorded in OAT-supplementary) remains correct. Future re-prosecution requires a fundamentally different comparison framework (per-field mass conservation comparison vs. simplex projection-based comparison).
 
@@ -77,7 +77,7 @@ The analyst's review surfaced that the original audit task spec used **declarati
 
 ### §3.4 NQ-217 — 3 blockers before continuum-limit Γ-convergence is well-posed
 
-(a) Target continuum space ambiguity: BV vs $H^1$ choice changes the result of E_cl + E_bd Γ-convergence. (b) Per-field-mass $\to$ continuum-mass scaling unspecified — graph mesh refinement requires choosing whether $m$ scales with $|X|$. (c) Interaction with $\theta = 1/2$ canonical interface (CN17 / Commitment 11) needs treatment.
+(a) Target continuum space ambiguity: BV vs $H^1$ choice changes the result of E_cl + E_bd Γ-convergence. (b) Per-field-mass $\to$ continuum-mass scaling unspecified — graph mesh refinement requires choosing whether $m$ scales with $\lvert X \rvert$. (c) Interaction with $\theta = 1/2$ canonical interface (CN17 / Commitment 11) needs treatment.
 
 **Implication:** Re-spawn after canonical commits or working-file decisions on (a)–(c).
 

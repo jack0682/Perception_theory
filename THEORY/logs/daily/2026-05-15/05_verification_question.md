@@ -105,7 +105,7 @@ V-AFD 의 중심 정리 V-AFD-T9 (Information Loss Theorem): "자기 자신의 p
 
 ### §4.1 자체 sketch 증명
 
-**Step 1**: $\Sigma_m = \{u \in [0,1]^X : \sum_x u(x) = m\}$ 은 $\mathbb{R}^{|X|}$ 의 *closed bounded affine subset* — finite-dim 에서 *compact*.
+**Step 1**: $\Sigma_m = \{u \in [0,1]^X : \sum_x u(x) = m\}$ 은 $\mathbb{R}^{\lvert X \rvert}$ 의 *closed bounded affine subset* — finite-dim 에서 *compact*.
 
 **Step 2**: $K_z(x,y) = \exp(-d_X^2/2\rho^2) \exp(-d_\mathcal{F}^2/2\sigma^2)$ 는 $z$ 에 대해 측정 가능, $x,y$ 에 대해 *bounded continuous* (실제로는 $C^\infty$).
 
@@ -141,13 +141,13 @@ R-2 D-R2-1: $u^* \in \Sigma_m$ 의 존재를 *전제*. R-2 는 NP-A 와 동일�
 
 **명제 정식 (Stage 3 §6.2)**:
 
-$$\mathrm{Var}_X(z) \geq \Theta(\rho, \sigma, \beta/\alpha, |X|) \quad \Longrightarrow \quad u^*(z) \text{ is non-uniform}$$
+$$\mathrm{Var}_X(z) \geq \Theta(\rho, \sigma, \beta/\alpha, \lvert X \rvert) \quad \Longrightarrow \quad u^*(z) \text{ is non-uniform}$$
 
 ### §5.1 T8 와의 *strict* 비교
 
 **canonical T8-Core (Cat A)** (DECLARATION + canonical.md §13):
 
-$$\frac{\beta}{\alpha} > \frac{4\lambda_2(L)}{|W''(c)|} \quad \Longrightarrow \quad \exists u^* \in \Sigma_m \text{ with } u^* \text{ non-uniform critical}$$
+$$\frac{\beta}{\alpha} > \frac{4\lambda_2(L)}{\lvert W''(c) \rvert} \quad \Longrightarrow \quad \exists u^* \in \Sigma_m \text{ with } u^* \text{ non-uniform critical}$$
 
 여기서 $\lambda_2(L)$ 은 graph Laplacian $L = D - W$ 의 algebraic connectivity (Fiedler value), $W$ 는 *N_t 에서 유도된 weight matrix*.
 
@@ -235,13 +235,13 @@ R-2 에는 *§8-5 와 직접 비교* 할 명제 부재 — R-2 는 readout side 
 
 ### §7.1 즉시 증명
 
-**Spectral clustering** objective: $\min_{u \in \{0,1\}^X, |u|=k} u^T L u$ — Boolean indicator + Ncut.
+**Spectral clustering** objective: $\min_{u \in \{0,1\}^X, \lvert u \rvert=k} u^T L u$ — Boolean indicator + Ncut.
 
 SCC energy: $\min_{u \in [0,1]^X, \sum u = m} \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{sep}} + \lambda_{\mathrm{bd}} E_{\mathrm{bd}}$.
 
 **구별점**:
 - $u$ 의 codomain: $\{0,1\}$ vs $[0,1]$ — *graded vs Boolean*.
-- Constraint: $|u| = k$ (cardinality) vs $\sum u = m$ (mass).
+- Constraint: $\lvert u \rvert = k$ (cardinality) vs $\sum u = m$ (mass).
 - Energy 항: 1 항 (Ncut) vs 4 항 (closure + sep + bd + tr).
 - $E_{\mathrm{cl}}$ 항은 *contraction operator $\mathrm{Cl}$ 와 fixed-point 의 거리* — spectral clustering 에 *대응 항 없음*.
 - $E_{\mathrm{bd}}$ 항은 *double-well $W(u)$* 를 포함 — spectral clustering 에 *대응 항 없음*.

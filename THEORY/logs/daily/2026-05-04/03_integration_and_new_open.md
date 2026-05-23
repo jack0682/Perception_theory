@@ -90,11 +90,11 @@ T-L1-F's "439/1920 = 22.9% feasible on $T^2_{20}$" empirical anchor establishes 
 The post-R2 $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ uses $\rho_{\mathrm{bg}}$ (from P5) instead of $\rho_{\mathrm{res}}$ (from P10).
 
 > ***(Erratum, W6 D1 late re-review per `op_resolution.md` §9.7 + §13.6)***: An earlier draft of this paragraph claimed "$\rho_{\mathrm{bg}} \ge \rho_{\mathrm{res}}$ in general, so $\tau_*^{\mathrm{post-R2}} \ge \tau_*$ — the post-R2 admissible $\tau$ range is at least as wide as the pre-repair range." **This is incorrect.** The relationship is **configuration-dependent**:
-> - $\rho_{\mathrm{bg}}^{\mathrm{actual}} = \ell_{\min} - \|U\|_{\infty, X_{\mathrm{bg}}}$ (P5 form, restricted to $X_{\mathrm{bg}}$).
-> - $\rho_{\mathrm{res}}^{\mathrm{actual}} = \ell_{\min} - \|R_{\mathrm{inact}}\|_\infty$ (P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$).
-> - Since $\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\|R_{\mathrm{inact}}\|_\infty \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other.
+> - $\rho_{\mathrm{bg}}^{\mathrm{actual}} = \ell_{\min} - \lVert U \rVert_{\infty, X_{\mathrm{bg}}}$ (P5 form, restricted to $X_{\mathrm{bg}}$).
+> - $\rho_{\mathrm{res}}^{\mathrm{actual}} = \ell_{\min} - \lVert R_{\mathrm{inact}} \rVert_\infty$ (P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$).
+> - Since $\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other.
 >
-> **Corrected reading:** the comparison $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (NQ-G1-1, deferred to NQ-G1-1-ext W7+ for empirical anchor via L1-I extension recording $\|R_{\mathrm{inact}}\|_\infty$ separately). The post-R2 derivation gains theoretical clarity (P5 direct on $U$, no implicit T-L1-F LG-7 dependency) at potentially the cost of a slightly tighter or wider $\tau$ range depending on configuration. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: the lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint. Net trade-off accepted for canonical promotion (post-R2 derivation more honest about regime structure).
+> **Corrected reading:** the comparison $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (NQ-G1-1, deferred to NQ-G1-1-ext W7+ for empirical anchor via L1-I extension recording $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately). The post-R2 derivation gains theoretical clarity (P5 direct on $U$, no implicit T-L1-F LG-7 dependency) at potentially the cost of a slightly tighter or wider $\tau$ range depending on configuration. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: the lemma states "edge band empty for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$" which holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint. Net trade-off accepted for canonical promotion (post-R2 derivation more honest about regime structure).
 
 ### §3.3 Existing canonical theorems: relation to T-L1-M
 
@@ -196,7 +196,7 @@ These are questions that G1 closure does *not* answer but became visible during 
 
 ### NQ-G1-2. (P9-tight) regime experiment — would tighter perturbation budget recover factor 1?
 
-**Question.** R-1 closure (§2 above) noted that "(P9-tight): $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/4$" would tighten the Type-N bar bound to use $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$. Empirically: how often is the tighter bound (P9-tight) satisfied in the L1-I FEASIBLE configurations? If frequently, an L1-J' regime with (P9-tight) replacing P9 would give a tighter T-L1-M with wider $\tau_*$.
+**Question.** R-1 closure (§2 above) noted that "(P9-tight): $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/4$" would tighten the Type-N bar bound to use $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$. Empirically: how often is the tighter bound (P9-tight) satisfied in the L1-I FEASIBLE configurations? If frequently, an L1-J' regime with (P9-tight) replacing P9 would give a tighter T-L1-M with wider $\tau_*$.
 
 **Severity.** Low-Medium. Future regime tightening direction.
 
@@ -230,7 +230,7 @@ These are questions that G1 closure does *not* answer but became visible during 
 
 ### NQ-G1-6. T-L1-M extension to perturbation analysis (NQ-L1M-5 carry-over)
 
-**Question.** T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\|\mathbf u_1 - \mathbf u_2\|$? This extends T-L1-M to perturbation analysis. (Was NQ-L1M-5 in W5 D7; preserved.)
+**Question.** T-L1-M states a *static* bound. For two states $\mathbf u_1, \mathbf u_2$ in the same regime, is there a quantitative bound on $|K_{\mathrm{soft}}^\phi(U_1) - K_{\mathrm{soft}}^\phi(U_2)|$ in terms of $\lVert \mathbf u_1 - \mathbf u_2 \rVert$? This extends T-L1-M to perturbation analysis. (Was NQ-L1M-5 in W5 D7; preserved.)
 
 **Severity.** Medium. Useful for future dynamics analysis.
 

@@ -35,7 +35,7 @@
 
 Phase 1 §4 (분석) + Phase 2 (numerical at L=12). Detailed sketch:
 
-**Step 1.** $u^*_\text{disk}$ critical of pure $\mathcal{E}_\text{bd}$ ⇔ $g_\text{bd} := \pi_{\mathbf{1}^\perp} \nabla \mathcal{E}_\text{bd}(u^*_\text{disk}) = 0$. (Standard variational + Phase 2 verified $\|g_\text{bd}\| < 10^{-3}$ at converged optimizer.)
+**Step 1.** $u^*_\text{disk}$ critical of pure $\mathcal{E}_\text{bd}$ ⇔ $g_\text{bd} := \pi_{\mathbf{1}^\perp} \nabla \mathcal{E}_\text{bd}(u^*_\text{disk}) = 0$. (Standard variational + Phase 2 verified $\lVert g_\text{bd} \rVert < 10^{-3}$ at converged optimizer.)
 
 **Step 2.** $u^*_\text{disk}$ critical of full $\mathcal{E}$ ⇔ $\pi_{\mathbf{1}^\perp} \nabla \mathcal{E}(u^*_\text{disk}) = 0$ ⇔ $g_\text{bd} + \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} = 0$ ⇔ (using Step 1) $\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} = 0$.
 
@@ -138,12 +138,12 @@ C2 cluster 의 **약 60%가 Phase 2 만으로 정복**.
 
 ### 4.1 Lemma — disk non-criticality 의 monotonicity in $\lambda$
 
-> **Lemma 4 (monotonicity).** Under Theorem 2 setup, $\|\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep}\|^2$ is a quadratic form in $(\lambda_\text{cl}, \lambda_\text{sep})$ with PSD matrix
-> $$M = \begin{pmatrix} \|g_\text{cl}\|^2 & \langle g_\text{cl}, g_\text{sep}\rangle \\ \langle g_\text{cl}, g_\text{sep}\rangle & \|g_\text{sep}\|^2 \end{pmatrix}.$$
+> **Lemma 4 (monotonicity).** Under Theorem 2 setup, $\lVert \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \rVert^2$ is a quadratic form in $(\lambda_\text{cl}, \lambda_\text{sep})$ with PSD matrix
+> $$M = \begin{pmatrix} \lVert g_\text{cl} \rVert^2 & \langle g_\text{cl}, g_\text{sep}\rangle \\ \langle g_\text{cl}, g_\text{sep}\rangle & \lVert g_\text{sep} \rVert^2 \end{pmatrix}.$$
 > $M$ is positive definite ⇔ $g_\text{cl}, g_\text{sep}$ linearly independent.
 
 ### Proof
-Direct expansion of $\|\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep}\|^2$. Det($M$) $= \|g_\text{cl}\|^2 \|g_\text{sep}\|^2 - \langle g_\text{cl}, g_\text{sep}\rangle^2 = \|g_\text{cl}\|^2 \|g_\text{sep}\|^2 (1 - \cos^2\theta) = \|g_\text{cl}\|^2 \|g_\text{sep}\|^2 \sin^2\theta$.
+Direct expansion of $\lVert \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \rVert^2$. Det($M$) $= \lVert g_\text{cl} \rVert^2 \lVert g_\text{sep} \rVert^2 - \langle g_\text{cl}, g_\text{sep}\rangle^2 = \lVert g_\text{cl} \rVert^2 \lVert g_\text{sep} \rVert^2 (1 - \cos^2\theta) = \lVert g_\text{cl} \rVert^2 \lVert g_\text{sep} \rVert^2 \sin^2\theta$.
 
 PSD iff $\sin^2\theta > 0$ iff $g_\text{cl} \not\parallel g_\text{sep}$ (irrespective of sign). $\Box$
 
@@ -153,11 +153,11 @@ PSD iff $\sin^2\theta > 0$ iff $g_\text{cl} \not\parallel g_\text{sep}$ (irrespe
 
 ### 4.2 Corollary — minimal non-criticality residual
 
-For unit-norm $(\lambda_\text{cl}, \lambda_\text{sep})$, the minimum of $\|\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep}\|^2$ over the unit sphere is the smallest eigenvalue $\mu_\text{min}(M)$ of $M$ (Lemma 4).
+For unit-norm $(\lambda_\text{cl}, \lambda_\text{sep})$, the minimum of $\lVert \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \rVert^2$ over the unit sphere is the smallest eigenvalue $\mu_\text{min}(M)$ of $M$ (Lemma 4).
 
-For Phase 2 data (L=12): $M$ has trace = $\|g_\text{cl}\|^2 + \|g_\text{sep}\|^2 \approx 4.45 + 49.4 = 53.85$, and Det = 92.5. Eigenvalues: $\mu = (53.85 \pm \sqrt{53.85^2 - 4 \cdot 92.5})/2 = (53.85 \pm \sqrt{2530})/2 \approx (53.85 \pm 50.30)/2$, so $\mu_\text{min} \approx 1.78$, $\mu_\text{max} \approx 52.07$.
+For Phase 2 data (L=12): $M$ has trace = $\lVert g_\text{cl} \rVert^2 + \lVert g_\text{sep} \rVert^2 \approx 4.45 + 49.4 = 53.85$, and Det = 92.5. Eigenvalues: $\mu = (53.85 \pm \sqrt{53.85^2 - 4 \cdot 92.5})/2 = (53.85 \pm \sqrt{2530})/2 \approx (53.85 \pm 50.30)/2$, so $\mu_\text{min} \approx 1.78$, $\mu_\text{max} \approx 52.07$.
 
-→ **Even at the worst direction** (closest to anti-parallel), $\|\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep}\|^2 \geq 1.78$ (for unit-norm $\lambda$). Disk-non-criticality has **substantial floor**, not just ε > 0.
+→ **Even at the worst direction** (closest to anti-parallel), $\lVert \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \rVert^2 \geq 1.78$ (for unit-norm $\lambda$). Disk-non-criticality has **substantial floor**, not just ε > 0.
 
 This sharpens Theorem 2 (i): disk is non-critical with **quantitative gap** $\mu_\text{min}(M) > 0$.
 
@@ -173,7 +173,7 @@ Computation: for canonical $a_\text{cl} = 3.5$, $\tau_\text{cl} = 0.5$, $\eta_\t
 
 Theorem 2 (iii)(a) said "$c^* \neq c$ → $g_\text{cl} \neq 0$". When $c^* = c$, this naive argument fails — but $g_\text{cl}$ can still be nonzero because $u^*_\text{disk}$ has interior $\to 1$ and exterior $\to 0$, **both not equal to $c^* = 1/2$**. So $u^*_\text{disk} - \text{Cl}(u^*_\text{disk}) \neq 0$ in the bulk.
 
-Phase 2 confirms: $c = c^* = 0.5$ regime, $\|g_\text{cl}\| = 2.11$ (nonzero). Theorem 2 still applies, with $g_\text{cl}$ generated by **disk-binary structure mismatching the FP value** rather than $c \neq c^*$.
+Phase 2 confirms: $c = c^* = 0.5$ regime, $\lVert g_\text{cl} \rVert = 2.11$ (nonzero). Theorem 2 still applies, with $g_\text{cl}$ generated by **disk-binary structure mismatching the FP value** rather than $c \neq c^*$.
 
 **Sharpened (iii)(a)**: $g_\text{cl} \neq 0$ iff $u^*_\text{disk}$ is **not constant** equal to $c^*$. This is automatic since $u^*_\text{disk}$ is the disk minimizer (binary interior/exterior).
 

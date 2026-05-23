@@ -40,7 +40,7 @@ For each (grid, β) configuration:
 4. Compute the **component-wise** projected Hessians $\Pi_T H_{\mathrm{bd}} \Pi_T$, $\Pi_T H_{\mathrm{cl}} \Pi_T$, $\Pi_T H_{\mathrm{sep}} \Pi_T$ separately.
 5. Eigendecompose via `np.linalg.eigh` — full spectrum.
 6. The smallest eigenvalue is $\approx 0$ (volume Goldstone projected out); the **second-smallest** is the actual minimum eigenvalue on the tangent space mod volume.
-7. Measure closure residual $r = \mathrm{Cl}(u^*) - u^*$, both $\|r\|_\infty$ and $\|r\|_2$.
+7. Measure closure residual $r = \mathrm{Cl}(u^*) - u^*$, both $\lVert r \rVert_\infty$ and $\lVert r \rVert_2$.
 
 ### §1.4 PASS criteria
 
@@ -53,7 +53,7 @@ For each (grid, β) configuration:
 
 Full results in `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.json` + `.md`. Summary table:
 
-| n_grid | $\beta$ | u_range | $\|r\|_2$ | $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T)$ | $\mu_{\min}(\Pi_T H_{\mathrm{cl}} \Pi_T)$ | pred (Theorem B2) | broadness | lift |
+| n_grid | $\beta$ | u_range | $\lVert r \rVert_2$ | $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T)$ | $\mu_{\min}(\Pi_T H_{\mathrm{cl}} \Pi_T)$ | pred (Theorem B2) | broadness | lift |
 |---|---:|---|---:|---:|---:|---:|---|---|
 | 5 | 10 | [0.000, 1.000] | 0.7272 | +2.10×10⁻¹ | +4.63×10⁻¹ | 7.44×10⁻³ | PASS | PASS |
 | 5 | 20 | [0.000, 1.000] | 0.7633 | +4.76×10⁻¹ | +5.22×10⁻¹ | 7.44×10⁻³ | PASS | PASS |
@@ -97,11 +97,11 @@ Yet $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T) > 0$ in all 15 runs. This is **stro
 
 ### §3.3 Residual norm is large but does not dominate
 
-$\|r\|_2 \in [0.73, 2.33]$ across runs — far larger than the conservative analytical bound $\delta < 2 \times 10^{-4}$ derived in `42_broadness_approach_b_trace.md §6` (Theorem B3 (CL-RES)).
+$\lVert r \rVert_2 \in [0.73, 2.33]$ across runs — far larger than the conservative analytical bound $\delta < 2 \times 10^{-4}$ derived in `42_broadness_approach_b_trace.md §6` (Theorem B3 (CL-RES)).
 
 **Reason for analytical pessimism.** The residual-correction term $2\sum_k r_k \nabla^2 \mathrm{Cl}_k$ was bounded using worst-case $|\sigma''|_{\max} \leq 0.0962$. But at *saturated* nodes, $\sigma$ is in its flat region: $\sigma'' \approx 0$. Only non-saturated nodes (the boundary band) contribute to $\sigma''$, and that band is a small fraction of $X$ (per T-OP6-B, $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta}$).
 
-**Sharper bound (post-numerical insight).** Effective residual contribution: $\|r_{\mathrm{band}}\|_2 \cdot \rho_{\mathrm{bd-band}} \cdot a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \|M\|^2$, where $r_{\mathrm{band}}$ is the residual restricted to the boundary band. This is *much smaller* than the worst-case bound, explaining the numerical results.
+**Sharper bound (post-numerical insight).** Effective residual contribution: $\lVert r_{\mathrm{band}} \rVert_2 \cdot \rho_{\mathrm{bd-band}} \cdot a_{\mathrm{cl}}^2 \cdot |\sigma''|_{\max} \cdot \lVert M \rVert^2$, where $r_{\mathrm{band}}$ is the residual restricted to the boundary band. This is *much smaller* than the worst-case bound, explaining the numerical results.
 
 ### §3.4 Scaling with $\beta$
 

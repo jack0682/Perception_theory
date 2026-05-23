@@ -45,7 +45,7 @@
 Prop 1.3a Hessian eigenvalues $\mu_k = 4\alpha\lambda_k + \beta W''(c)$, $k = 1, 2, \ldots, n$. $\mu_1 = 0$ (constant mode), unstable $\mu_k < 0$ for $k \in \mathcal{S}_u = \{k \geq 2 : \mu_k < 0\}$.
 
 Linearized gradient flow on tangent $T_{u_{\mathrm{unif}}}\Sigma_m$:
-$$\dot v_k = -\mu_k v_k + O(\|v\|^2), \quad v_k = \langle u - u_{\mathrm{unif}}, \phi_k\rangle.$$
+$$\dot v_k = -\mu_k v_k + O(\lVert v \rVert^2), \quad v_k = \langle u - u_{\mathrm{unif}}, \phi_k\rangle.$$
 
 Unstable modes grow exponentially: $v_k(t) = \sigma_0 e^{|\mu_k| t}$ until nonlinear saturation.
 
@@ -212,7 +212,7 @@ As $\sigma_0 \to 0$, this concentrates on the Fiedler direction (§P1). For smal
 $\mathbb{P}(\text{land in }\mathcal{B}_K) = \text{Gaussian measure of "IC's flowing to }\mathcal{B}_K\text{"}$.
 
 For small $\sigma_0$:
-$$\mathbb{P}(\mathcal{B}_K) \approx \frac{\int_{A_K} e^{-\|\xi\|^2/(2\sigma_0^2)} d\xi}{\int_{\Sigma_m} e^{-\|\xi\|^2/(2\sigma_0^2)} d\xi}$$
+$$\mathbb{P}(\mathcal{B}_K) \approx \frac{\int_{A_K} e^{-\lVert \xi \rVert^2/(2\sigma_0^2)} d\xi}{\int_{\Sigma_m} e^{-\lVert \xi \rVert^2/(2\sigma_0^2)} d\xi}$$
 
 where $A_K = $ {ξ : gradient flow from $u_{\mathrm{unif}} + \sigma_0 \xi$ lands in $\mathcal{B}_K$}.
 
@@ -272,13 +272,13 @@ Cat A for the asymptotic statement (standard LDP). Cat B for finite-$\sigma_0$ r
 
 ### P4.1 Problem restatement
 
-Definition (informal, §05 §A.3.8): $X$ is **K1-preserving** iff for every set $S \subset X$ with $|S| \approx m$ consisting of disjoint "disks," $X \setminus S$ is connected.
+Definition (informal, §05 §A.3.8): $X$ is **K1-preserving** iff for every set $S \subset X$ with $\lvert S \rvert \approx m$ consisting of disjoint "disks," $X \setminus S$ is connected.
 
 Formalize this property.
 
 ### P4.2 Formal definition
 
-**Definition P4.1**: Graph $G = (X, E)$ is **$(c, K)$-complement-connected** iff for every set $S \subset X$ with $|S| = \lfloor cn \rfloor$ such that $G[S]$ (induced subgraph) has at most $K$ connected components, $G[X \setminus S]$ is connected.
+**Definition P4.1**: Graph $G = (X, E)$ is **$(c, K)$-complement-connected** iff for every set $S \subset X$ with $\lvert S \rvert = \lfloor cn \rfloor$ such that $G[S]$ (induced subgraph) has at most $K$ connected components, $G[X \setminus S]$ is connected.
 
 $X$ is **K1-preserving at mass fraction $c$** iff for all $K \geq 1$, $G$ is $(c, K)$-complement-connected.
 
@@ -302,7 +302,7 @@ For disks $S$ of total size $cn$ with $c < 1$, removing them keeps complement co
 
 ### P4.5 Characterization via 2-cell embedding
 
-**Proposition P4.3 (conjectural, NQ-84)**: $X$ is K1-preserving at mass fraction $c$ iff $X$ admits a **2-cell embedding in a surface of genus $g$** such that for any disjoint disks $D_1, \ldots, D_K \subset X$ with $\sum |D_i| = cn$, the complement $X \setminus \bigcup D_i$ is connected.
+**Proposition P4.3 (conjectural, NQ-84)**: $X$ is K1-preserving at mass fraction $c$ iff $X$ admits a **2-cell embedding in a surface of genus $g$** such that for any disjoint disks $D_1, \ldots, D_K \subset X$ with $\sum \lvert D_i \rvert = cn$, the complement $X \setminus \bigcup D_i$ is connected.
 
 For planar graphs ($g = 0$): complement is connected iff disks don't form a Jordan curve cutting $X$.
 For higher genus: complement can remain connected even with separating disks (homological cancellation).

@@ -32,7 +32,7 @@ Wait — that means Fisher info diverges at the boundary $u \in \{0, 1\}$. Issue
 **Correct interpretation:** Fisher info per vertex is finite and bounded. The relevant scaling: at *boundary* (intermediate $u$), $\sigma(1-\sigma) = 1/4$ at $\sigma = 1/2$ (maximum). At *deep core* ($u \to 1$, $\sigma \to 1$): $(\sigma(1-\sigma))^{-1} \to \infty$ but $(\Phi')^2 \to 0$ (sigmoid saturates). Cancellation gives finite $\mathcal{I}_{vv}$.
 
 For canonical $\sigma(\Phi) = 1/(1 + e^{-\Phi})$: $\sigma' = \sigma(1-\sigma)$. So:
-$$\mathcal{I}_{vv} = \Phi'(u(v))^2 \cdot \sigma(1-\sigma)\Big|_{\sigma=\sigma(\Phi(u(v)))}.$$
+$$\mathcal{I}_{vv} = \Phi'(u(v))^2 \cdot \sigma(1-\sigma)\Big\vert_{\sigma=\sigma(\Phi(u(v)))}.$$
 This is *maximized* at $\sigma = 1/2$ (boundary $\Phi(u) = 0$, i.e., $u$ at threshold) and *minimized* at $\sigma \to 0, 1$ (deep core or far exterior).
 
 **Conclusion: Fisher info is concentrated at the *formation boundary*, not at deep core. **
@@ -52,7 +52,7 @@ Canonical T-Persist-1(b) (line 1794, Proposition BMD) identifies the *boundary m
 **Lemma 24 (NOP-J closure, Cat B).** *Under canonical $\Phi_\mathrm{obs}$ + LM1–LM3 (T-K-Select-OBS §2.4) + (A1)–(A3), at the formation $u^*$:*
 
 *The Fisher information matrix $\mathcal{I}(u^*)$ is conformal to the boundary-restricted SCC Hessian:*
-$$\boxed{\;\mathcal{I}(u^*)\big|_{\partial\mathrm{Core}} \;=\; \kappa_F(u^*)\,\cdot\,H[u^*]\big|_{\partial\mathrm{Core}}\;,}$$
+$$\boxed{\;\mathcal{I}(u^*)\big\vert_{\partial\mathrm{Core}} \;=\; \kappa_F(u^*)\,\cdot\,H[u^*]\big\vert_{\partial\mathrm{Core}}\;,}$$
 *where $\kappa_F(u^*) = (\Phi'(u^*))^2 / (\sigma(1-\sigma)) \cdot 1/(\beta + \alpha)$ is the conformal factor (depending on threshold + Hessian parameters), and the equality holds up to $O(|\partial\mathrm{Core}|^{-1})$ correction.*
 
 *Furthermore:*
@@ -95,7 +95,7 @@ By Lemma 14 (`09_OP0021_T_star_brainstorm.md` §4): $T_*^{(\mathrm{Fisher})} = \
 By conformality: $\mathcal{I}^{-1} = \kappa_F^{-1}\,(H|_{\partial\mathrm{Core}})^{-1}$. Trace:
 $$T_*^{(\mathrm{Fisher})} = \kappa_F^{-1}\,\mathrm{tr}\,(H|_{\partial\mathrm{Core}})^{-1} = \kappa_F^{-1}\,\sum_{k \in \partial\mathrm{Core}} \mu_k^{-1}.$$
 
-By RG identification (Lemma 14): $\sum_k \mu_k^{-1}\big|_{\mathrm{slow}} = T_*^{(\mathrm{RG})}$. Combining:
+By RG identification (Lemma 14): $\sum_k \mu_k^{-1}\big\vert_{\mathrm{slow}} = T_*^{(\mathrm{RG})}$. Combining:
 $$T_*^{(\mathrm{Fisher})} = \kappa_F^{-1}\,T_*^{(\mathrm{RG})}.$$
 
 So Fisher and RG temperatures are proportional, with proportionality factor $\kappa_F^{-1}$.

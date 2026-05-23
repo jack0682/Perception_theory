@@ -18,9 +18,9 @@
 | **T7-Enhanced** (canonical Cat A, §13 line 1138) | Primary input for L-CLOSURE-LIFT closure-correction lift inequality $\Pi_T H_{\mathrm{cl}} \Pi_T \succeq 2\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2 \Pi_T$ | H-MORSE-Local ← T7-Enhanced |
 | **V5b-T-zero** (canonical Cat A) | Exclusion clause anchor (C4); explicit zero Goldstone family identified | H-MORSE-Local ⊃ exclusion (V5b-T-zero out of scope) |
 | **T-PreObj-1G** (canonical Cat A, graph-class independent) | Non-vacuity of D-HMORSE-LOCAL: symmetry-broken interior minimizers exist on generic graphs | H-MORSE-Local ← T-PreObj-1G |
-| **T-OP6-B** (canonical Cat A conditional, §5.3b) | $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot \|\partial \Omega\|/n$ bound used in L-CLOSURE-LIFT spinodal attenuation | H-MORSE-Local ← T-OP6-B |
+| **T-OP6-B** (canonical Cat A conditional, §5.3b) | $\rho_{\mathrm{bd-band}} \leq 2\sqrt{\alpha/\beta} \cdot \lVert \partial \Omega \rVert/n$ bound used in L-CLOSURE-LIFT spinodal attenuation | H-MORSE-Local ← T-OP6-B |
 | **T-PF-A1-AR** (canonical Cat A) | Tangent-space affine reduction; volume Goldstone mod-out | H-MORSE-Local ← T-PF-A1-AR |
-| **T8-Core** (canonical Cat A) | Phase-separated regime $\beta/\alpha > 4\lambda_2/\|W''(c)\|$ as Conditions (C2)+supercritical | H-MORSE-Local ← T8-Core |
+| **T8-Core** (canonical Cat A) | Phase-separated regime $\beta/\alpha > 4\lambda_2/\lVert W''(c) \rVert$ as Conditions (C2)+supercritical | H-MORSE-Local ← T8-Core |
 | **D-ST-3** (CV-1.6 Cat B; D-HMORSE-LOCAL (C3) uses single-formation = $\#\mathrm{PersComp}(u^*) = 1$) | Definitional input | H-MORSE-Local ← D-ST-3 |
 | **CN1 closure dual-mode self-referentiality** | Foundational alignment (Approach α justified) | conceptual |
 | **CN4 analyticity ($b_D = 0$)** | Required for spectrum of $H_{\mathcal{E}}$ to be well-defined | H-MORSE-Local ← CN4 |

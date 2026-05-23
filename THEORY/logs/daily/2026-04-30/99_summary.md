@@ -488,7 +488,7 @@ W6 revised plan:
 
 **NQ-187 — $\epsilon^{3/2}$ structurally impossible**: $D_4$ equivariant ring has no integer solution to $2a + 4b = 5$; actual splitting is $O(\epsilon^2)$ via 6th-order equivariant.
 
-**Tool A4 — SCC has no simplex constraint**: PHR comparison framework was based on incorrect assumption ($\sum_j u^j \leq 1$ per site). SCC enforces only per-field mass conservation $\|u^j\|_1 = m_j$. Tool A4 PARTIAL FAIL status maintained.
+**Tool A4 — SCC has no simplex constraint**: PHR comparison framework was based on incorrect assumption ($\sum_j u^j \leq 1$ per site). SCC enforces only per-field mass conservation $\lVert u^j \rVert_1 = m_j$. Tool A4 PARTIAL FAIL status maintained.
 
 **Dormant OPs analyst — recommendation vs declaration voice**: Original task spec used declaration voice ("OP is now PARTIALLY RESOLVED"). This would silently resolve OPs and violate ontological constraint #5. Re-spawn requires recommendation voice + retraction triggers.
 

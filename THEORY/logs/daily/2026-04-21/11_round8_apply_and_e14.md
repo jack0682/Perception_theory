@@ -81,7 +81,7 @@ For small T and small λ_K (perturbation regime), u^* is close to ℰ minimizer 
 **Prop 2.1 (corrected, Round 8 per E-14):** At ℱ_C+E critical points u^* close (in IFT-perturbation sense) to canonical ℰ critical points, the constrained Hessian satisfies:
 
 $$
-\mu_{\min}(H_{C+E}(u^*)) \;\geq\; \mu_{\min}(H_\mathcal{E}(u^*)) + T\cdot \mu_{-S}^{\min}(u^*) - \lambda_K\cdot \|\nabla^2 K_{\mathrm{soft}}\|_{op},
+\mu_{\min}(H_{C+E}(u^*)) \;\geq\; \mu_{\min}(H_\mathcal{E}(u^*)) + T\cdot \mu_{-S}^{\min}(u^*) - \lambda_K\cdot \lVert \nabla^2 K_{\mathrm{soft}} \rVert_{op},
 $$
 
 where `μ_{min}(H_ℰ(u^*))` is the constrained ℰ Hessian eigenvalue **at u^*** (NOT at the canonical ℰ minimizer; the two differ by IFT-displacement of order T + λ_K).

@@ -165,7 +165,7 @@ If the user defers Decision Point 4 again (i.e., does not commit to A/B/C in Day
 | `op_resolution.md` §10.6 + §10.7 | section bodies | §10.6 EXECUTED + §10.7 fresh-full-run validation | §10.6 explicit "NQ-G1-2-ext (W7+)" |
 | `op_resolution.md` §13.1 row 11 | summary table | "✅ EXECUTED (W6 D1 EOD thirteenth addendum) | C absolute (R1=R0=439, H6 non-binding; (P9-tight) candidate for L1-J' without empirical penalty)" | "NQ-G1-2-ext deferred W7+" |
 | `op_resolution.md` §13.4 item 4 | follow-on actions | "✅ NQ-G1-2 EXECUTED W6 D1 EOD post-EOD chat session" | (consistent — NQ-G1-2-ext registered §13.3) |
-| `W6_strategic_plan.md` §1 G1 follow-ons | bullet list | "NQ-G1-2: ✅ EXECUTED (W6 D1 EOD thirteenth addendum). ... R0 = R1 = 439/1920 ... (P9-tight) is CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening without empirical penalty (R0 ⊆ R1 with \|R1\R0\| = 0)." | "NQ-G1-2-ext (W7+): direct $\|R_j\|_\infty$ measurement under shared-pool gradient-flow dynamics... Estimated ~1-2h." |
+| `W6_strategic_plan.md` §1 G1 follow-ons | bullet list | "NQ-G1-2: ✅ EXECUTED (W6 D1 EOD thirteenth addendum). ... R0 = R1 = 439/1920 ... (P9-tight) is CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening without empirical penalty (R0 ⊆ R1 with \|R1\R0\| = 0)." | "NQ-G1-2-ext (W7+): direct $\lVert R_j \rVert_\infty$ measurement under shared-pool gradient-flow dynamics... Estimated ~1-2h." |
 | `99_summary.md` §7.2 | section header | "NQ-G1-2 (P9-tight) regime experiment — two-phase EXECUTED" + "Phase A post-processing wrapper" + "Phase B fresh-full-run with H6-only patch (5 regimes 75.7s, 5/5 match)" | implicit (pending NQ-G1-2-ext) |
 | `99_summary.md` §7.3 | findings | "(P9-tight) verdict: CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening. Final canonical adoption deferred to NQ-G1-2-ext (W7+)" | explicit |
 | `99_summary.md` §7.5 inventory row | inventory table | "NQ-G1-2 ((P9-tight) regime) | ✅ EXECUTED (post-processing + fresh-full-run 5/5 match)" | row reflects status |
@@ -194,7 +194,7 @@ If the user defers Decision Point 4 again (i.e., does not commit to A/B/C in Day
    Four-layer agreement on the no-theorem-modification claim.
 
 4. **Probe: NQ-G1-2-ext W7+ scope wording consistent?**
-   All four layers agree: NQ-G1-2-ext is **direct $\|R_j\|_\infty$ measurement under shared-pool gradient-flow dynamics** (not initial-state geometry; the *post-flow* perturbation magnitude). Estimated ~1-2h. Required for canonical adoption of (P9-tight) → L1-J'.
+   All four layers agree: NQ-G1-2-ext is **direct $\lVert R_j \rVert_\infty$ measurement under shared-pool gradient-flow dynamics** (not initial-state geometry; the *post-flow* perturbation magnitude). Estimated ~1-2h. Required for canonical adoption of (P9-tight) → L1-J'.
 
 ### §3.3 Verdict — Check 3
 
@@ -269,7 +269,7 @@ This body-level promotion-target line was **not updated** by the 12th addendum (
 |---|---|
 | `03_integration_and_new_open.md` §3.2 (post-erratum) | "the comparison ρ_bg vs ρ_res is **configuration-dependent** (NQ-G1-1, deferred to NQ-G1-1-ext W7+ for empirical anchor). Cat A conditional self-classification of Lemma L-M-2 is unaffected" + explicit cross-references to `op_resolution.md` §9.7 + §13.6 |
 | `02_development.md` §3.4 (post-erratum) | (per `99_summary.md` §7.1) "added a parallel NQ-G1-1 cross-reference erratum block linking to `op_resolution.md` §9.4–§9.10". §3.4 hedge "may be tighter or looser" already correct; cross-reference makes audit trail explicit |
-| `op_resolution.md` §9.4 | original analysis: P5 implies "$\|U\|_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$" stronger than P10 directly |
+| `op_resolution.md` §9.4 | original analysis: P5 implies "$\lVert U \rVert_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$" stronger than P10 directly |
 | `op_resolution.md` §9.7 | intermediate verdict (later corrected): "Generically $\rho_{\mathrm{bg}} \le \rho_{\mathrm{res}}$, giving $\tau_*^{\mathrm{post-R2}} \le \tau_*$" |
 | `op_resolution.md` §9.9 | self-correction: both §3.2's original claim AND §9.4 reverse claim are oversimplifications; configuration-dependent |
 | `op_resolution.md` §9.10 | final: "Both `03_integration_and_new_open.md` §3.2 AND this op_resolution.md §9.4–§9.5 require correction to the configuration-dependent statement... Defer as **NQ-G1-1-ext** (W7+ work)" |
@@ -283,7 +283,7 @@ This body-level promotion-target line was **not updated** by the 12th addendum (
 ### §5.2 Adversarial probes attempted
 
 1. **Probe: does §3.2 erratum's three-line P5 vs P10 derivation chain match §9.9's analysis?**
-   - §3.2 reads: "P5 form, restricted to $X_{\mathrm{bg}}$" / "P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$" / "$\|U\|_{\infty, X_{\mathrm{bg}}} \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\|R_{\mathrm{inact}}\|_\infty \ge \|R_{\mathrm{inact}}\|_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other."
+   - §3.2 reads: "P5 form, restricted to $X_{\mathrm{bg}}$" / "P10 form, **global** over the full graph, not just $X_{\mathrm{bg}}$" / "$\lVert U \rVert_{\infty, X_{\mathrm{bg}}} \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (active-slot decay tails add to $U|_{X_{\mathrm{bg}}}$ via P7), and $\lVert R_{\mathrm{inact}} \rVert_\infty \ge \lVert R_{\mathrm{inact}} \rVert_{\infty, X_{\mathrm{bg}}}$ (global $\ge$ restricted), neither $\rho_{\mathrm{bg}}^{\mathrm{actual}}$ nor $\rho_{\mathrm{res}}^{\mathrm{actual}}$ generically dominates the other."
    - §9.9 (op_resolution.md): consistent — both quantities are restricted vs global, with active-slot decay tails on the $U$ side. ✓
    No drift between the two derivations.
 

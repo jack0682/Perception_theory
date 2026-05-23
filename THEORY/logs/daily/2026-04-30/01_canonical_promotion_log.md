@@ -41,7 +41,7 @@ User authorization context: "지금 하자" 직접 진행 (W5 Day 3 EOD 7-에이
 **Content**:
 - K is NOT primitive of $\mathfrak{C}^{\mathrm{soft}}$.
 - K_field (architectural cap, modeling-layer commitment).
-- K_act(t) (derived integer diagnostic, $K_{\mathrm{act}}(\mathbf{u}) = \#\{j : \|u^{(j)}\|_1 > \epsilon\}$).
+- K_act(t) (derived integer diagnostic, $K_{\mathrm{act}}(\mathbf{u}) = \#\{j : \lVert u^{(j)} \rVert_1 > \epsilon\}$).
 - Inequality $K_{\mathrm{act}}(t) \leq K_{\mathrm{field}}$.
 - CN6 ↔ K_act, I9 ↔ K_field clarified (no contradiction).
 - CN10 one-way mapping: $u_t \to (K_{\mathrm{field}}, K_{\mathrm{act}}) \to$ cog-sci comparisons (forbidden reverse).

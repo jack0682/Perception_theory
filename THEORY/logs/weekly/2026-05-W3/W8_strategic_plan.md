@@ -98,7 +98,7 @@ W8 은 그 *결정 C framework 를 prophylactic 하게 매일 적용* 하면서,
 **Status 변경 (2026-05-16):** 이전 plan 의 "optional stretch" → **committed second SEAL**. Distinctive layer secure 가 W8 의 *core deliverable* 가 됨.
 
 **Primary target (사용자 확정 aggressive 옵션):** **OP-0008-MERGE/SPLIT σ_standard Wigner-projection Cat C → Cat B 승급** 시도. 2-approach attack:
-- Approach (a) perturbation theory: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\|V_{\mathrm{coup}}\|_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5).
+- Approach (a) perturbation theory: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\lVert V_{\mathrm{coup}} \rVert_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5).
 - Approach (b) RMT level repulsion: GOE projection, $P(s) \sim s$ as $s \to 0$, Aut(G) character data 결여 bypass.
 - 두 route 가 *동일* 결정론적 σ_standard map 산출 시 → Cat C → Cat B 승급 → Gate A 활성.
 

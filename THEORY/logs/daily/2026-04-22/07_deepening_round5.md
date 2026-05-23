@@ -45,7 +45,7 @@ This round does NOT cover:
 
 ### 2.1 Definition
 
-> **Definition 2.1 (continuum-limit graph family).** A sequence $\{G_n\}_{n \geq n_0}$ of finite graphs with $|V(G_n)| = n$ has a **continuum limit** $(M, g)$ (a compact Riemannian manifold $M$ with metric $g$) if:
+> **Definition 2.1 (continuum-limit graph family).** A sequence $\{G_n\}_{n \geq n_0}$ of finite graphs with $\lvert V(G_n) \rvert = n$ has a **continuum limit** $(M, g)$ (a compact Riemannian manifold $M$ with metric $g$) if:
 > 1. There exists a sequence of embeddings $\iota_n : V(G_n) \hookrightarrow M$ such that $\{\iota_n(V(G_n))\}$ becomes equidistributed in $M$ as $n \to \infty$.
 > 2. The Laplacian spectrum $\{\lambda_k^{G_n}\}$ converges to the manifold spectrum $\{\lambda_k^{(M, g)}\}$ as $n \to \infty$ (spectral convergence).
 > 3. The automorphism group inflates: $\mathrm{Aut}(G_n) \hookrightarrow \mathrm{Aut}(M, g) = \mathrm{Iso}(M, g)$ (isometry group) with the image becoming dense as $n \to \infty$.
@@ -61,7 +61,7 @@ This round does NOT cover:
 | $K_n$ | $n$-simplex? | $S_n$ | — (singular limit) |
 | 3D torus $C_L^3$ | Flat $T^3$ | $S_4 \ltimes (\mathbb Z_L)^3$ | $S_4 \ltimes T^3$ |
 
-**Key observation:** The enlargement $|\mathrm{Aut}(G_n)| \to |\mathrm{Iso}(M)|$ happens only for graph families with **translation-or-rotation symmetry**. The 2D square (free BC) has no enlargement: $|D_4| = 8$ finite, preserved.
+**Key observation:** The enlargement $|\mathrm{Aut}(G_n)| \to |\mathrm{Iso}(M)|$ happens only for graph families with **translation-or-rotation symmetry**. The 2D square (free BC) has no enlargement: $\lvert D_4 \rvert = 8$ finite, preserved.
 
 ### 2.3 What "continuous-Aut" means operationally
 
@@ -208,7 +208,7 @@ Define:
 |---|---|---|
 | 2D square | 0 | 0 (discrete, 4 points; volume = $4$ in counting measure) |
 | $C_n$ | 0 | $2\pi$ (continuum circle in $n \to \infty$ limit; $n$ in finite graph) |
-| $T^2$ | 0 | $2 \cdot (2\pi)^2/|D_4|$ (two circle orbits glued by $D_4$, each of circumference $2\pi$; 2D torus has orbit volume $(2\pi)^2$ per orbit) |
+| $T^2$ | 0 | $2 \cdot (2\pi)^2/\lvert D_4 \rvert$ (two circle orbits glued by $D_4$, each of circumference $2\pi$; 2D torus has orbit volume $(2\pi)^2$ per orbit) |
 
 ### 5.3 Why this matters
 

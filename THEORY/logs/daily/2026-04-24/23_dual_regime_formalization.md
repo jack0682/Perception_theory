@@ -112,7 +112,7 @@
 
 > **Lemma 4.4 (Pinning rigidity).** For $\zeta < \zeta_*^\text{sub}$, the minimum translation step $u^* \mapsto \tau u^*$ on discrete graph requires energy $\geq E_\text{pin} = O(\beta)$ per lattice step.
 
-**Proof sketch**: Binary profile (Lemma 4.1) 에서 translation 이 "flip" 을 수반 — 한 interior site 를 exterior 로 (or vice versa), 비용 $\approx \beta \cdot |W(1) - W(0)| + \text{boundary}$. Since $W(0) = W(1) = 0$ exactly, cost comes from interface reconfiguration $\sim \beta \cdot O(1)$.
+**Proof sketch**: Binary profile (Lemma 4.1) 에서 translation 이 "flip" 을 수반 — 한 interior site 를 exterior 로 (or vice versa), 비용 $\approx \beta \cdot \lvert W(1) - W(0) \rvert + \text{boundary}$. Since $W(0) = W(1) = 0$ exactly, cost comes from interface reconfiguration $\sim \beta \cdot O(1)$.
 
 **Cat B** for precise constants.
 

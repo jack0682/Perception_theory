@@ -13,7 +13,7 @@
 
 ### §1.1 ε's role in l1i
 
-ε determines the active set $A^\varepsilon = \{j : \|u^{(j)}\|_1 > \varepsilon\}$ when state_mode = `wq1` (per `l1i_constants_feasibility.py` line 279: `A = [j for j, m in enumerate(masses) if m > epsilon]`). For state_mode = `raw_gaussian`, the active set is ε-independent (line 281: `A = [j for j in range(K) if initial_masses[j] > 0]`).
+ε determines the active set $A^\varepsilon = \{j : \lVert u^{(j)} \rVert_1 > \varepsilon\}$ when state_mode = `wq1` (per `l1i_constants_feasibility.py` line 279: `A = [j for j, m in enumerate(masses) if m > epsilon]`). For state_mode = `raw_gaussian`, the active set is ε-independent (line 281: `A = [j for j in range(K) if initial_masses[j] > 0]`).
 
 ### §1.2 Predicted f(ε) for wq1 state_mode
 

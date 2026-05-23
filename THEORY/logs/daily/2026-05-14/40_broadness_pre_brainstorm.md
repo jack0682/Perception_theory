@@ -11,7 +11,7 @@
 
 ## §1. What is "broadness"?
 
-**Narrow lift (T7-Enhanced as canonically stated):** Closure correction quadratic form $\langle v, (I-J_{\mathrm{Cl}})^\top(I-J_{\mathrm{Cl}}) v\rangle \geq (1-a_{\mathrm{cl}}/4)^2 \|v\|^2$ holds along *some* closure-aligned direction $v$.
+**Narrow lift (T7-Enhanced as canonically stated):** Closure correction quadratic form $\langle v, (I-J_{\mathrm{Cl}})^\top(I-J_{\mathrm{Cl}}) v\rangle \geq (1-a_{\mathrm{cl}}/4)^2 \lVert v \rVert^2$ holds along *some* closure-aligned direction $v$.
 
 **Broad lift (target):** The same inequality holds **uniformly** on the entire tangent space $T_{u^*}\Sigma_m$ (mod volume Goldstone $\mathbf{1}$).
 
@@ -34,19 +34,19 @@ For the mixing operator $M := (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ on
 - $P$ is **similar to a symmetric matrix**: $P = D^{-1/2}(D^{-1/2}WD^{-1/2})D^{1/2}$, with $D^{-1/2}WD^{-1/2}$ symmetric.
 - The spectral radius of $P$ is 1 (Perron eigenvalue, eigenvector $\mathbf{1}$).
 
-For $v \perp \mathbf{1}$ (tangent vectors), $\|Pv\| \leq$ (something < 1)? Need more care since $P$ isn't symmetric. The relevant operator norm for $\ell^2$:
+For $v \perp \mathbf{1}$ (tangent vectors), $\lVert Pv \rVert \leq$ (something < 1)? Need more care since $P$ isn't symmetric. The relevant operator norm for $\ell^2$:
 
-$$\|M\|_{\ell^2 \to \ell^2} = \sqrt{\rho(M^\top M)}.$$
+$$\lVert M \rVert_{\ell^2 \to \ell^2} = \sqrt{\rho(M^\top M)}.$$
 
-For $M = (1-\eta)I + \eta P$, in general $\|M\|_{\ell^2 \to \ell^2}$ depends on $P$'s singular values. However, **the canonical claim A3** ($a_{\mathrm{cl}} < 4$ enforces contraction) requires:
+For $M = (1-\eta)I + \eta P$, in general $\lVert M \rVert_{\ell^2 \to \ell^2}$ depends on $P$'s singular values. However, **the canonical claim A3** ($a_{\mathrm{cl}} < 4$ enforces contraction) requires:
 
-$$\|J_{\mathrm{Cl}}\|_{\ell^2 \to \ell^2} \leq \frac{a_{\mathrm{cl}}}{4} \cdot \|M\|_{\ell^2 \to \ell^2} < 1.$$
+$$\lVert J_{\mathrm{Cl}} \rVert_{\ell^2 \to \ell^2} \leq \frac{a_{\mathrm{cl}}}{4} \cdot \lVert M \rVert_{\ell^2 \to \ell^2} < 1.$$
 
-If $\|M\|_{\ell^2 \to \ell^2} \leq 1$ (which holds at least for symmetric edge weights — to be verified for $P$ non-symmetric), then $\|J_{\mathrm{Cl}}\|_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4$.
+If $\lVert M \rVert_{\ell^2 \to \ell^2} \leq 1$ (which holds at least for symmetric edge weights — to be verified for $P$ non-symmetric), then $\lVert J_{\mathrm{Cl}} \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4$.
 
-**Consequence (the broadness route).** If $\|J_{\mathrm{Cl}}\|_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4 < 1$, then
+**Consequence (the broadness route).** If $\lVert J_{\mathrm{Cl}} \rVert_{\ell^2 \to \ell^2} \leq a_{\mathrm{cl}}/4 < 1$, then
 
-$$\sigma_{\min}(I - J_{\mathrm{Cl}}) \;\geq\; 1 - \|J_{\mathrm{Cl}}\|_{\ell^2 \to \ell^2} \;\geq\; 1 - a_{\mathrm{cl}}/4,$$
+$$\sigma_{\min}(I - J_{\mathrm{Cl}}) \;\geq\; 1 - \lVert J_{\mathrm{Cl}} \rVert_{\ell^2 \to \ell^2} \;\geq\; 1 - a_{\mathrm{cl}}/4,$$
 
 so
 
@@ -60,13 +60,13 @@ This is essentially **Approach (b) collapsed to an operator-norm argument** — 
 
 ## §3. Open question for operator norm
 
-The decisive question: **is $\|M\|_{\ell^2 \to \ell^2} \leq 1$?** I.e., is the mixing operator $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ a contraction on $\ell^2$?
+The decisive question: **is $\lVert M \rVert_{\ell^2 \to \ell^2} \leq 1$?** I.e., is the mixing operator $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ a contraction on $\ell^2$?
 
 **Sub-claims to verify:**
-1. $\|P\|_{\ell^2 \to \ell^2} \leq 1$ when $P$ is row-stochastic over symmetric edge weights — **YES** when $P$ is similar to a symmetric matrix with spectrum in $[-1, 1]$. Standard graph-theoretic fact for $P = D^{-1}W$ on undirected graphs.
-2. Convex combination $(1-\eta)I + \eta P$ inherits $\|\cdot\|_{\ell^2} \leq 1$ when both $I$ and $P$ are non-expansive — YES (convex combination of contractions).
+1. $\lVert P \rVert_{\ell^2 \to \ell^2} \leq 1$ when $P$ is row-stochastic over symmetric edge weights — **YES** when $P$ is similar to a symmetric matrix with spectrum in $[-1, 1]$. Standard graph-theoretic fact for $P = D^{-1}W$ on undirected graphs.
+2. Convex combination $(1-\eta)I + \eta P$ inherits $\lVert \cdot \rVert_{\ell^2} \leq 1$ when both $I$ and $P$ are non-expansive — YES (convex combination of contractions).
 
-**Verification needed.** Confirm $\|P\|_{\ell^2 \to \ell^2} = 1$ for the canonical $P = D^{-1}W$ on undirected graph. If yes, the broadness route is immediate.
+**Verification needed.** Confirm $\lVert P \rVert_{\ell^2 \to \ell^2} = 1$ for the canonical $P = D^{-1}W$ on undirected graph. If yes, the broadness route is immediate.
 
 ---
 
@@ -75,7 +75,7 @@ The decisive question: **is $\|M\|_{\ell^2 \to \ell^2} \leq 1$?** I.e., is the m
 | Approach | Strategy | Status estimate |
 |---|---|---|
 | **(a)** Closure Jacobian off-diagonal + Perron-Frobenius | Spectral mixing via irreducibility | likely *subsumed* by (b) — keep as complementary sharper bound if available |
-| **(b)** Operator norm $\|I - J_{\mathrm{Cl}}\|$ + Weyl | Direct contraction argument | **leading candidate** — proves broadness uniformly |
+| **(b)** Operator norm $\lVert I - J_{\mathrm{Cl}} \rVert$ + Weyl | Direct contraction argument | **leading candidate** — proves broadness uniformly |
 | **(c)** Numerical full spectrum at canonical 15×15 | Direct verification | **always works** — confirms or refutes |
 
 **Execution order.**
@@ -89,23 +89,23 @@ The decisive question: **is $\|M\|_{\ell^2 \to \ell^2} \leq 1$?** I.e., is the m
 
 Reminder: the goal is bound on $\mu_{\min}(\Pi_T H_{\mathcal{E}} \Pi_T)$ where $H_{\mathcal{E}} = H_{\mathrm{bd}} + H_{\mathrm{cl}} + H_{\mathrm{sep}}$ (per L-HMORSE-DECOMP in `02_development.md §3`).
 
-- $H_{\mathrm{bd}}$ contributes $\geq -\beta |W''(u^*)|$ in worst case (boundary band) — attenuated via T-OP6-B's $\rho_{\mathrm{bd-band}}$ bound, but worst-case eigenvalue can be $-\beta$ in spinodal band.
+- $H_{\mathrm{bd}}$ contributes $\geq -\beta \lvert W''(u^*) \rvert$ in worst case (boundary band) — attenuated via T-OP6-B's $\rho_{\mathrm{bd-band}}$ bound, but worst-case eigenvalue can be $-\beta$ in spinodal band.
 - $H_{\mathrm{cl}}$ contributes $+2\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2$ (broad, if Approach (b) succeeds).
 - $H_{\mathrm{sep}}$ contributes $\geq 0$ on tangent space.
 
 **Residual correction.** $H_{\mathrm{cl}}$ has actual form $2(J_{\mathrm{Cl}} - I)^\top(J_{\mathrm{Cl}} - I) + 2\sum_k (Cl(u^*)_k - u^*_k) \nabla^2 Cl_k$. At a *critical point of full $\mathcal{E}$* (not $E_{\mathrm{cl}}$ alone), the residual $r = Cl(u^*) - u^*$ does not necessarily vanish. We need:
 
-$$\bigl\|\sum_k r_k \nabla^2 Cl_k\bigr\|_{op} \;\leq\; \|r\|_\infty \cdot \max_k \|\nabla^2 Cl_k\|_{op}.$$
+$$\bigl\lVert \sum_k r_k \nabla^2 Cl_k\bigr \rVert_{op} \;\leq\; \lVert r \rVert_\infty \cdot \max_k \lVert \nabla^2 Cl_k \rVert_{op}.$$
 
-At an interior minimizer of $\mathcal{E}$, $\|r\|_\infty$ is empirically small (close to closure fixed point); $\|\nabla^2 Cl_k\|_{op}$ bounded by $|\sigma''|_{\max} \cdot a_{\mathrm{cl}}^2 \cdot \|M\|^2 \leq 0.1 \cdot a_{\mathrm{cl}}^2$ (since $|\sigma''| \leq 0.1$).
+At an interior minimizer of $\mathcal{E}$, $\lVert r \rVert_\infty$ is empirically small (close to closure fixed point); $\lVert \nabla^2 Cl_k \rVert_{op}$ bounded by $|\sigma''|_{\max} \cdot a_{\mathrm{cl}}^2 \cdot \lVert M \rVert^2 \leq 0.1 \cdot a_{\mathrm{cl}}^2$ (since $|\sigma''| \leq 0.1$).
 
-Numerical verification of $\|r\|_\infty$ at the canonical minimizer is part of Approach (c).
+Numerical verification of $\lVert r \rVert_\infty$ at the canonical minimizer is part of Approach (c).
 
 ---
 
 ## §6. Operational decision
 
-**Proceed with Approach (b)** as primary. Verify $\|P\|_{\ell^2 \to \ell^2} \leq 1$ first (literature: standard for $P = D^{-1}W$, undirected graph) — this is the only non-trivial step in the argument.
+**Proceed with Approach (b)** as primary. Verify $\lVert P \rVert_{\ell^2 \to \ell^2} \leq 1$ first (literature: standard for $P = D^{-1}W$, undirected graph) — this is the only non-trivial step in the argument.
 
 Numerical Approach (c) runs concurrently. Approach (a) deferred unless (b) hits unexpected obstacle.
 

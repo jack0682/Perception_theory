@@ -113,7 +113,7 @@ Where unordered-pair sums are intended:
 
 $$\sum_{\{x, y\}} \;=\; \frac{1}{2} \sum_{x, y \in X_t} \quad \text{for symmetric } f(x, y).$$
 
-This convention is **load-bearing** in T8-Core (phase transition: factor 4 in $4\lambda_2/|W''(c)|$ ratio, not 2 — see Cat R for the historical 2 vs 4 confusion).
+This convention is **load-bearing** in T8-Core (phase transition: factor 4 in $4\lambda_2/\lvert W''(c) \rvert$ ratio, not 2 — see Cat R for the historical 2 vs 4 confusion).
 
 # III. Operator Triad
 
@@ -168,7 +168,7 @@ Canonical form: entropic partial OT plan with cost $c[u_t, u_s]$ (fingerprint si
 |---|---|
 | **Closure self-fixed-point** | At critical points of $\mathcal{E}_{\mathrm{cl}}$, the closure residual $\mathrm{Cl}(u^*) - u^*$ is "small" but generally non-zero. At canonical interior minimizers, the residual is concentrated in the boundary band (saturated nodes have $\sigma'(z) \to 0$). |
 | **Distinction self-reference** | $\mathbf{D}_t$ uses $1 - u$ as exterior; this self-induced exterior makes the distinction operator entirely intrinsic. |
-| **Co-belonging Jacobian role** | The closure Jacobian $J_{\mathrm{Cl}} = \mathrm{diag}(\sigma' a_{\mathrm{cl}}) \cdot M$ with $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ governs both energy gradient and Hessian. Via the degree-weighted operator norm (L-CLOSURE-LIFT Cat A CV-1.16), $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$. |
+| **Co-belonging Jacobian role** | The closure Jacobian $J_{\mathrm{Cl}} = \mathrm{diag}(\sigma' a_{\mathrm{cl}}) \cdot M$ with $M = (1-\eta_{\mathrm{cl}})I + \eta_{\mathrm{cl}} P$ governs both energy gradient and Hessian. Via the degree-weighted operator norm (L-CLOSURE-LIFT Cat A CV-1.16), $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$. |
 | **Transport vs static** | $\mathbf{M}_{t \to s}$ is the *only* operator linking distinct time slices. Static structure ($\mathrm{Cl}, \mathbf{D}, \mathbf{C}$) acts within a single $u_t$; dynamic structure acts between $u_t$ and $u_s$. |
 
 ## §7. Why exactly three operators in the triad

@@ -45,7 +45,7 @@ Phase 1 §4 의 Theorem 2 (i) proof 의 모든 step 이 graph-class 무관:
 
 ## §4. (G1) 의 graph-class 검증
 
-(G1) "Pure $\mathcal{E}_\text{bd}$ 가 non-uniform critical point 보유" 는 graph 의 spectral property 에 의존. T8-Core (canonical Cat A): $\beta > 4\alpha\lambda_2/|W''(c)|$ ⇒ uniform unstable, non-uniform critical 존재.
+(G1) "Pure $\mathcal{E}_\text{bd}$ 가 non-uniform critical point 보유" 는 graph 의 spectral property 에 의존. T8-Core (canonical Cat A): $\beta > 4\alpha\lambda_2/\lvert W''(c) \rvert$ ⇒ uniform unstable, non-uniform critical 존재.
 
 **검증된 graph class**:
 - **2D square grid (free-BC, torus)**: Cat A (T-Birth-Parametric, R22 §3.3).

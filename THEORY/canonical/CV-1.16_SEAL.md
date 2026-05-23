@@ -59,7 +59,7 @@ CV-1.16 is hereby sealed. The primary advancement of CV-1.16 over CV-1.15 is the
 
 | Entry | Statement | Conditions |
 |-------|-----------|------------|
-| **L-CLOSURE-LIFT** | (i) $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$; (ii) $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$ uniformly; (iii) standard $\ell^2$ form with $(d_{\min}/d_{\max})$ factor; (iv) tangent restriction inherits | $G$ connected; canonical A3 ($a_{\mathrm{cl}} < 4$); $u^* \in [0,1]^n$ |
+| **L-CLOSURE-LIFT** | (i) $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$; (ii) $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$ uniformly; (iii) standard $\ell^2$ form with $(d_{\min}/d_{\max})$ factor; (iv) tangent restriction inherits | $G$ connected; canonical A3 ($a_{\mathrm{cl}} < 4$); $u^* \in [0,1]^n$ |
 
 ### Cat B additions (+2 entries)
 
@@ -72,7 +72,7 @@ CV-1.16 is hereby sealed. The primary advancement of CV-1.16 over CV-1.15 is the
 
 | Entry | Statement | Conditions |
 |-------|-----------|------------|
-| **L-BOUNDARY-MODE-EXCLUSION** | Lowest eigenvalue mode of $\Pi_T^{\mathrm{free}} H_{\mathcal{E}}$ is generically not boundary-localized: $\|v_{\min}\|_{\partial X}^2/\|v_{\min}\|^2 \leq 1/2 + O(\alpha/\beta)$ | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4); non-empty $\partial X$; SKETCH-level Weyl perturbation |
+| **L-BOUNDARY-MODE-EXCLUSION** | Lowest eigenvalue mode of $\Pi_T^{\mathrm{free}} H_{\mathcal{E}}$ is generically not boundary-localized: $\lVert v_{\min} \rVert_{\partial X}^2/\lVert v_{\min} \rVert^2 \leq 1/2 + O(\alpha/\beta)$ | D-HMORSE-LOCAL (C1)(C2′)(C3)(C4); non-empty $\partial X$; SKETCH-level Weyl perturbation |
 
 ### Definition registered (no count effect)
 

@@ -100,7 +100,7 @@ This is consistent with `00_plan.md`'s expected delta (14B → 15B).
 **Today's impact:** No new resolution. Today's session **isolates** OP-0011 Step 2 as the *sole* remaining sub-step for part (c) of T-Temporal-Identity to be promoted from Cat C to Cat B. Specifically:
 
 - Step 1 (site-level): T-Persist-1(e) Cat A bound — already canonical.
-- Step 2 (component-level): bound $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$ for two E1–E4-admissible plans $M, M'$. **OPEN**. The candidate approach is a covering argument: $|\gamma_M - \gamma_{M'}| \leq |C_i^t| \cdot \|M - M'\|_{\infty,C_i^t \times C_j^s}$, but a Cat B-grade bound requires connecting to the site-level confinement bound $C_\mathrm{conf}\sqrt{m}$ properly.
+- Step 2 (component-level): bound $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \leq \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$ for two E1–E4-admissible plans $M, M'$. **OPEN**. The candidate approach is a covering argument: $|\gamma_M - \gamma_{M'}| \leq \lvert C_i^t \rvert \cdot \lVert M - M' \rVert_{\infty,C_i^t \times C_j^s}$, but a Cat B-grade bound requires connecting to the site-level confinement bound $C_\mathrm{conf}\sqrt{m}$ properly.
 - Step 3 (identity-level): once Step 2 closes, $\Delta_\mathrm{sep} > \epsilon_\mathrm{kernel}$ implies $R_{t\to s}[M] = R_{t\to s}[M']$. This is now expressible via Theorem 4.2's closed-form $\Delta_\mathrm{sep}^*$.
 
 **Refined OP-0011 sub-status entry (suggestion for `theorem_status.md`):**
@@ -203,7 +203,7 @@ Six open questions surfaced during today's development. Numbered NQ-T-Identity-1
 
 **Why it matters.** This is the sole remaining sub-step to promote T-Temporal-Identity part (c) from Cat C to Cat B (kernel independence under margin condition).
 
-**Candidate approach.** Covering argument: site-level bound $\|\tilde u - \hat u_t\| \leq C_\mathrm{conf}\sqrt{m}$ (T-Persist-1(e)) → component-level bound by summing over $C_i^t \times C_j^s$ block. Complication: $C_\mathrm{conf}$ depends on $\sigma, \varepsilon_\mathrm{OT}$ and the bound's tightness depends on iso-ratio of $C_i^t \times C_j^s$.
+**Candidate approach.** Covering argument: site-level bound $\lVert \tilde u - \hat u_t \rVert \leq C_\mathrm{conf}\sqrt{m}$ (T-Persist-1(e)) → component-level bound by summing over $C_i^t \times C_j^s$ block. Complication: $C_\mathrm{conf}$ depends on $\sigma, \varepsilon_\mathrm{OT}$ and the bound's tightness depends on iso-ratio of $C_i^t \times C_j^s$.
 
 **Estimated difficulty.** 1–2 sessions. Mid difficulty.
 

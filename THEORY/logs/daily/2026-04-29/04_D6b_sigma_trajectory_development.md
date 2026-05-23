@@ -164,7 +164,7 @@ $$\sigma^A(t) := \sigma^A_{\mathrm{multi}}(\mathbf{u}(t)) \in \Sigma^A_{K'}, \ta
 *Hypotheses:*
 - (H1) $\mathbf{u}(t)$ is the gradient flow of $\mathcal{E}_K$ on shared-pool $\widetilde\Sigma^K_M$, smooth in $t$ on a smooth segment $(t_n^*, t_{n+1}^*)$.
 - (H2) The energy $\mathcal{E}_K$ is real-analytic on $\widetilde\Sigma^K_M$ (true for the explicit form (4.6) with $W$ a polynomial).
-- (H3) On the segment, the joint Hessian $H_{\mathrm{joint}}(\mathbf{u}(t))$ has dimension $N := K' \cdot |X|$ constant, where $K' = K_{\mathrm{act}}$.
+- (H3) On the segment, the joint Hessian $H_{\mathrm{joint}}(\mathbf{u}(t))$ has dimension $N := K' \cdot \lvert X \rvert$ constant, where $K' = K_{\mathrm{act}}$.
 
 *Claim:* $\sigma^A(t)$ is piecewise constant in $t$ on the segment, with jump times $\{\tau_m\} \subset (t_n^*, t_{n+1}^*)$ corresponding to **avoided crossings** of $H_{\mathrm{joint}}$ eigenvalues. At each $\tau_m$:
 - Eigenvalues $\lambda_k(t)$ are continuous (real-analytic; T1 of Kato).

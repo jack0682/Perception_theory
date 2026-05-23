@@ -31,7 +31,7 @@ Effect on $\widehat K$ via $N_{\mathrm{unst}}^{\mathrm{full}}(c) \approx N^{\mat
 
 $T > 0$: all mode eigenvalues shifted by $+T/[c(1-c)]$. Modes at $\mu_k < T/[c(1-c)]$ become stable. Effective $N_{\mathrm{unst}}(T) < N_{\mathrm{unst}}(0)$.
 
-**Thermal critical $\beta$-shift:** $\beta^{\mathrm{thermal}}_{\mathrm{crit}}(c, T) = \beta_{\mathrm{crit}}^{(2)}(c) + T\lambda_2 \cdot c(1-c)/[|W''(c)| \cdot c(1-c)] = \beta_{\mathrm{crit}}^{(2)}(c)(1 + T/[|W''(c)|c(1-c)])$.
+**Thermal critical $\beta$-shift:** $\beta^{\mathrm{thermal}}_{\mathrm{crit}}(c, T) = \beta_{\mathrm{crit}}^{(2)}(c) + T\lambda_2 \cdot c(1-c)/[\lvert W''(c) \rvert \cdot c(1-c)] = \beta_{\mathrm{crit}}^{(2)}(c)(1 + T/[|W''(c)|c(1-c)])$.
 
 Higher $T$ → higher critical $\beta$ → more "stable" uniform state.
 
@@ -121,17 +121,17 @@ Single threshold → $\widehat K = 1$ for all $\beta > \beta_{\mathrm{crit}}$. V
 ### 4.1 Critical $\beta_{\mathrm{crit}}^{(2)}(c, T; G)$
 
 Thermal-extended Prop 1.3a:
-$$\beta_{\mathrm{crit}}^{(2)}(c, T) = \frac{4\alpha\lambda_2(G)}{|W''(c)| - T/[c(1-c)]}.$$
+$$\beta_{\mathrm{crit}}^{(2)}(c, T) = \frac{4\alpha\lambda_2(G)}{\lvert W''(c) \rvert - T/[c(1-c)]}.$$
 
-Diverges when $|W''(c)| = T/[c(1-c)]$, i.e., at the thermal dissolution line.
+Diverges when $\lvert W''(c) \rvert = T/[c(1-c)]$, i.e., at the thermal dissolution line.
 
-**Locus of dissolution:** $T_{\mathrm{dis}}(c) = c(1-c)|W''(c)| = c(1-c)(2 - 12c + 12c^2)$.
+**Locus of dissolution:** $T_{\mathrm{dis}}(c) = c(1-c)\lvert W''(c) \rvert = c(1-c)(2 - 12c + 12c^2)$.
 
-$c \in (c_-, c_+)$, $|W''|$ max at $c = 1/2$ ($|W''(1/2)| = 1$), so $T_{\mathrm{dis}}(1/2) = 1/4$. Decreasing away from $c = 1/2$.
+$c \in (c_-, c_+)$, $\lvert W'' \rvert$ max at $c = 1/2$ ($\lvert W''(1/2) \rvert = 1$), so $T_{\mathrm{dis}}(1/2) = 1/4$. Decreasing away from $c = 1/2$.
 
 ### 4.2 Saturation boundary $\beta_{\mathrm{crossover}}(c, G)$
 
-From Round 7: $\beta_{\mathrm{crossover}} \sim 16\pi^2/L$ on 2D grid. Weakly $c$-dependent (via $|W''(c)|$ in $\beta^{(k)}_{\mathrm{crit}}$).
+From Round 7: $\beta_{\mathrm{crossover}} \sim 16\pi^2/L$ on 2D grid. Weakly $c$-dependent (via $\lvert W''(c) \rvert$ in $\beta^{(k)}_{\mathrm{crit}}$).
 
 Not strongly $T$-dependent (since $H_{\mathrm{cl,sep}}$ is $T$-invariant, only $H_{\mathrm{bd}}$ thermal; shift rescales $\beta$).
 
@@ -175,7 +175,7 @@ Classical Conjecture 2.1 curve: $\widehat K \sim 1 + \sqrt{N_{\mathrm{unst}}(\be
 
 1. **Master formula** $\widehat K = 1 + \mathrm{Vol} \cdot N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}} + O(1)$ with all three $(\beta, c, T)$ dependencies.
 
-2. **Thermal dissolution line** $T_{\mathrm{dis}}(c) = c(1-c)|W''(c)|$; max at $c = 1/2$ giving $T_{\mathrm{dis}}(1/2) = 1/4$.
+2. **Thermal dissolution line** $T_{\mathrm{dis}}(c) = c(1-c)\lvert W''(c) \rvert$; max at $c = 1/2$ giving $T_{\mathrm{dis}}(1/2) = 1/4$.
 
 3. **3-phase structure** in $(\beta, c, T)$: uniform / single-formation / multi-formation / saturation, each a 3D region bounded by 2D surfaces.
 

@@ -61,13 +61,13 @@ All positive after projection. So $u_{\mathrm{corner}}$ is a strict local minimu
 ### 3.2 Lyapunov function
 
 The energy $\mathcal{E}_{\mathrm{bd}}$ itself is a Lyapunov function for the gradient flow. Near $u_{\mathrm{corner}}$:
-$$\mathcal{E}_{\mathrm{bd}}(u) - \mathcal{E}_{\mathrm{bd}}(u_{\mathrm{corner}}) \geq \tfrac{1}{2} \mu_{\min}(H) \cdot \|u - u_{\mathrm{corner}}\|^2, \tag{3.1}$$
+$$\mathcal{E}_{\mathrm{bd}}(u) - \mathcal{E}_{\mathrm{bd}}(u_{\mathrm{corner}}) \geq \tfrac{1}{2} \mu_{\min}(H) \cdot \lVert u - u_{\mathrm{corner}} \rVert^2, \tag{3.1}$$
 where $\mu_{\min}(H) = \mu_{\mathrm{Gold}}^{\mathrm{lifted}} \approx \beta e^{-c_d/\xi_0}$ is the smallest Hessian eigenvalue (Goldstone-like).
 
 ### 3.3 Basin radius (linear estimate)
 
-The linear approximation holds while $\|u - u_{\mathrm{corner}}\|$ is small enough that higher-order terms are subdominant. Heuristic threshold:
-$$\|u - u_{\mathrm{corner}}\| \leq \mathcal{R}_{\mathrm{lin}} \approx \mu_{\min}(H) / \beta_{\max}, \tag{3.2}$$
+The linear approximation holds while $\lVert u - u_{\mathrm{corner}} \rVert$ is small enough that higher-order terms are subdominant. Heuristic threshold:
+$$\lVert u - u_{\mathrm{corner}} \rVert \leq \mathcal{R}_{\mathrm{lin}} \approx \mu_{\min}(H) / \beta_{\max}, \tag{3.2}$$
 where $\beta_{\max}$ is the largest Hessian eigenvalue ($\approx 2\beta$).
 
 For our setup: $\mu_{\min} \approx 0.002, \beta_{\max} \approx 8$ (β=4): $\mathcal{R}_{\mathrm{lin}} \approx 0.00025$. **Extremely small** linear basin.
@@ -77,7 +77,7 @@ This is a known issue: corner-saturated states have very narrow linear basins be
 ### 3.4 Beyond linear: Włodzimierz / Łojasiewicz inequality
 
 For analytic energy $\mathcal{E}_{\mathrm{bd}}$ (which is polynomial in $u$, hence analytic), the Łojasiewicz inequality (canonical T14 framework) gives:
-$$\|\nabla \mathcal{E}\|^2 \geq c (\mathcal{E} - \mathcal{E}^*)^{2 - \theta} \quad \text{for some } \theta \in (0, 1). \tag{3.3}$$
+$$\lVert \nabla \mathcal{E} \rVert^2 \geq c (\mathcal{E} - \mathcal{E}^*)^{2 - \theta} \quad \text{for some } \theta \in (0, 1). \tag{3.3}$$
 
 This guarantees that gradient flow from any IC in a sufficiently small neighborhood of $u_{\mathrm{corner}}$ converges to $u_{\mathrm{corner}}$ in finite-energy time. The **size** of this neighborhood depends on the Łojasiewicz exponent $\theta$.
 
@@ -90,7 +90,7 @@ For double-well potential $W$ at saturation $u = 1$ (where $W' = 0$ and $W'' = 2
 ### 4.1 The condition
 
 **Definition 4.1 (IC-localized at $u_{\mathrm{corner}}$)**: An initial field $u_0 \in \Sigma_m$ is *IC-localized at $u_{\mathrm{corner}}$* if:
-$$\|u_0 - u_{\mathrm{corner}}\|_2 < \mathcal{R}_{\mathrm{basin}}, \tag{4.1}$$
+$$\lVert u_0 - u_{\mathrm{corner}} \rVert_2 < \mathcal{R}_{\mathrm{basin}}, \tag{4.1}$$
 where $\mathcal{R}_{\mathrm{basin}}$ is the basin radius (per §4.2 below).
 
 ### 4.2 Basin radius estimate
@@ -104,7 +104,7 @@ This means IC $u_0$ within $\sim 5 \times 10^{-4}$ (in $L^2$ norm) of $u_{\mathr
 
 ### 4.3 Practical implication
 
-A randomly-perturbed disk IC $u_0 = u_{\mathrm{corner}} + \eta$ with $\|\eta\| \sim \sigma$ (noise scale) converges to $u_{\mathrm{corner}}$ iff $\sigma < \mathcal{R}_{\mathrm{basin}} \approx 5 \times 10^{-4}$.
+A randomly-perturbed disk IC $u_0 = u_{\mathrm{corner}} + \eta$ with $\lVert \eta \rVert \sim \sigma$ (noise scale) converges to $u_{\mathrm{corner}}$ iff $\sigma < \mathcal{R}_{\mathrm{basin}} \approx 5 \times 10^{-4}$.
 
 For typical numerical noise $\sigma \sim 10^{-2}$ (per NQ-173 setup): $\sigma \gg \mathcal{R}_{\mathrm{basin}}$. So **direct linear basin is too small** to attract noisy IC.
 

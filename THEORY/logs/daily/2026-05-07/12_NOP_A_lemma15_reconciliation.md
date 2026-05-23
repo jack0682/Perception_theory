@@ -40,20 +40,20 @@ This means the spectral form has a hidden error.
 
 ### §2.1 Re-examining Lemma 13 step 2
 
-Lemma 13 (`08_NQ6_spectral_gap_advance.md` §3.1) step 2 claimed: a swap-mode plan perturbation $\delta M_{ij}$ induces a field perturbation $\delta u^j$ on time-$s$ field of magnitude $\|\delta u^j\|_2 \approx d_\mathrm{inter}^*$ (geometric distance between formations). This was wrong.
+Lemma 13 (`08_NQ6_spectral_gap_advance.md` §3.1) step 2 claimed: a swap-mode plan perturbation $\delta M_{ij}$ induces a field perturbation $\delta u^j$ on time-$s$ field of magnitude $\lVert \delta u^j \rVert_2 \approx d_\mathrm{inter}^*$ (geometric distance between formations). This was wrong.
 
-**Correct scaling.** A swap-mode of *magnitude* $\eta_\mathrm{cross}$ (small mass moved off-diagonal) induces a field perturbation of magnitude $\|\delta u^j\|_2 \approx \eta_\mathrm{cross} \cdot \sqrt{|C_j^s|}$ — **proportional to $\eta_\mathrm{cross}$, not to $d_\mathrm{inter}^*$**.
+**Correct scaling.** A swap-mode of *magnitude* $\eta_\mathrm{cross}$ (small mass moved off-diagonal) induces a field perturbation of magnitude $\lVert \delta u^j \rVert_2 \approx \eta_\mathrm{cross} \cdot \sqrt{\lvert C_j^s \rvert}$ — **proportional to $\eta_\mathrm{cross}$, not to $d_\mathrm{inter}^*$**.
 
 **Corrected energy cost.**
-$$\Delta E \approx \mu_\mathrm{joint} \cdot \|\delta u^j\|^2 / 2 \approx \mu_\mathrm{joint}\,|C_j^s|\,\eta_\mathrm{cross}^2 / 2.$$
+$$\Delta E \approx \mu_\mathrm{joint} \cdot \lVert \delta u^j \rVert^2 / 2 \approx \mu_\mathrm{joint}\,\lvert C_j^s \rvert\,\eta_\mathrm{cross}^2 / 2.$$
 
 This is *quadratic in $\eta_\mathrm{cross}$*, leading to a self-consistency equation, not a linear exponential.
 
 **Corrected Boltzmann factor.**
-$$\eta_\mathrm{cross} \propto \exp\!\Big(-\frac{\mu_\mathrm{joint}\,|C|\,\eta_\mathrm{cross}^2}{2\,\varepsilon_\mathrm{OT}}\Big) \cdot \mathrm{ref}.$$
+$$\eta_\mathrm{cross} \propto \exp\!\Big(-\frac{\mu_\mathrm{joint}\,\lvert C \rvert\,\eta_\mathrm{cross}^2}{2\,\varepsilon_\mathrm{OT}}\Big) \cdot \mathrm{ref}.$$
 
 Solving self-consistently for small $\eta_\mathrm{cross}$:
-$$\eta_\mathrm{cross} \approx \sqrt{\frac{\varepsilon_\mathrm{OT}\,\log(1/\eta_\mathrm{ref})}{\mu_\mathrm{joint}\,|C|}}.$$
+$$\eta_\mathrm{cross} \approx \sqrt{\frac{\varepsilon_\mathrm{OT}\,\log(1/\eta_\mathrm{ref})}{\mu_\mathrm{joint}\,\lvert C \rvert}}.$$
 
 This is **algebraically slow decay** in $\varepsilon_\mathrm{OT}$, not exponential. The Hessian-eigenvalue contribution is genuinely quadratic, not linear.
 
@@ -126,7 +126,7 @@ The improvement is a factor $n/(K-1) \approx 225/1 = 225$ at default — exactly
 
 ### §3.5 Why sharp form has $L_g d_\mathrm{eff}$ subtraction
 
-Sharp form's $L_g d_\mathrm{eff}$ comes from bounding $|g(y) - g(y_0)|$ for $y, y_0$ in the same component (small distance). Used in cost-comparison, this subtracts from the effective barrier.
+Sharp form's $L_g d_\mathrm{eff}$ comes from bounding $\lvert g(y) - g(y_0) \rvert$ for $y, y_0$ in the same component (small distance). Used in cost-comparison, this subtracts from the effective barrier.
 
 But this is *worst-case Lipschitz*. In Lemma 15's derivation, we compare cross-component vs intra-component cost directly — no $g$-Lipschitz needed. The $g$ contribution is implicit in the *target marginal* $u_s(y)$: in Sinkhorn equilibrium, $g(y) = -\varepsilon_\mathrm{OT}\log u_s(y) + \mathrm{const}$, so $g(y_\mathrm{cross}) - g(y_\mathrm{intra}) \approx \varepsilon_\mathrm{OT} \log(m_\mathrm{intra}/m_\mathrm{cross})$ — bounded by $\log C_\mathrm{mass}$, much smaller than $L_g d_\mathrm{eff}$ in general.
 
@@ -184,7 +184,7 @@ This is similar to what NOP-6 spectral path promised, but actually achievable.
 ### §6.2 Update for `08_NQ6_spectral_gap_advance.md` (erratum)
 
 Suggested erratum note:
-> *Erratum 2026-05-07 late evening: Lemma 13 step 2 has a scaling error. The energy cost of swap-mode plan perturbation is quadratic in $\eta_\mathrm{cross}$, not linear in $d_\mathrm{inter}^*$. Corrected scaling: $\Delta E \approx \mu_\mathrm{joint}\,|C|\,\eta_\mathrm{cross}^2/2$, leading to algebraic decay in $\varepsilon_\mathrm{OT}$, not exponential. The intended exponential decay actually comes from the cost-comparison argument (Lemma 15, `12_NOP_A_lemma15_reconciliation.md`), not from the Hessian-spectral argument. Lemma 13's spectral-form claim is **withdrawn**; replaced by Lemma 15.*
+> *Erratum 2026-05-07 late evening: Lemma 13 step 2 has a scaling error. The energy cost of swap-mode plan perturbation is quadratic in $\eta_\mathrm{cross}$, not linear in $d_\mathrm{inter}^*$. Corrected scaling: $\Delta E \approx \mu_\mathrm{joint}\,\lvert C \rvert\,\eta_\mathrm{cross}^2/2$, leading to algebraic decay in $\varepsilon_\mathrm{OT}$, not exponential. The intended exponential decay actually comes from the cost-comparison argument (Lemma 15, `12_NOP_A_lemma15_reconciliation.md`), not from the Hessian-spectral argument. Lemma 13's spectral-form claim is **withdrawn**; replaced by Lemma 15.*
 
 ### §6.3 NQ-T-Identity-6 reclassification
 

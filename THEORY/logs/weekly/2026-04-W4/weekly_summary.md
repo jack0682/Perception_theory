@@ -342,7 +342,7 @@ canonical/theorem_status.md                        (main 동기 update)
 
 - **(i) Disk non-criticality**: $u_0^*$는 full $\mathcal{E}$의 critical point가 **아님**
 - **(ii) Multi-peak attractor**: $u_0^*$로부터의 gradient flow가 $u^*_\text{end}$로 수렴, $\mathcal{F}(u^*_\text{end}) > \mathcal{F}(u_0^*)$
-- **(iii) Lemma 4 (quadratic form PD)**: $M \in \mathbb{R}^{2\times 2}$ ($M_{11}=\|g_\text{cl}\|^2$, $M_{22}=\|g_\text{sep}\|^2$, $M_{12}=\langle g_\text{cl}, g_\text{sep}\rangle$)이 $g_\text{cl}, g_\text{sep}$ 선형독립 하 positive definite. $\|\nabla\mathcal{E}(u_0^*)\|^2 = \lambda^\top M \lambda$
+- **(iii) Lemma 4 (quadratic form PD)**: $M \in \mathbb{R}^{2\times 2}$ ($M_{11}=\lVert g_\text{cl} \rVert^2$, $M_{22}=\lVert g_\text{sep} \rVert^2$, $M_{12}=\langle g_\text{cl}, g_\text{sep}\rangle$)이 $g_\text{cl}, g_\text{sep}$ 선형독립 하 positive definite. $\lVert \nabla\mathcal{E}(u_0^*) \rVert^2 = \lambda^\top M \lambda$
 - **(iv) IC sensitivity**: basin-attraction이 IC eigenmode alignment에 민감
 - **(v) Thermodynamic dichotomy**:
   - Adaptive IC (Fiedler/eigenmode): $\mathcal{F}_*^\text{adaptive}(L) \leq F^\text{first-pitchfork}(\beta, c) + O(1)$, **bounded**
@@ -360,11 +360,11 @@ canonical/theorem_status.md                        (main 동기 update)
 **Numerical confirmation (L=12 free-BC, Phase 2)**:
 | 측정량 | 값 | 의미 |
 |--------|----|----|
-| $\|g_\text{cl}(u_0^*)\|$ | 2.11 | Step 3 g_cl ≠ 0 확인 |
-| $\|g_\text{sep}(u_0^*)\|$ | 7.03 | Step 4 g_sep ≠ 0 확인 |
+| $\lVert g_\text{cl}(u_0^*) \rVert$ | 2.11 | Step 3 g_cl ≠ 0 확인 |
+| $\lVert g_\text{sep}(u_0^*) \rVert$ | 7.03 | Step 4 g_sep ≠ 0 확인 |
 | $\cos(g_\text{cl}, g_\text{sep})$ | **−0.76** (≠ −1) | Step 5 generic regime 확인 |
-| $\|g_\text{full}\|$ analytic | 5.59 | Lemma 4 quadratic form |
-| $\|g_\text{full}\|$ numerical | **5.589** | 3-digit quantitative 일치 |
+| $\lVert g_\text{full} \rVert$ analytic | 5.59 | Lemma 4 quadratic form |
+| $\lVert g_\text{full} \rVert$ numerical | **5.589** | 3-digit quantitative 일치 |
 | Flow endpoint 𝓕 | **F=1 → F=9** | (ii) multi-peak attractor 직접 관측 |
 
 **Phase 3C dichotomy (L=32, IC protocol)**:

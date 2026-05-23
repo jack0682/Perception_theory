@@ -226,7 +226,7 @@ User asked in `92_critical_review_round2.md` §13 discussion topics:
 
 **With O5' + O7 jointly applied**, the T-σ-Theorem-4 (v) σ-tuple becomes:
 
-$$\sigma(u^*_\epsilon)\big|_{D_4} = \big(\mathcal{F}; (1, [+1], 4|W''(c)|\epsilon),\ (1, [-1], 4|W''(c)|\epsilon),\ \ldots\big)$$
+$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (1, [+1], 4|W''(c)|\epsilon),\ (1, [-1], 4|W''(c)|\epsilon),\ \ldots\big)$$
 
 The two entries are separately listed (O5' multi-set doesn't apply because each is a 1-dim sub-eigenspace at the same eigenvalue, not a multi-irrep block). Their ordering follows O7: $[+1]$ before $[-1]$ (Z_2 convention).
 

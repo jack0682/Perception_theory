@@ -11,13 +11,13 @@
 ## §1. OP-0011 Step 2 statement
 
 **Original (working-file §7.1, Session V):**
-> Lift the site-level transport confinement bound $\|\tilde u - u_t\|_2 \leq C_\mathrm{conf}\sqrt{m}$ (T-Persist-1(e), canonical) to the component-level mass bound:
+> Lift the site-level transport confinement bound $\lVert \tilde u - u_t \rVert_2 \leq C_\mathrm{conf}\sqrt{m}$ (T-Persist-1(e), canonical) to the component-level mass bound:
 > $$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \;\leq\; \epsilon_\mathrm{kernel}(C_i^t, C_j^s)$$
 > for any two E1–E4-admissible plans $M, M'$ on the same fields and cost.
 
 **Two routes today.**
 
-- **Route A (Sinkhorn cost-perturbation).** Treat $M, M'$ as ε_OT-Sinkhorn optima of two slightly different costs $c, c'$ with $\|c - c'\|_\infty \leq \delta$. Use Sinkhorn-Lipschitz to bound $\|M - M'\|_\mathrm{TV}$. Component-level bound follows.
+- **Route A (Sinkhorn cost-perturbation).** Treat $M, M'$ as ε_OT-Sinkhorn optima of two slightly different costs $c, c'$ with $\lVert c - c' \rVert_\infty \leq \delta$. Use Sinkhorn-Lipschitz to bound $\lVert M - M' \rVert_\mathrm{TV}$. Component-level bound follows.
 - **Route B (Definitional refinement of E3).** Narrow the canonical E3 (core-inheritance solution constraint) to "M is the entropic-OT optimum of self-referential cost". Then E1–E4 admits a *unique* plan (Sinkhorn uniqueness theorem), so $\epsilon_\mathrm{kernel} = 0$ trivially.
 
 Both routes today; Route B is a *canonical proposal*, Route A is a *theorem*.
@@ -30,13 +30,13 @@ Both routes today; Route B is a *canonical proposal*, Route A is a *theorem*.
 
 Let $M, M'$ be ε_OT-entropic-OT optima of:
 $$M = \arg\min_{P \in \Pi(u_t, u_s)} \big[\langle c, P\rangle + \varepsilon_\mathrm{OT} H(P)\big], \quad M' = \arg\min_{P \in \Pi(u_t, u_s)} \big[\langle c', P\rangle + \varepsilon_\mathrm{OT} H(P)\big],$$
-with $\|c - c'\|_\infty \leq \delta$ and the same target marginals $u_t, u_s$.
+with $\lVert c - c' \rVert_\infty \leq \delta$ and the same target marginals $u_t, u_s$.
 
 ### §2.2 Lemma 9 — Sinkhorn TV-stability under cost perturbation
 
-**Lemma 9 (cost-perturbation TV stability).** *Under (A1)–(A3) + ε_OT > 0 + the cost-perturbation hypothesis $\|c - c'\|_\infty \leq \delta$, the entropic-OT optima satisfy:*
-$$\|M - M'\|_\mathrm{TV} \;\leq\; \frac{2\,M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}},$$
-*where $M_\mathrm{tot} = \sum_{x,y} M(x,y) = \min(\|u_t\|_1, \|u_s\|_1) \leq M$.*
+**Lemma 9 (cost-perturbation TV stability).** *Under (A1)–(A3) + ε_OT > 0 + the cost-perturbation hypothesis $\lVert c - c' \rVert_\infty \leq \delta$, the entropic-OT optima satisfy:*
+$$\lVert M - M' \rVert_\mathrm{TV} \;\leq\; \frac{2\,M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}},$$
+*where $M_\mathrm{tot} = \sum_{x,y} M(x,y) = \min(\lVert u_t \rVert_1, \lVert u_s \rVert_1) \leq M$.*
 
 **Proof.** Standard Sinkhorn perturbation (cf. Genevay-Peyré-Cuturi 2018 Prop 4.3; Mena-Niles-Weed 2019 Thm 2.4). Sketch:
 
@@ -45,21 +45,21 @@ $$f_M(x) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\sum_y \exp((g_M(y) - c(x,y))/\v
 similarly for $M'$. Subtracting:
 $$f_M(x) - f_{M'}(x) = -\varepsilon_\mathrm{OT}\,\log\!\Big(\frac{\sum_y \exp((g_M(y) - c(x,y))/\varepsilon_\mathrm{OT})}{\sum_y \exp((g_{M'}(y) - c'(x,y))/\varepsilon_\mathrm{OT})}\Big).$$
 
-Using the log-sum-exp bound $|\log\sum a e^{u_x} - \log \sum a e^{v_x}| \leq \max_x |u_x - v_x|$:
-$$|f_M - f_{M'}| \leq \max_y \Big|\frac{g_M(y) - g_{M'}(y) - c(x,y) + c'(x,y)}{\varepsilon_\mathrm{OT}}\Big| \cdot \varepsilon_\mathrm{OT}.$$
+Using the log-sum-exp bound $|\log\sum a e^{u_x} - \log \sum a e^{v_x}| \leq \max_x \lvert u_x - v_x \rvert$:
+$$\lvert f_M - f_{M'} \rvert \leq \max_y \Big\vert\frac{g_M(y) - g_{M'}(y) - c(x,y) + c'(x,y)}{\varepsilon_\mathrm{OT}}\Big\vert \cdot \varepsilon_\mathrm{OT}.$$
 
 Combining with the symmetric bound on $g$ and the contraction property of Sinkhorn iteration (Hilbert metric contraction with rate $1 - 2\eta$ where $\eta$ depends on cost spread):
-$$\|f_M - f_{M'}\|_\infty + \|g_M - g_{M'}\|_\infty \leq 2 \cdot \frac{\delta}{1 - (1-2\eta)} \leq \frac{\delta}{\eta}.$$
+$$\lVert f_M - f_{M'} \rVert_\infty + \lVert g_M - g_{M'} \rVert_\infty \leq 2 \cdot \frac{\delta}{1 - (1-2\eta)} \leq \frac{\delta}{\eta}.$$
 
-For our cost class, $\eta \geq 1/2$ (canonical 3-component fingerprint + spatial), so $\|f_M - f_{M'}\| + \|g_M - g_{M'}\| \leq 2\delta$.
+For our cost class, $\eta \geq 1/2$ (canonical 3-component fingerprint + spatial), so $\lVert f_M - f_{M'} \rVert + \lVert g_M - g_{M'} \rVert \leq 2\delta$.
 
 The plan difference:
 $$M(x,y) - M'(x,y) = \exp((f_M+g_M-c)/\varepsilon_\mathrm{OT}) - \exp((f_{M'}+g_{M'}-c')/\varepsilon_\mathrm{OT}).$$
-Using $|e^a - e^b| \leq e^{\max(a,b)}|a - b|$ and bounding by total mass:
-$$\|M - M'\|_1 = \sum_{x,y}|M(x,y) - M'(x,y)| \leq M_\mathrm{tot} \cdot \frac{\|f_M - f_{M'}\| + \|g_M - g_{M'}\| + \|c - c'\|_\infty}{\varepsilon_\mathrm{OT}} \leq \frac{2 M_\mathrm{tot} \delta}{\varepsilon_\mathrm{OT}}.$$
+Using $\lvert e^a - e^b \rvert \leq e^{\max(a,b)}\lvert a - b \rvert$ and bounding by total mass:
+$$\lVert M - M' \rVert_1 = \sum_{x,y}\lvert M(x,y) - M'(x,y) \rvert \leq M_\mathrm{tot} \cdot \frac{\lVert f_M - f_{M'} \rVert + \lVert g_M - g_{M'} \rVert + \lVert c - c' \rVert_\infty}{\varepsilon_\mathrm{OT}} \leq \frac{2 M_\mathrm{tot} \delta}{\varepsilon_\mathrm{OT}}.$$
 
-The TV norm satisfies $\|M - M'\|_\mathrm{TV} = \frac{1}{2}\|M - M'\|_1$, so:
-$$\|M - M'\|_\mathrm{TV} \leq \frac{M_\mathrm{tot} \delta}{\varepsilon_\mathrm{OT}}.$$
+The TV norm satisfies $\lVert M - M' \rVert_\mathrm{TV} = \frac{1}{2}\lVert M - M' \rVert_1$, so:
+$$\lVert M - M' \rVert_\mathrm{TV} \leq \frac{M_\mathrm{tot} \delta}{\varepsilon_\mathrm{OT}}.$$
 
 (The factor 2 in the lemma statement is for safety with constants; the proof gives $M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$.) $\square$
 
@@ -71,7 +71,7 @@ $$\|M - M'\|_\mathrm{TV} \leq \frac{M_\mathrm{tot} \delta}{\varepsilon_\mathrm{O
 $$|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| \;\leq\; \frac{2\,M_\mathrm{tot}\,\delta}{\varepsilon_\mathrm{OT}} \;=:\; \epsilon_\mathrm{kernel},$$
 *independent of the specific component $(i,j)$.*
 
-**Proof.** $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)| = |\sum_{x \in C_i^t, y \in C_j^s} (M(x,y) - M'(x,y))| \leq \|M - M'\|_1 \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$. $\square$
+**Proof.** $|\gamma_M(C_i^t, C_j^s) - \gamma_{M'}(C_i^t, C_j^s)\lvert = \rvert\sum_{x \in C_i^t, y \in C_j^s} (M(x,y) - M'(x,y))| \leq \lVert M - M' \rVert_1 \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$. $\square$
 
 **Note on tightness.** The bound is uniform across $(i,j)$, not tightened by component sizes. Tighter component-aware bounds (factor $|C_i^t \times C_j^s|/n^2$) are possible but require entry-wise rather than total-mass control; Cat B holds at the uniform level.
 
@@ -85,9 +85,9 @@ $$\Delta_\mathrm{sep}(M) \;\geq\; \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kerne
 
 ### §2.5 Cost-perturbation source in SCC
 
-In SCC, the cost $c$ is *self-referential*: $c[u](x,y) = \|\varphi(u)(x) - \varphi(u)(y)\|^2 + \mathrm{spatial}$. Two admissible plans on the same field $u_t$ use the same $\varphi(u_t)$, hence the *same* cost — $\delta = 0$ — hence $\epsilon_\mathrm{kernel} = 0$ and Lemma 11 trivially gives kernel independence.
+In SCC, the cost $c$ is *self-referential*: $c[u](x,y) = \lVert \varphi(u)(x) - \varphi(u)(y) \rVert^2 + \mathrm{spatial}$. Two admissible plans on the same field $u_t$ use the same $\varphi(u_t)$, hence the *same* cost — $\delta = 0$ — hence $\epsilon_\mathrm{kernel} = 0$ and Lemma 11 trivially gives kernel independence.
 
-The non-trivial scenario for Lemma 11 is when the *self-referential update* of the cost is approximate (e.g., one fixed-point iteration vs another), giving $\delta = O(\|\varphi(u^{(k+1)}) - \varphi(u^{(k)})\|_\infty)$. By the Schauder fixed-point existence (T-Persist-1(e) line 1805–1806 canonical), this $\delta \to 0$ in the convergence limit, so $\epsilon_\mathrm{kernel} \to 0$.
+The non-trivial scenario for Lemma 11 is when the *self-referential update* of the cost is approximate (e.g., one fixed-point iteration vs another), giving $\delta = O(\lVert \varphi(u^{(k+1)}) - \varphi(u^{(k)}) \rVert_\infty)$. By the Schauder fixed-point existence (T-Persist-1(e) line 1805–1806 canonical), this $\delta \to 0$ in the convergence limit, so $\epsilon_\mathrm{kernel} \to 0$.
 
 **Status of Lemma 11:** Cat B (Cat A path: the Sinkhorn-Lipschitz step in Lemma 9 needs Cat A promotion = same S-B2 sub-step as `03_development.md` §13.2).
 
@@ -138,7 +138,7 @@ Route B is **logically simpler** but **conceptually heavier** (changes E3 from d
 
 **Refined OP-0011 entry suggestion for `theorem_status.md`:**
 
-> **OP-0011** Status: PARTIALLY RESOLVED via Lemma 10 (`THEORY/logs/daily/2026-05-07/06_close_OP0011_step2.md` §2.3): Sinkhorn cost-perturbation gives $\epsilon_\mathrm{kernel} \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ where $\delta = \|c - c'\|_\infty$. In the self-referential cost regime $\delta = 0$, hence $\epsilon_\mathrm{kernel} = 0$ trivially. Definitional refinement of E3 (Route B) further trivializes uniqueness. Cat A: requires S-B2 promotion of Sinkhorn-Lipschitz to canonical Cat A.
+> **OP-0011** Status: PARTIALLY RESOLVED via Lemma 10 (`THEORY/logs/daily/2026-05-07/06_close_OP0011_step2.md` §2.3): Sinkhorn cost-perturbation gives $\epsilon_\mathrm{kernel} \leq 2 M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$ where $\delta = \lVert c - c' \rVert_\infty$. In the self-referential cost regime $\delta = 0$, hence $\epsilon_\mathrm{kernel} = 0$ trivially. Definitional refinement of E3 (Route B) further trivializes uniqueness. Cat A: requires S-B2 promotion of Sinkhorn-Lipschitz to canonical Cat A.
 
 ### §4.2 T-Temporal-Identity part (c) status: **Cat C → Cat B**
 

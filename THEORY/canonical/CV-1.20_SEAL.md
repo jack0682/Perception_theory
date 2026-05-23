@@ -61,9 +61,9 @@ CV-1.19 SEAL (오후 16:23-16:27) 이후 evening session 의 산출물 (14 worki
 
 ### §2.1 Statement
 
-Let $G = (V, E)$ be a finite connected graph with $|V| = n$. Let $m \in (0, n)$ with $c := m/n \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At the uniform critical $u^* = c\mathbf{1} \in \Sigma_m$, the kernel of the constrained Hessian of the full SCC energy on $\mathbf{1}^\perp$ decomposes purely into Type A (critical zero) and Type B (eigenvalue-multiplicity) modes:
+Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$. Let $m \in (0, n)$ with $c := m/n \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At the uniform critical $u^* = c\mathbf{1} \in \Sigma_m$, the kernel of the constrained Hessian of the full SCC energy on $\mathbf{1}^\perp$ decomposes purely into Type A (critical zero) and Type B (eigenvalue-multiplicity) modes:
 
-$$\boxed{\ker H(u^*)\big|_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G), \qquad K^* := \{k \in \{2,\ldots,n\} : \mu_k = 0\}}$$
+$$\boxed{\ker H(u^*)\big\vert_{\mathbf{1}^\perp} = \bigoplus_{k \in K^*} V_{\lambda_k}(L_G), \qquad K^* := \{k \in \{2,\ldots,n\} : \mu_k = 0\}}$$
 
 where $\mu_k = 4\alpha\lambda_k(L_G) + \beta W''(c)$. **Type C (continuous Goldstone / orbit-tangent) zero modes are absent at the uniform critical point.**
 

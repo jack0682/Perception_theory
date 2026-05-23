@@ -36,7 +36,7 @@ For canonical $\alpha = 1$: $\xi_0 = \sqrt{2/\beta}$. So:
 - $\beta = 0.5$: $\xi_0 = 2$ (supra-lattice).
 - $\beta = 0.08$: $\xi_0 = 5$ (deep supra-lattice).
 
-Note: $\beta_{\mathrm{crit}}^{(2)} = 4\lambda_2/|W''(c)|$ on 2D 64×64 is $\approx 0.039$ (from `mode_count.md` §1.4). So $\beta \leq 0.08$ is **near-critical** (factor-2 above threshold). Supra-lattice regime is **physically the near-critical regime**.
+Note: $\beta_{\mathrm{crit}}^{(2)} = 4\lambda_2/\lvert W''(c) \rvert$ on 2D 64×64 is $\approx 0.039$ (from `mode_count.md` §1.4). So $\beta \leq 0.08$ is **near-critical** (factor-2 above threshold). Supra-lattice regime is **physically the near-critical regime**.
 
 ---
 
@@ -157,14 +157,14 @@ $$\boxed{\,p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4) \qu
 
 As $\xi_0/a \to \infty$: $p \to 1$ quadratically in $a/\xi_0$.
 
-Equivalently: $|p - 1| \sim (a/\xi_0)^2$, i.e., the effective profile converges to pure tanh with $(a/\xi_0)^2$ rate.
+Equivalently: $\lvert p - 1 \rvert \sim (a/\xi_0)^2$, i.e., the effective profile converges to pure tanh with $(a/\xi_0)^2$ rate.
 
 ---
 
 ## §5. Convergence rate theorem
 
 > **Cor 2.2 Supra-Lattice Theorem (Round 9, Cat A).** In the regime $\xi_0 \gg a$ (supra-lattice / near-critical), the SCC-minimizer profile converges to the continuum tanh:
-> $$\|u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot)\|_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),$$
+> $$\lVert u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot) \rVert_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),$$
 > and the effective shape parameter from fitting $u_p$ to $u_{\mathrm{SCC}}$ satisfies
 > $$p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4),$$
 > with $C_p = O(1)$ numerical constant determined by the Allen-Cahn linearized operator and the specific $u_p$ ansatz.
@@ -174,7 +174,7 @@ Equivalently: $|p - 1| \sim (a/\xi_0)^2$, i.e., the effective profile converges 
 ### 5.1 Implications
 
 - **Pure tanh is recovered exactly** in the $\xi_0/a \to \infty$ limit.
-- **Deviation is perturbative** at supra-lattice: at $\xi_0/a = 5$, predicted $|p - 1| \sim 0.025 \cdot C_p$, i.e., ~2% modulation for $C_p \approx 1$ — consistent with "near-critical tanh-like profile".
+- **Deviation is perturbative** at supra-lattice: at $\xi_0/a = 5$, predicted $\lvert p - 1 \rvert \sim 0.025 \cdot C_p$, i.e., ~2% modulation for $C_p \approx 1$ — consistent with "near-critical tanh-like profile".
 - **Sub-lattice regime is fundamentally different**: expansion parameter $(a/\xi_0)^2 \gg 1$ at $\xi_0 < a$, breakdown of perturbation theory. Round 2's $p = 1.256$ is a sub-lattice Cat B result, not an extrapolation of Round 9 Cat A.
 
 ---
@@ -185,9 +185,9 @@ Equivalently: $|p - 1| \sim (a/\xi_0)^2$, i.e., the effective profile converges 
 
 Round 2: $\xi_0 = 0.2$, $a = 1$ (canonical lattice units). $\xi_0/a = 0.2$ ⇒ $(a/\xi_0)^2 = 25$.
 
-Round 9 supra-lattice theory: $|p - 1| \sim C_p \cdot 25/12 \approx 2 C_p$.
+Round 9 supra-lattice theory: $\lvert p - 1 \rvert \sim C_p \cdot 25/12 \approx 2 C_p$.
 
-At $C_p = O(1)$: predicted $|p - 1| \sim 2$, i.e., $p \in \{−1, 3\}$. Round 2 measured $p = 1.256$, i.e., $|p - 1| = 0.256$.
+At $C_p = O(1)$: predicted $\lvert p - 1 \rvert \sim 2$, i.e., $p \in \{−1, 3\}$. Round 2 measured $p = 1.256$, i.e., $\lvert p - 1 \rvert = 0.256$.
 
 **Interpretation:** At sub-lattice, the perturbation series has expansion parameter >1 and does NOT converge. Truncating at first order gives wildly wrong predictions. Round 2's measured $p = 1.256$ is a **non-perturbative** result from direct numerical optimization, not a perturbative approximation.
 
@@ -196,8 +196,8 @@ This is consistent — the Round 9 Cat A result applies in the supra-lattice reg
 ### 6.2 Supra-lattice verification target
 
 To verify Round 9 prediction numerically, run `exp_profile_fit.py` at:
-- $\beta = 0.5, \alpha = 1$: $\xi_0 = 2$, $(a/\xi_0)^2 = 0.25$, predicted $|p - 1| \sim 0.021 C_p \approx 0.02$.
-- $\beta = 0.1, \alpha = 1$: $\xi_0 = 4.47$, $(a/\xi_0)^2 = 0.05$, predicted $|p - 1| \sim 0.004 C_p \approx 0.004$.
+- $\beta = 0.5, \alpha = 1$: $\xi_0 = 2$, $(a/\xi_0)^2 = 0.25$, predicted $\lvert p - 1 \rvert \sim 0.021 C_p \approx 0.02$.
+- $\beta = 0.1, \alpha = 1$: $\xi_0 = 4.47$, $(a/\xi_0)^2 = 0.05$, predicted $\lvert p - 1 \rvert \sim 0.004 C_p \approx 0.004$.
 
 But: these near-critical regimes require much larger grids to avoid finite-size artifacts. The formation itself only exists at $\beta > \beta_{\mathrm{crit}}^{(2)}$, and for large $L = 64$: $\beta_{\mathrm{crit}}^{(2)} \approx 0.039$. So $\beta = 0.1$ is ~2.5× threshold, near-critical. Formations are **large** (scale with $\xi_0$), requiring $L \gg \xi_0$ for multiple formations; but near-critical, only 1-2 formations fit in the system.
 
@@ -221,7 +221,7 @@ Round 9 Cat A applies strictly for $\beta < 2\alpha$ (supra-lattice) in canonica
 
 3. **Source orthogonality** $\int u_0' u_0^{(4)} = 0$ by parity — existence of bounded correction $u_1$.
 
-4. **Cor 2.2 Supra-Lattice Theorem**: $\|u_{\mathrm{SCC}} - u_{\mathrm{tanh}}\|_{L^\infty} = O((a/\xi_0)^2)$, $p - 1 = O((a/\xi_0)^2)$.
+4. **Cor 2.2 Supra-Lattice Theorem**: $\lVert u_{\mathrm{SCC}} - u_{\mathrm{tanh}} \rVert_{L^\infty} = O((a/\xi_0)^2)$, $p - 1 = O((a/\xi_0)^2)$.
 
 5. **Sub-lattice vs supra-lattice regime distinction** with crossover at $\xi_0 = a$ ($\beta = 2\alpha$ canonical).
 
@@ -240,7 +240,7 @@ Round 9 Cat A applies strictly for $\beta < 2\alpha$ (supra-lattice) in canonica
 **Before Round 9:** "Cat B at sub-lattice with $p = 1.256$; expected to converge Cat A at supra-lattice."
 
 **After Round 9:** Framework closed:
-- **Supra-lattice ($\xi_0 \gg a$):** Cat A with explicit rate $|p - 1| = O((a/\xi_0)^2)$.
+- **Supra-lattice ($\xi_0 \gg a$):** Cat A with explicit rate $\lvert p - 1 \rvert = O((a/\xi_0)^2)$.
 - **Sub-lattice ($\xi_0 \ll a$):** Cat B, $p$ set by non-perturbative discretization physics.
 - **Crossover:** $\xi_0 \sim a$ (at $\beta \sim 2\alpha$ canonical).
 

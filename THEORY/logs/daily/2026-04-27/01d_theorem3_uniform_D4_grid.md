@@ -13,11 +13,11 @@
 
 ## §1. Setup
 
-$G$ = free-BC $L \times L$ 2D square grid. $|X| = n = L^2$. $\Gamma = \mathrm{Aut}(G) = D_4$ (4 rotations + 4 reflections about grid center; $|\Gamma| = 8$). Combinatorial Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1^{\mathrm{Lap}} < \lambda_2^{\mathrm{Lap}} \leq \cdots \leq \lambda_n^{\mathrm{Lap}}$.
+$G$ = free-BC $L \times L$ 2D square grid. $\lvert X \rvert = n = L^2$. $\Gamma = \mathrm{Aut}(G) = D_4$ (4 rotations + 4 reflections about grid center; $|\Gamma| = 8$). Combinatorial Laplacian $L_G = D - A$ with eigenvalues $0 = \lambda_1^{\mathrm{Lap}} < \lambda_2^{\mathrm{Lap}} \leq \cdots \leq \lambda_n^{\mathrm{Lap}}$.
 
 Take $u^* = c\mathbf{1}$ with **spinodal regime** $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6) \approx (0.211, 0.789)$ (canonical §11 Commitment 10 spinodal). Stabilizer $G_u = D_4$ (full graph automorphism preserves constant function).
 
-Choose $\beta < \beta_{\mathrm{crit}}^{(2)} := 4\alpha \lambda_2^{\mathrm{Lap}} / |W''(c)|$ (sub-critical for first pitchfork) so that $u^* = c\mathbf{1}$ is Morse-0 stable.
+Choose $\beta < \beta_{\mathrm{crit}}^{(2)} := 4\alpha \lambda_2^{\mathrm{Lap}} / \lvert W''(c) \rvert$ (sub-critical for first pitchfork) so that $u^* = c\mathbf{1}$ is Morse-0 stable.
 
 **Note on sign convention** (per `pre_brainstorm.md` §1.5): at $c = 0.5$, $W''(c) = -1$ for $W(u) = u^2(1-u)^2$ (since $W''(u) = 2 - 12u + 12u^2$, so $W''(0.5) = 2 - 6 + 3 = -1$). At $c = (3-\sqrt{3})/6$, $W''(c) = 0$ (spinodal boundary). For $c$ in spinodal interior, $W''(c) < 0$.
 
@@ -69,7 +69,7 @@ At $c = 0.5$: $W''(0.5) = -1$. Hence $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - 
 
 **Sign of $W''(c)$ in spinodal:** $W''(c) < 0$ throughout spinodal interior. Hence $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c) = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)|$.
 
-For sub-critical $\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}} / |W''(c)|$: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)| > 4\alpha(\lambda_k^{\mathrm{Lap}} - \lambda_2^{\mathrm{Lap}}) \geq 0$ (positive for $k \geq 2$, zero for $k = 2$ at $\beta = \beta_{\mathrm{crit}}^{(2)}$). ✓ Morse-0 confirmed.
+For sub-critical $\beta < \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2^{\mathrm{Lap}} / \lvert W''(c) \rvert$: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)| > 4\alpha(\lambda_k^{\mathrm{Lap}} - \lambda_2^{\mathrm{Lap}}) \geq 0$ (positive for $k \geq 2$, zero for $k = 2$ at $\beta = \beta_{\mathrm{crit}}^{(2)}$). ✓ Morse-0 confirmed.
 
 **At $c$ near $c = 0.5$ symmetric:** $W'''(0.5) = 12(2 \cdot 0.5 - 1) = 0$ (using $W''' = -12 + 24u$). This vanishing has consequences for Theorem 4 (first-pitchfork analysis) — the leading-order $\sqrt{\epsilon}$ perturbation in Hessian vanishes at $c = 0.5$, requiring $O(\epsilon)$ second-order terms.
 
@@ -118,7 +118,7 @@ Cutoff $K$ (option K-A with $c_{\mathrm{cut}} = 10$): $\mu_{0+} = 4\alpha + \bet
 ### Step 1 — Hessian at uniform (Prop 1.3a).
 
 Per `working/SF/mode_count.md` §1.1 (Cat A), the constrained Hessian at uniform $u = c\mathbf{1}$ is
-$$H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I \;\Big|_{\mathbf{1}^\perp}.$$
+$$H(c\mathbf{1}) = 4\alpha L_G + \beta W''(c) I \;\Big\vert_{\mathbf{1}^\perp}.$$
 The factor 4 comes from the ordered-pair convention (`canonical.md` §0) on the boundary energy: $\mathcal{E}_{\mathrm{bd}} = 2\alpha\, u^\top L_G u + \beta \sum W(u_i)$, gradient $4\alpha L_G u + \beta W'(u)$, Hessian $4\alpha L_G + \beta\,\mathrm{diag}(W''(u))$. At constant $u = c\mathbf{1}$, $\mathrm{diag}(W''(c)) = W''(c) I$.
 
 (Closure and separation contributions: at constant $u$, $\mathrm{Cl}(c\mathbf{1}) = c\mathbf{1}$ for the canonical sigmoid closure with appropriate fixed point; gradients of $\mathcal{E}_{\mathrm{cl}}$ and $\mathcal{E}_{\mathrm{sep}}$ at constant $u$ are zero by direct calculation of the canonical operator forms.)

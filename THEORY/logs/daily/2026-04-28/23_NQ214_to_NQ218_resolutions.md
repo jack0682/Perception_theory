@@ -109,14 +109,14 @@ Full closed-form requires NQ-214b (W7+ work).
 
 ### §2.1 The cluster geometry
 
-For corner-saturated F=1 minimizer (regime R3b), saturation set $S = \{x : u(x) = 1\}$ has $|S| \approx m$ sites. The cluster-boundary $\partial S = \{(x, y) \in S \times \bar S : x \sim y\}$ has $|\partial S|$ edges.
+For corner-saturated F=1 minimizer (regime R3b), saturation set $S = \{x : u(x) = 1\}$ has $\lvert S \rvert \approx m$ sites. The cluster-boundary $\partial S = \{(x, y) \in S \times \bar S : x \sim y\}$ has $|\partial S|$ edges.
 
-For an isoperimetric cluster on 2D lattice (square shape): $|\partial S| \sim 4\sqrt{|S|} = 4\sqrt m$.
+For an isoperimetric cluster on 2D lattice (square shape): $|\partial S| \sim 4\sqrt{\lvert S \rvert} = 4\sqrt m$.
 
-For circular tanh-disk shape (smoother interface): $|\partial S| \sim 2\pi \sqrt{|S|/\pi} = 2\sqrt{\pi |S|} \approx 3.54 \sqrt{|S|}$.
+For circular tanh-disk shape (smoother interface): $|\partial S| \sim 2\pi \sqrt{\lvert S \rvert/\pi} = 2\sqrt{\pi \lvert S \rvert} \approx 3.54 \sqrt{\lvert S \rvert}$.
 
 **Formula**:
-$$|\partial S| \approx C \sqrt{|S|}, \quad C \in [3.54, 4]. \tag{2.1}$$
+$$|\partial S| \approx C \sqrt{\lvert S \rvert}, \quad C \in [3.54, 4]. \tag{2.1}$$
 
 ### §2.2 PN-barrier scaling (g_∂Cluster)
 
@@ -146,7 +146,7 @@ Hmm, for SUB-lattice $\xi_0 < a$: the exponential factor is intended for SUPER-l
 
 Phase 5 **scope clarification**: NQ-215 boundary perimeter formula applies in SUPER-lattice regime where smooth tanh-disk approximation is valid. In sub-lattice (R3b), cluster has discrete shape, $|\partial S| \approx \mathrm{const}$ (lattice-discrete).
 
-For NQ-173 (R3b) at L=20, $|S| \approx 19$ saturated sites: $|\partial S| \approx 4\sqrt{19} \approx 17$ edges. So $g_{\partial} \approx 17/\xi_0 \approx 34$ at $\xi_0 = 0.5$.
+For NQ-173 (R3b) at L=20, $\lvert S \rvert \approx 19$ saturated sites: $|\partial S| \approx 4\sqrt{19} \approx 17$ edges. So $g_{\partial} \approx 17/\xi_0 \approx 34$ at $\xi_0 = 0.5$.
 
 Then $\mu_{\mathrm{Gold}}^{\mathrm{lifted}} \approx \beta \cdot 34 \approx 136$. But measured $\mu_{\mathrm{Gold}} \approx 0.65$ (NQ-173 mode 2). Off by factor 200.
 

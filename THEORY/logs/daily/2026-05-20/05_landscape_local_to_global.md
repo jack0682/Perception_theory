@@ -130,7 +130,7 @@ $$s_\pm = \frac{3 \mp \sqrt{3}}{6} \approx 0.211 \text{ 또는 } 0.789$$
 
 ### §1.1.3 국소 해석
 
-> 한 노드는 본질적으로 "0이거나 1이거나" 선택하고 싶어합니다. 중간값은 불안정한 능선 위에 있을 뿐. 그러나 *어떤 중간값에서 능선이 가장 가파른가* (= $|W''(c)|$ 최대) 는 $c = 1/2$.
+> 한 노드는 본질적으로 "0이거나 1이거나" 선택하고 싶어합니다. 중간값은 불안정한 능선 위에 있을 뿐. 그러나 *어떤 중간값에서 능선이 가장 가파른가* (= $\lvert W''(c) \rvert$ 최대) 는 $c = 1/2$.
 
 ---
 
@@ -231,7 +231,7 @@ $$\boxed{\mu_k = 4\alpha\,\lambda_k(L_G) + \beta\,W''(c), \qquad k = 2, \ldots, 
 $$\mu_2 = 4\alpha\,\lambda_2(L_G) + \beta\,W''(c)$$
 
 Spinodal 내부 ($W''(c) < 0$) 에서 처음 0 이 되는 조건:
-$$\boxed{\mu_2 = 0 \iff \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{|W''(c)|}}$$
+$$\boxed{\mu_2 = 0 \iff \frac{\beta}{\alpha} = \frac{4\lambda_2(L_G)}{\lvert W''(c) \rvert}}$$
 
 이것이 canonical T8 — DECLARATION-1.0 의 중심 정리. canonical SB7 (L2540, Cat A) 는 *$\Sigma_{T8} = \Sigma_{\mathrm{Hess}}$ codim-1 algebraic hypersurface*.
 
@@ -278,7 +278,7 @@ Hessian on 1⊥:   μ_k = 4αλ_k + βW''(c),  k = 2,...,n  ← Correction #1
 ### §2.1.1 1단계 — 주변 공간 (Ambient)
 
 가장 큰 공간은 단순한 유클리드:
-$$u \in \mathbb{R}^n, \quad n = |V|$$
+$$u \in \mathbb{R}^n, \quad n = \lvert V \rvert$$
 
 ### §2.1.2 2단계 — 박스 제약 (Box)
 
@@ -582,10 +582,10 @@ $k = 1$ (constant mode) 은 $\Pi$ 에 의해 *물리적으로 제거*. spectrum 
 ### §3.2.2 임계 조건 — Mode 별
 
 Spinodal interior $W''(c) < 0$ 가정. Mode $k$ 가 불안정해지는 조건:
-$$\mu_k < 0 \iff 4\alpha\lambda_k < \beta|W''(c)| \iff \frac{\beta}{\alpha} > \frac{4\lambda_k}{|W''(c)|}$$
+$$\mu_k < 0 \iff 4\alpha\lambda_k < \beta|W''(c)| \iff \frac{\beta}{\alpha} > \frac{4\lambda_k}{\lvert W''(c) \rvert}$$
 
 **Critical ratio 정의** (Correction #1 적용 1-index):
-$$\boxed{r_k^{\text{crit}} := \frac{4\lambda_k(L_G)}{|W''(c)|}, \quad k = 2, 3, \ldots, n}$$
+$$\boxed{r_k^{\text{crit}} := \frac{4\lambda_k(L_G)}{\lvert W''(c) \rvert}, \quad k = 2, 3, \ldots, n}$$
 
 $\beta/\alpha$ 증가하면서 모드들이 *하나씩 순서대로* 불안정:
 $$r_2^{\text{crit}} < r_3^{\text{crit}} < \cdots < r_n^{\text{crit}}$$
@@ -593,7 +593,7 @@ $$r_2^{\text{crit}} < r_3^{\text{crit}} < \cdots < r_n^{\text{crit}}$$
 ### §3.2.3 첫 crossing — T8 (canonical SB7 L2540)
 
 가장 먼저 불안정해지는 것은 Fiedler mode:
-$$\boxed{\frac{\beta}{\alpha} = r_2^{\text{crit}} = \frac{4\lambda_2(L_G)}{|W''(c)|} \iff \mu_2 = 0}$$
+$$\boxed{\frac{\beta}{\alpha} = r_2^{\text{crit}} = \frac{4\lambda_2(L_G)}{\lvert W''(c) \rvert} \iff \mu_2 = 0}$$
 
 이것이 canonical T8 — DECLARATION 의 중심 정리. SB7 (L2540, Cat A): $\Sigma_{T8} = \Sigma_{\mathrm{Hess}}$ codim-1 algebraic hypersurface.
 
@@ -641,7 +641,7 @@ $$L_G v_2 = \lambda_2 v_2, \quad v_2 \in \mathbf{1}^\perp$$
 $v_2$ 는 그래프 이론의 **best 2-way split** — spectral clustering 의 핵심:
 - $v_2(i) > 0$ 인 노드들 = 한 클러스터
 - $v_2(i) < 0$ 인 노드들 = 다른 클러스터
-- $|v_2(i)|$ 클수록 cluster 소속이 강함
+- $\lvert v_2(i) \rvert$ 클수록 cluster 소속이 강함
 
 ### §3.3.2 분기 가지의 초기 거동 (선형)
 
@@ -714,7 +714,7 @@ $W'''(c) = 12(2c - 1) \neq 0$ → quadratic coefficient 살아남. $\mathbb{Z}_2
 ### §3.4.3 Case 3: $c$ 가 spinodal 경계에 가까워질 때
 
 $c \to s_\pm = (3 \mp \sqrt{3})/6$ 에서 $W''(c) \to 0$:
-- 임계 ratio $r_k^{\text{crit}} = 4\lambda_k / |W''(c)| \to \infty$
+- 임계 ratio $r_k^{\text{crit}} = 4\lambda_k / \lvert W''(c) \rvert \to \infty$
 - 임의로 큰 $\beta/\alpha$ 필요
 - Łojasiewicz exponent $1/2 \to 2/3$ (어제 02 §3 의 math-olympiad 발견; L-LOJASIEWICZ-CG L2066 의 non-degenerate Fiedler stratum 제한)
 
@@ -764,7 +764,7 @@ $c \to s_\pm = (3 \mp \sqrt{3})/6$ 에서 $W''(c) \to 0$:
 
 canonical CV-1.19 (L1798, Cat A) 의 정확한 statement:
 
-> "Let $G = (V, E)$ be a finite connected graph with $|V| = n$, mass $M = c \cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At uniform critical $u^* = c\mathbf{1}$ on the T8 critical surface $\Sigma_{T8}$, the dimension of the kernel of the constrained Hessian of the full SCC energy on $T_{c\mathbf{1}}\Sigma_m = \mathbf{1}^\perp$ equals $\mathrm{mult}(\lambda_2(L_G))$."
+> "Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$, mass $M = c \cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At uniform critical $u^* = c\mathbf{1}$ on the T8 critical surface $\Sigma_{T8}$, the dimension of the kernel of the constrained Hessian of the full SCC energy on $T_{c\mathbf{1}}\Sigma_m = \mathbf{1}^\perp$ equals $\mathrm{mult}(\lambda_2(L_G))$."
 
 Case structure:
 - **Case A (regular graph)**: $P = I - L_G/d$ polynomial in $L_G$ → $[J_D, L_G] = 0$ globally → Cat A unconditional
@@ -851,7 +851,7 @@ $$r_2^{\text{crit}} \to r_3^{\text{crit}} \to r_4^{\text{crit}} \to \cdots \to r
 **예시**: T8 임계 $\mu_2 = 0$ (canonical SB7 L2540).
 
 **수식**:
-$$\mu_k(\alpha, \beta, c) = 0 \quad \text{at} \quad \frac{\beta}{\alpha} = r_k^{\text{crit}} = \frac{4\lambda_k(L_G)}{|W''(c)|}$$
+$$\mu_k(\alpha, \beta, c) = 0 \quad \text{at} \quad \frac{\beta}{\alpha} = r_k^{\text{crit}} = \frac{4\lambda_k(L_G)}{\lvert W''(c) \rvert}$$
 
 이 type 은 *crossing 의 isolated parameter set* 에서만 발생.
 
@@ -876,7 +876,7 @@ $$\dim\ker\bigl(H(u^*)|_{\mathbf{1}^\perp}\bigr) = \mathrm{mult}(\lambda_k(L_G))
 ### §3.7.3 Type C — True Goldstone / group-orbit zero mode
 
 **정의**: *비균일해* $u_\star$ (즉 $u_\star \neq c\mathbf{1}$) 가 *연속 대칭군의 orbit* 위에 있을 때, orbit-tangent 방향이 자동 zero:
-$$H(u_\star) \cdot \frac{\partial}{\partial\theta}\bigl(g_\theta \cdot u_\star\bigr)\bigg|_{\theta=0} = 0$$
+$$H(u_\star) \cdot \frac{\partial}{\partial\theta}\bigl(g_\theta \cdot u_\star\bigr)\bigg\vert_{\theta=0} = 0$$
 
 여기서 $g_\theta$ 는 연속 대칭군의 1-parameter subgroup.
 
@@ -944,8 +944,8 @@ $$\mu_k = 4\alpha\lambda_k + \beta W''(c) > 0 \quad \forall k \geq 2$$
 
 $c \in (s_-, s_+)$ 인 경우:
 - 분기 가능
-- 임계 ratio $r_k^{\text{crit}} = 4\lambda_k / |W''(c)|$ 잘 정의
-- $|W''(c)|$ 클수록 (즉 $c \to 1/2$) 임계 ratio 작음 → 분기 더 쉽게
+- 임계 ratio $r_k^{\text{crit}} = 4\lambda_k / \lvert W''(c) \rvert$ 잘 정의
+- $\lvert W''(c) \rvert$ 클수록 (즉 $c \to 1/2$) 임계 ratio 작음 → 분기 더 쉽게
 
 ```
    |W''(c)|

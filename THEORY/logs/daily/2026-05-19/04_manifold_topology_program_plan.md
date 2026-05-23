@@ -103,7 +103,7 @@ phase_completion_count: 19/19
 
 ### B.1 Claim S4 — Σ_T8 codim-1 hypersurface
 
-**Statement**: $\Sigma_{T8} = \{\Theta \in \mathcal{P} : \beta/\alpha = 4\lambda_2(L_G)/|W''(c)|\}$ is a smooth codim-1 algebraic hypersurface in parameter space $\mathcal{P} = \mathbb{R}^4_{>0} \times I_{sp}$.
+**Statement**: $\Sigma_{T8} = \{\Theta \in \mathcal{P} : \beta/\alpha = 4\lambda_2(L_G)/\lvert W''(c) \rvert\}$ is a smooth codim-1 algebraic hypersurface in parameter space $\mathcal{P} = \mathbb{R}^4_{>0} \times I_{sp}$.
 
 **Cat Status**: **Cat A unconditional** (canonical SB7, L2495-2510).
 

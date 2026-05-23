@@ -49,7 +49,7 @@ $$
 Solving for T:
 
 $$
-\boxed{\;\;T^*_{\mathrm{uniform}} \;=\; \frac{\beta\, |W''(c)| - 4\alpha\lambda_2(G) - (\mathrm{cl, sep \ contributions})}{4}\;\;}
+\boxed{\;\;T^*_{\mathrm{uniform}} \;=\; \frac{\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - (\mathrm{cl, sep \ contributions})}{4}\;\;}
 $$
 
 (Valid when W''(c) < 0 — i.e., c ∈ spinodal `(0.211, 0.789)`.)
@@ -69,7 +69,7 @@ At T > T*_uniform ≈ 7.37, **uniform configuration becomes thermodynamically st
 This is **a new C+E-derived theorem** (call it **T-Uniform-Stab-T**):
 
 > **Theorem 1.1 (T-Uniform-Stab-T).** On Σ_m with c = m/n in the spinodal `((3-√3)/6, (3+√3)/6)`, the uniform configuration `u_uniform = c·1` is a local minimum of `ℱ_C+E[·; T, λ_K]` if and only if:
-> $$T \geq T^*_{\mathrm{uniform}} := \frac{\beta\, |W''(c)| - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}}{4 \cdot (1/c + 1/(1-c))/4}$$
+> $$T \geq T^*_{\mathrm{uniform}} := \frac{\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}}{4 \cdot (1/c + 1/(1-c))/4}$$
 > where `r_{cl,sep}` is the closure+separation Hessian contribution at uniform (positive, O(1) under canonical parameters).
 
 Wait — the entropy contribution is not just 4 universally; let me redo carefully. At general c (not just c = 0.5):
@@ -79,7 +79,7 @@ Wait — the entropy contribution is not just 4 universally; let me redo careful
 
 Corrected formula:
 $$
-T^*_{\mathrm{uniform}}(c) \;=\; \frac{\beta\, |W''(c)| - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}}{1/(c(1-c))} \;=\; c(1-c)\cdot \big[\beta\, |W''(c)| - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}\big].
+T^*_{\mathrm{uniform}}(c) \;=\; \frac{\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}}{1/(c(1-c))} \;=\; c(1-c)\cdot \big[\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}\big].
 $$
 
 At c = 0.5: T*_uniform = 0.25 · (30 - 0.4 - 0.125) ≈ 0.25 · 29.5 ≈ 7.37. ✓ (consistent)

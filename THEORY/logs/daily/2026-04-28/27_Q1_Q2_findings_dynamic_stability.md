@@ -24,9 +24,9 @@ Per `_q1_NQ219_volproj.py`:
 
 **Volume-projected H lowest 6 eigvals**: $[-0.0336, -0.0307, -0.0285, -0.0243, -0.0136, -0.0023]$.
 
-**Selected eigvec 0**: λ = -0.0336, with per-formation norms $\|v_1\| = 0.71, \|v_2\| = 0.71$ (split between the two formations) and sums $\sum v_1 = 0, \sum v_2 = 0$ (volume-preserving). ✓ Properly orthogonal to volume tangents.
+**Selected eigvec 0**: λ = -0.0336, with per-formation norms $\lVert v_1 \rVert = 0.71, \lVert v_2 \rVert = 0.71$ (split between the two formations) and sums $\sum v_1 = 0, \sum v_2 = 0$ (volume-preserving). ✓ Properly orthogonal to volume tangents.
 
-**Predicted dynamic rate**: $|λ| = 0.0336$, $τ_{lin} = 29.7$.
+**Predicted dynamic rate**: $\lvert λ \rvert = 0.0336$, $τ_{lin} = 29.7$.
 
 **Measured dynamic rate**: $-0.0195$ (NEGATIVE — perturbation DECAYS at rate 0.0195).
 

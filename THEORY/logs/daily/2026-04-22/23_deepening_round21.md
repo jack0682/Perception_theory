@@ -13,7 +13,7 @@
 ## §1. Pre-registered hypothesis (Round 9 §11 Cat A claim)
 
 > **Cor 2.2 Supra-Lattice Theorem (Round 9, Cat A).** In the regime $\xi_0 \gg a$:
-> $$\|u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot)\|_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right), \quad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4)$$
+> $$\lVert u_{\mathrm{SCC}}(\cdot) - u_{\mathrm{tanh}}(\cdot) \rVert_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right), \quad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4)$$
 > Pure tanh recovered exactly as $\xi_0/a \to \infty$, with quadratic convergence rate.
 
 **Test design**: 9 configs spanning $\xi_{\mathrm{th}} = \sqrt{\alpha/\beta} \in [1.0, 3.16]$ on 48×48 grid, c=0.3, n_inits=24.

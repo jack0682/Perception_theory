@@ -34,7 +34,7 @@
 ### 2.1 The problem
 
 T-σ-Theorem-4 (v) σ-signature on $D_4$:
-$$\sigma(u^*_\epsilon)\big|_{D_4} = \big(\mathcal{F}; (2, [+1], 4|W''(c)|\epsilon),\ (2, [-1], 4|W''(c)|\epsilon),\ \ldots\big).$$
+$$\sigma(u^*_\epsilon)\big\vert_{D_4} = \big(\mathcal{F}; (2, [+1], 4|W''(c)|\epsilon),\ (2, [-1], 4|W''(c)|\epsilon),\ \ldots\big).$$
 
 Both first two entries have **identical eigenvalue** $\lambda = 4|W''(c)|\epsilon$ but **different irrep labels** ($[+1]$ trivial vs $[-1]$ sign).
 

@@ -50,10 +50,10 @@ $ grep -nE "§4\.6\.1|§4\.9\.1" THEORY/canonical/auxiliary_structures_master.md
 
 ### §1.1 Statement B.2.1 — Fixed-point map ψ definition
 
-**Statement B.2.1** *(Definition, technical).* Let $G = (V, E)$ be a finite connected graph with $|V| = n$, mass $M \in (0, 1)$, and SCC energy $\mathcal{E}_{\mathrm{SCC}}$ on the field polytope $\mathcal{F}_M(G) \subset \Sigma_m$. For each $T > 0$, the Gibbs measure
+**Statement B.2.1** *(Definition, technical).* Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$, mass $M \in (0, 1)$, and SCC energy $\mathcal{E}_{\mathrm{SCC}}$ on the field polytope $\mathcal{F}_M(G) \subset \Sigma_m$. For each $T > 0$, the Gibbs measure
 $$\pi_T(du) = Z(T)^{-1} \exp(-\mathcal{E}_{\mathrm{SCC}}(u)/T)\, d\sigma_M(u)$$
 is well-defined (canonical T-PF-A1-GI Cat A, L1689+). Define the *variance map*
-$$\psi : (0, \infty) \to [0, M_*], \quad \psi(T) := \mathbb{E}_{\pi_T}\!\left[\,\|u - \mathbb{E}_{\pi_T}[u]\|^2\,\right]$$
+$$\psi : (0, \infty) \to [0, M_*], \quad \psi(T) := \mathbb{E}_{\pi_T}\!\left[\,\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2\,\right]$$
 where $M_* < \infty$ is the supremum of variance over the bounded polytope $\mathcal{F}_M(G)$.
 
 **CoT step 1**: $\pi_T$ 가 임의 $T > 0$ 에서 well-defined (canonical T-PF-A1-GI Cat A) → $\mathbb{E}_{\pi_T}[u]$ 와 variance 모두 well-defined.
@@ -71,7 +71,7 @@ is *non-empty*.
 
 ### §1.3 Statement B.2.3 — Multiplicity (open)
 
-**Statement B.2.3** *(Multiplicity, OPEN).* The set $\mathcal{B}_{T_*}^{\mathrm{FP}}$ may have multiple elements (multi-well $\mathcal{E}_{\mathrm{SCC}}$ in the formation regime). **Uniqueness is NOT guaranteed by Brouwer** — Banach contraction principle (1922) would give uniqueness, but SCC $\mathcal{E}$ is *not* a contraction in $T$ globally (formation regime $\beta/\alpha > 4\lambda_2/|W''(c)|$ has multi-well structure, generating multiple stable measures $\pi_T$ branches as $T$ varies).
+**Statement B.2.3** *(Multiplicity, OPEN).* The set $\mathcal{B}_{T_*}^{\mathrm{FP}}$ may have multiple elements (multi-well $\mathcal{E}_{\mathrm{SCC}}$ in the formation regime). **Uniqueness is NOT guaranteed by Brouwer** — Banach contraction principle (1922) would give uniqueness, but SCC $\mathcal{E}$ is *not* a contraction in $T$ globally (formation regime $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ has multi-well structure, generating multiple stable measures $\pi_T$ branches as $T$ varies).
 
 **CoT step 1**: Banach contraction → uniqueness; Brouwer alone → existence only.
 **CoT step 2**: 본 multi-well structure 가 canonical T-PF-A1-PE (Cat A, L1703+) 의 $C_P \sim e^{\mathrm{osc}/T}$ exponential scaling 에서 *간접* confirmation — multi-well 시 *spectral gap* 이 small (metastable basin separation) → multiple basins each with local variance → multiple fixed-point candidates possible.
@@ -109,7 +109,7 @@ is a *free parameter* under observer-personal classification **P** (OMS-1 ξ res
 
 ### §2.2 Lemma L2 — ψ continuity
 
-**Lemma L2.** $\psi(T) = \mathbb{E}_{\pi_T}[\|u - \mathbb{E}_{\pi_T}[u]\|^2]$ is continuous in $T \in (0, \infty)$.
+**Lemma L2.** $\psi(T) = \mathbb{E}_{\pi_T}[\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2]$ is continuous in $T \in (0, \infty)$.
 
 **Proof (CoT + CoC):**
 - CoT step 1: L1 + bounded test function $f(u) = u_i$ → $\mathbb{E}_{\pi_T}[u_i]$ continuous in $T$ (TV convergence + bounded functional integration).
@@ -208,7 +208,7 @@ L1 + L2 + L3 → B.2.2 (Brouwer existence Cat A 후보).
 
 **OP-T*-FIXED-POINT (Draft, ranked HIGH).**
 
-*Statement*: The fixed-point map $\psi(T) = \mathbb{E}_{\pi_T}[\|u - \mathbb{E}_{\pi_T}[u]\|^2]$ associated with the SCC Gibbs measure $\pi_T$ (canonical T-PF-A1-GI Cat A) has a non-empty fixed-point set $\mathcal{B}_{T_*}^{\mathrm{FP}} \neq \emptyset$ by Brouwer 1911 (Cat A 후보 sketch, §2). Uniqueness is OPEN (multi-well $\mathcal{E}$ in formation regime can generate multiple fixed-points; B.2.3). Under CN-COB, $T_*$ is classified as observer-personal **P** (ξ resident, OMS-1) — the observer's choice $T_* \in \mathcal{B}_{T_*}^{\mathrm{FP}}$ is *free* (Route C, B.2.4).
+*Statement*: The fixed-point map $\psi(T) = \mathbb{E}_{\pi_T}[\lVert u - \mathbb{E}_{\pi_T}[u] \rVert^2]$ associated with the SCC Gibbs measure $\pi_T$ (canonical T-PF-A1-GI Cat A) has a non-empty fixed-point set $\mathcal{B}_{T_*}^{\mathrm{FP}} \neq \emptyset$ by Brouwer 1911 (Cat A 후보 sketch, §2). Uniqueness is OPEN (multi-well $\mathcal{E}$ in formation regime can generate multiple fixed-points; B.2.3). Under CN-COB, $T_*$ is classified as observer-personal **P** (ξ resident, OMS-1) — the observer's choice $T_* \in \mathcal{B}_{T_*}^{\mathrm{FP}}$ is *free* (Route C, B.2.4).
 
 *Status*: **OPEN** (existence Cat A 후보 path identified — Brouwer sketch §2; uniqueness OPEN; Route C axiomatic classification recommended).
 

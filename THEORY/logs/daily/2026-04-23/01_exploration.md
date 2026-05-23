@@ -158,7 +158,7 @@ Fallback 대안: A2 단독 (static/dynamic 구분이 애매한 경우). A1은 di
 
 - **성공 결과물**: Landau-Ginzburg 스타일의 exponent table.
 - **실패 모드**: 많은 SCC 현상이 finite-size, non-universal (R21 $p = 5.0$ saturated 관측). Pure scaling은 large-system limit 가정.
-- **canonical 상호작용**: canonical T8-Core의 $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$는 scaling 형태로 해석 가능. 대부분의 다른 Cat A는 constant-level statement.
+- **canonical 상호작용**: canonical T8-Core의 $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/\lvert W''(c) \rvert$는 scaling 형태로 해석 가능. 대부분의 다른 Cat A는 constant-level statement.
 
 ### 3.5 Primary selection (G2)
 
@@ -185,7 +185,7 @@ Fallback 대안: A2 단독 (static/dynamic 구분이 애매한 경우). A1은 di
 
 ### 4.2 Approach C2: Configuration moduli space $\mathcal{M}_K$
 
-**Core idea**: K-formation configuration space $\mathcal{M}_K = \{(A_1^*, \ldots, A_K^*) : \sum |A_k^*| = m\} / \mathrm{Aut}(G)$. Multi-formation structure = moduli space structure.
+**Core idea**: K-formation configuration space $\mathcal{M}_K = \{ (A_1^*, \ldots, A_K^*) : \sum \mid A_k^* \mid = m \} / \mathrm{Aut}(G)$. Multi-formation structure = moduli space structure.
 
 - **성공 결과물**: $\mathcal{M}_K$의 dimension·topology·singular locus를 명시. K=2의 $\mathcal{M}_2$는 R11에서 parameterized됨 (position + size).
 - **실패 모드**: $\mathcal{M}_K$의 정확한 정의가 formation support $A_k^*$의 discrete/soft 구분에 민감. Soft formation이면 $\mathcal{M}_K$는 $\Sigma_m$의 submanifold로 embedded, "configuration space"가 아니라 continuous orbit.

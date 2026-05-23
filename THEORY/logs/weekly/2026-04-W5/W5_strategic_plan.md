@@ -1780,7 +1780,7 @@ W5 close 시점 SCC theory의 *unique signature* identification:
 
 | Aspect | Allen-Cahn | SCC (post-W5) |
 |--------|------------|---------------|
-| Energy | $\int(\epsilon\|\nabla u\|^2 + W(u))$ | + closure $\mathcal{E}_\text{cl}$ + separation $\mathcal{E}_\text{sep}$ + transport $\mathcal{E}_\text{tr}$ |
+| Energy | $\int(\epsilon\lVert \nabla u \rVert^2 + W(u))$ | + closure $\mathcal{E}_\text{cl}$ + separation $\mathcal{E}_\text{sep}$ + transport $\mathcal{E}_\text{tr}$ |
 | Self-reference | None | Closure (self-completion) + distinction (self-contrast) |
 | Pre-objective | No (single phase) | Yes (Theorem 2 family, F=1 disk non-critical) |
 | Multi-formation | Phase-separation only | Multi-peak σ_multi (W5 G3) |

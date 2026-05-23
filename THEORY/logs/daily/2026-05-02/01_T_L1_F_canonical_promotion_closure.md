@@ -46,12 +46,12 @@ equivalently $\mathcal A_{\mathrm{bar}}(j)=$ the bar born at $q_j^U=\arg\max^\pr
 - **P2** active mass $m_j>\varepsilon$ + connected $\delta$-support $G[S_j^\delta]$.
 - **P3** disjoint active neighborhoods $N_j^r\cap N_k^r=\emptyset$ (LG-1).
 - **P4** low boundary collar $\max_{\partial N_j^r}U\le b_j-\ell_{\min}-r_{\mathrm{assoc}}$ (LG-2).
-- **P5** background suppression on $U$: $\|U\|_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}$ (LG-4 — on $U$, not just $R_{\mathrm{inact}}$).
+- **P5** background suppression on $U$: $\lVert U \rVert_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}$ (LG-4 — on $U$, not just $R_{\mathrm{inact}}$).
 - **P6** birth height $b_j\ge h_{\min}\ge\ell_{\min}$.
-- **P7** decay-to-cut (heterogeneous form): $u^{(\ell)}(x)\le\psi_\ell(d_G(x,S_\ell^\delta))$ and $H_{C_{jk}}(U)\le\sum_{\ell\in A}\psi_\ell(q_{\ell,jk})+\|R_{\mathrm{inact}}\|_{\infty,C_{jk}}$.
+- **P7** decay-to-cut (heterogeneous form): $u^{(\ell)}(x)\le\psi_\ell(d_G(x,S_\ell^\delta))$ and $H_{C_{jk}}(U)\le\sum_{\ell\in A}\psi_\ell(q_{\ell,jk})+\lVert R_{\mathrm{inact}} \rVert_{\infty,C_{jk}}$.
 - **P8** tightened H6 on $G_j^r$: $\ell_{j,2}(u^{(j)};G_j^r)\le\ell_{\min}-3\rho_{\mathrm{pert}}$.
-- **P9** local perturbation control $\|R_j\|_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$.
-- **P10** inactive residual suppression $\|R_{\mathrm{inact}}\|_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$.
+- **P9** local perturbation control $\lVert R_j \rVert_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$.
+- **P10** inactive residual suppression $\lVert R_{\mathrm{inact}} \rVert_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$.
 - **P11** margin ledger $h_{\min}-\max_{k\neq j}B_{jk}\ge\ell_{\min}+r_{\mathrm{assoc}}+r_{\mathrm{birth}}$.
 
 ---

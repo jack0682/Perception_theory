@@ -70,10 +70,10 @@ A site $x_0$ saturates to **upper corner** $u(x_0) = 1$ iff (E2): $4\alpha (Lu)(
 
 Saturates to **lower corner** $u(x_0) = 0$ iff (E3): $4\alpha (Lu)(x_0) \geq \mu$.
 
-Stays **interior** $u(x_0) \in (0, 1)$ iff (E1): $4\alpha (Lu)(x_0) + \beta W'(u(x_0)) = \mu$, which requires $|\mu - 4\alpha (Lu)(x_0)| \leq \beta \max_{u \in (0,1)} |W'(u)| = \beta \cdot \tfrac{1}{6\sqrt{3}}$ (since $\max |W'| = 1/(6\sqrt 3)$ at $u = (1 \pm 1/\sqrt 3)/2 \approx 0.211, 0.789$ — the spinodal endpoints!).
+Stays **interior** $u(x_0) \in (0, 1)$ iff (E1): $4\alpha (Lu)(x_0) + \beta W'(u(x_0)) = \mu$, which requires $|\mu - 4\alpha (Lu)(x_0)| \leq \beta \max_{u \in (0,1)} \lvert W'(u) \rvert = \beta \cdot \tfrac{1}{6\sqrt{3}}$ (since $\max \lvert W' \rvert = 1/(6\sqrt 3)$ at $u = (1 \pm 1/\sqrt 3)/2 \approx 0.211, 0.789$ — the spinodal endpoints!).
 
 **Key result (closed-form sufficient condition for interior)**:
-$$\big|\mu - 4\alpha (Lu)(x_0)\big| \leq \frac{\beta}{6\sqrt{3}}. \tag{INT}$$
+$$\big\vert\mu - 4\alpha (Lu)(x_0)\big\vert \leq \frac{\beta}{6\sqrt{3}}. \tag{INT}$$
 
 Equivalent: site $x_0$ is interior iff $4\alpha (Lu)(x_0) \in [\mu - \beta/(6\sqrt 3), \mu + \beta/(6\sqrt 3)]$ — a band of width $\beta/(3\sqrt 3) \approx \beta / 5.196$.
 

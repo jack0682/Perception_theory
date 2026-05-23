@@ -22,9 +22,9 @@ Key findings:
 
 | Metric | Value | Interpretation |
 |---|---|---|
-| $\|g_\text{bd}\|$ | 23.90 | Large because ξ_0 < 1 (sub-lattice ansatz) |
-| $\|g_\text{cl}\|$ | 2.27 | Nonzero |
-| $\|g_\text{sep}\|$ | 6.68 | Nonzero |
+| $\lVert g_\text{bd} \rVert$ | 23.90 | Large because ξ_0 < 1 (sub-lattice ansatz) |
+| $\lVert g_\text{cl} \rVert$ | 2.27 | Nonzero |
+| $\lVert g_\text{sep} \rVert$ | 6.68 | Nonzero |
 | $\cos(g_\text{cl}, g_\text{sep})$ | **-0.339** | **Not -1: generic non-anti-parallel** ✓ |
 
 **Caveat**: Cor 2.2 ansatz at $\xi_0 = 0.18$ is sub-lattice — sharper than 1 lattice spacing. The actual minimizer has wider interface. Hence Script 1 is leading-order indicative only.
@@ -41,7 +41,7 @@ Key findings:
 | Converged | True |
 | F (local-maxima count) | **1** |
 | $u$ range | $[0, 1]$ (binary) |
-| $\|g_\text{bd}\|$ at this point | $1.6 \times 10^{-4}$ ≈ 0 |
+| $\lVert g_\text{bd} \rVert$ at this point | $1.6 \times 10^{-4}$ ≈ 0 |
 
 → Pure $\mathcal{E}_\text{bd}$ 의 minimizer 가 F=1 (single disk), gradient zero 확인. Cor 2.2 의 lattice 등가물.
 
@@ -49,14 +49,14 @@ Key findings:
 
 | Quantity | Value |
 |---|---|
-| $\|g_\text{cl}\|$ | **2.110** |
-| $\|g_\text{sep}\|$ | **7.030** |
-| $\|g_\text{bd}\|$ | $1.6 \times 10^{-4}$ |
+| $\lVert g_\text{cl} \rVert$ | **2.110** |
+| $\lVert g_\text{sep} \rVert$ | **7.030** |
+| $\lVert g_\text{bd} \rVert$ | $1.6 \times 10^{-4}$ |
 | $\cos(g_\text{cl}, g_\text{sep})$ | **-0.7634** |
 | $\cos(g_\text{cl}, g_\text{bd})$ | -0.137 |
 | $\cos(g_\text{sep}, g_\text{bd})$ | +0.066 |
 
-| $(\lambda_\text{cl}, \lambda_\text{sep})$ | $\|g_\text{full}\|$ |
+| $(\lambda_\text{cl}, \lambda_\text{sep})$ | $\lVert g_\text{full} \rVert$ |
 |---|---|
 | $(0, 0)$ | $1.6 \times 10^{-4}$ |
 | $(1, 0)$ | 2.109 |
@@ -67,7 +67,7 @@ Key findings:
 | $(0.1, 1)$ | 6.871 |
 
 **핵심 결론**: 
-- 모든 generic $(\lambda_\text{cl}, \lambda_\text{sep}) > 0$ 에서 $\|g_\text{full}\| > 1$ (substantial nonzero)
+- 모든 generic $(\lambda_\text{cl}, \lambda_\text{sep}) > 0$ 에서 $\lVert g_\text{full} \rVert > 1$ (substantial nonzero)
 - $\cos(g_\text{cl}, g_\text{sep}) = -0.7634$, $\neq -1$ → Phase 1.3 의 generic non-anti-parallel 가정 **확정**
 - **Theorem 2 의 (C5) condition** 이 사실상 trivial: 본 R23-like setup 에서 disk 가 모든 tested $(\lambda_\text{cl}, \lambda_\text{sep})$ 에서 non-critical of full $\mathcal{E}$ ✓
 
@@ -89,7 +89,7 @@ Key findings:
 | Phase 1 prediction | Phase 2 observation | 상태 |
 |---|---|---|
 | $g_\text{cl}, g_\text{sep}$ are not anti-parallel at disk | $\cos = -0.76$ (not -1) | ✓ confirmed |
-| Disk is non-critical of full $\mathcal{E}$ | $\|g_\text{full}\| > 1$ for all generic weights | ✓ confirmed |
+| Disk is non-critical of full $\mathcal{E}$ | $\lVert g_\text{full} \rVert > 1$ for all generic weights | ✓ confirmed |
 | Closure destabilizes single-disk → multi-peak | F: 1 → 9 transition observed | ✓ confirmed |
 | $F_* \geq 2$ exists | $F_* = 9$ at L=12 setup | ✓ confirmed (with $F_*$ value ≠ R23 due to L difference) |
 | $\lambda_\text{cl}^\text{crit} = 0$ generically | All tested $(\lambda_\text{cl}, \lambda_\text{sep}) > 0$ disk non-critical | ✓ confirmed |
@@ -102,7 +102,7 @@ Phase 2 결과 후 Theorem 2 의 새 statement:
 
 > **Theorem 2 (Pre-Objective Structure, post-Phase-2, 2026-04-24):**
 > Let $G = L \times L$ free-BC grid ($L \geq 12$ tested), full SCC energy $\mathcal{E}$ with $b_D = 0$ and canonical parameters $(c, \beta, \alpha, a_\text{cl}, a_D, \lambda_D) = (0.5, 30, 1, 3.5, 5, 1)$. Let $u^*_\text{disk}$ denote a pure-$\mathcal{E}_\text{bd}$ critical point with $\mathcal{F}(u^*_\text{disk}) = 1$ (= single-disk minimizer of pure $\mathcal{E}_\text{bd}$). Then for any energy weights $(\lambda_\text{cl}, \lambda_\text{sep}) \in \mathbb{R}_{> 0}^2$ in the generic regime (excluding the codim-1 anti-parallel locus where $g_\text{cl}(u^*_\text{disk}) \parallel -g_\text{sep}(u^*_\text{disk})$):
-> (i) $u^*_\text{disk}$ is **not a critical point** of $\mathcal{E}$ on $\Sigma_m$ — verified empirically with $\|g_\text{full}\| / \|u^*_\text{disk}\|_2 > 0.1$ at L=12.
+> (i) $u^*_\text{disk}$ is **not a critical point** of $\mathcal{E}$ on $\Sigma_m$ — verified empirically with $\lVert g_\text{full} \rVert / \lVert u^*_\text{disk} \rVert_2 > 0.1$ at L=12.
 > (ii) Full-SCC gradient flow from $u^*_\text{disk}$ converges to a multi-peak configuration with $\mathcal{F} \geq 2$ — verified at L=12 with $\mathcal{F}_\text{full} = 9$.
 > (iii) The minimum stable $\mathcal{F}_*$ depends on $(L, \beta, \lambda_\text{cl}, \lambda_\text{sep}, c, c^*)$. R23 32×32: $\mathcal{F}_* = 5$. L=12 here: $\mathcal{F}_* = 9$ (likely finite-size effect; verification at intermediate L recommended).
 

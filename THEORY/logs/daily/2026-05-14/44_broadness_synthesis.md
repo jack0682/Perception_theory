@@ -14,7 +14,7 @@
 | Approach | Method | Result | Status |
 |---|---|---|---|
 | **(α) Closure Jacobian** | Perron-Frobenius + Collatz-Wielandt on $J_{\mathrm{Cl}}$ | $\rho(J_{\mathrm{Cl}}) \leq a_{\mathrm{cl}}/4 < 1$; standard $\ell^2$ same as (b); Perron-weighted sharper but state-dependent | **PROVED Cat A** (complementary, not primary) |
-| **(β) Operator norm + Weyl** | $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4$ via degree-weighted self-adjointness | Theorem B2: $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$ | **PROVED Cat A** (primary) |
+| **(β) Operator norm + Weyl** | $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4$ via degree-weighted self-adjointness | Theorem B2: $(I - J_{\mathrm{Cl}})^\top D (I - J_{\mathrm{Cl}}) \succeq (1 - a_{\mathrm{cl}}/4)^2 D$ | **PROVED Cat A** (primary) |
 | **(γ) Numerical** | 15-config sweep, full eigendecomp + component-wise | 15/15 broadness + lift PASS at canonical parameters; lift ~60× prediction | **CONFIRMED PASS** |
 
 **Triple convergence.** Three mathematically independent approaches yield the same conclusion: **OP-HMORSE-BROADNESS is CLOSED**. The closure-correction lift propagates uniformly across the tangent space, not narrowly along a single eigenmode.

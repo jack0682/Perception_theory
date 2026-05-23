@@ -19,7 +19,7 @@ $G$ = finite simple connected graph. $u^* \in \Sigma_m^{\circ}$ Morse-0 minimize
 $$\delta u_\mu := \nabla_\mu u^* := u^*(\cdot + e_\mu) - u^*.$$
 By Theorem 1 (`canonical.md` §13 — sketched, here invoked at level (b)):
 - (a) $\delta u_\mu \in \mathbf{1}^\perp$ up to $O(\exp(-d_*/\xi_0))$ correction.
-- (b) $\langle \delta u_\mu, H(u^*) \delta u_\mu \rangle = O(\exp(-d_*/\xi_0)) \cdot \|\delta u_\mu\|^2$ — near-zero Hessian energy → Goldstone character.
+- (b) $\langle \delta u_\mu, H(u^*) \delta u_\mu \rangle = O(\exp(-d_*/\xi_0)) \cdot \lVert \delta u_\mu \rVert^2$ — near-zero Hessian energy → Goldstone character.
 - (d) Under stabilizer $G_u \supseteq D_4$ at center, $(\delta u_x, \delta u_y)$ carries the $E$-irrep of $D_4$.
 
 **ℓ=1 angular basis**. Let $(x_*, y_*)$ = center of mass of $u^*$. For each vertex $i \in X$ with position $(i_x, i_y)$, define polar angle $\theta_i := \arg((i_x - x_*) + \mathrm{i}(i_y - y_*))$. The **ℓ=1 angular basis vectors** are
@@ -39,7 +39,7 @@ $$\mathcal{P}_{\ell=1}[v] := \big(\langle v, \psi^{(c)}_{\ell=1}\rangle,\ \langl
 > where $m = \sum_i u^*(i)$ is the formation mass (volume).
 >
 > **(ii) Angular ℓ=1 power saturation.** The normalized angular ℓ=1 power fraction
-> $$\rho_{\ell=1}[\hat\phi] := \frac{|\langle\hat\phi, \hat\psi^{(c)}_{\ell=1}\rangle|^2 + |\langle\hat\phi, \hat\psi^{(s)}_{\ell=1}\rangle|^2}{\|\hat\phi\|^2}$$
+> $$\rho_{\ell=1}[\hat\phi] := \frac{|\langle\hat\phi, \hat\psi^{(c)}_{\ell=1}\rangle|^2 + |\langle\hat\phi, \hat\psi^{(s)}_{\ell=1}\rangle|^2}{\lVert \hat\phi \rVert^2}$$
 > ($\hat\psi^{(c, s)}_{\ell=1}$ unit-normalized) for any unit Goldstone vector $\hat\phi \in \mathrm{span}(\delta u_x, \delta u_y)$ satisfies
 > $$\rho_{\ell=1}[\hat\phi] \;\geq\; \kappa_{\ell=1} > 0,$$
 > with $\kappa_{\ell=1} = \kappa_{\ell=1}(r_0, \xi_0, R)$ a positive constant depending on the disk radius $r_0$, interface width $\xi_0$, and graph extent $R$.
@@ -78,21 +78,21 @@ So $\mathcal{P}_{\ell=1}[\delta u_x] = (-m, 0)$ to leading order. Similarly $\ma
 
 ### 3.2 Proof of (ii) — Angular ℓ=1 power lower bound
 
-Take unit Goldstone vector $\hat\phi = (a \delta u_x + b \delta u_y)/\|a\delta u_x + b\delta u_y\|$ with $a^2 + b^2 = 1$. By linearity:
-$$\mathcal{P}_{\ell=1}[\hat\phi] = (a \cdot \mathcal{P}_{\ell=1}[\delta u_x] + b \cdot \mathcal{P}_{\ell=1}[\delta u_y]) / \|a\delta u_x + b\delta u_y\| = (-am, -bm) / \|a\delta u_x + b\delta u_y\|.$$
+Take unit Goldstone vector $\hat\phi = (a \delta u_x + b \delta u_y)/\lVert a\delta u_x + b\delta u_y \rVert$ with $a^2 + b^2 = 1$. By linearity:
+$$\mathcal{P}_{\ell=1}[\hat\phi] = (a \cdot \mathcal{P}_{\ell=1}[\delta u_x] + b \cdot \mathcal{P}_{\ell=1}[\delta u_y]) / \lVert a\delta u_x + b\delta u_y \rVert = (-am, -bm) / \lVert a\delta u_x + b\delta u_y \rVert.$$
 
-$\|\mathcal{P}_{\ell=1}[\hat\phi]\|^2 = m^2(a^2 + b^2) / \|a\delta u_x + b\delta u_y\|^2 = m^2 / \|a\delta u_x + b\delta u_y\|^2$.
+$\lVert \mathcal{P}_{\ell=1}[\hat\phi] \rVert^2 = m^2(a^2 + b^2) / \lVert a\delta u_x + b\delta u_y \rVert^2 = m^2 / \lVert a\delta u_x + b\delta u_y \rVert^2$.
 
-Estimate $\|a\delta u_x + b\delta u_y\|^2$ for radially symmetric $u^*(r)$ (e.g. tanh ansatz $u^*(r) = \tfrac{1}{2}(1 - \tanh((r - r_0)/\xi_0))$): $\partial_x u^* = \partial_r u^* \cdot \cos\theta$, $\partial_y u^* = \partial_r u^* \cdot \sin\theta$. So
-$$\|a\delta u_x + b\delta u_y\|^2 = \int (a\cos\theta + b\sin\theta)^2 (\partial_r u^*)^2 \cdot r\,dr\,d\theta = \pi (a^2 + b^2) \int (\partial_r u^*)^2 r\,dr.$$
+Estimate $\lVert a\delta u_x + b\delta u_y \rVert^2$ for radially symmetric $u^*(r)$ (e.g. tanh ansatz $u^*(r) = \tfrac{1}{2}(1 - \tanh((r - r_0)/\xi_0))$): $\partial_x u^* = \partial_r u^* \cdot \cos\theta$, $\partial_y u^* = \partial_r u^* \cdot \sin\theta$. So
+$$\lVert a\delta u_x + b\delta u_y \rVert^2 = \int (a\cos\theta + b\sin\theta)^2 (\partial_r u^*)^2 \cdot r\,dr\,d\theta = \pi (a^2 + b^2) \int (\partial_r u^*)^2 r\,dr.$$
 For tanh ansatz: $\int (\partial_r u^*)^2 r\,dr \approx (4/3)\xi_0 \cdot r_0 / (4\xi_0^2) = r_0/(3\xi_0)$.
 
-So $\|a\delta u_x + b\delta u_y\|^2 \approx \pi r_0 / (3\xi_0)$.
+So $\lVert a\delta u_x + b\delta u_y \rVert^2 \approx \pi r_0 / (3\xi_0)$.
 
-Normalize $\hat\psi^{(c)}_{\ell=1}$: $\|\psi^{(c)}_{\ell=1}\|^2 = \int_0^R \int_0^{2\pi} \cos^2\theta \cdot r\,dr\,d\theta = \pi R^2/2$ for graph extent $R$ (boundary).
+Normalize $\hat\psi^{(c)}_{\ell=1}$: $\lVert \psi^{(c)}_{\ell=1} \rVert^2 = \int_0^R \int_0^{2\pi} \cos^2\theta \cdot r\,dr\,d\theta = \pi R^2/2$ for graph extent $R$ (boundary).
 
 Angular ℓ=1 power fraction:
-$$\rho_{\ell=1}[\hat\phi] = \frac{\|\mathcal{P}_{\ell=1}[\hat\phi]\|^2}{\|\hat\phi\|^2 \cdot (\|\psi^{(c)}\|^2 + \|\psi^{(s)}\|^2)/2} \approx \frac{m^2 / (\pi r_0/(3\xi_0))}{1 \cdot \pi R^2/2}.$$
+$$\rho_{\ell=1}[\hat\phi] = \frac{\lVert \mathcal{P}_{\ell=1}[\hat\phi] \rVert^2}{\lVert \hat\phi \rVert^2 \cdot (\lVert \psi^{(c)} \rVert^2 + \lVert \psi^{(s)} \rVert^2)/2} \approx \frac{m^2 / (\pi r_0/(3\xi_0))}{1 \cdot \pi R^2/2}.$$
 
 For disk mass $m \approx \pi r_0^2$:
 $$\rho_{\ell=1}[\hat\phi] \approx \frac{\pi^2 r_0^4 \cdot 3\xi_0/(\pi r_0)}{\pi R^2/2} = \frac{6 r_0^3 \xi_0}{R^2}.$$
@@ -101,10 +101,10 @@ Order of magnitude: for $r_0 \sim R/2$ (formation occupies half the support) and
 
 **Correct normalization** (from W4-04-24 §3.3): use $\rho_{\ell=1} = (|\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 + |\langle\hat\phi, \hat\psi^{(s)}\rangle|^2) / 1$ with both vectors unit-normalized.
 
-$\hat\phi = \delta u_x / \|\delta u_x\|$, $\hat\psi^{(c)} = \psi^{(c)}/\|\psi^{(c)}\|$.
-$\langle\hat\phi, \hat\psi^{(c)}\rangle = (-m + O(\xi_0/L)) / (\|\delta u_x\| \cdot \|\psi^{(c)}\|)$.
+$\hat\phi = \delta u_x / \lVert \delta u_x \rVert$, $\hat\psi^{(c)} = \psi^{(c)}/\lVert \psi^{(c)} \rVert$.
+$\langle\hat\phi, \hat\psi^{(c)}\rangle = (-m + O(\xi_0/L)) / (\lVert \delta u_x \rVert \cdot \lVert \psi^{(c)} \rVert)$.
 
-For tanh disk: $\|\delta u_x\| \approx \sqrt{\pi r_0/(6\xi_0)}$ (one-quadrant integral; $a^2+b^2$ contribution averaged out so $\|\delta u_x\|^2 = (1/2)\|\delta u_x + \delta u_y\|^2 = \pi r_0 / (6\xi_0)$). $\|\psi^{(c)}\| = \sqrt{\pi R^2/2}$.
+For tanh disk: $\lVert \delta u_x \rVert \approx \sqrt{\pi r_0/(6\xi_0)}$ (one-quadrant integral; $a^2+b^2$ contribution averaged out so $\lVert \delta u_x \rVert^2 = (1/2)\lVert \delta u_x + \delta u_y \rVert^2 = \pi r_0 / (6\xi_0)$). $\lVert \psi^{(c)} \rVert = \sqrt{\pi R^2/2}$.
 
 $|\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 \approx m^2 / (\pi r_0/(6\xi_0) \cdot \pi R^2/2) = m^2 \cdot 12\xi_0 / (\pi^2 r_0 R^2)$.
 

@@ -59,7 +59,7 @@ Each axiom gets a **layer-primary classification** and a list of **derived conse
 
 ### A.2.3 A3 (Stabilization / Contraction)
 
-**Statement**: Cauchy iteration $\|\mathrm{Cl}^{(n+1)} - \mathrm{Cl}^{(n)}\| \to 0$; for sigmoid, contraction rate $a_{\mathrm{cl}}/4$ when $a_{\mathrm{cl}} < 4$.
+**Statement**: Cauchy iteration $\lVert \mathrm{Cl}^{(n+1)} - \mathrm{Cl}^{(n)} \rVert \to 0$; for sigmoid, contraction rate $a_{\mathrm{cl}}/4$ when $a_{\mathrm{cl}} < 4$.
 
 **Primary layer**: **L3**.
 
@@ -694,7 +694,7 @@ For c=0.3 2D square: low symmetry for K=1 config (off-center); small $\mathcal{B
 
 **Short (empirical verification)**:
 - Run $\widehat K$ measurement across ($c, G$) grid at fixed β.
-- Correlate with $(\lambda_2/\lambda_3, |c - 1/2|)$.
+- Correlate with $(\lambda_2/\lambda_3, \lvert c - 1/2 \rvert)$.
 - If hypothesis holds, tentative Cat C empirical.
 
 **Medium (theoretical)**:

@@ -509,7 +509,7 @@ $$u^*(x) = \sum_{f=1}^{\mathcal{F}(u^*)} \Phi_f^*(x; n_f, \ell_f, c_f, r_f) + r(
 where:
 - $\mathcal{F}(u^*) \in \mathbb{Z}_{\geq 0}$ = **true formation count** (topological, $\tau$-independent).
 - $\Phi_f^*$ = $f$-th formation with orbital state $(n_f, \ell_f)$, center $c_f$, size $r_f$.
-- $\|r\|_\infty$ = $O(\exp(-d_{\min}/\xi_0))$ as before.
+- $\lVert r \rVert_\infty$ = $O(\exp(-d_{\min}/\xi_0))$ as before.
 
 ### 12.3 Relation to current FQ (Thm 3.2)
 

@@ -275,7 +275,7 @@ Sub-statements:
 
 - **(i) disk non-criticality**: $u_0^*$ is NOT a critical point of full $\mathcal{E}$ on $\Sigma_m$.
 - **(ii) multi-peak attractor**: gradient flow from $u_0^*$ converges to $u^*_{\mathrm{end}}$ with $\mathcal{F}(u^*_{\mathrm{end}}) > \mathcal{F}(u_0^*)$.
-- **(iii) Lemma 4 (quadratic form PD)**: $M \in \mathbb{R}^{2\times 2}$ with $M_{11} = \|g_{\mathrm{cl}}\|^2$, $M_{22} = \|g_{\mathrm{sep}}\|^2$, $M_{12} = \langle g_{\mathrm{cl}}, g_{\mathrm{sep}}\rangle$ is positive definite under $g_{\mathrm{cl}}, g_{\mathrm{sep}}$ linear independence. Destabilization magnitude $\|\nabla \mathcal{E}(u_0^*)\|^2 = \lambda^\top M \lambda$.
+- **(iii) Lemma 4 (quadratic form PD)**: $M \in \mathbb{R}^{2\times 2}$ with $M_{11} = \lVert g_{\mathrm{cl}} \rVert^2$, $M_{22} = \lVert g_{\mathrm{sep}} \rVert^2$, $M_{12} = \langle g_{\mathrm{cl}}, g_{\mathrm{sep}}\rangle$ is positive definite under $g_{\mathrm{cl}}, g_{\mathrm{sep}}$ linear independence. Destabilization magnitude $\lVert \nabla \mathcal{E}(u_0^*) \rVert^2 = \lambda^\top M \lambda$.
 - **(iv) IC sensitivity**: basin-attraction 이 initial condition 의 eigenmode alignment 에 민감.
 - **(v) thermodynamic dichotomy**:
   - Adaptive IC (Fiedler/eigenmode-aligned): $\mathcal{F}_*^{\mathrm{adaptive}}(L) \leq F^{\mathrm{first-pitchfork}}(\beta, c) + O(1)$, **bounded**.
@@ -294,12 +294,12 @@ Sub-statements:
 
 | 측정량 | 값 | 의미 |
 |---|---|---|
-| $\|g_{\mathrm{cl}}(u_0^*)\|$ | 2.11 | Step 3 의 $g_{\mathrm{cl}} \neq 0$ 확인 |
-| $\|g_{\mathrm{sep}}(u_0^*)\|$ | 7.03 | Step 4 의 $g_{\mathrm{sep}} \neq 0$ 확인 |
+| $\lVert g_{\mathrm{cl}}(u_0^*) \rVert$ | 2.11 | Step 3 의 $g_{\mathrm{cl}} \neq 0$ 확인 |
+| $\lVert g_{\mathrm{sep}}(u_0^*) \rVert$ | 7.03 | Step 4 의 $g_{\mathrm{sep}} \neq 0$ 확인 |
 | $\cos(g_{\mathrm{cl}}, g_{\mathrm{sep}})$ | **−0.76** (≠ −1) | Step 5 의 generic regime 확인 |
 | $\langle g_{\mathrm{cl}}, g_{\mathrm{sep}}\rangle$ | −11.3 | — |
-| $\|g_{\mathrm{full}}\|$ at $\lambda=(1,1)$ analytic | $\sqrt{4.45 - 22.6 + 49.4} = 5.59$ | Lemma 4 quadratic form |
-| $\|g_{\mathrm{full}}\|$ numerical | **5.589** | 3-digit quantitative 일치 |
+| $\lVert g_{\mathrm{full}} \rVert$ at $\lambda=(1,1)$ analytic | $\sqrt{4.45 - 22.6 + 49.4} = 5.59$ | Lemma 4 quadratic form |
+| $\lVert g_{\mathrm{full}} \rVert$ numerical | **5.589** | 3-digit quantitative 일치 |
 | Flow endpoint $\mathcal{F}$ | **F=1 → F=9** | (ii) multi-peak attractor 직접 관측 |
 
 **Phase 3C confirmation (L=32, thermodynamic dichotomy).**
@@ -882,7 +882,7 @@ where $(n_k, \ell_k)$ is the dominant Hessian eigenmode at each local peak. Obse
 **출처:** `working/SF/mode_count.md` §1.
 
 **Statement.** On finite connected $G$ with Laplacian eigenvalues $\{\lambda_k\}$, $c \in (c_-, c_+)$ strictly spinodal, $\alpha, \beta > 0$:
-$$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{uniform}}}^{\mathbf{1}^\perp}\big) = N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) = \#\{k \geq 2 : 4\alpha\lambda_k(G) < \beta|W''(c)|\}.$$
+$$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{uniform}}}^{\mathbf{1}^\perp}\big) = N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c, G) = \#\{ k \geq 2 : 4\alpha\lambda_k(G) < \beta \mid W''(c) \mid \}.$$
 
 **Proof.** Three steps at file-level granularity (`mode_count.md` §1.2 + `logs/daily/2026-04-22/02_development.md` §2.2): (i) diagonalize in $\phi$-basis, (ii) tangent-space restriction to $\mathbf{1}^\perp$, (iii) sign analysis with $W''(c) < 0$.
 
@@ -899,7 +899,7 @@ $$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{unifo
 **Statement.** $H_{\mathrm{cl,sep}} := H_{\mathrm{full}} - H_{\mathrm{bd}}$ satisfies:
 (a) **$\beta$-invariance** (depends on $\alpha, \lambda_{\mathrm{cl}}, \lambda_{\mathrm{sep}}, a_{\mathrm{cl}}, \tau_{\mathrm{cl}}, c, G$; no $\beta$).
 (b) **Bilinear decomposition** $H_{\mathrm{cl,sep}} = \lambda_{\mathrm{cl}} H_{\mathrm{cl}} + \lambda_{\mathrm{sep}} H_{\mathrm{sep}}$.
-(c) **Closure block PSD** $H_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^\top(I - J_{\mathrm{Cl}})\big|_{u_{\mathrm{uniform}}}$ (Gram structure reuses T3/T6-Stability).
+(c) **Closure block PSD** $H_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^\top(I - J_{\mathrm{Cl}})\big\vert_{u_{\mathrm{uniform}}}$ (Gram structure reuses T3/T6-Stability).
 (d) **Separation block** — explicit form via $u$-weighted distinction resolvent, deferred (C-S2).
 (e) **Weyl bracket** for full-energy Morse: $N_{\mathrm{unst}}^{\mathrm{full}}(\beta) \in [N_{\mathrm{unst}}^{\mathrm{bd}}(\beta) - \#\{+\nu\}, N_{\mathrm{unst}}^{\mathrm{bd}}(\beta) + \#\{-\nu\}]$.
 
@@ -936,7 +936,7 @@ $$\mathrm{Morse}\big(\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}|_{u_{\mathrm{unifo
 **출처:** `working/SF/interface_scale.md` §3.
 
 **Statement.** On 2D square grid with tanh radial profile $u(s) = \tfrac{1}{2}(1 - \tanh(s/\xi_0))$ around a circular interface of width $\xi_0 = \sqrt{\alpha/\beta}$:
-$$\frac{|B|}{\mathrm{Per}_G(A)} = \frac{\pi\ln 9}{2}\cdot \xi_0 + O(1/\sqrt n) \approx 3.449\cdot \xi_0.$$
+$$\frac{\lvert B \rvert}{\mathrm{Per}_G(A)} = \frac{\pi\ln 9}{2}\cdot \xi_0 + O(1/\sqrt n) \approx 3.449\cdot \xi_0.$$
 
 **Proof.** Five-step explicit integration (`interface_scale.md` §3.2 + `02_development.md` §4.4): continuum tanh width $\ln 9\cdot \xi_0$, grid-to-continuum perimeter factor $2/\pi$, combine.
 
@@ -1386,7 +1386,7 @@ with $d_0(c) = \sigma(a_D(2c-1))$. Explicit function of $c$, universal on regula
 
 **A-2026-04-22-R6-02. Bifurcation eigenvalue $p^\ast(c)$** — `mode_count.md` §2.3e. $p^\ast(c) := -2/[c(1-2d_0(c))\kappa_D]$ is the second zero of $\nu_k(c) = 0$ (beyond $p_k = 0$). Sign: negative for $c < 1/2$, $\pm\infty$ at $c = 1/2$, positive for $c > 1/2$. **Category: Cat A**.
 
-**A-2026-04-22-R6-03. Critical $c$-thresholds $c_{\mathrm{bif}}^\pm$** — `mode_count.md` §2.3e. At canonical $a_D = 5, \kappa_D = 10$: $c_{\mathrm{bif}}^- \approx 0.385$ (below which $|p^\ast|$ enters spectrum from below), $c_{\mathrm{bif}}^+ \approx 0.545$ (above which $p^\ast$ enters spectrum from above). Defined by $|s(c)| \cdot \max|p_k| = 2$ where $s(c) := c(1-2d_0(c))\kappa_D$. **Category: Cat A**.
+**A-2026-04-22-R6-03. Critical $c$-thresholds $c_{\mathrm{bif}}^\pm$** — `mode_count.md` §2.3e. At canonical $a_D = 5, \kappa_D = 10$: $c_{\mathrm{bif}}^- \approx 0.385$ (below which $|p^\ast|$ enters spectrum from below), $c_{\mathrm{bif}}^+ \approx 0.545$ (above which $p^\ast$ enters spectrum from above). Defined by $\lvert s(c) \rvert \cdot \max|p_k| = 2$ where $s(c) := c(1-2d_0(c))\kappa_D$. **Category: Cat A**.
 
 **A-2026-04-22-R6-04. Three-regime classification** — `mode_count.md` §2.3e. Spinodal $(c_-, c_+)$ decomposes into three regimes with distinct destabilized-set characterizations:
 - **I** ($c_-, c_{\mathrm{bif}}^-$) $\approx$ (0.21, 0.39): $\{p_k > 0\} \cup \{p_k < p^\ast(c)\}$ (gains bipartite).
@@ -1564,7 +1564,7 @@ Round 6 provides the structural justification for choosing $c = 1/2$ in canonica
 **A-2026-04-22-R9-03. Source-orthogonality parity argument** — `profile_deviation.md` §11.3. Source $u_0^{(4)}$ is odd under interface-center reflection, zero-mode $u_0'$ is even ⇒ $\int u_0' u_0^{(4)} = 0$, solvability satisfied, bounded $u_1$ exists. **Category: Cat A**.
 
 **A-2026-04-22-R9-04. Cor 2.2 Supra-Lattice Theorem** — `profile_deviation.md` §11.4. In supra-lattice regime ($\xi_0 \gg a$):
-$$\|u_{\mathrm{SCC}} - u_{\mathrm{tanh}}\|_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),\qquad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4),$$
+$$\lVert u_{\mathrm{SCC}} - u_{\mathrm{tanh}} \rVert_{L^\infty} = O\!\left(\frac{a^2}{\xi_0^2}\right),\qquad p(\xi_0/a) - 1 = C_p \cdot \frac{a^2}{12\xi_0^2} + O((a/\xi_0)^4),$$
 with $C_p = O(1)$ numerical constant. **Quadratic convergence to pure tanh** as $\xi_0/a \to \infty$. **Category: Cat A**.
 
 **A-2026-04-22-R9-05. Regime diagram for Cor 2.2 SCC-minimizer** — `profile_deviation.md` §11.5. Four regimes with explicit category labels:
@@ -1581,7 +1581,7 @@ with $C_p = O(1)$ numerical constant. **Quadratic convergence to pure tanh** as 
 
 **Framework-closed** via Round 2 + Round 9 combined:
 - Round 2 closes sub-lattice (Cat B, $p = 1.256$ measured).
-- Round 9 closes supra-lattice (Cat A, $|p-1| = O((a/\xi_0)^2)$ predicted).
+- Round 9 closes supra-lattice (Cat A, $\lvert p-1 \rvert = O((a/\xi_0)^2)$ predicted).
 - Crossover at $\xi_0 \sim a$ (= $\beta \sim 2\alpha$ canonical).
 
 NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2$ (supra-lattice) to measure $p - 1 \sim$ few percent, verifying Round 9 prediction. **Not blocked on theory**.
@@ -1712,7 +1712,7 @@ NQ-32 remaining task: execute `exp_profile_fit.py` at $L \geq 128$, $\beta \ll 2
 
 **A-R15-01 through A-R15-06** (in `17_deepening_round15.md`):
 - Master formula $\widehat K = 1 + \mathrm{Vol} \cdot N_{\mathrm{unst}}^{1/d_{\mathrm{eff}}} + O(1)$ in all $(\beta, c, T)$.
-- Thermal dissolution line $T_{\mathrm{dis}}(c) = c(1-c)|W''(c)|$; max $= 1/4$ at $c = 1/2$.
+- Thermal dissolution line $T_{\mathrm{dis}}(c) = c(1-c)\lvert W''(c) \rvert$; max $= 1/4$ at $c = 1/2$.
 - 3-phase structure: uniform / single / multi / saturation, each 3D region.
 - $c_{\mathrm{bif}}^\pm$ is $T$-independent (since $H_{\mathrm{cl,sep}}$ $T$-invariant).
 - Graph-class scaling: intensive (2D square), extensive (torus), linear (cycle), constant ($K_n$).
@@ -2291,7 +2291,7 @@ T-Persist-K-Sep / T-Persist-K-Weak / T-Persist-K-Unified (3 Cat C theorems) — 
 #### Strengthened claims (2 new Cat A theorems)
 
 - **T-Uniform-Stab-T (Theorem 1.1, Round 4 §1):** uniform configuration `u_uniform = (m/n)·1` 가 ℱ_C+E 의 local minimum 이 되는 조건. 임계 온도:
-$$T^*_{\mathrm{uniform}}(c) \;=\; c(1-c)\cdot \big[\beta\, |W''(c)| - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}\big].$$
+$$T^*_{\mathrm{uniform}}(c) \;=\; c(1-c)\cdot \big[\beta\, \lvert W''(c) \rvert - 4\alpha\lambda_2(G) - r_{\mathrm{cl,sep}}\big].$$
 canonical default 에서 T*_uniform ≈ 7.37 at c = 0.5. T8-Core 의 strict generalization (T = 0 에서 destabilization, T > T*_uniform 에서 re-stabilization). **Cat A** (sketched-rigorous Hessian).
 
 - **Three-regime T phase diagram (Theorem 2.1, Round 4 §2):** (T, c) parameter space 가 single-mode (T < T_c ≈ 1) / multi-mode (T_c < T < T*_uniform ≈ 7) / uniform (T > T*_uniform) 3 영역으로 분해. canonical v1.2 에 없던 신규 결과. **Cat A** structural + Cat C precise T_c.

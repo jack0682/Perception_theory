@@ -35,10 +35,10 @@ Total runtime: 79 s.
 
 ## OP-OMS-028 — Quantitative Lipschitz bound for $v(\lambda)$ (PROVED)
 
-**Theorem L1:** $|v(\lambda) - v(\lambda')| \le \|M\|_2 \cdot \|\lambda - \lambda'\|_2$ globally on $\Delta^3$, where $M_i = \sup_{u \in \Omega} |E_i(u; X_t)|$.
+**Theorem L1:** $|v(\lambda) - v(\lambda')| \le \lVert M \rVert_2 \cdot \lVert \lambda - \lambda' \rVert_2$ globally on $\Delta^3$, where $M_i = \sup_{u \in \Omega} \lvert E_i(u; X_t) \rvert$.
 
 Proof: $v(\lambda) = \inf_u L_u(\lambda)$ with $L_u$ affine in $\lambda$;
-$|L_u(\lambda) - L_u(\lambda')| \le \|E(u)\|_2 \|\lambda - \lambda'\|_2$;
+$|L_u(\lambda) - L_u(\lambda')| \le \lVert E(u) \rVert_2 \lVert \lambda - \lambda' \rVert_2$;
 take sup over $u \in \Omega$ (compact ⇒ finite).
 
 **Explicit bounds for S3-like scenes:**

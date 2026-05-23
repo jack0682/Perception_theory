@@ -83,7 +83,7 @@ the orbit of $\mathbf{u}$ under $S_K$.
 
 **Application:** The SCC energy $\mathcal{E}$ is $S_K$-equivariant (proved in `02c_minimization_principle_unordered.md` §3.1). Therefore $\mathcal{E}$ factors through $\pi$: there is a well-defined $\widetilde{\mathcal{E}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{R}$ with $\mathcal{E} = \widetilde{\mathcal{E}} \circ \pi$.
 
-Similarly, $K_{\mathrm{act}}(\mathbf{u}) = |\{j : \|u^{(j)}\|_\infty > \varepsilon\}|$ is $S_K$-equivariant (permuting slots doesn't change the count). So $K_{\mathrm{act}}$ factors through $\pi$ to a well-defined $\widetilde{K}_{\mathrm{act}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{Z}_{\geq 0}$. This is how $K_{\mathrm{act}}$ is already orbit-invariant in the canonical theory.
+Similarly, $K_{\mathrm{act}}(\mathbf{u}) = |\{j : \lVert u^{(j)} \rVert_\infty > \varepsilon\}|$ is $S_K$-equivariant (permuting slots doesn't change the count). So $K_{\mathrm{act}}$ factors through $\pi$ to a well-defined $\widetilde{K}_{\mathrm{act}} : \widetilde{\widetilde\Sigma}^K_M \to \mathbb{Z}_{\geq 0}$. This is how $K_{\mathrm{act}}$ is already orbit-invariant in the canonical theory.
 
 ---
 

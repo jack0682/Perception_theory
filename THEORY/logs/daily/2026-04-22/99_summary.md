@@ -40,7 +40,7 @@ The morning SF-S1 session formalized the Round 12-18 audit's 4 Cat A candidates 
 - [x] **Item 3** Prop 1.3b (d) full $c$-spectrum — **Round 6**, closed-form $\nu_k(c)$ + 3-regime phase diagram + canonical $c = 1/2$ justification.
 - [x] **Item 4** NQ-31 sharp $c_0$ — **Round 7**, cascade-enumeration + two-regime + NQ-31 framework-closure.
 - [x] **Item 5** G-C sub-claim C general graphs — **Round 8**, universal $c_0$-Counting Theorem via equivariant CR.
-- [x] **Item 6** Cor 2.2 supra-lattice — **Round 9**, Cat A convergence $|p-1| = O((a/\xi_0)^2)$ via Allen-Cahn perturbation.
+- [x] **Item 6** Cor 2.2 supra-lattice — **Round 9**, Cat A convergence $\lvert p-1 \rvert = O((a/\xi_0)^2)$ via Allen-Cahn perturbation.
 - [x] **Item 7** Higher-order pitchfork cascade — **Round 10**, tree structure + saddle-node saturation + Hyp. Thm. 4.1* full closure.
 
 **All 7 items CLOSED at Cat A universal.**
@@ -598,7 +598,7 @@ R17 + R19 + R20 trilogy가 "$\widehat K = f(N_{\mathrm{unst}})$" 전제를 세 �
 
 ### 17.11 Round 9 §11 falsification details
 
-**Round 9 §11 예측**: $p \to 1$ as $\xi_0/a \to \infty$, $\|u_{\mathrm{SCC}} - u_{\mathrm{tanh}}\|_\infty = O((a/\xi_0)^2)$ — pure tanh 수렴.
+**Round 9 §11 예측**: $p \to 1$ as $\xi_0/a \to \infty$, $\lVert u_{\mathrm{SCC}} - u_{\mathrm{tanh}} \rVert_\infty = O((a/\xi_0)^2)$ — pure tanh 수렴.
 
 **관측**:
 1. **9/9 configs 모두 best_profile = generalized** (단 하나도 tanh 선택 안 됨)

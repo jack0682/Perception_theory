@@ -19,7 +19,7 @@ Soft cohesion fields $u_t : X \to [0, 1]$ on finite graphs admit a canonical dis
 
 #### §4.1.1 Definition
 
-Let $G = (X, E)$ be a finite connected simple graph with $|X| = n$ vertices, and let $u^* \in \Sigma_m^\circ \subset (0, 1)^n$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex $\Sigma_m = \{u : \sum_i u_i = m\}$. Let $\mathrm{Stab}(u^*) = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) \leq \mathrm{Aut}(G)$ denote the stabilizer of $u^*$ under graph automorphisms acting by coordinate permutation $(\pi \cdot v)_i = v_{\pi^{-1}(i)}$.
+Let $G = (X, E)$ be a finite connected simple graph with $\lvert X \rvert = n$ vertices, and let $u^* \in \Sigma_m^\circ \subset (0, 1)^n$ be a Morse-index-0 local minimum of the SCC energy $\mathcal{E}$ on the volume-constrained simplex $\Sigma_m = \{u : \sum_i u_i = m\}$. Let $\mathrm{Stab}(u^*) = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*) \leq \mathrm{Aut}(G)$ denote the stabilizer of $u^*$ under graph automorphisms acting by coordinate permutation $(\pi \cdot v)_i = v_{\pi^{-1}(i)}$.
 
 \begin{definition}[σ-tuple, Commitment 14]
 The σ-tuple of $u^*$ is the discrete invariant
@@ -203,7 +203,7 @@ Linear extrapolation: $c_{\mathrm{eff}}(L) \approx 0.18 + 0.0085 L$, suggesting 
 
 #### §4.3.4 Numerical Verification
 
-We verified Theorem~\ref{thm:tsm1} on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12, 16\}$ and $\lambda_{\mathrm{rep}} \in \{0.01, 0.1, 1.0\}$ with $c = 0.10$, $\beta = 4.0$. The cross-block operator norm $\|H_{12}\|_{\mathrm{op}} = \lambda_{\mathrm{rep}}$ exactly in the well-separated regime, confirming the Coupling Bound Lemma prediction. Joint Hessian lowest eigenvalues are negative for $\lambda_{\mathrm{rep}} \geq 0.1$ across all $d_{\min}$, confirming static instability.
+We verified Theorem~\ref{thm:tsm1} on $T^2_{20}$ across $d_{\min} \in \{5, 8, 12, 16\}$ and $\lambda_{\mathrm{rep}} \in \{0.01, 0.1, 1.0\}$ with $c = 0.10$, $\beta = 4.0$. The cross-block operator norm $\lVert H_{12} \rVert_{\mathrm{op}} = \lambda_{\mathrm{rep}}$ exactly in the well-separated regime, confirming the Coupling Bound Lemma prediction. Joint Hessian lowest eigenvalues are negative for $\lambda_{\mathrm{rep}} \geq 0.1$ across all $d_{\min}$, confirming static instability.
 
 #### §4.3.5 Static vs Dynamic Instability
 

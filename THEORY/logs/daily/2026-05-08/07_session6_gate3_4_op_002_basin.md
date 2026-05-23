@@ -22,7 +22,7 @@ Construct an explicit non-trivial admissible landscape $V \in \mathcal{V}_{\math
 For two targets $y_1, y_2 \in \mathbb{R}^6$ (smooth-component readouts at canonical $\lambda^{(1)}, \lambda^{(2)}$) and offset $c \ge 0$:
 
 **Hard min:**
-$$V_2(\lambda) = \min\bigl\{ \|P^{\mathrm{sm}}(\lambda) - y_1\|_2^2,\ \|P^{\mathrm{sm}}(\lambda) - y_2\|_2^2 + c \bigr\}.$$
+$$V_2(\lambda) = \min\bigl\{ \lVert P^{\mathrm{sm}}(\lambda) - y_1 \rVert_2^2,\ \lVert P^{\mathrm{sm}}(\lambda) - y_2 \rVert_2^2 + c \bigr\}.$$
 
 **Smoothed (soft-min):**
 $$V_{2,\tau}(\lambda) = -\tau \log\!\bigl(\exp(-D_1/\tau) + \exp(-(D_2 + c)/\tau)\bigr).$$
@@ -72,8 +72,8 @@ Total runtime: 97.4 s.
 
 ### Readout separations
 
-- P12: $\|y_1 - y_2\| = 0.2424$.
-- S3:  $\|y_1 - y_2\| = 0.3238$.
+- P12: $\lVert y_1 - y_2 \rVert = 0.2424$.
+- S3:  $\lVert y_1 - y_2 \rVert = 0.3238$.
 
 ### NV10 caveat confirmed
 

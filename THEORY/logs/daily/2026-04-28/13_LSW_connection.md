@@ -49,7 +49,7 @@ For $\lambda_{\mathrm{rep}} = 0.1$, $c_{\mathrm{eff}} \approx 0.33$ (Phase 3 E9 
 The linear approximation breaks down when $|\mathbf{u}_{\mathrm{antisym}}| \approx |\mathbf{u}^*|$, i.e., the perturbation is comparable to the unperturbed state. This is the threshold where formations begin merging structurally.
 
 Time to reach this threshold:
-$$t_{\mathrm{merge}} = \tau_{\mathrm{linear}} \cdot \log\big(|\mathbf{u}^*| / |\mathbf{u}_{\mathrm{antisym}}(0)|\big) \sim \tau_{\mathrm{linear}} \cdot \log(\sigma^{-1}). \tag{2.3}$$
+$$t_{\mathrm{merge}} = \tau_{\mathrm{linear}} \cdot \log\big(|\mathbf{u}^*\lvert / \rvert\mathbf{u}_{\mathrm{antisym}}(0)|\big) \sim \tau_{\mathrm{linear}} \cdot \log(\sigma^{-1}). \tag{2.3}$$
 
 For typical IC perturbation $\sigma \sim 10^{-2}$: $\log(100) \approx 4.6$. So $t_{\mathrm{merge}} \approx 4.6 \tau_{\mathrm{linear}} \sim 140$ time units (at $\lambda_{\mathrm{rep}}=0.1$, c_eff=0.33).
 

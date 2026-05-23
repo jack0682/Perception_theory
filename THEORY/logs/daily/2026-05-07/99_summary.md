@@ -75,7 +75,7 @@ After today's evening-session closures, the highest-value next session has shift
 | NOP | Closed via | Result |
 |-----|-----------|--------|
 | **NOP-A** | Lemma 15 (corrected form) | Cost-comparison + component union; tighter than both sharp & spectral; certified $\varepsilon_\mathrm{OT}^* = 2.29$ covers exp83 |
-| **NOP-B** | Lemma 16 (σ_rich Lipschitz) | Closes OP-0008-DIST; $L_\sigma \approx 2\sqrt{|C|}D_C^2/m_\mathrm{min}$ |
+| **NOP-B** | Lemma 16 (σ_rich Lipschitz) | Closes OP-0008-DIST; $L_\sigma \approx 2\sqrt{\lvert C \rvert}D_C^2/m_\mathrm{min}$ |
 | **NOP-D** | Lemma 18 (Hilbert metric, refined) | Sweet spot $\varepsilon_\mathrm{OT} \in [0.71, 2.29]$ — Hilbert contraction + concentration overlap; exp83 ε=1 in sweet spot |
 | **NOP-J** | Lemma 24 (Fisher ↔ Hessian) | Conformality on boundary subspace; canonical $\Phi$ ⇒ $T_*^{(\mathrm{Fisher})} = T_*^{(\mathrm{RG})}$ |
 

@@ -65,13 +65,13 @@ Decompose $H_{\mathcal{E}}(u^*) = H_{\mathrm{bd}}(u^*) + H_{\mathrm{cl}}(u^*) + 
 - $H_{\mathrm{sep}}$: separation; positive on tangent space by self-induced-exterior structure.
 
 Bound each term *separately* on the tangent space mod volume:
-1. $H_{\mathrm{bd}}$ tangent eigenvalue $\geq \alpha \lambda_2(L) - \beta \|W''\|_\infty$ — can be negative in spinodal regime.
+1. $H_{\mathrm{bd}}$ tangent eigenvalue $\geq \alpha \lambda_2(L) - \beta \lVert W'' \rVert_\infty$ — can be negative in spinodal regime.
 2. $H_{\mathrm{cl}} \succeq 2 \lambda_{\mathrm{cl}} (1 - a_{\mathrm{cl}}/4)^2 \cdot \Pi_T$ — *strictly positive* via T7-Enhanced (canonical Cat A, line 1138). This is the "closure lift".
 3. $H_{\mathrm{sep}} \succeq 0$ on $\Sigma_m^\circ$ (positivity of self-induced quadratic form; minor verification).
 
-Sum: $\mu_{\min}(H^{\mathrm{proj}}) \geq 2\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 - \beta\|W''\|_\infty + \alpha\lambda_2(L)$. When the closure-lift term dominates the spinodal deficit, $\mu_{\min} > 0$.
+Sum: $\mu_{\min}(H^{\mathrm{proj}}) \geq 2\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 - \beta\lVert W'' \rVert_\infty + \alpha\lambda_2(L)$. When the closure-lift term dominates the spinodal deficit, $\mu_{\min} > 0$.
 
-**Success form.** Explicit Cat B lower bound: $\mu_{\min} \geq c(\lambda_{\mathrm{cl}}, \beta, a_{\mathrm{cl}}) > 0$ with conditions $\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 \geq \beta\|W''\|_\infty / 2 - \alpha\lambda_2(L)/2$.
+**Success form.** Explicit Cat B lower bound: $\mu_{\min} \geq c(\lambda_{\mathrm{cl}}, \beta, a_{\mathrm{cl}}) > 0$ with conditions $\lambda_{\mathrm{cl}}(1 - a_{\mathrm{cl}}/4)^2 \geq \beta\lVert W'' \rVert_\infty / 2 - \alpha\lambda_2(L)/2$.
 
 **Failure mode.** If the closure-lift inequality from T7-Enhanced applies only to a *specific* eigenmode (the one along closure direction) rather than uniformly across the tangent space, $\mu_{\min}$ is not bounded by this argument — only the closure-direction eigenvalue is. This is the *narrow vs broad lift* question.
 
@@ -114,7 +114,7 @@ Allen–Cahn Morse transition theorems (Bates–Fife–Wang 1997; Fei–Wang–Z
 | **Proof technique** | term-by-term spectral bound + sum | implicit function theorem on Lagrangian | transversality + sharp-interface limit |
 | **Output type** | quantitative explicit constant | qualitative positivity | generic measure-theoretic |
 | **Failure mode** | closure-lift narrow vs broad | no explicit bound | not pointwise; framework drift |
-| **Conditions required** | $\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2 \geq \beta\|W''\|_\infty / 2 - \alpha\lambda_2(L)/2$ | symmetry-broken + interior + non-boundary | generic in $\mathcal{E}_\delta$ space |
+| **Conditions required** | $\lambda_{\mathrm{cl}}(1-a_{\mathrm{cl}}/4)^2 \geq \beta\lVert W'' \rVert_\infty / 2 - \alpha\lambda_2(L)/2$ | symmetry-broken + interior + non-boundary | generic in $\mathcal{E}_\delta$ space |
 | **Canonical self-containment** | full | full | partial (external framework) |
 
 The three approaches:

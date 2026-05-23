@@ -13,7 +13,7 @@
 
 ### 1.1 Graph and field structure
 
-$G = (X, E)$ 는 finite simple connected graph, $n = |X|$. Adjacency matrix $A$, degree matrix $D = \text{diag}(d_i)$, **combinatorial Laplacian** $L = D - A$ (PSD, $L \mathbf{1} = 0$, eigenvalues $0 = \lambda_1 < \lambda_2 \leq \cdots \leq \lambda_n$). 모든 site index $i \in X$.
+$G = (X, E)$ 는 finite simple connected graph, $n = \lvert X \rvert$. Adjacency matrix $A$, degree matrix $D = \text{diag}(d_i)$, **combinatorial Laplacian** $L = D - A$ (PSD, $L \mathbf{1} = 0$, eigenvalues $0 = \lambda_1 < \lambda_2 \leq \cdots \leq \lambda_n$). 모든 site index $i \in X$.
 
 **Volume-constrained simplex:** for $m \in (0, n)$,
 $$\Sigma_m := \Big\{u \in [0,1]^X : \sum_i u_i = m\Big\}.$$
@@ -109,7 +109,7 @@ By polarization, $\mathbf{H}(u^*) = \pi^\top \mathbf{H}(u^*) \pi$, i.e. $\pi$ co
 **Step 3 (Isotypic decomposition).** $S$ is a finite group acting on the finite-dim real vector space $V_k$. By Maschke's theorem (alternatively, since $S$ acts unitarily after choosing the standard inner product on $\mathbf{1}^\perp$), $V_k$ decomposes as a direct sum of $S$-irreducible subrepresentations. Group these by isomorphism class:
 $$V_k = \bigoplus_{[\rho] \in \widehat{S}} V_k^{[\rho]}.$$
 **Canonical**: the projector onto $V_k^{[\rho]}$ is given by the **isotypic projector**
-$$P_{[\rho]} = \frac{\dim \rho}{|S|} \sum_{\pi \in S} \overline{\chi_\rho(\pi)} \cdot \pi$$
+$$P_{[\rho]} = \frac{\dim \rho}{\lvert S \rvert} \sum_{\pi \in S} \overline{\chi_\rho(\pi)} \cdot \pi$$
 with $\chi_\rho$ the character of $\rho$. This projector depends only on $S$ and $\rho$, not on a choice of basis. Hence the decomposition (and the multi-set $\{(\dim V_k^{[\rho]}, [\rho])\}$) is canonical.
 
 **Step 4 (1-dim case).** If $\dim V_k = 1$, $V_k$ is a single 1-dim subrepresentation, hence equals $V_k^{[\rho]}$ for a unique $[\rho]$. This $[\rho]$ is $[\rho_k]$ in (O5). $\Box$
@@ -165,7 +165,7 @@ $G$ 는 $L \times L$ free-BC 2D square grid, $u^* \in \Sigma_m$ Morse-0 local mi
 
 free-BC grid 의 finite vertex set $X = \{0, \ldots, L-1\}^2$ 에 대해 lattice translation $\tau_{(a,b)}(x,y) := (x+a, y+b)$ 는 일반적으로 graph automorphism이 **아니다** (boundary vertex set 이 변동하면 그래프 구조 다름). 그러나 boundary 로부터 충분히 멀리 떨어진 bulk 에서는 translation 이 **approximate** symmetry.
 
-> **Definition (Pseudo-translation).** $u^*$ 가 boundary 로부터 거리 $\geq d_*$ 인 bulk 에 localized 되어 있고, $|a|, |b| \leq d_* / 2$ 인 small translation $\tau_{(a,b)}$ 에 대해 $u^*_{(a,b)} := \tau_{(a,b)} \cdot u^*$ 는 다시 $\Sigma_m$ 의 valid configuration. Energy $\mathcal{E}(u^*_{(a,b)})$ 는 $\mathcal{E}(u^*)$ 와 동일 (boundary 에 닿지 않으므로 graph 구조가 effectively translationally-invariant in the supported region).
+> **Definition (Pseudo-translation).** $u^*$ 가 boundary 로부터 거리 $\geq d_*$ 인 bulk 에 localized 되어 있고, $\lvert a \rvert, \lvert b \rvert \leq d_* / 2$ 인 small translation $\tau_{(a,b)}$ 에 대해 $u^*_{(a,b)} := \tau_{(a,b)} \cdot u^*$ 는 다시 $\Sigma_m$ 의 valid configuration. Energy $\mathcal{E}(u^*_{(a,b)})$ 는 $\mathcal{E}(u^*)$ 와 동일 (boundary 에 닿지 않으므로 graph 구조가 effectively translationally-invariant in the supported region).
 
 ### 5.3 Translation modes are near-zero of Hessian
 
@@ -179,7 +179,7 @@ free-BC grid 의 finite vertex set $X = \{0, \ldots, L-1\}^2$ 에 대해 lattice
 
 ### Proof (sketch — Cat B)
 
-**(a)** $\sum_i \delta u_x(i) = \sum_i [u^*(i+e_1) - u^*(i)]$. For any vertex $i$ with $i + e_1$ in $X$ (interior): contributions cancel pairwise by telescoping. For $i$ on the boundary (no $i+e_1$ neighbor or value undefined): contribution $|u^*(i)|$ or $|u^*(i+e_1)|$. In the localized regime ($u^* \approx 0$ near boundary), these residual sums are $O(\exp(-d_*/\xi_0))$ (Cor 2.2 quantitative tail). Hence $\sum \delta u_x = O(\exp(-d_*/\xi_0))$ — approximately mass-preserving.
+**(a)** $\sum_i \delta u_x(i) = \sum_i [u^*(i+e_1) - u^*(i)]$. For any vertex $i$ with $i + e_1$ in $X$ (interior): contributions cancel pairwise by telescoping. For $i$ on the boundary (no $i+e_1$ neighbor or value undefined): contribution $\lvert u^*(i) \rvert$ or $\lvert u^*(i+e_1) \rvert$. In the localized regime ($u^* \approx 0$ near boundary), these residual sums are $O(\exp(-d_*/\xi_0))$ (Cor 2.2 quantitative tail). Hence $\sum \delta u_x = O(\exp(-d_*/\xi_0))$ — approximately mass-preserving.
 
 **(b)** Bulk evaluation. In the bulk (away from boundary), $u^*$ satisfies
 $$\nabla \mathcal{E}(u^*) = 0 \quad \text{up to constraint multiplier (volume)},$$
@@ -187,7 +187,7 @@ i.e. $\frac{\partial \mathcal{E}}{\partial u(i)}(u^*) = \mu$ (constant Lagrange 
 $$\partial_x \frac{\partial \mathcal{E}}{\partial u(i)}(u^*) = 0 \quad \text{for }i\text{ in bulk}.$$
 But $\partial_x \frac{\partial \mathcal{E}}{\partial u(i)} = \sum_j \frac{\partial^2 \mathcal{E}}{\partial u(i) \partial u(j)} \cdot (\partial_x u^*)(j) = (\mathbf{H}(u^*) \delta u_x)(i)$. So $(\mathbf{H} \delta u_x)(i) = 0$ in bulk.
 
-Boundary contribution: residual where translation breaks, of size $O(\exp(-d_*/\xi_0))$ in $L^2$ norm (Cor 2.2 tail). So $\|\mathbf{H} \delta u_x\|_2 = O(\exp(-d_*/\xi_0)) \cdot \|\delta u_x\|_2$. Restriction to $\mathbf{1}^\perp$: similar bound. Hence $\langle \delta u_x, H \delta u_x\rangle / \|\delta u_x\|^2 = O(\exp(-d_*/\xi_0))$.
+Boundary contribution: residual where translation breaks, of size $O(\exp(-d_*/\xi_0))$ in $L^2$ norm (Cor 2.2 tail). So $\lVert \mathbf{H} \delta u_x \rVert_2 = O(\exp(-d_*/\xi_0)) \cdot \lVert \delta u_x \rVert_2$. Restriction to $\mathbf{1}^\perp$: similar bound. Hence $\langle \delta u_x, H \delta u_x\rangle / \lVert \delta u_x \rVert^2 = O(\exp(-d_*/\xi_0))$.
 
 **(c)** By 90° rotation 대칭 (D₄ rotational subgroup).
 
@@ -235,7 +235,7 @@ Pure $\mathcal{E}_\text{bd}$ 만 활성화된 ($\lambda_\text{cl} = \lambda_\tex
 
 ### 6.2 Closure gradient at disk
 
-$\mathcal{E}_\text{cl}(u) = \tfrac{a_\text{cl}}{2} \|u - \text{Cl}(u)\|^2$ with $\text{Cl}(u) = \sigma(\text{contraction})$. At $u = u_\text{disk}^*$, $\text{Cl}(u_\text{disk}^*) \neq u_\text{disk}^*$ generally. Specifically:
+$\mathcal{E}_\text{cl}(u) = \tfrac{a_\text{cl}}{2} \lVert u - \text{Cl}(u) \rVert^2$ with $\text{Cl}(u) = \sigma(\text{contraction})$. At $u = u_\text{disk}^*$, $\text{Cl}(u_\text{disk}^*) \neq u_\text{disk}^*$ generally. Specifically:
 
 **Interior** ($u_\text{disk}^* \approx 1$): $\text{Cl}$ pulls toward fixed point $c^*$. Since $1 > c^*$ (closure FP 는 일반적으로 $c^* \in (0, 1)$ 이고 spinodal 영역 안), $\text{Cl}(1) < 1$. Mismatch: $u - \text{Cl}(u) = 1 - c^* > 0$.
 **Exterior** ($u_\text{disk}^* \approx 0$): $\text{Cl}(0) > 0$. Mismatch: $u - \text{Cl}(u) = -c^* < 0$.
@@ -281,7 +281,7 @@ Generally, $\nabla \mathcal{E}_\text{sep}(u_\text{disk}^*) \neq 0$ in the interi
 
 **Step 4.** **Claim**: $g_\text{cl} \neq 0$ under (C2)–(C4). Reason: $u_\text{disk}^* - \text{Cl}(u_\text{disk}^*)$ is interior-positive ($\approx 1 - c^*$) and exterior-negative ($\approx -c^*$). The image under $(I - J_\text{Cl}^\top)$ retains spatial inhomogeneity (a constant 0 image would require $(I - J_\text{Cl}^\top) v = 0$ for non-zero spatially-varying $v$, contradicting injectivity in contraction regime per T6b). Projection to $\mathbf{1}^\perp$ removes only the mean, leaving nonzero variation. Hence $g_\text{cl} \neq 0$.
 
-**Step 5.** Therefore $\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \neq 0$ unless precise cancellation $\lambda_\text{cl} g_\text{cl} = -\lambda_\text{sep} g_\text{sep}$. This cancellation occurs only on a codim-1 subset of parameter space (a single equation in the 2D space $(\lambda_\text{cl}, \lambda_\text{sep})$). For generic $(\lambda_\text{cl}, \lambda_\text{sep}) > 0$, no cancellation → $u_\text{disk}^*$ not critical. (C5) makes "generic" precise via threshold $\lambda_\text{cl}^\text{crit}$ above which $\|g_\text{cl}\| > \|g_\text{sep}\|$.
+**Step 5.** Therefore $\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \neq 0$ unless precise cancellation $\lambda_\text{cl} g_\text{cl} = -\lambda_\text{sep} g_\text{sep}$. This cancellation occurs only on a codim-1 subset of parameter space (a single equation in the 2D space $(\lambda_\text{cl}, \lambda_\text{sep})$). For generic $(\lambda_\text{cl}, \lambda_\text{sep}) > 0$, no cancellation → $u_\text{disk}^*$ not critical. (C5) makes "generic" precise via threshold $\lambda_\text{cl}^\text{crit}$ above which $\lVert g_\text{cl} \rVert > \lVert g_\text{sep} \rVert$.
 
 **Step 6.** Not-critical implies not-local-min (since local min ⊂ critical points). $\Box$
 

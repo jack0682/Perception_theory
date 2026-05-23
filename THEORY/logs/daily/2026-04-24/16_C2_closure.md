@@ -102,21 +102,21 @@ Phase 3.2 phase diagram (random IC only):
 ### 3.2 Theoretical decomposition
 
 Decompose Theorem 2 (i) via gradient magnitude:
-$$\|\nabla \mathcal{E}(u^*_\text{disk})\|_{\mathbf{1}^\perp}^2 = \lambda_\text{cl}^2 \|g_\text{cl}\|^2 + 2\lambda_\text{cl}\lambda_\text{sep}\langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \|g_\text{sep}\|^2.$$
+$$\lVert \nabla \mathcal{E}(u^*_\text{disk}) \rVert_{\mathbf{1}^\perp}^2 = \lambda_\text{cl}^2 \lVert g_\text{cl} \rVert^2 + 2\lambda_\text{cl}\lambda_\text{sep}\langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \lVert g_\text{sep} \rVert^2.$$
 
-이는 quadratic form (Lemma 4). Destabilization strength is $\propto \|\nabla\mathcal{E}\|$ magnitude (direction away from disk).
+이는 quadratic form (Lemma 4). Destabilization strength is $\propto \lVert \nabla\mathcal{E} \rVert$ magnitude (direction away from disk).
 
 ### 3.3 cl destabilization monotone
 
 **Fix $\lambda_\text{sep} = 0$, vary $\lambda_\text{cl}$**:
-$\|\nabla \mathcal{E}\|^2 = \lambda_\text{cl}^2 \|g_\text{cl}\|^2$ — **monotone increasing in $\lambda_\text{cl}$** ✓
+$\lVert \nabla \mathcal{E} \rVert^2 = \lambda_\text{cl}^2 \lVert g_\text{cl} \rVert^2$ — **monotone increasing in $\lambda_\text{cl}$** ✓
 
 이는 Phase 3.2 data (F_mean 6.8 → 8.2 → 8.0) 와 qualitatively 부합하나, 정확한 monotone 은 F_mean 이 아닌 gradient magnitude 에서. F_mean 의 non-monotone end (8.2 → 8.0) 는 random IC noise.
 
 ### 3.4 sep destabilization 의 진짜 mechanism
 
 **Fix $\lambda_\text{cl} = 0$, vary $\lambda_\text{sep}$**:
-$\|\nabla \mathcal{E}\|^2 = \lambda_\text{sep}^2 \|g_\text{sep}\|^2$ — 이도 monotone increasing!
+$\lVert \nabla \mathcal{E} \rVert^2 = \lambda_\text{sep}^2 \lVert g_\text{sep} \rVert^2$ — 이도 monotone increasing!
 
 그러나 Phase 3.2 의 F_mean (7.4 → 5.5 → 4.8 → 18) 은 non-monotone. 이 discrepancy 의 source:
 
@@ -130,14 +130,14 @@ $\|\nabla \mathcal{E}\|^2 = \lambda_\text{sep}^2 \|g_\text{sep}\|^2$ — 이도 
 
 ### 3.5 Cl / sep 의 책임 구분 (Phase 3.2 data 기반)
 
-Pure cl: destabilization strength $\lambda_\text{cl} \|g_\text{cl}\|$. Phase 2 L=12 측정: $\|g_\text{cl}\| = 2.11$.
-Pure sep: destabilization strength $\lambda_\text{sep} \|g_\text{sep}\|$. Phase 2 L=12 측정: $\|g_\text{sep}\| = 7.03$.
+Pure cl: destabilization strength $\lambda_\text{cl} \lVert g_\text{cl} \rVert$. Phase 2 L=12 측정: $\lVert g_\text{cl} \rVert = 2.11$.
+Pure sep: destabilization strength $\lambda_\text{sep} \lVert g_\text{sep} \rVert$. Phase 2 L=12 측정: $\lVert g_\text{sep} \rVert = 7.03$.
 
 → **Sep 이 cl 보다 약 3.3× 더 큰 gradient magnitude**. 즉 단위 $\lambda$ 당 sep 이 closure 보다 더 강한 destabilizer.
 
 단, $\langle g_\text{cl}, g_\text{sep}\rangle = -0.76 \cdot 2.11 \cdot 7.03 = -11.3$ — 상당한 anti-alignment. 두 활성화 시 부분 cancellation 으로 total magnitude 가 $\lambda_\text{cl}^2 \cdot 4.45 - 2\lambda_\text{cl}\lambda_\text{sep} \cdot 11.3 + \lambda_\text{sep}^2 \cdot 49.4$. 
 
-At $\lambda_\text{cl} = \lambda_\text{sep} = 1$: $4.45 - 22.6 + 49.4 = 31.25$, $\|\text{grad}\| \approx 5.6$ — Phase 2 L=12 numerical 과 일치 ($\|g_\text{full}\| = 5.589$ at (1,1)).
+At $\lambda_\text{cl} = \lambda_\text{sep} = 1$: $4.45 - 22.6 + 49.4 = 31.25$, $\lVert \text{grad} \rVert \approx 5.6$ — Phase 2 L=12 numerical 과 일치 ($\lVert g_\text{full} \rVert = 5.589$ at (1,1)).
 
 → **NQ-134 정확한 mechanism-level answer Cat A**.
 

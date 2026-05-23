@@ -38,9 +38,9 @@ The original H-SINK plan-stability lemma (H-SINK-6) covers balanced OT via Hilbe
 
 The SCC canonical transport is **one-sided partial OT** (E1 axiom: $\sum_y M(x,y) \leq u_t(x)$, no column constraint). Each row is independent. **Theorem Partial-H-SINK** (W7-FINAL) gives a direct proof via row-softmax Lipschitz:
 
-$$\|M^* - M^{*'}\|_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon_\mathrm{OT}} \cdot e^{2\delta/\varepsilon_\mathrm{OT}}.$$
+$$\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq \frac{m_t \delta}{\varepsilon_\mathrm{OT}} \cdot e^{2\delta/\varepsilon_\mathrm{OT}}.$$
 
-Linear regime ($\delta \leq \varepsilon_\mathrm{OT}/4$): $\|M^* - M^{*'}\|_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$.
+Linear regime ($\delta \leq \varepsilon_\mathrm{OT}/4$): $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq 2m_t\delta/\varepsilon_\mathrm{OT}$.
 
 Proof uses only log-sum-exp: $|\log\sum a_i e^{r_i} - \log\sum a_i| \leq \max_i|r_i|$. No Hilbert projective metric, no Séjourné et al. 2019 — direct elementary proof for the canonical SCC E1 case.
 

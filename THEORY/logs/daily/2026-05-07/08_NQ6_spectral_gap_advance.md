@@ -25,7 +25,7 @@ Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ with $\mathrm{PersComp}(u_t) = \{C
 Define the **transport-energy functional** with self-referential cost:
 $$\mathcal{T}_{\varepsilon_\mathrm{OT}}(M; u_t, u_s) \;=\; \sum_{x,y} c[u_t](x,y)\,M(x,y) \;+\; \varepsilon_\mathrm{OT}\,H(M),$$
 where $H(M) = \sum_{x,y} M(x,y)\log M(x,y) - M(x,y)$ is the entropy and the cost is self-referential:
-$$c[u_t](x,y) = \|\varphi(u_t)(x) - \varphi(u_t)(y)\|^2 + \sigma_\mathrm{sp}^{-2}d_G(x,y)^2.$$
+$$c[u_t](x,y) = \lVert \varphi(u_t)(x) - \varphi(u_t)(y) \rVert^2 + \sigma_\mathrm{sp}^{-2}d_G(x,y)^2.$$
 
 The Sinkhorn optimum $M^*$ satisfies the marginal constraints:
 $$\sum_y M^*(x,y) \leq u_t(x),\quad \sum_x M^*(x,y) \leq u_s(y),$$
@@ -65,15 +65,15 @@ This is positive but the *effective* curvature for a *swap-mode* perturbation de
 2. **Step 2 — Project onto formation Hessian.** A swap-mode $\delta M_{ij}$ that transports mass from $\mathrm{Core}(C_i^t)$ to $\mathrm{Core}(C_j^s)$ (instead of $\mathrm{Core}(C_{\pi(i)}^s)$) induces a corresponding *field perturbation* $\delta u^{j} = (\delta M_{ij})^\top \mathbf{1}$ on the time-$s$ field. This $\delta u^j$ deforms the K-formation by adding mass to $C_j^s$ from the wrong source.
 
 The energy cost of this field perturbation is bounded below by joint Hessian + spatial transport:
-$$\Delta E_\mathrm{form} \geq \frac{1}{2}\mu_\mathrm{joint}\,\|\delta u^j\|^2 + \tfrac{1}{2}\sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2\,\|\delta M_{ij}\|^2.$$
+$$\Delta E_\mathrm{form} \geq \frac{1}{2}\mu_\mathrm{joint}\,\lVert \delta u^j \rVert^2 + \tfrac{1}{2}\sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2\,\lVert \delta M_{ij} \rVert^2.$$
 The first term: formation Hessian on $\delta u$. The second: spatial transport cost over distance $d_\mathrm{inter}^*$.
 
 3. **Step 3 — Boltzmann concentration.** The entropic-OT optimum is a Boltzmann distribution over plans:
 $$M^*(\delta M) \propto \exp(-\Delta E[\delta M]/\varepsilon_\mathrm{OT}).$$
-Therefore the probability of a swap-mode perturbation of magnitude $\|\delta M_{ij}\|$ is bounded by:
-$$\Pr[\|\delta M_{ij}\| > t] \leq \exp(-(\mu_\mathrm{joint} t^2 + \sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2 t^2)/(2\varepsilon_\mathrm{OT})).$$
+Therefore the probability of a swap-mode perturbation of magnitude $\lVert \delta M_{ij} \rVert$ is bounded by:
+$$\Pr[\lVert \delta M_{ij} \rVert > t] \leq \exp(-(\mu_\mathrm{joint} t^2 + \sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2 t^2)/(2\varepsilon_\mathrm{OT})).$$
 
-4. **Step 4 — Mass interpretation.** Off-diagonal mass $\gamma(C_i^t, C_j^s) = \int t \cdot \Pr[\|\delta M_{ij}\| = t] dt$. By Gaussian-tail integration:
+4. **Step 4 — Mass interpretation.** Off-diagonal mass $\gamma(C_i^t, C_j^s) = \int t \cdot \Pr[\lVert \delta M_{ij} \rVert = t] dt$. By Gaussian-tail integration:
 $$\gamma(C_i^t, C_j^s) \leq \min(m_i^t, m_j^s) \cdot \exp(-(\mu_\mathrm{joint} + \sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2)\,(d_\mathrm{inter}^*)^2 / (2\varepsilon_\mathrm{OT})).$$
 
 The spatial term is $\geq 0$ and small for moderate $d_\mathrm{inter}^*$ (at $\sigma_\mathrm{sp}^2 = \mathrm{diam}^2/2 \approx 392$ and $d_\mathrm{inter}^* = 5$: $\sigma_\mathrm{sp}^{-2}(d_\mathrm{inter}^*)^2 = 25/392 \approx 0.064$, much smaller than $\mu_\mathrm{joint}$ at default).
@@ -92,7 +92,7 @@ This is the sketched bound.
    - These field perturbations live in the joint-formation tangent space.
    - The joint Hessian acts on $(\delta u^t, \delta u^s) \in T \mathcal{F}^K_M \times T \mathcal{F}^K_M$.
 
-   A clean formulation: $\Delta E_\mathrm{form}[\delta u^s | \delta M_{ij}, u_t] \geq \mu_\mathrm{joint} \cdot \|\delta u^s_{(j)}\|^2$ — energy increment for the $j$-th formation slot deformation. Need to formalize.
+   A clean formulation: $\Delta E_\mathrm{form}[\delta u^s | \delta M_{ij}, u_t] \geq \mu_\mathrm{joint} \cdot \lVert \delta u^s_{(j)} \rVert^2$ — energy increment for the $j$-th formation slot deformation. Need to formalize.
 
 3. **Step 3 Boltzmann factor.** The entropic-OT plan is a *constrained* Boltzmann distribution (marginal constraints), not a free one. The naive Boltzmann argument needs adjustment for the marginal constraints — typically a saddle-point / Legendre-transform argument.
 

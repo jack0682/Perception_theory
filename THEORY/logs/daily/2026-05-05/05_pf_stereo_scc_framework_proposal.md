@@ -100,7 +100,7 @@ where $f_L, f_R$ are left/right image intensities, $\Pi_{LR} : X_L \rightharpoon
 
 **Depth-aware adjacency.** The graph $G_t = (\mathcal{P}_t, E_t^{3D})$ uses depth-filtered edges:
 
-$$E_t^{3D} = \bigl\{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D},\; |z(x) - z(y)| < \delta_z \bigr\}$$
+$$E_t^{3D} = \bigl\{(b_t(x), b_t(y)) : (x,y) \in E_t^{2D},\; \lvert z(x) - z(y) \rvert < \delta_z \bigr\}$$
 
 for depth threshold $\delta_z > 0$. This prevents spurious closure support across depth discontinuities.
 

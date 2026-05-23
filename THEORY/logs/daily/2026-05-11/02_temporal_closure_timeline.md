@@ -32,7 +32,7 @@ All five sessions occurred on 2026-05-10. This file structures the work as a mil
 **Trigger:** Complete single-formation temporal closure chain. Bridge: H-SINK → partial OT → S-B1 → S-B3 → T-Temporal-Identity canonical → CV-1.12.
 
 **Outputs:**
-- **Theorem Partial-H-SINK (Cat A NEW):** Direct row-softmax Lipschitz proof for canonical SCC E1 one-sided sub-stochastic OT. No Séjourné et al. 2019 needed. Bound: $\|M^* - M^{*'}\|_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$.
+- **Theorem Partial-H-SINK (Cat A NEW):** Direct row-softmax Lipschitz proof for canonical SCC E1 one-sided sub-stochastic OT. No Séjourné et al. 2019 needed. Bound: $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$.
 - Cascade: Lemma 9 (plan stability) Cat B → **Cat A**; Lemma 10 (component confinement) Cat B → **Cat A**; Lemma 11 (kernel independence, = S-B3) Cat B → **Cat A conditional** (margin condition).
 - H-SINK full theorem (canonical SCC E1) → **Cat A**.
 - **S-B3 (Lemma 11) Cat A conditional** under margin $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}$ (later corrected to $+2\epsilon_\mathrm{kernel}$ by S-C1).

@@ -42,7 +42,7 @@ This is the **standard projected Laplacian** on the hyperplane Σ_m.
 For potential ℱ : Σ_m^ε → ℝ and parameter T > 0:
 
 $$
-\boxed{\;\;\Delta_{\mathcal{F}, T} \;=\; -T^2\, \Delta_{\Sigma_m} \;+\; \|\nabla_{\Sigma_m} \mathcal{F}\|^2 \;-\; T \cdot \Delta_{\Sigma_m} \mathcal{F}\;\;}
+\boxed{\;\;\Delta_{\mathcal{F}, T} \;=\; -T^2\, \Delta_{\Sigma_m} \;+\; \lVert \nabla_{\Sigma_m} \mathcal{F} \rVert^2 \;-\; T \cdot \Delta_{\Sigma_m} \mathcal{F}\;\;}
 $$
 
 where:
@@ -138,7 +138,7 @@ F3 Langevin (Theorem F3.1, Round 3) on Σ_m^ε with stationary measure `ℙ_T = 
 Mixing rate via **Poincaré inequality**:
 
 $$
-\mathrm{Var}_{\mathbb{P}_T}(\phi) \leq \frac{1}{C_P(T)}\, \mathbb{E}_{\mathbb{P}_T}\!\big(\|\nabla \phi\|^2 \cdot 2T\big),
+\mathrm{Var}_{\mathbb{P}_T}(\phi) \leq \frac{1}{C_P(T)}\, \mathbb{E}_{\mathbb{P}_T}\!\big(\lVert \nabla \phi \rVert^2 \cdot 2T\big),
 $$
 
 where C_P(T) is the **Poincaré constant**. The corresponding Langevin gap is `α = 2T · C_P(T)`.

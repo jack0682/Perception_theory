@@ -132,7 +132,7 @@ Regime III ($c > c_{\mathrm{bif}}^+$): -50-56%.
 
 **불일치 원인:** Round 6 예측은 $N^{\mathrm{sep}}$ (cl_sep 기여)에 대한 것. 우리 predictor는 $N^{\mathrm{bd}}$ (bd Morse index만)만 계산.
 
-$N^{\mathrm{bd}}$: $|W''(c)|$에 비례. $|W''(0.5)| = 1$, $|W''(0.3)| = 0.52$. c=0.5가 bd-destabilization 더 강함 → N_unst 더 큼.
+$N^{\mathrm{bd}}$: $\lvert W''(c) \rvert$에 비례. $\lvert W''(0.5) \rvert = 1$, $\lvert W''(0.3) \rvert = 0.52$. c=0.5가 bd-destabilization 더 강함 → N_unst 더 큼.
 
 $N^{\mathrm{sep}}$: Regime I에서 추가 bipartite modes. 우리가 계산한 것에 포함 안됨.
 

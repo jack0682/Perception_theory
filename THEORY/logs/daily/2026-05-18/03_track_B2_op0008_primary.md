@@ -46,7 +46,7 @@ OP-0008 σ_standard MERGE Wigner-projection Cat C → Cat B 승급의 *2-route a
 
 ### §2.2 Route (a) Kato resolvent perturbation
 
-- Setup: cross-block Hessian $H = H_0 + V$, $H_0 = H_{i_1, i_1} \oplus H_{i_2, i_2}$, $\|V\|_\mathrm{op} \leq \lambda_\mathrm{rep} c e^{-c_0 d_\mathrm{inter}}$.
+- Setup: cross-block Hessian $H = H_0 + V$, $H_0 = H_{i_1, i_1} \oplus H_{i_2, i_2}$, $\lVert V \rVert_\mathrm{op} \leq \lambda_\mathrm{rep} c e^{-c_0 d_\mathrm{inter}}$.
 - 도구: Reed-Simon IV §XIII.5 (resolvent expansion for isolated simple eigenvalues).
 - Schur-complement reduction → post-merger $\sigma_\mathrm{std}(C_j^s)$ explicit polynomial form (target Cat B).
 - 성공 조건: perturbative regime + simple eigenvalues + analytic family.
@@ -64,7 +64,7 @@ OP-0008 σ_standard MERGE Wigner-projection Cat C → Cat B 승급의 *2-route a
 
 | 비교 항목 | Route (a) | Route (b) |
 |---|---|---|
-| 적용 영역 | low coupling ($\|V\| <$ gap) | deep merger ($\|V\| \to O(\lambda_\mathrm{rep})$) |
+| 적용 영역 | low coupling ($\lVert V \rVert <$ gap) | deep merger ($\lVert V \rVert \to O(\lambda_\mathrm{rep})$) |
 | 결정성 | deterministic per-instance | distributional ensemble |
 | 실패 모드 | deep merger | high symmetry |
 | 성공 조건 | $\lambda_\mathrm{rep} e^{-c_0 d_\mathrm{inter}} <$ gap | $\mathrm{Aut}(G) = 1$ |
@@ -79,7 +79,7 @@ OP-0008 σ_standard MERGE Wigner-projection Cat C → Cat B 승급의 *2-route a
 - Route (a) Kato $O(\varepsilon^2)$ prediction.
 - Route (b) RMT Wigner-Dyson cdf.
 - Numerical merger ground truth.
-- 3-way 비교: $\|\Phi^{(a)} - \Phi^{(b)}\| / \|\sigma^{(\mathrm{num})}\|$ → overlap regime 의 convergence indicator.
+- 3-way 비교: $\lVert \Phi^{(a)} - \Phi^{(b)} \rVert / \lVert \sigma^{(\mathrm{num})} \rVert$ → overlap regime 의 convergence indicator.
 
 ### §2.6 Gate A/B 분기 condition
 

@@ -76,7 +76,7 @@ Observed μ ∈ [0.381, 1.750]. Variation factor 4.6×. **Far from constant** �
 
 Compute $\mu \cdot n / |\partial S|$ across all 6 valid data points:
 
-| Setup | μ | \|∂S\| | n | $\mu \cdot n / |∂S|$ |
+| Setup | μ | \|∂S\| | n | $\mu \cdot n / \lvert ∂S \rvert$ |
 |---|---|---|---|---|
 | m=40 L=20 | 0.656 | 20 | 400 | 13.12 |
 | m=80 L=20 | 1.108 | 32 | 400 | 13.85 |
@@ -99,7 +99,7 @@ Best dimensional guess: **$\mu \approx \pi \beta \cdot |\partial S|/n = \pi \cdo
 
 Physical interpretation: the Goldstone-like eigenvector is a **collective translation** of the cluster. On a finite system of size n, the volume-projection $P = I - \frac{1}{n}\mathbf{1}\mathbf{1}^T$ subtracts the mean — but on free-BC graph, the translation perturbation $\partial_x u^*$ has *non-zero mean* (boundary integration by parts has $u(L) \neq 0$ residual). The volume-projection subtracts this nonzero mean, giving a perturbation with norm proportional to $|\partial S|/n$.
 
-Specifically: $\|\partial_x u^*\|^2 \sim |\partial S|/\xi_0$ in continuum, but after volume projection $\|P \partial_x u^*\|^2 \sim |\partial S|^2 / n$ (the boundary residual scaled by 1/n). Hessian quadratic form $\langle \partial_x u^*, H \partial_x u^* \rangle \sim$ surface tension $\times |\partial S|$, divided by squared norm $\sim |\partial S|^2/n \cdot$ (some factor). Ratio: $\mu \sim |\partial S| / |\partial S|^2 \cdot n = n / |\partial S|$.
+Specifically: $\lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ in continuum, but after volume projection $\lVert P \partial_x u^* \rVert^2 \sim |\partial S|^2 / n$ (the boundary residual scaled by 1/n). Hessian quadratic form $\langle \partial_x u^*, H \partial_x u^* \rangle \sim$ surface tension $\times |\partial S|$, divided by squared norm $\sim |\partial S|^2/n \cdot$ (some factor). Ratio: $\mu \sim |\partial S| / |\partial S|^2 \cdot n = n / |\partial S|$.
 
 That gives $\mu \propto n/|\partial S|$ — **opposite** of observed!
 
@@ -108,13 +108,13 @@ Hmm, my heuristic is wrong. Let me redo.
 Actually: $\langle \partial_x u^*, H \partial_x u^* \rangle$ in continuum is **zero** (translation invariance). On lattice, it's non-zero due to PN-barrier — proportional to $V_0 \sim \alpha |\partial S|/\xi_0$ from §4.3 of `05_*`.
 
 Squared norm of projected $\partial_x u^*$:
-- Pre-projection: $\|\partial_x u^*\|^2 \sim |\partial S|/\xi_0$ (gradient localized to perimeter).
+- Pre-projection: $\lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ (gradient localized to perimeter).
 - Mean: $\sum_x \partial_x u^*(x) = u^*(L) - u^*(0) \sim 1$ on free BC (nonzero).
-- After projection: $\|P \partial_x u^*\|^2 = \|\partial_x u^*\|^2 - (mean)^2 \cdot n / n^2 \cdot n = \|\partial_x u^*\|^2 - 1/n$. The 1/n correction is small for large n.
+- After projection: $\lVert P \partial_x u^* \rVert^2 = \lVert \partial_x u^* \rVert^2 - (mean)^2 \cdot n / n^2 \cdot n = \lVert \partial_x u^* \rVert^2 - 1/n$. The 1/n correction is small for large n.
 
-So projected norm $\approx \|\partial_x u^*\|^2 \sim |\partial S|/\xi_0$ to leading order.
+So projected norm $\approx \lVert \partial_x u^* \rVert^2 \sim |\partial S|/\xi_0$ to leading order.
 
-μ ratio: $V_0 / \|\partial_x u^*\|^2 = (\alpha |\partial S|/\xi_0) / (|\partial S|/\xi_0) = \alpha$. CONSTANT — recovers `05_*` §4 prediction.
+μ ratio: $V_0 / \lVert \partial_x u^* \rVert^2 = (\alpha |\partial S|/\xi_0) / (|\partial S|/\xi_0) = \alpha$. CONSTANT — recovers `05_*` §4 prediction.
 
 But empirical data says μ ∝ |∂S|/n ≠ const. **Where does the 1/n come from?**
 
@@ -164,7 +164,7 @@ In thermodynamic limit n → ∞ at fixed cluster: μ → 0. Recovers continuum 
 
 ## §5. Diagnosis: Where Day 3 §4 Missed n-Dependence
 
-In `05_*` §4.4, equations (5.4.4) and (5.4.10) treated $\|\delta u\|^2$ and $V_0$ as both extensive in $|\partial S|$, giving constant μ. The empirical 1/n shows this is wrong.
+In `05_*` §4.4, equations (5.4.4) and (5.4.10) treated $\lVert \delta u \rVert^2$ and $V_0$ as both extensive in $|\partial S|$, giving constant μ. The empirical 1/n shows this is wrong.
 
 **Hypothesis**: the volume projection on free-BC graph introduces explicit n-dependence absent from the continuum or torus calculation. The translation perturbation on free BC has nonzero mean (boundary integration); volume projection *subtracts this mean*, but the resulting projected mode has different norm structure.
 

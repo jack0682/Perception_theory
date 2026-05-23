@@ -75,7 +75,7 @@ plan.md §"잠정 직감" 1~5 와 §Q1~Q4 를 검토하면 다음 4 개 가정�
 **핵심 아이디어.** Soft-K 의 정의에 H₀ persistence 의 weighted bar-length sum 을 commit (`K_pers(u) = Σᵢ φ(ℓᵢ)`, φ monotone Lipschitz). well-definedness 의 핵심은 Cohen-Steiner–Edelsbrunner–Harer (2007) 의 **bottleneck stability theorem**:
 
 $$
-W_\infty\!\big(\mathrm{Dgm}(u),\,\mathrm{Dgm}(v)\big) \;\leq\; \|u - v\|_\infty.
+W_\infty\!\big(\mathrm{Dgm}(u),\,\mathrm{Dgm}(v)\big) \;\leq\; \lVert u - v \rVert_\infty.
 $$
 
 φ 의 Lipschitz 성과 결합하여 `K_pers : (Σ_m, ‖·‖_∞) → ℝ_{≥0}` 가 Lipschitz. 이 위에 standard Gibbs `ℙ ∝ exp(−ℱ/T)` 와 standard Bernoulli 엔트로피 `S[u] = −Σ[u log u + (1−u) log(1−u)]` 를 layered overlay 로 추가.
@@ -112,7 +112,7 @@ Modica-Mortola (1977) 의 Γ-convergence 에서 ε → 0 극한의 perimeter fun
 **핵심 아이디어.** 정의 layer 자체는 P1 (또는 P2) 와 동일하게 시작하되, **존재론적 무게중심을 Witten Laplacian 의 spectrum 에 둠**. Free energy `ℱ_C+E[u]` 의 Witten 변형:
 
 $$
-\Delta_{\mathcal{F}, T} \;=\; -T\,\Delta + \frac{1}{T}\|\nabla \mathcal{F}\|^2 - \Delta \mathcal{F}.
+\Delta_{\mathcal{F}, T} \;=\; -T\,\Delta + \frac{1}{T}\lVert \nabla \mathcal{F} \rVert^2 - \Delta \mathcal{F}.
 $$
 
 Helffer-Sjöstrand (1985) 의 semiclassical analysis: T → 0 에서 Witten Laplacian 의 small eigenvalues 가 critical points of ℱ 와 1-1 대응 (Morse-theoretic). 이 spectrum 이 Kramers escape rates 를 직접 encode.

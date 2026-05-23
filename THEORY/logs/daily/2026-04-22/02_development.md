@@ -11,17 +11,17 @@
 
 ## §1. Notation and conventions
 
-Throughout, $G = (X, E)$ is a finite connected graph with $n = |X|$, vertex-weighted Laplacian $L$, Fiedler eigenvalue $\lambda_2 > 0$. Eigenpairs $(\lambda_k, \phi_k)_{k=1}^n$ with $\phi_1 = \mathbf{1}/\sqrt n$. The constraint manifold is $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$, tangent space $T_u\Sigma_m = \mathbf{1}^\perp \cap (\text{open face of hypercube})$. The double-well potential $W(u) = u^2(1-u)^2$ with $W''(c) = 12c^2 - 12c + 2$; at $c = 1/2$, $W''(c) = -1$. Spinodal range $c \in (c_-, c_+) = ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ where $W''(c) < 0$.
+Throughout, $G = (X, E)$ is a finite connected graph with $n = \lvert X \rvert$, vertex-weighted Laplacian $L$, Fiedler eigenvalue $\lambda_2 > 0$. Eigenpairs $(\lambda_k, \phi_k)_{k=1}^n$ with $\phi_1 = \mathbf{1}/\sqrt n$. The constraint manifold is $\Sigma_m = \{u \in [0,1]^n : \sum_i u_i = m\}$, tangent space $T_u\Sigma_m = \mathbf{1}^\perp \cap (\text{open face of hypercube})$. The double-well potential $W(u) = u^2(1-u)^2$ with $W''(c) = 12c^2 - 12c + 2$; at $c = 1/2$, $W''(c) = -1$. Spinodal range $c \in (c_-, c_+) = ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ where $W''(c) < 0$.
 
 The canonical four-term energy (§8.1):
 $$\mathcal{E}[u] = \lambda_{\mathrm{cl}}\mathcal{E}_{\mathrm{cl}}[u] + \lambda_{\mathrm{sep}}\mathcal{E}_{\mathrm{sep}}[u] + \lambda_{\mathrm{bd}}\mathcal{E}_{\mathrm{bd}}[u] + \lambda_{\mathrm{tr}}\mathcal{E}_{\mathrm{tr}}[u].$$
 With closure bd-factor $\lambda_{\mathrm{bd}} = 1$ absorbed into $(\alpha, \beta)$ convention:
 $$\mathcal{E}_{\mathrm{bd}}[u] = \alpha \sum_{x,y} \mathbf{N}(x,y) (u_x - u_y)^2 + \beta \sum_x W(u_x),\qquad \nabla \mathcal{E}_{\mathrm{bd}}(u) = 4\alpha L u + \beta W'(u).$$
 The Hessian: $\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}(u) = 4\alpha L + \beta \mathrm{diag}(W''(u))$. At $u_{\mathrm{uniform}} = c \mathbf{1}$:
-$$\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\big|_{u_{\mathrm{uniform}}} = 4\alpha L + \beta W''(c) I.$$
+$$\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\big\vert_{u_{\mathrm{uniform}}} = 4\alpha L + \beta W''(c) I.$$
 Restricted to $\mathbf{1}^\perp$ (the constrained tangent space), eigenvalues are $\mu_k^{\mathrm{bd}} = 4\alpha\lambda_k + \beta W''(c)$ for $k = 2, \ldots, n$.
 
-We write $\xi_0 := \sqrt{\alpha/\beta}$ (canonical interface width, Round 13). $\beta_{\mathrm{crit}}^{(k)} := 4\alpha\lambda_k / |W''(c)|$ is the $k$-th phase-transition threshold; $\beta_{\mathrm{crit}}^{(2)}$ is the canonical T8-Core threshold.
+We write $\xi_0 := \sqrt{\alpha/\beta}$ (canonical interface width, Round 13). $\beta_{\mathrm{crit}}^{(k)} := 4\alpha\lambda_k / \lvert W''(c) \rvert$ is the $k$-th phase-transition threshold; $\beta_{\mathrm{crit}}^{(2)}$ is the canonical T8-Core threshold.
 
 ---
 
@@ -30,17 +30,17 @@ We write $\xi_0 := \sqrt{\alpha/\beta}$ (canonical interface width, Round 13). $
 ### 2.1 Formal statement
 
 > **Proposition 1.3a (Morse index at $u_{\mathrm{uniform}}$ under pure bd-energy).** Let $G$ be finite connected, $c \in (c_-, c_+)$ strictly in the spinodal range, $\alpha, \beta > 0$. The constrained Hessian of $\mathcal{E}_{\mathrm{bd}}$ at $u_{\mathrm{uniform}} = c\mathbf{1} \in \Sigma_{cn}$ restricted to $\mathbf{1}^\perp$ has exactly $N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c)$ negative eigenvalues, where
-> $$\boxed{\;N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c) \;=\; \#\big\{k \in \{2, \ldots, n\}\;:\;4\alpha\lambda_k(G) < \beta |W''(c)|\big\}.\;}$$
+> $$\boxed{\;N_{\mathrm{unst}}^{\mathrm{bd}}(\beta, \alpha, c) \;=\; \#\big\{k \in \{2, \ldots, n\}\;:\;4\alpha\lambda_k(G) < \beta \lvert W''(c) \rvert\big\}.\;}$$
 
 ### 2.2 Proof (Approach A1, analytic)
 
 **Step 2.2.1 (Hessian diagonalization in $\phi$-basis).** Because $L \phi_k = \lambda_k \phi_k$ and $\mathrm{diag}(W''(c))$ at $u_{\mathrm{uniform}}$ is the constant $W''(c) I$ (any constant diagonal commutes with any symmetric matrix):
-$$\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\big|_{u_{\mathrm{uniform}}} = 4\alpha L + \beta W''(c) I.$$
+$$\mathrm{Hess}\,\mathcal{E}_{\mathrm{bd}}\big\vert_{u_{\mathrm{uniform}}} = 4\alpha L + \beta W''(c) I.$$
 This is simultaneously diagonal in $\{\phi_k\}$: eigenvalues $\mu_k^{\mathrm{bd}} = 4\alpha\lambda_k + \beta W''(c)$, $k = 1, \ldots, n$.
 
 **Step 2.2.2 (Tangent-space restriction).** The constraint $\sum u_i = cn$ means $T_{u_{\mathrm{uniform}}}\Sigma_m = \mathbf{1}^\perp = \mathrm{span}(\phi_2, \ldots, \phi_n)$. Restricting to $\mathbf{1}^\perp$ removes the $k=1$ eigenspace.
 
-**Step 2.2.3 (Sign analysis).** $\mu_k^{\mathrm{bd}} < 0 \iff 4\alpha\lambda_k < \beta |W''(c)|$ (because $W''(c) < 0$ in the spinodal range). The Morse index equals the number of $k \geq 2$ satisfying this. $\square$
+**Step 2.2.3 (Sign analysis).** $\mu_k^{\mathrm{bd}} < 0 \iff 4\alpha\lambda_k < \beta \lvert W''(c) \rvert$ (because $W''(c) < 0$ in the spinodal range). The Morse index equals the number of $k \geq 2$ satisfying this. $\square$
 
 **Proof granularity check.** Step 2.2.1 uses: $L$ symmetric (standard), $W''(c) I$ is a multiple of identity (obvious from definition). Step 2.2.2 uses: canonical §8.0 ordered-pair convention (ensures $4\alpha L$ not $2\alpha L$; Round 4 Theorem 1.1 reconfirmed); the constraint tangent space is standard linear algebra. Step 2.2.3: arithmetic. Each step cites $\leq$ one external fact.
 
@@ -52,7 +52,7 @@ This is simultaneously diagonal in $\{\phi_k\}$: eigenvalues $\mu_k^{\mathrm{bd}
 
 ### 2.4 Numerical verification
 
-Round 16 `exp_hessian_uniform_v2` with $\alpha = 1$, $c = 0.5$ (so $|W''(c)| = 1$), grid 64×64 ($n = 4096$, $\lambda_2 \approx 4\sin^2(\pi/64) \approx 0.00964$):
+Round 16 `exp_hessian_uniform_v2` with $\alpha = 1$, $c = 0.5$ (so $\lvert W''(c) \rvert = 1$), grid 64×64 ($n = 4096$, $\lambda_2 \approx 4\sin^2(\pi/64) \approx 0.00964$):
 
 | $\beta$ | $N_{\mathrm{unst}}^{\mathrm{bd}}$ (analytic) | Morse index (numerical) | Match |
 |---|---|---|---|
@@ -94,7 +94,7 @@ Minimum eigenvalue at $\beta=5$: theory $\approx -\beta + 4\alpha\lambda_2 \appr
 
 **Step 3.2.2 (b) Decomposition.** Bilinearity of Hessian in its energy decomposition: $\mathrm{Hess}(\lambda_{\mathrm{cl}} \mathcal{E}_{\mathrm{cl}} + \lambda_{\mathrm{sep}}\mathcal{E}_{\mathrm{sep}}) = \lambda_{\mathrm{cl}}\mathrm{Hess}(\mathcal{E}_{\mathrm{cl}}) + \lambda_{\mathrm{sep}}\mathrm{Hess}(\mathcal{E}_{\mathrm{sep}})$. Using canonical naming $(w_{\mathrm{cl}} = \lambda_{\mathrm{cl}}, w_{\mathrm{sep}} = \lambda_{\mathrm{sep}})$: stated form.
 
-**Step 3.2.3 (c) Closure block.** Canonical §8.2 defines $\mathcal{E}_{\mathrm{cl}}[u] = \|u - \mathrm{Cl}(u)\|^2$. Hessian at a closure fixed-point: by canonical T3/T6-Stability proof, $\mathrm{Hess}\mathcal{E}_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^\top(I - J_{\mathrm{Cl}})$ (Gram). At $u_{\mathrm{uniform}}$ with $c = c^\ast$ the closure fixed point (or near it with residual $O(\bar r_0)$), the Gram form holds modulo small corrections. PSD of Gram is elementary; canonical T3/T6-Stability Cat A.
+**Step 3.2.3 (c) Closure block.** Canonical §8.2 defines $\mathcal{E}_{\mathrm{cl}}[u] = \lVert u - \mathrm{Cl}(u) \rVert^2$. Hessian at a closure fixed-point: by canonical T3/T6-Stability proof, $\mathrm{Hess}\mathcal{E}_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^\top(I - J_{\mathrm{Cl}})$ (Gram). At $u_{\mathrm{uniform}}$ with $c = c^\ast$ the closure fixed point (or near it with residual $O(\bar r_0)$), the Gram form holds modulo small corrections. PSD of Gram is elementary; canonical T3/T6-Stability Cat A.
 
 **Step 3.2.4 (d) Separation block.** $\mathcal{E}_{\mathrm{sep}}[u] = m - \sum_x u_x D_x(u; 1-u)$ in the $u$-weighted form (canonical §8.3, Phase 13). $D_x$ is built from the resolvent of $\alpha W_{\mathrm{sym}}$ — depends on $\alpha$ but not $\beta$. The Hessian is an $\alpha$-dependent symmetric operator; explicit form is derivable but technically involved (deferred to C-S2 for full presentation).
 
@@ -141,15 +141,15 @@ This structure is the Hessian-level origin of NQ-32 (profile deviation): cl_sep 
 ### 4.2 Proof (Approach A2)
 
 **Step 4.2.1 (boundary-band energy lower bound).** For $u \in [0.1, 0.9]$, $W(u) = u^2(1-u)^2$ has minimum at $u=1/2$ with $W(1/2) = 1/16$, and $W(0.1) = W(0.9) = 0.0081 = W_{\min}'$. So on $B(u^\ast)$ (where $u^\ast \in (0.1, 0.9)$), $\beta W(u^\ast) \geq \beta W_{\min}' \geq \beta / (16 \cdot 1/W_{\min}')$. Taking the crude bound $W(u) \geq W(1/2) \cdot (\ldots) = 1/16$ for all $u \in [0.1, 0.9]$ after renormalizing (standard): this yields
-$$\mathcal{E}_{\mathrm{bd}}(u^\ast) \geq \beta \sum_{x \in B} W(u^\ast_x) \geq \frac{\beta |B|}{16}.$$
-Hence $|B| \leq 16 \mathcal{E}_{\mathrm{bd}}(u^\ast)/\beta$. (Factor $\ln 9$ vs $16$ differs in the tanh-precise version; the Round 13 statement uses $\ln 9 / 16$.)
+$$\mathcal{E}_{\mathrm{bd}}(u^\ast) \geq \beta \sum_{x \in B} W(u^\ast_x) \geq \frac{\beta \lvert B \rvert}{16}.$$
+Hence $\lvert B \rvert \leq 16 \mathcal{E}_{\mathrm{bd}}(u^\ast)/\beta$. (Factor $\ln 9$ vs $16$ differs in the tanh-precise version; the Round 13 statement uses $\ln 9 / 16$.)
 
 **Step 4.2.2 (Modica-Mortola upper bound).** Canonical T11 (Γ-convergence, Cat A): as $\varepsilon = \alpha/\beta \to 0$,
 $$\mathcal{E}_{\mathrm{bd}}(u^\ast) \to c_W \sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast),\qquad c_W = \int_0^1\sqrt{2W(s)}\,ds = \tfrac{1}{3\sqrt{2}}.$$
 For finite $\alpha, \beta$, $\mathcal{E}_{\mathrm{bd}}(u^\ast) \leq C_\ast \sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)$ with $C_\ast$ close to $c_W$ in the sharp-interface regime.
 
 **Step 4.2.3 (combine).** Substituting into step 4.2.1:
-$$|B| \leq \frac{16}{\ln 9}\cdot \frac{C_\ast \sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)}{\beta} = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big). \square$$
+$$\lvert B \rvert \leq \frac{16}{\ln 9}\cdot \frac{C_\ast \sqrt{\alpha\beta}\cdot \mathrm{Per}_G(A^\ast)}{\beta} = O\!\big(\sqrt{\alpha/\beta}\cdot \mathrm{Per}_G(A^\ast)\big). \square$$
 
 ### 4.3 Quantitative constant derivation (2D-grid tanh ansatz)
 
@@ -222,7 +222,7 @@ Unstable modes ($\mu_k^{\mathrm{bd}} < 0$) grow exponentially; stable modes deca
 $$\phi_{p,q}(i, j) = \cos(\pi p (i + 1/2)/L)\cos(\pi q (j + 1/2)/L)$$
 with eigenvalue $\lambda_{p,q} = 4\sin^2(\pi p/(2L)) + 4\sin^2(\pi q/(2L)) \approx \pi^2 (p^2 + q^2)/L^2$ for small $p, q$.
 
-**Step 5.2.3 (unstable mode set as 2D-grid of modes).** The unstable set $\mathcal{S}_u$ consists of $(p,q)$ with $4\alpha \lambda_{p,q} < \beta |W''(c)|$, i.e., $p^2 + q^2 < \beta|W''(c)| L^2 / (4\alpha\pi^2) =: R^2$. Thus $\mathcal{S}_u$ is approximately a quarter-disk of radius $R$ in $(p,q)$-space, giving $N_{\mathrm{unst}} \approx \pi R^2/4$.
+**Step 5.2.3 (unstable mode set as 2D-grid of modes).** The unstable set $\mathcal{S}_u$ consists of $(p,q)$ with $4\alpha \lambda_{p,q} < \beta \lvert W''(c) \rvert$, i.e., $p^2 + q^2 < \beta|W''(c)| L^2 / (4\alpha\pi^2) =: R^2$. Thus $\mathcal{S}_u$ is approximately a quarter-disk of radius $R$ in $(p,q)$-space, giving $N_{\mathrm{unst}} \approx \pi R^2/4$.
 
 **Step 5.2.4 (spatial-pattern count via amplitude saturation).** At nonlinear saturation, modes with comparable growth rates interact. For a product-form Fiedler mode $\phi_{p,q}$, the saturated pattern has $p$ nodal lines in the $x$-direction and $q$ in the $y$-direction, forming a $p \times q$ grid of bumps. The "characteristic" mode after saturation is the most unstable (largest $|\mu_{p,q}^{\mathrm{bd}}|$) — corresponding to $(p^\ast, q^\ast) = $ the maximum of $\mathcal{S}_u$.
 
@@ -339,7 +339,7 @@ Prefactor $C_{\mathrm{spacing}} \approx 7$: **sketched** — depends on $\epsilo
 
 ### 8.2 Derivation
 
-**Step 8.2.1 (emergence).** Linearization $\dot a_k = -\mu_k^{\mathrm{bd}} a_k$. For $\mu_k^{\mathrm{bd}} < 0$, $|a_k(t)| = |a_k(0)|\exp(-\mu_k^{\mathrm{bd}} t) = |a_k(0)|\exp(|\mu_k^{\mathrm{bd}}| t)$. Saturation occurs when $a_k = O(1)$: $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/|\mu_{\min}^{\mathrm{bd}}|$, where $\mu_{\min}^{\mathrm{bd}} = \min_{k \in \mathcal{S}_u}\mu_k^{\mathrm{bd}}$ is the most-unstable eigenvalue. At $c = 0.5$ with $\beta = 30, \alpha = 1, n = 8^2 = 64$: $\mu_{\min}^{\mathrm{bd}} \approx -\beta + 4\alpha\lambda_2 \approx -30$, so $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/30 \approx 0.23$ for $\sigma_0 = 0.001$.
+**Step 8.2.1 (emergence).** Linearization $\dot a_k = -\mu_k^{\mathrm{bd}} a_k$. For $\mu_k^{\mathrm{bd}} < 0$, $\lvert a_k(t) \rvert = \lvert a_k(0) \rvert\exp(-\mu_k^{\mathrm{bd}} t) = \lvert a_k(0) \rvert\exp(|\mu_k^{\mathrm{bd}}| t)$. Saturation occurs when $a_k = O(1)$: $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/|\mu_{\min}^{\mathrm{bd}}|$, where $\mu_{\min}^{\mathrm{bd}} = \min_{k \in \mathcal{S}_u}\mu_k^{\mathrm{bd}}$ is the most-unstable eigenvalue. At $c = 0.5$ with $\beta = 30, \alpha = 1, n = 8^2 = 64$: $\mu_{\min}^{\mathrm{bd}} \approx -\beta + 4\alpha\lambda_2 \approx -30$, so $t_{\mathrm{emerge}} \approx \ln(1/\sigma_0)/30 \approx 0.23$ for $\sigma_0 = 0.001$.
 
 **Step 8.2.2 (metastable plateau).** Once in a $\widehat{K}$-formation configuration, the system sits at a local minimum of $\mathcal{E}$. At $T=0$, this is an absorbing state (gradient flow cannot escape). At $T>0$, escape requires barrier crossing. Kramers (canonical T-Kinetic-2 in development, M1_dissolution.md §3): $\tau_{\mathrm{metastable}} = \tau_0 \exp(\Delta\mathcal{F}/T)$.
 

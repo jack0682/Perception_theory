@@ -12,7 +12,7 @@
 
 ## §1. Measurement Quantity
 
-**Target:** Post-flow residual $\|R_j\|_\infty$ under shared-pool gradient-flow dynamics.
+**Target:** Post-flow residual $\lVert R_j \rVert_\infty$ under shared-pool gradient-flow dynamics.
 
 **Definition:** For a K-formation configuration starting at initial state $\mathbf{u}_0 \in \Sigma^K_M$ (wq1 build_initial_state), after $N_{\mathrm{steps}}$ gradient steps, define:
 $$R_j(t) = u^{(j)}(t) - u^{(j),\mathrm{ideal}}(t)$$
@@ -20,19 +20,19 @@ where:
 - $u^{(j)}(t)$ = the $j$-th slot cohesion field at step $t$.
 - $u^{(j),\mathrm{ideal}}(t)$ = the "ideal" Gaussian-shaped formation centered at the centroid of the active support of $u^{(j)}(0)$, with the same mass (i.e., a reference shape that would satisfy T-L1-F's L1-J regime hypothesis).
 
-**Measurement:** $\|R_j\|_\infty = \max_{i \in V} |R_j(t)_i|$ at each snapshot step $t$.
+**Measurement:** $\lVert R_j \rVert_\infty = \max_{i \in V} \lvert R_j(t)_i \rvert$ at each snapshot step $t$.
 
-**Primary metric:** $\|R_j\|_{\infty,\mathrm{max}} = \max_{t \in \{100, 200, \ldots, N_{\mathrm{steps}}\}} \|R_j(t)\|_\infty$ (worst-case residual over the trajectory).
+**Primary metric:** $\lVert R_j \rVert_{\infty,\mathrm{max}} = \max_{t \in \{100, 200, \ldots, N_{\mathrm{steps}}\}} \lVert R_j(t) \rVert_\infty$ (worst-case residual over the trajectory).
 
 ---
 
 ## §2. Theoretical Motivation
 
-**T-L1-F hypothesis P9:** $\|R_j\|_{\infty, N_j^r} \leq \rho_{\mathrm{pert}}/2$ where $N_j^r$ is the restricted neighborhood of formation $j$ and $\rho_{\mathrm{pert}}$ is the perturbation radius from the L1-J regime conditions.
+**T-L1-F hypothesis P9:** $\lVert R_j \rVert_{\infty, N_j^r} \leq \rho_{\mathrm{pert}}/2$ where $N_j^r$ is the restricted neighborhood of formation $j$ and $\rho_{\mathrm{pert}}$ is the perturbation radius from the L1-J regime conditions.
 
-**NQ-G1-2 finding (W6 D1):** Initial-state $\|R_j\|_\infty$ satisfies H6' (non-binding) in the initial configuration. But *dynamic-state* $\|R_j\|_\infty$ has not been measured (post-gradient-flow snapshots).
+**NQ-G1-2 finding (W6 D1):** Initial-state $\lVert R_j \rVert_\infty$ satisfies H6' (non-binding) in the initial configuration. But *dynamic-state* $\lVert R_j \rVert_\infty$ has not been measured (post-gradient-flow snapshots).
 
-**The W2 debt:** If post-flow $\|R_j\|_\infty > \rho_{\mathrm{pert}}/2$ frequently in WQ-1 trajectories, T-L1-F Cat A conditional's regime condition (P9) is not met in production, and the theorem's reach is narrower than the headline 22.9% suggests.
+**The W2 debt:** If post-flow $\lVert R_j \rVert_\infty > \rho_{\mathrm{pert}}/2$ frequently in WQ-1 trajectories, T-L1-F Cat A conditional's regime condition (P9) is not met in production, and the theorem's reach is narrower than the headline 22.9% suggests.
 
 **Key question:** Does the gradient flow *maintain* the L1-J regime conditions (P0-P11), or does it *exit* the regime as the formations evolve?
 
@@ -55,17 +55,17 @@ where:
 
 ## §4. Hypothesis Branches
 
-**H-G1-2-ext-A (optimistic):** Post-flow $\|R_j\|_{\infty,\mathrm{max}} \leq \rho_{\mathrm{pert}}/4$ for the majority (>50%) of wq1 configs.
+**H-G1-2-ext-A (optimistic):** Post-flow $\lVert R_j \rVert_{\infty,\mathrm{max}} \leq \rho_{\mathrm{pert}}/4$ for the majority (>50%) of wq1 configs.
 
 → *Interpretation:* (P9-tight) condition met in production. T-L1-J' regime is production-representative. T-L1-F/M reach substantial. **Action:** Add production reach note to canonical T-L1-F entry; consider T-L1-J' regime as new canonical Cat A regime.
 
-**H-G1-2-ext-B (pessimistic):** Post-flow $\|R_j\|_{\infty,\mathrm{max}} > \rho_{\mathrm{pert}}/2$ for the majority (>50%) of wq1 configs.
+**H-G1-2-ext-B (pessimistic):** Post-flow $\lVert R_j \rVert_{\infty,\mathrm{max}} > \rho_{\mathrm{pert}}/2$ for the majority (>50%) of wq1 configs.
 
 → *Interpretation:* Regime exit is common. L1-J regime is transient. T-L1-F Cat A conditional's reach is narrow in production. **Action:** Add retroactive caveat to T-L1-F/M (similar to T-σ-Theorem-4 pattern: continuum-vs-discrete caveat). Cat A conditional demoted to "narrow regime" status. Alert for W8 canonical correction.
 
 **H-G1-2-ext-C (intermediate):** Mixed distribution — some configs satisfy (P9-tight), others exceed $\rho_{\mathrm{pert}}/2$, with regime-dependent clustering.
 
-→ *Interpretation:* T-L1-F reach is regime-dependent; extended regime characterization needed. **Action:** NQ-G1-2-ext-2 follow-up: characterize which initial configs (by $\|R_j\|_\infty|_{t=0}$ or by formation separation) predict post-flow reach.
+→ *Interpretation:* T-L1-F reach is regime-dependent; extended regime characterization needed. **Action:** NQ-G1-2-ext-2 follow-up: characterize which initial configs (by $\lVert R_j \rVert_\infty|_{t=0}$ or by formation separation) predict post-flow reach.
 
 ---
 

@@ -150,7 +150,7 @@ $$\dim \ker(\mathrm{Hess}(E_\Theta)(c\mathbf{1})|_{T\Sigma_m}) = \mathrm{mult}(\
 
 **Direct algebraic proof (minimal model, $E_{bd}$ only)**:
 - $\mu_k(\Theta, c) = 4\alpha\lambda_k(L_G) + \beta W''(c)$ for eigenvalue index $k$
-- $\mu_k = 0 \iff \beta/\alpha = -4\lambda_k(L_G)/W''(c) = 4\lambda_k/|W''(c)|$ (since $W''(c) < 0$)
+- $\mu_k = 0 \iff \beta/\alpha = -4\lambda_k(L_G)/W''(c) = 4\lambda_k/\lvert W''(c) \rvert$ (since $W''(c) < 0$)
 - Multiple $k$ vanish simultaneously $\iff \lambda_k(L_G) = \lambda_2(L_G)$
 - Count: $k_0(G) = \mathrm{mult}(\lambda_2(L_G))$
 

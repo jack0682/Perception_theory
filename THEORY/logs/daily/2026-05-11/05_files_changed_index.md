@@ -11,7 +11,7 @@ All file edits dated 2026-05-10 (the closure work day). The 2026-05-11 daily log
 | File | Purpose | Status | Key result |
 |------|---------|--------|------------|
 | **H-SINK.md** | Main H-SINK proof file: six lemmas + main theorem + audit (462 lines) | NEW, W7-T1 (Cat A); updated W7-FINAL (status block, §7, §12.5, §12.7) | S-B2 = Lemma 8.2 → Cat A; H-SINK PARTIALLY CLOSED, then FULLY CLOSED |
-| **partial_ot_stability.md** | Theorem Partial-H-SINK: one-sided SCC E1 partial OT Lipschitz stability (217 lines) | NEW, W7-FINAL | Cat A: $\|M^* - M^{*'}\|_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$ via direct row-softmax Lipschitz |
+| **partial_ot_stability.md** | Theorem Partial-H-SINK: one-sided SCC E1 partial OT Lipschitz stability (217 lines) | NEW, W7-FINAL | Cat A: $\lVert M^* - M^{*'} \rVert_\mathrm{TV} \leq (m_t\delta/\varepsilon_\mathrm{OT})e^{2\delta/\varepsilon_\mathrm{OT}}$ via direct row-softmax Lipschitz |
 | **S-B3_kernel_independence.md** | Lemma 9 → Lemma 10 → Lemma 11 (= S-B3) chain (149 lines) | NEW, W7-FINAL; UPDATED W7-CV1.13 (margin corrected to $2\epsilon_\mathrm{kernel}$ in §0.1, §1.3) | Cat A conditional kernel independence; margin correction |
 | **S-B1_deep_core_density.md** | S-B1 deep-core density working file with 8-route audit (342 lines) | NEW, W7-FINAL; UPDATED W7-CV113 (§5 correction note); UPDATED W7-CV113A (§6 ρ_sym reframing) | Cat B conditional; counterexample $3\times 10$ rectangle; literal 0.84 retracted as standalone |
 | **CV113_S-B1_DEEP_CORE_CLOSURE.md** | W7-CV113 8-route audit document (350 lines) | NEW, W7-CV113 | Lemma S-B1-Weak Cat A: $\Delta_\mathrm{sep} > 0$ proved via positivity threshold $\rho_* \approx 0.003$ |

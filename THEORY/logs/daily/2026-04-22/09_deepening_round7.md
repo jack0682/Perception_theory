@@ -136,7 +136,7 @@ For unit-square continuum limit, $\lambda_{m,n} = (m^2 + n^2)\pi^2$. Sorted smal
 
 ### 4.2 Critical $\beta$ values
 
-$\beta_{\mathrm{crit}}^{(k)} = 4\alpha\lambda_k/|W''(c)|$. At canonical $\alpha = 1, c = 1/2, |W''| = 1$:
+$\beta_{\mathrm{crit}}^{(k)} = 4\alpha\lambda_k/\lvert W''(c) \rvert$. At canonical $\alpha = 1, c = 1/2, \lvert W'' \rvert = 1$:
 
 | $k$ | $\beta_{\mathrm{crit}}^{(k)}/\pi^2$ (continuum) | Cumulative mode count |
 |---|---|---|

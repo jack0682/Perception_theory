@@ -25,7 +25,7 @@ The canonical theory currently makes several implicit finite-T / stochastic assu
 
 **Location:** T-Persist-K-Unified (canonical §13) and supporting T-Persist-K-Sep.
 
-**Implicit assumption:** The perturbation bound $\|\delta u\|_\infty \leq \varepsilon_{\mathrm{pert}}$ assumes a *source* of perturbation — but the source's statistical properties are unspecified. Is $\delta u$ deterministic (bounded-magnitude external perturbation)? Or stochastic (noise with some distribution)?
+**Implicit assumption:** The perturbation bound $\lVert \delta u \rVert_\infty \leq \varepsilon_{\mathrm{pert}}$ assumes a *source* of perturbation — but the source's statistical properties are unspecified. Is $\delta u$ deterministic (bounded-magnitude external perturbation)? Or stochastic (noise with some distribution)?
 
 **P-F dependency:** The transition operator results (Cat A conditional) hold for deterministic bounded perturbations. If interpreted as a stochastic stability result, requires P-F framework specifying the perturbation distribution.
 

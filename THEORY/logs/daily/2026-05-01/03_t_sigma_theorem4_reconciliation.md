@@ -16,7 +16,7 @@
 
 Per CV-1.5.1 frozen text (`canonical.md` §13 lines 1377-1413), T-σ-Theorem-4 is **Cat B retroactive** with the following load-bearing claim at leading order:
 
-$$\mu_0 = 4|W''(c)|\,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\,|W''(c)|\,\epsilon + O(\epsilon^{3/2}),$$
+$$\mu_0 = 4|W''(c)|\,\epsilon + O(\epsilon^{3/2}), \qquad \mu_1 = (A_2/A_1)\,\lvert W''(c) \rvert\,\epsilon + O(\epsilon^{3/2}),$$
 
 with **continuum claim** $A_2/A_1 = 4$ (sourced to `working/SF/symmetry_moduli.md` §3.3, R22 working file) ⇒ leading-order degeneracy $\mu_0 = \mu_1 = 4|W''(c)|\,\epsilon$. The σ-tuple at first pitchfork on $D_4$ free-BC inherits this degeneracy and is broken only by Commitment 14 (O7) Mulliken tie-break on irrep label (trivial $A_1$ before sign $A_2$).
 

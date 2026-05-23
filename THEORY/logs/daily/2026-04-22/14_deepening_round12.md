@@ -61,7 +61,7 @@ $v$ is well-defined (exponentially small) away from translation directions.
 
 ### 3.1 Hessian definition
 
-$H(u^\ast_2) = \mathrm{Hess}\,\mathcal{E}\big|_{u^\ast_2}$. Full $n \times n$ matrix on $\mathbb R^n \supset \Sigma_m$.
+$H(u^\ast_2) = \mathrm{Hess}\,\mathcal{E}\big\vert_{u^\ast_2}$. Full $n \times n$ matrix on $\mathbb R^n \supset \Sigma_m$.
 
 ### 3.2 Localization
 
@@ -76,7 +76,7 @@ where $H_i$ acts on $V_i$ and $H_{ij}$ is small.
 ### 3.3 Per-formation blocks
 
 $H_i$ is the Hessian of Allen-Cahn linearized at $u_0$, restricted to $V_i$:
-$$H_i \approx \mathcal{L}_{u_0}\big|_{V_i} = (-2\alpha\Delta + \beta W''(u_0))\big|_{V_i}.$$
+$$H_i \approx \mathcal{L}_{u_0}\big\vert_{V_i} = (-2\alpha\Delta + \beta W''(u_0))\big\vert_{V_i}.$$
 
 **Spectrum of $\mathcal{L}_{u_0}$** (continuum on real line):
 - 1 zero mode (translation $u_0'$).
@@ -160,7 +160,7 @@ Time scales in the K=2 configuration:
 On 2D torus (continuous translation): K=2 config has:
 - 2-dim Goldstone (center-of-mass translation).
 - 1 zero eigenvalue (center-of-mass, exact).
-- 1 small-positive eigenvalue (separation magnitude, $\mu_{\mathrm{sep}}^{|d|}$).
+- 1 small-positive eigenvalue (separation magnitude, $\mu_{\mathrm{sep}}^{\lvert d \rvert}$).
 - 1 zero or small eigenvalue (separation angle, if continuous rotation available).
 
 **On 2D torus**: 2 Goldstones (CM-x + CM-y), 1 separation mode (radial), 1 angle. Total 2 zero + 2 small-positive.

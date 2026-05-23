@@ -39,9 +39,9 @@
 | $r,r_{\mathrm{assoc}},r_{\mathrm{birth}}$ | P3, P4, P11 | radii defining $N_j^r$, association window, birth-margin window |
 | $\ell_{\min}$ | P0/P6/T-L1-F statement | hard-bar count threshold |
 | $h_{\min}$ | P6 | minimum birth height; $h_{\min}\ge\ell_{\min}$ |
-| $\rho_{\mathrm{bg}}$ | P5 | background suppression margin: $\|U\|_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}$ |
-| $\rho_{\mathrm{pert}}$ | P8, P9 | perturbation budget; $\ell_{j,2}(u^{(j)};G_j^r)\le\ell_{\min}-3\rho_{\mathrm{pert}}$ and $\|R_j\|_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$ |
-| $\rho_{\mathrm{res}}$ | P10 | inactive-residual margin: $\|R_{\mathrm{inact}}\|_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$ |
+| $\rho_{\mathrm{bg}}$ | P5 | background suppression margin: $\lVert U \rVert_{\infty,X_{\mathrm{bg}}}\le\ell_{\min}-\rho_{\mathrm{bg}}$ |
+| $\rho_{\mathrm{pert}}$ | P8, P9 | perturbation budget; $\ell_{j,2}(u^{(j)};G_j^r)\le\ell_{\min}-3\rho_{\mathrm{pert}}$ and $\lVert R_j \rVert_{\infty,N_j^r}\le\rho_{\mathrm{pert}}/2$ |
+| $\rho_{\mathrm{res}}$ | P10 | inactive-residual margin: $\lVert R_{\mathrm{inact}} \rVert_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$ |
 
 All constants are positive and arise from the L1-J regime-membership ledger (`working/MF/kbar_kact_bridge_L1J_catA_upgrade_attempt.md`). For T-L1-F to hold non-vacuously, $\rho_{\mathrm{pert}},\rho_{\mathrm{res}},\rho_{\mathrm{bg}},r_{\mathrm{birth}}>0$ and the L1-I constants-feasibility condition must be satisfied (per L1-I 439/1920 FEASIBLE_WITH_BUDGET on $T^2_{20}$).
 
@@ -310,7 +310,7 @@ For $\tau<r_{\mathrm{birth}}$: $\ell_i\ge\ell_{\min}+r_{\mathrm{birth}}>\ell_{\m
 
 ### §5.4 Type-N bars sit below the edge band: $\ell_i<\ell_{\min}-\tau$ for $\tau<2\rho_{\mathrm{pert}}$
 
-Each Type-N bar $i$ has $b_i\in N_{j(i)}^r$ for some active slot $j(i)$. By T-L1-F's "per-neighborhood at-most-one-dominant-bar" argument (L1-H2 Lemma 1 + Lemma 2 in canonical.md §13), the bar of $U$ on the local graph $G_{j(i)}^r$ corresponds (via bottleneck stability of $\mathrm{Dgm}_0^{\sup}$ under the $\|U-u^{(j(i))}\|_{\infty,N_{j(i)}^r}\le\rho_{\mathrm{pert}}/2$ perturbation, P9) to a bar of $u^{(j(i))}$ on $G_{j(i)}^r$. Since this $U$-bar is non-dominant (not the slot primary), the corresponding $u^{(j)}$-bar is also non-dominant, hence has length at most the second longest bar of $u^{(j)}$ on $G_j^r$:
+Each Type-N bar $i$ has $b_i\in N_{j(i)}^r$ for some active slot $j(i)$. By T-L1-F's "per-neighborhood at-most-one-dominant-bar" argument (L1-H2 Lemma 1 + Lemma 2 in canonical.md §13), the bar of $U$ on the local graph $G_{j(i)}^r$ corresponds (via bottleneck stability of $\mathrm{Dgm}_0^{\sup}$ under the $\lVert U-u^{(j(i))} \rVert_{\infty,N_{j(i)}^r}\le\rho_{\mathrm{pert}}/2$ perturbation, P9) to a bar of $u^{(j(i))}$ on $G_{j(i)}^r$. Since this $U$-bar is non-dominant (not the slot primary), the corresponding $u^{(j)}$-bar is also non-dominant, hence has length at most the second longest bar of $u^{(j)}$ on $G_j^r$:
 $$
 \ell_i^{(u^{(j)})}\le\ell_{j,2}(u^{(j)};G_j^r).
 $$
@@ -326,7 +326,7 @@ For $\tau<2\rho_{\mathrm{pert}}$: $\ell_i\le\ell_{\min}-2\rho_{\mathrm{pert}}<\e
 
 ### §5.5 Type-B bars sit far below the edge band: $\ell_i\le\ell_{\min}-\rho_{\mathrm{res}}$ for $\tau<\rho_{\mathrm{res}}$
 
-For Type-B bars, $b_i\in X_{\mathrm{bg}}$ where $X_{\mathrm{bg}}$ is the background region (off all $N_j^r$). On $X_{\mathrm{bg}}$ the field $U$ coincides with the inactive residual: $U|_{X_{\mathrm{bg}}}=R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$. By P10, $\|R_{\mathrm{inact}}\|_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$. Hence the birth height $b_i=U(b_i)\le\ell_{\min}-\rho_{\mathrm{res}}$, and by P0 the death is $d_i=0$:
+For Type-B bars, $b_i\in X_{\mathrm{bg}}$ where $X_{\mathrm{bg}}$ is the background region (off all $N_j^r$). On $X_{\mathrm{bg}}$ the field $U$ coincides with the inactive residual: $U|_{X_{\mathrm{bg}}}=R_{\mathrm{inact}}|_{X_{\mathrm{bg}}}$. By P10, $\lVert R_{\mathrm{inact}} \rVert_\infty\le\ell_{\min}-\rho_{\mathrm{res}}$. Hence the birth height $b_i=U(b_i)\le\ell_{\min}-\rho_{\mathrm{res}}$, and by P0 the death is $d_i=0$:
 $$
 \ell_i=b_i\le\ell_{\min}-\rho_{\mathrm{res}}.
 $$
@@ -351,7 +351,7 @@ for any $\tau\in(0,\tau_*)$ we have $\ell_i\notin[\ell_{\min}-\tau,\ell_{\min}+\
 
 The "sketched" status (rather than "proved") reflects three points where rigor could be sharpened:
 
-1. **The bottleneck-stability factor.** §5.4 used $|\ell_i-\ell_i^{(u^{(j)})}|\le 2\cdot\rho_{\mathrm{pert}}/2=\rho_{\mathrm{pert}}$. The factor $2$ derives from both birth and death of a single bar shifting by at most $\|\Delta U\|_\infty=\rho_{\mathrm{pert}}/2$. This is consistent with `working/E/soft_K_definition.md` §2.2 Prop 2.1 (the factor-$2$ from u-side and v-side diagonal pairings is properly handled there as $4L_\phi n$ Lipschitz constant, but here we want only the per-bar shift, which is the $2$).
+1. **The bottleneck-stability factor.** §5.4 used $|\ell_i-\ell_i^{(u^{(j)})}|\le 2\cdot\rho_{\mathrm{pert}}/2=\rho_{\mathrm{pert}}$. The factor $2$ derives from both birth and death of a single bar shifting by at most $\lVert \Delta U \rVert_\infty=\rho_{\mathrm{pert}}/2$. This is consistent with `working/E/soft_K_definition.md` §2.2 Prop 2.1 (the factor-$2$ from u-side and v-side diagonal pairings is properly handled there as $4L_\phi n$ Lipschitz constant, but here we want only the per-bar shift, which is the $2$).
 2. **The Type-B bound's interaction with LG-7.** §5.5 used P10 directly on $X_{\mathrm{bg}}$. The LG-7 coverage that T-L1-F's proof derives from P5+P0+LG-4 ensures every dominant-bar birth has $U\ge\ell_{\min}$ and hence is *not* in $X_{\mathrm{bg}}$. This is the basis for the "Type-B" classification as background. A fully rigorous L-M-2 proof would re-establish this explicitly rather than invoking the T-L1-F proof structure.
 3. **The terminal-death convention's role for Type-N.** §5.4 implicitly assumed Type-N bars also use terminal death. This is correct under P0 (which is global), but the argument should make this explicit: the comparison between $U|_{G_j^r}$ and $u^{(j)}|_{G_j^r}$ both use terminal death on $G_j^r$, giving consistent diagram-comparisons.
 

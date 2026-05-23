@@ -94,7 +94,7 @@ $$
 > **Corollary 2.2 (Single-Formation Interface Concentration, Round 13 §2.5.4).**
 > Any local minimizer `u*` of `ℰ_bd` on Σ_m satisfies:
 > $$
-> |B(u^*)| \;\leq\; \frac{16}{\log 9} \cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^*)}{\beta} \;=\; O(\sqrt{\alpha/\beta} \cdot \mathrm{Per}_G(A^*)),
+> \lvert B(u^*) \rvert \;\leq\; \frac{16}{\log 9} \cdot \frac{\mathcal{E}_{\mathrm{bd}}(u^*)}{\beta} \;=\; O(\sqrt{\alpha/\beta} \cdot \mathrm{Per}_G(A^*)),
 > $$
 > where `B(u*) = {x : 0.1 < u*_x < 0.9}`, `A* = {x : u*_x ≥ 0.5}`.
 
@@ -396,7 +396,7 @@ Round 15 시점: **추가로 ~60 줄** (Prop 1.3, Cor 2.2, arccosh-decay + geome
 
 **Predicted**: 
 $$
-\frac{|B|}{\mathrm{Per}_{edge}} = \frac{\pi \ln 9}{2}\cdot\xi_0 \approx 3.451\cdot\xi_0
+\frac{\lvert B \rvert}{\mathrm{Per}_{edge}} = \frac{\pi \ln 9}{2}\cdot\xi_0 \approx 3.451\cdot\xi_0
 $$
 
 **실측 (grid 512 tanh edge): 3.450** — **1000분의 1 오차**.
@@ -414,7 +414,7 @@ $$
 **신규 Cat A candidate**:
 > **Theorem (Cor 2.2 quantitative).** For single K=1 formation on 2D grid with tanh-profile interface of width `ξ_0 = √(α/β)`:
 > $$
-> \frac{|B(u^*)|}{\mathrm{Per}_G(A^*)} = \frac{\pi \ln 9}{2}\cdot\xi_0 + O(1/\sqrt{n}) \approx 3.449\cdot\xi_0
+> \frac{\lvert B(u^*) \rvert}{\mathrm{Per}_G(A^*)} = \frac{\pi \ln 9}{2}\cdot\xi_0 + O(1/\sqrt{n}) \approx 3.449\cdot\xi_0
 > $$
 
 **Constant is explicit, profile-specific, grid-invariant, and mathematically derivable.**

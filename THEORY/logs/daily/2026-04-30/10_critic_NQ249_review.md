@@ -112,7 +112,7 @@ Suggested wording: *"Reconciliation with NQ-253: per `formation_birth_string_bre
 **The claim.**
 
 §7.1 states:
-> "**Cat A target (immediate, this file):** $\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\quad \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0.$
+> "**Cat A target (immediate, this file):** $\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\quad \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0.$
 > **Proof sketch:** Direct from Morse-0 definition: a Morse-0 critical point has positive-definite Hessian on the tangent space modulo zero modes. The Goldstone subspace is exactly the zero-mode subspace per T-σ-Lemma-3 (canonical `canonical.md:1318`); modding it out leaves a positive-definite operator. $\Box$
 > **Status:** Cat A immediate, no new mathematical content beyond canonical Morse-0 + T-σ-Lemma-3."
 
@@ -139,7 +139,7 @@ Suggested rewrite:
 > - (H2) Well-separated regime: $D_{\mathrm{sep}}(\mathbf{u}^*) \geq 3$ for all $\mathbf{u}^* \in \mathcal{L}_K$ (canonical §13 T-σ-multi-A-Static hypothesis, lines 1232–1235).
 > - (H3) Multi-formation Goldstone subspace identified per T-σ-Multi-1 (canonical lines 1248–1255).
 >
-> Then: $\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\; \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0$ pointwise.
+> Then: $\forall\, \mathbf{u}^* \in \mathcal{L}_K \text{ Morse-0},\; \min_k \lambda_k\!\big(H(\mathbf{u}^*)\big)\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp} \,>\, 0$ pointwise.
 >
 > **Status:** Cat A *conditional on T-σ-Multi-1 Cat A upgrade*. Currently (H3) is Cat B target per canonical CV-1.5.1; this conditional Cat A inherits T-σ-Multi-1's Cat B status until the T-σ-Multi-1 promotion is completed (NQ-2xx). Reduces to Cat A immediate only after T-σ-Multi-1 Cat A upgrade."
 
@@ -218,7 +218,7 @@ Apply fixes in §1.3, §2.1, §3.1, §5 table, §7.3, §8.1, §9.4, §12.2, §14
 **The problem — canonical Scaling Caveat (line 1009).**
 
 T8-Core Scaling Caveat (canonical line 1009):
-> "The phase transition threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$ depends on the spectral gap $\lambda_2$ of the graph Laplacian. For graph families where $\lambda_2 \to 0$ as $n \to \infty$ (e.g., $k \times k$ grids with $\lambda_2 \sim \pi^2/k^2$), the threshold vanishes and the criterion is trivially satisfied for any fixed $\beta > 0$. In this regime, T8-Core guarantees non-trivial minimizer *existence* but does not provide a meaningful *selection criterion* for parameters."
+> "The phase transition threshold $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/\lvert W''(c) \rvert$ depends on the spectral gap $\lambda_2$ of the graph Laplacian. For graph families where $\lambda_2 \to 0$ as $n \to \infty$ (e.g., $k \times k$ grids with $\lambda_2 \sim \pi^2/k^2$), the threshold vanishes and the criterion is trivially satisfied for any fixed $\beta > 0$. In this regime, T8-Core guarantees non-trivial minimizer *existence* but does not provide a meaningful *selection criterion* for parameters."
 
 **Implication for NQ-249.** On $L^d$ grids, $\lambda_2 \sim \pi^2/L^2 \to 0$ as $L \to \infty$, so $\beta_{\mathrm{crit}}^{(2)} \to 0$. The post-bifurcation regime $\{\beta > \beta_{\mathrm{crit}}^{(2)}\}$ degenerates to "$\beta > 0$" trivially — the BC-249-1 hypothesis is satisfied for any fixed $\beta > 0$ in the thermodynamic limit, but the selection criterion is degenerate. The mass-gap statement BC-249-2 inherits this scaling pathology: any "uniform mass gap" claim across $L \to \infty$ must specify how the bifurcation distance $\delta(\alpha,\beta,c)$ from §C1 scales with $L$. If $\delta \to 0$ as $L \to \infty$, BC-249-2 collapses.
 
@@ -226,7 +226,7 @@ T8-Core Scaling Caveat (canonical line 1009):
 
 **Recommended fix (M2).** Add a footnote or paragraph in §3.3 acknowledging T8-Core Scaling Caveat (canonical line 1009) and noting that BC-249-2 (continuum extension) inherits the spectral-gap pathology: any uniform mass-gap claim across $L \to \infty$ must specify the bifurcation-distance scaling. Suggested wording:
 
-> "*Caveat (T8-Core Scaling, canonical line 1009)*: On $L^d$ grids, $\beta_{\mathrm{crit}}^{(2)} \sim 4\alpha\pi^2/(L^2 |W''(c)|) \to 0$ as $L \to \infty$, and the T8-Core selection criterion degenerates. BC-249-2 inherits this: any uniform mass-gap statement across $L \to \infty$ must specify how the bifurcation-distance threshold $\delta_0$ (per C1 fix) scales with $L$. If $\delta_0(L) \to 0$ faster than the bifurcation locus accumulates, BC-249-2 collapses. Dependence on NQ-217 thermodynamic-limit machinery is therefore non-trivial."
+> "*Caveat (T8-Core Scaling, canonical line 1009)*: On $L^d$ grids, $\beta_{\mathrm{crit}}^{(2)} \sim 4\alpha\pi^2/(L^2 \lvert W''(c) \rvert) \to 0$ as $L \to \infty$, and the T8-Core selection criterion degenerates. BC-249-2 inherits this: any uniform mass-gap statement across $L \to \infty$ must specify how the bifurcation-distance threshold $\delta_0$ (per C1 fix) scales with $L$. If $\delta_0(L) \to 0$ faster than the bifurcation locus accumulates, BC-249-2 collapses. Dependence on NQ-217 thermodynamic-limit machinery is therefore non-trivial."
 
 ---
 
@@ -244,9 +244,9 @@ T8-Core Scaling Caveat (canonical line 1009):
 
 **The gap.** $\dim \mathrm{Gold}_{\mathrm{full}}$ depends on $(K_{\mathrm{act}}, \mathrm{Stab}(\mathbf{u}^*), G)$. On a $D_4$-symmetric grid with $K_{\mathrm{act}} = 2$ formations placed symmetrically, the joint stabilizer $\mathrm{Stab}(\mathbf{u}^*) = \mathbb{Z}_2$ (formation-swap) reduces the effective Goldstone dimension by inducing pair-wise correlations among the per-formation Goldstones. The "$d$-dim" count from §6.1 is not $d \times K_{\mathrm{act}}$ — it is some function of $(d, K_{\mathrm{act}}, \mathrm{Stab})$ that the file does not specify.
 
-The mass-gap definition $\Delta_K(G,\alpha,\beta,c) := \inf_{\mathbf{u}^* \in \mathcal{L}_K} \min_k \lambda_k(H(\mathbf{u}^*))\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp}$ then depends on $\dim \mathrm{Gold}$ varying across $\mathcal{L}_K$ — which means the orthogonal complement is a varying-dimension subbundle. The infimum then takes a non-trivial form (over varying-dimensional fibers).
+The mass-gap definition $\Delta_K(G,\alpha,\beta,c) := \inf_{\mathbf{u}^* \in \mathcal{L}_K} \min_k \lambda_k(H(\mathbf{u}^*))\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp}$ then depends on $\dim \mathrm{Gold}$ varying across $\mathcal{L}_K$ — which means the orthogonal complement is a varying-dimension subbundle. The infimum then takes a non-trivial form (over varying-dimensional fibers).
 
-**Severity justification.** Without specifying how $\dim \mathrm{Gold}$ varies, the operator $H\big|_{(\mathbf{1}\oplus\mathrm{Gold})^\perp}$ is ambiguous when $\mathcal{L}_K$ contains minimizers with different stabilizers. This is a definitional gap that affects BC-249-1's well-formedness.
+**Severity justification.** Without specifying how $\dim \mathrm{Gold}$ varies, the operator $H\big\vert_{(\mathbf{1}\oplus\mathrm{Gold})^\perp}$ is ambiguous when $\mathcal{L}_K$ contains minimizers with different stabilizers. This is a definitional gap that affects BC-249-1's well-formedness.
 
 **Recommended fix (M3).** Add §6.4 (or expand §6.3) explicitly stating $\dim \mathrm{Gold}_{\mathrm{full}}(\mathbf{u}^*) = \dim \mathrm{Gold}_{\mathrm{full}}(d, K_{\mathrm{act}}(\mathbf{u}^*), \mathrm{Stab}(\mathbf{u}^*))$ and either:
 

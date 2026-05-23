@@ -69,7 +69,7 @@ $$V \cong \mathrm{Ind}_{\Delta G}^{G \wr S_2}(V_{\mathrm{base}}).$$
 
 Here $\Delta G = \{(g, g; e) : g \in G\}$ is the "diagonal" subgroup, and the induction adds the swap $\tau$.
 
-**Index**: $|G \wr S_2| / |\Delta G| = (|G|^2 \cdot 2) / |G| = 2 |G|$. Since $\dim V = 2 \dim V_{\mathrm{base}}$, the dimension count matches: $\dim \mathrm{Ind}(V_{\mathrm{base}}) = (2|G|/|G|) \dim V_{\mathrm{base}} = 2 \dim V_{\mathrm{base}}$. ✓
+**Index**: $|G \wr S_2| / |\Delta G| = (\lvert G \rvert^2 \cdot 2) / \lvert G \rvert = 2 \lvert G \rvert$. Since $\dim V = 2 \dim V_{\mathrm{base}}$, the dimension count matches: $\dim \mathrm{Ind}(V_{\mathrm{base}}) = (2|G|/\lvert G \rvert) \dim V_{\mathrm{base}} = 2 \dim V_{\mathrm{base}}$. ✓
 
 ### 2.4 Decomposition via Frobenius reciprocity + Mackey
 

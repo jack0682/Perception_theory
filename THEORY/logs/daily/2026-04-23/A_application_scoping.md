@@ -48,7 +48,7 @@ CLAUDE.md Ontological Constraint #4: "Not fuzzy segmentation, not clustering, no
 
 ### 3.1 Contrastive positioning
 
-**Mumford-Shah (1989)**: minimizes $\mathcal{E}_{\mathrm{MS}}(u, \Gamma) = \int_\Omega |u - f|^2 + \mu \int_{\Omega \setminus \Gamma} |\nabla u|^2 + \nu |\Gamma|$ (piecewise smooth u + boundary $\Gamma$). Assumes **Euclidean domain**, **gradient-based** boundary term.
+**Mumford-Shah (1989)**: minimizes $\mathcal{E}_{\mathrm{MS}}(u, \Gamma) = \int_\Omega \lvert u - f \rvert^2 + \mu \int_{\Omega \setminus \Gamma} |\nabla u|^2 + \nu |\Gamma|$ (piecewise smooth u + boundary $\Gamma$). Assumes **Euclidean domain**, **gradient-based** boundary term.
 
 **Chan-Vese (2001)**: level-set based; $u$ is piecewise constant; interface is zero level-set of level-set function $\phi$.
 
@@ -218,7 +218,7 @@ $$\widehat K_{\mathrm{SCC}} = K_{\mathrm{block}} \text{ exactly when SNR} > \tex
 
 ### 9.2 Image segmentation
 
-- SCC **lacks the "data term"** $\int_\Omega |u - f|^2$ of Mumford-Shah. Adding it would make SCC a hybrid (not pure SCC). Pure SCC produces cohesion-only segmentation, which may not match image intensity.
+- SCC **lacks the "data term"** $\int_\Omega \lvert u - f \rvert^2$ of Mumford-Shah. Adding it would make SCC a hybrid (not pure SCC). Pure SCC produces cohesion-only segmentation, which may not match image intensity.
 
 ### 9.3 Community detection
 
@@ -247,7 +247,7 @@ Priority rationale: SBM gives mathematical assurance on framework claims ($\wide
 
 ### 11.1 NQ-72 — Data-term augmentation
 
-How to add $\int_\Omega |u - f|^2$ data term without breaking SCC canonical structure (4 independent terms, CN5)? Add 5th term? Modify existing?
+How to add $\int_\Omega \lvert u - f \rvert^2$ data term without breaking SCC canonical structure (4 independent terms, CN5)? Add 5th term? Modify existing?
 
 ### 11.2 NQ-73 — Graph construction from image
 

@@ -18,7 +18,7 @@ canonical_state_at_end: CV-1.16 SEALED unchanged (no canonical edits in this OP-
 
 **OP-HMORSE-SBM partially resolved — 11/11 lift PASS, 6/11 broadness PASS with structural-degeneracy analysis on barbell.**
 
-L-CLOSURE-LIFT Cat A (CV-1.16 canonical) is **fully robust** across all 11 valid runs (100% lift PASS): operator-norm $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ propagates to every tested graph class (SBM, barbell, small-world).
+L-CLOSURE-LIFT Cat A (CV-1.16 canonical) is **fully robust** across all 11 valid runs (100% lift PASS): operator-norm $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ propagates to every tested graph class (SBM, barbell, small-world).
 
 L-HMORSE-LOCAL Cat B (CV-1.16 canonical) holds **on graphs satisfying effective (C3) single-formation**: SBM (high Fiedler) + small-world PASS, barbell at canonical $c = 0.2$ produces (C3)-violating minimizers (mass split across two near-disconnected cliques creates a *second near-zero eigenmode* beyond the volume Goldstone). The barbell "FAIL" is **not** a counterexample but a *condition violation*: D-HMORSE-LOCAL (C3) + effective (C4) symmetry-breaking are needed.
 

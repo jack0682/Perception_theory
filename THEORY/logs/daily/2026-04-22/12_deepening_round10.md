@@ -145,7 +145,7 @@ But most secondary/tertiary branches are **SADDLES of high Morse index**, not lo
 
 ### 5.4 Survival count
 
-At saturation $\beta \to \infty$: surviving local minima are **sharp-interface configurations** = combinatorial $|A| = m$ subsets minimizing perimeter. On 2D grid: approximately disks (up to lattice corrections), distinct positions $O(L)$ modulo $D_4$.
+At saturation $\beta \to \infty$: surviving local minima are **sharp-interface configurations** = combinatorial $\lvert A \rvert = m$ subsets minimizing perimeter. On 2D grid: approximately disks (up to lattice corrections), distinct positions $O(L)$ modulo $D_4$.
 
 **Summary theorem:**
 

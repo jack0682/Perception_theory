@@ -104,7 +104,7 @@ Then "$\dot u = -\nabla F[u]$" gives $\dot u = -\nabla E - T_*(\log u - 1)$ — 
 ### §2.8 Angle 8 — Variational / Legendre duality
 
 **Definition candidate.** Define $T_*^{(\mathrm{var})}$ via Legendre transform:
-$$T_*^{(\mathrm{var})}(u) := \sup_{\delta u}\frac{\langle \delta u, \nabla E[u]\rangle - \frac{1}{2}\|\delta u\|^2}{\|\delta u\|^2}.$$
+$$T_*^{(\mathrm{var})}(u) := \sup_{\delta u}\frac{\langle \delta u, \nabla E[u]\rangle - \frac{1}{2}\lVert \delta u \rVert^2}{\lVert \delta u \rVert^2}.$$
 
 This is the optimal "effective temperature" trading off energy gain vs. fluctuation cost.
 

@@ -88,9 +88,9 @@ $$P_k(\beta; T) = \frac{e^{-E_k^*(\beta)/T}}{\sum_j e^{-E_j^*(\beta)/T}}$$
 - **Boundedness**: $P_k \in [0, 1]$, $\sum_k P_k = 1$.
 - **Asymptotic**:
   - $T \to 0$: $P_k \to \delta_{k, k^*}$ (Heaviside-like; reduces to class H selector).
-  - $T \to \infty$: uniform $P_k = 1/|K|$.
+  - $T \to \infty$: uniform $P_k = 1/\lvert K \rvert$.
 - **Parameter**: continuous $T$ controls sharpness.
-- **Relation to L**: binary case ($|K| = 2$) reduces exactly to logistic $P_1 = \sigma((E_2-E_1)/T)$.
+- **Relation to L**: binary case ($\lvert K \rvert = 2$) reduces exactly to logistic $P_1 = \sigma((E_2-E_1)/T)$.
 - **SCC primary role**: **thermal basin selection at finite T**; **REFUTED as universal description** by R22 V7 P1 for SCC (P(K=1)≈0.02 constant across β=8.5-9.5) — see §5.3.
 
 ### 2.6 Class R — Rational / algebraic (static)

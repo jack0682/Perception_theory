@@ -22,11 +22,11 @@ where:
 
 (Or richer: with $\sigma_\mathrm{standard}$ involving Wigner-projection eigenvectors, deferred to OP-0008-MERGE/SPLIT.)
 
-**The OP-0008-DIST question.** Under perturbation $u \to u + \delta u$, with $\|\delta u\|_2 \leq \varepsilon$ small, how does $\sigma_\mathrm{rich}$ change?
+**The OP-0008-DIST question.** Under perturbation $u \to u + \delta u$, with $\lVert \delta u \rVert_2 \leq \varepsilon$ small, how does $\sigma_\mathrm{rich}$ change?
 
 **Lipschitz target.** Find an explicit constant $L_\sigma$ such that:
-$$\big\|\sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u)\big\|_\Sigma \;\leq\; L_\sigma \cdot \|\delta u|_C\|_2,$$
-where $\|\cdot\|_\Sigma$ is a natural product norm on $\mathbb{R}_{\geq 0} \times \mathbb{R}^d \times \mathrm{Sym}^+_d$.
+$$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u) - \sigma_\mathrm{rich}(C; u)\big \rVert_\Sigma \;\leq\; L_\sigma \cdot \lVert \delta u|_C \rVert_2,$$
+where $\lVert \cdot \rVert_\Sigma$ is a natural product norm on $\mathbb{R}_{\geq 0} \times \mathbb{R}^d \times \mathrm{Sym}^+_d$.
 
 ### §1.2 Why this matters now
 
@@ -41,9 +41,9 @@ But σ-inheritance under noise/disturbance requires σ-stability under $u$-pertu
 ### §2.1 Angle B1 — Spectral perturbation (Davis-Kahan)
 
 **Tool.** Spectral perturbation theorem of Davis-Kahan (1970). For symmetric matrices $A, A + E$ with eigenspace gap $\delta$:
-$$\|\sin\Theta(V_A, V_{A+E})\| \leq \|E\|/\delta.$$
+$$\lVert \sin\Theta(V_A, V_{A+E}) \rVert \leq \lVert E \rVert/\delta.$$
 
-**Application to σ_standard.** σ_standard uses Wigner-projection eigenvectors of the joint Hessian. Perturbation $\delta u$ changes Hessian by $\delta H \approx L_H \|\delta u\|$; eigenvectors change by $L_H/\delta_\mathrm{gap} \cdot \|\delta u\|$.
+**Application to σ_standard.** σ_standard uses Wigner-projection eigenvectors of the joint Hessian. Perturbation $\delta u$ changes Hessian by $\delta H \approx L_H \lVert \delta u \rVert$; eigenvectors change by $L_H/\delta_\mathrm{gap} \cdot \lVert \delta u \rVert$.
 
 **Strength.** Quantitative bound on σ_standard sensitivity. Aligns with OP-0008-MERGE/SPLIT direction.
 
@@ -54,15 +54,15 @@ $$\|\sin\Theta(V_A, V_{A+E})\| \leq \|E\|/\delta.$$
 **Tool.** Direct calculus on each σ-component (mass, centroid, inertia).
 
 **Application to σ_rich.**
-- mass: $m(C; u) = \sum_C u$, Lipschitz constant $\sqrt{|C|}$ in $L^2$ ($\sum |u| \leq \sqrt{|C|}\sqrt{\sum u^2}$).
-- centroid: $\bar x(C; u) = \sum_C u x / m$. Differentiating: $\partial \bar x / \partial u(y) = (y - \bar x)/m$ for $y \in C$. Lipschitz (in $L^\infty(u)$): $\|\partial \bar x\| \leq \mathrm{diam}_\mathrm{intra}/m_\mathrm{min}$.
-- inertia: $\mathcal{J}(C; u) = \sum_C u (x - \bar x)(x - \bar x)^\top / m$. Lipschitz: $\|\partial \mathcal{J}\| \leq \mathrm{diam}_\mathrm{intra}^2/m_\mathrm{min}$.
+- mass: $m(C; u) = \sum_C u$, Lipschitz constant $\sqrt{\lvert C \rvert}$ in $L^2$ ($\sum \lvert u \rvert \leq \sqrt{\lvert C \rvert}\sqrt{\sum u^2}$).
+- centroid: $\bar x(C; u) = \sum_C u x / m$. Differentiating: $\partial \bar x / \partial u(y) = (y - \bar x)/m$ for $y \in C$. Lipschitz (in $L^\infty(u)$): $\lVert \partial \bar x \rVert \leq \mathrm{diam}_\mathrm{intra}/m_\mathrm{min}$.
+- inertia: $\mathcal{J}(C; u) = \sum_C u (x - \bar x)(x - \bar x)^\top / m$. Lipschitz: $\lVert \partial \mathcal{J} \rVert \leq \mathrm{diam}_\mathrm{intra}^2/m_\mathrm{min}$.
 
 **Combined Lipschitz.** $L_\sigma \leq O(\mathrm{diam}_\mathrm{intra}^2/m_\mathrm{min})$.
 
 **Strength.** Constructive, explicit constants. Works for σ_rich (no eigenvector dependence).
 
-**Weakness.** Coarse — doesn't exploit structural smoothness. Bound proportional to $|C|^2$ in worst case.
+**Weakness.** Coarse — doesn't exploit structural smoothness. Bound proportional to $\lvert C \rvert^2$ in worst case.
 
 ### §2.3 Angle B3 — Subgraph perturbation (when topology changes)
 
@@ -100,9 +100,9 @@ $$\|\sin\Theta(V_A, V_{A+E})\| \leq \|E\|/\delta.$$
 
 ### §3.1 Setup
 
-Fix component $C \subseteq \mathcal{P}$ with $|C| \geq 1$. Let $u, u' \in [0,1]^n$ with $\sum_x u(x) = \sum_x u'(x) = M$ (volume conservation). Set $\delta u = u' - u$ with $\delta u|_{\mathcal{P} \setminus C} = 0$ (perturbation localized in $C$). Let $\varepsilon = \|\delta u|_C\|_2$.
+Fix component $C \subseteq \mathcal{P}$ with $\lvert C \rvert \geq 1$. Let $u, u' \in [0,1]^n$ with $\sum_x u(x) = \sum_x u'(x) = M$ (volume conservation). Set $\delta u = u' - u$ with $\delta u|_{\mathcal{P} \setminus C} = 0$ (perturbation localized in $C$). Let $\varepsilon = \lVert \delta u|_C \rVert_2$.
 
-**Mass-positivity assumption (MP).** $m(C; u) = \sum_C u \geq m_\mathrm{min} = \rho_\mathrm{pers} \cdot |C|/4$ (D-ST-3 ensures this for valid PersComp).
+**Mass-positivity assumption (MP).** $m(C; u) = \sum_C u \geq m_\mathrm{min} = \rho_\mathrm{pers} \cdot \lvert C \rvert/4$ (D-ST-3 ensures this for valid PersComp).
 
 **Component-localized perturbation (PL).** $\delta u|_{\mathcal{P} \setminus C} = 0$.
 
@@ -111,7 +111,7 @@ Fix component $C \subseteq \mathcal{P}$ with $|C| \geq 1$. Let $u, u' \in [0,1]^
 ### §3.2 Component-wise bounds
 
 **Mass perturbation.**
-$$\big|m(C; u') - m(C; u)\big| = \big|\sum_C \delta u\big| \leq \sqrt{|C|} \cdot \varepsilon \quad \text{(Cauchy-Schwarz)}.$$
+$$\big\vertm(C; u') - m(C; u)\big\vert = \big\vert\sum_C \delta u\big\vert \leq \sqrt{\lvert C \rvert} \cdot \varepsilon \quad \text{(Cauchy-Schwarz)}.$$
 
 **Centroid perturbation.** Write $\bar x = \bar x(C; u)$, $\bar x' = \bar x(C; u')$, $m = m(C; u)$, $m' = m(C; u')$.
 $$\bar x' - \bar x = \frac{1}{m'}\sum_C u' x - \frac{1}{m}\sum_C u x = \frac{1}{m'}\Big[\sum_C u x + \sum_C \delta u \cdot x\Big] - \frac{1}{m}\sum_C u x.$$
@@ -124,28 +124,28 @@ $$\bar x' - \bar x = \frac{m \bar x + \sum_C \delta u \cdot x - m' \bar x}{m'} =
 (The $(m - m')\bar x = -\sum_C \delta u \cdot \bar x$ cancels with $\sum_C \delta u \cdot \bar x$ in the second term.)
 
 Hence:
-$$\|\bar x' - \bar x\|_2 = \frac{1}{m'}\Big\|\sum_C \delta u(x) (x - \bar x)\Big\|_2 \leq \frac{1}{m'}\sqrt{\sum_C \delta u(x)^2}\sqrt{\sum_C \|x - \bar x\|^2}.$$
-Using $\sum_C \|x - \bar x\|^2 \leq |C| \cdot D_C^2$:
-$$\|\bar x' - \bar x\|_2 \leq \frac{D_C \sqrt{|C|}}{m'}\,\varepsilon.$$
-Under (MP), $m' \geq m - \sqrt{|C|}\varepsilon \geq m_\mathrm{min} - \sqrt{|C|}\varepsilon$. For $\varepsilon \leq m_\mathrm{min}/(2\sqrt{|C|})$: $m' \geq m_\mathrm{min}/2$. Hence:
-$$\|\bar x' - \bar x\|_2 \leq \frac{2 D_C \sqrt{|C|}}{m_\mathrm{min}}\,\varepsilon.$$
+$$\lVert \bar x' - \bar x \rVert_2 = \frac{1}{m'}\Big\lVert \sum_C \delta u(x) (x - \bar x)\Big \rVert_2 \leq \frac{1}{m'}\sqrt{\sum_C \delta u(x)^2}\sqrt{\sum_C \lVert x - \bar x \rVert^2}.$$
+Using $\sum_C \lVert x - \bar x \rVert^2 \leq \lvert C \rvert \cdot D_C^2$:
+$$\lVert \bar x' - \bar x \rVert_2 \leq \frac{D_C \sqrt{\lvert C \rvert}}{m'}\,\varepsilon.$$
+Under (MP), $m' \geq m - \sqrt{\lvert C \rvert}\varepsilon \geq m_\mathrm{min} - \sqrt{\lvert C \rvert}\varepsilon$. For $\varepsilon \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$: $m' \geq m_\mathrm{min}/2$. Hence:
+$$\lVert \bar x' - \bar x \rVert_2 \leq \frac{2 D_C \sqrt{\lvert C \rvert}}{m_\mathrm{min}}\,\varepsilon.$$
 
 **Inertia tensor perturbation.** Similar calculation with Frobenius norm:
 $$\mathcal{J}' - \mathcal{J} = \frac{1}{m'}\sum_C \delta u(x) (x - \bar x)(x - \bar x)^\top + \mathrm{cross\text{-}terms}.$$
 
 The cross terms involve $\bar x' - \bar x$, of order $\varepsilon$. Combining (after some algebra):
-$$\|\mathcal{J}' - \mathcal{J}\|_F \leq \frac{D_C^2 \sqrt{|C|}}{m_\mathrm{min}}\,\varepsilon \cdot (1 + O(\varepsilon)) \leq \frac{2 D_C^2 \sqrt{|C|}}{m_\mathrm{min}}\,\varepsilon.$$
+$$\lVert \mathcal{J}' - \mathcal{J} \rVert_F \leq \frac{D_C^2 \sqrt{\lvert C \rvert}}{m_\mathrm{min}}\,\varepsilon \cdot (1 + O(\varepsilon)) \leq \frac{2 D_C^2 \sqrt{\lvert C \rvert}}{m_\mathrm{min}}\,\varepsilon.$$
 
 ### §3.3 Lemma 16 statement
 
-**Lemma 16 (σ_rich Lipschitz, Cat B).** *Under (MP) + (PL) + (DB), and for $\varepsilon = \|\delta u|_C\|_2 \leq m_\mathrm{min}/(2\sqrt{|C|})$:*
-$$\big\|\sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big\|_\Sigma \;\leq\; L_\sigma\,\varepsilon,$$
-*where $\|\cdot\|_\Sigma$ is the product norm $(|m|, \|\bar x\|_2, \|\mathcal{J}\|_F)$ and:*
-$$L_\sigma = \sqrt{|C|}\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{2 D_C^2}{m_\mathrm{min}}\Big) \;\approx\; \frac{2\sqrt{|C|}\,D_C^2}{m_\mathrm{min}} \quad\text{(dominant term)}.$$
+**Lemma 16 (σ_rich Lipschitz, Cat B).** *Under (MP) + (PL) + (DB), and for $\varepsilon = \lVert \delta u|_C \rVert_2 \leq m_\mathrm{min}/(2\sqrt{\lvert C \rvert})$:*
+$$\big\lVert \sigma_\mathrm{rich}(C; u + \delta u, P) - \sigma_\mathrm{rich}(C; u, P)\big \rVert_\Sigma \;\leq\; L_\sigma\,\varepsilon,$$
+*where $\lVert \cdot \rVert_\Sigma$ is the product norm $(\lvert m \rvert, \lVert \bar x \rVert_2, \lVert \mathcal{J} \rVert_F)$ and:*
+$$L_\sigma = \sqrt{\lvert C \rvert}\Big(1 + \frac{2 D_C}{m_\mathrm{min}} + \frac{2 D_C^2}{m_\mathrm{min}}\Big) \;\approx\; \frac{2\sqrt{\lvert C \rvert}\,D_C^2}{m_\mathrm{min}} \quad\text{(dominant term)}.$$
 
 ### §3.4 Numerical instance
 
-For 2D grid components at exp83 default ($|C| \leq 25$, $D_C \leq 7$ Manhattan, $\rho_\mathrm{pers} = 0.5$, $m_\mathrm{min} \geq 0.5 \cdot 25/4 = 3.125$):
+For 2D grid components at exp83 default ($\lvert C \rvert \leq 25$, $D_C \leq 7$ Manhattan, $\rho_\mathrm{pers} = 0.5$, $m_\mathrm{min} \geq 0.5 \cdot 25/4 = 3.125$):
 $$L_\sigma \leq 5 \cdot (1 + 2\cdot 7/3.125 + 2\cdot 49/3.125) \approx 5 \cdot (1 + 4.48 + 31.36) \approx 5 \cdot 37 = 185.$$
 
 **Interpretation.** For a perturbation $\varepsilon = 0.01$ (1% noise on $u$), the σ-shift is bounded by $L_\sigma \varepsilon \leq 1.85$. Mass shift bounded by $\sqrt{25} \cdot 0.01 = 0.05$ (reasonable). Centroid shift $\leq 2 \cdot 7 \cdot 5/3.125 \cdot 0.01 = 0.224$ — small relative to $D_C = 7$. Inertia shift $\leq 2 \cdot 49 \cdot 5/3.125 \cdot 0.01 = 1.568$ — comparable to $D_C^2 = 49$, manageable.
@@ -172,7 +172,7 @@ The bound is **conservative** (Cauchy-Schwarz + worst-case diameter). Tighter bo
 | Angle | Lipschitz constant form | Bound at default | Cat |
 |-------|--------------------------|------------------|-----|
 | B1 (Davis-Kahan, σ_standard only) | $L_H/\delta_\mathrm{gap}$ | $\sim 100$ at default; diverges at bifurcation | C (gap-cond.) |
-| B2 (functional analysis) | $\sqrt{|C|} D_C^2 / m_\mathrm{min}$ | $185$ | **B (Lemma 16)** |
+| B2 (functional analysis) | $\sqrt{\lvert C \rvert} D_C^2 / m_\mathrm{min}$ | $185$ | **B (Lemma 16)** |
 | B3 (subgraph topology) | discontinuous; $\infty$ at threshold | ill-posed | C |
 | B4 (Riemannian) | metric-dependent | TBD | non-canonical |
 | B5 (concentration) | average-case | $\sim 30$ (Talagrand) | B (probabilistic) |
@@ -193,14 +193,14 @@ With Lemma 16, the T-σ-Inherit Cat B path becomes concrete:
 
 ### §5.1 Part (a) σ-existence
 
-Trivial: σ_rich is well-defined for any $C$ with $|C| \geq 1$ + $m(C) > 0$.
+Trivial: σ_rich is well-defined for any $C$ with $\lvert C \rvert \geq 1$ + $m(C) > 0$.
 
 ### §5.2 Part (b) CONT (continuation)
 
 Under T-Temporal-Identity bijection $\pi$ + Lemma 16:
-$$\sigma_\mathrm{rich}(C_{\pi(i)}^s) = \sigma_\mathrm{rich}(C_i^t) + O(\|u_s - u_t|_{C_i}\|_2 \cdot L_\sigma).$$
+$$\sigma_\mathrm{rich}(C_{\pi(i)}^s) = \sigma_\mathrm{rich}(C_i^t) + O(\lVert u_s - u_t|_{C_i} \rVert_2 \cdot L_\sigma).$$
 
-If transport is small ($\|u_s - u_t\|_2 \leq \varepsilon_\mathrm{transp}$), σ-inheritance is approximate with quantified error.
+If transport is small ($\lVert u_s - u_t \rVert_2 \leq \varepsilon_\mathrm{transp}$), σ-inheritance is approximate with quantified error.
 
 ### §5.3 Part (d-direction) SPLIT direction
 
@@ -247,7 +247,7 @@ Pre-evening: T-σ-Inherit Cat B blocked by OP-0008-DIST.
 Post-this-file: T-σ-Inherit Cat B (parts a, b, d-direction, e) Cat B-ready, conditional on Lemma 16.
 
 **Suggested update for `theorem_status.md` OP-0008:**
-> **OP-0008-DIST** Status: **CLOSED Cat B via Lemma 16** (`THEORY/logs/daily/2026-05-07/11_NOP_B_sigma_lipschitz_development.md` §3.3). Explicit Lipschitz constant $L_\sigma \approx 2\sqrt{|C|} D_C^2/m_\mathrm{min}$. Cat A: requires NOP-E (D-ST-3 ↔ proxy phase boundary) closure to extend to general perturbations.
+> **OP-0008-DIST** Status: **CLOSED Cat B via Lemma 16** (`THEORY/logs/daily/2026-05-07/11_NOP_B_sigma_lipschitz_development.md` §3.3). Explicit Lipschitz constant $L_\sigma \approx 2\sqrt{\lvert C \rvert} D_C^2/m_\mathrm{min}$. Cat A: requires NOP-E (D-ST-3 ↔ proxy phase boundary) closure to extend to general perturbations.
 
 ### §6.4 Working file action
 

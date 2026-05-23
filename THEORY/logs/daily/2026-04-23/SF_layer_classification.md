@@ -86,7 +86,7 @@ Real-valued geometric parameter 주장. Smooth functions of $(\beta, \alpha, c)$
 
 | # | Name | S/D | Layer | Proof tool | Source | Notes |
 |---|---|---|---|---|---|---|
-| 25 | **T8-Core ($\beta_{\mathrm{crit}} = 4\alpha\lambda_2/|W''(c)|$)** | S | L2 | Spectral variation | canonical §13 | $\beta_{\mathrm{crit}}$ is L2 real-valued; existence of non-uniform is L1 (§4) |
+| 25 | **T8-Core ($\beta_{\mathrm{crit}} = 4\alpha\lambda_2/\lvert W''(c) \rvert$)** | S | L2 | Spectral variation | canonical §13 | $\beta_{\mathrm{crit}}$ is L2 real-valued; existence of non-uniform is L1 (§4) |
 | 26 | **$\xi_0$ scaling** | S | L2 | Allen-Cahn dimensional | R9 / interface_scale.md | $\xi_0 = \sqrt{\alpha/\beta}$ |
 | 27 | **$d_{\min}^*$ screened Poisson** | S | L2 | Bessel $K_0$ asymptotic | R2 §4.3b | $d_{\min} = \sqrt{2}\,\xi_0 \ln(1/\epsilon_0) + O(\xi_0)$ |
 | 28 | **$c_{\mathrm{bif}}^\pm$ thresholds** | S | L2 | Explicit from Prop 1.3b(d) | R6 | 3-regime 경계값 |

@@ -38,7 +38,7 @@ with $K(u^*) = 1$ topological invariant.
 
 > **Definition 2.1 (K-sector basin)**. Let $\mathcal{B}_K \subseteq \Sigma_m$ be the set of points $u$ satisfying:
 > (i) $u$ is in the basin of attraction of some well-separated local minimizer $u^*$ under gradient flow $\dot u = -\Pi_{\Sigma_m}\nabla\mathcal{E}(u)$,
-> (ii) $u^* = \sum_{k=1}^{K} \phi_k^*(x) + r(u^*)$ with $\|r\|_\infty \leq \exp(-d_{\min}/\xi_0)$ and $\phi_k^*$ pairwise disjointly supported,
+> (ii) $u^* = \sum_{k=1}^{K} \phi_k^*(x) + r(u^*)$ with $\lVert r \rVert_\infty \leq \exp(-d_{\min}/\xi_0)$ and $\phi_k^*$ pairwise disjointly supported,
 > (iii) $K(u^*) = K$ (integer invariant in each basin).
 
 Then:
@@ -81,10 +81,10 @@ For each of the four proposed axioms (`step_cohesion.md` §10.1):
 #### S1 (Step-Cohesion Decomposition) — AN: ✅ natural
 
 Single-formation form:
-$$u^* = \phi_1^* + r,\quad \|r\|_\infty \leq \exp(-d_{\min,\mathrm{boundary}}/\xi_0).$$
+$$u^* = \phi_1^* + r,\quad \lVert r \rVert_\infty \leq \exp(-d_{\min,\mathrm{boundary}}/\xi_0).$$
 
 Multi-K form:
-$$u^* = \sum_{k=1}^K \phi_k^* + r,\quad \|r\|_\infty \leq K \exp(-d_{\min}/\xi_0).$$
+$$u^* = \sum_{k=1}^K \phi_k^* + r,\quad \lVert r \rVert_\infty \leq K \exp(-d_{\min}/\xi_0).$$
 
 The upper bound on residual gets a factor $K$ from pairwise contributions, but the form extends naturally. **AN = ✅**.
 
@@ -272,9 +272,9 @@ where $u^{\mathrm{fit}}$ is the tanh-fit extension beyond $A_k^*$.
 $$u^*(x) - \sum_j \phi_j^*(x) = u^*(x) - \phi_k^*(x) - \sum_{j \neq k} \phi_j^*(x) = 0 - O(\eta) = -O(\eta)\ \text{on }A_k^*.$$
 Similarly on $X \setminus \bigcup_k A_k^*$, $u^*(x)$ is already at the background level $\sim 0$, and $\sum_j \phi_j^*(x) \leq K \cdot O(\eta)$.
 
-Hence residual $r(u^*) = u^* - \sum_k \phi_k^*$ satisfies $\|r\|_\infty \leq O(K\eta) = O(K \exp(-d_{\min}/\xi_0))$.
+Hence residual $r(u^*) = u^* - \sum_k \phi_k^*$ satisfies $\lVert r \rVert_\infty \leq O(K\eta) = O(K \exp(-d_{\min}/\xi_0))$.
 
-**Step 5 — Uniqueness up to permutation**: Suppose alternative decomposition $u^* = \sum_k \tilde\phi_k^* + \tilde r$ exists with $\|\tilde r\|_\infty \leq O(\eta')$. Then each $\tilde\phi_k^*$ must be supported on some connected component of $\{u^* \geq \tau - O(\eta')\}$, which (for $\eta' < \tau/2$) matches $A_k^*$ (for some permutation of indices). Hence $\tilde\phi_k^* \approx \phi_{\pi(k)}^*$ for a permutation $\pi$. QED.
+**Step 5 — Uniqueness up to permutation**: Suppose alternative decomposition $u^* = \sum_k \tilde\phi_k^* + \tilde r$ exists with $\lVert \tilde r \rVert_\infty \leq O(\eta')$. Then each $\tilde\phi_k^*$ must be supported on some connected component of $\{u^* \geq \tau - O(\eta')\}$, which (for $\eta' < \tau/2$) matches $A_k^*$ (for some permutation of indices). Hence $\tilde\phi_k^* \approx \phi_{\pi(k)}^*$ for a permutation $\pi$. QED.
 
 **Category**: **Cat A structural** for well-separated regime. Proof elementary given Coupling Bound Lemma.
 

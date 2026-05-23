@@ -46,7 +46,7 @@
 
 ### §3.1 T8-Core β_crit validation errors
 
-7 of 18 runs failed canonical T8-Core validation (`params.validate`): $\beta_{\mathrm{bd}} \leq \beta_{\mathrm{crit}} = 4 \alpha \lambda_2 / |W''(c)|$. The β_crit depends linearly on the Fiedler eigenvalue $\lambda_2$:
+7 of 18 runs failed canonical T8-Core validation (`params.validate`): $\beta_{\mathrm{bd}} \leq \beta_{\mathrm{crit}} = 4 \alpha \lambda_2 / \lvert W''(c) \rvert$. The β_crit depends linearly on the Fiedler eigenvalue $\lambda_2$:
 
 | Graph | $\lambda_2$ | $\beta_{\mathrm{crit}}$ |
 |---|---:|---:|
@@ -98,7 +98,7 @@ WS_n60_k6_p0.2: only β=100 valid. **PASS**: $\mu_{\min}$(full) = 1.56. Confirms
 ## §4. Effect on L-HMORSE-LOCAL Cat B Status
 
 **Strong confirmations.**
-- L-CLOSURE-LIFT Cat A (Theorem B2) is **fully robust**: 11/11 valid runs lift PASS, including the most extreme barbell case with $d_{\min}/d_{\max} = 0.165$. The operator-norm bound $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ is **graph-independent in the degree-weighted form** and propagates to the standard-$\ell^2$ form modulo $d_{\min}/d_{\max}$ factor.
+- L-CLOSURE-LIFT Cat A (Theorem B2) is **fully robust**: 11/11 valid runs lift PASS, including the most extreme barbell case with $d_{\min}/d_{\max} = 0.165$. The operator-norm bound $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ is **graph-independent in the degree-weighted form** and propagates to the standard-$\ell^2$ form modulo $d_{\min}/d_{\max}$ factor.
 - L-HMORSE-LOCAL Cat B holds **on graphs satisfying both (C3) and effective (C4) strong symmetry-breaking**: SBM (high $\lambda_2$) + small-world (moderate $\lambda_2$) all PASS where T8-valid.
 
 **Refinement needed.**

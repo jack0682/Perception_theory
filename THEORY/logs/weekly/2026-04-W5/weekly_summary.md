@@ -303,15 +303,15 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 - P4 LG-2 low boundary collar $\max_{\partial N_j^r}U \le b_j - \ell_\min - r_\mathrm{assoc}$
 - P5 LG-4 background suppression on $U$ (not just $R_\mathrm{inact}$)
 - P6 birth height $b_j \ge h_\min \ge \ell_\min$
-- P7 decay-to-cut (heterogeneous): $u^{(\ell)}(x) \le \psi_\ell(d_G(x, S_\ell^\delta))$ + $H_{C_{jk}}(U) \le \sum_\ell \psi_\ell(q_{\ell,jk}) + \|R_\mathrm{inact}\|_{\infty,C_{jk}}$
+- P7 decay-to-cut (heterogeneous): $u^{(\ell)}(x) \le \psi_\ell(d_G(x, S_\ell^\delta))$ + $H_{C_{jk}}(U) \le \sum_\ell \psi_\ell(q_{\ell,jk}) + \lVert R_\mathrm{inact} \rVert_{\infty,C_{jk}}$
 - P8 tightened H6 on $G_j^r$: $\ell_{j,2}(u^{(j)};G_j^r) \le \ell_\min - 3\rho_\mathrm{pert}$
-- P9 NE-2 perturbation $\|R_j\|_{\infty,N_j^r} \le \rho_\mathrm{pert}/2$
-- P10 inactive residual $\|R_\mathrm{inact}\|_\infty \le \ell_\min - \rho_\mathrm{res}$
+- P9 NE-2 perturbation $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_\mathrm{pert}/2$
+- P10 inactive residual $\lVert R_\mathrm{inact} \rVert_\infty \le \ell_\min - \rho_\mathrm{res}$
 - P11 margin ledger $h_\min - \max_{k\ne j}B_{jk} \ge \ell_\min + r_\mathrm{assoc} + r_\mathrm{birth}$
 
 **Proof structure**:
-- Lower bound $K_\mathrm{bar} \ge |A|$ via LG-2 boundary collar + LG-3 inter-neighborhood bridge + $h_\min \ge \ell_\min$ (L1-H §8 step 2).
-- Upper bound $K_\mathrm{bar} \le |A|$ via:
+- Lower bound $K_\mathrm{bar} \ge \lvert A \rvert$ via LG-2 boundary collar + LG-3 inter-neighborhood bridge + $h_\min \ge \ell_\min$ (L1-H §8 step 2).
+- Upper bound $K_\mathrm{bar} \le \lvert A \rvert$ via:
   - (α) LG-7 coverage derived from LG-4 + terminal-death (every dominant bar's birth has $U \ge \ell_\min$, hence not in $X_\mathrm{bg}$)
   - (β) per-neighborhood at-most-one-dominant-bar via L1-H2 Lemma 1 (graph-inclusion: $\ell_\mathrm{glob} \le \ell_\mathrm{loc}$ on $G_j^r \subseteq G$) + L1-H2 Lemma 2 (contradiction-based bottleneck-stability under tightened H6)
 - PO-1 decay-to-cut (P7) bounds $\theta_\mathrm{bridge}^{jk}(U)$ via L1-J §8.1 + L1-B Cat-A cut lemma.

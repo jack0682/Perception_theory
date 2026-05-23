@@ -55,7 +55,7 @@ is non-empty (for any `u_0 \in cl(B_{F_i})`, `u_1 \in cl(B_{F_j})`, the segment 
 (S7) The metric used on `C([0,1], Σ_m)` is the uniform (sup) metric
 
 $$
-d_\infty(\gamma, \tilde\gamma) \;=\; \max_{s\in[0,1]} \| \gamma(s) - \tilde\gamma(s) \|_2.
+d_\infty(\gamma, \tilde\gamma) \;=\; \max_{s\in[0,1]} \lVert \gamma(s) - \tilde\gamma(s) \rVert_2.
 $$
 
 **Functionals.** For `γ ∈ Adm(F_i, F_j)`:

@@ -12,7 +12,7 @@
 
 ## §1. Setup (matches `05_*` §1)
 
-- 2D torus $T^2_{20}$, $|X| = 400$.
+- 2D torus $T^2_{20}$, $\lvert X \rvert = 400$.
 - $\mathrm{Aut}(G) = (\mathbb{Z}_{20})^2 \rtimes D_4$, $|\mathrm{Aut}(G)| = 3200$.
 - K=2, two disks at $\mathbf{c}_1 = (0, 0), \mathbf{c}_2 = (8, 0)$.
 - Each disk $D_4$-symmetric tanh profile, c=0.10 each.
@@ -41,7 +41,7 @@ Subgroups of $\Gamma$ isomorphic to $D_4 \wr S_2$: the conjugacy class is determ
 - Modulo conjugation by $\Gamma$.
 
 For $T^2_{20}$:
-- $D_4$ subgroups of $\mathrm{Aut}(G)$: there are $|\mathrm{Aut}(G)| / |\mathrm{Norm}(D_4)|$ conjugates of any single $D_4$, and modulo conjugation just one conjugacy class ($D_4$ at origin / center / lattice corners are all conjugate by translation).
+- $D_4$ subgroups of $\mathrm{Aut}(G)$: there are $|\mathrm{Aut}(G)\lvert / \rvert\mathrm{Norm}(D_4)|$ conjugates of any single $D_4$, and modulo conjugation just one conjugacy class ($D_4$ at origin / center / lattice corners are all conjugate by translation).
 - Pairs $(D_4, D_4)$ of subgroups in $\mathrm{Aut}(G)$: parameterized by relative position of their "centers" on $T^2_{20}$.
 - Involutive $\rho$: 180° rotation about midpoint, requires the two centers to be antipodally placed (i.e., separation vector compatible with 180° rotation: must be self-mapped under $-\mathrm{id}$, which on torus means separation $(d_x, d_y)$ with $2 d_x \equiv 0 \mod 20$ AND $2 d_y \equiv 0 \mod 20$, i.e., $d_x \in \{0, 10\}$, $d_y \in \{0, 10\}$).
 

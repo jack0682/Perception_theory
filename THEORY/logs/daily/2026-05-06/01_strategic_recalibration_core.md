@@ -138,7 +138,7 @@ Key decisions (Day 3):
 | `03_pf_framework_escalation_core.md` | G3.3 main | Implicit P-F catalog + OP-0005 Layer B / OP-0008 P-F dependence + escalation proposal + W9 plan |
 | `03a_pf_framework_axiom_proposal_v0.md` | G3.3 §2 | P-F-A1 through P-F-A8 axiom set v0 sketch |
 | `03b_op_0005_layer_b_kramers_pf_dependence.md` | G3.3 §3 | Layer B Kramers reformulation under P-F outline |
-| `04_nq_g1_2_ext_design.md` | G3.4 main | Post-flow $\|R_j\|_\infty$ measurement design + hypothesis branches |
+| `04_nq_g1_2_ext_design.md` | G3.4 main | Post-flow $\lVert R_j \rVert_\infty$ measurement design + hypothesis branches |
 | `04a_l1i_extension_script_outline.md` | G3.4 §2 | Pseudo-code + module deps for NQ-G1-2-ext wrapper |
 | `04b_post_flow_R_j_measurement_protocol.md` | G3.4 §3 | Sampling protocol + aggregation + statistical reporting |
 | `05_canonical_md_split_feasibility.md` | G3.5 | Part I-IV split candidate + trade-off + recommendation (W10 D6) |

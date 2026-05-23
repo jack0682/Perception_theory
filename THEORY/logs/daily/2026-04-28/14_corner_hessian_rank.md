@@ -15,11 +15,11 @@
 ### 1.1 Corner-saturated state structure
 
 Per `07_corner_touching_quantification.md` §2, a $\mathcal{F}=1$ minimizer in regime R3 (corner sub-lattice) has:
-- Saturation set $S = \{x \in X : u(x) = 1\}$ with $|S| \approx m$ (formation core).
-- Outside set $O = \{x : u(x) = 0\}$ with $|O| \approx n - m$ (far field).
-- Interface set $I = X \setminus (S \cup O)$ with $|I|$ small (typically O(perimeter)).
+- Saturation set $S = \{x \in X : u(x) = 1\}$ with $\lvert S \rvert \approx m$ (formation core).
+- Outside set $O = \{x : u(x) = 0\}$ with $\lvert O \rvert \approx n - m$ (far field).
+- Interface set $I = X \setminus (S \cup O)$ with $\lvert I \rvert$ small (typically O(perimeter)).
 
-Numerical (single NQ-173 single sample at ζ=0.5 seed=0): peak at (17, 0), 19 sites with u > 0.9, $|S| \approx 19$ (close to m = 40 expected). Substantial saturation but not full.
+Numerical (single NQ-173 single sample at ζ=0.5 seed=0): peak at (17, 0), 19 sites with u > 0.9, $\lvert S \rvert \approx 19$ (close to m = 40 expected). Substantial saturation but not full.
 
 ### 1.2 The Hessian on saturated/non-saturated regions
 
@@ -120,7 +120,7 @@ Modes constant on interior of $S$ + constant on interior of $O$: eigenvalue ≈ 
 
 Number of such modes ≈ |S| + |O| - 2 = n - |I| - 2 ≈ n - O(perimeter) - 2.
 
-For our setup: $n - |I| - 2 \approx 400 - O(\sqrt{40}) - 2 \approx 392$ modes.
+For our setup: $n - \lvert I \rvert - 2 \approx 400 - O(\sqrt{40}) - 2 \approx 392$ modes.
 
 ### 3.4 Interface modes
 
@@ -165,7 +165,7 @@ For canonical statement, σ-tuple should **exclude** spurious entries by appropr
 ### 4.3 σ-tuple dimension formula (corner-saturated state)
 
 Effective σ-tuple count for corner-saturated F=1:
-$$|\sigma_{\mathrm{eff}}| \leq d + |\mathrm{Stab}_{D_4}| + O(|\partial S|) + 1, \tag{4.1}$$
+$$|\sigma_{\mathrm{eff}}| \leq d + |\mathrm{Stab}_{D_4}\lvert + O( \rvert\partial S|) + 1, \tag{4.1}$$
 where $d$ = spatial dimension (translation Goldstones), $|\mathrm{Stab}_{D_4}|$ = rotational symmetry contribution, $|\partial S|$ = cluster perimeter (interface modes), +1 for volume tangent.
 
 For 2D K=1 disk-shaped cluster: ≈ 2 + 4 + O(20) + 1 ≈ 27 modes worth tracking. Cutoff K=10 or K=20 captures all relevant ones.

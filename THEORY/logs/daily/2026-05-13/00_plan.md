@@ -192,8 +192,8 @@ OP-0012-SINK의 정확한 명칭/내용 정리:
 제안 후보: "Sinkhorn Temporal Scaling Compatibility Problem"
 
 필요 lemma 두 가지:
-1. **L-δ_eff-SINK** (Cat C): Sinkhorn plan의 cost-level gap bound. $\delta_\mathrm{eff} := \|c_\mathrm{direct}(u_t, u_r) - c^\mathrm{eff}(M_{t→s}, M_{s→r})\|_\infty$ bound.
-2. **L-Eff-Sinkhorn** (Cat C): $\|M^\mathrm{sink}(\mathbf{K}_{t→r}) - M_1 M_2\|_\infty$ bound. Sinkhorn scaling gap (b₁⊙a₂≠c·I generically) 정량화.
+1. **L-δ_eff-SINK** (Cat C): Sinkhorn plan의 cost-level gap bound. $\delta_\mathrm{eff} := \lVert c_\mathrm{direct}(u_t, u_r) - c^\mathrm{eff}(M_{t→s}, M_{s→r}) \rVert_\infty$ bound.
+2. **L-Eff-Sinkhorn** (Cat C): $\lVert M^\mathrm{sink}(\mathbf{K}_{t→r}) - M_1 M_2 \rVert_\infty$ bound. Sinkhorn scaling gap (b₁⊙a₂≠c·I generically) 정량화.
 
 연관 open problem 후보:
 - **OP-0022** (continuous-time action limit): Γ-수렴 또는 viscosity 분석. discrete-time action → continuous-time SCC action functional 극한. CV-1.16 이후.

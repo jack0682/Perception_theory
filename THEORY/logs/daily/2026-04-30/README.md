@@ -27,7 +27,7 @@ $$E = \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{
 
 **Proto-cohesion diagnostic** $\mathbf{d} = (\mathrm{Bind},\ \mathrm{Sep},\ \mathrm{Inside},\ \mathrm{Persist}) \in [0,1]^4$
 
-**Phase transition:** $\beta/\alpha > 4\lambda_2 / |W''(c)|$ with $c$ in spinodal $((3-\sqrt{3})/6,\ (3+\sqrt{3})/6)$.
+**Phase transition:** $\beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert$ with $c$ in spinodal $((3-\sqrt{3})/6,\ (3+\sqrt{3})/6)$.
 
 Full formal specification: **`THEORY/canonical/canonical.md`** (v1.2).
 

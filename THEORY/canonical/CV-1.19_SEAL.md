@@ -56,13 +56,13 @@ source_working_files:
 
 ### §2.1 Statement
 
-Let $G = (V, E)$ be a finite connected graph with $|V| = n$, mass $M = c \cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At uniform critical $u^* = c\mathbf{1}$ on the T8 critical surface $\Sigma_{T8}$ (canonical SB7), the dimension of the kernel of the constrained Hessian of the full SCC energy $\mathcal{E} = \lambda_{cl}\mathcal{E}_{cl} + \lambda_{sep}\mathcal{E}_{sep} + \lambda_{bd}\mathcal{E}_{bd} + \lambda_{tr}\mathcal{E}_{tr}$ on $T_{c\mathbf{1}}\Sigma_m = \mathbf{1}^\perp$ equals the multiplicity of the Fiedler eigenvalue of the graph Laplacian:
+Let $G = (V, E)$ be a finite connected graph with $\lvert V \rvert = n$, mass $M = c \cdot n$ with $c \in ((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ (spinodal interior). At uniform critical $u^* = c\mathbf{1}$ on the T8 critical surface $\Sigma_{T8}$ (canonical SB7), the dimension of the kernel of the constrained Hessian of the full SCC energy $\mathcal{E} = \lambda_{cl}\mathcal{E}_{cl} + \lambda_{sep}\mathcal{E}_{sep} + \lambda_{bd}\mathcal{E}_{bd} + \lambda_{tr}\mathcal{E}_{tr}$ on $T_{c\mathbf{1}}\Sigma_m = \mathbf{1}^\perp$ equals the multiplicity of the Fiedler eigenvalue of the graph Laplacian:
 
-$$\boxed{\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big|_{T\Sigma_m}\Big) = \mathrm{mult}\!\Big(\lambda_2(L_G)\Big) =: k_0(G)}$$
+$$\boxed{\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big\vert_{T\Sigma_m}\Big) = \mathrm{mult}\!\Big(\lambda_2(L_G)\Big) =: k_0(G)}$$
 
 ### §2.2 Standard Regimes (3 cases)
 
-**Case A (regular graphs)**: For $d$-regular $G$, the row-normalized aggregation $P_t = D_G^{-1}A_G = I - L_G/d$ is a polynomial in $L_G$. Therefore $[J_D, L_G] = 0$ globally → S3 Cat A unconditional. *Source*: `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working anchor) + W8-Day3 03 §4.1 (explicit small-matrix verification: K_4 → $\|[P,L]\|_F = 2.2 \times 10^{-16}$; $C_4 \times C_4 \to 0$ exact).
+**Case A (regular graphs)**: For $d$-regular $G$, the row-normalized aggregation $P_t = D_G^{-1}A_G = I - L_G/d$ is a polynomial in $L_G$. Therefore $[J_D, L_G] = 0$ globally → S3 Cat A unconditional. *Source*: `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working anchor) + W8-Day3 03 §4.1 (explicit small-matrix verification: K_4 → $\lVert [P,L] \rVert_F = 2.2 \times 10^{-16}$; $C_4 \times C_4 \to 0$ exact).
 
 **Case B (any graph at uniform critical)**: At $u^* = c\mathbf{1}$ uniform, $G_{u^*} = \mathrm{Aut}(G)$ (uniform is fixed by all permutations). Canonical T-σ-Lemma-1 (Cat A, CV-1.5, canonical.md §13) gives Hessian-Aut(G) commutation + isotypic block decomposition. Fiedler eigenspace is an isotypic component (or sum thereof); Schur's Lemma gives $J_D V_{\lambda_2} \subseteq V_{\lambda_2}$ — kernel preserved → S3 Cat A unconditional. *Source*: W8-Day3 03 §4.2.
 

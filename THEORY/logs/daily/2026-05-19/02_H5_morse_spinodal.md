@@ -65,7 +65,7 @@ contains an *open dense* subset (in standard topology); furthermore $\mathcal{D}
 **Statement A.2.2** *(Spinodal critical surface identification, Cat A — direct from canonical SB7).* The Hessian degeneracy locus
 $$\Sigma_{\mathrm{Hess}} := \{\,(\Theta, u^*) : u^* \text{ critical, } \det \mathrm{Hess}\,\mathcal{E}_\Theta(u^*)|_{T_{u^*}\Sigma_m} = 0\,\}$$
 *equals* the T8 phase transition surface
-$$\Sigma_{T8} := \{\,(\Theta, u^*) : \beta/\alpha = 4\lambda_2(G)/|W''(c(u^*))|\,\}$$
+$$\Sigma_{T8} := \{ \,(\Theta, u^*) : \beta/\alpha = 4\lambda_2(G)/ \mid W''(c(u^*)) \mid \, \}$$
 on the uniform critical sheet $u^* = c\mathbf{1}$ (c the equilibrium concentration). In particular $\Sigma_{T8}$ is codim-1 in $\Theta$-space (parameterized by $\beta/\alpha$).
 
 **CoC anchors**: canonical §13 Theorem SB7 (Cat A, L2495) provides this identification directly — verbatim "$\Sigma_{\mathrm{Hess}} = \Sigma_{T8}$" + envelope theorem T5 + analyticity 명시.
@@ -73,7 +73,7 @@ on the uniform critical sheet $u^* = c\mathbf{1}$ (c the equilibrium concentrati
 ### §1.3 Statement A.2.3 — Stratified Morse on Post-Bifurcation Stable Basin
 
 **Statement A.2.3** *(Stratified Morse, Cat A 후보 conditional).* For $\Theta$ in the *post-bifurcation supercritical regime*
-$$\mathcal{R}_{\mathrm{post}} := \{\,\Theta : \beta/\alpha > 4\lambda_2(G)/|W''(c)|, \; c \in (\tfrac{3-\sqrt{3}}{6}, \tfrac{3+\sqrt{3}}{6})\,\}$$
+$$\mathcal{R}_{\mathrm{post}} := \{\,\Theta : \beta/\alpha > 4\lambda_2(G)/\lvert W''(c) \rvert, \; c \in (\tfrac{3-\sqrt{3}}{6}, \tfrac{3+\sqrt{3}}{6})\,\}$$
 (spinodal interior + supercritical), the *stable basin* $\mathcal{B}_{\mathrm{stable}}(\Theta) \subset \Sigma_m$ — defined as the union of basins of all local energy minima with $\mathrm{Hess}\,\mathcal{E}_\Theta > 0$ on $T_{u^*}\Sigma_m$ — admits a *stratified Morse decomposition* (in the sense of A.2.1) outside the codim-1 stratum $\Sigma_{T8}$. Equivalently: $\mathcal{E}_\Theta|_{\mathcal{B}_{\mathrm{stable}}}$ is Morse for $\Theta$ in an open dense subset of $\mathcal{R}_{\mathrm{post}}$.
 
 **CoT step 1**: $\mathcal{R}_{\mathrm{post}}$ 는 *post-bifurcation* — uniform critical $c\mathbf{1}$ 이 *Hessian-unstable* (T8 supercritical 의 정의) → 새 non-uniform critical (formation) 가 *stable* sheet 으로 출현 (pitchfork bifurcation 의 직접 후속).
@@ -121,17 +121,17 @@ is real-analytic (in fact polynomial) of total degree $\leq 3$ in $(u, \Theta)$ 
 
 ### §2.4 Lemma L4 — Goldstone direction on uniform sheet is exactly Σ_T8
 
-**Lemma L4.** On the uniform critical sheet $u^* = c\mathbf{1} \in \Sigma_m$ (so $m = c$), the Hessian $\mathrm{Hess}\,\mathcal{E}_\Theta(c\mathbf{1})|_{T\Sigma_m}$ has zero eigenvalue *if and only if* $\beta/\alpha = 4\lambda_2(G)/|W''(c)|$ (i.e., $\Theta \in \Sigma_{T8}$).
+**Lemma L4.** On the uniform critical sheet $u^* = c\mathbf{1} \in \Sigma_m$ (so $m = c$), the Hessian $\mathrm{Hess}\,\mathcal{E}_\Theta(c\mathbf{1})|_{T\Sigma_m}$ has zero eigenvalue *if and only if* $\beta/\alpha = 4\lambda_2(G)/\lvert W''(c) \rvert$ (i.e., $\Theta \in \Sigma_{T8}$).
 
 **Proof (CoT + CoC):**
 - CoT step 1: On uniform $c\mathbf{1}$, the Hessian eigenvalues are $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} - \beta|W''(c)|$ for $k = 2, \ldots, n$ (canonical §13 Theorem 4 cited).
-- CoT step 2: Zero eigenvalue ⟺ $\mu_2 = 0$ (smallest eigenvalue first; $k=1$ excluded by $\Sigma_m$ projection) ⟺ $\beta/\alpha = 4\lambda_2/|W''(c)|$.
+- CoT step 2: Zero eigenvalue ⟺ $\mu_2 = 0$ (smallest eigenvalue first; $k=1$ excluded by $\Sigma_m$ projection) ⟺ $\beta/\alpha = 4\lambda_2/\lvert W''(c) \rvert$.
 - CoT step 3: 본 condition 은 *exactly* T8 phase transition (canonical DECLARATION.md 중심 정리).
 - CoC anchors: canonical §13 Theorem 4 (CV-1.5.1, L1466 *spinodal interior* hypothesis discussion 직접 인용); canonical SB7 (Cat A) confirms $\Sigma_{\mathrm{Hess}} = \Sigma_{T8}$ as global identity (본 lemma 는 uniform sheet 에서의 *local* form).
 
 ### §2.5 Lemma L5 — Spinodal stratum is intrinsic codim-1 (Cat A — direct from SB7)
 
-**Lemma L5.** $\Sigma_{T8} \subset \mathbb{R}^4_{>0} \times (0,1)$ is a smooth codim-1 hypersurface (parameterized by the single equation $\beta/\alpha = 4\lambda_2/|W''(c)|$, with $\lambda_2 = \lambda_2(G)$ fixed by graph).
+**Lemma L5.** $\Sigma_{T8} \subset \mathbb{R}^4_{>0} \times (0,1)$ is a smooth codim-1 hypersurface (parameterized by the single equation $\beta/\alpha = 4\lambda_2/\lvert W''(c) \rvert$, with $\lambda_2 = \lambda_2(G)$ fixed by graph).
 
 **Proof (CoT + CoC):**
 - CoT step 1: 본 equation 은 *smooth* function of $(\alpha, \beta, m)$ (since $c = m \in (0,1)$, $W''(c) = 6c - 6c^2 - 1$ smooth nonzero except at spinodal boundary $c = (3 \pm \sqrt{3})/6$).

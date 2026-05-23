@@ -87,7 +87,7 @@ All four production scripts (`nq242c`, `l1i`, `wq_lat1`, `l1g`) use $\epsilon = 
 `THEORY/working/MF/K_status_commitment.md` was the W5 Day 3 EOD OAT-1 working file from which Commitment 16 was promoted into canonical CV-1.5.1 (2026-04-29). It is the authoritative source for the original author's intent.
 
 Line 149-150:
-> $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \|u^{(j)}(t)\|_1 > \epsilon\}$
+> $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$
 > for some support-threshold $\epsilon$. K_act is dynamic: ...
 
 The original author **does not specify** the value of $\epsilon$ here. The canonical-bound text (line 810 of canonical.md) adds "$\epsilon = 0.01 \cdot \bar m$, $\bar m$ per-formation expected mass" — this default was added during canonical promotion.

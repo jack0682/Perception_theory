@@ -53,7 +53,7 @@ The two phenomena differ in **WHERE the formation is**:
 
 Let $\Gamma = (X, E)$ be a connected finite graph (any topology). Let $u^* : X \to [0, 1]$ be a $\mathcal{F}=1$ minimizer of $\mathcal{E}_{\mathrm{bd}}$ with center $\mathbf{x}_* \in \mathbb{R}^d$ (interpolated lattice coordinates). Let $\partial \Gamma \subset X$ denote the graph boundary set (for free BC: lattice corners/edges; for torus: empty).
 
-Define the **distance-to-boundary** $\delta(\mathbf{x}_*) := \min_{y \in \partial \Gamma} \|\mathbf{x}_* - y\|$.
+Define the **distance-to-boundary** $\delta(\mathbf{x}_*) := \min_{y \in \partial \Gamma} \lVert \mathbf{x}_* - y \rVert$.
 
 Define the **lattice-phase** $\phi(\mathbf{x}_*) := (\{x_*^{(1)}\}, \ldots, \{x_*^{(d)}\}) \in [0, 1)^d$ (fractional parts).
 
@@ -101,7 +101,7 @@ For $\delta \gg \xi_0$: $g_{\partial} \to 1$. For $\delta = 0$: $g_{\partial} = 
 ### 2.5 Functional form of $f_{\mathrm{comm}}$ (2D specific)
 
 For 2D square lattice with translation x and y:
-$$f_{\mathrm{comm}}(\phi^{(1)}, \phi^{(2)}) = \max(|\sin \pi \phi^{(1)}|, |\sin \pi \phi^{(2)}|). \tag{2.5}$$
+$$f_{\mathrm{comm}}(\phi^{(1)}, \phi^{(2)}) = \max(|\sin \pi \phi^{(1)}\lvert , \rvert\sin \pi \phi^{(2)}|). \tag{2.5}$$
 
 Peaks at $\phi^{(1)} = 0.5, \phi^{(2)} = 0$ (or vice versa) → x-translation easier than y. As phase shifts, peaks swap → direction-flipping.
 

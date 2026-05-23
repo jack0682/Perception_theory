@@ -25,7 +25,7 @@ $$\boxed{\mathbf{d}(u) \;=\; (\mathsf{Bind},\;\mathsf{Sep},\;\mathsf{Inside},\;\
 
 | Component | Meaning | Canonical formula | Ontological role |
 |---|---|---|---|
-| **$\mathsf{Bind}$** | self-support / closure fidelity | $\mathsf{Bind}(u) = 1 - \tfrac{\|u - \mathrm{Cl}(u)\|}{\sqrt{n}}$ | Does the formation support itself under closure? |
+| **$\mathsf{Bind}$** | self-support / closure fidelity | $\mathsf{Bind}(u) = 1 - \tfrac{\lVert u - \mathrm{Cl}(u) \rVert}{\sqrt{n}}$ | Does the formation support itself under closure? |
 | **$\mathsf{Sep}$** | exterior contrast | $\mathsf{Sep}(u) = 1 - \mathcal{E}_{\mathrm{sep}}(u) / m$ (exact $u$-weighted; CN5 bridge) | Is the formation distinguishable from its self-induced exterior? |
 | **$\mathsf{Inside}$** | morphological articulation | $\mathsf{Inside}(u) = \mathcal{Q}_{\mathrm{morph}}(u)$ normalized form | Does the formation have core-boundary-exterior morphology? |
 | **$\mathsf{Persist}$** | temporal inheritance | $\mathsf{Persist}(u_t, u_s) = $ core-overlap via $\mathbf{M}_{t \to s}$ | Does the formation's structure carry across time? |
@@ -113,7 +113,7 @@ defined on the volume-constrained simplex $\Sigma_m = \{u \in [0, 1]^n : \mathbf
 
 ### §9.1 Closure energy
 
-$$\mathcal{E}_{\mathrm{cl}}(u) \;=\; \|u - \mathrm{Cl}(u)\|^2 \;=\; \sum_x (u(x) - \mathrm{Cl}(u)(x))^2$$
+$$\mathcal{E}_{\mathrm{cl}}(u) \;=\; \lVert u - \mathrm{Cl}(u) \rVert^2 \;=\; \sum_x (u(x) - \mathrm{Cl}(u)(x))^2$$
 
 Measures deviation from closure fixed-point. Vanishes only at $u = \mathrm{Cl}(u)$ (fixed-point condition).
 
@@ -168,7 +168,7 @@ where $\sigma_i$ is the Hessian spectral norm at the uniform reference $u = c \m
 
 ### §12.1 T8-Core (phase transition; Cat A)
 
-$$\boxed{\frac{\beta}{\alpha} \;>\; \frac{4 \lambda_2(L)}{|W''(c)|}}$$
+$$\boxed{\frac{\beta}{\alpha} \;>\; \frac{4 \lambda_2(L)}{\lvert W''(c) \rvert}}$$
 
 is the necessary-and-sufficient condition for a non-uniform global minimizer of $\mathcal{E}_{\mathrm{bd}}$ to exist on $\Sigma_m$ with volume fraction $c = m/n$.
 
@@ -188,7 +188,7 @@ At non-idempotent fixed point, $H_{\mathrm{cl}} = 2(I - J_{\mathrm{Cl}})^\top (I
 
 ### §12.5 L-CLOSURE-LIFT (broadness; Cat A, CV-1.16)
 
-$$\|J_{\mathrm{Cl}}\|_{D \to D} \;\leq\; \frac{a_{\mathrm{cl}}}{4} \;<\; 1$$
+$$\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \;\leq\; \frac{a_{\mathrm{cl}}}{4} \;<\; 1$$
 
 in the degree-weighted inner product. Consequence:
 

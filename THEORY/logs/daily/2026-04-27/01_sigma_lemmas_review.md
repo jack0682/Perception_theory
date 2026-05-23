@@ -88,7 +88,7 @@ Three corrections to the statements as written in plan.md §10 templates were id
 
 **Plan template:** $G_u = \mathrm{Stab}_{\mathrm{Aut}(G)}(u^*)$ acts on $T_{u^*}\Sigma_m$.
 
-**Issue:** $\mathrm{Aut}(G)$ may be infinite for non-finite graphs (e.g., $\mathbb{Z}^d$ on infinite lattice). Maschke's theorem requires finite groups to provide isotypic projectors $P_{[\rho]} = (\dim\rho/|S|)\sum_\pi \overline{\chi_\rho(\pi)} \pi$.
+**Issue:** $\mathrm{Aut}(G)$ may be infinite for non-finite graphs (e.g., $\mathbb{Z}^d$ on infinite lattice). Maschke's theorem requires finite groups to provide isotypic projectors $P_{[\rho]} = (\dim\rho/\lvert S \rvert)\sum_\pi \overline{\chi_\rho(\pi)} \pi$.
 
 **Correction:** Statement assumes $G$ **finite** (so $\mathrm{Aut}(G)$ finite, hence $G_u$ finite). This matches the canonical scope (canonical §3.1: "X_t is a finite set"; 04-24/02_development.md §1.1 explicitly: "finite simple connected graph").
 

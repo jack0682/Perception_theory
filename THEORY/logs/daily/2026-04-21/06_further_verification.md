@@ -101,7 +101,7 @@ where `v_i = e_{v_b^i} - e_{v_d^i}` are ±1-support vectors with `‖v_i‖² = 
 
 **Consequence.** ∇²K_soft is a sum of rank-1 **negative semi-definite** matrices ⇒ `∇²K_soft ≼ 0`, with:
 $$
-\|\nabla^2 K_{\mathrm{soft}}(u)\|_{op} \;\leq\; \max_i |\varphi''(\ell_i)| \cdot 2 \cdot |B_+(u)| \;\leq\; 2 \cdot 2 \cdot n \;=\; 4n.
+\lVert \nabla^2 K_{\mathrm{soft}}(u) \rVert_{op} \;\leq\; \max_i |\varphi''(\ell_i)| \cdot 2 \cdot \lvert B_+(u) \rvert \;\leq\; 2 \cdot 2 \cdot n \;=\; 4n.
 $$
 (Using `|φ''| ≤ 2` at ℓ = 0 and `|B_+| ≤ n`.)
 
@@ -117,7 +117,7 @@ H_{C+E}(u^*) \;=\; H_\mathcal{E}(u^*) \;+\; T\cdot H_{-S}(u^*) \;+\; \lambda_K\c
 $$
 with constrained (tangent-space projected) min eigenvalue:
 $$
-\mu_K^{(C+E)} \;\geq\; \mu_K^{(\mathcal{E})} \;+\; T\cdot \mu_{-S}^{\min} \;-\; \lambda_K\cdot \|H_{K_{\mathrm{soft}}}\|_{op}.
+\mu_K^{(C+E)} \;\geq\; \mu_K^{(\mathcal{E})} \;+\; T\cdot \mu_{-S}^{\min} \;-\; \lambda_K\cdot \lVert H_{K_{\mathrm{soft}}} \rVert_{op}.
 $$
 
 Using the bounds:

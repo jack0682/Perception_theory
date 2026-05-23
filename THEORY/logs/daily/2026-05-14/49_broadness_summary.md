@@ -34,7 +34,7 @@ CV-1.15 canonical state (sealed in morning Track 1) is unchanged by this extensi
 
 ## Three-sentence summary
 
-1. The CONJECTURE-broadness from `02_development.md §4` is PROVED Cat A by Theorem B2: $\|J_{\mathrm{Cl}}\|_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ via degree-weighted self-adjointness of $P$, giving the uniform tangent-space lower bound on the closure-correction Gauss-Newton Hessian.
+1. The CONJECTURE-broadness from `02_development.md §4` is PROVED Cat A by Theorem B2: $\lVert J_{\mathrm{Cl}} \rVert_{D \to D} \leq a_{\mathrm{cl}}/4 < 1$ via degree-weighted self-adjointness of $P$, giving the uniform tangent-space lower bound on the closure-correction Gauss-Newton Hessian.
 2. Numerical verification (`exp_hmorse_broadness_full_spectrum.py`, 15 configs) confirms broadness PASS unanimously, even on canonical `find_formation` minimizers that *saturate at corners* (violating D-HMORSE-LOCAL (C2) interior) — motivating a revised (C2′) active-set formulation that better matches canonical behavior.
 3. Five new daily-log files (40–44) + one CV114 working file (`11_broadness_attack.md`) + one experiment script + JSON/MD results created; no canonical edits; canonical CV-1.15 state preserved.
 

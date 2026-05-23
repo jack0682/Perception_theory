@@ -27,7 +27,7 @@ The framing presupposes that **0.225 ≠ 0.01·m̄** under the canonical reading
 
 `canonical.md` line 810 (Commitment 16):
 
-> $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \|u^{(j)}(t)\|_1 > \epsilon\}$
+> $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$
 > for support threshold $\epsilon$ (default $\epsilon = 0.01 \cdot \bar{m}$, $\bar{m}$ per-formation expected mass).
 
 The canonical text says "per-formation expected mass" but does **not** uniquely fix what "per-formation expected mass" means. Three readings are syntactically possible:

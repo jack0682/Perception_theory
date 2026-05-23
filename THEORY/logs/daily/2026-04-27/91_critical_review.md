@@ -14,8 +14,8 @@
 | # | Severity | Where | Issue |
 |---|---------|-------|-------|
 | **A** | **CRITICAL math error** | T-σ-Lemma-3 (i), `01c` §3.1, canonical line 1217 | IBP identity gives $-\pi \int u^*(r) dr$ (1D radial integral), NOT $-m$ (2D mass). W4-04-24 source had an erroneous step ($\cos\theta \cdot r = x$ substitution missing a Jacobian factor). My re-derivation in `01c` §3.1 perpetuated the error. |
-| **B** | **CRITICAL math error** | T-σ-Theorem-4 (ii), `01e` §2/§3, canonical line 1267 | Stated "$0 < K_1 < K_0$" for the two Hessian eigenvalues at axis-aligned post-pitchfork minimizer. Correct: on $D_4$ free-BC with cubic ratio $A_2/A_1 = 4$, leading-order Hessian eigenvalues are $K_0 = 4\|W''(c)\|$ and $K_1 = (A_2/A_1)\|W''(c)\| = 4\|W''(c)\|$ — i.e., **equal**. The two modes are distinguished by irrep (+1 vs -1), not by eigenvalue magnitude. |
-| **C** | Substantive but recoverable | T-σ-Theorem-4 §3 derivation, `01e` §3 Step 5, canonical proof sketch | My second-order perturbation calculation gave $\mu_1 = -(1/2)\epsilon\|W''(c)\|$ — negative, contradicting Morse-0. The calculation was incomplete (missed off-diagonal couplings). Correct route: defer Morse-0 establishment to R22 normal-form analysis (which is the standard cubic-equivariant framework giving the eigenvalue formulas in (B)). |
+| **B** | **CRITICAL math error** | T-σ-Theorem-4 (ii), `01e` §2/§3, canonical line 1267 | Stated "$0 < K_1 < K_0$" for the two Hessian eigenvalues at axis-aligned post-pitchfork minimizer. Correct: on $D_4$ free-BC with cubic ratio $A_2/A_1 = 4$, leading-order Hessian eigenvalues are $K_0 = 4\lVert W''(c) \rVert$ and $K_1 = (A_2/A_1)\lVert W''(c) \rVert = 4\lVert W''(c) \rVert$ — i.e., **equal**. The two modes are distinguished by irrep (+1 vs -1), not by eigenvalue magnitude. |
+| **C** | Substantive but recoverable | T-σ-Theorem-4 §3 derivation, `01e` §3 Step 5, canonical proof sketch | My second-order perturbation calculation gave $\mu_1 = -(1/2)\epsilon\lVert W''(c) \rVert$ — negative, contradicting Morse-0. The calculation was incomplete (missed off-diagonal couplings). Correct route: defer Morse-0 establishment to R22 normal-form analysis (which is the standard cubic-equivariant framework giving the eigenvalue formulas in (B)). |
 | **D** | Loose proof, recoverable | T-σ-Theorem-3 (vi) irrep table, `01d` §2(vi)/§5 Step 6, canonical line 1248 | Mixed-parity $\{(p, q), (q, p)\}$ orbit decomposition was stated as "$E \oplus E$ or $A_1 \oplus B_1 \oplus E$" — actually mixed-parity gives **single $E$** (2-dim, character $(2, -2, 0, 0, 0)$). Both-odd off-diagonal gives $A_2 \oplus B_2$, not $E \oplus E$. |
 | **E** | Stylistic / clarification | T-σ-Lemma-1 §3 Step 2, `01a` §3, canonical proof sketch | Polarization step "$H = \pi^\top H \pi$, ie $\pi^{-1} = \pi^\top$ gives $H \pi = \pi H$" is correct but the logical chain is compressed. Clearer: from quadratic-form equality on $\mathbb{R}^X$, we get matrix equality $H = \pi^\top H \pi$; multiplying both sides by $\pi$ on right + using $\pi^\top \pi = I$: $H \pi = \pi^\top H \pi \cdot \pi = \pi^\top H = (H\pi)^\top$ wait this circles. Actually clean path: $\pi$ orthogonal $\Rightarrow \pi^\top = \pi^{-1}$, so $H = \pi^\top H \pi = \pi^{-1} H \pi$, multiply by $\pi$ on left: $\pi H = H \pi$. ✓ |
 | **F** | Loose proof | T-σ-Lemma-3 §3.4, `01c` §3.4, canonical (iii) | "Sign pattern of $\partial_x u^*$ for radial $u^*$: $\sgn(\partial_x u^*) = -\sgn(x)$ → two half-plane nodal domains." This needs slight care for the discrete graph: the half-plane partition $\{x > 0\}$ vs $\{x < 0\}$ on the integer grid is connected. Spelling out: $X^+ = \{i : i_x < 0\}$ is a $L \times L/2$ rectangle; $X^- = \{i : i_x > 0\}$ similarly. Both connected. ✓ Lower-bound $\geq 2$ from Lemma 2 (iii) automatic. So the count = 2 in continuum and discrete. |
@@ -70,11 +70,11 @@ For 32×32 R23 minimizer ($r_0 \approx 8$, $\xi_0 \approx 1$, $L = 32$):
 - Original (wrong) claim: $|\mathcal{P}_{\ell=1}[\delta u_x]| = m \approx 64\pi \approx 201$.
 
 For the angular ℓ=1 power fraction $\rho_{\ell=1}[\hat\phi]$ to be $\leq 1$ (Cauchy–Schwarz), the correct value is required:
-- $\|\delta u_x\|^2 \approx \pi r_0/(3\xi_0) \approx 8.4$.
-- $\|\psi^{(c)}\|^2 \approx L^2/2 \approx 512$.
-- $\rho_{\ell=1}[\hat\phi] = |\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 = (\pi r_0)^2 / (\|\delta u_x\|^2 \|\psi^{(c)}\|^2) = 8\pi^2 \cdot 64 / (8.4 \cdot 512) \approx 0.15$.
+- $\lVert \delta u_x \rVert^2 \approx \pi r_0/(3\xi_0) \approx 8.4$.
+- $\lVert \psi^{(c)} \rVert^2 \approx L^2/2 \approx 512$.
+- $\rho_{\ell=1}[\hat\phi] = |\langle\hat\phi, \hat\psi^{(c)}\rangle|^2 = (\pi r_0)^2 / (\lVert \delta u_x \rVert^2 \lVert \psi^{(c)} \rVert^2) = 8\pi^2 \cdot 64 / (8.4 \cdot 512) \approx 0.15$.
 
-This is plausible (R23 measured $\sim 0.4$-$0.5$ "p-dominant"; the $0.15$ vs $0.4$-$0.5$ gap may reflect that R23's metric was different from this normalized fraction, or that the tanh approximation underestimates $\|\delta u_x\|$ for non-tanh actual minimizer).
+This is plausible (R23 measured $\sim 0.4$-$0.5$ "p-dominant"; the $0.15$ vs $0.4$-$0.5$ gap may reflect that R23's metric was different from this normalized fraction, or that the tanh approximation underestimates $\lVert \delta u_x \rVert$ for non-tanh actual minimizer).
 
 With the wrong value $-m$: $\rho \approx 12$ — *impossible* (exceeds Cauchy–Schwarz bound 1). This would have been the immediate red flag if I had numerically substituted; instead the W4-04-24 source's bottom-line "Numeric ballpark for typical $u^*$ on 32×32: ... $\rho_{\ell=1} \sim 0.5$" smuggled in a re-normalization without showing it, masking the error.
 
@@ -109,9 +109,9 @@ Standard $D_4$-equivariant normal form: $F(x, y; \beta) = \beta(x^2 + y^2) + A_1
 - $\partial^2_{yy} F$ at minimum: $2\beta + (4 A_1 + 2 A_2) x^2 = 2\beta + (4 A_1 + 2 A_2)(-\beta/(2 A_1)) = -\beta A_2/A_1$.
 - $\partial^2_{xy} F$ at minimum: $4 A_2 x y = 0$ (since $y = 0$).
 
-Identifying $-\beta = \epsilon |W''(c)|$ (the "above critical" parameter):
-- $K_0 = 4 \cdot |W''(c)| / 1 = 4|W''(c)|$.
-- $K_1 = (A_2/A_1) \cdot |W''(c)|$.
+Identifying $-\beta = \epsilon \lvert W''(c) \rvert$ (the "above critical" parameter):
+- $K_0 = 4 \cdot \lvert W''(c) \rvert / 1 = 4|W''(c)|$.
+- $K_1 = (A_2/A_1) \cdot \lvert W''(c) \rvert$.
 
 For $A_2/A_1 = 4$ on $D_4$ (R22 §3.3): $K_1 = 4|W''(c)| = K_0$. **Equal**.
 
@@ -129,11 +129,11 @@ In `01e` §3 Step 5/5', I computed only the *direct* $W''''(c) \cdot \phi_{(1, 0
 
 The omission: *off-diagonal couplings* from $\delta H^{(1)} = \beta a_\epsilon W'''(c) \mathrm{diag}(\phi_{(1, 0)})$ to higher modes contribute additional second-order shift via $\sum_l |\langle \phi_l | \delta H^{(1)} | \phi_{(0, 1)}\rangle|^2 / (\mu_{(0, 1)}^{(0)} - \mu_l^{(0)})$. These contribute $O(\epsilon)$ corrections to $\mu_1$.
 
-R22 normal-form encapsulates the full calculation (all relevant cubic and quartic equivariants) and gives the clean result $K_1 = (A_2/A_1)|W''(c)|$. My ad-hoc partial calculation was incomplete.
+R22 normal-form encapsulates the full calculation (all relevant cubic and quartic equivariants) and gives the clean result $K_1 = (A_2/A_1)\lvert W''(c) \rvert$. My ad-hoc partial calculation was incomplete.
 
 ### 3.5 Net effect on Theorem 4 statement
 
-**Correction (ii):** "Mode 0 along $\phi_{(1, 0)}$: $\mu_0 = 4|W''(c)|\epsilon + O(\epsilon^{3/2})$. Mode 1 along $\phi_{(0, 1)}$: $\mu_1 = (A_2/A_1)|W''(c)|\epsilon + O(\epsilon^{3/2})$. On $D_4$ free-BC: $A_2/A_1 = 4$, so $\mu_1 = \mu_0$ at leading order — the two modes are degenerate but irrep-distinct (Mode 0 trivial $[+1]$, Mode 1 sign $[-1]$)."
+**Correction (ii):** "Mode 0 along $\phi_{(1, 0)}$: $\mu_0 = 4|W''(c)|\epsilon + O(\epsilon^{3/2})$. Mode 1 along $\phi_{(0, 1)}$: $\mu_1 = (A_2/A_1)\lvert W''(c) \rvert\epsilon + O(\epsilon^{3/2})$. On $D_4$ free-BC: $A_2/A_1 = 4$, so $\mu_1 = \mu_0$ at leading order — the two modes are degenerate but irrep-distinct (Mode 0 trivial $[+1]$, Mode 1 sign $[-1]$)."
 
 **Statement (v) σ-signature:** $\sigma(u^*_\epsilon)|_{D_4} = (\mathcal{F}; (2, [+1], 4|W''(c)|\epsilon), (2, [-1], 4|W''(c)|\epsilon), \ldots)$ — note both eigenvalues are now equal at leading order.
 
@@ -191,7 +191,7 @@ For $\{\phi_{(p, q)}, \phi_{(q, p)}\}$ basis under $D_4$:
 - $s_x$ ($x \to L-1-x$): $s_x \cdot \phi_{(p, q)} = (-1)^p \phi_{(p, q)}$ (depends on $x$-parity). Matrix $\mathrm{diag}((-1)^p, (-1)^q)$. $\chi(s_x) = (-1)^p + (-1)^q$.
 - $rs_x$ ($(x, y) \to (L-1-y, L-1-x)$, antidiagonal reflection): $rs_x \cdot \phi_{(p, q)} = (-1)^{p+q} \phi_{(q, p)}$. Off-diagonal. $\chi(rs_x) = 0$.
 
-Schur: $n_\rho = (1/|G|) \sum_g \chi_\rho(g) \chi(g)$ where $|G| = 8$ and class sizes $1, 1, 2, 2, 2$.
+Schur: $n_\rho = (1/\lvert G \rvert) \sum_g \chi_\rho(g) \chi(g)$ where $\lvert G \rvert = 8$ and class sizes $1, 1, 2, 2, 2$.
 
 For $n_E$ ($\chi_E = (2, -2, 0, 0, 0)$):
 $n_E = (1/8)[2 \cdot 2 + 1 \cdot 2(-1)^{p+q} \cdot (-2) + 0 + 0 + 0] = (1/8)[4 - 4(-1)^{p+q}] = (1/2)[1 - (-1)^{p+q}]$.
@@ -219,7 +219,7 @@ Total dimension check: $\sum n_\rho \dim\rho = 2$ for all rows. ✓
 
 ### 5.1 What `01e` §3 Step 5 actually said
 
-I worked through second-order direct corrections from $W''''(c) \cdot a_\epsilon^2 \cdot \mathrm{diag}(\phi_{(1, 0)}^2)$ and got numerical estimates $K_0 = K_0^{\mathrm{est}}, K_1 = K_1^{\mathrm{est}}$ with $K_1^{\mathrm{est}} = (1/2)|W''(c)|$ — half of the correct $K_1 = 4|W''(c)|$ value, and went into in-text "Wait — this gives Morse-1, not Morse-0" admission without resolving.
+I worked through second-order direct corrections from $W''''(c) \cdot a_\epsilon^2 \cdot \mathrm{diag}(\phi_{(1, 0)}^2)$ and got numerical estimates $K_0 = K_0^{\mathrm{est}}, K_1 = K_1^{\mathrm{est}}$ with $K_1^{\mathrm{est}} = (1/2)\lvert W''(c) \rvert$ — half of the correct $K_1 = 4|W''(c)|$ value, and went into in-text "Wait — this gives Morse-1, not Morse-0" admission without resolving.
 
 ### 5.2 Correct path
 
@@ -228,7 +228,7 @@ The complete leading-order Hessian eigenvalues at the post-pitchfork minimizer c
 1. Project full energy $\mathcal{E}(u^* + v)$ onto Fiedler doublet basis $V_2 = \mathrm{span}(\phi_{(1, 0)}, \phi_{(0, 1)})$, expanding to quartic in $v$. Result: 2D normal form $F(x, y; \beta) = \beta(x^2 + y^2) + A_1(x^2 + y^2)^2 + A_2 x^2 y^2$ with explicit $A_1, A_2$ from the integrals $\int \phi_{(1, 0)}^4, \int \phi_{(1, 0)}^2 \phi_{(0, 1)}^2$.
 2. Find post-bifurcation minima of $F$: axis-aligned $(\pm\sqrt{-\beta/(2A_1)}, 0)$ and $(0, \pm\sqrt{-\beta/(2A_1)})$.
 3. Compute Hessian of $F$ at axis-aligned minimum: $\partial_x^2 F = -4\beta$, $\partial_y^2 F = -\beta A_2/A_1$.
-4. Identify $-\beta = \epsilon |W''(c)|$: $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)|W''(c)|$.
+4. Identify $-\beta = \epsilon \lvert W''(c) \rvert$: $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)\lvert W''(c) \rvert$.
 
 The off-diagonal couplings to higher modes (which I missed in `01e` §3 Step 5) are *implicit* in the quartic-equivariant coefficient $A_2$ — they renormalize $A_2$ to its full value, which on $D_4$ free-BC equals $4 A_1$ (R22 Cat A).
 
@@ -307,7 +307,7 @@ No theorem becomes Cat B/C as a result of these corrections — all five remain 
 
 1. **canonical.md T-σ-Lemma-3**: replace (i) statement with corrected IBP identity; refine (ii) bound formula; refine proof sketch.
 2. **canonical.md T-σ-Theorem-3**: replace (vi) with rigorous irrep table; clean worked-example signature.
-3. **canonical.md T-σ-Theorem-4**: replace (ii) with $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)|W''(c)|$ giving $K_1 = K_0$ on $D_4$; refine (v) σ-signature; defer Morse-0 to R22; remove "would-be Goldstone" framing.
+3. **canonical.md T-σ-Theorem-4**: replace (ii) with $K_0 = 4|W''(c)|$, $K_1 = (A_2/A_1)\lvert W''(c) \rvert$ giving $K_1 = K_0$ on $D_4$; refine (v) σ-signature; defer Morse-0 to R22; remove "would-be Goldstone" framing.
 4. **01c**: refine §3.1 IBP derivation; refine §3.2 (norm calculation); fix §7 canonical wording.
 5. **01d**: refine §2(vi) irrep table + §5 Step 6 character calculation; fix §8 canonical wording.
 6. **01e**: refine §2 statement (ii)(v); §3 Step 5/5' replace with R22 reference; §6 canonical wording.

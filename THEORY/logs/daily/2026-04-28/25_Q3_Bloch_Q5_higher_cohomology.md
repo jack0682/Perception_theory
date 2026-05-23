@@ -16,7 +16,7 @@
 ### §1.1 The Goldstone overlap integral
 
 For tanh-disk $u^*$ on T²_L with center $\mathbf{c}_*$, translation Goldstone $\delta u_x = \partial u^*/\partial x$. The Hessian eigenvalue:
-$$\mu_{\mathrm{Gold}} = \frac{\langle \delta u_x | H | \delta u_x \rangle}{\langle \delta u_x | \delta u_x \rangle}, \quad H = 4\alpha L_{\mathrm{Lap}} + \beta D_{W''(u^*)}.$$
+$$\mu_{\mathrm{Gold}} = \frac{\langle \delta u_x \lvert H \rvert \delta u_x \rangle}{\langle \delta u_x | \delta u_x \rangle}, \quad H = 4\alpha L_{\mathrm{Lap}} + \beta D_{W''(u^*)}.$$
 
 In **continuum infinite-volume**: $\mu_{\mathrm{Gold}} = 0$ exactly (continuous translation symmetry).
 
@@ -46,21 +46,21 @@ For uniform $u^* \approx c$ background (treating disk as small perturbation): $D
 But for actual disk profile: $D_{W''}$ varies with site, weighted toward interface $u \in (c, 1-c)$ where $W''$ is most negative.
 
 Effective Hessian on $\delta u_x$:
-$\mu_{\mathrm{Gold}} \approx 4\alpha \langle \delta u_x | L_{\mathrm{Lap}} | \delta u_x \rangle / \|\delta u_x\|^2 - O(\beta)$ correction from W''.
+$\mu_{\mathrm{Gold}} \approx 4\alpha \langle \delta u_x | L_{\mathrm{Lap}} | \delta u_x \rangle / \lVert \delta u_x \rVert^2 - O(\beta)$ correction from W''.
 
 For 2D lattice Laplacian: $\langle \delta u_x | L_{\mathrm{Lap}} | \delta u_x \rangle = \sum_{\mathbf{k}} \lambda_{\mathbf{k}} |\widetilde{\delta u_x}(\mathbf{k})|^2$.
 
 Lattice Laplacian eigenvalues: $\lambda_{\mathbf{k}} = 4 - 2\cos(k_x a) - 2\cos(k_y a)$ for nearest-neighbor 2D.
 
-For small $|\mathbf{k}| a \ll 1$: $\lambda_{\mathbf{k}} \approx |\mathbf{k}|^2 a^2 + O((|\mathbf{k}| a)^4)$.
+For small $|\mathbf{k}| a \ll 1$: $\lambda_{\mathbf{k}} \approx |\mathbf{k}\lvert ^2 a^2 + O(( \rvert\mathbf{k}| a)^4)$.
 
 ### §1.4 The $L^{-2}$ result (continuum-Goldstone leading order)
 
 For continuum tanh-disk and continuous $\mathbf{k}$ integration:
-$\langle \delta u_x | (-\Delta) | \delta u_x \rangle / \|\delta u_x\|^2 = \int |\mathbf{k}|^2 |\widetilde{\delta u_x}|^2 d^2 \mathbf{k} / \int |\widetilde{\delta u_x}|^2 d^2 \mathbf{k}$.
+$\langle \delta u_x | (-\Delta) | \delta u_x \rangle / \lVert \delta u_x \rVert^2 = \int |\mathbf{k}\lvert ^2 \rvert\widetilde{\delta u_x}|^2 d^2 \mathbf{k} / \int |\widetilde{\delta u_x}|^2 d^2 \mathbf{k}$.
 
 Using $\widetilde{\delta u_x}(\mathbf{k}) = i k_x \widetilde{u^*}(|\mathbf{k}|)$ and isotropy:
-$\int |k_x|^2 \cdot |\mathbf{k}|^2 |\widetilde{u^*}|^2 d^2\mathbf{k} / \int |k_x|^2 |\widetilde{u^*}|^2 d^2\mathbf{k}$.
+$\int \lvert k_x \rvert^2 \cdot |\mathbf{k}\lvert ^2 \rvert\widetilde{u^*}|^2 d^2\mathbf{k} / \int \lvert k_x \rvert^2 |\widetilde{u^*}|^2 d^2\mathbf{k}$.
 
 For Gaussian-decaying $\widetilde{u^*} \sim e^{-\xi_0 |\mathbf{k}|}$: integrals are convergent.
 

@@ -103,7 +103,7 @@ print(f"Saved {len(results)} configs to {OUTPUT_PATH}")
 ## §3. `compute_ideal_gaussian` Helper
 
 The "ideal" Gaussian reference for slot $j$ is:
-$$u^{(j),\mathrm{ideal}}_i = \frac{m_j}{Z_j} \exp\!\left(-\frac{\|i - c_j\|^2}{2\sigma_j^2}\right)$$
+$$u^{(j),\mathrm{ideal}}_i = \frac{m_j}{Z_j} \exp\!\left(-\frac{\lVert i - c_j \rVert^2}{2\sigma_j^2}\right)$$
 where:
 - $c_j = \sum_i i \cdot u^{(j)}_i / m_j$ = centroid of slot $j$ at the **initial** state.
 - $\sigma_j$ = width parameter (set to match the "typical" Gaussian width for mass $m_j$ on $T^2_{20}$; default: $\sigma_j = \sqrt{m_j / (2\pi)}$ in continuous approximation).

@@ -75,7 +75,7 @@ $$\exists\, X,\ \mathcal{F},\ z : X \to \mathcal{F} \text{ 로서 } z \text{ 가
 
 **형식화**: 응집장 $u_t$ 의 closure operator $\mathrm{Cl}_t$ 가 자기-지지 contraction 성질 (A1'/A2/A3, $a_{\mathrm{cl}}<4$).
 
-$$\mathrm{Cl}_t : [0,1]^{X_t} \to [0,1]^{X_t},\ \|\mathrm{Cl}_t(u) - \mathrm{Cl}_t(v)\|_D \leq (a_{\mathrm{cl}}/4) \|u - v\|_D$$
+$$\mathrm{Cl}_t : [0,1]^{X_t} \to [0,1]^{X_t},\ \lVert \mathrm{Cl}_t(u) - \mathrm{Cl}_t(v) \rVert_D \leq (a_{\mathrm{cl}}/4) \lVert u - v \rVert_D$$
 
 **분류**: **수학명제** (이미 canonical, A3 = Cat A).
 
@@ -95,7 +95,7 @@ $$\mathrm{Cl}_t : [0,1]^{X_t} \to [0,1]^{X_t},\ \|\mathrm{Cl}_t(u) - \mathrm{Cl}
 
 **본문**: "두 사과가 멀리 있으면 *하나로* 보일 수 있다. 해상도가 낮으면 두 객체가 융합한다."
 
-**형식화**: T8 임계 *붕괴* 조건. $\beta/\alpha \leq 4\lambda_2/|W''(c)|$ — 또는 $\lambda_2 \to$ 작음 → 임계 붕괴 → uniform minimum.
+**형식화**: T8 임계 *붕괴* 조건. $\beta/\alpha \leq 4\lambda_2/\lvert W''(c) \rvert$ — 또는 $\lambda_2 \to$ 작음 → 임계 붕괴 → uniform minimum.
 
 **분류**: **수학명제** + **DECL-1.0 의 직접 인용 ("이것이 이 이론의 심장이다")**.
 

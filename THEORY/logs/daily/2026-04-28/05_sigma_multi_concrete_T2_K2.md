@@ -28,7 +28,7 @@ Two identical tanh-disk profiles, placed symmetrically along the x-axis:
 - **Disk 2**: $u^{(2)*}$ centered at $\mathbf{c}_2 = (8, 0)$, identical profile structure.
 - $r_0 = \sqrt{c L^2 / \pi}$ with $c = 0.10$, $L = 20$ → $r_0 \approx 3.57$ (each disk radius ≈ 3.57 lattice units).
 - $\beta_{\mathrm{bd}} = 4.0$ → $\xi_0 = 1/\sqrt{\beta} = 0.5$ → super-lattice regime $\zeta = 0.5$ ≥ $\zeta_*(2D) \approx 0.35$ (per `02_NQ174_zeta_star_results.md` §3 a priori).
-- Inter-disk distance $d_{\min} = 8$ (well-separated per CBL hypothesis (WI): $|O_{12}| / \min |\mathrm{Core}| \ll 0.2$ since disk supports of radius ~3.57 don't overlap at separation 8).
+- Inter-disk distance $d_{\min} = 8$ (well-separated per CBL hypothesis (WI): $\lvert O_{12} \rvert / \min |\mathrm{Core}| \ll 0.2$ since disk supports of radius ~3.57 don't overlap at separation 8).
 
 ### 1.3 K=2 Joint Field
 
@@ -304,7 +304,7 @@ This recovers and refines canonical T-Persist-K-Sep / T-Persist-K-Weak conclusio
 ### 6.4 Connection to V5b-F mechanism transfer (§5.5 of multi_formation_sigma.md)
 
 The §5.5 prediction was:
-> "per-formation Goldstones split into Goldstone-pair with magnitude $\sim \|H_{12}\|$".
+> "per-formation Goldstones split into Goldstone-pair with magnitude $\sim \lVert H_{12} \rVert$".
 
 Now made **quantitative**:
 - Goldstone-pair eigenvalue splitting = $2 \lambda_{\mathrm{rep}} + O(\exp(-c_0 d_{\min}))$.

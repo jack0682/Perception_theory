@@ -65,7 +65,7 @@ Between δ = 0 and δ = −0.05: `‖u^0 − u^{−0.05}‖_∞ = 0.05`. Differe
 For (φ-sat) `φ(ℓ) = ℓ/(1+ℓ)`: `φ(0.10) = 0.10/1.10 ≈ 0.091`. Lipschitz check:
 
 $$
-\frac{|K_{\mathrm{soft}}(u^{-0.05}) - K_{\mathrm{soft}}(u^0)|}{\|u^{-0.05} - u^0\|_\infty} = \frac{0.091}{0.05} = 1.82.
+\frac{|K_{\mathrm{soft}}(u^{-0.05}) - K_{\mathrm{soft}}(u^0)|}{\lVert u^{-0.05} - u^0 \rVert_\infty} = \frac{0.091}{0.05} = 1.82.
 $$
 
 Cor 4.1 bound: `L_K ≤ 2 L_φ n = 2 · 1 · 4 = 8`. Empirical 1.82 ≤ 8 ✓.
@@ -79,7 +79,7 @@ The bound is loose by ~4× here (n = 4 small graph). Tighter bound NQ-9 carry.
 **Proof.** By bottleneck stability (CSEH 2007 Theorem 4.2):
 
 $$
-W_\infty(D_u, D_v) \leq \|u - v\|_\infty.
+W_\infty(D_u, D_v) \leq \lVert u - v \rVert_\infty.
 $$
 
 Let γ be an optimal bottleneck matching realizing this distance. γ pairs each `(b_u, d_u) ∈ B_+(u)` with either:
@@ -88,7 +88,7 @@ Let γ be an optimal bottleneck matching realizing this distance. γ pairs each 
 
 For matched pairs (a):
 $$
-|\ell_u - \ell_v| = |(d_u - b_u) - (d_v - b_v)| \leq |d_u - d_v| + |b_u - b_v| \leq 2 W_\infty.
+|\ell_u - \ell_v| = \lvert (d_u - b_u) - (d_v - b_v) \rvert \leq \lvert d_u - d_v \rvert + \lvert b_u - b_v \rvert \leq 2 W_\infty.
 $$
 
 For diagonal-paired (b):
@@ -99,7 +99,7 @@ $$
 Hence:
 
 $$
-\big|\sum_{B_+(u)} \varphi(\ell_u) - \sum_{B_+(v)} \varphi(\ell_v)\big| \leq \sum_{\text{matched}} L_\varphi \cdot 2 W_\infty + \sum_{\text{diagonal-}u} L_\varphi \cdot 2 W_\infty + \sum_{\text{diagonal-}v} L_\varphi \cdot 2 W_\infty.
+\big\vert\sum_{B_+(u)} \varphi(\ell_u) - \sum_{B_+(v)} \varphi(\ell_v)\big\vert \leq \sum_{\text{matched}} L_\varphi \cdot 2 W_\infty + \sum_{\text{diagonal-}u} L_\varphi \cdot 2 W_\infty + \sum_{\text{diagonal-}v} L_\varphi \cdot 2 W_\infty.
 $$
 
 Total bars (matched + diagonal-u + diagonal-v) ≤ N(u) + N(v) ≤ 2 · max(N(u), N(v)) ≤ 2 · n (since `n = |X_t|` and each bar requires distinct vertex events).
@@ -107,7 +107,7 @@ Total bars (matched + diagonal-u + diagonal-v) ≤ N(u) + N(v) ≤ 2 · max(N(u)
 Therefore:
 
 $$
-|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq 2 L_\varphi \cdot 2n \cdot \|u - v\|_\infty = 4 L_\varphi n \cdot \|u - v\|_\infty.
+|K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)| \leq 2 L_\varphi \cdot 2n \cdot \lVert u - v \rVert_\infty = 4 L_\varphi n \cdot \lVert u - v \rVert_\infty.
 $$
 
 So `L_K ≤ 4 L_φ n` (slightly looser than the dev §4.1 claim of `2 L_φ n`; the factor of 2 difference comes from counting both matched and diagonal contributions separately).

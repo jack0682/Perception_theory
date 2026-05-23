@@ -55,8 +55,8 @@ Full-energy Hessian (Prop 1.3b): $H_{\mathrm{full}} = H_{\mathrm{bd}} + H_{\math
 
 $N_{\mathrm{unst}}^{\mathrm{bd}}(\beta) = \#\{k : \mu_k < 0\}$.
 
-For $\beta > \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2/|W''(c)|$: $\mu_2 < 0$ (at least one unstable).
-For $\beta > 4\alpha\lambda_3/|W''(c)|$: $\mu_3 < 0$ (two unstable).
+For $\beta > \beta_{\mathrm{crit}}^{(2)} = 4\alpha\lambda_2/\lvert W''(c) \rvert$: $\mu_2 < 0$ (at least one unstable).
+For $\beta > 4\alpha\lambda_3/\lvert W''(c) \rvert$: $\mu_3 < 0$ (two unstable).
 Etc.
 
 ### A.2.3 Near-critical regime ($\beta$ slightly above $\beta_{\mathrm{crit}}^{(2)}$)
@@ -75,7 +75,7 @@ Hence $u^*(x)$ exceeds $c$ on one part, falls below on another. **$\{u^* > \tau\
 
 ### A.2.4 Claim G-miss-4.1
 
-> **Claim A.2.1 (K=1 near bifurcation, Cat A structural)**: For $\beta \in (\beta_{\mathrm{crit}}^{(2)}, \beta_{\mathrm{crit}}^{(3)})$, where $\beta_{\mathrm{crit}}^{(3)} = 4\alpha\lambda_3/|W''(c)|$, gradient flow from generic small-$\sigma_0$ initial condition produces $u^*$ with $K_{\mathrm{step}}(u^*) = 1$ almost surely.
+> **Claim A.2.1 (K=1 near bifurcation, Cat A structural)**: For $\beta \in (\beta_{\mathrm{crit}}^{(2)}, \beta_{\mathrm{crit}}^{(3)})$, where $\beta_{\mathrm{crit}}^{(3)} = 4\alpha\lambda_3/\lvert W''(c) \rvert$, gradient flow from generic small-$\sigma_0$ initial condition produces $u^*$ with $K_{\mathrm{step}}(u^*) = 1$ almost surely.
 
 **Proof sketch**:
 1. Only Fiedler mode $\phi_2$ is unstable.
@@ -116,7 +116,7 @@ For $\beta > \beta_{\mathrm{crit}}^{(3)}$ with multiple unstable modes: dynamics
 ### A.3.1 Setup
 
 For each K-formation minimizer $u^*_K$ with constrained Hessian $H_K > 0$ on tangent $T_{u^*_K}\Sigma_m$, the basin $\mathcal{B}_K$ admits local Gaussian approximation:
-$$\mathcal{E}(u) \approx \mathcal{E}(u^*_K) + \tfrac{1}{2} (u - u^*_K)^T H_K (u - u^*_K) + O(\|u - u^*_K\|^3)$$
+$$\mathcal{E}(u) \approx \mathcal{E}(u^*_K) + \tfrac{1}{2} (u - u^*_K)^T H_K (u - u^*_K) + O(\lVert u - u^*_K \rVert^3)$$
 
 ### A.3.2 Basin volume estimate
 
@@ -231,7 +231,7 @@ Outside these: $\widehat K \geq 1$ is possible, $\widehat K = 1$ generic is cond
 
 The involution argument used "complement of K disks on connected 2D = 1 connected region". Generalize:
 
-**Definition (topological simplicity for K=1 preference)**: $X$ is **K1-preserving** iff for every set $S \subset X$ with $|S| = n/2$ consisting of disjoint "disks," $X \setminus S$ is connected.
+**Definition (topological simplicity for K=1 preference)**: $X$ is **K1-preserving** iff for every set $S \subset X$ with $\lvert S \rvert = n/2$ consisting of disjoint "disks," $X \setminus S$ is connected.
 
 - 2D grid (free BC, torus): K1-preserving ✓.
 - 1D cycle: **NOT** K1-preserving — removing K disjoint "intervals" leaves K complementary intervals. Removing 2 intervals leaves 2 intervals. $K_{\mathrm{step}}(1-u) = K_{\mathrm{step}}(u)$, not 1.

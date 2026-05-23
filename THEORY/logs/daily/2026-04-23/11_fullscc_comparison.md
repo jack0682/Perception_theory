@@ -85,7 +85,7 @@ Stable minimizer의 F 분포 (stable만):
 
 ### 3.3 Finding FSC3 — Closure가 **multi-peak을 선호**
 
-$\mathcal{E}_{\mathrm{cl}} = \|u - \mathrm{Cl}(u)\|^2$ 는 closure fixed point 근처에서 minimized. Sigmoid closure는 local reinforcement → **큰 disk의 boundary**에서 불만족 (interior는 sigmoid 고정점 근처이지만 boundary는 불안정).
+$\mathcal{E}_{\mathrm{cl}} = \lVert u - \mathrm{Cl}(u) \rVert^2$ 는 closure fixed point 근처에서 minimized. Sigmoid closure는 local reinforcement → **큰 disk의 boundary**에서 불만족 (interior는 sigmoid 고정점 근처이지만 boundary는 불안정).
 
 대신 **작은 peak들이 흩어진 구조**는:
 - 각 peak가 독자적으로 closure FP에 근접.

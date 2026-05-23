@@ -176,7 +176,7 @@ Per `op_resolution.md` §10.4 (deferred numerical experiment with execution plan
 
 - **R0 = R1 = R3 = 439:** H6' is **non-binding** in the L1-I FEASIBLE_WITH_BUDGET set. Binding constraints are LG-1 (904 failures) / LG-2 (243) / LG-4 (402) / ledger.
 - **R0 ⊆ R1 with |R1 \ R0| = 0:** adopting (P9-tight) does NOT shrink the empirical regime. Factor-1 sharpening for Lemma L-M-2 §5.4 R-1's perturbation argument is empirically supportable on the existing 439-config FEASIBLE set **without empirical penalty**.
-- **(P9-tight) verdict:** CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening. Final canonical adoption deferred to NQ-G1-2-ext (W7+) requiring direct $\|R_j\|_\infty$ measurement under shared-pool gradient-flow dynamics (initial-state H6' non-binding ≠ post-flow $R_j$ satisfying (P9-tight)).
+- **(P9-tight) verdict:** CANDIDATE for L1-J' regime promotion enabling factor-1 sharpening. Final canonical adoption deferred to NQ-G1-2-ext (W7+) requiring direct $\lVert R_j \rVert_\infty$ measurement under shared-pool gradient-flow dynamics (initial-state H6' non-binding ≠ post-flow $R_j$ satisfying (P9-tight)).
 - **T-L1-M Cat A conditional status: unchanged.** Factor-1 sharpening is an empirical regime extension, not a theorem-level claim modification.
 
 ### §7.4 Hard-constraint sweep (this session)

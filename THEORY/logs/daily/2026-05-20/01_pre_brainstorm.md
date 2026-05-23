@@ -59,7 +59,7 @@ $$\lambda_2 \approx 4 \cdot 0.03806 \approx 0.1522$$
 2. Double-well 2nd derivative at $c = 1/2$:
 $$W(u) = u^2(1-u)^2, \quad W''(u) = 2(1 - 6u + 6u^2)$$
 $$W''(1/2) = 2(1 - 3 + 1.5) = 2 \cdot (-0.5) = -1$$
-$$|W''(1/2)| = 1$$
+$$\lvert W''(1/2) \rvert = 1$$
 
 3. Double-well 3rd derivative at $c = 1/2$:
 $$W'''(u) = 12(2u - 1)$$
@@ -185,7 +185,7 @@ Where:
 **Continuum Cahn-Hilliard**:
 $$\partial_t \phi = -\nabla^2(\varepsilon^2 \nabla^2 \phi - W'(\phi))$$
 - Outer $-\nabla^2$ ensures *local mass conservation*
-- Dispersion $\omega(q) = q^2 (\varepsilon^2 q^2 - |W''(c)|)$
+- Dispersion $\omega(q) = q^2 (\varepsilon^2 q^2 - \lvert W''(c) \rvert)$
 - Coarsening $L(t) \sim t^{1/3}$
 
 **SCC on graph**:

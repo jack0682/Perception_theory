@@ -84,7 +84,7 @@ grep -r "MF_atlas\|multi-formation atlas" THEORY/canonical/ THEORY/working/
 **산출 파일:** `THEORY/working/MF/broad_survey_B2.md` (가장 두꺼움, ~150-250줄 목표)
 
 **내용:**
-- Approach (a) **Perturbation theory**: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\|V_{\mathrm{coup}}\|_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5) 의 SCC adaptation 가능성.
+- Approach (a) **Perturbation theory**: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\lVert V_{\mathrm{coup}} \rVert_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5) 의 SCC adaptation 가능성.
 - Approach (b) **RMT level repulsion**: GOE projection, $P(s) \sim s$ as $s \to 0$, Aut(G) character data 결여 bypass 가능성.
 - **두 route 의 *동일 σ_standard map* 산출 수렴 분석 framework** — Day 2 (perturbation thrust) / Day 3 (RMT + audit) 의 *직접 입력*.
 - 8×8, 12×12 toy 의 numerical cross-check 계획 (Day 3 exp92).

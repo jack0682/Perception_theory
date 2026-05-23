@@ -239,17 +239,40 @@ def transform_math_content(s):
 
 # ---- File processing -------------------------------------------------------
 
-def is_excluded(rel_path_str, include_logs=False):
+CANONICAL_PATTERNS = [
+    re.compile(r"(?:^|/)THEORY/canonical/canonical\.md$"),
+    re.compile(r"(?:^|/)THEORY/canonical/theorem_status\.md$"),
+    re.compile(r"(?:^|/)THEORY/canonical/DECLARATION\.md$"),
+    re.compile(r"(?:^|/)THEORY/canonical/hypothesis_tree\.md$"),
+    re.compile(r"(?:^|/)THEORY/canonical/CV-.*_SEAL\.md$"),
+    re.compile(r"(?:^|/)SCC_CANONICAL/"),
+]
+
+
+def is_excluded(rel_path_str, include_logs=False, include_canonical=False):
     s = rel_path_str.replace("\\", "/")
+    # Always-excluded patterns (audit report itself)
+    if re.search(r"(?:^|/)markdown_latex_audit_report\.md$", s):
+        return True
+    # Canonical patterns - excluded unless --include-canonical
+    if not include_canonical:
+        for pat in CANONICAL_PATTERNS:
+            if pat.search(s):
+                return True
+    # Other excluded patterns
     for pat in EXCLUDED_FILE_PATTERNS:
         if pat.search(s):
+            # Skip if it's a canonical pattern and we're including canonical
+            is_canonical = any(cp.search(s) for cp in CANONICAL_PATTERNS)
+            if is_canonical and include_canonical:
+                continue
             return True
     if not include_logs and LOGS_PATTERN.search(s):
         return True
     return False
 
 
-def find_markdown_files(root, include_logs=False):
+def find_markdown_files(root, include_logs=False, include_canonical=False):
     root = Path(root)
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in EXCLUDED_DIRS]
@@ -260,7 +283,7 @@ def find_markdown_files(root, include_logs=False):
                     rel = fp.relative_to(root)
                 except ValueError:
                     continue
-                if not is_excluded(str(rel), include_logs):
+                if not is_excluded(str(rel), include_logs, include_canonical):
                     yield fp, rel
 
 
@@ -499,6 +522,9 @@ def main():
                     help='Report output path (default: <root>/markdown_latex_audit_report.md)')
     ap.add_argument('--include-logs', action='store_true',
                     help='Include THEORY/logs/ in scan')
+    ap.add_argument('--include-canonical', action='store_true',
+                    help='Include THEORY/canonical/canonical.md, theorem_status.md, '
+                         'DECLARATION.md, hypothesis_tree.md, CV-*_SEAL.md, SCC_CANONICAL/')
     args = ap.parse_args()
 
     root = Path(args.root).resolve()
@@ -506,7 +532,10 @@ def main():
     print(f"Mode: {'APPLY' if args.apply else 'SCAN-ONLY'}", file=sys.stderr)
 
     results = []
-    for path, rel in find_markdown_files(root, include_logs=args.include_logs):
+    for path, rel in find_markdown_files(
+            root,
+            include_logs=args.include_logs,
+            include_canonical=args.include_canonical):
         r = audit_file(path, apply=args.apply)
         results.append(r)
 

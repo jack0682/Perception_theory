@@ -47,7 +47,7 @@ The plan (`00_plan.md` lines 161–163) flags four vocabularies that must remain
 | "action cost" | "*Definition D-LOCAL-ACTION ... Path action $\mathcal{A}_{i:k}$ ... Hard-min cost $c^{\mathrm{act}}_{i\to k}$*" | D-LOCAL-ACTION § | **Defined cleanly.** First introduction is via path integral of local action $a_i$, then `min over paths`. |
 | "Gibbs kernel" | "*Definition D-GIBBS-KERNEL ... $\mathbf{K}_{\ell,\ell+1}(x,y)=\exp(-a_\ell(x,y)/\varepsilon)$*" | D-GIBBS-KERNEL § | **Defined cleanly with bold $\mathbf{K}$.** First introduction via softmax-of-action. |
 | "Sinkhorn plan" | "*Sinkhorn-scaled plan $M^{\mathrm{sink}}(K)=\mathrm{diag}(a)K\mathrm{diag}(b)$*" | T-SINKHORN-PLAN-... § | **Defined cleanly.** Explicit factorization with row/col scaling vectors. |
-| "endpoint cost" | "*Squared endpoint cost $c^{\mathrm{end}}(x,z)=\|z-x\|^2$*" | L-ENDPOINT-NONSEMI § | **Defined cleanly.** |
+| "endpoint cost" | "*Squared endpoint cost $c^{\mathrm{end}}(x,z)=\lVert z-x \rVert^2$*" | L-ENDPOINT-NONSEMI § | **Defined cleanly.** |
 
 Two adjacent terms also occur but are **not flagged in the plan**:
 
@@ -108,7 +108,7 @@ Issue: T-Temporal-Identity lives in `canonical §13`, not §8.5. The §8.5 cited
 
 The L-ACTION-DELTA-EFF-ZERO statement (10_patch_plan §1):
 
-> *$c^{\mathrm{direct}}_{i\to k} := c^{\mathrm{act}}_{i\to k}$로 재정의하면 $\delta_{\mathrm{eff}} = \|c^{\mathrm{act}} - c^{\mathrm{eff}}\|_\infty = 0$.*
+> *$c^{\mathrm{direct}}_{i\to k} := c^{\mathrm{act}}_{i\to k}$로 재정의하면 $\delta_{\mathrm{eff}} = \lVert c^{\mathrm{act}} - c^{\mathrm{eff}} \rVert_\infty = 0$.*
 > *주의: endpoint cost, fingerprint similarity cost, Sinkhorn plan에는 적용 불가.*
 
 The conditional ("재정의하면") is essential — without redefinition, δ_eff is exactly what OP-0012-SINK is asking about and is unresolved. The 주의-line correctly delimits the scope.
@@ -366,7 +366,7 @@ After patch application, the following *must* hold. We record them here as the *
 
 | Case | Residual | Value | Theoretical expectation | Verdict |
 |---|---|---|---|---|
-| A | `endpoint_residual` | 2.0 | = 2.0 exactly (L-ENDPOINT-NONSEMI counterexample: $|2-0|^2 - 2 \cdot |1-0|^2 = 4 - 2 = 2$) | **PASS — exact** |
+| A | `endpoint_residual` | 2.0 | = 2.0 exactly (L-ENDPOINT-NONSEMI counterexample: $\lvert 2-0 \rvert^2 - 2 \cdot \lvert 1-0 \rvert^2 = 4 - 2 = 2$) | **PASS — exact** |
 | A | `time_normalized_residual` | 0.0 | = 0.0 exactly (L-ACTION-NORMALIZATION at midpoint) | **PASS — exact** |
 | B | `endpoint_residual` | 80.0 | > 0 (endpoint cost generically nonzero) | **PASS** |
 | B | `action_residual_2hop` | 0.0 | ≈ 0 (T-ACT-DP) | **PASS — machine zero** |

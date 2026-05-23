@@ -18,7 +18,7 @@ $$u^*_\text{disk}(r) = \tfrac{1}{2}\big(1 - \tanh((r - r_0)/\xi_0)\big), \quad r
 Interior $u^* \to 1$, exterior $u^* \to 0$, interface $r \approx r_0$ width $\xi_0$.
 
 Closure operator $\text{Cl} : [0,1]^X \to [0,1]^X$ with FP $c^* \in (0, 1)$, contraction regime $a_\text{cl} \in (0, 4)$. Linearization $J_\text{Cl} = \partial \text{Cl}/\partial u$ around $u = c^* \mathbf{1}$. From canonical convention (`working/SF/mode_count.md` §2.1):
-$$J_\text{Cl}\big|_{c^*\mathbf{1}} = \mu_c \cdot P, \quad P = D^{-1}A,\quad \mu_c \in (0, 1).$$
+$$J_\text{Cl}\big\vert_{c^*\mathbf{1}} = \mu_c \cdot P, \quad P = D^{-1}A,\quad \mu_c \in (0, 1).$$
 
 Distinction operator $D(u)_i = \sigma(\kappa_D (Pu)_i - \delta_D)$, separation energy $\mathcal{E}_\text{sep}[u] = \sum_i u_i (1 - D(u)_i)$.
 
@@ -28,7 +28,7 @@ Distinction operator $D(u)_i = \sigma(\kappa_D (Pu)_i - \delta_D)$, separation e
 
 ### 2.1 Gradient form
 
-$\mathcal{E}_\text{cl}[u] = \tfrac{a_\text{cl}}{2} \|u - \text{Cl}(u)\|_2^2$. By chain rule:
+$\mathcal{E}_\text{cl}[u] = \tfrac{a_\text{cl}}{2} \lVert u - \text{Cl}(u) \rVert_2^2$. By chain rule:
 $$\nabla \mathcal{E}_\text{cl}(u) = a_\text{cl} (I - J_\text{Cl}(u)^\top)(u - \text{Cl}(u)).$$
 
 Constrained gradient on $\mathbf{1}^\perp$:
@@ -45,23 +45,23 @@ Thus interior residual: $\rho_\text{int} = 1 - [\mu_c + (1-\mu_c)c^*] = (1 - \mu
 **Exterior** ($r \gg r_0 + 2\xi_0$): $u^* \approx 0$. Symmetric:
 $\rho_\text{ext} = 0 - [\mu_c \cdot 0 + (1 - \mu_c)c^*] = -(1 - \mu_c) c^*$.
 
-**Interface** ($|r - r_0| \lesssim 2\xi_0$): transitional. Profile $\rho(r) \approx (1 - \mu_c) \cdot [u^*(r) - c^*]$ (linear interpolation hypothesis, valid when $\xi_0 \gg$ lattice spacing).
+**Interface** ($\lvert r - r_0 \rvert \lesssim 2\xi_0$): transitional. Profile $\rho(r) \approx (1 - \mu_c) \cdot [u^*(r) - c^*]$ (linear interpolation hypothesis, valid when $\xi_0 \gg$ lattice spacing).
 
 **Composite**: 
 $$\rho(r) \approx (1 - \mu_c) \cdot [u^*(r) - c^*] = (1 - \mu_c) \cdot \big[\tfrac{1}{2}(1 - \tanh((r-r_0)/\xi_0)) - c^*\big].$$
 
 ### 2.3 Norm of residual
 
-$\|\rho\|_2^2 = (1 - \mu_c)^2 \int (u^* - c^*)^2 \, dV$. Evaluate using disk geometry:
+$\lVert \rho \rVert_2^2 = (1 - \mu_c)^2 \int (u^* - c^*)^2 \, dV$. Evaluate using disk geometry:
 - Interior contribution: $(1 - c^*)^2 \cdot \pi r_0^2$
 - Exterior: $(c^*)^2 \cdot (\text{area outside disk})$ (proportional to $L^2 - \pi r_0^2$ for free-BC)
 - Interface: $O(\xi_0 \cdot 2\pi r_0)$ correction
 
-For $r_0 \ll L/2$ (small disk): exterior dominates → $\|\rho\|_2^2 \approx (1 - \mu_c)^2 \cdot (c^*)^2 \cdot L^2$.
+For $r_0 \ll L/2$ (small disk): exterior dominates → $\lVert \rho \rVert_2^2 \approx (1 - \mu_c)^2 \cdot (c^*)^2 \cdot L^2$.
 For $r_0 \approx L/2$ (large disk): both contribute.
 
 **Scaling estimate**:
-$$\|\rho\|_2^2 = (1-\mu_c)^2 \cdot \big[(1-c^*)^2 \pi r_0^2 + (c^*)^2 (L^2 - \pi r_0^2)\big] + O(r_0 \xi_0).$$
+$$\lVert \rho \rVert_2^2 = (1-\mu_c)^2 \cdot \big[(1-c^*)^2 \pi r_0^2 + (c^*)^2 (L^2 - \pi r_0^2)\big] + O(r_0 \xi_0).$$
 
 ### 2.4 g_cl norm (after $(I - J_\text{Cl}^\top)$)
 
@@ -72,11 +72,11 @@ $$g_\text{cl} = a_\text{cl} \sum_{k \geq 2} (1 - \mu_c \lambda_k(P^\top)) \hat\r
 
 For the disk shape: $\hat\rho_k$ is concentrated in low-$k$ modes (rotationally symmetric ~ radial $\phi_{(0,0)}$ + small angular). $\hat\rho_2$ (Fiedler) is small unless $L$ is small or disk is asymmetric.
 
-Dominant contribution to $\|g_\text{cl}\|^2$:
-$$\|g_\text{cl}\|^2 \approx a_\text{cl}^2 \sum_{k \geq 2} (1 - \mu_c \lambda_k)^2 |\hat\rho_k|^2.$$
+Dominant contribution to $\lVert g_\text{cl} \rVert^2$:
+$$\lVert g_\text{cl} \rVert^2 \approx a_\text{cl}^2 \sum_{k \geq 2} (1 - \mu_c \lambda_k)^2 |\hat\rho_k|^2.$$
 
 For low-$k$ ($\lambda_k$ small): $(1 - \mu_c \lambda_k)^2 \approx 1$. Approximation:
-$$\boxed{\;\|g_\text{cl}\|^2 \approx a_\text{cl}^2 (1-\mu_c)^2 \cdot \big[(1-c^*)^2 \pi r_0^2 + (c^*)^2 (L^2 - \pi r_0^2)\big] - a_\text{cl}^2 \cdot (\text{mean removed})\;}$$
+$$\boxed{\;\lVert g_\text{cl} \rVert^2 \approx a_\text{cl}^2 (1-\mu_c)^2 \cdot \big[(1-c^*)^2 \pi r_0^2 + (c^*)^2 (L^2 - \pi r_0^2)\big] - a_\text{cl}^2 \cdot (\text{mean removed})\;}$$
 The "mean removed" is $\pi_{\mathbf{1}^\perp}$'s effect.
 
 ### 2.5 Self-classification of (1.1)
@@ -117,11 +117,11 @@ After projection:
 - Interface: peaked correction
 
 **Scaling**:
-$$\|g_\text{sep}\|^2 \sim |\text{Int}| \cdot \bar^2 + |\text{Ext}|(1-\bar)^2 + (\text{interface peak})^2.$$
+$$\lVert g_\text{sep} \rVert^2 \sim |\text{Int}| \cdot \bar^2 + |\text{Ext}|(1-\bar)^2 + (\text{interface peak})^2.$$
 With $\bar = |\text{Ext}|/L^2$ and $|\text{Int}| = \pi r_0^2$:
-$$\boxed{\;\|g_\text{sep}\|^2 \approx \pi r_0^2 \cdot (1 - \pi r_0^2/L^2)^2 + (L^2 - \pi r_0^2) \cdot (\pi r_0^2/L^2)^2 + O(\kappa_D \xi_0)\;}$$
+$$\boxed{\;\lVert g_\text{sep} \rVert^2 \approx \pi r_0^2 \cdot (1 - \pi r_0^2/L^2)^2 + (L^2 - \pi r_0^2) \cdot (\pi r_0^2/L^2)^2 + O(\kappa_D \xi_0)\;}$$
 $$= \pi r_0^2 (L^2 - \pi r_0^2)/L^2 + O(...).$$
-For $r_0 \ll L$: $\|g_\text{sep}\|^2 \approx \pi r_0^2$.
+For $r_0 \ll L$: $\lVert g_\text{sep} \rVert^2 \approx \pi r_0^2$.
 
 ### 3.3 Self-classification of (1.2)
 
@@ -138,11 +138,11 @@ $$\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} = 0$$
 on $\mathbf{1}^\perp$.
 
 Take inner product with itself:
-$$\lambda_\text{cl}^2 \|g_\text{cl}\|^2 + 2 \lambda_\text{cl} \lambda_\text{sep} \langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \|g_\text{sep}\|^2 = 0.$$
+$$\lambda_\text{cl}^2 \lVert g_\text{cl} \rVert^2 + 2 \lambda_\text{cl} \lambda_\text{sep} \langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \lVert g_\text{sep} \rVert^2 = 0.$$
 This is a quadratic in $\lambda_\text{cl}/\lambda_\text{sep}$:
-$$\frac{\lambda_\text{cl}}{\lambda_\text{sep}} = \frac{-\langle g_\text{cl}, g_\text{sep}\rangle \pm \sqrt{\langle g_\text{cl}, g_\text{sep}\rangle^2 - \|g_\text{cl}\|^2 \|g_\text{sep}\|^2}}{\|g_\text{cl}\|^2}.$$
+$$\frac{\lambda_\text{cl}}{\lambda_\text{sep}} = \frac{-\langle g_\text{cl}, g_\text{sep}\rangle \pm \sqrt{\langle g_\text{cl}, g_\text{sep}\rangle^2 - \lVert g_\text{cl} \rVert^2 \lVert g_\text{sep} \rVert^2}}{\lVert g_\text{cl} \rVert^2}.$$
 
-By Cauchy-Schwarz: $\langle g_\text{cl}, g_\text{sep}\rangle^2 \leq \|g_\text{cl}\|^2 \|g_\text{sep}\|^2$. Discriminant ≤ 0, real solution exists iff equality (= cancellation curve).
+By Cauchy-Schwarz: $\langle g_\text{cl}, g_\text{sep}\rangle^2 \leq \lVert g_\text{cl} \rVert^2 \lVert g_\text{sep} \rVert^2$. Discriminant ≤ 0, real solution exists iff equality (= cancellation curve).
 
 **Conclusion**: cancellation $\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} = 0$ holds **only** when $g_\text{cl}$ and $g_\text{sep}$ are anti-parallel ($\cos\theta = -1$). For generic $u^*_\text{disk}$, $g_\text{cl}$ and $g_\text{sep}$ are **not** anti-parallel (independent terms with different spatial profiles).
 
@@ -156,7 +156,7 @@ So (C5) reduces to "anti-parallel locus is codim-$\geq 1$" (which is true unless
 ### 4.3 Sharper version — quantitative non-criticality
 
 The "amount" by which disk fails criticality:
-$$\|\pi_{\mathbf{1}^\perp} \nabla \mathcal{E}(u^*_\text{disk})\|^2 = \|\lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep}\|^2 = \lambda_\text{cl}^2 \|g_\text{cl}\|^2 + 2 \lambda_\text{cl} \lambda_\text{sep} \langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \|g_\text{sep}\|^2.$$
+$$\lVert \pi_{\mathbf{1}^\perp} \nabla \mathcal{E}(u^*_\text{disk}) \rVert^2 = \lVert \lambda_\text{cl} g_\text{cl} + \lambda_\text{sep} g_\text{sep} \rVert^2 = \lambda_\text{cl}^2 \lVert g_\text{cl} \rVert^2 + 2 \lambda_\text{cl} \lambda_\text{sep} \langle g_\text{cl}, g_\text{sep}\rangle + \lambda_\text{sep}^2 \lVert g_\text{sep} \rVert^2.$$
 
 For "disk is far from critical" (large displacement from any nearby critical point), need this norm to be substantial. The quantitative threshold:
 $$\boxed{\;\lambda_\text{cl} \cdot \lambda_\text{sep}\text{-quadratic form} \geq \epsilon_\text{crit}^2(L, \beta, \alpha, c, c^*, \mu_c, \kappa_D, \delta_D)\;}$$

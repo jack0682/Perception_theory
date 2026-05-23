@@ -43,7 +43,7 @@ and σ(-s ℓ_min) ≥ 0, we have φ(ℓ) ≤ 1. Hence F1 is satisfied: φ(ℓ) 
 
 ### §2.1 Setup (recap from L-M draft §5.4)
 
-Type-N bar $i$ of $\mathrm{Dgm}_0^{\sup}(U;G_j^r)$ (subdominant local maximum within active neighborhood $N_j^r$) is matched via CSEH bottleneck stability to a bar of $\mathrm{Dgm}_0^{\sup}(u^{(j)};G_j^r)$ under perturbation $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ (P9). The L-M draft uses:
+Type-N bar $i$ of $\mathrm{Dgm}_0^{\sup}(U;G_j^r)$ (subdominant local maximum within active neighborhood $N_j^r$) is matched via CSEH bottleneck stability to a bar of $\mathrm{Dgm}_0^{\sup}(u^{(j)};G_j^r)$ under perturbation $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ (P9). The L-M draft uses:
 
 $$
 \bigl|\ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)\bigr| \le 2 \cdot \rho_{\mathrm{pert}}/2 = \rho_{\mathrm{pert}}, \tag{F2}
@@ -67,14 +67,14 @@ So the matched bars in CSEH applied to $(U|_{G_j^r}, u^{(j)}|_{G_j^r})$ for the 
 
 ### §2.3 Explicit perturbation realizing the factor-2 bound (sharpness verification)
 
-To show that (F2) is sharp under L1-J, construct an admissible perturbation $R_j$ (satisfying $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ per P9) such that $|\ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)| = \rho_{\mathrm{pert}}$ exactly.
+To show that (F2) is sharp under L1-J, construct an admissible perturbation $R_j$ (satisfying $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/2$ per P9) such that $|\ell_i(U;G_j^r) - \ell_i(u^{(j)};G_j^r)| = \rho_{\mathrm{pert}}$ exactly.
 
 **Construction.** Let $i$ be a Type-N bar of $\mathrm{Dgm}_0^{\sup}(u^{(j)};G_j^r)$ with birth at vertex $v$ and death at saddle vertex $w$ (both in $N_j^r$). Define $R_j$ by:
 - $R_j(v) = +\rho_{\mathrm{pert}}/2$.
 - $R_j(w) = -\rho_{\mathrm{pert}}/2$.
 - $R_j(x) = 0$ for $x \ne v, w$.
 
-Clearly $\|R_j\|_{\infty,N_j^r} = \rho_{\mathrm{pert}}/2 \le \rho_{\mathrm{pert}}/2$ (P9 satisfied with equality).
+Clearly $\lVert R_j \rVert_{\infty,N_j^r} = \rho_{\mathrm{pert}}/2 \le \rho_{\mathrm{pert}}/2$ (P9 satisfied with equality).
 
 Compute the resulting $U = u^{(j)} + R_j$:
 - $U(v) = u^{(j)}(v) + \rho_{\mathrm{pert}}/2$ (birth of the Type-N bar in $\mathrm{Dgm}(U)$ shifts by $+\rho_{\mathrm{pert}}/2$, assuming the persistence skeleton — which vertex is birth, which is saddle — is preserved under the perturbation).
@@ -95,7 +95,7 @@ So $|\ell_i^U - \ell_i^{u^{(j)}}| = \rho_{\mathrm{pert}}$ exactly — **the fact
 The factor 2 in (F2) is **sharp** under the L1-J regime hypothesis package $(P0)$–$(P11)$. Recovering factor 1 would require **strictly stronger** structural hypotheses on $R_j$ that constrain the sign correlation across (peak vertex, saddle vertex) pairs — none of which are in $(P0)$–$(P11)$. Specifically, any of the following would suffice but exceeds L1-J:
 - **(S-sign):** $R_j(v)$ and $R_j(w)$ have the same sign for every (subdominant peak, saddle) pair within $N_j^r$.
 - **(S-Lip):** $R_j$ is $L_R$-Lipschitz on $N_j^r$ with $L_R \cdot d_G(v, w) \le \rho_{\mathrm{pert}}/2$.
-- **(P9-tight):** $\|R_j\|_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/4$ instead of $\rho_{\mathrm{pert}}/2$ (would trivially give factor 2 with $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$).
+- **(P9-tight):** $\lVert R_j \rVert_{\infty,N_j^r} \le \rho_{\mathrm{pert}}/4$ instead of $\rho_{\mathrm{pert}}/2$ (would trivially give factor 2 with $\rho_{\mathrm{pert}}/2$ instead of $\rho_{\mathrm{pert}}$, expanding $\tau_*$).
 
 None of these is currently part of L1-J. R-1 is therefore **RESOLVED in the negative direction**: $\tau_* = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{res}}, r_{\mathrm{birth}})$ in §5.6 of the L-M draft is correct as stated; no expansion is available without strengthening the regime.
 
@@ -152,13 +152,13 @@ sufficient for the conclusion; the stronger P5 bound only tightens the constant.
 P5 (`canonical.md` line 1483, T-L1-F regime hypothesis): **background suppression on $U$ directly** (not just on $R_{\mathrm{inact}}$):
 
 $$
-\|U\|_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}.
+\lVert U \rVert_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}.
 $$
 
 This is *stronger* than P10 (which bounds only $R_{\mathrm{inact}}$). For Type-B bars, P5 directly gives:
 
 $$
-b_i = U(b_i) \le \|U\|_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}.
+b_i = U(b_i) \le \lVert U \rVert_{\infty,X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}.
 $$
 
 For the death $d_i$: regardless of whether the Type-B bar is terminal or merge, $d_i \ge 0$ (death levels are non-negative in $H_0$ superlevel persistence). Hence
@@ -183,7 +183,7 @@ This may be tighter or looser than the original $\tau_* = \min(2\rho_{\mathrm{pe
 
 For consistency with T-L1-F's empirical L1-I anchor (which uses $\rho_{\mathrm{bg}}$ implicitly via P5), the $\tau_*^{\mathrm{post-R2}}$ formulation with $\rho_{\mathrm{bg}}$ is **more honest** (matches the canonical regime constants directly) and **avoids the P10 indirection**.
 
-> ***(NQ-G1-1 cross-reference, W6 D1 late re-review per `op_resolution.md` §9.7 + §13.6)***: The "may be tighter or looser" hedge above is correct. Detailed analysis in `op_resolution.md` §9.4–§9.10 confirms that $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (P5 restricts to $X_{\mathrm{bg}}$ but bounds $U$ which includes active-slot decay tails per P7; P10 bounds $R_{\mathrm{inact}}$ globally; neither generically dominates). NQ-G1-1-ext (W7+) for empirical anchor via L1-I extension recording $\|R_{\mathrm{inact}}\|_\infty$ separately. Note: `03_integration_and_new_open.md` §3.2 originally claimed "post-R2 range at least as wide" — that claim was **incorrect** and has been corrected per the same erratum link. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: edge-band emptiness for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$ holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint.
+> ***(NQ-G1-1 cross-reference, W6 D1 late re-review per `op_resolution.md` §9.7 + §13.6)***: The "may be tighter or looser" hedge above is correct. Detailed analysis in `op_resolution.md` §9.4–§9.10 confirms that $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is **configuration-dependent** (P5 restricts to $X_{\mathrm{bg}}$ but bounds $U$ which includes active-slot decay tails per P7; P10 bounds $R_{\mathrm{inact}}$ globally; neither generically dominates). NQ-G1-1-ext (W7+) for empirical anchor via L1-I extension recording $\lVert R_{\mathrm{inact}} \rVert_\infty$ separately. Note: `03_integration_and_new_open.md` §3.2 originally claimed "post-R2 range at least as wide" — that claim was **incorrect** and has been corrected per the same erratum link. **Cat A conditional self-classification of Lemma L-M-2 is unaffected**: edge-band emptiness for $\tau \in (0, \tau_*^{\mathrm{post-R2}})$ holds regardless of which of $\rho_{\mathrm{bg}}, \rho_{\mathrm{res}}$ is the binding constraint.
 
 ### §3.5 Replacement text for L-M draft §5.5
 
@@ -414,7 +414,7 @@ Each substantive claim is independently re-checkable:
   - confirming the resulting $\ell_i^U - \ell_i^{u^{(j)}} = R_j(v) - R_j(w) = \rho_{\mathrm{pert}}$.
 - **§3 R-2 closure** can be verified by:
   - reading P5 statement in canonical T-L1-F (line 1483).
-  - applying the bound $b_i \le \|U\|_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ directly.
+  - applying the bound $b_i \le \lVert U \rVert_{\infty, X_{\mathrm{bg}}} \le \ell_{\min} - \rho_{\mathrm{bg}}$ directly.
   - noting that $\ell_i \le b_i$ regardless of $d_i$'s value.
 - **§4 R-3 closure** can be verified by reading §2 (R-1 closure) — R-3 is a clarification consequence.
 - **§5 Lemma L-M-2 post-repair Cat A conditional self-classification** can be verified by tracing the bound chain in §5.4 of the post-repair L-M draft.
