@@ -4,6 +4,139 @@
 
 ---
 
+## [SENSING PIPELINE FULL VERIFY + RUTHLESS CLEANUP] 2026-05-25 (evening) — 3-Pass adversarial verification + 21 of 22 TC-SP deleted
+
+**Type**: Adversarial verification + cleanup execution. canonical / SCC / PAI 무수정. CV-1.20 그대로. 102 claims 그대로. 8 retractions 무수정.
+
+**Trigger**: 사용자 directive "모순은 가차없이 박탈 삭제하고 계속 찾아라" (deep-dive math-olympiad full verify). Plan: `/Users/ojaehong/.claude/plans/sensing-pipeline-full-verify-cleanup.md`.
+
+**Execution**: 3 passes × 9 attack patterns × Opus critic agents:
+- **Pass 3** (4 patterns: #4 RH-spec, #18 tautology, #40 too-clean lemma, #5 hypothesis): 20 TC-SP 적용 → 6 CONFIRMED, 9 REFUTED, 5 UNCLEAR. *Phase 2 cleanup*: 5 DELETE + 4 WEAKEN + 1 SPLIT (TC-SP-0.1 → 0.1a 보존, 0.1b 삭제).
+- **Pass 4** (3 patterns: #6 divergent regularization, #46 boundary condition, #51 independence): 17 active TCs 적용 → 9 추가 REFUTED. *Phase 4 cleanup*: 4 weakened-then-escalated DELETE + 5 fresh DELETE.
+- **Pass 5** (2 patterns: #11 model misspecification, #29 continuity at limits): 8 surviving TCs 적용 → 7 hits on #11. *Phase 5 cleanup*: 7 DELETE under ruthless directive.
+
+**Files modified (sensing_pipeline/ only)**:
+- `01_framework_master.md` — 1 DELETE (TC-SP-1.1 P4) + 1 WEAKEN-then-DELETE (TC-SP-1.3 P3→P4) + 1 DELETE (TC-SP-1.2 P5)
+- `02_stage0_photon_point_process.md` — 1 SPLIT (TC-SP-0.1a retained, 0.1b deleted P3) + 1 DELETE (TC-SP-0.2 P5)
+- `03_stage1_photoreceptor_sde.md` — 1 DELETE (TC-SP-1.5 P3) + 1 WEAKEN-then-DELETE (TC-SP-1.4 P3→P4)
+- `04_stage2_inner_retinal_algebra.md` — 1 WEAKEN-then-DELETE (TC-SP-2.3 P3→P4) + 4 DELETE (TC-SP-2.1, 2.2, 2.4, 2.5, 2.6 P4/P5)
+- `05_stage3_ganglion_spike_encoding.md` — 1 DELETE (TC-SP-3.2 P3) + 1 WEAKEN-then-DELETE (TC-SP-3.3 P3→P4) + 1 DELETE (TC-SP-3.1 P4)
+- `06_endtoend_information_bound.md` — 2 DELETE (TC-SP-4.2 P4, 4.3 P4) + 1 DELETE (TC-SP-4.1 P5)
+- `07_omega_sigma_lift.md` — 2 DELETE (TC-SP-5.1, 5.2 P3)
+- `09_verification_pass3.md` — §11-§14 added (Pass 3+4+5 results, dispositions, stable state declaration)
+- `00_INDEX.md` — §2.1 update with active count (1) and retraction table (21)
+
+**Final state**:
+- **Active TC-SP**: **1** (TC-SP-0.1a — Stage 0 Poisson stats = Λ functional, survived 9 patterns)
+- **Retracted TC-SP**: 21 (full retraction notices preserved in stage docs as audit trail)
+- **Survival rate**: 1/22 = 4.5%
+
+**Files NOT modified**:
+- `THEORY/canonical/canonical.md` — 0 edit
+- `THEORY/canonical/theorem_status.md` — 0 edit
+- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
+- `THEORY/canonical/PAI_ROADMAP.md` — 0 edit
+- `THEORY/canonical/DECLARATION.md` — 0 edit
+- `THEORY/canonical/hypothesis_tree.md` — 0 edit
+- `CODE/scc/` 모든 파일 — 0 edit
+
+**Claim count change**: 0 (102 unchanged: 71A / 20B / 6C / 5R).
+**CV version change**: 0 (CV-1.20 unchanged).
+**8 SCC retractions revival**: 0.
+
+**Discipline 준수**:
+- canonical / scc 무수정 ✓
+- Stage docs 의 retraction notices = *honest audit trail* (silent removal 아님; 모든 deleted TC 의 original statement + delete reason + verifier votes 보존)
+- 9 attack patterns 의 systematic application (fresh-context Opus critics)
+- 사용자 directive *"가차없이 박탈"* 그대로 집행
+- Stable state 도달 (추가 attack 의 marginal value 매우 낮음)
+
+**Honest assessment 결과**:
+- Mathematical content (math derivation) 대부분 sound — Pass 4 #6 (divergent) + Pass 5 #29 (continuity) 거의 HOLDS
+- **Biological applicability 가 systematic 약점** — Pass 5 #11 (model misspec) 가 8 중 7 hits
+- Cox / Markov / iid 가정의 systematic 위반 — Pass 4 #51 가 17 중 9 hits
+- **본 corpus 가 *biological theorems* 가 아닌 *mathematical observations with retinal motivation* 임이 확인됨**
+
+**Non-overclaim**:
+- 본 verification 은 *TC-SP candidate 자격* 의 attack — *underlying math* 의 correctness 박탈 아님 (예: Cover-Thomas DPI 는 여전히 generic 정리; *retinal application* 만 TC 자격 박탈)
+- Stage docs 본문의 *technical content* (van Kampen expansion, Pugh-Lamb cascade, Adelson-Bergen Fourier, Mandel-Wolf coherence 등) 은 모두 *mathematical references* 로 유지
+- *Audit trail* 보존 = silent revision 아님; 모든 deleted TC 의 original 정확히 preserved
+
+**Carry-forward**:
+- 사용자 결정 (4 candidates):
+  - (A) Corpus 의 *register 격하* — DEFINITION-DRAFT 가 아닌 *retinal lecture notes with mathematical references*
+  - (B) Task-relevant Fisher information framework 채택 (Geisler 2008) — Shannon capacity 의 대안
+  - (C) OP-SP-006 (SCC $u_t$ ↔ stage) advancement — 유일한 unique 가치 (생존 0.1a 만으로는 부족)
+  - (D) 전체 sensing_pipeline 디렉토리 *archival* — learning artifact 로 보존, 새 framework 로 fresh start
+
+---
+
+## [SENSING PIPELINE BOOTSTRAP] 2026-05-25 — sensing_pipeline/ working subdirectory 신설 (PAI 와 병렬 substrate)
+
+**Type**: 새 working subdirectory. PAI 와 *병렬* substrate 층. DEFINITION-DRAFT + THEOREM-CANDIDATE. canonical / SCC / PAI 무수정. CV-1.20 그대로. 102 claims 그대로. 8 retractions 무수정.
+
+**Trigger**: 사용자 7시간 대화 (Raw 센싱 → 인식의 장 형식화) 의 산출물. 대화 흐름: SCC 가 substrate 로 격하된 이후의 새 axis 탐색 → 장의 존재론적 지위 (P2+P3 hybrid) → Raw 의 수학적 정의 (Tier 2 minimal, (Ω, σ)) → 광센서 / 망막 파이프라인의 5단계 → 수리물리학적 형식화 요청. 사용자 선택: (1) 독립 substrate (PAI 와 병렬) 위치, (2) 포괄 survey + 단계별 deep dive, (3) Theorem-candidate 명시 + 증명 차후.
+
+**Files created (9)**:
+- `THEORY/working/sensing_pipeline/00_INDEX.md` — Navigation hub; TC-SP 20개 / OP-SP 14개 통합 색인; PAI / SCC 양방향 링크
+- `THEORY/working/sensing_pipeline/01_framework_master.md` — Stratified Stochastic Kernel Pipeline (SSKP); 수학 도구 13군 포괄 survey (점과정, SDE, 함수해석, 합성곱, scale-space, 미분기하, 시공간 분석, 정보이론, 대수위상, 범주론, 최적수송, 군이론, 변분법); TC-SP-1.1~1.3 등록
+- `THEORY/working/sensing_pipeline/02_stage0_photon_point_process.md` — Marked Poisson point process; Campbell / Slivnyak-Mecke / Janossy / Palm calculus; 광자 강도의 광학-양자효율 분해; TC-SP-0.1, 0.2; OP-SP-001
+- `THEORY/working/sensing_pipeline/03_stage1_photoreceptor_sde.md` — Jump-diffusion SDE for 광수용기; Naka-Rushton Hill function + adaptive sliding; hyperpolarizing dark current; single-photon impulse response; Fokker-Planck dual; Rod vs Cone; TC-SP-1.4, 1.5; OP-SP-002
+- `THEORY/working/sensing_pipeline/04_stage2_inner_retinal_algebra.md` — (Stage 2a+b+c 통합) ON/OFF Riesz 분해; DoG center-surround + scale-space + Laplace-Beltrami; Adelson-Bergen motion energy + Reichardt detector + optical flow PDE; 색 대립 (L-M, S-(L+M), L+M); TC-SP-2.1~2.6; OP-SP-003, 004
+- `THEORY/working/sensing_pipeline/05_stage3_ganglion_spike_encoding.md` — 4 candidate spike models (LIF SDE, SRM, Cox, Hawkes); renewal theory ISI 분포; M/P/K 경로 latency 비대칭; ON-center / OFF-center 수용야 상속; 비균질 표본화 (fovea 1:1 vs periphery 126:1); TC-SP-3.1~3.3; OP-SP-005
+- `THEORY/working/sensing_pipeline/06_endtoend_information_bound.md` — Data processing inequality chain; per-stage channel capacity; Fisher information; Bayesian posterior P(scene | spikes); Laughlin 1981 efficient coding (TC-SP-4.3 Naka-Rushton ≈ natural CDF); free-energy principle *cited but not adopted*; SCC 4 energy term ↔ stage 2 측면의 formal parallel (OP-SP-M3 으로 등록)
+- `THEORY/working/sensing_pipeline/07_omega_sigma_lift.md` — 각 stage 의 (Ω_i, σ_i) explicit; σ propagation as functor (TC-SP-5.1); Tier 2 closure of pipeline (TC-SP-5.2); 점 ↔ 장 ↔ 점 순환 (Stage 0, Stage 3 둘 다 순수 점과정); SCC $u_t$ ↔ which stage 의 4 candidates (OP-SP-006); prolegomena C1-C5 와의 정합 확인
+- `THEORY/working/sensing_pipeline/08_open_problems_sp.md` — 14 OP 통합 registry (10 core + 4 meta); severity 분포 (High 2, Medium 6, Low 4); 의존성 그래프 (critical path: OP-SP-006 → OP-SP-007 → PAI bridge); PAI OP 와 공식적 격리
+
+**Files modified (backref 등록만)**:
+- `THEORY/working/INDEX.md` — "Sensing Pipeline Layer (PAI 와 병렬 substrate)" 신규 섹션 추가 (Prolegomena Layer 뒤). 9 파일 entry + TC-SP / OP-SP 총수 명시.
+- (본 CHANGELOG entry 자체)
+
+**Files NOT modified**:
+- `THEORY/canonical/canonical.md` — 0 edit
+- `THEORY/canonical/theorem_status.md` — 0 edit
+- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
+- `THEORY/canonical/PAI_ROADMAP.md` — 0 edit
+- `THEORY/canonical/DECLARATION.md` — 0 edit
+- `THEORY/canonical/hypothesis_tree.md` — 0 edit
+- `CODE/scc/` 모든 파일 — 0 edit
+
+**Discipline 준수**:
+- 모든 산출이 `THEORY/working/sensing_pipeline/` 내부. canonical / scc 무수정.
+- 모든 수학 객체 = DEFINITION-DRAFT. 모든 명제 = THEOREM-CANDIDATE. **증명 시도 0**.
+- 8 retractions (EW universality / Model A / $t_\times$ / $D_f$ / H-int / closure RG / $D_f = 11/8$ / $k(k+1)/2-1$) 어느 것도 *부활 시도 없음* — sensing pipeline 어느 stage 도 이 retracted 객체를 *언급*하지도 않음.
+- macro_audit §9 hard-stop 위반 0.
+- PAI 의 6 OP-PAI 와의 다리 *시도 없음* — 공식적 격리.
+- SCC $u_t$ 의 *stage 위치 결정* 안 함 (OP-SP-006 으로 OPEN 등록만).
+
+**Claim count change**: 0 (102 unchanged: 71A / 20B / 6C / 5R).
+**CV version change**: 0 (CV-1.20 unchanged).
+**HT version change**: 0 (HT-3.12 unchanged).
+**scc/ edits**: 0; **pytest**: 무영향.
+**theorem_status.md edits**: 0.
+
+**TC-SP 등록 총수**: 20 (theorem-candidates, 증명 0).
+**OP-SP 등록 총수**: 14 (resolved 0).
+
+**Non-overclaim**:
+- 본 디렉토리는 *PAI substrate* 가 아니라 *PAI 와 병렬 substrate* — PAI 가 가정하는 입력측 mechanism 의 형식. 이 *상하 관계* commitment 없음.
+- "Raw 센싱 → 인식의 장" 변환의 *완성* 아님. 단지 *수학적 어휘 구축*.
+- 망막 biology 의 *완전 모델링* 아님 (LGN, top-down, melanopsin 등은 OP-SP).
+- 모든 candidate 의 *최적성* 또는 *진실성* 주장 없음 — Laughlin optimality 도 *근사적 fitting* statement.
+- (Ω, σ) Tier 2 framework 가 *유일하게 올바른* 형식 주장 없음 — 단지 사용자 commit 의 *수학적 실현*.
+- SCC 의 $u_t$ 가 어느 stage 인지 *결정 안 함* (OP-SP-006 OPEN).
+
+**Carry-forward**:
+- 다음 작업의 자연 entry points (사용자 선택):
+  - (A) **OP-SP-006** advance — SCC $u_t$ ↔ stage 매핑 결정. High severity. PAI bridge 의 *전제조건*. 4 candidates 중 evidence-based 선택.
+  - (B) **OP-SP-004** advance — 색 대립축의 군론적 정당화. High severity. Sensing 자체의 *제일 원리* 강화.
+  - (C) **TC-SP-1.1 또는 TC-SP-1.2 증명** — easy theorem-candidates (standard 이론의 직접 적용). 본 디렉토리의 *self-consistency* 강화.
+  - (D) **Stage 2 의 fiber bundle 형식화** (OP-SP-003) — sensing pipeline 의 *구조적 깔끔함* 개선.
+  - (E) **PAI bridge work** — 단, OP-SP-006 의 partial 해결 후에만.
+- 우선순위 결정 보류 — 다음 세션 user.
+
+---
+
 ## [PAI PROLEGOMENA] 2026-05-23 — Formula Catalog v0 (44 M_k full formal candidate notation)
 
 **Type**: candidate formal notation. No new canonical theorem. No claim count change. canonical.md / theorem_status.md / DECLARATION.md / scc/ 모두 무수정. CV-1.20 그대로. 102 claims (71A/20B/6C/5R) 그대로. M_k 등급 (N/S/O) 그대로.

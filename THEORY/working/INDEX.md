@@ -35,6 +35,26 @@ Active theory development files, organized by the 6 perceptual questions from `c
 
 ---
 
+## Sensing Pipeline Layer (PAI 와 *병렬* substrate)
+
+`sensing_pipeline/` 은 2026-05-25 생성. PAI 와 *병렬* — PAI 가 가정하는 *perceptual individuation* $\mathcal{I}_{\text{perception}}(F)$ 보다 한 층 *상류* 의 "Raw 센싱 → 인식의 장" 변환을 수리물리학적으로 형식화. PAI Phase 1 과의 다리 시도 없음 (격리). DEFINITION-DRAFT + THEOREM-CANDIDATE (증명 0). canonical / SCC / PAI 무수정. CV-1.20 그대로. 102 claims 그대로.
+
+| File | Status | Notes |
+|---|---|---|
+| `sensing_pipeline/00_INDEX.md` | Active | Navigation hub; TC-SP / OP-SP 통합 색인 |
+| `sensing_pipeline/01_framework_master.md` | Draft | Stratified Stochastic Kernel Pipeline; 수학 도구 13개 카탈로그; TC-SP-1.1~1.3 |
+| `sensing_pipeline/02_stage0_photon_point_process.md` | Draft | Marked Poisson; Campbell-Mecke; Slivnyak; TC-SP-0.1~0.2; OP-SP-001 |
+| `sensing_pipeline/03_stage1_photoreceptor_sde.md` | Draft | Jump-diffusion SDE; Naka-Rushton; Fokker-Planck; TC-SP-1.4~1.5; OP-SP-002 |
+| `sensing_pipeline/04_stage2_inner_retinal_algebra.md` | Draft | ON/OFF Riesz + DoG + Adelson-Bergen; 색 대립; TC-SP-2.1~2.6; OP-SP-003, 004 |
+| `sensing_pipeline/05_stage3_ganglion_spike_encoding.md` | Draft | LIF/Cox/Hawkes; M/P/K; 비균질 표본화; TC-SP-3.1~3.3; OP-SP-005 |
+| `sensing_pipeline/06_endtoend_information_bound.md` | Draft | DPI chain; Laughlin; efficient coding; TC-SP-4.1~4.3 |
+| `sensing_pipeline/07_omega_sigma_lift.md` | Draft | Tier 2 functorial lift; 점 ↔ 장 ↔ 점 순환; TC-SP-5.1~5.2; OP-SP-006 |
+| `sensing_pipeline/08_open_problems_sp.md` | Draft | 14 OP 통합 registry; critical path OP-SP-006 → OP-SP-007 → PAI bridge |
+
+**TC-SP 총수**: 20 (theorem-candidates, 증명 0). **OP-SP 총수**: 14 (resolved = 0).
+
+---
+
 ## Phase 1 Target (Read First)
 
 | File | Status | Notes |
