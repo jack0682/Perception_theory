@@ -1,6 +1,6 @@
 """Tests for scc.sigma_rich — OP-0008 Path B σ_rich numerical pipeline.
 
-Spec: THEORY/working/MF/sigma_rich_augmentation.md
+Spec: THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md
 """
 import os
 import sys

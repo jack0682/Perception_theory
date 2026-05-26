@@ -1,7 +1,7 @@
 """WQ-LAT-1 — Reservoir Resolution Sweep.
 
 Implements the protocol of
-THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_protocol.md.
+THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_protocol.md.
 
 For K_field in {3, 4, 6, 8, 12}, runs the WQ-1 / WQ-2 baseline multi-field
 projected gradient flow on T^2_20 under two initialization options:

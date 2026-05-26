@@ -3,7 +3,7 @@
 Implements `K_soft(u) = Σ_i φ(ℓ_i)` where ℓ_i are H₀ persistence bar lengths
 of the superlevel-set filtration of u.
 
-Theoretical reference: `THEORY/working/E/soft_K_definition.md` (G1).
+Theoretical reference: `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` (G1).
 Numerical verification: `THEORY/logs/daily/2026-04-21/12_code_verification.md`.
 
 Hard-K recovery (Prop 4.1 verified):

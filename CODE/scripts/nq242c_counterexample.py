@@ -1,6 +1,6 @@
 """NQ-242c Counterexample Protocol — executable WQ-1 script.
 
-Implements the protocol of THEORY/working/MF/nq242c_counterexample_protocol.md.
+Implements the protocol of THEORY/2_substrate/multiformation/nq242c_counterexample_protocol.md.
 
 Constructs two trajectories (Configuration A: equilateral disk-triangle;
 Configuration B: isosceles disk-triangle) on the 20x20 torus, runs them under

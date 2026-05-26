@@ -1,7 +1,7 @@
 """WQ-2 ksoft / kact bridge diagnostics.
 
 Reruns the WQ-1 NQ-242c trajectories with per-snapshot diagnostics for the
-K_soft / K_act bridge analysis of THEORY/working/MF/ksoft_kact_bridge_lemma.md.
+K_soft / K_act bridge analysis of THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md.
 
 For each snapshot u(t) of a trajectory:
   - per-slot mass m_j(t)
@@ -345,7 +345,7 @@ def summarize_trajectory(traj_diag: dict) -> dict:
 
 def recommend_retry_path(summary_A: dict, summary_B: dict) -> str:
     """Apply the WQ-1 retry decision rule from
-    THEORY/working/MF/ksoft_kact_bridge_lemma.md §9.1."""
+    THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md §9.1."""
     any_K_bar_change = (summary_A["I_2_K_bar_changed"]
                         or summary_B["I_2_K_bar_changed"])
     any_K_soft_change = (summary_A["I_1_K_soft_changed_smooth"]

@@ -3,7 +3,7 @@
 Computes minimum energy path between two K-different minima of ℰ on Σ_m,
 identifies saddle (highest-energy image), and reports ΔE_barrier.
 
-Theoretical reference: `THEORY/working/E/M1_dissolution.md` §3-§5 (Kramers).
+Theoretical reference: `THEORY/2_substrate/foundations/dissolutions/M1_dissolution.md` §3-§5 (Kramers).
                        `THEORY/logs/daily/2026-04-21/05_deepening_and_verification.md` §3
                        (Mountain Pass + mollification).
                        `THEORY/logs/daily/2026-04-21/07_round4_verification.md` §3-§5

@@ -4,7 +4,7 @@ Status: working diagnostic. NON-canonical. Does not prove L-1, does not promote
 L1-F to Cat-A, does not solve OP-0005 / OP-0008.
 
 This script computes measurable proxies for the L1Hyp clauses H1-H10 of
-``THEORY/working/MF/kbar_kact_bridge_L1F_synthesis.md``, evaluated on existing
+``THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1F_synthesis.md``, evaluated on existing
 WQ-LAT-style multi-formation trajectories.
 
 ----------------------------------------------------------------------------
