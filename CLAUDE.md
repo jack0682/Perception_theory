@@ -9,10 +9,11 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 Read in order:
 1. **`THEORY/0_axis/DECLARATION.md`** — **(DECL-2.0, 2026-05-26) 먼저 읽기.** 중심축: *perception = 가능한 개입(intervention)의 장 형성*; 객체성·affordance·action·control 은 하나의 장 u_t 의 사영(projection). 객체성 = 안정화된 affordance. DECL-1.0 의 objecthood 질문(Q1~Q6, T8)은 §substrate 로 보존. 2분.
 1b. **`THEORY/0_axis/CANONICAL_AXIS.md`** + **`PAI_GLOSSARY.md`** — 축의 spine 과 통제 어휘. substrate↔destination 관계와 가드레일.
-2. **`THEORY/2_substrate/canonical/canonical.md`** — authoritative specification (**CV-1.13**, sealed 2026-05-10). Single source of truth for the theory. Counts: **59A / 14B / 5C / 5R = 83 claims** (~71% fully proved). Primary CV-1.13 advance: T-Temporal-Identity full Cat A (all parts a,b,c,d).
-3. **`THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md`** — seal record for the current canonical version; certifications for S-A1, S-A3, S-C1 tasks.
-4. **`THEORY/2_substrate/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021.
-5. **`THEORY/2_substrate/canonical/hypothesis_tree.md`** — **(HT-3.0, 2026-05-07)** 의존성 구조 권위 소스. 블록이 Q1~Q6 인식론적 질문 기준으로 재편됨. 수정 규칙 후미.
+1c. **`THEORY/0_axis/SCOPE_LEDGER.md`** — 야망-증명 기울기. 증명된 것(Tier 1 = field morphology) vs 방향(Tier 3 = objecthood·actional·𝕌, OPEN). 거시 주장은 티어 태그 의무.
+2. **`THEORY/2_substrate/canonical/canonical.md`** — authoritative specification (**CV-1.20**, sealed 2026-05-20). Single source of truth for the theory. Counts: **71A / 20B / 6C / 5R = 102 claims** (~70% fully proved). 증명된 핵심은 *field morphology* (Tier 1); objecthood/actional 은 DIRECTION (SCOPE_LEDGER).
+3. **`THEORY/2_substrate/canonical/seals/CV-1.20_SEAL.md`** — 최신 봉인 기록 (seal chain: CV-1.13→…→CV-1.20).
+4. **`THEORY/2_substrate/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021; 축 OP: OP-PAI-001..006, OP-UNIFY-1..3, OP-PROLEGOMENA.
+5. **`THEORY/2_substrate/canonical/hypothesis_tree.md`** — **(HT-3.12, 2026-05-21)** 의존성 구조 권위 소스. Q1~Q6 + H-PAI branch. 수정 규칙 후미.
 6. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
 For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).
@@ -25,7 +26,7 @@ Perception_theory/
 │
 ├── CODE/                           executable assets — run from this dir
 │   ├── scc/                        Python package (15 modules)
-│   ├── tests/                      pytest suite (215 passed, 1 xfailed)
+│   ├── tests/                      pytest suite (228 passed, 1 xfailed, 1 pre-existing error)
 │   ├── experiments/                exp<N>_<name>.py + results/
 │   ├── scripts/                    one-off utilities
 │   ├── papers/                     LaTeX + generate_figures.py
@@ -71,7 +72,7 @@ THEORY/2_substrate/canonical/canonical.md      (authoritative — one-way only)
 ## Test & Build
 
 ```bash
-# All tests (215 + 1 xfailed, ~4min)
+# All tests (228 passed, 1 xfailed, 1 pre-existing error, ~6min)
 cd CODE && python3 -m pytest tests/ -v
 
 # Single file
@@ -120,7 +121,7 @@ Pipeline: `graph → params → operators → energy → optimizer → diagnosti
 4. **Not fuzzy segmentation, not clustering, not tracking.** No engineering proxies.
 5. **Never silently resolve open problems** (F-1, M-1, MO-1, co-belonging form, transition operator, crisp recovery). Keep explicit until deliberately resolved via promotion pipeline.
 
-## Theory Sketch (CV-1.13)
+## Theory Sketch (CV-1.20)
 
 Formal universe: `C^soft = (T, {X_t}, {u_t}, {Cl_t}, {N_t, D_t}, {M_{t→s}})`
 

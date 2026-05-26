@@ -118,6 +118,8 @@ Each tool controls a specific ambiguity. Variational methods address stable exis
 
 ## 4. Current Status
 
+> **정본 현재 상태 (2026-05-26):** CV-1.20 SEALED · 71A/20B/6C/5R = **102 claims** · DECL-2.0 · HT-3.12. 증명된 핵심은 *field morphology* (Tier 1); objecthood·actional·𝕌 는 DIRECTION(OPEN). 야망-증명 기울기는 `THEORY/0_axis/SCOPE_LEDGER.md`. 아래 표·§8의 일부 항목은 옛 버전(HT-1.0, CV-1.12 등) 인용일 수 있으며 그 경우 SCOPE_LEDGER가 정본이다.
+
 The authoritative status file is:
 
 ```text
@@ -176,7 +178,7 @@ THEORY/                  perception-action stack
 
 Key documents:
 
-- `THEORY/2_substrate/canonical/canonical.md` — settled theory specification (CV-1.11)
+- `THEORY/2_substrate/canonical/canonical.md` — settled theory specification (CV-1.20, 102 claims; current state: `THEORY/0_axis/SCOPE_LEDGER.md`)
 - `THEORY/2_substrate/canonical/theorem_status.md` — theorem index + open problem registry
 - `THEORY/2_substrate/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
 - `THEORY/2_substrate/multiformation/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation

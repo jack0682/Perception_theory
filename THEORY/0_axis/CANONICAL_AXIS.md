@@ -20,6 +20,8 @@ This repository studies **one problem**: the structural interpretation gap betwe
 
 The unit perception produces *is* the unit action acts upon. There is no second translation.
 
+> **[Tier 3 / DIRECTION]** This thesis is a *declared direction*, not a proved theorem. What is actually proved is Tier 1 = field morphology; objecthood / actional perception / 𝕌 are OPEN. See [[SCOPE_LEDGER]] for the full proof-vs-ambition gradient.
+
 ## One field, many projections
 
 ```

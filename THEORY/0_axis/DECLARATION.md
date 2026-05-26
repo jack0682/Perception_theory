@@ -10,7 +10,7 @@ description: SCC 이론 중심축 선언문 (DECL-2.0). 2026-05-26 perception-ac
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]] · [[CANONICAL_AXIS]] · [[PAI_GLOSSARY]]
 > Authority: [[canonical]] · [[sct_manifest]]
-> Axis: [[perception_action_interpretation_pivot_2026_05_21]] · [[PAI_ROADMAP]] · [[AUDIT_perception_action_2026-05-26]]
+> Axis: [[perception_action_interpretation_pivot_2026_05_21]] · [[PAI_ROADMAP]] · [[AUDIT_perception_action_2026-05-26]] · [[SCOPE_LEDGER]]
 > Q-MOCs (substrate): [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
 > Status: Canonical (DECL-2.0)
 
@@ -43,6 +43,8 @@ description: SCC 이론 중심축 선언문 (DECL-2.0). 2026-05-26 perception-ac
 > **객체성 = 안정화된 affordance 구조.**
 
 perception 이 만드는 단위가 곧 action 이 작용하는 단위다. 두 번째 번역은 없다.
+
+> **[Tier 3 / DIRECTION — 증명 0]** 이 중심 주장은 *선언된 방향*이다. 실제로 증명된 바닥층은 field morphology(Tier 1)이며, objecthood 완성·actional perception·𝕌 단일화는 모두 OPEN이다. 야망-증명 기울기 전체는 [[SCOPE_LEDGER]] 참조.
 
 ```
 감각 차이
