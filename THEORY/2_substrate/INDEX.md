@@ -4,11 +4,11 @@ created: 2026-05-07
 last_updated: 2026-05-21
 ---
 
-**2026-05-21 PAI PIVOT note**: working/ 의 모든 기존 파일은 *substrate-canonical* (cohesion-morphology) 작업으로 유지됩니다. **새 main research axis = Perception-Action Interpretation (PAI)**. PAI 작업 파일은 향후 `THEORY/working/PAI/` 신규 서브디렉토리에 배치 (Phase 1 시작 시 생성). 기존 OP-0001..OP-0022 / OP-HMORSE-* 외에 **6 OP-PAI-001..006** 등록 (모두 OPEN). Pivot 문서: [[../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[../canonical/PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md`.
+**2026-05-21 PAI PIVOT note**: working/ 의 모든 기존 파일은 *substrate-canonical* (cohesion-morphology) 작업으로 유지됩니다. **새 main research axis = Perception-Action Interpretation (PAI)**. PAI 작업 파일은 향후 `THEORY/working/PAI/` 신규 서브디렉토리에 배치 (Phase 1 시작 시 생성). 기존 OP-0001..OP-0022 / OP-HMORSE-* 외에 **6 OP-PAI-001..006** 등록 (모두 OPEN). Pivot 문서: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md`.
 
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]]
-> PAI: [[../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[../canonical/PAI_ROADMAP|Roadmap]]
+> PAI: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[PAI_ROADMAP|Roadmap]]
 > Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]] · [[MOC_sigma_rich_framework]]
 > Vertical: [[MOC_H_MORSE_packageII]] · [[MOC_action_temporal_cost]] · [[MOC_temporal_composition]] · [[MOC_observer_moduli_OMS]] · [[MOC_AFD_0_foundation]] · [[MOC_temporal_audit_W7]]
 > Ops: [[MOC_open_problems_blockers]] · [[MOC_experiments_validation]] · [[MOC_research_journal]] · [[MOC_parked_superseded]]
@@ -274,7 +274,7 @@ These 16 files document the development of T-L1-F (Hard-Bar/Active-Count Bridge)
 
 Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\mathrm{obs}} / G_{\mathrm{SCC}}^{(0)}$
 
-**Stage:** **OMS-2.0 Accepted — Full** (2026-05-08, Session 8). Static face PROVED (Sessions 4–7); Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced temporal OMS test (Session 8, VP-11). Canonical authority: `THEORY/canonical/canonical.md` **Appendix OMS** sections A–L (Static, Session 7) + M (Temporal, Session 8). Final audits: `oms_2_0_accepted_audit.md` (Static) + `oms_2_0_full_accepted_audit.md` (Full).
+**Stage:** **OMS-2.0 Accepted — Full** (2026-05-08, Session 8). Static face PROVED (Sessions 4–7); Full Temporal COMPUTATIONALLY SUPPORTED on faithful reduced temporal OMS test (Session 8, VP-11). Canonical authority: `THEORY/2_substrate/canonical/canonical.md` **Appendix OMS** sections A–L (Static, Session 7) + M (Temporal, Session 8). Final audits: `oms_2_0_accepted_audit.md` (Static) + `oms_2_0_full_accepted_audit.md` (Full).
 
 **Prior stages:** OMS-2.0 Accepted Static (Session 7); OMS-2.0 Conditional Accepted (Session 6); OMS-1.2 (Session 5).
 
@@ -386,7 +386,7 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/op_oms_033_sigma_sn_arnold.md` | OP-OMS-033 final | PROVED as conditional fold theorem SN3 |
 | `observer_moduli/op_oms_034_temporal_delta3_status.md` | OP-OMS-034 final | SEPARATED (Static does not require it) |
 | `observer_moduli/oms_2_0_accepted_audit.md` | OMS-2.0 final audit | Accepted Static + Conditional Temporal |
-| `THEORY/canonical/canonical.md` | **Appendix OMS** added | 20+ theorem-grade items (Static OMS canonical layer) |
+| `THEORY/2_substrate/canonical/canonical.md` | **Appendix OMS** added | 20+ theorem-grade items (Static OMS canonical layer) |
 
 **Session 7 introduces NO new experiments** (per the no-broadening rule).
 
@@ -397,7 +397,7 @@ Central object: $\mathfrak{M}_{\mathrm{SCC}}^{\mathrm{obs}} = \mathcal{M}_{\math
 | `observer_moduli/op_oms_034_initial_log.md` | Session 8 reading log | brief |
 | `observer_moduli/op_oms_034_temporal_delta3_resolution.md` | OP-OMS-034 final | Theorems T1–T8; rank-3 corrected; Case A verdict |
 | `observer_moduli/oms_2_0_full_accepted_audit.md` | OMS-2.0 Full audit | Final classification: Accepted — Full |
-| `THEORY/canonical/canonical.md` | **Appendix OMS subsection M (Temporal)** added | T1–T8 + TS3 + H4-T-CW |
+| `THEORY/2_substrate/canonical/canonical.md` | **Appendix OMS subsection M (Temporal)** added | T1–T8 + TS3 + H4-T-CW |
 | `CODE/experiments/observer_moduli/vp11_temporal_delta3.py` | VP-11 Phase 1+2 | rank witness + Δ³ branch map |
 | `CODE/experiments/results/observer_moduli/vp11_temporal_rank_witness.{json,md}` | Phase 1 results | 14/14 (Wit-T) |
 | `CODE/experiments/results/observer_moduli/vp11_temporal_delta3.{json,md}` | Phase 2 results | 19 branches, 7 λ_tr-unique |
@@ -430,7 +430,7 @@ Key surviving content (Cat B verified + Cat A unconditional via CV-1.19 SEAL):
 - L-LOJASIEWICZ-CG ($c_G$ explicit formula, non-degenerate Fiedler stratum) — Cat B
 - L-S3-KERNEL-MULT (dim ker(Hess H_sep) = mult(λ_2(L_G))) — Cat A unconditional on case A/B + Cat A with H-INV on case C
 
-Reference: `THEORY/canonical/CV-1.19_SEAL.md` for promoted content.
+Reference: `THEORY/2_substrate/canonical/seals/CV-1.19_SEAL.md` for promoted content.
 Promotion status: promotion-pipeline complete (foundation/ → CV-1.19 canonical).
 
 ---

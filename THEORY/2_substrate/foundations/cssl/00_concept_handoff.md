@@ -28,7 +28,7 @@ key_themes:
   - tame vs wild singularity distinction
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§3.7, §9.3, §13 L-HMORSE-LOCAL/DECOMP/BOUNDARY-MODE-EXCLUSION, T-σ-Lemma-1, T-V5b-T-zero) · [[../foundation/manifold_topology_attempt_v1|v1 master synthesis]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|W8-Day3 03 [D, L_G] Case C derivation]] · [[../../logs/daily/2026-05-20/99_summary|W8-Day3 99 summary §"Carry-Forward"]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§3.7, §9.3, §13 L-HMORSE-LOCAL/DECOMP/BOUNDARY-MODE-EXCLUSION, T-σ-Lemma-1, T-V5b-T-zero) · [[manifold_topology_attempt_v1|v1 master synthesis]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|W8-Day3 03 [D, L_G] Case C derivation]] · [[THEORY/logs/daily/2026-05-20/99_summary|W8-Day3 99 summary §"Carry-Forward"]]
 
 # Critical Skeleton Surgery Layer (CSSL) — Concept Handoff Document
 

@@ -27,11 +27,11 @@ lemma_count: 16
 ---
 
 > [!nav] Linked: [[01_ns_inspired_synthesis|01 NS synthesis]] (§6 catalog, §7 network) ·
-> [[../../canonical/canonical|CV-1.13 canonical]] (§13 Theorem 4 L1134–1136, SB7 L2497–2498,
+> [[canonical|CV-1.13 canonical]] (§13 Theorem 4 L1134–1136, SB7 L2497–2498,
 > T-PF-A1-AR L1652, T-PF-A1-SDE L1668, T-PF-A1-GI L1686, T-PF-A1-PE L1700,
-> T-P-F-ε0-K L1818) · [[../../canonical/DECLARATION|DECL-1.0]] ·
-> [[../../logs/daily/2026-05-20/02_cg_numerical_verification|02 c_G verification]] ·
-> [[../cssl/01_critic_evaluation|CSSL critic eval (avoid patterns)]] ·
+> T-P-F-ε0-K L1818) · [[DECLARATION|DECL-1.0]] ·
+> [[02_cg_numerical_verification|02 c_G verification]] ·
+> [[01_critic_evaluation|CSSL critic eval (avoid patterns)]] ·
 > companion: [[06_surface_tension_rescaling_cat_a|06 H-Morse rescaling]] ·
 > companion: [[02_kramers_prefactor_op_0005_attack|02 Kramers Cat B]]
 

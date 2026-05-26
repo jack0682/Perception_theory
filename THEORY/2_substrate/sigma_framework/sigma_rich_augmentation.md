@@ -5,7 +5,7 @@
 **Status:** working draft (W5 Day 4 OAT-supplementary; OP-0008 Path B candidate proposal; CV-1.6 candidate, NOT promoted).
 **Created:** 2026-04-30 (W5 Day 4).
 **Type:** Direct attack on OP-0008 σ^A K-jump Inheritance Non-Determinism via Path B (rich-σ augmentation).
-**Author origin:** OP-0008 registration `THEORY/canonical/theorem_status.md` (CV-1.5.1) + Path A/B bifurcation per OP-0008 Impact section + 4-tool mathematical scaffolding `working/MF/mathematical_scaffolding_4tools.md` Tool A3 PH framing.
+**Author origin:** OP-0008 registration `THEORY/2_substrate/canonical/theorem_status.md` (CV-1.5.1) + Path A/B bifurcation per OP-0008 Impact section + 4-tool mathematical scaffolding `working/MF/mathematical_scaffolding_4tools.md` Tool A3 PH framing.
 **Canonical refs:** §11.1 Commitment 14 (single-formation σ); §11.1 Commitment 14-Multi (D-6a static σ_multi^A + σ_multi^D, CV-1.5.1); §13 T-σ-multi-A-Static, T-σ-Multi-1; §11.1 Commitment 16 (K_field/K_act); §14 CN5, CN10; §15 OP-0008.
 **Working refs:** `working/MF/sigma_multi_trajectory.md` (D-6b dynamic, Lemma 4.4.1(c) Cat C); `working/MF/multi_formation_sigma.md` (D-6a static, Approach A primary); `working/MF/mathematical_scaffolding_4tools.md` §4 Tool A3 (Persistent Homology).
 **Open problems referenced:** OP-0008 (direct attack); OP-0009-A (architecture, related); OP-0009-Pre (pre-objective vs labels, related).
@@ -498,21 +498,21 @@ Cat A everywhere (post-CV-1.6) requires the following theoretical completions, r
 
 ### §12.1 Working files
 
-- `THEORY/working/MF/sigma_multi_trajectory.md` (D-6b dynamic σ_multi^A(t) framework; Lemma 4.4.1(c) Cat C non-determinism source for OP-0008).
-- `THEORY/working/MF/multi_formation_sigma.md` (D-6a static σ_multi^A; §5.5 cross-formation Goldstone observation, Wigner-pair source).
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md` (4-tool framework; §4 Tool A3 PH foundation; §3 Tool A2 quotient framework).
-- `THEORY/working/MF/K_status_commitment.md` (Commitment 16 K_field/K_act decomposition; ordered/unordered architecture).
-- `THEORY/working/MF/lambda_rep_ontology.md` (planned W6 OAT-3; λ_rep status; relevant for §2.3.3 $W_{jk}$ which depends on λ_rep coupling strength).
+- `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` (D-6b dynamic σ_multi^A(t) framework; Lemma 4.4.1(c) Cat C non-determinism source for OP-0008).
+- `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` (D-6a static σ_multi^A; §5.5 cross-formation Goldstone observation, Wigner-pair source).
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` (4-tool framework; §4 Tool A3 PH foundation; §3 Tool A2 quotient framework).
+- `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (Commitment 16 K_field/K_act decomposition; ordered/unordered architecture).
+- `THEORY/2_substrate/multiformation/lambda_rep_ontology.md` (planned W6 OAT-3; λ_rep status; relevant for §2.3.3 $W_{jk}$ which depends on λ_rep coupling strength).
 
 ### §12.2 Canonical references
 
-- `THEORY/canonical/canonical.md` §11.1 Commitment 14 (single-formation σ).
-- `THEORY/canonical/canonical.md` §11.1 Commitment 14-Multi (D-6a static, CV-1.5.1).
-- `THEORY/canonical/canonical.md` §11.1 Commitment 16 (K_field/K_act, CV-1.5.1).
-- `THEORY/canonical/canonical.md` §13 T-σ-multi-A-Static, T-σ-Multi-1.
-- `THEORY/canonical/canonical.md` §14 CN5, CN10, CN17.
-- `THEORY/canonical/theorem_status.md` OP-0008 (direct attack subject), OP-0009 (related ontological foundations).
-- `THEORY/canonical/theorem_status.md` (D-6a entries; D-6b deferred to CV-1.6 with Path B candidate per this file).
+- `THEORY/2_substrate/canonical/canonical.md` §11.1 Commitment 14 (single-formation σ).
+- `THEORY/2_substrate/canonical/canonical.md` §11.1 Commitment 14-Multi (D-6a static, CV-1.5.1).
+- `THEORY/2_substrate/canonical/canonical.md` §11.1 Commitment 16 (K_field/K_act, CV-1.5.1).
+- `THEORY/2_substrate/canonical/canonical.md` §13 T-σ-multi-A-Static, T-σ-Multi-1.
+- `THEORY/2_substrate/canonical/canonical.md` §14 CN5, CN10, CN17.
+- `THEORY/2_substrate/canonical/theorem_status.md` OP-0008 (direct attack subject), OP-0009 (related ontological foundations).
+- `THEORY/2_substrate/canonical/theorem_status.md` (D-6a entries; D-6b deferred to CV-1.6 with Path B candidate per this file).
 
 ### §12.3 Open problem / NQ register
 
@@ -542,6 +542,6 @@ Cat A everywhere (post-CV-1.6) requires the following theoretical completions, r
 
 **Status: working draft. OP-0008 Path B (rich-σ augmentation) candidate proposal. σ_rich definition (§2) Cat B sketch; Φ_rich determinism claim (§3.3) Cat B sketch; NQ-242c-Rich + NQ-242d explicit construction proposed (§6, §7) for W6+ Cat A target. CV-1.6 Commitment 14-Multi (D) addendum (§9.1) marked CANDIDATE NOT PROMOTED. Path B vs Path A vs Hybrid registered (§5, §9). Hard constraints verified (§11). OP-0008 severity 🟠 HIGH retained.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_augmentation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.6 W8 D-CV1.6-O5 packet (Path B vs Path A vs Hybrid decision item).

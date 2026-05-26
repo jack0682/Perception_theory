@@ -48,7 +48,7 @@ consensus_baseline:
   Theorem_4_line: canonical.md L1134-1136
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§3.7, §5.3, §5.3b T-OP6-B, §13 L-HMORSE-LOCAL, L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION, T-σ-Lemma-1, T-V5b-T-zero, Theorem 4) · [[../../canonical/theorem_status|theorem_status]] (L594 OP-HMORSE-SADDLE, L803 OP-0005-DYN) · [[../../canonical/DECLARATION|DECL-1.0]] · [[01_ns_inspired_synthesis|01 NS synthesis]] · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola — this file's COMPLEMENT]] · [[07_critic_full_review|07 critic §B]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§3.7, §5.3, §5.3b T-OP6-B, §13 L-HMORSE-LOCAL, L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION, T-σ-Lemma-1, T-V5b-T-zero, Theorem 4) · [[theorem_status|theorem_status]] (L594 OP-HMORSE-SADDLE, L803 OP-0005-DYN) · [[DECLARATION|DECL-1.0]] · [[01_ns_inspired_synthesis|01 NS synthesis]] · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola — this file's COMPLEMENT]] · [[07_critic_full_review|07 critic §B]]
 
 # 10 — Forman Discrete Morse Theory: Graph-Native H-Morse Analysis Complementary to Modica-Mortola
 

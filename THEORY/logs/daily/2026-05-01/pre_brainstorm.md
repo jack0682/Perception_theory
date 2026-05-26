@@ -357,12 +357,12 @@ The volume budget exists so that Day 5 can finish W6 priming today instead of pu
 3. `THEORY/logs/daily/2026-04-30/99_summary.md` §11-§14 (post-AM addenda)
 4. `TASK_LEDGER.md`
 5. `THEORY/working/CV-1.6_packet_crosswalk.md`
-6. `THEORY/working/SF/sigma_theorem4_higher_order.md` (revised pivot, 819 lines)
-7. `THEORY/working/SF/nq187b_L_extrapolation.md` (post-EOD α-path input)
-8. `THEORY/working/SF/sigma_theorem4_canonical_revision.md`
-9. `THEORY/working/MF/sigma_multi_trajectory.md` (label hygiene target)
-10. `THEORY/working/MF/commitments_18_19_drafts.md` + `commitment_18_sigma_rich_packet.md` + `commitment_19_k_selection_axiom_packet.md` (CV-1.7 parking lot scope)
-11. `THEORY/canonical/theorem_status.md` (OP-0008, OP-0009)
+6. `THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` (revised pivot, 819 lines)
+7. `THEORY/2_substrate/sigma_framework/nq187b_L_extrapolation.md` (post-EOD α-path input)
+8. `THEORY/2_substrate/sigma_framework/sigma_theorem4_canonical_revision.md`
+9. `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` (label hygiene target)
+10. `THEORY/2_substrate/multiformation/commitments_18_19_drafts.md` + `commitment_18_sigma_rich_packet.md` + `commitment_19_k_selection_axiom_packet.md` (CV-1.7 parking lot scope)
+11. `THEORY/2_substrate/canonical/theorem_status.md` (OP-0008, OP-0009)
 
 ---
 

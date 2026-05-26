@@ -481,7 +481,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 ### F. Files affected.
 
 - **NEW (Session 8):** `op_oms_034_initial_log.md`, `op_oms_034_temporal_delta3_resolution.md` (placeholder filled), `oms_2_0_full_accepted_audit.md`, `vp11_temporal_delta3.py`, `vp11_temporal_rank_witness.{json,md}`, `vp11_temporal_delta3.{json,md}`.
-- **UPDATED (Session 8):** `THEORY/canonical/canonical.md` (Temporal subsection M added), `open_problems.md` (OP-OMS-034 CLOSED; 034b/034c registered), `audit_log.md` (this entry; W26–W28 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `oms_1_candidate.md`.
+- **UPDATED (Session 8):** `THEORY/2_substrate/canonical/canonical.md` (Temporal subsection M added), `open_problems.md` (OP-OMS-034 CLOSED; 034b/034c registered), `audit_log.md` (this entry; W26–W28 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/2_substrate/INDEX.md`, `oms_1_candidate.md`.
 
 ---
 
@@ -519,7 +519,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 2. **OP-OMS-033 → PROVED as conditional fold theorem.** Σ_SN codim-1 via Crandall–Rabinowitz; SN4 (SCC genericity) PROOF SKETCH (sub-OP OP-OMS-033b, non-blocking).
 3. **OP-OMS-034 → SEPARATED.** Static OMS does not require it; full temporal stays Conditional.
 4. **OMS-2.0 promotion verdict: Accepted — Static, with Full Temporal Conditional on OP-OMS-034.** Per `oms_2_0_accepted_audit.md`.
-5. **Canonical promotion: Appendix OMS added to `THEORY/canonical/canonical.md`** with 20+ theorem-grade items, separated from SCC core registry.
+5. **Canonical promotion: Appendix OMS added to `THEORY/2_substrate/canonical/canonical.md`** with 20+ theorem-grade items, separated from SCC core registry.
 
 ### D. New audit warnings.
 
@@ -531,7 +531,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 ### E. Files affected.
 
 - **NEW (Session 7):** `proof_promotion_reading_log.md`, `gap_c1_final_theorem_package.md`, `op_oms_032_closed_form_h4.md`, `op_oms_033_sigma_sn_arnold.md`, `op_oms_034_temporal_delta3_status.md`, `oms_2_0_accepted_audit.md`.
-- **UPDATED (Session 7):** `THEORY/canonical/canonical.md` (Appendix OMS added at end), `open_problems.md` (032/033/034 statuses updated; 032b/033b registered), `audit_log.md` (this entry; W22–W25 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `oms_1_candidate.md` (frontmatter + status declaration).
+- **UPDATED (Session 7):** `THEORY/2_substrate/canonical/canonical.md` (Appendix OMS added at end), `open_problems.md` (032/033/034 statuses updated; 032b/033b registered), `audit_log.md` (this entry; W22–W25 added), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/2_substrate/INDEX.md`, `oms_1_candidate.md` (frontmatter + status declaration).
 
 ---
 
@@ -600,7 +600,7 @@ Prior session notes referenced "4×4 minor" requirement for the temporal extensi
 ### E. Files affected.
 
 - **NEW (Session 6):** `op_oms_001_gap_c1_rank_theorem.md`, `op_oms_001_gap_c1_sensitivity.md`, `op_oms_001_gap_c1_genericity.md`, `op_oms_002_nontrivial_v.md`, `op_oms_026_sigma_branch_full.md`, `oms_2_0_promotion_audit.md` (Gate 7), `vp8_gap_c1_rank_witness.py`, `vp9_nontrivial_v_basin_test.py`, `vp10_sigma_branch_delta3.py`, plus 3 result JSONs and 3 result MDs.
-- **UPDATED (Session 6):** `open_problems.md` (this commit), `audit_log.md` (this entry), `daily_log.md`, `checkpoints.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `canonical_promotion_checklist.md`, possibly `oms_1_candidate.md` for OMS-2.0 frontmatter.
+- **UPDATED (Session 6):** `open_problems.md` (this commit), `audit_log.md` (this entry), `daily_log.md`, `checkpoints.md`, `THEORY/CHANGELOG.md`, `THEORY/2_substrate/INDEX.md`, `canonical_promotion_checklist.md`, possibly `oms_1_candidate.md` for OMS-2.0 frontmatter.
 
 ---
 
@@ -684,7 +684,7 @@ absorbs OP-OMS-017), OP-OMS-027 (corner regularity), OP-OMS-028
 - `canonical_promotion_checklist.md` — v1.3 (OMS-1.2) update.
 - `oms_1_candidate.md` — promote stage label OMS-1.1 → OMS-1.2 (after audit).
 - `THEORY/CHANGELOG.md` — Session 5 entry.
-- `THEORY/working/INDEX.md` — Session 5 files added.
+- `THEORY/2_substrate/INDEX.md` — Session 5 files added.
 - `daily_log.md` — Session 5 entry.
 - `checkpoints.md` — VP-6 + OP-OMS-018 sections added.
 

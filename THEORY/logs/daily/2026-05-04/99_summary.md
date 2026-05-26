@@ -116,14 +116,14 @@ THEORY/logs/weekly/2026-05-W1/
 ├── W6_strategic_plan.md                 (140 lines, redesigned 4-goal anchor; G3 §4.2 status-text revision proposed in g3_03 §4.2; G1 status-text revision proposed in 03 §5.1)
 └── weekly_draft_storming.md             (4528 B 09:21, OLD-plan content; STALE; user decision pending — see plan.md v2 §5.2)
 
-THEORY/canonical/canonical.md
+THEORY/2_substrate/canonical/canonical.md
 ├── line 810: Commitment 16 ε convention — G3 amendment proposed (g3_02 §6.1)
 ├── lines 1385-1433: T-σ-Theorem-4 — evening G2 NQ-187 handling APPLIED
 ├── line 1452: T-Bind-Proj — evening G2 erratum APPLIED
 ├── line 1457: T-Bind-Full — evening G2 erratum APPLIED
 └── line 1489+: T-L1-M new entry proposed (03 §1.2)
 
-THEORY/canonical/theorem_status.md
+THEORY/2_substrate/canonical/theorem_status.md
 ├── lines 163-164: T-Bind-Proj/Full status — evening G2 erratum APPLIED
 ├── line 285: CV-1.1 row — evening G2 erratum APPLIED
 └── (proposed addition): C-0722 row for T-L1-M (03 §2.1)

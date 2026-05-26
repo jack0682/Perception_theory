@@ -103,4 +103,4 @@ See `_style.py` for the shared matplotlib `rcParams`. For schematic figures, see
 
 ## Aligned with canonical CV-1.4 (2026-04-26)
 
-The figures correspond to the theorems and commitments registered in `THEORY/canonical/canonical.md` (CV-1.4) and the heroes index at the blog (`/notes/scc-heroes/`).
+The figures correspond to the theorems and commitments registered in `THEORY/2_substrate/canonical/canonical.md` (CV-1.4) and the heroes index at the blog (`/notes/scc-heroes/`).

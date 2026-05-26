@@ -582,8 +582,8 @@ Day 1 morning (09:00-09:30): Option α / β / γ.
 ### G0.5 Outputs
 
 - `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md`
-- `THEORY/canonical/canonical.md` (5 new §13 entries + 4 location count updates)
-- `THEORY/canonical/theorem_status.md` (CV-1.5 release + 5 C-IDs)
+- `THEORY/2_substrate/canonical/canonical.md` (5 new §13 entries + 4 location count updates)
+- `THEORY/2_substrate/canonical/theorem_status.md` (CV-1.5 release + 5 C-IDs)
 - `THEORY/CHANGELOG.md` (W5 Day 1 entry)
 
 ### G0.6 Success criterion (multi-level)

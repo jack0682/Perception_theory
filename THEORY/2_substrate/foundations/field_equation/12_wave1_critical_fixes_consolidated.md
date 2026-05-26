@@ -24,7 +24,7 @@ purpose: |
   and cross-file consistency mandates. Serves as the Wave 1 → W9+ promotion gate.
 ---
 
-> [!nav] Linked: [[07_critic_full_review|07 Wave-2 critic review]] · [[02_kramers_prefactor_op_0005_attack|02 Kramers]] · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola]] · [[04_h_morse_spectral_quantification|04 H-Morse spectral]] · [[05_cat_a_direct_catalog_proofs|05 Cat A catalog]] · [[06_surface_tension_rescaling_cat_a|06 Surface tension rescaling]] · [[../../canonical/theorem_status|theorem_status.md]] · [[../../canonical/canonical|CV-1.13 canonical]]
+> [!nav] Linked: [[07_critic_full_review|07 Wave-2 critic review]] · [[02_kramers_prefactor_op_0005_attack|02 Kramers]] · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola]] · [[04_h_morse_spectral_quantification|04 H-Morse spectral]] · [[05_cat_a_direct_catalog_proofs|05 Cat A catalog]] · [[06_surface_tension_rescaling_cat_a|06 Surface tension rescaling]] · [[theorem_status|theorem_status.md]] · [[canonical|CV-1.13 canonical]]
 
 # 12 — Wave 1 Critical Fixes Consolidated (W8-Day3 Post-Critic Gate)
 

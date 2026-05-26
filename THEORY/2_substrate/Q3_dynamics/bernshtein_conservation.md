@@ -202,7 +202,7 @@ This file **IS the formal Bernshtein bridge** declared in `foundational_bridges_
 
 **Status: working draft. Cat BC target. Lemma 2.1 stated; 3-step proof outline (Tool A3 locality + Kato–Rellich + Ripser/GUDHI complexity) provided. Empirical verification deferred to NQ-242 Phase 1 (next claim: PH pipeline working file outline). CN10 contrastive reaffirmed: Bernshtein bridge is methodological import, not SCC reduction.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/bernshtein_conservation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q3_dynamics/bernshtein_conservation.md`
 **Created:** 2026-04-30 (W5 Day 4 PM Wave 3).
 **Lines:** ~210.
 **Promotion target:** post-NQ-261 closure + NQ-242 Phase 1 numerical confirmation; no immediate canonical edits.

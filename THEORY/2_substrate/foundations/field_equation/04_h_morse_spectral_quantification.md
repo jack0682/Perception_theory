@@ -29,7 +29,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§13 Theorem 4 Cat A; L-HMORSE-LOCAL Cat B; L-HMORSE-DECOMP Cat B conditional; L-BOUNDARY-MODE-EXCLUSION Cat C; T-PF-A1-PE Cat A) · [[../../canonical/DECLARATION|DECL-1.0]] (Q1 T8 boundary; Q3 stochastic dynamics) · [[01_ns_inspired_synthesis|01 NS-inspired synthesis (§6 catalog, §8.3 Path 3)]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation (3-block decomposition)]] · [[../CV114_H_MORSE_PACKAGEII/MOC_H_MORSE_packageII|CV114 H-Morse Package II MOC]] · [[../cssl/01_critic_evaluation|CSSL critic eval (anti-patterns)]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§13 Theorem 4 Cat A; L-HMORSE-LOCAL Cat B; L-HMORSE-DECOMP Cat B conditional; L-BOUNDARY-MODE-EXCLUSION Cat C; T-PF-A1-PE Cat A) · [[DECLARATION|DECL-1.0]] (Q1 T8 boundary; Q3 stochastic dynamics) · [[01_ns_inspired_synthesis|01 NS-inspired synthesis (§6 catalog, §8.3 Path 3)]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation (3-block decomposition)]] · [[MOC_H_MORSE_packageII|CV114 H-Morse Package II MOC]] · [[01_critic_evaluation|CSSL critic eval (anti-patterns)]]
 
 # 04 — H-Morse Spectral Quantification: Sc^{(2)} Bulk-Active Separation + Pr^{(bd)} Threshold
 

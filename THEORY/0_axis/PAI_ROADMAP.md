@@ -24,7 +24,7 @@ description: |
 **Goal**: ensure SCC's 102 claims remain navigable as substrate-canonical without erosion.
 
 **Tasks**:
-- Keep `THEORY/canonical/canonical.md` §13 untouched.
+- Keep `THEORY/2_substrate/canonical/canonical.md` §13 untouched.
 - Maintain claim count 102 across all MOCs.
 - Pause new SCC SEALs unless they advance a specific PAI OP.
 - macro_audit §9 hard-stop gates apply to all candidate new proof work.
@@ -175,7 +175,7 @@ The roadmap may stop or be re-planned at any of the following points:
 
 ## Reading Order for This Roadmap
 
-1. `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` (pivot doc, §1-§11)
+1. `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` (pivot doc, §1-§11)
 2. This file
 3. macro_audit_2026-05-20 §8 macro gaps and §9 hard stops
 4. The specific OP-PAI body the next session targets

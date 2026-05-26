@@ -109,7 +109,7 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 
 ## Step 7: Integration
 
-**Files:** `THEORY/working/INDEX.md`, `THEORY/CHANGELOG.md`
+**Files:** `THEORY/2_substrate/INDEX.md`, `THEORY/CHANGELOG.md`
 
 - [x] `observer_moduli/` added to INDEX.md (Session 1)
 - [x] Creation logged in CHANGELOG.md (Session 1)
@@ -326,7 +326,7 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 
 **OMS-2.0 overall (Session 6, 2026-05-08): CONDITIONAL ACCEPTED — three hard blockers resolved with theorem + computational witness. Conditions: H4 (rank-3 minor witness, COMP. CONFIRMED); $\Sigma_{\mathrm{SN}}$ (Arnold PROOF SKETCH); pseudo-Δ³ (full temporal Δ³ pending). Remaining sub-OPs for full OMS-2.0 Accepted: OP-OMS-032 (closed-form H4), OP-OMS-033 ($\Sigma_{\mathrm{SN}}$ specifics), OP-OMS-034 (full temporal Δ³).**
 
-**OMS-2.0 overall (Session 7, 2026-05-08): ACCEPTED — STATIC, FULL TEMPORAL CONDITIONAL ON OP-OMS-034.** Three sub-OPs resolved (032 CLOSED UNDER CERTIFIED WITNESS, 033 PROVED conditional fold theorem, 034 SEPARATED). Gap C1 theorem package (C1.1–C1.5) consolidated and corrected (rank equivalence requires $H_T \succ 0$; rigidity requires (Vertex) supplied by CW1+VP-3). Canonical Appendix OMS added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items.
+**OMS-2.0 overall (Session 7, 2026-05-08): ACCEPTED — STATIC, FULL TEMPORAL CONDITIONAL ON OP-OMS-034.** Three sub-OPs resolved (032 CLOSED UNDER CERTIFIED WITNESS, 033 PROVED conditional fold theorem, 034 SEPARATED). Gap C1 theorem package (C1.1–C1.5) consolidated and corrected (rank equivalence requires $H_T \succ 0$; rigidity requires (Vertex) supplied by CW1+VP-3). Canonical Appendix OMS added to `THEORY/2_substrate/canonical/canonical.md` with 20+ theorem-grade items.
 
 **OMS-2.0 overall (Session 8, 2026-05-08): ACCEPTED — FULL.** OP-OMS-034 CLOSED at COMPUTATIONALLY SUPPORTED level via VP-11 (faithful reduced temporal OMS test). 14/14 (Wit-T) witnesses confirmed; Δ³ branch map shows 19 branches with 7 λ_tr-unique. Canonical.md Appendix OMS extended with Temporal subsection M (Theorems T1–T8 + TS3). All five user-stated promotion criteria met. Equivalent fully-qualified form: "Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test)". No remaining hard blockers.
 
@@ -360,7 +360,7 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 - [x] C: `op_oms_033_sigma_sn_arnold.md` written. Theorem SN3 PROVED via Crandall–Rabinowitz; Lemma SN4 PROOF SKETCH (sub-OP OP-OMS-033b non-blocking). Status: PROVED as conditional fold theorem.
 - [x] D: `op_oms_034_temporal_delta3_status.md` written. Theorems TS1 + TS2. Static OMS-2.0 self-contained on $\Delta^2_{\mathrm{static}}$. Status: SEPARATED.
 - [x] E: `oms_2_0_accepted_audit.md` written. Verdict: **OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034**. Appendix OMS added to canonical.md.
-- [x] F: `open_problems.md`, `audit_log.md` (AUDIT-025 + W22–W25), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`, `oms_1_candidate.md` updated.
+- [x] F: `open_problems.md`, `audit_log.md` (AUDIT-025 + W22–W25), `canonical_promotion_checklist.md`, `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`, `THEORY/2_substrate/INDEX.md`, `oms_1_candidate.md` updated.
 
 **Status: COMPLETE (Session 7, 2026-05-08).**
 
@@ -459,7 +459,7 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 | 2026-05-07 | Session 1: Toy models | toy_models.md |
 | 2026-05-07 | Session 1: Open problems + audit | open_problems.md, audit_log.md, checkpoints.md |
 | 2026-05-07 | Session 1: Main document (OMS-0.1) | observer_moduli_space.md |
-| 2026-05-07 | Session 1: INDEX + CHANGELOG | THEORY/working/INDEX.md, THEORY/CHANGELOG.md |
+| 2026-05-07 | Session 1: INDEX + CHANGELOG | THEORY/2_substrate/INDEX.md, THEORY/CHANGELOG.md |
 | 2026-05-07 | Session 2: OMS-0.2 Readout + Landscape + Basin | readout_map_audit.md, observer_landscape_candidates.md, basin_stratification.md |
 | 2026-05-07 | Session 2: OMS-0.3 Core-Weight + Latent | core_weight_symmetry.md, latent_symmetry.md |
 | 2026-05-07 | Session 2: OMS-0.4 RG Relevance | rg_relevance_flow.md |
@@ -468,7 +468,7 @@ Progress tracker for the 7-step execution plan (see `plan.md`).
 | 2026-05-07 | Session 2: OMS-0.7 Integration | integration_with_scc.md |
 | 2026-05-07 | Session 2: OMS-1.0 Candidate + Checklist | oms_1_candidate.md, canonical_promotion_checklist.md |
 | 2026-05-07 | Session 2: Updates — OP/Audit/Definitions/Main | open_problems.md, audit_log.md, definitions.md, observer_moduli_space.md, daily_log.md |
-| 2026-05-07 | Session 2: INDEX + CHANGELOG (Task 27) | THEORY/working/INDEX.md, THEORY/CHANGELOG.md |
+| 2026-05-07 | Session 2: INDEX + CHANGELOG (Task 27) | THEORY/2_substrate/INDEX.md, THEORY/CHANGELOG.md |
 | 2026-05-07 | Session 3: VP-1 P-resolution audit | exp86_vp1_p_resolution_audit.py, vp1_pairs.json, vp1_summary.md, vp1_p_resolution_audit.md, vp1_counterexamples.md, vp1_results.md, vp1_p_resolution_audit_log.md |
 | 2026-05-08 | Session 4: VP-3 core-weight symmetry; VP-2 landscape; VP-4 basin; OMS-1.1 audit | exp87, exp88, vp3_initial_reading_log.md, vp3_core_weight_symmetry_results.md, vp2_observer_landscape_admissible.md, vp4_basin_stratification_results.md, oms_1_1_promotion_audit.md, vp3_symmetry_results.json, vp3_symmetry_summary.md, vp4_basin_results.json, vp4_basin_summary.md |
 | 2026-05-08 | Session 5: VP-6 effective DOF; OP-OMS-018 partial resolution; OMS-1.2 audit | vp6_effective_dof_jacobian.py, vp6_u_star_regular_path_test.py, vp6_initial_reading_log.md, effective_dof_theory.md, op_oms_018_regular_u_star.md, vp6_effective_dof.md, vp6_effective_dof_log.md, observer_landscape_admissible_class.md, oms_1_2_status_audit.md, vp6_jacobian_spectra.json, vp6_effective_dof_summary.md, vp6_u_star_path_results.json, vp6_u_star_path_summary.md |

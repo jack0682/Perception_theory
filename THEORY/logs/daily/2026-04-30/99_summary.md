@@ -16,12 +16,12 @@
 
 | File | Pre | Post | Δ | Type |
 |---|---|---|---|---|
-| `THEORY/canonical/canonical.md` | 1593 | **1664** | +71 | canonical edit |
-| `THEORY/canonical/theorem_status.md` | 299 | **338** | +39 | canonical edit |
-| `THEORY/canonical/theorem_status.md` | 412 | **507** | +95 | canonical edit |
+| `THEORY/2_substrate/canonical/canonical.md` | 1593 | **1664** | +71 | canonical edit |
+| `THEORY/2_substrate/canonical/theorem_status.md` | 299 | **338** | +39 | canonical edit |
+| `THEORY/2_substrate/canonical/theorem_status.md` | 412 | **507** | +95 | canonical edit |
 | `THEORY/CHANGELOG.md` | 4037 | **4165** | +128 | canonical edit |
-| `THEORY/working/MF/K_status_commitment.md` | — | **480** | +480 NEW | working (OAT-1) |
-| `THEORY/working/MF/mathematical_scaffolding_4tools.md` | — | **611** | +611 NEW | working (OAT-supplementary) |
+| `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` | — | **480** | +480 NEW | working (OAT-1) |
+| `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` | — | **611** | +611 NEW | working (OAT-supplementary) |
 
 **Total**: ~1424 canonical lines + working lines.
 

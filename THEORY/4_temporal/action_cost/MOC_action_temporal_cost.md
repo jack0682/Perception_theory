@@ -19,7 +19,7 @@ CV-1.15 봉인의 action-based 시간 비용 패키지: temporal succession 의 
 
 ## Core Files
 
-- [[00_goal]] — Goal statement
+- [[action_cost_00_goal]] — Goal statement
 - [[01_endpoint_failure]] — Endpoint failure 분석 (L-ENDPOINT-NONSEMI 기원)
 - [[01_proofs_cat_a]] — Cat A proofs
 - [[02_action_cost_definition]] — Action cost definition
@@ -44,7 +44,7 @@ CV-1.15 봉인의 action-based 시간 비용 패키지: temporal succession 의 
 ## Reading Order
 
 1. [[CV-1.15_SEAL]]
-2. [[00_goal]] · [[01_endpoint_failure]]
+2. [[action_cost_00_goal]] · [[01_endpoint_failure]]
 3. [[02_action_cost_definition]]
 4. [[03_dynamic_programming_theorem]] (T-ACT-DP)
 5. [[04_softmin_gibbs_semigroup]] (T-ACT-GIBBS)

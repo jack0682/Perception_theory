@@ -19,7 +19,7 @@ constraint_compliance:
   pai_canonical_edits: 0
 ---
 
-> [!nav] Parent: [[00_INDEX]] · Next: [[02_stage0_photon_point_process]] · Substrate: [[../../canonical/canonical|canonical.md (CV-1.20)]] · Parallel: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
+> [!nav] Parent: [[00_INDEX]] · Next: [[02_stage0_photon_point_process]] · Substrate: [[canonical|canonical.md (CV-1.20)]] · Parallel: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
 
 # Framework Master — Stratified Stochastic Kernel Pipeline
 

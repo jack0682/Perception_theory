@@ -28,7 +28,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§3.5, §3.7, §9.3, §13 Theorem 4, T-V5b-T-zero, T-σ-Lemma-1, L-HMORSE-LOCAL/DECOMP, L-BOUNDARY-MODE-EXCLUSION, T-OP6-B, OP-HMORSE-SADDLE L594) · [[../../canonical/DECLARATION|DECL-1.0]] · [[01_ns_inspired_synthesis|01 NS synthesis §8.2]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] §6]] · [[../../logs/daily/2026-05-20/04_dynamic_class_investigation|04 dynamic class §6]] · [[../cssl/01_critic_evaluation|CSSL critic §A.1 §D.3 §F.6 anti-patterns]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§3.5, §3.7, §9.3, §13 Theorem 4, T-V5b-T-zero, T-σ-Lemma-1, L-HMORSE-LOCAL/DECOMP, L-BOUNDARY-MODE-EXCLUSION, T-OP6-B, OP-HMORSE-SADDLE L594) · [[DECLARATION|DECL-1.0]] · [[01_ns_inspired_synthesis|01 NS synthesis §8.2]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] §6]] · [[04_dynamic_class_investigation|04 dynamic class §6]] · [[01_critic_evaluation|CSSL critic §A.1 §D.3 §F.6 anti-patterns]]
 
 # 03 — Modica-Mortola Jacobi Cat B Target for SCC Non-Uniform Critical H-Morse
 

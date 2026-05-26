@@ -44,7 +44,7 @@ last_updated: 2026-05-14
 
 ## Dependencies
 
-- Requires: A3 ($a_{cl} < 4$), $b_D = 0$, [[02_axioms_and_primitives]] F1-F3 axioms.
+- Requires: A3 ($a_{cl} < 4$), $b_D = 0$, [[sct_axioms_and_primitives]] F1-F3 axioms.
 - Feeds into: [[MOC_Q4_K_selection]] (DYN branch), [[MOC_H_MORSE_packageII]] (Eyring-Kramers prefactor).
 - Blocked by: **H-T*** (T_* registration; OP-0021) + **H-MORSE** (Local Cat B 가짐, Global Cat A path = OP-HMORSE-LOCAL-A).
 

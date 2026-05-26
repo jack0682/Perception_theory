@@ -2,7 +2,7 @@
 
 # L1-J: Cat-A Upgrade Attempt for the Hard-Bar / Active-Count Bridge
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1J_catA_upgrade_attempt.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1J_catA_upgrade_attempt.md`
 **Document type:** non-canonical working theorem candidate + Cat-A upgrade audit
 **Created:** 2026-05-02 (after L1-A through L1-I, L1-H2)
 **Status:** working; **THEOREM_CANDIDATE_STRONG**, not Cat-A; pending external audit and explicit decay-assumption commitment

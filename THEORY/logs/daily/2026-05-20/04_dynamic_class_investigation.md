@@ -11,7 +11,7 @@ priority: 3
 core_finding: "SCC ≠ Cahn-Hilliard at the algebraic spectrum level (L-PROJ-1 + L-PROJ-2 + corollary in §6). SCC's P_{TΣ_m} is rank-1 (removes only constant mode); CH's ∇² is mode-dependent (q² scaling). Therefore retraction #2 (z = 2.17 Model A wrong) does NOT promote to Model B (CH) either — SCC is in a *constrained Allen-Cahn (Rubinstein-Sternberg)* regime, or its own SCC-specific class. Universality class value (z) itself remains W9+ open."
 ---
 
-> [!nav] Linked: [[00_plan|today's plan §B.3]] · [[01_pre_brainstorm|reference §3]] · [[02_cg_numerical_verification|Priority 1]] · [[03_D_L_commutation|Priority 2]] · [[../2026-05-19/99_summary|§POST-SEAL EXTENSION retractions #1-3]] · [[../../../canonical/canonical|CV-1.18 T-PF-A1-SDE]]
+> [!nav] Linked: [[00_plan|today's plan §B.3]] · [[01_pre_brainstorm|reference §3]] · [[02_cg_numerical_verification|Priority 1]] · [[03_D_L_commutation|Priority 2]] · [[../2026-05-19/99_summary|§POST-SEAL EXTENSION retractions #1-3]] · [[canonical|CV-1.18 T-PF-A1-SDE]]
 
 # 04 — SCC Dynamic Class Investigation (W8-Day3 Priority 3)
 

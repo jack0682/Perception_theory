@@ -5,7 +5,7 @@
 **Session:** 2026-04-27 (W5 Day 1 AGGRESSIVE)
 **Target (from plan.md §3 Block 1, 09:00–09:30):** G0 user decision Option α/β/γ on σ-framework supporting lemmas/theorems canonical merge granularity.
 **This file covers:** Decision summary + corrected statement scoping (per `pre_brainstorm.md` §1.1/1.2/1.3) + default action.
-**Depends on reading:** `THEORY/canonical/canonical.md` §11.1 (Commitment 14), §13 (T-V5b-T entry as insertion anchor); `THEORY/logs/daily/2026-04-24/02_development.md` §3 (Lemma 1), §4 (Lemma 2), §5 (Theorem 1), `04_orbital_proofs.md` §1 (Theorem 3), §2 (Theorem 4), §3 (Lemma 3); `pre_brainstorm.md` §1 (technical hurdles).
+**Depends on reading:** `THEORY/2_substrate/canonical/canonical.md` §11.1 (Commitment 14), §13 (T-V5b-T entry as insertion anchor); `THEORY/logs/daily/2026-04-24/02_development.md` §3 (Lemma 1), §4 (Lemma 2), §5 (Theorem 1), `04_orbital_proofs.md` §1 (Theorem 3), §2 (Theorem 4), §3 (Lemma 3); `pre_brainstorm.md` §1 (technical hurdles).
 
 ---
 

@@ -522,7 +522,7 @@ The following items remain open after this working file:
 
 **Status**: Working draft. String-breaking analog formalized (Connection H direct exploitation). NQ-253 opened with Phase 1 (numerical, W7, Cat B) and Phase 2 (variational, W8–W10, Cat A) targets. NQ-200 entry identified (K=1→2 birth as simplest non-involution case). CN10 contrastive throughout. C(β) functional form (NQ-198k) identified as primary theoretical gap. QuEra validation pathway sketched (§9). Hard constraints verified (§10).
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/formation_birth_string_breaking.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q2_multiformation/formation_birth_string_breaking.md`
 **Created:** 2026-04-30 (W5 Day 4, post-OAT batch)
 **Lines:** ~390
 **NQ:** NQ-253 (Formation Birth via String-Breaking Analog)

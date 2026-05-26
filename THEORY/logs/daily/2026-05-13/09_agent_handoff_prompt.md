@@ -19,12 +19,12 @@ CV-1.15 Action-Based Temporal Succession Package가 완성되었다. 10 working 
 
 ## 필수 선행 독해 (에이전트 착수 전)
 
-1. `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` — §10 + §11 (READY FOR USER APPROVAL 판정 + exp89 결과)
-2. `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` — §1–§5 (canonical 삽입 draft blocks + 적용 순서)
+1. `THEORY/4_temporal/action_cost/09_final_audit.md` — §10 + §11 (READY FOR USER APPROVAL 판정 + exp89 결과)
+2. `THEORY/4_temporal/action_cost/10_patch_plan.md` — §1–§5 (canonical 삽입 draft blocks + 적용 순서)
 3. `CODE/experiments/results/exp89_results.json` — 수치 결과 확인
-4. `THEORY/canonical/canonical.md` §13 끝 — 삽입 위치
-5. `THEORY/canonical/theorem_status.md` — Cat A / Cat B 섹션 끝 + OP-0012 항목
-6. `THEORY/canonical/hypothesis_tree.md` H-COMP 가지
+4. `THEORY/2_substrate/canonical/canonical.md` §13 끝 — 삽입 위치
+5. `THEORY/2_substrate/canonical/theorem_status.md` — Cat A / Cat B 섹션 끝 + OP-0012 항목
+6. `THEORY/2_substrate/canonical/hypothesis_tree.md` H-COMP 가지
 7. `THEORY/CHANGELOG.md` 최상단
 8. `THEORY/logs/daily/2026-05-13/00_plan.md` — 오늘 deep work plan (Blocks A–G)
 9. `THEORY/logs/daily/2026-05-13/01_pre_brainstorm.md` — Q1–Q8 brainstorm
@@ -63,9 +63,9 @@ CV-1.15 Action-Based Temporal Succession Package가 완성되었다. 10 working 
 `canonical.md` 전체에서 다음 항목 grep 및 확인:
 
 ```bash
-grep -n "T-ACT-DP\|T-ACT-GIBBS\|L-ENDPOINT-NONSEMI\|OP-0012-SINK\|Sinkhorn-scaled\|action cost\|endpoint cost\|delta_eff" THEORY/canonical/canonical.md
-grep -n "T-ACT-DP\|T-ACT-GIBBS\|OP-0012-SINK" THEORY/canonical/theorem_status.md
-grep -n "H-COMP-ACTION\|H-COMP-SINK\|T-SINKHORN-PLAN" THEORY/canonical/hypothesis_tree.md
+grep -n "T-ACT-DP\|T-ACT-GIBBS\|L-ENDPOINT-NONSEMI\|OP-0012-SINK\|Sinkhorn-scaled\|action cost\|endpoint cost\|delta_eff" THEORY/2_substrate/canonical/canonical.md
+grep -n "T-ACT-DP\|T-ACT-GIBBS\|OP-0012-SINK" THEORY/2_substrate/canonical/theorem_status.md
+grep -n "H-COMP-ACTION\|H-COMP-SINK\|T-SINKHORN-PLAN" THEORY/2_substrate/canonical/hypothesis_tree.md
 ```
 
 충돌 확인 목록:

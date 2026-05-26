@@ -165,7 +165,7 @@ These are *patterns of speech* that overclaim what SCC-CT actually proves. Banne
 
 ### §3.7 "L-CLOSURE-LIFT replaces T7-Enhanced"
 
-**Why forbidden:** L-CLOSURE-LIFT *supersedes* T7-Enhanced *as the broadness statement* — it generalizes the closure-spectrum lower bound from "along closure direction" (T7-Enhanced narrow) to "uniformly on tangent space" (L-CLOSURE-LIFT broad). But T7-Enhanced as a canonical Cat A entry is **preserved** in `THEORY/canonical/canonical.md` (line 1152) for historical context and CN14 (multi-formation stability expansion).
+**Why forbidden:** L-CLOSURE-LIFT *supersedes* T7-Enhanced *as the broadness statement* — it generalizes the closure-spectrum lower bound from "along closure direction" (T7-Enhanced narrow) to "uniformly on tangent space" (L-CLOSURE-LIFT broad). But T7-Enhanced as a canonical Cat A entry is **preserved** in `THEORY/2_substrate/canonical/canonical.md` (line 1152) for historical context and CN14 (multi-formation stability expansion).
 
 **Allowed:**
 - ✓ "L-CLOSURE-LIFT (CV-1.16 Cat A) supersedes T7-Enhanced as the broadness statement."
@@ -276,4 +276,4 @@ The discipline of §IX is the discipline of *not regressing*. Every forbidden-wo
 
 ---
 
-*Chapter IX sealed within SCC-CT v0.1. References: `THEORY/canonical/canonical.md` §13 (Retracted section); `THEORY/CHANGELOG.md` (V-AFD discard 2026-05-13; R-2 archive 2026-05-13; CV-1.16 P7 promotion 2026-05-14); `THEORY/logs/daily/2026-05-13/41_v_afd_discard.md`, `51_r2_archive.md`; `THEORY/logs/daily/2026-05-14/01_pre_brainstorm.md §7 Rule R1-R6`. Next: `07_changelog.md`.*
+*Chapter IX sealed within SCC-CT v0.1. References: `THEORY/2_substrate/canonical/canonical.md` §13 (Retracted section); `THEORY/CHANGELOG.md` (V-AFD discard 2026-05-13; R-2 archive 2026-05-13; CV-1.16 P7 promotion 2026-05-14); `THEORY/logs/daily/2026-05-13/41_v_afd_discard.md`, `51_r2_archive.md`; `THEORY/logs/daily/2026-05-14/01_pre_brainstorm.md §7 Rule R1-R6`. Next: `07_changelog.md`.*

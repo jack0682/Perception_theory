@@ -4,9 +4,9 @@ date: 2026-05-12
 session_label: W7-Day2-AFD0-OP004
 canonical_version: CV-1.13 (unchanged, read-only)
 files_created:
-  - THEORY/working/AFD_0/op_afd_004_proof.md
+  - THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md
 files_modified:
-  - THEORY/working/AFD_0/afd_theorem_registry.md (pending: AFD-T7 Cat B upgrade)
+  - THEORY/2_substrate/foundations/AFD/afd_theorem_registry.md (pending: AFD-T7 Cat B upgrade)
   - THEORY/logs/weekly/2026-05-W2/weekly_draft_storming.md (pending: Day 2)
 ---
 
@@ -54,7 +54,7 @@ canonical/theorem_status/changelog 등은 수정하지 않았다 (working 단계
 
 ## 작업 2: OP-AFD-004 증명 — `op_afd_004_proof.md` 작성
 
-**출력:** `THEORY/working/AFD_0/op_afd_004_proof.md`
+**출력:** `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md`
 
 ### 핵심 판정: Cat B Resolved (qualitative positivity)
 
@@ -122,7 +122,7 @@ W7 strategic plan의 Track A (H-MORSE-Local Cat B):
 | 항목 | 결과 |
 |---|---|
 | Canonical 상태 변경 | 없음 (CV-1.13 그대로) |
-| 파일 생성 | `THEORY/working/AFD_0/op_afd_004_proof.md` (1개) |
+| 파일 생성 | `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md` (1개) |
 | 파일 수정 | 이 파일 + weekly draft (Day 2) |
 | AFD-T7 상태 | Lemma Candidate → Cat B 권장 (registry 업데이트 필요) |
 | OP-AFD-004 해결 수준 | **Cat B Resolved** (Strategy A: qualitative; Strategy B: c_low = 0.0221β) |

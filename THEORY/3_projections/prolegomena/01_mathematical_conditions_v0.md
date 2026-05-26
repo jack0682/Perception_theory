@@ -18,7 +18,7 @@ constraint_compliance:
   status: 'pre-formal mathematical vocabulary; 정리 0, 명제 0'
 ---
 
-> [!nav] Parent: [[../INDEX|working/INDEX.md]] · Companion: [[00_field_conditions_v0.md]] · Source: [[../../logs/daily/2026-05-21/conversation/00_index|2026-05-21 transcript]]
+> [!nav] Parent: [[INDEX|working/INDEX.md]] · Companion: [[00_field_conditions_v0.md]] · Source: [[../../logs/daily/2026-05-21/conversation/00_index|2026-05-21 transcript]]
 
 # Mathematical Conditions — Pure-Form Catalog v0
 

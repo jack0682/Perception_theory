@@ -17,12 +17,12 @@ constraint_compliance:
   scc_edits: 0
   excessive_math: 0 (사용자 명시 제약 준수)
 preceded_by:
-  - THEORY/working/macro_audit_2026-05-20.md (§11 verdict + §8 macro gaps)
+  - THEORY/0_axis/macro_audit_2026-05-20.md (§11 verdict + §8 macro gaps)
   - THEORY/logs/daily/2026-05-20/05_landscape_local_to_global.md (substrate honest limit)
   - User long-form reasoning (2026-05-20 evening, three messages on perception-action interpretation gap)
 ---
 
-> [!nav] Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · Substrate: [[canonical]] (CV-1.20) · Pair: [[PAI_ROADMAP]] · Daily: [[../logs/daily/2026-05-21/00_pivot_entry|2026-05-21 pivot entry]]
+> [!nav] Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · Substrate: [[canonical]] (CV-1.20) · Pair: [[PAI_ROADMAP]] · Daily: [[00_pivot_entry|2026-05-21 pivot entry]]
 
 # Perception-Action Interpretation Pivot (2026-05-21)
 
@@ -38,7 +38,7 @@ The previous main axis of SCC was *pre-objective cohesive formation*:
 
 This produced 71 Cat A + 20 Cat B + 6 Cat C + 5 Retracted = 102 claims about field-first boundary/formation emergence. These remain *substrate-canonical*.
 
-But the 2026-05-20 macro audit (`THEORY/working/macro_audit_2026-05-20.md` §11) showed that SCC is *fragile* exactly where it tries to be a *complete* perception theory. The deeper motivation — the one that started the project — was not "explain object emergence." It was:
+But the 2026-05-20 macro audit (`THEORY/0_axis/macro_audit_2026-05-20.md` §11) showed that SCC is *fragile* exactly where it tries to be a *complete* perception theory. The deeper motivation — the one that started the project — was not "explain object emergence." It was:
 
 > The interpretation used for perception and the interpretation required for action should not diverge. The system should not need to translate the world twice.
 
@@ -270,14 +270,14 @@ These three are recorded for OP-PAI-003 reference. *Choosing among them is part 
 
 ## §10 — Reading Order for Future Agents
 
-1. `THEORY/working/macro_audit_2026-05-20.md` — first.
+1. `THEORY/0_axis/macro_audit_2026-05-20.md` — first.
 2. This document — second.
-3. `THEORY/canonical/PAI_ROADMAP.md` — third (W9+ planning context).
+3. `THEORY/0_axis/PAI_ROADMAP.md` — third (W9+ planning context).
 4. `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` — fourth (the day the pivot was made).
 5. `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` — fifth (agent instructions).
-6. `THEORY/canonical/DECLARATION.md` (DECL-1.0) — substrate thesis, unchanged.
-7. `THEORY/canonical/canonical.md` — substrate body, unchanged.
-8. `THEORY/canonical/CV-1.20_SEAL.md` — most recent substrate seal.
+6. `THEORY/0_axis/DECLARATION.md` (DECL-1.0) — substrate thesis, unchanged.
+7. `THEORY/2_substrate/canonical/canonical.md` — substrate body, unchanged.
+8. `THEORY/2_substrate/canonical/seals/CV-1.20_SEAL.md` — most recent substrate seal.
 
 ---
 

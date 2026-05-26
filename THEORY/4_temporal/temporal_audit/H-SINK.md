@@ -5,7 +5,7 @@ status: Cat A — W7-FINAL 2026-05-10; partial OT closed via Theorem Partial-H-S
 created: 2026-05-10
 session: W7-T1
 scope: single-formation temporal, 3-component canonical fingerprint, Sinkhorn-Lipschitz stability
-predecessor: THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md (Lemma 8.2 Cat B, Lemma 9 Cat B)
+predecessor: THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md (Lemma 8.2 Cat B, Lemma 9 Cat B)
 closes: S-B2 (Lemma 8.2 Cat A) — conditionally
 hypothesis_tree: H-SINK (Phase 1 target)
 ---
@@ -37,7 +37,7 @@ CV-1.11. Count: **54A / 14B / 5C / 5R = 78 claims**. Next target: CV-1.12.
 
 ### 0.2 T-Temporal-Identity status
 
-**Working Cat B** (all four parts a, b, c, d) — not yet canonical. Source: `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` (Session W6 D5 evening).
+**Working Cat B** (all four parts a, b, c, d) — not yet canonical. Source: `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` (Session W6 D5 evening).
 
 | Part | Content | Status |
 |------|---------|--------|

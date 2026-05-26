@@ -45,7 +45,7 @@ consensus_baseline_used:
   W_double_well: "W''(1/2) = -1"
 ---
 
-> [!nav] Linked: [[01_ns_inspired_synthesis]] · [[02_kramers_prefactor_op_0005_attack]] (Cat B prefactor — complement) · [[07_critic_full_review]] §A · [[../../canonical/canonical|CV-1.18 canonical]] (§13 T-PF-A1-SDE/PE, T-P-F-ε0-K, Theorem 4) · [[../../canonical/theorem_status]] (L803 OP-0005-DYN, L594 OP-HMORSE-SADDLE) · [[../../canonical/DECLARATION|DECL-1.0]] (Q3 stochastic dynamics)
+> [!nav] Linked: [[01_ns_inspired_synthesis]] · [[02_kramers_prefactor_op_0005_attack]] (Cat B prefactor — complement) · [[07_critic_full_review]] §A · [[canonical|CV-1.18 canonical]] (§13 T-PF-A1-SDE/PE, T-P-F-ε0-K, Theorem 4) · [[theorem_status]] (L803 OP-0005-DYN, L594 OP-HMORSE-SADDLE) · [[DECLARATION|DECL-1.0]] (Q3 stochastic dynamics)
 
 # 09 — Freidlin-Wentzell Large Deviations for SCC Reflected Langevin: L-FW-KRAMERS-SCC Cat A Target (OP-0005-DYN Exponential-Rate Channel)
 

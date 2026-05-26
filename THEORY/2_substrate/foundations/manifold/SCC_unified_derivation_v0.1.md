@@ -14,7 +14,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[../../canonical/DECLARATION|DECL-1.0]] · [[../../canonical/canonical|canonical CV-1.17]] · [[../../canonical/theorem_status|theorem registry]] · [[../../canonical/hypothesis_tree|HT-3.8]] · [[../../canonical/auxiliary_structures_master|AUX-1.5]] · [[../../logs/daily/2026-05-19/99_summary|W8-Day2 EOD]] · [[../../logs/daily/2026-05-19/02_H5_morse_spinodal|02_H5]] · [[../../logs/daily/2026-05-19/03_T_star_fixed_point|03_T_star]]
+> [!nav] Linked: [[DECLARATION|DECL-1.0]] · [[canonical|canonical CV-1.17]] · [[theorem_status|theorem registry]] · [[hypothesis_tree|HT-3.8]] · [[auxiliary_structures_master|AUX-1.5]] · [[THEORY/logs/daily/2026-05-19/99_summary|W8-Day2 EOD]] · [[02_H5_morse_spinodal|02_H5]] · [[03_T_star_fixed_point|03_T_star]]
 
 # SCC Unified Derivation from Foundation (v0.1) — Cat C SKETCH
 
@@ -2180,7 +2180,7 @@ $$
 
 는 centroid, orientation, eigenvalue 성분으로 분해된다.
 
-**CoC anchor (§7.7).** canonical §13 working-candidate T-σ-Inherit (Session W 2026-05-06), `THEORY/working/MF/sigma_inherit_k_jump.md` §8b; `scc/sigma_rich.py` (SigmaRich namedtuple, derived diagnostic, CN5 4-energy independence 비위배).
+**CoC anchor (§7.7).** canonical §13 working-candidate T-σ-Inherit (Session W 2026-05-06), `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` §8b; `scc/sigma_rich.py` (SigmaRich namedtuple, derived diagnostic, CN5 4-energy independence 비위배).
 
 ---
 
@@ -2243,7 +2243,7 @@ Gap condition $\lambda_1<\lambda_2$ 가 가설.
 
 **수치 anchor.** exp84 5/5 PASS (Session X 2026-05-06, scenarios A=CONT, B=MERGE centroid, C=MERGE orientation, D=SPLIT direction, E=BIRTH). Anchors parts (a, b, d-direction, e); (c) 와 (d-σ_standard) 는 미해결.
 
-**CoC anchor (§7.8).** canonical §13 Session W working candidate T-σ-Inherit; `THEORY/working/MF/sigma_inherit_k_jump.md` §8b; `theorem_status.md` Open Problems Catalog OP-0008 sub-problems table.
+**CoC anchor (§7.8).** canonical §13 Session W working candidate T-σ-Inherit; `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` §8b; `theorem_status.md` Open Problems Catalog OP-0008 sub-problems table.
 
 ---
 
@@ -3634,7 +3634,7 @@ Photometric likelihood $\mathcal{L}_{\mathrm{obs}}$은 $\tilde{u}_t^{\mathrm{pix
 
 **분류:** **Cat A** (canonical T-ST-5a, CV-1.6).
 
-**CoC anchor:** canonical §16 T-ST-5a + `THEORY/working/MF/tst5a_hard_depth_locking_proof.md` + exp02-NEB (`results/exp02_neb/k_stability.csv`).
+**CoC anchor:** canonical §16 T-ST-5a + `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md` + exp02-NEB (`results/exp02_neb/k_stability.csv`).
 
 ---
 
@@ -3697,7 +3697,7 @@ $$\boxed{d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\,\mathrm{Core}
 - $\partial\,\mathrm{Core}(\mathrm{PersComp}(\tilde{u}^*))$: PersComp core의 위상적 경계
 - $\rho_{\mathrm{bd\text{-}band}} \leq 2\sqrt{\alpha/\beta}$: 경계 band 너비 (명시적 상수)
 
-**증명 요약 (B1–B4, 모두 폐쇄).** **B1 (위상적 분리자):** $C_j^{\mathrm{int}}$에서 $C_j^{\mathrm{ext}}$로의 임의의 경로는 $\partial C_j \subset B_t$를 가로지른다 — $B_t$는 vertex separator. **B2 (곡선 Hausdorff):** matched-asymptotic expansion: $u^*(x) = u_0(r/\xi) + \xi\kappa_{\mathrm{mean}} v_1(r/\xi) + O((\kappa_{\mathrm{max}}\xi)^2)$, Pöschl-Teller correction $\lvert v_1'(s) \rvert \leq 1$; H4 하에서 $d_H \leq 1.37\xi < 2(\alpha/\beta)^{1/2}$. **B3 (Stereo conditioning):** $G^{\mathcal{P}}_t$가 depth-gap 엣지를 끊음; stereo graph 위의 PersRidge가 동일한 bound를 상속. **B4 ($\rho_{\mathrm{bd}}$ 보정):** $\rho_{\mathrm{bd}} = 1/(4\xi)$이 $\rho_{\mathrm{bd}} \cdot \xi = 1/4$를 줌; 1D bound $\Delta_{1D} = \xi \cdot \mathrm{arctanh}(1/\sqrt{2}) \approx 1.246\sqrt{\alpha/\beta}$ (Session J). 전체 증명: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`.
+**증명 요약 (B1–B4, 모두 폐쇄).** **B1 (위상적 분리자):** $C_j^{\mathrm{int}}$에서 $C_j^{\mathrm{ext}}$로의 임의의 경로는 $\partial C_j \subset B_t$를 가로지른다 — $B_t$는 vertex separator. **B2 (곡선 Hausdorff):** matched-asymptotic expansion: $u^*(x) = u_0(r/\xi) + \xi\kappa_{\mathrm{mean}} v_1(r/\xi) + O((\kappa_{\mathrm{max}}\xi)^2)$, Pöschl-Teller correction $\lvert v_1'(s) \rvert \leq 1$; H4 하에서 $d_H \leq 1.37\xi < 2(\alpha/\beta)^{1/2}$. **B3 (Stereo conditioning):** $G^{\mathcal{P}}_t$가 depth-gap 엣지를 끊음; stereo graph 위의 PersRidge가 동일한 bound를 상속. **B4 ($\rho_{\mathrm{bd}}$ 보정):** $\rho_{\mathrm{bd}} = 1/(4\xi)$이 $\rho_{\mathrm{bd}} \cdot \xi = 1/4$를 줌; 1D bound $\Delta_{1D} = \xi \cdot \mathrm{arctanh}(1/\sqrt{2}) \approx 1.246\sqrt{\alpha/\beta}$ (Session J). 전체 증명: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §9–§12`.
 
 **수치 검증.** exp06: shadow 5/5 ratio 4.09, blur 5/5 ratio 50.8 — 예측 경계 폭과 일치.
 
@@ -3707,7 +3707,7 @@ $$\boxed{d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\,\mathrm{Core}
 
 **분류:** **Cat A conditional H1–H5** (canonical T-OP6-B, CV-1.7 Session K).
 
-**CoC anchor:** canonical §5.3b T-OP6-B (full statement, L375+) + canonical §13 Cat A T-OP6-B entry (L1640+) + `THEORY/working/MF/op_0006_boundary_precision.md §9–§12` + exp06.
+**CoC anchor:** canonical §5.3b T-OP6-B (full statement, L375+) + canonical §13 Cat A T-OP6-B entry (L1640+) + `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §9–§12` + exp06.
 
 ---
 

@@ -2,7 +2,7 @@
 
 # L1-D: Internal Unimodality and No-Extra-Bar Criterion
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1D_no_extra_bar.md`  
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1D_no_extra_bar.md`  
 **Document type:** non-canonical working formalization.  
 **Created:** 2026-05-02, after L1-A, L1-B, and L1-C.  
 **Status:** lemma-candidate layer only; no canonical promotion.

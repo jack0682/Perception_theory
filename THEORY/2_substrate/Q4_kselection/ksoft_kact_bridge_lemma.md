@@ -2,20 +2,20 @@
 
 # WQ-2: $K_{\mathrm{soft}}$ / $K_{\mathrm{act}}$ Bridge Lemma
 
-**File:** `THEORY/working/MF/ksoft_kact_bridge_lemma.md`
+**File:** `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md`
 **Document type:** Working-grade bridge-lemma analysis (non-canonical).
 **Created:** 2026-05-02 (WQ-2 of layered ambient-state architecture work queue).
 **Status:** working draft. Bridge lemma stated as candidate; failure modes enumerated; computational diagnostics specified; WQ-1 retry decision rule provided.
 
 **Companion artifacts:**
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` — Layer I/II/III definitions, $K_{\mathrm{soft}}^\phi$ (§6.4), $K_{\mathrm{act}}^\varepsilon$ (§6.2), $S_A^\varepsilon$ (§7), regime discipline (§9).
-- `THEORY/working/MF/layered_ambient_architecture_next_work.md` — WQ-2 specification.
-- `THEORY/working/MF/nq242c_counterexample_protocol.md` — WQ-1 protocol.
-- `THEORY/working/MF/nq242c_results.md` — WQ-1 F2 outcome.
-- `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md` — WQ-LAT-1 reservoir-resolution sweep; integer morphology stable, default smooth envelope unstable.
-- `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md` — WQ-LAT-1.B phi-envelope refinement; sub-threshold suppressing envelopes restore tested chart-invariance.
-- `THEORY/working/E/soft_K_definition.md` — pre-existing $K_{\mathrm{soft}}$ definition with (φ-sat) and (φ-lin) families and CSEH stability proof. **This memo reuses it; it does not redefine it.**
-- `THEORY/working/MF/F_Kstep_K_triple.md` — 4-quantity bridge ($\mathcal{F}, K_{\mathrm{step}}, K_{\mathrm{act}}, K_{\mathrm{field}}$); BC-1 well-separated bijection (R23 generic regime fails BC-1).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` — Layer I/II/III definitions, $K_{\mathrm{soft}}^\phi$ (§6.4), $K_{\mathrm{act}}^\varepsilon$ (§6.2), $S_A^\varepsilon$ (§7), regime discipline (§9).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_next_work.md` — WQ-2 specification.
+- `THEORY/2_substrate/multiformation/nq242c_counterexample_protocol.md` — WQ-1 protocol.
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — WQ-1 F2 outcome.
+- `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_results.md` — WQ-LAT-1 reservoir-resolution sweep; integer morphology stable, default smooth envelope unstable.
+- `THEORY/2_substrate/multiformation/wq_lat1b_phi_envelope_refinement_results.md` — WQ-LAT-1.B phi-envelope refinement; sub-threshold suppressing envelopes restore tested chart-invariance.
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` — pre-existing $K_{\mathrm{soft}}$ definition with (φ-sat) and (φ-lin) families and CSEH stability proof. **This memo reuses it; it does not redefine it.**
+- `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` — 4-quantity bridge ($\mathcal{F}, K_{\mathrm{step}}, K_{\mathrm{act}}, K_{\mathrm{field}}$); BC-1 well-separated bijection (R23 generic regime fails BC-1).
 - `CODE/scripts/ksoft_kact_diagnostics.py` — companion diagnostics script.
 
 ---

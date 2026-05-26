@@ -25,8 +25,8 @@ THEORY/working/<topic>.md         active theory development (one file per topic)
          |
          |  proof + review + tests + user merge decision
          v
-THEORY/canonical/canonical.md     authoritative — one-way only
-THEORY/canonical/theorem_status.md  index updated in same merge
+THEORY/2_substrate/canonical/canonical.md     authoritative — one-way only
+THEORY/2_substrate/canonical/theorem_status.md  index updated in same merge
 THEORY/CHANGELOG.md               session log entry recorded
 ```
 

@@ -303,6 +303,6 @@ Upon completion of #1-#4: full **(R1)+(R2) rigorous proof** of σ_rich Aut-invar
 
 **Status: working draft. Task #1 complete. Centroid formal derivation: well-definedness (Cat A), Aut(G) covariance (Cat A, Theorem 5.1), $S_{K_{\mathrm{field}}}$ invariance (Cat A, Theorem 6.1), wreath-product invariance of multi-set features (Cat A, Theorem 6.3), embedding canonicalness (Cat A, Proposition 7.1), uniqueness as first moment (Cat A, Theorem 8.1), distinguishing power (Cat A constructive, Theorem 8.2), continuity through K-jumps (Cat A under mass-conservation; Continuity claim 9.1 → Φ_rich §3.3(b) justification). All hard constraints verified. CN10 contrastive preserved. Promotion target: (R1) Aut-invariance proof centroid sub-piece — Cat A everywhere completed. Next: Task #2 σ_rich orientation tensor Θ_j formal derivation.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_centroid_derivation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_centroid_derivation.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7 W9+ Cat A everywhere proof completion (combined with Tasks #2-4).

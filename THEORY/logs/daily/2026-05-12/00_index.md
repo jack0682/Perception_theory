@@ -63,4 +63,4 @@ hypothesis_tree_at_start: HT-3.5
 ## 참고: 전일 생성 분석 문서
 
 - `THEORY/logs/daily/2026-05-11/10_post_seal_session.md` — H-MORSE 감사 + AFD 분석 요약
-- CV114 감사 전체: `THEORY/working/CV114_H_MORSE_PACKAGEII/00_index.md` ~ `10_agent_handoff_prompt.md`
+- CV114 감사 전체: `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/h_morse_packageII_00_index.md` ~ `10_agent_handoff_prompt.md`

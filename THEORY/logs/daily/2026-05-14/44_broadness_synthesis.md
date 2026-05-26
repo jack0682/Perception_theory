@@ -172,7 +172,7 @@ After CV-1.16 H-MORSE-Local Cat B / Cat A, the CV-1.17+ Package II / Eyring-Kram
 | `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.md` | numerical summary |
 
 Pending:
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` — final attack record in CV114
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` — final attack record in CV114
 - `THEORY/logs/daily/2026-05-14/49_broadness_summary.md` — extension session summary
 
 ---

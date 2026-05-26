@@ -12,7 +12,7 @@ prior_step: 2026-05-18 AUX-1.5 §4.6.6 / §4.9.5 (registry-level diagnosis)
 next_step: §5 의 T-P-F-ε0-K regime restriction draft + cross-ref in 03_T_star_fixed_point.md §5
 ---
 
-> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[03_T_star_fixed_point]] · [[../../canonical/auxiliary_structures_master|AUX-1.5 §4.6.6/§4.9.5]] · [[../../canonical/canonical|canonical §13 T-P-F-ε0-K L1818-1833]]
+> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[03_T_star_fixed_point]] · [[auxiliary_structures_master|AUX-1.5 §4.6.6/§4.9.5]] · [[canonical|canonical §13 T-P-F-ε0-K L1818-1833]]
 
 # 02 — H5 (Morse Stability, Spinodal Goldstone Mode Degeneracy) — Deep Attack
 
@@ -26,14 +26,14 @@ next_step: §5 의 T-P-F-ε0-K regime restriction draft + cross-ref in 03_T_star
 ## §0 Pre-work xref check (§15.1 의무 기록)
 
 ```bash
-$ grep -nE "Morse stability|H5\b|spinodal.*degenerate" THEORY/canonical/canonical.md
+$ grep -nE "Morse stability|H5\b|spinodal.*degenerate" THEORY/2_substrate/canonical/canonical.md
 # Result: T-P-F-ε0-K (L1820 (H5) Morse stability) + L1831 (H5 holds generically) + L2495 SB7 (Σ_Hess = Σ_T8 codim-1)
 # = 3 hits, 모두 T-P-F-ε0-K 가정 어휘 또는 Σ_Hess 일치 (수학적 content 부재)
 
 $ grep -rn "H5_morse|morse_spinodal" THEORY/working/
 # Result: 0 hits (clean slate)
 
-$ grep -nE "§4\.6\.6|§4\.9\.5" THEORY/canonical/auxiliary_structures_master.md
+$ grep -nE "§4\.6\.6|§4\.9\.5" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 # Result: §4.6.6 (H5 new COB-violation entry) + §4.9.5 (H5 U-잔류 diagnosis)
 # = 2 hits, registry-level diagnosis only
 ```

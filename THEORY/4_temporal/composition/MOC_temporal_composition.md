@@ -19,7 +19,7 @@ last_updated: 2026-05-14
 
 ## Core Files
 
-- [[00_goal]] — Goal statement
+- [[composition_00_goal]] — Goal statement
 - [[01_definitions]] — Definitions
 - [[02_op0012_cc_stablek]] — OP-0012-CC stable-K
 - [[03_gap_audit]] — Gap audit
@@ -28,7 +28,7 @@ last_updated: 2026-05-14
 
 ## Reading Order
 
-1. [[00_goal]]
+1. [[composition_00_goal]]
 2. [[01_definitions]]
 3. [[02_op0012_cc_stablek]]
 4. [[03_gap_audit]]

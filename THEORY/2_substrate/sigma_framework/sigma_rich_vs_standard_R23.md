@@ -441,6 +441,6 @@ If (W3) FAIL: NQ-242c-only result — graph-class-dependence register; CN17 univ
 
 **Status: working draft. Task #35 complete (design phase). σ_rich vs σ_standard equivalence + discrimination test on R23 canonical dataset designed. 4 R23 configurations (F=1, F=2-H, F=2-V, F=9); 2 tests (E1 compatibility, E2 strict discrimination); cross-validation against NQ-242c (T²_20). OP-0009-Emp partial closure target at Cat B post-execution. Numerical script outline at CODE/scripts/sigma_rich_vs_standard_R23.py (NOT run); ~40 min runtime; depends on scc/sigma_rich.py module (Task #58 in_progress). All hard constraints verified. Forward: W6 Day 1-3 scc/sigma_rich.py completion → W6 Day 4 execution.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_vs_standard_R23.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_vs_standard_R23.md`
 **Created:** 2026-04-30 (W5 Day 4 PM).
 **Promotion target:** Commitment 18 CV-1.7 packet supplementary anchor (E1+E2 PASS strengthens promotion confidence).

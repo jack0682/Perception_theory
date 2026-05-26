@@ -32,7 +32,7 @@ $$\boxed{\mathbf{d}(u) \;=\; (\mathsf{Bind},\;\mathsf{Sep},\;\mathsf{Inside},\;\
 
 ## §3. Predicate-Energy Bridge (Cat A)
 
-Two of the four components are tied to specific energy terms by **exact bridges** (registered Cat A in `THEORY/canonical/canonical.md` §13):
+Two of the four components are tied to specific energy terms by **exact bridges** (registered Cat A in `THEORY/2_substrate/canonical/canonical.md` §13):
 
 ### §3.1 Sep — exact $u$-weighted bridge
 
@@ -141,7 +141,7 @@ $$\mathcal{E}_{\mathrm{tr}}(u_t, u_s, \mathbf{M}) \;=\; \langle \mathbf{M},\; c[
 
 with self-referential fingerprint cost $c[u_t, u_s]$, entropic regularization $\varepsilon_{\mathrm{OT}} > 0$, unbalanced partial OT structure (E1-E4).
 
-**CV-1.15 extension.** Action-Based Temporal Succession Package (CV-1.15) provides an alternative *action-cost* formulation $c^{\mathrm{act}}_{i \to k}$ satisfying T-ACT-DP Bellman composition (Cat A); see `THEORY/canonical/canonical.md` §13 CV-1.15 Cat A insert. The action-cost form is *composition-compatible* in a way the standard $c[u_t, u_s]$ is not (Sinkhorn plan semigroup generically fails — T-SINKHORN-PLAN-SEMIGROUP-FAILS Cat R / OPEN warning).
+**CV-1.15 extension.** Action-Based Temporal Succession Package (CV-1.15) provides an alternative *action-cost* formulation $c^{\mathrm{act}}_{i \to k}$ satisfying T-ACT-DP Bellman composition (Cat A); see `THEORY/2_substrate/canonical/canonical.md` §13 CV-1.15 Cat A insert. The action-cost form is *composition-compatible* in a way the standard $c[u_t, u_s]$ is not (Sinkhorn plan semigroup generically fails — T-SINKHORN-PLAN-SEMIGROUP-FAILS Cat R / OPEN warning).
 
 ## §10. The 4-term independence commitment (CN5)
 
@@ -218,4 +218,4 @@ The following energy-level constructions are excluded (Cat R `06_forbidden_claim
 
 ---
 
-*Chapters IV & V sealed within SCC-CT v0.1. References: `THEORY/canonical/canonical.md` §7 (Energy), §8 (Diagnostic Vector), §13 (Cat A theorems on energy and predicates), §14 CN5 (4-term independence). Next: `04_theorem_registry.md` (Ch. VI Static Core Theorems + Ch. VII Computational Validation).*
+*Chapters IV & V sealed within SCC-CT v0.1. References: `THEORY/2_substrate/canonical/canonical.md` §7 (Energy), §8 (Diagnostic Vector), §13 (Cat A theorems on energy and predicates), §14 CN5 (4-term independence). Next: `04_theorem_registry.md` (Ch. VI Static Core Theorems + Ch. VII Computational Validation).*

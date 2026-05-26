@@ -171,7 +171,7 @@ This is the strongest defensible mathematical promotion at the end of Session 8.
 
 ## §8. What is canonical now (final)
 
-The Appendix OMS in `THEORY/canonical/canonical.md` is augmented (Gate 7) with the **Temporal Extension subsection** containing:
+The Appendix OMS in `THEORY/2_substrate/canonical/canonical.md` is augmented (Gate 7) with the **Temporal Extension subsection** containing:
 
 - Definitions T1–T5.
 - Theorems T6 (PROVED conditional on (Wit-T) — CONFIRMED).

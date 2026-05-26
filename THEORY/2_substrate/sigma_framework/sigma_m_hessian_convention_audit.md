@@ -70,8 +70,8 @@ If NQ-187 + canonical convention map differs in ways not captured above: deeper 
 - `working/SF/symmetry_moduli.md` §3.3 — R22 axis-aligned analysis (lines 100-156).
 - `working/SF/sigma_theorem4_canonical_revision.md` §2.5 (Issue #3 deeper audit insight) — refined reconciliation framework.
 - `working/SF/nq187b_L_extrapolation.md` §2.6.1-§2.6.2 (Issue #3 reconciliation) — multinomial factor 6 + measurement-position analysis.
-- `THEORY/canonical/canonical.md` §13 T-σ-Theorem-4 entry — canonical (ii) statement.
-- `THEORY/canonical/theorem_status.md` line 196 — C-0716 row with continuum-vs-discrete caveat.
+- `THEORY/2_substrate/canonical/canonical.md` §13 T-σ-Theorem-4 entry — canonical (ii) statement.
+- `THEORY/2_substrate/canonical/theorem_status.md` line 196 — C-0716 row with continuum-vs-discrete caveat.
 
 ---
 

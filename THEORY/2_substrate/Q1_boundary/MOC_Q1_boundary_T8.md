@@ -56,7 +56,7 @@ T8 위상전이 조건 $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ 가 성�
 
 ## Dependencies
 
-- Requires: [[02_axioms_and_primitives]] (A1', A3, B-axioms), [[03_energy_and_diagnostics]] (E_cl, E_sep, E_bd).
+- Requires: [[sct_axioms_and_primitives]] (A1', A3, B-axioms), [[sct_energy_and_diagnostics]] (E_cl, E_sep, E_bd).
 - Feeds into: [[MOC_Q2_multi_formation]] (multi-formation), [[MOC_H_MORSE_packageII]] (H-MORSE prerequisite via H-MORSE-LOCAL).
 - Blocked by: H-κ, H-μ0 (무조건화); H-σ4 (σ framework).
 

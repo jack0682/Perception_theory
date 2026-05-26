@@ -16,7 +16,7 @@
 ### §1.1 The conflict
 
 plan.md §5 success criterion 1 reads:
-> 1. `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` is **created** (working-grade document, NOT canonical).
+> 1. `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` is **created** (working-grade document, NOT canonical).
 
 plan.md §7 lists the same path as the **likely** Day 7 deliverable.
 
@@ -34,7 +34,7 @@ I take the prompt's hard constraint as authoritative (§8.1: "canonical 직접 �
 
 **Why this satisfies plan.md §5.** The criterion states "the document … contains a theorem candidate with explicit hypothesis package" + "error terms are explicit" + "Φ_res is formalized" + "relation to T-L1-F is explicit" + "non-claims preserved" + "next step identified". `02_L1M_proof_development.md` satisfies each of these criteria with identical content quality to a working/ document; only the *file path* differs.
 
-**Recommended user follow-up.** Copy `02_L1M_proof_development.md` to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with the following minimal header changes:
+**Recommended user follow-up.** Copy `02_L1M_proof_development.md` to `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` with the following minimal header changes:
 - Title: `# L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ — Working Draft`
 - Status: `working-grade theorem candidate; Cat-B sketched; CV-1.6 promotion path TBD`
 - Predecessor: `T-L1-F (canonical CV-1.5.2, 2026-05-02)`
@@ -165,7 +165,7 @@ In particular, L-M does NOT:
 - predict $\sigma^A(t^{*+})$ from $\sigma^A(t^{*-})$;
 - characterize K-jump-event geometry $\mathcal M$ (which slots merge, centroids, alignment);
 - bridge static $\sigma^A$ to dynamic $\sigma^A$ trajectories;
-- discharge Lemma 4.4.1(c) Cat C status in `THEORY/working/MF/sigma_multi_trajectory.md` §4.2.
+- discharge Lemma 4.4.1(c) Cat C status in `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` §4.2.
 
 OP-0008 retains 🟠 HIGH severity post-L-M.
 

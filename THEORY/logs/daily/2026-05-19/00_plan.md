@@ -20,7 +20,7 @@ coc_enforcement_level: strict
 expected_session_count: 1
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[00_index]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[../MAIN_PROMPT_v3]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[00_index]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[MAIN_PROMPT_v3]]
 
 # 00 — Plan (2026-05-19, W8-Day2)
 
@@ -217,20 +217,20 @@ AUX-1.0 → AUX-1.5 (5 amendments):
 
 ```bash
 # 1. 현재 canonical state 확인 (어제 AUX 작업이 stale reference에 기반했는지 검증)
-grep -nE "current = \*\*CV-|claims" THEORY/canonical/theorem_status.md | head -10
+grep -nE "current = \*\*CV-|claims" THEORY/2_substrate/canonical/theorem_status.md | head -10
 
 # 2. Working files 존재
 ls -la THEORY/logs/daily/2026-05-19/02_H5_morse_spinodal.md
 ls -la THEORY/logs/daily/2026-05-19/03_T_star_fixed_point.md
 
 # 3. canonical.md mtime 불변
-ls -la THEORY/canonical/canonical.md | awk '{print $6, $7, $8}'
+ls -la THEORY/2_substrate/canonical/canonical.md | awk '{print $6, $7, $8}'
 
 # 4. 본 plan 파일 frontmatter
 head -25 THEORY/logs/daily/2026-05-19/00_plan.md
 
 # 5. AUX-1.5 마감 보존
-grep -n "AUX-1.5" THEORY/canonical/auxiliary_structures_master.md | head -3
+grep -n "AUX-1.5" THEORY/2_substrate/canonical/auxiliary_structures_master.md | head -3
 ```
 
 ---

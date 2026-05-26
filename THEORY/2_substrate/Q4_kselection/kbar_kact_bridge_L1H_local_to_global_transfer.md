@@ -2,7 +2,7 @@
 
 # L1-H: Local-to-Global Barcode Transfer
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1H_local_to_global_transfer.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1H_local_to_global_transfer.md`
 **Document type:** non-canonical working theorem candidate + counterexample register
 **Created:** 2026-05-02 (after L1-A through L1-G)
 **Status:** working; partial theorem with explicit residual proof obligations; not theorem-grade; not Cat-A

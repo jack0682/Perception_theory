@@ -34,7 +34,7 @@ prerequisite: 01_pre_brainstorm.md 읽기 (또는 사용자 직접 결정)
 **Rationale.** state report §7.5 권장 1순위. P-F-A1 Package I 전체 Cat A (canonical) 이 Package II 진입의 토대를 마련함 → SDE 존재 + Gibbs 불변 + Poincaré 부등식. Package II = Eyring-Kramers prefactor = Hessian determinant 필요.
 
 **First step (5/14 첫 작업).**
-- `THEORY/working/SF/sigma_m_hessian_convention_audit.md` 열어서 prerequisite 점검.
+- `THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md` 열어서 prerequisite 점검.
 - Allen-Cahn Morse 전이 문헌 (Bates-Fife-Wang 1997, Fei-Wang-Zhou 2019) + T7-Enhanced Cat A 결합 가능성 평가.
 - 5/14 종료까지: H-MORSE 일반 증명 *시도 가능* 한 lemma 구조 (P-Hessian-Reg + P-Spectrum-Lower 등 ~3-5 lemmas) 의 working draft.
 
@@ -49,7 +49,7 @@ prerequisite: 01_pre_brainstorm.md 읽기 (또는 사용자 직접 결정)
 **Rationale.** Q6 σ-Inheritance 의 *핵심 미해결*. R-2 가 archive 되었지만 R-2 의 stratification insight (centroid+orientation Cat B / σ_standard Cat C) 가 정직한 분류였음을 보여줌. canonical OP-0008-MERGE-σ part c 직격.
 
 **First step.**
-- `THEORY/working/MF/sigma_inherit_k_jump.md` §3.3(d) + `THEORY/working/MF/sigma_rich_phi_proof.md` Conjecture 8.1 정독.
+- `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` §3.3(d) + `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md` Conjecture 8.1 정독.
 - Wigner-von Neumann avoided-crossing theorem 의 SCC 변형 가능성 평가.
 - 5/14 종료까지: Cat C → Cat B 시도의 working draft (lemma structure proposal).
 

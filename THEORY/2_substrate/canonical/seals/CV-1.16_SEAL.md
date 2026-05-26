@@ -119,12 +119,12 @@ User choice (plan-mode 2026-05-14): **(C2′) active-set form** over strict-inte
 
 | File | Change |
 |------|--------|
-| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (L-CLOSURE-LIFT entry after CV-1.15 Cat A block); §13 Cat B insert (D-HMORSE-LOCAL Definition + L-HMORSE-LOCAL + L-HMORSE-DECOMP entries after CV-1.15 Cat B block); §13 Cat C insert (L-BOUNDARY-MODE-EXCLUSION at end of Cat C section). Per-block CV-1.16 count notes. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.16; CV-1.16 count update line after CV-1.15 line; CV-1.16 section block (4-row table + OP-HMORSE-BROADNESS retirement + non-overclaim + methodological highlight + audit reference). |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — W7-Day5 extension CV-1.16 SEALED header after CV-1.15 SEALED line; 다음 목표 line → CV-1.17 (Package II + OP-HMORSE-LOCAL-A + OP-HMORSE-SBM + §F Step 2 + others); H-MORSE row in §가설 상태 요약 OPEN → PARTIALLY CLOSED; Q3 H-MORSE block fully rewritten with CV-1.16 partial closure status (4 lemma summary, Cat A path, unlocks); HT-3.7 changelog row added. |
-| `THEORY/canonical/CV-1.16_SEAL.md` | **CREATED** (this document). |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (L-CLOSURE-LIFT entry after CV-1.15 Cat A block); §13 Cat B insert (D-HMORSE-LOCAL Definition + L-HMORSE-LOCAL + L-HMORSE-DECOMP entries after CV-1.15 Cat B block); §13 Cat C insert (L-BOUNDARY-MODE-EXCLUSION at end of Cat C section). Per-block CV-1.16 count notes. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.16; CV-1.16 count update line after CV-1.15 line; CV-1.16 section block (4-row table + OP-HMORSE-BROADNESS retirement + non-overclaim + methodological highlight + audit reference). |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — W7-Day5 extension CV-1.16 SEALED header after CV-1.15 SEALED line; 다음 목표 line → CV-1.17 (Package II + OP-HMORSE-LOCAL-A + OP-HMORSE-SBM + §F Step 2 + others); H-MORSE row in §가설 상태 요약 OPEN → PARTIALLY CLOSED; Q3 H-MORSE block fully rewritten with CV-1.16 partial closure status (4 lemma summary, Cat A path, unlocks); HT-3.7 changelog row added. |
+| `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` | **CREATED** (this document). |
 | `THEORY/CHANGELOG.md` | **UPDATED** — CV-1.16 entry prepended above CV-1.15 entry from morning. |
-| `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` | **NOT modified** (created in evening extension as CV-1.16 promotion candidate; serves as canonical-promotion-ready record). |
+| `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` | **NOT modified** (created in evening extension as CV-1.16 promotion candidate; serves as canonical-promotion-ready record). |
 | `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md` | **NOT modified** (audit trail preserved). |
 | `CODE/experiments/exp_hmorse_broadness_full_spectrum.py` + `results/exp_hmorse_broadness_full_spectrum.{json,md}` | **NOT modified** (numerical anchor preserved). |
 
@@ -139,7 +139,7 @@ User choice (plan-mode 2026-05-14): **(C2′) active-set form** over strict-inte
 - **OP-HMORSE-EXCLUSION-VOLUME** (DOWNGRADED LOW): operationally resolved by $\Pi_T = I - (1/n)\mathbf{1}\mathbf{1}^\top$ producing single ~0 eigenvalue numerically.
 - **OP-HMORSE-ACTION-INTERACT** (LOW, speculative): CV-1.15 T-ACT-KERNEL-COMP→REL ↔ CV-1.16 L-HMORSE-LOCAL interaction. Defer.
 - **Package II Eyring-Kramers prefactor Cat B**: combine L-HMORSE-LOCAL + OP-0021 $T_*$. Major CV-1.17 target.
-- **§F Step 2 housekeeping** (0.5 session): CV-1.15 deferred — replace `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md §1–§4` with §A–§D blocks.
+- **§F Step 2 housekeeping** (0.5 session): CV-1.15 deferred — replace `THEORY/4_temporal/action_cost/10_patch_plan.md §1–§4` with §A–§D blocks.
 - **OP-0021 dual-naming reconciliation** (carried from CV-1.15; 0.5 session hygiene).
 - **OQ-A CV-1.14 promotion audit parity** (carried from CV-1.15): unlocks T-ACT-KERNEL-COMP→REL unconditional.
 - **OQ-B L-δ_eff-SINK** (carried from CV-1.15): OP-0012-SINK plan-level scaling-gap.
@@ -171,4 +171,4 @@ This pattern **separates structural exploration from analytic closure**. Compare
 
 ---
 
-*CV-1.16 sealed by W7-Day5 evening extension P7 promotion turn, 2026-05-14. Audit reference: 10 files in `THEORY/logs/daily/2026-05-14/` (morning Track 1+2: 01–03 + 99; evening extension: 40–44 + 49) + `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` + `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}`. Three converging approaches: (a) Perron-Frobenius, (b) operator-norm degree-weighted (primary), (c) 15/15 numerical PASS.*
+*CV-1.16 sealed by W7-Day5 evening extension P7 promotion turn, 2026-05-14. Audit reference: 10 files in `THEORY/logs/daily/2026-05-14/` (morning Track 1+2: 01–03 + 99; evening extension: 40–44 + 49) + `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` + `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}`. Three converging approaches: (a) Perron-Frobenius, (b) operator-norm degree-weighted (primary), (c) 15/15 numerical PASS.*

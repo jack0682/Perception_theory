@@ -4,7 +4,7 @@ type: prompt/main/v4
 created: 2026-05-21
 status: active (PAI direction)
 predecessor: MAIN_PROMPT_v3.md (legacy substrate-framing; preserved, annotated)
-canonical_anchor: THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md
+canonical_anchor: THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md
 substrate: CV-1.20 SEALED (71A/20B/6C/5R = 102 claims)
 description: |
   Agent instructions for sessions after the 2026-05-21 PAI pivot.
@@ -118,11 +118,11 @@ Do not silently proceed past these points.
 
 ## §6 — Reading Order at Session Start
 
-1. `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — the pivot doc (always first).
-2. `THEORY/canonical/PAI_ROADMAP.md` — phase context.
-3. `THEORY/working/macro_audit_2026-05-20.md` §8 (macro gaps) + §9 (hard stop rules).
+1. `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` — the pivot doc (always first).
+2. `THEORY/0_axis/PAI_ROADMAP.md` — phase context.
+3. `THEORY/0_axis/macro_audit_2026-05-20.md` §8 (macro gaps) + §9 (hard stop rules).
 4. The specific OP-PAI body relevant to today's work (from `theorem_status.md` Open Problems Catalog).
-5. `THEORY/canonical/DECLARATION.md` — substrate thesis, unchanged.
+5. `THEORY/0_axis/DECLARATION.md` — substrate thesis, unchanged.
 6. The most recent daily log (and the day before if continuity matters).
 7. `MAIN_PROMPT_v3.md` (this file's predecessor) — only if substrate work is involved.
 

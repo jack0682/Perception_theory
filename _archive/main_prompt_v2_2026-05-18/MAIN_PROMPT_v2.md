@@ -128,7 +128,7 @@ SCC는 "객체(object)가 개별화되기 이전 층위에서 어떻게 응집(c
 - **energy on volume-constrained simplex** Σ_m: `E = λ_cl·E_cl + λ_sep·E_sep + λ_bd·E_bd + λ_tr·E_tr`
 - **proto-cohesion diagnostic vector** `d = (Bind, Sep, Inside, Persist) ∈ [0,1]⁴`
 
-권위는 `THEORY/canonical/canonical.md` (CV-1.X) — *작업 시작 전 반드시 참조*. DECL-1.0 (`THEORY/canonical/DECLARATION.md`) 의 *6 인식론적 질문 (Q1-Q6)* + *중심 정리 T8* 가 이론의 *축*.
+권위는 `THEORY/2_substrate/canonical/canonical.md` (CV-1.X) — *작업 시작 전 반드시 참조*. DECL-1.0 (`THEORY/0_axis/DECLARATION.md`) 의 *6 인식론적 질문 (Q1-Q6)* + *중심 정리 T8* 가 이론의 *축*.
 
 ---
 
@@ -164,10 +164,10 @@ logs/daily/...  →  working/<topic>.md  →  canonical/canonical.md
 
 1. **`THEORY/logs/daily/{DATE}/00_plan.md`** (또는 `plan.md`) — 오늘의 target / why-now / context refs / session goals / non-goals / success criterion. 본 plan 의 *frontmatter `mode:`* 가 §0 의 권위.
 2. **plan 의 `Context refs` 가 지정한 파일들** — 그 안에 포함된 canonical / working / 이전 log entries.
-3. **`THEORY/canonical/canonical.md`** — 최소 (a) plan 이 참조하는 § + (b) §2 (foundational orientation) + (c) §3 (formal universe) + (d) §11 (fixed commitments + Commitment 1-N) + (e) §14 (CN1-CN14 commitment notes).
-4. **`THEORY/canonical/theorem_status.md`** — 기존 OP-xxxx 목록 + 현재 Cat A/B/C/R 분류. plan target 이 어느 OP/Cat 와 관계되는지 파악.
-5. **`THEORY/canonical/hypothesis_tree.md`** — 현재 HT-X.Y + 해당 plan 의 가설 row.
-6. **`THEORY/canonical/DECLARATION.md`** (DECL-1.X) — 이론의 *축*. 본 day 의 mode 가 *review* 또는 *deep-attack* 이면 의무. *survey / SEAL-prep* 등에서는 plan 이 참조하지 않으면 skip 가능.
+3. **`THEORY/2_substrate/canonical/canonical.md`** — 최소 (a) plan 이 참조하는 § + (b) §2 (foundational orientation) + (c) §3 (formal universe) + (d) §11 (fixed commitments + Commitment 1-N) + (e) §14 (CN1-CN14 commitment notes).
+4. **`THEORY/2_substrate/canonical/theorem_status.md`** — 기존 OP-xxxx 목록 + 현재 Cat A/B/C/R 분류. plan target 이 어느 OP/Cat 와 관계되는지 파악.
+5. **`THEORY/2_substrate/canonical/hypothesis_tree.md`** — 현재 HT-X.Y + 해당 plan 의 가설 row.
+6. **`THEORY/0_axis/DECLARATION.md`** (DECL-1.X) — 이론의 *축*. 본 day 의 mode 가 *review* 또는 *deep-attack* 이면 의무. *survey / SEAL-prep* 등에서는 plan 이 참조하지 않으면 skip 가능.
 7. **최근 1-2일 `THEORY/logs/daily/<최근날짜>/99_summary.md`** — carry-forward 파악.
 8. **`THEORY/logs/weekly/<당주>/W{N}_strategic_plan.md`** (있다면) — 주간 frame.
 9. **`CLAUDE.md`** + **`CONVENTIONS.md`** — 저장소 규율.
@@ -217,9 +217,9 @@ CV-1.X SEAL 직전 *audit* + *6-step ready*:
 
 Canonical 직접 수정 1회 허용 — **단 1 회, *반드시* CV-1.X_SEAL.md note + CHANGELOG prepend 동반**:
 
-1. **`THEORY/canonical/canonical.md` §13 (또는 해당 §) 에 Cat A/B/C row insert**.
-2. **`THEORY/canonical/theorem_status.md` count update + OP Quick Index 갱신**.
-3. **`THEORY/canonical/hypothesis_tree.md` HT-X.Y → HT-X.(Y+1)** (해당 row 의 status 변경 시).
+1. **`THEORY/2_substrate/canonical/canonical.md` §13 (또는 해당 §) 에 Cat A/B/C row insert**.
+2. **`THEORY/2_substrate/canonical/theorem_status.md` count update + OP Quick Index 갱신**.
+3. **`THEORY/2_substrate/canonical/hypothesis_tree.md` HT-X.Y → HT-X.(Y+1)** (해당 row 의 status 변경 시).
 4. **`THEORY/canonical/CV-1.X_SEAL.md` 신설** — *Non-Overclaim* 항목 + *Next target* 명시.
 5. **`THEORY/CHANGELOG.md` prepend** — `[CV-1.X SEAL]` entry.
 6. **`git status THEORY/canonical/`** verification — 5 파일 변경 확인 (canonical.md + theorem_status.md + hypothesis_tree.md + CV-1.X_SEAL.md + CHANGELOG.md).

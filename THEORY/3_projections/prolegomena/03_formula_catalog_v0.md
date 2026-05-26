@@ -7,7 +7,7 @@ purpose: 01 의 44 prose 조건을 완전한 수학적 형태로 정리. 각 M_k
 companions: 01_mathematical_conditions_v0.md, 02_framework_skeleton_v0.md
 ---
 
-> [!nav] Parent: [[../INDEX|working/INDEX.md]] · Companions: [[01_mathematical_conditions_v0|01 Prose]] · [[02_framework_skeleton_v0|02 Layers]]
+> [!nav] Parent: [[INDEX|working/INDEX.md]] · Companions: [[01_mathematical_conditions_v0|01 Prose]] · [[02_framework_skeleton_v0|02 Layers]]
 
 # Formula Catalog — Full Mathematical Statements of M1–M44
 

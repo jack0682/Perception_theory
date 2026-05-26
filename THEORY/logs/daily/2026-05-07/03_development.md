@@ -346,7 +346,7 @@ No counterexample to the narrowed Theorem 4.2 (A1–A8 + A7') was found. Three r
 
 The following are **NOT** claimed by this development:
 
-1. **Does not promote canonical.** Theorem T-Temporal-Identity remains a *working candidate* in `THEORY/working/MF/temporal_identity_perscomp_transport.md`. Promotion requires a separate session with user authorization.
+1. **Does not promote canonical.** Theorem T-Temporal-Identity remains a *working candidate* in `THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md`. Promotion requires a separate session with user authorization.
 
 2. **Does not prove kernel independence (part c).** Two distinct E1–E4-admissible kernels may yield distinct $R_{t\to s}$ even when both satisfy the margin condition individually. Resolving this is Cat C / OP-0011 Step 2.
 

@@ -7,12 +7,12 @@
 **This file covers:** §4.4 primary-approach substantive development (audit, not proof).
 **Depends on reading:**
 - `01_exploration.md` (today; primary approach P3 = audit-only)
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` (R5 audit)
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` (R5 drafts)
-- `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` (R5 CV-1.14 draft — NOT canonical)
-- `THEORY/canonical/canonical.md` §8.5, §13 (current)
-- `THEORY/canonical/theorem_status.md` (CV-1.13 = 59A/14B/5C/5R = 83 claims)
-- `THEORY/canonical/CV-1.13_SEAL.md`
+- `THEORY/4_temporal/action_cost/09_final_audit.md` (R5 audit)
+- `THEORY/4_temporal/action_cost/10_patch_plan.md` (R5 drafts)
+- `THEORY/4_temporal/composition/05_promotion_draft.md` (R5 CV-1.14 draft — NOT canonical)
+- `THEORY/2_substrate/canonical/canonical.md` §8.5, §13 (current)
+- `THEORY/2_substrate/canonical/theorem_status.md` (CV-1.13 = 59A/14B/5C/5R = 83 claims)
+- `THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md`
 - `CODE/experiments/results/exp89_results.json`
 
 ---
@@ -168,11 +168,11 @@ This finding is the **dominant audit observation** of this session.
 But:
 
 - `grep -rn "T-CC-StableK" THEORY/canonical/` returns **zero hits**.
-- `THEORY/canonical/theorem_status.md` line 517 lists OP-0012 as "PARTIALLY STRUCTURED (Session V, 2026-05-06): OP-0012-CC compositional consistency Cat B path" — the OP-0012-CC label predates the T-CC-StableK-Kernel naming and is the form actually in canonical.
-- `THEORY/canonical/canonical.md` line 1779 references "OP-0012-CC Cat B" inside the T-Temporal-Identity body, **not** "T-CC-StableK-Kernel".
-- `THEORY/canonical/hypothesis_tree.md` HT-3.5 carries no "H-COMP" branch; `00_plan.md` line 169–171 says T-CC-StableK-Kernel "10_patch_plan §3" inserts `H-COMP-KERNEL` as a *new* node, implying it does not exist yet.
+- `THEORY/2_substrate/canonical/theorem_status.md` line 517 lists OP-0012 as "PARTIALLY STRUCTURED (Session V, 2026-05-06): OP-0012-CC compositional consistency Cat B path" — the OP-0012-CC label predates the T-CC-StableK-Kernel naming and is the form actually in canonical.
+- `THEORY/2_substrate/canonical/canonical.md` line 1779 references "OP-0012-CC Cat B" inside the T-Temporal-Identity body, **not** "T-CC-StableK-Kernel".
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` HT-3.5 carries no "H-COMP" branch; `00_plan.md` line 169–171 says T-CC-StableK-Kernel "10_patch_plan §3" inserts `H-COMP-KERNEL` as a *new* node, implying it does not exist yet.
 
-**Therefore:** the CV-1.15 patch references CV-1.14 as canonical fact when CV-1.14 is still a working candidate (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, header status "DRAFT — canonical 수정 전 검토용 초안 (not yet promoted)").
+**Therefore:** the CV-1.15 patch references CV-1.14 as canonical fact when CV-1.14 is still a working candidate (`THEORY/4_temporal/composition/05_promotion_draft.md`, header status "DRAFT — canonical 수정 전 검토용 초안 (not yet promoted)").
 
 ### §2.2 Three resolution paths
 
@@ -195,7 +195,7 @@ But:
 
 #### R-C. Rewrite §13.Y background sentence and T-ACT-KERNEL-COMP→REL annotation to cite CV-1.14 as a *working* candidate explicitly.
 
-- §13.Y background becomes: "CV-1.14 working candidate T-CC-StableK-Kernel (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B draft) showed that if M is composition-structured, R also composes; this is the natural sister composition theorem for action-derived kernels."
+- §13.Y background becomes: "CV-1.14 working candidate T-CC-StableK-Kernel (`THEORY/4_temporal/composition/05_promotion_draft.md`, Cat B draft) showed that if M is composition-structured, R also composes; this is the natural sister composition theorem for action-derived kernels."
 - T-ACT-KERNEL-COMP→REL annotation gets an explicit dependency note: "*조건 의존성: (GK)와 T-CC-StableK-Kernel (CV-1.14 working) 모두 필요. 후자가 canonical 승급 전까지 이 Cat B 등급은 'conditional on CV-1.14 promotion'으로 읽힌다.*"
 - Count delta: same as 09_final_audit's claim of 83 → 93. The Cat B status is preserved but explicitly conditional.
 - **This is the lightest amendment and the most conservative.** It does not require co-promoting CV-1.14 nor demoting CV-1.15 entries.

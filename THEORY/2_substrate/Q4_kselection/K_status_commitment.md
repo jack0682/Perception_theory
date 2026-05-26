@@ -476,7 +476,7 @@ If rejected, this file stays in `working/MF/` indefinitely as "explored ontologi
 
 **Status: working draft, theory-only audit. Recommendation: APPROVE Commitment 16 (§4.1) at CV-1.6 D-CV1.6-O1. Effort: ~40-45 canonical lines + amendments. Net effect: 4-month K-status ambiguity → explicit two-tier (K_field, K_act) decomposition. Carries 6 of 7 OP-0009 sub-items (K resolved; F/λ_rep/Architecture/C_t/Pre-objective/Empirical to OAT-2~7).**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/K_status_commitment.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/K_status_commitment.md`
 **Created:** 2026-04-29 W5 Day 3 EOD (post 4-agent ontological depth analysis)
 **Lines:** ~530
 **Promotion target:** CV-1.6 W6 Day 7 morning (if user approves)

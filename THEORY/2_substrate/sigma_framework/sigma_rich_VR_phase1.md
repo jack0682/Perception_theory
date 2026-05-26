@@ -333,6 +333,6 @@ CV-1.6 candidate Commitment 18 (proposed extension to Commitment 17 4-tool packe
 
 **Status: working draft. NQ-242 PH pipeline V-R Phase 1 design complete. Centroid trajectory $C(t)$ defined; V-R complex $R_r(C(t))$ on graph-metric instantiated; $H_0$ barcode ↔ $K_{\mathrm{act}}(t)$ + K-jump events ↔ $H_0$ bar-deaths formal mappings established. Phase 1 numerical pipeline spec (§7) with 5-step procedure + JSON output schema + GUDHI/Ripser dependencies. Cat B target upon W6 Day 1-3 execution. Promotion target CV-1.6 candidate Commitment 18 (task #48 future). Hard constraints all checked.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_VR_phase1.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_VR_phase1.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.6 W6 Day 7 packet.

@@ -38,7 +38,7 @@
 
 SCC는 이 모든 접근이 “이미 만들어진 객체를 다루는 일”이지, **“객체가 만들어지는 일”을 다루는 일이 아니라고 본다.** 만들어지기 직전 단계 — 즉 “경계가 칼로 자른 선이 아니라 안개처럼 번지는 단계” — 를 SCC는 **pre-objective cohesion**이라 부른다.
 
-**근거 파일:** `THEORY/canonical/DECLARATION.md` (DECL-1.0); `canonical.md §2 Foundational Orientation`.
+**근거 파일:** `THEORY/0_axis/DECLARATION.md` (DECL-1.0); `canonical.md §2 Foundational Orientation`.
 
 ### 1.2 초기 공리계 (crisp 단계의 흔적)
 
@@ -467,7 +467,7 @@ Sep을 $u$-weighted로 고친 후 C_t는 어느 술어·에너지에도 들어�
 ### 7.5 다음 작업의 첫 번째 파일·정리·실험
 
 **첫 번째 정리.** **H-MORSE Cat A 증명 시도.**
-**첫 번째 파일.** `THEORY/working/SF/sigma_m_hessian_convention_audit.md` (H-MORSE prerequisite).
+**첫 번째 파일.** `THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md` (H-MORSE prerequisite).
 **첫 번째 실험.** `CODE/experiments/` 신규 — H-MORSE numerical extension: 더 넓은 graph 클래스(SBM, barbell, 작은-월드)에서 $\mu_{\min}$ 분포 sweep + 임의 critical point에서 spectrum 확인.
 
 ---
@@ -483,4 +483,4 @@ Sep을 $u$-weighted로 고친 후 C_t는 어느 술어·에너지에도 들어�
 ---
 
 **보고서 종료. 작성 기준: CV-1.13 (sealed 2026-05-10, 83 claims).**
-**다음 실행 시 권장:** `THEORY/working/SF/sigma_m_hessian_convention_audit.md`를 열어 H-MORSE attack을 시작.
+**다음 실행 시 권장:** `THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md`를 열어 H-MORSE attack을 시작.

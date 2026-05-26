@@ -16,7 +16,7 @@ sealed: 2026-05-14
 - $X$ — major restructuring (chapter set changes, ontological commitment shift, manifest declaration revision).
 - $Y$ — minor revision (per-claim Cat reclassification, OP addition / closure, forbidden-claim list update).
 
-The SCC-CT version ladder is **separate from** the `THEORY/canonical/canonical.md` CV-1.x ladder. CV-1.x is implementation-progress (per-merge updates to canonical proofs). SCC-CT is theoretical-statement sealing (per-major-restructure of the framework's organization).
+The SCC-CT version ladder is **separate from** the `THEORY/2_substrate/canonical/canonical.md` CV-1.x ladder. CV-1.x is implementation-progress (per-merge updates to canonical proofs). SCC-CT is theoretical-statement sealing (per-major-restructure of the framework's organization).
 
 **Compatibility table:**
 
@@ -44,14 +44,14 @@ The CV-1.x release ladder accumulates *proof status*. SCC-CT v0.1 seals *theoret
 
 | File | Role |
 |---|---|
-| `SCC_CANONICAL/00_manifest.md` | Manifest: name (SCC-CT), central statement (bilingual), 9-chapter structure, 4-tier Cat, forbidden-wording summary |
-| `SCC_CANONICAL/01_ontology.md` | Ch. I Ontological Commitment — object $\neq$ primitive |
-| `SCC_CANONICAL/02_axioms_and_primitives.md` | Ch. II Primitive Structure + Ch. III Operator Triad |
-| `SCC_CANONICAL/03_energy_and_diagnostics.md` | Ch. IV Diagnostic Vector + Ch. V Energy Principle |
-| `SCC_CANONICAL/04_theorem_registry.md` | Ch. VI Static Core Theorems + Ch. VII Computational Validation (97 claims in 4-tier Cat) |
-| `SCC_CANONICAL/05_open_problems.md` | Ch. VIII Open Problems — Q1-Q6 closure status, OP catalog |
-| `SCC_CANONICAL/06_forbidden_claims.md` | Ch. IX Forbidden Claims — Cat R historical + overclaim wording ban list + R1-R7 operational rules |
-| `SCC_CANONICAL/07_changelog.md` | This file — SCC-CT version history |
+| `THEORY/2_substrate/canonical/structural/sct_manifest.md` | Manifest: name (SCC-CT), central statement (bilingual), 9-chapter structure, 4-tier Cat, forbidden-wording summary |
+| `THEORY/2_substrate/canonical/structural/sct_ontology.md` | Ch. I Ontological Commitment — object $\neq$ primitive |
+| `THEORY/2_substrate/canonical/structural/sct_axioms_and_primitives.md` | Ch. II Primitive Structure + Ch. III Operator Triad |
+| `THEORY/2_substrate/canonical/structural/sct_energy_and_diagnostics.md` | Ch. IV Diagnostic Vector + Ch. V Energy Principle |
+| `THEORY/2_substrate/canonical/structural/sct_theorem_registry.md` | Ch. VI Static Core Theorems + Ch. VII Computational Validation (97 claims in 4-tier Cat) |
+| `THEORY/2_substrate/canonical/structural/sct_open_problems.md` | Ch. VIII Open Problems — Q1-Q6 closure status, OP catalog |
+| `THEORY/2_substrate/canonical/structural/sct_forbidden_claims.md` | Ch. IX Forbidden Claims — Cat R historical + overclaim wording ban list + R1-R7 operational rules |
+| `THEORY/2_substrate/canonical/structural/sct_changelog.md` | This file — SCC-CT version history |
 
 ### Central canonical declaration (bilingual, sealed)
 
@@ -92,12 +92,12 @@ The CV-1.x release ladder accumulates *proof status*. SCC-CT v0.1 seals *theoret
 | Manifest authority | Implementation authority |
 
 **Read order** (per `00_manifest.md`):
-1. `THEORY/canonical/DECLARATION.md` (DECL-1.0, 2-min central axis)
-2. `SCC_CANONICAL/00_manifest.md` (this canonical sealing)
-3. `THEORY/canonical/canonical.md` (CV-1.16 implementation)
-4. `THEORY/canonical/theorem_status.md`
-5. `THEORY/canonical/hypothesis_tree.md` (HT-3.7)
-6. `THEORY/canonical/CV-1.16_SEAL.md` (most recent seal)
+1. `THEORY/0_axis/DECLARATION.md` (DECL-1.0, 2-min central axis)
+2. `THEORY/2_substrate/canonical/structural/sct_manifest.md` (this canonical sealing)
+3. `THEORY/2_substrate/canonical/canonical.md` (CV-1.16 implementation)
+4. `THEORY/2_substrate/canonical/theorem_status.md`
+5. `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.7)
+6. `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` (most recent seal)
 7. `THEORY/CHANGELOG.md`
 
 ### Methodological highlights captured into v0.1
@@ -122,23 +122,23 @@ Three patterns from the W7-Day5 全日 session are sealed as operational standar
 
 ### What v0.1 explicitly did NOT do
 
-- Did **not** modify `THEORY/canonical/canonical.md` (CV-1.16 state preserved).
-- Did **not** modify `THEORY/canonical/DECLARATION.md` (DECL-1.0 preserved).
+- Did **not** modify `THEORY/2_substrate/canonical/canonical.md` (CV-1.16 state preserved).
+- Did **not** modify `THEORY/0_axis/DECLARATION.md` (DECL-1.0 preserved).
 - Did **not** retract any Cat A claim.
 - Did **not** introduce a new central axis.
 - Did **not** add new theorems, lemmas, definitions beyond what existed in CV-1.16.
 
 ### Audit reference
 
-- `THEORY/canonical/canonical.md` (CV-1.16 SEALED, 2026-05-14)
-- `THEORY/canonical/CV-1.16_SEAL.md` (most recent seal record)
-- `THEORY/canonical/CV-1.15_SEAL.md` (prior seal)
-- `THEORY/canonical/CV-1.13_SEAL.md` (T-Temporal-Identity Cat A seal)
-- `THEORY/canonical/theorem_status.md` (per-claim history)
-- `THEORY/canonical/hypothesis_tree.md` HT-3.7
+- `THEORY/2_substrate/canonical/canonical.md` (CV-1.16 SEALED, 2026-05-14)
+- `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` (most recent seal record)
+- `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` (prior seal)
+- `THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md` (T-Temporal-Identity Cat A seal)
+- `THEORY/2_substrate/canonical/theorem_status.md` (per-claim history)
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` HT-3.7
 - `THEORY/CHANGELOG.md` (V-AFD discard, R-2 archive, CV-1.15 P7, CV-1.16 P7 — full audit trail)
 - `THEORY/logs/daily/2026-05-14/` (10 files: morning Track 1+2 + evening extension + SBM continuation)
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` (CV-1.16 promotion candidate record)
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` (CV-1.16 promotion candidate record)
 - `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` (15/15 PASS canonical 2D)
 - `CODE/experiments/exp_hmorse_sbm_robustness.{py,json,md}` (11/11 lift PASS heterogeneous)
 
@@ -173,4 +173,4 @@ v1.0 requires Q3-DYN (Kramers) and Q4-DYN (K-Select dynamic) at minimum.
 
 ---
 
-*SCC-CT v0.1 changelog sealed 2026-05-14 (W7-Day5 end-of-day). Authority: theoretical-statement canonical. Implementation authority: `THEORY/canonical/CV-1.16_SEAL.md`. Both authorities operate simultaneously; conflicts (should they arise) trigger SCC-CT version increment.*
+*SCC-CT v0.1 changelog sealed 2026-05-14 (W7-Day5 end-of-day). Authority: theoretical-statement canonical. Implementation authority: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`. Both authorities operate simultaneously; conflicts (should they arise) trigger SCC-CT version increment.*

@@ -23,7 +23,7 @@ next_step: Phase 3 V1 mathematical rigor verification (Session 2)
 status: draft (full proof attempt; Cat A conditional)
 ---
 
-> [!nav] Linked: [[../../../canonical/canonical|canonical CV-1.17]] · [[../../../logs/daily/2026-05-19/02_H5_morse_spinodal|02_H5 §2 L1-L5 sketch]] · [[../../../logs/daily/2026-05-19/01_pre_brainstorm|01_pre_brainstorm §6.3]] · `/tmp/scc_proofs_v02/E1_hironaka_literature.md`
+> [!nav] Linked: [[canonical|canonical CV-1.17]] · [[02_H5_morse_spinodal|02_H5 §2 L1-L5 sketch]] · [[THEORY/logs/daily/2026-05-19/01_pre_brainstorm|01_pre_brainstorm §6.3]] · `/tmp/scc_proofs_v02/E1_hironaka_literature.md`
 
 # P1 — OP-H5-α Full Proof Attempt (Hironaka Algebraic Strengthening)
 
@@ -38,17 +38,17 @@ status: draft (full proof attempt; Cat A conditional)
 ## §0 Pre-work xref check (§15.1 의무 기록)
 
 ```bash
-$ grep -nE "OP-H5-α|OP-H5-alpha|Hironaka algebraic strengthening" THEORY/canonical/canonical.md
+$ grep -nE "OP-H5-α|OP-H5-alpha|Hironaka algebraic strengthening" THEORY/2_substrate/canonical/canonical.md
 # 0 hits — canonical 에 미등록 (정상; OP catalog 등록 대기, 02_H5 §4 draft only)
 
 $ grep -rn "P1_OP-H5-alpha" THEORY/working/
 # 0 hits — clean slate (본 file 이 첫 작성)
 
-$ grep -nE "polynomial.*generic|Sard.*algebraic|Tarski-Seidenberg" THEORY/canonical/canonical.md
+$ grep -nE "polynomial.*generic|Sard.*algebraic|Tarski-Seidenberg" THEORY/2_substrate/canonical/canonical.md
 # 1 hit: L2063 T-PERSIST-1B-UNCONDITIONAL 의 Erratum 2026-04-03 (Sard's theorem applied)
 # = Sard precedent confirmed in canonical; Tarski-Seidenberg 는 canonical 에 부재 — 본 file 이 처음 도입
 
-$ grep -nE "Σ_Hess.*codim|Σ_T8.*codim" THEORY/canonical/canonical.md
+$ grep -nE "Σ_Hess.*codim|Σ_T8.*codim" THEORY/2_substrate/canonical/canonical.md
 # 2 hits: L2495 (SB7: Σ_Hess = Σ_T8 codim-1 on uniform sheet) + L2627 (temporal envelope)
 # = SB7 anchor confirmed for L5 (Σ_T8 codim-1)
 ```

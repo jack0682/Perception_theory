@@ -190,10 +190,10 @@ Total: **60 tasks**, 7 in_progress (claimed by current teammates), 53 pending.
 ## Wave 3 Late EOD Update (2026-04-30 23:xx KST, post lead-direct + 1 teammate completion + validation)
 
 ### New lead-direct files (post-initial-12)
-- L13 `THEORY/working/SF/sigma_fingerprint_qrcode.md` (~250 lines, Bridge B-4 σ-fingerprint algorithm spec, NQ-264 Cat B target)
-- L14 `THEORY/working/MF/commitments_18_19_drafts.md` (~180 lines, CV-1.7+ Commitment 18 σ_rich + 19 K-Selection axiom drafts)
+- L13 `THEORY/2_substrate/sigma_framework/sigma_fingerprint_qrcode.md` (~250 lines, Bridge B-4 σ-fingerprint algorithm spec, NQ-264 Cat B target)
+- L14 `THEORY/2_substrate/multiformation/commitments_18_19_drafts.md` (~180 lines, CV-1.7+ Commitment 18 σ_rich + 19 K-Selection axiom drafts)
 - L15 `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` (~220 lines, Wave 3 critical findings bulletin)
-- L16 `THEORY/working/MF/r24_dataset_design.md` (~180 lines, R24 dataset for Bridge B-2 σ-locality verification)
+- L16 `THEORY/2_substrate/multiformation/r24_dataset_design.md` (~180 lines, R24 dataset for Bridge B-2 σ-locality verification)
 
 **Lead-side Wave 3 total updated:** ~3300+ lines, 16 files.
 

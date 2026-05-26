@@ -5,7 +5,7 @@ status: Cat A — proved via direct row-normalization argument (W7-FINAL, 2026-0
 created: 2026-05-10
 session: W7-FINAL
 scope: SCC E1 sub-stochastic / one-sided partial OT stability; closes H-SINK-6 partial OT gap
-predecessor: THEORY/working/temporal/H-SINK.md (W7-T1; H-SINK-6 partial OT Cat B gap identified)
+predecessor: THEORY/4_temporal/temporal_audit/H-SINK.md (W7-T1; H-SINK-6 partial OT Cat B gap identified)
 closes: H-SINK partial OT gap → H-SINK full theorem Cat A
 ---
 
@@ -209,7 +209,7 @@ The Séjourné route (Phase 3, Route 2 in W7-FINAL task brief) would give an equ
 
 ## 8. Update Required in H-SINK.md
 
-The following update is needed in `THEORY/working/temporal/H-SINK.md §7`:
+The following update is needed in `THEORY/4_temporal/temporal_audit/H-SINK.md §7`:
 
 The existing text says:
 > "For unbalanced/partial OT, the Sinkhorn algorithm uses a modified update with KL-divergence marginal penalties. This case is **Cat B**..."

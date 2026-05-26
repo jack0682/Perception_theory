@@ -2,23 +2,23 @@
 
 # WQ-LAT-1 — Reservoir Resolution Sweep Protocol
 
-**File:** `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_protocol.md`
+**File:** `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_protocol.md`
 **Document type:** Working-grade executable protocol (non-canonical).
 **Created:** 2026-05-02 (WQ-LAT-1 of latent index space design work queue).
 
 **Companion artifacts:**
-- `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md` — results record.
+- `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_results.md` — results record.
 - `CODE/scripts/wq_lat1_reservoir_resolution_sweep.py` — executable script.
 - `CODE/scripts/results/wq_lat1_reservoir_resolution_sweep.json` — JSON output (after run).
 
 **Predecessor artifacts:**
-- `THEORY/working/MF/latent_index_space_design.md` — design document; selected WQ-LAT-1 as next package.
-- `THEORY/working/MF/reservoir_reinterpretation_of_K.md` — conceptual reinterpretation.
+- `THEORY/2_substrate/multiformation/latent_index_space_design.md` — design document; selected WQ-LAT-1 as next package.
+- `THEORY/2_substrate/Q4_kselection/reservoir_reinterpretation_of_K.md` — conceptual reinterpretation.
 - `THEORY/working/MF/layered_ambient_architecture_{candidate,README,agent_notes,next_work}.md` — Layer I/II/III ambient definitions.
-- `THEORY/working/MF/nq242c_results.md` — WQ-1 F2.
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` — WQ-2 F-B6 confirmed; bridge lemma + diagnostics.
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7.
-- `THEORY/working/MF/wq1c_r2_projected_layerII_aggregate_sigma_results.md` — WQ-1.C-R2 F-R2-F3 / F-R2-F4.
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — WQ-1 F2.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` — WQ-2 F-B6 confirmed; bridge lemma + diagnostics.
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7.
+- `THEORY/2_substrate/multiformation/wq1c_r2_projected_layerII_aggregate_sigma_results.md` — WQ-1.C-R2 F-R2-F3 / F-R2-F4.
 - `CODE/scripts/{nq242c_counterexample, ksoft_kact_diagnostics, wq1c_layerI_h0_bardeath, wq1c_r2_projected_layerII_aggregate_sigma}.py` — predecessor scripts (torus builder, persistence pipeline, σ extraction reused).
 
 ---

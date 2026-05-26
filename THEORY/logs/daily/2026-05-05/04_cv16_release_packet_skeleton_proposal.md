@@ -127,7 +127,7 @@ Current strings reference "CV-1.5.2 / 2026-05-02 + W6 D1 EOD T-L1-M supervised a
 > Status: Mature (215 tests passed + 1 xfailed; **62 theorem-claims, 75% Cat A as of CV-1.6 / 2026-05-XX**: 47A / 5B / 5C / 5R)
 
 `Perception_theory/CLAUDE.md`:
-> 1. **`THEORY/canonical/canonical.md`** — authoritative specification (**CV-1.6, 2026-05-XX**). Single source of truth for the theory. Counts: 47A / 5B / 5C / 5R = 62 claims, 75% fully proved.
+> 1. **`THEORY/2_substrate/canonical/canonical.md`** — authoritative specification (**CV-1.6, 2026-05-XX**). Single source of truth for the theory. Counts: 47A / 5B / 5C / 5R = 62 claims, 75% fully proved.
 
 ### §3.5 weekly_draft_storming.md tracking table delta
 

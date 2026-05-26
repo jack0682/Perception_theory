@@ -7,11 +7,11 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/canonical/DECLARATION.md`** — **(DECL-1.0, 2026-05-07) 먼저 읽기.** 이론의 중심축: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive: u_t. 중심 정리: T8 (β/α > 4λ₂/|W''(c)|). 6개 인식론적 질문(Q1~Q6). 2분 분량.
-2. **`THEORY/canonical/canonical.md`** — authoritative specification (**CV-1.13**, sealed 2026-05-10). Single source of truth for the theory. Counts: **59A / 14B / 5C / 5R = 83 claims** (~71% fully proved). Primary CV-1.13 advance: T-Temporal-Identity full Cat A (all parts a,b,c,d).
-3. **`THEORY/canonical/CV-1.13_SEAL.md`** — seal record for the current canonical version; certifications for S-A1, S-A3, S-C1 tasks.
-4. **`THEORY/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021.
-5. **`THEORY/canonical/hypothesis_tree.md`** — **(HT-3.0, 2026-05-07)** 의존성 구조 권위 소스. 블록이 Q1~Q6 인식론적 질문 기준으로 재편됨. 수정 규칙 후미.
+1. **`THEORY/0_axis/DECLARATION.md`** — **(DECL-1.0, 2026-05-07) 먼저 읽기.** 이론의 중심축: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive: u_t. 중심 정리: T8 (β/α > 4λ₂/|W''(c)|). 6개 인식론적 질문(Q1~Q6). 2분 분량.
+2. **`THEORY/2_substrate/canonical/canonical.md`** — authoritative specification (**CV-1.13**, sealed 2026-05-10). Single source of truth for the theory. Counts: **59A / 14B / 5C / 5R = 83 claims** (~71% fully proved). Primary CV-1.13 advance: T-Temporal-Identity full Cat A (all parts a,b,c,d).
+3. **`THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md`** — seal record for the current canonical version; certifications for S-A1, S-A3, S-C1 tasks.
+4. **`THEORY/2_substrate/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021.
+5. **`THEORY/2_substrate/canonical/hypothesis_tree.md`** — **(HT-3.0, 2026-05-07)** 의존성 구조 권위 소스. 블록이 Q1~Q6 인식론적 질문 기준으로 재편됨. 수정 규칙 후미.
 6. **`THEORY/CHANGELOG.md`** — theory-side session log; last entry defines carry-forward.
 
 For the reorganization history (what was tried and abandoned), see `_archive/research_os_2026-04-12/` (the original Research OS scaffolding archived 2026-04-18).
@@ -53,7 +53,7 @@ THEORY/logs/daily/YYYY-MM-DD.md   (raw chronological record)
          ↓ reorganize by topic
 THEORY/working/<topic>.md          (active theory development)
          ↓ proof + review + tests
-THEORY/canonical/canonical.md      (authoritative — one-way only)
+THEORY/2_substrate/canonical/canonical.md      (authoritative — one-way only)
 ```
 
 **canonical/ accepts only promoted content.** No reverse flow. Retractions stay explicit (inline `*(Retracted YYYY-MM-DD: reason)*`) and are logged in `THEORY/CHANGELOG.md`.
@@ -61,7 +61,7 @@ THEORY/canonical/canonical.md      (authoritative — one-way only)
 ## Policy
 
 - **Do not re-introduce Research OS structure** (numbered 00–99 dirs, 5-role daily logs, D/S/T/A/E/Q/C/P/X registry files). It was tried 2026-04-12, collapsed 2026-04-16, archived 2026-04-18.
-- **`THEORY/canonical/canonical.md` is the single authoritative spec.** Any theorem-status change edits it + `theorem_status.md` + appends to `THEORY/CHANGELOG.md`.
+- **`THEORY/2_substrate/canonical/canonical.md` is the single authoritative spec.** Any theorem-status change edits it + `theorem_status.md` + appends to `THEORY/CHANGELOG.md`.
 - **No per-item registry files.** Proofs live inside canonical.md sections; theorem index + Open Problems Catalog both live in `theorem_status.md` (single file). The previously separate `open_problems.md` was merged into `theorem_status.md` on 2026-05-04 to eliminate documentation drift.
 - **Experiments**: keep `experiments/exp<N>_*.py` numbering stable. No E-xxxx renaming.
 - **Run everything from `CODE/`.** Tests and experiments locate `scc` via sys.path relative to `CODE/`.
@@ -129,4 +129,4 @@ Diagnostic: `d = (Bind, Sep, Inside, Persist) ∈ [0,1]⁴`
 
 Phase transition: `β/α > 4λ₂ / |W''(c)|` with c in spinodal `((3-√3)/6, (3+√3)/6)`.
 
-Full theorem catalog: `THEORY/canonical/canonical.md` §13.
+Full theorem catalog: `THEORY/2_substrate/canonical/canonical.md` §13.

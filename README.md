@@ -119,7 +119,7 @@ Each tool controls a specific ambiguity. Variational methods address stable exis
 The authoritative status file is:
 
 ```text
-THEORY/canonical/theorem_status.md
+THEORY/2_substrate/canonical/theorem_status.md
 ```
 
 Current summary:
@@ -171,10 +171,10 @@ THEORY/
 
 Key documents:
 
-- `THEORY/canonical/canonical.md` — settled theory specification (CV-1.11)
-- `THEORY/canonical/theorem_status.md` — theorem index + open problem registry
-- `THEORY/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
-- `THEORY/working/MF/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
+- `THEORY/2_substrate/canonical/canonical.md` — settled theory specification (CV-1.11)
+- `THEORY/2_substrate/canonical/theorem_status.md` — theorem index + open problem registry
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
+- `THEORY/2_substrate/multiformation/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
 
 ---
 
@@ -202,7 +202,7 @@ The current phase shifts from expanding the theorem count to closing floating hy
 
 The theory has accumulated 14 Cat B theorems — results proved under explicit structural assumptions that have not yet been independently verified. Until those assumptions are closed, the conditional results cannot be upgraded to Cat A and the full logical chain from axioms to main claims remains incomplete.
 
-The five blocking hypotheses are tracked in `THEORY/canonical/hypothesis_tree.md` (HT-1.0):
+The five blocking hypotheses are tracked in `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-1.0):
 
 | Hypothesis | Blocks |
 |---|---|

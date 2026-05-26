@@ -16,7 +16,7 @@ constraint_compliance:
   status: 'pre-formal vocabulary; 정리 0, 명제 0'
 ---
 
-> [!nav] Parent: [[../INDEX|working/INDEX.md]] · Source: [[../../logs/daily/2026-05-21/conversation/00_index|2026-05-21 conversation transcript]] · Related: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
+> [!nav] Parent: [[INDEX|working/INDEX.md]] · Source: [[../../logs/daily/2026-05-21/conversation/00_index|2026-05-21 conversation transcript]] · Related: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
 
 # Field of Perception — Conditions Catalog v0
 

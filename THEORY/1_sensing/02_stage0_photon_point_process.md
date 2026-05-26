@@ -1057,7 +1057,7 @@ $$
 - $\Omega_0 = N$ 의 atomic 점들 = 광자 발생 사건 집합
 - $\sigma_0(x_i, x_j) \iff \|t_i - t_j\| < \tau \text{ AND } |x_i - x_j| < \delta$ (시공간 인접; $\beta$ 옵션)
 
-따라서 Stage 0 자체가 이미 $(Ω_0, \sigma_0)$ 형태의 Tier 2 객체를 제공. 이게 *최소 가공 Raw* 의 물리적 실현 ([[../prolegomena/00_field_conditions_v0|prolegomena C1–C5]] 가 요구한 *비-함수*, *비-공간*, *비-상태* 조건과 정합).
+따라서 Stage 0 자체가 이미 $(Ω_0, \sigma_0)$ 형태의 Tier 2 객체를 제공. 이게 *최소 가공 Raw* 의 물리적 실현 ([[00_field_conditions_v0|prolegomena C1–C5]] 가 요구한 *비-함수*, *비-공간*, *비-상태* 조건과 정합).
 
 ### 11.5 Two-point correlation in the visual periphery
 

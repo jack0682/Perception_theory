@@ -2,22 +2,22 @@
 
 # WQ-1.C — Layer I H_0 Bar-Death Counterexample Protocol
 
-**File:** `THEORY/working/MF/wq1c_layerI_h0_bardeath_protocol.md`
+**File:** `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_protocol.md`
 **Document type:** Working-grade executable protocol (non-canonical).
 **Created:** 2026-05-02 (WQ-1.C, retry path of WQ-1 selected by WQ-2 decision rule).
 **Status:** working draft. Protocol specified; executable script in `CODE/scripts/wq1c_layerI_h0_bardeath.py`.
 
 **Companion artifacts:**
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md` — results placeholder / outcome record.
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md` — results placeholder / outcome record.
 - `CODE/scripts/wq1c_layerI_h0_bardeath.py` — executable script.
 - `CODE/scripts/results/wq1c_layerI_h0_bardeath_results.json` — JSON output (after run).
 
 **Predecessor artifacts:**
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` — Layer I ambient $\Sigma_M(G_t)$, $K_{\mathrm{soft}}^\phi$ (§6.4), regime discipline (§9).
-- `THEORY/working/MF/nq242c_counterexample_protocol.md` — WQ-1 protocol on Layer II.
-- `THEORY/working/MF/nq242c_results.md` — WQ-1 F2 outcome.
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + WQ-2.D-1 production-run outcome ($K_{\mathrm{bar}}^{0.10}$ : 3 → 1 along F2 trajectory).
-- `THEORY/working/E/soft_K_definition.md` — pre-existing $K_{\mathrm{soft}}^\phi$ definition with (φ-sat) and (φ-lin).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` — Layer I ambient $\Sigma_M(G_t)$, $K_{\mathrm{soft}}^\phi$ (§6.4), regime discipline (§9).
+- `THEORY/2_substrate/multiformation/nq242c_counterexample_protocol.md` — WQ-1 protocol on Layer II.
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — WQ-1 F2 outcome.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + WQ-2.D-1 production-run outcome ($K_{\mathrm{bar}}^{0.10}$ : 3 → 1 along F2 trajectory).
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` — pre-existing $K_{\mathrm{soft}}^\phi$ definition with (φ-sat) and (φ-lin).
 - `CODE/scripts/nq242c_counterexample.py`, `CODE/scripts/ksoft_kact_diagnostics.py` — predecessor scripts (torus builder, persistence pipeline, σ extraction reused).
 
 ---

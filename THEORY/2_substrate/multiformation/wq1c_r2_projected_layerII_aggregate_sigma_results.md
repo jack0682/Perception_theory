@@ -2,7 +2,7 @@
 
 # WQ-1.C-R2 — Projected Layer-II Aggregate σ Test (Results)
 
-**File:** `THEORY/working/MF/wq1c_r2_projected_layerII_aggregate_sigma_results.md`
+**File:** `THEORY/2_substrate/multiformation/wq1c_r2_projected_layerII_aggregate_sigma_results.md`
 **Document type:** Working-grade R2 results / protocol record (non-canonical).
 **Created:** 2026-05-02 (WQ-1.C-R2 retry path of WQ-1.C, motivated by the F-C1 / F-C7 outcome of WQ-1.C base).
 **Status:** RUN COMPLETE — see §3 outcome.
@@ -12,11 +12,11 @@
 - `CODE/scripts/results/wq1c_r2_projected_layerII_aggregate_sigma.json` — JSON output.
 
 **Predecessor artifacts (read for context):**
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + WQ-2.D-1 production-run outcome ($K_{\mathrm{bar}}^{0.10}(U)$ : 3 → 1 for both A and B under Layer II).
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_protocol.md` — WQ-1.C base protocol.
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7 outcome (asymmetric event occurrence under pure Layer I single-field flow).
-- `THEORY/working/MF/nq242c_results.md` — WQ-1 F2 outcome.
-- `THEORY/working/MF/layered_ambient_architecture_agent_notes.md` — guardrails and forbidden non-claims.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + WQ-2.D-1 production-run outcome ($K_{\mathrm{bar}}^{0.10}(U)$ : 3 → 1 for both A and B under Layer II).
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_protocol.md` — WQ-1.C base protocol.
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7 outcome (asymmetric event occurrence under pure Layer I single-field flow).
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — WQ-1 F2 outcome.
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_agent_notes.md` — guardrails and forbidden non-claims.
 - `CODE/scripts/results/ksoft_kact_diag.json` — WQ-2.D-1 scalar diagnostics (no per-snapshot field arrays).
 
 ---

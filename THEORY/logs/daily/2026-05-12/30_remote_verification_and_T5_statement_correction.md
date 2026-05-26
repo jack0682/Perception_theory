@@ -25,7 +25,7 @@ remote_session_ref: https://claude.ai/code/session_01R5piPpBpftqvKNNDGD91T1
 
 > "AFD-T5's *statement* never claims attainment — only the properties bullet does. R1 promotion can therefore be unblocked **today** via a 5-line documentation edit that splits attainment out as a separate Cat B candidate (T5-Strong). The `2 K_field` constant in T5 step (d) similarly weakens cleanly to 'finite', which is all the proof actually needs."
 
-### 1.2 Direct check against `THEORY/working/AFD_0/abstract_formation_dynamics.md`
+### 1.2 Direct check against `THEORY/2_substrate/foundations/AFD/abstract_formation_dynamics.md`
 
 The AFD-T5 block runs from line 376 to line 401. Three load-bearing fragments:
 
@@ -144,7 +144,7 @@ Five replaced lines total. This is exactly what Remote characterized as the "5-l
 
 ### 3.4 Whether to actually do this edit
 
-**Caveat from SCC prompt §8.1:** "canonical 직접 수정 금지. THEORY/canonical/*.md 에 쓰기 금지." `THEORY/working/AFD_0/abstract_formation_dynamics.md` is **working layer, not canonical**, so the prohibition does not strictly apply. However, the more general prompt language (§2 of this prompt template) says: "당신의 모든 출력은 THEORY/logs/daily/2026-05-12/ 디렉토리 내부에만 씁니다. working/ 과 canonical/ 에는 직접 쓰지 않습니다. 승급은 사용자가 별도 단계에서 수행."
+**Caveat from SCC prompt §8.1:** "canonical 직접 수정 금지. THEORY/canonical/*.md 에 쓰기 금지." `THEORY/2_substrate/foundations/AFD/abstract_formation_dynamics.md` is **working layer, not canonical**, so the prohibition does not strictly apply. However, the more general prompt language (§2 of this prompt template) says: "당신의 모든 출력은 THEORY/logs/daily/2026-05-12/ 디렉토리 내부에만 씁니다. working/ 과 canonical/ 에는 직접 쓰지 않습니다. 승급은 사용자가 별도 단계에서 수행."
 
 So **even though the working layer is technically not canonical, this session is instructed to write only to logs/daily/.** Therefore Track A's edit must be **proposed**, not executed, by this agent. The Remote agent (in a separate session, presumably with different instructions) wrote to `working/AFD_0/`; this session does not.
 

@@ -8,7 +8,7 @@ total_turns: 14 user × 14 assistant = 28 turns
 total_files: 8 (1 index + 7 transcript)
 ---
 
-> [!nav] Parent: [[../00_pivot_entry|00_pivot_entry]] · [[../01_thinking_plan|01_thinking_plan]] · [[../../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
+> [!nav] Parent: [[00_pivot_entry|00_pivot_entry]] · [[01_thinking_plan|01_thinking_plan]] · [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]]
 
 # 2026-05-21 — 사유 대화 전체 transcript (인덱스)
 

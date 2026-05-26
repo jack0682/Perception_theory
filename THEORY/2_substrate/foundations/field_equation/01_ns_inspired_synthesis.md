@@ -26,7 +26,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§3.7, §9.3, §13 T-PF-A1-SDE/AR/GI/PE, Theorem 4, SB7, T-σ-Lemma-1, V5b-T-zero, L-HMORSE-LOCAL/DECOMP, T-K-Select-PF, T-OP6-B, T-P-F-ε0-K) · [[../../canonical/DECLARATION|DECL-1.0]] · [[../cssl/00_concept_handoff|CSSL handoff]] · [[../cssl/01_critic_evaluation|CSSL critic eval]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]] · [[../../logs/daily/2026-05-20/04_dynamic_class_investigation|04 dynamic class]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§3.7, §9.3, §13 T-PF-A1-SDE/AR/GI/PE, Theorem 4, SB7, T-σ-Lemma-1, V5b-T-zero, L-HMORSE-LOCAL/DECOMP, T-K-Select-PF, T-OP6-B, T-P-F-ε0-K) · [[DECLARATION|DECL-1.0]] · [[00_concept_handoff|CSSL handoff]] · [[01_critic_evaluation|CSSL critic eval]] · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]] · [[04_dynamic_class_investigation|04 dynamic class]]
 
 # 01 — Navier-Stokes-Inspired Field Equation Framework for SCC (Synthesis v0.1)
 

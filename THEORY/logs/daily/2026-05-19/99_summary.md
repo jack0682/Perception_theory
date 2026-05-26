@@ -22,7 +22,7 @@ coc_enforcement: strict
 v3_first_real_world_use: AUDIT — see §"prompt body 개선 제안"
 ---
 
-> [!nav] Linked: [[00_plan]] · [[00_index]] · [[01_pre_brainstorm]] · [[02_H5_morse_spinodal]] · [[03_T_star_fixed_point]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[../../canonical/auxiliary_structures_master|AUX-1.5 registry]] · [[../MAIN_PROMPT_v3]]
+> [!nav] Linked: [[00_plan]] · [[00_index]] · [[01_pre_brainstorm]] · [[02_H5_morse_spinodal]] · [[03_T_star_fixed_point]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[MAIN_PROMPT_v3]]
 
 # 99 — W8-Day2 Session Summary (2026-05-19)
 
@@ -78,8 +78,8 @@ v3_first_real_world_use: AUDIT — see §"prompt body 개선 제안"
 | 위치 / 종류 | 이유 |
 |---|---|
 | `THEORY/canonical/*.md` 수정 | Day 2 deep-attack day, SEAL day 아님 (§8.1) |
-| `THEORY/canonical/DECLARATION.md` 수정 | §G 비-goal (5/7 sealed) |
-| `THEORY/canonical/auxiliary_structures_master.md` 수정 | AUX-1.6 amendment *선택* — 본 day 의 *기본 선택* = 99_summary 우선 (plan §B.3 결정) |
+| `THEORY/0_axis/DECLARATION.md` 수정 | §G 비-goal (5/7 sealed) |
+| `THEORY/2_substrate/canonical/auxiliary_structures_master.md` 수정 | AUX-1.6 amendment *선택* — 본 day 의 *기본 선택* = 99_summary 우선 (plan §B.3 결정) |
 | `CODE/scc/*.py` 수정 | W8 anti-goal §5 carry-forward |
 | `THEORY/working/MF/*.md` 또는 다른 working file 신규 | 본 plan 의 output schema 가 *daily logs 만* (plan §D); 후속 결정 plan §E item 2 (theorem_status.md working candidate 등록) 시점에 working file 생성 |
 | `04_AUX-1.6_amendment.md` (선택) | 시간 분배 우선순위 — 99_summary 가 의무, AUX-1.6 생략 |

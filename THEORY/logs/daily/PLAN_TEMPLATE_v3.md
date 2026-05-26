@@ -85,10 +85,10 @@ Hybrid day 인 경우 — frontmatter 에 *primary mode* 명시, 본문 §"Mode"
 
 mode 별 권장 (deep-attack 외 mode 는 plan 의 target 에 맞게 조정):
 
-- `THEORY/canonical/canonical.md` §X.Y — <관련 섹션>
-- `THEORY/canonical/theorem_status.md` — <해당 OP-ID / P-ID / Cat 분류 row>
-- `THEORY/canonical/hypothesis_tree.md` — <오늘 타겟하는 HT-node>
-- `THEORY/canonical/DECLARATION.md` — <deep-attack / review / SEAL-execute mode 의무>
+- `THEORY/2_substrate/canonical/canonical.md` §X.Y — <관련 섹션>
+- `THEORY/2_substrate/canonical/theorem_status.md` — <해당 OP-ID / P-ID / Cat 분류 row>
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — <오늘 타겟하는 HT-node>
+- `THEORY/0_axis/DECLARATION.md` — <deep-attack / review / SEAL-execute mode 의무>
 - `THEORY/canonical/CV-1.X_SEAL.md` — <SEAL-prep / SEAL-execute mode 의 직전 SEAL 참조>
 - `THEORY/working/<file>.md` — <plan 의 직접 ancestor working files>
 - 어제 로그: `THEORY/logs/daily/YYYY-MM-DD/99_summary.md` — <carry-forward>

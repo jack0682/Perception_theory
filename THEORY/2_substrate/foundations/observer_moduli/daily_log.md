@@ -147,10 +147,10 @@ project: Observer Moduli Space of SCC
 - `CODE/experiments/exp86_vp1_p_resolution_audit.py` (bug fix: json.dump line 890)
 - `CODE/experiments/results/observer_moduli/vp1_pairs.json` (new)
 - `CODE/experiments/results/observer_moduli/vp1_summary.md` (new)
-- `THEORY/working/observer_moduli/vp1_p_resolution_audit.md` (new)
-- `THEORY/working/observer_moduli/vp1_p_resolution_audit_log.md` (new)
-- `THEORY/working/observer_moduli/vp1_counterexamples.md` (new)
-- `THEORY/working/observer_moduli/vp1_results.md` (new)
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_p_resolution_audit.md` (new)
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_p_resolution_audit_log.md` (new)
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_counterexamples.md` (new)
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_results.md` (new)
 
 **Files updated this session:**
 - `open_problems.md` — OP-OMS-009 status updated to RESOLVED-NEGATIVE; summary table and blocker list updated
@@ -174,7 +174,7 @@ project: Observer Moduli Space of SCC
 **Next session priority:**
 - Run VP-3 (core-weight symmetry test) — attacks OP-OMS-001
 - Run VP-2 (basin discovery) — attacks OP-OMS-002
-- Update THEORY/working/INDEX.md and THEORY/CHANGELOG.md with VP-1 files (this session)
+- Update THEORY/2_substrate/INDEX.md and THEORY/CHANGELOG.md with VP-1 files (this session)
 
 ---
 
@@ -211,7 +211,7 @@ project: Observer Moduli Space of SCC
 - `checkpoints.md` — VP-3/VP-2/VP-4 complete; OMS-1.1 status
 - `canonical_promotion_checklist.md` — v1.2 full rewrite
 - `THEORY/CHANGELOG.md` — Session 4 entry (VP-3+VP-4+OMS-1.1)
-- `THEORY/working/INDEX.md` — VP-4 complete; OMS-1.1 stage; new files table
+- `THEORY/2_substrate/INDEX.md` — VP-4 complete; OMS-1.1 stage; new files table
 
 **Key mathematical decisions:**
 1. PARTIAL_SYMMETRY verdicts (B,C,D,F,G) are NOT candidate symmetries — they reflect scene/λ-dependent approximate loci, not global gauge directions.
@@ -257,13 +257,13 @@ VP-6 (Jacobian spectrum / effective DOF, OP-OMS-016) and OP-OMS-018
 
 **Files created this session:**
 
-- `THEORY/working/observer_moduli/vp6_initial_reading_log.md`
-- `THEORY/working/observer_moduli/effective_dof_theory.md`
-- `THEORY/working/observer_moduli/op_oms_018_regular_u_star.md`
-- `THEORY/working/observer_moduli/vp6_effective_dof.md`
-- `THEORY/working/observer_moduli/vp6_effective_dof_log.md`
-- `THEORY/working/observer_moduli/observer_landscape_admissible_class.md`
-- `THEORY/working/observer_moduli/oms_1_2_status_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_initial_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/effective_dof_theory.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_018_regular_u_star.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/observer_landscape_admissible_class.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_2_status_audit.md`
 - `CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py`
 - `CODE/experiments/observer_moduli/vp6_u_star_regular_path_test.py`
 - `CODE/experiments/results/observer_moduli/vp6_jacobian_spectra.json`
@@ -273,15 +273,15 @@ VP-6 (Jacobian spectrum / effective DOF, OP-OMS-016) and OP-OMS-018
 
 **Files updated this session:**
 
-- `THEORY/working/observer_moduli/open_problems.md`
-- `THEORY/working/observer_moduli/audit_log.md`
-- `THEORY/working/observer_moduli/basin_stratification.md` (§11)
-- `THEORY/working/observer_moduli/stratified_dynamics.md` (§8)
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` (Session-5 head section + v1.3 footer)
-- `THEORY/working/observer_moduli/checkpoints.md` (Session-5 entries pending)
-- `THEORY/working/observer_moduli/daily_log.md` (this entry)
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md`
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/basin_stratification.md` (§11)
+- `THEORY/2_substrate/foundations/observer_moduli/stratified_dynamics.md` (§8)
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` (Session-5 head section + v1.3 footer)
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` (Session-5 entries pending)
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` (this entry)
 - `THEORY/CHANGELOG.md` (Session-5 entry pending)
-- `THEORY/working/INDEX.md` (Session-5 entries pending)
+- `THEORY/2_substrate/INDEX.md` (Session-5 entries pending)
 - (oms_1_candidate.md frontmatter and §11/§17/§18/§20 to be promoted to OMS-1.2 after final audit pass)
 
 **Key mathematical decisions:**
@@ -309,7 +309,7 @@ VP-6 (Jacobian spectrum / effective DOF, OP-OMS-016) and OP-OMS-018
 - OP-OMS-026 fine-grid $\Sigma_{\mathrm{branch}}$ mapping on $\Delta^3$ for S3 (and possibly a path graph $P_{12}$ to match VP-1).
 - OP-OMS-028 quantitative Lipschitz bound for $v(\lambda)$ on $\Delta^3$.
 - OP-OMS-001 formal proof attempt (e.g.\ functional-analytic argument that $E_\lambda$ is generically asymmetric under λ-space transformations beyond the static transport ablation).
-- Promote selected sub-results to `THEORY/canonical/canonical.md` §13 (OMS appendix), as recommended in the Session-4 next-priority list.
+- Promote selected sub-results to `THEORY/2_substrate/canonical/canonical.md` §13 (OMS appendix), as recommended in the Session-4 next-priority list.
 
 ### Session-5 continuation update (post-final-report, same day)
 
@@ -351,19 +351,19 @@ work attacked three OPs in the recommended priority order:
 
 **Files created (continuation):**
 
-- `THEORY/working/observer_moduli/op_oms_028_lipschitz_v.md`
-- `THEORY/working/observer_moduli/op_oms_001_formal_proof_attempt.md`
-- `THEORY/working/observer_moduli/vp7_branch_map_results.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_028_lipschitz_v.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_formal_proof_attempt.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp7_branch_map_results.md`
 - `CODE/experiments/observer_moduli/vp7_branch_map.py`
 - `CODE/experiments/results/observer_moduli/vp7_branch_map.json`
 - `CODE/experiments/results/observer_moduli/vp7_branch_map.md`
 
 **Files updated (continuation):**
 
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-024/026/028 statuses; OP-OMS-029 registered (PROVED)
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-024/026/028 statuses; OP-OMS-029 registered (PROVED)
 - `THEORY/CHANGELOG.md` — continuation deliverables block
-- `THEORY/working/INDEX.md` — Session-5 continuation files table
-- `THEORY/working/observer_moduli/daily_log.md` — this entry
+- `THEORY/2_substrate/INDEX.md` — Session-5 continuation files table
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — this entry
 
 **Remaining hard blockers for OMS-2.0-Accepted (post Session-5 cont.):**
 
@@ -417,16 +417,16 @@ three OMS-2.0 hard blockers. All gates completed.
 - **Gate 8 — repository bookkeeping:** all of `open_problems.md`,
   `audit_log.md` (AUDIT-024), `canonical_promotion_checklist.md`,
   `checkpoints.md`, `daily_log.md` (this entry), `THEORY/CHANGELOG.md`,
-  `THEORY/working/INDEX.md` updated with Session-6 deliverables.
+  `THEORY/2_substrate/INDEX.md` updated with Session-6 deliverables.
 
 ### Files created (Session 6):
 
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_rank_theorem.md`
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_sensitivity.md`
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_genericity.md`
-- `THEORY/working/observer_moduli/op_oms_002_nontrivial_v.md`
-- `THEORY/working/observer_moduli/op_oms_026_sigma_branch_full.md`
-- `THEORY/working/observer_moduli/oms_2_0_promotion_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_rank_theorem.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_sensitivity.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_genericity.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_002_nontrivial_v.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_026_sigma_branch_full.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_promotion_audit.md`
 - `CODE/experiments/observer_moduli/vp8_gap_c1_rank_witness.py`
 - `CODE/experiments/observer_moduli/vp9_nontrivial_v_basin_test.py`
 - `CODE/experiments/observer_moduli/vp10_sigma_branch_delta3.py`
@@ -443,7 +443,7 @@ three OMS-2.0 hard blockers. All gates completed.
 - `checkpoints.md` — Session-6 entries added; OMS-2.0 Conditional status.
 - `daily_log.md` — this entry.
 - `THEORY/CHANGELOG.md` — Session-6 entry.
-- `THEORY/working/INDEX.md` — Session-6 file table + status update.
+- `THEORY/2_substrate/INDEX.md` — Session-6 file table + status update.
 
 ### Key mathematical decisions:
 
@@ -455,7 +455,7 @@ three OMS-2.0 hard blockers. All gates completed.
 
 ### Next session priority:
 
-1. Promote the proved OMS sub-results (RT1/RT2/RT3, S1, NV3–NV10, SB5–SB11, R1–R5, ED1, ED2) into `THEORY/canonical/canonical.md` §13 OMS appendix.
+1. Promote the proved OMS sub-results (RT1/RT2/RT3, S1, NV3–NV10, SB5–SB11, R1–R5, ED1, ED2) into `THEORY/2_substrate/canonical/canonical.md` §13 OMS appendix.
 2. Close OP-OMS-032 (closed-form H4 witness on $P_3$ or $P_4$).
 3. Close OP-OMS-033 ($\Sigma_{\mathrm{SN}}$ Arnold specifics for SCC).
 4. Close OP-OMS-034 (full temporal Δ³ via `scc.multi`).
@@ -475,30 +475,30 @@ three OMS-2.0 hard blockers. All gates completed.
 - **Task B — OP-OMS-032:** `op_oms_032_closed_form_h4.md` written. Status: **CLOSED UNDER CERTIFIED WITNESS**. Witness type: INTERVAL_CERTIFIED. 12 certified witnesses across 3 scenes. Best margin $4 \times 10^{13}$ over IEEE error bound. This is standard convention for computer-assisted mathematical proof.
 - **Task C — OP-OMS-033:** `op_oms_033_sigma_sn_arnold.md` written. Status: **PROVED as conditional fold theorem SN3** via Crandall–Rabinowitz applied to the SCC KKT system. Lemma SN4 (SCC genericity) PROOF SKETCH; sub-OP OP-OMS-033b (non-blocking).
 - **Task D — OP-OMS-034:** `op_oms_034_temporal_delta3_status.md` written. Theorems TS1 (static-temporal independence) + TS2 (separation declaration). Status: **SEPARATED**. Static OMS-2.0 self-contained on $\Delta^2_{\mathrm{static}}$; full temporal Conditional on OP-OMS-034.
-- **Task E — Final audit:** `oms_2_0_accepted_audit.md` written. Verdict: **OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034**. Canonical Appendix OMS added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items.
+- **Task E — Final audit:** `oms_2_0_accepted_audit.md` written. Verdict: **OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034**. Canonical Appendix OMS added to `THEORY/2_substrate/canonical/canonical.md` with 20+ theorem-grade items.
 - **Task F — Bookkeeping:** all repository updates completed.
 
 ### Files created (Session 7):
 
-- `THEORY/working/observer_moduli/proof_promotion_reading_log.md`
-- `THEORY/working/observer_moduli/gap_c1_final_theorem_package.md`
-- `THEORY/working/observer_moduli/op_oms_032_closed_form_h4.md`
-- `THEORY/working/observer_moduli/op_oms_033_sigma_sn_arnold.md`
-- `THEORY/working/observer_moduli/op_oms_034_temporal_delta3_status.md`
-- `THEORY/working/observer_moduli/oms_2_0_accepted_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/proof_promotion_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/gap_c1_final_theorem_package.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_032_closed_form_h4.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_033_sigma_sn_arnold.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_temporal_delta3_status.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_accepted_audit.md`
 
 ### Files updated (Session 7):
 
-- `THEORY/canonical/canonical.md` — **Appendix OMS** added at file end.
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-032/033/034 statuses; 032b/033b registered.
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-025 + W22–W25.
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — Session-7 head + final classification: Accepted Static.
-- `THEORY/working/observer_moduli/checkpoints.md` — Session-7 row + Accepted Static status.
-- `THEORY/working/observer_moduli/observer_moduli_space.md` — §18 promotion trajectory + supersession note.
-- `THEORY/working/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Static.
+- `THEORY/2_substrate/canonical/canonical.md` — **Appendix OMS** added at file end.
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-032/033/034 statuses; 032b/033b registered.
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-025 + W22–W25.
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — Session-7 head + final classification: Accepted Static.
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — Session-7 row + Accepted Static status.
+- `THEORY/2_substrate/foundations/observer_moduli/observer_moduli_space.md` — §18 promotion trajectory + supersession note.
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Static.
 - `THEORY/CHANGELOG.md` — Session-7 entry.
-- `THEORY/working/INDEX.md` — Session-7 file table + status.
-- `THEORY/working/observer_moduli/daily_log.md` — this entry.
+- `THEORY/2_substrate/INDEX.md` — Session-7 file table + status.
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — this entry.
 
 ### Key mathematical decisions:
 
@@ -540,24 +540,24 @@ three OMS-2.0 hard blockers. All gates completed.
 
 ### Files created (Session 8):
 
-- `THEORY/working/observer_moduli/op_oms_034_initial_log.md`
-- `THEORY/working/observer_moduli/op_oms_034_temporal_delta3_resolution.md`
-- `THEORY/working/observer_moduli/oms_2_0_full_accepted_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_initial_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_temporal_delta3_resolution.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_full_accepted_audit.md`
 - `CODE/experiments/observer_moduli/vp11_temporal_delta3.py`
 - `CODE/experiments/results/observer_moduli/vp11_temporal_rank_witness.{json,md}`
 - `CODE/experiments/results/observer_moduli/vp11_temporal_delta3.{json,md}`
 
 ### Files updated (Session 8):
 
-- `THEORY/canonical/canonical.md` — Appendix OMS Temporal subsection (M) added.
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-034 CLOSED; 034b/034c registered.
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-026 + W26–W28.
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md`
-- `THEORY/working/observer_moduli/checkpoints.md`
-- `THEORY/working/observer_moduli/oms_1_candidate.md` — promoted to OMS-2.0 Accepted Full.
+- `THEORY/2_substrate/canonical/canonical.md` — Appendix OMS Temporal subsection (M) added.
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-034 CLOSED; 034b/034c registered.
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-026 + W26–W28.
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md`
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_candidate.md` — promoted to OMS-2.0 Accepted Full.
 - `THEORY/CHANGELOG.md` — Session-8 entry.
-- `THEORY/working/INDEX.md` — Session-8 file table + Full Accepted status.
-- `THEORY/working/observer_moduli/daily_log.md` — this entry.
+- `THEORY/2_substrate/INDEX.md` — Session-8 file table + Full Accepted status.
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — this entry.
 
 ### Key mathematical decisions:
 

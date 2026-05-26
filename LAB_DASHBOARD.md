@@ -12,7 +12,7 @@ cssclasses:
 # Research Lab Dashboard
 
 > [!nav] Authority
-> [[THEORY_INDEX]] · [[THEORY/canonical/canonical|canonical]] · [[THEORY/canonical/theorem_status|theorem_status]] · [[THEORY/canonical/hypothesis_tree|hypothesis_tree]] · [[THEORY/CHANGELOG|CHANGELOG]]
+> [[THEORY_INDEX]] · [[canonical|canonical]] · [[theorem_status|theorem_status]] · [[hypothesis_tree|hypothesis_tree]] · [[CHANGELOG|CHANGELOG]]
 
 > [!status] Current posture
 > Canonical authority remains in `THEORY/canonical/`; active reasoning moves through `THEORY/working/`; session history stays in `THEORY/logs/`. This dashboard indexes the system without changing the theory files.
@@ -23,9 +23,9 @@ cssclasses:
 TABLE type, status, cluster, last_updated AS updated, description
 FROM "Perception_theory"
 WHERE file.path = "Perception_theory/THEORY_INDEX.md"
-   OR file.path = "Perception_theory/THEORY/canonical/canonical.md"
-   OR file.path = "Perception_theory/THEORY/canonical/theorem_status.md"
-   OR file.path = "Perception_theory/THEORY/canonical/hypothesis_tree.md"
+   OR file.path = "Perception_theory/THEORY/2_substrate/canonical/canonical.md"
+   OR file.path = "Perception_theory/THEORY/2_substrate/canonical/theorem_status.md"
+   OR file.path = "Perception_theory/THEORY/2_substrate/canonical/hypothesis_tree.md"
    OR file.path = "Perception_theory/THEORY/CHANGELOG.md"
 SORT file.path ASC
 ```
@@ -62,7 +62,7 @@ LIMIT 40
 ## Experiments And Validation
 
 > [!nav] Entry points
-> [[THEORY/MOC_experiments_validation|MOC_experiments_validation]] · [[CODE/README|CODE README]] · `CODE/experiments/` · `CODE/results/`
+> [[MOC_experiments_validation|MOC_experiments_validation]] · [[CODE/README|CODE README]] · `CODE/experiments/` · `CODE/results/`
 
 ```dataview
 TABLE file.folder AS folder, file.mtime AS modified

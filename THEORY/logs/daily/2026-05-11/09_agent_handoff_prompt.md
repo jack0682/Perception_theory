@@ -74,13 +74,13 @@ INSPECT THESE FILES FIRST
 
 Required reading (in order):
 
-    THEORY/canonical/DECLARATION.md
-    THEORY/canonical/hypothesis_tree.md (especially Q3 / H-MORSE block)
-    THEORY/canonical/canonical.md (§13 — Category B / T-PF-ε0-K;
+    THEORY/0_axis/DECLARATION.md
+    THEORY/2_substrate/canonical/hypothesis_tree.md (especially Q3 / H-MORSE block)
+    THEORY/2_substrate/canonical/canonical.md (§13 — Category B / T-PF-ε0-K;
                                    §13 Category A — T-PF-A1 Package I)
-    THEORY/canonical/theorem_status.md (T-PF-A1 Package I; T-P-F-ε0;
+    THEORY/2_substrate/canonical/theorem_status.md (T-PF-A1 Package I; T-P-F-ε0;
                                         T-P-F-ε0-K; T-K-Select-*)
-    THEORY/canonical/CV-1.13_SEAL.md
+    THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md
     THEORY/logs/daily/2026-05-11/ (this folder — for full W7 context)
 
 Search the working tree for:
@@ -105,12 +105,12 @@ Search the working tree for:
 
 Likely locations:
 
-    THEORY/working/MF/pf_tstar_langevin.md
-    THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md
-    THEORY/working/MF/op_0006_boundary_precision.md (T-OP6-B; H1–H5)
-    THEORY/working/MF/k_select_pf_equilibrium.md
-    THEORY/working/MF/k_select_obs_posterior.md
-    THEORY/working/MF/emergent_multi_formation_synthesis.md
+    THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md
+    THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md
+    THEORY/2_substrate/multiformation/op_0006_boundary_precision.md (T-OP6-B; H1–H5)
+    THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md
+    THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md
+    THEORY/2_substrate/Q2_multiformation/emergent_multi_formation_synthesis.md
       (T-MF-Synthesis future candidate)
     THEORY/working/observer_moduli/
     THEORY/logs/daily/2026-05-06/ (Sessions H-I, Q-R, S-T-Y — P-F-A1

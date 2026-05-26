@@ -59,7 +59,7 @@ consensus_baseline_compliance:
   L_HMORSE_DECOMP_anchor: canonical.md L1974
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§13 Theorem 4 L1134, T-σ-Lemma-1 L1386, V5b-T-zero L1328, L-HMORSE-LOCAL L1948, L-HMORSE-DECOMP L1974) · [[../../canonical/theorem_status|theorem_status]] (OP-HMORSE-SADDLE L594, OP-0005-DYN L803, OP-0021 L587) · [[../../canonical/DECLARATION|DECL-1.0]] (Q1 boundary T8, Q4 K-selection) · [[01_ns_inspired_synthesis|01 NS synthesis]] (12-number catalog) · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola continuum]] · [[04_h_morse_spectral_quantification|04 Schur block decomposition]] · [[07_critic_full_review|07 Wave 2 critic — σ formula consensus]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§13 Theorem 4 L1134, T-σ-Lemma-1 L1386, V5b-T-zero L1328, L-HMORSE-LOCAL L1948, L-HMORSE-DECOMP L1974) · [[theorem_status|theorem_status]] (OP-HMORSE-SADDLE L594, OP-0005-DYN L803, OP-0021 L587) · [[DECLARATION|DECL-1.0]] (Q1 boundary T8, Q4 K-selection) · [[01_ns_inspired_synthesis|01 NS synthesis]] (12-number catalog) · [[03_modica_mortola_jacobi_cat_b|03 Modica-Mortola continuum]] · [[04_h_morse_spectral_quantification|04 Schur block decomposition]] · [[07_critic_full_review|07 Wave 2 critic — σ formula consensus]]
 
 # 08 — Spectral Graph Theory + Cheeger Inequalities for SCC H-Morse Bounds (Wave 3)
 

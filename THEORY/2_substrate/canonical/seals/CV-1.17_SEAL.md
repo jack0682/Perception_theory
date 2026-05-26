@@ -22,7 +22,7 @@ description: T-CC-StableK-Kernel Cat B canonical promotion (kernel-composed comp
 
 ## Seal Statement
 
-본 SEAL 은 (a) `/Users/ojaehong/.claude/plans/groovy-humming-starlight.md` 의 OPT-B (Hygiene + CV114 promotion) 사용자 채택과 (b) `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` 의 P1–P6 충족 + P7 사용자 승인을 근거로 **T-CC-StableK-Kernel** (kernel-composed compositional consistency, Cat B) 을 canonical §13 Category B 에 등재한다. 동시에 CV-1.15 의 T-ACT-KERNEL-COMP→REL conditional 의 forward-reference 가 활성화되어 (GK) precondition 의 working-candidate 의존성이 closed 된다.
+본 SEAL 은 (a) `/Users/ojaehong/.claude/plans/groovy-humming-starlight.md` 의 OPT-B (Hygiene + CV114 promotion) 사용자 채택과 (b) `THEORY/4_temporal/composition/05_promotion_draft.md` 의 P1–P6 충족 + P7 사용자 승인을 근거로 **T-CC-StableK-Kernel** (kernel-composed compositional consistency, Cat B) 을 canonical §13 Category B 에 등재한다. 동시에 CV-1.15 의 T-ACT-KERNEL-COMP→REL conditional 의 forward-reference 가 활성화되어 (GK) precondition 의 working-candidate 의존성이 closed 된다.
 
 본 SEAL 은 또한 **CV-1.14 reserved-version 의 흡수** 를 기록한다 — CV-1.14 는 CV-1.15 (W7-Day5 morning) 시점에 T-CC-StableK-Kernel working candidate 의 promotion 용으로 reserved 되었으나, 그 사이 CV-1.16 (W7-Day5 evening extension) 이 H-MORSE-Local Closure Package 로 먼저 sealed 됨. CV-1.17 의 T-CC-StableK-Kernel promotion 이 *원래 의도된 CV-1.14 의 semantic content* 를 충족하므로 CV-1.14 numeric slot 은 *retroactively absorbed* — 즉 별도 CV-1.14 SEAL 문서 작성 없이 CV-1.17 SEAL 이 그 역할까지 cover. *Version-ladder 의 numeric jump 는 promotion 자체로 정당화*.
 
@@ -32,7 +32,7 @@ description: T-CC-StableK-Kernel Cat B canonical promotion (kernel-composed comp
 
 ### P1 — 명제 명확화 ✓
 
-T-CC-StableK-Kernel 의 setup / conditions / construction / conclusion / proof sketch / limitation / scope — 모두 `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md §2` 에 완전한 형태로 작성됨.
+T-CC-StableK-Kernel 의 setup / conditions / construction / conclusion / proof sketch / limitation / scope — 모두 `THEORY/4_temporal/composition/05_promotion_draft.md §2` 에 완전한 형태로 작성됨.
 
 ### P2 — 증명 ✓
 
@@ -134,12 +134,12 @@ OPT-B selection (2026-05-15) via plan-mode AskUserQuestion. 선택지 본문에 
 
 | File | Change |
 |------|--------|
-| `THEORY/canonical/canonical.md` | **UPDATED** — frontmatter (id/version/released → CV-1.17/1.17/2026-05-15); description: CV-1.17 sealed entry 추가; title CV-1.16 → CV-1.17; version-naming-block CV-1.17 추가; release-state section heading CV-1.16 → CV-1.17 + body CV-1.17 sealed entry + next-target CV-1.18 갱신; §13 Category B section header 카운트 19 갱신; §13 Cat B body: **CV-1.17 Cat B addition block** 신설 (T-CC-StableK-Kernel block, full theorem statement + proof sketch + scope limitation + T-ACT-KERNEL-COMP→REL conditional lift note); CV-1.16 Cat B count comment 후 CV-1.17 count comment 추가. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — header CV-1.16 → CV-1.17. Stage A hygiene 작업 (OP Quick Index 의 OP-HMORSE-* 등재, OP-0012-SINK scope cross-cite, OP-0021 dual-naming note) 가 이미 적용된 base 위에. |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — frontmatter HT-3.7 → HT-3.8; Status line CV-1.16 → CV-1.17; title HT-3.5 → HT-3.8; CV-1.17 SEALED block 추가 (CV-1.16 SEALED block 다음); 다음 목표 CV-1.18 갱신; H-COMP-KERNEL subbranch CLOSED Cat B 활성화 (H-COMP-CC 와 H-COMP-ACTION 사이 삽입); H-COMP-ACTION 의 conditional lift active CV-1.17 표기; H-COMP-KERNEL Note 갱신; HT-3.8 changelog row 추가. |
-| `THEORY/canonical/CV-1.17_SEAL.md` | **CREATED** (this document). |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — frontmatter (id/version/released → CV-1.17/1.17/2026-05-15); description: CV-1.17 sealed entry 추가; title CV-1.16 → CV-1.17; version-naming-block CV-1.17 추가; release-state section heading CV-1.16 → CV-1.17 + body CV-1.17 sealed entry + next-target CV-1.18 갱신; §13 Category B section header 카운트 19 갱신; §13 Cat B body: **CV-1.17 Cat B addition block** 신설 (T-CC-StableK-Kernel block, full theorem statement + proof sketch + scope limitation + T-ACT-KERNEL-COMP→REL conditional lift note); CV-1.16 Cat B count comment 후 CV-1.17 count comment 추가. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — header CV-1.16 → CV-1.17. Stage A hygiene 작업 (OP Quick Index 의 OP-HMORSE-* 등재, OP-0012-SINK scope cross-cite, OP-0021 dual-naming note) 가 이미 적용된 base 위에. |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — frontmatter HT-3.7 → HT-3.8; Status line CV-1.16 → CV-1.17; title HT-3.5 → HT-3.8; CV-1.17 SEALED block 추가 (CV-1.16 SEALED block 다음); 다음 목표 CV-1.18 갱신; H-COMP-KERNEL subbranch CLOSED Cat B 활성화 (H-COMP-CC 와 H-COMP-ACTION 사이 삽입); H-COMP-ACTION 의 conditional lift active CV-1.17 표기; H-COMP-KERNEL Note 갱신; HT-3.8 changelog row 추가. |
+| `THEORY/2_substrate/canonical/seals/CV-1.17_SEAL.md` | **CREATED** (this document). |
 | `THEORY/CHANGELOG.md` | **UPDATED** — [CV-1.17] 2026-05-15 entry prepended above [HYGIENE] 2026-05-15 entry. |
-| `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` | **NOT modified** (working draft 보존; 본 SEAL 이 reference). 향후 *working-layer cleanup* (예: "PROMOTED" 상태 변경) 은 별도 hygiene plan. |
+| `THEORY/4_temporal/composition/05_promotion_draft.md` | **NOT modified** (working draft 보존; 본 SEAL 이 reference). 향후 *working-layer cleanup* (예: "PROMOTED" 상태 변경) 은 별도 hygiene plan. |
 | 그 외 (canonical.md §13 Cat A / Cat C 본문, DECLARATION.md, OMS Appendix, scc/ 모듈) | **NOT modified.** |
 
 ---
@@ -150,7 +150,7 @@ OPT-B selection (2026-05-15) via plan-mode AskUserQuestion. 선택지 본문에 
 - **Package II Eyring-Kramers prefactor Cat B** (CV-1.18 secondary, 3-4 sessions): L-HMORSE-LOCAL Cat B provides partial H5 replacement; combine with OP-0021 ($T_*$) for full prefactor. Q3 closure path.
 - **OP-HMORSE-SBM** (1 session): numerical robustness extension to SBM / barbell / small-world. OP-HMORSE-LOCAL-A sub-task B 와 중복.
 - **OP-0021 dual-naming reconciliation** (0.5 session, hygiene): H-T* "T_* normalization" (hypothesis_tree) vs OP-0021 "Stochastic Dynamics" (theorem_status). CV-1.16 SEAL 의 deferred 결정 처리.
-- **§F Step 2 housekeeping** (0.5 session, working-file only): `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md §1–§4` → §A–§D blocks rewrite. CV-1.15 deferred.
+- **§F Step 2 housekeeping** (0.5 session, working-file only): `THEORY/4_temporal/action_cost/10_patch_plan.md §1–§4` → §A–§D blocks rewrite. CV-1.15 deferred.
 - **OP-0012-SINK 잔여 blocker** (Cat C targets): L-δ_eff-SINK + L-Eff-Sinkhorn. T-CC-StableK-Kernel canonical promotion 후 *kernel-composed scope* 명시화 → Sinkhorn-recomputed scope 차이 더 선명해짐.
 - **OQ-A CV-1.14 promotion audit** (이미 absorbed by CV-1.17): formally close.
 

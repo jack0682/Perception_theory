@@ -822,6 +822,6 @@ The existing theories are largely salvageable; the main required changes are (1)
 
 **Status:** Working draft, W6 Day 2 evening, 2026-05-05. Comprehensive cross-validation of all existing SCC theories against the stereo-conditioned framework. No canonical claims asserted; all items working-level. P-F flags throughout. Feeds: OP-0005 Commitment 19, OP-0006 resolution path, OP-0008 Commitment 18, OP-0009-Pre canonical §1 amendment (v2.0 horizon), OP-0021 stochastic extension (highest-priority blocker).
 
-**File:** `THEORY/working/MF/cross_validation_stereo_scc_framework.md`
+**File:** `THEORY/2_substrate/Q2_multiformation/cross_validation_stereo_scc_framework.md`
 **Created:** 2026-05-05 W6 D2 evening.
 **Promotion target:** No direct canonical promotion; feeds multiple working files and OP resolution paths. CV-1.8+ / v2.0 horizon for canonical §1/§3/§14 amendments.

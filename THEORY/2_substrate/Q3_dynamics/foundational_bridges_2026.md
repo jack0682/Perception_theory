@@ -413,6 +413,6 @@ Before any NQ-261..267 enters CV-1.x packet, verify all ⚠️ pending citations
 
 **End of foundational_bridges_2026.md (W5 Day 4 PM Wave 3).**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/foundational_bridges_2026.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md`
 **Lines:** ~340
 **Promotion target:** none (permanent working/MF/ catalog).

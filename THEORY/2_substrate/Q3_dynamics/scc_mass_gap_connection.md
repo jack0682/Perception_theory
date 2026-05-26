@@ -272,7 +272,7 @@ If $\min_k \lambda_k \to 0$ uniformly as $\beta \uparrow$ a bifurcation surface 
 
 ### §9.4 K-jump non-determinism (OP-0008)
 
-**Failure (d):** σ^A K-jump non-determinism (OP-0008, registered in canonical §1.1 CV-1.5.1 release-notes line 77; full open-problem statement at `THEORY/canonical/theorem_status.md` OP-0008) implies $\mathcal{L}_K$ is not connected and the infimum may be taken over a path-disconnected union with different mass-gap values per connected component. Resolution: BC-249-1 (revised §3.1 form) stated per-component, with $\Delta_*(G, K, \delta_0)$ depending on the connected component label as well as $(G, K, \delta_0)$.
+**Failure (d):** σ^A K-jump non-determinism (OP-0008, registered in canonical §1.1 CV-1.5.1 release-notes line 77; full open-problem statement at `THEORY/2_substrate/canonical/theorem_status.md` OP-0008) implies $\mathcal{L}_K$ is not connected and the infimum may be taken over a path-disconnected union with different mass-gap values per connected component. Resolution: BC-249-1 (revised §3.1 form) stated per-component, with $\Delta_*(G, K, \delta_0)$ depending on the connected component label as well as $(G, K, \delta_0)$.
 
 ---
 
@@ -290,7 +290,7 @@ If $\min_k \lambda_k \to 0$ uniformly as $\beta \uparrow$ a bifurcation surface 
 
 **Mass-gap correspondence:** *Formation birth ↔ mass-gap closure + reopening (protocol-conditional).* When $K_{\mathrm{act}}$ jumps $K \to K+1$, the $K$-component mass gap closes (a flat direction opens for the new formation to nucleate); after birth, $(K+1)$-component mass gap re-opens. This $\Delta_K$ cycling structurally parallels QuEra-observed string breaking.
 
-**Reconciliation with NQ-253 (added 2026-04-30 per critic C2).** Per `THEORY/working/MF/formation_birth_string_breaking.md` §4.3, the $\Delta K = +1$ formation-birth event is **forbidden under noiseless SCC gradient flow** on $\widetilde\Sigma^K_M$ (NQ-253 Claim 4.3, anchored on T-Merge (b) Cat A monotone $K_{\mathrm{act}}$ decrease). The $\Delta_K$ cycling described above is therefore **protocol-conditional**, occurring only under one of the NQ-253 §4.2 mechanisms — **B1** (thermal noise added to canonical dynamics), **B2** (initial-condition manipulation placing $\mathbf{u}(0) \in S_{K_{\mathrm{act}}+1}$), or **B3** (stretching protocol externally driving the string-length parameter past $L_{\mathrm{crit}}$). Under generic noiseless canonical SCC dynamics, $\Delta_K$ does **not** cycle: the system descends monotonically through $K$-strata and the QuEra-style oscillatory mass-gap pattern is absent. The QuEra parallel is therefore one-way (SCC inherits the *threshold structure* of birth via §3 string-breaking energetics), not bidirectional (QuEra spontaneous-vacuum-pair-creation is not an SCC ontological input — CN10 contrastive lock applies). NQ-249g (§15) effort estimate must therefore depend on NQ-253 Phase 1 completion.
+**Reconciliation with NQ-253 (added 2026-04-30 per critic C2).** Per `THEORY/2_substrate/Q2_multiformation/formation_birth_string_breaking.md` §4.3, the $\Delta K = +1$ formation-birth event is **forbidden under noiseless SCC gradient flow** on $\widetilde\Sigma^K_M$ (NQ-253 Claim 4.3, anchored on T-Merge (b) Cat A monotone $K_{\mathrm{act}}$ decrease). The $\Delta_K$ cycling described above is therefore **protocol-conditional**, occurring only under one of the NQ-253 §4.2 mechanisms — **B1** (thermal noise added to canonical dynamics), **B2** (initial-condition manipulation placing $\mathbf{u}(0) \in S_{K_{\mathrm{act}}+1}$), or **B3** (stretching protocol externally driving the string-length parameter past $L_{\mathrm{crit}}$). Under generic noiseless canonical SCC dynamics, $\Delta_K$ does **not** cycle: the system descends monotonically through $K$-strata and the QuEra-style oscillatory mass-gap pattern is absent. The QuEra parallel is therefore one-way (SCC inherits the *threshold structure* of birth via §3 string-breaking energetics), not bidirectional (QuEra spontaneous-vacuum-pair-creation is not an SCC ontological input — CN10 contrastive lock applies). NQ-249g (§15) effort estimate must therefore depend on NQ-253 Phase 1 completion.
 
 ### §10.3 Connection F — Fukaya symplectic Floer
 
@@ -347,7 +347,7 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
 
 ### §12.2 Internal SCC references
 
-- `THEORY/canonical/canonical.md`:
+- `THEORY/2_substrate/canonical/canonical.md`:
   - §11.1 Commitment 14 + sub-conventions (O5')(O7) — `canonical.md:785–794`
   - §11.1 Commitment 16 K-status — `canonical.md:796–812` *(Erratum 2026-04-30, critic M1: previous citation `canonical.md:77` pointed to the CV-1.5.1 version-history table row, not Commitment 16 itself.)*
   - §13 T-Commitment-14-Multi-Static — `canonical.md:1217–1228`
@@ -362,12 +362,12 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
   - §13 T8-Core phase transition (existence) — `canonical.md:1005` + Scaling Caveat `canonical.md:1009`
   - §13 T-σ-Theorem-3 (Hessian on uniform, σ at uniform) — `canonical.md:1334–1371`
   - §8 admissible spinodal range $((3-\sqrt{3})/6, (3+\sqrt{3})/6)$ — `canonical.md:572`
-- `THEORY/working/SF/mode_count.md` — closed-form Hessian on $u_{\mathrm{uniform}}$, Prop 1.3a/b.
-- `THEORY/working/MF/multi_formation_sigma.md` — multi-formation σ framework, V5b-F transfer mechanism §5.5.
-- `THEORY/working/MF/sigma_multi_trajectory.md` — dynamic σ trajectory, K-jump events.
+- `THEORY/2_substrate/sigma_framework/mode_count.md` — closed-form Hessian on $u_{\mathrm{uniform}}$, Prop 1.3a/b.
+- `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` — multi-formation σ framework, V5b-F transfer mechanism §5.5.
+- `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` — dynamic σ trajectory, K-jump events.
 - `THEORY/logs/daily/2026-04-30/06_gauge_theory_connections_analysis.md` — 9 gauge-theory connections enumeration; Connection A §3 (NQ-249 origin), Connection G §9, Connection H §10, Connection F §8.
 - OP-0009 sub-item OP-0009-Emp (R23 σ verification) — `canonical/theorem_status.md` OP-0009.
-- OP-0008 σ^A K-jump non-determinism — registered in canonical §1.1 CV-1.5.1 release-notes (`canonical.md:77`); full open-problem statement at `THEORY/canonical/theorem_status.md` OP-0008.
+- OP-0008 σ^A K-jump non-determinism — registered in canonical §1.1 CV-1.5.1 release-notes (`canonical.md:77`); full open-problem statement at `THEORY/2_substrate/canonical/theorem_status.md` OP-0008.
 
 ---
 
@@ -379,7 +379,7 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
 | **CN10 contrastive (YM downstream parallel, not foundation)** | ✅ | §1.3, §5 contrastive table, §10 connection structure. SCC content is graph-spectral; YM is structural inspiration only. |
 | **F-1 not silently resolved** | ✅ | F-1 (vacuity) is about pre-objective formation existence; this file restricts to non-trivial $\mathcal{L}_K$ Morse-0 minimizers ⇒ F-1 regime is *outside* scope. We do not claim F-1 resolved; we restrict hypothesis. |
 | **M-1 not silently resolved** | ✅ | M-1 (K=1 preference) is about ground-state K-selection; this file analyzes spectral structure *given* K, not selection of K. M-1 untouched. |
-| **MO-1 not silently resolved** | ✅ | MO-1 (Morse inapplicability) is sidestepped in canonical via single-formation framework; multi-formation Morse re-engagement deferred to MO-1 OP-0003 rider (canonical §1.1 CV-1.5.1 release-notes line 77; full statement at `THEORY/canonical/theorem_status.md` OP-0003). This file uses Morse-0 hypothesis explicitly *as hypothesis*, never claims MO-1 resolved. |
+| **MO-1 not silently resolved** | ✅ | MO-1 (Morse inapplicability) is sidestepped in canonical via single-formation framework; multi-formation Morse re-engagement deferred to MO-1 OP-0003 rider (canonical §1.1 CV-1.5.1 release-notes line 77; full statement at `THEORY/2_substrate/canonical/theorem_status.md` OP-0003). This file uses Morse-0 hypothesis explicitly *as hypothesis*, never claims MO-1 resolved. |
 | **Cat A/B/C distinctions explicit** | ✅ | §7 Cat A immediate (§7.1), Cat B target BC-249-1 (§7.2), Cat C closed-form (§7.3). |
 | **Multi-formation default; K=1 degenerate special case** | ✅ | Throughout, $K_{\mathrm{act}} \geq 1$ general; $K=1$ recovers single-formation per canonical T-σ-multi-A-Static reduction (`canonical.md:1233`). |
 
@@ -389,7 +389,7 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
 
 ### §14.1 Canonical references (read-only)
 
-- `THEORY/canonical/canonical.md`
+- `THEORY/2_substrate/canonical/canonical.md`
   - §3 phase transition (lines 1337–1371)
   - §11.1 Commitment 14 (lines 785–794)
   - §11.1 Commitment 16 (line 77)
@@ -400,16 +400,16 @@ T-V5b-T-zero (canonical `canonical.md:1199–1201`) Goldstone-eigenvalue exact-z
   - §13 T-σ-Lemma-3 (lines 1301–1320)
   - §13 T-V5b-T-zero (lines 1199–1201)
   - §13 T-σ-Theorem-3 (lines 1262–1265)
-- `THEORY/canonical/theorem_status.md` — OP-0009 sub-items (OP-0009-Emp), OP-0008.
-- `THEORY/canonical/theorem_status.md` — Cat A/B/C registry.
+- `THEORY/2_substrate/canonical/theorem_status.md` — OP-0009 sub-items (OP-0009-Emp), OP-0008.
+- `THEORY/2_substrate/canonical/theorem_status.md` — Cat A/B/C registry.
 
 ### §14.2 Working references
 
-- `THEORY/working/MF/multi_formation_sigma.md` (510 lines) — σ-framework multi-formation extension; V5b-F → multi transfer §5.5.
-- `THEORY/working/MF/sigma_multi_trajectory.md` (283 lines) — dynamic σ trajectory + K-jump events; OP-0008 dependence.
-- `THEORY/working/MF/F_Kstep_K_triple.md` (359 lines) — F / K_step / K_act triple bridge; OP-0009-F partial resolution.
-- `THEORY/working/SF/mode_count.md` (359 lines) — Prop 1.3a/b closed-form Hessian on uniform; SF baseline.
-- `THEORY/working/SF/symmetry_moduli.md` — D_4 normal-form coefficients $A_1, A_2$ (used in T-σ-Theorem-4).
+- `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` (510 lines) — σ-framework multi-formation extension; V5b-F → multi transfer §5.5.
+- `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` (283 lines) — dynamic σ trajectory + K-jump events; OP-0008 dependence.
+- `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` (359 lines) — F / K_step / K_act triple bridge; OP-0009-F partial resolution.
+- `THEORY/2_substrate/sigma_framework/mode_count.md` (359 lines) — Prop 1.3a/b closed-form Hessian on uniform; SF baseline.
+- `THEORY/2_substrate/sigma_framework/symmetry_moduli.md` — D_4 normal-form coefficients $A_1, A_2$ (used in T-σ-Theorem-4).
 
 ### §14.3 Daily log references
 

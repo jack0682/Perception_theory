@@ -5,7 +5,7 @@
 **Session:** 2026-05-04 (W6 Day 1, late mid-day, after G3 + G1 deep-dives)
 **Target:** Address the 12 new open questions (NQ-G3-1..6 + NQ-G1-1..6) surfaced by `g3_03_integration_and_new_open.md` §6 + `03_integration_and_new_open.md` §6. Resolve where theoretically possible; produce numerical results where cheap; flag deferred items.
 **This file covers:** §0 classification + strategy; §1-§12 per-NQ analysis with verdicts (theoretical / numerical / deferred); §13 summary table + canonical implications + new follow-on NQs (if any); §14 hard-constraint sweep.
-**Depends on reading:** `g3_*.md` (G3 deep-dive results); `01_exploration.md`, `02_development.md`, `03_integration_and_new_open.md` (G1 self-audit results); `THEORY/canonical/canonical.md` §11.1 #16 Commitment 16 (line 810 amendment proposal); §13 T-L1-F (lines 1482-1489); `CODE/scripts/l1i_constants_feasibility.py` + existing `results/l1i_constants_feasibility.json`; `THEORY/working/E/soft_K_definition.md` §2.2 Cor 2.2; `THEORY/working/MF/K_status_commitment.md`.
+**Depends on reading:** `g3_*.md` (G3 deep-dive results); `01_exploration.md`, `02_development.md`, `03_integration_and_new_open.md` (G1 self-audit results); `THEORY/2_substrate/canonical/canonical.md` §11.1 #16 Commitment 16 (line 810 amendment proposal); §13 T-L1-F (lines 1482-1489); `CODE/scripts/l1i_constants_feasibility.py` + existing `results/l1i_constants_feasibility.json`; `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` §2.2 Cor 2.2; `THEORY/2_substrate/Q4_kselection/K_status_commitment.md`.
 
 ---
 
@@ -331,7 +331,7 @@ Cross-check W6 strategic plan G1, G2, G4 status texts against current canonical 
 ### §7.3 W6 strategic plan G1 audit
 
 Lines 18-30 (G1 status):
-- "L-M draft is at `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (Cat-B sketched)." — **MISMATCH:** the L-M draft is currently at `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md`; promotion to `working/MF/` is a future step (per `03_L1M_canonical_integration_and_NQ.md` §1.2). The strategic plan implicitly assumes the working/ promotion has happened.
+- "L-M draft is at `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` (Cat-B sketched)." — **MISMATCH:** the L-M draft is currently at `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md`; promotion to `working/MF/` is a future step (per `03_L1M_canonical_integration_and_NQ.md` §1.2). The strategic plan implicitly assumes the working/ promotion has happened.
 - "Three audit items are flagged in §5.7 of that file" — **MATCH:** R-1, R-2, R-3 in §5.7. ✓
 - "R-3 as potentially structural" — **MATCH:** §5.7 item 3 about terminal-death convention Type-N consistency. ✓ (G1 self-audit `02_development.md` §4 confirmed R-3 is a clarification, not structural.)
 

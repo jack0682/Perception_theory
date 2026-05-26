@@ -472,6 +472,6 @@ If (C3) succeeds for A but fails for B (or vice versa): Φ_rich is *configuratio
 
 **Status: working draft. Stand-alone NQ-242c construction file. Numerical setup (T²_20 equilateral vs isoceles) defined; σ_standard non-determinism prediction (§3); σ_rich determinism prediction (§4); script outline (§5, NOT run); Cat A promotion criteria (C1-C4 numerical, R1-R4 theoretical) registered (§6). Falsification + fallback paths registered. Promotion target: D-CV1.6-O5 packet upon (C1)-(C4) at W6 Day 7. NQ-242 PH pipeline V-R Phase 1 (W6 Day 1-3) prerequisite for `scc/sigma_rich.py` module.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/nq242c_explicit_construction.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/multiformation/nq242c_explicit_construction.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.6 W6 Day 7 D-CV1.6-O5 packet.

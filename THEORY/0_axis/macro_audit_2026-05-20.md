@@ -35,10 +35,10 @@ Current authoritative mathematical baseline:
 
 | Layer | Current source | Observed state |
 |---|---|---|
-| Declaration | `THEORY/canonical/DECLARATION.md` | Field-first objecthood thesis fixed at DECL-1.0 |
-| Claim registry | `THEORY/canonical/theorem_status.md` | CV-1.20, 71A / 20B / 6C / 5R = 102 claims |
-| Dependency graph | `THEORY/canonical/hypothesis_tree.md` | HT-3.11 |
-| Latest seal | `THEORY/canonical/CV-1.20_SEAL.md` | L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A |
+| Declaration | `THEORY/0_axis/DECLARATION.md` | Field-first objecthood thesis fixed at DECL-1.0 |
+| Claim registry | `THEORY/2_substrate/canonical/theorem_status.md` | CV-1.20, 71A / 20B / 6C / 5R = 102 claims |
+| Dependency graph | `THEORY/2_substrate/canonical/hypothesis_tree.md` | HT-3.11 |
+| Latest seal | `THEORY/2_substrate/canonical/seals/CV-1.20_SEAL.md` | L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A |
 | Data registry | `presentation/scc_deck/data/claim_registry.json` | Also says CV-1.20, 102 claims |
 
 Immediate hygiene issue:
@@ -46,9 +46,9 @@ Immediate hygiene issue:
 | File | Problem |
 |---|---|
 | `THEORY_INDEX.md` | Still says CV-1.16 in key places, while canonical status is CV-1.20 |
-| `THEORY/canonical/MOC_canonical_authority.md` | Still says CV-1.16 / 97 claims |
-| `THEORY/canonical/MOC_hypothesis_tree.md` | Still says HT-3.7 / CV-1.16 |
-| `THEORY/working/MOC_open_problems_blockers.md` | Still framed as CV-1.16 |
+| `THEORY/2_substrate/canonical/MOC_canonical_authority.md` | Still says CV-1.16 / 97 claims |
+| `THEORY/2_substrate/canonical/MOC_hypothesis_tree.md` | Still says HT-3.7 / CV-1.16 |
+| `THEORY/2_substrate/MOC_open_problems_blockers.md` | Still framed as CV-1.16 |
 
 Interpretation: the core registries moved faster than the macro navigation layer. That is a real source of disorientation.
 

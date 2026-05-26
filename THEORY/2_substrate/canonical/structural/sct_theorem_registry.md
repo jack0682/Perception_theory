@@ -4,7 +4,7 @@ type: canonical/theorem-registry
 chapter: VI + VII
 version: SCC-CT v0.1
 sealed: 2026-05-14
-canonical_source: THEORY/canonical/canonical.md (CV-1.16 SEALED)
+canonical_source: THEORY/2_substrate/canonical/canonical.md (CV-1.16 SEALED)
 total_claims: 97 (68A / 18B / 6C / 5R)
 ---
 
@@ -19,7 +19,7 @@ total_claims: 97 (68A / 18B / 6C / 5R)
 
 This chapter registers all 97 claims of the CV-1.16 SEALED state into the SCC-CT 4-tier Cat A/B/C/R taxonomy. The registry is **authoritative**: every claim in the system has exactly one Cat assignment.
 
-For the per-claim *historical* status (proof method, who proved it, when, in which session), refer to `THEORY/canonical/theorem_status.md`. This SCC-CT registry organizes by *ontological role*, not chronology.
+For the per-claim *historical* status (proof method, who proved it, when, in which session), refer to `THEORY/2_substrate/canonical/theorem_status.md`. This SCC-CT registry organizes by *ontological role*, not chronology.
 
 ## §2. Cat A — Fully Proved / Sealed (68 entries)
 
@@ -264,7 +264,7 @@ For the per-claim *historical* status (proof method, who proved it, when, in whi
 
 $$68 + 18 + 6 + 5 \;=\; 97 \quad \checkmark$$
 
-Matches CV-1.16 SEALED count (`THEORY/canonical/CV-1.16_SEAL.md`).
+Matches CV-1.16 SEALED count (`THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`).
 
 ---
 
@@ -356,4 +356,4 @@ CV-1.16's L-CLOSURE-LIFT achieves the highest confidence level (symbolic + numer
 
 ---
 
-*Chapters VI & VII sealed within SCC-CT v0.1. Counts verified against `THEORY/canonical/CV-1.16_SEAL.md`: 68A / 18B / 6C / 5R = 97. References: `THEORY/canonical/theorem_status.md` (per-claim history); `THEORY/canonical/canonical.md` §13 (Cat A/B/C bodies); `CODE/scc/` (implementation); `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` + `exp_hmorse_sbm_robustness.{py,json,md}` (CV-1.16 numerical anchors). Next: `05_open_problems.md` (Ch. VIII).*
+*Chapters VI & VII sealed within SCC-CT v0.1. Counts verified against `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`: 68A / 18B / 6C / 5R = 97. References: `THEORY/2_substrate/canonical/theorem_status.md` (per-claim history); `THEORY/2_substrate/canonical/canonical.md` §13 (Cat A/B/C bodies); `CODE/scc/` (implementation); `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` + `exp_hmorse_sbm_robustness.{py,json,md}` (CV-1.16 numerical anchors). Next: `05_open_problems.md` (Ch. VIII).*

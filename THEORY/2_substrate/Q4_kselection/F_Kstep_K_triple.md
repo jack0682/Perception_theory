@@ -433,7 +433,7 @@ Discrete graph adjacency $\sim$를 continuum limit (graph spacing $h \to 0$)에�
 
 **End of F_Kstep_K_triple.md (OAT-2 deliverable).**
 **Status: working draft. F as derived diagnostic register at canonical §5.5; CN17+ amendment; 4-quantity inequality bridge documented; Tool A3 PH connection (now extended with superlevel-filtration intrinsic PH layer §7.4 per Wave 3 OAT-2 deepening). OP-0009-F PARTIALLY RESOLVED at CV-1.6.**
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/F_Kstep_K_triple.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md`
 **Created:** 2026-04-30 (W5 Day 4 morning, OAT-2 advanced from W6 Day 1).
 **Promotion target:** CV-1.6 W6 Day 7 morning (D-CV1.6-O3 candidate).
 

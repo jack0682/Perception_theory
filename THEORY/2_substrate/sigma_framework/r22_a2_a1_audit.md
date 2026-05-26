@@ -85,7 +85,7 @@ If the audit identifies an actual error in R22 derivation (β-fail outcome): T-�
 - `working/SF/sigma_theorem4_canonical_revision.md` §2.5 (Issue #3 deeper audit) — reconciliation framework.
 - `working/SF/nq187b_L_extrapolation.md` §2.6 (post-W6 D1 EOD update) — discrete sum tables.
 - `working/SF/sigma_m_hessian_convention_audit.md` (companion (γ) audit, also placeholder).
-- `THEORY/canonical/canonical.md` §13 T-σ-Theorem-4 entry — canonical (ii) statement (audited via β path).
+- `THEORY/2_substrate/canonical/canonical.md` §13 T-σ-Theorem-4 entry — canonical (ii) statement (audited via β path).
 
 ---
 

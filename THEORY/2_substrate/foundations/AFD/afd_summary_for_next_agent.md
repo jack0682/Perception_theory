@@ -121,16 +121,16 @@ Low:
 ### Action 1 — Prove OP-AFD-004 (positive merge barrier)
 
 ```
-Read:  THEORY/canonical/canonical.md §13 (T7-Enhanced, T-Merge(b), T-Persist-1(b))
+Read:  THEORY/2_substrate/canonical/canonical.md §13 (T7-Enhanced, T-Merge(b), T-Persist-1(b))
        CODE/experiments/exp38_*.py, exp60_*.py (numerical barrier scans)
-       THEORY/working/MF/from_single.md (single→multi nucleation)
+       THEORY/2_substrate/Q2_multiformation/from_single.md (single→multi nucleation)
 Goal:  Analytic lower bound C_K(K, K−1) ≥ c(β, n, G) > 0.
 Method: Combine T7-Enhanced metastability gap (Hessian eigenvalue separation
         > Allen-Cahn) with T-Persist-1(b) basin radius
         r_basin = sqrt(2 Δ_min / λ_max). Argue that any merging path
         γ ∈ Adm(F_K, F_{K-1}) must traverse the inter-basin valley whose
         depth is bounded below by Δ_min, hence Bar ≥ Δ_min.
-Output: write THEORY/working/AFD_0/op_afd_004_proof.md (Cat B target).
+Output: write THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md (Cat B target).
 ```
 
 ### Action 2 — Resolve OP-AFD-003 (infimum attainment)
@@ -167,8 +167,8 @@ Promotion gate: if audit PASSes, promote AFD-T9 + AFD-D1..D5 + AFD-T1 +
 ### Action 4 (parallel) — CV-1.14 H-MORSE-Local Cat B
 
 ```
-Read:  THEORY/working/CV114_H_MORSE_PACKAGEII/09_CV114_recommendation.md
-       THEORY/working/CV114_H_MORSE_PACKAGEII/08_candidate_lemma_chain.md
+Read:  THEORY/2_substrate/Q3_dynamics/h_morse_packageII/09_CV114_recommendation.md
+       THEORY/2_substrate/Q3_dynamics/h_morse_packageII/08_candidate_lemma_chain.md
 Goal:  Promote H-MORSE-Local to Cat B (Layer-3 prerequisite for AFD-T8).
 Note:  This is independent of AFD-0 promotion. The two can proceed in
        parallel. AFD-T8 stays Lemma Candidate until CV-1.14 + reflected-EK

@@ -2,7 +2,7 @@
 
 # L1-L: SCC-Decay Theorem Attempt for P7 Decay-to-Cut
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1L_scc_decay_theorem.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1L_scc_decay_theorem.md`
 **Document type:** non-canonical theorem-attempt note
 **Created:** 2026-05-02 (after L1-A through L1-K and L1-K-REPAIR)
 **Status:** working; **P7_DERIVED_UNDER_STRONG_STATIONARITY** (with Path-A safe-technical adoption recommended for L1-F Cat-A); not theorem-grade in isolation; not Cat-A; not canonical

@@ -18,16 +18,16 @@ Chronological work log for the AFD-0 development session.
 
 Files read or grepped:
 
-- `THEORY/canonical/canonical.md` (CV-1.13, 2377 lines; checked §3, §7, §8, §11, §13, §16 (D-ST-3, D-ST-4), Appendix OMS).
-- `THEORY/canonical/theorem_status.md` (968 lines; checked Cat A/B/C/R counts, Open Problems Catalog, OP-0005 / OP-0008 / OP-0009 / OP-0021 statuses).
-- `THEORY/canonical/hypothesis_tree.md` (HT-3.5, 355 lines; checked Q1–Q6 dependency block structure).
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/06_packageII_dependency_map.md` (Package II requirements; H-MORSE-Local + H-MORSE-Saddle + EK prefactor formula confirmed).
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/07_Eyring_Kramers_requirements.md` (EK form for SCC documented).
-- `THEORY/working/E/soft_K_definition.md` (G1 K_soft definition; vineyard set V codim-1 confirmed; QM3 Lipschitz Cor 2.2 cited).
+- `THEORY/2_substrate/canonical/canonical.md` (CV-1.13, 2377 lines; checked §3, §7, §8, §11, §13, §16 (D-ST-3, D-ST-4), Appendix OMS).
+- `THEORY/2_substrate/canonical/theorem_status.md` (968 lines; checked Cat A/B/C/R counts, Open Problems Catalog, OP-0005 / OP-0008 / OP-0009 / OP-0021 statuses).
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.5, 355 lines; checked Q1–Q6 dependency block structure).
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/06_packageII_dependency_map.md` (Package II requirements; H-MORSE-Local + H-MORSE-Saddle + EK prefactor formula confirmed).
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/07_Eyring_Kramers_requirements.md` (EK form for SCC documented).
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` (G1 K_soft definition; vineyard set V codim-1 confirmed; QM3 Lipschitz Cor 2.2 cited).
 - `CODE/scc/diagnostics.py` (DiagnosticVector + Bind/Sep/Inside/Persist predicates; Sep = u-weighted distinction confirmed).
 - `CODE/scc/multi.py` (K-field architecture; V1–V4 validity conditions; K_act = #PersComp post-hoc).
 - `CODE/scc/k_soft.py` (K_soft = Σ φ(ℓ_i) implementation; phi_sat / phi_lin).
-- `THEORY/working/INDEX.md` (working file navigation, Q1–Q6 organization).
+- `THEORY/2_substrate/INDEX.md` (working file navigation, Q1–Q6 organization).
 
 Grepped for:
 
@@ -116,7 +116,7 @@ No revisions needed.
 
 ### Update to working index
 
-`THEORY/working/INDEX.md` updated with AFD_0 entry (see `INDEX.md` patch).
+`THEORY/2_substrate/INDEX.md` updated with AFD_0 entry (see `INDEX.md` patch).
 
 ---
 

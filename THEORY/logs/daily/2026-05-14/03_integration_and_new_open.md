@@ -239,7 +239,7 @@ Per `01_exploration.md §4` and Rule R2:
 | D-HMORSE-LOCAL | `grep "HMORSE-LOCAL\|H-MORSE-Local" canonical/ working/` | hits in CV114 only (target folder; this file extends it) |
 | Exclusion clause (C1)–(C5) | content-level check vs CV114 02 + 05 + canonical V5b-T-zero | every CV114 counterexample explicitly excluded |
 
-**Post-write follow-up (Rule R5, deferred to 5/15+).** Spawn fresh-context Explore agent with query: "Are the lemmas L-HMORSE-DECOMP, L-CLOSURE-LIFT, L-BOUNDARY-MODE-EXCLUSION (defined in `THEORY/logs/daily/2026-05-14/02_development.md`) duplicating any content in `THEORY/canonical/canonical.md` or in `THEORY/working/MF/`, `SF/`, `temporal/`, `CV114_*/`, `CV115_*/`?" — Round 4 alignment audit.
+**Post-write follow-up (Rule R5, deferred to 5/15+).** Spawn fresh-context Explore agent with query: "Are the lemmas L-HMORSE-DECOMP, L-CLOSURE-LIFT, L-BOUNDARY-MODE-EXCLUSION (defined in `THEORY/logs/daily/2026-05-14/02_development.md`) duplicating any content in `THEORY/2_substrate/canonical/canonical.md` or in `THEORY/working/MF/`, `SF/`, `temporal/`, `CV114_*/`, `CV115_*/`?" — Round 4 alignment audit.
 
 ---
 

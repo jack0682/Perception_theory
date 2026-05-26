@@ -2,7 +2,7 @@
 
 # L1-G: Empirical L1Hyp Diagnostic
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1G_empirical_diagnostic.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1G_empirical_diagnostic.md`
 **Document type:** non-canonical working diagnostic protocol + empirical observation
 **Created:** 2026-05-02 (after L1-A through L1-F)
 **Status:** working diagnostic; not theorem-grade; not Cat-A; not promotion-ready

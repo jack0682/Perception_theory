@@ -119,14 +119,14 @@ CV-1.15 is hereby sealed. The primary advancement of CV-1.15 over CV-1.13 is the
 
 | File | Change |
 |------|--------|
-| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 Cat A entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE Interpretation tail); §13 Cat B insert (T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL); §13 Cat B header amended for T-Temporal-Identity CV-1.13 promotion record (hygiene fix per Finding §2.4); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.15; CV-1.15 count update line; CV-1.15 section block (10 rows + OP-0012 sub-structure note + non-overclaim); OP-0012 quick-index row refactored to sub-labels; OP-0012 body fully refactored (CC/SINK/Kjump/Markov sub-cases). |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — CV-1.15 SEALED entry header; 다음 목표 line → CV-1.16; H-COMP parent branch + 5 subbranches under Q5; HT-3.5 → HT-3.6 changelog row. |
-| `THEORY/canonical/CV-1.15_SEAL.md` | **CREATED** (this document). |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 Cat A entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE Interpretation tail); §13 Cat B insert (T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL); §13 Cat B header amended for T-Temporal-Identity CV-1.13 promotion record (hygiene fix per Finding §2.4); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.15; CV-1.15 count update line; CV-1.15 section block (10 rows + OP-0012 sub-structure note + non-overclaim); OP-0012 quick-index row refactored to sub-labels; OP-0012 body fully refactored (CC/SINK/Kjump/Markov sub-cases). |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — CV-1.15 SEALED entry header; 다음 목표 line → CV-1.16; H-COMP parent branch + 5 subbranches under Q5; HT-3.5 → HT-3.6 changelog row. |
+| `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` | **CREATED** (this document). |
 | `THEORY/CHANGELOG.md` | **UPDATED** — CV-1.15 entry prepended (above the 2026-05-13 R-2 archive entry). |
-| `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` | §12 amendments-applied section (already present from 2026-05-13 pre-apply). |
-| `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` | **DEFERRED** — working file; not load-bearing. §F apply-order Step 2 (replace §1–§4 with §A–§D blocks) deferred to follow-up session as housekeeping. |
-| `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` | **NOT MODIFIED** — T-CC-StableK-Kernel remains working candidate (R-C decision). |
+| `THEORY/4_temporal/action_cost/09_final_audit.md` | §12 amendments-applied section (already present from 2026-05-13 pre-apply). |
+| `THEORY/4_temporal/action_cost/10_patch_plan.md` | **DEFERRED** — working file; not load-bearing. §F apply-order Step 2 (replace §1–§4 with §A–§D blocks) deferred to follow-up session as housekeeping. |
+| `THEORY/4_temporal/composition/05_promotion_draft.md` | **NOT MODIFIED** — T-CC-StableK-Kernel remains working candidate (R-C decision). |
 | `CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py` + `results/exp89_results.json` | **REFERENCED** — 3-case PASS (2026-05-13); numerical sanity check. |
 
 ---
@@ -140,7 +140,7 @@ CV-1.15 is hereby sealed. The primary advancement of CV-1.15 over CV-1.13 is the
 - **OQ-E** Interpretation entry convention (P-ACTION-PATH-INHERITANCE prototype).
 - **OQ-F** §13 versioned-subsection vs per-category style meta-convention.
 - **OQ-G** Pre-existing OP-0021 dual-naming inconsistency (Stochastic Dynamics in theorem_status row 837 vs T_* registration in hypothesis_tree H-T*) — reconcile CV-1.16+.
-- **OQ-H** §F Step 2 follow-up — rewrite `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` §1–§4 to match §A–§D applied content (housekeeping).
+- **OQ-H** §F Step 2 follow-up — rewrite `THEORY/4_temporal/action_cost/10_patch_plan.md` §1–§4 to match §A–§D applied content (housekeeping).
 
 ---
 

@@ -233,11 +233,11 @@ Generalizes to other state-functions (e.g., $\widehat{K}, \mathcal{F}$) via the 
 The four candidate mechanisms originally listed in OP-0005 are NOT mutually exclusive — they are *layered* aspects of a single composite picture. Each candidate is partially captured at this packet level; full mechanism instantiation requires the gating completions above.
 
 **References:**
-- `THEORY/working/MF/k_selection_a_free_energy.md` (Layer (a)).
-- `THEORY/working/MF/k_selection_b_kramers.md` (Layer (b)).
-- `THEORY/working/MF/k_selection_c_numerical_anchor.md` (Layer (c)).
-- `THEORY/working/MF/k_selection_compatibility_proof.md` (compatibility synthesis; W6 D1 EOD audit fix applied).
-- `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md` (canonical packet, this file; W6 D1 EOD audit fix applied).
+- `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` (Layer (a)).
+- `THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md` (Layer (b)).
+- `THEORY/2_substrate/Q4_kselection/k_selection_c_numerical_anchor.md` (Layer (c)).
+- `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md` (compatibility synthesis; W6 D1 EOD audit fix applied).
+- `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md` (canonical packet, this file; W6 D1 EOD audit fix applied).
 - `canonical/canonical.md` §11.1 Commitment 19; §13 T-K-Selection-A/B/C/Compatibility.
 
 **Severity:** ~~🟠 HIGH~~ → 🟡 PARTIALLY RESOLVED. (Full RESOLVED is W12+ separate-packet decision contingent on the 4 gating conditions above.)
@@ -255,7 +255,7 @@ The four candidate mechanisms originally listed in OP-0005 are NOT mutually excl
 - **Commitment 19 K-Selection Axiom (partial-resolution candidate)**: 4-layer composite mechanism
   (free-energy + Kramers + numerical anchor + Commitment 16 cap) **partially resolving** OP-0005
   at the compatibility level. Full resolution gated on (V1)-(V7) numerical PASS + W9+ Cat A
-  theoretical completions (W12+ separate packet). See `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md`
+  theoretical completions (W12+ separate packet). See `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md`
   for full canonical insertion text + gating conditions.
 
 ### Added (Theorems)
@@ -349,7 +349,7 @@ D-Items O1-O7 should be approved as a *coherent bundle* — partial approval ris
 ## §9. Hard Constraint Verification
 
 - [x] **canonical 직접 수정 0** — all proposals are *candidate text* in `working/MF/`; conditional on CV-1.7+ user approval.
-- [x] **Silent resolution 0** — OP-0005 status change at this packet's promotion is **OPEN → PARTIALLY RESOLVED** (NOT full RESOLVED). canonical OP catalog status `theorem_status.md` line 312 ("OPEN; partial via 4-layer composite") preserved. Full RESOLVED status is a future W12+ separate-packet decision contingent on 4 gating conditions (§5): (i) (V1)-(V7) numerical PASS, (ii) Theorem 3.3 Cat B → Cat A, (iii) W9+ Cat A theoretical completions, (iv) external prover-style audit. **No silent resolution at any stage** — partial-resolution language explicit throughout (§1 Mission, §2 Commitment 19 text, §3 compatibility theorems, §5 OP-0005 status block, §6 CHANGELOG, §7.2 D-CV1.7-K4 decision item, §8 D-CV1.7-O7 cross-walk). W6 D1 EOD audit fix applied 2026-05-04 (see `THEORY/working/MF/k_selection_compatibility_proof.md` §6.3.1 partial-answer scope clause + this file §1 N-1 silent-resolution constraint note).
+- [x] **Silent resolution 0** — OP-0005 status change at this packet's promotion is **OPEN → PARTIALLY RESOLVED** (NOT full RESOLVED). canonical OP catalog status `theorem_status.md` line 312 ("OPEN; partial via 4-layer composite") preserved. Full RESOLVED status is a future W12+ separate-packet decision contingent on 4 gating conditions (§5): (i) (V1)-(V7) numerical PASS, (ii) Theorem 3.3 Cat B → Cat A, (iii) W9+ Cat A theoretical completions, (iv) external prover-style audit. **No silent resolution at any stage** — partial-resolution language explicit throughout (§1 Mission, §2 Commitment 19 text, §3 compatibility theorems, §5 OP-0005 status block, §6 CHANGELOG, §7.2 D-CV1.7-K4 decision item, §8 D-CV1.7-O7 cross-walk). W6 D1 EOD audit fix applied 2026-05-04 (see `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md` §6.3.1 partial-answer scope clause + this file §1 N-1 silent-resolution constraint note).
 - [x] **No Research OS resurrection** — single packet, single canonical commitment.
 - [x] **Not reductive** — composite picture preserves SCC ontology; standard tools (free-energy, Kramers, LSW, BIC) used contrastively.
 - [x] **u_t primitive maintained** — all layers operate on $u^{(j)}$ states.
@@ -398,6 +398,6 @@ D-Items O1-O7 should be approved as a *coherent bundle* — partial approval ris
 
 *(W6 D1 EOD audit fix applied 2026-05-04: original §1/§2/§3/§5/§6/§7.2/§8/§9 contained "OP-0005 RESOLVED" wording in proposed canonical text + decision items + CHANGELOG entry. If approved as drafted, the canonical layer would inherit "OP-0005 RESOLVED" status — N-1 silent-resolution violation against current canonical OP catalog "OPEN; partial via 4-layer composite". 8 wording locations + §5 OP-0005 status update block fully reframed to OPEN → PARTIALLY RESOLVED. Full RESOLVED status decoupled to future W12+ separate packet. Triggered by: parking-lot precision audit Issue #1 deep-fix per `op_resolution.md` + `THEORY/CHANGELOG.md` 2026-05-04 W6 D1 EOD fourth/fifth/sixth addendum entries.)*
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/commitment_19_k_selection_axiom_packet.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7+ W12+ packet (D-CV1.7-O1 through D-CV1.7-O7 bundle).

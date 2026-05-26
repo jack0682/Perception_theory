@@ -180,7 +180,7 @@ Per plan.md §3 Block 6 §19:00-19:45 + `15_wave4_carry_forward.md` §6 baseline
 
 **Morning (09:00-12:00)**:
 - CV-1.6 packet user-decision review: present finalized packet to user; await approval/revision direction.
-- If approved: apply canonical edits to `THEORY/canonical/canonical.md` (estimated ~250-350 lines added/modified).
+- If approved: apply canonical edits to `THEORY/2_substrate/canonical/canonical.md` (estimated ~250-350 lines added/modified).
 
 **Afternoon (13:00-17:00)**:
 - canonical.md edit application: 11 D-items + 3 implicit candidates per packet draft.

@@ -245,13 +245,13 @@ Each component is grounded in $u_t$ primitive. No external framework reduction; 
   pending **RESOLVED** at CV-1.8+ (Cat A everywhere post-R2).
 
 **References:**
-- `THEORY/working/MF/sigma_rich_augmentation.md` (Path B framework).
-- `THEORY/working/MF/sigma_rich_phi_proof.md` (Theorem 7.1 master determinism).
-- `THEORY/working/MF/sigma_rich_centroid_derivation.md`, `_orientation_derivation.md`, `_wigner_derivation.md`
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` (Path B framework).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md` (Theorem 7.1 master determinism).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_centroid_derivation.md`, `_orientation_derivation.md`, `_wigner_derivation.md`
   (Tasks #1, #2, #3 Cat A foundations).
-- `THEORY/working/MF/nq242c_explicit_construction.md` (numerical anchor design).
-- `THEORY/working/MF/sigma_rich_VR_phase1.md` (Tool A3 V-R integration).
-- `THEORY/working/MF/commitment_18_sigma_rich_packet.md` (canonical packet, this file).
+- `THEORY/2_substrate/multiformation/nq242c_explicit_construction.md` (numerical anchor design).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_VR_phase1.md` (Tool A3 V-R integration).
+- `THEORY/2_substrate/multiformation/commitment_18_sigma_rich_packet.md` (canonical packet, this file).
 - `canonical/canonical.md` §11.1 Commitment 18; §13 T-σ-rich-* + T-Phi-rich + T-PH-A3-σ-rich.
 
 **Last reviewed:** [CV-1.7 promotion date].
@@ -267,7 +267,7 @@ Each component is grounded in $u_t$ primitive. No external framework reduction; 
 ### Added (Commitments)
 - **Commitment 18 σ_rich Augmentation**: σ-tuple extension (centroid + orientation + Wigner-data) enabling
   deterministic Φ_rich K-jump inheritance map (Path B for OP-0008). See
-  `THEORY/working/MF/commitment_18_sigma_rich_packet.md` for full canonical insertion text.
+  `THEORY/2_substrate/multiformation/commitment_18_sigma_rich_packet.md` for full canonical insertion text.
 
 ### Added (Theorems)
 - **T-σ-rich-Centroid**: Centroid Aut(G)-covariance + parallel-axis continuity (Cat A).
@@ -456,6 +456,6 @@ rollback (§7), CV-1.6 cross-walk (§8). All hard constraints verified. σ_rich 
 #1-4, #34, #48) FULLY CLOSED at design + canonical-ready level. CV-1.6 Hybrid candidate ready;
 CV-1.7 full promotion at W12+ post-NQ-242c-Rich + R2 + user approval.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/commitment_18_sigma_rich_packet.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/multiformation/commitment_18_sigma_rich_packet.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.6 Hybrid (W6 Day 7 D-CV1.6-O5); CV-1.7 full (W12+ D-CV1.7-S1 through S6 bundle).

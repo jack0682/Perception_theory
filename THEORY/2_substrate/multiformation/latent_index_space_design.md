@@ -2,23 +2,23 @@
 
 # Latent Index Space Design for SCC / Multi-Formation
 
-**File:** `THEORY/working/MF/latent_index_space_design.md`
+**File:** `THEORY/2_substrate/multiformation/latent_index_space_design.md`
 **Document type:** Non-canonical mathematical-design memo. Working draft. Candidate latent index space $\mathcal A$ specification.
 **Created:** 2026-05-02 (post WQ-1.C-R2 + reservoir reinterpretation memo).
 
 **Predecessor / sibling artifacts:**
-- `THEORY/working/MF/reservoir_reinterpretation_of_K.md` — conceptual reinterpretation of finite-slot $K$ as truncation of a latent reservoir. **This memo is the mathematical-design follow-up.**
+- `THEORY/2_substrate/Q4_kselection/reservoir_reinterpretation_of_K.md` — conceptual reinterpretation of finite-slot $K$ as truncation of a latent reservoir. **This memo is the mathematical-design follow-up.**
 - `THEORY/working/MF/layered_ambient_architecture_{candidate,README,agent_notes,next_work}.md` — Layer I/II/III ambient definitions.
-- `THEORY/working/MF/nq242c_results.md` — WQ-1 F2 outcome.
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + F-B6 confirmation.
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7 outcome.
-- `THEORY/working/MF/wq1c_r2_projected_layerII_aggregate_sigma_results.md` — WQ-1.C-R2 F-R2-F3 / F-R2-F4 outcome.
-- `THEORY/working/MF/K_status_commitment.md` — Commitment 16 K_field / K_act decomposition.
-- `THEORY/working/MF/shared_pool_canonical_proposal.md` — I9' shared-pool ambient.
-- `THEORY/working/MF/F_Kstep_K_triple.md` — 4-quantity bridge.
-- `THEORY/working/E/soft_K_definition.md` — $K_{\mathrm{soft}}^\phi$ persistence-based.
-- `THEORY/working/MF/sigma_rich_augmentation.md` — σ-rich Path B candidate.
-- `THEORY/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog) — canonical baseline (CV-1.5.1).
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — WQ-1 F2 outcome.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` — WQ-2 bridge lemma + F-B6 confirmation.
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md` — WQ-1.C F-C1 / F-C7 outcome.
+- `THEORY/2_substrate/multiformation/wq1c_r2_projected_layerII_aggregate_sigma_results.md` — WQ-1.C-R2 F-R2-F3 / F-R2-F4 outcome.
+- `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` — Commitment 16 K_field / K_act decomposition.
+- `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` — I9' shared-pool ambient.
+- `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` — 4-quantity bridge.
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` — $K_{\mathrm{soft}}^\phi$ persistence-based.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` — σ-rich Path B candidate.
+- `THEORY/2_substrate/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog) — canonical baseline (CV-1.5.1).
 
 ---
 

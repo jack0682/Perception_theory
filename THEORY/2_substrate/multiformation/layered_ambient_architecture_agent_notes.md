@@ -2,7 +2,7 @@
 
 # Layered Ambient-State Architecture — Agent Notes
 
-**File:** `THEORY/working/MF/layered_ambient_architecture_agent_notes.md`
+**File:** `THEORY/2_substrate/multiformation/layered_ambient_architecture_agent_notes.md`
 **Audience:** Future agents (Claude Code sessions, sub-tasks, downstream work) operating on the SCC / Multi-Formation theory along the layered ambient-state line.
 **Purpose:** Guardrails. Read this file before doing any new work in this line. The intent is to prevent overclaim, conflation, and silent canonical drift.
 
@@ -148,51 +148,51 @@ Inspect in this order. Highest-priority files are read fully; the rest are refer
 
 ### 5.1 Mandatory before any new work
 
-1. `THEORY/canonical/canonical.md` (CV-1.5.1) — current canonical baseline; especially §3 (formal universe), §11 (Commitments and Open Design Choices), §13 (theorem catalog including T-Persist-K-* and D-6a entries), §14 (CN list).
-2. `THEORY/canonical/theorem_status.md` — current OP register, especially OP-0001..0003 (resolved/clarified/sidestepped status), OP-0005 (K-Selection HIGH), OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Ontological Foundations, 7 sub-items).
-3. `THEORY/canonical/theorem_status.md` — current Cat A / B / C registry, version history.
-4. `THEORY/working/MF/layered_ambient_architecture_candidate.md` — full architecture definitions and status table.
-5. `THEORY/working/MF/layered_ambient_architecture_README.md` — architecture orientation.
-6. `THEORY/working/MF/K_status_commitment.md` (OAT-1) — Commitment 16 K-status decomposition (CV-1.5.1).
-7. `THEORY/working/MF/shared_pool_canonical_proposal.md` (OAT-4) — I9' shared-pool proposal; Whitney verification reference.
-8. `THEORY/working/MF/mathematical_scaffolding_4tools.md` (OAT-supplementary) — Tool A1 / A2 / A3 / A4 verification, with Tool A4 partial fail honest acknowledgment.
+1. `THEORY/2_substrate/canonical/canonical.md` (CV-1.5.1) — current canonical baseline; especially §3 (formal universe), §11 (Commitments and Open Design Choices), §13 (theorem catalog including T-Persist-K-* and D-6a entries), §14 (CN list).
+2. `THEORY/2_substrate/canonical/theorem_status.md` — current OP register, especially OP-0001..0003 (resolved/clarified/sidestepped status), OP-0005 (K-Selection HIGH), OP-0008 (σ^A K-jump non-determinism), OP-0009 (Multi-Formation Ontological Foundations, 7 sub-items).
+3. `THEORY/2_substrate/canonical/theorem_status.md` — current Cat A / B / C registry, version history.
+4. `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` — full architecture definitions and status table.
+5. `THEORY/2_substrate/multiformation/layered_ambient_architecture_README.md` — architecture orientation.
+6. `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (OAT-1) — Commitment 16 K-status decomposition (CV-1.5.1).
+7. `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` (OAT-4) — I9' shared-pool proposal; Whitney verification reference.
+8. `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` (OAT-supplementary) — Tool A1 / A2 / A3 / A4 verification, with Tool A4 partial fail honest acknowledgment.
 
 ### 5.2 For dynamic σ-multi work
 
-9. `THEORY/working/MF/sigma_multi_trajectory.md` — D-6b dynamic framework, Lemma 4.4.1(c) Cat C non-determinism, FM1–FM4 known failure modes.
-10. `THEORY/working/MF/multi_formation_sigma.md` — D-6a static framework.
-11. `THEORY/working/MF/sigma_rich_augmentation.md` — Path B framework, σ-rich definition, Φ_rich.
-12. `THEORY/working/MF/sigma_rich_phi_proof.md`, `sigma_rich_wigner_derivation.md`, `sigma_rich_centroid_derivation.md`, `sigma_rich_orientation_derivation.md` — σ-rich component derivations.
+9. `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` — D-6b dynamic framework, Lemma 4.4.1(c) Cat C non-determinism, FM1–FM4 known failure modes.
+10. `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` — D-6a static framework.
+11. `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` — Path B framework, σ-rich definition, Φ_rich.
+12. `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md`, `sigma_rich_wigner_derivation.md`, `sigma_rich_centroid_derivation.md`, `sigma_rich_orientation_derivation.md` — σ-rich component derivations.
 
 ### 5.3 For NQ-242c work
 
-13. `THEORY/working/MF/nq242c_explicit_construction.md` — full NQ-242c protocol, Cat A criteria (C1)–(C4) and (R1)–(R4).
-14. `THEORY/working/MF/sigma_rich_VR_phase1.md` — Vietoris-Rips / persistent homology V-R Phase 1 plan.
+13. `THEORY/2_substrate/multiformation/nq242c_explicit_construction.md` — full NQ-242c protocol, Cat A criteria (C1)–(C4) and (R1)–(R4).
+14. `THEORY/2_substrate/sigma_framework/sigma_rich_VR_phase1.md` — Vietoris-Rips / persistent homology V-R Phase 1 plan.
 15. `CODE/scc/multi.py`, `CODE/scc/diagnostics.py` — existing K-field implementation and σ-standard computation.
 16. `CODE/scc/transport.py`, `CODE/scc/persistence.py` — persistence pipeline.
 
 ### 5.4 For K-selection work
 
-17. `THEORY/working/MF/k_selection_mechanism.md` — three Cat C candidates.
-18. `THEORY/working/MF/k_selection_a_free_energy.md`, `k_selection_b_kramers.md`, `k_selection_c_numerical_anchor.md` — per-candidate development.
-19. `THEORY/working/MF/k_selection_compatibility_proof.md`, `commitment_19_k_selection_axiom_packet.md` — compatibility scaffolding.
-20. `THEORY/working/MF/cn15_static_dynamic_separation.md` — CN15 Static/Dynamic Separation candidate (relevant to why energy minimization does not force $K_{\mathrm{act}} = 1$).
+17. `THEORY/2_substrate/Q4_kselection/k_selection_mechanism.md` — three Cat C candidates.
+18. `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md`, `k_selection_b_kramers.md`, `k_selection_c_numerical_anchor.md` — per-candidate development.
+19. `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md`, `commitment_19_k_selection_axiom_packet.md` — compatibility scaffolding.
+20. `THEORY/2_substrate/Q2_multiformation/cn15_static_dynamic_separation.md` — CN15 Static/Dynamic Separation candidate (relevant to why energy minimization does not force $K_{\mathrm{act}} = 1$).
 
 ### 5.5 For stratified ambient feasibility check
 
-21. `THEORY/working/MF/mathematical_scaffolding_4tools.md` §2 (already in §5.1 above) — count-only Whitney verification.
-22. `THEORY/working/MF/op003_mo1_status_review.md` — MO-1 status, single-formation sidestep, multi-formation re-activation rider.
+21. `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` §2 (already in §5.1 above) — count-only Whitney verification.
+22. `THEORY/2_substrate/multiformation/op003_mo1_status_review.md` — MO-1 status, single-formation sidestep, multi-formation re-activation rider.
 
 ### 5.6 For empirical and bridge-lemma work
 
-23. `THEORY/working/MF/single_high_F_equivalence.md` (OAT-7) — R23 fullscale dataset analysis, overlap regime as generic.
-24. `THEORY/working/MF/F_Kstep_K_triple.md` (OAT-2) — F / $K_{\mathrm{step}}$ / $K_{\mathrm{act}}$ / $K_{\mathrm{field}}$ triple.
+23. `THEORY/2_substrate/Q2_multiformation/single_high_F_equivalence.md` (OAT-7) — R23 fullscale dataset analysis, overlap regime as generic.
+24. `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` (OAT-2) — F / $K_{\mathrm{step}}$ / $K_{\mathrm{act}}$ / $K_{\mathrm{field}}$ triple.
 
 ### 5.7 Do not edit
 
-- `THEORY/canonical/canonical.md`
-- `THEORY/canonical/theorem_status.md`
-- `THEORY/canonical/theorem_status.md`
+- `THEORY/2_substrate/canonical/canonical.md`
+- `THEORY/2_substrate/canonical/theorem_status.md`
+- `THEORY/2_substrate/canonical/theorem_status.md`
 - `THEORY/CHANGELOG.md`
 - `_archive/**` (frozen)
 - Any vision_model_sketch/ file (application-side, out of scope for this line)

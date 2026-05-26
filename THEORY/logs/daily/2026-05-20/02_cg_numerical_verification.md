@@ -11,7 +11,7 @@ priority: 1
 core_finding: "$c_G(\\text{2D torus 16}\\times 16, c=1/2, \\beta=1) = 1.170827$ — math-olympiad value CORRECT under canonical convention; Phase 5's 2.09 traced to W''=-2 (factor-2 normalization error, missing I6 correction); scc.GraphState.grid_2d returns Neumann grid (not torus), separate convention with $c_G = 1.012$."
 ---
 
-> [!nav] Linked: [[00_plan|today's plan]] · [[01_pre_brainstorm|reference §1]] · [[../2026-05-19/99_summary|§POST-SEAL EXTENSION]] · [[../../../working/foundation/manifold_topology_attempt_v1|v1 §1.1 + §8.1]] · [[../../../canonical/canonical|CV-1.18 canonical]]
+> [!nav] Linked: [[00_plan|today's plan]] · [[01_pre_brainstorm|reference §1]] · [[../2026-05-19/99_summary|§POST-SEAL EXTENSION]] · [[manifold_topology_attempt_v1|v1 §1.1 + §8.1]] · [[canonical|CV-1.18 canonical]]
 
 # 02 — $c_G$ Numerical Verification (W8-Day3 Priority 1)
 
@@ -19,7 +19,7 @@ core_finding: "$c_G(\\text{2D torus 16}\\times 16, c=1/2, \\beta=1) = 1.170827$ 
 **Target / mission**: Resolve √3 discrepancy between Phase 5 agent ($c_G \approx 2.09$) and math-olympiad ($c_G \approx 1.17$) for the 2D-torus-$L{=}16$, $c{=}1/2$, $\beta{=}1$ worked example of S1 (Łojasiewicz distance bound). Calibrate S1 Cat status.
 
 **Pre-work xref check** (§15.1):
-- `grep -r "c_G\|Łojasiewicz" THEORY/canonical/ THEORY/working/` → 30 hits, mostly in `THEORY/working/foundation/fractal_dynamic_dim_v0.md` (superseded v0 archive; original Lemma 2.4 source) + canonical references to Łojasiewicz convergence (T14, related but not the same constant). c_G concept is *original to working/foundation/*, not canonical. **Novel positioning**: 본 file 은 v0/v1 worked example 의 *numerical verification*, *방법론적 확장 위치* 명시.
+- `grep -r "c_G\|Łojasiewicz" THEORY/canonical/ THEORY/working/` → 30 hits, mostly in `THEORY/2_substrate/foundations/manifold/fractal_dynamic_dim_v0.md` (superseded v0 archive; original Lemma 2.4 source) + canonical references to Łojasiewicz convergence (T14, related but not the same constant). c_G concept is *original to working/foundation/*, not canonical. **Novel positioning**: 본 file 은 v0/v1 worked example 의 *numerical verification*, *방법론적 확장 위치* 명시.
 - §8a P1-P6: P1 (DECL Q1 직접 — T8 boundary 의 정량) / P2 (u_t 본체 미변경, derived diagnostic only) / P3 (canonical 0 hits, working 30 hits in v0 archive) / P4 (canonical Theorem 4 + SB7 의 직접 후속) / P5 (4 audit dimension 명시) / P6 (수학 only). **0/6 부합 → 진행 합법**.
 
 **Depends on reading**: 00_plan §B.1 + 01_pre_brainstorm §1 + v1 §1.1 + canonical §13 Theorem 4 + SB7
@@ -231,7 +231,7 @@ CoT step 3: P_5 (non-degenerate Fiedler, mult 1) → c_G = 1.826. Spectrum jumps
 
 ### §6.2 v1 §1.1 file update recommendation
 
-Recommended edit to `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 + §4 + §6:
+Recommended edit to `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.1 + §4 + §6:
 - §1.1 "Worked example" line: change `$c_G \approx 2.09$` to `$c_G \approx 1.171$` (under canonical convention)
 - §4 Content C1 list: change "2D torus L=16, c=1/2: c_G ≈ 2.09" to "c_G ≈ 1.171"
 - §4 Content C1 list: K_8 line OK (32 already correct under canonical)

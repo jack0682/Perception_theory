@@ -422,4 +422,4 @@ If promoted: **T-K-Select-OBS** — "Observation-Conditioned K-Selection via Pos
 
 **OP-0005-OBS: OPEN → STRUCTURED (Cat B candidate). OP-0005 overall OPEN.**
 
-**File:** `THEORY/working/MF/k_select_obs_posterior.md`
+**File:** `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md`

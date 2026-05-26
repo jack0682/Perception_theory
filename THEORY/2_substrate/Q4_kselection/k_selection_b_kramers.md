@@ -326,6 +326,6 @@ W12+: combined Cat A everywhere for K-Selection axiom canonical promotion at CV-
 
 **Status: working draft. Task #6 complete. K-Selection (b) Kramers metastability derivation: K-jump barrier (§3.1, Cat A under T-Persist-K-Weak); Kramers escape rate $\Gamma = (\omega_0/2\pi) \exp(-\Delta E / T)$ (§4.1, Cat A by classical theory); MFPT cascade (§4.4, Cat B under time-scale-separation, P-F flagged); reconciliation with free-energy equilibrium (§6, Cat A); Phase 10 V4 numerical anchor $\Delta t \propto t^{1.315}$ vs Kramers prediction (§7.3, Cat B target); LSW-coarsening parallel ($t^{4/3}$) consistency (§7.4, Cat B sketch). All P-F flags explicit. Forward: Task #7 numerical anchor; Task #8 compatibility proof composing options (a)+(b)+(c)+(d). CV-1.7+ Commitment 19 K-Selection axiom target.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/k_selection_b_kramers.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7+ W12+ packet (combined with Tasks #5, #7, #8).

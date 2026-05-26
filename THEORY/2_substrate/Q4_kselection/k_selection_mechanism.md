@@ -432,8 +432,8 @@ Wave 4 NQ-301..303 packet must pass Critic + 7-agent review before any candidate
 
 ### §13.1 Canonical (verified entries)
 
-- **OP-0005 K-Selection Mechanism**: `THEORY/canonical/theorem_status.md` §286–§309 (HIGH severity, OPEN, last reviewed 2026-04-17 phase 4 evidence-boundary alignment note).
-- **Commitment 16 (K_field/K_act decomposition)**: `THEORY/canonical/canonical.md` §11.1 #16 line 812 (CV-1.5.1, 2026-04-29).
+- **OP-0005 K-Selection Mechanism**: `THEORY/2_substrate/canonical/theorem_status.md` §286–§309 (HIGH severity, OPEN, last reviewed 2026-04-17 phase 4 evidence-boundary alignment note).
+- **Commitment 16 (K_field/K_act decomposition)**: `THEORY/2_substrate/canonical/canonical.md` §11.1 #16 line 812 (CV-1.5.1, 2026-04-29).
 - **CN6 (K kinetically determined, refined)**: `canonical.md` §14 line 1605 (refined per Commitment 16, CV-1.5.1).
 - **CN10 (contrastive vs reductive)**: `canonical.md` §14 line 1546.
 - **CN15 (Static/Dynamic Separation Principle)**: `canonical.md` §14 line 1627 (W4 added 2026-04-25).
@@ -516,7 +516,7 @@ If falsified across all three, OP-0005 stays HIGH OPEN; W7+ search for fourth ca
 
 **Status:** working draft, theory-only deepening file. **Recommendation:** ACCEPT as W6+ NQ-301/302/303 framework; preserve OP-0005 HIGH OPEN until verification. **Effort:** ~3–4 weeks numerical (NQ-302 first, NQ-301 second, NQ-303 third). **Net effect:** OP-0005 transformed from "no candidate mechanism" to "three explicit Cat C candidates with R23 falsifiability plan"; one (candidate (c) symmetry-broken stabilizer) is genuinely new and graph-theoretic. **Carries:** OP-0005 selection-mechanism scaffolding (HIGH); cross-references Commitment 16 (CV-1.5.1), CN15 (W4 04-23), N-1 (working W4 04-19), Bridge B-7 (Wave 3, `foundational_bridges_2026.md` §8 AC analog).
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/k_selection_mechanism.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/k_selection_mechanism.md`
 **Created:** 2026-04-30 W5 Day 4 PM Wave 3 (post-Commitment-16, post-Bridge-B-7).
 **Lines:** ~370
 **Promotion target:** CV-1.7 (W12+) pending Wave 4 NQ-301..303 verification.

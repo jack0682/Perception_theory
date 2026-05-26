@@ -159,7 +159,7 @@ Most-urgent-next: **OQ-A**, since it is the precondition for the largest unresol
 
 **Trigger.** Phase B 완료 후 3 단계 추가 검증:
 
-1. **Round-4 Explore canonical alignment audit (저녁 중반):** 별도 Explore agent 가 R-2 의 Lemmas B2/B3 와 canonical `THEORY/working/MF/sigma_inherit_k_jump.md` §3.3 비교. **발견: 수학적으로 동일.** B2 centroid (canonical §3.3(a), lines 240-246) 와 R-2 form 은 identical formula; B3 orientation (canonical §3.3(b), lines 248-256) 는 algebraic identity로 equivalent (parallel-axis theorem). R-2 는 새 수식 생산 아님 — K-tuple identity → PD_0 bar identity 라벨 변경.
+1. **Round-4 Explore canonical alignment audit (저녁 중반):** 별도 Explore agent 가 R-2 의 Lemmas B2/B3 와 canonical `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` §3.3 비교. **발견: 수학적으로 동일.** B2 centroid (canonical §3.3(a), lines 240-246) 와 R-2 form 은 identical formula; B3 orientation (canonical §3.3(b), lines 248-256) 는 algebraic identity로 equivalent (parallel-axis theorem). R-2 는 새 수식 생산 아님 — K-tuple identity → PD_0 bar identity 라벨 변경.
 
 2. **Round-4 honesty patches (Phase C1, 4 파일):** R2_op_R2_9 §0.5 신규 alignment 블록, R2_audit.md Round-4 addendum, R2_external_audit.md Round-2 addendum, CHANGELOG prepend. R-2 의 *진짜 기여* 재정의: (i) bar-attribute language scope extension, (ii) Cat B/C 계층화 (centroid+orientation vs σ_standard Wigner), (iii) 수치 stress-test (vs idealized exp84).
 

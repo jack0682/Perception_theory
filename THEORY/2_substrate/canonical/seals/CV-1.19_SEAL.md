@@ -27,10 +27,10 @@ source_working_files:
   - "THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md (308L — S1 Cat B verification, c_G = 1.171 confirmed)"
   - "THEORY/logs/daily/2026-05-20/03_D_L_commutation.md (400L — S3 Cat A on standard regimes, L-INV-1/L-INV-2/L-INV-3 case C)"
   - "THEORY/logs/daily/2026-05-20/99_summary.md (281L — Decision A confirmed)"
-  - "THEORY/working/foundation/manifold_topology_attempt_v1.md §1.1 + §1.3 (updated 2026-05-20 with CV-1.19 values)"
+  - "THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md §1.1 + §1.3 (updated 2026-05-20 with CV-1.19 values)"
 ---
 
-> [!nav] Linked: [[canonical|canonical.md §13 Cat A + Cat B]] · [[theorem_status|theorem_status.md row 18 + 589]] · [[hypothesis_tree|hypothesis_tree.md HT-3.10]] · [[CV-1.18_SEAL|CV-1.18 SEAL (predecessor)]] · [[../CHANGELOG|CHANGELOG]] · [[../logs/daily/2026-05-20/99_summary|W8-Day3 99_summary]] · [[../logs/daily/2026-05-20/02_cg_numerical_verification|02 c_G verification]] · [[../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]]
+> [!nav] Linked: [[canonical|canonical.md §13 Cat A + Cat B]] · [[theorem_status|theorem_status.md row 18 + 589]] · [[hypothesis_tree|hypothesis_tree.md HT-3.10]] · [[CV-1.18_SEAL|CV-1.18 SEAL (predecessor)]] · [[CHANGELOG|CHANGELOG]] · [[THEORY/logs/daily/2026-05-20/99_summary|W8-Day3 99_summary]] · [[02_cg_numerical_verification|02 c_G verification]] · [[../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]]
 
 # CV-1.19 SEAL (2026-05-20 W8-Day3 closing → W8-Day4 execution)
 
@@ -47,7 +47,7 @@ source_working_files:
 - **L-LOJASIEWICZ-CG** (Cat B verified for non-degenerate Fiedler stratum): Łojasiewicz distance bound μ_2(Θ) ≥ c_G(K) · d with c_G explicit form
 
 **Predecessors** (working layer):
-- `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 (S1) + §1.3 (S3) — updated 2026-05-20 per CV-1.19 values
+- `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.1 (S1) + §1.3 (S3) — updated 2026-05-20 per CV-1.19 values
 - `THEORY/logs/daily/2026-05-19/99_summary.md` §POST-SEAL EXTENSION (3 surviving claims S1/S2/S3 from 19-phase Manifold Topology Methodology Program)
 - `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (Priority 1 verification, c_G = 1.171 confirmed via 3 sources)
 - `THEORY/logs/daily/2026-05-20/03_D_L_commutation.md` (Priority 2 verification, S3 Cat A on standard regimes + §6 NEW L-INV-1/L-INV-2/L-INV-3 case C)
@@ -62,7 +62,7 @@ $$\boxed{\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big\vert_{T\Sig
 
 ### §2.2 Standard Regimes (3 cases)
 
-**Case A (regular graphs)**: For $d$-regular $G$, the row-normalized aggregation $P_t = D_G^{-1}A_G = I - L_G/d$ is a polynomial in $L_G$. Therefore $[J_D, L_G] = 0$ globally → S3 Cat A unconditional. *Source*: `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working anchor) + W8-Day3 03 §4.1 (explicit small-matrix verification: K_4 → $\lVert [P,L] \rVert_F = 2.2 \times 10^{-16}$; $C_4 \times C_4 \to 0$ exact).
+**Case A (regular graphs)**: For $d$-regular $G$, the row-normalized aggregation $P_t = D_G^{-1}A_G = I - L_G/d$ is a polynomial in $L_G$. Therefore $[J_D, L_G] = 0$ globally → S3 Cat A unconditional. *Source*: `THEORY/2_substrate/sigma_framework/mode_count.md` §2.3a Remark (Cat A working anchor) + W8-Day3 03 §4.1 (explicit small-matrix verification: K_4 → $\lVert [P,L] \rVert_F = 2.2 \times 10^{-16}$; $C_4 \times C_4 \to 0$ exact).
 
 **Case B (any graph at uniform critical)**: At $u^* = c\mathbf{1}$ uniform, $G_{u^*} = \mathrm{Aut}(G)$ (uniform is fixed by all permutations). Canonical T-σ-Lemma-1 (Cat A, CV-1.5, canonical.md §13) gives Hessian-Aut(G) commutation + isotypic block decomposition. Fiedler eigenspace is an isotypic component (or sum thereof); Schur's Lemma gives $J_D V_{\lambda_2} \subseteq V_{\lambda_2}$ — kernel preserved → S3 Cat A unconditional. *Source*: W8-Day3 03 §4.2.
 
@@ -171,7 +171,7 @@ Per `auxiliary_structures_master.md` §8 D/A/P classification:
 
 ## §7 — Carry-Forward to W9+
 
-Per `THEORY/logs/daily/2026-05-20/99_summary.md` Carry-Forward Tier-priorities + `THEORY/working/field_equation_framework/01_ns_inspired_synthesis.md` §11 OPEN problem leverage:
+Per `THEORY/logs/daily/2026-05-20/99_summary.md` Carry-Forward Tier-priorities + `THEORY/2_substrate/foundations/field_equation/01_ns_inspired_synthesis.md` §11 OPEN problem leverage:
 
 **Immediate W9+ candidates** (post-CV-1.19):
 - **L-LOJASIEWICZ-CG Cat A path**: Kato perturbation for degenerate Fiedler (W9-S1 candidate)

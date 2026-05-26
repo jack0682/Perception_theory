@@ -57,7 +57,7 @@ archive_pattern_match: 6/6 (측면 R + 측면 G 모두; V-AFD/R-2 와 동일 패
 | **Package II Eyring-Kramers prefactor Cat B** | HIGH | 3-4 sessions | DECL-1.0 Q3 closure; OP-LOCAL-A + OP-0021 결합 필요 |
 | **OP-0008 MERGE/SPLIT σ_standard** | MEDIUM-HIGH | 4-6 sessions | DECL-1.0 Q6 closure path; Wigner-projection W9+ |
 | **OP-0021 T_*** registration | MEDIUM | 4-8 sessions | Stochastic Dynamics axiom; Package II 의 prerequisite |
-| **§F Step 2 housekeeping** | LOW | 0.5 session | CV-1.15 deferred; `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` rewrite |
+| **§F Step 2 housekeeping** | LOW | 0.5 session | CV-1.15 deferred; `THEORY/4_temporal/action_cost/10_patch_plan.md` rewrite |
 | **OP-0021 dual-naming reconciliation** | LOW (hygiene) | 0.5 session | CV-1.15/CV-1.16 carried |
 | **OQ-A CV-1.14 promotion audit** | MEDIUM | 2-3 sessions | T-ACT-KERNEL-COMP→REL unconditional unlock |
 
@@ -109,7 +109,7 @@ archive_pattern_match: 6/6 (측면 R + 측면 G 모두; V-AFD/R-2 와 동일 패
 | `10_*_primitive_proposal.md` | 결정 A 거부; A 후속 작업 없음 |
 | `10_declaration_amendment_draft.md` | DECL-1.0 amend 는 *별도 plan 의 사용자 결정* (Stage 6 §5.2) |
 | `THEORY/canonical/*.md` 수정 | canonical 직접 수정 *금지* (Rule O) — 본 세션 권한 밖 |
-| `THEORY/canonical/DECLARATION.md` 수정 | DECL-1.0 amend 는 별도 세션 |
+| `THEORY/0_axis/DECLARATION.md` 수정 | DECL-1.0 amend 는 별도 세션 |
 | `THEORY/working/*.md` 수정 | 본 plan 은 *결정 일 — 작성 일 아님* |
 | `CODE/` 변경 | 본 plan 의 범위 밖 |
 | 새 OP 등재 | 결정 C 가 *기존 OP 우선순위로 복귀* 를 권장 — 새 OP 등재 불필요 |

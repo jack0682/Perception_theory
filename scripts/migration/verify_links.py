@@ -102,7 +102,15 @@ def main():
 
     if args.baseline:
         base = json.loads(Path(args.baseline).read_text(encoding="utf-8"))
-        base_dangling = {tuple(x) for x in base["dangling"]}
+        # Translate baseline source paths through the rename-map so a pre-existing
+        # dangler whose SOURCE file merely moved is not falsely flagged as new.
+        rmap = {}
+        mp = ROOT / "scripts/migration/rename_map.tsv"
+        if mp.exists():
+            import csv as _csv
+            for r in _csv.DictReader(mp.open(encoding="utf-8"), delimiter="\t"):
+                rmap[r["old_path"]] = r["new_path"]
+        base_dangling = {(rmap.get(src, src), tgt) for src, tgt in (tuple(x) for x in base["dangling"])}
         cur_dangling = {tuple(x) for x in report["dangling"]}
         new_dangling = sorted(cur_dangling - base_dangling)
         new_ambig = sorted(set(report["ambiguous_basenames"]) - set(base["ambiguous_basenames"]))

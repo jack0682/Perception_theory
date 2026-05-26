@@ -475,8 +475,8 @@ $$
 
 #### 2.6.2 문헌 지표
 
-- **SCC canonical.md (CV-1.13)**. `THEORY/canonical/canonical.md`. — $u_t$ 의 공리적 정의 (Axioms A1-A3), 4 energy term, diagnostic vector.
-- **DECLARATION.md (DECL-1.0, 2026-05-07)**. `THEORY/canonical/DECLARATION.md`. — "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" 의 원점. $u_t$ = primitive.
+- **SCC canonical.md (CV-1.13)**. `THEORY/2_substrate/canonical/canonical.md`. — $u_t$ 의 공리적 정의 (Axioms A1-A3), 4 energy term, diagnostic vector.
+- **DECLARATION.md (DECL-1.0, 2026-05-07)**. `THEORY/0_axis/DECLARATION.md`. — "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" 의 원점. $u_t$ = primitive.
 - **Koenderink, J.J. & van Doorn, A.J. (1992)**. "Generic neighborhood operators." *IEEE TPAMI* 14, 597–605. — graded saliency field 의 retinal basis 논의.
 - **Marr, D. (1982)**. *Vision*. Freeman. — primal sketch, 2.5D sketch — Stage 2 출력 수준에서의 형식; SCC 와의 대조.
 - **Grossberg, S. (1994)**. "3-D vision and figure-ground separation by visual cortex." *Perception & Psychophysics* 55, 48–121. — cortical filling-in 과 graded field 의 동역학.
@@ -1043,7 +1043,7 @@ RESOLVED OPs in this directory: NONE
 
 ## 7. PAI OP 와의 *공식적* 격리 및 cross-link 요약
 
-[[../../canonical/perception_action_interpretation_pivot_2026_05_21#OP-PAI-001|PAI 의 OP-PAI-001 ~ 006]] 과 본 디렉토리의 OP-SP-001 ~ 010 + M1-M4 는 *공식적으로 분리됨*:
+[[perception_action_interpretation_pivot_2026_05_21#OP-PAI-001|PAI 의 OP-PAI-001 ~ 006]] 과 본 디렉토리의 OP-SP-001 ~ 010 + M1-M4 는 *공식적으로 분리됨*:
 
 - 본 디렉토리는 PAI OP 를 *advance 시도하지 않음*
 - PAI 작업은 본 디렉토리의 OP-SP 를 *advance 시도하지 않음*

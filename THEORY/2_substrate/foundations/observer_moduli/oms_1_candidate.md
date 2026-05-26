@@ -463,7 +463,7 @@ $$\boxed{\textbf{Full Temporal Conditional on OP-OMS-034}}$$
 - **OP-OMS-032 CLOSED UNDER CERTIFIED WITNESS** (`op_oms_032_closed_form_h4.md`): INTERVAL_CERTIFIED H4 witness, best margin $4 \times 10^{13}$ over IEEE bound.
 - **OP-OMS-033 PROVED as conditional fold theorem SN3** (`op_oms_033_sigma_sn_arnold.md`) via Crandall–Rabinowitz applied to the SCC KKT system.
 - **OP-OMS-034 SEPARATED** (`op_oms_034_temporal_delta3_status.md`): static OMS-2.0 self-contained; full temporal stays Conditional.
-- **Canonical Appendix OMS** added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items, layered on SCC core (no SCC theorems modified).
+- **Canonical Appendix OMS** added to `THEORY/2_substrate/canonical/canonical.md` with 20+ theorem-grade items, layered on SCC core (no SCC theorems modified).
 
 ---
 

@@ -2,7 +2,7 @@
 
 # Layered Ambient-State Architecture — README
 
-**File:** `THEORY/working/MF/layered_ambient_architecture_README.md`
+**File:** `THEORY/2_substrate/multiformation/layered_ambient_architecture_README.md`
 **Companion docs:**
 - `layered_ambient_architecture_candidate.md` — full memo with definitions, status table, migration notes, non-claims.
 - `layered_ambient_architecture_agent_notes.md` — guardrails for future agents.

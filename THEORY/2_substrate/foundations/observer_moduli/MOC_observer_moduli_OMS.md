@@ -81,7 +81,7 @@ Session 1 → 2 → 3 → 4 → 5 → 5-cont → 6 → 7 → 8 (closed).
 
 ## Dependencies
 
-- Requires: SCC core framework ([[MOC_canonical_authority]], [[01_ontology]]). OMS 는 SCC 를 수정하지 않고 quotient 한 단계 위로 올림.
+- Requires: SCC core framework ([[MOC_canonical_authority]], [[sct_ontology]]). OMS 는 SCC 를 수정하지 않고 quotient 한 단계 위로 올림.
 - Feeds canonical: [[canonical]] Appendix OMS §A–L (Static, Session 7) + §M (Temporal, Session 8).
 
 ## Current Status (CV-1.16)

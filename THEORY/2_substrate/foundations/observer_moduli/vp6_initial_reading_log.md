@@ -146,7 +146,7 @@ evidence).
 - `results/observer_moduli/vp6_jacobian_spectra.json`, `vp6_effective_dof_summary.md`
 - `results/observer_moduli/vp6_u_star_path_results.json`, `vp6_u_star_path_summary.md`
 - updates: `open_problems.md`, `audit_log.md`, `daily_log.md`, `checkpoints.md`,
-  `THEORY/CHANGELOG.md`, `THEORY/working/INDEX.md`,
+  `THEORY/CHANGELOG.md`, `THEORY/2_substrate/INDEX.md`,
   `observer_landscape_admissible_class.md`, `basin_stratification.md`,
   `stratified_dynamics.md`, `canonical_promotion_checklist.md`.
 

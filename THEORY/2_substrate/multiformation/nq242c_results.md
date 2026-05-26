@@ -2,9 +2,9 @@
 
 # NQ-242c Counterexample Results — WQ-1 Numerical Anchor
 
-**File:** `THEORY/working/MF/nq242c_results.md`
+**File:** `THEORY/2_substrate/multiformation/nq242c_results.md`
 **Companion files:**
-- `THEORY/working/MF/nq242c_counterexample_protocol.md` — full protocol specification.
+- `THEORY/2_substrate/multiformation/nq242c_counterexample_protocol.md` — full protocol specification.
 - `CODE/scripts/results/nq242c_result_schema.json` — JSON schema for numerical anchor.
 - `CODE/scripts/nq242c_counterexample.py` — executable script.
 
@@ -211,9 +211,9 @@ The F2 outcome under Option D-2 is consistent across 14 trajectories spanning tw
 
 **Updates to other working files:**
 
-- `THEORY/working/MF/sigma_multi_trajectory.md` §6.2 should be updated to note that NQ-242 (full Hessian σ-tuple time series) requires Option D-1 implementation; Option D-2 is empirically refuted as a K-jump driver.
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` status table row 15 (Deterministic σ-standard inheritance across K-jump) is **not** affected by this F2 result. The non-determinism conjecture remains conjectural / Cat C; it has not been refuted by F2 (no K-jump means no test of the conjecture).
-- `THEORY/working/MF/layered_ambient_architecture_next_work.md` WQ-1 entry can be annotated with this F2 finding and the WQ-1.A/B/C remediation menu.
+- `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` §6.2 should be updated to note that NQ-242 (full Hessian σ-tuple time series) requires Option D-1 implementation; Option D-2 is empirically refuted as a K-jump driver.
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` status table row 15 (Deterministic σ-standard inheritance across K-jump) is **not** affected by this F2 result. The non-determinism conjecture remains conjectural / Cat C; it has not been refuted by F2 (no K-jump means no test of the conjecture).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_next_work.md` WQ-1 entry can be annotated with this F2 finding and the WQ-1.A/B/C remediation menu.
 
 **Forbidden non-claims still apply** (see below). In particular: F2 does **not** mean σ-standard is sufficient; F2 means the test was not executed at the σ level. Do not weaken the OP-0008 severity rating on the basis of this run.
 

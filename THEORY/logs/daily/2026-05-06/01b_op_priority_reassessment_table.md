@@ -5,7 +5,7 @@
 **Session:** 2026-05-06 (W6 Day 3 G3.1 supplement).
 **Parent:** `01_strategic_recalibration_core.md` §2.
 **Scope:** Full OP catalog before/after Day 3 recalibration + W7-W10 cycle assignment.
-**Source:** `THEORY/canonical/theorem_status.md` Open Problems Catalog (OP-0001..OP-0013 + OP-0020..OP-0022) + Day 3 debt analysis.
+**Source:** `THEORY/2_substrate/canonical/theorem_status.md` Open Problems Catalog (OP-0001..OP-0013 + OP-0020..OP-0022) + Day 3 debt analysis.
 
 ---
 

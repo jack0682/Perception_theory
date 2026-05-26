@@ -96,8 +96,8 @@ op_resolution.md                    (12 NQ resolution + W6 D1 late re-review err
 | File | Origin | Status post-reset |
 |---|---|---|
 | `THEORY/CHANGELOG.md` | morning audits + evening G2 | KEEP — authoritative session log |
-| `THEORY/canonical/canonical.md` (lines 1452, 1457, 1385-1433) | evening G2 + NQ-187 handling | KEEP — applied canonical edits |
-| `THEORY/canonical/theorem_status.md` (lines 163-164, 285) | evening G2 | KEEP — applied edits |
+| `THEORY/2_substrate/canonical/canonical.md` (lines 1452, 1457, 1385-1433) | evening G2 + NQ-187 handling | KEEP — applied canonical edits |
+| `THEORY/2_substrate/canonical/theorem_status.md` (lines 163-164, 285) | evening G2 | KEEP — applied edits |
 | `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` | morning Pass 2 | KEEP — authoritative weekly anchor |
 | `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` | first autonomous session 09:21 | **STALE** (OLD-plan content; user decision pending — see §5) |
 | `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md` | morning Pass 2 | KEEP — replacement parking-lot plan |
@@ -161,7 +161,7 @@ Per redesigned plan §3.4 (Day 4-5 work originally; first-redesigned plan tried 
 
 **Recommendation (per `99_summary.md` §5.5 conservative path):** (a-ii) re-spawn with conversation-memory R-1 summary as input, ~15-30 min; preserves audit rigor without re-doing the CSEH derivation.
 
-After G1 closure: promote L-M to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with Cat-A-conditional badge. **Closes redesigned W6 plan G1.**
+After G1 closure: promote L-M to `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` with Cat-A-conditional badge. **Closes redesigned W6 plan G1.**
 
 ### §4.3 Day 2 Block 2 (afternoon, ~2 hours) — Outstanding decisions cleanup (§5)
 
@@ -277,7 +277,7 @@ These need user input or explicit deferral by W6 close, otherwise they become si
 - `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` (L-M working draft, audit subject)
 - `THEORY/logs/daily/2026-05-03/01_L1M_approach_exploration.md`
 - `THEORY/logs/daily/2026-05-03/03_L1M_canonical_integration_and_NQ.md`
-- `THEORY/canonical/canonical.md` §13 T-L1-F (lines 1482-1489) + §11.1 #16 Commitment 16 (lines 804-820)
+- `THEORY/2_substrate/canonical/canonical.md` §13 T-L1-F (lines 1482-1489) + §11.1 #16 Commitment 16 (lines 804-820)
 
 **G3 (this Day 1 mid-day deliverables — ε-convention deep-dive):**
 - `THEORY/logs/daily/2026-05-04/01_exploration.md` — G3 multi-approach + A4 selection rationale.
@@ -286,9 +286,9 @@ These need user input or explicit deferral by W6 close, otherwise they become si
 - `THEORY/logs/daily/2026-05-04/99_summary.md` — G3 EOD summary + Day 2 recommendations.
 
 **G2 + NQ-187 evening session sources (already canonical):**
-- `THEORY/canonical/canonical.md` lines 1452, 1457 (T-Bind-Proj/Full Cat A erratum)
-- `THEORY/canonical/canonical.md` lines 1385-1433 (T-σ-Theorem-4 continuum-vs-discrete note)
-- `THEORY/canonical/theorem_status.md` lines 163-164, 285 (T-Bind sync)
+- `THEORY/2_substrate/canonical/canonical.md` lines 1452, 1457 (T-Bind-Proj/Full Cat A erratum)
+- `THEORY/2_substrate/canonical/canonical.md` lines 1385-1433 (T-σ-Theorem-4 continuum-vs-discrete note)
+- `THEORY/2_substrate/canonical/theorem_status.md` lines 163-164, 285 (T-Bind sync)
 
 **Outstanding (user-decision-pending, see §5):**
 - `THEORY/logs/weekly/2026-05-W1/weekly_draft_storming.md` — STALE OLD-plan content.

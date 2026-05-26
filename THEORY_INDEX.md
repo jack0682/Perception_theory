@@ -10,8 +10,8 @@ description: Soft Cognitive Cohesion (SCC) 이론 저장소의 최상위 진입 
 
 > [!nav] Theory Navigation
 > Parent: (root)
-> Authority: [[DECLARATION]] · [[canonical]] · [[00_manifest]]
-> PAI direction: [[canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[canonical/PAI_ROADMAP|Roadmap]]
+> Authority: [[DECLARATION]] · [[canonical]] · [[sct_manifest]]
+> PAI direction: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[PAI_ROADMAP|Roadmap]]
 > Status: Active (CV-1.20 substrate / HT-3.12 / 2026-05-21 PAI direction)
 
 ## 2026-05-21 Canonical Pivot
@@ -26,9 +26,9 @@ description: Soft Cognitive Cohesion (SCC) 이론 저장소의 최상위 진입 
 - 6 DEFINITION-DRAFT vocabulary + 6 OPEN problems (OP-PAI-001..006)
 - 증명 0건, mathematical formalization 없음, CANONICAL-DIRECTION
 
-상세: [[canonical/perception_action_interpretation_pivot_2026_05_21|PAI 핀 문서]] · [[canonical/PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` (새 agent prompt; v3 는 legacy substrate 작업용으로 보존).
+상세: [[perception_action_interpretation_pivot_2026_05_21|PAI 핀 문서]] · [[PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` (새 agent prompt; v3 는 legacy substrate 작업용으로 보존).
 
-Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
+Trigger: `THEORY/0_axis/macro_audit_2026-05-20.md` §11 verdict.
 
 ---
 
@@ -43,7 +43,7 @@ Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
 ## 0. 가장 먼저 읽을 것 (2분)
 
 1. [[DECLARATION]] — DECL-1.0, 이론 중심축 선언문 (Q1~Q6).
-2. [[00_manifest]] — SCC-CT v0.1 (구조적 권위, 9-Chapter, 4-tier Cat A/B/C/R).
+2. [[sct_manifest]] — SCC-CT v0.1 (구조적 권위, 9-Chapter, 4-tier Cat A/B/C/R).
 3. [[canonical]] — CV-1.20 SEALED (사실적 권위, 102 claims).
 4. [[theorem_status]] — 정리·OP 레지스트리.
 5. [[hypothesis_tree]] — HT-3.11 차단 가설 의존 트리.
@@ -106,7 +106,7 @@ CV SEAL 체인: [[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [
 
 1. [[DECLARATION]] (2 분)
 2. [[THEORY_INDEX|이 파일]]
-3. [[00_manifest]] — 구조적 권위 개관
+3. [[sct_manifest]] — 구조적 권위 개관
 4. [[canonical]] §2 Foundational Orientation
 5. [[hypothesis_tree]] §"세션 시작 / 즉시 타겟"
 6. 관심 Q 의 MOC 한 개 — 예: [[MOC_Q4_K_selection]]
@@ -118,7 +118,7 @@ CV SEAL 체인: [[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [
 
 ## 6. 현재 봉인 상태 (2026-05-20)
 
-- **구조적 권위:** SCC-CT v0.1 SEALED ([[00_manifest]]).
+- **구조적 권위:** SCC-CT v0.1 SEALED ([[sct_manifest]]).
 - **사실적 권위:** CV-1.20 SEALED ([[canonical]]).
 - **Counts:** 71 Cat A / 20 Cat B / 6 Cat C / 5 Cat R = **102 claims**, ~70% fully proved.
 - **CV-1.20 주 성과:** L-UNI-ZMODE Cat A, L-SURFACE-TENSION-RESCALE Cat A. H-MORSE uniform-critical zero-mode branch strengthened; H-RESCALE closed Cat A.

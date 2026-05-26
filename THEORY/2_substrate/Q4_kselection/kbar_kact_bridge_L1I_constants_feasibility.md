@@ -2,7 +2,7 @@
 
 # L1-I: Constants Feasibility Study
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1I_constants_feasibility.md`
 **Document type:** non-canonical working empirical feasibility study
 **Created:** 2026-05-02 (after L1-A through L1-H)
 **Status:** working; empirical verdict only; not theorem-grade; not Cat-A

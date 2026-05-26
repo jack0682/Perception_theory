@@ -52,7 +52,7 @@ H-MORSE 가설 (E 의 Morse 안정성) 은 Package II Eyring-Kramers prefactor �
 
 ## Dependencies
 
-- Requires: [[MOC_Q3_stochastic_dynamics]] (Langevin foundation), [[02_axioms_and_primitives]] (A3, $b_D = 0$).
+- Requires: [[MOC_Q3_stochastic_dynamics]] (Langevin foundation), [[sct_axioms_and_primitives]] (A3, $b_D = 0$).
 - Feeds into: Package II Eyring-Kramers prefactor (CV-1.17 타겟 Cat B).
 - Pairs with: OP-HMORSE-LOCAL-A (Cat A path, ~2 sessions), OP-HMORSE-SBM (numerical robustness 확장).
 

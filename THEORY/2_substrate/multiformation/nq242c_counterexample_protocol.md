@@ -2,20 +2,20 @@
 
 # NQ-242c Counterexample Protocol — σ-standard Incompleteness Test (WQ-1)
 
-**File:** `THEORY/working/MF/nq242c_counterexample_protocol.md`
+**File:** `THEORY/2_substrate/multiformation/nq242c_counterexample_protocol.md`
 **Document type:** Working-grade executable protocol (non-canonical).
 **Created:** 2026-05-02 (W6 prep, WQ-1 of layered ambient-state architecture work queue).
 **Status:** working draft. Protocol specified; not yet executed in this session.
 **Companion artifacts:**
-- `THEORY/working/MF/nq242c_results.md` — results placeholder (status: NOT RUN at time of writing).
+- `THEORY/2_substrate/multiformation/nq242c_results.md` — results placeholder (status: NOT RUN at time of writing).
 - `CODE/scripts/results/nq242c_result_schema.json` — JSON schema for numerical anchor output.
 - `CODE/scripts/nq242c_counterexample.py` — executable script.
-- `THEORY/working/MF/nq242c_explicit_construction.md` — predecessor design document (this file is the executable spec built on top).
+- `THEORY/2_substrate/multiformation/nq242c_explicit_construction.md` — predecessor design document (this file is the executable spec built on top).
 
 **Layered architecture references:**
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` (Layer II ambient, K-jump definition, $S_A^\varepsilon$, $K_{\mathrm{soft}}^\phi$ vs $K_{\mathrm{act}}^\varepsilon$).
-- `THEORY/working/MF/layered_ambient_architecture_agent_notes.md` (mandatory distinctions, forbidden overclaims).
-- `THEORY/working/MF/layered_ambient_architecture_next_work.md` (WQ-1 specification).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` (Layer II ambient, K-jump definition, $S_A^\varepsilon$, $K_{\mathrm{soft}}^\phi$ vs $K_{\mathrm{act}}^\varepsilon$).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_agent_notes.md` (mandatory distinctions, forbidden overclaims).
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_next_work.md` (WQ-1 specification).
 
 ---
 
@@ -725,8 +725,8 @@ These remain forbidden non-claims regardless of the outcome of this protocol.
 - Architecture: `layered_ambient_architecture_candidate.md` (Layer II definition, K-jump, status table); `layered_ambient_architecture_agent_notes.md` (mandatory distinctions, forbidden overclaims); `layered_ambient_architecture_next_work.md` (WQ-1 spec).
 - Code: `scc/multi.py`, `scc/sigma_rich.py`, `scc/diagnostics.py`, `scc/energy.py`, `scc/graph.py`, `scc/optimizer.py`, `scc/params.py`.
 - Tests: `tests/test_multi.py`, `tests/test_sigma_rich.py`, `tests/test_sigma_rich_integration.py`.
-- Open problems: `THEORY/canonical/theorem_status.md` OP-0008 (direct attack subject; severity 🟠 HIGH retained).
-- Theorem status: `THEORY/canonical/theorem_status.md` (no edits made by this protocol).
+- Open problems: `THEORY/2_substrate/canonical/theorem_status.md` OP-0008 (direct attack subject; severity 🟠 HIGH retained).
+- Theorem status: `THEORY/2_substrate/canonical/theorem_status.md` (no edits made by this protocol).
 
 ---
 

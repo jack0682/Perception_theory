@@ -1342,7 +1342,7 @@ $$
 
 ## 부록 F. 2026-05-03 기준 canonical 정의와 정리 상태 전체 정리
 
-이 부록은 현재 canonical layer를 한 번에 읽기 위한 정리표다. authoritative source는 `THEORY/canonical/theorem_status.md`와 `THEORY/canonical/canonical.md`이며, version authority는 `theorem_status.md`의 CV-1.5.2 항목이다. `canonical.md` 상단과 closing summary 일부에는 CV-1.5.1 기준 숫자가 남아 있으므로, 현재 수치와 T-L1-F 지위는 `theorem_status.md`를 우선한다.
+이 부록은 현재 canonical layer를 한 번에 읽기 위한 정리표다. authoritative source는 `THEORY/2_substrate/canonical/theorem_status.md`와 `THEORY/2_substrate/canonical/canonical.md`이며, version authority는 `theorem_status.md`의 CV-1.5.2 항목이다. `canonical.md` 상단과 closing summary 일부에는 CV-1.5.1 기준 숫자가 남아 있으므로, 현재 수치와 T-L1-F 지위는 `theorem_status.md`를 우선한다.
 
 현재 canonical headline은 다음이다.
 

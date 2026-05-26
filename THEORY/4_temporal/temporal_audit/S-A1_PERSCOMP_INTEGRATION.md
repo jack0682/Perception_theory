@@ -31,7 +31,7 @@ This is an integration/formalization task, not a mathematical proof task. It was
 
 ### 2.1 D-ST-3 definition in canonical §3.11
 
-**Location:** `THEORY/canonical/canonical.md` §3.11 (lines ~271–284)
+**Location:** `THEORY/2_substrate/canonical/canonical.md` §3.11 (lines ~271–284)
 
 > **§3.11. Active Formation Count K_act as Persistent Component Count**
 > *(Migrated from §16 D-ST-3, W6 D4 Session C. Canonical from CV-1.6.)*
@@ -42,7 +42,7 @@ This is an integration/formalization task, not a mathematical proof task. It was
 
 ### 2.2 T-Temporal-Identity citation of D-ST-3
 
-**Location:** `THEORY/canonical/canonical.md` §13 T-Temporal-Identity proof setup
+**Location:** `THEORY/2_substrate/canonical/canonical.md` §13 T-Temporal-Identity proof setup
 
 > "Let $\mathrm{PersComp}(u_t) = \{C_i^t\}_{i=1}^{K_t}$, $\mathrm{PersComp}(u_s) = \{C_j^s\}_{j=1}^{K_s}$ (D-ST-3, canonical §3.11)."
 

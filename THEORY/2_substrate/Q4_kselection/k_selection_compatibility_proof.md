@@ -376,6 +376,6 @@ CV-1.7+ packet (gated on §9.1 + §9.2 completions):
 
 *(W6 D1 EOD audit fix applied 2026-05-04: §6.3/§7.1/§8.1/§9.3 originally claimed "RESOLVED via composite" which contradicted canonical OP catalog "OPEN; partial via 4-layer composite". §6.3.1 partial-answer scope clause added; §1 mission + §6.3 + §7.1 + §8.1 + §9.3 + footer reframed to "PARTIALLY RESOLVED" wording. Net: 0 mathematical content changes; only catalog-consistent status alignment. See `op_resolution.md` parking-lot precision audit Issue #1 for trigger documentation.)*
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/k_selection_compatibility_proof.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7+ W12+ packet (Commitment 19 K-Selection Axiom).

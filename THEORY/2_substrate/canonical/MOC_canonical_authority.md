@@ -46,7 +46,7 @@ last_updated: 2026-05-20
 ## Dependencies
 
 - Promotes from: [[INDEX|working/INDEX.md]] → working files (3-stage pipeline).
-- Cross-links: [[00_manifest]] (SCC-CT v0.1 구조적 권위).
+- Cross-links: [[sct_manifest]] (SCC-CT v0.1 구조적 권위).
 - Feeds into: [[MOC_Q1_boundary_T8]]..[[MOC_Q6_sigma_inherit]] 의 "Current Status" 절.
 
 ## Promotion Pipeline (요약)
@@ -56,8 +56,8 @@ THEORY/logs/daily/YYYY-MM-DD/  (raw)
         ↓ reorganize
 THEORY/working/<topic>.md       (active)
         ↓ proof + review + tests + user merge
-THEORY/canonical/canonical.md   (one-way)
-THEORY/canonical/theorem_status.md
+THEORY/2_substrate/canonical/canonical.md   (one-way)
+THEORY/2_substrate/canonical/theorem_status.md
 THEORY/CHANGELOG.md
 ```
 
@@ -75,10 +75,10 @@ THEORY/CHANGELOG.md
 
 `THEORY/working/prolegomena/` — PAI pivot 이후 *조건 catalog → framework skeleton* 의 pre-formal 작업층. canonical 무수정; *후보 framework 의 이름 표시* 만.
 
-- [[../working/prolegomena/00_field_conditions_v0|00 Field Conditions]] — Perception-side 44 조건 (C1-C44).
-- [[../working/prolegomena/01_mathematical_conditions_v0|01 Mathematical Conditions]] — Math-side 44 조건 평행 번역 (M1-M44).
-- [[../working/prolegomena/02_framework_skeleton_v0|02 Framework Skeleton]] — 4-layer architecture (L0-L4); 2026-05-22 5-영역 리서치 수렴; 5 OP-NEW 식별 (등록 안 함).
-- [[../working/prolegomena/03_formula_catalog_v0|03 Formula Catalog]] — 44 M_k 의 full formal candidate notation; 6 O-grade open 마크; PAI vocabulary 형식화 0 (§13 placeholder).
+- [[00_field_conditions_v0|00 Field Conditions]] — Perception-side 44 조건 (C1-C44).
+- [[01_mathematical_conditions_v0|01 Mathematical Conditions]] — Math-side 44 조건 평행 번역 (M1-M44).
+- [[02_framework_skeleton_v0|02 Framework Skeleton]] — 4-layer architecture (L0-L4); 2026-05-22 5-영역 리서치 수렴; 5 OP-NEW 식별 (등록 안 함).
+- [[03_formula_catalog_v0|03 Formula Catalog]] — 44 M_k 의 full formal candidate notation; 6 O-grade open 마크; PAI vocabulary 형식화 0 (§13 placeholder).
 
 ## SEAL Chain (Superseded-by)
 

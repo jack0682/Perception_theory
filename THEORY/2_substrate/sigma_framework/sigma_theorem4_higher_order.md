@@ -9,7 +9,7 @@
 **Cat target:** Cat A re-promotion path for T-σ-Theorem-4 in ε-small regime, via 5th/6th equivariant computation.
 
 **Hard constraints (CN10 contrastive):**
-- This file does not modify `THEORY/canonical/canonical.md`.
+- This file does not modify `THEORY/2_substrate/canonical/canonical.md`.
 - Crandall–Rabinowitz reduction is *referenced* contrastively, not reductively imported. The σ-framework's discrete-graph $D_4$ specialization is the active surface; the smooth-manifold equivariant bifurcation literature (Golubitsky–Schaeffer–Stewart) is contrasted via *parallel structure*, not equated.
 - Higher-order coefficients $A_3, A_4, A_5, A_6$ named here are *placeholders for working-file algebra*; their relation to the canonical $\mathcal{E}$-derived integrals must be re-derived in σ-framework Hessian-projection idiom before any canonical promotion.
 

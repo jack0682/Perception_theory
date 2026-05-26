@@ -342,7 +342,7 @@ $$W^{\mathrm{obs}}(\mathbf{u}) = \begin{cases} \sum_{j<k} \gamma_{jk} u^{(j)} u^
 
 **End of lambda_rep_ontology.md (OAT-3 deliverable).**
 **Status: working draft. Argument B + Option 3 채택 권고. Argument A + C strict 기각. OP-0009-λ PARTIALLY RESOLVED at CV-1.6. Wave 3 OAT-3 deepening (§2.4) provides formal L0–L3 layer-theory backing for Argument B.**
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/lambda_rep_ontology.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/multiformation/lambda_rep_ontology.md`
 **Created:** 2026-04-30 (W5 Day 4)
 
 ---

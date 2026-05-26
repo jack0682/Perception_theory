@@ -5,7 +5,7 @@ status: in-progress — W7-FINAL session 2026-05-10
 created: 2026-05-10
 session: W7-FINAL
 scope: single-formation temporal closure; H-SINK → partial OT → S-B1 → S-B3 → T-Temporal-Identity → CV-1.12
-predecessor: THEORY/working/temporal/H-SINK.md (W7-T1, 2026-05-10)
+predecessor: THEORY/4_temporal/temporal_audit/H-SINK.md (W7-T1, 2026-05-10)
 ---
 
 > [!nav] Linked: [[MOC_temporal_audit_W7]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]
@@ -28,13 +28,13 @@ H-SINK → partial/sub-stochastic OT stability → S-B1 (ρ_deep) → S-B3 (kern
 
 | File | Change |
 |------|--------|
-| `THEORY/working/temporal/H-SINK.md` | **NEW** — 6 lemmas + main theorem + audit; H-SINK-S2 = S-B2 Cat A |
-| `THEORY/canonical/hypothesis_tree.md` | HT-3.0 → HT-3.1: H-SINK PARTIALLY CLOSED |
+| `THEORY/4_temporal/temporal_audit/H-SINK.md` | **NEW** — 6 lemmas + main theorem + audit; H-SINK-S2 = S-B2 Cat A |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | HT-3.0 → HT-3.1: H-SINK PARTIALLY CLOSED |
 | `THEORY/CHANGELOG.md` | W7-T1 entry added at top |
 
 **NOT updated in W7-T1** (need to fix in W7-FINAL):
-- `THEORY/canonical/theorem_status.md` — no W7-T1 entry; T-Temporal-Identity still "Session V Working Candidate"
-- `THEORY/canonical/canonical.md` — no W7-T1 integration; §13 Category B lacks T-Temporal-Identity canonical entry
+- `THEORY/2_substrate/canonical/theorem_status.md` — no W7-T1 entry; T-Temporal-Identity still "Session V Working Candidate"
+- `THEORY/2_substrate/canonical/canonical.md` — no W7-T1 integration; §13 Category B lacks T-Temporal-Identity canonical entry
 
 ### 0.3 Hypothesis and sub-lemma status entering W7-FINAL
 
@@ -76,8 +76,8 @@ H-SINK → partial/sub-stochastic OT stability → S-B1 (ρ_deep) → S-B3 (kern
 ## 1. Phase 1 Result — W7-T1 Canonical Integration
 
 **Executed in W7-FINAL.** See updates to:
-- `THEORY/canonical/theorem_status.md` — CV-1.12 section with H-SINK-S2 Cat A, H-SINK Cat A (after Phase 3), H-SINK-ENT registered, T-Temporal-Identity canonical Cat B row added.
-- `THEORY/canonical/canonical.md` — §13 Category B T-Temporal-Identity entry, §13 header updated, frontmatter updated, §16 CV-1.12 target updated.
+- `THEORY/2_substrate/canonical/theorem_status.md` — CV-1.12 section with H-SINK-S2 Cat A, H-SINK Cat A (after Phase 3), H-SINK-ENT registered, T-Temporal-Identity canonical Cat B row added.
+- `THEORY/2_substrate/canonical/canonical.md` — §13 Category B T-Temporal-Identity entry, §13 header updated, frontmatter updated, §16 CV-1.12 target updated.
 
 ---
 
@@ -94,7 +94,7 @@ Promoted T-Temporal-Identity to canonical Cat B (CV-1.12) with:
 
 ## 3. Phase 3 Result — Partial/Sub-Stochastic OT Stability
 
-**See `THEORY/working/temporal/partial_ot_stability.md`.**
+**See `THEORY/4_temporal/temporal_audit/partial_ot_stability.md`.**
 
 Key result: **Cat A** via direct row-normalization argument (no Séjourné et al. needed).
 
@@ -110,7 +110,7 @@ H-SINK: **PARTIALLY CLOSED → FULLY CLOSED (Cat A)**.
 
 ## 4. Phase 4 Result — S-B1 Deep-Core Density
 
-**See `THEORY/working/temporal/S-B1_deep_core_density.md`.**
+**See `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md`.**
 
 Key result: **Cat B conditional** under explicit well-formedness assumptions.
 - Route 2 (phase transition): Cat B under $\beta > 7\alpha$ + core size $\geq 25$ + T-Persist-1(c,e) preconditions
@@ -123,7 +123,7 @@ Key result: **Cat B conditional** under explicit well-formedness assumptions.
 
 ## 5. Phase 5 Result — S-B3 Kernel Independence
 
-**See `THEORY/working/temporal/S-B3_kernel_independence.md`.**
+**See `THEORY/4_temporal/temporal_audit/S-B3_kernel_independence.md`.**
 
 Key result: **ALREADY CLOSED** (Lemma 10, 2026-05-07). Formally verified and documented:
 - Lemma 10 (component confinement): $\vert \gamma_M(C_i,C_j) - \gamma_{M'}(C_i,C_j)\vert \leq 2M_\mathrm{tot}\delta/\varepsilon_\mathrm{OT}$

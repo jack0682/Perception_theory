@@ -188,7 +188,7 @@ These are the OMS theorems with the **highest** mathematical status (PROVED unco
 
 ## §9. What is canonical now
 
-The following are promotable to `THEORY/canonical/canonical.md` as part of an **Appendix OMS** (next mandatory step):
+The following are promotable to `THEORY/2_substrate/canonical/canonical.md` as part of an **Appendix OMS** (next mandatory step):
 
 - **Static-face Theorems** R1, R2, R3 (1)–(3), R4, R5, L1, L2, ED1, ED2, C1.1–C1.5, NV4–NV6/NV9–NV10, SB5/SB6/SB7/SB8, SN3 (conditional), TS1, OP-OMS-029.
 - **Topological Propositions** 1–7, A1–A6, B1–B3, CW1, CW2 (computationally confirmed → conditional theorem), LS1, SD1, R1 (P_min coarseness).
@@ -210,7 +210,7 @@ These together constitute **the Static OMS canonical theory** — the analog of 
 
 $$\boxed{\textbf{OMS-2.0 Accepted — Static, with Full Temporal remaining Conditional on OP-OMS-034}}$$
 
-**Promotion route:** Add Appendix OMS to `THEORY/canonical/canonical.md` (next mandatory step in this session — Gate F).
+**Promotion route:** Add Appendix OMS to `THEORY/2_substrate/canonical/canonical.md` (next mandatory step in this session — Gate F).
 
 **Honest reading:**
 

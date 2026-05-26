@@ -11,7 +11,7 @@
 
 ## §1. F-1 original statement
 
-From `THEORY/canonical/theorem_status.md` (pre-session):
+From `THEORY/2_substrate/canonical/theorem_status.md` (pre-session):
 
 > **F-1 (K=2 vacuity, CRITICAL).** In the K=1 analysis of `canonical.md`, the integer $K$ is treated as a primitive parameter. However, no explicit K=2 construction exists showing that energy minimization at fixed mass $m = 2m_0$ (twice K=1) actually prefers two formations rather than a single larger formation. Absent this, the "K=2 regime" of the theory is vacuous.
 

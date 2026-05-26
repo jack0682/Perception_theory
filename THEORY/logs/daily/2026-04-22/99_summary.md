@@ -104,19 +104,19 @@ The morning SF-S1 session formalized the Round 12-18 audit's 4 Cat A candidates 
 
 - `THEORY/logs/daily/2026-04-22/plan.md`, `pre_brainstorm.md`, `01_exploration.md`, `02_development.md`, `03_integration_and_new_open.md`, `99_summary.md` (this file), `errata_batch.md`.
 - `04_deepening_round2.md` through **`12_deepening_round10.md`** (Rounds 2-10 log files).
-- `THEORY/working/SF/README.md`, `mode_count.md`, `interface_scale.md`, `cardinality_open.md`, `profile_deviation.md`, `thermal_extension.md`, `symmetry_moduli.md`.
-- `THEORY/working/MF/from_single.md`.
+- `THEORY/2_substrate/sigma_framework/sigma_framework_README.md`, `mode_count.md`, `interface_scale.md`, `cardinality_open.md`, `profile_deviation.md`, `thermal_extension.md`, `symmetry_moduli.md`.
+- `THEORY/2_substrate/Q2_multiformation/from_single.md`.
 - `CODE/experiments/exp_profile_fit.py` + `results/exp_profile_fit.json`.
 
 ### 6.2 Modified
 
 - `THEORY/canonical/canonical_sub.md` — 10 daily sub-entries (morning + Rounds 2-10), ~700 lines total.
-- `THEORY/working/E/F1_dissolution.md`, `M1_dissolution.md`, `MO1_dissolution.md` — Round 18 post-audit sections.
+- `THEORY/2_substrate/foundations/dissolutions/F1_dissolution.md`, `M1_dissolution.md`, `MO1_dissolution.md` — Round 18 post-audit sections.
 - `THEORY/working/integer_K_dependency_map.md` — E-5/E-6 rewrite.
-- `THEORY/working/SF/mode_count.md` — Round 6 §2.3e added.
-- `THEORY/working/SF/symmetry_moduli.md` — Round 4 §3.6 + Round 5 §3.7 added.
-- `THEORY/working/SF/cardinality_open.md` — Round 7 §8.7 + Round 8 §8.8 + Round 10 §8.9 added.
-- `THEORY/working/SF/profile_deviation.md` — Round 9 §11 added.
+- `THEORY/2_substrate/sigma_framework/mode_count.md` — Round 6 §2.3e added.
+- `THEORY/2_substrate/sigma_framework/symmetry_moduli.md` — Round 4 §3.6 + Round 5 §3.7 added.
+- `THEORY/2_substrate/sigma_framework/cardinality_open.md` — Round 7 §8.7 + Round 8 §8.8 + Round 10 §8.9 added.
+- `THEORY/2_substrate/sigma_framework/profile_deviation.md` — Round 9 §11 added.
 
 ---
 

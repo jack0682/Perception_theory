@@ -308,6 +308,6 @@ Upon completion: full **(R1) Aut-invariance + (R2) Wigner-projection + Theorem 7
 
 **Status: working draft. Task #2 complete. Orientation tensor formal derivation: PSD (Cat A), real-analyticity (Cat A), Aut(G) covariance via $O M_j O^T$ conjugation (Cat A, Theorem 5.1), eigenvalue Aut-invariance (Cat A, Corollary 5.2), eigenvector covariance modulo sign (Cat A, Corollary 5.3), orientation invariants (Cat A, Theorem 5.4), sign-ambiguity resolution via projectors (Cat A) or Convention 6.1 (Cat B at degeneracies), parallel-axis theorem at K-jumps (Cat A, Theorem 7.1; verified against `nq242c_explicit_construction.md` §4.4), uniqueness as second central moment (Cat A, Theorem 8.1), distinguishing power beyond centroid (Cat A constructive, Theorem 8.2). All hard constraints verified. CN10 preserved. Promotion target: (R1) orientation sub-piece + (R2)/Φ_rich §3.3(c) parallel-axis basis. Next: Task #3 Wigner-von Neumann W_jk formal derivation.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_orientation_derivation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_orientation_derivation.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7 W9+ Cat A everywhere proof completion (combined with Tasks #1, #3, #4).

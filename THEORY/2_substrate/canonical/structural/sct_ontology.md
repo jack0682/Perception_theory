@@ -132,7 +132,7 @@ This one-way relationship is what makes the soft field genuinely primitive: it c
 
 ## §9. Cat A statements from CV-1.16 supporting this chapter
 
-The ontological commitment of SCC-CT is supported by the following Cat A statements (registered in `THEORY/canonical/canonical.md` §13 Category A):
+The ontological commitment of SCC-CT is supported by the following Cat A statements (registered in `THEORY/2_substrate/canonical/canonical.md` §13 Category A):
 
 - **T-PreObj-1G** (graph-class independent Pre-Objective Mechanism, W4): the four-term energy admits formations on *generic* finite weighted graphs without requiring graph-symmetry assumptions. Hence pre-objective formation is graph-class robust.
 - **T-Birth-Parametric** (D₄-symmetric case Cat A): explicit construction of formations on canonical graph families.
@@ -144,9 +144,9 @@ The following are NOT canonical ontological commitments of SCC-CT, and remain *o
 
 - **Multi-formation ontology** (how multiple coexisting formations interact) — partially structured by Commitment 16 K-status, but the full multi-formation ontology is not sealed. See `05_open_problems.md` §OP-0009.
 - **Continuous-time limit** of SCC dynamics — Γ-convergence to perimeter functional is Cat A (T11) but continuous-time *action* limit is open.
-- **Observer / measurement** ontology — partially developed in `THEORY/canonical/canonical.md` Appendix OMS (Observer Moduli Space, OMS-2.0 Accepted Full), but its integration with the central cohesion-field commitment is structural, not deeply unified.
+- **Observer / measurement** ontology — partially developed in `THEORY/2_substrate/canonical/canonical.md` Appendix OMS (Observer Moduli Space, OMS-2.0 Accepted Full), but its integration with the central cohesion-field commitment is structural, not deeply unified.
 - **Cognitive vs. visual scope** — SCC-CT operates at the perceptual-formation level. Higher cognition (concept formation, language, reasoning) is outside scope.
 
 ---
 
-*Chapter I sealed within SCC-CT v0.1. References: `THEORY/canonical/DECLARATION.md` (DECL-1.0, central axis); `THEORY/canonical/canonical.md` §2 (Foundational Orientation), §3.3 (soft cohesion field), §14 (CN1, CN4, CN5). Next: `02_axioms_and_primitives.md` (Ch. II Primitive Structure + Ch. III Operator Triad).*
+*Chapter I sealed within SCC-CT v0.1. References: `THEORY/0_axis/DECLARATION.md` (DECL-1.0, central axis); `THEORY/2_substrate/canonical/canonical.md` §2 (Foundational Orientation), §3.3 (soft cohesion field), §14 (CN1, CN4, CN5). Next: `02_axioms_and_primitives.md` (Ch. II Primitive Structure + Ch. III Operator Triad).*

@@ -2,21 +2,21 @@
 
 # Reservoir Reinterpretation of K: From Finite Slots to Latent Formation Reservoir
 
-**File:** `THEORY/working/MF/reservoir_reinterpretation_of_K.md`
+**File:** `THEORY/2_substrate/Q4_kselection/reservoir_reinterpretation_of_K.md`
 **Document type:** Non-canonical theoretical memo. Working draft. Conceptual reinterpretation candidate.
 **Created:** 2026-05-02 (post WQ-1.C-R2; conceptual correction motivated by the WQ-1 / WQ-2 / WQ-1.C / WQ-1.C-R2 empirical record).
 
 **Predecessor artifacts:**
 - `THEORY/working/MF/layered_ambient_architecture_{candidate,README,agent_notes,next_work}.md`
-- `THEORY/working/MF/nq242c_results.md` (WQ-1: F2)
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` (WQ-2: F-B6 confirmed)
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md` (WQ-1.C: F-C1 / F-C7)
-- `THEORY/working/MF/wq1c_r2_projected_layerII_aggregate_sigma_results.md` (WQ-1.C-R2: F-R2-F3 / F-R2-F4 dual reading)
-- `THEORY/working/MF/K_status_commitment.md` (Commitment 16 K_field / K_act decomposition)
-- `THEORY/working/MF/shared_pool_canonical_proposal.md` (I9' shared-pool ambient)
-- `THEORY/working/MF/F_Kstep_K_triple.md` (4-quantity bridge)
-- `THEORY/working/E/soft_K_definition.md` ($K_{\mathrm{soft}}^\phi$ persistence-based)
-- `THEORY/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog)
+- `THEORY/2_substrate/multiformation/nq242c_results.md` (WQ-1: F2)
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` (WQ-2: F-B6 confirmed)
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md` (WQ-1.C: F-C1 / F-C7)
+- `THEORY/2_substrate/multiformation/wq1c_r2_projected_layerII_aggregate_sigma_results.md` (WQ-1.C-R2: F-R2-F3 / F-R2-F4 dual reading)
+- `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (Commitment 16 K_field / K_act decomposition)
+- `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` (I9' shared-pool ambient)
+- `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` (4-quantity bridge)
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` ($K_{\mathrm{soft}}^\phi$ persistence-based)
+- `THEORY/2_substrate/canonical/canonical.md`, `theorem_status.md`, `theorem_status.md` (Open Problems Catalog)
 
 ---
 

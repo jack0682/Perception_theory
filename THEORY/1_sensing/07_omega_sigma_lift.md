@@ -111,7 +111,7 @@ constraint_compliance:
 
 ### 1.2 (Ω, σ) 와 prolegomena 의 양립 — 상세 검증
 
-[[../prolegomena/00_field_conditions_v0|prolegomena conditions catalog]] 의 negative 조건 C1–C5 에 대해 각각 *형식적 정당화*:
+[[00_field_conditions_v0|prolegomena conditions catalog]] 의 negative 조건 C1–C5 에 대해 각각 *형식적 정당화*:
 
 **C1 verification — 장은 함수가 아니다**.
 함수 $f : A \to B$ 는 *사전에 주어진* domain $A$, codomain $B$, 그리고 각 $a$ 에 *유일한* $f(a)$ 를 요구. Tier 2 $(\Omega, \sigma)$ 에는: (i) 사전에 주어진 codomain 없음 (σ 는 $\Omega \times \Omega \to \{0, 1\}$ 의 *관계* 일 뿐, $\Omega \to V$ 의 mapping 이 아님); (ii) σ 는 *대칭* 이므로 "input → output" 의 방향성 없음; (iii) 각 $x$ 에 대해 σ 가 *어떤 $y$ 와 관계 맺는가* 는 *복수* — 함수의 *single-valued* 조건 위배. 따라서 C1 ✓.

@@ -10,14 +10,14 @@
 
 ## Session summary (extended evening session — full-closure form)
 
-**Headline achievement.** T-Temporal-Identity is now **all-Cat-B (parts a, b, c, d)** with a *margin-only* hypothesis package — promotion-ready. Two NQ-T-Identity items fully closed today (NQ-5 via Lemma 8; NQ-1/OP-0011 Step 2 via Lemma 10), one partially closed (NQ-4 via sharp form + Theorem ER), and one substantively advanced (NQ-6 via Lemma 13 sketch with 4 critical gaps identified). OP-0011 status upgraded STRUCTURED → **PARTIALLY RESOLVED**; OP-0012 PARTIALLY STRUCTURED → **PARTIALLY RESOLVED via Lemma 6**. Sharp-form working file consolidating all closures sent to `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` (Cat B-ready, 9 sections, Lemmas 1–13 catalogued, P1–P5 promotion criteria specified). Cat A timeline collapsed from initial estimate of 9 sessions (morning) → 7 (sophistication layer) → ~5 (post-evening closures), with critical-path bottleneck = S-B2 (Sinkhorn-Lipschitz Cat A promotion); if NQ-6 closes (~50% probability in 2 sessions), timeline collapses further to ~3 sessions with no $\varepsilon_\mathrm{OT}^*$ ceiling.
+**Headline achievement.** T-Temporal-Identity is now **all-Cat-B (parts a, b, c, d)** with a *margin-only* hypothesis package — promotion-ready. Two NQ-T-Identity items fully closed today (NQ-5 via Lemma 8; NQ-1/OP-0011 Step 2 via Lemma 10), one partially closed (NQ-4 via sharp form + Theorem ER), and one substantively advanced (NQ-6 via Lemma 13 sketch with 4 critical gaps identified). OP-0011 status upgraded STRUCTURED → **PARTIALLY RESOLVED**; OP-0012 PARTIALLY STRUCTURED → **PARTIALLY RESOLVED via Lemma 6**. Sharp-form working file consolidating all closures sent to `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` (Cat B-ready, 9 sections, Lemmas 1–13 catalogued, P1–P5 promotion criteria specified). Cat A timeline collapsed from initial estimate of 9 sessions (morning) → 7 (sophistication layer) → ~5 (post-evening closures), with critical-path bottleneck = S-B2 (Sinkhorn-Lipschitz Cat A promotion); if NQ-6 closes (~50% probability in 2 sessions), timeline collapses further to ~3 sessions with no $\varepsilon_\mathrm{OT}^*$ ceiling.
 
 ## Status (post-evening-session)
 
 - **Canonical:** NOT modified. Counts unchanged (54A/14B/5C/5R = 78, CV-1.11). Promotion target: CV-1.12 (+1B → 79 claims).
 - **Working files:**
-  - **NEW:** `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` — sharp form Cat B-ready, all closures consolidated, P1–P5 criteria specified.
-  - Predecessor `THEORY/working/MF/temporal_identity_perscomp_transport.md` — marked **SUPERSEDED** with back-pointer to sharp form.
+  - **NEW:** `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` — sharp form Cat B-ready, all closures consolidated, P1–P5 criteria specified.
+  - Predecessor `THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md` — marked **SUPERSEDED** with back-pointer to sharp form.
 - **Theorem self-classification (post-closure):**
   - (a) Cat B (Lemma 1 + arithmetic).
   - (b) Cat B (Lemmas 2–5 + Lemma 8 NQ-5 closure: margin-only, no postulated (A8) or (MA1)).
@@ -102,7 +102,7 @@ When user authorizes a CHANGELOG append:
 - **Session:** W6 D5 (2026-05-07), Extended Evening — Closure + NOP-Catalog Form
 - **Topic:** T-Temporal-Identity all-Cat-B closure (parts a, b, c, d) + NQ-5 + NQ-1 (OP-0011 Step 2) closures + OP-0012-CC partial closure + NQ-6 advancement + **OP-0021 8-angle brainstorm + 10 NOPs (A–J) catalogued with Lemma 15–24 candidates + 3 working files (NEW: sharp_vs_spectral, self_ref_fp_stability; EXTENDED: pf_tstar_langevin §11)**
 - **Product:**
-  - **Working file:** `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` — promotion-ready Cat B all-parts (Lemmas 1–13 catalogued, hypothesis package (A1)–(A9)+(A7')+(DR1)–(DR2) margin-only).
+  - **Working file:** `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` — promotion-ready Cat B all-parts (Lemmas 1–13 catalogued, hypothesis package (A1)–(A9)+(A7')+(DR1)–(DR2) margin-only).
   - **Log files:** `02_exploration.md`, `03_development.md`, `04_integration_and_new_open.md`, `05_close_NQ5_full.md`, `06_close_OP0011_step2.md`, `07_close_NQ4_robust.md`, `08_NQ6_spectral_gap_advance.md`, `99_summary.md`.
   - **Predecessor working file marked SUPERSEDED** with back-pointer.
 - **Closures (NQ-T-Identity items):**

@@ -13,7 +13,7 @@ status: DRAFT — Cat B+ unconditional, Cat A 후보 conditional
 
 # P4 — OP-HMORSE-LOCAL-A: σ-Saturation 잔여항 Sharper Bound (Cat A attempt)
 
-> [!nav] Linked: [[CV114_H_MORSE_PACKAGEII/11_broadness_attack]] · [[canonical.md §13 L-HMORSE-LOCAL]] · [[E3_hmorse_stage0_oms.md §A]]
+> [!nav] Linked: [[11_broadness_attack]] · [[canonical.md §13 L-HMORSE-LOCAL]] · [[E3_hmorse_stage0_oms.md §A]]
 >
 > **목적:** L-HMORSE-LOCAL (CV-1.16 Cat B) 의 잔여항 $R_{\mathrm{cl}}$ 에 대한 *sharper* 해석 상한을 도출하여 Cat B → Cat A 승급의 기술적 장벽을 제거한다. 핵심 관측: $u^*$ 의 active set 에서 sigmoid 2차 도함수 $\sigma''(z(u^*))$ 가 *지수적*으로 작다 — 이를 정량화한 $\delta(u^*)$-bound 가 worst-case bound 대비 ~$10^4\times$ tighter.
 
@@ -42,7 +42,7 @@ status: DRAFT — Cat B+ unconditional, Cat A 후보 conditional
 
 ### §0.3 Working 위치 (CV114 H-MORSE Package II)
 
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` §8 Non-Overclaim: "$R_{\mathrm{cl}}$ contribution to $\mu_{\min}$ is small because $\vert \sigma''\vert \approx 0$ at saturated nodes" — *본 P4 의 정량화 대상*.
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` §8 Non-Overclaim: "$R_{\mathrm{cl}}$ contribution to $\mu_{\min}$ is small because $\vert \sigma''\vert \approx 0$ at saturated nodes" — *본 P4 의 정량화 대상*.
 - `THEORY/logs/daily/2026-05-14/02_development.md §3` + `42_broadness_approach_b_trace.md §5–§6`: $R_{\mathrm{cl}}$ 의 현재 worst-case bound 의 origin.
 
 ### §0.4 본 문서의 정확한 scope

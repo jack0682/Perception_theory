@@ -60,29 +60,29 @@ equivalently $\mathcal A_{\mathrm{bar}}(j)=$ the bar born at $q_j^U=\arg\max^\pr
 
 ### Canonical files modified
 
-- **`THEORY/canonical/theorem_status.md`** — added new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version (W6: L1-F Hard-Bar / Active-Count Bridge Conditional Cat-A)" with the T-L1-F entry; reflagged CV-1.5.1 from "Current Version" to "Previous Version". +30 lines (338→368).
-- **`THEORY/canonical/canonical.md`** — inserted T-L1-F entry at the end of §13 Category A (just before Category B header). +9 lines (1666→1675).
+- **`THEORY/2_substrate/canonical/theorem_status.md`** — added new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version (W6: L1-F Hard-Bar / Active-Count Bridge Conditional Cat-A)" with the T-L1-F entry; reflagged CV-1.5.1 from "Current Version" to "Previous Version". +30 lines (338→368).
+- **`THEORY/2_substrate/canonical/canonical.md`** — inserted T-L1-F entry at the end of §13 Category A (just before Category B header). +9 lines (1666→1675).
 
 ### Canonical files NOT modified
 
-- **`THEORY/canonical/theorem_status.md`** — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
+- **`THEORY/2_substrate/canonical/theorem_status.md`** — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
 
 ### L1 chain documents (provenance, working/MF — already in repo)
 
-- `THEORY/working/MF/kbar_kact_bridge_L1_formalization.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1A_merge_level.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1B_bridge_bound.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1C_slot_to_bar.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1D_no_extra_bar.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1E_inactive_suppression.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1F_synthesis.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1G_empirical_diagnostic.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1H_local_to_global_transfer.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1H2_boundary_leakage.md` (post-L1-K-REPAIR R-1 contradiction proof + R-3 plateau)
-- `THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1J_catA_upgrade_attempt.md` (post-L1-K-REPAIR R-2 $q_j^U$ + R-4 heterogeneous-$\psi$)
-- `THEORY/working/MF/kbar_kact_bridge_L1K_external_audit.md`
-- `THEORY/working/MF/kbar_kact_bridge_L1L_scc_decay_theorem.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1_formalization.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1A_merge_level.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1B_bridge_bound.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1C_slot_to_bar.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1D_no_extra_bar.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1E_inactive_suppression.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1F_synthesis.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1G_empirical_diagnostic.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1H_local_to_global_transfer.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1H2_boundary_leakage.md` (post-L1-K-REPAIR R-1 contradiction proof + R-3 plateau)
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1I_constants_feasibility.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1J_catA_upgrade_attempt.md` (post-L1-K-REPAIR R-2 $q_j^U$ + R-4 heterogeneous-$\psi$)
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1K_external_audit.md`
+- `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1L_scc_decay_theorem.md`
 
 ### Diagnostic / counterexample scripts (provenance)
 

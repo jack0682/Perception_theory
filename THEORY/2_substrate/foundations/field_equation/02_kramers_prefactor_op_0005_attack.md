@@ -41,7 +41,7 @@ coc_enforced: yes
 inverse_causation_enforced: yes (each Cat-B-target claim §5.X)
 ---
 
-> [!nav] Linked: [[01_ns_inspired_synthesis]] (§6 #12, §7 Identity 2, §11 Tier 1) · [[../../canonical/canonical|CV-1.18 canonical]] (§13 Theorem 4 / T-PF-A1-* / T-P-F-ε0-K / T-K-Select-PF, §16 D-ST-4, OP-0005-DYN) · [[../../canonical/DECLARATION|DECL-1.0]] (Q3 stochastic dynamics, Q4 K-selection) · [[../../canonical/CV-1.18_SEAL|CV-1.18 SEAL]] (M-Z deprecation) · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]] · [[../cssl/01_critic_evaluation|CSSL critic eval]]
+> [!nav] Linked: [[01_ns_inspired_synthesis]] (§6 #12, §7 Identity 2, §11 Tier 1) · [[canonical|CV-1.18 canonical]] (§13 Theorem 4 / T-PF-A1-* / T-P-F-ε0-K / T-K-Select-PF, §16 D-ST-4, OP-0005-DYN) · [[DECLARATION|DECL-1.0]] (Q3 stochastic dynamics, Q4 K-selection) · [[CV-1.18_SEAL|CV-1.18 SEAL]] (M-Z deprecation) · [[../../logs/daily/2026-05-20/03_D_L_commutation|03 [D, L_G] commutation]] · [[01_critic_evaluation|CSSL critic eval]]
 
 # 02 — Eyring–Kramers Prefactor for SCC: L-KRAMERS-PR-SCC Cat B Target (Tier 1 OP-0005-DYN Attack)
 

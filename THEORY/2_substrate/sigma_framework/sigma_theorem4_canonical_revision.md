@@ -474,6 +474,6 @@ If reconciliation incomplete: Cat B retained at CV-1.7; further W12+ work.
 
 **Status: working draft. Task #63 URGENT complete (canonical-revision packet draft). NQ-187 W5 Day 4 numerical falsification documented (§2): $\mu_1/\mu_0 = 2$ at finite L $\in \{4, 8, 16\}$, contradicting canonical claim $\mu_0 = \mu_1$ at leading order. Three reconciliation paths registered (§4): (α) continuum extrapolation, (β) R22 derivation audit, (γ) Σ_m-Hessian convention audit. Canonical revision text drafted (§3): T-σ-Theorem-4 (ii) augmented with finite-L caveat; Commitment 14 (O7) augmented with finite-L vs continuum disambiguation. CV-1.6 packet impact contained (§5): caveat addition is non-disruptive. Cat status: Cat B retained (Wave 3 audit subscript). Cat A re-promotion target CV-1.7+ post (α)+(β)+(γ) audit closure. Cross-cluster impact: σ_rich (Commitment 18) and K-Selection (Commitment 19) NOT affected. All hard constraints verified. Wave 4+ priorities (§8): (γ) audit W6 Day 1-3 (highest priority); (β) W6 Day 4-W7; (α) W7-W8.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/SF/sigma_theorem4_canonical_revision.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_theorem4_canonical_revision.md`
 **Created:** 2026-04-30 (W5 Day 4 PM, URGENT).
 **Promotion target:** CV-1.6 D-CV1.6-O? items (T-σ-Theorem-4 caveat addition + Commitment 14 (O7) finite-L disambiguation); CV-1.7+ Cat A re-promotion post-reconciliation.

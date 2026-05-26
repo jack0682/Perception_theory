@@ -193,4 +193,4 @@ The following operator-level constructions are explicitly excluded from SCC-CT p
 
 ---
 
-*Chapters II & III sealed within SCC-CT v0.1. References: `THEORY/canonical/canonical.md` §3 (Formal Universe), §6 (Axiomatic Groups A–E), §9 (Operators), §14 CN1/CN2/CN3/CN4. Next: `03_energy_and_diagnostics.md` (Ch. IV Diagnostic Vector + Ch. V Energy Principle).*
+*Chapters II & III sealed within SCC-CT v0.1. References: `THEORY/2_substrate/canonical/canonical.md` §3 (Formal Universe), §6 (Axiomatic Groups A–E), §9 (Operators), §14 CN1/CN2/CN3/CN4. Next: `03_energy_and_diagnostics.md` (Ch. IV Diagnostic Vector + Ch. V Energy Principle).*

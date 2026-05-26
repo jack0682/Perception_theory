@@ -3,7 +3,7 @@
 # 02_4tool_mapping_summary.md — 4-Tool Mathematical Scaffolding Verification 요약
 
 **Session:** 2026-04-30 (W5 Day 4) — 사용자 4-tool 권고 (2026-04-30 morning, "최신 위상수학·군론·집합론 동향 정리 (2024-2026) + 4 mathematical tools") 기반 multi-formation 22 한계 mapping verification.
-**Type:** Working file summary (full content at `THEORY/working/MF/mathematical_scaffolding_4tools.md` 611 lines).
+**Type:** Working file summary (full content at `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` 611 lines).
 **Result:** 4-tool 중 3개 (Tools A1, A2, A3) **fully applicable**; 1개 (Tool A4) **partially applicable** (Option 3 contrastive reformulation 권고).
 **Net effect on 22 한계**: 9 자동 해소 / 2-3 partial / 10-11 pending.
 
@@ -163,8 +163,8 @@ SCC's $\sum_{j<k} \lambda_{\mathrm{rep}} \langle u^j, u^k \rangle$ (bilinear) �
 
 이 daily summary file (`02_4tool_mapping_summary.md`)는 **OAT-supplementary working file의 daily-level 요약**. 자세한 verification + canonical proposals은 working file 참조:
 
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md` (611 lines) — full verification + proofs sketch + reformulation options + canonical text proposals.
-- `THEORY/working/MF/K_status_commitment.md` (480 lines, OAT-1 W5 Day 3 EOD) — Commitment 16 K-status audit (already canonical-merged at CV-1.5.1).
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` (611 lines) — full verification + proofs sketch + reformulation options + canonical text proposals.
+- `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (480 lines, OAT-1 W5 Day 3 EOD) — Commitment 16 K-status audit (already canonical-merged at CV-1.5.1).
 - `THEORY/logs/daily/2026-04-30/01_canonical_promotion_log.md` (this batch) — CV-1.5.1 머지 detailed log.
 - `THEORY/logs/daily/2026-04-30/99_summary.md` (next) — Day 4 EOD reflection.
 
@@ -230,4 +230,4 @@ SCC 적용: σ-framework + V5b family + Multi-Static 다중 layer가 multi-forma
 **End of 02_4tool_mapping_summary.md.**
 
 **File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/logs/daily/2026-04-30/02_4tool_mapping_summary.md`
-**References:** `THEORY/working/MF/mathematical_scaffolding_4tools.md` (full verification, 611 lines).
+**References:** `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` (full verification, 611 lines).

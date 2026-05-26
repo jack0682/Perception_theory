@@ -10,7 +10,7 @@ parent_authority: THEORY/canonical/ (CV-1.16 SEALED, 97 claims)
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]] · [[MOC_SCC_CT_v0.1]]
 > Pairs with: [[canonical]] (fact authority — CV-1.16)
-> Chapters: [[01_ontology]] → [[02_axioms_and_primitives]] → [[03_energy_and_diagnostics]] → [[04_theorem_registry]] → [[05_open_problems]] → [[06_forbidden_claims]] · [[07_changelog]]
+> Chapters: [[sct_ontology]] → [[sct_axioms_and_primitives]] → [[sct_energy_and_diagnostics]] → [[sct_theorem_registry]] → [[sct_open_problems]] → [[sct_forbidden_claims]] · [[sct_changelog]]
 > Read first: [[DECLARATION]] (2분), then this manifest
 > Status: SCC-CT v0.1 SEALED 2026-05-14 (structural authority)
 
@@ -20,7 +20,7 @@ parent_authority: THEORY/canonical/ (CV-1.16 SEALED, 97 claims)
 
 **Canonical Soft Cognitive Cohesion Theory.**
 
-Abbreviation: **SCC-CT** (preferred for mathematical literature and continuity with `THEORY/canonical/canonical.md` CV-1.x release ladder).
+Abbreviation: **SCC-CT** (preferred for mathematical literature and continuity with `THEORY/2_substrate/canonical/canonical.md` CV-1.x release ladder).
 
 Alternative full name (cognitive-mathematics framing): *Canonical Axiomatic Theory of Cognitive Cohesion*.
 
@@ -28,12 +28,12 @@ Alternative full name (cognitive-mathematics framing): *Canonical Axiomatic Theo
 
 **SCC-CT v0.1** (sealed 2026-05-14, W7-Day5 end-of-day).
 
-This is the *first* sealed version of the theoretical-statement canonical. Prior `THEORY/canonical/canonical.md` is the *implementation-progress canonical* (CV-1.0 → CV-1.16 release ladder). The two are **complementary**:
+This is the *first* sealed version of the theoretical-statement canonical. Prior `THEORY/2_substrate/canonical/canonical.md` is the *implementation-progress canonical* (CV-1.0 → CV-1.16 release ladder). The two are **complementary**:
 
 - `THEORY/canonical/` = working state of theorem proofs, with version increments per merge.
 - `SCC_CANONICAL/` (this directory) = sealed theoretical structure, with 9 chapters and 4-tier Cat A/B/C/R classification, organized by *what is theoretically permanent* rather than *what was proved when*.
 
-When the two disagree about a claim's status, `THEORY/canonical/canonical.md` is the *factual* authority (because it is updated per session) and `SCC_CANONICAL/` is the *structural* authority (because it organizes by ontological role). Conflicts trigger re-sealing of SCC-CT (v0.1 → v0.2).
+When the two disagree about a claim's status, `THEORY/2_substrate/canonical/canonical.md` is the *factual* authority (because it is updated per session) and `SCC_CANONICAL/` is the *structural* authority (because it organizes by ontological role). Conflicts trigger re-sealing of SCC-CT (v0.1 → v0.2).
 
 ## Central Statement
 
@@ -122,12 +122,12 @@ SCC_CANONICAL/
 
 **Read order at session start** (per `CLAUDE.md`):
 
-1. **`THEORY/canonical/DECLARATION.md`** (DECL-1.0, 2026-05-07) — 2-minute central axis.
-2. **`SCC_CANONICAL/00_manifest.md`** ← *this file*; theoretical structure overview.
-3. **`THEORY/canonical/canonical.md`** (CV-1.16 sealed 2026-05-14) — implementation-progress canonical (97 claims).
-4. **`THEORY/canonical/theorem_status.md`** — per-claim status registry.
-5. **`THEORY/canonical/hypothesis_tree.md`** (HT-3.7) — dependency structure.
-6. **`THEORY/canonical/CV-1.16_SEAL.md`** — most recent seal record.
+1. **`THEORY/0_axis/DECLARATION.md`** (DECL-1.0, 2026-05-07) — 2-minute central axis.
+2. **`THEORY/2_substrate/canonical/structural/sct_manifest.md`** ← *this file*; theoretical structure overview.
+3. **`THEORY/2_substrate/canonical/canonical.md`** (CV-1.16 sealed 2026-05-14) — implementation-progress canonical (97 claims).
+4. **`THEORY/2_substrate/canonical/theorem_status.md`** — per-claim status registry.
+5. **`THEORY/2_substrate/canonical/hypothesis_tree.md`** (HT-3.7) — dependency structure.
+6. **`THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`** — most recent seal record.
 7. **`THEORY/CHANGELOG.md`** — session log.
 
 **Working layer** continues at `THEORY/working/` (in-progress development; promotion pipeline to CV-1.x ladder unchanged).
@@ -147,11 +147,11 @@ The following expressions are **forbidden** at any layer of SCC-CT documentation
 
 ## What This Seal Does NOT Do
 
-- Does **not** modify `THEORY/canonical/canonical.md` (CV-1.16 sealed state preserved).
+- Does **not** modify `THEORY/2_substrate/canonical/canonical.md` (CV-1.16 sealed state preserved).
 - Does **not** introduce new mathematics (no new lemmas, no new theorems, no new definitions beyond what is already in CV-1.16).
 - Does **not** retract any Cat A claim from CV-1.16.
 - Does **not** establish new central axes beyond DECL-1.0 (which already declares the pre-objective primitive).
-- Does **not** replace `THEORY/canonical/DECLARATION.md`. SCC-CT extends and ssanctifies what DECL-1.0 declared.
+- Does **not** replace `THEORY/0_axis/DECLARATION.md`. SCC-CT extends and ssanctifies what DECL-1.0 declared.
 
 ## What This Seal DOES
 
@@ -163,4 +163,4 @@ The following expressions are **forbidden** at any layer of SCC-CT documentation
 
 ---
 
-*SCC-CT v0.1 manifest sealed 2026-05-14 (W7-Day5 end-of-day, post CV-1.16 P7 promotion + OP-HMORSE-SBM continuation). 8-file canonical authority skeleton complete. References: `THEORY/canonical/DECLARATION.md` (DECL-1.0); `THEORY/canonical/canonical.md` (CV-1.16); `THEORY/canonical/CV-1.16_SEAL.md`.*
+*SCC-CT v0.1 manifest sealed 2026-05-14 (W7-Day5 end-of-day, post CV-1.16 P7 promotion + OP-HMORSE-SBM continuation). 8-file canonical authority skeleton complete. References: `THEORY/0_axis/DECLARATION.md` (DECL-1.0); `THEORY/2_substrate/canonical/canonical.md` (CV-1.16); `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.*

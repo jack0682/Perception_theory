@@ -479,6 +479,6 @@ If all reconciled: T-σ-Theorem-4 Cat A re-promotion candidate at CV-1.7+.
 
 **Status: working draft. Task #62 complete (design phase). NQ-187b discrete-grid $A_2/A_1$ evaluation as function of L: closed-form discrete sums (§2.5 Cat A elementary algebra); naive convention gives $A_2/A_1 \to 2/3$ at L → ∞ (NOT R22's claimed 4 — significant discrepancy; (β) audit critical); §3.2 multiple convention candidates registered; §4 finite-size scaling extrapolation methodology; §5 three competing predictions (α-naive 1/6, R22 1, saturation 2); §6 script outline (direct A_2/A_1 < 1 hour, NQ-187 extension 10-30 hours W6+); §7 Cat A target post-execution (post (β) audit). Cross-linked to Task #63 reconciliation triple (§8). All hard constraints verified. Forward: W6 Day 1-3 direct + (γ) audit; W6 Day 4-W7 NQ-187 extension + (β) audit; W7-W8 combined reconciliation report; CV-1.7+ Cat A re-promotion target.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/SF/nq187b_L_extrapolation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/nq187b_L_extrapolation.md`
 **Created:** 2026-04-30 (W5 Day 4 PM).
 **Promotion target:** Component of T-σ-Theorem-4 Cat A re-promotion path (CV-1.7+).

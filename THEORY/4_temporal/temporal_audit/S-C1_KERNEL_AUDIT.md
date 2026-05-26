@@ -146,6 +146,6 @@ At canonical parameters with normalized costs ($\lambda_c \bar{c} \ll \lambda_m$
 
 ## 7. Files to Update
 
-1. `THEORY/working/temporal/S-B3_kernel_independence.md` — add correction note to Lemma 11 proof (§1.3)
-2. `THEORY/canonical/canonical.md` — T-Temporal-Identity part (c): change $\epsilon_\mathrm{kernel}$ in margin condition to $2\epsilon_\mathrm{kernel}$
-3. `THEORY/canonical/theorem_status.md` — T-Temporal-Identity (c) Cat A conditional row
+1. `THEORY/4_temporal/temporal_audit/S-B3_kernel_independence.md` — add correction note to Lemma 11 proof (§1.3)
+2. `THEORY/2_substrate/canonical/canonical.md` — T-Temporal-Identity part (c): change $\epsilon_\mathrm{kernel}$ in margin condition to $2\epsilon_\mathrm{kernel}$
+3. `THEORY/2_substrate/canonical/theorem_status.md` — T-Temporal-Identity (c) Cat A conditional row

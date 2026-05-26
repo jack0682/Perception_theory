@@ -356,6 +356,6 @@ If Conjecture 6.1 fails to reach Cat A everywhere by W9+: adopt Hybrid path (per
 
 **Status: working draft. Task #4 complete (synthesis). Φ_rich K-jump inheritance map determinism master theorem (Theorem 7.1) at Cat B target via composition of: pair identification (Cat A, Theorem 3.1), centroid update (Cat A, Theorem 4.1 from Task #1), orientation update (Cat A, Theorem 5.1 from Task #2), Hessian Wigner-projection (Cat B sketch, Conjecture 6.1 from Task #3 — W9+ Cat A blocker R2). Symmetric configurations handled via wreath-product-invariant identification; falsification routes registered. Composite Cat B target with NQ-242c-Rich numerical anchor at W6 Day 7. Cat A everywhere at W12+ post-Conjecture 6.1 proof. All hard constraints verified. OP-0008 Path B determinism foundation complete (modulo W9+ R2).**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_phi_proof.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.6 W6 Day 7 D-CV1.6-O5 packet (Cat B target with NQ-242c-Rich anchor); CV-1.7 W12+ Cat A everywhere (post-R2 Wigner-projection proof).

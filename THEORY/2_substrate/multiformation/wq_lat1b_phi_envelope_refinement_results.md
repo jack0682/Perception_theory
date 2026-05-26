@@ -2,7 +2,7 @@
 
 # WQ-LAT-1.B — Phi-Envelope Refinement Results
 
-**File:** `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md`
+**File:** `THEORY/2_substrate/multiformation/wq_lat1b_phi_envelope_refinement_results.md`
 **Document type:** Working-grade post-processing results (non-canonical).
 **Created:** 2026-05-02 (post-WQ-LAT-1; targeted phi-envelope refinement).
 
@@ -11,11 +11,11 @@
 - `CODE/scripts/results/wq_lat1b_phi_envelope_refinement.json` — full numerical output.
 
 **Predecessor artifacts:**
-- `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_protocol.md` — WQ-LAT-1 protocol.
-- `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md` — WQ-LAT-1 outcome (integer-morphology PASS, smooth K_soft FAIL under default φ).
-- `THEORY/working/MF/latent_index_space_design.md` — reservoir framework.
-- `THEORY/working/MF/ksoft_kact_bridge_lemma.md` — bridge lemma framework.
-- `THEORY/working/E/soft_K_definition.md` — original K_soft definition with (φ-sat) family.
+- `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_protocol.md` — WQ-LAT-1 protocol.
+- `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_results.md` — WQ-LAT-1 outcome (integer-morphology PASS, smooth K_soft FAIL under default φ).
+- `THEORY/2_substrate/multiformation/latent_index_space_design.md` — reservoir framework.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` — bridge lemma framework.
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` — original K_soft definition with (φ-sat) family.
 
 ---
 

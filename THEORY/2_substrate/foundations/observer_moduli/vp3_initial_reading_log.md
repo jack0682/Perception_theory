@@ -103,4 +103,4 @@ Transformation g IS a candidate symmetry if:
 - `CODE/experiments/exp87_vp3_core_weight_symmetry.py`
 - `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`
 - `CODE/experiments/results/observer_moduli/vp3_symmetry_summary.md`
-- `THEORY/working/observer_moduli/vp3_core_weight_symmetry_results.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp3_core_weight_symmetry_results.md`

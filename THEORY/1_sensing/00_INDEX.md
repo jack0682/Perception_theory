@@ -20,7 +20,7 @@ constraint_compliance:
   register: DEFINITION-DRAFT (objects) + THEOREM-CANDIDATE (propositions, no proofs)
 ---
 
-> [!nav] Parent: [[../INDEX|working/INDEX.md]] · Parallel: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · Substrate: [[../../canonical/canonical|canonical.md (CV-1.20)]] · Plan: `/Users/ojaehong/.claude/plans/gleaming-juggling-crab.md`
+> [!nav] Parent: [[INDEX|working/INDEX.md]] · Parallel: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · Substrate: [[canonical|canonical.md (CV-1.20)]] · Plan: `/Users/ojaehong/.claude/plans/gleaming-juggling-crab.md`
 
 # Sensing Pipeline — Mathematical-Physics Bootstrap
 
@@ -407,7 +407,7 @@ User directive: "태스크를 20개 이상으로 나눠서 자세하게 만들�
 - [ ] 8 retraction 부활 시도 수 (EW universality / Model A / $t_\times$ / $D_f$ / H-int / closure RG / $D_f=11/8$ / $k(k+1)/2-1$)
 - [ ] macro_audit §9 hard-stop 위반 수
 
-`THEORY/working/INDEX.md` 와 `THEORY/CHANGELOG.md` 에는 *각 1줄* 진입 허용 (등록 목적).
+`THEORY/2_substrate/INDEX.md` 와 `THEORY/CHANGELOG.md` 에는 *각 1줄* 진입 허용 (등록 목적).
 
 ---
 

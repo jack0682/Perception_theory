@@ -178,7 +178,7 @@ Major OPEN piece: σ_standard inheritance via Wigner-projection.
 
 ## §4. The DECL-1.0 Q1-Q6 closure status
 
-Per `THEORY/canonical/DECLARATION.md` DECL-1.0, the central question set:
+Per `THEORY/0_axis/DECLARATION.md` DECL-1.0, the central question set:
 
 | Q | Question | Status at SCC-CT v0.1 |
 |---|---|---|
@@ -202,4 +202,4 @@ The following are out of scope of SCC-CT v0.1 OPEN registry — they are *catego
 
 ---
 
-*Chapter VIII sealed within SCC-CT v0.1. References: `THEORY/canonical/theorem_status.md §Open Problems Catalog`; `THEORY/canonical/hypothesis_tree.md §가설 상태 요약`; `THEORY/canonical/CV-1.16_SEAL.md §Outstanding Items`; `THEORY/logs/daily/2026-05-14/50_hmorse_sbm_results.md`. Next: `06_forbidden_claims.md` (Ch. IX).*
+*Chapter VIII sealed within SCC-CT v0.1. References: `THEORY/2_substrate/canonical/theorem_status.md §Open Problems Catalog`; `THEORY/2_substrate/canonical/hypothesis_tree.md §가설 상태 요약`; `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md §Outstanding Items`; `THEORY/logs/daily/2026-05-14/50_hmorse_sbm_results.md`. Next: `06_forbidden_claims.md` (Ch. IX).*

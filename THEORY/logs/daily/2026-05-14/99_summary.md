@@ -86,10 +86,10 @@ session_phases: [Morning: Track 1 CV-1.15 P7 promotion, Afternoon: Track 2 H-MOR
 
 | File | Action | Source content |
 |---|---|---|
-| `THEORY/canonical/canonical.md` | **UPDATED** | §13 Cat A insert (8 entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE tail); §13 Cat B insert (T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL); §13 Cat B header amended (Finding §2.4 hygiene); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** | Header CV version → CV-1.15; CV-1.15 count update line; CV-1.15 section block (10 rows + OP-0012 sub-structure); OP-0012 quick-index + body refactored (CC/SINK/Kjump/Markov). |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** | W7-Day5 CV-1.15 SEALED header; 다음 목표 → CV-1.16; H-COMP parent + 5 subbranches under Q5; HT-3.6 changelog row. |
-| `THEORY/canonical/CV-1.15_SEAL.md` | **CREATED** | Seal record: count, certification, theorem-by-theorem, decision audit trail, non-overclaim, files modified, OQ list, CV-1.16 targets. |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** | §13 Cat A insert (8 entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE tail); §13 Cat B insert (T-ACT-KERNEL-COMP→REL conditional + P-SINKHORN-STABILITY-CONDITIONAL); §13 Cat B header amended (Finding §2.4 hygiene); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** | Header CV version → CV-1.15; CV-1.15 count update line; CV-1.15 section block (10 rows + OP-0012 sub-structure); OP-0012 quick-index + body refactored (CC/SINK/Kjump/Markov). |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** | W7-Day5 CV-1.15 SEALED header; 다음 목표 → CV-1.16; H-COMP parent + 5 subbranches under Q5; HT-3.6 changelog row. |
+| `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` | **CREATED** | Seal record: count, certification, theorem-by-theorem, decision audit trail, non-overclaim, files modified, OQ list, CV-1.16 targets. |
 | `THEORY/CHANGELOG.md` | **UPDATED** | CV-1.15 entry prepended above 2026-05-13 R-2 archive. |
 
 ### Track 2 — H-MORSE-Local Cat B Working Draft (logs only)
@@ -113,9 +113,9 @@ session_phases: [Morning: Track 1 CV-1.15 P7 promotion, Afternoon: Track 2 H-MOR
 ### NOT modified (verification per autonomous prompt §8)
 
 - All other canonical files except those listed above.
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` (§12 already existed from 5/13 pre-apply).
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` — Step 2 of §F apply-order deferred (working file, not load-bearing).
-- `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` — T-CC-StableK-Kernel remains working candidate (R-C decision preserved).
+- `THEORY/4_temporal/action_cost/09_final_audit.md` (§12 already existed from 5/13 pre-apply).
+- `THEORY/4_temporal/action_cost/10_patch_plan.md` — Step 2 of §F apply-order deferred (working file, not load-bearing).
+- `THEORY/4_temporal/composition/05_promotion_draft.md` — T-CC-StableK-Kernel remains working candidate (R-C decision preserved).
 - All other working content.
 - `_archive/` (frozen).
 - `CODE/` — no code changes; experiment file `exp_hmorse_local_*.py` deferred to 5/15+ per plan-mode read-only constraints.
@@ -160,7 +160,7 @@ Recommendation: add R7 to `01_pre_brainstorm.md §7` operational rule set in fut
 
 1. **Run OP-HMORSE-SBM numerical extension** — 1 session, generates evidence base for L-CLOSURE-LIFT broadness CONJECTURE.
 2. **Round 4 fresh-context Explore alignment audit (Rule R5)** — verify Track 2 lemmas (L-HMORSE-DECOMP, L-CLOSURE-LIFT, L-BOUNDARY-MODE-EXCLUSION) don't duplicate canonical/working content. Per `03_integration_and_new_open.md §5`.
-3. **§F Step 2 housekeeping** — replace `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md §1–§4` with the §A–§D blocks from `04_proposed_amendments.md` (deferred Track 1 step, not load-bearing but expected for full §F apply-order completion).
+3. **§F Step 2 housekeeping** — replace `THEORY/4_temporal/action_cost/10_patch_plan.md §1–§4` with the §A–§D blocks from `04_proposed_amendments.md` (deferred Track 1 step, not load-bearing but expected for full §F apply-order completion).
 4. **CV-1.14 T-CC-StableK-Kernel audit** (OQ-A) — 09-style audit for the working candidate that conditionalizes T-ACT-KERNEL-COMP→REL. If CV-1.14 promotes, T-ACT-KERNEL-COMP→REL becomes unconditional Cat B.
 5. **OP-HMORSE-BROADNESS analytic attack** — 3–5 sessions; remove the broadness CONJECTURE in L-CLOSURE-LIFT.
 

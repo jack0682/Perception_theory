@@ -26,7 +26,7 @@ grep -r "MF_atlas|multi-formation atlas" THEORY/canonical/ THEORY/working/
 
 | Path | Lines | 목적 |
 |---|---|---|
-| `THEORY/working/MF/MF_atlas.md` | ~270 | v0.1 skeleton, 12 sections + xref + gap/new candidate, W8 primary deliverable |
+| `THEORY/2_substrate/multiformation/MF_atlas.md` | ~270 | v0.1 skeleton, 12 sections + xref + gap/new candidate, W8 primary deliverable |
 
 verification:
 - 12 sections (`grep -c "^## §" MF_atlas.md` → 결과 14 = §1-§14 (skeleton 12 + verification §13 + status §14) ✓ 12 본문 + 2 보조).

@@ -2,7 +2,7 @@
 
 # L1-H2: Boundary-Leakage Proof for Local-to-Global Barcode Transfer
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1H2_boundary_leakage.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1H2_boundary_leakage.md`
 **Document type:** non-canonical working theorem candidate + numerical verification
 **Created:** 2026-05-02 (after L1-A through L1-I)
 **Status:** working; PROVED_UNDER_STRENGTHENED_CONDITIONS (the strengthening is restating H6 on G_j^r); not theorem-grade pending audit; not Cat-A

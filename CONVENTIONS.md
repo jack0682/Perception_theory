@@ -2,7 +2,7 @@
 
 # CONVENTIONS.md — Repository & Theory Discipline
 
-Read at session start with `THEORY/canonical/canonical.md`, `THEORY/canonical/theorem_status.md`, and the last entry of `THEORY/CHANGELOG.md`.
+Read at session start with `THEORY/2_substrate/canonical/canonical.md`, `THEORY/2_substrate/canonical/theorem_status.md`, and the last entry of `THEORY/CHANGELOG.md`.
 
 ---
 
@@ -137,7 +137,7 @@ Append to `THEORY/CHANGELOG.md` after any session that modifies canonical, worki
 |------|---------|---------|
 | Experiment | `CODE/experiments/exp<N>_<snake>.py` | `exp14_multi_persist.py` |
 | Test | `CODE/tests/test_<module>.py` | `test_transport.py` |
-| Canonical spec | `THEORY/canonical/canonical.md` (single file) | — |
+| Canonical spec | `THEORY/2_substrate/canonical/canonical.md` (single file) | — |
 | Working topic | `THEORY/working/<topic>.md` | `F-1_kinetic.md` |
 | Daily log | `THEORY/logs/daily/YYYY-MM-DD.md` | `2026-04-20.md` |
 | Weekly log | `THEORY/logs/weekly/YYYY-Www.md` | `2026-W17.md` |

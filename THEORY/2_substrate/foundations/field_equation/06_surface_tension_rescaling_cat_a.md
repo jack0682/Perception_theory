@@ -27,7 +27,7 @@ constraint_compliance:
   DECLARATION_edits: 0
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§13 Theorem 4, SB7, T-V5b-T-zero, §3.5 E_bd) · [[01_ns_inspired_synthesis|01 NS synthesis §7.5 + §8.1]] · [[../../canonical/DECLARATION|DECL-1.0]] · [[../cssl/00_concept_handoff|CSSL handoff §3.2]] · [[../cssl/01_critic_evaluation|CSSL critic §A.3 surface tension survivor]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§13 Theorem 4, SB7, T-V5b-T-zero, §3.5 E_bd) · [[01_ns_inspired_synthesis|01 NS synthesis §7.5 + §8.1]] · [[DECLARATION|DECL-1.0]] · [[00_concept_handoff|CSSL handoff §3.2]] · [[01_critic_evaluation|CSSL critic §A.3 surface tension survivor]]
 
 # 06 — L-SURFACE-TENSION-RESCALE: Cat A Direct Lemma (Primary H-Morse Attack via Parameter Rescaling)
 

@@ -378,6 +378,6 @@ If promoted: **T-K-Select-PF** — "K-Selection under P-F-A1 Package I, Equilibr
 - OP-0005-DYN: Kramers/Freidlin-Wentzell — OPEN, Package II, W9+.
 - OP-0005-OBS: observation-conditioned — OPEN, separate.
 
-**File:** `THEORY/working/MF/k_select_pf_equilibrium.md`
+**File:** `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md`
 **Created:** 2026-05-06 Session Q.
 **Promotion target:** `canonical.md §13 Category B` (T-K-Select-PF) pending Cat A formalization and user decision.

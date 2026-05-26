@@ -336,6 +336,6 @@ Combined with Tasks #1 (centroid) + #2 (orientation) + this file (Wigner-data): 
 
 **Status: working draft. Task #3 complete. Wigner-von Neumann $W_{jk}$ formal derivation: cross-block 2×2 sub-Hessian symmetry/reality (Cat A, Lemma 2.1), Wigner-von Neumann avoided-crossing theorem application (Cat A by classical reference, Theorem 3.1), Goldstone-pair gap formula (Cat A under Coupling Bound Lemma, §3.3), $W_{jk}$ definition (formal §4.1), well-definedness of components (Cat A on generic trajectories, Lemmas 5.1-5.4), Aut(G) invariance via Hessian conjugation (Cat A, Theorem 6.2 + Corollary 6.3), combined wreath-product invariance for eigenvalue-tuple (Cat A, Theorem 6.5), CN10 derived diagnostic status (§7.1), Wigner-projection conjecture for merger (Cat B sketch, Conjecture 8.1 open W9+). All hard constraints verified. Promotion: Wigner-data static Aut-invariance Cat A established; Task #4 Φ_rich determinism synthesis next.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/sigma_rich_wigner_derivation.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/sigma_rich_wigner_derivation.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7 W9+ Cat A everywhere proof completion (combined with Tasks #1, #2, #4); R2 (Wigner-projection rigorous proof) is the remaining Cat A blocker.

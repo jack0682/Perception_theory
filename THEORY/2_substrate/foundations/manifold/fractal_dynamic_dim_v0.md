@@ -7,7 +7,7 @@ parent: manifold_topology_attempt_v0.md
 status: Cat C synthesis with 2 Cat B-target concrete claims
 ---
 
-> [!nav] Linked: [[manifold_topology_attempt_v0]] · [[../proofs/_SUMMARY_v0.2]] · [[../../canonical/canonical]] · [[../../canonical/CV-1.18_SEAL]]
+> [!nav] Linked: [[manifold_topology_attempt_v0]] · [[_SUMMARY_v0.2]] · [[canonical]] · [[CV-1.18_SEAL]]
 
 # Type F (Dynamic Fractal Dimension) — 4 Theorem Derivation + Master Synthesis
 

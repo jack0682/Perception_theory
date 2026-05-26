@@ -30,7 +30,7 @@ agent_telemetry_target:
   general_purpose_agents: 0-2 (literature/canonical lookup as needed)
 ---
 
-> [!nav] Linked: [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[../2026-05-19/04_manifold_topology_program_plan|어제 04 manifold_topology program plan]] · [[../2026-05-19/01_pre_brainstorm|어제 01 pre_brainstorm + §POST-SEAL APPENDIX]] · [[01_pre_brainstorm|today's pre_brainstorm reference]] · [[../../../working/foundation/manifold_topology_attempt_v1|v1 master synthesis]] · [[../../../working/foundation/foundation_reset_v0|foundation_reset_v0]] · [[../../../working/foundation/W8_Day2_evening_manifold_topology_report|W8_Day2 evening report]] · [[../../../canonical/canonical|CV-1.18 canonical.md]] · [[../../../canonical/CV-1.18_SEAL|CV-1.18 SEAL]]
+> [!nav] Linked: [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[04_manifold_topology_program_plan|어제 04 manifold_topology program plan]] · [[../2026-05-19/01_pre_brainstorm|어제 01 pre_brainstorm + §POST-SEAL APPENDIX]] · [[01_pre_brainstorm|today's pre_brainstorm reference]] · [[manifold_topology_attempt_v1|v1 master synthesis]] · [[foundation_reset_v0|foundation_reset_v0]] · [[W8_Day2_evening_manifold_topology_report|W8_Day2 evening report]] · [[canonical|CV-1.18 canonical.md]] · [[CV-1.18_SEAL|CV-1.18 SEAL]]
 
 # 2026-05-20 (W8-Day3, Wed) Plan — Verification-Light Day (정밀 검증)
 
@@ -196,11 +196,11 @@ For S3 to hold for full SCC, additional terms must preserve $\ker(\mathrm{Hess}(
 | `2026-05-19/04_manifold_topology_program_plan.md` | daily logs | post-SEAL plan §A-§S 전체 |
 | `2026-05-19/01_pre_brainstorm.md` (§POST-SEAL APPENDIX) | daily logs | 위상수학 reference base |
 | `2026-05-19/99_summary.md` (§POST-SEAL EXTENSION) | daily logs | extension overview |
-| `THEORY/working/foundation/manifold_topology_attempt_v1.md` | working | v1 master synthesis (§8 math-olympiad) |
-| `THEORY/working/foundation/foundation_reset_v0.md` | working | Phase 0 honest inventory |
-| `THEORY/working/foundation/W8_Day2_evening_manifold_topology_report.md` | working | Phase 18 final report (timeline) |
-| `THEORY/working/foundation/manifold_topology_attempt_v0.md` | working (superseded) | archive of initial attempt |
-| `THEORY/working/foundation/fractal_dynamic_dim_v0.md` | working (superseded) | archive of Type F attempt |
+| `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` | working | v1 master synthesis (§8 math-olympiad) |
+| `THEORY/2_substrate/foundations/manifold/foundation_reset_v0.md` | working | Phase 0 honest inventory |
+| `THEORY/2_substrate/foundations/manifold/W8_Day2_evening_manifold_topology_report.md` | working | Phase 18 final report (timeline) |
+| `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v0.md` | working (superseded) | archive of initial attempt |
+| `THEORY/2_substrate/foundations/manifold/fractal_dynamic_dim_v0.md` | working (superseded) | archive of Type F attempt |
 | `~/.claude/plans/eager-splashing-dream.md` | plans | 14-tier palette + Phase 1 entry |
 
 ---
@@ -544,7 +544,7 @@ If Priority 2 takes > 2 hours (D operator complex):
 | 검사 | 기준 | 검증 방법 | 결과 (EOD) |
 |---|---|---|---|
 | 1 | canonical 0 edits | `git status THEORY/canonical/` clean | TBD |
-| 2 | DECLARATION 0 edits | `git status THEORY/canonical/DECLARATION.md` | TBD |
+| 2 | DECLARATION 0 edits | `git status THEORY/0_axis/DECLARATION.md` | TBD |
 | 3 | scc/ 0 edits (READ-ONLY) | `git status CODE/scc/` clean | TBD |
 | 4 | pytest baseline 유지 | optional 재실행 225+1xf | TBD |
 | 5 | 8 retractions 재시도 0 | §A.2 anti-goal 준수 check | TBD |
@@ -827,7 +827,7 @@ If Priority 2 takes > 2 hours (D operator complex):
 | Distinction candidate (provisional) | canonical §9.3 | §B.2.1 |
 | Appendix OMS §N (CV-1.18) | canonical Appendix OMS | §B.3.1 (T_* ξ resident) |
 | AUX-1.5 §8 (D/A/P classification) | auxiliary_structures_master.md | §A.1 context |
-| CV-1.18 SEAL | THEORY/canonical/CV-1.18_SEAL.md | §0 context |
+| CV-1.18 SEAL | THEORY/2_substrate/canonical/seals/CV-1.18_SEAL.md | §0 context |
 
 ### §H.4 External Literature (어제 §POST-SEAL APPENDIX 의 직접 인용)
 

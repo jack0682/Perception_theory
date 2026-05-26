@@ -10,10 +10,10 @@ parent_predecessors:
   - 2026-05-19 W8-Day2: T_*/H5 deep-attack → CV-1.18 SEAL (Stage 0 T axiom + T_* Route C + OP-0021 Routes A/B deprecation)
   - This day's session prior to plan: 19-phase Manifold Topology Methodology Program (initiated mid-day, all 19 phases completed)
 session_artifacts:
-  - THEORY/working/foundation/manifold_topology_attempt_v0.md (superseded)
-  - THEORY/working/foundation/fractal_dynamic_dim_v0.md (superseded)
-  - THEORY/working/foundation/foundation_reset_v0.md (Phase 0 honest inventory)
-  - THEORY/working/foundation/manifold_topology_attempt_v1.md (current synthesis, §8 math-olympiad verification)
+  - THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v0.md (superseded)
+  - THEORY/2_substrate/foundations/manifold/fractal_dynamic_dim_v0.md (superseded)
+  - THEORY/2_substrate/foundations/manifold/foundation_reset_v0.md (Phase 0 honest inventory)
+  - THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md (current synthesis, §8 math-olympiad verification)
   - THEORY/working/foundation/W8_Day3_final_report.md (Phase 18 comprehensive summary)
   - ~/.claude/plans/eager-splashing-dream.md (Plan mode artifact)
 agent_telemetry:
@@ -33,7 +33,7 @@ pytest_status: 225 passed + 1 xfailed (entry baseline maintained, no code change
 phase_completion_count: 19/19
 ---
 
-> [!nav] Linked: [[../2026-05-18/99_summary|W8-Day1 99_summary]] · [[../2026-05-19/99_summary|W8-Day2 99_summary]] · [[../../../canonical/canonical|canonical.md (CV-1.18)]] · [[../../../canonical/CV-1.18_SEAL|CV-1.18 SEAL]] · [[../../../working/foundation/manifold_topology_attempt_v1|v1 master synthesis]] · [[../../../working/foundation/W8_Day3_final_report|final report]]
+> [!nav] Linked: [[../2026-05-18/99_summary|W8-Day1 99_summary]] · [[../2026-05-19/99_summary|W8-Day2 99_summary]] · [[canonical|canonical.md (CV-1.18)]] · [[CV-1.18_SEAL|CV-1.18 SEAL]] · [[manifold_topology_attempt_v1|v1 master synthesis]] · [[../../../working/foundation/W8_Day3_final_report|final report]]
 
 # 2026-05-20 (W8-Day2 evening extension, Wed) 총검증 Plan — Manifold Topology Methodology Program
 
@@ -887,10 +887,10 @@ This plan file is intentionally extensive (~1300 lines) per user request "아주
 
 ### R.3 Soft Working References
 
-- `THEORY/working/foundation/manifold_topology_attempt_v0.md` — superseded
-- `THEORY/working/foundation/fractal_dynamic_dim_v0.md` — superseded
-- `THEORY/working/foundation/foundation_reset_v0.md` — Phase 0 inventory
-- `THEORY/working/foundation/manifold_topology_attempt_v1.md` — v1 master synthesis
+- `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v0.md` — superseded
+- `THEORY/2_substrate/foundations/manifold/fractal_dynamic_dim_v0.md` — superseded
+- `THEORY/2_substrate/foundations/manifold/foundation_reset_v0.md` — Phase 0 inventory
+- `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` — v1 master synthesis
 - `THEORY/working/foundation/W8_Day3_final_report.md` — Phase 18 final report
 - `~/.claude/plans/eager-splashing-dream.md` — plan-mode artifact
 

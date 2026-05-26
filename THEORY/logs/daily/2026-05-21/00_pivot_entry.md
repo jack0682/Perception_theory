@@ -18,7 +18,7 @@ constraint_compliance:
   retraction_retry: 0
 ---
 
-> [!nav] Linked: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[../../canonical/PAI_ROADMAP|PAI Roadmap]] · [[../MAIN_PROMPT_v4_PAI_PIVOT|v4 MAINPROMPT]] · [[../2026-05-20/99_summary|W8-Day3 99 summary]] · [[../../working/macro_audit_2026-05-20|macro_audit_2026-05-20]]
+> [!nav] Linked: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[PAI_ROADMAP|PAI Roadmap]] · [[MAIN_PROMPT_v4_PAI_PIVOT|v4 MAINPROMPT]] · [[../2026-05-20/99_summary|W8-Day3 99 summary]] · [[macro_audit_2026-05-20|macro_audit_2026-05-20]]
 
 # 2026-05-21 — PAI Pivot Entry (W8-Day4)
 
@@ -26,7 +26,7 @@ constraint_compliance:
 
 The previous main axis of the SCC project was "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" — pre-objective cohesive formation. This axis produced 102 canonical claims (71A/20B/6C/5R), most of them about field morphology on graphs.
 
-The 2026-05-20 macro audit (`THEORY/working/macro_audit_2026-05-20.md`) and the long-form discussion that followed reached a different verdict about *why* the project started.
+The 2026-05-20 macro audit (`THEORY/0_axis/macro_audit_2026-05-20.md`) and the long-form discussion that followed reached a different verdict about *why* the project started.
 
 The user's original dissatisfaction was not "objects are insufficiently explained." It was:
 
@@ -51,8 +51,8 @@ Perception = cohesive individuation + interpretation invariance across action
 The previous SCC layer is *not* discarded. It is reclassified as **substrate-canonical**: the morphology / cohesion layer on top of which PAI works. All 102 canonical claims preserved unchanged.
 
 The pivot is recorded in:
-- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — canonical pivot doc
-- `THEORY/canonical/PAI_ROADMAP.md` — roadmap (Phase 0-6, no commitments)
+- `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` — canonical pivot doc
+- `THEORY/0_axis/PAI_ROADMAP.md` — roadmap (Phase 0-6, no commitments)
 - `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` — new agent prompt for the new direction
 - This file — daily log entry
 
@@ -77,8 +77,8 @@ The pivot is recorded in:
 
 | Path | Purpose |
 |---|---|
-| `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` | Canonical pivot doc (~450L) |
-| `THEORY/canonical/PAI_ROADMAP.md` | Phase 0-6 roadmap (~200L) |
+| `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` | Canonical pivot doc (~450L) |
+| `THEORY/0_axis/PAI_ROADMAP.md` | Phase 0-6 roadmap (~200L) |
 | `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` | This file |
 | `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` | New agent instructions for PAI direction |
 
@@ -87,14 +87,14 @@ The pivot is recorded in:
 | Path | Change |
 |---|---|
 | `THEORY/CHANGELOG.md` | PAI pivot entry prepended |
-| `THEORY/canonical/canonical.md` | Pivot section appended (existing §1-§13 untouched) |
-| `THEORY/canonical/theorem_status.md` | "substrate-canonical" status note added; OP-PAI registered |
-| `THEORY/canonical/hypothesis_tree.md` | HT-3.11 → HT-3.12 (H-PAI branch added) |
-| `THEORY/canonical/DECLARATION.md` | Pivot annotation appended (DECL-1.0 body unchanged) |
-| `THEORY/canonical/MOC_canonical_authority.md` | Top pointer to PAI pivot doc |
-| `THEORY/canonical/MOC_hypothesis_tree.md` | HT-3.12 + H-PAI pointer |
-| `THEORY/working/MOC_open_problems_blockers.md` | OP-PAI-001..006 registered |
-| `THEORY/working/INDEX.md` | Top-of-file PAI pivot notice |
+| `THEORY/2_substrate/canonical/canonical.md` | Pivot section appended (existing §1-§13 untouched) |
+| `THEORY/2_substrate/canonical/theorem_status.md` | "substrate-canonical" status note added; OP-PAI registered |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | HT-3.11 → HT-3.12 (H-PAI branch added) |
+| `THEORY/0_axis/DECLARATION.md` | Pivot annotation appended (DECL-1.0 body unchanged) |
+| `THEORY/2_substrate/canonical/MOC_canonical_authority.md` | Top pointer to PAI pivot doc |
+| `THEORY/2_substrate/canonical/MOC_hypothesis_tree.md` | HT-3.12 + H-PAI pointer |
+| `THEORY/2_substrate/MOC_open_problems_blockers.md` | OP-PAI-001..006 registered |
+| `THEORY/2_substrate/INDEX.md` | Top-of-file PAI pivot notice |
 | `THEORY_INDEX.md` | Top-of-file PAI pivot notice |
 | `THEORY/logs/daily/MAIN_PROMPT_v3.md` | Legacy-framing header annotation (body unchanged) |
 

@@ -2,9 +2,9 @@
 
 # WQ-LAT-1 — Reservoir Resolution Sweep Results
 
-**File:** `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md`
+**File:** `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_results.md`
 **Companion files:**
-- `THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_protocol.md` — full protocol.
+- `THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_protocol.md` — full protocol.
 - `CODE/scripts/wq_lat1_reservoir_resolution_sweep.py` — executable script.
 - `CODE/scripts/results/wq_lat1_reservoir_resolution_sweep.json` — JSON output (after run).
 

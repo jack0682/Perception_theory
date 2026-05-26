@@ -79,5 +79,5 @@ NEB sweep: barrier decreases as eps increases (stereo→flat direction),
 consistent with T-ST-5a. Barrier=∞ at eps=0 (disconnection limit).
 
 T-ST-5a status: **SUPPORTED** (Cat A — all gaps G1–G4 closed W6 D4 Session E;
-proof in `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`).
+proof in `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`).
 T-ST-5b (smooth barrier) addressed in exp02c/exp02d/exp02e.

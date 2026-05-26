@@ -2,9 +2,9 @@
 
 # WQ-1.C — Layer I H_0 Bar-Death Counterexample Results
 
-**File:** `THEORY/working/MF/wq1c_layerI_h0_bardeath_results.md`
+**File:** `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_results.md`
 **Companion files:**
-- `THEORY/working/MF/wq1c_layerI_h0_bardeath_protocol.md` — full protocol specification.
+- `THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_protocol.md` — full protocol specification.
 - `CODE/scripts/wq1c_layerI_h0_bardeath.py` — executable script.
 - `CODE/scripts/results/wq1c_layerI_h0_bardeath_results.json` — JSON output (after run).
 

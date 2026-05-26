@@ -437,7 +437,7 @@ A potential unified framework: both theories are special cases of gauge theory o
 
 ### §13.2. Promotion Criteria
 
-For promotion to `THEORY/canonical/canonical.md`, the three blockers must be resolved:
+For promotion to `THEORY/2_substrate/canonical/canonical.md`, the three blockers must be resolved:
 
 1. **OP-OMS-001** (core-weight gauge): either prove $G_{\mathrm{core\text{-}weight}} = \{e\}$ or identify the correct non-trivial group. VP-3 can partially constrain.
 2. **OP-OMS-002** (admissible $V$): prove existence of $V \in \mathcal{V}_{\mathrm{adm}}$ satisfying V1–V5. VP-2 can demonstrate a concrete instance.
@@ -577,7 +577,7 @@ These three are conceptually distinct and must never be conflated.
 
 ---
 
-*OMS-0.7, 2026-05-07. Working document — superseded by `THEORY/canonical/canonical.md` Appendix OMS as of Session 7 (2026-05-08). Static OMS-2.0 Accepted. Full Temporal Conditional on OP-OMS-034.*
+*OMS-0.7, 2026-05-07. Working document — superseded by `THEORY/2_substrate/canonical/canonical.md` Appendix OMS as of Session 7 (2026-05-08). Static OMS-2.0 Accepted. Full Temporal Conditional on OP-OMS-034.*
 
 ---
 
@@ -591,4 +591,4 @@ These three are conceptually distinct and must never be conflated.
 | Session 6 | OMS-2.0 Conditional Accepted | All three hard blockers resolved at theorem + witness level |
 | **Session 7** | **OMS-2.0 Accepted — Static, Full Temporal Conditional on OP-OMS-034** | **Gap C1 theorem package consolidated; sub-OPs 032/033/034 resolved/separated; Appendix OMS added to canonical.md** |
 
-**Authoritative status at end of Session 7:** see `THEORY/canonical/canonical.md` **Appendix OMS** and `oms_2_0_accepted_audit.md`.
+**Authoritative status at end of Session 7:** see `THEORY/2_substrate/canonical/canonical.md` **Appendix OMS** and `oms_2_0_accepted_audit.md`.

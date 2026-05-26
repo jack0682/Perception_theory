@@ -2,7 +2,7 @@
 
 # Layered Ambient-State Architecture — Next Work Packages
 
-**File:** `THEORY/working/MF/layered_ambient_architecture_next_work.md`
+**File:** `THEORY/2_substrate/multiformation/layered_ambient_architecture_next_work.md`
 **Companion docs:** `layered_ambient_architecture_README.md`, `layered_ambient_architecture_candidate.md`, `layered_ambient_architecture_agent_notes.md`.
 **Audience:** Future agents executing the next research sequence under the layered ambient-state architecture.
 
@@ -33,11 +33,11 @@ Numerically demonstrate σ-standard non-determinism at a K-jump event by explici
 
 ### Input files
 
-- `THEORY/working/MF/nq242c_explicit_construction.md` — full setup (§§2–4), script outline (§5), Cat A criteria (§6).
-- `THEORY/working/MF/sigma_rich_augmentation.md` — Path B framework, σ-rich definition, Φ_rich definition (§3.3).
-- `THEORY/working/MF/sigma_rich_phi_proof.md`, `sigma_rich_wigner_derivation.md`, `sigma_rich_centroid_derivation.md`, `sigma_rich_orientation_derivation.md` — σ-rich component derivations.
-- `THEORY/working/MF/sigma_multi_trajectory.md` — Lemma 4.4.1(c) Cat C source; §3.7 PH reformulation; FM1–FM4 known failure modes.
-- `THEORY/working/MF/sigma_rich_VR_phase1.md` — Vietoris-Rips / PH V-R Phase 1 plan.
+- `THEORY/2_substrate/multiformation/nq242c_explicit_construction.md` — full setup (§§2–4), script outline (§5), Cat A criteria (§6).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` — Path B framework, σ-rich definition, Φ_rich definition (§3.3).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md`, `sigma_rich_wigner_derivation.md`, `sigma_rich_centroid_derivation.md`, `sigma_rich_orientation_derivation.md` — σ-rich component derivations.
+- `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` — Lemma 4.4.1(c) Cat C source; §3.7 PH reformulation; FM1–FM4 known failure modes.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_VR_phase1.md` — Vietoris-Rips / PH V-R Phase 1 plan.
 - `CODE/scc/multi.py` — existing `find_k_field_formation`, `gradient_flow_trajectory`.
 - `CODE/scc/diagnostics.py` — existing `compute_sigma_tuple_multi`.
 - (To be created) `CODE/scc/sigma_rich.py` — σ-rich extraction and Φ_rich application module (per `nq242c_explicit_construction.md` §5.2).
@@ -48,11 +48,11 @@ Numerically demonstrate σ-standard non-determinism at a K-jump event by explici
 1. `CODE/scripts/nq242c_construction.py` — numerical script.
 2. `CODE/scc/sigma_rich.py` — σ-rich module.
 3. `CODE/scripts/results/nq242c_construction.json` — JSON results, schema in `nq242c_explicit_construction.md` §5.3.
-4. `THEORY/working/MF/nq242c_results.md` — results write-up:
+4. `THEORY/2_substrate/multiformation/nq242c_results.md` — results write-up:
    - Cat-status updates against (C1) σ-standard non-determinism, (C2) σ-rich distinguishability at $t^{*-}$, (C3) Φ_rich determinism, (C4) generality probe;
    - identified regime of each trajectory (well-separated / overlap / corner-saturated) at sampled time points;
    - identified K-jump times and active-set transitions (which $A \to A'$).
-5. Update entries in `THEORY/working/MF/sigma_multi_trajectory.md` §6.2 and in this file's status table referencing WQ-1 outcome.
+5. Update entries in `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` §6.2 and in this file's status table referencing WQ-1 outcome.
 
 ### Success criterion
 
@@ -101,10 +101,10 @@ The output is the lemma in *its actual provable form* — which may differ from 
 
 ### Input files
 
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` §6, §9 — definitions and regime discipline.
-- `THEORY/working/E/soft_K_definition.md` (dormant) — pre-architecture $K_{\mathrm{soft}}$ proposal; this package upgrades to the $\phi$-envelope form.
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md` §4 — Tool A3 PH foundation; Cohen-Steiner stability citation.
-- `THEORY/working/MF/single_high_F_equivalence.md` (OAT-7) — R23 dataset analysis showing overlap regime is *generic* in the high-$\mathcal{F}$ regime; the bridge lemma is *not* expected to apply generically on R23.
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` §6, §9 — definitions and regime discipline.
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` (dormant) — pre-architecture $K_{\mathrm{soft}}$ proposal; this package upgrades to the $\phi$-envelope form.
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` §4 — Tool A3 PH foundation; Cohen-Steiner stability citation.
+- `THEORY/2_substrate/Q2_multiformation/single_high_F_equivalence.md` (OAT-7) — R23 dataset analysis showing overlap regime is *generic* in the high-$\mathcal{F}$ regime; the bridge lemma is *not* expected to apply generically on R23.
 - `CODE/scc/persistence.py`, `CODE/scc/transport.py` — existing persistence pipeline (cohesion fingerprint, transport-based persist).
 - (Optional probe) `CODE/scripts/k_soft_k_act_bridge_probe.py` — synthetic well-separated multi-disk configurations for $e(\cdot)$ estimation.
 
@@ -157,16 +157,16 @@ Determine the minimal set of augmentation data beyond plain σ-standard that ach
 
 ### Input files
 
-- WQ-1 results: `CODE/scripts/results/nq242c_construction.json`, `THEORY/working/MF/nq242c_results.md`.
-- `THEORY/working/MF/sigma_rich_augmentation.md` — current σ-rich definition; Path B framework.
-- `THEORY/working/MF/sigma_rich_phi_proof.md` — Φ_rich proof scaffolding.
-- `THEORY/working/MF/sigma_rich_wigner_derivation.md` — Wigner-data derivation.
-- `THEORY/working/MF/sigma_rich_centroid_derivation.md` — centroid derivation.
-- `THEORY/working/MF/sigma_rich_orientation_derivation.md` — orientation / inertia tensor derivation.
-- `THEORY/working/MF/sigma_rich_vs_standard_R23.md` — empirical σ-rich vs. σ-standard comparison.
-- `THEORY/working/MF/multi_formation_sigma.md` §5.5 — cross-formation Goldstone observation.
-- `THEORY/working/MF/commitment_18_sigma_rich_packet.md` — Commitment 18 candidate packet.
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` §11.5 — σ-rich precondition note.
+- WQ-1 results: `CODE/scripts/results/nq242c_construction.json`, `THEORY/2_substrate/multiformation/nq242c_results.md`.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` — current σ-rich definition; Path B framework.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md` — Φ_rich proof scaffolding.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_wigner_derivation.md` — Wigner-data derivation.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_centroid_derivation.md` — centroid derivation.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_orientation_derivation.md` — orientation / inertia tensor derivation.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_vs_standard_R23.md` — empirical σ-rich vs. σ-standard comparison.
+- `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` §5.5 — cross-formation Goldstone observation.
+- `THEORY/2_substrate/multiformation/commitment_18_sigma_rich_packet.md` — Commitment 18 candidate packet.
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` §11.5 — σ-rich precondition note.
 
 ### Output artifact
 
@@ -215,17 +215,17 @@ The three candidates per `k_selection_mechanism.md`:
 
 ### Input files
 
-- `THEORY/working/MF/k_selection_mechanism.md` — three Cat C candidates.
-- `THEORY/working/MF/k_selection_a_free_energy.md` — candidate (a) development.
-- `THEORY/working/MF/k_selection_b_kramers.md` — candidate (b) development.
-- `THEORY/working/MF/k_selection_c_numerical_anchor.md` — candidate (c) numerical anchor design.
-- `THEORY/working/MF/k_selection_compatibility_proof.md` — compatibility scaffolding.
-- `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md` — Commitment 19 axiom packet.
-- `THEORY/working/MF/cn15_static_dynamic_separation.md` — CN15 candidate (why energy minimization $\ne$ $K_{\mathrm{act}} = 1$ at protocol endpoint).
-- `THEORY/working/CE/free_energy_wellposed.md` — free-energy variational well-posedness.
+- `THEORY/2_substrate/Q4_kselection/k_selection_mechanism.md` — three Cat C candidates.
+- `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` — candidate (a) development.
+- `THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md` — candidate (b) development.
+- `THEORY/2_substrate/Q4_kselection/k_selection_c_numerical_anchor.md` — candidate (c) numerical anchor design.
+- `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md` — compatibility scaffolding.
+- `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md` — Commitment 19 axiom packet.
+- `THEORY/2_substrate/Q2_multiformation/cn15_static_dynamic_separation.md` — CN15 candidate (why energy minimization $\ne$ $K_{\mathrm{act}} = 1$ at protocol endpoint).
+- `THEORY/2_substrate/Q1_boundary/free_energy_wellposed.md` — free-energy variational well-posedness.
 - `CODE/experiments/exp51_k_selection.py` — existing K-selection empirical test on 10 graph configurations.
 - `CODE/experiments/exp39_formation_birth.py` — formation birth kinetics for candidate (b).
-- R23 dataset (90 runs) — already analysed in `THEORY/working/MF/single_high_F_equivalence.md` (OAT-7).
+- R23 dataset (90 runs) — already analysed in `THEORY/2_substrate/Q2_multiformation/single_high_F_equivalence.md` (OAT-7).
 
 ### Output artifact
 
@@ -237,7 +237,7 @@ The three candidates per `k_selection_mechanism.md`:
 - residual error vector per candidate;
 - implied refinement step per candidate (how to strengthen a partial-success candidate);
 - a falsification register (which candidates are falsified by R23, and on what specific configurations);
-- update to `THEORY/canonical/theorem_status.md` OP-0005 entry — *as a candidate text in this working file, not a direct canonical edit* — noting which candidates survived and what is the next refinement step.
+- update to `THEORY/2_substrate/canonical/theorem_status.md` OP-0005 entry — *as a candidate text in this working file, not a direct canonical edit* — noting which candidates survived and what is the next refinement step.
 
 ### Success criterion
 
@@ -275,10 +275,10 @@ Determine whether the labelled cell refinement $\{S_A^\varepsilon\}$ and the ε-
 
 ### Input files
 
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md` §2 — current Whitney verification for the *intrinsic*-count stratification.
-- `THEORY/working/MF/shared_pool_canonical_proposal.md` §3 — Goresky-MacPherson stratified Morse framework citation.
-- `THEORY/working/MF/layered_ambient_architecture_candidate.md` §7 — active-set cells, ε-active-count regions, status §7.3 (stratifiability open).
-- `THEORY/working/MF/op003_mo1_status_review.md` — MO-1 status: SIDESTEPPED at single-formation; multi-formation re-activation rider preserved.
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` §2 — current Whitney verification for the *intrinsic*-count stratification.
+- `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` §3 — Goresky-MacPherson stratified Morse framework citation.
+- `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md` §7 — active-set cells, ε-active-count regions, status §7.3 (stratifiability open).
+- `THEORY/2_substrate/multiformation/op003_mo1_status_review.md` — MO-1 status: SIDESTEPPED at single-formation; multi-formation re-activation rider preserved.
 - External references on Whitney stratification of semi-algebraic sets (Hironaka 1973, Mather 2012, Goresky-MacPherson 1988, per `mathematical_scaffolding_4tools.md` §9.1).
 
 ### Output artifact

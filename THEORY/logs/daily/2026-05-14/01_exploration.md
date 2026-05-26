@@ -5,7 +5,7 @@
 **Session:** 2026-05-14 (W7-Day5, post V-AFD + R-2 archives, post CV-1.15 P7 promotion)
 **Target (from `00_plan.md` + `01_pre_brainstorm.md` §6):** H-MORSE-Local Cat B candidate — lemma structure 와 첫 substantive lemma 의 working draft.
 **This file covers:** §4.1 Restatement (target re-stating) + §4.2 Multi-approach generation (3 mathematically independent approaches) + §4.3 Primary selection rationale.
-**Depends on reading:** `THEORY/canonical/canonical.md` §6 (Axiomatic Groups), §13 T7-Enhanced (line 1138), §13 T-V5b-T-zero, §13 T-PreObj-1; `THEORY/working/CV114_H_MORSE_PACKAGEII/00–09`; `THEORY/working/SF/sigma_m_hessian_convention_audit.md` (placeholder).
+**Depends on reading:** `THEORY/2_substrate/canonical/canonical.md` §6 (Axiomatic Groups), §13 T7-Enhanced (line 1138), §13 T-V5b-T-zero, §13 T-PreObj-1; `THEORY/working/CV114_H_MORSE_PACKAGEII/00–09`; `THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md` (placeholder).
 
 ---
 
@@ -170,8 +170,8 @@ Reasons:
 
 | Lemma | Primary source | Type |
 |---|---|---|
-| L-HMORSE-DECOMP | `THEORY/working/CV114_H_MORSE_PACKAGEII/03_energy_landscape_and_hessian.md` + canonical §13 | decomposition statement + per-term bound |
-| L-CLOSURE-LIFT | canonical.md §13 T7-Enhanced (line 1138); `THEORY/working/CV114_H_MORSE_PACKAGEII/02_H_MORSE_statement_reconstruction.md §9` | closure spectrum lower bound |
+| L-HMORSE-DECOMP | `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/03_energy_landscape_and_hessian.md` + canonical §13 | decomposition statement + per-term bound |
+| L-CLOSURE-LIFT | canonical.md §13 T7-Enhanced (line 1138); `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/02_H_MORSE_statement_reconstruction.md §9` | closure spectrum lower bound |
 | L-BOUNDARY-MODE-EXCLUSION | `CODE/experiments/exp25_hessian_diagonal.py` (>90% boundary concentration); CV114 04 §boundary degeneracy | exclusion of boundary-localized eigenmodes |
 | Counterexample exclusion | CV114 `05_counterexample_search.md` 7 CE explicit | scope-limit anchor |
 

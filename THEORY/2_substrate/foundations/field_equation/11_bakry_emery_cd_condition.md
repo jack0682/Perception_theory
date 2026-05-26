@@ -33,7 +33,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.18 canonical]] (§13 T-PF-A1-AR/SDE/GI/PE Cat A; Theorem 4 / T8-Core Cat A) · [[../../canonical/DECLARATION|DECL-1.0]] (Q1 T8 boundary; Q3 stochastic dynamics) · [[01_ns_inspired_synthesis|01 NS-inspired synthesis]] · [[04_h_morse_spectral_quantification|04 Schur complement Sc^{(2)} (complementary)]] · [[06_surface_tension_rescaling_cat_a|06 rescaling]] · [[07_critic_full_review|07 critic review §F (consensus baseline)]]
+> [!nav] Linked: [[canonical|CV-1.18 canonical]] (§13 T-PF-A1-AR/SDE/GI/PE Cat A; Theorem 4 / T8-Core Cat A) · [[DECLARATION|DECL-1.0]] (Q1 T8 boundary; Q3 stochastic dynamics) · [[01_ns_inspired_synthesis|01 NS-inspired synthesis]] · [[04_h_morse_spectral_quantification|04 Schur complement Sc^{(2)} (complementary)]] · [[06_surface_tension_rescaling_cat_a|06 rescaling]] · [[07_critic_full_review|07 critic review §F (consensus baseline)]]
 
 # 11 — Bakry-Émery CD(κ,∞) Curvature-Dimension Condition for SCC
 

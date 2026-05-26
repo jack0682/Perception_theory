@@ -15,7 +15,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[P1_OP-H5-alpha_Hironaka|P1 OP-H5-α Hironaka]] · [[P2_OP-T_star-alpha_multiplicity|P2 OP-T*-α multiplicity]] · [[P3_OP-0008_sigma_standard|P3 OP-0008 σ_standard]] · [[P4_OP-HMORSE-LOCAL-A|P4 HMORSE-LOCAL-A]] · [[P5_Stage0_sensor_T_9conditions|P5 Stage 0 9-conditions]] · [[P6_OMS-1_xi_Tstar_entry|P6 OMS-1 ξ T_*]] · [[../SCC_unified_derivation_v0.1|Unified Derivation v0.1]] · [[../SCC_U_excluded_and_problems_v0.1|U-excluded + problematic v0.1]]
+> [!nav] Linked: [[P1_OP-H5-alpha_Hironaka|P1 OP-H5-α Hironaka]] · [[P2_OP-T_star-alpha_multiplicity|P2 OP-T*-α multiplicity]] · [[P3_OP-0008_sigma_standard|P3 OP-0008 σ_standard]] · [[P4_OP-HMORSE-LOCAL-A|P4 HMORSE-LOCAL-A]] · [[P5_Stage0_sensor_T_9conditions|P5 Stage 0 9-conditions]] · [[P6_OMS-1_xi_Tstar_entry|P6 OMS-1 ξ T_*]] · [[SCC_unified_derivation_v0.1|Unified Derivation v0.1]] · [[SCC_U_excluded_and_problems_v0.1|U-excluded + problematic v0.1]]
 
 # SCC Detailed Proof Attempts v0.2 — Summary
 

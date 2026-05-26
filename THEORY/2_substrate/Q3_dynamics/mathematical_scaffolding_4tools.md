@@ -609,7 +609,7 @@ NQ-242 (full Hessian σ-tuple time series, W6+ 4-6 weeks) reframe as *computatio
 
 **Status: working draft. 4-tool mapping verified — Tools A1, A2, A3 fully applicable; Tool A4 partially applicable (Option 3 contrastive recommended). 9 of 22 limits auto-resolved or framework-reframed; 2-3 partially resolved; 10-11 pending OAT/numerical. Commitment 17 (Mathematical Scaffolding) proposed for CV-1.6 D-CV1.6-O5. NQ-242 reframed as computational topology pipeline (4-6 weeks → 3-4 weeks). External references 12 (Goresky-MacPherson, Whitney, Specht, Cohen-Steiner, Carlsson, Bertozzi, Modica-Mortola, etc.).**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/mathematical_scaffolding_4tools.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md`
 **Created:** 2026-04-30 (W5 Day 4)
 **Lines:** ~870
 **Promotion target:** CV-1.6 W6 Day 7 morning (if user approves).

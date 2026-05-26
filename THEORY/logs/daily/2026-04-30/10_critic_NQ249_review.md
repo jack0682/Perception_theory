@@ -4,7 +4,7 @@
 
 **Date:** 2026-04-30
 **Reviewer agent:** critic (oh-my-claudecode:critic)
-**Target file:** `THEORY/working/MF/scc_mass_gap_connection.md` (414 lines, last edit 2026-04-30)
+**Target file:** `THEORY/2_substrate/Q3_dynamics/scc_mass_gap_connection.md` (414 lines, last edit 2026-04-30)
 **Companion files reviewed for cross-consistency:** `formation_birth_string_breaking.md` (NQ-253), `multi_formation_sigma.md` (T-σ-Multi-1 source), `sigma_multi_trajectory.md` (K-jump dynamics), `06_gauge_theory_connections_analysis.md` (Connection enumeration), `08_pm_infinite_develop_batch.md` (origin context).
 **Source assignment:** PM batch §X — multi-perspective critic pass on the NQ-249 mass-gap conjecture file before Day 5+ promotion-gate decision.
 **Output verdict class:** REVISE.
@@ -193,7 +193,7 @@ Suggested rewrite:
 | Replace | With |
 |---|---|
 | `canonical.md:77` (Commitment 16 reference) | `canonical §11.1 Commitment 16, lines 796–812` |
-| `canonical.md:77` (OP-0008 reference) | `canonical §1.1 CV-1.5.1 release-notes line 77; see also `THEORY/canonical/theorem_status.md` OP-0008` |
+| `canonical.md:77` (OP-0008 reference) | `canonical §1.1 CV-1.5.1 release-notes line 77; see also `THEORY/2_substrate/canonical/theorem_status.md` OP-0008` |
 | `canonical.md:1337` (phase-transition / spinodal interior) | `canonical §8 admissible range line 572` (for spinodal interval) **or** `canonical §13 T8-Core line 1005 + Scaling Caveat line 1009` (for $\beta_{\mathrm{crit}}$ formula) |
 | `canonical.md:1343` (phase-transition + uniform vacuum) | `canonical §13 T-σ-Theorem-3 (lines 1334–1409)` (if context is σ-Theorem-3) **or** `canonical §13 T8-Core line 1005` (if context is phase-transition existence) — disambiguate based on §-by-§ context. |
 | `canonical.md:1367` (exp_hessian_uniform_v2.json) | Re-verify; if inside T-σ-Theorem-4, cite `canonical §13 T-σ-Theorem-4 lines 1378–1409`. |
@@ -334,7 +334,7 @@ This affects §3.1 conjecture statement: BC-249-1 may need stratum indices.
 **The claim.**
 
 §7.3 states:
-> "**Reference:** SF/mode_count.md (`/Users/ojaehong/Perception/Perception_theory/THEORY/working/SF/mode_count.md`) provides the closed-form Hessian on $u_{\mathrm{uniform}}$ basis: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ (canonical §13 line 1343, `mode_count.md` Prop 1.3a). Multi-formation analog with $K \geq 2$ Goldstone-pair coupling: open."
+> "**Reference:** SF/mode_count.md (`/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/sigma_framework/mode_count.md`) provides the closed-form Hessian on $u_{\mathrm{uniform}}$ basis: $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ (canonical §13 line 1343, `mode_count.md` Prop 1.3a). Multi-formation analog with $K \geq 2$ Goldstone-pair coupling: open."
 
 **The problem.**
 
@@ -516,4 +516,4 @@ Per C2 above, §10.2's framing risks treating QuEra's observed spontaneous strin
 ---
 
 **Critic review log persisted: 2026-04-30 EOD.**
-**Next action:** apply C1+C2+C3+M1 fixes to `THEORY/working/MF/scc_mass_gap_connection.md` (working-only, no canonical edits).
+**Next action:** apply C1+C2+C3+M1 fixes to `THEORY/2_substrate/Q3_dynamics/scc_mass_gap_connection.md` (working-only, no canonical edits).

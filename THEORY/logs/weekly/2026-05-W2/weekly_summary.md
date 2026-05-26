@@ -5,7 +5,7 @@
 **Period:** 2026-05-11 (Mon, Day 1) ~ 2026-05-15 (Fri, Day 5) — 5 영업일 마감
 **Status:** **CLOSED (2026-05-15 EOD)**
 **Prepared:** 2026-05-15 (Day 5 evening)
-**Source:** `weekly_draft_storming.md` (D1–D4 storming) + `THEORY/logs/daily/2026-05-15/{02..07,99}.md` (D5 결정 C 6 stage) + `THEORY/canonical/CV-1.15_SEAL.md` + `THEORY/canonical/CV-1.16_SEAL.md` + CHANGELOG (W7 4 entries).
+**Source:** `weekly_draft_storming.md` (D1–D4 storming) + `THEORY/logs/daily/2026-05-15/{02..07,99}.md` (D5 결정 C 6 stage) + `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` + `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` + CHANGELOG (W7 4 entries).
 **Predecessor:** `THEORY/logs/weekly/2026-05-W1/weekly_summary.md` (W6 close, CV-1.11 + OMS-2.0 Full)
 **Successor:** 2026-05-W3 — opens with **OP-HMORSE-LOCAL-A** (CV-1.17 target, ETA ~2 sessions)
 
@@ -219,10 +219,10 @@ W7 의 *단일 최대 dense day*. 2 SEAL + 1 OP closure + 사용자 메타-자�
 ## §3. 신설 / 변경된 주요 파일
 
 **Canonical (직접 수정 — 2 SEAL turns):**
-- `THEORY/canonical/canonical.md` — §13 CV-1.15 8A+2B insert (T-ACT-*, L-*, P-SINKHORN-STABILITY-CONDITIONAL) + §12 Warning (T-SINKHORN-PLAN-SEMIGROUP-FAILS) + §13 CV-1.16 +1A+2B+1C insert (L-CLOSURE-LIFT, L-HMORSE-LOCAL, L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION) + D-HMORSE-LOCAL 정의 + D-LOCAL-ACTION + D-GIBBS-KERNEL.
-- `THEORY/canonical/theorem_status.md` — CV-1.15/1.16 count updates + 11 신규 정리 행.
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.5 → **HT-3.7** (H-COMP parent + Q5 5 subbranches; H-MORSE row: OPEN → PARTIALLY CLOSED).
-- `THEORY/canonical/CV-1.15_SEAL.md` (신설) + `THEORY/canonical/CV-1.16_SEAL.md` (신설).
+- `THEORY/2_substrate/canonical/canonical.md` — §13 CV-1.15 8A+2B insert (T-ACT-*, L-*, P-SINKHORN-STABILITY-CONDITIONAL) + §12 Warning (T-SINKHORN-PLAN-SEMIGROUP-FAILS) + §13 CV-1.16 +1A+2B+1C insert (L-CLOSURE-LIFT, L-HMORSE-LOCAL, L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION) + D-HMORSE-LOCAL 정의 + D-LOCAL-ACTION + D-GIBBS-KERNEL.
+- `THEORY/2_substrate/canonical/theorem_status.md` — CV-1.15/1.16 count updates + 11 신규 정리 행.
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.5 → **HT-3.7** (H-COMP parent + Q5 5 subbranches; H-MORSE row: OPEN → PARTIALLY CLOSED).
+- `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` (신설) + `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` (신설).
 - `THEORY/CHANGELOG.md` — W7 entries (V-AFD discard / R-2 realignment / R-2 archive / CV-1.15 / CV-1.16) prepended.
 
 **Working (신설, 총 35 파일):**
@@ -230,7 +230,7 @@ W7 의 *단일 최대 dense day*. 2 SEAL + 1 OP closure + 사용자 메타-자�
 - `THEORY/working/CV115_ACTION_TEMPORAL_COST/` — 10 파일 (Action-Based Temporal Succession Package, P1–P6 충족, P7 sealed 5/14 오전).
 - `THEORY/logs/daily/2026-05-14/{01,02,03,40–44,49,50,59,99}.md` — H-MORSE-Local Cat B + broadness 3-approach + SBM robustness 사전 = **10 파일**.
 - `THEORY/logs/daily/2026-05-15/{02..07,99}.md` — 6 stage 결정 C = **7 파일**.
-- `THEORY/working/AFD_0/op_afd_004_proof.md` (5/12, AFD-T7 Cat B Resolved 기록).
+- `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md` (5/12, AFD-T7 Cat B Resolved 기록).
 
 **Archive (`_archive/`, 둘 다 W7 내 발생):**
 - `_archive/v_afd_2026-05-12/` — V-AFD 19 파일 (~8000 줄) + ARCHIVE_NOTE.md (5/13 discard 사유: DECL-1.0 fundamental question misalignment + scope creep).

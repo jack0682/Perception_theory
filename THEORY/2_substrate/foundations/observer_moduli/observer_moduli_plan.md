@@ -70,7 +70,7 @@ This is a **Level-2 SCC extension** — lifting the SCC field machinery one leve
 - Rejected candidates
 
 ### Step 7: Integration
-**Files:** `THEORY/working/INDEX.md`, `THEORY/CHANGELOG.md`
+**Files:** `THEORY/2_substrate/INDEX.md`, `THEORY/CHANGELOG.md`
 - Add observer_moduli to INDEX.md
 - Log creation in CHANGELOG.md
 

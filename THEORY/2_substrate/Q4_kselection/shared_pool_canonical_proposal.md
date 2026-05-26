@@ -398,7 +398,7 @@ OP-0009-Emp (R23 F=9 σ verification): per OAT-7 NQ-141 σ-irrep correspondence 
 
 **End of shared_pool_canonical_proposal.md (OAT-4 deliverable, Wave 3 revised 2026-04-30).**
 **Status: working draft. Shared-pool I9' canonical registration via Tool A1 stratified space framework. K-field I9 = codim-(K-1) slice of top stratum. I9 / I9' = complementary modeling-layer commitments per Whitney stratification (Corollary 2.3.1). T-Persist-K-* scope clauses (smooth segments only). MO-1 re-activation Goresky-MacPherson natural. CN10 contrastive scope load-bearing (§4.3.1). OP-0009-A PARTIALLY RESOLVED at CV-1.6.**
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/shared_pool_canonical_proposal.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md`
 **Created:** 2026-04-30 (W5 Day 4 morning, OAT-4 advanced from W6 Day 2).
 **Wave 3 revised:** 2026-04-30 (worker-2, wave-3-oat-deepening-team-work task 2).
 **Promotion target:** CV-1.6 W6 Day 7 morning (D-CV1.6-O2 candidate).

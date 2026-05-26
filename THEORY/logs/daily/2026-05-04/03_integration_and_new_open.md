@@ -5,7 +5,7 @@
 **Session:** 2026-05-04 (W6 Day 1, mid-day, post-G3)
 **Target (from `02_development.md` §10):** Integrate the G1 self-audit closure with the canonical structure; produce concrete T-L1-M canonical promotion proposal text; propose theorem_status.md update; record OP non-impact; collect new open questions; record prompt v2 notes.
 **This file covers:** §1 Integration with canonical (T-L1-M new entry text); §2 theorem_status.md update proposal (C-0722 row); §3 Integration with G3 ε-convention amendment + with T-L1-F empirical claim; §4 OP non-impact statement; §5 Integration with W6 strategic plan + CV-1.6 release scheduling; §6 New open questions surfaced; §7 Prompt v2 candidate notes.
-**Depends on reading:** `01_exploration.md` §1–§3 (problem framing); `02_development.md` §1–§10 (full self-audit + R-0/R-1/R-2/R-3 closures + Cat-A-conditional self-classification); `THEORY/canonical/canonical.md` §13 T-L1-F entry (lines 1482-1489) — anchor for placement; `THEORY/canonical/theorem_status.md` (existing theorem registry); `THEORY/logs/daily/2026-05-04/g3_03_integration_and_new_open.md` §1 (G3 Commitment 16 amendment proposal — affects Theorem L-M's $\epsilon$ usage).
+**Depends on reading:** `01_exploration.md` §1–§3 (problem framing); `02_development.md` §1–§10 (full self-audit + R-0/R-1/R-2/R-3 closures + Cat-A-conditional self-classification); `THEORY/2_substrate/canonical/canonical.md` §13 T-L1-F entry (lines 1482-1489) — anchor for placement; `THEORY/2_substrate/canonical/theorem_status.md` (existing theorem registry); `THEORY/logs/daily/2026-05-04/g3_03_integration_and_new_open.md` §1 (G3 Commitment 16 amendment proposal — affects Theorem L-M's $\epsilon$ usage).
 
 ---
 

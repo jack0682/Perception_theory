@@ -24,15 +24,15 @@ new_lemmas_added:
 pytest_status: "225 passed + 1 xfailed (entry baseline, unchanged — no scc/ edits)"
 hypothesis_tree_change: "HT-3.10 → HT-3.11"
 source_working_files:
-  - "THEORY/working/foundation/L-UNI-ZMODE_proof.md (NEW, ~430L — 5-step proof + anchors + non-overclaim + Cat A direct classification)"
-  - "THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md (492L — Cat A direct 6-part proof, Wave 2 critic Fix #1 반영)"
-  - "THEORY/working/field_equation_framework/12_wave1_critical_fixes_consolidated.md §2 (Wave 2 critic σ √2 fix consolidated)"
+  - "THEORY/2_substrate/foundations/manifold/L-UNI-ZMODE_proof.md (NEW, ~430L — 5-step proof + anchors + non-overclaim + Cat A direct classification)"
+  - "THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md (492L — Cat A direct 6-part proof, Wave 2 critic Fix #1 반영)"
+  - "THEORY/2_substrate/foundations/field_equation/12_wave1_critical_fixes_consolidated.md §2 (Wave 2 critic σ √2 fix consolidated)"
   - "THEORY/logs/daily/2026-05-20/05_landscape_local_to_global.md §3.7 (Goldstone Type A/B/C 재분류 motivation for L-UNI-ZMODE)"
-  - "THEORY/working/cssl/01_critic_evaluation.md §A.1 (CSSL critic 'ker = Goldstone only at uniform' misframing — L-UNI-ZMODE 의 formal refutation 대상)"
+  - "THEORY/2_substrate/foundations/cssl/01_critic_evaluation.md §A.1 (CSSL critic 'ker = Goldstone only at uniform' misframing — L-UNI-ZMODE 의 formal refutation 대상)"
 trigger: "W8-Day3 POST-99 evening Option C escalation — user critique '정리만 하고 증명이 된게 하나도 없는데' → 즉시 두 Cat A direct lemma 동시 SEAL 실행 (proof-first response)"
 ---
 
-> [!nav] Linked: [[canonical|canonical.md §13 Cat A]] · [[theorem_status|theorem_status.md L18]] · [[hypothesis_tree|hypothesis_tree.md HT-3.11]] · [[CV-1.19_SEAL|CV-1.19 SEAL (predecessor, 오후 16:23-16:27)]] · [[../CHANGELOG|CHANGELOG]] · [[../logs/daily/2026-05-20/99_summary|W8-Day3 99_summary]] · [[../logs/daily/2026-05-20/05_landscape_local_to_global|05 exposition refinement (motivation)]] · [[../working/foundation/L-UNI-ZMODE_proof|L-UNI-ZMODE proof file]] · [[../working/field_equation_framework/06_surface_tension_rescaling_cat_a|06 L-SURFACE-TENSION-RESCALE]] · [[../working/cssl/01_critic_evaluation|CSSL critic §A.1 (refuted)]]
+> [!nav] Linked: [[canonical|canonical.md §13 Cat A]] · [[theorem_status|theorem_status.md L18]] · [[hypothesis_tree|hypothesis_tree.md HT-3.11]] · [[CV-1.19_SEAL|CV-1.19 SEAL (predecessor, 오후 16:23-16:27)]] · [[CHANGELOG|CHANGELOG]] · [[THEORY/logs/daily/2026-05-20/99_summary|W8-Day3 99_summary]] · [[05_landscape_local_to_global|05 exposition refinement (motivation)]] · [[L-UNI-ZMODE_proof|L-UNI-ZMODE proof file]] · [[06_surface_tension_rescaling_cat_a|06 L-SURFACE-TENSION-RESCALE]] · [[01_critic_evaluation|CSSL critic §A.1 (refuted)]]
 
 # CV-1.20 SEAL (2026-05-20 W8-Day3 POST-99 evening — Option C escalation)
 
@@ -51,11 +51,11 @@ CV-1.19 SEAL (오후 16:23-16:27) 이후 evening session 의 산출물 (14 worki
 - **L-SURFACE-TENSION-RESCALE** (Cat A direct): $(α, β) → (sα, sβ)$ rescaling 의 6-part 구조 (T8 invariance + ℓ_bd invariance + σ linear scaling + Hessian linear homogeneity + Goldstone preservation + non-Goldstone gap expansion)
 
 **Predecessors** (working layer):
-- `THEORY/working/foundation/L-UNI-ZMODE_proof.md` (NEW, 본 evening 작성, ~430L Korean+English) — 5-step proof + anchors + non-overclaim + Cat A direct classification
-- `THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md` (492L, W8-Day3 evening 직전 작성) — Cat A direct 6-part proof, Wave 2 critic Fix #1 반영
-- `THEORY/working/field_equation_framework/12_wave1_critical_fixes_consolidated.md` §2 — Wave 2 critic 4 CRITICAL fixes (σ √2 fix 포함)
+- `THEORY/2_substrate/foundations/manifold/L-UNI-ZMODE_proof.md` (NEW, 본 evening 작성, ~430L Korean+English) — 5-step proof + anchors + non-overclaim + Cat A direct classification
+- `THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md` (492L, W8-Day3 evening 직전 작성) — Cat A direct 6-part proof, Wave 2 critic Fix #1 반영
+- `THEORY/2_substrate/foundations/field_equation/12_wave1_critical_fixes_consolidated.md` §2 — Wave 2 critic 4 CRITICAL fixes (σ √2 fix 포함)
 - `THEORY/logs/daily/2026-05-20/05_landscape_local_to_global.md` §3.7 — Goldstone Type A/B/C 재분류 (L-UNI-ZMODE 의 epistemic seed)
-- `THEORY/working/cssl/01_critic_evaluation.md` §A.1 — CSSL critic "ker = Goldstone only at uniform" misframing (L-UNI-ZMODE 가 formal refutation)
+- `THEORY/2_substrate/foundations/cssl/01_critic_evaluation.md` §A.1 — CSSL critic "ker = Goldstone only at uniform" misframing (L-UNI-ZMODE 가 formal refutation)
 
 ## §2 — L-UNI-ZMODE (Cat A direct)
 
@@ -75,7 +75,7 @@ where $\mu_k = 4\alpha\lambda_k(L_G) + \beta W''(c)$. **Type C (continuous Golds
 - **Step 4 (Kernel reduction)**: T-σ-Lemma-1 + Schur Lemma + L-S3-KERNEL-MULT Case B (Cat A, canonical L1798, CV-1.19) → $V_{\lambda_k}$ is $H(u^*)$-invariant, $H(u^*)$ acts as scalar $\mu_k$ on $V_{\lambda_k}$ in Theorem-4-dominant regime.
 - **Step 5 (A/B classification)**: $\mathrm{mult}(\lambda_k) = 1$ → Type A; $\mathrm{mult}(\lambda_k) \geq 2$ → Type B; Type C residue $= 0$ by Step 2. $\square$
 
-Full proof in `THEORY/working/foundation/L-UNI-ZMODE_proof.md` §4.
+Full proof in `THEORY/2_substrate/foundations/manifold/L-UNI-ZMODE_proof.md` §4.
 
 ### §2.3 Anchors
 
@@ -108,7 +108,7 @@ For finite connected graph $G$, boundary energy $\mathcal{E}_{bd}(u; \alpha, \be
 
 ### §3.2 Proof
 
-Each part = *direct algebraic* from $\mathcal{E}_{bd}$ linear-homogeneity in $(\alpha, \beta)$ + canonical Theorem 4 + Modica-Mortola standard formula. Full 6-part proof in `THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md` §3. No new hypothesis; no external theory import.
+Each part = *direct algebraic* from $\mathcal{E}_{bd}$ linear-homogeneity in $(\alpha, \beta)$ + canonical Theorem 4 + Modica-Mortola standard formula. Full 6-part proof in `THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md` §3. No new hypothesis; no external theory import.
 
 ### §3.3 Numerical reference
 

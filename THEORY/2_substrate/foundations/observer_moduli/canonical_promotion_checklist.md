@@ -11,7 +11,7 @@ project: Observer Moduli Space of SCC
 
 # Canonical Promotion Checklist — OMS
 
-Use this checklist to determine when OMS is ready for promotion from `THEORY/working/observer_moduli/` to `THEORY/canonical/canonical.md`.
+Use this checklist to determine when OMS is ready for promotion from `THEORY/working/observer_moduli/` to `THEORY/2_substrate/canonical/canonical.md`.
 
 Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE** | **[!] BLOCKER**
 
@@ -128,7 +128,7 @@ Each item is marked: **[✓] COMPLETE** | **[~] PARTIAL** | **[✗] INCOMPLETE**
 
 | # | Item | Status |
 |---|---|---|
-| E1 | `THEORY/working/INDEX.md` updated with observer_moduli/ | **[✓]** (Session 1) |
+| E1 | `THEORY/2_substrate/INDEX.md` updated with observer_moduli/ | **[✓]** (Session 1) |
 | E2 | `THEORY/CHANGELOG.md` updated with Session 1–4 entries | **[✓]** (Sessions 1–4) |
 | E3 | Cross-links to SCC static theory | **[✓]** (integration_with_scc.md) |
 | E4 | Cross-links to multi-formation theory | **[✓]** (integration_with_scc.md §3.2) |
@@ -205,7 +205,7 @@ $$\boxed{\textbf{OMS-2.0 Accepted — Static, with Full Temporal Conditional on 
 - **OP-OMS-032 → CLOSED UNDER CERTIFIED WITNESS.** INTERVAL_CERTIFIED H4 witness (best margin $4 \times 10^{13}$ over IEEE bound).
 - **OP-OMS-033 → PROVED as conditional fold theorem SN3** (Crandall–Rabinowitz applied to SCC KKT system). Lemma SN4 SCC genericity sketched (sub-OP OP-OMS-033b).
 - **OP-OMS-034 → SEPARATED.** Static does not require it.
-- **Appendix OMS** added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items.
+- **Appendix OMS** added to `THEORY/2_substrate/canonical/canonical.md` with 20+ theorem-grade items.
 
 **OMS-2.0 final classification: Accepted — Static (PROVED with all theorems labeled), with Full Temporal Conditional on OP-OMS-034.**
 
@@ -244,7 +244,7 @@ $$\boxed{\textbf{OMS-2.0 Conditional Accepted}}$$
   three sub-OPs (OP-OMS-032/033/034).
 - **Gate 8 (bookkeeping):** all of `open_problems.md`, `audit_log.md`
   (AUDIT-024), `checkpoints.md`, `daily_log.md`, `THEORY/CHANGELOG.md`,
-  `THEORY/working/INDEX.md` updated.
+  `THEORY/2_substrate/INDEX.md` updated.
 
 **Conditions on OMS-2.0 Conditional Accepted:**
 

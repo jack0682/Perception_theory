@@ -21,7 +21,7 @@
 - `THEORY/working/open_problems_reframing_2026-04-19.md` §1–§9 — N-1 분해 (P-A, P-D, P-G), P-F 공백, 외부 이론 비교 (Allen-Cahn, stat mech, Witten Laplacian reference).
 - `THEORY/working/integer_K_dependency_map.md` — 10 개 integer-K load-bearing 정리 (Retire 5+1, Re-prove 3, Re-prove-retain 1) + single-formation 19~20 survive.
 - `THEORY/working/new_open_questions_2026-04-20.md` — NQ-1 (soft-K uniqueness, 4 후보 중 (i) 선택 근거 필요), NQ-3 (vineyard 대체).
-- `THEORY/canonical/canonical.md` §3.3 (u codomain), §5.5 (transition diagnostics, persistence stability 이미 사용), §6 (Axiomatic Groups A-E, Group F 추가 대상), §8.1 (energy functional, ℱ_C+E 확장 대상), §12 (K-field 폐기 예고), §14 CN6/CN8/CN14 (thermal 재해석 대상).
+- `THEORY/2_substrate/canonical/canonical.md` §3.3 (u codomain), §5.5 (transition diagnostics, persistence stability 이미 사용), §6 (Axiomatic Groups A-E, Group F 추가 대상), §8.1 (energy functional, ℱ_C+E 확장 대상), §12 (K-field 폐기 예고), §14 CN6/CN8/CN14 (thermal 재해석 대상).
 - `THEORY/canonical/canonical_sub.md` — 2026-04-20 entry (integer-K dependency map, pending inconsistencies, NQ-1~7). 내일 출력은 본 파일 에 2026-04-21 entry append.
 - `THEORY/logs/daily/2026-04-20/03_integration_and_new_open.md` §11 CS-1 (soft-K volume compatibility 우려), §11 CS-2 (thermal framework 필요 근거).
 - 외부 정리 reference:

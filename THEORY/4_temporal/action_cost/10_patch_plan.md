@@ -284,9 +284,9 @@ CHANGELOG.md 최상단 (newest-on-top 규칙).
 | 순서 | 파일 | 작업 | 비고 |
 |---|---|---|---|
 | 1 | THEORY/CHANGELOG.md | §4 draft 최상단 삽입 | 가장 먼저 |
-| 2 | THEORY/canonical/theorem_status.md | §2 draft 삽입 + 카운트 업데이트 | CV-1.15 섹션 추가 |
-| 3 | THEORY/canonical/hypothesis_tree.md | §3 draft 삽입 | H-COMP 업데이트 |
-| 4 | THEORY/canonical/canonical.md | §1 draft 삽입 (§13 끝부분) | K symbol 주석 포함 |
+| 2 | THEORY/2_substrate/canonical/theorem_status.md | §2 draft 삽입 + 카운트 업데이트 | CV-1.15 섹션 추가 |
+| 3 | THEORY/2_substrate/canonical/hypothesis_tree.md | §3 draft 삽입 | H-COMP 업데이트 |
+| 4 | THEORY/2_substrate/canonical/canonical.md | §1 draft 삽입 (§13 끝부분) | K symbol 주석 포함 |
 | 5 (완료) | CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py | 3-case 검증 완료 (PASS) | exp89_results.json 저장됨; numerical validation only, not proof |
 
 ---

@@ -320,11 +320,11 @@ S-A1 and S-A3 are the primary blockers. S-A2 is supporting validation. All three
 
 | File | Action |
 |------|--------|
-| `THEORY/working/temporal/CV113_S-B1_DEEP_CORE_CLOSURE.md` | **CREATED** (this file) |
-| `THEORY/working/temporal/S-B1_deep_core_density.md` | **Updated** — §5 correction note added |
-| `THEORY/canonical/canonical.md` | **Updated** — Lemma S-B1-Weak Cat A added; T-Temporal-Identity entry updated; counts; CV-1.13 preliminary target |
-| `THEORY/canonical/theorem_status.md` | **Updated** — S-B1-Weak Cat A; OP-SB1-DEEP downgraded; T-Temporal-Identity blocker note corrected |
-| `THEORY/canonical/hypothesis_tree.md` | **Updated** — HT-3.2 → HT-3.3; S-B1 Weak Cat A; remaining blockers S-A1-A3 |
+| `THEORY/4_temporal/temporal_audit/CV113_S-B1_DEEP_CORE_CLOSURE.md` | **CREATED** (this file) |
+| `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | **Updated** — §5 correction note added |
+| `THEORY/2_substrate/canonical/canonical.md` | **Updated** — Lemma S-B1-Weak Cat A added; T-Temporal-Identity entry updated; counts; CV-1.13 preliminary target |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **Updated** — S-B1-Weak Cat A; OP-SB1-DEEP downgraded; T-Temporal-Identity blocker note corrected |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **Updated** — HT-3.2 → HT-3.3; S-B1 Weak Cat A; remaining blockers S-A1-A3 |
 | `THEORY/CHANGELOG.md` | **Updated** — W7-CV113 entry added at top |
 
 ---

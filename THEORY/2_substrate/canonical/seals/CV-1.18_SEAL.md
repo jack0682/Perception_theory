@@ -9,7 +9,7 @@ authority: P7 user authorization (instruction "즉시 (~1 session): CV-1.18 SEAL
 description: Stage 0 Sensor T Axiom Package (9 conditions, axiomatic on P) + T_* ξ Resident Formal Entry (Cat A axiomatic under OMS-1) + Routes A/B (Mori-Zwanzig / RG) DEPRECATED — COB-violating. Axiomatic registration acts. Claim count UNCHANGED (68A/19B/6C/5R = 98 claims). HT-3.8 → HT-3.9 (H-T* row Route C amendment).
 ---
 
-> [!nav] Linked: [[canonical]] · [[theorem_status]] · [[hypothesis_tree]] · [[CV-1.17_SEAL]] · [[CHANGELOG]] · [[../working/foundation/proofs/P5_Stage0_sensor_T_9conditions]] · [[../working/foundation/proofs/P6_OMS-1_xi_Tstar_entry]] · [[../working/foundation/proofs/_SUMMARY_v0.2]]
+> [!nav] Linked: [[canonical]] · [[theorem_status]] · [[hypothesis_tree]] · [[CV-1.17_SEAL]] · [[CHANGELOG]] · [[P5_Stage0_sensor_T_9conditions]] · [[P6_OMS-1_xi_Tstar_entry]] · [[_SUMMARY_v0.2]]
 
 
 # CV-1.18 SEAL Record (2026-05-19, W8-Day2 evening axiomatic registration)
@@ -22,7 +22,7 @@ description: Stage 0 Sensor T Axiom Package (9 conditions, axiomatic on P) + T_*
 
 ## Seal Statement
 
-본 SEAL 은 (a) 사용자 instruction 2026-05-19 late evening *"즉시 CV-1.18 SEAL execution (P5+P6 combined)"* 의 직접 권위와 (b) `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P) + `P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic ξ resident entry) + `_SUMMARY_v0.2.md` (Cat C consolidation reference) + `V1_rigor_verification.md` (6/6 PASS) + `V2_canonical_xref.md` (41/41 anchors verified) 의 *Phase 3 verification 결과* 를 근거로 **3 framework consolidation acts** 를 canonical 에 sealed.
+본 SEAL 은 (a) 사용자 instruction 2026-05-19 late evening *"즉시 CV-1.18 SEAL execution (P5+P6 combined)"* 의 직접 권위와 (b) `THEORY/2_substrate/foundations/manifold/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P) + `P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic ξ resident entry) + `_SUMMARY_v0.2.md` (Cat C consolidation reference) + `V1_rigor_verification.md` (6/6 PASS) + `V2_canonical_xref.md` (41/41 anchors verified) 의 *Phase 3 verification 결과* 를 근거로 **3 framework consolidation acts** 를 canonical 에 sealed.
 
 본 SEAL 은 *axiomatic registration* — **새 Cat A/B/C theorem 추가 부재**, **claim count 불변 (98)**, **canonical mathematical content 의 *framework refinement* + *open problem scope revision* 의 합산**.
 
@@ -76,11 +76,11 @@ canonical theorem_status.md OP-0021 (Stochastic Dynamics) row 갱신:
 
 ## Sources
 
-- **P5 Stage 0 9-conditions**: `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125 lines, 9× Cat A axiomatic on P verdict)
-- **P6 OMS-1 ξ T_* entry**: `THEORY/working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (952 lines, Cat A axiomatic verdict)
+- **P5 Stage 0 9-conditions**: `THEORY/2_substrate/foundations/manifold/proofs/P5_Stage0_sensor_T_9conditions.md` (1125 lines, 9× Cat A axiomatic on P verdict)
+- **P6 OMS-1 ξ T_* entry**: `THEORY/2_substrate/foundations/manifold/proofs/P6_OMS-1_xi_Tstar_entry.md` (952 lines, Cat A axiomatic verdict)
 - **V1 Phase 3 verification**: `/tmp/scc_proofs_v02/V1_rigor_verification.md` (6/6 PASS, including P5 + P6)
 - **V2 Phase 3 verification**: `/tmp/scc_proofs_v02/V2_canonical_xref.md` (41/41 anchors verified, 0 silent OP resolution)
-- **_SUMMARY_v0.2.md**: `THEORY/working/foundation/proofs/_SUMMARY_v0.2.md` (CV-1.18 candidate identification)
+- **_SUMMARY_v0.2.md**: `THEORY/2_substrate/foundations/manifold/proofs/_SUMMARY_v0.2.md` (CV-1.18 candidate identification)
 - **2026-05-19 02_H5 + 03_T_star + 99_summary** (W8-Day2 EOD predecessors)
 - **AUX-1.5 §4.5 (T sensor)** + **§4.6.1 (T_* registry)** + **§4.7.1 (ξ catalog)** + **§4.9.1 (T_* fixed-point diagnosis)** — registry-level prior diagnosis sources
 

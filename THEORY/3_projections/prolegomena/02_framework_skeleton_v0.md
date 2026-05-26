@@ -21,7 +21,7 @@ constraint_compliance:
   proofs: 0
 ---
 
-> [!nav] Parent: [[../INDEX|working/INDEX.md]] · Companions: [[00_field_conditions_v0.md]] · [[01_mathematical_conditions_v0.md]] · PAI: [[../../canonical/perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[../../canonical/PAI_ROADMAP|PAI Roadmap]]
+> [!nav] Parent: [[INDEX|working/INDEX.md]] · Companions: [[00_field_conditions_v0.md]] · [[01_mathematical_conditions_v0.md]] · PAI: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[PAI_ROADMAP|PAI Roadmap]]
 
 # Framework Skeleton — 4-Layer Architecture v0
 

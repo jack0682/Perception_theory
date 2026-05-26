@@ -10,7 +10,7 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
 > Read first: [[DECLARATION]] (2분)
-> Pairs with: [[00_manifest]] (SCC-CT v0.1 구조적 권위)
+> Pairs with: [[sct_manifest]] (SCC-CT v0.1 구조적 권위)
 > Related: [[theorem_status]] · [[hypothesis_tree]] · [[CV-1.16_SEAL]] · [[CHANGELOG]]
 > Status: SEALED CV-1.16 (97 claims; 68A/18B/6C/5R)
 
@@ -57,8 +57,8 @@ description: Current authoritative specification. F-1/M-1/MO-1 resolved/clarifie
 
 ### New documents (W6)
 
-- `THEORY/canonical/DECLARATION.md` — DECL-1.0: theory central axis, T8, Q1–Q6.
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.0: dependency tree reorganized by Q1–Q6.
+- `THEORY/0_axis/DECLARATION.md` — DECL-1.0: theory central axis, T8, Q1–Q6.
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.0: dependency tree reorganized by Q1–Q6.
 - `THEORY/working/observer_moduli/` — OMS-2.0 full working package (30+ files, VP-1..VP-11).
 
 ### Non-claims (mandatory)
@@ -101,7 +101,7 @@ This document is the canonical human-readable formal specification of the theory
 **Authoritative sources:**
 - Per-release detail: `theorem_status.md` §Canonical Spec Version History.
 - Per-merge session log: `THEORY/CHANGELOG.md` (chronological).
-- Open problems / status changes: `THEORY/canonical/theorem_status.md`.
+- Open problems / status changes: `THEORY/2_substrate/canonical/theorem_status.md`.
 
 The document declares the primitive ontology, the formal universe, the axiomatic groups (A–E), the derived predicates, the minimal energy principle with volume constraint, and the proved results registry that jointly constitute the theory as it now stands.
 
@@ -360,7 +360,7 @@ The boundary band is not a codimension-one manifold in general. It is a volumetr
 
 ### 5.3b. Persistent Gradient Ridge Boundary (Cat A conditional — CV-1.7)
 
-*(Added W6 D4 Session E as Cat B. Promoted Cat A conditional under H1–H5 in Session K 2026-05-06. Source: `THEORY/working/MF/op_0006_boundary_precision.md`. Resolves OP-0006 at Cat B level (Session E); fully resolved at Cat A level (Session K; see §13 Category A T-OP6-B entry).)*
+*(Added W6 D4 Session E as Cat B. Promoted Cat A conditional under H1–H5 in Session K 2026-05-06. Source: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md`. Resolves OP-0006 at Cat B level (Session E); fully resolved at Cat A level (Session K; see §13 Category A T-OP6-B entry).)*
 
 The §5.3 boundary band definition (field-value threshold) admits a gradient-based strengthening that is more stable under photometric perturbations and does not depend on the choice of thresholds $\theta_1, \theta_2$.
 
@@ -372,7 +372,7 @@ where $\vert \nabla_G \tilde{u}(x)\vert = \sqrt{\sum_{y \sim x}(\tilde{u}(x) - \
 
 **Interpretation.** $B_{\mathrm{PersRidge}}(\tilde{u})$ is the set of nodes whose gradient magnitude forms a persistent "ridge" — a connected component in $\{x : \vert \nabla_G \tilde{u}(x)\vert \geq \theta\}$ that persists for a range of thresholds of width $> \rho_{\mathrm{bd}}$. This is the gradient-domain analog of the D-ST-3 definition ($K_{\mathrm{act}}$ as #PersComp on the cohesion field itself, §3.11).
 
-**Theorem T-OP6-B (Cat A conditional — PersRidge Equivalence, H1–H5).** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`.)* *Under assumptions H1–H5 (see below), the persistent gradient ridge boundary and the topological boundary of the persistent formation core are approximately equivalent in graph Hausdorff distance:*
+**Theorem T-OP6-B (Cat A conditional — PersRidge Equivalence, H1–H5).** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §9–§12`.)* *Under assumptions H1–H5 (see below), the persistent gradient ridge boundary and the topological boundary of the persistent formation core are approximately equivalent in graph Hausdorff distance:*
 
 $$d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\mathrm{PersComp}(\tilde{u}^*)\bigr) \leq 2 \cdot (\alpha/\beta)^{1/2}$$
 
@@ -1551,7 +1551,7 @@ Three explicit possibilities accommodate this without retracting (ii):
 
 The current Cat-B status of T-σ-Theorem-4 already reflects this uncertainty (downgrade was retroactive at CV-1.5.1 for an Errata Round 1 Morse-index issue; the NQ-187 numerical refutation independently supports the Cat-B retention). Cat-A re-promotion is conditional on closing the γ/β/α path audit and resolving which of the three hypotheses above holds. Until then, **canonical statement (ii) should be read as a continuum-limit claim, not a finite-grid claim**.
 
-*References:* `canonical.md` §13 T-Birth-Parametric (Cat A); `working/SF/symmetry_moduli.md` §3.3 (R22 axis-aligned selection); `THEORY/working/SF/sigma_theorem4_higher_order.md` §8 (NQ-187 protocol + interpretation); `THEORY/logs/daily/2026-04-30/11_nq187_scaling_test_results.md` (numerical results); `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` §1 (Wave 3 RED finding); `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md` (γ/β/α 3-path framework); W4-04-24 `04_orbital_proofs.md` §2; W5 Day 1 `01e_theorem4_first_pitchfork.md`.
+*References:* `canonical.md` §13 T-Birth-Parametric (Cat A); `working/SF/symmetry_moduli.md` §3.3 (R22 axis-aligned selection); `THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` §8 (NQ-187 protocol + interpretation); `THEORY/logs/daily/2026-04-30/11_nq187_scaling_test_results.md` (numerical results); `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` §1 (Wave 3 RED finding); `THEORY/logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md` (γ/β/α 3-path framework); W4-04-24 `04_orbital_proofs.md` §2; W5 Day 1 `01e_theorem4_first_pitchfork.md`.
 
 **T-Birth-Parametric. Supercritical Pitchfork Bifurcation in Formation Stability.**
 At the critical parameter $\beta_{\mathrm{crit}} = 4\alpha\lambda_2/\lvert W''(c) \rvert$, a supercritical pitchfork bifurcation occurs: for $\beta < \beta_{\mathrm{crit}}$, only K=1 (uniform) minimizer; for $\beta > \beta_{\mathrm{crit}}$, two additional non-uniform minimizers appear with amplitude $\vert u_{\mathrm{nonunif}} - u_{\mathrm{unif}}\vert \propto (\beta - \beta_{\mathrm{crit}})^{1/2}$. The bifurcation is supercritical (stable branch) by Crandall-Rabinowitz theorem with cubic coefficient $A > 0$ from equivariant analysis (D₄ symmetry on square grids, cubic power symmetry via $W(u) = u(1-u)(1/2 - u)$).
@@ -1618,7 +1618,7 @@ $$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u))-K_{\mathrm{act}}^\varepsilon(\mathb
 
 *Status:* **Proved**, Cat A *conditional under the L1-J regime package $(P0)$–$(P11)$ + $\phi\in\Phi_{\mathrm{res}}(\ell_{\min},\tau)$ + $\tau<\tau_*^{\mathrm{post-R2}}$*. NOT a global identity. Does NOT solve OP-0005 (K-Selection) or OP-0008 ($\sigma^A$ K-jump non-determinism). Does NOT promote $\Phi_{\mathrm{res}}$ to a canonical envelope class beyond its working role; reservoir-admissible families restricted to WQ-LAT-1.B-empirically-supported sub-classes (hard, logistic $s\ge 50$, shift-sat $\beta\ge 20$). $\tau_*^{\mathrm{post-R2}}$ uses $\rho_{\mathrm{bg}}$ (per W6 D1 G1-AUDIT R-2 closure: §5.5 Type-B chain replaced with explicit P5-direct derivation). Comparison between $\rho_{\mathrm{bg}}$ and $\rho_{\mathrm{res}}$ is configuration-dependent (NQ-G1-1 self-correction; empirical anchor deferred to NQ-G1-1-ext W7+); Cat A conditional self-classification unaffected. R-1 sharpness construction valid in the generic vineyard-nonsingular regime (persistence-skeleton preservation, automatic for non-degenerate $u^{(j)}$ at $\rho_{\mathrm{pert}}/2$ below local skeleton stability threshold). External L-M-K-style audit PASSed W6 D1 EOD (R-0/R-1/R-2/R-3 + Theorem L-M composition all verified by independent cold-review).
 
-**T-P-F-ε0. Gibbs Measure Continuity at ε=0 (Target B → Target A Weak Convergence).** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Formal proof: `THEORY/working/MF/pf_tstar_langevin.md` §8.5.)*
+**T-P-F-ε0. Gibbs Measure Continuity at ε=0 (Target B → Target A Weak Convergence).** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Formal proof: `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` §8.5.)*
 Let $\mathcal{F}_M(\mathcal{P})=\{\tilde{u}\in[0,1]^n:\sum_i\tilde{u}_i=M\}$ be the mass-constrained field space (D-ST-2, §3.9). Define the parameterized measure family
 $$\mu_\varepsilon(d\tilde{u})=Z_\varepsilon^{-1}\exp\!\left(-\frac{\mathcal{E}_{\mathrm{SCC}}^{\mathcal{P}}[\tilde{u}]+\varepsilon R(\tilde{u})}{T_*}\right)d\sigma(\tilde{u}),\quad\varepsilon\in[0,1],$$
 where $d\sigma$ is the $(n-1)$-Hausdorff measure on $\mathcal{F}_M(\mathcal{P})$ and $Z_\varepsilon$ is the normalizing constant. With $R=-T_*S_{\mathrm{Bern}}$: $\varepsilon=0$ gives **Target A** (pure Gibbs $\propto\exp(-\mathcal{E}/T_*)$, canonical P-F-A1 axiom v0); $\varepsilon=1$ gives **Target B** (Bernoulli-regularized, `langevin.py` `lambda_K=0`). Under:
@@ -1637,7 +1637,7 @@ i.e., $\int f\,d\mu_\varepsilon\to\int f\,d\mu_0$ for all bounded continuous $f:
 
 *Status:* **Proved**, Cat A. All hypotheses H1–H4 verified in SCC setting. P-F-A1 axiom remains OPEN (see OP in `theorem_status.md`). Peer-review note: polynomial continuity of $\mathcal{E}_{\mathrm{SCC}}$ (H2) and polytope non-degeneracy (H3) are straightforward to verify.
 
-**T-OP6-B. PersRidge Boundary Equivalence.** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`. See also §5.3b for full statement with assumption package H1–H5.)*
+**T-OP6-B. PersRidge Boundary Equivalence.** *(Promoted Cat B → Cat A, W6 D4 Session K, 2026-05-06, CV-1.7. Full proofs: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §9–§12`. See also §5.3b for full statement with assumption package H1–H5.)*
 
 Under H1–H5 (phase separation, well-formed formation, canonical $\rho_{\mathrm{bd}} = 1/(4\xi)$, bounded curvature $\kappa_{\mathrm{max}}\xi \leq 0.1$, hard-cut D-ST-1):
 
@@ -1649,7 +1649,7 @@ $$d_H\bigl(B_{\mathrm{PersRidge}}(\tilde{u}^*),\; \partial\mathrm{PersComp}(\til
 
 ---
 
-**T-PF-A1-AR. Field Polytope Compact Convex Structure and Affine Reduction.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Affine-Reduction.)*
+**T-PF-A1-AR. Field Polytope Compact Convex Structure and Affine Reduction.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Affine-Reduction.)*
 
 Let $G=(V,E)$ be a finite graph with $\lvert V \rvert=n\geq 2$, $\mu\in\mathbb{R}^n$ a positive weight vector ($\mu_i>0$, $\sum\mu_i=1$), and $M\in(0,1)$. Define the **field polytope** $\mathcal{F}_M(G) = \{u\in[0,1]^n : \mu^\top u = M\}$. Then:
 
@@ -1665,7 +1665,7 @@ Let $G=(V,E)$ be a finite graph with $\lvert V \rvert=n\geq 2$, $\mu\in\mathbb{R
 
 ---
 
-**T-PF-A1-SDE. Well-Posedness of Reflected Langevin SDE on Field Polytope.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Finite-Reflected-SDE.)*
+**T-PF-A1-SDE. Well-Posedness of Reflected Langevin SDE on Field Polytope.** *(New, 2026-05-06 W6 D4 Sessions M–N, CV-1.8. Full proof: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Finite-Reflected-SDE.)*
 
 Under the setup of T-PF-A1-AR with $T_*>0$, there exists a **unique strong solution** $(X_t, K_t)$ to the reflected Langevin SDE on $\tilde{C}$:
 $$dX_t = -\nabla\tilde{\mathcal{E}}(X_t)\,dt + \sqrt{2T_*}\,dB_t + dK_t, \quad X_0\in\tilde{C}$$
@@ -1683,7 +1683,7 @@ where $\Pi_M=QQ^\top$ projects onto $H_0$ and $d\tilde{K}_t=Q\,dK_t\in N_{\mathc
 
 ---
 
-**T-PF-A1-GI. Gibbs Measure is the Unique Invariant Measure.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Gibbs-Invariance.)*
+**T-PF-A1-GI. Gibbs Measure is the Unique Invariant Measure.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Gibbs-Invariance.)*
 
 Under the setup of T-PF-A1-SDE, the Gibbs measure
 $$\pi_{T_*}(du) = Z^{-1}\exp\!\bigl(-\mathcal{E}_{\mathrm{SCC}}(u)/T_*\bigr)\,d\sigma_M(u)$$
@@ -1697,7 +1697,7 @@ is the **unique invariant probability measure** for the reflected Langevin $U_t$
 
 ---
 
-**T-PF-A1-PE. Poincaré Inequality and Exponential Ergodicity.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Poincare-Ergodicity.)*
+**T-PF-A1-PE. Poincaré Inequality and Exponential Ergodicity.** *(Promoted Cat B → Cat A, Session P 2026-05-06, CV-1.9. Full proof: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` §T-PF-A1-Poincare-Ergodicity.)*
 
 Under the setup of T-PF-A1-GI, there exists $C_P\in(0,\infty)$ such that the **Poincaré inequality** holds on $\mathcal{F}_M(G)$:
 $$\mathrm{Var}_{\pi_{T_*}}(f)\leq C_P\cdot T_*\cdot\int_{\mathcal{F}_M(G)}\vert \nabla_H f\vert ^2\,d\pi_{T_*},\qquad \lambda_1\geq 1/C_P>0$$
@@ -1748,7 +1748,7 @@ equivalently $\mathbf{K}_{i\to k} = \mathbf{K}_{i\to j} \cdot \mathbf{K}_{j\to k
 
 **Proposition P-ACTION-PATH-INHERITANCE.** *(Definition Justification — Interpretation; not counted in A/B/C tally; CV-1.15.)* The SCC temporal identity is more naturally captured by a *low-action path inheritance* criterion than by an *endpoint similarity* criterion. SCC axiom A3 (stabilization tendency; §6 Group A) implies that consecutive time-slices of a stably persisting formation realize a small-action transition path: $a_i(x, y)$ is small along the inherited support. Hence the action cost is the canonical refinement of "small temporal change" suggested by A3. *Status.* Interpretive justification, not a theorem. Not counted in the canonical A/B/C/R tally. Provides motivation for the canonical adoption of D-LOCAL-ACTION and T-ACT-DP / T-ACT-GIBBS. *Reference.* §6 Group A (A3 stabilization); §10 Structural Interpretation.
 
-*CV-1.15 Cat A count: +8 entries (L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO). P-ACTION-PATH-INHERITANCE Interpretation not counted. Cat B additions (T-ACT-KERNEL-COMP→REL conditional, P-SINKHORN-STABILITY-CONDITIONAL) in §13 Category B below. T-SINKHORN-PLAN-SEMIGROUP-FAILS OPEN warning in §12. Source: `THEORY/working/CV115_ACTION_TEMPORAL_COST/`; numerical anchor: exp89 ALL PASSED (3/3). Audit: `THEORY/logs/daily/2026-05-13/`. Seal: `THEORY/canonical/CV-1.15_SEAL.md`.*
+*CV-1.15 Cat A count: +8 entries (L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO). P-ACTION-PATH-INHERITANCE Interpretation not counted. Cat B additions (T-ACT-KERNEL-COMP→REL conditional, P-SINKHORN-STABILITY-CONDITIONAL) in §13 Category B below. T-SINKHORN-PLAN-SEMIGROUP-FAILS OPEN warning in §12. Source: `THEORY/working/CV115_ACTION_TEMPORAL_COST/`; numerical anchor: exp89 ALL PASSED (3/3). Audit: `THEORY/logs/daily/2026-05-13/`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md`.*
 
 ---
 
@@ -1756,7 +1756,7 @@ equivalently $\mathbf{K}_{i\to k} = \mathbf{K}_{i\to j} \cdot \mathbf{K}_{j\to k
 
 > **Notation note.** $J_{\mathrm{Cl}}(u^*)$ denotes the closure Jacobian at $u^*$, $D = \mathrm{diag}(\sum_y W(x,y))$ the graph degree matrix, $P = D^{-1} W$ the row-normalized aggregation, $M = (1 - \eta_{\mathrm{cl}}) I + \eta_{\mathrm{cl}} P$ the mixing operator. The degree-weighted inner product is $\langle u, v\rangle_D := u^\top D v$. See `CODE/scc/operators.py` (lines 63–101) for the explicit formula $J_{\mathrm{Cl}} = \mathrm{diag}(\sigma'(z) \cdot a_{\mathrm{cl}}) \cdot M$.
 
-**Theorem L-CLOSURE-LIFT.** *(Cat A; CV-1.16. Operator-norm broadness via degree-weighted self-adjointness. Promoted from `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` §1–§2 and the analytic proof in `THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`.)*
+**Theorem L-CLOSURE-LIFT.** *(Cat A; CV-1.16. Operator-norm broadness via degree-weighted self-adjointness. Promoted from `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` §1–§2 and the analytic proof in `THEORY/logs/daily/2026-05-14/42_broadness_approach_b_trace.md`.)*
 
 *Conditions.* Canonical A3 contraction ($a_{\mathrm{cl}} < 4$); $u^* \in [0,1]^n$ (any value, not requiring strict interior); $G$ connected undirected with symmetric adjacency $W$.
 
@@ -1789,7 +1789,7 @@ Step 6. Triangle inequality squaring gives (L-CL-LIFT.2). Conditioning bound $d_
 - This statement bounds the **closure** component only. The full $H_{\mathcal{E}}$ also has $H_{\mathrm{bd}}$ and $H_{\mathrm{sep}}$ contributions; combined positivity is L-HMORSE-LOCAL (Cat B, §13 Category B below).
 - The standard-$\ell^2$ form has a $d_{\min}/d_{\max}$ degree-conditioning factor that weakens the constant on non-regular graphs. The degree-weighted form (L-CL-LIFT.2) is the natural inner-product-free statement.
 
-*References.* T7-Enhanced (canonical Cat A, §13 line 1138 — historical context; L-CLOSURE-LIFT supersedes T7-Enhanced as the broadness statement); `CODE/scc/operators.py` lines 63–101; `THEORY/working/CV114_H_MORSE_PACKAGEII/02–06, 11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+*References.* T7-Enhanced (canonical Cat A, §13 line 1138 — historical context; L-CLOSURE-LIFT supersedes T7-Enhanced as the broadness statement); `CODE/scc/operators.py` lines 63–101; `THEORY/working/CV114_H_MORSE_PACKAGEII/02–06, 11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.
 
 *CV-1.16 Cat A count: +1 entry (L-CLOSURE-LIFT). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
 
@@ -1807,7 +1807,7 @@ $$\dim \ker\!\Big(\mathrm{Hess}(\mathcal{E})(c\mathbf{1})\big\vert_{T\Sigma_m}\B
 
 *Status:* **Cat A on standard SCC regimes** (Case A ∪ Case B covers all canonical SCC examples — regular graphs OR uniform critical with full Aut(G) symmetry; Case C is rare and requires H-INV explicit). The math-olympiad random-D finding (random matrix D destroying kernel) is reconciled: random D ≠ canonical §9.3 distinction operator (which is Aut(G)-equivariant by construction via $P_t = D_G^{-1}A_G$).
 
-*Anchors:* Theorem 4 (§13 Cat A); SB7 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); T-V5b-T-zero (§13 Cat A); §9.3 Distinction Candidate; `THEORY/working/SF/mode_count.md` §2.3a Remark (Cat A working anchor for Case A); `THEORY/logs/daily/2026-05-20/03_D_L_commutation.md` (full derivation + Case C §6 NEW L-INV-1/2/3).
+*Anchors:* Theorem 4 (§13 Cat A); SB7 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); T-V5b-T-zero (§13 Cat A); §9.3 Distinction Candidate; `THEORY/2_substrate/sigma_framework/mode_count.md` §2.3a Remark (Cat A working anchor for Case A); `THEORY/logs/daily/2026-05-20/03_D_L_commutation.md` (full derivation + Case C §6 NEW L-INV-1/2/3).
 
 *Non-overclaim:* Covers *uniform critical $u^* = c\mathbf{1}$* only. *Non-uniform critical* (formation regime with explicit boundary $\Gamma$) requires separate analysis (Modica-Mortola Jacobi or discrete Forman — see W8-Day3 evening Wave 3 working files in `field_equation_framework/`). Case C "H-INV" hypothesis is stated *explicitly*, not silently assumed. Seal: `CV-1.19_SEAL.md`.
 
@@ -1823,7 +1823,7 @@ where $\mu_k = 4\alpha\lambda_k(L_G) + \beta W''(c)$ (Theorem 4, Cat A). **Type 
 
 *Proof (Cat A direct, 5 steps):* (Step 1) For any $\sigma \in \mathrm{Aut}(G)$, $(\sigma \cdot u^*)_i = u^*_{\sigma^{-1}(i)} = c = u^*_i$, so the orbit $\mathcal{O}_{\mathrm{Aut}(G)}(u^*) = \{u^*\}$ is a singleton with tangent space $\{0\}$. (Step 2) Type C zero modes are orbit-tangent by definition; Step 1 forces them empty at $u^*$. (Step 3) $u^* = c\mathbf{1}$ is fixed by all $\sigma \in \mathrm{Aut}(G)$, so the isotropy group $G_{u^*} = \mathrm{Aut}(G)$. By T-σ-Lemma-1 (Cat A) the full Hessian commutes with $\mathrm{Aut}(G)$-action on $\mathbf{1}^\perp$. (Step 4) By T-σ-Lemma-1 + Schur's Lemma + L-S3-KERNEL-MULT Case B (Cat A, CV-1.19, uniform critical case), each $L_G$-eigenspace $V_{\lambda_k}$ is $H(u^*)$-invariant, with $H(u^*)$ acting as the scalar $\mu_k$ on $V_{\lambda_k}$ in the Theorem-4-dominant regime. (Step 5) For $k \in K^*$: $\dim V_{\lambda_k} = 1$ gives single Type A mode; $\mathrm{mult}(\lambda_k) \geq 2$ gives Type B; Type C residue $\equiv 0$ by Step 2. $\square$
 
-*Anchors:* Theorem 4 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); L-S3-KERNEL-MULT (§13 Cat A, CV-1.19); V5b-T-zero (§13 Cat A def, *non-uniform corner-saturated* context — contrast; Type C lives there, not at uniform); L-HMORSE-LOCAL (§13 Cat B, CV-1.16) (C4) condition — consistent with L-UNI-ZMODE's uniform/non-uniform distinction. `THEORY/working/foundation/L-UNI-ZMODE_proof.md` (full proof).
+*Anchors:* Theorem 4 (§13 Cat A); T-σ-Lemma-1 (§13 Cat A); L-S3-KERNEL-MULT (§13 Cat A, CV-1.19); V5b-T-zero (§13 Cat A def, *non-uniform corner-saturated* context — contrast; Type C lives there, not at uniform); L-HMORSE-LOCAL (§13 Cat B, CV-1.16) (C4) condition — consistent with L-UNI-ZMODE's uniform/non-uniform distinction. `THEORY/2_substrate/foundations/manifold/L-UNI-ZMODE_proof.md` (full proof).
 
 *Non-overclaim:* L-UNI-ZMODE covers *uniform critical $u^* = c\mathbf{1}$ only*. Non-uniform critical (corner-saturated formations) has *Type C present* via V5b-T-zero — distinct scope. Off-$\Sigma_{T8}$ regime: $\ker = \{0\}$ trivially. Theorem-4-dominant regime assumption: in canonical SCC regime where $\lambda_{bd}$ is primary symmetry-breaking coupling, the scalar action on $V_{\lambda_k}$ equals $\mu_k$ to leading order. CSSL critic ("ker = Goldstone only at uniform" misframing) is *formally refuted* by L-UNI-ZMODE. Seal: `CV-1.20_SEAL.md`.
 
@@ -1847,7 +1847,7 @@ For finite connected graph $G = (V, E)$ with $\lvert V \rvert = n$, boundary ene
 
 **(f) Non-Goldstone spectral gap expansion.** $\mu_{\min}^{(\text{non-Gold})}(s\alpha, s\beta) = s \cdot \mu_{\min}^{(\text{non-Gold})}(\alpha, \beta)$. For target gap $\mu^* > 0$ and baseline $\mu_0 := \mu_{\min}^{(\text{non-Gold})}(\alpha_0, \beta_0) > 0$, choose $s^* = \mu^*/\mu_0$ to achieve target.
 
-*Proof (Cat A direct):* Each part follows from $\mathcal{E}_{bd}$ linear-homogeneity in $(\alpha, \beta)$ + canonical Theorem 4 + Modica-Mortola standard surface tension formula. **(a)** $\beta/\alpha$ ratio unchanged. **(b)** Direct $\sqrt{\cdot/\cdot}$. **(c)** $\sigma = \sqrt{\alpha\beta} \int_0^1 \sqrt{2W(s)}\,ds = (\sqrt{2}/6)\sqrt{\alpha\beta}$ (Modica-Mortola; integrand $\sqrt{2W(s)} = \sqrt{2} \cdot s(1-s)$ since $W(s) = s^2(1-s)^2$). **(d)** $\mathcal{E}_{bd}(u; s\alpha, s\beta) = s\mathcal{E}_{bd}(u; \alpha, \beta)$ by linear homogeneity; differentiation linear → $\nabla^2$ inherits factor $s$. **(e)** Direct from (d). **(f)** Direct from (d) applied to non-Goldstone eigenvalues only. Full 6-part proof: `THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md` §3. $\square$
+*Proof (Cat A direct):* Each part follows from $\mathcal{E}_{bd}$ linear-homogeneity in $(\alpha, \beta)$ + canonical Theorem 4 + Modica-Mortola standard surface tension formula. **(a)** $\beta/\alpha$ ratio unchanged. **(b)** Direct $\sqrt{\cdot/\cdot}$. **(c)** $\sigma = \sqrt{\alpha\beta} \int_0^1 \sqrt{2W(s)}\,ds = (\sqrt{2}/6)\sqrt{\alpha\beta}$ (Modica-Mortola; integrand $\sqrt{2W(s)} = \sqrt{2} \cdot s(1-s)$ since $W(s) = s^2(1-s)^2$). **(d)** $\mathcal{E}_{bd}(u; s\alpha, s\beta) = s\mathcal{E}_{bd}(u; \alpha, \beta)$ by linear homogeneity; differentiation linear → $\nabla^2$ inherits factor $s$. **(e)** Direct from (d). **(f)** Direct from (d) applied to non-Goldstone eigenvalues only. Full 6-part proof: `THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md` §3. $\square$
 
 *Anchors:* Theorem 4 (§13 Cat A); SB7 (§13 Cat A); T-V5b-T-zero (§13 Cat A); CLAUDE.md "Critical Implementation Details" I6 correction; Modica-Mortola Γ-convergence (standard external — Modica 1987); `THEORY/working/field_equation_framework/06` (Cat A direct working layer, 492L); `THEORY/working/field_equation_framework/12` §2 (Wave 2 critic σ √2 fix consolidated).
 
@@ -1877,7 +1877,7 @@ The branch-conditioned threshold should be written $d_{\min}^*(B,\mathrm{rule},\
 $\mu_{\mathrm{joint}} \geq \min_k \mu_k - (K-1)\lambda_{\mathrm{rep}} \cdot \omega_{\mathrm{soft}}$, where $\omega_{\mathrm{soft}} = \max_{j \neq k} \lVert \mathcal{P}_{O_{jk}}\psi_k^{\mathrm{soft}} \rVert^2$ is branch/overlap-geometry dependent. The mathematical structured perturbation bound (Davis-Kahan + variational, under the relevant second-gap/localization hypotheses) is rigorous. The "33× improvement" is the special value $1/\omega_{\mathrm{soft}} \approx 33$ when $\omega_{\mathrm{soft}} \approx 0.03$ in a limited 12×12 well-separated configuration (exp46-47); it is not a universal constant. *(Erratum 2026-04-10: The improvement factor should be reported as $1/\omega_{\mathrm{soft}}(B,O)$ or as a branch/geometric interval, not as a universal 33× factor.)*
 *Status:* **Category B.** The structured bound formula is theorem-level under explicit conditions; the QUANTITATIVE CLAIM (33× improvement, extended coexistence window) is Cat B — verified on limited configurations.
 
-**T-P-F-ε0-K. Kramers Exponent Stability under Bernoulli Regularization.** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Corollary to T-P-F-ε0. Full derivation: `THEORY/working/MF/pf_tstar_langevin.md` §8.5 Corollary.)*
+**T-P-F-ε0-K. Kramers Exponent Stability under Bernoulli Regularization.** *(New, 2026-05-06 W6 D4 Session I, CV-1.7. Corollary to T-P-F-ε0. Full derivation: `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` §8.5 Corollary.)*
 Under T-P-F-ε0 hypotheses (H1)–(H4) and:
 *(H5)* Morse stability: saddle $\tilde{u}^*_{\mathrm{sad}}$ and minimum $\tilde{u}^*_{\mathrm{min}}$ are non-degenerate critical points of $\mathcal{E}+\varepsilon R$ stable for $\varepsilon\in[0,\varepsilon_0]$ (no critical-point bifurcation);
 
@@ -1894,7 +1894,7 @@ $$\frac{\Gamma_B}{\Gamma_A}=\exp(O(\delta))=1+O(\delta)\quad\text{(exponentially
 
 *Status:* **Cat B** — conditional on H5 (Morse stability). Cat A promotion path: (i) prove H5 for $\mathcal{E}_{\mathrm{SCC}}$ saddles, (ii) establish spectral gap / Poincaré inequality on $\mathcal{F}_M(\mathcal{P})$.
 
-**T-K-Select-PF. Equilibrium K-Selection under P-F-A1 Package I.** *(New, Session R, 2026-05-06. Source: `THEORY/working/MF/k_select_pf_equilibrium.md`. Grounded by CV-1.9 Package I; re-attacks OP-0005-EQ.)*
+**T-K-Select-PF. Equilibrium K-Selection under P-F-A1 Package I.** *(New, Session R, 2026-05-06. Source: `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md`. Grounded by CV-1.9 Package I; re-attacks OP-0005-EQ.)*
 
 Let $G=(V,E)$ be a finite connected graph with $\lvert V \rvert=n$, mass $M\in(0,1)$, $T_*>0$ (P-F-A1 axiom, OP-0021), and persistence parameters $\rho_{\mathrm{pers}},\tau\geq 0$. Define the persistent component count $K_{\mathrm{act}}(u):=\#\mathrm{PersComp}(u;\rho_{\mathrm{pers}},\tau)$ (D-ST-3, §3.11), the K-sector $\mathcal{B}_K=\{u\in\mathcal{F}_M(G):K_{\mathrm{act}}(u)=K\}$, and the feasible set $K_{\mathrm{feas}}=\{K\in\mathbb{Z}_{\geq 0}:\sigma_M(\mathcal{B}_K)>0\}$ (finite, non-empty; $K\leq K_{\mathrm{field}}$ by Commitment 16). Under P-F-A1 Package I (T-PF-A1-AR/SDE/GI/PE all Cat A, CV-1.9):
 
@@ -1914,7 +1914,7 @@ are well-defined ($Z_K>0$ for $K\in K_{\mathrm{feas}}$ since $e^{-E/T_*}>0$ on a
 
 *Status:* **Cat B** (Session R, 2026-05-06, CV-1.10). Gibbs-measure grounding of equilibrium K-selection via Package I is rigorous. Cat B conditions: (a) $K_{\mathrm{act}}$ definition uses D-ST-3 canonical form (§3.11); (b) $K_{\mathrm{feas}}$ characterization requires per-instance verification of $\sigma_M(\mathcal{B}_K)>0$; (c) $\sigma_M$-null boundary stated via codimension argument — requires explicit $\sigma_M$-coordinate computation for Cat A (T-PF-A1-AR affine isometry). Cat A path: formalize (a)–(c); no new mathematics beyond Package I.
 
-**T-K-Select-OBS. Observation-Conditioned K-Selection via Posterior Sector Mass.** *(New, Session Y, 2026-05-06, CV-1.11. Source: `THEORY/working/MF/k_select_obs_posterior.md`. Extends T-K-Select-PF to the observation-conditioned setting; addresses OP-0005-OBS.)*
+**T-K-Select-OBS. Observation-Conditioned K-Selection via Posterior Sector Mass.** *(New, Session Y, 2026-05-06, CV-1.11. Source: `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md`. Extends T-K-Select-PF to the observation-conditioned setting; addresses OP-0005-OBS.)*
 
 Under the same assumptions as T-K-Select-PF, let $\mathfrak{O}_t$ be an observation with likelihood $\mathcal{L}_\mathrm{obs}(\mathfrak{O}_t \mid u) = \exp(-\Phi_\mathrm{obs}(u;\mathfrak{O}_t))$ satisfying: **(LM1)** Borel measurability on $\mathcal{F}_M(G)$; **(LM2)** strict positivity $\mathcal{L}_\mathrm{obs} > 0$ for all $u$; **(LM3)** $Z^\mathrm{obs}(\mathfrak{O}_t) > 0$.
 
@@ -1936,7 +1936,7 @@ Under the same assumptions as T-K-Select-PF, let $\mathfrak{O}_t$ be an observat
 
 *Status:* **Cat B** (Session Y, 2026-05-06, CV-1.11). Claims (i)–(v) proved by standard Bayes on the Gibbs probability space (Package I + T-K-Select-PF + LM1–LM3). Canonical likelihood model (§2.4) verified. exp85 ALL PASSED. Cat A path: canonicalize full stereo likelihood $(H_L,H_R)$; formalize LM1–LM3 for stereo form; temporal extension (sequential update framework).
 
-**T-Temporal-Identity. Persistent Component Identity via Partial Transport.** *(New, W7-FINAL, 2026-05-10, CV-1.12. Sources: `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` (sharp form); `THEORY/working/temporal/H-SINK.md` (W7-T1, S-B2 Cat A); `THEORY/working/temporal/partial_ot_stability.md` (W7-FINAL, Theorem Partial-H-SINK Cat A). Closes NQ-T-Identity-1 (S-B3) and the H-SINK bottleneck. Addresses OP-0011 Steps 2–3.)*
+**T-Temporal-Identity. Persistent Component Identity via Partial Transport.** *(New, W7-FINAL, 2026-05-10, CV-1.12. Sources: `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` (sharp form); `THEORY/4_temporal/temporal_audit/H-SINK.md` (W7-T1, S-B2 Cat A); `THEORY/4_temporal/temporal_audit/partial_ot_stability.md` (W7-FINAL, Theorem Partial-H-SINK Cat A). Closes NQ-T-Identity-1 (S-B3) and the H-SINK bottleneck. Addresses OP-0011 Steps 2–3.)*
 
 Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ and let $M_{t \to s}$ be the canonical SCC entropic partial OT plan (E1–E4, one-sided row-marginal normalized to $u_t$, $\varepsilon_\mathrm{OT} \geq \varepsilon_\mathrm{min} > 0$ [H-SINK-ENT]). Let $\mathrm{PersComp}(u_t) = \{C_i^t\}_{i=1}^{K_t}$, $\mathrm{PersComp}(u_s) = \{C_j^s\}_{j=1}^{K_s}$ (D-ST-3, canonical §3.11). Canonical assumption package: (A1) finite shared graph; (A2) field admissibility; (A3) $K_t,K_s \geq 1$; (A4) stable-K ($K_t=K_s=K$, parts b,d); (A5) well-separated ($d_\mathrm{inter}^* \geq 3$); (A6) E1–E4 admissible plan; (A7) T-Persist-1(e) preconditions; (A7') sharp-OT regime $\varepsilon_\mathrm{OT} \leq \varepsilon_\mathrm{OT}^*$; (A9) mass dominance; (DR1)–(DR2) Sinkhorn dual-potential regularity. Component score matrix $S_{ij}^0 = \lambda_m \gamma(C_i^t,C_j^s) - \lambda_c \sum_{x \in C_i^t, y \in C_j^s} c(x,y)M(x,y)$.
 
@@ -1963,7 +1963,7 @@ Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ and let $M_{t \to s}$ be the canon
 **Theorem T-ACT-KERNEL-COMP→REL.** *(Cat B **conditional**; CV-1.15.)*
 
 *Conditions.*
-- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.17+ (CV-1.16 SEAL §"CV-1.17 Targets" lists T-CC-StableK-Kernel promotion as candidate).
+- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/4_temporal/composition/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.17+ (CV-1.16 SEAL §"CV-1.17 Targets" lists T-CC-StableK-Kernel promotion as candidate).
 - *(stable-K)* $K_t = K_s = K_r$, $d_{\mathrm{inter}}^* \geq 3$, $\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$.
 - *(margin)* $\Delta_{\mathrm{sep}}(M) \geq \Delta_{\mathrm{sep}}^* + 2\epsilon_{\mathrm{kernel}}$ (per S-C1 CERTIFIED correction, CV-1.13).
 
@@ -1979,11 +1979,11 @@ where $R[\cdot]$ is the persistence-correspondence relation extracted from a tra
 
 This entry uses Reading 1.
 
-*References.* T-ACT-GIBBS (§13 Cat A above); T-CC-StableK-Kernel (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §2); T-Temporal-Identity (§13 Cat A, CV-1.13).
+*References.* T-ACT-GIBBS (§13 Cat A above); T-CC-StableK-Kernel (`THEORY/4_temporal/composition/05_promotion_draft.md` §2); T-Temporal-Identity (§13 Cat A, CV-1.13).
 
 *Conditional lift note (forward reference).* Upon CV-1.14 T-CC-StableK-Kernel canonical promotion, the (GK) condition becomes satisfied unconditionally; T-ACT-KERNEL-COMP→REL then lifts from "Cat B conditional" to **Cat B unconditional** (Reading 1). The (stable-K) + (margin) conditions remain as canonical regime hypotheses (not lifted). Whether the unconditional form is automatic or requires a separate audit step is a CV-1.17 SEAL determination.
 
-**Proposition P-SINKHORN-STABILITY-CONDITIONAL.** *(Cat B; CV-1.15.)* *Conditions.* (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`. *Conclusion.* The Sinkhorn-scaled relation $R[M^{\mathrm{sink}}_{t \to s}]$ is stable under the hypothesis package, in the sense that $R[M^{\mathrm{sink}}_{t \to r}]$ approximates $R[M^{\mathrm{sink}}_{s \to r}] \circ R[M^{\mathrm{sink}}_{t \to s}]$ up to terms controlled by the small-sink-gap parameter. *Cat B conditional status.* H-SINK is a regime hypothesis (Sinkhorn-scaling) not yet promoted as a Cat A property; SMALL-SINK-GAP is a regime restriction. Both are explicit. *Reference.* `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`.
+**Proposition P-SINKHORN-STABILITY-CONDITIONAL.** *(Cat B; CV-1.15.)* *Conditions.* (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/4_temporal/action_cost/05_relation_to_sinkhorn.md`. *Conclusion.* The Sinkhorn-scaled relation $R[M^{\mathrm{sink}}_{t \to s}]$ is stable under the hypothesis package, in the sense that $R[M^{\mathrm{sink}}_{t \to r}]$ approximates $R[M^{\mathrm{sink}}_{s \to r}] \circ R[M^{\mathrm{sink}}_{t \to s}]$ up to terms controlled by the small-sink-gap parameter. *Cat B conditional status.* H-SINK is a regime hypothesis (Sinkhorn-scaling) not yet promoted as a Cat A property; SMALL-SINK-GAP is a regime restriction. Both are explicit. *Reference.* `THEORY/4_temporal/action_cost/05_relation_to_sinkhorn.md`.
 
 *CV-1.15 Cat B count: +2 entries (T-ACT-KERNEL-COMP→REL Cat B conditional on CV-1.14; P-SINKHORN-STABILITY-CONDITIONAL Cat B). Running total post-CV-1.15: 67A / 16B / 5C / 5R = 93 claims, ~72% fully proved.*
 
@@ -2029,7 +2029,7 @@ with $\rho_{\mathrm{bd-band}}(u^*) \leq 2\sqrt{\alpha/\beta} \cdot \vert \partia
 - Does NOT prove saddle-point Hessian regularity (OP-HMORSE-SADDLE, separate OP).
 - Does NOT prove Package II Eyring-Kramers prefactor (requires also OP-0021 $T_*$ + L-HMORSE-LOCAL-Saddle).
 
-*References.* L-CLOSURE-LIFT (§13 Cat A); L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION (§13 Cat B/C below/Cat C below); T-OP6-B (§5.3b Cat A); V5b-T-zero (Cat A definitional); T-PreObj-1G (Cat A graph-class independent — guarantees non-empty (C4) regime); D-ST-3 (§3.11 K_act observable). Source: `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+*References.* L-CLOSURE-LIFT (§13 Cat A); L-HMORSE-DECOMP, L-BOUNDARY-MODE-EXCLUSION (§13 Cat B/C below/Cat C below); T-OP6-B (§5.3b Cat A); V5b-T-zero (Cat A definitional); T-PreObj-1G (Cat A graph-class independent — guarantees non-empty (C4) regime); D-ST-3 (§3.11 K_act observable). Source: `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.
 
 ---
 
@@ -2064,7 +2064,7 @@ Cat A path: rigorous residual-correction $\lVert R_{\mathrm{cl}} \rVert$ bound u
 
 *Numerical anchor.* `exp_hmorse_broadness_full_spectrum.py` component-wise $\mu_{\min}$ measurements (H_bd, H_cl, H_sep separately): all match L-HMORSE-DECOMP per-term bounds.
 
-*References.* L-CLOSURE-LIFT (§13 Cat A); T-OP6-B persistent-ridge band bound; T7-Enhanced historical. Source: `THEORY/logs/daily/2026-05-14/02_development.md §3, 42_broadness_approach_b_trace.md §5-§6`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+*References.* L-CLOSURE-LIFT (§13 Cat A); T-OP6-B persistent-ridge band bound; T7-Enhanced historical. Source: `THEORY/logs/daily/2026-05-14/02_development.md §3, 42_broadness_approach_b_trace.md §5-§6`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.
 
 *CV-1.16 Cat B count: +2 entries (L-HMORSE-LOCAL Cat B unconditional, L-HMORSE-DECOMP Cat B conditional). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
 
@@ -2074,7 +2074,7 @@ Cat A path: rigorous residual-correction $\lVert R_{\mathrm{cl}} \rVert$ bound u
 
 **Theorem T-CC-StableK-Kernel (Compositional Consistency, Kernel-Composed Case).** *(Cat B; CV-1.17.)*
 
-*Source.* Lemma 6 in `THEORY/logs/daily/2026-05-07/03_development.md §10` (W6 D5 2026-05-07, complete proof). Working file: `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`. Gap audit v2 (2026-05-12) confirms kernel-composed scope.
+*Source.* Lemma 6 in `THEORY/logs/daily/2026-05-07/03_development.md §10` (W6 D5 2026-05-07, complete proof). Working file: `THEORY/4_temporal/composition/05_promotion_draft.md`. Gap audit v2 (2026-05-12) confirms kernel-composed scope.
 
 *Setup.* Let $u_t, u_s, u_r \in \mathcal{F}_M(\mathcal{P})$ be soft cohesion fields at successive times $t < s < r$. Let $M_{t\to s}, M_{s\to r}$ be E1–E4-admissible transport plans.
 
@@ -2258,7 +2258,7 @@ when D-HMORSE-LOCAL (C5) holds and the active set $A^* \subseteq \partial X$ (co
 
 *Cat B/A path.* Promotion to Cat B requires: explicit Weyl-perturbation bound with named constants; verification of "generically" condition via numerical sweep on heterogeneous graph classes (OP-HMORSE-SBM). Promotion to Cat A additionally requires fine-tune-exclusion (avoid fold-bifurcation proximities).
 
-*References.* T-OP6-B persistent ridge boundary bound (Cat A, §5.3b); D-HMORSE-LOCAL (C5); `CODE/experiments/exp25_hessian_diagonal.py`. Source: `THEORY/logs/daily/2026-05-14/02_development.md §5, 42_broadness_approach_b_trace.md §5.2`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+*References.* T-OP6-B persistent ridge boundary bound (Cat A, §5.3b); D-HMORSE-LOCAL (C5); `CODE/experiments/exp25_hessian_diagonal.py`. Source: `THEORY/logs/daily/2026-05-14/02_development.md §5, 42_broadness_approach_b_trace.md §5.2`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.
 
 *CV-1.16 Cat C count: +1 entry (L-BOUNDARY-MODE-EXCLUSION). Running total post-CV-1.16: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.*
 
@@ -2351,7 +2351,7 @@ The theory now stands as a mathematically structured ontology of pre-objective c
 
 ## 16. Stereo Observation Extension — Canonical Definitions (Cat B candidates, CV-1.6 target)
 
-*(Added 2026-05-06 W6 D4. Updated W6 D4 Session C: D-ST-1..D-ST-3 bodies migrated to §3.9–§3.11 of the Formal Universe; cross-references maintained below. T-ST-5 split into T-ST-5a (Cat B candidate, hard-cut topological locking) and T-ST-5b (Cat C pending, smooth-depth barrier raising). Status: D-ST-1..D-ST-3 now in §3.9–§3.11; D-ST-4..D-ST-5 Cat B candidates here; T-ST-5a Cat B candidate; T-ST-5b Cat C pending. Source: `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`. Implementation: `CODE/stereo_scc/`.)*
+*(Added 2026-05-06 W6 D4. Updated W6 D4 Session C: D-ST-1..D-ST-3 bodies migrated to §3.9–§3.11 of the Formal Universe; cross-references maintained below. T-ST-5 split into T-ST-5a (Cat B candidate, hard-cut topological locking) and T-ST-5b (Cat C pending, smooth-depth barrier raising). Status: D-ST-1..D-ST-3 now in §3.9–§3.11; D-ST-4..D-ST-5 Cat B candidates here; T-ST-5a Cat B candidate; T-ST-5b Cat C pending. Source: `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md`. Implementation: `CODE/stereo_scc/`.)*
 
 This section registers foundational definitions for the stereo observation extension of SCC. The stereo layer models the observation structure $\mathcal{P}_t$ as arising from a depth-conditioned point cloud rather than a flat pixel grid, and introduces P-conditioned versions of K_act, barriers, and free energy. These definitions are a prerequisite for OP-0005 K-Selection Layer C (Kramers barrier formalization) and OP-0006 Boundary Precision.
 
@@ -2418,14 +2418,14 @@ $$\tilde{u}_t^{\mathrm{pix}}(x) = \begin{cases} \tilde{u}_t(b_t(x)) & x \in X_L^
 
 Then: **(a)** the adjacency graph decomposes $G_t^\mathcal{P}\big\vert_{S_1 \cup S_2} = G_1 \sqcup G_2$; **(b)** gradient flow on $\mathcal{F}_M(\mathcal{P})$ preserves $K_{\mathrm{act}} = 2$ — no merger path exists; **(c)** the merger barrier is $\Delta E_{\mathrm{merge}} = +\infty$ (state-space disconnection, not an energy saddle).
 
-**Proof sketch.** Lemma 1 (Graph Decomposition): A-HARDCUT + A-DEPTH-SEP directly imply no cross-$S_1/S_2$ edges — proved by definition. Lemma 2 (Gradient Locality): by A-LOCAL, $\partial\mathcal{E}/\partial \tilde{u}_i$ for $i \in S_1$ depends only on neighbors in $G_1$ — independent of $S_2$ values. Lemma 3 (Mass Non-Flow — auxiliary, not required): gradient step alone preserves per-component masses, but the global projection (`project_volume` bisection) may transfer mass between $S_1$ and $S_2$. This lemma is NOT needed for the main proof. Lemma 4 (Persistent Component Stability): the $H_0$ superlevel-set filtration on $G_1 \sqcup G_2$ can produce bar deaths only within each $G_k$; a cross-component merger event requires a cross-component edge, which does not exist by Lemma 1. Therefore $K_{\mathrm{act}}$ is invariant — regardless of mass redistribution by the global projection. Therefore $K_{\mathrm{act}}$ is invariant. Together: $\mathcal{B}_2 = \{\tilde{u} \in \mathcal{F}_M(\mathcal{P}) : K_{\mathrm{act}} = 2, \text{ depth-sep.}\}$ is a closed invariant set under gradient flow; (b) and (c) follow. Full proof file: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`.
+**Proof sketch.** Lemma 1 (Graph Decomposition): A-HARDCUT + A-DEPTH-SEP directly imply no cross-$S_1/S_2$ edges — proved by definition. Lemma 2 (Gradient Locality): by A-LOCAL, $\partial\mathcal{E}/\partial \tilde{u}_i$ for $i \in S_1$ depends only on neighbors in $G_1$ — independent of $S_2$ values. Lemma 3 (Mass Non-Flow — auxiliary, not required): gradient step alone preserves per-component masses, but the global projection (`project_volume` bisection) may transfer mass between $S_1$ and $S_2$. This lemma is NOT needed for the main proof. Lemma 4 (Persistent Component Stability): the $H_0$ superlevel-set filtration on $G_1 \sqcup G_2$ can produce bar deaths only within each $G_k$; a cross-component merger event requires a cross-component edge, which does not exist by Lemma 1. Therefore $K_{\mathrm{act}}$ is invariant — regardless of mass redistribution by the global projection. Therefore $K_{\mathrm{act}}$ is invariant. Together: $\mathcal{B}_2 = \{\tilde{u} \in \mathcal{F}_M(\mathcal{P}) : K_{\mathrm{act}} = 2, \text{ depth-sep.}\}$ is a closed invariant set under gradient flow; (b) and (c) follow. Full proof file: `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`.
 
 **Remark (barrier interpretation).** The infinite barrier is the *non-existence of an admissible path*, not a saddle at infinite energy height. The correct analogy: separate drainage basins — no merger channel exists. The eps-bridge experiment (exp02-NEB) confirms this: any $\varepsilon > 0$ bridge immediately collapses the barrier to 0, showing the locking is topological (discontinuous at $\varepsilon = 0$), not energetic (which would decay smoothly).
 
 
-**Status:** **Cat A — all gaps closed (W6 D4 Session E).** G1: Lemma 3 (per-component mass conservation) is not required; Lemma 4 holds from Lemma 1 alone — graph topology prevents cross-component merger regardless of mass redistribution by the global projection. G2: claim distinguishes merger (prohibited) from decay (permitted). G3: A-STRICT assumption (strict barcode persistence b−d > ρ_pers + ε) ensures non-boundary case. G4: strict/non-strict threshold conventions are complementary (no ambiguity at |z_i−z_j| = Δz). Exp02-NEB confirmed (W6 D4). Full proof: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`. No P-F flag (deterministic topological result — no stochastic dynamics).
+**Status:** **Cat A — all gaps closed (W6 D4 Session E).** G1: Lemma 3 (per-component mass conservation) is not required; Lemma 4 holds from Lemma 1 alone — graph topology prevents cross-component merger regardless of mass redistribution by the global projection. G2: claim distinguishes merger (prohibited) from decay (permitted). G3: A-STRICT assumption (strict barcode persistence b−d > ρ_pers + ε) ensures non-boundary case. G4: strict/non-strict threshold conventions are complementary (no ambiguity at |z_i−z_j| = Δz). Exp02-NEB confirmed (W6 D4). Full proof: `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`. No P-F flag (deterministic topological result — no stochastic dynamics).
 
-**Source:** `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md §T5` + `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`. **Implementation:** `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py` + `results/exp02_neb/k_stability.csv`.
+**Source:** `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md §T5` + `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`. **Implementation:** `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py` + `results/exp02_neb/k_stability.csv`.
 
 ---
 
@@ -2478,11 +2478,11 @@ where $P$ = number of cross-depth bridge edges at the saddle and $\bar{w}^{2D}$ 
 
 *Gaps before Cat A:* (i) The saddle-profile approximation must be justified (perturbed saddle stability under $L_{\mathrm{smooth}} - L_{\mathrm{flat}}$); (ii) $P$ and $\bar{w}^{2D}$ are geometry-dependent (computed from the graph, not from SCC parameters alone); (iii) $\mathcal{E}_{\mathrm{sep}}$ contribution is not accounted for; (iv) monotonicity in $\Delta z$ of the function $f$ would require $P$ to be monotone, but $P$ depends on the merger geometry (not obvious). *Do not promote T-ST-5b beyond Cat B until gaps (i)–(iv) are closed.*
 
-**Source:** `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md §T5`. **Implementation (pending):** `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py`.
+**Source:** `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md §T5`. **Implementation (pending):** `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py`.
 
 ---
 
-*End of §16. D-ST-1..D-ST-3 bodies are in §3.9–§3.11 (migrated W6 D4 Session C); D-ST-4..D-ST-5 remain here as Cat B candidates. T-ST-5 has been split into T-ST-5a (**Cat A** — all gaps G1–G4 closed W6 D4 Session E; proof in `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`) and T-ST-5b (**Cat B** — formally signed off W6 D4 Session G; narrow claim: full SCC energy only, GL-only NULL, monotonicity not established; exp02e results: full_scc β=10 6/6 SUPPORTED 25% increase; gl_only NULL; β=20 3/6 PARTIAL; see `CODE/experiments/results/exp02e_single_field_neb_summary.md`). Count update at Session G: 48A/12B/5C/5R = 70 claims. *(Further updated Sessions I + K: T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B added → 49A/13B; T-OP6-B Cat B → Cat A → **50A/12B/5C/5R = 72 claims** as of CV-1.7 Session K. See §13 Category A/B headers for authoritative counts.)* Remaining promotion requirements: (i) T-ST-5b Cat A: monotonicity over Δz/λ_z + analytical lower bound on barrier gap; (ii) P-F-A1 Langevin formalization (for $T_*$ in D-ST-4; §8 implementation link + discrepancy note Session E; §8.4 three-target distinction Session F; see `THEORY/working/MF/pf_tstar_langevin.md`); (iii) OP-0009-Pre-a architecture migration OPEN (v2.0, W11–W12; exp02d V3 failure documented in working file §7). Target: CV-1.6 completed (T-ST-5a Cat A + OP-0006 §5.3b canonical + T-ST-5b Cat B sign-off); CV-1.7 completed (T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B + T-OP6-B Cat A, 2026-05-06). CV-1.8 completed (T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B, Sessions M–N–O 2026-05-06; P-F-A1 Package I canonical). CV-1.9 completed (T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, Session P 2026-05-06; heat kernel + $L^2$ kernel uniqueness for GI; Payne-Weinberger 1960 for convex polytopes + $L^2\to TV$ Cauchy-Schwarz for PE; P-F-A1 Package I fully Cat A; 54A/12B/76 claims). CV-1.10 completed (T-K-Select-PF Cat B + OP-0005-EQ partially resolved, Session R 2026-05-06; Gibbs sector-mass equilibrium K-selection grounded by Package I; 54A/13B/77 claims). CV-1.11 completed (T-K-Select-OBS Cat B + OP-0005-OBS partially resolved, Session Y 2026-05-06; observation-conditioned K-selection via posterior sector mass; exp85 ALL PASSED; 54A/14B/78 claims). CV-1.12 completed (T-Temporal-Identity canonical Cat B + H-SINK full Cat A + Theorem Partial-H-SINK Cat A + OP-0011 PARTIALLY RESOLVED, W7-FINAL 2026-05-10; temporal component identity via partial transport; exp83 ALL PASSED; 54A/15B/79 claims). W7-CV113 partial advance (2026-05-10): Lemma S-B1-Weak Cat A (+1A → 55A/15B/80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path updated to S-A1-A3 only. **CV-1.13 SEALED (W7-CV1.13, 2026-05-10):** T-Temporal-Identity full Cat A (S-A1/S-A3/S-C1 all CERTIFIED); count 59A/14B/5C/5R = 83 claims. CV-1.14 targets: T-ST-5b Cat A candidate (analytical lower bound + monotonicity over $\Delta z/\lambda_z$); P-F-A1 Package II conditional start (H5 Morse stability + T_* registration OP-0021); T-σ-Inherit OP-0008 MERGE/SPLIT resolution; OP-0005-DYN/OP-0009 remain active high-priority open problems.*
+*End of §16. D-ST-1..D-ST-3 bodies are in §3.9–§3.11 (migrated W6 D4 Session C); D-ST-4..D-ST-5 remain here as Cat B candidates. T-ST-5 has been split into T-ST-5a (**Cat A** — all gaps G1–G4 closed W6 D4 Session E; proof in `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`) and T-ST-5b (**Cat B** — formally signed off W6 D4 Session G; narrow claim: full SCC energy only, GL-only NULL, monotonicity not established; exp02e results: full_scc β=10 6/6 SUPPORTED 25% increase; gl_only NULL; β=20 3/6 PARTIAL; see `CODE/experiments/results/exp02e_single_field_neb_summary.md`). Count update at Session G: 48A/12B/5C/5R = 70 claims. *(Further updated Sessions I + K: T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B added → 49A/13B; T-OP6-B Cat B → Cat A → **50A/12B/5C/5R = 72 claims** as of CV-1.7 Session K. See §13 Category A/B headers for authoritative counts.)* Remaining promotion requirements: (i) T-ST-5b Cat A: monotonicity over Δz/λ_z + analytical lower bound on barrier gap; (ii) P-F-A1 Langevin formalization (for $T_*$ in D-ST-4; §8 implementation link + discrepancy note Session E; §8.4 three-target distinction Session F; see `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`); (iii) OP-0009-Pre-a architecture migration OPEN (v2.0, W11–W12; exp02d V3 failure documented in working file §7). Target: CV-1.6 completed (T-ST-5a Cat A + OP-0006 §5.3b canonical + T-ST-5b Cat B sign-off); CV-1.7 completed (T-P-F-ε0 Cat A + T-P-F-ε0-K Cat B + T-OP6-B Cat A, 2026-05-06). CV-1.8 completed (T-PF-A1-AR + T-PF-A1-SDE Cat A + T-PF-A1-GI + T-PF-A1-PE Cat B, Sessions M–N–O 2026-05-06; P-F-A1 Package I canonical). CV-1.9 completed (T-PF-A1-GI + T-PF-A1-PE Cat B → Cat A, Session P 2026-05-06; heat kernel + $L^2$ kernel uniqueness for GI; Payne-Weinberger 1960 for convex polytopes + $L^2\to TV$ Cauchy-Schwarz for PE; P-F-A1 Package I fully Cat A; 54A/12B/76 claims). CV-1.10 completed (T-K-Select-PF Cat B + OP-0005-EQ partially resolved, Session R 2026-05-06; Gibbs sector-mass equilibrium K-selection grounded by Package I; 54A/13B/77 claims). CV-1.11 completed (T-K-Select-OBS Cat B + OP-0005-OBS partially resolved, Session Y 2026-05-06; observation-conditioned K-selection via posterior sector mass; exp85 ALL PASSED; 54A/14B/78 claims). CV-1.12 completed (T-Temporal-Identity canonical Cat B + H-SINK full Cat A + Theorem Partial-H-SINK Cat A + OP-0011 PARTIALLY RESOLVED, W7-FINAL 2026-05-10; temporal component identity via partial transport; exp83 ALL PASSED; 54A/15B/79 claims). W7-CV113 partial advance (2026-05-10): Lemma S-B1-Weak Cat A (+1A → 55A/15B/80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path updated to S-A1-A3 only. **CV-1.13 SEALED (W7-CV1.13, 2026-05-10):** T-Temporal-Identity full Cat A (S-A1/S-A3/S-C1 all CERTIFIED); count 59A/14B/5C/5R = 83 claims. CV-1.14 targets: T-ST-5b Cat A candidate (analytical lower bound + monotonicity over $\Delta z/\lambda_z$); P-F-A1 Package II conditional start (H5 Morse stability + T_* registration OP-0021); T-σ-Inherit OP-0008 MERGE/SPLIT resolution; OP-0005-DYN/OP-0009 remain active high-priority open problems.*
 
 ---
 
@@ -2634,7 +2634,7 @@ OMS canonical promotion has two layers: (a) Static (PROVED, this appendix); (b) 
 
 $$\boxed{\textbf{OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034.}}$$
 
-(Source: `THEORY/working/observer_moduli/oms_2_0_accepted_audit.md`. CV-1.11 + Appendix OMS as of 2026-05-08, Session 7.)
+(Source: `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_accepted_audit.md`. CV-1.11 + Appendix OMS as of 2026-05-08, Session 7.)
 
 Count update with Appendix OMS: theorems R1–R5, L1, L2, ED1, ED2, C1.1–C1.5, NV-A, NV-B, SB5, SB7, SB8, SN3, TS1, TS2 + R-OMS-1 add **20 theorem-grade items** to the OMS canonical layer. They are layered on top of the SCC canonical theory (CV-1.12 baseline 54A/15B/5C/5R = 79 claims) and do not modify any SCC-internal theorem. The OMS layer total counts are kept separate from the SCC core registry.
 
@@ -2732,7 +2732,7 @@ $$\boxed{\textbf{OMS-2.0 Accepted — Full}}$$
 
 $$\boxed{\textbf{OMS-2.0 Accepted — Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test)}}$$
 
-(Source: `THEORY/working/observer_moduli/oms_2_0_full_accepted_audit.md`. CV-1.11 + Appendix OMS Static (Session 7) + Temporal subsection M (Session 8) as of 2026-05-08.)
+(Source: `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_full_accepted_audit.md`. CV-1.11 + Appendix OMS Static (Session 7) + Temporal subsection M (Session 8) as of 2026-05-08.)
 
 Count update with Temporal subsection M: theorems T1–T8 + TS3 + H4-T-CW add **9 additional temporal-layer items** (5 PROVED, 1 PROVED-conditional, 2 DEFINED, 1 COMPUTATIONAL EVIDENCE) layered on the static OMS layer (which itself is layered on the SCC core).
 
@@ -2863,11 +2863,11 @@ All prior canonical content is **SUBSTRATE-CANONICAL** — unchanged in statemen
 5. **Shared Unit Principle** — thesis-level: minimal perception unit ≈ minimal action interpretation unit.
 6. **Meaningless Split** — fragmentation not constrained to preserve PA-invariance.
 
-Full definitions, candidate forms, and non-overclaim: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`.
+Full definitions, candidate forms, and non-overclaim: `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md`.
 
 ## §P.4 — Open Problems Registered
 
-OP-PAI-001..006, all OPEN, all High/Medium severity. See `theorem_status.md` Open Problems Catalog for full bodies. The roadmap is `THEORY/canonical/PAI_ROADMAP.md`.
+OP-PAI-001..006, all OPEN, all High/Medium severity. See `theorem_status.md` Open Problems Catalog for full bodies. The roadmap is `THEORY/0_axis/PAI_ROADMAP.md`.
 
 ## §P.5 — Non-Overclaim
 
@@ -2877,4 +2877,4 @@ OP-PAI-001..006, all OPEN, all High/Medium severity. See `theorem_status.md` Ope
 - 8 retractions not reactivated.
 - Existing OPs (0001..0022, HMORSE-*) untouched in status; PAI is *added*, not *replacing*.
 
-*Pivot source: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`. Substrate-anchor verdict: `THEORY/working/macro_audit_2026-05-20.md`. CV-1.20 baseline preserved.*
+*Pivot source: `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md`. Substrate-anchor verdict: `THEORY/0_axis/macro_audit_2026-05-20.md`. CV-1.20 baseline preserved.*

@@ -926,16 +926,16 @@ The critic catches these but at significant rework cost downstream.
 Files 02 and 06 are ready for W9+ reference after targeted revisions. Files 03, 04, 05 require substantial rework before W9+ reference.
 
 **File paths reviewed (absolute)**:
-- `/home/jack/Perception_theory/THEORY/working/field_equation_framework/02_kramers_prefactor_op_0005_attack.md`
-- `/home/jack/Perception_theory/THEORY/working/field_equation_framework/03_modica_mortola_jacobi_cat_b.md`
-- `/home/jack/Perception_theory/THEORY/working/field_equation_framework/04_h_morse_spectral_quantification.md`
-- `/home/jack/Perception_theory/THEORY/working/field_equation_framework/05_cat_a_direct_catalog_proofs.md`
-- `/home/jack/Perception_theory/THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md`
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/field_equation/02_kramers_prefactor_op_0005_attack.md`
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/field_equation/03_modica_mortola_jacobi_cat_b.md`
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/field_equation/04_h_morse_spectral_quantification.md`
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/field_equation/05_cat_a_direct_catalog_proofs.md`
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md`
 
 **Canonical files used for verification**:
-- `/home/jack/Perception_theory/THEORY/canonical/canonical.md` (CV-1.17 SEALED L1134-1136 Theorem 4, L1328 V5b-T-zero, L1652-1711 Package I, L1837 T-K-Select-PF, L1948-2007 L-HMORSE-LOCAL/DECOMP)
-- `/home/jack/Perception_theory/THEORY/canonical/theorem_status.md` (CV-1.18 SEALED L594 OP-HMORSE-SADDLE registration, L803 OP-0005-DYN)
-- `/home/jack/Perception_theory/THEORY/canonical/CV-1.18_SEAL.md` (Routes A/B Mori-Zwanzig deprecation confirmed)
-- `/home/jack/Perception_theory/THEORY/working/cssl/01_critic_evaluation.md` (CSSL 3+4 flaw baseline)
+- `/home/jack/Perception_theory/THEORY/2_substrate/canonical/canonical.md` (CV-1.17 SEALED L1134-1136 Theorem 4, L1328 V5b-T-zero, L1652-1711 Package I, L1837 T-K-Select-PF, L1948-2007 L-HMORSE-LOCAL/DECOMP)
+- `/home/jack/Perception_theory/THEORY/2_substrate/canonical/theorem_status.md` (CV-1.18 SEALED L594 OP-HMORSE-SADDLE registration, L803 OP-0005-DYN)
+- `/home/jack/Perception_theory/THEORY/2_substrate/canonical/seals/CV-1.18_SEAL.md` (Routes A/B Mori-Zwanzig deprecation confirmed)
+- `/home/jack/Perception_theory/THEORY/2_substrate/foundations/cssl/01_critic_evaluation.md` (CSSL 3+4 flaw baseline)
 
 **Note on report file production**: User requested `07_critic_full_review.md`; my Role specification declares Write/Edit tools blocked ("Read-only"), and my system instructions explicitly state "Do NOT Write report/summary/findings/analysis .md files. Return findings directly as your final assistant message." The full critic review is delivered above per the system-mandated text-output model. If a file artifact is required, an external writer (e.g., a Wave 2 follow-up agent with Write access) can paste this content into `07_critic_full_review.md`.

@@ -11,17 +11,17 @@
 
 | # | File | Lines | Type |
 |---|---|---|---|
-| L1 | `THEORY/working/MF/foundational_bridges_2026.md` | 402 | 7 bridges B-1..B-7, NQ-261..267 |
+| L1 | `THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md` | 402 | 7 bridges B-1..B-7, NQ-261..267 |
 | L2 | `TASK_LEDGER.md` | ~150 | State persistence |
-| L3 | `THEORY/working/SF/theorem_2g_schramm_restatement.md` | ~250 | T-PreObj-1G Schramm-locality CV-1.6 candidate |
+| L3 | `THEORY/2_substrate/sigma_framework/theorem_2g_schramm_restatement.md` | ~250 | T-PreObj-1G Schramm-locality CV-1.6 candidate |
 | L4 | `THEORY/working/CV-1.6_packet_crosswalk.md` | ~350 | 11 D-items mapped |
-| L5 | `THEORY/working/MF/cn15_static_dynamic_separation.md` | ~200 | CN15 CV-1.6 candidate |
-| L6 | `THEORY/working/MF/n1_kramers_extension.md` | ~170 | N-1 ↔ K-Selection (b) connection |
-| L7 | `THEORY/working/SF/sigma_class_category.md` | ~250 | σ-class category Fukaya-spirit |
+| L5 | `THEORY/2_substrate/Q2_multiformation/cn15_static_dynamic_separation.md` | ~200 | CN15 CV-1.6 candidate |
+| L6 | `THEORY/2_substrate/Q3_dynamics/n1_kramers_extension.md` | ~170 | N-1 ↔ K-Selection (b) connection |
+| L7 | `THEORY/2_substrate/sigma_framework/sigma_class_category.md` | ~250 | σ-class category Fukaya-spirit |
 | L8 | `THEORY/working/WAVE3_MASTER_INDEX.md` | ~180 | Master index |
 | L9 | `THEORY/logs/daily/2026-04-30/15_wave4_carry_forward.md` | ~140 | Day 5 morning carry-forward (within Day 4 folder) |
-| L10 | `THEORY/working/MF/op003_mo1_status_review.md` | ~150 | MO-1 sidestep preservation review |
-| L11 | `THEORY/working/SF/sigma_rich_refinement_theorem.md` | ~250 | Cat A target σ_rich refinement theorem |
+| L10 | `THEORY/2_substrate/multiformation/op003_mo1_status_review.md` | ~150 | MO-1 sidestep preservation review |
+| L11 | `THEORY/2_substrate/sigma_framework/sigma_rich_refinement_theorem.md` | ~250 | Cat A target σ_rich refinement theorem |
 | L12 | `THEORY/logs/daily/2026-04-30/12_wave3_eod_status.md` | (this) | EOD status |
 
 **Lead-side total:** ~2500+ lines, 12 files.

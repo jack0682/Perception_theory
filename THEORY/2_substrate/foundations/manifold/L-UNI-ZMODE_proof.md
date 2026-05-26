@@ -14,7 +14,7 @@ primary_anchors:
   - canonical §13 L-HMORSE-LOCAL (L1953-1990, Cat B, CV-1.16) — (C4) consistency
 related_files:
   - THEORY/logs/daily/2026-05-20/05_landscape_local_to_global.md §3.7 (Goldstone Type A/B/C 재분류 motivation)
-  - THEORY/working/cssl/01_critic_evaluation.md §A.1 (CRITICAL #1 — "ker = Goldstone only" misframing critique 의 epistemic anchor)
+  - THEORY/2_substrate/foundations/cssl/01_critic_evaluation.md §A.1 (CRITICAL #1 — "ker = Goldstone only" misframing critique 의 epistemic anchor)
 promotion_candidate: CV-1.20 SEAL (along with L-SURFACE-TENSION-RESCALE)
 cot_enforced: yes
 coc_enforced: yes
@@ -27,7 +27,7 @@ constraint_compliance:
   DECLARATION_edits: 0
 ---
 
-> [!nav] Linked: [[../../canonical/canonical|CV-1.19 canonical]] (§13 Theorem 4 L1466, T-σ-Lemma-1 L1386, L-S3-KERNEL-MULT L1798, V5b-T-zero L1328, L-HMORSE-LOCAL L1953-1990) · [[../../canonical/DECLARATION|DECL-1.0]] · [[../../logs/daily/2026-05-20/05_landscape_local_to_global|05 §3.7 Goldstone 3-type 재분류]] · [[../cssl/01_critic_evaluation|CSSL critic §A.1]]
+> [!nav] Linked: [[canonical|CV-1.19 canonical]] (§13 Theorem 4 L1466, T-σ-Lemma-1 L1386, L-S3-KERNEL-MULT L1798, V5b-T-zero L1328, L-HMORSE-LOCAL L1953-1990) · [[DECLARATION|DECL-1.0]] · [[05_landscape_local_to_global|05 §3.7 Goldstone 3-type 재분류]] · [[01_critic_evaluation|CSSL critic §A.1]]
 
 # L-UNI-ZMODE — Uniform Zero-Mode Dichotomy (Cat A Direct)
 

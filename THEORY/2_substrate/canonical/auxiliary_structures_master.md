@@ -524,7 +524,7 @@ OP-0021에 새 후보 route 등록 권장 (canonical OP catalog 직접 수정은
 
 #### 4.8.1 L1-J `(P0)–(P11)` — Stage 3, T-L1-F가 Cat A인 조건 (12개)
 
-**출처:** `canonical.md` L1603–1619; `THEORY/working/MF/kbar_kact_bridge_L1J_catA_upgrade_attempt.md` §§4–5.
+**출처:** `canonical.md` L1603–1619; `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1J_catA_upgrade_attempt.md` §§4–5.
 
 | ID | 이름 | Statement 요약 | Origin | 이유 |
 |---|---|---|---|---|
@@ -854,68 +854,68 @@ H-SINK-ENT는 *별도 가설*이 아니라 H-SINK Cat A의 *부분 명제*. 따�
 
 ```bash
 # 1. 본 문서 존재
-ls THEORY/canonical/auxiliary_structures_master.md
+ls THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 2. Claim count 불변 (이전 79 → 83 유지)
-grep -n "59A.*14B.*5C.*5R\|83 claims" THEORY/canonical/theorem_status.md
+grep -n "59A.*14B.*5C.*5R\|83 claims" THEORY/2_substrate/canonical/theorem_status.md
 
 # 3. ρ_pers 출현 위치 확인 (§4.1) — 기호는 §3.11 (L291)에 도입, 값/규칙은 미등록
 #    (검증된 결과: L291 D-ST-3 정의, L371 ρ_bd 유사 맥락, L2341 T-ST-5a A-STRICT)
-grep -nE "rho_pers|ρ_pers|persistence threshold" THEORY/canonical/canonical.md
+grep -nE "rho_pers|ρ_pers|persistence threshold" THEORY/2_substrate/canonical/canonical.md
 
 # 4. ε_kernel canonical 미등록 확인 (§4.2) — 0 hits 기대
-grep -nE "epsilon_kernel|ε_kernel|kernel tolerance" THEORY/canonical/canonical.md
+grep -nE "epsilon_kernel|ε_kernel|kernel tolerance" THEORY/2_substrate/canonical/canonical.md
 
 # 5. T_* OP-0021 OPEN 확인 (§4.3)
-grep -n "OP-0021" THEORY/canonical/theorem_status.md
+grep -n "OP-0021" THEORY/2_substrate/canonical/theorem_status.md
 
 # 6. canonical.md 참조 §-anchor 유효성
-grep -nE "^## (3\.|6\.|8\.|13\.|14\.|16\.) " THEORY/canonical/canonical.md
+grep -nE "^## (3\.|6\.|8\.|13\.|14\.|16\.) " THEORY/2_substrate/canonical/canonical.md
 
 # 7. CHANGELOG AUX-1.0 entry
 grep -n "AUX-1.0" THEORY/CHANGELOG.md
 
 # 8. AUX-1.1 Stage 0 (T-transformation) row in registry
-grep -n "Stage 0 — Sensor-to-u Transformation" THEORY/canonical/auxiliary_structures_master.md
+grep -n "Stage 0 — Sensor-to-u Transformation" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 9. AUX-1.1 §4.5 (T 누락) section
-grep -n "^### 4.5" THEORY/canonical/auxiliary_structures_master.md
+grep -n "^### 4.5" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 10. AUX-1.1 CHANGELOG entry
 grep -n "AUX-1.1" THEORY/CHANGELOG.md
 
 # 11. AUX-1.2 §7 COB 원칙 절
-grep -n "^## §7" THEORY/canonical/auxiliary_structures_master.md
+grep -n "^## §7" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 12. AUX-1.2 §1 각 표 Origin 열 (8개 이상 hit 기대)
-grep -nE "\| Origin \|" THEORY/canonical/auxiliary_structures_master.md | head
+grep -nE "\| Origin \|" THEORY/2_substrate/canonical/auxiliary_structures_master.md | head
 
 # 13. AUX-1.2 §4.6 COB 위반/모호 항목
-grep -nE "^### 4\.6" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "^### 4\.6" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 14. AUX-1.2 §4.7 ξ 카탈로그 + Route C
-grep -nE "^### 4\.7" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "^### 4\.7" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 15. AUX-1.2 CHANGELOG entry
 grep -n "AUX-1.2" THEORY/CHANGELOG.md
 
 # 16. AUX-1.3 §4.8 전수 감사
-grep -nE "^### 4\.8" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "^### 4\.8" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 17. §4.6.6 / §4.6.7 / §4.6.8 새 COB 위반 / hybrid 항목
-grep -nE "^#### 4\.6\.[678]" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "^#### 4\.6\.[678]" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 18. AUX-1.3 CHANGELOG entry
 grep -n "AUX-1.3" THEORY/CHANGELOG.md
 
 # 19. AUX-1.4 §4.9 D-derivation 전수 시도 절
-grep -nE "^### 4\.9" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "^### 4\.9" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 20. §4.9 sub-sections (4.9.1-4.9.11, 11개 expected)
-grep -cE "^#### 4\.9\." THEORY/canonical/auxiliary_structures_master.md
+grep -cE "^#### 4\.9\." THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 21. D-승격 항목 Origin 갱신 (H-SINK-ENT, m, Mulliken, Wigner, HWF-1)
-grep -nE "\| \*\*D \(§4\.9\.10|\*\*D-conditional on T\*\* \(§4\.9\.[26]|\*\*A 확정\*\* \(§4\.9\.4|\*\*D/P hybrid\*\* \(§4\.9\.3" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "\| \*\*D \(§4\.9\.10|\*\*D-conditional on T\*\* \(§4\.9\.[26]|\*\*A 확정\*\* \(§4\.9\.4|\*\*D/P hybrid\*\* \(§4\.9\.3" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 
 # 22. AUX-1.4 CHANGELOG entry
 grep -n "AUX-1.4" THEORY/CHANGELOG.md

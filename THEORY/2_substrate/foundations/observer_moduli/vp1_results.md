@@ -87,7 +87,7 @@ OMS canonical promotion now requires: VP-3 (OP-OMS-001) and VP-2 (OP-OMS-002).
 
 `CODE/experiments/results/observer_moduli/vp1_summary.md` — machine-readable summary
 
-`THEORY/working/observer_moduli/vp1_counterexamples.md` — detailed analysis of each CE
+`THEORY/2_substrate/foundations/observer_moduli/vp1_counterexamples.md` — detailed analysis of each CE
 
 `CODE/experiments/exp86_vp1_p_resolution_audit.py` — reproducible experiment script
 

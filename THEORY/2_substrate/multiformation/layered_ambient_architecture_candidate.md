@@ -3,10 +3,10 @@
 # Non-Canonical Commitment Candidate: Layered Ambient-State Architecture for SCC / Multi-Formation
 
 **Document type:** Non-canonical commitment candidate. Working draft.
-**File:** `THEORY/working/MF/layered_ambient_architecture_candidate.md`
+**File:** `THEORY/2_substrate/multiformation/layered_ambient_architecture_candidate.md`
 **Created:** 2026-05-02 (W6 prep, advanced from prior architecture decision report).
 **Status mode:** Non-canonical. No commitment number is assigned. No canonical files are edited by this memo.
-**Canonical baseline:** CV-1.5.1 (`THEORY/canonical/canonical.md`, 2026-04-29).
+**Canonical baseline:** CV-1.5.1 (`THEORY/2_substrate/canonical/canonical.md`, 2026-04-29).
 **Related working files:** `K_status_commitment.md` (OAT-1), `shared_pool_canonical_proposal.md` (OAT-4), `mathematical_scaffolding_4tools.md` (OAT-supplementary), `sigma_multi_trajectory.md` (D-6b dynamic), `nq242c_explicit_construction.md` (NQ-242c protocol), `multi_formation_sigma.md` (D-6a static), `sigma_rich_augmentation.md` (Path B), `cn15_static_dynamic_separation.md` (CN15 candidate).
 **Companion docs (this package):** `layered_ambient_architecture_README.md`, `layered_ambient_architecture_agent_notes.md`, `layered_ambient_architecture_next_work.md`.
 

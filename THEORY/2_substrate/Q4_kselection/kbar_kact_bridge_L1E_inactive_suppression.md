@@ -2,7 +2,7 @@
 
 # L1-E: Inactive Suppression Bound
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1E_inactive_suppression.md`  
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1E_inactive_suppression.md`  
 **Document type:** non-canonical working formalization.  
 **Created:** 2026-05-02, after L1-A through L1-D.  
 **Status:** lemma-candidate layer only; no canonical promotion.

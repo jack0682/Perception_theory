@@ -7,7 +7,7 @@
 **Status:** working draft — daily log record; not yet promoted to working/ or canonical/
 **Type:** theoretical development + cross-verification
 **Author:** W6 D2 evening session.
-**Promotion target:** `THEORY/working/MF/stereo_observation_framework.md` (new working file, same session); canonical §1 / §3 amendment pending OP-0009-Pre full resolution (v2.0 horizon).
+**Promotion target:** `THEORY/2_substrate/Q2_multiformation/stereo_observation_framework.md` (new working file, same session); canonical §1 / §3 amendment pending OP-0009-Pre full resolution (v2.0 horizon).
 
 ---
 

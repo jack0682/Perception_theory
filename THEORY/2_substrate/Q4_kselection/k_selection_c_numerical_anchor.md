@@ -406,6 +406,6 @@ CV-1.7+ candidate Commitment 19 (K-Selection axiom) per task #49 in TaskList; th
 
 **Status: working draft. Task #7 complete (design phase). K-Selection (c) symmetry-broken numerical anchor: 7 measurements (M1 K_act trajectory, M2 crossover T_c, M3 K-jump intervals + LSW exponent, M4 barrier heights, M5 pair-distance at merger, M6 NQ-242c verification, M7 V-R PH barcode); 4 graph-class anchors (A1 T²_20, A2 T²_30, A3 R23, A4 hexagonal); script outline at CODE/scripts/k_selection_c_numerical.py (NOT run); ~100 single-CPU hours runtime with parallelization mitigation; 7 validation criteria (V1-V7) for Cat B target post-execution. Forward: Task #8 compatibility proof composing options (a)+(b)+(c)+(d). CV-1.7+ Commitment 19 K-Selection axiom target.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/k_selection_c_numerical_anchor.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/k_selection_c_numerical_anchor.md`
 **Created:** 2026-04-30 (W5 Day 4).
 **Promotion target:** CV-1.7+ W12+ packet (combined with Tasks #5, #6, #8 + numerical execution W6-W7).

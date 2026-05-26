@@ -17,7 +17,7 @@ constraint_compliance:
   - 4 energy terms treated as conceptually independent: ✓
 ---
 
-> [!nav] Linked: [[00_concept_handoff|CSSL concept handoff (audit target)]] · [[../../canonical/canonical|CV-1.18 canonical (untouched)]] · [[../../canonical/DECLARATION|DECL-1.0]] · [[../../logs/daily/2026-05-20/99_summary|W8-Day3 summary]] · canonical §3.7 §9.3 §13 L-HMORSE-LOCAL / L-HMORSE-DECOMP / L-BOUNDARY-MODE-EXCLUSION / T-σ-Lemma-1 / V5b-T-zero / T-PF-A1-SDE
+> [!nav] Linked: [[00_concept_handoff|CSSL concept handoff (audit target)]] · [[canonical|CV-1.18 canonical (untouched)]] · [[DECLARATION|DECL-1.0]] · [[THEORY/logs/daily/2026-05-20/99_summary|W8-Day3 summary]] · canonical §3.7 §9.3 §13 L-HMORSE-LOCAL / L-HMORSE-DECOMP / L-BOUNDARY-MODE-EXCLUSION / T-σ-Lemma-1 / V5b-T-zero / T-PF-A1-SDE
 
 # CSSL — Critic Evaluation (W8-Day3 evening, post-EOD)
 

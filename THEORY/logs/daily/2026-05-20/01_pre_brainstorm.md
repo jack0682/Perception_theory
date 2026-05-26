@@ -8,7 +8,7 @@ purpose: 본 day 의 Priority 1-3 verification task 의 reference 백서 — 어
 canonical_version: CV-1.18 (sealed 2026-05-19, untouched)
 ---
 
-> [!nav] Linked: [[00_plan|today's verification plan]] · [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[../2026-05-19/04_manifold_topology_program_plan|어제 post-SEAL plan]] · [[../2026-05-19/01_pre_brainstorm|어제 pre_brainstorm + §POST-SEAL APPENDIX]] · [[../../../working/foundation/manifold_topology_attempt_v1|v1 master synthesis]]
+> [!nav] Linked: [[00_plan|today's verification plan]] · [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[04_manifold_topology_program_plan|어제 post-SEAL plan]] · [[../2026-05-19/01_pre_brainstorm|어제 pre_brainstorm + §POST-SEAL APPENDIX]] · [[manifold_topology_attempt_v1|v1 master synthesis]]
 
 # 01 Pre-Brainstorm — Verification-Light Day Reference
 

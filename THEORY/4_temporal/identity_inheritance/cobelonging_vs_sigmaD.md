@@ -21,7 +21,7 @@
 **Status:** working draft (OAT-5, post W5 Day 4 morning batch session).
 **Type:** Theory-only audit; verdict on whether $C_t$ remains demoted-derived under K>1 or revives as primitive.
 **Author origin:** OAT-5 W6 priority advanced to W5 Day 4 per user "지금 하자" + "모든 도구 적극 활용 + 자율" direction; analyst-grade analysis (gap-list returned 2026-04-30 morning) integrated into write-capable working file.
-**Canonical refs:** §3.6 (line 198–200) — $\mathbf{C}_t$ demoted to derived diagnostic; §6 Group C (line 388–419) — C1–C4 axioms vestigial; §11.1 Commitment 12 (line 779) — derived diagnostic restated; §13 σ-multi entries (CV-1.5.1) — D-6a Multi-Static; OP-0009-C sub-item (`THEORY/canonical/theorem_status.md` Open Problems Catalog, registered W5 Day 3 EOD).
+**Canonical refs:** §3.6 (line 198–200) — $\mathbf{C}_t$ demoted to derived diagnostic; §6 Group C (line 388–419) — C1–C4 axioms vestigial; §11.1 Commitment 12 (line 779) — derived diagnostic restated; §13 σ-multi entries (CV-1.5.1) — D-6a Multi-Static; OP-0009-C sub-item (`THEORY/2_substrate/canonical/theorem_status.md` Open Problems Catalog, registered W5 Day 3 EOD).
 **Working refs:** `K_status_commitment.md` (OAT-1, Commitment 16); `mathematical_scaffolding_4tools.md` (OAT-supplementary, Tool A2 quotient + Tool A1 stratified); `multi_formation_sigma.md` (D-6a Approach A σ_multi^D definition); `sigma_multi_trajectory.md` (D-6b dynamic).
 **Open problems referenced:** OP-0009-C (this file's resolution candidate), OP-0009-A (architecture choice — verdict architecture-conditional).
 
@@ -404,7 +404,7 @@ Orthogonality witness §5.2 construction을 numerical로 실증 — 두 K=2 D_4-
 
 **Status: working draft (OAT-5 Option C-3 variant). $C_t$ demoted-derived maintained; σ_multi^D 와 orthogonal information (not subsumption). K-field architecture 4a primary 가정 하에서 verdict valid; shared-pool branch 결정 후 재검토. Orthogonality witness construction §5.2 (D_4-grid). OP-0009-C PARTIALLY RESOLVED (architecture-conditional). Canonical impact ~10-15 lines at CV-1.6.**
 
-**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/cobelonging_vs_sigmaD.md`
+**File:** `/Users/ojaehong/Perception/Perception_theory/THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md`
 **Created:** 2026-04-30 (W5 Day 4 morning, OAT-5 advanced from W6 Day 3).
 **Lines:** ~340.
 **Promotion target:** ~~CV-1.6 W6 Day 7 morning (D-CV1.6-O6 if user approves)~~ → **CV-1.6 D-CV1.6-O4** (canonical-scheduled per `THEORY/working/CV-1.6_packet_crosswalk.md` line 50; not "if user approves" hedge). *(Erratum 2026-05-05 W6 D2 closure-rigor audit Check 4: residual stale text from pre-12th-addendum disclosure-header design; corrected per CHANGELOG 2026-05-04 W6 D1 EOD twelfth addendum Error 1.)*

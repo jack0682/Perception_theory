@@ -152,4 +152,4 @@ local-minimum conditions. All 18 exp02d barriers were negative (artifacts, not b
 exp02e fixed this by using bimodal init → `single_field_relax` → `is_local_minimum` (energy-probe)
 to obtain genuine F_M(P) local minima as NEB endpoints.
 
-Documented in: `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md §7`.
+Documented in: `THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md §7`.

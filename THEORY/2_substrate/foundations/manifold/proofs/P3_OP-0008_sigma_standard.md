@@ -4,7 +4,7 @@
 **Date**: 2026-05-19 (W8-Day3 evening, Opus tier).
 **Author**: Claude session, sole producer (Opus 4.7 1M-context).
 **Phase 1 직접 입력**: `/tmp/scc_proofs_v02/E2_brouwer_kato_rmt.md` §B (P3 Kato + RMT literature scan).
-**Working 직접 입력**: `THEORY/working/MF/broad_survey_B2.md` (2-route attack framework).
+**Working 직접 입력**: `THEORY/2_substrate/multiformation/broad_survey_B2.md` (2-route attack framework).
 **Canonical 앵커**: `canonical.md §11.1 Commitment 14`, `§13 T-σ-multi-A-Static / T-σ-Lemma-1/2/3 / T-σ-Theorem-3/4`, `§12 Coupling Bound Lemma`, `§15 OP-0008 (registered CV-1.5.1)`, `§16 T-σ-Inherit working Cat B (CV-1.12, W7-FINAL)`.
 **Target Cat verdict**: **Cat B conditional on $\mathcal{D}_{\mathrm{conv}}$ regime + Sub-step 3 rate matching**; **honest gap on limit-exchange remains**; *Cat A path 명시* (Anderson-Guionnet-Zeitouni universality + free probability) **deferred to W9+**.
 

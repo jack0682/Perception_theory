@@ -2,7 +2,7 @@
 
 # Proof-Status Audit: \(K_{\mathrm{soft}}\), \(K_{\mathrm{bar}}\), and \(K_{\mathrm{act}}\)
 
-**File:** `THEORY/working/MF/ksoft_kact_bridge_proof_status.md`  
+**File:** `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_proof_status.md`  
 **Document type:** non-canonical proof-status audit.  
 **Created:** 2026-05-02, Work Package 3 after WQ-LAT-1.C.  
 **Status:** working audit; no canonical promotion.

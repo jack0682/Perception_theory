@@ -123,7 +123,7 @@ OP-0012 (Persistence Composition): PARTIALLY RESOLVED
   Sub-case B — Independent Sinkhorn plan:
     STATUS: OPEN (OP-0012-SINK, new)
     BLOCKER: δ_eff lemma (c_direct vs c_eff bound) + Eff-Sinkhorn lemma
-    See: THEORY/working/CV114_TEMPORAL_COMPOSITION/03_gap_audit.md §C
+    See: THEORY/4_temporal/composition/03_gap_audit.md §C
 
   Sub-case C — K-jump general:
     STATUS: OPEN, Cat C

@@ -15,13 +15,13 @@ last_updated: 2026-05-08
 
 **Purpose:** Register all claims (C-xxxx), proofs (P-xxxx), and canonical theorems (T-xxxx, CV-x.y). This is the authoritative index of what has been proved.
 
-**2026-05-21 PAI PIVOT note (CANONICAL-DIRECTION)**: As of 2026-05-21 (W8-Day4), all 102 claims below are reclassified as **SUBSTRATE-CANONICAL** — statements, proofs, and Cat ratings *unchanged*. The project's main research axis pivots to **Perception-Action Interpretation (PAI)**: *Perception must produce the same unit that action can act upon*. PAI registers 6 OPEN problems (OP-PAI-001..006, see Open Problems Catalog below) and 6 new DEFINITION-DRAFT vocabulary items. CV-1.20 remains the canonical version (no version bump from the pivot). Pivot source: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` + `THEORY/canonical/PAI_ROADMAP.md`. Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
+**2026-05-21 PAI PIVOT note (CANONICAL-DIRECTION)**: As of 2026-05-21 (W8-Day4), all 102 claims below are reclassified as **SUBSTRATE-CANONICAL** — statements, proofs, and Cat ratings *unchanged*. The project's main research axis pivots to **Perception-Action Interpretation (PAI)**: *Perception must produce the same unit that action can act upon*. PAI registers 6 OPEN problems (OP-PAI-001..006, see Open Problems Catalog below) and 6 new DEFINITION-DRAFT vocabulary items. CV-1.20 remains the canonical version (no version bump from the pivot). Pivot source: `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` + `THEORY/0_axis/PAI_ROADMAP.md`. Trigger: `THEORY/0_axis/macro_audit_2026-05-20.md` §11 verdict.
 
-**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.20; current = **CV-1.20**) then status (active, challenged, deprecated). *(Updated 2026-05-20 W8-Day3 evening: **CV-1.20 SEALED — L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A**. Two Cat A direct additions: (1) **L-UNI-ZMODE** (Uniform Zero-Mode Dichotomy) — 균일 critical $u^* = c\mathbf{1}$ 에서 Type C Goldstone zero mode 부재 증명; orbit triviality + canonical T-σ-Lemma-1 (Cat A) + L-S3-KERNEL-MULT Case B (Cat A, CV-1.19) 의 direct combination; 5-step proof; CSSL critic 의 "ker = Goldstone only at uniform" misframing 의 formal refutation. (2) **L-SURFACE-TENSION-RESCALE** (Surface Tension Parameter Rescaling) — $(α, β) → (sα, sβ)$ rescaling 의 T8 wall 불변 + boundary width 불변 + σ linear scaling + Hessian linear homogeneity + Goldstone preservation + non-Goldstone gap arbitrary expansion (6-part Cat A direct). Wave 2 critic σ √2 fix 반영 ($\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$, NOT $\sqrt{\alpha\beta}/3$) + prefactor invariance retraction. **Claim count change: +2A → 71A/20B/6C/5R = 102 claims (~70% fully proved). HT-3.10 → HT-3.11.** Source: `THEORY/working/foundation/L-UNI-ZMODE_proof.md` (proof file) + `THEORY/working/field_equation_framework/06_surface_tension_rescaling_cat_a.md` (rescaling 6-part proof) + `THEORY/working/field_equation_framework/12_wave1_critical_fixes_consolidated.md` §2 (Wave 2 critic σ √2 fix). Seal: `THEORY/canonical/CV-1.20_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged; no scc/ edits). Trigger: W8-Day3 POST-99 evening Option C escalation (사용자 critique "정리만 하고 증명 0건" → 즉시 증명 실행). Prior 2026-05-20 W8-Day3 closing → W8-Day4 execution: **CV-1.19 SEALED — S1 Łojasiewicz $c_G$ Cat B + S3 full SCC kernel-mult identity Cat A on standard regimes**. Two canonical lemma additions: (1) **L-S3-KERNEL-MULT** (Cat A on standard regimes — case A regular graphs via P=I-L/d functional calculus + case B uniform critical via T-σ-Lemma-1 Cat A + case C with H-INV explicit hypothesis via L-INV-1/2/3 derivation in W8-Day3 03 §6); (2) **L-LOJASIEWICZ-CG** (Cat B verified for non-degenerate Fiedler stratum, $c_G = 1.171$ for 2D torus 16×16 reference; Phase 5's original 2.09 traced to factor-2 W'' normalization error). **Claim count change: +1A +1B → 69A/20B/6C/5R = 100 claims** (~69% fully proved). HT-3.9 → HT-3.10. Source: `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (308L, S1) + `03_D_L_commutation.md` (400L, S3 with §6 NEW L-INV-1/2/3) + `99_summary.md` (281L, Decision A). Seal: `THEORY/canonical/CV-1.19_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged). Prior 2026-05-19 W8-Day2 evening: **CV-1.18 SEALED — Stage 0 Sensor T axiom package + T_* ξ resident formal entry + OP-0021 Routes A/B deprecation**. Three axiomatic registration acts: Act 1 OMS-1 §A clarification (ξ category Theorem-grade container); Act 2 Appendix OMS §N신설 (9-condition Stage 0 + T_* 6-field entry + Route C G1+G3 hybrid + Routes A/B DEPRECATION); Act 3 OP-0021 status amendment (Routes A/B COB-violating → DEPRECATED, Route C ξ resident → ACCEPTED). **Claim count UNCHANGED (68A/19B/6C/5R = 98)** — axiomatic registration acts, no new Cat A/B/C theorem additions. HT-3.8 → HT-3.9. Source: `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P) + `P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic) + `_SUMMARY_v0.2.md`. Seal: `THEORY/canonical/CV-1.18_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged). Prior 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
+**Structure:** Rows are organized by canonical version (CV-1.0 .. CV-1.20; current = **CV-1.20**) then status (active, challenged, deprecated). *(Updated 2026-05-20 W8-Day3 evening: **CV-1.20 SEALED — L-UNI-ZMODE Cat A + L-SURFACE-TENSION-RESCALE Cat A**. Two Cat A direct additions: (1) **L-UNI-ZMODE** (Uniform Zero-Mode Dichotomy) — 균일 critical $u^* = c\mathbf{1}$ 에서 Type C Goldstone zero mode 부재 증명; orbit triviality + canonical T-σ-Lemma-1 (Cat A) + L-S3-KERNEL-MULT Case B (Cat A, CV-1.19) 의 direct combination; 5-step proof; CSSL critic 의 "ker = Goldstone only at uniform" misframing 의 formal refutation. (2) **L-SURFACE-TENSION-RESCALE** (Surface Tension Parameter Rescaling) — $(α, β) → (sα, sβ)$ rescaling 의 T8 wall 불변 + boundary width 불변 + σ linear scaling + Hessian linear homogeneity + Goldstone preservation + non-Goldstone gap arbitrary expansion (6-part Cat A direct). Wave 2 critic σ √2 fix 반영 ($\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$, NOT $\sqrt{\alpha\beta}/3$) + prefactor invariance retraction. **Claim count change: +2A → 71A/20B/6C/5R = 102 claims (~70% fully proved). HT-3.10 → HT-3.11.** Source: `THEORY/2_substrate/foundations/manifold/L-UNI-ZMODE_proof.md` (proof file) + `THEORY/2_substrate/foundations/field_equation/06_surface_tension_rescaling_cat_a.md` (rescaling 6-part proof) + `THEORY/2_substrate/foundations/field_equation/12_wave1_critical_fixes_consolidated.md` §2 (Wave 2 critic σ √2 fix). Seal: `THEORY/2_substrate/canonical/seals/CV-1.20_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged; no scc/ edits). Trigger: W8-Day3 POST-99 evening Option C escalation (사용자 critique "정리만 하고 증명 0건" → 즉시 증명 실행). Prior 2026-05-20 W8-Day3 closing → W8-Day4 execution: **CV-1.19 SEALED — S1 Łojasiewicz $c_G$ Cat B + S3 full SCC kernel-mult identity Cat A on standard regimes**. Two canonical lemma additions: (1) **L-S3-KERNEL-MULT** (Cat A on standard regimes — case A regular graphs via P=I-L/d functional calculus + case B uniform critical via T-σ-Lemma-1 Cat A + case C with H-INV explicit hypothesis via L-INV-1/2/3 derivation in W8-Day3 03 §6); (2) **L-LOJASIEWICZ-CG** (Cat B verified for non-degenerate Fiedler stratum, $c_G = 1.171$ for 2D torus 16×16 reference; Phase 5's original 2.09 traced to factor-2 W'' normalization error). **Claim count change: +1A +1B → 69A/20B/6C/5R = 100 claims** (~69% fully proved). HT-3.9 → HT-3.10. Source: `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (308L, S1) + `03_D_L_commutation.md` (400L, S3 with §6 NEW L-INV-1/2/3) + `99_summary.md` (281L, Decision A). Seal: `THEORY/2_substrate/canonical/seals/CV-1.19_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged). Prior 2026-05-19 W8-Day2 evening: **CV-1.18 SEALED — Stage 0 Sensor T axiom package + T_* ξ resident formal entry + OP-0021 Routes A/B deprecation**. Three axiomatic registration acts: Act 1 OMS-1 §A clarification (ξ category Theorem-grade container); Act 2 Appendix OMS §N신설 (9-condition Stage 0 + T_* 6-field entry + Route C G1+G3 hybrid + Routes A/B DEPRECATION); Act 3 OP-0021 status amendment (Routes A/B COB-violating → DEPRECATED, Route C ξ resident → ACCEPTED). **Claim count UNCHANGED (68A/19B/6C/5R = 98)** — axiomatic registration acts, no new Cat A/B/C theorem additions. HT-3.8 → HT-3.9. Source: `THEORY/2_substrate/foundations/manifold/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P) + `P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic) + `_SUMMARY_v0.2.md`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.18_SEAL.md`. Pytest regression 0 (225 passed + 1 xfailed unchanged). Prior 2026-05-10 W7-CV1.13: **T-Temporal-Identity FULL Cat A — CV-1.13 SEALED**. S-A1 CERTIFIED (D-ST-3 integration), S-A3 CERTIFIED (existence Cat A), S-C1 CERTIFIED (kernel independence Cat A conditional, margin corrected to $\Delta_\mathrm{sep} \geq \Delta_\mathrm{sep}^* + 2\epsilon_\mathrm{kernel}$). All 4 parts (a,b,c,d) Cat A. Net: **+4A, −1B → 59A/14B/5C/5R = 83 claims**. HT-3.5. Prior 2026-05-10 W7-CV113A: S-B1-SYM Cat B added — symbolic identity ρ_deep ≥ θ_core(1 − 4 C_iso/√m) from Theorem 2b (Cat A); literal ρ_deep ≥ 0.84 retracted as standalone, preserved as ρ_sym(0.2, 25, 1.0); OP-SB1-084 registered (LOW); OP-SB1-DEEP superseded; HT-3.4. Net count: 55A/15B/5C/5R = 80 claims unchanged. Prior 2026-05-10 W7-CV113: Lemma S-B1-Weak Cat A (+1A → 80 claims preliminary); OP-SB1-DEEP downgraded non-blocking; T-Temporal-Identity (b,d) Cat A path now requires only S-A1-A3; HT-3.3. Prior 2026-05-10 W7-FINAL: T-Temporal-Identity canonical Cat B promoted (CV-1.12, +1B → 79 claims); H-SINK full theorem Cat A (partial OT gap closed via Theorem Partial-H-SINK); H-SINK-ENT hypothesis registered; hypothesis_tree.md HT-3.2; CHANGELOG updated. Prior 2026-05-10 W7-T1: H-SINK-S2 = S-B2 = Lemma 8.2 Cat A; H-SINK PARTIALLY CLOSED; HT-3.1. Prior 2026-05-08 W6 EOD: OMS-2.0 Accepted — Full (Appendix OMS §A–§M in canonical.md; formal theorem rows pending); DECLARATION.md DECL-1.0 + hypothesis_tree.md HT-3.0 created; T-Temporal-Identity + T-σ-Inherit working Cat B candidates (not yet canonical rows). Prior 2026-05-06: T-OP6-B Cat A, P-F-ε0/ε0-K, OP-0006 RESOLVED, P-F-A1 Package I fully Cat A, T-K-Select-PF Cat B (CV-1.10), T-K-Select-OBS Cat B (CV-1.11).)*
 
-**Dependency structure authority:** `THEORY/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
+**Dependency structure authority:** `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.0, 2026-05-07) — 정리 간 의존성, 미완 가설, 크리티컬 패스의 권위 소스. 이 파일(theorem_status.md)은 정리 상태의 권위 소스; hypothesis_tree.md는 의존성 구조의 권위 소스.
 
-**Auxiliary structures registry:** `THEORY/canonical/auxiliary_structures_master.md` (AUX-1.0, 2026-05-18) — Stage 1–7 보조구조(매개변수, 임계값, 가설 패키지, 관찰자 모델) 단일 레지스트리. 메타 문서, 클레임 카운트 영향 없음. ρ_pers / ε_kernel / T_* / 가설 패키지 호환성 등 canonical 미등록 항목 명시.
+**Auxiliary structures registry:** `THEORY/2_substrate/canonical/auxiliary_structures_master.md` (AUX-1.0, 2026-05-18) — Stage 1–7 보조구조(매개변수, 임계값, 가설 패키지, 관찰자 모델) 단일 레지스트리. 메타 문서, 클레임 카운트 영향 없음. ρ_pers / ε_kernel / T_* / 가설 패키지 호환성 등 canonical 미등록 항목 명시.
 
 ---
 
@@ -29,7 +29,7 @@ last_updated: 2026-05-08
 
 ### CV-1.6 Candidates — Stereo-SCC Extension (W6 D4, 2026-05-06, Sessions A–D)
 
-*Not yet canonical — pending CV-1.6 promotion. Bodies in `canonical.md §3.9–§3.11` and `§16`. Source: `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`.*
+*Not yet canonical — pending CV-1.6 promotion. Bodies in `canonical.md §3.9–§3.11` and `§16`. Source: `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md`.*
 
 | T-ID / D-ID | Name | Status | Category | Experiments | Notes |
 |---|---|---|---|---|---|
@@ -48,7 +48,7 @@ last_updated: 2026-05-08
 
 ### CV-1.7 Canonical Additions — P-F-A1 Stochastic Foundation (W6 D4, 2026-05-06, Sessions H–I)
 
-*T-P-F-ε0 and T-P-F-ε0-K promoted to canonical §13 in Session I. Bodies in `THEORY/working/MF/pf_tstar_langevin.md` §8.5. P-F-A1 axiom remains OPEN.*
+*T-P-F-ε0 and T-P-F-ε0-K promoted to canonical §13 in Session I. Bodies in `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` §8.5. P-F-A1 axiom remains OPEN.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -72,7 +72,7 @@ last_updated: 2026-05-08
 
 *CV-1.15 count update (W7-Day5, 2026-05-14): action-based temporal succession package — L-ENDPOINT-NONSEMI, L-ACTION-NORMALIZATION, L-FINGERPRINT-ACTION-ADMISSIBLE, T-ACT-DP, L-ACTION-DELTA-EFF-ZERO, T-ACT-GIBBS, L-SOFTMIN-HARDMIN-BOUND, L-SOFT-ACTION-DELTA-EFF-ZERO **Cat A (+8A)**; T-ACT-KERNEL-COMP→REL **Cat B conditional** on CV-1.14 working candidate; P-SINKHORN-STABILITY-CONDITIONAL **Cat B (+2B)**. P-ACTION-PATH-INHERITANCE Interpretation (not counted). OP-0012-SINK new sub-label (OPEN; cost-level blocker closed under action redefinition, scaling-gap blocker remains). T-SINKHORN-PLAN-SEMIGROUP-FAILS OPEN warning. **Running total: 67A / 16B / 5C / 5R = 93 claims, ~72% fully proved.** exp89 ALL PASSED (3/3 cases, numerical sanity only). HT-3.6.*
 
-*CV-1.16 count update (W7-Day5 extension, 2026-05-14): H-MORSE-Local closure package — **L-CLOSURE-LIFT Cat A (+1A)** via Theorem B2 operator-norm route ($\lVert J_\mathrm{Cl} \rVert_{D\to D} \leq a_\mathrm{cl}/4 < 1$, degree-weighted self-adjointness of stochastic operator $P$); **L-HMORSE-LOCAL Cat B (+1B)** unconditional under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form; **L-HMORSE-DECOMP Cat B (+1B)** conditional on b_D=0 + canonical A3; **L-BOUNDARY-MODE-EXCLUSION Cat C (+1C)** with numerical anchor exp25 + sketch-level Weyl-perturbation. **OP-HMORSE-BROADNESS CLOSED Cat A** (analytic Theorem B2 + 15/15 numerical PASS in `exp_hmorse_broadness_full_spectrum.py`). T7-Enhanced (canonical Cat A) historically related — L-CLOSURE-LIFT supersedes as the broadness statement. **Running total: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.** Source: `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`. HT-3.7.*
+*CV-1.16 count update (W7-Day5 extension, 2026-05-14): H-MORSE-Local closure package — **L-CLOSURE-LIFT Cat A (+1A)** via Theorem B2 operator-norm route ($\lVert J_\mathrm{Cl} \rVert_{D\to D} \leq a_\mathrm{cl}/4 < 1$, degree-weighted self-adjointness of stochastic operator $P$); **L-HMORSE-LOCAL Cat B (+1B)** unconditional under D-HMORSE-LOCAL (C1)(C2′)(C3)(C4)(C5) active-set form; **L-HMORSE-DECOMP Cat B (+1B)** conditional on b_D=0 + canonical A3; **L-BOUNDARY-MODE-EXCLUSION Cat C (+1C)** with numerical anchor exp25 + sketch-level Weyl-perturbation. **OP-HMORSE-BROADNESS CLOSED Cat A** (analytic Theorem B2 + 15/15 numerical PASS in `exp_hmorse_broadness_full_spectrum.py`). T7-Enhanced (canonical Cat A) historically related — L-CLOSURE-LIFT supersedes as the broadness statement. **Running total: 68A / 18B / 6C / 5R = 97 claims, ~70% fully proved.** Source: `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md`; daily logs `2026-05-14/40–44, 49`. Numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`. HT-3.7.*
 
 *CV-1.8 candidates registered (Session M, 2026-05-06): T-PF-A1-Affine-Reduction, T-PF-A1-Finite-Reflected-SDE, T-PF-A1-Gibbs-Invariance, T-PF-A1-Poincare-Ergodicity. No count change — pending canonical promotion (Session O).*
 
@@ -86,7 +86,7 @@ last_updated: 2026-05-08
 
 ### CV-1.9 Canonical Additions — P-F-A1 Package I Cat A Completion (W6 D4, 2026-05-06, Session P)
 
-*T-PF-A1-GI and T-PF-A1-PE promoted Cat B → Cat A in Session P. Bodies now in `canonical.md §13 Category A`. Working-file proof detail: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`.*
+*T-PF-A1-GI and T-PF-A1-PE promoted Cat B → Cat A in Session P. Bodies now in `canonical.md §13 Category A`. Working-file proof detail: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md`.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -99,7 +99,7 @@ last_updated: 2026-05-08
 
 ### CV-1.10 Canonical Additions — Equilibrium K-Selection (W6 D4, 2026-05-06, Session R)
 
-*T-K-Select-PF promoted from Session Q working candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file source: `THEORY/working/MF/k_select_pf_equilibrium.md` (tightened Session R: K_feas §3.5 added, §5.1 A5 updated). Count: +1B → 54A/13B/5C/5R = 77 claims.*
+*T-K-Select-PF promoted from Session Q working candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file source: `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md` (tightened Session R: K_feas §3.5 added, §5.1 A5 updated). Count: +1B → 54A/13B/5C/5R = 77 claims.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -111,7 +111,7 @@ last_updated: 2026-05-08
 
 ### CV-1.11 Canonical Addition — Observation-Conditioned K-Selection (W6 D4, 2026-05-06, Session Y)
 
-*T-K-Select-OBS promoted from Sessions S–T working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file source: `THEORY/working/MF/k_select_obs_posterior.md` (canonical likelihood §2.4 + exp85 ALL PASSED added Session Y). Count: +1B → 54A/14B/5C/5R = 78 claims. OP-0005-OBS: STRUCTURED → PARTIALLY RESOLVED.*
+*T-K-Select-OBS promoted from Sessions S–T working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file source: `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md` (canonical likelihood §2.4 + exp85 ALL PASSED added Session Y). Count: +1B → 54A/14B/5C/5R = 78 claims. OP-0005-OBS: STRUCTURED → PARTIALLY RESOLVED.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -123,7 +123,7 @@ last_updated: 2026-05-08
 
 ### Future Synthesis Candidate — T-MF-Synthesis (Session U, 2026-05-06)
 
-*Conceptual future synthesis candidate — no count change, no canonical promotion. Source: `THEORY/working/MF/emergent_multi_formation_synthesis.md` (Session U, 2026-05-06).*
+*Conceptual future synthesis candidate — no count change, no canonical promotion. Source: `THEORY/2_substrate/Q2_multiformation/emergent_multi_formation_synthesis.md` (Session U, 2026-05-06).*
 
 **T-MF-Synthesis** (Emergent Multi-Formation from Shared Soft Field): joint statement that T-OP6-B + T-ST-5a/5b + P-F-A1 Package I (AR/SDE/GI/PE) + T-K-Select-PF + T-K-Select-OBS together constitute a rigorous static + equilibrium emergent multi-formation theory. The synthesis asserts: (i) crisp spatial formation with boundary precision, (ii) hard/soft depth stabilization, (iii) ergodic stochastic dynamics, (iv) equilibrium K-distribution, (v) observation-conditioned posterior K-selection.
 
@@ -135,7 +135,7 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 
 ### CV-1.12 Canonical Addition — Temporal Identity (W7-FINAL, 2026-05-10)
 
-*T-Temporal-Identity promoted from Session V/X working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file sources: `THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md` (sharp form, 2026-05-07 evening); `THEORY/working/temporal/H-SINK.md` (W7-T1, S-B2 Cat A); `THEORY/working/temporal/partial_ot_stability.md` (W7-FINAL, Theorem Partial-H-SINK Cat A). Count: +1B → 54A/15B/5C/5R = 79 claims. OP-0011 → PARTIALLY RESOLVED.*
+*T-Temporal-Identity promoted from Session V/X working Cat B candidate to canonical Cat B. Body in `canonical.md §13 Category B`. Working-file sources: `THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md` (sharp form, 2026-05-07 evening); `THEORY/4_temporal/temporal_audit/H-SINK.md` (W7-T1, S-B2 Cat A); `THEORY/4_temporal/temporal_audit/partial_ot_stability.md` (W7-FINAL, Theorem Partial-H-SINK Cat A). Count: +1B → 54A/15B/5C/5R = 79 claims. OP-0011 → PARTIALLY RESOLVED.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -160,13 +160,13 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
 | **Lemma S-B1-Weak** | Deep-Core Density Positivity (ρ_deep > ρ_*) | **Cat A** (W7-CV113, 2026-05-10) | **A** | H2' (deep core non-emptiness, |Core| ≥ 25 → |Core²| ≥ 1, proved via Γ-convergence + DMP, Theorem 1 CORE-DEPTH-ISOPERIMETRIC.md) gives m^deep ≥ θ_core = 0.7; m ≤ n = 225; hence ρ_deep ≥ 0.7/225 ≈ 0.00311 > ρ_* ≈ 0.00282. Corollary: Δ_sep > 0 Cat A. | Requires: β > 7α (canonical), |Core| ≥ 25, n = 225 (15×15 grid). Does NOT prove ρ_deep ≥ 0.84. Quantitative magnitude (Δ_sep* ≈ 0.837) given by **S-B1-SYM** (Cat B; replaces S-B1 Strong literal 0.84, W7-CV113A). Source: `CV113_S-B1_DEEP_CORE_CLOSURE.md §3`. |
-| **Lemma S-B1-SYM** | Symbolic Deep-Core Density Identity | **Cat B** (W7-CV113A, 2026-05-10) | **B** | Theorem 2b (Deep Core Dominance, Cat A, canonical.md §13) + pointwise Core lower bound (u ≥ θ_core on Core) + trivial mass upper bound (m^total ≤ |Core| = m). Statement: ρ_deep ≥ θ_core(1 − 4 C_iso/√m) under HWF-1 (iso_ratio ≤ C_iso), m ≥ 25, β > 7α. Recovers literal 0.84 at sharp regime (C_iso, m, θ_core) = (0.2, 25, 1.0). Source: `THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md §2`. | Conditional on HWF-1 (iso_ratio ≤ C_iso) — not derivable from (A1)–(A7) alone. Counterexample: 3×10 rectangle, ρ_deep ≈ 0.27. Replaces S-B1 Strong (literal 0.84) as standalone Cat B claim. Three evaluations: default 0.613 / tight 0.867 / sharp 0.840. Literal 0.84 = ρ_sym(0.2, 25, 1.0), retracted as standalone, preserved as derived value. |
+| **Lemma S-B1-SYM** | Symbolic Deep-Core Density Identity | **Cat B** (W7-CV113A, 2026-05-10) | **B** | Theorem 2b (Deep Core Dominance, Cat A, canonical.md §13) + pointwise Core lower bound (u ≥ θ_core on Core) + trivial mass upper bound (m^total ≤ |Core| = m). Statement: ρ_deep ≥ θ_core(1 − 4 C_iso/√m) under HWF-1 (iso_ratio ≤ C_iso), m ≥ 25, β > 7α. Recovers literal 0.84 at sharp regime (C_iso, m, θ_core) = (0.2, 25, 1.0). Source: `THEORY/4_temporal/temporal_audit/SYMBOLIC_DEEP_CORE_NECESSITY.md §2`. | Conditional on HWF-1 (iso_ratio ≤ C_iso) — not derivable from (A1)–(A7) alone. Counterexample: 3×10 rectangle, ρ_deep ≈ 0.27. Replaces S-B1 Strong (literal 0.84) as standalone Cat B claim. Three evaluations: default 0.613 / tight 0.867 / sharp 0.840. Literal 0.84 = ρ_sym(0.2, 25, 1.0), retracted as standalone, preserved as derived value. |
 
 ---
 
 ### Session V Working Candidate — T-Temporal-Identity (2026-05-06) — **PROMOTED CV-1.12**
 
-*Working Cat B candidate (parts a,b,d) / Cat C (part c, pending OP-0011). No count change at Session V. Source: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06). **Promoted to canonical Cat B in CV-1.12 (W7-FINAL, 2026-05-10); see CV-1.12 section above.***
+*Working Cat B candidate (parts a,b,d) / Cat C (part c, pending OP-0011). No count change at Session V. Source: `THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06). **Promoted to canonical Cat B in CV-1.12 (W7-FINAL, 2026-05-10); see CV-1.12 section above.***
 
 **T-Temporal-Identity** (Persistent component identity via unbalanced transport): Given two consecutive fields $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$, their persistent component sets $\mathrm{PersComp}(u_t)$, $\mathrm{PersComp}(u_s)$, and an admissible unbalanced transport plan $M_{t \to s}$ (E1–E4), there exists a well-defined component-level correspondence relation $R_{t \to s} \subseteq \mathrm{PersComp}(u_t) \times \mathrm{PersComp}(u_s)$ obtained by thresholding the component score matrix $\mathbf{S}$. Five event types are handled: continuation (1-to-1), split (1-to-many), merge (many-to-1), birth ($\varnothing \to C_j^s$), death ($C_i^t \to \varnothing$). If $K_t = K_s$, no birth/death occurs, and the score matrix satisfies the margin condition ($\Delta_\mathrm{sep} > 0$), the relation is a unique bijection. Reduces to `persist_transport` scalar in the $K=1$ case.
 
@@ -185,7 +185,7 @@ Expected future status: Cat B after all listed dependencies canonical; Cat A aft
 
 ### Session W Working Candidate — T-σ-Inherit (2026-05-06)
 
-*Working Cat B candidate (parts a,b,d-direction,e) / Cat C (parts c,d-σ_standard, pending OP-0008-MERGE/SPLIT Wigner-projection W9+). No count change. Source: `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).*
+*Working Cat B candidate (parts a,b,d-direction,e) / Cat C (parts c,d-σ_standard, pending OP-0008-MERGE/SPLIT Wigner-projection W9+). No count change. Source: `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` (Session W, 2026-05-06).*
 
 **T-σ-Inherit** (σ-signature inheritance through persistent-component correspondence): Given persistent components $C_i^t \in \mathrm{PersComp}(u_t)$ with component-level signatures $\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$ — where $u_t^i := u_t \cdot \mathbf{1}_{C_i^t}$ and $G_{C_i^t}$ is the induced subgraph with one-hop buffer — and correspondence $R_{t \to s}$ from T-Temporal-Identity, the inheritance map $\Phi$ satisfies:
 
@@ -214,7 +214,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 
 ### CV-1.8 Canonical Additions — P-F-A1 Package I (W6 D4, 2026-05-06, Sessions M–N–O)
 
-*T-PF-A1-AR and T-PF-A1-SDE promoted to canonical §13 Category A in Session O. T-PF-A1-GI and T-PF-A1-PE promoted to canonical §13 Category B in Session O. Bodies in `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`.*
+*T-PF-A1-AR and T-PF-A1-SDE promoted to canonical §13 Category A in Session O. T-PF-A1-GI and T-PF-A1-PE promoted to canonical §13 Category B in Session O. Bodies in `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md`.*
 
 | T-ID | Name | Status | Category | Proof | Notes |
 |---|---|---|---|---|---|
@@ -294,7 +294,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 - **CN6 refined** (line 1603): "K kinetically determined" now refers specifically to K_act per Commitment 16.
 - **Open problems**: OP-0008 σ^A K-jump non-determinism + OP-0009 Multi-Formation Ontological Foundations registered; OP-0003 MO-1 re-activation rider added.
 - **canonical.md growth**: 1593 → 1664 lines (~71 lines added).
-- **Source**: `THEORY/logs/daily/2026-04-29/04..11_*` (Day 3 deepening + numerical + 7-agent + 4-agent ontological depth analysis); `THEORY/working/MF/K_status_commitment.md` (OAT-1 Commitment 16 audit); `THEORY/CHANGELOG.md` 2026-04-29 entry.
+- **Source**: `THEORY/logs/daily/2026-04-29/04..11_*` (Day 3 deepening + numerical + 7-agent + 4-agent ontological depth analysis); `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (OAT-1 Commitment 16 audit); `THEORY/CHANGELOG.md` 2026-04-29 entry.
 
 ### Canonical Spec v1.5 (2026-04-27) — Previous Version (W5 Day 1: σ-Framework Supporting Structures)
 
@@ -316,7 +316,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 - Sub-statement caveats canonically registered: T-σ-Lemma-2 internal Cat A/C split (sub-statements (v) Courant + (vi) orbit divisibility are Cat C riders within the Cat A entry); T-σ-Theorem-4 explicit "in $\epsilon$-small regime" qualifier; T-σ-Lemma-3 explicit "in continuum limit" qualifier.
 - Pre-brainstorm corrections folded in: Lemma 1 finite-graph hypothesis explicit; Lemma 2 sub-statement (iii) reframed as lower-bound-from-$\mathbf{1}^\perp$ (was incorrectly stated as "$n_k = 1$ iff constant" in plan templates); Lemma 3 IBP interpretation B (δu^ref = unit vector in ℓ=1 angular subspace) adopted.
 - σ-framework now fully canonical-grounded: definitional Commitment 14 + irrep apparatus (T-σ-Lemma-1) + nodal count (T-σ-Lemma-2) + Goldstone–ℓ=1 saturation (T-σ-Lemma-3) + worked examples on uniform (T-σ-Theorem-3) and post-bifurcation (T-σ-Theorem-4) configurations.
-- **Source:** `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet) + `01a-01e` (per-statement files); `THEORY/canonical/canonical.md` §13 (T-σ-Lemma-1 ~ T-σ-Theorem-4 entries inserted after T-V5b-T at lines 1169-1283); `THEORY/CHANGELOG.md` 2026-04-27 entry.
+- **Source:** `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet) + `01a-01e` (per-statement files); `THEORY/2_substrate/canonical/canonical.md` §13 (T-σ-Lemma-1 ~ T-σ-Theorem-4 entries inserted after T-V5b-T at lines 1169-1283); `THEORY/CHANGELOG.md` 2026-04-27 entry.
 
 ### Canonical Spec v1.4 (2026-04-26) — Previous Version (W4 Extended Close)
 
@@ -415,13 +415,13 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 
 **Numerical sanity check:** exp89 (3 cases A/B/C) ALL PASS — endpoint nonzero, action zero, soft ≈ machine ε, sinkhorn nonzero. Numerical validation only, not proof; Cat A judgments rest on closed-form proofs in `THEORY/working/CV115_ACTION_TEMPORAL_COST/` files 01–04.
 
-*Audit reference:* `THEORY/logs/daily/2026-05-13/02_development.md + 03_integration_and_new_open.md + 04_proposed_amendments.md`. Seal: `THEORY/canonical/CV-1.15_SEAL.md`.
+*Audit reference:* `THEORY/logs/daily/2026-05-13/02_development.md + 03_integration_and_new_open.md + 04_proposed_amendments.md`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md`.
 
 ---
 
 ### CV-1.16 Canonical Additions — H-MORSE-Local Closure Package (W7-Day5 extension, 2026-05-14)
 
-*CV-1.16 adds 1 Cat A entry (L-CLOSURE-LIFT) + 2 Cat B entries (L-HMORSE-LOCAL unconditional; L-HMORSE-DECOMP conditional on b_D=0 + canonical A3) + 1 Cat C entry (L-BOUNDARY-MODE-EXCLUSION). **OP-HMORSE-BROADNESS CLOSED Cat A** by Theorem B2 (operator-norm broadness via degree-weighted self-adjointness of stochastic operator $P$). T7-Enhanced (canonical Cat A) preserved as historical context; L-CLOSURE-LIFT supersedes as the broadness statement. Source: 5-document chain `THEORY/logs/daily/2026-05-14/40–44, 49_broadness_*.md` + `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md`; numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` 15/15 PASS. User decisions (plan-mode 2026-05-14): D-HMORSE-LOCAL (C2′) active-set form (over strict-interior (C2)); 4-lemma promotion package. Count: +1A, +2B, +1C → **68A / 18B / 6C / 5R = 97 claims** (~70% fully proved).*
+*CV-1.16 adds 1 Cat A entry (L-CLOSURE-LIFT) + 2 Cat B entries (L-HMORSE-LOCAL unconditional; L-HMORSE-DECOMP conditional on b_D=0 + canonical A3) + 1 Cat C entry (L-BOUNDARY-MODE-EXCLUSION). **OP-HMORSE-BROADNESS CLOSED Cat A** by Theorem B2 (operator-norm broadness via degree-weighted self-adjointness of stochastic operator $P$). T7-Enhanced (canonical Cat A) preserved as historical context; L-CLOSURE-LIFT supersedes as the broadness statement. Source: 5-document chain `THEORY/logs/daily/2026-05-14/40–44, 49_broadness_*.md` + `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md`; numerical anchor `CODE/experiments/exp_hmorse_broadness_full_spectrum.{py,json,md}` 15/15 PASS. User decisions (plan-mode 2026-05-14): D-HMORSE-LOCAL (C2′) active-set form (over strict-interior (C2)); 4-lemma promotion package. Count: +1A, +2B, +1C → **68A / 18B / 6C / 5R = 97 claims** (~70% fully proved).*
 
 | ID | Statement | Status | Cat | Conditions |
 |---|---|---|---|---|
@@ -440,7 +440,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 
 *Methodological highlight.* Two-pass closure pattern: (1) morning Track 2 produces Cat B SKETCH with **explicit named CONJECTURE-broadness**; (2) evening extension attacks the CONJECTURE directly via 3 independent approaches, closing Cat A. **Honest Cat B SKETCH + named CONJECTURE → clean evening closure**. Compare V-AFD/R-2 (5/12, 5/13) which made unsubstantiated PROVED claims that crumbled — this session's morning was honest about uncertainty.
 
-*Audit reference:* `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md`. Seal: `THEORY/canonical/CV-1.16_SEAL.md`.
+*Audit reference:* `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md`. Seal: `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md`.
 
 ---
 
@@ -491,7 +491,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 - **Counts**: 38 + 5 = **43** Category A; 52 + 5 = **57 claims**; 73% → **75% fully proved**.
 - **T1 explosion**: 3 → **8** (Option α: each of Lemma 1, 2, 3, Theorem 3, 4 individually T1).
 - **canonical.md growth**: 1420 → 1537 lines (~117 lines added; entries are concise per W4 §13 style).
-- **Source**: `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet); `01a_lemma1_irrep_decomposition.md`, `01b_lemma2_nodal_count.md`, `01c_lemma3_goldstone_saturation.md`, `01d_theorem3_uniform_D4_grid.md`, `01e_theorem4_first_pitchfork.md` (per-statement files); `THEORY/canonical/canonical.md` §13 lines 1169-1306 (new entries between T-V5b-T and T-Birth-Parametric).
+- **Source**: `THEORY/logs/daily/2026-04-27/01_sigma_lemmas_review.md` (decision packet); `01a_lemma1_irrep_decomposition.md`, `01b_lemma2_nodal_count.md`, `01c_lemma3_goldstone_saturation.md`, `01d_theorem3_uniform_D4_grid.md`, `01e_theorem4_first_pitchfork.md` (per-statement files); `THEORY/2_substrate/canonical/canonical.md` §13 lines 1169-1306 (new entries between T-V5b-T and T-Birth-Parametric).
 
 **Errata Round 1 (2026-04-27 evening, post-merge re-review)**: User-requested re-audit caught 3 substantive math errors in this morning's canonical merge. All errors fixed in canonical entries (with embedded `*Erratum 2026-04-27 evening:*` notes). **Theorem status NOT changed**: all 5 σ structures remain Cat A. See `THEORY/logs/daily/2026-04-27/91_critical_review.md`.
 
@@ -568,7 +568,7 @@ Inheritance residual $R_\sigma(i \to j) = d_\sigma(\sigma_j^s, \Phi(\sigma_i^t))
 
 ## Open Problems Catalog (OP-xxxx)
 
-> Note (2026-05-04 audit, second pass): this catalog absorbed the previously separate `THEORY/canonical/theorem_status.md` file. The merge eliminates a documentation drift surface (the two files used different OP-ID assignments and disagreed on body-level status flags). All OP body content (Statement, Evidence, Resolution mechanism, Sub-item tables, References, Statistics, Critical Path) lives here. Severity flags are kept in plain-text form (Critical / High / Medium / Low) rather than color emojis. Cross-references in working files that still point to `theorem_status.md` should be read as pointing to this section.
+> Note (2026-05-04 audit, second pass): this catalog absorbed the previously separate `THEORY/2_substrate/canonical/theorem_status.md` file. The merge eliminates a documentation drift surface (the two files used different OP-ID assignments and disagreed on body-level status flags). All OP body content (Statement, Evidence, Resolution mechanism, Sub-item tables, References, Statistics, Critical Path) lives here. Severity flags are kept in plain-text form (Critical / High / Medium / Low) rather than color emojis. Cross-references in working files that still point to `theorem_status.md` should be read as pointing to this section.
 
 ### Quick Index
 
@@ -693,7 +693,7 @@ Multi-formation extension still open: stratified Morse on $\Sigma^K_M$ (multi-fo
 - Day 3 deepening pass `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` Lemma 4.4.1(c): formal non-determinism claim, Cat C asserted.
 - Self-critique `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3: Lemma 4.4.1(c) downgraded "Cat B sketch" → "Cat C (conjectured)".
 - Phase 8 T4 SCC↔CH correspondence (`2026-04-28/32_U5_SCC_CH_theorem.md` Cat B target): implicit assumption of deterministic σ-trajectory under CH-correspondence flow — violated by Lemma 4.4.1(c).
-- Working file `THEORY/working/MF/sigma_multi_trajectory.md` §4.2 Lemma 4.2(c) Cat status: conjectured (Cat C).
+- Working file `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` §4.2 Lemma 4.2(c) Cat status: conjectured (Cat C).
 
 **Impact.** D-6b Commitment 14-Multi DYNAMIC Cat A path (CV-1.6+) requires **rich-σ augmentation**: σ-tuple expanded to include cluster centroid, orientation, and Wigner-von Neumann data beyond eigenvalue tuple. Bifurcates CV-1.6 release path:
 - Path A: accept non-determinism, register Cat B target with explicit non-deterministic K-jump map.
@@ -721,7 +721,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 
 **Related problems:** OP-0003 MO-1 (re-activation at multi-formation level via D-6b path); OP-0005 K-Selection (K-jump-event path-dependence implication); OP-0009 (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
 
-**References:** `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c); `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3; `THEORY/working/MF/sigma_multi_trajectory.md` §4.2; `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`; `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
+**References:** `THEORY/logs/daily/2026-04-29/04_D6b_sigma_trajectory_development.md` §4.4.1(c); `THEORY/logs/daily/2026-04-29/09_session_self_critique.md` §2.3; `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` §4.2; `THEORY/logs/daily/2026-04-28/32_U5_SCC_CH_theorem.md`; `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
 
 #### OP-0009: Multi-Formation Ontological Foundations
 
@@ -776,7 +776,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 
 **Related problems:** OP-0003 MO-1 (sub-item OP-0009-A architecture decision triggers MO-1 re-activation); OP-0005 K-Selection (sub-item OP-0009-K addresses what K is, not what selects $K_{\mathrm{act}}$); OP-0008 σ^A K-jump non-determinism (OP-0008 ⊂ OP-0009 sub-item dynamic-σ-trajectory aspect).
 
-**References.** 4-agent ontological depth analysis: inline conversation 2026-04-29 EOD (architect/critic/analyst/planner); OAT-1 working file; D-6a static merge: canonical.md §13 T-Commitment-14-Multi-Static (CV-1.5.1); D-6b dynamic deferred: `THEORY/working/MF/sigma_multi_trajectory.md` Theorem 4.6.1 Cat C/B target; Critic 7-agent verdict 2026-04-29 EOD.
+**References.** 4-agent ontological depth analysis: inline conversation 2026-04-29 EOD (architect/critic/analyst/planner); OAT-1 working file; D-6a static merge: canonical.md §13 T-Commitment-14-Multi-Static (CV-1.5.1); D-6b dynamic deferred: `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` Theorem 4.6.1 Cat C/B target; Critic 7-agent verdict 2026-04-29 EOD.
 
 #### OP-0004: Type A/B Classification Invalidation
 
@@ -827,7 +827,7 @@ Phase 8 T4 caveat needed in any Paper §4.5.7 SCC↔CH correspondence section: "
 - B3 Stereo conditioning: G_t^P edges only (hard-cut D-ST-1). CLOSED.
 - B4 ρ_bd = 1/(4ξ) canonical (Session J). CLOSED.
 
-Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + PersRidge equivalence + exp06 support (shadow 5/5 ratio 4.09, blur 5/5 ratio 50.8). Full proofs: `THEORY/working/MF/op_0006_boundary_precision.md §9–§12`. Canonical entry: `canonical.md §5.3b` + `§13 Category A`.
+Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + PersRidge equivalence + exp06 support (shadow 5/5 ratio 4.09, blur 5/5 ratio 50.8). Full proofs: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §9–§12`. Canonical entry: `canonical.md §5.3b` + `§13 Category A`.
 
 **Residual open items (not blockers for OP-0006 resolution):**
 - C=2 not tight (inner bound C < 1.37 under H4); H4 (κ_max·ξ ≤ 0.1) required.
@@ -867,7 +867,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Impact.** Affects long-timescale predictions; currently only T-Persist-1 (two-step) fully proved; limits temporal theory.
 
-**Sub-case A — OP-0012-CC (compositional consistency, Cat B path):** under stable-K + margin (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ holds. Cat B via Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`) and canonical §13 T-Temporal-Identity composition note. See also **T-CC-StableK-Kernel** (working candidate, CV-1.14: `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`) — not yet canonical.
+**Sub-case A — OP-0012-CC (compositional consistency, Cat B path):** under stable-K + margin (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ holds. Cat B via Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`) and canonical §13 T-Temporal-Identity composition note. See also **T-CC-StableK-Kernel** (working candidate, CV-1.14: `THEORY/4_temporal/composition/05_promotion_draft.md`) — not yet canonical.
 
 **Sub-case B — OP-0012-SINK (Sinkhorn temporal scaling compatibility, OPEN):** *(CV-1.15 update, 2026-05-14.)*
 
@@ -931,7 +931,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 - $T_* \in B_\xi^{\mathrm{OMS-1}}$ — observer-personal axiomatically free parameter under ξ resident category (canonical Appendix OMS §N, CV-1.18 SEAL).
 - Observer selection: $T_* = \mathrm{argmin}_{T \in B_{T_*}^{\mathrm{FP}}(\Theta) \cap B_\xi^{\mathrm{OMS-1}}} \rho_{\mathrm{JND}}(\Theta, T)$ (G1+G3 hybrid, Weber-Fechner JND criterion).
 - Existence: Brouwer 1911 (Cat A 후보 sketch — sub-OP OP-T*-FIXED-POINT).
-- Source: `THEORY/working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (Cat A axiomatic verdict, 952 lines).
+- Source: `THEORY/2_substrate/foundations/manifold/proofs/P6_OMS-1_xi_Tstar_entry.md` (Cat A axiomatic verdict, 952 lines).
 
 **Remaining OPEN:**
 1. **OP-T*-FIXED-POINT** (Brouwer existence Cat A 승급): L1 quantitative TV bound + π_T continuity rigorous. W9+ task.
@@ -957,7 +957,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Status:** DOWNGRADED NON-BLOCKING (W7-CV113, 2026-05-10). Original OPEN status (W7-FINAL): Cat B conditional under HWF-1–3; counterexample found (elongated formation, ρ_deep < 0.5). Routes 1–8 tried; Route 8 (corrected positivity analysis) yields Lemma S-B1-Weak Cat A. ρ_deep ≥ 0.84 unconditional remains Cat B conditional — relevant only for numerical magnitude claims.
 **Severity:** Low (non-blocking quantitative refinement).
-**Registered:** W7-FINAL, 2026-05-10. Downgraded: W7-CV113, 2026-05-10. Source: `THEORY/working/temporal/S-B1_deep_core_density.md §5`; `CV113_S-B1_DEEP_CORE_CLOSURE.md §6`.
+**Registered:** W7-FINAL, 2026-05-10. Downgraded: W7-CV113, 2026-05-10. Source: `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md §5`; `CV113_S-B1_DEEP_CORE_CLOSURE.md §6`.
 **Related:** T-Temporal-Identity parts (b), (d); Lemma S-B1-Weak (Cat A, W7-CV113); Lemma S-B1-SYM (Cat B, W7-CV113A); canonical.md §13 Cat B T-Temporal-Identity.
 **Successor:** OP-SB1-084 (W7-CV113A, 2026-05-10). The "ρ_deep ≥ 0.84 unconditional" question is reformulated as: prove S-B1-SYM Cat A by deriving HWF-1 (iso_ratio ≤ C_iso) from canonical (A1)–(A7). Source: `SYMBOLIC_DEEP_CORE_NECESSITY.md §6`.
 
@@ -971,7 +971,7 @@ Prior Cat B achievement (W6 D4 Session D): barcode stability (Chazal et al.) + P
 
 **Status.** OPEN (W7-CV113A, 2026-05-10). Resolution mechanisms: (a) derive HWF-1 from (A1)–(A7) with explicit tight C_iso; (b) constrained ensemble argument for SCC minimizers; (c) tighten Theorem 2b constant from 4 to c < 4 on canonical lattice.
 **Severity:** Low (does not block any Cat A path).
-**Registered:** W7-CV113A, 2026-05-10. Source: `THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md §6`.
+**Registered:** W7-CV113A, 2026-05-10. Source: `THEORY/4_temporal/temporal_audit/SYMBOLIC_DEEP_CORE_NECESSITY.md §6`.
 **Related:** OP-SB1-DEEP (superseded), Lemma S-B1-Weak (Cat A, W7-CV113), Lemma S-B1-SYM (Cat B, W7-CV113A), Theorem 2b Deep Core Dominance (Cat A, canonical.md §13).
 
 ---

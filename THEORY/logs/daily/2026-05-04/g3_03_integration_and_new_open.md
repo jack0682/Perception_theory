@@ -5,7 +5,7 @@
 **Session:** 2026-05-04 (W6 Day 1, mid-day)
 **Target (from plan.md / `02_development.md` §5–§10):** Integrate the G3 ε-convention decision (R1 explicit reading of $\bar m = M / K_{\mathrm{field}}$) with the canonical structure; surface what changes / what stays the same; collect new open questions; record prompt v2 notes.
 **This file covers:** §1 integration with canonical (Commitment 16 amendment); §2 integration with `theorem_status.md`; §3 integration with `T-L1-F` empirical claim; §4 integration with W6 strategic plan (misframing finding); §5 OP non-impact statement (recap); §6 new open questions surfaced; §7 prompt v2 candidate notes.
-**Depends on reading:** `02_development.md` §1–§10 (full diagnostic + decision rule + propagation plan); `01_exploration.md` §1–§3 (problem framing + multi-approach + A4 selection rationale); `THEORY/canonical/canonical.md` line 810 (Commitment 16); `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` G3 (lines 49-58).
+**Depends on reading:** `02_development.md` §1–§10 (full diagnostic + decision rule + propagation plan); `01_exploration.md` §1–§3 (problem framing + multi-approach + A4 selection rationale); `THEORY/2_substrate/canonical/canonical.md` line 810 (Commitment 16); `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` G3 (lines 49-58).
 
 ---
 

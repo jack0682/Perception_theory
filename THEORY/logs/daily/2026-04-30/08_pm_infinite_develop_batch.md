@@ -49,8 +49,8 @@ last_updated: 2026-04-30
 - `08_pm_infinite_develop_batch.md` (this file)
 
 **Citation corrections propagated (#8):**
-- `THEORY/working/MF/lambda_rep_ontology.md:200` — vol 169 → 167.
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md:496` — vol 169 → 167.
+- `THEORY/2_substrate/multiformation/lambda_rep_ontology.md:200` — vol 169 → 167.
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md:496` — vol 169 → 167.
 - `THEORY/logs/daily/2026-04-30/04_external_references_verification.md:453, 953` — vol 169 → 167.
 
 ---

@@ -46,7 +46,7 @@ seven_corrections_applied:
   - "#7 Branch → vertex is tendency, not theorem (finite-β catalog of branch fates)"
 ---
 
-> [!nav] Linked: [[00_plan|W8-Day3 plan]] · [[99_summary|99 summary + POST-99 EXTENSION]] · [[../../canonical/canonical|CV-1.19 canonical]] (§13 Theorem 4 L1466, T-σ-Lemma-1 L1386, V5b-T-zero L1328, L-HMORSE-LOCAL L1953-1990, L-S3-KERNEL-MULT L1798, L-LOJASIEWICZ-CG L2066, SB7 L2540) · [[../../canonical/DECLARATION|DECL-1.0]] · [[../../canonical/CV-1.19_SEAL|CV-1.19 SEAL]] · [[../../working/foundation/manifold_topology_attempt_v1|v1 master synthesis (S1-S5)]] · [[../../working/field_equation_framework/06_surface_tension_rescaling_cat_a|06 L-SURFACE-TENSION-RESCALE]]
+> [!nav] Linked: [[00_plan|W8-Day3 plan]] · [[99_summary|99 summary + POST-99 EXTENSION]] · [[canonical|CV-1.19 canonical]] (§13 Theorem 4 L1466, T-σ-Lemma-1 L1386, V5b-T-zero L1328, L-HMORSE-LOCAL L1953-1990, L-S3-KERNEL-MULT L1798, L-LOJASIEWICZ-CG L2066, SB7 L2540) · [[DECLARATION|DECL-1.0]] · [[CV-1.19_SEAL|CV-1.19 SEAL]] · [[manifold_topology_attempt_v1|v1 master synthesis (S1-S5)]] · [[06_surface_tension_rescaling_cat_a|06 L-SURFACE-TENSION-RESCALE]]
 
 # 05 — Local-to-Global Energy Landscape Exposition (Refined)
 
@@ -65,7 +65,7 @@ seven_corrections_applied:
 | `canonical.md` "local to global" / "uniform instability" / "primary bifurcation" | 부재 (Theorem 4 + SB7 자체는 *수학적 statement*; 본 exposition 은 *narrative integration*) | 신규 contribution |
 | `working/foundation/manifold_topology_attempt_v1.md` §1 (S1-S5 catalog) | S-claims 의 *summary list*; 본 exposition 의 §1-§3 narrative 와 *상보적* | 신규 contribution |
 | `working/field_equation_framework/01_ns_inspired_synthesis.md` §3-§4 (SCC field structure + NS mapping) | NS contrastive analysis; 본 exposition 의 §2.4 (Π ↔ NS pressure) 와 *cross-reference only* | 신규 contribution |
-| `THEORY/working/INDEX.md` foundation/ section | conversational draft 의 *축약본* 없음 | 신규 contribution |
+| `THEORY/2_substrate/INDEX.md` foundation/ section | conversational draft 의 *축약본* 없음 | 신규 contribution |
 
 **판정**: 본 exposition = *기존 산발 산출물의 narrative integration + 7 corrections 적용*. 중복 없음, contribution 정합.
 

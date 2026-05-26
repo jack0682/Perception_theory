@@ -11,7 +11,7 @@ priority: 2
 core_finding: "Case a (functional calculus) holds GLOBALLY on REGULAR graphs (P = I - L/d). Case b (Aut(G)-equivariance via T-σ-Lemma-1) holds at uniform critical u* = c·1 for ANY finite graph since G_u = Aut(G). Case c (generic non-regular + trivial Aut) requires explicit invariant-subspace condition — given by §6 NEW L-INV-1/L-INV-2/L-INV-3 derivation (사용자 명시 scope). Conclusion: S3 full SCC = Cat A on Σ_T8 for regular OR symmetric graphs (the canonical SCC regime); Cat A with explicit hypothesis for generic case c."
 ---
 
-> [!nav] Linked: [[00_plan|today's plan]] · [[01_pre_brainstorm|reference §2]] · [[02_cg_numerical_verification|c_G verification (Priority 1)]] · [[../../../canonical/canonical|CV-1.18 §3.7 §9.3 §13 T-σ-Lemma-1]] · [[../../../working/SF/mode_count|mode_count.md §2.3a Remark commutation]] · [[../../../working/foundation/manifold_topology_attempt_v1|v1 §1.3]]
+> [!nav] Linked: [[00_plan|today's plan]] · [[01_pre_brainstorm|reference §2]] · [[02_cg_numerical_verification|c_G verification (Priority 1)]] · [[canonical|CV-1.18 §3.7 §9.3 §13 T-σ-Lemma-1]] · [[mode_count|mode_count.md §2.3a Remark commutation]] · [[manifold_topology_attempt_v1|v1 §1.3]]
 
 # 03 — $[D, L_G]$ Commutation Algebraic Check (W8-Day3 Priority 2)
 
@@ -20,7 +20,7 @@ core_finding: "Case a (functional calculus) holds GLOBALLY on REGULAR graphs (P 
 
 **Pre-work xref check** (§15.1):
 - `grep -r "commutation\|\\[D,\\? L\\]" THEORY/canonical/ THEORY/working/` → 16 hits.
-- **Critical pre-existing result discovered**: `THEORY/working/SF/mode_count.md §2.3a "Remark (commutation with L)"` (L130-143) — *exact statement of the answer on regular graphs* (P = I - L/d, polynomial in L, commute).
+- **Critical pre-existing result discovered**: `THEORY/2_substrate/sigma_framework/mode_count.md §2.3a "Remark (commutation with L)"` (L130-143) — *exact statement of the answer on regular graphs* (P = I - L/d, polynomial in L, commute).
 - Also: `canonical.md §13 T-σ-Lemma-1` (L1386, Cat A) — Hessian commutes with $G_u$-action at any critical point fixed by $G_u$.
 - **Novel positioning**: 본 file 은 (1) v1 §1.3 의 math-olympiad finding ("random non-commuting D breaks kernel") 의 *정확한 reconciliation* (random ≠ canonical), (2) mode_count.md §2.3a 의 *canonical-anchor 활용* + 명시적 small-matrix verification, (3) Sub-task 2.6 의 NEW Lemmas L-INV-1/L-INV-2/L-INV-3 (사용자 명시 expansion).
 - §8a P1-P6: P1 (DECL Q1 + Q4 직접) / P2 (u_t 본체 미변경; H_sep는 derived) / P3 (mode_count.md §2.3a 직접 ancestor → 본 file 의 *방법론적 확장 위치* 명시; canonical T-σ-Lemma-1 direct anchor) / P4 (canonical §3.7+§9.3+§13 의 직접 후속) / P5 (4 audit dimension 명시) / P6 (수학 only). **0/6 부합 → 진행 합법**.
@@ -81,7 +81,7 @@ CoT step 2: J_D is therefore a *scalar multiple of the aggregation operator P_t*
 
 ## §2 Mode_count.md §"Remark (commutation with $L$)" — *pre-existing canonical-anchored result*
 
-Direct quote from `THEORY/working/SF/mode_count.md` §2.3a Remark (L130-143):
+Direct quote from `THEORY/2_substrate/sigma_framework/mode_count.md` §2.3a Remark (L130-143):
 
 > On 2D square grid with uniform edge weights and free BC, the aggregation $P = D^{-1} N$ (with $D = \mathrm{diag}(\deg)$). For a 4-regular interior, $P = N/4$ approximately (boundary effects aside). $P$ is symmetric iff $D$ is constant (regular graph). On $L \times L$ grid with periodic BC: $P$ symmetric, $P + P^\top = 2P$. On free BC: $P$ not quite symmetric near the boundary. **In the regular-bulk approximation, $P$ and $L$ share the eigenbasis $\{\phi_k\}$; eigenvalue of $P$ corresponding to $\phi_k$ is $p_k = 1 - \lambda_k^L/d$ where $d$ is the (effective) degree.**
 
@@ -328,7 +328,7 @@ CoT step 3: Minimality argument: H-INV cannot be weakened without admitting kern
 
 ### §7.2 v1 §1.3 file update recommendation
 
-Recommended edit to `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.3 + §3 + §6:
+Recommended edit to `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.3 + §3 + §6:
 - §1.3 final paragraph: replace "Full SCC: Cat A *conditional on $[D, L_G] = 0$*" with "Full SCC: Cat A unconditional on regular graphs (functional calculus, mode_count.md §2.3a) AND at any uniform critical u* = c·1 (T-σ-Lemma-1 via G_u = Aut(G), W8-Day3 03 §4.2). Case C (Aut(G) trivial + non-regular) requires H-INV (W8-Day3 03 §6.3 L-INV-3)".
 - §3 table: change "S3 Kernel dim" Cat status from "Cat A" to "Cat A (full SCC, all standard regimes)".
 - §6 Closing: add reference to W8-Day3 03 §4-§6 commutation verification.

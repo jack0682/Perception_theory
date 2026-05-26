@@ -7,9 +7,9 @@ target_canonical_version: CV-1.18 (prep)
 target_consumers: V1 (Phase 3 verification), V2 (Phase 3 canonical xref), Phase 4 _SUMMARY_v0.2.md
 direct_input: /tmp/scc_proofs_v02/E3_hmorse_stage0_oms.md §B
 auxiliary_input:
-  - THEORY/canonical/auxiliary_structures_master.md §4.5 (L303-365), §4.9.9 (L748-764)
-  - THEORY/working/foundation/SCC_unified_derivation_v0.1.md §2 (L214-510)
-  - THEORY/canonical/canonical.md Appendix OMS §A-§M (L2404-2663)
+  - THEORY/2_substrate/canonical/auxiliary_structures_master.md §4.5 (L303-365), §4.9.9 (L748-764)
+  - THEORY/2_substrate/foundations/manifold/SCC_unified_derivation_v0.1.md §2 (L214-510)
+  - THEORY/2_substrate/canonical/canonical.md Appendix OMS §A-§M (L2404-2663)
 self_cat: A axiomatic (T axiom package, A on P)
 canonical_edits: 0 (draft only)
 status: COMPLETE

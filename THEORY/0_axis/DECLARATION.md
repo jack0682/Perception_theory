@@ -8,7 +8,7 @@ description: SCC 이론 중심축 선언문. canonical.md의 모든 수학보다
 
 > [!nav] Theory Navigation
 > Parent: [[THEORY_INDEX]] · [[MOC_canonical_authority]]
-> Pairs with: [[00_manifest]] (SCC-CT v0.1 구조적 권위)
+> Pairs with: [[sct_manifest]] (SCC-CT v0.1 구조적 권위)
 > Next: [[canonical]] §2 Foundational Orientation → [[hypothesis_tree]] → [[theorem_status]]
 > Q-MOCs: [[MOC_Q1_boundary_T8]] · [[MOC_Q2_multi_formation]] · [[MOC_Q3_stochastic_dynamics]] · [[MOC_Q4_K_selection]] · [[MOC_Q5_temporal_identity]] · [[MOC_Q6_sigma_inherit]]
 > Status: Canonical (DECL-1.0)
@@ -176,9 +176,9 @@ DECL-1.0 의 *primitive $u_t$* 와 *Q1-Q6* 는 모두 *substrate* 으로 보존�
 - 6 OPEN problems (OP-PAI-001..006)
 - 증명 0건; CV-1.20 substrate 불변
 
-전체 pivot 문서: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`
-Roadmap: `THEORY/canonical/PAI_ROADMAP.md`
-Trigger: `THEORY/working/macro_audit_2026-05-20.md` §11 verdict.
+전체 pivot 문서: `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md`
+Roadmap: `THEORY/0_axis/PAI_ROADMAP.md`
+Trigger: `THEORY/0_axis/macro_audit_2026-05-20.md` §11 verdict.
 
 **DECL-1.0 → DECL-2.0 으로의 version bump 는 아직 하지 않습니다** — PAI 가 수학적으로 형식화 (OP-PAI-001..006 중 적어도 일부의 RESOLVED) 된 이후로 미룹니다. 현 시점에서 PAI 는 *방향 선언* 이지 *수학적 commitment* 가 아닙니다.
 

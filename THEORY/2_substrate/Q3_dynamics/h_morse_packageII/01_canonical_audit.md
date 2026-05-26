@@ -30,7 +30,7 @@ The repository uses **two distinct names** for the Morse-nondegeneracy hypothesi
 
 ### 2.1 "H-MORSE" as a hypothesis-tree node
 
-`THEORY/canonical/hypothesis_tree.md`:
+`THEORY/2_substrate/canonical/hypothesis_tree.md`:
 
 | Line | Content |
 |------|---------|
@@ -44,7 +44,7 @@ The repository uses **two distinct names** for the Morse-nondegeneracy hypothesi
 
 ### 2.2 "H5 (Morse stability)" as an embedded hypothesis
 
-In `THEORY/canonical/canonical.md` and `THEORY/working/MF/pf_tstar_langevin.md`, the same condition is registered as **(H5) Morse stability** inside the T-P-F-ε0-K assumption package:
+In `THEORY/2_substrate/canonical/canonical.md` and `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`, the same condition is registered as **(H5) Morse stability** inside the T-P-F-ε0-K assumption package:
 
 | File | Line | Content |
 |------|------|---------|

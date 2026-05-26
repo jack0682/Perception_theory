@@ -35,12 +35,12 @@ Total: 4 files. The single-deliverable structure (only `01_*` rather than the st
 
 ### §3.1 Canonical edits applied
 
-- `THEORY/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338 → 368).
-- `THEORY/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666 → 1675).
+- `THEORY/2_substrate/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338 → 368).
+- `THEORY/2_substrate/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666 → 1675).
 
 ### §3.2 Canonical files NOT modified
 
-- `THEORY/canonical/theorem_status.md` — unchanged. T-L1-F is a bridge, not a K-selection mechanism (OP-0005) or σ-inheritance result (OP-0008); minimal-edits principle. *(2026-05-04 audit note: the previous bump of `last_updated: 2026-04-25 → 2026-05-02` made on Day 6 was misleading because no body change accompanied it; reverted by audit fix.)*
+- `THEORY/2_substrate/canonical/theorem_status.md` — unchanged. T-L1-F is a bridge, not a K-selection mechanism (OP-0005) or σ-inheritance result (OP-0008); minimal-edits principle. *(2026-05-04 audit note: the previous bump of `last_updated: 2026-04-25 → 2026-05-02` made on Day 6 was misleading because no body change accompanied it; reverted by audit fix.)*
 
 ### §3.3 Counts at CV-1.5.2
 

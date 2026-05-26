@@ -15,7 +15,7 @@ last_updated: 2026-05-14
 
 ## Purpose
 
-SCC 의 layer-1 (구체 구현) 위로 추상화한 layer-2 **Abstract Formation Dynamics** foundation. 핵심 주장: **AFD-T9 — Layer-2 AFD 는 H-MORSE 를 요구하지 않으며, H-MORSE 는 Layer-3 regularity 로 재분류**된다. 'Cat A by construction' 금지 어휘 ([[06_forbidden_claims]] 참조) 가 이 draft 의 R-2 실패 모드에서 유래.
+SCC 의 layer-1 (구체 구현) 위로 추상화한 layer-2 **Abstract Formation Dynamics** foundation. 핵심 주장: **AFD-T9 — Layer-2 AFD 는 H-MORSE 를 요구하지 않으며, H-MORSE 는 Layer-3 regularity 로 재분류**된다. 'Cat A by construction' 금지 어휘 ([[sct_forbidden_claims]] 참조) 가 이 draft 의 R-2 실패 모드에서 유래.
 
 ## Core Files
 
@@ -51,7 +51,7 @@ SCC 의 layer-1 (구체 구현) 위로 추상화한 layer-2 **Abstract Formation
 ## Dependencies
 
 - References: [[MOC_canonical_authority]] (canonical Layer-1 baseline), [[MOC_H_MORSE_packageII]] (H-MORSE 재분류 대상).
-- 영향: 'Cat A by construction' 금지 어휘 ([[06_forbidden_claims]]) 의 동기.
+- 영향: 'Cat A by construction' 금지 어휘 ([[sct_forbidden_claims]]) 의 동기.
 
 ## Current Status
 

@@ -7,7 +7,7 @@ status: working draft, Cat C synthesis with 1 Cat B-target concrete claim
 parent_plan: /Users/ojaehong/.claude/plans/eager-splashing-dream.md
 ---
 
-> [!nav] Linked: [[../proofs/_SUMMARY_v0.2]] · [[../../canonical/auxiliary_structures_master|AUX-1.5]] · [[../../canonical/canonical#§13|canonical §13]] · [[../../canonical/CV-1.18_SEAL|CV-1.18 SEAL]] · [[../../logs/daily/2026-05-19/02_H5_morse_spinodal|어제 02_H5]]
+> [!nav] Linked: [[_SUMMARY_v0.2]] · [[auxiliary_structures_master|AUX-1.5]] · [[canonical#§13|canonical §13]] · [[CV-1.18_SEAL|CV-1.18 SEAL]] · [[02_H5_morse_spinodal|어제 02_H5]]
 
 # Manifold Topology Methodology Palette — Precision Mapping + Direct Proof Attempt
 

@@ -13,7 +13,7 @@ cot_enforced: yes
 coc_enforced: yes
 ---
 
-> [!nav] Linked: [[SCC_unified_derivation_v0.1|Unified Derivation v0.1]] · [[../../canonical/auxiliary_structures_master|AUX-1.5 (U-residue source)]] · [[../../canonical/theorem_status|theorem registry]] · [[../../canonical/hypothesis_tree|HT-3.8]] · [[../../logs/daily/2026-05-19/02_H5_morse_spinodal|02_H5]] · [[../../logs/daily/2026-05-19/03_T_star_fixed_point|03_T_star]]
+> [!nav] Linked: [[SCC_unified_derivation_v0.1|Unified Derivation v0.1]] · [[auxiliary_structures_master|AUX-1.5 (U-residue source)]] · [[theorem_status|theorem registry]] · [[hypothesis_tree|HT-3.8]] · [[02_H5_morse_spinodal|02_H5]] · [[03_T_star_fixed_point|03_T_star]]
 
 # SCC U-Excluded + Problematic Items — Consolidation v0.1
 
@@ -767,7 +767,7 @@ $$T_{\mathrm{sensor}} = T_{\mathrm{temp}} \circ T_{\mathrm{CSF}} \circ T_{\mathr
 
 *End of SCC_U_excluded_and_problems_v0.1.md.*
 
-**File**: `/home/jack/Perception_theory/THEORY/working/foundation/SCC_U_excluded_and_problems_v0.1.md`
+**File**: `/home/jack/Perception_theory/THEORY/2_substrate/foundations/manifold/SCC_U_excluded_and_problems_v0.1.md`
 **Lines**: ~700 expected
 **Predecessor**: `SCC_unified_derivation_v0.1.md` (4633 lines, 18 sections, ~278 derived definitions)
 **Status**: Cat C SKETCH consolidation reference. Canonical 0 edits.

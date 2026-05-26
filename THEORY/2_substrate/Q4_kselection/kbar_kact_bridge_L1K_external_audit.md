@@ -2,7 +2,7 @@
 
 # L1-K: External Audit of L1-H2 / L1-J Hard-Bar Bridge Lemmas
 
-**File:** `THEORY/working/MF/kbar_kact_bridge_L1K_external_audit.md`
+**File:** `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1K_external_audit.md`
 **Document type:** non-canonical adversarial audit
 **Created:** 2026-05-02 (after L1-A through L1-J)
 **Status:** working audit; advisory only; no canonical commitment; no Cat-A promotion

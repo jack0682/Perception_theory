@@ -38,21 +38,21 @@ Every file/line where the literal `0.84` appears in a deep-core density context:
 
 | # | File | Line(s) | Role | Classification |
 |---|------|---------|------|----------------|
-| 1 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 8, 12, 16 (front matter + title) | Historical "S-B1 Strong" claim | (C) conjectured threshold |
-| 2 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 37 | Substituted into Δ_sep* formula: `1.0 × (0.84 × 0.99976 − 1.2×10⁻⁴) − 0.005 × 0.54 ≈ 0.837` | (E) empirical plug-in value |
-| 3 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 42 | "At default parameters, this threshold is approximately 0.84" | **(C/ERROR)** — identified as error in W7-CV113; actual threshold ρ_* ≈ 0.003 |
-| 4 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 84 | Route 1 calculation: "For ρ_deep ≥ 0.84 need..." | (D) derived bound check |
-| 5 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 114, 123, 125 | Route 2 / Route 3 calculations | (D) derived bound checks |
-| 6 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 154–158 | **Corrective note (W7-CV113):** "0.84 is a NUMERICAL OBSERVATION from exp83 Scenario A" | (E) empirical observation, correctly labelled |
-| 7 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 172–186 | Route 5 calculation: HWF-1 + HWF-2' yields ρ_deep ≥ 0.84 exactly | (D) derived under HWF-1 |
-| 8 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 195 | "With HWF-1 strengthened to iso ≤ 0.155 and near-unit interior: ρ_deep ≥ 0.84" | (D) conditional derived |
-| 9 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 205, 208, 210 | Cat C route: exp83 Δ_sep ≈ 0.726 implies ρ_deep effectively ≥ 0.84 | (E) empirical Cat C |
-| 10 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 216–224 | Counterexample search: elongated formation violates ρ_deep ≥ 0.84 | (D) counterexample |
-| 11 | `THEORY/working/temporal/S-B1_deep_core_density.md` | 230, 239, 245, 256, 258, 286, 290 | Summary/conclusion of W7-FINAL route audit | (R) retracted as standalone claim (W7-CV113) |
-| 12 | `THEORY/working/temporal/CV113_S-B1_DEEP_CORE_CLOSURE.md` | 18, 36, 60, 80–84 | W7-CV113 audit document: documents old claim and counterexample | (R) historical record of retraction |
-| 13 | `THEORY/canonical/canonical.md` | 1771 | "θ_diag ≥ ρ_deep(1−η_self^K) − η_cross^sharp ≥ 0.83 at default parameters under S-B1 (ρ_deep ≥ 0.84 Cat B conditional)" | (D) conditional derived magnitude — **update target for W7-CV113A Step E** |
-| 14 | `THEORY/canonical/canonical.md` | 1781 | "S-B1 Strong (ρ_deep ≥ 0.84) remains Cat B conditional" | (R) retracted standalone — **update target for W7-CV113A Step E** |
-| 15 | `THEORY/canonical/hypothesis_tree.md` | 33 | "OP-SB1-DEEP (ρ_deep ≥ 0.84): Lemma S-B1-Weak (Cat A)가 Δ_sep > 0 충분히 증명함" | (R) superseded (OP-SB1-DEEP → OP-SB1-084) — **update target for W7-CV113A Step F** |
+| 1 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 8, 12, 16 (front matter + title) | Historical "S-B1 Strong" claim | (C) conjectured threshold |
+| 2 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 37 | Substituted into Δ_sep* formula: `1.0 × (0.84 × 0.99976 − 1.2×10⁻⁴) − 0.005 × 0.54 ≈ 0.837` | (E) empirical plug-in value |
+| 3 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 42 | "At default parameters, this threshold is approximately 0.84" | **(C/ERROR)** — identified as error in W7-CV113; actual threshold ρ_* ≈ 0.003 |
+| 4 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 84 | Route 1 calculation: "For ρ_deep ≥ 0.84 need..." | (D) derived bound check |
+| 5 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 114, 123, 125 | Route 2 / Route 3 calculations | (D) derived bound checks |
+| 6 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 154–158 | **Corrective note (W7-CV113):** "0.84 is a NUMERICAL OBSERVATION from exp83 Scenario A" | (E) empirical observation, correctly labelled |
+| 7 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 172–186 | Route 5 calculation: HWF-1 + HWF-2' yields ρ_deep ≥ 0.84 exactly | (D) derived under HWF-1 |
+| 8 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 195 | "With HWF-1 strengthened to iso ≤ 0.155 and near-unit interior: ρ_deep ≥ 0.84" | (D) conditional derived |
+| 9 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 205, 208, 210 | Cat C route: exp83 Δ_sep ≈ 0.726 implies ρ_deep effectively ≥ 0.84 | (E) empirical Cat C |
+| 10 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 216–224 | Counterexample search: elongated formation violates ρ_deep ≥ 0.84 | (D) counterexample |
+| 11 | `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | 230, 239, 245, 256, 258, 286, 290 | Summary/conclusion of W7-FINAL route audit | (R) retracted as standalone claim (W7-CV113) |
+| 12 | `THEORY/4_temporal/temporal_audit/CV113_S-B1_DEEP_CORE_CLOSURE.md` | 18, 36, 60, 80–84 | W7-CV113 audit document: documents old claim and counterexample | (R) historical record of retraction |
+| 13 | `THEORY/2_substrate/canonical/canonical.md` | 1771 | "θ_diag ≥ ρ_deep(1−η_self^K) − η_cross^sharp ≥ 0.83 at default parameters under S-B1 (ρ_deep ≥ 0.84 Cat B conditional)" | (D) conditional derived magnitude — **update target for W7-CV113A Step E** |
+| 14 | `THEORY/2_substrate/canonical/canonical.md` | 1781 | "S-B1 Strong (ρ_deep ≥ 0.84) remains Cat B conditional" | (R) retracted standalone — **update target for W7-CV113A Step E** |
+| 15 | `THEORY/2_substrate/canonical/hypothesis_tree.md` | 33 | "OP-SB1-DEEP (ρ_deep ≥ 0.84): Lemma S-B1-Weak (Cat A)가 Δ_sep > 0 충분히 증명함" | (R) superseded (OP-SB1-DEEP → OP-SB1-084) — **update target for W7-CV113A Step F** |
 | 16 | `THEORY/CHANGELOG.md` | 7, 15, 18, 24, 25, 35, 92, 106, 186 | W7-CV113 and earlier CHANGELOG entries | (R) historical record — preserved |
 | 17 | `CODE/experiments/results/exp49_unified_predictions.json` | multiple | `"deep_core_frac": 0.84` appears 7 times; range 0.664–0.865 | (E) empirical observations; mean ≈ 0.81, mode ≈ 0.84 |
 | 18 | `CODE/experiments/results/exp83_temporal_identity_transport.json` | multiple | Scenario A margin ≈ 0.726; ρ_deep not directly stored but formula uses 0.84 | (E) downstream empirical usage |
@@ -67,7 +67,7 @@ The 0.84 constant entered the SCC repository through the following chain:
 
 ### 3.1 First appearance: temporal identity sharp form (2026-05-07)
 
-`THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md §5`:
+`THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md §5`:
 
 > *"Δ_sep* ≥ 1.0 × (0.84 × 0.99976 − 1.2×10⁻⁴) − 0.005 × 0.54 = 0.837"*
 
@@ -75,7 +75,7 @@ Here `0.84` was substituted as the **observed** ρ_deep from exp83 Scenario A to
 
 ### 3.2 Misidentification as positivity threshold (W7-FINAL error)
 
-`THEORY/working/temporal/S-B1_deep_core_density.md §0.2` (W7-FINAL):
+`THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md §0.2` (W7-FINAL):
 
 > *"At default parameters, this threshold is approximately 0.84."*
 
@@ -87,7 +87,7 @@ This error caused OP-SB1-DEEP to be labelled BLOCKING (implying ρ_deep ≥ 0.84
 
 ### 3.3 W7-CV113 correction: ρ_* ≈ 0.003 isolated (2026-05-10)
 
-`THEORY/working/temporal/CV113_S-B1_DEEP_CORE_CLOSURE.md §2`:
+`THEORY/4_temporal/temporal_audit/CV113_S-B1_DEEP_CORE_CLOSURE.md §2`:
 
 The diagonal bound reconstruction route (Route 4) identified: "0.84 is the observed ρ_deep value, not the positivity threshold." The actual threshold is ρ_* ≈ 0.00270–0.00282, proved Cat A via Lemma S-B1-Weak.
 
@@ -95,7 +95,7 @@ OP-SB1-DEEP downgraded from BLOCKING to NON-BLOCKING.
 
 ### 3.4 W7-CV113A derivation: 0.84 = ρ_sym(0.2, 25, 1.0) (2026-05-10, this session)
 
-`THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md §2`:
+`THEORY/4_temporal/temporal_audit/SYMBOLIC_DEEP_CORE_NECESSITY.md §2`:
 
 The current session shows that 0.84 is **not empirically mysterious** — it is the value of the symbolic expression
 
@@ -163,11 +163,11 @@ The outstanding analytic question is **OP-SB1-084**: what is the tightest provab
 
 - **Full symbolic theorem:** `SYMBOLIC_DEEP_CORE_NECESSITY.md §2`
 - **Canonical update:** `S-B1_deep_core_density.md §6` (W7-CV113A reframing)
-- **Theorem status:** `THEORY/canonical/theorem_status.md` → row `Lemma S-B1-SYM` (Cat B), row `OP-SB1-084` (LOW OPEN)
-- **OP-SB1-DEEP supersession:** `THEORY/canonical/theorem_status.md` → OP-SB1-DEEP body footer (W7-CV113A)
+- **Theorem status:** `THEORY/2_substrate/canonical/theorem_status.md` → row `Lemma S-B1-SYM` (Cat B), row `OP-SB1-084` (LOW OPEN)
+- **OP-SB1-DEEP supersession:** `THEORY/2_substrate/canonical/theorem_status.md` → OP-SB1-DEEP body footer (W7-CV113A)
 - **Positivity threshold correction:** `CV113_S-B1_DEEP_CORE_CLOSURE.md §2`
 - **Lemma S-B1-Weak (Cat A):** `CV113_S-B1_DEEP_CORE_CLOSURE.md §3`
-- **Theorem 2b (Cat A):** `THEORY/canonical/canonical.md §13` — Deep Core Dominance
+- **Theorem 2b (Cat A):** `THEORY/2_substrate/canonical/canonical.md §13` — Deep Core Dominance
 
 ---
 

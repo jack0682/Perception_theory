@@ -3,7 +3,7 @@
 # L1-M Soft-Count Corollary under $\Phi_{\mathrm{res}}$ — Working Draft
 
 > **Status:** working-grade theorem candidate; **Cat A conditional under $(P0)$–$(P11)$** *(post-W6 D1 L1-M-AUDIT closure 2026-05-04: R-0 + R-1 + R-2 + R-3 all resolved; was Cat-B sketched pre-audit)*. CV-1.6 promotion candidate; external `l-m-k-audit-prover`-style audit recommended for promotion rigor (NQ-G1-3, deferred to user decision).
-> **Predecessor:** T-L1-F (canonical CV-1.5.2, 2026-05-02; see `THEORY/canonical/canonical.md` §13). Commitment 16 ε convention amendment applied W6 D1 (R1 reading: $\bar m := M / K_{\mathrm{field}}$; for $T^2_{20}, M=90, K_{\mathrm{field}}=4 \Rightarrow \epsilon = 0.225$ matching production-script default).
+> **Predecessor:** T-L1-F (canonical CV-1.5.2, 2026-05-02; see `THEORY/2_substrate/canonical/canonical.md` §13). Commitment 16 ε convention amendment applied W6 D1 (R1 reading: $\bar m := M / K_{\mathrm{field}}$; for $T^2_{20}, M=90, K_{\mathrm{field}}=4 \Rightarrow \epsilon = 0.225$ matching production-script default).
 > **Provenance:** content promoted from `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` on 2026-05-04 (audit pass). W6 D1 self-audit closure applied 2026-05-04 late from `THEORY/logs/daily/2026-05-04/02_development.md` §1-§5 (R-0/R-1/R-2/R-3 specifications) + `op_resolution.md` §9 NQ-G1-1 self-correction integration.
 > **Audit closure (Lemma L-M-2 §5.7):** R-1 bottleneck-stability factor sharpness ✅ Cat A absolute (sharpness verified via explicit perturbation construction); R-2 Type-B bound P5-direct chain ✅ Cat A absolute (no T-L1-F LG-7 dependency, no $(P0)$ dependency for the bound); R-3 Type-N non-terminal consistency ✅ Cat A absolute (cf. R-1); R-0 §2.2 Phi-4c F1 wording ✅ Cat A absolute (clipping hedge removed). **Substantive change:** $\tau_*^{\mathrm{post-R2}} = \min(2\rho_{\mathrm{pert}}, \rho_{\mathrm{bg}}, r_{\mathrm{birth}})$ (uses $\rho_{\mathrm{bg}}$ not $\rho_{\mathrm{res}}$); NQ-G1-1 self-correction notes that $\rho_{\mathrm{bg}}$ vs $\rho_{\mathrm{res}}$ is configuration-dependent (deferred to NQ-G1-1-ext W7+).
 > **Companion artifacts:** Day 7 daily logs at `THEORY/logs/daily/2026-05-03/{01_L1M_approach_exploration, 02_L1M_proof_development, 03_L1M_canonical_integration_and_NQ, 99_summary}.md`. W6 D1 audit closure at `THEORY/logs/daily/2026-05-04/{01_,02_,03_,99_}.md` + `op_resolution.md` §9 + §13.6 erratum.
@@ -485,7 +485,7 @@ Per prompt §7 (counterexample tries are explicit constructions, not "no counter
 
 ### §7.1 Attempt 1: default $\phi$-sat envelope (Phi-0)
 
-**Construction.** $\phi_0(\ell)=\ell/(\ell+\ell_{\min})$, $\ell_{\min}=0.10$, on the $T^2_{20}$ multi-formation state from WQ-LAT-1 production run (`THEORY/working/MF/wq_lat1_reservoir_resolution_sweep_results.md`).
+**Construction.** $\phi_0(\ell)=\ell/(\ell+\ell_{\min})$, $\ell_{\min}=0.10$, on the $T^2_{20}$ multi-formation state from WQ-LAT-1 production run (`THEORY/2_substrate/multiformation/wq_lat1_reservoir_resolution_sweep_results.md`).
 
 **Outcome.** WQ-LAT-1.B Phi-0 measured range $0.943$ across $K_{\mathrm{field}}\in\{3,4,6,8,12\}$. The L1-M corollary would *seem* to predict a small bound. **Resolution: not a counterexample to L-M.** Phi-0 is excluded by axiom F4 (Claim L-M-V2: $\phi_0\notin\Phi_{\mathrm{res}}$ with any usefully small $\varepsilon_{\mathrm{sub}}$). The hypothesis $\phi\in\Phi_{\mathrm{res}}$ is violated. The L-M conclusion does not apply.
 

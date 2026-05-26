@@ -149,7 +149,7 @@ Block 0.5 reconciliation (`00_*`)은 D-1..D-6b 의 6개 proposal text를 "FINAL 
 | 2 | **NQ-198f 실행** (V5b-T' torus mass-dep test) — `05_*` §4 derivation의 마지막 변호 가능성 | ~30 min | **CRITICAL** |
 | 3 | NQ-198f 결과로 D-5 V5b-T' canonical text 추가 refinement (V5b-T' torus regime 명시) | ~15 min | HIGH |
 | 4 | Block 1 canonical merge (D-1..D-5 with finalized text + D-6a) — user authorize 필요 | ~75 min | depends on user |
-| 5 | `04_*` Theorem 4.6.1 → `THEORY/working/MF/sigma_multi_trajectory.md` promote | ~30 min | MEDIUM |
+| 5 | `04_*` Theorem 4.6.1 → `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` promote | ~30 min | MEDIUM |
 | 6 | Day 4 99_summary | ~30 min | required |
 
 **Layer A 산출물 (예상)**: `01a_canonical_promotion_log.md`, `02_NQ198f_torus_results.md` (NQ-198f), `03_Theorem_4_6_1_working_promotion.md`, `99_summary.md`. 4-5 files, ~1500 lines, ~3h Block 1 application + ~1h numerical + ~30min misc.

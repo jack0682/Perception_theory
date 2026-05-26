@@ -19,7 +19,7 @@ silent_failure_policy: 0 (explicit assessment if L5 fails)
 status: draft (Cat B attempt with explicit gap declaration)
 ---
 
-> [!nav] Linked: [[../../../canonical/canonical|canonical §13 T-PF-A1 family L1670-1711]] · [[../../../canonical/canonical|canonical T8 §13]] · [[../../../logs/daily/2026-05-19/03_T_star_fixed_point|03_T_star_fixed_point.md]] · [[E2 scan|/tmp/scc_proofs_v02/E2_brouwer_kato_rmt.md]]
+> [!nav] Linked: [[canonical|canonical §13 T-PF-A1 family L1670-1711]] · [[canonical|canonical T8 §13]] · [[03_T_star_fixed_point|03_T_star_fixed_point.md]] · [[E2 scan|/tmp/scc_proofs_v02/E2_brouwer_kato_rmt.md]]
 
 # P2 — OP-T*-α: Multi-well Multiplicity Quantification |B_{T_*}^{FP}| = 2K(Θ) - 1
 
@@ -34,7 +34,7 @@ where $K(\Theta)$ is the number of basins of attraction of $\mathcal{E}_\lambda$
 ## §0 Pre-work xref + frontmatter
 
 ```bash
-$ grep -nE "OP-T\*-α|2K-1|Poincaré-Hopf" THEORY/canonical/canonical.md
+$ grep -nE "OP-T\*-α|2K-1|Poincaré-Hopf" THEORY/2_substrate/canonical/canonical.md
 # Result: 0 hits — OP-T*-α is genuinely novel sub-OP from 03_T_star §4 (2026-05-19)
 
 $ grep -rn "OP-T\*-α|2K-1" THEORY/working/

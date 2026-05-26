@@ -396,11 +396,11 @@ via Tool A2 quotient construction (`working/MF/mathematical_scaffolding_4tools.m
 
 ### §8.4 SCC internal references
 
-- `THEORY/canonical/canonical.md:757` Commitment 1 (u_t primitive).
-- `THEORY/canonical/canonical.md:761` Commitment 11 (crisp objects derivative).
-- `THEORY/canonical/canonical.md:846` I9 K-field architecture.
-- `THEORY/canonical/canonical.md:1532` CN6 (K kinetically determined).
-- `THEORY/canonical/canonical.md:1546` CN10 (contrastive vs reductive).
+- `THEORY/2_substrate/canonical/canonical.md:757` Commitment 1 (u_t primitive).
+- `THEORY/2_substrate/canonical/canonical.md:761` Commitment 11 (crisp objects derivative).
+- `THEORY/2_substrate/canonical/canonical.md:846` I9 K-field architecture.
+- `THEORY/2_substrate/canonical/canonical.md:1532` CN6 (K kinetically determined).
+- `THEORY/2_substrate/canonical/canonical.md:1546` CN10 (contrastive vs reductive).
 
 ---
 
@@ -578,7 +578,7 @@ Cross-reference: `op_0009_pre_a_kfield_chart_validity.md §8` (Architecture Migr
 
 **Status**: working draft, theory-only ontological audit. Recommendation: APPROVE Path A + Path C + Tool A2 quotient hybrid at v2.0; canonical §1 ontological setup paragraph amendment (~25-30 lines). Net effect: 4-에이전트 Critic CRITICAL-1 *"K-field imports object-like fields"* tension RESOLVED at quotient level via labels-forgotten primacy + cognitive science contrastive analog + upper-bound F regime hybrid. Pre-objective primacy (Commitment 1) preserved automatically at unordered configuration $\widetilde{\widetilde\Sigma}^K_M = \widetilde\Sigma^K_M / S_{K_{\mathrm{field}}}$ level. CN10 one-way ontological flow $u_t \to [\mathbf{u}] \to \mathbf{u} \to (K_{\mathrm{field}}, K_{\mathrm{act}}) \to \text{cog-sci}$ formalized.
 
-**File**: `/Users/ojaehong/Perception/Perception_theory/THEORY/working/MF/pre_objective_K_field_tension.md`
+**File**: `/Users/ojaehong/Perception/Perception_theory/THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md`
 **Created**: 2026-04-29 W5 Day 4 (post 4-agent ontological depth analysis CRITICAL-1; post Tool A2 quotient verification)
 **Lines**: ~370
 **Promotion target**: v2.0 W11–W12 (canonical §1 amendment); CV-1.6 forward-reference at W6 Day 6 EOD.

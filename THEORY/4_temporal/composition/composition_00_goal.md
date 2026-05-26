@@ -6,7 +6,7 @@ created: 2026-05-12
 session: W7 carry-forward (CV-1.13 sealed 2026-05-10)
 scope: OP-0012-CC-StableK — stable-K regime에서 temporal correspondence의 compositional consistency
 parent_op: OP-0012 (Persistence Composition)
-predecessor: THEORY/working/MF/temporal_identity_sharp_form_2026-05-07.md (Lemma 6, Cat B sketch)
+predecessor: THEORY/4_temporal/identity_inheritance/temporal_identity_sharp_form_2026-05-07.md (Lemma 6, Cat B sketch)
 ---
 
 > [!nav] Linked: [[MOC_temporal_composition]] · [[MOC_Q5_temporal_identity]] · [[THEORY_INDEX]]

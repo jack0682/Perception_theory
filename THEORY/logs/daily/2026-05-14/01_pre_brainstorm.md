@@ -3,7 +3,7 @@ type: log/daily/pre_brainstorm
 date: 2026-05-14
 session_label: W7-Day5 — post-archive phenomenological re-grounding
 prerequisite_reading:
-  - THEORY/canonical/DECLARATION.md (DECL-1.0)
+  - THEORY/0_axis/DECLARATION.md (DECL-1.0)
   - _archive/v_afd_2026-05-12/ARCHIVE_NOTE.md
   - _archive/r2_dcr_2026-05-13/ARCHIVE_NOTE.md
   - THEORY/logs/daily/2026-05-13/99_summary.md (Blocks H-K)
@@ -197,7 +197,7 @@ Roadmap C 가 *어려움* 때문에 막히면, 또 다른 *language refactor* �
 
 ### Step 0 (필수 사전 검증):
 ```bash
-grep -l "T-CC-StableK-Kernel\|T-ACT-DP\|T-ACT-GIBBS\|T-SINKHORN-PLAN-SEMIGROUP-FAILS" THEORY/canonical/canonical.md
+grep -l "T-CC-StableK-Kernel\|T-ACT-DP\|T-ACT-GIBBS\|T-SINKHORN-PLAN-SEMIGROUP-FAILS" THEORY/2_substrate/canonical/canonical.md
 # (P7 apply 전 sanity: 새 정리들이 아직 canonical 에 없는지 확인)
 ```
 
@@ -210,7 +210,7 @@ grep -l "T-CC-StableK-Kernel\|T-ACT-DP\|T-ACT-GIBBS\|T-SINKHORN-PLAN-SEMIGROUP-F
 
 ### Step 2 (Option A, P7 무관):
 ```bash
-# Read THEORY/working/SF/sigma_m_hessian_convention_audit.md
+# Read THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md
 # Read 관련 working/SF/ 파일 (M-A1, M-A2, M-A3 conditions)
 # 5/14 작업: H-MORSE-Local Cat B target lemma structure 초안
 ```
