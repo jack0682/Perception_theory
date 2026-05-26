@@ -900,7 +900,20 @@ $$
 
 ## 8. Theorem-Candidates
 
-### TC-SP-0.1a (Statistics determined by Λ) — [RETAINED]
+### TC-SP-0.1a — [DELETED 2026-05-25 Pass 8]
+
+**Status**: **DELETED via Pass 8** (2 patterns HOLE — original 9-pattern survivor finally cracks).
+
+- **#7 implicit regularity smuggle**: "Density of Λ w.r.t. reference measure" silently assumes Radon-Nikodym absolute continuity ($\Lambda \ll \mu_{\text{ref}}$). 정리 자체의 hypothesis 가 아닌 *명사구 안에 hidden*. PGF/Tonelli interchange 도 verify 안 됨.
+- **#28 subset support (mild)**: Stated "all Poisson PP" iff product Janossy 이나, atomic Λ excluded silently (§2.2 Note 의 "simple — atomless" 가정 우회). Subset 이 stated full domain 보다 좁음.
+
+**Original statement (preserved for audit trail)**:
+
+> Stage 0 의 Poisson 점과정 $N \sim \text{Poisson}(\Lambda)$ 의 모든 finite-dimensional 통계는 강도 측도 $\Lambda$ 만으로 결정된다.
+
+**Why DELETED**: 본 TC 가 sensing pipeline corpus 의 *마지막 9-pattern survivor* 였으나 Pass 8 의 *meta-mathematical attacks* (#7 regularity, #28 subset support) 에서 *load-bearing 가정이 statement 밖에 hidden* 임이 노출. Radon-Nikodym 과 simple-process 가정의 *명시화* 가 fix 의 길이나, *현재 형식* 으로는 자격 박탈.
+
+**Replacement**: §3-§5 본문의 Poisson + Janossy 도구 reference 는 *generic mathematical reference* 로 유지. *Theorem-candidate* 자격 박탈. TC-SP-R-1 (with explicit Radon-Nikodym hypothesis) 가 후속 version.
 
 > Stage 0 의 점과정 $N \sim \text{Poisson}(\Lambda)$ 의 모든 finite-dimensional 통계는 강도 측도 $\Lambda$ 만으로 결정된다.
 

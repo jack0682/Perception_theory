@@ -4,6 +4,466 @@
 
 ---
 
+## [SENSING PIPELINE PASS 12 CONTINUOUS VERIFICATION PROGRAM] 2026-05-26 — 27-task adversarial audit of Pass 11
+
+**Type**: Systematic verification of Pass 11 perception cone + Einstein-form field equation framework. canonical / SCC / PAI 무수정. sensing_pipeline/01-12 body content 무수정 (모든 verification 결과는 새 docs).
+
+**Trigger**: User directive "태스크를 20개 이상으로 나눠서 자세하게 만들어줘서 계속 검증해줘" — convert Pass 11's adversarial gauntlet survival into systematic per-component verification with explicit falsification triggers.
+
+**Execution**: 27 tasks across 7 phases, each phase = single doc, each task = section with explicit verdict (PASS / WEAKEN / FAIL / OPEN) against pre-stated falsification criterion:
+- Phase A (Tasks 1-5): Postulate verification — `13_p1_p2_verification.md`
+- Phase B (Tasks 6-10): Field equation verification — `14_field_equation_verification.md`
+- Phase C (Tasks 11-15): Operational test protocols — `15_operational_test_protocols.md`
+- Phase D (Tasks 16-20): OP-PFE advancement — `16_op_pfe_advancement.md`
+- Phase E (Tasks 21-23): Extended adversarial gauntlet (Patterns #61, #62, #63) — `17_pass12_adversarial_extensions.md`
+- Phase F (Tasks 24-26): Synthesis (stress-energy alternatives / Δ_interp / three-framework integration) — `18_`, `19_`, `20_`
+- Phase G (Task 27): Final report — `21_pass12_final_report.md`
+
+**Files created (9)**:
+- `THEORY/working/sensing_pipeline/13_p1_p2_verification.md` (~420 LOC)
+- `THEORY/working/sensing_pipeline/14_field_equation_verification.md` (~470 LOC)
+- `THEORY/working/sensing_pipeline/15_operational_test_protocols.md` (~330 LOC)
+- `THEORY/working/sensing_pipeline/16_op_pfe_advancement.md` (~390 LOC)
+- `THEORY/working/sensing_pipeline/17_pass12_adversarial_extensions.md` (~320 LOC)
+- `THEORY/working/sensing_pipeline/18_stress_energy_alternatives.md` (~230 LOC)
+- `THEORY/working/sensing_pipeline/19_delta_interp_synthesis.md` (~200 LOC)
+- `THEORY/working/sensing_pipeline/20_three_framework_synthesis.md` (~220 LOC)
+- `THEORY/working/sensing_pipeline/21_pass12_final_report.md` (~360 LOC)
+
+**Files modified (backref only)**:
+- `THEORY/working/sensing_pipeline/00_INDEX.md` — file count 9→22; §2.8 Pass 12 declaration added
+
+**Verdict aggregate**:
+- PASS: 18/27 (67%)
+- WEAKEN: 8/27 (30%)
+- FAIL: 1/27 (3.7%) — Task 3 σ-derivation rigor
+- Framework collapse threshold (>50% FAIL): **NOT triggered**
+
+**Framework state — substantive weakening but SURVIVES**:
+- Postulate count revised: 2 → 6 commitments (1 Minkowski-like commitment + 4 implicit hypotheses)
+- σ status: derived → constructed (Task 3 FAIL with reformulation route OP-PFE-7)
+- σ at threshold: binary → probabilistic fuzzy edge (Task 1)
+- Stage table: 3/6 PASS, 2/6 FAIL (>2× error), 1/6 AMBIGUOUS (Task 2; convention fix = OP-PFE-6)
+- Vacuum (1+2D): Schwarzschild-like claim WRONG; only flat + conical defects (Task 8)
+- Symmetry: demoted from Lorentz-invariant Einstein-form to Newton-Cartan-like (Task 21)
+- Cauchy problem: well-posed only in quasi-static equilibrium regime (Task 22)
+- Stress-energy: SCC E[u] = 1 of 4 plausible candidates; noise-scaling experiment discriminates (Task 24)
+- $\Delta_{\text{interp}}$: Wasserstein W_2 uniquely recommended (Task 25); SCC `transport.py` provides computation
+
+**OP catalog growth**: 5 → 19 OPs (14 added). Closure paths identified per OP. 0 closed.
+
+**Tier 1 Pass 13 priorities** (zero new-experiment cost):
+1. OP-PFE-11: Execute Test 1 on Chichilnisky CRCNS data
+2. OP-PFE-6: Re-extract stage table under consistent convention
+3. OP-PFE-7: Reformulate P1 via reachability R to remove Task 3 circularity
+
+**Three-framework synthesis (Task 26)**: PFE positioned as downstream coupling layer between SCC (upstream substrate) and PAI (intermediate; Δ_interp commitment is gating dependency). 4 natural integration points; 5 unresolved gaps; 3 discipline-violation risks flagged.
+
+**Constraint compliance (100%)**:
+- THEORY/canonical/: 0 edits
+- SCC canonical (CV-1.13, canonical.md, theorem_status.md): 0 edits
+- PAI canonical (PIVOT-2026-05-21 and predecessors): 0 edits
+- 8 SCC retractions: 0 revivals
+- sensing_pipeline/01-12 body content: 0 edits (all verification in 13-21)
+- CODE/scc/: 0 edits
+
+**Framework register update**: Pass 11's "measurement scaffold" → Pass 12's "measurement scaffold *for quasi-static perception in Newton-Cartan-like equilibrium-effective regime, with empirically uncalibrated coupling, awaiting Test 1 execution as Tier-1 priority*".
+
+**Honest sentence**: After 12 passes (1 bootstrap + 1 deepening + 7 adversarial + 1 reconstruction + 1 minimal-core + 1 PFE construction + 1 systematic verification), the framework *survives* but its truth is conditional on (i) OP-PFE-11 empirical validation, (ii) OP-PFE-14 dissipative-coupling repair, (iii) OP-PFE-16 stress-energy selection, (iv) PAI substrate $\Delta_{\text{interp}}$ commitment. None resolved in Pass 12.
+
+---
+
+## [SENSING PIPELINE PASS 11 PERCEPTION CONE + FIELD EQUATION] 2026-05-26 — 20-iter framework construction
+
+**Type**: Constructive framework building via 20 iterations of derive + adversarial verify. canonical / SCC / PAI 무수정.
+
+**Trigger**: User's three-step strategic reframing across the day:
+1. (Earlier) NS-analogy: governing equation + approximation regimes
+2. (Later) Einstein-style field equation form with geometric interpretation
+3. (Final) Minkowski-style derivation of perception relation σ + 20-iteration construction
+
+**Key insight**: Tier 2 σ commitment (made early in conversation) has *exactly* the lightcone structure (reflexive + symmetric + non-transitive). Making this explicit via Minkowski-style derivation gives σ a *principled origin* instead of primitive assertion.
+
+**Execution**: 20 iterations consolidated into single document `12_perception_cone_field_equation.md` (~700 LOC):
+- Iter 1-5: Postulates P1, P2; Minkowski σ derivation; $c_p^{(s)}$ operationalization; stage cone hierarchy
+- Iter 6-10: Local Lorentz metric; curvature; SCC-based stress-energy; field equation candidate; 6 approximation regimes
+- Iter 11-15: Adversarial gauntlet (Patterns #11, #15, #51, #28, #7+#37+#50)
+- Iter 16-18: 4 operational tests; connection to SCC E[u]; connection to PAI $\Delta_{\text{interp}}$
+- Iter 19-20: Minimal compression; final report
+- §21: Meta-reflection on framework's honest standing
+
+**Files created (1)**:
+- `THEORY/working/sensing_pipeline/12_perception_cone_field_equation.md` (~700 LOC) — full 20-iteration construction with audit-visible derive + verify cycle per iteration
+
+**Files modified (backref only)**:
+- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.7 added with Pass 11 framework declaration + adversarial results summary
+
+**Framework status**:
+- **2 postulates** (P1 perceptual relativity, P2 limiting rate $c_p^{(s)}$)
+- **5 primitives** (event, stage rate, cohesion field, perception cone, per-stage metric)
+- **1 field equation** (Einstein form, per-stage)
+- **6 approximation regimes**
+- **4 operational tests** (falsifiable)
+- **5 open problems** (OP-PFE-1..5)
+
+**Adversarial gauntlet results**: framework survives all 6 patterns *conditionally* (as measurement scaffold, not biological theorem). σ relation now *derived* rather than asserted — Pattern #18 (tautology) explicitly defeated by the postulate-based derivation.
+
+**Substrate preservation** (entire day's discipline maintained):
+- SCC canonical CV-1.20 (102 claims): **0 edits**
+- PAI canonical: **0 edits**
+- 8 SCC retractions: **0 revivals**
+- 31 prior TC deletions: preserved as audit trail
+- All sensing_pipeline docs 01-11 본문: **0 edits** (Pass 11 = new doc only)
+
+**Natural component synthesis**:
+- SCC's variational $E[u]$ becomes the natural stress-energy source $T_{\mu\nu}^{\text{perception}}$
+- PAI's $\Delta_{\text{interp}}$ gets candidate operational form via geodesic distance
+- 31 prior deletions reframed as *non-cone-respecting framework attempts* — failure modes now have *structural reason*
+
+**Honest caveats** (all explicit in document):
+- σ derivation assumes P1+P2 hold within an observer equivalence class — narrow scoping
+- $c_p^{(s)}$ varies spatially (fovea vs periphery) — single-value-per-stage is approximation
+- Cone hierarchy is *not nested* (different stages have crossing cones)
+- Local metric is *piecewise smooth*; singular at sharp $c_p$ transitions
+- Stress-energy choice (SCC E[u]) is *one candidate*; alternatives (Friston F, Fisher info, sparse coding) give *different* PFEs
+- Framework is *measurement scaffold*, not theorem; *truth* depends on empirical tests 1-4 (not yet done)
+
+**Next cuts identified** (5):
+1. Piecewise treatment for non-smooth $c_p^{(s)}$
+2. $c_p^{(s)}(x)$ as a *field* formulation (not single value)
+3. Test alternative field equation forms (Yang-Mills, gauge theory)
+4. Test alternative energy functionals
+5. Discrete (cellular automaton / discrete diff geometry) version
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01-11` 본문 — 0 edit
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Total sensing_pipeline directory size**: ~12,300 LOC (12 documents).
+
+**Strategic significance**: 오늘 9시간 작업의 *자연 telos*. 작업 순서가 *우연이 아닌 필연* 으로 정렬됨:
+1. SCC 보존 (Pass 3+ verification 내내) → 오늘 Pass 11 의 stress-energy source 로 활용됨
+2. PAI 보존 (모든 패스 내내) → 오늘 Pass 11 의 $\Delta_{\text{interp}}$ 후보로 활용됨
+3. Tier 2 σ commit (이른 대화) → 오늘 Pass 11 의 perception cone 으로 derive 됨
+4. 31 deletions (9 verification 패스) → 오늘 Pass 11 의 *non-cone-respecting attempts* 로 reframed 됨
+5. 11_minimal_core (Pass 10) → 오늘 Pass 11 의 *primitives + constraints* 의 출발점
+
+각 step 이 *Pass 11 framework 의 component* 로 자연 사용됨. 사용자 지적: "오늘 작업의 *진짜 자연스러운 telos*".
+
+---
+
+## [SENSING PIPELINE PASS 10 MINIMAL CORE] 2026-05-25 (post-collapse refinement) — 11_minimal_core.md consolidation
+
+**Type**: 10-iteration minimal-structure adversarial refinement. canonical / SCC / PAI 무수정. No new TC. No new framework name.
+
+**Trigger**: 사용자 directive — execute ralph-loop-style 10 iterations on the prompt at `~/.claude/plans/minimal-adversarial-refinement-prompt.md`. Ralph-loop slash-command failed due to shell parsing of triple-backticks + parens in the long prompt; executed directly in main context with task tracking.
+
+**Execution**: 10 sequential iterations consolidated into single deliverable:
+- Iter 1: Register inventory of all 11 sensing_pipeline docs (11,581 LOC)
+- Iter 2: Pattern A (hidden idealization) sweep — Poisson 249, Markov 104, mostly in DELETED notices
+- Iter 3: Pattern B (ontology inflation) sweep — formation 146, field 111, perception 25; 5 inflated terms (field, perception, object, world, meaning) marked for downgrade
+- Iter 4: Pattern C (false generality) sweep — already clean (1-1 hits only)
+- Iter 5: Pattern D (evidence boundary) classification — most biology-facing content at E1-E3; no E4
+- Iter 6: Pattern E compression — successful to 5+5+5 (primitives + constraints + open problems)
+- Iter 7: Survival criteria — reclassified ~11,000 LOC as EXPLORATION-RECORD
+- Iter 8: Reconstruction-rule audit — PASSED (no new architecture; OP-MIN-1..5 each replace a deleted TC with weaker/operational form)
+- Iter 9: Wrote `11_minimal_core.md` (~700 LOC)
+- Iter 10: Final report + 5 Next Cut Recommendations
+
+**Files created (1)**:
+- `THEORY/working/sensing_pipeline/11_minimal_core.md` (~700 LOC) — single authoritative document with 5 primitives + 5 constraints + 5 OPs + pattern sweep results + deletion log compression + no-expansion compliance check + next cut recommendations
+
+**Files modified (backref only)**:
+- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.6 added with Pass 10 minimal core declaration
+
+**5 Primitives** (P1-P5, operationally defined): photon arrival event; bounded intensity response; forward-only kernel transformation; tolerance σ; channel index.
+
+**5 Constraints** (C1-C5, negative): NOT Poisson; NOT Markov; NOT probability-kernel; NOT unbounded; NOT biological-theorem.
+
+**5 Open Problems** (OP-MIN-1..5, with question + obstacle + route): operational perceptual field definition; super-Poisson Mandel Q measurement protocol; sub-probability kernel composition theorem; non-Markov information-flow inequality; SCC u_t ↔ stage mapping (carry-forward from OP-SP-006).
+
+**Reclassification verdict**:
+- ~11,000 LOC = EXPLORATION-RECORD (research process documentation)
+- 1 active CONDITIONAL-OBS (TC-SP-R-5; salvage via OP-MIN-3)
+- 5 OPERATIONAL-HYPOTHESIS / OPEN-PROBLEM (OP-MIN-1..5)
+- 0 BIOLOGICAL-CLAIM (per C5)
+
+**Final standard compliance**:
+- Smaller: 32 active TCs → 6 active claims (1 UNCLEAR + 5 OPs)
+- Sharper: every primitive has operational definition; every OP has explicit falsification
+- More falsifiable: OP-MIN-2 falsifiable via MEA Mandel Q measurement; OP-MIN-3 via counterexample search; etc.
+- Net active-claim content shrank (despite +700 LOC for minimal core doc)
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01-10` 본문 — 0 edit (Pass 10 = consolidation only; audit trail preserved)
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Cumulative statistics across 9 verification passes + 1 refinement pass**:
+- Total TCs ever-created: 32
+- Total DELETED: 31
+- Total UNCLEAR with salvage: 1 (R-5)
+- Total new operational hypotheses: 5 (OP-MIN-1..5)
+- Total new negative constraints: 5 (C1..C5)
+- Total new operational primitives: 5 (P1..P5)
+- **Final framework size**: 6 active claims + 5 primitives + 5 constraints (vs initial 32 TCs)
+
+**5 Next Cut Recommendations**:
+1. Forward-only assumption in P3 may need non-causal reformulation
+2. Channel index P5 ("given by anatomy") needs operational distinguishability criterion
+3. σ tolerance parameters δ_t, δ_x principled vs arbitrary
+4. "Operational" itself: feasibility audit of OP-MIN-1..4 measurement procedures
+5. Constraint C5 (no biological theorem) as contingent vs necessary
+
+---
+
+## [SENSING PIPELINE PASS 9 CORPUS COLLAPSE] 2026-05-25 (absolute final) — 3 추가 deleted, 1 active (96.9% cumulative attrition)
+
+**Type**: Pass 9 adversarial verification — *corpus terminal collapse*. canonical / SCC / PAI 무수정.
+
+**Trigger**: 사용자 directive (third "더 깎아보자 정밀하게").
+
+**Execution**: 3 parallel fresh-context Opus critic agents:
+- **#41 non-constructive set-theoretic dependency**
+- **#15 vacuity at biological boundary**  
+- **#52 information-theoretic vs operational mismatch**
+
+**결과**:
+- **RETAINED**: **0** (final MATH-FACT ironclad R-4 falls)
+- **UNCLEAR**: 1 (R-5 — sub-probability vs probability kernel)
+- **DELETED (Pass 9)**: 3 (R-1, R-2, R-4)
+
+**Pass 9 deletions**:
+- **R-1 Janossy** (3 patterns): Radon-Nikodym + super-Poisson reality + operational inaccessibility
+- **R-2 Riesz** (3 patterns): scope/motivation + AC-equivalent Hahn-Banach gratuitous + retinal signal space NOT bona fide Banach lattice
+- **R-4 DPI** (2 patterns — *last MATH-FACT ironclad falls*): retinal NOT Markov (multiple prior passes established; should have triggered earlier retraction) + Shannon I ≠ task-relevant Fisher info (Geisler 2008)
+
+**Pattern #15 (vacuity) hits ALL 4 active TCs**: 본 corpus 의 *every TC's universal hypothesis class is empty in actual retina*.
+
+**Files modified (sensing_pipeline/ only)**:
+- `10_reconstruction_pass6.md`:
+  - 3 DELETE escalations (R-1, R-2, R-4 — previously UNCLEAR/RETAINED, now DELETED)
+  - 1 UNCLEAR annotation (R-5 with Pass 9 #15 vacuity hit)
+  - §13 Pass 9 Verification Results section added (final 통계 + meta-meta-lesson)
+- `00_INDEX.md` — §2.5 added with Pass 9 results + corpus collapse declaration
+
+**Final cumulative statistics (Pass 3 through Pass 9)**:
+- Total TCs ever-created: 32
+- Total deleted: 31
+- Final active: 1 (R-5 UNCLEAR with salvage path)
+- **Survival rate: 3.1% (1/32)**
+
+**Meta-meta-lesson (Pass 9 의 systematic 진단)**:
+
+본 corpus 의 *모든* TC 가 textbook mathematical structure (Poisson, Banach lattice, Markov chain, probability kernel) 의 retinal 응용 주장. 그러나 *실제 retina 는 그 textbook structures 의 instance 아님*:
+- Poisson 가정 → 실제 자연 광 super-Poisson (Bose-Einstein bunching)
+- Banach lattice 가정 → 실제 retinal signal space 는 bounded cone (vector lattice 아님)
+- Markov 가정 → 실제 retinal pipeline 은 feedback + adaptation 으로 non-Markov
+- Probability kernel 가정 → 실제 retinal stages 는 sub-probability + intensity (saturation + refractory + divisive normalization)
+
+**본 corpus 의 *진정한 contribution*** = *negative result* — *"다음 시도하지 마라"* 의 documented record:
+- 다음 framework 의 출발점이 super-Poisson + bounded cone + non-Markov + sub-probability/intensity 가 되어야 함을 establish
+- 11,400+ 라인의 mathematical exploration record 가 *어떤 framework 시도가 어디서 부서지는가* 의 *systematic documentation*
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01-09` 본문 — 0 edit (Pass 9 cleanup 은 10_ 내부에만)
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Absolute stable state 선언**: 추가 verification 의 marginal value 0. R-5 의 1 UNCLEAR hole 도 *biological vacuity* (probability vs sub-probability) 로 fundamental; *salvage path* 는 measure-kernel reformulation.
+
+**Carry-forward** (사용자 결정 — 본 corpus 의 future):
+- **(A) Framework 전면 reformulation** — super-Poisson + bounded cone + non-Markov + sub-probability 가 *실제 retinal 구조*; 새 sensing pipeline framework 가 이들 위에 build
+- **(B) PAI bridge pivot (가장 high-leverage)** — OP-SP-006 (SCC u_t ↔ stage); 본 sensing pipeline 의 value 가 negative result + exploration record 임이 확립
+- **(C) Register 격하** — "Mathematical exploration with retinal motivation; negative result documentation; research process record" 로 framing 변경
+- **(D) Archival** — corpus 를 *learning artifact* 로 보존; SCC + PAI 와 별도 framework 로 fresh start
+- **(E) Negative results paper** — 본 9-pass verification process 자체가 publishable *adversarial verification methodology* + *systematic failure documentation*
+
+---
+
+## [SENSING PIPELINE PASS 8 DEEPEST CUT] 2026-05-25 (final) — 5 추가 deleted, 4 active (87.5% cumulative attrition)
+
+**Type**: Pass 8 adversarial verification + cleanup. canonical / SCC / PAI 무수정.
+
+**Trigger**: 사용자 directive "더 깎아보자 정밀하게" (second time) — Pass 7 cleanup 후 *meta-mathematical* attacks.
+
+**Execution**: 3 parallel fresh-context Opus critic agents × 3 new attack patterns:
+- **#7 implicit regularity smuggle** — silent smoothness/integrability assumptions
+- **#37 pointwise vs uniform conflation** — sup-interchange-without-uniform-convergence
+- **#28 subset support** — actual proof scope < stated
+
+**결과**:
+- **RETAINED (truly ironclad)**: 2 (R-4 DPI, R-5 Composition) — 0 HOLE across 6 P7+P8 patterns
+- **UNCLEAR (1 minor HOLE)**: 2 (R-1 Janossy, R-2 Riesz) — fixable
+- **DELETED (Pass 8)**: 5 (TC-SP-0.1a, R-3, R-6, R-9, R-10)
+
+**Pass 8 deletions**:
+- **TC-SP-0.1a** (2 patterns): Radon-Nikodym a.c. + simple-process 가정이 statement 외 hidden. *9-pattern original survivor* 가 처음 falls
+- **R-3 Spacetime slab** (4 patterns — strongest): PSD $S_V$ existence smuggle (no WSS hypothesis on V); concentration constant $S_V$-dependent; uniform-claim-pointwise-proof
+- **R-6 Naka-Rushton Weber** (3 patterns): Q-conjunction natural-viewing empty support + Taylor remainder $\bar I$-dependent + stated R_op 25배 넓음
+- **R-9 Shannon min-capacity** (2 patterns — second MATH-FACT failure): sup-interchange admissibility-pushforward compatibility silent
+- **R-10 Sparse coding** (4 patterns — equal strongest with R-3): empirical-as-guarantee + per-instance pointwise + $\arg\min$ uniqueness/convergence smuggle + Olshausen-Field corpus only
+
+**Files modified (sensing_pipeline/ only)**:
+- `02_stage0_photon_point_process.md` — TC-SP-0.1a DELETED notice (was RETAINED post-split in Pass 3)
+- `10_reconstruction_pass6.md`:
+  - 4 DELETE escalations (R-3, R-6, R-9, R-10 — previously UNCLEAR or RETAINED, now DELETED)
+  - 2 UNCLEAR annotations (R-1, R-2 with Pass 8 minor holes)
+  - §12 Pass 8 Verification Results section added (verdict matrix + 6-pattern cumulative + meta-lesson)
+- `00_INDEX.md` — §2.4 added with Pass 8 results + stable state declaration
+
+**Cumulative verification statistics (Pass 3 through Pass 8)**:
+- Total TCs ever-created: 32 (22 original including split 0.1a + 10 Pass 6 reconstruction)
+- Total deleted: 28 (21 in P3-P5 + 2 in P7 + 5 in P8)
+- Final active: 4 (2 RETAINED ironclad + 2 UNCLEAR-fixable)
+- **Survival rate: 12.5%** (4/32)
+
+**Meta-lesson (Pass 8 confirmed)**:
+1. **TC-SP-0.1a 의 fall** 이 *systematic verbal smuggle pattern* 확립 — "density of Λ", "Poisson" 같은 명사구 안에 load-bearing hypothesis 가 hidden
+2. **MATH-FACT 의 *signal-class regularity vulnerability*** — R-3 (PSD existence) + R-9 (admissibility-pushforward compatibility) 가 *textbook citation 자체* 의 hypothesis 가 TC 의 stated Q-conditions 으로 verify 안 됨
+3. **남은 2 RETAINED 의 공통점**: pure measure-theoretic existence/closure; signal-class / data-class hypothesis 0
+4. **본 corpus 의 *진정한 value*** 는 4 surviving TCs 가 아니라 *11,000+ 라인의 mathematical exploration record* — *retinal phenomena 의 mathematical 형식화 시도와 그 시도가 어디서 부서지는가* 의 documented research process
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01, 03-09` 본문 — 0 edit (Pass 8 cleanup 은 02 의 0.1a + 10_ 내부에만)
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Stable state 선언**: 추가 attack 의 marginal value 극히 낮음. R-4 / R-5 는 textbook generic existence/closure (DPI + kernel composition); UNCLEAR R-1 / R-2 는 explicit hypothesis 추가로 fix 가능.
+
+**Carry-forward** (사용자 결정):
+- (A) R-4, R-5 의 full proof attempt — Cover-Thomas + Kallenberg 의 직접 인용으로 canonical-track promotion 후보
+- (B) R-1, R-2 의 minor fix (explicit Radon-Nikodym 가정 추가) — UNCLEAR → RETAINED 전환
+- (C) **PAI bridge pivot (가장 high-leverage)** — OP-SP-006 (SCC $u_t$ ↔ stage) advancement; 본 sensing pipeline 의 *value* 가 *TC corpus* 가 아닌 *exploration record* 임이 확립되었으므로, 다음 단계는 PAI 와의 *별도 framework* 구축
+- (D) 전체 sensing_pipeline directory 의 *register 격하* — DEFINITION-DRAFT + THEOREM-CANDIDATE 가 아닌 *Mathematical exploration with retinal motivation; research process documentation* 으로 framing 변경
+
+---
+
+## [SENSING PIPELINE PASS 7 PRECISION CUT] 2026-05-25 (late late evening) — 2 NTCs deleted, 3 UNCLEAR
+
+**Type**: Pass 7 adversarial verification + cleanup on Pass 6 reconstruction. canonical / SCC / PAI 무수정.
+
+**Trigger**: 사용자 directive "더 깎아보자 정밀하게" — Pass 6 reconstruction (10 new TC-SP-R) 의 *실제 검증*.
+
+**Execution**: 3 parallel fresh-context Opus critic agents × 3 new attack patterns:
+- **#22 Q-condition compounding** — conjunction Q1∧Q2∧... 의 empty support in real retinal data
+- **#3 Assumption-by-citation** — cited theorem 의 hypothesis 가 TC's own Q-conditions 으로 verified 되는가
+- **#50 Typicality vs guarantee** — approximate (≈, O, ~) claims 가 typical-case vs uniform bound
+
+**결과**:
+- **RETAINED (0 HOLE across all 3 P7 patterns)**: 5 (R-1, R-2, R-4, R-5, R-9) — 모두 MATH-FACT
+- **DELETED (≥2 HOLE)**: 2 (R-7 with 3 patterns, R-8 with 2 patterns)
+- **UNCLEAR (1 HOLE)**: 3 (R-3, R-6, R-10 — pending Pass 8 추가 검증)
+
+**Pass 7 deletions**:
+- **TC-SP-R-7 DoG≈Laplacian on Interior** (3-pattern strong refute):
+  - #22: Q1 (C² with bounded ∂²V) excludes natural-scene edges precisely where DoG biologically targets
+  - #3: Lindeberg-Koenderink remainder requires C⁴ with bounded 4th derivatives; Q1 only specifies C² — *citation hypothesis NOT verified by TC's own Q1*
+  - #50: bound vacuous (RHS = ∞) on stated hypothesis class; α-near-1 typicality smuggled into formal leading coefficient
+- **TC-SP-R-8 Cox Rate Sufficiency in High-Rate Regime** (2-pattern):
+  - #22: 5 Q-conditions multiplicative — joint Q1∧Q2∧Q4∧Q5 satisfaction <1% in actual parvocellular recordings (Berry-Meister 1998 Fano violation; Mastronarde 1989 + Shlens 2006 noise correlation violation in ~80% pairs)
+  - #50: O(W/λ̄ log(λ̄/W)) presented as uniform at Q3 boundary, but Bialek-Rieke produces it as asymptotic *limit*
+
+**Files modified (sensing_pipeline/ only)**:
+- `10_reconstruction_pass6.md`:
+  - 2 DELETE retraction notices (R-7, R-8 headers replaced)
+  - 3 UNCLEAR flags (R-3, R-6, R-10 headers annotated with Pass 7 #50/#22 holes)
+  - §11 Pass 7 Verification Results section added (verdict matrix + statistics + design lessons)
+- `00_INDEX.md` — §2.3 added with Pass 7 results
+
+**Active TC count change**:
+- Pre-Pass-7: 11 (TC-SP-0.1a + R-1..R-10)
+- Post-Pass-7: **9** = TC-SP-0.1a + 5 RETAINED + 3 UNCLEAR
+
+**총 verification 통계 (Pass 3-7 combined)**:
+- Total TCs created: 22 (original 20 + split 0.1a + Pass 6 new 10 = 32 actually, but minus retracted = active 9)
+- Wait: 22 original (20 + 0.1a split + 2.6 borderline) + 10 P6 new = 32 total ever. Of these: 21 deleted in P3-P5 + 2 deleted in P7 = 23 deleted. Active 9.
+
+**핵심 design lesson** (Pass 7 confirmed):
+1. MATH-FACT TCs 가 모두 survive — pattern-aware design 의 성공
+2. COND-OBS TCs 가 systematically vulnerable — #22 Q-compounding 이 가장 lethal
+3. R-7 의 3-pattern failure 가 mathematical citation 의 *hypothesis-check requirement* 드러냄
+4. Pass 6 self-prediction 7/10 correct (3 over-optimistic) — self-prediction 의 confirmation bias 위험
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01-09` 본문 — 0 edit (모든 P7 cleanup 은 10_ 내부)
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Carry-forward**:
+- Pass 8 verification of 3 UNCLEAR (R-3, R-6, R-10) — 별도 plan
+- 5 RETAINED MATH-FACT TCs: full proof 시도 (별도 plan)
+- PAI bridge work (OP-SP-006 advancement) — 별도 plan
+
+---
+
+## [SENSING PIPELINE PASS 6 RECONSTRUCTION] 2026-05-25 (late evening) — 10 new TC-SP-R candidates with pattern-aware design
+
+**Type**: Reconstruction extension of prior Pass 3-5 cleanup. canonical / SCC / PAI 무수정. CV-1.20 그대로.
+
+**Trigger**: 사용자 directive "/ralplan /math-olympiad /ultrawork 계속 진행해 아주 길고 아주 자세하고 아주 정밀하게" — Pass 5 collapse 후 forward motion 요청. Plan: extension of `/Users/ojaehong/.claude/plans/sensing-pipeline-full-verify-cleanup.md` (Phase 6).
+
+**Execution**: Self-orchestrated Planner/Architect/Critic consensus (Architect/Critic agent 가 session limit 으로 unavailable — main context 에서 모든 role 수행). Approved plan: Option A (10 new TCs, 5 MATH-FACT + 5 COND-OBS, pattern-aware design).
+
+**Files created (1)**:
+- `THEORY/working/sensing_pipeline/10_reconstruction_pass6.md` (~700 lines) — 10 new TC-SP-R candidates with:
+  - Statement (with Q-conditions for COND-OBS)
+  - Tag (MATH-FACT or COND-OBS)
+  - Pattern-avoidance analysis (≥3 of 9 known patterns per TC)
+  - Proof sketch + references
+  - Predicted survival (HIGH / MOD-HIGH / MODERATE)
+  - Cross-reference to deleted predecessor
+  - Pre-mortem (3 scenarios) + expanded test plan + ADR
+
+**Files modified (backref only)**:
+- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.2 added with 10 new TC-SP-R table
+
+**New TC-SP-R candidates** (10):
+- **TC-SP-R-1** Janossy product density (MATH-FACT, HIGH)
+- **TC-SP-R-2** Riesz lattice decomposition (MATH-FACT, HIGH)
+- **TC-SP-R-3** Spacetime Fourier velocity-slab — V1 cortical, NOT retinal (MATH-FACT, HIGH)
+- **TC-SP-R-4** DPI for Markov kernel cascades (MATH-FACT, HIGH)
+- **TC-SP-R-5** Composition of stochastic kernels (MATH-FACT, HIGH)
+- **TC-SP-R-6** Naka-Rushton Weber-Fechner under bounded operating range, Q1-Q5 (COND-OBS, MOD-HIGH)
+- **TC-SP-R-7** DoG ≈ Laplacian on C² interior with margin, Q1-Q3 (COND-OBS, MOD-HIGH)
+- **TC-SP-R-8** Cox process rate sufficiency in Q5-conditioned parvocellular regime (COND-OBS, MODERATE)
+- **TC-SP-R-9** Shannon min-capacity bound — math only, biological non-applicability via Geisler 2008 (MATH-FACT, HIGH)
+- **TC-SP-R-10** Sparse coding L1 MAP for V1 (Olshausen-Field 1996), NOT retinal bipolar (COND-OBS, MODERATE)
+
+**Files NOT modified**:
+- `THEORY/canonical/` 어떤 파일도 — 0 edit
+- `THEORY/working/sensing_pipeline/01-09` 본문 — 0 edit (reconstruction은 NEW file only)
+- `CODE/scc/` 모든 파일 — 0 edit
+- 8 SCC retractions — 0 부활
+
+**Active TC count change**:
+- Pre Pass 6: 1 (TC-SP-0.1a)
+- Post Pass 6: **11** (TC-SP-0.1a + TC-SP-R-1..R-10)
+- Note: TC-SP-R-N namespace separate from deleted TC-SP-N.M (no code reuse)
+
+**Discipline 준수**:
+- Constraint 100% (canonical/SCC/PAI/8-retractions 무수정)
+- Pattern-aware design: 각 NTC 가 ≥3 patterns explicitly addressed
+- Math/biology separation: MATH-FACT vs COND-OBS tagging
+- No unconditional retinal claims
+- Audit trail: Pass 3-5 의 21 deletions 본문 그대로 유지; reconstruction 은 ADDITIVE
+
+**Predicted Pass 7 survival**: ≥70% (6 HIGH + 2 MOD-HIGH + 2 MODERATE)
+
+**Carry-forward**:
+- Pass 7 verification of 10 new TCs (별도 plan)
+- PAI bridge work (OP-SP-006 advancement, 별도 plan)
+- Stage docs (02-07) cross-reference updates linking to TC-SP-R-N (별도 plan)
+- Possible Stage 6/7 expansion (LGN, V1)
+
+---
+
 ## [SENSING PIPELINE FULL VERIFY + RUTHLESS CLEANUP] 2026-05-25 (evening) — 3-Pass adversarial verification + 21 of 22 TC-SP deleted
 
 **Type**: Adversarial verification + cleanup execution. canonical / SCC / PAI 무수정. CV-1.20 그대로. 102 claims 그대로. 8 retractions 무수정.
