@@ -4,6 +4,29 @@
 
 ---
 
+## [COHERENCE: SCOPE CALIBRATION + LEGACY QUARANTINE] 2026-05-26
+
+### Summary
+"조화롭나?" 점검 후 두 조치. (1) 야망-증명 기울기를 명시 격리(scope 보정), (2) 죽은 자료를 _archive로 격리. substrate 102 claims 불변.
+
+### Scope calibration
+- NEW `THEORY/0_axis/SCOPE_LEDGER.md` — Tier 1 PROVEN(field morphology) / Tier 2 PARTIAL(Cat B-C) / Tier 3 DIRECTION(objecthood·actional·𝕌, OPEN). cold_failure_analysis 자기진단을 구속 가드레일로 승격; 거시 산문 티어 태그 의무.
+- DECLARATION·CANONICAL_AXIS에 `[Tier 3 / DIRECTION]` 태그 + SCOPE_LEDGER cross-link.
+- drift 보정: CLAUDE.md (CV-1.13/83claims → CV-1.20/102; test 215→228; sketch CV-1.20), README (CV-1.11 → CV-1.20 + 현재상태 배너). (THEORY_INDEX·MOC_canonical_authority·sct_manifest 는 이미 현재.)
+
+### Legacy quarantine (CONVENTIONS §7)
+- `_archive/quarantine_2026-05-26/` 로 git mv (history 보존): cssl/{00_concept_handoff,01_critic_evaluation} (critic-REJECTED), manifold/{manifold_topology_attempt_v0, fractal_dynamic_dim_v0, foundation_reset_v0} (superseded/retracted-source), logs/daily/{MAIN_PROMPT_v3, _dry_run_audit} (legacy prompt). cssl 디렉터리 제거. ARCHIVE_NOTE 첨부.
+- 미격리(보류): broad_survey_B1/B2/B3 — dead-marker 없어 live 유지.
+- 링크: basename 링크는 _archive에서 계속 resolve. 게이트 exit 0; dangling 21→17 (악화 없음).
+
+### Theorem Status / Test Count
+- 변경 없음. 102 claims 봉인.
+
+### Carry-Forward
+- broad_survey 처리 결정. README §8(HT-1.0/H-SINK open) 옛 서사 정리. theorem_status에 OP-UNIFY/OP-PROLEGOMENA 정식 등록.
+
+---
+
 ## [THREAD CONSOLIDATION] 2026-05-26 — Unified Structure candidate
 
 ### Summary
