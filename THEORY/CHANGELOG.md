@@ -4,6 +4,36 @@
 
 ---
 
+## [REORGANIZATION + DECL-2.0] 2026-05-26 — Perception-Action Stack
+
+### Summary
+Full hierarchical reorganization of the repository into a perception-action stack and promotion of the perception-action axis to the ontological center (DECL-1.0 → **DECL-2.0**). Motivated by the perception-action axis audit (`THEORY/0_axis/AUDIT_perception_action_2026-05-26.md`). **No substrate theorem changed: 102 claims (71A/20B/6C/5R) remain sealed and unchanged; the PAI projection maps remain OPEN.**
+
+### Structure
+- `THEORY/` reorganized into a 5-layer semantic stack: `0_axis / 1_sensing / 2_substrate / 3_projections / 4_temporal / logs`. 339 files moved via `git mv` (history preserved).
+- Cryptic dirs (`C/CE/E/SF/MF`) dissolved; `MF/` (89-file drawer) split by Q-MOC membership; 15 colliding basenames de-duplicated.
+- **Authority unified:** top-level `SCC_CANONICAL/` (structural view) folded into `THEORY/2_substrate/canonical/structural/`; reconciled to one authority, live count 102 (CV-1.20). Fact view = `canonical.md`; structural view = `sct_manifest.md`.
+- Migration tooling under `scripts/migration/` (path-keyed rename-map, idempotent link rewriter, baseline-diff verifier). Wikilink integrity: dangling 49→23, ambiguous 18→17 — **no new danglers** (net improvement; gate `verify_links.py` exit 0).
+
+### Files Created / Modified
+- `THEORY/0_axis/DECLARATION.md` — **DECL-2.0** (perception-action center; substrate preserved).
+- `THEORY/0_axis/CANONICAL_AXIS.md`, `PAI_GLOSSARY.md` — NEW (spine + controlled vocabulary).
+- `THEORY/0_axis/AUDIT_perception_action_2026-05-26.md` — NEW (rationale of record).
+- `THEORY_INDEX.md`, `README.md`, `CLAUDE.md`, `CONVENTIONS.md` — rewritten to one consistent substrate→destination story; §5–6 amended to permit the fixed semantic stack layers while keeping the 00–99 Research-OS ban.
+
+### Theorem Status Changes
+- None. Substrate sealed at CV-1.20 (102 claims), unchanged. DECL version: DECL-1.0 → DECL-2.0 (declaration only).
+- New OPs registered in narrative: OP-ACTIONAL-U, OP-PROJECTION, OP-CONTROL-GROUNDING (see DECLARATION/CANONICAL_AXIS); formal entries pending in `theorem_status.md`.
+
+### Test Count
+228 passed, 1 xfailed, 1 pre-existing error (`exp24_basin_flow_test` collection) — CODE/ untouched by reorg; baseline preserved.
+
+### Carry-Forward
+- Branch `restructure/perception-action-stack` off tag `premigration-baseline`; commits C0–C4. Open PR after final verify.
+- Register OP-ACTIONAL-U / OP-PROJECTION / OP-CONTROL-GROUNDING formally in `theorem_status.md`; begin PAI Roadmap Phase 1–2 (define a concrete 𝒜(u;Θ)).
+
+---
+
 ## [SENSING PIPELINE PASS 12 CONTINUOUS VERIFICATION PROGRAM] 2026-05-26 — 27-task adversarial audit of Pass 11
 
 **Type**: Systematic verification of Pass 11 perception cone + Einstein-form field equation framework. canonical / SCC / PAI 무수정. sensing_pipeline/01-12 body content 무수정 (모든 verification 결과는 새 docs).

@@ -1,13 +1,15 @@
 > [!nav] Linked: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · [[INDEX|working/INDEX.md]]
 
-# Relational Field Formation
+# Actional Perception — Relational Field Formation
 
-This repository develops a mathematical theory of how object-like structure can emerge from relational fields without assuming objects in advance.
+This repository develops a mathematical theory of **actional perception**: perception as the formation of a *field of possible robot intervention*, from which objects, affordances, action units, trajectories, and control modes emerge as projections of one field. The goal is to dissolve the double-translation gap where a system interprets the world once for perception and again for action. See `THEORY/0_axis/DECLARATION.md` (DECL-2.0) and `THEORY/0_axis/CANONICAL_AXIS.md`.
 
 In short:
 
 > Objects are not primitive.  
-> Relations and soft cohesion fields come first; objects are later interpretations of stabilized field patterns.
+> A soft cohesion field comes first; objects, affordances, and actions are later projections of stabilized field patterns. **Objecthood is stabilized affordance structure.**
+
+The cohesion-field *morphology* (closure, separation, boundary, temporal transport; 102 sealed claims) is the **substrate** — the carrier the intervention field rides on, documented below — not the whole theory.
 
 ---
 
@@ -163,9 +165,12 @@ CODE/
   experiments/   research experiments
   scripts/       diagnostics and result generation
 
-THEORY/
-  canonical/     settled definitions, theorem registry, open problems
-  working/       active notes and explanatory documents
+THEORY/                  perception-action stack
+  0_axis/        center: DECLARATION (DECL-2.0), CANONICAL_AXIS, PAI_GLOSSARY, audit
+  1_sensing/     raw → field
+  2_substrate/   cohesion morphology + canonical/ (settled spec, theorem registry, open problems)
+  3_projections/ PAI projections (object / affordance / action / control)
+  4_temporal/    identity / transport / succession
   logs/          research history
 ```
 

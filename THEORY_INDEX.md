@@ -2,143 +2,114 @@
 type: MOC
 cluster: top-level
 id: MOC_00_THEORY_INDEX
-last_updated: 2026-05-21
-description: Soft Cognitive Cohesion (SCC) 이론 저장소의 최상위 진입 인덱스. 2026-05-21 PAI pivot 이후 substrate (SCC) + 새 main axis (PAI) 두 layer 가 공존.
+last_updated: 2026-05-26
+description: Soft Cognitive Cohesion (SCC) 저장소 최상위 진입 인덱스. 2026-05-26 perception-action stack 으로 재편. 중심축 = actional perception (DECL-2.0); substrate = 봉인된 cohesion morphology.
 ---
 
-# THEORY_INDEX — SCC Substrate + Perception-Action Interpretation (PAI)
+# THEORY_INDEX — Actional Perception (perception-action stack)
 
 > [!nav] Theory Navigation
 > Parent: (root)
-> Authority: [[DECLARATION]] · [[canonical]] · [[sct_manifest]]
-> PAI direction: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot Doc]] · [[PAI_ROADMAP|Roadmap]]
-> Status: Active (CV-1.20 substrate / HT-3.12 / 2026-05-21 PAI direction)
+> Center: [[DECLARATION]] (DECL-2.0) · [[CANONICAL_AXIS]] · [[PAI_GLOSSARY]]
+> Authority (substrate): [[canonical]] (CV-1.20) · [[sct_manifest]]
+> Status: Active (DECL-2.0 / CV-1.20 substrate sealed / HT-3.12)
 
-## 2026-05-21 Canonical Pivot
+## 중심축 (DECL-2.0)
 
-본 저장소는 두 layer 가 공존합니다.
+> **Perception 은 가능한 로봇 개입(intervention)의 장을 형성하는 것이다.** 장면은 개입 가능성 구조에 대한 등급화된 참여 $u_t : X_t \to [0,1]$ 로 조직되고, 객체·affordance·행동단위·궤적·제어모드는 그 *하나의 장의 사영*이다. 객체성 = 안정화된 affordance 구조.
 
-**Substrate layer** (변경 없음): SCC = soft cohesion field $u_t : X_t \to [0,1]$ 의 phase-field morphology 이론. CV-1.20 SEALED, 102 claims (71A/20B/6C/5R), DECL-1.0 thesis "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" 모두 **SUBSTRATE-CANONICAL** 로 보존.
+지능이 세계를 두 번 해석(perception → 다시 action)하는 **이중 번역**을 제거하는 것이 이 이론의 목표다. 상세: [[CANONICAL_AXIS]] · [[AUDIT_perception_action_2026-05-26]].
 
-**Main research axis** (2026-05-21 등록): **Perception-Action Interpretation (PAI)**.
-- Thesis: *Perception must produce the same unit that action can act upon.*
-- 정의: Perception = cohesive individuation + interpretation invariance across action.
-- 6 DEFINITION-DRAFT vocabulary + 6 OPEN problems (OP-PAI-001..006)
-- 증명 0건, mathematical formalization 없음, CANONICAL-DIRECTION
+축의 형식화 (𝒜(u;Θ), Δ_interp, 불변성 기준) 는 **OPEN**: [[perception_action_interpretation_pivot_2026_05_21|PAI Pivot]] · [[PAI_ROADMAP|Roadmap Phase 0–6]] · OP-PAI-001..006 / OP-ACTIONAL-U / OP-PROJECTION / OP-CONTROL-GROUNDING ([[theorem_status]]).
 
-상세: [[perception_action_interpretation_pivot_2026_05_21|PAI 핀 문서]] · [[PAI_ROADMAP|Phase 0-6 roadmap]] · `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` · `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` (새 agent prompt; v3 는 legacy substrate 작업용으로 보존).
+## Substrate (봉인, 불변)
 
-Trigger: `THEORY/0_axis/macro_audit_2026-05-20.md` §11 verdict.
+cohesion-field morphology — closure/separation/boundary/transport — 와 102개 봉인 정리(CV-1.20, 71A/20B/6C/5R). 개입 장이 올라타는 *운반층*이지 이론 자체가 아니다. DECL-1.0 의 질문 "어떤 차이의 덩어리가 언제 객체가 되는가" 는 substrate 질문으로 보존.
 
 ---
 
-이 저장소의 **substrate 질문** (DECL-1.0):
-**"어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"** — 변경 없음. Primitive 는 soft 응집장 $u_t : X_t \to [0,1]$ 이며, 객체는 가정되지 않고 준안정 응집장의 안정된 판독으로 사후 출현한다.
+## 0. 가장 먼저 읽을 것 (perception-action stack)
 
-이 저장소의 **새 main axis** (PAI pivot, 2026-05-21):
-**"Perception 과 action 이 같은 단위를 공유해야 한다."** — 이중 번역 거부. 증명 미완, OPEN.
+| 순서 | 문서 | 위치 |
+|---|---|---|
+| 1 | [[DECLARATION]] (DECL-2.0) — 중심축 선언 | `THEORY/0_axis/` |
+| 2 | [[CANONICAL_AXIS]] — spine (one field → projections) | `THEORY/0_axis/` |
+| 3 | [[PAI_GLOSSARY]] — 통제 어휘 | `THEORY/0_axis/` |
+| 4 | [[canonical]] (CV-1.20) — substrate 사실 권위 | `THEORY/2_substrate/canonical/` |
+| 5 | [[sct_manifest]] — substrate 구조 권위 (9장) | `THEORY/2_substrate/canonical/structural/` |
+| 6 | [[theorem_status]] · [[hypothesis_tree]] — 정리·OP·차단 트리 | `THEORY/2_substrate/canonical/` |
+| 7 | [[CHANGELOG]] — 세션 로그 | `THEORY/` |
 
----
-
-## 0. 가장 먼저 읽을 것 (2분)
-
-1. [[DECLARATION]] — DECL-1.0, 이론 중심축 선언문 (Q1~Q6).
-2. [[sct_manifest]] — SCC-CT v0.1 (구조적 권위, 9-Chapter, 4-tier Cat A/B/C/R).
-3. [[canonical]] — CV-1.20 SEALED (사실적 권위, 102 claims).
-4. [[theorem_status]] — 정리·OP 레지스트리.
-5. [[hypothesis_tree]] — HT-3.11 차단 가설 의존 트리.
-6. [[CV-1.20_SEAL]] — 최신 봉인 기록.
-7. [[CHANGELOG]] — 세션 로그.
-
-권위 계층 MOC: [[MOC_canonical_authority]] · [[MOC_SCC_CT_v0.1]] · [[MOC_hypothesis_tree]].
+권위 MOC: [[MOC_canonical_authority]] · [[MOC_SCC_CT_v0.1]] · [[MOC_hypothesis_tree]].
 
 ---
 
-## 1. 이론이 답하려는 여섯 가지 질문
+## 1. Substrate 의 여섯 질문 (Q1~Q6)
 
-| 질문 | MOC | 수학적 구조 | 현재 상태 |
+| 질문 | MOC | 수학 구조 | 상태 |
 | --- | --- | --- | --- |
-| Q1. 경계는 언제 출현하는가? | [[MOC_Q1_boundary_T8]] | T8 위상전이 $\beta/\alpha > 4\lambda_2/\lvert W''(c) \rvert$ | 대부분 Cat A |
-| Q2. 여럿이 공존할 수 있는가? | [[MOC_Q2_multi_formation]] | Multi-formation, Count bridge (T-L1-F) | Cat A (조건부) |
-| Q3. 어떻게 변하는가? | [[MOC_Q3_stochastic_dynamics]] | Langevin / Gibbs / Lions-Sznitman | Package I Cat A |
-| Q4. 몇으로 안정화되는가? | [[MOC_Q4_K_selection]] | K-selection (EQ / OBS / DYN) | Cat B |
-| Q5. 시간이 지나도 같은 것인가? | [[MOC_Q5_temporal_identity]] | T-Temporal-Identity, OT, Sinkhorn | Cat A (CV-1.13) |
-| Q6. 분열·합병 후에도 이어지는가? | [[MOC_Q6_sigma_inherit]] | σ-Inheritance (Wigner-projection) | 진행 중 |
+| Q1. 경계는 언제 출현? | [[MOC_Q1_boundary_T8]] | T8 위상전이 $\beta/\alpha > 4\lambda_2/\lvert W''(c)\rvert$ | 대부분 Cat A |
+| Q2. 여럿이 공존? | [[MOC_Q2_multi_formation]] | Multi-formation, Count bridge | Cat A (조건부) |
+| Q3. 어떻게 변하나? | [[MOC_Q3_stochastic_dynamics]] | Langevin / Gibbs / Lions-Sznitman | Package I Cat A |
+| Q4. 몇으로 안정화? | [[MOC_Q4_K_selection]] | K-selection (EQ/OBS/DYN) | Cat B |
+| Q5. 시간 동일성? | [[MOC_Q5_temporal_identity]] | T-Temporal-Identity, OT, Sinkhorn | Cat A (CV-1.13) |
+| Q6. 분열·합병 계승? | [[MOC_Q6_sigma_inherit]] | σ-Inheritance | 진행 중 |
 
-Cross-cutting: [[MOC_sigma_rich_framework]] — σ-Rich fingerprint (Q1/Q2/Q4 횡단).
+Cross-cutting: [[MOC_sigma_rich_framework]] (σ-Rich fingerprint).
 
 ---
 
-## 2. 수직 확장 — 큰 패키지 단위
+## 2. 수직 확장 패키지
 
 | 패키지 | MOC | 위치 |
 | --- | --- | --- |
-| H-MORSE / Eyring-Kramers (Package II) | [[MOC_H_MORSE_packageII]] | `THEORY/working/CV114_H_MORSE_PACKAGEII/` |
-| CV-1.15 Action 기반 시간 비용 | [[MOC_action_temporal_cost]] | `THEORY/working/CV115_ACTION_TEMPORAL_COST/` |
-| CV-1.14 Temporal Composition 후보 | [[MOC_temporal_composition]] | `THEORY/working/CV114_TEMPORAL_COMPOSITION/` |
-| W7 Temporal Audit (S-A1/S-A3/S-B1/S-C1) | [[MOC_temporal_audit_W7]] | `THEORY/working/temporal/` |
-| Level-2 Observer Moduli Space (OMS) | [[MOC_observer_moduli_OMS]] | `THEORY/working/observer_moduli/` |
-| Abstract Formation Dynamics (AFD-0 v0.1) | [[MOC_AFD_0_foundation]] | `THEORY/working/AFD_0/` |
+| H-MORSE / Eyring-Kramers (Package II) | [[MOC_H_MORSE_packageII]] | `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/` |
+| CV-1.15 Action 기반 시간 비용 | [[MOC_action_temporal_cost]] | `THEORY/4_temporal/action_cost/` |
+| CV-1.14 Temporal Composition | [[MOC_temporal_composition]] | `THEORY/4_temporal/composition/` |
+| W7 Temporal Audit | [[MOC_temporal_audit_W7]] | `THEORY/4_temporal/temporal_audit/` |
+| Level-2 Observer Moduli (OMS) | [[MOC_observer_moduli_OMS]] | `THEORY/2_substrate/foundations/observer_moduli/` |
+| Abstract Formation Dynamics (AFD-0) | [[MOC_AFD_0_foundation]] | `THEORY/2_substrate/foundations/AFD/` |
 
 ---
 
-## 3. 차단 가설 · Open Problems
+## 3. Open Problems
 
-[[MOC_open_problems_blockers]] — OP-0001~0022 + H-T*, H-MORSE, H-SINK, H-SR, H-WS, H-σ4, H-P7, H-κ, H-μ0 차단 그래프.
-
-현재 W9+ 타겟: **macro ledger / objecthood theorem 정리**, **L-LOJASIEWICZ-CG Cat A path**, **non-uniform H-MORSE / Package II Eyring-Kramers 진입**, **T-σ-Inherit MERGE/SPLIT** ([[hypothesis_tree]] HT-3.11).
+[[MOC_open_problems_blockers]] — substrate OP-0001~0022 + H-* 차단 그래프; **축 OP**: OP-PAI-001..006, OP-ACTIONAL-U, OP-PROJECTION, OP-CONTROL-GROUNDING.
 
 ---
 
-## 4. 검증 · 감사 · 기록
+## 4. 검증 · 기록
 
-| 자산 | MOC |
-| --- | --- |
-| 실험 (exp1~exp88 + VP1~VP11) ↔ 정리 매핑 | [[MOC_experiments_validation]] |
-| 일·주·월간 연구 일지 | [[MOC_research_journal]] |
-| 폐기·계승된 산출물 (parking, 구 SEAL) | [[MOC_parked_superseded]] |
-
-CV SEAL 체인: [[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [[CV-1.17_SEAL]] → [[CV-1.18_SEAL]] → [[CV-1.19_SEAL]] → [[CV-1.20_SEAL]].
+실험↔정리 매핑 [[MOC_experiments_validation]] · 연구 일지 [[MOC_research_journal]].
+CV SEAL 체인 (`THEORY/2_substrate/canonical/seals/`): [[CV-1.13_SEAL]] → [[CV-1.15_SEAL]] → [[CV-1.16_SEAL]] → [[CV-1.17_SEAL]] → [[CV-1.18_SEAL]] → [[CV-1.19_SEAL]] → [[CV-1.20_SEAL]].
 
 ---
 
-## 5. 권장 reading path (신규 협력자)
-
-1. [[DECLARATION]] (2 분)
-2. [[THEORY_INDEX|이 파일]]
-3. [[sct_manifest]] — 구조적 권위 개관
-4. [[canonical]] §2 Foundational Orientation
-5. [[hypothesis_tree]] §"세션 시작 / 즉시 타겟"
-6. 관심 Q 의 MOC 한 개 — 예: [[MOC_Q4_K_selection]]
-7. MOC 안의 ACTIVE ★ 파일 한 개
-8. [[theorem_status]] 에서 그 정리의 Cat 상태 확인
-9. [[CHANGELOG]] 최신 항목으로 현재 상태 확인
-
----
-
-## 6. 현재 봉인 상태 (2026-05-20)
-
-- **구조적 권위:** SCC-CT v0.1 SEALED ([[sct_manifest]]).
-- **사실적 권위:** CV-1.20 SEALED ([[canonical]]).
-- **Counts:** 71 Cat A / 20 Cat B / 6 Cat C / 5 Cat R = **102 claims**, ~70% fully proved.
-- **CV-1.20 주 성과:** L-UNI-ZMODE Cat A, L-SURFACE-TENSION-RESCALE Cat A. H-MORSE uniform-critical zero-mode branch strengthened; H-RESCALE closed Cat A.
-- **Macro audit:** [[macro_audit_2026-05-20]] — 새 증명 없이 origin / grounded / conditional / intuition / overreach / macro gap 을 분리한 정지 감사.
-
----
-
-## 7. 저장소 구조
+## 5. 저장소 구조 (perception-action stack)
 
 ```
 Perception_theory/
-├── THEORY_INDEX.md           ← 지금 이 문서 (최상위 MOC)
-├── DECLARATION 등 권위 문서 ← THEORY/canonical/
-├── SCC-CT v0.1 봉인 구조    ← SCC_CANONICAL/
-├── 진행 중 작업 (Q1~Q6)      ← THEORY/working/  ([[INDEX|working/INDEX.md]])
-├── 일·주·월 로그            ← THEORY/logs/
-├── Python 구현 / 실험        ← CODE/
-└── _archive/, private_brainstorm/ (이 인덱스에서 다루지 않음)
+├── THEORY_INDEX.md             ← 이 문서 (최상위 MOC)
+├── CLAUDE.md / README.md / CONVENTIONS.md
+├── THEORY/
+│   ├── 0_axis/                 중심축: DECLARATION(2.0), CANONICAL_AXIS, PAI_GLOSSARY, audit, roadmap, pivot
+│   ├── 1_sensing/              raw → field
+│   ├── 2_substrate/            cohesion morphology + canonical/ (사실+구조 권위) + Q1~Q4 + foundations
+│   ├── 3_projections/          PAI 사영 (prolegomena, object/affordance/action/control)
+│   ├── 4_temporal/             identity / transport / succession
+│   └── logs/                   daily / weekly / monthly
+├── CODE/                       Python 구현 / 실험
+└── _archive/, private_brainstorm/
 ```
 
 ---
 
-*MOC_00_THEORY_INDEX, 2026-05-20. 이론의 방향 또는 봉인 버전이 갱신될 때만 수정. 수정 시 [[CHANGELOG]] 에 기록.*
+## 6. 봉인 상태 (2026-05-20 substrate / 2026-05-26 reorg)
+
+- **사실 권위:** CV-1.20 SEALED ([[canonical]]). **구조 권위:** SCC-CT v0.1 ([[sct_manifest]]).
+- **Counts:** 71 Cat A / 20 Cat B / 6 Cat C / 5 Cat R = **102 claims** (~70% proved). 축(PAI) 작업으로 불변.
+- **2026-05-26 reorg:** perception-action stack 재편; SCC_CANONICAL → `2_substrate/canonical/structural/` 통합; DECL-2.0 승격. 링크 무결성 검증 통과 (`scripts/migration/verify_links.py`).
+
+---
+
+*MOC_00_THEORY_INDEX, 2026-05-26. 방향·봉인 버전 갱신 시에만 수정. [[CHANGELOG]] 기록.*

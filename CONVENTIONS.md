@@ -23,21 +23,30 @@ Two physically separated trees:
 ## 2. THEORY/ Internal Structure
 
 ```
-THEORY/
-├── CHANGELOG.md           state changes to canonical (status changes, errata, retractions)
-├── canonical/             authoritative specification — no contamination allowed
-├── working/               active theory development (topic-based, free-form)
-└── logs/                  chronological journal (daily / weekly / monthly)
+THEORY/                         perception-action stack (2026-05-26 reorg; see CANONICAL_AXIS.md)
+├── CHANGELOG.md                state changes to canonical (status changes, errata, retractions)
+├── 0_axis/                     ontological center: DECLARATION (DECL-2.0), CANONICAL_AXIS, PAI_GLOSSARY, audit
+├── 1_sensing/                  raw → field (sensing pipeline)
+├── 2_substrate/                cohesion morphology + the sealed authority
+│   ├── canonical/              authoritative specification — no contamination (+ structural/ = folded SCC-CT)
+│   ├── Q1_boundary/ Q2_multiformation/ Q3_dynamics/ Q4_kselection/   substrate development
+│   ├── sigma_framework/ multiformation/ foundations/                 substrate development
+│   └── INDEX.md                substrate working index
+├── 3_projections/              PAI projections (object / affordance / action / control); prolegomena/
+├── 4_temporal/                 identity / transport / succession (composition, action_cost, audit)
+└── logs/                       chronological journal (daily / weekly / monthly)
 ```
+
+The five numbered layers (`0_axis … 4_temporal`) are a **semantic perception-action stack**, not the bureaucratic 00–99 Research-OS numbering (which remains forbidden — see §6).
 
 ### Promotion Pipeline (Contamination Barrier)
 
 ```
-logs/daily/YYYY-MM-DD.md   ──── reorganize by topic ──→   working/<topic>.md
+logs/daily/YYYY-MM-DD.md   ──── reorganize by topic ──→   2_substrate/<layer>/<topic>.md
                                                                 │
                                                                 │ proof + review + tests
                                                                 ↓
-                                                     canonical/canonical.md
+                                              2_substrate/canonical/canonical.md
                                                     (one-way — no return path)
 ```
 
@@ -143,13 +152,13 @@ Append to `THEORY/CHANGELOG.md` after any session that modifies canonical, worki
 | Weekly log | `THEORY/logs/weekly/YYYY-Www.md` | `2026-W17.md` |
 | Monthly log | `THEORY/logs/monthly/YYYY-MM.md` | `2026-04.md` |
 
-**No prefix registries** (D-/S-/T-/A-/E-/Q-/C-/P-/X-) and **no numbered top-level directories** (00_meta, 01_canonical, ...). The Research OS that used these patterns is archived at `_archive/research_os_2026-04-12/` and must not be re-introduced.
+**No prefix registries** (D-/S-/T-/A-/E-/Q-/C-/P-/X-). The Research OS bureaucratic numbering (00_meta … 99_templates, one dir per role/stage) is archived at `_archive/research_os_2026-04-12/` and must not be re-introduced. **Exception (2026-05-26):** the five fixed semantic stack layers `THEORY/0_axis … 4_temporal/` are permitted — they encode the perception-action pipeline (sensing → substrate → projections → temporal), are a closed set, and carry meaning, unlike the open-ended 00–99 sprawl that collapsed in 2026-04.
 
 ---
 
 ## 6. Forbidden
 
-- Numbered top-level dirs (00_meta, 01_canonical, ..., 99_templates)
+- Open-ended numbered registry dirs (00_meta, 01_canonical, ..., 99_templates) — the Research-OS pattern. (The five fixed semantic stack layers `0_axis … 4_temporal/` are explicitly permitted; see §5.)
 - Per-item registry files (standalone Q-xxxx, P-xxxx, X-xxxx, etc.)
 - 5-role daily logs (lead/proof/critic/experiment/archivist format)
 - Editing `canonical/` directly from raw ideas — must pass through `working/` with review

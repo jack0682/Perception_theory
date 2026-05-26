@@ -7,7 +7,8 @@ Guidance for Claude Code working on **Soft Cognitive Cohesion (SCC)** — a math
 ## Session Start
 
 Read in order:
-1. **`THEORY/0_axis/DECLARATION.md`** — **(DECL-1.0, 2026-05-07) 먼저 읽기.** 이론의 중심축: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive: u_t. 중심 정리: T8 (β/α > 4λ₂/|W''(c)|). 6개 인식론적 질문(Q1~Q6). 2분 분량.
+1. **`THEORY/0_axis/DECLARATION.md`** — **(DECL-2.0, 2026-05-26) 먼저 읽기.** 중심축: *perception = 가능한 개입(intervention)의 장 형성*; 객체성·affordance·action·control 은 하나의 장 u_t 의 사영(projection). 객체성 = 안정화된 affordance. DECL-1.0 의 objecthood 질문(Q1~Q6, T8)은 §substrate 로 보존. 2분.
+1b. **`THEORY/0_axis/CANONICAL_AXIS.md`** + **`PAI_GLOSSARY.md`** — 축의 spine 과 통제 어휘. substrate↔destination 관계와 가드레일.
 2. **`THEORY/2_substrate/canonical/canonical.md`** — authoritative specification (**CV-1.13**, sealed 2026-05-10). Single source of truth for the theory. Counts: **59A / 14B / 5C / 5R = 83 claims** (~71% fully proved). Primary CV-1.13 advance: T-Temporal-Identity full Cat A (all parts a,b,c,d).
 3. **`THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md`** — seal record for the current canonical version; certifications for S-A1, S-A3, S-C1 tasks.
 4. **`THEORY/2_substrate/canonical/theorem_status.md`** — theorem index + Open Problems Catalog. Active high-priority OPs: OP-0005, OP-0008, OP-0009, OP-0021.
@@ -30,20 +31,21 @@ Perception_theory/
 │   ├── papers/                     LaTeX + generate_figures.py
 │   └── README.md
 │
-├── THEORY/                         theory documents — read-oriented
+├── THEORY/                         theory documents — read-oriented (perception-action stack, 2026-05-26)
 │   ├── CHANGELOG.md                theory state-change log
-│   ├── canonical/                  authoritative (no contamination)
-│   │   ├── canonical.md            ← THE spec (CV-1.13, sealed 2026-05-10)
-│   │   └── theorem_status.md       proved / conditional / retracted index + Open Problems Catalog (merged 2026-05-04)
-│   ├── working/                    in-progress theory (subdirs by topic: C/, CE/, E/, MF/, SF/, temporal/, observer_moduli/; see INDEX.md)
-│   └── logs/                       chronological research journal
-│       ├── daily/  YYYY-MM-DD.md
-│       ├── weekly/ YYYY-Www.md
-│       └── monthly/ YYYY-MM.md
+│   ├── 0_axis/                     ontological center: DECLARATION (DECL-2.0), CANONICAL_AXIS, PAI_GLOSSARY, audit, roadmap
+│   ├── 1_sensing/                  raw → field (sensing pipeline)
+│   ├── 2_substrate/                cohesion morphology + sealed authority
+│   │   ├── canonical/              ← THE spec (canonical.md, CV-1.20) + structural/ (folded SCC-CT) + seals/
+│   │   ├── Q1_boundary/ Q2_multiformation/ Q3_dynamics/ Q4_kselection/
+│   │   ├── sigma_framework/ multiformation/ foundations/   (+ INDEX.md)
+│   ├── 3_projections/              PAI projections (object/affordance/action/control); prolegomena/
+│   ├── 4_temporal/                 identity / transport / succession
+│   └── logs/                       chronological journal (daily / weekly / monthly)
 │
 ├── private_brainstorm/             personal exploratory notes
 └── _archive/                       frozen material — do not edit
-    └── research_os_2026-04-12/     abandoned Research OS scaffolding
+    └── research_os_2026-04-12/     abandoned Research OS scaffolding (numbered 00–99; do not revive)
 ```
 
 ## Promotion Pipeline (Contamination Barrier)
@@ -60,7 +62,7 @@ THEORY/2_substrate/canonical/canonical.md      (authoritative — one-way only)
 
 ## Policy
 
-- **Do not re-introduce Research OS structure** (numbered 00–99 dirs, 5-role daily logs, D/S/T/A/E/Q/C/P/X registry files). It was tried 2026-04-12, collapsed 2026-04-16, archived 2026-04-18.
+- **Do not re-introduce Research OS structure** (open-ended numbered 00–99 dirs, 5-role daily logs, D/S/T/A/E/Q/C/P/X registry files). It was tried 2026-04-12, collapsed 2026-04-16, archived 2026-04-18. **Permitted exception:** the five fixed semantic stack layers `THEORY/0_axis … 4_temporal/` (perception-action pipeline; closed set; see `CONVENTIONS.md` §5–6).
 - **`THEORY/2_substrate/canonical/canonical.md` is the single authoritative spec.** Any theorem-status change edits it + `theorem_status.md` + appends to `THEORY/CHANGELOG.md`.
 - **No per-item registry files.** Proofs live inside canonical.md sections; theorem index + Open Problems Catalog both live in `theorem_status.md` (single file). The previously separate `open_problems.md` was merged into `theorem_status.md` on 2026-05-04 to eliminate documentation drift.
 - **Experiments**: keep `experiments/exp<N>_*.py` numbering stable. No E-xxxx renaming.

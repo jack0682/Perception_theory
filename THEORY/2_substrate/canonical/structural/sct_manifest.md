@@ -4,7 +4,7 @@ type: canonical/manifest
 version: SCC-CT v0.1
 sealed: 2026-05-14
 status: AUTHORITATIVE
-parent_authority: THEORY/canonical/ (CV-1.16 SEALED, 97 claims)
+parent_authority: THEORY/2_substrate/canonical/ (CV-1.20 SEALED, 102 claims)
 ---
 
 > [!nav] Theory Navigation
@@ -15,6 +15,9 @@ parent_authority: THEORY/canonical/ (CV-1.16 SEALED, 97 claims)
 > Status: SCC-CT v0.1 SEALED 2026-05-14 (structural authority)
 
 # SCC-CT — Canonical Soft Cognitive Cohesion Theory
+
+> [!important] Unified authority (2026-05-26)
+> This manifest is the **structural view** of a *single* canonical authority, now co-located at `THEORY/2_substrate/canonical/` (folded in from the former top-level `SCC_CANONICAL/`). The **fact view** is [[canonical]] (canonical.md, CV-1.20, **102 claims** = 71A/20B/6C/5R). This structural snapshot was last sealed at SCC-CT v0.1 (CV-1.16 baseline, 97 claims); the **authoritative live count is 102 (CV-1.20)**. When the two views conflict, re-seal SCC-CT (v0.1 → v0.2) to match the fact view. There is one authority with two views — no parallel/competing authority.
 
 ## Name
 
