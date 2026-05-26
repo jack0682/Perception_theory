@@ -27,7 +27,7 @@
   \mathcal A_{\mathrm{bar}}:A^\varepsilon(\mathbf u)\to\mathrm{Bars}_0^{\mathrm{term}}(U;G)
   \]
   defined by $\mathcal A_{\mathrm{bar}}(j)=$ the unique dominant bar with birth in $N_j^r$, equivalently born at $q_j^U=\arg\max^\prec_{x\in N_j^r}U(x)$.
-- **`THEORY/canonical/theorem_status.md` unchanged.** OP-0005 (K-Selection) and OP-0008 ($\sigma^A$ K-jump non-determinism) remain open; T-L1-F does not solve either.
+- **`THEORY/2_substrate/canonical/theorem_status.md` unchanged.** OP-0005 (K-Selection) and OP-0008 ($\sigma^A$ K-jump non-determinism) remain open; T-L1-F does not solve either.
 - **Empirical anchors**: L1-I 439/1920 FEASIBLE_WITH_BUDGET on $T^2_{20}$; L1-H2 5/5 stress tests; L1-J PO-1 6/6 decay-to-cut configs.
 - **L1-M is the next research target** (per Day 6 closure recommendation).
 
@@ -55,11 +55,11 @@ This is **NOT** a global identity. It is a controlled approximation under T-L1-F
 
 ## §3. Key Inputs
 
-- **Canonical T-L1-F** in `THEORY/canonical/canonical.md` §13 Cat A + `theorem_status.md` CV-1.5.2.
-- **WQ-LAT-1.B phi-envelope refinement results** (`THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md`): 13 envelope variants tested; 5 pass chart-invariance (hard, logistic-$s=100$, logistic-$s=50$, shifted-sat-$\beta=20$, shift-lin); default $\phi$-sat fails.
-- **Existing soft-count bridge candidate** (`THEORY/working/MF/ksoft_kact_bridge_lemma.md` §5.3): pre-canonical sketch with $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}},\rho_\phi$ error decomposition. L1-M makes this rigorous under T-L1-F.
-- **Proof-status audit** (`THEORY/working/MF/ksoft_kact_bridge_proof_status.md`): C-09, C-10, C-11 lemma candidates already enumerated.
-- **Soft-K definition** (`THEORY/working/E/soft_K_definition.md`): $K_{\mathrm{soft}}^\phi(u)=\sum_i\phi(\ell_i(u))$ with monotone Lipschitz $\phi$, $\phi(0)=0$. $L_K\le 4L_\phi n$ via CSEH 2007 bottleneck stability.
+- **Canonical T-L1-F** in `THEORY/2_substrate/canonical/canonical.md` §13 Cat A + `theorem_status.md` CV-1.5.2.
+- **WQ-LAT-1.B phi-envelope refinement results** (`THEORY/2_substrate/multiformation/wq_lat1b_phi_envelope_refinement_results.md`): 13 envelope variants tested; 5 pass chart-invariance (hard, logistic-$s=100$, logistic-$s=50$, shifted-sat-$\beta=20$, shift-lin); default $\phi$-sat fails.
+- **Existing soft-count bridge candidate** (`THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_lemma.md` §5.3): pre-canonical sketch with $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}},\rho_\phi$ error decomposition. L1-M makes this rigorous under T-L1-F.
+- **Proof-status audit** (`THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_proof_status.md`): C-09, C-10, C-11 lemma candidates already enumerated.
+- **Soft-K definition** (`THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md`): $K_{\mathrm{soft}}^\phi(u)=\sum_i\phi(\ell_i(u))$ with monotone Lipschitz $\phi$, $\phi(0)=0$. $L_K\le 4L_\phi n$ via CSEH 2007 bottleneck stability.
 - **CSEH 2007 bottleneck stability** (already used in repo for $K_{\mathrm{soft}}$ Lipschitz proofs).
 - **Existing $\Phi_{\mathrm{res}}$ definition** (`ksoft_kact_bridge_lemma.md` §5.3.2): nonnegativity + lower normalization + dominant-bar normalization + sub-threshold suppression + dominant-bar retention + regularity + sharpness parameter.
 
@@ -165,7 +165,7 @@ Must preserve in the L1-M document:
 
 Day 7 is successful if:
 
-1. `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` is **created** (working-grade document, NOT canonical).
+1. `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` is **created** (working-grade document, NOT canonical).
 2. The document contains a **theorem candidate** (L1-M-Theorem-Candidate) or **corollary candidate** with explicit hypothesis package (T-L1-F (P0)–(P11) + $\Phi_{\mathrm{res}}$ + edge-band control (E)).
 3. **Error terms** are explicit: $\rho_{\mathrm{sub}},\rho_{\mathrm{edge}}^\phi,\rho_\phi$ with formulas + envelope-sub-class bounds.
 4. **$\Phi_{\mathrm{res}}$** is formalized or referenced cleanly (point to `ksoft_kact_bridge_lemma.md` §5.3.2 + WQ-LAT-1.B empirical sub-classes).
@@ -192,7 +192,7 @@ Day 7 is successful if:
 
 **Likely:**
 
-- `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (working-grade, ~30–50 KB, mirror of L1-J/L1-L style).
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` (working-grade, ~30–50 KB, mirror of L1-J/L1-L style).
 
 **Optional (only if needed):**
 
@@ -221,7 +221,7 @@ Day 7 is also the **W5 close ceremony** — `weekly_summary.md` finalize for W5 
 **Source files for Day 7:**
 - Day 6 EOD: `THEORY/logs/daily/2026-05-02/01_T_L1_F_canonical_promotion_closure.md`
 - L1 chain: `THEORY/working/MF/kbar_kact_bridge_L1*.md` (L1-A through L1-L, 13 documents)
-- Canonical: `THEORY/canonical/canonical.md` §13 Cat A T-L1-F entry; `theorem_status.md` CV-1.5.2 section
-- WQ-LAT-1.B: `THEORY/working/MF/wq_lat1b_phi_envelope_refinement_results.md`
-- ksoft proof status: `THEORY/working/MF/ksoft_kact_bridge_proof_status.md`, `ksoft_kact_bridge_lemma.md`
-- Soft-K definition: `THEORY/working/E/soft_K_definition.md`
+- Canonical: `THEORY/2_substrate/canonical/canonical.md` §13 Cat A T-L1-F entry; `theorem_status.md` CV-1.5.2 section
+- WQ-LAT-1.B: `THEORY/2_substrate/multiformation/wq_lat1b_phi_envelope_refinement_results.md`
+- ksoft proof status: `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_proof_status.md`, `ksoft_kact_bridge_lemma.md`
+- Soft-K definition: `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md`

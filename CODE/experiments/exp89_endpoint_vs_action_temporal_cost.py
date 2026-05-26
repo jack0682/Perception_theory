@@ -14,7 +14,7 @@ Three test cases:
   Case B: 2D grid K=1 gentle motion
   Case C: 2D grid K=2 stable-K gentle motion
 
-NOT a proof. Source: THEORY/working/CV115_ACTION_TEMPORAL_COST/06_experiment_plan.md
+NOT a proof. Source: THEORY/4_temporal/action_cost/06_experiment_plan.md
 Session W7, 2026-05-12. CV-1.15.
 """
 

@@ -152,7 +152,7 @@ python3 scripts/nq174_zeta_star_precise.py
 
 #### 13:30-14:30 (60min): G3 — multi-formation σ definition draft
 
-**Action**: open `THEORY/working/MF/multi_formation_sigma.md` (currently doesn't exist; create).
+**Action**: open `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` (currently doesn't exist; create).
 
 **Initial scope**:
 - Phase 5 σ definition for K-formation field $\{u^{(j)}\}_{j=1}^K$ on $\Sigma^K_M = \Sigma_{m_1} \times \cdots \times \Sigma_{m_K}$.

@@ -19,8 +19,8 @@ is **attained** by some admissible path γ_* ∈ Adm(F_i, F_j).
 **This file covers:** Restatement + multi-approach + primary selection.
 
 **Depends on reading:**
-- `THEORY/working/AFD_0/abstract_formation_dynamics.md` §6 (AFD-D6, AFD-D7, AFD-D8, AFD-D9, AFD-D10), §14 (AFD-T5), §17 (OP-AFD-003).
-- `THEORY/working/AFD_0/op_afd_004_proof.md` §5.1 item 4 (relation: OP-AFD-003 does **not** block lower-bound on Bar; it blocks *attainment*).
+- `THEORY/2_substrate/foundations/AFD/abstract_formation_dynamics.md` §6 (AFD-D6, AFD-D7, AFD-D8, AFD-D9, AFD-D10), §14 (AFD-T5), §17 (OP-AFD-003).
+- `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md` §5.1 item 4 (relation: OP-AFD-003 does **not** block lower-bound on Bar; it blocks *attainment*).
 - `canonical.md` §13 Cat A list: T-PF-A1-AR (Σ_m is a compact convex polytope), T14 (Łojasiewicz analytic gradient-flow convergence), T8-Core, T-Merge(b), Pred-E Bridge, A3 closure, QM3, CSEH 2007.
 - `01_pre_brainstorm.md` §3 (pre-session Arzelà-Ascoli sketch).
 

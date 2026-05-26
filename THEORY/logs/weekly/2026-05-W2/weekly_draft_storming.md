@@ -41,7 +41,7 @@
 - **exp38 재실행** (barrier height, 15×15 grid):
   - β=20: 86.5 / β=30: 193.9 / β=50: 279.6 (linear), 23.5 (refined) / β=100: 680.5
   - log-log slope: γ_linear = 1.216 (linear interpolation 경로); NEB 실제 MEP ≈ 37.2 (exp60)
-- **OP-AFD-004 증명 작성** → `THEORY/working/AFD_0/op_afd_004_proof.md`
+- **OP-AFD-004 증명 작성** → `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md`
   - Strategy A (정성적): basin-exit argument. H-MORSE 불필요. Cat A 입력 (T8-Core, T14, T-Merge(b))만 사용.
   - Strategy B (정량적): T-Persist-1(b) Δ_core ≥ 0.0441β → c_low = 0.0221β (H1-H4+WS+SR 조건부)
   - **판정: Cat B Resolved** — Bar(F_K, F_{K-1}) ≥ 0.0221β > 0

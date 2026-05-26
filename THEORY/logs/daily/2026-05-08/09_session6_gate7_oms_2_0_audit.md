@@ -101,4 +101,4 @@ with three sub-OPs (**OP-OMS-032 / 033 / 034**) for the Conditional → Accepted
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/oms_2_0_promotion_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_promotion_audit.md`

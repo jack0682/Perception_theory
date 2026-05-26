@@ -14,7 +14,7 @@
 Before drafting D-HMORSE-LOCAL, grep canonical and working for existing content:
 
 ```
-grep "H-MORSE-Local\|H-MORSE\|Path B" THEORY/canonical/canonical.md
+grep "H-MORSE-Local\|H-MORSE\|Path B" THEORY/2_substrate/canonical/canonical.md
   → 0 hits in canonical.md proper (H-MORSE referenced only in section headers / status notes)
 grep "H-MORSE-Local" THEORY/working/CV114_H_MORSE_PACKAGEII/
   → multiple hits in 02, 08, 09 (the *target* working folder; this file builds on it)

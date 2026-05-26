@@ -4,7 +4,7 @@ g3_baseline_k2_sigma.py — K=2 Baseline Multi-Formation σ_multi^(A) Numerical 
 W5 Day 2 G3 P1 Phase 5 initiation script (skeleton). Day 3 morning execution target.
 
 Purpose:
-    Empirically test σ_multi^(A) (per `THEORY/working/MF/multi_formation_sigma.md` §5)
+    Empirically test σ_multi^(A) (per `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` §5)
     on K=2 well-separated formations on 2D torus L=20.
 
 Requires:

@@ -30,7 +30,7 @@ coc_enforcement: strict (prior_anchor + causation_chain + inverse_causation_chec
 v3_verification_light_first_use: AUDIT — see §"prompt body 개선 제안" §3 (v4 candidate mode proposal)
 ---
 
-> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[02_cg_numerical_verification]] · [[03_D_L_commutation]] · [[04_dynamic_class_investigation]] · [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[../../canonical/canonical|CV-1.18 canonical (untouched)]] · [[../../canonical/CV-1.18_SEAL|CV-1.18 SEAL]]
+> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[02_cg_numerical_verification]] · [[03_D_L_commutation]] · [[04_dynamic_class_investigation]] · [[../2026-05-19/99_summary|어제 W8-Day2 99_summary + §POST-SEAL EXTENSION]] · [[canonical|CV-1.18 canonical (untouched)]] · [[CV-1.18_SEAL|CV-1.18 SEAL]]
 
 # 99 — W8-Day3 Session Summary (2026-05-20)
 
@@ -103,7 +103,7 @@ v3_verification_light_first_use: AUDIT — see §"prompt body 개선 제안" §3
 | `THEORY/logs/daily/2026-05-20/03_D_L_commutation.md` | 593 | **NEW** — Priority 2 deliverable (incl. §6 NEW L-INV-1/2/3 user-expanded scope) |
 | `THEORY/logs/daily/2026-05-20/04_dynamic_class_investigation.md` | 437 | **NEW** — Priority 3 deliverable (incl. §6 NEW L-PROJ-1/2/corollary user-expanded scope) |
 | `THEORY/logs/daily/2026-05-20/99_summary.md` | 본 file | **NEW** — EOD mandatory |
-| `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 / §1.3 | (DEFERRED) | NOT updated today — recommendation made in 02 §6.2 + 03 §7.2; user discretion for next session edit |
+| `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.1 / §1.3 | (DEFERRED) | NOT updated today — recommendation made in 02 §6.2 + 03 §7.2; user discretion for next session edit |
 
 **합계**: 4 new daily log files = ~1414 lines.
 
@@ -349,13 +349,13 @@ canonical_수정: 0 (SEAL-execute 의 *precursor*; verification PASS 시 *SEAL-p
 | `field_equation_framework/10_forman_discrete_morse.md` | working/ | 1015 (NEW) |
 | `field_equation_framework/11_bakry_emery_cd_condition.md` | working/ | 874 (NEW) |
 | `field_equation_framework/12_wave1_critical_fixes_consolidated.md` | working/ | 854 (NEW) |
-| `THEORY/canonical/CV-1.19_SEAL.md` | canonical/ | 193 (NEW) |
-| `THEORY/canonical/canonical.md` | canonical/ | +44/-1 (modified) |
-| `THEORY/canonical/theorem_status.md` | canonical/ | +1/-1 (modified) |
-| `THEORY/canonical/hypothesis_tree.md` | canonical/ | +9/-3 (modified) |
+| `THEORY/2_substrate/canonical/seals/CV-1.19_SEAL.md` | canonical/ | 193 (NEW) |
+| `THEORY/2_substrate/canonical/canonical.md` | canonical/ | +44/-1 (modified) |
+| `THEORY/2_substrate/canonical/theorem_status.md` | canonical/ | +1/-1 (modified) |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | canonical/ | +9/-3 (modified) |
 | `THEORY/CHANGELOG.md` | THEORY/ | +50 (modified) |
 | `working/foundation/manifold_topology_attempt_v1.md` | working/ | +17/-4 (modified) |
-| `THEORY/working/INDEX.md` | working/ | (EOD 직전 갱신 — last_updated 2026-05-07→2026-05-20 + foundation/cssl/field_equation_framework 3 신규 섹션) |
+| `THEORY/2_substrate/INDEX.md` | working/ | (EOD 직전 갱신 — last_updated 2026-05-07→2026-05-20 + foundation/cssl/field_equation_framework 3 신규 섹션) |
 
 ### Extension 의 *진짜 결론*
 

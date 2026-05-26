@@ -26,14 +26,14 @@ CV-1.15 Promotion checklist P1–P6 충족 완료. exp89 3-case PASS (2026-05-13
 
 ## Context refs (에이전트가 반드시 읽어야 할 소재)
 
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` §10, §11 — 최종 감사 + exp89 결과 (READY FOR USER APPROVAL 판정)
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` — canonical 삽입 draft blocks (§1~§4), 적용 순서 (§5)
+- `THEORY/4_temporal/action_cost/09_final_audit.md` §10, §11 — 최종 감사 + exp89 결과 (READY FOR USER APPROVAL 판정)
+- `THEORY/4_temporal/action_cost/10_patch_plan.md` — canonical 삽입 draft blocks (§1~§4), 적용 순서 (§5)
 - `CODE/experiments/results/exp89_results.json` — 수치 검증 결과 확인
-- `THEORY/canonical/canonical.md` §13 끝부분 — 삽입 위치 (T-Temporal-Identity 이후, T-CC-StableK-Kernel 이후)
-- `THEORY/canonical/theorem_status.md` — Cat A / Cat B 섹션 끝 + OP-0012-SINK 항목
-- `THEORY/canonical/hypothesis_tree.md` — H-COMP 가지 (OP-0012 계열)
+- `THEORY/2_substrate/canonical/canonical.md` §13 끝부분 — 삽입 위치 (T-Temporal-Identity 이후, T-CC-StableK-Kernel 이후)
+- `THEORY/2_substrate/canonical/theorem_status.md` — Cat A / Cat B 섹션 끝 + OP-0012-SINK 항목
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — H-COMP 가지 (OP-0012 계열)
 - `THEORY/CHANGELOG.md` 최상단 — newest-on-top 삽입
-- `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §9 — CV-1.14/CV-1.15 연결 확인
+- `THEORY/4_temporal/composition/05_promotion_draft.md` §9 — CV-1.14/CV-1.15 연결 확인
 
 ---
 
@@ -129,9 +129,9 @@ P7 승인 전이라면: **"approval-ready package가 모든 검토를 통과하�
 | 순서 | 파일 | 작업 | 검증 |
 |---|---|---|---|
 | 1 | THEORY/CHANGELOG.md | §4 draft 최상단 삽입 | 카운트 83→93 확인 |
-| 2 | THEORY/canonical/theorem_status.md | §2 draft 삽입 + 카운트 업데이트 | CV-1.15 섹션 + OP-0012-SINK 업데이트 |
-| 3 | THEORY/canonical/hypothesis_tree.md | §3 draft 삽입 | H-COMP-ACTION 신규 가지 + H-COMP-SINK 업데이트 |
-| 4 | THEORY/canonical/canonical.md | §1 draft 삽입 (§13 끝부분) | K symbol 주석 + 전체 theorem block |
+| 2 | THEORY/2_substrate/canonical/theorem_status.md | §2 draft 삽입 + 카운트 업데이트 | CV-1.15 섹션 + OP-0012-SINK 업데이트 |
+| 3 | THEORY/2_substrate/canonical/hypothesis_tree.md | §3 draft 삽입 | H-COMP-ACTION 신규 가지 + H-COMP-SINK 업데이트 |
+| 4 | THEORY/2_substrate/canonical/canonical.md | §1 draft 삽입 (§13 끝부분) | K symbol 주석 + 전체 theorem block |
 
 각 파일 수정 후:
 - 카운트 일관성 확인 (CHANGELOG ↔ theorem_status ↔ canonical)

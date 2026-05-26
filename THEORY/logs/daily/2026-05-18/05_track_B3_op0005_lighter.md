@@ -26,7 +26,7 @@ grep -r "OP-0005-DYN|Kramers.*rate|metastability" THEORY/canonical/ THEORY/worki
 
 | Path | Lines | 목적 |
 |---|---|---|
-| `THEORY/working/MF/broad_survey_B3.md` | ~140 | 3-pillar 분류 + lift candidate + 외부 reference + unlock chain |
+| `THEORY/2_substrate/multiformation/broad_survey_B3.md` | ~140 | 3-pillar 분류 + lift candidate + 외부 reference + unlock chain |
 
 ---
 

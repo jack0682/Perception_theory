@@ -26,7 +26,7 @@ grep -r "Mori-Zwanzig|OP-0021|T_\*" THEORY/canonical/ THEORY/working/
 
 | Path | Lines | 목적 |
 |---|---|---|
-| `THEORY/working/MF/broad_survey_B1.md` | ~140 | Mori-Zwanzig Route A literature + 5 light gap (W9 sketch 의 직접 입력) |
+| `THEORY/2_substrate/multiformation/broad_survey_B1.md` | ~140 | Mori-Zwanzig Route A literature + 5 light gap (W9 sketch 의 직접 입력) |
 
 ---
 

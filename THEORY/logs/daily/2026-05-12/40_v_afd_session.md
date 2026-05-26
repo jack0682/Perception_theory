@@ -45,13 +45,13 @@ Current V-AFD session: builds on top of the above without modifying any earlier 
 
 | File | Purpose of reading |
 |---|---|
-| `THEORY/working/AFD_0/abstract_formation_dynamics.md` (lines 1–220, 370–484) | AFD-0 definitions D1..D15, theorems T1..T9 |
-| `THEORY/working/AFD_0/afd_summary_for_next_agent.md` | session context, R1 promotion-readiness state |
-| `THEORY/working/AFD_0/afd_theorem_registry.md` | AFD-T1..T9 statuses |
-| `THEORY/working/AFD_0/afd_open_problems.md` | OP-AFD-001..010 |
-| `THEORY/working/AFD_0/afd_hmorse_reclassification.md` | H-MORSE Layer 3 commitment |
-| `THEORY/working/AFD_0/op_afd_004_proof.md` (referenced) | AFD-T7 Cat B merge barrier |
-| `THEORY/canonical/canonical.md` (header) | CV-1.13 state |
+| `THEORY/2_substrate/foundations/AFD/abstract_formation_dynamics.md` (lines 1–220, 370–484) | AFD-0 definitions D1..D15, theorems T1..T9 |
+| `THEORY/2_substrate/foundations/AFD/afd_summary_for_next_agent.md` | session context, R1 promotion-readiness state |
+| `THEORY/2_substrate/foundations/AFD/afd_theorem_registry.md` | AFD-T1..T9 statuses |
+| `THEORY/2_substrate/foundations/AFD/afd_open_problems.md` | OP-AFD-001..010 |
+| `THEORY/2_substrate/foundations/AFD/afd_hmorse_reclassification.md` | H-MORSE Layer 3 commitment |
+| `THEORY/2_substrate/foundations/AFD/op_afd_004_proof.md` (referenced) | AFD-T7 Cat B merge barrier |
+| `THEORY/2_substrate/canonical/canonical.md` (header) | CV-1.13 state |
 | `logs/daily/2026-05-12/02_development.md`, `02b`, `03`, `20`, `30` | this-session prior |
 | `logs/daily/2026-05-12/00_plan.md`, `00_index.md` | Day 3 plan / index |
 | `CODE/scc/` (referenced, not edited) | implementation context |

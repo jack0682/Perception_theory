@@ -103,7 +103,7 @@ Do **not** attempt in CV-1.14:
 - **Carry CV-1.13 sealed state as baseline.** T-Temporal-Identity Cat A is the floor.
 - **Do not reopen H-SINK, T-Temporal-Identity, or the deep-core density chain.** They are closed.
 - **Treat HT-3.5 as authoritative.** (The earlier HT-3.4 leftover label on line 308 of `hypothesis_tree.md` was repaired 2026-05-11; the 변경 이력 table now includes an explicit HT-3.5 row.)
-- **Start by reading `THEORY/canonical/DECLARATION.md` and the H-MORSE block in `hypothesis_tree.md` Q3.** Then enumerate every working file that mentions H-MORSE or Morse stability.
+- **Start by reading `THEORY/0_axis/DECLARATION.md` and the H-MORSE block in `hypothesis_tree.md` Q3.** Then enumerate every working file that mentions H-MORSE or Morse stability.
 - **Default to audit, not proof.** Do not attempt full H-MORSE proof in the entry session.
 
 The handoff prompt in `09_agent_handoff_prompt.md` is ready to run directly.

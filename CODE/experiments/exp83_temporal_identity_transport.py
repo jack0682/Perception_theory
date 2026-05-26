@@ -5,7 +5,7 @@ Validates the component correspondence relation R_{t->s} across four toy scenari
 covering all five event types: continuation, merge, split, birth, death.
 
 Numerical anchor for T-Temporal-Identity (Session V, working Cat B candidate).
-NOT a proof. Source: THEORY/working/MF/temporal_identity_perscomp_transport.md §9.
+NOT a proof. Source: THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md §9.
 
 Session X (W6 D4, 2026-05-06). CV-1.10.
 Note: original plan referenced exp55; renumbered exp83 (exp55-56 already exist).

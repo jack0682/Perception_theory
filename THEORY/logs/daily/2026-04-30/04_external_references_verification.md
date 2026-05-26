@@ -995,7 +995,7 @@ The following citation keys are standardized for use across all SCC paper drafts
   institution = {Perception Theory Project},
   year        = {2026},
   month       = {April},
-  note        = {THEORY/canonical/canonical.md}
+  note        = {THEORY/2_substrate/canonical/canonical.md}
 }
 ```
 

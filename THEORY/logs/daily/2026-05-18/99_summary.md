@@ -87,7 +87,7 @@ new_mathematics: 0 — *survey day 이므로 정상* (5/15 결정 C carry-forwar
 | 위치 / 종류 | 이유 |
 |---|---|
 | `THEORY/canonical/*.md` 수정 | Day 1 survey day, SEAL day 아님 |
-| `THEORY/canonical/DECLARATION.md` 수정 | W8 anti-goal §5 — DECL-1.0 amend 시도 금지 |
+| `THEORY/0_axis/DECLARATION.md` 수정 | W8 anti-goal §5 — DECL-1.0 amend 시도 금지 |
 | `CODE/scc/*.py` 수정 | W8 anti-goal §5 — `experiments/` + `tests/` 만 신규 |
 | `_archive/` 의 부활 시도 | 5/15 결정 C carry-forward — V-AFD/R-2/z_t 부활 금지 |
 | 새 framework letter 도입 | 5/15 결정 C 규칙 1 carry-forward |

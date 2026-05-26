@@ -111,7 +111,7 @@ SCC는 "객체(object)가 개별화되기 이전 층위에서 어떻게 응집(c
 - **energy on volume-constrained simplex** Σ_m: `E = λ_cl·E_cl + λ_sep·E_sep + λ_bd·E_bd + λ_tr·E_tr`
 - **proto-cohesion diagnostic vector** `d = (Bind, Sep, Inside, Persist) ∈ [0,1]⁴`
 
-이 모든 사항은 `THEORY/canonical/canonical.md` (v1.2, 1216줄)에 authoritative 형태로 기술되어 있습니다. 당신이 작업을 시작하기 전에 이 문서는 반드시 참조해야 합니다.
+이 모든 사항은 `THEORY/2_substrate/canonical/canonical.md` (v1.2, 1216줄)에 authoritative 형태로 기술되어 있습니다. 당신이 작업을 시작하기 전에 이 문서는 반드시 참조해야 합니다.
 
 ---
 
@@ -147,9 +147,9 @@ logs/daily/...  →  working/<topic>.md  →  canonical/canonical.md
 다음 파일들을 **이 순서로** 읽으십시오. 각 단계마다 요점을 짧게 메모하면서 진행:
 
 1. **`THEORY/logs/daily/{DATE}/plan.md`** — 오늘의 target, why-now, context refs, session goals, non-goals, success criterion. **이 파일이 세션의 소관을 규정**합니다.
-2. **`THEORY/canonical/canonical.md`** — 이론 본문. 최소한 plan.md가 참조하는 섹션들, 그리고 §2 (foundational orientation), §3 (formal universe), §11 (fixed commitments), §14 (commitment notes CN1~CN14) 은 읽기.
-3. **`THEORY/canonical/theorem_status.md`** — 기존 OP-xxxx 목록. plan.md의 target이 기존 OP와 어떻게 관계되는지 파악.
-4. **`THEORY/canonical/theorem_status.md`** — 49개 claims의 현재 Category (A/B/C/R). 당신이 어떤 정리를 건드리게 될지 사전 점검.
+2. **`THEORY/2_substrate/canonical/canonical.md`** — 이론 본문. 최소한 plan.md가 참조하는 섹션들, 그리고 §2 (foundational orientation), §3 (formal universe), §11 (fixed commitments), §14 (commitment notes CN1~CN14) 은 읽기.
+3. **`THEORY/2_substrate/canonical/theorem_status.md`** — 기존 OP-xxxx 목록. plan.md의 target이 기존 OP와 어떻게 관계되는지 파악.
+4. **`THEORY/2_substrate/canonical/theorem_status.md`** — 49개 claims의 현재 Category (A/B/C/R). 당신이 어떤 정리를 건드리게 될지 사전 점검.
 5. **`THEORY/working/*.md`** — plan.md가 지정한 working 파일들. 특히 `open_problems_reframing_2026-04-19.md` 는 최근 F-1/M-1/MO-1을 N-1 (Soft-Hard Switching Asymmetry)로 통합 재프레이밍한 문서. 미리 읽어두면 언어가 일관됨.
 6. **최근 1~2일치 `THEORY/logs/daily/<최근날짜>/*.md`** — 전일 세션의 carry-forward 파악.
 7. **`CLAUDE.md` 및 `CONVENTIONS.md` (루트)** — 저장소 규율.

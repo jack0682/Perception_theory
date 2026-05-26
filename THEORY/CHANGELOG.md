@@ -4,6 +4,84 @@
 
 ---
 
+## [COHERENCE: SCOPE CALIBRATION + LEGACY QUARANTINE] 2026-05-26
+
+### Summary
+"조화롭나?" 점검 후 두 조치. (1) 야망-증명 기울기를 명시 격리(scope 보정), (2) 죽은 자료를 _archive로 격리. substrate 102 claims 불변.
+
+### Scope calibration
+- NEW `THEORY/0_axis/SCOPE_LEDGER.md` — Tier 1 PROVEN(field morphology) / Tier 2 PARTIAL(Cat B-C) / Tier 3 DIRECTION(objecthood·actional·𝕌, OPEN). cold_failure_analysis 자기진단을 구속 가드레일로 승격; 거시 산문 티어 태그 의무.
+- DECLARATION·CANONICAL_AXIS에 `[Tier 3 / DIRECTION]` 태그 + SCOPE_LEDGER cross-link.
+- drift 보정: CLAUDE.md (CV-1.13/83claims → CV-1.20/102; test 215→228; sketch CV-1.20), README (CV-1.11 → CV-1.20 + 현재상태 배너). (THEORY_INDEX·MOC_canonical_authority·sct_manifest 는 이미 현재.)
+
+### Legacy quarantine (CONVENTIONS §7)
+- `_archive/quarantine_2026-05-26/` 로 git mv (history 보존): cssl/{00_concept_handoff,01_critic_evaluation} (critic-REJECTED), manifold/{manifold_topology_attempt_v0, fractal_dynamic_dim_v0, foundation_reset_v0} (superseded/retracted-source), logs/daily/{MAIN_PROMPT_v3, _dry_run_audit} (legacy prompt). cssl 디렉터리 제거. ARCHIVE_NOTE 첨부.
+- 미격리(보류): broad_survey_B1/B2/B3 — dead-marker 없어 live 유지.
+- 링크: basename 링크는 _archive에서 계속 resolve. 게이트 exit 0; dangling 21→17 (악화 없음).
+
+### Theorem Status / Test Count
+- 변경 없음. 102 claims 봉인.
+
+### Carry-Forward
+- broad_survey 처리 결정. README §8(HT-1.0/H-SINK open) 옛 서사 정리. theorem_status에 OP-UNIFY/OP-PROLEGOMENA 정식 등록.
+
+---
+
+## [THREAD CONSOLIDATION] 2026-05-26 — Unified Structure candidate
+
+### Summary
+누적된 브레인스토밍으로 갈라진 8개 이론 결을 묶기 위한 두 문서 추가. **조직/방향 작업 — 증명 0건, substrate 102 claims 불변, CV 버전 불변.**
+
+### Files Created
+- `THEORY/0_axis/THREAD_ATLAS.md` — 8개 결(SCC substrate / PAI / SSKP sensing / PFE / AFD / Multi-K / σ-framework / Temporal / Prolegomena)을 공유 대상(u_t·E·σ·K·observer·action)과 DECL-2.0 사영축에 매핑. 프레임 분열 3곳 진단(경쟁 아키텍처·K난립·perception 어휘).
+- `THEORY/0_axis/UNIFIED_STRUCTURE.md` — 수학적 단일화 **후보**: 생성구조 𝕌 = Σ_m(G) over 𝓜_obs(OMS) × 𝓜_act(Θ), 판독 필트레이션 {σ,K,π}. 모든 결 = 𝕌의 section/readout/transport/chart/abstraction. **CANONICAL-DIRECTION, 증명 0.**
+
+### Decisions
+- **Prolegomena 위치 확정:** 44 조건 = 𝕌의 base/observer 공리 스펙(별도 경쟁 프레임 아님). 매핑된 조건은 기존 정의로 환원, 미매핑은 OP-PROLEGOMENA로 deferral. → 떠 있던 9번째 결 해소.
+- 경쟁 4개 "아키텍처"(layered-ambient/NS/SSKP/prolegomena-4layer)는 경쟁 이론이 아니라 𝕌의 chart/추상단계 atlas로 재배치.
+
+### Open Problems (narrative 등록; theorem_status 후속)
+- OP-UNIFY-1 (𝕌 존재/정합), OP-UNIFY-2 (= OP-PROJECTION, 판독 정합), OP-UNIFY-3 (= OP-ACTIONAL-U, E의 관측자/행동 조건성), OP-PROLEGOMENA.
+
+### Theorem Status / Test Count
+- 변경 없음. 102 claims 봉인. CODE 무관.
+
+### Carry-Forward
+- theorem_status.md Open Problems Catalog에 OP-UNIFY-1/2/3 + OP-PROLEGOMENA 정식 등록.
+- 구조적 중복 정리(K_bar/K̂ 형식화·은퇴, 경쟁 synthesis 문서 통합)는 미선택 — 후속 결정.
+
+---
+
+## [REORGANIZATION + DECL-2.0] 2026-05-26 — Perception-Action Stack
+
+### Summary
+Full hierarchical reorganization of the repository into a perception-action stack and promotion of the perception-action axis to the ontological center (DECL-1.0 → **DECL-2.0**). Motivated by the perception-action axis audit (`THEORY/0_axis/AUDIT_perception_action_2026-05-26.md`). **No substrate theorem changed: 102 claims (71A/20B/6C/5R) remain sealed and unchanged; the PAI projection maps remain OPEN.**
+
+### Structure
+- `THEORY/` reorganized into a 5-layer semantic stack: `0_axis / 1_sensing / 2_substrate / 3_projections / 4_temporal / logs`. 339 files moved via `git mv` (history preserved).
+- Cryptic dirs (`C/CE/E/SF/MF`) dissolved; `MF/` (89-file drawer) split by Q-MOC membership; 15 colliding basenames de-duplicated.
+- **Authority unified:** top-level `SCC_CANONICAL/` (structural view) folded into `THEORY/2_substrate/canonical/structural/`; reconciled to one authority, live count 102 (CV-1.20). Fact view = `canonical.md`; structural view = `sct_manifest.md`.
+- Migration tooling under `scripts/migration/` (path-keyed rename-map, idempotent link rewriter, baseline-diff verifier). Wikilink integrity: dangling 49→23, ambiguous 18→17 — **no new danglers** (net improvement; gate `verify_links.py` exit 0).
+
+### Files Created / Modified
+- `THEORY/0_axis/DECLARATION.md` — **DECL-2.0** (perception-action center; substrate preserved).
+- `THEORY/0_axis/CANONICAL_AXIS.md`, `PAI_GLOSSARY.md` — NEW (spine + controlled vocabulary).
+- `THEORY/0_axis/AUDIT_perception_action_2026-05-26.md` — NEW (rationale of record).
+- `THEORY_INDEX.md`, `README.md`, `CLAUDE.md`, `CONVENTIONS.md` — rewritten to one consistent substrate→destination story; §5–6 amended to permit the fixed semantic stack layers while keeping the 00–99 Research-OS ban.
+
+### Theorem Status Changes
+- None. Substrate sealed at CV-1.20 (102 claims), unchanged. DECL version: DECL-1.0 → DECL-2.0 (declaration only).
+- New OPs registered in narrative: OP-ACTIONAL-U, OP-PROJECTION, OP-CONTROL-GROUNDING (see DECLARATION/CANONICAL_AXIS); formal entries pending in `theorem_status.md`.
+
+### Test Count
+228 passed, 1 xfailed, 1 pre-existing error (`exp24_basin_flow_test` collection) — CODE/ untouched by reorg; baseline preserved.
+
+### Carry-Forward
+- Branch `restructure/perception-action-stack` off tag `premigration-baseline`; commits C0–C4. Open PR after final verify.
+- Register OP-ACTIONAL-U / OP-PROJECTION / OP-CONTROL-GROUNDING formally in `theorem_status.md`; begin PAI Roadmap Phase 1–2 (define a concrete 𝒜(u;Θ)).
+
+---
+
 ## [SENSING PIPELINE PASS 12 CONTINUOUS VERIFICATION PROGRAM] 2026-05-26 — 27-task adversarial audit of Pass 11
 
 **Type**: Systematic verification of Pass 11 perception cone + Einstein-form field equation framework. canonical / SCC / PAI 무수정. sensing_pipeline/01-12 body content 무수정 (모든 verification 결과는 새 docs).
@@ -20,18 +98,18 @@
 - Phase G (Task 27): Final report — `21_pass12_final_report.md`
 
 **Files created (9)**:
-- `THEORY/working/sensing_pipeline/13_p1_p2_verification.md` (~420 LOC)
-- `THEORY/working/sensing_pipeline/14_field_equation_verification.md` (~470 LOC)
-- `THEORY/working/sensing_pipeline/15_operational_test_protocols.md` (~330 LOC)
-- `THEORY/working/sensing_pipeline/16_op_pfe_advancement.md` (~390 LOC)
-- `THEORY/working/sensing_pipeline/17_pass12_adversarial_extensions.md` (~320 LOC)
-- `THEORY/working/sensing_pipeline/18_stress_energy_alternatives.md` (~230 LOC)
-- `THEORY/working/sensing_pipeline/19_delta_interp_synthesis.md` (~200 LOC)
-- `THEORY/working/sensing_pipeline/20_three_framework_synthesis.md` (~220 LOC)
-- `THEORY/working/sensing_pipeline/21_pass12_final_report.md` (~360 LOC)
+- `THEORY/1_sensing/13_p1_p2_verification.md` (~420 LOC)
+- `THEORY/1_sensing/14_field_equation_verification.md` (~470 LOC)
+- `THEORY/1_sensing/15_operational_test_protocols.md` (~330 LOC)
+- `THEORY/1_sensing/16_op_pfe_advancement.md` (~390 LOC)
+- `THEORY/1_sensing/17_pass12_adversarial_extensions.md` (~320 LOC)
+- `THEORY/1_sensing/18_stress_energy_alternatives.md` (~230 LOC)
+- `THEORY/1_sensing/19_delta_interp_synthesis.md` (~200 LOC)
+- `THEORY/1_sensing/20_three_framework_synthesis.md` (~220 LOC)
+- `THEORY/1_sensing/21_pass12_final_report.md` (~360 LOC)
 
 **Files modified (backref only)**:
-- `THEORY/working/sensing_pipeline/00_INDEX.md` — file count 9→22; §2.8 Pass 12 declaration added
+- `THEORY/1_sensing/00_INDEX.md` — file count 9→22; §2.8 Pass 12 declaration added
 
 **Verdict aggregate**:
 - PASS: 18/27 (67%)
@@ -93,10 +171,10 @@
 - §21: Meta-reflection on framework's honest standing
 
 **Files created (1)**:
-- `THEORY/working/sensing_pipeline/12_perception_cone_field_equation.md` (~700 LOC) — full 20-iteration construction with audit-visible derive + verify cycle per iteration
+- `THEORY/1_sensing/12_perception_cone_field_equation.md` (~700 LOC) — full 20-iteration construction with audit-visible derive + verify cycle per iteration
 
 **Files modified (backref only)**:
-- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.7 added with Pass 11 framework declaration + adversarial results summary
+- `THEORY/1_sensing/00_INDEX.md` — §2.7 added with Pass 11 framework declaration + adversarial results summary
 
 **Framework status**:
 - **2 postulates** (P1 perceptual relativity, P2 limiting rate $c_p^{(s)}$)
@@ -173,10 +251,10 @@
 - Iter 10: Final report + 5 Next Cut Recommendations
 
 **Files created (1)**:
-- `THEORY/working/sensing_pipeline/11_minimal_core.md` (~700 LOC) — single authoritative document with 5 primitives + 5 constraints + 5 OPs + pattern sweep results + deletion log compression + no-expansion compliance check + next cut recommendations
+- `THEORY/1_sensing/11_minimal_core.md` (~700 LOC) — single authoritative document with 5 primitives + 5 constraints + 5 OPs + pattern sweep results + deletion log compression + no-expansion compliance check + next cut recommendations
 
 **Files modified (backref only)**:
-- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.6 added with Pass 10 minimal core declaration
+- `THEORY/1_sensing/00_INDEX.md` — §2.6 added with Pass 10 minimal core declaration
 
 **5 Primitives** (P1-P5, operationally defined): photon arrival event; bounded intensity response; forward-only kernel transformation; tolerance σ; channel index.
 
@@ -412,7 +490,7 @@
 **Execution**: Self-orchestrated Planner/Architect/Critic consensus (Architect/Critic agent 가 session limit 으로 unavailable — main context 에서 모든 role 수행). Approved plan: Option A (10 new TCs, 5 MATH-FACT + 5 COND-OBS, pattern-aware design).
 
 **Files created (1)**:
-- `THEORY/working/sensing_pipeline/10_reconstruction_pass6.md` (~700 lines) — 10 new TC-SP-R candidates with:
+- `THEORY/1_sensing/10_reconstruction_pass6.md` (~700 lines) — 10 new TC-SP-R candidates with:
   - Statement (with Q-conditions for COND-OBS)
   - Tag (MATH-FACT or COND-OBS)
   - Pattern-avoidance analysis (≥3 of 9 known patterns per TC)
@@ -422,7 +500,7 @@
   - Pre-mortem (3 scenarios) + expanded test plan + ADR
 
 **Files modified (backref only)**:
-- `THEORY/working/sensing_pipeline/00_INDEX.md` — §2.2 added with 10 new TC-SP-R table
+- `THEORY/1_sensing/00_INDEX.md` — §2.2 added with 10 new TC-SP-R table
 
 **New TC-SP-R candidates** (10):
 - **TC-SP-R-1** Janossy product density (MATH-FACT, HIGH)
@@ -492,12 +570,12 @@
 - **Survival rate**: 1/22 = 4.5%
 
 **Files NOT modified**:
-- `THEORY/canonical/canonical.md` — 0 edit
-- `THEORY/canonical/theorem_status.md` — 0 edit
-- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
-- `THEORY/canonical/PAI_ROADMAP.md` — 0 edit
-- `THEORY/canonical/DECLARATION.md` — 0 edit
-- `THEORY/canonical/hypothesis_tree.md` — 0 edit
+- `THEORY/2_substrate/canonical/canonical.md` — 0 edit
+- `THEORY/2_substrate/canonical/theorem_status.md` — 0 edit
+- `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
+- `THEORY/0_axis/PAI_ROADMAP.md` — 0 edit
+- `THEORY/0_axis/DECLARATION.md` — 0 edit
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — 0 edit
 - `CODE/scc/` 모든 파일 — 0 edit
 
 **Claim count change**: 0 (102 unchanged: 71A / 20B / 6C / 5R).
@@ -538,27 +616,27 @@
 **Trigger**: 사용자 7시간 대화 (Raw 센싱 → 인식의 장 형식화) 의 산출물. 대화 흐름: SCC 가 substrate 로 격하된 이후의 새 axis 탐색 → 장의 존재론적 지위 (P2+P3 hybrid) → Raw 의 수학적 정의 (Tier 2 minimal, (Ω, σ)) → 광센서 / 망막 파이프라인의 5단계 → 수리물리학적 형식화 요청. 사용자 선택: (1) 독립 substrate (PAI 와 병렬) 위치, (2) 포괄 survey + 단계별 deep dive, (3) Theorem-candidate 명시 + 증명 차후.
 
 **Files created (9)**:
-- `THEORY/working/sensing_pipeline/00_INDEX.md` — Navigation hub; TC-SP 20개 / OP-SP 14개 통합 색인; PAI / SCC 양방향 링크
-- `THEORY/working/sensing_pipeline/01_framework_master.md` — Stratified Stochastic Kernel Pipeline (SSKP); 수학 도구 13군 포괄 survey (점과정, SDE, 함수해석, 합성곱, scale-space, 미분기하, 시공간 분석, 정보이론, 대수위상, 범주론, 최적수송, 군이론, 변분법); TC-SP-1.1~1.3 등록
-- `THEORY/working/sensing_pipeline/02_stage0_photon_point_process.md` — Marked Poisson point process; Campbell / Slivnyak-Mecke / Janossy / Palm calculus; 광자 강도의 광학-양자효율 분해; TC-SP-0.1, 0.2; OP-SP-001
-- `THEORY/working/sensing_pipeline/03_stage1_photoreceptor_sde.md` — Jump-diffusion SDE for 광수용기; Naka-Rushton Hill function + adaptive sliding; hyperpolarizing dark current; single-photon impulse response; Fokker-Planck dual; Rod vs Cone; TC-SP-1.4, 1.5; OP-SP-002
-- `THEORY/working/sensing_pipeline/04_stage2_inner_retinal_algebra.md` — (Stage 2a+b+c 통합) ON/OFF Riesz 분해; DoG center-surround + scale-space + Laplace-Beltrami; Adelson-Bergen motion energy + Reichardt detector + optical flow PDE; 색 대립 (L-M, S-(L+M), L+M); TC-SP-2.1~2.6; OP-SP-003, 004
-- `THEORY/working/sensing_pipeline/05_stage3_ganglion_spike_encoding.md` — 4 candidate spike models (LIF SDE, SRM, Cox, Hawkes); renewal theory ISI 분포; M/P/K 경로 latency 비대칭; ON-center / OFF-center 수용야 상속; 비균질 표본화 (fovea 1:1 vs periphery 126:1); TC-SP-3.1~3.3; OP-SP-005
-- `THEORY/working/sensing_pipeline/06_endtoend_information_bound.md` — Data processing inequality chain; per-stage channel capacity; Fisher information; Bayesian posterior P(scene | spikes); Laughlin 1981 efficient coding (TC-SP-4.3 Naka-Rushton ≈ natural CDF); free-energy principle *cited but not adopted*; SCC 4 energy term ↔ stage 2 측면의 formal parallel (OP-SP-M3 으로 등록)
-- `THEORY/working/sensing_pipeline/07_omega_sigma_lift.md` — 각 stage 의 (Ω_i, σ_i) explicit; σ propagation as functor (TC-SP-5.1); Tier 2 closure of pipeline (TC-SP-5.2); 점 ↔ 장 ↔ 점 순환 (Stage 0, Stage 3 둘 다 순수 점과정); SCC $u_t$ ↔ which stage 의 4 candidates (OP-SP-006); prolegomena C1-C5 와의 정합 확인
-- `THEORY/working/sensing_pipeline/08_open_problems_sp.md` — 14 OP 통합 registry (10 core + 4 meta); severity 분포 (High 2, Medium 6, Low 4); 의존성 그래프 (critical path: OP-SP-006 → OP-SP-007 → PAI bridge); PAI OP 와 공식적 격리
+- `THEORY/1_sensing/00_INDEX.md` — Navigation hub; TC-SP 20개 / OP-SP 14개 통합 색인; PAI / SCC 양방향 링크
+- `THEORY/1_sensing/01_framework_master.md` — Stratified Stochastic Kernel Pipeline (SSKP); 수학 도구 13군 포괄 survey (점과정, SDE, 함수해석, 합성곱, scale-space, 미분기하, 시공간 분석, 정보이론, 대수위상, 범주론, 최적수송, 군이론, 변분법); TC-SP-1.1~1.3 등록
+- `THEORY/1_sensing/02_stage0_photon_point_process.md` — Marked Poisson point process; Campbell / Slivnyak-Mecke / Janossy / Palm calculus; 광자 강도의 광학-양자효율 분해; TC-SP-0.1, 0.2; OP-SP-001
+- `THEORY/1_sensing/03_stage1_photoreceptor_sde.md` — Jump-diffusion SDE for 광수용기; Naka-Rushton Hill function + adaptive sliding; hyperpolarizing dark current; single-photon impulse response; Fokker-Planck dual; Rod vs Cone; TC-SP-1.4, 1.5; OP-SP-002
+- `THEORY/1_sensing/04_stage2_inner_retinal_algebra.md` — (Stage 2a+b+c 통합) ON/OFF Riesz 분해; DoG center-surround + scale-space + Laplace-Beltrami; Adelson-Bergen motion energy + Reichardt detector + optical flow PDE; 색 대립 (L-M, S-(L+M), L+M); TC-SP-2.1~2.6; OP-SP-003, 004
+- `THEORY/1_sensing/05_stage3_ganglion_spike_encoding.md` — 4 candidate spike models (LIF SDE, SRM, Cox, Hawkes); renewal theory ISI 분포; M/P/K 경로 latency 비대칭; ON-center / OFF-center 수용야 상속; 비균질 표본화 (fovea 1:1 vs periphery 126:1); TC-SP-3.1~3.3; OP-SP-005
+- `THEORY/1_sensing/06_endtoend_information_bound.md` — Data processing inequality chain; per-stage channel capacity; Fisher information; Bayesian posterior P(scene | spikes); Laughlin 1981 efficient coding (TC-SP-4.3 Naka-Rushton ≈ natural CDF); free-energy principle *cited but not adopted*; SCC 4 energy term ↔ stage 2 측면의 formal parallel (OP-SP-M3 으로 등록)
+- `THEORY/1_sensing/07_omega_sigma_lift.md` — 각 stage 의 (Ω_i, σ_i) explicit; σ propagation as functor (TC-SP-5.1); Tier 2 closure of pipeline (TC-SP-5.2); 점 ↔ 장 ↔ 점 순환 (Stage 0, Stage 3 둘 다 순수 점과정); SCC $u_t$ ↔ which stage 의 4 candidates (OP-SP-006); prolegomena C1-C5 와의 정합 확인
+- `THEORY/1_sensing/08_open_problems_sp.md` — 14 OP 통합 registry (10 core + 4 meta); severity 분포 (High 2, Medium 6, Low 4); 의존성 그래프 (critical path: OP-SP-006 → OP-SP-007 → PAI bridge); PAI OP 와 공식적 격리
 
 **Files modified (backref 등록만)**:
-- `THEORY/working/INDEX.md` — "Sensing Pipeline Layer (PAI 와 병렬 substrate)" 신규 섹션 추가 (Prolegomena Layer 뒤). 9 파일 entry + TC-SP / OP-SP 총수 명시.
+- `THEORY/2_substrate/INDEX.md` — "Sensing Pipeline Layer (PAI 와 병렬 substrate)" 신규 섹션 추가 (Prolegomena Layer 뒤). 9 파일 entry + TC-SP / OP-SP 총수 명시.
 - (본 CHANGELOG entry 자체)
 
 **Files NOT modified**:
-- `THEORY/canonical/canonical.md` — 0 edit
-- `THEORY/canonical/theorem_status.md` — 0 edit
-- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
-- `THEORY/canonical/PAI_ROADMAP.md` — 0 edit
-- `THEORY/canonical/DECLARATION.md` — 0 edit
-- `THEORY/canonical/hypothesis_tree.md` — 0 edit
+- `THEORY/2_substrate/canonical/canonical.md` — 0 edit
+- `THEORY/2_substrate/canonical/theorem_status.md` — 0 edit
+- `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` — 0 edit
+- `THEORY/0_axis/PAI_ROADMAP.md` — 0 edit
+- `THEORY/0_axis/DECLARATION.md` — 0 edit
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — 0 edit
 - `CODE/scc/` 모든 파일 — 0 edit
 
 **Discipline 준수**:
@@ -604,11 +682,11 @@
 **Trigger**: 02 (4-layer architecture) 작성 후 user 요청 — *44 조건을 각각 수학적 수식으로 정리한 문서*. User 결정: full formal definitions (~3-5 lines per condition), 분량 ~600-900L.
 
 **Files created (1)**:
-- `THEORY/working/prolegomena/03_formula_catalog_v0.md` (~400L) — 44 M_k entry 각각의 signature + definition (candidate); shared notation key (§1); 10 categories (§2-§11); O-grade summary (§12); PAI vocabulary placeholder (§13, *NOT formalized*); inter-condition reference (§14).
+- `THEORY/3_projections/prolegomena/03_formula_catalog_v0.md` (~400L) — 44 M_k entry 각각의 signature + definition (candidate); shared notation key (§1); 10 categories (§2-§11); O-grade summary (§12); PAI vocabulary placeholder (§13, *NOT formalized*); inter-condition reference (§14).
 
 **Files modified (backref 등록만)**:
-- `THEORY/working/INDEX.md` — Prolegomena Layer 섹션에 03 entry 추가.
-- `THEORY/canonical/MOC_canonical_authority.md` — Prolegomena Layer 섹션에 03 entry 추가.
+- `THEORY/2_substrate/INDEX.md` — Prolegomena Layer 섹션에 03 entry 추가.
+- `THEORY/2_substrate/canonical/MOC_canonical_authority.md` — Prolegomena Layer 섹션에 03 entry 추가.
 
 **Discipline (5/21 원칙 준수)**:
 - 모든 44 정의는 *candidate notation* — committed definition 아님. 표기 갱신 가능.
@@ -642,12 +720,12 @@
 **Trigger**: 2026-05-21 PAI pivot 의 *기술 substrate* 가 부재했음 — `00_field_conditions_v0.md` (perception-side 44 조건) 와 `01_mathematical_conditions_v0.md` (math-side 평행) 는 *조건 catalog* 만 제공. *어떤 수학적 객체가 어느 layer 에 거주하는지* 의 분담 미명시. 2026-05-22 5-영역 광범위 리서치 (작용소대수 / 범주론 / 동역학 / 이산-관계론 / 정보-인지) 가 *4-layer hybrid* 로 수렴.
 
 **Files created (1)**:
-- `THEORY/working/prolegomena/02_framework_skeleton_v0.md` — 4-layer architecture scaffold (L0 cohesion field dynamics on Prob(X_t) / L1 derived carrier + correlation metric / L2 algebraic state + autonomous dynamics + time / L3 frame / observer / no global section / L4 self-reference scaffold). 각 layer 의 primitive / derived / 후보 framework / 담당 M_k 클러스터 명시.
+- `THEORY/3_projections/prolegomena/02_framework_skeleton_v0.md` — 4-layer architecture scaffold (L0 cohesion field dynamics on Prob(X_t) / L1 derived carrier + correlation metric / L2 algebraic state + autonomous dynamics + time / L3 frame / observer / no global section / L4 self-reference scaffold). 각 layer 의 primitive / derived / 후보 framework / 담당 M_k 클러스터 명시.
 
 **Files modified (backref 등록만; 본문 보존)**:
-- `THEORY/working/INDEX.md` — `## Prolegomena Layer (PAI track)` 섹션 신설 (00/01/02 entry).
-- `THEORY/canonical/MOC_canonical_authority.md` — `## Prolegomena Layer (PAI track, pre-formal)` 섹션 추가.
-- `THEORY/canonical/PAI_ROADMAP.md` — Phase 1 의 *Technical substrate* 단락 추가 (3 prolegomena 문서 참조).
+- `THEORY/2_substrate/INDEX.md` — `## Prolegomena Layer (PAI track)` 섹션 신설 (00/01/02 entry).
+- `THEORY/2_substrate/canonical/MOC_canonical_authority.md` — `## Prolegomena Layer (PAI track, pre-formal)` 섹션 추가.
+- `THEORY/0_axis/PAI_ROADMAP.md` — Phase 1 의 *Technical substrate* 단락 추가 (3 prolegomena 문서 참조).
 
 **5 OP-NEW identified (NOT registered; 02 §6 내부 언급만)**:
 - OP-NEW-A — `σ_t`-공변 spectral triple 의 완전 특성화 (Layer 1 ↔ Layer 2).
@@ -708,8 +786,8 @@
 - OP-PAI-006: Formation-to-affordance bridge (Medium)
 
 **Files created (4)**:
-- `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md` — canonical pivot doc
-- `THEORY/canonical/PAI_ROADMAP.md` — Phase 0-6 roadmap (no commitments)
+- `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md` — canonical pivot doc
+- `THEORY/0_axis/PAI_ROADMAP.md` — Phase 0-6 roadmap (no commitments)
 - `THEORY/logs/daily/2026-05-21/00_pivot_entry.md` — daily log
 - `THEORY/logs/daily/MAIN_PROMPT_v4_PAI_PIVOT.md` — new agent prompt (v3 preserved as legacy)
 
@@ -741,12 +819,12 @@
 **Trigger:** 사용자 우려 — "증명의 증명을 위한 가설을 위한 증명" 식으로 국소 증명 체인이 커지며 SCC 이론의 거시 구조가 흐려졌다는 지적.
 
 **Actions:**
-- Added `THEORY/working/macro_audit_2026-05-20.md` as a working-grade pause audit. It separates origin, grounded results, conditional results, intuition, overreach, known non-claims, and macro gaps.
+- Added `THEORY/0_axis/macro_audit_2026-05-20.md` as a working-grade pause audit. It separates origin, grounded results, conditional results, intuition, overreach, known non-claims, and macro gaps.
 - Synced top-level navigation / MOC status references to the current CV-1.20 / HT-3.11 baseline:
   - `THEORY_INDEX.md`
-  - `THEORY/canonical/MOC_canonical_authority.md`
-  - `THEORY/canonical/MOC_hypothesis_tree.md`
-  - `THEORY/working/MOC_open_problems_blockers.md`
+  - `THEORY/2_substrate/canonical/MOC_canonical_authority.md`
+  - `THEORY/2_substrate/canonical/MOC_hypothesis_tree.md`
+  - `THEORY/2_substrate/MOC_open_problems_blockers.md`
 - Added append-only theory-loop notes in ignored local `research_log.md`.
 
 **Canonical claim count:** unchanged — 71A / 20B / 6C / 5R = 102 claims.
@@ -856,7 +934,7 @@ v3 prompt body "SEAL-execute escalation" mode 의 *production-grade 검증*: 사
 
 ### Working Layer Pre-SEAL Fixes Applied (Wave 2 Critic 4 CRITICAL)
 
-In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave 2 adversarial critic (`THEORY/working/field_equation_framework/07_critic_full_review.md`) were applied to working layer files 02-06 prior to SEAL:
+In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave 2 adversarial critic (`THEORY/2_substrate/foundations/field_equation/07_critic_full_review.md`) were applied to working layer files 02-06 prior to SEAL:
 
 - **Fix #1 (σ formula consensus)**: $\sigma = (\sqrt{2}/6)\sqrt{\alpha\beta}$ — corrected files 05, 06 (previously had incorrect $\sqrt{\alpha\beta}/3$ form, off by factor √2).
 - **Fix #2 (file 03 L1967 × 9)**: OP-HMORSE-SADDLE citations updated to `theorem_status.md L594` (registration) with cross-ref `canonical.md L1967` (caveat); 10 instances corrected.
@@ -865,7 +943,7 @@ In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave
 
 ### v1 Working File Updated
 
-`THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 ($c_G = 2.09$ → $1.171$ with Phase 5 forensics CoT) + §1.3 (S3 Cat status: conditional → Cat A on standard regimes with case A/B/C breakdown).
+`THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.1 ($c_G = 2.09$ → $1.171$ with Phase 5 forensics CoT) + §1.3 (S3 Cat status: conditional → Cat A on standard regimes with case A/B/C breakdown).
 
 ### Pytest Status
 
@@ -873,10 +951,10 @@ In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave
 
 ### Cross-References
 
-- Working files anchored: `THEORY/working/foundation/manifold_topology_attempt_v1.md` §1.1 + §1.3 (updated for CV-1.19) + `THEORY/working/SF/mode_count.md` §2.3a (Cat A anchor for Case A regular graphs).
+- Working files anchored: `THEORY/2_substrate/foundations/manifold/manifold_topology_attempt_v1.md` §1.1 + §1.3 (updated for CV-1.19) + `THEORY/2_substrate/sigma_framework/mode_count.md` §2.3a (Cat A anchor for Case A regular graphs).
 - Daily logs: `THEORY/logs/daily/2026-05-20/02_cg_numerical_verification.md` (S1) + `03_D_L_commutation.md` (S3) + `99_summary.md` (Decision A).
-- Field equation framework: `THEORY/working/field_equation_framework/12_wave1_critical_fixes_consolidated.md` (Wave 2 critic fix specs source).
-- Seal: `THEORY/canonical/CV-1.19_SEAL.md`.
+- Field equation framework: `THEORY/2_substrate/foundations/field_equation/12_wave1_critical_fixes_consolidated.md` (Wave 2 critic fix specs source).
+- Seal: `THEORY/2_substrate/canonical/seals/CV-1.19_SEAL.md`.
 
 ---
 
@@ -903,10 +981,10 @@ In the W8-Day3 closing → W8-Day4 execution session, 4 CRITICAL fixes from Wave
 
 ### Files Modified
 
-- `THEORY/canonical/canonical.md` — Acts 1 + 2 (Definition OMS-1 amendment + Appendix §N 신설)
-- `THEORY/canonical/theorem_status.md` — Act 3 (OP-0021 row + detail amendment) + CV-1.18 SEAL prepend note at structural row
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.8 → HT-3.9 (H-T* row PARTIALLY CLOSED via Route C; dual-naming with OP-0021 resolved)
-- `THEORY/canonical/CV-1.18_SEAL.md` — NEW (seal record, 152 lines)
+- `THEORY/2_substrate/canonical/canonical.md` — Acts 1 + 2 (Definition OMS-1 amendment + Appendix §N 신설)
+- `THEORY/2_substrate/canonical/theorem_status.md` — Act 3 (OP-0021 row + detail amendment) + CV-1.18 SEAL prepend note at structural row
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.8 → HT-3.9 (H-T* row PARTIALLY CLOSED via Route C; dual-naming with OP-0021 resolved)
+- `THEORY/2_substrate/canonical/seals/CV-1.18_SEAL.md` — NEW (seal record, 152 lines)
 - `THEORY/CHANGELOG.md` — this entry
 
 ### Claim Count
@@ -933,9 +1011,9 @@ Reasoning: 본 SEAL = *axiomatic registration acts*, NOT new Cat A/B/C theorem a
 
 ### Sources
 
-- `THEORY/working/foundation/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P verdict)
-- `THEORY/working/foundation/proofs/P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic verdict)
-- `THEORY/working/foundation/proofs/_SUMMARY_v0.2.md` (CV-1.18 candidate identification)
+- `THEORY/2_substrate/foundations/manifold/proofs/P5_Stage0_sensor_T_9conditions.md` (1125L, 9× Cat A axiomatic on P verdict)
+- `THEORY/2_substrate/foundations/manifold/proofs/P6_OMS-1_xi_Tstar_entry.md` (952L, Cat A axiomatic verdict)
+- `THEORY/2_substrate/foundations/manifold/proofs/_SUMMARY_v0.2.md` (CV-1.18 candidate identification)
 - `THEORY/working/foundation/proofs/V1_rigor_verification.md` (6/6 PASS — `/tmp/scc_proofs_v02/`)
 - `THEORY/working/foundation/proofs/V2_canonical_xref.md` (41/41 anchors verified, 0 silent OP resolution)
 - AUX-1.5 §4.5 + §4.6.1 + §4.7.1 + §4.9.1 — registry-level prior diagnosis sources
@@ -1034,7 +1112,7 @@ W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-att
 
 ## [CV-1.17] 2026-05-15 — T-CC-StableK-Kernel canonical promotion (Stage B of OPT-B canonical update)
 
-**Trigger:** Plan-mode OPT-B 사용자 채택 (`/Users/ojaehong/.claude/plans/groovy-humming-starlight.md`) → D1 P7 묵시적 승인. Stage A hygiene 완료 후 Stage B 실행 — `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` 의 T-CC-StableK-Kernel Cat B 를 canonical §13 Cat B 에 promote.
+**Trigger:** Plan-mode OPT-B 사용자 채택 (`/Users/ojaehong/.claude/plans/groovy-humming-starlight.md`) → D1 P7 묵시적 승인. Stage A hygiene 완료 후 Stage B 실행 — `THEORY/4_temporal/composition/05_promotion_draft.md` 의 T-CC-StableK-Kernel Cat B 를 canonical §13 Cat B 에 promote.
 
 ### Summary
 
@@ -1060,10 +1138,10 @@ W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-att
 
 ### Files modified
 
-- `THEORY/canonical/canonical.md` — frontmatter (CV-1.16 → CV-1.17, 1.16 → 1.17, 2026-05-14 → 2026-05-15) + description (CV-1.17 sealed entry 추가) + title CV-1.17 + version-naming-block + release-state section heading + body CV-1.17 sealed entry + next-target CV-1.18 + §13 Category B section header 카운트 19 + §13 Cat B body 의 *CV-1.17 Cat B addition block 신설* (T-CC-StableK-Kernel full theorem block).
-- `THEORY/canonical/theorem_status.md` — header CV-1.16 → CV-1.17. (Stage A 의 다른 hygiene 작업 이미 적용된 base 위에.)
-- `THEORY/canonical/hypothesis_tree.md` — frontmatter HT-3.7 → HT-3.8; CV-1.17 SEALED block 추가; H-COMP-KERNEL subbranch CLOSED Cat B 활성화; H-COMP-ACTION conditional lift active CV-1.17 표기; HT-3.8 changelog row 추가; 다음 목표 CV-1.18 갱신.
-- `THEORY/canonical/CV-1.17_SEAL.md` (신설) — 인증 / decision audit trail / non-overclaim / files modified / OQ list / CV-1.18 targets / methodological highlight.
+- `THEORY/2_substrate/canonical/canonical.md` — frontmatter (CV-1.16 → CV-1.17, 1.16 → 1.17, 2026-05-14 → 2026-05-15) + description (CV-1.17 sealed entry 추가) + title CV-1.17 + version-naming-block + release-state section heading + body CV-1.17 sealed entry + next-target CV-1.18 + §13 Category B section header 카운트 19 + §13 Cat B body 의 *CV-1.17 Cat B addition block 신설* (T-CC-StableK-Kernel full theorem block).
+- `THEORY/2_substrate/canonical/theorem_status.md` — header CV-1.16 → CV-1.17. (Stage A 의 다른 hygiene 작업 이미 적용된 base 위에.)
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — frontmatter HT-3.7 → HT-3.8; CV-1.17 SEALED block 추가; H-COMP-KERNEL subbranch CLOSED Cat B 활성화; H-COMP-ACTION conditional lift active CV-1.17 표기; HT-3.8 changelog row 추가; 다음 목표 CV-1.18 갱신.
+- `THEORY/2_substrate/canonical/seals/CV-1.17_SEAL.md` (신설) — 인증 / decision audit trail / non-overclaim / files modified / OQ list / CV-1.18 targets / methodological highlight.
 - `THEORY/CHANGELOG.md` — 본 [CV-1.17] entry prepended above [HYGIENE] entry.
 
 ### Did NOT change
@@ -1265,12 +1343,12 @@ W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-att
 
 | File | Action |
 |---|---|
-| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (L-CLOSURE-LIFT) after CV-1.15 Cat A block; §13 Cat B insert (L-HMORSE-LOCAL, L-HMORSE-DECOMP, D-HMORSE-LOCAL Definition) after CV-1.15 Cat B block; §13 Cat C insert (L-BOUNDARY-MODE-EXCLUSION) at end of Cat C section. Per-block CV-1.16 count notes. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.16; CV-1.16 count update line after CV-1.15 line; CV-1.16 section block (4-row table + OP-HMORSE-BROADNESS retirement + non-overclaim + methodological highlight + audit reference). |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — W7-Day5 extension CV-1.16 SEALED header; 다음 목표 → CV-1.17; H-MORSE row PARTIALLY CLOSED in §가설 상태 요약; Q3 H-MORSE block fully rewritten with CV-1.16 partial closure status; HT-3.7 changelog row. |
-| `THEORY/canonical/CV-1.16_SEAL.md` | **CREATED** — seal record. |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (L-CLOSURE-LIFT) after CV-1.15 Cat A block; §13 Cat B insert (L-HMORSE-LOCAL, L-HMORSE-DECOMP, D-HMORSE-LOCAL Definition) after CV-1.15 Cat B block; §13 Cat C insert (L-BOUNDARY-MODE-EXCLUSION) at end of Cat C section. Per-block CV-1.16 count notes. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — header CV version → CV-1.16; CV-1.16 count update line after CV-1.15 line; CV-1.16 section block (4-row table + OP-HMORSE-BROADNESS retirement + non-overclaim + methodological highlight + audit reference). |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — W7-Day5 extension CV-1.16 SEALED header; 다음 목표 → CV-1.17; H-MORSE row PARTIALLY CLOSED in §가설 상태 요약; Q3 H-MORSE block fully rewritten with CV-1.16 partial closure status; HT-3.7 changelog row. |
+| `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md` | **CREATED** — seal record. |
 | `THEORY/CHANGELOG.md` | **UPDATED** — this entry prepended above CV-1.15 entry from morning. |
-| `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` | NOT modified (already created in evening extension; CV-1.16 promotion candidate record). |
+| `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` | NOT modified (already created in evening extension; CV-1.16 promotion candidate record). |
 | `THEORY/logs/daily/2026-05-14/40_broadness_pre_brainstorm.md, 41_broadness_approach_a_jacobian.md, 42_broadness_approach_b_trace.md, 43_broadness_approach_c_numerical.md, 44_broadness_synthesis.md, 49_broadness_summary.md` | NOT modified (audit trail preserved). |
 | `CODE/experiments/exp_hmorse_broadness_full_spectrum.py` + `results/exp_hmorse_broadness_full_spectrum.{json,md}` | NOT modified (numerical anchor preserved). |
 
@@ -1342,14 +1420,14 @@ W8-Day1 (2026-05-18) 의 *3-track survey day* 가 v1 의 *단일 target deep-att
 
 | File | Action |
 |---|---|
-| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE Interpretation row); §13 Cat B insert (2 entries); §13 Cat B header amended for T-Temporal-Identity CV-1.13 promotion record (hygiene); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — CV-1.15 section block (10 rows); OP-0012 entry refactored to three sub-labels (CC / SINK / Kjump / Markov); header CV version → CV-1.15; claim count → 93. |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — H-COMP parent branch + subbranches under Q5; HT-3.5 → HT-3.6; next-target line → CV-1.16. |
-| `THEORY/canonical/CV-1.15_SEAL.md` | **CREATED** — seal record. |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 entries + D-LOCAL-ACTION + D-GIBBS-KERNEL + P-ACTION-PATH-INHERITANCE Interpretation row); §13 Cat B insert (2 entries); §13 Cat B header amended for T-Temporal-Identity CV-1.13 promotion record (hygiene); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — CV-1.15 section block (10 rows); OP-0012 entry refactored to three sub-labels (CC / SINK / Kjump / Markov); header CV version → CV-1.15; claim count → 93. |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — H-COMP parent branch + subbranches under Q5; HT-3.5 → HT-3.6; next-target line → CV-1.16. |
+| `THEORY/2_substrate/canonical/seals/CV-1.15_SEAL.md` | **CREATED** — seal record. |
 | `THEORY/CHANGELOG.md` | **UPDATED** — this entry prepended. |
-| `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` | §12 amendments-applied section (already present from 5/13 pre-apply). |
-| `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` | Deferred (working file; not load-bearing). To be replaced with §A–§D blocks in follow-up session. |
-| `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` | **NOT MODIFIED** (T-CC-StableK-Kernel remains working candidate under R-C) |
+| `THEORY/4_temporal/action_cost/09_final_audit.md` | §12 amendments-applied section (already present from 5/13 pre-apply). |
+| `THEORY/4_temporal/action_cost/10_patch_plan.md` | Deferred (working file; not load-bearing). To be replaced with §A–§D blocks in follow-up session. |
+| `THEORY/4_temporal/composition/05_promotion_draft.md` | **NOT MODIFIED** (T-CC-StableK-Kernel remains working candidate under R-C) |
 | `CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py` + `results/exp89_results.json` | **REFERENCED** — 3-case PASS (2026-05-13); numerical sanity check, not proof. |
 
 ### Outstanding items registered
@@ -1453,7 +1531,7 @@ Both V-AFD and R-2 chose *not* to take this frontal-attack path. After two conse
 
 ## 2026-05-13 — R-2 Honest Realignment: Lemmas B2/B3 are Canonical's, R-2 is Language Refactor
 
-**Trigger:** Post-Phase-B follow-up Explore audit cross-checked R-2 Lemmas B2/B3 against existing canonical working content. Discovered that B2 (centroid mass-weighted) and B3 (orientation parallel-axis) are *mathematically identical* to existing canonical `THEORY/working/MF/sigma_inherit_k_jump.md` §3.3(a)(b).
+**Trigger:** Post-Phase-B follow-up Explore audit cross-checked R-2 Lemmas B2/B3 against existing canonical working content. Discovered that B2 (centroid mass-weighted) and B3 (orientation parallel-axis) are *mathematically identical* to existing canonical `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` §3.3(a)(b).
 
 ### Summary
 
@@ -1699,15 +1777,15 @@ $$\geq (\Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}) - 2\epsilon_\mathrm{ke
 
 | File | Action |
 |------|--------|
-| `THEORY/working/temporal/S-A1_PERSCOMP_INTEGRATION.md` | **CREATED** — D-ST-3 integration certification (5 checkpoints) |
-| `THEORY/working/temporal/S-A3_EXISTENCE_AUDIT.md` | **CREATED** — T-Temporal-Identity (a) existence proof audit |
-| `THEORY/working/temporal/S-C1_KERNEL_AUDIT.md` | **CREATED** — Lemma 11 kernel independence audit (margin correction) |
-| `THEORY/working/temporal/S-B3_kernel_independence.md` | **UPDATED** — margin factor corrected to 2ε_kernel in §0.1, §1.3; Final Classification updated |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — T-Temporal-Identity Cat B→Cat A; CV-1.13 section sealed; header banner CV-1.13, 59A/14B/5C/5R=83 |
-| `THEORY/canonical/canonical.md` | **UPDATED** — id/version CV-1.13; release state block; T-Temporal-Identity (c) margin 2ε_kernel; status Cat A |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — HT-3.4→HT-3.5; CV-1.13 SEALED block; critical path updated |
+| `THEORY/4_temporal/temporal_audit/S-A1_PERSCOMP_INTEGRATION.md` | **CREATED** — D-ST-3 integration certification (5 checkpoints) |
+| `THEORY/4_temporal/temporal_audit/S-A3_EXISTENCE_AUDIT.md` | **CREATED** — T-Temporal-Identity (a) existence proof audit |
+| `THEORY/4_temporal/temporal_audit/S-C1_KERNEL_AUDIT.md` | **CREATED** — Lemma 11 kernel independence audit (margin correction) |
+| `THEORY/4_temporal/temporal_audit/S-B3_kernel_independence.md` | **UPDATED** — margin factor corrected to 2ε_kernel in §0.1, §1.3; Final Classification updated |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — T-Temporal-Identity Cat B→Cat A; CV-1.13 section sealed; header banner CV-1.13, 59A/14B/5C/5R=83 |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — id/version CV-1.13; release state block; T-Temporal-Identity (c) margin 2ε_kernel; status Cat A |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — HT-3.4→HT-3.5; CV-1.13 SEALED block; critical path updated |
 | `THEORY/CHANGELOG.md` | **UPDATED** — W7-CV1.13 entry prepended |
-| `THEORY/canonical/CV-1.13_SEAL.md` | **CREATED** — official CV-1.13 seal document |
+| `THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md` | **CREATED** — official CV-1.13 seal document |
 
 ---
 
@@ -1735,12 +1813,12 @@ $$\geq (\Delta_\mathrm{sep}^* + \epsilon_\mathrm{kernel}) - 2\epsilon_\mathrm{ke
 
 | File | Action |
 |------|--------|
-| `THEORY/working/temporal/TRACE_084_ORIGIN.md` | **CREATED** — forensic provenance audit of literal 0.84 |
-| `THEORY/working/temporal/SYMBOLIC_DEEP_CORE_NECESSITY.md` | **CREATED** — 8-section symbolic theorem development (S-B1-SYM, OP-SB1-084) |
-| `THEORY/working/temporal/S-B1_deep_core_density.md` | **Updated** — §6 appended (W7-CV113A reframing; §0–§5 preserved as historical record) |
-| `THEORY/canonical/canonical.md` | **Updated** — metadata block, T-Temporal-Identity (b) entry, non-overclaim block, status line |
-| `THEORY/canonical/theorem_status.md` | **Updated** — S-B1-SYM Cat B row added; S-B1-Weak Notes updated; OP-SB1-DEEP body footer + OP-SB1-084 registered; statistics table updated |
-| `THEORY/canonical/hypothesis_tree.md` | **Updated** — HT-3.3 → HT-3.4; W7-CV113A note; OP-SB1-084 supersession; changelog row |
+| `THEORY/4_temporal/temporal_audit/TRACE_084_ORIGIN.md` | **CREATED** — forensic provenance audit of literal 0.84 |
+| `THEORY/4_temporal/temporal_audit/SYMBOLIC_DEEP_CORE_NECESSITY.md` | **CREATED** — 8-section symbolic theorem development (S-B1-SYM, OP-SB1-084) |
+| `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` | **Updated** — §6 appended (W7-CV113A reframing; §0–§5 preserved as historical record) |
+| `THEORY/2_substrate/canonical/canonical.md` | **Updated** — metadata block, T-Temporal-Identity (b) entry, non-overclaim block, status line |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **Updated** — S-B1-SYM Cat B row added; S-B1-Weak Notes updated; OP-SB1-DEEP body footer + OP-SB1-084 registered; statistics table updated |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **Updated** — HT-3.3 → HT-3.4; W7-CV113A note; OP-SB1-084 supersession; changelog row |
 | `THEORY/CHANGELOG.md` | **Updated** — this entry prepended |
 
 ### T-Temporal-Identity status — no Cat A path change
@@ -1815,11 +1893,11 @@ The value 0.84 is the **observed** ρ_deep from exp83, used to compute the magni
 
 ### Files created/updated
 
-- `THEORY/working/temporal/CV113_S-B1_DEEP_CORE_CLOSURE.md` — NEW (full audit + proof)
-- `THEORY/working/temporal/S-B1_deep_core_density.md` — §5 correction note added
-- `THEORY/canonical/canonical.md` — Lemma S-B1-Weak noted; T-Temporal-Identity entry updated; CV-1.13 path updated
-- `THEORY/canonical/theorem_status.md` — Lemma S-B1-Weak Cat A row added; OP-SB1-DEEP downgraded; T-Temporal-Identity path corrected
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.2 → HT-3.3
+- `THEORY/4_temporal/temporal_audit/CV113_S-B1_DEEP_CORE_CLOSURE.md` — NEW (full audit + proof)
+- `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` — §5 correction note added
+- `THEORY/2_substrate/canonical/canonical.md` — Lemma S-B1-Weak noted; T-Temporal-Identity entry updated; CV-1.13 path updated
+- `THEORY/2_substrate/canonical/theorem_status.md` — Lemma S-B1-Weak Cat A row added; OP-SB1-DEEP downgraded; T-Temporal-Identity path corrected
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.2 → HT-3.3
 - `THEORY/CHANGELOG.md` — this entry
 
 ### Next session (CV-1.13 completion)
@@ -1873,13 +1951,13 @@ Full temporal chain closed at Cat B / Cat A conditional level. **CV-1.12 sealed:
 
 ### Files created/updated
 
-- `THEORY/working/temporal/W7_FINAL_TEMPORAL_CLOSURE.md` — NEW (pre-audit + full session log)
-- `THEORY/working/temporal/partial_ot_stability.md` — NEW (Theorem Partial-H-SINK Cat A proof)
-- `THEORY/working/temporal/S-B1_deep_core_density.md` — NEW (S-B1 Cat B conditional; OP-SB1-DEEP)
-- `THEORY/working/temporal/S-B3_kernel_independence.md` — NEW (Lemma 9→10→11 chain, Cat A conditional)
-- `THEORY/canonical/canonical.md` — CV-1.12 (T-Temporal-Identity §13 Cat B entry; counts updated to 79)
-- `THEORY/canonical/theorem_status.md` — CV-1.12 section added; OP-0011 PARTIALLY RESOLVED; OP-SB1-DEEP registered
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.1 → HT-3.2 (H-SINK FULLY CLOSED)
+- `THEORY/4_temporal/temporal_audit/W7_FINAL_TEMPORAL_CLOSURE.md` — NEW (pre-audit + full session log)
+- `THEORY/4_temporal/temporal_audit/partial_ot_stability.md` — NEW (Theorem Partial-H-SINK Cat A proof)
+- `THEORY/4_temporal/temporal_audit/S-B1_deep_core_density.md` — NEW (S-B1 Cat B conditional; OP-SB1-DEEP)
+- `THEORY/4_temporal/temporal_audit/S-B3_kernel_independence.md` — NEW (Lemma 9→10→11 chain, Cat A conditional)
+- `THEORY/2_substrate/canonical/canonical.md` — CV-1.12 (T-Temporal-Identity §13 Cat B entry; counts updated to 79)
+- `THEORY/2_substrate/canonical/theorem_status.md` — CV-1.12 section added; OP-0011 PARTIALLY RESOLVED; OP-SB1-DEEP registered
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.1 → HT-3.2 (H-SINK FULLY CLOSED)
 - `THEORY/CHANGELOG.md` — this entry
 
 ### Next session (CV-1.13 targets)
@@ -1924,8 +2002,8 @@ H-SINK attacked via 6-lemma chain. **S-B2 (Lemma 8.2) proved Cat A.** Full plan-
 
 ### Files created/updated
 
-- `THEORY/working/temporal/H-SINK.md` — **NEW** (main proof file, 6 lemmas + main theorem + audit)
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.0 → HT-3.1 (H-SINK PARTIALLY CLOSED)
+- `THEORY/4_temporal/temporal_audit/H-SINK.md` — **NEW** (main proof file, 6 lemmas + main theorem + audit)
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.0 → HT-3.1 (H-SINK PARTIALLY CLOSED)
 - `THEORY/CHANGELOG.md` — this entry
 
 ### T-Temporal-Identity consequence
@@ -1984,24 +2062,24 @@ OMS promoted from **Accepted — Static (Full Temporal Conditional)** to **Accep
 
 ### Files Created (Session 8)
 
-- `THEORY/working/observer_moduli/op_oms_034_initial_log.md` — initial reading + plan.
-- `THEORY/working/observer_moduli/op_oms_034_temporal_delta3_resolution.md` — Theorems T1–T8 + verdict (Case A: Full Temporal COMPUTATIONALLY SUPPORTED).
-- `THEORY/working/observer_moduli/oms_2_0_full_accepted_audit.md` — final classification audit; verdict: OMS-2.0 Accepted — Full.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_initial_log.md` — initial reading + plan.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_temporal_delta3_resolution.md` — Theorems T1–T8 + verdict (Case A: Full Temporal COMPUTATIONALLY SUPPORTED).
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_full_accepted_audit.md` — final classification audit; verdict: OMS-2.0 Accepted — Full.
 - `CODE/experiments/observer_moduli/vp11_temporal_delta3.py` — combined Phase 1 (rank witness) + Phase 2 (Δ³ branch map). Custom temporal optimizer with closed-form analytic gradient for L2 transport coupling.
 - `CODE/experiments/results/observer_moduli/vp11_temporal_rank_witness.{json,md}`
 - `CODE/experiments/results/observer_moduli/vp11_temporal_delta3.{json,md}`
 
 ### Files Modified (Session 8)
 
-- `THEORY/canonical/canonical.md` — Appendix OMS Temporal subsection (M) added: Theorems T1–T8 + TS3 + H4-T-CW; final status declaration upgraded to "OMS-2.0 Accepted — Full".
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-034 status CLOSED; OP-OMS-034b/034c registered (non-blocking).
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-026 added; W26–W28 added.
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — Session-8 head + Full Accepted final classification.
-- `THEORY/working/observer_moduli/checkpoints.md` — Session-8 row + Full Accepted status.
-- `THEORY/working/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Full.
-- `THEORY/working/observer_moduli/daily_log.md` — Session-8 entry.
+- `THEORY/2_substrate/canonical/canonical.md` — Appendix OMS Temporal subsection (M) added: Theorems T1–T8 + TS3 + H4-T-CW; final status declaration upgraded to "OMS-2.0 Accepted — Full".
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-034 status CLOSED; OP-OMS-034b/034c registered (non-blocking).
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-026 added; W26–W28 added.
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — Session-8 head + Full Accepted final classification.
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — Session-8 row + Full Accepted status.
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Full.
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — Session-8 entry.
 - `THEORY/CHANGELOG.md` — this entry.
-- `THEORY/working/INDEX.md` — Session-8 file table + Full Accepted status.
+- `THEORY/2_substrate/INDEX.md` — Session-8 file table + Full Accepted status.
 
 ### Theorem Status Changes
 
@@ -2031,7 +2109,7 @@ OMS promoted from **Accepted — Static (Full Temporal Conditional)** to **Accep
 
 $$\textbf{OMS-2.0 Accepted — Full.}$$
 
-Equivalent: **Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test).** Canonical Appendix OMS in `THEORY/canonical/canonical.md` (Sections A–L Static + Section M Temporal) is authoritative. No remaining hard blockers.
+Equivalent: **Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on faithful reduced test).** Canonical Appendix OMS in `THEORY/2_substrate/canonical/canonical.md` (Sections A–L Static + Section M Temporal) is authoritative. No remaining hard blockers.
 
 ---
 
@@ -2041,29 +2119,29 @@ Equivalent: **Static (PROVED) + Full Temporal (COMPUTATIONALLY SUPPORTED on fait
 
 ### Summary
 
-OMS promoted from **Conditional Accepted** to **Accepted — Static, with Full Temporal Conditional on OP-OMS-034**. The Gap C1 theorem package is consolidated with two real bug fixes (rank equivalence requires $H_T \succ 0$; rigidity requires explicit (Vertex) hypothesis). Three sub-OPs resolved/separated (032 CLOSED UNDER CERTIFIED WITNESS, 033 PROVED conditional fold theorem, 034 SEPARATED). Canonical Appendix OMS added to `THEORY/canonical/canonical.md` with 20+ theorem-grade items.
+OMS promoted from **Conditional Accepted** to **Accepted — Static, with Full Temporal Conditional on OP-OMS-034**. The Gap C1 theorem package is consolidated with two real bug fixes (rank equivalence requires $H_T \succ 0$; rigidity requires explicit (Vertex) hypothesis). Three sub-OPs resolved/separated (032 CLOSED UNDER CERTIFIED WITNESS, 033 PROVED conditional fold theorem, 034 SEPARATED). Canonical Appendix OMS added to `THEORY/2_substrate/canonical/canonical.md` with 20+ theorem-grade items.
 
 ### Files Created (Session 7)
 
-- `THEORY/working/observer_moduli/proof_promotion_reading_log.md`
-- `THEORY/working/observer_moduli/gap_c1_final_theorem_package.md` — C1.1–C1.5 theorem package, sharpened.
-- `THEORY/working/observer_moduli/op_oms_032_closed_form_h4.md` — INTERVAL_CERTIFIED H4 witness; CLOSED UNDER CERTIFIED WITNESS.
-- `THEORY/working/observer_moduli/op_oms_033_sigma_sn_arnold.md` — Theorem SN3 (conditional fold); Lemma SN4 sketched.
-- `THEORY/working/observer_moduli/op_oms_034_temporal_delta3_status.md` — Theorems TS1, TS2; SEPARATED.
-- `THEORY/working/observer_moduli/oms_2_0_accepted_audit.md` — final classification: Accepted — Static + Conditional Temporal.
+- `THEORY/2_substrate/foundations/observer_moduli/proof_promotion_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/gap_c1_final_theorem_package.md` — C1.1–C1.5 theorem package, sharpened.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_032_closed_form_h4.md` — INTERVAL_CERTIFIED H4 witness; CLOSED UNDER CERTIFIED WITNESS.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_033_sigma_sn_arnold.md` — Theorem SN3 (conditional fold); Lemma SN4 sketched.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_034_temporal_delta3_status.md` — Theorems TS1, TS2; SEPARATED.
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_accepted_audit.md` — final classification: Accepted — Static + Conditional Temporal.
 
 ### Files Modified (Session 7)
 
-- `THEORY/canonical/canonical.md` — **Appendix OMS** added at file end (20+ theorem-grade items).
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-032/033/034 statuses; OP-OMS-032b, 033b registered.
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-025 added; W22–W25 added to overclaim warnings.
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — Session-7 head + final classification: Accepted Static.
-- `THEORY/working/observer_moduli/checkpoints.md` — Session-7 row + Accepted Static status.
-- `THEORY/working/observer_moduli/observer_moduli_space.md` — §18 promotion trajectory added; superseded by canonical.md Appendix OMS.
-- `THEORY/working/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Static.
-- `THEORY/working/observer_moduli/daily_log.md` — Session-7 entry.
+- `THEORY/2_substrate/canonical/canonical.md` — **Appendix OMS** added at file end (20+ theorem-grade items).
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-032/033/034 statuses; OP-OMS-032b, 033b registered.
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-025 added; W22–W25 added to overclaim warnings.
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — Session-7 head + final classification: Accepted Static.
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — Session-7 row + Accepted Static status.
+- `THEORY/2_substrate/foundations/observer_moduli/observer_moduli_space.md` — §18 promotion trajectory added; superseded by canonical.md Appendix OMS.
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Accepted Static.
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — Session-7 entry.
 - `THEORY/CHANGELOG.md` — this entry.
-- `THEORY/working/INDEX.md` — Session-7 file table + status.
+- `THEORY/2_substrate/INDEX.md` — Session-7 file table + status.
 
 ### Theorem Status Changes
 
@@ -2089,7 +2167,7 @@ No new VPs (per Session-7 mandate: no broadening). All Session-7 work is theory 
 
 $$\text{OMS-2.0 Accepted — Static, with Full Temporal Conditional on OP-OMS-034.}$$
 
-Canonical Appendix OMS in `THEORY/canonical/canonical.md` is authoritative.
+Canonical Appendix OMS in `THEORY/2_substrate/canonical/canonical.md` is authoritative.
 
 ---
 
@@ -2131,12 +2209,12 @@ sub-OPs (OP-OMS-032/033/034) for full OMS-2.0 Accepted.
 
 ### Files Created (Session 6)
 
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_rank_theorem.md` — Theorems RT1, RT2, RT3 PROVED conditional on H1–H3.
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_sensitivity.md` — Theorems S1, S2 PROVED with explicit formula.
-- `THEORY/working/observer_moduli/op_oms_001_gap_c1_genericity.md` — Lemmas G1–G3 + Theorem G4 (analytic dichotomy) + G5/G7/G8 + GAP-C1 PROVED conditional on H4.
-- `THEORY/working/observer_moduli/op_oms_002_nontrivial_v.md` — $V_2$ and $V_{2,\tau}$ defined; NV3–NV10 PROVED.
-- `THEORY/working/observer_moduli/op_oms_026_sigma_branch_full.md` — SB1–SB11 with codim-1 PROVED, $\Sigma_{\mathrm{SN}}$ PROOF SKETCH.
-- `THEORY/working/observer_moduli/oms_2_0_promotion_audit.md` — final classification: OMS-2.0 Conditional Accepted.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_rank_theorem.md` — Theorems RT1, RT2, RT3 PROVED conditional on H1–H3.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_sensitivity.md` — Theorems S1, S2 PROVED with explicit formula.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_gap_c1_genericity.md` — Lemmas G1–G3 + Theorem G4 (analytic dichotomy) + G5/G7/G8 + GAP-C1 PROVED conditional on H4.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_002_nontrivial_v.md` — $V_2$ and $V_{2,\tau}$ defined; NV3–NV10 PROVED.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_026_sigma_branch_full.md` — SB1–SB11 with codim-1 PROVED, $\Sigma_{\mathrm{SN}}$ PROOF SKETCH.
+- `THEORY/2_substrate/foundations/observer_moduli/oms_2_0_promotion_audit.md` — final classification: OMS-2.0 Conditional Accepted.
 - `CODE/experiments/observer_moduli/vp8_gap_c1_rank_witness.py` — Gate 2 rank witness.
 - `CODE/experiments/observer_moduli/vp9_nontrivial_v_basin_test.py` — Gate 4 basin test.
 - `CODE/experiments/observer_moduli/vp10_sigma_branch_delta3.py` — Gate 6 pseudo-Δ³ branch map.
@@ -2146,13 +2224,13 @@ sub-OPs (OP-OMS-032/033/034) for full OMS-2.0 Accepted.
 
 ### Files Modified (Session 6)
 
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-001 PROVED conditional on H4; OP-OMS-002+/026 statuses updated; OP-OMS-030/031/032/033/034 registered.
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-024 (Session-6 super-entry); W18/W19/W20/W21 added.
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — Session-6 head + v1.4 footer; OMS-2.0 Conditional final classification.
-- `THEORY/working/observer_moduli/checkpoints.md` — Session-6 row + OMS-2.0 status.
-- `THEORY/working/observer_moduli/daily_log.md` — Session-6 entry.
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-001 PROVED conditional on H4; OP-OMS-002+/026 statuses updated; OP-OMS-030/031/032/033/034 registered.
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-024 (Session-6 super-entry); W18/W19/W20/W21 added.
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — Session-6 head + v1.4 footer; OMS-2.0 Conditional final classification.
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — Session-6 row + OMS-2.0 status.
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — Session-6 entry.
 - `THEORY/CHANGELOG.md` — this entry.
-- `THEORY/working/INDEX.md` — Session-6 file table + OMS-2.0 status.
+- `THEORY/2_substrate/INDEX.md` — Session-6 file table + OMS-2.0 status.
 
 ### Theorem Status Changes
 
@@ -2178,7 +2256,7 @@ sub-OPs (OP-OMS-032/033/034) for full OMS-2.0 Accepted.
 - **OP-OMS-033** ($\Sigma_{\mathrm{SN}}$ Arnold specifics): closes the only PROOF SKETCH in SB11.
 - **OP-OMS-034** (full temporal Δ³ via `scc.multi`): closes the only pseudo-Δ³ caveat.
 - After all three: promote stage to **OMS-2.0 Accepted**.
-- **Promote** Session-5/6 OMS sub-results into `THEORY/canonical/canonical.md` §13 OMS appendix (R1–R5, ED1–ED2, RT1–RT3, S1–S2, G4, G8, NV3–NV10, SB5–SB11, plus AUDIT-024).
+- **Promote** Session-5/6 OMS sub-results into `THEORY/2_substrate/canonical/canonical.md` §13 OMS appendix (R1–R5, ED1–ED2, RT1–RT3, S1–S2, G4, G8, NV3–NV10, SB5–SB11, plus AUDIT-024).
 
 ---
 
@@ -2205,13 +2283,13 @@ Candidate with Local Regularity Theorem**.
 
 ### Files Created (Session 5)
 
-- `THEORY/working/observer_moduli/vp6_initial_reading_log.md`
-- `THEORY/working/observer_moduli/effective_dof_theory.md` — Props ED1, ED2 PROVED; revised Hyp RG1
-- `THEORY/working/observer_moduli/op_oms_018_regular_u_star.md` — Theorems R1, R2, R3, R4, R5
-- `THEORY/working/observer_moduli/vp6_effective_dof.md`
-- `THEORY/working/observer_moduli/vp6_effective_dof_log.md`
-- `THEORY/working/observer_moduli/observer_landscape_admissible_class.md` — V2 stratified-smooth patch
-- `THEORY/working/observer_moduli/oms_1_2_status_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_initial_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/effective_dof_theory.md` — Props ED1, ED2 PROVED; revised Hyp RG1
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_018_regular_u_star.md` — Theorems R1, R2, R3, R4, R5
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/observer_landscape_admissible_class.md` — V2 stratified-smooth patch
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_2_status_audit.md`
 - `CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py`
 - `CODE/experiments/observer_moduli/vp6_u_star_regular_path_test.py`
 - `CODE/experiments/results/observer_moduli/vp6_jacobian_spectra.json`
@@ -2221,15 +2299,15 @@ Candidate with Local Regularity Theorem**.
 
 ### Files Modified (Session 5)
 
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-018 status PARTIALLY RESOLVED; OP-OMS-024..028 registered; OP-OMS-017 superseded; summary table updated
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-023 (Session-5 super-entry); W13–W17 added
-- `THEORY/working/observer_moduli/basin_stratification.md` — §11 added (basin boundaries include $\Sigma_{\mathrm{branch}}$)
-- `THEORY/working/observer_moduli/stratified_dynamics.md` — §8 added (Filippov sliding-mode at $\Sigma_{\mathrm{branch}}$)
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — Session-5 head section + v1.3 footer; new final classification box (OMS-1.2)
-- `THEORY/working/observer_moduli/daily_log.md` — Session-5 entry
-- `THEORY/working/observer_moduli/checkpoints.md` — VP-6 + OP-OMS-018 sections (this commit)
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-018 status PARTIALLY RESOLVED; OP-OMS-024..028 registered; OP-OMS-017 superseded; summary table updated
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-023 (Session-5 super-entry); W13–W17 added
+- `THEORY/2_substrate/foundations/observer_moduli/basin_stratification.md` — §11 added (basin boundaries include $\Sigma_{\mathrm{branch}}$)
+- `THEORY/2_substrate/foundations/observer_moduli/stratified_dynamics.md` — §8 added (Filippov sliding-mode at $\Sigma_{\mathrm{branch}}$)
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — Session-5 head section + v1.3 footer; new final classification box (OMS-1.2)
+- `THEORY/2_substrate/foundations/observer_moduli/daily_log.md` — Session-5 entry
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — VP-6 + OP-OMS-018 sections (this commit)
 - `THEORY/CHANGELOG.md` — this entry
-- `THEORY/working/INDEX.md` — Session-5 file list
+- `THEORY/2_substrate/INDEX.md` — Session-5 file list
 
 ### Theorem Status Changes
 
@@ -2253,13 +2331,13 @@ VP-6 Jacobian experiment: 42 stencils on S3 + S4 (12 static + 9 full per scene),
 - OP-OMS-027 (corner regularity) — open.
 - OP-OMS-028 (quantitative Lipschitz of $v$) — **PROVED** (Session 5 cont.).
 - OP-OMS-029 (continuous component of $G_{\mathrm{cw}}$ trivial) — **PROVED** (Session 5 cont.).
-- Promote selected OMS sub-results into `THEORY/canonical/canonical.md` §13 OMS appendix.
+- Promote selected OMS sub-results into `THEORY/2_substrate/canonical/canonical.md` §13 OMS appendix.
 
 ### Session 5 continuation deliverables (2026-05-08, post-final-report)
 
-- `THEORY/working/observer_moduli/op_oms_028_lipschitz_v.md` — Theorem L1 PROVED (global Lipschitz constant for $v(\lambda)$); Prop L2 (strict concavity off Σ_branch) PROVED.
-- `THEORY/working/observer_moduli/op_oms_001_formal_proof_attempt.md` — three structural reductions; continuous case PROVED (Reduction B + LS1); discrete case PARTIALLY RESOLVED with three named gaps (A1, B1, C1).
-- `THEORY/working/observer_moduli/vp7_branch_map_results.md` — VP-7 results writeup; OP-OMS-026 / OP-OMS-024 partial resolution.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_028_lipschitz_v.md` — Theorem L1 PROVED (global Lipschitz constant for $v(\lambda)$); Prop L2 (strict concavity off Σ_branch) PROVED.
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_formal_proof_attempt.md` — three structural reductions; continuous case PROVED (Reduction B + LS1); discrete case PARTIALLY RESOLVED with three named gaps (A1, B1, C1).
+- `THEORY/2_substrate/foundations/observer_moduli/vp7_branch_map_results.md` — VP-7 results writeup; OP-OMS-026 / OP-OMS-024 partial resolution.
 - `CODE/experiments/observer_moduli/vp7_branch_map.py` — fine-grid Σ_branch mapping experiment (66 + 45 = 111 evaluations; 79 s).
 - `CODE/experiments/results/observer_moduli/vp7_branch_map.json` and `vp7_branch_map.md`.
 - New OP registered: OP-OMS-029 (continuous-component triviality, PROVED).
@@ -2297,11 +2375,11 @@ VP-6 Jacobian experiment: 42 stencils on S3 + S4 (12 static + 9 full per scene),
 
 ### Files Created
 
-- `THEORY/working/observer_moduli/vp3_initial_reading_log.md`
-- `THEORY/working/observer_moduli/vp3_core_weight_symmetry_results.md`
-- `THEORY/working/observer_moduli/vp2_observer_landscape_admissible.md`
-- `THEORY/working/observer_moduli/oms_1_1_promotion_audit.md`
-- `THEORY/working/observer_moduli/vp4_basin_stratification_results.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp3_initial_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp3_core_weight_symmetry_results.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp2_observer_landscape_admissible.md`
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_1_promotion_audit.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp4_basin_stratification_results.md`
 - `CODE/experiments/exp87_vp3_core_weight_symmetry.py`
 - `CODE/experiments/exp88_vp4_basin_stratification.py`
 - `CODE/experiments/results/observer_moduli/vp3_symmetry_results.json`
@@ -2311,12 +2389,12 @@ VP-6 Jacobian experiment: 42 stencils on S3 + S4 (12 static + 9 full per scene),
 
 ### Files Updated
 
-- `THEORY/working/observer_moduli/core_weight_symmetry.md` — §6–7 VP-3 결과 추가
-- `THEORY/working/observer_moduli/open_problems.md` — OP-OMS-001/010 업데이트; OP-OMS-017, OP-OMS-018 추가
-- `THEORY/working/observer_moduli/oms_1_candidate.md` — OMS-1.1 승격; 프론트매터 + 상태 선언 업데이트
-- `THEORY/working/observer_moduli/audit_log.md` — AUDIT-022 추가
-- `THEORY/working/observer_moduli/checkpoints.md` — VP-4 완료; OMS-1.1 상태 업데이트
-- `THEORY/working/observer_moduli/canonical_promotion_checklist.md` — v1.2 전면 업데이트
+- `THEORY/2_substrate/foundations/observer_moduli/core_weight_symmetry.md` — §6–7 VP-3 결과 추가
+- `THEORY/2_substrate/foundations/observer_moduli/open_problems.md` — OP-OMS-001/010 업데이트; OP-OMS-017, OP-OMS-018 추가
+- `THEORY/2_substrate/foundations/observer_moduli/oms_1_candidate.md` — OMS-1.1 승격; 프론트매터 + 상태 선언 업데이트
+- `THEORY/2_substrate/foundations/observer_moduli/audit_log.md` — AUDIT-022 추가
+- `THEORY/2_substrate/foundations/observer_moduli/checkpoints.md` — VP-4 완료; OMS-1.1 상태 업데이트
+- `THEORY/2_substrate/foundations/observer_moduli/canonical_promotion_checklist.md` — v1.2 전면 업데이트
 
 ---
 
@@ -2342,10 +2420,10 @@ Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$�
 
 ### Files created
 
-- `THEORY/working/observer_moduli/vp1_p_resolution_audit.md` — 주 감사 문서; Prop R1 PROVED; OP-OMS-009 분류
-- `THEORY/working/observer_moduli/vp1_p_resolution_audit_log.md` — 실행 로그; 설계 근거; 해석 결정
-- `THEORY/working/observer_moduli/vp1_counterexamples.md` — 4개 반례 문서화; 메커니즘 분석
-- `THEORY/working/observer_moduli/vp1_results.md` — 최종 분류; Prop/OP 상태 업데이트; 다음 단계
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_p_resolution_audit.md` — 주 감사 문서; Prop R1 PROVED; OP-OMS-009 분류
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_p_resolution_audit_log.md` — 실행 로그; 설계 근거; 해석 결정
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_counterexamples.md` — 4개 반례 문서화; 메커니즘 분석
+- `THEORY/2_substrate/foundations/observer_moduli/vp1_results.md` — 최종 분류; Prop/OP 상태 업데이트; 다음 단계
 - `CODE/experiments/results/observer_moduli/vp1_pairs.json` — 반례 데이터
 - `CODE/experiments/results/observer_moduli/vp1_summary.md` — 기계 가독 요약
 
@@ -2356,7 +2434,7 @@ Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$�
 - `canonical_promotion_checklist.md` — B8 PROVED, B17 open (비차단), D9 RESOLVED, Criterion B/D 요약 업데이트, VP-1 COMPLETE, 최종 박스 업데이트 (v1.1)
 - `checkpoints.md` — VP-1 섹션 추가; 성공 기준 업데이트; 세션 로그 업데이트
 - `daily_log.md` — Session 3 기록 추가
-- `THEORY/working/INDEX.md` — VP-1 파일 목록 추가; 차단 요인/프로토콜 상태 업데이트
+- `THEORY/2_substrate/INDEX.md` — VP-1 파일 목록 추가; 차단 요인/프로토콜 상태 업데이트
 
 ### Next session priority
 
@@ -2392,7 +2470,7 @@ Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$�
   - `observer_moduli_space.md`: §§15–17 추가 (OMS-0.2/0.5/0.4 결과 통합); OP 테이블 16개로 확장; 상태 테이블 업데이트; 버전 OMS-0.1→OMS-0.7
   - `daily_log.md`: Session 2 완전 기록 추가
   - `checkpoints.md`: OMS-0.2~1.0 모든 단계 체크포인트 추가; 성공 기준 완전 업데이트
-  - `THEORY/working/INDEX.md`: observer_moduli/ 섹션을 OMS-1.0-candidate 상태로 갱신; 11개 신규 파일 목록 추가
+  - `THEORY/2_substrate/INDEX.md`: observer_moduli/ 섹션을 OMS-1.0-candidate 상태로 갱신; 11개 신규 파일 목록 추가
   - `THEORY/CHANGELOG.md`: 이 항목 (Session 2 기록)
 
 - **KEY MATHEMATICAL DECISIONS (영구 기록):**
@@ -2447,7 +2525,7 @@ Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$�
   8. 최솟값 모델: 𝔐_min ≅ Δ³ (K=1, 임계, ξ 고정)
   9. OP-OMS-003 해결: 연결성 (연결 공간의 상 = 연결)
   10. 퍼셉션 불연속성은 위상 장벽이 아닌 V(Θ) 분지 구조에서 발생
-- **`THEORY/working/INDEX.md` 업데이트:** Level-2 Extension 섹션 추가 (observer_moduli/ 9개 파일 목록, 승격 차단 요인 명시)
+- **`THEORY/2_substrate/INDEX.md` 업데이트:** Level-2 Extension 섹션 추가 (observer_moduli/ 9개 파일 목록, 승격 차단 요인 명시)
 - **Canonical 카운트 변동 없음:** 54A/14B/5C/5R = 78 (CV-1.11). Observer Moduli Space는 working/ 단계; canonical 승격 전제 조건 미충족.
 
 ### Non-claims preserved
@@ -2466,14 +2544,14 @@ Inside 예측자 = $(l_{\max}-c)/(1-c) \times (1 - l_{\mathrm{sec}}/l_{\max})$�
 
 ### Summary
 
-- **hypothesis_tree.md 초기 등록 (HT-1.0):** `THEORY/canonical/hypothesis_tree.md` 신규 생성.
+- **hypothesis_tree.md 초기 등록 (HT-1.0):** `THEORY/2_substrate/canonical/hypothesis_tree.md` 신규 생성.
   - 대목표 명시: formation 출현 · K-selection · 시간 동일성 · 동역학 — u_t 단독 primitive.
   - 6개 블록 (I~VI), 10개 가설 노드 등록 (H-T*, H-MORSE, H-SINK, H-SPEC, H-SR, H-WS, H-P7, GAP-0, GAP-1, GAP-2).
   - 수정 규칙 (HT-ADD, HT-CLOSE, HT-PROMOTE, HT-RESTRUCTURE, HT-SYNC) 확정.
   - 버전 체계 HT-x.y 도입.
 - **hypothesis_tree.md HT-1.1:** GAP-0/1/2 → H-μ0/H-κ/H-σ4 통합; H-SPEC Archived 섹션으로 이동; Phase 1/2/3 구조 및 연구 페이즈 섹션 추가.
 - **hypothesis_tree.md HT-2.0 (에이전트 최적화 리스트럭처):** 섹션 순서 전면 재편. 즉시 타겟 → 가설 요약 → 대목표 → 크리티컬 패스 → H-노드 상세 → 페이즈 → 수정 규칙(후미). Cat A 완성 목록은 한 줄 요약으로 압축. 세션 시작 시 첫 화면에서 Phase 1 타겟(H-SINK) 즉시 파악 가능.
-- **DECLARATION.md (DECL-1.0) 신규 생성:** `THEORY/canonical/DECLARATION.md` — 이론 중심축 선언문. 출발 질문: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive u_t 정의. 중심 정리 T8 (β/α > 4λ₂/|W''(c)|) 단독 제시. 6개 인식론적 질문(Q1~Q6) 표. 관측 조건 의존성 (구조화된 조건부성). 에너지 구조 표. 이론이 아닌 것(non-claims) 명시. **canonical/의 읽기 진입점 — 모든 수학 이전에 읽어야 할 2분 분량 문서.** CLAUDE.md Session Start 단계 1로 삽입. canonical/README.md Contents 최상단에 등록.
+- **DECLARATION.md (DECL-1.0) 신규 생성:** `THEORY/0_axis/DECLARATION.md` — 이론 중심축 선언문. 출발 질문: "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?" Primitive u_t 정의. 중심 정리 T8 (β/α > 4λ₂/|W''(c)|) 단독 제시. 6개 인식론적 질문(Q1~Q6) 표. 관측 조건 의존성 (구조화된 조건부성). 에너지 구조 표. 이론이 아닌 것(non-claims) 명시. **canonical/의 읽기 진입점 — 모든 수학 이전에 읽어야 할 2분 분량 문서.** CLAUDE.md Session Start 단계 1로 삽입. canonical/README.md Contents 최상단에 등록.
 - **hypothesis_tree.md HT-3.0 (인식론적 질문 재편):** 대목표를 "어떤 차이의 덩어리가 언제부터 하나의 객체가 되는가?"로 재정의. 기존 BLOCK-I~VI → Q1(경계 출현), Q2(다수 공존), Q3(변화), Q4(K-선택), Q5(시간 동일성), Q6(σ-상속) 6개 인식론적 질문 블록으로 재편. H-노드 내용 변경 없음 — 귀속 블록 명칭만 Q-notation으로 전환. DECLARATION.md 일관성 체크 HT-SYNC 규칙에 추가. 모든 신규 H-노드는 Q1~Q6 중 하나에 귀속 필수 (새 불변 규칙). theorem_status.md Dependency authority 라인 HT-1.0 → HT-3.0 업데이트.
 - **연구 방향 전환:** 새 정리/NOP 생성 중단 → 기존 가설 클로저 + Cat B → Cat A 승격 집중.
 - **크리티컬 패스 식별:** H-T* 및 H-MORSE 가 최우선 병목 (독립 공략 가능).
@@ -2650,7 +2728,7 @@ State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. OP-0008 OPEN. No component-
 
 ### 2. Phase 2 — Created sigma inheritance working file
 
-**Created**: `THEORY/working/MF/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
+**Created**: `THEORY/4_temporal/identity_inheritance/sigma_inherit_k_jump.md` (Session W, 2026-05-06).
 
 Sections: §1 problem statement ($\mathfrak{F}_i = (C_i, \partial C_i, K, \sigma_i^?)$ — completing the σ component); §2 component-level signature definition ($\sigma(C_i^t; u_t, \mathcal{P}_t) = \sigma_{\mathrm{rich}}(u_t^i; G_{C_i^t}, P_C)$); §3 inheritance per five event types (CONT/MERGE/SPLIT/BIRTH/DEATH); §4 inheritance residual $R_\sigma$ decomposition; §5 T-σ-Inherit candidate (6-row status table); §6 OP-0008 restructuring into four sub-problems; §7 code alignment with sigma_rich.py; §8 exp56 four-scenario plan; §9 non-overclaim register (8 items); §10 session boundary.
 
@@ -2726,7 +2804,7 @@ State confirmed: CV-1.10, 54A/13B/5C/5R = 77 claims. T-MF-Synthesis future candi
 
 ### 2. Phase 2 — Created temporal identity working file
 
-**Created**: `THEORY/working/MF/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06).
+**Created**: `THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md` (Session V, 2026-05-06).
 
 Sections: §1 problem statement + scope; §2 objects ($u_t$, $\mathrm{PersComp}$, cores, cohesion measures); §3 transport map vs. transport plan forms (unbalanced); §4 component correspondence score $S_{ij}^0$ and full score $S_{ij}$ ($\sigma$-terms deferred); §5 temporal identity relation $R_{t \to s}$ with all five event types; §6 T-Temporal-Identity candidate theorem (parts a,b,c,d); §7 OP-0011/OP-0012 structured treatment; §8 non-overclaim register; §9 exp55 four-scenario plan; §10 session boundary.
 
@@ -2789,7 +2867,7 @@ Searched canonical.md, theorem_status.md, emergent_multi_formation_synthesis.md 
 
 ### 2. Phase 2 — Synthesis Document Created
 
-**`THEORY/working/MF/emergent_multi_formation_synthesis.md`** — 9 sections:
+**`THEORY/2_substrate/Q2_multiformation/emergent_multi_formation_synthesis.md`** — 9 sections:
 
 **§1 Central Thesis:** Multi-formation is not primitive — it emerges from a shared soft field. $K_\mathrm{act}(u) = \vert \mathrm{PersComp}(u)\vert $ is derived, not assumed. $\Sigma_M^K$ is local chart, not foundational.
 
@@ -2825,8 +2903,8 @@ No code changes in Session U (theory-only markdown). pytest 215+1xfailed confirm
 
 | File | Change |
 |------|--------|
-| `THEORY/working/MF/emergent_multi_formation_synthesis.md` | CREATED — 9-section synthesis document |
-| `THEORY/canonical/theorem_status.md` | T-MF-Synthesis future candidate section added |
+| `THEORY/2_substrate/Q2_multiformation/emergent_multi_formation_synthesis.md` | CREATED — 9-section synthesis document |
+| `THEORY/2_substrate/canonical/theorem_status.md` | T-MF-Synthesis future candidate section added |
 | `THEORY/CHANGELOG.md` | This entry |
 
 ### 7. Canonical Count
@@ -2902,8 +2980,8 @@ All patterns searched: no overclaims found.
 
 | File | Change |
 |------|--------|
-| `THEORY/working/MF/k_select_obs_posterior.md` | Status header updated; §3.5 K_feas^obs tightening added (Defn 3.5, Lemma 3.2) |
-| `THEORY/canonical/theorem_status.md` | Section header → "Session S/T"; Session T review note appended |
+| `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md` | Status header updated; §3.5 K_feas^obs tightening added (Defn 3.5, Lemma 3.2) |
+| `THEORY/2_substrate/canonical/theorem_status.md` | Section header → "Session S/T"; Session T review note appended |
 | `THEORY/CHANGELOG.md` | This entry |
 
 ### 8. OP-0005 Status Post-Session T
@@ -2972,8 +3050,8 @@ Final state: **54A/13B/5C/5R = 77 claims, ~70% fully proved** — consistent acr
 
 ### 5. Files Modified
 
-- `THEORY/canonical/canonical.md` — 8 stale ref fixes
-- `THEORY/canonical/theorem_status.md` — 3 stale ref fixes (+ CV-1.9 stale ref fix from Phase 0)
+- `THEORY/2_substrate/canonical/canonical.md` — 8 stale ref fixes
+- `THEORY/2_substrate/canonical/theorem_status.md` — 3 stale ref fixes (+ CV-1.9 stale ref fix from Phase 0)
 - `THEORY/working/W6D4_progress_consolidation_2026-05-06.md` — CREATED
 - `THEORY/CHANGELOG.md` — this entry
 
@@ -3010,7 +3088,7 @@ Read `stereo_observation_framework.md` (W6 D2 evening, working draft):
 
 ### 3. T-K-Select-OBS Theorem Definition (Phase 2-3)
 
-**New working file**: `THEORY/working/MF/k_select_obs_posterior.md`
+**New working file**: `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md`
 
 **Core definitions introduced:**
 - Observation tuple: $\mathfrak{O}_t = (f_L, f_R, \Pi_{LR}, b_L, b_R, c)$
@@ -3086,8 +3164,8 @@ Critical non-overclaims explicitly in §5:
 
 ### Files Created / Modified
 
-- `THEORY/working/MF/k_select_obs_posterior.md` — NEW (T-K-Select-OBS Cat B candidate, ~380 lines)
-- `THEORY/canonical/theorem_status.md` — Session S working candidates section; OP-0005-OBS updated
+- `THEORY/2_substrate/Q4_kselection/k_select_obs_posterior.md` — NEW (T-K-Select-OBS Cat B candidate, ~380 lines)
+- `THEORY/2_substrate/canonical/theorem_status.md` — Session S working candidates section; OP-0005-OBS updated
 - `THEORY/CHANGELOG.md` — this entry
 
 **Canonical count: 54A/13B/5C/5R = 77 claims (unchanged). OP-0005-OBS: OPEN → STRUCTURED.**
@@ -3102,7 +3180,7 @@ Critical non-overclaims explicitly in §5:
 
 ### 1. Pre-Promotion Review (Phase 1)
 
-Working file `THEORY/working/MF/k_select_pf_equilibrium.md` reviewed against canonical standards:
+Working file `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md` reviewed against canonical standards:
 
 - K_act definition: uses D-ST-3 canonical form (#PersComp(u; ρ_pers, τ)) — PASS.
 - Sector B_K Borel measurability: Lemma 3.1 — piecewise-constant step function on finite graph — PASS.
@@ -3167,9 +3245,9 @@ OP-0005 overall remains OPEN (EQ sub-problem only).
 
 ### 6. Files Modified
 
-- `THEORY/working/MF/k_select_pf_equilibrium.md` — status update, §3.5 K_feas, §5.1 A5 tightened
-- `THEORY/canonical/canonical.md` — T-K-Select-PF §13 Cat B entry; Cat B header; §13 preamble count; §14 summary; §16 CV history; YAML frontmatter
-- `THEORY/canonical/theorem_status.md` — Session Q working candidate → CV-1.10 canonical Cat B; OP-0005-EQ row updated; CV-1.10 count update line
+- `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md` — status update, §3.5 K_feas, §5.1 A5 tightened
+- `THEORY/2_substrate/canonical/canonical.md` — T-K-Select-PF §13 Cat B entry; Cat B header; §13 preamble count; §14 summary; §16 CV history; YAML frontmatter
+- `THEORY/2_substrate/canonical/theorem_status.md` — Session Q working candidate → CV-1.10 canonical Cat B; OP-0005-EQ row updated; CV-1.10 count update line
 - `THEORY/CHANGELOG.md` — this entry
 - `Perception_theory/CLAUDE.md` — count update 12B → 13B, 76 → 77
 - `Perception/CLAUDE.md` — count update 12B → 13B, 76 → 77
@@ -3214,7 +3292,7 @@ For K_act(u) := #PersComp(u; ρ_pers, τ) on finite graph G:
 
 ### 3. T-K-Select-PF: Equilibrium K-Selection Theorem
 
-**New working theorem** (Cat B candidate): `THEORY/working/MF/k_select_pf_equilibrium.md`
+**New working theorem** (Cat B candidate): `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md`
 
 **Statement (informal):** Under P-F-A1 Package I on finite graph G with T_* > 0:
 1. Sector masses p_K = π_{T_*}(B_K) = Z_K/Z form a well-defined probability distribution.
@@ -3264,10 +3342,10 @@ OP-0005 overall: HIGH OPEN (EQ sub-problem partially addressed; DYN and OBS rema
 
 ### 6. Files Modified
 
-1. `THEORY/working/MF/k_select_pf_equilibrium.md` — NEW (Session Q); T-K-Select-PF Cat B candidate; ~360 lines.
-2. `THEORY/working/MF/k_selection_a_free_energy.md` — §3.3 P-F flag resolved; cross-reference T-K-Select-PF added.
-3. `THEORY/canonical/theorem_status.md` — Session Q working candidates section added (T-K-Select-PF table); OP-0005 body updated with 3-way split table.
-4. `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md` — Session Q update note added; P-F flag resolution noted; T-K-Select-PF cross-reference.
+1. `THEORY/2_substrate/Q4_kselection/k_select_pf_equilibrium.md` — NEW (Session Q); T-K-Select-PF Cat B candidate; ~360 lines.
+2. `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` — §3.3 P-F flag resolved; cross-reference T-K-Select-PF added.
+3. `THEORY/2_substrate/canonical/theorem_status.md` — Session Q working candidates section added (T-K-Select-PF table); OP-0005 body updated with 3-way split table.
+4. `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md` — Session Q update note added; P-F flag resolution noted; T-K-Select-PF cross-reference.
 
 ---
 
@@ -3373,9 +3451,9 @@ Canonical version: **CV-1.8 → CV-1.9**. P-F-A1 Package I is now **fully Cat A*
 
 ### 5. Files Modified
 
-1. `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — T-PF-A1-GI: Step 5 replaced with two-part uniqueness proof (Aronson + L² kernel); category → Cat A. T-PF-A1-PE: Step 1 extended (P-W polytope applicability); Steps 5–6 replaced (L² ergodicity + L²→TV Cauchy-Schwarz with explicit density assumption); category → Cat A.
-2. `THEORY/canonical/canonical.md` — frontmatter CV-1.8 → CV-1.9; §13 Cat A header "51 → 53 theorems"; T-PF-A1-GI and T-PF-A1-PE entries moved Cat B → Cat A (full canonical text); Cat B header updated; old Cat B entries removed; §11 count paragraph addendum; §15 "52 → 54 fully proved"; §16 CV-1.9 note; running total 54A/12B/76/~71%.
-3. `THEORY/canonical/theorem_status.md` — header current = CV-1.9; CV-1.9 section added (2-row table + promotion detail paragraph + count update); CV-1.8 historical rows annotated with Session P promotion; CV-1.8 running total de-bolded (historical).
+1. `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` — T-PF-A1-GI: Step 5 replaced with two-part uniqueness proof (Aronson + L² kernel); category → Cat A. T-PF-A1-PE: Step 1 extended (P-W polytope applicability); Steps 5–6 replaced (L² ergodicity + L²→TV Cauchy-Schwarz with explicit density assumption); category → Cat A.
+2. `THEORY/2_substrate/canonical/canonical.md` — frontmatter CV-1.8 → CV-1.9; §13 Cat A header "51 → 53 theorems"; T-PF-A1-GI and T-PF-A1-PE entries moved Cat B → Cat A (full canonical text); Cat B header updated; old Cat B entries removed; §11 count paragraph addendum; §15 "52 → 54 fully proved"; §16 CV-1.9 note; running total 54A/12B/76/~71%.
+3. `THEORY/2_substrate/canonical/theorem_status.md` — header current = CV-1.9; CV-1.9 section added (2-row table + promotion detail paragraph + count update); CV-1.8 historical rows annotated with Session P promotion; CV-1.8 running total de-bolded (historical).
 4. `Perception_theory/CLAUDE.md` — Session Start: CV-1.9 counts 54A/12B; ~71%; Session P listed.
 5. `Perception/CLAUDE.md` — Status line and theorem_status.md description: 54A/12B/~71%; Session P listed.
 
@@ -3455,8 +3533,8 @@ Canonical version: **CV-1.7 → CV-1.8**.
 
 ### 4. Files Modified
 
-1. `THEORY/canonical/canonical.md` — §13 Cat A: two entries added after T-OP6-B; §13 Cat B: two entries added after T-P-F-ε0-K; Cat A header "49 entries" → "51 entries"; running total lines; §11 count paragraph; CV-1.7 additions running total; §15 end paragraph; §16 end note + "active open problems" label; frontmatter id/version 1.7 → 1.8
-2. `THEORY/canonical/theorem_status.md` — header current = CV-1.8; P-F-A1 row updated; new CV-1.8 section with 4-row table; count footnote 52A/14B/76/~68%
+1. `THEORY/2_substrate/canonical/canonical.md` — §13 Cat A: two entries added after T-OP6-B; §13 Cat B: two entries added after T-P-F-ε0-K; Cat A header "49 entries" → "51 entries"; running total lines; §11 count paragraph; CV-1.7 additions running total; §15 end paragraph; §16 end note + "active open problems" label; frontmatter id/version 1.7 → 1.8
+2. `THEORY/2_substrate/canonical/theorem_status.md` — header current = CV-1.8; P-F-A1 row updated; new CV-1.8 section with 4-row table; count footnote 52A/14B/76/~68%
 3. `Perception_theory/CLAUDE.md` — Session Start line 1: CV-1.8 counts, T-PF-A1-AR/SDE Cat A + T-PF-A1-GI/PE Cat B; ~68%
 4. `Perception/CLAUDE.md` — Status line and theorem_status.md description updated to 52A/14B/76/~68%
 
@@ -3554,8 +3632,8 @@ Added explicit calculation:
 
 ### 6. Files Modified
 
-1. `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — four theorem proof sections replaced with reviewed proofs
-2. `THEORY/canonical/theorem_status.md` — CV-1.8 note updated with Session N review outcome
+1. `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` — four theorem proof sections replaced with reviewed proofs
+2. `THEORY/2_substrate/canonical/theorem_status.md` — CV-1.8 note updated with Session N review outcome
 
 ---
 
@@ -3579,7 +3657,7 @@ Session O: Canonical promotion of all four Package I theorems into canonical.md 
 
 ### 1. Route Memo Restructured: Three-Package Split
 
-File: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — completely rewritten from Session L version.
+File: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` — completely rewritten from Session L version.
 
 **Three-package structure:**
 
@@ -3616,7 +3694,7 @@ All four written in `working/MF/pf_a1_lions_sznitman_freidlin_route.md` as worki
 
 ### 3. Stale Reference Fix in pf_tstar_langevin.md
 
-**File:** `THEORY/working/MF/pf_tstar_langevin.md` §8.5 "Promotion path for P-F-A1 Cat A"
+**File:** `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` §8.5 "Promotion path for P-F-A1 Cat A"
 
 **Stale content:** Listed "Holley-Stroock for log-Sobolev; Bakry-Émery curvature on simplex" as viable spectral gap routes.
 
@@ -3756,7 +3834,7 @@ Contents:
 
 ### 5. P-F-A1 Route Memo
 
-Created: `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md`
+Created: `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md`
 
 Contents:
 - Why Bakry-Émery failed: double-well W''(u) changes sign in spinodal; no global Ric ≥ K > 0
@@ -3780,7 +3858,7 @@ Contents:
 
 - **CV-1.7 SEALED.** All counts consistent: 50A/12B/5C/5R = 72 claims, ~69% fully proved.
 - **Release packet:** `THEORY/working/CV-1.7_release_packet.md`
-- **P-F-A1 next step:** `THEORY/working/MF/pf_a1_lions_sznitman_freidlin_route.md` — Obligation 1 (Lions-Sznitman construction) is recommended first deliverable for W7.
+- **P-F-A1 next step:** `THEORY/2_substrate/Q3_dynamics/pf_a1_lions_sznitman_freidlin_route.md` — Obligation 1 (Lions-Sznitman construction) is recommended first deliverable for W7.
 - **Remaining open problems:** OP-0005 (K-Selection), OP-0008 (σ^A K-jump), OP-0009 (Multi-Formation), P-F-A1, T-ST-5b Cat A.
 
 ---
@@ -3859,7 +3937,7 @@ where `u₀(s) = ½(1+tanh(s))` is the flat profile and `v₁` solves the Pösch
 
 **Decision: T-OP6-B promoted to Cat A conditional (H1–H5). Count: 49A/13B → 50A/12B.**
 
-Working file: `THEORY/working/MF/op_0006_boundary_precision.md §12.5`.
+Working file: `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §12.5`.
 
 ---
 
@@ -3878,14 +3956,14 @@ Working file: `THEORY/working/MF/op_0006_boundary_precision.md §12.5`.
 
 Files updated in Session K:
 
-- `THEORY/canonical/canonical.md`:
+- `THEORY/2_substrate/canonical/canonical.md`:
   - §5.3b: Proposition T-OP6-B (Cat B) → Theorem T-OP6-B (Cat A conditional, H1–H5); assumption package H1–H5 added; blockers B1–B4 resolved inline; Hausdorff formula updated to `≤ 2(α/β)^{1/2}`; "Unresolved" block removed.
   - §13 Category A header: count 48 → 49 in §13; running total 49A → 50A; T-OP6-B added to addition list.
   - §13 Category A: T-OP6-B Cat A entry added (after T-P-F-ε0).
   - §13 Category B header: note T-OP6-B promoted to Cat A.
   - Running total annotation updated: 49A/13B → 50A/12B.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - T-OP6-B row: Cat B → Cat A (conditional); evidence/notes updated with B1–B4 closed.
   - Count footnote: 49A/13B → 50A/12B = 72 claims, ~69% fully proved.
   - OP-0006 entry: TENTATIVE → RESOLVED (residual: C=2 not tight; H4 required; soft-cut open).
@@ -3940,7 +4018,7 @@ Files updated in Session K:
 
 Also corrected: the §7 Δ formula `ξ·arctanh(√(1−4ρ²ξ²))` is wrong. The correct derivation from `sech²(Δ/ξ) = 2ρ·ξ` gives `Δ = ξ·arctanh(√(1−2ρ·ξ))`.
 
-**Files edited:** `THEORY/working/MF/op_0006_boundary_precision.md` §7 Working Note (added ⚠ CORRECTION block + formula strike-through; Blocker 4 candidate line corrected).
+**Files edited:** `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md` §7 Working Note (added ⚠ CORRECTION block + formula strike-through; Blocker 4 candidate line corrected).
 
 ---
 
@@ -4050,7 +4128,7 @@ All 6 patterns clean. No propagation of ρ_bd error to canonical documents.
 
 ### 1. T-P-F-ε0 Promoted to Canonical Cat A
 
-**Location:** `THEORY/canonical/canonical.md` §13 Category A — entry appended after T-L1-M.
+**Location:** `THEORY/2_substrate/canonical/canonical.md` §13 Category A — entry appended after T-L1-M.
 
 **Theorem statement (canonical):**
 
@@ -4064,7 +4142,7 @@ Let $\mathcal{F}_M(\mathcal{P})=\{\tilde{u}\in[0,1]^n:\sum_i\tilde{u}_i=M\}$. Pa
 
 ### 2. T-P-F-ε0-K Promoted to Canonical Cat B
 
-**Location:** `THEORY/canonical/canonical.md` §13 Category B — entry appended after T-Beyond-Weyl.
+**Location:** `THEORY/2_substrate/canonical/canonical.md` §13 Category B — entry appended after T-Beyond-Weyl.
 
 **Theorem statement (canonical):**
 
@@ -4110,7 +4188,7 @@ Both `Perception/CLAUDE.md` and `Perception_theory/CLAUDE.md`:
 
 ### 6. OP-0006 Hausdorff Constant Working Note
 
-**Added to `THEORY/working/MF/op_0006_boundary_precision.md` §7 Blocker 2:**
+**Added to `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md` §7 Blocker 2:**
 
 New subsection "Working Note — 1D Allen-Cahn Profile Bound for C (W6 D4 Session I, 2026-05-06)":
 - Profile: $u^*(x)=\frac{1}{2}(1+\tanh((x-x_0)/\xi))$, $\xi=(2\alpha/\beta)^{1/2}$ (using $\lvert W''(1/2) \rvert=1$ for $W(u)=u^2(1-u)^2$)
@@ -4167,7 +4245,7 @@ All 7 patterns clean.
 
 ### 1. T-P-F-ε0 Formal Proof (§8.5 replacement)
 
-**File modified:** `THEORY/working/MF/pf_tstar_langevin.md` — §8.5 completely replaced (proof sketch → formal theorem package); §8.6 registration decision added.
+**File modified:** `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` — §8.5 completely replaced (proof sketch → formal theorem package); §8.6 registration decision added.
 
 **Theorem T-P-F-ε0 (Gibbs Measure Continuity at ε=0):**
 
@@ -4212,7 +4290,7 @@ At phase-separated endpoints A, B: ΔE_ε = ΔE_0 + ε·ΔR with ΔR = O(δ) (δ
 
 ### 2. CV-1.7 Registration in theorem_status.md
 
-**File modified:** `THEORY/canonical/theorem_status.md` — new CV-1.7 section prepended before CV-1.5.2 section.
+**File modified:** `THEORY/2_substrate/canonical/theorem_status.md` — new CV-1.7 section prepended before CV-1.5.2 section.
 
 **New entries (NOT yet in running total):**
 
@@ -4228,7 +4306,7 @@ At phase-separated endpoints A, B: ΔE_ε = ΔE_0 + ε·ΔR with ΔR = O(δ) (δ
 
 ### 3. T-ST-5b Cat A Lower-Bound Plan
 
-**File modified:** `THEORY/canonical/canonical.md` — §16 T-ST-5b section, after "Cat A promotion requires" block.
+**File modified:** `THEORY/2_substrate/canonical/canonical.md` — §16 T-ST-5b section, after "Cat A promotion requires" block.
 
 **Driver:** L_smooth − L_flat has off-diagonal entries w_{ij}^{2D}·(1−exp(−λ_z|z_i−z_j|²)) for cross-depth pairs (i,j); zero for same-depth. Barrier gap formula:
 
@@ -4252,7 +4330,7 @@ where P = number of cross-depth edge pairs, w̄^{2D} = mean 2D weight, Δz = dep
 
 ### 4. OP-0006 Cat A Blocker Routes
 
-**File modified:** `THEORY/working/MF/op_0006_boundary_precision.md` — §7 Cat A blockers section completely rewritten with explicit routes.
+**File modified:** `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md` — §7 Cat A blockers section completely rewritten with explicit routes.
 
 **Blocker 1 — Topological separator existence:**
 - Route A (PL Morse): Extend Morse theory to PL energy → requires non-degeneracy of E_SCC Hessian at critical points. Obstacle: E_SCC may have degenerate critical manifolds on F_M(P) boundary.
@@ -4326,9 +4404,9 @@ All 7 patterns clean.
 **Warning added:** T-ST-5b is NOT a universal theorem. Applies only under: (1) full SCC energy (E_cl + E_sep active); (2) intermediate β (~10); (3) smooth depth-weighted adjacency. Not valid for GL-only or β=20 with small depth separation.
 
 **Files modified:**
-- `THEORY/canonical/canonical.md`: §16 T-ST-5b header → Cat B; claim body (removed monotonicity assertion); Status block → formal sign-off; Warning block added; Cat A requirements updated; §16 footer count updated.
-- `THEORY/canonical/theorem_status.md`: T-ST-5b row "B candidate" → **B**; count note updated to 48A/12B/5C/5R.
-- `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`: §T5 updated — monotonicity overclaim removed; T-ST-5a/5b split noted; Cat B status recorded.
+- `THEORY/2_substrate/canonical/canonical.md`: §16 T-ST-5b header → Cat B; claim body (removed monotonicity assertion); Status block → formal sign-off; Warning block added; Cat A requirements updated; §16 footer count updated.
+- `THEORY/2_substrate/canonical/theorem_status.md`: T-ST-5b row "B candidate" → **B**; count note updated to 48A/12B/5C/5R.
+- `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md`: §T5 updated — monotonicity overclaim removed; T-ST-5a/5b split noted; Cat B status recorded.
 - Both CLAUDE.md files: status counts updated.
 
 ---
@@ -4346,7 +4424,7 @@ All 7 patterns clean.
 
 ### 3. P-F-A1 ε→0 Proof Plan
 
-**Added `§8.5` to `THEORY/working/MF/pf_tstar_langevin.md`:**
+**Added `§8.5` to `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`:**
 
 Parameterized family: μ_ε ∝ exp(−E_SCC/T*)·exp(ε·R)·dũ, ε ∈ [0,1], R = S_Bern.
 - ε=0: Target A (pure Gibbs, Lions-Sznitman reflection — canonical axiom)
@@ -4440,7 +4518,7 @@ Key design:
 
 ### 2. OP-0009-Pre-a: exp02d failure documented as V3 chart-validity violation
 
-Added §7 to `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`:
+Added §7 to `THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md`:
 - §7.1–§7.2: V3 violation mechanism — λ_rep=10 creates artificially deep valley between K-field bumps; ũ_A is NOT a critical point of E_SCC on F_M(P)
 - §7.3: 18 conditions, all barriers < 0. Null result — artifacts only.
 - §7.4: exp02e fix (single_field_relax methodology)
@@ -4450,7 +4528,7 @@ Added §7 to `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`:
 
 ### 3. OP-0006 Cat B package strengthened
 
-**Working file** `THEORY/working/MF/op_0006_boundary_precision.md`:
+**Working file** `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md`:
 - §5b theorem statement aligned with canonical: updated bound to `d_H(...) ≤ C·(α/β)^{1/2}` (was `C(β^{−1/2})`); C is geometry-dependent, Allen-Cahn interface width interpretation
 - §7 Cat A blockers expanded from 3 to **4 explicit blockers**:
   1. Topological separator (§4.2): connected separator argument (combinatorial Jordan curve)
@@ -4463,7 +4541,7 @@ Added §7 to `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`:
 
 ### 4. P-F-A1 §8.4: Three Gibbs targets distinguished
 
-Added §8.4 to `THEORY/working/MF/pf_tstar_langevin.md`:
+Added §8.4 to `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`:
 
 **Target A (canonical axiom v0):** μ_A ∝ exp(−E_SCC/T_*) — pure Gibbs; achieved via Lions-Sznitman reflection at ∂[0,1]^n. Not currently implemented.
 
@@ -4517,7 +4595,7 @@ All clean. xfailed = scc.aut_g (deferred NQ-259 W6+).
 
 **1. T-ST-5a G1–G4 gaps closed → Cat A promoted:**
 
-Updated `THEORY/working/MF/tst5a_hard_depth_locking_proof.md` (status → "Cat A — all gaps G1–G4 closed"):
+Updated `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md` (status → "Cat A — all gaps G1–G4 closed"):
 
 - **G1 (Mass projection uniformity) — CLOSED:** Confirmed `optimizer.py:project_volume` uses bisection on Lagrange multiplier, NOT uniform shift. Key insight: Lemma 3 (per-component mass conservation) is NOT required by the main theorem. Lemma 4 follows from Lemma 1 (graph topology) alone — cross-component H₀ merger requires a cross-component edge, which Lemma 1 rules out. Even global-projection mass redistribution cannot enable merger. Lemma 3 demoted to auxiliary corollary.
 - **G2 (Merger vs decay) — CLOSED:** Theorem part (b) now explicitly says "no merger path" (cross-component K=2→K=1 transition). Decay (K_act→1 via intra-component bar death) is permitted and explicitly listed in §6 "what T-ST-5a does NOT claim".
@@ -4568,7 +4646,7 @@ Experiment running (PID 76206, background). Results to: `CODE/stereo_scc/results
 
 **4. P-F-A1 T_* Langevin formalization — §8 implementation link added:**
 
-Updated `THEORY/working/MF/pf_tstar_langevin.md`:
+Updated `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`:
 
 New §8 (Implementation Link: langevin.py):
 - §8.1: Documents `projected_langevin` in `CODE/scc/langevin.py` — uses `F_C+E = E_SCC − T·S_Bernoulli + λ_K·K_soft`; `_project_tangent(v,n) = v − mean(v)` (correct F_M(P) mass conservation); `_reflect_to_box` approximates Lions-Sznitman reflection.
@@ -4582,7 +4660,7 @@ New §8 (Implementation Link: langevin.py):
 Updated module docstring of `CODE/scc/multi.py`:
 - Added ARCHITECTURE NOTE (OP-0009-Pre-a): K-field Σ_M^K is a LOCAL COORDINATE CHART within F_M(P); valid under V1 (K-stability), V2 (basin localization), V3 (formation separation), V4 (mass budget).
 - Notes V1 failure mode (K-jump event → chart degeneration).
-- References `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`.
+- References `THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md`.
 - Architecture migration deferred to v2.0 (W11–W12).
 
 ---
@@ -4625,7 +4703,7 @@ Searched `scc/`, `stereo_scc/`, `tests/` for: TODO, FIXME, HACK, XXX, BROKEN, de
 
 **1. T-ST-5a formal proof sketch → Cat A-candidate:**
 
-New file: `THEORY/working/MF/tst5a_hard_depth_locking_proof.md`.
+New file: `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md`.
 
 Formal proof via 4 lemmas:
 - **Lemma 1 (Graph Decomposition):** A-HARDCUT + A-DEPTH-SEP → no cross-component edges (by definition). Proved.
@@ -4669,7 +4747,7 @@ Results: `CODE/stereo_scc/experiments/results/exp02c_smooth_full/`.
 
 **3. OP-0006 Boundary Precision → Cat B candidate achieved:**
 
-Added §5b to `THEORY/working/MF/op_0006_boundary_precision.md`:
+Added §5b to `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md`:
 
 **PersRidge equivalence theorem (proof sketch):** In the phase-separated regime (β large, ũ* ≈ {0,1}-valued), B_t(ũ*) (PersRidge) ≈ ∂PersComp(ũ*) (topological boundary of formation core) in graph Hausdorff distance O(β^{−1/2}). Proof: gradient magnitude concentrated at ∂PersComp nodes (≈1−2δ) under phase separation; PersRidge picks up exactly these nodes. Regime conditions: R1 (phase separation), R2 (well-formed formation), R3 (compatible persistence thresholds). Gap: explicit constant C in O(β^{−1/2}) bound.
 
@@ -4681,7 +4759,7 @@ Cat B §7 update: All three criteria now met. (1) Barcode stability — standard
 
 **4. pf_tstar_langevin.md — F_0/F_M dynamics distinction + Cat B ceiling policy:**
 
-Added §1b to `THEORY/working/MF/pf_tstar_langevin.md`:
+Added §1b to `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`:
 
 - **F_0(P) = [0,1]^n** (unconstrained): non-conservative flow; no natural Gibbs invariant measure; boundary attractors at {0,1}^n corners prevent compactness argument.
 - **F_M(P) = {ũ : Σ uᵢ = M} ∩ [0,1]^n** (mass-constrained): conservative flow; compact manifold; Gibbs measure exp(−E/T_*) well-defined; T_* is the Langevin temperature of THIS dynamics specifically.
@@ -4698,7 +4776,7 @@ Added §7b: **No Kramers promotion above Cat B until P-F-A1.** Policy:
 
 **5. OP-0009-Pre-a chart validity working file:**
 
-New file: `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md`.
+New file: `THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md`.
 
 Formalizes Σ_M^K as local chart within one basin A_{K,α}(P), with 4 validity conditions:
 - **V1 (K-Stability):** K_act stable on trajectory; K-jump → chart degenerates, needs (K-1)-chart
@@ -4735,15 +4813,15 @@ Also clarified: Σ_M^K → B_K(P) domain fix already done (D-ST-4); chart map Φ
 
 | File | Change |
 |---|---|
-| `THEORY/working/MF/tst5a_hard_depth_locking_proof.md` | NEW — formal proof sketch for T-ST-5a (Lemmas 1–4 + Theorem + 4 gaps) |
-| `THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md` | NEW — K-field chart validity conditions V1–V4 + architecture migration status |
+| `THEORY/2_substrate/Q2_multiformation/tst5a_hard_depth_locking_proof.md` | NEW — formal proof sketch for T-ST-5a (Lemmas 1–4 + Theorem + 4 gaps) |
+| `THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md` | NEW — K-field chart validity conditions V1–V4 + architecture migration status |
 | `CODE/stereo_scc/experiments/exp02c_smooth_barrier_full_energy.py` | NEW — β-sweep NEB experiment (flat/smooth/hard adjacency comparison) |
 | `CODE/stereo_scc/experiments/results/exp02c_smooth_full/` | NEW — exp02c results (CSV + summary + plots) |
-| `THEORY/canonical/canonical.md §16 T-ST-5a` | Cat B → Cat A-candidate; assumptions + proof sketch added inline |
-| `THEORY/canonical/canonical.md §16 T-ST-5b` | Status updated with exp02c null-differentiation result |
-| `THEORY/working/MF/op_0006_boundary_precision.md §5b, §7` | PersRidge equivalence theorem added; Cat B status achieved |
-| `THEORY/working/MF/pf_tstar_langevin.md §1b, §7b` | F_0/F_M distinction added; Cat B ceiling policy added |
-| `THEORY/canonical/theorem_status.md` | CV-1.6 candidates table added (D-ST-1..D-ST-5, T-ST-5a/b); OP-0006 → Cat B; OP-0009-Pre-a row updated |
+| `THEORY/2_substrate/canonical/canonical.md §16 T-ST-5a` | Cat B → Cat A-candidate; assumptions + proof sketch added inline |
+| `THEORY/2_substrate/canonical/canonical.md §16 T-ST-5b` | Status updated with exp02c null-differentiation result |
+| `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md §5b, §7` | PersRidge equivalence theorem added; Cat B status achieved |
+| `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md §1b, §7b` | F_0/F_M distinction added; Cat B ceiling policy added |
+| `THEORY/2_substrate/canonical/theorem_status.md` | CV-1.6 candidates table added (D-ST-1..D-ST-5, T-ST-5a/b); OP-0006 → Cat B; OP-0009-Pre-a row updated |
 
 ### Status snapshot (Session D EOD)
 
@@ -4808,7 +4886,7 @@ This is the $H_0$ barcode of the gradient magnitude field (not the field itself)
 OP-0006 Cat B criterion 3 (stability ratio > 1 for s ≥ 0.3): **MET**.
 
 **4. T_* working file:**
-`THEORY/working/MF/pf_tstar_langevin.md` (new). Contents: 3 candidate interpretations, P-F-A1 axiom v0, Kramers formula with explicit A and ΔE, Laplace approximation of Z_K, implications table. P-F-A1 axiom v0 is CV-1.7 Axiom Group G candidate.
+`THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md` (new). Contents: 3 candidate interpretations, P-F-A1 axiom v0, Kramers formula with explicit A and ΔE, Laplace approximation of Z_K, implications table. P-F-A1 axiom v0 is CV-1.7 Axiom Group G candidate.
 
 **5. D-ST-1..D-ST-3 migration into §3 Formal Universe:**
 Bodies of D-ST-1, D-ST-2, D-ST-3 moved from §16 extension into §3:
@@ -4834,10 +4912,10 @@ theorem_status.md OP-0009-Pre-b updated: "FURTHER RESOLVED (Session C) — D-ST-
 
 ### Net effect
 
-- `THEORY/canonical/canonical.md`: §3 extended (+§3.9..§3.11); §16 T-ST-5 split into T-ST-5a/b; §16 D-ST-1..D-ST-3 cross-refs; T-ST-5b null-barrier status updated; §16 footer updated
-- `THEORY/canonical/theorem_status.md`: OP-0009-Pre-b FURTHER RESOLVED (§3 migration satisfied)
-- `THEORY/working/MF/op_0006_boundary_precision.md`: §2b PersRidge definition added; promotion criteria updated
-- `THEORY/working/MF/pf_tstar_langevin.md`: new P-F-A1 working file
+- `THEORY/2_substrate/canonical/canonical.md`: §3 extended (+§3.9..§3.11); §16 T-ST-5 split into T-ST-5a/b; §16 D-ST-1..D-ST-3 cross-refs; T-ST-5b null-barrier status updated; §16 footer updated
+- `THEORY/2_substrate/canonical/theorem_status.md`: OP-0009-Pre-b FURTHER RESOLVED (§3 migration satisfied)
+- `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md`: §2b PersRidge definition added; promotion criteria updated
+- `THEORY/2_substrate/Q3_dynamics/pf_tstar_langevin.md`: new P-F-A1 working file
 - `CODE/stereo_scc/experiments/exp02b_smooth_adjacency_neb.py`: new experiment
 - `CODE/stereo_scc/results/exp02b_smooth_neb/`: new results directory (summary.md + CSVs + plots)
 - `CODE/stereo_scc/experiments/exp06_boundary_stability_shadow_blur.py`: new experiment
@@ -4893,7 +4971,7 @@ Added new §16 "Stereo Observation Extension" after §15 Closing Summary (~116 l
 Results saved: `CODE/stereo_scc/results/exp02_neb/{k_stability.csv, barrier_vs_depth_NEB.csv, barrier_vs_eps.png, energy_path_*.png, exp02_neb_summary.md, field_*.png}`.
 
 **4. OP-0006 boundary precision — working formalization:**
-`THEORY/working/MF/op_0006_boundary_precision.md` (new, ~185 lines). Contents:
+`THEORY/2_substrate/multiformation/op_0006_boundary_precision.md` (new, ~185 lines). Contents:
 - §1: Problem statement (soft boundary band §5.3 → crisp persistent boundary)
 - §2: Definition: $\partial_{\mathrm{SCC}}(\tilde{u},\theta) = \{x : \vert \nabla_G \tilde{u}(x)\vert > \theta\}$; persistent if stable under $\lVert \delta \rVert_\infty$ small
 - §3: Distinction from raw image edge (table: 5 properties)
@@ -4917,9 +4995,9 @@ Replaced "monotonically increasing barrier with depth separation" (anticipated r
 
 ### Net effect
 
-- `THEORY/canonical/canonical.md`: §16 appended (D-ST-1..D-ST-5, T-ST-5; ~116 lines); T-ST-5 status paragraph updated with NEB results
-- `THEORY/canonical/theorem_status.md`: OP-0009-Pre split into Pre-a + Pre-b; sub-item table + net status updated
-- `THEORY/working/MF/op_0006_boundary_precision.md`: new working file
+- `THEORY/2_substrate/canonical/canonical.md`: §16 appended (D-ST-1..D-ST-5, T-ST-5; ~116 lines); T-ST-5 status paragraph updated with NEB results
+- `THEORY/2_substrate/canonical/theorem_status.md`: OP-0009-Pre split into Pre-a + Pre-b; sub-item table + net status updated
+- `THEORY/2_substrate/multiformation/op_0006_boundary_precision.md`: new working file
 - `CODE/stereo_scc/experiments/exp02_stereo_merger_barrier_neb.py`: new NEB experiment
 - `CODE/stereo_scc/results/exp02_neb/`: new results directory (8 files)
 - Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims); D-ST-1..D-ST-5 are Cat B *candidates* not yet promoted
@@ -4970,8 +5048,8 @@ Checked 10 residue categories (slot-counting K_act, foundational Σ_M^K, E_photo
 
 ### Net effect
 
-- `THEORY/canonical/canonical.md`: **0 edits** (no promotion this session)
-- `THEORY/canonical/theorem_status.md`: **0 edits** (OP catalog unchanged)
+- `THEORY/2_substrate/canonical/canonical.md`: **0 edits** (no promotion this session)
+- `THEORY/2_substrate/canonical/theorem_status.md`: **0 edits** (OP catalog unchanged)
 - Theorem count: unchanged (47A / 5B / 5C / 5R = 62 claims)
 - Open problems: unchanged (not silently resolved); OP-0009-Pre partially addressed at implementation level only
 - `CODE/stereo_scc/`: 7 new module files + 6 experiment files + run_all_experiments.py + results/
@@ -4993,7 +5071,7 @@ Checked 10 residue categories (slot-counting K_act, foundational Σ_M^K, E_photo
 13. `CODE/stereo_scc/experiments/exp05_kramers_markov_chain.py`
 14. `CODE/stereo_scc/run_all_experiments.py`
 15. `CODE/stereo_scc/results/phase10_final_report.md`
-16. `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md` (from W6 D3)
+16. `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md` (from W6 D3)
 
 ### Next session carry-forward
 
@@ -5163,7 +5241,7 @@ A cheap (~30 min wrapper) numerical sweep can simultaneously (a) confirm a theor
 ### Files created / modified
 1. `THEORY/logs/daily/2026-05-05/01_closure_rigor_audit.md` (G2.1 audit + G2.2 capture + §7.1 erratum proposal).
 2. `THEORY/logs/daily/2026-05-05/99_summary.md` (Day 2 EOD).
-3. `THEORY/working/MF/cobelonging_vs_sigmaD.md` line 408 (erratum applied, preserve-with-correction pattern).
+3. `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md` line 408 (erratum applied, preserve-with-correction pattern).
 
 ### Lesson logged
 Audit-closure-rigor day produces a small but actionable finding (1 residual line out of ~600+ modified) that an over-delivered closure-day (W6 D1) did NOT explicitly catch. Pattern reaffirmed: chain-verification adversarial cold-read on canonical sub-item tables + packet crosswalks + body-level promotion lines is the right hardening discipline. The canonical preserve-with-correction default may produce minor body-level residue in working/MF/ files; a periodic body-level pass (~once per major addendum batch) would catch such residue earlier. Pattern recommendation: future addendum batches that correct disclosure headers should include a `grep -n` body-level scan for the same incorrect token before declaring closure.
@@ -5347,8 +5425,8 @@ OAT-5 is officially scheduled as **D-CV1.6-O4**, not D-CV1.6-O6 as I previously 
 
 ### Files modified (3)
 
-1. `THEORY/working/MF/cobelonging_vs_sigmaD.md`: REJECT-RETIRE header updated with D-CV1.6-O4 correction + canonical-scheduled (not "if user approves") clarification + re-examination metadata.
-2. `THEORY/working/MF/pre_objective_K_field_tension.md`: REJECT-RETIRE header updated with v2.0 §1 amendment specifics + Cluster F misclassification origin note + re-examination metadata.
+1. `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md`: REJECT-RETIRE header updated with D-CV1.6-O4 correction + canonical-scheduled (not "if user approves") clarification + re-examination metadata.
+2. `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md`: REJECT-RETIRE header updated with v2.0 §1 amendment specifics + Cluster F misclassification origin note + re-examination metadata.
 3. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.5 Cluster E classification correction note added; §1.6 OAT-5/6 row updated with canonical-confirmed status + D-CV1.6-O4 correction.
 
 ### Net effect
@@ -5428,8 +5506,8 @@ Both files received **REJECT-RETIRE-RECOMMENDATION disclosure headers** (~10-12 
 
 ### Files modified
 
-1. `THEORY/working/MF/pre_objective_K_field_tension.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
-2. `THEORY/working/MF/cobelonging_vs_sigmaD.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
+1. `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
+2. `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md`: REJECT-RETIRE-RECOMMENDATION header (~12 lines).
 3. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.6 Issue #5 audit table added (REJECT-RETIRE verdict + OAT systematic structure documentation).
 
 ### Net effect
@@ -5514,12 +5592,12 @@ For PARTIAL RETIRE files, the substantive content slated for preservation:
 
 ### Files modified
 
-1. `THEORY/working/MF/scc_mass_gap_connection.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~7 lines).
-2. `THEORY/working/MF/formation_birth_string_breaking.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~8 lines).
-3. `THEORY/working/SF/formation_fundamental_group.md`: PARTIAL RETIRE + RENAME disclosure header (~10 lines).
-4. `THEORY/working/SF/sigma_lie_algebra_structure.md`: PARTIAL RETIRE + CONSOLIDATE disclosure header (~10 lines).
-5. `THEORY/working/MF/foundational_bridges_2026.md`: SPLIT disclosure header with per-bridge verdict table (~12 lines).
-6. `THEORY/working/SF/sigma_class_category.md`: FULL RETIRE-CANDIDATE disclosure header (~10 lines).
+1. `THEORY/2_substrate/Q3_dynamics/scc_mass_gap_connection.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~7 lines).
+2. `THEORY/2_substrate/Q2_multiformation/formation_birth_string_breaking.md`: PARTIAL RETIRE-CANDIDATE disclosure header (~8 lines).
+3. `THEORY/2_substrate/sigma_framework/formation_fundamental_group.md`: PARTIAL RETIRE + RENAME disclosure header (~10 lines).
+4. `THEORY/2_substrate/sigma_framework/sigma_lie_algebra_structure.md`: PARTIAL RETIRE + CONSOLIDATE disclosure header (~10 lines).
+5. `THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md`: SPLIT disclosure header with per-bridge verdict table (~12 lines).
+6. `THEORY/2_substrate/sigma_framework/sigma_class_category.md`: FULL RETIRE-CANDIDATE disclosure header (~10 lines).
 7. `THEORY/working/CV-1.7_parking_lot_inventory.md`: §1.6 refined verdicts table added.
 8. `_archive/cv17_speculative_retired_2026-05-04/`: directory created (empty until W7+ moves).
 
@@ -5606,19 +5684,19 @@ This **matches NQ-187 numerical measurement** $\mu_1/\mu_0 \approx 2$ exactly (m
 
 ### Files modified (3 deeper-audit revisions)
 
-1. **`THEORY/working/SF/sigma_theorem4_canonical_revision.md`** §2.5.1-§2.5.3 + §4.5 + §4.6 added:
+1. **`THEORY/2_substrate/sigma_framework/sigma_theorem4_canonical_revision.md`** §2.5.1-§2.5.3 + §4.5 + §4.6 added:
    - §2.5.1 DEEPER AUDIT — two-normal-form conversion analysis + canonical Step 4 mixing error.
    - §2.5.2 Revised falsification verdict — algebraic error, not scope ambiguity.
    - §2.5.3 What original Phase 2 missed — canonical normal form definition not examined.
    - §4.5 revised path probability table — γ-ii promoted to ~75%.
    - §4.6 NEW — recommended canonical correction text with corrected formula + convention disclosure.
 
-2. **`THEORY/working/SF/nq187b_L_extrapolation.md`** §2.6.3 added:
+2. **`THEORY/2_substrate/sigma_framework/nq187b_L_extrapolation.md`** §2.6.3 added:
    - DEEPER AUDIT subsection — two-normal-form mixing error identified.
    - (γ) audit refocused: from "which evaluation point NQ-187 measures" to "verify two-normal-form conversion identity".
    - Corrected canonical formula matches NQ-187 measurement at all $L$ (not just finite-$L$ correction).
 
-3. **`THEORY/working/SF/sigma_theorem4_higher_order.md`** §11.10 added:
+3. **`THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md`** §11.10 added:
    - DEEPER AUDIT REVISION subsection — superseding §11.7-§11.9 path γ-i framing.
    - Hypothesis A "continuum-limit recovery $\to 4$" interpretation refined: holds for `symmetry_moduli`'s $A_2^{sym}/A_1$ but does not address canonical's formula error.
    - "§8.5 numerical falsification" reframed: real falsification of canonical (ii) as written, not scope ambiguity.
@@ -5683,31 +5761,31 @@ Per refined understanding (§2.5 of `sigma_theorem4_canonical_revision.md` post-
 
 **Modified:**
 
-1. **`THEORY/working/SF/nq187b_L_extrapolation.md`** §2.6 corrected:
+1. **`THEORY/2_substrate/sigma_framework/nq187b_L_extrapolation.md`** §2.6 corrected:
    - §2.6.1 RECONCILIATION subsection added (multinomial factor 6 explanation).
    - §2.6.2 Implication for NQ-187 numerical measurement (uniform vs axis-minimum point).
    - §2.6 Discrete ratio table corrected: separate columns for naive $K^L/I_4^L$ (→ 2/3) vs R22-comparable $A_2^L/A_1^L = 6 \cdot K^L/I_4^L$ (→ 4).
 
-2. **`THEORY/working/SF/sigma_theorem4_canonical_revision.md`** §2.5 + §4.4 + §4.5:
+2. **`THEORY/2_substrate/sigma_framework/sigma_theorem4_canonical_revision.md`** §2.5 + §4.4 + §4.5:
    - §2.5 RECONCILIATION subsection added (Claim 1 R22 LIKELY CORRECT + Claim 2 canonical (ii) LIKELY PARTIALLY INCORRECT decomposition).
    - §4.4 audit priority refined (γ-i scope clarification expected).
    - §4.5 NEW — refined 4-path decision tree (γ-i / γ-ii / β-fail / α-fail) with probability estimates.
 
-3. **`THEORY/working/SF/sigma_theorem4_higher_order.md`** §11.7-§11.9 added:
+3. **`THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md`** §11.7-§11.9 added:
    - §11.7 Hypothesis A (continuum-limit recovery $r(L) \to 4$) algebraically forced + numerically confirmed.
    - §11.8 §8.5 "numerical falsification" reframed as falsifying canonical (ii) scope/formula, NOT R22.
    - §11.9 §11.6 sister revision recommendation on `symmetry_moduli.md` REVISED — R22 stands; revision was based on original false-falsification framing.
 
 **New placeholder files (2):**
 
-4. **`THEORY/working/SF/sigma_m_hessian_convention_audit.md`** (NEW, 110 lines):
+4. **`THEORY/2_substrate/sigma_framework/sigma_m_hessian_convention_audit.md`** (NEW, 110 lines):
    - (γ) Σ_m-Hessian convention audit placeholder.
    - §2.1 Convention I (centered) vs Convention II (Lagrange multiplier) test matrix.
    - §2.2 3 candidate evaluation points: uniform / axis-min / diagonal saddle.
    - §2.4 decision criterion: which (point, convention) NQ-187 measured at.
    - Resolves previously-broken cross-reference from `sigma_theorem4_canonical_revision.md` §4.3.
 
-5. **`THEORY/working/SF/r22_a2_a1_audit.md`** (NEW, 100 lines):
+5. **`THEORY/2_substrate/sigma_framework/r22_a2_a1_audit.md`** (NEW, 100 lines):
    - (β) R22 cubic-equivariant derivation audit placeholder.
    - §2 R22 derivation recap (lines 100-156 of `symmetry_moduli.md` §3.3).
    - §3 audit verification checklist (8 items: multinomial coefficient, reflection-symmetry vanishing, integral evaluations, normalization, discrete-to-continuum convergence, axis-minimum existence, Hessian at minimum, diagonal saddle structure).
@@ -5885,7 +5963,7 @@ Total: **~10 wording locations + §5 OP-0005 status block requiring full reframe
 
 ### Files modified
 
-- `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md`: ~10 wording locations + §5 OP-0005 status update full reframe + §1 N-1 silent-resolution constraint subsection + footer audit-fix metadata.
+- `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md`: ~10 wording locations + §5 OP-0005 status update full reframe + §1 N-1 silent-resolution constraint subsection + footer audit-fix metadata.
 
 ---
 
@@ -5948,10 +6026,10 @@ User directive "8 critical issues 하나씩 디벨롭" after Stage 0 inventory +
 
 ### Files modified
 
-- `THEORY/working/MF/k_selection_compatibility_proof.md`: 7 wording locations + new §6.3.1 partial-answer scope clause + footer audit-fix metadata note.
-- `THEORY/working/MF/sigma_rich_phi_proof.md`: §6.2.2 matrix-perturbation framework (new) + §6.2.3 failure modes (new).
-- `THEORY/working/MF/sigma_rich_wigner_derivation.md`: §8.2 cross-reference + mass-rescaling specifics + failure modes reference.
-- `THEORY/working/MF/sigma_rich_augmentation.md`: §10.4 R1/R2/R3 blocker registration + Hybrid CV-1.6 / CV-1.7+ promotion path.
+- `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md`: 7 wording locations + new §6.3.1 partial-answer scope clause + footer audit-fix metadata note.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md`: §6.2.2 matrix-perturbation framework (new) + §6.2.3 failure modes (new).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_wigner_derivation.md`: §8.2 cross-reference + mass-rescaling specifics + failure modes reference.
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md`: §10.4 R1/R2/R3 blocker registration + Hybrid CV-1.6 / CV-1.7+ promotion path.
 
 ### Net effect on theorem-status / OP catalog / canonical / scc
 
@@ -6001,7 +6079,7 @@ The auxiliary cluster F was massively under-counted in the original W5 narrative
 
 ### One file already promoted to canonical
 
-`THEORY/working/MF/K_status_commitment.md` (480 lines) → **Commitment 16** (canonical.md §11.1 #16, line 810; CV-1.5.1, 2026-04-29). Should transition from "parking-lot candidate" to "promoted-source" status. Cross-references in `canonical.md` line 820 + `theorem_status.md` CV-1.5.1 release-notes line 80.
+`THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (480 lines) → **Commitment 16** (canonical.md §11.1 #16, line 810; CV-1.5.1, 2026-04-29). Should transition from "parking-lot candidate" to "promoted-source" status. Cross-references in `canonical.md` line 820 + `theorem_status.md` CV-1.5.1 release-notes line 80.
 
 ### Net effect on theorem-status / OP catalog / canonical / scc
 
@@ -6060,8 +6138,8 @@ $$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mat
 
 ### Files modified
 
-- `THEORY/canonical/canonical.md`: T-L1-M new entry inserted in §13 after T-L1-F (~6 lines: header + theorem statement display + proof outline + status block).
-- `THEORY/canonical/theorem_status.md`: C-0722 row added to Active Claims comprehensive table after C-0716 row.
+- `THEORY/2_substrate/canonical/canonical.md`: T-L1-M new entry inserted in §13 after T-L1-F (~6 lines: header + theorem statement display + proof outline + status block).
+- `THEORY/2_substrate/canonical/theorem_status.md`: C-0722 row added to Active Claims comprehensive table after C-0716 row.
 
 ### Net effect
 
@@ -6081,7 +6159,7 @@ $$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mat
 
 ### Provenance / audit trail
 
-- L-M draft: `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (548 → 581 lines post-W6-D1-AUDIT closure).
+- L-M draft: `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` (548 → 581 lines post-W6-D1-AUDIT closure).
 - Repair specifications: `THEORY/logs/daily/2026-05-04/02_development.md` §1-§5 (R-0/R-1/R-2/R-3 + post-repair Cat A conditional self-classification).
 - Promotion proposal: `THEORY/logs/daily/2026-05-04/03_integration_and_new_open.md` §1.2 (T-L1-M canonical entry text) + §2.1 (C-0722 row text).
 - NQ-G1-1 self-correction: `THEORY/logs/daily/2026-05-04/op_resolution.md` §9.9–§9.10.
@@ -6091,7 +6169,7 @@ $$\vert K_{\mathrm{soft}}^\phi(U(\mathbf u)) - K_{\mathrm{act}}^\varepsilon(\mat
 
 ## 2026-05-04 (W6 Day 1 EOD addendum) — G1 L-M-AUDIT closure applied to working draft + external audit PASS (L-M Cat A conditional)
 
-W6 Day 1 G1 deliverable closed at the working layer. The R-0/R-1/R-2/R-3 specifications from `THEORY/logs/daily/2026-05-04/02_development.md` (originally session-log proposals) were applied to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (the L-M working draft, 548 → ~620 lines). NQ-G1-1 self-correction (op_resolution.md §9) integrated. External audit (NQ-G1-3 dispatch, ~7 min general-purpose agent in cold-review mode) verified all four closures + Theorem L-M composition. Verdict: **PASS — L-M is genuinely Cat A conditional under (P0)–(P11)**.
+W6 Day 1 G1 deliverable closed at the working layer. The R-0/R-1/R-2/R-3 specifications from `THEORY/logs/daily/2026-05-04/02_development.md` (originally session-log proposals) were applied to `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` (the L-M working draft, 548 → ~620 lines). NQ-G1-1 self-correction (op_resolution.md §9) integrated. External audit (NQ-G1-3 dispatch, ~7 min general-purpose agent in cold-review mode) verified all four closures + Theorem L-M composition. Verdict: **PASS — L-M is genuinely Cat A conditional under (P0)–(P11)**.
 
 ### Substantive changes to the L-M working draft
 
@@ -6130,7 +6208,7 @@ Cold-review general-purpose agent dispatched with input package (working/MF/ rev
 
 ### Files modified
 
-- `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md`: header status block + §2.2 Phi-4c F1 + §5.4 R-1/R-3 notes appended + §5.5 Type-B chain replaced (with NQ-G1-1 self-correction) + §5.6 τ_* updated + §5.7 status block + §6.1 Theorem L-M statement.
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md`: header status block + §2.2 Phi-4c F1 + §5.4 R-1/R-3 notes appended + §5.5 Type-B chain replaced (with NQ-G1-1 self-correction) + §5.6 τ_* updated + §5.7 status block + §6.1 Theorem L-M statement.
 
 ### Net effect
 
@@ -6168,8 +6246,8 @@ Production scripts (`l1i_constants_feasibility.py`, `nq242c_counterexample.py`, 
 
 ### Files modified
 
-- `THEORY/canonical/canonical.md`: line 810 amended in-place (one-sentence change; +~150 chars).
-- `THEORY/canonical/theorem_status.md`: CV-1.5.1 release-notes Commitment 16 line appended with the same Erratum text inline (traceability footnote).
+- `THEORY/2_substrate/canonical/canonical.md`: line 810 amended in-place (one-sentence change; +~150 chars).
+- `THEORY/2_substrate/canonical/theorem_status.md`: CV-1.5.1 release-notes Commitment 16 line appended with the same Erratum text inline (traceability footnote).
 
 ### Net effect
 
@@ -6198,7 +6276,7 @@ Production scripts (`l1i_constants_feasibility.py`, `nq242c_counterexample.py`, 
 
 ## 2026-05-04 (W6 Day 1 late evening) — open_problems.md merged into theorem_status.md
 
-User decision (per the audit Pass 2 finding that the two files used incompatible OP-ID systems and overlapping but drifted bodies): consolidate `THEORY/canonical/open_problems.md` into `THEORY/canonical/theorem_status.md` as a unified Open Problems Catalog section, then delete `open_problems.md`.
+User decision (per the audit Pass 2 finding that the two files used incompatible OP-ID systems and overlapping but drifted bodies): consolidate `THEORY/canonical/open_problems.md` into `THEORY/2_substrate/canonical/theorem_status.md` as a unified Open Problems Catalog section, then delete `open_problems.md`.
 
 ### Migration scope
 
@@ -6218,7 +6296,7 @@ A bulk `sed` pass updated ~63 cross-references across the project from `open_pro
 
 Manual fixes were applied to:
 - `CLAUDE.md`: Session Start reading list (CV-1.2 -> CV-1.5.2; F-1/M-1/MO-1 phrasing updated); Repository Layout tree (removed redundant entry the bulk sed had created); Theory Sketch heading (v1.2 -> CV-1.5.2); Policy section (added explicit note about the 2026-05-04 merge).
-- `THEORY/working/MF/cobelonging_vs_sigmaD.md`, `THEORY/working/MF/cn15_static_dynamic_separation.md`: cross-reference lines updated.
+- `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md`, `THEORY/2_substrate/Q2_multiformation/cn15_static_dynamic_separation.md`: cross-reference lines updated.
 
 ### Files NOT updated (acceptable as historical)
 
@@ -6231,10 +6309,10 @@ Five files still contain `open_problems.md` mentions in narrative-historical con
 
 ### Files modified (this entry)
 
-- `THEORY/canonical/theorem_status.md`: Open Problems Catalog section added (~480 lines absorbed from open_problems.md).
+- `THEORY/2_substrate/canonical/theorem_status.md`: Open Problems Catalog section added (~480 lines absorbed from open_problems.md).
 - `THEORY/canonical/open_problems.md`: DELETED.
-- `THEORY/canonical/README.md`: list of catalog files updated by user/linter to reflect the merge.
-- `CLAUDE.md`, `CONVENTIONS.md`, `THEORY/canonical/canonical.md`, ~30 working files, several `logs/daily/` files: cross-references updated by the bulk sed passes.
+- `THEORY/2_substrate/canonical/canonical_readme.md`: list of catalog files updated by user/linter to reflect the merge.
+- `CLAUDE.md`, `CONVENTIONS.md`, `THEORY/2_substrate/canonical/canonical.md`, ~30 working files, several `logs/daily/` files: cross-references updated by the bulk sed passes.
 
 ### Test count
 
@@ -6254,7 +6332,7 @@ W6 Day 1 evening session per the redesigned W6 strategic plan (G2 + opportunisti
 
 **Decision:** T-Bind-Proj = Cat A (for all τ_cl ∈ (0,1)). T-Bind-Full = Cat A.
 
-**Rationale:** `THEORY/canonical/canonical.md` §13 line 1440-1448 explicitly states "T-Bind-Proj. *(Moved here from former Category B — Phase 13 upgrade to Cat A for all τ.)*" and "T-Bind-Full. ... *Status:* **Proved**, Cat A." The Erratum 2026-04-07 inside the §13 Cat B header (line 1481) explicitly says "T-Bind-Proj/Full moved to Category A above." The proof is complete: KKT projection + Banach inversion of restricted operator with $\sigma_{\min} \ge 1 - a_{\mathrm{cl}}/4$, with general τ via the binary mass-balance formula $\Phi(\tau; a_{\mathrm{cl}}, c)$. T-Bind-Full follows from T-Bind-Proj + universal gradient bounds.
+**Rationale:** `THEORY/2_substrate/canonical/canonical.md` §13 line 1440-1448 explicitly states "T-Bind-Proj. *(Moved here from former Category B — Phase 13 upgrade to Cat A for all τ.)*" and "T-Bind-Full. ... *Status:* **Proved**, Cat A." The Erratum 2026-04-07 inside the §13 Cat B header (line 1481) explicitly says "T-Bind-Proj/Full moved to Category A above." The proof is complete: KKT projection + Banach inversion of restricted operator with $\sigma_{\min} \ge 1 - a_{\mathrm{cl}}/4$, with general τ via the binary mass-balance formula $\Phi(\tau; a_{\mathrm{cl}}, c)$. T-Bind-Full follows from T-Bind-Proj + universal gradient bounds.
 
 The disagreement with `theorem_status.md` (which had T-Bind-Proj at Cat B with τ=1/2 restriction and T-Bind-Full at Cat C "very conditional") was a stale shadow: the Phase 13 upgrade was applied in `canonical.md` 2026-04-07 but never propagated to `theorem_status.md`.
 
@@ -6279,7 +6357,7 @@ The canonical statement is therefore mathematically correct as a **continuum-lim
 
 **Actions:**
 - `canonical.md` §13 T-σ-Theorem-4 entry: statement (ii) prefix amended to make the "continuum-limit prediction" framing explicit; added a "Continuum vs discrete grid note (added 2026-05-04 W6 NQ-187 audit)" paragraph that documents the NQ-187 numerical results, identifies the three reconciliation hypotheses (α/β/γ), and states "canonical statement (ii) should be read as a continuum-limit claim, not a finite-grid claim" until the γ/β/α audit closes.
-- References block updated to cite the NQ-187 daily log (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`), the Wave 3 critical findings doc (`logs/daily/2026-04-30/13_wave3_critical_findings.md` §1), the Day 5 reconciliation γ/β/α framework (`logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`), and the working file (`THEORY/working/SF/sigma_theorem4_higher_order.md` §8).
+- References block updated to cite the NQ-187 daily log (`logs/daily/2026-04-30/11_nq187_scaling_test_results.md`), the Wave 3 critical findings doc (`logs/daily/2026-04-30/13_wave3_critical_findings.md` §1), the Day 5 reconciliation γ/β/α framework (`logs/daily/2026-05-01/03_t_sigma_theorem4_reconciliation.md`), and the working file (`THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` §8).
 - `theorem_status.md` row C-0716 brief and Proof Status Summary entry rewritten to surface the continuum-vs-discrete caveat: "Statement now read as continuum-limit claim until γ/β/α audit closes."
 
 **Net effect on Cat counts:** none. T-σ-Theorem-4 was already Cat B; the audit only adds documentation. The γ/β/α path audit (executed by W6 G3 in the *deleted* old W6 plan, deferred in the *redesigned* W6 plan to a future cycle) will determine whether Cat A re-promotion is possible or whether a deeper retraction / restatement is needed.
@@ -6317,12 +6395,12 @@ Second audit pass on 2026-05-04. Triggered by user request for a precise re-revi
 - **canonical.md §15 rewritten** for CV-1.5.2 baseline (46A / 5B / 5C / 5R = 61 claims) with explicit T-L1-F mention, explicit non-claims, explicit P7 caveat about WQ-1 production dynamics being outside the L1-J regime, updated remaining-research-extensions list (now numbers L1-M, T-σ-Theorem-4 re-promotion, OP-0008 σ-rich, OP-0005 K-Selection composite, OP-0009 sub-items, etc. as concrete CV-1.6/1.7 candidates).
 - **Errata Round 1 corrections propagated** to `theorem_status.md` rows for T-σ-Lemma-3 (line 95 + C-0714 detail row), T-σ-Theorem-3 (C-0715 detail row), T-σ-Theorem-4 (line 97 + C-0716 detail row, including the retroactive Cat A → Cat B downgrade explanation and the NQ-187 Wave 3 numerical refutation context).
 - **Retraction count corrected** in `theorem_status.md` Proof Status Summary (2 → 5; the 5 retractions are K-Saddle Conjecture, r̄₀ general τ / Theorem 3.3, T-Merge (c), T-Merge (d), T-Merge (e), matching `canonical.md` §13 Retracted block).
-- **L-M draft promoted to working/MF/.** `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` content copied to `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` with a working-grade header that is explicit about Cat-B sketched status, the three open R-items (R-1 / R-2 / R-3), and the L1-M-AUDIT promotion path.
+- **L-M draft promoted to working/MF/.** `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` content copied to `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` with a working-grade header that is explicit about Cat-B sketched status, the three open R-items (R-1 / R-2 / R-3), and the L1-M-AUDIT promotion path.
 - **Cat-A inflation in proposed canonical text fixed** in `2026-05-03/03_L1M_canonical_integration_and_NQ.md` §2.1 line 74 ("**Cat-A conditional**" -> "**Cat-B sketched**" with audit note explaining why the inflation was wrong).
 - **W6 strategic plan deleted** (`THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md`, ~1,691 lines). User decision: delete then redesign. The replacement parking-lot plan is at `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md`. A new W6 strategic plan is to be drafted per user decision; the current `2026-05-04/plan.md` no longer references the deleted strategic plan.
 - **Parking-lot plan created.** `THEORY/working/CV-1.7_PARKING_LOT_REVIEW_PLAN.md` lays out a 4-stage plan (Inventory -> Per-file self-assessment -> Cluster-by-cluster critic dispatch -> Disposition) for surfacing the 17 unaudited working files (~8,145 lines) introduced during the W5 Day 4 Wave 3 burst. Estimated total: ~10 working days for the full pass. Per-cluster priority order is recommended (Reconciliation drafts first, σ-rich foundation second, K-Selection third, Commitment packets fourth).
 - **3 root-level directories deleted** (`vision_model_sketch/`, `private_brainstorm/`, root-level `experiments/`). Per user decision: not part of the canonical structure; clean up to reduce noise.
-- **Pipeline diagram unified to 3-stage** (`daily -> working -> canonical`) by rewriting `THEORY/canonical/README.md` and `THEORY/logs/README.md` (both previously described a 4-stage weekly-rotation pipeline). The 3-stage variant in `CLAUDE.md`, `CONVENTIONS.md`, `working/README.md`, and `MAIN_PROMPT.md` is now the single canonical pipeline.
+- **Pipeline diagram unified to 3-stage** (`daily -> working -> canonical`) by rewriting `THEORY/2_substrate/canonical/canonical_readme.md` and `THEORY/logs/README.md` (both previously described a 4-stage weekly-rotation pipeline). The 3-stage variant in `CLAUDE.md`, `CONVENTIONS.md`, `working/README.md`, and `MAIN_PROMPT.md` is now the single canonical pipeline.
 - **CONVENTIONS.md test count fixed** ("175 must pass" -> "215 passed, 1 xfailed (216 collected; verified 2026-05-04). Update this number when adding tests.").
 - **Parent `Perception/CLAUDE.md` synced** to current Perception_theory state (215+1xfailed, 61 claims, CV-1.5.2, single canonical.md file, deleted paper drafts noted, stale `Agent Instructions.md` reference removed, ontological constraints expanded to the full 5).
 
@@ -6474,12 +6552,12 @@ and the map $\mathcal A_{\mathrm{bar}} : A^\varepsilon(\mathbf u) \to \mathrm{Ba
 
 ### Files Modified
 
-- `THEORY/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666 → 1675).
-- `THEORY/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338 → 368).
+- `THEORY/2_substrate/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666 → 1675).
+- `THEORY/2_substrate/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02) — Current Version" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338 → 368).
 
 ### Files NOT Modified
 
-- `THEORY/canonical/theorem_status.md` — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
+- `THEORY/2_substrate/canonical/theorem_status.md` — left unchanged. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result); minimal-edits principle.
 
 ### Files Created
 
@@ -6624,8 +6702,8 @@ Wave 3 directly addresses the 10 carry-forward items from the Wave 2 Critic re-r
 
 ### Files Added (Wave 3 NEW theoretical work)
 
-- `THEORY/working/SF/sigma_lie_algebra_structure.md` (NEW, 321 lines) — Lie algebra / group theory perspective on the σ-framework. $T_{u^*}\Sigma_m$ as tangent space; $\mathrm{Aut}(G)_{u^*}$ stabilizer; σ-tuple recognized as the $\mathrm{Aut}(G)_{u^*}$-irrep decomposition of $T_{u^*}\Sigma_m$ (§4, Cat A definitional restatement of Commitment 14). §5 **NQ-258** McKay-spirit conjecture (Cat C): σ-tuple at $u^*$ determined by Sylow normalizer $N_{\mathrm{Aut}(G)_{u^*}}(P)$, SCC analog of Cabanes-Späth (2023). §6 Lie-algebra reading of Goldstone modes as broken-symmetry generators (Cat B). §7 V5b-F mass reinterpretation. §8 GAGTA-spirit ML classifier **NQ-260** (Cat C). **NQ-259**: explicit $\mathrm{Aut}(G)_{u^*}$ computation on R23 (Cat A target, W6).
-- `THEORY/working/MF/foundational_bridges_2026.md` (NEW, ~340 lines) — 2024-2026 mathematical breakthroughs as structural bridges to SCC. **7 bridges B-1..B-7** with **NQ-261..NQ-267** candidates (all Cat BC scaffolding, all CN10 contrastive):
+- `THEORY/2_substrate/sigma_framework/sigma_lie_algebra_structure.md` (NEW, 321 lines) — Lie algebra / group theory perspective on the σ-framework. $T_{u^*}\Sigma_m$ as tangent space; $\mathrm{Aut}(G)_{u^*}$ stabilizer; σ-tuple recognized as the $\mathrm{Aut}(G)_{u^*}$-irrep decomposition of $T_{u^*}\Sigma_m$ (§4, Cat A definitional restatement of Commitment 14). §5 **NQ-258** McKay-spirit conjecture (Cat C): σ-tuple at $u^*$ determined by Sylow normalizer $N_{\mathrm{Aut}(G)_{u^*}}(P)$, SCC analog of Cabanes-Späth (2023). §6 Lie-algebra reading of Goldstone modes as broken-symmetry generators (Cat B). §7 V5b-F mass reinterpretation. §8 GAGTA-spirit ML classifier **NQ-260** (Cat C). **NQ-259**: explicit $\mathrm{Aut}(G)_{u^*}$ computation on R23 (Cat A target, W6).
+- `THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md` (NEW, ~340 lines) — 2024-2026 mathematical breakthroughs as structural bridges to SCC. **7 bridges B-1..B-7** with **NQ-261..NQ-267** candidates (all Cat BC scaffolding, all CN10 contrastive):
   - **B-1** Bernshtein 2025 set-theory ↔ network bridge → SCC σ-trajectory ↔ Vietoris-Rips PH pipeline (**NQ-261**, HIGH; aligned with W6 OAT NQ-242 reframe).
   - **B-2** Schramm locality (Hutchcroft-Easo 2023) → SCC pre-objective formation independent of graph class (**NQ-262**).
   - **B-3** Gaitsgory-Raskin Geometric Langlands → SCC multi-layer encirclement (**NQ-263**).
@@ -6634,8 +6712,8 @@ Wave 3 directly addresses the 10 carry-forward items from the Wave 2 Critic re-r
   - **B-6** Aguilera-Bagaria-Lücke exacting cardinals → SCC K-field hierarchy (**NQ-266**).
   - **B-7** Axiom of Choice debate → SCC selection mechanism (OP-0005) (**NQ-267**).
   - All 7 bridges include explicit citation-verification gate (⚠️ pending entries flagged).
-- `THEORY/working/MF/sigma_rich_augmentation.md` (IN FLIGHT, OP-0008 Path B architect spawn).
-- `THEORY/working/MF/k_selection_mechanism.md` (IN FLIGHT, OP-0005 Path B candidate enumeration; B-7 AC-analog frame inheritance).
+- `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` (IN FLIGHT, OP-0008 Path B architect spawn).
+- `THEORY/2_substrate/Q4_kselection/k_selection_mechanism.md` (IN FLIGHT, OP-0005 Path B candidate enumeration; B-7 AC-analog frame inheritance).
 - `THEORY/logs/daily/2026-04-30/10_critic_NQ249_review.md` (IN FLIGHT, NQ-249 mass-gap critic verdict REVISE, 600+ lines).
 - `CODE/scripts/sigma_class_count_R23.py` + `CODE/scripts/results/sigma_class_count_R23.json` — σ-class enumeration script (carry-forward #3); supports NQ-188 §5 R23 protocol step + NQ-258 §5.2 / NQ-259 prerequisite.
 
@@ -6748,14 +6826,14 @@ W5 Day 4 PM autonomous-execution batch under user directive "아직 close안하�
 
 ### Files Added (working/SF — 4 new σ-framework drafts)
 
-- `THEORY/working/SF/sigma_theorem4_higher_order.md` (303 lines, NQ-187): T-σ-Theorem-4 higher-order ε splitting via $D_4$ equivariant polynomial ring. Critical correction: previously-conjectured $\epsilon^{3/2}$ splitting **structurally ruled out** — no integer solution to $2a + 4b = 5$ in the equivariant ring; actual splitting is $O(\epsilon^2)$ via 6th-order equivariant. Cat A target reformulation staged via CV-1.6-candidate refined statement (§10).
-- `THEORY/working/SF/sigma_uniqueness_theorem.md` (~360 lines, NQ-188): σ-class enumeration on $D_4$ free-BC grid. T-σ-Uniqueness candidate (i) finiteness Cat A, (ii) parameter independence Cat B target, (iii) R23 enumeration $\vert σ\text{-classes}\vert \in [6, 20]$ Cat A target. BC-188-1 (parameter independence) + BC-188-2 (universality) conjectures registered.
-- `THEORY/working/SF/sigma_to_crisp_recovery.md` (~430 lines, NQ-189): σ → crisp K-object recovery 5-step procedure (peak / basin / boundary / irrep / stability). Closes Critic 7-agent verdict §"What's Missing" foundational gap. K-field disjoint-support Cat A (§4.3), single-field F-multi Cat B target (§5), σ-driven $\theta^*$ Cat C (§7.2). Commitment 11 upgraded from declaration to procedurally-specified commitment.
-- `THEORY/working/SF/sigma_topological_invariance.md` (268 lines, NQ-190): σ-tuple decomposition into topological skeleton (preserved under graph homeomorphism) + geometric skeleton (perturbation-sensitive). Cat C topology classification of σ; T-σ-Lemma-1 corollary candidate (§4.1).
+- `THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` (303 lines, NQ-187): T-σ-Theorem-4 higher-order ε splitting via $D_4$ equivariant polynomial ring. Critical correction: previously-conjectured $\epsilon^{3/2}$ splitting **structurally ruled out** — no integer solution to $2a + 4b = 5$ in the equivariant ring; actual splitting is $O(\epsilon^2)$ via 6th-order equivariant. Cat A target reformulation staged via CV-1.6-candidate refined statement (§10).
+- `THEORY/2_substrate/sigma_framework/sigma_uniqueness_theorem.md` (~360 lines, NQ-188): σ-class enumeration on $D_4$ free-BC grid. T-σ-Uniqueness candidate (i) finiteness Cat A, (ii) parameter independence Cat B target, (iii) R23 enumeration $\vert σ\text{-classes}\vert \in [6, 20]$ Cat A target. BC-188-1 (parameter independence) + BC-188-2 (universality) conjectures registered.
+- `THEORY/2_substrate/sigma_framework/sigma_to_crisp_recovery.md` (~430 lines, NQ-189): σ → crisp K-object recovery 5-step procedure (peak / basin / boundary / irrep / stability). Closes Critic 7-agent verdict §"What's Missing" foundational gap. K-field disjoint-support Cat A (§4.3), single-field F-multi Cat B target (§5), σ-driven $\theta^*$ Cat C (§7.2). Commitment 11 upgraded from declaration to procedurally-specified commitment.
+- `THEORY/2_substrate/sigma_framework/sigma_topological_invariance.md` (268 lines, NQ-190): σ-tuple decomposition into topological skeleton (preserved under graph homeomorphism) + geometric skeleton (perturbation-sensitive). Cat C topology classification of σ; T-σ-Lemma-1 corollary candidate (§4.1).
 
 ### Files Added (working/MF — 1 new birth-event draft)
 
-- `THEORY/working/MF/formation_birth_string_breaking.md` (486 lines, NQ-253): Formation-birth event analog to QuEra string-breaking experiment (Connection H gauge-theory candidate). Continuum analog of σ^A K-jump non-determinism (OP-0008) via lattice gauge-theory parallel.
+- `THEORY/2_substrate/Q2_multiformation/formation_birth_string_breaking.md` (486 lines, NQ-253): Formation-birth event analog to QuEra string-breaking experiment (Connection H gauge-theory candidate). Continuum analog of σ^A K-jump non-determinism (OP-0008) via lattice gauge-theory parallel.
 
 ### Files Added (logs/daily/2026-04-30 — gauge extension audit)
 
@@ -6763,8 +6841,8 @@ W5 Day 4 PM autonomous-execution batch under user directive "아직 close안하�
 
 ### Citation Corrections Propagated (#8)
 
-- `THEORY/working/MF/lambda_rep_ontology.md:200` — Garcia Trillos & Murray volume 169(3) → **167**(5), 934–958 + correct paper title "A new analytical approach to consistency and overfitting in regularized empirical risk minimization."
-- `THEORY/working/MF/mathematical_scaffolding_4tools.md:496` — same correction.
+- `THEORY/2_substrate/multiformation/lambda_rep_ontology.md:200` — Garcia Trillos & Murray volume 169(3) → **167**(5), 934–958 + correct paper title "A new analytical approach to consistency and overfitting in regularized empirical risk minimization."
+- `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md:496` — same correction.
 - `THEORY/logs/daily/2026-04-30/04_external_references_verification.md:453, 953` — same correction (audit-trail comments updated).
 
 **Total session corrections: 8** (Day 4 morning's 7 + this PM's 1).
@@ -6853,7 +6931,7 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
 
 ### Files Modified
 
-- `THEORY/canonical/canonical.md` (1593 → 1664 lines, +71):
+- `THEORY/2_substrate/canonical/canonical.md` (1593 → 1664 lines, +71):
   - §1 frontmatter: `description` updated; `released: 2026-04-29` for CV-1.5.1.
   - §1.1 Canonical Release History table: added CV-1.5.1 row (45A/60 claims/75%).
   - §1 Status Note line 94: appended Update 2026-04-29 with full delta.
@@ -6865,7 +6943,7 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
   - §14 CN6 entry line 1603: refined to specify K_act per Commitment 16.
   - §15 closing summary lines 1658, 1662: counts updated to 45A/5B/5C/5R/60 claims.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - last_updated → 2026-04-29.
   - **CV-1.5.1 release entry** added at top (above CV-1.5).
   - 4 new C-IDs (C-0717 Multi-Static, C-0718 multi-A-Static, C-0719 multi-D-Static, C-0720 Multi-1).
@@ -6874,13 +6952,13 @@ This release is structurally larger than CV-1.5.1 was originally scoped: ontolog
   - D-5 V5b-T' WITHDRAWN row recorded.
   - Counts: 43A → 45A, 4B → 5B, 57 → 60 claims.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - **OP-0008** σ^A K-jump Inheritance Non-Determinism added (HIGH severity).
   - **OP-0009** Multi-Formation Ontological Foundations added (HIGH severity, 7 sub-items: K-status / F / λ_rep / Architecture / C_t / Pre-objective / Empirical).
   - OP-0003 MO-1 entry: re-activation trigger rider added ("D-6b approval / NQ-248 begin").
   - Problem Statistics table: HIGH 1 → 3 (OP-0005 + OP-0008 + OP-0009).
 
-- `THEORY/working/MF/K_status_commitment.md` (NEW, ~480 lines):
+- `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` (NEW, ~480 lines):
   - OAT-1 deliverable: K-status canonical commitment audit; 4-month 5-conflicting-uses inventory + Commitment 16 two-tier resolution + 8-section compatibility audit.
 
 ### Theorem Status Changes
@@ -6981,14 +7059,14 @@ The original cleanup pass (earlier 2026-04-28) introduced a dual-axis system (CV
 
 ### Files Modified
 
-- `THEORY/canonical/canonical.md`:
+- `THEORY/2_substrate/canonical/canonical.md`:
   - Frontmatter (L1-7): `id: CV-1.2 / version: 1.2 / released: 2026-04-12` → `id: CV-1.5 / version: 1.5 / theory_revision: 2.1 / released: 2026-04-27`. Description updated to current state.
   - Main heading (L10): `# Canonical Specification of Soft Cognitive Cohesion (v1.2)` → `(CV-1.5)`.
   - Added explicit version-axes banner under main heading: explains theory-revision (v2.1) vs canonical-release (CV-1.5) two-axis convention.
   - L14-52 DEVELOPMENT NOTICE block: replaced CV-1.3-frozen content with CV-1.5 → CV-1.6 progression. Kept CV-1.0..CV-1.5 history list; added CV-1.6 development items (V5b-F, ζ_*, multi-formation σ Phase 5, SF Round merge, Commitment 14 (O5')(O7)).
   - §1 Status Note (L64): self-reference "version 2.1" reframed as "**CV-1.5 (2026-04-27)** of theory revision **v2.1**". Added inline §1.1 Canonical Release History table — 6 rows (CV-1.0..CV-1.5) with dates, Cat A counts, total claims, % proved, headline change.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - L12 Structure note: `(CV-1.0, CV-1.1, CV-1.2)` → `(CV-1.0 .. CV-1.5; current = CV-1.5)`.
   - L197 duplicate empty stub `### CV-1.2 (2026-04-12) — Previous Version (Frozen)` removed.
   - Version History bottom section reordered to reverse-chronological: CV-1.2 → CV-1.1 → CV-1.0 (was CV-1.0 → CV-1.1 → CV-1.2 ascending). Now full Version History reads CV-1.5 → CV-1.4 → CV-1.3 → CV-1.2 → CV-1.1 → CV-1.0 (newest first throughout).
@@ -7034,11 +7112,11 @@ W5 G0 + planned G1 (NQ-173 V5b-F partial Goldstone characterization) + G2 (NQ-17
 
 ### Files Modified (W5 Day 1, this entry)
 
-- `THEORY/canonical/canonical.md` (v1.4 → **v1.5**):
+- `THEORY/2_substrate/canonical/canonical.md` (v1.4 → **v1.5**):
   - §13: **5 new entries** added between T-V5b-T (line 1117) and T-Birth-Parametric (line 1286): T-σ-Lemma-1 (line 1169), T-σ-Lemma-2 (1189), T-σ-Lemma-3 (1213), T-σ-Theorem-3 (1235), T-σ-Theorem-4 (1262). canonical.md grows from 1420 → **1537 lines** (~117 lines added; entries are concise per W4 §13 style, more compact than initial plan §3 estimate of ~600 lines).
   - 4 location counts update: 38A → **43A**, 52 → **57 claims**, 73% → **75% fully proved** at lines 76 (§1 Status Note), 939 (§13 header), 1531 (§15 closing summary first sentence), 1535 (§15 Theory status). Each location appended with "(Update 2026-04-27: W5 Day 1 G0 ...)" attribution note.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - last_updated: 2026-04-26 → 2026-04-27.
   - **CV-1.5 release entry** added at line 18 (above CV-1.4 frozen entry).
   - 5 new C-IDs (C-0712 ~ C-0716) added to Active Claims table (lines 123-127), all "✅ accepted Cat A" except C-0716 ("Cat A in $\epsilon$-small regime") and C-0713 ("A/C-split" for sub-statement structure).
@@ -7212,12 +7290,12 @@ W4 close (initial 2026-04-25)을 user direction "아직 내용은 전부 W4로 �
 
 ### Files Modified (W4 extended)
 
-- `THEORY/canonical/canonical.md` (v1.3 → **v1.4**):
+- `THEORY/2_substrate/canonical/canonical.md` (v1.3 → **v1.4**):
   - §13: **T-V5b-T** Cat A entry 추가 (Pre-Objective Goldstone on Translation-Invariant Graphs). T-PreObj family 다음에 위치.
   - 4곳 counts update: 37A → **38A**, 51 → **52** claims (line 58, 906, 1300, 1304).
   - §15 closing summary: V5b-T narrative + W4 extended note 추가.
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - last_updated: 2026-04-25 → 2026-04-26.
   - **CV-1.4 release entry** 추가 (W4 extended close).
   - C-0710 (T-V5b-T) + C-0711 (V5b-F Cat C, NQ-173 carry) Active Claims 추가.
@@ -7324,7 +7402,7 @@ W4 (Apr 19–25) 7일 누적 결과 마감. **Critical 3건 (F-1, M-1, MO-1) 모
 
 ### Files Modified
 
-- `THEORY/canonical/theorem_status.md`:
+- `THEORY/2_substrate/canonical/theorem_status.md`:
   - **OP-0001 F-1**: ❌ UNRESOLVED 🔴 → ✅ **SPLIT-RESOLVED** (Pure $\mathcal{E}_{\mathrm{bd}}$ via T-Merge (b) Cat A pre-existing; Full SCC via Theorem 2 (i) Cat A graph-class independent).
   - **OP-0002 M-1**: ❌ UNRESOLVED 🔴 → ✅ **LAYER-CLARIFIED** (proved theorem T-Merge (b) misframed as problem; Static/Dynamic Separation explains apparent K=1 vs K>1 conflict).
   - **OP-0003 MO-1**: ❌ UNRESOLVED 🟠 → ⚪ **SIDESTEPPED** (single-formation σ-framework on $\Sigma_m$ requires no corners; multi-formation Phase 5 still open).
@@ -7438,7 +7516,7 @@ W4의 핵심 narrative arc: **04-19 N-1 reframing 발견 → 04-21 K_soft + ℱ_
 - `THEORY/logs/weekly/README.md` — Weekly rotation workflow 가이드 (폴더 명명, daily append, weekly close, freeze policy, rationale, 기존 logs/ 구조와의 관계).
 
 ### Files Modified
-- `THEORY/canonical/README.md` — Pipeline 섹션 재작성. `canonical_sub.md` 제거, 외부 staging 은 `../logs/weekly/YYYY-MM-W<n>/` 로 포인팅.
+- `THEORY/2_substrate/canonical/canonical_readme.md` — Pipeline 섹션 재작성. `canonical_sub.md` 제거, 외부 staging 은 `../logs/weekly/YYYY-MM-W<n>/` 로 포인팅.
 - `THEORY/logs/weekly/2026-04-W4/weekly_draft_storming.md` — Header 재작성: "Canonical Sub 주간 누적 Buffer" → "Weekly Draft Storming 2026-04-W4", Week scope 명시, 파일 위치 이력 명시, rotation rationale 추가, pipeline diagram 경로 수정.
 
 ### Theorem Status Changes
@@ -7483,7 +7561,7 @@ Reformulation Stage 0 (Purpose Declaration) 의 blocking gate 해소를 위한 *
 
 ### Files Modified
 - `THEORY/CHANGELOG.md` — 이 entry 추가
-- `THEORY/canonical/README.md` — Pipeline 섹션 개정 (working → canonical_sub → canonical.md weekly merge 구조 반영)
+- `THEORY/2_substrate/canonical/canonical_readme.md` — Pipeline 섹션 개정 (working → canonical_sub → canonical.md weekly merge 구조 반영)
 
 ### Theorem Status Changes
 - **None.** canonical.md 미수정, theorem_status.md 미수정. `integer_K_dependency_map.md` 는 기존 canonical §13 의 암묵적 의존성을 **명시화** 한 working-level 문서이며 category 변경을 동반하지 않음.
@@ -7525,7 +7603,7 @@ Split the repository into **CODE/** (executable assets — scc, tests, experimen
 - `CODE/tests/conftest.py` — added 3-line `sys.path` bridge so pytest resolves `scc` from `CODE/`
 
 ### Files Created
-- `CODE/README.md`, `THEORY/canonical/README.md`, `THEORY/working/README.md`, `THEORY/logs/README.md` — orientation for each area
+- `CODE/README.md`, `THEORY/2_substrate/canonical/canonical_readme.md`, `THEORY/2_substrate/substrate_readme.md`, `THEORY/logs/README.md` — orientation for each area
 - `THEORY/logs/daily/2026-04-19.md` — first log entry in new structure (this restructure itself)
 
 ### Theorem Status Changes
@@ -11011,10 +11089,10 @@ Not run (docs-only tracker/changelog integration update). Fresh verification thi
 SCC 이론의 인식 흐름 7단계(T8 / T-PreObj-1 / D-ST-3 / σ-framework / P-F-A1+K-Select / T-Temporal-Identity / T-σ-Inherit)에서 각 단계가 도입하는 보조구조(매개변수, 함수, 측도, 임계값, 가설 패키지)를 단일 레지스트리로 모았다. 이론이 `u_t`를 유일한 primitive로 약속함에도 실제로는 외생적 보조구조가 단계마다 누적된다는 직관을 *문서적 사실*로 만든다. 새 정리 없음, 클레임 카운트 불변(83), 어느 정리의 상태도 변경하지 않음. Open Problems Catalog도 변경하지 않음 — 미등록 항목(`ρ_pers`, `ε_kernel`, `T_*`, 가설 패키지 호환성)은 registry §4가 명시.
 
 ### Files Created
-- `THEORY/canonical/auxiliary_structures_master.md` (AUX-1.0) — Stage 1–7 인벤토리, 단계횡단 drift 표, 후보 1(보조구조 묶음 통일 누락) 진단, 미해결 등록 4항, scale/observer tag 확장 슬롯, 검증 grep 명령.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` (AUX-1.0) — Stage 1–7 인벤토리, 단계횡단 drift 표, 후보 1(보조구조 묶음 통일 누락) 진단, 미해결 등록 4항, scale/observer tag 확장 슬롯, 검증 grep 명령.
 
 ### Files Modified
-- `THEORY/canonical/theorem_status.md` — Structure 헤더 부근에 master registry 포인터 1줄 추가.
+- `THEORY/2_substrate/canonical/theorem_status.md` — Structure 헤더 부근에 master registry 포인터 1줄 추가.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes
@@ -11037,7 +11115,7 @@ Not run (메타 문서 신설; 코드 변경 없음). 검증은 registry §6의 
 - None.
 
 ### Files Modified
-- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.0 → AUX-1.1. (a) Stage 0 row를 §1에 추가; (b) §2 cross-stage table에 T row 추가 (모든 stage에 영향, 메타-불일관 명시); (c) §4.5 신설 — T 미등록의 상세 + 9-조건 downstream hypothesis package 표 + OMS-2.0과의 관계 + fixed-point 구조 설명 + `OP-AUX-T-FIXED-POINT` 시드; (d) §6 검증 grep 4항 추가; (e) 부록 변경 기록에 AUX-1.1 row.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — AUX-1.0 → AUX-1.1. (a) Stage 0 row를 §1에 추가; (b) §2 cross-stage table에 T row 추가 (모든 stage에 영향, 메타-불일관 명시); (c) §4.5 신설 — T 미등록의 상세 + 9-조건 downstream hypothesis package 표 + OMS-2.0과의 관계 + fixed-point 구조 설명 + `OP-AUX-T-FIXED-POINT` 시드; (d) §6 검증 grep 4항 추가; (e) 부록 변경 기록에 AUX-1.1 row.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes
@@ -11062,7 +11140,7 @@ Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6�
 - None.
 
 ### Files Modified
-- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.1 → AUX-1.2. (a) §7 COB 원칙 신설 (CN-COB 진술 + 출처 + OMS-1 관계 + registry-internal 적용 범위); (b) §1 Stage 0–7 모든 표 (8개)에 Origin 열 추가 (D/A/P/U 분류); (c) §4.6 신설 (COB 위반/모호 5항: T_* / m / Wigner / Mulliken / 가설 패키지); (d) §4.7 신설 (ξ 카탈로그 시드 + T_* Route C 권장 + 분류 결정 미루어진 항목 표); (e) §6 검증 grep 5항 추가; (f) 부록 변경 기록에 AUX-1.2 row.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — AUX-1.1 → AUX-1.2. (a) §7 COB 원칙 신설 (CN-COB 진술 + 출처 + OMS-1 관계 + registry-internal 적용 범위); (b) §1 Stage 0–7 모든 표 (8개)에 Origin 열 추가 (D/A/P/U 분류); (c) §4.6 신설 (COB 위반/모호 5항: T_* / m / Wigner / Mulliken / 가설 패키지); (d) §4.7 신설 (ξ 카탈로그 시드 + T_* Route C 권장 + 분류 결정 미루어진 항목 표); (e) §6 검증 grep 5항 추가; (f) 부록 변경 기록에 AUX-1.2 row.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes
@@ -11093,7 +11171,7 @@ Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6�
 - None.
 
 ### Files Modified
-- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.2 → AUX-1.3. (a) §4.8 신설 — 32개 가설 전수 감사표 (4.8.1 L1-J / 4.8.2 H1–H5 / 4.8.3 LM / 4.8.4 Temporal + HWF-1 / 4.8.5 요약); (b) §4.6 확장 — 4.6.6 H5 COB 위반 후보, 4.6.7 HWF-1 COB 위반 후보, 4.6.8 P7 D/A hybrid; (c) §1 6개 가설 패키지 row Origin 갱신 (Stage 3 L1-J/P7, Stage 5 H1-H5/LM, Stage 6 A1-A9/DR/HWF-1/H-SINK-ENT); (d) §6 검증 grep 3항 추가; (e) §4.7.3 미루어진 항목 표에 H5/HWF-1/P7 추가; (f) 부록 변경 기록에 AUX-1.3 row.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — AUX-1.2 → AUX-1.3. (a) §4.8 신설 — 32개 가설 전수 감사표 (4.8.1 L1-J / 4.8.2 H1–H5 / 4.8.3 LM / 4.8.4 Temporal + HWF-1 / 4.8.5 요약); (b) §4.6 확장 — 4.6.6 H5 COB 위반 후보, 4.6.7 HWF-1 COB 위반 후보, 4.6.8 P7 D/A hybrid; (c) §1 6개 가설 패키지 row Origin 갱신 (Stage 3 L1-J/P7, Stage 5 H1-H5/LM, Stage 6 A1-A9/DR/HWF-1/H-SINK-ENT); (d) §6 검증 grep 3항 추가; (e) §4.7.3 미루어진 항목 표에 H5/HWF-1/P7 추가; (f) 부록 변경 기록에 AUX-1.3 row.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes
@@ -11118,7 +11196,7 @@ Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6�
 - None.
 
 ### Files Modified
-- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.3 → AUX-1.4. (a) §4.9 신설 — 10개 D-derivation 시도 sub-section (§4.9.1 T_* / §4.9.2 m / §4.9.3 Wigner / §4.9.4 Mulliken / §4.9.5 H5 / §4.9.6 HWF-1 / §4.9.7 P7 / §4.9.8 I_t / §4.9.9 T hyp pkg / §4.9.10 H-SINK-ENT) + §4.9.11 요약; (b) §1 8개 row Origin 갱신 (Stage 0: I_t, T hyp pkg; Stage 1: m; Stage 4: Mulliken; Stage 5: T_*; Stage 6: HWF-1, H-SINK-ENT; Stage 7: Wigner); (c) §6 검증 grep 4항 추가; (d) 부록 변경 기록에 AUX-1.4 row.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — AUX-1.3 → AUX-1.4. (a) §4.9 신설 — 10개 D-derivation 시도 sub-section (§4.9.1 T_* / §4.9.2 m / §4.9.3 Wigner / §4.9.4 Mulliken / §4.9.5 H5 / §4.9.6 HWF-1 / §4.9.7 P7 / §4.9.8 I_t / §4.9.9 T hyp pkg / §4.9.10 H-SINK-ENT) + §4.9.11 요약; (b) §1 8개 row Origin 갱신 (Stage 0: I_t, T hyp pkg; Stage 1: m; Stage 4: Mulliken; Stage 5: T_*; Stage 6: HWF-1, H-SINK-ENT; Stage 7: Wigner); (c) §6 검증 grep 4항 추가; (d) 부록 변경 기록에 AUX-1.4 row.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes
@@ -11146,7 +11224,7 @@ Not run (메타 문서 amendment; 코드 변경 없음). 검증은 registry §6�
 - None.
 
 ### Files Modified
-- `THEORY/canonical/auxiliary_structures_master.md` — AUX-1.4 → AUX-1.5. §8 신설 (6 sub-section): 8.1 분류 완료 (D/A/P/hybrid/external input), 8.2 U 잔류 (T_*, H5만, 따로 분리), 8.3 통계, 8.4 5-amendment 결산, 8.5 9개 carry-forward 결정 사항, 8.6 인식론적 결산. 부록 변경 기록에 AUX-1.5 row.
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — AUX-1.4 → AUX-1.5. §8 신설 (6 sub-section): 8.1 분류 완료 (D/A/P/hybrid/external input), 8.2 U 잔류 (T_*, H5만, 따로 분리), 8.3 통계, 8.4 5-amendment 결산, 8.5 9개 carry-forward 결정 사항, 8.6 인식론적 결산. 부록 변경 기록에 AUX-1.5 row.
 - `THEORY/CHANGELOG.md` — 이 entry.
 
 ### Theorem Status Changes

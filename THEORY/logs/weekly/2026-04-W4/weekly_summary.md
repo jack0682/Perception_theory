@@ -803,11 +803,11 @@ T1=2 + T2=5 + T3=3 + T4=2 분류 (§3 참조).
 
 ## §5. Canonical Merge Recommendations (T1만, 구체 diff)
 
-### 5.1 `THEORY/canonical/theorem_status.md` 수정 (3건)
+### 5.1 `THEORY/2_substrate/canonical/theorem_status.md` 수정 (3건)
 
 위 §4의 3개 diff block.
 
-### 5.2 `THEORY/canonical/canonical.md` §13 추가
+### 5.2 `THEORY/2_substrate/canonical/canonical.md` §13 추가
 
 ```markdown
 | T-PreObj-1 | Pre-Objective Multi-Peak Formation (Theorem 2 family) | Cat A | 2026-04-24 |
@@ -822,7 +822,7 @@ T1=2 + T2=5 + T3=3 + T4=2 분류 (§3 참조).
 |            | F-1 (pure portion + full portion) split-resolved as corollary |
 ```
 
-### 5.3 `THEORY/canonical/theorem_status.md` 추가
+### 5.3 `THEORY/2_substrate/canonical/theorem_status.md` 추가
 
 T-PreObj-1 family 항목 + 6 NQ Cat A entries (NQ-132/133/134/135/150/155 + NQ-141/128).
 

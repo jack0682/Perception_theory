@@ -143,15 +143,15 @@
 ### 신설 / 변경된 주요 파일
 
 **신설:**
-- `THEORY/canonical/DECLARATION.md` (DECL-1.0)
-- `THEORY/canonical/hypothesis_tree.md` (HT-3.0)
+- `THEORY/0_axis/DECLARATION.md` (DECL-1.0)
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.0)
 - `THEORY/working/observer_moduli/` — 30+ 파일 (OMS 전체 워킹 패키지)
 - `CODE/experiments/exp86–exp88` + `observer_moduli/vp8–vp11` (VP 실험 스위트)
 - `CODE/experiments/results/observer_moduli/` (VP-1 ~ VP-11 결과 JSON+MD)
 
 **수정:**
-- `THEORY/canonical/canonical.md` — Appendix OMS (§A–§M) 추가; CV-1.11 frontmatter
-- `THEORY/canonical/theorem_status.md` — CV-1.7~1.11 count updates; 9개 신규 정리 행
+- `THEORY/2_substrate/canonical/canonical.md` — Appendix OMS (§A–§M) 추가; CV-1.11 frontmatter
+- `THEORY/2_substrate/canonical/theorem_status.md` — CV-1.7~1.11 count updates; 9개 신규 정리 행
 - `THEORY/CHANGELOG.md` — ~2,000줄 추가 (W6 D1–D6 전 세션)
 
 ---

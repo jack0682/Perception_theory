@@ -18,9 +18,9 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | Bytes | mtime | Status |
 |---|---:|---:|---|---|
-| `THEORY/working/SF/sigma_theorem4_higher_order.md` | 819 | 90040 | Apr 30 19:14 | ✅ persisted (revised pivot — was 303 lines pre-pivot per Wave 3 nq-187-rewriter) |
-| `THEORY/working/SF/sigma_theorem4_canonical_revision.md` | 338 | 20634 | Apr 30 19:23 | ✅ persisted (post-EOD op-0008 Task #63) |
-| `THEORY/working/SF/nq187b_L_extrapolation.md` | 422 | 19815 | Apr 30 19:29 | ✅ persisted (post-EOD α-path input) |
+| `THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` | 819 | 90040 | Apr 30 19:14 | ✅ persisted (revised pivot — was 303 lines pre-pivot per Wave 3 nq-187-rewriter) |
+| `THEORY/2_substrate/sigma_framework/sigma_theorem4_canonical_revision.md` | 338 | 20634 | Apr 30 19:23 | ✅ persisted (post-EOD op-0008 Task #63) |
+| `THEORY/2_substrate/sigma_framework/nq187b_L_extrapolation.md` | 422 | 19815 | Apr 30 19:29 | ✅ persisted (post-EOD α-path input) |
 | `CODE/scripts/test_sigma_theorem4_scaling.py` | — | 14645 | Apr 30 19:01 | ✅ persisted (lanczos-engineer) |
 | `CODE/scripts/results/sigma_theorem4_scaling.json` | — | 18075 | Apr 30 19:02 | ✅ persisted (15 (L,ε) combinations raw data) |
 | `THEORY/logs/daily/2026-04-30/11_nq187_scaling_test_results.md` | — | 8485 | Apr 30 19:03 | ✅ persisted |
@@ -31,16 +31,16 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | mtime |
 |---|---:|---|
-| `THEORY/working/MF/sigma_rich_augmentation.md` | 533 | Apr 30 18:44 |
-| `THEORY/working/MF/sigma_rich_centroid_derivation.md` | 306 | Apr 30 18:54 |
-| `THEORY/working/MF/sigma_rich_orientation_derivation.md` | 311 | Apr 30 18:57 |
-| `THEORY/working/MF/sigma_rich_phi_proof.md` | 313 | Apr 30 19:02 |
-| `THEORY/working/MF/sigma_rich_wigner_derivation.md` | 333 | Apr 30 18:59 |
-| `THEORY/working/MF/sigma_rich_vs_standard_R23.md` | 444 | Apr 30 19:26 |
-| `THEORY/working/MF/sigma_rich_VR_phase1.md` | 336 | Apr 30 18:52 |
-| `THEORY/working/SF/sigma_rich_refinement_theorem.md` | 188 | Apr 30 19:04 |
-| `THEORY/working/SF/sigma_fingerprint_qrcode.md` | 195 | Apr 30 19:10 |
-| `THEORY/working/SF/sigma_fingerprint_algorithm.md` | 344 | Apr 30 19:21 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md` | 533 | Apr 30 18:44 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_centroid_derivation.md` | 306 | Apr 30 18:54 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_orientation_derivation.md` | 311 | Apr 30 18:57 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_phi_proof.md` | 313 | Apr 30 19:02 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_wigner_derivation.md` | 333 | Apr 30 18:59 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_vs_standard_R23.md` | 444 | Apr 30 19:26 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_VR_phase1.md` | 336 | Apr 30 18:52 |
+| `THEORY/2_substrate/sigma_framework/sigma_rich_refinement_theorem.md` | 188 | Apr 30 19:04 |
+| `THEORY/2_substrate/sigma_framework/sigma_fingerprint_qrcode.md` | 195 | Apr 30 19:10 |
+| `THEORY/2_substrate/sigma_framework/sigma_fingerprint_algorithm.md` | 344 | Apr 30 19:21 |
 
 **Subtotal**: 10 files / **3303 working lines**. *All un-audited by lead-side critic.*
 
@@ -48,12 +48,12 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | mtime |
 |---|---:|---|
-| `THEORY/working/MF/k_selection_mechanism.md` | 520 | Apr 30 18:44 (op-0005-architect upstream) |
-| `THEORY/working/MF/k_selection_a_free_energy.md` | 306 | Apr 30 19:05 |
-| `THEORY/working/MF/k_selection_b_kramers.md` | 315 | Apr 30 19:08 |
-| `THEORY/working/MF/k_selection_c_numerical_anchor.md` | 409 | Apr 30 19:10 |
-| `THEORY/working/MF/k_selection_compatibility_proof.md` | 365 | Apr 30 19:13 |
-| `THEORY/working/MF/n1_kramers_extension.md` | 121 | Apr 30 18:57 (Wave 3 lead-direct) |
+| `THEORY/2_substrate/Q4_kselection/k_selection_mechanism.md` | 520 | Apr 30 18:44 (op-0005-architect upstream) |
+| `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` | 306 | Apr 30 19:05 |
+| `THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md` | 315 | Apr 30 19:08 |
+| `THEORY/2_substrate/Q4_kselection/k_selection_c_numerical_anchor.md` | 409 | Apr 30 19:10 |
+| `THEORY/2_substrate/Q4_kselection/k_selection_compatibility_proof.md` | 365 | Apr 30 19:13 |
+| `THEORY/2_substrate/Q3_dynamics/n1_kramers_extension.md` | 121 | Apr 30 18:57 (Wave 3 lead-direct) |
 
 **Subtotal**: 6 files / **2036 working lines**. K-Selection a/b/c/compatibility cluster (4 files / 1395 lines) are post-EOD, un-audited.
 
@@ -61,15 +61,15 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | Type |
 |---|---:|---|
-| `THEORY/working/MF/foundational_bridges_2026.md` | 402 | 7 bridges B-1..B-7, NQ-261..267 |
-| `THEORY/working/SF/theorem_2g_schramm_restatement.md` | 156 | T-PreObj-1G Schramm-locality CV-1.6 candidate |
-| `THEORY/working/SF/schramm_sigma_locality_theorem.md` | 343 | schramm-locality-prover Cat BC |
-| `THEORY/working/MF/bernshtein_conservation.md` | 206 | bernshtein-prover Cat BC |
-| `THEORY/working/SF/formation_fundamental_group.md` | 349 | pi1-formation-prover B-3 π_1 |
-| `THEORY/working/MF/cn15_static_dynamic_separation.md` | 146 | CN15 CV-1.6 candidate |
-| `THEORY/working/SF/sigma_class_category.md` | 185 | σ-class category Fukaya-spirit |
-| `THEORY/working/SF/sigma_lie_algebra_structure.md` | 323 | NQ-258 McKay-spirit + Lie algebra |
-| `THEORY/working/SF/sigma_topological_invariance.md` | 321 | NQ-190 Wave 1 + Wave 3 fix |
+| `THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md` | 402 | 7 bridges B-1..B-7, NQ-261..267 |
+| `THEORY/2_substrate/sigma_framework/theorem_2g_schramm_restatement.md` | 156 | T-PreObj-1G Schramm-locality CV-1.6 candidate |
+| `THEORY/2_substrate/sigma_framework/schramm_sigma_locality_theorem.md` | 343 | schramm-locality-prover Cat BC |
+| `THEORY/2_substrate/Q3_dynamics/bernshtein_conservation.md` | 206 | bernshtein-prover Cat BC |
+| `THEORY/2_substrate/sigma_framework/formation_fundamental_group.md` | 349 | pi1-formation-prover B-3 π_1 |
+| `THEORY/2_substrate/Q2_multiformation/cn15_static_dynamic_separation.md` | 146 | CN15 CV-1.6 candidate |
+| `THEORY/2_substrate/sigma_framework/sigma_class_category.md` | 185 | σ-class category Fukaya-spirit |
+| `THEORY/2_substrate/sigma_framework/sigma_lie_algebra_structure.md` | 323 | NQ-258 McKay-spirit + Lie algebra |
+| `THEORY/2_substrate/sigma_framework/sigma_topological_invariance.md` | 321 | NQ-190 Wave 1 + Wave 3 fix |
 
 **Subtotal**: 9 files / **2431 working lines**.
 
@@ -78,11 +78,11 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 | File | Lines | Notes |
 |---|---:|---|
 | `THEORY/working/CV-1.6_packet_crosswalk.md` | 205 | 11 D-items mapped (lead-direct) |
-| `THEORY/working/MF/commitments_18_19_drafts.md` | 144 | CV-1.7 candidate texts (lead-direct) |
-| `THEORY/working/MF/commitment_18_sigma_rich_packet.md` | 459 | post-EOD packet |
-| `THEORY/working/MF/commitment_19_k_selection_axiom_packet.md` | 376 | post-EOD packet |
-| `THEORY/working/MF/r24_dataset_design.md` | 146 | Bridge B-2 σ-locality verification dataset |
-| `THEORY/working/MF/op003_mo1_status_review.md` | 140 | MO-1 sidestep preservation review |
+| `THEORY/2_substrate/multiformation/commitments_18_19_drafts.md` | 144 | CV-1.7 candidate texts (lead-direct) |
+| `THEORY/2_substrate/multiformation/commitment_18_sigma_rich_packet.md` | 459 | post-EOD packet |
+| `THEORY/2_substrate/Q4_kselection/commitment_19_k_selection_axiom_packet.md` | 376 | post-EOD packet |
+| `THEORY/2_substrate/multiformation/r24_dataset_design.md` | 146 | Bridge B-2 σ-locality verification dataset |
+| `THEORY/2_substrate/multiformation/op003_mo1_status_review.md` | 140 | MO-1 sidestep preservation review |
 
 **Subtotal**: 6 files / **1470 lines**. The 459+376=835 lines of post-EOD Commitment 18/19 packets are un-audited.
 
@@ -90,13 +90,13 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | OAT |
 |---|---:|---|
-| `THEORY/working/MF/F_Kstep_K_triple.md` | 451 | OAT-2 (BC-1 fails generic update Day 4 PM) |
-| `THEORY/working/MF/lambda_rep_ontology.md` | 360 | OAT-3 (1 citation correction) |
-| `THEORY/working/MF/shared_pool_canonical_proposal.md` | 402 | OAT-4 |
-| `THEORY/working/MF/cobelonging_vs_sigmaD.md` | 392 | OAT-5 (Specht 1933 → 1935 correction) |
-| `THEORY/working/MF/pre_objective_K_field_tension.md` | 534 | OAT-6 |
-| `THEORY/working/MF/single_high_F_equivalence.md` | 511 | OAT-7 (R23 numerical + σ-irrep CONFIRMED) |
-| `THEORY/working/MF/mathematical_scaffolding_4tools.md` | 613 | supplementary (4-tool, Commitment 17 candidate §8.1) |
+| `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` | 451 | OAT-2 (BC-1 fails generic update Day 4 PM) |
+| `THEORY/2_substrate/multiformation/lambda_rep_ontology.md` | 360 | OAT-3 (1 citation correction) |
+| `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` | 402 | OAT-4 |
+| `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md` | 392 | OAT-5 (Specht 1933 → 1935 correction) |
+| `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md` | 534 | OAT-6 |
+| `THEORY/2_substrate/Q2_multiformation/single_high_F_equivalence.md` | 511 | OAT-7 (R23 numerical + σ-irrep CONFIRMED) |
+| `THEORY/2_substrate/Q3_dynamics/mathematical_scaffolding_4tools.md` | 613 | supplementary (4-tool, Commitment 17 candidate §8.1) |
 
 **Subtotal**: 7 files / **3263 working lines**. OAT batch is critic-passed at Day 4 morning audit (`05_critic_final_review.md`); cleanup deferrals are minor.
 
@@ -104,10 +104,10 @@ Method: `ls -la` + `wc -l` on every file expected per `15_wave4_carry_forward.md
 
 | File | Lines | Status |
 |---|---:|---|
-| `THEORY/working/MF/scc_mass_gap_connection.md` | 445 | NQ-249 REVISE applied (C1+C2+C3+M1); M2-M6 + m1-m5 deferred |
-| `THEORY/working/MF/formation_birth_string_breaking.md` | 520 | NQ-253 — REVISE per critic (2 critical + 5 major); fixes partially applied per Wave 3 |
-| `THEORY/working/MF/nq242c_explicit_construction.md` | 475 | post-EOD; W6 D6 input |
-| `THEORY/working/MF/sigma_multi_trajectory.md` | 283 | Theorem 4.6.1 working file |
+| `THEORY/2_substrate/Q3_dynamics/scc_mass_gap_connection.md` | 445 | NQ-249 REVISE applied (C1+C2+C3+M1); M2-M6 + m1-m5 deferred |
+| `THEORY/2_substrate/Q2_multiformation/formation_birth_string_breaking.md` | 520 | NQ-253 — REVISE per critic (2 critical + 5 major); fixes partially applied per Wave 3 |
+| `THEORY/2_substrate/multiformation/nq242c_explicit_construction.md` | 475 | post-EOD; W6 D6 input |
+| `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` | 283 | Theorem 4.6.1 working file |
 
 **Subtotal**: 4 files / **1723 working lines**.
 

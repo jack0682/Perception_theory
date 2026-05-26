@@ -21,7 +21,7 @@ coc_enforcement_level: strict  # 모든 lemma 의 anchored chain
 expected_session_count: 1-2  # multi-session day (3-track 병렬)
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[W8_strategic_plan]] · [[00_index]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[../2026-05-18/broad_survey_B2|어제 broad_survey_B2]] · [[../MAIN_PROMPT_v3]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[W8_strategic_plan]] · [[00_index]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[broad_survey_B2|어제 broad_survey_B2]] · [[MAIN_PROMPT_v3]]
 
 
 # 00 — Plan (2026-05-19, W8-Day2)
@@ -117,7 +117,7 @@ grep -r "op0008_merge_wigner_perturbation\|Kato resolvent.*SCC\|5x5 toy.*K-jump"
 
 ### Track A — Atlas §3 + §4 full + k_select_pf_obs_unified_view (목표 ~1.5h)
 
-**산출 파일 1**: `THEORY/working/MF/MF_atlas.md` v0.1 → v0.2 (§3 + §4 full).
+**산출 파일 1**: `THEORY/2_substrate/multiformation/MF_atlas.md` v0.1 → v0.2 (§3 + §4 full).
 
 **§3 Equilibrium K-selection (T-K-Select-PF Cat B) full**:
 - T-K-Select-PF (canonical Cat B, CV-1.10 Session R 2026-05-06) 정리 본문 재기술.
@@ -286,7 +286,7 @@ Track B PRIMARY 의 *substantive lemma 도출* 이 Day 2 의 *single most import
 | `THEORY/working/MF/op0008_merge_wigner_perturbation.md` | Day 2 primary deliverable | Cat B candidate or Cat C SKETCH |
 | `THEORY/working/MF/k_select_pf_obs_unified_view.md` | Day 2 Track A 신규 | Cat B SKETCH (P-K-Select-Unified) |
 | `THEORY/working/MF/op0005_dyn_kramers_sketch.md` | Day 2 Track B secondary | Cat C SKETCH (W9+ staging) |
-| `THEORY/working/MF/MF_atlas.md` v0.1 → v0.2 | Day 2 Track A 갱신 | n/a (working atlas) |
+| `THEORY/2_substrate/multiformation/MF_atlas.md` v0.1 → v0.2 | Day 2 Track A 갱신 | n/a (working atlas) |
 
 추가 code files:
 | 파일 | 단계 |
@@ -309,7 +309,7 @@ python3 experiments/exp91_ksoft_hard_recovery.py
 python3 -m pytest tests/ -q   # 225 + 2 신규 + 1xf, 기존 225 변동 없음
 
 # Track A — file existence
-ls -la THEORY/working/MF/MF_atlas.md  # v0.2 (§3 + §4 full)
+ls -la THEORY/2_substrate/multiformation/MF_atlas.md  # v0.2 (§3 + §4 full)
 ls -la THEORY/working/MF/k_select_pf_obs_unified_view.md  # 신규
 
 # Track B — file existence

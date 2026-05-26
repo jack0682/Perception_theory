@@ -51,7 +51,7 @@ W7 EOD (5/15) 의 결정 C — *어휘 회귀 패턴 (V-AFD/R-2/z_t 3 회) 의 �
 
 ### Track A — Atlas Skeleton (목표 ~1.5h)
 
-**산출 파일:** `THEORY/working/MF/MF_atlas.md` v0.1
+**산출 파일:** `THEORY/2_substrate/multiformation/MF_atlas.md` v0.1
 
 **12 sections, 각 ~1 paragraph + xref + *gap 또는 새 후보 1개* 명시:**
 
@@ -81,7 +81,7 @@ grep -r "MF_atlas\|multi-formation atlas" THEORY/canonical/ THEORY/working/
 
 #### Agent B2 PRIMARY — OP-0008 Wigner-projection 2-route mapping
 
-**산출 파일:** `THEORY/working/MF/broad_survey_B2.md` (가장 두꺼움, ~150-250줄 목표)
+**산출 파일:** `THEORY/2_substrate/multiformation/broad_survey_B2.md` (가장 두꺼움, ~150-250줄 목표)
 
 **내용:**
 - Approach (a) **Perturbation theory**: $H_{\mathrm{merged}} = H_1 \oplus H_2 + V_{\mathrm{coup}}$, $\lVert V_{\mathrm{coup}} \rVert_F = O(d_{\mathrm{inter}}^{-\alpha})$, Kato resolvent expansion (Reed-Simon IV §XIII.5) 의 SCC adaptation 가능성.
@@ -91,13 +91,13 @@ grep -r "MF_atlas\|multi-formation atlas" THEORY/canonical/ THEORY/working/
 
 #### Agent B1 LIGHTER — OP-0021 Mori-Zwanzig + canonical MF/pf_tstar_langevin.md gap 5개
 
-**산출 파일:** `THEORY/working/MF/broad_survey_B1.md` (~80-120줄)
+**산출 파일:** `THEORY/2_substrate/multiformation/broad_survey_B1.md` (~80-120줄)
 
 **내용:** W9 staging only — Mori-Zwanzig Route A literature + canonical `MF/pf_tstar_langevin.md` 의 5 gap (NOP-F / NOP-J 중 가장 가벼운 것) 식별.
 
 #### Agent B3 LIGHTER — OP-0005-DYN Kramers 3-pillar multi-formation lift
 
-**산출 파일:** `THEORY/working/MF/broad_survey_B3.md` (~80-120줄)
+**산출 파일:** `THEORY/2_substrate/multiformation/broad_survey_B3.md` (~80-120줄)
 
 **내용:** W9+ staging only — nucleation / metastability / coarsening 의 multi-formation 확장 후보. Package II 입력.
 
@@ -226,7 +226,7 @@ python3 experiments/exp90_sanity_canonical_xref.py
 python3 -m pytest tests/ -v   # 215 passed + 1 xfailed (+ Day 1 신규)
 
 # Track A
-ls -la THEORY/working/MF/MF_atlas.md   # exists + 12 sections
+ls -la THEORY/2_substrate/multiformation/MF_atlas.md   # exists + 12 sections
 
 # Track B
 ls -la THEORY/working/MF/broad_survey_{B1,B2,B3}.md   # 3 파일 존재

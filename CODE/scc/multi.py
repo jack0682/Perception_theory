@@ -20,7 +20,7 @@ replaced by a (K±1)-field chart. The foundational single-field architecture
 (find_formation in optimizer.py + K_act = #PersComp post-hoc) is the
 canonical F_M(P) approach; K-field is a computational accelerator within
 stable basins. Full migration to F_M(P) as primary architecture is deferred
-to v2.0 (W11–W12). See THEORY/working/MF/op_0009_pre_a_kfield_chart_validity.md.
+to v2.0 (W11–W12). See THEORY/2_substrate/Q4_kselection/op_0009_pre_a_kfield_chart_validity.md.
 """
 
 from __future__ import annotations

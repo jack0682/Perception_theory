@@ -10,7 +10,7 @@ strategic_plan: 폐기됨 (원래 W8-Day2 OP-0008 perturbation 작업은 _archiv
 prompt_body: MAIN_PROMPT_v3.md
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[00_plan|본 plan]] · [[../MAIN_PROMPT_v3]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[../2026-05-18/99_summary|어제 99_summary]] · [[auxiliary_structures_master|AUX-1.5 registry]] · [[00_plan|본 plan]] · [[MAIN_PROMPT_v3]]
 
 # 00 — Index (2026-05-19, W8-Day2)
 
@@ -74,15 +74,15 @@ prompt_body: MAIN_PROMPT_v3.md
 
 ```bash
 # H5 관련 기존 자료 확인
-grep -nE "Morse stability|H5\b|spinodal.*degenerate" THEORY/canonical/canonical.md
+grep -nE "Morse stability|H5\b|spinodal.*degenerate" THEORY/2_substrate/canonical/canonical.md
 grep -rn "H5_morse|morse_spinodal" THEORY/working/
 
 # T_* 관련 기존 자료 확인
-grep -nE "T_\*|effective.*stochastic.*temperature|OP-0021" THEORY/canonical/canonical.md
+grep -nE "T_\*|effective.*stochastic.*temperature|OP-0021" THEORY/2_substrate/canonical/canonical.md
 grep -rn "T_star_fixed|tstar_brouwer" THEORY/working/
 
 # 어제 AUX-1.5 §4.6.6 (H5), §4.6.1 (T_*), §4.9.5 / §4.9.1 cross-ref
-grep -nE "§4\.6\.[16]|§4\.9\.[15]" THEORY/canonical/auxiliary_structures_master.md
+grep -nE "§4\.6\.[16]|§4\.9\.[15]" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 ```
 
 ### Track switching 60-min 룰
@@ -103,7 +103,7 @@ H5 (PRIMARY) 60분 막힘 → T_* (SECONDARY) 로 전환. 둘 다 막히면 §F 
 - `canonical.md`, `theorem_status.md`, `hypothesis_tree.md`, `CHANGELOG.md`, `CV-1.X_SEAL.md`, `DECLARATION.md` — **읽기 전용** (Day 2는 deep-attack working day, SEAL 아님).
 - `scc/` 모듈 — **읽기 전용** (코드 변경 없음).
 - `_archive/` — **봉인**.
-- `THEORY/canonical/auxiliary_structures_master.md` — **읽기 전용** (어제 마감; AUX-1.6 amendment는 EOD *선택*).
+- `THEORY/2_substrate/canonical/auxiliary_structures_master.md` — **읽기 전용** (어제 마감; AUX-1.6 amendment는 EOD *선택*).
 - `THEORY/working/` — **쓰기 가능** (working file 신규 생성 OK).
 - `THEORY/logs/daily/2026-05-19/` — **쓰기 가능** (본 day 산출).
 
@@ -114,7 +114,7 @@ H5 (PRIMARY) 60분 막힘 → T_* (SECONDARY) 로 전환. 둘 다 막히면 §F 
 어제 AUX-1.0~1.5 작업에서 "83 claims 불변" 으로 검증했으나, *현재 canonical state* 가 CV-1.17 / 98 claims 일 가능성이 있음 (어제 W8 strategic plan 기준). 정확한 화해는 §11 verification #1 으로 확인:
 
 ```bash
-grep -nE "current = \*\*CV-|[0-9]+ claims" THEORY/canonical/theorem_status.md | head -10
+grep -nE "current = \*\*CV-|[0-9]+ claims" THEORY/2_substrate/canonical/theorem_status.md | head -10
 ```
 
 만약 현재 카운트가 98 이면, AUX-1.0~1.5 의 §1 row anchor 는 영향 없음 (canonical row anchor 기준은 일관) 이나 §3 / §4 commentary 의 일부 historical reference 가 *stale* — 별도 reconciliation 작업 필요 (AUX-1.6 후속 또는 다음 day).

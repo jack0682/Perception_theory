@@ -95,7 +95,7 @@ one. NV10 explicitly says "for τ small enough"; τ = 0.01 is small enough,
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/op_oms_002_nontrivial_v.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_002_nontrivial_v.md`
 - `CODE/experiments/observer_moduli/vp9_nontrivial_v_basin_test.py`
 - `CODE/experiments/results/observer_moduli/vp9_nontrivial_v_basin.json`
 - `CODE/experiments/results/observer_moduli/vp9_nontrivial_v_basin.md`

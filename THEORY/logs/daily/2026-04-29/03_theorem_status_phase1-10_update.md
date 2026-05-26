@@ -54,7 +54,7 @@ This file is a **draft template**. No edits to `theorem_status.md` or `CHANGELOG
 - Static-vs-dynamic distinction documented: T-σ-Multi-1 (static Cat A); per-formation pool dynamic stability (Cat A empirical, Phase 5+10); shared-pool LSW recovery (Cat B sketch, Phase 7+8+10).
 - LSW α plateau ≈ 0.25–0.30 standardized (Phase 10 V2); strict per-formation pool α=−0.069 verified (Phase 10 V1).
 - 3D σ-framework structurally verified (Phase 10 V5 T³_10 K=4); full LSW α in 3D deferred (NQ-244 W6+).
-- **Source**: `THEORY/logs/daily/2026-04-28/` (Phase 1-10 daily files); `THEORY/logs/daily/2026-04-29/01_canonical_promotion_queue_review.md` (user-decision queue + approvals); `THEORY/canonical/canonical.md` updates per Block 1 D-* approvals.
+- **Source**: `THEORY/logs/daily/2026-04-28/` (Phase 1-10 daily files); `THEORY/logs/daily/2026-04-29/01_canonical_promotion_queue_review.md` (user-decision queue + approvals); `THEORY/2_substrate/canonical/canonical.md` updates per Block 1 D-* approvals.
 ```
 
 ### §2.2 Update to Active Claims Table (Per-D-Item Conditional)

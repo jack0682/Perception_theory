@@ -9,7 +9,7 @@ predecessor: 2026-05-15 (W7-Day6 결정 C 채택 + CV-1.17 SEAL)
 strategic_plan: THEORY/logs/weekly/2026-05-W3/W8_strategic_plan.md
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[W8_strategic_plan]] · [[2026-05-15/07_decision]]
+> [!nav] Linked: [[MOC_research_journal]] · [[THEORY_INDEX]] · [[W8_strategic_plan]] · [[07_decision]]
 
 
 # 00 — Index (2026-05-18, W8-Day1)
@@ -37,7 +37,7 @@ strategic_plan: THEORY/logs/weekly/2026-05-W3/W8_strategic_plan.md
 | `99_summary.md` | EOD — Decision gate 결과 + W8-Day2 입력 준비 | 마지막 |
 
 **산출물 예상 (Day 1 EOD):**
-- `THEORY/working/MF/MF_atlas.md` v0.1 (skeleton, 12 sections × ~1 paragraph + xref)
+- `THEORY/2_substrate/multiformation/MF_atlas.md` v0.1 (skeleton, 12 sections × ~1 paragraph + xref)
 - `THEORY/working/MF/broad_survey_{B1,B2,B3}.md` (3 broad survey, B2 가장 두꺼움)
 - `CODE/experiments/exp90_sanity_canonical_xref.py` + `CODE/tests/test_sanity_canonical_xref.py` (PASS)
 - daily log 본 7-8 파일

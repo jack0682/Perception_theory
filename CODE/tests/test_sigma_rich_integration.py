@@ -2,7 +2,7 @@
 
 End-to-end check that compute_sigma_rich is well-defined on the actual
 output of the SCC optimizer (single- and multi-formation), per
-THEORY/working/MF/sigma_rich_augmentation.md §6.3.
+THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md §6.3.
 """
 import os
 import sys

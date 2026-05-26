@@ -10,12 +10,12 @@ Session: 2026-05-06 (W6 D3–D4 continued)
 
 | File | Purpose | Status |
 |---|---|---|
-| `THEORY/working/MF/pre_objective_K_field_tension.md` | K_act definition origin | Modified (§4.4) |
-| `THEORY/working/MF/k_selection_a_free_energy.md` | F(K;P,T) free energy, Z_K | Modified (§3.1, §3.3) |
-| `THEORY/working/MF/k_selection_b_kramers.md` | Barriers, timescale hierarchy | Modified (§3.1, §3.2, new §) |
-| `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md` | Canonical memo v1.1 | Created (new) |
-| `THEORY/working/MF/stereo_observation_framework.md` | Stereo likelihood model | Already complete (Phase 5 skipped) |
-| `THEORY/canonical/theorem_status.md` | OP catalog | Read (OP-0006 already correct) |
+| `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md` | K_act definition origin | Modified (§4.4) |
+| `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` | F(K;P,T) free energy, Z_K | Modified (§3.1, §3.3) |
+| `THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md` | Barriers, timescale hierarchy | Modified (§3.1, §3.2, new §) |
+| `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md` | Canonical memo v1.1 | Created (new) |
+| `THEORY/2_substrate/Q2_multiformation/stereo_observation_framework.md` | Stereo likelihood model | Already complete (Phase 5 skipped) |
+| `THEORY/2_substrate/canonical/theorem_status.md` | OP catalog | Read (OP-0006 already correct) |
 | `CODE/stereo_scc/__init__.py` | Module init | Created (new) |
 | `CODE/stereo_scc/fields.py` | Graph construction, Gaussian fields | Created + bugfixed |
 | `CODE/stereo_scc/topology.py` | K_act = #PersComp | Created (new) |
@@ -121,12 +121,12 @@ New untracked files (all in `CODE/stereo_scc/`):
 - `results/exp01–exp05/{*.csv, *.png, summary.md}`
 
 Modified working theory files (tracked):
-- `THEORY/working/MF/k_selection_a_free_energy.md`
-- `THEORY/working/MF/k_selection_b_kramers.md`
-- `THEORY/working/MF/pre_objective_K_field_tension.md`
+- `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md`
+- `THEORY/2_substrate/Q4_kselection/k_selection_b_kramers.md`
+- `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md`
 
 New working theory files (untracked):
-- `THEORY/working/MF/stereo_scc_canonical_memo_v1.1.md`
+- `THEORY/2_substrate/Q2_multiformation/stereo_scc_canonical_memo_v1.1.md`
 
 ---
 

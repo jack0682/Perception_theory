@@ -179,7 +179,7 @@ NQ-198a effectively functioned as the self-critique (numerical refutation), but 
 CLAUDE.md §"Promotion Pipeline":
 > "logs/daily/ → working/<topic>.md → canonical/canonical.md (one-way only)"
 
-Day 3 deepening produced **substantive theoretical content** (Theorem 4.6.1 framework in `04_*`) at the daily-log level. Per CLAUDE.md, this should be promoted to `THEORY/working/MF/sigma_multi_trajectory.md` before further development.
+Day 3 deepening produced **substantive theoretical content** (Theorem 4.6.1 framework in `04_*`) at the daily-log level. Per CLAUDE.md, this should be promoted to `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` before further development.
 
 I did NOT do this promotion in Day 3 — `04_*` is still raw daily-log. `08_*` §2.4 mentions it as a "Day 4 morning post-Block-1 task".
 

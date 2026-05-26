@@ -133,7 +133,7 @@ Day 5 (Fri, 05-15)
 
 ## 6. 참고 파일
 
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/09_CV114_recommendation.md` — H-MORSE-Local Cat B 증명 계획 상세
-- `THEORY/working/CV114_H_MORSE_PACKAGEII/10_agent_handoff_prompt.md` — 다음 agent 실행 프롬프트
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/09_CV114_recommendation.md` — H-MORSE-Local Cat B 증명 계획 상세
+- `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/10_agent_handoff_prompt.md` — 다음 agent 실행 프롬프트
 - `THEORY/logs/daily/2026-05-11/10_post_seal_session.md` — 오늘 H-MORSE 감사 + AFD 분석 요약
-- `THEORY/canonical/hypothesis_tree.md` (HT-3.5) — H-MORSE 크리티컬 패스
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.5) — H-MORSE 크리티컬 패스

@@ -41,7 +41,7 @@
 | Net change over W7-CV113A preliminary (55A/15B/5C/5R = 80) | +4A, −1B, +3 net |
 | T-Temporal-Identity | **Cat A** (full theorem, parts a/b/c/d) |
 | H-SINK | FULLY CLOSED (Cat A) |
-| Seal document | `THEORY/canonical/CV-1.13_SEAL.md` (created 2026-05-10) |
+| Seal document | `THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md` (created 2026-05-10) |
 
 The count in the prompt brief ("59A / 14B / 5C / 5R = 83 claims") matches the repository state exactly; no discrepancy.
 

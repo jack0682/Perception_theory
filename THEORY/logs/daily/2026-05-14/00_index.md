@@ -36,9 +36,9 @@ W7 Day 5 (Thu). 두 reframe 시도 (V-AFD, R-2) 가 어제 (5/13) 모두 archive
 | V-AFD archive note | `_archive/v_afd_2026-05-12/ARCHIVE_NOTE.md` | V-AFD 폐기 사유 + 다음 방향 권장 |
 | R-2 archive note | `_archive/r2_dcr_2026-05-13/ARCHIVE_NOTE.md` | R-2 폐기 사유 + 두 archive 패턴 분석 |
 | State report | `THEORY/logs/daily/2026-05-13/10_scc_current_state_and_next_expansion_report.md` §7.5 | Roadmap C 정의 |
-| DECLARATION | `THEORY/canonical/DECLARATION.md` | DECL-1.0 fundamental question + Q1-Q6 |
-| theorem_status | `THEORY/canonical/theorem_status.md` | Open Problems Catalog (OP-0005, OP-0008, OP-0021) |
-| canonical.md | `THEORY/canonical/canonical.md` | CV-1.13 sealed authoritative spec |
+| DECLARATION | `THEORY/0_axis/DECLARATION.md` | DECL-1.0 fundamental question + Q1-Q6 |
+| theorem_status | `THEORY/2_substrate/canonical/theorem_status.md` | Open Problems Catalog (OP-0005, OP-0008, OP-0021) |
+| canonical.md | `THEORY/2_substrate/canonical/canonical.md` | CV-1.13 sealed authoritative spec |
 
 ## Decision-required (OQ-H from 5/13)
 

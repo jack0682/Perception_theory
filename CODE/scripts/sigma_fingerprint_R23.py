@@ -2,7 +2,7 @@
 
 OBJECTIVE
 ---------
-Compute the 8-component σ-fingerprint per `THEORY/working/SF/sigma_fingerprint_qrcode.md`
+Compute the 8-component σ-fingerprint per `THEORY/2_substrate/sigma_framework/sigma_fingerprint_qrcode.md`
 §2 spec for each of the 56 R23 stable Morse-0 minimizers in
 `CODE/results/exp_orbital_fullscale.json` and verify the NQ-264 Cat B target:
 the σ-fingerprint distinguishes all 56 R23 minimizers (no collisions).
@@ -595,7 +595,7 @@ def main():
 
     # ---------- Save JSON ----------
     output = {
-        "spec": "THEORY/working/SF/sigma_fingerprint_qrcode.md §2 (Bridge B-4 NQ-264)",
+        "spec": "THEORY/2_substrate/sigma_framework/sigma_fingerprint_qrcode.md §2 (Bridge B-4 NQ-264)",
         "n_minimizers": n_min,
         "n_stored_morse0": len(stored_by_key),
         "n_exact_matches": n_exact,

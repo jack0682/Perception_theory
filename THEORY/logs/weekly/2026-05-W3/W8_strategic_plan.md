@@ -60,7 +60,7 @@ W8 은 그 *결정 C framework 를 prophylactic 하게 매일 적용* 하면서,
 
 ### G1 — Multi-Formation Atlas v1.0 (트랙 A, **Primary deliverable**)
 
-**목표:** `THEORY/working/MF/MF_atlas.md` v1.0 작성 — multi-formation 의 canonical/working/open 전체 지도. 12개 section.
+**목표:** `THEORY/2_substrate/multiformation/MF_atlas.md` v1.0 작성 — multi-formation 의 canonical/working/open 전체 지도. 12개 section.
 
 **구성 (12 sections):**
 1. Multi-formation primitive (D-6a, K-field architecture, Commitment 16 status)
@@ -281,14 +281,14 @@ W7 회귀 패턴 (V-AFD/R-2) 재발 방지 운영 룰.
 ## 7. Critical Files (수정 대상)
 
 **Canonical (수정 가능, SEAL 시):**
-- `THEORY/canonical/canonical.md` — §13 신규 entry insert (Day 4 CV-1.18, optional Day 5 CV-1.19)
-- `THEORY/canonical/theorem_status.md` — count update + OP Quick Index 갱신 + L-HMORSE-LOCAL Cat B → Cat A row 갱신
-- `THEORY/canonical/hypothesis_tree.md` — HT-3.8 → HT-3.9 (H-MORSE row CLOSED + H-EK 활성화) → stretch HT-3.10
-- `THEORY/canonical/CV-1.18_SEAL.md` (신설), 옵션 `CV-1.19_SEAL.md`
+- `THEORY/2_substrate/canonical/canonical.md` — §13 신규 entry insert (Day 4 CV-1.18, optional Day 5 CV-1.19)
+- `THEORY/2_substrate/canonical/theorem_status.md` — count update + OP Quick Index 갱신 + L-HMORSE-LOCAL Cat B → Cat A row 갱신
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — HT-3.8 → HT-3.9 (H-MORSE row CLOSED + H-EK 활성화) → stretch HT-3.10
+- `THEORY/2_substrate/canonical/seals/CV-1.18_SEAL.md` (신설), 옵션 `CV-1.19_SEAL.md`
 - `THEORY/CHANGELOG.md` — W8 entries prepend ([CV-1.18], [W8 CLOSE], optional [CV-1.19])
 
 **Working (신설, 최소 ≥9 파일):**
-- `THEORY/working/MF/MF_atlas.md` (메인 deliverable, Day 1-5 누적)
+- `THEORY/2_substrate/multiformation/MF_atlas.md` (메인 deliverable, Day 1-5 누적)
 - `THEORY/working/MF/broad_survey_{B1,B2,B3}.md` (Day 1, 3 Explore outputs)
 - `THEORY/working/MF/k_select_pf_obs_unified_view.md` (Day 2)
 - `THEORY/working/MF/op0005_dyn_kramers_sketch.md` (Day 2)
@@ -421,9 +421,9 @@ W9 priority 는 W8 의 CV-1.19 gate 결과에 따라 *조건부 분기*:
 - **Source plan**: `/Users/ojaehong/.claude/plans/plan-scalable-plum.md` (approved 2026-05-16)
 - **Predecessor week**: `THEORY/logs/weekly/2026-05-W2/weekly_summary.md` (W7 close)
 - **Predecessor week plan**: `THEORY/logs/weekly/2026-05-W2/W7_strategic_plan.md` (형식 reference)
-- **CV-1.17 SEAL**: `THEORY/canonical/CV-1.17_SEAL.md`
-- **CV-1.16 SEAL** (OP-HMORSE-LOCAL-A target 명시): `THEORY/canonical/CV-1.16_SEAL.md §"Non-Overclaim"`
+- **CV-1.17 SEAL**: `THEORY/2_substrate/canonical/seals/CV-1.17_SEAL.md`
+- **CV-1.16 SEAL** (OP-HMORSE-LOCAL-A target 명시): `THEORY/2_substrate/canonical/seals/CV-1.16_SEAL.md §"Non-Overclaim"`
 - **5/15 결정 C 6-stage framework**: `THEORY/logs/daily/2026-05-15/{02..07,99}.md`
-- **DECLARATION.md DECL-1.0**: `THEORY/canonical/DECLARATION.md`
-- **Hypothesis tree HT-3.8**: `THEORY/canonical/hypothesis_tree.md`
-- **Open Problems Catalog**: `THEORY/canonical/theorem_status.md`
+- **DECLARATION.md DECL-1.0**: `THEORY/0_axis/DECLARATION.md`
+- **Hypothesis tree HT-3.8**: `THEORY/2_substrate/canonical/hypothesis_tree.md`
+- **Open Problems Catalog**: `THEORY/2_substrate/canonical/theorem_status.md`

@@ -1,13 +1,15 @@
 > [!nav] Linked: [[THEORY_INDEX]] · [[MOC_canonical_authority]] · [[INDEX|working/INDEX.md]]
 
-# Relational Field Formation
+# Actional Perception — Relational Field Formation
 
-This repository develops a mathematical theory of how object-like structure can emerge from relational fields without assuming objects in advance.
+This repository develops a mathematical theory of **actional perception**: perception as the formation of a *field of possible robot intervention*, from which objects, affordances, action units, trajectories, and control modes emerge as projections of one field. The goal is to dissolve the double-translation gap where a system interprets the world once for perception and again for action. See `THEORY/0_axis/DECLARATION.md` (DECL-2.0) and `THEORY/0_axis/CANONICAL_AXIS.md`.
 
 In short:
 
 > Objects are not primitive.  
-> Relations and soft cohesion fields come first; objects are later interpretations of stabilized field patterns.
+> A soft cohesion field comes first; objects, affordances, and actions are later projections of stabilized field patterns. **Objecthood is stabilized affordance structure.**
+
+The cohesion-field *morphology* (closure, separation, boundary, temporal transport; 102 sealed claims) is the **substrate** — the carrier the intervention field rides on, documented below — not the whole theory.
 
 ---
 
@@ -116,10 +118,12 @@ Each tool controls a specific ambiguity. Variational methods address stable exis
 
 ## 4. Current Status
 
+> **정본 현재 상태 (2026-05-26):** CV-1.20 SEALED · 71A/20B/6C/5R = **102 claims** · DECL-2.0 · HT-3.12. 증명된 핵심은 *field morphology* (Tier 1); objecthood·actional·𝕌 는 DIRECTION(OPEN). 야망-증명 기울기는 `THEORY/0_axis/SCOPE_LEDGER.md`. 아래 표·§8의 일부 항목은 옛 버전(HT-1.0, CV-1.12 등) 인용일 수 있으며 그 경우 SCOPE_LEDGER가 정본이다.
+
 The authoritative status file is:
 
 ```text
-THEORY/canonical/theorem_status.md
+THEORY/2_substrate/canonical/theorem_status.md
 ```
 
 Current summary:
@@ -163,18 +167,21 @@ CODE/
   experiments/   research experiments
   scripts/       diagnostics and result generation
 
-THEORY/
-  canonical/     settled definitions, theorem registry, open problems
-  working/       active notes and explanatory documents
+THEORY/                  perception-action stack
+  0_axis/        center: DECLARATION (DECL-2.0), CANONICAL_AXIS, PAI_GLOSSARY, audit
+  1_sensing/     raw → field
+  2_substrate/   cohesion morphology + canonical/ (settled spec, theorem registry, open problems)
+  3_projections/ PAI projections (object / affordance / action / control)
+  4_temporal/    identity / transport / succession
   logs/          research history
 ```
 
 Key documents:
 
-- `THEORY/canonical/canonical.md` — settled theory specification (CV-1.11)
-- `THEORY/canonical/theorem_status.md` — theorem index + open problem registry
-- `THEORY/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
-- `THEORY/working/MF/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
+- `THEORY/2_substrate/canonical/canonical.md` — settled theory specification (CV-1.20, 102 claims; current state: `THEORY/0_axis/SCOPE_LEDGER.md`)
+- `THEORY/2_substrate/canonical/theorem_status.md` — theorem index + open problem registry
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` — hypothesis dependency tree (HT-1.0)
+- `THEORY/2_substrate/multiformation/scc_multiformation_origin_to_current_korean_explanation_2026-05-03.md` — full Korean origin-to-current explanation
 
 ---
 
@@ -202,7 +209,7 @@ The current phase shifts from expanding the theorem count to closing floating hy
 
 The theory has accumulated 14 Cat B theorems — results proved under explicit structural assumptions that have not yet been independently verified. Until those assumptions are closed, the conditional results cannot be upgraded to Cat A and the full logical chain from axioms to main claims remains incomplete.
 
-The five blocking hypotheses are tracked in `THEORY/canonical/hypothesis_tree.md` (HT-1.0):
+The five blocking hypotheses are tracked in `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-1.0):
 
 | Hypothesis | Blocks |
 |---|---|

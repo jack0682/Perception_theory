@@ -5,7 +5,7 @@
 **Session:** 2026-05-04 (W6 Day 1, mid-day, post-G3)
 **Target (from `01_exploration.md` §3):** Execute Approach A3 (self-audit) for redesigned W6 plan G1. Apply R-0 + R-1 + R-2 + R-3 closures to L-M working draft + produce Cat-A-conditional promotion proposal text for canonical §13 + theorem_status.md row.
 **This file covers:** §1 R-0 closure (§2.2 Phi-4c F1 wording fix); §2 R-1 closure (§5.4 factor-2 sharpness verification); §3 R-2 closure (§5.5 Type-B chain explicit reproof); §4 R-3 closure (§5.4 Type-N non-terminal clarification note); §5 Lemma L-M-2 post-repair Cat-A-conditional self-classification; §6 Theorem L-M post-repair statement; §7 per-family corollaries L-M.A/B/C self-classification; §8 counterexample stability check; §9 granularity check + audit-independence acknowledgement; §10 hard-constraint sweep.
-**Depends on reading:** `01_exploration.md` §1–§3 (problem framing + multi-approach + A3 selection); `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` §§2.2, 5.3, 5.4, 5.5, 5.7, 6.1, 6.3 (all sections being repaired); `THEORY/canonical/canonical.md` §13 T-L1-F (lines 1482-1489) + §11.1 #16 Commitment 16 (line 810, with G3 amendment proposal); CSEH 2007 Theorem 4.2 (`working/E/soft_K_definition.md` §2.1).
+**Depends on reading:** `01_exploration.md` §1–§3 (problem framing + multi-approach + A3 selection); `THEORY/logs/daily/2026-05-03/02_L1M_proof_development.md` §§2.2, 5.3, 5.4, 5.5, 5.7, 6.1, 6.3 (all sections being repaired); `THEORY/2_substrate/canonical/canonical.md` §13 T-L1-F (lines 1482-1489) + §11.1 #16 Commitment 16 (line 810, with G3 amendment proposal); CSEH 2007 Theorem 4.2 (`working/E/soft_K_definition.md` §2.1).
 
 ---
 

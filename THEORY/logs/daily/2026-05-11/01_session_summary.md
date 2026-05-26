@@ -22,7 +22,7 @@ The CV-1.12 work and the CV-1.13 work both happened on 2026-05-10. This log capt
 The W7 arc proceeded as five sessions on 2026-05-10:
 
 ### 1. W7-T1 — H-SINK / S-B2 result
-- Wrote `THEORY/working/temporal/H-SINK.md` (462 lines): six lemmas H-SINK-1 through H-SINK-6 + main theorem + audit.
+- Wrote `THEORY/4_temporal/temporal_audit/H-SINK.md` (462 lines): six lemmas H-SINK-1 through H-SINK-6 + main theorem + audit.
 - **H-SINK-S2 = Lemma 8.2 = S-B2 promoted Cat A**: $L_g(\varepsilon_\mathrm{OT}) \leq L_c$ — dual-potential Lipschitz for SCC temporal cost class.
 - Newly registered hypothesis **H-SINK-ENT** ($\varepsilon_\mathrm{OT} \geq \varepsilon_\mathrm{min} > 0$).
 - Critical finding: canonical fingerprint is 3-component, not 4-component (the 4-component version was demoted because $C_u(x,x)$ has Jacobian norm ≈ 9300 making the Lipschitz bound vacuous).

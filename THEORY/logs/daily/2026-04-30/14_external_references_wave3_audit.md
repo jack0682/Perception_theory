@@ -128,7 +128,7 @@ For CV-1.6 release (W6 Day 7 EOD), the following ⚠️ pending must be verified
 - `THEORY/logs/daily/2026-04-30/04_external_references_verification.md` (AM audit, 7 corrections).
 - `THEORY/logs/daily/2026-04-30/07_external_references_gauge_extension.md` (PM gauge ext, 1 correction).
 - `THEORY/logs/daily/2026-04-30/13_wave3_critical_findings.md` (Wave 3 critical findings).
-- `THEORY/working/MF/foundational_bridges_2026.md` §12 citation list.
+- `THEORY/2_substrate/Q3_dynamics/foundational_bridges_2026.md` §12 citation list.
 
 ---
 

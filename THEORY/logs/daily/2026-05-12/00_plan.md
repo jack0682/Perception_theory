@@ -35,8 +35,8 @@ AFD-0 is in working state with OP-AFD-004 Cat B resolved. Two parallel tracks to
 - Verdict: M-A2 PASS / FAIL / PARTIAL
 
 **Files to read first.**
-- THEORY/working/CV114_H_MORSE_PACKAGEII/09_CV114_recommendation.md
-- THEORY/working/CV114_H_MORSE_PACKAGEII/02_H_MORSE_statement_reconstruction.md
+- THEORY/2_substrate/Q3_dynamics/h_morse_packageII/09_CV114_recommendation.md
+- THEORY/2_substrate/Q3_dynamics/h_morse_packageII/02_H_MORSE_statement_reconstruction.md
 - CODE/scc/graph.py (for Aut(G) construction)
 
 ---
@@ -94,6 +94,6 @@ Agent C — Overclaim audit:
 ## References
 
 - THEORY/working/AFD_0/ (all 12 files after today)
-- THEORY/canonical/canonical.md (CV-1.13, sealed 2026-05-10)
+- THEORY/2_substrate/canonical/canonical.md (CV-1.13, sealed 2026-05-10)
 - THEORY/working/CV114_H_MORSE_PACKAGEII/
 - CODE/scc/graph.py, optimizer.py

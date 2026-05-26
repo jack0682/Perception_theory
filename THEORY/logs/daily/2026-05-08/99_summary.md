@@ -109,7 +109,7 @@ with three sub-OPs (OP-OMS-032 / 033 / 034) for OMS-2.0 Accepted promotion.
 2. **OP-OMS-033** — Arnold saddle-node theorem applied to SCC double-well energy.
 3. **OP-OMS-034** — full temporal Δ³ via `scc.multi` 2-time-slice scene.
 4. After all three sub-OPs closed, promote stage to **OMS-2.0 Accepted**.
-5. Promote Session-5/6 sub-results into `THEORY/canonical/canonical.md` §13 OMS appendix.
+5. Promote Session-5/6 sub-results into `THEORY/2_substrate/canonical/canonical.md` §13 OMS appendix.
 
 ---
 
@@ -163,7 +163,7 @@ with three sub-OPs (OP-OMS-032 / 033 / 034) for OMS-2.0 Accepted promotion.
 - `checkpoints.md` — Session 5 / 6 rows + OMS-2.0 status.
 - `oms_1_candidate.md` — frontmatter + §20 promoted to OMS-2.0 Conditional Accepted.
 - `THEORY/CHANGELOG.md` — Session 5 / 6 entries.
-- `THEORY/working/INDEX.md` — Session 5 / 6 file tables + status update.
+- `THEORY/2_substrate/INDEX.md` — Session 5 / 6 file tables + status update.
 
 ### Daily log files (this folder)
 

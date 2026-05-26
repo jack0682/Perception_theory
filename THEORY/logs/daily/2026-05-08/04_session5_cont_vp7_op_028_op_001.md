@@ -84,9 +84,9 @@ Gate 1 + Gate 2 target.
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/vp7_branch_map_results.md`
-- `THEORY/working/observer_moduli/op_oms_028_lipschitz_v.md`
-- `THEORY/working/observer_moduli/op_oms_001_formal_proof_attempt.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp7_branch_map_results.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_028_lipschitz_v.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_001_formal_proof_attempt.md`
 - `CODE/experiments/observer_moduli/vp7_branch_map.py`
 - `CODE/experiments/results/observer_moduli/vp7_branch_map.json`
 - `CODE/experiments/results/observer_moduli/vp7_branch_map.md`

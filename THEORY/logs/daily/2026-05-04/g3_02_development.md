@@ -5,7 +5,7 @@
 **Session:** 2026-05-04 (W6 Day 1, mid-day acceleration)
 **Target (from plan.md / `01_exploration.md` §3):** Execute Approach **A4 (Diagnostic-First)** for redesigned W6 G3. Diagnose which reading (R1 / R2 / R3) of "$\bar m$ per-formation expected mass" the canonical Commitment 16 *intends* and which the production scripts use; apply the resulting decision rule (D1 minimal-clarify / D2 full-amend-or-rerun / D3 dual-convention).
 **This file covers:** §1 diagnostic source #1 (production scripts); §2 diagnostic source #2 (OAT-1 source `K_status_commitment.md`); §3 diagnostic source #3 (L1-I working file); §4 cross-check (T-L1-F canonical empirical claim); §5 diagnostic verdict; §6 decision rule applied (Cat A definitional precision); §7 propagation plan; §8 T-L1-F empirical claim re-anchor; §9 counterexample attempts; §10 Cat classification + status self-check.
-**Depends on reading:** `01_exploration.md` §1–§3 (problem restatement + multi-approach + A4 selection rationale); `THEORY/canonical/canonical.md` line 810 (Commitment 16 K_act); `THEORY/working/MF/K_status_commitment.md` lines 149-150, 263, 313, 356 (OAT-1 source); `THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md` lines 84, 92 (L1-I parameter use); `CODE/scripts/nq242c_counterexample.py` lines 78-100 (RunConfig with explicit ε comment); `CODE/scripts/l1i_constants_feasibility.py` lines 605-625 (M_total + ε); `CODE/scripts/wq_lat1_reservoir_resolution_sweep.py` lines 77, 192; `CODE/scripts/l1g_l1hyp_diagnostic.py` lines 950-960; `THEORY/canonical/canonical.md` line 1489 (T-L1-F empirical claim "439/1920 FEASIBLE_WITH_BUDGET").
+**Depends on reading:** `01_exploration.md` §1–§3 (problem restatement + multi-approach + A4 selection rationale); `THEORY/2_substrate/canonical/canonical.md` line 810 (Commitment 16 K_act); `THEORY/2_substrate/Q4_kselection/K_status_commitment.md` lines 149-150, 263, 313, 356 (OAT-1 source); `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1I_constants_feasibility.md` lines 84, 92 (L1-I parameter use); `CODE/scripts/nq242c_counterexample.py` lines 78-100 (RunConfig with explicit ε comment); `CODE/scripts/l1i_constants_feasibility.py` lines 605-625 (M_total + ε); `CODE/scripts/wq_lat1_reservoir_resolution_sweep.py` lines 77, 192; `CODE/scripts/l1g_l1hyp_diagnostic.py` lines 950-960; `THEORY/2_substrate/canonical/canonical.md` line 1489 (T-L1-F empirical claim "439/1920 FEASIBLE_WITH_BUDGET").
 
 ---
 
@@ -84,7 +84,7 @@ All four production scripts (`nq242c`, `l1i`, `wq_lat1`, `l1g`) use $\epsilon = 
 
 ### §2.1 The original Commitment 16 author's text
 
-`THEORY/working/MF/K_status_commitment.md` was the W5 Day 3 EOD OAT-1 working file from which Commitment 16 was promoted into canonical CV-1.5.1 (2026-04-29). It is the authoritative source for the original author's intent.
+`THEORY/2_substrate/Q4_kselection/K_status_commitment.md` was the W5 Day 3 EOD OAT-1 working file from which Commitment 16 was promoted into canonical CV-1.5.1 (2026-04-29). It is the authoritative source for the original author's intent.
 
 Line 149-150:
 > $K_{\mathrm{act}}(\mathbf{u}(t)) := \#\{j \in \{1, \ldots, K_{\mathrm{field}}\} : \lVert u^{(j)}(t) \rVert_1 > \epsilon\}$
@@ -128,7 +128,7 @@ The original Commitment 16 author **did not commit** to a specific reading of $\
 
 ### §3.1 ε reference in L1-I
 
-`THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md` line 92:
+`THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1I_constants_feasibility.md` line 92:
 
 > `n_active`: number of slots with mass $>\epsilon=0.225$ (`wq1` mode) or with `initial_masses[j] > 0` (`raw_gaussian` mode);
 
@@ -234,7 +234,7 @@ The G3 decision applies one canonical amendment + zero script changes + a few cr
 
 ### §7.1 Canonical edits (1 file, 1 sentence)
 
-- **`THEORY/canonical/canonical.md` line 810**: replace sentence per §6.1 above.
+- **`THEORY/2_substrate/canonical/canonical.md` line 810**: replace sentence per §6.1 above.
 - **No other canonical lines need changing.** T-L1-F entry (line 1489) implicitly uses $\epsilon = 0.225$ via L1-I; this is now explicit per §6.1.
 
 ### §7.2 theorem_status.md updates (0 substantive)
@@ -290,8 +290,8 @@ Not run (theory-only canonical wording clarification + no scc/ touched). Tests p
 
 ### §7.4 Working file updates (optional, for traceability)
 
-- **`THEORY/working/MF/K_status_commitment.md`**: add a 2-3 line note at line 314 (after the "deferred to NQ-242 W6 D1-D3" sentence) recording that the W6 D1 G3 audit resolved the deferral with R1. Optional — the canonical clarification + CHANGELOG entry suffice.
-- **`THEORY/working/MF/kbar_kact_bridge_L1I_constants_feasibility.md`**: add a 1-line note at line 92 confirming $\epsilon = 0.225$ corresponds to canonical $\epsilon = 0.01 \cdot M / K_{\mathrm{field}}$ under the standard regime. Optional.
+- **`THEORY/2_substrate/Q4_kselection/K_status_commitment.md`**: add a 2-3 line note at line 314 (after the "deferred to NQ-242 W6 D1-D3" sentence) recording that the W6 D1 G3 audit resolved the deferral with R1. Optional — the canonical clarification + CHANGELOG entry suffice.
+- **`THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1I_constants_feasibility.md`**: add a 1-line note at line 92 confirming $\epsilon = 0.225$ corresponds to canonical $\epsilon = 0.01 \cdot M / K_{\mathrm{field}}$ under the standard regime. Optional.
 
 ### §7.5 Verification
 

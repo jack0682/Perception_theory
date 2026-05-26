@@ -24,7 +24,7 @@ When promoted to canonical (future session), the natural insertion point is:
 
   Let $u_t, u_s \in \mathcal{F}_M(\mathcal{P})$ be soft cohesion fields on a finite shared graph $G$ (A1, A2). Let $\mathrm{PersComp}(u_t), \mathrm{PersComp}(u_s)$ be the D-ST-3 persistent-component sets, with $K_t \geq 1, K_s \geq 1$ (A3). Let $M_{t \to s}$ be an admissible transport plan satisfying (E1–E4) with entropic regularization $\varepsilon_\mathrm{OT} \leq \varepsilon_\mathrm{OT}^*$, where $\varepsilon_\mathrm{OT}^* = (\gamma_\mathrm{OT}\Delta_\varphi^2_\mathrm{inter} - L_g d_\mathrm{eff})/2$ is the sharp-OT certified regime (A7').
 
-  Define the component score matrix $\tilde{\mathbf{S}} \in \mathbb{R}^{K_t \times K_s}$ via §4 of `THEORY/working/MF/temporal_identity_perscomp_transport.md`. Then:
+  Define the component score matrix $\tilde{\mathbf{S}} \in \mathbb{R}^{K_t \times K_s}$ via §4 of `THEORY/4_temporal/identity_inheritance/temporal_identity_perscomp_transport.md`. Then:
 
   **(a) Existence.** A relation $R_{t \to s} \subseteq \mathrm{PersComp}(u_t) \times \mathrm{PersComp}(u_s)$ exists (constructive, via thresholded $\tilde{\mathbf{S}}$) and exhaustively classifies every pair into one of five mutually-exclusive event types (continuation, split, merge, birth, death).
 

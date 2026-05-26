@@ -68,7 +68,7 @@ regular branches.
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/op_oms_018_regular_u_star.md` (23 KB; full proofs)
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_018_regular_u_star.md` (23 KB; full proofs)
 - `CODE/experiments/observer_moduli/vp6_u_star_regular_path_test.py`
 - `CODE/experiments/results/observer_moduli/vp6_u_star_path_results.json` (224 KB)
 - `CODE/experiments/results/observer_moduli/vp6_u_star_path_summary.md`

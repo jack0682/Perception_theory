@@ -323,9 +323,9 @@ and the map $\mathcal A_\mathrm{bar}: A^\varepsilon(\mathbf u) \to \mathrm{Bars}
 - P7 status decision (L1-L): P7 adopted as **safe technical regime hypothesis**; L1-L Combes-Thomas / discrete Agmon analysis provides theorem-grade backing under strong stationarity but P7 is not asserted for all SCC states.
 
 **Files modified**:
-- `THEORY/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666→1675).
-- `THEORY/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02)" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338→368).
-- `THEORY/canonical/theorem_status.md` — **unchanged**. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result).
+- `THEORY/2_substrate/canonical/canonical.md` — T-L1-F entry inserted at end of §13 Cat A (just before Cat B header). +9 lines (1666→1675).
+- `THEORY/2_substrate/canonical/theorem_status.md` — new section "Canonical Spec v1.5.2 (2026-05-02)" with T-L1-F entry; CV-1.5.1 reflagged "Previous Version". +30 lines (338→368).
+- `THEORY/2_substrate/canonical/theorem_status.md` — **unchanged**. Rationale: no existing OP entry maps directly to L1-F; OP-0005 / OP-0008 are not solved by T-L1-F (T-L1-F is a bridge, not a K-selection mechanism or σ-inheritance result).
 
 **Counts at CV-1.5.2**: 45A → **46A** / 5B / 5C / 5R / 60 → **61 claims** / 75% proved.
 
@@ -577,9 +577,9 @@ W5 close ceremony 시점에 weekly_summary §4.1-§4.4 의 모든 수치를 actu
 
 | 파일 | weekly_summary §4 claim | Actual current state | Δ | 해석 |
 |---|---|---|---|---|
-| `THEORY/canonical/canonical.md` | post-CV-1.5.2: 1675 lines | **1675 lines** | 0 | ✅ exact match |
-| `THEORY/canonical/theorem_status.md` | post-CV-1.5.2: 368 lines | **368 lines** | 0 | ✅ exact match |
-| `THEORY/canonical/theorem_status.md` | post-CV-1.5.1: 507 lines (CV-1.5.2 unchanged) | **523 lines** | **+16** | ⚠ Day 7 W5 close에서 frontmatter `last_updated` + update history block 추가됨 (release-day 머지) |
+| `THEORY/2_substrate/canonical/canonical.md` | post-CV-1.5.2: 1675 lines | **1675 lines** | 0 | ✅ exact match |
+| `THEORY/2_substrate/canonical/theorem_status.md` | post-CV-1.5.2: 368 lines | **368 lines** | 0 | ✅ exact match |
+| `THEORY/2_substrate/canonical/theorem_status.md` | post-CV-1.5.1: 507 lines (CV-1.5.2 unchanged) | **523 lines** | **+16** | ⚠ Day 7 W5 close에서 frontmatter `last_updated` + update history block 추가됨 (release-day 머지) |
 | `THEORY/CHANGELOG.md` | post-CV-1.5.1: 4165 lines | **4404 lines (pre-Day 7 머지)** → **+~600 lines (post-Day 7 머지)** | substantial | ⚠ W5 Day 5/6/7 entries는 4404 → ~5000 lines로 추가됨 (release-day 머지) |
 
 #### 4.5.2 §13 Cat A entry inventory (W5 cumulative, 9 net Cat A added)

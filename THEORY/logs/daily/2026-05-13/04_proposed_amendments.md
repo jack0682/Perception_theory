@@ -9,7 +9,7 @@
 - **S-i** for Finding §3 (style mismatch): split the single `§13.Y` block into per-category inserts matching canonical practice.
 - **Findings applied:** 1.2a, 1.2b, 1.3b, 1.4a, 1.4b, 1.5, 1.7, 2.4. Deferred: 1.3a (Sinkhorn $a$ rename — purely internal stylistic; low priority).
 
-**Scope of this file:** *Proposal text only.* Per session prompt §2, no working/* or canonical/* file is modified. The blocks below are intended for one-step copy-paste into `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` (replacing §1–§4 of that file) by a follow-up session or by the user directly.
+**Scope of this file:** *Proposal text only.* Per session prompt §2, no working/* or canonical/* file is modified. The blocks below are intended for one-step copy-paste into `THEORY/4_temporal/action_cost/10_patch_plan.md` (replacing §1–§4 of that file) by a follow-up session or by the user directly.
 
 **Depends on reading:** `00_plan.md`, `01_exploration.md`, `02_development.md`, `03_integration_and_new_open.md`.
 
@@ -212,7 +212,7 @@ Update the header in the same patch turn to add the T-Temporal-Identity promotio
 **Theorem T-ACT-KERNEL-COMP→REL** *(Cat B conditional; CV-1.15)*
 
 *Conditions.*
-- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.16+.
+- *(GK) [pending CV-1.14 canonical promotion]:* Adopt $M_{t\to s} := \mathbf{K}_{t\to s}$ (action-derived Gibbs kernel) as the canonical transport kernel. This requires either (a) CV-1.14 T-CC-StableK-Kernel promotion (currently a working candidate in `THEORY/4_temporal/composition/05_promotion_draft.md`, Cat B not yet canonical), or (b) a future canonical §8.5 $M_{t\to s}$ redefinition. Both are deferred to CV-1.16+.
 - *(stable-K)* $K_t = K_s = K_r$, $d_{\mathrm{inter}}^* \geq 3$, $\varepsilon_{\mathrm{OT}} \leq \varepsilon_{\mathrm{OT}}^*$.
 - *(margin)* $\Delta_{\mathrm{sep}}(M) \geq \Delta_{\mathrm{sep}}^* + 2\epsilon_{\mathrm{kernel}}$ (per S-C1 CERTIFIED correction, CV-1.13).
 
@@ -230,19 +230,19 @@ where $R[\cdot]$ is the persistence-correspondence relation extracted from a tra
 
 This row uses Reading 1.
 
-*References.* T-ACT-GIBBS (§A.2 above); T-CC-StableK-Kernel (`THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §2); T-Temporal-Identity (canonical §13 Cat A, CV-1.13).
+*References.* T-ACT-GIBBS (§A.2 above); T-CC-StableK-Kernel (`THEORY/4_temporal/composition/05_promotion_draft.md` §2); T-Temporal-Identity (canonical §13 Cat A, CV-1.13).
 
 ---
 
 **Proposition P-SINKHORN-STABILITY-CONDITIONAL** *(Cat B; CV-1.15)*
 
-*Conditions.* Hypothesis package (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`.
+*Conditions.* Hypothesis package (H-SINK) + (MARGIN) + (SMALL-SINK-GAP), as defined in `THEORY/4_temporal/action_cost/05_relation_to_sinkhorn.md`.
 
 *Conclusion.* The Sinkhorn-scaled relation $R[M^{\mathrm{sink}}_{t \to s}]$ is stable under the hypothesis package, in the sense that $R[M^{\mathrm{sink}}_{t \to r}]$ approximates $R[M^{\mathrm{sink}}_{s \to r}] \circ R[M^{\mathrm{sink}}_{t \to s}]$ up to terms controlled by the small-sink-gap parameter.
 
 *Cat B conditional status.* H-SINK is itself a hypothesis (the Sinkhorn-scaling regime) not yet promoted as a Cat A property; SMALL-SINK-GAP is a regime restriction. Both are explicit.
 
-*Reference.* Working draft, `THEORY/working/CV115_ACTION_TEMPORAL_COST/05_relation_to_sinkhorn.md`.
+*Reference.* Working draft, `THEORY/4_temporal/action_cost/05_relation_to_sinkhorn.md`.
 ```
 
 ### §A.4. OPEN insert — to be appended to `canonical.md ## 12. Open Problems and Next Formalization Layers` (or as new "Warning" subsection at the end of §13)
@@ -344,7 +344,7 @@ Place at the end of `theorem_status.md ## Canonical Theorems (Accepted into Cano
 
 **Quick status:** PARTIALLY STRUCTURED (Session V, 2026-05-06); sub-structure refined (CV-1.15, 2026-05-13). Three sub-labels: OP-0012-CC (Cat B path), OP-0012-SINK (OPEN), OP-0012-Kjump (Cat C). Overall problem **OPEN** — full general-K-jump composition unresolved.
 
-**Sub-case A — OP-0012-CC (compositional consistency, Cat B path):** under stable-K + margin (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ holds. Cat B via Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`) and canonical §13 T-Temporal-Identity composition note at line 1779. See also **T-CC-StableK-Kernel** (working candidate, CV-1.14: `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`) — not yet canonical.
+**Sub-case A — OP-0012-CC (compositional consistency, Cat B path):** under stable-K + margin (compositional consistency, Definition 7.1 in `temporal_identity_perscomp_transport.md`), $R_{t \to r} = R_{s \to r} \circ R_{t \to s}$ holds. Cat B via Lemma 6 (`THEORY/logs/daily/2026-05-07/03_development.md §10`) and canonical §13 T-Temporal-Identity composition note at line 1779. See also **T-CC-StableK-Kernel** (working candidate, CV-1.14: `THEORY/4_temporal/composition/05_promotion_draft.md`) — not yet canonical.
 
 **Sub-case B — OP-0012-SINK (Sinkhorn temporal scaling compatibility, OPEN):** *(CV-1.15 update, 2026-05-13.)*
 
@@ -405,7 +405,7 @@ Insert under Q5 ("시간이 지나도 같은 것인가?") — currently at line 
 - **T-ACT-DP** (Cat A): hard-min action cost Bellman DP.
 - **T-ACT-GIBBS** (Cat A): Gibbs kernel semigroup $\mathbf{K}_{i\to k} = \mathbf{K}_{i\to j} \cdot \mathbf{K}_{j\to k}$.
 - **T-ACT-KERNEL-COMP→REL** (Cat B conditional): $(GK)+(stable-K)+(margin) \Rightarrow R$ composition.
-- *조건 의존성:* (GK) requires CV-1.14 T-CC-StableK-Kernel promotion (working candidate, `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`) or canonical §8.5 $M_{t\to s}$ redefinition. Deferred CV-1.16+.
+- *조건 의존성:* (GK) requires CV-1.14 T-CC-StableK-Kernel promotion (working candidate, `THEORY/4_temporal/composition/05_promotion_draft.md`) or canonical §8.5 $M_{t\to s}$ redefinition. Deferred CV-1.16+.
 
 #### H-COMP-SINK (OP-0012-SINK, OPEN) [NEW]
 - **T-SINKHORN-PLAN-SEMIGROUP-FAILS**: scaling-gap obstruction $b_1 \odot a_2 \neq c \cdot \mathbf{1}$ (proved failure).
@@ -496,12 +496,12 @@ Insert at the **very top of CHANGELOG.md**, above the CV-1.13 entry (line ~5).
 
 | File | Action |
 |---|---|
-| `THEORY/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 Cat A entries + D-LOCAL-ACTION + D-GIBBS-KERNEL definitions + P-ACTION-PATH-INHERITANCE Interpretation row); §13 Cat B insert (2 Cat B entries); §13 Cat B header amended to record T-Temporal-Identity CV-1.13 promotion (hygiene fix); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
-| `THEORY/canonical/theorem_status.md` | **UPDATED** — CV-1.15 section block added (10 rows); OP-0012 entry refactored to three sub-labels; header CV version updated to CV-1.15; claim count updated. |
-| `THEORY/canonical/hypothesis_tree.md` | **UPDATED** — H-COMP parent branch + four subbranches added under Q5; HT-3.5 → HT-3.6; next-target line updated to CV-1.16. |
+| `THEORY/2_substrate/canonical/canonical.md` | **UPDATED** — §13 Cat A insert (8 Cat A entries + D-LOCAL-ACTION + D-GIBBS-KERNEL definitions + P-ACTION-PATH-INHERITANCE Interpretation row); §13 Cat B insert (2 Cat B entries); §13 Cat B header amended to record T-Temporal-Identity CV-1.13 promotion (hygiene fix); §12 Warning T-SINKHORN-PLAN-SEMIGROUP-FAILS added. |
+| `THEORY/2_substrate/canonical/theorem_status.md` | **UPDATED** — CV-1.15 section block added (10 rows); OP-0012 entry refactored to three sub-labels; header CV version updated to CV-1.15; claim count updated. |
+| `THEORY/2_substrate/canonical/hypothesis_tree.md` | **UPDATED** — H-COMP parent branch + four subbranches added under Q5; HT-3.5 → HT-3.6; next-target line updated to CV-1.16. |
 | `THEORY/CHANGELOG.md` | **UPDATED** — this entry prepended. |
 | `THEORY/working/CV115_ACTION_TEMPORAL_COST/` | (working files; ten files 00–10 completed 2026-05-12; pre-promotion audit + amendments package 2026-05-13) |
-| `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` | **NOT MODIFIED** (T-CC-StableK-Kernel CV-1.14 candidate; remains working under R-C) |
+| `THEORY/4_temporal/composition/05_promotion_draft.md` | **NOT MODIFIED** (T-CC-StableK-Kernel CV-1.14 candidate; remains working under R-C) |
 | `CODE/experiments/exp89_endpoint_vs_action_temporal_cost.py` | numerical validation script (referenced; not modified this session) |
 | `CODE/experiments/results/exp89_results.json` | **REFERENCED** — 3-case PASS (2026-05-13); numerical sanity check, not proof |
 | `THEORY/logs/daily/2026-05-13/01_exploration.md, 02_development.md, 03_integration_and_new_open.md, 04_proposed_amendments.md, 99_summary.md` | **CREATED** — pre-promotion audit + amendments package (this session) |
@@ -528,7 +528,7 @@ Insert at the **very top of CHANGELOG.md**, above the CV-1.13 entry (line ~5).
 
 ## §E. Status update text for `09_final_audit.md`
 
-Append the following as a new section §12 to `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md`:
+Append the following as a new section §12 to `THEORY/4_temporal/action_cost/09_final_audit.md`:
 
 ```markdown
 ## §12. 2026-05-13 audit pass — amendments applied (R-C + S-i)
@@ -573,12 +573,12 @@ Per `00_plan.md` §C, the application order is:
 
 | Step | File | Action | Source block in this file |
 |---|---|---|---|
-| 1 | `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` | Append §12 amendments-applied section | §E |
-| 2 | `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` | Replace §1, §2, §3, §4 with §A, §B, §C, §D from this file | §A, §B, §C, §D |
+| 1 | `THEORY/4_temporal/action_cost/09_final_audit.md` | Append §12 amendments-applied section | §E |
+| 2 | `THEORY/4_temporal/action_cost/10_patch_plan.md` | Replace §1, §2, §3, §4 with §A, §B, §C, §D from this file | §A, §B, §C, §D |
 | 3 | `THEORY/CHANGELOG.md` | Prepend §D block at top | §D |
-| 4 | `THEORY/canonical/theorem_status.md` | Insert §B.1 (CV-1.15 section block); apply §B.2 (OP-0012 amendment); apply §B.3 (header update) | §B |
-| 5 | `THEORY/canonical/hypothesis_tree.md` | Insert §C.1 (H-COMP branch); apply §C.2 (HT-3.6 changelog row + next-target line) | §C |
-| 6 | `THEORY/canonical/canonical.md` | Apply §A.3.0 (Cat B header hygiene); insert §A.2 (Cat A entries); §A.3 (Cat B entries); §A.4 (§12 Warning); §A.5 (Interpretation) | §A |
+| 4 | `THEORY/2_substrate/canonical/theorem_status.md` | Insert §B.1 (CV-1.15 section block); apply §B.2 (OP-0012 amendment); apply §B.3 (header update) | §B |
+| 5 | `THEORY/2_substrate/canonical/hypothesis_tree.md` | Insert §C.1 (H-COMP branch); apply §C.2 (HT-3.6 changelog row + next-target line) | §C |
+| 6 | `THEORY/2_substrate/canonical/canonical.md` | Apply §A.3.0 (Cat B header hygiene); insert §A.2 (Cat A entries); §A.3 (Cat B entries); §A.4 (§12 Warning); §A.5 (Interpretation) | §A |
 
 After step 6, execute the Block D consistency audit from `02_development.md` §4.2 against the post-patch canonical.
 
@@ -598,16 +598,16 @@ grep -rn "δ_eff" THEORY/canonical/                 # always qualified by "actio
 grep -rn "T-Temporal-Identity" THEORY/canonical/ | wc -l  # should be unchanged from pre-patch + some new cross-references
 
 # §4.2.2 no-double-classification
-grep -n "T-ACT-DP" THEORY/canonical/theorem_status.md | wc -l   # exactly 1 (Cat A only)
-grep -n "T-ACT-KERNEL-COMP" THEORY/canonical/theorem_status.md | wc -l  # exactly 1 (Cat B only)
+grep -n "T-ACT-DP" THEORY/2_substrate/canonical/theorem_status.md | wc -l   # exactly 1 (Cat A only)
+grep -n "T-ACT-KERNEL-COMP" THEORY/2_substrate/canonical/theorem_status.md | wc -l  # exactly 1 (Cat B only)
 
 # §4.2.3 cross-reference
-grep -n "OP-0012-CC" THEORY/canonical/canonical.md  # line 1779 preserved
-grep -n "Cat A" THEORY/canonical/CV-1.13_SEAL.md     # T-Temporal-Identity Cat A status preserved
+grep -n "OP-0012-CC" THEORY/2_substrate/canonical/canonical.md  # line 1779 preserved
+grep -n "Cat A" THEORY/2_substrate/canonical/seals/CV-1.13_SEAL.md     # T-Temporal-Identity Cat A status preserved
 
 # §4.2.4 hypothesis-tree
-grep -n "H-COMP" THEORY/canonical/hypothesis_tree.md  # new branch present
-grep -n "HT-3.6" THEORY/canonical/hypothesis_tree.md  # version incremented
+grep -n "H-COMP" THEORY/2_substrate/canonical/hypothesis_tree.md  # new branch present
+grep -n "HT-3.6" THEORY/2_substrate/canonical/hypothesis_tree.md  # version incremented
 
 # §4.2.5 CHANGELOG ordering
 head -5 THEORY/CHANGELOG.md  # CV-1.15 first
@@ -635,8 +635,8 @@ Each command's expected output is documented inline in `02_development.md` §4.2
 
 Per session prompt §2 (no working/ direct writes):
 
-- This file does **NOT** modify `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md`.
-- This file does **NOT** modify `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md`.
+- This file does **NOT** modify `THEORY/4_temporal/action_cost/10_patch_plan.md`.
+- This file does **NOT** modify `THEORY/4_temporal/action_cost/09_final_audit.md`.
 - This file does **NOT** modify any file under `THEORY/canonical/`, `THEORY/working/`, or `CODE/`.
 
 All amendments are *proposal text*. To apply, follow §F apply-order in a P7-authorized turn.

@@ -1,6 +1,6 @@
 """Tests for Aut(G)_{u*} stabilizer behavior — NQ-258 / NQ-259 (working).
 
-Spec: ``THEORY/working/SF/sigma_lie_algebra_structure.md`` §3.2:
+Spec: ``THEORY/2_substrate/sigma_framework/sigma_lie_algebra_structure.md`` §3.2:
 
     Aut(G)_{u*} := {π ∈ Aut(G) : P_π u* = u*}.
 

@@ -41,12 +41,12 @@
 
 **어제 오전-오후 Stage 1 산출물**:
 - `THEORY/logs/daily/2026-04-21/99_summary.md` — Rounds 1-11 요약
-- `THEORY/working/E/soft_K_definition.md` (G1) — K_soft commit
-- `THEORY/working/CE/free_energy_wellposed.md` (G3) — ℱ_C+E
-- `THEORY/working/E/F1_dissolution.md`, `M1_dissolution.md`, `MO1_dissolution.md` (G4-G6)
+- `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md` (G1) — K_soft commit
+- `THEORY/2_substrate/Q1_boundary/free_energy_wellposed.md` (G3) — ℱ_C+E
+- `THEORY/2_substrate/foundations/dissolutions/F1_dissolution.md`, `M1_dissolution.md`, `MO1_dissolution.md` (G4-G6)
 
 **Canonical refs**:
-- `THEORY/canonical/canonical.md` §13 (Cat A 정리 목록 — 특히 T-1, T-8-Core/Full, T-Birth-Parametric)
+- `THEORY/2_substrate/canonical/canonical.md` §13 (Cat A 정리 목록 — 특히 T-1, T-8-Core/Full, T-Birth-Parametric)
 - `THEORY/canonical/canonical_sub.md` (Weekly merge buffer, 725줄 누적)
 - `THEORY/working/integer_K_dependency_map.md` — 9+1 정리 목록
 

@@ -131,7 +131,7 @@ User authorization context: "지금 하자" 직접 진행 (W5 Day 3 EOD 7-에이
 
 ## §3. theorem_status.md Updates
 
-**File**: `THEORY/canonical/theorem_status.md`.
+**File**: `THEORY/2_substrate/canonical/theorem_status.md`.
 **Pre-state**: 299 lines, last_updated 2026-04-27.
 **Post-state**: 338 lines, last_updated 2026-04-29.
 
@@ -171,7 +171,7 @@ User authorization context: "지금 하자" 직접 진행 (W5 Day 3 EOD 7-에이
 
 ## §5. theorem_status.md Updates
 
-**File**: `THEORY/canonical/theorem_status.md`.
+**File**: `THEORY/2_substrate/canonical/theorem_status.md`.
 **Pre-state**: 412 lines.
 **Post-state**: 507 lines.
 

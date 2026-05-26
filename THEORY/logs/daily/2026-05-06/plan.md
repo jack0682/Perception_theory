@@ -26,12 +26,12 @@
 - `THEORY/logs/daily/2026-05-05/04_cv16_release_packet_skeleton_proposal.md` (migrated to `working/CV-1.6_release_packet_skeleton.md`).
 - `THEORY/logs/daily/2026-05-05/99_summary.md` §13 Bronze/Silver/Gold target verdicts.
 - `THEORY/CHANGELOG.md` first 350 lines (W6 D1 EOD addendums #1–#14 + W6 D2 entries × 3).
-- `THEORY/canonical/canonical.md` §11 Fixed Commitments + §13 theorem catalog + §14 CN1-CN17 + §15 closing summary.
-- `THEORY/canonical/theorem_status.md` Open Problems Catalog (OP-0001..OP-0009 + OP-0010..OP-0013 Medium + OP-0020..OP-0022 Low).
-- `THEORY/working/MF/pre_objective_K_field_tension.md` (OAT-6, ~534 lines, OP-0009-Pre PARTIALLY RESOLVED working draft, v2.0 §1 amendment promotion target).
-- `THEORY/working/MF/cobelonging_vs_sigmaD.md` (OAT-5, line 408 erratum applied W6 D2 EOD).
-- `THEORY/working/MF/k_selection_a_free_energy.md` + `k_selection_b_kramers.md` + `k_selection_c_numerical_anchor.md` (OP-0005 4-layer composite working drafts).
-- `THEORY/working/MF/n1_kramers_extension.md` (P-F framework adjacent existing working draft).
+- `THEORY/2_substrate/canonical/canonical.md` §11 Fixed Commitments + §13 theorem catalog + §14 CN1-CN17 + §15 closing summary.
+- `THEORY/2_substrate/canonical/theorem_status.md` Open Problems Catalog (OP-0001..OP-0009 + OP-0010..OP-0013 Medium + OP-0020..OP-0022 Low).
+- `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md` (OAT-6, ~534 lines, OP-0009-Pre PARTIALLY RESOLVED working draft, v2.0 §1 amendment promotion target).
+- `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md` (OAT-5, line 408 erratum applied W6 D2 EOD).
+- `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` + `k_selection_b_kramers.md` + `k_selection_c_numerical_anchor.md` (OP-0005 4-layer composite working drafts).
+- `THEORY/2_substrate/Q3_dynamics/n1_kramers_extension.md` (P-F framework adjacent existing working draft).
 - `THEORY/logs/weekly/2026-05-W1/W6_strategic_plan.md` (Day 2 row + Decision Point 4 = Option B captured).
 - **W6 D2 EOD whole-theory-direction review (chat 후반부, this session 의 motive)** — 5 누적 부채 W1-W5 enumeration + cost-of-delay analysis.
 - `THEORY/logs/daily/2026-05-06/pre_brainstorm.md` v2 (sibling, conceptual frame; 4 hazards: H6 recalibration without commitment / H7 cherry-picking easiest debt / H8 recalibration as substitute for action / H9 closure-week boundary 깨짐).
@@ -813,9 +813,9 @@ Day 3 EOD 99_summary.md 에서 explicit answer:
 Day 3 plan v3 는 다음 docs 에 의존:
 
 ## Canonical layer (read-only Day 3)
-- `THEORY/canonical/canonical.md` — §11 Fixed Commitments + §13 theorem catalog + §14 CN1-CN17 + §15 closing summary.
-- `THEORY/canonical/theorem_status.md` — Open Problems Catalog + Proof Status Summary.
-- `THEORY/canonical/README.md` — pipeline + criteria.
+- `THEORY/2_substrate/canonical/canonical.md` — §11 Fixed Commitments + §13 theorem catalog + §14 CN1-CN17 + §15 closing summary.
+- `THEORY/2_substrate/canonical/theorem_status.md` — Open Problems Catalog + Proof Status Summary.
+- `THEORY/2_substrate/canonical/canonical_readme.md` — pipeline + criteria.
 
 ## W6 D2 EOD outputs (depend-on-reading)
 - `THEORY/logs/daily/2026-05-05/01_closure_rigor_audit.md` §0.4 Option B + §7.1 erratum.
@@ -827,16 +827,16 @@ Day 3 plan v3 는 다음 docs 에 의존:
 - `THEORY/CHANGELOG.md` first 350 lines (W6 D1 #1-#14 + W6 D2 × 3).
 
 ## Working files relevant to Day 3 (read but not edit)
-- `THEORY/working/MF/pre_objective_K_field_tension.md` (OAT-6, OP-0009-Pre).
-- `THEORY/working/MF/cobelonging_vs_sigmaD.md` (OAT-5, OP-0009-C, line 408 erratum applied W6 D2 EOD).
-- `THEORY/working/MF/k_selection_a_free_energy.md` + `b_kramers.md` + `c_numerical_anchor.md` (OP-0005 4-layer).
-- `THEORY/working/MF/n1_kramers_extension.md` (P-F adjacent).
-- `THEORY/working/MF/shared_pool_canonical_proposal.md` (OP-0009-A).
-- `THEORY/working/MF/single_high_F_equivalence.md` (OP-0009-Emp).
-- `THEORY/working/MF/lambda_rep_ontology.md` (OP-0009-λ).
-- `THEORY/working/MF/F_Kstep_K_triple.md` (OP-0009-F).
+- `THEORY/2_substrate/Q4_kselection/pre_objective_K_field_tension.md` (OAT-6, OP-0009-Pre).
+- `THEORY/4_temporal/identity_inheritance/cobelonging_vs_sigmaD.md` (OAT-5, OP-0009-C, line 408 erratum applied W6 D2 EOD).
+- `THEORY/2_substrate/Q4_kselection/k_selection_a_free_energy.md` + `b_kramers.md` + `c_numerical_anchor.md` (OP-0005 4-layer).
+- `THEORY/2_substrate/Q3_dynamics/n1_kramers_extension.md` (P-F adjacent).
+- `THEORY/2_substrate/Q4_kselection/shared_pool_canonical_proposal.md` (OP-0009-A).
+- `THEORY/2_substrate/Q2_multiformation/single_high_F_equivalence.md` (OP-0009-Emp).
+- `THEORY/2_substrate/multiformation/lambda_rep_ontology.md` (OP-0009-λ).
+- `THEORY/2_substrate/Q4_kselection/F_Kstep_K_triple.md` (OP-0009-F).
 - `THEORY/working/MF/kbar_kact_bridge_*.md` series (T-L1-F/M provenance).
-- `THEORY/working/MF/ksoft_kact_bridge_L1M_soft_count_corollary.md` (T-L1-M working draft).
+- `THEORY/2_substrate/Q4_kselection/ksoft_kact_bridge_L1M_soft_count_corollary.md` (T-L1-M working draft).
 - `THEORY/working/CV-1.6_release_packet_skeleton.md` (W6 D7 deliverable; W6 D5-D6 refinement targets).
 - `THEORY/working/CV-1.7_parking_lot_inventory.md` (Stage 0 inventory).
 - `THEORY/working/CV-1.6_packet_crosswalk.md` (D-CV1.6-O1..O5 list).

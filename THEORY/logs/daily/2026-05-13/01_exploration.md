@@ -7,12 +7,12 @@
 **This file covers:** §4.1 Restatement, §4.2 Multi-approach (≥3 independent), §4.3 Primary selection rationale.
 **Depends on reading:**
 - `THEORY/logs/daily/2026-05-13/00_plan.md`
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/09_final_audit.md` (READY FOR USER APPROVAL judgment)
-- `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md` (canonical / theorem_status / hypothesis_tree / CHANGELOG draft blocks)
-- `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` (T-CC-StableK-Kernel CV-1.14 candidate; **NOT YET PROMOTED**)
-- `THEORY/canonical/canonical.md` §13 (current CV-1.13 state), §8.5 (M_{t→s} definition), §11/§14 (commitments / commitment notes)
-- `THEORY/canonical/theorem_status.md` (CV-1.13: 59A/14B/5C/5R = 83 claims)
-- `THEORY/canonical/hypothesis_tree.md` (HT-3.5)
+- `THEORY/4_temporal/action_cost/09_final_audit.md` (READY FOR USER APPROVAL judgment)
+- `THEORY/4_temporal/action_cost/10_patch_plan.md` (canonical / theorem_status / hypothesis_tree / CHANGELOG draft blocks)
+- `THEORY/4_temporal/composition/05_promotion_draft.md` (T-CC-StableK-Kernel CV-1.14 candidate; **NOT YET PROMOTED**)
+- `THEORY/2_substrate/canonical/canonical.md` §13 (current CV-1.13 state), §8.5 (M_{t→s} definition), §11/§14 (commitments / commitment notes)
+- `THEORY/2_substrate/canonical/theorem_status.md` (CV-1.13: 59A/14B/5C/5R = 83 claims)
+- `THEORY/2_substrate/canonical/hypothesis_tree.md` (HT-3.5)
 - `THEORY/CHANGELOG.md` (newest-on-top header)
 - `CODE/experiments/results/exp89_results.json`
 
@@ -104,7 +104,7 @@ Today's "approach" is not a mathematical proof strategy but a **promotion-workfl
 
 **Successful output shape.**
 - Single CHANGELOG block for CV-1.15.
-- 10_patch_plan §1 amendments: the background sentence becomes "T-CC-StableK-Kernel (working candidate, `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`, Cat B not yet canonical) ..."; the T-ACT-KERNEL-COMP→REL "조건 의존성" note becomes "depends on T-CC-StableK-Kernel; canonical instance pending CV-1.14 promotion."
+- 10_patch_plan §1 amendments: the background sentence becomes "T-CC-StableK-Kernel (working candidate, `THEORY/4_temporal/composition/05_promotion_draft.md`, Cat B not yet canonical) ..."; the T-ACT-KERNEL-COMP→REL "조건 의존성" note becomes "depends on T-CC-StableK-Kernel; canonical instance pending CV-1.14 promotion."
 - Count delta: 83 → 93 (+8A +2B) — clean.
 - Hypothesis-tree update would create only `H-COMP-ACTION` and `H-COMP-SINK` nodes; `H-COMP-KERNEL` remains a *working* branch outside the tree until CV-1.14 promotes.
 

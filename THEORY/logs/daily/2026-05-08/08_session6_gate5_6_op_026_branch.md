@@ -108,7 +108,7 @@ budget on the tetrahedral grid.
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/op_oms_026_sigma_branch_full.md`
+- `THEORY/2_substrate/foundations/observer_moduli/op_oms_026_sigma_branch_full.md`
 - `CODE/experiments/observer_moduli/vp10_sigma_branch_delta3.py`
 - `CODE/experiments/results/observer_moduli/vp10_sigma_branch_delta3.json`
 - `CODE/experiments/results/observer_moduli/vp10_sigma_branch_delta3.md`

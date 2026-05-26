@@ -57,7 +57,7 @@ In Day 4 morning Block 1 application (if approved): the CV-1.5.1 CHANGELOG entry
 
 ### §2.4 Working-level promotion (Day 4 morning post-Block-1 task)
 
-Move Theorem 4.6.1 framework from `daily/2026-04-29/04_*` to `THEORY/working/MF/sigma_multi_trajectory.md` as a single-topic working file. ~30 min Day 4 PM task.
+Move Theorem 4.6.1 framework from `daily/2026-04-29/04_*` to `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` as a single-topic working file. ~30 min Day 4 PM task.
 
 This is the meta-prompt §2 promotion pipeline (`logs/daily/` → `working/`) — does NOT affect canonical.
 
@@ -154,7 +154,7 @@ Cumulative Day 3 NQ spawns: **14** (was 10 after deepening; +4 from NQ-198a:
 
 ### §5.3 Working-level promotion (post-Block-1)
 
-Promote `04_*` Theorem 4.6.1 framework to `THEORY/working/MF/sigma_multi_trajectory.md` (~30 min reformatting).
+Promote `04_*` Theorem 4.6.1 framework to `THEORY/4_temporal/identity_inheritance/sigma_multi_trajectory.md` (~30 min reformatting).
 
 ### §5.4 W5 ladder status post-Day-3-EOD (if approved)
 

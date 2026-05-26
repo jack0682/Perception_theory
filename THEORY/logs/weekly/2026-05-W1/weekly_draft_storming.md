@@ -39,7 +39,7 @@ SCC (cohesion-first field) → RelationWorld (relation/world grammar) → ONN (s
 
 - Perceptual generation order: cohesion → relation → meaning → action.
 - RelationWorld may be ontologically broader; SCC is the perceptual entry point.
-- Stub document: `THEORY/working/MF/scc_relation_onn_ortsf_perception_stack.md`.
+- Stub document: `THEORY/2_substrate/multiformation/scc_relation_onn_ortsf_perception_stack.md`.
 
 ### Theorem-count delta (W6 D4)
 

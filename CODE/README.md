@@ -61,6 +61,6 @@ These do not affect the main test/experiment pipeline. Fix on demand.
 
 ## Links
 
-- Theory: `../THEORY/canonical/canonical.md`
+- Theory: `../THEORY/2_substrate/canonical/canonical.md`
 - Project orientation: `../CLAUDE.md`
 - Conventions: `../CONVENTIONS.md`

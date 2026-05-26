@@ -1,6 +1,6 @@
 """WQ-1.C — Layer I H_0 Bar-Death Counterexample Protocol.
 
-Implements the protocol of THEORY/working/MF/wq1c_layerI_h0_bardeath_protocol.md.
+Implements the protocol of THEORY/2_substrate/multiformation/wq1c_layerI_h0_bardeath_protocol.md.
 
 Constructs two single-field aggregate trajectories (A-I: equilateral 3-bump,
 B-I: compressed 3-bump) on the 20x20 torus, runs them under the canonical

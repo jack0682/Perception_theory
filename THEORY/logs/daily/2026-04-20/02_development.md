@@ -117,7 +117,7 @@
 ### C-S1. F-group (thermal) 공리 F1~F4 초안
 
 - **Target:** 유한 온도 T > 0 하에서의 이론의 공리 구조를 F1~F4 로 형식화.
-- **파일:** `THEORY/working/C/F_group_axioms.md`
+- **파일:** `THEORY/2_substrate/Q1_boundary/F_group_axioms.md`
 - **내용 요약:** 공리 후보:
   (F1) **Thermal state**: $u$ 의 상태 공간이 확률분포 $\mathbb{P}[u] \propto \exp(-\mathcal{F}[u]/T)$. Free energy $\mathcal{F}[u] = \mathcal{E}[u] - T \cdot S[u]$.
   (F2) **Entropy**: $S[u] = -\sum_x [u(x) \log u(x) + (1-u(x)) \log(1-u(x))]$ (Bernoulli entropy per site). Lipschitz on $[\varepsilon, 1-\varepsilon]$.
@@ -210,7 +210,7 @@
 ### E-S1. K_soft 정의 확정 — H_0 persistence 기반
 
 - **Target:** K 를 soft quantity 로 재정의하는 **단일** 정의 채택 (A-S2 의 후보 중 하나 commit) + well-definedness 증명 골격.
-- **파일:** `THEORY/working/E/soft_K_definition.md`
+- **파일:** `THEORY/2_substrate/foundations/dissolutions/soft_K_definition.md`
 - **내용 요약:**
   **정의:** $K_{\mathrm{soft}}(u) = \sum_{i \in \mathrm{H_0 bars}} \phi(\ell_i)$ where $\ell_i$ = persistence bar length (death − birth) in the superlevel-set filtration of $u$, $\phi: \mathbb{R}_{\geq 0} \to [0,1]$ monotone with $\phi(0) = 0$, $\phi(\ell) \to 1$ as $\ell \to \infty$ (예: $\phi(\ell) = 1 - \exp(-\ell / \ell_{\mathrm{scale}})$).
   **Well-definedness:** $K_{\mathrm{soft}}$ 는 persistence stability theorem 에 의해 $\lVert u - v \rVert_\infty$ 에 Lipschitz. 즉 $\vert K_{\mathrm{soft}}(u) - K_{\mathrm{soft}}(v)\vert \leq L_\phi \cdot n \cdot \lVert u - v \rVert_\infty$ (n = |X_t|).

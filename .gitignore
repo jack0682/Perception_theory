@@ -27,6 +27,7 @@ experiments/*.csv
 # Local agent state (machine-local; never tracked)
 .omc/
 .omx/
+SCC_PRESENTATION/
 
 # Per-developer agent guides (not part of repo authority)
 AGENTS.md

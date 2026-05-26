@@ -12,7 +12,7 @@ prior_step: 2026-05-19 02_H5_morse_spinodal.md (H5 PRIMARY) + 2026-05-18 AUX-1.5
 next_step: §5 의 Route C 정식화 + H5 ↔ T_* cross-reference + 99_summary
 ---
 
-> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[02_H5_morse_spinodal]] · [[../../canonical/auxiliary_structures_master|AUX-1.5 §4.6.1/§4.9.1]] · [[../../canonical/canonical|canonical §13 T-PF-A1 family L1670-1711]]
+> [!nav] Linked: [[00_plan]] · [[01_pre_brainstorm]] · [[02_H5_morse_spinodal]] · [[auxiliary_structures_master|AUX-1.5 §4.6.1/§4.9.1]] · [[canonical|canonical §13 T-PF-A1 family L1670-1711]]
 
 # 03 — T_* (Effective Stochastic Temperature, Fixed-Point Structure) — Deep Attack
 
@@ -26,14 +26,14 @@ next_step: §5 의 Route C 정식화 + H5 ↔ T_* cross-reference + 99_summary
 ## §0 Pre-work xref check (§15.1 의무 기록)
 
 ```bash
-$ grep -nE "T_\*|effective.*stochastic.*temperature|OP-0021" THEORY/canonical/canonical.md
+$ grep -nE "T_\*|effective.*stochastic.*temperature|OP-0021" THEORY/2_substrate/canonical/canonical.md
 # Result: T-PF-A1 family (L1670-1711) 모두 T_* 를 axiomatic parameter 로 처리; OP-0021 (T_* registration) Open
 # = ~10 hits, all referring to T_* as axiomatic / OPEN OP
 
 $ grep -rn "T_star_fixed|tstar_brouwer" THEORY/working/
 # Result: 0 hits (clean slate)
 
-$ grep -nE "§4\.6\.1|§4\.9\.1" THEORY/canonical/auxiliary_structures_master.md
+$ grep -nE "§4\.6\.1|§4\.9\.1" THEORY/2_substrate/canonical/auxiliary_structures_master.md
 # Result: §4.6.1 (T_* origin classification, P/external) + §4.9.1 (T_* fixed-point 순환 diagnosis)
 # = 2 hits, registry-level diagnosis only
 ```

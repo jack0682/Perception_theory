@@ -34,7 +34,7 @@ grep -r "OP-0008|Wigner-projection|MERGE/SPLIT" THEORY/canonical/ THEORY/working
 
 | Path | Lines | 목적 |
 |---|---|---|
-| `THEORY/working/MF/broad_survey_B2.md` | ~330 | 2-route framework + convergence + 3rd route preserved + 5 NOQs |
+| `THEORY/2_substrate/multiformation/broad_survey_B2.md` | ~330 | 2-route framework + convergence + 3rd route preserved + 5 NOQs |
 
 ---
 

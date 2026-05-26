@@ -6,7 +6,7 @@
 **Owner:** SF (Single-Formation σ-framework)
 **Script:** `CODE/scripts/test_sigma_theorem4_scaling.py`
 **Output JSON:** `CODE/scripts/results/sigma_theorem4_scaling.json`
-**Working file:** `THEORY/working/SF/sigma_theorem4_higher_order.md` §8
+**Working file:** `THEORY/2_substrate/sigma_framework/sigma_theorem4_higher_order.md` §8
 
 ---
 

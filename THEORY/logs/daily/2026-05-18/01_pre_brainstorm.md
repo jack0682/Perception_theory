@@ -7,7 +7,7 @@ prerequisite: 00_plan.md 읽음 + 5/15 07_decision.md 읽음
 mode: 자기 점검 — 3-track 진입 *전* 정직 점검
 ---
 
-> [!nav] Linked: [[MOC_research_journal]] · [[00_plan]] · [[W8_strategic_plan]] · [[2026-05-15/07_decision]] · [[2026-05-15/99_summary]]
+> [!nav] Linked: [[MOC_research_journal]] · [[00_plan]] · [[W8_strategic_plan]] · [[07_decision]] · [[2026-05-15/99_summary]]
 
 
 # 01 — Pre-brainstorm (2026-05-18, W8-Day1)

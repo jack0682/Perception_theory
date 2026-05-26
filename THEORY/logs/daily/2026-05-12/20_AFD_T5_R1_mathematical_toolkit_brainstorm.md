@@ -131,7 +131,7 @@ From `02_development.md` §5.1 (T-OP-AFD-003-A) and `03_integration_and_new_open
 
 ### 1.5 R1 promotion in promotion-pipeline terms
 
-Per `THEORY/canonical/canonical.md` §1.1 and `theorem_status.md` §Canonical Spec Version History, the next canonical bump is **CV-1.14**. The current targeting (per `00_index.md` of 2026-05-12) is **CV-1.14 = H-MORSE-Local Cat B + Package II Pre-Theorem Cat B**, yielding 59A/16B/5C/5R = 85 claims.
+Per `THEORY/2_substrate/canonical/canonical.md` §1.1 and `theorem_status.md` §Canonical Spec Version History, the next canonical bump is **CV-1.14**. The current targeting (per `00_index.md` of 2026-05-12) is **CV-1.14 = H-MORSE-Local Cat B + Package II Pre-Theorem Cat B**, yielding 59A/16B/5C/5R = 85 claims.
 
 If AFD-R1 promotion happens instead (an alternative track per `afd_theorem_registry.md` and 99_summary.md Option 1), CV-1.14-AFD adds:
 - AFD-T9 (Cat A, by-inspection)

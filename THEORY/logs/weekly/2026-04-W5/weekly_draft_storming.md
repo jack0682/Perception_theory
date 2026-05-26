@@ -77,9 +77,9 @@ K_{\mathrm{act}}^\varepsilon(\mathbf u),
 and a labeled bijection $\mathcal A_{\mathrm{bar}}:A^\varepsilon(\mathbf u)\to\mathrm{Bars}_0^{\mathrm{term}}(U;G)$ via primary representative $q_j^U=\arg\max^\prec_{x\in N_j^r}U(x)$.
 
 **Canonical edits**:
-- `THEORY/canonical/theorem_status.md` (+30 lines, CV-1.5.2 section with T-L1-F).
-- `THEORY/canonical/canonical.md` (+9 lines, T-L1-F entry at end of §13 Category A).
-- `THEORY/canonical/theorem_status.md` UNCHANGED (no OP affected; T-L1-F does not solve OP-0005 / OP-0008).
+- `THEORY/2_substrate/canonical/theorem_status.md` (+30 lines, CV-1.5.2 section with T-L1-F).
+- `THEORY/2_substrate/canonical/canonical.md` (+9 lines, T-L1-F entry at end of §13 Category A).
+- `THEORY/2_substrate/canonical/theorem_status.md` UNCHANGED (no OP affected; T-L1-F does not solve OP-0005 / OP-0008).
 
 ### Why it matters
 
@@ -131,8 +131,8 @@ The theory now has a **canonical baseline** for multi-formation counting. This i
 
 - Daily log: `THEORY/logs/daily/2026-05-02/01_T_L1_F_canonical_promotion_closure.md`.
 - L1 chain (full 13 documents): `THEORY/working/MF/kbar_kact_bridge_L1*.md`.
-- L1-K external audit: `THEORY/working/MF/kbar_kact_bridge_L1K_external_audit.md`.
-- L1-L P7 status: `THEORY/working/MF/kbar_kact_bridge_L1L_scc_decay_theorem.md`.
+- L1-K external audit: `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1K_external_audit.md`.
+- L1-L P7 status: `THEORY/2_substrate/Q4_kselection/kbar_kact_bridge_L1L_scc_decay_theorem.md`.
 - Diagnostic scripts: `CODE/scripts/l1g_l1hyp_diagnostic.py`, `l1h_local_to_global_counterexample.py`, `l1h2_boundary_leakage_counterexample.py`, `l1i_constants_feasibility.py`, `l1j_bridge_cut_decay_diagnostic.py`.
 - Result JSONs: `CODE/scripts/results/l1{g,h,h2,i,j}_*.json`.
 
@@ -1040,7 +1040,7 @@ After initial Phase 1 F1 deferral, user instructed substantive recovery via 4-op
 - **`THEORY/logs/daily/2026-04-28/02_NQ174_zeta_star_results.md`**: status DEFERRED → **resolved for 2D torus**. ζ_*(2D torus L=20, c=0.10) ≈ **0.40**; ζ_*(1D cycle L=40, c=0.10) > 0.15 (extended sweep needed). **NEW finding: ζ_*(graph) is c-dependent** — comparison to NQ-170c c=0.5 measurements shows different crossover values per c-regime.
 - **`THEORY/logs/daily/2026-04-28/03_canonical_proposal_v5b_t_update.md`**: TEXT-PENDING → **filled with actual values**. Proposal #1 V5b-F Branch B refined statement (~15-20 lines canonical). Proposal #2 ζ_*(graph, c) precise + c-dependence finding (~10-15 lines canonical). Total estimated canonical delta if all approved: ~60-90 lines.
 - **`THEORY/logs/daily/2026-04-28/04_G3_phase5_MO1_decision.md`**: Option A primary → **revised to A+D layered** per `06_*` Approach D introduction + `07_*` regime classification.
-- **`THEORY/working/MF/multi_formation_sigma.md`**: §5 Lemma 5.1 step-labels → **substantive computation** via cross-reference to `05_*`. §3.4 independence check → **revised** via `06_*`.
+- **`THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md`**: §5 Lemma 5.1 step-labels → **substantive computation** via cross-reference to `05_*`. §3.4 independence check → **revised** via `06_*`.
 
 ### Added (CODE/scripts/ wrappers)
 
@@ -1078,7 +1078,7 @@ The α/β/γ/δ recovery pattern after self-critique demonstrates: **substantive
 
 ### Added (G3 P1 substantive opening — primary Day 2 deliverable)
 
-- **`THEORY/working/MF/multi_formation_sigma.md`** (NEW, ~770 lines): σ_multi^(A) Phase 5 initiation. Per meta-prompt §4 framework:
+- **`THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md`** (NEW, ~770 lines): σ_multi^(A) Phase 5 initiation. Per meta-prompt §4 framework:
   - **Multi-approach generation**: Approach A (block-decomposition + per-formation σ_j + cross-block σ_jk), Approach B (joint Hessian + wreath-product irreps), Approach C (per-formation σ + interaction graph). Independence checked.
   - **Primary**: **Approach A** — continuity with single-formation Commitment 14, V5b-F mechanism transfer compatibility, time budget feasibility (W5-W6 Cat B target).
   - **Definition 5.1**: σ_multi^(A) formal — $(\mathcal{F}_{\text{total}}; \{\sigma_j\}_{j=1}^K; \{\sigma_{jk}\}_{j<k})$ on well-separated regime.

@@ -64,10 +64,10 @@ $\Sigma_{\mathrm{branch}}$.
 
 ## Files produced
 
-- `THEORY/working/observer_moduli/effective_dof_theory.md`
-- `THEORY/working/observer_moduli/vp6_effective_dof.md`
-- `THEORY/working/observer_moduli/vp6_effective_dof_log.md`
-- `THEORY/working/observer_moduli/vp6_initial_reading_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/effective_dof_theory.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_effective_dof_log.md`
+- `THEORY/2_substrate/foundations/observer_moduli/vp6_initial_reading_log.md`
 - `CODE/experiments/observer_moduli/vp6_effective_dof_jacobian.py`
 - `CODE/experiments/results/observer_moduli/vp6_jacobian_spectra.json` (118 KB)
 - `CODE/experiments/results/observer_moduli/vp6_effective_dof_summary.md`

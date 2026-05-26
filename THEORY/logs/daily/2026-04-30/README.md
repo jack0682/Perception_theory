@@ -29,7 +29,7 @@ $$E = \lambda_{\mathrm{cl}} E_{\mathrm{cl}} + \lambda_{\mathrm{sep}} E_{\mathrm{
 
 **Phase transition:** $\beta/\alpha > 4\lambda_2 / \lvert W''(c) \rvert$ with $c$ in spinodal $((3-\sqrt{3})/6,\ (3+\sqrt{3})/6)$.
 
-Full formal specification: **`THEORY/canonical/canonical.md`** (v1.2).
+Full formal specification: **`THEORY/2_substrate/canonical/canonical.md`** (v1.2).
 
 ---
 
@@ -102,7 +102,7 @@ cd CODE/papers && pdflatex paper1_math.tex && pdflatex paper1_math.tex
 
 **Retracted:** K-Saddle Conjecture, Theorem 3.3 (r̄₀ general τ), **Type A/B classification** (exp65: 0/4 configs observed as Type B).
 
-**Open critical:** F-1 (K=2 vacuity), M-1 (K=1 always preferred), MO-1 (Morse inapplicable under fixed-K). See `THEORY/canonical/theorem_status.md`.
+**Open critical:** F-1 (K=2 vacuity), M-1 (K=1 always preferred), MO-1 (Morse inapplicable under fixed-K). See `THEORY/2_substrate/canonical/theorem_status.md`.
 
 **Predictions verified:** P1–P5 (single-formation), P1-K/P2-K/P3-K (multi-formation). P4-K retracted.
 

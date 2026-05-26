@@ -1,7 +1,7 @@
 """σ_rich augmentation for K-jump deterministic inheritance (OP-0008 Path B).
 
 Implements the rich σ-tuple per
-``THEORY/working/MF/sigma_rich_augmentation.md``::
+``THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md``::
 
     σ_rich = (σ_standard, centroids, orientations, wigner_data)
 
@@ -229,7 +229,7 @@ def compute_sigma_rich(
 ) -> SigmaRich:
     """Compute σ_rich = (σ_standard, centroids, orientations, wigner_data).
 
-    See ``THEORY/working/MF/sigma_rich_augmentation.md`` §2 for the full
+    See ``THEORY/2_substrate/sigma_framework/sigma_rich_augmentation.md`` §2 for the full
     mathematical specification.
 
     Args:

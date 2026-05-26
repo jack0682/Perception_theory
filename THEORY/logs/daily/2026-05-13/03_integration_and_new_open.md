@@ -7,9 +7,9 @@
 **This file covers:** §4.5 Integration with canonical / hypothesis_tree / theorem_status / open-problems; §4.6 new open questions raised by the audit; prompt-improvement suggestions (§14 of prompt).
 **Depends on reading:**
 - `01_exploration.md` and `02_development.md` (today).
-- `THEORY/canonical/canonical.md`, `theorem_status.md`, `hypothesis_tree.md`, `CV-1.13_SEAL.md`.
+- `THEORY/2_substrate/canonical/canonical.md`, `theorem_status.md`, `hypothesis_tree.md`, `CV-1.13_SEAL.md`.
 - `THEORY/working/CV115_ACTION_TEMPORAL_COST/` (09_final_audit, 10_patch_plan).
-- `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md`.
+- `THEORY/4_temporal/composition/05_promotion_draft.md`.
 
 ---
 
@@ -316,7 +316,7 @@ R-A is **not** the recommended path of this session, but we sketch the integrati
 
 ### §3.1 Pre-CV-1.15 prerequisite: CV-1.14 T-CC-StableK-Kernel insert
 
-Per `THEORY/working/CV114_TEMPORAL_COMPOSITION/05_promotion_draft.md` §2:
+Per `THEORY/4_temporal/composition/05_promotion_draft.md` §2:
 
 ```
 Insert into canonical §13 Cat B (after T-K-Select-OBS):

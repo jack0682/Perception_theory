@@ -208,7 +208,7 @@ $\Box$
 
 **Test:** `CODE/scripts/results/exp_hessian_uniform_v2.json` (W4-04-25 NQ-141 verification cluster) confirms: at $u^* = c\mathbf{1}$ on $D_4$ free-BC grid, computed Hessian eigenvalues match $\mu_k = 4\alpha\lambda_k^{\mathrm{Lap}} + \beta W''(c)$ to numerical precision $< 10^{-9}$.
 
-**Cross-reference:** `THEORY/working/SF/mode_count.md` §1 numerical Cat A check.
+**Cross-reference:** `THEORY/2_substrate/sigma_framework/mode_count.md` §1 numerical Cat A check.
 
 ---
 

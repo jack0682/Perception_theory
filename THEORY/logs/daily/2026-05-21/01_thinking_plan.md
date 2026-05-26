@@ -143,17 +143,17 @@ purpose: |
 다음 *세 문서를 fresh eyes 로 읽기* (~15-20분, 모두 짧게):
 
 ### 5.1 첫 번째 — macro audit (어제 정리해둔 진단)
-파일: `THEORY/working/macro_audit_2026-05-20.md`
+파일: `THEORY/0_axis/macro_audit_2026-05-20.md`
 읽을 부분: **§11 verdict** (한 문장) + **§8 macro gaps** (5개 표)
 다른 절은 건너뜀.
 
 ### 5.2 두 번째 — PAI pivot 문서 (어제 등록한 새 axis)
-파일: `THEORY/canonical/perception_action_interpretation_pivot_2026_05_21.md`
+파일: `THEORY/0_axis/perception_action_interpretation_pivot_2026_05_21.md`
 읽을 부분: **§1 motivation** + **§2 thesis** + **§11 final status**
 다른 절은 건너뜀.
 
 ### 5.3 세 번째 — roadmap (앞으로 갈 수 있는 길)
-파일: `THEORY/canonical/PAI_ROADMAP.md`
+파일: `THEORY/0_axis/PAI_ROADMAP.md`
 읽을 부분: **각 Phase 의 제목 + 첫 한 줄 만**
 Phase 본문은 건너뜀.
 

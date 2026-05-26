@@ -57,7 +57,7 @@ CV-1.15 canonical state (sealed in morning Track 1) is unchanged by this extensi
 
 ### Tier 4 — Follow-ups
 5. **Round 4 Explore alignment audit** (Rule R5; 0.5 session). Fresh-context Explore agent to verify Track 2 + extension lemmas don't duplicate canonical/working content. *Lower priority now* given CV114 audit (2026-05-11) already establishes the structural facts.
-6. **CV-1.15 §F Step 2 housekeeping** (0.5 session). Replace `THEORY/working/CV115_ACTION_TEMPORAL_COST/10_patch_plan.md §1–§4` with the §A–§D blocks. Not load-bearing.
+6. **CV-1.15 §F Step 2 housekeeping** (0.5 session). Replace `THEORY/4_temporal/action_cost/10_patch_plan.md §1–§4` with the §A–§D blocks. Not load-bearing.
 7. **OP-HMORSE-BROADNESS retirement** in canonical `theorem_status.md`: mark as CLOSED Cat A under L-CLOSURE-LIFT promotion. Deferred to P7 turn (Tier 1 #1).
 
 **Conservative alternative for 5/15.** If next-session author prefers consolidation: spend 0.5 session on (Tier 1 #2 D-HMORSE-LOCAL (C2′) reformulation), 0.5 session on (Tier 2 #3 SBM numerical), and write `CV-1.16_PREVIEW.md`.
@@ -76,7 +76,7 @@ CV-1.15 canonical state (sealed in morning Track 1) is unchanged by this extensi
 | `THEORY/logs/daily/2026-05-14/43_broadness_approach_c_numerical.md` | Approach (c) — 15/15 numerical PASS |
 | `THEORY/logs/daily/2026-05-14/44_broadness_synthesis.md` | Synthesis verdict + canonical proposal draft |
 | `THEORY/logs/daily/2026-05-14/49_broadness_summary.md` | (this file) — extension summary |
-| `THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md` | CV-1.16+ canonical promotion candidate record |
+| `THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md` | CV-1.16+ canonical promotion candidate record |
 | `CODE/experiments/exp_hmorse_broadness_full_spectrum.py` | Numerical script (Approach (c)) |
 | `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.json` | Raw numerical results |
 | `CODE/experiments/results/exp_hmorse_broadness_full_spectrum.md` | Numerical summary |
@@ -151,7 +151,7 @@ The methodological highlight from morning ("plan-mode review caught target-preci
 ```bash
 # Extension산출물 존재 확인
 ls -la /home/jack/Perception_theory/THEORY/logs/daily/2026-05-14/4*.md
-ls -la /home/jack/Perception_theory/THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md
+ls -la /home/jack/Perception_theory/THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md
 ls -la /home/jack/Perception_theory/CODE/experiments/exp_hmorse_broadness_full_spectrum.py
 ls -la /home/jack/Perception_theory/CODE/experiments/results/exp_hmorse_broadness_full_spectrum.{json,md}
 
@@ -162,7 +162,7 @@ cd /home/jack/Perception_theory && git diff --stat THEORY/canonical/ | tail -10
 # R1 vocabulary 부재
 grep -rE "V-AFD|R2_DCR|S_0\(u\)|K_read|differentiated cohesion readout" \
   /home/jack/Perception_theory/THEORY/logs/daily/2026-05-14/4*.md \
-  /home/jack/Perception_theory/THEORY/working/CV114_H_MORSE_PACKAGEII/11_broadness_attack.md
+  /home/jack/Perception_theory/THEORY/2_substrate/Q3_dynamics/h_morse_packageII/11_broadness_attack.md
 # expected: no matches in extension files
 
 # Numerical results

@@ -84,7 +84,7 @@ Key inputs from Day 1:
 - σ supporting structures (Lemma 1/2/3 + Theorem 3/4) **canonical-grounded** — multi-formation σ can build on this base.
 - V5b-F mechanism (NQ-173 verdict from Block 2): if Branch B, the **bulk-localization picture** gives an analytical tool for inter-formation gap analog (cross-cutting synergy noted in `03_v5b_f_status_update.md` §4 + `99_summary.md` §4).
 
-Suggested approach: open `THEORY/working/MF/multi_formation_sigma.md` (currently empty — `THEORY/working/MF/` has only `from_single.md`). Initial scope:
+Suggested approach: open `THEORY/2_substrate/Q2_multiformation/multi_formation_sigma.md` (currently empty — `THEORY/working/MF/` has only `from_single.md`). Initial scope:
 - Phase 5 σ definition for K-formation field $\{u^{(j)}\}_{j=1}^K$ on $\Sigma^K_M$.
 - MO-1 face decision (per W5 strategic plan §0.4 Decision 2): Option A (interior only, corner-avoiding) vs Option B (stratified Morse on $\Sigma^K_M$) vs Option C (soft-K detour on $\Sigma_m$).
 - First numerical test on K=2 baseline.
