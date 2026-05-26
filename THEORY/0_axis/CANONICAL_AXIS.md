@@ -6,7 +6,7 @@ status: CANONICAL-DIRECTION (ontological center; substrate sealed, projection ma
 description: The central axis of the repository. One field, many projections. Read first, with DECLARATION (DECL-2.0).
 ---
 
-> [!nav] Parent: [[THEORY_INDEX]] · Pair: [[DECLARATION]] · [[PAI_GLOSSARY]] · [[AUDIT_perception_action_2026-05-26]] · [[perception_action_interpretation_pivot_2026_05_21]]
+> [!nav] Parent: [[THEORY_INDEX]] · Pair: [[DECLARATION]] · [[PAI_GLOSSARY]] · [[THREAD_ATLAS]] · [[UNIFIED_STRUCTURE]] · [[AUDIT_perception_action_2026-05-26]] · [[perception_action_interpretation_pivot_2026_05_21]]
 
 # Canonical Axis — Actional Perception
 
@@ -56,7 +56,8 @@ The projections are *readouts of the same field*, each selected by an action cla
 3. [[PAI_GLOSSARY]] — controlled vocabulary.
 4. [[AUDIT_perception_action_2026-05-26]] — the rationale (why the repo is organized this way).
 5. [[perception_action_interpretation_pivot_2026_05_21]] + [[PAI_ROADMAP]] — the open research program.
-6. Substrate: [[canonical]] §2 → a question MOC ([[MOC_Q4_K_selection]] etc.).
+6. [[THREAD_ATLAS]] + [[UNIFIED_STRUCTURE]] — 누적된 8개 결의 지도와, 그것들이 하나의 생성구조 𝕌의 단면임을 보이는 단일화 후보 (OPEN).
+7. Substrate: [[canonical]] §2 → a question MOC ([[MOC_Q4_K_selection]] etc.).
 
 ---
 

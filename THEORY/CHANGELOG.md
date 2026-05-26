@@ -4,6 +4,31 @@
 
 ---
 
+## [THREAD CONSOLIDATION] 2026-05-26 — Unified Structure candidate
+
+### Summary
+누적된 브레인스토밍으로 갈라진 8개 이론 결을 묶기 위한 두 문서 추가. **조직/방향 작업 — 증명 0건, substrate 102 claims 불변, CV 버전 불변.**
+
+### Files Created
+- `THEORY/0_axis/THREAD_ATLAS.md` — 8개 결(SCC substrate / PAI / SSKP sensing / PFE / AFD / Multi-K / σ-framework / Temporal / Prolegomena)을 공유 대상(u_t·E·σ·K·observer·action)과 DECL-2.0 사영축에 매핑. 프레임 분열 3곳 진단(경쟁 아키텍처·K난립·perception 어휘).
+- `THEORY/0_axis/UNIFIED_STRUCTURE.md` — 수학적 단일화 **후보**: 생성구조 𝕌 = Σ_m(G) over 𝓜_obs(OMS) × 𝓜_act(Θ), 판독 필트레이션 {σ,K,π}. 모든 결 = 𝕌의 section/readout/transport/chart/abstraction. **CANONICAL-DIRECTION, 증명 0.**
+
+### Decisions
+- **Prolegomena 위치 확정:** 44 조건 = 𝕌의 base/observer 공리 스펙(별도 경쟁 프레임 아님). 매핑된 조건은 기존 정의로 환원, 미매핑은 OP-PROLEGOMENA로 deferral. → 떠 있던 9번째 결 해소.
+- 경쟁 4개 "아키텍처"(layered-ambient/NS/SSKP/prolegomena-4layer)는 경쟁 이론이 아니라 𝕌의 chart/추상단계 atlas로 재배치.
+
+### Open Problems (narrative 등록; theorem_status 후속)
+- OP-UNIFY-1 (𝕌 존재/정합), OP-UNIFY-2 (= OP-PROJECTION, 판독 정합), OP-UNIFY-3 (= OP-ACTIONAL-U, E의 관측자/행동 조건성), OP-PROLEGOMENA.
+
+### Theorem Status / Test Count
+- 변경 없음. 102 claims 봉인. CODE 무관.
+
+### Carry-Forward
+- theorem_status.md Open Problems Catalog에 OP-UNIFY-1/2/3 + OP-PROLEGOMENA 정식 등록.
+- 구조적 중복 정리(K_bar/K̂ 형식화·은퇴, 경쟁 synthesis 문서 통합)는 미선택 — 후속 결정.
+
+---
+
 ## [REORGANIZATION + DECL-2.0] 2026-05-26 — Perception-Action Stack
 
 ### Summary
